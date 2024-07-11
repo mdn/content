@@ -50,7 +50,7 @@ For {{SVGElement('path')}}, `d` is a string containing a series of path commands
     <tr>
       <th scope="row">Value</th>
       <td>
-        <strong><a href="/en-US/docs/Web/SVG/Content_type#string">&#x3C;string></a></strong>
+        <strong><a href="/en-US/docs/Web/CSS/string">&#x3C;string></a></strong>
       </td>
     </tr>
     <tr>
@@ -75,7 +75,7 @@ For {{SVGElement('glyph')}}, `d` is a string containing a series of path command
     <tr>
       <th scope="row">Value</th>
       <td>
-        <strong><a href="/en-US/docs/Web/SVG/Content_type#string">&#x3C;string></a></strong>
+        <strong><a href="/en-US/docs/Web/CSS/string">&#x3C;string></a></strong>
       </td>
     </tr>
     <tr>
@@ -102,7 +102,7 @@ For {{SVGElement('missing-glyph')}}, `d` is a string containing a series of path
     <tr>
       <th scope="row">Value</th>
       <td>
-        <strong><a href="/en-US/docs/Web/SVG/Content_type#string">&#x3C;string></a></strong>
+        <strong><a href="/en-US/docs/Web/CSS/string">&#x3C;string></a></strong>
       </td>
     </tr>
     <tr>

@@ -7,7 +7,7 @@ browser-compat: webextensions.api.declarativeNetRequest.getDisabledRuleIds
 
 {{AddonSidebar}}
 
-Returns the IDs of the disabled rules in a static ruleset.
+Returns the IDs of the disabled rules in a static ruleset. The number of disabled rules in a ruleset is limited to the value of {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_DISABLED_STATIC_RULES","MAX_NUMBER_OF_DISABLED_STATIC_RULES")}}.
 
 ## Syntax
 

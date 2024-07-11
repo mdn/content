@@ -398,11 +398,8 @@
 /en-US/docs/CSS/:-moz-ui-valid	/en-US/docs/Web/CSS/:user-valid
 /en-US/docs/CSS/:-moz-user-disabled	/en-US/docs/Web/CSS/:-moz-user-disabled
 /en-US/docs/CSS/:-moz-window-inactive	/en-US/docs/Web/CSS/:-moz-window-inactive
-/en-US/docs/CSS/::-moz-page	/en-US/docs/Web/CSS/::-moz-page
-/en-US/docs/CSS/::-moz-page-sequence	/en-US/docs/Web/CSS/::-moz-page-sequence
 /en-US/docs/CSS/::-moz-placeholder	/en-US/docs/Web/CSS/::placeholder
 /en-US/docs/CSS/::-moz-progress-bar	/en-US/docs/Web/CSS/::-moz-progress-bar
-/en-US/docs/CSS/::-moz-scrolled-page-sequence	/en-US/docs/Web/CSS/::-moz-scrolled-page-sequence
 /en-US/docs/CSS/::-moz-selection	/en-US/docs/Web/CSS/::selection
 /en-US/docs/CSS/::after	/en-US/docs/Web/CSS/::after
 /en-US/docs/CSS/::after-redirect-1	/en-US/docs/Web/CSS/::after
@@ -1987,7 +1984,7 @@
 /en-US/docs/DOM/event.view	/en-US/docs/Web/API/UIEvent/view
 /en-US/docs/DOM/event.which	/en-US/docs/Web/API/UIEvent/which
 /en-US/docs/DOM/event/AnimationEvent	/en-US/docs/Web/API/AnimationEvent
-/en-US/docs/DOM/event/Comparison_of_Event_Targets	/en-US/docs/Web/API/Event/Comparison_of_Event_Targets
+/en-US/docs/DOM/event/Comparison_of_Event_Targets	/en-US/docs/Learn/JavaScript/Building_blocks/Event_bubbling
 /en-US/docs/DOM/form.acceptCharset	/en-US/docs/Web/API/HTMLFormElement/acceptCharset
 /en-US/docs/DOM/form.action	/en-US/docs/Web/API/HTMLFormElement/action
 /en-US/docs/DOM/form.elements	/en-US/docs/Web/API/HTMLFormElement/elements
@@ -2469,7 +2466,7 @@
 /en-US/docs/DOM:event.type	/en-US/docs/Web/API/Event/type
 /en-US/docs/DOM:event.view	/en-US/docs/Web/API/UIEvent/view
 /en-US/docs/DOM:event.which	/en-US/docs/Web/API/UIEvent/which
-/en-US/docs/DOM:event:Comparison_of_Event_Targets	/en-US/docs/Web/API/Event/Comparison_of_Event_Targets
+/en-US/docs/DOM:event:Comparison_of_Event_Targets	/en-US/docs/Learn/JavaScript/Building_blocks/Event_bubbling
 /en-US/docs/DOM:form.acceptCharset	/en-US/docs/Web/API/HTMLFormElement/acceptCharset
 /en-US/docs/DOM:form.action	/en-US/docs/Web/API/HTMLFormElement/action
 /en-US/docs/DOM:form.elements	/en-US/docs/Web/API/HTMLFormElement/elements
@@ -3584,6 +3581,7 @@
 /en-US/docs/Glossary/GZip	/en-US/docs/Glossary/gzip_compression
 /en-US/docs/Glossary/Global_attribute	/en-US/docs/Web/HTML/Global_attributes
 /en-US/docs/Glossary/Grid_Rows	/en-US/docs/Glossary/Grid_Row
+/en-US/docs/Glossary/Guard	/en-US/docs/Web/API/Fetch_API/Using_Fetch
 /en-US/docs/Glossary/Hash_function	/en-US/docs/Glossary/Cryptographic_hash_function
 /en-US/docs/Glossary/Header	/en-US/docs/Glossary/HTTP_header
 /en-US/docs/Glossary/I18N	/en-US/docs/Glossary/Internationalization
@@ -3601,11 +3599,13 @@
 /en-US/docs/Glossary/Property_(CSS)	/en-US/docs/Glossary/property/CSS
 /en-US/docs/Glossary/Random_Number_Generator	/en-US/docs/Glossary/RNG
 /en-US/docs/Glossary/Reference	/en-US/docs/Glossary/Object_reference
+/en-US/docs/Glossary/Rendering_engine	/en-US/docs/Glossary/Engine/Rendering
 /en-US/docs/Glossary/Responsive_design	/en-US/docs/Glossary/Responsive_web_design
 /en-US/docs/Glossary/Round_Trip_Time_(RTT)	/en-US/docs/Glossary/Round_Trip_Time
 /en-US/docs/Glossary/SRTP	/en-US/docs/Glossary/RTP
 /en-US/docs/Glossary/SSL_Glossary	/en-US/docs/Glossary/SSL
 /en-US/docs/Glossary/Scrollport	/en-US/docs/Glossary/Scroll_container
+/en-US/docs/Glossary/Second-level_Domain	/en-US/docs/Glossary/SLD
 /en-US/docs/Glossary/Serialize	/en-US/docs/Glossary/Serialization
 /en-US/docs/Glossary/Simple_header	/en-US/docs/Glossary/CORS-safelisted_request_header
 /en-US/docs/Glossary/Simple_response_header	/en-US/docs/Glossary/CORS-safelisted_response_header
@@ -6502,7 +6502,6 @@
 /en-US/docs/SVG/Attribute/color	/en-US/docs/Web/SVG/Attribute/color
 /en-US/docs/SVG/Attribute/color-interpolation	/en-US/docs/Web/SVG/Attribute/color-interpolation
 /en-US/docs/SVG/Attribute/color-interpolation-filters	/en-US/docs/Web/SVG/Attribute/color-interpolation-filters
-/en-US/docs/SVG/Attribute/color-profile	/en-US/docs/Web/SVG/Attribute/color-profile
 /en-US/docs/SVG/Attribute/cursor	/en-US/docs/Web/SVG/Attribute/cursor
 /en-US/docs/SVG/Attribute/cx	/en-US/docs/Web/SVG/Attribute/cx
 /en-US/docs/SVG/Attribute/cy	/en-US/docs/Web/SVG/Attribute/cy
@@ -6544,7 +6543,7 @@
 /en-US/docs/SVG/Attribute/k4	/en-US/docs/Web/SVG/Attribute/k4
 /en-US/docs/SVG/Attribute/kernelMatrix	/en-US/docs/Web/SVG/Attribute/kernelMatrix
 /en-US/docs/SVG/Attribute/kernelUnitLength	/en-US/docs/Web/SVG/Attribute/kernelUnitLength
-/en-US/docs/SVG/Attribute/kerning	/en-US/docs/Web/SVG/Attribute/kerning
+/en-US/docs/SVG/Attribute/kerning	/en-US/docs/Web/CSS/font-kerning
 /en-US/docs/SVG/Attribute/keySplines	/en-US/docs/Web/SVG/Attribute/keySplines
 /en-US/docs/SVG/Attribute/keyTimes	/en-US/docs/Web/SVG/Attribute/keyTimes
 /en-US/docs/SVG/Attribute/letter-spacing	/en-US/docs/Web/SVG/Attribute/letter-spacing
@@ -8135,6 +8134,7 @@
 /en-US/docs/Web/API/Event.Event	/en-US/docs/Web/API/Event/Event
 /en-US/docs/Web/API/Event.initEvent()	/en-US/docs/Web/API/Event/initEvent
 /en-US/docs/Web/API/Event/AnimationEvent	/en-US/docs/Web/API/AnimationEvent
+/en-US/docs/Web/API/Event/Comparison_of_Event_Targets	/en-US/docs/Learn/JavaScript/Building_blocks/Event_bubbling
 /en-US/docs/Web/API/Event/CustomEvent	/en-US/docs/Web/API/CustomEvent
 /en-US/docs/Web/API/Event/UIEvent	/en-US/docs/Web/API/UIEvent
 /en-US/docs/Web/API/Event/UIEvent/KeyEvent	/en-US/docs/Web/API/KeyboardEvent
@@ -8171,6 +8171,8 @@
 /en-US/docs/Web/API/FetchSignal	/en-US/docs/Web/API/AbortSignal
 /en-US/docs/Web/API/FetchSignal/aborted	/en-US/docs/Web/API/AbortSignal/aborted
 /en-US/docs/Web/API/FetchSignal/onabort	/en-US/docs/Web/API/AbortSignal/abort_event
+/en-US/docs/Web/API/Fetch_API/Basic_concepts	/en-US/docs/Web/API/Fetch_API/Using_Fetch
+/en-US/docs/Web/API/Fetch_API/Cross-global_fetch_usage	/en-US/docs/Web/API/Fetch_API/Using_Fetch
 /en-US/docs/Web/API/File.lastModifiedDate	/en-US/docs/Web/API/File/lastModifiedDate
 /en-US/docs/Web/API/File.name	/en-US/docs/Web/API/File/name
 /en-US/docs/Web/API/File.size	/en-US/docs/Web/API/Blob/size
@@ -10340,6 +10342,8 @@
 /en-US/docs/Web/API/XMLHttpRequestEventTarget/onprogress	/en-US/docs/Web/API/XMLHttpRequest/progress_event
 /en-US/docs/Web/API/XMLHttpRequestResponseType	/en-US/docs/Web/API/XMLHttpRequest/responseType
 /en-US/docs/Web/API/XPathEvaluator/XPathEvaluator.createExpression()	/en-US/docs/Web/API/XPathEvaluator/createExpression
+/en-US/docs/Web/API/XPathNSResolver	/en-US/docs/Web/API/Node/lookupNamespaceURI
+/en-US/docs/Web/API/XPathNSResolver/lookupNamespaceURI	/en-US/docs/Web/API/Node/lookupNamespaceURI
 /en-US/docs/Web/API/XPathResult/XPathResult.booleanValue	/en-US/docs/Web/API/XPathResult/booleanValue
 /en-US/docs/Web/API/XPathResult/numericValue	/en-US/docs/Web/API/XPathResult/numberValue
 /en-US/docs/Web/API/XR	/en-US/docs/Web/API/XRSystem
@@ -11568,6 +11572,7 @@
 /en-US/docs/Web/CSS/box_edges	/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 /en-US/docs/Web/CSS/box_model	/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 /en-US/docs/Web/CSS/calc()	/en-US/docs/Web/CSS/calc
+/en-US/docs/Web/CSS/calc-constant	/en-US/docs/Web/CSS/calc-keyword
 /en-US/docs/Web/CSS/clamp()	/en-US/docs/Web/CSS/clamp
 /en-US/docs/Web/CSS/color-adjust	/en-US/docs/Web/CSS/print-color-adjust
 /en-US/docs/Web/CSS/color-interpolation-filters	/en-US/docs/Web/SVG/Attribute/color-interpolation-filters
@@ -12494,12 +12499,13 @@
 /en-US/docs/Web/JavaScript/Reference/Code_comments	/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Comments
 /en-US/docs/Web/JavaScript/Reference/Data_types	/en-US/docs/Web/JavaScript/Data_structures
 /en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
-/en-US/docs/Web/JavaScript/Reference/Errors/Bad_octal	/en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_octal
+/en-US/docs/Web/JavaScript/Reference/Errors/Bad_octal	/en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_octal_literal
 /en-US/docs/Web/JavaScript/Reference/Errors/Bad_return_or_yield	/en-US/docs/Web/JavaScript/Reference/Errors/Bad_return
 /en-US/docs/Web/JavaScript/Reference/Errors/Cant_access_property	/en-US/docs/Web/JavaScript/Reference/Errors/Unexpected_type
 /en-US/docs/Web/JavaScript/Reference/Errors/Dead_object	https://blog.mozilla.org/addons/2012/09/12/what-does-cant-access-dead-object-mean/
 /en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_String_generics	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_expression_closures	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
+/en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_octal	/en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_octal_literal
 /en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_toLocaleFormat	/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /en-US/docs/Web/JavaScript/Reference/Errors/Malformed_formal_parameter	/en-US/docs/Web/JavaScript/Reference/Errors/Missing_formal_parameter
 /en-US/docs/Web/JavaScript/Reference/Errors/Not_a_codepoint	/en-US/docs/Web/JavaScript/Reference/Errors/Not_a_valid_code_point
@@ -12979,6 +12985,7 @@
 /en-US/docs/Web/SVG/Attribute/Presentation	/en-US/docs/Web/SVG/Attribute
 /en-US/docs/Web/SVG/Attribute/Styling	/en-US/docs/Web/SVG/Attribute
 /en-US/docs/Web/SVG/Attribute/dataset	/en-US/docs/Web/API/SVGElement/dataset
+/en-US/docs/Web/SVG/Attribute/kerning	/en-US/docs/Web/CSS/font-kerning
 /en-US/docs/Web/SVG/Compatibility_sources	/en-US/docs/Web/SVG
 /en-US/docs/Web/SVG/Element/animateColor	/en-US/docs/Web/SVG/Element/animate
 /en-US/docs/Web/SVG/Index	/en-US/docs/Web/SVG

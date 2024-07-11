@@ -7,7 +7,7 @@ browser-compat: css.selectors.user-valid
 
 {{CSSRef}}
 
-The **`:user-valid`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any validated form element whose value validates correctly based on its [validation constraints](/en-US/docs/Learn/Forms#constraint_validation). However, unlike {{cssxref(":valid")}} it only matches once the user has interacted with it.
+The **`:user-valid`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any validated form element whose value validates correctly based on its [validation constraints](/en-US/docs/Web/HTML/Constraint_validation). However, unlike {{cssxref(":valid")}} it only matches once the user has interacted with it.
 
 This pseudo-class is applied if the form control is valid and any of the following has occurred:
 

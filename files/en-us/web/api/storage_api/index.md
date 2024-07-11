@@ -25,7 +25,7 @@ The storage system described by the Storage Standard, where site data is stored,
 
 In essence, every website has its own storage space into which its data gets placed. In some cases however, user agents may decide to store a single origin's data in multiple different buckets, for example when this origin is embedded in different third-party origins.
 
-To learn more, see [How browsers separate data from different websites?](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria#how_browsers_separate_data_from_different_websites)
+To learn more, see [How do browsers separate data from different websites?](/en-US/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria#how_do_browsers_separate_data_from_different_websites)
 
 ### Bucket modes
 

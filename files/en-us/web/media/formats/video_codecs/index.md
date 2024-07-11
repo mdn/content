@@ -1871,7 +1871,7 @@ First, let's look at the best options for videos presented on a typical website 
    <video controls src="filename.webm"></video>
    ```
 
-2. An **[MP4](/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4)** container and the **[AVC](#avc_h.264)** (**H.264**) video codec, ideally with **[AAC](/en-US/docs/Web/Media/Formats/Audio_codecs#aac)** as your audio codec. This is because the MP4 container with AVC and AAC codecs within is a broadly-supported combination—by every major browser, in fact—and the quality is typically good for most use cases. Make sure you verify your compliance with the license requirements, however.
+2. An **[MP4](/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4)** container and the **[AVC](#avc_h.264)** (**H.264**) video codec, ideally with **[AAC](/en-US/docs/Web/Media/Formats/Audio_codecs#aac_advanced_audio_coding)** as your audio codec. This is because the MP4 container with AVC and AAC codecs within is a broadly-supported combination—by every major browser, in fact—and the quality is typically good for most use cases. Make sure you verify your compliance with the license requirements, however.
 
    ```html
    <video controls>
@@ -1933,7 +1933,7 @@ const options = {
 let recorder = new MediaRecorder(sourceStream, options);
 ```
 
-This example creates a `MediaRecorder` configured to record [AV1](#av1) video using BT.2100 HDR in 12-bit color with 4:4:4 chroma subsampling and [FLAC](/en-US/docs/Web/Media/Formats/Audio_codecs#flac) for lossless audio. The resulting file will use a bit rate of no more than 800 Mbps shared between the video and audio tracks. You will likely need to adjust these values depending on hardware performance, your requirements, and the specific codecs you choose to use. This bit rate is obviously not realistic for network transmission and would likely only be used locally.
+This example creates a `MediaRecorder` configured to record [AV1](#av1) video using BT.2100 HDR in 12-bit color with 4:4:4 chroma subsampling and [FLAC](/en-US/docs/Web/Media/Formats/Audio_codecs#flac_free_lossless_audio_codec) for lossless audio. The resulting file will use a bit rate of no more than 800 Mbps shared between the video and audio tracks. You will likely need to adjust these values depending on hardware performance, your requirements, and the specific codecs you choose to use. This bit rate is obviously not realistic for network transmission and would likely only be used locally.
 
 Breaking down the value of the `codecs` parameter into its dot-delineated properties, we see the following:
 
