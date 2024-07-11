@@ -277,7 +277,9 @@ Fixed positioning is similar to absolute positioning, with the exception that th
 
 ### Sticky positioning
 
-Sticky positioning can be thought of as a hybrid of relative and fixed positioning when its nearest scrolling ancestor is the viewport. A stickily positioned element is treated as relatively positioned until it crosses a specified threshold, at which point it is treated as fixed until it reaches the boundary of its parent. For example:
+A stickily positioned element stays in its normal position as long as it stays within the provided [inset](/en-US/docs/Web/CSS/inset) boundaries, and if the element is moved out of the boundary it stays fixed to the boundary in that direction. So the sticky positioning could be thought of as a hybrid of relative and fixed positioning. For inset sides that have `auto` value, the element doesn't stay fixed in that direction and can go out of the [scrollport](/en-US/docs/Glossary/Scroll_container#scrollport) due to scrolling.
+
+You must specify at least one of `top`, `right`, `bottom`, or `left` inset for sticky positioning to behave as expected. Otherwise, it will be indistinguishable from relative positioning.
 
 ```css
 #one {
@@ -288,91 +290,66 @@ Sticky positioning can be thought of as a hybrid of relative and fixed positioni
 
 The above CSS rule would position the element with id _one_ relatively until the viewport was scrolled such that the element would be less than 10 pixels from the top. Beyond that threshold, the element would be fixed to 10 pixels from the top.
 
-A common use for sticky positioning is for the headings in an alphabetized list. The "B" heading will appear just below the items that begin with "A" until they are scrolled offscreen. Rather than sliding offscreen with the rest of the content, the "B" heading will then remain fixed to the top of the viewport until all the "B" items have scrolled offscreen, at which point it will be covered up by the "C" heading, and so on.
-
-You must specify a threshold with at least one of `top`, `right`, `bottom`, or `left` for sticky positioning to behave as expected. Otherwise, it will be indistinguishable from relative positioning.
-
 #### HTML
 
 ```html
-<dl>
-  <div>
-    <dt>A</dt>
-    <dd>Andrew W.K.</dd>
-    <dd>Apparat</dd>
-    <dd>Arcade Fire</dd>
-    <dd>At The Drive-In</dd>
-    <dd>Aziz Ansari</dd>
-  </div>
-  <div>
-    <dt>C</dt>
-    <dd>Chromeo</dd>
-    <dd>Common</dd>
-    <dd>Converge</dd>
-    <dd>Crystal Castles</dd>
-    <dd>Cursive</dd>
-  </div>
-  <div>
-    <dt>E</dt>
-    <dd>Explosions In The Sky</dd>
-  </div>
-  <div>
-    <dt>T</dt>
-    <dd>Ted Leo &amp; The Pharmacists</dd>
-    <dd>T-Pain</dd>
-    <dd>Thrice</dd>
-    <dd>TV On The Radio</dd>
-    <dd>Two Gallants</dd>
-  </div>
-</dl>
+Try to find the right places of the sticky light bulbs(💡) in the following
+text:
+<div>
+  <p>
+    The representation of an idea by a light bulb(<span class="bulb">💡</span>)
+    is a commonly used metaphor that symbolizes the moment of inspiration or the
+    birth of a new idea. The association between a light bulb and an idea can be
+    traced back to the invention of the incandescent light bulb(<span
+      class="bulb"
+      >💡</span
+    >) by Thomas Edison in the late 19th century. The light bulb is a powerful
+    symbol because it represents illumination, clarity, and the sudden
+    brightening of one's thoughts or understanding. When someone has an idea, it
+    is often described as a light bulb turning on in their mind, signifying a
+    moment of insight or creativity. The image of a light bulb also suggests the
+    idea of energy, power, and the potential for growth and development.
+  </p>
+</div>
 ```
 
 #### CSS
 
+```css hidden
+div {
+  width: 400px;
+  height: 200px;
+  overflow: scroll;
+  font-size: 16px;
+  font-family: verdana;
+  border: 1px solid;
+}
+
+p {
+  width: 600px;
+  height: 300px;
+  user-select: none;
+  margin: 100px 150px 50px 100px;
+}
+```
+
 ```css
-* {
-  box-sizing: border-box;
-}
-
-dl > div {
-  background: #fff;
-  padding: 24px 0 0 0;
-}
-
-dt {
-  background: #b8c1c8;
-  border-bottom: 1px solid #989ea4;
-  border-top: 1px solid #717d85;
-  color: #fff;
-  font:
-    bold 18px/21px Helvetica,
-    Arial,
-    sans-serif;
-  margin: 0;
-  padding: 2px 0 0 12px;
-  position: -webkit-sticky;
+.bulb {
   position: sticky;
-  top: -1px;
+  inset: 50px 100px 50px 100px;
 }
 
-dd {
-  font:
-    bold 20px/45px Helvetica,
-    Arial,
-    sans-serif;
-  margin: 0;
-  padding: 0 0 0 12px;
-  white-space: nowrap;
-}
-
-dd + dd {
-  border-top: 1px solid #ccc;
+div {
+  /* mark area defined by the inset boundaries using gray color */
+  background: linear-gradient(#9999, #9999) 100px 50px / 184px 84px no-repeat;
 }
 ```
 
 #### Result
 
 {{EmbedLiveSample('Sticky_positioning', '', '300px')}}
+
+In the above example, both the light bulbs have been made sticky, and inset boundaries have been specified as 50px(top), 100px(right), 50px(bottom), and 100px(right). The inset area has been marked using the same-sized gray-colored background on the div. After you put both the bulbs in their right place, you'll notice that the bulbs act as relatively positioned inside the inset area. But as soon as they get moved out of the inset area they get fixed(stick) to the inset boundary in that direction.
 
 ## Specifications
 
