@@ -7,7 +7,7 @@ status:
 browser-compat: api.CSSPositionTryDescriptors
 ---
 
-{{APIRef("CSSOM")}}
+{{APIRef("CSSOM")}}{{SeeCompatTable}}
 
 The **`CSSPositionTryDescriptors`** interface describes an object representing a {{cssxref("@position-try")}} [at-rule](/en-US/docs/Web/CSS/At-rule).
 
