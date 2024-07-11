@@ -57,7 +57,7 @@ There are plans to further extend possible queries by adding the generalized con
 
 - {{glossary("media/CSS", "Media")}}
 - Supports query (See [feature query](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries))
-- [Conditional group rules](/en-US/docs/Web/CSS/At-rule#conditional_group_rules)
+- [Conditional group rules](/en-US/docs/Web/CSS/CSS_conditional_rules)
 
 ## Guides
 

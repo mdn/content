@@ -15,7 +15,7 @@ The **`@media`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rul
 
 ## Syntax
 
-The `@media` at-rule may be placed at the top level of your code or nested inside any other [conditional group at-rule](/en-US/docs/Web/CSS/At-rule#conditional_group_rules).
+The `@media` at-rule may be placed at the top level of your code or nested inside any other conditional group at-rule.
 
 ```css
 /* At the top level of your code */
