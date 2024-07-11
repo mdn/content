@@ -12306,6 +12306,7 @@
 /en-US/docs/Web/HTTP/HTTP_response_codes	/en-US/docs/Web/HTTP/Status
 /en-US/docs/Web/HTTP/Headers/Cache-Disposition	/en-US/docs/Web/HTTP/Headers/Content-Disposition
 /en-US/docs/Web/HTTP/Headers/Content-Security-Policy/navigate-to	/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
+/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/referrer	/en-US/docs/Web/HTTP/Headers/Referrer-Policy
 /en-US/docs/Web/HTTP/Headers/Content-Security-Policy/require-sri-for	/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
 /en-US/docs/Web/HTTP/Headers/Cookie2	/en-US/docs/Web/HTTP/Headers/Cookie
 /en-US/docs/Web/HTTP/Headers/Feature-Policy	/en-US/docs/Web/HTTP/Headers/Permissions-Policy

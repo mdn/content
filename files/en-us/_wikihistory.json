@@ -99743,10 +99743,6 @@
     "modified": "2020-10-15T22:21:20.756Z",
     "contributors": ["mfuji09", "bershanskiy"]
   },
-  "Web/HTTP/Headers/Content-Security-Policy/referrer": {
-    "modified": "2020-10-15T21:50:39.723Z",
-    "contributors": ["bershanskiy", "Sheppy", "infuerno", "fscholz", "teoli"]
-  },
   "Web/HTTP/Headers/Content-Security-Policy/report-to": {
     "modified": "2020-10-15T22:03:06.085Z",
     "contributors": [
