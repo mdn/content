@@ -83,7 +83,7 @@ In addition to the `@view-transition` at-rule, we define two {{cssxref("@keyfram
 }
 ```
 
-See the [transitions multi-page app live](https://mdn.github.io/dom-examples/view-transitions/mpa/).
+See this [transitions multi-page app](https://mdn.github.io/dom-examples/view-transitions/mpa/) demo live.
 
 ## Specifications
 
