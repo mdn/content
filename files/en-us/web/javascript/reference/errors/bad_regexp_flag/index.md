@@ -26,7 +26,7 @@ The regular expression contains invalid flags, or valid flags have been used mor
 
 The valid (allowed) flags are `d`, `g`, `i`, `m`, `s`, `u`, `v`, and `y`. They are introduced in more detail in [Regular expressions > Advanced searching with flags](/en-US/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags).
 
-The the [`u`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) and [`v`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets) flags are mutually exclusive, so they cannot be used together. You can read the references to understand what their behavior differences are.
+The [`u`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) and [`v`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets) flags are mutually exclusive, so they cannot be used together. You can read the references to understand what their behavior differences are.
 
 ## Examples
 

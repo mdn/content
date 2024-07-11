@@ -34,7 +34,7 @@ In Unicode-unaware mode, this syntax causes the `-` to become a literal characte
 /[\s-_]/u; // \s is a character class escape for whitespace
 /[A-\D]/u; // \D is a character class escape for non-digits
 /[\p{L}-\p{N}]/u; // \p{L} is a character class escape for Unicode letters
-/[\w-_]/v; // In unicodeSets mode, character classes can be nested
+/[[A-z]-_]/v; // In unicodeSets mode, character classes can be nested
 ```
 
 ### Valid cases
@@ -50,7 +50,7 @@ In Unicode-unaware mode, this syntax causes the `-` to become a literal characte
 // Remove the hyphen so the two bounds represent two alternatives
 /[\p{L}\p{N}]/u;
 // Use -- in unicodeSets mode, which represents set subtraction
-/[\w--_]]/v;
+/[[A-z]--_]]/v;
 ```
 
 ## See also
