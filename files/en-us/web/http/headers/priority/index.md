@@ -9,8 +9,8 @@ browser-compat: http.headers.Priority
 
 The **`Priority`** HTTP header is sent in requests to indicate a client's preference for the priority order at which the response containing the requested resource should be sent, relative to other resource requests on the same connection. If the header is not specified in the request, a default priority is assumed.
 
-The server is not bound by the client prioritization, and might use the client request as just one input to its own prioritization process.
-For example, a server may have specific knowledge that a particular image is vitally important for the best user experience, and therefore should be sent at highest priority.
+The server is not bound by client prioritization and might only use client requests as hints for its own prioritization process.
+For example, a server may know that a specific image is vital for user experience and should be sent at the highest priority.
 Server prioritization might also be affected by factors such as network congestion.
 
 This request may be cached, and the server is expected to control the cacheability or the applicability of the cached response using the header fields that control the caching behavior, such as {{HTTPHeader("Cache-Control")}} and {{HTTPHeader("Vary")}}.
@@ -18,7 +18,7 @@ This request may be cached, and the server is expected to control the cacheabili
 The server may also include this header in responses in order to indicate it has an interest in changing the prioritization.
 This information can then be used as an input to the prioritization process for caching servers and other servers that are forwarding the response.
 
-> **Note:** This header is just one part of the "Extensible Prioritization Scheme for HTTP" defined in {{rfc("9218")}}.
+> **Note:** This header is one part of the "Extensible Prioritization Scheme for HTTP" defined in {{rfc("9218")}}.
 > There are also HTTP/2 and HTTP/3 `PRIORITY_UPDATE` frames that can be used to re-prioritize a resource request after it has been sent.
 > The request can be sent in any HTTP version.
 
@@ -51,10 +51,10 @@ Priority: u=<priority>, i
 - `u=<priority>`
 
   - : The "urgency" (`u`) parameter specifies a priority value `<priority>` for the resource.
-    The value is an integer between 0 and 7 inclusive, in descending order of priority.
+    The value is an integer between 0 and 7 inclusive, in descending order of priority (0 is the highest urgency).
     The default priority value for requests is 3.
     There is no default priority value for responses: the absence of the header in a response indicates that the server has chosen not to modify the client priority.
-    A priority of 7 should only be used for resources that are unlikely to affect the user experience.
+    A priority of 7 should only be used for resources that are unlikely to affect the user experience, such as background tasks or delivery of software updates.
 
     Browsers should request documents that are likely to use other resources at the default priority level.
     The referenced resources should then be requested using values that reflect the relative impact on the user experience of their arrival time.
@@ -80,7 +80,7 @@ Priority: u=<priority>, i
 
 ## Examples
 
-### Setting the urgency
+### Setting resource urgency
 
 The following example shows a request for an HTML file.
 The urgency isn't set, and so defaults to 3, with `i` being false.
@@ -93,7 +93,7 @@ This is the normal setting for a document that owns other resources.
 :path = /index.html
 ```
 
-The HTTP below request below a possible follow on request for a CSS file.
+The request below is a possible follow-on request for a CSS file used by the HTML.
 The urgency is set to 2, indicating that the browser considers it to be quite high priority, but `i` is unset because the CSS file can't be handled incrementally.
 
 ```http
@@ -126,7 +126,7 @@ date: [current date]
 ### Setting the incremental directive
 
 The header below shows a browser request for an image that can be rendered incrementally.
-In this case the priority is set lower than the default (4) and `i` is set to indicate that the JPG file can be processed incrementally.
+In this case, the priority is set to 4 (lower than the default of 3), and `i` is set to indicate that the client can process the JPG file incrementally.
 
 ```http
 :method = GET
