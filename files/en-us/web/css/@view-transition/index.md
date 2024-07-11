@@ -95,7 +95,6 @@ See this [transitions multi-page app](https://mdn.github.io/dom-examples/view-tr
 
 ## See also
 
-
 - {{cssxref("::view-transition", "::view-transition")}}
 - {{cssxref("::view-transition-new", "::view-transition-new()")}}
 - {{cssxref("::view-transition-old", "::view-transition-old()")}}
