@@ -20,5 +20,6 @@ See the {{domxref("UserActivation.isActive")}} property to programmatically acce
 ## See also
 
 - [HTML Living Standard > Transient activation](https://html.spec.whatwg.org/multipage/interaction.html#transient-activation)
-- {{Glossary("Sticky activation")}}
+- Related glossary terms:
+  - {{Glossary("Sticky activation")}}
 - {{domxref("UserActivation.isActive")}}

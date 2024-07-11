@@ -15,7 +15,7 @@ Specifically, where a defined policy blocks the use of this feature:
 
 - Background `attributionsrc` requests won't be made.
 - The {{domxref("XMLHttpRequest.setAttributionReporting()")}} method will throw an exception when called.
-- The [`attributionReporting`](/en-US/docs/Web/API/fetch#attributionreporting) option, when included on a {{domxref("fetch()")}} call, will cause it to throw an exception.
+- The [`attributionReporting`](/en-US/docs/Web/API/RequestInit#attributionreporting) option, when included on a {{domxref("fetch()")}} call, will cause it to throw an exception.
 - Registration headers ({{httpheader("Attribution-Reporting-Register-Source")}} and {{httpheader("Attribution-Reporting-Register-Trigger")}}) in HTTP responses on associated documents will be ignored.
 
 ## Syntax

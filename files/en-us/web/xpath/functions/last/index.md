@@ -8,24 +8,24 @@ page-type: xpath-function
 
 The `last` function returns a number equal to the context size from the expression evaluation context.
 
-### Syntax
+## Syntax
 
 ```plain
 last()
 ```
 
-### Returns
+### Return value
 
 An integer equal to the context size from the expression evaluation context.
 
-### Notes
+## Description
 
 - This is often used with the [position()](/en-US/docs/Web/XPath/Functions/position) function to determine if a particular node is the last in a node-set.
 
-### Defined
+## Specifications
 
 [XPath 1.0 4.1](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-last)
 
-### Gecko support
+## Gecko support
 
 Supported.

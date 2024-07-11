@@ -8,7 +8,7 @@ page-type: xslt-element
 
 The `<xsl:value-of>` element evaluates an XPath expression, converts it to a string, and writes that string to the result tree.
 
-### Syntax
+## Syntax
 
 ```xml
 <xsl:value-of select=EXPRESSION disable-output-escaping="yes" | "no"  />
@@ -28,10 +28,10 @@ The `<xsl:value-of>` element evaluates an XPath expression, converts it to a str
 
 Instruction, appears with a template.
 
-### Defined
+## Specifications
 
 XSLT, section 7.6.1.
 
-### Gecko support
+## Gecko support
 
 Supported except as above.

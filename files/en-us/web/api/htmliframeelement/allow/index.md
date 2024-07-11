@@ -12,7 +12,7 @@ The **`allow`** property of the {{domxref("HTMLIFrameElement")}} interface indic
 
 The Permissions Policy specified by the `allow` attribute implements a further restriction on top of the policy specified in the {{HTTPHeader("Permissions-Policy")}} header. It doesn't replace it.
 
-See [`<iframe>`'s Permissions Policy syntax](/en-US/docs/Web/HTTP/Permissions_Policy#iframe_syntax) for more details.
+See [`<iframe>`'s Permissions Policy syntax](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#iframes) for more details.
 
 It reflects the `allow` attribute of the {{HTMLElement("iframe")}} element.
 
@@ -34,7 +34,7 @@ const el = document.getElementById("el");
 console.log(el.allow); // Output: "geolocation 'self' https://a.example.com https://b.example.com; fullscreen 'none'"
 ```
 
-See [Permissions Policy in `<iframe>` element](/en-US/docs/Web/HTTP/Permissions_Policy#iframe_syntax) for more available examples.
+See [Permissions Policy in `<iframe>` element](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#iframes) for more available examples.
 
 ## Specifications
 

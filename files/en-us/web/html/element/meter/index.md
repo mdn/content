@@ -21,9 +21,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     > **Note:** Unless the `value` attribute is between `0` and `1` (inclusive), the `min` and `max` attributes should define the range so that the `value` attribute's value is within it.
 
-- `min`
+- [`min`](/en-US/docs/Web/HTML/Attributes/min)
   - : The lower numeric bound of the measured range. This must be less than the maximum value (`max` attribute), if specified. If unspecified, the minimum value is `0`.
-- `max`
+- [`max`](/en-US/docs/Web/HTML/Attributes/max)
   - : The upper numeric bound of the measured range. This must be greater than the minimum value (`min` attribute), if specified. If unspecified, the maximum value is `1`.
 - `low`
   - : The upper numeric bound of the low end of the measured range. This must be greater than the minimum value (`min` attribute), and it also must be less than the high value and maximum value (`high` attribute and `max` attribute, respectively), if any are specified. If unspecified, or if less than the minimum value, the `low` value is equal to the minimum value.
@@ -36,25 +36,19 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ## Examples
 
-### Simple example
+### Simple Example
 
 #### HTML
 
 ```html
-<p>
-  Heat the oven to <meter min="200" max="500" value="350">350 degrees</meter>.
-</p>
+<p>Battery level: <meter min="0" max="100" value="75">75%</meter></p>
 ```
 
 #### Result
 
 {{EmbedLiveSample("Simple_example", 300, 60)}}
 
-On Google Chrome, the resulting meter looks like this:
-
-![A screenshot of the meter element in Google Chrome](screen_shot_2020-10-12_at_10.10.53_pm.png)
-
-### High and Low range example
+### High and low range example
 
 Note that in this example the [`min`](#min) attribute is omitted. This is allowed, as it will default to `0`.
 
@@ -62,7 +56,8 @@ Note that in this example the [`min`](#min) attribute is omitted. This is allowe
 
 ```html
 <p>
-  He got a <meter low="69" high="80" max="100" value="84">B</meter> on the exam.
+  Student's exam score:
+  <meter min="0" low="50" high="80" max="100" value="84">84%</meter>
 </p>
 ```
 
@@ -70,11 +65,7 @@ Note that in this example the [`min`](#min) attribute is omitted. This is allowe
 
 {{EmbedLiveSample("High_and_Low_range_example", 300, 60)}}
 
-On Google Chrome, the resulting meter looks like this:
-
-![red meter in Google Chrome](screen_shot_2020-10-12_at_10.11.52_pm.png)
-
-## Technical summary
+## Technical Summary
 
 <table class="properties">
   <tbody>
