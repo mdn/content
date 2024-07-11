@@ -39,9 +39,8 @@ user-select: unset;
   - : The used value of `auto` is determined as follows:
 
     - On the `::before` and `::after` pseudo elements, the used value is `none`
-    - If the element is an editable element, the used value is `contain`
+    - If the used value of `user-select` on the parent of this element is `none`, the used value is `none`
     - Otherwise, if the used value of `user-select` on the parent of this element is `all`, the used value is `all`
-    - Otherwise, if the used value of `user-select` on the parent of this element is `none`, the used value is `none`
     - Otherwise, the used value is `text`
 
 - `text`
