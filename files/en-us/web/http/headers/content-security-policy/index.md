@@ -170,9 +170,6 @@ Reporting directives control the reporting process of CSP violations. See also t
 
 - {{CSP("block-all-mixed-content")}} {{deprecated_inline}}
   - : Prevents loading any assets using HTTP when the page is loaded using HTTPS.
-- {{CSP("referrer")}} {{deprecated_inline}} {{non-standard_inline}}
-  - : Used to specify information in the [Referer](/en-US/docs/Web/HTTP/Headers/Referer) (sic) header for links away
-    from a page. Use the {{HTTPHeader("Referrer-Policy")}} header instead.
 
 ## Values
 
