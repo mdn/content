@@ -76,7 +76,7 @@ The single argument constructor (see above) creates a clone of an existing {{dom
 
 ## Examples
 
-In the following example, the KeyframeEffect constructor is used to create a set of keyframes that dictate how the emoji should role on the floor:
+In the following example, the KeyframeEffect constructor is used to create a set of keyframes that dictate how the emoji should roll on the floor:
 
 ```js
 const emoji = document.querySelector("div"); // element to animate
