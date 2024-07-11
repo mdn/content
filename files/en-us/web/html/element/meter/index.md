@@ -41,9 +41,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 #### HTML
 
 ```html
-<p>
-  Battery level: <meter min="0" max="100" value="75">75%</meter>
-</p>
+<p>Battery level: <meter min="0" max="100" value="75">75%</meter></p>
 ```
 
 #### Result
