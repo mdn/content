@@ -19,7 +19,8 @@ This is used to represent messages in:
 - [Broadcast channels](/en-US/docs/Web/API/Broadcast_Channel_API) (see {{domxref("BroadcastChannel.postMessage()")}}) and the {{domxref("BroadcastChannel.message_event", "message")}} event of {{domxref("BroadcastChannel")}}).
 - WebRTC data channels (see the {{domxref("RTCDataChannel.message_event", "message")}} event of {{domxref("RTCDataChannel")}}).
 
-The action triggered by this event is defined in a function set as the event handler for the relevant `message` event (e.g. using an `onmessage` handler as listed above).
+The action triggered by this event is defined in a function set as the event handler for the relevant `message` event.
+
 {{InheritanceDiagram}}
 
 ## Constructor
