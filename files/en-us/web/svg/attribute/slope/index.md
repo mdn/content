@@ -8,7 +8,9 @@ spec-urls: https://drafts.fxtf.org/filter-effects/#element-attrdef-fecomponenttr
 
 {{SVGRef}}
 
-The **`slope`** attribute defines the values for linear filters, such as brightness. The `slope` attribute is supported by children of the {{SVGElement("feComponentTransfer")}} filter primitive, including the `<feFuncR>`, `<feFuncB>`, `<feFuncG>`, and `<feFuncA>` transfer functions. When the `type` of a transfer function is `linear`, the `slope` defines the slope of the linear function.
+The **`slope`** attribute defines the values for linear filters, such as brightness.
+
+The `slope` attribute is supported by children of the {{SVGElement("feComponentTransfer")}} filter primitive, including the `<feFuncR>`, `<feFuncB>`, `<feFuncG>`, and `<feFuncA>` transfer functions. When the `type` of a transfer function is `linear`, the `slope` defines the slope of the linear function.
 
 You can use this attribute with the following SVG component transfer function elements when `type="linear"` is set:
 
