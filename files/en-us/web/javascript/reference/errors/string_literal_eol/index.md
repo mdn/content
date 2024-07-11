@@ -1,20 +1,21 @@
 ---
-title: "SyntaxError: unterminated string literal"
-slug: Web/JavaScript/Reference/Errors/Unterminated_string_literal
+title: "SyntaxError: string literal contains an unescaped line break"
+slug: Web/JavaScript/Reference/Errors/String_literal_EOL
 page-type: javascript-error
 ---
 
 {{jsSidebar("Errors")}}
 
-The JavaScript error "unterminated string literal" occurs when there is an unterminated
+The JavaScript error "string literal contains an unescaped line break" occurs when there is an unterminated
 [string literal](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#string_literals) somewhere. String literals must be enclosed by single
-(`'`) or double (`"`) quotes.
+(`'`) or double (`"`) quotes and cannot split across multiple lines.
 
 ## Message
 
 ```plain
-SyntaxError: Unterminated string constant (Edge)
-SyntaxError: unterminated string literal (Firefox)
+SyntaxError: Invalid or unexpected token (V8-based)
+SyntaxError: '' string literal contains an unescaped line break (Firefox)
+SyntaxError: Unexpected EOF (Safari)
 ```
 
 ## Error type
