@@ -99,7 +99,7 @@ img {
 
 #### Result
 
-{{EmbedLiveSample('Setting_image_scaling_algorithms')}}
+{{EmbedLiveSample('Setting_image_scaling_algorithms', 260, 260)}}
 
 ## Specifications
 
