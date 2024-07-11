@@ -7,7 +7,7 @@ status:
 browser-compat: api.CSSPositionTryRule
 ---
 
-{{APIRef("CSSOM")}}
+{{APIRef("CSSOM")}}{{SeeCompatTable}}
 
 The **`CSSPositionTryRule`** interface describes an object representing a {{cssxref("@position-try")}} [at-rule](/en-US/docs/Web/CSS/At-rule).
 
@@ -17,9 +17,9 @@ The **`CSSPositionTryRule`** interface describes an object representing a {{cssx
 
 _Inherits properties from its ancestor {{domxref("CSSRule")}}._
 
-- {{domxref("CSSPositionTryRule.name")}} {{ReadOnlyInline}}
+- {{domxref("CSSPositionTryRule.name")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : Represents the name of the position try option specified by the `@position-try` at-rule's {{cssxref("dashed-ident")}}.
-- {{domxref("CSSPositionTryRule.style")}} {{ReadOnlyInline}}
+- {{domxref("CSSPositionTryRule.style")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : Returns a {{domxref("CSSPositionTryDescriptors")}} object representing the declarations set in the body of the `@position-try` at-rule.
 
 ## Instance methods

@@ -99739,10 +99739,6 @@
     "modified": "2020-10-15T21:50:32.476Z",
     "contributors": ["mfuji09", "Sheppy", "vrana", "Malvoz", "fscholz"]
   },
-  "Web/HTTP/Headers/Content-Security-Policy/plugin-types": {
-    "modified": "2020-10-15T21:50:26.194Z",
-    "contributors": ["mfuji09", "Sheppy", "fscholz", "teoli"]
-  },
   "Web/HTTP/Headers/Content-Security-Policy/prefetch-src": {
     "modified": "2020-10-15T22:21:20.756Z",
     "contributors": ["mfuji09", "bershanskiy"]
