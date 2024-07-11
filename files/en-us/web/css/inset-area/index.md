@@ -425,10 +425,9 @@ Try selecting new `inset-area` values from the `<select>` menu to see the effect
 
 - {{cssxref("anchor-name")}}
 - {{cssxref("position-anchor")}}
-- {{cssxref("position-try-options")}}
+- {{cssxref("position-try-fallbacks")}}
 - The [`anchor()`](/en-US/docs/Web/CSS/anchor) function
-- The [`inset-area()`](/en-US/docs/Web/CSS/inset-area_function) function
 - The [`<inset-area>`](/en-US/docs/Web/CSS/inset-area_value) value
 - [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide
-- [Handling overflow: try options and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide
+- [Handling overflow: try fallbacks and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide
 - [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module

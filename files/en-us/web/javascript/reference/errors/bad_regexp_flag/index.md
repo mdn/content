@@ -13,8 +13,10 @@ It may also be raised if the expression contains more than one instance of a val
 ## Message
 
 ```plain
+SyntaxError: Invalid flags supplied to RegExp constructor 'x' (V8-based)
 SyntaxError: Invalid regular expression flags (V8-based)
 SyntaxError: invalid regular expression flag x (Firefox)
+SyntaxError: Invalid flags supplied to RegExp constructor. (Safari)
 SyntaxError: Invalid regular expression: invalid flags (Safari)
 ```
 
