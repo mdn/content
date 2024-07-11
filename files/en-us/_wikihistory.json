@@ -100061,10 +100061,6 @@
       "teoli"
     ]
   },
-  "Web/HTTP/Headers/Large-Allocation": {
-    "modified": "2020-10-15T21:51:49.609Z",
-    "contributors": ["fscholz"]
-  },
   "Web/HTTP/Headers/Last-Modified": {
     "modified": "2020-10-15T21:48:43.337Z",
     "contributors": [
