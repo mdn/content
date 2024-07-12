@@ -45,3 +45,4 @@ None.
 
 - {{domxref("DOMParser.parseFromString()")}} for parsing HTML or XML into a DOM tree
 - {{domxref("Element.setHTMLUnsafe")}}
+- [Declarative Shadow DOM polyfill](https://github.com/EasyWebApp/declarative-shadow-dom-polyfill)

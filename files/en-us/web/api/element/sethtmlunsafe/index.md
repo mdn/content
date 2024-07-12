@@ -62,3 +62,4 @@ document.getElementById("target").setHTMLUnsafe(value);
 - {{domxref("ShadowRoot.setHTMLUnsafe()")}}
 - {{domxref("Element.innerHTML")}}
 - {{domxref("Document.parseHTMLUnsafe_static", "Document.parseHTMLUnsafe()")}}
+- [Declarative Shadow DOM polyfill](https://github.com/EasyWebApp/declarative-shadow-dom-polyfill)

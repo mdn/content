@@ -49,3 +49,4 @@ None.
 - {{domxref("Element.setHTMLUnsafe()")}}
 - {{domxref("ShadowRoot.innerHTML")}}
 - {{domxref("Document.parseHTMLUnsafe_static", "Document.parseHTMLUnsafe()")}}
+- [Declarative Shadow DOM polyfill](https://github.com/EasyWebApp/declarative-shadow-dom-polyfill)
