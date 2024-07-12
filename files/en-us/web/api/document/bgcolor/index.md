@@ -17,6 +17,8 @@ current document.
 
 A string representing the color as a word (e.g., "red") or hexadecimal value (e.g., "`#ff0000`").
 
+When set to the `null` value, that `null` value is converted to the empty string (`""`), so `document.bgColor = null` is equivalent to `document.bgColor = ""`.
+
 ## Examples
 
 ```js

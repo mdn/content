@@ -45,7 +45,7 @@ createPattern(image, repetition)
     - `"repeat-y"` (vertical only)
     - `"no-repeat"` (neither direction)
 
-    If `repetition` is specified as an empty string (`""`) or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) (but not {{jsxref("undefined")}}), a value of `"repeat"` will be used.
+    A [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) value is treated the same as the empty string (`""`): both are synonyms of `"repeat"`.
 
 ### Return value
 
