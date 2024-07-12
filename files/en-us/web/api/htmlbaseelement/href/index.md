@@ -14,7 +14,7 @@ It reflects the `href` attribute of the {{HTMLElement("base")}} element.
 
 ## Value
 
-A string that contains a URL, or the empty string (`""`) if the `<base>` element does not include the `href` attribute.
+A string that contains a URL, or the empty string (`""`) if the corresponding `<base>` element does not include the `href` attribute.
 
 ## Examples
 
