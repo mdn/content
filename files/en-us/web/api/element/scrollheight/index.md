@@ -46,16 +46,6 @@ The following will _not_ work all the time because `scrollTop` can contain decim
 element.scrollHeight - Math.abs(element.scrollTop) === element.clientHeight;
 ```
 
-### Determine if an element is scrollable
-
-When the container does not scroll, but has overflowing children, these checks
-determine if the container can scroll:
-
-```js
-window.getComputedStyle(element).overflowY === "visible";
-window.getComputedStyle(element).overflowY !== "hidden";
-```
-
 ### Determine if the content of an element is overflowing
 
 This function returns a boolean value indicating if the content of an element is overflowing its bounds:
@@ -63,6 +53,17 @@ This function returns a boolean value indicating if the content of an element is
 ```js
 function isOverflowing(element) {
   return element.scrollHeight > element.clientHeight;
+}
+```
+
+Then, you may want to check if it's scrollable in this case:
+
+```js
+function isScrollable(element) {
+  return (
+    isOverflowing(element) &&
+    ["scroll", "auto"].includes(window.getComputedStyle(element).overflowY)
+  );
 }
 ```
 
