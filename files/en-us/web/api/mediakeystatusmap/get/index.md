@@ -39,7 +39,10 @@ The following status values are allowed:
 - `output-restricted`
   - : There are output restrictions associated with the key based on the specified policy.
     Media data decrypted with this key may be blocked from presentation.
-    An application might, for example, opt to use a higher HDCP version, or content that does not require such a high version.
+    The status indicates that the connection between the source and output (for example, your computer and an external display), is not trusted.
+    This might indicate that there are HDCP version mismatches between the source, intermediate devices, and output, or that intermediate connecting devices such as HDMI cables or video splitters are damaged or non-compliant.
+    An application might opt to use a higher HDCP version, content that does not require such a high version.
+    You should also check that intermediate devices and cables support HDCP, are connected firmly, and are not damaged.
 - `output-downscaled`
   - : There are output restrictions associated with the key based on the specified policy, however these restrictions might be relaxed if the content is played at a lower quality.
     If this value is returned an application might play the content at a lower resolution, or it could choose to use a higher HDCP version, or use other content that does not require such a high HDCP version.
