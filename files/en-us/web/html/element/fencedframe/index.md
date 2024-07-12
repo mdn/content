@@ -63,7 +63,7 @@ However, trying to traverse the boundary via an API call such as {{domxref("HTML
 As a [replaced element](/en-US/docs/Web/CSS/Replaced_element), the position of the embedded document within the `<iframe>` element's box can be adjusted with the {{cssxref("object-position")}}.
 
 > [!NOTE]
-> The {{cssxref("object-fit")}} doesn't work on `<fencedframe>` element.
+> The {{cssxref("object-fit")}} has no effect on `<fencedframe>` elements.
 
 The size of the embedded content may be set by internal `contentWidth` and `contentHeight` properties of the `<fencedframe>`'s {{domxref("HTMLFencedFrameElement.config", "config")}} object. In such cases, changing the `width` or `height` of the `<fencedframe>` will change the size of the embedded container on the page, but the document inside the container will be visually scaled to fit. The reported width and height of the embedded document (i.e. {{domxref("Window.innerWidth")}} and {{domxref("Window.innerHeight")}}) will be unchanged.
 

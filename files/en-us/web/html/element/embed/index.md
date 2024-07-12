@@ -33,7 +33,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 You can use the {{cssxref("object-position")}} property to adjust the positioning of the embedded object within the element's frame.
 
 > [!NOTE]
-> The {{cssxref("object-fit")}} doesn't work on `<embed>` element.
+> The {{cssxref("object-fit")}} has no effect on `<embed>` elements.
 
 ## Accessibility
 
