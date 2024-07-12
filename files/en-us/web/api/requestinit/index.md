@@ -89,7 +89,7 @@ You can also construct a `Request` with a `RequestInit`, and pass the `Request` 
 
 - `credentials` {{optional_inline}}
 
-  - : Controls whether or not the browser sends credentials with the request. Credentials are cookies, {{glossary("TLS")}} client certificates, or authentication headers containing a username and password. This option may be any one of the following values:
+  - : Controls whether or not the browser sends credentials with the request, as well as whether any **`Set-Cookie`** response headers are respected. Credentials are cookies, {{glossary("TLS")}} client certificates, or authentication headers containing a username and password. This option may be any one of the following values:
 
     - `omit`
       - : Never send credentials in the request or include credentials in the response.
