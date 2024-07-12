@@ -9,7 +9,7 @@ browser-compat: api.HTMLTableSectionElement.insertRow
 {{APIRef("HTML DOM")}}
 
 The **`insertRow()`** method of the {{domxref("HTMLTableSectionElement")}} interface inserts a new row
-({{HtmlElement("tr")}}) in the given  ({{HTMLElement("thead")}}, {{HTMLElement("tfoot")}}, or
+({{HtmlElement("tr")}}) in the given ({{HTMLElement("thead")}}, {{HTMLElement("tfoot")}}, or
 {{HTMLElement("tbody")}} element then returns a reference to this new row.
 
 > **Note:** `insertRow()` inserts the row directly into the
