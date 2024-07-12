@@ -18,7 +18,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}_.
 - {{domxref("HTMLIFrameElement.align")}} {{Deprecated_Inline}}
   - : A string that specifies the alignment of the frame with respect to the surrounding context.
 - {{domxref("HTMLIFrameElement.allow")}}
-  - : A list of origins the frame is allowed to display content from. This attribute also accepts the values `self` and `src` which represent the origin in the iframe's src attribute. The default value is `src`.
+  - : A string that indicates the [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) specified for this `<iframe>`.
 - {{domxref("HTMLIFrameElement.allowFullscreen")}}
   - : A boolean value indicating whether the inline frame is willing to be placed into full screen mode. See [Using fullscreen mode](/en-US/docs/Web/API/Fullscreen_API) for details.
 - {{domxref("HTMLIFrameElement.allowPaymentRequest")}} {{Deprecated_Inline}} {{Non-standard_Inline}}

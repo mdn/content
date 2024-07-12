@@ -7,7 +7,7 @@ status:
 browser-compat: api.ImageTrack
 ---
 
-{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
+{{APIRef("WebCodecs API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`ImageTrack`** interface of the {{domxref('WebCodecs API','','','true')}} represents an individual image track.
 

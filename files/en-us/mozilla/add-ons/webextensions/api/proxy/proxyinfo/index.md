@@ -42,7 +42,7 @@ Values of this type are objects. They contain the following properties:
     For instance, if you want to send "username" and "password" for "basic" authentication, you can set the `proxyAuthorizationHeader` property to `Basic dXNlcm5hbWU6cGFzc3dvcmQ=`
 
 - `connectionIsolationKey` {{optional_inline}}
-  - : `string`. An optional key used for additional isolation of this proxy connection. Applies to HTTPS proxies only.
+  - : `string`. An optional key used for additional isolation of this proxy connection.
 
 ## Browser compatibility
 

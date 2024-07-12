@@ -1,10 +1,10 @@
 ---
 title: "Partitioned: All third-party storage access requests"
-slug: Web/Privacy/Storage_access_policy/Errors/CookiePartitionedForeign
+slug: Web/Privacy/Storage_Access_Policy/Errors/CookiePartitionedForeign
 page-type: guide
 ---
 
-{{QuicklinksWithSubPages("Web/Privacy/Storage_access_policy/Errors")}}
+{{QuicklinksWithSubPages("Web/Privacy/Storage_Access_Policy/Errors")}}
 
 ## Message
 
@@ -20,7 +20,7 @@ third-party context and storage partitioning is enabled.
 
 A request to access cookies or storage was _partitioned_ because it
 came from a third-party (a different origin) and
-[dynamic state partitioning](/en-US/docs/Web/Privacy/State_Partitioning#dynamic_state_partitioning) is enabled.
+[dynamic state partitioning](/en-US/docs/Web/Privacy/State_Partitioning#dynamic_partitioning) is enabled.
 
 With Dynamic State Partitioning enabled, Firefox provides embedded resources with a
 separate storage bucket for every top-level website. Embedded third-parties may

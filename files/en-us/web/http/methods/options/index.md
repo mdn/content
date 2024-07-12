@@ -81,7 +81,7 @@ Accept-Encoding: gzip,deflate
 Connection: keep-alive
 Origin: https://foo.example
 Access-Control-Request-Method: POST
-Access-Control-Request-Headers: X-PINGOTHER, Content-Type
+Access-Control-Request-Headers: content-type,x-pingother
 ```
 
 The server now can respond if it will accept a request under these circumstances. In this example, the server response says that:

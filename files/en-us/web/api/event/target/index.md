@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Event.target
 ---
 
-{{ApiRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The read-only **`target`** property of the
 {{domxref("Event")}} interface is a reference to the object onto which the event was
@@ -53,4 +53,4 @@ ul.addEventListener("click", hide, false);
 
 ## See also
 
-- [Comparison of Event Targets](/en-US/docs/Web/API/Event/Comparison_of_Event_Targets)
+- [Event bubbling](/en-US/docs/Learn/JavaScript/Building_blocks/Event_bubbling)

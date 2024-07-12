@@ -23,7 +23,7 @@ In this example, we simulate a slow operation using a local sink: We do nothing 
 ```js
 const writingStream = new WritableStream({
   // Define the slow local sink to simulate a long operation
-  write(controller) {
+  write(chunk, controller) {
     return new Promise((resolve, reject) => {
       controller.signal.addEventListener("abort", () =>
         reject(controller.signal.reason),

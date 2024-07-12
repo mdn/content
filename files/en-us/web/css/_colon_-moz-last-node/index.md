@@ -4,6 +4,7 @@ slug: Web/CSS/:-moz-last-node
 page-type: css-pseudo-class
 status:
   - non-standard
+browser-compat: css.selectors.-moz-last-node
 ---
 
 {{Non-standard_header}}{{CSSRef}}
@@ -51,6 +52,10 @@ span:-moz-last-node {
 ## Specifications
 
 Not part of any standard.
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

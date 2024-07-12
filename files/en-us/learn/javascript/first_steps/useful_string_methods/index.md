@@ -29,13 +29,13 @@ Now that we've looked at the very basics of strings, let's move up a gear and st
 
 ## Strings as objects
 
-Most things are objects in JavaScript. When you create a string, for example by using
+Most values can be used as if they are objects in JavaScript. When you create a string, for example by using
 
 ```js
 const string = "This is my string";
 ```
 
-your variable becomes a string object instance, and as a result has a large number of properties and methods available to it. You can see this if you go to the {{jsxref("String")}} object page and look down the list on the side of the page!
+although the variable itself isn't an object, it still has a large number of properties and methods available to it, by virtue of being usable as an object when accessing properties. You can see this if you go to the {{jsxref("String")}} object page and look down the list on the side of the page!
 
 **Now, before your brain starts melting, don't worry!** You really don't need to know about most of these early on in your learning journey. But there are a few that you'll potentially use quite often that we'll look at here.
 
@@ -342,12 +342,12 @@ window.addEventListener("load", updateCode);
 // make it write a tab at the caret position instead
 
 textarea.onkeydown = (e) => {
-  if (e.keyCode === 9) {
+  if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
   }
 
-  if (e.keyCode === 27) {
+  if (e.code === "Escape") {
     textarea.blur();
   }
 };
@@ -506,12 +506,12 @@ window.addEventListener("load", updateCode);
 // make it write a tab at the caret position instead
 
 textarea.onkeydown = function (e) {
-  if (e.keyCode === 9) {
+  if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
   }
 
-  if (e.keyCode === 27) {
+  if (e.code === "Escape") {
     textarea.blur();
   }
 };
@@ -689,12 +689,12 @@ window.addEventListener("load", updateCode);
 // make it write a tab at the caret position instead
 
 textarea.onkeydown = function (e) {
-  if (e.keyCode === 9) {
+  if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
   }
 
-  if (e.keyCode === 27) {
+  if (e.code === "Escape") {
     textarea.blur();
   }
 };

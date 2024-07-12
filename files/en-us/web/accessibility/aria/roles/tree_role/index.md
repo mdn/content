@@ -39,7 +39,7 @@ In a tree view, the `tree` node is the root node; it can have child, grandchild,
 
 Each element serving as a tree node has role `treeitem`, except for the root tree node which has a role of `tree`. A `tree` does not have a parent `tree` node - it is the root node. If a node is both nested in a tree and has descendant tree items, then it has the role `treeitem` and the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) attribute; `aria-expanded="false"` is set when the node is in a closed state, `aria-expanded="true"` is set when the node is in an open state.
 
-`treeitem` nodes can be direct children of the `tree` root node, nested within a `treeitem` node, or, optionally nested in a [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) element, which, when nested in a `tree` is an expandable collections of treeitem elements.
+`treeitem` nodes can be direct children of the `tree` root node, nested within a `treeitem` node, or, optionally nested in a [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) element, which, when nested in a `tree` is an expandable collection of treeitem elements.
 
 Do not include `aria-expanded` on end nodes — those without tree item children — as that would incorrectly describe the node as a parent node to assistive technologies.
 

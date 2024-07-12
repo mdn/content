@@ -58,6 +58,7 @@ okan
 Oklab
 oklch
 Paciello
+Pinia
 prophoto
 rgba
 ripgrep

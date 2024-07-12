@@ -45,10 +45,11 @@ The CSS box model module defines physical (or "page relative") properties such a
 ### Data types
 
 - [`<box>`](/en-US/docs/Web/CSS/box-edge)
-  - [`<visual-box>`](/en-US/docs/Web/CSS/box-edge#visual_box)
-  - [`<layout-box>`](/en-US/docs/Web/CSS/box-edge#layout_box)
-  - [`<paint-box>`](/en-US/docs/Web/CSS/box-edge#paing_box)
-  - [`<coord-box>`](<(/en-US/docs/Web/CSS/box-edge#coord_box)>)
+  - [`<visual-box>`](/en-US/docs/Web/CSS/box-edge#visual-box)
+  - [`<layout-box>`](/en-US/docs/Web/CSS/box-edge#layout-box)
+  - [`<paint-box>`](/en-US/docs/Web/CSS/box-edge#paint-box)
+  - [`<coord-box>`](/en-US/docs/Web/CSS/box-edge#coord-box)
+  - [`<geometry-box>`](/en-US/docs/Web/CSS/box-edge#geometry-box)
 
 ## Guides
 
@@ -136,3 +137,4 @@ The CSS box model module defines physical (or "page relative") properties such a
 - [CSS table](/en-US/docs/Web/CSS/CSS_table) module
 - [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) module
 - [CSS fragmentation](/en-US/docs/Web/CSS/CSS_fragmentation) module
+- [Understanding aspect ratios](/en-US/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)

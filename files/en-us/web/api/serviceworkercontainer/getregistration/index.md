@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.ServiceWorkerContainer.getRegistration
 ---
 
-{{APIRef("Service Workers API")}}{{SecureContext_Header}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`getRegistration()`** method of the
 {{domxref("ServiceWorkerContainer")}} interface gets a

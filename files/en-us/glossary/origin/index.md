@@ -41,5 +41,6 @@ These are not same origin because they use different ports:
 ## See also
 
 - [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)
-- {{Glossary("Site")}}
+- Related glossary terms:
+  - {{Glossary("Site")}}
 - [HTML specification: origin](https://html.spec.whatwg.org/multipage/origin.html#origin)

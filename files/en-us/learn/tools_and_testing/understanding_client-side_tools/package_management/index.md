@@ -77,250 +77,218 @@ What is important is that you ensure you've chosen the best registry for you. Ma
 
 Let's run through an example to get you started with using a package manager and registry to install a command line utility.
 
-[Parcel](https://parceljs.org/) is another tool that developers commonly use in their development process. Parcel is clever in that it can watch the contents of our code for calls to dependencies and automatically installs any dependencies it sees that our code needs. It can also automatically build our code.
+We will use [Vite](https://vitejs.dev/) to create a blank website. In the next article, we will expand on the toolchain to include more tools and show you how to deploy the site.
+
+Vite provides some [init templates](https://vitejs.dev/guide/#scaffolding-your-first-vite-project), with all necessary dependencies and configurations, to get you started quickly in a real project. For demonstration, we will configure one from scratch, using the [React template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react) as a reference.
 
 ### Setting up the app as an npm package
 
-First of all, create a new directory to store our experimental app in, somewhere sensible that you'll find again. We'll call it parcel-experiment, but you can call it whatever you like:
+First of all, create a new directory to store our experimental app in, somewhere sensible that you'll find again. We'll call it `npm-experiment`, but you can call it whatever you like:
 
 ```bash
-mkdir parcel-experiment
-cd parcel-experiment
+mkdir npm-experiment
+cd npm-experiment
 ```
 
-Next, let's initialise our app as an npm package, which creates a config file — `package.json` — that allows us to save our configuration details in case we want to recreate this environment later on, or even publish the package to the npm registry (although this is somewhat beyond the scope of this article).
+Next, let's initialize our app as an npm package, which creates a config file — `package.json` — that allows us to save our configuration details in case we want to recreate this environment later on, or even publish the package to the npm registry (although it's not relevant for our article, because we are developing an application, not a reusable library).
 
-Type the following command, making sure you are inside the `parcel-experiment` directory:
+Type the following command, making sure you are inside the `npm-experiment` directory:
 
 ```bash
 npm init
 ```
 
-You will now be asked some questions; npm will then create a default `package.json` file based on the answers:
+You will now be asked some questions; npm will then create a default `package.json` file based on the answers. Note that none of these are relevant for our purposes because they are only used if you publish your package to a registry and others want to install and import it.
 
-- `name`: A name to identify the app. Just press
-
-  <kbd>Return</kbd>
-
-  to accept the default `parcel-experiment`.
-
-- `version`: The starting version number for the app. Again, just press
-
-  <kbd>Return</kbd>
-
-  to accept the default `1.0.0`.
-
-- `description`: A quick description of the app's purpose. Type in something really simple, like "A simple npm package to learn about using npm", then press
-
-  <kbd>Return</kbd>
-
-  .
-
-- `entry point`: This will be the top-level JavaScript file of the app. The default `index.js` is fine for now — press
-
-  <kbd>Return</kbd>
-
-  .
-
-- `test command`, `git repository`, and `keywords`: press
-
-  <kbd>Return</kbd>
-
-  to leave each of these blank for now.
-
-- `author`: The author of the project. Type your own name, and press
-
-  <kbd>Return</kbd>
-
-  .
-
-- `license`: The license to publish the package under. Press
-
-  <kbd>Return</kbd>
-
-  to accept the default for now.
+- `name`: A name to identify the app. Just press <kbd>Return</kbd> to accept the default `npm-experiment`.
+- `version`: The starting version number for the app. Again, just press <kbd>Return</kbd> to accept the default `1.0.0`.
+- `description`: A quick description of the app's purpose. We'll omit it here, but you can also enter anything you like. Press <kbd>Return</kbd>.
+- `entry point`: This will be the JavaScript file that is run when others import your package. It has no use for us, so just press <kbd>Return</kbd>.
+- `test command`, `git repository`, and `keywords`: press <kbd>Return</kbd> to leave each of these blank for now.
+- `author`: The author of the project. Type your own name, and press <kbd>Return</kbd>.
+- `license`: The license to publish the package under. Press <kbd>Return</kbd> to accept the default for now.
 
 Press <kbd>Return</kbd> one more time to accept these settings.
 
-Go into your `parcel-experiment` directory and you should now find you've got a package.json file. Open it up and it should look something like this:
+Go into your `npm-experiment` directory and you should now find you've got a package.json file. Open it up and it should look something like this:
 
 ```json
 {
-  "name": "parcel-experiment",
+  "name": "npm-experiment",
   "version": "1.0.0",
-  "description": "A simple npm package to learn about using npm",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Chris Mills",
+  "author": "Your name",
   "license": "ISC"
 }
 ```
 
-So this is the config file that defines your package. This is good for now, so let's move on.
+We will add two more lines to package.json:
 
-### Installing parcel
+- `"type": "module"`, which causes Node to interpret all `.js` files as [ES modules](/en-US/docs/Web/JavaScript/Guide/Modules) rather than the old CommonJS modules. It's a generally good habit to get into.
+- `"private": true`, which prevents you from accidentally publishing your package to the npm registry.
 
-Run the following command to install Parcel locally:
-
-```bash
-npm install parcel-bundler
-```
-
-Once that's done _All The Things_, we're now ready for some "modern client-side development" (which really means using build tools to make the developer experience a little easier). First of all however, take another look at your package.json file. You'll see that npm has added a new field, dependencies:
+Add these lines right below the `"name"`:
 
 ```json
-"dependencies": {
-  "parcel-bundler": "^1.12.4"
+"name": "npm-experiment",
+"type": "module",
+"private": true,
+```
+
+So this is the config file that defines your package. This is good for now, so let's move on.
+
+### Installing Vite
+
+We will first install Vite, the build tool for our website. It is responsible for bundling our HTML, CSS, and JavaScript files into an optimized bundle for the browser.
+
+```bash
+npm install --save-dev vite
+```
+
+Once that's done _All The Things_, take another look at your package.json file. You'll see that npm has added a new field, `devDependencies`:
+
+```json
+"devDependencies": {
+  "vite": "^5.2.13"
 }
 ```
 
 This is part of the npm magic — if in the future you move your codebase to another location, on another machine, you can recreate the same setup by running the command `npm install`, and npm will look at the dependencies and install them for you.
 
-One disadvantage is that Parcel is only available inside our `parcel-experiment` app; you won't be able to run it in a different directory. But the advantages outweigh the disadvantages.
+One disadvantage is that Vite is only available inside our `npm-experiment` app; you won't be able to run it in a different directory. But the advantages outweigh the disadvantages.
+
+Note that we chose to install `vite` as a dev dependency. This difference rarely matters for an application, but for a library, it means when others install your package, they won't implicitly install Vite. Usually, for applications, any package imported in source code is a real dependency, while any package used for development (usually as command line tools) is a dev dependency. Install real dependencies by removing the `--save-dev` flag.
+
+You'll find a number of new files created too:
+
+- `node_modules`: The dependency files required to run Vite. npm has downloaded all of them for you.
+- `package-lock.json`: This is a lockfile storing the exact information needed to reproduce the `node_modules` directory. This ensures that as long as the lockfile is unchanged, the `node_modules` directory will be the same across different machines.
+
+You needn't worry about these files, as they are managed by npm. You should add `node_modules` to your `.gitignore` file if you are using Git, but you should generally keep `package-lock.json`, because as mentioned it's used to synchronize the `node_modules` state across different machines.
 
 ### Setting up our example app
 
 Anyway, on with the setup.
 
-Parcel expects an `index.html` and an `index.js` file to work with, but otherwise, it is very unopinionated about how you structure your project. Other tools can be very different, but at least Parcel makes it easy for our initial experiment.
-
-So now we need to add an `index.html` file to our working directory. Create `index.html` in your test directory, and give it the following contents:
+In Vite, the `index.html` file is front and central. It defines the starting point of your app, and Vite will use it to find other files needed to build your app. Create an `index.html` file in your `npm-experiment` directory, and give it the following contents:
 
 ```html
 <!doctype html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <title>My test page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
-    <script src="./index.js"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
 ```
 
-Next, we need to add an `index.js` file in the same directory as `index.html`. For now, `index.js` can be empty; it just needs to exist. Create this now.
+Note that the `<script>` elements creates a dependency on a file called `src/main.jsx`, which declares the entry point of the JavaScript logic for the app. Create the `src` folder and create `main.jsx` in this folder, but leave it blank for now.
 
-### Having fun with Parcel
+> **Note:** The [`type="module"`](/en-US/docs/Web/HTML/Element/script/type) attribute is important. It tells the browser to treat the script as an ES module, which allows us to use `import` and `export` syntax in our JavaScript code. The file extension is `.jsx`, because in the next article, we will add React JSX syntax to it. Browsers don't understand JSX, but Vite will transform it to regular JavaScript for us, as if browsers do!
 
-Now we'll run our newly installed Parcel tool. In your terminal, run the following command:
+### Having fun with Vite
+
+Now we'll run our newly installed Vite tool. In your terminal, run the following command:
 
 ```bash
- npx parcel index.html
+npx vite
 ```
 
 You should see something like this printed in your terminal:
 
-```bash
-Server running at http://localhost:1234
-✨  Built in 193ms.
+```plain
+VITE v5.2.13  ready in 326 ms
+
+➜  Local:   http://localhost:5173/
+➜  Network: use --host to expose
+➜  press h + enter to show help
 ```
 
-> **Note:** If you have trouble with the terminal returning a "command not found" type error, try running the above command with the `npx` utility, i.e. `npx parcel index.html`.
+Now we're ready to benefit from the full JavaScript package ecosystem. For a start, there is now a local web server running at `http://localhost:5173`. You'll not see anything for now, but what is cool is that when you do make changes to your app, Vite will rebuild it and refresh the server automatically so you can instantly see the effect your update had.
 
-Now we're ready to benefit from the full JavaScript package ecosystem. For a start, there is now a local web server running at `http://localhost:1234`. Go there now and you'll not see anything for now, but what is cool is that when you do make changes to your app, Parcel will rebuild it and refresh the server automatically so you can instantly see the effect your update had.
+You can stop the dev server any time with <kbd>Ctrl</kbd> + <kbd>C</kbd> and start it again with the same command. If you decide to keep it running, you can open a new terminal window to run other commands.
 
-Now for some page content. Let's say we want to show human-readable relative dates, such as "2 hours ago", "4 days ago" and so on. The [`date-fns`](https://date-fns.org/) package's `formatDistanceToNow()` method is useful for this (there's other packages that do the same thing too).
+Now for some page content. As a demonstration, let's add a graph to the page. We will use the [plotly.js](https://www.npmjs.com/package/plotly.js) package, a data visualization library. Install it by running the following command:
 
-In the `index.js` file, add the following code and save it:
+```bash
+npm install plotly.js-dist-min
+```
+
+Note how we are installing without the `--save-dev` flag. As previously mentioned, this is because we will actually use this package in our source code, not just as a command line tool. This command will add a new `"dependencies"` object to your `package.json` file, with `plotly.js-dist-min` in it.
+
+> **Note:** Here, we chose the package for you to complete our task. When you are writing your own code, think about the following questions when finding and installing a dependency:
+>
+> - Do I need a dependency at all? Is it possible to do it with built-in features, or is it simple enough to write myself?
+> - What exactly do I need to do? The more detailed you are, the more likely you are going to find a package that does exactly what you need. You can search for keywords on npm or Google. Also prefer small packages to big ones, as the latter may lead to performance issues when installing, running, etc.
+> - Is the dependency trustable and well-maintained? Check when the last version was published, who the author is, and how many weekly downloads the package has. Determining the trustworthiness of a package is a skill that comes with experience, because you have to account for factors such as how likely the package needs updates, or how many people may need it.
+
+In the `src/main.jsx` file, add the following code and save it:
 
 ```js
-import { formatDistanceToNow } from "date-fns";
+import Plotly from "plotly.js-dist-min";
 
-const date = "1996-09-13 10:00:00";
-document.body.textContent = `${formatDistanceToNow(new Date(date))} ago`;
+const root = document.getElementById("root");
+Plotly.newPlot(
+  root,
+  [
+    {
+      x: [1, 2, 3, 4, 5],
+      y: [1, 2, 4, 8, 16],
+    },
+  ],
+  {
+    margin: { t: 0 },
+  },
+);
 ```
 
-Go back to `http://localhost:1234` and you'll see how long ago it is since the author turned 18.
-
-What's particularly special about the code above is that it is using the `formatDistanceToNow()` function from the `date-fns` package, which we didn't install! Parcel has spotted that you need the module, searched for it in the `npmjs.com` package registry, and installed it locally for us, automatically. You can prove this by looking in our `package.json` file again — you'll see that the `dependencies` field has been updated for us:
-
-```json
-"dependencies": {
-  "date-fns": "^2.12.0",
-  "parcel-bundler": "^1.12.4"
-}
-```
-
-Parcel has also added the files required for someone else to pick up this project and install any dependencies that we've used. If you take a look in the directory you ran the `parcel` command in, you'll find a number of new files; the most interesting of which are:
-
-- `node_modules`: The dependency files of Parcel and date-fns.
-- `dist`: The distribution directory — these are the automatically packaged, minified files Parcel has built for us, and the files it is serving at `localhost:1234`. These are the files you would upload to your web server when releasing the site online for public consumption.
-
-So long as we know the package name, we can use it in our code and Parcel will go off, fetch, and install (actually "copy") the package into our local directory (under `node_modules`).
+Go back to `http://localhost:5173` and you'll see a graph on the page. Change the different numbers and see the graph updated every time you save your file.
 
 ### Building our code for production
 
-However, this code is not ready for production. Most build tooling systems will have a "development mode" and a "production mode". The important difference is that a lot of the helpful features you will use in development are not needed in the final site, so will be stripped out for production, e.g. "hot module replacement", "live reloading", and "uncompressed and commented source code". Though far from exhaustive, these are some of the common web development features that are very helpful at the development stage but are not very useful in production. In production, they will just bloat your site.
+However, this code is not ready for production. Most build tooling systems, including Vite, have a "development mode" and a "production mode". The important difference is that a lot of the helpful features you will use in development are not needed in the final site, so will be stripped out for production, e.g. "hot module replacement", "live reloading", and "uncompressed and commented source code". Though far from exhaustive, these are some of the common web development features that are very helpful at the development stage but are not very useful in production. In production, they will just bloat your site.
 
-Now stop the previous Parcel command using <kbd>Ctrl</kbd> + <kbd>C</kbd>.
+Now stop the running Vite dev server using <kbd>Ctrl</kbd> + <kbd>C</kbd>.
 
-We can now prepare our bare bones example site for an imaginary deployment. Parcel provides an additional command to generate files that are suited to publication, making bundles (mentioned earlier) with the build option.
+We can now prepare our bare bones example site for an imaginary deployment. Vite provides an additional `build` command to generate files that are suited to publication.
 
 Run the following command:
 
 ```bash
-npx parcel build index.html
+npx vite build
 ```
 
 You should see an output like so:
 
-```bash
-✨  Built in 9.35s.
+```plain
+vite v5.2.13 building for production...
+✓ 6 modules transformed.
+dist/index.html                    0.32 kB │ gzip:     0.24 kB
+dist/assets/index-BlYAJQFz.js  3,723.18 kB │ gzip: 1,167.74 kB
 
-dist/my-project.fb76efcf.js.map    648.58 KB     64ms
-dist/my-project.fb76efcf.js        195.74 KB    8.43s
-dist/index.html                        288 B    806ms
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 4.36s
 ```
 
-Again, the destination for our production files is the `dist` directory.
+Vite will create a directory called `dist`. If you look into it, it contains an `index.html`, which looks very similar to the root one, except that the `script`'s source is now replaced with a path to the `assets` folder. The `assets` folder containing transformed JavaScript output, which is now minified and optimized for production.
 
-### Reducing your app's file size
-
-However, as with all tools that "help" developers there's often a tradeoff. In this particular case, it's the file size. The JavaScript bundle my-project.fb76efcf.js is a whopping 195K — very large, given that all it does is print a line of text. Sure, there's some calculation, but we definitely don't need 195K worth of JavaScript to do this!
-
-When you use development tooling it's worth questioning whether they're doing the right thing for you. In this case, the bundle is nearly 200K because it has in fact included the entire `date-fns` library, not just the function we're using.
-
-If we had avoided any development tools and pointed a `<script src="">` element to a hosted version of `date-fns`, roughly the same thing would have happened — all of the library would be downloaded when our example page is loaded in a browser.
-
-However, this is where development tooling has a chance to shine. Whilst the tooling is on our machine, we can ask the software to inspect our use of the code and only include the functions that we're actually using in production — a process known as "Tree Shaking".
-
-This makes a lot of sense as we want to reduce file size and thus make our app load as quickly as possible. Different tooling will let you tree shake in different ways.
-
-Although the list grows by the month, there are three main offerings for tools that generate bundles from our source code: Webpack, [Rollup](https://rollupjs.org/guide/en/), and Parcel. There will be more available than this, but these are popular ones:
-
-- The RollUp tool offers tree shaking and code splitting as its core features.
-- Webpack requires some configuration (though "some" might be understating the complexity of some developers' Webpack configurations).
-- In the case of Parcel (prior to Parcel version 2), there's a special flag required — `--experimental-scope-hoisting` — which will tree shake while building.
-
-Let's stick with Parcel for now, given that we've already got it installed. Try running the following command:
-
-```bash
-npx parcel build index.html --experimental-scope-hoisting
-```
-
-You'll see that this makes a huge difference:
-
-```bash
-✨  Built in 7.87s.
-
-dist/my-project.86f8a5fc.js    10.34 KB    7.17s
-dist/index.html                   288 B    753ms
-```
-
-Now the bundle is approximately 10K. Much better.
-
-If we were to release this project to a server, we would only release the files in the `dist` folder. Parcel has automatically handled all the filename changes for us. We recommend having a look at the source code in `dist/index.html` just so you can see what changes Parcel has performed automatically.
-
-> **Note:** At the time of writing, Parcel 2 had not been released. However when it does, these commands will all still work because the authors of Parcel have had the good sense to name the tool slightly differently. To install Parcel 1.x you have to install `parcel-bundler`, but parcel 2.x is called `parcel`.
-
-There's a lot of tools available and the JavaScript package ecosystem is growing at an unprecedented rate, which has pros and cons. There's improvements being made all the time and the choice, for better or worse, is constantly increasing. Faced with the overwhelming choice of tooling, probably the most important lesson is to learn what the tool you select is capable of.
+> **Note:** You may be worried about the warning that there's a chunk that's too large. This is expected because we are loading a library that does a lot of things behind the scenes (imagine writing all the code yourself to draw the same graph). For now, we don't need to worry about it.
 
 ## A rough guide to package manager clients
 
-This tutorial installed the Parcel package using npm, but as mentioned earlier on there are some alternatives. It's worth at least knowing they exist and having some vague idea of the common commands across the tools. You've already seen some in action, but let's look at the others.
+This tutorial installed the Vite package using npm, but as mentioned earlier on there are some alternatives. It's worth at least knowing they exist and having some vague idea of the common commands across the tools. You've already seen some in action, but let's look at the others.
 
 The list will grow over time, but at the time of writing, the following main package managers are available:
 
@@ -334,11 +302,13 @@ Where npm is shown in the examples below, pnpm can be swapped in and the command
 
 Yarn is often thought to be quicker than npm in terms of the installation process (though your mileage may vary). This is important to developers because there can be a significant amount of time wasted on waiting for dependencies to install (and copy to the computer).
 
-> **Note:** The npm package manager is **not** required to install packages from the npm registry, even though they share the same name. pnpm and Yarn can consume the same `package.json` format as npm, and can install any package from the npm and other package registries.
+However, worth noting that the npm package manager is **not** required to install packages from the npm registry. pnpm and Yarn can consume the same `package.json` format as npm, and can install any package from the npm and other package registries.
 
 Let's review the common actions you'll want to perform with package managers.
 
-### Initialise a new project
+> **Note:** We will demonstrate both npm and Yarn commands. They are not meant to be run in the same project. You should set up your project with either npm or Yarn and use commands from that package manager consistently.
+
+### Initialize a new project
 
 ```bash
 npm init
@@ -350,13 +320,13 @@ As shown above, this will prompt and walk you through a series of questions to d
 ### Installing dependencies
 
 ```bash
-npm install date-fns
-yarn add date-fns
+npm install vite
+yarn add vite
 ```
 
-We also saw `install` in action above. This would directly add the `date-fns` package to the working directory in a subdirectory called `node_modules`, along with `date-fns`'s own dependencies.
+We also saw `install` in action above. This would directly add the `vite` package to the working directory in a subdirectory called `node_modules`, along with `vite`'s own dependencies.
 
-By default, this command will install the latest version of `date-fns`, but you can control this too. You can ask for `date-fns@1`, which gives you the latest 1.x version (which is 1.30.1). Or you could try `date-fns@^2.3.0`, which means the latest version after or including 2.3.0 (2.8.1 at the time of writing).
+By default, this command will install the latest version of `vite`, but you can control this too. You can ask for `vite@4`, which gives you the latest 4.x version (which is 4.5.3). Or you could try `vite@^4.0.0`, which means the latest version after or including 4.0.0 (the same meaning as above).
 
 ### Updating dependencies
 
@@ -367,33 +337,11 @@ yarn upgrade
 
 This will look at the currently installed dependencies and update them, if there is an update available, within the range that's specified in the package.
 
-The range is specified in the version of the dependency in your `package.json`, such as `date-fns@^2.0.1` — in this case, the caret character `^` means all minor and patch releases after and including 2.0.1, up to but excluding 3.0.0.
+The range is specified in the version of the dependency in your `package.json`, such as `"vite": "^5.2.13"` — in this case, the caret character `^` means all minor and patch releases after and including 5.2.13, up to but excluding 6.0.0.
 
 This is determined using a system called [semver](https://semver.org/), which might look a bit complicated from the documentation but can be simplified by considering only the summary information and that a version is represented by `MAJOR.MINOR.PATCH`, such as 2.0.1 being major version 2 with patch version 1. An excellent way to try out semver values is to use the [semver calculator](https://semver.npmjs.com/).
 
 It's important to remember that `npm update` will not upgrade the dependencies to beyond the range defined in the `package.json` — to do this you will need to install that version specifically.
-
-### Audit for vulnerabilities
-
-```bash
-npm audit
-yarn audit
-```
-
-This will check all of the dependency tree for your project and run the specific versions you're using against a vulnerability database and notify you if there are potential vulnerable packages in your project.
-
-A good starting point for learning about vulnerabilities is the [Snyk project](https://snyk.io/), which covers both JavaScript packages and other programming languages.
-
-### Checking on a dependency
-
-```bash
-npm ls date-fns
-yarn why date-fns
-```
-
-This command will show what version of a dependency is installed and how it came to be included in your project. It's possible that another, top-level, package could have pulled in `date-fns`. It's equally possible (and not ideal) that you have multiple versions of a package in your project (this has been seen many times over with the [lodash](https://lodash.com/) package, as it's so useful).
-
-Although the package manager will do its best to deduplicate packages you may want to investigate exactly which version is installed.
 
 ### More commands
 
@@ -401,7 +349,7 @@ You can find out more about the individual commands for [npm](https://docs.npmjs
 
 ## Making your own commands
 
-The package managers also support creating your own commands and executing them from the command line. For instance, we could create the following command:
+The package managers also support creating your own commands and executing them from the command line. For instance, previously we invoked the command `vite` with `npx` to start the Vite dev server. We could create the following command:
 
 ```bash
 npm run dev
@@ -410,13 +358,7 @@ npm run dev
 
 This would run a custom script for starting our project in "development mode". In fact, we regularly include this in all projects as the local development setup tends to run slightly differently to how it would run in production.
 
-If you tried running this in your Parcel test project from earlier it would (likely) claim the "dev script is missing". This is because npm, Yarn (and the like) are looking for a property called dev in the `scripts` property of your `package.json` file.
-
-Parcel can run a development server using the command `parcel serve filename.html`, and we'd like to use that often during our development.
-
-So, let's create a custom shorthand command — "dev" — in our `package.json`.
-
-If you followed the tutorial from earlier, you should have a `package.json` file inside your parcel-experiment directory. Open it up, and its `scripts` member should look like this:
+If you tried running this in your test project from earlier it would (likely) claim the "dev script is missing". This is because npm, Yarn (and the like) are looking for a property called `dev` in the `scripts` property of your `package.json` file. So, let's create a custom shorthand command — "dev" — in our `package.json`. If you followed the tutorial from earlier, you should have a `package.json` file inside your npm-experiment directory. Open it up, and its `scripts` member should look like this:
 
 ```json
 "scripts": {
@@ -428,29 +370,33 @@ Update it so that it looks like this, and save the file:
 
 ```json
 "scripts": {
-  "test": "echo \"Error: no test specified\" && exit 1",
-  "dev": "parcel serve index.html"
+  "dev": "vite"
 },
 ```
 
 We've added a custom `dev` command as an npm script.
 
-Now try running the following in your terminal, making sure you are inside the `parcel-experiment` directory:
+Now try running the following in your terminal, making sure you are inside the `npm-experiment` directory:
 
 ```bash
- npm run dev
+npm run dev
 ```
 
-This should start Parcel and serve up your `index.html` at the local development server, as we saw before:
+This should start Vite and start the same local development server, as we saw before.
 
-```bash
-Server running at http://localhost:1234
-✨  Built in 5.48s.
+Note that the script we defined here no longer need the `npx` prefix. This is because npm (and yarn) commands are clever in that they will search for command line tools that are locally installed to the project before trying to find them through conventional methods (where your computer will normally store and allow software to be found). You can [learn more about the technical intricacies of the `run` command](https://docs.npmjs.com/cli/run-script/), although in most cases your own scripts will run just fine.
+
+This particular one may look unnecessary — `npm run dev` is more characters to type than `npx vite`, but it is a form of _abstraction_. It allows us to add more work to the `dev` command in the future, such as setting environment variables, generating temporary files, etc., without complicating the command.
+
+You can add all kinds of things to the `scripts` property that help you do your job. For example, here's what Vite recommends in the template:
+
+```json
+"scripts": {
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview"
+},
 ```
-
-In addition, the npm (and yarn) commands are clever in that they will search for command line tools that are locally installed to the project before trying to find them through conventional methods (where your computer will normally store and allow software to be found). You can [learn more about the technical intricacies of the `run` command](https://docs.npmjs.com/cli/run-script/), although in most cases your own scripts will run just fine.
-
-You can add all kinds of things to the `scripts` property that help you do your job. We certainly have, and [others have too](https://github.com/facebook/create-react-app/blob/c5b96c2853671baa3f1f297ec3b36d7358898304/package.json#L6).
 
 ## Summary
 

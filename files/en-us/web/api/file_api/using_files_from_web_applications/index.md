@@ -400,7 +400,7 @@ function sendFiles() {
 }
 ```
 
-Line 2 fetches a {{DOMxRef("NodeList")}}, called `imgs`, of all the elements in the document with the CSS class `obj`. In our case, these will be all of the image thumbnails. Once we have that list, it's trivial to go through it and create a new `FileUpload` instance for each. Each of these handles uploading the corresponding file.
+`document.querySelectorAll` fetches a {{DOMxRef("NodeList")}} of all the elements in the document with the CSS class `obj`. In our case, these will be all of the image thumbnails. Once we have that list, it's trivial to go through it and create a new `FileUpload` instance for each. Each of these handles uploading the corresponding file.
 
 ### Handling the upload process for a file
 
@@ -436,7 +436,7 @@ function FileUpload(img, file) {
   );
   xhr.open(
     "POST",
-    "http://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php",
+    "https://demos.hacks.mozilla.org/paul/demos/resources/webservices/devnull.php",
   );
   xhr.overrideMimeType("text/plain; charset=x-user-defined-binary");
   reader.onload = (evt) => {

@@ -10,7 +10,7 @@ browser-compat: api.PublicKeyCredential.parseCreationOptionsFromJSON_static
 
 {{APIRef("Web Authentication API")}} {{SeeCompatTable}}{{securecontext_header}}
 
-The **`parseCreationOptionsFromJSON()`** static method of the {{domxref("PublicKeyCredential")}} interface converts a {{glossary("JSON type representation")}} into its corresponding [`publicKey` create credentials options object structure](/en-US/docs/Web/API/CredentialsContainer/create#publickey_object_structure).
+The **`parseCreationOptionsFromJSON()`** static method of the {{domxref("PublicKeyCredential")}} interface creates a {{domxref("PublicKeyCredentialCreationOptions")}} object from a JSON representation of its properties.
 
 The method is a convenience function for converting credential options information provided by a relying party server to the form that a web app can use to [create a credential](/en-US/docs/Web/API/Web_Authentication_API#creating_a_key_pair_and_registering_a_user).
 
@@ -24,25 +24,25 @@ PublicKeyCredential.parseCreationOptionsFromJSON(options)
 
 - `options`
 
-  - : An object with the same structure as the Web Authentication API [`publicKey` create credentials options object](/en-US/docs/Web/API/CredentialsContainer/create#publickey_object_structure), but with [base64url](/en-US/docs/Glossary/Base64)-encoded strings used in place of buffer properties.
+  - : An object with the same structure as a {{domxref("PublicKeyCredentialCreationOptions")}}, but with [base64url](/en-US/docs/Glossary/Base64)-encoded strings used in place of buffer properties.
 
 ### Return value
 
-An object with the Web Authentication API [`publicKey` create credentials options object structure](/en-US/docs/Web/API/CredentialsContainer/create#publickey_object_structure).
+A {{domxref("PublicKeyCredentialCreationOptions")}} object.
 
 ### Exceptions
 
 - `EncodingError` {{domxref("DOMException")}}
-  - : Thrown if any part of the `options` object cannot be converted into the [`publicKey` create credentials options object structure](/en-US/docs/Web/API/CredentialsContainer/create#publickey_object_structure).
+  - : Thrown the `options` object cannot be converted into a {{domxref("PublicKeyCredentialCreationOptions")}} object.
 
 ## Description
 
 The Web Authentication process for [creating a key pair and registering a user](/en-US/docs/Web/API/Web_Authentication_API#creating_a_key_pair_and_registering_a_user) involves a relying party server sending the web app information needed to create a credential, including details about the user identity, the relying party, and a "challenge".
-The web app passes this information to an authenticator to create the credential, by calling [`navigator.credentials.create()`](/en-US/docs/Web/API/CredentialsContainer/create) with an argument that contains the server-supplied data in the [`publicKey` create credentials options object structure](/en-US/docs/Web/API/CredentialsContainer/create#publickey_object_structure).
+The web app passes this information to an authenticator to create the credential, by calling [`navigator.credentials.create()`](/en-US/docs/Web/API/CredentialsContainer/create) with a {{domxref("PublicKeyCredentialCreationOptions")}} object as an argument.
 
 The specification does not define how the information needed for creating a credential is sent.
-A convenient approach is for the server to encapsulate the information in a {{glossary("JSON type representation")}} of the [`publicKey` create credentials options object](/en-US/docs/Web/API/CredentialsContainer/create#publickey_object_structure) that mirrors its structure but encodes buffer properties such as the `challenge` and `user.id` as [base64url](/en-US/docs/Glossary/Base64) strings.
-This object can be serialized to a [JSON](/en-US/docs/Glossary/JSON) string, sent to the web app and deserialized, and then converted to the [`publicKey` create credentials options object structure](/en-US/docs/Web/API/CredentialsContainer/create#publickey_object_structure) using **`parseCreationOptionsFromJSON()`**.
+A convenient approach is for the server to encapsulate the information in a {{glossary("JSON type representation")}} of the {{domxref("PublicKeyCredentialCreationOptions")}} object that mirrors its structure but encodes buffer properties such as the `challenge` and `user.id` as [base64url](/en-US/docs/Glossary/Base64) strings.
+This object can be serialized to a [JSON](/en-US/docs/Glossary/JSON) string, sent to the web app and deserialized, and then converted to a {{domxref("PublicKeyCredentialCreationOptions")}} object using **`parseCreationOptionsFromJSON()`**.
 
 ## Examples
 

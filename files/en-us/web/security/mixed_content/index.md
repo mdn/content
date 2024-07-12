@@ -2,92 +2,162 @@
 title: Mixed content
 slug: Web/Security/Mixed_content
 page-type: guide
+browser-compat: http.mixed-content
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
 
-When a user visits a page served over {{Glossary("HTTPS")}}, their connection with the web server is encrypted with {{Glossary("TLS")}} and is therefore safeguarded from most sniffers and man-in-the-middle attacks. An HTTPS page that includes content fetched using cleartext HTTP is called a **mixed content** page. Pages like this are only partially encrypted, leaving the unencrypted content accessible to sniffers and man-in-the-middle attackers. That leaves the pages unsafe.
+When a web page is loaded from a secure origin, over a secure channel such as {{Glossary("HTTPS")}}, the connection with the web server is encrypted, and is therefore protected from eavesdropping and modification by man-in-the-middle attacks.
+If the securely loaded web page only includes images, scripts, and other resources that are also hosted on secure origins, users can be confident that the whole page is safe from these kinds of attacks.
+
+"Mixed content" refers to securely loaded web pages that use resources to be fetched via HTTP or another insecure protocol.
+This kind of web page is potentially unsafe because any resources that are sent insecurely can be viewed, possibly revealing sensitive information, and/or modified by an attacker.
+Scripts are particularly dangerous because they can modify any aspect of the page, but all types of resources have some risk.
+For example, images can be modified to give the user false or misleading information, or to change the apparent function of a button.
+
+"Mixed downloads" refer to resource downloads initiated from a secure context, but fetched over an insecure connection.
+These are share the same risks as mixed content: downloads appears to come from a secure origin, but could have been modified or viewed en-route.
+
+You should avoid using mixed content and mixed downloads in your websites!
+Browsers mitigate the risks of mixed content by auto-upgrading image, video, and audio mixed content requests from HTTP to HTTPS, and block insecure requests for all other resource types.
+They should also block _mixed downloads_ by default.
 
 ## Types of mixed content
 
-There are two categories for mixed content: **mixed passive/display content** and **mixed active content**. The difference lies in the threat level of the worst case scenario if content is rewritten as part of a man-in-the-middle attack. In the case of passive content, the threat is lower (the page may contain misleading content, or the user's cookies may be stolen). In the case of active content, the threat can lead to phishing, sensitive data disclosure, redirection to malicious sites, etc.
+Mixed content in a web page is divided into two categories: "upgradable content" and "blockable content".
+Browsers should automatically upgrade requests for upgradable content from HTTP to HTTPS, and block requests for the blockable content.
 
-### Mixed passive/display content
+This approach ensures that all content in a secure context is either loaded via a secure channel or blocked, which is safer for users than displaying a mix of secure and insecure content, and less disruptive than breaking web pages by blocking absolutely all insecure content.
 
-Mixed passive/display content is content served over HTTP that is included in an HTTPS webpage, but that cannot alter other portions of the webpage. For example, an attacker could replace an image served over HTTP with an inappropriate image or message to the user. The attacker could also infer information about the user's activities by watching which images are served to the user; often images are only served on a specific page within a website. If the attacker observes HTTP requests to certain images, they could determine which webpage the user is visiting.
+> **Note:** Earlier versions of the specification divided mixed content into "blockable" and "optionally blockable" categories:
+>
+> - Blockable content types, also referred to as "active mixed content", were those that could modify other parts of the web page, such as scripts and stylesheets.
+>   The potential risk if these files are modified is very high, and browsers were required to block them.
+> - Optionally blockable content types, also known as "passive mixed content", were those that could not modify other content in the web page, such as images, videos, and audio files.
+>   The potential risk of allowing these files was lower, so browsers could choose to block or display them, or defer the decision to the user.
 
-#### Passive content list
+The set of resource types that comprise "upgradable content" was seeded from the set of "optionally blockable" mixed content.
+The expectation is that any new file types will be defined as blockable content, and some upgradable content may become blockable in future.
 
-This section lists all types of HTTP requests which are considered passive content:
+### Upgradable content
 
-- {{HTMLElement("img")}} (`src` attribute)
-- {{HTMLElement("audio")}} (`src` attribute)
-- {{HTMLElement("video")}} (`src` attribute)
-- {{HTMLElement("object")}} subresources (when an `<object>` performs HTTP requests)
+Upgradable content requests are those where an insecure request will automatically be upgraded to a secure request, by modifying the origin scheme from `http` to `https`.
+The remote server will either respond with the resource, or a status code indicating that it was not found.
 
-### Mixed active content
+The resource types in this category are those where the blocking the request would risk of breaking significant portions of the web.
+These currently correspond to the mixed content types that were previously "optionally blockable", as these are still used on some websites.
 
-**Mixed active content** is content that has access to all or parts of the Document Object Model of the HTTPS page. This type of mixed content can alter the behavior of the HTTPS page and potentially steal sensitive data from the user. Hence, in addition to the risks described for mixed display content above, mixed active content is vulnerable to a few other attack vectors.
+The following elements are upgradable (except where the URL host is specified as an IP address — see the following section):
 
-In the mixed active content case, a man-in-the-middle attacker can intercept the request for the HTTP content. The attacker can also rewrite the response to include malicious JavaScript code. Malicious active content can steal the user's credentials, acquire sensitive data about the user, or attempt to install malware on the user's system (by leveraging vulnerabilities in the browser or its plugins, for example).
+- {{HTMLElement("img")}} where origin is set via `src` attribute, including SVG documents (but not when setting resources with `srcset` or `<picture>`).
+- CSS image elements such as: `background-image`, `border-image`, etc.
+- {{HTMLElement("audio")}} where origin is set with `src` attribute.
+- {{HTMLElement("video")}} where origin is set with `src` attribute
+- {{HTMLElement("source")}} where video or origin resource is set.
 
-The risk involved with mixed content does depend on the type of website the user is visiting and how sensitive the data exposed to that site may be. The webpage may have public data visible to the world or private data visible only when authenticated. If the webpage is public and has no sensitive data about the user, using mixed active content still provides the attacker with the opportunity to redirect the user to other HTTP pages and steal HTTP cookies from those sites.
+### Blockable content
 
-#### Active content examples
+Blockable content is defined as "all mixed content that is not upgradable".
 
-This section lists some types of HTTP requests which are considered active content:
+This includes HTTP requests resulting from the following elements (this list is not exhaustive):
 
-- {{HTMLElement("script")}} (`src` attribute)
-- {{HTMLElement("link")}} (`href` attribute) (this includes CSS stylesheets)
-- {{HTMLElement("iframe")}} (`src` attribute)
+- {{HTMLElement("script")}} where origin is set via `src` attribute
+- {{HTMLElement("link")}} where the origin is set in the `href` attribute, and includes stylesheets
+- {{HTMLElement("iframe")}} where origin is set via `src` attribute
 - {{domxref("fetch()")}} requests
 - {{domxref("XMLHttpRequest")}} requests
 - All cases in CSS where a {{cssxref("url", "url()")}} value is used ({{cssxref("@font-face")}}, {{cssxref("cursor")}}, {{cssxref("background-image")}}, and so forth).
 - {{HTMLElement("object")}} (`data` attribute)
 - {{domxref("Navigator.sendBeacon")}} (`url` attribute)
+- {{HTMLElement("img")}} where origin is set via `srcset` or `<picture>`.
+- Web fonts
 
-Other resource types like web fonts and workers may be considered active mixed content, as they are in Chrome.
+Mixed content requests that would otherwise be upgraded are blocked if the URL's host is an IP address rather than a domain name.
+So `<img src="http://example.com/image.png">` will be upgraded, but `<img src="http://93.184.215.14/image.png">` is blocked.
 
-## Loading mixed-content resources
+## Examples of mixed content requests
 
-Most browsers prevent _mixed active content_ from loading, and some also block _mixed display content_.
+Mixed content requests are insecure requests for resources from a [secure context](/en-US/docs/Web/Security/Secure_Contexts):
+
+The following examples demonstrate secure, insecure, and mixed content requests:
+
+- `http://insecure.com` loads `http://also.insecure.com` — is not a mixed content request because both origins are insecure.
+- `https://secure.com` loads `http://insecure.com` — is a mixed content request because the insecure resource`http://insecure.com` is loaded into the secure context `https://secure.com`.
+- `http://insecure.com` loads `https://secure.com` in an `<iframe>`, which in turn loads `http://also.insecure.com` — loading `https://secure.com` into `http://insecure.com` is not a mixed content request (there is no restriction on loading a secure context into an insecure context).
+  However loading `http://also.insecure.com` into the secure frame `https://secure.com` is a mixed content request.
+- `https://secure.com` frames a `data:` URL, which loads `http://insecure.com` — this is a mixed content request, because `https://secure.com` (and hence `data:`) were securely loaded and `http://insecure.com` is insecure.
+
+Mixed context requests can also be made from secure contexts such as plugins or workers, and will be upgraded/blocked in the same way.
+
+Note however that navigation requests from a secure context that target insecure target top-level browsing contexts are not considered mixed content as they create a new context that will either be secure or insecure independent of the origin of the request.
 
 ### Loading locally delivered mixed-resources
 
-Browsers _may_ allow locally-delivered mixed resources to be loaded. This includes `file:` URLs and content accessed from loopback addresses (e.g. `http://127.0.0.1/`).
+Local resources are considered to be from secure origins, just like HTTPS origins.
+This includes `file:` URLs, and content accessed from loopback addresses such as `http://127.0.0.1/` or `http://localhost/`.
 
-- Firefox 55 and later allow loading of mixed content on the loopback address `http://127.0.0.1/` (see [Firefox bug 903966](https://bugzil.la/903966)),
-- Firefox 84 and later allow loading of mixed content on `http://localhost/` and `http://*.localhost/` URLs, as these are now mapped to loopback addresses (see [Firefox bug 1220810](https://bugzil.la/1220810)).
-- Chrome also allows mixed content on `http://127.0.0.1/` and `http://localhost/`.
-- Safari does not allow any mixed content.
+You can load these files from secure contexts, and you will still have a secure context.
+However if a local file loads insecure resource via `http:`, it would be a mixed content request.
 
-### Upgrading mixed-display resources
+Support for loading local content can be checked in the [Browser compatibility](#browser_compatibility) section.
 
-Browsers may support automatic upgrade of requests for display/media content from HTTP to HTTPS on secure pages (this prevents mixed-content conditions in which some content is loaded securely while other content is insecure).
+## Mixed downloads
 
-Firefox supports this functionality as an experimental feature. It can be enabled using the preference `security.mixed_content.upgrade_display_content`).
+A mixed download is a resource download from a secure context over an insecure connection.
+They are problematic for the same reasons as mixed content — content may be intercepted and/or modified by an attacker, and it is not obvious to users that this might happen on a secure site.
 
-- If the upgrade fails (because the media's host doesn't support HTTPS), the media is not loaded.
-- Console warnings indicate when content has been successfully upgraded.
-- For more information see [Experimental features in Firefox > Upgrading mixed display content](/en-US/docs/Mozilla/Firefox/Experimental_features#upgrading_mixed_display_content).
+For example, the following code defines an [`<a>`](/en-US/docs/Web/HTML/Element/a#download) element that could be used to download the page at the insecure origin `http://example.com/`.
+If this code is in a page that is served over HTTPS, saving the link results in a mixed download.
 
-## Warnings in Firefox Web Console
+```html
+<a href="http://example.com/" download>Download</a>
+```
 
-The Firefox Web Console displays a mixed content warning message in the Net pane when a page on your website has this issue. The mixed content resource that was loaded via HTTP will show up in red, along with the text "mixed content", which links to this page.
+Browsers are expected to block mixed downloads, and secure sites should not include them.
 
-![Screen shot of the web console displaying a mixed content warning.](mixed_content_-_net_pane.png)
+> **Note:** Browsers commonly block mixed downloads by default, but inform users of the risk and allow them to keep or discard the download.
 
-As well as finding these warnings in the Web Console, you could use [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) to report issues. You could also use an online crawler like [SSL-check](https://www.jitbit.com/sslcheck/) or [Missing Padlock](https://www.missingpadlock.com/) that will check your website recursively and find links to insecure content.
+## Developer console
 
-Starting in Firefox 23, mixed active content is blocked by default (and mixed display content can be blocked by setting a preference). To make it easier for web developers to find mixed content errors, all blocked mixed content requests are logged to the Security pane of the Web Console, as seen below:
+The developer console shows warnings when mixed content is upgraded or blocked.
+These can be used to debug and fix mixed-content in your websites.
 
-![A screenshot of blocked mixed content errors in the Security Pane of the Web Console](mixed_content_webconsole.png)
+The screenshot below shows the console warning when an image is upgraded on Firefox (Chrome has a similar warning).
 
-To fix this type of error, all requests to HTTP content should be removed and replaced with content served over HTTPS. Some common examples of mixed content include JavaScript files, stylesheets, images, videos, and other media.
+![Screen shot of the web console displaying upgrade warning for mixed content image.](mixed_content_console_upgradable.png)
 
-> **Note:** The console will display a message indicating if mixed-display content is being successfully [upgraded from HTTP to HTTPS](#upgrading_mixed-display_resources) (instead of a warning about "Loading mixed (insecure) display content").
+On browser versions that still display "optionally blockable" content, an icon is used to indicate that there is mixed content in the displayed content, along with a console warning.
+The screenshot below shows the icon and console warning for Firebox starting supporting upgradable mixed-content.
+
+![Screen shot of the web console displaying display warning for mixed content image.](mixed_content_console_displayed.png)
+
+## Fixing mixed content issues
+
+The best strategy to avoid issues with mixed content is to serve all the content as HTTPS:
+
+- Serve all content from your domain as HTTPS.
+- Make all references to resources hosted on your domain into relative links or HTTPS links, including for downloads.
+- If using resource on other sites use HTTPS versions, if available.
+
+  Most sites provide HTTPS versions of shared resources.
+  Often the easiest approach is to replace all `http://` links with `https://` and then use tools such as [linkchecker](https://linkchecker.github.io/linkchecker/) to verify that the links all work.
+
+There are a number of ways to verify that your site is free of mixed content including:
+
+- Navigate your site, and check your browser's [developer console](#developer_console) for mixed content warnings.
+- Disable all mixed content on your browser and test that pages work as expected.
+  This is the default for Safari, but most browsers support some mechanism for blocking all mixed content (see [compatibility data](#browser_compatibility)).
+- Use a desktop-based web crawler like [HTTPSChecker](https://httpschecker.net/how-it-works), or a CLI tool like [mcdetect](https://github.com/agis/mcdetect), to check your website recursively and find links to insecure content.
+- Use an online tool like [Mixed Content Checker](https://www.crawlcenter.com/mixed-content-checker) to check your site.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 
-- [Mixed Content - W3C Editor's Draft](https://w3c.github.io/webappsec/specs/mixedcontent/)
-- [How to fix a website with blocked mixed content](/en-US/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content)
+- [CSP: `upgrade-insecure-requests`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests) upgrades all requests to HTTPS, including blockable mixed content

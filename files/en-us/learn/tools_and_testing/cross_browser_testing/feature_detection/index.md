@@ -49,7 +49,7 @@ if ("geolocation" in navigator) {
 }
 ```
 
-Before we move on, we'd like to say one thing upfront — don't confuse feature detection with **browser sniffing** (detecting what specific browser is accessing the site) — this is a terrible practice that should be discouraged at all costs. See [Using bad browser sniffing code](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#using_bad_browser_sniffing_code) for more details.
+Before we move on, we'd like to say one thing upfront — don't confuse feature detection with **browser sniffing** (detecting what specific browser is accessing the site) — this is a terrible practice that should be discouraged at all costs. See [don't browser sniff](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#dont_browser_sniff) for more details.
 
 ## Writing your own feature detection tests
 

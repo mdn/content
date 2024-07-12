@@ -46,7 +46,7 @@ A `MediaTrackCapabilities` object which specifies the value or range of values w
 - `sampleSize`
   - : A [`ConstrainULong`](/en-US/docs/Web/API/MediaTrackConstraints#constrainulong) containing the sample size or range of sample sizes.
 - `aspectRatio`
-  - : A [`ConstrainDouble`](/en-US/docs/Web/API/MediaTrackConstraints#constraindouble) containing the video aspect ratio (width in pixels divided by height in pixels) or range of aspect ratios.
+  - : A [`ConstrainDouble`](/en-US/docs/Web/API/MediaTrackConstraints#constraindouble) containing the video {{glossary("aspect ratio")}} (width in pixels divided by height in pixels) or range of aspect ratios.
 - `facingMode`
   - : A [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring) object containing the camera facing mode. A camera may report multiple facings, for example "left" and "user".
 - `frameRate`

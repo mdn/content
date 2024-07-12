@@ -77,9 +77,9 @@ Boolean values are usually used for conditional operations, including [ternary o
 
 ### Number type
 
-The {{jsxref("Number")}} type is a [double-precision 64-bit binary format IEEE 754 value](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_encoding). It is capable of storing positive floating-point numbers between 2<sup>-1074</sup> ({{jsxref("Number.MIN_VALUE")}}) and 2<sup>1024</sup> ({{jsxref("Number.MAX_VALUE")}}) as well as negative floating-point numbers between -2<sup>-1074</sup> and -2<sup>1024</sup>, but it can only safely store integers in the range -(2<sup>53</sup> − 1) ({{jsxref("Number.MIN_SAFE_INTEGER")}}) to 2<sup>53</sup> − 1 ({{jsxref("Number.MAX_SAFE_INTEGER")}}). Outside this range, JavaScript can no longer safely represent integers; they will instead be represented by a double-precision floating point approximation. You can check if a number is within the range of safe integers using {{jsxref("Number.isSafeInteger()")}}.
+The {{jsxref("Number")}} type is a [double-precision 64-bit binary format IEEE 754 value](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_encoding). It is capable of storing positive floating-point numbers between 2<sup>-1074</sup> ({{jsxref("Number.MIN_VALUE")}}) and 2<sup>1023</sup> × (2 - 2<sup>-52</sup>) ({{jsxref("Number.MAX_VALUE")}}) as well as negative floating-point numbers of the same magnitude, but it can only safely store integers in the range -(2<sup>53</sup> − 1) ({{jsxref("Number.MIN_SAFE_INTEGER")}}) to 2<sup>53</sup> − 1 ({{jsxref("Number.MAX_SAFE_INTEGER")}}). Outside this range, JavaScript can no longer safely represent integers; they will instead be represented by a double-precision floating point approximation. You can check if a number is within the range of safe integers using {{jsxref("Number.isSafeInteger()")}}.
 
-Values outside the range ±(2<sup>-1074</sup> to 2<sup>1024</sup>) are automatically converted:
+Values outside the representable range are automatically converted:
 
 - Positive values greater than {{jsxref("Number.MAX_VALUE")}} are converted to `+Infinity`.
 - Positive values smaller than {{jsxref("Number.MIN_VALUE")}} are converted to `+0`.
@@ -155,7 +155,7 @@ In computer science, an object is a value in memory which is possibly referenced
 
 ### Properties
 
-In JavaScript, objects can be seen as a collection of properties. With the [object literal syntax](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#object_literals), a limited set of properties are initialized; then properties can be added and removed. Object properties are equivalent to key-value pairs. Property keys are either [strings](#string_type) or [symbols](#symbol_type). Property values can be values of any type, including other objects, which enables building complex data structures.
+In JavaScript, objects can be seen as a collection of properties. With the [object literal syntax](/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#object_literals), a limited set of properties are initialized; then properties can be added and removed. Object properties are equivalent to key-value pairs. Property keys are either [strings](#string_type) or [symbols](#symbol_type). When other types (such as numbers) are used to index objects, the values are implicitly converted to strings. Property values can be values of any type, including other objects, which enables building complex data structures.
 
 There are two types of object properties: The [_data_ property](#data_property) and the [_accessor_ property](#accessor_property). Each property has corresponding _attributes_. Each attribute is accessed internally by the JavaScript engine, but you can set them through {{jsxref("Object.defineProperty()")}}, or read them through {{jsxref("Object.getOwnPropertyDescriptor()")}}. You can read more about the various nuances on the {{jsxref("Object.defineProperty()")}} page.
 

@@ -9,11 +9,11 @@ spec-urls:
 
 {{CSSRef}}
 
-**At-rules** are [CSS statements](/en-US/docs/Web/CSS/Syntax#css_statements) that instruct CSS how to behave. They begin with an at sign, '`@`' (`U+0040 COMMERCIAL AT`), followed by an identifier and includes everything up to the next semicolon, '`;`' (`U+003B SEMICOLON`), or the next [CSS block](/en-US/docs/Web/CSS/Syntax#css_declaration_blocks), whichever comes first.
+**At-rules** are [CSS statements](/en-US/docs/Web/CSS/Syntax#css_statements) that instruct CSS how to behave. They begin with an at sign, '`@`' (`U+0040 COMMERCIAL AT`), followed by an identifier, and include everything up to the next semicolon, '`;`' (`U+003B SEMICOLON`), or the next [CSS block](/en-US/docs/Web/CSS/Syntax#css_declaration_blocks), whichever comes first.
 
 ## Syntax
 
-### Regular
+### Statement at-rules
 
 ```css
 /* General structure */
@@ -23,51 +23,50 @@ spec-urls:
 @charset "utf-8";
 ```
 
-There are several regular at-rules, designated by their identifiers, each with a different syntax:
+Statement at-rules end in a semicolon. There are several statement at-rules, designated by their identifiers, each with a different syntax:
 
-- {{cssxref("@charset")}} — Defines the character set used by the style sheet.
-- {{cssxref("@import")}} — Tells the CSS engine to include an external style sheet.
-- {{cssxref("@namespace")}} — Tells the CSS engine that all its content must be considered prefixed with an XML namespace.
+- {{cssxref("@charset")}}
+  - : Defines the character set used by the style sheet.
+- {{cssxref("@import")}}
+  - : Tells the CSS engine to include an external style sheet.
+- {{cssxref("@namespace")}}
+  - : Tells the CSS engine that all its content must be considered prefixed with an XML namespace.
 
-### Nested
+> **Note:** Strictly speaking, `@charset` is not an at-rule, but a special byte sequence that's stripped before processing the content. Read its reference for more information.
+
+### Block at-rules
 
 ```css
 @identifier (RULE) {
 }
 ```
 
-A subset of nested statements, which can be used as a statement of a style sheet as well as inside of conditional group rules.
+Block at-rules end in {}-block containing a subset of nested statements, which can be used as a statement of a style sheet as well as inside of conditional group rules.
 
-- {{cssxref("@media")}} — A conditional group rule that will apply its content if the device meets the criteria of the condition defined using a _media query_.
-- {{cssxref("@scope")}} - A conditional group rule that will apply its content if the device meets the criteria of the given condition.
-- {{cssxref("@starting-style")}} - A conditional group rule that will apply starting transition if the browser meets the criteria of the given condition.
-- {{cssxref("@supports")}} — A conditional group rule that will apply its content if the browser meets the criteria of the given condition.
-- {{cssxref("@document")}} {{deprecated_inline}} — A conditional group rule that will apply its content if the document in which the style sheet is applied meets the criteria of the given condition.
-- {{cssxref("@page")}} — Describes the aspect of layout changes that will be applied when printing the document.
-- {{cssxref("@font-face")}} — Describes the aspect of an external font to be downloaded.
-- {{cssxref("@keyframes")}} — Describes the aspect of intermediate steps in a CSS animation sequence.
-- {{cssxref("@counter-style")}} — Defines specific counter styles that are not part of the predefined set of styles.
-- {{cssxref("@font-feature-values")}} (plus `@swash`, `@ornaments`, `@annotation`, `@stylistic`, `@styleset` and `@character-variant`) — Define common names in {{cssxref("font-variant-alternates")}} for feature activated differently in OpenType.
-- {{cssxref("@property")}} — Describes the aspect of custom properties and variables.
-- {{cssxref("@layer")}} – Declares a cascade layer and defines the order of precedence in case of multiple cascade layers.
-
-## Conditional group rules
-
-Much like the values of properties, each at-rule has a different syntax. Nevertheless, several of them can be grouped into a special category named **conditional group rules**. These statements share a common syntax and each of them can include _nested statements_—either _rulesets_ or _nested at-rules_. Furthermore, they all convey a common semantic meaning—they all link some type of condition, which at any time evaluates to either **true** or **false**. If the condition evaluates to **true**, then all of the statements within the group will be applied.
-
-Conditional group rules are:
-
-- {{cssxref("@media")}},
-- {{cssxref("@scope")}},
-- {{cssxref("@starting-style")}},
-- {{cssxref("@supports")}},
-- {{cssxref("@document")}}. _(deferred to Level 4 of CSS Spec)_
-
-Since each conditional group may also contain nested statements, there may be an unspecified amount of nesting.
-
-## Nesting @layer with CSS nesting
-
-[Cascade layers](/en-US/docs/Web/CSS/@layer) can be nested to [create nested layers](/en-US/docs/Web/CSS/@layer#nesting_layers). These are joined with a `.`(dot). This can also be achieved using [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting/Nesting_at-rules#nesting_cascade_layers_layer).
+- {{cssxref("@counter-style")}}
+  - : Defines specific counter styles that are not part of the predefined set of styles.
+- {{cssxref("@container")}}
+  - : A conditional group rule that will apply its content if the container meets the [`<container-condition>`](/en-US/docs/Web/CSS/@container#container-condition)s.
+- {{cssxref("@font-face")}}
+  - : Describes the aspect of an external font to be downloaded.
+- {{cssxref("@font-feature-values")}} (plus `@swash`, `@ornaments`, `@annotation`, `@stylistic`, `@styleset` and `@character-variant`)
+  - : Define common names in {{cssxref("font-variant-alternates")}} for feature activated differently in OpenType.
+- {{cssxref("@keyframes")}}
+  - : Describes the aspect of intermediate steps in a CSS animation sequence.
+- {{cssxref("@layer")}}
+  - : Declares a cascade layer and defines the order of precedence in case of multiple cascade layers.
+- {{cssxref("@media")}}
+  - : A conditional group rule that will apply its content if the device meets the criteria of the condition defined using a _media query_.
+- {{cssxref("@page")}}
+  - : Describes the aspect of layout changes that will be applied when printing the document.
+- {{cssxref("@property")}}
+  - : Describes the aspect of custom properties and variables.
+- {{cssxref("@scope")}}
+  - : A conditional group rule that will apply its content if the device meets the criteria of the given condition.
+- {{cssxref("@starting-style")}}
+  - : A conditional group rule that will apply starting transition if the browser meets the criteria of the given condition.
+- {{cssxref("@supports")}}
+  - : A conditional group rule that will apply its content if the browser meets the criteria of the given condition.
 
 ## Index
 
@@ -75,7 +74,6 @@ Since each conditional group may also contain nested statements, there may be an
 - {{cssxref("@color-profile")}}
 - {{cssxref("@container")}}
 - {{cssxref("@counter-style")}}
-- {{cssxref("@document")}} {{deprecated_inline}}
 - {{cssxref("@font-face")}}
 - {{cssxref("@font-feature-values")}}
 - {{cssxref("@font-palette-values")}}

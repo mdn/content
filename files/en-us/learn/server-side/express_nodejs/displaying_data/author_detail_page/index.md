@@ -61,7 +61,7 @@ block content
 
   div(style='margin-left:20px;margin-top:20px')
 
-    h4 Books
+    h2(style='font-size: 1.5rem;') Books
     if author_books.length
       dl
         each book in author_books

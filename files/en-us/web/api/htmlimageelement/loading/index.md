@@ -51,7 +51,7 @@ When an image whose loading has been delayed by the `loading` attribute being se
 
 To prevent this reflow from occurring, you should explicitly specify the size of the image's presentation using the image element's [`width`](/en-US/docs/Web/HTML/Element/img#width) and
 [`height`](/en-US/docs/Web/HTML/Element/img#height) attributes.
-By establishing the intrinsic aspect ratio in this manner, you prevent elements from shifting around while the document loads, which can be disconcerting or off-putting at best and can cause users to click the wrong thing at worst, depending on the exact timing of the deferred loads and reflows.
+By establishing the intrinsic {{glossary("aspect ratio")}} in this manner, you prevent elements from shifting around while the document loads, which can be disconcerting or off-putting at best and can cause users to click the wrong thing at worst, depending on the exact timing of the deferred loads and reflows.
 
 ## Examples
 
