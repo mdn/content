@@ -7,7 +7,13 @@ browser-compat: html.elements.track
 
 {{HTMLSidebar}}
 
-The **`<track>`** [HTML](/en-US/docs/Web/HTML) element is used as a child of the media elements, {{HTMLElement("audio")}} and {{HTMLElement("video")}}. It lets you specify timed text tracks (or time-based data), for example to automatically handle subtitles. The tracks are formatted in [WebVTT format](/en-US/docs/Web/API/WebVTT_API) (`.vtt` files) — Web Video Text Tracks.
+The **`<track>`** [HTML](/en-US/docs/Web/HTML) element is used as a child of the media elements, {{HTMLElement("audio")}} and {{HTMLElement("video")}}.
+Each track element lets you specify a timed text track (or time-based data) that can be displayed in parallel with the media element, for example to overlay subtitles or closed captions on top of a video or alongside audio tracks.
+
+Multiple tracks can be specified for a media element, containing different kinds of timed text data, or timed text data that has been translated for different locales.
+The data that is used will either be the track that has been set to be the default, or a kind and translation based on user preferences.
+
+The tracks are formatted in [WebVTT format](/en-US/docs/Web/API/WebVTT_API) (`.vtt` files) — Web Video Text Tracks.
 
 {{EmbedInteractiveExample("pages/tabbed/track.html", "tabbed-standard")}}
 
@@ -30,13 +36,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `captions`
 
       - Closed captions provide a transcription and possibly a translation of audio.
-      - It may include important non-verbal information such as music cues or sound effects. It may indicate the cue's source (e.g. music, text, character).
+      - It may include important non-verbal information such as music cues or sound effects.
+        It may indicate the cue's source (e.g. music, text, character).
       - Suitable for users who are deaf or when the sound is muted.
-
-    - `descriptions`
-
-      - Textual description of the video content.
-      - Suitable for users who are blind or where the video cannot be seen.
 
     - `chapters`
 
@@ -57,7 +59,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ### Track data types
 
-The type of data that `track` adds to the media is set in the `kind` attribute, which can take values of `subtitles`, `captions`, `descriptions`, `chapters` or `metadata`. The element points to a source file containing timed text that the browser exposes when the user requests additional data.
+The type of data that `track` adds to the media is set in the `kind` attribute, which can take values of `subtitles`, `captions`, `chapters` or `metadata`. The element points to a source file containing timed text that the browser exposes when the user requests additional data.
 
 A media element cannot have more than one `track` with the same `kind`, `srclang`, and `label`.
 
@@ -75,6 +77,14 @@ textTrackElem.addEventListener("cuechange", (event) => {
 });
 ```
 
+### Adding text tracks programmatically
+
+The JavaScript interface that represents the `<track>` element is {{domxref("HTMLTrackElement")}}.
+The text track associated with an element can be obtained from the {{domxref("HTMLTrackElement.track")}} property, and is of type {{domxref("TextTrack")}}.
+
+`TextTrack` objects also can be added to a {{domxref("HTMLVideoElement")}} or {{domxref("HTMLAudioElement")}} elements using the {{domxref("HTMLMediaElement.addTrack()")}} method.
+The `TextTrack` objects associated with a media element stored in a {{domxref("TextTrackList")}}, which can be retrieved using the {{domxref("HTMLMediaElement.textTracks")}} property.
+
 ## Examples
 
 ```html
@@ -82,7 +92,6 @@ textTrackElem.addEventListener("cuechange", (event) => {
   <source src="sample.mp4" type="video/mp4" />
   <source src="sample.ogv" type="video/ogv" />
   <track kind="captions" src="sampleCaptions.vtt" srclang="en" />
-  <track kind="descriptions" src="sampleDescriptions.vtt" srclang="en" />
   <track kind="chapters" src="sampleChapters.vtt" srclang="en" />
   <track kind="subtitles" src="sampleSubtitles_de.vtt" srclang="de" />
   <track kind="subtitles" src="sampleSubtitles_en.vtt" srclang="en" />
