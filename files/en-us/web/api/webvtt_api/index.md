@@ -196,7 +196,7 @@ video::cue {
 }
 ```
 
-We then style text that is underlined and bold to be green and yellow, respectively.
+We then use {{cssxref("::cue")}} to select text that has been marked up using the `u` and `b` elements and style them green and yellow, respectively.
 
 ```css
 video::cue(u) {
@@ -210,7 +210,8 @@ video::cue(b) {
 
 #### JavaScript
 
-The cues are also the same as in the other examples, but we've marked up some with underline and some with bold (which will be highlighted by the CSS above).
+The JavaScript is the same as in the first example, except that we have marked up some of the cue text using `<b>` (bold) and `<u>` (underline) tags.
+By default the marked text would be displayed as bold or underlined (depending on the tag) but we have used the {{cssxref("::cue")}} in the previous section to also style the text to be green and purple, respectively.
 
 ```js
 let video = document.querySelector("video");
@@ -327,8 +328,8 @@ video::cue(c.myclass) {
 
 #### Styling using attributes
 
-The next two cues are displayed after three seconds.
-The first displays a `v` (voice) tag with the "Bob" attribute, while the second displays text marked up with the `lang` tag for three locales of English.
+The next two cues are displayed after two and then three seconds.
+The first displays text marked up with the `lang` tag for three locales of English, while the second displays a `<v>` (voice) tag with the "Bob" attribute.
 
 ```js
 track.addCue(

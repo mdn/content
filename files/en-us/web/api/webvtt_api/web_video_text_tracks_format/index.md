@@ -54,7 +54,7 @@ The following sections explain the parts of the file, including those not used i
 
 WebVTT files start with a header block containing the following:
 
-- An optional byte order mark (BOM).
+- An optional byte order mark (BOM), which is Unicode character `U+FEFF`.
 - The string "`WEBVTT`".
 - An optional text header to the right of `WEBVTT`.
 
@@ -234,7 +234,7 @@ Cue settings are added to the right of cue timings. There must be one or more sp
 
 - `size`
 
-  - : Specifies the width of the text area. If vertical is set, size specifies the height of the text area. The value is a percentage, that is an integer (no decimals) between 0 and 100 inclusive followed by a percent sign (%).
+  - : If `vertical` is not set, `size` specifies the width of the text area. If `vertical` is set, `size` specifies the height of the text area. The value is a percentage between 0 and 100 inclusive.
 
     | Size        | `vertical` omitted | `vertical:rl` | `vertical:lr` |
     | ----------- | ------------------ | ------------- | ------------- |
@@ -267,7 +267,7 @@ The first line demonstrates no settings. The second line might be used to overla
 ### Cue payload
 
 The payload is where the cue content is defined, such as the subtitle or closed caption text.
-The payload text may contain newlines but it cannot contain two consecutive newlines: that would create a blank line, which signifies the end of a cue.
+It may contain newlines but cannot contain two consecutive newlines: that would create a blank line, which indicates the end of the block.
 
 A cue text payload cannot contain the string `-->`, the ampersand character (`&`), or the less-than sign (`<`).
 If needed, you can instead use a {{glossary("character reference")}} such as the named character reference `&amp;` for ampersand and `&lt;` for less-than.
@@ -400,7 +400,7 @@ A comment consists of three parts:
 - A space or a newline.
 - Zero or more characters other than those noted above.
 
-Below we show a number of examples:
+Here are some examples:
 
 ```plain
 NOTE This is a single line comment
@@ -423,20 +423,20 @@ NOTE TODO I might add a line to indicate work that still has to be done.
 `STYLE` blocks are optional sections that can be used to embed CSS styling of cues within a WebVTT file.
 Note that these are used to style the appearance and size of the cues, but not their position and layout, which are controlled by the [Cue settings](#cue_settings).
 
-> **Note:** WebVTT cues can also be match by CSS styles loaded by the associated [document embedding the video/audio element](/en-US/docs/Web/API/WebVTT_API#styling_webvtt_in_html_or_a_stylesheet).
+> **Note:** WebVTT cues can also be matched by CSS styles loaded by the associated [document embedding the video/audio element](/en-US/docs/Web/API/WebVTT_API#styling_webvtt_in_html_or_a_stylesheet).
 
 `STYLE` blocks must appear before any cue blocks in the file.
 
-Each block consists of the lines:
+Each block consists of the following lines:
 
 - The String `STYLE` followed by zero or more space or tab characters, and then a newline.
 - A string defining the CSS styles to match and apply, using the {{cssxref("::cue")}} pseudo-element.
 
 The block cannot cannot contain the string `-->`.
-It may contain newlines but cannot contain two consecutive newlines, as this is a blank line and indicates the end of the block.
+It may contain newlines but cannot contain two consecutive newlines: that would create a blank line, which indicates the end of the block.
 
 A simple WebVTT files with two `STYLE` blocks is shown below.
-This uses {{cssxref("::cue")}} to first apply a style to all cue text, and then to apply just to text that is tagged between `<b>` start and end tags
+This uses {{cssxref("::cue")}} to apply a text color to all cue text, and a different text color just to text that is tagged with `<b></b>` tags.
 
 ```plain
 WEBVTT
@@ -467,7 +467,7 @@ NOTE style blocks cannot appear after the first cue.
 
 Match on all cue payload text using {{cssxref("::cue")}}.
 
-For example, the following `STYLE` block would match all cue text and color it as yellow.
+For example, the following `STYLE` block would match all cue text and color it yellow.
 
 ```plain
 STYLE
@@ -533,7 +533,7 @@ STYLE ::cue(b.myclass) {
 
 ### Match an attribute
 
-Cue payload text that is marked up with a particular tag and attribute can be matched using an attribute selector.
+Cue payload text marked up with a particular tag and attribute can be matched using an attribute selector.
 
 For example, consider the following WebVTT file, which has text marked up using using the `v` and `lang` [cue payload text tags](#cue_payload_text_tags), using attributes to specify the particular voice ("Salame") and languages.
 
@@ -561,7 +561,7 @@ Yellow!
 I like <v Salame>lime.</v>
 ```
 
-### Match using pseudo classes
+### Match using pseudo-classes
 
 The previous example styled text for a particular language using attribute matching.
 You can also match languages using the `:lang()` pseudo class, as demonstrated by the `STYLE` block below.
@@ -576,7 +576,7 @@ STYLE
 }
 ```
 
-You can similarly match with the `:past` and `:future` pseudo classes, in order to provide a karaoke-like experience.
+You can similarly match with the `:past` and `:future` pseudo-classes, to provide a karaoke-like experience.
 
 ```css
 video::cue(:past) {
@@ -587,11 +587,11 @@ video::cue(:future) {
 }
 ```
 
-Other pseudo classes such as `link`, `nth-last-child`, `nth-child` should work in a similar way.
+Other pseudo-classes such as `link`, `nth-last-child`, and `nth-child` should work similarly.
 
 ### Match a cue id
 
-Match against a particular cue id by specifying the id {{cssxref("::cue()")}}.
+Match against a particular cue `id` by specifying the `id` inside {{cssxref("::cue()")}}.
 
 > **Note:** At time of writing this does not appear to be supported in any of the main browsers.
 
@@ -609,7 +609,7 @@ cue1
 Green!
 ```
 
-Note that the CSS uses escape sequences the way they are used in HTML pages, so you would escape the "crédit de transcription" identifier as shown below:
+Note that escape sequences are used in WebVTT CSS in the same way as HTML pages. The below example shows how to escape spaces in a cue identifier:
 
 ```plain
 WEBVTT
