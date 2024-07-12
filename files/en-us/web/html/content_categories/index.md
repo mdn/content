@@ -22,7 +22,7 @@ There are three types of content categories:
 
 ### Metadata content
 
-Elements belonging to the _metadata content_ category modify the presentation or the behavior of the rest of the document, set up links to other documents, or convey other _out-of-band_ information. In HTML, these elements are generally included within the {{htmlelement("head")}} of the document.
+Elements belonging to the _metadata content_ category modify the presentation or the behavior of the rest of the document, set up links to other documents, or convey other _out-of-band_ information. In HTML, metadata content is generally defined in the {{htmlelement("head")}}.
 
 Elements belonging to this category are {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("meta")}}, {{HTMLElement("noscript")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}} and {{HTMLElement("title")}}.
 
