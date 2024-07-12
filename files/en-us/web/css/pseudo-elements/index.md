@@ -59,13 +59,17 @@ C
 
 F
 
+- {{CSSxRef("::file-selector-button")}}
 - {{CSSxRef("::first-letter")}}
 - {{CSSxRef("::first-line")}}
-- {{CSSxRef("::file-selector-button")}}
 
 G
 
-- {{CSSxRef("::grammar-error")}} {{Experimental_Inline}}
+- {{CSSxRef("::grammar-error")}}
+
+H
+
+- {{CSSxRef("::highlight()")}}
 
 M
 
@@ -80,11 +84,19 @@ S
 
 - {{CSSxRef("::selection")}}
 - {{CSSxRef("::slotted", "::slotted()")}}
-- {{CSSxRef("::spelling-error")}} {{Experimental_Inline}}
+- {{CSSxRef("::spelling-error")}}
 
 T
 
 - {{CSSxRef("::target-text")}} {{Experimental_Inline}}
+
+V
+
+- {{cssxref("::view-transition")}} {{Experimental_Inline}}
+- {{cssxref("::view-transition-image-pair()")}} {{Experimental_Inline}}
+- {{cssxref("::view-transition-group()")}} {{Experimental_Inline}}
+- {{cssxref("::view-transition-new()")}} {{Experimental_Inline}}
+- {{cssxref("::view-transition-old()")}} {{Experimental_Inline}}
 
 > **Note:** Browsers support the single colon syntax only for the original four pseudo-elements: `::before`, `::after`, `::first-line`, and `::first-letter`.
 
