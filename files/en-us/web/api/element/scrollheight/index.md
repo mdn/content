@@ -182,8 +182,6 @@ function checkScrollToBottom(element) {
   if (isRead(element)) {
     info.innerText = "You have read all text. Agree to continue.";
     toAgree.disabled = false;
-  } else {
-    info.innerText = "Read all text to agree";
   }
 }
 
