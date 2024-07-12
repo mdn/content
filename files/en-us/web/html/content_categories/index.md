@@ -238,7 +238,77 @@ Some elements belong to this category only under specific conditions:
 
 ### Palpable content
 
-Content is palpable when it's neither empty nor hidden; it is content that is rendered and is substantive. Elements whose model is flow content should have at least one node which is palpable.
+Content is palpable when it's neither empty nor hidden; it is content that is rendered and is substantive. Elements whose model is flow content should have at least one node which is palpable. Elements that belong to this category include:
+
+- {{HTMLElement("a")}}
+- {{HTMLElement("abbr")}}
+- {{HTMLElement("address")}}
+- {{HTMLElement("article")}}
+- {{HTMLElement("aside")}}
+- {{HTMLElement("b")}}
+- {{HTMLElement("bdi")}}
+- {{HTMLElement("bdo")}}
+- {{HTMLElement("blockquote")}}
+- {{HTMLElement("button")}}
+- {{HTMLElement("canvas")}}
+- {{HTMLElement("cite")}}
+- {{HTMLElement("code")}}
+- {{HTMLElement("data")}}
+- {{HTMLElement("del")}}
+- {{HTMLElement("details")}}
+- {{HTMLElement("dfn")}}
+- {{HTMLElement("div")}}
+- {{HTMLElement("em")}}
+- {{HTMLElement("embed")}}
+- {{HTMLElement("fieldset")}}
+- {{HTMLElement("footer")}}
+- {{HTMLElement("figure")}}
+- {{HTMLElement("form")}}
+- {{HtmlElement("iframe")}}
+- {{HtmlElement("img")}}
+- {{HtmlElement("ins")}}
+- {{HtmlElement("kbd")}}
+- {{HtmlElement("label")}}
+- {{HtmlElement("main")}}
+- {{HtmlElement("map")}}
+- {{HtmlElement("mark")}}
+- {{MathMLElement("math")}} from [MathML](/en-us/doc/Web/MathML)
+- {{HtmlElement("meter")}}
+- {{HtmlElement("nav")}}
+- {{HtmlElement("object")}}
+- {{HtmlElement("p")}}
+- {{HtmlElement("picture")}}
+- {{HtmlElement("pre")}}
+- {{HtmlElement("progress")}}
+- {{HtmlElement("q")}}
+- {{HtmlElement("ruby")}}
+- {{HtmlElement("s")}}
+- {{HtmlElement("samp")}}
+- {{HtmlElement("search")}}
+- {{HtmlElement("section")}}
+- {{HtmlElement("select")}}
+- {{HtmlElement("small")}}
+- {{HtmlElement("span")}}
+- {{HtmlElement("strong")}}
+- {{HtmlElement("sub")}}
+- {{HtmlElement("sup")}}
+- {{SVGElement("svg")}} from [SVG](/en-US/docs/Web/SVG)
+- {{HtmlElement("table")}}
+- {{HtmlElement("textarea")}}
+- {{HtmlElement("time")}}
+- {{HtmlElement("u")}}
+- {{HtmlElement("var")}}
+- {{HtmlElement("video")}}
+- [Autonomus custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements)
+- text that is not inter-element [whitespace](/en-US/docs/Glossary/Whitespace)
+
+Some elements belong to this category only under specific conditions:
+
+- {{HTMLElement("audio")}}, if the [`controls`](/en-US/docs/Web/HTML/Element/audio#controls) attribute is present
+- {{HTMLElement("dl")}}, if the element's children include at least one name-value group
+- {{HTMLElement("input")}}, if the [type](/en-US/docs/Web/HTML/Element/input#type) attribute is not in the hidden state
+- {{HTMLElement("ol")}}, if it's children include at least one {{HTMLElement("li")}} element
+- {{HTMLElement("ul")}}, if it's children include at least one {{HTMLElement("li")}} element
 
 ### Form-associated content
 

@@ -2367,7 +2367,7 @@
     },
     "WebVTT": {
       "overview": ["WebVTT API"],
-      "guides": ["/docs/Web/API/Web_Video_Text_Tracks_Format"],
+      "guides": ["/docs/Web/API/WebVTT_API/Web_Video_Text_Tracks_Format"],
       "interfaces": [
         "VTTCue",
         "VTTRegion",
