@@ -9,7 +9,7 @@ browser-compat: api.Element.after
 {{APIRef("DOM")}}
 
 The **`Element.after()`** method inserts a set of
-{{domxref("Node")}} or strings in the children list of the
+{{domxref("Node")}} objects or strings in the children list of the
 `Element`'s parent, just after the `Element`.
 Strings are inserted as equivalent {{domxref("Text")}} nodes.
 
@@ -24,7 +24,7 @@ after(node1, node2, /* …, */ nodeN)
 ### Parameters
 
 - `node1`, …, `nodeN`
-  - : A set of {{domxref("Node")}} or strings to insert.
+  - : A set of {{domxref("Node")}} objects or strings to insert.
 
 ### Return value
 
