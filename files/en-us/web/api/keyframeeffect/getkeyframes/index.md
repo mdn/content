@@ -60,6 +60,7 @@ const rollingKeyframes = new KeyframeEffect(
 const rollingAnimation = new Animation(rollingKeyframes, document.timeline);
 rollingAnimation.play();
 
+// Array [ {…}, {…} ]
 console.log(rollingAnimation.effect.getKeyframes());
 ```
 
