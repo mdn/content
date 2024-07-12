@@ -15,7 +15,7 @@ Anything in HTML between `<!--` and `-->` is an HTML comment. The browser ignore
 
 Comments can be placed wherever white space is allowed within a document. They can be used on a single line, or traverse multiple lines.
 
-The above is true for [XML](/en-US/docs/Web/XML/) comments as well. In addition, in XML, like with[SVG](/en-US/docs/Web/SVG/) or [MathML](<(/en-US/docs/Web/MathML/)>) markup, a comment cannot contain the character sequence `--`.
+The above is true for [XML](/en-US/docs/Web/XML) comments as well. In addition, in XML, such as in [SVG](/en-US/docs/Web/SVG) or [MathML](/en-US/docs/Web/MathML) markup, a comment cannot contain the character sequence `--`.
 
 ## Syntax
 
