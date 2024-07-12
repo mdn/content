@@ -70,6 +70,8 @@ These [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-ele
 - {{CSSxRef("::cue")}}
   - : Matches cues within a selected element in media with VTT tracks.
 
+> **Note:** The specification defines another pseudo-element, `::cue-region`, but this is not supported by any browsers.
+
 ## Examples
 
 ### Using the WebVTT API to add captions
