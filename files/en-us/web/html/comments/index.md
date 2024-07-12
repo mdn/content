@@ -13,7 +13,15 @@ Comments start with the string `<!--` and end with the string `-->`, generally w
 
 Anything in HTML between `<!--` and `-->` is an HTML comment. The browser ignores comments as it renders the code. In other words, they are not visible on the page - just in the code. HTML comments are a way for you to write helpful notes about your code or logic.
 
-Comments can be placed wherever white space is allowed within a document. They can be used on a single line, or traverse multiple lines.
+Comments can be used on a single line, or span multiple lines. They can be used in the following places:
+
+- Before and after the {{Glossary("Doctype")}}
+- Before and after the {{HTMLElement("html")}} element
+- As the content of most elements except: {{HTMLElement("script")}}, {{HTMLElement("style")}}, {{HTMLElement("title")}}, {{HTMLElement("textarea")}}, because these elements interpret their content as raw text
+
+> **Note:** While `<script>` elements should not have HTML comments and should use [JavaScript comments](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#comments) instead, there was a legacy practice to enclose the whole script content in an HTML comment so ancient browsers that don't support JavaScript don't render it as text. This is now a [legacy feature of JavaScript itself](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#html_comments) and you should not rely on it.
+
+> **Note:** HTML comments are only permitted as content. You cannot use it within a tag, such as before an HTML [attribute](/en-US/docs/Glossary/Attribute).
 
 The above is true for [XML](/en-US/docs/Web/XML) comments as well. In addition, in XML, such as in [SVG](/en-US/docs/Web/SVG) or [MathML](/en-US/docs/Web/MathML) markup, a comment cannot contain the character sequence `--`.
 
