@@ -66,4 +66,4 @@ While comments do start with a `<` and end in a `>`, a comment is not an HTML el
 
 - [Comments in JavaScript](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#comments)
 - [Comments in CSS](/en-US/docs/Web/CSS/Comments)
-- {{domxref("Comment")}} API
+- {{domxref("Comment")}} API (`Comment` inherits from {{domxref("Node")}})
