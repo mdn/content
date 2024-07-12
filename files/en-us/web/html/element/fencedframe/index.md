@@ -60,7 +60,7 @@ However, trying to traverse the boundary via an API call such as {{domxref("HTML
 
 ## Positioning and scaling
 
-As a [replaced element](/en-US/docs/Web/CSS/Replaced_element), the position of the embedded document within the `<iframe>` element's box can be adjusted with the {{cssxref("object-position")}}.
+Being a [replaced element](/en-US/docs/Web/CSS/Replaced_element), the `<fencedframe>` allows the position of the embedded document within its box to be adjusted using the {{cssxref("object-position")}} property.
 
 > [!NOTE]
 > The {{cssxref("object-fit")}} has no effect on `<fencedframe>` elements.
