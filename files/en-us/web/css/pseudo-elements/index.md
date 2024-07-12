@@ -54,7 +54,7 @@ B
 
 C
 
-- {{CSSxRef("::cue")}}
+- {{CSSxRef("::cue")}} (and `::cue()`)
 
 F
 
