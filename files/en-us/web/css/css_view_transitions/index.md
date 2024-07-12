@@ -32,6 +32,9 @@ The **CSS view transitions** module defines the [View Transition API](/en-US/doc
 
 - {{domxref("ViewTransition")}}
   - {{domxref("ViewTransition.skipTransition()")}}
+  - {{domxref("ViewTransition.updateCallbackDone")}}
+  - {{domxref("ViewTransition.ready")}}
+  - {{domxref("ViewTransition.finished")}}
 - {{domxref("Document.startViewTransition()")}}
 
 ## Guides
@@ -39,6 +42,9 @@ The **CSS view transitions** module defines the [View Transition API](/en-US/doc
 ## Related concepts
 
 - {{domxref("PageSwapEvent")}}
+- {{cssxref("@keyframes")}}
+- {{cssxref("animation")}}
+- [Pseudo-elements]()
 
 ## Specifications
 
