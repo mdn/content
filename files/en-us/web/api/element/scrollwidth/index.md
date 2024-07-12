@@ -37,12 +37,12 @@ In this example, we use the `scrollWidth` property to check if the content of an
 #### HTML
 
 ```html
-<div id="aDiv">FooBar-FooBar-FooBar-FooBar</div>
-<button id="aButton">Check for overflow</button>
-<pre id="aLog"></pre>
-<div id="anotherDiv">FooBar-FooBar-FooBar-FooBar</div>
-<button id="anotherButton">Check for overflow</button>
-<pre id="anotherLog"></pre>
+<div id="div1">FooBar-FooBar-FooBar-FooBar</div>
+<button id="button1">Check for overflow</button>
+<pre id="log1"></pre>
+<div id="div2">FooBar-FooBar-FooBar-FooBar</div>
+<button id="button2">Check for overflow</button>
+<pre id="log2"></pre>
 ```
 
 #### CSS
@@ -63,11 +63,11 @@ pre {
   margin: 0.5em 0;
 }
 
-#aDiv {
+#div1 {
   width: 100px;
 }
 
-#aLog {
+#log1 {
   margin-bottom: 2em;
 }
 ```
@@ -75,14 +75,14 @@ pre {
 #### JavaScript
 
 ```js
-const aButton = document.getElementById("aButton");
-const anotherButton = document.getElementById("anotherButton");
+const button1 = document.getElementById("button1");
+const button2 = document.getElementById("button2");
 
-const aDiv = document.getElementById("aDiv");
-const anotherDiv = document.getElementById("anotherDiv");
+const div1 = document.getElementById("div1");
+const div2 = document.getElementById("div2");
 
-const aLog = document.getElementById("aLog");
-const anotherLog = document.getElementById("anotherLog");
+const log1 = document.getElementById("log1");
+const log2 = document.getElementById("log2");
 
 // Check if the scrollWidth is bigger than the offsetWidth or not
 function isOverflowing(element) {
@@ -91,18 +91,18 @@ function isOverflowing(element) {
 
 function checkOverflow(element) {
   if (isOverflowing(element)) {
-    aLog.innerText = `Contents are overflowing, scrollWidth is ${element.scrollWidth}px`;
+    log1.innerText = `Contents are overflowing, scrollWidth is ${element.scrollWidth}px`;
   } else {
-    anotherLog.innerText = `No overflows, scrollWidth is ${element.scrollWidth}px`;
+    log2.innerText = `No overflows, scrollWidth is ${element.scrollWidth}px`;
   }
 }
 
-aButton.addEventListener("click", () => {
-  checkOverflow(aDiv);
+button1.addEventListener("click", () => {
+  checkOverflow(div1);
 });
 
-anotherButton.addEventListener("click", () => {
-  checkOverflow(anotherDiv);
+button2.addEventListener("click", () => {
+  checkOverflow(div2);
 });
 ```
 
