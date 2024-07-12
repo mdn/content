@@ -8,11 +8,9 @@ spec-urls: https://drafts.fxtf.org/filter-effects/#element-attrdef-fecomponenttr
 
 {{SVGRef}}
 
-The **`intercept`** attribute defines the intercept of the linear function of color component transfers when the {{SVGAttr("type")}} attribute is set to `linear`.
+The **`intercept`** attribute defines the intercept of the linear function of color component transfers when the {{SVGAttr("type")}} attribute is set to `linear`.  When the `type` of a transfer function is `linear`, the `intercept` defines the intercept of the linear function. The `linear` function is defined as `slope * color + intercept`, where `color` is the color value. 
 
-The `intercept` attribute is supported by children of the {{SVGElement("feComponentTransfer")}} filter primitive, including the feFunc-RGBA transfer functions. When the `type` of a transfer function is `linear`, the `intercept` defines the intercept of the linear function. The `linear` function is defined as `slope * color + intercept`, where `color` is the color value.
-
-You can use this attribute with the following SVG component transfer function elements when `type="linear"` is set:
+The `intercept` attribute is supported by children of the {{SVGElement("feComponentTransfer")}} filter primitive and is used with the following SVG component transfer function elements when `type="linear"` is set:
 
 - {{SVGElement("feFuncA")}}
 - {{SVGElement("feFuncB")}}
