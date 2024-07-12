@@ -89,20 +89,20 @@ function isOverflowing(element) {
   return element.scrollWidth > element.offsetWidth;
 }
 
-function checkOverflow(element) {
+function checkOverflow(element, log) {
   if (isOverflowing(element)) {
-    log1.innerText = `Contents are overflowing, scrollWidth is ${element.scrollWidth}px`;
+    log.innerText = `Content is overflowing, scrollWidth is ${element.scrollWidth}px`;
   } else {
-    log2.innerText = `No overflows, scrollWidth is ${element.scrollWidth}px`;
+    log.innerText = `No overflows, scrollWidth is ${element.scrollWidth}px`;
   }
 }
 
 button1.addEventListener("click", () => {
-  checkOverflow(div1);
+  checkOverflow(div1, log1);
 });
 
 button2.addEventListener("click", () => {
-  checkOverflow(div2);
+  checkOverflow(div2, log2);
 });
 ```
 
@@ -110,7 +110,7 @@ button2.addEventListener("click", () => {
 
 Click the buttons to check if the content is overflowing the containers.
 
-{{EmbedLiveSample('Examples', '100%', 190)}}
+{{EmbedLiveSample("detecting_overflowing_content", "100%", "190")}}
 
 ## Specifications
 
