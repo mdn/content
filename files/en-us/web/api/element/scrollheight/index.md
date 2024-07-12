@@ -56,6 +56,16 @@ window.getComputedStyle(element).overflowY === "visible";
 window.getComputedStyle(element).overflowY !== "hidden";
 ```
 
+### Determine if the content of an element is overflowing
+
+This function returns a boolean value indicating if the content of an element is overflowing its bounds:
+
+```js
+function isOverflowing(element) {
+  return element.scrollHeight > element.clientHeight;
+}
+```
+
 ## Examples
 
 ### Checking that the user has read a text
@@ -167,7 +177,6 @@ function checkScrollToBottom(element) {
     toAgree.disabled = false;
   } else {
     info.innerText = "Read all text to agree";
-    toAgree.disabled = true;
   }
 }
 
@@ -182,7 +191,7 @@ veryImportantRead.onscroll = () => {
 
 toNextStep.onclick = () => {
   if (toAgree.checked) {
-    toNextStep.value = "All clear!";
+    toNextStep.value = "Done!";
   }
 };
 ```
