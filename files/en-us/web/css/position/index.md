@@ -277,9 +277,7 @@ Fixed positioning is similar to absolute positioning, with the exception that th
 
 ### Sticky positioning
 
-A stickily positioned element stays in its normal position as long as it stays within the provided [inset](/en-US/docs/Web/CSS/inset) boundaries, and if the element is moved out of the boundary it stays fixed to the boundary in that direction. So the sticky positioning could be thought of as a hybrid of relative and fixed positioning. For inset sides that have `auto` value, the element doesn't stay fixed in that direction and can go out of the [scrollport](/en-US/docs/Glossary/Scroll_container#scrollport) due to scrolling.
-
-You must specify at least one of `top`, `right`, `bottom`, or `left` inset for sticky positioning to behave as expected. Otherwise, it will be indistinguishable from relative positioning.
+The following CSS rule would position the element with id one relatively until the viewport was scrolled such that the element would be less than 10 pixels from the top. Beyond that threshold, the element would be fixed to 10 pixels from the top.
 
 ```css
 #one {
@@ -288,13 +286,13 @@ You must specify at least one of `top`, `right`, `bottom`, or `left` inset for s
 }
 ```
 
-The above CSS rule would position the element with id _one_ relatively until the viewport was scrolled such that the element would be less than 10 pixels from the top. Beyond that threshold, the element would be fixed to 10 pixels from the top.
+Now consider the following example, where we have two light bulb emojis in a paragraph. Both the light bulbs have been made sticky, and inset boundaries have been specified as 50px from top, 100px from right, 50px from bottom, and 50px from left. The inset area has been roughly marked using the same-sized gray-colored background on the div.
 
 #### HTML
 
 ```html
-Try to find the right places of the sticky light bulbs(💡) in the following
-text:
+Using scrollbars, try to find the right places of the sticky light bulbs(💡) in
+the following text:
 <div>
   <p>
     The representation of an idea by a light bulb(<span class="bulb">💡</span>)
@@ -320,6 +318,7 @@ div {
   width: 400px;
   height: 200px;
   overflow: scroll;
+  scrollbar-width: thin;
   font-size: 16px;
   font-family: verdana;
   border: 1px solid;
@@ -327,9 +326,9 @@ div {
 
 p {
   width: 600px;
-  height: 300px;
   user-select: none;
-  margin: 100px 150px 50px 100px;
+  margin: 0;
+  border: 110px solid transparent;
 }
 ```
 
@@ -341,7 +340,7 @@ p {
 
 div {
   /* mark area defined by the inset boundaries using gray color */
-  background: linear-gradient(#9999, #9999) 100px 50px / 184px 84px no-repeat;
+  background: linear-gradient(#9999, #9999) 100px 50px / 192px 100px no-repeat;
 }
 ```
 
@@ -349,7 +348,7 @@ div {
 
 {{EmbedLiveSample('Sticky_positioning', '', '300px')}}
 
-In the above example, both the light bulbs have been made sticky, and inset boundaries have been specified as 50px(top), 100px(right), 50px(bottom), and 100px(right). The inset area has been marked using the same-sized gray-colored background on the div. After you put both the bulbs in their right place, you'll notice that the bulbs act as relatively positioned inside the inset area. But as soon as they get moved out of the inset area they get fixed(stick) to the inset boundary in that direction.
+After you put both the bulbs in their right place, you'll notice that the bulbs act as relatively positioned inside the inset area. But as soon as they get moved out of the inset area they get fixed(stick) to the inset boundary in that direction.
 
 ## Specifications
 
