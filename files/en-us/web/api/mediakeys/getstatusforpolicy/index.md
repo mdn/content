@@ -82,7 +82,10 @@ The string can have one of the following values:
 
 ### Check if keys are usable with HDCP restriction
 
-This example checks if keys are usuable for decrypting a particular video format when using a minimum HDCP version of `2.2`.
+This example checks if keys are usable for decrypting a particular video format when using a minimum HDCP version of `2.2`.
+
+> **Note:** A status of `output-restricted` when you're using an external display can be caused by hardware HDCP incompatibility issues.
+> If using a laptop, you may be able to "fix" this by disconnecting the external display.
 
 #### HTML
 
