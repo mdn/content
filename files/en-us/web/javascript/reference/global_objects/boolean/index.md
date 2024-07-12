@@ -7,9 +7,31 @@ browser-compat: javascript.builtins.Boolean
 
 {{JSRef}}
 
-The **`Boolean`** object represents a truth value: `true` or `false`.
+**`Boolean`** values can be one of two values: `true` or `false`, representing the truth value of a logical proposition.
 
 ## Description
+
+Boolean values are typically produced by [relational operators](/en-US/docs/Web/JavaScript/Reference/Operators#relational_operators), [equality operators](/en-US/docs/Web/JavaScript/Reference/Operators#equality_operators), and [logical NOT (`!`)](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_NOT). They can also be produced by functions that represent conditions, such as {{jsxref("Array.isArray()")}}. Note that [binary logical operators](/en-US/docs/Web/JavaScript/Reference/Operators#binary_logical_operators) such as `&&` and `||` return the values of the operands, which may or may not be boolean values.
+
+Boolean values are typically used in conditional testing, such as the condition for {{jsxref("Statements/if...else", "if...else")}} and {{jsxref("Statements/while", "while")}} statements, the [conditional operator](/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator) (`? :`), or the predicate return value of {{jsxref("Array.prototype.filter()")}}.
+
+You would rarely need to explicitly convert something to a boolean value, as JavaScript does this automatically in boolean contexts, so you can use any value as if it's a boolean, based on its [truthiness](#boolean_coercion). You are also encouraged to use `if (condition)` and `if (!condition)` instead of `if (condition === true)` or `if (condition === false)` in your own code so you can take advantage of this convention. However, making sure that values representing conditions are always booleans can help clarify the intent of your code.
+
+```js
+// Do this:
+// This always returns a boolean value
+const isObject = (obj) => !!obj && typeof obj === "object";
+
+// Or this:
+const isObject = (obj) => Boolean(obj) && typeof obj === "object";
+
+// Or this:
+const isObject = (obj) => obj !== null && typeof obj === "object";
+
+// Instead of this:
+// This may return falsy values that are not equal to false
+const isObject = (obj) => obj && typeof obj === "object";
+```
 
 ### Boolean primitives and Boolean objects
 
@@ -58,7 +80,7 @@ Many built-in operations that expect booleans first coerce their arguments to bo
 
 > **Note:** A legacy behavior makes [`document.all`](/en-US/docs/Web/API/Document/all) return `false` when used as a boolean, despite it being an object. This property is legacy and non-standard and should not be used.
 
-> **Note:** Unlike other type conversions like [string coercion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion) or [number coercion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), boolean coercion does not attempt to convert objects to primitives.
+> **Note:** Unlike other type conversions like [string coercion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion) or [number coercion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), boolean coercion does not attempt to [convert objects to primitives](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion) by calling user methods.
 
 In other words, there are only a handful of values that get coerced to `false` — these are called [falsy](/en-US/docs/Glossary/Falsy) values. All other values are called [truthy](/en-US/docs/Glossary/Truthy) values. A value's truthiness is important when used with logical operators, conditional statements, or any boolean context.
 
@@ -109,25 +131,25 @@ These properties are defined on `Boolean.prototype` and shared by all `Boolean` 
 
 ## Examples
 
-### Creating Boolean objects with an initial value of false
+### Creating false values
 
 ```js
-const bNoParam = new Boolean();
-const bZero = new Boolean(0);
-const bNull = new Boolean(null);
-const bEmptyString = new Boolean("");
-const bfalse = new Boolean(false);
+const bNoParam = Boolean();
+const bZero = Boolean(0);
+const bNull = Boolean(null);
+const bEmptyString = Boolean("");
+const bfalse = Boolean(false);
 ```
 
-### Creating Boolean objects with an initial value of true
+### Creating true values
 
 ```js
-const btrue = new Boolean(true);
-const btrueString = new Boolean("true");
-const bfalseString = new Boolean("false");
-const bSuLin = new Boolean("Su Lin");
-const bArrayProto = new Boolean([]);
-const bObjProto = new Boolean({});
+const btrue = Boolean(true);
+const btrueString = Boolean("true");
+const bfalseString = Boolean("false");
+const bSuLin = Boolean("Su Lin");
+const bArrayProto = Boolean([]);
+const bObjProto = Boolean({});
 ```
 
 ## Specifications
