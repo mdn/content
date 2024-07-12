@@ -32,6 +32,9 @@ let downloading = browser.downloads.download(
 
   - : An `object` specifying what file you wish to download, and any other preferences you wish to set concerning the download. It can contain the following properties:
 
+    - `url`
+      - : A `string` representing the URL to download.
+
     - `allowHttpErrors` {{optional_inline}}
 
       - : A `boolean` flag that enables downloads to continue even if they encounter HTTP errors. Using this flag, for example, enables the download of server error pages. Default value `false`. When set to:
@@ -60,9 +63,6 @@ let downloading = browser.downloads.download(
         If this option is omitted, the browser will show the file chooser or not based on the general user preference for this behavior (in Firefox this preference is labeled "Always ask you where to save files" in about:preferences, or `browser.download.useDownloadDir` in about:config).
 
         > **Note:** Firefox for Android raises an error if `saveAs` is set to `true`. The parameter is ignored when `saveAs` is `false` or not included.
-
-    - `url`
-      - : A `string` representing the URL to download.
 
 ### Return value
 
