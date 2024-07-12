@@ -11,7 +11,7 @@ An HTML **comment** is used to add explanatory notes to the markup or to prevent
 
 Comments start with the string `<!--` and end with the string `-->`, generally with text in between. This text cannot start with the string `>` or `->`, cannot contain the strings `-->` or `--!>`, nor end with the string `<!-`, though `<!` is allowed.
 
-Anything in HTML between `<!--` and `-->` is an HTML comment. The browser ignores comments as it renders the code. In other words, they are not visible on the page - just in the code. HTML comments are a way for you to write helpful notes about your code or logic.
+The browser ignores comments as it renders the code. In other words, they are not visible on the page - just in the code. HTML comments are a way for you to write helpful notes about your code or logic.
 
 The above is true for [XML](/en-US/docs/Web/XML) comments as well. In addition, in XML, such as in [SVG](/en-US/docs/Web/SVG) or [MathML](/en-US/docs/Web/MathML) markup, a comment cannot contain the character sequence `--`.
 
