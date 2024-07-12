@@ -144,9 +144,9 @@ The sectioning elements are:
 
 Heading content, a subset of flow content, defines the title of a section. This definition applies both to sections marked by an explicit [sectioning content](#sectioning_content) elements and to those implicitly defined by the heading content itself.
 
-The heading elements are: 
+The heading elements are:
 
-- {{HTMLElement("Heading_Elements", "<code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code>")}} 
+- {{HTMLElement("Heading_Elements", "<code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code>")}}
 - {{HTMLElement("hgroup")}}
 
 > **Note:** Though likely to contain heading content, the {{HTMLElement("header")}} is not heading content itself.
@@ -220,7 +220,7 @@ A few other elements belong to this category, but only if a specific condition i
 
 ### Embedded content
 
-Embedded content, a subset of flow content, imports another resource or inserts content from another markup language or namespace into the document. 
+Embedded content, a subset of flow content, imports another resource or inserts content from another markup language or namespace into the document.
 
 The embedded content elements are:
 
@@ -237,7 +237,7 @@ The embedded content elements are:
 
 ### Interactive content
 
-Interactive content, a subset of flow content, includes elements that are specifically designed for user interaction. 
+Interactive content, a subset of flow content, includes elements that are specifically designed for user interaction.
 
 The interactive content elements are:
 
@@ -260,7 +260,7 @@ Some elements belong to this category only under specific conditions:
 
 ### Palpable content
 
-Content is palpable when it's neither empty nor hidden; it is content that is rendered and is substantive. Elements whose model is flow content should have at least one node which is palpable. 
+Content is palpable when it's neither empty nor hidden; it is content that is rendered and is substantive. Elements whose model is flow content should have at least one node which is palpable.
 
 The palpable elements are:
 
