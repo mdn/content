@@ -6,15 +6,14 @@ page-type: javascript-error
 
 {{jsSidebar("Errors")}}
 
-The JavaScript exception "illegal character" occurs when there is an invalid or
-unexpected token that doesn't belong at this position in the code.
+The JavaScript exception "illegal character" occurs when the [lexer](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar) reads a character that's not part of a string literal, and the character cannot constitute a valid token in the language.
 
 ## Message
 
 ```plain
-SyntaxError: Invalid character (Edge)
-SyntaxError: illegal character (Firefox)
-SyntaxError: Invalid or unexpected token (Chrome)
+SyntaxError: Invalid or unexpected token (V8-based)
+SyntaxError: illegal character U+201C (Firefox)
+SyntaxError: Invalid character '\u201c' (Safari)
 ```
 
 ## Error type
@@ -23,8 +22,7 @@ SyntaxError: Invalid or unexpected token (Chrome)
 
 ## What went wrong?
 
-There is an invalid or unexpected token that doesn't belong at this position in the
-code. Use an editor that supports syntax highlighting and carefully check your code
+There is an invalid character that the interpreter doesn't understand. You should either put it in a string literal or replace it with another character. Use an editor that supports syntax highlighting and carefully check your code
 against mismatches like a minus sign (`-`) versus a dash (`–`)
 or simple quotes (`"`) versus non-standard quotation marks (`"`).
 
@@ -62,14 +60,14 @@ Some editors and IDEs will notify you or at least use a slightly different highl
 It's easy to forget a character here or there.
 
 ```js-nolint example-bad
-const colors = ["#000", #333", "#666"];
-// SyntaxError: illegal character
+const operators = ["+", "-", ×", "÷"];
+// SyntaxError: illegal character U+00D7
 ```
 
-Add the missing quote for `"#333"`.
+Add the missing quote for `"×"`.
 
 ```js example-good
-const colors = ["#000", "#333", "#666"];
+const operators = ["+", "-", "×", "÷"];
 ```
 
 ### Hidden characters

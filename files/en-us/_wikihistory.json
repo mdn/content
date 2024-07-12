@@ -73699,10 +73699,6 @@
       "fscholz"
     ]
   },
-  "Web/CSS/::cue-region": {
-    "modified": "2020-10-15T22:23:36.923Z",
-    "contributors": ["wbamberg", "ExE-Boss"]
-  },
   "Web/CSS/::file-selector-button": {
     "modified": "2020-10-28T10:50:12.079Z",
     "contributors": [
@@ -99739,17 +99735,9 @@
     "modified": "2020-10-15T21:50:32.476Z",
     "contributors": ["mfuji09", "Sheppy", "vrana", "Malvoz", "fscholz"]
   },
-  "Web/HTTP/Headers/Content-Security-Policy/plugin-types": {
-    "modified": "2020-10-15T21:50:26.194Z",
-    "contributors": ["mfuji09", "Sheppy", "fscholz", "teoli"]
-  },
   "Web/HTTP/Headers/Content-Security-Policy/prefetch-src": {
     "modified": "2020-10-15T22:21:20.756Z",
     "contributors": ["mfuji09", "bershanskiy"]
-  },
-  "Web/HTTP/Headers/Content-Security-Policy/referrer": {
-    "modified": "2020-10-15T21:50:39.723Z",
-    "contributors": ["bershanskiy", "Sheppy", "infuerno", "fscholz", "teoli"]
   },
   "Web/HTTP/Headers/Content-Security-Policy/report-to": {
     "modified": "2020-10-15T22:03:06.085Z",
@@ -100068,10 +100056,6 @@
       "kmag",
       "teoli"
     ]
-  },
-  "Web/HTTP/Headers/Large-Allocation": {
-    "modified": "2020-10-15T21:51:49.609Z",
-    "contributors": ["fscholz"]
   },
   "Web/HTTP/Headers/Last-Modified": {
     "modified": "2020-10-15T21:48:43.337Z",
@@ -103949,10 +103933,6 @@
     "modified": "2020-11-30T05:50:18.195Z",
     "contributors": ["mfuji09", "fscholz"]
   },
-  "Web/JavaScript/Reference/Errors/Equal_as_assign": {
-    "modified": "2020-04-16T08:23:11.906Z",
-    "contributors": ["fscholz", "arai"]
-  },
   "Web/JavaScript/Reference/Errors/Getter_only": {
     "modified": "2020-05-06T10:16:12.614Z",
     "contributors": ["fscholz", "PatrickKettner"]
@@ -104054,21 +104034,6 @@
   "Web/JavaScript/Reference/Errors/Missing_parenthesis_after_condition": {
     "modified": "2020-05-06T09:40:23.426Z",
     "contributors": ["fscholz", "PatrickKettner"]
-  },
-  "Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement": {
-    "modified": "2020-04-16T07:49:53.557Z",
-    "contributors": [
-      "fscholz",
-      "sideshowbarker",
-      "kevinbmagill",
-      "SphinxKnight",
-      "ogigpermana",
-      "luisvallejomohl",
-      "PatrickKettner",
-      "nmve",
-      "jwhitlock",
-      "loveabushu1"
-    ]
   },
   "Web/JavaScript/Reference/Errors/More_arguments_needed": {
     "modified": "2020-05-06T09:46:25.163Z",
@@ -104204,6 +104169,10 @@
     "modified": "2020-04-15T11:09:10.798Z",
     "contributors": ["fscholz", "PatrickKettner", "nmve", "nbp", "arai"]
   },
+  "Web/JavaScript/Reference/Errors/String_literal_EOL": {
+    "modified": "2020-04-16T08:26:04.965Z",
+    "contributors": ["fscholz", "PatrickKettner", "neroshan12", "nmve"]
+  },
   "Web/JavaScript/Reference/Errors/Too_much_recursion": {
     "modified": "2020-04-14T12:37:45.784Z",
     "contributors": [
@@ -104219,10 +104188,6 @@
   "Web/JavaScript/Reference/Errors/Undeclared_var": {
     "modified": "2020-06-04T08:11:57.239Z",
     "contributors": ["Sheppy", "fscholz", "ZavodPodushek", "nmve"]
-  },
-  "Web/JavaScript/Reference/Errors/Undefined_prop": {
-    "modified": "2020-10-24T03:39:49.210Z",
-    "contributors": ["angleKH", "fscholz", "arai", "fiejen", "nmve", "Sheppy"]
   },
   "Web/JavaScript/Reference/Errors/Unexpected_token": {
     "modified": "2020-04-15T11:24:29.836Z",
@@ -104255,10 +104220,6 @@
   "Web/JavaScript/Reference/Errors/Unnamed_function_statement": {
     "modified": "2020-04-16T07:01:37.303Z",
     "contributors": ["fscholz", "wbamberg", "PatrickKettner"]
-  },
-  "Web/JavaScript/Reference/Errors/Unterminated_string_literal": {
-    "modified": "2020-04-16T08:26:04.965Z",
-    "contributors": ["fscholz", "PatrickKettner", "neroshan12", "nmve"]
   },
   "Web/JavaScript/Reference/Errors/in_operator_no_object": {
     "modified": "2020-12-06T05:37:14.314Z",

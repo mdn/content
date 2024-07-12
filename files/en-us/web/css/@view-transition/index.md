@@ -83,7 +83,6 @@ In addition to the `@view-transition` at-rule, we define two {{cssxref("@keyfram
 }
 ```
 
-
 ## Specifications
 
 {{Specifications}}
