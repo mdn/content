@@ -25,7 +25,7 @@ The above is true for [XML](/en-US/docs/Web/XML) comments as well. In addition, 
 
 ## Examples
 
-```css
+```html
 <!-- A one-line comment -->
 
 <!--
