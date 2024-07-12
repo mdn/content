@@ -18,14 +18,43 @@ A string that contains a URL, or the empty string (`""`) if the corresponding `<
 
 ## Examples
 
+### HTML with base URL
+
+This example demonstrates that the `href` attribute in `<base>` is reflected in the `href` property of `HTMLBaseElement`.
+
+```html hidden
+<pre id="log"></pre>
+```
+
+```js hidden
+const logElement = document.querySelector("#log");
+function log(text) {
+  logElement.innerText = text;
+}
+```
+
+```css hidden
+#log {
+  height: 20px;
+}
+```
+
+#### HTML
+
 ```html
 <base href="https://developer.mozilla.org/example" />
 ```
 
+#### JavaScript
+
 ```js
 const base = document.getElementsByTagName("base")[0];
-console.log(base.href); // 'https://developer.mozilla.org/example'
+log(`base.href="${base.href}"`);
 ```
+
+#### Result
+
+{{EmbedLiveSample('HTML with base URL', '100','50px')}}
 
 ## Specifications
 
