@@ -27,6 +27,7 @@ None.
 ### Check if keys are usable with HDCP restriction
 
 This example shows how `getStatusForPolicy()` can be used to check if keys can decrypt a particular video format in a setup that has a minimum HDCP version of `2.2`.
+For more information, see the [MediaKeys: getStatusForPolicy() method](/en-US/docs/Web/API/MediaKeys/getStatusForPolicy) documentation.
 
 #### HTML
 
