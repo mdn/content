@@ -44,28 +44,51 @@ _This interface inherits some of its methods from its parent, {{domxref("Animati
 
 ## Examples
 
-In the [Follow the White Rabbit example](https://codepen.io/rachelnabors/pen/eJyWzm/?editors=0010), the KeyframeEffect constructor is used to create a set of keyframes that dictate how the White Rabbit should animate down the hole:
+In the following example, the KeyframeEffect constructor is used to create a set of keyframes that dictate how the rofl emoji should roll on the floor:
 
 ```js
-const whiteRabbit = document.getElementById("rabbit");
+const emoji = document.querySelector("div"); // element to animate
 
-const rabbitDownKeyframes = new KeyframeEffect(
-  whiteRabbit, // element to animate
+const rollingKeyframes = new KeyframeEffect(
+  emoji,
   [
-    { transform: "translateY(0%)" }, // keyframe
-    { transform: "translateY(100%)" }, // keyframe
+    { transform: "translateX(0) rotate(0)" }, // keyframe
+    { transform: "translateX(200px) rotate(1.3turn)" }, // keyframe
   ],
-  { duration: 3000, fill: "forwards" }, // keyframe options
+  {
+    // keyframe options
+    duration: 2000,
+    direction: "alternate",
+    easing: "ease-in-out",
+    iterations: "Infinity",
+  },
 );
 
-const rabbitDownAnimation = new Animation(
-  rabbitDownKeyframes,
-  document.timeline,
-);
+const rollingAnimation = new Animation(rollingKeyframes, document.timeline);
 
-// Play rabbit animation
-rabbitDownAnimation.play();
+// play rofl animation
+rollingAnimation.play();
 ```
+
+```html
+<div>🤣</div>
+```
+
+```css hidden
+body {
+  box-shadow: 0 5px 5px pink;
+}
+
+div {
+  width: fit-content;
+  margin-left: calc(50% - 132px);
+  font-size: 64px;
+  user-select: none;
+  margin-top: 1rem;
+}
+```
+
+{{ EmbedLiveSample("Examples", "100%", "120") }}
 
 ## Specifications
 

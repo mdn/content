@@ -7,7 +7,8 @@ browser-compat: css.selectors.cue
 
 {{CSSRef}}
 
-The **`::cue`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) matches [WebVTT](/en-US/docs/Web/API/WebVTT_API) cues within a selected element. This can be used to [style captions and other cues](/en-US/docs/Web/API/WebVTT_API#styling_webvtt_cues) in media with VTT tracks.
+The **`::cue`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) matches [WebVTT](/en-US/docs/Web/API/WebVTT_API) cues within a selected element.
+This can be used to [style captions and other cues](/en-US/docs/Web/API/WebVTT_API#styling_webvtt_in_html_or_a_stylesheet) in media with VTT tracks.
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-element-cue.html", "tabbed-shorter")}}
 
@@ -76,7 +77,8 @@ The following CSS sets the cue style so that the text is white and the backgroun
 
 ### Styling WebVTT internal node objects
 
-Cue text can include _internal node objects_ as the tags (similar to HTML elements) `<c>`, `<i>`, `<b>`, `<u>`, `<ruby>`, `<rt>`, `<v>`, and `<lang>`. The `::cue()` selector can be used to apply styles to content inside these tags to customize how the WebVTT track is displayed.
+Cue text can include _internal node objects_ as the tags (similar to HTML elements) `<c>`, `<i>`, `<b>`, `<u>`, `<ruby>`, `<rt>`, `<v>`, and `<lang>`.
+The `::cue()` selector can be used to apply styles to content inside these tags to customize how the WebVTT track is displayed.
 Consider the following cue text that uses the `<u>` tag to underline some text:
 
 ```plain
