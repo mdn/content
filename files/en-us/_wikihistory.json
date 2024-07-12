@@ -73699,10 +73699,6 @@
       "fscholz"
     ]
   },
-  "Web/CSS/::cue-region": {
-    "modified": "2020-10-15T22:23:36.923Z",
-    "contributors": ["wbamberg", "ExE-Boss"]
-  },
   "Web/CSS/::file-selector-button": {
     "modified": "2020-10-28T10:50:12.079Z",
     "contributors": [
