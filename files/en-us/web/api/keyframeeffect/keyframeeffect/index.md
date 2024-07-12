@@ -118,7 +118,7 @@ div {
 }
 ```
 
-{{ EmbedLiveSample("Examples", "100%", '120') }}
+{{ EmbedLiveSample("Examples", "100%", "120") }}
 
 ## Specifications
 

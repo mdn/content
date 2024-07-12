@@ -71,7 +71,7 @@ switchPseudoElement();
 logPseudoElement();
 ```
 
-{{EmbedLiveSample("Examples", "100", "80")}}
+{{EmbedLiveSample("Examples", "100", "90")}}
 
 ## Specifications
 
