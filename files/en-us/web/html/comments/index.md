@@ -50,9 +50,9 @@ lines
 -->
 ```
 
-> **Note:** HTML comments are only permitted as content. You cannot use it within a tag, such as before an HTML [attribute](/en-US/docs/Glossary/Attribute).
-
 ## Notes
+
+HTML comments are only permitted as content. You cannot use it within a tag, such as before an HTML [attribute](/en-US/docs/Glossary/Attribute).
 
 As with most programming languages that use the `<!-- -->` comment syntax, comments cannot be nested. In other words, the first instance of `-->` that follows an instance of `<!--` closes the comment.
 
