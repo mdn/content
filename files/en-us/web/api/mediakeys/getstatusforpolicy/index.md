@@ -34,7 +34,6 @@ getStatusForPolicy(policy)
     - `minHdcpVersion` {{optional_inline}}
 
       - : A string indicating the semantic version of the minimum HDCP version to check for usability, such as `1.0`, `1.4`, `2.2`, `2.3`.
-        The values are defined in the [Encrypted Media Extensions HDCP Version Registry](https://www.w3.org/TR/eme-hdcp-version-registry/) (note that at time of writing this link does not work).
 
 > **Note:** At least one policy restriction must be specified, so `minHdcpVersion` is only "technically" optional.
 
