@@ -15,8 +15,7 @@ are inserted as equivalent {{domxref("Text")}} nodes.
 
 Differences from {{domxref("Node.appendChild()")}}:
 
-- `Element.append()` allows you to also append string
-  objects, whereas `Node.appendChild()` only accepts {{domxref("Node")}}
+- `Element.append()` allows you to also append strings, whereas `Node.appendChild()` only accepts {{domxref("Node")}}
   objects.
 - `Element.append()` has no return value, whereas
   `Node.appendChild()` returns the appended {{domxref("Node")}} object.
