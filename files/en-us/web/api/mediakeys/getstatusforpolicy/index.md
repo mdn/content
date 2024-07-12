@@ -73,7 +73,8 @@ The string can have one of the following values:
   - : The `policy` has no defined properties (policy restrictions), or a property key is not valid.
 
 - `NotSupportedError`
-  - : The CDMcannot determine the status for all/any of the policy restrictions.
+
+  - : The CDM cannot determine the status for any or all of the policy restrictions.
 
 ## Examples
 
