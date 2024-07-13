@@ -1,5 +1,5 @@
 ---
-title: Segments.prototype[@@iterator]()
+title: Segments.prototype[Symbol.iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/@@iterator
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.Segments.@@iterator
@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Intl.Segments.@@iterator
 
 {{JSRef}}
 
-The **`[@@iterator]()`** method of [`Segments`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) instances implements the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) and allows `Segments` objects to be consumed by most syntaxes expecting iterables, such as the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) and {{jsxref("Statements/for...of", "for...of")}} loops. It returns a [segments iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) that yields data about each segment.
+The **`[Symbol.iterator]()`** method of [`Segments`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) instances implements the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) and allows `Segments` objects to be consumed by most syntaxes expecting iterables, such as the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) and {{jsxref("Statements/for...of", "for...of")}} loops. It returns a [segments iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) that yields data about each segment.
 
 {{EmbedInteractiveExample("pages/js/segments-prototype-@@iterator.html")}}
 
@@ -29,7 +29,7 @@ A new [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Obj
 
 ### Iteration using for...of loop
 
-Note that you seldom need to call this method directly. The existence of the `@@iterator` method makes `Segments` objects [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol), and iterating syntaxes like the `for...of` loop automatically call this method to obtain the iterator to loop over.
+Note that you seldom need to call this method directly. The existence of the `[Symbol.iterator]()` method makes `Segments` objects [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol), and iterating syntaxes like the `for...of` loop automatically call this method to obtain the iterator to loop over.
 
 ```js
 const segmenter = new Intl.Segmenter("zh-CN", { granularity: "word" });

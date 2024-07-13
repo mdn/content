@@ -1,5 +1,5 @@
 ---
-title: RegExp.prototype[@@matchAll]()
+title: RegExp.prototype[Symbol.matchAll]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.RegExp.@@matchAll
@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.RegExp.@@matchAll
 
 {{JSRef}}
 
-The **`[@@matchAll]()`** method of {{jsxref("RegExp")}} instances specifies how [`String.prototype.matchAll`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll) should behave.
+The **`[Symbol.matchAll]()`** method of {{jsxref("RegExp")}} instances specifies how [`String.prototype.matchAll`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll) should behave.
 
 {{EmbedInteractiveExample("pages/js/regexp-prototype-@@matchall.html", "taller")}}
 
@@ -36,7 +36,7 @@ This method is called internally in {{jsxref("String.prototype.matchAll()")}}. F
 /a/g[Symbol.matchAll]("abc");
 ```
 
-Like [`@@split`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@split), `@@matchAll` starts by using [`@@species`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@species) to construct a new regex, thus avoiding mutating the original regexp in any way. [`lastIndex`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) starts as the original regex's value.
+Like [`[Symbol.split]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@split), `[Symbol.matchAll]()` starts by using [`[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@species) to construct a new regex, thus avoiding mutating the original regexp in any way. [`lastIndex`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) starts as the original regex's value.
 
 ```js
 const regexp = /[a-c]/g;
@@ -46,7 +46,7 @@ Array.from(str.matchAll(regexp), (m) => `${regexp.lastIndex} ${m[0]}`);
 // [ "1 b", "1 c" ]
 ```
 
-The validation that the input is a global regex happens in [`String.prototype.matchAll()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll). `@@matchAll` does not validate the input. If the regex is not global, the returned iterator yields the [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) result once and then returns `undefined`. If the regexp is global, each time the returned iterator's `next()` method is called, the regex's [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) is called and the result is yielded.
+The validation that the input is a global regex happens in [`String.prototype.matchAll()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll). `[Symbol.matchAll]()` does not validate the input. If the regex is not global, the returned iterator yields the [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) result once and then returns `undefined`. If the regexp is global, each time the returned iterator's `next()` method is called, the regex's [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) is called and the result is yielded.
 
 When the regex is sticky and global, it will still perform sticky matches — i.e. it will not match any occurrences beyond the `lastIndex`.
 
@@ -82,9 +82,9 @@ console.log(Array.from(result, (x) => x[0]));
 // [ "2016", "01", "02" ]
 ```
 
-### Using @@matchAll in subclasses
+### Using `[Symbol.matchAll]()` in subclasses
 
-Subclasses of {{jsxref("RegExp")}} can override the `[@@matchAll]()` method to modify the default behavior.
+Subclasses of {{jsxref("RegExp")}} can override the `[Symbol.matchAll]()` method to modify the default behavior.
 
 For example, to return an {{jsxref("Array")}} instead of an [iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators):
 
@@ -117,10 +117,10 @@ console.log(result[1]);
 
 ## See also
 
-- [Polyfill of `RegExp.prototype[@@matchAll]` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `RegExp.prototype[Symbol.matchAll]` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.matchAll()")}}
-- [`RegExp.prototype[@@match]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@match)
-- [`RegExp.prototype[@@replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)
-- [`RegExp.prototype[@@search]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@search)
-- [`RegExp.prototype[@@split]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@split)
+- [`RegExp.prototype[Symbol.match]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@match)
+- [`RegExp.prototype[Symbol.replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace)
+- [`RegExp.prototype[Symbol.search]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@search)
+- [`RegExp.prototype[Symbol.split]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@split)
 - {{jsxref("Symbol.matchAll")}}

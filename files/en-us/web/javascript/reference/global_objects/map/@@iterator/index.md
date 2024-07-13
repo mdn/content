@@ -1,5 +1,5 @@
 ---
-title: Map.prototype[@@iterator]()
+title: Map.prototype[Symbol.iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Map/@@iterator
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Map.@@iterator
@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Map.@@iterator
 
 {{JSRef}}
 
-The **`[@@iterator]()`** method of {{jsxref("Map")}} instances implements the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) and allows `Map` objects to be consumed by most syntaxes expecting iterables, such as the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) and {{jsxref("Statements/for...of", "for...of")}} loops. It returns a [map iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) that yields the key-value pairs of the map in insertion order.
+The **`[Symbol.iterator]()`** method of {{jsxref("Map")}} instances implements the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) and allows `Map` objects to be consumed by most syntaxes expecting iterables, such as the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) and {{jsxref("Statements/for...of", "for...of")}} loops. It returns a [map iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) that yields the key-value pairs of the map in insertion order.
 
 The initial value of this property is the same function object as the initial value of the {{jsxref("Map.prototype.entries")}} property.
 
@@ -31,7 +31,7 @@ The same return value as {{jsxref("Map.prototype.entries()")}}: a new [iterable 
 
 ### Iteration using for...of loop
 
-Note that you seldom need to call this method directly. The existence of the `@@iterator` method makes `Map` objects [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol), and iterating syntaxes like the `for...of` loop automatically call this method to obtain the iterator to loop over.
+Note that you seldom need to call this method directly. The existence of the `[Symbol.iterator]()` method makes `Map` objects [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol), and iterating syntaxes like the `for...of` loop automatically call this method to obtain the iterator to loop over.
 
 ```js
 const myMap = new Map();

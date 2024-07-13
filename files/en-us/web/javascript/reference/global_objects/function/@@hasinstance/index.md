@@ -1,5 +1,5 @@
 ---
-title: Function.prototype[@@hasInstance]()
+title: Function.prototype[Symbol.hasInstance]()
 slug: Web/JavaScript/Reference/Global_Objects/Function/@@hasInstance
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Function.@@hasInstance
@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Function.@@hasInstance
 
 {{JSRef}}
 
-The **`[@@hasInstance]()`** method of {{jsxref("Function")}} instances specifies the default procedure for determining if a constructor function recognizes an object as one of the constructor's instances. It is called by the [`instanceof`](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) operator.
+The **`[Symbol.hasInstance]()`** method of {{jsxref("Function")}} instances specifies the default procedure for determining if a constructor function recognizes an object as one of the constructor's instances. It is called by the [`instanceof`](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) operator.
 
 ## Syntax
 
@@ -31,9 +31,9 @@ func[Symbol.hasInstance](value)
 
 ## Description
 
-The [`instanceof`](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) operator calls the [`[@@hasInstance]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance) method of the right-hand side whenever such a method exists. Because all functions inherit from `Function.prototype` by default, they would all have the `[@@hasInstance]()` method, so most of the time, the `Function.prototype[@@hasInstance]` method specifies the behavior of `instanceof` when the right-hand side is a function. This method implements the default behavior of the `instanceof` operator (the same algorithm when `constructor` has no `@@hasInstance` method).
+The [`instanceof`](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) operator calls the [`[Symbol.hasInstance]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance) method of the right-hand side whenever such a method exists. Because all functions inherit from `Function.prototype` by default, they would all have the `[Symbol.hasInstance]()` method, so most of the time, the `Function.prototype[Symbol.hasInstance]()` method specifies the behavior of `instanceof` when the right-hand side is a function. This method implements the default behavior of the `instanceof` operator (the same algorithm when `constructor` has no `[Symbol.hasInstance]()` method).
 
-Unlike most methods, the `Function.prototype[@@hasInstance]()` property is non-configurable and non-writable. This is a security feature to prevent the underlying target function of a bound function from being obtainable. See [this StackOverflow answer](https://stackoverflow.com/questions/38215027/trying-to-understand-the-official-es6-spec-regarding-symbol-hasinstance/38215392#38215392) for an example.
+Unlike most methods, the `Function.prototype[Symbol.hasInstance]()` property is non-configurable and non-writable. This is a security feature to prevent the underlying target function of a bound function from being obtainable. See [this StackOverflow answer](https://stackoverflow.com/questions/38215027/trying-to-understand-the-official-es6-spec-regarding-symbol-hasinstance/38215392#38215392) for an example.
 
 ## Examples
 
@@ -47,7 +47,7 @@ const foo = new Foo();
 console.log(foo instanceof Foo === Foo[Symbol.hasInstance](foo)); // true
 ```
 
-You may want to use this method if you want to invoke the default `instanceof` behavior, but you don't know if a constructor has a overridden `[@@hasInstance]()` method.
+You may want to use this method if you want to invoke the default `instanceof` behavior, but you don't know if a constructor has a overridden `[Symbol.hasInstance]()` method.
 
 ```js
 class Foo {
