@@ -24,13 +24,8 @@ const params = new URL("https://example.com/?name=Jonathan%20Smith&age=18")
 const name = params.get("name");
 const age = parseInt(params.get("age"));
 
-console.log(`name:\t${name}`);
-console.log(`age:\t${age}`);
-```
-
-```plain
-name: Jonathan Smith
-age:  18
+console.log(`name: ${name}`); // name: Jonathan Smith
+console.log(`age: ${age}`); // age: 18
 ```
 
 ## Specifications
