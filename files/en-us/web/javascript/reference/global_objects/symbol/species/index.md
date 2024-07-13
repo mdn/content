@@ -55,10 +55,10 @@ console.log(mapped instanceof Array); // true
 
 ## See also
 
-- {{jsxref("Array/@@species", "Array[Symbol.species]")}}
-- {{jsxref("ArrayBuffer/@@species", "ArrayBuffer[Symbol.species]")}}
-- {{jsxref("Map/@@species", "Map[Symbol.species]")}}
-- {{jsxref("Promise/@@species", "Promise[Symbol.species]")}}
-- {{jsxref("RegExp/@@species", "RegExp[Symbol.species]")}}
-- {{jsxref("Set/@@species", "Set[Symbol.species]")}}
-- {{jsxref("TypedArray/@@species", "TypedArray[Symbol.species]")}}
+- [`Array[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.species)
+- [`ArrayBuffer[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/Symbol.species)
+- [`Map[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.species)
+- [`Promise[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Symbol.species)
+- [`RegExp[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.species)
+- [`Set[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.species)
+- [`TypedArray[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.species)

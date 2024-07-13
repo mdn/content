@@ -93,7 +93,7 @@ For security reasons, `SharedArrayBuffer`s cannot be reduced in size, only grown
 
 ## Static properties
 
-- {{jsxref("SharedArrayBuffer/@@species", "SharedArrayBuffer[Symbol.species]")}}
+- [`SharedArrayBuffer[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/Symbol.species)
   - : Returns the constructor used to construct return values from `SharedArrayBuffer` methods.
 
 ## Instance properties

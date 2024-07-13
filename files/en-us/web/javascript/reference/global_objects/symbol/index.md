@@ -134,7 +134,7 @@ These properties are defined on `Symbol.prototype` and shared by all `Symbol` in
   - : Returns a string containing the description of the Symbol. Overrides the {{jsxref("Object.prototype.toString()")}} method.
 - {{jsxref("Symbol.prototype.valueOf()")}}
   - : Returns the Symbol. Overrides the {{jsxref("Object.prototype.valueOf()")}} method.
-- [`Symbol.prototype[Symbol.toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive)
+- [`Symbol.prototype[Symbol.toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/Symbol.toPrimitive)
   - : Returns the Symbol.
 
 ## Examples

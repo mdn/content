@@ -61,7 +61,7 @@ For more information about the `onRejected` handler, see the {{jsxref("Promise/c
 
 [Thenable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables) objects that arise along the `then()` chain are always [resolved](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise#the_resolve_function) — the `onFulfilled` handler never receives a thenable object, and any thenable returned by either handler are always resolved before being passed to the next handler. This is because when constructing the new promise, the `resolve` and `reject` functions passed by the `executor` are saved, and when the current promise settles, the respective function will be called with the fulfillment value or rejection reason. The resolving logic comes from the `resolve` function passed by the {{jsxref("Promise/Promise", "Promise()")}} constructor.
 
-`then()` supports subclassing, which means it can be called on instances of subclasses of `Promise`, and the result will be a promise of the subclass type. You can customize the type of the return value through the [`[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/@@species) property.
+`then()` supports subclassing, which means it can be called on instances of subclasses of `Promise`, and the result will be a promise of the subclass type. You can customize the type of the return value through the [`[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Symbol.species) property.
 
 ## Examples
 
