@@ -2,12 +2,10 @@
 title: orientation
 slug: Web/Manifest/orientation
 page-type: web-manifest-member
-status:
-  - experimental
 browser-compat: html.manifest.orientation
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}{{SeeCompatTable}}
+{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
 <table class="properties">
   <tbody>
