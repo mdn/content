@@ -219,6 +219,18 @@ readonly attribute MediaError? error;
 
 The property value is an object of type `MediaError`. The question mark (`'?'`) indicates that it can take a value of `null`, and the documentation must explain _when_ this may occur. If no question mark is present, the `error` property can't be `null`.
 
+The type of the property may be prefixed with an _extended attribute_, a string enclosed in square brackets (like `[LegacyNullToEmptyString]`). Such extended attributes indicate special behaviors that must be described in the prose. Here is a list of standard extended attributes of types, and the addition that must be made:
+
+- `[LegacyNullToEmptyString]`
+
+  - : The `null` value is converted to a string in a non-standard way. The standard way is to convert it to the `"null"` string, but in this case, it is converted to `""`.
+
+    Add the following sentence to the end of the _Value_ section of the article:
+
+    _When set to the `null` value, that `null` value is converted to the empty string (`""`), so `elt.innerHTML = null` is equivalent to `elt.innerHTML = ""`._
+
+    The small inline example has to be adapted for each property.
+
 ### Writing permissions on the property
 
 ```webidl
@@ -347,6 +359,11 @@ TextTrack addTextTrack(TextTrackKind kind,
 ```
 
 The parameters of a method are listed in the Syntax section of the method sub-page. They are listed in the WebIDL in order, between the parenthesis, as a comma-separated list. Each parameter has a name (indicated above) and a type (e.g. a `'?'` means that the `null` value is valid.) If marked `optional`, the parameter is optional to include in a method call and must have the \\{{OptionalInline}} flag included when it is listed in the Syntax section. The parameter's default value is listed after the equality sign (`'='`).
+
+Parameter types may have special behaviors described using extended attributes (like `[LegacyNullToEmptyString]`). Here is the list of such attributes, and the addition you have to do in the prose:
+
+- `[LegacyNullToEmptyString]`
+  - : Add the following sentence at the end of the parameter description: _A [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) value is treated the same as the empty string (`""`)._
 
 ### Type of the return value
 

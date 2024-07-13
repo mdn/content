@@ -1101,7 +1101,7 @@ In the example shown here, a video is offered to the browser in two formats: Web
 
 {{EmbedInteractiveExample("pages/tabbed/source.html", "tabbed-standard")}}
 
-The video is offered first in WebM format (with the [`type`](/en-US/docs/Web/HTML/Element/video#type) attribute set to `video/webm`).
+The video is offered first in WebM format (with the [`type`](/en-US/docs/Web/HTML/Element/source#type) attribute set to `video/webm`).
 If the {{Glossary("user agent")}} can't play that, it moves on to the next option, whose `type` is specified as `video/mp4`.
 If neither of those can be played, the text "This browser does not support the HTML video element." is presented.
 

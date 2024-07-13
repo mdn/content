@@ -100,9 +100,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     > **Note:** Specifying multiple URLs means that multiple attribution sources can be registered on the same feature. You might for example have different campaigns that you are trying to measure the success of, which involve generating different reports on different data.
 
-- `crossorigin`
+- [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin)
 
-  - : Indicates if the fetching of the image must be done using a {{glossary("CORS")}} request. Image data from a [CORS-enabled image](/en-US/docs/Web/HTML/CORS_enabled_image) returned from a CORS request can be reused in the {{HTMLElement("canvas")}} element without being marked "[tainted](/en-US/docs/Web/HTML/CORS_enabled_image#what_is_a_tainted_canvas)".
+  - : Indicates if the fetching of the image must be done using a {{glossary("CORS")}} request. Image data from a [CORS-enabled image](/en-US/docs/Web/HTML/CORS_enabled_image) returned from a CORS request can be reused in the {{HTMLElement("canvas")}} element without being marked "[tainted](/en-US/docs/Web/HTML/CORS_enabled_image#security_and_tainted_canvases)".
 
     If the `crossorigin` attribute is _not_ specified, then a non-CORS request is sent (without the {{httpheader("Origin")}} request header), and the browser marks the image as tainted and restricts access to its image data, preventing its usage in {{HTMLElement("canvas")}} elements.
 
@@ -134,7 +134,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `auto`
       - : No preference for the decoding mode; the browser decides what is best for the user. This is the default value.
 
-- `elementtiming`
+- [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming)
 
   - : Marks the image for observation by the {{domxref("PerformanceElementTiming")}} API. The value given becomes an identifier for the observed image element. See also the [`elementtiming`](/en-US/docs/Web/HTML/Attributes/elementtiming) attribute page.
 
@@ -267,6 +267,50 @@ You can use the {{cssxref("object-position")}} property to position the image wi
 
 Depending on its type, an image may have an intrinsic width and height. For some image types, however, intrinsic dimensions are unnecessary. {{glossary("SVG")}} images, for instance, have no intrinsic dimensions if their root {{SVGElement("svg")}} element doesn't have a `width` or `height` set on it.
 
+## Accessibility
+
+### Authoring meaningful alternate descriptions
+
+An `alt` attribute's value should provide a clear and concise text replacement for the image's content. It should not describe the presence of the image itself or the file name of the image. If the `alt` attribute is purposefully left off because the image has no textual equivalent, consider alternate methods to present what the image is trying to communicate.
+
+#### Don't
+
+```html example-bad
+<img alt="image" src="penguin.jpg" />
+```
+
+#### Do
+
+```html example-good
+<img alt="A Rockhopper Penguin is standing on a beach." src="penguin.jpg" />
+```
+
+When an `alt` attribute is not present on an image, some screen readers may announce the image's file name instead. This can be a confusing experience if the file name isn't representative of the image's contents.
+
+- [An alt Decision Tree • Images • WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/images/decision-tree/)
+- [Alt-texts: The Ultimate Guide — Axess Lab](https://axesslab.com/alt-texts/)
+- [How to Design Great Alt Text: An Introduction | Deque](https://www.deque.com/blog/great-alt-text-introduction/)
+- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
+- [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
+
+### Identifying SVG as an image
+
+Due to a [VoiceOver bug](https://webkit.org/b/216364), VoiceOver does not correctly announce SVG images as images. Include [`role="img"`](/en-US/docs/Web/Accessibility/ARIA/Roles/img_role) to all `<img>` elements with SVG source files to ensure assistive technologies correctly announce the SVG as image content.
+
+```html
+<img src="mdn.svg" alt="MDN" role="img" />
+```
+
+### The title attribute
+
+The [`title`](/en-US/docs/Web/HTML/Global_attributes#title) attribute is not an acceptable substitute for the `alt` attribute. Additionally, avoid duplicating the `alt` attribute's value in a `title` attribute declared on the same image. Doing so may cause some screen readers to announce the same text twice, creating a confusing experience.
+
+The `title` attribute should also not be used as supplemental captioning information to accompany an image's `alt` description. If an image needs a caption, use the [`figure`](/en-US/docs/Web/HTML/Element/figure) and [`figcaption`](/en-US/docs/Web/HTML/Element/figcaption) elements.
+
+The value of the `title` attribute is usually presented to the user as a tooltip, which appears shortly after the cursor stops moving over the image. While this _can_ provide additional information to the user, you should not assume that the user will ever see it: the user may only have keyboard or touchscreen. If you have information that's particularly important or valuable for the user, present it inline using one of the methods mentioned above instead of using `title`.
+
+- [Using the HTML title attribute – updated | The Paciello Group](https://www.tpgi.com/using-the-html-title-attribute-updated/)
+
 ## Examples
 
 ### Alternative text
@@ -320,50 +364,6 @@ The `src` attribute is ignored in {{glossary("User agent", "user agents")}} that
 ## Security and privacy concerns
 
 Although `<img>` elements have innocent uses, they can have undesirable consequences for user security and privacy. See [Referer header: privacy and security concerns](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns) for more information and mitigations.
-
-## Accessibility concerns
-
-### Authoring meaningful alternate descriptions
-
-An `alt` attribute's value should provide a clear and concise text replacement for the image's content. It should not describe the presence of the image itself or the file name of the image. If the `alt` attribute is purposefully left off because the image has no textual equivalent, consider alternate methods to present what the image is trying to communicate.
-
-#### Don't
-
-```html example-bad
-<img alt="image" src="penguin.jpg" />
-```
-
-#### Do
-
-```html example-good
-<img alt="A Rockhopper Penguin is standing on a beach." src="penguin.jpg" />
-```
-
-When an `alt` attribute is not present on an image, some screen readers may announce the image's file name instead. This can be a confusing experience if the file name isn't representative of the image's contents.
-
-- [An alt Decision Tree • Images • WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/images/decision-tree/)
-- [Alt-texts: The Ultimate Guide — Axess Lab](https://axesslab.com/alt-texts/)
-- [How to Design Great Alt Text: An Introduction | Deque](https://www.deque.com/blog/great-alt-text-introduction/)
-- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
-- [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
-
-### Identifying SVG as an image
-
-Due to a [VoiceOver bug](https://webkit.org/b/216364), VoiceOver does not correctly announce SVG images as images. Include [`role="img"`](/en-US/docs/Web/Accessibility/ARIA/Roles/img_role) to all `<img>` elements with SVG source files to ensure assistive technologies correctly announce the SVG as image content.
-
-```html
-<img src="mdn.svg" alt="MDN" role="img" />
-```
-
-### The title attribute
-
-The [`title`](/en-US/docs/Web/HTML/Global_attributes#title) attribute is not an acceptable substitute for the `alt` attribute. Additionally, avoid duplicating the `alt` attribute's value in a `title` attribute declared on the same image. Doing so may cause some screen readers to announce the same text twice, creating a confusing experience.
-
-The `title` attribute should also not be used as supplemental captioning information to accompany an image's `alt` description. If an image needs a caption, use the [`figure`](/en-US/docs/Web/HTML/Element/figure) and [`figcaption`](/en-US/docs/Web/HTML/Element/figcaption) elements.
-
-The value of the `title` attribute is usually presented to the user as a tooltip, which appears shortly after the cursor stops moving over the image. While this _can_ provide additional information to the user, you should not assume that the user will ever see it: the user may only have keyboard or touchscreen. If you have information that's particularly important or valuable for the user, present it inline using one of the methods mentioned above instead of using `title`.
-
-- [Using the HTML title attribute – updated | The Paciello Group](https://www.tpgi.com/using-the-html-title-attribute-updated/)
 
 ## Technical summary
 

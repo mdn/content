@@ -230,7 +230,7 @@ In this section, we'll look at some of the more common cross-browser JavaScript 
 
 ### Using modern JavaScript/API features
 
-In the [previous article](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#older_browsers_not_supporting_modern_features) we described some of the ways in which HTML and CSS errors and unrecognized features can be handled due to the nature of the languages. JavaScript is not as permissive as HTML and CSS however — if the JavaScript engine encounters mistakes or unrecognized syntax, such as when new, unsupported features are used, more often than not it will throw errors.
+In the [previous article](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS) we described some of the ways in which HTML and CSS errors and unrecognized features can be handled due to the nature of the languages. JavaScript is not as permissive as HTML and CSS however — if the JavaScript engine encounters mistakes or unrecognized syntax, such as when new, unsupported features are used, more often than not it will throw errors.
 
 There are a few strategies for handling new feature support; let's explore the most common ones.
 

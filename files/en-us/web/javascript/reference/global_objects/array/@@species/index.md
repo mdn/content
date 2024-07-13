@@ -1,5 +1,5 @@
 ---
-title: Array[@@species]
+title: Array[Symbol.species]
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@species
 page-type: javascript-static-accessor-property
 browser-compat: javascript.builtins.Array.@@species
@@ -7,9 +7,9 @@ browser-compat: javascript.builtins.Array.@@species
 
 {{JSRef}}
 
-The **`Array[@@species]`** static accessor property returns the constructor used to construct return values from array methods.
+The **`Array[Symbol.species]`** static accessor property returns the constructor used to construct return values from array methods.
 
-> **Warning:** The existence of `@@species` allows execution of arbitrary code and may create security vulnerabilities. It also makes certain optimizations much harder. Engine implementers are [investigating whether to remove this feature](https://github.com/tc39/proposal-rm-builtin-subclassing). Avoid relying on it if possible. Modern array methods, such as {{jsxref("Array/toReversed", "toReversed()")}}, do not use `@@species` and always return a new `Array` base class instance.
+> **Warning:** The existence of `[Symbol.species]` allows execution of arbitrary code and may create security vulnerabilities. It also makes certain optimizations much harder. Engine implementers are [investigating whether to remove this feature](https://github.com/tc39/proposal-rm-builtin-subclassing). Avoid relying on it if possible. Modern array methods, such as {{jsxref("Array/toReversed", "toReversed()")}}, do not use `[Symbol.species]` and always return a new `Array` base class instance.
 
 ## Syntax
 
@@ -19,11 +19,11 @@ Array[Symbol.species]
 
 ### Return value
 
-The value of the constructor (`this`) on which `get @@species` was called. The return value is used to construct return values from array methods that create new arrays.
+The value of the constructor (`this`) on which `get [Symbol.species]` was called. The return value is used to construct return values from array methods that create new arrays.
 
 ## Description
 
-The `@@species` accessor property returns the default constructor for `Array` objects. Subclass constructors may override it to change the constructor assignment. The default implementation is basically:
+The `[Symbol.species]` accessor property returns the default constructor for `Array` objects. Subclass constructors may override it to change the constructor assignment. The default implementation is basically:
 
 ```js
 // Hypothetical underlying implementation for illustration
@@ -34,14 +34,14 @@ class Array {
 }
 ```
 
-Because of this polymorphic implementation, `@@species` of derived subclasses would also return the constructor itself by default.
+Because of this polymorphic implementation, `[Symbol.species]` of derived subclasses would also return the constructor itself by default.
 
 ```js
 class SubArray extends Array {}
 SubArray[Symbol.species] === SubArray; // true
 ```
 
-When calling array methods that do not mutate the existing array but return a new array instance (for example, [`filter()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) and [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)), the array's `constructor[@@species]` will be accessed. The returned constructor will be used to construct the return value of the array method. This makes it technically possible to make array methods return objects unrelated to arrays.
+When calling array methods that do not mutate the existing array but return a new array instance (for example, [`filter()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) and [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)), the array's `constructor[Symbol.species]` will be accessed. The returned constructor will be used to construct the return value of the array method. This makes it technically possible to make array methods return objects unrelated to arrays.
 
 ```js
 class NotAnArray {
@@ -61,7 +61,7 @@ arr.concat([1, 2]); // NotAnArray { '0': 0, '1': 1, '2': 2, '3': 1, '4': 2, leng
 
 ### Species in ordinary objects
 
-The `@@species` property returns the default constructor function, which is the `Array` constructor for `Array`.
+The `[Symbol.species]` property returns the default constructor function, which is the `Array` constructor for `Array`.
 
 ```js
 Array[Symbol.species]; // [Function: Array]
@@ -90,7 +90,7 @@ class MyArray extends Array {
 
 ## See also
 
-- [Polyfill of `Array[@@species]` and support of `@@species` in all affected `Array` methods in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array[Symbol.species]` and support of `[Symbol.species]` in all affected `Array` methods in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Symbol.species")}}

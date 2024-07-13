@@ -19,10 +19,8 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 - `autofocus`
   - : This Boolean attribute specifies that the button should have input [focus](/en-US/docs/Web/API/HTMLElement/focus) when the page loads. **Only one element in a document can have this attribute.**
-- `disabled`
-
+- [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled)
   - : This Boolean attribute prevents the user from interacting with the button: it cannot be pressed or focused.
-
 - `form`
 
   - : The {{HTMLElement("form")}} element to associate the button with (its _form owner_). The value of this attribute must be the `id` of a `<form>` in the same document. (If this attribute is not set, the `<button>` is associated with its ancestor `<form>` element, if any.)
@@ -106,15 +104,9 @@ If your buttons are not for submitting form data to a server, be sure to set the
 
 While `<button type="button">` has no default behavior, event handlers can be scripted to trigger behaviors. An activated button can perform programmable actions using [JavaScript](/en-US/docs/Learn/JavaScript), such as removing an item from a list.
 
-## Examples
+By default, user agents style buttons as `display: flow-root`, which establishes a new [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context) and centers the button's children both horizontally and vertically as long as they do not overflow. If the button is defined as a flex or grid container, the children will behave as flex or grid items. A button set to `display: inline` will be styled as if the value were set to `display: inline-block`.
 
-```html
-<button name="button">Press me</button>
-```
-
-{{ EmbedLiveSample('Example', 200, 64) }}
-
-## Accessibility concerns
+## Accessibility
 
 ### Icon buttons
 
@@ -182,6 +174,14 @@ Color contrast ratio is determined by comparing the luminosity of the button tex
 ### Clicking and focus
 
 Whether clicking on a {{HTMLElement("button")}} or {{HTMLElement("input")}} button types causes it to (by default) become focused varies by browser and OS. Most browsers do give focus to a button being clicked, but [Safari does not, by design](https://webkit.org/b/22261).
+
+## Examples
+
+```html
+<button name="button">Press me</button>
+```
+
+{{ EmbedLiveSample('Example', 200, 64) }}
 
 ## Technical summary
 

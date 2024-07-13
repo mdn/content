@@ -147,6 +147,8 @@ input[type="radio"]:checked::before {
 
 This is really useful — screen readers already let their users know when a radio button or checkbox they encounter is checked/selected, so you don't want them to read out another DOM element that indicates selection — that could be confusing. Having a purely visual indicator solves this problem.
 
+Not all `<input>` types support having generated content put on them. All input types that show dynamic text in them, such as `text`, `password`, or `button`, don't display generated content. Others, including `range`, `color`, `checkbox`, etc., display generated content.
+
 Back to our required/optional example from before, this time we'll not alter the appearance of the input itself — we'll use generated content to add an indicating label ([see it live here](https://mdn.github.io/learning-area/html/forms/pseudo-classes/required-optional-generated.html), and see the [source code here](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/required-optional-generated.html)).
 
 First of all, we'll add a paragraph to the top of the form to say what you are looking for:
@@ -157,7 +159,7 @@ First of all, we'll add a paragraph to the top of the form to say what you are l
 
 Screen reader users will get "required" read out as an extra bit of information when they get to each required input, while sighted users will get our label.
 
-Since form inputs don't directly support having generated content put on them (this is because generated content is placed relative to an element's formatting box, but form inputs work more like replaced elements and therefore don't have one), we will add an empty [`<span>`](/en-US/docs/Web/HTML/Element/span) to hang the generated content on:
+As previously mentioned, text inputs don't support generated content, so we add an empty [`<span>`](/en-US/docs/Web/HTML/Element/span) to hang the generated content on:
 
 ```html
 <div>

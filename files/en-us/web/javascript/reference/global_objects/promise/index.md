@@ -175,7 +175,7 @@ Note that JavaScript is [single-threaded](/en-US/docs/Glossary/Thread) by nature
 
 ## Static properties
 
-- {{jsxref("Promise/@@species", "Promise[@@species]")}}
+- {{jsxref("Promise/@@species", "Promise[Symbol.species]")}}
   - : Returns the constructor used to construct return values from promise methods.
 
 ## Static methods
@@ -201,8 +201,8 @@ These properties are defined on `Promise.prototype` and shared by all `Promise` 
 
 - {{jsxref("Object/constructor", "Promise.prototype.constructor")}}
   - : The constructor function that created the instance object. For `Promise` instances, the initial value is the {{jsxref("Promise/Promise", "Promise")}} constructor.
-- `Promise.prototype[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Promise"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+- `Promise.prototype[Symbol.toStringTag]`
+  - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Promise"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 

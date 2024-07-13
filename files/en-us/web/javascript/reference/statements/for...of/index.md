@@ -29,7 +29,7 @@ for (variable of iterable)
 
 A `for...of` loop operates on the values sourced from an iterable one by one in sequential order. Each operation of the loop on a value is called an _iteration_, and the loop is said to _iterate over the iterable_. Each iteration executes statements that may refer to the current sequence value.
 
-When a `for...of` loop iterates over an iterable, it first calls the iterable's [`[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) method, which returns an [iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol), and then repeatedly calls the resulting iterator's [`next()`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol) method to produce the sequence of values to be assigned to `variable`.
+When a `for...of` loop iterates over an iterable, it first calls the iterable's [`[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) method, which returns an [iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol), and then repeatedly calls the resulting iterator's [`next()`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol) method to produce the sequence of values to be assigned to `variable`.
 
 A `for...of` loop exits when the iterator has completed (the `next()` result is an object with `done: true`). Like other looping statements, you can use [control flow statements](/en-US/docs/Web/JavaScript/Reference/Statements#control_flow) inside `statement`:
 
@@ -174,7 +174,7 @@ for (const paragraph of articleParagraphs) {
 
 ### Iterating over a user-defined iterable
 
-Iterating over an object with an `@@iterator` method that returns a custom iterator:
+Iterating over an object with an `[Symbol.iterator]()` method that returns a custom iterator:
 
 ```js
 const iterable = {
@@ -199,7 +199,7 @@ for (const value of iterable) {
 // 3
 ```
 
-Iterating over an object with an `@@iterator` generator method:
+Iterating over an object with an `[Symbol.iterator]()` generator method:
 
 ```js
 const iterable = {
@@ -218,7 +218,7 @@ for (const value of iterable) {
 // 3
 ```
 
-_Iterable iterators_ (iterators with a `[@@iterator]()` method that returns `this`) are a fairly common technique to make iterators usable in syntaxes expecting iterables, such as `for...of`.
+_Iterable iterators_ (iterators with a `[Symbol.iterator]()` method that returns `this`) are a fairly common technique to make iterators usable in syntaxes expecting iterables, such as `for...of`.
 
 ```js
 let i = 1;

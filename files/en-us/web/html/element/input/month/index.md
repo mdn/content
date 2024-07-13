@@ -478,13 +478,18 @@ function populateYears() {
       <td>
         <a href="/en-US/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
         <a href="/en-US/docs/Web/HTML/Element/input#list"><code>list</code></a>,
-        <a href="/en-US/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>, and
-        <a href="/en-US/docs/Web/HTML/Element/input#step"><code>step</code></a>.
+        <a href="/en-US/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#step"><code>step</code></a>
       </td>
     </tr>
     <tr>
       <td><strong>IDL attributes</strong></td>
-      <td><code>value</code></td>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#value"><code>value</code></a>,
+        <code>valueAsDate</code>,
+        <code>valueAsNumber</code>
+      </td>
     </tr>
     <tr>
       <td><strong>DOM interface</strong></td>
@@ -517,6 +522,6 @@ function populateYears() {
 
 - The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
 - [Date and time formats used in HTML](/en-US/docs/Web/HTML/Date_and_time_formats)
-- [Date and Time picker tutorial](/en-US/docs/Learn/Forms/Basic_native_form_controls#date_and_time_picker)
+- [Date and Time picker tutorial](/en-US/docs/Learn/Forms/HTML5_input_types#date_and_time_pickers)
 - [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Element/input/datetime-local), [`<input type="date">`](/en-US/docs/Web/HTML/Element/input/date), [`<input type="time">`](/en-US/docs/Web/HTML/Element/input/time), and [`<input type="week">`](/en-US/docs/Web/HTML/Element/input/week)
 - [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

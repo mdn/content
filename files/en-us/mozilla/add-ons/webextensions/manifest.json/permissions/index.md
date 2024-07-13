@@ -57,7 +57,7 @@ The extra privileges include:
 - [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) and [fetch](/en-US/docs/Web/API/Fetch_API) access to those origins without cross-origin restrictions (even for requests made from content scripts)
 - the ability to read tab-specific metadata without the "tabs" permission, such as the `url`, `title`, and `favIconUrl` properties of {{WebExtAPIRef("tabs.Tab")}} objects
 - the ability to [inject content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#loading_content_scripts) and styles programmatically into pages served from those origins.
-- the ability to receive events from the {{webextAPIref("webrequest")}} API for these hosts
+- the ability to receive events from the {{webextAPIref("webRequest")}} API for these hosts
 - the ability to access cookies for that host using the {{webextAPIref("cookies")}} API, as long as the `"cookies"` API permission is also included.
 - bypassing tracking protection for extension pages where a host is specified as a full domain or with wildcards. Content scripts, however, can only bypass tracking protection for hosts specified with a full domain.
 
@@ -138,7 +138,7 @@ In most cases the permission just grants access to the API, with the following e
   - In Firefox 85 and earlier, you also need `tabs` if you want to include `url` in the `queryInfo` parameter to {{webextAPIref("tabs/query", "tabs.query()")}}. The rest of the `tabs` API can be used without requesting any permission.
   - As of Firefox 86 and Chrome 50, matching [host permissions](#host_permissions) can also be used instead of the "tabs" permission.
 
-- `webRequestBlocking` enables you to use the `"blocking"` argument, so you can {{webextAPIref("WebRequest", "modify and cancel requests")}}.
+- `webRequestBlocking` enables you to use the `"blocking"` argument, so you can {{webextAPIref("webRequest", "modify and cancel requests")}}.
 - `downloads.open` lets you use the {{WebExtAPIRef("downloads.open()")}} API.
 - `tabHide` lets you use the {{WebExtAPIRef("tabs.hide()")}} API.
 

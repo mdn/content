@@ -70,7 +70,7 @@ Use flexbox:
 
 ### Lining items up in rows and columns — grid layout
 
-If you want a two-dimensional grid where items line up in rows _and_ columns, then you should choose CSS Grid Layout. Similar to how flexbox works on the direct children of the flex container, grid layout works on the direct children of the grid container. Just set {{cssxref("display", "display: grid;")}} on the container. Properties set on this container — like {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}} — define how the items are distributed along rows and columns.
+If you want a two-dimensional grid where items line up in rows _and_ columns, then you should choose CSS grid layout. Similar to how flexbox works on the direct children of the flex container, grid layout works on the direct children of the grid container. Just set {{cssxref("display", "display: grid;")}} on the container. Properties set on this container — like {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}} — define how the items are distributed along rows and columns.
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/columns-grid.html", '100%', 720)}}
 
@@ -78,7 +78,7 @@ If you want a two-dimensional grid where items line up in rows _and_ columns, th
 >
 > [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/columns-grid--download.html)
 
-Use Grid:
+Use grid:
 
 - For multiple rows or columns of items.
 - When you want to be able to align the items on the block and inline axes.
@@ -87,5 +87,5 @@ Use Grid:
 ## Resources on MDN
 
 - [Guide to Multi-column Layout](/en-US/docs/Web/CSS/CSS_multicol_layout)
-- [Guide to Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout)
-- [Guide to CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout)
+- [Guide to flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout)
+- [Guide to CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout)

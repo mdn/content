@@ -17,8 +17,6 @@ The `console` object can be accessed from any global object. {{domxref("Window")
 console.log("Failed to open the specified link");
 ```
 
-This page documents the [Methods](#methods) available on the `console` object and gives a few [Usage](#usage) examples.
-
 ## Instance methods
 
 - {{domxref("console/assert_static", "console.assert()")}}
@@ -30,13 +28,13 @@ This page documents the [Methods](#methods) available on the `console` object an
 - {{domxref("console/countReset_static", "console.countReset()")}}
   - : Resets the value of the counter with the given label.
 - {{domxref("console/debug_static", "console.debug()")}}
-  - : Outputs a message to the console with the log level `debug`.
+  - : Outputs a message to the console with the debug log level.
 - {{domxref("console/dir_static", "console.dir()")}}
   - : Displays an interactive listing of the properties of a specified JavaScript object. This listing lets you use disclosure triangles to examine the contents of child objects.
 - {{domxref("console/dirxml_static", "console.dirxml()")}}
   - : Displays an XML/HTML Element representation of the specified object if possible or the JavaScript Object view if it is not possible.
 - {{domxref("console/error_static", "console.error()")}}
-  - : Outputs an error message. You may use [string substitution](#using_string_substitutions) and additional arguments with this method.
+  - : Outputs a message to the console with the error log level.
 - `console.exception()` {{Non-standard_inline}} {{deprecated_inline}}
   - : An alias for `console.error()`.
 - {{domxref("console/group_static", "console.group()")}}
@@ -46,9 +44,9 @@ This page documents the [Methods](#methods) available on the `console` object an
 - {{domxref("console/groupEnd_static", "console.groupEnd()")}}
   - : Exits the current inline [group](#using_groups_in_the_console).
 - {{domxref("console/info_static", "console.info()")}}
-  - : Informative logging of information. You may use [string substitution](#using_string_substitutions) and additional arguments with this method.
+  - : Outputs a message to the console with the info log level.
 - {{domxref("console/log_static", "console.log()")}}
-  - : For general output of logging information. You may use [string substitution](#using_string_substitutions) and additional arguments with this method.
+  - : Outputs a message to the console.
 - {{domxref("console/profile_static", "console.profile()")}} {{Non-standard_inline}}
   - : Starts the browser's built-in profiler (for example, the [Firefox performance tool](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)). You can specify an optional name for the profile.
 - {{domxref("console/profileEnd_static", "console.profileEnd()")}} {{Non-standard_inline}}
@@ -66,7 +64,7 @@ This page documents the [Methods](#methods) available on the `console` object an
 - {{domxref("console/trace_static", "console.trace()")}}
   - : Outputs a [stack trace](#stack_traces).
 - {{domxref("console/warn_static", "console.warn()")}}
-  - : Outputs a warning message. You may use [string substitution](#using_string_substitutions) and additional arguments with this method.
+  - : Outputs a message to the console with the warning log level.
 
 ## Examples
 
@@ -94,6 +92,28 @@ The output looks something like this:
 {str:"Some text", id:5}
 ```
 
+The browser will display as much information about the object as it can and wishes to. For example, private state of the object may be displayed too. Certain types of objects, such as DOM elements or functions, may also be displayed in a special way.
+
+#### Snapshotting objects
+
+Information about an object is lazily retrieved. This means that the log message shows the content of an object at the time when it's first viewed, not when it was logged. For example:
+
+```js
+const obj = {};
+console.log(obj);
+obj.prop = 123;
+```
+
+This will output `{}`. However, if you expand the object's details, you will see `prop: 123`.
+
+If you are going to mutate your object and you want to prevent the logged information from being updated, you can [deep-clone](/en-US/docs/Glossary/Deep_copy) the object before logging it. A common way is to {{jsxref("JSON.stringify()")}} and then {{jsxref("JSON.parse()")}} it:
+
+```js
+console.log(JSON.parse(JSON.stringify(obj)));
+```
+
+There are other alternatives that work in browsers, such as [`structuredClone()`](/en-US/docs/Web/API/structuredClone), which are more effective at cloning different types of objects.
+
 #### Outputting multiple objects
 
 You can also output multiple objects by listing them when calling the logging method, like this:
@@ -112,18 +132,22 @@ My first car was a Dodge Charger. The object is: {str:"Some text", id:5}
 
 #### Using string substitutions
 
-When passing a string to one of the `console` object's methods that accepts a string (such as `console.log()`), you may use these substitution strings:
+The first parameter to the logging methods can be a string containing zero or more substitution strings. Each substitution string is replaced by the corresponding argument value.
 
-- `%o` or `%O`
-  - : Outputs a JavaScript object. Clicking the object name opens more information about it in the inspector.
+- `%o`
+  - : Outputs a JavaScript object in the "optimally useful formatting" style, for example DOM elements may be displayed the same way as they would appear in the element inspector.
+- `%O`
+  - : Outputs a JavaScript object in the "generic JavaScript object formatting" style, usually in the form of an expandable tree. This is similar to {{domxref("console/dir_static", "console.dir()")}}.
 - `%d` or `%i`
-  - : Outputs an integer. Number formatting is supported, for example `console.log("Foo %.2d", 1.1)` will output the number as two significant figures with a leading 0: `Foo 01`.
+  - : Outputs an integer.
 - `%s`
   - : Outputs a string.
 - `%f`
-  - : Outputs a floating-point value. Formatting is supported, for example `console.log("Foo %.2f", 1.1)` will output the number to 2 decimal places: `Foo 1.10`.
+  - : Outputs a floating-point value.
+- `%c`
+  - : Applies CSS style rules to all following text. See [Styling console output](#styling_console_output).
 
-> **Note:** Precision formatting doesn't work in Chrome.
+Some browsers may implement additional format specifiers. For example, Safari and Firefox support the C-style precision formating `%.<precision>f`. For example `console.log("Foo %.2f", 1.1)` will output the number to 2 decimal places: `Foo 1.10`, while `console.log("Foo %.2d", 1.1)` will output the number as two significant figures with a leading 0: `Foo 01`.
 
 Each of these pulls the next argument after the format string off the parameter list. For example:
 
@@ -190,7 +214,9 @@ The properties usable along with the `%c` syntax are as follows (at least, in Fi
 - {{cssxref("word-spacing")}} and {{cssxref("word-break")}}
 - {{cssxref("writing-mode")}}
 
-> **Note:** The console message behaves like an inline element by default. To see the effects of `padding`, `margin`, etc. you should set it to for example `display: inline-block`.
+> **Note:** Each console message behaves like an inline element by default. If you want properties such as `padding`, `margin`, and so on to have any effect, you can set the `display` property to `display: inline-block`.
+
+> **Note:** In order to support both light and dark color schemes, {{cssxref("color_value/light-dark")}} can be used when specifying colors; for example: `color: light-dark(#D00000, #FF4040);`
 
 ### Using groups in the console
 
@@ -262,18 +288,11 @@ The output in the console looks something like this:
 
 {{Compat}}
 
-## Notes
-
-- At least in Firefox, if a page defines a `console` object, that object overrides the one built into Firefox.
-
 ## See also
 
 - [Firefox Developer Tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
 - [Web console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) — how the Web console in Firefox handles console API calls
 - [about:debugging](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html) — how to see console output when the debugging target is a mobile device
-
-### Other implementations
-
 - [Google Chrome DevTools](https://developer.chrome.com/docs/devtools/console/api/)
 - [Microsoft Edge DevTools](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/)
 - [Safari Web Inspector](https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/Safari_Developer_Guide/Console/Console.html)

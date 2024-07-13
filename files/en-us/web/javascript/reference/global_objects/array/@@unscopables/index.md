@@ -1,5 +1,5 @@
 ---
-title: Array.prototype[@@unscopables]
+title: Array.prototype[Symbol.unscopables]
 slug: Web/JavaScript/Reference/Global_Objects/Array/@@unscopables
 page-type: javascript-instance-data-property
 browser-compat: javascript.builtins.Array.@@unscopables
@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.@@unscopables
 
 {{JSRef}}
 
-The **`@@unscopables`** data property of `Array.prototype` is shared by all {{jsxref("Array")}} instances. It contains property names that were not included in the ECMAScript standard prior to the ES2015 version and that are ignored for [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) statement-binding purposes.
+The **`[Symbol.unscopables]`** data property of `Array.prototype` is shared by all {{jsxref("Array")}} instances. It contains property names that were not included in the ECMAScript standard prior to the ES2015 version and that are ignored for [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) statement-binding purposes.
 
 ## Value
 
@@ -36,25 +36,25 @@ The default `Array` properties that are ignored for `with` statement-binding pur
 - [`toSpliced()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSpliced)
 - [`values()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/values)
 
-`Array.prototype[@@unscopables]` is an empty object only containing all the above property names with the value `true`. Its [prototype is `null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects), so `Object.prototype` properties like [`toString`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) won't accidentally be made unscopable, and a `toString()` within the `with` statement will continue to be called on the array.
+`Array.prototype[Symbol.unscopables]` is an empty object only containing all the above property names with the value `true`. Its [prototype is `null`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects), so `Object.prototype` properties like [`toString`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) won't accidentally be made unscopable, and a `toString()` within the `with` statement will continue to be called on the array.
 
 See {{jsxref("Symbol.unscopables")}} for how to set unscopable properties for your own objects.
 
 ## Examples
 
-Imagine the `keys.push('something')` call below is in code that was written prior to ECMAScript 2015.
+Imagine the `values.push('something')` call below is in code that was written prior to ECMAScript 2015.
 
 ```js
-var keys = [];
+var values = [];
 
-with (Array.prototype) {
-  keys.push("something");
+with (values) {
+  values.push("something");
 }
 ```
 
-When ECMAScript 2015 introduced the {{jsxref("Array.prototype.keys()")}} method, if the `@@unscopables` data property had not also been introduced, that `keys.push('something')` call would break — because the JavaScript runtime would have interpreted `keys` as being the {{jsxref("Array.prototype.keys()")}} method, rather than the `keys` array defined in the example code.
+When ECMAScript 2015 introduced the {{jsxref("Array.prototype.values()")}} method, the `with` statement in the above code started to interpret `values` as the `values.values` array method instead of the external `values` variable. The `values.push('something')` call would break because it's now accessing `push` on the `values.values` method. This caused a bug to be reported to Firefox ([Firefox Bug 883914](https://bugzil.la/883914)).
 
-So the `@@unscopables` data property for `Array.prototype` causes the `Array` properties introduced in ECMAScript 2015 to be ignored for `with` statement-binding purposes — allowing code that was written prior to ECMAScript 2015 to continue working as expected, rather than breaking.
+So the `[Symbol.unscopables]` data property for `Array.prototype` causes the `Array` properties introduced in ECMAScript 2015 to be ignored for `with` statement-binding purposes — allowing code that was written prior to ECMAScript 2015 to continue working as expected, rather than breaking.
 
 ## Specifications
 
@@ -66,7 +66,7 @@ So the `@@unscopables` data property for `Array.prototype` causes the `Array` pr
 
 ## See also
 
-- [Polyfill of `Array.prototype[@@unscopables]` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
+- [Polyfill of `Array.prototype[Symbol.unscopables]` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
 - [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Statements/with", "with")}}

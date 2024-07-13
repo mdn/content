@@ -132,7 +132,7 @@ ol {
 
 {{EmbedLiveSample("Overriding the list-item counter", 140, 300)}}
 
-Using `counter-reset`, we were able to set the implicit `list-item` counter to start counting at `3`, similar to the effect of writing [`<ol start="3">`](/en-US/docs/Web/HTML/Element/ol#start) in HTML.
+Using `counter-reset`, we set the implicit `list-item` counter to start counting at `3` for every `ol`. Then, the first item would be numbered 4, second would be numbered 5, etc., similar to the effect of writing [`<ol start="4">`](/en-US/docs/Web/HTML/Element/ol#start) in HTML.
 
 ## Specifications
 

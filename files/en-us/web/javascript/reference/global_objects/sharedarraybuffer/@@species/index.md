@@ -1,5 +1,5 @@
 ---
-title: SharedArrayBuffer[@@species]
+title: SharedArrayBuffer[Symbol.species]
 slug: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/@@species
 page-type: javascript-static-accessor-property
 browser-compat: javascript.builtins.SharedArrayBuffer.@@species
@@ -7,9 +7,9 @@ browser-compat: javascript.builtins.SharedArrayBuffer.@@species
 
 {{JSRef}}
 
-The **`SharedArrayBuffer[@@species]`** static accessor property returns the constructor used to construct return values from `SharedArrayBuffer` methods.
+The **`SharedArrayBuffer[Symbol.species]`** static accessor property returns the constructor used to construct return values from `SharedArrayBuffer` methods.
 
-> **Warning:** The existence of `@@species` allows execution of arbitrary code and may create security vulnerabilities. It also makes certain optimizations much harder. Engine implementers are [investigating whether to remove this feature](https://github.com/tc39/proposal-rm-builtin-subclassing). Avoid relying on it if possible.
+> **Warning:** The existence of `[Symbol.species]` allows execution of arbitrary code and may create security vulnerabilities. It also makes certain optimizations much harder. Engine implementers are [investigating whether to remove this feature](https://github.com/tc39/proposal-rm-builtin-subclassing). Avoid relying on it if possible.
 
 ## Syntax
 
@@ -19,11 +19,11 @@ SharedArrayBuffer[Symbol.species]
 
 ### Return value
 
-The value of the constructor (`this`) on which `get @@species` was called. The return value is used to construct return values from array buffer methods that create new array buffer.
+The value of the constructor (`this`) on which `get [Symbol.species]` was called. The return value is used to construct return values from array buffer methods that create new array buffer.
 
 ## Description
 
-The `@@species` accessor property returns the default constructor for `SharedArrayBuffer` objects. Subclass constructors may override it to change the constructor assignment. The default implementation is basically:
+The `[Symbol.species]` accessor property returns the default constructor for `SharedArrayBuffer` objects. Subclass constructors may override it to change the constructor assignment. The default implementation is basically:
 
 ```js
 // Hypothetical underlying implementation for illustration
@@ -34,20 +34,20 @@ class SharedArrayBuffer {
 }
 ```
 
-Because of this polymorphic implementation, `@@species` of derived subclasses would also return the constructor itself by default.
+Because of this polymorphic implementation, `[Symbol.species]` of derived subclasses would also return the constructor itself by default.
 
 ```js
 class SubArrayBuffer extends SharedArrayBuffer {}
 SubArrayBuffer[Symbol.species] === SharedArrayBuffer; // true
 ```
 
-When calling array buffer methods that do not mutate the existing array but return a new array buffer instance (for example, [`slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice)), the array's `constructor[@@species]` will be accessed. The returned constructor will be used to construct the return value of the array buffer method.
+When calling array buffer methods that do not mutate the existing array but return a new array buffer instance (for example, [`slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/slice)), the array's `constructor[Symbol.species]` will be accessed. The returned constructor will be used to construct the return value of the array buffer method.
 
 ## Examples
 
 ### Species in ordinary objects
 
-The `@@species` property returns the default constructor function, which is the `SharedArrayBuffer` constructor for `SharedArrayBuffer`.
+The `[Symbol.species]` property returns the default constructor function, which is the `SharedArrayBuffer` constructor for `SharedArrayBuffer`.
 
 ```js
 SharedArrayBuffer[Symbol.species]; // function SharedArrayBuffer()
