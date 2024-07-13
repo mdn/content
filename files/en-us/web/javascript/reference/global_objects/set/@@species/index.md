@@ -1,5 +1,5 @@
 ---
-title: Set[@@species]
+title: Set[Symbol.species]
 slug: Web/JavaScript/Reference/Global_Objects/Set/@@species
 page-type: javascript-static-accessor-property
 browser-compat: javascript.builtins.Set.@@species
@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Set.@@species
 
 {{JSRef}}
 
-The **`Set[@@species]`** static accessor property is an unused accessor property specifying how to copy `Set` objects.
+The **`Set[Symbol.species]`** static accessor property is an unused accessor property specifying how to copy `Set` objects.
 
 ## Syntax
 
@@ -17,11 +17,11 @@ Set[Symbol.species]
 
 ### Return value
 
-The value of the constructor (`this`) on which `get @@species` was called. The return value is used to construct copied `Set` instances.
+The value of the constructor (`this`) on which `get [Symbol.species]` was called. The return value is used to construct copied `Set` instances.
 
 ## Description
 
-The `@@species` accessor property returns the default constructor for `Set` objects. Subclass constructors may override it to change the constructor assignment.
+The `[Symbol.species]` accessor property returns the default constructor for `Set` objects. Subclass constructors may override it to change the constructor assignment.
 
 > **Note:** This property is currently unused by all `Set` methods.
 
@@ -29,7 +29,7 @@ The `@@species` accessor property returns the default constructor for `Set` obje
 
 ### Species in ordinary objects
 
-The `@@species` property returns the default constructor function, which is the `Set` constructor for `Set`.
+The `[Symbol.species]` property returns the default constructor function, which is the `Set` constructor for `Set`.
 
 ```js
 Set[Symbol.species]; // function Set()

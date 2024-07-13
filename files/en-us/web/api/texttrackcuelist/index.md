@@ -7,9 +7,10 @@ browser-compat: api.TextTrackCueList
 
 {{APIRef("WebVTT")}}
 
-The **`TextTrackCueList`** array-like object represents a dynamically updating list of {{domxref("TextTrackCue")}} objects.
+The **`TextTrackCueList`** interface of the [WebVTT API](/en-US/docs/Web/API/WebVTT_API) is an array-like object that represents a dynamically updating list of {{domxref("TextTrackCue")}} objects.
 
-This interface has no constructor. Retrieve an instance of this object with {{domxref('TextTrack.cues')}} which returns all of the cues in a {{domxref("TextTrack")}} object.
+An instance of this type is obtained from {{domxref('TextTrack.cues')}} in order to get all the cues in the {{domxref("TextTrack")}} object.
+This interface has no constructor.
 
 ## Instance properties
 

@@ -36,11 +36,11 @@ xhr.onerror = (e) => {
 xhr.send(null);
 ```
 
-Line 2 specifies `true` for its third parameter to indicate that the request should be handled asynchronously.
+The `xhr.open` line specifies `true` for its third parameter to indicate that the request should be handled asynchronously.
 
-Line 3 creates an event handler function object and assigns it to the request's `onload` attribute. This handler looks at the request's `readyState` to see if the transaction is complete in line 4; if it is, and the HTTP status is 200, the handler dumps the received content. If an error occurred, an error message is displayed.
+We then creates an event handler function object and assigns it to the request's `onload` attribute. This handler looks at the request's `readyState` to see if the transaction is complete; if it is, and the HTTP status is 200, the handler dumps the received content. If an error occurred, an error message is displayed.
 
-Line 15 actually initiates the request. The callback routine is called whenever the state of the request changes.
+The `xhr.send` call actually initiates the request. The callback routine is called whenever the state of the request changes.
 
 ### Example: writing a function to read an external file
 
@@ -78,17 +78,13 @@ loadFile("message.txt", showMessage, "New message!\n\n");
 
 The signature of the utility function **_loadFile_** declares (i) a target URL to read (via an HTTP GET request), (ii) a function to execute on successful completion of the XHR operation, and (iii) an arbitrary list of additional arguments that are passed through the XHR object (via the `arguments` property) to the success callback function.
 
-Line 1 declares a function invoked when the XHR operation completes successfully. It, in turn, invokes the callback function specified in the invocation of the `loadFile` function (in this case, the function `showMessage`) which has been assigned to a property of the XHR object (Line 11). The additional arguments (if any) supplied to the invocation of function loadFile are "applied" to the running of the callback function.
+We first declare a function `xhrSuccess` invoked when the XHR operation completes successfully. It, in turn, invokes the callback function specified in the invocation of the `loadFile` function (in this case, the function `showMessage`) which has been assigned to a property of the XHR object. The additional arguments (if any) supplied to the invocation of function loadFile are "applied" to the running of the callback function. The `xhrError` function is invoked when the XHR operation fails to complete successfully.
 
-Line 5 declares a function invoked when the XHR operation fails to complete successfully.
+We stores the success callback given as the second argument to `loadFile` in the XHR object's `callback` property. Starting with the third argument, all remaining arguments of `loadFile` are collected (using the [rest parameter](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) syntax), assigned to the `arguments` property of the variable `xhr`, passed to the success callback function `xhrSuccess`, and ultimately supplied to the callback function (in this case, `showMessage`) which is invoked by function `xhrSuccess`.
 
-Line 11 stores the success callback given as the second argument to `loadFile` in the XHR object's `callback` property.
+The `xhr.open` call specifies `true` for its third parameter to indicate that the request should be handled asynchronously.
 
-Line 12 slices the arguments array given to the invocation of `loadFile`. Starting with the third argument, all remaining arguments are collected, assigned to the arguments property of the variable `xhr`, passed to the success callback function `xhrSuccess`., and ultimately supplied to the callback function (in this case, `showMessage`) which is invoked by function `xhrSuccess`.
-
-Line 15 specifies _true_ for its third parameter to indicate that the request should be handled asynchronously.
-
-Line 16 actually initiates the request.
+Finally, `xhr.send` actually initiates the request.
 
 ### Example: using a timeout
 
@@ -149,9 +145,9 @@ if (request.status === 200) {
 }
 ```
 
-Line 3 sends the request. The `null` parameter indicates that no body content is needed for the `GET` request.
+The `request.send` call sends the request. The `null` parameter indicates that no body content is needed for the `GET` request.
 
-Line 5 checks the status code after the transaction is completed. If the result is 200 — HTTP's "OK" result — the document's text content is output to the console.
+The `if` statement checks the status code after the transaction is completed. If the result is 200 — HTTP's "OK" result — the document's text content is output to the console.
 
 ### Example: Synchronous HTTP request from a Worker
 

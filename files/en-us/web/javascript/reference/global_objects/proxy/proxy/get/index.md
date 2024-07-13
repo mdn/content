@@ -17,24 +17,23 @@ The **`handler.get()`** method is a trap for the `[[Get]]` [object internal meth
 new Proxy(target, {
   get(target, property, receiver) {
   }
-});
+})
 ```
 
 ### Parameters
 
-The following parameters are passed to the `get()` method. `this`
-is bound to the handler.
+The following parameters are passed to the `get()` method. `this` is bound to the handler.
 
 - `target`
   - : The target object.
 - `property`
-  - : The name or {{jsxref("Symbol")}} of the property to get.
+  - : A string or {{jsxref("Symbol")}} representing the property name.
 - `receiver`
-  - : Either the proxy or an object that inherits from the proxy.
+  - : The `this` value for getters; see {{jsxref("Reflect.get()")}}. This is usually either the proxy itself or an object that inherits from the proxy.
 
 ### Return value
 
-The `get()` method can return any value.
+The `get()` method can return any value, representing the property value.
 
 ## Description
 
@@ -49,14 +48,10 @@ Or any other operation that invokes the `[[Get]]` [internal method](/en-US/docs/
 
 ### Invariants
 
-If the following invariants are violated, the trap throws a {{jsxref("TypeError")}} when invoked.
+The proxy's `[[Get]]` internal method throws a {{jsxref("TypeError")}} if the handler definition violates one of the following invariants:
 
-- The value reported for a property must be the same as the value of the corresponding
-  target object property if the target object property is a non-writable,
-  non-configurable own data property.
-- The value reported for a property must be undefined if the corresponding target
-  object property is a non-configurable own accessor property that has
-  `undefined` as its `[[Get]]` attribute.
+- The value reported for a property must be the same as the value of the corresponding target object property, if the target object property is a non-writable, non-configurable own data property. That is, if {{jsxref("Reflect.getOwnPropertyDescriptor()")}} returns `configurable: false, writable: false` for the property on `target`, then the trap must return the same value as the `value` attribute in the `target`'s property descriptor.
+- The value reported for a property must be `undefined`, if the corresponding target object property is a non-configurable own accessor property that has an undefined getter. That is, if {{jsxref("Reflect.getOwnPropertyDescriptor()")}} returns `configurable: false, get: undefined` for the property on `target`, then the trap must return `undefined`.
 
 ## Examples
 

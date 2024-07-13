@@ -1,5 +1,5 @@
 ---
-title: Set.prototype[@@iterator]()
+title: Set.prototype[Symbol.iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Set/@@iterator
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.@@iterator
@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Set.@@iterator
 
 {{JSRef}}
 
-The **`[@@iterator]()`** method of {{jsxref("Set")}} instances implements the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) and allows `Set` objects to be consumed by most syntaxes expecting iterables, such as the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) and {{jsxref("Statements/for...of", "for...of")}} loops. It returns a [set iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) that yields the values of the set in insertion order.
+The **`[Symbol.iterator]()`** method of {{jsxref("Set")}} instances implements the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) and allows `Set` objects to be consumed by most syntaxes expecting iterables, such as the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) and {{jsxref("Statements/for...of", "for...of")}} loops. It returns a [set iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) that yields the values of the set in insertion order.
 
 The initial value of this property is the same function object as the initial value of the {{jsxref("Set.prototype.values")}} property.
 
@@ -31,7 +31,7 @@ The same return value as {{jsxref("Set.prototype.values()")}}: a new [iterable i
 
 ### Iteration using for...of loop
 
-Note that you seldom need to call this method directly. The existence of the `@@iterator` method makes `Set` objects [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol), and iterating syntaxes like the `for...of` loop automatically call this method to obtain the iterator to loop over.
+Note that you seldom need to call this method directly. The existence of the `[Symbol.iterator]()` method makes `Set` objects [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol), and iterating syntaxes like the `for...of` loop automatically call this method to obtain the iterator to loop over.
 
 ```js
 const mySet = new Set();

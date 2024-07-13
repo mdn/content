@@ -122,7 +122,7 @@ console.log(midpoint(3, 1, 4, 1, 5)); // 3
   - : Reference to the currently executing function that the arguments belong to. Forbidden in strict mode.
 - {{jsxref("Functions/arguments/length", "arguments.length")}}
   - : The number of arguments that were passed to the function.
-- {{jsxref("Functions/arguments/@@iterator", "arguments[@@iterator]")}}
+- [`arguments[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator)
   - : Returns a new {{jsxref("Array/@@iterator", "Array iterator", "", 0)}} object that contains the values for each index in `arguments`.
 
 ## Examples

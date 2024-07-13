@@ -83,14 +83,14 @@ In the CSS, we import a [color font](https://www.colorfonts.wtf/) called [Nabla]
   base-palette: 2; /* this is Nabla's blue palette */
 }
 
-@font-palette-values --yellowNabla {
+@font-palette-values --greyNabla {
   font-family: Nabla;
-  base-palette: 7; /* this is Nabla's yellow palette */
+  base-palette: 3; /* this is Nabla's grey palette */
 }
 
 @keyframes animate-palette {
   from {
-    font-palette: --yellowNabla;
+    font-palette: --greyNabla;
   }
 
   to {
@@ -103,7 +103,7 @@ p {
   font-size: 5rem;
   margin: 0;
   text-align: center;
-  animation: animate-palette 2s infinite alternate linear;
+  animation: animate-palette 4s infinite alternate linear;
 }
 ```
 

@@ -51,8 +51,7 @@ PHP (a recursive initialism for PHP: Hypertext Preprocessor) is an open-source s
 - [Official website](https://www.php.net/)
 - [PHP](https://en.wikipedia.org/wiki/PHP) on Wikipedia
 - [PHP programming](https://en.wikibooks.org/wiki/PHP_Programming) on Wikibooks
-- [MDN Web Docs Glossary](/en-US/docs/Glossary)
-
+- Related glossary terms:
   - {{Glossary("Java")}}
   - {{Glossary("JavaScript")}}
   - {{Glossary("Python")}}
