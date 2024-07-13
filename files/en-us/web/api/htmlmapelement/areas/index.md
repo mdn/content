@@ -8,51 +8,46 @@ browser-compat: api.HTMLMapElement.areas
 
 {{ApiRef("HTML DOM")}}
 
-The **`areas`** read-only property of the {{domxref("HTMLMapElement")}} returns a collection of {{HTMLElement("area")}} elements associated with the {{HTMLElement("map")}} element.
+The **`areas`** read-only property of the {{domxref("HTMLMapElement")}} interface returns a collection of {{HTMLElement("area")}} elements associated with the {{HTMLElement("map")}} element.
 
 ## Value
 
-A {{domxref("HTMLCollection")}} object of {{HTMLElement("area")}} elements.
+A {{domxref("HTMLCollection")}} object of {{domxref("HTMLAreaElement")}} elements.
 
 ## Example
 
 ```html
-<map name="image-map">
-  <a href="www.link1_example.com">link 1</a>
-  <area
-    shape="circle"
-    coords="50,50,35"
-    href="www.left_example.com"
-    target="_self"
-    alt="left" />
-  <a href="www.link2_example.com">link 2</a>
-  <area
-    shape="circle"
-    coords="150,50,35"
-    href="www.right_example.com"
-    target="_self"
-    alt="right" />
+<map id="image-map">
+  <area shape="circle" coords="50,50,35" alt="left arrow" />
+  <area shape="circle" coords="150,50,35" alt="right arrow" />
 </map>
 <img
   usemap="#image-map"
   src="left-right-arrow.png"
   alt="left right arrow image" />
+<output></output>
+```
+
+```css hidden
+output {
+  display: block;
+}
 ```
 
 ```js
-const mapElement = document.getElementsByName("image-map")[0];
-// filter area elements
-console.log(mapElement.areas); // Output: HTMLCollection(2) [area, area]
+const mapElement = document.getElementById("image-map");
+const outputElement = document.querySelector("output");
 
-const mapElementAreas = mapElement.areas;
-// Iterate over each area element and update alt for area elements.
-[...mapElementAreas].forEach((area) => (area.alt = area.alt + " " + "arrow"));
-console.log(mapElementAreas[0].alt); // Output: "left arrow"
+for (const area of mapElement.areas) {
+  area.addEventListener("click", (event) => {
+    outputElement.textContent = `You clicked on the ${area.alt} area.\n\n`;
+  });
+}
 ```
 
 ### Results
 
-{{EmbedLiveSample("Example",100,100)}}
+{{EmbedLiveSample("Example",100,150)}}
 
 ## Specifications
 
