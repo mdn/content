@@ -2,7 +2,9 @@
 title: MediaTrackSettings
 slug: Web/API/MediaTrackSettings
 page-type: web-api-interface
-browser-compat: api.MediaTrackSettings
+spec-urls:
+  - https://w3c.github.io/mediacapture-main/#media-track-settings
+  - https://w3c.github.io/mediacapture-screen-share/#extensions-to-mediatracksettings
 ---
 
 {{APIRef("Media Capture and Streams")}}
@@ -107,10 +109,6 @@ Tracks containing video shared from a user's screen (regardless of whether the s
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

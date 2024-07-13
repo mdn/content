@@ -23,7 +23,6 @@ Let's consider a few use cases for the Page Visibility API.
 
 - A site has an image carousel that shouldn't advance to the next slide unless the user is viewing the page
 - An application showing a dashboard of information doesn't want to poll the server for updates when the page isn't visible
-- A page wants to detect when it is being prerendered so it can keep accurate count of page views
 - A site wants to switch off sounds when a device is in standby mode (user pushes power button to turn screen off)
 
 Developers have historically used imperfect proxies to detect this. For example, watching for {{domxref("Window/blur_event", "blur")}} and {{domxref("Window/focus_event", "focus")}} events on the window helps you know when your page is not the active page, but it does not tell you that your page is actually hidden to the user. The Page Visibility API addresses this.
@@ -79,48 +78,36 @@ The Page Visibility API adds the following events to the {{domxref("Document")}}
 ### Pausing audio on page hide
 
 This example pauses playing audio when the page is hidden and resumes playing when the page becomes visible again.
-There is a button which allows the user to toggle between playing and paused audio.
-The boolean `userClicked` is used to prevent audio from playing if the page changes visibility but the user hasn't clicked "Play audio" before.
+The `<audio>` element controls allow the user to toggle between playing and paused audio.
+The boolean `playingOnHide` is used to prevent audio from playing if the page changes to a `visible` state, but the media wasn't playing on page hide.
+
+```css hidden
+audio {
+  width: 100%;
+}
+```
 
 #### HTML
 
 ```html
 <audio
+  controls
   src="https://mdn.github.io/webaudio-examples/audio-basics/outfoxing.mp3"></audio>
-<button id="start">Play audio</button>
 ```
 
 #### JavaScript
 
 ```js
 const audio = document.querySelector("audio");
-const playButton = document.querySelector("#start");
 
-let userClicked = false;
 let playingOnHide = false;
 
-playButton.addEventListener("click", handleToggle);
-
-// Toggle playing states and record that the user started audio
-function handleToggle() {
-  userClicked = true;
-  if (audio.paused) {
-    audio.play();
-    playButton.textContent = "Pause audio";
-  } else {
-    audio.pause();
-    playButton.textContent = "Play audio";
-  }
-}
-
-// Handle page visibility changes
 document.addEventListener("visibilitychange", () => {
   if (document.hidden) {
-    // Was the audio playing when the page changed to hidden?
     playingOnHide = !audio.paused;
     audio.pause();
   } else {
-    // Page became visible, resume if audio was playing when hidden
+    // Page became visible! Resume playing if audio was "playing on hide"
     if (playingOnHide) {
       audio.play();
     }
@@ -130,7 +117,7 @@ document.addEventListener("visibilitychange", () => {
 
 #### Result
 
-{{EmbedLiveSample("Pausing audio on page hide", "", 100)}}
+{{EmbedLiveSample("Pausing audio on page hide", "", 50)}}
 
 ## Specifications
 
@@ -139,3 +126,10 @@ document.addEventListener("visibilitychange", () => {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("Document.visibilityState")}}
+- {{domxref("Document.hidden")}}
+- [PerformanceEventTiming: Reporting the First Input Delay (FID)](/en-US/docs/Web/API/PerformanceEventTiming#reporting_the_first_input_delay_fid)
+- [Timing element visibility with the Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility)

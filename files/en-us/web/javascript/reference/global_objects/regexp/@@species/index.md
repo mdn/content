@@ -1,5 +1,5 @@
 ---
-title: RegExp[@@species]
+title: RegExp[Symbol.species]
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@species
 page-type: javascript-static-accessor-property
 browser-compat: javascript.builtins.RegExp.@@species
@@ -7,9 +7,9 @@ browser-compat: javascript.builtins.RegExp.@@species
 
 {{JSRef}}
 
-The **`RegExp[@@species]`** static accessor property returns the constructor used to construct copied regular expressions in certain `RegExp` methods.
+The **`RegExp[Symbol.species]`** static accessor property returns the constructor used to construct copied regular expressions in certain `RegExp` methods.
 
-> **Warning:** The existence of `@@species` allows execution of arbitrary code and may create security vulnerabilities. It also makes certain optimizations much harder. Engine implementers are [investigating whether to remove this feature](https://github.com/tc39/proposal-rm-builtin-subclassing). Avoid relying on it if possible.
+> **Warning:** The existence of `[Symbol.species]` allows execution of arbitrary code and may create security vulnerabilities. It also makes certain optimizations much harder. Engine implementers are [investigating whether to remove this feature](https://github.com/tc39/proposal-rm-builtin-subclassing). Avoid relying on it if possible.
 
 {{EmbedInteractiveExample("pages/js/regexp-getregexp-@@species.html")}}
 
@@ -21,11 +21,11 @@ RegExp[Symbol.species]
 
 ### Return value
 
-The value of the constructor (`this`) on which `get @@species` was called. The return value is used to construct copied `RegExp` instances.
+The value of the constructor (`this`) on which `get [Symbol.species]` was called. The return value is used to construct copied `RegExp` instances.
 
 ## Description
 
-The `@@species` accessor property returns the default constructor for `RegExp` objects. Subclass constructors may override it to change the constructor assignment. The default implementation is basically:
+The `[Symbol.species]` accessor property returns the default constructor for `RegExp` objects. Subclass constructors may override it to change the constructor assignment. The default implementation is basically:
 
 ```js
 // Hypothetical underlying implementation for illustration
@@ -36,23 +36,23 @@ class RegExp {
 }
 ```
 
-Because of this polymorphic implementation, `@@species` of derived subclasses would also return the constructor itself by default.
+Because of this polymorphic implementation, `[Symbol.species]` of derived subclasses would also return the constructor itself by default.
 
 ```js
 class SubRegExp extends SubRegExp {}
 SubRegExp[Symbol.species] === SubRegExp; // true
 ```
 
-Some `RegExp` methods create a copy of the current regex instance before running {{jsxref("RegExp/exec", "exec()")}}, so that side effects such as changes to {{jsxref("RegExp/lastIndex", "lastIndex")}} are not retained. The `@@species` property is used to determine the constructor of the new instance. The methods that copy the current regex instance are:
+Some `RegExp` methods create a copy of the current regex instance before running {{jsxref("RegExp/exec", "exec()")}}, so that side effects such as changes to {{jsxref("RegExp/lastIndex", "lastIndex")}} are not retained. The `[Symbol.species]` property is used to determine the constructor of the new instance. The methods that copy the current regex instance are:
 
-- [`[@@matchAll]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll)
-- [`[@@split]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@split)
+- [`[Symbol.matchAll]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll)
+- [`[Symbol.split]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@split)
 
 ## Examples
 
 ### Species in ordinary objects
 
-The `@@species` property returns the default constructor function, which is the `RegExp` constructor for `RegExp` objects:
+The `[Symbol.species]` property returns the default constructor function, which is the `RegExp` constructor for `RegExp` objects:
 
 ```js
 RegExp[Symbol.species]; // function RegExp()

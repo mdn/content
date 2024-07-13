@@ -10,6 +10,8 @@ browser-compat: api.Element.mouseenter_event
 
 The **`mouseenter`** event is fired at an {{domxref("Element")}} when a pointing device (usually a mouse) is initially moved so that its hotspot is within the element at which the event was fired.
 
+Note that "moving into an event" refers to the element's position in the DOM tree, not to its visual position. For example, if a child element is positioned so it is placed outside its parent, then moving into the child element will trigger `mouseenter` on the parent element, even though the pointer is still outside the bounds of the parent element.
+
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
@@ -92,7 +94,7 @@ One `mouseenter` event is sent to each element of the hierarchy when entering th
 ![Mouseover behavior diagram](mouseover.png)
 A single `mouseover` event is sent to the deepest element of the DOM tree, then it bubbles up the hierarchy until it is canceled by a handler or reaches the root.
 
-With deep hierarchies, the number of `mouseover` events sent can be quite huge and cause significant performance problems. In such cases, it is better to listen for `mouseenter` events.
+With deep hierarchies, the number of `mouseenter` events sent can be quite huge and cause significant performance problems. In such cases, it is better to listen for `mouseover` events.
 
 Combined with the corresponding `mouseleave` (which is fired at the element when the mouse exits its content area), the `mouseenter` event acts in a very similar way to the CSS {{cssxref(':hover')}} pseudo-class.
 

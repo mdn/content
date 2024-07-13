@@ -25,7 +25,7 @@ readAsArrayBuffer(blob)
 
 An {{jsxref("ArrayBuffer")}} representing the file's data.
 
-## Exceptions
+### Exceptions
 
 The following exceptions can be raised by this method:
 

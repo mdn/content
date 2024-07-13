@@ -6,7 +6,7 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-A **CORS-safelisted response header** is an [HTTP header](/en-US/docs/Web/HTTP/Headers) in a [CORS](/en-US/docs/Web/HTTP/CORS) response that it is considered _safe_ to expose to client scripts. Only safelisted response headers are made available to web pages.
+A **CORS-safelisted response header** (also known as "simple response header") is an [HTTP header](/en-US/docs/Web/HTTP/Headers) in a [CORS](/en-US/docs/Web/HTTP/CORS) response that it is considered _safe_ to expose to client scripts. Only safelisted response headers are made available to web pages.
 
 By default, the safelist includes the following response headers:
 
@@ -37,8 +37,7 @@ Access-Control-Expose-Headers: X-Custom-Header, Content-Encoding
 - [HTTP](/en-US/docs/Web/HTTP)
 - [HTTP headers](/en-US/docs/Web/HTTP/Headers)
 - {{HTTPHeader("Access-Control-Expose-Headers")}}
-- [Glossary](/en-US/docs/Glossary)
-
+- Related glossary terms:
   - {{Glossary("CORS")}}
   - {{Glossary("CORS-safelisted_request_header", "CORS-safelisted request header")}}
   - {{Glossary("Forbidden header name")}}

@@ -7,7 +7,7 @@ browser-compat: api.Blob
 
 {{APIRef("File API")}}{{AvailableInWorkers}}
 
-The **`Blob`** object represents a blob, which is a file-like object of immutable, raw data; they can be read as text or binary data, or converted into a {{DOMxRef("ReadableStream")}} so its methods can be used for processing the data.
+The **`Blob`** interface represents a blob, which is a file-like object of immutable, raw data; they can be read as text or binary data, or converted into a {{DOMxRef("ReadableStream")}} so its methods can be used for processing the data.
 
 Blobs can represent data that isn't necessarily in a JavaScript-native format. The {{DOMxRef("File")}} interface is based on `Blob`, inheriting blob functionality and expanding it to support files on the user's system.
 
@@ -33,6 +33,8 @@ The APIs accepting `Blob` objects are also listed in the {{DOMxRef("File")}} doc
 
 - {{DOMxRef("Blob.arrayBuffer()")}}
   - : Returns a promise that resolves with an {{jsxref("ArrayBuffer")}} containing the entire contents of the `Blob` as binary data.
+- {{DOMxRef("Blob.bytes()")}}
+  - : Returns a promise that resolves with an {{jsxref("Uint8Array")}} containing the contents of the `Blob`.
 - {{DOMxRef("Blob.slice()")}}
   - : Returns a new `Blob` object containing the data in the specified range of bytes of the blob on which it's called.
 - {{DOMxRef("Blob.stream()")}}

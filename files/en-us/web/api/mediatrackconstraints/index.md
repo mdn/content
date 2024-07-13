@@ -2,7 +2,7 @@
 title: MediaTrackConstraints
 slug: Web/API/MediaTrackConstraints
 page-type: web-api-interface
-browser-compat: api.MediaTrackConstraints
+spec-urls: https://w3c.github.io/mediacapture-main/#dom-mediatrackconstraints
 ---
 
 {{APIRef("Media Capture and Streams")}}
@@ -162,10 +162,6 @@ These constraints apply to the `video` property of the object passed into {{domx
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

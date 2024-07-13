@@ -53,8 +53,8 @@ Our [CSS Learning Area](/en-US/docs/Learn/CSS) features multiple modules that te
   - [Stacking](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) and [block-formatting](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context) contexts
   - [Initial](/en-US/docs/Web/CSS/initial_value), [computed](/en-US/docs/Web/CSS/computed_value), [used](/en-US/docs/Web/CSS/used_value), and [actual](/en-US/docs/Web/CSS/actual_value) values
   - [CSS shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
-  - [CSS Flexible Box Layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout)
-  - [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout)
+  - [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout)
+  - [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout)
   - [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors)
   - [Media queries](/en-US/docs/Web/CSS/CSS_media_queries)
   - [Animation](/en-US/docs/Web/CSS/animation)
@@ -75,6 +75,5 @@ The [CSS layout cookbook](/en-US/docs/Web/CSS/Layout_cookbook) aims to bring tog
 
 ## See also
 
-- [CSS demos](/en-US/docs/Web/Demos#css): Get a creative boost by exploring examples of the latest CSS technologies in action.
 - Web languages to which CSS is often applied: [HTML](/en-US/docs/Web/HTML), [SVG](/en-US/docs/Web/SVG), [MathML](/en-US/docs/Web/MathML), {{Glossary("XHTML")}}, and [XML](/en-US/docs/Web/XML/XML_introduction).
 - [Stack Overflow questions about CSS](https://stackoverflow.com/questions/tagged/css)

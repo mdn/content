@@ -329,7 +329,7 @@ Then we declare the `get_absolute_url()` method, which returns a URL that can be
 
 Setting `unique=True` on the field above prevents genres being created with _exactly_ the same name, but not variations such as "fantasy", "Fantasy", or even "FaNtAsY".
 The last part of the model definition uses a [`constraints`](https://docs.djangoproject.com/en/5.0/ref/models/options/#constraints) option on the model's [metadata](#metadata) to specify that the lower case of the value in the `name` field must be unique in the database, and display the `violation_error_message` string if it isn't.
-Here we don't need to do anything else, but you can define multiple constrainst a field or fields.
+Here we don't need to do anything else, but you can define multiple constraints against a field or fields.
 For more information see the [Constraints reference](https://docs.djangoproject.com/en/5.0/ref/models/constraints), including [`UniqueConstraint()`](https://docs.djangoproject.com/en/5.0/ref/models/constraints/#uniqueconstraint) (and [`Lower()`](https://docs.djangoproject.com/en/5.0/ref/models/database-functions/#lower)).
 
 ### Book model

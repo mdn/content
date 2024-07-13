@@ -1,5 +1,5 @@
 ---
-title: Promise[@@species]
+title: Promise[Symbol.species]
 slug: Web/JavaScript/Reference/Global_Objects/Promise/@@species
 page-type: javascript-static-accessor-property
 browser-compat: javascript.builtins.Promise.@@species
@@ -7,9 +7,9 @@ browser-compat: javascript.builtins.Promise.@@species
 
 {{JSRef}}
 
-The **`Promise[@@species]`** static accessor property returns the constructor used to construct return values from promise methods.
+The **`Promise[Symbol.species]`** static accessor property returns the constructor used to construct return values from promise methods.
 
-> **Warning:** The existence of `@@species` allows execution of arbitrary code and may create security vulnerabilities. It also makes certain optimizations much harder. Engine implementers are [investigating whether to remove this feature](https://github.com/tc39/proposal-rm-builtin-subclassing). Avoid relying on it if possible.
+> **Warning:** The existence of `[Symbol.species]` allows execution of arbitrary code and may create security vulnerabilities. It also makes certain optimizations much harder. Engine implementers are [investigating whether to remove this feature](https://github.com/tc39/proposal-rm-builtin-subclassing). Avoid relying on it if possible.
 
 ## Syntax
 
@@ -19,11 +19,11 @@ Promise[Symbol.species]
 
 ### Return value
 
-The value of the constructor (`this`) on which `get @@species` was called. The return value is used to construct return values from promise chaining methods that create new promises.
+The value of the constructor (`this`) on which `get [Symbol.species]` was called. The return value is used to construct return values from promise chaining methods that create new promises.
 
 ## Description
 
-The `@@species` accessor property returns the default constructor for `Promise` objects. Subclass constructors may override it to change the constructor assignment. The default implementation is basically:
+The `[Symbol.species]` accessor property returns the default constructor for `Promise` objects. Subclass constructors may override it to change the constructor assignment. The default implementation is basically:
 
 ```js
 // Hypothetical underlying implementation for illustration
@@ -34,14 +34,14 @@ class Promise {
 }
 ```
 
-Because of this polymorphic implementation, `@@species` of derived subclasses would also return the constructor itself by default.
+Because of this polymorphic implementation, `[Symbol.species]` of derived subclasses would also return the constructor itself by default.
 
 ```js
 class SubPromise extends Promise {}
 SubPromise[Symbol.species] === SubPromise; // true
 ```
 
-Promise chaining methods — [`then()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then), [`catch()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch), and [`finally()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally) — return new promise objects. They get the constructor to construct the new promise through `this.constructor[@@species]`. If `this.constructor` is `undefined`, or if `this.constructor[@@species]` is `undefined` or `null`, the default {{jsxref("Promise/Promise", "Promise()")}} constructor is used. Otherwise, the constructor returned by `this.constructor[@@species]` is used to construct the new promise object.
+Promise chaining methods — [`then()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then), [`catch()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch), and [`finally()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/finally) — return new promise objects. They get the constructor to construct the new promise through `this.constructor[Symbol.species]`. If `this.constructor` is `undefined`, or if `this.constructor[Symbol.species]` is `undefined` or `null`, the default {{jsxref("Promise/Promise", "Promise()")}} constructor is used. Otherwise, the constructor returned by `this.constructor[Symbol.species]` is used to construct the new promise object.
 
 ## Examples
 
@@ -76,7 +76,7 @@ class MyPromise extends Promise {
 console.log(MyPromise.resolve(1).then(() => {}).someValue); // 1
 ```
 
-By overriding `@@species`, the promise methods will return the base `Promise` type.
+By overriding `[Symbol.species]`, the promise methods will return the base `Promise` type.
 
 ```js
 class MyPromise extends Promise {

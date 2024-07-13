@@ -17,7 +17,6 @@ Browsers also have their own database system called {{glossary("IndexedDB")}}.
 ## See also
 
 - [Database](https://en.wikipedia.org/wiki/Database) on Wikipedia
-- [Glossary](/en-US/docs/glossary)
-
+- Related glossary terms:
   - {{Glossary("IndexedDB")}}
   - {{Glossary("SQL")}}

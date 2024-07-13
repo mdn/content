@@ -7,7 +7,9 @@ browser-compat: api.VTTCue
 
 {{APIRef("WebVTT")}}
 
-The `VTTCue` interface—part of the API for handling WebVTT (text tracks on media presentations)—describes and controls the text track associated with a particular {{HTMLElement("track")}} element.
+The `VTTCue` interface of the [WebVTT API](/en-US/docs/Web/API/WebVTT_API) represents a cue that can be added to the text track associated with a particular video (or other media).
+
+A cue defines the text to display in a particular timeslice of a video or audio track, along with display properties such as its size, alignment, and position.
 
 {{InheritanceDiagram}}
 
@@ -23,23 +25,27 @@ _This interface also inherits properties from {{domxref("TextTrackCue")}}._
 - {{domxref("VTTCue.region")}}
   - : A {{domxref("VTTRegion")}} object describing the video's sub-region that the cue will be drawn onto, or `null` if none is assigned.
 - {{domxref("VTTCue.vertical")}}
-  - : Returns an enum representing the cue writing direction.
+  - : An enum representing the cue writing direction.
 - {{domxref("VTTCue.snapToLines")}}
-  - : Returns true if the {{domxref("VTTCue.line")}} attribute is an integer number of lines or a percentage of the video size.
+  - : `true` if the {{domxref("VTTCue.line")}} attribute indicates an integer number of lines or `false` if it represents a percentage of the video size.
+    This is `true` by default.
 - {{domxref("VTTCue.line")}}
-  - : Returns the line positioning of the cue. This can be the string `auto` or a number whose interpretation depends on the value of {{domxref("VTTCue.snapToLines")}}.
+  - : Represents the line positioning of the cue. This can be the string `auto` or a number whose interpretation depends on the value of {{domxref("VTTCue.snapToLines")}}.
 - {{domxref("VTTCue.lineAlign")}}
-  - : Returns an enum representing the alignment of the {{domxref("VTTCue.line")}}.
+  - : An enum representing the alignment of the {{domxref("VTTCue.line")}}.
 - {{domxref("VTTCue.position")}}
-  - : Returns the indentation of the cue within the line. This can be the string `auto` or a number representing the percentage of the {{domxref("VTTCue.region")}}, or the video size if {{domxref("VTTCue.region")}} is `null`.
+  - : Represents the indentation of the cue within the line.
+    This can be the string `auto`, a number representing the percentage of the {{domxref("VTTCue.region")}}, or the video size if {{domxref("VTTCue.region")}} is `null`.
 - {{domxref("VTTCue.positionAlign")}}
-  - : Returns an enum representing the alignment of the cue. This is used to determine what the {{domxref("VTTCue.position")}} is anchored to. The default is `auto`.
+  - : An enum representing the alignment of the cue.
+    This is used to determine what the {{domxref("VTTCue.position")}} is anchored to.
+    The default is `auto`.
 - {{domxref("VTTCue.size")}}
-  - : Returns a `double` representing the size of the cue, as a percentage of the video size.
+  - : Represents the size of the cue, as a percentage of the video size.
 - {{domxref("VTTCue.align")}}
-  - : Returns an enum representing the alignment of all the lines of text within the cue box.
+  - : An enum representing the alignment of all the lines of text within the cue box.
 - {{domxref("VTTCue.text")}}
-  - : Returns a string with the contents of the cue.
+  - : A string representing the contents of the cue.
 
 ## Instance methods
 

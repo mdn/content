@@ -307,17 +307,12 @@ You can find the version of node that was used for development by entering the c
 v16.17.1
 ```
 
-Open **package.json**, and add this information as an **engines > node** section as shown (using the version number for your system).
+Open **package.json**, and add this information as an **engines > node** as shown (using the version number for your system).
 
 ```json
-{
-  "name": "express-locallibrary-tutorial",
-  "version": "0.0.0",
   "engines": {
     "node": ">=16.17.1"
   },
-  "private": true,
-  // …
 ```
 
 The hosting service might not support the specific indicated version of node, but this change should ensure that it attempts to use a version with the same major version number, or a more recent version.
@@ -497,6 +492,31 @@ To start using Glitch you will first need to create an account:
 - Select GitHub in the popup to sign up using your GitHub credentials.
 - You'll then be logged in to the Glitch dashboard: <https://glitch.com/dashboard>.
 
+### Troubleshooting Node.js version
+
+Hosting providers commonly support some major version of recent Node.js releases.
+If the exact "minor" version you have specified in your `package.json` file is not supported they will usually fall back to the closest version they support (and often this will just work).
+
+Unfortunately, at time of writing, the highest supported version on Glitch is Node.js 16.
+If you have been developing with Node.js 17 or later, you should reduce the version used in your `package.json` file as shown.
+You will also need to retest:
+
+```json
+  "engines": {
+    "node": ">=v16"
+  },
+```
+
+Glitch [plans to update node and keep it better updated in future](https://blog.glitch.com/post/rebuilding-glitch) — and it may be that by the time you read this the version limit no longer exists.
+Instead of downgrading the `node` version, you could upload your project to see if it builds.
+If there are errors and your application doesn't load, you should try setting the `node` version to `>=v16` in your `package.json` in the Glitch editor.
+
+> **Note:** You can also check the supported versions by entering the following command into the terminal of any Glitch project:
+>
+> ```sh
+> ls -l /opt/nvm/versions/node | grep '^d' | awk '{ print $9 }'
+> ```
+
 ### Deploy on Glitch from GitHub
 
 Next we'll import the Library project from GitHub.
@@ -545,7 +565,7 @@ The site updates as you enter values into the editor.
 
 ### Other configuration variables
 
-You will recall from a preceding section that we need to [set NODE_ENV to 'production'](#node_env) in order to improve our performance and generate less-verbose error messages. We do this in the same file as we set the `MONGODB_URI` variable.
+You will recall from a preceding section that we need to [set NODE_ENV to 'production'](#set_node_env_to_production) in order to improve our performance and generate less-verbose error messages. We do this in the same file as we set the `MONGODB_URI` variable.
 
 Open `.env` and add a `NODE_ENV` variable with value `production` (see the screenshot in the previous section).
 
@@ -700,7 +720,7 @@ Railway restarts your app when it updates variables. If you check the home page 
 
 ### Other configuration variables
 
-You will recall from a preceding section that we need to [set NODE_ENV to 'production'](#node_env) in order to improve our performance and generate less-verbose error messages. We can do this in the same screen as we set the `MONGODB_URI` variable.
+You will recall from a preceding section that we need to [set NODE_ENV to 'production'](#set_node_env_to_production) in order to improve our performance and generate less-verbose error messages. We can do this in the same screen as we set the `MONGODB_URI` variable.
 
 Open the application service.
 Then select the _Variables_ tab, where you will see that `MONGODB_URI` is already defined, and press the **New Variable** button.

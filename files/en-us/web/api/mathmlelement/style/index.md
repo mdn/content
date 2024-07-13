@@ -37,7 +37,7 @@ A live {{domxref("CSSStyleDeclaration")}} object.
 The following code snippet demonstrates how the `style` attribute is translated into a list of entries in {{domxref("CSSStyleDeclaration")}} :
 
 ```html
-<math xmlns="http://www.w3.org/1998/Math/MathML">
+<math>
   <mrow>
     <mi>f</mi>
     <mo stretchy="false">(</mo>
@@ -85,3 +85,4 @@ for (const prop in elementStyle) {
 - [Using dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
 - {{domxref("HTMLElement.style")}}
 - {{domxref("SVGElement.style")}}
+- {{domxref("MathMLElement.attributeStyleMap")}}

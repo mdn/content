@@ -98,13 +98,13 @@ The following example creates an otherwise non-semantic checkbox element using C
   id="chkPref"
   aria-checked="false"
   onclick="changeCheckbox()"
-  onKeyDown="changeCheckbox(event.keyCode)"
+  onKeyDown="changeCheckbox(event.code)"
   tabindex="0"
   aria-labelledby="chk1-label"></span>
 <label
   id="chk1-label"
   onclick="changeCheckbox()"
-  onKeyDown="changeCheckbox(event.keyCode)"
+  onKeyDown="changeCheckbox(event.code)"
   >Remember my preferences</label
 >
 ```
@@ -132,12 +132,11 @@ The following example creates an otherwise non-semantic checkbox element using C
 ### JavaScript
 
 ```js
-function changeCheckbox(keyCode) {
-  const spacebarKeyCode = 32;
+function changeCheckbox(code) {
   const item = document.getElementById("chkPref");
   const checked = item.getAttribute("aria-checked");
 
-  if (keyCode && keyCode !== spacebarKeyCode) {
+  if (code && code !== "Space") {
     return;
   } else if (checked === "true") {
     item.setAttribute("aria-checked", "false");

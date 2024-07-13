@@ -17,7 +17,7 @@ This element and its contents are not rendered in the DOM, but it can still be r
 Let's look at a trivial quick example:
 
 ```html
-<template id="my-paragraph">
+<template id="custom-paragraph">
   <p>My paragraph</p>
 </template>
 ```
@@ -25,7 +25,7 @@ Let's look at a trivial quick example:
 This won't appear in your page until you grab a reference to it with JavaScript and then append it to the DOM, using something like the following:
 
 ```js
-let template = document.getElementById("my-paragraph");
+let template = document.getElementById("custom-paragraph");
 let templateContent = template.content;
 document.body.appendChild(templateContent);
 ```
@@ -44,7 +44,7 @@ customElements.define(
   class extends HTMLElement {
     constructor() {
       super();
-      let template = document.getElementById("my-paragraph");
+      let template = document.getElementById("custom-paragraph");
       let templateContent = template.content;
 
       const shadowRoot = this.attachShadow({ mode: "open" });
@@ -62,7 +62,7 @@ This wouldn't work if we just appended it to the standard DOM.
 So for example:
 
 ```html
-<template id="my-paragraph">
+<template id="custom-paragraph">
   <style>
     p {
       color: white;

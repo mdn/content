@@ -30,6 +30,7 @@ Where `TypedArray` is one of:
 - {{jsxref("Uint16Array")}}
 - {{jsxref("Int32Array")}}
 - {{jsxref("Uint32Array")}}
+- {{jsxref("Float16Array")}}
 - {{jsxref("Float32Array")}}
 - {{jsxref("Float64Array")}}
 - {{jsxref("BigInt64Array")}}

@@ -15,17 +15,19 @@ The obsolete
 property is a string that reflects the [`color`](/en-US/docs/Web/HTML/Element/font#color) HTML attribute, containing either a named color or a color specified in the
 hexadecimal #RRGGBB format.
 
-The format of the string must follow one of the following HTML microsyntaxes:
+The format of the string must follow one of the following HTML microsyntaxes (see [`<color>`](/en-US/docs/Web/CSS/color_value)):
 
-| Microsyntax              | Description                                                      | Examples                  |
-| ------------------------ | ---------------------------------------------------------------- | ------------------------- |
-| Valid name color string  | _nameOfColor (case insensitive)_                                 | `Green`, `green`, `GREEN` |
-| Valid hex color string   | _in_ {{cssxref("color_value", "RGB format", "#rgb")}}_: #RRGGBB_ | `#008000`                 |
-| RGB using decimal values | _rgb(x,x,x) (x in 0-255 range)_                                  | `rgb(0 128 0)`            |
+| Microsyntax              | Description                      | Examples                  |
+| ------------------------ | -------------------------------- | ------------------------- |
+| Valid name color string  | _nameOfColor (case insensitive)_ | `Green`, `green`, `GREEN` |
+| Valid hex color string   | _#RRGGBB_                        | `#008000`                 |
+| RGB using decimal values | _rgb(x,x,x) (x in 0-255 range)_  | `rgb(0 128 0)`            |
 
 ## Value
 
 A string.
+
+When set to the `null` value, that `null` value is converted to the empty string (`""`), so `elt.color = null` is equivalent to `elt.color = ""`.
 
 ## Examples
 

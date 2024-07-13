@@ -30,12 +30,14 @@ A string or `null`.
 
 ```css
 #text::after {
-  content: "⭐";
+  content: "👹";
   display: inline-block; /* Needed as the `transform` property does not apply to inline elements */
+  font-size: 2rem;
 }
 #text::before {
-  content: "😊";
+  content: "🤠";
   display: inline-block;
+  font-size: 2rem;
 }
 ```
 
@@ -44,14 +46,11 @@ const log = document.getElementById("log");
 const text = document.getElementById("text");
 
 // Create the keyframe and launch the animation
-const animation = text.animate(
-  [
-    { transform: "rotate(0)" },
-    { transform: "rotate(180deg)" },
-    { transform: "rotate(360deg)" },
-  ],
-  { duration: 3000, iterations: Infinity, pseudoElement: "::after" },
-);
+const animation = text.animate([{ transform: "rotate(360deg)" }], {
+  duration: 3000,
+  iterations: Infinity,
+  pseudoElement: "::after",
+});
 
 // Get the value of KeyframeEffect.pseudoElement
 function logPseudoElement() {
@@ -72,7 +71,7 @@ switchPseudoElement();
 logPseudoElement();
 ```
 
-{{EmbedLiveSample("Examples", "100", "70")}}
+{{EmbedLiveSample("Examples", "100", "90")}}
 
 ## Specifications
 

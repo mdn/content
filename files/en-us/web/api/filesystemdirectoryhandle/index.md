@@ -24,7 +24,7 @@ _Inherits methods from its parent, {{DOMxRef("FileSystemHandle")}}._
 Regular methods:
 
 - {{domxref('FileSystemDirectoryHandle.getDirectoryHandle()')}}
-  - : Returns a {{jsxref('Promise')}} fulfilled with a {{domxref('FileSystemDirectoryHandle')}} for a subdirectory with the specified name within the directory handle on which the method is called.
+  - : Returns a {{jsxref('Promise')}} fulfilled with a `FileSystemDirectoryHandle` for a subdirectory with the specified name within the directory handle on which the method is called.
 - {{domxref('FileSystemDirectoryHandle.getFileHandle()')}}
   - : Returns a {{jsxref('Promise')}} fulfilled with a {{domxref('FileSystemFileHandle')}} for a file with the specified name, within the directory the method is called.
 - {{domxref('FileSystemDirectoryHandle.removeEntry()')}}
@@ -40,7 +40,7 @@ Regular methods:
   - : Returns a new _async iterator_ containing the keys for each item in `FileSystemDirectoryHandle`.
 - {{domxref('FileSystemDirectoryHandle.values()')}}
   - : Returns a new _async iterator_ containing the values for each index in the `FileSystemDirectoryHandle` object.
-- `FileSystemDirectoryHandle[@@asyncIterator]()`
+- `FileSystemDirectoryHandle[Symbol.asyncIterator]()`
   - : Returns a new _async iterator_ of a given object's own enumerable property `[key, value]` pairs.
 
 ## Examples

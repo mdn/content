@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.EncodedVideoChunk.EncodedVideoChunk
 ---
 
-{{APIRef("WebCodecs API")}}
+{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`EncodedVideoChunk()`** constructor creates a new {{domxref("EncodedVideoChunk")}} object representing a chunk of encoded video.
 

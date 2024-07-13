@@ -27,7 +27,7 @@ requestAnimationFrame(callback)
 ### Parameters
 
 - `callback`
-  - The function to call when it's time to update your animation for the next repaint. This callback function is passed a single argument: a {{domxref("DOMHighResTimeStamp")}} indicating the end time of the previous frame's rendering (based on the number of milliseconds since [time origin](/en-US/docs/Web/API/DOMHighResTimeStamp#the_time_origin)).
+  - The function to call when it's time to update your animation for the next repaint. This callback function is passed a single argument: a {{domxref("DOMHighResTimeStamp")}} indicating the end time of the previous frame's rendering (based on the number of milliseconds since [time origin](/en-US/docs/Web/API/Performance/timeOrigin)).
   - The timestamp is a decimal number, in milliseconds, but with a minimal precision of 1 millisecond. The timestamp value is also similar to calling {{domxref('performance.now()')}} at the start of the callback function, but it is never the same value.
   - When multiple callbacks queued by `requestAnimationFrame()` begin to fire in a single frame, each receives the same timestamp even though time has passed during the computation of every previous callback's workload.
 
@@ -66,19 +66,20 @@ When receiving the `"start"` message, the worker starts the animation, moving th
 ```js
 let ctx;
 let pos = 0;
+let handle;
 
 function draw(dt) {
   ctx.clearRect(0, 0, 100, 100);
   ctx.fillRect(pos, 0, 10, 10);
   pos += 10 * dt;
-  self.requestAnimationFrame(draw);
+  handle = self.requestAnimationFrame(draw);
 }
 
 self.addEventListener("message", (e) => {
   if (e.data.type === "start") {
     const transferredCanvas = e.data.canvas;
     ctx = transferredCanvas.getContext("2d");
-    self.requestAnimationFrame(draw);
+    handle = self.requestAnimationFrame(draw);
   }
   if (e.data.type === "stop") {
     self.cancelAnimationFrame(handle);
