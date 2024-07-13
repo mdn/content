@@ -11,6 +11,8 @@ The **`Set-Cookie`** HTTP response header is used to send a cookie from the serv
 To send multiple cookies, multiple **`Set-Cookie`** headers should be sent in the same response.
 
 > **Warning:** Browsers block frontend JavaScript code from accessing the `Set-Cookie` header, as required by the Fetch spec, which defines `Set-Cookie` as a [forbidden response-header name](https://fetch.spec.whatwg.org/#forbidden-response-header-name) that [must be filtered out](https://fetch.spec.whatwg.org/#ref-for-forbidden-response-header-name%E2%91%A0) from any response exposed to frontend code.
+>
+> [Browsers will ignore `Set-Cookie` headers](https://fetch.spec.whatwg.org/#cors-protocol-examples) unless the request that triggers the server response has a value of `'include'` set for the `credentials` property of the {{domxref("RequestInit")}} object passed as the `options` argument to the {{domxref("Request.Request","Request()")}} constructor. See also section [4.6, #15](https://fetch.spec.whatwg.org/#http-network-fetch) of the [Fetch Living Standard](https://fetch.spec.whatwg.org/), and  [Using the Fetch API - Including credentials](/en-US/docs/Web/API/Fetch_API/Using_Fetch#including_credentials) for more guidance.
 
 For more information, see the guide on [Using HTTP cookies](/en-US/docs/Web/HTTP/Cookies).
 
