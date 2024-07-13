@@ -10,7 +10,7 @@ CSS animations make it possible to do incredible things with the elements that m
 
 ## Run an animation again
 
-The [CSS Animations](/en-US/docs/Web/CSS/CSS_animations) specification doesn't offer a way to run an animation again. There's no magic `resetAnimation()` method on elements, and you can't even just set the element's {{cssxref("animation-play-state")}} to `"running"` again. Instead, you have to use clever tricks to get a stopped animation to replay.
+The [CSS Animations](/en-US/docs/Web/CSS/CSS_animations) specification doesn't offer a way to run an animation again. You can't just set the element's {{cssxref("animation-play-state")}} to `"running"` again. Instead, you have to use JavaScript to get a stopped animation to replay.
 
 Here's one way to do it that we feel is stable and reliable enough to suggest to you.
 
@@ -20,141 +20,100 @@ First, let's define the HTML for a {{HTMLElement("div")}} we wish to animate and
 
 ```html
 <div class="box"></div>
-
-<div class="runButton">Click me to run the animation</div>
+<button class="runButton">Run the animation</button>
 ```
 
 ### CSS
 
-Now we'll define the animation itself using CSS. Some CSS that's not important (the style of the "Run" button itself) isn't shown here, for brevity.
-
-```css hidden
-.runButton {
-  cursor: pointer;
-  width: 300px;
-  border: 1px solid black;
-  font-size: 16px;
-  text-align: center;
-  margin-top: 12px;
-  padding-top: 2px;
-  padding-bottom: 4px;
-  color: white;
-  background-color: darkgreen;
-  font:
-    14px "Open Sans",
-    "Arial",
-    sans-serif;
-}
-```
+Let's style the box using CSS.
 
 ```css
-@keyframes colorchange {
-  0% {
-    background: yellow;
-  }
-  100% {
-    background: blue;
-  }
-}
-
 .box {
   width: 100px;
   height: 100px;
   border: 1px solid black;
-}
-
-.changing {
-  animation: colorchange 2s;
+  margin-bottom: 1rem;
 }
 ```
-
-There are two classes here. The `"box"` class is the basic description of the box's appearance, without any animation information included. The animation details are included in the `"changing"` class, which says that the {{cssxref("@keyframes")}} named `"colorchange"` should be used over the course of two seconds to animate the box.
-
-Note that because of this, the box doesn't start with any animation effects in place, so it won't be animating.
 
 ### JavaScript
 
-Next we'll look at the JavaScript that does the work. The meat of this technique is in the `play()` function, which is called when the user clicks on the "Run" button.
+Next, we'll look at the JavaScript that does the work. The `playAnimation()` function is to be called when the user clicks on the run button. Instead of {{cssxref("@keyframes")}} at-rule we [define the keyframes in JavaScript](/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats).
 
 ```js
-function play() {
-  document.querySelector(".box").className = "box";
-  requestAnimationFrame((time) => {
-    requestAnimationFrame((time) => {
-      document.querySelector(".box").className = "box changing";
-    });
-  });
+const box = document.querySelector(".box");
+const button = document.querySelector(".runButton");
+
+/*
+  equivalent to the following CSS @keyframes
+
+  @keyframes colorChange {
+    0% {
+      background-color: grey;
+    }
+    100% {
+      background-color: lime;
+    }
+  }
+*/
+const colorChangeFrames = { backgroundColor: ["grey", "lime"] };
+
+function playAnimation() {
+  box.animate(colorChangeFrames, 4000);
 }
 ```
 
-This looks weird, doesn't it? That's because the only way to play an animation again is to remove the animation effect, let the document recompute styles so that it knows you've done that, then add the animation effect back to the element. To make that happen, we have to be creative.
+The `playAnimation` method simply calls {{domxref("Element.animate()")}} method on the box to play the animation. The `animate` method takes the `colorChangeFrames` keyframe object and animation duration as arguments.
 
-Here's what happens when the `play()` function gets called:
-
-1. The box's list of CSS classes is reset to `"box"`. This has the effect of removing any other classes currently applied to the box, including the `"changing"` class that handles animation. In other words, we're removing the animation effect from the box. However, changes to the class list don't take effect until the style recomputation is complete and a refresh has occurred to reflect the change.
-2. To be sure that the styles are recalculated, we use {{domxref("window.requestAnimationFrame()")}}, specifying a callback. Our callback gets executed just before the next repaint of the document. The problem for us is that because it's before the repaint, the style recomputation hasn't actually happened yet!
-3. Our callback cleverly calls `requestAnimationFrame()` a second time! This time, the callback is run before the next repaint, which is after the style recomputation has occurred. This callback adds the `"changing"` class back onto the box, so that the repaint will start the animation once again.
-
-Of course, we also need to add an event handler to our "Run" button so it'll actually do something:
+Of course, we also need to add an event handler to our run button so it'll actually do something:
 
 ```js
-document.querySelector(".runButton").addEventListener("click", play, false);
+button.addEventListener("click", playAnimation);
 ```
 
 ### Result
 
-{{ EmbedLiveSample('Run_an_animation_again', 320, 160) }}
+{{ EmbedLiveSample("Run_an_animation_again", "100%", "160") }}
 
-## Stopping an animation
+## Waiting for an animation to complete before stopping
 
-Removing the {{cssxref("animation-name")}} applied to an element will make it jump or cut to its next state. If instead you'd like the animation to complete and then come to a stop you have to try a different approach. The main tricks are:
+In the previous example if the run button is clicked before the animation is completed, then the current animation is stopped abruptly and the next animation starts from the start. If instead, you'd like the current animation to be complete before starting a new one then we need to check if any animation is still running on the element before accepting a new play request.
 
-1. Make your animation as self-contained as possible. This means you should not rely on `animation-direction: alternate`. Instead you should explicitly write a keyframe animation that goes through the full animation in one forward repetition.
-2. Use JavaScript and clear the animation being used when the `animationiteration` event fires.
+The following demo shows how you'd achieve this. You'll have to do the following modification to the same code:
 
-The following demo shows how you'd achieve the aforementioned JavaScript technique:
+```html hidden
+<div class="box"></div>
+<button class="runButton">Run the animation</button>
+```
 
-```css
-.slidein {
-  animation-duration: 5s;
-  animation-name: slidein;
-  animation-iteration-count: infinite;
-}
-
-.stopped {
-  animation-name: none;
-}
-
-@keyframes slidein {
-  0% {
-    margin-left: 0%;
-  }
-  50% {
-    margin-left: 50%;
-  }
-  100% {
-    margin-left: 0%;
-  }
+```css hidden
+.box {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  margin-bottom: 1rem;
 }
 ```
 
-```html
-<h1 id="watchme">Click me to stop</h1>
+```js hidden
+const box = document.querySelector(".box");
+const button = document.querySelector(".runButton");
+const colorChangeFrames = { backgroundColor: ["grey", "lime"] };
 ```
 
 ```js
-const watchme = document.getElementById("watchme");
-
-watchme.className = "slidein";
-const listener = (e) => {
-  watchme.className = "slidein stopped";
-};
-watchme.addEventListener("click", () =>
-  watchme.addEventListener("animationiteration", listener, false),
-);
+function playAnimation() {
+  if (box.getAnimations().length === 0) {
+    box.animate(colorChangeFrames, 4000);
+  }
+}
 ```
 
-Demo <https://jsfiddle.net/morenoh149/5ty5a4oy/>Animations and stacking context
+button.addEventListener("click", playAnimation);
+
+{{ EmbedLiveSample("Waiting for an animation to complete before stopping", "100%", "160") }}
+
+The code uses {{domxref("Element.getAnimations()")}} method to ensure there is no animation running on the element.
 
 ## Stacking context in animations
 
@@ -162,5 +121,4 @@ In the case of the `animation-fill-mode` [forwards](/en-US/docs/Web/CSS/animatio
 
 ## See also
 
-- [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
-- {{domxref("Window.requestAnimationFrame()")}}
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
