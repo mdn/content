@@ -314,7 +314,7 @@ However, if the WebVTT file is used in a {{HTMLElement("track")}} element where 
     ```
 
 The following tags are the HTML tags allowed in a cue and require opening and closing tags (e.g., `<b>text</b>`).
-Text marked up with these tags can be formatted in [`STYLE` blocks](/en-US/docs/Web/API/WebVTT_API/Web_Video_Text_Tracks_Format#style_blocks) using the {{cssxref("::cue")}} pseudo-element.
+Text marked up with these tags can be formatted in [`STYLE` blocks](#style_blocks) using the {{cssxref("::cue")}} pseudo-element.
 
 - Italics tag (`<i></i>`)
 
