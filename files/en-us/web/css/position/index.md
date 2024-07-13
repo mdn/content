@@ -286,13 +286,103 @@ The following CSS rule would position the element with id one relatively until t
 }
 ```
 
-Now consider the following example, where we have two light bulb emojis in a paragraph. Both the light bulbs have been made sticky, and inset boundaries have been specified as 50px from top, 100px from right, 50px from bottom, and 50px from left. The inset area has been roughly marked using the same-sized gray-colored background on the div.
+#### List with sticky headings
 
-#### HTML
+A common use for sticky positioning is for the headings in an alphabetized list. The "B" heading will appear just below the items that begin with "A" until they are scrolled offscreen. Rather than sliding offscreen with the rest of the content, the "B" heading will then remain fixed to the top of the viewport until all the "B" items have scrolled offscreen, at which point it will be covered up by the "C" heading, and so on.
+
+You must specify a threshold with at least one of `top`, `right`, `bottom`, or `left` for sticky positioning to behave as expected. Otherwise, it will be indistinguishable from relative positioning.
+
+##### HTML
 
 ```html
-Using scrollbars, try to find the right places of the sticky light bulbs(💡) in
-the following text:
+<dl>
+  <div>
+    <dt>A</dt>
+    <dd>Andrew W.K.</dd>
+    <dd>Apparat</dd>
+    <dd>Arcade Fire</dd>
+    <dd>At The Drive-In</dd>
+    <dd>Aziz Ansari</dd>
+  </div>
+  <div>
+    <dt>C</dt>
+    <dd>Chromeo</dd>
+    <dd>Common</dd>
+    <dd>Converge</dd>
+    <dd>Crystal Castles</dd>
+    <dd>Cursive</dd>
+  </div>
+  <div>
+    <dt>E</dt>
+    <dd>Explosions In The Sky</dd>
+  </div>
+  <div>
+    <dt>T</dt>
+    <dd>Ted Leo &amp; The Pharmacists</dd>
+    <dd>T-Pain</dd>
+    <dd>Thrice</dd>
+    <dd>TV On The Radio</dd>
+    <dd>Two Gallants</dd>
+  </div>
+</dl>
+```
+
+##### CSS
+
+```css
+* {
+  box-sizing: border-box;
+}
+
+dl > div {
+  background: #fff;
+  padding: 24px 0 0 0;
+}
+
+dt {
+  background: #b8c1c8;
+  border-bottom: 1px solid #989ea4;
+  border-top: 1px solid #717d85;
+  color: #fff;
+  font:
+    bold 18px/21px Helvetica,
+    Arial,
+    sans-serif;
+  margin: 0;
+  padding: 2px 0 0 12px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: -1px;
+}
+
+dd {
+  font:
+    bold 20px/45px Helvetica,
+    Arial,
+    sans-serif;
+  margin: 0;
+  padding: 0 0 0 12px;
+  white-space: nowrap;
+}
+
+dd + dd {
+  border-top: 1px solid #ccc;
+}
+```
+
+##### Result
+
+{{EmbedLiveSample('List with sticky headings', '', '300px')}}
+
+#### Sticky position with all the inset boundaries set
+
+The following example demonstrates how an element behaves when all the inset boundaries are set. Here we have two light bulb emojis in a paragraph. Both the light bulbs have been made sticky, and inset boundaries have been specified as 50px from top, 100px from right, 50px from bottom, and 50px from left. To make the inset area recognizable same-sized gray-colored background on the parent div element has been set.
+
+##### HTML
+
+```html
+Use scrollbars to put the light bulbs(💡) in the right place in the following
+text:
 <div>
   <p>
     The representation of an idea by a light bulb(<span class="bulb">💡</span>)
@@ -311,7 +401,7 @@ the following text:
 </div>
 ```
 
-#### CSS
+##### CSS
 
 ```css hidden
 div {
@@ -344,9 +434,9 @@ div {
 }
 ```
 
-#### Result
+##### Result
 
-{{EmbedLiveSample('Sticky_positioning', '', '300px')}}
+{{EmbedLiveSample('Sticky position with all the inset boundaries set', '', '300px')}}
 
 After you put both the bulbs in their right place, you'll notice that the bulbs act as relatively positioned inside the inset area. But as soon as they get moved out of the inset area they get fixed(stick) to the inset boundary in that direction.
 
