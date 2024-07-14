@@ -22,7 +22,7 @@ In the case of a same named group of {{HTMLElement("input/checkbox","checkbox")}
 
 ### Attribute interactions
 
-Because a read-only field cannot have a value, `required` does not have any effect on inputs with the [`readonly`](/en-US/docs/Web/HTML/Attributes/readonly) attribute also specified.
+Because a read-only field cannot be changed, `required` does not have any effect on inputs with the [`readonly`](/en-US/docs/Web/HTML/Attributes/readonly) attribute also specified.
 
 ### Usability
 

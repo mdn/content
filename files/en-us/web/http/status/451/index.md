@@ -2,7 +2,7 @@
 title: 451 Unavailable For Legal Reasons
 slug: Web/HTTP/Status/451
 page-type: http-status-code
-browser-compat: http.status.451
+spec-urls: https://httpwg.org/specs/rfc7725.html#n-451-unavailable-for-legal-reasons
 ---
 
 {{HTTPSidebar}}
@@ -43,10 +43,6 @@ Content-Type: text/html
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

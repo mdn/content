@@ -41,7 +41,7 @@ Sec-WebSocket-Version: 13
 
 The client can solicit extensions and/or subprotocols here; see [Miscellaneous](#miscellaneous) for details. Also, common headers like {{HTTPHeader("User-Agent")}}, {{HTTPHeader("Referer")}}, {{HTTPHeader("Cookie")}}, or authentication headers might be there as well. Do whatever you want with those; they don't directly pertain to the WebSocket. It's also safe to ignore them. In many common setups, a reverse proxy has already dealt with them.
 
-> **Note:** All **browsers** send an [`Origin` header](/en-US/docs/Web/HTTP/CORS#origin). You can use this header for security (checking for same origin, automatically allowing or denying, etc.) and send a [403 Forbidden](/en-US/docs/Web/HTTP/Status#403) if you don't like what you see. However, be warned that non-browser agents can send a faked `Origin`. Most applications reject requests without this header.
+> **Note:** All **browsers** send an [`Origin` header](/en-US/docs/Web/HTTP/CORS#origin). You can use this header for security (checking for same origin, automatically allowing or denying, etc.) and send a [403 Forbidden](/en-US/docs/Web/HTTP/Status/403) if you don't like what you see. This is effective against [Cross Site WebSocket Hijacking (CSWH)](https://cwe.mitre.org/data/definitions/1385.html). However, be warned that non-browser agents can send a faked `Origin`. Most applications reject requests without this header.
 
 If any header is not understood or has an incorrect value, the server should send a {{HTTPStatus("400")}} ("Bad Request") response and immediately close the socket. As usual, it may also give the reason why the handshake failed in the HTTP response body, but the message may never be displayed (browsers do not display it). If the server doesn't understand that version of WebSockets, it should send a {{HTTPHeader("Sec-WebSocket-Version")}} header back that contains the version(s) it does understand. In the example above, it indicates version 13 of the WebSocket protocol.
 
@@ -180,7 +180,7 @@ To close a connection either the client or server can send a control frame with 
 
 > **Note:** WebSocket codes, extensions, subprotocols, etc. are registered at the [IANA WebSocket Protocol Registry](https://www.iana.org/assignments/websocket/websocket.xml).
 
-WebSocket extensions and subprotocols are negotiated via headers during [the handshake](#handshake). Sometimes extensions and subprotocols are very similar, but there is a clear distinction. Extensions control the WebSocket _frame_ and _modify_ the payload, while subprotocols structure the WebSocket _payload_ and _never modify_ anything. Extensions are optional and generalized (like compression); subprotocols are mandatory and localized (like ones for chat and for MMORPG games).
+WebSocket extensions and subprotocols are negotiated via headers during [the handshake](#the_websocket_handshake). Sometimes extensions and subprotocols are very similar, but there is a clear distinction. Extensions control the WebSocket _frame_ and _modify_ the payload, while subprotocols structure the WebSocket _payload_ and _never modify_ anything. Extensions are optional and generalized (like compression); subprotocols are mandatory and localized (like ones for chat and for MMORPG games).
 
 ### Extensions
 

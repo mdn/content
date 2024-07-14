@@ -9,9 +9,9 @@ browser-compat: api.Element.before
 {{APIRef("DOM")}}
 
 The **`Element.before()`** method inserts a set of
-{{domxref("Node")}} or string objects in the children list of this
+{{domxref("Node")}} objects or strings in the children list of this
 `Element`'s parent, just before this `Element`.
-String objects are inserted as equivalent {{domxref("Text")}} nodes.
+Strings are inserted as equivalent {{domxref("Text")}} nodes.
 
 ## Syntax
 
@@ -24,7 +24,7 @@ before(param1, param2, /* …, */ paramN)
 ### Parameters
 
 - `param1`, …, `paramN`
-  - : A set of {{domxref("Node")}} or string objects to insert.
+  - : A set of {{domxref("Node")}} objects or strings to insert.
 
 ### Return value
 

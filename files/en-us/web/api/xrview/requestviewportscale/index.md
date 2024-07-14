@@ -18,12 +18,12 @@ The **`requestViewportScale()`** method of the {{domxref("XRView")}} interface r
 requestViewportScale(scale)
 ```
 
-## Parameters
+### Parameters
 
 - `scale`
   - : A number greater than 0.0 and less than or equal to 1.0 representing the scale factor.
 
-## Return value
+### Return value
 
 None ({{jsxref("undefined")}}).
 

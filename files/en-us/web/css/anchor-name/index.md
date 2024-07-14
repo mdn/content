@@ -135,7 +135,7 @@ body {
 
 We associate the second `<div>` with the anchor element by setting its anchor name as the value of the positioned element's {{cssxref("position-anchor")}} property. We then set the positioned element's:
 
-- {{cssxref("position")}} property to `fixed`, converting it to an **anchor-positioned element** so it can be positioned relative to the anchor's position on the page.
+- {{cssxref("position")}} property to `fixed`, converting it to an _anchor-positioned element_ so it can be positioned relative to the anchor's position on the page.
 - {{cssxref("left")}} and {{cssxref("top")}} properties to {{cssxref("anchor()")}} functions with values of `right` and `top` respectively. This positions the infobox's left edge flush to the right edge of its anchor, and its top edge relative to the top edge of its anchor.
 - {{cssxref("margin-left")}} to `10px`, creating space between the anchor positioned element and its anchor.
 

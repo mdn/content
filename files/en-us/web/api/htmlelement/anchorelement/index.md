@@ -4,11 +4,12 @@ short-title: anchorElement
 slug: Web/API/HTMLElement/anchorElement
 page-type: web-api-instance-property
 status:
+  - experimental
   - non-standard
 browser-compat: api.HTMLElement.anchorElement
 ---
 
-{{APIRef("HTML DOM")}}{{Non-standard_Header}}
+{{APIRef("HTML DOM")}}{{Non-standard_Header}}{{SeeCompatTable}}
 
 The **`anchorElement`** property of the {{domxref("HTMLElement")}} interface returns a reference to the element's anchor element. This works only in the case of elements associated with their anchors via the [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) HTML attribute, not elements associated with their anchors via the CSS {{cssxref("anchor-name")}} and {{cssxref("position-anchor")}} properties.
 

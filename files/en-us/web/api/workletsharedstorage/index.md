@@ -37,7 +37,7 @@ _`WorkletSharedStorage` inherits properties from its parent interface, {{domxref
   - : Returns a new async iterator for the key-value pairs of a `WorkletSharedStorage` object instance's enumerable properties.
 - {{domxref("WorkletSharedStorage.keys", "keys()")}} {{Experimental_Inline}}
   - : Returns a new async iterator containing the keys for each item in a `WorkletSharedStorage` object instance.
-- `WorkletSharedStorage[@@asyncIterator]()` {{Experimental_Inline}}
+- `WorkletSharedStorage[Symbol.asyncIterator]()` {{Experimental_Inline}}
   - : Returns the {{domxref("WorkletSharedStorage.entries", "entries()")}} function by default.
 
 ## Examples
