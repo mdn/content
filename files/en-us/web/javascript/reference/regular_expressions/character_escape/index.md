@@ -154,9 +154,6 @@ console.log(space);
 // Output: (a space)
 ```
 
-
-
-
 ## Specifications
 
 {{Specifications}}
