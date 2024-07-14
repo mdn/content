@@ -75,6 +75,88 @@ b`;
 console.log(pattern.test(string)); // true
 ```
 
+In JavaScript, escape characters are used to include special characters within strings that would otherwise be interpreted differently by the language. The backslash \ is used as an escape character in JavaScript strings. Here's how you can use some common escape characters, including \n which is used for a new line:
+
+New Line (\n): This escape sequence is used to insert a line break in a string. It's equivalent to pressing the "Enter" key on your keyboard.
+
+```js
+let message = "Hello,\nhow are you doing today?";
+console.log(message);
+// Output:
+// Hello,
+// how are you doing today?
+```
+
+Carriage Return (\r): This escape sequence is used to insert a carriage return, which moves the cursor to the beginning of the line without advancing to a new line. It's often used in conjunction with \n for cross-platform compatibility in text files.
+
+```js
+let message = "Hello,\r\nhow are you doing today?";
+console.log(message); // This will print the message with a line break
+//Output:
+// Hello,
+// how are you doing today?
+```
+
+Tab (\t): This escape sequence inserts a horizontal tab space in the string.
+
+```js
+let message = "Column1\tColumn2\tColumn3";
+console.log(message);
+// Output (with tabs between columns):
+// Column1  Column2  Column3
+```js
+
+Single Quote (\'): Use this to include a single quote character within a string that is itself enclosed in single quotes.
+
+```js
+let message = 'It\'s a beautiful day.';
+console.log(message);
+// Output: It's a beautiful day.
+```
+
+Double Quote (\"): Similarly, use this to include a double quote character within a string that is enclosed in double quotes.
+
+```js
+let message = "He said, \"Hello!\"";
+console.log(message);
+// Output: He said, "Hello!"
+```
+
+Backslash (\\): To include a literal backslash in a string, you need to escape the backslash itself.
+
+```js
+let filePath = "C:\\Users\\Username\\file.txt";
+console.log(filePath);
+// Output: C:\Users\Username\file.txt
+```
+
+Unicode Characters (\uXXXX): You can represent Unicode characters using their code points. XXXX should be replaced with the hexadecimal value of the character.
+
+```js
+let heart = "\u2764"; // Unicode for a heart symbol
+console.log(heart);
+// Output: ❤
+```
+
+Hexadecimal Characters (\xXX): You can also represent characters using hexadecimal values, where XX is the hexadecimal code for the character.
+
+```js
+let tab = "\x09"; // Hexadecimal for a tab character
+console.log(tab);
+// Output: (a tab space)
+```
+
+Octal Characters (\XXX): JavaScript also supports octal escape sequences, but their use is discouraged due to potential confusion with other escape sequences and security implications.
+
+```js
+let space = "\040"; // Octal for a space character
+console.log(space);
+// Output: (a space)
+```
+
+
+
+
 ## Specifications
 
 {{Specifications}}
