@@ -112,7 +112,7 @@ Single Quote (\'): Use this to include a single quote character within a string 
 let message = 'It\'s a beautiful day.';
 console.log(message);
 // Output: It's a beautiful day.
-```
+````
 
 Double Quote (\"): Similarly, use this to include a double quote character within a string that is enclosed in double quotes.
 
