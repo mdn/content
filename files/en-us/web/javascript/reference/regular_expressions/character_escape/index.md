@@ -117,7 +117,7 @@ console.log(message);
 Double Quote (\"): Similarly, use this to include a double quote character within a string that is enclosed in double quotes.
 
 ```js
-let message = "He said, \"Hello!\"";
+let message = 'He said, "Hello!"';
 console.log(message);
 // Output: He said, "Hello!"
 ```
