@@ -397,7 +397,7 @@ It is also recommended that you use the greater-than escape sequence (`&gt;`) in
 A comment consists of three parts:
 
 - The string `NOTE`.
-- A space or a newline.
+- A space or a new line.
 - Zero or more characters other than those noted above.
 
 Here are some examples:
@@ -432,7 +432,7 @@ Each block consists of the following lines:
 - The String `STYLE` followed by zero or more space or tab characters, and then a newline.
 - A string defining the CSS styles to match and apply, using the {{cssxref("::cue")}} pseudo-element.
 
-The block cannot cannot contain the string `-->`.
+The block cannot contain the string `-->`.
 It may contain newlines but cannot contain two consecutive newlines: that would create a blank line, which indicates the end of the block.
 
 A simple WebVTT files with two `STYLE` blocks is shown below.
@@ -535,7 +535,7 @@ STYLE ::cue(b.myclass) {
 
 Cue payload text marked up with a particular tag and attribute can be matched using an attribute selector.
 
-For example, consider the following WebVTT file, which has text marked up using using the `v` and `lang` [cue payload text tags](#cue_payload_text_tags), using attributes to specify the particular voice ("Salame") and languages.
+For example, consider the following WebVTT file, which has text marked up using the `v` and `lang` [cue payload text tags](#cue_payload_text_tags), using attributes to specify the particular voice ("Salame") and languages.
 
 ```plain
 WEBVTT
