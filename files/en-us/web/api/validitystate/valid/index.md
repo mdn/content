@@ -18,18 +18,54 @@ A boolean that is `true` if the `ValidityState` does conform to all the constrai
 
 ## Examples
 
+### Displaying validity state
+
+The following example checks the validity of a [numeric input element](/en-US/docs/Web/HTML/Element/input/number).
+A constraint has been added using the [`min` attribute](/en-US/docs/Web/HTML/Element/input/number#min) which sets a minimum value of `18` for the input.
+If the user enters a number lower than 18, the element fails constraint validation, and the styles matching `input:invalid` are applied.
+
+```css
+input:invalid {
+  outline: red solid 3px;
+}
+```
+
+```css hidden
+body {
+  margin: 0.5rem;
+}
+pre {
+  padding: 1rem;
+  height: 2rem;
+  background-color: lightgrey;
+  outline: 1px solid grey;
+}
+```
+
 ```html
-<input type="number" id="age" />
+<pre id="log">Validation logged here...</pre>
+<input type="number" id="age" min="18" />
 ```
 
 ```js
-const input = document.getElementById("age");
-if (input.validity.valid) {
-  console.log("Bad input detected…");
-} else {
-  console.log("Input OK…");
+const userInput = document.getElementById("age");
+const logElement = document.getElementById("log");
+
+function log(text) {
+  logElement.innerText = text;
 }
+
+userInput.addEventListener("input", () => {
+  userInput.reportValidity();
+  if (userInput.validity.valid) {
+    log("Input OK…");
+  } else {
+    log("Bad input detected…");
+  }
+});
 ```
+
+{{EmbedLiveSample("displaying_validity_state", "100%", "140")}}
 
 ## Specifications
 
@@ -41,5 +77,6 @@ if (input.validity.valid) {
 
 ## See also
 
+- ValidityState [badInput](/en-US/docs/Web/API/ValidityState/badInput), [customError](/en-US/docs/Web/API/ValidityState/customError) properties.
 - [Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
 - [Forms: Data form validation](/en-US/docs/Learn/Forms/Form_validation)

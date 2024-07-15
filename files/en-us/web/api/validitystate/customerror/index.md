@@ -53,7 +53,7 @@ pre {
   padding: 1rem;
   height: 2rem;
   background-color: lightgrey;
-  outline: 2px black;
+  outline: 1px solid grey;
 }
 ```
 
@@ -86,7 +86,7 @@ const validateInput = () => {
   userInput.reportValidity();
   if (userInput.validity.customError) {
     // We can handle custom validity states here
-    log("Try to be more specific: " + userInput.validationMessage);
+    log("Custom validity error: " + userInput.validationMessage);
   } else {
     log(userInput.validationMessage);
   }
@@ -109,5 +109,6 @@ checkButton.addEventListener("click", validateInput);
 
 ## See also
 
+- ValidityState [badInput](/en-US/docs/Web/API/ValidityState/badInput), [valid](/en-US/docs/Web/API/ValidityState/valid) properties.
 - [Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
 - [Forms: Data form validation](/en-US/docs/Learn/Forms/Form_validation)
