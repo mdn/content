@@ -37,6 +37,9 @@
 # MathML
 /files/en-us/web/mathml/ @mdn/content-mathml
 
+# MDN Firefox Release Notes
+/files/en-us/mozilla/firefox @mdn/core-yari-content
+
 # ============================= CONTROL FILES ============================= #
 # The CODEOWNERS file must end with these matches: Any pull request changing
 # one or more of these files should be escalated to the owners specified here.

@@ -295,14 +295,16 @@ See [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vert
         <a href="/en-US/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
         <a href="/en-US/docs/Web/HTML/Element/input#list"><code>list</code></a>,
         <a href="/en-US/docs/Web/HTML/Element/input#max"><code>max</code></a>,
-        <a href="/en-US/docs/Web/HTML/Element/input#min"><code>min</code></a>, and
+        <a href="/en-US/docs/Web/HTML/Element/input#min"><code>min</code></a>,
         <a href="/en-US/docs/Web/HTML/Element/input#step"><code>step</code></a>
       </td>
     </tr>
     <tr>
       <td><strong>IDL attributes</strong></td>
       <td>
-        <code>list</code>, <code>value</code>, and <code>valueAsNumber</code>
+        <a href="/en-US/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#value"><code>value</code></a>,
+        <code>valueAsNumber</code>
       </td>
     </tr>
     <tr>

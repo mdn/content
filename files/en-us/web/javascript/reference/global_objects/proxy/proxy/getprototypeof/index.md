@@ -14,24 +14,22 @@ The **`handler.getPrototypeOf()`** method is a trap for the `[[GetPrototypeOf]]`
 ## Syntax
 
 ```js-nolint
-new Proxy(obj, {
+new Proxy(target, {
   getPrototypeOf(target) {
-    // …
   }
-});
+})
 ```
 
 ### Parameters
 
-The following parameter is passed to the `getPrototypeOf()` method.
-`this` is bound to the handler.
+The following parameter is passed to the `getPrototypeOf()` method. `this` is bound to the handler.
 
 - `target`
   - : The target object.
 
 ### Return value
 
-The `getPrototypeOf()` method must return an object or `null`.
+The `getPrototypeOf()` method must return an object or `null`, representing the prototype of the target object.
 
 ## Description
 
@@ -49,12 +47,10 @@ Or any other operation that invokes the `[[GetPrototypeOf]]` [internal method](/
 
 ### Invariants
 
-If the following invariants are violated, the trap throws a {{jsxref("TypeError")}} when invoked.
+The proxy's `[[GetPrototypeOf]]` internal method throws a {{jsxref("TypeError")}} if the handler definition violates one of the following invariants:
 
-- `getPrototypeOf()` method must return an object or `null`.
-- If `target` is not extensible,
-  `Object.getPrototypeOf(proxy)` method must return the same
-  value as `Object.getPrototypeOf(target)`.
+- The result must be either an {{jsxref("Object")}} or `null`.
+- If the target object is not extensible (that is, {{jsxref("Reflect.isExtensible()")}} returns `false` on `target`), the result must be the same as the result of `Reflect.getPrototypeOf(target)`.
 
 ## Examples
 
