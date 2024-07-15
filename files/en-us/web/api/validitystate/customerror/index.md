@@ -26,15 +26,32 @@ When the value in the form control is invalid, even if there is not custom error
 #### HTML
 
 ```html
-<input type="text" id="userInput" placeholder="How are you feeling?" />
-<button id="checkButton">Check input</button>
+<pre id="log">Validation failures logged here...</pre>
+<input
+  type="text"
+  id="userInput"
+  placeholder="How do you feel?"
+  minlength="2" />
+<button id="checkButton">Validate input</button>
 ```
 
 #### CSS
 
 ```css
 input:invalid {
-  outline: red solid 3px;
+  border: red solid 3px;
+}
+```
+
+```css hidden
+body {
+  margin: 0.5rem;
+}
+pre {
+  padding: 1rem;
+  height: 2rem;
+  background-color: lightgrey;
+  outline: 2px black;
 }
 ```
 
@@ -43,13 +60,18 @@ input:invalid {
 ```js
 const userInput = document.getElementById("userInput");
 const checkButton = document.getElementById("checkButton");
+const logElement = document.getElementById("log");
+
+function log(text) {
+  logElement.innerText = text;
+}
 
 const check = (input) => {
-  // If the input is the string 'good', set a custom validity message
+  // For the exact string 'good', set a custom validity message
   if (input.value === "good") {
     input.setCustomValidity(`"${input.value}" is not a feeling.`);
   } else {
-    // Reset the custom error message
+    // An empty string resets the custom validity state
     input.setCustomValidity("");
   }
 };
@@ -60,6 +82,12 @@ userInput.addEventListener("input", () => {
 
 const validateInput = () => {
   userInput.reportValidity();
+  if (userInput.validity.customError) {
+    // We can handle custom validity states here
+    log("Try to be more specific: " + userInput.validationMessage);
+  } else {
+    log(userInput.validationMessage);
+  }
 };
 
 checkButton.addEventListener("click", validateInput);
@@ -67,7 +95,7 @@ checkButton.addEventListener("click", validateInput);
 
 #### Result
 
-{{EmbedLiveSample("detecting_a_custom_error", "100%", "100")}}
+{{EmbedLiveSample("detecting_a_custom_error", "100%", "140")}}
 
 ## Specifications
 
