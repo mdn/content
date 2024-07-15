@@ -45,13 +45,19 @@ min-width: unset;
 - {{cssxref("&lt;percentage&gt;")}}
   - : Defines the `min-width` as a percentage of the containing block's width.
 - `auto`
-  - : The browser will calculate and select a `min-width` for the specified element.
+
+  - : Specifies an automatic minimum size. The browser will calculate and select a `min-width` for the specified element.
+
+    For block boxes, inline boxes, inline blocks, and all table layout boxes the keyword resolves to `0`.
+
+    For [flex items](/en-US/docs/Glossary/Flex_Item) and grid items [content-based minimum size](https://drafts.csswg.org/css-grid/#content-based-minimum-size) is used, that is either specified, transferred, or `min-content` size is used. If a flex or gird item is a scroll container the automatic minimum size is `0`.
+
 - `max-content`
   - : The intrinsic preferred `min-width`.
 - `min-content`
   - : The intrinsic minimum `min-width`.
 - `fit-content`
-  - : Use the available space, but not more than [max-content](/en-US/docs/Web/CSS/max-content), i.e `min(max-content, max(min-content, stretch))`.
+  - : Use the available space, but not more than [max-content](/en-US/docs/Web/CSS/max-content), i.e. `min(max-content, max(min-content, stretch))`.
 - `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
   - : Uses the `fit-content` formula with the available space replaced by the specified argument, i.e. `min(max-content, max(min-content, argument))`.
 
