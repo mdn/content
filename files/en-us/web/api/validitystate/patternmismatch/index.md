@@ -8,13 +8,17 @@ browser-compat: api.ValidityState.patternMismatch
 
 {{APIRef("HTML DOM")}}
 
-The read-only **`patternMismatch`** property of a **[`ValidityState`](/en-US/docs/Web/API/ValidityState)** object indicates if the value of an {{HTMLElement("input")}}, after having been edited by the user, does not conform to the constraints set by the element's [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) attribute.
+The read-only **`patternMismatch`** property of the [`ValidityState`](/en-US/docs/Web/API/ValidityState) interface indicates if the value of an {{HTMLElement("input")}}, after having been edited by the user, does not conform to the constraints set by the element's [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) attribute.
 
 The `patternMismatch` property will be true if and only if the following conditions are all true:
 
 - the field supports the [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) attribute — which means the {{HTMLElement("input")}} is of `type` {{HTMLElement("input/text", "text")}}, {{HTMLElement("input/tel", "tel")}}, {{HTMLElement("input/email", "email")}}, {{HTMLElement("input/url", "url")}}, {{HTMLElement("input/password", "password")}}, or {{HTMLElement("input/search", "search")}}
 - the [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) attribute contains a valid regular expression
 - the {{HTMLElement("input")}} value doesn't conform to the constraints set by the [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) value.
+
+## Value
+
+A boolean that is `true` if the `ValidityState` object does not conform to the constraints.
 
 ## Examples
 
