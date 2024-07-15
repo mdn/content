@@ -341,7 +341,7 @@ blockquote {
 
 {{EmbedLiveSample("words", "100", "400")}}
 
-Each box has one dimension defined: the {{cssxref("inline-size")}}, which is the width in horizontal languages, is set to {{cssxref("max-content")}}, which sets the size to be as wide as it needs to be to fit the content without wrapping. The second dimension, in this case, the {{cssxref("block-size")}} or {{cssxref("height")}}, is set to be the same length as the first dimension. This is accomplished with the {{cssxref("aspect-ratio")}} property. We defined the desired width-to-height ratio of the element's box to be `1`, which is the same as `1 / 1`, a square. This sets the the block direction to match the width of the element, without using the {{cssxref("height")}} or {{cssxref("block-size")}} properties.
+Each box has one dimension defined: the {{cssxref("inline-size")}}, which is the width in horizontal languages, is set to {{cssxref("max-content")}}, which sets the size to be as wide as it needs to be to fit the content without wrapping. The second dimension, in this case, the {{cssxref("block-size")}} or {{cssxref("height")}}, is set to be the same length as the first dimension. This is accomplished with the {{cssxref("aspect-ratio")}} property. We defined the desired width-to-height ratio of the element's box to be `1`, which is the same as `1 / 1`, a square. This sets the block direction to match the width of the element, without using the {{cssxref("height")}} or {{cssxref("block-size")}} properties.
 
 In these examples, a size was explicitly set on the element itself. When working with non-replaced elements, aspect ratio comes into play when no size dimension is explicitly set.
 
