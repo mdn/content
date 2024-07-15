@@ -8,7 +8,9 @@ spec-urls: https://drafts.fxtf.org/filter-effects/#element-attrdef-fecomponenttr
 
 {{SVGRef}}
 
-The **`intercept`** attribute defines the intercept of the linear function of color component transfers when the {{SVGAttr("type")}} attribute is set to `linear`. The `linear` function is defined as `slope * color + intercept`, where `color` is the color value, the `intercept` provides a base value for the result, and the [`slope`](/en-US/docs/Web/SVG/Attribute/slope) is a scaling factor.
+The **`intercept`** attribute defines the intercept of the linear function of color component transfers when the {{SVGAttr("type")}} attribute is set to `linear`.
+
+The `linear` function is defined as `slope * color + intercept`, where `color` is the color value, the `intercept` provides a base value for the result, and the [`slope`](/en-US/docs/Web/SVG/Attribute/slope) is a scaling factor.
 
 The `intercept` attribute is supported by children of the {{SVGElement("feComponentTransfer")}} filter primitive and is used with the following SVG component transfer function elements when `type="linear"` is set:
 
