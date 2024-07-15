@@ -108,7 +108,7 @@ Beyond the standard data returned by a {{domxref("PerformanceEntry")}} entry, th
 
 ## Calculating timestamps
 
-The timestamps provided in the {{domxref("PerformanceLongAnimationFrameTiming")}} class allow several further useful timings to be calculated for the the long animation frame:
+The timestamps provided in the {{domxref("PerformanceLongAnimationFrameTiming")}} class allow several further useful timings to be calculated for the long animation frame:
 
 | Timing                            | Calculation                                                              |
 | --------------------------------- | ------------------------------------------------------------------------ |

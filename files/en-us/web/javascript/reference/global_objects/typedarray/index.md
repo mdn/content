@@ -184,7 +184,7 @@ All `TypeArray` subclass constructors operate in the same way. They would all th
 
 These properties are defined on the `TypedArray` constructor object and are thus shared by all `TypedArray` subclass constructors.
 
-- {{jsxref("TypedArray/@@species", "TypedArray[Symbol.species]")}}
+- [`TypedArray[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.species)
   - : The constructor function used to create derived objects.
 
 All `TypedArray` subclasses also have the following static properties:
@@ -289,7 +289,7 @@ These methods are defined on the `TypedArray` prototype object and are thus shar
   - : Returns a new _array iterator_ object that contains the values for each index in the array. See also {{jsxref("Array.prototype.values()")}}.
 - {{jsxref("TypedArray.prototype.with()")}}
   - : Returns a new array with the element at the given index replaced with the given value, without modifying the original array.
-- [`TypedArray.prototype[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator)
+- [`TypedArray.prototype[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator)
   - : Returns a new _array iterator_ object that contains the values for each index in the array.
 
 ## Examples

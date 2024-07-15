@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.AsyncIterator
 
 {{JSRef}}
 
-An **`AsyncIterator`** object is an object that conforms to the [async iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols) by providing a `next()` method that returns a promise fulfilling to an iterator result object. The `AsyncIterator.prototype` object is a hidden global object that all built-in async iterators inherit from. It provides an [`[Symbol.asyncIterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncIterator/@@asyncIterator) method that returns the async iterator object itself, making the async iterator also [async iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols).
+An **`AsyncIterator`** object is an object that conforms to the [async iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols) by providing a `next()` method that returns a promise fulfilling to an iterator result object. The `AsyncIterator.prototype` object is a hidden global object that all built-in async iterators inherit from. It provides an [`[Symbol.asyncIterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncIterator/Symbol.asyncIterator) method that returns the async iterator object itself, making the async iterator also [async iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols).
 
 Note that `AsyncIterator` is _not_ a global object, although it will be in the future with the [async iterator helpers proposal](https://github.com/tc39/proposal-async-iterator-helpers). The `AsyncIterator.prototype` object shared by all built-in async iterators can be obtained with the following code:
 
@@ -27,7 +27,7 @@ Each of these async iterators have a distinct prototype object, which defines th
 
 ## Instance methods
 
-- [`AsyncIterator.prototype[Symbol.asyncIterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncIterator/@@asyncIterator)
+- [`AsyncIterator.prototype[Symbol.asyncIterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncIterator/Symbol.asyncIterator)
   - : Returns the async iterator object itself. This allows async iterator objects to also be async iterable.
 
 ## Examples

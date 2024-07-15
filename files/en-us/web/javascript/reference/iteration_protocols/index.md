@@ -96,7 +96,7 @@ console.log(aGeneratorObject[Symbol.iterator]() === aGeneratorObject);
 
 All built-in iterators inherit from {{jsxref("Iterator", "Iterator.prototype")}}, which implements the `[Symbol.iterator]()` method as returning `this`, so that built-in iterators are also iterable.
 
-However, when possible, it's better for `iterable[Symbol.iterator]()` to return different iterators that always start from the beginning, like [`Set.prototype[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/@@iterator) does.
+However, when possible, it's better for `iterable[Symbol.iterator]()` to return different iterators that always start from the beginning, like [`Set.prototype[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator) does.
 
 ## The async iterator and async iterable protocols
 
@@ -456,7 +456,7 @@ const someString = "hi";
 console.log(typeof someString[Symbol.iterator]); // "function"
 ```
 
-`String`'s [default iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator) returns the string's code points one by one:
+`String`'s [default iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator) returns the string's code points one by one:
 
 ```js
 const iterator = someString[Symbol.iterator]();
