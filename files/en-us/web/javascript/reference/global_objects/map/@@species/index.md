@@ -1,5 +1,5 @@
 ---
-title: Map[@@species]
+title: Map[Symbol.species]
 slug: Web/JavaScript/Reference/Global_Objects/Map/@@species
 page-type: javascript-static-accessor-property
 browser-compat: javascript.builtins.Map.@@species
@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Map.@@species
 
 {{JSRef}}
 
-The **`Map[@@species]`** static accessor property is an unused accessor property specifying how to copy `Map` objects.
+The **`Map[Symbol.species]`** static accessor property is an unused accessor property specifying how to copy `Map` objects.
 
 ## Syntax
 
@@ -17,11 +17,11 @@ Map[Symbol.species]
 
 ### Return value
 
-The value of the constructor (`this`) on which `get @@species` was called. The return value is used to construct copied `Map` instances.
+The value of the constructor (`this`) on which `get [Symbol.species]` was called. The return value is used to construct copied `Map` instances.
 
 ## Description
 
-The `@@species` accessor property returns the default constructor for `Map` objects. Subclass constructors may override it to change the constructor assignment.
+The `[Symbol.species]` accessor property returns the default constructor for `Map` objects. Subclass constructors may override it to change the constructor assignment.
 
 > **Note:** This property is currently unused by all `Map` methods.
 
@@ -29,7 +29,7 @@ The `@@species` accessor property returns the default constructor for `Map` obje
 
 ### Species in ordinary objects
 
-The `@@species` property returns the default constructor function, which is the `Map` constructor for `Map`.
+The `[Symbol.species]` property returns the default constructor function, which is the `Map` constructor for `Map`.
 
 ```js
 Map[Symbol.species]; // function Map()

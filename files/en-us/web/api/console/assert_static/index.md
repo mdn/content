@@ -33,7 +33,7 @@ assert(assertion, msg, subst1, /* …, */ substN)
 - `msg`
   - : A JavaScript string containing zero or more substitution strings, which are replaced with `subst1` through `substN` in consecutive order up to the number of substitution strings. A colon, a space, and then the substituted string are appended to the generic assertion message to form a detailed assertion message, and the result is output to the console. See [Using string substitutions](/en-US/docs/Web/API/console#using_string_substitutions) for a description of how substitutions work.
 - `subst1` … `substN`
-  - : JavaScript values with which to replace substitution strings within `msg`. If there are more substutition values than there are substitution strings, the extra values are themselves written to the console after the detailed assertion message in the same manner as when there's no format string.
+  - : JavaScript values with which to replace substitution strings within `msg`. If there are more substitution values than there are substitution strings, the extra values are themselves written to the console after the detailed assertion message in the same manner as when there's no format string.
 
 See [Outputting text to the console](/en-US/docs/Web/API/console#outputting_text_to_the_console) in the documentation of {{domxref("console")}} for further details.
 

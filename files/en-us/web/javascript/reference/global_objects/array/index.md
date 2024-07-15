@@ -264,7 +264,7 @@ f("a", "b"); // 'a+b'
 
 ## Static properties
 
-- {{jsxref("Array/@@species", "Array[@@species]")}}
+- {{jsxref("Array/@@species", "Array[Symbol.species]")}}
   - : Returns the `Array` constructor.
 
 ## Static methods
@@ -284,7 +284,7 @@ These properties are defined on `Array.prototype` and shared by all `Array` inst
 
 - {{jsxref("Object/constructor", "Array.prototype.constructor")}}
   - : The constructor function that created the instance object. For `Array` instances, the initial value is the {{jsxref("Array/Array", "Array")}} constructor.
-- {{jsxref("Array/@@unscopables", "Array.prototype[@@unscopables]")}}
+- {{jsxref("Array/@@unscopables", "Array.prototype[Symbol.unscopables]")}}
   - : Contains property names that were not included in the ECMAScript standard prior to the ES2015 version and that are ignored for [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with) statement-binding purposes.
 
 These properties are own properties of each `Array` instance.
@@ -370,7 +370,7 @@ These properties are own properties of each `Array` instance.
   - : Returns a new [_array iterator_](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators) object that contains the values for each index in the array.
 - {{jsxref("Array.prototype.with()")}}
   - : Returns a new array with the element at the given index replaced with the given value, without modifying the original array.
-- [`Array.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
+- [`Array.prototype[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
   - : An alias for the [`values()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/values) method by default.
 
 ## Examples

@@ -46,14 +46,25 @@ The following will _not_ work all the time because `scrollTop` can contain decim
 element.scrollHeight - Math.abs(element.scrollTop) === element.clientHeight;
 ```
 
-### Determine if an element is scrollable
+### Determine if the content of an element is overflowing
 
-When the container does not scroll, but has overflowing children, these checks
-determine if the container can scroll:
+This function returns a boolean value indicating if the content of an element is overflowing its bounds:
 
 ```js
-window.getComputedStyle(element).overflowY === "visible";
-window.getComputedStyle(element).overflowY !== "hidden";
+function isOverflowing(element) {
+  return element.scrollHeight > element.clientHeight;
+}
+```
+
+Then, you may want to check if it's scrollable in this case:
+
+```js
+function isScrollable(element) {
+  return (
+    isOverflowing(element) &&
+    ["scroll", "auto"].includes(window.getComputedStyle(element).overflowY)
+  );
+}
 ```
 
 ## Examples
@@ -66,42 +77,70 @@ the {{domxref("element.scrollTop")}} and {{domxref("element.clientHeight")}}
 properties).
 
 The checkbox in the demo below is disabled, and so cannot be checked to show agreement
-until the content of the textarea has been scrolled through.
+until the content of the paragraph has been scrolled through. Once checked, the "Next" button can be clicked to continue.
 
 #### HTML
 
 ```html
-<form name="registration">
+<form id="form" name="registration">
+  <p id="info">Read all text to agree</p>
+  <div id="very-important-read">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Feugiat sed lectus
+      vestibulum mattis. Id consectetur purus ut faucibus pulvinar elementum
+      integer enim neque. Metus vulputate eu scelerisque felis imperdiet. Massa
+      massa ultricies mi quis hendrerit dolor magna eget est. Rhoncus aenean vel
+      elit scelerisque mauris pellentesque. Volutpat est velit egestas dui id
+      ornare arcu. Id cursus metus aliquam eleifend mi in. Condimentum lacinia
+      quis vel eros donec ac. Feugiat pretium nibh ipsum consequat nisl vel
+      pretium lectus.
+    </p>
+    <p>
+      Sit amet volutpat consequat mauris nunc congue nisi vitae. Viverra
+      accumsan in nisl nisi scelerisque. Enim ut tellus elementum sagittis
+      vitae. Dolor sed viverra ipsum nunc aliquet bibendum enim facilisis. Nisi
+      scelerisque eu ultrices vitae. Sem fringilla ut morbi tincidunt augue
+      interdum velit. Senectus et netus et malesuada fames ac turpis egestas.
+      Nunc non blandit massa enim nec. At augue eget arcu dictum varius duis at.
+      Dictumst quisque sagittis purus sit amet. Ut eu sem integer vitae justo.
+      Mollis aliquam ut porttitor leo a diam sollicitudin. Mollis nunc sed id
+      semper risus in. Eu volutpat odio facilisis mauris sit. Augue interdum
+      velit euismod in pellentesque massa placerat duis. Aliquam faucibus purus
+      in massa tempor nec feugiat. Nisl rhoncus mattis rhoncus urna neque
+      viverra justo. Leo duis ut diam quam nulla. Ultrices dui sapien eget mi
+      proin sed libero enim.
+    </p>
+    <p>
+      Cras adipiscing enim eu turpis egestas. Est ultricies integer quis auctor
+      elit. Tempor id eu nisl nunc mi ipsum. Non nisi est sit amet facilisis.
+      Nisl suscipit adipiscing bibendum est ultricies integer quis. Habitant
+      morbi tristique senectus et netus et malesuada. Etiam erat velit
+      scelerisque in dictum non consectetur a erat. Diam sollicitudin tempor id
+      eu nisl. Aenean vel elit scelerisque mauris pellentesque pulvinar
+      pellentesque habitant. A pellentesque sit amet porttitor. Viverra aliquet
+      eget sit amet tellus cras. Eu ultrices vitae auctor eu.
+    </p>
+    <p>
+      Fames ac turpis egestas sed tempus. Id donec ultrices tincidunt arcu non
+      sodales. Congue mauris rhoncus aenean vel elit scelerisque mauris
+      pellentesque. Velit scelerisque in dictum non consectetur a erat nam.
+      Auctor elit sed vulputate mi sit amet mauris commodo. Mauris ultrices eros
+      in cursus turpis massa tincidunt. Dui sapien eget mi proin sed libero enim
+      sed faucibus. Ipsum dolor sit amet consectetur adipiscing elit
+      pellentesque habitant. Amet massa vitae tortor condimentum. Feugiat nisl
+      pretium fusce id velit. Malesuada proin libero nunc consequat interdum
+      varius sit. Quam nulla porttitor massa id neque aliquam vestibulum morbi
+      blandit. Gravida arcu ac tortor dignissim convallis aenean et tortor at.
+      Dapibus ultrices in iaculis nunc sed. Fermentum et sollicitudin ac orci
+      phasellus egestas tellus. Proin libero nunc consequat interdum varius sit
+      amet mattis. Sed viverra ipsum nunc aliquet bibendum.
+    </p>
+  </div>
   <p>
-    <textarea id="rules">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at laoreet magna.
-Aliquam erat volutpat. Praesent molestie, dolor ut eleifend aliquam, mi ligula ultrices sapien, quis cursus
-neque dui nec risus. Duis tincidunt lobortis purus eu aliquet. Quisque in dignissim magna. Aenean ac lorem at
-velit ultrices consequat. Nulla luctus nisi ut libero cursus ultrices. Pellentesque nec dignissim enim. Phasellus
-ut quam lacus, sed ultricies diam. Vestibulum convallis rutrum dolor, sit amet egestas velit scelerisque id.
-Proin non dignissim nisl. Sed mi odio, ullamcorper eget mattis id, malesuada vitae libero. Integer dolor lorem,
-mattis sed dapibus a, faucibus id metus. Duis iaculis dictum pulvinar. In nisi nibh, dapibus ac blandit at, porta
-at arcu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent
-dictum ipsum aliquet erat eleifend sit amet sollicitudin felis tempus. Aliquam congue cursus venenatis. Maecenas
-luctus pellentesque placerat. Mauris nisl odio, condimentum sed fringilla a, consectetur id ligula. Praesent sem
-sem, aliquet non faucibus vitae, iaculis nec elit. Nullam volutpat, lectus et blandit bibendum, nulla lorem congue
-turpis, ac pretium tortor sem ut nibh. Donec vel mi in ligula hendrerit sagittis. Donec faucibus viverra fermentum.
-Fusce in arcu. Nullam at dignissim massa. Cras nibh est, pretium sit amet faucibus eget, sollicitudin in
-ligula. Vivamus vitae urna mauris, eget euismod nunc. Aenean semper gravida enim non feugiat. In hac habitasse
-platea dictumst. Cras eleifend nisl volutpat ante condimentum convallis. Donec varius dolor malesuada erat
-consequat congue. Donec eu lacus ut sapien venenatis tincidunt. Quisque sit amet tellus et enim bibendum varius et
-a orci. Donec aliquet volutpat scelerisque. Proin et tortor dolor. Ut aliquet, dolor a mattis sodales, odio diam
-pulvinar sem, egestas pretium magna eros vitae felis. Nam vitae magna lectus, et ornare elit. Morbi feugiat, ipsum
-ac mattis congue, quam neque mollis tortor, nec mollis nisl dolor a tortor. Maecenas varius est sit amet elit
-interdum quis placerat metus posuere. Duis malesuada justo a diam vestibulum vel aliquam nisi ornare. Integer
-laoreet nisi a odio ornare non congue turpis eleifend. Cum sociis natoque penatibus et magnis dis parturient montes,
-nascetur ridiculus mus. Cras vulputate libero sed arcu iaculis nec lobortis orci fermentum.
-    </textarea>
-  </p>
-  <p>
-    <input type="checkbox" id="agree" name="accept" />
+    <input type="checkbox" id="agree" name="accept" disabled />
     <label for="agree">I agree</label>
-    <input type="submit" id="nextstep" value="Next" />
+    <input type="submit" id="nextstep" value="Next" disabled />
   </p>
 </form>
 ```
@@ -109,54 +148,61 @@ nascetur ridiculus mus. Cras vulputate libero sed arcu iaculis nec lobortis orci
 #### CSS
 
 ```css
-#notice {
+#info {
+  margin: 5px;
   display: inline-block;
-  margin-bottom: 12px;
-  border-radius: 5px;
-  width: 600px;
-  padding: 5px;
-  border: 2px #7fdf55 solid;
+  font-style: italic;
 }
 
-#rules {
-  width: 600px;
+#very-important-read {
   height: 130px;
   padding: 5px;
-  border: #2a9f00 solid 2px;
+  border: 2px solid #00b4c5;
   border-radius: 5px;
+  overflow: scroll;
 }
 ```
 
 #### JavaScript
 
 ```js
-function checkReading() {
-  if (checkReading.read) {
-    return;
-  }
-  checkReading.read =
-    this.scrollHeight - Math.round(this.scrollTop) === this.clientHeight;
-  document.registration.accept.disabled = document.getElementById(
-    "nextstep",
-  ).disabled = !checkReading.read;
-  checkReading.noticeBox.textContent = checkReading.read
-    ? "Thank you."
-    : "Please, scroll and read the following text.";
+const info = document.getElementById("info");
+const toAgree = document.getElementById("agree");
+const toNextStep = document.getElementById("nextstep");
+const veryImportantRead = document.getElementById("very-important-read");
+
+// Check if user has scrolled the element to the bottom
+function isRead(element) {
+  return (
+    element.scrollHeight - Math.round(element.scrollTop) <= element.clientHeight
+  );
 }
 
-onload = () => {
-  const oToBeRead = document.getElementById("rules");
-  checkReading.noticeBox = document.createElement("span");
-  document.registration.accept.checked = false;
-  checkReading.noticeBox.id = "notice";
-  oToBeRead.parentNode.insertBefore(checkReading.noticeBox, oToBeRead);
-  oToBeRead.parentNode.insertBefore(document.createElement("br"), oToBeRead);
-  oToBeRead.onscroll = checkReading;
-  checkReading.call(oToBeRead);
-};
+function checkScrollToBottom(element) {
+  if (isRead(element)) {
+    info.innerText = "You have read all text. Agree to continue.";
+    toAgree.disabled = false;
+  }
+}
+
+toAgree.addEventListener("change", (e) => {
+  toNextStep.disabled = !e.target.checked;
+});
+
+veryImportantRead.addEventListener("scroll", () => {
+  checkScrollToBottom(veryImportantRead);
+});
+
+toNextStep.addEventListener("click", () => {
+  if (toAgree.checked) {
+    toNextStep.value = "Done!";
+  }
+});
 ```
 
-{{EmbedLiveSample('Checking_that_the_user_has_read_a_text', '640', '400')}}
+#### Result
+
+{{EmbedLiveSample('Checking_that_the_user_has_read_a_text', 640, 250)}}
 
 ## Specifications
 
