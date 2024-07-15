@@ -104628,7 +104628,7 @@
       "Dria"
     ]
   },
-  "Web/JavaScript/Reference/Functions/arguments/@@iterator": {
+  "Web/JavaScript/Reference/Functions/arguments/Symbol.iterator": {
     "modified": "2020-11-28T02:55:48.887Z",
     "contributors": ["mfuji09", "fscholz", "claudepache", "alexlur", "arai"]
   },
@@ -105044,7 +105044,11 @@
       "Anonymous"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Array/@@iterator": {
+  "Web/JavaScript/Reference/Global_Objects/Array/Array": {
+    "modified": "2020-10-15T22:24:17.414Z",
+    "contributors": ["alattalatta", "fscholz"]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator": {
     "modified": "2020-12-11T06:07:06.762Z",
     "contributors": [
       "bershanskiy",
@@ -105068,7 +105072,7 @@
       "arai"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Array/@@species": {
+  "Web/JavaScript/Reference/Global_Objects/Array/Symbol.species": {
     "modified": "2020-10-20T12:35:23.741Z",
     "contributors": [
       "mfuji09",
@@ -105078,7 +105082,7 @@
       "arai"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Array/@@unscopables": {
+  "Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables": {
     "modified": "2020-10-15T21:44:45.668Z",
     "contributors": [
       "mfuji09",
@@ -105090,10 +105094,6 @@
       "matt-tingen",
       "evilpie"
     ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Array/Array": {
-    "modified": "2020-10-15T22:24:17.414Z",
-    "contributors": ["alattalatta", "fscholz"]
   },
   "Web/JavaScript/Reference/Global_Objects/Array/concat": {
     "modified": "2020-10-15T21:06:07.150Z",
@@ -107131,13 +107131,13 @@
       "Kennyluck"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/ArrayBuffer/@@species": {
-    "modified": "2020-10-20T12:11:40.687Z",
-    "contributors": ["mfuji09", "wbamberg", "fscholz", "arai"]
-  },
   "Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer": {
     "modified": "2020-10-20T11:08:01.722Z",
     "contributors": ["mfuji09", "wbamberg", "fscholz", "alattalatta"]
+  },
+  "Web/JavaScript/Reference/Global_Objects/ArrayBuffer/Symbol.species": {
+    "modified": "2020-10-20T12:11:40.687Z",
+    "contributors": ["mfuji09", "wbamberg", "fscholz", "arai"]
   },
   "Web/JavaScript/Reference/Global_Objects/ArrayBuffer/byteLength": {
     "modified": "2020-10-20T12:25:40.058Z",
@@ -107859,19 +107859,6 @@
       "Dria"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive": {
-    "modified": "2020-10-24T23:52:13.775Z",
-    "contributors": [
-      "mfuji09",
-      "chrisdavidmills",
-      "fscholz",
-      "SphinxKnight",
-      "wuqiu",
-      "Delapouite",
-      "eduardoboucas",
-      "arai"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Date/Date": {
     "modified": "2020-11-18T23:28:25.551Z",
     "contributors": [
@@ -107882,6 +107869,19 @@
       "chrisdavidmills",
       "imankurpatel000",
       "Zearin_Galaurum"
+    ]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Date/Symbol.toPrimitive": {
+    "modified": "2020-10-24T23:52:13.775Z",
+    "contributors": [
+      "mfuji09",
+      "chrisdavidmills",
+      "fscholz",
+      "SphinxKnight",
+      "wuqiu",
+      "Delapouite",
+      "eduardoboucas",
+      "arai"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/Date/UTC": {
@@ -110919,7 +110919,11 @@
       "dbruant"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Map/@@iterator": {
+  "Web/JavaScript/Reference/Global_Objects/Map/Map": {
+    "modified": "2020-10-15T22:26:23.997Z",
+    "contributors": ["fscholz", "mfuji09"]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator": {
     "modified": "2020-11-06T02:35:08.765Z",
     "contributors": [
       "mfuji09",
@@ -110936,7 +110940,7 @@
       "arai"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Map/@@species": {
+  "Web/JavaScript/Reference/Global_Objects/Map/Symbol.species": {
     "modified": "2020-11-06T05:22:03.978Z",
     "contributors": [
       "mfuji09",
@@ -110946,10 +110950,6 @@
       "kdex",
       "arai"
     ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/Map": {
-    "modified": "2020-10-15T22:26:23.997Z",
-    "contributors": ["fscholz", "mfuji09"]
   },
   "Web/JavaScript/Reference/Global_Objects/Map/clear": {
     "modified": "2020-11-06T05:11:13.709Z",
@@ -115227,7 +115227,11 @@
       "Jesse"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/RegExp/@@match": {
+  "Web/JavaScript/Reference/Global_Objects/RegExp/RegExp": {
+    "modified": "2020-11-14T04:54:00.564Z",
+    "contributors": ["mfuji09", "fscholz", "NidalR"]
+  },
+  "Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match": {
     "modified": "2020-10-15T21:44:51.537Z",
     "contributors": [
       "fscholz",
@@ -115239,7 +115243,7 @@
       "arai"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll": {
+  "Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll": {
     "modified": "2020-10-15T22:14:41.855Z",
     "contributors": [
       "mfuji09",
@@ -115251,7 +115255,7 @@
       "ExE-Boss"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/RegExp/@@replace": {
+  "Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace": {
     "modified": "2020-11-13T12:23:20.203Z",
     "contributors": [
       "mfuji09",
@@ -115262,7 +115266,7 @@
       "arai"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/RegExp/@@search": {
+  "Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search": {
     "modified": "2020-11-13T11:35:56.254Z",
     "contributors": [
       "mfuji09",
@@ -115274,7 +115278,7 @@
       "arai"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/RegExp/@@species": {
+  "Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.species": {
     "modified": "2020-11-14T03:17:15.528Z",
     "contributors": [
       "mfuji09",
@@ -115285,7 +115289,7 @@
       "h4writer"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/RegExp/@@split": {
+  "Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split": {
     "modified": "2020-10-15T21:44:51.419Z",
     "contributors": [
       "mfuji09",
@@ -115297,10 +115301,6 @@
       "h4writer",
       "arai"
     ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/RegExp/RegExp": {
-    "modified": "2020-11-14T04:54:00.564Z",
-    "contributors": ["mfuji09", "fscholz", "NidalR"]
   },
   "Web/JavaScript/Reference/Global_Objects/RegExp/compile": {
     "modified": "2020-10-15T21:32:42.681Z",
@@ -115724,7 +115724,11 @@
       "Marcoos"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Set/@@iterator": {
+  "Web/JavaScript/Reference/Global_Objects/Set/Set": {
+    "modified": "2020-10-15T22:26:29.688Z",
+    "contributors": ["fscholz", "wbamberg"]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator": {
     "modified": "2020-11-14T05:08:12.971Z",
     "contributors": [
       "mfuji09",
@@ -115737,7 +115741,7 @@
       "arai"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Set/@@species": {
+  "Web/JavaScript/Reference/Global_Objects/Set/Symbol.species": {
     "modified": "2020-11-14T06:33:16.648Z",
     "contributors": [
       "mfuji09",
@@ -115747,10 +115751,6 @@
       "kdex",
       "arai"
     ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Set/Set": {
-    "modified": "2020-10-15T22:26:29.688Z",
-    "contributors": ["fscholz", "wbamberg"]
   },
   "Web/JavaScript/Reference/Global_Objects/Set/add": {
     "modified": "2020-11-20T19:40:29.784Z",
@@ -116026,7 +116026,11 @@
       "Dria"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/String/@@iterator": {
+  "Web/JavaScript/Reference/Global_Objects/String/String": {
+    "modified": "2020-11-27T11:31:24.196Z",
+    "contributors": ["mfuji09", "gregprice", "wbamberg", "fscholz"]
+  },
+  "Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator": {
     "modified": "2020-11-23T12:37:09.114Z",
     "contributors": [
       "mfuji09",
@@ -116038,10 +116042,6 @@
       "Mingun",
       "arai"
     ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/String/String": {
-    "modified": "2020-11-27T11:31:24.196Z",
-    "contributors": ["mfuji09", "gregprice", "wbamberg", "fscholz"]
   },
   "Web/JavaScript/Reference/Global_Objects/String/anchor": {
     "modified": "2020-11-27T10:17:06.805Z",
@@ -117624,7 +117624,11 @@
       "phistuck"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive": {
+  "Web/JavaScript/Reference/Global_Objects/Symbol/Symbol": {
+    "modified": "2020-11-22T11:20:17.264Z",
+    "contributors": ["mfuji09", "hinell", "wbamberg", "fscholz"]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Symbol/Symbol.toPrimitive": {
     "modified": "2020-11-22T09:53:22.125Z",
     "contributors": [
       "mfuji09",
@@ -117635,10 +117639,6 @@
       "eduardoboucas",
       "arai"
     ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Symbol/Symbol": {
-    "modified": "2020-11-22T11:20:17.264Z",
-    "contributors": ["mfuji09", "hinell", "wbamberg", "fscholz"]
   },
   "Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator": {
     "modified": "2020-10-15T22:14:59.721Z",
@@ -117955,17 +117955,17 @@
       "virkkila"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator": {
-    "modified": "2020-11-15T01:01:49.006Z",
-    "contributors": ["mfuji09", "fscholz", "eduardoboucas", "arai"]
-  },
-  "Web/JavaScript/Reference/Global_Objects/TypedArray/@@species": {
-    "modified": "2020-10-15T21:44:51.304Z",
-    "contributors": ["wbamberg", "fscholz", "arai"]
-  },
   "Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT": {
     "modified": "2020-10-15T21:29:48.949Z",
     "contributors": ["wbamberg", "mfuji09", "fscholz", "jameshkramer"]
+  },
+  "Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator": {
+    "modified": "2020-11-15T01:01:49.006Z",
+    "contributors": ["mfuji09", "fscholz", "eduardoboucas", "arai"]
+  },
+  "Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.species": {
+    "modified": "2020-10-15T21:44:51.304Z",
+    "contributors": ["wbamberg", "fscholz", "arai"]
   },
   "Web/JavaScript/Reference/Global_Objects/TypedArray/buffer": {
     "modified": "2020-11-19T22:38:31.902Z",

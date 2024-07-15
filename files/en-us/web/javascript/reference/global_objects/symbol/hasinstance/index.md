@@ -22,9 +22,9 @@ The well-known symbol `Symbol.hasInstance`.
 The `instanceof` operator uses the following algorithm to calculate the return value of `object instanceof constructor`:
 
 1. If `constructor` has a `[Symbol.hasInstance]()` method, then call it with `object` as the first argument and return the result, [coerced to a boolean](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean#boolean_coercion). Throw a {{jsxref("TypeError")}} if `constructor` is not an object, or if `constructor[Symbol.hasInstance]` is not one of `null`, `undefined`, or a function.
-2. Otherwise, if `constructor` doesn't have a `[Symbol.hasInstance]()` method (`constructor[Symbol.hasInstance]` is `null` or `undefined`), then determine the result using the same algorithm as [`Function.prototype[Symbol.hasInstance]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/@@hasInstance). Throw a {{jsxref("TypeError")}} if `constructor` is not a function.
+2. Otherwise, if `constructor` doesn't have a `[Symbol.hasInstance]()` method (`constructor[Symbol.hasInstance]` is `null` or `undefined`), then determine the result using the same algorithm as [`Function.prototype[Symbol.hasInstance]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Symbol.hasInstance). Throw a {{jsxref("TypeError")}} if `constructor` is not a function.
 
-Because all functions inherit from `Function.prototype` by default, most of the time, the [`Function.prototype[Symbol.hasInstance]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/@@hasInstance) method specifies the behavior of `instanceof` when the right-hand side is a function.
+Because all functions inherit from `Function.prototype` by default, most of the time, the [`Function.prototype[Symbol.hasInstance]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Symbol.hasInstance) method specifies the behavior of `instanceof` when the right-hand side is a function.
 
 ## Examples
 
@@ -76,4 +76,4 @@ console.log(Animal[Symbol.hasInstance](cat)); // true
 ## See also
 
 - {{jsxref("Operators/instanceof", "instanceof")}}
-- [`Function.prototype[Symbol.hasInstance]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/@@hasInstance)
+- [`Function.prototype[Symbol.hasInstance]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Symbol.hasInstance)

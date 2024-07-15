@@ -175,7 +175,7 @@ Note that JavaScript is [single-threaded](/en-US/docs/Glossary/Thread) by nature
 
 ## Static properties
 
-- {{jsxref("Promise/@@species", "Promise[Symbol.species]")}}
+- [`Promise[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Symbol.species)
   - : Returns the constructor used to construct return values from promise methods.
 
 ## Static methods

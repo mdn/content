@@ -41,7 +41,7 @@ For an empty string, `length` is 0.
 
 The static property `String.length` is unrelated to the length of strings. It's the [arity](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length) of the `String` function (loosely, the number of formal parameters it has), which is 1.
 
-Since `length` counts code units instead of characters, if you want to get the number of characters, you can first split the string with its [iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator), which iterates by characters:
+Since `length` counts code units instead of characters, if you want to get the number of characters, you can first split the string with its [iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator), which iterates by characters:
 
 ```js
 function getCharacterLength(str) {

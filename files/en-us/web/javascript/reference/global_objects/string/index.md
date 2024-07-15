@@ -195,7 +195,7 @@ Lone surrogates do not represent any Unicode character. Although most JavaScript
 
 On top of Unicode characters, there are certain sequences of Unicode characters that should be treated as one visual unit, known as a _grapheme cluster_. The most common case is emojis: many emojis that have a range of variations are actually formed by multiple emojis, usually joined by the \<ZWJ> (`U+200D`) character.
 
-You must be careful which level of characters you are iterating on. For example, [`split("")`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) will split by UTF-16 code units and will separate surrogate pairs. String indexes also refer to the index of each UTF-16 code unit. On the other hand, [`[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator) iterates by Unicode code points. Iterating through grapheme clusters will require some custom code.
+You must be careful which level of characters you are iterating on. For example, [`split("")`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) will split by UTF-16 code units and will separate surrogate pairs. String indexes also refer to the index of each UTF-16 code unit. On the other hand, [`[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator) iterates by Unicode code points. Iterating through grapheme clusters will require some custom code.
 
 ```js
 "😄".split(""); // ['\ud83d', '\ude04']; splits into two lone surrogates
@@ -348,7 +348,7 @@ These properties are own properties of each `String` instance.
 - {{jsxref("String.prototype.valueOf()")}}
   - : Returns the primitive value of the specified object. Overrides the
     {{jsxref("Object.prototype.valueOf()")}} method.
-- [`String.prototype[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator)
+- [`String.prototype[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator)
   - : Returns a new iterator object that iterates over the code points of a String value,
     returning each code point as a String value.
 
