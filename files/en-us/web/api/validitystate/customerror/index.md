@@ -21,7 +21,8 @@ A boolean that is `true` if a custom error message has been set to a non-empty s
 In this example, `setCustomValidity` sets a custom error message when a form submission contains invalid user input.
 Click the "Check input" button calls the `reportValidity` function, displaying a validation message if a user entered values does not match the [form control's constraints](/en-US/docs/Web/HTML/Constraint_validation#constraint_validation_process).
 For example, if you enter the text "good" and try to validate the form, the field is marked invalid until the custom error message is cleared (set to an empty string).
-When the value in the form control is invalid, even if there is not custom error, the widget will have a red outline.
+For comparison, there is a [`minlength`](/en-US/docs/Web/HTML/Attributes/minlength) attribute which allows us to demonstrate the [`tooShort` validity state](/en-US/docs/Web/API/ValidityState/tooShort) when there is only one character entered.
+When the value in the form control is invalid, even if there is no custom error, the input will have a red outline.
 
 #### HTML
 
@@ -67,8 +68,8 @@ function log(text) {
 }
 
 const check = (input) => {
-  // For the exact string 'good', set a custom validity message
-  if (input.value === "good") {
+  // Handle cases where input is too vague
+  if (input.value == "good" || input.value == "fine") {
     input.setCustomValidity(`"${input.value}" is not a feeling.`);
   } else {
     // An empty string resets the custom validity state
