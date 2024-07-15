@@ -20,7 +20,8 @@ In the digital world, color wheels are used in _color pickers_, like the default
 
 ## See also
 
-- {{glossary("color_space", "Color space")}}
+- Related glossary terms:
+  - {{glossary("Color space")}}
 - [`<color>`](/en-US/docs/Web/CSS/color_value) the CSS data type
 - [Color theory and the color wheel](https://www.canva.com/colors/color-wheel/)
 - [How to Use the Color Wheel to Pick Your Perfect Color Palette](https://www.bhg.com/decorating/color/basics/color-wheel-color-chart/) on Better Homes & Gardens

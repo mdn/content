@@ -22,7 +22,7 @@ You can have an unlimited number of cursors at the same time. You always get the
 - {{domxref("IDBCursor.source")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("IDBObjectStore")}} or {{domxref("IDBIndex")}} that the cursor is iterating. This function never returns null or throws an exception, even if the cursor is currently being iterated, has iterated past its end, or its transaction is not active.
 - {{domxref("IDBCursor.direction")}} {{ReadOnlyInline}}
-  - : Returns the direction of traversal of the cursor. See [Constants](#const_next) for possible values.
+  - : Returns the direction of traversal of the cursor.
 - {{domxref("IDBCursor.key")}} {{ReadOnlyInline}}
   - : Returns the key for the record at the cursor's position. If the cursor is outside its range, this is set to `undefined`. The cursor's key can be any data type.
 - {{domxref("IDBCursor.primaryKey")}} {{ReadOnlyInline}}

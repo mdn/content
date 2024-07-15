@@ -1,5 +1,5 @@
 ---
-title: RegExp.prototype[@@replace]()
+title: RegExp.prototype[Symbol.replace]()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/@@replace
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.RegExp.@@replace
@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.RegExp.@@replace
 
 {{JSRef}}
 
-The **`[@@replace]()`** method of {{jsxref("RegExp")}} instances specifies how [`String.prototype.replace()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace) and [`String.prototype.replaceAll()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll) should behave when the regular expression is passed in as the pattern.
+The **`[Symbol.replace]()`** method of {{jsxref("RegExp")}} instances specifies how [`String.prototype.replace()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace) and [`String.prototype.replaceAll()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll) should behave when the regular expression is passed in as the pattern.
 
 {{EmbedInteractiveExample("pages/js/regexp-prototype-@@replace.html")}}
 
@@ -42,7 +42,7 @@ This method is called internally in {{jsxref("String.prototype.replace()")}} and
 
 If the regex is global (with the `g` flag), the regex's [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) method will be repeatedly called until `exec()` returns `null`. Otherwise, `exec()` would only be called once. For each `exec()` result, the substitution will be prepared based on the description in [`String.prototype.replace()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#description).
 
-Because `@@replace` would keep calling `exec()` until it returns `null`, and `exec()` would automatically reset the regex's [`lastIndex`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) to 0 when the last match fails, `@@replace` would typically not have side effects when it exits. However, when the regex is [sticky](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky) but not global, `lastIndex` would not be reset. In this case, each call to `replace()` may return a different result.
+Because `[Symbol.replace]()` would keep calling `exec()` until it returns `null`, and `exec()` would automatically reset the regex's [`lastIndex`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) to 0 when the last match fails, `[Symbol.replace]()` would typically not have side effects when it exits. However, when the regex is [sticky](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky) but not global, `lastIndex` would not be reset. In this case, each call to `replace()` may return a different result.
 
 ```js
 const re = /a/y;
@@ -86,9 +86,9 @@ const newstr = re[Symbol.replace](str, ".");
 console.log(newstr); // 2016.01.01
 ```
 
-### Using @@replace in subclasses
+### Using `[Symbol.replace]()` in subclasses
 
-Subclasses of {{jsxref("RegExp")}} can override the `[@@replace]()` method to modify the default behavior.
+Subclasses of {{jsxref("RegExp")}} can override the `[Symbol.replace]()` method to modify the default behavior.
 
 ```js
 class MyRegExp extends RegExp {
@@ -97,7 +97,7 @@ class MyRegExp extends RegExp {
     this.count = count;
   }
   [Symbol.replace](str, replacement) {
-    // Perform @@replace |count| times.
+    // Perform [Symbol.replace]() `count` times.
     let result = str;
     for (let i = 0; i < this.count; i++) {
       result = RegExp.prototype[Symbol.replace].call(this, result, replacement);
@@ -108,7 +108,7 @@ class MyRegExp extends RegExp {
 
 const re = new MyRegExp("\\d", "", 3);
 const str = "01234567";
-const newstr = str.replace(re, "#"); // String.prototype.replace calls re[@@replace].
+const newstr = str.replace(re, "#"); // String.prototype.replace calls re[Symbol.replace]().
 console.log(newstr); // ###34567
 ```
 
@@ -122,13 +122,13 @@ console.log(newstr); // ###34567
 
 ## See also
 
-- [Polyfill of `RegExp.prototype[@@replace]` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
+- [Polyfill of `RegExp.prototype[Symbol.replace]` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
 - {{jsxref("String.prototype.replace()")}}
 - {{jsxref("String.prototype.replaceAll()")}}
-- [`RegExp.prototype[@@match]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@match)
-- [`RegExp.prototype[@@matchAll]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll)
-- [`RegExp.prototype[@@search]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@search)
-- [`RegExp.prototype[@@split]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@split)
+- [`RegExp.prototype[Symbol.match]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@match)
+- [`RegExp.prototype[Symbol.matchAll]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll)
+- [`RegExp.prototype[Symbol.search]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@search)
+- [`RegExp.prototype[Symbol.split]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@split)
 - {{jsxref("RegExp.prototype.exec()")}}
 - {{jsxref("RegExp.prototype.test()")}}
 - {{jsxref("Symbol.replace")}}

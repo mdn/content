@@ -26,7 +26,7 @@ There are three types of character references:
 
 - **Hexadecimal numeric character reference**
   - : These references start with `&#x` or `&#X`, followed by one or more ASCII hex digits, representing the hexadecimal integer that corresponds to the character's Unicode code point, and ending with `;`.
-    For example, the hexadecimal character reference for `<` is `&#x3C;` or `&#x3C;`, because the Unicode code point for the symbol is `U+0003C`.
+    For example, the hexadecimal character reference for `<` is `&#x3C;` or `&#X3C;`, because the Unicode code point for the symbol is `U+0003C`.
 
 A very small subset of useful named character references along with their unicode code points are listed below.
 

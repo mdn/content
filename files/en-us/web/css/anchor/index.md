@@ -7,7 +7,7 @@ browser-compat: css.types.anchor
 
 {{CSSRef}}
 
-The **`anchor()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) can be used within an **anchor-positioned** element's [inset property](#properties_that_accept_anchor_function_values) values, returning a length value relative to the position of the edges of its associated **anchor element**.
+The **`anchor()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) can be used within an **anchor-positioned** element's [inset property](#properties_that_accept_anchor_function_values) values, returning a length value relative to the position of the edges of its associated anchor element.
 
 ## Syntax
 
@@ -42,7 +42,7 @@ The parameters are:
 
   - : The [`anchor-name`](/en-US/docs/Web/CSS/anchor-name) property value of an anchor element you want to position the element's side relative to. This is a `<dashed-ident>` value. If omitted, the element's **default anchor**, referenced in its [`position-anchor`](/en-US/docs/Web/CSS/position-anchor) property, or associated with the element via the [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) HTML attribute, is used.
 
-  > **Note:** Specifying an `<anchor-element>` inside an `anchor()` function does not associate an element with an anchor; it only positions the element relative to that anchor. The [`position-anchor`](/en-US/docs/Web/CSS/position-anchor) CSS property or the [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) HTML attribute is still needed to create the association.
+    > **Note:** Specifying an `<anchor-element>` inside an `anchor()` function does not associate an element with an anchor; it only positions the element relative to that anchor. The [`position-anchor`](/en-US/docs/Web/CSS/position-anchor) CSS property or the [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) HTML attribute is still needed to create the association.
 
 - `<anchor-side>`
 
@@ -80,7 +80,7 @@ Returns a {{cssxref("length")}} value.
 
 ## Description
 
-The `anchor()` function enables positioning an element relative to the edges of an anchor element. It is only valid within within {{glossary("inset properties", "inset property")}} values set on absolute or fixed position elements.
+The `anchor()` function enables positioning an element relative to the edges of an anchor element. It is only valid within {{glossary("inset properties", "inset property")}} values set on absolute or fixed position elements.
 
 It returns a `<length>` value specifying the distance between the anchor-positioned element side specified by the inset value, and the side of the anchor element specified by the chosen `<anchor-side>` value. As it returns a `<length>`, it can be used within [other CSS functions](/en-US/docs/Web/CSS/CSS_Functions) that accept length values, including {{cssxref("calc()")}}, {{cssxref("clamp()")}}, etc.
 
@@ -461,25 +461,25 @@ The anchor-positioned element, with its `position` set to `fixed`, is associated
 ```js hidden
 // grab all the anchors and make each one draggable
 const anchors = document.querySelectorAll(".anchor");
-anchors.forEach((anchor) => dragElement(anchor));
+anchors.forEach((anchor) => makeDraggable(anchor));
 
-function dragElement(elmnt) {
+function makeDraggable(elem) {
   let pos1, pos2, pos3, pos4;
 
-  elmnt.onmousedown = dragMouseDown;
-  elmnt.addEventListener("keyup", (e) => {
+  elem.onmousedown = dragMouseDown;
+  elem.addEventListener("keyup", (e) => {
     switch (e.key) {
       case "d":
-        elmnt.style.left = elmnt.offsetLeft + 5 + "px";
+        elem.style.left = elem.offsetLeft + 5 + "px";
         break;
       case "a":
-        elmnt.style.left = elmnt.offsetLeft - 5 + "px";
+        elem.style.left = elem.offsetLeft - 5 + "px";
         break;
       case "w":
-        elmnt.style.top = elmnt.offsetTop - 5 + "px";
+        elem.style.top = elem.offsetTop - 5 + "px";
         break;
       case "s":
-        elmnt.style.top = elmnt.offsetTop + 5 + "px";
+        elem.style.top = elem.offsetTop + 5 + "px";
         break;
     }
     e.preventDefault();
@@ -493,8 +493,8 @@ function dragElement(elmnt) {
     pos3 = e.offsetLeft;
     pos4 = e.offsetTop;
     // set the element's new position:
-    elmnt.style.top = elmnt.offsetTop - pos2 + "px";
-    elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
+    elem.style.top = elem.offsetTop - pos2 + "px";
+    elem.style.left = elem.offsetLeft - pos1 + "px";
   }
 
   function dragMouseDown(e) {
@@ -513,8 +513,8 @@ function dragElement(elmnt) {
     pos3 = e.clientX;
     pos4 = e.clientY;
     // set the element's new position:
-    elmnt.style.top = elmnt.offsetTop - pos2 + "px";
-    elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
+    elem.style.top = elem.offsetTop - pos2 + "px";
+    elem.style.left = elem.offsetLeft - pos1 + "px";
   }
 
   function closeDragElement() {
@@ -547,5 +547,5 @@ The positioned element is positioned relative to both anchor elements. Drag them
 - {{cssxref("inset-area")}}
 - {{cssxref("anchor-size()")}} function
 - [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide
-- [Handling overflow: try options and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide
+- [Handling overflow: try fallbacks and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide
 - [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module

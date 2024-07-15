@@ -61,7 +61,7 @@ As the `@import` at-rule is declared after the styles it is invalid and hence ig
 /* more styles */
 ```
 
-The `@import` rule is not a [nested statement](/en-US/docs/Web/CSS/Syntax#nested_statements). Therefore, it cannot be used inside [conditional group at-rules](/en-US/docs/Web/CSS/At-rule#conditional_group_rules).
+The `@import` rule is not a [nested statement](/en-US/docs/Web/CSS/Syntax#nested_statements). Therefore, it cannot be used inside [conditional group at-rules](/en-US/docs/Web/CSS/CSS_conditional_rules#at-rules).
 
 So that {{glossary("user agent", "user agents")}} can avoid retrieving resources for unsupported media types, authors may specify media-dependent import conditions. These conditional imports specify comma-separated [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) after the URL. In the absence of any media query, the import is not conditional on the media used. Specifying `all` for the `list-of-media-queries` has the same effect.
 

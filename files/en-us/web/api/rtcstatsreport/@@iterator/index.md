@@ -1,6 +1,6 @@
 ---
-title: "RTCStatsReport: [@@iterator]() method"
-short-title: "@@iterator"
+title: "RTCStatsReport: [Symbol.iterator]() method"
+short-title: "[Symbol.iterator]"
 slug: Web/API/RTCStatsReport/@@iterator
 page-type: web-api-instance-method
 browser-compat: api.RTCStatsReport.@@iterator
@@ -8,12 +8,12 @@ browser-compat: api.RTCStatsReport.@@iterator
 
 {{APIRef("WebRTC")}}
 
-The **`[@@iterator]()`** method of the {{domxref("RTCStatsReport")}} interface implements the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) and allows statistics reports to be consumed by most syntaxes expecting iterables, such as the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) and {{jsxref("Statements/for...of", "for...of")}} loops.
+The **`[Symbol.iterator]()`** method of the {{domxref("RTCStatsReport")}} interface implements the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) and allows statistics reports to be consumed by most syntaxes expecting iterables, such as the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) and {{jsxref("Statements/for...of", "for...of")}} loops.
 It returns an [iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) that yields the key-value pairs of the report in insertion order.
 
 The initial value of this property is the same function object as the initial value of the {{domxref("RTCStatsReport.entries()")}} method.
 
-The method is otherwise the same as [`Map.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/@@iterator).
+The method is otherwise the same as [`Map.prototype[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/@@iterator).
 
 ## Syntax
 
@@ -37,4 +37,4 @@ This is a new [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Gl
 ## See also
 
 - {{domxref("RTCStatsReport.entries()")}}
-- [`Map.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/@@iterator)
+- [`Map.prototype[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/@@iterator)

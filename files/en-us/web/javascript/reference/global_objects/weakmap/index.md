@@ -46,8 +46,8 @@ These properties are defined on `WeakMap.prototype` and shared by all `WeakMap` 
 
 - {{jsxref("Object/constructor", "WeakMap.prototype.constructor")}}
   - : The constructor function that created the instance object. For `WeakMap` instances, the initial value is the {{jsxref("WeakMap/WeakMap", "WeakMap")}} constructor.
-- `WeakMap.prototype[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"WeakMap"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+- `WeakMap.prototype[Symbol.toStringTag]`
+  - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"WeakMap"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 
@@ -256,7 +256,7 @@ function handleObjectValues(obj) {
 }
 ```
 
-This only works if your function's input is an object. Moreover, even if the input is never passed in again, the result still remains forever in the cache. A more effective way is to use a {{jsxref("Map")}} paired with {{jsxref("WeakRef")}} objects, which allows you to associate any type of input value with its respective (potentially large) computation result. See the [WeakRefs and FinalizationRegistry](/en-US/docs/Web/JavaScript/Memory_management#weakrefs_and_finalizationregistry) example for more details.
+This only works if your function's input is an object. Moreover, even if the input is never passed in again, the result still remains forever in the cache as long as the key (input) is alive. A more effective way is to use a {{jsxref("Map")}} paired with {{jsxref("WeakRef")}} objects, which allows you to associate any type of input value with its respective (potentially large) computation result. See the [WeakRefs and FinalizationRegistry](/en-US/docs/Web/JavaScript/Memory_management#weakrefs_and_finalizationregistry) example for more details.
 
 ## Specifications
 
