@@ -56,7 +56,7 @@
     "lint-staged": "15.2.7",
     "markdownlint-cli2": "0.13.0",
     "markdownlint-rule-search-replace": "1.2.0",
-    "prettier": "3.3.2"
+    "prettier": "3.3.3"
   },
   "devDependencies": {
     "jest": "^29.7.0"
