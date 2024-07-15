@@ -22,11 +22,14 @@ A boolean that is `true` if the `ValidityState` does conform to all the constrai
 
 The following example checks the validity of a [numeric input element](/en-US/docs/Web/HTML/Element/input/number).
 A constraint has been added using the [`min` attribute](/en-US/docs/Web/HTML/Element/input/number#min) which sets a minimum value of `18` for the input.
-If the user enters a number lower than 18, the element fails constraint validation, and the styles matching `input:invalid` are applied.
+If the user enters any value that's not a number greater than 17, the element fails constraint validation, and the styles matching `input:invalid` are applied.
 
 ```css
 input:invalid {
   outline: red solid 3px;
+}
+input:valid {
+  outline: palegreen solid 3px;
 }
 ```
 
@@ -44,7 +47,7 @@ pre {
 
 ```html
 <pre id="log">Validation logged here...</pre>
-<input type="number" id="age" min="18" />
+<input type="number" id="age" min="18" required />
 ```
 
 ```js

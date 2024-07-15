@@ -67,7 +67,7 @@ function log(text) {
 userInput.addEventListener("input", () => {
   userInput.reportValidity();
   if (userInput.validity.tooLong) {
-    log("Too many characters entered.");
+    log("Too many characters in the textarea.");
   } else {
     log("Input is valid…");
   }
