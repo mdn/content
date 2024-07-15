@@ -18,56 +18,56 @@ A boolean that is `true` if a custom error message has been set to a non-empty s
 
 ### Detecting a custom error
 
-In the following example, we set a custom error when both emails don't match. A log is written when this is the case, and a different message is displayed when there is no custom errors. When there is an error, custom or not, the widget is surrounded by a red border.
+In this example, `setCustomValidity` sets a custom error message when a form submission contains invalid user input.
+Click the "Check input" button calls the `reportValidity` function, displaying a validation message if a user entered values does not match the [form control's constraints](/en-US/docs/Web/HTML/Constraint_validation#constraint_validation_process).
+For example, if you enter the text "good" and try to validate the form, the field is marked invalid until the custom error message is cleared (set to an empty string).
+When the value in the form control is invalid, even if there is not custom error, the widget will have a red outline.
 
 #### HTML
 
 ```html
-<label for="original">Type your email:</label>
-<input type="email" id="original" />
-<label for="confirmation">Retype your email:</label>
-<input type="email" id="confirmation" />
-<pre id="log"></pre>
+<input type="text" id="userInput" placeholder="How are you feeling?" />
+<button id="checkButton">Check input</button>
 ```
 
 #### CSS
 
 ```css
 input:invalid {
-  border: red solid 3px;
+  outline: red solid 3px;
 }
 ```
 
 #### JavaScript
 
 ```js
-const log = document.getElementById("log");
-const confirmElement = document.getElementById("confirmation");
+const userInput = document.getElementById("userInput");
+const checkButton = document.getElementById("checkButton");
 
-confirmElement.addEventListener("change", () => {
-  const originalElement = document.getElementById("original");
-  confirmElement.setCustomValidity(
-    confirmElement.value != originalElement.value
-      ? "Both email addresses must match."
-      : "",
-  );
+const check = (input) => {
+  // If the input is the string 'good', set a custom validity message
+  if (input.value === "good") {
+    input.setCustomValidity(`"${input.value}" is not a feeling.`);
+  } else {
+    // Reset the custom error message
+    input.setCustomValidity("");
+  }
+};
+
+userInput.addEventListener("input", () => {
+  check(userInput);
 });
 
-function displayLog() {
-  if (confirmElement.validity.customError) {
-    log.textContent = `There is a custom error on the repeated password: ${confirmElement.validationMessage}`;
-  } else {
-    log.textContent = "No custom error message is set.";
-  }
-  requestAnimationFrame(displayLog);
-}
+const validateInput = () => {
+  userInput.reportValidity();
+};
 
-requestAnimationFrame(displayLog);
+checkButton.addEventListener("click", validateInput);
 ```
 
 #### Result
 
-{{EmbedLiveSample("Examples", "100%", "100")}}
+{{EmbedLiveSample("detecting_a_custom_error", "100%", "100")}}
 
 ## Specifications
 
