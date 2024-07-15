@@ -41,7 +41,7 @@ Content-Length: <length>
 ## Directives
 
 - \<length>
-  - : The length in decimal number of octets.
+  - : The length in octets.
 
 ## Specifications
 

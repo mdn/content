@@ -299,7 +299,7 @@ The following are examples of read-only `Map`-like browser objects:
 
 ## Static properties
 
-- {{jsxref("Map/@@species", "Map[Symbol.species]")}}
+- [`Map[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.species)
   - : The constructor function that is used to create derived objects.
 
 ## Static methods
@@ -340,7 +340,7 @@ These properties are defined on `Map.prototype` and shared by all `Map` instance
   - : Sets the value for the passed key in the `Map` object. Returns the `Map` object.
 - {{jsxref("Map.prototype.values()")}}
   - : Returns a new Iterator object that contains the values for each element in the `Map` object in insertion order.
-- [`Map.prototype[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/@@iterator)
+- [`Map.prototype[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator)
   - : Returns a new Iterator object that contains a two-member array of `[key, value]` for each element in the `Map` object in insertion order.
 
 ## Examples

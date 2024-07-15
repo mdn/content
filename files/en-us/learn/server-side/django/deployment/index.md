@@ -665,7 +665,7 @@ The steps are:
 
 4. Restart the application.
 
-You can test that the operation worked by attempting to open a record that that does not exist (for example, create a genre, then increment the number in the URL bar to open a record that has not yet been created).
+You can test that the operation worked by attempting to open a record that does not exist (for example, create a genre, then increment the number in the URL bar to open a record that has not yet been created).
 If the environment variable has been loaded you'll get a "Not found" message rather than a detailed debug trace.
 
 ## Example: Hosting on Railway

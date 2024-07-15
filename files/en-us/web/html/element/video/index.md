@@ -328,7 +328,7 @@ Instead, they're sent to the track list object within the `<video>` element's {{
   - : An {{domxref("AudioTrackList")}} containing all of the media element's audio tracks.
     Add a listener for `addtrack` to this object to be notified when new audio tracks are added to the element.
 - {{domxref("HTMLMediaElement.videoTracks")}}
-  - : A {{domxref("VideoTrackList")}} containing all of the media element's audio tracks.
+  - : A {{domxref("VideoTrackList")}} containing all of the media element's video tracks.
     Add an `addtrack` listener to this object to be notified when video tracks are added to the element.
 - {{domxref("HTMLMediaElement.textTracks")}}
   - : A {{domxref("TextTrackList")}} containing all of the media element's text tracks (which are used for subtitles, closed captions, and so on).

@@ -299,7 +299,7 @@ Content is palpable when it's neither empty nor hidden; it is content that is re
 - {{HtmlElement("u")}}
 - {{HtmlElement("var")}}
 - {{HtmlElement("video")}}
-- [Autonomus custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements)
+- [Autonomous custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements)
 - text that is not inter-element [whitespace](/en-US/docs/Glossary/Whitespace)
 
 Some elements belong to this category only under specific conditions:

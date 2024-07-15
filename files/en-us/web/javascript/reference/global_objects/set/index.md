@@ -118,7 +118,7 @@ const b = new Map([
 console.log(a.union(b)); // Set(4) {1, 2, 3, 4}
 ```
 
-> **Note:** The set-like protocol invokes the `keys()` method instead of [`[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/@@iterator) to produce elements. This is to make maps valid set-like objects, because for maps, the iterator produces _entries_ but the `has()` method takes _keys_.
+> **Note:** The set-like protocol invokes the `keys()` method instead of [`[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator) to produce elements. This is to make maps valid set-like objects, because for maps, the iterator produces _entries_ but the `has()` method takes _keys_.
 
 [Arrays](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) are not set-like because they don't have a `has()` method or the `size` property, and their `keys()` method produces indices instead of elements. {{jsxref("WeakSet")}} objects are also not set-like because they don't have a `keys()` method.
 
@@ -165,7 +165,7 @@ The following are examples of writable `Set`-like browser objects:
 
 ## Static properties
 
-- {{jsxref("Set/@@species", "Set[Symbol.species]")}}
+- [`Set[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.species)
   - : The constructor function that is used to create derived objects.
 
 ## Instance properties
@@ -211,7 +211,7 @@ These properties are defined on `Set.prototype` and shared by all `Set` instance
   - : Takes a set and returns a new set containing elements which are in either or both of this set and the given set.
 - {{jsxref("Set.prototype.values()")}}
   - : Returns a new iterator object that yields the **values** for each element in the `Set` object in insertion order.
-- [`Set.prototype[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/@@iterator)
+- [`Set.prototype[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator)
   - : Returns a new iterator object that yields the **values** for each element in the `Set` object in insertion order.
 
 ## Examples
