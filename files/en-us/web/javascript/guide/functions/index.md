@@ -78,7 +78,7 @@ const square = function (number) {
 console.log(square(4)); // 16
 ```
 
-However, a name _can_ be provided with a function expression. Providing a name allows the function to refer to itself, and also makes it easier to identify the function in a debugger's stack traces:
+However, a name _can_ be provided with a function expression. Providing a name allows the function to refer to itself, and also makes it easier to identify the function in a debugger's stack trace:
 
 ```js
 const factorial = function fac(n) {
