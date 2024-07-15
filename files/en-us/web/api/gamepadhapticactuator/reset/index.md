@@ -24,19 +24,29 @@ None.
 
 A promise that resolves with `"complete"` if the effect is successfully reset, or `"preempted"` if the effect was stopped or replaced by another effect.
 
+The promise may reject with the following exception types:
+
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Promise rejects with `InvalidStateError` if the current document is not active or hidden.
+
 ## Examples
 
 ```js
-const gamepad = navigator.getGamepads()[0];
+async function playEffect() {
+  const result = await gamepad.vibrationActuator.playEffect("dual-rumble", {
+    startDelay: 0,
+    duration: 200,
+    weakMagnitude: 1.0,
+    strongMagnitude: 1.0,
+  });
 
-gamepad.vibrationActuator.playEffect("dual-rumble", {
-  startDelay: 0,
-  duration: 200,
-  weakMagnitude: 1.0,
-  strongMagnitude: 1.0,
-});
+  setTimeout(() => {
+    gamepad.vibrationActuator.reset();
+  }, 150);
 
-gamepad.vibrationActuator.reset();
+  // Should log "preempted" because reset() was called before the end of the effect
+  console.log(result);
+}
 ```
 
 ## Specifications

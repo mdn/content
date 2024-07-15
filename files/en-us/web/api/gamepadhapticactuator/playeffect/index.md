@@ -53,17 +53,31 @@ playEffect(type, params)
 
 A promise that resolves with `"complete"` when the effect successfully completes, or `"preempted"` if the current effect is stopped or replaced by another effect.
 
+The promise may reject with the following exception types:
+
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : The current document is not active or hidden.
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : The requested `type` is not supported by the current gamepad's actuator.
+- `TypeError` {{domxref("DOMException")}}
+  - : The requested `type` is not a valid effect type.
+
 ## Examples
 
 ```js
 const gamepad = navigator.getGamepads()[0];
 
-gamepad.vibrationActuator.playEffect("dual-rumble", {
-  startDelay: 0,
-  duration: 200,
-  weakMagnitude: 1.0,
-  strongMagnitude: 1.0,
-});
+async function playEffect() {
+  const result = await gamepad.vibrationActuator.playEffect("dual-rumble", {
+    startDelay: 0,
+    duration: 200,
+    weakMagnitude: 1.0,
+    strongMagnitude: 1.0,
+  });
+
+  // Should log "complete" if effect successfully runs
+  console.log(result);
+}
 ```
 
 ## Specifications
