@@ -116,9 +116,9 @@ There are two multipart types:
 
 ## Important MIME types for Web developers
 
-### Binary data types
+### Application data types
 
-A few `application/` types need special notes:
+`application/` types are typically binary data, but they can also be text (such as XML and JSON). They are usually data that must be interpreted using a specific application. Some common `application/` types include:
 
 - `application/octet-stream`: This is the default for binary files. As it means _unknown binary_ file, browsers usually don't execute it, or even ask if it should be executed. They treat it as if the {{HTTPHeader("Content-Disposition")}} header was set to `attachment`, and propose a "Save As" dialog.
 - `application/xml`: This is recommended as of [RFC 7303](https://datatracker.ietf.org/doc/html/rfc7303#section-4.1) (section 4.1), but `text/xml` is still used sometimes. You can assign a specific MIME type to a file with `.xml` extension depending on how its contents are meant to be interpreted. For instance, an Atom feed is `application/atom+xml`, but `application/xml` serves as a valid default.
@@ -166,7 +166,7 @@ Other common binary data types:
 
 ### Text types
 
-Apart from the text types introduced below, there are some other text types worth mentioning:
+As opposed to application data types, `text/` types are always textual. Apart from the text types introduced below, there are some other text types worth mentioning:
 
 - `text/csv`: Comma-separated values (CSV)
 - `text/calendar`: iCalendar format (ICS)
