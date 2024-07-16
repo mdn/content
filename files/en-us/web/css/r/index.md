@@ -41,7 +41,7 @@ r: unset;
 
 ### Defining the radius of a circle
 
-In this example, we have a `<circle>` in an SVG.
+In this example, we have a `<circle>` in an SVG, which has a `0` radius.
 
 ```html
 <svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
