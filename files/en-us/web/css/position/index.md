@@ -277,7 +277,7 @@ Fixed positioning is similar to absolute positioning, with the exception that th
 
 ### Sticky positioning
 
-Sticky positioning can be thought of as a hybrid of relative and fixed positioning when its nearest scrolling ancestor is the viewport. A stickily positioned element is treated as relatively positioned until it crosses a specified threshold, at which point it is treated as fixed until it reaches the boundary of its parent. For example:
+The following CSS rule positions the element with id `one` relatively until the viewport is scrolled such that the element is 10 pixels from the top. Beyond that threshold, the element is fixed to 10 pixels from the top.
 
 ```css
 #one {
@@ -286,13 +286,13 @@ Sticky positioning can be thought of as a hybrid of relative and fixed positioni
 }
 ```
 
-The above CSS rule would position the element with id _one_ relatively until the viewport was scrolled such that the element would be less than 10 pixels from the top. Beyond that threshold, the element would be fixed to 10 pixels from the top.
+#### List with sticky headings
 
 A common use for sticky positioning is for the headings in an alphabetized list. The "B" heading will appear just below the items that begin with "A" until they are scrolled offscreen. Rather than sliding offscreen with the rest of the content, the "B" heading will then remain fixed to the top of the viewport until all the "B" items have scrolled offscreen, at which point it will be covered up by the "C" heading, and so on.
 
 You must specify a threshold with at least one of `top`, `right`, `bottom`, or `left` for sticky positioning to behave as expected. Otherwise, it will be indistinguishable from relative positioning.
 
-#### HTML
+##### HTML
 
 ```html
 <dl>
@@ -327,7 +327,7 @@ You must specify a threshold with at least one of `top`, `right`, `bottom`, or `
 </dl>
 ```
 
-#### CSS
+##### CSS
 
 ```css
 * {
@@ -370,9 +370,75 @@ dd + dd {
 }
 ```
 
-#### Result
+##### Result
 
-{{EmbedLiveSample('Sticky_positioning', '', '300px')}}
+{{EmbedLiveSample('List with sticky headings', '', '300px')}}
+
+#### Sticky position with all the inset boundaries set
+
+The following example demonstrates an element's behavior when all inset boundaries are set. Here, we have two light bulb emojis in a paragraph. The light bulbs use sticky positioning, and the inset boundaries are specified as 50px from the top, 100px from the right, 50px from the bottom, and 50px from the left. A gray background on the parent div element marks the inset area.
+
+##### HTML
+
+```html
+Use scrollbars to put the light bulbs(💡) in the right place in the following
+text:
+<div>
+  <p>
+    The representation of an idea by a light bulb(<span class="bulb">💡</span>)
+    is a commonly used metaphor that symbolizes the moment of inspiration or the
+    birth of a new idea. The association between a light bulb and an idea can be
+    traced back to the invention of the incandescent light bulb(<span
+      class="bulb"
+      >💡</span
+    >) by Thomas Edison in the late 19th century. The light bulb is a powerful
+    symbol because it represents illumination, clarity, and the sudden
+    brightening of one's thoughts or understanding. When someone has an idea, it
+    is often described as a light bulb turning on in their mind, signifying a
+    moment of insight or creativity. The image of a light bulb also suggests the
+    idea of energy, power, and the potential for growth and development.
+  </p>
+</div>
+```
+
+##### CSS
+
+```css hidden
+div {
+  width: 400px;
+  height: 200px;
+  overflow: scroll;
+  scrollbar-width: thin;
+  font-size: 16px;
+  font-family: verdana;
+  border: 1px solid;
+}
+
+p {
+  width: 600px;
+  user-select: none;
+  margin: 0;
+  border: 110px solid transparent;
+}
+```
+
+```css
+.bulb {
+  position: sticky;
+  inset: 50px 100px 50px 100px;
+}
+
+div {
+  /* mark area defined by the inset boundaries using gray color */
+  background: linear-gradient(#9999, #9999) 100px 50px / 192px 100px no-repeat;
+}
+```
+
+##### Result
+
+{{EmbedLiveSample('Sticky position with all the inset boundaries set', '', '300px')}}
+
+When you put both bulbs in their proper place, you'll notice that they are relatively positioned inside the inset area. When you move them out of the inset area, they are fixed (sticky) to the inset boundary in that direction.
 
 ## Specifications
 

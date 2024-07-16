@@ -7753,7 +7753,7 @@
 /en-US/docs/Web/API/CanvasRenderingContext2D.rotate	/en-US/docs/Web/API/CanvasRenderingContext2D/rotate
 /en-US/docs/Web/API/CanvasRenderingContext2D.save	/en-US/docs/Web/API/CanvasRenderingContext2D/save
 /en-US/docs/Web/API/CanvasRenderingContext2D.scale	/en-US/docs/Web/API/CanvasRenderingContext2D/scale
-/en-US/docs/Web/API/CanvasRenderingContext2D.scrollPathIntoView	/en-US/docs/Web/API/CanvasRenderingContext2D/scrollPathIntoView
+/en-US/docs/Web/API/CanvasRenderingContext2D.scrollPathIntoView	/en-US/docs/Web/API/CanvasRenderingContext2D
 /en-US/docs/Web/API/CanvasRenderingContext2D.setLineDash	/en-US/docs/Web/API/CanvasRenderingContext2D/setLineDash
 /en-US/docs/Web/API/CanvasRenderingContext2D.setTransform	/en-US/docs/Web/API/CanvasRenderingContext2D/setTransform
 /en-US/docs/Web/API/CanvasRenderingContext2D.shadowBlur	/en-US/docs/Web/API/CanvasRenderingContext2D/shadowBlur
@@ -7777,6 +7777,7 @@
 /en-US/docs/Web/API/CanvasRenderingContext2D/mozDashOffset	/en-US/docs/Web/API/CanvasRenderingContext2D/lineDashOffset
 /en-US/docs/Web/API/CanvasRenderingContext2D/mozImageSmoothingEnabled	/en-US/docs/Web/API/CanvasRenderingContext2D/imageSmoothingEnabled
 /en-US/docs/Web/API/CanvasRenderingContext2D/mozTextStyle	/en-US/docs/Web/API/CanvasRenderingContext2D/font
+/en-US/docs/Web/API/CanvasRenderingContext2D/scrollPathIntoView	/en-US/docs/Web/API/CanvasRenderingContext2D
 /en-US/docs/Web/API/Canvas_API/Drawing_graphics_with_canvas	/en-US/docs/Web/API/Canvas_API/Tutorial
 /en-US/docs/Web/API/Canvas_API/Tutorial/Compositing/Example	/en-US/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation
 /en-US/docs/Web/API/CharacterData.previousElementSibling	/en-US/docs/Web/API/CharacterData/previousElementSibling
