@@ -41,6 +41,17 @@
     "zh-TW": "已棄用"
   },
 
+  "deprecated_header_copy": {
+    "en-US": "This feature is no longer recommended. Though some browsers might still support it, it may have already been removed from the relevant web standards, may be in the process of being dropped, or may only be kept for compatibility purposes. Avoid using it, and update existing code if possible; see the <a href='#browser_compatibility'>compatibility table</a> at the bottom of this page to guide your decision. Be aware that this feature may cease to work at any time.",
+    "es": "Esta característica ya no se recomienda. Aunque es posible que algunos navegadores aún lo admitan, probablemente ya se ha eliminado de los estándares web relevantes, está en proceso de eliminación o solo se conserva por motivos de compatibilidad. Evite usarlo y actualice el código existente si es posible; consulte la <a href='#browser_compatibility'>tabla de compatibilidad</a> en la parte inferior de esta página para orientar su decisión. Tenga en cuenta que esta característica puede dejar de funcionar en cualquier momento.",
+    "fr": "Cette fonctionnalité a été supprimée des standards du Web. Bien que quelques navigateurs puissent encore la supporter, elle est en cours d'éradication. Ne l'utilisez ni dans d'anciens projets, ni dans de nouveaux. Les pages et applications Web l'utilisant peuvent cesser de fonctionner à tout moment.",
+    "ja": "この機能は非推奨になりました。まだ対応しているブラウザーがあるかもしれませんが、すでに関連するウェブ標準から削除されているか、削除の手続き中であるか、互換性のためだけに残されている可能性があります。使用を避け、できれば既存のコードは更新してください。このページの下部にある<a href='#browser_compatibility'>互換性一覧表</a>を見て判断してください。この機能は突然動作しなくなる可能性があることに注意してください。",
+    "ko": "이 기능은 더 이상 권장되지 않습니다. 일부 브라우저에서는 아직 지원할 수 있지만 관련 웹 표준에서 이미 제거되었거나 제거 과정에 있는 경우가 있으며, 호환성을 위해 유지되고 있을 수 있습니다. 사용을 피하고 가능하다면 기존 코드를 업데이트하세요. 결정을 지원할 <a href='#browser_compatibility'>하단의 호환성 표</a>를 확인하세요. 이 기능은 언제든지 작동을 중단할 수 있음을 유의하세요.",
+    "ru": "Эта возможность была удалена из веб-стандартов. Хотя некоторые браузеры по-прежнему могут поддерживать её, она находится в процессе удаления. Не используйте её ни в старых, ни в новых проектах. Страницы или веб-приложения, использующие её, могут в любой момент сломаться.",
+    "zh-CN": "不再推荐使用该特性。虽然一些浏览器仍然支持它，但也许已从相关的 web 标准中移除，也许正准备移除或出于兼容性而保留。请尽量不要使用该特性，并更新现有的代码；参见本页面底部的<a href='#浏览器兼容性'>兼容性表格</a>以指导你作出决定。请注意，该特性随时可能无法正常工作。",
+    "zh-TW": "不推薦使用此功能。雖可能有一些瀏覽器仍然支援它，但也許已自相關的網頁標準中移除、正準備移除、或僅為了維持相容性而保留。避免使用此功能，盡可能更新現有程式；請參考頁面底部的<a href='#瀏覽器相容性'>相容性表格</a>來下決定。請注意：本功能可能隨時停止運作。"
+  },
+
   "non_standard_badge_title": {
     "en-US": "Non-standard. Check cross-browser support before using.",
     "ko": "비표준. 사용하기전에 다른 브라우저에서도 사용 가능한지 확인 해주세요.",
@@ -53,6 +64,30 @@
     "ko": "비표준",
     "zh-CN": "非标准",
     "zh-TW": "非標準"
+  },
+
+  "secure_context_label": {
+    "en-US": "Secure context",
+    "es": "Contexto seguro",
+    "fr": "Contexte sécurisé",
+    "ja": "安全なコンテキスト用",
+    "zh-CN": "安全上下文"
+  },
+
+  "secure_context_inline_copy": {
+    "en-US": "This feature is available only in secure contexts (HTTPS)",
+    "es": "Esta función está disponible solo en contextos seguros (HTTPS)",
+    "fr": "Cette fonctionnalité est uniquement disponible dans des contextes sécurisés (HTTPS)",
+    "ja": "この機能は安全なコンテキスト (HTTPS) でのみ利用できます",
+    "zh-CN": "此功能仅在安全上下文（HTTPS）中可用"
+  },
+
+  "secure_context_header_copy": {
+    "en-US": "This feature is available only in <a href='/en-US/docs/Web/Security/Secure_Contexts'>secure contexts</a> (HTTPS), in some or all <a href='#browser_compatibility'>supporting browsers</a>.",
+    "es": "Esta función está disponible solo en <a href='/es/docs/Web/Security/Secure_Contexts'>contextos seguros</a> (HTTPS), en algunos o todos los <a href='#browser_compatibility'>navegadores que lo soportan</a>.",
+    "fr": "Cette fonctionnalité est uniquement disponible dans des <a href='/fr/docs/Web/Security/Secure_Contexts'>contextes sécurisés</a> (HTTPS), pour certains <a href='#compatibilité_des_navigateurs'>navigateurs qui la prennent en charge</a>.",
+    "ja": "この機能は一部またはすべての<a href='#browser_compatibility'>対応しているブラウザー</a>において、<a href='/ja/docs/Web/Security/Secure_Contexts'>安全なコンテキスト</a> (HTTPS) でのみ利用できます。",
+    "zh-CN": "此项功能仅在一些<a href='#浏览器兼容性'>支持的浏览器</a>的<a href='/zh-CN/docs/Web/Security/Secure_Contexts'>安全上下文</a>（HTTPS）中可用。"
   },
 
   "interactive_example_cta": {
@@ -138,5 +173,59 @@
     "en-US": "<strong>This is an <a href='/en-US/docs/MDN/Contribute/Guidelines/Conventions_definitions#experimental'>experimental technology</a></strong><br />Check the <a href='#browser_compatibility'>Browser compatibility table</a> carefully before using this in production.",
     "pt-BR": "<strong>Esta é uma <a href='/pt-BR/docs/MDN/Contribute/Guidelines/Conventions_definitions#experimental'>tecnologia experimental</a></strong><br />Verifique a <a href='#browser_compatibility'>tabela de compatibilidade entre Navegadores</a> cuidadosamente antes de usar essa funcionalidade em produção.",
     "ru": "<strong>Это экспериментальная технология</strong><br />Так как спецификация этой технологии ещё не стабилизировалась, смотрите <a href='#browser_compatibility'>таблицу совместимости</a> по поводу использования в различных браузерах. Также заметьте, что синтаксис и поведение экспериментальной технологии может измениться в будущих версиях браузеров, вслед за изменениями спецификации."
+  },
+
+  "available_in_worker__default": {
+    "en-US": "This feature is available in <a href=\"/en-US/docs/Web/API/Web_Workers_API\">Web Workers</a>.",
+    "zh-CN": "此特性在 <a href=\"/zh-CN/docs/Web/API/Web_Workers_API\">Web Worker</a> 中可用。",
+    "zh-TW": "此功能可在 <a href=\"/zh-TW/docs/Web/API/Web_Workers_API\">Web Worker</a> 中使用。",
+    "es": "Esta característica está disponible en <a href=\"/es/docs/Web/API/Web_Workers_API\">Web Workers</a>.",
+    "fr": "Cette fonctionnalité est disponible via les <a href=\"/fr/docs/Web/API/Web_Workers_API\">Web Workers</a>.",
+    "ja": "この機能は<a href=\"/ja/docs/Web/API/Web_Workers_API\">ウェブワーカー</a>内で利用可能です。",
+    "ko": "이 기능은 <a href=\"/ko/docs/Web/API/Web_Workers_API\">Web Worker</a>에서 사용할 수 있습니다.",
+    "ru": "Эта возможность доступна в <a href=\"/ru/docs/Web/API/Web_Workers_API\">Web Workers</a>."
+  },
+
+  "available_in_worker__worker": {
+    "en-US": "This feature is only available in <a href=\"/en-US/docs/Web/API/Web_Workers_API\">Web Workers</a>.",
+    "ja": "この機能は<a href=\"/ja/docs/Web/API/Web_Workers_API\">ウェブワーカー</a>内でのみ利用可能です。",
+    "zh-CN": "此特性仅在 <a href=\"/zh-CN/docs/Web/API/Web_Workers_API\">Web Worker</a> 中可用。"
+  },
+
+  "available_in_worker__window_and_worker_except_service": {
+    "en-US": "This feature is available in <a href=\"/en-US/docs/Web/API/Web_Workers_API\">Web Workers</a>, except for <a href=\"/en-US/docs/Web/API/Service_Worker_API\">Service Workers</a>.",
+    "ja": "この機能は<a href=\"/ja/docs/Web/API/Web_Workers_API\">ウェブワーカー</a>内で利用可能ですが、<a href=\"/ja/docs/Web/API/Service_Worker_API\">サービスワーカー</a>では使用できません。",
+    "zh-CN": "此特性在 <a href=\"/zh-CN/docs/Web/API/Web_Workers_API\">Web Worker</a>（不包括 <a href=\"/zh-CN/docs/Web/API/Service_Worker_API\">Service Worker</a>）中可用。",
+    "zh-TW": "此功能可在 <a href=\"/zh-TW/docs/Web/API/Web_Workers_API\">Web Worker</a>（不包括 <a href=\"/zh-TW/docs/Web/API/Service_Worker_API\">Service Worker</a>）中使用。"
+  },
+
+  "available_in_worker__worker_except_service": {
+    "en-US": "This feature is only available in <a href=\"/en-US/docs/Web/API/Web_Workers_API\">Web Workers</a>, except for <a href=\"/en-US/docs/Web/API/Service_Worker_API\">Service Workers</a>.",
+    "ja": "この機能は<a href=\"/ja/docs/Web/API/Web_Workers_API\">ウェブワーカー</a>内でのみ利用可能ですが、<a href=\"/ja/docs/Web/API/Service_Worker_API\">サービスワーカー</a>では使用できません。",
+    "zh-CN": "此特性仅在 <a href=\"/zh-CN/docs/Web/API/Web_Workers_API\">Web Worker</a>（不包括 <a href=\"/zh-CN/docs/Web/API/Service_Worker_API\">Service Worker</a>）中可用。"
+  },
+
+  "available_in_worker__window_and_dedicated": {
+    "en-US": "This feature is available in <a href=\"/en-US/docs/Web/API/DedicatedWorkerGlobalScope\">Dedicated Web Workers</a>.",
+    "ja": "この機能は<a href=\"/ja/docs/Web/API/DedicatedWorkerGlobalScope\">専用ウェブワーカー</a>内で利用可能です。",
+    "zh-CN": "此特性在<a href=\"/zh-CN/docs/Web/API/DedicatedWorkerGlobalScope\">专用 Web Worker</a>中可用。"
+  },
+
+  "available_in_worker__dedicated": {
+    "en-US": "This feature is only available in <a href=\"/en-US/docs/Web/API/DedicatedWorkerGlobalScope\">Dedicated Web Workers</a>.",
+    "ja": "この機能は<a href=\"/ja/docs/Web/API/DedicatedWorkerGlobalScope\">専用ウェブワーカー</a>内でのみ利用可能です。",
+    "zh-CN": "此特性仅在<a href=\"/zh-CN/docs/Web/API/DedicatedWorkerGlobalScope\">专用 Web Worker</a> 中可用。"
+  },
+
+  "available_in_worker__window_and_service": {
+    "en-US": "This feature is available in <a href=\"/en-US/docs/Web/API/Service_Worker_API\">Service Workers</a>.",
+    "ja": "この機能は<a href=\"/ja/docs/Web/API/Service_Worker_API\">サービスワーカー</a>内で利用可能です。",
+    "zh-CN": "此特性在 <a href=\"/zh-CN/docs/Web/API/Service_Worker_API\">Service Worker</a> 中可用。"
+  },
+
+  "available_in_worker__service": {
+    "en-US": "This feature is only available in <a href=\"/en-US/docs/Web/API/Service_Worker_API\">Service Workers</a>.",
+    "ja": "この機能は<a href=\"/ja/docs/Web/API/Service_Worker_API\">サービスワーカー</a>内でのみ利用可能です。",
+    "zh-CN": "此特性仅在 <a href=\"/zh-CN/docs/Web/API/Service_Worker_API\">Service Worker</a> 中可用。"
   }
 }
