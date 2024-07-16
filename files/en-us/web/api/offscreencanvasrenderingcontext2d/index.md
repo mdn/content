@@ -49,12 +49,10 @@ The following method is new to the `OffscreenCanvasRenderingContext2D` interface
 
 ## Unsupported features
 
-The following user interface methods are **not supported** by the `OffscreenCanvasRenderingContext2D` interface:
+The following user interface method is **not supported** by the `OffscreenCanvasRenderingContext2D` interface:
 
 - {{domxref("CanvasRenderingContext2D.drawFocusIfNeeded()")}}
   - : If a given element is focused, this method draws a focus ring around the current path.
-- {{domxref("CanvasRenderingContext2D.scrollPathIntoView()")}} {{Experimental_Inline}}
-  - : Scrolls the current path or a given path into the view.
 
 ## Inherited properties and methods
 
@@ -273,12 +271,10 @@ The `CanvasRenderingContext2D` rendering context contains a variety of drawing s
 
 ## Unsupported properties and methods
 
-The following methods are **not supported** in the `OffscreenCanvasRenderingContext2D` interface:
+The following method is **not supported** in the `OffscreenCanvasRenderingContext2D` interface:
 
 - {{domxref("CanvasRenderingContext2D.drawFocusIfNeeded()")}}
   - : If a given element is focused, this method draws a focus ring around the current path.
-- {{domxref("CanvasRenderingContext2D.scrollPathIntoView()")}} {{Experimental_Inline}}
-  - : Scrolls the current path or a given path into the view.
 
 ## Specifications
 
