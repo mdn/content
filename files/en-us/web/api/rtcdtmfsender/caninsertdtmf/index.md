@@ -16,6 +16,9 @@ A boolean value which is `true` if the `RTCDTMFSender` is capable of sending DTM
 
 ## Examples
 
+The example first checks if the {{domxref("RTCDTMFSender.canInsertDTMF")}} property is defined, and if so uses it to check if inserting DTMF tones is supported.
+If the feature is supported then {{domxref("RTCDTMFSender.insertDTMF()")}} is called to insert a tone.
+
 ```js
 if (sender.dtmf.canInsertDTMF) {
   const duration = 500;
