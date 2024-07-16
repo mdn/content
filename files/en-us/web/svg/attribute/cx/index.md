@@ -9,7 +9,7 @@ spec-urls:
 
 {{SVGRef}}
 
-The **`cx`** attribute define the x-axis coordinate of a center point.
+The **`cx`** attribute defines the x-axis coordinate of a center point.
 
 You can use this attribute with the following SVG elements:
 

@@ -9,7 +9,7 @@ spec-urls:
 
 {{SVGRef}}
 
-The **`cy`** attribute define the y-axis coordinate of a center point.
+The **`cy`** attribute defines the y-axis coordinate of a center point.
 
 You can use this attribute with the following SVG elements:
 
