@@ -103,6 +103,8 @@ In this case, the radius of the circle is `10%` of the normalized diagonal of th
 
 ## See also
 
+- {{cssxref("fill")}}
+- {{cssxref("stroke")}}
 - {{cssxref("border-radius")}} shorthand property
 - {{cssxref("radial-gradient")}}
 - {{cssxref("basic-shape")}} data type
