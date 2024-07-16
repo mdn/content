@@ -24237,10 +24237,6 @@
     "modified": "2020-10-15T21:31:12.560Z",
     "contributors": ["mfluehr", "servinlp", "fscholz", "nmve", "erikadoyle"]
   },
-  "Web/API/CanvasRenderingContext2D/scrollPathIntoView": {
-    "modified": "2020-10-15T21:31:58.837Z",
-    "contributors": ["mfluehr", "fscholz", "nmve"]
-  },
   "Web/API/CanvasRenderingContext2D/setLineDash": {
     "modified": "2020-10-15T21:30:32.898Z",
     "contributors": [
