@@ -74,7 +74,7 @@ decodingInfo(configuration)
     - `keySystemConfiguration` {{optional_inline}}
 
       - : Object specifying the key system configuration for encrypted media.
-      
+
         Note that [`Navigator.requestMediaKeySystemAccess()`](/en-US/docs/Web/API/Navigator/requestMediaKeySystemAccess) takes arrays some of the same data types in its `supportedConfigurations` argument.
 
         If specified, the [`type`](#type) must be `media-source` or `file` (not `webrtc`).
@@ -203,9 +203,30 @@ In other words, the selection decision is devolved to the caller.
 
 This example shows how to create a media configuration for an audio file and then use it in `MediaCapabilities.decodingInfo()`.
 
+```css hidden
+#log {
+  height: 100px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
+```html hidden
+<pre id="log"></pre>
+```
+
+```js hidden
+const logElement = document.querySelector("#log");
+function log(text) {
+  logElement.innerText = `${logElement.innerText}${text}\n`;
+  logElement.scrollTop = logElement.scrollHeight;
+}
+```
+
 ```js
 //Create media configuration to be tested
-const mediaConfig = {
+const audioConfig = {
   type: "file", // or 'media-source' or 'webrtc'
   audio: {
     contentType: "audio/ogg; codecs=vorbis", // valid content type
@@ -216,19 +237,23 @@ const mediaConfig = {
 };
 
 // check support and performance
-navigator.mediaCapabilities.decodingInfo(mediaConfig).then((result) => {
-  console.log(
-    `This configuration is ${result.supported ? "" : "not "}supported,`,
-  );
-  console.log(`${result.smooth ? "" : "not "}smooth, and`);
-  console.log(`${result.powerEfficient ? "" : "not "}power efficient.`);
+navigator.mediaCapabilities.decodingInfo(audioConfig).then((result) => {
+  console.log(result);
+
+  if (result.supported) {
+    log(
+      `The audio configuration is supported${result.smooth ? ", smooth" : ", not smooth"}${result.powerEfficient ? ", power efficient" : ", not power efficient"}.`,
+    );
+  } else {
+    log("The audio configuration is not supported");
+  }
 });
 ```
 
 Similarly, the code below shows the configuration for a video file.
 
 ```js
-const mediaConfig = {
+const videoConfig = {
   type: "file",
   video: {
     contentType: "video/webm;codecs=vp8", // valid content type
@@ -238,7 +263,22 @@ const mediaConfig = {
     framerate: 30, // number of frames making up that 1s.
   },
 };
+
+// check support and performance
+navigator.mediaCapabilities.decodingInfo(audioConfig).then((result) => {
+  console.log(result);
+
+  if (result.supported) {
+    log(
+      `The video configuration is supported${result.smooth ? ", smooth" : ", not smooth"}${result.powerEfficient ? ", power efficient" : ", not power efficient"}.`,
+    );
+  } else {
+    log("The video configuration is not supported");
+  }
+});
 ```
+
+{{EmbedLiveSample("Getting decoding information for unencrypted media files")}}
 
 ### Getting decoding information for encrypted media
 
