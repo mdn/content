@@ -75,7 +75,7 @@ decodingInfo(configuration)
 
       - : Object specifying the key system configuration for encrypted media.
 
-        Note that [`Navigator.requestMediaKeySystemAccess()`](/en-US/docs/Web/API/Navigator/requestMediaKeySystemAccess) takes arrays some of the same data types in its `supportedConfigurations` argument.
+        > **Note:** [`Navigator.requestMediaKeySystemAccess()`](/en-US/docs/Web/API/Navigator/requestMediaKeySystemAccess) takes arrays some of the same data types in its `supportedConfigurations` argument.
 
         If specified, the [`type`](#type) must be `media-source` or `file` (not `webrtc`).
         This has the following properties: <!-- MediaCapabilitiesKeySystemConfiguration in the spec -->
@@ -83,7 +83,7 @@ decodingInfo(configuration)
         - `keySystem`
 
           - : A string identifying the media key system.
-            For example `com.example.somesystem` or `org.w3.clearkey`.
+            For example `org.w3.clearkey` or `com.widevine.alpha`.
 
         - `initDataType` {{optional_inline}}
 
@@ -166,8 +166,6 @@ A {{jsxref('Promise')}} fulfilling with an object containing the following attri
   - : `true` if playback of the media will be power efficient. Otherwise, it is `false`.
 - `keySystemAccess`
   - : A {{domxref("MediaKeySystemAccess")}} that can be used to create a {{domxref("MediaKeys")}} object to setup encrypted playback, or `null` if decoding is not supported using the supplied configuration.
-- `configuration`
-  - : The [`configuration`](#configuration) used to generate this returned object.
 
 Browsers will report a supported media configuration as `smooth` and `powerEfficient` until stats on this device have been recorded.
 All supported audio codecs report `powerEfficient` as true.
@@ -238,8 +236,6 @@ const audioConfig = {
 
 // check support and performance
 navigator.mediaCapabilities.decodingInfo(audioConfig).then((result) => {
-  console.log(result);
-
   if (result.supported) {
     log(
       `The audio configuration is supported${result.smooth ? ", smooth" : ", not smooth"}${result.powerEfficient ? ", power efficient" : ", not power efficient"}.`,
@@ -266,8 +262,6 @@ const videoConfig = {
 
 // check support and performance
 navigator.mediaCapabilities.decodingInfo(audioConfig).then((result) => {
-  console.log(result);
-
   if (result.supported) {
     log(
       `The video configuration is supported${result.smooth ? ", smooth" : ", not smooth"}${result.powerEfficient ? ", power efficient" : ", not power efficient"}.`,
@@ -282,8 +276,92 @@ navigator.mediaCapabilities.decodingInfo(audioConfig).then((result) => {
 
 ### Getting decoding information for encrypted media
 
-This example shows how to use `decodingInfo()` to select a media configuration for encrypted content that is both supported and smooth.
-Note that the code uses `await`/`async`, and would need to be called within a function (not in the top level context).
+This example shows how you might use `decodingInfo()` to select a media configuration for encrypted content.
+
+As in the previous example we define a media configuration, but this time we use the `type` of `media-source` (rather than `file`), and specify both audio and video content.
+We also specify a simple `keySystemConfiguration`.
+
+```css hidden
+#log {
+  height: 100px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
+```html hidden
+<pre id="log"></pre>
+```
+
+```js hidden
+const logElement = document.querySelector("#log");
+function log(text) {
+  logElement.innerText = `${logElement.innerText}${text}\n`;
+  logElement.scrollTop = logElement.scrollHeight;
+}
+```
+
+```js
+const encryptedMediaConfig = {
+  type: "media-source", // or 'file'
+  audio: {
+    contentType: "audio/webm; codecs=opus",
+    channels: 2, // audio channels used by the track
+    bitrate: 132700, // number of bits used to encode 1s of audio
+    samplerate: 48000, // number of audio samples making up that 1s.
+  },
+  video: {
+    contentType: 'video/webm; codecs="vp09.00.10.08"',
+    width: 800, // width of the video
+    height: 600, // height of the video
+    bitrate: 10000, // number of bits used to encode 1s of video
+    framerate: 30, // number of frames making up that 1s.
+  },
+  keySystemConfiguration: {
+    keySystem: "org.w3.clearkey",
+    initDataType: "webm",
+    distinctiveIdentifier: "required",
+  },
+};
+```
+
+In the previous example we used [promise chaining](/en-US/docs/Web/JavaScript/Guide/Using_promises#chaining), to wait on the result.
+Here we've chosen to use [`async` and `await`](/en-US/docs/Learn/JavaScript/Asynchronous/Promises#async_and_await) to wait on the result, and then log it.
+
+```js
+getDecodingInfo(encryptedMediaConfig);
+
+async function getDecodingInfo(mediaConfig) {
+  const result = await navigator.mediaCapabilities.decodingInfo(mediaConfig);
+  console.log(result);
+  if (!result.supported) {
+    log("This encrypted media configuration is not supported.");
+    return;
+  }
+
+  // keySystemAccess is returned if decoding encrypted media is supported
+  // This can be used to decrypt and playback the media
+  if (!result.keySystemAccess) {
+    log("Encrypted media support is not available.");
+    return;
+  }
+
+  log(
+    `The encrypted media configuration is supported${result.smooth ? ", smooth" : ", not smooth"}${result.powerEfficient ? ", power efficient" : ", not power efficient"}.`,
+  );
+}
+```
+
+The log output is shown below.
+
+{{EmbedLiveSample("Getting decoding information for encrypted media")}}
+
+### Iterating through decoding information for encrypted media
+
+The previous example showed how you can use `decodingInfo()` to get information for just one configuration.
+In reality the method would normally be called iteratively with a number of configurations, selecting the first supported configuration that matches the application's criteria for smooth playing or power efficiency.
+The way this works is described below.
 
 Assuming we already have an `Array` of media configurations named `orderedMediaConfigs`, which we have ordered from most to least wanted, we can use the [`Array.prototype.map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) to call `decodingInfo()` for each configuration and get an array containing all the returned {{jsxref("Promise")}} objects.
 
@@ -313,7 +391,7 @@ for await (const mediaCapabilityInfo of capabilitiesPromises) {
 }
 ```
 
-If we found a smooth and supported configuration (`bestConfig`) we use it to [create our media keys](/en-US/docs/Web/API/MediaKeySystemAccess/createMediaKeys) and decode the media.
+If we found a smooth and supported configuration while looping (`bestConfig`) we use it to [create our media keys](/en-US/docs/Web/API/MediaKeySystemAccess/createMediaKeys) and decode the media.
 If we didn't discover any smooth configurations we might instead use `nonSmoothConfig` to decode the media.
 This will be the supported configuration that was found last, which because of the way we ordered the original `orderedMediaConfigs`, should be the one with the lowest framerate.
 
@@ -321,13 +399,13 @@ This will be the supported configuration that was found last, which because of t
 let keys = null;
 if (bestConfig) {
   keys = await bestConfig.keySystemAccess.createMediaKeys();
-  // ... use keys to decode media with best config
+  // ... use keys to decode media using best config
 } else if (nonSmoothConfig) {
   console.log(
     "No smooth configs found. Using lowest resolution configuration!",
   );
   keys = await nonSmoothConfig.keySystemAccess.createMediaKeys();
-  // ... use keys to decode media with best config
+  // ... use keys to decode media using lowest framerate config
 } else {
   console.log("No supported configs!");
   // Fail!
