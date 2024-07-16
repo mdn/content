@@ -60,9 +60,9 @@ For more information about the `onRejected` handler, see the {{jsxref("Promise/c
 `then()` returns a new promise object but mutates the promise object it's called on, appending the handlers to its list. The handler is retained by the original promise and its lifetime is at least as the original promise's lifetime. For example, the following example will eventually run out of memory even though the returned promise is not retained:
 
 ```js
-const p = new Promise();
+const pendingPromise = new Promise(() => {});
 while (true) {
-  p.then(doSomething);
+  pendingPromise.then(doSomething);
 }
 ```
 
