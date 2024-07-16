@@ -10,7 +10,7 @@ CSS animations make it possible to do incredible things with the elements that m
 
 ## Run an animation again
 
-The [CSS Animations](/en-US/docs/Web/CSS/CSS_animations) specification doesn't offer a way to run an animation again. You can't just set the element's {{cssxref("animation-play-state")}} to `"running"` again. Instead, you have to use JavaScript to get a stopped animation to replay.
+The [CSS Animations](/en-US/docs/Web/CSS/CSS_animations) specification doesn't offer a way to run an animation again. You can't just set the element's {{cssxref("animation-play-state")}} to `"running"` again. Instead, you have to use JavaScript to get a completed animation to replay.
 
 Here's one way to do it that we feel is stable and reliable enough to suggest to you.
 
@@ -63,7 +63,7 @@ function playAnimation() {
 }
 ```
 
-The `playAnimation` method simply calls {{domxref("Element.animate()")}} method on the box to play the animation. The `animate` method takes the `colorChangeFrames` keyframe object and animation duration as arguments.
+The `playAnimation` method calls {{domxref("Element.animate()")}} method on the box to play the animation. The `animate` method takes the `colorChangeFrames` keyframe object and animation duration as arguments.
 
 Of course, we also need to add an event handler to our run button so it'll actually do something:
 
@@ -77,7 +77,7 @@ button.addEventListener("click", playAnimation);
 
 ## Waiting for an animation to complete before stopping
 
-In the previous example if the run button is clicked before the animation is completed, then the current animation is stopped abruptly and the next animation starts from the start. If instead, you'd like the current animation to be complete before starting a new one then we need to check if any animation is still running on the element before accepting a new play request.
+In the previous example, if the run button is clicked before the animation is completed, the current animation will abruptly stop and the animation restarts from the `0%` or `from` starting keyframe. If you would like the current animation iteration to be complete before starting a new one, we can disable the `run` button while the animation is running, reenabling it based on the `animationend` event. Alternatively, if we want to enable multiple iterations of the animation, we can check to see if an animation is running on the element and increment the `animation-iteration` count for each button click while the animation is running.
 
 The following demo shows how you'd achieve this. You'll have to do the following modification to the same code:
 
