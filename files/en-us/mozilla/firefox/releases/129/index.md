@@ -18,7 +18,7 @@ This article provides information about the changes in Firefox 129 that affect d
 
 ### CSS
 
-- Support has also been added for the [@starting-style](/en-US/docs/Web/CSS/@starting-style) CSS at-rule. This allows elements that are animated when they appear to have styles that the elements start from. Currently animating from `display: none;` is not supported ([Firefox bug 1834876](https://bugzil.la/1834876) and [Firefox bug 1834877](https://bugzil.la/1834877)).
+- The [@starting-style](/en-US/docs/Web/CSS/@starting-style) CSS at-rule is supported. This lets you define starting values for properties set on an element that you want to transition from when the element receives its first style update. Currently animating from `display: none;` is not supported ([Firefox bug 1834876](https://bugzil.la/1834876) and [Firefox bug 1834877](https://bugzil.la/1834877)).
 
 #### Removals
 
