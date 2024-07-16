@@ -7,7 +7,10 @@ browser-compat: css.properties.r
 
 {{CSSRef}}
 
-The **`r`** [CSS](/en-US/docs/Web/CSS) property defines the radius of a circle. It can only be used with the SVG {{SVGElement("circle")}} element and doesn't apply to other SVG or HTML elements. If present, it overrides the circle's {{SVGAttr("r")}} attribute.
+The **`r`** [CSS](/en-US/docs/Web/CSS) property defines the radius of a circle. It can only be used with the SVG {{SVGElement("circle")}} element. If present, it overrides the circle's {{SVGAttr("r")}} attribute.
+
+> [!NOTE]
+> The `r` property only applies {{SVGElement("circle")}} elements nested in an {{SVGElement("svg")}}. It doesn't apply to other SVG elements or HTML elements or pseudo-elements.
 
 ## Syntax
 
@@ -105,6 +108,7 @@ In this case, the radius of the circle is `10%` of the normalized diagonal of th
 
 - {{cssxref("fill")}}
 - {{cssxref("stroke")}}
+- {{cssxref("paint-order")}}
 - {{cssxref("border-radius")}} shorthand property
 - {{cssxref("radial-gradient")}}
 - {{cssxref("basic-shape")}} data type
