@@ -1,6 +1,6 @@
 ---
-title: CSS animation tips and tricks
-slug: Web/CSS/CSS_animations/Tips
+title: Web animation API tips and tricks
+slug: Web/API/Web_Animations_API/Tips
 page-type: guide
 ---
 
@@ -77,7 +77,7 @@ button.addEventListener("click", playAnimation);
 
 ## Waiting for an animation to complete before stopping
 
-In the previous example, if the run button is clicked before the animation is completed, the current animation will abruptly stop and the animation restarts from the `0%` or `from` starting keyframe. If you would like the current animation iteration to be complete before starting a new one, we can disable the `run` button while the animation is running, reenabling it based on the `animationend` event. Alternatively, if we want to enable multiple iterations of the animation, we can check to see if an animation is running on the element and increment the `animation-iteration` count for each button click while the animation is running.
+In the previous example, if the run button is clicked before the animation is completed, the current animation will abruptly stop and the animation will restart from the `0%` or `from` starting keyframe. If you would like the current animation iteration to be complete before starting a new one, we can disable the `run` button while the animation is running, reenabling it based on the [`finish`](/en-US/docs/Web/API/Animation/finish) event. Alternatively, if we want to enable multiple iterations of the animation, we can check to see if an animation is running on the element and increment the `animation-iteration` count for each button click while the animation is running.
 
 The following demo shows how you'd achieve this. You'll have to do the following modification to the same code:
 
@@ -99,13 +99,14 @@ The following demo shows how you'd achieve this. You'll have to do the following
 const box = document.querySelector(".box");
 const button = document.querySelector(".runButton");
 const colorChangeFrames = { backgroundColor: ["grey", "lime"] };
-```
 
-```js
 function playAnimation() {
-  if (box.getAnimations().length === 0) {
-    box.animate(colorChangeFrames, 4000);
-  }
+  button.setAttribute("disabled", true);
+  const anim = box.animate(colorChangeFrames, 4000);
+
+  anim.addEventListener("finish", (event) => {
+    button.removeAttribute("disabled");
+  });
 }
 ```
 
@@ -113,7 +114,7 @@ button.addEventListener("click", playAnimation);
 
 {{ EmbedLiveSample("Waiting for an animation to complete before stopping", "100%", "160") }}
 
-The code uses {{domxref("Element.getAnimations()")}} method to ensure there is no animation running on the element.
+The code disables the button and then starts the animation. The button remains disabled till the animation completes.
 
 ## Stacking context in animations
 
@@ -122,3 +123,4 @@ In the case of the `animation-fill-mode` [forwards](/en-US/docs/Web/CSS/animatio
 ## See also
 
 - [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
+- [Animation Interface](/en-US/docs/Web/API/Animation/Animation)

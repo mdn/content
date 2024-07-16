@@ -65325,6 +65325,17 @@
       "rachelnabors"
     ]
   },
+  "Web/API/Web_Animations_API/Tips": {
+    "modified": "2020-06-24T00:29:43.861Z",
+    "contributors": [
+      "emilhem",
+      "chrisdavidmills",
+      "morenoh149",
+      "tzthet",
+      "mfluehr",
+      "Sheppy"
+    ]
+  },
   "Web/API/Web_Animations_API/Using_the_Web_Animations_API": {
     "modified": "2020-11-11T08:34:26.031Z",
     "contributors": [
@@ -76475,17 +76486,6 @@
       "Sheppy",
       "MexieAndCo",
       "teoli"
-    ]
-  },
-  "Web/CSS/CSS_animations/Tips": {
-    "modified": "2020-06-24T00:29:43.861Z",
-    "contributors": [
-      "emilhem",
-      "chrisdavidmills",
-      "morenoh149",
-      "tzthet",
-      "mfluehr",
-      "Sheppy"
     ]
   },
   "Web/CSS/CSS_animations/Using_CSS_animations": {
