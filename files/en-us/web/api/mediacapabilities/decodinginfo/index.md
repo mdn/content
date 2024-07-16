@@ -86,8 +86,8 @@ decodingInfo(configuration)
         - `initDataType` {{optional_inline}}
 
           - : A string indicating the data type name the initialization data format, such as `"cenc"`, `"keyids"` and `"webm"`.
-            This is a single value from the array defined in the [`supportedConfigurations.initDataTypes`](/en-US/docs/Web/API/Navigator/requestMediaKeySystemAccess#initdatatypes) option passed to `Navigator.requestMediaKeySystemAccess()`.
             Allowed names are defined in the [Encrypted Media Extensions Initialization Data Format Registry](https://www.w3.org/TR/eme-initdata-registry/).
+            Note that [`Navigator.requestMediaKeySystemAccess()`](/en-US/docs/Web/API/Navigator/requestMediaKeySystemAccess) takes an array of data type names in the `supportedConfigurations.initDataTypes` argument.
 
         - `distinctiveIdentifier` {{optional_inline}}
 
