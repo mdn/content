@@ -277,7 +277,7 @@ Fixed positioning is similar to absolute positioning, with the exception that th
 
 ### Sticky positioning
 
-The following CSS rule would position the element with id one relatively until the viewport was scrolled such that the element would be less than 10 pixels from the top. Beyond that threshold, the element would be fixed to 10 pixels from the top.
+The following CSS rule positions the element with id `one` relatively until the viewport is scrolled such that the element is 10 pixels from the top. Beyond that threshold, the element is fixed to 10 pixels from the top.
 
 ```css
 #one {
