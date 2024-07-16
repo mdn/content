@@ -48,7 +48,7 @@ Block at-rules end in a `{}`-block that contain nested rules, other at-rules, or
 - {{cssxref("@font-face")}}
   - : Defines font resource locations, both local and external, along with the style characteristics for when those resources are used with a declared {{cssxref("font-family")}} ([CSS fonts](/en-US/docs/Web/CSS/CSS_fonts)).
 - {{cssxref("@font-feature-values")}} (plus `@swash`, `@ornaments`, `@annotation`, `@stylistic`, `@styleset` and `@character-variant`)
-  - : Control font display per font-family by defining font-specific alternates, or custom names, to feature indexes in {{cssxref("font-variant-alternates")}} in OpenType ([CSS fonts](/en-US/docs/Web/CSS/CSS_fonts)).
+  - : Controls font display per font-family by defining font-specific alternates, or custom names, to feature indexes in {{cssxref("font-variant-alternates")}} in OpenType ([CSS fonts](/en-US/docs/Web/CSS/CSS_fonts)).
 - {{cssxref("@keyframes")}} (and the `@-webkit-keyframes` alias)
   - : Define a named animation by describing defining CSS styles for intermediate steps (or keyframes) in the animation sequence ([CSS animations](/en-US/docs/Web/CSS/CSS_animations)).
 - {{cssxref("@layer")}}
@@ -67,7 +67,7 @@ Block at-rules end in a `{}`-block that contain nested rules, other at-rules, or
   - : Define the starting property values for an element to transition from when the element receives its first style update, such as when transitioning from `display: none` ([CSS transitions](/en-US/docs/Web/CSS/CSS_transitions)).
 - {{cssxref("@supports")}}
   - : A conditional group rule applies its content if the browser supports the CSS features of the given condition ([CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules)).
-- {{cssxref("@view-transitions")}}
+- {{cssxref("@view-transition")}}
   - : Opts the current document into a [view transition](/en-US/docs/Web/API/View_Transitions_API), and the destination document as well in the case of cross-document navigation transitions.
 
 ## Index
