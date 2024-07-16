@@ -53,8 +53,8 @@ The `flags1` and `flags2` parameters are optional, but at least one must be non-
 
 Other flags don't make sense in a modifier and are thus syntax errors if included:
 
-- The [`g`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/global) and [`y`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky) flags determine how multiple calls to [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) behaves and affect matching behavior of the whole regex.
-- The [`d`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices) flag enable additional information in the [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) result and affects matching behavior of the whole regex.
+- The [`g`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/global) and [`y`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky) flags determine how multiple calls to [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) behave and affect matching behavior of the whole regex.
+- The [`d`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices) flag enables additional information in the [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) result and affects matching behavior of the whole regex.
 - The [`u`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) and [`v`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets) flags change the behavior of the regex engine in a way that's too complex to be locally modified. They also have global effects on the regex, such as how the [`lastIndex`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) is advanced.
 
 ## Examples
