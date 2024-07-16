@@ -376,7 +376,7 @@ dd + dd {
 
 #### Sticky position with all the inset boundaries set
 
-The following example demonstrates how an element behaves when all the inset boundaries are set. Here we have two light bulb emojis in a paragraph. Both the light bulbs have been made sticky, and inset boundaries have been specified as 50px from top, 100px from right, 50px from bottom, and 50px from left. To make the inset area recognizable same-sized gray-colored background on the parent div element has been set.
+The following example demonstrates an element's behavior when all inset boundaries are set. Here, we have two light bulb emojis in a paragraph. The light bulbs use sticky positioning, and the inset boundaries are specified as 50px from the top, 100px from the right, 50px from the bottom, and 50px from the left. A gray background on the parent div element marks the inset area.
 
 ##### HTML
 
@@ -438,7 +438,7 @@ div {
 
 {{EmbedLiveSample('Sticky position with all the inset boundaries set', '', '300px')}}
 
-After you put both the bulbs in their right place, you'll notice that the bulbs act as relatively positioned inside the inset area. But as soon as they get moved out of the inset area they get fixed(stick) to the inset boundary in that direction.
+When you put both bulbs in their proper place, you'll notice that they are relatively positioned inside the inset area. When you move them out of the inset area, they are fixed (sticky) to the inset boundary in that direction.
 
 ## Specifications
 
