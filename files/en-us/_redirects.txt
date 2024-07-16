@@ -7753,7 +7753,6 @@
 /en-US/docs/Web/API/CanvasRenderingContext2D.rotate	/en-US/docs/Web/API/CanvasRenderingContext2D/rotate
 /en-US/docs/Web/API/CanvasRenderingContext2D.save	/en-US/docs/Web/API/CanvasRenderingContext2D/save
 /en-US/docs/Web/API/CanvasRenderingContext2D.scale	/en-US/docs/Web/API/CanvasRenderingContext2D/scale
-/en-US/docs/Web/API/CanvasRenderingContext2D.scrollPathIntoView	/en-US/docs/Web/API/CanvasRenderingContext2D/scrollPathIntoView
 /en-US/docs/Web/API/CanvasRenderingContext2D.setLineDash	/en-US/docs/Web/API/CanvasRenderingContext2D/setLineDash
 /en-US/docs/Web/API/CanvasRenderingContext2D.setTransform	/en-US/docs/Web/API/CanvasRenderingContext2D/setTransform
 /en-US/docs/Web/API/CanvasRenderingContext2D.shadowBlur	/en-US/docs/Web/API/CanvasRenderingContext2D/shadowBlur
