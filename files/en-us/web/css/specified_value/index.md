@@ -11,7 +11,7 @@ The **specified value** of a [CSS](/en-US/docs/Web/CSS) property is the value it
 
 1. If the document's style sheet explicitly specifies a value for the property, the given value will be used.
 2. If the document's style sheet doesn't specify a value but it is an inherited property, the value will be taken from the parent element.
-3. If none of the above pertains, the element's [initial value](/en-US/docs/Web/CSS/initial_value) will be used.
+3. If none of the above apply, the element's [initial value](/en-US/docs/Web/CSS/initial_value) will be used.
 
 ## Examples
 
