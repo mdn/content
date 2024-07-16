@@ -105,5 +105,5 @@ In this case, the radius of the circle is `10%` of the normalized diagonal of th
 
 - {{cssxref("border-radius")}} shorthand property
 - {{cssxref("radial-gradient")}}
-- {{cssxref("shapes")}} data type
+- {{cssxref("basic-shape")}} data type
 - SVG {{SVGAttr("r")}} attribute
