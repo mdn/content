@@ -51,11 +51,12 @@ A {{jsxref("Promise")}} that resolves to a {{domxref("Response")}} object.
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if use of the [Topics API](/en-US/docs/Web/API/Topics_API) is specifically disallowed by a {{httpheader('Permissions-Policy/browsing-topics','browsing-topics')}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy), and a `fetch()` request was made with `browsingTopics: true`.
 - {{jsxref("TypeError")}}
-  - : Can occur for the reasons showing in {{domxref("Window.fetch()")}}.
+  - : An error when the fetch operation could not be performed.
+    See {{domxref("Window.fetch()")}} exceptions for a list of reasons why this error can occur.
 
 ## Examples
 
-You can see the example at {{domxref("Window.fetch", "fetch()")}}.
+See {{domxref("Window.fetch", "fetch()")}} for examples.
 
 ## Specifications
 
