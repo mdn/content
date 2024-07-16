@@ -29,7 +29,7 @@ console.log(new Date(8.64e15 + 1).toString()); // "Invalid Date"
 There are various methods that allow you to interact with the timestamp stored in the date:
 
 - You can interact with the timestamp value directly using the {{jsxref("Date/getTime", "getTime()")}} and {{jsxref("Date/setTime", "setTime()")}} methods.
-- The {{jsxref("Date/valueOf", "valueOf()")}} and [`[@@toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive) (when passed `"number"`) methods — which are automatically called in [number coercion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion) — return the timestamp, causing `Date` objects to behave like their timestamps when used in number contexts.
+- The {{jsxref("Date/valueOf", "valueOf()")}} and [`[Symbol.toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Symbol.toPrimitive) (when passed `"number"`) methods — which are automatically called in [number coercion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion) — return the timestamp, causing `Date` objects to behave like their timestamps when used in number contexts.
 - All static methods ({{jsxref("Date.now()")}}, {{jsxref("Date.parse()")}}, and {{jsxref("Date.UTC()")}}) return timestamps instead of `Date` objects.
 - The {{jsxref("Date/Date", "Date()")}} constructor can be called with a timestamp as the only argument.
 
@@ -166,7 +166,7 @@ Non-standard strings can be parsed in any way as desired by the implementation, 
 ### Other ways to format a date
 
 - {{jsxref("Date/toISOString", "toISOString()")}} returns a string in the format `1970-01-01T00:00:00.000Z` (the date time string format introduced above, which is simplified [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)). {{jsxref("Date/toJSON", "toJSON()")}} calls `toISOString()` and returns the result.
-- {{jsxref("Date/toString", "toString()")}} returns a string in the format `Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)`, while {{jsxref("Date/toDateString", "toDateString()")}} and {{jsxref("Date/toTimeString", "toTimeString()")}} return the date and time parts of the string, respectively. [`[@@toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive) (when passed `"string"` or `"default"`) calls `toString()` and returns the result.
+- {{jsxref("Date/toString", "toString()")}} returns a string in the format `Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)`, while {{jsxref("Date/toDateString", "toDateString()")}} and {{jsxref("Date/toTimeString", "toTimeString()")}} return the date and time parts of the string, respectively. [`[Symbol.toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Symbol.toPrimitive) (when passed `"string"` or `"default"`) calls `toString()` and returns the result.
 - {{jsxref("Date/toUTCString", "toUTCString()")}} returns a string in the format `Thu, 01 Jan 1970 00:00:00 GMT` (generalized {{rfc(7231)}}).
 - {{jsxref("Date/toLocaleDateString", "toLocaleDateString()")}}, {{jsxref("Date/toLocaleTimeString", "toLocaleTimeString()")}}, and {{jsxref("Date/toLocaleString", "toLocaleString()")}} use locale-specific date and time formats, usually provided by the [`Intl`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl) API.
 
@@ -285,7 +285,7 @@ These properties are defined on `Date.prototype` and shared by all `Date` instan
   - : Converts a date to a string using the UTC timezone.
 - {{jsxref("Date.prototype.valueOf()")}}
   - : Returns the primitive value of a {{jsxref("Date")}} object. Overrides the {{jsxref("Object.prototype.valueOf()")}} method.
-- [`Date.prototype[@@toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive)
+- [`Date.prototype[Symbol.toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Symbol.toPrimitive)
   - : Converts this `Date` object to a primitive value.
 
 ## Examples

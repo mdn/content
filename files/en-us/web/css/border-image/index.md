@@ -1,7 +1,7 @@
 ---
 title: border-image
 slug: Web/CSS/border-image
-page-type: css-property
+page-type: css-shorthand-property
 browser-compat: css.properties.border-image
 ---
 

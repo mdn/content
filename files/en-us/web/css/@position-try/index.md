@@ -32,9 +32,9 @@ The descriptors specify property values that define the behavior of the custom p
 - `position-anchor`
   - : Specifies a {{cssxref("position-anchor")}} property value that defines the anchor element that the positioned element is tethered to, by specifying a {{cssxref("dashed-ident")}} value equal to the anchor element's {{cssxref("anchor-name")}} property value.
 - `inset-area`
-  - : Specifies an {{cssxref("inset-area")}} property value that defines the position of the the anchor-positioned element relative to the anchor.
+  - : Specifies an {{cssxref("inset-area")}} property value that defines the position of the anchor-positioned element relative to the anchor.
 - [Inset property](/en-US/docs/Glossary/Inset_properties) descriptors
-  - : Specify [`anchor()`](/en-US/docs/Web/CSS/anchor) function values that define the position of the the anchor-positioned element's edges relative to the anchor element's edge. Inset property descriptors can be set that represent the following properties:
+  - : Specify [`anchor()`](/en-US/docs/Web/CSS/anchor) function values that define the position of the anchor-positioned element's edges relative to the anchor element's edge. Inset property descriptors can be set that represent the following properties:
     - {{cssxref("top")}}
     - {{cssxref("left")}}
     - {{cssxref("bottom")}}
