@@ -236,7 +236,6 @@ See [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_
 - {{cssxref("scroll-timeline")}}
 - {{cssxref("text-decoration")}}
 - {{cssxref("text-emphasis")}}
-- {{cssxref("text-underline-position")}}
 - {{cssxref("text-wrap")}}
 - {{cssxref("transition")}}
 - {{cssxref("view-timeline")}}
