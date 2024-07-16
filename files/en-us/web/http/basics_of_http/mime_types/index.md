@@ -171,7 +171,7 @@ As opposed to application data types, `text/` types are always textual. Apart fr
 - `text/csv`: Comma-separated values (CSV)
 - `text/calendar`: iCalendar format (ICS)
 
-### text/plain
+#### text/plain
 
 This is the default for textual files. Even if it really means "unknown textual file," browsers assume they can display it.
 
@@ -180,19 +180,19 @@ This is the default for textual files. Even if it really means "unknown textual 
 > Specifically if they download a `text/plain` file from a {{HTMLElement("link")}} element declaring a CSS file, they will not recognize it as a valid CSS file if presented with `text/plain`.
 > The CSS mime type `text/css` must be used.
 
-### text/css
+#### text/css
 
 CSS files used to style a Web page **must** be sent with `text/css`.
 If a server doesn't recognize the `.css` suffix for CSS files, it may send them with `text/plain` or `application/octet-stream` MIME types.
 If so, they won't be recognized as CSS by most browsers and will be ignored.
 
-### text/html
+#### text/html
 
 All HTML content should be served with this type. Alternative MIME types for XHTML (like `application/xhtml+xml`) are mostly useless nowadays.
 
 > **Note:** Use `application/xml` or `application/xhtml+xml` if you want XML's strict parsing rules, [`<![CDATA[…]]>`](/en-US/docs/Web/API/CDATASection) sections, or elements that aren't from HTML/SVG/MathML namespaces.
 
-### text/javascript
+#### text/javascript
 
 Per the [IANA Media Types registry](https://www.iana.org/assignments/media-types/media-types.xhtml#text), [RFC 9239](https://www.rfc-editor.org/rfc/rfc9239.html), and the [HTML specification](https://html.spec.whatwg.org/multipage/scripting.html#scriptingLanguages:text/javascript), JavaScript content should always be served using the MIME type `text/javascript`.
 No other MIME types are considered valid for JavaScript, and using any MIME type other than `text/javascript` may result in scripts that do not load or run.
@@ -200,7 +200,7 @@ No other MIME types are considered valid for JavaScript, and using any MIME type
 You may find some JavaScript content incorrectly served with a `charset` parameter as part of the MIME type — as an attempt to specify the character set for the script content.
 That `charset` parameter isn't valid for JavaScript content, and in most cases will result in a script failing to load.
 
-#### Legacy JavaScript MIME types
+##### Legacy JavaScript MIME types
 
 In addition to the `text/javascript` MIME type, for historical reasons, the [MIME Sniffing Standard](https://mimesniff.spec.whatwg.org/)
 (the definition of how browsers should interpret MIME types and figure
@@ -271,7 +271,9 @@ The following are common audio and video MIME types:
 - [`audio/3gpp`, `video/3gpp`](/en-US/docs/Web/Media/Formats/Containers#3gp): 3GPP container
 - `audio/3gpp2`, `video/3gpp2`, `audio/3gp2`, `video/3gp2`: 3GPP2 container
 
-### multipart/form-data
+### Multipart types
+
+#### multipart/form-data
 
 The `multipart/form-data` type can be used when sending the values of a completed [HTML Form](/en-US/docs/Learn/Forms) from browser to server.
 
@@ -342,7 +344,7 @@ Simple file.
 -----------------------------8721656041911415653955004498--
 ```
 
-### multipart/byteranges
+#### multipart/byteranges
 
 The `multipart/byteranges` MIME type is used to send partial responses to the browser.
 
