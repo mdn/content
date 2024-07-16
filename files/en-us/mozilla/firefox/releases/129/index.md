@@ -38,6 +38,8 @@ This article provides information about the changes in Firefox 129 that affect d
 
 ### APIs
 
+- {{domxref('MediaCapabilities.decodingInfo()')}} can now get decoding information for a particular _encrypted media_ configuration as well unencrypted media, allowing applications to tell ahead of time if the configuration is supported, and whether it will play the content smoothly and be power efficient. Changes include a new property `keySystemConfiguration` on the method's `configuration` argument that defines the properties of the key system used to encrypt the media, and a new `keySystemAccess` property on the returned object, which is a {{domxref('MediaKeySystemAccess')}} object that can be used to create keys and decode the content for playback. ([Firefox bug 1898344](https://bugzil.la/1898344)).
+
 #### DOM
 
 #### Media, WebRTC, and Web Audio
