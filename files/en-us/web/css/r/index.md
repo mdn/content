@@ -44,15 +44,16 @@ r: unset;
 
 ### Defining the radius of a circle
 
-In this example, we have a `<circle>` in an SVG, which has a `0` radius.
+In this example, we have two identical `<circle>` elements in an SVG, each with a `10` radius and the same x- and y-axis coordinates for their center points.
 
 ```html
 <svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="50" cy="50" r="0" />
+  <circle cx="50" cy="50" r="10" />
+  <circle cx="50" cy="50" r="10" />
 </svg>
 ```
 
-With CSS, we use the `r` property, overriding the value of the SVG {{SVGAttr("r")}} attribute.
+With CSS, we style only the first circle, allowing the second circle to use default styles (with ({{cssxref("fill")}} defaulting to black). We use the `r` property to override the value of the SVG {{SVGAttr("r")}} attribute, giving it a `fill` and {{cssxref("stroke")}}.
 
 ```css
 svg {
@@ -60,7 +61,7 @@ svg {
   width: 300px;
 }
 
-circle {
+circle:first-of-type {
   r: 30px;
   fill: lightgreen;
   stroke: black;
@@ -75,7 +76,8 @@ In this example, we use the same markup as the previous example. The only differ
 
 ```html hidden
 <svg viewBox="0 0 300 100" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="50" cy="50" r="0" />
+  <circle cx="50" cy="50" r="10" />
+  <circle cx="50" cy="50" r="10" />
 </svg>
 ```
 
@@ -85,7 +87,7 @@ svg {
   width: 300px;
 }
 
-circle {
+circle:first-of-type {
   r: 10%;
   fill: lightgreen;
   stroke: black;
