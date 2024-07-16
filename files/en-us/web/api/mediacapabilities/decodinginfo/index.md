@@ -74,6 +74,8 @@ decodingInfo(configuration)
     - `keySystemConfiguration` {{optional_inline}}
 
       - : Object specifying the key system configuration for encrypted media.
+      
+        Note that [`Navigator.requestMediaKeySystemAccess()`](/en-US/docs/Web/API/Navigator/requestMediaKeySystemAccess) takes arrays some of the same data types in its `supportedConfigurations` argument.
 
         If specified, the [`type`](#type) must be `media-source` or `file` (not `webrtc`).
         This has the following properties: <!-- MediaCapabilitiesKeySystemConfiguration in the spec -->
@@ -87,7 +89,6 @@ decodingInfo(configuration)
 
           - : A string indicating the data type name the initialization data format, such as `"cenc"`, `"keyids"` and `"webm"`.
             Allowed names are defined in the [Encrypted Media Extensions Initialization Data Format Registry](https://www.w3.org/TR/eme-initdata-registry/).
-            Note that [`Navigator.requestMediaKeySystemAccess()`](/en-US/docs/Web/API/Navigator/requestMediaKeySystemAccess) takes an array of data type names in the `supportedConfigurations.initDataTypes` argument.
 
         - `distinctiveIdentifier` {{optional_inline}}
 
