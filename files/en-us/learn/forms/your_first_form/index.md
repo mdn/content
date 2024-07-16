@@ -154,9 +154,13 @@ The markup for our form is almost complete; we just need to add a button to allo
 This is done by using the {{HTMLelement("button")}} element; add the following just above the closing `</ul>` tag:
 
 ```html
-<li class="button">
-  <button type="submit">Send your message</button>
-</li>
+<form action="example_form.php" method="POST"> 
+  <ul>
+    <li class="button">
+      <button type="submit">Send your message</button>
+    </li>
+  </ul>
+</form>
 ```
 
 The {{htmlelement("button")}} element also accepts a `type` attribute — this accepts one of three values: `submit`, `reset`, or `button`.
