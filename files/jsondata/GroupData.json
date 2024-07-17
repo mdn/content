@@ -516,12 +516,9 @@
     },
     "Fetch API": {
       "overview": ["Fetch API"],
-      "guides": [
-        "/docs/Web/API/Fetch_API/Using_Fetch",
-        "/docs/Web/API/Fetch_API/Cross-global_fetch_usage"
-      ],
-      "interfaces": ["Headers", "Request", "Response"],
-      "methods": ["fetch()"],
+      "guides": ["/docs/Web/API/Fetch_API/Using_Fetch"],
+      "interfaces": ["Headers", "Request", "RequestInit", "Response"],
+      "methods": ["Window.fetch()", "WorkerGlobalScope.fetch()"],
       "properties": [],
       "events": []
     },
@@ -2370,7 +2367,7 @@
     },
     "WebVTT": {
       "overview": ["WebVTT API"],
-      "guides": ["/docs/Web/API/Web_Video_Text_Tracks_Format"],
+      "guides": ["/docs/Web/API/WebVTT_API/Web_Video_Text_Tracks_Format"],
       "interfaces": [
         "VTTCue",
         "VTTRegion",

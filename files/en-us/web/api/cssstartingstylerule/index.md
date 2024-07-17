@@ -13,11 +13,11 @@ The **`CSSStartingStyleRule`** interface of the [CSS Object Model](/en-US/docs/W
 
 ## Instance properties
 
-_This interface inherits properties from its parent, {{domxref("CSSGroupingRule")}}._
+_Inherits properties from its ancestors {{domxref("CSSGroupingRule")}} and {{domxref("CSSRule")}}._
 
 ## Instance methods
 
-_This interface inherits methods from its parent, {{domxref("CSSGroupingRule")}}._
+_Inherits methods from its ancestors {{domxref("CSSGroupingRule")}} and {{domxref("CSSRule")}}._
 
 ## Specifications
 

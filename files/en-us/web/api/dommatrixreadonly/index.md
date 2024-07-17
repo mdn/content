@@ -75,7 +75,7 @@ _This interface doesn't inherit any methods. None of the following methods alter
   - : Returns a JSON representation of the `DOMMatrixReadOnly` object.
 - {{domxref("DOMMatrixReadOnly.toString()")}}
 
-  - : Creates and returns a string object which contains a string representation of the matrix in CSS matrix syntax, using the appropriate CSS matrix notation. See the {{cssxref("transform-function/matrix", "matrix()")}} CSS function for details on this syntax.
+  - : Creates and returns a string which contains a string representation of the matrix in CSS matrix syntax, using the appropriate CSS matrix notation. See the {{cssxref("transform-function/matrix", "matrix()")}} CSS function for details on this syntax.
 
     For a 2D matrix, the elements `a` through `f` are listed, for a total of six values and the form `matrix(a, b, c, d, e, f)`.
 

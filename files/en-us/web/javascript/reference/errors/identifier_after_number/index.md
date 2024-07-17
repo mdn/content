@@ -13,9 +13,9 @@ underscore (\_), or dollar sign ($).
 ## Message
 
 ```plain
-SyntaxError: Unexpected identifier after numeric literal (Edge)
+SyntaxError: Invalid or unexpected token (V8-based)
 SyntaxError: identifier starts immediately after numeric literal (Firefox)
-SyntaxError: Unexpected number (Chrome)
+SyntaxError: No identifiers allowed directly after numeric literal (Safari)
 ```
 
 ## Error type
