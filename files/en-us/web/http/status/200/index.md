@@ -11,16 +11,15 @@ The HTTP **`200 OK`** status response code indicates that a request has succeede
 It is part of the `200`-`299` class of [successful responses](/en-US/docs/Web/HTTP/Status#successful_responses).
 A `200 OK` response is cacheable by default.
 
-The meaning of a 'successful request' and the type of response a server sends in return depends on the request method.
-A `200 OK` in response to these request methods has the following meaning and results:
+A `200 OK` has the following meaning and format in response to these request methods:
 
-- {{HTTPMethod("POST")}}: The requested action has succeeded and the response has a message body that describes the result.
-- {{HTTPMethod("GET")}}: A resource has been successfully retrieved by the server and it's included in the response body.
-- {{HTTPMethod("HEAD")}}: The response has representation headers, but no message body.
+- {{HTTPMethod("GET")}}: A resource was retrieved by the server and it's included in the response body.
+- {{HTTPMethod("POST")}}: An action succeeded, the response has a message body describing the result.
+- {{HTTPMethod("HEAD")}}: Identical to `GET`, except there is no message body.
 - {{HTTPMethod("TRACE")}}: The response has a message body containing the request as received by the server.
 
-A successful {{HTTPMethod("PUT")}} or {{HTTPMethod("DELETE")}} request often does not result in a `200 OK` response.
-It is more common to see {{HTTPStatus("201")}} `Created` if the resource is uploaded or created for the first time, or {{HTTPStatus("204")}} `No Content` upon successful deletions.
+Although possible, a successful {{HTTPMethod("PUT")}} or {{HTTPMethod("DELETE")}} request often does not result in a `200 OK` response.
+It is more common to see {{HTTPStatus("201")}} `Created` if the resource is uploaded or created for the first time, or {{HTTPStatus("204")}} `No Content` upon successful deletion of a resource.
 
 ## Status
 
