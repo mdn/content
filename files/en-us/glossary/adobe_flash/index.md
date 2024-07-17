@@ -19,5 +19,5 @@ page-type: glossary-definition
   - Edge: [The End of an Era – Next Steps for Adobe Flash](https://blogs.windows.com/msedgedev/2017/07/25/flash-on-windows-timeline/)
   - Windows: [Microsoft Windows Flash Player removal](https://blogs.windows.com/msedgedev/2020/09/04/update-adobe-flash-end-support/)
   - Facebook: [Migrating Games from Flash to Open Web Standards on Facebook](https://developers.facebook.com/blog/post/2017/07/25/Games-Migration-to-Open-Web-Standards/)
-- Glossary
+- Related glossary terms:
   - {{Glossary("Plugin")}}

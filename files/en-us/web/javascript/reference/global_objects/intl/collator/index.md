@@ -27,8 +27,8 @@ These properties are defined on `Intl.Collator.prototype` and shared by all `Int
 
 - {{jsxref("Object/constructor", "Intl.Collator.prototype.constructor")}}
   - : The constructor function that created the instance object. For `Intl.Collator` instances, the initial value is the {{jsxref("Intl/Collator/Collator", "Intl.Collator")}} constructor.
-- `Intl.Collator.prototype[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Intl.Collator"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+- `Intl.Collator.prototype[Symbol.toStringTag]`
+  - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Intl.Collator"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 

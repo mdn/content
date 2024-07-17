@@ -226,7 +226,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
 
 ### Non-standard values
 
-- `apple-touch-icon`
+- [`apple-touch-icon`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4)
   - : Specifies the icon for a web application on an iOS device.
 
 ## Specifications

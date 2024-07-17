@@ -27,7 +27,7 @@ The `scheme` value is logged to the console to display the scheme of the metadat
 
 ```js
 // given <meta name="identifier" content="1580081754" scheme="ISBN">
-let meta = document.querySelector("meta[name='identifier']");
+const meta = document.querySelector("meta[name='identifier']");
 console.log(meta.scheme);
 // "ISBN"
 ```
