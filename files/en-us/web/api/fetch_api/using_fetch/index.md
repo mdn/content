@@ -51,7 +51,7 @@ To make a request, call `fetch()`, passing in:
    - a {{domxref("Request")}} instance
 2. optionally, an object containing options to configure the request.
 
-In this section we'll look at some of the most commonly-used options. To read about all the options that can be given, see the [`fetch()`](/en-US/docs/Web/API/fetch) reference page.
+In this section we'll look at some of the most commonly-used options. To read about all the options that can be given, see the [`fetch()`](/en-US/docs/Web/API/Window/fetch) reference page.
 
 ### Setting the method
 
@@ -188,7 +188,7 @@ Whether a request can be made cross-origin or not is determined by the value of 
 
 Credentials are cookies, {{glossary("TLS")}} client certificates, or authentication headers containing a username and password.
 
-To control whether or not the browser sends credentials, set the `credentials` option, which can take one of the following three values:
+To control whether or not the browser sends credentials, as well as whether the browser respects any **`Set-Cookie`** response headers, set the `credentials` option, which can take one of the following three values:
 
 - `omit`: never send credentials in the request or include credentials in the response.
 - `same-origin` (the default): only send and include credentials for same-origin requests.

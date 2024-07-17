@@ -44,6 +44,7 @@ These are the `manifest.json` keys; these keys are available in Manifest V2 and 
 - [name](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name)
 - [offline_enabled](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/offline_enabled)
 - [omnibox](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/omnibox)
+- [optional_host_permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_host_permissions) (Manifest V3 and above)
 - [optional_permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions)
 - [options_page](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_page)
 - [options_ui](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui)

@@ -12,7 +12,7 @@ The **`messagesSent`** property of the {{domxref("RTCDataChannelStats")}} dictio
 
 ## Value
 
-A positive integer value indicating the total number of `message` events for outbound data on the the associated data channel.
+A positive integer value indicating the total number of `message` events for outbound data on the associated data channel.
 
 ## Specifications
 

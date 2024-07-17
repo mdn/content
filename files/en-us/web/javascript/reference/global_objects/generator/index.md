@@ -43,8 +43,8 @@ These properties are defined on `Generator.prototype` and shared by all `Generat
 
     > **Note:** `Generator` objects do not store a reference to the generator function that created them.
 
-- `Generator.prototype[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Generator"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+- `Generator.prototype[Symbol.toStringTag]`
+  - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Generator"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 
