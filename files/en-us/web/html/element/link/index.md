@@ -175,7 +175,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : This attribute explicitly indicates that certain operations should be blocked on the fetching of an external resource. It must only be used when the `rel` attribute contains `expect` or `stylesheet` keywords. The operations that are to be blocked must be a space-separated list of blocking tokens listed below.
     - `render`: The rendering of content on the screen is blocked.
 
-- `crossorigin`
+- [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin)
 
   - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute indicates whether {{Glossary("CORS")}} must be used when fetching the resource.
     [CORS-enabled images](/en-US/docs/Web/HTML/CORS_enabled_image) can be reused in the {{HTMLElement("canvas")}} element without being _tainted_.
@@ -243,7 +243,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `unsafe-url` means that the referrer will include the origin and the path (but not the fragment, password, or username).
       This case is unsafe because it can leak origins and paths from TLS-protected resources to insecure origins.
 
-- `rel`
+- [`rel`](/en-US/docs/Web/HTML/Attributes/rel)
   - : This attribute names a relationship of the linked document to the current document. The attribute must be a space-separated list of [link type values](/en-US/docs/Web/HTML/Attributes/rel).
 - `sizes`
 
@@ -255,7 +255,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - a white-space separated list of sizes, each in the format `<width in pixels>x<height in pixels>` or `<width in pixels>X<height in pixels>`. Each of these sizes must be contained in the resource.
 
     > **Note:** Most icon formats are only able to store one single icon; therefore, most of the time, the [`sizes`](#sizes) attribute contains only one entry.
-    > MS's ICO format does, as well as Apple's ICNS. ICO is more ubiquitous, so you should use this format if cross-browser support is a concern (especially for old IE versions).
+    > Microsoft's ICO format and Apple's ICNS format can store multiple icon sizes in a single file. ICO has better browser support, so you should use this format if cross-browser support is a concern.
 
 - `title`
   - : The `title` attribute has special semantics on the `<link>` element.
@@ -268,12 +268,6 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ### Non-standard attributes
 
-- `methods` {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : The value of this attribute provides information about the functions that might be performed on an object.
-    The values generally are given by the HTTP protocol when it is used, but it might (for similar reasons as for the **title** attribute) be useful to include advisory information in advance in the link.
-    For example, the browser might choose a different rendering of a link as a function of the methods specified;
-    something that is searchable might get a different icon, or an outside link might render with an indication of leaving the current site.
-    This attribute is not well understood nor supported, even by the defining browser, Internet Explorer 4.
 - `target` {{Deprecated_Inline}}
   - : Defines the frame or window name that has the defined linking relationship or that will show the rendering of any linked resource.
 
@@ -324,17 +318,30 @@ This provides a way for users to see multiple versions of a page.
 You can include links to several icons on the same page, and the browser will choose which one works best for its particular context using the `rel` and `sizes` values as hints.
 
 ```html
-<!-- third-generation iPad with high-resolution Retina display: -->
-<link rel="apple-touch-icon" sizes="144x144" href="favicon144.png" />
-<!-- iPhone with high-resolution Retina display: -->
-<link rel="apple-touch-icon" sizes="114x114" href="favicon114.png" />
-<!-- first- and second-generation iPad: -->
-<link rel="apple-touch-icon" sizes="72x72" href="favicon72.png" />
-<!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-<link rel="apple-touch-icon" href="favicon57.png" />
+<!-- iPad Pro with high-resolution Retina display: -->
+<link
+  rel="apple-touch-icon"
+  sizes="167x167"
+  href="/apple-touch-icon-167x167.png" />
+<!-- 3x resolution iPhone: -->
+<link
+  rel="apple-touch-icon"
+  sizes="180x180"
+  href="/apple-touch-icon-180x180.png" />
+<!-- non-Retina iPad, iPad mini, etc.: -->
+<link
+  rel="apple-touch-icon"
+  sizes="152x152"
+  href="/apple-touch-icon-152x152.png" />
+<!-- 2x resolution iPhone and other devices: -->
+<link rel="apple-touch-icon" href="/apple-touch-icon-120x120.png" />
 <!-- basic favicon -->
-<link rel="icon" href="favicon32.png" />
+<link rel="icon" href="/favicon.ico" />
 ```
+
+For information about what `sizes` to choose for Apple icons, see [Apple's documentation on configuring web applications](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4) and the referenced [Apple human interface guidelines](https://developer.apple.com/design/human-interface-guidelines/app-icons#App-icon-sizes). Usually, it is sufficient to provide a large image, such as 192x192, and let the browser scale it down as needed, but you may want to provide images with different levels of detail for different sizes, as the Apple design guideline recommends. Providing smaller icons for lower resolutions also saves bandwidth.
+
+It may not be necessary to provide `<link>` elements at all. For example, browsers automatically request `/favicon.ico` from the root of a site, and Apple also automatically requests `/apple-touch-icon-[size].png`, `/apple-touch-icon.png`, etc. However, providing explicit links protects you against changes to these conventions.
 
 ### Conditionally loading resources with media queries
 

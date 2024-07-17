@@ -230,7 +230,7 @@ In this section, we'll look at some of the more common cross-browser JavaScript 
 
 ### Using modern JavaScript/API features
 
-In the [previous article](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#older_browsers_not_supporting_modern_features) we described some of the ways in which HTML and CSS errors and unrecognized features can be handled due to the nature of the languages. JavaScript is not as permissive as HTML and CSS however — if the JavaScript engine encounters mistakes or unrecognized syntax, such as when new, unsupported features are used, more often than not it will throw errors.
+In the [previous article](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS) we described some of the ways in which HTML and CSS errors and unrecognized features can be handled due to the nature of the languages. JavaScript is not as permissive as HTML and CSS however — if the JavaScript engine encounters mistakes or unrecognized syntax, such as when new, unsupported features are used, more often than not it will throw errors.
 
 There are a few strategies for handling new feature support; let's explore the most common ones.
 
@@ -312,7 +312,7 @@ Let's work through an exercise — in this example used for demonstration purpos
    });
    ```
 
-5. If you load it in a browser that doesn't support [Fetch](/en-US/docs/Web/API/fetch), you should still see the flower image appear — cool!
+5. If you load it in a browser that doesn't support [Fetch](/en-US/docs/Web/API/Window/fetch), you should still see the flower image appear — cool!
    ![heading reading fetch basic example with a photo of purple flowers](fetch-image.jpg)
 
 > **Note:** You can find our finished version at [fetch-polyfill-finished.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html) (see also the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html)).
@@ -343,7 +343,7 @@ function browserSupportsAllFeatures() {
 }
 ```
 
-Here we are testing whether the [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) object and [`fetch()`](/en-US/docs/Web/API/fetch) function exist in the browser. If both do, the function returns `true`. If the function returns `false`, then we run the code inside the second part of the conditional — this runs a function called `loadScript()`, which loads the polyfills into the page, then runs `main()` after the loading has finished. `loadScript()` looks like this:
+Here we are testing whether the [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) object and [`fetch()`](/en-US/docs/Web/API/Window/fetch) function exist in the browser. If both do, the function returns `true`. If the function returns `false`, then we run the code inside the second part of the conditional — this runs a function called `loadScript()`, which loads the polyfills into the page, then runs `main()` after the loading has finished. `loadScript()` looks like this:
 
 ```js
 function loadScript(src, done) {

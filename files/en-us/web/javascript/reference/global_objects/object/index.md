@@ -145,7 +145,7 @@ JavaScript also has built-in APIs that produce `null`-prototype objects, especia
 
 - The return value of {{jsxref("Object.groupBy()")}}
 - The `groups` and `indices.groups` properties of the result of {{jsxref("RegExp.prototype.exec()")}}
-- [`Array.prototype[@@unscopables]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@unscopables) (all `@@unscopables` objects should have `null`-prototype)
+- [`Array.prototype[Symbol.unscopables]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables) (all `[Symbol.unscopables]` objects should have `null`-prototype)
 - [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta)
 - Module namespace objects, obtained through [`import * as ns from "module";`](/en-US/docs/Web/JavaScript/Reference/Statements/import#namespace_import) or [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import)
 

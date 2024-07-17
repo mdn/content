@@ -2,12 +2,10 @@
 title: background_color
 slug: Web/Manifest/background_color
 page-type: web-manifest-member
-status:
-  - experimental
 browser-compat: html.manifest.background_color
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}{{SeeCompatTable}}
+{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
 <table class="properties">
   <tbody>

@@ -46,7 +46,7 @@ We can obtain a reference to images on the same page as the canvas by using one 
 
 ### Using images from other domains
 
-Using the [`crossorigin`](/en-US/docs/Web/HTML/Element/img#crossorigin) attribute of an {{HTMLElement("img")}} element (reflected by the {{domxref("HTMLImageElement.crossOrigin")}} property), you can request permission to load an image from another domain for use in your call to `drawImage()`. If the hosting domain permits cross-domain access to the image, the image can be used in your canvas without tainting it; otherwise using the image will [taint the canvas](/en-US/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f).
+Using the [`crossorigin`](/en-US/docs/Web/HTML/Element/img#crossorigin) attribute of an {{HTMLElement("img")}} element (reflected by the {{domxref("HTMLImageElement.crossOrigin")}} property), you can request permission to load an image from another domain for use in your call to `drawImage()`. If the hosting domain permits cross-domain access to the image, the image can be used in your canvas without tainting it; otherwise using the image will [taint the canvas](/en-US/docs/Web/HTML/CORS_enabled_image#security_and_tainted_canvases).
 
 ### Using other canvas elements
 
@@ -54,28 +54,47 @@ Just as with normal images, we access other canvas elements using either the {{d
 
 One of the more practical uses of this would be to use a second canvas element as a thumbnail view of the other larger canvas.
 
-### Creating an image from scratch
+### Creating images from scratch
 
-Another option is to create new {{domxref("HTMLImageElement")}} objects in our script. To do this, you can use the convenient `Image()` constructor:
+Another option is to create new {{domxref("HTMLImageElement")}} objects in our script. To do this, we have the convenience of an `Image()` constructor:
 
 ```js
 const img = new Image(); // Create new img element
 img.src = "myImage.png"; // Set source path
 ```
 
-When this script gets executed, the image starts loading.
-
-If you try to call `drawImage()` before the image has finished loading, it won't do anything (or, in older browsers, may even throw an exception). So you need to be sure to use the load event so you don't try this before the image has loaded:
+When this script gets executed, the image starts loading, but if you try to call `drawImage()` before the image has finished loading, it won't do anything.
+Older browsers may even throw an exception, so you need to be sure to use the [load event](/en-US/docs/Web/API/HTMLElement/load_event) so you don't draw the image to the canvas before it's ready:
 
 ```js
-const img = new Image(); // Create new img element
+const ctx = document.getElementById("canvas").getContext("2d");
+const img = new Image();
+
 img.addEventListener("load", () => {
-  // execute drawImage statements here
+  ctx.drawImage(img, 0, 0);
 });
-img.src = "myImage.png"; // Set source path
+
+img.src = "myImage.png";
 ```
 
-If you're only using one external image this can be a good approach, but once you need to track more than one we need to resort to something more clever. It's beyond the scope of this tutorial to look at image pre-loading tactics, but you should keep that in mind.
+If you're using one external image, this can be a good approach, but once you want to use many images or [lazy-load resources](/en-US/docs/Web/Performance/Lazy_loading), you probably need to wait for all the files to be available before drawing to the canvas.
+The examples below that deal with multiple images use an async function and [Promise.all](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) to wait for all images to load before calling `drawImage()`:
+
+```js
+async function draw() {
+  // Wait for all images to be loaded:
+  await Promise.all(
+    Array.from(document.images).map(
+      (image) =>
+        new Promise((resolve) => image.addEventListener("load", resolve)),
+    ),
+  );
+
+  const ctx = document.getElementById("canvas").getContext("2d");
+  // call drawImage() as usual
+}
+draw();
+```
 
 ### Embedding an image via data: URL
 
@@ -93,15 +112,14 @@ Some disadvantages of this method are that your image is not cached, and for lar
 
 ### Using frames from a video
 
-You can also use frames from a video being presented by a {{HTMLElement("video")}} element (even if the video is not visible). For example, if you have a {{HTMLElement("video")}} element with the ID "myvideo", you can do this:
+You can also use frames from a video being presented by a {{HTMLElement("video")}} element (even if the video is not visible). For example, if you have a {{HTMLElement("video")}} element with the ID "myVideo", you can do this:
 
 ```js
 function getMyVideo() {
   const canvas = document.getElementById("canvas");
   if (canvas.getContext) {
     const ctx = canvas.getContext("2d");
-
-    return document.getElementById("myvideo");
+    return document.getElementById("myVideo");
   }
 }
 ```
@@ -117,7 +135,7 @@ Once we have a reference to our source image object we can use the `drawImage()`
 
 > **Note:** SVG images must specify a width and height in the root \<svg> element.
 
-### Example: A simple line graph
+### Example: A small line graph
 
 In the following example, we will use an external image as the backdrop for a small line graph. Using backdrops can make your script considerably smaller because we can avoid the need for code to generate the background. In this example, we're only using one image, so I use the image object's `load` event handler to execute the drawing statements. The `drawImage()` method places the backdrop at the coordinate (0, 0), which is the top-left corner of the canvas.
 
@@ -144,9 +162,7 @@ function draw() {
   };
   img.src = "backdrop.png";
 }
-```
 
-```js
 draw();
 ```
 
@@ -188,9 +204,7 @@ function draw() {
   };
   img.src = "rhino.jpg";
 }
-```
 
-```js hidden
 draw();
 ```
 
@@ -218,19 +232,23 @@ Slicing can be a useful tool when you want to make compositions. You could have 
 In this example, we'll use the same rhino as in the previous example, but we'll slice out its head and composite it into a picture frame. The picture frame image is a 24-bit PNG which includes a drop shadow. Because 24-bit PNG images include a full 8-bit alpha channel, unlike GIF and 8-bit PNG images, it can be placed onto any background without worrying about a matte color.
 
 ```html
-<html lang="en">
-  <body>
-    <canvas id="canvas" width="150" height="150"></canvas>
-    <div style="display:none;">
-      <img id="source" src="rhino.jpg" width="300" height="227" />
-      <img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
-    </div>
-  </body>
-</html>
+<canvas id="canvas" width="150" height="150"></canvas>
+<div style="display: none;">
+  <img id="source" src="rhino.jpg" width="300" height="227" />
+  <img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
+</div>
 ```
 
 ```js
-function draw() {
+async function draw() {
+  // Wait for all images to be loaded.
+  await Promise.all(
+    Array.from(document.images).map(
+      (image) =>
+        new Promise((resolve) => image.addEventListener("load", resolve)),
+    ),
+  );
+
   const canvas = document.getElementById("canvas");
   const ctx = canvas.getContext("2d");
 
@@ -250,14 +268,18 @@ function draw() {
   // Draw frame
   ctx.drawImage(document.getElementById("frame"), 0, 0);
 }
+
 draw();
 ```
 
-We took a different approach to loading the images this time. Instead of loading them by creating new {{domxref("HTMLImageElement")}} objects, we included them as {{HTMLElement("img")}} tags directly in our HTML source and retrieved the images from those. The images are hidden from output by setting the CSS property {{cssxref("display")}} to none for those images.
+We took a different approach to loading the images this time. Instead of loading them by creating new {{domxref("HTMLImageElement")}} objects, we included them as {{HTMLElement("img")}} tags in our HTML source and retrieved the images from those when drawing to the canvas. The images are hidden from page by setting the CSS property {{cssxref("display")}} to `none` for those images.
 
-{{EmbedLiveSample("Example_Framing_an_image", "", "160")}}
+{{EmbedLiveSample("example_framing_an_image", "", "160")}}
 
-The script itself is very simple. Each {{HTMLElement("img")}} is assigned an ID attribute, which makes them easy to select using {{domxref("document.getElementById()")}}. We then use `drawImage()` to slice the rhino out of the first image and scale him onto the canvas, then draw the frame on top using a second `drawImage()` call.
+Each {{HTMLElement("img")}} is assigned an ID attribute, so we have one for a `source` and one for the `frame`, which makes them easy to select using {{domxref("document.getElementById()")}}.
+We're using [Promise.all](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) to wait for all images to load before calling `drawImage()`.
+`drawImage()` slices the rhino out of the first image and scales it onto the canvas.
+Lastly, we draw the picture frame using a second `drawImage()` call.
 
 ## Art gallery example
 
@@ -265,28 +287,25 @@ In the final example of this chapter, we'll build a little art gallery. The gall
 
 In this case, every image has a fixed width and height, as does the frame that's drawn around them. You could enhance the script so that it uses the image's width and height to make the frame fit perfectly around it.
 
-The code below should be self-explanatory. We loop through the {{domxref("document.images")}} container and add new canvas elements accordingly. Probably the only thing to note, for those not so familiar with the DOM, is the use of the {{domxref("Node.insertBefore")}} method. `insertBefore()` is a method of the parent node (a table cell) of the element (the image) before which we want to insert our new node (the canvas element).
+In the code below, we're using [Promise.all](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) to wait for all images to load before drawing any images to the canvas.
+We loop through the {{domxref("document.images")}} container and add new canvas elements for each one. One other thing to note is the use of the {{domxref("Node.insertBefore")}} method. `insertBefore()` is a method of the parent node (a table cell) of the element (the image) before which we want to insert our new node (the canvas element).
 
 ```html
-<html lang="en">
-  <body>
-    <table>
-      <tr>
-        <td><img src="gallery_1.jpg" /></td>
-        <td><img src="gallery_2.jpg" /></td>
-        <td><img src="gallery_3.jpg" /></td>
-        <td><img src="gallery_4.jpg" /></td>
-      </tr>
-      <tr>
-        <td><img src="gallery_5.jpg" /></td>
-        <td><img src="gallery_6.jpg" /></td>
-        <td><img src="gallery_7.jpg" /></td>
-        <td><img src="gallery_8.jpg" /></td>
-      </tr>
-    </table>
-    <img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
-  </body>
-</html>
+<table>
+  <tr>
+    <td><img src="gallery_1.jpg" /></td>
+    <td><img src="gallery_2.jpg" /></td>
+    <td><img src="gallery_3.jpg" /></td>
+    <td><img src="gallery_4.jpg" /></td>
+  </tr>
+  <tr>
+    <td><img src="gallery_5.jpg" /></td>
+    <td><img src="gallery_6.jpg" /></td>
+    <td><img src="gallery_7.jpg" /></td>
+    <td><img src="gallery_8.jpg" /></td>
+  </tr>
+</table>
+<img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
 ```
 
 And here's some CSS to make things look nice:
@@ -313,8 +332,16 @@ td {
 Tying it all together is the JavaScript to draw our framed images:
 
 ```js
-function draw() {
-  // Loop through all images
+async function draw() {
+  // Wait for all images to be loaded.
+  await Promise.all(
+    Array.from(document.images).map(
+      (image) =>
+        new Promise((resolve) => image.addEventListener("load", resolve)),
+    ),
+  );
+
+  // Loop through all images.
   for (const image of document.images) {
     // Don't add a canvas for the frame image
     if (image.getAttribute("id") !== "frame") {
@@ -336,6 +363,7 @@ function draw() {
     }
   }
 }
+
 draw();
 ```
 

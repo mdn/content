@@ -88,7 +88,7 @@ function format(template, ...args) {
     ...args.map((num) =>
       (Object.is(num, -0)
         ? "-0"
-        : formattedNumbers.get(num) ?? String(num)
+        : (formattedNumbers.get(num) ?? String(num))
       ).padEnd(5),
     ),
   );

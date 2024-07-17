@@ -32,9 +32,9 @@ Not all devices are the same width; you should make sure that your pages work we
 The basic attributes of the "viewport" `<meta>` element include:
 
 - `width`
-  - : Controls the size of the viewport. It can be set to a specific number of pixels like `width=600` or to the special value `device-width`, which is [100vw](/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport), or 100% of the viewport width. Minimum: `1`. Maximum: `10000`. Negative values: ignored.
+  - : Controls the (minimum) size of the viewport (see [viewport width and screen width](#viewport_width_and_screen_width)). It can be set to a specific number of pixels like `width=600` or to the special value `device-width`, which is the physical size of the device screen in CSS pixels. This value establishes the value of the [`vw`](/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport) unit. Minimum: `1`. Maximum: `10000`. Negative values: ignored.
 - `height`
-  - : Controls the size of the viewport. It can be set to a specific number of pixels like `height=400` or to the special value `device-height`, which is [100vh](/en-US/docs/Web/CSS/length#vh), or 100% of the viewport height. Minimum: `1`. Maximum: `10000`. Negative values: ignored.
+  - : Controls the (minimum) size of the viewport (see [viewport width and screen width](#viewport_width_and_screen_width)). It can be set to a specific number of pixels like `height=400` or to the special value `device-height`, which is the physical size of the device screen in CSS pixels. This value establishes the value of the [`vh`](/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport) unit. Minimum: `1`. Maximum: `10000`. Negative values: ignored.
 - `initial-scale`
   - : Controls the zoom level when the page is first loaded. Minimum: `0.1`. Maximum: `10`. Default: `1`. Negative values: ignored.
 - `minimum-scale`
@@ -81,7 +81,7 @@ Allowed values are:
 - `overlays-content`
   - : Neither the {{Glossary("viewport")}} nor the {{Glossary("visual viewport")}} gets resized by the interactive widget.
 
-When the {{Glossary("viewport")}} gets resized, the initial [containing block](/en-US/docs/Web/CSS/Containing_block) also gets resized, thereby affecting the computed size of [viewport units](/en-US/docs/Web/CSS/length#viewport-percentage_lengths).
+When the {{Glossary("viewport")}} gets resized, the initial [containing block](/en-US/docs/Web/CSS/Containing_block) also gets resized, thereby affecting the computed size of [viewport units](/en-US/docs/Web/CSS/length#relative_length_units_based_on_viewport).
 
 ## Common viewport sizes for mobile and tablet devices
 

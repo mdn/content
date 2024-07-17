@@ -58,7 +58,7 @@ console.log(unsafeRedactName(report, "ha.*er")); // "A [REDACTED]s in their name
 console.log(safeRedactName(report, "ha.*er")); // "A hacker called [REDACTED] used special characters in their name to breach the system."
 ```
 
-If `pattern` is an object with a [`Symbol.replace`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) method (including `RegExp` objects), that method is called with the target string and `replacement` as arguments. Its return value becomes the return value of `replaceAll()`. In this case the behavior of `replaceAll()` is entirely encoded by the `@@replace` method, and therefore will have the same result as `replace()` (apart from the extra input validation that the regex is global).
+If `pattern` is an object with a [`Symbol.replace`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) method (including `RegExp` objects), that method is called with the target string and `replacement` as arguments. Its return value becomes the return value of `replaceAll()`. In this case the behavior of `replaceAll()` is entirely encoded by the `[Symbol.replace]()` method, and therefore will have the same result as `replace()` (apart from the extra input validation that the regex is global).
 
 If the `pattern` is an empty string, the replacement will be inserted in between every UTF-16 code unit, similar to [`split()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) behavior.
 
@@ -66,7 +66,7 @@ If the `pattern` is an empty string, the replacement will be inserted in between
 "xxx".replaceAll("", "_"); // "_x_x_x_"
 ```
 
-For more information about how regex properties (especially the [sticky](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky) flag) interact with `replaceAll()`, see [`RegExp.prototype[@@replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace).
+For more information about how regex properties (especially the [sticky](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky) flag) interact with `replaceAll()`, see [`RegExp.prototype[Symbol.replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace).
 
 ## Examples
 

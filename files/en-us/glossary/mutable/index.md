@@ -14,5 +14,5 @@ By contrast, {{Glossary("primitive", "primitive values")}} are immutable — onc
 ## See also
 
 - [Immutable object](https://en.wikipedia.org/wiki/Immutable_object) on Wikipedia
-- Glossary
+- Related glossary terms:
   - {{glossary("Immutable")}}

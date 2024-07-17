@@ -14,7 +14,7 @@ returns the object selected by the specified key. This is for retrieving
 specific records from an object store.
 
 If a value is successfully found, then a structured clone of it is created and set as
-the [`result`](/en-US/docs/Web/API/IDBRequest#attr_result) of the
+the [`result`](/en-US/docs/Web/API/IDBRequest/result) of the
 request object.
 
 > **Note:** This method produces the same result for: a) a record that doesn't exist in the database and b) a record that has an undefined value.

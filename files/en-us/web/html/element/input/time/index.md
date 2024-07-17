@@ -301,7 +301,7 @@ input:valid + span::after {
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong><a href="#value">Value</a></strong></td>
+      <td><strong><a href="/en-US/docs/Web/HTML/Element/input#value">Value</a></strong></td>
       <td>A string representing a time, or empty.</td>
     </tr>
     <tr>
@@ -316,15 +316,17 @@ input:valid + span::after {
       <td>
         <a href="/en-US/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
         <a href="/en-US/docs/Web/HTML/Element/input#list"><code>list</code></a>,
-        <a href="/en-US/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>, and
+        <a href="/en-US/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
         <a href="/en-US/docs/Web/HTML/Element/input#step"><code>step</code></a>
       </td>
     </tr>
     <tr>
       <td><strong>IDL attributes</strong></td>
       <td>
-        <code>value</code>, <code>valueAsDate</code>,
-        <code>valueAsNumber</code>, and <code>list</code>.
+        <a href="/en-US/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#value"><code>value</code></a>,
+        <code>valueAsDate</code>,
+        <code>valueAsNumber</code>
       </td>
     </tr>
     <tr>
