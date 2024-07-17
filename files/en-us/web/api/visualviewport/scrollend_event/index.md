@@ -8,7 +8,7 @@ browser-compat: api.VisualViewport.scrollend_event
 
 {{APIRef("Visual Viewport")}}
 
-The **`scrollend`** event of the {{domxref("VisualViewport")}} interface is fired when a scrolling operation on the visual viewport ends.
+The **`scrollend`** event of the {{domxref("VisualViewport")}} interface is fired when a scrolling operation on the visual viewport ends. This allows you to update an element when a scrolling action is completed. For example, you could use the {{domxref("VisualViewport/resize_event", "resize")}} and {{domxref("VisualViewport/scroll_event", "scroll")}} events to keep an element fixed to the visual viewport as it is pinch-zoomed and scrolled, and update it with new content when scrolling ends using `scrollend`.
 
 ## Syntax
 
@@ -26,21 +26,7 @@ A generic {{domxref("Event")}}.
 
 ## Examples
 
-You can use the `scrollend` event in an {{domxref("EventTarget.addEventListener", "addEventListener()")}} method:
-
-```js
-visualViewport.addEventListener("scrollend", () => {
-  // …
-});
-```
-
-Or use the `onscrollend` event handler property:
-
-```js
-visualViewport.onscrollend = () => {
-  // …
-};
-```
+See the [Visual Viewport API](/en-US/docs/Web/API/Visual_Viewport_API#examples) landing page for a usage demo.
 
 ## Specifications
 
