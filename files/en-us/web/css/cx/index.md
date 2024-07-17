@@ -7,17 +7,18 @@ browser-compat: css.properties.cx
 
 {{CSSRef}}
 
-The **`cx`** [CSS](/en-US/docs/Web/CSS) property defines the x-axis center point of an SVG {{SVGElement("circle")}} or {{SVGElement("ellipse")}} elements. If present, it overrides the element's {{SVGAttr("cx")}} attribute.
+The **`cx`** [CSS](/en-US/docs/Web/CSS) property defines the x-axis center point of an SVG {{SVGElement("circle")}} or {{SVGElement("ellipse")}} element. If present, it overrides the element's {{SVGAttr("cx")}} attribute.
 
 > [!NOTE]
-> While the SVG {{SVGElement("radialGradient")}} element the {{SVGAttr("cx")}} attribute, the `cx` property only applies to {{SVGElement("circle")}} and {{SVGElement("ellipse")}} elements nested in an {{SVGElement("svg")}}. It doesn't apply to `<radialGradient>`, or other SVG elements, or HTML elements or pseudo-elements.
+> While SVG the {{SVGAttr("cx")}} attribute is relevant to the SVG {{SVGElement("radialGradient")}} element, the `cx` property only applies to {{SVGElement("circle")}} and {{SVGElement("ellipse")}} elements nested in an {{SVGElement("svg")}}. It doesn't apply to `<radialGradient>` or other SVG elements nor to HTML elements or pseudo-elements.
 
 ## Syntax
 
 ```css
 /* length and percentage values */
-cx: 3px;
+cx: 20px;
 cx: 20%;
+cx: 20;
 
 /* Global values */
 cx: inherit;
