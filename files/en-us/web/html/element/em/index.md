@@ -31,7 +31,7 @@ This means the right one to use depends on the situation. Neither is for purely 
 
 An example for `<em>` could be: "Just _do_ it already!", or: "We _had_ to do something about it". A person or software reading the text would pronounce the words in italics with an emphasis, using verbal stress.
 
-An example for `<i>` could be: "The _Queen Mary_ sailed last night". Here, there is no added emphasis or importance on the word "Queen Mary". It is merely indicated that the object in question is not a queen named Mary, but a ship named _Queen Mary_. Another example for `<i>` could be: "The word _the_ is an article".
+An example for `<i>` could be: "The <i>Queen Mary</i> sailed last night". Here, there is no added emphasis or importance on the word "Queen Mary". It is merely indicated that the object in question is not a queen named Mary, but a ship named <i>Queen Mary</i>. Another example for `<i>` could be: "The word <i>the</i> is an article".
 
 ## Examples
 
