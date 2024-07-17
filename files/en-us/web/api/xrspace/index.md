@@ -19,9 +19,9 @@ Numeric values such as pose positions are thus coordinates in the corresponding 
 
 Below is a list of interfaces based on the `XRSpace` interface.
 
-- {{domxref("XRBoundedReferenceSpace")}} {{SecureContext_Inline}}
+- {{domxref("XRBoundedReferenceSpace")}}
   - : Represents a reference space which may move within a region of space whose borders are defined by an array of points laid out in clockwise order along the floor to define the passable region of the space. The origin of an `XRBoundedReferenceSpace` is always at floor level, with its X and Z coordinates typically defaulting to a location near the room's center.
-- {{domxref("XRReferenceSpace")}} {{SecureContext_Inline}}
+- {{domxref("XRReferenceSpace")}}
   - : Represents a reference space which is typically expected to remain static for the duration of the {{domxref("XRSession")}}. While objects may move within the space, the space itself remains fixed in place. There are exceptions to this static nature; most commonly, an `XRReferenceSpace` may move in order to adjust based on reconfiguration of the user's headset or other motion-sensitive device.
 - {{domxref("XRJointSpace")}}
   - : Represents the space of an {{domxref("XRHand")}} joint.
