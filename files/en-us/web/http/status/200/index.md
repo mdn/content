@@ -46,6 +46,7 @@ X-Cache: HIT
 Content-Length: 1256
 
 <!doctype html>
+<!-- HTML content will follow here -->
 ```
 
 ### POST response in form submission
