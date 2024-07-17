@@ -121,55 +121,16 @@ There are two multipart types:
 `application/` types are typically binary data, but they can also be text (such as XML and JSON). They are usually data that must be interpreted using a specific application. Some common `application/` types include:
 
 - `application/octet-stream`: This is the default for binary files. As it means _unknown binary_ file, browsers usually don't execute it, or even ask if it should be executed. They treat it as if the {{HTTPHeader("Content-Disposition")}} header was set to `attachment`, and propose a "Save As" dialog.
-- `application/xml`: This is recommended as of [RFC 7303](https://datatracker.ietf.org/doc/html/rfc7303#section-4.1) (section 4.1), but `text/xml` is still used sometimes. You can assign a specific MIME type to a file with `.xml` extension depending on how its contents are meant to be interpreted. For instance, an Atom feed is `application/atom+xml`, but `application/xml` serves as a valid default.
+- `application/xml`: This is recommended as of [RFC 7303](https://datatracker.ietf.org/doc/html/rfc7303#section-4.1) (section 4.1), but `text/xml` is still used sometimes. You can assign a specific MIME type to a file with `.xml` extension depending on how its contents are meant to be interpreted. For instance, an Atom feed is `application/atom+xml`, and XHTML is `application/xhtml+xml`, but `application/xml` serves as a valid default.
+- `application/json`: JSON data. It also accepts subtypes, such as `application/ld+json` for Linked Data JSON (JSON-LD).
+- `application/pdf`: Adobe [Portable Document Format](https://www.adobe.com/acrobat/about-adobe-pdf.html) (PDF)
 - `application/zip`: This is the standard, but beware that Windows uploads .zip with MIME type `application/x-zip-compressed`.
 
-Other common binary data types:
-
-| Extension | Kind of document                                                                           | MIME Type                                                                   |
-| --------- | ------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------- |
-| `.abw`    | [AbiWord](https://en.wikipedia.org/wiki/AbiWord) document                                  | `application/x-abiword`                                                     |
-| `.arc`    | Archive document (multiple files embedded)                                                 | `application/x-freearc`                                                     |
-| `.azw`    | Amazon Kindle eBook format                                                                 | `application/vnd.amazon.ebook`                                              |
-| `.bz`     | BZip archive                                                                               | `application/x-bzip`                                                        |
-| `.bz2`    | BZip2 archive                                                                              | `application/x-bzip2`                                                       |
-| `.cda`    | CD audio                                                                                   | `application/x-cdf`                                                         |
-| `.csh`    | C-Shell script                                                                             | `application/x-csh`                                                         |
-| `.doc`    | Microsoft Word                                                                             | `application/msword`                                                        |
-| `.docx`   | Microsoft Word (OpenXML)                                                                   | `application/vnd.openxmlformats-officedocument.wordprocessingml.document`   |
-| `.eot`    | MS Embedded OpenType fonts                                                                 | `application/vnd.ms-fontobject`                                             |
-| `.epub`   | Electronic publication (EPUB)                                                              | `application/epub+zip`                                                      |
-| `.gz`     | GZip Compressed Archive                                                                    | `application/gzip`                                                          |
-| `.jar`    | Java Archive (JAR)                                                                         | `application/java-archive`                                                  |
-| `.json`   | JSON format                                                                                | `application/json`                                                          |
-| `.jsonld` | JSON-LD format                                                                             | `application/ld+json`                                                       |
-| `.mpkg`   | Apple Installer Package                                                                    | `application/vnd.apple.installer+xml`                                       |
-| `.odp`    | OpenDocument presentation document                                                         | `application/vnd.oasis.opendocument.presentation`                           |
-| `.ods`    | OpenDocument spreadsheet document                                                          | `application/vnd.oasis.opendocument.spreadsheet`                            |
-| `.odt`    | OpenDocument text document                                                                 | `application/vnd.oasis.opendocument.text`                                   |
-| `.ogx`    | OGG                                                                                        | `application/ogg`                                                           |
-| `.pdf`    | Adobe [Portable Document Format](https://www.adobe.com/acrobat/about-adobe-pdf.html) (PDF) | `application/pdf`                                                           |
-| `.php`    | PHP: Hypertext Preprocessor                                                                | `application/x-httpd-php`                                                   |
-| `.ppt`    | Microsoft PowerPoint                                                                       | `application/vnd.ms-powerpoint`                                             |
-| `.pptx`   | Microsoft PowerPoint (OpenXML)                                                             | `application/vnd.openxmlformats-officedocument.presentationml.presentation` |
-| `.rar`    | RAR archive                                                                                | `application/vnd.rar`                                                       |
-| `.rtf`    | Rich Text Format (RTF)                                                                     | `application/rtf`                                                           |
-| `.sh`     | Bourne shell script                                                                        | `application/x-sh`                                                          |
-| `.tar`    | Tape Archive (TAR)                                                                         | `application/x-tar`                                                         |
-| `.vsd`    | Microsoft Visio                                                                            | `application/vnd.visio`                                                     |
-| `.xhtml`  | XHTML                                                                                      | `application/xhtml+xml`                                                     |
-| `.xls`    | Microsoft Excel                                                                            | `application/vnd.ms-excel`                                                  |
-| `.xlsx`   | Microsoft Excel (OpenXML)                                                                  | `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet`         |
-| `.xul`    | XUL                                                                                        | `application/vnd.mozilla.xul+xml`                                           |
-| `.zip`    | ZIP archive                                                                                | `application/zip`                                                           |
-| `.7z`     | [7-zip](https://en.wikipedia.org/wiki/7-Zip) archive                                       | `application/x-7z-compressed`                                               |
+There are a lot of other `application/` types. Some of them are summarized in [the table below](#other_common_types).
 
 ### Text types
 
-As opposed to application data types, `text/` types are always textual. Apart from the text types introduced below, there are some other text types worth mentioning:
-
-- `text/csv`: Comma-separated values (CSV)
-- `text/calendar`: iCalendar format (ICS)
+As opposed to application data types, `text/` types are always textual. The text can either be plain text that can be directly readable, or it can be interpreted by an application. There's no consistent definition for what format is "text" and what is "application", so you should always consult the documentation for the specific MIME type you're using.
 
 #### text/plain
 
@@ -270,6 +231,46 @@ The following are common audio and video MIME types:
 - `video/x-msvideo`: Audio Video Interleave (AVI)
 - [`audio/3gpp`, `video/3gpp`](/en-US/docs/Web/Media/Formats/Containers#3gp): 3GPP container
 - `audio/3gpp2`, `video/3gpp2`, `audio/3gp2`, `video/3gp2`: 3GPP2 container
+
+### Other common types
+
+Most of these types are application data types that are not directly displayed in a browser. They are usually served as downloaded files.
+
+| Extension | Kind of document                                          | MIME Type                                                                   |
+| --------- | --------------------------------------------------------- | --------------------------------------------------------------------------- |
+| `.abw`    | [AbiWord](https://en.wikipedia.org/wiki/AbiWord) document | `application/x-abiword`                                                     |
+| `.arc`    | Archive document (multiple files embedded)                | `application/x-freearc`                                                     |
+| `.azw`    | Amazon Kindle eBook format                                | `application/vnd.amazon.ebook`                                              |
+| `.bz`     | BZip archive                                              | `application/x-bzip`                                                        |
+| `.bz2`    | BZip2 archive                                             | `application/x-bzip2`                                                       |
+| `.cda`    | CD audio                                                  | `application/x-cdf`                                                         |
+| `.csh`    | C-Shell script                                            | `application/x-csh`                                                         |
+| `.doc`    | Microsoft Word                                            | `application/msword`                                                        |
+| `.docx`   | Microsoft Word (OpenXML)                                  | `application/vnd.openxmlformats-officedocument.wordprocessingml.document`   |
+| `.eot`    | MS Embedded OpenType fonts                                | `application/vnd.ms-fontobject`                                             |
+| `.epub`   | Electronic publication (EPUB)                             | `application/epub+zip`                                                      |
+| `.gz`     | GZip Compressed Archive                                   | `application/gzip`                                                          |
+| `.jar`    | Java Archive (JAR)                                        | `application/java-archive`                                                  |
+| `.mpkg`   | Apple Installer Package                                   | `application/vnd.apple.installer+xml`                                       |
+| `.odp`    | OpenDocument presentation document                        | `application/vnd.oasis.opendocument.presentation`                           |
+| `.ods`    | OpenDocument spreadsheet document                         | `application/vnd.oasis.opendocument.spreadsheet`                            |
+| `.odt`    | OpenDocument text document                                | `application/vnd.oasis.opendocument.text`                                   |
+| `.ogx`    | OGG                                                       | `application/ogg`                                                           |
+| `.php`    | PHP: Hypertext Preprocessor                               | `application/x-httpd-php`                                                   |
+| `.ppt`    | Microsoft PowerPoint                                      | `application/vnd.ms-powerpoint`                                             |
+| `.pptx`   | Microsoft PowerPoint (OpenXML)                            | `application/vnd.openxmlformats-officedocument.presentationml.presentation` |
+| `.rar`    | RAR archive                                               | `application/vnd.rar`                                                       |
+| `.rtf`    | Rich Text Format (RTF)                                    | `application/rtf`                                                           |
+| `.sh`     | Bourne shell script                                       | `application/x-sh`                                                          |
+| `.tar`    | Tape Archive (TAR)                                        | `application/x-tar`                                                         |
+| `.vsd`    | Microsoft Visio                                           | `application/vnd.visio`                                                     |
+| `.xls`    | Microsoft Excel                                           | `application/vnd.ms-excel`                                                  |
+| `.xlsx`   | Microsoft Excel (OpenXML)                                 | `application/vnd.openxmlformats-officedocument.spreadsheetml.sheet`         |
+| `.xul`    | XUL                                                       | `application/vnd.mozilla.xul+xml`                                           |
+| `.zip`    | ZIP archive                                               | `application/zip`                                                           |
+| `.7z`     | [7-zip](https://en.wikipedia.org/wiki/7-Zip) archive      | `application/x-7z-compressed`                                               |
+| `.csv`    | Comma-separated values (CSV)                              | `text/csv`                                                                  |
+| `.ics`    | iCalendar format                                          | `text/calendar`                                                             |
 
 ### Multipart types
 
