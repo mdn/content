@@ -14,6 +14,7 @@ The JavaScript exception "invalid regexp group" occurs when the sequence `(?` do
 - `(?<=` for [positive lookbehind](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookbehind_assertion)
 - `(?<!` for negative lookbehind
 - `(?<` for [named capturing groups](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group)
+- `(?-i:`, `(?i:`, `(?m:`, `(?ims-:`, etc. for [modifiers](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Modifier)
 
 `(?` followed by any other character would cause this error.
 
@@ -57,5 +58,6 @@ SyntaxError: Invalid regular expression: unrecognized character after (? (Safari
 - [Capturing group: `(...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group)
 - [Lookahead assertion: `(?=...)`, `(?!...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion)
 - [Lookbehind assertion: `(?<=...)`, `(?<!...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookbehind_assertion)
+- [Modifier: `(?ims-ims:...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Modifier)
 - [Named capturing group: `(?<name>...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group)
 - [Non-capturing group: `(?:...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Non-capturing_group)
