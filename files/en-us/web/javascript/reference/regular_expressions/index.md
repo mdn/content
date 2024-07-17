@@ -55,6 +55,8 @@ Flags are special parameters that can change the way a regular expression is int
 | `v`  | An upgrade to the `u` mode with more Unicode features.                                        | {{jsxref("RegExp/unicodeSets", "unicodeSets")}} |
 | `y`  | Perform a "sticky" search that matches starting at the current position in the target string. | {{jsxref("RegExp/sticky", "sticky")}}           |
 
+The `i`, `m`, and `s` flags can be enabled or disabled for specific parts of a regex using the [modifier](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Modifier) syntax.
+
 The sections below list all available regex syntaxes, grouped by their syntactic nature.
 
 ### Assertions
@@ -86,6 +88,8 @@ Atoms are the most basic units of a regular expression. Each atom _consumes_ one
   - : Matches a character that may not be able to be conveniently represented in its literal form.
 - [Literal character: `a`, `b`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character)
   - : Matches a specific character.
+- [Modifier: `(?ims-ims:...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Modifier)
+  - : Overrides flag settings in a specific part of a regular expression.
 - [Named backreference: `\k<name>`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_backreference)
   - : Matches a previously matched subpattern captured with a named capturing group.
 - [Named capturing group: `(?<name>...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group)

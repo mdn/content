@@ -1,14 +1,14 @@
 ---
-title: fetch() global function
+title: "Window: fetch() method"
 short-title: fetch()
-slug: Web/API/fetch
-page-type: web-api-global-function
+slug: Web/API/Window/fetch
+page-type: web-api-instance-method
 browser-compat: api.fetch
 ---
 
-{{APIRef("Fetch API")}}{{AvailableInWorkers}}
+{{APIRef("Fetch API")}}
 
-The global **`fetch()`** method starts the process of fetching a resource from the network, returning a promise that is fulfilled once the response is available.
+The **`fetch()`** method of the {{domxref("Window")}} interface starts the process of fetching a resource from the network, returning a promise that is fulfilled once the response is available.
 
 The promise resolves to the {{domxref("Response")}} object representing the response to your request.
 
@@ -197,7 +197,8 @@ const myImage = document.querySelector("img");
 
 const myRequest = new Request("flowers.jpg");
 
-fetch(myRequest)
+window
+  .fetch(myRequest)
   .then((response) => {
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
@@ -211,7 +212,7 @@ fetch(myRequest)
 ```
 
 In our [Fetch Request with init example](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-request-with-init) (see [Fetch Request init live](https://mdn.github.io/dom-examples/fetch/fetch-request-with-init)) we do the same thing except that we pass in an _options_ object when we invoke `fetch()`.
-In this case, we can set a {{httpheader("Cache-Control")}} value to indicate what kind of cached responses we're okay with:
+In this case, we can set a {{HTTPHeader("Cache-Control")}} value to indicate what kind of cached responses we're okay with:
 
 ```js
 const myImage = document.querySelector("img");
@@ -260,6 +261,7 @@ const req = new Request("flowers.jpg", options);
 
 ## See also
 
+- {{domxref("WorkerGlobalScope.fetch()")}}
 - [Fetch API](/en-US/docs/Web/API/Fetch_API)
 - [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
 - [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)

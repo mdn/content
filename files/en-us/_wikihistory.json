@@ -24237,10 +24237,6 @@
     "modified": "2020-10-15T21:31:12.560Z",
     "contributors": ["mfluehr", "servinlp", "fscholz", "nmve", "erikadoyle"]
   },
-  "Web/API/CanvasRenderingContext2D/scrollPathIntoView": {
-    "modified": "2020-10-15T21:31:58.837Z",
-    "contributors": ["mfluehr", "fscholz", "nmve"]
-  },
   "Web/API/CanvasRenderingContext2D/setLineDash": {
     "modified": "2020-10-15T21:30:32.898Z",
     "contributors": [
@@ -66867,6 +66863,49 @@
     "modified": "2020-10-15T22:11:52.818Z",
     "contributors": ["wbamberg", "JeffersonScher", "chrisdavidmills"]
   },
+  "Web/API/Window/fetch": {
+    "modified": "2020-10-15T21:33:25.494Z",
+    "contributors": [
+      "mfuji09",
+      "Wind1808",
+      "Sheppy",
+      "Zearin_Galaurum",
+      "chrisdavidmills",
+      "TestPolygon",
+      "bigjilm",
+      "tkrotoff",
+      "old_morfey13",
+      "skellix",
+      "FranklinYu",
+      "sideshowbarker",
+      "tjcrowder",
+      "DamienCassou",
+      "fscholz",
+      "mfulton26",
+      "SiliconSoldier",
+      "satyabhimisetty",
+      "jakubboucek",
+      "AngeloKai",
+      "Yaffle",
+      "cpplearner",
+      "Konrud",
+      "BuonOmo",
+      "kenrick95",
+      "kmiyashiro",
+      "xfq",
+      "arronei",
+      "valtlai",
+      "erikadoyle",
+      "jpmedley",
+      "runn1ng",
+      "ysmood",
+      "jsx",
+      "Sebastianz",
+      "George8211",
+      "matiishyn",
+      "kscarfone"
+    ]
+  },
   "Web/API/Window/find": {
     "modified": "2020-10-16T15:18:21.626Z",
     "contributors": [
@@ -71554,49 +71593,6 @@
       "zeird",
       "Kaku",
       "adria"
-    ]
-  },
-  "Web/API/fetch": {
-    "modified": "2020-10-15T21:33:25.494Z",
-    "contributors": [
-      "mfuji09",
-      "Wind1808",
-      "Sheppy",
-      "Zearin_Galaurum",
-      "chrisdavidmills",
-      "TestPolygon",
-      "bigjilm",
-      "tkrotoff",
-      "old_morfey13",
-      "skellix",
-      "FranklinYu",
-      "sideshowbarker",
-      "tjcrowder",
-      "DamienCassou",
-      "fscholz",
-      "mfulton26",
-      "SiliconSoldier",
-      "satyabhimisetty",
-      "jakubboucek",
-      "AngeloKai",
-      "Yaffle",
-      "cpplearner",
-      "Konrud",
-      "BuonOmo",
-      "kenrick95",
-      "kmiyashiro",
-      "xfq",
-      "arronei",
-      "valtlai",
-      "erikadoyle",
-      "jpmedley",
-      "runn1ng",
-      "ysmood",
-      "jsx",
-      "Sebastianz",
-      "George8211",
-      "matiishyn",
-      "kscarfone"
     ]
   },
   "Web/API/queueMicrotask": {
