@@ -151,11 +151,11 @@ We include three SVG images, each with the same two circles as seen in the previ
   <circle cx="50" cy="50" r="30" />
   <circle cx="50" cy="50" r="30" />
 </svg>
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg">
   <circle cx="50" cy="50" r="30" />
   <circle cx="50" cy="50" r="30" />
 </svg>
-<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
   <circle cx="50" cy="50" r="30" />
   <circle cx="50" cy="50" r="30" />
 </svg>
@@ -184,7 +184,7 @@ circle:first-of-type {
 
 The effect of the CSS `cx` property values differs depending on whether the `viewBox` is defined.
 
-{{EmbedLiveSample("Using unitless values", "300", "800")}}
+{{EmbedLiveSample("Using unitless values", "300", "460")}}
 
 The circle's horizontal center point in `30` in all cases, which is the same value as the radius defined with the {{SVGAttr("r")}} SVG attribute, making the styled green circle abut the left edge of the SVG viewport. When the `viewBox` is omitted, CSS pixels are used, and the `30` is equal to `30px`; the center of green circle in the first SVG is `30` CSS pixels from the left edge of the SVG viewport.
 
