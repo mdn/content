@@ -7,17 +7,20 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.200
 
 {{HTTPSidebar}}
 
-The HTTP **`200 OK`** status response code is part of the `200`-`299` class of [successful responses](/en-US/docs/Web/HTTP/Status#successful_responses) and indicates that a request has succeeded.
-A 200 response is cacheable by default.
+The HTTP **`200 OK`** status response code indicates that a request has succeeded.
+It is part of the `200`-`299` class of [successful responses](/en-US/docs/Web/HTTP/Status#successful_responses).
+A `200 OK` response is cacheable by default.
 
-The meaning of success depends on the HTTP request method used:
+The meaning of a 'successful request' and the type of response a server sends in return depends on the request method.
+A `200 OK` in response to these request methods has the following meaning and results:
 
-- {{HTTPMethod("GET")}}: The resource has been retrieved and is included in the response body.
+- {{HTTPMethod("POST")}}: The requested action has succeeded and the response has a message body that describes the result.
+- {{HTTPMethod("GET")}}: A resource has been successfully retrieved by the server and it's included in the response body.
 - {{HTTPMethod("HEAD")}}: The response has representation headers, but no message body.
-- {{HTTPMethod("POST")}}: The response has a message body that describes the result of the action.
-- {{HTTPMethod("TRACE")}}: The response has a message body with the request message as received by the server.
+- {{HTTPMethod("TRACE")}}: The response has a message body containing the request as received by the server.
 
-The successful result of a {{HTTPMethod("PUT")}} or a {{HTTPMethod("DELETE")}} is often not `200 OK`, but {{HTTPStatus("204")}} `No Content`, or {{HTTPStatus("201")}} `Created` if the resource is uploaded for the first time.
+A successful {{HTTPMethod("PUT")}} or {{HTTPMethod("DELETE")}} request often does not result in a `200 OK` response.
+It is more common to see {{HTTPStatus("201")}} `Created` if the resource is uploaded or created for the first time, or {{HTTPStatus("204")}} `No Content` upon successful deletions.
 
 ## Status
 

@@ -7,12 +7,17 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.204
 
 {{HTTPSidebar}}
 
-The HTTP **`204 No Content`** status response code is part of the `200`-`299` class of [successful responses](/en-US/docs/Web/HTTP/Status#successful_responses) and indicates that a request has succeeded, but the client doesn't need to navigate away from its current page.
+The HTTP **`204 No Content`** status response code indicates that a request has succeeded, but the client doesn't need to navigate away from its current page.
+A `204` response is cacheable by default and an {{HTTPHeader("ETag")}} header is included in such cases.
+It is part of the `200`-`299` class of [successful responses](/en-US/docs/Web/HTTP/Status#successful_responses).
 
-This can be used when implementing "save and continue editing" functionality for an application like a wiki site, for example.
-In this case a {{HTTPMethod("PUT")}} request can be used to save the page, and a `204 No Content` response indicates that the editor should not be replaced by another page.
+A `204 No Content` in response to these request methods has the following meaning and results:
 
-A 204 response is cacheable by default and an {{HTTPHeader("ETag")}} header is included in such cases.
+- {{HTTPMethod("DELETE")}}: the action was successful and no further information is to be supplied.
+- {{HTTPMethod("PUT")}}: the action was successful and the {{HTTPHeader("ETag")}} value contains the entity tag for the new representation of that target resource.
+
+A `204` response can be used when implementing "save and continue editing" functionality for an application like a wiki site, for example.
+In this case, a {{HTTPMethod("PUT")}} request could be used to save the page contents, and a `204 No Content` response indicates to the browser that the editor should not be replaced by other content.
 
 ## Status
 

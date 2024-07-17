@@ -7,9 +7,10 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc3229.html#section-10.4.1
 
 {{HTTPSidebar}}
 
-The HTTP **`226 IM Used`** status response code is part of the `200`-`299` class of [successful responses](/en-US/docs/Web/HTTP/Status#successful_responses) and is used in the context of _HTTP delta encodings_ for a server to indicate that it is returning a {{Glossary("delta")}} in response to a {{HTTPMethod("GET")}} request.
-IM stands for _instance manipulations_, the term used to describe an algorithm generating a _delta_.
+The HTTP **`226 IM Used`** status response code is used in the context of _HTTP delta encodings_ for a server to indicate that it is returning a {{Glossary("delta")}} in response to a {{HTTPMethod("GET")}} request.
+It is part of the `200`-`299` class of [successful responses](/en-US/docs/Web/HTTP/Status#successful_responses).
 
+IM stands for _instance manipulations_, the term used to describe an algorithm generating a _delta_.
 With delta encoding, a client sends a {{HTTPMethod("GET")}} request with an `A-IM:` HTTP header that indicates a preference for a differencing algorithm and the {{HTTPHeader("If-None-Match")}} header to tell the server what version of a resource it has.
 The server responds with deltas relative to a given base document rather than the document in full.
 The server's HTTP response uses the `226` status code, an `IM:` header that describes the diff algorithm used, and may include a `Delta-Base:` header with the {{HTTPHeader("ETag")}} matching the base document associated to the delta.

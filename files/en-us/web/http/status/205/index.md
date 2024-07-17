@@ -7,10 +7,11 @@ spec-urls: https://httpwg.org/specs/rfc9110.html#status.205
 
 {{HTTPSidebar}}
 
-The HTTP **`205 Reset Content`** status response code is part of the `200`-`299` class of [successful responses](/en-US/docs/Web/HTTP/Status#successful_responses) and tells the client to reset the document view.
-An instruction to "Reset Content" can mean clearing the contents of a form, resetting a canvas state, or refreshing a UI, but this is dependent on client implementations.
+The HTTP **`205 Reset Content`** status response code tells the client to reset the document view.
+It is part of the `200`-`299` class of [successful responses](/en-US/docs/Web/HTTP/Status#successful_responses).
 
-This response is intended to support use cases where the user receives content that supports data entry, submits entered data in a request, and then the content is reset for the next entry by the client.
+This response is intended to support use cases where the user receives content that supports data entry, submits user-edited data in a request, and the content is reset for the next entry by the client.
+An instruction to "Reset Content" can mean clearing the contents of a form, resetting a canvas state, or refreshing a UI, but this is dependent on client implementations.
 
 There must be no payload in the response body, and this can be indicated using `Content-Length: 0` response header or `Transfer-Encoding: chunked` response header with an empty chunk.
 
@@ -36,7 +37,7 @@ comment=Hello!
 ```
 
 The server may send a response that indicates that the client should reset a form.
-It's assumed that the client supports resetting the content for entering data via JavaScript on `205` responses, as this is not handled natively by browsers:
+It's assumed that the client supports resetting the content for entering data on `205` responses via JavaScript, as this is not handled natively by browsers:
 
 ```http
 HTTP/1.1 205 Reset Content

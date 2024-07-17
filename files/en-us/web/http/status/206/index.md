@@ -7,8 +7,9 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.206
 
 {{HTTPSidebar}}
 
-The HTTP **`206 Partial Content`** status response code is part of the `200`-`299` class of [successful responses](/en-US/docs/Web/HTTP/Status#successful_responses) and is sent in response to a [range request](/en-US/docs/Web/HTTP/Range_requests).
-The response body contains the requested ranges of data as described in the {{HTTPHeader("Range")}} header of the request.
+The HTTP **`206 Partial Content`** status response code is sent in response to a [range request](/en-US/docs/Web/HTTP/Range_requests).
+The response body contains the ranges of data as described in the {{HTTPHeader("Range")}} header of the request.
+It is part of the `200`-`299` class of [successful responses](/en-US/docs/Web/HTTP/Status#successful_responses).
 
 If there is only one range, the {{HTTPHeader("Content-Type")}} of the whole response is set to the type of the document, and a {{HTTPHeader("Content-Range")}} is provided.
 If several ranges are sent back, the {{HTTPHeader("Content-Type")}} is set to `multipart/byteranges` and each fragment covers one range, with {{HTTPHeader("Content-Range")}} and {{HTTPHeader("Content-Type")}} headers describing it.

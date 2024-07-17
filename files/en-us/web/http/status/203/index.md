@@ -7,12 +7,13 @@ spec-urls: https://httpwg.org/specs/rfc9110.html#status.203
 
 {{HTTPSidebar}}
 
-The HTTP **`203 Non-Authoritative Information`** status response code is part of the `200`-`299` class of [successful responses](/en-US/docs/Web/HTTP/Status#successful_responses) and indicates that the request was successful but the enclosed payload has been modified by a _transforming {{Glossary("Proxy server", "proxy")}}_ from that of the origin server's {{HTTPStatus("200")}} (`OK`) response.
+The HTTP **`203 Non-Authoritative Information`** status response code indicates that the request was successful but the enclosed payload has been modified by a _transforming {{Glossary("Proxy server", "proxy")}}_ from that of the origin server's {{HTTPStatus("200")}} (`OK`) response.
+It is part of the `200`-`299` class of [successful responses](/en-US/docs/Web/HTTP/Status#successful_responses).
 
 The purpose of this status code is to allow transforming proxies to notify clients when changes have been applied to successful responses, since this may impact decisions regarding the content later.
 Transformations to messages typically means modifying responses in a way that are presumed to be desirable to the client, such as a malware filter, a format transcoder, or a privacy filter, or other hints to the client about future requests.
 
-The `203` response is similar to the value [`214`](/en-US/docs/Web/HTTP/Headers/Warning#warning_codes), meaning `Transformation Applied`, of the deprecated {{HTTPHeader("Warning")}} header, which may be applicable to responses with any status code.
+The `203` response is similar to the [`214`](/en-US/docs/Web/HTTP/Headers/Warning#warning_codes) `Transformation Applied` value of the deprecated {{HTTPHeader("Warning")}} header, which may be applicable to responses with any status code.
 
 ## Status
 
