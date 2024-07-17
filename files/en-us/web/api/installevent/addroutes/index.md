@@ -32,7 +32,7 @@ addRoutes(routerRules)
         - `or` {{optional_inline}}
           - : An array of `condition` objects. One set of these defined conditions must be met to match the rule. Conditions defined inside an `or` condition are mutually exclusive with other conditions.
         - `requestMethod` {{optional_inline}}
-          - : A string representing the [HTTP method](/en-US/docs/Web/HTTP/Methods) a request should be sent by for it to match the rule, such as `"GET"`, `"PUT"`, or `"HEAD"`.
+          - : A string representing the [HTTP method](/en-US/docs/Web/HTTP/Methods) a request should be sent by for it to match the rule, such as `"get"`, `"put"`, or `"head"`.
         - `requestMode` {{optional_inline}}
           - : A string representing the [mode](/en-US/docs/Web/API/Request/mode) a request should have for it to match the rule, for example `"same-origin"`, `"no-cors"`, or `"cors"`.
         - `requestDestination` {{optional_inline}}
@@ -59,12 +59,12 @@ addRoutes(routerRules)
 
 ### Return value
 
-None (`undefined`).
+A {{jsxref("Promise")}} that fulfills with `undefined`.
 
 ### Exceptions
 
 - `TypeError` {{domxref("DOMException")}}
-  - : Thrown if one or more of the rules objects inside `routerRules` is invalid, or has a `source` value of `"fetch-event"` when the associated service worker does not have a {{DOMxRef("ServiceWorkerGlobalScope.fetch_event", "fetch")}} event handler.
+  - : Thrown if one or more of the rules objects inside `routerRules` is invalid, or has a `source` value of `"fetch-event"` when the associated service worker does not have a {{DOMxRef("ServiceWorkerGlobalScope.fetch_event", "fetch")}} event handler. Also thrown if you try to combine `or` with another condition type.
 
 ## Examples
 
@@ -102,7 +102,7 @@ addEventListener("install", (event) => {
 
 ### Route certain image type requests to a named cache
 
-In the following example, the browser {{domxref("Cache")}} named `"pictures"` is used for fetching files with extensions of `.png` or `.jpg`.
+In the following example, the browser {{domxref("Cache")}} named `"pictures"` is used for fetching files with extensions of `.png` or `.jpg`:
 
 ```js
 addEventListener("install", (event) => {
@@ -114,6 +114,35 @@ addEventListener("install", (event) => {
       cacheName: "pictures",
     },
   });
+});
+```
+
+> **Note:** If the cache does not exist, the browser defaults to using the network so that the requested resources can still be obtained provided the network is available.
+
+You can't combine `or` with another condition — this results in a `TypeError`. If for example you wanted to match files with extensions of `.png` or `.jpg` but only when the `requestMethod` is `get`, you'd need to specify two separate conditions:
+
+```js
+addEventListener("install", (event) => {
+  event.addRoutes(
+    {
+      condition: {
+        urlPattern: "*.png",
+        requestMethod: "get",
+      },
+      source: {
+        cacheName: "pictures",
+      },
+    },
+    {
+      condition: {
+        urlPattern: "*.jpg",
+        requestMethod: "get",
+      },
+      source: {
+        cacheName: "pictures",
+      },
+    },
+  );
 });
 ```
 
