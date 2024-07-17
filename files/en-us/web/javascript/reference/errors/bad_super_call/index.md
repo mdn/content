@@ -6,7 +6,7 @@ page-type: javascript-error
 
 {{jsSidebar("Errors")}}
 
-The JavaScript exception "super() is only valid in derived class constructors" occurs when the {{jsxref("Operator/super", "super()")}} call is used somewhere that's not the body of a [constructor](/en-US/docs/Web/JavaScript/Reference/Classes/constructor) in a class with [`extends`](/en-US/docs/Web/JavaScript/Reference/Classes/extends) keyword.
+The JavaScript exception "super() is only valid in derived class constructors" occurs when the {{jsxref("Operators/super", "super()")}} call is used somewhere that's not the body of a [constructor](/en-US/docs/Web/JavaScript/Reference/Classes/constructor) in a class with [`extends`](/en-US/docs/Web/JavaScript/Reference/Classes/extends) keyword.
 
 ## Message
 
@@ -24,7 +24,7 @@ SyntaxError: super is not valid in this context. (Safari)
 
 The `super()` call is used to invoke the base constructor of a derived class, so the base class can initialize the {{jsxref("Operators/this", "this")}} object. Using it anywhere else doesn't make sense.
 
-Note that `super()` can be defined in a function, as long as that function is nested within the constructor. However, this function must be then immediately called within the constructor and can't be deferred to be called later, because `super()` must be called exactly once before the constructor returns and cannot be called more than once.
+`super()` can also be defined in an arrow function that's nested within the constructor. However, it cannot be defined in any other kind of function.
 
 ## Examples
 
@@ -42,8 +42,10 @@ class Base {
 
 You cannot call `super()` in a class method, even if that method is called from the constructor:
 
-```js example-bad
-class Base {
+```js example-ba
+class Base {}
+
+class Derived extends Base {
   constructor() {
     this.init();
   }
@@ -74,7 +76,9 @@ Object.setPrototypeOf(Derived, Base);
 You can call `super()` before calling any other method in the constructor:
 
 ```js example-good
-class Base {
+class Base {}
+
+class Derived extends Base {
   constructor() {
     super();
     this.init();
@@ -86,14 +90,16 @@ class Base {
 }
 ```
 
-You can call `super()` in a function that's nested within the constructor:
+You can call `super()` in an arrow function that's nested within the constructor:
 
 ```js example-good
-class Base {
+class Base {}
+
+class Derived extends Base {
   constructor() {
-    function init() {
+    const init = () => {
       super();
-    }
+    };
 
     init();
   }
