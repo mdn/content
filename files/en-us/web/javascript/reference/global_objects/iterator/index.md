@@ -7,28 +7,28 @@ browser-compat: javascript.builtins.Iterator
 
 {{JSRef}}
 
-An **`Iterator`** object is an object that conforms to the [iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol) by providing a `next()` method that returns an iterator result object. All built-in iterators inherit from the `Iterator` class. The `Iterator` class provides a [`@@iterator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/@@iterator) method that returns the iterator object itself, making the iterator also [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol). It also provides some helper methods for working with iterators.
+An **`Iterator`** object is an object that conforms to the [iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol) by providing a `next()` method that returns an iterator result object. All built-in iterators inherit from the `Iterator` class. The `Iterator` class provides a [`[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/Symbol.iterator) method that returns the iterator object itself, making the iterator also [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol). It also provides some helper methods for working with iterators.
 
 ## Description
 
 The following are all built-in JavaScript iterators:
 
-- The _Array Iterator_ returned by {{jsxref("Array.prototype.values()")}}, {{jsxref("Array.prototype.keys()")}}, {{jsxref("Array.prototype.entries()")}}, [`Array.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator), {{jsxref("TypedArray.prototype.values()")}}, {{jsxref("TypedArray.prototype.keys()")}}, {{jsxref("TypedArray.prototype.entries()")}}, [`TypedArray.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator), and [`arguments[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator).
-- The _String Iterator_ returned by [`String.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator).
-- The _Map Iterator_ returned by {{jsxref("Map.prototype.values()")}}, {{jsxref("Map.prototype.keys()")}}, {{jsxref("Map.prototype.entries()")}}, and [`Map.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/@@iterator).
-- The _Set Iterator_ returned by {{jsxref("Set.prototype.values()")}}, {{jsxref("Set.prototype.keys()")}}, {{jsxref("Set.prototype.entries()")}}, and [`Set.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/@@iterator).
-- The _RegExp String Iterator_ returned by [`RegExp.prototype[@@matchAll]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll) and {{jsxref("String.prototype.matchAll()")}}.
+- The _Array Iterator_ returned by {{jsxref("Array.prototype.values()")}}, {{jsxref("Array.prototype.keys()")}}, {{jsxref("Array.prototype.entries()")}}, [`Array.prototype[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator), {{jsxref("TypedArray.prototype.values()")}}, {{jsxref("TypedArray.prototype.keys()")}}, {{jsxref("TypedArray.prototype.entries()")}}, [`TypedArray.prototype[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator), and [`arguments[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/Symbol.iterator).
+- The _String Iterator_ returned by [`String.prototype[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator).
+- The _Map Iterator_ returned by {{jsxref("Map.prototype.values()")}}, {{jsxref("Map.prototype.keys()")}}, {{jsxref("Map.prototype.entries()")}}, and [`Map.prototype[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator).
+- The _Set Iterator_ returned by {{jsxref("Set.prototype.values()")}}, {{jsxref("Set.prototype.keys()")}}, {{jsxref("Set.prototype.entries()")}}, and [`Set.prototype[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator).
+- The _RegExp String Iterator_ returned by [`RegExp.prototype[Symbol.matchAll]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll) and {{jsxref("String.prototype.matchAll()")}}.
 - The {{jsxref("Generator")}} object returned by [generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*).
-- The _Segments Iterator_ returned by the [`[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/@@iterator) method of the [`Segments`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) object returned by [`Intl.Segmenter.prototype.segment()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment).
+- The _Segments Iterator_ returned by the [`[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments/Symbol.iterator) method of the [`Segments`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) object returned by [`Intl.Segmenter.prototype.segment()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment).
 - The _Iterator Helper_ returned by iterator helper methods such as {{jsxref("Iterator.prototype.filter()")}} and {{jsxref("Iterator.prototype.map()")}}.
 
-Each of these iterators have a distinct prototype object, which defines the `next()` method used by the particular iterator. For example, all string iterator objects inherit from a hidden object `StringIteratorPrototype`, which has a `next()` method that iterates this string by code points. `StringIteratorPrototype` also has a [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property whose initial value is the string `"String Iterator"`. This property is used in {{jsxref("Object.prototype.toString()")}}. Similarly, other iterator prototypes also have their own `@@toStringTag` values, which are the same as the names given above.
+Each of these iterators have a distinct prototype object, which defines the `next()` method used by the particular iterator. For example, all string iterator objects inherit from a hidden object `StringIteratorPrototype`, which has a `next()` method that iterates this string by code points. `StringIteratorPrototype` also has a [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property whose initial value is the string `"String Iterator"`. This property is used in {{jsxref("Object.prototype.toString()")}}. Similarly, other iterator prototypes also have their own `[Symbol.toStringTag]` values, which are the same as the names given above.
 
-All of these prototype objects inherit from `Iterator.prototype`, which provides a [`@@iterator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) method that returns the iterator object itself, making the iterator also [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol).
+All of these prototype objects inherit from `Iterator.prototype`, which provides a [`[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) method that returns the iterator object itself, making the iterator also [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol).
 
 ### Iterator helpers
 
-> **Note:** These methods are _iterator_ helpers, not _iterable_ helpers, because the only requirement for an object to be iterable is just the presence of a `@@iterator` method. There is no shared prototype to install these methods on.
+> **Note:** These methods are _iterator_ helpers, not _iterable_ helpers, because the only requirement for an object to be iterable is just the presence of a `[Symbol.iterator]()` method. There is no shared prototype to install these methods on.
 
 The `Iterator` class itself provides some helper methods for working with iterators. For example, you may be tempted to do the following:
 
@@ -132,11 +132,11 @@ These properties are defined on `Iterator.prototype` and shared by all `Iterator
 
 - {{jsxref("Object/constructor", "Iterator.prototype.constructor")}}
   - : The constructor function that created the instance object. For `Iterator` instances, the initial value is the {{jsxref("Iterator/Iterator", "Iterator")}} constructor.
-- `Iterator.prototype[@@toStringTag]`
+- `Iterator.prototype[Symbol.toStringTag]`
 
-  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Iterator"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+  - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Iterator"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
-    > **Note:** Unlike the `@@toStringTag` on most built-in classes, `Iterator.prototype[@@toStringTag]` is writable for web compatibility reasons.
+    > **Note:** Unlike the `[Symbol.toStringTag]` on most built-in classes, `Iterator.prototype[Symbol.toStringTag]` is writable for web compatibility reasons.
 
 ## Instance methods
 
@@ -162,7 +162,7 @@ These properties are defined on `Iterator.prototype` and shared by all `Iterator
   - : Returns a new iterator helper that yields the given number of elements in this iterator and then terminates.
 - {{jsxref("Iterator.prototype.toArray()")}} {{experimental_inline}}
   - : Creates a new {{jsxref("Array")}} instance populated with the elements yielded from the iterator.
-- [`Iterator.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/@@iterator)
+- [`Iterator.prototype[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/Symbol.iterator)
   - : Returns the iterator object itself. This allows iterator objects to also be iterable.
 
 ## Examples

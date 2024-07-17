@@ -23,11 +23,11 @@ write(message, options)
 
 - `message`
 
-  - : The message to be written, either a string object or literal, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}},
+  - : The message to be written, either a string, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}},
     a {{jsxref("DataView")}}, or an array of records. A record has the following members:
 
     - `data` {{optional_inline}}
-      - : Contains the data to be transmitted, a string object or literal, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}},
+      - : Contains the data to be transmitted, a string, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}},
         a {{jsxref("DataView")}}, or an array of nested records
     - `encoding` {{optional_inline}}
       - : A string specifying the record's encoding.

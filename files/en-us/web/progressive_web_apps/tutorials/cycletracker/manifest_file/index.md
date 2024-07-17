@@ -87,7 +87,7 @@ Add presentation definitions to the manifest file you began creating in the prev
 
 As the example application is a single page, we can use `"/"` as the `start_url`, or omit the member altogether. For that same reason, we can display the app without the browser UI by setting the `display` to `standalone`.
 
-In [our CSS](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS#css_file), the `background-color: #efe;` is set on the `body` element selector. We use `#eeffee` to ensure a smooth transition from placeholder appearance to app load.
+In [our CSS](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS#css_content), the `background-color: #efe;` is set on the `body` element selector. We use `#eeffee` to ensure a smooth transition from placeholder appearance to app load.
 
 ```js
 {
@@ -238,7 +238,7 @@ The {{HTMLelement("head")}} of `index.html` may now look similar to:
 
 View the [`cycletracker.json` file](https://mdn.github.io/pwa-examples/cycletracker/manifest_file/cycletracker.json) and view the [project source code](https://github.com/mdn/pwa-examples/blob/main/cycletracker/manifest_file/) on GitHub.
 
-With a manifest file and and when loaded from an `https://` URL (or `localhost`), [most browsers](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#browser_support) will recognize your site as a PWA and some will prompt to install it. To make our PWA work offline, we'll still need to add a service worker.
+With a manifest file and when loaded from an `https://` URL (or `localhost`), [most browsers](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#browser_support) will recognize your site as a PWA and some will prompt to install it. To make our PWA work offline, we'll still need to add a service worker.
 
 ## Debugging manifest files
 

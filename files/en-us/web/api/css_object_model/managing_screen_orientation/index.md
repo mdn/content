@@ -143,7 +143,7 @@ The Screen Orientation API is made to prevent or handle such a change.
 
 ### Listening to orientation changes
 
-Each time the orientation of the screen changes, the {{domxref("Window.orientationchange_event", "orientationchange")}} event is triggered:
+Each time the orientation of the screen changes, the {{domxref("ScreenOrientation.change_event", "change")}} event of the {{domxref("ScreenOrientation")}} interface is triggered:
 
 ```js
 screen.orientation.addEventListener("change", () => {
@@ -163,13 +163,13 @@ screen.orientation.lock();
 
 It returns a [promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that resolves after the lock succeeds.
 
-> **Note:** A screen lock is web application dependent. If application A is locked to `landscape` and application B is locked to `portrait`, switching from application A to B or B to A will not fire an {{domxref("Window.orientationchange_event", "orientationchange")}} event because both applications will keep the orientation they had.
+> **Note:** A screen lock is web application dependent. If application A is locked to `landscape` and application B is locked to `portrait`, switching from application A to B or B to A will not fire a `change` event on `ScreenOrientation` because both applications will keep the orientation they had.
 >
-> However, locking the orientation can fire an {{domxref("Window.orientationchange_event", "orientationchange")}} event if the orientation had to be changed to satisfy the lock requirements.
+> However, locking the orientation can fire an `change` event if the orientation had to be changed to satisfy the lock requirements.
 
 ## See also
 
 - {{domxref("Screen.orientation", "screen.orientation")}}
 - {{domxref("ScreenOrientation")}}
-- {{DOMxRef("Screen.orientationchange_event", "orientationchange")}} event
+- {{DOMxRef("ScreenOrientation.change_event", "change")}} event of {{domxref("ScreenOrientation")}}
 - [The orientation media query](/en-US/docs/Web/CSS/@media/orientation)

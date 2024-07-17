@@ -62,11 +62,13 @@ demo on GitHub, and [view it live](https://mdn.github.io/webassembly-examples/js
 directly streams a Wasm module from an underlying source then
 compiles and instantiates it, the promise fulfilling with a `ResultObject`.
 Because the `instantiateStreaming()` function accepts a promise for a [`Response`](/en-US/docs/Web/API/Response)
-object, you can directly pass it a [`fetch()`](/en-US/docs/Web/API/fetch)
+object, you can directly pass it a [`fetch()`](/en-US/docs/Web/API/Window/fetch)
 call, and it will pass the response into the function when it fulfills.
 
 ```js
-const importObject = { imports: { imported_func: (arg) => console.log(arg) } };
+const importObject = {
+  my_namespace: { imported_func: (arg) => console.log(arg) },
+};
 
 WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
   (obj) => obj.instance.exports.exported_func(),

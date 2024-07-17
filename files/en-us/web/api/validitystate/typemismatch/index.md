@@ -8,7 +8,7 @@ browser-compat: api.ValidityState.typeMismatch
 
 {{APIRef("HTML DOM")}}
 
-The read-only **`typeMismatch`** property of a **[`ValidityState`](/en-US/docs/Web/API/ValidityState)** object indicates if the value of an {{HTMLElement("input")}}, after having been edited by the user, does not conform to the constraints set by the element's [`type`](/en-US/docs/Web/HTML/Element/input#input_types) attribute.
+The read-only **`typeMismatch`** property of the [`ValidityState`](/en-US/docs/Web/API/ValidityState) interface indicates if the value of an {{HTMLElement("input")}}, after having been edited by the user, does not conform to the constraints set by the element's [`type`](/en-US/docs/Web/HTML/Element/input#input_types) attribute.
 
 If the `type` attribute expects specific strings, such as the {{HTMLElement("input/email", "email")}} and {{HTMLElement("input/url", "url")}} types and the value doesn't conform to the constraints set by the type, the `typeMismatch` property will be true.
 
@@ -21,21 +21,26 @@ The {{HTMLElement("input/url", "url")}} input type expects one or more valid URL
 | {{HTMLElement("input/email", "email")}} | `x@y` or `x@y.z`  | email address, with or without [TLD](/en-US/docs/Glossary/TLD) |
 | {{HTMLElement("input/url", "url")}}     | `x:` or `x://y.z` | protocol or full URL with protocol                             |
 
+## Value
+
+A boolean that is `true` if the `ValidityState` does not conform to the constraints.
+
 ## Examples
 
-Given the following:
+### Type mismatch on input element
+
+The `typeMismatch` occurs when there is a disconnect between the [`value`](/en-US/docs/Web/HTML/Element/input#value) expected via the [`type`](/en-US/docs/Web/HTML/Element/input#input_types) attribute and the data that is actually present.
+The `typeMismatch` is only one of the many possible errors and is only relevant for the {{HTMLElement("input/email", "email")}} and {{HTMLElement("input/url", "url")}} types.
+When the value provided doesn't match the expected value based on the type for other input types, you get different errors.
+For example, if the {{HTMLElement("input/number", "number")}} input value is not a floating point number, the `badInput` is `true`.
+If the email is [`required`](/en-US/docs/Web/HTML/Attributes/required) but is empty, the {{domxref('ValidityState.valueMissing','valueMissing')}} will be `true`.
 
 ```html
+<pre id="log">Validation logged here...</pre>
 <p>
   <label>
     Enter an email address:
-    <input type="email" value="example.com" />
-  </label>
-</p>
-<p>
-  <label>
-    Enter a URL:
-    <input type="url" value="example.com" />
+    <input id="emailInput" type="email" value="example.com" required />
   </label>
 </p>
 ```
@@ -46,11 +51,39 @@ input:invalid {
 }
 ```
 
-{{EmbedLiveSample("Examples", 300, 110)}}
+```css hidden
+body {
+  margin: 0.5rem;
+}
+pre {
+  padding: 1rem;
+  height: 2rem;
+  background-color: lightgrey;
+  outline: 1px solid grey;
+}
+```
 
-The above each produce a `typeMismatch` because the email address is just a domain and the URL has no protocol
+```js
+const emailInput = document.getElementById("emailInput");
+const logElement = document.getElementById("log");
 
-The `typeMismatch` occurs when there is a disconnect between the [`value`](/en-US/docs/Web/HTML/Attributes/value) expected via the [`type`](/en-US/docs/Web/HTML/Element/input#input_types) attribute and the data that is actually present. The `typeMismatch` is only one of the many possible errors and is only relevant for the {{HTMLElement("input/email", "email")}} and {{HTMLElement("input/url", "url")}} types. When the value provided doesn't match the expected value based on the type for other input types, you get different errors. For example, if the {{HTMLElement("input/number", "number")}} input value is not a floating point number, the `badInput` is `true`. If the email is [`required`](/en-US/docs/Web/HTML/Attributes/required) but is empty, the {{domxref('ValidityState.valueMissing','valueMissing')}} will be `true`.
+function log(text) {
+  logElement.innerText = text;
+}
+
+emailInput.addEventListener("input", () => {
+  emailInput.reportValidity();
+  if (emailInput.validity.valid) {
+    log("Input OK…");
+  } else if (emailInput.validity.typeMismatch) {
+    log("Input is not an email.");
+  } else {
+    log("Validation failed: " + emailInput.validationMessage);
+  }
+});
+```
+
+{{EmbedLiveSample("Examples", "100%", "160")}}
 
 ## Specifications
 
@@ -62,6 +95,7 @@ The `typeMismatch` occurs when there is a disconnect between the [`value`](/en-U
 
 ## See also
 
+- ValidityState [badInput](/en-US/docs/Web/API/ValidityState/badInput), [valid](/en-US/docs/Web/API/ValidityState/valid), [customError](/en-US/docs/Web/API/ValidityState/customError) properties.
 - [Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
 - [Forms: Data form validation](/en-US/docs/Learn/Forms/Form_validation)
 - [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)

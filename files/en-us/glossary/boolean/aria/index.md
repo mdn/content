@@ -12,4 +12,5 @@ In ARIA, booleans only come in the form of strings `"true"` and `"false"`.
 
 ## See also
 
-- {{Glossary("Enumerated")}} that contains more behavioral details and examples of ARIA boolean attributes
+- Related glossary terms:
+  - {{Glossary("Enumerated")}} that contains more behavioral details and examples of ARIA boolean attributes
