@@ -17,6 +17,8 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("ellipse")}}
 - {{SVGElement("radialGradient")}}
 
+> **Note:** As a _geometry property_, {{cssxref("cy")}} can also be used as CSS property for `<circle>` and `<ellipse>`.
+
 ## Example
 
 ```css hidden
@@ -63,8 +65,6 @@ For {{SVGElement('circle')}}, `cy` defines the y-axis coordinate of the center o
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `cy` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for circles.
-
 ## ellipse
 
 For {{SVGElement('ellipse')}}, `cy` defines the y-axis coordinate of the center of the shape.
@@ -85,8 +85,6 @@ For {{SVGElement('ellipse')}}, `cy` defines the y-axis coordinate of the center 
     </tr>
   </tbody>
 </table>
-
-> **Note:** Starting with SVG2, `cy` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for ellipses.
 
 ## radialGradient
 
@@ -175,3 +173,6 @@ svg {
 
 - {{SVGAttr("cx")}}
 - {{SVGAttr("r")}}
+- {{SVGAttr("rx")}}
+- {{SVGAttr("ry")}}
+- Geometry properties: {{cssxref("cx")}}, {{cssxref("cy")}}, {{cssxref("r")}}, {{cssxref("rx")}}, {{cssxref("ry")}}, {{cssxref("x")}}, {{cssxref("y")}}, {{cssxref("width")}}, {{cssxref("height")}}
