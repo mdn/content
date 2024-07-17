@@ -32,21 +32,21 @@ The promise may reject with the following exception types:
 ## Examples
 
 ```js
-async function playEffect() {
-  const result = await gamepad.vibrationActuator.playEffect("dual-rumble", {
+const gamepad = navigator.getGamepads()[0];
+
+setTimeout(() => {
+  gamepad.vibrationActuator.reset();
+}, 150);
+
+gamepad.vibrationActuator
+  .playEffect("dual-rumble", {
     startDelay: 0,
     duration: 200,
     weakMagnitude: 1.0,
     strongMagnitude: 1.0,
-  });
-
-  setTimeout(() => {
-    gamepad.vibrationActuator.reset();
-  }, 150);
-
-  // Should log "preempted" because reset() was called before the end of the effect
-  console.log(result);
-}
+  })
+  .then((result) => console.log(result));
+// Should log "preempted" because reset() will run before the effect ends
 ```
 
 ## Specifications

@@ -67,17 +67,15 @@ The promise may reject with the following exception types:
 ```js
 const gamepad = navigator.getGamepads()[0];
 
-async function playEffect() {
-  const result = await gamepad.vibrationActuator.playEffect("dual-rumble", {
+gamepad.vibrationActuator
+  .playEffect("dual-rumble", {
     startDelay: 0,
     duration: 200,
     weakMagnitude: 1.0,
     strongMagnitude: 1.0,
-  });
-
-  // Should log "complete" if effect successfully runs
-  console.log(result);
-}
+  })
+  .then((result) => console.log(result));
+// Should log "complete" if effect successfully runs
 ```
 
 ## Specifications
