@@ -17,6 +17,7 @@ The server's HTTP response uses the `226` status code, an `IM:` header that desc
 
 > **Warning:**
 > Poor support for HTTP delta encodings means there are few implementations, and instead most systems rely solely on [compression methods](/en-US/docs/Web/HTTP/Compression) to reduce bandwidth, although a combination of compression and delta encodings is possible.
+>
 > Even if the client and server support delta encodings, proxies or caches may not, and the complexity of adding HTTP delta encodings to a system may outweigh the benefits.
 
 ## Status
