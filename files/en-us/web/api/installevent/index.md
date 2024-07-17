@@ -2,12 +2,10 @@
 title: InstallEvent
 slug: Web/API/InstallEvent
 page-type: web-api-interface
-status:
-  - deprecated
 browser-compat: api.InstallEvent
 ---
 
-{{APIRef("Service Workers API")}}{{Deprecated_Header}}
+{{APIRef("Service Workers API")}}
 
 > **Note:** Instead of using the deprecated `ServiceWorkerGlobalScope.oninstall` handler to catch events of this type, handle the (non-deprecated) {{domxref("ServiceWorkerGlobalScope/install_event", "install")}} event using a listener added with {{domxref("EventTarget/addEventListener", "addEventListener")}}.
 
