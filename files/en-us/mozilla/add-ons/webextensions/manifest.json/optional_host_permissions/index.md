@@ -39,7 +39,7 @@ Use the `optional_host_permissions` key to enable runtime requests for access (a
 
 See [`host_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) for more information on defining hosts.
 
-Use the {{webextapiref("permissions")}} API to ask for a permission. Asking for a permission may present the user with a dialog requesting they grant the host permission to your extension.
+Use the {{webextapiref("permissions")}} API to request an optional host permission at runtime. Requesting a host permission may present the user with a dialog asking whether they want to grant the permission to your extension.
 
 ## Example
 
