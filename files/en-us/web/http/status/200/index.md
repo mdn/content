@@ -27,7 +27,7 @@ The successful result of a {{HTTPMethod("PUT")}} or a {{HTTPMethod("DELETE")}} i
 
 ## Examples
 
-### GET response
+### Receiving a `200 OK` for a GET request
 
 Making a successful GET request to `https://example.com` returns the following response with the HTML contained in the message body:
 
@@ -62,7 +62,7 @@ Content-Length: 50
 name=Brian%20Smith&email=brian.smith%40example.com
 ```
 
-An example response could look like this:
+In this example, a response with a `200 OK` status could look like this:
 
 ```http
 HTTP/1.1 200 OK
@@ -87,4 +87,4 @@ Content-Type: application/json
 
 - [HTTP request methods](/en-US/docs/Web/HTTP/Methods)
 - [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
-- {{Glossary("Idempotent")}} Glossary entry
+- Glossary: {{Glossary("Idempotent")}}

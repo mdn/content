@@ -7,8 +7,8 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.201
 
 {{HTTPSidebar}}
 
-The HTTP **`201 Created`** status response code is part of the `200`-`299` class of [successful responses](/en-US/docs/Web/HTTP/Status#successful_responses) and indicates that the request has led to the creation of a resource.
-The new resource or a description and link to the new resource is created before the response is returned and the newly-created items are returned in the body of the message, located at either the URL of the request, or at the URL in the value of the {{HTTPHeader("Location")}} header.
+The HTTP **`201 Created`** status response code indicates that the HTTP request has led to the creation of a resource. This status code is commonly sent as the result of a {{HTTPMethod("POST")}} request.
+The new resource or a description and link to the new resource is created before the response is returned. The newly-created items are returned in the body of the message, located at either the URL of the request or the URL in the value of the {{HTTPHeader("Location")}} header. This status code is part of the `200`-`299` class of [successful responses](/en-US/docs/Web/HTTP/Status#successful_responses).
 
 This status code is commonly sent as the result of a {{HTTPMethod("POST")}} request.
 
@@ -20,9 +20,9 @@ This status code is commonly sent as the result of a {{HTTPMethod("POST")}} requ
 
 ## Examples
 
-### Response indicating new user created
+### Receiving a response indicating user creation
 
-Assuming a REST API exists with an endpoint to manage users at `http://example.com/users` and a `POST` request with the following body will create a user:
+Let's assume there's a REST API for managing users with an endpoint at `http://example.com/users`. In this example, we send a `POST` request with the following body to create a user:
 
 ```http
 POST /users HTTP/1.1
@@ -36,7 +36,7 @@ Content-Type: application/json
 }
 ```
 
-A generic 201 response may look like this:
+After successful user creation, the `201 Created` response will look like this:
 
 ```http
 HTTP/1.1 201 Created

@@ -8,10 +8,10 @@ spec-urls: https://httpwg.org/specs/rfc9110.html#status.202
 {{HTTPSidebar}}
 
 The HTTP **`202 Accepted`** status response code is part of the `200`-`299` class of [successful responses](/en-US/docs/Web/HTTP/Status#successful_responses) and indicates that a request has been accepted for processing, but processing has not been completed or may even not have started yet.
-The request may or may not eventually be acted upon, as it may be disallowed when processing begins.
+The processing of the request is not guaranteed; it may be disallowed when processing begins.
 
-A `202` response is non-committal, meaning that there is no way to later send an asynchronous HTTP response indicating the outcome of processing the request.
-It is intended for cases where another process or server handles the request, or for batch processing.
+A `202` response is non-committal, meaning there is no way to later send an asynchronous HTTP response to indicate the outcome of the processing.
+This response code is typically used when the request is handled by another process or server, or when requests are processed in batches.
 
 ## Status
 
@@ -23,7 +23,7 @@ It is intended for cases where another process or server handles the request, or
 
 ### Begin automated task
 
-In the following example, we want to kick off an automation process that performs a common task in the system:
+In the following example, we want to kick off an automation process to email dog owners about the pickup task:
 
 ```http
 POST /tasks HTTP/1.1
@@ -36,7 +36,7 @@ Content-Type: application/json
 }
 ```
 
-The following response indicates that the request is allowed, and the task is scheduled to begin:
+The following response indicates that the request to start task has been accepted for processing:
 
 ```http
 HTTP/1.1 202 Accepted
