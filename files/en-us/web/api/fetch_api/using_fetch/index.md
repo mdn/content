@@ -6,219 +6,477 @@ page-type: guide
 
 {{DefaultAPISidebar("Fetch API")}}
 
-The [Fetch API](/en-US/docs/Web/API/Fetch_API) provides a JavaScript interface for accessing and manipulating parts of the [protocol](/en-US/docs/Glossary/Protocol), such as requests and responses. It also provides a global {{domxref("fetch()")}} method that provides an easy, logical way to fetch resources asynchronously across the network.
+The [Fetch API](/en-US/docs/Web/API/Fetch_API) provides a JavaScript interface for making HTTP requests and processing the responses.
 
-Unlike {{domxref("XMLHttpRequest")}} that is a callback-based API, Fetch is promise-based and provides a better alternative that can be easily used in [service workers](/en-US/docs/Web/API/Service_Worker_API). Fetch also integrates advanced HTTP concepts such as [CORS](/en-US/docs/Web/HTTP/CORS) and other extensions to HTTP.
+Fetch is the modern replacement for {{domxref("XMLHttpRequest")}}: unlike `XMLHttpRequest`, which uses callbacks, Fetch is promise-based and is integrated with features of the modern web such as [service workers](/en-US/docs/Web/API/Service_Worker_API) and [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS).
 
-A basic fetch request looks like this:
+With the Fetch API, you make a request by calling {{domxref("fetch()")}}, which is available as a global function in both {{domxref("Window", "window", "", "", "nocode")}} and {{domxref("WorkerGlobalScope", "worker", "", "", "nocode")}} contexts. You pass it a {{domxref("Request")}} object or a string containing the URL to fetch, along with an optional argument to configure the request.
+
+The `fetch()` function returns a {{jsxref("Promise")}} which is fulfilled with a {{domxref("Response")}} object representing the server's response. You can then check the request status and extract the body of the response in various formats, including text and JSON, by calling the appropriate method on the response.
+
+Here's a minimal function that uses `fetch()` to retrieve some JSON data from a server:
 
 ```js
-async function logMovies() {
-  const response = await fetch("http://example.com/movies.json");
-  const movies = await response.json();
-  console.log(movies);
+async function getData() {
+  const url = "https://example.org/products.json";
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Response status: ${response.status}`);
+    }
+
+    const json = await response.json();
+    console.log(json);
+  } catch (error) {
+    console.error(error.message);
+  }
 }
 ```
 
-Here we are fetching a JSON file across the network, parsing it, and printing the data to the console. The simplest use of `fetch()` takes one argument — the path to the resource you want to fetch — and does not directly return the JSON response body but instead returns a promise that resolves with a {{domxref("Response")}} object.
+We declare a string containing the URL and then call `fetch()`, passing the URL with no extra options.
 
-The {{domxref("Response")}} object, in turn, does not directly contain the actual JSON response body but is instead a representation of the entire HTTP response. So, to extract the JSON body content from the {{domxref("Response")}} object, we use the {{domxref("Response.json()", "json()")}} method, which returns a second promise that resolves with the result of parsing the response body text as JSON.
+The `fetch()` function will reject the promise on some errors, but not if the server responds with an error status like {{httpstatus("404")}}: so we also check the response status and throw if it is not OK.
 
-> **Note:** See the [Body](#body) section for similar methods to extract other types of body content.
+Otherwise, we fetch the response body content as {{glossary("JSON")}} by calling the {{domxref("Response.json()", "json()")}} method of `Response`, and log one of its values. Note that like `fetch()` itself, `json()` is asynchronous, as are all the other methods to access the response body content.
 
-Fetch requests are controlled by the `connect-src` directive of [Content Security Policy](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) rather than the directive of the resources it's retrieving.
+In the rest of this page we'll look in more detail at the different stages of this process.
 
-## Supplying request options
+## Making a request
 
-The `fetch()` method can optionally accept a second parameter, an `init` object that allows you to control a number of different settings:
+To make a request, call `fetch()`, passing in:
 
-See {{domxref("fetch()")}} for the full options available, and more details.
+1. a definition of the resource to fetch. This can be any one of:
+   - a string containing the URL
+   - an object, such an instance of {{domxref("URL")}}, which has a {{glossary("stringifier")}} that produces a string containing the URL
+   - a {{domxref("Request")}} instance
+2. optionally, an object containing options to configure the request.
+
+In this section we'll look at some of the most commonly-used options. To read about all the options that can be given, see the [`fetch()`](/en-US/docs/Web/API/Window/fetch) reference page.
+
+### Setting the method
+
+By default, `fetch()` makes a {{httpmethod("GET")}} request, but you can use the `method` option to use a different [request method](/en-US/docs/Web/HTTP/Methods):
 
 ```js
-// Example POST method implementation:
-async function postData(url = "", data = {}) {
-  // Default options are marked with *
-  const response = await fetch(url, {
-    method: "POST", // *GET, POST, PUT, DELETE, etc.
-    mode: "cors", // no-cors, *cors, same-origin
-    cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
-    credentials: "same-origin", // include, *same-origin, omit
-    headers: {
-      "Content-Type": "application/json",
-      // 'Content-Type': 'application/x-www-form-urlencoded',
-    },
-    redirect: "follow", // manual, *follow, error
-    referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-    body: JSON.stringify(data), // body data type must match "Content-Type" header
-  });
-  return response.json(); // parses JSON response into native JavaScript objects
-}
-
-postData("https://example.com/answer", { answer: 42 }).then((data) => {
-  console.log(data); // JSON data parsed by `data.json()` call
+const response = await fetch("https://example.org/post", {
+  method: "POST",
+  // ...
 });
 ```
 
-Note that `mode: "no-cors"` only allows a limited set of headers in the request:
+If the `mode` option is set to `no-cors`, then `method` must be one of `GET`, `POST` or `HEAD`.
 
-- `Accept`
-- `Accept-Language`
-- `Content-Language`
-- `Content-Type` with a value of `application/x-www-form-urlencoded`, `multipart/form-data`, or `text/plain`
+### Setting a body
 
-## Aborting a fetch
+The request body is the payload of the request: it's the thing the client is sending to the server. You cannot include a body with `GET` requests, but it's useful for requests that send content to the server, such as {{httpmethod("POST")}} or {{httpmethod("PUT")}} requests. For example, if you want to upload a file to the server, you might make a `POST` request and include the file as the request body.
 
-To abort incomplete `fetch()` operations, use the {{DOMxRef("AbortController")}} and {{DOMxRef("AbortSignal")}} interfaces.
+To set a request body, pass it as the `body` option:
+
+```js
+const response = await fetch("https://example.org/post", {
+  body: JSON.stringify({ username: "example" }),
+  // ...
+});
+```
+
+You can supply the body as an instance of any of the following types:
+
+- a string
+- {{jsxref("ArrayBuffer")}}
+- {{jsxref("TypedArray")}}
+- {{jsxref("DataView")}}
+- {{domxref("Blob")}}
+- {{domxref("File")}}
+- {{domxref("URLSearchParams")}}
+- {{domxref("FormData")}}
+
+Note that just like response bodies, request bodies are streams, and making the request reads the stream, so if a request contains a body, you can't make it twice:
+
+```js example-bad
+const request = new Request("https://example.org/post", {
+  method: "POST",
+  body: JSON.stringify({ username: "example" }),
+});
+
+const response1 = await fetch(request);
+console.log(response1.status);
+
+// Will throw: "Body has already been consumed."
+const response2 = await fetch(request);
+console.log(response2.status);
+```
+
+Instead, you would need to {{domxref("Request.clone()", "create a clone", "", "nocode")}} of the request before sending it:
+
+```js
+const request1 = new Request("https://example.org/post", {
+  method: "POST",
+  body: JSON.stringify({ username: "example" }),
+});
+
+const request2 = request1.clone();
+
+const response1 = await fetch(request1);
+console.log(response1.status);
+
+const response2 = await fetch(request2);
+console.log(response2.status);
+```
+
+See [Locked and disturbed streams](#locked_and_disturbed_streams) for more information.
+
+### Setting headers
+
+Request headers give the server information about the request: for example, the {{httpheader("Content-Type")}} header tells the server the format of the request's body. Many headers are set automatically by the browser and can't be set by a script: these are called {{glossary("Forbidden header name", "Forbidden header names")}}.
+
+To set request headers, assign them to the `headers` option.
+
+You can pass an object literal here containing `header-name: header-value` properties:
+
+```js
+const response = await fetch("https://example.org/post", {
+  headers: {
+    "Content-Type": "application/json",
+  },
+  // .,.
+});
+```
+
+Alternatively, you can construct a {{domxref("Headers")}} object, add headers to that object using {{domxref("Headers.append()")}}, then assign the `Headers` object to the `headers` option:
+
+```js
+const myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+const response = await fetch("https://example.org/post", {
+  headers: myHeaders,
+  // .,.
+});
+```
+
+If the `mode` option is set to `no-cors`, you can only set {{glossary("CORS-safelisted request header", "CORS-safelisted request headers")}}.
+
+### Making POST requests
+
+We can combine the `method`, `body`, and `headers` options to make a POST request:
+
+```js
+const myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+const response = await fetch("https://example.org/post", {
+  method: "POST",
+  body: JSON.stringify({ username: "example" }),
+  headers: myHeaders,
+});
+```
+
+### Making cross-origin requests
+
+Whether a request can be made cross-origin or not is determined by the value of the `mode` option. This may take one of three values: `cors`, `no-cors`, or `same-origin`.
+
+- By default, `mode` is set to `cors`, meaning that if the request is cross-origin then it will use the [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS) mechanism. This means that:
+
+  - if the request is a [simple request](/en-US/docs/Web/HTTP/CORS#simple_requests), then the request will always be sent, but the server must respond with the correct {{httpheader("Access-Control-Allow-Origin")}} header or the browser will not share the response with the caller.
+  - if the request is not a simple request, then the browser will send a [preflighted request](/en-US/docs/Web/HTTP/CORS#preflighted_requests) to check that the server understands CORS and allows the request, and the real request will not be sent unless the server responds to the preflighted request with the appropriate CORS headers.
+
+- Setting `mode` to `same-origin` disallows cross-origin requests completely.
+
+- Setting `mode` to `no-cors` means the request must be a simple request, which restricts the headers that may be set, and restricts methods to `GET`, `HEAD`, and `POST`.
+
+### Including credentials
+
+Credentials are cookies, {{glossary("TLS")}} client certificates, or authentication headers containing a username and password.
+
+To control whether or not the browser sends credentials, as well as whether the browser respects any **`Set-Cookie`** response headers, set the `credentials` option, which can take one of the following three values:
+
+- `omit`: never send credentials in the request or include credentials in the response.
+- `same-origin` (the default): only send and include credentials for same-origin requests.
+- `include`: always include credentials, even cross-origin.
+
+Note that if a cookie's [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) attribute is set to `Strict` or `Lax`, then the cookie will not be sent cross-site, even if `credentials` is set to `include`.
+
+Including credentials in cross-origin requests can make a site vulnerable to {{glossary("CSRF")}} attacks, so even if `credentials` is set to `include`, the server must also agree to their inclusion by including the {{httpheader("Access-Control-Allow-Credentials")}} header in its response. Additionally, in this situation the server must explicitly specify the client's origin in the {{httpheader("Access-Control-Allow-Origin")}} response header (that is, `*` is not allowed).
+
+This means that if `credentials` is set to `include` and the request is cross-origin, then:
+
+- If the request is a [simple request](/en-US/docs/Web/HTTP/CORS#simple_requests), then the request will be sent with credentials, but the server must set the {{httpheader("Access-Control-Allow-Credentials")}} and {{httpheader("Access-Control-Allow-Origin")}} response headers, or the browser will return a network error to the caller. If the server does set the correct headers, then the response, including credentials, will be delivered to the caller.
+
+- If the request is not a simple request, then the browser will send a [preflighted request](/en-US/docs/Web/HTTP/CORS#preflighted_requests) without credentials, and the server must set the {{httpheader("Access-Control-Allow-Credentials")}} and {{httpheader("Access-Control-Allow-Origin")}} response headers, or the browser will return a network error to the caller. If the server does set the correct headers, then the browser will follow up with the real request, including credentials, and will deliver the real response, including credentials, to the caller.
+
+### Creating a `Request` object
+
+The {{domxref("Request.Request()", "Request()")}} constructor takes the same arguments as `fetch()` itself. This means that instead of passing options into `fetch()`, you can pass the same options to the `Request()` constructor, and then pass that object to `fetch()`.
+
+For example, we can make a POST request by passing options into `fetch()` using code like this:
+
+```js
+const myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+const response = await fetch("https://example.org/post", {
+  method: "POST",
+  body: JSON.stringify({ username: "example" }),
+  headers: myHeaders,
+});
+```
+
+However, we could rewrite this to pass the same arguments to the `Request()` constructor:
+
+```js
+const myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
+
+const myRequest = new Request("https://example.org/post", {
+  method: "POST",
+  body: JSON.stringify({ username: "example" }),
+  headers: myHeaders,
+});
+
+const response = await fetch(myRequest);
+```
+
+This also means that you can create a request from another request, while changing some of its properties using the second argument:
+
+```js
+async function post(request) {
+  try {
+    const response = await fetch(request);
+    const result = await response.json();
+    console.log("Success:", result);
+  } catch (error) {
+    console.error("Error:", error);
+  }
+}
+
+const request1 = new Request("https://example.org/post", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({ username: "example1" }),
+});
+
+const request2 = new Request(request1, {
+  body: JSON.stringify({ username: "example2" }),
+});
+
+post(request1);
+post(request2);
+```
+
+## Canceling a request
+
+To make a request cancelable, create an {{domxref("AbortController")}}, and assign its {{domxref("AbortSignal")}} to the request's `signal` property.
+
+To cancel the request, call the controller's {{domxref("AbortController.abort()", "abort()")}} method. The `fetch()` call will reject the promise with an `AbortError` exception.
 
 ```js
 const controller = new AbortController();
-const signal = controller.signal;
-const url = "video.mp4";
 
-const downloadBtn = document.querySelector("#download");
-const abortBtn = document.querySelector("#abort");
-
-downloadBtn.addEventListener("click", async () => {
+const fetchButton = document.querySelector("#fetch");
+fetchButton.addEventListener("click", async () => {
   try {
-    const response = await fetch(url, { signal });
-    console.log("Download complete", response);
-  } catch (error) {
-    console.error(`Download error: ${error.message}`);
+    console.log("Starting fetch");
+    const response = await fetch("https://example.org/get", {
+      signal: controller.signal,
+    });
+    console.log(`Response: ${response.status}`);
+  } catch (e) {
+    console.error(`Error: ${e}`);
   }
 });
 
-abortBtn.addEventListener("click", () => {
+const cancelButton = document.querySelector("#cancel");
+cancelButton.addEventListener("click", () => {
   controller.abort();
-  console.log("Download aborted");
+  console.log("Canceled fetch");
 });
 ```
 
-## Sending a request with credentials included
-
-To cause browsers to send a request with credentials included on both same-origin and cross-origin calls, add `credentials: 'include'` to the `init` object you pass to the `fetch()` method.
+If the request is aborted after the `fetch()` call has been fulfilled but before the response body has been read, then attempting to read the response body will reject with an `AbortError` exception.
 
 ```js
-fetch("https://example.com", {
-  credentials: "include",
-});
+async function get() {
+  const controller = new AbortController();
+  const request = new Request("https://example.org/get", {
+    signal: controller.signal,
+  });
+
+  const response = await fetch(request);
+  controller.abort();
+  // The next line will throw `AbortError`
+  const text = await response.text();
+  console.log(text);
+}
 ```
 
-> **Note:** `Access-Control-Allow-Origin` is prohibited from using a wildcard for requests with `credentials: 'include'`. In such cases, the exact origin must be provided; even if you are using a CORS unblocker extension, the requests will still fail.
+## Handling the response
 
-> **Note:** Browsers should not send credentials in _preflight requests_ irrespective of this setting. For more information see: [CORS Requests with credentials](/en-US/docs/Web/HTTP/CORS#requests_with_credentials).
+As soon as the browser has received the response status and headers from the server (and potentially before the response body itself has been received), the promise returned by `fetch()` is fulfilled with a {{domxref("Response")}} object.
 
-If you only want to send credentials if the request URL is on the same origin as the calling script, add `credentials: 'same-origin'`.
+### Checking response status
 
-```js
-// The calling script is on the origin 'https://example.com'
+The promise returned by `fetch()` will reject on some errors, such as a network error or a bad scheme. However, if the server responds with an error like {{httpstatus("404")}}, then `fetch()` fulfills with a `Response`, so we have to check the status before we can read the response body.
 
-fetch("https://example.com", {
-  credentials: "same-origin",
-});
-```
+The {{domxref("Response.status")}} property tells us the numerical status code, and the {{domxref("Response.ok")}} property returns `true` if the status is in the [200 range](/en-US/docs/Web/HTTP/Status#successful_responses).
 
-To instead ensure browsers don't include credentials in the request, use `credentials: 'omit'`.
+A common pattern is to check the value of `ok` and throw if it is `false`:
 
 ```js
-fetch("https://example.com", {
-  credentials: "omit",
-});
-```
-
-## Uploading JSON data
-
-Use {{domxref("fetch()")}} to POST JSON-encoded data.
-
-```js
-async function postJSON(data) {
+async function getData() {
+  const url = "https://example.org/products.json";
   try {
-    const response = await fetch("https://example.com/profile", {
-      method: "POST", // or 'PUT'
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Response status: ${response.status}`);
+    }
+    // ...
+  } catch (error) {
+    console.error(error.message);
+  }
+}
+```
 
-    const result = await response.json();
-    console.log("Success:", result);
+### Checking the response type
+
+Responses have a {{domxref("Response.type", "type")}} property that can be one of the following:
+
+- `basic`: the request was a same-origin request.
+- `cors`: the request was a cross-origin CORS request.
+- `opaque`: the request was a cross-origin simple request made with the `no-cors` mode.
+- `opaqueredirect`: the request set the `redirect` option to `manual`, and the server returned a [redirect status](/en-US/docs/Web/HTTP/Status#redirection_messages).
+
+The type determines the possible contents of the response, as follows:
+
+- Basic responses exclude response headers from the {{glossary("Forbidden response header name")}} list.
+
+- CORS responses include only response headers from the {{glossary("CORS-safelisted response header")}} list.
+
+- Opaque responses and opaque redirect responses have a `status` of `0`, an empty header list, and a `null` body.
+
+### Checking headers
+
+Just like the request, the response has a {{domxref("Response.headers", "headers")}} property which is a {{domxref("Headers")}} object, and this contains any response headers that are exposed to scripts, subject to the exclusions made based on the response type.
+
+A common use case for this is to check the content type before trying to read the body:
+
+```js
+async function fetchJSON(request) {
+  try {
+    const response = await fetch(request);
+    const contentType = response.headers.get("content-type");
+    if (!contentType || !contentType.includes("application/json")) {
+      throw new TypeError("Oops, we haven't got JSON!");
+    }
+    // Otherwise, we can read the body as JSON
   } catch (error) {
     console.error("Error:", error);
   }
 }
-
-const data = { username: "example" };
-postJSON(data);
 ```
 
-## Uploading a file
+### Reading the response body
 
-Files can be uploaded using an HTML `<input type="file" />` input element, {{domxref("FormData.FormData","FormData()")}} and {{domxref("fetch()")}}.
+The `Response` interface provides a number of methods to retrieve the entire body contents in a variety of different formats:
+
+- {{domxref("Response.arrayBuffer()")}}
+- {{domxref("Response.blob()")}}
+- {{domxref("Response.formData()")}}
+- {{domxref("Response.json()")}}
+- {{domxref("Response.text()")}}
+
+These are all asynchronous methods, returning a {{jsxref("Promise")}} which will be fulfilled with the body content.
+
+In this example, we fetch an image and read it as a {{domxref("Blob")}}, which we can then use to create an object URL:
 
 ```js
-async function upload(formData) {
+const image = document.querySelector("img");
+
+const url = "flowers.jpg";
+
+async function setImage() {
   try {
-    const response = await fetch("https://example.com/profile/avatar", {
-      method: "PUT",
-      body: formData,
-    });
-    const result = await response.json();
-    console.log("Success:", result);
-  } catch (error) {
-    console.error("Error:", error);
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Response status: ${response.status}`);
+    }
+    const blob = await response.blob();
+    const objectURL = URL.createObjectURL(blob);
+    image.src = objectURL;
+  } catch (e) {
+    console.error(e);
   }
 }
-
-const formData = new FormData();
-const fileField = document.querySelector('input[type="file"]');
-
-formData.append("username", "abc123");
-formData.append("avatar", fileField.files[0]);
-
-upload(formData);
 ```
 
-## Uploading multiple files
+The method will throw an exception if the response body is not in the appropriate format: for example, if you call `json()` on a response that can't be parsed as JSON.
 
-Files can be uploaded using an HTML `<input type="file" multiple />` input element, {{domxref("FormData.FormData","FormData()")}} and {{domxref("fetch()")}}.
+### Streaming the response body
+
+Request and response bodies are actually {{domxref("ReadableStream")}} objects, and whenever you read them, you're streaming the content. This is good for memory efficiency, because the browser doesn't have to buffer the entire response in memory before the caller retrieves it using a method like `json()`.
+
+This also means that the caller can process the content incrementally as it is received.
+
+For example, consider a `GET` request that fetches a large text file and processes it in some way, or displays it to the user:
 
 ```js
-async function uploadMultiple(formData) {
+const url = "https://www.example.org/a-large-file.txt";
+
+async function fetchText(url) {
   try {
-    const response = await fetch("https://example.com/posts", {
-      method: "POST",
-      body: formData,
-    });
-    const result = await response.json();
-    console.log("Success:", result);
-  } catch (error) {
-    console.error("Error:", error);
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Response status: ${response.status}`);
+    }
+
+    const text = await response.text();
+    console.log(text);
+  } catch (e) {
+    console.error(e);
   }
 }
-
-const photos = document.querySelector('input[type="file"][multiple]');
-const formData = new FormData();
-
-formData.append("title", "My Vegas Vacation");
-
-for (const [i, photo] of Array.from(photos.files).entries()) {
-  formData.append(`photos_${i}`, photo);
-}
-
-uploadMultiple(formData);
 ```
 
-## Processing a text file line by line
+If we use {{domxref("Response.text()")}}, as above, we must wait until the whole file has been received before we can process any of it.
 
-The chunks that are read from a response are not broken neatly at line boundaries and are Uint8Arrays, not strings. If you want to fetch a text file and process it line by line, it is up to you to handle these complications. The following example shows one way to do this by creating a line iterator (for simplicity, it assumes the text is UTF-8, and doesn't handle fetch errors).
+If we stream the response instead, we can process chunks of the body as they are received from the network:
+
+```js
+const url = "https://www.example.org/a-large-file.txt";
+
+async function fetchTextAsStream(url) {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Response status: ${response.status}`);
+    }
+
+    const stream = response.body.pipeThrough(new TextDecoderStream());
+    for await (const value of stream) {
+      console.log(value);
+    }
+  } catch (e) {
+    console.error(e);
+  }
+}
+```
+
+In this example, we {{jsxref("Statements/for-await...of", "iterate asynchronously", "", "nocode")}} over the stream, processing each chunk as it arrives.
+
+Note that when you access the body directly like this, you get the raw bytes of the response and must transform it yourself. In this case we call {{domxref("ReadableStream.pipeThrough()")}} to pipe the response through a {{domxref("TextDecoderStream")}}, which decodes the UTF-8-encoded body data as text.
+
+### Processing a text file line by line
+
+In the example below, we fetch a text resource and process it line by line, using a regular expression to look for line endings. For simplicity, we assume the text is UTF-8, and don't handle fetch errors:
 
 ```js
 async function* makeTextFileLineIterator(fileURL) {
-  const utf8Decoder = new TextDecoder("utf-8");
   const response = await fetch(fileURL);
-  const reader = response.body.getReader();
+  const reader = response.body.pipeThrough(new TextDecoderStream()).getReader();
+
   let { value: chunk, done: readerDone } = await reader.read();
-  chunk = chunk ? utf8Decoder.decode(chunk) : "";
+  chunk = chunk || "";
 
   const newline = /\r?\n/gm;
   let startIndex = 0;
@@ -230,7 +488,7 @@ async function* makeTextFileLineIterator(fileURL) {
       if (readerDone) break;
       const remainder = chunk.substr(startIndex);
       ({ value: chunk, done: readerDone } = await reader.read());
-      chunk = remainder + (chunk ? utf8Decoder.decode(chunk) : "");
+      chunk = remainder + (chunk || "");
       startIndex = newline.lastIndex = 0;
       continue;
     }
@@ -240,252 +498,101 @@ async function* makeTextFileLineIterator(fileURL) {
 
   if (startIndex < chunk.length) {
     // Last line didn't end in a newline char
-    yield chunk.substr(startIndex);
+    yield chunk.substring(startIndex);
   }
 }
 
-async function run() {
+async function run(urlOfFile) {
   for await (const line of makeTextFileLineIterator(urlOfFile)) {
     processLine(line);
   }
 }
 
-run();
+function processLine(line) {
+  console.log(line);
+}
+
+run("https://www.example.org/a-large-file.txt");
 ```
 
-## Checking that the fetch was successful
+### Locked and disturbed streams
 
-A {{domxref("fetch()")}} promise will reject with a {{jsxref("TypeError")}} when a network error is encountered or CORS is misconfigured on the server-side, although this usually means permission issues or similar — a 404 does not constitute a network error, for example. An accurate check for a successful `fetch()` would include checking that the promise resolved, then checking that the {{domxref("Response.ok")}} property has a value of true. The code would look something like this:
+The consequences of request and response bodies being streams are that:
 
-```js
-async function fetchImage() {
+- if a reader has been attached to a stream using `ReadableStream.getReader()`, then the stream is _locked_, and nothing else can read the stream.
+- if any content has been read from the stream, then the stream is _disturbed_, and nothing else can read from the stream.
+
+This means it's not possible to read the same response (or request) body more than once:
+
+```js example-bad
+async function getData() {
+  const url = "https://example.org/products.json";
   try {
-    const response = await fetch("flowers.jpg");
+    const response = await fetch(url);
     if (!response.ok) {
-      throw new Error("Network response was not OK");
+      throw new Error(`Response status: ${response.status}`);
     }
-    const myBlob = await response.blob();
-    myImage.src = URL.createObjectURL(myBlob);
+
+    const json1 = await response.json();
+    const json2 = await response.json(); // will throw
   } catch (error) {
-    console.error("There has been a problem with your fetch operation:", error);
+    console.error(error.message);
   }
 }
 ```
 
-## Supplying your own request object
-
-Instead of passing a path to the resource you want to request into the `fetch()` call, you can create a request object using the {{domxref("Request.Request","Request()")}} constructor, and pass that in as a `fetch()` method argument:
+If you do need to read the body more than once, you must call {{domxref("Response.clone()")}} before reading the body:
 
 ```js
-async function fetchImage(request) {
+async function getData() {
+  const url = "https://example.org/products.json";
   try {
-    const response = await fetch(request);
-    if (!response.ok) {
-      throw new Error("Network response was not OK");
+    const response1 = await fetch(url);
+    if (!response1.ok) {
+      throw new Error(`Response status: ${response1.status}`);
     }
-    const myBlob = await response.blob();
-    myImage.src = URL.createObjectURL(myBlob);
+
+    const response2 = response1.clone();
+
+    const json1 = await response1.json();
+    const json2 = await response2.json();
   } catch (error) {
-    console.error("Error:", error);
+    console.error(error.message);
   }
 }
-
-const myHeaders = new Headers();
-
-const myRequest = new Request("flowers.jpg", {
-  method: "GET",
-  headers: myHeaders,
-  mode: "cors",
-  cache: "default",
-});
-
-fetchImage(myRequest);
 ```
 
-`Request()` accepts exactly the same parameters as the `fetch()` method. You can even pass in an existing request object to create a copy of it:
+This is a common pattern when [implementing an offline cache with service workers](/en-US/docs/Web/Progressive_web_apps/Guides/Caching). The service worker wants to return the response to the app, but also to cache the response. So it clones the response, returns the original, and caches the clone:
 
 ```js
-const anotherRequest = new Request(myRequest, myInit);
-```
-
-This is pretty useful, as request and response bodies can only be used once.
-Making a copy like this allows you to effectively use the request/response again while varying the `init` options if desired.
-The copy must be made before the body is read.
-
-> **Note:** There is also a {{domxref("Request.clone","clone()")}} method that creates a copy. Both methods of creating a copy will fail if the body of the original request or response has already been read, but reading the body of a cloned response or request will not cause it to be marked as read in the original.
-
-## Headers
-
-The {{domxref("Headers")}} interface allows you to create your own headers object via the {{domxref("Headers.Headers","Headers()")}} constructor. A headers object is a simple multi-map of names to values:
-
-```js
-const content = "Hello World";
-const myHeaders = new Headers();
-myHeaders.append("Content-Type", "text/plain");
-myHeaders.append("Content-Length", content.length.toString());
-myHeaders.append("X-Custom-Header", "ProcessThisImmediately");
-```
-
-The same can be achieved by passing an array of arrays or an object literal to the constructor:
-
-```js
-const myHeaders = new Headers({
-  "Content-Type": "text/plain",
-  "Content-Length": content.length.toString(),
-  "X-Custom-Header": "ProcessThisImmediately",
-});
-```
-
-The contents can be queried and retrieved:
-
-```js
-console.log(myHeaders.has("Content-Type")); // true
-console.log(myHeaders.has("Set-Cookie")); // false
-myHeaders.set("Content-Type", "text/html");
-myHeaders.append("X-Custom-Header", "AnotherValue");
-
-console.log(myHeaders.get("Content-Length")); // 11
-console.log(myHeaders.get("X-Custom-Header")); // ['ProcessThisImmediately', 'AnotherValue']
-
-myHeaders.delete("X-Custom-Header");
-console.log(myHeaders.get("X-Custom-Header")); // null
-```
-
-Some of these operations are only useful in {{domxref("Service_Worker_API","ServiceWorkers")}}, but they provide a much nicer API for manipulating headers.
-
-All of the Headers methods throw a `TypeError` if a header name is used that is not a valid HTTP Header name. The mutation operations will throw a `TypeError` if there is an immutable guard ([see below](#guard)). Otherwise, they fail silently. For example:
-
-```js
-const myResponse = Response.error();
-try {
-  myResponse.headers.set("Origin", "http://mybank.com");
-} catch (e) {
-  console.log("Cannot pretend to be a bank!");
-}
-```
-
-A good use case for headers is checking whether the content type is correct before you process it further. For example:
-
-```js
-async function fetchJSON(request) {
+async function cacheFirst(request) {
+  const cachedResponse = await caches.match(request);
+  if (cachedResponse) {
+    return cachedResponse;
+  }
   try {
-    const response = await fetch(request);
-    const contentType = response.headers.get("content-type");
-    if (!contentType || !contentType.includes("application/json")) {
-      throw new TypeError("Oops, we haven't got JSON!");
+    const networkResponse = await fetch(request);
+    if (networkResponse.ok) {
+      const cache = await caches.open("MyCache_1");
+      cache.put(request, networkResponse.clone());
     }
-    const jsonData = await response.json();
-    // process your data further
+    return networkResponse;
   } catch (error) {
-    console.error("Error:", error);
+    return Response.error();
   }
 }
-```
 
-### Guard
-
-Since headers can be sent in requests and received in responses, and have various limitations about what information can and should be mutable, headers' objects have a _guard_ property. This is not exposed to the Web, but it affects which mutation operations are allowed on the headers object.
-
-Possible guard values are:
-
-- `none`: default.
-- `request`: guard for a headers object obtained from a request ({{domxref("Request.headers")}}).
-- `request-no-cors`: guard for a headers object obtained from a request created with {{domxref("Request.mode")}} `no-cors`.
-- `response`: guard for a headers object obtained from a response ({{domxref("Response.headers")}}).
-- `immutable`: guard that renders a headers object read-only; mostly used for ServiceWorkers.
-
-> **Note:** You may not append or set the `Content-Length` header on a guarded headers object for a `response`. Similarly, inserting `Set-Cookie` into a response header is not allowed: ServiceWorkers are not allowed to set cookies via synthesized responses.
-
-## Response objects
-
-As you have seen above, {{domxref("Response")}} instances are returned when `fetch()` promises are resolved.
-
-The most common response properties you'll use are:
-
-- {{domxref("Response.status")}} — An integer (default value 200) containing the response status code.
-- {{domxref("Response.statusText")}} — A string (default value ""), which corresponds to the HTTP status code message. Note that HTTP/2 [does not support](https://fetch.spec.whatwg.org/#concept-response-status-message) status messages.
-- {{domxref("Response.ok")}} — seen in use above, this is a shorthand for checking that status is in the range 200-299 inclusive. This returns a boolean value.
-
-They can also be created programmatically via JavaScript, but this is only really useful in {{domxref("Service_Worker_API", "ServiceWorkers")}}, when you are providing a custom response to a received request using a {{domxref("FetchEvent.respondWith","respondWith()")}} method:
-
-```js
-const myBody = new Blob();
-
-addEventListener("fetch", (event) => {
-  // ServiceWorker intercepting a fetch
-  event.respondWith(
-    new Response(myBody, {
-      headers: { "Content-Type": "text/plain" },
-    }),
-  );
+self.addEventListener("fetch", (event) => {
+  if (precachedResources.includes(url.pathname)) {
+    event.respondWith(cacheFirst(event.request));
+  }
 });
 ```
-
-The {{domxref("Response.Response","Response()")}} constructor takes two optional arguments — a body for the response, and an init object (similar to the one that {{domxref("Request.Request","Request()")}} accepts.)
-
-> **Note:** The static method {{domxref("Response/error_static","error()")}} returns an error response. Similarly, {{domxref("Response/redirect_static","redirect()")}} returns a response resulting in a redirect to a specified URL. These are also only relevant to Service Workers.
-
-## Body
-
-Both requests and responses may contain body data. A body is an instance of any of the following types:
-
-- {{jsxref("ArrayBuffer")}}
-- {{jsxref("TypedArray")}} (Uint8Array and friends)
-- {{jsxref("DataView")}}
-- {{domxref("Blob")}}
-- {{domxref("File")}}
-- {{jsxref("String")}}, or a string literal
-- {{domxref("URLSearchParams")}}
-- {{domxref("FormData")}}
-
-The {{domxref("Request")}} and {{domxref("Response")}} interfaces share the following methods to extract a body. These all return a promise that is eventually resolved with the actual content.
-
-- {{domxref("Request.arrayBuffer()")}} / {{domxref("Response.arrayBuffer()")}}
-- {{domxref("Request.blob()")}} / {{domxref("Response.blob()")}}
-- {{domxref("Request.formData()")}} / {{domxref("Response.formData()")}}
-- {{domxref("Request.json()")}} / {{domxref("Response.json()")}}
-- {{domxref("Request.text()")}} / {{domxref("Response.text()")}}
-
-This makes usage of non-textual data much easier than it was with XHR.
-
-Request bodies can be set by passing body parameters:
-
-```js
-const form = new FormData(document.getElementById("login-form"));
-fetch("/login", {
-  method: "POST",
-  body: form,
-});
-```
-
-Both request and response (and by extension the `fetch()` function), will try to intelligently determine the content type. A request will also automatically set a `Content-Type` header if none is set in the [`options`](/en-US/docs/Web/API/fetch#options) parameter.
-
-## Feature detection
-
-Fetch API support can be detected by checking for the existence of {{domxref("Headers")}}, {{domxref("Request")}}, {{domxref("Response")}} or {{domxref("fetch()")}} on the {{domxref("Window")}} or {{domxref("Worker")}} scope. For example:
-
-```js
-if (window.fetch) {
-  // run my fetch request here
-} else {
-  // do something with XMLHttpRequest?
-}
-```
-
-## Differences from `jQuery.ajax()`
-
-The `fetch` specification differs from `jQuery.ajax()` in the following significant ways:
-
-- The promise returned from `fetch()` won't reject on HTTP errors even if the response is an HTTP 404 or 500. Instead, as soon as the server responds with headers, the promise will resolve (with the {{domxref("Response/ok", "ok")}} property of the response set to `false` if the response isn't in the range 200–299). The promise will only reject on network failure or if anything prevented the request from completing.
-- Unless `fetch()` is called with the [`credentials`](/en-US/docs/Web/API/fetch#credentials) option set to `include`, `fetch()`:
-  - won't send cookies in cross-origin requests
-  - won't set any cookies sent back in cross-origin responses
-  - As of August 2018, the default credentials policy changed to same-origin.
 
 ## See also
 
-- [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
+- [Service Worker API](/en-US/docs/Web/API/Service_Worker_API)
+- [Streams API](/en-US/docs/Web/API/Streams_API)
+- [CORS](/en-US/docs/Web/HTTP/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)
-- [Fetch polyfill](https://github.com/github/fetch)
 - [Fetch examples on GitHub](https://github.com/mdn/dom-examples/tree/main/fetch)

@@ -109,7 +109,7 @@ After each implementation phase, you will need to test the new functionality. To
 
 At this point, fix any problems you find with your new code.
 
-Next, you should try expanding your list of test browsers to a full list of target audience browsers and start concentrating on weeding out cross-browser issues (see the next article for more information on [determining your target browsers](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#gotta_test_em_all)). For example:
+Next, you should try expanding your list of test browsers to a full list of target audience browsers and start concentrating on weeding out cross-browser issues (see the next article for more information on [determining your target browsers](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)). For example:
 
 - Try to test the latest change on all the modern desktop browsers you can — including Firefox, Chrome, Opera, Edge, and Safari on desktop (Mac, Windows, and Linux, ideally).
 - Test it in common phone and tablet browsers (e.g. iOS Safari on iPhone/iPad, Chrome and Firefox on iPhone/iPad/Android),
@@ -157,7 +157,6 @@ Once a fix has been made, you'll want to repeat your testing process to make sur
 Just to reiterate on what was said above, if you discover bugs in browsers, you should report them:
 
 - [Firefox Bugzilla](https://bugzilla.mozilla.org/)
-- [EdgeHTML issue tracker](https://developer.microsoft.com/en-us/microsoft-edge/)
 - [Safari](https://bugs.webkit.org/)
 - [Chrome](https://bugs.chromium.org/p/chromium/issues/list)
 - [Opera](https://opera.atlassian.net/servicedesk/customer/portal/9)

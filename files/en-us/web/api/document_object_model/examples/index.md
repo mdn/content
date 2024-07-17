@@ -416,4 +416,4 @@ To add a row and some cells to an existing table:
 
 - A table's {{domxref("element.innerHTML","innerHTML")}} property should never be used to modify a table, although you can use it to write an entire table or the content of a cell.
 - If DOM Core methods {{domxref("document.createElement")}} and {{domxref("Node.appendChild")}} are used to create rows and cells, IE requires that they are appended to a {{HTMLElement("tbody")}} element, whereas other browsers will allow appending to a {{HTMLElement("table")}} element (the rows will be added to the last `<tbody>` element).
-- There are a number of other convenience methods belonging to the [`HTMLTableElement` interface](/en-US/docs/Web/API/HTMLTableElement#methods) that can be used for creating and modifying tables.
+- There are a number of other convenience methods belonging to the [`HTMLTableElement` interface](/en-US/docs/Web/API/HTMLTableElement#instance_methods) that can be used for creating and modifying tables.

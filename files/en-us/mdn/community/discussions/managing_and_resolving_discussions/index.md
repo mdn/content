@@ -49,7 +49,7 @@ Every discussion will have a different timeline depending on the complexity of t
 8. During the second month, keep reaching out the community for feedback on the proposed plan, making updates to the plan in light of any new feedback. Rinse. Repeat.
 9. If there are points of contention, arrange an online, synchronous, face-to-face meeting to resolve any remaining disagreements (as captured in the discussion thread).
 10. Keep the discussion threads alive during the second month as you work with the community towards the resolution.
-11. [Create the issue](/en-US/docs/MDN/Community/Issues) for the resolution implementation plan and put it into action. ([Issue reporting guidelines](/en-US/docs/MDN/Community/Issues#guidelines_for_reporting_an_issue?))
+11. [Create the issue](/en-US/docs/MDN/Community/Issues) for the resolution implementation plan and put it into action. ([Issue reporting guidelines](/en-US/docs/MDN/Community/Issues#guidelines_for_reporting_an_issue))
 12. Close the discussion.
 
 If the discussion involves reaching out to and receiving feedback from experts, the timeline above can be extended as needed.

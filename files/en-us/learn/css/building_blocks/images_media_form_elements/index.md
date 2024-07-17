@@ -74,7 +74,7 @@ You could also try the value of `fill`, which will fill the box but not maintain
 
 ## Replaced elements in layout
 
-When using various CSS layout techniques on replaced elements, you may well find that they behave slightly differently from other elements. For example, in a flex or grid layout, elements are stretched by default to fill the entire area. Images will not stretch, and instead will be aligned to the start of the grid area or flex container.
+When using various CSS layout techniques on replaced elements, you may well find that they behave slightly differently from other elements. For example, in a grid layout, elements are stretched by default to fill their entire [grid areas](/en-US/docs/Glossary/Grid_Areas). Images do not stretch; instead, they are aligned to the start of their grid areas.
 
 You can see this happening in the example below where we have a two column, two row grid container, which has four items in it. All of the `<div>` elements have a background color and stretch to fill the row and column. The image, however, does not stretch.
 

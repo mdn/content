@@ -9,6 +9,8 @@ browser-compat: webassembly.api.Module
 
 A **`WebAssembly.Module`** object contains stateless WebAssembly code that has already been compiled by the browser — this can be efficiently [shared with Workers](/en-US/docs/Web/API/Worker/postMessage), and instantiated multiple times.
 
+> **Note:** The `WebAssembly.Module` object is unrelated to the [`Module`](https://emscripten.org/docs/api_reference/module.html) object used in Emscripten.
+
 ## Constructor
 
 - [`WebAssembly.Module()`](/en-US/docs/WebAssembly/JavaScript_interface/Module/Module)
@@ -43,7 +45,7 @@ The worker function [`wasm_worker.js`](https://github.com/mdn/webassembly-exampl
 
 ```js
 const importObject = {
-  imports: {
+  my_namespace: {
     imported_func(arg) {
       console.log(arg);
     },

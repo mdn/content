@@ -29,6 +29,25 @@ the opened page can open a URL in the original tab or window. In some cases, thi
 phishing attacks possible, where a trusted page that is opened in the original window is
 replaced by a phishing page by the newly opened page.
 
+To be exact, for cross-origin opener objects, the following properties are available:
+
+- {{domxref("Window.window", "window")}}
+- {{domxref("Window.self", "self")}}
+- {{domxref("Window.location", "location")}}: with only the {{domxref("Location.replace")}} and {{domxref("Location.href")}} properties available
+- {{domxref("Window.close", "close")}}
+- {{domxref("Window.closed", "closed")}}
+- {{domxref("Window.focus", "focus")}}
+- {{domxref("Window.blur", "blur")}}
+- {{domxref("Window.frames", "frames")}}
+- {{domxref("Window.length", "length")}}
+- {{domxref("Window.top", "top")}}
+- {{domxref("Window.opener", "opener")}}
+- {{domxref("Window.parent", "parent")}}
+- {{domxref("Window.postMessage", "postMessage")}}
+- `window[0]`, `window[1]`, etc.
+
+In addition, there are a few properties: [`then`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables), {{jsxref("Symbol/toStringTag", "[Symbol.toStringTag]")}}, {{jsxref("Symbol/hasInstance", "[Symbol.hasInstance]")}}, {{jsxref("Symbol/isConcatSpreadable", "[Symbol.isConcatSpreadable]")}}, which are used by various JavaScript operations. These properties have values `undefined`. All other properties generate a `SecurityError` {{domxref("DOMException")}} when accessed.
+
 In the following cases, the browser does not populate `window.opener`, but
 leaves it [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null):
 

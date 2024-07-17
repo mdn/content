@@ -60,9 +60,25 @@ However, trying to traverse the boundary via an API call such as {{domxref("HTML
 
 ## Positioning and scaling
 
-As a [replaced element](/en-US/docs/Web/CSS/Replaced_element), the position, alignment, and scaling of the embedded document within the `<iframe>` element's box, can be adjusted with the {{cssxref("object-position")}} and {{cssxref("object-fit")}} properties.
+Being a [replaced element](/en-US/docs/Web/CSS/Replaced_element), the `<fencedframe>` allows the position of the embedded document within its box to be adjusted using the {{cssxref("object-position")}} property.
+
+> [!NOTE]
+> The {{cssxref("object-fit")}} property has no effect on `<fencedframe>` elements.
 
 The size of the embedded content may be set by internal `contentWidth` and `contentHeight` properties of the `<fencedframe>`'s {{domxref("HTMLFencedFrameElement.config", "config")}} object. In such cases, changing the `width` or `height` of the `<fencedframe>` will change the size of the embedded container on the page, but the document inside the container will be visually scaled to fit. The reported width and height of the embedded document (i.e. {{domxref("Window.innerWidth")}} and {{domxref("Window.innerHeight")}}) will be unchanged.
+
+## Accessibility
+
+People navigating with assistive technology such as a screen reader can use the [`title` attribute](/en-US/docs/Web/HTML/Global_attributes/title) on an `<fencedframe>` to label its content. The title's value should concisely describe the embedded content:
+
+```html
+<fencedframe
+  title="Advertisement for new Log. From Blammo!"
+  width="640"
+  height="320"></fencedframe>
+```
+
+Without this title, they have to navigate into the `<iframe>` to determine what its embedded content is. This context shift can be confusing and time-consuming, especially for pages with multiple `<iframe>`s and/or if embeds contain interactive content like video or audio.
 
 ## Examples
 
@@ -85,19 +101,6 @@ frame.config = frameConfig;
 ```
 
 > **Note:** `resolveToConfig: true` must be passed in to the `runAdAuction()` call to obtain a `FencedFrameConfig` object. If it is not set, the resulting {{jsxref("Promise")}} will resolve to a URN that can only be used in an {{htmlelement("iframe")}}.
-
-## Accessibility concerns
-
-People navigating with assistive technology such as a screen reader can use the [`title` attribute](/en-US/docs/Web/HTML/Global_attributes/title) on an `<fencedframe>` to label its content. The title's value should concisely describe the embedded content:
-
-```html
-<fencedframe
-  title="Advertisement for new Log. From Blammo!"
-  width="640"
-  height="320"></fencedframe>
-```
-
-Without this title, they have to navigate into the `<iframe>` to determine what its embedded content is. This context shift can be confusing and time-consuming, especially for pages with multiple `<iframe>`s and/or if embeds contain interactive content like video or audio.
 
 ## Technical summary
 

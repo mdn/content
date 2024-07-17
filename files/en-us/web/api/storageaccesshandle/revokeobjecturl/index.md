@@ -29,7 +29,8 @@ None ({{jsxref("undefined")}}).
 
 - `SecurityError` {{domxref("DomException")}}
   - : Thrown if access was not granted.
-- See {{domxref("URL.revokeObjectURL_static", "revokeObjectURL()")}}
+
+See {{domxref("URL.revokeObjectURL_static", "revokeObjectURL()")}}
 
 ## Examples
 

@@ -37,7 +37,8 @@ An unpartitioned {{domxref("SharedWorker")}} object.
 
 - `SecurityError` {{domxref("DomException")}}
   - : Thrown if access was not granted.
-- See {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}}
+
+See {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}}
 
 ## Examples
 

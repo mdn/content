@@ -22,7 +22,7 @@ The **`MediaSource`** interface of the {{domxref("Media Source Extensions API", 
   - : Returns a {{domxref("SourceBufferList")}} object containing a subset of the {{domxref("SourceBuffer")}} objects contained within {{domxref("MediaSource.sourceBuffers")}} — the list of objects providing the selected video track, enabled audio tracks, and shown/hidden text tracks.
 - {{domxref("MediaSource.duration")}}
   - : Gets and sets the duration of the current media being presented.
-- {{domxref("MediaSource.handle")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("MediaSource.handle")}} {{ReadOnlyInline}}
   - : Inside a dedicated worker, returns a {{domxref("MediaSourceHandle")}} object, a proxy for the `MediaSource` that can be transferred from the worker back to the main thread and attached to a media element via its {{domxref("HTMLMediaElement.srcObject")}} property.
 - {{domxref("MediaSource.readyState")}} {{ReadOnlyInline}}
   - : Returns an enum representing the state of the current `MediaSource`, whether it is not currently attached to a media element (`closed`), attached and ready to receive {{domxref("SourceBuffer")}} objects (`open`), or attached but the stream has been ended via {{domxref("MediaSource.endOfStream()")}} (`ended`.)
@@ -31,7 +31,7 @@ The **`MediaSource`** interface of the {{domxref("Media Source Extensions API", 
 
 ## Static properties
 
-- {{domxref("MediaSource.canConstructInDedicatedWorker_static", "MediaSource.canConstructInDedicatedWorker")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("MediaSource.canConstructInDedicatedWorker_static", "MediaSource.canConstructInDedicatedWorker")}} {{ReadOnlyInline}}
   - : A boolean; returns `true` if `MediaSource` worker support is implemented, providing a low-latency feature detection mechanism.
 
 ## Instance methods

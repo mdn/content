@@ -53,21 +53,6 @@ a#selected > .icon {
 
 Selectors can be read from right to left. For example, `a#selected > .icon` matches all elements with a class of `icon` that are the direct children of the `<a>` element with the id `selected`. The selector `.box h2 + p` matches the first `<p>`s to come immediately after any `<h2>` elements that are descendants of any element with the class of `box`.
 
-### Relative selector
-
-A **relative selector** is a selector representing an element relative to one or more anchor elements preceded by a combinator. Relative selectors that don't begin with an explicit combinator have an implied [descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator).
-
-```css
-+ div#topic > #reference {
-}
-
-> .icon {
-}
-
-dt:has(+ img) ~ dd {
-}
-```
-
 ### Selector list
 
 A [**selector list**](/en-US/docs/Web/CSS/Selector_list) is a comma-separated list of simple, compound, and/or complex selectors. A given element is said to match a selector list when the element matches any (at least one) of the selectors in that selector list.
@@ -89,6 +74,23 @@ If any selector in a [non-forgiving selector](/en-US/docs/Web/CSS/Selector_list#
 ```
 
 The {{cssxref(":is", ":is()")}} and {{cssxref(":where", ":where()")}} pseudo-classes can be used to construct [forgiving selector lists](/en-US/docs/Web/CSS/Selector_list#forgiving_selector_list).
+
+### Relative selector
+
+A **relative selector** is a selector representing an element relative to one or more anchor elements preceded by a combinator. Relative selectors that don't begin with an explicit combinator have an implied [descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator).
+
+Relative selectors cannot be used in a selector list. Rather, it is accepted within certain contexts, such as the {{cssxref(":has", ":has()")}} pseudo-class.
+
+```css
+:has(+ div#topic > #reference) {
+}
+
+:has(> .icon) {
+}
+
+dt:has(+ img) ~ dd {
+}
+```
 
 ## Specifications
 

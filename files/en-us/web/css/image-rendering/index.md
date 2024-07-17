@@ -56,7 +56,7 @@ image-rendering: unset;
 
 ### Setting image scaling algorithms
 
-In practical use, the `pixelated` and `crisp-edges` rules can be combined to provide some fallback for each other. (Just prepend the actual rules with the fallback.) The [Canvas API](/en-US/docs/Web/API/Canvas_API) can provide a [fallback solution for `pixelated`](http://phrogz.net/tmp/canvas_image_zoom.html) through manual image data manipulation or with [`imageSmoothingEnabled`](/en-US/docs/Web/API/CanvasRenderingContext2D/imageSmoothingEnabled).
+In this example, an image is repeated three times, with each having a different `image-rendering` value applied.
 
 ```html hidden
 <div>
@@ -93,14 +93,13 @@ img {
 }
 
 .crisp-edges {
-  image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample('Setting_image_scaling_algorithms')}}
+{{EmbedLiveSample('Setting_image_scaling_algorithms', 260, 260)}}
 
 ## Specifications
 
@@ -110,10 +109,11 @@ img {
 
 {{Compat}}
 
-> **Note:** Although `crisp-edges` is supposed to use a pixel-art scaler like in the specification example, in practice no browsers (as of January 2020) do so. [In Firefox](https://searchfox.org/mozilla-central/rev/1061fae5e225a99ef5e43dbdf560a91a0c0d00d1/gfx/wr/webrender/src/resource_cache.rs#1356), `crisp-edges` or `pixelated` is interpreted as nearest-neighbor, and `auto` is interpolated as trilinear or linear.
->
-> For behavior on Chromium and Safari (WebKit), see the [`GetInterpolationQuality`](https://source.chromium.org/chromium/chromium/src/+/main:third_party/blink/renderer/core/style/computed_style.cc;l=1160) function and [`CSSPrimitiveValue::operator ImageRendering()`](https://github.com/WebKit/WebKit/blob/9b26fc6081e0db8a1304cf4b4f8f1c67efb9bc0c/Source/WebCore/css/CSSPrimitiveValueMappings.h#L4045) respectively.
-
 ## See also
 
-- Other image-related CSS properties: {{cssxref("object-fit")}}, {{cssxref("object-position")}}, {{cssxref("image-orientation")}}, {{cssxref("image-rendering")}}, {{cssxref("image-resolution")}}.
+- {{cssxref("object-fit")}}
+- {{cssxref("object-position")}}
+- {{cssxref("image-orientation")}}
+- {{cssxref("image-resolution")}}
+- [CSS images](/en-US/docs/Web/CSS/CSS_images) module
+- SVG {{SVGAttr("image-rendering")}} attribute

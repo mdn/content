@@ -27,8 +27,8 @@ These properties are defined on `Intl.DurationFormat.prototype` and shared by al
 
 - {{jsxref("Object/constructor", "Intl.DurationFormat.prototype.constructor")}}
   - : The constructor function that created the instance object. For `Intl.DurationFormat` instances, the initial value is the {{jsxref("Intl/DurationFormat/DurationFormat", "Intl.DurationFormat")}} constructor.
-- `Intl.DurationFormat.prototype[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Intl.DurationFormat"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+- `Intl.DurationFormat.prototype[Symbol.toStringTag]`
+  - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Intl.DurationFormat"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 
