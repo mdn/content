@@ -22,7 +22,7 @@ SyntaxError: Invalid regular expression: invalid class set character (Safari)
 
 ## What went wrong?
 
-Normally, character classes can contain almost all characters literally. However, the `v` mode made the character class syntax more sophisticated, and in order to leave room for future syntax extensions, some syntax characters are forbidden from appearing literally in a character class. They include: `(`, `)`, `[`, `]`, `{`, `}`, `/`, `-`, `|`. If you want to match these literal characters, escape them such as `/[\|]/v`.
+Normally, character classes can contain almost all characters literally. However, the `v` mode made the character class syntax more sophisticated, and in order to leave room for future syntax extensions, some syntax characters are forbidden from appearing literally in a character class. They include: `(`, `)`, `[`, `]`, `{`, `}`, `/`, `-`, `|`. If you want to match these literal characters, escape them; for example: `/[\|]/v`.
 
 ## Examples
 
