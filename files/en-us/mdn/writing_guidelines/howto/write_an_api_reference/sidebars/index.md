@@ -81,7 +81,7 @@ These are all technically optional, but it is strongly encouraged that instead o
    "Response" results in a link being made to [https://developer.mozilla.org/en-US/docs/Web/API/Response](/en-US/docs/Web/API/Response).
 3. `"methods"` — the value is an array that should contain any methods the spec adds to interfaces associated with other APIs, such as instantiation methods created on {{domxref("Navigator")}} or {{domxref("Window")}}.
    If there are a huge number of methods, you might want to consider only listing the most popular ones, or putting them first in the list.
-   "fetch()" results in a link being made to [https://developer.mozilla.org/en-US/docs/Web/API/fetch](/en-US/docs/Web/API/fetch).
+   "fetch()" results in a link being made to [https://developer.mozilla.org/en-US/docs/Web/API/fetch](/en-US/docs/Web/API/Window/fetch).
    Do _not_ list methods that are members of interfaces that are owned by the same API.
 4. `"properties"` — the value is an array that should contain all of the properties associated with the API.
    This can include properties that are members of interfaces defined in the API spec, and properties the API defines on other interfaces.
