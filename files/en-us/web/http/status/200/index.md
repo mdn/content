@@ -31,7 +31,8 @@ It is more common to see {{HTTPStatus("201")}} `Created` if the resource is uplo
 
 ### Receiving a `200 OK` for a GET request
 
-Making a successful GET request to `https://example.com` returns the following response with the HTML contained in the message body:
+In this example, a successful GET request to `https://example.com` returns a `200 OK` response.
+The response includes representation headers and a message body with the HTML resource:
 
 ```http
 HTTP/1.1 200 OK
@@ -48,7 +49,7 @@ X-Cache: HIT
 Content-Length: 1256
 
 <!doctype html>
-<!-- HTML content will follow here -->
+<!-- HTML content follows here -->
 ```
 
 ### POST response in form submission
