@@ -7,7 +7,8 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc6585#section-5
 
 {{HTTPSidebar}}
 
-The HTTP **`431 Request Header Fields Too Large`** status response code is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses) and indicates that the server refuses to process the request because the request's [HTTP headers](/en-US/docs/Web/HTTP/Headers) are too long.
+The HTTP **`431 Request Header Fields Too Large`** status response code indicates that the server refuses to process the request because the request's [HTTP headers](/en-US/docs/Web/HTTP/Headers) are too long.
+It is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses)
 The request _may_ be resubmitted after reducing the size of the request headers.
 
 431 can be used when the **total size** of request headers is too large, or when a **single** header field is too large.

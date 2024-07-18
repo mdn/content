@@ -7,7 +7,8 @@ spec-urls: https://httpwg.org/specs/rfc7725.html#n-451-unavailable-for-legal-rea
 
 {{HTTPSidebar}}
 
-The HTTP **`451 Unavailable For Legal Reasons`** status response code is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses) and indicates that the user requested a resource that is not available due to legal reasons, such as a web page for which a legal action has been issued.
+The HTTP **`451 Unavailable For Legal Reasons`** status response code indicates that the user requested a resource that is not available due to legal reasons, such as a web page for which a legal action has been issued.
+It is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses).
 
 ## Status
 

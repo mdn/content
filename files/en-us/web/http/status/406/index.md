@@ -7,7 +7,8 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.406
 
 {{HTTPSidebar}}
 
-The HTTP **`406 Not Acceptable`** status response code is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses) and indicates that the server cannot produce a response matching the list of acceptable values defined in the request's proactive [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) headers, and that the server is unwilling to supply a default representation.
+The HTTP **`406 Not Acceptable`** status response code indicates that the server could not produce a response matching the list of acceptable values defined in the request's proactive [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) headers, and that the server was unwilling to supply a default representation.
+It is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses).
 
 Proactive content negotiation headers include:
 
@@ -15,7 +16,9 @@ Proactive content negotiation headers include:
 - {{HTTPHeader("Accept-Encoding")}}
 - {{HTTPHeader("Accept-Language")}}
 
-A server may return responses which are not in the accept headers sent in the client request, and this may be preferable to sending a 406 response in some cases.
+A server may return responses that differ from the request's accept headers.
+In such cases, a {{HTTPStatus("200")}} response with a default resource that doesn't match the client's list of acceptable content negotiation values may be preferable to sending a 406 response.
+
 If a server returns a 406, the body of the message should contain the list of available representations for the resource, allowing the user to choose, although no standard way for this is defined.
 
 ## Status

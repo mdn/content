@@ -7,7 +7,8 @@ spec-urls: https://httpwg.org/specs/rfc9110.html#status.422
 
 {{HTTPSidebar}}
 
-The HTTP **`422 Unprocessable Content`** status response code is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses) and indicates that the server understands the content type of the request entity, and the syntax of the request entity is correct, but it was unable to process the contained instructions.
+The HTTP **`422 Unprocessable Content`** status response code indicates that the server understood the content type of the request entity, and the syntax of the request entity was correct, but it was unable to process the contained instructions.
+It is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses).
 
 Clients that receive a `422` response should expect that repeating the request without modification will fail with the same error.
 
@@ -22,7 +23,7 @@ Clients that receive a `422` response should expect that repeating the request w
 ### SHA validation failure
 
 The following example makes a request to update file contents ([based on GitHub's API](https://docs.github.com/en/rest/repos/contents?apiVersion=2022-11-28#create-or-update-file-contents)).
-The `content` field is Base64 encoded and uses `\n` line feeds every 60 characters, with one terminating the string:
+The `content` field is {{glossary("Base64")}} encoded and uses `\n` line feeds every 60 characters, with one terminating the string:
 
 ```http
 PUT /repos/mdn/content/contents/README.md HTTP/1.1

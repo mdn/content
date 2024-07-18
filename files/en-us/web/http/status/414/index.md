@@ -7,15 +7,16 @@ spec-urls: https://httpwg.org/specs/rfc9110.html#status.414
 
 {{HTTPSidebar}}
 
-The HTTP **`414 URI Too Long`** status response code is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses) and indicates that a URI requested by the client is longer than the server is willing to interpret.
+The HTTP **`414 URI Too Long`** status response code indicates that a URI requested by the client was longer than the server is willing to interpret.
+It is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses).
 
 There are a few rare conditions when this might occur:
 
 - a client has improperly converted a {{HTTPMethod("POST")}} request to a {{HTTPMethod("GET")}} request with long query information,
-- a client has descended into a loop of redirection (for example, a redirected URI prefix that points to a suffix of itself),
-- or when the server is under attack by a client attempting to exploit potential security holes.
+- a client has descended into a loop of redirection (for example, a redirected URI prefix that points to a suffix of itself), or
+- the server is under attack by a client attempting to exploit potential security holes.
 
-Some systems implement "414 URI Too Long" as "414 Request-URI Too Large".
+Some systems implement `414 URI Too Long` as `414 Request-URI Too Large`.
 
 ## Status
 
@@ -27,7 +28,7 @@ Some systems implement "414 URI Too Long" as "414 Request-URI Too Large".
 
 ### Form submission using GET
 
-In the following example, a HTML [form method](/en-US/docs/Web/HTML/Element/form#method) accidentally uses `get` instead of `post`.
+In the following example, an HTML [`<form>` method](/en-US/docs/Web/HTML/Element/form#method) accidentally uses `get` instead of `post`.
 A large amount of form data is appended to the URL specified at the form's `action` attribute and is sent as a GET request:
 
 ```http

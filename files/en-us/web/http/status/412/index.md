@@ -7,9 +7,10 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.412
 
 {{HTTPSidebar}}
 
-The HTTP **`412 Precondition Failed`** status response code is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses) and indicates that access to the target resource has been denied.
-This happens with conditional requests on methods other than {{HTTPMethod("GET")}} or {{HTTPMethod("HEAD")}} when the condition defined by the {{HTTPHeader("If-Unmodified-Since")}} or {{HTTPHeader("If-None-Match")}} headers is notfulfilled.
-In that case, the request, usually an upload or a modification of a resource, cannot be made and this error response is sent back.
+The HTTP **`412 Precondition Failed`** status response code indicates that access to the target resource was denied.
+This happens with [conditional requests](/en-US/docs/Web/HTTP/Conditional_requests) on methods other than {{HTTPMethod("GET")}} or {{HTTPMethod("HEAD")}} when the condition defined by the {{HTTPHeader("If-Unmodified-Since")}} or {{HTTPHeader("If-None-Match")}} headers is not fulfilled.
+In that case, the request (usually an upload or a modification of a resource) cannot be made and this error response is sent back.
+It is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses).
 
 ## Status
 

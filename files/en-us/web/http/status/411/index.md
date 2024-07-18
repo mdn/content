@@ -7,10 +7,11 @@ spec-urls: https://httpwg.org/specs/rfc9110.html#status.411
 
 {{HTTPSidebar}}
 
-The HTTP **`411 Length Required`** status response code is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses) and indicates that the server refuses to accept the request without a defined {{HTTPHeader("Content-Length")}} header.
+The HTTP **`411 Length Required`** status response code indicates that the server refused to accept the request without a defined {{HTTPHeader("Content-Length")}} header.
+It is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses).
 
 > **Note:**
-> When sending data in a series of chunks, the `Content-Length` header is omitted and at the beginning of each chunk you need to add the length of the current chunk in hexadecimal format.
+> When sending data in a series of chunks, the `Content-Length` header is omitted, and at the beginning of each chunk, the length of the current chunk needs to be included in hexadecimal format.
 > See {{HTTPHeader("Transfer-Encoding")}} for more details.
 
 ## Status
@@ -23,7 +24,7 @@ The HTTP **`411 Length Required`** status response code is part of the `400`-`49
 
 ### Chunked POST request
 
-The following request is sent chunked, which can be the default method of sending data in some cases (specifically when [writing to streams](https://nodejs.org/api/http.html#requestwritechunk-encoding-callback)):
+The following request is sent chunked, which is the default method of sending data in some cases, such as when [writing to streams](https://nodejs.org/api/http.html#requestwritechunk-encoding-callback):
 
 ```http
 POST /translate/de HTTP/1.1

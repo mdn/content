@@ -7,12 +7,13 @@ spec-urls: https://httpwg.org/specs/rfc9110.html#status.408
 
 {{HTTPSidebar}}
 
-The HTTP **`408 Request Timeout`** status response code is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses) and indicates that the server would like to shut down this unused connection.
-It is sent on an idle connection by some servers, _even without any previous request by the client_.
+The HTTP **`408 Request Timeout`** status response code indicates that the server would like to shut down this unused connection.
+It is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses).
+A `408` is sent on an idle connection by some servers, _even without any previous request by the client_.
 
 A server should send the "close" {{HTTPHeader("Connection")}} header field in the response, since `408` implies that the server has decided to close the connection rather than continue waiting.
 
-This response is used much more since some browsers, like Chrome, Firefox 27+, and IE9, use HTTP pre-connection mechanisms to speed up surfing.
+This response is used much more since some browsers, like Chrome and Firefox, use HTTP pre-connection mechanisms to speed up surfing.
 
 > **Note:** Some servers will shut down a connection without sending this message.
 
@@ -26,7 +27,7 @@ This response is used much more since some browsers, like Chrome, Firefox 27+, a
 
 ### Timeout in form submission
 
-The following example shows what a client may send when an [input](/en-US/docs/Web/HTML/Element/input/file) element uses an image on form submission with `method="post"`:
+The following example shows what a client may send when an [`<input type="file">`](/en-US/docs/Web/HTML/Element/input/file) element uses an image on form submission with `method="post"`:
 
 ```http
 POST /upload HTTP/1.1

@@ -7,11 +7,12 @@ spec-urls: https://httpwg.org/specs/rfc9110.html#status.405
 
 {{HTTPSidebar}}
 
-The HTTP **`405 Method Not Allowed`** status response code is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses) and indicates that the server knows the request method, but the target resource doesn't support this method.
+The HTTP **`405 Method Not Allowed`** status response code indicates that the server knows the request method, but the target resource doesn't support this method.
+It is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses).
 
 The server **must** generate an {{HTTPHeader("Allow")}} header in a 405 response with a list of methods that the target resource currently supports.
 
-In cases where a server is returning a 405 response, and a server owner expects the requests to succeed, this may be caused by improper permissions set on files or directories that are expected to be served to clients.
+Improper server-side permissions set on files or directories may cause a 405 response when the request would otherwise be expected to succeed.
 
 ## Status
 

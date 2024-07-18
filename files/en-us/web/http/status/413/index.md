@@ -7,9 +7,11 @@ spec-urls: https://httpwg.org/specs/rfc9110.html#status.413
 
 {{HTTPSidebar}}
 
-The HTTP **`413 Content Too Large`** status response code is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses) and indicates that the request entity is larger than limits defined by server; the server might close the connection or return a {{HTTPHeader("Retry-After")}} header field.
+The HTTP **`413 Content Too Large`** status response code indicates that the request entity was larger than limits defined by server; the server might close the connection or return a {{HTTPHeader("Retry-After")}} header field.
+It is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses).
 
-Prior to RFC 9110 the response phrase for the status was **`Payload Too Large`**, and that message is still widely used.
+Prior to {{rfc("9110")}} the response phrase for the status was **`Payload Too Large`**.
+This message is still widely used.
 
 ## Status
 
@@ -21,7 +23,7 @@ Prior to RFC 9110 the response phrase for the status was **`Payload Too Large`**
 
 ### File upload limit exceeded
 
-The following example shows what the client may send when an [input](/en-US/docs/Web/HTML/Element/input/file) element uses an image on form submission with `method="post"`:
+The following example shows what the client may send when an [`<input type="file">`](/en-US/docs/Web/HTML/Element/input/file) element includes an image on form submission with `method="post"`:
 
 ```http
 POST /upload HTTP/1.1

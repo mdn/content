@@ -7,11 +7,12 @@ spec-urls: https://httpwg.org/specs/rfc9110.html#status.415
 
 {{HTTPSidebar}}
 
-The HTTP **`415 Unsupported Media Type`** status response code is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses) and indicates that the server refuses to accept the request because the payload is in an unsupported format.
+The HTTP **`415 Unsupported Media Type`** status response code indicates that the server refused to accept the request because the payload format is not supported.
+It is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses).
 
-The format problem might be due to the request's indicated {{HTTPHeader("Content-Type")}} or {{HTTPHeader("Content-Encoding")}}, or as a result of inspecting the data directly.
-Some servers may be strict about the expected `Content-Type` of certain requests.
-For example, sending `UTF8` instead of `UTF-8` to specify the [UTF-8 charset](https://www.rfc-editor.org/rfc/rfc3629.html) may cause the server to consider the media type invalid.
+The format problem might be due to the request's indicated {{HTTPHeader("Content-Type")}} or {{HTTPHeader("Content-Encoding")}}, or as a result of processing the request payload.
+Some servers may be strict about the expected `Content-Type` of requests.
+For example, sending `UTF8` instead of `UTF-8` to specify the {{glossary("UTF-8")}} charset may cause the server to consider the media type invalid.
 
 ## Status
 
@@ -48,7 +49,7 @@ Content-Length: 0
 
 ### Invalid content type
 
-In the following example, the {{HTTPHeader("Content-Type")}} header is incorrectly set to URL-encoded form data where the payload is in the request body instead:
+In the following example, the {{HTTPHeader("Content-Type")}} header is incorrectly set to URL-encoded form data when the payload is in the request body instead:
 
 ```http
 POST /comments HTTP/1.1
@@ -57,7 +58,7 @@ Content-Length: 23
 Content-Type: application/x-www-form-urlencoded
 
 {
-  "user": "brian",
+  "user": "belgin",
   "comment": "LGTM!"
 }
 ```

@@ -7,12 +7,13 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.416
 
 {{HTTPSidebar}}
 
-The HTTP **`416 Range Not Satisfiable`** status response code is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses) and indicates that a server cannot serve the requested ranges.
-The most likely reason is that the document doesn't contain such ranges, or that the {{HTTPHeader("Range")}} header value, though syntactically correct, doesn't make sense.
+The HTTP **`416 Range Not Satisfiable`** status response code indicates that a server could not serve the requested ranges.
+It is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses).
+The most likely reason for this response is that the document doesn't contain such [ranges](/en-US/docs/Web/HTTP/Range_requests), or that the {{HTTPHeader("Range")}} header value, though syntactically correct, doesn't make sense.
 
 The `416` response message should contain a {{HTTPHeader("Content-Range")}} indicating an unsatisfied range (that is a `'*'`) followed by a `'/'` and the current length of the resource, e.g., `Content-Range: bytes */12777`
 
-Faced with this error, browsers usually either abort the operation (for example, a download will be considered as non-resumable) or ask for the whole document again.
+When encountering this error, browsers typically either abort the operation (for example, a download will be considered non-resumable) or request the whole document again without ranges.
 
 ## Status
 
@@ -47,7 +48,6 @@ Content-Range: bytes */800
 
 ## See also
 
-- [HTTP range requests](/en-US/docs/Web/HTTP/Range_requests)
 - [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
 - {{HTTPStatus(206)}} `Partial Content`
 - {{HTTPHeader("Content-Range")}}
