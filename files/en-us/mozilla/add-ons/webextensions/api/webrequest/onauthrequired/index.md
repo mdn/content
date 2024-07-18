@@ -86,7 +86,6 @@ Events have three functions:
       - : `object`. Details about the request. See the [details](#details_2) section for more information.
     - `asyncCallback` {{optional_inline}}
 
-
       - : A function to call, at most once, to asynchronously modify the request object.
         This parameter is only present if the event listener is registered with `"asyncBlocking"` in the `extraInfoSpec` array. `asyncCallback` is undefined if `extraInfoSpec` is not provided or contains `"blocking"`.
 
@@ -101,11 +100,12 @@ Events have three functions:
     - `"blocking"`: make the request block so you can cancel the request or supply authentication credentials. Return a `BlockingResponse` object with its `cancel` or `authCredentials` properties set.
 
       - In Chrome, the event listener must respond synchronously.
-      - In Firefox, the event listener can return a Promise that resolves to a `BlockingResponse` object to respond to the event asynchronously.
+      - In Firefox, the event listener can respond synchronously or return a promise that resolves to a `BlockingResponse` object to respond asynchronously.
 
-    - `"asyncBlocking"`: handle the request asynchronously. The return value of the event listener is ignored. To resolve the event, pass the `asyncCallback` parameter a `BlockingResponse` result, with its `cancel` or `authCredentials` properties set. Supported from Chrome 120 and Firefox 128. Not supported in Safari.
+    - `"asyncBlocking"`: handle the request asynchronously. The return value of the event listener is ignored. To resolve the event, pass the `asyncCallback` parameter a `BlockingResponse` object.
 
-    - `"responseHeaders"`: include `responseHeaders` in the `details` object passed to the listener.
+      - Supported from Chrome 120 and Firefox 128.
+      - Not supported in Safari.
 
 ## Additional objects
 
