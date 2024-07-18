@@ -7,9 +7,9 @@ spec-urls: https://drafts.csswg.org/css-values/#value-defs
 
 {{CSSRef}}
 
-**CSS value definition syntax**, a formal grammar, is used for defining the set of valid values for a CSS property or function. In addition to this syntax, the set of valid values can be further restricted by semantic constraints (for example, for a number to be strictly positive).
+**CSS value definition syntax**, a formal grammar, is used to define the set of valid values for a CSS property or function. In addition to this syntax, the set of valid values can be further restricted by semantic constraints (for example, for a number to be strictly positive).
 
-The definition syntax describes which values are allowed and the interactions between them. A component can be a _keyword_, some characters considered as a _literal_, or a value of a given CSS data type or of another CSS property.
+The definition syntax describes which values are allowed and the interactions between them. A component can be a _keyword_, some characters considered as a _literal_, or a value of a given CSS data type or another CSS property.
 
 ## Component value types
 
@@ -21,11 +21,11 @@ A keyword with a predefined meaning appears literally, without quotation marks. 
 
 #### The specific case of `inherit`, `initial` and `unset`
 
-All CSS properties accept the keywords `inherit`, `initial` and `unset`, that are defined throughout CSS. They are not shown in the value definition, and are implicitly defined.
+All CSS properties accept the keywords `inherit`, `initial`, and `unset`. They are not shown in the value definition and are implicitly defined.
 
 ### Literals
 
-In CSS, a few characters can appear on their own, like the slash ('`/`') or the comma ('`,`'), and are used in a property definition to separate its parts. The comma is often used to separate values in enumerations, or parameters in mathematical-like functions; the slash often separates parts of the value that are semantically different, but have a common syntax. Typically, the slash is used in shorthand properties; to separate components that are of the same type, but belong to different properties.
+In CSS, a few characters can appear on their own, like the slash ('`/`') or the comma ('`,`'), and are used in a property definition to separate its parts. The comma is often used to separate values in enumerations, or parameters in mathematical-like functions; the slash often separates parts of the value that are semantically different, but have a common syntax. Typically, the slash is used in shorthand properties; to separate components of the same type, but belong to different properties.
 
 Both symbols appear literally in a value definition.
 
@@ -33,7 +33,7 @@ Both symbols appear literally in a value definition.
 
 #### Basic data types
 
-Some kind of data are used throughout CSS, and are defined once for all values in the specification. Called _basic data types_, they are represented with their name surrounded by the symbol '`<`' and '`>`': {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;string&gt;")}}, …
+Some data types are used throughout CSS and are defined once for all values in the specification. Called _basic data types_, they are represented with their name surrounded by the symbol '`<`' and '`>`': {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;string&gt;")}}, …
 
 #### Non-terminal data types
 
@@ -42,7 +42,7 @@ Less common data types, called _non-terminal data types_, are also surrounded by
 Non-terminal data types are of two kinds:
 
 - data types _sharing the same name of a property_, put between quotes. In this case, the data type shares the same set of values as the property. They are often used in the definition of shorthand properties.
-- data type _not sharing the same name of a property_. These data types are very close to the basic data types. They only differ from the basic data types in the physical location of their definition. In this case, the definition is usually physically very close to the definition of the property using them.
+- data types _not sharing the same name of a property_. These data types are very close to the basic data types. They only differ from the basic data types in the physical location of their definition. In this case, the definition is usually physically very close to the definition of the property using them.
 
 ## Component value combinators
 
@@ -66,7 +66,7 @@ But not:
 
 ### Juxtaposition
 
-Placing several keywords, literals or data types, next to one another, only separated by one or several spaces, is called _juxtaposition_. All juxtaposed components are **mandatory and should appear in the exact order**.
+Placing several keywords, literals, or data types, next to one another, only separated by one or several spaces, is called _juxtaposition_. All juxtaposed components are **mandatory and should appear in the exact order**.
 
 ```css
 bold <length>, thin
@@ -103,13 +103,13 @@ This example matches the following values:
 But not:
 
 - `bold`, as both components must appear in the value.
-- `bold 1em bold`, as both components must appear only one time.
+- `bold 1em bold`, as both components must appear only once.
 
 > **Note:** juxtaposition has precedence over the double ampersand, meaning that `bold thin && <length>` is equivalent to `[ bold thin ] && <length>`. It describes `bold thin <length>` or `<length> bold thin` but not `bold <length> thin`.
 
 ### Double bar
 
-Separating two or more components by a _double bar_, `||`, means that all entities are options: **at least one of them must be present, and they may appear in any order**. Typically this is used to define the different values of a [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties).
+Separating two or more components by a _double bar_, `||`, means that all entities are options: **at least one must be present, and they may appear in any order**. Typically this is used to define the different values of a [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties).
 
 ```css
 <'border-width'> || <'border-style'> || <'border-color'>
@@ -123,10 +123,10 @@ This example matches the following values:
 
 But not:
 
-- `blue yellow`, as a component must appear at most one single time.
-- `bold`, as it isn't a keyword allowed as value of any of the entity.
+- `blue yellow`, as a component must appear once at most.
+- `bold`, as it isn't a keyword allowed as a value of any of the entities.
 
-> **Note:** the double ampersand has precedence over the double bar, meaning that `bold || thin && <length>` is equivalent to `bold || [ thin && <length> ]`. It describes `bold`, `thin <length>`, `bold thin <length>`, or `thin <length> bold` but not `<length> bold thin` as bold, if not omitted, must be placed before or after the whole `thin && <length>` component.
+> **Note:** The double ampersand has precedence over the double bar, meaning that `bold || thin && <length>` is equivalent to `bold || [ thin && <length> ]`. It describes `bold`, `thin <length>`, `bold thin <length>`, or `thin <length> bold` but not `<length> bold thin` as bold, if not omitted, must be placed before or after the whole `thin && <length>` component.
 
 ### Single bar
 
@@ -152,13 +152,13 @@ But not:
 - `center 3%`, as only one of the components must be present.
 - `3em 4.5em`, as a component must be present at most one time.
 
-> **Note:** the double bar has precedence over the single bar, meaning that `bold | thin || <length>` is equivalent to `bold | [ thin || <length> ]`. It describes `bold`, `thin`, `<length>`, `<length> thin`, or `thin <length>` but not `bold <length>` as only one entity from each side of the `|` combinator can be present.
+> **Note:** The double bar has precedence over the single bar, meaning that `bold | thin || <length>` is equivalent to `bold | [ thin || <length> ]`. It describes `bold`, `thin`, `<length>`, `<length> thin`, or `thin <length>` but not `bold <length>` as only one entity from each side of the `|` combinator can be present.
 
 ## Component value multipliers
 
 A multiplier is a sign that indicates how many times a preceding entity can be repeated. Without a multiplier, an entity must appear exactly one time.
 
-Note that multipliers cannot be added and have precedence over all combinators.
+Multipliers cannot be added and have precedence over all combinators.
 
 ### Asterisk (`*`)
 
@@ -195,7 +195,7 @@ This example matches the following values:
 
 But not:
 
-- `bold`, as `smaller` must appear at least one time.
+- `bold`, as `smaller` must appear at least once.
 - `smaller`, as `bold` is juxtaposed and must appear before any `smaller` keyword.
 
 ### Question mark (`?`)
@@ -213,7 +213,7 @@ This example matches the following values:
 
 But not:
 
-- `bold smaller smaller`, as `smaller` must appear at most one time.
+- `bold smaller smaller`, as `smaller` must appear at most once.
 - `smaller`, as `bold` is juxtaposed and must appear before any `smaller` keyword.
 
 ### Curly braces (`{ }`)
@@ -232,7 +232,7 @@ This example matches the following values:
 
 But not:
 
-- `bold`, as `smaller` must appear at least one time.
+- `bold`, as `smaller` must appear at least once.
 - `bold smaller smaller smaller smaller`, as `smaller` must appear at most three times.
 - `smaller`, as `bold` is juxtaposed and must appear before any `smaller` keyword
 
@@ -252,11 +252,11 @@ This example matches the following values:
 
 But not:
 
-- `bold`, as `smaller` must appear at least one time.
+- `bold`, as `smaller` must appear at least once.
 - `bold smaller smaller smaller`, as the different occurrences of `smaller` must be separated by commas.
 - `smaller`, as `bold` is juxtaposed and must appear before any `smaller` keyword.
 
-The hash mark may optionally be followed by curly braces to indicate precisely how many times the repetition occurs.
+The hash mark may optionally be followed by curly braces to indicate how many times the entity repeats.
 
 ```css
 bold smaller#{1,3}
@@ -318,7 +318,7 @@ The _bracketed range notation_ `[min, max]` indicates an inclusive range between
 
 Here are some more examples:
 
-- `<integer [-∞,∞]>` - any integer from negative infinity to positive infinity
+- `<integer [-∞,∞]>`: Any integer from negative infinity to positive infinity.
 - `<integer [0,∞]>`: Any integer from 0 to positive infinity is valid. Negative integers are invalid.
 - `<time [0s,10s]>` or `<time [0,10s]>`: Any duration from 0 to 10 seconds is valid.
 - `<integer [-∞,-1]> | <integer [1,∞]>`: Any integer except zero is valid.
@@ -410,7 +410,7 @@ Here are some more examples:
       <td><code>#</code></td>
       <td>Hash mark</td>
       <td>
-        1 or more times, but each occurrence separated by a comma
+        1 or more times, with each occurrence separated by a comma
         ('<code>,</code>')
       </td>
       <td><code>bold smaller#</code></td>
