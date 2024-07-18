@@ -13,8 +13,8 @@ A `200 OK` response is cacheable by default.
 
 A `200 OK` has the following meaning and format in response to these request methods:
 
-- {{HTTPMethod("GET")}}: A resource was retrieved by the server and it's included in the response body.
-- {{HTTPMethod("POST")}}: An action succeeded, the response has a message body describing the result.
+- {{HTTPMethod("GET")}}: A resource was retrieved by the server and included in the response body.
+- {{HTTPMethod("POST")}}: An action succeeded; the response has a message body describing the result.
 - {{HTTPMethod("HEAD")}}: Identical to `GET`, except there is no message body.
 - {{HTTPMethod("TRACE")}}: The response has a message body containing the request as received by the server.
 
