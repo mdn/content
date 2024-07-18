@@ -60,7 +60,7 @@ In this example pressing the button runs some code. First, it changes the text o
 
 ### Without a variable
 
-To understand why this is so useful, let's think about how we'd write this example without using a variable. It would end up looking something like this:
+To understand why this is so useful, let's think about how we'd write this example without using a variable to store the count. It would end up looking something like this:
 
 ```html example-bad
 <button id="button_B">Press me</button>
