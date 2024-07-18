@@ -179,19 +179,7 @@ The basic syntax is the same, but the font technology can be specified, and allo
 }
 ```
 
-#### Example for a font that includes both upright and italics
-
-```css
-@font-face {
-  font-family: "MyVariableFontName";
-  src: url("path/to/font/file/myvariablefont.woff2") format("woff2-variations");
-  font-weight: 125 950;
-  font-stretch: 75% 125%;
-  font-style: oblique 0deg 20deg;
-}
-```
-
-> **Note:** there is no set specific value for the upper-end degree measurement in this case; they indicate that there is an axis so the browser can know to render upright or italic (remember that italics are only on or off)
+The `font-style: oblique 0deg` and `font-style: oblique 0deg 20deg` values also indicate the font has normal glyphs.
 
 #### Example for a font that contains only italics and no upright characters
 
@@ -204,6 +192,8 @@ The basic syntax is the same, but the font technology can be specified, and allo
   font-style: italic;
 }
 ```
+
+The `font-style: oblique 14deg` also indicates that the font has italics glyphs.
 
 #### Example for a font that contains an oblique (slant) axis
 
