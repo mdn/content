@@ -112,13 +112,13 @@ justify-content: unset;
 
 Defined in the [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module, `justify-content` applies to multicol containers, flex containers, and grid containers. The property does not apply to and has no effect on block containers.
 
-This property shares many keyword values with the {{cssxref("align-content")}} property, but not all! The `justify-content` isn't involved in baseline alignment, and therefore does not take baseline values.
+This property shares many keyword values with the {{cssxref("align-content")}} property, but not all! `justify-content` isn't involved in baseline alignment, and therefore does not take baseline values.
 
-In [flex layouts](/en-US/docs/Web/CSS/CSS_flexible_box_layout), the property defines how positive free space in each flex line is distributed between or around flex items, along the main axis. This property impacts the elements in a line, not between lines. The alignment is done after the lengths and auto margins are applied, which means that when one or more flex items in a line have a {{cssxref("flex-grow")}} factor greater than `0` the property has no effect on flex lines as that line has no available space to distribute. Also, as stretching in the main axis is controlled by {{cssxref("flex")}}, the `stretch` value behaves as `flex-start`.
+In [flex layouts](/en-US/docs/Web/CSS/CSS_flexible_box_layout), the property defines how positive free space is distributed between or around flex items along the main axis. This property impacts the space between elements in a line, not the space between lines. The alignment is done after the lengths and auto margins are applied, which means that when one or more flex items in a line have a {{cssxref("flex-grow")}} factor greater than `0`, the property has no effect as there is no space to distribute along that line. Also, as stretching along the main axis is controlled by {{cssxref("flex")}}, the `stretch` value behaves as `flex-start`.
 
 With [grid layout](/en-US/docs/Web/CSS/CSS_grid_layout), this property distributes available space between or around grid columns, not grid items. If the grid container is larger than the grid itself, the `justify-content` property can be used to justify the grid along the inline axis, aligning the grid columns.
 
-Grid `auto` track sizes (and only `auto` track sizes) can be stretched by the `align-content` and `justify-content` properties. Therefore by default, an `auto` sized track will take up any remaining space in the grid container. As the grid's inline size has to be less than the grid container's inline size for there to be space to distribute, in this case the property has no effect.
+Grid `auto` track sizes (and only `auto` track sizes) can be stretched by the `align-content` and `justify-content` properties. Therefore by default, an `auto` sized track will take up any remaining space in the grid container. As the grid's inline size has to be less than the grid container's inline size for there to be space to distribute, the property has no effect in this case.
 
 ## Formal definition
 
@@ -136,7 +136,7 @@ In this example, we have a grid that is narrower than its grid container, and we
 
 #### HTML
 
-The {{htmlelement("section")}} container, our to-be grid container, has 16 nested {{htmlelement("div")}} to-be flex item elements.
+The {{htmlelement("section")}} container, our grid container to-be, has 16 nested {{htmlelement("div")}}s that will become grid items.
 
 ```html
 <section class="container">
@@ -176,7 +176,7 @@ div {
 }
 ```
 
-We set the width of the container to `500px` but only have three columns that are each `80px` wide, meaning there is `260px` of available space to distribute between or around the grid columns. We set `justify-content: space-evenly`, which means there will be `65px` of space before, between, and after each column.
+We set the container width to `500px` and specify three columns, each `80px` wide, meaning there is `260px` of available space to distribute between or around them. We then set `justify-content: space-evenly`, which means there will be `65px` of space before, between, and after each column.
 
 We set different widths (and background colors) to demonstrate how the justification is applied to the columns.
 
@@ -210,9 +210,9 @@ div:nth-last-of-type(3) {
 
 Note that `justify-contents` aligns the columns and has no effect on the items or alignment in grid areas. Grid items, even those that overflow their grid cell, do not impact column justification.
 
-### The safe keyword
+### The safe keyterm
 
-This example demonstrates the `safe` keyterm. Four centered flex items are not allowed to wrap, overflow their single flex-line container. By adding `safe` to `center` in the `justify-content` property, overflowing content behaves as if the alignment mode is `start`
+This example demonstrates the `safe` keyterm. We specify four centered flex items that are not allowed to wrap, and as a result, overflow their single flex-line container. By adding `safe` to `center` in the `justify-content` property, overflowing content behaves as if the alignment mode is `start`
 
 ```html hidden
 <p><code>justify-content: center;</code></p>
@@ -281,7 +281,7 @@ div {
 
 {{EmbedLiveSample("the safe keyword", "100%", 260)}}
 
-As an item overflows the alignment container, with `safe` included, the alignment mode is `start` and the `center` alignment is not implemented. The `safe` keyterm has no effect if the items do not overflow the container.
+As an item overflows the alignment container, with `safe` included the alignment mode behaves as `start` and the `center` alignment is not implemented. The `safe` keyterm has no effect if the items do not overflow the container.
 
 ### Visualizing flex item distribution
 
@@ -378,7 +378,7 @@ justifyContent.addEventListener("change", (evt) => {
 
 {{EmbedLiveSample("Visualizing_flex_item_distribution", "100%", 180)}}
 
-Select different keywords from the drop-down menu to visualize the different `justify-content` keyword values. Because an item on the first line can grow, there is no available space for the `justify-content` property to distribute on that line only. With the `space-between` value, the first item on each line is flush with the main-start edge, and the last item is flush with the main-end edge; this means if a line has only one item, it will be at the main-start edge (as seen in the last line). This is not the case for other `space-*` values, such as `space-evenly` and `space-around`, which centers one-item flex-lines.
+Select different keywords from the drop-down menu to visualize the different `justify-content` keyword values. Because an item on the first line can grow, there is no available space on that line for the `justify-content` property to distribute. With the `space-between` value, the first item on each line is flush with the main-start edge, and the last item is flush with the main-end edge. As a result, if a line has only one item, it will be aligned with the main-start edge (as seen in the last line). This is not the case for other `space-*` values, such as `space-evenly` and `space-around`, which center one-item flex-lines.
 
 ## Specifications
 
