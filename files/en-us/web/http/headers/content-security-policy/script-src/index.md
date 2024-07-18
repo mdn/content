@@ -263,7 +263,7 @@ will act like `'unsafe-inline' https:` in browsers that support CSP1, `https: 'n
 
 ### Allowing speculation rules
 
-To include [speculation rules](/en-US/docs/Web/API/Speculation_Rules_API) in scripts (see also [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Element/script/type/speculationrules)), you need to use the `script-src` directive with one of the `'inline-speculation-rules'` source, a hash-source, or nonce-source. For example:
+To include [speculation rules](/en-US/docs/Web/API/Speculation_Rules_API) in a script element (see also [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Element/script/type/speculationrules)), you need to use the `script-src` directive with one of the `'inline-speculation-rules'` source, a hash-source, or nonce-source. For example:
 
 ```http
 Content-Security-Policy: script-src 'inline-speculation-rules'
