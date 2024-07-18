@@ -36,7 +36,7 @@ Web browsers follow a strict security model that enforces strong security for co
 
 In general, documents from one origin cannot make requests to other origins. This makes sense because you don't want sites to be able to interfere with one another and access unauthorized data.
 
-However, you might want to relax this restriction in some circumstances; for example, if you have multiple websites that interact with each other, you may allow them to request resources from one another using [`fetch()`](/en-US/docs/Web/API/fetch). This can be permitted using [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS), an HTTP-header-based mechanism that allows a server to indicate any origins (domain, scheme, or port) other than its own from which a browser should permit loading resources.
+However, you might want to relax this restriction in some circumstances; for example, if you have multiple websites that interact with each other, you may allow them to request resources from one another using [`fetch()`](/en-US/docs/Web/API/Window/fetch). This can be permitted using [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS), an HTTP-header-based mechanism that allows a server to indicate any origins (domain, scheme, or port) other than its own from which a browser should permit loading resources.
 
 ### HTTP model for communication
 

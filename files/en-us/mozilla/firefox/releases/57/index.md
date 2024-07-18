@@ -69,7 +69,7 @@ _No changes._
 #### New APIs
 
 - The {{DOMxRef("PerformanceObserver")}} API is now enabled by default ([Firefox bug 1386021](https://bugzil.la/1386021)).
-- The {{DOMxRef("AbortController")}} and {{DOMxRef("AbortSignal")}} interfaces (known as the Abort API) have been added, allowing DOM requests (such as [fetch requests](/en-US/docs/Web/API/fetch)) to be aborted if desired ([Firefox bug 1378342](https://bugzil.la/1378342)).
+- The {{DOMxRef("AbortController")}} and {{DOMxRef("AbortSignal")}} interfaces (known as the Abort API) have been added, allowing DOM requests (such as [fetch requests](/en-US/docs/Web/API/Window/fetch)) to be aborted if desired ([Firefox bug 1378342](https://bugzil.la/1378342)).
 - \[2] The [Storage API](/en-US/docs/Web/API/Storage_API) is implemented and enabled by default ([Firefox bug 1399038](https://bugzil.la/1399038)).
 
 #### DOM

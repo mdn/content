@@ -7,7 +7,7 @@ browser-compat: css.properties.font-variant-ligatures
 
 {{CSSRef}}
 
-The **`font-variant-ligatures`** [CSS](/en-US/docs/Web/CSS) property controls which {{Glossary("ligature", "ligatures")}} and {{Glossary("contextual forms")}} are used in textual content of the elements it applies to. This leads to more harmonized forms in the resulting text.
+The **`font-variant-ligatures`** [CSS](/en-US/docs/Web/CSS) property controls which {{Glossary("ligature", "ligatures")}} and {{Glossary("contextual forms")}} are used in the textual content of the elements it applies to. This leads to more harmonized forms in the resulting text.
 
 {{EmbedInteractiveExample("pages/css/font-variant-ligatures.html")}}
 
@@ -26,6 +26,13 @@ font-variant-ligatures: no-historical-ligatures; /* <historical-lig-values> */
 font-variant-ligatures: contextual; /* <contextual-alt-values> */
 font-variant-ligatures: no-contextual; /* <contextual-alt-values> */
 
+/* Two keyword values */
+font-variant-ligatures: no-contextual common-ligatures;
+
+/* Four keyword values */
+font-variant-ligatures: common-ligatures no-discretionary-ligatures
+  historical-ligatures contextual;
+
 /* Global values */
 font-variant-ligatures: inherit;
 font-variant-ligatures: initial;
@@ -34,17 +41,17 @@ font-variant-ligatures: revert-layer;
 font-variant-ligatures: unset;
 ```
 
-The `font-variant-ligatures` property is specified as one of the keyword values listed below.
+The font-variant-ligatures property is specified as `normal`, `none`, or one or more of the other value types listed below. Spaces separate multiple values.
 
 ### Values
 
 - `normal`
-  - : This keyword leads to the activation of the usual ligatures and contextual forms needed for correct rendering. The ligatures and forms activated depend on the font, language and kind of script. This is the default value.
+  - : This keyword activates the usual ligatures and contextual forms needed for correct rendering. The ligatures and forms activated depend on the font, language, and kind of script. This is the default value.
 - `none`
   - : This keyword specifies that all ligatures and contextual forms are disabled, even common ones.
 - _`<common-lig-values>`_
 
-  - : These values control the most common ligatures, like for `fi`, `ffi`, `th` or similar. They correspond to the OpenType values `liga` and `clig`. Two values are possible:
+  - : These values control the most common ligatures, like for `fi`, `ffi`, `th`, or similar. They correspond to the OpenType values `liga` and `clig`. Two values are possible:
 
     - `common-ligatures` activating these ligatures. Note that the keyword `normal` activates these ligatures.
     - `no-common-ligatures` deactivating these ligatures.

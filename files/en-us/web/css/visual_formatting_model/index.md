@@ -15,9 +15,9 @@ In the visual formatting model, each element in the document tree generates zero
 - Relationships between elements in the document tree.
 - External information (e.g., viewport size, intrinsic dimensions of images, etc.).
 
-Much of the information about the visual formatting model is defined in CSS2, however, various level 3 specifications have added to this information. When reading specifications you will often find references to the model as defined in CSS2, so an understanding of the model and the terms used to describe it in CSS2 is valuable when reading other layout specifications.
+Much of the information about the visual formatting model is defined in CSS2, however, various CSS layout modules have expanded upon this information. When reading specifications you will often find references to the model as defined in CSS2, so an understanding of the model and the terms used to describe it in CSS2 is valuable when reading other layout specifications.
 
-In this document we define the model and introduce some of the related terms and concepts, linking to more specific pages on MDN for further details.
+In this document we define the model and introduce some of the related terms and concepts, linking to more specific pages for further details.
 
 ## The role of the viewport
 
@@ -87,7 +87,7 @@ Find out more about [floats](/en-US/docs/Learn/CSS/CSS_layout/Floats).
 
 ### Absolute positioning
 
-In the absolute positioning model (which also includes fixed positioning), a box is removed from the normal flow entirely and assigned a position with respect to a containing block (which is the viewport in the case of fixed positioning).
+In the absolute positioning model (which also includes `fixed` positioning), a box is removed from the normal flow entirely and assigned a position relative to a containing block (which is the viewport in the case of fixed positioning) or to one or more anchor elements in [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning).
 
 An element is called **out of flow** if it is floated, absolutely positioned, or is the root element. An element is called **in-flow** if it is not out of the flow.
 
@@ -101,22 +101,23 @@ Boxes also have an inner display type, dictating how their children behave. For 
 
 However, the inner display type might be something like `grid` or `flex`, in which case the direct children will display as a grid, or flex items. In such a case the element is described as creating a grid or flex [formatting context](/en-US/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts). In many ways, this is similar to a block formatting context, however, the children behave as flex or grid items rather than items in normal flow.
 
-The interactions between block-level and inline-level boxes are described in the MDN documentation for {{cssxref("display")}}.
+The interactions between block-level and inline-level boxes are described in the {{cssxref("display")}} property reference.
 
 In addition, the references for specific values of display explain how these formatting contexts work in terms of box layout.
 
-- [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout)
-- [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout)
+- [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module
+- [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module
+- [CSS multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout) module
 - [CSS table](/en-US/docs/Web/CSS/CSS_table) module
 - [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
 
 ### Independent formatting contexts
 
-Elements either participate in the formatting context of their containing block or establish an independent formatting context. A grid container, for example, establishes a new **Grid Formatting Context** for its children.
+Elements either participate in the formatting context of their containing block or establish an independent formatting context. A grid container, for example, establishes a new **grid formatting context** for its children.
 
 **Independent formatting contexts** contain floats, and margins do not collapse across formatting context boundaries. Therefore, creating a new block formatting context can ensure that floats and margins remain inside a box. To do this, add `display: flow-root` to the box on which you wish to create a new [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context).
 
-The following example shows the effect of `display: flow-root`. The box with the black background appears to wrap round the floated item and text. If you remove `display: flow-root` from the editable CSS the floated item will poke out of the bottom of the box as it is no longer contained.
+The following example shows the effect of `display: flow-root`. The box with the black background appears to wrap around the floated item and text. If you remove `display: flow-root` from the editable CSS the floated item will poke out of the bottom of the box as it is no longer contained.
 
 {{EmbedGHLiveSample("css-examples/display/multi-keyword/block-flow-root.html", '100%', 720)}}
 
@@ -134,24 +135,19 @@ These are the boxes contained inside the block container that are participating 
 
 #### Block boxes
 
-A block box is a block-level box that is also a block container. As described in CSS `display`, it is possible for a box to be a block-level box, but not also a block container (it might be a flex or grid container for example).
+A block box is a block-level box that is also a block container. As described in CSS `display`, a box can be a block-level box, but not also a block container (it might be a flex or grid container for example).
 
 ## See also
 
-- CSS key concepts:
-  - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
-  - [Comments](/en-US/docs/Web/CSS/Comments)
-  - [Specificity](/en-US/docs/Web/CSS/Specificity)
-  - [Inheritance](/en-US/docs/Web/CSS/Inheritance)
-  - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
-  - **Visual formatting models**
-  - [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-  - Values
-    - [Initial values](/en-US/docs/Web/CSS/initial_value)
-    - [Computed values](/en-US/docs/Web/CSS/computed_value)
-    - [Used values](/en-US/docs/Web/CSS/used_value)
-    - [Actual values](/en-US/docs/Web/CSS/actual_value)
-  - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
-  - [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
-  - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
+- [CSS syntax](/en-US/docs/Web/CSS/Syntax) guide
+- [Comments](/en-US/docs/Web/CSS/Comments)
+- [Specificity](/en-US/docs/Web/CSS/Specificity)
+- [Inheritance](/en-US/docs/Web/CSS/Inheritance)
+- [Stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)
+- [Block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context)
+- [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
+- [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+- [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
+- {{DOMxRef("VisualViewport")}} interface
+- {{glossary("Scroll container")}}
