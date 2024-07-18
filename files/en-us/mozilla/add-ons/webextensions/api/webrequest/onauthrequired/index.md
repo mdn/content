@@ -31,9 +31,9 @@ The listener can respond in one of four ways:
 
   - : The extension might need to fetch credentials asynchronously. For example, the extension might need to fetch credentials from storage or ask the user. In this case, the listener can supply credentials asynchronously as follows:
 
-    - in addListener, pass `"asyncBlocking"` in Chrome and Firefox or `"blocking"` in Firefoxin the `extraInfoSpec` parameter
+    - in addListener, pass `"asyncBlocking"` in Chrome and Firefox or `"blocking"` in Firefox in the `extraInfoSpec` parameter
     - If `"blocking"` is provided, the extension can return a `webRequest.BlockingResponse` object or a Promise that resolves to a `webRequest.BlockingResponse` object
-    - If `"asyncBlocking"`` is provided, the event listener function receives a`asyncCallback`function as its second parameter.`asyncCallback`can be called asynchronously and takes a`webRequest.BlockingResponse` object as its only parameter
+    - If `"asyncBlocking"` is provided, the event listener function receives a `asyncCallback` function as its second parameter. `asyncCallback`can be called asynchronously and takes a`webRequest.BlockingResponse` object as its only parameter
 
       > **Note:** Chrome does not support a Promise as a return value ([Chromium issue 1510405](https://crbug.com/1510405)). For alternatives, see [the return value of the `listener`](#listener).
 
@@ -85,6 +85,7 @@ Events have three functions:
     - `details`
       - : `object`. Details about the request. See the [details](#details_2) section for more information.
     - `asyncCallback` {{optional_inline}}
+
 
       - : A function to call, at most once, to asynchronously modify the request object.
         This parameter is only present if the event listener is registered with `"asyncBlocking"` in the `extraInfoSpec` array. `asyncCallback` is undefined if `extraInfoSpec` is not provided or contains `"blocking"`.
