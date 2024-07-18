@@ -7,7 +7,7 @@ browser-compat: css.properties.ry
 
 {{CSSRef}}
 
-The **`ry`** [CSS](/en-US/docs/Web/CSS) property defines the y-axis, or vertical, radius of an SVG {{SVGElement("ellipse")}} and the vertical curve of the corners of the SVG {{SVGElement("rect")}} rectangle. This property can only be used with the SVG `<ellipse>` and `<rect>` elements. If present, it overrides the shape's {{SVGAttr("ry")}} attribute.
+The **`ry`** [CSS](/en-US/docs/Web/CSS) property defines the y-axis, or vertical, radius of an SVG {{SVGElement("ellipse")}} and the vertical curve of the corners of an SVG {{SVGElement("rect")}} rectangle. If present, it overrides the shape's {{SVGAttr("ry")}} attribute.
 
 > [!NOTE]
 > The `ry` property only applies to {{SVGElement("ellipse")}} and {{SVGElement("rect")}} elements nested in an {{SVGElement("svg")}}. It doesn't apply to other SVG elements or HTML elements or pseudo-elements.
@@ -15,10 +15,10 @@ The **`ry`** [CSS](/en-US/docs/Web/CSS) property defines the y-axis, or vertical
 ## Syntax
 
 ```css
-/* initial value */
+/* Initial value */
 ry: auto;
 
-/* length and percentage values */
+/* Length and percentage values */
 ry: 30px;
 ry: 30%;
 ry: 30;
@@ -33,11 +33,11 @@ ry: unset;
 
 ### Values
 
-The {{cssxref("length-percentage")}} property value denotes the vertical radius of ellipses and the vertical border-radius of rectangles.
+The {{cssxref("length")}}, {{cssxref("percentage")}}, or `auto` keyword value denotes the vertical radius of ellipses and the vertical border-radius of rectangles.
 
 - {{cssxref("length")}}
 
-  - : As an absolute or relative length, it can be expressed in any unit allowed by the CSS {{cssxref("&lt;length&gt;")}} data type. Unitless and `px` values are SVG coordinate units if the {{SVGAttr("viewBox")}} attribute is included; otherwise, CSS pixel units are used. Negative values are invalid.
+  - : Absolute or relative lengths can be expressed in any unit allowed by the CSS {{cssxref("&lt;length&gt;")}} data type. Unitless and `px` values are SVG coordinate units if the {{SVGAttr("viewBox")}} attribute is included; otherwise, CSS pixel units are used. Negative values are invalid.
 
 - {{cssxref("percentage")}}
 
@@ -63,7 +63,7 @@ This example demonstrates creating rectangles with rounded corners by applying t
 
 #### HTML
 
-We include an SVG image with four `<rect>` elements; all the rectangles are the same except for their {{SVGAttr("x")}} attribute value, which positions them along the y-axis.
+We include an SVG image with four `<rect>` elements; all the rectangles are the same except for their {{SVGAttr("x")}} attribute value, which positions them along the x-axis.
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg">
@@ -187,7 +187,7 @@ When using percentage values for `ry`, the values are relative to the height of 
 
 ### Using unitless values
 
-This example demonstrates the effects of the viewBox attribute on unitless `ry` value declaration.
+This example demonstrates the effects of the viewBox attribute on unitless `ry` value declarations.
 
 #### HTML
 
@@ -247,7 +247,7 @@ The `viewBox` attribute is defined in the second and third SVG images as `50` an
 
 ## See also
 
-- Geometrx properties: `ry`, {{cssxref("cx")}}, {{cssxref("cy")}}, {{cssxref("r")}}, {{cssxref("rx")}}, {{cssxref("x")}}, {{cssxref("y")}}, {{cssxref("height")}}, {{cssxref("height")}}
+- Geometry properties: `ry`, {{cssxref("cx")}}, {{cssxref("cy")}}, {{cssxref("r")}}, {{cssxref("rx")}}, {{cssxref("x")}}, {{cssxref("y")}}, {{cssxref("height")}}, {{cssxref("height")}}
 - {{cssxref("fill")}}
 - {{cssxref("stroke")}}
 - {{cssxref("paint-order")}}

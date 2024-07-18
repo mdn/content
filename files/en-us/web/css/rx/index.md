@@ -7,7 +7,7 @@ browser-compat: css.properties.rx
 
 {{CSSRef}}
 
-The **`rx`** [CSS](/en-US/docs/Web/CSS) property defines the x-axis, or horizontal, radius of an SVG {{SVGElement("ellipse")}} and the horizontal curve of the corners of the SVG {{SVGElement("rect")}} rectangle. This property can only be used with the SVG `<ellipse>` and `<rect>` elements. If present, it overrides the shape's {{SVGAttr("rx")}} attribute.
+The **`rx`** [CSS](/en-US/docs/Web/CSS) property defines the x-axis, or horizontal, radius of an SVG {{SVGElement("ellipse")}} and the horizontal curve of the corners of an SVG {{SVGElement("rect")}} rectangle. If present, it overrides the shape's {{SVGAttr("rx")}} attribute.
 
 > [!NOTE]
 > The `rx` property only applies to {{SVGElement("ellipse")}} and {{SVGElement("rect")}} elements nested in an {{SVGElement("svg")}}. It doesn't apply to other SVG elements or HTML elements or pseudo-elements.
@@ -15,10 +15,10 @@ The **`rx`** [CSS](/en-US/docs/Web/CSS) property defines the x-axis, or horizont
 ## Syntax
 
 ```css
-/* initial value */
+/* Initial value */
 rx: auto;
 
-/* length and percentage values */
+/* Length and percentage values */
 rx: 20px;
 rx: 20%;
 rx: 20;
@@ -37,7 +37,7 @@ The {{cssxref("length-percentage")}} property value denotes the horizontal radiu
 
 - {{cssxref("length")}}
 
-  - : As an absolute or relative length, it can be expressed in any unit allowed by the CSS {{cssxref("&lt;length&gt;")}} data type. Unitless and `px` values are SVG coordinate units if the {{SVGAttr("viewBox")}} attribute is included; otherwise, CSS pixel units are used. Negative values are invalid.
+  - : Absolute or relative lengths can be expressed in any unit allowed by the CSS {{cssxref("&lt;length&gt;")}} data type. Unitless and `px` values are SVG coordinate units if the {{SVGAttr("viewBox")}} attribute is included; otherwise, CSS pixel units are used. Negative values are invalid.
 
 - {{cssxref("percentage")}}
 
@@ -187,7 +187,7 @@ When using percentage values for `rx`, the values are relative to the width of t
 
 ### Using unitless values
 
-This example demonstrates the effects of the viewBox attribute on unitless `rx` value declaration.
+This example demonstrates the effects of the viewBox attribute on unitless `rx` value declarations.
 
 #### HTML
 
