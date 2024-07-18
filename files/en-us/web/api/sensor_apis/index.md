@@ -151,27 +151,27 @@ magSensor.start();
 
 ## Interfaces
 
-- {{domxref('AbsoluteOrientationSensor')}} {{securecontext_inline}}
+- {{domxref('AbsoluteOrientationSensor')}}
   - : Describes the device's physical orientation in relation to the Earth's reference coordinate system.
-- {{domxref('Accelerometer')}} {{securecontext_inline}}
+- {{domxref('Accelerometer')}}
   - : Provides the acceleration applied to the device along all three axes.
-- {{domxref('AmbientLightSensor')}} {{securecontext_inline}}
+- {{domxref('AmbientLightSensor')}}
   - : Returns the current light level or illuminance of the ambient light around the hosting device.
-- {{domxref('GravitySensor')}} {{securecontext_inline}}
+- {{domxref('GravitySensor')}}
   - : Provides the gravity applied to the device along all three axes.
-- {{domxref('Gyroscope')}} {{securecontext_inline}}
+- {{domxref('Gyroscope')}}
   - : Provides the angular velocity of the device along all three axes.
-- {{domxref('LinearAccelerationSensor')}} {{securecontext_inline}}
+- {{domxref('LinearAccelerationSensor')}}
   - : Provides the acceleration applied to the device along all three axes, but without the contribution of gravity.
-- {{domxref('Magnetometer')}} {{securecontext_inline}}
+- {{domxref('Magnetometer')}}
   - : Provides information about the magnetic field as detected by the device's primary magnetometer sensor.
-- {{domxref('OrientationSensor')}} {{securecontext_inline}}
+- {{domxref('OrientationSensor')}}
   - : The base class for the {{domxref('AbsoluteOrientationSensor')}}. This interface cannot be used directly, instead it provides properties and methods accessed by interfaces that inherit from it.
-- {{domxref('RelativeOrientationSensor')}} {{securecontext_inline}}
+- {{domxref('RelativeOrientationSensor')}}
   - : Describes the device's physical orientation without regard to the Earth's reference coordinate system.
-- {{domxref('Sensor')}} {{securecontext_inline}}
+- {{domxref('Sensor')}}
   - : The base class for all the other sensor interfaces. This interface cannot be used directly. Instead, it provides properties, event handlers, and methods accessed by interfaces that inherit from it.
-- {{domxref('SensorErrorEvent')}} {{securecontext_inline}}
+- {{domxref('SensorErrorEvent')}}
   - : Provides information about errors thrown by a {{domxref('Sensor')}} or related interface.
 
 ## Specifications

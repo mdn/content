@@ -57,7 +57,7 @@ This section lists `page-type` values for pages under [Web/Accessibility](/en-US
 
 This section lists `page-type` values for pages under [Web/CSS](/en-US/docs/Web/CSS). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
-- `css-at-rule`: an [at-rule](/en-US/docs/Web/CSS/At-rule), like {{cssxref("@charset")}}.
+- `css-at-rule`: an [at-rule](/en-US/docs/Web/CSS/At-rule), like {{cssxref("@media")}}.
 - `css-at-rule-descriptor`: an at-rule descriptor, like [`@counter-style/prefix`](/en-US/docs/Web/CSS/@counter-style/prefix).
 - `css-combinator`: a combinator, like the [descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator).
 - `css-function`: a [function](/en-US/docs/Web/CSS/CSS_Functions), like {{cssxref("max")}}.
@@ -136,7 +136,7 @@ This section lists `page-type` values for pages under [Web/SVG](/en-US/docs/Web/
 This section lists `page-type` values for pages under [Web/API](/en-US/docs/Web/API). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
 - `web-api-overview`: gives an overview of a Web API, like the [Fetch API](/en-US/docs/Web/API/Fetch_API).
-- `web-api-global-function`: a global function, like [`fetch()`](/en-US/docs/Web/API/fetch).
+- `web-api-global-function`: a global function, like [`fetch()`](/en-US/docs/Web/API/Window/fetch).
 - `web-api-global-property`: a global property.
 - `web-api-interface`: a Web API interface, like [`Request`](/en-US/docs/Web/API/Request).
 - `web-api-constructor`: a constructor, like [`Request()`](/en-US/docs/Web/API/Request/Request).

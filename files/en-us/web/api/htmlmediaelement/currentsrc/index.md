@@ -15,7 +15,7 @@ is an empty string if the `networkState` property is `EMPTY`.
 
 ## Value
 
-A string object containing the absolute URL of the chosen media
+A string containing the absolute URL of the chosen media
 source; this may be an empty string if `networkState` is `EMPTY`;
 otherwise, it will be one of the resources listed by the
 {{domxref("HTMLSourceElement")}} contained within the media element, or the value or src

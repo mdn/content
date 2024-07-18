@@ -1,7 +1,7 @@
 ---
 title: border-radius
 slug: Web/CSS/border-radius
-page-type: css-property
+page-type: css-shorthand-property
 browser-compat: css.properties.border-radius
 ---
 

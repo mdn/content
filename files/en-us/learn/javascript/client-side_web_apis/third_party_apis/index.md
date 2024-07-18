@@ -171,8 +171,6 @@ Have a play with the other options shown in the documentation and see what you c
 
 Now let's look at another API example — the [New York Times API](https://developer.nytimes.com). This API allows you to retrieve New York Times news story information and display it on your site. This type of API is known as a **RESTful API** — instead of getting data using the features of a JavaScript library like we did with Mapquest, we get data by making HTTP requests to specific URLs, with data like search terms and other properties encoded in the URL (often as URL parameters). This is a common pattern you'll encounter with APIs.
 
-## An approach for using third-party APIs
-
 Below we'll take you through an exercise to show you how to use the NYTimes API, which also provides a more general set of steps to follow that you can use as an approach for working with new APIs.
 
 ### Find the documentation
@@ -268,7 +266,7 @@ fetch(url)
   .catch((error) => console.error(`Error fetching data: ${error.message}`));
 ```
 
-Here we run the request by passing our `url` variable to [`fetch()`](/en-US/docs/Web/API/fetch), convert the response body to JSON using the [`json()`](/en-US/docs/Web/API/Response/json) function, then pass the resulting JSON to the `displayResults()` function so the data can be displayed in our UI. We also catch and log any errors that might be thrown.
+Here we run the request by passing our `url` variable to [`fetch()`](/en-US/docs/Web/API/Window/fetch), convert the response body to JSON using the [`json()`](/en-US/docs/Web/API/Response/json) function, then pass the resulting JSON to the `displayResults()` function so the data can be displayed in our UI. We also catch and log any errors that might be thrown.
 
 ### Displaying the data
 

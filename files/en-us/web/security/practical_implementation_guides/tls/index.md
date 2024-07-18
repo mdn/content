@@ -58,7 +58,7 @@ In this example, HTTPS is being used correctly to load a JavaScript library:
 
 Websites may continue to listen on port 80 (HTTP) to prevent connection errors when users type a URL into their address bar, as initial browser connections are often made via HTTP. This poses an initial security risk during the first connection to sites as that connection is not protected by TLS.
 
-In addition, sites should avoid redirections from HTTP on one host to HTTPS on a different host, as this prevents `Strict-Transport-Security` from being set for the first host (see [HTTP Strict Transport Security](#http_strict_transport_security)).
+In addition, sites should avoid redirections from HTTP on one host to HTTPS on a different host, as this prevents `Strict-Transport-Security` from being set for the first host (see [HTTP Strict Transport Security](#http_strict_transport_security_implementation)).
 
 ### Solution
 

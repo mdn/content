@@ -21,7 +21,7 @@ To minimize the scope for cookie vulnerabilities on your site, limit access to c
     - Use `__Host-` for all cookies needed only on a specific domain (no subdomains) where `Path` is set to `/`.
     - Use `__Secure-` for all other cookies sent from secure origins ([HTTPS](/en-US/docs/Glossary/HTTPS)).
 - `Secure`
-  - : All cookies must be set with the `Secure` directive, indicating that they should only be sent over HTTPS. [HTTP Strict Transport Security](/en-US/docs/Web/Security/Practical_implementation_guides/TLS#http_strict_transport_security) (HSTS) can also be used to prevent transmission over HTTP, but ideally `Secure` should be set on cookies as well.
+  - : All cookies must be set with the `Secure` directive, indicating that they should only be sent over HTTPS. [HTTP Strict Transport Security](/en-US/docs/Web/Security/Practical_implementation_guides/TLS#http_strict_transport_security_implementation) (HSTS) can also be used to prevent transmission over HTTP, but ideally `Secure` should be set on cookies as well.
 - `HttpOnly`
   - : Cookies that don't require access from JavaScript should have the `HttpOnly` directive set to block access, such as from {{domxref("Document.cookie")}}. It is particularly important that session identifiers don't have JavaScript access, to help prevent attacks such as CSRF.
 - `Expires` and `Max-Age`

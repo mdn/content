@@ -92,7 +92,7 @@ Looking for the [`Document`](/en-US/docs/Web/API/Document) object, [`Window`](/e
 - [Canvas 2D Context](https://html.spec.whatwg.org/multipage//#2dcontext) is a drawing API for [`<canvas>`](/en-US/docs/Web/HTML/Element/canvas).
 - The [WebAssembly interface](https://webassembly.github.io/spec/js-api) provides utilities for communication between JavaScript code and [WebAssembly](/en-US/docs/WebAssembly) modules.
 
-Non-browser environments (like Node.js) often do not have DOM APIs — because they don't interact with a document — but they still usually implement many web APIs, such as [`fetch()`](/en-US/docs/Web/API/fetch) and [`setTimeout()`](/en-US/docs/Web/API/setTimeout).
+Non-browser environments (like Node.js) often do not have DOM APIs — because they don't interact with a document — but they still usually implement many web APIs, such as [`fetch()`](/en-US/docs/Web/API/Window/fetch) and [`setTimeout()`](/en-US/docs/Web/API/setTimeout).
 
 ## JavaScript implementations
 

@@ -19,6 +19,6 @@ All modern browsers support the TLS protocol, requiring the server to provide a 
 - [RFC 5246](https://datatracker.ietf.org/doc/html/rfc5246) (The Transport Layer Security Protocol, Version 1.2)
 - [Transport Layer Security](/en-US/docs/Web/Security/Transport_Layer_Security)
 - [Transport Layer Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Security_Cheat_Sheet.html) (OWASP)
-- [Glossary](/en-US/docs/Glossary)
+- Related glossary terms:
   - {{Glossary("HTTPS")}}
   - {{Glossary("SSL")}}

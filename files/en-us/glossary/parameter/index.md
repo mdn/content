@@ -42,6 +42,6 @@ Note the difference between _parameters_ and _arguments_:
 - [Difference between _parameters_ and _arguments_](<https://en.wikipedia.org/wiki/Parameter_(computer_programming)#Parameters_and_arguments>)
 - [Function declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function)
 - [Function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function)
-- Glossary
+- Related glossary terms:
   - {{Glossary("Function")}}
   - {{Glossary("Argument")}}
