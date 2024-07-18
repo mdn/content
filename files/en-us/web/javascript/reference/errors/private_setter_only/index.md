@@ -6,7 +6,7 @@ page-type: javascript-error
 
 {{jsSidebar("Errors")}}
 
-The JavaScript "getting private setter-only property" occurs when reading the value of a [private property](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) for which only a [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set) is defined.
+The JavaScript exception "getting private setter-only property" occurs when reading the value of a [private property](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) for which only a [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set) is defined.
 
 ## Message
 
