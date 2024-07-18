@@ -18,7 +18,7 @@ A `200 OK` has the following meaning and format in response to these request met
 - {{HTTPMethod("HEAD")}}: Identical to `GET`, except there is no message body.
 - {{HTTPMethod("TRACE")}}: The response has a message body containing the request as received by the server.
 
-Although possible, a successful {{HTTPMethod("PUT")}} or {{HTTPMethod("DELETE")}} request often does not result in a `200 OK` response.
+Although possible, successful {{HTTPMethod("PUT")}} or {{HTTPMethod("DELETE")}} requests often do not result in a `200 OK` response.
 It is more common to see {{HTTPStatus("201")}} `Created` if the resource is uploaded or created for the first time, or {{HTTPStatus("204")}} `No Content` upon successful deletion of a resource.
 
 ## Status
