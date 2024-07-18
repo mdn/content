@@ -7,11 +7,11 @@ spec-urls: https://drafts.csswg.org/cssom/#resolved-values
 
 {{CSSRef}}
 
-The **resolved value** of a [CSS](/en-US/docs/Web/CSS) property is the value returned by the {{domxref("Window.getComputedStyle", "getComputedStyle()")}} method, which returns a live {{domxref("CSSStyleDeclaration")}} object containing the values of all CSS properties of an element, after applying active stylesheets and resolving any basic computation those values may contain.
+The **resolved value** of a [CSS](/en-US/docs/Web/CSS) property is the value after applying active stylesheets and resolving any basic computation those values may contain. The {{domxref("Window.getComputedStyle", "getComputedStyle()")}} method returns a live {{domxref("CSSStyleDeclaration")}} object containing the resolved values of all CSS properties applied to a specified element.
 
-Historically, `getComputedStyle()` was defined to return the [computed value](/en-US/docs/Web/CSS/computed_value) of an element or pseudo-element. As CSS evolved, so did the concept of "computed value", but the implementation of `getComputedStyle()` had to remain the same for backward compatibility with deployed scripts. The "resolved value" resolves this.
+Historically, `getComputedStyle()` returned the [computed value](/en-US/docs/Web/CSS/computed_value) of an element or pseudo-element. As CSS evolved, so did the concept of "computed value", but the values returned by `getComputedStyle()` had to remain the same for backward compatibility with deployed scripts. These values are the "resolved values".
 
-For most properties, it is the [computed value](/en-US/docs/Web/CSS/computed_value), but for a few legacy properties (including {{cssxref("width")}} and {{cssxref("height")}}), it is instead the [used value](/en-US/docs/Web/CSS/used_value). See the specification link below for some per-property details.
+For most properties, the resolved value is the [computed value](/en-US/docs/Web/CSS/computed_value), but for a few legacy properties (including {{cssxref("width")}} and {{cssxref("height")}}), it is the [used value](/en-US/docs/Web/CSS/used_value). See the specification link below for some per-property details.
 
 ## Specifications
 
