@@ -30,7 +30,10 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 ## Usage notes
 
-You can use the {{cssxref("object-position")}} property to adjust the positioning of the embedded object within the element's frame, and the {{cssxref("object-fit")}} property to control how the object's size is adjusted to fit within the frame.
+You can use the {{cssxref("object-position")}} property to adjust the positioning of the embedded object within the element's frame.
+
+> [!NOTE]
+> The {{cssxref("object-fit")}} property has no effect on `<embed>` elements.
 
 ## Accessibility
 

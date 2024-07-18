@@ -57,7 +57,7 @@ There are plans to further extend possible queries by adding the generalized con
 
 - {{glossary("media/CSS", "Media")}}
 - Supports query (See [feature query](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries))
-- [Conditional group rules](/en-US/docs/Web/CSS/At-rule#conditional_group_rules)
+- [Conditional group rules](/en-US/docs/Web/CSS/CSS_conditional_rules)
 
 ## Guides
 
@@ -90,6 +90,10 @@ There are plans to further extend possible queries by adding the generalized con
   - [`<media-condition>`](/en-US/docs/Web/CSS/@media#logical_operators)
   - [`<media-query-list>`](/en-US/docs/Web/SVG/Attribute/media)
   - [CSS logical operators](/en-US/docs/Web/CSS/@media#logical_operators) (`not`, `or`, and `and`)
+
+- [CSS containment](/en-US/docs/Web/CSS/CSS_containment)
+
+  - {{cssxref("@container")}} at-rule
 
 - [CSSOM view](/en-US/docs/Web/CSS/CSSOM_view) module
 

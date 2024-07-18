@@ -10,7 +10,7 @@ spec-urls: https://fetch.spec.whatwg.org/#requestinit
 
 The **`RequestInit`** dictionary of the [Fetch API](/en-US/docs/Web/API/Fetch_API) represents the set of options that can be used to configure a Fetch request.
 
-You can pass a `RequestInit` object into the {{domxref("Request.Request()", "Request()")}} constructor, or directly into the [`fetch()`](/en-US/docs/Web/API/fetch) function call.
+You can pass a `RequestInit` object into the {{domxref("Request.Request()", "Request()")}} constructor, or directly into the [`fetch()`](/en-US/docs/Web/API/Window/fetch) function call.
 
 You can also construct a `Request` with a `RequestInit`, and pass the `Request` to a `fetch()` call along with another `RequestInit`. If you do this, and the same option is set in both places, then the value passed directly into `fetch()` is used.
 
@@ -89,7 +89,7 @@ You can also construct a `Request` with a `RequestInit`, and pass the `Request` 
 
 - `credentials` {{optional_inline}}
 
-  - : Controls whether or not the browser sends credentials with the request. Credentials are cookies, {{glossary("TLS")}} client certificates, or authentication headers containing a username and password. This option may be any one of the following values:
+  - : Controls whether or not the browser sends credentials with the request, as well as whether any **`Set-Cookie`** response headers are respected. Credentials are cookies, {{glossary("TLS")}} client certificates, or authentication headers containing a username and password. This option may be any one of the following values:
 
     - `omit`
       - : Never send credentials in the request or include credentials in the response.
@@ -210,7 +210,7 @@ You can also construct a `Request` with a `RequestInit`, and pass the `Request` 
 
 ### Passing options into `fetch()`
 
-In this example we pass the `method`, `body`, and `headers` options directly into the [`fetch()`](/en-US/docs/Web/API/fetch) method call:
+In this example we pass the `method`, `body`, and `headers` options directly into the [`fetch()`](/en-US/docs/Web/API/Window/fetch) method call:
 
 ```js
 async function post() {

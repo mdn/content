@@ -24,7 +24,7 @@ You can create a new `AbortController` object using the {{domxref("AbortControll
 ## Instance methods
 
 - {{domxref("AbortController.abort()")}}
-  - : Aborts an asynchronous operation before it has completed. This is able to abort [fetch requests](/en-US/docs/Web/API/fetch), consumption of any response bodies, and streams.
+  - : Aborts an asynchronous operation before it has completed. This is able to abort [fetch requests](/en-US/docs/Web/API/Window/fetch), consumption of any response bodies, and streams.
 
 ## Examples
 
@@ -34,7 +34,7 @@ In the following snippet, we aim to download a video using the [Fetch API](/en-U
 
 We first create a controller using the {{domxref("AbortController.AbortController","AbortController()")}} constructor, then grab a reference to its associated {{domxref("AbortSignal")}} object using the {{domxref("AbortController.signal")}} property.
 
-When the [fetch request](/en-US/docs/Web/API/fetch) is initiated, we pass in the `AbortSignal` as an option inside the request's options object (the `{signal}` below). This associates the signal and controller with the fetch request and allows us to abort it by calling {{domxref("AbortController.abort()")}}, as seen below in the second event listener.
+When the [fetch request](/en-US/docs/Web/API/Window/fetch) is initiated, we pass in the `AbortSignal` as an option inside the request's options object (the `{signal}` below). This associates the signal and controller with the fetch request and allows us to abort it by calling {{domxref("AbortController.abort()")}}, as seen below in the second event listener.
 
 When `abort()` is called, the `fetch()` promise rejects with a `DOMException` named `AbortError`.
 
