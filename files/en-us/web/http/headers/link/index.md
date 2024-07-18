@@ -18,7 +18,7 @@ Link: <uri-reference>; param1=value1; param2="value2"
 ```
 
 - `<uri-reference>`
-  - : The URI reference, must be enclosed between `<` and `>` and [percent-encoded](https://en.wikipedia.org/wiki/Percent-encoding).
+  - : The URI reference, must be enclosed between `<` and `>` and {{Glossary("Percent-encoding", "percent-encoded")}}.
 
 ### Parameters
 
