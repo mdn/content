@@ -61,9 +61,22 @@
 
   "non_standard_badge_abbreviation": {
     "en-US": "Non-standard",
+    "es": "No estándar",
+    "fr": "Non standard",
+    "ja": "非標準",
     "ko": "비표준",
-    "zh-CN": "非标准",
-    "zh-TW": "非標準"
+    "ru": "Не стандартно",
+    "zh-CN": "非标准"
+  },
+
+  "non_standard_header_copy": {
+    "en-US": "This feature is non-standard and is not on a standards track. Do not use it on production sites facing the Web: it will not work for every user. There may also be large incompatibilities between implementations and the behavior may change in the future.",
+    "es": "Esta característica no es parte de los estándares. No la uses en sitios Web en producción: no funcionará para todos los usuarios. Podrían haber también incompatibilidades considerables entre distintas implementaciones y el comportamiento podría cambiar en el futuro.",
+    "fr": "Cette fonctionnalité n'est ni standard, ni en voie de standardisation. Ne l'utilisez pas pour des sites accessibles sur le Web : elle ne fonctionnera pas pour tout utilisateur. Il peut également y avoir d'importantes incompatibilités entre les implémentations et son comportement peut être modifié dans le futur.",
+    "ja": "この機能は標準ではなく、標準化の予定もありません。公開されているウェブサイトには使用しないでください。ユーザーによっては使用できないことがあります。実装ごとに大きな差があることもあり、将来は振る舞いが変わるかもしれません。",
+    "ko": "이 기능은 비표준이므로 실제 프로덕션에서 사용하지 마세요. 모든 사용자 환경에서 작동하지 않을 수 도 있으며, 미래에 호환성 문제가 생길 수 있습니다.",
+    "ru": "Эта возможность не является стандартной и стандартизировать её пока никто не собирается. Не используйте её на сайтах, смотрящих во внешний мир: она будет работать не у всех пользователей. Также могут присутствовать большие несовместимости между реализациями и её поведение может в будущем измениться.",
+    "zh-CN": "该特性是非标准的，请尽量不要在生产环境中使用它！"
   },
 
   "secure_context_label": {
@@ -227,5 +240,44 @@
     "en-US": "This feature is only available in <a href=\"/en-US/docs/Web/API/Service_Worker_API\">Service Workers</a>.",
     "ja": "この機能は<a href=\"/ja/docs/Web/API/Service_Worker_API\">サービスワーカー</a>内でのみ利用可能です。",
     "zh-CN": "此特性仅在 <a href=\"/zh-CN/docs/Web/API/Service_Worker_API\">Service Worker</a> 中可用。"
+  },
+
+  "example_extensions_heading": {
+    "en-US": "Example extensions",
+    "zh-CN": "示例扩展",
+    "zh-TW": "範例擴充套件"
+  },
+
+  "previous": {
+    "en-US": " Previous ",
+    "es": " Anterior ",
+    "fr": " Précédent ",
+    "ja": " 前のページ ",
+    "ko": " 이전 ",
+    "pt-BR": " Anterior ",
+    "ru": " Назад ",
+    "zh-CN": " 上一页 ",
+    "zh-TW": " 前頁 "
+  },
+
+  "next": {
+    "en-US": " Next  ",
+    "es": " Siguiente  ",
+    "fr": " Suivant  ",
+    "ja": " 次のページ  ",
+    "ko": " 다음  ",
+    "pt-BR": " Próxima  ",
+    "ru": " Далее  ",
+    "zh-CN": " 下一页  ",
+    "zh-TW": " 次頁  "
+  },
+
+  "prev_next_menu": {
+    "en-US": " Overview: ",
+    "pt-BR": " Menu: ",
+    "fr": " Aperçu&nbsp;: ",
+    "ru": " Обзор: ",
+    "zh-CN": " 概述：",
+    "zh-TW": " 概述："
   }
 }
