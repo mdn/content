@@ -26,7 +26,7 @@ Internal errors occur when something happens in the WebGPU implementation that w
 
 The `message` property is inherited from its parent, {{domxref("GPUError")}}:
 
-- {{domxref("GPUError.message", "message")}} {{Experimental_Inline}} {{ReadOnlyInline}} {{SecureContext_Inline}}
+- {{domxref("GPUError.message", "message")}} {{Experimental_Inline}} {{ReadOnlyInline}}
   - : A string providing a human-readable message that explains why the error occurred.
 
 ## Examples

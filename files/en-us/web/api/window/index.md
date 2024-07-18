@@ -25,7 +25,7 @@ _This interface inherits properties from the {{domxref("EventTarget")}} interfac
 
 Note that properties which are objects (e.g., for overriding the prototype of built-in elements) are listed in a separate section below.
 
-- {{domxref("Window.caches")}} {{ReadOnlyInline}}
+- {{domxref("Window.caches")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns the {{domxref("CacheStorage")}} object associated with the current context. This object enables functionality such as storing assets for offline use, and generating custom responses to requests.
 - {{domxref("Window.navigator", "Window.clientInformation")}} {{ReadOnlyInline}}
   - : An alias for {{domxref("Window.navigator")}}.
