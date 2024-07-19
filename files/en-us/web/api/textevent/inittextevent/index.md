@@ -8,7 +8,7 @@ browser-compat: api.TextEvent.initTextEvent
 
 {{APIRef("UI Events")}}
 
-The **`initTextEventEvent()`** method of the {{domxref("TextEvent")}} interface initializes the value of a `TextEvent` after its been created.
+The **`initTextEventEvent()`** method of the {{domxref("TextEvent")}} interface initializes the value of a `TextEvent` after it has been created.
 
 This method must be called to set the event before it is dispatched, using {{ domxref("EventTarget.dispatchEvent()") }}.
 

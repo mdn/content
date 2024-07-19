@@ -9,7 +9,7 @@ browser-compat: api.TextEvent
 
 The **`TextEvent`** interface is a legacy UI event interface for reporting changes to text UI elements.
 
-> **Note:** `TextEvent` events have been superseded by events such as `input`, `beforeinput`, `keypress`, `keyup`, `keydown`.
+> **Note:** `TextEvent` events have been superseded by events such as `input`, `beforeinput`, `keypress`, `keyup`, and `keydown`.
 
 {{InheritanceDiagram}}
 
