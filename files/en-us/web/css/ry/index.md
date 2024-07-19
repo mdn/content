@@ -21,7 +21,6 @@ ry: auto;
 /* Length and percentage values */
 ry: 30px;
 ry: 30%;
-ry: 30;
 
 /* Global values */
 ry: inherit;
@@ -37,7 +36,7 @@ The {{cssxref("length")}}, {{cssxref("percentage")}}, or `auto` keyword value de
 
 - {{cssxref("length")}}
 
-  - : Absolute or relative lengths can be expressed in any unit allowed by the CSS {{cssxref("&lt;length&gt;")}} data type. Unitless and `px` values are SVG coordinate units if the {{SVGAttr("viewBox")}} attribute is included; otherwise, CSS pixel units are used. Negative values are invalid.
+  - : Absolute or relative lengths can be expressed in any unit allowed by the CSS {{cssxref("&lt;length&gt;")}} data type. Negative values are invalid.
 
 - {{cssxref("percentage")}}
 
@@ -146,7 +145,7 @@ ellipse:first-of-type {
 
 {{EmbedLiveSample("Defining the vertical radius of an ellipse", "300", "180")}}
 
-The styled ellipse's vertical radius is `80px`, as defined in the CSS `ry` property value. The unstyled ellipse's vertical radius is `20px`, which was defined by the `ry` attribute [unitless value declaration](#using_unitless_values).
+The styled ellipse's vertical radius is `80px`, as defined in the CSS `ry` property value. The unstyled ellipse's vertical radius is `20px`, which was defined by the `ry` attribute.
 
 ### Ellipse vertical radius percentage values
 
@@ -184,58 +183,6 @@ ellipse:first-of-type {
 {{EmbedLiveSample("Ellipse vertical radius percentage values", "300", "180")}}
 
 When using percentage values for `ry`, the values are relative to the height of the SVG viewport. Here, the size of the styled ellipse vertical radius is `30%` of the height of the current SVG viewport. As the height defaulted to `150px`, the `ry` value is `45px`, making the ellipse `90px` tall.
-
-### Using unitless values
-
-This example demonstrates the effects of the viewBox attribute on unitless `ry` value declarations.
-
-#### HTML
-
-We include three SVG images, each with the same two ellipses as seen in the previous examples. The only difference is the `viewBox` attribute included in the second and third images.
-
-```html
-<svg xmlns="http://www.w3.org/2000/svg">
-  <ellipse cx="80" cy="50" rx="40" ry="20" />
-  <ellipse cx="80" cy="50" rx="40" ry="20" />
-</svg>
-<svg viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg">
-  <ellipse cx="80" cy="50" rx="40" ry="20" />
-  <ellipse cx="80" cy="50" rx="40" ry="20" />
-</svg>
-<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
-  <ellipse cx="80" cy="50" rx="40" ry="20" />
-  <ellipse cx="80" cy="50" rx="40" ry="20" />
-</svg>
-```
-
-#### CSS
-
-We set all three images to be `150px` tall. We style only the first ellipse in each SVG, allowing the second ellipse to use default styles.
-
-We include a unitless `ry` value of `30`.
-
-```css
-svg {
-  border: 1px solid;
-  height: 150px;
-}
-
-ellipse:first-of-type {
-  ry: 30;
-  fill: magenta;
-  stroke: rebeccapurple;
-}
-```
-
-#### Results
-
-The effect of the CSS `ry` property values differs depending on whether the `viewBox` is defined.
-
-{{EmbedLiveSample("Using unitless values", "300", "460")}}
-
-When the `viewBox` is omitted, CSS pixels are used, and the `30` is equal to `30px`; the vertical radius of magenta ellipse in the first SVG is `30` CSS pixels.
-
-The `viewBox` attribute is defined in the second and third SVG images as `50` and `100` SVG units tall, respectively. This makes `30` the equivalent of `60%` of the second SVG's viewbox height and `30%` of the third SVG's viewbox height. Both SVGs are `150px` tall when displayed, meaning the ellipses y-axis radius is the equivalent of `90px` and `45px`. Another way to understand the value is to consider that the second SVG image is rendered scaled up by 300% (30 _ 300% = 90) and the third one by 150% (30 _ 150% = 45).
 
 ## Specifications
 
