@@ -46,6 +46,8 @@ Interact with browser windows. You can use this API to get information about ope
 
 ## Events
 
+- {{WebExtAPIRef("windows.onBoundsChanged")}}
+  - : Fired when a window is resized or moved.
 - {{WebExtAPIRef("windows.onCreated")}}
   - : Fired when a window is created.
 - {{WebExtAPIRef("windows.onRemoved")}}
