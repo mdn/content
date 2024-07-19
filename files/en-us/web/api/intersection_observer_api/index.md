@@ -287,13 +287,13 @@ startup = () => {
 
 intersectionCallback = (entries) => {
   entries.forEach((entry) => {
-    let box = entry.target;
-    let visiblePct = `${Math.floor(entry.intersectionRatio * 100)}%`;
+    const box = entry.target;
+    const visiblePct = `${Math.floor(entry.intersectionRatio * 100)}%`;
 
-    box.querySelector(".topLeft").innerHTML = visiblePct;
-    box.querySelector(".topRight").innerHTML = visiblePct;
-    box.querySelector(".bottomLeft").innerHTML = visiblePct;
-    box.querySelector(".bottomRight").innerHTML = visiblePct;
+    box.querySelector(".topLeft").textContent = visiblePct;
+    box.querySelector(".topRight").textContent = visiblePct;
+    box.querySelector(".bottomLeft").textContent = visiblePct;
+    box.querySelector(".bottomRight").textContent = visiblePct;
   });
 };
 

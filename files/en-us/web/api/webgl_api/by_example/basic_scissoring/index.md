@@ -62,9 +62,8 @@ window.addEventListener(
     const gl =
       canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
     if (!gl) {
-      paragraph.innerHTML =
-        "Failed to get WebGL context. " +
-        "Your browser or device may not support WebGL.";
+      paragraph.textContent =
+        "Failed to get WebGL context. Your browser or device may not support WebGL.";
       return;
     }
     gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);

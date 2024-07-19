@@ -246,16 +246,15 @@ function enableLog(ev) {
 
 function log(name, ev) {
   const o = document.getElementsByTagName("output")[0];
-  const s =
-    `${name}:<br>` +
-    `  pointerID   = ${ev.pointerId}<br>` +
-    `  pointerType = ${ev.pointerType}<br>` +
-    `  isPrimary   = ${ev.isPrimary}`;
-  o.innerHTML += `${s}<br>`;
+  o.innerText += `${name}:
+  pointerID   = ${ev.pointerId}
+  pointerType = ${ev.pointerType}
+  isPrimary   = ${ev.isPrimary}
+`;
 }
 
 function clearLog(event) {
   const o = document.getElementsByTagName("output")[0];
-  o.innerHTML = "";
+  o.textContent = "";
 }
 ```

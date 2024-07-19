@@ -59,7 +59,7 @@ Setting the value of `innerHTML` lets you easily replace the existing contents o
 For example, you can erase the entire contents of a document by clearing the contents of the document's {{domxref("Document.body", "body")}} attribute:
 
 ```js
-document.body.innerHTML = "";
+document.body.textContent = "";
 ```
 
 This example fetches the document's current HTML markup and replaces the `"<"` characters with the {{glossary("character reference")}} `"&lt;"`, thereby essentially converting the HTML into raw text.

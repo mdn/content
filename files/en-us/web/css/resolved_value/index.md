@@ -7,9 +7,11 @@ spec-urls: https://drafts.csswg.org/cssom/#resolved-values
 
 {{CSSRef}}
 
-The **resolved value** of a [CSS](/en-US/docs/Web/CSS) property is the value returned by {{domxref("Window.getComputedStyle", "getComputedStyle()")}}.
+The **resolved value** of a [CSS](/en-US/docs/Web/CSS) property is the value after applying active stylesheets and resolving any basic computation those values may contain. The {{domxref("Window.getComputedStyle", "getComputedStyle()")}} method returns a live {{domxref("CSSStyleDeclaration")}} object containing the resolved values of all CSS properties applied to a specified element.
 
-For most properties, it is the [computed value](/en-US/docs/Web/CSS/computed_value), but for a few legacy properties (including {{cssxref("width")}} and {{cssxref("height")}}), it is instead the [used value](/en-US/docs/Web/CSS/used_value). See the specification link below for more per-property details.
+Historically, `getComputedStyle()` returned the [computed value](/en-US/docs/Web/CSS/computed_value) of an element or pseudo-element. As CSS evolved, so did the concept of "computed value", but the values returned by `getComputedStyle()` had to remain the same for backward compatibility with deployed scripts. These values are the "resolved values".
+
+For most properties, the resolved value is the [computed value](/en-US/docs/Web/CSS/computed_value), but for a few legacy properties (including {{cssxref("width")}} and {{cssxref("height")}}), it is the [used value](/en-US/docs/Web/CSS/used_value). See the specification link below for some per-property details.
 
 ## Specifications
 
@@ -17,22 +19,12 @@ For most properties, it is the [computed value](/en-US/docs/Web/CSS/computed_val
 
 ## See also
 
+- [Initial](/en-US/docs/Web/CSS/initial_value), [computed](/en-US/docs/Web/CSS/computed_value), [used](/en-US/docs/Web/CSS/used_value), and [actual](/en-US/docs/Web/CSS/actual_value) values
 - {{domxref("window.getComputedStyle")}}
-- CSS key concepts:
-  - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
-  - [At-rules](/en-US/docs/Web/CSS/At-rule)
-  - [Comments](/en-US/docs/Web/CSS/Comments)
-  - [Specificity](/en-US/docs/Web/CSS/Specificity)
-  - [Inheritance](/en-US/docs/Web/CSS/Inheritance)
-  - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
-  - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
-  - [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-  - Values
-    - [Initial values](/en-US/docs/Web/CSS/initial_value)
-    - [Computed values](/en-US/docs/Web/CSS/computed_value)
-    - [Used values](/en-US/docs/Web/CSS/used_value)
-    - [Actual values](/en-US/docs/Web/CSS/actual_value)
-  - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
-  - [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
-  - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
+- {{domxref("CSSStyleDeclaration.getPropertyValue")}}
+- [CSS syntax](/en-US/docs/Web/CSS/Syntax)
+- [At-rules](/en-US/docs/Web/CSS/At-rule)
+- [Specificity](/en-US/docs/Web/CSS/Specificity)
+- [Inheritance](/en-US/docs/Web/CSS/Inheritance)
+- [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
+- [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)

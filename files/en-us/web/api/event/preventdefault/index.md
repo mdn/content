@@ -42,8 +42,8 @@ const checkbox = document.querySelector("#id-checkbox");
 checkbox.addEventListener("click", checkboxClick, false);
 
 function checkboxClick(event) {
-  let warn = "preventDefault() won't let you check this!<br>";
-  document.getElementById("output-box").innerHTML += warn;
+  const warn = "preventDefault() won't let you check this!\n";
+  document.getElementById("output-box").innerText += warn;
   event.preventDefault();
 }
 ```
@@ -121,9 +121,7 @@ function checkName(evt) {
   const lowerCaseAlphabet = "abcdefghijklmnopqrstuvwxyz";
   if (!lowerCaseAlphabet.includes(key)) {
     evt.preventDefault();
-    displayWarning(
-      "Please use lowercase letters only.\n" + `Key pressed: ${key}\n`,
-    );
+    displayWarning(`Please use lowercase letters only.\nKey pressed: ${key}\n`);
   }
 }
 ```
@@ -137,7 +135,7 @@ const warningBox = document.createElement("div");
 warningBox.className = "warning";
 
 function displayWarning(msg) {
-  warningBox.innerHTML = msg;
+  warningBox.innerText = msg;
 
   if (document.body.contains(warningBox)) {
     clearTimeout(warningTimeout);

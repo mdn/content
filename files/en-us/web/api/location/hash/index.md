@@ -10,7 +10,7 @@ browser-compat: api.Location.hash
 
 The **`hash`** property of the {{domxref("Location")}} interface returns a string containing a `'#'` followed by the fragment identifier of the URL — the ID on the page that the URL is trying to target.
 
-The fragment is not [percent-encoded](https://en.wikipedia.org/wiki/Percent-encoding). If the URL does not have a fragment identifier, this property contains an empty string, `""`.
+The fragment is not {{Glossary("Percent-encoding", "percent-encoded")}}. If the URL does not have a fragment identifier, this property contains an empty string, `""`.
 
 ## Value
 

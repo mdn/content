@@ -122,12 +122,12 @@ Try experimenting using the following two test cases:
 ### JavaScript
 
 ```js
-let textarea = document.getElementById("test-target"),
-  consoleLog = document.getElementById("console-log"),
-  btnReset = document.getElementById("btn-reset");
+const textarea = document.getElementById("test-target");
+const consoleLog = document.getElementById("console-log");
+const btnReset = document.getElementById("btn-reset");
 
 function logMessage(message) {
-  consoleLog.innerHTML += `${message}<br>`;
+  consoleLog.innerText += `${message}\n`;
 }
 
 textarea.addEventListener("keydown", (e) => {
