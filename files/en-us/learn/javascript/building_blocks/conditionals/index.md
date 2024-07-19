@@ -459,7 +459,7 @@ select.addEventListener('change', () => {
 });
 
 function createCalendar(days, choice) {
-  list.innerHTML = '';
+  list.textContent = "";
   h1.textContent = choice;
   for (let i = 1; i <= days; i++) {
     const listItem = document.createElement('li');
@@ -530,7 +530,7 @@ select.addEventListener("change", () => {
 });
 
 function createCalendar(days, choice) {
-  list.innerHTML = "";
+  list.textContent = "";
   h1.textContent = choice;
   for (let i = 1; i <= days; i++) {
     const listItem = document.createElement("li");
