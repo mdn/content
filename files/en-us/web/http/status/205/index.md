@@ -36,7 +36,8 @@ Content-Length: 15
 comment=Hello!
 ```
 
-After successfully processing the form submission, the server responds with the following `205` response,  indicating that the client should reset the form.
+After successfully processing the form submission, the server responds with the following `205` response, indicating that the client should reset the form.
+
 > **Note:** It's assumed that the client supports resetting the content after a `205` response. This is typically done via JavaScript, as resetting content after a `205` is not handled natively by browsers.
 
 ```http
