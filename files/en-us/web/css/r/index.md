@@ -39,9 +39,6 @@ The {{cssxref("length")}} and {{cssxref("percentage")}} values defines the radiu
 
   - : Percentages refer to the normalized diagonal of the current SVG viewport, which is calculated as <math><mfrac><msqrt><mrow><msup><mi>&lt;width&gt;</mi><mn>2</mn></msup><mo>+</mo><msup><mi>&lt;height&gt;</mi><mn>2</mn></msup></mrow></msqrt><msqrt><mn>2</mn></msqrt></mfrac></math>. Negative values are invalid.
 
-> [!NOTE]
-> Unitless values default to SVG coordinate system pixel units defined by the {{SVGattr("viewBox")}} attribute if present, otherwise, the implicit or explicit `px` is treated as regular viewport pixels.
-
 ## Formal definition
 
 {{CSSInfo}}
