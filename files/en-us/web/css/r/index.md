@@ -29,8 +29,15 @@ r: unset;
 
 ### Values
 
-- `<length-percentage>`
-  - : Denotes the size of the circle radius. As an absolute length, it can be expressed in any unit allowed by the CSS {{cssxref("&lt;length&gt;")}} data type. Percentages refer to the normalized diagonal of the current SVG viewport, which is calculated as <math><mfrac><msqrt><mrow><msup><mi>&lt;width&gt;</mi><mn>2</mn></msup><mo>+</mo><msup><mi>&lt;height&gt;</mi><mn>2</mn></msup></mrow></msqrt><msqrt><mn>2</mn></msqrt></mfrac></math>. Negative values are invalid.
+The {{cssxref("length")}} and {{cssxref("percentage")}} values defines the radius of the circle.
+
+- {{cssxref("length")}}
+
+  - : Absolute or relative lengths can be expressed in any unit allowed by the CSS {{cssxref("&lt;length&gt;")}} data type. Negative values are invalid.
+
+- {{cssxref("percentage")}}
+
+  - : Percentages refer to the normalized diagonal of the current SVG viewport, which is calculated as <math><mfrac><msqrt><mrow><msup><mi>&lt;width&gt;</mi><mn>2</mn></msup><mo>+</mo><msup><mi>&lt;height&gt;</mi><mn>2</mn></msup></mrow></msqrt><msqrt><mn>2</mn></msqrt></mfrac></math>. Negative values are invalid.
 
 > [!NOTE]
 > Unitless values default to SVG coordinate system pixel units defined by the {{SVGattr("viewBox")}} attribute if present, otherwise, the implicit or explicit `px` is treated as regular viewport pixels.
