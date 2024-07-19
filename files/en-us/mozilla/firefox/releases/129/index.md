@@ -40,6 +40,10 @@ This article provides information about the changes in Firefox 129 that affect d
 
 ### APIs
 
+- The deprecated {{domxref("TextEvent", "textInput")}} event is now supported, enabling web apps that use legacy libraries or frameworks that rely on these events.
+  The [`beforeinput` event](/en-US/docs/Web/API/Element/beforeinput_event) supersedes `textInput`, and should always be used by new applications.
+  ([Firefox bug 1901923](https://bugzil.la/1901923).)
+
 #### DOM
 
 #### Media, WebRTC, and Web Audio
