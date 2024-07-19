@@ -18,7 +18,6 @@ The **`cx`** [CSS](/en-US/docs/Web/CSS) property defines the x-axis center point
 /* length and percentage values */
 cx: 20px;
 cx: 20%;
-cx: 20;
 
 /* Global values */
 cx: inherit;
@@ -30,11 +29,11 @@ cx: unset;
 
 ### Values
 
-The {{cssxref("length-percentage")}} property value denotes the horizontal center of the circle or ellipse.
+The {{cssxref("length")}} and {{cssxref("percentage")}} values denote the horizontal center of the circle or ellipse.
 
-- {{cssxref("length-percentage")}}
+- {{cssxref("length)}}
 
-  - : As an absolute or relative length, it can be expressed in any unit allowed by the CSS {{cssxref("&lt;length&gt;")}} data type. Unitless and `px` values are SVG coordinate units if the {{SVGAttr("viewBox")}} attribute is included; otherwise, CSS pixel units are used. Negative values are invalid.
+  - : As an absolute or relative length, it can be expressed in any unit allowed by the CSS {{cssxref("&lt;length&gt;")}} data type. Negative values are invalid.
 
 - {{cssxref("percentage")}}
 
@@ -137,58 +136,6 @@ ellipse:first-of-type {
 {{EmbedLiveSample("x-axis coordinates as percentage values", "300", "180")}}
 
 When using percentage values for `cx`, the values are relative to the width of the SVG viewport. Here, the x-axis coordinates of the center of the style circle and ellipse are `30%` and `80%`, respectively, of the width of the current SVG viewport. As the width defaulted to `300px`, the `cx` values are `90px` and `240px` from the SVG viewport's left edge.
-
-### Using unitless values
-
-This example demonstrates the effects of the viewBox attribute on unitless `cx` value declaration.
-
-#### HTML
-
-We include three SVG images, each with the same two circles as seen in the previous examples. The only difference is the `viewBox` attribute included in the second and third images.
-
-```html
-<svg xmlns="http://www.w3.org/2000/svg">
-  <circle cx="50" cy="50" r="30" />
-  <circle cx="50" cy="50" r="30" />
-</svg>
-<svg viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="50" cy="50" r="30" />
-  <circle cx="50" cy="50" r="30" />
-</svg>
-<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="50" cy="50" r="30" />
-  <circle cx="50" cy="50" r="30" />
-</svg>
-```
-
-#### CSS
-
-We set all three images to be `300px` wide. We style only the first circle in each SVG, allowing the second circle to use default styles.
-
-We include a unitless `cx` value of `30`.
-
-```css
-svg {
-  border: 1px solid;
-  width: 300px;
-}
-
-circle:first-of-type {
-  cx: 30;
-  fill: lightgreen;
-  stroke: black;
-}
-```
-
-#### Results
-
-The effect of the CSS `cx` property values differs depending on whether the `viewBox` is defined.
-
-{{EmbedLiveSample("Using unitless values", "300", "460")}}
-
-The circle's horizontal center point in `30` in all cases, which is the same value as the radius defined with the {{SVGAttr("r")}} SVG attribute, making the styled green circle abut the left edge of the SVG viewport. When the `viewBox` is omitted, CSS pixels are used, and the `30` is equal to `30px`; the center of green circle in the first SVG is `30` CSS pixels from the left edge of the SVG viewport.
-
-The `viewBox` attribute is defined in the second and third SVG images as `100` and `200` SVG units wide, respectively. This makes `30` the equivalent of `30%` of the second SVG's viewbox and `15%` of the third SVG's viewbox. Both SVGs are `300px` wide when displayed, meaning the circles' center point along the x-axis (and radii) is the equivalent of `90px` and `45px`.
 
 ## Specifications
 
