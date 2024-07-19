@@ -94,7 +94,7 @@ orderButton.addEventListener(
       output = "You didn't order anything!";
     }
 
-    outputBox.innerHTML = output;
+    outputBox.textContent = output;
   },
   false,
 );

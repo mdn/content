@@ -79,11 +79,11 @@ When the user stops scrolling, the `scrollend` event fires:
 const output = document.querySelector("p#output");
 
 document.addEventListener("scroll", (event) => {
-  output.innerHTML = `Document scroll event fired!`;
+  output.textContent = "Document scroll event fired!";
 });
 
 document.addEventListener("scrollend", (event) => {
-  output.innerHTML = `Document scrollend event fired!`;
+  output.textContent = "Document scrollend event fired!";
 });
 ```
 
@@ -133,11 +133,11 @@ This builds on the first example, but uses `document.onscrollend` instead of an 
 
 ```js
 document.onscroll = (event) => {
-  output.innerHTML = "Document scroll event fired!";
+  output.textContent = "Document scroll event fired!";
 };
 
 document.onscrollend = (event) => {
-  output.innerHTML = "Document scrollend event fired!";
+  output.textContent = "Document scrollend event fired!";
 };
 ```
 

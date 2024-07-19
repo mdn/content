@@ -100,7 +100,7 @@ let currentTokens = [];
 
 function render(text, selectionStart, selectionEnd) {
   // Empty the editor. We're re-rendering everything.
-  editorEl.innerHTML = "";
+  editorEl.textContent = "";
 
   // Tokenize the text.
   currentTokens = tokenizeHTML(text);
