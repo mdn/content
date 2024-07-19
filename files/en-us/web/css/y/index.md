@@ -101,7 +101,7 @@ rect:nth-of-type(4) {
 
 {{EmbedLiveSample("Defining the y-axis coordinate of SVG shapes", "300", "180")}}
 
-The top edges of the rectangles are at `10` (from the attribute), `-20px`, `4em`, and `60%`, respectively. The rectangle is 40px tall, so the `-20px` places half the red rectangle outside the viewport. The SVG is `150px` tall, so the orange rectangle's top side is at the `90px` mark.
+The top edges of the rectangles are at `10` (from the attribute), `-20px`, `4em`, and `60%`, respectively. The rectangle is 40px tall, so the `-20px` places half the red rectangle outside the viewport. The SVG is `150px` tall, so the orange rectangle's top side is `90px` from the top of the SVG viewport.
 
 ## Specifications
 
