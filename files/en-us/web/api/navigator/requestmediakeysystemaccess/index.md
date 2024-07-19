@@ -150,3 +150,4 @@ navigator
 - [Encrypted Media Extensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API)
 - [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- {{domxref("MediaCapabilities.decodingInfo()")}}
