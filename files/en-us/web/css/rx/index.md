@@ -32,7 +32,7 @@ rx: unset;
 
 ### Values
 
-The {{cssxref("length-percentage")}} property value denotes the horizontal radius of ellipses and the horizontal border-radius of rectangles.
+The {{cssxref("length")}}, {{cssxref("percentage")}}, or `auto` keyword value denotes the horizontal radius of ellipses and the horizontal border-radius of rectangles.
 
 - {{cssxref("length")}}
 
