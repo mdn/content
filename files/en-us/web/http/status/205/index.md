@@ -7,11 +7,11 @@ spec-urls: https://httpwg.org/specs/rfc9110.html#status.205
 
 {{HTTPSidebar}}
 
-The HTTP **`205 Reset Content`** status response code tells the client to reset the document view.
+The HTTP **`205 Reset Content`** status response code indicates that the request has been successfully processed and the client should reset the document view.
 It is part of the `200`-`299` class of [successful responses](/en-US/docs/Web/HTTP/Status#successful_responses).
 
-This response is intended to support use cases where the user receives content that supports data entry, submits user-edited data in a request, and the content is reset for the next entry by the client.
-An instruction to "Reset Content" can mean clearing the contents of a form, resetting a canvas state, or refreshing a UI, but this is dependent on client implementations.
+This response is intended to support use cases where the user receives content that supports data entry, submits user-edited data in a request, and the content needs to be reset for the next entry.
+The instruction to "reset content" can mean clearing the contents of a form, resetting a canvas state, or refreshing a UI; the implementation depends on the client.
 
 There must be no payload in the response body, and this can be indicated using `Content-Length: 0` response header or `Transfer-Encoding: chunked` response header with an empty chunk.
 
@@ -23,9 +23,9 @@ There must be no payload in the response body, and this can be indicated using `
 
 ## Examples
 
-### Resetting a form
+### Resetting a form after receiving a `205 Reset Content`
 
-A request for form submission may look like the following:
+The client in this example sends a `POST` request to submit a form with the comment `Hello!`:
 
 ```http
 POST /submit HTTP/1.1
@@ -36,8 +36,8 @@ Content-Length: 15
 comment=Hello!
 ```
 
-The server may send a response that indicates that the client should reset a form.
-It's assumed that the client supports resetting the content for entering data on `205` responses via JavaScript, as this is not handled natively by browsers:
+After successfully processing the form submission, the server responds with the following `205` response,  indicating that the client should reset the form.
+> **Note:** It's assumed that the client supports resetting the content after a `205` response. This is typically done via JavaScript, as resetting content after a `205` is not handled natively by browsers.
 
 ```http
 HTTP/1.1 205 Reset Content
@@ -52,7 +52,7 @@ Date: Wed, 26 Jun 2024 12:00:00 GMT
 
 ## Compatibility notes
 
-Browser behavior differs if this response erroneously includes a body on persistent connections.
+Browser behaviors differ if this response erroneously includes a body on persistent connections.
 See [204 No Content](/en-US/docs/Web/HTTP/Status/204) for more details.
 
 ## See also

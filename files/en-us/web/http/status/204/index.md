@@ -8,15 +8,15 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.204
 {{HTTPSidebar}}
 
 The HTTP **`204 No Content`** status response code indicates that a request has succeeded, but the client doesn't need to navigate away from its current page.
-A `204` response is cacheable by default and an {{HTTPHeader("ETag")}} header is included in such cases.
+A `204` response is cacheable by default, and an {{HTTPHeader("ETag")}} header is included in such cases.
 It is part of the `200`-`299` class of [successful responses](/en-US/docs/Web/HTTP/Status#successful_responses).
 
 A `204 No Content` in response to these request methods has the following meaning and results:
 
-- {{HTTPMethod("DELETE")}}: the action was successful and no further information is to be supplied.
-- {{HTTPMethod("PUT")}}: the action was successful and the {{HTTPHeader("ETag")}} value contains the entity tag for the new representation of that target resource.
+- {{HTTPMethod("DELETE")}}: The action was successful, and no further information needs to be supplied.
+- {{HTTPMethod("PUT")}}: The action was successful, and the {{HTTPHeader("ETag")}} value contains the entity tag for the new representation of that target resource.
 
-A `204` response can be used when implementing "save and continue editing" functionality for an application like a wiki site, for example.
+A `204` response can be used when implementing "save and continue editing" functionality for applications like wiki sites.
 In this case, a {{HTTPMethod("PUT")}} request could be used to save the page contents, and a `204 No Content` response indicates to the browser that the editor should not be replaced by other content.
 
 ## Status
@@ -27,10 +27,10 @@ In this case, a {{HTTPMethod("PUT")}} request could be used to save the page con
 
 ## Examples
 
-### Deleting an image
+### Receiving a response after deleting an image
 
-In this example, the client is requesting that an image is deleted using the `DELETE` method.
-An {{HTTPHeader("Authorization")}} header includes a token to authenticate the request:
+In this example, the client sends a request to delete an image using the `DELETE` method.
+The request includes an {{HTTPHeader("Authorization")}} header with a token to authenticate the request:
 
 ```http
 DELETE /image/123 HTTP/1.1
@@ -38,7 +38,7 @@ Host: example.com
 Authorization: Bearer 1234abcd
 ```
 
-The server responds with a `204` response with no body in the message:
+After successfully deleting the image, the server responds with a `204` response with no body in the message, indicating no further information needs to be sent to the client.
 
 ```http
 HTTP/1.1 204 No Content
@@ -52,13 +52,12 @@ Server: Apache/2.4.1 (Unix)
 
 ## Compatibility notes
 
-Although this status code is intended to describe a response with no body, servers may erroneously include data after the headers.
-The protocol allows user agents to vary in how they process such responses and there is discussion regarding the specification text in the [HTTPWG `http-core` GitHub repository](https://github.com/httpwg/http-core/issues/26).
-This is observable in persistent connections, where the invalid body may include a distinct response to a subsequent request.
+Although this status code is intended for responses with no body, servers may erroneously include data after the headers. This issue is observable in persistent connections, where the invalid body may include a distinct response to a subsequent request.
+The HTTP protocol allows browsers to handle such responses differently (there is an ongoing discussion regarding the specification text in the [HTTPWG `http-core` GitHub repository](https://github.com/httpwg/http-core/issues/26)).
 
 Apple Safari rejects any such data.
 Google Chrome and Microsoft Edge discard up to four invalid bytes preceding a valid response.
-Firefox tolerates in excess of a kilobyte of invalid data preceding a valid response.
+Firefox tolerates over a kilobyte of invalid data preceding a valid response.
 
 ## See also
 

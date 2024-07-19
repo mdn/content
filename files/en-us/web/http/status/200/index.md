@@ -11,7 +11,7 @@ The HTTP **`200 OK`** status response code indicates that a request has succeede
 It is part of the `200`-`299` class of [successful responses](/en-US/docs/Web/HTTP/Status#successful_responses).
 A `200 OK` response is cacheable by default.
 
-A `200 OK` has the following meaning and format in response to these request methods:
+A `200 OK` response has a different meaning and format depending on the HTTP request method. Here's how they vary for different methods:
 
 - {{HTTPMethod("GET")}}: A resource was retrieved by the server and included in the response body.
 - {{HTTPMethod("POST")}}: An action succeeded; the response has a message body describing the result.
@@ -29,9 +29,9 @@ It is more common to see {{HTTPStatus("201")}} `Created` if the resource is uplo
 
 ## Examples
 
-### Receiving a `200 OK` for a GET request
+### Receiving a `200 OK` for a `GET` request
 
-In this example, a successful GET request to `https://example.com` returns a `200 OK` response.
+In this example, a successful `GET` request to `https://example.com` returns a `200 OK` response.
 The response includes representation headers and a message body with the HTML resource:
 
 ```http
@@ -52,7 +52,7 @@ Content-Length: 1256
 <!-- HTML content follows here -->
 ```
 
-### POST response in form submission
+### Receiving a `200 OK` for `POST` request in form submission
 
 Assuming a form exists to send data to an endpoint for managing subscriptions at `http://example.com/subscribe`.
 A `POST` request to subscribe a user may look like the following:

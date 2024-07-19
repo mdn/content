@@ -7,11 +7,11 @@ spec-urls: https://httpwg.org/specs/rfc9110.html#status.203
 
 {{HTTPSidebar}}
 
-The HTTP **`203 Non-Authoritative Information`** status response code indicates that the request was successful but the headers or enclosed payload have been modified by a _transforming {{Glossary("Proxy server", "proxy")}}_ from that of the origin server's {{HTTPStatus("200")}} (`OK`) response.
+The HTTP **`203 Non-Authoritative Information`** status response code indicates that the request was successful, but a _transforming {{Glossary("Proxy server", "proxy")}}_ has modified the headers or enclosed payload from the origin server's {{HTTPStatus("200")}} (`OK`) response.
 It is part of the `200`-`299` class of [successful responses](/en-US/docs/Web/HTTP/Status#successful_responses).
 
 The purpose of this status code is to allow transforming proxies to notify clients when changes have been applied to successful responses, since this may impact decisions regarding the content later.
-Transformations to messages can mean modifications of headers to indicate that a resource is from a mirror or a backup, but may also mean modifying content in a way that are presumed to be desirable to the client, such as a malware filter, a format transcoder, or a privacy filter, or other hints to the client about future requests.
+Transformations to messages can mean modifications of headers to indicate that a resource is from a mirror or a backup, but may also mean modifying content in a way that are presumed to be desirable to the client. These modifications might include malware filtering, format transcoding, privacy filtering, or other hints to the client about future requests.
 
 The `203` response is similar to the [`214`](/en-US/docs/Web/HTTP/Headers/Warning#warning_codes) `Transformation Applied` value of the deprecated {{HTTPHeader("Warning")}} header, which may be applicable to responses with any status code.
 
@@ -23,16 +23,16 @@ The `203` response is similar to the [`214`](/en-US/docs/Web/HTTP/Headers/Warnin
 
 ## Examples
 
-### Filtered message response
+### Receiving a filtered message response
 
-The following `GET` request is asking for a comment with an ID `123`:
+In this example, a user sends a `GET` request for a comment with ID `123` to `example.com`:
 
 ```http
 GET /comments/123 HTTP/1.1
 Host: example.com
 ```
 
-In the case of a proxy filtering a message, a response could look like the following:
+In the case of a proxy filtering this message, the response could look like the following:
 
 ```http
 HTTP/1.1 203 Non-Authoritative Information
