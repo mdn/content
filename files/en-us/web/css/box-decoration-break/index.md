@@ -111,7 +111,6 @@ Notice how the result of `box-decoration-break: slice` would be the equivalent o
 ```css hidden
 body {
   background-color: grey;
-  font-family: sans-serif;
 }
 span {
   padding: 0em 2em;
