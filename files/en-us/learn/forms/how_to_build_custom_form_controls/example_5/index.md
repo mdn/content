@@ -207,7 +207,7 @@ function updateValue(select, index) {
   optionList[index].setAttribute("aria-selected", "true");
 
   nativeWidget.selectedIndex = index;
-  value.innerHTML = optionList[index].innerHTML;
+  value.textContent = optionList[index].textContent;
   highlightOption(select, optionList[index]);
 }
 

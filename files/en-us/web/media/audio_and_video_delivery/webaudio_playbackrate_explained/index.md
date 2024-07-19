@@ -51,7 +51,7 @@ window.onload = () => {
   p.addEventListener(
     "input",
     () => {
-      c.innerHTML = p.value;
+      c.textContent = p.value;
       v.playbackRate = p.value;
     },
     false,

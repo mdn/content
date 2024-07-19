@@ -192,7 +192,7 @@ function renderPastPeriods() {
   }
 
   // Clear the list of past periods, since we're going to re-render it.
-  pastPeriodContainer.innerHTML = "";
+  pastPeriodContainer.textContent = "";
 
   const pastPeriodHeader = document.createElement("h2");
   pastPeriodHeader.textContent = "Past periods";
@@ -289,7 +289,7 @@ function renderPastPeriods() {
   if (periods.length === 0) {
     return;
   }
-  pastPeriodContainer.innerHTML = "";
+  pastPeriodContainer.textContent = "";
   pastPeriodHeader.textContent = "Past periods";
   periods.forEach((period) => {
     const periodEl = document.createElement("li");

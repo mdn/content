@@ -72,9 +72,9 @@ Using JavaScript, you can dynamically change the content _inside_ the element wi
 
 ```js
 // clear the contents of the container
-document.getElementById("alertContainer").innerHTML = "";
+document.getElementById("alertContainer").textContent = "";
 // inject the new alert message
-document.getElementById("alertContainer").innerHTML =
+document.getElementById("alertContainer").textContent =
   "Your session will expire in " + expiration + " minutes";
 ```
 
@@ -102,9 +102,9 @@ However, make sure that the container is not hidden using `display:none`, as thi
 
 ```js
 // clear the contents of the container
-document.getElementById("hiddenAlertContainer").innerHTML = "";
+document.getElementById("hiddenAlertContainer").textContent = "";
 // inject the new alert message
-document.getElementById("hiddenAlertContainer").innerHTML =
+document.getElementById("hiddenAlertContainer").textContent =
   "All items were removed from your inventory.";
 ```
 
