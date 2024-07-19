@@ -8,10 +8,7 @@ browser-compat: api.WorkerNavigator.mediaCapabilities
 
 {{APIRef("HTML DOM")}}
 
-The read-only **`WorkerNavigator.mediaCapabilities`** property
-returns a {{domxref("MediaCapabilities")}} object that can expose information about the
-decoding and encoding capabilities for a given format and output capabilities as defined
-by the [Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API).
+The read-only **`mediaCapabilities`** property of the {{domxref("WorkerNavigator")}} interface references a {{domxref("MediaCapabilities")}} object that can expose information about the decoding and encoding capabilities for a given format and output capabilities (as defined by the [Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API)).
 
 ## Value
 

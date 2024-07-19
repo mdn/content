@@ -82,7 +82,8 @@ Now that we've created a video decoding configuration we can pass it as a parame
 let promise = navigator.mediaCapabilities.decodingInfo(videoConfiguration);
 ```
 
-The `decodingInfo()` and {{domxref("MediaCapabilities.encodingInfo", "encodingInfo()")}} methods both return promises. Once the promises state is fulfilled, you can access the `supported`, `smooth`, and `powerEfficient` properties from the returned object.
+The `decodingInfo()` and {{domxref("MediaCapabilities.encodingInfo", "encodingInfo()")}} methods both return promises.
+Once the promise states are fulfilled, you can access the `supported`, `smooth`, and `powerEfficient` properties from the returned object.
 
 ### Handling the response
 
