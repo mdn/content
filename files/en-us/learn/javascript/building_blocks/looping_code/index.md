@@ -614,7 +614,7 @@ If you get really stuck, press "Show solution" to see a solution.
 </p>
 <textarea id="code" class="playable-code" style="height: 300px;width: 95%">
 let output = document.querySelector('.output');
-output.innerHTML = '';
+output.textContent = "";
 
 // let i = 10;
 
@@ -682,7 +682,7 @@ solution.addEventListener("click", function () {
 });
 
 let jsSolution = `const output = document.querySelector('.output');
-output.innerHTML = '';
+output.textContent = "";
 
 let i = 10;
 
