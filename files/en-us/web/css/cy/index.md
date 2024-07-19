@@ -31,7 +31,7 @@ cy: unset;
 
 The {{cssxref("length")}} and {{cssxref("percentage")}} values denote the vertical center of the circle or ellipse.
 
-- {{cssxref("length)}}
+- {{cssxref("length")}}
 
   - : As an absolute or relative length, it can be expressed in any unit allowed by the CSS {{cssxref("&lt;length&gt;")}} data type. Negative values are invalid.
 
