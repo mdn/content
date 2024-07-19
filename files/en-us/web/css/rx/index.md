@@ -21,7 +21,6 @@ rx: auto;
 /* Length and percentage values */
 rx: 20px;
 rx: 20%;
-rx: 20;
 
 /* Global values */
 rx: inherit;
@@ -37,7 +36,7 @@ The {{cssxref("length-percentage")}} property value denotes the horizontal radiu
 
 - {{cssxref("length")}}
 
-  - : Absolute or relative lengths can be expressed in any unit allowed by the CSS {{cssxref("&lt;length&gt;")}} data type. Unitless and `px` values are SVG coordinate units if the {{SVGAttr("viewBox")}} attribute is included; otherwise, CSS pixel units are used. Negative values are invalid.
+  - : Absolute or relative lengths can be expressed in any unit allowed by the CSS {{cssxref("&lt;length&gt;")}} data type. Negative values are invalid.
 
 - {{cssxref("percentage")}}
 
@@ -146,7 +145,7 @@ ellipse:first-of-type {
 
 {{EmbedLiveSample("Defining the horizontal radius of an ellipse", "300", "180")}}
 
-The styled ellipse's horizontal radius is `80px`, as defined in the CSS `rx` property value. The unstyled ellipse's horizontal radius is `20px`, which was defined by the `rx` attribute [unitless value declaration](#using_unitless_values).
+The styled ellipse's horizontal radius is `80px`, as defined in the CSS `rx` property value. The unstyled ellipse's horizontal radius is `20px`, which was defined by the `rx` attribute.
 
 ### Ellipse horizontal radius percentage values
 
@@ -184,58 +183,6 @@ ellipse:first-of-type {
 {{EmbedLiveSample("Ellipse horizontal radius percentage values", "300", "180")}}
 
 When using percentage values for `rx`, the values are relative to the width of the SVG viewport. Here, the size of the styled ellipse horizontal radius is `30%` of the width of the current SVG viewport. As the width defaulted to `300px`, the `rx` value is `90px`.
-
-### Using unitless values
-
-This example demonstrates the effects of the viewBox attribute on unitless `rx` value declarations.
-
-#### HTML
-
-We include three SVG images, each with the same two ellipses as seen in the previous examples. The only difference is the `viewBox` attribute included in the second and third images.
-
-```html
-<svg xmlns="http://www.w3.org/2000/svg">
-  <ellipse cx="80" cy="50" rx="20" ry="40" />
-  <ellipse cx="80" cy="50" rx="20" ry="40" />
-</svg>
-<svg viewBox="0 0 100 50" xmlns="http://www.w3.org/2000/svg">
-  <ellipse cx="80" cy="50" rx="20" ry="40" />
-  <ellipse cx="80" cy="50" rx="20" ry="40" />
-</svg>
-<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
-  <ellipse cx="80" cy="50" rx="20" ry="40" />
-  <ellipse cx="80" cy="50" rx="20" ry="40" />
-</svg>
-```
-
-#### CSS
-
-We set all three images to be `300px` wide. We style only the first ellipse in each SVG, allowing the second ellipse to use default styles.
-
-We include a unitless `rx` value of `30`.
-
-```css
-svg {
-  border: 1px solid;
-  width: 300px;
-}
-
-ellipse:first-of-type {
-  rx: 30;
-  fill: magenta;
-  stroke: rebeccapurple;
-}
-```
-
-#### Results
-
-The effect of the CSS `rx` property values differs depending on whether the `viewBox` is defined.
-
-{{EmbedLiveSample("Using unitless values", "300", "460")}}
-
-When the `viewBox` is omitted, CSS pixels are used, and the `30` is equal to `30px`; the horizontal radius of green ellipse in the first SVG is `30` CSS pixels.
-
-The `viewBox` attribute is defined in the second and third SVG images as `100` and `200` SVG units wide, respectively. This makes `30` the equivalent of `30%` of the second SVG's viewbox and `15%` of the third SVG's viewbox. Both SVGs are `300px` wide when displayed, meaning the ellipses x-axis radius is the equivalent of `90px` and `45px`.
 
 ## Specifications
 
