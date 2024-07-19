@@ -98,7 +98,8 @@ let db;
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += "<li>Database initialized.</li>";
+  note.appendChild(document.createElement("li")).textContent =
+    "Database initialized.";
 
   // store the result of opening the database in the db variable.
   // This is used a lot below
@@ -114,13 +115,13 @@ const transaction = db.transaction(["toDoList"], "readwrite");
 
 // report on the success of opening the transaction
 transaction.oncomplete = (event) => {
-  note.innerHTML +=
-    "<li>Transaction completed: database modification finished.</li>";
+  note.appendChild(document.createElement("li")).textContent =
+    "Transaction completed: database modification finished.";
 };
 
 transaction.onerror = (event) => {
-  note.innerHTML +=
-    "<li>Transaction not opened due to error. Duplicate items not allowed.</li>";
+  note.appendChild(document.createElement("li")).textContent =
+    "Transaction not opened due to error. Duplicate items not allowed.";
 };
 
 // you would then go on to do something to this database
