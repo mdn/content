@@ -24,6 +24,8 @@ This article provides information about the changes in Firefox 129 that affect d
 
 ### JavaScript
 
+- Regular expressions can now use the same name for [named capturing groups](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group) in different [disjunction alternatives](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction). This is allowed because only one alternative in a disjunction will match, so a name declared in several alternatives can only reference one captured group. The names must still be unique within a particular alternative, and across the rest of the pattern. ([Firefox bug 1903288](https://bugzil.la/1903288).)
+
 #### Removals
 
 ### SVG
