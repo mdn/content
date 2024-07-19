@@ -39,23 +39,23 @@ wrapper.appendChild(document.createTextNode("Part 1 "));
 wrapper.appendChild(document.createTextNode("Part 2 "));
 
 let node = wrapper.firstChild;
-let result = "Before normalization:<br/>";
+let result = "Before normalization:\n";
 while (node) {
-  result += ` ${node.nodeName}: ${node.nodeValue}<br/>`;
+  result += ` ${node.nodeName}: ${node.nodeValue}\n`;
   node = node.nextSibling;
 }
 
 wrapper.normalize();
 
 node = wrapper.firstChild;
-result += "<br/><br/>After normalization:<br/>";
+result += "\n\nAfter normalization:\n";
 while (node) {
-  result += ` ${node.nodeName}: ${node.nodeValue}<br/>`;
+  result += ` ${node.nodeName}: ${node.nodeValue}\n`;
   node = node.nextSibling;
 }
 
 const output = document.getElementById("result");
-output.innerHTML = result;
+output.innerText = result;
 ```
 
 {{ EmbedLiveSample("Example", "100%", "170")}}

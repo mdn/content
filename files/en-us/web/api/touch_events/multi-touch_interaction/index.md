@@ -248,20 +248,20 @@ function log(name, ev, printTargetIds) {
     `${name}: touches = ${ev.touches.length} ; ` +
     `targetTouches = ${ev.targetTouches.length} ; ` +
     `changedTouches = ${ev.changedTouches.length}`;
-  o.innerHTML += `${s}<br>`;
+  o.innerText += `${s}\n`;
 
   if (printTargetIds) {
     s = "";
     for (let i = 0; i < ev.targetTouches.length; i++) {
-      s += `... id = ${ev.targetTouches[i].identifier}<br>`;
+      s += `... id = ${ev.targetTouches[i].identifier}\n`;
     }
-    o.innerHTML += s;
+    o.innerText += s;
   }
 }
 
 function clearLog(event) {
   const o = document.getElementsByTagName("output")[0];
-  o.innerHTML = "";
+  o.textContent = "";
 }
 ```
 

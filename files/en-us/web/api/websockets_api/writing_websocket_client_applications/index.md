@@ -157,7 +157,7 @@ exampleSocket.onmessage = (event) => {
       text = `Your username has been set to <em>${msg.name}</em> because the name you chose is in use.<br>`;
       break;
     case "userlist":
-      document.getElementById("userlistbox").innerHTML = msg.users.join("<br>");
+      document.getElementById("userlistbox").innerText = msg.users.join("\n");
       break;
   }
 
