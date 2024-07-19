@@ -228,7 +228,7 @@ let mc = {
           result.powerEfficient ? " IS " : " IS NOT "
         }power efficient.`;
         const ul = document.getElementById("results");
-        li.innerHTML = content;
+        li.textContent = content;
         ul.appendChild(li);
       })
       .catch((error) => {

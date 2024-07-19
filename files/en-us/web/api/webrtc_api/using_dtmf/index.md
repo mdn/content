@@ -387,11 +387,11 @@ The `addstream` event includes a {{domxref("MediaStreamEvent.stream", "stream")}
 
 #### Logging
 
-A simple `log()` function is used throughout the code to append HTML to a {{HTMLElement("div")}} box for displaying status and errors to the user.
+A simple `log()` function is used throughout the code to append text to a {{HTMLElement("div")}} box for displaying status and errors to the user.
 
 ```js
 function log(msg) {
-  logElement.innerHTML += `${msg}<br/>`;
+  logElement.innerText += `${msg}\n`;
 }
 ```
 

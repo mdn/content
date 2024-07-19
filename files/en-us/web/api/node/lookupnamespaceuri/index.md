@@ -68,17 +68,12 @@ const tbody = document.querySelector("tbody");
 for (const prefix of ["xmlns", "xml", "html", "svg", "xlink", "", null]) {
   const row = document.createElement("tr");
   tbody.appendChild(row);
-  row.appendChild(
-    Object.assign(document.createElement("td"), {
-      textContent: JSON.stringify(prefix),
-    }),
-  );
+  row.appendChild(document.createElement("td")).textContent =
+    JSON.stringify(prefix);
   for (const el of [htmlElt, svgElt, mathElt]) {
     console.log(el, prefix, el.lookupNamespaceURI(prefix));
-    row.appendChild(
-      Object.assign(document.createElement("td"), {
-        textContent: String(el.lookupNamespaceURI(prefix)),
-      }),
+    row.appendChild(document.createElement("td")).textContent = String(
+      el.lookupNamespaceURI(prefix),
     );
   }
 }
