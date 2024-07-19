@@ -15,7 +15,7 @@ The **`r`** [CSS](/en-US/docs/Web/CSS) property defines the radius of a circle. 
 ## Syntax
 
 ```css
-/* length and percentage values */
+/* Length and percentage values */
 r: 3px;
 r: 20%;
 
