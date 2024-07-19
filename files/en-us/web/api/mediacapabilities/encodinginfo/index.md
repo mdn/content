@@ -6,9 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.MediaCapabilities.encodingInfo
 ---
 
-{{APIRef("MediaCapabilities")}}
+{{APIRef("Media Capabilities API")}}
 
-The **`MediaCapabilities.encodingInfo()`** method, part of the {{domxref("MediaCapabilities")}} interface of the [Media Capabilities API](/en-US/docs/Web/API/MediaCapabilities), returns a promise with the tested media configuration's capabilities information.
+The **`encodingInfo()`** method of the {{domxref("MediaCapabilities")}} interface returns a promise that fulfills with the tested media configuration's capabilities for encoding media.
 This contains the three boolean properties `supported`, `smooth`, and `powerefficient`, which describe how compatible the device is with the type of media.
 
 ## Syntax
@@ -69,7 +69,7 @@ encodingInfo(configuration)
 A {{jsxref('Promise')}} fulfilling with an object containing three Boolean attributes:
 
 - `supported`
-  - : `true` if the media content can be decoded at all. Otherwise, it is `false`.
+  - : `true` if the media content can be encoded at all. Otherwise, it is `false`.
 - `smooth`
   - : `true` if playback of the media will be smooth (of high quality). Otherwise it is `false`.
 - `powerEfficient`
