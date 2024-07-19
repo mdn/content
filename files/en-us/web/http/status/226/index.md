@@ -7,16 +7,18 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc3229.html#section-10.4.1
 
 {{HTTPSidebar}}
 
-The HTTP **`226 IM Used`** status response code is used in the context of _HTTP delta encodings_ for a server to indicate that it is returning a {{Glossary("delta")}} in response to a {{HTTPMethod("GET")}} request.
+The HTTP **`226 IM Used`** status response code indicates that the server is returning a {{Glossary("delta")}} in response to a {{HTTPMethod("GET")}} request.
+It is used in the context of _HTTP delta encodings_.
 It is part of the `200`-`299` class of [successful responses](/en-US/docs/Web/HTTP/Status#successful_responses).
 
-IM stands for _instance manipulations_, the term used to describe an algorithm generating a _delta_.
-With delta encoding, a client sends a {{HTTPMethod("GET")}} request with an `A-IM:` HTTP header that indicates a preference for a differencing algorithm and the {{HTTPHeader("If-None-Match")}} header to tell the server what version of a resource it has.
-The server responds with deltas relative to a given base document rather than the document in full.
-The server's HTTP response uses the `226` status code, an `IM:` header that describes the diff algorithm used, and may include a `Delta-Base:` header with the {{HTTPHeader("ETag")}} matching the base document associated to the delta.
+IM stands for _instance manipulation_, which refers to the algorithm generating a _delta_.
+In delta encoding, a client sends a {{HTTPMethod("GET")}} request with two headers: `A-IM:`, which indicates a preference for a differencing algorithm, and {{HTTPHeader("If-None-Match")}}, which specifies the version of a resource it has.
+The server responds with deltas relative to a given base document, rather than the document in full.
+This response uses the `226` status code, an `IM:` header that describes the differencing algorithm used, and may include a `Delta-Base:` header with the {{HTTPHeader("ETag")}} matching the base document associated to the delta.
 
 > **Warning:**
-> Poor support for HTTP delta encodings means there are few implementations, and instead most systems rely solely on [compression methods](/en-US/docs/Web/HTTP/Compression) to reduce bandwidth, although a combination of compression and delta encodings is possible.
+> Poor support for HTTP delta encodings means there are few implementations.
+> Instead, most systems rely solely on [compression methods](/en-US/docs/Web/HTTP/Compression) to reduce bandwidth, although a combination of compression and delta encodings is possible.
 >
 > Even if the client and server support delta encodings, proxies or caches may not, and the complexity of adding HTTP delta encodings to a system may outweigh the benefits.
 
@@ -28,7 +30,7 @@ The server's HTTP response uses the `226` status code, an `IM:` header that desc
 
 ## Examples
 
-### Response using vcdiff algorithm
+### Receiving a `208` with the `vcdiff` delta algorithm
 
 In the following `GET` request, a client requests a resource and has a cached version with the ETag `abcd123`.
 The `A-IM:` header indicates a preference for `vcdiff` and `diffe` delta algorithms:
@@ -40,7 +42,7 @@ A-IM: vcdiff, diffe
 If-None-Match: "abcd123"
 ```
 
-Given support for delta encodings, the server responds with the diff since a version with the ETag `abcd123`.
+Assuming the server supports delta encodings, it responds with the diff since the version with the ETag `abcd123`.
 The `IM` header indicates that the `vcdiff` algorithm is used, and the `Delta-Base:` header indicates that the diff is based on a resource with ETag `abcd123`.
 
 ```http

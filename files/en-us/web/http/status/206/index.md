@@ -24,7 +24,14 @@ If several ranges are requested, the {{HTTPHeader("Content-Type")}} is set to `m
 
 ### Receiving a `206` response for a single requested range
 
-A response containing one single range:
+The following is a sample `206` response when a single range of `21010-*` (bytes 21010 to the end of file) of an image file is requested.
+The response contains {{HTTPHeader("Content-Type")}} of `image/gif` and the {{HTTPHeader("Content-Range")}} is provided:
+
+```http
+GET /z4d4kWk.gif HTTP/1.1
+Host: images.example.com
+Range: bytes=21010-*
+```
 
 ```http
 HTTP/1.1 206 Partial Content
@@ -40,7 +47,13 @@ Content-Type: image/gif
 ### Receiving a `206` response for multiple requested ranges
 
 Following is a sample `206` response when two ranges of a PDF file are requested.
-The response contains the `multipart/byteranges` `Content-Type` and separate `Content-Type` and `Content-Range` for each range.
+The response contains the `multipart/byteranges` {{HTTPHeader("Content-Type")}} with a separate {{HTTPHeader("Content-Type")}} (`application/pdf`) and {{HTTPHeader("Content-Range")}} for each range.
+
+```http
+GET /pricelist.pdf HTTP/1.1
+Host: example.com
+Range: bytes=234-639,4590-7999
+```
 
 ```http
 HTTP/1.1 206 Partial Content
@@ -53,12 +66,12 @@ Content-Type: multipart/byteranges; boundary=String_separator
 Content-Type: application/pdf
 Content-Range: bytes 234-639/8000
 
-# the first range
+# content of first range (406 bytes)
 --String_separator
 Content-Type: application/pdf
 Content-Range: bytes 4590-7999/8000
 
-# the second range
+# content of second range (3410 bytes)
 --String_separator--
 ```
 

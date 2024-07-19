@@ -11,7 +11,8 @@ The HTTP **`203 Non-Authoritative Information`** status response code indicates 
 It is part of the `200`-`299` class of [successful responses](/en-US/docs/Web/HTTP/Status#successful_responses).
 
 The purpose of this status code is to allow transforming proxies to notify clients when changes have been applied to successful responses, since this may impact decisions regarding the content later.
-Transformations to messages can mean modifications of headers to indicate that a resource is from a mirror or a backup, but may also mean modifying content in a way that are presumed to be desirable to the client. These modifications might include malware filtering, format transcoding, privacy filtering, or other hints to the client about future requests.
+Transformations to messages can mean modifications of headers to indicate that a resource is from a mirror or a backup, but may also mean modifying content in a way that are presumed to be desirable to the client.
+These modifications might include malware filtering, format transcoding, privacy filtering, or other hints to the client about future requests.
 
 The `203` response is similar to the [`214`](/en-US/docs/Web/HTTP/Headers/Warning#warning_codes) `Transformation Applied` value of the deprecated {{HTTPHeader("Warning")}} header, which may be applicable to responses with any status code.
 
@@ -25,14 +26,15 @@ The `203` response is similar to the [`214`](/en-US/docs/Web/HTTP/Headers/Warnin
 
 ### Receiving a filtered message response
 
-In this example, a user sends a `GET` request for a comment with ID `123` to `example.com`:
+In this example, a user sends a `GET` request for content with ID `123` to `example.com`.
 
 ```http
 GET /comments/123 HTTP/1.1
 Host: example.com
 ```
 
-In the case of a proxy filtering this message, the response could look like the following:
+A proxy has altered the message based on malware filtering rules for known unsafe attachments.
+The response payload has been modified, replacing the `attachment_url` value to a link with information about the filtering in place:
 
 ```http
 HTTP/1.1 203 Non-Authoritative Information
@@ -42,7 +44,8 @@ Content-Type: application/json
 Content-Length: 123
 
 {
-  "content": "This is ridiculous!",
+  "comment": "Check out my bio!",
+  "attachment_url": "https://example.com/attachment-unavailable-faq"
 }
 ```
 
