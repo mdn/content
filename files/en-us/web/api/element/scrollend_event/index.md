@@ -77,11 +77,11 @@ const element = document.querySelector("div#scroll-box");
 const output = document.querySelector("p#output");
 
 element.addEventListener("scroll", (event) => {
-  output.innerHTML = "Scroll event fired, waiting for scrollend...";
+  output.textContent = "Scroll event fired, waiting for scrollend...";
 });
 
 element.addEventListener("scrollend", (event) => {
-  output.innerHTML = "Scrollend event fired!";
+  output.textContent = "Scrollend event fired!";
 });
 ```
 
@@ -131,11 +131,11 @@ const element = document.querySelector("div#scroll-box");
 const output = document.querySelector("p#output");
 
 element.onscroll = (event) => {
-  output.innerHTML = "Element scroll event fired, waiting for scrollend...";
+  output.textContent = "Element scroll event fired, waiting for scrollend...";
 };
 
 element.onscrollend = (event) => {
-  output.innerHTML = "Element scrollend event fired!";
+  output.textContent = "Element scrollend event fired!";
 };
 ```
 

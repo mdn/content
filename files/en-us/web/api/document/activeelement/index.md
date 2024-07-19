@@ -64,8 +64,8 @@ function onMouseUp(e) {
 
   const outputElement = document.getElementById("output-element");
   const outputText = document.getElementById("output-text");
-  outputElement.innerHTML = activeTextarea.id;
-  outputText.innerHTML = selection;
+  outputElement.textContent = activeTextarea.id;
+  outputText.textContent = selection;
 }
 
 const textarea1 = document.getElementById("ta-example-one");

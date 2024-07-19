@@ -132,8 +132,8 @@ applying `selectors`, so that levels outside the specified
 
 ```js
 const baseElement = document.querySelector("p");
-document.getElementById("output").innerHTML =
-  baseElement.querySelector("div span").innerHTML;
+document.getElementById("output").textContent =
+  baseElement.querySelector("div span").textContent;
 ```
 
 #### Result
