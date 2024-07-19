@@ -32,7 +32,7 @@ The **`:autofill`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) match
 ## Examples
 
 The following example demonstrates the use of the `:autofill` pseudo-class to change the border of a text field that has been autocompleted by the browser.
-To ensure we don't creat an [invalid selector lis](/en-US/docs/Web/CSS/Selector_list#invalid_selector_list), both `:-webkit-autofill` and `:autofill` are matched using a forgiving selector list with {{cssxref(":is()")}}.
+To ensure we don't create an [invalid selector list](/en-US/docs/Web/CSS/Selector_list#invalid_selector_list), both `:-webkit-autofill` and `:autofill` are matched using a forgiving selector list with {{cssxref(":is()")}}.
 
 ```css
 input {
