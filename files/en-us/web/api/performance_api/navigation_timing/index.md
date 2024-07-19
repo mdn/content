@@ -35,7 +35,7 @@ The {{domxref("PerformanceNavigationTiming")}} interface provides additional pro
 
 ## Example
 
-The `domContentLoadedEventEnd` and `domContentLoadedEventStart` timestamps can be used to measure how long it takes process the [`DOMContentLoaded`](/en-US/docs/Web/API/Document/DOMContentLoaded_event) event handler.
+The `domContentLoadedEventEnd` and `domContentLoadedEventStart` timestamps can be used to measure how long it takes to process the [`DOMContentLoaded`](/en-US/docs/Web/API/Document/DOMContentLoaded_event) event handler.
 
 This example uses a {{domxref("PerformanceObserver")}}, which notifies the caller about new `navigation` performance entries as they are recorded in the browser's performance timeline. The example uses the `buffered` option to access entries that were recorded before the observer was created.
 
