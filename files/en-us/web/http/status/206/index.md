@@ -11,8 +11,8 @@ The HTTP **`206 Partial Content`** status response code is sent in response to a
 The response body contains the requested ranges of data as specified in the {{HTTPHeader("Range")}} header of the request.
 It is part of the `200`-`299` class of [successful responses](/en-US/docs/Web/HTTP/Status#successful_responses).
 
-If there is only one range, the {{HTTPHeader("Content-Type")}} of the whole response is set to the type of the document, and a {{HTTPHeader("Content-Range")}} is provided.
-If several ranges are sent back, the {{HTTPHeader("Content-Type")}} is set to `multipart/byteranges` and each fragment covers one range, with {{HTTPHeader("Content-Range")}} and {{HTTPHeader("Content-Type")}} headers describing it.
+The format of the response depends on the number of ranges requested. If a single range is requested, the {{HTTPHeader("Content-Type")}} of the entire response is set to the type of the document, and a {{HTTPHeader("Content-Range")}} is provided.
+If several ranges are requested, the {{HTTPHeader("Content-Type")}} is set to `multipart/byteranges`, and each fragment covers one range, with its own {{HTTPHeader("Content-Range")}} and {{HTTPHeader("Content-Type")}} headers describing it.
 
 ## Status
 
@@ -22,7 +22,7 @@ If several ranges are sent back, the {{HTTPHeader("Content-Type")}} is set to `m
 
 ## Examples
 
-### 206 response with a single range
+### Receiving a `206` response for a single requested range
 
 A response containing one single range:
 
@@ -37,9 +37,10 @@ Content-Type: image/gif
 # 26012 bytes of partial image data…
 ```
 
-### 206 response with several ranges
+### Receiving a `206` response for multiple requested ranges
 
-A response containing several ranges:
+Following is a sample `206` response when two ranges of a PDF file are requested.
+The response contains the `multipart/byteranges` `Content-Type` and separate `Content-Type` and `Content-Range` for each range.
 
 ```http
 HTTP/1.1 206 Partial Content
