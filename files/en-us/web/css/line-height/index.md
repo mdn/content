@@ -7,7 +7,7 @@ browser-compat: css.properties.line-height
 
 {{CSSRef}}
 
-The **`line-height`** [CSS](/en-US/docs/Web/CSS) property sets the height of a line box. It's commonly used to set the distance between lines of text. On block-level elements, it specifies the minimum height of line boxes within the element. On non-[replaced](/en-US/docs/Web/CSS/Replaced_element) inline elements, it specifies the height that is used to calculate line box height.
+The **`line-height`** [CSS](/en-US/docs/Web/CSS) property sets the height of a line box in horizontal [writing modes](/en-US/docs/Web/CSS/writing-mode#vertical-rl). In vertical writing modes, it sets the width of a line box. It's commonly used to set the distance between lines of text. On block-level elements in horizontal writing modes, it specifies the preferred height of line boxes within the element, and on non-[replaced](/en-US/docs/Web/CSS/Replaced_element) inline elements, it specifies the height that is used to calculate line box height.
 
 {{EmbedInteractiveExample("pages/css/line-height.html")}}
 
@@ -105,7 +105,7 @@ It is often more convenient to set `line-height` by using the {{cssxref("font")}
 
 ### Prefer unitless numbers for line-height values
 
-This example shows why it is better to use {{cssxref("&lt;number&gt;")}} values instead of {{cssxref("&lt;length&gt;")}} values. We will use two {{HTMLElement("div")}} elements. The first, with the green border, uses a unitless `line-height` value. The second, with the red border, uses a `line-height` value defined in `em`s.
+This example shows why it is better to use {{cssxref("&lt;number&gt;")}} values instead of {{cssxref("&lt;length&gt;")}} values. We will use two {{HTMLElement("div")}} elements. The first div, with the green border, uses a unitless `line-height` value. The second div, with the red border, uses a `line-height` value defined in `em`s.
 
 #### HTML
 
@@ -152,6 +152,45 @@ h1 {
 #### Result
 
 {{EmbedLiveSample('Prefer_unitless_numbers_for_line-height_values', 600, 200)}}
+
+### Space between lines in vertical writing modes
+
+The `line-height` property can be used to adjust space between vertical lines in vertical writing modes.
+
+```html hidden
+<div class="haiku">
+  古池や蛙飛び込む水の音<br />
+  ふるいけやかわずとびこむみずのおと<br />
+  富士の風や扇にのせて江戸土産<br />
+  ふじのかぜやおうぎにのせてえどみやげ<br />
+</div>
+
+<div class="haiku wide">
+  古池や蛙飛び込む水の音<br />
+  ふるいけやかわずとびこむみずのおと<br />
+  富士の風や扇にのせて江戸土産<br />
+  ふじのかぜやおうぎにのせてえどみやげ<br />
+</div>
+```
+
+```css
+.haiku {
+  border: 1px solid;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  background-color: wheat;
+
+  writing-mode: vertical-rl;
+}
+
+.wide {
+  line-height: 2;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Space between lines in vertical writing modes', '100%', 650)}}
 
 ## Specifications
 
