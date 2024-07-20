@@ -867,7 +867,8 @@ For {{SVGElement('foreignObject')}}, `x` defines the x coordinate of the upper l
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `x` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for `<foreignObject>`.
+> [!Note]
+> The x-axis coordinate of the `<foreignObject>` can also be defined with the {{cssxref("x")}} _geometry property_.
 
 ### `<glyphRef>`
 
@@ -935,7 +936,8 @@ For {{SVGElement('image')}}, `x` defines the x coordinate of the upper left corn
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `x` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for images.
+> [!Note]
+> The x-axis coordinate of the `<image>` can also be defined with the {{cssxref("x")}} _geometry property_.
 
 ### `<mask>`
 
@@ -1030,7 +1032,8 @@ For {{SVGElement('rect')}}, `x` defines the x coordinate of the upper left corne
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `x` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for rectangles.
+> [!Note]
+> The x-axis coordinate of the `<rect>` can also be defined with the {{cssxref("x")}} _geometry property_.
 
 ### `<svg>`
 
@@ -1065,7 +1068,8 @@ For {{SVGElement('svg')}}, `x` defines the x coordinate of the upper left corner
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `x` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for `<svg>`.
+> [!Note]
+> The x-axis coordinate of the `<svg>` can also be defined with the {{cssxref("x")}} _geometry property_.
 
 ### `<text>`
 
@@ -1293,7 +1297,8 @@ For {{SVGElement('use')}}, `x` defines the x coordinate of the upper left corner
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `x` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for used elements.
+> [!Note]
+> Declaring a `<length>` or `<percentage>` value in CSS using the {{cssxref("x")}} _geometry property_ overrides the x-axis coordinate of the `<use>` set by the `x` attribute in some browsers. This behavior is at-risk.
 
 ## Examples
 
