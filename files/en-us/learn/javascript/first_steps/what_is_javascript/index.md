@@ -335,7 +335,7 @@ There are a few different strategies to make sure your JavaScript only runs afte
 
 - In the external JavaScript example above, the script element is placed in the head of the document, before the HTML body is parsed. But because we're using `<script type="module">`, the code is treated as a [module](/en-US/docs/Web/JavaScript/Guide/Modules) and the browser waits for all HTML to be processed before executing JavaScript modules.
 
-- Before browsers supported JavaScript modules, placing a script element in the head of the document could block the whole HTML of the page from displaying before the script was loaded. So we had to add `defer` and `async` attributes on the {{htmlelement("script")}} element, and then that could cause errors when the JavaScript was run but the HTML was not parsed yet. So we had to use the [DOMContentLoaded event](/en-US/docs/Web/API/Document/DOMContentLoaded_event). But unless you need to support very old browsers, don't do this, and simply use `<script type="module>` instead.
+- Non-module scripts in the document head could block the whole page from displaying before the script is loaded, so we have to add the `defer` and `async` attributes on the {{htmlelement("script")}} element. Furthermore, the errors caused by running JavaScript before the HTML is parsed remains, so we have to use the [`DOMContentLoaded` event](/en-US/docs/Web/API/Document/DOMContentLoaded_event). But unless you need to support very old browsers, you don't have to do this and can just use `<script type="module>` instead.
 
 ## Comments
 
