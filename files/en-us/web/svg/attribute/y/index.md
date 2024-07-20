@@ -868,7 +868,7 @@ For {{SVGElement('foreignObject')}}, `y` defines the y coordinate of the upper l
 </table>
 
 > [!Note]
-> The y-axis coordinate of the `<foreignObject>` can also be defined with the {{cssxref("y")}} _geometry property_.
+> The y-axis coordinate of the `<foreignObject>` can also be defined with the {{cssxref("y")}} _geometry property_. If set in CSS, the `y` property value overrides the `y` attribute value.
 
 ### `<glyphRef>`
 
@@ -933,7 +933,7 @@ For {{SVGElement('image')}}, `y` defines the y coordinate of the upper left corn
 </table>
 
 > [!Note]
-> The y-axis coordinate of the `<image>` can also be defined with the {{cssxref("y")}} _geometry property_.
+> The y-axis coordinate of the `<image>` can also be defined with the {{cssxref("y")}} _geometry property_. If set in CSS, the `y` property value overrides the `y` attribute value.
 
 ### `<mask>`
 
@@ -1029,7 +1029,7 @@ For {{SVGElement('rect')}}, `y` defines the y coordinate of the upper left corne
 </table>
 
 > [!Note]
-> The y-axis coordinate of the `<rect>` can also be defined with the {{cssxref("y")}} _geometry property_.
+> The y-axis coordinate of the `<rect>` can also be defined with the {{cssxref("y")}} _geometry property_. If set in CSS, the `y` property value overrides the `y` attribute value.
 
 ### `<svg>`
 
@@ -1065,7 +1065,7 @@ For {{SVGElement('svg')}}, `y` defines the y coordinate of the upper left corner
 </table>
 
 > [!Note]
-> The y-axis coordinate of the `<svg>` can also be defined with the {{cssxref("y")}} _geometry property_.
+> The y-axis coordinate of the `<svg>` can also be defined with the {{cssxref("y")}} _geometry property_. If set in CSS, the `y` property value overrides the `y` attribute value.
 
 ### `<text>`
 

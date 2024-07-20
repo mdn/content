@@ -64,7 +64,7 @@ For {{SVGElement('circle')}}, `cy` defines the y-axis coordinate of the center o
 </table>
 
 > [!Note]
-> The y-axis coordinate of the center of the `<circle>` can also be defined with the {{cssxref("cy")}} _geometry property_.
+> The y-axis coordinate of the center of the `<circle>` can also be defined with the {{cssxref("cy")}} _geometry property_. If set in CSS, the `cy` property value overrides the `cy` attribute value.
 
 ## ellipse
 
@@ -88,7 +88,7 @@ For {{SVGElement('ellipse')}}, `cy` defines the y-axis coordinate of the center 
 </table>
 
 > [!Note]
-> The y-axis coordinate of the center of the `<ellipse>` can also be defined with the {{cssxref("cy")}} _geometry property_.
+> The y-axis coordinate of the center of the `<ellipse>` can also be defined with the {{cssxref("cy")}} _geometry property_. If set in CSS, the `cy` property value overrides the `cy` attribute value.
 
 ## radialGradient
 
