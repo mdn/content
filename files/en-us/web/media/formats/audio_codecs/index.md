@@ -225,7 +225,7 @@ Audio codecs typically employ cleverly-designed and highly-complex mathematical 
     <tr>
       <th scope="row">
         <a
-          href="/en-US/docs/Web/Media/Formats/Audio_concepts#lossy_vs_lossless_compression"
+          href="/en-US/docs/Web/Media/Formats/Audio_concepts#lossy_vs._lossless_compression"
           >Lossless compression</a
         >
       </th>
@@ -235,7 +235,7 @@ Audio codecs typically employ cleverly-designed and highly-complex mathematical 
     <tr>
       <th scope="row">
         <a
-          href="/en-US/docs/Web/Media/Formats/Audio_concepts#lossy_vs_lossless_compression"
+          href="/en-US/docs/Web/Media/Formats/Audio_concepts#lossy_vs._lossless_compression"
           >Lossy compression</a
         >
       </th>
@@ -244,20 +244,6 @@ Audio codecs typically employ cleverly-designed and highly-complex mathematical 
         loss
       </td>
       <td>Compression of up to 80-95% possible</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        <a href="/en-US/docs/Web/Media/Formats/Audio_concepts#quality"
-          >Quality setting</a
-        >
-      </th>
-      <td>
-        The higher the quality, the better the fidelity of the encoded audio
-      </td>
-      <td>
-        The higher the fidelity, the larger the resulting file becomes, though
-        the amount of change varies from codec to codec
-      </td>
     </tr>
     <tr>
       <th scope="row">
@@ -289,7 +275,7 @@ Audio codecs typically employ cleverly-designed and highly-complex mathematical 
     <tr>
       <th scope="row">
         <a
-          href="/en-US/docs/Web/Media/Formats/Audio_concepts#stereo_coding_method"
+          href="/en-US/docs/Web/Media/Formats/Audio_concepts#joint_stereo"
           >Stereo coding</a
         >
       </th>

@@ -21,6 +21,9 @@ We'll discuss each of these features in this guide. First, though, we'll discuss
 
 For a web app to be promoted for installation by a supporting browser, it needs to meet some technical requirements. We can consider these the minimum requirements for a web app to be a PWA.
 
+> **Note:** While not a requirement for a PWA to be installable, many PWAs use [service workers](/en-US/docs/Web/API/Service_Worker_API) to provide an offline experience.
+> See the [CycleTracker: Service workers](en-us/web/progressive_web_apps/tutorials/cycletracker/service_workers/index.md) tutorial for more information.
+
 ### The web app manifest
 
 A web app manifest is a JSON file that tells the browser how the PWA should appear and behave on the device. For a web app to be a PWA it must be installable, and for it to be installable it must include a manifest.
@@ -59,20 +62,19 @@ The manifest contains a single JSON object containing a collection of members, e
 
 Chromium-based browsers, including Google Chrome, Samsung Internet, and Microsoft Edge, require that the manifest includes the following members:
 
-- [`name`](/en-US/docs/Web/Manifest/name)
-- [`icons`](/en-US/docs/Web/Manifest/icons)
+- [`name`](/en-US/docs/Web/Manifest/name) or [`short_name`](/en-US/docs/Web/Manifest/short_name)
+- [`icons`](/en-US/docs/Web/Manifest/icons) must contain a 192px and a 512px icon
 - [`start_url`](/en-US/docs/Web/Manifest/start_url)
 - [`display`](/en-US/docs/Web/Manifest/display) and/or [`display_override`](/en-US/docs/Web/Manifest/display_override)
+- [`prefer-related-application`](/en-US/docs/Web/Manifest/prefer_related_applications) must be `false` or not present
 
 For a full description of every member, see the [web app manifest reference documentation](/en-US/docs/Web/Manifest).
 
-### Secure context
+### HTTPS, localhost, or loopback are required
 
-For a web app to be installable, it must be served in a [secure context](/en-US/docs/Web/Progressive_web_apps). This usually means that it must be served over HTTPS. Local resources, such as localhost, `127.0.0.1` and `file://` are also considered secure.
+For a PWA to be installable it must be served using the `https` protocol, or from a local development environment using `localhost` or `127.0.0.1` — with or without a port number.
 
-### Service worker
-
-For a web app to be installable, it must include a [service worker](/en-US/docs/Web/API/Service_Worker_API) with a [`fetch` event handler](/en-US/docs/Web/API/ServiceWorkerGlobalScope/fetch_event) that provides a basic offline experience.
+This is a more stringent requirement than [secure context](/en-US/docs/Web/Security/Secure_Contexts), which considers resources loaded from `file://` URLs to be secure.
 
 ## Installation from an app store
 
@@ -108,8 +110,8 @@ Support for PWA installation promotion from the web varies by browser and by pla
 
 On desktop:
 
-- Firefox and Safari do not support installing PWAs on any desktop operating systems. See [Installing sites as apps](#installing_sites_as_apps), below.
-- Chrome and Edge support installing PWAs on Linux, Windows, macOS, and Chromebooks.
+- Chromium browsers support installing PWAs that have a manifest file on all supported desktop operating systems.
+- Firefox and Safari do not support installing PWAs using a manifest file.
 
 On mobile:
 
@@ -119,7 +121,8 @@ On mobile:
 
 ### Installing sites as apps
 
-Safari for desktop and mobile, and Edge for desktop also support installing any website as an app. However, this is not specific to PWA because the site doesn't need to meet the installability criteria described in this guide, and because the browser doesn't proactively promote the site for installation.
+Chrome for desktop and Android, Safari for desktop, and Edge for desktop also support users installing any website as an app, whether or not it has a manifest file, and without regard to the installability criteria for the manifest file.
+The benefit of using a manifest file is that the browser will actively promote the site for installation when it is visited, and developers can customize installation behavior.
 
 ### Triggering the install prompt
 

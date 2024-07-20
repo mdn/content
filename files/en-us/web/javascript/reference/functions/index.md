@@ -247,7 +247,7 @@ function myFunc({ a, b }, c = 1, ...rest) {
 There are some consequences if one of the above non-simple parameter syntaxes is used:
 
 - You cannot apply `"use strict"` to the function body — this causes a [syntax error](/en-US/docs/Web/JavaScript/Reference/Errors/Strict_non_simple_params).
-- Even if the function is not in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), the [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object stops syncing with the named parameters, and [`arguments.callee`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee) throws an error when accessed.
+- Even if the function is not in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), certain strict mode function features apply, including that the [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object stops syncing with the named parameters, [`arguments.callee`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee) throws an error when accessed, and duplicate parameter names are not allowed.
 
 ### The arguments object
 

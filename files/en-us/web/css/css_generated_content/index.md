@@ -34,7 +34,7 @@ The CSS generated content module introduces six yet-to-be implemented CSS functi
 
 ### Data types
 
-- [`<content-list>`](/en-US/docs/Web/CSS/content#content-list)
+- [`<content-list>`](/en-US/docs/Web/CSS/content)
 - `<content-replacement>` (see {{cssxref("image")}})
 - {{cssxref("image")}}
 - [`<counter>`](/en-US/docs/Web/CSS/content#counter)

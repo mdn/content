@@ -48,7 +48,7 @@ For details on how the ICE process works, see [Lifetime of a WebRTC session](/en
 - {{domxref("RTCIceCandidate.tcpType", "tcpType")}} {{ReadOnlyInline}}
   - : If `protocol` is `"tcp"`, `tcpType` represents the type of TCP candidate. Otherwise, `tcpType` is `null`.
 - {{domxref("RTCIceCandidate.type", "type")}} {{ReadOnlyInline}}
-  - : A string indicating the type of candidate as one of the strings listed on [`RTCIceCandidate.type`](/en-US/docs/Web/API/RTCIceCandidate/type#values).
+  - : A string indicating the type of candidate as one of the strings listed on [`RTCIceCandidate.type`](/en-US/docs/Web/API/RTCIceCandidate/type#value).
 - {{domxref("RTCIceCandidate.usernameFragment", "usernameFragment")}} {{ReadOnlyInline}}
   - : A string containing a randomly-generated username fragment ("ice-ufrag") which ICE uses for message integrity along with a randomly-generated password ("ice-pwd"). You can use this string to verify generations of ICE generation; each generation of the same ICE process will use the same `usernameFragment`, even across ICE restarts.
 

@@ -14,7 +14,7 @@ The **`alignment-baseline`** attribute specifies how an object is aligned with r
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("tspan")}}
-- {{SVGElement("tref")}}
+- {{SVGElement("text")}}
 - {{SVGElement("textPath")}}
 
 ## Usage notes

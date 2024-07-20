@@ -31,7 +31,7 @@ _While `XRReferenceSpaceEvent` does not define any methods, it inherits the meth
 
 ## Event types
 
-- {{domxref("XRReferenceSpace.reset_event", "reset")}} {{SecureContext_Inline}}
+- {{domxref("XRReferenceSpace.reset_event", "reset")}}
   - : The `reset` event is sent to a reference space when its native origin is changed due to a discontinuity, recalibration, or device reset. This is an opportunity for your app to update any stored transforms, position/orientation information, or the like—or to dump any cached values based on the reference's space's origin so you can recompute them as needed.
 
 ## Specifications

@@ -25,6 +25,8 @@ Values of this type are objects. They contain these properties:
   - : `array` of `string`. Array of path to JavaScript files in the extension package to inject into matching pages. Scripts are injected in the order they appear in this array.
 - `matches` {{optional_inline}}
   - : `array` of `string`. Array of the pages this content script is injected into. Must be specified for {{WebExtAPIRef("scripting.registerContentScripts()")}}.
+- `matchOriginAsFallback` {{optional_inline}}
+  - : `boolean`. Whether code is injected into `about:`, `data:`, and `blob:` pages when their origin matches the pattern in `matches`, even if the document origin is opaque (due to the use of CSP or iframe sandbox). Match patterns in `matches` must specify a wildcard path glob. Defaults to `false`.
 - `persistAcrossSessions` {{optional_inline}}
   - : `boolean`. Specifies if this content script persists across browser restarts and updates and extension restarts. Defaults to `true`.
 - `runAt` {{optional_inline}}

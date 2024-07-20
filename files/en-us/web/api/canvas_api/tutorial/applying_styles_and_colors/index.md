@@ -392,10 +392,8 @@ function draw() {
   ctx.lineWidth = 10;
 
   // check input
-  if (document.getElementById("miterLimit").value.match(/\d+(\.\d+)?/)) {
+  if (document.getElementById("miterLimit").checkValidity()) {
     ctx.miterLimit = parseFloat(document.getElementById("miterLimit").value);
-  } else {
-    alert("Value must be a positive number");
   }
 
   // Draw lines
@@ -419,11 +417,9 @@ function draw() {
     <td>
       Change the <code>miterLimit</code> by entering a new value below and
       clicking the redraw button.<br /><br />
-      <form onsubmit="return draw();">
-        <label for="miterLimit">Miter limit</label>
-        <input type="number" size="3" id="miterLimit" />
-        <input type="submit" value="Redraw" />
-      </form>
+      <label for="miterLimit">Miter limit</label>
+      <input type="number" id="miterLimit" size="3" min="1" />
+      <input type="submit" id="redraw" value="Redraw" />
     </td>
   </tr>
 </table>
@@ -434,6 +430,9 @@ document.getElementById("miterLimit").value = document
   .getElementById("canvas")
   .getContext("2d").miterLimit;
 draw();
+
+const redraw = document.getElementById("redraw");
+redraw.addEventListener("click", draw);
 ```
 
 {{EmbedLiveSample("A_demo_of_the_miterLimit_property", "", "180")}}

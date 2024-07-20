@@ -34,7 +34,7 @@ getParent(successCallback)
 
 None ({{jsxref("undefined")}}).
 
-### Errors
+### Exceptions
 
 - `FileError.INVALID_STATE_ERR`
   - : The operation failed because the file system's state doesn't permit it. This can

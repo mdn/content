@@ -10,307 +10,191 @@ This page outlines the derivation of the [Quadratic Formula](https://en.wikipedi
 
 We take a quadratic equation in its general form, and solve for x:
 
-<math>
-  <mtable>
-    <mtr>
-      <mtd>
-        <mrow>
+<!-- prettier-ignore-start -->
+<math display="block">
+  <semantics>
+    <mtable>
+      <mtr>
+        <mtd>
           <mrow>
             <mrow>
               <mrow>
-                <mi>a</mi>
+                <mrow>
+                  <mi>a</mi>
+                  <mo>&#x2062;<!-- INVISIBLE TIMES --></mo>
+                  <msup>
+                    <mi>x</mi>
+                    <mn>2</mn>
+                  </msup>
+                </mrow>
+                <mo>+</mo>
+                <mi>b</mi>
                 <mo>&#x2062;<!-- INVISIBLE TIMES --></mo>
+                <mi>x</mi>
+              </mrow>
+              <mo>+</mo>
+              <mi>c</mi>
+            </mrow>
+          </mrow>
+        </mtd>
+        <mtd>
+          <mo>=</mo>
+        </mtd>
+        <mtd>
+          <mn>0</mn>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mrow>
+            <mrow>
+              <mi>a</mi>
+              <mo>&#x2062;<!-- INVISIBLE TIMES --></mo>
+              <msup>
+                <mi>x</mi>
+                <mn>2</mn>
+              </msup>
+            </mrow>
+            <mo>+</mo>
+            <mi>b</mi>
+            <mo>&#x2062;<!-- INVISIBLE TIMES --></mo>
+            <mi>x</mi>
+          </mrow>
+        </mtd>
+        <mtd>
+          <mo>=</mo>
+        </mtd>
+        <mtd>
+          <mo>−</mo>
+          <mi>c</mi>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mrow>
+            <mrow>
+              <msup>
+                <mi>x</mi>
+                <mn>2</mn>
+              </msup>
+            </mrow>
+            <mo>+</mo>
+            <mfrac>
+              <mi>b</mi>
+              <mi>a</mi>
+            </mfrac>
+            <mo>⁤</mo>
+            <mi>x</mi>
+          </mrow>
+        </mtd>
+        <mtd>
+          <mo>=</mo>
+        </mtd>
+        <mtd>
+          <mfrac>
+            <mrow>
+              <mo>−</mo>
+              <mi>c</mi>
+            </mrow>
+            <mi>a</mi>
+          </mfrac>
+        </mtd>
+        <mtd>
+          <mrow>
+            <mtext style="color: red; font-size: 10pt;">Divide out leading coefficient.</mtext>
+          </mrow>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mrow>
+            <mrow>
+              <mrow>
                 <msup>
                   <mi>x</mi>
                   <mn>2</mn>
                 </msup>
               </mrow>
               <mo>+</mo>
-              <mi>b</mi>
-              <mo>&#x2062;<!-- INVISIBLE TIMES --></mo>
+              <mfrac>
+                <mrow>
+                  <mi>b</mi>
+                </mrow>
+                <mi>a</mi>
+              </mfrac>
+              <mo>⁤</mo>
               <mi>x</mi>
-            </mrow>
-            <mo>+</mo>
-            <mi>c</mi>
-          </mrow>
-        </mrow>
-      </mtd>
-      <mtd>
-        <mo>=</mo>
-      </mtd>
-      <mtd>
-        <mn>0</mn>
-      </mtd>
-    </mtr>
-    <mtr>
-      <mtd>
-        <mrow>
-          <mrow>
-            <mi>a</mi>
-            <mo>&#x2062;<!-- INVISIBLE TIMES --></mo>
-            <msup>
-              <mi>x</mi>
-              <mn>2</mn>
-            </msup>
-          </mrow>
-          <mo>+</mo>
-          <mi>b</mi>
-          <mo>&#x2062;<!-- INVISIBLE TIMES --></mo>
-          <mi>x</mi>
-        </mrow>
-      </mtd>
-      <mtd>
-        <mo>=</mo>
-      </mtd>
-      <mtd>
-        <mo>−</mo>
-        <mi>c</mi>
-      </mtd>
-    </mtr>
-    <mtr>
-      <mtd>
-        <mrow>
-          <mrow>
-            <msup>
-              <mi>x</mi>
-              <mn>2</mn>
-            </msup>
-          </mrow>
-          <mo>+</mo>
-          <mfrac>
-            <mi>b</mi>
-            <mi>a</mi>
-          </mfrac>
-          <mo>⁤</mo>
-          <mi>x</mi>
-        </mrow>
-      </mtd>
-      <mtd>
-        <mo>=</mo>
-      </mtd>
-      <mtd>
-        <mfrac>
-          <mrow>
-            <mo>−</mo>
-            <mi>c</mi>
-          </mrow>
-          <mi>a</mi>
-        </mfrac>
-      </mtd>
-      <mtd>
-        <mrow>
-          <mtext style="color: red; font-size: 10pt;">Divide out leading coefficient.</mtext>
-        </mrow>
-      </mtd>
-    </mtr>
-    <mtr>
-      <mtd>
-        <mrow>
-          <mrow>
-            <mrow>
+              <mo>+</mo>
               <msup>
-                <mi>x</mi>
+                <mrow>
+                  <mo>(</mo>
+                  <mfrac>
+                    <mrow>
+                      <mi>b</mi>
+                    </mrow>
+                    <mrow>
+                      <mn>2</mn>
+                      <mi>a</mi>
+                    </mrow>
+                  </mfrac>
+                  <mo>)</mo>
+                </mrow>
                 <mn>2</mn>
               </msup>
             </mrow>
-            <mo>+</mo>
+          </mrow>
+        </mtd>
+        <mtd>
+          <mo>=</mo>
+        </mtd>
+        <mtd>
+          <mrow>
             <mfrac>
               <mrow>
-                <mi>b</mi>
-              </mrow>
-              <mi>a</mi>
-            </mfrac>
-            <mo>⁤</mo>
-            <mi>x</mi>
-            <mo>+</mo>
-            <msup>
-              <mrow>
+                <mo>−</mo>
+                <mi>c</mi>
                 <mo>(</mo>
-                <mfrac>
-                  <mrow>
-                    <mi>b</mi>
-                  </mrow>
-                  <mrow>
-                    <mn>2</mn>
-                    <mi>a</mi>
-                  </mrow>
-                </mfrac>
+                <mn>4</mn>
+                <mi>a</mi>
                 <mo>)</mo>
               </mrow>
-              <mn>2</mn>
-            </msup>
-          </mrow>
-        </mrow>
-      </mtd>
-      <mtd>
-        <mo>=</mo>
-      </mtd>
-      <mtd>
-        <mrow>
-          <mfrac>
-            <mrow>
-              <mo>−</mo>
-              <mi>c</mi>
-              <mo>(</mo>
-              <mn>4</mn>
-              <mi>a</mi>
-              <mo>)</mo>
-            </mrow>
-            <mrow>
-              <mi>a</mi>
-              <mo>(</mo>
-              <mn>4</mn>
-              <mi>a</mi>
-              <mo>)</mo>
-            </mrow>
-          </mfrac>
-          <mo>+</mo>
-          <mfrac>
-            <mrow>
-              <msup>
-                <mi>b</mi>
-                <mn>2</mn>
-              </msup>
-            </mrow>
-            <mrow>
-              <mn>4</mn>
-              <msup>
+              <mrow>
                 <mi>a</mi>
-                <mn>2</mn>
-              </msup>
-            </mrow>
-          </mfrac>
-        </mrow>
-      </mtd>
-      <mtd>
-        <mrow>
-          <mtext style="color: red; font-size: 10pt;">Complete the square.</mtext>
-        </mrow>
-      </mtd>
-    </mtr>
-    <mtr>
-      <mtd>
-        <mrow>
-          <mrow>
-            <mo>(</mo>
-            <mi>x</mi>
-            <mo>+</mo>
-            <mfrac>
-              <mrow>
-                <mi>b</mi>
-              </mrow>
-              <mrow>
-                <mn>2</mn>
-                <mi>a</mi>
-              </mrow>
-            </mfrac>
-            <mo>)</mo>
-            <mo>(</mo>
-            <mi>x</mi>
-            <mo>+</mo>
-            <mfrac>
-              <mrow>
-                <mi>b</mi>
-              </mrow>
-              <mrow>
-                <mn>2</mn>
-                <mi>a</mi>
-              </mrow>
-            </mfrac>
-            <mo>)</mo>
-          </mrow>
-        </mrow>
-      </mtd>
-      <mtd>
-        <mo>=</mo>
-      </mtd>
-      <mtd>
-        <mfrac>
-          <mrow>
-            <msup>
-              <mi>b</mi>
-              <mn>2</mn>
-            </msup>
-            <mo>−</mo>
-            <mn>4</mn>
-            <mi>a</mi>
-            <mi>c</mi>
-          </mrow>
-          <mrow>
-            <mn>4</mn>
-            <msup>
-              <mi>a</mi>
-              <mn>2</mn>
-            </msup>
-          </mrow>
-        </mfrac>
-      </mtd>
-      <mtd>
-        <mrow>
-          <mtext style="color: red; font-size: 10pt;">Discriminant revealed.</mtext>
-        </mrow>
-      </mtd>
-    </mtr>
-    <mtr>
-      <mtd>
-        <mrow>
-          <mrow>
-            <msup>
-              <mrow>
                 <mo>(</mo>
-                <mi>x</mi>
-                <mo>+</mo>
-                <mfrac>
-                  <mrow>
-                    <mi>b</mi>
-                  </mrow>
-                  <mrow>
-                    <mn>2</mn>
-                    <mi>a</mi>
-                  </mrow>
-                </mfrac>
+                <mn>4</mn>
+                <mi>a</mi>
                 <mo>)</mo>
               </mrow>
-              <mn>2</mn>
-            </msup>
+            </mfrac>
+            <mo>+</mo>
+            <mfrac>
+              <mrow>
+                <msup>
+                  <mi>b</mi>
+                  <mn>2</mn>
+                </msup>
+              </mrow>
+              <mrow>
+                <mn>4</mn>
+                <msup>
+                  <mi>a</mi>
+                  <mn>2</mn>
+                </msup>
+              </mrow>
+            </mfrac>
           </mrow>
-        </mrow>
-      </mtd>
-      <mtd>
-        <mo>=</mo>
-      </mtd>
-      <mtd>
-        <mfrac>
+        </mtd>
+        <mtd>
           <mrow>
-            <msup>
-              <mi>b</mi>
-              <mn>2</mn>
-            </msup>
-            <mo>−</mo>
-            <mn>4</mn>
-            <mi>a</mi>
-            <mi>c</mi>
+            <mtext style="color: red; font-size: 10pt;">Complete the square.</mtext>
           </mrow>
-          <mrow>
-            <mn>4</mn>
-            <msup>
-              <mi>a</mi>
-              <mn>2</mn>
-            </msup>
-          </mrow>
-        </mfrac>
-      </mtd>
-      <mtd>
-        <mrow>
-          <mtext style="color: red; font-size: 10pt;"></mtext>
-        </mrow>
-      </mtd>
-    </mtr>
-    <mtr>
-      <mtd>
-        <mrow>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
           <mrow>
             <mrow>
+              <mo>(</mo>
               <mi>x</mi>
               <mo>+</mo>
               <mfrac>
@@ -322,15 +206,27 @@ We take a quadratic equation in its general form, and solve for x:
                   <mi>a</mi>
                 </mrow>
               </mfrac>
+              <mo>)</mo>
+              <mo>(</mo>
+              <mi>x</mi>
+              <mo>+</mo>
+              <mfrac>
+                <mrow>
+                  <mi>b</mi>
+                </mrow>
+                <mrow>
+                  <mn>2</mn>
+                  <mi>a</mi>
+                </mrow>
+              </mfrac>
+              <mo>)</mo>
             </mrow>
           </mrow>
-        </mrow>
-      </mtd>
-      <mtd>
-        <mo>=</mo>
-      </mtd>
-      <mtd>
-        <msqrt>
+        </mtd>
+        <mtd>
+          <mo>=</mo>
+        </mtd>
+        <mtd>
           <mfrac>
             <mrow>
               <msup>
@@ -350,39 +246,42 @@ We take a quadratic equation in its general form, and solve for x:
               </msup>
             </mrow>
           </mfrac>
-        </msqrt>
-      </mtd>
-      <mtd>
-        <mrow>
-          <mtext style="color: red; font-size: 10pt;"></mtext>
-        </mrow>
-      </mtd>
-    </mtr>
-    <mtr>
-      <mtd>
-        <mi>x</mi>
-      </mtd>
-      <mtd>
-        <mo>=</mo>
-      </mtd>
-      <mtd>
-        <mfrac>
+        </mtd>
+        <mtd>
           <mrow>
-            <mo>−</mo>
-            <mi>b</mi>
+            <mtext style="color: red; font-size: 10pt;">Discriminant revealed.</mtext>
           </mrow>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
           <mrow>
-            <mn>2</mn>
-            <mi>a</mi>
+            <mrow>
+              <msup>
+                <mrow>
+                  <mo>(</mo>
+                  <mi>x</mi>
+                  <mo>+</mo>
+                  <mfrac>
+                    <mrow>
+                      <mi>b</mi>
+                    </mrow>
+                    <mrow>
+                      <mn>2</mn>
+                      <mi>a</mi>
+                    </mrow>
+                  </mfrac>
+                  <mo>)</mo>
+                </mrow>
+                <mn>2</mn>
+              </msup>
+            </mrow>
           </mrow>
-        </mfrac>
-        <mo>±</mo>
-        <mrow>
-          <mo>{</mo>
-          <mi>C</mi>
-          <mo>}</mo>
-        </mrow>
-        <msqrt>
+        </mtd>
+        <mtd>
+          <mo>=</mo>
+        </mtd>
+        <mtd>
           <mfrac>
             <mrow>
               <msup>
@@ -402,54 +301,160 @@ We take a quadratic equation in its general form, and solve for x:
               </msup>
             </mrow>
           </mfrac>
-        </msqrt>
-      </mtd>
-      <mtd>
-        <mrow>
-          <mtext style="color: red; font-size: 10pt;">There's the vertex formula.</mtext>
-        </mrow>
-      </mtd>
-    </mtr>
-    <mtr>
-      <mtd>
-        <mi>x</mi>
-      </mtd>
-      <mtd>
-        <mo>=</mo>
-      </mtd>
-      <mtd>
-        <mfrac>
+        </mtd>
+        <mtd>
           <mrow>
-            <mo>−</mo>
-            <mi>b</mi>
-            <mo>±</mo>
+            <mtext style="color: red; font-size: 10pt;"></mtext>
+          </mrow>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mrow>
             <mrow>
-              <mo>{</mo>
-              <mi>C</mi>
-              <mo>}</mo>
+              <mrow>
+                <mi>x</mi>
+                <mo>+</mo>
+                <mfrac>
+                  <mrow>
+                    <mi>b</mi>
+                  </mrow>
+                  <mrow>
+                    <mn>2</mn>
+                    <mi>a</mi>
+                  </mrow>
+                </mfrac>
+              </mrow>
             </mrow>
-            <msqrt>
-              <msup>
-                <mi>b</mi>
-                <mn>2</mn>
-              </msup>
-              <mo>−</mo>
-              <mn>4</mn>
-              <mi>a</mi>
-              <mi>c</mi>
-            </msqrt>
           </mrow>
+        </mtd>
+        <mtd>
+          <mo>=</mo>
+        </mtd>
+        <mtd>
+          <msqrt>
+            <mfrac>
+              <mrow>
+                <msup>
+                  <mi>b</mi>
+                  <mn>2</mn>
+                </msup>
+                <mo>−</mo>
+                <mn>4</mn>
+                <mi>a</mi>
+                <mi>c</mi>
+              </mrow>
+              <mrow>
+                <mn>4</mn>
+                <msup>
+                  <mi>a</mi>
+                  <mn>2</mn>
+                </msup>
+              </mrow>
+            </mfrac>
+          </msqrt>
+        </mtd>
+        <mtd>
           <mrow>
-            <mn>2</mn>
-            <mi>a</mi>
+            <mtext style="color: red; font-size: 10pt;"></mtext>
           </mrow>
-        </mfrac>
-      </mtd>
-      <mtd>
-        <mrow>
-          <mtext style="color: red; font-size: 10pt;"></mtext>
-        </mrow>
-      </mtd>
-    </mtr>
-  </mtable>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>x</mi>
+        </mtd>
+        <mtd>
+          <mo>=</mo>
+        </mtd>
+        <mtd>
+          <mfrac>
+            <mrow>
+              <mo>−</mo>
+              <mi>b</mi>
+            </mrow>
+            <mrow>
+              <mn>2</mn>
+              <mi>a</mi>
+            </mrow>
+          </mfrac>
+          <mo>±</mo>
+          <mrow>
+            <mo>{</mo>
+            <mi>C</mi>
+            <mo>}</mo>
+          </mrow>
+          <msqrt>
+            <mfrac>
+              <mrow>
+                <msup>
+                  <mi>b</mi>
+                  <mn>2</mn>
+                </msup>
+                <mo>−</mo>
+                <mn>4</mn>
+                <mi>a</mi>
+                <mi>c</mi>
+              </mrow>
+              <mrow>
+                <mn>4</mn>
+                <msup>
+                  <mi>a</mi>
+                  <mn>2</mn>
+                </msup>
+              </mrow>
+            </mfrac>
+          </msqrt>
+        </mtd>
+        <mtd>
+          <mrow>
+            <mtext style="color: red; font-size: 10pt;">There's the vertex formula.</mtext>
+          </mrow>
+        </mtd>
+      </mtr>
+      <mtr>
+        <mtd>
+          <mi>x</mi>
+        </mtd>
+        <mtd>
+          <mo>=</mo>
+        </mtd>
+        <mtd>
+          <mfrac>
+            <mrow>
+              <mo>−</mo>
+              <mi>b</mi>
+              <mo>±</mo>
+              <mrow>
+                <mo>{</mo>
+                <mi>C</mi>
+                <mo>}</mo>
+              </mrow>
+              <msqrt>
+                <msup>
+                  <mi>b</mi>
+                  <mn>2</mn>
+                </msup>
+                <mo>−</mo>
+                <mn>4</mn>
+                <mi>a</mi>
+                <mi>c</mi>
+              </msqrt>
+            </mrow>
+            <mrow>
+              <mn>2</mn>
+              <mi>a</mi>
+            </mrow>
+          </mfrac>
+        </mtd>
+        <mtd>
+          <mrow>
+            <mtext style="color: red; font-size: 10pt;"></mtext>
+          </mrow>
+        </mtd>
+      </mtr>
+    </mtable>
+    <annotation encoding="TeX">TODO</annotation>
+  </semantics>
 </math>
+<!-- prettier-ignore-end -->

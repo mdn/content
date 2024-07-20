@@ -58,15 +58,6 @@ this case you would want to manually call `abort()` on the source buffer to
 stop the decoding of the current buffer, then fetch and append the newly requested
 segment that relates to the current new position of the video.
 
-You can see something similar in action in Nick Desaulnier's [bufferWhenNeeded demo](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferWhenNeeded.html) — in [line 48, an event listener is added to the playing video](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferWhenNeeded.html#L48) so a function called
-`seek()` is run when the `seeking` event fires. In [lines 92-101, the seek() function is defined](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferWhenNeeded.html#L92-L101) — note that `abort()` is called
-if {{domxref("MediaSource.readyState")}} is set to `open`, which means that
-it is ready to receive new source buffers — at this point it is worth aborting the
-current segment and just getting the one for the new seek position (see
-[`checkBuffer()`](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferWhenNeeded.html#L78-L90)
-and
-[`getCurrentSegment()`](https://github.com/nickdesaulniers/netfix/blob/gh-pages/demo/bufferWhenNeeded.html#L103-L105).)
-
 ## Specifications
 
 {{Specifications}}

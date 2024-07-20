@@ -168,4 +168,3 @@ function overListener(event) {
 ## See also
 
 - {{ domxref("MouseEvent") }}
-- [Comparison of Event Targets](/en-US/docs/Web/API/Event/Comparison_of_Event_Targets)

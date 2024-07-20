@@ -31,7 +31,7 @@ Before starting you should have a basic understanding of XML or another markup l
 - SVG elements and attributes should all be entered in the case shown here since XML is case-sensitive (unlike HTML).
 - Attribute values in SVG must be placed inside quotes, even if they are numbers.
 
-SVG is a huge specification. This tutorial attempts to cover the basics. Once you are familiar, you should be able to use the [Element Reference](/en-US/docs/Web/SVG/Element) and the [Interface Reference](/en-US/docs/Web/API/Document_Object_Model#svg_interfaces) to find out anything else you need to know.
+SVG is a huge specification. This tutorial attempts to cover the basics. Once you are familiar, you should be able to use the [Element Reference](/en-US/docs/Web/SVG/Element) and the [Interface Reference](/en-US/docs/Web/API/Document_Object_Model#svg_dom) to find out anything else you need to know.
 
 ## Flavors of SVG
 

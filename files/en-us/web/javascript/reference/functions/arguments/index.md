@@ -104,7 +104,7 @@ const args = Array.from(arguments);
 const args = [...arguments];
 ```
 
-For common use cases, using it as an array-like object is sufficient, since it both [is iterable](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator) and has `length` and number indices. For example, [`Function.prototype.apply()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) accepts array-like objects.
+For common use cases, using it as an array-like object is sufficient, since it both [is iterable](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/Symbol.iterator) and has `length` and number indices. For example, [`Function.prototype.apply()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) accepts array-like objects.
 
 ```js
 function midpoint() {
@@ -122,8 +122,8 @@ console.log(midpoint(3, 1, 4, 1, 5)); // 3
   - : Reference to the currently executing function that the arguments belong to. Forbidden in strict mode.
 - {{jsxref("Functions/arguments/length", "arguments.length")}}
   - : The number of arguments that were passed to the function.
-- {{jsxref("Functions/arguments/@@iterator", "arguments[@@iterator]")}}
-  - : Returns a new {{jsxref("Array/@@iterator", "Array iterator", "", 0)}} object that contains the values for each index in `arguments`.
+- [`arguments[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/Symbol.iterator)
+  - : Returns a new [array iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator) object that contains the values for each index in `arguments`.
 
 ## Examples
 

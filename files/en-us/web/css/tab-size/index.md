@@ -14,7 +14,7 @@ The **`tab-size`** [CSS](/en-US/docs/Web/CSS) property is used to customize the 
 ## Syntax
 
 ```css
-/* <integer> values */
+/* <number> values */
 tab-size: 4;
 tab-size: 0;
 
@@ -32,7 +32,7 @@ tab-size: unset;
 
 ### Values
 
-- {{CSSxRef("&lt;integer&gt;")}}
+- {{CSSxRef("&lt;number&gt;")}}
   - : A multiple of the advance width of the space character (U+0020) to be used as the width of tabs. Must be nonnegative.
 - {{CSSxRef("&lt;length&gt;")}}
   - : The width of tabs. Must be nonnegative.

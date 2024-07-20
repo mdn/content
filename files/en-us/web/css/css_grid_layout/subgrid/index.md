@@ -7,7 +7,7 @@ browser-compat: css.properties.grid-template-columns.subgrid
 
 {{CSSRef}}
 
-Level 2 of the CSS Grid Layout specification includes a `subgrid` value for {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}}. This guide details what subgrid does and gives some use cases and design patterns that the feature solves.
+Level 2 of the CSS grid layout specification includes a `subgrid` value for {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}}. This guide details what subgrid does and gives some use cases and design patterns that the feature solves.
 
 ## Introduction to subgrid
 
@@ -63,13 +63,13 @@ You can see this in the example below. The parent grid has a gap of 20px for row
 
 {{EmbedGHLiveSample("css-examples/grid/subgrid/gap.html", '100%', 1200)}}
 
-If you inspect this in the Firefox Grid Inspector, you can see how the line of the grid is in the correct place down the center of the gap, so when we set the gap to 0, it acts in a similar way to applying a negative margin to an element, giving the space from the gap back to the item.
+If you inspect this in the Firefox grid inspector, you can see how the line of the grid is in the correct place down the center of the gap, so when we set the gap to 0, it acts in a similar way to applying a negative margin to an element, giving the space from the gap back to the item.
 
 ![The smaller item displays in the gap as row-gap is set to 0 on the subgrid.](gap.png)
 
 ## Named grid lines
 
-When using CSS Grid, you can name lines on your grid and then position items based on those names rather than the line number. The line names on the parent grid are passed into the subgrid, and you can place items using them. In the example below, I named lines on the parent `col-start` and `col-end` and then used those to place the subitem.
+When using CSS grid, you can name lines on your grid and then position items based on those names rather than the line number. The line names on the parent grid are passed into the subgrid, and you can place items using them. In the example below, I named lines on the parent `col-start` and `col-end` and then used those to place the subitem.
 
 {{EmbedGHLiveSample("css-examples/grid/subgrid/line-names.html", '100%', 1200)}}
 
@@ -95,5 +95,5 @@ As the subgrid value acts in much the same way as a regular nested grid, it is e
 
 ## See also
 
-- On the Mozilla Developer YouTube Channel, see the videos [Laying out forms using subgrid](https://www.youtube.com/watch?v=gmQlK3kRft4) and [Don't Wait To Use Subgrid For Better Card Layouts](https://www.youtube.com/watch?v=lLnFtK1LNu4)
-- [Hello Subgrid!](https://noti.st/rachelandrew/i6gUcF/hello-subgrid) A presentation from CSSConf.eu
+- Videos: [Laying out forms using subgrid](https://www.youtube.com/watch?v=gmQlK3kRft4) and [Don't wait to use subgrid for better card layouts](https://www.youtube.com/watch?v=lLnFtK1LNu4)
+- [Hello subgrid!](https://noti.st/rachelandrew/i6gUcF/hello-subgrid) A presentation from CSSConf.eu

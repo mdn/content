@@ -2,7 +2,9 @@
 title: <display-outside>
 slug: Web/CSS/display-outside
 page-type: css-type
-browser-compat: css.properties.display.display-outside
+browser-compat:
+  - css.properties.display.block
+  - css.properties.display.inline
 ---
 
 {{CSSRef}}

@@ -44,7 +44,8 @@ This example prints to the screen whenever the {{HtmlElement("img")}} element su
 ```js
 const image = document.getElementById("image");
 image.onload = () => {
-  document.body.innerHTML += "<div>loaded!</div>";
+  document.body.appendChild(document.createElement("div")).textContent =
+    "loaded!";
 };
 
 function reload() {

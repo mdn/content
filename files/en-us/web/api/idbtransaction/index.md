@@ -24,6 +24,8 @@ objectStore1.put("1", "key");
 
 After the code is executed the object store should contain the value "2", since `trans2` should run after `trans1`.
 
+A transaction alternates between _active_ and _inactive_ states between event loop tasks. It's active in the task when it was created, and in each task of the requests' [`success`](/en-US/docs/Web/API/IDBRequest/success) or [`error`](/en-US/docs/Web/API/IDBRequest/error) event handlers. It's inactive in all other tasks, in which case placing requests will fail. If no new requests are placed when the transaction is active, and there are no other outstanding requests, the transaction will automatically commit.
+
 ## Transaction failures
 
 Transactions can fail for a fixed number of reasons, all of which (except the user agent crash) will trigger an abort callback:
@@ -50,7 +52,7 @@ If you must ensure durability for some reason (e.g. you're storing critical data
 - {{domxref("IDBTransaction.error")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("DOMException")}} indicating the type of error that occurred when there is an unsuccessful transaction. This property is `null` if the transaction is not finished, is finished and successfully committed, or was aborted with the {{domxref("IDBTransaction.abort()")}} function.
 - {{domxref("IDBTransaction.mode")}} {{ReadOnlyInline}}
-  - : The mode for isolating access to data in the object stores that are in the scope of the transaction. The default value is [`readonly`](#const_read_only).
+  - : The mode for isolating access to data in the object stores that are in the scope of the transaction. The default value is `readonly`.
 - {{domxref("IDBTransaction.objectStoreNames")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("DOMStringList")}} of the names of {{domxref("IDBObjectStore")}} objects associated with the transaction.
 
@@ -149,7 +151,8 @@ let db;
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += "<li>Database initialized.</li>";
+  note.appendChild(document.createElement("li")).textContent =
+    "Database initialized.";
 
   // store the result of opening the database in the db
   // variable. This is used a lot below
@@ -178,13 +181,13 @@ function addData() {
 
   // report on the success of opening the transaction
   transaction.oncomplete = (event) => {
-    note.innerHTML +=
-      "<li>Transaction completed: database modification finished.</li>";
+    note.appendChild(document.createElement("li")).textContent =
+      "Transaction completed: database modification finished.";
   };
 
   transaction.onerror = (event) => {
-    note.innerHTML +=
-      "<li>Transaction not opened due to error. Duplicate items not allowed.</li>";
+    note.appendChild(document.createElement("li")).textContent =
+      "Transaction not opened due to error. Duplicate items not allowed.";
   };
 
   // create an object store on the transaction
@@ -196,7 +199,8 @@ function addData() {
   objectStoreRequest.onsuccess = (event) => {
     // report the success of the request (this does not mean the item
     // has been stored successfully in the DB - for that you need transaction.oncomplete)
-    note.innerHTML += "<li>Request successful.</li>";
+    note.appendChild(document.createElement("li")).textContent =
+      "Request successful.";
   };
 }
 ```

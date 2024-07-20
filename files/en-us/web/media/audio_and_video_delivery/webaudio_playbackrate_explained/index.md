@@ -51,7 +51,7 @@ window.onload = () => {
   p.addEventListener(
     "input",
     () => {
-      c.innerHTML = p.value;
+      c.textContent = p.value;
       v.playbackRate = p.value;
     },
     false,
@@ -71,27 +71,11 @@ So `defaultPlaybackRate` allows us to set the playback rate _before_ playing the
 
 There is also an event available called `ratechange`, which fires every time the `playbackRate` changes.
 
-## Browser support
-
-- Chrome 20+ ✔
-- Firefox 20+ ✔
-- IE 9+ ✔
-- Safari 6+ ✔
-- Opera 15+ ✔
-- Mobile Chrome (Android) ✖
-- Mobile Firefox 24+ ✔
-- IE Mobile ✖
-- Mobile Safari 6+ (iOS) ✔
-- Opera Mobile ✖
-
 ### Notes
 
 - Most browsers stop playing audio outside `playbackRate` bounds of 0.5 and 4, leaving the video playing silently. For most applications, it's recommended that you limit the range to between 0.5 and 4.
 - The pitch of the audio track does not change when `playBackRate` is altered.
 - Negative values indicating the media should play in reverse is not currently supported by most browsers.
-- IE9+ switches to the default playback rate when an `ended` event is fired.
-- Firefox generates a `ratechange` event when the media source is substituted.
-- On iOS 7 you can only affect the `playbackRate` when the media is paused (not while it's playing).
 
 ## See also
 

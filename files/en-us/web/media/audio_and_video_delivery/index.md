@@ -37,7 +37,7 @@ The code above will create an audio player that attempts to preload as much audi
 
 > **Note:** The `preload` attribute may be ignored by some mobile browsers.
 
-For further info see [Cross Browser Audio Basics (HTML Audio In Detail)](/en-US/docs/Web/Media/Audio_and_video_delivery/Cross-browser_audio_basics#html5_audio_in_detail)
+For further info see [Cross Browser Audio Basics (HTML Audio In Detail)](/en-US/docs/Web/Media/Audio_and_video_delivery/Cross-browser_audio_basics#html_audio_in_detail)
 
 ### HTML Video
 
@@ -282,7 +282,7 @@ window.onload = () => {
   }
 
   function checkKey(e) {
-    if (e.keycode === 32) {
+    if (e.code === "Space") {
       // space bar
       switchState();
     }

@@ -52,6 +52,8 @@ You can create a new `Response` object using the {{domxref("Response.Response", 
   - : Returns a promise that resolves with an {{jsxref("ArrayBuffer")}} representation of the response body.
 - {{domxref("Response.blob()")}}
   - : Returns a promise that resolves with a {{domxref("Blob")}} representation of the response body.
+- {{domxref("Response.bytes()")}}
+  - : Returns a promise that resolves with a {{jsxref("Uint8Array")}} representation of the response body.
 - {{domxref("Response.clone()")}}
   - : Creates a clone of a `Response` object.
 - {{domxref("Response.formData()")}}

@@ -15,7 +15,7 @@ editable content.
 
 ## Value
 
-A {{domxref("DataTransfer")}} object.
+A {{domxref("DataTransfer")}} object or `null`. The spec has an [overview](https://w3c.github.io/input-events/#overview) of its value in various cases.
 
 ## Examples
 

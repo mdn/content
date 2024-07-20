@@ -49,9 +49,9 @@ const element = document.querySelector("div#scroll-box");
 const output = document.querySelector("p#output");
 
 element.addEventListener("scroll", (event) => {
-  output.innerHTML = "Scroll event fired!";
+  output.textContent = "Scroll event fired!";
   setTimeout(() => {
-    output.innerHTML = "Waiting on scroll events...";
+    output.textContent = "Waiting on scroll events...";
   }, 1000);
 });
 ```
@@ -76,9 +76,9 @@ const element = document.querySelector("div#scroll-box");
 const output = document.querySelector("p#output");
 
 element.onscroll = (event) => {
-  output.innerHTML = "Element scroll event fired!";
+  output.textContent = "Element scroll event fired!";
   setTimeout(() => {
-    output.innerHTML = "Waiting on scroll events...";
+    output.textContent = "Waiting on scroll events...";
   }, 1000);
 };
 ```

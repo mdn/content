@@ -45,7 +45,7 @@ You can see a full example of what this might look like in the [Examples](#examp
 
 Hidden inputs are also used to store and submit security tokens or _secrets_, for the purposes of improving website security. The basic idea is that if a user is filling in a sensitive form, such as a form on their banking website to transfer some money to another account, the secret they would be provided with would prove that they are who they say they are, and that they are using the correct form to submit the transfer request.
 
-This would stop a malicious user from creating a fake form, pretending to be a bank, and emailing the form to unsuspecting users to trick them into transferring money to the wrong place. This kind of attack is called a [Cross Site Request Forgery (CSRF)](</en-US/docs/Learn/Server-side/First_steps/Website_security#cross-site_request_forgery_(csrf)>); pretty much any reputable server-side framework uses hidden secrets to prevent such attacks.
+This would stop a malicious user from creating a fake form, pretending to be a bank, and emailing the form to unsuspecting users to trick them into transferring money to the wrong place. This kind of attack is called a [Cross Site Request Forgery (CSRF)](/en-US/docs/Learn/Server-side/First_steps/Website_security#cross-site_request_forgery_csrf); pretty much any reputable server-side framework uses hidden secrets to prevent such attacks.
 
 > **Note:** Placing the secret in a hidden input doesn't inherently make it secure. The key's composition and encoding would do that. The value of the hidden input is that it keeps the secret associated with the data and automatically includes it when the form is sent to the server. You need to use well-designed secrets to actually secure your website.
 

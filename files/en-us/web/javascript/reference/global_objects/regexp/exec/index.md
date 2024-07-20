@@ -46,7 +46,7 @@ JavaScript {{jsxref("RegExp")}} objects are _stateful_ when they have the [globa
 
 When using `exec()`, the global flag has no effect when the sticky flag is set — the match is always sticky.
 
-`exec()` is the primitive method of regexps. Many other regexp methods call `exec()` internally — including those called by string methods, like [`@@replace`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@replace). While `exec()` itself is powerful (and is the most efficient), it often does not convey the intent most clearly.
+`exec()` is the primitive method of regexps. Many other regexp methods call `exec()` internally — including those called by string methods, like [`[Symbol.replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace). While `exec()` itself is powerful (and is the most efficient), it often does not convey the intent most clearly.
 
 - If you only care whether the regex matches a string, but not what is actually being matched, use {{jsxref("RegExp.prototype.test()")}} instead.
 - If you are finding all occurrences of a global regex and you don't care about information like capturing groups, use {{jsxref("String.prototype.match()")}} instead. In addition, {{jsxref("String.prototype.matchAll()")}} helps to simplify matching multiple parts of a string (with capture groups) by allowing you to iterate over the matches.

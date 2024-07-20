@@ -68,8 +68,12 @@ This article provides information about the changes in Firefox 127 that affect d
 
 ## Changes for add-on developers
 
+- Firefox now installs extensions that specify the `"split"` value of the manifest.json [`"incognito"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/incognito) key. However, as Firefox doesn't support split mode and to preserve the integrity of incognito browsing `"split"` is treated as an alias of the `"not_allowed"` value ([Firefox bug 1876924](https://bugzil.la/1876924)).
 - {{WebExtAPIRef("management.ExtensionInfo")}} now returns the `install_type` of `"admin"` when an add-on is installed using an enterprise policy ([Firefox bug 1895341](https://bugzil.la/1895341)).
 - Addition of a `filter` parameter to {{WebExtAPIRef("declarativeNetRequest.getDynamicRules")}} and {{WebExtAPIRef("declarativeNetRequest.getSessionRules")}}, which enables the list of returned rules to be filtered by ID ([Firefox bug 1820870](https://bugzil.la/1820870)).
+- [`host_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) for Manifest V3 extensions are now displayed to users during installation ([Firefox bug 1889402](https://bugzil.la/1889402)). However, if an extension update requests new host permissions, these are not shown to the user. See ([Firefox bug 1893232](https://bugzil.la/1893232)).
+- Addition of the {{WebExtAPIRef("runtime.getContexts")}} function that returns information about the contexts associated with the extension ([Firefox bug 1875480](https://bugzil.la/1875480)).
+- For Manifest V3 extensions, adds fall back to the user-defined shortcuts for the special [`_execute_browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands#special_shortcuts) command if there are no user-defined shortcuts for `_execute_action`. This enables extensions migrating from Manifest V2 to V3 to preserve any user-defined shortcuts for the browser action ([Firefox bug 1797811](https://bugzil.la/1797811)).
 
 ## Experimental web features
 
@@ -82,6 +86,10 @@ These features are newly shipped in Firefox 127 but are disabled by default. To 
 - **`calc()` color channel support in relative colors:** `layout.css.relative-color-syntax.enabled`.
 
   The CSS [`calc()`](/en-US/docs/Web/CSS/calc) function can now parse color channels in [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors#using_math_functions) ([Firefox bug 1889561](https://bugzil.la/1889561)).
+
+- **JavaScript `Float16Array` typed array**: `javascript.options.experimental.float16array`.
+
+  {{jsxref("Float16Array")}} typed arrays are now supported, along with {{jsxref("DataView.prototype.getFloat16()")}} and {{jsxref("DataView.prototype.setFloat16()")}} for reading and setting `Float16Array` values from a {{jsxref("DataView")}}, and the {{jsxref("Math.f16round()")}} static method that can be used to round numbers to 16 bits. The new type is useful for sharing data with a GPU, in particular for use cases where it makes sense to trade off precision for memory consumption. ([Firefox bug 1833647](https://bugzil.la/1833647).)
 
 ## Older versions
 

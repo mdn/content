@@ -26,8 +26,9 @@ Representation headers include: {{HTTPHeader("Content-Type")}}, {{HTTPHeader("Co
 
 - [RFC 9110, section 3.2: Representations](https://httpwg.org/specs/rfc9110.html#representations)
 - [List of all HTTP headers](/en-US/docs/Web/HTTP/Headers)
-- {{Glossary("Payload header")}}
-- {{glossary("Entity header")}}
+- Related glossary terms:
+  - {{Glossary("Payload header")}}
+  - {{glossary("Entity header")}}
 - {{HTTPHeader("Repr-Digest")}}, {{HTTPHeader("Want-Repr-Digest")}}
 - {{HTTPHeader("Content-Digest")}}, {{HTTPHeader("Want-Content-Digest")}}
 - {{HTTPHeader("Digest")}} {{Deprecated_Inline}}, {{HTTPHeader("Want-Digest")}} {{Deprecated_Inline}}

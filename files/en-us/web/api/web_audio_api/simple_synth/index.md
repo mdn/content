@@ -56,7 +56,7 @@ First we create the `<div>` to contain the settings bar, so it can be styled as 
 </div>
 ```
 
-We specify a default value of 0.5, and we provide a {{HTMLElement("datalist")}} element which is connected to the range using the [`name`](/en-US/docs/Web/HTML/Global_attributes#name) attribute to find an option list whose ID matches; in this case, the data set is named `"volume"`. This lets us provide a set of common values and special strings which the browser may optionally choose to display in some fashion; we provide names for the values 0.0 ("Mute") and 1.0 ("100%").
+We specify a default value of 0.5, and we provide a {{HTMLElement("datalist")}} element which is connected to the range using the [`list`](/en-US/docs/Web/HTML/Element/input#list) attribute to find an option list whose ID matches; in this case, the data set is named `"volumes"`. This lets us provide a set of common values and special strings which the browser may optionally choose to display in some fashion; we provide names for the values 0.0 ("Mute") and 1.0 ("100%").
 
 ##### The waveform picker
 
@@ -484,8 +484,8 @@ function createKey(note, octave, freq) {
   keyElement.dataset["octave"] = octave;
   keyElement.dataset["note"] = note;
   keyElement.dataset["frequency"] = freq;
-
-  labelElement.innerHTML = `${note}<sub>${octave}</sub>`;
+  labelElement.appendChild(document.createTextNode(note));
+  labelElement.appendChild(document.createElement("sub")).textContent = octave;
   keyElement.appendChild(labelElement);
 
   keyElement.addEventListener("mousedown", notePressed, false);
@@ -497,7 +497,7 @@ function createKey(note, octave, freq) {
 }
 ```
 
-After creating the elements that will represent the key and its label, we configure the key's element by setting its class to "key" (which establishes its appearance). Then we add [`data-*`](/en-US/docs/Web/HTML/Global_attributes#data-*) attributes which contain the key's octave (attribute `data-octave`), string representing the note to play (attribute `data-note`), and frequency (attribute `data-frequency`) in Hertz. This will let us easily fetch that information as needed when handling events.
+After creating the elements that will represent the key and its label, we configure the key's element by setting its class to "key" (which establishes its appearance). Then we add [`data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*) attributes which contain the key's octave (attribute `data-octave`), string representing the note to play (attribute `data-note`), and frequency (attribute `data-frequency`) in Hertz. This will let us easily fetch that information as needed when handling events.
 
 ### Making music
 
@@ -551,7 +551,7 @@ function notePressed(event) {
 
 We start by checking whether the primary mouse button is pressed, for two reasons. First, we want to only allow the primary mouse button to trigger notes playing. Second, and more importantly, we are using this to handle {{domxref("Element/mouseover_event", "mouseover")}} for cases where the user is dragging from note to note, and we only want to start playing the note if the mouse is pressed when it enters the element.
 
-If the mouse button is in fact down, we get the pressed key's [`dataset`](/en-US/docs/Web/HTML/Global_attributes#dataset) attribute; this makes it easy to access the custom data attributes on the element. We look for a `data-pressed` attribute; if there isn't one (which indicates that the note isn't already playing), we call `playTone()` to start playing the note, passing in the value of the element's `data-frequency` attribute. The returned oscillator is stored into `oscList` for future reference, and `data-pressed` is set to `yes` to indicate that the note is playing so we don't start it again next time this is called.
+If the mouse button is in fact down, we get the pressed key's [`dataset`](/en-US/docs/Web/API/HTMLElement/dataset) attribute; this makes it easy to access the custom data attributes on the element. We look for a `data-pressed` attribute; if there isn't one (which indicates that the note isn't already playing), we call `playTone()` to start playing the note, passing in the value of the element's `data-frequency` attribute. The returned oscillator is stored into `oscList` for future reference, and `data-pressed` is set to `yes` to indicate that the note is playing so we don't start it again next time this is called.
 
 #### Stopping a tone
 

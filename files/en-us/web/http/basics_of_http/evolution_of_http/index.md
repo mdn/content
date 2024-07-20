@@ -54,7 +54,7 @@ At this point in time, a typical request and response looked like this:
 GET /mypage.html HTTP/1.0
 User-Agent: NCSA_Mosaic/2.0 (Windows 3.1)
 
-200 OK
+HTTP/1.0 200 OK
 Date: Tue, 15 Nov 1994 08:12:31 GMT
 Server: CERN/3.0 libwww/2.17
 Content-Type: text/html
@@ -70,7 +70,7 @@ It was followed by a second connection and a request to fetch the image (with th
 GET /myimage.gif HTTP/1.0
 User-Agent: NCSA_Mosaic/2.0 (Windows 3.1)
 
-200 OK
+HTTP/1.0 200 OK
 Date: Tue, 15 Nov 1994 08:12:32 GMT
 Server: CERN/3.0 libwww/2.17
 Content-Type: text/gif
@@ -103,7 +103,7 @@ Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br
 Referer: https://developer.mozilla.org/en-US/docs/Glossary/CORS-safelisted_request_header
 
-200 OK
+HTTP/1.1 200 OK
 Connection: Keep-Alive
 Content-Encoding: gzip
 Content-Type: text/html; charset=utf-8
@@ -125,7 +125,7 @@ Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br
 Referer: https://developer.mozilla.org/en-US/docs/Glossary/CORS-safelisted_request_header
 
-200 OK
+HTTP/1.1 200 OK
 Age: 9578461
 Cache-Control: public, max-age=315360000
 Connection: keep-alive
@@ -140,9 +140,9 @@ Server: Apache
 
 HTTP/1.1 was first published as {{rfc(2068)}} in January 1997.
 
-## More than 15 years of extensions
+## More than two decades of development
 
-The extensibility of HTTP made it easy to create new headers and methods. Even though the HTTP/1.1 protocol was refined over two revisions, {{RFC("2616")}} published in June 1999 and {{RFC("7230")}}-{{RFC("7235")}} published in June 2014 before the release of HTTP/2, it was extremely stable for more than 15 years.
+The extensibility of HTTP made it easy to create new headers and methods. Even though the HTTP/1.1 protocol was refined over two revisions, {{RFC("2616")}} published in June 1999 and {{RFC("7230")}}-{{RFC("7235")}} published in June 2014 before the release of HTTP/2, it was extremely stable for more than 15 years. HTTP/1.1 was updated again in 2022 with {{RFC("9110")}}. Not only was HTTP/1.1 updated, but all of HTTP was revised and is now split into the following documents: semantics ({{RFC("9110")}}), caching ({{RFC("9111")}}) applying to all HTTP versions, and HTTP/1.1 ({{RFC("9112")}}), HTTP/2 ({{RFC("9113")}}), and HTTP/3 ({{RFC("9114")}}). In addition, the specification finally achieved the status of Internet Standard (STD 97), whereas before it was always a proposed/draft standard.
 
 ### Using HTTP for secure transmissions
 

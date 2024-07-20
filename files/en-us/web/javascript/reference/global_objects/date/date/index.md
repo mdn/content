@@ -85,6 +85,32 @@ Calling `new Date()` (the `Date()` constructor) returns a [`Date`](/en-US/docs/W
 
 Calling the `Date()` function (without the `new` keyword) returns a string representation of the current date and time, exactly as `new Date().toString()` does. Any arguments given in a `Date()` function call (without the `new` keyword) are ignored; regardless of whether it's called with an invalid date string — or even called with any arbitrary object or other primitive as an argument — it always returns a string representation of the current date and time.
 
+## Description
+
+### Reduced time precision
+
+To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), the precision of `new Date()` might get rounded depending on browser settings. In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by default and defaults to 2ms. You can also enable `privacy.resistFingerprinting`, in which case the precision will be 100ms or the value of `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever is larger.
+
+For example, with reduced time precision, the result of `new Date().getTime()` will always be a multiple of 2, or a multiple of 100 (or `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`) with `privacy.resistFingerprinting` enabled.
+
+```js
+// reduced time precision (2ms) in Firefox 60
+new Date().getTime();
+// Might be:
+// 1519211809934
+// 1519211810362
+// 1519211811670
+// …
+
+// reduced time precision with `privacy.resistFingerprinting` enabled
+new Date().getTime();
+// Might be:
+// 1519129853500
+// 1519129858900
+// 1519129864400
+// …
+```
+
 ## Examples
 
 ### Several ways to create a Date object

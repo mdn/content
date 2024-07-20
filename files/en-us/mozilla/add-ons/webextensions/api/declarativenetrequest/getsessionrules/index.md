@@ -7,7 +7,7 @@ browser-compat: webextensions.api.declarativeNetRequest.getSessionRules
 
 {{AddonSidebar}}
 
-Returns the active set of session scoped rules for the extension.
+Returns the active set of session-scoped rules for the extension.
 
 ## Syntax
 

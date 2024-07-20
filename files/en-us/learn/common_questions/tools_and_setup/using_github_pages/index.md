@@ -47,7 +47,7 @@ The best way to upload your code to GitHub is via the command line — this is a
 Every operating system comes with a command line tool:
 
 - **Windows**: **Command Prompt** can be accessed by pressing the Windows key, typing _Command Prompt_, and choosing it from the list that appears. Note that Windows has its own command conventions differing from Linux and macOS, so the commands below may vary on your machine.
-- **OS X**: **Terminal** can be found in _Applications > Utilities_.
+- **macOS**: **Terminal** can be found in _Applications > Utilities_.
 - **Linux**: Usually you can pull up a terminal with _Ctrl + Alt + T_. If that doesn't work, look for **Terminal** in an app bar or menu.
 
 This may seem a bit scary at first, but don't worry — you'll soon get the hang of the basics. You tell the computer to do something in the terminal by typing in a command and hitting Enter, as seen above.

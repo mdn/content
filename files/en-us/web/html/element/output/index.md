@@ -13,7 +13,7 @@ The **`<output>`** [HTML](/en-US/docs/Web/HTML) element is a container element i
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- `for`
+- [`for`](/en-US/docs/Web/HTML/Attributes/for)
   - : A space-separated list of other elements' [`id`](/en-US/docs/Web/HTML/Global_attributes#id)s, indicating that those elements contributed input values to (or otherwise affected) the calculation.
 - `form`
 
@@ -25,6 +25,10 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : The element's name. Used in the {{domxref("HTMLFormElement.elements", "form.elements")}} API.
 
 The `<output>` value, name, and contents are NOT submitted during form submission.
+
+## Accessibility
+
+Many browsers implement this element as an [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) region. Assistive technology will thereby announce the results of UI interactions posted inside it without requiring that focus is switched away from the controls that produce those results.
 
 ## Examples
 
@@ -41,10 +45,6 @@ In the following example, the form provides a slider whose value can range betwe
 ### Result
 
 {{ EmbedLiveSample('Examples')}}
-
-## Accessibility concerns
-
-Many browsers implement this element as an [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) region. Assistive technology will thereby announce the results of UI interactions posted inside it without requiring that focus is switched away from the controls that produce those results.
 
 ## Technical summary
 

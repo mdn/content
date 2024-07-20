@@ -62,7 +62,7 @@ const panNode = audioCtx.createStereoPanner();
 
 panControl.oninput = () => {
   panNode.pan.setValueAtTime(panControl.value, audioCtx.currentTime);
-  panValue.innerHTML = panControl.value;
+  panValue.textContent = panControl.value;
 };
 
 // connect the MediaElementAudioSourceNode to the panNode

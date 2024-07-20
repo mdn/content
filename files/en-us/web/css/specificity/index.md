@@ -162,7 +162,7 @@ div:not(.inner, #fakeId) p {
 
 In the above CSS code block, we have included `#fakeId` in the selectors. This `#fakeId` adds `1-0-0` to the specificity weight of each paragraph.
 
-When creating complex selector lists with [CSS nesting]() this behaves in exactly the same way as the `:is()` pseudo-class.
+When creating complex selector lists with [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting) this behaves in exactly the same way as the `:is()` pseudo-class.
 
 ```css
 p,
@@ -494,21 +494,14 @@ A few things to remember about specificity:
 - [SpeciFISHity](https://specifishity.com)
 - [Specificity Calculator](https://specificity.keegan.st/): An interactive website to test and understand your own CSS rules
 - [_ID-CLASS-TYPE_ exercise](https://estelle.github.io/CSS/selectors/exercises/specificity.html) a specificity quiz
-- CSS key concepts:
-  - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
-  - [At-rules](/en-US/docs/Web/CSS/At-rule)
-  - [Comments](/en-US/docs/Web/CSS/Comments)
-  - [Inheritance](/en-US/docs/Web/CSS/Inheritance)
-  - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
-  - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
-  - [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-  - Values
-    - [Initial values](/en-US/docs/Web/CSS/initial_value)
-    - [Computed values](/en-US/docs/Web/CSS/computed_value)
-    - [Used values](/en-US/docs/Web/CSS/used_value)
-    - [Actual values](/en-US/docs/Web/CSS/actual_value)
-  - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
-  - [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
-  - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
-  - [CSS nesting module](/en-US/docs/Web/CSS/CSS_nesting)
+- [CSS syntax](/en-US/docs/Web/CSS/Syntax) guide
+- [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax) module
+- [CSS error handling](/en-US/docs/Web/CSS/CSS_syntax/Error_handling)
+- [At-rules](/en-US/docs/Web/CSS/At-rule)
+- [Inheritance](/en-US/docs/Web/CSS/Inheritance)
+- [Initial](/en-US/docs/Web/CSS/initial_value), [computed](/en-US/docs/Web/CSS/computed_value), [used](/en-US/docs/Web/CSS/used_value), and [actual](/en-US/docs/Web/CSS/actual_value) values
+- [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
+- [Building blocks: the CSS cascade](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+- [Building blocks: cascade layers](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers)
+- [CSS cascade and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
+- [CSS nesting module](/en-US/docs/Web/CSS/CSS_nesting)

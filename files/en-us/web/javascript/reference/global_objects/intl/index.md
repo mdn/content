@@ -90,8 +90,8 @@ If the selected locale identifier had a Unicode extension sequence, that extensi
   - : Constructor for objects that enable language-sensitive relative time formatting.
 - {{jsxref("Intl.Segmenter")}}
   - : Constructor for objects that enable locale-sensitive text segmentation.
-- `Intl[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Intl"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+- `Intl[Symbol.toStringTag]`
+  - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Intl"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Static methods
 

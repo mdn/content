@@ -21,8 +21,7 @@ A value of any type.
 
 In this simple fragment we create a transaction, retrieve an object store, then use a
 cursor to iterate through all the records in the object store. Within each iteration we
-log the key of the cursor to the console, something like this (its the album title in
-each case, which is our key).
+log the key of the cursor to the console.
 
 The cursor does not require us to select the data based
 on a key; we can just grab all of it. Also note that in each iteration of the loop,

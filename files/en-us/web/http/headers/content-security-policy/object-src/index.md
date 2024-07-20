@@ -11,8 +11,6 @@ The HTTP {{HTTPHeader("Content-Security-Policy")}}
 **`object-src`** directive specifies valid sources for the
 {{HTMLElement("object")}} and {{HTMLElement("embed")}} elements.
 
-To set allowed types for {{HTMLElement("object")}} and {{HTMLElement("embed")}}, use the {{CSP("plugin-types")}} directive.
-
 > **Note:** Elements controlled by `object-src` are perhaps coincidentally
 > considered legacy HTML elements and aren't receiving new standardized features (such as
 > the security attributes `sandbox` or `allow` for
@@ -83,4 +81,3 @@ The following {{HTMLElement("object")}} and {{HTMLElement("embed")}} elements ar
 
 - {{HTTPHeader("Content-Security-Policy")}}
 - {{HTMLElement("object")}} and {{HTMLElement("embed")}}
-- {{CSP("plugin-types")}}

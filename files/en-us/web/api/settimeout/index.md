@@ -384,8 +384,22 @@ API instead.
 ### Maximum delay value
 
 Browsers store the delay as a 32-bit signed integer internally. This causes an integer
-overflow when using delays larger than 2,147,483,647 ms (about 24.8 days), resulting in
-the timeout being executed immediately.
+overflow when using delays larger than 2,147,483,647 ms (about 24.8 days). So for example, this code:
+
+```js
+setTimeout(() => console.log("hi!"), 2 ** 32 - 5000);
+```
+
+…results in the timeout being executed immediately (since `2**32 - 5000` overflows to a negative number), while the following code:
+
+```js
+setTimeout(() => console.log("hi!"), 2 ** 32 + 5000);
+```
+
+…results in the timeout being executed after approximately 5 seconds.
+
+**Note**: That doesn't match `setTimeout` behavior in Node.js, where any timeout larger than 2,147,483,647 ms
+results in an immediate execution.
 
 ## Examples
 

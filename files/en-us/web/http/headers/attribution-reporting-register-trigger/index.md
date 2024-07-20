@@ -9,7 +9,7 @@ browser-compat: http.headers.Attribution-Reporting-Register-Trigger
 
 {{HTTPSidebar}}{{seecompattable}}
 
-The **`Attribution-Reporting-Register-Trigger`** header registers a page feature as an [attribution trigger](/en-US/docs/Web/API/Attribution_Reporting_API#registering_attribution_triggers). This is included as part of a response to a request that included an {{httpheader("Attribution-Reporting-Eligible")}} header.
+The **`Attribution-Reporting-Register-Trigger`** header registers a page feature as an [attribution trigger](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_triggers). This is included as part of a response to a request that included an {{httpheader("Attribution-Reporting-Eligible")}} header.
 
 See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
 

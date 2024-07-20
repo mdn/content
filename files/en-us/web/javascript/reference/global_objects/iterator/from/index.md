@@ -24,7 +24,7 @@ from(object)
 
 ### Return value
 
-If `object` is an iterable, its `@@iterator` method is called to obtain the iterator. Otherwise, `object` is assumed to be an iterator. If the iterator is already {{jsxref("Operators/instanceof", "instanceof")}} {{jsxref("Iterator")}} (which means it has `Iterator.prototype` in its prototype chain), it is returned directly. Otherwise, a new {{jsxref("Iterator")}} object is created that wraps the original iterator.
+If `object` is an iterable, its `[Symbol.iterator]()` method is called to obtain the iterator. Otherwise, `object` is assumed to be an iterator. If the iterator is already {{jsxref("Operators/instanceof", "instanceof")}} {{jsxref("Iterator")}} (which means it has `Iterator.prototype` in its prototype chain), it is returned directly. Otherwise, a new {{jsxref("Iterator")}} object is created that wraps the original iterator.
 
 ## Description
 
@@ -39,7 +39,7 @@ This method exists to convert custom iterators, probably exported by libraries, 
 
 ### Converting an iterable to a proper iterator
 
-Because `obj` is already an iterable that returns a proper iterator when its `@@iterator` method is called, `Iterator.from(obj)` returns the same iterator.
+Because `obj` is already an iterable that returns a proper iterator when its `[Symbol.iterator]()` method is called, `Iterator.from(obj)` returns the same iterator.
 
 ```js
 const iterator = (function* () {
@@ -58,7 +58,7 @@ const iterator2 = Iterator.from(obj);
 console.log(iterator2 === iterator); // true
 ```
 
-Because `obj2` is an iterable that returns a non-proper iterator when its `@@iterator` method is called, `Iterator.from(obj2)` returns a new iterator that wraps the original iterator.
+Because `obj2` is an iterable that returns a non-proper iterator when its `[Symbol.iterator]()` method is called, `Iterator.from(obj2)` returns a new iterator that wraps the original iterator.
 
 ```js
 const iterator = {

@@ -37,9 +37,7 @@ Content-Security-Policy: base-uri <source> <source>;
 
 ### Sources
 
-This directive uses most of the same source values for arguments as other CSP directives: [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
-
-Note however that some of the values don't make sense for `base-uri`, such as the keywords `'unsafe-inline'` and `'strict-dynamic'`.
+This directive uses the same [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources) syntax for arguments as other CSP directives. However, only values that match URLs make sense for `base-uri`, including `<host-source>`, `<scheme-source>`, `'self'`, and `'none'`.
 
 ## Examples
 

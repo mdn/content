@@ -57,7 +57,7 @@ We also provide the user with a dropdown menu to allow them to change the audio 
    ```js
    mediaDeviceBtn.addEventListener('click', async () => {
      if ("setSinkId" in AudioContext.prototype) {
-       selectDiv.innerHTML = '';
+       selectDiv.textContent = "";
 
        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
        const devices = await navigator.mediaDevices.enumerateDevices();

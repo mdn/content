@@ -32,7 +32,7 @@ You can use this attribute with the following SVG elements:
         <a href="/en-US/docs/Web/CSS/Value_definition_syntax#single_bar">|</a>
         <code>&#x3C;urange></code>
         <a href="/en-US/docs/Web/CSS/Value_definition_syntax#brackets">]</a
-        ><a href="/en-US/docs/Web/CSS/Value_definition_syntax#hash_mark_()"
+        ><a href="/en-US/docs/Web/CSS/Value_definition_syntax#hash_mark)"
           >#</a
         >
       </td>

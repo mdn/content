@@ -57,12 +57,6 @@ The experimental {{HTTPHeader("Accept-CH")}} lists configuration data that the s
 | `Viewport-Width` | Indicates the layout viewport width in CSS pixels.                                                                                                                                                                 |
 | `Width`          | Indicates the resource width in physical pixels (in other words the intrinsic size of an image).                                                                                                                   |
 
-### The `Accept-CH-Lifetime` header
-
-> **Note:** This is part of an **experimental** technology called _Client Hints_ and is only available in Chrome 61 or later.
-
-The {{HTTPHeader("Accept-CH-Lifetime")}} header is used with the `Device-Memory` value of the `Accept-CH` header and indicates the amount of time the device should opt in to sharing the device memory with the server. The value is given in milliseconds and it's optional.
-
 ### The `Accept-Encoding` header
 
 The {{HTTPHeader("Accept-Encoding")}} header defines the acceptable content encoding (supported compressions). The value is a q-factor list (e.g., `br, gzip;q=0.8`) that indicates the priority of the encoding values. The default value `identity` is at the lowest priority (unless otherwise noted).

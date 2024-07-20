@@ -70,6 +70,10 @@ Instead, perhaps you would like to add scrollbars when content overflows? Using 
 
 **Remove some content from the box below. Notice how the scrollbars remain, even if there is no need for scrolling.**
 
+> [!NOTE]
+> Scrollbar visibility depends on the operating system.
+> You may have to change your browser settings to always show scroll bars in order for the scroll bars to always show in the following examples.
+
 {{EmbedGHLiveSample("css-examples/learn/overflow/scroll.html", '100%', 700)}}
 
 In the example above, we only need to scroll on the `y` axis, however we get scrollbars in both axes. To just scroll on the `y` axis, you could use the {{cssxref("overflow-y")}} property, setting `overflow-y: scroll`.

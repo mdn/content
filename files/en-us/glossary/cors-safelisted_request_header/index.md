@@ -31,6 +31,7 @@ CORS-safelisted headers must also fulfill the following requirements in order to
 
 ## See also
 
-- {{Glossary("CORS-safelisted response header")}}
-- {{Glossary("Forbidden header name")}}
-- {{Glossary("Request header")}}
+- Related glossary terms:
+  - {{Glossary("CORS-safelisted response header")}}
+  - {{Glossary("Forbidden header name")}}
+  - {{Glossary("Request header")}}

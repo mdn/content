@@ -102,12 +102,61 @@ const resizeObserver = new ResizeObserver((entries) => {
   }
 });
 
-window.addEventListener("error", function (e) {
+resizeObserver.observe(divElem);
+
+window.addEventListener("error", (e) => {
   console.error(e.message);
 });
 ```
 
 As long as the error event does not fire indefinitely, resize observer will settle and produce a stable, likely correct, layout. However, visitors may see a flash of broken layout, as a sequence of changes expected to happen in a single frame is instead happening over multiple frames.
+
+If you want to prevent these errors, the solution depends on what your intended effect is. If you actually intend to have an infinite loop, you just need to defer the resizing code in your `ResizeObserver` callback to after the browser repaints. You can put it into a [`requestAnimationFrame`](/en-US/docs/Web/API/Window/requestAnimationFrame) callback.
+
+```js
+const divElem = document.querySelector("body > div");
+
+const resizeObserver = new ResizeObserver((entries) => {
+  requestAnimationFrame(() => {
+    for (const entry of entries) {
+      entry.target.style.width = entry.contentBoxSize[0].inlineSize + 10 + "px";
+    }
+  });
+});
+
+resizeObserver.observe(divElem);
+
+window.addEventListener("error", (e) => {
+  console.error(e.message);
+});
+```
+
+If you don't intend to have an infinite loop, you should make sure your resizing code does not trigger the resize observer callback. There are many ways to do this, such as by setting an "expected size" and not resizing if the size is already at that value.
+
+```js
+const divElem = document.querySelector("body > div");
+const expectedSizes = new WeakMap();
+
+const resizeObserver = new ResizeObserver((entries) => {
+  requestAnimationFrame(() => {
+    for (const entry of entries) {
+      const expectedSize = expectedSizes.get(entry.target);
+      if (entry.contentBoxSize[0].inlineSize === expectedSize) {
+        continue;
+      }
+      const newSize = entry.contentBoxSize[0].inlineSize + 10;
+      entry.target.style.width = `${newSize}px`;
+      expectedSizes.set(entry.target, newSize);
+    }
+  });
+});
+
+resizeObserver.observe(divElem);
+
+window.addEventListener("error", (e) => {
+  console.error(e.message);
+});
+```
 
 ## Specifications
 

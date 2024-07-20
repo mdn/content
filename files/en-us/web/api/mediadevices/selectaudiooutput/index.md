@@ -10,7 +10,7 @@ browser-compat: api.MediaDevices.selectAudioOutput
 
 {{APIRef("Audio Output Devices API")}}{{securecontext_header}}{{SeeCompatTable}}
 
-The **`MediaDevices.selectAudioOutput()`** method of the [Audio Output Devices API](/en-US/docs/Web/API/Audio_Output_Devices_API) prompts the user to select an audio output device, such as a speaker or headset. If the user selects a device, the method grants user permission to use the selected device as an audio output sink.
+The **`selectAudioOutput()`** method of the {{domxref("MediaDevices")}} interface prompts the user to select an audio output device, such as a speaker or headset. If the user selects a device, the method grants user permission to use the selected device as an audio output sink.
 
 Following selection, if the device is available it can be enumerated using {{domxref("MediaDevices.enumerateDevices()")}} and set as the audio output sink using {{domxref("HTMLMediaElement.setSinkId()")}}.
 

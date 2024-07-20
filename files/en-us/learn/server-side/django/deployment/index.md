@@ -546,7 +546,7 @@ After getting the local library sources and installing the dependencies in a vir
 6. Scroll down to the "Code" section of the _Web_ tab and select the link to the WSGI configuration file.
    This will have a name with the form `/var/www/<user_name>_pythonanywhere_com_wsgi.py`.
 
-   ![PythonAnywhere WGSI file in Web tab, code section](python_anywhere_web_code_wsgi_select.png)
+   ![PythonAnywhere WSGI file in Web tab, code section](python_anywhere_web_code_wsgi_select.png)
 
    Replace the content in the file with the following text (first updating "hamishwillee" with your own username), and then select the **Save** button.
 
@@ -564,7 +564,7 @@ After getting the local library sources and installing the dependencies in a vir
    application = get_wsgi_application()
    ```
 
-   Note that the role of the WGSI file is to help the Gunicorn server find the local library application.
+   Note that the role of the WSGI file is to help the Gunicorn server find the local library application.
    PythonAnywhere expects this file to be in this location, which is why the WSGI file already in the project cannot be used.
 
 7. Scroll down to the "Virtualenv" section of the _Web_ tab.
@@ -665,7 +665,7 @@ The steps are:
 
 4. Restart the application.
 
-You can test that the operation worked by attempting to open a record that that does not exist (for example, create a genre, then increment the number in the URL bar to open a record that has not yet been created).
+You can test that the operation worked by attempting to open a record that does not exist (for example, create a genre, then increment the number in the URL bar to open a record that has not yet been created).
 If the environment variable has been loaded you'll get a "Not found" message rather than a detailed debug trace.
 
 ## Example: Hosting on Railway

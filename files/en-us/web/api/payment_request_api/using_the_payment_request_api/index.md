@@ -265,7 +265,7 @@ checkoutButton.addEventListener("click", () => {
       });
     })
     .catch((error) => {
-      if (error.code === DOMException.NOT_SUPPORTED_ERR) {
+      if (error.name === "NotSupportedError") {
         window.location.href = "https://bobpay.xyz/#download";
       } else {
         // Other kinds of errors; cancelled or failed payment. For demo purposes:

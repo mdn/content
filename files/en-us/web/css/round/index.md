@@ -20,7 +20,7 @@ width: round(down, var(--height), var(--interval));
 margin: round(to-zero, -105px, 10px);
 ```
 
-### Parameter
+### Parameters
 
 The `round(<rounding-strategy>, valueToRound, roundingInterval)` function specifies an optional rounding strategy, a value (or mathematical expression) to be rounded and a rounding interval (or mathematical expression).
 The `valueToRound` is rounded according to the rounding strategy, to the nearest integer multiple of `roundingInterval`.

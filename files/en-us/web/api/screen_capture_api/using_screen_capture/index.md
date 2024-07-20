@@ -217,7 +217,7 @@ console.error = (msg) =>
   (logElem.textContent = `${logElem.textContent}\nError: ${msg}`);
 ```
 
-This allows us to use {{domxref("console/log_static", "console/log()")}} and {{domxref("console.error_static", "console.error()")}} to log information to the log box in the document.
+This allows us to use {{domxref("console/log_static", "console.log()")}} and {{domxref("console.error_static", "console.error()")}} to log information to the log box in the document.
 
 ##### Starting display capture
 
@@ -225,7 +225,7 @@ The `startCapture()` method, below, starts the capture of a {{domxref("MediaStre
 
 ```js
 async function startCapture() {
-  logElem.innerHTML = "";
+  logElem.textContent = "";
 
   try {
     videoElem.srcObject =

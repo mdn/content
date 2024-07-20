@@ -100,7 +100,7 @@ let currentTokens = [];
 
 function render(text, selectionStart, selectionEnd) {
   // Empty the editor. We're re-rendering everything.
-  editorEl.innerHTML = "";
+  editorEl.textContent = "";
 
   // Tokenize the text.
   currentTokens = tokenizeHTML(text);
@@ -304,7 +304,7 @@ editorEl.addEventListener("keydown", (e) => {
 });
 ```
 
-The above code also calls the `updateSelection()` function to update the selection after the text content has been updated. See [Updating the selection state and selection bounds](#updating-the-selection-state-and-selection-bounds), below, for more information.
+The above code also calls the `updateSelection()` function to update the selection after the text content has been updated. See [Updating the selection state and selection bounds](#updating_the_selection_state_and_selection_bounds), below, for more information.
 
 We could improve the code by handling other key combinations, such as <kbd>Ctrl</kbd>+<kbd>C</kbd> and <kbd>Ctrl</kbd>+<kbd>V</kbd> to copy and paste text, or <kbd>Ctrl</kbd>+<kbd>Z</kbd> and <kbd>Ctrl</kbd>+<kbd>Y</kbd> to undo and redo text changes.
 

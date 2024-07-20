@@ -8,7 +8,7 @@ browser-compat: api.IDBRequest.success_event
 
 {{ APIRef("IndexedDB") }}
 
-The `success` event is fired when an `IDBRequest` succeeds.
+The `success` event is fired when an `IDBRequest` succeeds. In the `success` event handler, you can access the result of the request, as well as place more requests to the same transaction.
 
 This event is not cancelable and does not bubble.
 

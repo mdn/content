@@ -6,10 +6,11 @@ page-type: web-api-instance-property
 browser-compat: api.MediaKeySystemAccess.keySystem
 ---
 
-{{APIRef("EncryptedMediaExtensions")}}{{SecureContext_Header}}
+{{APIRef("Encrypted Media Extensions")}}{{SecureContext_Header}}
 
-The `MediaKeySystemAccess.keySystem` read-only property returns a
-string identifying the key system being used.
+The **`keySystem`** read-only property of the {{domxref("MediaKeySystemAccess")}} interface returns a string identifying the key system being used.
+
+This is the value that was passed to {{domxref("Navigator.requestMediaKeySystemAccess()")}} when system access is requested.
 
 ## Value
 

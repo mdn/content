@@ -8,7 +8,7 @@ browser-compat: api.Document.hasUnpartitionedCookieAccess
 
 {{APIRef("Storage Access API")}}
 
-The **`hasUnpartitionedCookieAccess()`** method of the {{domxref("Document")}} interface returns a {{jsxref("Promise")}} that resolves with a boolean value indicating whether the document has access to [third-party](/en-US/docs/Web/HTTP/Cookies#third-party_cookies), [unpartitioned](/en-US/docs/Web/API/Storage_Access_API#unpartitioned_versus_partitioned_cookies) cookies.
+The **`hasUnpartitionedCookieAccess()`** method of the {{domxref("Document")}} interface returns a {{jsxref("Promise")}} that resolves with a boolean value indicating whether the document has access to [third-party](/en-US/docs/Web/Privacy/Third-party_cookies), [unpartitioned](/en-US/docs/Web/API/Storage_Access_API#unpartitioned_versus_partitioned_cookies) cookies.
 
 This method is part of the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
 

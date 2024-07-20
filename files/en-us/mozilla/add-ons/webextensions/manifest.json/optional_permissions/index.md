@@ -39,7 +39,7 @@ The [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/perm
 
 For advice on designing your request for runtime permissions, to maximize the likelihood that users grant them, see [Request permissions at runtime](https://extensionworkshop.com/documentation/develop/request-the-right-permissions/#request_permissions_at_runtime).
 
-Starting with Firefox 84, users will be able to manage optional permissions from the Firefox Add-ons Manager. Extensions that use optional permissions should listen for [browser.permissions.onAdded](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions/onAdded) and [browser.permissions.onRemoved](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions/onRemoved) API events to know when a user grants or revokes these permissions.
+Starting with Firefox 84, users can manage optional permissions from the Firefox Add-ons Manager. Extensions that use optional permissions can listen for [browser.permissions.onAdded](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions/onAdded) and [browser.permissions.onRemoved](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions/onRemoved) API events to know when a user grants or revokes these permissions.
 
 The key can contain two kinds of permissions: host permissions and API permissions.
 
@@ -47,10 +47,7 @@ The key can contain two kinds of permissions: host permissions and API permissio
 
 These are the same as the host permissions you can specify in the [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) key.
 
-> **Note:** When using Manifest V3 or higher:
->
-> - in Chrome, host permissions must be specified in the [`host_permission`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) manifest key.
-> - in Firefox, during the Manifest V3 developer preview, hosts can be in either `host_permissions` or `optional_permissions`. Subject to completion of [bug 1766026](https://bugzil.la/1766026), hosts will be specified in either `host_permissions` or `optional_host_permissions`.
+> **Note:** When using Manifest V3 or higher optional host permissions should be specified using the [`optional_host_permission`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_host_permissions) manifest key. Firefox introduced `optional_host_permission`in release 128, see [bug 1766026](https://bugzil.la/1766026), and allows for the continued use of `optional_permissions` to specify optional hosts. Use of `optional_host_permission` however is recommended.
 
 ## API permissions
 

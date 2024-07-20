@@ -15,14 +15,14 @@ Three objects derive from `CSSConditionRule`: {{domxref("CSSMediaRule")}}, {{dom
 
 ## Instance properties
 
-_Inherits properties from its ancestors {{domxref("CSSRule")}} and {{domxref("CSSGroupingRule")}}._
+_Inherits properties from its ancestors {{domxref("CSSGroupingRule")}} and {{domxref("CSSRule")}}._
 
-- {{domxref("CSSConditionRule.conditionText")}}
+- {{domxref("CSSConditionRule.conditionText")}} {{ReadOnlyInline}}
   - : Represents the text of the condition of the rule.
 
 ## Instance methods
 
-No specific methods; inherits methods from its ancestors {{domxref("CSSRule")}} and {{domxref("CSSGroupingRule")}}.
+_Inherits methods from its ancestors {{domxref("CSSGroupingRule")}} and {{domxref("CSSRule")}}._
 
 ## Specifications
 

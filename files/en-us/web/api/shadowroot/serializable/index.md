@@ -3,12 +3,10 @@ title: "ShadowRoot: serializable property"
 short-title: serializable
 slug: Web/API/ShadowRoot/serializable
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.ShadowRoot.serializable
 ---
 
-{{APIRef("Shadow DOM")}}{{SeeCompatTable}}
+{{APIRef("Shadow DOM")}}
 
 The **`serializable`** read-only property of the {{domxref("ShadowRoot")}} interface returns `true` if the shadow root is serializable.
 

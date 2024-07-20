@@ -51,7 +51,7 @@ A new string containing the extracted section of the string.
 - If `indexStart >= str.length`, an empty string is returned.
 - If `indexStart < 0`, the index is counted from the end of the string. More formally, in this case, the substring starts at `max(indexStart + str.length, 0)`.
 - If `indexStart` is omitted, undefined, or cannot be [converted to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), it's treated as `0`.
-- If `indexEnd` is omitted, undefined, or cannot be [converted to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), or if `indexEnd >= str.length`, `slice()` extracts to the end of the string.
+- If `indexEnd` is omitted or undefined, or if `indexEnd >= str.length`, `slice()` extracts to the end of the string.
 - If `indexEnd < 0`, the index is counted from the end of the string. More formally, in this case, the substring ends at `max(indexEnd + str.length, 0)`.
 - If `indexEnd <= indexStart` after normalizing negative values (i.e. `indexEnd` represents a character that's before `indexStart`), an empty string is returned.
 

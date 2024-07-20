@@ -21,11 +21,10 @@ The following custom utility function can be used to evaluate XPath expressions 
 // initial work.
 function evaluateXPath(aNode, aExpr) {
   const xpe = new XPathEvaluator();
-  const nsResolver = xpe.createNSResolver(
+  const nsResolver =
     aNode.ownerDocument === null
       ? aNode.documentElement
-      : aNode.ownerDocument.documentElement,
-  );
+      : aNode.ownerDocument.documentElement;
   const result = xpe.evaluate(aExpr, aNode, nsResolver, 0, null);
   const found = [];
   let res;
@@ -34,11 +33,11 @@ function evaluateXPath(aNode, aExpr) {
 }
 ```
 
-Note that `createNSResolver` should only be used if you are sure the namespace prefixes in the XPath expression match those in the document you want to query (and that no default namespace is being used (though see [document.createNSResolver](/en-US/docs/Web/API/Document/createNSResolver) for a workaround)). Otherwise, you have to provide your own implementation of XPathNSResolver.
+Note that the `documentElement` should only be used if you are sure the namespace prefixes in the XPath expression match those in the document you want to query (and that no default namespace is being used). Otherwise, you have to provide your own implementation of XPathNSResolver.
 
 #### Sample usage
 
-Assume we have the following XML document (see also [How to Create a DOM tree](/en-US/docs/Web/API/Document_Object_Model/How_to_create_a_DOM_tree) and [Parsing and serializing XML](/en-US/docs/Web/XML/Parsing_and_serializing_XML)):
+Assume we have the following XML document (see also [Parsing and serializing XML](/en-US/docs/Web/XML/Parsing_and_serializing_XML)):
 
 ##### Example: An XML document to use with the custom `evaluateXPath()` utility function
 

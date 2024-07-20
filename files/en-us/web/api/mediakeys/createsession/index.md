@@ -6,11 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.MediaKeys.createSession
 ---
 
-{{APIRef("EncryptedMediaExtensions")}}{{SecureContext_Header}}
+{{APIRef("Encrypted Media Extensions")}}{{SecureContext_Header}}
 
-The `MediaKeys.createSession()` method returns a new
-{{domxref("MediaKeySession")}} object, which represents a context for message exchange
-with a content decryption module (CDM).
+The `createSession()` method of the {{domxref("MediaKeys")}} interface returns a new {{domxref("MediaKeySession")}} object, which represents a context for message exchange with a content decryption module (CDM).
 
 ## Syntax
 

@@ -26,7 +26,7 @@ width: calc(100px * cos(pi));
 width: calc(100px * cos(e / 2));
 ```
 
-### Parameter
+### Parameters
 
 The `cos(angle)` function accepts only one value as its parameter.
 

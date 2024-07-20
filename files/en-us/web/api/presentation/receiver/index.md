@@ -50,7 +50,8 @@ let listElem = document.getElementById("connectionview");
 
 navigator.presentation.receiver.connectionList.then((connections) => {
   connections.forEach((aConnection) => {
-    listElem.innerHTML += `<li>${aConnection.id}</li>`;
+    listElem.appendChild(document.createElement("li")).textContent =
+      aConnection.id;
   });
 });
 ```

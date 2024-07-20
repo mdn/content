@@ -27,7 +27,7 @@ See also, [SVG Tutorial](/en-US/docs/Web/SVG/Tutorial).
   - : Details about each SVG element.
 - [SVG attribute reference](/en-US/docs/Web/SVG/Attribute)
   - : Details about each SVG attribute.
-- [SVG DOM interface reference](/en-US/docs/Web/API/Document_Object_Model#svg_interfaces)
+- [SVG DOM interface reference](/en-US/docs/Web/API/Document_Object_Model#svg_dom)
   - : Details about the SVG DOM API, for interaction with JavaScript.
 - [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
   - : SVG works together with {{Glossary("HTML")}}, {{Glossary("CSS")}} and {{Glossary("JavaScript")}}.

@@ -27,9 +27,9 @@ When a fragment of JavaScript code runs, it runs inside an **execution context**
 Each context is, in essence, a level of scope within your code. As one of these code segments begins execution, a new context is constructed in which to run it; that context is then destroyed when the code exits. Consider the JavaScript program below:
 
 ```js
-let outputElem = document.getElementById("output");
+const outputElem = document.getElementById("output");
 
-let userLanguages = {
+const userLanguages = {
   Mike: "en",
   Teresa: "es",
 };
@@ -37,7 +37,7 @@ let userLanguages = {
 function greetUser(user) {
   function localGreeting(user) {
     let greeting;
-    let language = userLanguages[user];
+    const language = userLanguages[user];
 
     switch (language) {
       case "es":
@@ -50,7 +50,7 @@ function greetUser(user) {
     }
     return greeting;
   }
-  outputElem.innerHTML += `${localGreeting(user)}<br>\r`;
+  outputElem.innerText += `${localGreeting(user)}\n`;
 }
 
 greetUser("Mike");

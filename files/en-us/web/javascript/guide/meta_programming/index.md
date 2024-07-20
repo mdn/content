@@ -52,7 +52,6 @@ The following table summarizes the available traps available to `Proxy` objects.
     <tr>
       <th>Handler / trap</th>
       <th>Interceptions</th>
-      <th>Invariants</th>
     </tr>
   </thead>
   <tbody>
@@ -63,20 +62,6 @@ The following table summarizes the available traps available to `Proxy` objects.
       <td>
         {{jsxref("Object.getPrototypeOf()")}}<br />{{jsxref("Reflect.getPrototypeOf()")}}<br />{{jsxref("Object/proto", "__proto__")}}<br />{{jsxref("Object.prototype.isPrototypeOf()")}}<br />{{jsxref("Operators/instanceof", "instanceof")}}
       </td>
-      <td>
-        <ul>
-          <li>
-            <code>getPrototypeOf</code> method must return an object or
-            <code>null</code>.
-          </li>
-          <li>
-            If <code><var>target</var></code> is not extensible,
-            <code>Object.getPrototypeOf(<var>proxy</var>)</code> method must
-            return the same value as
-            <code>Object.getPrototypeOf(<var>target</var>)</code>.
-          </li>
-        </ul>
-      </td>
     </tr>
     <tr>
       <td>
@@ -84,11 +69,6 @@ The following table summarizes the available traps available to `Proxy` objects.
       </td>
       <td>
         {{jsxref("Object.setPrototypeOf()")}}<br />{{jsxref("Reflect.setPrototypeOf()")}}
-      </td>
-      <td>
-        If <code><var>target</var></code> is not extensible, the
-        <code>prototype</code> parameter must be the same value as
-        <code>Object.getPrototypeOf(<var>target</var>)</code>.
       </td>
     </tr>
     <tr>
@@ -98,10 +78,6 @@ The following table summarizes the available traps available to `Proxy` objects.
       <td>
         {{jsxref("Object.isExtensible()")}}<br />{{jsxref("Reflect.isExtensible()")}}
       </td>
-      <td>
-        <code>Object.isExtensible(<var>proxy</var>)</code> must return the same
-        value as <code>Object.isExtensible(<var>target</var>)</code>.
-      </td>
     </tr>
     <tr>
       <td>
@@ -109,12 +85,6 @@ The following table summarizes the available traps available to `Proxy` objects.
       </td>
       <td>
         {{jsxref("Object.preventExtensions()")}}<br />{{jsxref("Reflect.preventExtensions()")}}
-      </td>
-      <td>
-        <code>Object.preventExtensions(<var>proxy</var>)</code> only returns
-        <code>true</code> if
-        <code>Object.isExtensible(<var>proxy</var>)</code> is
-        <code>false</code>.
       </td>
     </tr>
     <tr>
@@ -124,42 +94,6 @@ The following table summarizes the available traps available to `Proxy` objects.
       <td>
         {{jsxref("Object.getOwnPropertyDescriptor()")}}<br />{{jsxref("Reflect.getOwnPropertyDescriptor()")}}
       </td>
-      <td>
-        <ul>
-          <li>
-            <code>getOwnPropertyDescriptor</code> must return an object or
-            <code>undefined</code>.
-          </li>
-          <li>
-            A property cannot be reported as non-existent if it exists as a
-            non-configurable own property of <code><var>target</var></code
-            >.
-          </li>
-          <li>
-            A property cannot be reported as non-existent if it exists as an own
-            property of <code><var>target</var></code> and
-            <code><var>target</var></code> is not extensible.
-          </li>
-          <li>
-            A property cannot be reported as existent if it does not exists as
-            an own property of <code><var>target</var></code> and
-            <code><var>target</var></code> is not extensible.
-          </li>
-          <li>
-            A property cannot be reported as non-configurable if it does not
-            exist as an own property of <code><var>target</var></code> or if it
-            exists as a configurable own property of
-            <code><var>target</var></code
-            >.
-          </li>
-          <li>
-            The result of
-            <code>Object.getOwnPropertyDescriptor(<var>target</var>)</code> can
-            be applied to <code><var>target</var></code> using
-            <code>Object.defineProperty</code> and will not throw an exception.
-          </li>
-        </ul>
-      </td>
     </tr>
     <tr>
       <td>
@@ -167,37 +101,6 @@ The following table summarizes the available traps available to `Proxy` objects.
       </td>
       <td>
         {{jsxref("Object.defineProperty()")}}<br />{{jsxref("Reflect.defineProperty()")}}
-      </td>
-      <td>
-        <ul>
-          <li>
-            A property cannot be added if <code><var>target</var></code
-            > is not extensible.
-          </li>
-          <li>
-            A property cannot be added as (or modified to be)
-            non-configurable if it does not exist as a non-configurable own
-            property of <code><var>target</var></code
-            >.
-          </li>
-          <li>
-            A property may not be non-configurable if a corresponding
-            configurable property of <code><var>target</var></code> exists.
-          </li>
-          <li>
-            If a property has a corresponding target object property, then
-            <code
-              >Object.defineProperty(<var>target</var>, <var>prop</var>,
-              <var>descriptor</var>)</code
-            >
-            will not throw an exception.
-          </li>
-          <li>
-            In strict mode, a <code>false</code> value returned from the
-            <code>defineProperty</code> handler will throw a
-            {{jsxref("TypeError")}} exception.
-          </li>
-        </ul>
       </td>
     </tr>
     <tr>
@@ -214,20 +117,6 @@ The following table summarizes the available traps available to `Proxy` objects.
             ><br />{{jsxref("Reflect.has()")}}
           </dd>
         </dl>
-      </td>
-      <td>
-        <ul>
-          <li>
-            A property cannot be reported as non-existent, if it exists as a
-            non-configurable own property of <code><var>target</var></code
-            >.
-          </li>
-          <li>
-            A property cannot be reported as non-existent if it exists as an own
-            property of <code><var>target</var></code> and
-            <code><var>target</var></code> is not extensible.
-          </li>
-        </ul>
       </td>
     </tr>
     <tr>
@@ -250,22 +139,6 @@ The following table summarizes the available traps available to `Proxy` objects.
           </dd>
         </dl>
       </td>
-      <td>
-        <ul>
-          <li>
-            The value reported for a property must be the same as the value of
-            the corresponding <code><var>target</var></code> property if
-            <code><var>target</var></code
-            >'s property is a non-writable, non-configurable data property.
-          </li>
-          <li>
-            The value reported for a property must be <code>undefined</code> if
-            the corresponding <code><var>target</var></code> property is
-            non-configurable accessor property that has undefined as its
-            <code>[[Get]]</code> attribute.
-          </li>
-        </ul>
-      </td>
     </tr>
     <tr>
       <td>
@@ -287,27 +160,6 @@ The following table summarizes the available traps available to `Proxy` objects.
             <!-- markdownlint-enable MD011 -->
         </dl>
       </td>
-      <td>
-        <ul>
-          <li>
-            Cannot change the value of a property to be different from the value
-            of the corresponding <code><var>target</var></code> property if the
-            corresponding <code><var>target</var></code> property is a
-            non-writable, non-configurable data property.
-          </li>
-          <li>
-            Cannot set the value of a property if the corresponding
-            <code><var>target</var></code> property is a non-configurable
-            accessor property that has <code>undefined</code> as its
-            <code>[[Set]]</code> attribute.
-          </li>
-          <li>
-            In strict mode, a <code>false</code> return value from the
-            <code>set</code> handler will throw a
-            {{jsxref("TypeError")}} exception.
-          </li>
-        </ul>
-      </td>
     </tr>
     <tr>
       <td>
@@ -323,11 +175,6 @@ The following table summarizes the available traps available to `Proxy` objects.
           </dd>
         </dl>
       </td>
-      <td>
-        A property cannot be deleted if it exists as a non-configurable own
-        property of <code><var>target</var></code
-        >.
-      </td>
     </tr>
     <tr>
       <td>
@@ -335,26 +182,6 @@ The following table summarizes the available traps available to `Proxy` objects.
       </td>
       <td>
         {{jsxref("Object.getOwnPropertyNames()")}}<br />{{jsxref("Object.getOwnPropertySymbols()")}}<br />{{jsxref("Object.keys()")}}<br />{{jsxref("Reflect.ownKeys()")}}
-      </td>
-      <td>
-        <ul>
-          <li>The result of <code>ownKeys</code> is a List.</li>
-          <li>
-            The Type of each result List element is either
-            {{jsxref("String")}} or {{jsxref("Symbol")}}.
-          </li>
-          <li>
-            The result List must contain the keys of all non-configurable own
-            properties of <code><var>target</var></code
-            >.
-          </li>
-          <li>
-            If the <code><var>target</var></code> object is not extensible, then
-            the result List must contain all the keys of the own properties of
-            <code><var>target</var></code
-            > and no other values.
-          </li>
-        </ul>
       </td>
     </tr>
     <tr>
@@ -366,10 +193,6 @@ The following table summarizes the available traps available to `Proxy` objects.
         ><br />{{jsxref("Function.prototype.apply()")}} and
         {{jsxref("Function.prototype.call()")}}<br />{{jsxref("Reflect.apply()")}}
       </td>
-      <td>
-        There are no invariants for the
-        <code><var>handler</var>.apply</code> method.
-      </td>
     </tr>
     <tr>
       <td>
@@ -379,7 +202,6 @@ The following table summarizes the available traps available to `Proxy` objects.
         <code>new proxy(...args)</code
         ><br />{{jsxref("Reflect.construct()")}}
       </td>
-      <td>The result must be an <code>Object</code>.</td>
     </tr>
   </tbody>
 </table>

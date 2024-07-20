@@ -13,6 +13,7 @@ interface replaces the current resource with the one at the provided URL. The di
 from the {{domxref("Location.assign","assign()")}} method is that after using
 `replace()` the current page will not be saved in session {{domxref("History")}},
 meaning the user won't be able to use the _back_ button to navigate to it.
+Not to be confused with the {{jsxref("String")}} method {{jsxref("String.prototype.replace()")}}.
 
 ## Syntax
 

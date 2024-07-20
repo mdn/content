@@ -8,11 +8,19 @@ browser-compat: api.Element.wheel_event
 
 {{APIRef}}
 
-The **`wheel`** event fires when the user rotates a wheel button on a pointing device (typically a mouse).
+The **`wheel`** event fires when the user rotates a wheel button on a pointing device (typically a mouse). It is also fired for related devices that simulate wheel actions, such as trackpads and mouse balls.
 
 This event replaces the non-standard deprecated {{domxref("Element/mousewheel_event", "mousewheel")}} event.
 
-> **Note:** Don't confuse the `wheel` event with the {{domxref("Element/scroll_event", "scroll")}} event. The default action of a `wheel` event is implementation-specific, and doesn't necessarily dispatch a `scroll` event. Even when it does, the `delta*` values in the `wheel` event don't necessarily reflect the content's scrolling direction. Therefore, do not rely on the `wheel` event's `delta*` properties to get the scrolling direction. Instead, detect value changes of {{domxref("Element.scrollLeft", "scrollLeft")}} and {{domxref("Element.scrollTop", "scrollTop")}} of the target in the `scroll` event.
+Don't confuse the `wheel` event with the {{domxref("Element/scroll_event", "scroll")}} event:
+
+- A `wheel` event doesn't necessarily dispatch a `scroll` event. For example, the element may be unscrollable at all. Zooming actions using the wheel or trackpad also fire `wheel` events.
+- A `scroll` event isn't necessarily triggered by a `wheel` event. Elements can also be scrolled by using the keyboard, dragging a scrollbar, or using JavaScript.
+- Even when the `wheel` event does trigger scrolling, the `delta*` values in the `wheel` event don't necessarily reflect the content's scrolling direction.
+
+Therefore, do not rely on the `wheel` event's `delta*` properties to get the scrolling direction. Instead, detect value changes of {{domxref("Element.scrollLeft", "scrollLeft")}} and {{domxref("Element.scrollTop", "scrollTop")}} of the target in the `scroll` event.
+
+The `wheel` event is cancelable. If the event is canceled, no scrolling or zooming is performed. This may cause performance issues as the browser has to wait for every wheel event to be processed before actually scrolling the content. You can avoid this by setting `passive: true` when calling {{domxref("EventTarget.addEventListener", "addEventListener()")}}, which may cause the browser to generate non-cancelable `wheel` events.
 
 ## Syntax
 

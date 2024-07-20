@@ -17,5 +17,6 @@ See the {{domxref("UserActivation.hasBeenActive")}} property to programmatically
 ## See also
 
 - [HTML Living Standard > Sticky activation](https://html.spec.whatwg.org/multipage/interaction.html#sticky-activation)
-- {{Glossary("Transient activation")}}
+- Related glossary terms:
+  - {{Glossary("Transient activation")}}
 - {{domxref("UserActivation.hasBeenActive")}}

@@ -15,24 +15,7 @@ The **`<s>`** [HTML](/en-US/docs/Web/HTML) element renders text with a strikethr
 
 This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-## Examples
-
-```css
-.sold-out {
-  text-decoration: line-through;
-}
-```
-
-```html
-<s>Today's Special: Salmon</s> SOLD OUT<br />
-<span class="sold-out">Today's Special: Salmon</span> SOLD OUT
-```
-
-### Result
-
-{{EmbedLiveSample("Examples")}}
-
-## Accessibility concerns
+## Accessibility
 
 The presence of the `s` element is not announced by most screen reading technology in its default configuration. It can be made to be announced by using the CSS {{cssxref("content")}} property, along with the {{cssxref("::before")}} and {{cssxref("::after")}} pseudo-elements.
 
@@ -61,6 +44,23 @@ Some people who use screen readers deliberately disable announcing content that 
 
 - [Short note on making your mark (more accessible) | The Paciello Group](https://www.tpgi.com/short-note-on-making-your-mark-more-accessible/)
 - [Tweaking Text Level Styles | Adrian Roselli](https://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
+
+## Examples
+
+```css
+.sold-out {
+  text-decoration: line-through;
+}
+```
+
+```html
+<s>Today's Special: Salmon</s> SOLD OUT<br />
+<span class="sold-out">Today's Special: Salmon</span> SOLD OUT
+```
+
+### Result
+
+{{EmbedLiveSample("Examples")}}
 
 ## Technical summary
 

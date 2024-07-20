@@ -30,6 +30,12 @@ The `<br>` element has a single, well-defined purpose — to create a line break
 
 You can set a {{cssxref("margin")}} on `<br>` elements themselves to increase the spacing between the lines of text in the block, but this is a bad practice — you should use the {{cssxref("line-height")}} property that was designed for that purpose.
 
+## Accessibility
+
+Creating separate paragraphs of text using `<br>` is not only bad practice, it is problematic for people who navigate with the aid of screen reading technology. Screen readers may announce the presence of the element, but not any content contained within `<br>`s. This can be a confusing and frustrating experience for the person using the screen reader.
+
+Use `<p>` elements, and use CSS properties like {{cssxref("margin")}} to control their spacing.
+
 ## Examples
 
 ### Simple br
@@ -47,12 +53,6 @@ USA<br />
 #### Result
 
 {{ EmbedLiveSample('Simple_br', 640, 120) }}
-
-## Accessibility concerns
-
-Creating separate paragraphs of text using `<br>` is not only bad practice, it is problematic for people who navigate with the aid of screen reading technology. Screen readers may announce the presence of the element, but not any content contained within `<br>`s. This can be a confusing and frustrating experience for the person using the screen reader.
-
-Use `<p>` elements, and use CSS properties like {{cssxref("margin")}} to control their spacing.
 
 ## Technical summary
 

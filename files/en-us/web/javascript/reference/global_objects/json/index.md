@@ -89,8 +89,8 @@ Insignificant {{Glossary("whitespace")}} may be present anywhere except within a
 
 ## Static properties
 
-- `JSON[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"JSON"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+- `JSON[Symbol.toStringTag]`
+  - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"JSON"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Static methods
 

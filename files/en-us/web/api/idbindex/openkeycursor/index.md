@@ -76,7 +76,7 @@ corresponding primary key of the referenced record into an HTML table.
 
 ```js
 function displayDataByIndex() {
-  tableEntry.innerHTML = "";
+  tableEntry.textContent = "";
   const transaction = db.transaction(["contactsList"], "readonly");
   const objectStore = transaction.objectStore("contactsList");
 
@@ -86,8 +86,10 @@ function displayDataByIndex() {
     const cursor = event.target.result;
     if (cursor) {
       const tableRow = document.createElement("tr");
-      tableRow.innerHTML =
-        `<td>${cursor.key}</td>` + `<td>${cursor.primaryKey}</td>`;
+      tableRow.appendChild(document.createElement("td")).textContent =
+        cursor.key;
+      tableRow.appendChild(document.createElement("td")).textContent =
+        cursor.primaryKey;
       tableEntry.appendChild(tableRow);
 
       cursor.continue();

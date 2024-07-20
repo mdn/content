@@ -26,11 +26,11 @@ None.
 An object representing week information associated with the Locale data specified in [UTS 35's Week Elements](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Patterns_Week_Elements). It has the following properties:
 
 - `firstDay`
-  - : An integer indicating the first day of the week for the locale. Can be either `1` (Monday) or `7` (Sunday).
+  - : An integer between 1 (Monday) and 7 (Sunday) indicating the first day of the week for the locale. Commonly 1, 5, 6, or 7.
 - `weekend`
-  - : An array of integers indicating the weekend days for the locale, where `1` is Monday and `7` is Sunday.
+  - : An array of integers between 1 and 7 indicating the weekend days for the locale. This is usually continuous because UTS 35 stores `weekendStart` and `weekendEnd` instead.
 - `minimalDays`
-  - : An integer between 1 and 7 indicating the minimal days required in the first week of a month or year, for calendar purposes.
+  - : An integer between 1 and 7 (commonly 1 and 4) indicating the minimal days required in the first week of a month or year, for week-of-year or week-of-month calculations (e.g. The 20th week of the year). For example, in the [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) calendar, the first week of a year must have at least 4 days in this year, so if January 1 is a Friday, Saturday, or Sunday, it will be numbered as part of the last week of the previous year.
 
 ## Examples
 
@@ -39,18 +39,20 @@ An object representing week information associated with the Locale data specifie
 Return the week information for a given `Locale`.
 
 ```js
-const he = new Intl.Locale("he");
+const he = new Intl.Locale("he"); // Hebrew (Israel)
 console.log(he.getWeekInfo()); // { firstDay: 7, weekend: [5, 6], minimalDays: 1 }
 
-const af = new Intl.Locale("af");
+const af = new Intl.Locale("af"); // Afrikaans (South Africa)
 console.log(af.getWeekInfo()); // { firstDay: 7, weekend: [6, 7], minimalDays: 1 }
 
-const enGB = new Intl.Locale("en-GB");
+const enGB = new Intl.Locale("en-GB"); // English (United Kingdom)
 console.log(enGB.getWeekInfo()); // { firstDay: 1, weekend: [6, 7], minimalDays: 4 }
 
-const msBN = new Intl.Locale("ms-BN");
-console.log(msBN.getWeekInfo()); // { firstDay: 7, weekend: [5, 7], minimalDays: 1 }
-// Brunei weekend is Friday and Sunday but not Saturday
+const arAF = new Intl.Locale("ar-AF"); // Arabic (Afghanistan)
+console.log(arAF.getWeekInfo()); // { firstDay: 6, weekend: [4, 5], minimalDays: 1 }
+
+const dvMV = new Intl.Locale("dv-MV"); // Divehi (Maldives)
+console.log(dvMV.getWeekInfo()); // { firstDay: 5, weekend: [6, 7], minimalDays: 1 }
 ```
 
 ## Specifications

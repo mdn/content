@@ -608,7 +608,7 @@ Notes:
 1. The operand can be any expression.
 2. The "right-hand side" must be an identifier.
 3. The "right-hand side" can be any expression.
-4. The "right-hand side" is a comma-separated list of any expression with precedence > 1 (i.e. not comma expressions).
+4. The "right-hand side" is a comma-separated list of any expression with precedence > 1 (i.e. not comma expressions). The constructor of a `new` expression cannot be an optional chain.
 5. The operand must be a valid assignment target (identifier or property access). Its precedence means `new Foo++` is `(new Foo)++` (a syntax error) and not `new (Foo++)` (a TypeError: (Foo++) is not a constructor).
 6. The operand must be a valid assignment target (identifier or property access).
 7. The operand cannot be an identifier or a [private property](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) access.
@@ -618,3 +618,14 @@ Notes:
 11. The associativity means the two expressions after `?` are implicitly grouped.
 12. The "left-hand side" is a single identifier or a parenthesized parameter list.
 13. Only valid inside object literals, array literals, or argument lists.
+
+The precedence of groups 17 and 16 may be a bit ambiguous. Here are a few examples to clarify.
+
+- Optional chaining is always substitutable for its respective syntax without optionality (barring a few special cases where optional chaining is forbidden). For example, any place that accepts `a?.b` also accepts `a.b` and vice versa, and similarly for `a?.()`, `a()`, etc.
+- Member expressions and computed member expressions are always substitutable for each other.
+- Call expressions and `import()` expressions are always substitutable for each other.
+- This leaves four classes of expressions: member access, `new` with arguments, function call, and `new` without arguments.
+  - The "left-hand side" of a member access can be: a member access (`a.b.c`), `new` with arguments (`new a().b`), and function call (`a().b`).
+  - The "left-hand side" of `new` with arguments can be: a member access (`new a.b()`) and `new` with arguments (`new new a()()`).
+  - The "left-hand side" of a function call can be: a member access (`a.b()`), `new` with arguments (`new a()()`), and function call (`a()()`).
+  - The operand of `new` without arguments can be: a member access (`new a.b`), `new` with arguments (`new new a()`), and `new` without arguments (`new new a`).

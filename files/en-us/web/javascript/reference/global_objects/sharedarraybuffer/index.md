@@ -93,7 +93,7 @@ For security reasons, `SharedArrayBuffer`s cannot be reduced in size, only grown
 
 ## Static properties
 
-- {{jsxref("SharedArrayBuffer/@@species", "SharedArrayBuffer[@@species]")}}
+- [`SharedArrayBuffer[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/Symbol.species)
   - : Returns the constructor used to construct return values from `SharedArrayBuffer` methods.
 
 ## Instance properties
@@ -108,8 +108,8 @@ These properties are defined on `SharedArrayBuffer.prototype` and shared by all 
   - : Read-only. Returns `true` if the `SharedArrayBuffer` can be grown, or `false` if not.
 - {{jsxref("SharedArrayBuffer.prototype.maxByteLength")}}
   - : The read-only maximum length, in bytes, that the `SharedArrayBuffer` can be grown to. This is established when the array is constructed and cannot be changed.
-- `SharedArrayBuffer.prototype[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"SharedArrayBuffer"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+- `SharedArrayBuffer.prototype[Symbol.toStringTag]`
+  - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"SharedArrayBuffer"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 

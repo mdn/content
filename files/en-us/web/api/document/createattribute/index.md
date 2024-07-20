@@ -23,7 +23,8 @@ createAttribute(name)
 
 ### Parameters
 
-- `name` is a string containing the name of the attribute.
+- `name`
+  - : A string containing the name of the attribute.
 
 ### Return value
 

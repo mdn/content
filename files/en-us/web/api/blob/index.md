@@ -33,6 +33,8 @@ The APIs accepting `Blob` objects are also listed in the {{DOMxRef("File")}} doc
 
 - {{DOMxRef("Blob.arrayBuffer()")}}
   - : Returns a promise that resolves with an {{jsxref("ArrayBuffer")}} containing the entire contents of the `Blob` as binary data.
+- {{DOMxRef("Blob.bytes()")}}
+  - : Returns a promise that resolves with an {{jsxref("Uint8Array")}} containing the contents of the `Blob`.
 - {{DOMxRef("Blob.slice()")}}
   - : Returns a new `Blob` object containing the data in the specified range of bytes of the blob on which it's called.
 - {{DOMxRef("Blob.stream()")}}

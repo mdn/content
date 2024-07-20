@@ -10,13 +10,13 @@ The `choose` function returns one of the specified objects based on a boolean pa
 
 > **Note:** This method should be used instead of `if ()`, which has been deprecated.
 
-### Syntax
+## Syntax
 
 ```plain
 choose( boolean, object1, object2 )
 ```
 
-### Arguments
+### Parameters
 
 - `boolean`
   - : The boolean operation to use when determining which object to return.
@@ -25,16 +25,16 @@ choose( boolean, object1, object2 )
 - `object2`
   - : The second object to consider returning.
 
-### Returns
+### Return value
 
 If the boolean parameter is true, the first object is returned; otherwise, the second object is returned.
 
 > **Note:** All parameters are evaluated, even the one that's not returned.
 
-### Defined
+## Specifications
 
 [XForms 1.1](https://www.w3.org/TR/xforms11/#fn-choose)
 
-### Gecko support
+## Gecko support
 
 Supported.

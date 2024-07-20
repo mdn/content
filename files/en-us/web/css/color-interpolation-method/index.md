@@ -2,20 +2,13 @@
 title: <color-interpolation-method>
 slug: Web/CSS/color-interpolation-method
 page-type: css-type
-browser-compat:
-  - css.types.color.color-mix
-  - css.types.image.gradient.conic-gradient.interpolation_color_space
-  - css.types.image.gradient.linear-gradient.interpolation_color_space
-  - css.types.image.gradient.radial-gradient.interpolation_color_space
-  - css.types.image.gradient.repeating-conic-gradient.interpolation_color_space
-  - css.types.image.gradient.repeating-linear-gradient.interpolation_color_space
-  - css.types.image.gradient.repeating-radial-gradient.interpolation_color_space
+browser-compat: css.types.color.color-mix
 spec-urls: https://drafts.csswg.org/css-color/#interpolation-space
 ---
 
 {{CSSRef}}
 
-The **`<color-interpolation-method>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents the color space used for interpolation between {{CSSXref("&lt;color&gt;")}} values. It can be used to override the default interpolation color space for color-related functional notations such as {{CSSXref("color_value/color-mix", "color-mix()")}} and {{CSSXref("gradient/linear-gradient", "linear-gradient()")}}.
+The **`<color-interpolation-method>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents the [color space](/en-US/docs/Glossary/Color_space) used for interpolation between {{CSSXref("&lt;color&gt;")}} values. It can be used to override the default interpolation color space for color-related functional notations such as {{CSSXref("color_value/color-mix", "color-mix()")}} and {{CSSXref("gradient/linear-gradient", "linear-gradient()")}}.
 
 When interpolating `<color>` values, the interpolation color space defaults to Oklab.
 
@@ -66,49 +59,6 @@ The following example shows the effect of using different interpolation color sp
 
 #### CSS
 
-```css hidden
-/* Fallback styles */
-.srgb {
-  background-image: linear-gradient(
-    to right,
-    rgb(0% 0% 100%),
-    rgb(20% 0% 80%),
-    rgb(40% 0% 60%),
-    rgb(60% 0% 40%),
-    rgb(80% 0% 20%),
-    rgb(100% 0% 0%)
-  );
-}
-.oklab {
-  background-image: linear-gradient(
-    to right,
-    oklab(45.2% -0.032 -0.312),
-    oklab(48.7% 0.019 -0.224),
-    oklab(52.2% 0.07 -0.137),
-    oklab(55.8% 0.122 -0.049),
-    oklab(59.3% 0.173 0.038),
-    oklab(62.8% 0.225 0.126)
-  );
-}
-.oklch-longer {
-  background-image: linear-gradient(
-    to right,
-    oklch(45.2% 0.313 264),
-    oklch(46.8% 0.308 243),
-    oklch(48.4% 0.303 221),
-    oklch(50% 0.298 200),
-    oklch(51.6% 0.293 179),
-    oklch(53.2% 0.288 157),
-    oklch(54.8% 0.283 136),
-    oklch(56.4% 0.278 115),
-    oklch(58% 0.273 93),
-    oklch(59.6% 0.268 72),
-    oklch(61.2% 0.263 51),
-    oklch(62.8% 0.258 29)
-  );
-}
-```
-
 ```css
 .gradient {
   height: 50px;
@@ -128,6 +78,69 @@ The following example shows the effect of using different interpolation color sp
 #### Result
 
 {{EmbedLiveSample("comparing_interpolation_color_spaces_using_gradients", "100%", 250)}}
+
+### Color interpolation in repeating gradients
+
+The following example shows how to specify a color space when interpolating colors in repeating gradients.
+Three boxes show different types of repeating gradients using the [`repeating-conic-gradient()`](/en-US/docs/Web/CSS/gradient/repeating-conic-gradient), [`repeating-linear-gradient()`](/en-US/docs/Web/CSS/gradient/repeating-linear-gradient), and [`repeating-radial-gradient()`](/en-US/docs/Web/CSS/gradient/repeating-radial-gradient) functions.
+The first box uses the Lab color space to interpolate between two color values.
+The second and third boxes use Oklch and additionally provide a [`<hue-interpolation-method>`](/en-US/docs/Web/CSS/hue-interpolation-method) to specify how to interpolate between hue values.
+
+#### HTML
+
+```html
+<div class="gradient conic">conic</div>
+<div class="gradient linear">linear</div>
+<div class="gradient radial">radial</div>
+```
+
+#### CSS
+
+We used the same two colors in each gradient to demonstrate the different effects of [`<hue-interpolation-method>`](/en-US/docs/Web/CSS/hue-interpolation-method) and {{glossary("color space")}} on color interpolation in gradients.
+
+```css hidden
+.gradient {
+  height: 200px;
+  width: 200px;
+  display: inline-block;
+  font-family: monospace;
+  margin: 10px;
+  font-size: 16px;
+}
+```
+
+```css
+.conic {
+  background-image: repeating-conic-gradient(
+    in lab,
+    burlywood,
+    blueviolet 120deg
+  );
+}
+
+.linear {
+  background-image: repeating-linear-gradient(
+    in oklch,
+    burlywood,
+    blueviolet 75px
+  );
+}
+
+.radial {
+  background-image: repeating-radial-gradient(
+    in oklch longer hue,
+    blueviolet 50px,
+    burlywood 100px
+  );
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("hue_interpolation_in_repeating_gradients", "100%", 250)}}
+
+Comparing the first and second boxes demonstrates the difference of interpolating between two colors in differing color spaces.
+Comparing the second and third boxes shows the difference between [`<hue-interpolation-method>`](/en-US/docs/Web/CSS/hue-interpolation-method)s, with the linear gradient using the shorter method (default) and the radial gradient using the longer method.
 
 ## Specifications
 

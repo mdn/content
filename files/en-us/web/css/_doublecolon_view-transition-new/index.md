@@ -9,34 +9,45 @@ browser-compat: css.selectors.view-transition-new
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`::view-transition-new`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the "new" view state of a view transition — a live representation of the new view, after the transition.
+The **`::view-transition-new`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the "new" view state of a view transition — a snapshot live representation of the state after the transition.
 
-During a view transition, `::view-transition-new` is included in the associated pseudo-element tree as explained in [The view transition process](/en-US/docs/Web/API/View_Transitions_API#the_view_transition_process). It is only ever a child of a {{cssxref("::view-transition-image-pair")}}, and never has any children.
+During a view transition, `::view-transition-new` is included in the associated pseudo-element tree as explained in [The view transition pseudo-element tree](/en-US/docs/Web/API/View_Transitions_API/Using#the_view_transition_pseudo-element_tree). It is only ever a child of a {{cssxref("::view-transition-image-pair")}}, and never has any children.
 
-It is a replaced element, and therefore can be manipulated with properties such as {{cssxref("object-fit")}} and {{cssxref("object-position")}}. It has natural dimensions equal to the content's size.
+It is a replaced element and therefore can be manipulated with properties such as {{cssxref("object-fit")}} and {{cssxref("object-position")}}. It has natural dimensions equal to the content's size.
 
 The following default styling is included in the UA stylesheet:
 
 ```css
-@keyframes -ua-view-transition-fade-in {
-  from {
-    opacity: 0;
-  }
-}
-
-html::view-transition-new(*) {
+:root::view-transition-old(*),
+:root::view-transition-new(*) {
   position: absolute;
   inset-block-start: 0;
   inline-size: 100%;
   block-size: auto;
 
-  animation-name: -ua-view-transition-fade-in;
   animation-duration: inherit;
   animation-fill-mode: inherit;
+  animation-delay: inherit;
+}
+
+/* Keyframes for blending when there are 2 images */
+@keyframes -ua-mix-blend-mode-plus-lighter {
+  from {
+    mix-blend-mode: plus-lighter;
+  }
+  to {
+    mix-blend-mode: plus-lighter;
+  }
+}
+
+@keyframes -ua-view-transition-fade-in {
+  from {
+    opacity: 0;
+  }
 }
 ```
 
-> **Note:** Additional view transition style sheet styles are also setup to animate `::view-transition-new`. These are dynamically generated during the view transition; see the specification [setup transition pseudo-elements](https://drafts.csswg.org/css-view-transitions-1/#setup-transition-pseudo-elements) and [update pseudo-element styles](https://drafts.csswg.org/css-view-transitions-1/#update-pseudo-element-styles) sections for more details.
+> **Note:** Additional view transition styles are also setup to animate `::view-transition-new`. These are dynamically generated during the view transition; see the specification [setup transition pseudo-elements](https://drafts.csswg.org/css-view-transitions-1/#setup-transition-pseudo-elements) and [update pseudo-element styles](https://drafts.csswg.org/css-view-transitions-1/#update-pseudo-element-styles) sections for more details.
 
 ## Syntax
 
@@ -51,9 +62,9 @@ html::view-transition-new(*) {
 - `*`
   - : Causes the pseudo-element to match all view transition groups.
 - `root`
-  - : Causes the pseudo-element to match the default `root` view transition group created by the user agent to contain the view transition for the overall page, meaning any element not assigned to its own specific view transition group via the {{cssxref("view-transition-name")}} property.
+  - : Causes the pseudo-element to match the default `root` view transition snapshot group created by the user agent to contain the view transition for the overall page. This group includes any element not assigned to its own specific view transition snapshot group via the {{cssxref("view-transition-name")}} property.
 - {{cssxref("custom-ident")}}
-  - : Causes the pseudo-element to match a specific view transition group created by assigning the given {{cssxref("custom-ident")}} to an element via the {{cssxref("view-transition-name")}} property.
+  - : Causes the pseudo-element to match a specific view transition snapshot group created by assigning the given {{cssxref("custom-ident")}} to an element via the {{cssxref("view-transition-name")}} property.
 
 ## Examples
 

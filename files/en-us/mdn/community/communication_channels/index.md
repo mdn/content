@@ -6,7 +6,7 @@ page-type: mdn-community-guide
 
 {{MDNSidebar}}
 
-There are various communication channels using which community can contact MDN Web Docs staff and participate in discussions.
+There are various communication channels that the community can use to contact MDN Web Docs staff and participate in discussions.
 
 ## Chat rooms
 

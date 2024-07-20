@@ -2,7 +2,9 @@
 title: "HTML attribute: size"
 slug: Web/HTML/Attributes/size
 page-type: html-attribute
-browser-compat: html.elements.attribute.size
+browser-compat:
+  - html.elements.select.size
+  - html.elements.input.size
 ---
 
 {{HTMLSidebar}}

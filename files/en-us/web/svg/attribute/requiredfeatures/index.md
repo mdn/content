@@ -174,7 +174,7 @@ The following are the feature strings for the `requiredFeatures` attribute. Thes
 - `http://www.w3.org/TR/SVG11/feature#SVGDOM-dynamic`
   - : The browser supports all DOM interfaces and methods to the language features for `http://www.w3.org/TR/SVG11/feature#SVG-dynamic`.
 - `http://www.w3.org/TR/SVG11/feature#CoreAttribute`
-  - : The browser supports the {{SVGAttr("id")}}, {{SVGAttr("xml:base")}}, {{SVGAttr("xml:lang")}} and {{SVGAttr("xml:space")}} attributes
+  - : The browser supports the {{SVGAttr("id")}}, {{SVGAttr("xml:lang")}} and {{SVGAttr("xml:space")}} attributes
 - `http://www.w3.org/TR/SVG11/feature#Structure`
   - : The browser supports {{SVGElement("svg")}}, {{SVGElement("g")}}, {{SVGElement("defs")}}, {{SVGElement("desc")}}, {{SVGElement("title")}}, {{SVGElement("metadata")}}, {{SVGElement("symbol")}} and {{SVGElement("use")}} elements.
 - `http://www.w3.org/TR/SVG11/feature#BasicStructure`

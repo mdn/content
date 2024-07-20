@@ -107,7 +107,7 @@ None ({{jsxref("undefined")}}).
 ```js
 document.body.onclick = (event) => {
   const elementTag = event.target.tagName.toLowerCase();
-  document.getElementById("out").innerHTML = elementTag;
+  document.getElementById("out").textContent = elementTag;
 };
 
 const simulateClick = () => {

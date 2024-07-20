@@ -18,13 +18,6 @@ A WebRTC data channel lets you send text or binary data over an active connectio
 
 We have [documentation for using WebRTC](/en-US/docs/Web/API/WebRTC_API). This article, however, will take advantage of some libraries that can help trivialize the work, and will demonstrate ways to use abstraction to work around implementation differences between browsers. Hopefully, of course, those differences will fade away in time.
 
-## Using the p2p library
-
-One library you can use is the [p2p](https://github.com/js-platform/p2p) library. This library provides a simple API for creating peer connections and setting up streams and data channels. There's also a broker server component and a hosted broker you can use instead of having to set one up for yourself.
-
-> [!NOTE]
-> We will continue to add content here soon; there are some organizational issues to sort out.
-
 ## Original Document Information
 
 - Author(s): Alan Kligman

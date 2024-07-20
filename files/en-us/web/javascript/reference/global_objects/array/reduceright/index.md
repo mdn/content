@@ -49,7 +49,7 @@ Unlike other [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Obj
 
 The `reduceRight()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
 
-All caveats about `reduce` discussed in [when not to use reduce()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce#when_not_to_use_reduce) apply to `reduceRight` as well. Because JavaScript has no lazy evaluation semantics, there is no performance difference between `reduce` and `reduceRight`.
+All caveats about `reduce` discussed in [when to not use reduce()](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce#when_to_not_use_reduce) apply to `reduceRight` as well. Because JavaScript has no lazy evaluation semantics, there is no performance difference between `reduce` and `reduceRight`.
 
 ## Examples
 

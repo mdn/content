@@ -18,6 +18,8 @@ The element's width is set to the value of `min-width` whenever `min-width` is l
 ```css
 /* <length> value */
 min-width: 3.5em;
+min-width: anchor-size(width);
+min-width: anchor-size(--myAnchor self-inline, 200%);
 
 /* <percentage> value */
 min-width: 10%;
@@ -43,13 +45,17 @@ min-width: unset;
 - {{cssxref("&lt;percentage&gt;")}}
   - : Defines the `min-width` as a percentage of the containing block's width.
 - `auto`
-  - : The browser will calculate and select a `min-width` for the specified element.
+
+  - : The default value. The source of the automatic value for the specified element depends on its display value. For block boxes, inline boxes, inline blocks, and all table layout boxes `auto` resolves to `0`.
+
+    For [flex items](/en-US/docs/Glossary/Flex_Item) and grid items, the minimum width value is either the specified suggested size, such as the value of the `width` property, the transferred size, calculated if the element has an `aspect-ratio` set and the height is a definite size, otherwise, the `min-content` size is used. If the flex or grid item is a {{glossary("scroll container")}}, or if a grid item spans more than one flexible column track, the automatic minimum size is `0`.
+
 - `max-content`
   - : The intrinsic preferred `min-width`.
 - `min-content`
   - : The intrinsic minimum `min-width`.
 - `fit-content`
-  - : Use the available space, but not more than [max-content](/en-US/docs/Web/CSS/max-content), i.e `min(max-content, max(min-content, stretch))`.
+  - : Use the available space, but not more than [`max-content`](/en-US/docs/Web/CSS/max-content), i.e. `min(max-content, max(min-content, stretch))`.
 - `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
   - : Uses the `fit-content` formula with the available space replaced by the specified argument, i.e. `min(max-content, max(min-content, argument))`.
 

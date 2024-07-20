@@ -36,5 +36,6 @@ The preflight response can be optionally cached for the requests created in the 
 
 ## See also
 
-- {{Glossary("CORS")}}
+- Related glossary terms:
+  - {{Glossary("CORS")}}
 - {{HTTPMethod("OPTIONS")}}

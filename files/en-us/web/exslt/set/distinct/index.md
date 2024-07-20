@@ -19,7 +19,7 @@ set:distinct(nodeSet)
 - `nodeSet`
   - : The node-set in which to find unique nodes.
 
-### Returns
+### Return value
 
 A node-set containing the nodes that have unique string values.
 

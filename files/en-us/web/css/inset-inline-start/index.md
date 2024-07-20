@@ -9,6 +9,8 @@ browser-compat: css.properties.inset-inline-start
 
 The **`inset-inline-start`** [CSS](/en-US/docs/Web/CSS) property defines the logical inline start inset of an element, which maps to a physical offset depending on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, or {{cssxref("left")}} property depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
 
+This {{glossary("inset properties", "inset property")}} has no effect on non-positioned elements.
+
 {{EmbedInteractiveExample("pages/css/inset-inline-start.html")}}
 
 ## Syntax
@@ -17,6 +19,8 @@ The **`inset-inline-start`** [CSS](/en-US/docs/Web/CSS) property defines the log
 /* <length> values */
 inset-inline-start: 3px;
 inset-inline-start: 2.4em;
+inset-inline-start: anchor(self-end);
+inset-inline-start: calc(anchor(--myAnchor 50%) + 10px);
 
 /* <percentage>s of the width or height of the containing block */
 inset-inline-start: 10%;

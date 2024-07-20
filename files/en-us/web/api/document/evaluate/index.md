@@ -95,6 +95,8 @@ if not, it is the same object as the one passed as the `result` parameter.
 
 ## Examples
 
+### Finding all H2 headings by XPath
+
 ```js
 const headings = document.evaluate(
   "/html/body//h2",
@@ -137,6 +139,22 @@ query would start from the root node (`html`) which would be more
 wasteful.)
 
 See [Introduction to using XPath in JavaScript](/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript) for more information.
+
+### Getting element by xml:id
+
+This function is a replacement for {{domxref("Document.getElementById()")}} for when you need to search by `xml:id` instead.
+
+```js
+function getElementByIdWrapper(xmldoc, id) {
+  return xmldoc.evaluate(
+    `//*[@xml:id="${id}"]`,
+    xmldoc,
+    () => "http://www.w3.org/XML/1998/namespace",
+    XPathResult.FIRST_ORDERED_NODE_TYPE,
+    null,
+  ).singleNodeValue;
+}
+```
 
 ## Specifications
 

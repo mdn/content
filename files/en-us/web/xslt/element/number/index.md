@@ -8,7 +8,7 @@ page-type: xslt-element
 
 The `<xsl:number>` element counts things sequentially. It can also be used to quickly format a number.
 
-### Syntax
+## Syntax
 
 ```xml
 <xsl:number
@@ -76,10 +76,10 @@ None.
 
 Instruction, appears within a template.
 
-### Defined
+## Specifications
 
 XSLT, section 7.7
 
-### Gecko support
+## Gecko support
 
 Partial support. See comments above.

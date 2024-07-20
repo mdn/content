@@ -8,7 +8,7 @@ page-type: xslt-element
 
 The `<xsl:attribute>` element creates an attribute in the output document, using any values that can be accessed from the stylesheet. The element must be defined before any other output document element inside the output document element for which it establishes attribute values. But it may be after or inside elements that won't be part of the output (like `<xsl:choose>` or `<xsl:apply-templates>` etc.).
 
-### Syntax
+## Syntax
 
 ```xml
 <xsl:attribute name=NAME namespace=URI>
@@ -30,10 +30,10 @@ The `<xsl:attribute>` element creates an attribute in the output document, using
 
 Instruction, appears within a template or an `<xsl:attribute-set>` element.
 
-### Defined
+## Specifications
 
 XSLT, section 7.1.3.
 
-### Gecko support
+## Gecko support
 
 Supported.

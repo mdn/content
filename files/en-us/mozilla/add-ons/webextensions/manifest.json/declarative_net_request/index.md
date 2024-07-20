@@ -38,7 +38,11 @@ browser-compat: webextensions.manifest.declarative_net_request
   </tbody>
 </table>
 
-Specify static rulesets for use with {{WebExtAPIRef("declarativeNetRequest")}}. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#permissions">Permissions</a> for more information on permission requirements.
+Specify static rulesets for use with {{WebExtAPIRef("declarativeNetRequest")}}. See [static ruleset limits](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#static_ruleset_limits) for information on the number of rulesets, enabled rulesets, and rules that can be specified.
+
+See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#permissions">Permissions</a> for more information on permission requirements.
+
+> **Note:** A rule containing unrecognized properties is loaded if it is otherwise valid, that is, unrecognized properties are ignored. Before Firefox 128, a rule with unrecognized properties was considered invalid and not loaded.
 
 ## Syntax
 

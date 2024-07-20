@@ -372,15 +372,15 @@ can be used to change an underlined element that is in focus.
       this.setStateValue = setStateValue;
       this.#callbackKeydown = (evt) => {
         let valueInput;
-        switch (evt.keyCode) {
-          case 13: // enter -- do not allow since adds <br> nodes
+        switch (evt.code) {
+          case "Enter": // Do not allow since adds <br> nodes
             evt.preventDefault();
             return;
-          case 38: // up arrow
+          case "ArrowUp":
             valueInput = Number(this.elementText.textContent) + 1;
             evt.preventDefault();
             break;
-          case 40: // down arrow
+          case "ArrowDown":
             valueInput = Number(this.elementText.textContent) - 1;
             evt.preventDefault();
             break;
@@ -812,20 +812,20 @@ can be used to change an underlined element that is in focus.
     elem.addEventListener("keydown", (evt) => {
       let valueNew;
       let indexActive = indexTextInput;
-      switch (evt.keyCode) {
-        case 37: // left arrow -- dec x by 1
+      switch (evt.code) {
+        case "ArrowLeft": // left arrow -- dec x by 1
           valueNew = textInputs[indexActive].getStateValue() - 1;
           evt.preventDefault();
           break;
-        case 38: // up arrow -- dec y by 1
+        case "ArrowUp": // up arrow -- dec y by 1
           valueNew = textInputs[++indexActive].getStateValue() - 1;
           evt.preventDefault();
           break;
-        case 39: // right arrow -- inc x by 1
+        case "ArrowRight": // right arrow -- inc x by 1
           valueNew = textInputs[indexActive].getStateValue() + 1;
           evt.preventDefault();
           break;
-        case 40: // down arrow -- inc y by 1
+        case "ArrowDown": // down arrow -- inc y by 1
           valueNew = textInputs[++indexActive].getStateValue() + 1;
           evt.preventDefault();
           break;

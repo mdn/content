@@ -15,7 +15,9 @@ padding around the individual cells of the table.
 
 ## Value
 
-A string representing pixels (e.g. "10") or a percentage value (e.g. "10%").
+A string representing pixels (e.g., `"10"`) or a percentage value (e.g., `"10%"`).
+
+When set to the `null` value, that `null` value is converted to the empty string (`""`), so `elt.cellPadding = null` is equivalent to `elt.cellPadding = ""`.
 
 ## Examples
 

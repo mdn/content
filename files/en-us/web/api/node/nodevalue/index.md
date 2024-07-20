@@ -45,14 +45,14 @@ and the following script:
 
 ```js
 let node = document.querySelector("body").firstChild;
-let result = "<br/>Node names are:<br/>";
+let result = "Node names are:\n";
 while (node) {
-  result += `Value of ${node.nodeName}: ${node.nodeValue}<br/>`;
+  result += `Value of ${node.nodeName}: ${node.nodeValue}\n`;
   node = node.nextSibling;
 }
 
 const output = document.getElementById("result");
-output.innerHTML = result;
+output.innerText = result;
 ```
 
 {{ EmbedLiveSample("Example", "100%", "250")}}

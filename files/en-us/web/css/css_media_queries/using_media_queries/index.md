@@ -23,7 +23,7 @@ Media queries are case-insensitive.
 
 - [Media types](/en-US/docs/Web/CSS/@media#media_types) define the broad category of device for which the media query applies: `all`, `print`, `screen`.
 
-  The type is optional (assumed to be `all`) except when using the `not` or `only` logical operators.
+  The type is optional (assumed to be `all`) except when using the `only` logical operator.
 
 - [Media features](/en-US/docs/Web/CSS/@media#media_features) describe a specific characteristic of the {{glossary("user agent")}}, output device, or environment:
 
@@ -180,7 +180,7 @@ The `and` operator can also combine multiple media features into a single media 
 The `only` operator prevents older browsers from applying the styles.
 
 > **Note:** In most cases, the `all` media type is used by default when no other type is specified.
-> However, if you use the `not` or `only` operators, you must explicitly specify a media type.
+> However, if you use the `only` operator, you must explicitly specify a media type. You can see `only screen` or `only print` as a whole.
 
 ### Combining multiple types or features
 

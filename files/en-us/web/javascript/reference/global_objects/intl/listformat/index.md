@@ -27,8 +27,8 @@ These properties are defined on `Intl.ListFormat.prototype` and shared by all `I
 
 - {{jsxref("Object/constructor", "Intl.ListFormat.prototype.constructor")}}
   - : The constructor function that created the instance object. For `Intl.ListFormat` instances, the initial value is the {{jsxref("Intl/ListFormat/ListFormat", "Intl.ListFormat")}} constructor.
-- `Intl.ListFormat.prototype[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Intl.ListFormat"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+- `Intl.ListFormat.prototype[Symbol.toStringTag]`
+  - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Intl.ListFormat"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 

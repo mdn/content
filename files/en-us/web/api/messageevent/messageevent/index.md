@@ -43,7 +43,7 @@ new MessageEvent(type, options)
         (E.g. in channel messaging or when sending a message to a shared worker).
         This defaults to an empty array (`[]`) if not specified.
 
-## Return value
+### Return value
 
 A new {{domxref("MessageEvent")}} object.
 

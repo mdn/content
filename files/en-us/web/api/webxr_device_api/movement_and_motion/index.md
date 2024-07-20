@@ -677,8 +677,7 @@ function displayMatrix(mat, rowLength, target) {
 
   if (mat && rowLength && rowLength <= mat.length) {
     let numRows = mat.length / rowLength;
-    outHTML =
-      "<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>\n<mrow>\n<mo>[</mo>\n<mtable>\n";
+    outHTML = "<math display='block'>\n<mrow>\n<mo>[</mo>\n<mtable>\n";
 
     for (let y = 0; y < numRows; y++) {
       outHTML += "<mtr>\n";

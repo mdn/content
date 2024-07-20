@@ -29,7 +29,7 @@ speechRecognitionList.addFromString(grammar, 1);
 recognition.grammars = speechRecognitionList;
 
 console.log(speechRecognitionList[0].src); // should return the same as the contents of the grammar variable
-console.log(speechRecognitionList[0].weight); // should return 1 - the same as the weight set in line 4.
+console.log(speechRecognitionList[0].weight); // should return 1 - the same as the weight set in addFromString.
 ```
 
 ## Specifications

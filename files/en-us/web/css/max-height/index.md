@@ -18,6 +18,8 @@ The **`max-height`** [CSS](/en-US/docs/Web/CSS) property sets the maximum height
 ```css
 /* <length> value */
 max-height: 3.5em;
+max-height: anchor-size(height);
+max-height: calc(anchor-size(--myAnchor self-block, 250px) + 2em);
 
 /* <percentage> value */
 max-height: 75%;

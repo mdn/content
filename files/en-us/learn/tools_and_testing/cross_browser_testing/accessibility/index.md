@@ -164,14 +164,14 @@ Sometimes it is not possible to avoid losing keyboard accessibility. You might h
 
    ```js
    document.onkeydown = (e) => {
-     if (e.keyCode === 13) {
+     if (e.code === "Enter") {
        // The Enter/Return key
        document.activeElement.onclick(e);
      }
    };
    ```
 
-   Here we add a listener to the `document` object to detect when a button has been pressed on the keyboard. We check what button was pressed via the event object's [keyCode](/en-US/docs/Web/API/KeyboardEvent/keyCode) property; if it is the keycode that matches Return/Enter, we run the function stored in the button's `onclick` handler using `document.activeElement.onclick()`. [`activeElement`](/en-US/docs/Web/API/Document/activeElement) gives us the element that is currently focused on the page.
+   Here we add a listener to the `document` object to detect when a button has been pressed on the keyboard. We check what button was pressed via the event object's [`code`](/en-US/docs/Web/API/KeyboardEvent/code) property; if it is the code that matches Return/Enter, we run the function stored in the button's `onclick` handler using `document.activeElement.onclick()`. [`activeElement`](/en-US/docs/Web/API/Document/activeElement) gives us the element that is currently focused on the page.
 
 > **Note:** This technique will only work if you set your original event handlers via event handler properties (e.g. `onclick`). `addEventListener` won't work. This is a lot of extra hassle to build the functionality back in. And there's bound to be other problems with it. Better to just use the right element for the right job in the first place.
 
@@ -265,7 +265,6 @@ To deal with regularly updating regions of content, you can use the `aria-live` 
 - `off:` The default. Updates should not be announced.
 - `polite`: Updates should be announced only if the user is idle.
 - `assertive`: Updates should be announced to the user as soon as possible.
-- `rude`: Updates should be announced straight away, even if this interrupts the user.
 
 Here's an example:
 
@@ -325,7 +324,7 @@ Let's go through some tests with a couple of different screen readers to give yo
 
 #### VoiceOver
 
-VoiceOver (VO) comes free with your Mac/iPhone/iPad, so it's useful for testing on desktop/mobile if you use Apple products. We'll be testing it on Mac OS X on a MacBook Pro.
+VoiceOver (VO) comes free with your Mac/iPhone/iPad, so it's useful for testing on desktop/mobile if you use Apple products. We'll be testing it on macOS on a MacBook Pro.
 
 To turn it on, press Cmd + F5. If you've not used VO before, you will be given a welcome screen where you can choose to start VO or not, and run through a rather useful tutorial to learn how to use it. To turn it off again, press Cmd + F5 again.
 

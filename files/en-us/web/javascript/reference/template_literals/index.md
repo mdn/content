@@ -325,7 +325,7 @@ const node = document.getElementById("formula");
 MathJax.typesetClear([node]);
 // Throws in older ECMAScript versions (ES2016 and earlier)
 // SyntaxError: malformed Unicode character escape sequence
-node.innerHTML = String.raw`$\underline{u}$`;
+node.textContent = String.raw`$\underline{u}$`;
 MathJax.typesetPromise([node]);
 ```
 

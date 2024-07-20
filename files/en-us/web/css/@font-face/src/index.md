@@ -179,19 +179,20 @@ The example below shows how to define two font faces with the same font family. 
 /* Defining a regular font face */
 @font-face {
   font-family: MainText;
-  src: local(Futura-Medium),
-    url('FuturaMedium.woff') format("woff"),
-    url('FuturaMedium.otf') format("opentype");
-    format("opentype");
+  src:
+    local(Futura-Medium),
+    url("FuturaMedium.woff") format("woff"),
+    url("FuturaMedium.otf") format("opentype");
 }
 
 /* Defining a different bold font face for the same family */
 @font-face {
   font-family: MainText;
-  src: local(Gill Sans Bold), /* full font name */
-    local(GillSans-Bold), /* postscript name */
-    url('GillSansBold.woff') format("woff"),
-    url('GillSansBold.otf') format("opentype"),
+  src:
+    local(Gill Sans Bold) /* full font name */,
+    local(GillSans-Bold) /* postscript name */,
+    url("GillSansBold.woff") format("woff"),
+    url("GillSansBold.otf") format("opentype"),
     url("GillSansBold.svg#MyFontBold"); /* Referencing an SVG font fragment by id */
   font-weight: bold;
 }

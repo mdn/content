@@ -89,9 +89,9 @@ async function hashTheseFiles(e) {
   // iterate over each file in file select input
   for (const file of this.files) {
     // calculate its hash and list it in the output element.
-    outHTML += `${file.name}    ${await fileHash(file)}`;
+    outHTML += `${file.name}    ${await fileHash(file)}\n`;
   }
-  output.innerHTML = outHTML;
+  output.innerText = outHTML;
 }
 ```
 
@@ -192,9 +192,9 @@ function hashToString(arrayBuffer) {
 async function hashTheseFiles(e) {
   let outHTML = "";
   for (const file of this.files) {
-    outHTML += `${file.name}    ${await fileHash(file)}`;
+    outHTML += `${file.name}    ${await fileHash(file)}\n`;
   }
-  output.innerHTML = outHTML;
+  output.innerText = outHTML;
 }
 ```
 

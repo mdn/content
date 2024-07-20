@@ -8,22 +8,22 @@ page-type: xpath-function
 
 The `string` function converts the given argument to a string.
 
-### Syntax
+## Syntax
 
 ```plain
 string( [object] )
 ```
 
-### Arguments
+### Parameters
 
 - `object` (optional)
   - : The object to convert to a string. If omitted, the context node is used.
 
-### Returns
+### Return value
 
 A string
 
-### Notes
+## Description
 
 - If the object is a node-set, the string value of the first node in the set is returned.
 - A number is converted as follows:
@@ -37,10 +37,10 @@ A string
   - Boolean true is converted to the string true.
   - Boolean false is converted to the string false.
 
-### Defined
+## Specifications
 
 [XPath 1.0 4.2](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-string)
 
-### Gecko support
+## Gecko support
 
 Supported.

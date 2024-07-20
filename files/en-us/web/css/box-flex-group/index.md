@@ -10,7 +10,7 @@ browser-compat: css.properties.box-flex-group
 
 {{CSSRef}}{{Non-standard_Header}}{{Deprecated_Header}}
 
-> **Warning:** This is a property of the original CSS Flexible Box Layout Module draft. It has been replaced in the specification. See [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) for information about the current standard.
+> **Warning:** This is a property of the original CSS flexible box layout Module draft. It has been replaced in the specification. See [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) for information about the current standard.
 
 The **`box-flex-group`** [CSS](/en-US/docs/Web/CSS) property assigns the flexbox's child elements to a flex group.
 
@@ -48,7 +48,7 @@ box-flex-group =
 
 ### Simple usage example
 
-In the original Flexbox spec, `box-flex-group` could be used to assign flex children to different groups to distribute flexible space between:
+In the original flexbox spec, `box-flex-group` could be used to assign flex children to different groups to distribute flexible space between:
 
 ```css
 article:nth-child(1) {

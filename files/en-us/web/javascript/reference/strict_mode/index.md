@@ -194,9 +194,11 @@ function sum(a, a, c) {
 }
 ```
 
+It is also a syntax error in non-strict mode to have duplicate parameter names, if the function has a default parameter, rest parameter, or destructured parameter.
+
 #### Legacy octal literals
 
-Strict mode [forbids a `0`-prefixed octal literal or octal escape sequence](/en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_octal). In sloppy mode, a number beginning with a `0`, such as `0644`, is interpreted as an octal number (`0644 === 420`), if all digits are smaller than 8. Novice developers sometimes believe a leading-zero prefix has no semantic meaning, so they might use it as an alignment device — but this changes the number's meaning! A leading-zero syntax for the octal is rarely useful and can be mistakenly used, so strict mode makes it a syntax error:
+Strict mode [forbids a `0`-prefixed octal literal](/en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_octal_literal). In sloppy mode, a number beginning with a `0`, such as `0644`, is interpreted as an octal number (`0644 === 420`), if all digits are smaller than 8. Novice developers sometimes believe a leading-zero prefix has no semantic meaning, so they might use it as an alignment device — but this changes the number's meaning! A leading-zero syntax for the octal is rarely useful and can be mistakenly used, so strict mode makes it a syntax error:
 
 ```js-nolint example-bad
 "use strict";
@@ -213,7 +215,7 @@ const sumWithOctal = 0o10 + 8;
 console.log(sumWithOctal); // 16
 ```
 
-Octal escape sequences, such as `"\45"`, which is equal to `"%"`, can be used to represent characters by extended-{{Glossary("ASCII")}} character code numbers in octal. In strict mode, this is a syntax error. More formally, it's disallowed to have `\` followed by any decimal digit other than `0`, or `\0` followed by a decimal digit; for example `\9` and `\07`.
+Octal escape sequences, such as `"\45"`, which is equal to `"%"`, can be used to represent characters by extended-{{Glossary("ASCII")}} character code numbers in octal. In strict mode, this is a [syntax error](/en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_octal_escape_sequence). More formally, it's disallowed to have `\` followed by any decimal digit other than `0`, or `\0` followed by a decimal digit; for example `\9` and `\07`.
 
 #### Setting properties on primitive values
 

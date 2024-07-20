@@ -21,7 +21,7 @@ A good example is VR rendering. Recording the rendering as a render bundle and t
 
 ## Instance properties
 
-- {{domxref("GPUComputePassEncoder.label", "label")}} {{Experimental_Inline}} {{SecureContext_Inline}}
+- {{domxref("GPUComputePassEncoder.label", "label")}} {{Experimental_Inline}}
   - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
 
 ## Examples

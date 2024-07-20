@@ -49,7 +49,7 @@ _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}
 - {{domxref("HTMLTableCellElement.height")}} {{deprecated_inline}}
   - : A string containing a length of pixel of the hinted height of the cell. It reflects the obsolete [`height`](/en-US/docs/Web/HTML/Element/td#height) attribute.
 - {{domxref("HTMLTableCellElement.noWrap")}} {{deprecated_inline}}
-  - : A boolean value reflecting the [`nowrap`](/en-US/docs/Web/HTML/Element/td#nowrap) attribute and indicating if cell content can be broken into several lines.
+  - : A boolean value reflecting the `nowrap` attribute and indicating if cell content can be broken into several lines.
 - {{domxref("HTMLTableCellElement.vAlign")}} {{deprecated_inline}}
   - : A string representing an enumerated value indicating how the content of the cell must be vertically aligned. It reflects the [`valign`](/en-US/docs/Web/HTML/Element/td#valign) attribute and can have one of the following values: `"top"`, `"middle"`, `"bottom"`, or `"baseline"`. Use the CSS {{cssxref("vertical-align")}} property instead.
 - {{domxref("HTMLTableCellElement.width")}} {{deprecated_inline}}

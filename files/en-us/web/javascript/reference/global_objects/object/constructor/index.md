@@ -136,7 +136,7 @@ Child.prototype = Object.create(Parent.prototype);
 
 The `constructor` of instances of `Child` will be `Parent` due to `Child.prototype` being re-assigned.
 
-This is usually not a big deal — the language almost never reads the `constructor` property of an object. The only exception is when using [`@@species`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/species) to create new instances of a class, but such cases are rare, and you should be using the [`extends`](/en-US/docs/Web/JavaScript/Reference/Classes/extends) syntax to subclass builtins anyway.
+This is usually not a big deal — the language almost never reads the `constructor` property of an object. The only exception is when using [`[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/species) to create new instances of a class, but such cases are rare, and you should be using the [`extends`](/en-US/docs/Web/JavaScript/Reference/Classes/extends) syntax to subclass builtins anyway.
 
 However, ensuring that `Child.prototype.constructor` always points to `Child` itself is crucial when some caller is using `constructor` to access the original class from an instance. Take the following case: the object has the `create()` method to create itself.
 

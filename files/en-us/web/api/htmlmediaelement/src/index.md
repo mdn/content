@@ -21,7 +21,7 @@ resource to use in the element.
 
 ## Value
 
-A string object containing the URL of a media resource to use in the
+A string containing the URL of a media resource to use in the
 element; this property reflects the value of the HTML element's `src`
 attribute.
 

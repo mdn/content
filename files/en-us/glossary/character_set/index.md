@@ -16,7 +16,6 @@ If a character set is used incorrectly (For example, Unicode for an article enco
 
 - [Character encoding](https://en.wikipedia.org/wiki/Character_encoding) (Wikipedia)
 - [Mojibake](https://en.wikipedia.org/wiki/Mojibake) (Wikipedia)
-- [Glossary](/en-US/docs/Glossary)
-
+- Related glossary terms:
   - {{Glossary("Character")}}
   - {{Glossary("Unicode")}}

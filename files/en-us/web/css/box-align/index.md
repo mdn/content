@@ -10,7 +10,7 @@ browser-compat: css.properties.box-align
 
 {{CSSRef}}{{Non-standard_header}}{{Deprecated_Header}}
 
-> **Warning:** This is a property of the original CSS Flexible Box Layout Module draft, and has been replaced by a newer standard.
+> **Warning:** This is a property of the original CSS flexible box layout Module draft, and has been replaced by a newer standard.
 
 The **`box-align`** [CSS](/en-US/docs/Web/CSS) property specifies how an element aligns its contents across its layout in a perpendicular direction. The effect of the property is only visible if there is extra space in the box.
 

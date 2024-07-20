@@ -40,7 +40,7 @@ None ({{jsxref("undefined")}}).
 ```js
 const pc = new RTCPeerConnection();
 
-pc.setIdentityAssertion("developer.mozilla.org");
+pc.setIdentityProvider("developer.mozilla.org");
 ```
 
 ## Specifications

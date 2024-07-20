@@ -26,4 +26,5 @@ A positive number indicating the number of channels.
 
 ## See also
 
-- [`RTCRtpCodecParameters.channels`](/en-US/docs/Web/API/RTCRtpCodecParameters#channels)
+- `codecs.channels` option in parameter passed to [`RTCRtpTransceiver.setCodecPreferences()`](/en-US/docs/Web/API/RTCRtpTransceiver/setCodecPreferences#channels) and [`RTCRtpSender.setParameters()`](/en-US/docs/Web/API/RTCRtpSender/setParameters#channels).
+- `codecs.channels` in object returned by [`RTCRtpSender.getParameters()`](/en-US/docs/Web/API/RTCRtpSender/getParameters#channels) and [`RTCRtpReceiver.getParameters()`](/en-US/docs/Web/API/RTCRtpReceiver/getParameters#channels).

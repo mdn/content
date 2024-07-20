@@ -10,7 +10,7 @@ Certain HTML elements use date and/or time values. The formats of the strings th
 
 Elements that use such formats include certain forms of the {{HTMLElement("input")}} element that let the user choose or specify a date, time, or both, as well as the {{HTMLElement("ins")}} and {{HTMLElement("del")}} elements, whose [`datetime`](/en-US/docs/Web/HTML/Element/ins#datetime) attribute specifies the date or date and time at which the insertion or deletion of content occurred.
 
-For `<input>`, the values of [`type`](/en-US/docs/Web/HTML/Element/input#type) that return a [`value`](/en-US/docs/Web/HTML/Global_attributes#value) which contains a string representing a date and/or time are:
+For `<input>`, the [`type`](/en-US/docs/Web/HTML/Element/input#type) values of inputs whose [`value`](/en-US/docs/Web/HTML/Element/input#value) contains a string representing a date and/or time are:
 
 - [`date`](/en-US/docs/Web/HTML/Element/input/date)
 - [`datetime-local`](/en-US/docs/Web/HTML/Element/input/datetime-local)

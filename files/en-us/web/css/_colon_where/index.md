@@ -13,6 +13,16 @@ The difference between `:where()` and {{CSSxRef(":is", ":is()")}} is that `:wher
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-where.html", "tabbed-shorter")}}
 
+## Syntax
+
+The `:where()` pseudo-class requires a [selector list](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#selector_list), a comma-separated list of one or more selectors, as its argument. The list must not contain a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements), but any other simple, compound, and complex selectors are allowed.
+
+```css-nolint
+:where(<complex-selector-list>) {
+  /* ... */
+}
+```
+
 ### Forgiving Selector Parsing
 
 The specification defines `:is()` and `:where()` as accepting a [forgiving selector list](https://drafts.csswg.org/selectors-4/#typedef-forgiving-selector-list).
@@ -128,14 +138,6 @@ However, selectors inside `:where()` have specificity 0, so the orange footer li
 > **Note:** You can also find this example on GitHub; see [is-where](https://mdn.github.io/css-examples/is-where/).
 
 {{EmbedLiveSample('Examples', '100%', 600)}}
-
-## Syntax
-
-```css-nolint
-:where(<complex-selector-list>) {
-  /* ... */
-}
-```
 
 ## Specifications
 

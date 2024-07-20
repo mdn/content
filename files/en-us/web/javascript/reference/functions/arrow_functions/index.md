@@ -122,7 +122,7 @@ The braces can only be omitted if the function directly returns an expression. I
 };
 ```
 
-Arrow functions are always unnamed. If the arrow function needs to call itself, use a named function expression instead. You can also assign the arrow function to a variable so it has a name.
+Arrow functions are not inherently associated with a name. If the arrow function needs to call itself, use a named function expression instead. You can also assign the arrow function to a variable, allowing you to refer to it through that variable.
 
 ```js
 // Traditional Function

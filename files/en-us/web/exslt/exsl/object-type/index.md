@@ -21,7 +21,7 @@ exsl:object-type(object)
 - `object`
   - : The object whose type is to be returned.
 
-### Returns
+### Return value
 
 The object's type, which will be one of the following:
 

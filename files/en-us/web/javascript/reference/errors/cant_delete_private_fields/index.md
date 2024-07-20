@@ -22,7 +22,7 @@ SyntaxError: Cannot delete private field X (Safari)
 
 ## What went wrong?
 
-There's code trying to `delete` a private property (field or method) of an object or a class. This is forbidden by Javascript—private properties cannot be added or removed on the fly.
+There's code trying to `delete` a private property (field or method) of an object or a class. This is forbidden by JavaScript—private properties cannot be added or removed on the fly.
 
 ## Examples
 

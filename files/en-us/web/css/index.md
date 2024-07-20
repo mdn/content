@@ -8,7 +8,7 @@ page-type: landing-page
 
 **Cascading Style Sheets** (**CSS**) is a [stylesheet](/en-US/docs/Web/API/StyleSheet) language used to describe the presentation of a document written in [HTML](/en-US/docs/Web/HTML) or [XML](/en-US/docs/Web/XML/XML_introduction) (including XML dialects such as [SVG](/en-US/docs/Web/SVG), [MathML](/en-US/docs/Web/MathML) or {{Glossary("XHTML")}}). CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.
 
-CSS is among the core languages of the **open web** and is standardized across Web browsers according to [W3C specifications](https://www.w3.org/Style/CSS/#specs). Previously, the development of various parts of CSS specification was done synchronously, which allowed the versioning of the latest recommendations. You might have heard about CSS1, CSS2.1, or even CSS3. There will never be a CSS3 or a CSS4; rather, everything is now CSS without a version number.
+CSS is among the core languages of the **open web** and is standardized across Web browsers according to [W3C specifications](https://www.w3.org/Style/CSS/#specs). Previously, the development of various parts of CSS specification was done synchronously, which allowed the versioning of the latest recommendations. You might have heard about CSS1, CSS2.1, or even CSS3. There will never be a CSS3 or a CSS4; rather, everything is now just "CSS" with individual CSS modules having version numbers.
 
 After CSS 2.1, the scope of the specification increased significantly and the progress on different CSS modules started to differ so much, that it became more effective to [develop and release recommendations separately per module](https://www.w3.org/Style/CSS/current-work). Instead of versioning the CSS specification, W3C now periodically takes a snapshot of [the latest stable state of the CSS specification](https://www.w3.org/TR/css/) and individual modules progress. CSS modules now have version numbers, or levels, such as [CSS Color Module Level 5](https://drafts.csswg.org/css-color-5/).
 
@@ -19,7 +19,7 @@ After CSS 2.1, the scope of the specification increased significantly and the pr
 - CSS Tutorials
   - : Our [CSS learning area](/en-US/docs/Learn/CSS) contains a wealth of tutorials to take you from beginner level to proficiency, covering all the fundamentals.
 - CSS Reference
-  - : Our [exhaustive CSS reference](/en-US/docs/Web/CSS/Reference) for seasoned Web developers describes every property and concept of CSS.
+  - : Our [CSS reference](/en-US/docs/Web/CSS/Reference) describes every property and concept of CSS.
 
 ## Tutorials
 
@@ -34,30 +34,32 @@ Our [CSS Learning Area](/en-US/docs/Learn/CSS) features multiple modules that te
     The aim here is to provide you with a toolkit for writing competent CSS and help you understand all the essential theory, before moving on to more specific disciplines like [text styling](/en-US/docs/Learn/CSS/Styling_text) and [CSS layout](/en-US/docs/Learn/CSS/CSS_layout).
 
 - [CSS styling text](/en-US/docs/Learn/CSS/Styling_text)
+
   - : With the basics of the CSS language covered, the next CSS topic for you to concentrate on is styling text — one of the most common things you'll do with CSS. Here we look at text styling fundamentals, including setting font, boldness, italics, line and letter spacing, drop shadows, and other text features. We round off the module by looking at applying custom fonts to your page, and styling lists and links.
+
 - [CSS layout](/en-US/docs/Learn/CSS/CSS_layout)
+
   - : At this point we've already looked at CSS fundamentals, how to style text, and how to style and manipulate the boxes that your content sits inside. Now it's time to look at how to place your boxes in the right place in relation to the viewport, and to each other. We have covered the necessary prerequisites so we can now dive deep into CSS layout, looking at different display settings, modern layout tools like flexbox, CSS grid, and positioning, and some of the legacy techniques you might still want to know about.
+
 - [Use CSS to solve common problems](/en-US/docs/Learn/CSS/Howto)
   - : This module provides links to sections of content explaining how to use CSS to solve common problems when creating a web page.
 
 ## Reference
 
-- [CSS reference](/en-US/docs/Web/CSS/Reference): This exhaustive reference for seasoned Web developers describes every property and concept of CSS.
-- CSS key concepts:
+The [CSS reference](/en-US/docs/Web/CSS/Reference) is an exhaustive reference for seasoned Web developers, describing every property and concept of CSS, including:
 
-  - The [syntax and forms of the language](/en-US/docs/Web/CSS/Syntax)
-  - [Specificity](/en-US/docs/Web/CSS/Specificity), [inheritance](/en-US/docs/Web/CSS/Inheritance), and [the Cascade](/en-US/docs/Web/CSS/Cascade)
-  - [CSS units and values](/en-US/docs/Web/CSS/CSS_Values_and_Units) and [functional notations](/en-US/docs/Web/CSS/CSS_Functions)
-  - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) and [margin collapse](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-  - The [containing block](/en-US/docs/Web/CSS/Containing_block)
-  - [Stacking](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) and [block-formatting](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context) contexts
-  - [Initial](/en-US/docs/Web/CSS/initial_value), [computed](/en-US/docs/Web/CSS/computed_value), [used](/en-US/docs/Web/CSS/used_value), and [actual](/en-US/docs/Web/CSS/actual_value) values
-  - [CSS shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
-  - [CSS Flexible Box Layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout)
-  - [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout)
-  - [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors)
-  - [Media queries](/en-US/docs/Web/CSS/CSS_media_queries)
-  - [Animation](/en-US/docs/Web/CSS/animation)
+- The [syntax and forms of the language](/en-US/docs/Web/CSS/Syntax)
+- [Specificity](/en-US/docs/Web/CSS/Specificity), [inheritance](/en-US/docs/Web/CSS/Inheritance), and [the cascade](/en-US/docs/Web/CSS/Cascade)
+- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors), including [pseudo-elements](/en-US/docs/Web/CSS/CSS_pseudo-elements), [nesting](/en-US/docs/Web/CSS/CSS_nesting), [scoping](/en-US/docs/Web/CSS/CSS_scoping) and [shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts)
+- [CSS at-rules](/en-US/docs/Web/CSS/At-rule), including [media](/en-US/docs/Web/CSS/CSS_media_queries) and [container](/en-US/docs/Web/CSS/CSS_containment) queries
+- [CSS units and values](/en-US/docs/Web/CSS/CSS_Values_and_Units) and [functional notations](/en-US/docs/Web/CSS/CSS_Functions)
+- [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) and [margin collapse](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+- The [containing block](/en-US/docs/Web/CSS/Containing_block)
+- [Stacking](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) and [block-formatting](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context) contexts
+- [Initial](/en-US/docs/Web/CSS/initial_value), [computed](/en-US/docs/Web/CSS/computed_value), [used](/en-US/docs/Web/CSS/used_value), and [actual](/en-US/docs/Web/CSS/actual_value) values
+- [CSS shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
+- [CSS flexible box](/en-US/docs/Web/CSS/CSS_flexible_box_layout), [multi-column](/en-US/docs/Web/CSS/CSS_multicol_layout) and [grid](/en-US/docs/Web/CSS/CSS_grid_layout) layout
+- [Animation](/en-US/docs/Web/CSS/CSS_animation), [transitions](/en-US/docs/Web/CSS/CSS_transitions), and [transforms](/en-US/docs/Web/CSS/CSS_transforms)
 
 ## Cookbook
 

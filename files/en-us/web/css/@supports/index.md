@@ -9,7 +9,7 @@ browser-compat: css.at-rules.supports
 
 The **`@supports`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) lets you specify CSS declarations that depend on a browser's support for CSS features.
 Using this at-rule is commonly called a _feature query_.
-The rule must be placed at the top level of your code or nested inside any other [conditional group at-rule](/en-US/docs/Web/CSS/At-rule#conditional_group_rules).
+The rule must be placed at the top level of your code or nested inside any other conditional group at-rule.
 
 {{EmbedInteractiveExample("pages/tabbed/at-rule-supports.html", "tabbed-standard")}}
 

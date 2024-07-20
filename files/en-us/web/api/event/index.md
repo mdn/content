@@ -17,7 +17,7 @@ Many DOM elements can be set up to accept (or "listen" for) these events, and ex
 
 > **Note:** One element can have several such handlers, even for the exact same event—particularly if separate, independent code modules attach them, each for its own independent purposes. (For example, a webpage with an advertising-module and statistics-module both monitoring video-watching.)
 
-When there are many nested elements, each with its own handler(s), event processing can become very complicated—especially where a parent element receives the very same event as its child elements because "spatially" they overlap so the event technically occurs in both, and the processing order of such events depends on the [Event bubbling and capture](/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling_and_capture) settings of each handler triggered.
+When there are many nested elements, each with its own handler(s), event processing can become very complicated—especially where a parent element receives the very same event as its child elements because "spatially" they overlap so the event technically occurs in both, and the processing order of such events depends on the [Event bubbling](/en-US/docs/Learn/JavaScript/Building_blocks/Event_bubbling) settings of each handler triggered.
 
 ## Interfaces based on Event
 
@@ -138,5 +138,6 @@ Note that all event interfaces have names which end in "Event".
 ## See also
 
 - Types of events available: [Event reference](/en-US/docs/Web/Events)
-- [Comparison of Event Targets](/en-US/docs/Web/API/Event/Comparison_of_Event_Targets) (`target` vs. `currentTarget` vs. `relatedTarget` vs. `originalTarget`)
+- [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
+- [Event bubbling](/en-US/docs/Learn/JavaScript/Building_blocks/Event_bubbling)
 - [Creating and triggering custom events](/en-US/docs/Web/Events/Creating_and_triggering_events)

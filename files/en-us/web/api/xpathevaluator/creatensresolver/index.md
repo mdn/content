@@ -3,19 +3,14 @@ title: "XPathEvaluator: createNSResolver() method"
 short-title: createNSResolver()
 slug: Web/API/XPathEvaluator/createNSResolver
 page-type: web-api-instance-method
+status:
+  - deprecated
 browser-compat: api.XPathEvaluator.createNSResolver
 ---
 
-{{APIRef("DOM XPath")}}
+{{APIRef("DOM XPath")}}{{deprecated_header}}
 
-This method adapts any DOM node to resolve namespaces so that an XPath expression can
-be easily evaluated relative to the context of the node where it appeared within the
-document.
-
-This adapter works like the DOM Level 3 method {{domxref("Node.lookupNamespaceURI", "Node.lookupNamespaceURI()")}}
-in resolving the namespace URI from a given prefix using
-the current information available in the node's hierarchy at the time the method is
-called, also correctly resolving the implicit `xml` prefix.
+The **`createNSResolver()`** method of the {{domxref("XPathEvaluator")}} interface used to create a custom `XPathNSResolver` object. It now returns the input as-is and is only kept for compatibility reasons.
 
 ## Syntax
 
@@ -26,12 +21,11 @@ createNSResolver(nodeResolver)
 ### Parameters
 
 - `nodeResolver`
-  - : A {{domxref("Node")}} to be used as a context for namespace resolution.
+  - : A {{domxref("Node")}}.
 
 ### Return value
 
-An {{domxref("XPathNSResolver")}} object which resolves namespaces with respect to the
-definitions in scope for a specified node.
+`nodeResolver` itself.
 
 ## Specifications
 

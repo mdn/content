@@ -71,7 +71,7 @@ This is a very simple example of the problem with physical values and properties
 
 ### Logical properties and values
 
-Logical properties and values do not make an assumption about text direction. Which is why in Grid Layout we use the keyword `start` when aligning something to the start of the container. For me, working in English, `start` may well be on the left, however it doesn't have to be, and the word `start` infers no physical location.
+Logical properties and values do not make an assumption about text direction. Which is why in grid layout we use the keyword `start` when aligning something to the start of the container. For me, working in English, `start` may well be on the left, however it doesn't have to be, and the word `start` infers no physical location.
 
 ## Block and Inline
 
@@ -486,7 +486,7 @@ In addition to displaying documents, using the correct writing mode for the lang
 
 ## Physical values and grid layout
 
-We encounter physical properties frequently when building websites, and while the grid placement and alignment properties and values respect writing modes, there are things you may want to do with Grid that force you to use physical properties and values. In the guide to [Box alignment and grids](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout), I demonstrated how auto margins work in a grid area. Using an auto margin to push one item away from the others is a common flexbox trick too, however this also ties the layout to the physical space.
+We encounter physical properties frequently when building websites, and while the grid placement and alignment properties and values respect writing modes, there are things you may want to do with grid that force you to use physical properties and values. In the guide to [Box alignment and grids](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout), I demonstrated how auto margins work in a grid area. Using an auto margin to push one item away from the others is a common flexbox trick too, however this also ties the layout to the physical space.
 
 If you use absolute positioning within a grid area, then you will again be using physical offsets to push the item around inside the grid area. The key thing is to be aware of, is the tension between physical and logical properties and values. For example, be aware that you may need to make changes to your CSS to cope with a switch from `ltr` to `rtl`.
 

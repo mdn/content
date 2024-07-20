@@ -176,7 +176,7 @@ function draw() {
 }
 
 function startGame() {
-  const interval = setInterval(draw, 10);
+  setInterval(draw, 10);
 }
 
 document.getElementById("runButton").addEventListener("click", function () {

@@ -280,9 +280,7 @@ introduceSelf() {
 }
 ```
 
-You are probably wondering what "this" is. The `this` keyword refers to the current object the code is being written inside — so in this case `this` is equivalent to `person`. So why not just write `person` instead?
-
-Well, when you only have to create a single object literal, it's not so useful. But if you create more than one, `this` enables you to use the same method definition for every object you create.
+You are probably wondering what "this" is. The `this` keyword typically refers to the current object the code is being executed in. In the context of an object method, `this` refers to the object that the method was called on.
 
 Let's illustrate what we mean with a simplified pair of person objects:
 
@@ -302,7 +300,9 @@ const person2 = {
 };
 ```
 
-In this case, `person1.introduceSelf()` outputs "Hi! I'm Chris."; `person2.introduceSelf()` on the other hand outputs "Hi! I'm Deepti.", even though the method's code is exactly the same in each case. This isn't hugely useful when you are writing out object literals by hand, but it will be essential when we start using **constructors** to create more than one object from a single object definition, and that's the subject of the next section.
+In this case, `person1.introduceSelf()` outputs "Hi! I'm Chris."; `person2.introduceSelf()` outputs "Hi! I'm Deepti." This happens because when the method is called, `this` refers to the object on which the method is called, which allows the same method definition to work for multiple objects.
+
+This isn't hugely useful when you are writing out object literals by hand, as using the object's name (`person1` and `person2`) leads to the exact same result, but it will be essential when we start using **constructors** to create more than one object from a single object definition, and that's the subject of the next section.
 
 ## Introducing constructors
 

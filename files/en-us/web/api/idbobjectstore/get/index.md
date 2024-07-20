@@ -14,7 +14,7 @@ returns the object selected by the specified key. This is for retrieving
 specific records from an object store.
 
 If a value is successfully found, then a structured clone of it is created and set as
-the [`result`](/en-US/docs/Web/API/IDBRequest#attr_result) of the
+the [`result`](/en-US/docs/Web/API/IDBRequest/result) of the
 request object.
 
 > **Note:** This method produces the same result for: a) a record that doesn't exist in the database and b) a record that has an undefined value.
@@ -62,7 +62,8 @@ normal JavaScript, then put it back into the database using a
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += "<li>Database initialized.</li>";
+  note.appendChild(document.createElement("li")).textContent =
+    "Database initialized.";
 
   // store the result of opening the database in the db variable.
   // This is used a lot below
@@ -78,11 +79,13 @@ function getData() {
 
   // report on the success of the transaction completing, when everything is done
   transaction.oncomplete = (event) => {
-    note.innerHTML += "<li>Transaction completed.</li>";
+    note.appendChild(document.createElement("li")).textContent =
+      "Transaction completed.";
   };
 
   transaction.onerror = (event) => {
-    note.innerHTML += `<li>Transaction not opened due to error: ${transaction.error}</li>`;
+    note.appendChild(document.createElement("li")).textContent =
+      `Transaction not opened due to error: ${transaction.error}`;
   };
 
   // create an object store on the transaction
@@ -93,7 +96,8 @@ function getData() {
 
   objectStoreRequest.onsuccess = (event) => {
     // report the success of our request
-    note.innerHTML += "<li>Request successful.</li>";
+    note.appendChild(document.createElement("li")).textContent =
+      "Request successful.";
 
     const myRecord = objectStoreRequest.result;
   };

@@ -9,8 +9,7 @@ browser-compat: api.ReadableStreamDefaultController.enqueue
 {{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`enqueue()`** method of the
-{{domxref("ReadableStreamDefaultController")}} interface enqueues a given chunk in the
-associated stream.
+{{domxref("ReadableStreamDefaultController")}} interface enqueues a given [chunk](/en-US/docs/Web/API/Streams_API/Concepts#chunks) in the associated stream.
 
 ## Syntax
 

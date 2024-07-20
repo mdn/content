@@ -16,20 +16,52 @@ An {{domxref("Element")}} or `null`.
 
 ## Examples
 
-In the [Follow the White Rabbit example](https://codepen.io/rachelnabors/pen/eJyWzm/?editors=0010), `whiteRabbit` sets the `target` element to be animated:
+In the following example, `emoji` has been set as the `target` element to be animated:
 
 ```js
-const whiteRabbit = document.getElementById("rabbit");
+const emoji = document.querySelector("div"); // element to animate
 
-const rabbitDownKeyframes = new KeyframeEffect(
-  whiteRabbit,
-  [{ transform: "translateY(0%)" }, { transform: "translateY(100%)" }],
-  { duration: 3000, fill: "forwards" },
+const rollingKeyframes = new KeyframeEffect(
+  emoji,
+  [
+    { transform: "translateX(0) rotate(0)" }, // keyframe
+    { transform: "translateX(200px) rotate(1.3turn)" }, // keyframe
+  ],
+  {
+    // keyframe options
+    duration: 2000,
+    direction: "alternate",
+    easing: "ease-in-out",
+    iterations: "Infinity",
+  },
 );
 
-// returns <div id="rabbit">Click the rabbit's ears!</div>
-rabbitDownKeyframes.target;
+const rollingAnimation = new Animation(rollingKeyframes, document.timeline);
+rollingAnimation.play();
+
+// logs "<div>🤣</div>"
+console.log(rollingKeyframes.target);
 ```
+
+```html
+<div>🤣</div>
+```
+
+```css hidden
+body {
+  box-shadow: 0 5px 5px pink;
+}
+
+div {
+  width: fit-content;
+  margin-left: calc(50% - 132px);
+  font-size: 64px;
+  user-select: none;
+  margin-top: 1rem;
+}
+```
+
+{{ EmbedLiveSample("Examples", "100%", "120") }}
 
 ## Specifications
 

@@ -169,7 +169,7 @@ The availability of these special shortcuts varies between manifest versions and
   <tr>
     <td><code>_execute_page_action</code></td>
     <td>Yes</td>
-    <td>Not available in Chromium-based browsers</td>
+    <td>Firefox only</td>
   </tr>
   <tr>
     <td><code>_execute_sidebar_action</code></td>
@@ -178,6 +178,8 @@ The availability of these special shortcuts varies between manifest versions and
   </tr>
 </tbody>
 </table>
+
+> **Note:** If the user changes the shortcut of the `_execute_browser_action` command, it is automatically carried over to the `_execute_action` command when the extension migrates from Manifest V2 to V3. This was implemented in Chrome 111 and Firefox 127.
 
 For example, this JSON defines a key combination that clicks the extension's browser action:
 

@@ -241,7 +241,7 @@ p1.ageDifference(p2); // TypeError: Cannot read private member #age from an obje
 
 Without the `in` operator, you would have to use a `try...catch` block to check if the object has the private property.
 
-You can also implement this as a [`@@hasInstance`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance) method of the class, so that you can use the [`instanceof`](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) operator to perform the same check (which, by default, only checks for the existence of `Person.prototype` in the object's prototype chain).
+You can also implement this as a [`[Symbol.hasInstance]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance) method of the class, so that you can use the [`instanceof`](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) operator to perform the same check (which, by default, only checks for the existence of `Person.prototype` in the object's prototype chain).
 
 ```js
 class Person {

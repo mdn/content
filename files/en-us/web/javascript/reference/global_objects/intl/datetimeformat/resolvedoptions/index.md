@@ -32,7 +32,11 @@ A new object with properties reflecting the options computed during the initiali
 - `numberingSystem`
   - : One of the [supported numbering system types](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getNumberingSystems#supported_numbering_system_types), reflecting the value provided for this property in the `options` argument or the `nu` Unicode extension key. The default is locale dependent.
 - `timeZone`
+
   - : One of the [IANA time zone names](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getTimeZones), reflecting the value provided for this property in the `options` argument. The default is the runtime's default time zone; should never be `undefined`.
+
+    > **Note:** While the IANA database changes from time to time, the Unicode CLDR database (which browsers use) keeps old time zone names for stability purposes. All browsers canonicalize time zone names, but in different directions. For example, `new Intl.DateTimeFormat("en-US", { timeZone: "Europe/Kiev" }).resolvedOptions().timeZone` and `new Intl.DateTimeFormat("en-US", { timeZone: "Europe/Kyiv" }).resolvedOptions().timeZone` will return the same string in the same browser, but maybe different strings in different browsers. See {{jsxref("Intl/Locale/getTimeZones", "Intl.Locale.prototype.getTimeZones")}} for more information.
+
 - `hourCycle`
   - : The value provided for this property in the `options` argument, or provided in the Unicode extension key `"hc"`, with default filled in as needed. Only present if the `options` argument included `hour` or `timeStyle`.
 - `hour12`

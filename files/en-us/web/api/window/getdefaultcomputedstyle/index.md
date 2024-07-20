@@ -63,7 +63,7 @@ const style = window.getDefaultComputedStyle(elem1);
 <script>
   const elem = document.getElementById("elem-container");
   const theCSSprop = window.getDefaultComputedStyle(elem).position;
-  document.getElementById("output").innerHTML = theCSSprop; // Will output "static"
+  document.getElementById("output").textContent = theCSSprop; // Will output "static"
 </script>
 ```
 

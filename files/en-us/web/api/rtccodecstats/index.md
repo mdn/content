@@ -75,4 +75,5 @@ stats.forEach((report) => {
 ## See also
 
 - {{domxref("RTCStatsReport")}}
-- {{domxref("RTCRtpCodecParameters")}}
+- `codecs` option in parameter passed to {{domxref("RTCRtpTransceiver.setCodecPreferences()")}} and {{domxref("RTCRtpSender.setParameters()()")}}.
+- `codecs` property in object returned by {{domxref("RTCRtpSender.getParameters()")}} and {{domxref("RTCRtpReceiver.getParameters()")}}.

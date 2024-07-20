@@ -7,7 +7,7 @@ browser-compat: css.properties.left
 
 {{CSSRef}}
 
-The **`left`** [CSS](/en-US/docs/Web/CSS) property participates in specifying the horizontal position of a [positioned element](/en-US/docs/Web/CSS/position). It has no effect on non-positioned elements.
+The **`left`** [CSS](/en-US/docs/Web/CSS) property participates in specifying the horizontal position of a [positioned element](/en-US/docs/Web/CSS/position). This {{glossary("inset properties", "inset property")}} has no effect on non-positioned elements.
 
 {{EmbedInteractiveExample("pages/css/left.html")}}
 
@@ -17,6 +17,8 @@ The **`left`** [CSS](/en-US/docs/Web/CSS) property participates in specifying th
 /* <length> values */
 left: 3px;
 left: 2.4em;
+left: calc(anchor(right) + 20px);
+left: anchor(--myAnchor 50%);
 
 /* <percentage>s of the width of the containing block */
 left: 10%;
@@ -39,6 +41,7 @@ left: unset;
   - : A negative, null, or positive {{cssxref("&lt;length&gt;")}} that represents:
 
     - for _absolutely positioned elements_, the distance to the left edge of the containing block.
+    - for [_anchor-positioned elements_](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#using_inset_properties_with_anchor_function_values), the {{cssxref("anchor()")}} function resolves to a {{cssxref("&lt;length&gt;")}} value relative to the position of the associated _anchor element_'s left or right edge.
     - for _relatively positioned elements_, the distance that the element is moved to the right of its normal position.
 
 - {{cssxref("&lt;percentage&gt;")}}
@@ -57,7 +60,7 @@ left: unset;
 
 The effect of `left` depends on how the element is positioned (i.e., the value of the {{cssxref("position")}} property):
 
-- When `position` is set to `absolute` or `fixed`, the `left` property specifies the distance between the element's outer margin of left edge and the inner border of left edge of its containing block. (The containing block is the ancestor to which the element is relatively positioned.)
+- When `position` is set to `absolute` or `fixed`, the `left` property specifies the distance between the element's outer margin of left edge and the inner border of left edge of its containing block. (The containing block is the ancestor to which the element is relatively positioned.) If the positioned element has an associated [_anchor element_](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using), and the property value includes an {{cssxref("anchor()")}} function, `left` positions the left edge of the positioned element relative to the position of the specified [`<anchor-side>`](/en-US/docs/Web/CSS/anchor#anchor-side) edge. The `left` property is [compatible](/en-US/docs/Web/CSS/anchor#compatibility_of_inset_properties_and_anchor-side_values) with the `left`, `right`, `start`, `end`, `self-start`, `self-end`, `center`, and `<percentage>` values.
 - When `position` is set to `relative`, the `left` property specifies the distance the element's left edge is moved to the right from its normal position.
 - When `position` is set to `sticky`, the `left` property is used to compute the sticky-constraint rectangle.
 - When `position` is set to `static`, the `left` property has _no effect_.

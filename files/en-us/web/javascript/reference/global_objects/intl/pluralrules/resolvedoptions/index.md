@@ -37,16 +37,16 @@ The object has the following properties:
 
 - `roundingIncrement` {{experimental_inline}}
   - : The rounding-increment precision (the increment used when rounding numbers).
-    This is the value specified in the [`options.roundingIncrement`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules#roundingincrement) argument in the constructor.
+    This is the value specified in the `options.roundingIncrement` argument in the constructor.
 - `roundingMode` {{experimental_inline}}
   - : The rounding mode.
-    This is the value provided for the [`options.roundingMode`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules#roundingmode) argument in the constructor, or the default value: `halfExpand`.
+    This is the value provided for the `options.roundingMode` argument in the constructor, or the default value: `halfExpand`.
 - `roundingPriority` {{experimental_inline}}
   - : The priority for resolving rounding conflicts if both "FractionDigits" and "SignificantDigits" are specified.
-    This is the value provided for the [`options.roundingPriority`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules#roundingpriority) argument in the constructor, or the default value: `auto`.
+    This is the value provided for the `options.roundingPriority` argument in the constructor, or the default value: `auto`.
 - `trailingZeroDisplay` {{experimental_inline}}
   - : The strategy for displaying trailing zeros on whole numbers.
-    This is the value specified in the [`options.trailingZeroDisplay`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules#trailingzerodisplay) argument in the constructor, or the default value: `"auto"`.
+    This is the value specified in the `options.trailingZeroDisplay` argument in the constructor, or the default value: `"auto"`.
 
 Only one of the following two groups of properties is included:
 

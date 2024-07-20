@@ -74,7 +74,7 @@ Note that, in XML, it is an XML error to use a prefix that hasn't been bound to 
 
 As an aside, it's useful to know that namespace prefixes can also be used for element names. This tells the user agent that the particular element (but not its children this time!) belongs to the namespace assigned to the prefix. Knowing this will save you some confusion if you come across markup like in the following example:
 
-```html
+```xml
 <html
   lang="en"
   xmlns="http://www.w3.org/1999/xhtml"
@@ -87,6 +87,8 @@ As an aside, it's useful to know that namespace prefixes can also be used for el
   </body>
 </html>
 ```
+
+> **Note:** This is an {{Glossary("XHTML")}} file, not an HTML file. XML namespaces are not valid in HTML. To try this example, you have to save your file as `.xhtml`.
 
 Note that because a namespace prefix is used for the `<svg:svg>` element and its child `<svg:circle>`, it wasn't necessary to redeclare the default namespace. In general, it is better to redeclare the default namespace rather than prefix lots of elements in this way.
 
@@ -302,7 +304,7 @@ For SVG, HTML, and MathML, the namespace is implied and therefore optional. It i
 
 When writing SVG, it is helpful to use a template that includes all the commonly used namespace declarations when creating new files. If you don't already have one, make one up starting with the following code:
 
-```html
+```xml
 <svg
   xmlns="http://www.w3.org/2000/svg"
   xmlns:xlink="http://www.w3.org/1999/xlink"></svg>

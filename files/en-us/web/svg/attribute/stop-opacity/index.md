@@ -56,3 +56,6 @@ You can use this attribute with the following SVG elements:
 ## See also
 
 - {{SVGAttr("stop-color")}}
+- {{SVGAttr("opacity")}}
+- {{SVGAttr("fill-opacity")}}
+- {{SVGAttr("stroke-opacity")}}

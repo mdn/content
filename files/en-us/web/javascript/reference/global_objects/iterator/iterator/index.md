@@ -42,7 +42,7 @@ You can also use {{jsxref("Iterator.from()")}} to create an `Iterator` instance 
 
 ### Subclassing Iterator
 
-The following example defines a custom data structure, `Range`, which allows iteration. The simplest way to make an object iterable is to provide an [`[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) method in the form of a generator function:
+The following example defines a custom data structure, `Range`, which allows iteration. The simplest way to make an object iterable is to provide an [`[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) method in the form of a generator function:
 
 ```js
 class Range {
@@ -74,7 +74,7 @@ This works, but it isn't as nice as how built-in iterators work. There are two p
 - The returned iterator inherits from {{jsxref("Generator")}}, which means modifications to `Generator.prototype` are going to affect the returned iterator, which is a leak of abstraction.
 - The returned iterator does not inherit from a custom prototype, which makes it harder if we intend to add extra methods to the iterator.
 
-We can mimic the implementation of built-in iterators, such as [map iterators](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/@@iterator), by subclassing `Iterator`. This enables us to define extra properties, such as [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag), while making the iterator helper methods available on the returned iterator.
+We can mimic the implementation of built-in iterators, such as [map iterators](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator), by subclassing `Iterator`. This enables us to define extra properties, such as [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag), while making the iterator helper methods available on the returned iterator.
 
 ```js
 class Range {

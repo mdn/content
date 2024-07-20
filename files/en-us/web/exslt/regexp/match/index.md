@@ -30,7 +30,7 @@ The character flags are:
 - `i`
   - : Case insensitive match. If this flag is specified, the match is performed in a case insensitive fashion.
 
-### Returns
+### Return value
 
 A node set of `match` elements, each of which has the string value equal to a portion of the first parameter string as captured by the regular expression. If the match isn't a global one, the first match element has the value of the portion of the string matched by the entire regular expression.
 

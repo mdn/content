@@ -44,15 +44,15 @@ To write content to file, create a FileWriter object by calling [`createWriter()
 
 Creates a new `FileWriter` associated with the file that the `FileEntry` represents.
 
-```webidl
-void createWriter();
+```js-nolint
+createWriter()
 ```
 
-#### Parameter
+#### Parameters
 
 None.
 
-#### Returns
+#### Return value
 
 A `FileWriterSync` object.
 
@@ -69,15 +69,15 @@ This method can raise a [DOMException](/en-US/docs/Web/API/DOMException) with th
 
 Returns a File that represents the current state of the file that this `FileEntry` represents.
 
-```webidl
-void file();
+```js-nolint
+file()
 ```
 
-#### Parameter
+#### Parameters
 
 None.
 
-#### Returns
+#### Return value
 
 A `File` object.
 

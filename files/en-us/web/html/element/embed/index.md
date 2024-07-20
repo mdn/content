@@ -30,7 +30,14 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 ## Usage notes
 
-You can use the {{cssxref("object-position")}} property to adjust the positioning of the embedded object within the element's frame, and the {{cssxref("object-fit")}} property to control how the object's size is adjusted to fit within the frame.
+You can use the {{cssxref("object-position")}} property to adjust the positioning of the embedded object within the element's frame.
+
+> [!NOTE]
+> The {{cssxref("object-fit")}} property has no effect on `<embed>` elements.
+
+## Accessibility
+
+Use the [`title` attribute](/en-US/docs/Web/HTML/Global_attributes/title) on an `embed` element to label its content so that people navigating with assistive technology such as a screen reader can understand what it contains. The title's value should concisely describe the embedded content. Without a title, they may not be able to determine what its embedded content is. This context shift can be confusing and time-consuming, especially if the `embed` element contains interactive content like video or audio.
 
 ## Examples
 
@@ -42,10 +49,6 @@ You can use the {{cssxref("object-position")}} property to adjust the positionin
   height="480"
   title="Title of my video" />
 ```
-
-## Accessibility concerns
-
-Use the [`title` attribute](/en-US/docs/Web/HTML/Global_attributes/title) on an `embed` element to label its content so that people navigating with assistive technology such as a screen reader can understand what it contains. The title's value should concisely describe the embedded content. Without a title, they may not be able to determine what its embedded content is. This context shift can be confusing and time-consuming, especially if the `embed` element contains interactive content like video or audio.
 
 ## Technical summary
 

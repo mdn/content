@@ -61,7 +61,6 @@ Pseudo-elements enable targeting entities not included in HTML and sections of c
 
   - {{cssxref("::cue")}}
   - {{cssxref("::cue", "::cue()")}}
-  - {{cssxref("::cue-region")}}
 
 - [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module
 

@@ -648,8 +648,8 @@
       "inh": "CSSRule",
       "impl": []
     },
-    "CSSNestRule": {
-      "inh": "CSSGroupingRule",
+    "CSSNestedDeclarations": {
+      "inh": "CSSRule",
       "impl": []
     },
     "CSSNumericArray": {
@@ -1446,6 +1446,18 @@
     },
     "Gyroscope": {
       "inh": "Sensor",
+      "impl": []
+    },
+    "HandwritingDrawing": {
+      "inh": "",
+      "impl": []
+    },
+    "HandwritingRecognizer": {
+      "inh": "",
+      "impl": []
+    },
+    "HandwritingStroke": {
+      "inh": "",
       "impl": []
     },
     "HashChangeEvent": {
@@ -3829,6 +3841,10 @@
       "impl": []
     },
     "VideoTrackList": {
+      "inh": "EventTarget",
+      "impl": []
+    },
+    "Viewport": {
       "inh": "EventTarget",
       "impl": []
     },

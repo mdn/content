@@ -93,6 +93,7 @@ Include a description of the property's value, including data type and what it r
 > A string representing...
 
 Note that some property pages are written in the form "Returns a [name of the property type] representing..." but this is not the recommended form.
+Also, some WebIDL extended attributes with specific meanings can be associated with the type. There are standard ways to document them; consult [Information contained in a WebIDL file](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file#type_of_the_property) for more information.
 
 ## Examples
 

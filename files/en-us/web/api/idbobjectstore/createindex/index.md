@@ -44,8 +44,7 @@ createIndex(indexName, keyPath, options)
         If `false`, it will add one single entry containing the array. Defaults to `false`.
     - `locale` {{non-standard_inline}} {{deprecated_inline}}
       - : Allows you to specify a locale for the index.
-        Any sorting operations performed on the data via key ranges will then obey sorting rules of that locale
-        (see [locale-aware sorting](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB#locale-aware_sorting)).
+        Any sorting operations performed on the data via key ranges will then obey sorting rules of that locale.
         You can specify its value in one of three ways:
         - `string`: A string containing a specific locale code, e.g. `en-US`, or `pl`.
         - `auto`: The platform default locale will be used (may be changed by user agent settings).
@@ -92,11 +91,13 @@ const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // Two event handlers for opening the database.
 DBOpenRequest.onerror = (event) => {
-  note.innerHTML += "<li>Error loading database.</li>";
+  note.appendChild(document.createElement("li")).textContent =
+    "Error loading database.";
 };
 
 DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += "<li>Database initialized.</li>";
+  note.appendChild(document.createElement("li")).textContent =
+    "Database initialized.";
 
   // store the result of opening the database in the db variable.
   // This is used a lot below.
@@ -115,7 +116,8 @@ DBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
   db.onerror = (event) => {
-    note.innerHTML += "<li>Error loading database.</li>";
+    note.appendChild(document.createElement("li")).textContent =
+      "Error loading database.";
   };
 
   // Create an objectStore for this database

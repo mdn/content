@@ -14,6 +14,8 @@ The **`mouseleave`** event is fired at an {{domxref("Element")}} when the cursor
 
 The `mouseleave` and `mouseout` events will not be triggered when the element is replaced or removed from the DOM.
 
+Note that "moving out of an event" refers to the element's position in the DOM tree, not to its visual position. For example, if two sibling elements are positioned so one is placed inside the other, then moving from the outer element into the inner element will trigger `mouseleave` on the outer element, even though the pointer is still in the bounds of the outer element.
+
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.

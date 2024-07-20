@@ -459,7 +459,7 @@ select.addEventListener('change', () => {
 });
 
 function createCalendar(days, choice) {
-  list.innerHTML = '';
+  list.textContent = "";
   h1.textContent = choice;
   for (let i = 1; i <= days; i++) {
     const listItem = document.createElement('li');
@@ -530,7 +530,7 @@ select.addEventListener("change", () => {
 });
 
 function createCalendar(days, choice) {
-  list.innerHTML = "";
+  list.textContent = "";
   h1.textContent = choice;
   for (let i = 1; i <= days; i++) {
     const listItem = document.createElement("li");
@@ -636,12 +636,12 @@ solution.addEventListener("click", () => {
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 textarea.onkeydown = (e) => {
-  if (e.keyCode === 9) {
+  if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
   }
 
-  if (e.keyCode === 27) {
+  if (e.code === "Escape") {
     textarea.blur();
   }
 };
@@ -826,12 +826,12 @@ solution.addEventListener("click", () => {
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 textarea.onkeydown = (e) => {
-  if (e.keyCode === 9) {
+  if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
   }
 
-  if (e.keyCode === 27) {
+  if (e.code === "Escape") {
     textarea.blur();
   }
 };

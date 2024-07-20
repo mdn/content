@@ -61,7 +61,7 @@ The opposite also occurs. Sometimes there are no declarations defining the value
   - [user origin](/en-US/docs/Web/CSS/Cascade#user_stylesheets)
 - [Declaring layers](/en-US/docs/Web/CSS/@import#importing_css_rules_into_a_cascade_layer)
   - [named layer](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers#the_layer_statement_at-rule_for_named_layers)
-  - [anonymous layer](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers#the-layer-block-at-rule-for-named-and-anonymous-layers)
+  - [anonymous layer](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers#the_layer_block_at-rule_for_named_and_anonymous_layers)
 - Glossary: {{glossary("style origin")}}
 
 ## Guides

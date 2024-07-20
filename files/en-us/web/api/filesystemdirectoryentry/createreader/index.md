@@ -30,40 +30,34 @@ directory's entries.
 
 ## Examples
 
-This example creates a method called `readDirectory()`, which fetches all of
+This example creates an async function called `readDirectory()`, which fetches all of
 the entries in the specified {{domxref("FileSystemDirectoryEntry")}} and returns them in
 an array.
 
 ```js
-function readDirectory(directory) {
-  let dirReader = directory.createReader();
-  let entries = [];
+async function readDirectory(directory) {
+  const dirReader = directory.createReader();
+  const entries = [];
 
-  let getEntries = () => {
-    dirReader.readEntries(
-      (results) => {
-        if (results.length) {
-          entries = entries.concat(toArray(results));
-          getEntries();
-        }
-      },
-      (error) => {
-        /* handle error — error is a FileError object */
-      },
-    );
-  };
+  while (true) {
+    const results = await new Promise((resolve, reject) => {
+      dirReader.readEntries(resolve, reject);
+    });
 
-  getEntries();
+    if (!results.length) {
+      break;
+    }
+
+    for (const entry of results) {
+      entries.push(entry);
+    }
+  }
+
   return entries;
 }
 ```
 
-This works by creating an internal function, `getEntries()`, which calls
-itself recursively to get all the entries in the directory, concatenating each batch to
-the array. Each iteration, {{domxref("FileSystemDirectoryReader.readEntries", "readEntries()")}}
-is called to get more entries. When it returns an empty array, the
-end of the directory has been reached, and the recursion ends. Once control is returned
-to `readDirectory()`, the array is returned to the caller.
+This works by calling {{domxref("FileSystemDirectoryReader.readEntries", "readEntries()")}} repetitively to get all the entries in the directory, concatenating each batch to the array. When it returns an empty array, all entries have been read, and the loop ends.
 
 ## Specifications
 

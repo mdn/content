@@ -614,7 +614,7 @@ If you get really stuck, press "Show solution" to see a solution.
 </p>
 <textarea id="code" class="playable-code" style="height: 300px;width: 95%">
 let output = document.querySelector('.output');
-output.innerHTML = '';
+output.textContent = "";
 
 // let i = 10;
 
@@ -682,7 +682,7 @@ solution.addEventListener("click", function () {
 });
 
 let jsSolution = `const output = document.querySelector('.output');
-output.innerHTML = '';
+output.textContent = "";
 
 let i = 10;
 
@@ -710,12 +710,12 @@ window.addEventListener("load", updateCode);
 // make it write a tab at the caret position instead
 
 textarea.onkeydown = function (e) {
-  if (e.keyCode === 9) {
+  if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
   }
 
-  if (e.keyCode === 27) {
+  if (e.code === "Escape") {
     textarea.blur();
   }
 };
@@ -891,12 +891,12 @@ window.addEventListener("load", updateCode);
 // make it write a tab at the caret position instead
 
 textarea.onkeydown = function (e) {
-  if (e.keyCode === 9) {
+  if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
   }
 
-  if (e.keyCode === 27) {
+  if (e.code === "Escape") {
     textarea.blur();
   }
 };

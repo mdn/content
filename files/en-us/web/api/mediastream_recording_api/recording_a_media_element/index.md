@@ -129,7 +129,7 @@ Next, we create some utility functions that will get used later.
 
 ```js
 function log(msg) {
-  logElement.innerHTML += `${msg}\n`;
+  logElement.innerText += `${msg}\n`;
 }
 ```
 
@@ -173,20 +173,13 @@ function startRecording(stream, lengthInMS) {
 
 `startRecording()` takes two input parameters: a {{domxref("MediaStream")}} to record from and the length in milliseconds of the recording to make. We always record no more than the specified number of milliseconds of media, although if the media stops before that time is reached, {{domxref("MediaRecorder")}} automatically stops recording as well.
 
-- Line 2
-  - : Creates the `MediaRecorder` that will handle recording the input `stream`.
-- Line 3
-  - : Creates an empty array, `data`, which will be used to hold the {{domxref("Blob")}}s of media data provided to our {{domxref("MediaRecorder.dataavailable_event", "ondataavailable")}} event handler.
-- Line 5
-  - : Sets up the handler for the {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} event. The received event's `data` property is a {{domxref("Blob")}} that contains the media data. The event handler pushes the `Blob` onto the `data` array.
-- Lines 6-7
-  - : Starts the recording process by calling {{domxref("MediaRecorder.start", "recorder.start()")}}, and outputs a message to the log with the updated state of the recorder and the number of seconds it will be recording.
-- Lines 9-12
-  - : Creates a new {{jsxref("Promise")}}, named `stopped`, which is resolved when the `MediaRecorder`'s {{domxref("MediaRecorder.stop_event", "onstop")}} event handler is called, and is rejected if its {{domxref("MediaRecorder.error_event", "onerror")}} event handler is called. The rejection handler receives as input the name of the error that occurred.
-- Lines 14-16
-  - : Creates a new `Promise`, named `recorded`, which is resolved when the specified number of milliseconds have elapsed. Upon resolution, it stops the `MediaRecorder` if it's recording.
-- Lines 18-22
-  - : These lines create a new `Promise` which is fulfilled when both of the two `Promise`s (`stopped` and `recorded`) have resolved. Once that resolves, the array data is returned by `startRecording()` to its caller.
+- We first create the `MediaRecorder` that will handle recording the input `stream`.
+- `data` is an array, initially empty, that holds the {{domxref("Blob")}}s of media data provided to our {{domxref("MediaRecorder.dataavailable_event", "ondataavailable")}} event handler.
+- The `ondataavailable` assignment sets up the handler for the {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} event. The received event's `data` property is a {{domxref("Blob")}} that contains the media data. The event handler pushes the `Blob` onto the `data` array.
+- We start the recording process by calling {{domxref("MediaRecorder.start", "recorder.start()")}}, and output a message to the log with the updated state of the recorder and the number of seconds it will be recording.
+- We create a new {{jsxref("Promise")}}, named `stopped`, which is resolved when the `MediaRecorder`'s {{domxref("MediaRecorder.stop_event", "onstop")}} event handler is called, and is rejected if its {{domxref("MediaRecorder.error_event", "onerror")}} event handler is called. The rejection handler receives as input the name of the error that occurred.
+- We creates another new `Promise`, named `recorded`, which is resolved when the specified number of milliseconds have elapsed. Upon resolution, it stops the `MediaRecorder` if it's recording.
+- Finally, we use {{jsxref("Promise.all")}} to create a new `Promise` which is fulfilled when both of the two `Promise`s (`stopped` and `recorded`) have resolved. Once that resolves, the array data is returned by `startRecording()` to its caller.
 
 ### Stopping the input stream
 
@@ -245,22 +238,15 @@ startButton.addEventListener(
 
 When a {{domxref("Element/click_event", "click")}} event occurs, here's what happens:
 
-- Lines 2-4
-  - : {{domxref("MediaDevices.getUserMedia")}} is called to request a new {{domxref("MediaStream")}} that has both video and audio tracks. This is the stream we'll record.
-- Lines 5-9
-  - : When the Promise returned by `getUserMedia()` is resolved, the preview {{HTMLElement("video")}} element's {{domxref("HTMLMediaElement.srcObject","srcObject")}} property is set to be the input stream, which causes the video being captured by the user's camera to be displayed in the preview box. Since the `<video>` element is muted, the audio won't play. The "Download" button's link is then set to refer to the stream as well. Then, in line 8, we arrange for `preview.captureStream()` to call `preview.mozCaptureStream()` so that our code will work on Firefox, on which the {{domxref("HTMLMediaElement.captureStream()")}} method is prefixed. Then a new {{jsxref("Promise")}} which resolves when the preview video starts to play is created and returned.
-- Line 10
-  - : When the preview video begins to play, we know there's media to record, so we respond by calling the [`startRecording()`](#starting_media_recording) function we created earlier, passing in the preview video stream (as the source media to be recorded) and `recordingTimeMS` as the number of milliseconds of media to record. As mentioned before, `startRecording()` returns a {{jsxref("Promise")}} whose resolution handler is called (receiving as input an array of {{domxref("Blob")}} objects containing the chunks of recorded media data) once recording has completed.
-- Lines 11-15
+- {{domxref("MediaDevices.getUserMedia")}} is called to request a new {{domxref("MediaStream")}} that has both video and audio tracks. This is the stream we'll record.
+- When the Promise returned by `getUserMedia()` is resolved, the preview {{HTMLElement("video")}} element's {{domxref("HTMLMediaElement.srcObject","srcObject")}} property is set to be the input stream, which causes the video being captured by the user's camera to be displayed in the preview box. Since the `<video>` element is muted, the audio won't play. The "Download" button's link is then set to refer to the stream as well. Then, we arrange for `preview.captureStream()` to call `preview.mozCaptureStream()` so that our code will work on Firefox, on which the {{domxref("HTMLMediaElement.captureStream()")}} method is prefixed. Then a new {{jsxref("Promise")}} which resolves when the preview video starts to play is created and returned.
+- When the preview video begins to play, we know there's media to record, so we respond by calling the [`startRecording()`](#starting_media_recording) function we created earlier, passing in the preview video stream (as the source media to be recorded) and `recordingTimeMS` as the number of milliseconds of media to record. As mentioned before, `startRecording()` returns a {{jsxref("Promise")}} whose resolution handler is called (receiving as input an array of {{domxref("Blob")}} objects containing the chunks of recorded media data) once recording has completed.
+- The recording process's resolution handler receives as input an array of media data `Blob`s locally known as `recordedChunks`. The first thing we do is merge the chunks into a single {{domxref("Blob")}} whose MIME type is `"video/webm"` by taking advantage of the fact that the {{domxref("Blob.Blob", "Blob()")}} constructor concatenates arrays of objects into one object. Then {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} is used to create a URL that references the blob; this is then made the value of the recorded video playback element's [`src`](/en-US/docs/Web/HTML/Element/video#src) attribute (so that you can play the video from the blob) as well as the target of the download button's link.
 
-  - : The recording process's resolution handler receives as input an array of media data `Blob`s locally known as `recordedChunks`. The first thing we do is merge the chunks into a single {{domxref("Blob")}} whose MIME type is `"video/webm"` by taking advantage of the fact that the {{domxref("Blob.Blob", "Blob()")}} constructor concatenates arrays of objects into one object. Then {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} is used to create a URL that references the blob; this is then made the value of the recorded video playback element's [`src`](/en-US/docs/Web/HTML/Element/video#src) attribute (so that you can play the video from the blob) as well as the target of the download button's link.
+  Then the download button's [`download`](/en-US/docs/Web/HTML/Element/a#download) attribute is set. While the `download` attribute can be a Boolean, you can also set it to a string to use as the name for the downloaded file. So by setting the download link's `download` attribute to "RecordedVideo.webm", we tell the browser that clicking the button should download a file named `"RecordedVideo.webm"` whose contents are the recorded video.
 
-    Then the download button's [`download`](/en-US/docs/Web/HTML/Element/a#download) attribute is set. While the `download` attribute can be a Boolean, you can also set it to a string to use as the name for the downloaded file. So by setting the download link's `download` attribute to "RecordedVideo.webm", we tell the browser that clicking the button should download a file named `"RecordedVideo.webm"` whose contents are the recorded video.
-
-- Lines 17-18
-  - : The size and type of the recorded media are output to the log area below the two videos and the download button.
-- Line 20
-  - : The `catch()` for all the `Promise`s outputs the error to the logging area by calling our `log()` function.
+- The size and type of the recorded media are output to the log area below the two videos and the download button.
+- The `catch()` for all the `Promise`s outputs the error to the logging area by calling our `log()` function.
 
 ### Handling the stop button
 

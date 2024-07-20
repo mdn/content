@@ -7,17 +7,15 @@ browser-compat: webextensions.api.browserAction
 
 {{AddonSidebar}}
 
-Adds a button to the browser's toolbar.
+Read and modify attributes of and listen to clicks on the browser toolbar button defined with the [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) manifest key.
 
 A [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) is a button in the browser's toolbar.
 
-You can associate a popup with the button. Like a web page, the popup is specified using HTML, CSS, and JavaScript. JavaScript running in the popup gets access to all the same WebExtension APIs as your background scripts, but its global context is the popup, not the current page displayed in the browser. To affect web pages, you need to communicate with them via [messages](/en-US/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page#messaging).
+You can associate a popup with the button. Like a web page, the popup is specified using HTML, CSS, and JavaScript. JavaScript running in the popup gets access to the same WebExtension APIs as your background scripts, but its global context is the popup, not the current page displayed in the browser. To affect web pages, you need to communicate with them via [messages](/en-US/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page#messaging).
 
 If you specify a popup, it is shown — and the content loaded — when the user clicks the icon. If you do not specify a popup, an event is dispatched to your extension when the user clicks the icon.
 
 The button also has a context menu, and you can add items to this menu with the {{WebExtAPIRef("menus")}} API using the `browser_action` {{WebExtAPIRef("menus.ContextType")}}.
-
-You can define most of a browser action's properties declaratively using the [`browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) key in the manifest.json.
 
 With the `browserAction` API, you can:
 

@@ -8,11 +8,7 @@ browser-compat: api.CanvasRenderingContext2D.setTransform
 
 {{APIRef}}
 
-The
-**`CanvasRenderingContext2D.setTransform()`**
-method of the Canvas 2D API resets (overrides) the current transformation to the
-identity matrix, and then invokes a transformation described by the arguments of this
-method. This lets you scale, rotate, translate (move), and skew the context.
+The **`CanvasRenderingContext2D.setTransform()`** method of the Canvas 2D API resets (overrides) the current transformation to the identity matrix, and then invokes a transformation described by the arguments of this method. This lets you scale, rotate, translate (move), and skew the context.
 
 > **Note:** See also the {{domxref("CanvasRenderingContext2D.transform()", "transform()")}} method; instead of overriding the current transform matrix, it
 > multiplies it with a given one.
@@ -24,27 +20,13 @@ setTransform(a, b, c, d, e, f)
 setTransform(matrix)
 ```
 
-The transformation matrix is described by: <math><semantics><mrow><mo>[</mo>
-<mtable columnalign="center center center" rowspacing="0.5ex"><mtr><mtd><mi>a</mi>
-</mtd><mtd><mi>c</mi>
-</mtd><mtd><mi>e</mi>
-</mtd></mtr><mtr><mtd><mi>b</mi>
-</mtd><mtd><mi>d</mi>
-</mtd><mtd><mi>f</mi>
-</mtd></mtr><mtr><mtd><mn>0</mn>
-</mtd><mtd><mn>0</mn>
-</mtd><mtd><mn>1</mn>
-</mtd></mtr></mtable><mo>]</mo>
-</mrow><annotation encoding="TeX">\left[ \begin{array}{ccc} a &#x26; c &#x26; e \\ b &#x26; d
-&#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{array} \right]</annotation></semantics></math>
+The transformation matrix is described by: <math><semantics><mrow><mo>[</mo><mtable columnalign="center center center" rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="TeX">\left[ \begin{array}{ccc} a & c & e \\ b & d & f \\ 0 & 0 & 1 \end{array} \right]</annotation></semantics></math>.
 
 This transformation matrix gets multiplied on the left of a column vector representing each point being drawn on the canvas, to produce the final coordinate used on the canvas.
 
 ### Parameters
 
-`setTransform()` has two types of parameter that it can accept. The older
-type consists of several parameters representing the individual components of the
-transformation matrix to set:
+`setTransform()` accepts two types of parameters. The older type consists of several parameters representing the individual components of the transformation matrix to set:
 
 - `a` (`m11`)
   - : The cell in the first row and first column of the matrix.
@@ -75,8 +57,7 @@ None ({{jsxref("undefined")}}).
 
 ### Skewing a shape
 
-This example skews a rectangle both vertically (`.2`) and horizontally
-(`.8`). Scaling and translation remain unchanged.
+This example skews a rectangle both vertically (`.2`) and horizontally (`.8`). Scaling and translation remain unchanged.
 
 #### HTML
 
@@ -100,14 +81,9 @@ ctx.fillRect(0, 0, 100, 100);
 
 ### Retrieving and passing a DOMMatrix object
 
-In the following example, we have two {{htmlelement("canvas")}} elements. We apply a
-transform to the first one's context using the first type of `setTransform()`
-and draw a square on it, then retrieve the matrix from it using
-{{domxref("CanvasRenderingContext2D.getTransform()")}}.
+In the following example, we have two {{htmlelement("canvas")}} elements. We apply a transform to the first one's context using the first type of `setTransform()` and draw a square on it, then retrieve the matrix from it using {{domxref("CanvasRenderingContext2D.getTransform()")}}.
 
-We then apply the retrieved matrix directly to the second canvas context by passing the
-`DOMMatrix` object directly to `setTransform()` (i.e. the second
-type), and draw a circle on it.
+We then apply the retrieved matrix directly to the second canvas context by passing the `DOMMatrix` object directly to `setTransform()` (i.e. the second type), and draw a circle on it.
 
 #### HTML
 

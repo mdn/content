@@ -27,7 +27,7 @@ The `WebAssembly.Instance()` constructor function can be called to synchronously
 
 ```js
 const importObject = {
-  imports: {
+  my_namespace: {
     imported_func(arg) {
       console.log(arg);
     },
@@ -47,7 +47,7 @@ The preferred way to get an `Instance` is asynchronously, for example using the 
 
 ```js
 const importObject = {
-  imports: {
+  my_namespace: {
     imported_func(arg) {
       console.log(arg);
     },

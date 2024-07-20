@@ -9,6 +9,8 @@ browser-compat: css.types.filter-function.hue-rotate
 
 The **`hue-rotate()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) rotates the [hue](https://en.wikipedia.org/wiki/Hue) of an element and its contents. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
 
+> **Note:** `hue-rotate()` is specified as a matrix operation on the RGB color. It does not actually convert the color to the HSL model, which is a non-linear operation. Therefore, it may not preserve the saturation or lightness of the original color, especially for saturated colors.
+
 {{EmbedInteractiveExample("pages/css/function-hue-rotate.html")}}
 
 ## Syntax
@@ -173,6 +175,53 @@ This example shows three images: the image with a `hue-rotate()` filter function
 ```
 
 {{EmbedLiveSample('With_url()_and_the_SVG_hue-rotate_filter','100%','280')}}
+
+### hue-rotate() does not preserve saturation or lightness
+
+The diagram below compares two color gradients starting with red: the first is generated using `hue-rotate()`, and the second uses actual HSL color values. Note how the `hue-rotate()` gradient shows obvious differences in saturation and lightness in the middle.
+
+```html
+<div>
+  <p>Using <code>hue-rotate()</code></p>
+  <div id="hue-rotate"></div>
+</div>
+<div>
+  <p>Using <code>hsl()</code></p>
+  <div id="hsl"></div>
+</div>
+```
+
+```css hidden
+#hue-rotate,
+#hsl {
+  display: flex;
+  margin: 1em 0;
+}
+
+#hue-rotate div,
+#hsl div {
+  width: 2px;
+  height: 100px;
+}
+```
+
+```js
+const hueRotate = document.getElementById("hue-rotate");
+const hsl = document.getElementById("hsl");
+
+for (let i = 0; i < 360; i++) {
+  const div1 = document.createElement("div");
+  div1.style.backgroundColor = `hsl(${i}, 100%, 50%)`;
+  hsl.appendChild(div1);
+
+  const div2 = document.createElement("div");
+  div2.style.backgroundColor = "red";
+  div2.style.filter = `hue-rotate(${i}deg)`;
+  hueRotate.appendChild(div2);
+}
+```
+
+{{EmbedLiveSample('hue-rotate_does_not_preserve_saturation_or_lightness','100%','350')}}
 
 ## Specifications
 

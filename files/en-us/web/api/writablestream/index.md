@@ -108,9 +108,13 @@ You can find the full code in our [Simple writer example](https://mdn.github.io/
 Because of how [backpressure](/en-US/docs/Web/API/Streams_API/Concepts#backpressure) is supported in the API, its implementation in code may be less than obvious.
 To see how backpressure is implemented look for three things:
 
-- The `highWaterMark` property, which is set when creating the counting strategy (line 35), sets the maximum amount of data that the `WritableStream` instance will handle in a single `write()` operation. In this example, it's the maximum amount of data that can be sent to `defaultWriter.write()` (line 11).
-- The `defaultWriter.ready` property returns a promise that resolves when the sink (the first property of the `WritableStream` constructor) is done writing data. The data source can either write more data (line 9) or call `close()` (line 24). Calling close() too early can prevent data from being written. This is why the example calls `defaultWriter.ready` twice (lines 9 and 22).
-- The {{jsxref("Promise")}} returned by the sink's `write()` method (line 40) tells the `WritableStream` and its writer when to resolve `defaultWriter.ready`.
+- The `highWaterMark` property, which is set when creating the counting strategy using `new CountQueuingStrategy`, sets the maximum amount of data that the `WritableStream` instance will handle in a single `write()` operation.
+  In this example, it's the maximum amount of data that can be sent to `defaultWriter.write()`, in the `sendMessage` function.
+- The `defaultWriter.ready` property returns a promise that resolves when the sink (the first property of the `WritableStream` constructor) is done writing data.
+  The data source can either write more data using `defaultWriter.write()` or call `defaultWriter.close()`, as demonstrated in the example above.
+  Calling `close()` too early can prevent data from being written.
+  This is why the example calls `defaultWriter.ready` twice.
+- The {{jsxref("Promise")}} returned by the sink's `write()` method tells the `WritableStream` and its writer when to resolve `defaultWriter.ready`.
 
 ## Specifications
 

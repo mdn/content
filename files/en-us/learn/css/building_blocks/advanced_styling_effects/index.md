@@ -4,7 +4,7 @@ slug: Learn/CSS/Building_blocks/Advanced_styling_effects
 page-type: guide
 ---
 
-{{LearnSidebar}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}
 
 This article acts as a box of tricks, providing an introduction to some interesting advanced styling features such as box shadows, blend modes, and filters.
 
@@ -340,3 +340,5 @@ If you do want to use such features in your production work, make sure to test a
 ## Summary
 
 We hope this article was fun — playing with shiny toys generally is, and it is always interesting to see what kinds of advanced styling tools are becoming available in modern browsers.
+
+{{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks")}}

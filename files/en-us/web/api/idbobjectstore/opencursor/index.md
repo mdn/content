@@ -39,10 +39,10 @@ openCursor(query, direction)
       - : The cursor is opened at the start of the store; then, the cursor returns all records, that are not duplicates,
         in the increasing order of keys.
     - `prev`
-      - : The cursor is opened at the start of the store; then, the cursor returns all records, even duplicates,
+      - : The cursor is opened at the end of the store; then, the cursor returns all records, even duplicates,
         in the decreasing order of keys.
     - `prevunique`
-      - : The cursor is opened at the start of the store; then, the cursor returns all records, that are not duplicates,
+      - : The cursor is opened at the end of the store; then, the cursor returns all records, that are not duplicates,
         in the decreasing order of keys.
 
 ### Return value

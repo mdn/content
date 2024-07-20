@@ -1,7 +1,7 @@
 ---
 title: font-synthesis
 slug: Web/CSS/font-synthesis
-page-type: css-property
+page-type: css-shorthand-property
 browser-compat: css.properties.font-synthesis
 ---
 

@@ -7,7 +7,7 @@ browser-compat: webextensions.api.declarativeNetRequest.MAX_NUMBER_OF_STATIC_RUL
 
 {{AddonSidebar}}
 
-The maximum number of static rulesets an extension can specify as part of the [`declarative_net_request.rule_resources`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request) manifest key.
+The maximum number of static rulesets an extension can specify as part of the [`declarative_net_request.rule_resources`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request) manifest key. See [static ruleset limits](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#static_ruleset_limits) for more information on the static ruleset limits.
 
 Its value is `50`.
 

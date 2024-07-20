@@ -88,7 +88,7 @@ However, it is no good if you want to embed cross-site content across multiple s
 Set-Cookie: widget_session=7yjgj57e4n3d; SameSite=None; Secure; HttpOnly
 ```
 
-Note that if `SameSite=None` is set then the `Secure` attribute must also be set — `SameSite=None` requires a _secure context_. In the above example we have also set the `HttpOnly` attribute, to disable JavaScript access to the cookie (e.g. via {{domxref("Document.cookie")}}). Cookies that persist sensitive information should always have the `HttpOnly` attribute set — it would be really insecure to make them available to JavaScript. This precaution helps mitigate cross-site scripting ([XSS](</en-US/docs/Web/Security/Types_of_attacks#cross-site_scripting_(xss)>)) attacks.
+Note that if `SameSite=None` is set then the `Secure` attribute must also be set — `SameSite=None` requires a _secure context_. In the above example we have also set the `HttpOnly` attribute, to disable JavaScript access to the cookie (e.g. via {{domxref("Document.cookie")}}). Cookies that persist sensitive information should always have the `HttpOnly` attribute set — it would be really insecure to make them available to JavaScript. This precaution helps mitigate cross-site scripting ([XSS](/en-US/docs/Web/Security/Types_of_attacks#cross-site_scripting_xss)) attacks.
 
 > **Note:** Cookies that are used for sensitive information should also have a short [lifetime](/en-US/docs/Web/HTTP/Cookies#removal_defining_the_lifetime_of_a_cookie).
 

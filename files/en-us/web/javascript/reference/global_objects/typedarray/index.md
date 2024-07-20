@@ -184,7 +184,7 @@ All `TypeArray` subclass constructors operate in the same way. They would all th
 
 These properties are defined on the `TypedArray` constructor object and are thus shared by all `TypedArray` subclass constructors.
 
-- {{jsxref("TypedArray/@@species", "TypedArray[@@species]")}}
+- [`TypedArray[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.species)
   - : The constructor function used to create derived objects.
 
 All `TypedArray` subclasses also have the following static properties:
@@ -215,8 +215,8 @@ These properties are defined on `TypedArray.prototype` and shared by all `TypedA
   - : The constructor function that created the instance object. `TypedArray.prototype.constructor` is the hidden `TypedArray` constructor function, but each typed array subclass also defines its own `constructor` property.
 - {{jsxref("TypedArray.prototype.length")}}
   - : Returns the number of elements held in the typed array.
-- `TypedArray.prototype[@@toStringTag]`
-  - : The initial value of the [`TypedArray.prototype[@@toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is a getter that returns the same string as the typed array constructor's name. It returns `undefined` if the `this` value is not one of the typed array subclasses. This property is used in {{jsxref("Object.prototype.toString()")}}. However, because `TypedArray` also has its own [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/toString) method, this property is not used unless you call [`Object.prototype.toString.call()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call) with a typed array as `thisArg`.
+- `TypedArray.prototype[Symbol.toStringTag]`
+  - : The initial value of the [`TypedArray.prototype[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is a getter that returns the same string as the typed array constructor's name. It returns `undefined` if the `this` value is not one of the typed array subclasses. This property is used in {{jsxref("Object.prototype.toString()")}}. However, because `TypedArray` also has its own [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/toString) method, this property is not used unless you call [`Object.prototype.toString.call()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call) with a typed array as `thisArg`.
 
 All `TypedArray` subclasses also have the following instance properties:
 
@@ -289,7 +289,7 @@ These methods are defined on the `TypedArray` prototype object and are thus shar
   - : Returns a new _array iterator_ object that contains the values for each index in the array. See also {{jsxref("Array.prototype.values()")}}.
 - {{jsxref("TypedArray.prototype.with()")}}
   - : Returns a new array with the element at the given index replaced with the given value, without modifying the original array.
-- [`TypedArray.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator)
+- [`TypedArray.prototype[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator)
   - : Returns a new _array iterator_ object that contains the values for each index in the array.
 
 ## Examples

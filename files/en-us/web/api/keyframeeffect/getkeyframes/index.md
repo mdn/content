@@ -27,9 +27,9 @@ Returns a sequence of objects with the following format:
 - `property value pairs`
   - : As many property value pairs as are contained in each keyframe of the animation.
 - `offset`
-  - : The offset of the keyframe specified as a number between `0.0` and `1.0` inclusive or `null`. This is equivalent to specifying start and end states in percentages in CSS stylesheets using `@keyframes`. This will be `null` if the keyframe is automatically spaced using {{domxref("KeyframeEffect.spacing")}}.
+  - : The offset of the keyframe specified as a number between `0.0` and `1.0` inclusive or `null`. This is equivalent to specifying start and end states in percentages in CSS stylesheets using `@keyframes`. This will be `null` if the keyframe is automatically spaced.
 - `computedOffset`
-  - : The computed offset for this keyframe, calculated when the list of computed keyframes was produced according to {{domxref("KeyframeEffect.spacing")}}. Unlike **`offset`,** above, the **`computedOffset`** is never `null`.
+  - : The computed offset for this keyframe, calculated when the list of computed keyframes was produced. Unlike **`offset`,** above, the **`computedOffset`** is never `null`.
 - `easing`
   - : The [easing function](/en-US/docs/Web/CSS/easing-function) used from this keyframe until the next keyframe in the series.
 - `composite`
@@ -37,13 +37,52 @@ Returns a sequence of objects with the following format:
 
 ## Examples
 
-In the [Red Queen Race](https://codepen.io/rachelnabors/pen/PNGGaV) example, we can inspect Alice and the RedQueen's animation to see its individual keyframes like so:
+In the following example, we can inspect the rolling animation to see its keyframes using the `getKeyframes()` method:
 
 ```js
-// Return the array of keyframes
+const emoji = document.querySelector("div"); // element to animate
 
-redQueen_alice.effect.getKeyframes();
+const rollingKeyframes = new KeyframeEffect(
+  emoji,
+  [
+    { transform: "translateX(0) rotate(0)" }, // keyframe
+    { transform: "translateX(200px) rotate(1.3turn)" }, // keyframe
+  ],
+  {
+    // keyframe options
+    duration: 2000,
+    direction: "alternate",
+    easing: "ease-in-out",
+    iterations: "Infinity",
+  },
+);
+
+const rollingAnimation = new Animation(rollingKeyframes, document.timeline);
+rollingAnimation.play();
+
+// Array [ {…}, {…} ]
+console.log(rollingAnimation.effect.getKeyframes());
 ```
+
+```html
+<div>🤣</div>
+```
+
+```css hidden
+body {
+  box-shadow: 0 5px 5px pink;
+}
+
+div {
+  width: fit-content;
+  margin-left: calc(50% - 132px);
+  font-size: 64px;
+  user-select: none;
+  margin-top: 1rem;
+}
+```
+
+{{ EmbedLiveSample("Examples", "100%", "120") }}
 
 ## Specifications
 

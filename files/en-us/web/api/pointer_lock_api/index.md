@@ -18,7 +18,7 @@ Pointer lock lets you access mouse events even when the cursor goes past the bou
 
 ## Basic concepts
 
-Pointer lock is related to [mouse capture](/en-US/docs/Web/API/Element/setCapture). Mouse capture provides continued delivery of events to a target element while a mouse is being dragged, but it stops when the mouse button is released. Pointer lock is different from mouse capture in the following ways:
+Pointer lock is related to [pointer capture](/en-US/docs/Web/API/Pointer_events#pointer_capture). Pointer capture provides continued delivery of events to a target element while a mouse is being dragged, but it stops when the mouse button is released. Pointer lock is different from pointer capture in the following ways:
 
 - It is persistent: Pointer lock does not release the mouse until an explicit API call is made or the user uses a specific release gesture.
 - It is not limited by browser or screen boundaries.

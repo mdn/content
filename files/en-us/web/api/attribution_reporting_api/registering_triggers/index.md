@@ -99,7 +99,7 @@ However, what happens behind the scenes to register triggers, look for matches, 
    - The trigger's filters do not match the source's filter data (See [Filters](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#filters) for more details).
    - The source's [`"trigger_data_matching"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#trigger_data_matching) setting results in no match occurring.
    - The source's [`"max_event_level_reports"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#max_event_level_reports) limit has been reached.
-   - A successful match is not reported due to the browser's randomized response algorithm. See [How noise is added to reports](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#how_noise_is_added_to_reports) for more details.
+   - A successful match is not reported due to the browser's randomized response algorithm. See [Adding noise to reports](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#adding_noise_to_reports) for more details.
 
 4. If a successful match is found, the browser [generates a report](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports) based on the source and trigger data, and sends it to a reporting endpoint.
 

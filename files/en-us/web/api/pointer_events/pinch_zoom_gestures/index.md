@@ -202,17 +202,16 @@ function enableLog(ev) {
 function log(prefix, ev) {
   if (!logEvents) return;
   const o = document.getElementsByTagName("output")[0];
-  const s =
-    `${prefix}:<br>` +
-    `  pointerID   = ${ev.pointerId}<br>` +
-    `  pointerType = ${ev.pointerType}<br>` +
-    `  isPrimary   = ${ev.isPrimary}`;
-  o.innerHTML += `${s}<br>`;
+  o.innerText += `${prefix}:
+  pointerID   = ${ev.pointerId}
+  pointerType = ${ev.pointerType}
+  isPrimary   = ${ev.isPrimary}
+`;
 }
 
 function clearLog(event) {
   const o = document.getElementsByTagName("output")[0];
-  o.innerHTML = "";
+  o.textContent = "";
 }
 ```
 

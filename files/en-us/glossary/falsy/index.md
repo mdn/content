@@ -78,7 +78,8 @@ console.log(0 && "dog");
 
 ## See also
 
-- {{Glossary("Truthy")}}
-- {{Glossary("Type_coercion", "Coercion")}}
-- {{Glossary("Boolean")}}
+- Related glossary terms:
+  - {{Glossary("Truthy")}}
+  - {{Glossary("Type_coercion", "Coercion")}}
+  - {{Glossary("Boolean")}}
 - [Boolean coercion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean#boolean_coercion)

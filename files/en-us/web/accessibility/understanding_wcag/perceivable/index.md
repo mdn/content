@@ -39,19 +39,16 @@ The key here is that text can be converted to other forms that people with disab
       <td>
         Complex images or charts should have an accessible alternative provided,
         either on the same page or via a link. Use a regular link instead of
-        a `longdesc` attribute.
+        a <code>longdesc</code> attribute.
       </td>
       <td>
         <p>
           A text description may work, or an accessible data table (see
           <a href="/en-US/docs/Learn/HTML/Tables/Advanced"
             >HTML table advanced features and accessibility</a
-          >). See
-          <a
-            href="/en-US/docs/Learn/Accessibility/HTML#other_text_alternative_mechanisms"
-            >Other text alternative mechanisms</a
-          >
-          for the argument against `longdesc`.
+          >). See W3C's
+          <a href="https://www.w3.org/TR/html-longdesc/">Image Description Extension (longdesc)</a>
+          for the argument against <code>longdesc</code>.
         </p>
       </td>
     </tr>
@@ -71,10 +68,6 @@ The key here is that text can be converted to other forms that people with disab
           >,
           <a href="/en-US/docs/Learn/Accessibility/Multimedia#video_text_tracks"
             >Video text tracks</a
-          >, and
-          <a
-            href="/en-US/docs/Learn/Accessibility/Multimedia#other_multimedia_content"
-            >Other multimedia content</a
           >
           for other alternatives.
         </p>
@@ -145,7 +138,7 @@ Time-based media refers to multimedia with a duration, such as audio and video. 
     <tr>
        <td>1.2.2 Provide captions for web-based video (A)</td>
        <td>You should provide captions for video presented on the web (e.g., HTML video). This is for the benefit of people who can't hear the audio part of the video.</td>
-       <td>See <a href="/en-US/docs/Learn/Accessibility/Multimedia#video_text_tracks">Video text tracks</a> for HTML video captions, and <a href="/en-US/docs/Learn/Accessibility/Multimedia#other_multimedia_content">Other multimedia content</a> for other technologies. See also <a href="https://support.google.com/youtube/answer/2734796?hl=en">Add your own subtitles &amp; closed captions</a> (YouTube).</td>
+       <td>See <a href="/en-US/docs/Learn/Accessibility/Multimedia#video_text_tracks">Video text tracks</a> for HTML video captions. See also <a href="https://support.google.com/youtube/answer/2734796?hl=en">Add your own subtitles &amp; closed captions</a> (YouTube).</td>
     </tr>
     <tr>
        <td>1.2.3 Provide text transcript or audio description for web-based video (A)</td>

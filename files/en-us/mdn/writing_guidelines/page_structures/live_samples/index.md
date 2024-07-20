@@ -109,7 +109,7 @@ Only the `<p>` element with `class="fancy"` will get styled `red`:
 \{{EmbedLiveSample("paragraph-styling")}}
 ````
 
-The macro uses a special URL to fetch the output for a given group of code blocks, for example `https://yari-demos.prod.mdn.mozit.cloud/en-US/docs/Web/CSS/animation/_sample_.Cylon_Eye.html`. The general structure followed is `https://url-of-page/_sample_.group-id.html`, where `group-id` is the ID of the heading or block where the code blocks are located.
+The macro uses a special URL that includes the ID to fetch the output for a given group of code blocks. You should never hardcode this URL in content — if you need to link to the example, use the [`LiveSampleLink`](#livesamplelink_macro) macro.
 
 The resulting frame (or page) is sandboxed, secure, and technically may do anything that works on the web. Of course, as a practical matter, the code should be relevant to the page's content; any unrelated material is subject to removal by MDN's editor community.
 
@@ -127,23 +127,24 @@ In many cases, you may be able to add the `EmbedLiveSample` or `LiveSampleLink` 
 #### EmbedLiveSample macro
 
 ```plain
-\{{EmbedLiveSample(sample_id, width, height, screenshot_URL, page_slug)}}
+\{{EmbedLiveSample(sample_id, width, height, screenshot_URL, page_slug, class_name, allow)}}
 ```
 
 - sample_id
   - : Required: This can be the string identifier of the sample or the ID of the heading or enclosing block to draw the code from.
     To verify if you have the correct heading ID, look at the URL of the section in the page's table of contents; you can also check it by viewing the source of the page.
-- width
-  - : The width of the {{HTMLElement("iframe")}} to create, specified in `px`. This is optional; a reasonable default width will be used if you omit this. Note that if you want to use a specific width, you _must_ also specify the height parameter.
+- width {{deprecated_inline}}
+  - : The `width` attribute for the {{HTMLElement("iframe")}}, specified in `px`. Deprecated since it no longer has any effect: live examples always span the full width of the content area.
 - height
-  - : The height of the {{HTMLElement("iframe")}} to create, specified in `px`. This is optional; a reasonable default height will be used if you omit this. Note that if you want to use a specific height, you _must_ also specify the width parameter. If you use only one of them, the default frame size is used.
-- screenshot_URL
-  - : The URL of a screenshot that shows what the live sample should look like. This is optional, but can be useful for new technologies that may not work in the user's browser, so they can see what the sample would look like if it were supported by their browser. If you include this parameter, the screenshot is shown next to the live sample, with appropriate headings.
-- page_slug
-
-  - : The slug of the page containing the sample; this is optional, and if it's not provided, the sample is pulled from the same page on which the macro is used.
-
-    > **Warning:** This parameter is deprecated. Don't use it in new examples, and remove it from existing examples if you see it. We're actively removing usages of it, and when it is no longer used we will remove support for it.
+  - : The `height` attribute of the {{HTMLElement("iframe")}}, specified in `px`. Must be at least `60`. This is optional; a reasonable default height will be used if you omit this.
+- screenshot_URL {{deprecated_inline}}
+  - : The URL of a screenshot that shows what the live sample should look like. Deprecated; only add live samples if there is reasonable browser support.
+- page_slug {{deprecated_inline}}
+  - : The slug of the page containing the sample; this is optional, and if it's not provided, the sample is pulled from the same page on which the macro is used. Deprecated; only include live samples if the code is on the same page.
+- class_name {{deprecated_inline}}
+  - : The class name to apply to the {{HTMLElement("iframe")}}. Deprecated; there's no reason to use another class name.
+- allow
+  - : The `allow` attribute for the {{HTMLElement("iframe")}}. This is optional; by default no allowed features are present.
 
 #### LiveSampleLink macro
 
@@ -263,12 +264,16 @@ The CSS code styles the box as well as the text inside it.
 
 #### JavaScript
 
-This code is very simple. All it does is attach an event handler to the "Hello world!" text that makes an alert appear when it is clicked.
+In the JavaScript example, we attach an event handler to the "Hello world!" text that toggles it when it is clicked.
 
 ```js
 const el = document.getElementById("item");
+let toggleClick = false;
 el.onclick = function () {
-  alert("Owww, stop poking me!");
+  this.textContent = toggleClick
+    ? "Hello world! Welcome to MDN"
+    : "Owww, stop poking me!";
+  toggleClick = !toggleClick;
 };
 ```
 
@@ -311,18 +316,69 @@ The CSS code styles the box as well as the text inside it. The `live-sample___he
 }
 ```
 
-This JavaScript code attaches an event handler to the "Hello world!" text that makes an alert appear when it is clicked. The `live-sample___hello-world` string has been added to the `js` language identifier for this code block as well.
+This JavaScript code attaches an event handler to the "Hello world!" text that toggles it when it is clicked. The `live-sample___hello-world` string has been added to the `js` language identifier for this code block as well.
 
 ```js live-sample___hello-world
 const el = document.getElementById("item");
+let toggleClick = false;
 el.onclick = function () {
-  alert("Owww, stop poking me!");
+  this.textContent = toggleClick
+    ? "Hello world! Welcome to MDN"
+    : "Owww, stop poking me!";
+  toggleClick = !toggleClick;
 };
 ```
 
 We get this output by running the code blocks above using the string identifier `hello-world` in the `\{{EmbedLiveSample('hello-world')}}` macro call:
 
 {{EmbedLiveSample("hello-world")}}
+
+### Displaying `<iframe>` of a certain size
+
+Use the `height` parameter to specify the size of the `<iframe>` element that contains the live sample output.
+
+```html
+<p>Just some simple text here.</p>
+```
+
+Result of `\{{EmbedLiveSample("iframe_size", "", "60")}}`:
+
+{{EmbedLiveSample("iframe_size", "", "60")}}
+
+Result of `\{{EmbedLiveSample("iframe_size", "", "120")}}`:
+
+{{EmbedLiveSample("iframe_size", "", "120")}}
+
+### Allowing features
+
+The `allow` parameter can be used to specify the features that are allowed in the `<iframe>` element that contains the live sample output. The available values come from the [permission policy syntax for frames](/en-US/docs/Web/HTTP/Permissions_Policy#embedded_frame_syntax).
+
+```html
+<div id="fullscreen-content">
+  <button id="toggle-btn">Toggle fullscreen</button>
+</div>
+```
+
+```js
+const toggleBtn = document.getElementById("toggle-btn");
+const fullscreenContent = document.getElementById("fullscreen-content");
+
+toggleBtn.addEventListener("click", () => {
+  if (document.fullscreenElement) {
+    document.exitFullscreen();
+  } else {
+    fullscreenContent.requestFullscreen();
+  }
+});
+```
+
+Result of `\{{EmbedLiveSample("allowing_features", "", "60", "", "", "", "fullscreen")}}`:
+
+{{EmbedLiveSample("allowing_features", "", "60", "", "", "", "fullscreen")}}
+
+Result of `\{{EmbedLiveSample("allowing_features", "", "60")}}`:
+
+{{EmbedLiveSample("allowing_features", "", "60")}}
 
 ### Displaying a single entry log
 

@@ -49,7 +49,7 @@ WebAssembly.compileStreaming(fetch("simple.wasm")).then((mod) => {
 The console log displays the following description for the imported module:
 
 ```js
-{ module: "imports", name: "imported_func", kind: "function" }
+{ module: "my_namespace", name: "imported_func", kind: "function" }
 ```
 
 ## Specifications

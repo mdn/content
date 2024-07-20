@@ -34,7 +34,7 @@ new NDEFReadingEvent(type, options)
       - : An object with the following members:
 
         - `data` {{optional_inline}}
-          - : Contains the data to be transmitted. It can be a string object or literal, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}}, or an array of nested records.
+          - : Contains the data to be transmitted. It can be a string, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}}, or an array of nested records.
         - `encoding` {{optional_inline}}
           - : A string specifying the record's encoding.
         - `id` {{optional_inline}}

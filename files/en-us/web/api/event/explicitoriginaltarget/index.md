@@ -49,7 +49,3 @@ _This is a Mozilla-specific property and is not part of any current specificatio
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [Comparison of Event Targets](/en-US/docs/Web/API/Event/Comparison_of_Event_Targets)

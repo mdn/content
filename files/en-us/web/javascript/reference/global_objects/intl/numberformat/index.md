@@ -27,8 +27,8 @@ These properties are defined on `Intl.NumberFormat.prototype` and shared by all 
 
 - {{jsxref("Object/constructor", "Intl.NumberFormat.prototype.constructor")}}
   - : The constructor function that created the instance object. For `Intl.NumberFormat` instances, the initial value is the {{jsxref("Intl/NumberFormat/NumberFormat", "Intl.NumberFormat")}} constructor.
-- `Intl.NumberFormat.prototype[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Intl.NumberFormat"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+- `Intl.NumberFormat.prototype[Symbol.toStringTag]`
+  - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Intl.NumberFormat"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 

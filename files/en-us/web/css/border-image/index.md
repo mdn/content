@@ -1,7 +1,7 @@
 ---
 title: border-image
 slug: Web/CSS/border-image
-page-type: css-property
+page-type: css-shorthand-property
 browser-compat: css.properties.border-image
 ---
 
@@ -139,6 +139,40 @@ To match the size of a single diamond, we will use a value of 81 divided by 3, o
 #### Result
 
 {{EmbedLiveSample('Gradient')}}
+
+### Rounded borders
+
+{{cssxref("border-radius")}} has no effect on the border image. This is because {{cssxref("border-image-outset")}} is able to place the image outside the border box, so it doesn't make sense for the border image to be clipped by the border area. To create rounded borders when using a border image, you should create the image itself with rounded corners, or, in the case of a gradient, draw it as the background instead. Below, we show one approach to do this, which is to use two {{cssxref("background-image")}}s: one that extends the border box, and another for the padding box.
+
+#### HTML
+
+```html
+<div id="rounded">
+  This element is surrounded by a border image with rounded corners!
+</div>
+```
+
+#### CSS
+
+```css
+#rounded {
+  width: 200px;
+  /* Use transparent so the background image is visible */
+  border: 10px solid transparent;
+  padding: 20px;
+  border-radius: 20px;
+  background-image: linear-gradient(white, white),
+    linear-gradient(to right, cyan, lime);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('rounded_borders')}}
+
+> **Note:** There is a new `{{cssxref("background-clip")}}: border-area` value [being proposed](https://github.com/w3c/csswg-drafts/issues/9456) to address this use case.
 
 ## Specifications
 

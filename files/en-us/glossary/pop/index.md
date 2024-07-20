@@ -16,6 +16,6 @@ Clients usually retrieve all messages and then delete them from the server, but 
 - [RFC 1734](https://datatracker.ietf.org/doc/html/rfc1734) (Specification of POP3 authentication mechanism)
 - [RFC 1939](https://datatracker.ietf.org/doc/html/rfc1939) (Specification of POP3)
 - [RFC 2449](https://datatracker.ietf.org/doc/html/rfc2449) (Specification of POP3 extension mechanism)
-- [MDN Web Docs Glossary](/en-US/docs/Glossary):
+- Related glossary terms::
 
   - {{Glossary("IMAP")}}

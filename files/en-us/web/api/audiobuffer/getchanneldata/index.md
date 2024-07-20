@@ -35,7 +35,7 @@ const button = document.querySelector("button");
 const pre = document.querySelector("pre");
 const myScript = document.querySelector("script");
 
-pre.innerHTML = myScript.innerHTML;
+pre.textContent = myScript.textContent;
 
 // Stereo
 const channels = 2;

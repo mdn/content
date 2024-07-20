@@ -144,10 +144,17 @@ If there are multiple values, `dy` defines a shift along the y-axis for each ind
     <tr>
       <th scope="row">Value</th>
       <td>
-        List of
-        <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#length">&#x3C;length></a></strong
+        List of (<strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+            >&#x3C;length></a
+          ></strong
         >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >)
       </td>
     </tr>
     <tr>
@@ -214,10 +221,17 @@ If there are multiple values, `dy` defines a shift along the y-axis for each ind
     <tr>
       <th scope="row">Value</th>
       <td>
-        List of
-        <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#length">&#x3C;length></a></strong
+        List of (<strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+            >&#x3C;length></a
+          ></strong
         >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >)
       </td>
     </tr>
     <tr>
@@ -242,10 +256,17 @@ If there are multiple values, `dy` defines a shift along the y-axis for each ind
     <tr>
       <th scope="row">Value</th>
       <td>
-        List of
-        <strong
-          ><a href="/en-US/docs/Web/SVG/Content_type#length">&#x3C;length></a></strong
+        List of (<strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#length"
+            >&#x3C;length></a
+          ></strong
         >
+        |
+        <strong
+          ><a href="/en-US/docs/Web/SVG/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >)
       </td>
     </tr>
     <tr>

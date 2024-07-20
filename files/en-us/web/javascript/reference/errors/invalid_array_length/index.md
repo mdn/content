@@ -19,8 +19,10 @@ From Firefox version 89 the maximum value of {{jsxref("ArrayBuffer")}} is 2<sup>
 
 ```plain
 RangeError: invalid array length (V8-based & Firefox)
-RangeError: Array buffer allocation failed (V8-based)
 RangeError: Array size is not a small enough positive integer. (Safari)
+
+RangeError: Invalid array buffer length (V8-based)
+RangeError: length too large (Safari)
 ```
 
 ## Error type

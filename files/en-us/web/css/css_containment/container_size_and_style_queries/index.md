@@ -28,7 +28,7 @@ There are two types of container queries: _container size queries_ and _containe
 
 In this guide, we learn the basics of container queries by looking at:
 
-1. [container size queries](#container-size-queries),
+1. [container size queries](#container_size_queries_2),
 2. [naming containers](#naming_containers) to limit their scope, and
 3. using the `style()` functional notation within the {{cssxref("@container")}} at rule's `<container-condition>` to create [style queries with custom properties](#style_queries_for_custom_properties).
 

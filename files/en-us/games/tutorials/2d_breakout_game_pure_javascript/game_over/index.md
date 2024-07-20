@@ -28,7 +28,13 @@ if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
 
 Instead of allowing the ball to bounce off all four walls, let's only allow three now — left, top and right. Hitting the bottom wall will end the game. We'll edit the second if block so it's an if else block that will trigger our "game over" state upon the ball colliding with the bottom edge of the canvas. For now we'll show an alert message and restarting the game by reloading the page.
 
-First, replace where you initially called `setInterval()`
+First, add a declaration for the `interval` variable at the top level, before any functions:
+
+```js
+let interval = 0;
+```
+
+Then, replace where you initially called `setInterval()`:
 
 ```js
 setInterval(draw, 10);
@@ -37,7 +43,7 @@ setInterval(draw, 10);
 with:
 
 ```js
-const interval = setInterval(draw, 10);
+interval = setInterval(draw, 10);
 ```
 
 Then replace the second if statement with the following:
@@ -107,6 +113,8 @@ let paddleX = (canvas.width - paddleWidth) / 2;
 let rightPressed = false;
 let leftPressed = false;
 
+let interval = 0;
+
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
 
@@ -172,7 +180,7 @@ function draw() {
 }
 
 function startGame() {
-  let interval = setInterval(draw, 10);
+  interval = setInterval(draw, 10);
 }
 
 document.getElementById("runButton").addEventListener("click", function () {

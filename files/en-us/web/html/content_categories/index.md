@@ -22,9 +22,19 @@ There are three types of content categories:
 
 ### Metadata content
 
-Elements belonging to the _metadata content_ category modify the presentation or the behavior of the rest of the document, set up links to other documents, or convey other _out-of-band_ information.
+Elements belonging to the _metadata content_ category modify the presentation or the behavior of the rest of the document, set up links to other documents, or convey other _out-of-band_ information. Everything in the {{htmlelement("head")}}, including the `<title>`, `<link>`, `<script>`, `<style>`, and the lesser used `<base>`, is metadata content. There is a `<meta>` element for metadata that cannot be represented by these other elements.
 
-Elements belonging to this category are {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("meta")}}, {{HTMLElement("noscript")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}} and {{HTMLElement("title")}}.
+The metadata elements are:
+
+- {{HTMLElement("base")}}
+- {{HTMLElement("link")}}
+- {{HTMLElement("meta")}}
+- {{HTMLElement("noscript")}}
+- {{HTMLElement("script")}}
+- {{HTMLElement("style")}}
+- {{HTMLElement("title")}}
+
+Some of these elements belong to more than one content category. For example, `<script>` is a member of the metadata, flow, and phrasing content categories, and is a script-supporting element; `<script>` can be used where metadata contet, phrasing content, or script-supporting elements are expected.
 
 ### Flow content
 
@@ -123,13 +133,21 @@ A few other elements belong to this category, but only if a specific condition i
 
 Sectioning content, a subset of flow content, creates a [section in the current outline](/en-US/docs/Web/HTML/Element/Heading_Elements) defining the scope of {{HTMLElement("header")}} and {{HTMLElement("footer")}} elements.
 
-Elements belonging to this category are {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("nav")}}, and {{HTMLElement("section")}}.
+The sectioning elements are:
+
+- {{HTMLElement("article")}}
+- {{HTMLElement("aside")}}
+- {{HTMLElement("nav")}}
+- {{HTMLElement("section")}}
 
 ### Heading content
 
 Heading content, a subset of flow content, defines the title of a section. This definition applies both to sections marked by an explicit [sectioning content](#sectioning_content) elements and to those implicitly defined by the heading content itself.
 
-Elements belonging to this category are {{HTMLElement("Heading_Elements", "<code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code>")}} and {{HTMLElement("hgroup")}}.
+The heading elements are:
+
+- {{HTMLElement("Heading_Elements", "<code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code>")}}
+- {{HTMLElement("hgroup")}}
 
 > **Note:** Though likely to contain heading content, the {{HTMLElement("header")}} is not heading content itself.
 
@@ -137,7 +155,7 @@ Elements belonging to this category are {{HTMLElement("Heading_Elements", "<code
 
 Phrasing content, a subset of flow content, refers to the text and the markup within a document. Sequences of phrasing content make up paragraphs.
 
-Elements belonging to this category are:
+The phrasing elements are:
 
 - {{HTMLElement("abbr")}}
 - {{HTMLElement("audio")}}
@@ -202,7 +220,9 @@ A few other elements belong to this category, but only if a specific condition i
 
 ### Embedded content
 
-Embedded content, a subset of flow content, imports another resource or inserts content from another markup language or namespace into the document. Elements that belong to this category include:
+Embedded content, a subset of flow content, imports another resource or inserts content from another markup language or namespace into the document.
+
+The embedded content elements are:
 
 - {{HTMLElement("audio")}}
 - {{HTMLElement("canvas")}}
@@ -217,7 +237,9 @@ Embedded content, a subset of flow content, imports another resource or inserts 
 
 ### Interactive content
 
-Interactive content, a subset of flow content, includes elements that are specifically designed for user interaction. Elements that belong to this category include:
+Interactive content, a subset of flow content, includes elements that are specifically designed for user interaction.
+
+The interactive content elements are:
 
 - {{HTMLElement("button")}}
 - {{HTMLElement("details")}}
@@ -240,9 +262,83 @@ Some elements belong to this category only under specific conditions:
 
 Content is palpable when it's neither empty nor hidden; it is content that is rendered and is substantive. Elements whose model is flow content should have at least one node which is palpable.
 
+The palpable elements are:
+
+- {{HTMLElement("a")}}
+- {{HTMLElement("abbr")}}
+- {{HTMLElement("address")}}
+- {{HTMLElement("article")}}
+- {{HTMLElement("aside")}}
+- {{HTMLElement("b")}}
+- {{HTMLElement("bdi")}}
+- {{HTMLElement("bdo")}}
+- {{HTMLElement("blockquote")}}
+- {{HTMLElement("button")}}
+- {{HTMLElement("canvas")}}
+- {{HTMLElement("cite")}}
+- {{HTMLElement("code")}}
+- {{HTMLElement("data")}}
+- {{HTMLElement("del")}}
+- {{HTMLElement("details")}}
+- {{HTMLElement("dfn")}}
+- {{HTMLElement("div")}}
+- {{HTMLElement("em")}}
+- {{HTMLElement("embed")}}
+- {{HTMLElement("fieldset")}}
+- {{HTMLElement("footer")}}
+- {{HTMLElement("figure")}}
+- {{HTMLElement("form")}}
+- {{HtmlElement("iframe")}}
+- {{HtmlElement("img")}}
+- {{HtmlElement("ins")}}
+- {{HtmlElement("kbd")}}
+- {{HtmlElement("label")}}
+- {{HtmlElement("main")}}
+- {{HtmlElement("map")}}
+- {{HtmlElement("mark")}}
+- {{MathMLElement("math")}} from [MathML](/en-us/doc/Web/MathML)
+- {{HtmlElement("meter")}}
+- {{HtmlElement("nav")}}
+- {{HtmlElement("object")}}
+- {{HtmlElement("p")}}
+- {{HtmlElement("picture")}}
+- {{HtmlElement("pre")}}
+- {{HtmlElement("progress")}}
+- {{HtmlElement("q")}}
+- {{HtmlElement("ruby")}}
+- {{HtmlElement("s")}}
+- {{HtmlElement("samp")}}
+- {{HtmlElement("search")}}
+- {{HtmlElement("section")}}
+- {{HtmlElement("select")}}
+- {{HtmlElement("small")}}
+- {{HtmlElement("span")}}
+- {{HtmlElement("strong")}}
+- {{HtmlElement("sub")}}
+- {{HtmlElement("sup")}}
+- {{SVGElement("svg")}} from [SVG](/en-US/docs/Web/SVG)
+- {{HtmlElement("table")}}
+- {{HtmlElement("textarea")}}
+- {{HtmlElement("time")}}
+- {{HtmlElement("u")}}
+- {{HtmlElement("var")}}
+- {{HtmlElement("video")}}
+- [Autonomous custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements)
+- text that is not inter-element [whitespace](/en-US/docs/Glossary/Whitespace)
+
+Some elements belong to this category only under specific conditions:
+
+- {{HTMLElement("audio")}}, if the [`controls`](/en-US/docs/Web/HTML/Element/audio#controls) attribute is present
+- {{HTMLElement("dl")}}, if the element's children include at least one name-value group
+- {{HTMLElement("input")}}, if the [type](/en-US/docs/Web/HTML/Element/input#type) attribute is not in the hidden state
+- {{HTMLElement("ol")}}, if it's children include at least one {{HTMLElement("li")}} element
+- {{HTMLElement("ul")}}, if it's children include at least one {{HTMLElement("li")}} element
+
 ### Form-associated content
 
 Form-associated content is a subset of flow content comprising elements that have a form owner, exposed by a **form** attribute, and can be used everywhere flow content is expected. A form owner is either the containing {{HTMLElement("form")}} element or the element whose id is specified in the **form** attribute.
+
+The form-associated elements are:
 
 - {{HTMLElement("button")}}
 - {{HTMLElement("fieldset")}}

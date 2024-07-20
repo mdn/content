@@ -16,6 +16,7 @@ The Unicode standard provides foundations for complete BiDi support, with detail
 
 ## See also
 
-- {{glossary("Unicode")}}
+- Related glossary terms:
+  - {{glossary("Unicode")}}
 - [Bi-directional text](https://en.wikipedia.org/wiki/Bi-directional_text) on Wikipedia
 - [UAX#9: Unicode Bi-directional Algorithm](https://www.unicode.org/reports/tr9)

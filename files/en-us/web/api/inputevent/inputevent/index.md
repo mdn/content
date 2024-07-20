@@ -35,7 +35,7 @@ new InputEvent(type, options)
       - : A boolean indicating that the event is part of a composition session,
         meaning it is after a {{domxref("Element/compositionstart_event", "compositionstart")}} event but before a {{domxref("Element/compositionend_event", "compositionend")}} event. The default is `false`.
 
-## Return value
+### Return value
 
 A new {{domxref("InputEvent")}} object.
 

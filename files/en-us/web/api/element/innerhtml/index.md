@@ -25,6 +25,8 @@ In order to set an element's contents from an HTML string that includes declarat
 A string containing the HTML serialization of the element's descendants.
 Setting the value of `innerHTML` removes all of the element's descendants and replaces them with nodes constructed by parsing the HTML given in the string _htmlString_.
 
+When set to the `null` value, that `null` value is converted to the empty string (`""`), so `elt.innerHTML = null` is equivalent to `elt.innerHTML = ""`.
+
 ### Exceptions
 
 - `SyntaxError` {{domxref("DOMException")}}
@@ -57,10 +59,10 @@ Setting the value of `innerHTML` lets you easily replace the existing contents o
 For example, you can erase the entire contents of a document by clearing the contents of the document's {{domxref("Document.body", "body")}} attribute:
 
 ```js
-document.body.innerHTML = "";
+document.body.textContent = "";
 ```
 
-This example fetches the document's current HTML markup and replaces the `"<"` characters with the HTML entity `"&lt;"`, thereby essentially converting the HTML into raw text.
+This example fetches the document's current HTML markup and replaces the `"<"` characters with the {{glossary("character reference")}} `"&lt;"`, thereby essentially converting the HTML into raw text.
 This is then wrapped in a {{HTMLElement("pre")}} element.
 Then the value of `innerHTML` is changed to this new string.
 As a result, the document contents are replaced with a display of the page's entire source code.

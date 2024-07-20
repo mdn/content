@@ -7,7 +7,7 @@ browser-compat: api.VTTRegion
 
 {{APIRef("WebVTT")}}
 
-The `VTTRegion` interface—part of the API for handling WebVTT (text tracks on media presentations)—describes a portion of the video to render a {{domxref("VTTCue")}} onto.
+The `VTTRegion` interface of the [WebVTT API](/en-US/docs/Web/API/WebVTT_API) describes a portion of the video to render a {{domxref("VTTCue")}} onto.
 
 ## Constructor
 
@@ -19,19 +19,19 @@ The `VTTRegion` interface—part of the API for handling WebVTT (text tracks on 
 - {{domxref("VTTRegion.id")}}
   - : A string that identifies the region.
 - {{domxref("VTTRegion.width")}}
-  - : A `double` representing the width of the region, as a percentage of the video.
+  - : Represents the width of the region, as a percentage of the video.
 - {{domxref("VTTRegion.lines")}}
-  - : A `double` representing the height of the region, in number of lines.
+  - : Represents the height of the region, in number of lines.
 - {{domxref("VTTRegion.regionAnchorX")}}
-  - : A `double` representing the region anchor X offset, as a percentage of the region.
+  - : Represents the region anchor X offset, as a percentage of the region.
 - {{domxref("VTTRegion.regionAnchorY")}}
-  - : A `double` representing the region anchor Y offset, as a percentage of the region.
+  - : Represents the region anchor Y offset, as a percentage of the region.
 - {{domxref("VTTRegion.viewportAnchorX")}}
-  - : A `double` representing the viewport anchor X offset, as a percentage of the video.
+  - : Represents the viewport anchor X offset, as a percentage of the video.
 - {{domxref("VTTRegion.viewportAnchorY")}}
-  - : A `double` representing the viewport anchor Y offset, as a percentage of the video.
+  - : Represents the viewport anchor Y offset, as a percentage of the video.
 - {{domxref("VTTRegion.scroll")}}
-  - : An enum representing how adding new cues will move existing cues.
+  - : An enum representing how adding a new cue will move existing cues.
 
 ## Examples
 

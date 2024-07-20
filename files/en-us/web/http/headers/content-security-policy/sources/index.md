@@ -2,6 +2,7 @@
 title: CSP source values
 slug: Web/HTTP/Headers/Content-Security-Policy/Sources
 page-type: http-csp-directive
+spec-urls: https://w3c.github.io/webappsec-csp/#framework-directive-source-list
 ---
 
 {{HTTPSidebar}}
@@ -24,6 +25,10 @@ Relevant directives include the {{Glossary("fetch directive", "fetch directives"
     - `*.example.com`: Matches all attempts to load from any subdomain of example.com.
     - `https://*.example.com:12/path/to/file.js`: Matches all attempts to load from any subdomain of example.com using `https:` on port 12, and only if the path is `/path/to/file.js`.
     - `ws://example.com`: Matches all attempts to load from example.com using `ws:`. Also matches `wss` resources.
+    - `https://example.com/subdirectory`: Matches all attempts to load the exact path `https://example.com/subdirectory`.
+    - `https://example.com/subdirectory/`: Matches all attempts to load files under `subdirectory` directory. For example, `https://example.com/subdirectory/path/to/file.js`. It does not match `https://example.com/path/to/file.js`.
+
+    For more details about how path matching is done refer the [parts matching algorithms](https://w3c.github.io/webappsec-csp/#match-schemes) in the specification.
 
 - `<scheme-source>`
 
@@ -85,6 +90,10 @@ Relevant directives include the {{Glossary("fetch directive", "fetch directives"
   - : Requires a sample of the violating code to be included in the violation report.
 - `'inline-speculation-rules'`
   - : Allows the inclusion of [speculation rules](/en-US/docs/Web/API/Speculation_Rules_API) in scripts (see also [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Element/script/type/speculationrules)).
+
+## Specifications
+
+{{Specifications}}
 
 ## Relevant directives
 

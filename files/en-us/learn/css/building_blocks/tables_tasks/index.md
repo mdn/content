@@ -21,7 +21,10 @@ Our finished table will look like the image below. There are a number of ways th
 - Add padding of `0.3em` to the table headings and data and align them at the top of their cells.
 - Align headings and data for columns containing numbers right.
 - Align headings and data for columns containing text left.
-- Add a 1px top and bottom solid border with the hex color `#999`, plus a 1px solid border of the same color above the footer.
+- Align the heading of the table footer right.
+- Align the data of the table footer left.
+- Add a 1px top and bottom solid border with the hex color `#999` to the table.
+- Add a 1px top solid border with the hex color `#999` to the footer.
 - Remove the default spacing between the table elements borders to get the expected result.
 - Stripe every odd row of the main table with the hex color `#eee`.
 

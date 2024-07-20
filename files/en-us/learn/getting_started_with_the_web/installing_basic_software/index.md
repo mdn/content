@@ -20,13 +20,11 @@ For web development, you can probably do better than Notepad or TextEdit. We rec
 
 ### Installing modern web browsers
 
-For now, we'll install a couple of desktop web browsers to test our code in. Choose your operating system below and click the relevant links to download installers for your favorite browsers:
+For now, we'll install a couple of desktop web browsers to test our code in. Make sure you install at least two of these browsers, from two different families (so you don't test in two browsers that use the same rendering engine):
 
-- Linux: [Firefox](https://www.mozilla.org/en-US/firefox/new/), [Chrome](https://www.google.com/chrome/), [Opera](https://www.opera.com/), [Brave](https://brave.com).
-- Windows: [Firefox](https://www.mozilla.org/en-US/firefox/new/), [Chrome](https://www.google.com/chrome/), [Opera](https://www.opera.com/), [Microsoft Edge](https://www.microsoft.com/edge), [Brave](https://brave.com) (Windows 10 and 11 come with Edge by default; otherwise, you should install an alternative browser).
-- macOS: [Firefox](https://www.mozilla.org/en-US/firefox/new/), [Chrome](https://www.google.com/chrome/), [Opera](https://www.opera.com/), [Safari](https://www.apple.com/safari/), [Brave](https://brave.com) (macOS and iOS come with Safari by default).
-
-Before going on, you should install at least two of these browsers and have them ready for testing.
+- Chromium: [Chrome](https://www.google.com/chrome/), [Opera](https://www.opera.com/), [Brave](https://brave.com), [Microsoft Edge](https://www.microsoft.com/edge)
+- Gecko: [Firefox](https://www.mozilla.org/en-US/firefox/new/)
+- WebKit: [Safari](https://www.apple.com/safari/) (macOS and iOS only)
 
 ### Installing a local web server
 

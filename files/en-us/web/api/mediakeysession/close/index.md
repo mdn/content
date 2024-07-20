@@ -6,11 +6,10 @@ page-type: web-api-instance-method
 browser-compat: api.MediaKeySession.close
 ---
 
-{{APIRef("EncryptedMediaExtensions")}}{{SecureContext_Header}}
+{{APIRef("Encrypted Media Extensions")}}{{SecureContext_Header}}
 
-The `MediaKeySession.close()` method notifies that the current media session
-is no longer needed, and that the content decryption module should release any resources
-associated with this object and close it. Then, it returns a {{jsxref('Promise')}}.
+The `close()` method of the {{domxref('MediaKeySession')}} interface notifies that the current media session is no longer needed, and that the content decryption module should release any resources associated with this object and close it.
+Then, it returns a {{jsxref('Promise')}}.
 
 ## Syntax
 

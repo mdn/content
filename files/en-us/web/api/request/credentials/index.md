@@ -8,28 +8,30 @@ browser-compat: api.Request.credentials
 
 {{APIRef("Fetch API")}}
 
-The **`credentials`** read-only property of the {{domxref("Request")}} interface indicates whether the user agent should send or receive cookies from the other domain in the case of cross-origin requests.
+The **`credentials`** read-only property of the {{domxref("Request")}} interface reflects the value given to the {{domxref("Request.Request()", "Request()")}} constructor in the [`credentials`](/en-US/docs/Web/API/RequestInit#credentials) option. It determines whether or not the browser sends credentials with the request, as well as whether any **`Set-Cookie`** response headers are respected.
+
+Credentials are cookies, {{glossary("TLS")}} client certificates, or authentication headers containing a username and password.
+
+See [Including credentials](/en-US/docs/Web/API/Fetch_API/Using_Fetch#including_credentials) for more details.
 
 ## Value
 
-A `RequestCredentials` dictionary value indicating whether the user agent should send or receive cookies from the other domain in the case of cross-origin requests. Possible values are:
+A string with one of the following values:
 
 - `omit`
-  - : Never send or receive cookies.
+  - : Never send credentials in the request or include credentials in the response.
 - `same-origin`
-  - : Send user credentials (cookies, basic http auth, etc..) if the URL is on the same origin as the calling script. **This is the default value.**
+  - : Only send and include credentials for same-origin requests.
 - `include`
-  - : Always send user credentials (cookies, basic http auth, etc..), even for cross-origin calls.
-
-This is similar to XHR's [`withCredentials`](/en-US/docs/Web/API/XMLHttpRequest/withCredentials) flag, but with three available values instead of two.
+  - : Always include credentials, even for cross-origin requests.
 
 ## Examples
 
 In the following snippet, we create a new request using the {{domxref("Request.Request", "Request()")}} constructor (for an image file in the same directory as the script), then save the request credentials in a variable:
 
 ```js
-const myRequest = new Request("flowers.jpg");
-const myCred = myRequest.credentials; // returns "same-origin" by default
+const request = new Request("flowers.jpg");
+const request = request.request; // returns "same-origin" by default
 ```
 
 ## Specifications

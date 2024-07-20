@@ -2,7 +2,7 @@
 title: 303 See Other
 slug: Web/HTTP/Status/303
 page-type: http-status-code
-browser-compat: http.status.303
+spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.303
 ---
 
 {{HTTPSidebar}}
@@ -21,10 +21,6 @@ redirected page is always {{HTTPMethod("GET")}}.
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

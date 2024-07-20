@@ -47,7 +47,9 @@ A **type selector** is sometimes referred to as a _tag name selector_ or _elemen
 
 ## The universal selector
 
-The universal selector is indicated by an asterisk (`*`). It selects everything in the document (or inside the parent element if it is being chained together with another element and a descendant combinator). In the following example, we use the universal selector to remove the margins on all elements. Instead of the default styling added by the browser — which spaces out headings and paragraphs with margins — everything is close together.
+The universal selector is indicated by an asterisk (`*`). It selects everything in the document. If `*` is chained using a [descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator), it selects everything inside that ancestor element. For example, `p *` selects all the nested elements in the `<p>` element.
+
+In the following example, we use the universal selector to remove the margins on all elements. Instead of the browser's default styling, which spaces out headings and paragraphs with margins, everything is close together.
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/universal.html", '100%', 750)}}
 

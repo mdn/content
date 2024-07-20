@@ -22,10 +22,6 @@ Note the retro cassette deck with a play button, and vol and pan sliders to allo
 
 [Check out the final demo here on Codepen](https://codepen.io/Rumyra/pen/qyMzqN/), or see the [source code on GitHub](https://github.com/mdn/webaudio-examples/tree/main/audio-basics).
 
-## Browser support
-
-Modern browsers have good support for most features of the Web Audio API. There are a lot of features of the API, so for more exact information, you'll have to check the browser compatibility tables at the bottom of each reference page.
-
 ## Audio graphs
 
 Everything within the Web Audio API is based around the concept of an audio graph, which is made up of nodes.

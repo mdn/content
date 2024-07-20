@@ -10,7 +10,13 @@ The creation of web forms has always been a complex task. While marking up the f
 
 For a basic introduction to these concepts, with examples, see the [Form validation tutorial](/en-US/docs/Learn/Forms/Form_validation).
 
-> **Note:** HTML Constraint validation doesn't remove the need for validation on the _server side_. Even though far fewer invalid form requests are to be expected, invalid ones can still be sent such as by bad people trying to trick your web application. Therefore, you need to always also validate input constraints on the server side, in a way that is consistent with what is done on the client side.
+> **Note:** HTML Constraint validation doesn't remove the need for validation on the _server side_. Even though far fewer invalid form requests are to be expected, invalid ones can still be sent in many ways:
+>
+> - By modifying HTML via the browser's developer tools.
+> - By hand-crafting an HTTP request without using the form.
+> - By programmatically writing content into the form (certain constraint validations are _only run_ for user input, and not if you set the value of a form field using JavaScript).
+>
+> Therefore, you should always validate form data on the server side, consistent with what is done on the client side.
 
 ## Intrinsic and basic constraints
 
@@ -276,6 +282,7 @@ Calling `checkValidity()` is called _statically_ validating the constraints, whi
 >
 > - If the [`novalidate`](/en-US/docs/Web/HTML/Element/form#novalidate) attribute is set on the {{ HTMLElement("form") }} element, interactive validation of the constraints doesn't happen.
 > - Calling the `submit()` method on the [`HTMLFormElement`](/en-US/docs/Web/API/HTMLFormElement) interface doesn't trigger a constraint validation. In other words, this method sends the form data to the server even if it doesn't satisfy the constraints. Call the `click()` method on a submit button instead.
+> - The `minlength` and `maxlength` constraints are only checked on user-provided input. They are not checked if a value is set programmatically, even when explicitly calling `checkValidity()` or `reportValidity()`.
 
 ## Complex constraints using the Constraint Validation API
 
@@ -392,6 +399,7 @@ function checkFileSize() {
     if (files[0].size > 75 * 1024) {
       // Check the constraint
       FS.setCustomValidity("The selected file must not be larger than 75 kB");
+      FS.reportValidity();
       return;
     }
   }

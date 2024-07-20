@@ -141,7 +141,7 @@ const [one, two, three] = foo;
 
 ### Evaluation and nesting
 
-In general, assignments are used within a variable declaration (i.e., with [`const`][], [`let`][], or [`var`][]) or as standalone statements.
+In general, assignments are used within a variable declaration (i.e., with [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const), [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), or [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var)) or as standalone statements.
 
 ```js
 // Declares a variable x and initializes it to the result of f().
@@ -151,18 +151,12 @@ let x = f();
 x = g(); // Reassigns the variable x to the result of g().
 ```
 
-[`const`]: /en-US/docs/Web/JavaScript/Reference/Statements/const
-[`let`]: /en-US/docs/Web/JavaScript/Reference/Statements/let
-[`var`]: /en-US/docs/Web/JavaScript/Reference/Statements/var
-
 However, like other expressions, assignment expressions like `x = f()` evaluate into a result value.
 Although this result value is usually not used, it can then be used by another expression.
 
 Chaining assignments or nesting assignments in other expressions can result in surprising behavior.
-For this reason, some JavaScript style guides [discourage chaining or nesting assignments][discourage assign chain].
+For this reason, some JavaScript style guides [discourage chaining or nesting assignments](https://github.com/airbnb/javascript/blob/master/README.md#variables--no-chain-assignment).
 Nevertheless, assignment chaining and nesting may occur sometimes, so it is important to be able to understand how they work.
-
-[discourage assign chain]: https://github.com/airbnb/javascript/blob/master/README.md#variables--no-chain-assignment
 
 By chaining or nesting an assignment expression, its result can itself be assigned to another variable.
 It can be logged, it can be put inside an array literal or function call, and so on.
@@ -193,9 +187,7 @@ logical operation without the assignment, so `x && f()`,
 
 When chaining these expressions without parentheses or other grouping operators
 like array literals, the assignment expressions are **grouped right to left**
-(they are [right-associative][]), but they are **evaluated left to right**.
-
-[right-associative]: https://en.wikipedia.org/wiki/Operator_associativity
+(they are [right-associative](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#precedence_and_associativity)), but they are **evaluated left to right**.
 
 Note that, for all assignment operators other than `=` itself,
 the resulting values are always based on the operands' values _before_
@@ -227,7 +219,7 @@ x[f()] = g();
 #### Evaluation example 1
 
 `y = x = f()` is equivalent to `y = (x = f())`,
-because the assignment operator `=` is [right-associative][].
+because the assignment operator `=` is [right-associative](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#precedence_and_associativity).
 However, it evaluates from left to right:
 
 1. The assignment expression `y = x = f()` starts to evaluate.
@@ -307,9 +299,9 @@ For more information about objects, read [Working with Objects](/en-US/docs/Web/
 
 Chaining assignments or nesting assignments in other expressions can
 result in surprising behavior. For this reason,
-[chaining assignments in the same statement is discouraged][discourage assign chain].
+[chaining assignments in the same statement is discouraged](https://github.com/airbnb/javascript/blob/master/README.md#variables--no-chain-assignment).
 
-In particular, putting a variable chain in a [`const`][], [`let`][], or [`var`][] statement often does _not_ work. Only the outermost/leftmost variable would get declared; other variables within the assignment chain are _not_ declared by the `const`/`let`/`var` statement.
+In particular, putting a variable chain in a [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const), [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), or [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var) statement often does _not_ work. Only the outermost/leftmost variable would get declared; other variables within the assignment chain are _not_ declared by the `const`/`let`/`var` statement.
 For example:
 
 ```js-nolint
@@ -664,8 +656,8 @@ The shift operators are listed in the following table.
 ## Logical operators
 
 Logical operators are typically used with Boolean (logical) values; when they are, they return a Boolean value.
-However, the `&&` and `||` operators actually return the value of one of the specified operands, so if these
-operators are used with non-Boolean values, they may return a non-Boolean value.
+However, the `&&`, `||`, and `??` operators actually return the value of one of the specified operands, so if these
+operators are used with non-Boolean values, they may return a non-Boolean value. As such, they are more adequately called "value selection operators".
 The logical operators are described in the following table.
 
 <table class="fullwidth-table">
@@ -694,7 +686,7 @@ The logical operators are described in the following table.
     </tr>
     <tr>
       <td>
-        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR">Logical OR </a>(<code>||</code>)
+        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR">Logical OR</a> (<code>||</code>)
       </td>
       <td><code>expr1 || expr2</code></td>
       <td>
@@ -702,6 +694,16 @@ The logical operators are described in the following table.
         otherwise, returns <code>expr2</code>. Thus, when used with Boolean
         values, <code>||</code> returns <code>true</code> if either operand is
         true; if both are false, returns <code>false</code>.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing">Nullish coalescing operator</a> (<code>??</code>)
+      </td>
+      <td><code>expr1 ?? expr2</code></td>
+      <td>
+        Returns <code>expr1</code> if it is neither <code>null</code> nor
+        <code>undefined</code>; otherwise, returns <code>expr2</code>.
       </td>
     </tr>
     <tr>
@@ -717,11 +719,9 @@ The logical operators are described in the following table.
   </tbody>
 </table>
 
-Examples of expressions that can be converted to `false` are those that
-evaluate to null, 0, NaN, the empty string (""), or undefined.
+Examples of expressions that can be converted to `false` are those that evaluate to `null`, `0`, `0n`, `NaN`, the empty string (`""`), or `undefined`.
 
-The following code shows examples of the `&&` (logical AND)
-operator.
+The following code shows examples of the `&&` (logical AND) operator.
 
 ```js
 const a1 = true && true; // t && t returns true
@@ -733,7 +733,7 @@ const a6 = false && "Cat"; // f && t returns false
 const a7 = "Cat" && false; // t && f returns false
 ```
 
-The following code shows examples of the || (logical OR) operator.
+The following code shows examples of the `||` (logical OR) operator.
 
 ```js
 const o1 = true || true; // t || t returns true
@@ -745,7 +745,18 @@ const o6 = false || "Cat"; // f || t returns Cat
 const o7 = "Cat" || false; // t || f returns Cat
 ```
 
-The following code shows examples of the ! (logical NOT) operator.
+The following code shows examples of the `??` (nullish coalescing) operator.
+
+```js
+const n1 = null ?? 1; // 1
+const n2 = undefined ?? 2; // 2
+const n3 = false ?? 3; // false
+const n4 = 0 ?? 4; // 0
+```
+
+Note how `??` works like `||`, but it only returns the second expression when the first one is "[nullish](/en-US/docs/Glossary/Nullish)", i.e. [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined). `??` is a better alternative than `||` for setting defaults for values that might be `null` or `undefined`, in particular when values like `''` or `0` are valid values and the default should not apply.
+
+The following code shows examples of the `!` (logical NOT) operator.
 
 ```js
 const n1 = !true; // !t returns false
@@ -758,16 +769,13 @@ const n3 = !"Cat"; // !t returns false
 As logical expressions are evaluated left to right, they are tested for possible
 "short-circuit" evaluation using the following rules:
 
-- `false && anything` is short-circuit evaluated to false.
-- `true || anything` is short-circuit evaluated to true.
+- `falsy && anything` is short-circuit evaluated to the falsy value.
+- `truthy || anything` is short-circuit evaluated to the truthy value.
+- `nonNullish ?? anything` is short-circuit evaluated to the non-nullish value.
 
 The rules of logic guarantee that these evaluations are always correct. Note that the
 _anything_ part of the above expressions is not evaluated, so any side effects of
 doing so do not take effect.
-
-Note that for the second case, in modern code you can use the [Nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing) (`??`) that works like `||`, but it only returns the second expression, when the first one is "[nullish](/en-US/docs/Glossary/Nullish)", i.e. [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)
-or [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined).
-It is thus the better alternative to provide defaults, when values like `''` or `0` are valid values for the first expression, too.
 
 ## BigInt operators
 
@@ -1098,6 +1106,28 @@ a + (b * c)   // 7
 
 // which is equivalent to
 a * c + b * c // 9
+```
+
+### Property accessor
+
+The [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) syntax gets property values on objects, using either dot notation or bracket notation.
+
+```js
+object.property;
+object["property"];
+```
+
+The [working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_objects) guide goes into more details about object properties.
+
+### Optional chaining
+
+The [optional chaining](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) syntax (`?.`) performs the chained operation on an object if it is defined and non-`null`, and otherwise short-circuits the operation and returns `undefined`.
+This allows you to operate on a value that may be `null` or `undefined` without causing a `TypeError`.
+
+```js
+maybeObject?.property;
+maybeObject?.[property];
+maybeFunction?.();
 ```
 
 ### new

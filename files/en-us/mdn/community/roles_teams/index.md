@@ -295,7 +295,7 @@ We define inactivity as:
 
 Inactivity harms the project; it may lead to unexpected delays, contributor attrition, and a loss of trust in the project. Contributors must be active to set an example and show commitment to the project.
 
-Please communicate with the community team to avoid demotion or removal should your time commitments change; instead you can proactively choose to [step down for a while or move to emeritus status](#stepping-down-or-applying-for-emeritus-status).
+Please communicate with the community team to avoid demotion or removal should your time commitments change; instead you can proactively choose to [step down for a while or move to emeritus status](#stepping_down_or_applying_for_emeritus_status).
 
 ## Teams
 

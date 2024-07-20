@@ -55,7 +55,7 @@ The template uses (and includes) JavaScript and CSS from [Bootstrap](https://get
 > **Note:** The scripts are loaded cross-origin, so later in the tutorial, when we add security middleware, we will need to explicitly allow these files to be loaded.
 > For more information see [Deployment > Use Helmet to protect against well known vulnerabilities](/en-US/docs/Learn/Server-side/Express_Nodejs/deployment#use_helmet_to_protect_against_well_known_vulnerabilities).
 
-The layout should be fairly obvious if you've read our above [Template primer](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data#template_primer). Note the use of `block content` as a placeholder for where the content for our individual pages will be placed.
+The layout should be fairly obvious if you've read our above [Template primer](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer). Note the use of `block content` as a placeholder for where the content for our individual pages will be placed.
 
 The base template also references a local CSS file (**style.css**) that provides a little additional styling. Open **/public/stylesheets/style.css** and replace its content with the following CSS code:
 

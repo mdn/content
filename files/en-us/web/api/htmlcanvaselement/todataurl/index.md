@@ -18,6 +18,8 @@ Browsers are required to support `image/png`; many will support additional forma
 
 The created image data will have a resolution of 96dpi for file formats that support encoding resolution metadata.
 
+> **Warning:** `toDataURL()` encodes the whole image in an in-memory string. For larger images, this can have performance implications, and may even overflow browsers' URL length limit when assigned to {{domxref("HTMLImageElement.src")}}. You should generally prefer [`toBlob()`](/en-US/docs/Web/API/HTMLCanvasElement/toBlob) instead, in combination with {{domxref("URL/createObjectURL_static", "URL.createObjectURL()")}}.
+
 ## Syntax
 
 ```js-nolint

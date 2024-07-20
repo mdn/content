@@ -2,7 +2,7 @@
 title: 204 No Content
 slug: Web/HTTP/Status/204
 page-type: http-status-code
-browser-compat: http.status.204
+spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.204
 ---
 
 {{HTTPSidebar}}
@@ -26,10 +26,6 @@ A 204 response is cacheable by default (an {{HTTPHeader("ETag")}} header is incl
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ### Compatibility notes
 

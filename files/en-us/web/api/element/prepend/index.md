@@ -9,8 +9,8 @@ browser-compat: api.Element.prepend
 {{APIRef("DOM")}}
 
 The **`Element.prepend()`** method inserts a set of
-{{domxref("Node")}} objects or string objects before the first child
-of the {{domxref("Element")}}. String objects are inserted as
+{{domxref("Node")}} objects or strings before the first child
+of the {{domxref("Element")}}. Strings are inserted as
 equivalent {{domxref("Text")}} nodes.
 
 ## Syntax
@@ -24,7 +24,7 @@ prepend(param1, param2, /* …, */ paramN)
 ### Parameters
 
 - `param1`, …, `paramN`
-  - : A set of {{domxref("Node")}} or string objects to insert.
+  - : A set of {{domxref("Node")}} objects or strings to insert.
 
 ### Return value
 

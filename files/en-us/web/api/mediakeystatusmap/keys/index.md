@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.MediaKeyStatusMap.keys
 ---
 
-{{APIRef("EncryptedMediaExtensions API")}}
+{{APIRef("Encrypted Media Extensions")}}
 
 The **`keys()`** method of the
 {{domxref("MediaKeyStatusMap")}} interface returns a new Iterator object, containing

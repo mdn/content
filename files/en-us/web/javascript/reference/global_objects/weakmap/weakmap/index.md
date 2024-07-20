@@ -21,7 +21,7 @@ new WeakMap(iterable)
 ### Parameters
 
 - `iterable`
-  - : An [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) or other iterable object that implements an [@@iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator) method that returns an iterator object that produces a two-element array-like object whose first element is a value that will be used as a `WeakMap` key and whose second element is the value to associate with that key. Each key-value pair will be added to the new `WeakMap`. null is treated as undefined.
+  - : An [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) or other [iterable object](<(/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)>) that produces a two-element array-like object whose first element is a value that will be used as a `WeakMap` key and whose second element is the value to associate with that key. Each key-value pair will be added to the new `WeakMap`. null is treated as undefined.
 
 ## Examples
 

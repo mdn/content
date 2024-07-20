@@ -19,7 +19,7 @@ str:concat(nodeSet)
 - `nodeSet`
   - : The node-set whose nodes' string values should be concatenated into one string.
 
-### Returns
+### Return value
 
 A string whose value is all the string values of the nodes in `nodeSet` concatenated together. If `nodeSet` is empty, an empty string is returned.
 

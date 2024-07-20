@@ -26,8 +26,8 @@ Each main area of the site — JavaScript, CSS, and so on — has a set of domai
 
 These page types are not specific to a particular MDN technology area:
 
-- `guide`: a generic guide page with no specific structure. See [Conceptual page](#conceptual_page).
-- `landing-page`: a page that acts primarily as a navigation aid, listing links to other pages. See [Landing page](#landing_page).
+- `guide`: a generic guide page with no specific structure.
+- `landing-page`: a page that acts primarily as a navigation aid, listing links to other pages.
 - `how-to`: a page that acts primarily as a goal-oriented how-to article.
 - `tutorial`: a page that is the overview page of a learning-oriented article.
 - `tutorial-chapter`: a page that is a part of a multipart tutorial.
@@ -57,7 +57,7 @@ This section lists `page-type` values for pages under [Web/Accessibility](/en-US
 
 This section lists `page-type` values for pages under [Web/CSS](/en-US/docs/Web/CSS). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
-- `css-at-rule`: an [at-rule](/en-US/docs/Web/CSS/At-rule), like {{cssxref("@charset")}}.
+- `css-at-rule`: an [at-rule](/en-US/docs/Web/CSS/At-rule), like {{cssxref("@media")}}.
 - `css-at-rule-descriptor`: an at-rule descriptor, like [`@counter-style/prefix`](/en-US/docs/Web/CSS/@counter-style/prefix).
 - `css-combinator`: a combinator, like the [descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator).
 - `css-function`: a [function](/en-US/docs/Web/CSS/CSS_Functions), like {{cssxref("max")}}.
@@ -136,7 +136,7 @@ This section lists `page-type` values for pages under [Web/SVG](/en-US/docs/Web/
 This section lists `page-type` values for pages under [Web/API](/en-US/docs/Web/API). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
 - `web-api-overview`: gives an overview of a Web API, like the [Fetch API](/en-US/docs/Web/API/Fetch_API).
-- `web-api-global-function`: a global function, like [`fetch()`](/en-US/docs/Web/API/fetch).
+- `web-api-global-function`: a global function, like [`fetch()`](/en-US/docs/Web/API/Window/fetch).
 - `web-api-global-property`: a global property.
 - `web-api-interface`: a Web API interface, like [`Request`](/en-US/docs/Web/API/Request).
 - `web-api-constructor`: a constructor, like [`Request()`](/en-US/docs/Web/API/Request/Request).
@@ -144,7 +144,7 @@ This section lists `page-type` values for pages under [Web/API](/en-US/docs/Web/
 - `web-api-instance-property`: an instance property, like [`request.headers`](/en-US/docs/Web/API/Request/headers).
 - `web-api-static-method`: a static method, like [`Response.error()`](/en-US/docs/Web/API/Response/error_static).
 - `web-api-static-property`: a static property, like [`Notification.permission`](/en-US/docs/Web/API/Notification/permission_static).
-- `web-api-event`: an event, like [`Notification.click`](/en-US/docs/Web/API/Notification/click_event). See [API reference subpage](#api_reference_subpage).
+- `web-api-event`: an event, like [`Notification.click`](/en-US/docs/Web/API/Notification/click_event).
 - `webgl-extension`: a WebGL extension, like [`WEBGL_draw_buffers`](/en-US/docs/Web/API/WEBGL_draw_buffers).
 - `webgl-extension-method`: a WebGL extension method, like [`OES_vertex_array_object.bindVertexArrayOES()`](/en-US/docs/Web/API/OES_vertex_array_object/bindVertexArrayOES).
 

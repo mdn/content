@@ -43,6 +43,11 @@ Links pointing to a fragment in the document — e.g. `<a href="#some-id">` — 
 
 For example, given `<base href="https://example.com/">` and this link: `<a href="#anchor">To anchor</a>`. The link points to `https://example.com/#anchor`.
 
+### target may not contain ASCII newline, tab, or <
+
+If the [`target`](#target) attribute contains an ASCII newline, tab, or the `<` character, the value is reset to `_blank`.
+This is to prevent dangling markup injection attacks, a script-less attack in which an unclosed `target` attribute is injected into the page so that any text that follows is captured until the browser reaches a character that closes the attribute.
+
 ### Open Graph
 
 [Open Graph](https://ogp.me/) tags do not acknowledge `<base>`, and should always have full absolute URLs. For example:

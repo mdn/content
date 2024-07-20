@@ -228,7 +228,7 @@ function change(event) {
 
   switch (event.target.id) {
     case "year":
-      yearOut.innerHTML = event.target.value;
+      yearOut.textContent = event.target.value;
       break;
     default:
       return;

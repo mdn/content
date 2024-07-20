@@ -1,7 +1,7 @@
 ---
 title: "-webkit-mask-box-image"
 slug: Web/CSS/-webkit-mask-box-image
-page-type: css-property
+page-type: css-shorthand-property
 status:
   - non-standard
 browser-compat: css.properties.-webkit-mask-box-image

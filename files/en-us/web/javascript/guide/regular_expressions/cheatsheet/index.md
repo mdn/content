@@ -569,6 +569,15 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
       </td>
     </tr>
     <tr>
+      <td><code>(?<em>flags</em>:<em>x</em>)</code>, <code>(?:<em>flags</em>-<em>flags</em>:<em>x</em>)</code></td>
+      <td>
+        <p>
+          <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Modifier"><strong>Modifier:</strong></a>
+          Enables or disables the specified flags only to the enclosed pattern. Only the <code>i</code>, <code>m</code>, and <code>s</code> flags can be used in a modifier.
+        </p>
+      </td>
+    </tr>
+    <tr>
       <td>
         <code>\<em>n</em></code>
       </td>

@@ -12,5 +12,6 @@ The website _relies on_ the validity of the credentials the browser presents whe
 
 ## See also
 
-- {{glossary("Federated identity")}}
-- {{glossary("Identity provider")}}
+- Related glossary terms:
+  - {{glossary("Federated identity")}}
+  - {{glossary("Identity provider")}}

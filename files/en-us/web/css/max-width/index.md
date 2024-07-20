@@ -18,6 +18,8 @@ The **`max-width`** [CSS](/en-US/docs/Web/CSS) property sets the maximum width o
 ```css
 /* <length> value */
 max-width: 3.5em;
+max-width: anchor-size(--myAnchor inline, 245px);
+max-width: calc(anchor-size(width) + 4em);
 
 /* <percentage> value */
 max-width: 75%;
