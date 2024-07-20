@@ -1,34 +1,12 @@
 ---
-title: XRInputSource.targetRaySpace
+title: "XRInputSource: targetRaySpace property"
+short-title: targetRaySpace
 slug: Web/API/XRInputSource/targetRaySpace
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Controller
-  - Input
-  - Mixed
-  - Property
-  - Ray
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRInputSource
-  - XRReferenceSpace
-  - XRSpace
-  - augmented
-  - source
-  - space
-  - target
 browser-compat: api.XRInputSource.targetRaySpace
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The read-only {{domxref("XRInputSource")}} property
 **`targetRaySpace`** returns an {{domxref("XRSpace")}}
@@ -40,8 +18,7 @@ the input source's {{domxref("XRInputSource.targetRayMode", "targetRayMode")}}, 
 used both to fully interpret the device as an input source.
 
 To obtain an `XRSpace` representing the input controller's position and
-orientation in virtual space, use the {{domxref("XRInputSource.gripSpace",
-  "gripSpace")}} property.
+orientation in virtual space, use the {{domxref("XRInputSource.gripSpace", "gripSpace")}} property.
 
 ## Value
 
@@ -55,9 +32,8 @@ direction in which the target ray is pointing.
 
 ## Usage notes
 
-All input sources—regardless of their {{domxref("XRInputSource.targetRayMode",
-  "targetRayMode")}}—have a valid `targetRaySpace`. The exact meaning of this
-space varies, however, depending on the mode:
+All input sources—regardless of their {{domxref("XRInputSource.targetRayMode", "targetRayMode")}}—have a valid `targetRaySpace`.
+The exact meaning of this space varies, however, depending on the mode:
 
 - Every gaze input (`targetRayMode` value of `gaze`), shares the
   same {{domxref("XRSpace")}} object as their target ray space, since the gaze input
@@ -70,8 +46,8 @@ space varies, however, depending on the mode:
   orientation of the input device.
 
 To determine the position and orientation of the target ray while rendering a frame,
-pass it into the {{domxref("XRFrame")}} method {{domxref("XRFrame.getPose",
-  "getPose()")}} method, then use the returned {{domxref("XRPose")}} object's
+pass it into the {{domxref("XRFrame")}} method {{domxref("XRFrame.getPose", "getPose()")}} method,
+then use the returned {{domxref("XRPose")}} object's
 {{domxref("XRPose.transform", "transform")}} to gather the spatial information you need.
 
 ## Examples
@@ -84,8 +60,8 @@ The code should continue to perform tasks such as drawing controllers or any obj
 
 ```js
 function updateInputSources(session, frame, refSpace) {
-  for (let source of session.getInputSources()) {
-    let targetRayPose = frame.getPose(inputSource.targetRaySpace, refSpace);
+  for (const source of session.getInputSources()) {
+    const targetRayPose = frame.getPose(inputSource.targetRaySpace, refSpace);
 
     if (targetRayPose) {
       if (source.targetRayMode === "tracked-pointer") {

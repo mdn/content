@@ -1,14 +1,12 @@
 ---
-title: ':-moz-last-node'
+title: ":-moz-last-node"
 slug: Web/CSS/:-moz-last-node
-tags:
-  - CSS
-  - CSS:Mozilla Extensions
-  - NeedsCompatTable
-  - Non-standard
-  - Pseudo-class
-  - Selector
+page-type: css-pseudo-class
+status:
+  - non-standard
+browser-compat: css.selectors.-moz-last-node
 ---
+
 {{Non-standard_header}}{{CSSRef}}
 
 The **`:-moz-last-node`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that represents any element that is the last child node of some other element. It differs from {{cssxref(":last-child")}} because it does not match a last-child element with (non-whitespace) text after it.
@@ -18,7 +16,9 @@ The **`:-moz-last-node`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/
 ## Syntax
 
 ```css
-:-moz-last-node
+:-moz-last-node {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -52,6 +52,10 @@ span:-moz-last-node {
 ## Specifications
 
 Not part of any standard.
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

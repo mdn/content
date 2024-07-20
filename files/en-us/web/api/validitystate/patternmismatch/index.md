@@ -1,18 +1,14 @@
 ---
-title: ValidityState.patternMismatch
+title: "ValidityState: patternMismatch property"
+short-title: patternMismatch
 slug: Web/API/ValidityState/patternMismatch
 page-type: web-api-instance-property
-tags:
-  - API
-  - Constraint Validation API
-  - DOM
-  - Property
-  - Reference
 browser-compat: api.ValidityState.patternMismatch
 ---
+
 {{APIRef("HTML DOM")}}
 
-The read-only **`patternMismatch`** property of a **[`ValidityState`](/en-US/docs/Web/API/ValidityState)** object indicates if the value of an {{HTMLElement("input")}}, after having been edited by the user, does not conform to the constraints set by the element's [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) attribute.
+The read-only **`patternMismatch`** property of the [`ValidityState`](/en-US/docs/Web/API/ValidityState) interface indicates if the value of an {{HTMLElement("input")}}, after having been edited by the user, does not conform to the constraints set by the element's [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) attribute.
 
 The `patternMismatch` property will be true if and only if the following conditions are all true:
 
@@ -20,17 +16,40 @@ The `patternMismatch` property will be true if and only if the following conditi
 - the [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) attribute contains a valid regular expression
 - the {{HTMLElement("input")}} value doesn't conform to the constraints set by the [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) value.
 
+## Value
+
+A boolean that is `true` if the `ValidityState` object does not conform to the constraints.
+
 ## Examples
 
 Given the following:
 
 ```html
 <p>
- <label>Enter your phone number in the format (123)456-7890
-  (<input name="tel1" type="tel" pattern="[0-9]{3}" placeholder="###" aria-label="3-digit area code" size="2"/>)-
-   <input name="tel2" type="tel" pattern="[0-9]{3}" placeholder="###" aria-label="3-digit prefix" size="2"/> -
-   <input name="tel3" type="tel" pattern="[0-9]{4}" placeholder="####" aria-label="4-digit number" size="3"/>
- </label>
+  <label
+    >Enter your phone number in the format (123)456-7890 (<input
+      name="tel1"
+      type="tel"
+      pattern="[0-9]{3}"
+      placeholder="###"
+      aria-label="3-digit area code"
+      size="2" />)-
+    <input
+      name="tel2"
+      type="tel"
+      pattern="[0-9]{3}"
+      placeholder="###"
+      aria-label="3-digit prefix"
+      size="2" />
+    -
+    <input
+      name="tel3"
+      type="tel"
+      pattern="[0-9]{4}"
+      placeholder="####"
+      aria-label="4-digit number"
+      size="3" />
+  </label>
 </p>
 ```
 
@@ -60,6 +79,6 @@ Note, in this case, we get a `patternMismatch` not a {{domxref('validityState.to
 
 ## See also
 
-- [Constraint validation](/en-US/docs/Web/Guide/HTML/Constraint_validation)
+- [Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
 - [Forms: Data form validation](/en-US/docs/Learn/Forms/Form_validation)
-- [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions)

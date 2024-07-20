@@ -1,18 +1,11 @@
 ---
-title: 'Element: touchstart event'
+title: "Element: touchstart event"
+short-title: touchstart
 slug: Web/API/Element/touchstart_event
 page-type: web-api-event
-tags:
-  - Event
-  - Touch Events
-  - TouchEvent
-  - UI
-  - UI Events
-  - UX
-  - touch
-  - touchstart
 browser-compat: api.Element.touchstart_event
 ---
+
 {{APIRef}}
 
 The `touchstart` event is fired when one or more touch points are placed on the touch surface.
@@ -22,9 +15,9 @@ The `touchstart` event is fired when one or more touch points are placed on the 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('touchstart', (event) => {});
+addEventListener("touchstart", (event) => {});
 
-ontouchstart = (event) => { };
+ontouchstart = (event) => {};
 ```
 
 ## Event type
@@ -37,24 +30,24 @@ A {{domxref("TouchEvent")}}. Inherits from {{domxref("Event")}}.
 
 _This interface inherits properties from its parent, {{domxref("UIEvent")}} and {{domxref("Event")}}._
 
-- {{domxref("TouchEvent.altKey")}} {{readonlyInline}}
+- {{domxref("TouchEvent.altKey")}} {{ReadOnlyInline}}
   - : A Boolean value indicating whether or not the alt key was down when the touch event was fired.
-- {{domxref("TouchEvent.changedTouches")}} {{readonlyInline}}
+- {{domxref("TouchEvent.changedTouches")}} {{ReadOnlyInline}}
   - : A {{domxref("TouchList")}} of all the {{domxref("Touch")}} objects representing individual points of contact whose states changed between the previous touch event and this one.
-- {{domxref("TouchEvent.ctrlKey")}} {{readonlyInline}}
+- {{domxref("TouchEvent.ctrlKey")}} {{ReadOnlyInline}}
   - : A Boolean value indicating whether or not the control key was down when the touch event was fired.
-- {{domxref("TouchEvent.metaKey")}} {{readonlyInline}}
+- {{domxref("TouchEvent.metaKey")}} {{ReadOnlyInline}}
   - : A Boolean value indicating whether or not the meta key was down when the touch event was fired.
-- {{domxref("TouchEvent.shiftKey")}} {{readonlyInline}}
+- {{domxref("TouchEvent.shiftKey")}} {{ReadOnlyInline}}
   - : A Boolean value indicating whether or not the shift key was down when the touch event was fired.
-- {{domxref("TouchEvent.targetTouches")}} {{readonlyInline}}
+- {{domxref("TouchEvent.targetTouches")}} {{ReadOnlyInline}}
   - : A {{domxref("TouchList")}} of all the {{domxref("Touch")}} objects that are both currently in contact with the touch surface **and** were also started on the same element that is the target of the event.
-- {{domxref("TouchEvent.touches")}} {{readonlyInline}}
+- {{domxref("TouchEvent.touches")}} {{ReadOnlyInline}}
   - : A {{domxref("TouchList")}} of all the {{domxref("Touch")}} objects representing all current points of contact with the surface, regardless of target or changed status.
-- {{domxref("TouchEvent.rotation")}} {{non-standard_inline()}} {{readonlyInline}}
-  - : Change in rotation (in degrees) since the event's beginning. Positive values indicate clockwise rotation; negative values indicate counterclockwise rotation. Initial value: `0.0`
-- {{domxref("TouchEvent.scale")}} {{non-standard_inline()}} {{readonlyInline}}
-  - : Distance between two digits since the event's beginning. Expressed as a floating-point multiple of the initial distance between the digits at the beginning of the event. Values below 1.0 indicate an inward pinch (zoom out). Values above 1.0 indicate an outward unpinch (zoom in). Initial value: `1.0`
+- {{domxref("TouchEvent.rotation")}} {{non-standard_inline()}} {{ReadOnlyInline}}
+  - : Change in rotation (in degrees) since the event's beginning. Positive values indicate clockwise rotation; negative values indicate counterclockwise rotation. Initial value: `0.0`.
+- {{domxref("TouchEvent.scale")}} {{non-standard_inline()}} {{ReadOnlyInline}}
+  - : Distance between two digits since the event's beginning. Expressed as a floating-point multiple of the initial distance between the digits at the beginning of the event. Values below 1.0 indicate an inward pinch (zoom out). Values above 1.0 indicate an outward unpinch (zoom in). Initial value: `1.0`.
 
 ## Examples
 
@@ -71,4 +64,3 @@ Code samples for those events are available on the dedicated page: [Touch events
 ## See also
 
 - [Touch events](/en-US/docs/Web/API/Touch_events)
-- This event on {{domxref("Document")}} targets: {{domxref("Document/touchstart_event", "touchstart")}}

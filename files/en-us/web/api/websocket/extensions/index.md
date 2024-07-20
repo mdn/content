@@ -1,15 +1,11 @@
 ---
-title: WebSocket.extensions
+title: "WebSocket: extensions property"
+short-title: extensions
 slug: Web/API/WebSocket/extensions
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Web API
-  - WebSocket
 browser-compat: api.WebSocket.extensions
 ---
+
 {{APIRef("Web Sockets API")}}
 
 The **`WebSocket.extensions`** read-only property returns the

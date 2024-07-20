@@ -1,12 +1,10 @@
 ---
 title: Combinators
 slug: Learn/CSS/Building_blocks/Selectors/Combinators
-tags:
-  - CSS
-  - Selectors
-  - combinators
+page-type: learn-module-chapter
 ---
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}
+
+{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks")}}
 
 The final selectors we will look at are called combinators, because they combine other selectors in a way that gives them a useful relationship to each other and the location of content in the document.
 
@@ -15,10 +13,9 @@ The final selectors we will look at are called combinators, because they combine
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy,
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >basic software installed</a
+          >Basic software installed</a
         >, basic knowledge of
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
@@ -42,7 +39,7 @@ The final selectors we will look at are called combinators, because they combine
 
 ## Descendant combinator
 
-The **descendant combinator** — typically represented by a single space (" ") character — combines two selectors such that elements matched by the second selector are selected if they have an ancestor (parent, parent's parent, parent's parent's parent, etc) element matching the first selector. Selectors that utilize a descendant combinator are called *descendant selectors*.
+The **descendant combinator** — typically represented by a single space (" ") character — combines two selectors such that elements matched by the second selector are selected if they have an ancestor (parent, parent's parent, parent's parent's parent, etc.) element matching the first selector. Selectors that utilize a descendant combinator are called _descendant selectors_.
 
 ```css
 body article p
@@ -60,15 +57,15 @@ The **child combinator** (`>`) is placed between two CSS selectors. It matches o
 article > p
 ```
 
-In this next example, we have an unordered list, nested inside of which is an ordered list. The child combinator selects only those `<li>` elements which are direct children of a `<ul>`, and styles them with a top border.
+In this next example, we have an ordered list ({{htmlelement("ol")}}) nested inside an unordered list ({{htmlelement("ul")}}). The child combinator selects only those `<li>` elements which are direct children of a `<ul>`, and styles them with a top border.
 
 If you remove the `>` that designates this as a child combinator, you end up with a descendant selector and all `<li>` elements will get a red border.
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/child.html", '100%', 600)}}
 
-## Adjacent sibling combinator
+## Next-sibling combinator
 
-The adjacent sibling selector (`+`) is placed between two CSS selectors. It matches only those elements matched by the second selector that are the next sibling element of the first selector. For example, to select all `<img>` elements that are immediately preceded by a `<p>` element:
+The **next-sibling combinator** (`+`) is placed between two CSS selectors. It matches only those elements matched by the second selector that are the next sibling element of the first selector. For example, to select all `<img>` elements that are immediately preceded by a `<p>` element:
 
 ```css
 p + img
@@ -78,11 +75,13 @@ A common use case is to do something with a paragraph that follows a heading, as
 
 If you insert some other element such as a `<h2>` in between the `<h1>` and the `<p>`, you will find that the paragraph is no longer matched by the selector and so does not get the background and foreground color applied when the element is adjacent.
 
+<!-- This example lives https://github.com/mdn/css-examples/blob/main/learn/selectors/adjacent.html -->
+
 {{EmbedGHLiveSample("css-examples/learn/selectors/adjacent.html", '100%', 800)}}
 
-## General sibling combinator
+## Subsequent-sibling combinator
 
-If you want to select siblings of an element even if they are not directly adjacent, then you can use the general sibling combinator (`~`). To select all `<img>` elements that come _anywhere_ after `<p>` elements, we'd do this:
+If you want to select siblings of an element even if they are not directly adjacent, then you can use the **subsequent-sibling combinator** (`~`). To select all `<img>` elements that come _anywhere_ after `<p>` elements, we'd do this:
 
 ```css
 p ~ img
@@ -90,14 +89,49 @@ p ~ img
 
 In the example below we are selecting all `<p>` elements that come after the `<h1>`, and even though there is a `<div>` in the document as well, the `<p>` that comes after it is selected.
 
+<!-- This example lives https://github.com/mdn/css-examples/blob/main/learn/selectors/general.html -->
+
 {{EmbedGHLiveSample("css-examples/learn/selectors/general.html", '100%', 600)}}
+
+## Creating complex selectors with nesting
+
+The [CSS nesting module](/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting#combinators) allows you to write nested rules that use combinators to create [complex selectors](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#complex_selector).
+
+```css
+p {
+  ~ img {
+  }
+}
+/* This is parsed by the browser as */
+p ~ img {
+}
+```
+
+The [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector) can also be used to create complex selectors.
+
+```css
+p {
+  & img {
+  }
+}
+/* This is parsed by the browser as */
+p img {
+}
+```
+
+<!-- This example lives https://github.com/mdn/css-examples/blob/main/learn/selectors/nesting.html -->
+
+{{EmbedGHLiveSample("css-examples/learn/selectors/nesting.html", '100%', 800)}}
+
+> **Note:** In the example above, the `&` nesting selector is not required, but adding it helps to explicitly show that CSS nesting is being used.
 
 ## Using combinators
 
 You can combine any of the selectors that we discovered in previous lessons with combinators in order to pick out part of your document. For example, to select list items with a class of "a" which are direct children of a `<ul>`, try the following:
 
 ```css
-ul > li[class="a"] {  }
+ul > li[class="a"] {
+}
 ```
 
 Take care, however, when creating big lists of selectors that select very specific parts of your document. It will be hard to reuse the CSS rules since you have made the selector very specific to the location of that element in the markup.
@@ -110,30 +144,6 @@ You've reached the end of this article, but can you remember the most important 
 
 ## Summary
 
-This is the last section in our lessons on selectors. Next, we'll move on to another important part of CSS — the [CSS Box Model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model).
+This is the last section in our lessons on selectors. Next, we'll move on to another important part of CSS — the [cascade, specificity, and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance).
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}
-
-## In this module
-
-- [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-- [CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
-
-  - [Type, class, and ID selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-  - [Attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-  - [Pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-  - [Combinators](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
-
-- [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
-- [Backgrounds and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-- [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-- [Overflowing content](/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content)
-- [Values and units](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
-- [Sizing items in CSS](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-- [Images, media, and form elements](/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-- [Styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)
-- [Debugging CSS](/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-- [Organizing your CSS](/en-US/docs/Learn/CSS/Building_blocks/Organizing)
-- [Fundamental CSS comprehension](/en-US/docs/Learn/CSS/Building_blocks/Fundamental_CSS_comprehension)
-- [Creating fancy letterheaded paper](/en-US/docs/Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper)
-- [A cool-looking box](/en-US/docs/Learn/CSS/Building_blocks/A_cool_looking_box)
+{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks")}}

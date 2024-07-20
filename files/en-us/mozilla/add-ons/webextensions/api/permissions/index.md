@@ -1,16 +1,13 @@
 ---
 title: permissions
 slug: Mozilla/Add-ons/WebExtensions/API/permissions
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Permissions
-  - Reference
-  - WebExtensions
+page-type: webextension-api
 browser-compat: webextensions.api.permissions
 ---
-{{AddonSidebar}}Enables extensions to request extra permissions at runtime, after they have been installed.
+
+{{AddonSidebar}}
+
+Enables extensions to request extra permissions at runtime, after they have been installed.
 
 Extensions need permissions to access more powerful WebExtension APIs. They can ask for permissions at install time, by including the permissions they need in the [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) manifest.json key. The main advantages of asking for permissions at install time are:
 
@@ -66,5 +63,3 @@ For advice on designing your request for runtime permissions, to maximize the li
 {{WebExtExamples("h2")}}
 
 > **Note:** This API is based on Chromium's [`chrome.permissions`](https://developer.chrome.com/docs/extensions/reference/permissions/) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

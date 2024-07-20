@@ -1,12 +1,10 @@
 ---
 title: page_action
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/page_action
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
+page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.page_action
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -28,7 +26,6 @@ browser-compat: webextensions.manifest.page_action
       <td>
         <pre class="brush: json">
 "page_action": {
-  "browser_style": true,
   "default_icon": {
     "19": "button/geo-19.png",
     "38": "button/geo-38.png"
@@ -46,13 +43,13 @@ A page action is an icon that your extension adds inside the browser's URL bar.
 
 Your extension may optionally also supply an associated popup whose content is specified using HTML, CSS, and JavaScript.
 
-If you supply a popup, then the popup is opened when the user clicks the icon, and your JavaScript running in the popup can handle the user's interaction with it. If you don't supply a popup, then a click event is dispatched to your extension's [background scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_pages) when the user clicks the icon.
+You must specify this key to include a page action in your extension. When specified, you can manipulate the button programmatically using the {{WebExtAPIRef("pageAction")}} API.
 
-You can also create and manipulate page actions programmatically using the {{WebExtAPIRef("pageAction", "pageAction API")}}.
+If you supply a popup, then the popup is opened when the user clicks the icon, and your JavaScript running in the popup can handle the user's interaction with it. If you don't supply a popup, then a click event is dispatched to your extension's [background scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_pages) when the user clicks the icon.
 
 Page actions are like browser actions, except that they are associated with particular web pages rather than with the browser as a whole. If an action is only relevant on certain pages, then you should use a page action and display it only on relevant pages. If an action is relevant to all pages or to the browser itself, use a browser action.
 
-While browser actions are displayed by default, page actions are hidden by default. They can be shown for a particular tab by calling {{WebExtAPIRef("pageAction.show()")}} , passing in the tab's `id`. You can also change this default behavior using the `show_matches` property.
+While browser actions are displayed by default, page actions are hidden by default. They can be shown for a particular tab by calling {{WebExtAPIRef("pageAction.show()")}}, passing in the tab's `id`. You can also change this default behavior using the `show_matches` property.
 
 ## Syntax
 
@@ -69,41 +66,31 @@ The `page_action` key is an object that may have any of three properties, all op
   <tbody>
     <tr>
       <td>
-        <code
-          ><a
-            href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles"
-            >browser_style</a
-          ></code
-        >
+        <code>
+          <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles">
+            browser_style
+          </a>
+        </code>
+        <br />{{optional_inline}}
+        <br />{{deprecated_inline}} in Manifest V3.
       </td>
       <td><code>Boolean</code></td>
       <td>
         <p>Optional. Defaults to <code>false</code>.</p>
-        <p>
-          Use this to include a stylesheet in your popup that will make it look
-          consistent with the browser's UI and with other extensions that use
-          the <code>browser_style</code> property. Although this key defaults to
-          <code>false</code>, it's recommended that you include it and set it to
-          <code>true</code> in order to make your popups consistent with the
-          look of the rest of the browser user interface.
-        </p>
+        <div class="notecard warning">
+          <p>
+            Do not set <code>browser_style</code> to true: its not support in Manifest V3 from Firefox 118. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles#manifest_v3_migration">Manifest V3 migration for <code>browser_style</code></a>.
+          </p>
+        </div>
         <p>
           In Firefox, the stylesheet can be seen at
-          <code>chrome://browser/content/extension.css</code>, or
+          <code>chrome://browser/content/extension.css</code> or
           <code>chrome://browser/content/extension-mac.css</code> on macOS.
         </p>
         <p>
           The
-          <a href="https://firefoxux.github.io/StyleGuide/#/controls"
-            >Firefox Style Guide</a
-          >
-          describes the classes you can apply to elements in the popup in order
-          to get particular styles.
-        </p>
-        <p>
-          The
           <a
-            href="https://github.com/mdn/webextensions-examples/tree/master/latest-download"
+            href="https://github.com/mdn/webextensions-examples/tree/main/latest-download"
             >latest-download</a
           >
           example extension uses <code>browser_style</code> in its popup.
@@ -285,7 +272,7 @@ The `page_action` key is an object that may have any of three properties, all op
 A page action with just an icon, specified in 2 different sizes. The extension's background scripts can receive click events when the user clicks the icon using code like this:
 
 ```js
- browser.pageAction.onClicked.addListener(handleClick);
+browser.pageAction.onClicked.addListener(handleClick);
 ```
 
 ```json

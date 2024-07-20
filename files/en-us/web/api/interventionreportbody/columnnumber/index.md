@@ -1,16 +1,13 @@
 ---
-title: InterventionReportBody.columnNumber
+title: "InterventionReportBody: columnNumber property"
+short-title: columnNumber
 slug: Web/API/InterventionReportBody/columnNumber
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Experimental
-  - columnNumber
-  - InterventionReportBody
-spec-urls: https://wicg.github.io/intervention-reporting/#dom-interventionreportbody-columnnumber
+status:
+  - experimental
+browser-compat: api.InterventionReportBody.columnNumber
 ---
+
 {{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The **`columnNumber`** read-only property of the {{domxref("InterventionReportBody")}} interface returns the line in the source file in which the intervention occurred.
@@ -27,9 +24,9 @@ In this example we create a new {{domxref("ReportingObserver")}} to observe inte
 
 ```js
 const options = {
-  types: ['intervention'],
-  buffered: true
-}
+  types: ["intervention"],
+  buffered: true,
+};
 
 const observer = new ReportingObserver((reports, observer) => {
   const firstReport = reports[0];
@@ -46,4 +43,4 @@ const observer = new ReportingObserver((reports, observer) => {
 
 ## Browser compatibility
 
-This feature is not yet available by default in any released browser. It can be activated in Firefox by setting `dom_reporting_enabled` to `true` and in Chrome if you [enable this experimental feature](https://web.dev/reporting-api/#use-devtools).
+{{Compat}}

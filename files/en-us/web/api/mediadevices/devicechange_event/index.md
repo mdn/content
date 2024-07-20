@@ -1,22 +1,14 @@
 ---
 title: "MediaDevices: devicechange event"
+short-title: devicechange
 slug: Web/API/MediaDevices/devicechange_event
 page-type: web-api-event
-tags:
-  - API
-  - Audio
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - MediaDevices
-  - Reference
-  - Video
-  - Event
 browser-compat: api.MediaDevices.devicechange_event
 ---
-{{APIRef}}
 
-A `devicechange` event is sent to a {{domxref("MediaDevices")}} instance whenever a media device such as a camera, microphone, or speaker is connected to or removed from the system.
+{{APIRef("Media Capture and Streams")}}{{SecureContext_Header}}
+
+The **`devicechange`** event is sent to a {{domxref("MediaDevices")}} instance whenever a media device such as a camera, microphone, or speaker is connected to or removed from the system.
 
 This event is not cancelable and does not bubble.
 
@@ -25,7 +17,7 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('devicechange', (event) => {});
+addEventListener("devicechange", (event) => {});
 
 ondevicechange = (event) => {};
 ```
@@ -46,10 +38,8 @@ media device is attached to or removed from the device running the sample.
 
 ```html hidden
 <p>Click the start button below to begin the demonstration.</p>
-<div id="startButton" class="button">
-  Start
-</div>
-<video id="video" width="160" height="120" autoplay></video><br>
+<div id="startButton" class="button">Start</div>
+<video id="video" width="160" height="120" autoplay></video><br />
 
 <div class="left">
   <h2>Audio devices:</h2>
@@ -65,7 +55,10 @@ media device is attached to or removed from the device running the sample.
 
 ```css hidden
 body {
-  font: 14px "Open Sans", "Arial", sans-serif;
+  font:
+    14px "Open Sans",
+    "Arial",
+    sans-serif;
 }
 
 video {
@@ -111,12 +104,12 @@ h2 {
 
 ```js hidden
 // UI elements
-const videoElement = document.queryElement("#video");
-const logElement = document.queryElement("output");
-const startButton = document.queryElement("#startButton");
+const videoElement = document.querySelector("#video");
+const logElement = document.querySelector("output");
+const startButton = document.querySelector("#startButton");
 
 function log(msg) {
-  logElement.innerHTML += `${msg}<br>`;
+  logElement.innerText += `${msg}\n`;
 }
 
 startButton.addEventListener(
@@ -126,16 +119,17 @@ startButton.addEventListener(
       video: {
         width: 160,
         height: 120,
-        frameRate: 30
+        frameRate: 30,
       },
       audio: {
         sampleRate: 44100,
         sampleSize: 16,
-        volume: 0.25
-      }
+        volume: 0.25,
+      },
     };
 
-    navigator.mediaDevices.getUserMedia(constraints)
+    navigator.mediaDevices
+      .getUserMedia(constraints)
       .then((stream) => {
         videoElement.srcObject = stream;
         updateDeviceList();
@@ -144,7 +138,7 @@ startButton.addEventListener(
         log(`${err.name}: ${err.message}`);
       });
   },
-  false
+  false,
 );
 ```
 
@@ -156,7 +150,7 @@ const audioList = document.getElementById("audioList");
 const videoList = document.getElementById("videoList");
 ```
 
-#### Getting and drawing the device list
+### Getting and drawing the device list
 
 Now let's take a look at `updateDeviceList()` itself. This method is called
 any time we want to fetch the current list of media devices and then update the
@@ -164,23 +158,22 @@ displayed lists of audio and video devices using that information.
 
 ```js
 function updateDeviceList() {
-  navigator.mediaDevices.enumerateDevices()
-    .then((devices) => {
-      audioList.innerHTML = "";
-      videoList.innerHTML = "";
+  navigator.mediaDevices.enumerateDevices().then((devices) => {
+    audioList.textContent = "";
+    videoList.textContent = "";
 
-      devices.forEach((device) => {
-        const elem = document.createElement("li");
-        const [kind, type, direction] = device.kind.match(/(\w+)(input|output)/i);
+    devices.forEach((device) => {
+      const elem = document.createElement("li");
+      const [kind, type, direction] = device.kind.match(/(\w+)(input|output)/i);
 
-        elem.innerHTML = `<strong>${device.label}</strong> (${direction})`;
-        if (type === "audio") {
-          audioList.appendChild(elem);
-        } else if (type === "video") {
-          videoList.appendChild(elem);
-        }
-      });
+      elem.innerHTML = `<strong>${device.label}</strong> (${direction})`;
+      if (type === "audio") {
+        audioList.appendChild(elem);
+      } else if (type === "video") {
+        videoList.appendChild(elem);
+      }
     });
+  });
 }
 ```
 
@@ -212,7 +205,7 @@ parentheses, it's appended to the appropriate list by calling
 {{domxref("Node.appendChild", "appendChild()")}} on either `audioList` or
 `videoList`, as appropriate based on the device type.
 
-#### Handling device list changes
+### Handling device list changes
 
 We call `updateDeviceList()` in two places. The first is in the
 {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} promise's fulfillment

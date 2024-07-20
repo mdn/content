@@ -1,16 +1,11 @@
 ---
-title: KeyboardEvent.metaKey
+title: "KeyboardEvent: metaKey property"
+short-title: metaKey
 slug: Web/API/KeyboardEvent/metaKey
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - MouseEvent
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.KeyboardEvent.metaKey
 ---
+
 {{APIRef("UI Events")}}
 
 The **`KeyboardEvent.metaKey`** read-only property returning a
@@ -20,13 +15,13 @@ systems may intercept the key so it is never detected.
 
 > **Note:** On Macintosh keyboards, this is the <kbd>⌘ Command</kbd> key.
 
-> **Warning:** At least as of Firefox 48, the <kbd>⊞ Windows</kbd> key is no longer considered the
-> "Meta" key. `KeyboardEvent.metaKey` is `false` when the <kbd>⊞
-> Windows</kbd> key is pressed.
+> **Note:** Before Firefox 118, the <kbd>⊞ Windows</kbd> key was handled
+> as an "OS" key rather than the "Meta" key. `KeyboardEvent.metaKey` was
+> `false` when the <kbd>⊞ Windows</kbd> key was pressed.
 
 ## Value
 
-A boolean value
+A boolean value.
 
 ## Examples
 
@@ -38,11 +33,12 @@ A boolean value
 
 ```js
 function ismetaKey(e) {
-  document.querySelector("#output").textContent = `metaKey pressed? ${e.metaKey}`;
+  document.querySelector("#output").textContent =
+    `metaKey pressed? ${e.metaKey}`;
 }
 ```
 
-#### Result
+### Result
 
 {{ EmbedLiveSample('Examples', 400, 90) }}
 

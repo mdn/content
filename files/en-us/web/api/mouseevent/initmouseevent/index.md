@@ -1,17 +1,13 @@
 ---
-title: MouseEvent.initMouseEvent()
+title: "MouseEvent: initMouseEvent() method"
+short-title: initMouseEvent()
 slug: Web/API/MouseEvent/initMouseEvent
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOM Events
-  - Deprecated
-  - Method
-  - MouseEvent
-  - Reference
+status:
+  - deprecated
 browser-compat: api.MouseEvent.initMouseEvent
 ---
+
 {{APIRef("UI Events")}}{{deprecated_header}}
 
 The **`MouseEvent.initMouseEvent()`** method initializes the
@@ -28,7 +24,7 @@ before it is dispatched, using {{ domxref("EventTarget.dispatchEvent()") }}.
 
 ## Syntax
 
-```js
+```js-nolint
 initMouseEvent(type, canBubble, cancelable, view,
                      detail, screenX, screenY, clientX, clientY,
                      ctrlKey, altKey, shiftKey, metaKey,
@@ -102,7 +98,7 @@ None ({{jsxref("undefined")}}).
 ```html
 <div style="background:red; width:180px; padding:10px;">
   <div id="out"></div>
-  <input type="text">
+  <input type="text" />
 </div>
 ```
 
@@ -111,14 +107,30 @@ None ({{jsxref("undefined")}}).
 ```js
 document.body.onclick = (event) => {
   const elementTag = event.target.tagName.toLowerCase();
-  document.getElementById("out").innerHTML = elementTag;
+  document.getElementById("out").textContent = elementTag;
 };
 
 const simulateClick = () => {
   const event = document.createEvent("MouseEvents");
-  event.initMouseEvent("click", true, true, window, 0, 0, 0, 80, 20, false, false, false, false, 0, null);
+  event.initMouseEvent(
+    "click",
+    true,
+    true,
+    window,
+    0,
+    0,
+    0,
+    80,
+    20,
+    false,
+    false,
+    false,
+    false,
+    0,
+    null,
+  );
   document.body.dispatchEvent(event);
-}
+};
 
 simulateClick();
 ```

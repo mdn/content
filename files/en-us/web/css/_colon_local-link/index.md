@@ -1,9 +1,11 @@
 ---
-title: ':local-link'
+title: ":local-link"
 slug: Web/CSS/:local-link
+page-type: css-pseudo-class
 spec-urls: https://drafts.csswg.org/selectors/#local-link-pseudo
 ---
-{{ CSSRef }}
+
+{{CSSRef}}
 
 The **`:local-link`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents a link to the same document. Therefore an element that is the source anchor of a hyperlink whose target's absolute URL matches the element's own document URL.
 
@@ -16,8 +18,10 @@ a:local-link {
 
 ## Syntax
 
-```
-:local-link
+```css
+:local-link {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -25,8 +29,8 @@ a:local-link {
 ### HTML
 
 ```html
-<a href="#target">This is a link on the current page.</a><br>
-<a href="https://example.com">This is an external link</a><br>
+<a href="#target">This is a link on the current page.</a><br />
+<a href="https://example.com">This is an external link</a><br />
 ```
 
 ### CSS

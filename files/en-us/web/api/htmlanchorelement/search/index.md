@@ -1,14 +1,11 @@
 ---
-title: HTMLAnchorElement.search
+title: "HTMLAnchorElement: search property"
+short-title: search
 slug: Web/API/HTMLAnchorElement/search
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAnchorElement
-  - Property
-  - Reference
 browser-compat: api.HTMLAnchorElement.search
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAnchorElement.search`** property is a search

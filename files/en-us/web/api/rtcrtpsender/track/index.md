@@ -1,20 +1,11 @@
 ---
-title: RTCRtpSender.track
+title: "RTCRtpSender: track property"
+short-title: track
 slug: Web/API/RTCRtpSender/track
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - DTMF
-  - Property
-  - RTCRtpSender
-  - Reference
-  - Video
-  - Web
-  - WebRTC API
-  - track
 browser-compat: api.RTCRtpSender.track
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`track`** read-only property of

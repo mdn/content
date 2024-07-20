@@ -1,17 +1,11 @@
 ---
-title: GainNode()
+title: "GainNode: GainNode() constructor"
+short-title: GainNode()
 slug: Web/API/GainNode/GainNode
 page-type: web-api-constructor
-tags:
-  - API
-  - Audio
-  - Constructor
-  - GainNode
-  - Media
-  - Reference
-  - Web Audio API
 browser-compat: api.GainNode.GainNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`GainNode()`** constructor of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) creates a new
@@ -20,7 +14,7 @@ change in volume.
 
 ## Syntax
 
-```js
+```js-nolint
 new GainNode(context, options)
 ```
 

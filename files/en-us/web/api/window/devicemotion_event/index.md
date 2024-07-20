@@ -1,17 +1,14 @@
 ---
-title: 'Window: devicemotion event'
+title: "Window: devicemotion event"
+short-title: devicemotion
 slug: Web/API/Window/devicemotion_event
 page-type: web-api-event
-tags:
-  - API
-  - Device Orientation API
-  - Sensors
-  - events
 browser-compat: api.Window.devicemotion_event
 ---
-{{APIRef}}
 
-The `devicemotion` event is fired at a regular interval and indicates the amount of physical force of acceleration the device is receiving at that time. It also provides information about the rate of rotation, if available.
+{{APIRef("Device Orientation Events")}}{{securecontext_header}}
+
+The **`devicemotion`** event is fired at a regular interval and indicates the acceleration rate of the device with/without the contribution of the gravity force at that time. It also provides information about the rate of rotation, if available.
 
 This event is not cancelable and does not bubble.
 
@@ -20,14 +17,14 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('devicemotion', (event) => { });
+addEventListener("devicemotion", (event) => {});
 
-ondevicemotion = (event) => { };
+ondevicemotion = (event) => {};
 ```
 
 ## Event type
 
-An {{domxref("DeviceMotionEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("DeviceMotionEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("DeviceMotionEvent")}}
 
@@ -46,12 +43,11 @@ An {{domxref("DeviceMotionEvent")}}. Inherits from {{domxref("Event")}}.
 
 ```js
 function handleMotionEvent(event) {
+  const x = event.accelerationIncludingGravity.x;
+  const y = event.accelerationIncludingGravity.y;
+  const z = event.accelerationIncludingGravity.z;
 
-    const x = event.accelerationIncludingGravity.x;
-    const y = event.accelerationIncludingGravity.y;
-    const z = event.accelerationIncludingGravity.z;
-
-    // Do something awesome.
+  // Do something awesome.
 }
 
 window.addEventListener("devicemotion", handleMotionEvent, true);
@@ -67,5 +63,5 @@ window.addEventListener("devicemotion", handleMotionEvent, true);
 
 ## See also
 
-- {{domxref("Window.deviceorientation_event_event", "deviceorientation")}}
+- {{domxref("Window.deviceorientation_event", "deviceorientation")}}
 - [DeviceOrientation Event](https://www.w3.org/TR/orientation-event/#devicemotion)

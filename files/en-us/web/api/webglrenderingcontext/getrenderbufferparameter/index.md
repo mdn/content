@@ -1,15 +1,11 @@
 ---
-title: WebGLRenderingContext.getRenderbufferParameter()
+title: "WebGLRenderingContext: getRenderbufferParameter() method"
+short-title: getRenderbufferParameter()
 slug: Web/API/WebGLRenderingContext/getRenderbufferParameter
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.getRenderbufferParameter
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.getRenderbufferParameter()`**
@@ -18,7 +14,7 @@ about the renderbuffer.
 
 ## Syntax
 
-```js
+```js-nolint
 getRenderbufferParameter(target, pname)
 ```
 
@@ -43,6 +39,7 @@ getRenderbufferParameter(target, pname)
       - : Returns a {{domxref("WebGL_API/Types", "GLint")}} indicating
         the height of the image of the currently bound renderbuffer.
     - `gl.RENDERBUFFER_INTERNAL_FORMAT`
+
       - : Returns a {{domxref("WebGL_API/Types", "GLenum")}}
         indicating the internal format of the currently bound renderbuffer. The default is
         `gl.RGBA4`. Possible return values:
@@ -69,15 +66,17 @@ getRenderbufferParameter(target, pname)
       - : Returns a {{domxref("WebGL_API/Types", "GLint")}} that is
         the resolution size (in bits) for the depth component.
     - `gl.RENDERBUFFER_STENCIL_SIZE`
+
       - : Returns a {{domxref("WebGL_API/Types", "GLint")}} that
         is the resolution size (in bits) for the stencil component.
-    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
-      the following value is available additionally:
 
-      - `gl.RENDERBUFFER_SAMPLES`
-        - : Returns a {{domxref("WebGL_API/Types", "GLint")}}
-          indicating the number of samples of the image of the currently bound
-          renderbuffer.
+    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
+    the following value is available additionally:
+
+    - `gl.RENDERBUFFER_SAMPLES`
+      - : Returns a {{domxref("WebGL_API/Types", "GLint")}}
+        indicating the number of samples of the image of the currently bound
+        renderbuffer.
 
 ### Return value
 

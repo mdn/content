@@ -1,18 +1,11 @@
 ---
 title: sessions.removeTabValue()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/removeTabValue
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - removeTabValue
-  - sessions
+page-type: webextension-api-function
 browser-compat: webextensions.api.sessions.removeTabValue
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Removes a value previously stored by a call to {{WebExtAPIRef("sessions.setTabValue")}}.
 
@@ -20,7 +13,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 let removing = browser.sessions.removeTabValue(
   tabId,    // integer
   key       // string
@@ -48,13 +41,19 @@ This code adds two context menu items: one stores a value associated with the cu
 
 ```js
 async function setOnActiveTab() {
-  let tabArray = await browser.tabs.query({currentWindow: true, active: true});
+  let tabArray = await browser.tabs.query({
+    currentWindow: true,
+    active: true,
+  });
   let tabId = tabArray[0].id;
   await browser.sessions.setTabValue(tabId, "my-key", "my-value");
 }
 
 async function removeFromActiveTab() {
-  let tabArray = await browser.tabs.query({currentWindow: true, active: true});
+  let tabArray = await browser.tabs.query({
+    currentWindow: true,
+    active: true,
+  });
   let tabId = tabArray[0].id;
   await browser.sessions.removeTabValue(tabId, "my-key");
 }
@@ -62,13 +61,13 @@ async function removeFromActiveTab() {
 browser.menus.create({
   id: "add-my-item",
   title: "add item",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.create({
   id: "remove-my-item",
   title: "remove item",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.onClicked.addListener((info) => {

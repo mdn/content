@@ -1,17 +1,11 @@
 ---
-title: Document.replaceChildren()
+title: "Document: replaceChildren() method"
+short-title: replaceChildren()
 slug: Web/API/Document/replaceChildren
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Node
-  - Document
-  - Reference
-  - replaceChildren
 browser-compat: api.Document.replaceChildren
 ---
+
 {{APIRef("DOM")}}
 
 The **`Document.replaceChildren()`** method replaces the
@@ -19,16 +13,16 @@ existing children of a `Document` with a specified new set of children.
 
 ## Syntax
 
-```js
+```js-nolint
 replaceChildren(param1)
 replaceChildren(param1, param2)
-replaceChildren(param1, param2, /* … ,*/ paramN)
+replaceChildren(param1, param2, /* …, */ paramN)
 ```
 
 ### Parameters
 
 - `param1`, …, `paramN`
-  - : A set of {{domxref("Node")}} or string objects to replace the
+  - : A set of {{domxref("Node")}} objects or strings to replace the
     `Document`'s existing children with. If no replacement objects are
     specified, then the `Document` is emptied of all child nodes.
 

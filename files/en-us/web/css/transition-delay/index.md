@@ -1,17 +1,13 @@
 ---
 title: transition-delay
 slug: Web/CSS/transition-delay
-tags:
-  - CSS
-  - CSS Property
-  - CSS Transitions
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.transition-delay
 ---
+
 {{CSSRef}}
 
-The **`transition-delay`** CSS property specifies the duration to wait before starting a property's [transition effect](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) when its value changes.
+The **`transition-delay`** [CSS](/en-US/docs/Web/CSS) property specifies the duration to wait before starting a property's [transition effect](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) when its value changes.
 
 {{EmbedInteractiveExample("pages/css/transition-delay.html")}}
 
@@ -58,13 +54,13 @@ transition-delay: unset;
 #### HTML
 
 ```html
-  <div class="box delay-1">0.5 seconds</div>
+<div class="box delay-1">0.5 seconds</div>
 
-  <div class="box delay-2">2 seconds</div>
+<div class="box delay-2">2 seconds</div>
 
-  <div class="box delay-3">4 seconds</div>
+<div class="box delay-3">4 seconds</div>
 
-  <button id="change">Change</button>
+<button id="change">Change</button>
 ```
 
 #### CSS
@@ -111,7 +107,7 @@ transition-delay: unset;
 ```js
 function change() {
   const elements = document.querySelectorAll("div.box");
-  for (let element of elements) {
+  for (const element of elements) {
     element.classList.toggle("transformed-state");
   }
 }
@@ -134,5 +130,5 @@ changeButton.addEventListener("click", change);
 
 ## See also
 
-- [Using CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - {{domxref("TransitionEvent")}} API

@@ -1,30 +1,29 @@
 ---
 title: lang
 slug: Web/XPath/Functions/lang
-tags:
-  - XSLT
-  - XSLT_Reference
+page-type: xpath-function
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}
 
 The `lang` function determines whether the context node matches the given language and returns boolean true or false.
 
-### Syntax
+## Syntax
 
-```
+```plain
 lang(string )
 ```
 
-### Arguments
+### Parameters
 
 - `string`
   - : The language code or localization (language and country) code to be matched.
 
-### Returns
+### Return value
 
 `true` if the context node matches the given languages. Otherwise, `false`.
 
-### Notes
+## Description
 
 - A node's language is determined by its `xml:lang` attribute. If the current node does not have an `xml:lang` attribute, then the value of the `xml:lang` attribute of the nearest ancestor that has an `xml:lang` attribute will determine the current node's language. If the language cannot be determined (no ancestor has an `xml:lang` attribute), this function will return false.
 
@@ -49,17 +48,17 @@ And this part of an XSL template:
 
 The output might be:
 
-```
+```plain
 3
 1
 1
 0
 ```
 
-### Defined
+## Specifications
 
 [XPath 1.0 4.3](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-lang)
 
-### Gecko support
+## Gecko support
 
 Supported.

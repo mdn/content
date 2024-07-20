@@ -1,16 +1,10 @@
 ---
 title: alarms
 slug: Mozilla/Add-ons/WebExtensions/API/alarms
-tags:
-  - API
-  - Extensions
-  - Interface
-  - Needs Privileges
-  - Reference
-  - WebExtensions
-  - alarms
+page-type: webextension-api
 browser-compat: webextensions.api.alarms
 ---
+
 {{AddonSidebar}}
 
 Schedule code to run at a specific time in the future. This is like [`setTimeout()`](/en-US/docs/Web/API/setTimeout) and [`setInterval()`](/en-US/docs/Web/API/setInterval), except that those functions don't work with background pages that are loaded on demand.
@@ -49,5 +43,3 @@ To use this API you need to have the "alarms" [permission](/en-US/docs/Mozilla/A
 {{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/alarms/) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

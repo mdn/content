@@ -1,23 +1,20 @@
 ---
-title: InterventionReportBody.toJSON()
+title: "InterventionReportBody: toJSON() method"
+short-title: toJSON()
 slug: Web/API/InterventionReportBody/toJSON
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Experimental
-  - toJSON
-  - InterventionReportBody
-spec-urls: https://wicg.github.io/intervention-reporting/#dom-interventionreportbody-tojson
+status:
+  - experimental
+browser-compat: api.InterventionReportBody.toJSON
 ---
+
 {{APIRef("Reporting API")}}{{SeeCompatTable}}
 
 The **`toJSON()`** method of the {{domxref("InterventionReportBody")}} interface is a _serializer_, and returns a JSON representation of the `InterventionReportBody` object.
 
 ## Syntax
 
-```js
+```js-nolint
 toJSON()
 ```
 
@@ -35,9 +32,9 @@ In this example we create a new {{domxref("ReportingObserver")}} to observe inte
 
 ```js
 const options = {
-  types: ['intervention'],
-  buffered: true
-}
+  types: ["intervention"],
+  buffered: true,
+};
 
 const observer = new ReportingObserver((reports, observer) => {
   const firstReport = reports[0];
@@ -51,4 +48,4 @@ const observer = new ReportingObserver((reports, observer) => {
 
 ## Browser compatibility
 
-This feature is not yet available by default in any released browser. It can be activated in Firefox by setting `dom_reporting_enabled` to `true` and in Chrome if you [enable this experimental feature](https://web.dev/reporting-api/#use-devtools).
+{{Compat}}

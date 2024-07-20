@@ -1,17 +1,11 @@
 ---
-title: BaseAudioContext.destination
+title: "BaseAudioContext: destination property"
+short-title: destination
 slug: Web/API/BaseAudioContext/destination
 page-type: web-api-instance-property
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - Property
-  - Reference
-  - Web Audio API
-  - destination
 browser-compat: api.BaseAudioContext.destination
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `destination` property of the {{ domxref("BaseAudioContext") }}
@@ -25,8 +19,7 @@ An {{ domxref("AudioDestinationNode") }}.
 
 ## Examples
 
-> **Note:** for a full example implementation, see one of our Web Audio
-> Demos on the [MDN GitHub repo](https://github.com/mdn/), like [voice-change-o-matic](https://github.com/mdn/voice-change-o-matic).
+> **Note:** For more complete applied examples/information, check out our [Voice-change-O-matic](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic) demo (see [app.js lines 108–193](https://github.com/mdn/webaudio-examples/blob/main/voice-change-o-matic/scripts/app.js#L108-L193) for relevant code).
 
 ```js
 const audioCtx = new AudioContext();

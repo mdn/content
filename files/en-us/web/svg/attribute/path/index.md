@@ -1,13 +1,12 @@
 ---
 title: path
 slug: Web/SVG/Attribute/path
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 spec-urls:
   - https://svgwg.org/svg2-draft/text.html#TextPathElementPathAttribute
   - https://svgwg.org/specs/animations/#AnimateMotionElementPathAttribute
 ---
+
 {{SVGRef}}
 
 The **`path`** attribute has two different meanings, either it defines a text path along which the characters of a text are rendered, or a motion path along which a referenced element is animated.
@@ -20,18 +19,24 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <path id="MyPath" fill="none" stroke="silver"
-        d="M10,90 Q90,90 90,45 Q90,10 50,10 Q10,10 10,40 Q10,70 45,70 Q70,70 75,50" />
+  <path
+    id="MyPath"
+    fill="none"
+    stroke="silver"
+    d="M10,90 Q90,90 90,45 Q90,10 50,10 Q10,10 10,40 Q10,70 45,70 Q70,70 75,50" />
 
   <text>
-    <textPath path="M10,90 Q90,90 90,45 Q90,10 50,10 Q10,10 10,40 Q10,70 45,70 Q70,70 75,50">
+    <textPath
+      path="M10,90 Q90,90 90,45 Q90,10 50,10 Q10,10 10,40 Q10,70 45,70 Q70,70 75,50">
       Quick brown fox jumps over the lazy dog.
     </textPath>
   </text>

@@ -2,15 +2,9 @@
 title: DocumentFragment
 slug: Web/API/DocumentFragment
 page-type: web-api-interface
-tags:
-  - API
-  - DOM
-  - DocumentFragment
-  - Interface
-  - Reference
-  - Web Components
 browser-compat: api.DocumentFragment
 ---
+
 {{ APIRef("DOM") }}
 
 The **`DocumentFragment`** interface represents a minimal document object that has no parent.
@@ -24,27 +18,27 @@ It is used as a lightweight version of {{domxref("Document")}} that stores a seg
 - {{ domxref("DocumentFragment.DocumentFragment()", "DocumentFragment()") }}
   - : Creates and returns a new `DocumentFragment` object.
 
-## Properties
+## Instance properties
 
 _This interface has no specific properties, but inherits those of its parent, {{domxref("Node")}}._
 
-- {{ domxref("DocumentFragment.childElementCount") }} {{readonlyInline}}
+- {{ domxref("DocumentFragment.childElementCount") }} {{ReadOnlyInline}}
   - : Returns the amount of child {{domxref("Element","elements")}} the `DocumentFragment` has.
-- {{ domxref("DocumentFragment.children") }} {{readonlyInline}}
+- {{ domxref("DocumentFragment.children") }} {{ReadOnlyInline}}
   - : Returns a live {{domxref("HTMLCollection")}} containing all objects of type {{domxref("Element")}} that are children of the `DocumentFragment` object.
-- {{ domxref("DocumentFragment.firstElementChild") }} {{readonlyInline}}
+- {{ domxref("DocumentFragment.firstElementChild") }} {{ReadOnlyInline}}
   - : Returns the {{domxref("Element")}} that is the first child of the `DocumentFragment` object, or `null` if there is none.
-- {{ domxref("DocumentFragment.lastElementChild") }} {{readonlyInline}}
+- {{ domxref("DocumentFragment.lastElementChild") }} {{ReadOnlyInline}}
   - : Returns the {{domxref("Element")}} that is the last child of the `DocumentFragment` object, or `null` if there is none.
 
-## Methods
+## Instance methods
 
 _This interface inherits the methods of its parent, {{domxref("Node")}}._
 
 - {{DOMxRef("DocumentFragment.append()")}}
-  - : Inserts a set of {{domxref("Node")}} objects or string objects after the last child of the document fragment.
+  - : Inserts a set of {{domxref("Node")}} objects or strings after the last child of the document fragment.
 - {{DOMxRef("DocumentFragment.prepend()")}}
-  - : Inserts a set of {{domxref("Node")}} objects or string objects before the first child of the document fragment.
+  - : Inserts a set of {{domxref("Node")}} objects or strings before the first child of the document fragment.
 - {{domxref("DocumentFragment.querySelector()")}}
   - : Returns the first {{domxref("Element")}} node within the `DocumentFragment`, in document order, that matches the specified selectors.
 - {{domxref("DocumentFragment.querySelectorAll()")}}
@@ -77,13 +71,13 @@ The performance benefit of `DocumentFragment` is often overstated. In fact, in s
 ### JavaScript
 
 ```js
-const ul = document.querySelector('ul');
-const fruits = ['Apple', 'Orange', 'Banana', 'Melon'];
+const ul = document.querySelector("ul");
+const fruits = ["Apple", "Orange", "Banana", "Melon"];
 
 const fragment = new DocumentFragment();
 
 for (const fruit of fruits) {
-  const li = document.createElement('li');
+  const li = document.createElement("li");
   li.textContent = fruit;
   fragment.append(li);
 }

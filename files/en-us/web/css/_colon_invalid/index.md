@@ -1,18 +1,13 @@
 ---
-title: ':invalid'
+title: ":invalid"
 slug: Web/CSS/:invalid
-tags:
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
+page-type: css-pseudo-class
 browser-compat: css.selectors.invalid
 ---
+
 {{CSSRef}}
 
-The **`:invalid`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any {{HTMLElement("form")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}} or other {{HTMLElement("form")}} element whose contents fail to [validate](/en-US/docs/Web/Guide/HTML/Constraint_validation).
+The **`:invalid`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any {{HTMLElement("form")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}} or other {{HTMLElement("form")}} element whose contents fail to [validate](/en-US/docs/Web/HTML/Constraint_validation).
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-invalid.html", "tabbed-shorter")}}
 
@@ -20,8 +15,10 @@ This pseudo-class is useful for highlighting field errors for the user.
 
 ## Syntax
 
-```
-:invalid
+```css
+:invalid {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -34,12 +31,12 @@ This pseudo-class is useful for highlighting field errors for the user.
 <form>
   <div class="field">
     <label for="url_input">Enter a URL:</label>
-    <input type="url" id="url_input">
+    <input type="url" id="url_input" />
   </div>
 
   <div class="field">
     <label for="email_input">Enter an email address:</label>
-    <input type="email" id="email_input" required>
+    <input type="email" id="email_input" required />
   </div>
 </form>
 ```
@@ -90,30 +87,28 @@ input:required:invalid {
 
 ### Showing sections in stages
 
-In this example we use `:invalid` along with `~`, the [general sibling combinator](/en-US/docs/Web/CSS/General_sibling_combinator), to make a form appear in stages, so the form initially shows the first item to complete, and when the user completes each item the form displays the next one. When the whole form is complete the user can submit it.
+In this example we use `:invalid` along with `~`, the [subsequent-sibling combinator](/en-US/docs/Web/CSS/Subsequent-sibling_combinator), to make a form appear in stages, so the form initially shows the first item to complete, and when the user completes each item the form displays the next one. When the whole form is complete the user can submit it.
 
 #### HTML
 
 ```html
 <form>
-
   <fieldset>
-    <label for="form-name">Name</label><br>
-    <input type="text" name="name" id="form-name" required>
+    <label for="form-name">Name</label><br />
+    <input type="text" name="name" id="form-name" required />
   </fieldset>
 
   <fieldset>
-    <label for="form-email">Email Address</label><br>
-    <input type="email" name="email" id="form-email" required>
+    <label for="form-email">Email Address</label><br />
+    <input type="email" name="email" id="form-email" required />
   </fieldset>
 
   <fieldset>
-    <label for="form-message">Message</label><br>
+    <label for="form-message">Message</label><br />
     <textarea name="message" id="form-message" required></textarea>
   </fieldset>
 
   <button type="submit" name="send">Submit</button>
-
 </form>
 ```
 
@@ -121,7 +116,7 @@ In this example we use `:invalid` along with `~`, the [general sibling combinato
 
 ```css
 /* Hide the fieldset after an invalid fieldset */
-fieldset:invalid~fieldset {
+fieldset:invalid ~ fieldset {
   display: none;
 }
 
@@ -131,10 +126,11 @@ form:invalid button {
   pointer-events: none;
 }
 
-input, textarea {
+input,
+textarea {
   box-sizing: border-box;
   width: 100%;
-  font-family:monospace;
+  font-family: monospace;
   padding: 0.25em 0.5em;
 }
 

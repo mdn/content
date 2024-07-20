@@ -2,14 +2,9 @@
 title: CSSStyleDeclaration
 slug: Web/API/CSSStyleDeclaration
 page-type: web-api-interface
-tags:
-  - API
-  - CSSOM
-  - CSSRule
-  - Interface
-  - Reference
 browser-compat: api.CSSStyleDeclaration
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`CSSStyleDeclaration`** interface represents an object that is a CSS declaration block, and exposes style information and various style-related methods and properties.
@@ -36,7 +31,7 @@ A `CSSStyleDeclaration` object can be exposed using three different APIs:
 - {{DOMxRef("CSSStyleDeclaration.named_properties", '<code>CSSStyleDeclaration</code> named properties', "", 1)}}
   - : Dashed and camel-cased attributes for all supported CSS properties.
 
-## Methods
+## Instance methods
 
 - {{DOMxRef("CSSStyleDeclaration.getPropertyPriority()")}}
   - : Returns the optional priority, "important".
@@ -57,7 +52,7 @@ A `CSSStyleDeclaration` object can be exposed using three different APIs:
 const styleObj = document.styleSheets[0].cssRules[0].style;
 console.log(styleObj.cssText);
 
-for (let i = styleObj.length; i--;) {
+for (let i = styleObj.length; i--; ) {
   const nameString = styleObj[i];
   styleObj.removeProperty(nameString);
 }
@@ -72,7 +67,3 @@ console.log(styleObj.cssText);
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [CSS Properties Reference](/en-US/docs/Web/CSS/CSS_Properties_Reference)

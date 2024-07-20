@@ -1,15 +1,12 @@
 ---
-title: ':-moz-handler-crashed'
+title: ":-moz-handler-crashed"
 slug: Web/CSS/:-moz-handler-crashed
-tags:
-  - CSS
-  - CSS:Mozilla Extensions
-  - Non-standard
-  - Pseudo-class
-  - Reference
-  - Selector
+page-type: css-pseudo-class
+status:
+  - non-standard
 ---
-{{ CSSRef }}{{Non-standard_header}}
+
+{{CSSRef}} {{Non-standard_header}}
 
 The **`:-moz-handler-crashed`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that matches elements that can't be displayed because the plugin responsible for drawing them has crashed.
 
@@ -18,7 +15,9 @@ The **`:-moz-handler-crashed`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US
 ## Syntax
 
 ```css
-:-moz-handler-crashed
+:-moz-handler-crashed {
+  /* ... */
+}
 ```
 
 ## Specifications

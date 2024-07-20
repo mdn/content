@@ -1,14 +1,10 @@
 ---
 title: 415 Unsupported Media Type
 slug: Web/HTTP/Status/415
-tags:
-  - Client error
-  - HTTP
-  - HTTP Status Code
-  - Reference
-  - Status code
-spec-urls: https://httpwg.org/specs/rfc7231.html#section-6.5.13
+page-type: http-status-code
+spec-urls: https://httpwg.org/specs/rfc9110.html#status.415
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`415 Unsupported Media Type`** client error response
@@ -21,7 +17,7 @@ inspecting the data directly.
 
 ## Status
 
-```
+```http
 415 Unsupported Media Type
 ```
 

@@ -1,19 +1,13 @@
 ---
-title: SpeechGrammarList.addFromString()
+title: "SpeechGrammarList: addFromString() method"
+short-title: addFromString()
 slug: Web/API/SpeechGrammarList/addFromString
 page-type: web-api-instance-method
-tags:
-  - API
-  - Experimental
-  - Method
-  - Reference
-  - SpeechGrammarList
-  - Web Speech
-  - addFromString
-  - recognition
-  - speech
+status:
+  - experimental
 browser-compat: api.SpeechGrammarList.addFromString
 ---
+
 {{APIRef("Web Speech API")}}{{ SeeCompatTable() }}
 
 The **`addFromString()`** method of the
@@ -23,7 +17,7 @@ the `SpeechGrammarList` as a new {{domxref("SpeechGrammar")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 addFromString(string)
 addFromString(string, weight)
 ```
@@ -46,7 +40,8 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-const grammar = '#JSGF V1.0; grammar colors; public <color> = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;'
+const grammar =
+  "#JSGF V1.0; grammar colors; public <color> = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;";
 const recognition = new SpeechRecognition();
 const speechRecognitionList = new SpeechGrammarList();
 speechRecognitionList.addFromString(grammar, 1);

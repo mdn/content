@@ -1,15 +1,12 @@
 ---
 title: aural
 slug: Web/CSS/@media/aural
-tags:
-  - CSS
-  - Deprecated
-  - Reference
-  - aural
-  - media feature
-  - speech
+page-type: css-media-feature
+status:
+  - deprecated
 spec-urls: https://www.w3.org/TR/CSS22/aural.html
 ---
+
 {{CSSRef}} {{deprecated_header}}
 
 The `aural` [CSS](/en-US/docs/Web/CSS) [media type](/en-US/docs/Web/CSS/@media#media_types) is used for devices that have speech output capabilities.
@@ -30,7 +27,9 @@ The `aural` CSS media type was used to specify a block of CSS that applied only 
 
 ```css
 @media aural {
-  body { voice-family: Paul }
+  body {
+    voice-family: Paul;
+  }
 }
 ```
 
@@ -40,6 +39,6 @@ The `aural` CSS media type was used to specify a block of CSS that applied only 
 
 ## See also
 
-- [Media queries](/en-US/docs/Web/CSS/Media_Queries)
-- [Using media queries](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Media queries](/en-US/docs/Web/CSS/CSS_media_queries)
+- [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - [`@media`](/en-US/docs/Web/CSS/@media)

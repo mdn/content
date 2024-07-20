@@ -1,23 +1,11 @@
 ---
-title: RTCRtpStreamStats.trackId
+title: "RTCRtpStreamStats: trackId property"
+short-title: trackId
 slug: Web/API/RTCRtpStreamStats/trackId
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - RTCRtpStreamStats
-  - RTP
-  - Reference
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - id
-  - rtc
-  - track
-  - trackId
 browser-compat: api.RTCRtpStreamStats.trackId
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCRtpStreamStats")}} dictionary's

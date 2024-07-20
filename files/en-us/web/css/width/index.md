@@ -1,24 +1,20 @@
 ---
 title: width
 slug: Web/CSS/width
-tags:
-  - CSS
-  - CSS Property
-  - Layout
-  - Reference
-  - dimensions
-  - recipe:css-property
-  - size
-  - width
+page-type: css-property
 browser-compat: css.properties.width
 ---
+
 {{CSSRef}}
 
-The **`width`** CSS property sets an element's width. By default, it sets the width of the [content area](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content_area), but if {{cssxref("box-sizing")}} is set to `border-box`, it sets the width of the [border area](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#border_area).
+The **`width`** [CSS](/en-US/docs/Web/CSS) property sets an element's width. By default, it sets the width of the [content area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content_area), but if {{cssxref("box-sizing")}} is set to `border-box`, it sets the width of the [border area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#border_area).
 
 {{EmbedInteractiveExample("pages/css/width.html")}}
 
-The {{cssxref("min-width")}} and {{cssxref("max-width")}} properties override `width`.
+The specified value of `width` applies to the content area so long as its value remains within the values defined by {{cssxref("min-width")}} and {{cssxref("max-width")}}.
+
+- If the value for `width` is less than the value for `min-width`, then `min-width` overrides `width`.
+- If the value for `width` is greater than the value for `max-width`, then `max-width` overrides `width`.
 
 ## Syntax
 
@@ -26,6 +22,8 @@ The {{cssxref("min-width")}} and {{cssxref("max-width")}} properties override `w
 /* <length> values */
 width: 300px;
 width: 25em;
+width: anchor-size(--myAnchor inline, 120%);
+width: minmax(100px, anchor-size(width));
 
 /* <percentage> value */
 width: 75%;
@@ -33,6 +31,7 @@ width: 75%;
 /* Keyword values */
 width: max-content;
 width: min-content;
+width: fit-content;
 width: fit-content(20em);
 width: auto;
 
@@ -47,15 +46,17 @@ width: unset;
 ### Values
 
 - {{cssxref("&lt;length&gt;")}}
-  - : Defines the width as an absolute value.
+  - : Defines the width as a distance value.
 - {{cssxref("&lt;percentage&gt;")}}
-  - : Defines the width as a percentage of the containing block's width.
+  - : Defines the width as a percentage of the [containing block](/en-US/docs/Web/CSS/Containing_block)'s width.
 - `auto`
   - : The browser will calculate and select a width for the specified element.
 - `max-content`
   - : The intrinsic preferred width.
 - `min-content`
   - : The intrinsic minimum width.
+- `fit-content`
+  - : Use the available space, but not more than [max-content](/en-US/docs/Web/CSS/max-content), i.e `min(max-content, max(min-content, stretch))`.
 - `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
   - : Uses the fit-content formula with the available space replaced by the specified argument, i.e. `min(max-content, max(min-content, <length-percentage>))`.
 
@@ -85,7 +86,7 @@ p.goldie {
 ```
 
 ```html
-<p class="goldie">The Mozilla community produces a lot of great software.</p>
+<p class="goldie">The MDN community writes really great documentation.</p>
 ```
 
 {{EmbedLiveSample('Default_width', '500px', '64px')}}
@@ -136,15 +137,12 @@ p.goldie {
 ```css
 p.maxgreen {
   background: lightgreen;
-  width: intrinsic;           /* Safari/WebKit uses a non-standard name */
-  width: -moz-max-content;    /* Firefox/Gecko */
-  width: -webkit-max-content; /* Chrome */
   width: max-content;
 }
 ```
 
 ```html
-<p class="maxgreen">The Mozilla community produces a lot of great software.</p>
+<p class="maxgreen">The MDN community writes really great documentation.</p>
 ```
 
 {{EmbedLiveSample('Example using "max-content"', '500px', '64px')}}
@@ -154,14 +152,12 @@ p.maxgreen {
 ```css
 p.minblue {
   background: lightblue;
-  width: -moz-min-content;    /* Firefox */
-  width: -webkit-min-content; /* Chrome */
   width: min-content;
 }
 ```
 
 ```html
-<p class="minblue">The Mozilla community produces a lot of great software.</p>
+<p class="minblue">The MDN community writes really great documentation.</p>
 ```
 
 {{EmbedLiveSample('Example using "min-content"', '500px', '155px')}}
@@ -176,8 +172,9 @@ p.minblue {
 
 ## See also
 
-- [The box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [The box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - {{cssxref("height")}}
 - {{cssxref("box-sizing")}}
 - {{cssxref("min-width")}}, {{cssxref("max-width")}}
 - The mapped logical properties: {{cssxref("block-size")}}, {{cssxref("inline-size")}}
+- {{cssxref("anchor-size()")}}

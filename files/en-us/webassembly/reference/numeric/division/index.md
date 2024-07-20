@@ -1,16 +1,12 @@
 ---
 title: Division
 slug: WebAssembly/Reference/Numeric/Division
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
-  - Arithmetic
+page-type: webassembly-instruction
 ---
+
 {{WebAssemblySidebar}}
 
-The **`div`** instructions, short for *division*, are used for dividing one number by another, similar to the **`/`** operator in other languages.
+The **`div`** instructions, short for _division_, are used for dividing one number by another, similar to the **`/`** operator in other languages.
 
 {{EmbedInteractiveExample("pages/wat/div.html", "tabbed-taller")}}
 

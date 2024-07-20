@@ -1,17 +1,13 @@
 ---
 title: resolution
 slug: Web/CSS/@media/resolution
-tags:
-  - '@media'
-  - CSS
-  - Media Queries
-  - Reference
-  - media feature
+page-type: css-media-feature
 browser-compat: css.at-rules.media.resolution
 ---
+
 {{CSSRef}}
 
-The **`resolution`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) can be used to test the pixel density of the output device.
+The **`resolution`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to test the pixel density of the output device.
 
 ## Syntax
 
@@ -28,22 +24,28 @@ The `resolution` feature is specified as a {{cssxref("&lt;resolution&gt;")}} val
 ### CSS
 
 ```css
-/* Exact resolution */
+/* Exact resolution with unit `dpi` */
 @media (resolution: 150dpi) {
   p {
     color: red;
   }
 }
 
-/* Minimum resolution */
-@media (min-resolution: 72dpi) {
+/* Minimum resolution synonym units: `dppx` and `x` */
+@media (min-resolution: 2dppx) {
   p {
     text-decoration: underline;
   }
 }
 
-/* Maximum resolution */
-@media (max-resolution: 300dpi) {
+@media (min-resolution: 2x) {
+  p {
+    text-decoration: underline;
+  }
+}
+
+/* Maximum resolution with unit `dpcm` */
+@media (max-resolution: 2dpcm) {
   p {
     background: yellow;
   }

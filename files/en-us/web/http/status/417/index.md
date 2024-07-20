@@ -1,14 +1,10 @@
 ---
 title: 417 Expectation Failed
 slug: Web/HTTP/Status/417
-tags:
-  - Client error
-  - HTTP
-  - HTTP Status Code
-  - Reference
-  - Status code
-spec-urls: https://httpwg.org/specs/rfc7231.html#section-6.5.14
+page-type: http-status-code
+spec-urls: https://httpwg.org/specs/rfc9110.html#status.417
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`417 Expectation Failed`** client error response
@@ -19,7 +15,7 @@ See the {{HTTPHeader("Expect")}} header for more details.
 
 ## Status
 
-```
+```http
 417 Expectation Failed
 ```
 

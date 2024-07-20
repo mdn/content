@@ -1,15 +1,11 @@
 ---
-title: WebGL2RenderingContext.fenceSync()
+title: "WebGL2RenderingContext: fenceSync() method"
+short-title: fenceSync()
 slug: Web/API/WebGL2RenderingContext/fenceSync
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.fenceSync
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.fenceSync()`** method of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) creates a new
@@ -17,7 +13,7 @@ The **`WebGL2RenderingContext.fenceSync()`** method of the [WebGL 2 API](/en-US/
 
 ## Syntax
 
-```js
+```js-nolint
 fenceSync(condition, flags)
 ```
 

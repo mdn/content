@@ -1,16 +1,11 @@
 ---
-title: Window.getComputedStyle()
+title: "Window: getComputedStyle() method"
+short-title: getComputedStyle()
 slug: Web/API/Window/getComputedStyle
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM View
-  - Method
-  - Reference
-  - Window
-  - getComputedStyle
 browser-compat: api.Window.getComputedStyle
 ---
+
 {{APIRef("CSSOM")}}
 
 The
@@ -23,7 +18,7 @@ indexing with CSS property names.
 
 ## Syntax
 
-```js
+```js-nolint
 getComputedStyle(element)
 getComputedStyle(element, pseudoElt)
 ```
@@ -41,7 +36,7 @@ getComputedStyle(element, pseudoElt)
 A _live_ {{DOMxRef("CSSStyleDeclaration")}}
 object, which updates automatically when the element's styles are changed.
 
-### Throws
+### Exceptions
 
 - {{JSxRef("TypeError")}}
 
@@ -51,8 +46,8 @@ object, which updates automatically when the element's styles are changed.
 
     > **Note:** Valid pseudo-element selector refers to syntactic
     > validity, e.g. `::unsupported` is considered valid, even though the
-    > pseudo-element itself is not supported.  Additionally, the latest W3 standard [explicitly supports](https://www.w3.org/TR/cssom-1/#dom-window-getcomputedstyle) only `::before` and `::after`, while the CSS
-    > WG draft [does not > restrict this value](https://drafts.csswg.org/cssom/#dom-window-getcomputedstyle).  Browser compatibility may vary.
+    > pseudo-element itself is not supported. Additionally, the latest W3 standard [explicitly supports](https://www.w3.org/TR/cssom-1/#dom-window-getcomputedstyle) only `::before` and `::after`, while the CSS
+    > WG draft [does not restrict this value](https://drafts.csswg.org/cssom/#dom-window-getcomputedstyle). Browser compatibility may vary.
 
 ## Examples
 
@@ -83,10 +78,13 @@ p {
 ### JavaScript
 
 ```js
-const para = document.querySelector('p');
+const para = document.querySelector("p");
 const compStyles = window.getComputedStyle(para);
-para.textContent = `My computed font-size is ${compStyles.getPropertyValue('font-size')},\n` +
-  `and my computed line-height is ${compStyles.getPropertyValue('line-height')}.`;
+para.textContent =
+  `My computed font-size is ${compStyles.getPropertyValue("font-size")},\n` +
+  `and my computed line-height is ${compStyles.getPropertyValue(
+    "line-height",
+  )}.`;
 ```
 
 ### Result
@@ -127,33 +125,32 @@ Java.
 ```html
 <style>
   h3::after {
-    content: ' rocks!';
+    content: " rocks!";
   }
 </style>
 
 <h3>Generated content</h3>
 
 <script>
-  const h3 = document.querySelector('h3');
-  const result = getComputedStyle(h3, ':after').content;
+  const h3 = document.querySelector("h3");
+  const result = getComputedStyle(h3, ":after").content;
 
-  console.log('the generated content is: ', result); // returns ' rocks!'
+  console.log("the generated content is: ", result); // returns ' rocks!'
 </script>
 ```
 
 ## Notes
 
 - The returned {{DOMxRef("CSSStyleDeclaration")}} object contains active values for
-  CSS property **_longhand_** names. For example,
-  `border-bottom-width` instead of the `border-width` and
-  `border` [shorthand property names](/en-US/docs/Web/CSS/Shorthand_properties). It is safest to query values with only longhand names like
-  `font-size`. Shorthand names like `font` will not work with most
-  browsers.
+  CSS property **_longhand_** names as well as shorthand names. For example, the returned object contains entries for
+  {{cssxref("border-bottom-width")}} in addition to the {{cssxref("border-width")}} and
+  {{cssxref("border")}} [shorthand property names](/en-US/docs/Web/CSS/Shorthand_properties). You can query values with longhand names like
+  {{cssxref("font-size")}} as well as shorthand names like {{cssxref("font")}}.
 - CSS property values may be accessed using the
-  `getPropertyValue(propName)` API or by indexing directly into the object
-  such as `obj['z-index']` or `obj.zIndex`.
-- The values returned by `getComputedStyle` are {{CSSxRef("resolved_value",
-    "resolved values", "", 1)}}. These are usually the same as CSS 2.1's
+  {{DOMxRef("CSSStyleDeclaration.getPropertyValue", "getPropertyValue(propName)")}} method or by indexing directly into the object
+  using array or [dot notation](/en-US/docs/Learn/JavaScript/Objects/Basics#dot_notation) such as `obj['z-index']` or `obj.zIndex`.
+- The values returned by `getComputedStyle` are {{CSSxRef("resolved_value", "resolved values", "", 1)}}.
+  These are usually the same as CSS 2.1's
   {{CSSxRef("computed_value","computed values", "", 1)}}, but for some older properties
   like `width`, `height`, or `padding`, they are
   instead the same as {{CSSxRef("used_value","used values", "", 1)}}. Originally, CSS
@@ -167,8 +164,8 @@ Java.
   _used values_.
 - Returned values are sometimes deliberately inaccurate. To avoid the "CSS History
   Leak" security issue, browsers may lie about the computed styles for a visited link,
-  returning values as if the user never visited the linked URL. See [Plugging the CSS History Leak](https://blog.mozilla.org/security/2010/03/31/plugging-the-css-history-leak/) and [Privacy-related changes coming to CSS :visited](https://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/) for examples of how this is implemented.
-- During [CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions),
+  returning values as if the user never visited the linked URL. See [Plugging the CSS history leak](https://blog.mozilla.org/security/2010/03/31/plugging-the-css-history-leak/) and [Privacy-related changes coming to CSS `:visited`](https://hacks.mozilla.org/2010/03/privacy-related-changes-coming-to-css-vistited/) for examples of how this is implemented.
+- During [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions),
   `getComputedStyle` returns the original property value in Firefox, but the
   final property value in WebKit.
 - In Firefox, properties with the value `auto` return the used value, not
@@ -187,5 +184,6 @@ Java.
 
 ## See also
 
-- {{DOMxRef("window.getDefaultComputedStyle")}}
+- {{DOMxRef("window.getDefaultComputedStyle()")}}
+- {{DOMxRef("CSSStyleDeclaration.getPropertyValue", "getPropertyValue()")}}
 - {{CSSxRef("resolved_value", "Resolved Value")}}

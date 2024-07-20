@@ -1,17 +1,9 @@
 ---
 title: UserScripts.UserScriptOptions
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts/UserScriptOptions
-tags:
-  - Add-ons
-  - Extensions
-  - Firefox
-  - Guide
-  - Intermediate
-  - NeedsExample
-  - UserScriptOptions
-  - WebExtensions
-  - userScripts
+page-type: webextension-api-type
 ---
+
 {{AddonSidebar}}
 
 The UserScriptOptions object represents the content scripts to register. It has similar syntax to the contentScript options supported by browser.contentScripts.register. The differences are:

@@ -1,15 +1,11 @@
 ---
-title: HTMLTextAreaElement.labels
+title: "HTMLTextAreaElement: labels property"
+short-title: labels
 slug: Web/API/HTMLTextAreaElement/labels
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLTextAreaElement
-  - Property
-  - Reference
 browser-compat: api.HTMLTextAreaElement.labels
 ---
+
 {{APIRef("DOM")}}
 
 The **`HTMLTextAreaElement.labels`** read-only property returns
@@ -27,7 +23,7 @@ with the `<textArea>` element.
 
 ```html
 <label id="label1" for="test">Label 1</label>
-<textArea id="test">Some text</textArea>
+<textarea id="test">Some text</textarea>
 <label id="label2" for="test">Label 2</label>
 ```
 

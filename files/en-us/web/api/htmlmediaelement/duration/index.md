@@ -1,19 +1,11 @@
 ---
-title: HTMLMediaElement.duration
+title: "HTMLMediaElement: duration property"
+short-title: duration
 slug: Web/API/HTMLMediaElement/duration
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Property
-  - Read-only
-  - Time
-  - Web
-  - duration
-  - seconds
 browser-compat: api.HTMLMediaElement.duration
 ---
+
 {{APIRef("HTML DOM")}}
 
 The _read-only_ {{domxref("HTMLMediaElement")}}
@@ -30,7 +22,7 @@ of `duration` is `+Infinity`.
 ## Examples
 
 ```js
-const obj = document.createElement('video');
+const obj = document.createElement("video");
 console.log(obj.duration); // NaN
 ```
 

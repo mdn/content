@@ -1,14 +1,9 @@
 ---
 title: Desktop mouse and keyboard controls
 slug: Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard
-tags:
-  - Controls
-  - Desktop
-  - Games
-  - JavaScript
-  - keyboard
-  - mouse
+page-type: guide
 ---
+
 {{GamesSidebar}}
 
 {{PreviousMenuNext("Games/Techniques/Control_mechanisms/Mobile_touch", "Games/Techniques/Control_mechanisms/Desktop_with_gamepad", "Games/Techniques/Control_mechanisms")}}
@@ -24,8 +19,8 @@ It's also easier to test control-independent features like gameplay on desktop i
 Let's think about implementing pure JavaScript keyboard/mouse controls in the game first, to see how it would work. First, we'd need an event listener to listen for the pressed keys:
 
 ```js
-document.addEventListener('keydown', keyDownHandler, false);
-document.addEventListener('keyup', keyUpHandler, false);
+document.addEventListener("keydown", keyDownHandler, false);
+document.addEventListener("keyup", keyUpHandler, false);
 ```
 
 Whenever any key is pressed down, we're executing the `keyDownHandler` function, and when press finishes we're executing the `keyUpHandler` function, so we know when it's no longer pressed. To do that, we'll hold the information on whether the keys we are interested in are pressed or not:
@@ -37,24 +32,24 @@ let upPressed = false;
 let downPressed = false;
 ```
 
-Then we will listen for the `keydown` and `keyup` events and act accordingly in both handler functions. Inside them we can get the code of the key that was pressed from the [keyCode](/en-US/docs/Web/API/KeyboardEvent/keyCode) property of the event object, see which key it is, and then set the proper variable. There are no helpers so you have to remember what the given codes are (or [look them up](/en-US/docs/Web/API/KeyboardEvent/keyCode#value_of_keycode)); `37` is the left arrow:
+Then we will listen for the `keydown` and `keyup` events and act accordingly in both handler functions. Inside them we can get the code of the key that was pressed from the [`code`](/en-US/docs/Web/API/KeyboardEvent/code) property of the event object, see which key it is, and then set the proper variable. The codes are all readable string names, but you can [look them up](/en-US/docs/Web/API/UI_Events/Keyboard_event_code_values) to be sure; `"ArrowLeft"` is the left arrow:
 
 ```js
 function keyDownHandler(event) {
-  if (event.keyCode === 39) {
+  if (event.code === "ArrowRight") {
     rightPressed = true;
-  } else if (event.keyCode === 37) {
+  } else if (event.code === "ArrowLeft") {
     leftPressed = true;
   }
-  if (event.keyCode === 40) {
+  if (event.code === "ArrowDown") {
     downPressed = true;
-  } else if (event.keyCode === 38) {
+  } else if (event.code === "ArrowUp") {
     upPressed = true;
   }
 }
 ```
 
-The `keyUpHandler` looks almost exactly the same as the `keyDownHandler` above, but instead of setting the pressed variables to `true`, we would set them to `false`. If the left arrow is pressed (<kbd>⬅︎</kbd>; key code 37), we can set the `leftPressed` variable to `true` and in the `draw` function perform the action assigned to it — move the ship left:
+The `keyUpHandler` looks almost exactly the same as the `keyDownHandler` above, but instead of setting the pressed variables to `true`, we would set them to `false`. If the left arrow is pressed (<kbd>⬅︎</kbd>; `"ArrowLeft"`), we can set the `leftPressed` variable to `true` and in the `draw` function perform the action assigned to it — move the ship left:
 
 ```js
 function draw() {
@@ -64,33 +59,19 @@ function draw() {
   } else if (leftPressed) {
     playerX -= 5;
   }
-  
+
   if (downPressed) {
     playerY += 5;
   } else if (upPressed) {
     playerY -= 5;
   }
-  
+
   ctx.drawImage(img, playerX, playerY);
   requestAnimationFrame(draw);
 }
 ```
 
-The `draw` function first clears the whole Canvas — we draw everything from scratch on every single frame. Then the pressed key variables are checked and the `playerX` and `playerY` variables (that we define earlier just after `leftPressed` and the others) holding the position of the ship are adjusted by a given amount, let's say 5 pixels. Then the player's ship is drawn on the screen and the next draw is called from within the [requestAnimationFrame](/en-US/docs/Web/API/window/requestAnimationFrame).
-
-We could write our own `KeyCode` object containing the key codes. For example:
-
-```js
-const KeyboardHelper = { left: 37, up: 38, right: 39, down: 40 };
-```
-
-That way instead of using the codes to compare the input in the handler functions, we could do something like this, which is arguably easier to remember:
-
-```js
-leftPressed = event.keyCode === KeyboardHelper.left;
-```
-
-> **Note:** You can also find a list of the different keycodes and what keys they relate to in the [keyCode](/en-US/docs/Web/API/KeyboardEvent/keyCode) reference page.
+The `draw` function first clears the whole Canvas — we draw everything from scratch on every single frame. Then the pressed key variables are checked and the `playerX` and `playerY` variables (that we define earlier just after `leftPressed` and the others) holding the position of the ship are adjusted by a given amount, let's say 5 pixels. Then the player's ship is drawn on the screen and the next draw is called from within the [requestAnimationFrame](/en-US/docs/Web/API/Window/requestAnimationFrame).
 
 ![Pure JavaScript demo containing player's ship (with stars in the background) that can be controlled with keyboard and mouse.](controls-purejsgame.png)
 
@@ -105,13 +86,25 @@ As I mentioned before, you can write everything on your own, but you can also ta
 The mouse interactions in the game are focused on clicking the buttons. In Phaser, the buttons you create will take any type of input, whether it's a touch on mobile or a click on desktop. That way, if you already implemented the buttons as shown in the [Mobile touch controls](/en-US/docs/Games/Techniques/Control_mechanisms/Mobile_touch) article, it will work out of the box on the desktop too:
 
 ```js
-const buttonEnclave = this.add.button(10, 10, 'logo-enclave', this.clickEnclave, this);
+const buttonEnclave = this.add.button(
+  10,
+  10,
+  "logo-enclave",
+  this.clickEnclave,
+  this,
+);
 ```
 
 The button will be placed ten pixels from the top left corner of the screen, use the `logo-enclave` image, and will execute the `clickEnclave()` function when clicked. We can assign actions directly to the buttons:
 
 ```js
-this.buttonShoot = this.add.button(this.world.width * 0.5, 0, 'button-alpha', null, this);
+this.buttonShoot = this.add.button(
+  this.world.width * 0.5,
+  0,
+  "button-alpha",
+  null,
+  this,
+);
 this.buttonShoot.onInputDown.add(this.shootingPressed, this);
 this.buttonShoot.onInputUp.add(this.shootingReleased, this);
 ```
@@ -238,11 +231,11 @@ We've implemented the controls, and now we should inform the player about their 
 
 ```js
 if (this.game.device.desktop) {
-  moveText = 'Arrow keys or WASD to move';
-  shootText = 'X or Space to shoot';
+  moveText = "Arrow keys or WASD to move";
+  shootText = "X or Space to shoot";
 } else {
-  moveText = 'Tap and hold to move';
-  shootText = 'Tap to shoot';
+  moveText = "Tap and hold to move";
+  shootText = "Tap to shoot";
 }
 ```
 
@@ -253,8 +246,8 @@ If the game is running on desktop, the cursor and <kbd>W</kbd> <kbd>A</kbd> <kbd
 To skip the how to play screen, we can listen for any key being pressed and move on:
 
 ```js
-this.input.keyboard.onDownCallback = function() {
-  if (this.stateStatus === 'intro') {
+this.input.keyboard.onDownCallback = function () {
+  if (this.stateStatus === "intro") {
     this.hideIntro();
   }
 };

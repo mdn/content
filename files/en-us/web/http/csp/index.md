@@ -1,15 +1,10 @@
 ---
 title: Content Security Policy (CSP)
 slug: Web/HTTP/CSP
-tags:
-  - CSP
-  - Content Security Policy
-  - Example
-  - Guide
-  - Security
-  - access
+page-type: guide
 browser-compat: http.headers.Content-Security-Policy
 ---
+
 {{HTTPSidebar}}
 
 **Content Security Policy** ({{Glossary("CSP")}}) is an added layer of security that helps to detect and mitigate certain types of attacks,
@@ -17,7 +12,7 @@ including Cross-Site Scripting ({{Glossary("Cross-site_scripting", "XSS")}}) and
 These attacks are used for everything from data theft, to site defacement, to malware distribution.
 
 CSP is designed to be fully backward compatible (except CSP version 2 where there are some explicitly-mentioned inconsistencies in backward compatibility; more details [here](https://www.w3.org/TR/CSP2/) section 1.1).
-Browsers that don't support it still work with servers that implement it, and vice-versa: browsers that don't support CSP ignore it, functioning as usual, defaulting to the standard same-origin policy for web content.
+Browsers that don't support it still work with servers that implement it, and vice versa: browsers that don't support CSP ignore it, functioning as usual, defaulting to the standard same-origin policy for web content.
 If the site doesn't offer the CSP header, browsers likewise use the standard [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy).
 
 To enable CSP, you need to configure your web server to return the {{HTTPHeader("Content-Security-Policy")}} HTTP header.
@@ -26,9 +21,12 @@ To enable CSP, you need to configure your web server to return the {{HTTPHeader(
 Alternatively, the {{HTMLElement("meta")}} element can be used to configure a policy, for example:
 
 ```html
-<meta http-equiv="Content-Security-Policy"
-      content="default-src 'self'; img-src https://*; child-src 'none';">
+<meta
+  http-equiv="Content-Security-Policy"
+  content="default-src 'self'; img-src https://*; child-src 'none';" />
 ```
+
+> **Note:** Some features, such as sending CSP violation reports, are only available when using the HTTP headers.
 
 ## Threats
 
@@ -83,7 +81,7 @@ This section provides examples of some common security policy scenarios.
 
 ### Example 1
 
-A web site administrator wants all content to come from the site's own origin (this excludes subdomains.)
+A website administrator wants all content to come from the site's own origin (this excludes subdomains.)
 
 ```http
 Content-Security-Policy: default-src 'self'
@@ -91,7 +89,7 @@ Content-Security-Policy: default-src 'self'
 
 ### Example 2
 
-A web site administrator wants to allow content from a trusted domain and all its subdomains (it doesn't have to be the same domain that the CSP is set on.)
+A website administrator wants to allow content from a trusted domain and all its subdomains (it doesn't have to be the same domain that the CSP is set on.)
 
 ```http
 Content-Security-Policy: default-src 'self' example.com *.example.com
@@ -99,7 +97,7 @@ Content-Security-Policy: default-src 'self' example.com *.example.com
 
 ### Example 3
 
-A web site administrator wants to allow users of a web application to include images from any origin in their own content,
+A website administrator wants to allow users of a web application to include images from any origin in their own content,
 but to restrict audio or video media to trusted providers, and all scripts only to a specific server that hosts trusted code.
 
 ```http
@@ -114,7 +112,7 @@ Here, by default, content is only permitted from the document's origin, with the
 
 ### Example 4
 
-A web site administrator for an online banking site wants to ensure that all its content is loaded using TLS, in order to prevent attackers from eavesdropping on requests.
+A website administrator for an online banking site wants to ensure that all its content is loaded using TLS, in order to prevent attackers from eavesdropping on requests.
 
 ```http
 Content-Security-Policy: default-src https://onlinebanking.example.com
@@ -124,14 +122,13 @@ The server permits access only to documents being loaded specifically over HTTPS
 
 ### Example 5
 
-A web site administrator of a web mail site wants to allow HTML in email, as well as images loaded from anywhere, but not JavaScript or other potentially dangerous content.
+A website administrator of a web mail site wants to allow HTML in email, as well as images loaded from anywhere, but JavaScript or other potentially dangerous content can only come from the same origin as the mail server.
 
 ```http
 Content-Security-Policy: default-src 'self' *.example.com; img-src *
 ```
 
-Note that this example doesn't specify a {{CSP("script-src")}}; with the example CSP,
-this site uses the setting specified by the {{CSP("default-src")}} directive, which means that scripts can be loaded only from the originating server.
+Note that this example doesn't specify a {{CSP("script-src")}}, so the {{CSP("default-src")}} directive will be used for JavaScript sources as a fallback.
 
 ## Testing your policy
 
@@ -150,17 +147,39 @@ The policy specified in `Content-Security-Policy` headers is enforced while the 
 
 ## Enabling reporting
 
-By default, violation reports aren't sent. To enable violation reporting, you need to specify the {{CSP("report-uri")}} policy directive, providing at least one URI to which to deliver the reports:
+A server can inform clients where to send reports using the {{HTTPHeader("Reporting-Endpoints")}} HTTP response header.
+This header defines one or more endpoint URLs as a comma-separated list.
+If you want to define an endpoint named `csp-endpoint` which accepts reports at `https://example.com/csp-reports`, the server's response header would look like this:
 
 ```http
-Content-Security-Policy: default-src 'self'; report-uri http://reportcollector.example.com/collector.cgi
+Reporting-Endpoints: csp-endpoint="https://example.com/csp-reports"
 ```
 
-Then you need to set up your server to receive the reports; it can store or process them in whatever manner you determine is appropriate.
+You must then use the `Content-Security-Policy` header's {{CSP("report-to")}} directive to refer to an endpoint where reports of that policy should be sent.
+For example, to send violation reports to `https://example.com/csp-reports` you can send response headers that look like the following:
+
+```http
+Reporting-Endpoints: csp-endpoint="https://example.com/csp-reports"
+Content-Security-Policy: default-src 'self'; report-to csp-endpoint
+```
+
+You need to set up a server to receive reports at the given URL (`https://example.com/csp-reports` in this case) that accepts a JSON object sent with an `application/csp-report` {{HTTPHeader("Content-Type")}}.
+The server handling these requests can then store or process the incoming reports in a way that best suits your needs.
+
+If you want to have multiple endpoints that handle different types of reports, the `Reporting-Endpoints` header can contain a comma-separated list of endpoints:
+
+```http
+Reporting-Endpoints: csp-endpoint="https://example.com/csp-reports",
+                     hpkp-endpoint="https://example.com/hpkp-reports"
+```
+
+> **Warning:**
+> The `report-uri` directive is deprecated and it's recommended to send CSP reports using {{CSP("report-to")}} instead.
+> See the {{CSP("report-uri")}} documentation for details on how to specify both directives for backwards compatibility.
 
 ## Violation report syntax
 
-The report JSON object contains the following data:
+The report JSON object is sent with an `application/csp-report` {{HTTPHeader("Content-Type")}} and contains the following data:
 
 - `blocked-uri`
   - : The URI of the resource that was blocked from loading by the Content Security Policy.
@@ -174,15 +193,15 @@ The report JSON object contains the following data:
     Some browsers may provide different values, such as Chrome providing `style-src-elem`/`style-src-attr`, even when the actually enforced directive was `style-src`.
 - `original-policy`
   - : The original policy as specified by the `Content-Security-Policy` HTTP header.
-- `referrer`
+- `referrer` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : The referrer of the document in which the violation occurred.
 - `script-sample`
   - : The first 40 characters of the inline script, event handler, or style that caused the violation.
     Only applicable to `script-src*` and `style-src*` violations, when they contain the `'report-sample'`
 - `status-code`
   - : The HTTP status code of the resource on which the global object was instantiated.
-- `violated-directive`
-  - : The name of the policy section that was violated.
+- `violated-directive` {{deprecated_inline}}
+  - : The directive whose enforcement caused the violation. The `violated-directive` is a historic name for the `effective-directive` field and contains the same value.
 
 ## Sample violation report
 
@@ -190,18 +209,18 @@ Let's consider a page located at `http://example.com/signup.html`.
 It uses the following policy, disallowing everything but stylesheets from `cdn.example.com`.
 
 ```http
-Content-Security-Policy: default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports
+Content-Security-Policy: default-src 'none'; style-src cdn.example.com; report-to /_/csp-reports
 ```
 
 The HTML of `signup.html` looks like this:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Sign Up</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     Here be content.
@@ -215,11 +234,14 @@ A browser capable of enforcing CSP would send the following violation report as 
 ```json
 {
   "csp-report": {
-    "document-uri": "http://example.com/signup.html",
-    "referrer": "",
     "blocked-uri": "http://example.com/css/style.css",
-    "violated-directive": "style-src cdn.example.com",
-    "original-policy": "default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports"
+    "disposition": "report",
+    "document-uri": "http://example.com/signup.html",
+    "effective-directive": "style-src-elem",
+    "original-policy": "default-src 'none'; style-src cdn.example.com; report-to /_/csp-reports",
+    "referrer": "",
+    "status-code": 200,
+    "violated-directive": "style-src-elem"
   }
 }
 ```
@@ -248,4 +270,3 @@ the browser will block self-hosted content and off-site content, and incorrectly
 - [CSP in Web Workers](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#csp_in_workers)
 - [Privacy, permissions, and information security](/en-US/docs/Web/Privacy)
 - [CSP Evaluator](https://github.com/google/csp-evaluator) - Evaluate your Content Security Policy
-- [CSP Scanner](https://cspscanner.com/) - Improve your Content Security Policy

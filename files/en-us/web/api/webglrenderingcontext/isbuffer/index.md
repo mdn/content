@@ -1,15 +1,11 @@
 ---
-title: WebGLRenderingContext.isBuffer()
+title: "WebGLRenderingContext: isBuffer() method"
+short-title: isBuffer()
 slug: Web/API/WebGLRenderingContext/isBuffer
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.isBuffer
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.isBuffer()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) returns `true` if the
@@ -17,7 +13,7 @@ passed {{domxref("WebGLBuffer")}} is valid and `false` otherwise.
 
 ## Syntax
 
-```js
+```js-nolint
 isBuffer(buffer)
 ```
 
@@ -35,8 +31,8 @@ A {{domxref("WebGL_API/Types", "GLboolean")}} indicating whether or not the buff
 ### Creating a buffer
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 const buffer = gl.createBuffer();
 
 gl.isBuffer(buffer);

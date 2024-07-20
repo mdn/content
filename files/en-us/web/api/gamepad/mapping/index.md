@@ -1,18 +1,12 @@
 ---
-title: Gamepad.mapping
+title: "Gamepad: mapping property"
+short-title: mapping
 slug: Web/API/Gamepad/mapping
 page-type: web-api-instance-property
-tags:
-  - API
-  - Gamepad API
-  - Games
-  - NeedsBetterSpecLink
-  - NeedsMarkupWork
-  - Property
-  - Reference
 browser-compat: api.Gamepad.mapping
 ---
-{{APIRef("Gamepad API")}}
+
+{{APIRef("Gamepad API")}}{{SecureContext_Header}}
 
 The **`Gamepad.mapping`** property of the
 {{domxref("Gamepad")}} interface returns a string indicating whether the browser has

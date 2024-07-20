@@ -1,15 +1,11 @@
 ---
-title: TextTrack.kind
+title: "TextTrack: kind property"
+short-title: kind
 slug: Web/API/TextTrack/kind
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - kind
-  - TextTrack
 browser-compat: api.TextTrack.kind
 ---
+
 {{APIRef("WebVTT")}}
 
 The **`kind`** read-only property of the {{domxref("TextTrack")}} interface returns the kind of text track this object represents. This decides how the track will be handled by a user agent.
@@ -34,7 +30,7 @@ A string. One of:
 In the following example the value of `kind` is printed to the console.
 
 ```js
-let video = document.querySelector('video');
+let video = document.querySelector("video");
 let track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
 console.log(track.kind);

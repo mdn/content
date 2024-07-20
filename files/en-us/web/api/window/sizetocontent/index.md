@@ -1,16 +1,14 @@
 ---
-title: Window.sizeToContent()
+title: "Window: sizeToContent() method"
+short-title: sizeToContent()
 slug: Web/API/Window/sizeToContent
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Reference
-  - Window
+status:
+  - non-standard
 browser-compat: api.Window.sizeToContent
 ---
-{{APIRef}}{{Non-standard_header}}
+
+{{APIRef}}{{Non-standard_Header}}
 
 The **`Window.sizeToContent()`** method sizes the window
 according to its content. In order for it to work, the DOM content should be loaded when
@@ -22,7 +20,7 @@ being too small for the user to interact with.
 
 ## Syntax
 
-```js
+```js-nolint
 sizeToContent()
 ```
 

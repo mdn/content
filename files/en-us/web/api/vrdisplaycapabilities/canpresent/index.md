@@ -1,20 +1,15 @@
 ---
-title: VRDisplayCapabilities.canPresent
+title: "VRDisplayCapabilities: canPresent property"
+short-title: canPresent
 slug: Web/API/VRDisplayCapabilities/canPresent
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRDisplayCapabilities
-  - Virtual Reality
-  - WebVR
-  - canPresent
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRDisplayCapabilities.canPresent
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`canPresent`** read-only property of the {{domxref("VRDisplayCapabilities")}} interface returns a boolean value stating whether the VR display is capable of presenting content (e.g. through an HMD).
 
@@ -42,5 +37,4 @@ Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/Web
 
 ## See also
 
-- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.
+- [WebVR API](/en-US/docs/Web/API/WebVR_API)

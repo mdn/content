@@ -1,16 +1,12 @@
 ---
-title: FileSystemDirectoryHandle.resolve()
+title: "FileSystemDirectoryHandle: resolve() method"
+short-title: resolve()
 slug: Web/API/FileSystemDirectoryHandle/resolve
 page-type: web-api-instance-method
-tags:
-  - Directory
-  - File
-  - File System Access API
-  - FileSystemDirectoryHandle
-  - Method
 browser-compat: api.FileSystemDirectoryHandle.resolve
 ---
-{{securecontext_header}}{{DefaultAPISidebar("File System Access API")}}
+
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}
 
 The **`resolve()`** method of the
 {{domxref("FileSystemDirectoryHandle")}} interface returns an {{jsxref('Array')}} of
@@ -19,15 +15,14 @@ the child entry as the last array item.
 
 ## Syntax
 
-```js
-const pathArr = FileSystemDirectoryHandle.resolve(possibleDescendant);
+```js-nolint
+resolve(possibleDescendant)
 ```
 
 ### Parameters
 
-- possibleDescendant
-  - : The {{domxref('FileSystemHandle.name')}} of the {{domxref('FileSystemHandle')}} from
-    which to return the relative path.
+- `possibleDescendant`
+  - : The {{domxref('FileSystemHandle')}} from which to return the relative path.
 
 ### Return value
 
@@ -45,22 +40,20 @@ chosen file, relative to a specified directory handle.
 
 ```js
 async function returnPathDirectories(directoryHandle) {
-
   // Get a file handle by showing a file picker:
-  const handle = await self.showOpenFilePicker();
+  const [handle] = await self.showOpenFilePicker();
   if (!handle) {
     // User cancelled, or otherwise failed to open a file.
     return;
   }
 
   // Check if handle exists inside our directory handle
-  const relativePaths = await directoryHandle.resolve(handle[0]);
+  const relativePaths = await directoryHandle.resolve(handle);
 
   if (relativePaths === null) {
     // Not inside directory handle
   } else {
     // relativePath is an array of names, giving the relative path
-
     for (const name of relativePaths) {
       // log each entry
       console.log(name);
@@ -79,5 +72,5 @@ async function returnPathDirectories(directoryHandle) {
 
 ## See also
 
-- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [File System API](/en-US/docs/Web/API/File_System_API)
+- [The File System Access API: simplifying access to local files](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)

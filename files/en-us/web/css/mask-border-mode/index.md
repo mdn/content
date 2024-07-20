@@ -1,16 +1,10 @@
 ---
 title: mask-border-mode
 slug: Web/CSS/mask-border-mode
-tags:
-  - CSS
-  - CSS Masking
-  - CSS Property
-  - NeedsContent
-  - NeedsExample
-  - Reference
-  - recipe:css-property
-browser-compat: css.properties.mask-border-mode
+page-type: css-property
+spec-urls: https://drafts.fxtf.org/css-masking-1/#the-mask-border-mode
 ---
+
 {{CSSRef}}
 
 The **`mask-border-mode`** [CSS](/en-US/docs/Web/CSS) property specifies the blending mode used in a [mask border](/en-US/docs/Web/CSS/mask-border).
@@ -45,24 +39,13 @@ mask-border-mode: unset;
 
 {{csssyntax}}
 
-## Examples
-
-### Basic usage
-
-This property doesn't yet seem to have support anywhere. When browsers support it, it will specify the type of blending mode used for the mask border — luminance or alpha:
-
-```css
-mask-border-mode: luminance;
-mask-border-mode: alpha;
-```
-
 ## Specifications
 
 {{Specifications}}
 
 ## Browser compatibility
 
-{{Compat}}
+This property is not supported by any browser yet.
 
 ## See also
 

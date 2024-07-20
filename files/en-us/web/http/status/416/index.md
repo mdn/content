@@ -1,12 +1,10 @@
 ---
 title: 416 Range Not Satisfiable
 slug: Web/HTTP/Status/416
-tags:
-  - Client error
-  - HTTP
-  - Status code
-browser-compat: http.status.416
+page-type: http-status-code
+spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.416
 ---
+
 {{HTTPSidebar}}
 
 The HyperText Transfer Protocol (HTTP) **`416 Range Not Satisfiable`** error response code indicates that a server cannot serve the requested ranges. The most likely reason is that the document doesn't contain such ranges, or that the {{HTTPHeader("Range")}} header value, though syntactically correct, doesn't make sense.
@@ -17,17 +15,13 @@ Faced with this error, browsers usually either abort the operation (for example,
 
 ## Status
 
-```
+```http
 416 Range Not Satisfiable
 ```
 
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

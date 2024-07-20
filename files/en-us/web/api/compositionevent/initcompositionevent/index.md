@@ -1,16 +1,13 @@
 ---
-title: CompositionEvent.initCompositionEvent()
+title: "CompositionEvent: initCompositionEvent() method"
+short-title: initCompositionEvent()
 slug: Web/API/CompositionEvent/initCompositionEvent
 page-type: web-api-instance-method
-tags:
-  - API
-  - CompositionEvent
-  - Deprecated
-  - Method
-  - Reference
-  - initCompositionEvent
+status:
+  - deprecated
 browser-compat: api.CompositionEvent.initCompositionEvent
 ---
+
 {{deprecated_header}}{{APIRef("UI Events")}}
 
 The **`initCompositionEvent()`**
@@ -22,7 +19,7 @@ method of the {{domxref("CompositionEvent")}} interface initializes the attribut
 
 ## Syntax
 
-```js
+```js-nolint
 initCompositionEvent(type, canBubble, cancelable, view, data, locale)
 ```
 

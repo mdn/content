@@ -1,15 +1,11 @@
 ---
-title: Document.evaluate()
+title: "Document: evaluate() method"
+short-title: evaluate()
 slug: Web/API/Document/evaluate
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
-  - XPath
 browser-compat: api.Document.evaluate
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`evaluate()`** method of the {{domxref("Document")}} interface selects elements based on the [XPath](/en-US/docs/Web/XPath)
@@ -19,7 +15,7 @@ XPath expressions can be evaluated on both HTML and XML documents.
 
 ## Syntax
 
-```js
+```js-nolint
 evaluate(xpathExpression, contextNode, namespaceResolver, resultType, result)
 ```
 
@@ -37,6 +33,7 @@ evaluate(xpathExpression, contextNode, namespaceResolver, resultType, result)
     so that they can be matched with the document.
     The value `null` is common for HTML documents or when no namespace prefixes are used.
 - `resultType`
+
   - : An integer that corresponds to the type of result `XPathResult` to return.
     The following values are possible:
     - `ANY_TYPE` (`0`)
@@ -53,13 +50,13 @@ evaluate(xpathExpression, contextNode, namespaceResolver, resultType, result)
       - : A result set containing all the nodes matching the expression. The nodes
         in the result set are not necessarily in the same order they appear in
         the document.
-        > **Note:** Results this type contain references to nodes in the document.
+        > **Note:** Results of this type contain references to nodes in the document.
         > Modifying a node will invalidate the iterator.
         > After modifying a node, attempting to iterate through the results will result in an error.
     - `ORDERED_NODE_ITERATOR_TYPE` (`5`)
       - : A result set containing all the nodes matching the expression. The nodes
         in the result set are in the same order they appear in the document.
-        > **Note:** Results this type contain references to nodes in the document.
+        > **Note:** Results of this type contain references to nodes in the document.
         > Modifying a node will invalidate the iterator.
         > After modifying a node, attempting to iterate through the results will result in an error.
     - `UNORDERED_NODE_SNAPSHOT_TYPE` (`6`)
@@ -98,8 +95,16 @@ if not, it is the same object as the one passed as the `result` parameter.
 
 ## Examples
 
+### Finding all H2 headings by XPath
+
 ```js
-const headings = document.evaluate("/html/body//h2", document, null, XPathResult.ANY_TYPE, null);
+const headings = document.evaluate(
+  "/html/body//h2",
+  document,
+  null,
+  XPathResult.ANY_TYPE,
+  null,
+);
 /* Search the document for all h2 elements.
  * The result will likely be an unordered node iterator. */
 let thisHeading = headings.iterateNext();
@@ -112,9 +117,9 @@ alert(alertText); // Alerts the text of all h2 elements
 ```
 
 Note, in the above example, a more verbose _xpath_ is preferred over common shortcuts
-such as `//h2`. Generally, more specific _xpath_ selectors as in the above
-example usually gives a significant performance improvement, especially on very large
-documents. This is because the evaluation of the query spends does not waste time
+such as `//h2`. Generally, more specific _xpath_ selectors, as in the above
+example, usually give a significant performance improvement, especially on very large
+documents. This is because the evaluation of the query does not waste time
 visiting unnecessary nodes. Using // is generally slow as it visits _every_
 node from the root and all subnodes looking for possible matches.
 
@@ -134,6 +139,22 @@ query would start from the root node (`html`) which would be more
 wasteful.)
 
 See [Introduction to using XPath in JavaScript](/en-US/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript) for more information.
+
+### Getting element by xml:id
+
+This function is a replacement for {{domxref("Document.getElementById()")}} for when you need to search by `xml:id` instead.
+
+```js
+function getElementByIdWrapper(xmldoc, id) {
+  return xmldoc.evaluate(
+    `//*[@xml:id="${id}"]`,
+    xmldoc,
+    () => "http://www.w3.org/XML/1998/namespace",
+    XPathResult.FIRST_ORDERED_NODE_TYPE,
+    null,
+  ).singleNodeValue;
+}
+```
 
 ## Specifications
 

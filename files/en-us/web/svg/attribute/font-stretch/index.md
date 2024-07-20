@@ -1,12 +1,10 @@
 ---
 title: font-stretch
 slug: Web/SVG/Attribute/font-stretch
-tags:
-  - NeedsExample
-  - SVG
-  - SVG Attribute
-browser-compat: svg.attributes.presentation.font-stretch
+page-type: svg-attribute
+browser-compat: svg.global_attributes.font-stretch
 ---
+
 {{SVGRef}}
 
 The **`font-stretch`** attribute indicates the desired amount of condensing or expansion in the glyphs used to render the text.
@@ -15,7 +13,6 @@ The **`font-stretch`** attribute indicates the desired amount of condensing or e
 
 You can use this attribute with the following SVG elements:
 
-- {{SVGElement("altGlyph")}}
 - {{SVGElement("text")}}
 - {{SVGElement("textPath")}}
 - {{SVGElement("tref")}}
@@ -27,7 +24,7 @@ You can use this attribute with the following SVG elements:
   <tbody>
     <tr>
       <th scope="row">Value</th>
-      <td>{{csssyntax("font-stretch")}}</td>
+      <td>See {{cssxref("font-stretch", "", "#formal_syntax")}}</td>
     </tr>
     <tr>
       <th scope="row">Default value</th>

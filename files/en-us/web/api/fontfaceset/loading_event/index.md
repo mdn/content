@@ -1,15 +1,11 @@
 ---
-title: 'FontFaceSet: loading event'
+title: "FontFaceSet: loading event"
+short-title: loading
 slug: Web/API/FontFaceSet/loading_event
 page-type: web-api-event
-tags:
-  - API
-  - Property
-  - Reference
-  - onloading
-  - FontFaceSet
 browser-compat: api.FontFaceSet.loading_event
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
 The `loading` event fires when the document begins loading fonts.
@@ -19,9 +15,9 @@ The `loading` event fires when the document begins loading fonts.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('loading', (event) => { });
+addEventListener("loading", (event) => {});
 
-onloading = (event) => { };
+onloading = (event) => {};
 ```
 
 ## Example
@@ -30,8 +26,8 @@ In the following example, when the font `Ephesis` starts to load, "Font is loadi
 
 ```js
 document.fonts.onloading = () => {
-  console.log('Font is loading');
-}
+  console.log("Font is loading");
+};
 
 (async () => {
   await document.fonts.load("16px Ephesis");

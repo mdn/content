@@ -1,27 +1,12 @@
 ---
-title: XRRigidTransform.inverse
+title: "XRRigidTransform: inverse property"
+short-title: inverse
 slug: Web/API/XRRigidTransform/inverse
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRRigidTransform
-  - augmented
-  - inverse
-  - transform
 browser-compat: api.XRRigidTransform.inverse
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The read-only **`inverse`** property
 of the {{domxref("XRRigidTransform")}} interface returns another
@@ -46,17 +31,20 @@ In this example, the model view matrix for an object is computed by taking the v
 matrix and multiplying it by the object's pose matrix.
 
 ```js
-let modelViewMatrix = mat4.create();
+const modelViewMatrix = mat4.create();
 
-for (let view of pose.view) {
-  let viewport = glLayer.getViewport(view);
+for (const view of pose.view) {
+  const viewport = glLayer.getViewport(view);
   gl.viewport(viewport.x, viewport.y, viewport.width, viewport.height);
 
   // …
 
   mat4.multiply(modelViewMatrix, view.transform.inverse.matrix, objectMatrix);
-  gl.uniformMatrix4fv(programInfo.uniformLocations.modelViewMatrix,
-                      false, modelViewMatrix);
+  gl.uniformMatrix4fv(
+    programInfo.uniformLocations.modelViewMatrix,
+    false,
+    modelViewMatrix,
+  );
 
   // …
 }

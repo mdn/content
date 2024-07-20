@@ -1,14 +1,10 @@
 ---
 title: chrome_settings_overrides
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
-  - chrome_settings_overrides
-  - manifest.json
+page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.chrome_settings_overrides
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -188,7 +184,6 @@ This example shows how to set a search provider.
     "favicon_url": "https://www.discogs.com/favicon.ico"
   }
 }
-
 ```
 
 ## Browser compatibility

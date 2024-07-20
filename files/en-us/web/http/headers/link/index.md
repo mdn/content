@@ -1,29 +1,24 @@
 ---
 title: Link
 slug: Web/HTTP/Headers/Link
-tags:
-  - Draft
-  - HTTP
-  - HTTP Header
-  - Link
-  - NeedsCompatTable
-  - NeedsContent
-  - NeedsSyntax
-  - Reference
+page-type: http-header
 browser-compat: http.headers.Link
 ---
+
 {{HTTPSidebar}}
 
-The HTTP **`Link`** entity-header field provides a means for serializing one or more links in HTTP headers. It is semantically equivalent to the HTML {{HTMLElement("link")}} element.
+The HTTP **`Link`** [entity header](/en-US/docs/Glossary/Entity_header) field provides a means for serializing one or more links in HTTP headers. This header has the same semantics as the HTML {{HTMLElement("link")}} element. The benefit of using the `Link` header is that the browser can start preconnecting or preloading resources before the HTML itself is fetched and processed.
+
+In practice, most [link types](/en-US/docs/Web/HTML/Attributes/rel) don't have an effect in the HTTP header. For example, the `icon` relation only works in HTML, and `stylesheet` does not work reliably across browsers (only in Firefox). The only relations that work reliably are `preconnect` and `preload`, which can be combined with {{HTTPStatus(103, "103 Early Hints")}}.
 
 ## Syntax
 
-```
+```http
 Link: <uri-reference>; param1=value1; param2="value2"
 ```
 
 - `<uri-reference>`
-  - : The URI reference, must be enclosed between `<` and `>` and [percent encoded](/en-US/docs/Glossary/percent-encoding).
+  - : The URI reference, must be enclosed between `<` and `>` and {{Glossary("Percent-encoding", "percent-encoded")}}.
 
 ### Parameters
 
@@ -57,7 +52,7 @@ Link: <https://example.com/苗条>; rel="preconnect"
 
 You can specify multiple links separated by commas, for example:
 
-```
+```http
 Link: <https://one.example.com>; rel="preconnect", <https://two.example.com>; rel="preconnect", <https://three.example.com>; rel="preconnect"
 ```
 

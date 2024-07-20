@@ -1,20 +1,15 @@
 ---
-title: VRStageParameters.sizeY
+title: "VRStageParameters: sizeY property"
+short-title: sizeY
 slug: Web/API/VRStageParameters/sizeY
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRStageParameters
-  - Virtual Reality
-  - WebVR
-  - sizeY
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRStageParameters.sizeY
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`sizeY`** read-only property of the {{domxref("VRStageParameters")}} interface _returns the depth_ of the play-area bounds in meters.
 
@@ -42,5 +37,4 @@ Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/Web
 
 ## See also
 
-- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.
+- [WebVR API](/en-US/docs/Web/API/WebVR_API)

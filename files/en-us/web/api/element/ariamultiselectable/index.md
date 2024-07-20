@@ -1,17 +1,11 @@
 ---
-title: Element.ariaMultiSelectable
+title: "Element: ariaMultiSelectable property"
+short-title: ariaMultiSelectable
 slug: Web/API/Element/ariaMultiSelectable
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaMultiSelectable
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaMultiSelectable
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaMultiSelectable`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-multiselectable`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable) attribute, which indicates that the user may select more than one item from the current selectable descendants.
@@ -41,9 +35,9 @@ In this example the `aria-multiselectable` attribute on the element with an ID o
 ```
 
 ```js
-let el = document.getElementById('listbox1');
+let el = document.getElementById("listbox1");
 console.log(el.ariaMultiSelectable); // "true"
-el.ariaMultiSelectable = "false"
+el.ariaMultiSelectable = "false";
 console.log(el.ariaMultiSelectable); // "false"
 ```
 

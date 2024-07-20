@@ -1,16 +1,11 @@
 ---
-title: PointerEvent.height
+title: "PointerEvent: height property"
+short-title: height
 slug: Web/API/PointerEvent/height
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Interface
-  - PointerEvent
-  - Property
-  - Reference
 browser-compat: api.PointerEvent.height
 ---
+
 {{ APIRef("Pointer Events") }}
 
 The **`height`** read-only property of the
@@ -28,7 +23,7 @@ The height of the event's contact area (in CSS pixels).
 
 ## Examples
 
-An example of this property is included in the [PointerEvent.width example](/en-US/docs/Web/API/PointerEvent/width#example).
+An example of this property is included in the [PointerEvent.width example](/en-US/docs/Web/API/PointerEvent/width#examples).
 
 ## Specifications
 

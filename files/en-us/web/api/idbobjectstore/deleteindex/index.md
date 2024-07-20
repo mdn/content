@@ -1,19 +1,12 @@
 ---
-title: IDBObjectStore.deleteIndex()
+title: "IDBObjectStore: deleteIndex() method"
+short-title: deleteIndex()
 slug: Web/API/IDBObjectStore/deleteIndex
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBObjectStore
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - deleteIndex
 browser-compat: api.IDBObjectStore.deleteIndex
 ---
-{{ APIRef("IndexedDB") }}
+
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`deleteIndex()`** method of the
 {{domxref("IDBObjectStore")}} interface destroys the index with the specified name in
@@ -23,11 +16,9 @@ Note that this method must be called only from a `VersionChange` transaction
 mode callback. Note that this method synchronously modifies the
 {{domxref("IDBObjectStore.indexNames")}} property.
 
-{{AvailableInWorkers}}
-
 ## Syntax
 
-```js
+```js-nolint
 deleteIndex(indexName)
 ```
 
@@ -57,7 +48,7 @@ database structure if a database with a higher version number is loaded.
 {{domxref("IDBObjectStore.createIndex")}} is used to create new indexes on the object
 store, after which we delete the unneeded old indexes with `deleteIndex()`.
 For a full working example, see our
-[To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) app ([view example live](https://mdn.github.io/to-do-notifications/).)
+[To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 let db;
@@ -67,11 +58,13 @@ const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // these two event handlers act on the database being opened successfully, or not
 DBOpenRequest.onerror = (event) => {
-  note.innerHTML += '<li>Error loading database.</li>';
+  note.appendChild(document.createElement("li")).textContent =
+    "Error loading database.";
 };
 
 DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += '<li>Database initialized.</li>';
+  note.appendChild(document.createElement("li")).textContent =
+    "Database initialized.";
 
   // store the result of opening the database in the db variable. This is used a lot below
   db = event.target.result;
@@ -88,11 +81,14 @@ DBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
   db.onerror = (event) => {
-    note.innerHTML += '<li>Error loading database.</li>';
+    note.appendChild(document.createElement("li")).textContent =
+      "Error loading database.";
   };
 
   // Create an objectStore for this database
-  const objectStore = db.createObjectStore("toDoList", { keyPath: "taskTitle" });
+  const objectStore = db.createObjectStore("toDoList", {
+    keyPath: "taskTitle",
+  });
 
   // define what data items the objectStore will contain
 
@@ -105,7 +101,6 @@ DBOpenRequest.onupgradeneeded = (event) => {
 
   objectStore.deleteIndex("seconds");
   objectStore.deleteIndex("contact");
-
 };
 ```
 
@@ -125,4 +120,4 @@ DBOpenRequest.onupgradeneeded = (event) => {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

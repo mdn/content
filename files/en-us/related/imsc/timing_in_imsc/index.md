@@ -1,13 +1,9 @@
 ---
 title: Timing in IMSC
 slug: Related/IMSC/Timing_in_IMSC
-tags:
-  - Guide
-  - IMSC
-  - Timing
-  - captions
-  - subtitles
+page-type: guide
 ---
+
 When building an IMSC document, each defined piece of text must include timing information to specify when it should appear. There are multiple ways to describe when a subtitle should start and stop displaying, with pros and cons to each method. This article explains those different methods.
 
 If you have not already read the [IMSC document with timing](/en-US/docs/Related/IMSC/Basics#timing) section in the [IMSC basics](/en-US/docs/Related/IMSC/Basics) article, you should do so now and then return here — it contains an initial overview of how to describe timing events.

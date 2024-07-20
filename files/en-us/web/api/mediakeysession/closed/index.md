@@ -1,24 +1,16 @@
 ---
-title: MediaKeySession.closed
+title: "MediaKeySession: closed property"
+short-title: closed
 slug: Web/API/MediaKeySession/closed
 page-type: web-api-instance-property
-tags:
-  - API
-  - EncryptedMediaExtensions
-  - Experimental
-  - MediaKeySession
-  - NeedsExample
-  - Property
-  - Reference
-  - closed
 browser-compat: api.MediaKeySession.closed
 ---
-{{APIRef("EncryptedMediaExtensions")}}
 
-The `MediaKeySession.closed` read-only property returns a
-{{jsxref('Promise')}} signaling when a {{domxref('MediaKeySession')}} closes. This
-promise can only be fulfilled and is never rejected. Closing a session means that
-licenses and keys associated with it are no longer valid for decrypting media data.
+{{APIRef("Encrypted Media Extensions")}}{{SecureContext_Header}}
+
+The **`closed`** read-only property of the {{domxref('MediaKeySession')}} interface returns a {{jsxref('Promise')}} signaling when a {{domxref('MediaKeySession')}} closes.
+This promise can only be fulfilled and is never rejected.
+Closing a session means that licenses and keys associated with it are no longer valid for decrypting media data.
 
 ## Value
 

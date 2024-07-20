@@ -1,17 +1,10 @@
 ---
 title: <image>
 slug: Web/CSS/image
-tags:
-  - CSS
-  - CSS Data Type
-  - CSS Images
-  - Data Type
-  - Graphics
-  - Layout
-  - Reference
-  - Web
+page-type: css-type
 browser-compat: css.types.image
 ---
+
 {{CSSRef}}
 
 The **`<image>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a two-dimensional image.
@@ -32,22 +25,22 @@ The `<image>` data type can be represented with any of the following:
 CSS can handle the following kinds of images:
 
 - Images with _intrinsic dimensions_ (a natural size), like a JPEG, PNG, or other [raster format](https://en.wikipedia.org/wiki/Raster_graphics).
-- Images with _multiple intrinsic dimensions_, existing in multiple versions inside a single file, like some .ico formats. (In this case, the intrinsic dimensions will be those of the image largest in area and the aspect ratio most similar to the containing box.)
+- Images with _multiple intrinsic dimensions_, existing in multiple versions inside a single file, like some .ico formats. (In this case, the intrinsic dimensions will be those of the image largest in area and the {{glossary("aspect ratio")}} most similar to the containing box.)
 - Images with no intrinsic dimensions but with _an intrinsic aspect ratio_ between its width and height, like an SVG or other [vector format](https://en.wikipedia.org/wiki/Vector_graphics).
 - Images with _neither intrinsic dimensions, nor an intrinsic aspect ratio_, like a CSS gradient.
 
 CSS determines an object's _concrete size_ using (1) its _intrinsic dimensions_; (2) its _specified size_, defined by CSS properties like {{CSSxRef("width")}}, {{CSSxRef("height")}}, or {{CSSxRef("background-size")}}; and (3) its _default size_, determined by the kind of property the image is used with:
 
-| Kind of Object (CSS Property)                                                                                     | Default object size                                                                                           |
-| ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| {{CSSxRef("background-image")}}                                                                          | The size of the element's background positioning area                                                         |
-| {{CSSxRef("list-style-image")}}                                                                          | The size of a `1em` character                                                                                 |
-| {{CSSxRef("border-image-source")}}                                                                      | The size of the element's border image area                                                                   |
-| {{CSSxRef("cursor")}}                                                                                      | The browser-defined size matching the usual cursor size on the client's system                                |
-| {{CSSxRef("mask-image")}}                                                                                  | ?                                                                                                             |
-| {{CSSxRef("shape-outside")}}                                                                              | ?                                                                                                             |
-| {{CSSxRef("mask-border-source")}}                                                                      | ?                                                                                                             |
-| {{CSSxRef("symbols", "symbols()")}} for @counter-style                                                               | At risk feature. If supported, the browser-defined size matching the usual cursor size on the client's system |
+| Kind of Object (CSS Property)                                                                | Default object size                                                                                           |
+| -------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| {{CSSxRef("background-image")}}                                                              | The size of the element's background positioning area                                                         |
+| {{CSSxRef("list-style-image")}}                                                              | The size of a `1em` character                                                                                 |
+| {{CSSxRef("border-image-source")}}                                                           | The size of the element's border image area                                                                   |
+| {{CSSxRef("cursor")}}                                                                        | The browser-defined size matching the usual cursor size on the client's system                                |
+| {{CSSxRef("mask-image")}}                                                                    | ?                                                                                                             |
+| {{CSSxRef("shape-outside")}}                                                                 | ?                                                                                                             |
+| {{CSSxRef("mask-border-source")}}                                                            | ?                                                                                                             |
+| {{CSSxRef("symbols", "symbols()")}} for @counter-style                                       | At risk feature. If supported, the browser-defined size matching the usual cursor size on the client's system |
 | {{CSSxRef("content")}} for a pseudo-element ({{CSSxRef("::after")}}/{{CSSxRef("::before")}}) | A 300px × 150px rectangle                                                                                     |
 
 The concrete object size is calculated using the following algorithm:
@@ -62,8 +55,12 @@ The concrete object size is calculated using the following algorithm:
 
 Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.
 
-- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_%e2%80%94_providing_text_alternatives_for_non-text_content)
+- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
 - [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
+
+## Formal syntax
+
+{{csssyntax}}
 
 ## Examples
 
@@ -92,7 +89,7 @@ nourl.jpg            /* An image file must be defined using the url() function. 
 url(report.pdf)      /* A file pointed to by the url() function must be an image. */
 element(#fakeid)     /* An element ID must be an existing ID on the page. */
 image(z.jpg#xy=0,0)  /* The spatial fragment must be written in the format of xywh=#,#,#,# */
-image-set('cat.jpg' 1x, 'dog.jpg' 1x) /* every image in an image set must have a different resolutions */
+image-set('cat.jpg' 1x, 'dog.jpg' 1x) /* every image in an image set must have a different resolution */
 ```
 
 ## Specifications

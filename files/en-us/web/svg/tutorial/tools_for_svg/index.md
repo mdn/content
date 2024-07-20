@@ -1,19 +1,14 @@
 ---
 title: Tools for SVG
 slug: Web/SVG/Tutorial/Tools_for_SVG
-tags:
-  - Intermediate
-  - NeedsUpdate
-  - SVG
-  - Tools
+page-type: guide
 ---
+
+{{SVGRef}}
+
 {{ PreviousNext("Web/SVG/Tutorial/SVG_Image_Tag", "Web/SVG/Tutorial/SVG_and_CSS") }}
 
 Now that we covered the basics of the SVG internals, we will take a look at some tools to work with SVG files.
-
-### Browser support
-
-As of Internet Explorer 9, all major browsers support SVG: IE 9, Mozilla Firefox, Safari, Google Chrome and Opera. Mobile devices with Webkit-based browsers also support SVG. On older or smaller devices, chances are that SVG Tiny is supported.
 
 ## Inkscape
 
@@ -42,12 +37,6 @@ Together with [Apache FOP](https://xmlgraphics.apache.org/fop/) Batik can transf
 ### Other renderers
 
 Several projects exist that can create a raster image from an SVG source. [ImageMagick](https://imagemagick.org/) is one of the most famous command-line image processing tools. The Gnome library [rsvg](https://wiki.gnome.org/Projects/LibRsvg) is used by the Wikipedia to raster their SVG graphics. Usage of headless browsers such as SlimerJS and PhantomJS are also popular for this purpose, as the image produced is closer to what the SVG will look like in the browser.
-
-## Raphael JS
-
-URL: [raphaeljs.com](https://raphaeljs.com/)
-
-This is a JavaScript library, that acts as an abstraction layer between browser implementations. Notably older versions of Internet Explorer are supported by generating VML, a vector markup language, that is one of two ancestors of SVG and exists since IE 5.5.
 
 ## Snap.svg
 

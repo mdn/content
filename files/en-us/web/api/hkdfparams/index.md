@@ -2,17 +2,14 @@
 title: HkdfParams
 slug: Web/API/HkdfParams
 page-type: web-api-interface
-tags:
-  - API
-  - Dictionary
-  - HkdfParams
-  - Reference
-  - Web Crypto API
 spec-urls: https://w3c.github.io/webcrypto/#dfn-HkdfParams
 ---
-{{ APIRef("Web Crypto API") }}The **`HkdfParams`** dictionary of the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) represents the object that should be passed as the `algorithm` parameter into {{domxref("SubtleCrypto.deriveKey()")}}, when using the [HKDF](/en-US/docs/Web/API/SubtleCrypto/deriveKey#hkdf) algorithm.
 
-## Properties
+{{ APIRef("Web Crypto API") }}
+
+The **`HkdfParams`** dictionary of the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) represents the object that should be passed as the `algorithm` parameter into {{domxref("SubtleCrypto.deriveKey()")}}, when using the [HKDF](/en-US/docs/Web/API/SubtleCrypto/deriveKey#hkdf) algorithm.
+
+## Instance properties
 
 - `name`
   - : A string. This should be set to `HKDF`.

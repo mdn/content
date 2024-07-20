@@ -1,17 +1,11 @@
 ---
-title: Element.ariaMultiLine
+title: "Element: ariaMultiLine property"
+short-title: ariaMultiLine
 slug: Web/API/Element/ariaMultiLine
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaMultiline
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaMultiLine
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaMultiLine`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-multiline`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-multiline) attribute, which indicates whether a text box accepts multiple lines of input or only a single line.
@@ -33,14 +27,19 @@ In this example the `aria-multiline` attribute on the element with an ID of `txt
 
 ```html
 <div id="txtboxMultilineLabel">Enter the tags for the article</div>
-<div role="textbox" id="txtBoxInput" contenteditable="true" aria-multiline="true"
-  aria-labelledby="txtboxMultilineLabel" aria-required="true"></div>
+<div
+  role="textbox"
+  id="txtBoxInput"
+  contenteditable="true"
+  aria-multiline="true"
+  aria-labelledby="txtboxMultilineLabel"
+  aria-required="true"></div>
 ```
 
 ```js
-let el = document.getElementById('txtBoxInput');
+let el = document.getElementById("txtBoxInput");
 console.log(el.ariaMultiLine); // "true"
-el.ariaMultiLine = "false"
+el.ariaMultiLine = "false";
 console.log(el.ariaMultiLine); // "false"
 ```
 

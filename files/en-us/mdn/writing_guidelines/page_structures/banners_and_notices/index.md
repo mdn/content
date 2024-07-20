@@ -2,39 +2,73 @@
 title: Banners and notices
 slug: MDN/Writing_guidelines/Page_structures/Banners_and_notices
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
+
 {{MDNSidebar}}
 
-Sometimes, an article needs a special notice added to it.
-This might happen if the page covers deprecated technology or other material that shouldn't be used in production code.
-This article covers the most common such cases and what to do.
+Banners and notices are displayed in some pages, in particular API reference, in order to highlight important factors that will affect how the described content is used.
+For example, banners are used to highlight when a particular interface, method or property is deprecated, and should not be used in production code, or can only be used in a secure context.
 
-## How to add notice boxes
+Banners are rendered using macros in the page content.
+Some banner macros are added automatically to the page, while others are added manually.
 
-In most cases, you apply these notices by adding a macro call to inject an appropriate banner into the page content, and by adding a tag to the page's list of tags.
+This article describes the more important banners and how they are added.
 
-To do this, you insert the macro call at the top of the article, and add the new tag to the list.
-Once you've done that, raise a pull request and get your changes reviewed and merged.
-From then on, an appropriate banner will appear on the page, and any macros that reference page tags when looking for up-to-date articles will know that the page you've updated is deprecated, or whatever.
+## Where are banner macros added
 
-> **Note:** To learn more about editing, see our [content repo README](https://github.com/mdn/content).
+Banners are added using macros that are usually inserted below the page metadata, alongside the page sidebar macro. For example, in the block below, the `\{{SecureContext_Header}}` macro has been used to indicate that the {{domxref("AudioDecoder")}} interface is only available in a [secure context](/en-US/docs/Web/Security/Secure_Contexts), and `\{{SeeCompatTable}}` has been added to indicate that the interface is experimental.
 
-Sometimes, you might want to flag just a single item in a list of items, or in a table, as obsolete, deprecated, or the like.
-There are special versions of each of the following macros for that; change "\_header" to "\_inline" to the end of the macro's name.
+```md
+---
+title: AudioDecoder
+slug: Web/API/AudioDecoder
+page-type: web-api-interface
+status:
+  - experimental
+browser-compat: api.AudioDecoder
+---
 
-## Deprecated content
+\{{APIRef("WebCodecs API")}} \{{SeeCompatTable}} \{{SecureContext_Header}} \{{AvailableInWorkers}}
+```
 
-Deprecated content is content that covers a technology or idea that is in the process of becoming obsolete.
-It's no longer recommended, and is expected to be removed from browsers in the relatively near future.
-You can mark pages as deprecated using the [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs) macro.
-Just like with obsolete content, you can specify the Gecko version in which the technology was deprecated as a parameter, if the technology is Gecko-specific.
+## Banners that must be added manually
 
-You should also add the tag "Deprecated" to the page.
+You need to add the following macros manually:
 
-## Non-standard content
+- `\{{SecureContext_Header}}` — this generates a **Secure context** banner that indicates the technology is only available in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
+- `\{{AvailableInWorkers}}` — this generates a note that indicates that the technology is available [web workers](/en-US/docs/Web/API/Web_Workers_API).
 
-Non-standard content is any content not yet part of a Web standard; this includes any technology that isn't even proposed as a draft specification, even if it's implemented by multiple browsers.
-You should use the [`non-standard_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Non-standard_Header.ejs) macro on these pages, and tag the pages with "Non-standard".
+## Banners that are added automatically
+
+The following macros are automatically added to the content in order to match the statuses stored in the browser-compat-data repository:
+
+- `\{{SeeCompatTable}}` — generates a **This is an experimental technology** banner that indicates the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
+- `\{{Deprecated_Header}}` — generates a **Deprecated** banner that indicates that use of the technology is [discouraged](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
+- `\{{Non-standard_Header}}` — generates a **Non-Standard** banner that indicates that use of the technology is not part of a formal specification, even if it is implemented in multiple browsers.
+
+[Update the feature status in the browser-compat-data repository](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses) in order to change these values.
+
+> **Note:** While you can manually/update these macros in content, values that don't match the browser compatibility data will be replaced/removed.
+
+> **Note:** Pages that have the `\{{SeeCompatTable}}`, `\{{Deprecated_Header}}`, or `\{{Non-standard_Header}}` banners will also have the corresponding `experimental`, `deprecated` and `non-standard` status values in the page metadata.
+> The metadata is automatically updated at the same time as the headers.
+> The banner macros do not depend on this status metadata (but may one day be generated from it).
+
+## Experimental: "Standards positions" banner
+
+Occasionally, browser vendors disagree on how a feature is developing, and some may oppose it in its current form. In exceptional cases, MDN documents technologies in this state to encourage the web community to experiment with them, provide feedback, and help browser vendors reach a consensus.
+
+It is important to clarify the current standardization status of such features to readers. While a longer-term solution for representing this information is not final, we are doing the following for specific high-profile technologies to avoid confusion:
+
+- Adding this banner to the landing page for that feature (not for every subpage for the feature):
+
+  ```text
+  > **Warning:** This feature is currently opposed by <number> browser vendor(s). See the [Standards positions](#standards_positions) section below for details of opposition.
+  ```
+
+  - Replace `<number>` with the number of browser vendors opposing the feature.
+  - Use `vendor` or `vendors` as appropriate.
+
+- Adding a "Standards positions" section to the same page as the above banner, as a sub-section of the standard "Specifications" section.
+
+> **Note:** See [Related Website Sets](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets) for an example of the "Standards positions" section and what it should contain, as well as the landing page banner.

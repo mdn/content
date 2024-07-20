@@ -1,22 +1,10 @@
 ---
 title: Identifying resources on the Web
 slug: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
-tags:
-  - Domain
-  - HTTP
-  - Path
-  - Scheme
-  - Syntax
-  - URI
-  - URL
-  - URL Syntax
-  - Web
-  - fragment
-  - port
-  - query
-  - resources
-spec-urls: https://httpwg.org/specs/rfc7230.html#section-2.7
+page-type: guide
+spec-urls: https://httpwg.org/specs/rfc9110.html#uri
 ---
+
 {{HTTPSidebar}}
 
 The target of an HTTP request is called a "resource", whose nature isn't defined further; it can be a document, a photo, or anything else. Each resource is identified by a Uniform Resource Identifier ({{Glossary("URI")}}) used throughout HTTP for identifying resources.
@@ -27,7 +15,7 @@ The target of an HTTP request is called a "resource", whose nature isn't defined
 
 The most common form of URI is the Uniform Resource Locator ({{Glossary("URL")}}), which is known as the _web address_.
 
-```
+```url
 https://developer.mozilla.org
 https://developer.mozilla.org/en-US/docs/Learn/
 https://developer.mozilla.org/en-US/search?q=URL
@@ -35,9 +23,9 @@ https://developer.mozilla.org/en-US/search?q=URL
 
 Any of those URLs can be typed into your browser's address bar to tell it to load the associated page (resource).
 
-A URL is composed of different parts, some mandatory and others are optional. A more complex example might look like this:
+A URL is composed of different parts, some mandatory and others optional. A more complex example might look like this:
 
-```
+```url
 http://www.example.com:80/path/to/myfile.html?key1=value1&key2=value2#SomewhereInTheDocument
 ```
 
@@ -45,7 +33,7 @@ http://www.example.com:80/path/to/myfile.html?key1=value1&key2=value2#SomewhereI
 
 A Uniform Resource Name (URN) is a URI that identifies a resource by name in a particular namespace.
 
-```
+```url
 urn:isbn:9780141036144
 urn:ietf:rfc:7230
 ```
@@ -66,7 +54,7 @@ The two URNs correspond to
 | ----------- | -------------------------------------------------------------------- |
 | data        | [Data URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)           |
 | file        | Host-specific file names                                             |
-| ftp         | {{Glossary("FTP","File Transfer Protocol")}}         |
+| ftp         | {{Glossary("FTP","File Transfer Protocol")}}                         |
 | http/https  | [Hyper text transfer protocol (Secure)](/en-US/docs/Glossary/HTTP)   |
 | javascript  | URL-embedded JavaScript code                                         |
 | mailto      | Electronic mail address                                              |
@@ -109,7 +97,7 @@ FTP is still acceptable at the top level (such as typed directly into the browse
 
 ## Examples
 
-```
+```url
 https://developer.mozilla.org/en-US/docs/Learn
 tel:+1-816-555-1212
 git@github.com:mdn/browser-compat-data.git
@@ -124,5 +112,5 @@ mailto:help@supercyberhelpdesk.info
 
 ## See also
 
-- [What is a URL?](/en-US/docs/Learn/Common_questions/What_is_a_URL)
+- [What is a URL?](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
 - [IANA list of URI schemes](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml)

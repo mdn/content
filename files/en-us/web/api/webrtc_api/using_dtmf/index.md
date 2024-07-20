@@ -2,19 +2,9 @@
 title: Using DTMF with WebRTC
 slug: Web/API/WebRTC_API/Using_DTMF
 page-type: guide
-tags:
-  - API
-  - DTMF
-  - Example
-  - Guide
-  - Media
-  - RTCDTMFSender
-  - RTCPeerConnection
-  - Touch-tone
-  - WebRTC
-  - WebRTC API
 ---
-{{APIRef("WebRTC")}}
+
+{{DefaultAPISidebar("WebRTC")}}
 
 In order to more fully support audio/video conferencing, [WebRTC](/en-US/docs/Web/API/WebRTC_API) supports sending {{Glossary("DTMF")}} to the remote peer on an {{domxref("RTCPeerConnection")}}. This article offers a brief high-level overview of how DTMF works over WebRTC, then provides a guide for everyday developers about how to send DTMF over an `RTCPeerConnection`. The DTMF system is often referred to as "touch tone," after an old trade name for the system.
 
@@ -53,14 +43,16 @@ The HTML for this example is very basic; there are only three elements of import
 - A {{HTMLElement("div")}} to receive and display log text to show status information.
 
 ```html
-  <p>This example demonstrates the use of DTMF in WebRTC. Note that this
-     example is "cheating" by generating both peers in one code stream,
-     rather than having each be a truly separate entity.</p>
+<p>
+  This example demonstrates the use of DTMF in WebRTC. Note that this example is
+  "cheating" by generating both peers in one code stream, rather than having
+  each be a truly separate entity.
+</p>
 
-  <audio id="audio" autoplay controls></audio><br/>
-  <button name="dial" id="dial">Dial</button>
+<audio id="audio" autoplay controls></audio><br />
+<button name="dial" id="dial">Dial</button>
 
-  <div class="log"></div>
+<div class="log"></div>
 ```
 
 ### JavaScript
@@ -82,12 +74,12 @@ let hasAddTrack = false;
 
 let mediaConstraints = {
   audio: true,
-  video: false
+  video: false,
 };
 
 let offerOptions = {
   offerToReceiveAudio: 1,
-  offerToReceiveVideo: 0
+  offerToReceiveVideo: 0,
 };
 
 let dialButton = null;
@@ -105,7 +97,7 @@ These are, in order:
 - `hasAddTrack`
   - : Because some browsers have not yet implemented {{domxref("RTCPeerConnection.addTrack()")}}, therefore requiring the use of the obsolete {{domxref("RTCPeerConnection.addStream", "addStream()")}} method, we use this Boolean to determine whether or not the user agent supports `addTrack()`; if it doesn't, we'll fall back to `addStream()`. This gets figured out in `connectAndDial()`, as shown in [Starting the connection process](#starting_the_connection_process).
 - `mediaConstraints`
-  - : An object conforming to the {{domxref("MediaConstraints")}} dictionary specifying the constraints to use when starting the connection. We want an audio-only connection, so `video` is `false`, while `audio` is `true`.
+  - : An object specifying the constraints to use when starting the connection. We want an audio-only connection, so `video` is `false`, while `audio` is `true`.
 - `offerOptions`
   - : An object providing options to specify when calling {{domxref("RTCPeerConnection.createOffer()")}}. In this case, we state that we want to receive audio but not video.
 - `dialButton` and `logElement`
@@ -132,7 +124,7 @@ When the dial button is clicked, `connectAndDial()` is called. This starts build
 function connectAndDial() {
   callerPC = new RTCPeerConnection();
 
-  hasAddTrack = (callerPC.addTrack !== undefined);
+  hasAddTrack = callerPC.addTrack !== undefined;
 
   callerPC.onicecandidate = handleCallerIceEvent;
   callerPC.onnegotiationneeded = handleCallerNegotiationNeeded;
@@ -149,9 +141,10 @@ function connectAndDial() {
     receiverPC.onaddstream = handleReceiverAddStreamEvent;
   }
 
-  navigator.mediaDevices.getUserMedia(mediaConstraints)
-  .then(gotStream)
-  .catch((err) => log(err.message));
+  navigator.mediaDevices
+    .getUserMedia(mediaConstraints)
+    .then(gotStream)
+    .catch((err) => log(err.message));
 }
 ```
 
@@ -180,17 +173,21 @@ function gotStream(stream) {
       audioTracks.forEach((track) => callerPC.addTrack(track, stream));
     }
   } else {
-    log("Your browser doesn't support RTCPeerConnection.addTrack(). Falling " +
-        "back to the <strong>deprecated</strong> addStream() method…");
+    log(
+      "Your browser doesn't support RTCPeerConnection.addTrack(). Falling " +
+        "back to the <strong>deprecated</strong> addStream() method…",
+    );
     callerPC.addStream(stream);
   }
 
   if (callerPC.getSenders) {
     dtmfSender = callerPC.getSenders()[0].dtmf;
   } else {
-    log("Your browser doesn't support RTCPeerConnection.getSenders(), so " +
+    log(
+      "Your browser doesn't support RTCPeerConnection.getSenders(), so " +
         "falling back to use <strong>deprecated</strong> createDTMFSender() " +
-        "instead.");
+        "instead.",
+    );
     dtmfSender = callerPC.createDTMFSender(audioTracks[0]);
   }
 
@@ -241,7 +238,7 @@ The [`tonechange`](/en-US/docs/Web/API/RTCDTMFSender/tonechange_event) event is 
 
 In this example, we log to the screen which tone just finished playing. In a more advanced application, you might update the user interface, for example, to indicate which note is currently playing.
 
-On the other hand, if the tone buffer is empty, our example is designed to disconnect the call. This is done by stopping each stream on both the caller and the receiver by iterating over each `RTCPeerConnection`'s track list (as returned by its {{domxref("RTCPeerConnection.getTracks", "getTracks()")}} method) and calling each track's {{domxref("MediaStreamTrack.stop", "stop()")}} method.
+On the other hand, if the tone buffer is empty, our example is designed to disconnect the call. This is done by stopping each stream on both the caller and the receiver by iterating over each `RTCPeerConnection`'s track list (as returned by its {{domxref("MediaStream.getTracks", "getTracks()")}} method) and calling each track's {{domxref("MediaStreamTrack.stop", "stop()")}} method.
 
 Once both the caller's and the receiver's media tracks are all stopped, we pause the {{HTMLElement("audio")}} element and set its {{domxref("HTMLMediaElement.srcObject", "srcObject")}} to `null`. This detaches the audio stream from the {{HTMLElement("audio")}} element.
 
@@ -256,8 +253,9 @@ function handleCallerIceEvent(event) {
   if (event.candidate) {
     log(`Adding candidate to receiver: ${event.candidate.candidate}`);
 
-    receiverPC.addIceCandidate(new RTCIceCandidate(event.candidate))
-    .catch((err) => log(`Error adding candidate to receiver: ${err}`));
+    receiverPC
+      .addIceCandidate(new RTCIceCandidate(event.candidate))
+      .catch((err) => log(`Error adding candidate to receiver: ${err}`));
   } else {
     log("Caller is out of candidates.");
   }
@@ -293,28 +291,31 @@ When the calling {{domxref("RTCPeerConnection")}} begins to receive media (after
 ```js
 function handleCallerNegotiationNeeded() {
   log("Negotiating…");
-  callerPC.createOffer(offerOptions)
-  .then((offer) => {
-    log(`Setting caller's local description: ${offer.sdp}`);
-    return callerPC.setLocalDescription(offer);
-  })
-  .then(() => {
-    log("Setting receiver's remote description to the same as caller's local");
-    return receiverPC.setRemoteDescription(callerPC.localDescription)
-  })
-  .then(() => {
-    log("Creating answer");
-    return receiverPC.createAnswer();
-  })
-  .then((answer) => {
-    log(`Setting receiver's local description to ${answer.sdp}`);
-    return receiverPC.setLocalDescription(answer);
-  })
-  .then(() => {
-    log("Setting caller's remote description to match");
-    return callerPC.setRemoteDescription(receiverPC.localDescription);
-  })
-  .catch((err) => log(`Error during negotiation: ${err.message}`));
+  callerPC
+    .createOffer(offerOptions)
+    .then((offer) => {
+      log(`Setting caller's local description: ${offer.sdp}`);
+      return callerPC.setLocalDescription(offer);
+    })
+    .then(() => {
+      log(
+        "Setting receiver's remote description to the same as caller's local",
+      );
+      return receiverPC.setRemoteDescription(callerPC.localDescription);
+    })
+    .then(() => {
+      log("Creating answer");
+      return receiverPC.createAnswer();
+    })
+    .then((answer) => {
+      log(`Setting receiver's local description to ${answer.sdp}`);
+      return receiverPC.setLocalDescription(answer);
+    })
+    .then(() => {
+      log("Setting caller's remote description to match");
+      return callerPC.setRemoteDescription(receiverPC.localDescription);
+    })
+    .catch((err) => log(`Error during negotiation: ${err.message}`));
 }
 ```
 
@@ -353,8 +354,9 @@ function handleReceiverIceEvent(event) {
   if (event.candidate) {
     log(`Adding candidate to caller: ${event.candidate.candidate}`);
 
-    callerPC.addIceCandidate(new RTCIceCandidate(event.candidate))
-    .catch((err) => log(`Error adding candidate to caller: ${err}`));
+    callerPC
+      .addIceCandidate(new RTCIceCandidate(event.candidate))
+      .catch((err) => log(`Error adding candidate to caller: ${err}`));
   } else {
     log("Receiver is out of candidates.");
   }
@@ -367,7 +369,7 @@ If `event.candidate` is `null`, that indicates that there are no more candidates
 
 #### Adding media to the receiver
 
-When the receiver begins to receive media, an event is delivered to the receiver's {{domxref("RTCPeerConnection")}}, `receiverPC`. As explained in [Starting the connection process](#starting_the_connection_process), the current WebRTC specification uses the {{domxref("RTCPeerConnection.track_event", "track")}} event for this, but some browsers haven't been updated to support this yet, so we also need to handle the {{domxref("RTCPeerConnection/addstream_event", "addstream")}} event. The `handleReceiverTrackEvent()` and `handleReceiverAddStreamEvent()` methods, shown below, handle these.
+When the receiver begins to receive media, an event is delivered to the receiver's {{domxref("RTCPeerConnection")}}, `receiverPC`. As explained in [Starting the connection process](#starting_the_connection_process), the current WebRTC specification uses the {{domxref("RTCPeerConnection.track_event", "track")}} event for this. Since some browsers haven't been updated to support this yet, we also need to handle the {{domxref("RTCPeerConnection/addstream_event", "addstream")}} event. This is demonstrated in the `handleReceiverTrackEvent()` and `handleReceiverAddStreamEvent()` methods below.
 
 ```js
 function handleReceiverTrackEvent(event) {
@@ -381,25 +383,25 @@ function handleReceiverAddStreamEvent(event) {
 
 The `track` event includes a {{domxref("RTCTrackEvent.streams", "streams")}} property containing an array of the streams the track is a member of (one track can be part of many streams). We take the first stream and attach it to the {{HTMLElement("audio")}} element.
 
-The `addstream` event includes a {{domxref("RTCTrackEvent.stream", "stream")}} property specifying a single stream added to the track. We attach it to the `<audio>` element.
+The `addstream` event includes a {{domxref("MediaStreamEvent.stream", "stream")}} property specifying a single stream added to the track. We attach it to the `<audio>` element.
 
 #### Logging
 
-A simple `log()` function is used throughout the code to append HTML to a {{HTMLElement("div")}} box for displaying status and errors to the user.
+A simple `log()` function is used throughout the code to append text to a {{HTMLElement("div")}} box for displaying status and errors to the user.
 
 ```js
 function log(msg) {
-  logElement.innerHTML += `${msg}<br/>`;
+  logElement.innerText += `${msg}\n`;
 }
 ```
 
 ### Result
 
-You can try this example here. When you click the "Dial" button, you should see a series of logging messages output, then the dialing will begin. If your browser plays the tones audibly as part of its user experience, you should hear them as they're transmitted.
+You can try this example here. When you click the "Dial" button, you should see a series of logging messages output; then the dialing will begin. If your browser plays the tones audibly as part of its user experience, you should hear them as they're transmitted.
 
 {{ EmbedLiveSample('Simple_example', 600, 500, "", "", "", "microphone") }}
 
-Once transmission of the tones is complete, the connection is closed. You can click "Dial" again to reconnect and send the tones again.
+Once transmission of the tones is complete, the connection is closed. You can click "Dial" again to reconnect and send the tones.
 
 ## See also
 

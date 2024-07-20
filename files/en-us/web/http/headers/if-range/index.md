@@ -1,15 +1,10 @@
 ---
 title: If-Range
 slug: Web/HTTP/Headers/If-Range
-tags:
-  - Conditional Requests
-  - HTTP
-  - HTTP Header
-  - Range Requests
-  - Reference
-  - Request header
+page-type: http-header
 browser-compat: http.headers.If-Range
 ---
+
 {{HTTPSidebar}}
 
 The **`If-Range`** HTTP request header makes a range request
@@ -39,7 +34,7 @@ has not been modified since the last fragment has been received.
 
 ## Syntax
 
-```
+```http
 If-Range: <day-name>, <day> <month> <year> <hour>:<minute>:<second> GMT
 If-Range: <etag>
 ```
@@ -69,7 +64,7 @@ If-Range: <etag>
 
 ## Examples
 
-```
+```http
 If-Range: Wed, 21 Oct 2015 07:28:00 GMT
 ```
 

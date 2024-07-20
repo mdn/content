@@ -1,22 +1,14 @@
 ---
-title: MediaStreamTrack.enabled
+title: "MediaStreamTrack: enabled property"
+short-title: enabled
 slug: Web/API/MediaStreamTrack/enabled
 page-type: web-api-instance-property
-tags:
-  - Media
-  - Media Capture and Streams
-  - MediaStreamTrack
-  - Muting a Media Track
-  - Muting a Track
-  - Property
-  - Reference
-  - WebRTC
-  - enabled
 browser-compat: api.MediaStreamTrack.enabled
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
-The **`enabled`** property on the
+The **`enabled`** property of the
 {{domxref("MediaStreamTrack")}} interface is a Boolean value which is
 `true` if the track is allowed to render the source stream or
 `false` if it is not. This can be used to intentionally mute a
@@ -30,8 +22,8 @@ which every sample's value is 0). For video tracks, every frame is filled entire
 black pixels.
 
 The value of `enabled`, in essence, represents what a typical user would
-consider the muting state for a track, whereas the {{domxref("MediaStreamTrack.muted",
-  "muted")}} property indicates a state in which the track is temporarily unable to output
+consider the muting state for a track, whereas the {{domxref("MediaStreamTrack.muted", "muted")}}
+property indicates a state in which the track is temporarily unable to output
 data, such as a scenario in which frames have been lost in transit.
 
 > **Note:** If the track has been disconnected, the value of this property
@@ -67,7 +59,7 @@ pauseButton.onclick = (evt) => {
 
   pauseButton.innerHTML = newState ? "&#x25B6;&#xFE0F;" : "&#x23F8;&#xFE0F;";
   myAudioTrack.enabled = newState;
-}
+};
 ```
 
 This creates a variable, `newState`, which is the opposite of the current
@@ -87,7 +79,7 @@ Finally, the new value of `enabled` is saved, making the change take effect.
 
 ## See also
 
-- [MediaStream API](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 - {{domxref("MediaStream")}}
 - {{domxref("MediaStreamTrack")}}
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)

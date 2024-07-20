@@ -1,12 +1,12 @@
 ---
 title: horiz-adv-x
 slug: Web/SVG/Attribute/horiz-adv-x
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.font.horiz-adv-x
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`horiz-adv-x`** attribute indicates the horizontal advance after rendering a {{Glossary("glyph")}} in horizontal orientation.
@@ -27,7 +27,7 @@ For {{SVGElement("font")}} elements, `horiz-adv-x` specifies the default horizon
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#Number"
+          ><a href="/en-US/docs/Web/SVG/Content_type#number"
             >&#x3C;number></a
           ></code
         >
@@ -57,7 +57,7 @@ For {{SVGElement("glyph")}} and {{SVGElement("missing-glyph")}} elements, `horiz
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#Number"
+          ><a href="/en-US/docs/Web/SVG/Content_type#number"
             >&#x3C;number></a
           ></code
         >

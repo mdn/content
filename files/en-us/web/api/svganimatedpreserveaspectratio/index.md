@@ -2,13 +2,9 @@
 title: SVGAnimatedPreserveAspectRatio
 slug: Web/API/SVGAnimatedPreserveAspectRatio
 page-type: web-api-interface
-tags:
-  - API
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGAnimatedPreserveAspectRatio
 ---
+
 {{APIRef("SVG")}}
 
 ## SVG animated preserveAspectRatio interface
@@ -48,14 +44,14 @@ The `SVGAnimatedPreserveAspectRatio` interface is used for attributes of type {{
   </tbody>
 </table>
 
-## Properties
+## Instance properties
 
 - {{domxref("SVGAnimatedPreserveAspectRatio.baseVal")}} {{ReadOnlyInline}}
   - : A {{domxref("SVGPreserveAspectRatio")}} that represents the base value of the given attribute before applying any animations.
 - {{domxref("SVGAnimatedPreserveAspectRatio.animVal")}} {{ReadOnlyInline}}
   - : A {{domxref("SVGPreserveAspectRatio")}} that represents the current animated value of the given attribute. If the given attribute is not currently being animated, then the {{ domxref("SVGPreserveAspectRatio") }} will have the same contents as `baseVal`. The object referenced by `animVal` is always distinct from the one referenced by `baseVal`, even when the attribute is not animated.
 
-## Methods
+## Instance methods
 
 The `SVGAnimatedPreserveAspectRatio` interface do not provide any specific methods.
 

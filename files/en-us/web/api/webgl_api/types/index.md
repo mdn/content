@@ -2,16 +2,13 @@
 title: WebGL types
 slug: Web/API/WebGL_API/Types
 page-type: guide
-tags:
-  - Reference
-  - Types
-  - WebGL
 spec-urls:
   - https://www.khronos.org/registry/webgl/specs/latest/1.0/#5.1
   - https://www.khronos.org/registry/webgl/specs/latest/2.0/#3.1
   - https://www.khronos.org/registry/webgl/extensions/EXT_disjoint_timer_query/
 ---
-{{WebGLSidebar}}
+
+{{DefaultAPISidebar("WebGL")}}
 
 The following types are used in [WebGL](/en-US/docs/Web/API/WebGL_API) interfaces.
 
@@ -82,17 +79,17 @@ These types are used within a {{domxref("WebGLRenderingContext")}}.
     <tr>
       <td><code>GLubyte</code></td>
       <td><code>octet</code></td>
-      <td>8-bit twos complement unsigned integer.</td>
+      <td>8-bit unsigned integer.</td>
     </tr>
     <tr>
       <td><code>GLushort</code></td>
       <td><code>unsigned short</code></td>
-      <td>16-bit twos complement unsigned integer.</td>
+      <td>16-bit unsigned integer.</td>
     </tr>
     <tr>
       <td><code>GLuint</code></td>
       <td><code>unsigned long</code></td>
-      <td>32-bit twos complement unsigned integer.</td>
+      <td>32-bit unsigned integer.</td>
     </tr>
     <tr>
       <td><code>GLfloat</code></td>

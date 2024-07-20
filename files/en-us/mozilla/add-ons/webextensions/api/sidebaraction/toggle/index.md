@@ -1,18 +1,11 @@
 ---
 title: sidebarAction.toggle()
 slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/toggle
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - sidebarAction
-  - toggle
+page-type: webextension-api-function
 browser-compat: webextensions.api.sidebarAction.toggle
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Toggles the visibility of the sidebar in the active window, if the sidebar belongs to the extension.
 
@@ -22,7 +15,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 browser.sidebarAction.toggle()
 ```
 
@@ -46,7 +39,7 @@ Toggles the sidebar when the user selects an item from the context menu:
 browser.menus.create({
   id: "toggle-sidebar",
   title: "Toggle sidebar",
-  contexts: ["all"]
+  contexts: ["all"],
 });
 
 browser.menus.onClicked.addListener(() => {

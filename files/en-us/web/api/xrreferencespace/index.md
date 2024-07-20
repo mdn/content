@@ -2,27 +2,9 @@
 title: XRReferenceSpace
 slug: Web/API/XRReferenceSpace
 page-type: web-api-interface
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Distances
-  - Interface
-  - Mixed Reality
-  - Offsets
-  - Reference
-  - Spaces
-  - VR
-  - Virtual Reality
-  - WebXR API
-  - WebXR Device API
-  - WebXR\
-  - XR
-  - XRReferenceSpace
-  - matrix
-  - transform
 browser-compat: api.XRReferenceSpace
 ---
+
 {{APIRef("WebXR Device API")}}{{secureContext_header}}
 
 The WebXR Device API's **`XRReferenceSpace`** interface describes the coordinate system for a specific tracked entity or object within the virtual world using a specified tracking behavior. The tracking behavior is defined by the selected [reference space type](#reference_space_types). It expands upon the base class, {{domxref("XRSpace")}}, by adding support for several different tracking behaviors as well as to request a new reference space which describes the offset transform between the tracked object and another location in the world.
@@ -31,11 +13,11 @@ All reference spaces—with the sole exception being bounded reference spaces—
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _`XRReferenceSpace` inherits the properties of {{domxref("EventTarget")}} but defines no additional properties._
 
-## Methods
+## Instance methods
 
 _`XRReferenceSpace` also inherits methods from {{domxref("EventTarget")}} in addition to the following methods._
 
@@ -57,7 +39,7 @@ The types of reference space are listed in the table below, with brief informati
 - `local`
   - : An `XRReferenceSpace` tracking space whose native origin is located near the viewer's position at the time the session was created. The exact position depends on the underlying platform and implementation. The user isn't expected to move much if at all beyond their starting position, and tracking is optimized for this use case. For devices with six degrees of freedom (6DoF) tracking, the `local` reference space tries to keep the origin stable relative to the environment.
 - `local-floor`
-  - : An `XRReferenceSpace` similar to the `local` type, except the starting position is placed in a safe location for the viewer to stand, where the value of the y axis is 0 at floor level. If that floor level isn't known, the {{Glossary("user agent")}} will estimate the floor level. If the estimated floor level is non-zero, the browser is expected to round it such a way as to avoid fingerprinting (likely to the nearest centimeter).
+  - : An `XRReferenceSpace` similar to the `local` type, except the starting position is placed in a safe location for the viewer to stand, where the value of the y axis is 0 at floor level. If that floor level isn't known, the {{Glossary("user agent")}} will estimate the floor level. If the estimated floor level is non-zero, the browser is expected to round it such a way as to avoid [fingerprinting](/en-US/docs/Glossary/Fingerprinting) (likely to the nearest centimeter).
 - `unbounded`
   - : An `XRReferenceSpace` tracking space which allows the user total freedom of movement, possibly over extremely long distances from their origin point. The viewer isn't tracked at all; tracking is optimized for stability around the user's current position, so the native origin may drift as needed to accommodate that need.
 - `viewer`
@@ -81,8 +63,10 @@ The other situation in which you may need to acquire a new reference space is if
 To move or rotate the user's view of the world, you need to change the `XRReferenceSpace` used to represent that viewpoint. However, `XRReferenceSpace` is immutable, so you need to instead create a new reference space representing the changed viewpoint. This is easily done using the {{domxref("XRReferenceSpace.getOffsetReferenceSpace", "getOffsetReferenceSpace()")}} method.
 
 ```js
-let offsetTransform = new XRRigidTransform({x: 2, y: 0, z: 1},
-                                           {x: 0, y: 1, z: 0, w: 1});
+let offsetTransform = new XRRigidTransform(
+  { x: 2, y: 0, z: 1 },
+  { x: 0, y: 0, z: 0, w: 1 },
+);
 xrReferenceSpace = xrReferenceSpace.getOffsetReferenceSpace(offsetTransform);
 ```
 

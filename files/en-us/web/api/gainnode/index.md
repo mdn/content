@@ -2,14 +2,9 @@
 title: GainNode
 slug: Web/API/GainNode
 page-type: web-api-interface
-tags:
-  - API
-  - GainNode
-  - Interface
-  - Reference
-  - Web Audio API
 browser-compat: api.GainNode
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `GainNode` interface represents a change in volume. It is an {{domxref("AudioNode")}} audio-processing module that causes a given gain to be applied to the input data before its propagation to the output. A `GainNode` always has exactly one input and one output, both with the same number of channels.
@@ -50,20 +45,20 @@ The gain is a unitless value, changing with time, that is multiplied to each cor
 - {{domxref("GainNode.GainNode", "GainNode()")}}
   - : Creates and returns a new `GainNode` object. As an alternative, you can use the {{domxref("BaseAudioContext.createGain()")}} factory method; see [Creating an AudioNode](/en-US/docs/Web/API/AudioNode#creating_an_audionode).
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
-- {{domxref("GainNode.gain")}} {{readonlyinline}}
+- {{domxref("GainNode.gain")}} {{ReadOnlyInline}}
   - : An [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} representing the amount of gain to apply. You have to set {{domxref("AudioParam.value")}} or use the methods of `AudioParam` to change the effect of gain.
 
-## Methods
+## Instance methods
 
 _No specific method; inherits methods from its parent, {{domxref("AudioNode")}}_.
 
 ## Example
 
-See [`BaseAudioContext.createGain()`](/en-US/docs/Web/API/BaseAudioContext/createGain#example) for example code showing how to use an `AudioContext` to create a `GainNode`.
+See [`BaseAudioContext.createGain()`](/en-US/docs/Web/API/BaseAudioContext/createGain#examples) for example code showing how to use an `AudioContext` to create a `GainNode`.
 
 ## Specifications
 

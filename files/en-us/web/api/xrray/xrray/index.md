@@ -1,22 +1,20 @@
 ---
-title: XRRay()
+title: "XRRay: XRRay() constructor"
+short-title: XRRay()
 slug: Web/API/XRRay/XRRay
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - WebXR
-  - XR
+status:
+  - experimental
 browser-compat: api.XRRay.XRRay
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`XRRay()`** constructor creates a new {{domxref("XRRay")}} object which is a geometric ray described by an origin point and a direction vector.
 
 ## Syntax
 
-```js
+```js-nolint
 new XRRay()
 new XRRay(origin)
 new XRRay(origin, direction)
@@ -25,11 +23,11 @@ new XRRay(transform)
 
 ### Parameters
 
-- `origin` {{optional_inline}}
+- `origin` {{Optional_Inline}}
   - : A point object defining the 3-dimensional point in space that the ray originates from, in meters. All dimensions are optional, however, if provided, the origin's `w` property must be 1.0. The object is initialized to `{ x: 0.0, y: 0.0, z: 0.0, w: 1.0 }` by default.
-- `direction` {{optional_inline}}
+- `direction` {{Optional_Inline}}
   - : A vector object defining the ray's 3-dimensional directional vector. All dimensions are optional, however, if provided, the direction's `w` property must be 0.0. The object is initialized to: `{ x: 0.0, y: 0.0, z: -1.0, w: 0.0 }` by default.
-- `transform` {{optional_inline}}
+- `transform` {{Optional_Inline}}
   - : An {{domxref("XRRigidTransform")}} object representing the position and orientation of the ray.
 
 ### Return value
@@ -55,21 +53,21 @@ The `XRRay()` constructor allows to creating new rays by either providing an `or
 let ray1 = new XRRay();
 
 // Specifying origin, leaving direction as default
-let ray2 = new XRRay({y: 0.5});
+let ray2 = new XRRay({ y: 0.5 });
 
 // Specifying both, origin and direction
-let origin = {x : 10.0, y : 10.0, z : 10.0, w : 1.0};
-let direction = {x : 10.0, y : 0.0, z : 0.0, w : 0.0};
+let origin = { x: 10.0, y: 10.0, z: 10.0, w: 1.0 };
+let direction = { x: 10.0, y: 0.0, z: 0.0, w: 0.0 };
 let ray3 = new XRRay(origin, direction);
 
 // Using DOMPoint.fromPoint
-let ray4 = new XRRay(DOMPoint.fromPoint(origin),
-                     DOMPoint.fromPoint(direction));
+let ray4 = new XRRay(DOMPoint.fromPoint(origin), DOMPoint.fromPoint(direction));
 
 // Using rigid transform
 let rigidTransform = new XRRigidTransform(
-        DOMPoint.fromPoint(origin),
-        DOMPoint.fromPoint(direction));
+  DOMPoint.fromPoint(origin),
+  DOMPoint.fromPoint(direction),
+);
 let ray5 = new XRRay(rigidTransform);
 ```
 
@@ -84,4 +82,4 @@ let ray5 = new XRRay(rigidTransform);
 ## See also
 
 - {{domxref("DOMPoint")}}
-- {{domxref("DOMPoint.fromPoint()")}}
+- {{domxref("DOMPoint.fromPoint_static", "DOMPoint.fromPoint()")}}

@@ -1,12 +1,11 @@
 ---
 title: Color contrast
 slug: Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast
-tags:
-  - Accessibility
-  - WCAG
-  - contrast
-  - perceivable
+page-type: guide
 ---
+
+{{AccessibilitySidebar}}
+
 The [color contrast](https://www.w3.org/TR/WCAG21/#dfn-contrast-ratio) between background and foreground content (that is, usually text) should be great enough to ensure legibility.
 
 When designing readable interfaces for different vision capabilities, the WCAG guidelines recommend the following contrast ratios:
@@ -40,7 +39,7 @@ div {
 }
 
 .good {
-  background-color: #fae6fa;
+  background-color: #5a80a9;
 }
 
 .bad {
@@ -48,11 +47,18 @@ div {
 }
 ```
 
-Both pieces of text have their default black color. The "good" `<div>` has a light purple background, which makes the text easy to read:
+Both pieces of text have their default black color.
 
-<div class="hidden"><h4 id="example1">example1</h4><pre class="brush: html">    &#x3C;div class="good">
-      Good contrast
-    &#x3C;/div></pre><pre class="brush: css">div {
+### Good Contrast
+
+The "good" `<div>` has a neon blue background, which makes the text easy to read:
+
+```html
+<div class="good">Good contrast</div>
+```
+
+```css
+div {
   font-family: sans-serif;
   text-align: center;
   font-size: 2rem;
@@ -60,20 +66,26 @@ Both pieces of text have their default black color. The "good" `<div>` has a lig
   width: 250px;
   padding: 30px;
   border-radius: 20px;
-  box-shadow: 1px 1px 1px black;
+  box-shadow: 4px 4px 4px black;
 }
 
 .good {
-background-color: #fae6fa;
-}</pre></div>
+  background-color: #5a80a9;
+}
+```
 
-{{EmbedLiveSample('example1', '100%', '100')}}
+{{EmbedLiveSample('Good_Contrast', '100%', '100')}}
+
+### Bad Contrast
 
 The "bad" `<div>` on the other hand has a very dark purple background, which makes the text much harder to read:
 
-<div class="hidden"><h4 id="example2">example2</h4><pre class="brush: html">    &#x3C;div class="bad">
-      Bad contrast
-    &#x3C;/div></pre><pre class="brush: css">div {
+```html
+<div class="bad">Bad contrast</div>
+```
+
+```css
+div {
   font-family: sans-serif;
   text-align: center;
   font-size: 2rem;
@@ -81,14 +93,15 @@ The "bad" `<div>` on the other hand has a very dark purple background, which mak
   width: 250px;
   padding: 30px;
   border-radius: 20px;
-  box-shadow: 1px 1px 1px black;
+  box-shadow: 4px 4px 4px black;
 }
 
 .bad {
-background-color: #400064;
-}</pre></div>
+  background-color: #400064;
+}
+```
 
-{{EmbedLiveSample('example2', '100%', '100')}}
+{{EmbedLiveSample('Bad_Contrast', '100%', '100')}}
 
 ## Solution
 
@@ -96,9 +109,9 @@ When choosing a color scheme for your website, choose foreground and background 
 
 If you are including non-text content such as video or animation, you should follow 1.4.11 (again, see below).
 
-To check your contrast as you make your color choices, use a tool such as WebAIM's [Color Contrast Checker](http://webaim.org/resources/contrastchecker/).
+To check your contrast as you make your color choices, use a tool such as WebAIM's [Color Contrast Checker](https://webaim.org/resources/contrastchecker/).
 
-You can also check color contrast on the fly using Firefox's Developer Tools — see our [Accessibility inspector](/en-US/docs/Tools/Accessibility_inspector) guide, and in particular the section [Check for accessibility issues](/en-US/docs/Tools/Accessibility_inspector#check_for_accessibility_issues). Try using it on the live examples in the description section.
+You can also check color contrast on the fly using Firefox's Developer Tools — see the [Accessibility inspector](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html) guide, and in particular the section [Check for accessibility issues](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#check-for-accessibility-issues). Try using it on the live examples in the description section.
 
 ## Related WCAG success criteria
 

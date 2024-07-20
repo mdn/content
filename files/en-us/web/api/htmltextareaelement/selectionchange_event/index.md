@@ -1,17 +1,13 @@
 ---
-title: 'HTMLTextAreaElement: selectionchange event'
+title: "HTMLTextAreaElement: selectionchange event"
+short-title: selectionchange
 slug: Web/API/HTMLTextAreaElement/selectionchange_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - Selection
-  - Selection API
-  - selectionchange
-  - Experimental
+status:
+  - experimental
 browser-compat: api.HTMLTextAreaElement.selectionchange_event
 ---
+
 {{APIRef}}{{SeeCompatTable}}
 
 The **`selectionchange`** event of the [Selection API](/en-US/docs/Web/API/Selection) is fired when the text selection within an {{HTMLElement("textarea")}} element is changed.
@@ -28,9 +24,9 @@ It is also possible to add a listener on the global `onselectionchange` event ha
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('selectionchange', (event) => {});
+addEventListener("selectionchange", (event) => {});
 
-onselectionchange = (event) => { };
+onselectionchange = (event) => {};
 ```
 
 ## Event type
@@ -44,7 +40,12 @@ The example below shows how to get the text selected in an {{HTMLElement("textar
 ### HTML
 
 ```html
-<div>Enter and select text here:<br><textarea id="mytext" rows="2" cols="20"></textarea></div>
+<div>
+  Enter and select text here:<br /><textarea
+    id="mytext"
+    rows="2"
+    cols="20"></textarea>
+</div>
 <div>selectionStart: <span id="start"></span></div>
 <div>selectionEnd: <span id="end"></span></div>
 <div>selectionDirection: <span id="direction"></span></div>

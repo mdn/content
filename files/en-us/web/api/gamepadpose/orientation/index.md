@@ -1,19 +1,13 @@
 ---
-title: GamepadPose.orientation
+title: "GamepadPose: orientation property"
+short-title: orientation
 slug: Web/API/GamepadPose/orientation
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Gamepad API
-  - GamepadPose
-  - Orientation
-  - Property
-  - Reference
-  - Virtual Reality
-  - WebVR
+status:
+  - experimental
 browser-compat: api.GamepadPose.orientation
 ---
+
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
 The **`orientation`** read-only property of the {{domxref("GamepadPose")}} interface returns the orientation of the {{domxref("Gamepad")}}, as a quarternion value.

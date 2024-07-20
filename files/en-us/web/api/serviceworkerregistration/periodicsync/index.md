@@ -1,19 +1,14 @@
 ---
-title: ServiceWorkerRegistration.periodicSync
+title: "ServiceWorkerRegistration: periodicSync property"
+short-title: periodicSync
 slug: Web/API/ServiceWorkerRegistration/periodicSync
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - PeriodicSyncManager
-  - Property
-  - Reference
-  - Service Workers
-  - ServiceWorkerRegistration
-  - periodicSync
+status:
+  - experimental
 browser-compat: api.ServiceWorkerRegistration.periodicSync
 ---
-{{APIRef("Service Workers API")}}
+
+{{APIRef("Service Workers API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`periodicSync`** read-only property of
 the {{domxref("ServiceWorkerRegistration")}} interface returns a reference to the
@@ -36,11 +31,9 @@ Here is an example from the main script:
 const registration = await navigator.serviceWorker.ready;
 
 // feature detection
-if ('periodicSync' in registration) {
-
+if ("periodicSync" in registration) {
   // Background Periodic Sync functionality
   const periodicSync = registration.periodicSync;
-
 }
 ```
 
@@ -62,5 +55,5 @@ const periodicSync = self.registration.periodicSync;
 
 ## See also
 
-- [Richer offline experiences with the Periodic Background Sync API](https://web.dev/periodic-background-sync/)
+- [Richer offline experiences with the Periodic Background Sync API](https://developer.chrome.com/docs/capabilities/periodic-background-sync)
 - [A Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html)

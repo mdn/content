@@ -1,27 +1,11 @@
 ---
-title: RTCError.errorDetail
+title: "RTCError: errorDetail property"
+short-title: errorDetail
 slug: Web/API/RTCError/errorDetail
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Error
-  - Error code
-  - Media
-  - Property
-  - RTCError
-  - Read-only
-  - Reference
-  - Type
-  - Video
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
-  - details
-  - errorDetail
-  - rtc
 browser-compat: api.RTCError.errorDetail
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCError")}} interface's read-only
@@ -36,7 +20,7 @@ occurred on an {{domxref("RTCPeerConnection")}}. The possible values are:
   - : The connection's {{domxref("RTCDataChannel")}} has failed.
 - `dtls-failure`
   - : The negotiation of the {{Glossary("DTLS")}} connection failed, or the connection was
-    terminated with a fatal error. The error's {{domxref("RTCError.message", "message")}}
+    terminated with a fatal error. The error's {{domxref("DOMException.message", "message")}}
     contains details about the nature of the error. If a fatal error is _received_,
     the error object's {{domxref("RTCError.receivedAlert", "receivedAlert")}} property is
     set to the value of the DTLSL alert received. If, on the other hand, a fatal error was
@@ -58,8 +42,8 @@ occurred on an {{domxref("RTCPeerConnection")}}. The possible values are:
     object's {{domxref("RTCError.sctpCauseCode", "sctpCauseCode")}}. SCTP error cause
     codes 1-13 are defined in the SCTP specification: {{RFC(4960, "", "3.3.10")}}.
 - `sdp-syntax-error`
-  - : The SDP syntax is invalid. The error's {{domxref("RTCError.sdpLineNumber",
-    "sdpLineNumber")}} property indicates the line number within the SDP at which the
+  - : The SDP syntax is invalid. The error's {{domxref("RTCError.sdpLineNumber", "sdpLineNumber")}}
+    property indicates the line number within the SDP at which the
     error was detected.
 
 ## Examples

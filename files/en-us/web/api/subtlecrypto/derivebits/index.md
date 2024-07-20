@@ -1,16 +1,11 @@
 ---
-title: SubtleCrypto.deriveBits()
+title: "SubtleCrypto: deriveBits() method"
+short-title: deriveBits()
 slug: Web/API/SubtleCrypto/deriveBits
 page-type: web-api-instance-method
-tags:
-  - API
-  - Crypto
-  - Method
-  - Reference
-  - SubtleCrypto
-  - deriveBits
 browser-compat: api.SubtleCrypto.deriveBits
 ---
+
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
 The **`deriveBits()`** method of the
@@ -18,7 +13,7 @@ The **`deriveBits()`** method of the
 key.
 
 It takes as its arguments the base key, the derivation algorithm to use, and the length
-of the bit string to derive. It returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+of the bits to derive. It returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 which will be fulfilled with an
 [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
 containing the derived bits.
@@ -37,7 +32,7 @@ for some more detail on these algorithms.
 
 ## Syntax
 
-```js
+```js-nolint
 deriveBits(algorithm, baseKey, length)
 ```
 
@@ -63,8 +58,8 @@ deriveBits(algorithm, baseKey, length)
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-  that fulfills with an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
-  containing the derived bits.
+that fulfills with an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
+containing the derived bits.
 
 ### Exceptions
 
@@ -78,8 +73,7 @@ The promise is rejected when one of the following exceptions are encountered:
     `deriveBits`.
 - `NotSupported` {{domxref("DOMException")}}
   - : Raised when trying to use an algorithm that is either unknown or isn't suitable for
-    derivation, or if the algorithm requested for the derived key doesn't define a key
-    length.
+    derivation.
 
 ## Supported algorithms
 
@@ -93,7 +87,7 @@ See the [Supported algorithms section of the `deriveKey()` documentation](/en-US
 
 In this example Alice and Bob each generate an ECDH key pair.
 
-We then use Alice's private key and Bob's public key to derive a shared secret. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/derive-bits/ecdh.js)
+We then use Alice's private key and Bob's public key to derive a shared secret. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/derive-bits/ecdh.js)
 
 ```js
 async function deriveSharedSecret(privateKey, publicKey) {
@@ -101,10 +95,10 @@ async function deriveSharedSecret(privateKey, publicKey) {
     {
       name: "ECDH",
       namedCurve: "P-384",
-      public: publicKey
+      public: publicKey,
     },
     privateKey,
-    128
+    128,
   );
 
   const buffer = new Uint8Array(sharedSecret, 0, 5);
@@ -122,19 +116,19 @@ async function deriveSharedSecret(privateKey, publicKey) {
 const generateAlicesKeyPair = window.crypto.subtle.generateKey(
   {
     name: "ECDH",
-    namedCurve: "P-384"
+    namedCurve: "P-384",
   },
   false,
-  ["deriveBits"]
+  ["deriveBits"],
 );
 
 const generateBobsKeyPair = window.crypto.subtle.generateKey(
   {
     name: "ECDH",
-    namedCurve: "P-384"
+    namedCurve: "P-384",
   },
   false,
-  ["deriveBits"]
+  ["deriveBits"],
 );
 
 Promise.all([generateAlicesKeyPair, generateBobsKeyPair]).then((values) => {
@@ -153,7 +147,7 @@ Promise.all([generateAlicesKeyPair, generateBobsKeyPair]).then((values) => {
 ### PBKDF2
 
 In this example we ask the user for a password, then use it to derive some bits using
-PBKDF2. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/derive-bits/pbkdf2.js)
+PBKDF2. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/derive-bits/pbkdf2.js)
 
 ```js
 let salt;
@@ -170,7 +164,7 @@ function getKeyMaterial() {
     enc.encode(password),
     { name: "PBKDF2" },
     false,
-    ["deriveBits", "deriveKey"]
+    ["deriveBits", "deriveKey"],
   );
 }
 
@@ -188,11 +182,13 @@ async function getDerivedBits() {
       hash: "SHA-256",
     },
     keyMaterial,
-    256
+    256,
   );
 
   const buffer = new Uint8Array(derivedBits, 0, 5);
-  const derivedBitsValue = document.querySelector(".pbkdf2 .derived-bits-value");
+  const derivedBitsValue = document.querySelector(
+    ".pbkdf2 .derived-bits-value",
+  );
   derivedBitsValue.classList.add("fade-in");
   derivedBitsValue.addEventListener("animationend", () => {
     derivedBitsValue.classList.remove("fade-in");

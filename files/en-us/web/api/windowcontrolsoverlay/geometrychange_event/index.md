@@ -1,16 +1,14 @@
 ---
-title: 'WindowControlsOverlay: geometrychange event'
+title: "WindowControlsOverlay: geometrychange event"
+short-title: geometrychange
 slug: Web/API/WindowControlsOverlay/geometrychange_event
 page-type: web-api-event
-tags:
-  - Event
-  - Reference
-  - Progressive Web Apps
-  - Window Controls Overlay
-  - events
+status:
+  - experimental
 browser-compat: api.WindowControlsOverlay.geometrychange_event
 ---
-{{APIRef("EyeDropper API")}}
+
+{{APIRef("Window Controls Overlay API")}}{{SeeCompatTable}}
 
 The `geometrychange` event is fired when the position, size, or visibility of a Progressive Web App's title bar area changes.
 
@@ -21,9 +19,9 @@ This only applies to Progressive Web Apps installed on desktop operating systems
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('geometrychange', (event) => { })
+addEventListener("geometrychange", (event) => {});
 
-ongeometrychange = (event) => { }
+ongeometrychange = (event) => {};
 ```
 
 ## Event type
@@ -46,9 +44,11 @@ _In addition to the properties listed below, properties from the parent interfac
 Using `addEventListener()`:
 
 ```js
-navigator.windowControlsOverlay.addEventListener('geometrychange', (event) => {
-  const {x, y, width, height} = event.titlebarAreaRect;
-  console.log(`The titlebar area coordinates are x:${x}, y:${y}, width:${width}, height:${height}`);
+navigator.windowControlsOverlay.addEventListener("geometrychange", (event) => {
+  const { x, y, width, height } = event.titlebarAreaRect;
+  console.log(
+    `The titlebar area coordinates are x:${x}, y:${y}, width:${width}, height:${height}`,
+  );
 });
 ```
 
@@ -56,8 +56,10 @@ Using the `ongeometrychange` event handler property:
 
 ```js
 navigator.windowControlsOverlay.ongeometrychange = (event) => {
-  const {x, y, width, height} = event.titlebarAreaRect;
-  console.log(`The titlebar area coordinates are x:${x}, y:${y}, width:${width}, height:${height}`);
+  const { x, y, width, height } = event.titlebarAreaRect;
+  console.log(
+    `The titlebar area coordinates are x:${x}, y:${y}, width:${width}, height:${height}`,
+  );
 };
 ```
 

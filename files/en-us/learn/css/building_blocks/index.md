@@ -1,32 +1,20 @@
 ---
 title: CSS building blocks
 slug: Learn/CSS/Building_blocks
-tags:
-  - Beginner
-  - CSS
-  - Learn
-  - building blocks
+page-type: learn-module
 ---
+
 {{LearnSidebar}}
 
 This module carries on where [CSS first steps](/en-US/docs/Learn/CSS/First_steps) left off — now that you've gained familiarity with the language and its syntax, and got some basic experience using it, it's time to dive a bit deeper. This module looks at the cascade and inheritance, all the selector types we have available, units, sizing, styling backgrounds and borders, debugging, and lots more.
 
 The aim here is to provide you with a toolkit for writing competent CSS and help you understand all the essential theory, before moving on to more specific disciplines like [text styling](/en-US/docs/Learn/CSS/Styling_text) and [CSS layout](/en-US/docs/Learn/CSS/CSS_layout).
 
-> **Callout:**
->
-> #### Looking to become a front-end web developer?
->
-> We have put together a course that includes all the essential information you need to
-> work towards your goal.
->
-> [**Get started**](/en-US/docs/Learn/Front-end_web_developer)
-
 ## Prerequisites
 
 Before starting this module, you should have:
 
-1. Basic familiarity with using computers, and using the Web passively (i.e. just looking at it, consuming the content.)
+1. Basic familiarity with using computers, and using the Web passively (i.e., just looking at it, consuming the content).
 2. A basic work environment set up as detailed in [Installing basic software](/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software), and an understanding of how to create and manage files, as detailed in [Dealing with files](/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files).
 3. Basic familiarity with HTML, as discussed in the [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML) module.
 4. An understanding of the basics of CSS, as discussed in the [CSS first steps](/en-US/docs/Learn/CSS/First_steps) module.
@@ -37,8 +25,6 @@ Before starting this module, you should have:
 
 This module contains the following articles, which cover the most essential parts of the CSS language. Along the way you'll come across plenty of exercises to allow you to test your understanding.
 
-- [Cascade and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-  - : The aim of this lesson is to develop your understanding of some of the most fundamental concepts of CSS — the cascade, specificity, and inheritance — which control how CSS is applied to HTML and how conflicts are resolved.
 - [CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors)
 
   - : There are a wide variety of CSS selectors available, allowing for fine-grained precision when selecting elements to style. In this article and its sub-articles, we'll run through the different types in great detail, seeing how they work. The sub-articles are as follows:
@@ -47,6 +33,14 @@ This module contains the following articles, which cover the most essential part
     - [Attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
     - [Pseudo-classes and pseudo-elements](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
     - [Combinators](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
+
+- [Cascade, specificity, and inheritance](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+
+  - : The aim of this lesson is to develop your understanding of some of the most fundamental concepts of CSS — the cascade, specificity, and inheritance — which control how CSS is applied to HTML and how conflicts are resolved.
+
+- [Cascade layers](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers)
+
+  - : This lesson aims to introduce you to [cascade layers](/en-US/docs/Web/CSS/@layer), a more advanced feature that builds on the fundamental concepts of the [CSS cascade](/en-US/docs/Web/CSS/Cascade) and [CSS specificity](/en-US/docs/Web/CSS/Specificity).
 
 - [The box model](/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
   - : Everything in CSS has a box around it, and understanding these boxes is key to being able to create layouts with CSS, or to align items with other items. In this lesson, we will take a proper look at the CSS _Box Model_, in order that you can move onto more complex layout tasks with an understanding of how it works and the terminology that relates to it.
@@ -64,6 +58,8 @@ This module contains the following articles, which cover the most essential part
   - : In this lesson we will take a look at how certain special elements are treated in CSS. Images, other media, and form elements behave a little differently in terms of your ability to style them with CSS than regular boxes. Understanding what is and isn't possible can save some frustration, and this lesson will highlight some of the main things that you need to know.
 - [Styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)
   - : Styling an HTML table isn't the most glamorous job in the world, but sometimes we all have to do it. This article provides a guide to making HTML tables look good, with some specific table styling techniques highlighted.
+- [Advanced styling effects](/en-US/docs/Learn/CSS/Building_blocks/Advanced_styling_effects)
+  - : This article acts as a box of tricks, providing an introduction to some interesting advanced styling features such as box shadows, blend modes, and filters.
 - [Debugging CSS](/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS)
   - : Sometimes when writing CSS you will encounter an issue where your CSS doesn't seem to be doing what you expect. This article will give you guidance on how to go about debugging a CSS problem, and show you how the DevTools included in all modern browsers can help you find out what is going on.
 - [Organizing your CSS](/en-US/docs/Learn/CSS/Building_blocks/Organizing)
@@ -79,8 +75,3 @@ The following assessments will test your understanding of the CSS covered in the
   - : If you want to make the right impression, writing a letter on nice letterheaded paper can be a really good start. In this assessment, we'll challenge you to create an online template to achieve such a look.
 - [A cool looking box](/en-US/docs/Learn/CSS/Building_blocks/A_cool_looking_box)
   - : Here you'll get some practice in using background and border styling to create an eye-catching box.
-
-## See also
-
-- [Advanced styling effects](/en-US/docs/Learn/CSS/Building_blocks/Advanced_styling_effects)
-  - : This article acts as a box of tricks, providing an introduction to some interesting advanced styling features such as box shadows, blend modes, and filters.

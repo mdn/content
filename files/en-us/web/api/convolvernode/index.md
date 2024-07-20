@@ -2,14 +2,9 @@
 title: ConvolverNode
 slug: Web/API/ConvolverNode
 page-type: web-api-interface
-tags:
-  - API
-  - ConvolverNode
-  - Interface
-  - Reference
-  - Web Audio API
 browser-compat: api.ConvolverNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The `ConvolverNode` interface is an {{domxref("AudioNode")}} that performs a Linear Convolution on a given {{domxref("AudioBuffer")}}, often used to achieve a reverb effect. A `ConvolverNode` always has exactly one input and one output.
@@ -48,7 +43,7 @@ The `ConvolverNode` interface is an {{domxref("AudioNode")}} that performs a Lin
 - {{domxref("ConvolverNode.ConvolverNode()", "ConvolverNode()")}}
   - : Creates a new `ConvolverNode` object instance.
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 
@@ -57,7 +52,7 @@ _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 - {{domxref("ConvolverNode.normalize")}}
   - : A boolean that controls whether the impulse response from the buffer will be scaled by an equal-power normalization when the `buffer` attribute is set, or not.
 
-## Methods
+## Instance methods
 
 _No specific method; inherits methods from its parent, {{domxref("AudioNode")}}_.
 
@@ -71,14 +66,14 @@ The following example shows basic usage of an AudioContext to create a convolver
 let audioCtx = new window.AudioContext();
 
 async function createReverb() {
-    let convolver = audioCtx.createConvolver();
+  let convolver = audioCtx.createConvolver();
 
-    // load impulse response from file
-    let response     = await fetch("path/to/impulse-response.wav");
-    let arraybuffer  = await response.arrayBuffer();
-    convolver.buffer = await audioCtx.decodeAudioData(arraybuffer);
+  // load impulse response from file
+  let response = await fetch("path/to/impulse-response.wav");
+  let arraybuffer = await response.arrayBuffer();
+  convolver.buffer = await audioCtx.decodeAudioData(arraybuffer);
 
-    return convolver;
+  return convolver;
 }
 
 // …

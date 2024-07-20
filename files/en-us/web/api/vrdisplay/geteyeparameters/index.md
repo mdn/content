@@ -1,21 +1,15 @@
 ---
-title: VRDisplay.getEyeParameters()
+title: "VRDisplay: getEyeParameters() method"
+short-title: getEyeParameters()
 slug: Web/API/VRDisplay/getEyeParameters
 page-type: web-api-instance-method
-tags:
-  - API
-  - Deprecated
-  - Deprecated
-  - Method
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-  - getEyeParameters()
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRDisplay.getEyeParameters
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`getEyeParameters()`** method of the {{domxref("VRDisplay")}} interface returns the {{domxref("VREyeParameters")}} object containing the eye parameters for the specified eye.
 
@@ -23,7 +17,7 @@ The **`getEyeParameters()`** method of the {{domxref("VRDisplay")}} interface re
 
 ## Syntax
 
-```js
+```js-nolint
 getEyeParameters(whichEye)
 ```
 
@@ -52,5 +46,4 @@ Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/Web
 
 ## See also
 
-- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.
+- [WebVR API](/en-US/docs/Web/API/WebVR_API)

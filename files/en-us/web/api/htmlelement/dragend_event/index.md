@@ -1,31 +1,25 @@
 ---
-title: 'HTMLElement: dragend event'
+title: "HTMLElement: dragend event"
+short-title: dragend
 slug: Web/API/HTMLElement/dragend_event
 page-type: web-api-event
-tags:
-  - API
-  - DOM
-  - HTMLElement
-  - DragEvent
-  - Event
-  - Reference
-  - Web
-  - drag and drop
-  - dragend
 browser-compat: api.HTMLElement.dragend_event
 ---
+
 {{APIRef}}
 
-The `dragend` event is fired when a drag operation is being ended (by releasing a mouse button or hitting the escape key).
+The `dragend` event is fired when a drag operation ends (by releasing a mouse button or hitting the escape key).
+
+This event is cancelable and may bubble up to the {{domxref("Document")}} and {{domxref("Window")}} objects.
 
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('dragend', (event) => {});
+addEventListener("dragend", (event) => {});
 
-ondragend = (event) => { };
+ondragend = (event) => {};
 ```
 
 ## Event type
@@ -38,26 +32,24 @@ A {{domxref("DragEvent")}}. Inherits from {{domxref("Event")}}.
 
 _In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
 
-- {{domxref('DragEvent.dataTransfer')}} {{readonlyInline}}
-  - : The data that is transferred during a drag and drop interaction.
+- {{domxref('DragEvent.dataTransfer')}} {{ReadOnlyInline}}
+  - : The data that is transferred during a drag-and-drop interaction.
 
 ## Examples
 
-### Resetting opacity on drag end
+### Resetting opacity on dragend
 
 In this example, we have a draggable element inside a container. Try grabbing the element, dragging it, and then releasing it.
 
-We make the element half-transparent while it is being dragged, and listen for the `dragend` event to reset the element's opacity when it is released.
+We make the element half-transparent while it is dragged, and listen for the `dragend` event to reset the element's opacity when it is released.
 
-For a more complete example of drag and drop, see the page for the [`drag`](/en-US/docs/Web/API/HTMLElement/drag_event) event.
+For a complete example of drag and drop, see the page for the [`drag`](/en-US/docs/Web/API/HTMLElement/drag_event) event.
 
 #### HTML
 
 ```html
 <div id="container">
-  <div id="draggable" draggable="true">
-    This div is draggable
-  </div>
+  <div id="draggable" draggable="true">This div is draggable</div>
 </div>
 <div class="dropzone"></div>
 ```
@@ -66,7 +58,7 @@ For a more complete example of drag and drop, see the page for the [`drag`](/en-
 
 ```css
 body {
-  /* Prevent the user selecting text in the example */
+  /* Prevent the user from selecting text in the example */
   user-select: none;
 }
 
@@ -83,7 +75,7 @@ body {
 }
 
 .dragging {
-  opacity: .5;
+  opacity: 0.5;
 }
 ```
 
@@ -124,9 +116,3 @@ source.addEventListener("dragend", (event) => {
   - {{domxref("HTMLElement/dragenter_event", "dragenter")}}
   - {{domxref("HTMLElement/dragleave_event", "dragleave")}}
   - {{domxref("HTMLElement/drop_event", "drop")}}
-
-- This event on other targets:
-
-  - {{domxref("Window")}}: {{domxref("Window/dragend_event", "dragend")}} event
-  - {{domxref("Document")}}: {{domxref("Document/dragend_event", "dragend")}} event
-  - {{domxref("SVGElement")}}: {{domxref("SVGElement/dragend_event", "dragend")}} event

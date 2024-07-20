@@ -1,18 +1,16 @@
 ---
-title: UIEvent.sourceCapabilities
+title: "UIEvent: sourceCapabilities property"
+short-title: sourceCapabilities
 slug: Web/API/UIEvent/sourceCapabilities
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Property
-  - Reference
-  - UIEvent
+status:
+  - experimental
 browser-compat: api.UIEvent.sourceCapabilities
 ---
-{{APIRef("UI Events")}}{{SeeCompatTable}}
 
-The **`UIEvent.sourceCapabilities`** read-only property returns
+{{APIRef("Input Device Capabilities API")}}{{SeeCompatTable}}
+
+The **`sourceCapabilities`** read-only property of the {{domxref("UIEvent")}} interface returns
 an instance of the {{domxref('InputDeviceCapabilities')}} interface which provides
 information about the physical device responsible for generating a touch event. If no
 input device was responsible for the event, it returns `null`.

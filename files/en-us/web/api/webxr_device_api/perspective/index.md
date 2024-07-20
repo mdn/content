@@ -2,22 +2,8 @@
 title: A perspective retrospective for WebXR developers
 slug: Web/API/WebXR_Device_API/Perspective
 page-type: guide
-tags:
-  - 3D
-  - API
-  - AR
-  - Graphics
-  - Guide
-  - Mixed
-  - Reality
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR Device API
-  - XR
-  - augmented
-  - perspective
 ---
+
 {{DefaultAPISidebar("WebXR Device API")}}
 
 Because [WebXR](/en-US/docs/Web/API/WebXR_Device_API) uses [WebGL](/en-US/docs/Web/API/WebGL_API) to render the views that form the 3D environment displayed using the XR hardware, it's easy to think that the perspective-related matters are identical to those found in any WebGL project. This is largely true, but there are a few specific topics that need to be revisited and some minor additional guidelines considered in order to ensure that your app looks right and, more importantly, that your 3D world doesn't cause people to become ill from vertigo or other effects that can be caused when what's being seen doesn't match what the brain expects from reality.
@@ -28,7 +14,7 @@ In this article, we examine scenarios in which the way your project calculates, 
 
 Every WebXR session, represented by an {{domxref("XRSession")}} object, offers a set of options that can be configured by creating a new {{domxref("XRRenderState")}} object and activating the updated state by calling the session's {{domxref("XRSession.updateRenderState", "updateRenderState()")}} method to replace the current configuration.
 
-The majority of these values define the XR device's [viewing frustum](/en-US/docs/Web/API/WebGL_API/WebGL_model_view_projection#the_viewing_frustum); that is, the subset of the device's visual field that should be rendered. The viewing frustum can be represented using four key data points: the field of view angle, the aspect ratio of the rendered image, and the distances to the near and far clipping planes.
+The majority of these values define the XR device's [viewing frustum](/en-US/docs/Web/API/WebGL_API/WebGL_model_view_projection#the_viewing_frustum); that is, the subset of the device's visual field that should be rendered. The viewing frustum can be represented using four key data points: the field of view angle, the {{glossary("aspect ratio")}} of the rendered image, and the distances to the near and far clipping planes.
 
 ### Welcome to the projection matrix
 
@@ -60,10 +46,22 @@ function makePerspectiveMatrix(fieldOfViewInRadians, aspectRatio, near, far) {
   const rangeInv = 1 / (near - far);
 
   return [
-    f / aspectRatio, 0,                          0,   0,
-    0,               f,                          0,   0,
-    0,               0,    (near + far) * rangeInv,  -1,
-    0,               0,  near * far * rangeInv * 2,   0
+    f / aspectRatio,
+    0,
+    0,
+    0,
+    0,
+    f,
+    0,
+    0,
+    0,
+    0,
+    (near + far) * rangeInv,
+    -1,
+    0,
+    0,
+    near * far * rangeInv * 2,
+    0,
   ];
 }
 ```

@@ -1,23 +1,18 @@
 ---
-title: MediaStreamAudioDestinationNode()
+title: "MediaStreamAudioDestinationNode: MediaStreamAudioDestinationNode() constructor"
+short-title: MediaStreamAudioDestinationNode()
 slug: Web/API/MediaStreamAudioDestinationNode/MediaStreamAudioDestinationNode
 page-type: web-api-constructor
-tags:
-  - API
-  - Audio
-  - Constructor
-  - MediaStreamAudioDestinationNode
-  - Reference
-  - Web Audio API
 browser-compat: api.MediaStreamAudioDestinationNode.MediaStreamAudioDestinationNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`MediaStreamAudioDestinationNode()`** constructor of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) creates a new {{domxref("MediaStreamAudioDestinationNode")}} object instance.
 
 ## Syntax
 
-```js
+```js-nolint
 new MediaStreamAudioDestinationNode(context)
 new MediaStreamAudioDestinationNode(context, options)
 ```

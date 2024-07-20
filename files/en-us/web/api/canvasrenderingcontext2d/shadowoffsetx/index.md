@@ -1,15 +1,11 @@
 ---
-title: CanvasRenderingContext2D.shadowOffsetX
+title: "CanvasRenderingContext2D: shadowOffsetX property"
+short-title: shadowOffsetX
 slug: Web/API/CanvasRenderingContext2D/shadowOffsetX
 page-type: web-api-instance-property
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Property
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.shadowOffsetX
 ---
+
 {{APIRef}}
 
 The
@@ -19,8 +15,7 @@ horizontally.
 
 > **Note:** Shadows are only drawn if the
 > {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}} property is set to
-> a non-transparent value. One of the {{domxref("CanvasRenderingContext2D.shadowBlur",
-    "shadowBlur")}}, `shadowOffsetX`, or
+> a non-transparent value. One of the {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}}, `shadowOffsetX`, or
 > {{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}} properties must
 > be non-zero, as well.
 
@@ -47,16 +42,16 @@ of 10.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Shadow
-ctx.shadowColor = 'red';
+ctx.shadowColor = "red";
 ctx.shadowOffsetX = 25;
 ctx.shadowBlur = 10;
 
 // Rectangle
-ctx.fillStyle = 'blue';
+ctx.fillStyle = "blue";
 ctx.fillRect(20, 20, 150, 100);
 ```
 

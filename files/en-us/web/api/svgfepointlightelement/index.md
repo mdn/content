@@ -2,21 +2,16 @@
 title: SVGFEPointLightElement
 slug: Web/API/SVGFEPointLightElement
 page-type: web-api-interface
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGFEPointLightElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGFEPointLightElement`** interface corresponds to the {{SVGElement("fePointLight")}} element.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
 
@@ -27,7 +22,7 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 - {{domxref("SVGFEPointLightElement.z")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedNumber")}} corresponding to the {{SVGAttr("z")}} attribute of the given element.
 
-## Methods
+## Instance methods
 
 _This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGElement")}}._
 

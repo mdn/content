@@ -1,20 +1,14 @@
 ---
-title: XRRay.origin
+title: "XRRay: origin property"
+short-title: origin
 slug: Web/API/XRRay/origin
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Experimental
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR Device API
+status:
+  - experimental
 browser-compat: api.XRRay.origin
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The _read-only_ **`origin`** property of the {{DOMxRef("XRRay")}} interface is a {{domxref("DOMPointReadOnly")}} representing the 3-dimensional point in space that the ray originates from, in meters.
 
@@ -29,8 +23,8 @@ A {{domxref("DOMPointReadOnly")}} object.
 The `origin` property contains the 3-dimensional point in space that the ray originates from, in meters.
 
 ```js
-let origin = {x : 10.0, y : 10.0, z : 10.0, w : 1.0};
-let direction = {x : 10.0, y : 0.0, z : 0.0, w : 0.0};
+let origin = { x: 10.0, y: 10.0, z: 10.0, w: 1.0 };
+let direction = { x: 10.0, y: 0.0, z: 0.0, w: 0.0 };
 let ray = new XRRay(origin, direction);
 
 ray.origin;

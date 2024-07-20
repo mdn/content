@@ -1,26 +1,11 @@
 ---
-title: RTCIceCandidateStats.url
+title: "RTCIceCandidateStats: url property"
+short-title: url
 slug: Web/API/RTCIceCandidateStats/url
 page-type: web-api-instance-property
-tags:
-  - API
-  - Candidate
-  - Connection
-  - Connectivity
-  - ICE
-  - Network
-  - Networking
-  - Property
-  - RTCIceCandidateStats
-  - Reference
-  - Statistics
-  - Stats
-  - URL
-  - WebRTC
-  - WebRTC API
-  - rtc
 browser-compat: api.RTCIceCandidateStats.url
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidateStats")}} dictionary's

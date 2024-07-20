@@ -1,11 +1,12 @@
 ---
 title: cursor
 slug: Web/SVG/Attribute/cursor
-tags:
-  - SVG
-  - SVG Attribute
-browser-compat: svg.attributes.presentation.cursor
+page-type: svg-attribute
+browser-compat: svg.global_attributes.cursor
 ---
+
+{{SVGRef}}
+
 [SVG Attribute reference home](/en-US/docs/Web/SVG/Attribute)
 
 The `cursor` attribute specifies the mouse cursor displayed when the mouse pointer is over an element.

@@ -1,18 +1,11 @@
 ---
-title: SpeechSynthesisUtterance.volume
+title: "SpeechSynthesisUtterance: volume property"
+short-title: volume
 slug: Web/API/SpeechSynthesisUtterance/volume
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SpeechSynthesisUtterance
-  - Volume
-  - Web Speech API
-  - speech
-  - synthesis
 browser-compat: api.SpeechSynthesisUtterance.volume
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`volume`** property of the {{domxref("SpeechSynthesisUtterance")}} interface gets and sets the volume that the utterance will be spoken at.
@@ -30,9 +23,9 @@ If [SSML](https://www.w3.org/TR/speech-synthesis/) is used, this value will be o
 ```js
 const synth = window.speechSynthesis;
 
-const inputForm = document.querySelector('form');
-const inputTxt = document.querySelector('input');
-const voiceSelect = document.querySelector('select');
+const inputForm = document.querySelector("form");
+const inputTxt = document.querySelector("input");
+const voiceSelect = document.querySelector("select");
 
 const voices = synth.getVoices();
 
@@ -42,8 +35,9 @@ inputForm.onsubmit = (event) => {
   event.preventDefault();
 
   const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-  const selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
-  for (let i = 0; i < voices.length ; i++) {
+  const selectedOption =
+    voiceSelect.selectedOptions[0].getAttribute("data-name");
+  for (let i = 0; i < voices.length; i++) {
     if (voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
     }
@@ -51,7 +45,7 @@ inputForm.onsubmit = (event) => {
   utterThis.volume = 0.5;
   synth.speak(utterThis);
   inputTxt.blur();
-}
+};
 ```
 
 ## Specifications

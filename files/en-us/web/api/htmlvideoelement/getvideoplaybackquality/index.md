@@ -1,24 +1,11 @@
 ---
-title: HTMLVideoElement.getVideoPlaybackQuality()
+title: "HTMLVideoElement: getVideoPlaybackQuality() method"
+short-title: getVideoPlaybackQuality()
 slug: Web/API/HTMLVideoElement/getVideoPlaybackQuality
 page-type: web-api-instance-method
-tags:
-  - API
-  - Frames
-  - HTML DOM
-  - HTMLVideoElement
-  - Media
-  - Media Playback Quality
-  - Media Playback Quality API
-  - Method
-  - Playback
-  - Quality
-  - Reference
-  - Time
-  - Video
-  - getVideoPlaybackQuality
 browser-compat: api.HTMLVideoElement.getVideoPlaybackQuality
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **{{domxref("HTMLVideoElement")}}** method
@@ -30,7 +17,7 @@ The data returned can be used to evaluate the quality of the video stream.
 
 ## Syntax
 
-```js
+```js-nolint
 getVideoPlaybackQuality()
 ```
 

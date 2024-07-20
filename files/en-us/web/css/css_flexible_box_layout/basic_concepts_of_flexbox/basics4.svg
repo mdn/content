@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" width="1307.569" height="667.73" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round" viewBox="0 0 980.8 500.86">
+  <defs>
+    <path id="a" d="M39.974 80.23h899.403V459.98H39.974z" />
+  </defs>
+  <path fill="#fff" d="M0 0h980.8v500.86H0z" />
+  <path fill="#4f79eb" d="M59.96 100.217h859.43v99.934H59.96z" /><text fill="#fff" font-family="Helvetica" font-size="60" transform="translate(454.126 100.217)">
+    <tspan x="23.289" y="58" textLength="33.369">a</tspan>
+  </text>
+  <path fill="#4f79eb" d="M59.96 220.138h859.43v99.934H59.96z" /><text fill="#fff" font-family="Helvetica" font-size="60" transform="translate(474.113 220.138)">
+    <tspan x="6.087" y="58" textLength="33.369">b</tspan>
+  </text>
+  <path fill="#4f79eb" d="M59.96 340.058h859.43v99.934H59.96z" /><text fill="#fff" font-family="Helvetica" font-size="60" transform="translate(454.126 340.058)">
+    <tspan x="27.758" y="58" textLength="30">c</tspan>
+  </text>
+  <mask id="b" width="905.404" height="385.748" x="36.974" y="77.231" maskUnits="userSpaceOnUse">
+    <path fill="#fff" d="M36.974 77.231h905.404v385.748H36.974z" />
+    <use xlink:href="#a" fill-rule="evenodd" />
+  </mask>
+  <use xlink:href="#a" fill="none" stroke="#000" stroke-dasharray="4" stroke-linecap="butt" stroke-width="6" mask="url(#b)" />
+  <path fill="none" stroke="#000" stroke-linecap="butt" stroke-width="2" d="M930.377 39.974H759.496" />
+  <path d="m927.377 46.974 12-7-12-7z" /><text font-family="Helvetica" font-size="33" transform="translate(219.854 19.987)">
+    <tspan x="0" y="32" textLength="515.351">Cross Axis - flex-direction: column</tspan>
+  </text>
+  <path fill="none" stroke="#000" stroke-linecap="butt" stroke-width="2" d="M48.978 40.33c14.029-.056 150.889-.591 150.889-.591" />
+  <path d="m51.95 33.318-11.972 7.046 12.027 6.953z" />
+</svg>

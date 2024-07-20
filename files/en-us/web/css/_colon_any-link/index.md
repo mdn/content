@@ -1,18 +1,10 @@
 ---
-title: ':any-link'
+title: ":any-link"
 slug: Web/CSS/:any-link
-tags:
-  - ':any-link'
-  - CSS
-  - Layout
-  - Links
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
-  - hyperlinks
+page-type: css-pseudo-class
 browser-compat: css.selectors.any-link
 ---
+
 {{CSSRef}}
 
 The **`:any-link`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selector represents an element that acts as the source anchor of a hyperlink, independent of whether it has been visited. In other words, it matches every {{HTMLElement("a")}} or {{HTMLElement("area")}} element that has an `href` attribute. Thus, it matches all elements that match {{cssxref(":link")}} or {{cssxref(":visited")}}.
@@ -21,8 +13,10 @@ The **`:any-link`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CS
 
 ## Syntax
 
-```
-:any-link
+```css
+:any-link {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -30,8 +24,8 @@ The **`:any-link`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CS
 ### HTML
 
 ```html
-<a href="https://example.com">External link</a><br>
-<a href="#">Internal target link</a><br>
+<a href="https://example.com">External link</a><br />
+<a href="#">Internal target link</a><br />
 <a>Placeholder link (won't get styled)</a>
 ```
 
@@ -65,7 +59,7 @@ a:-webkit-any-link {
 ## See also
 
 - [Creating hyperlinks](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- Matches HTML elements: [`<a>`](/en-US/docs/Web/HTML/Element/a) and [`<area>`](/en-US/docs/Web/HTML/Element/area) with an {{htmlattrxref("href", "a")}} attribute
+- Matches HTML elements: [`<a>`](/en-US/docs/Web/HTML/Element/a) and [`<area>`](/en-US/docs/Web/HTML/Element/area) with an [`href`](/en-US/docs/Web/HTML/Element/a#href) attribute
 - Related CSS selectors:
 
   - [`:visited`](/en-US/docs/Web/CSS/:visited)

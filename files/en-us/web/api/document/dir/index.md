@@ -1,15 +1,11 @@
 ---
-title: Document.dir
+title: "Document: dir property"
+short-title: dir
 slug: Web/API/Document/dir
 page-type: web-api-instance-property
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
 browser-compat: api.Document.dir
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The **`Document.dir`** property is a string

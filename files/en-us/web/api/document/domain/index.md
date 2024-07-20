@@ -1,16 +1,13 @@
 ---
-title: Document.domain
+title: "Document: domain property"
+short-title: domain
 slug: Web/API/Document/domain
 page-type: web-api-instance-property
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.Document.domain
 ---
+
 {{ApiRef}} {{Deprecated_Header}}
 
 The **`domain`** property of the {{domxref("Document")}}
@@ -20,6 +17,11 @@ document, as used by the [same-origin policy](/en-US/docs/Web/Security/Same-orig
 ## Value
 
 A string.
+
+### Exceptions
+
+- `SecurityError` {{domxref("DOMException")}}
+  - : Use of this feature was blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 
 ## Examples
 
@@ -39,7 +41,7 @@ there are some exceptions:
 
 - If the page has an opaque {{glossary("origin")}}, e.g. for a page with a [data URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs), then it will
   return the empty string.
-- If the `document.domain` [setter](#setter) has been used, then
+- If the `document.domain` [setter](#setting_the_domain) has been used, then
   it will return the value that was set.
 
 Although the getter is not dangerous in the same way that the setter is, it is likely
@@ -54,12 +56,12 @@ For the URL `https://developer.mozilla.org/en-US/docs/Web`,
 `currentHostname` is also the string "`developer.mozilla.org`".
 Other alternatives that provide slightly different information are
 {{domxref("Location.host")}}, which includes the port, and
-{{domxref("origin")}}, which provides the full origin.
+{{domxref("Window.origin")}}, which provides the full origin.
 
 ### Setting the domain
 
 ```js
-document.domain = domainString
+document.domain = domainString;
 ```
 
 The setter for this property can be used to _change_ a page's
@@ -116,8 +118,8 @@ blanket exposure of all data caused by `document.domain`.
 The setter will throw a "`SecurityError`" {{domxref("DOMException")}} in
 several cases:
 
-- The {{httpheader('Feature-Policy/document-domain','document-domain')}}
-  {{HTTPHeader("Feature-Policy")}} is disabled.
+- The {{httpheader('Permissions-Policy/document-domain','document-domain')}}
+  {{HTTPHeader("Permissions-Policy")}} is disabled.
 - The document is inside a sandboxed {{htmlelement("iframe")}}.
 - The document has no {{glossary("browsing context")}}.
 - The document's [effective domain](https://html.spec.whatwg.org/multipage/origin.html#concept-origin-effective-domain) is `null`.
@@ -154,4 +156,4 @@ Affected APIs include (but are not limited to):
 - [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)
 - {{domxref("Location.hostname")}}
 - {{domxref("Location.host")}}
-- {{domxref("origin")}}
+- {{domxref("Window.origin")}}

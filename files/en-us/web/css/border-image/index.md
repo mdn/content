@@ -1,14 +1,10 @@
 ---
 title: border-image
 slug: Web/CSS/border-image
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - recipe:css-shorthand-property
+page-type: css-shorthand-property
 browser-compat: css.properties.border-image
 ---
+
 {{CSSRef}}
 
 The **`border-image`** [CSS](/en-US/docs/Web/CSS) property draws an image around a given element. It replaces the element's regular [border](/en-US/docs/Web/CSS/border).
@@ -71,8 +67,8 @@ The `border-image` property may be specified with anywhere from one to five of t
 
 Assistive technology cannot parse border images. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.
 
-- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_%e2%80%94_providing_text_alternatives_for_non-text_content)
-- [Understanding Success Criterion 1.1.1  | Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
+- [MDN Understanding WCAG, Guideline 1.1 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
+- [Understanding Success Criterion 1.1.1 | Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
 ## Formal definition
 
@@ -93,7 +89,9 @@ In this example, we will apply a diamond pattern to an element's borders. The so
 #### HTML
 
 ```html
-<div id="bitmap">This element is surrounded by a bitmap-based border image!</div>
+<div id="bitmap">
+  This element is surrounded by a bitmap-based border image!
+</div>
 ```
 
 #### CSS
@@ -108,12 +106,8 @@ To match the size of a single diamond, we will use a value of 81 divided by 3, o
   margin: 30px;
   padding: 10px;
 
-  border-image:
-      url("border.png")  /* source */
-      27 /                    /* slice */
-      36px 28px 18px 8px /    /* width */
-      18px 14px 9px 4px       /* outset */
-      round;                  /* repeat */
+  border-image: url("border.png") 27 / 36px 28px 18px 8px / 18px 14px 9px 4px
+    round;
 }
 ```
 
@@ -126,7 +120,9 @@ To match the size of a single diamond, we will use a value of 81 divided by 3, o
 #### HTML
 
 ```html
-<div id="gradient">This element is surrounded by a gradient-based border image!</div>
+<div id="gradient">
+  This element is surrounded by a gradient-based border image!
+</div>
 ```
 
 #### CSS
@@ -144,6 +140,40 @@ To match the size of a single diamond, we will use a value of 81 divided by 3, o
 
 {{EmbedLiveSample('Gradient')}}
 
+### Rounded borders
+
+{{cssxref("border-radius")}} has no effect on the border image. This is because {{cssxref("border-image-outset")}} is able to place the image outside the border box, so it doesn't make sense for the border image to be clipped by the border area. To create rounded borders when using a border image, you should create the image itself with rounded corners, or, in the case of a gradient, draw it as the background instead. Below, we show one approach to do this, which is to use two {{cssxref("background-image")}}s: one that extends the border box, and another for the padding box.
+
+#### HTML
+
+```html
+<div id="rounded">
+  This element is surrounded by a border image with rounded corners!
+</div>
+```
+
+#### CSS
+
+```css
+#rounded {
+  width: 200px;
+  /* Use transparent so the background image is visible */
+  border: 10px solid transparent;
+  padding: 20px;
+  border-radius: 20px;
+  background-image: linear-gradient(white, white),
+    linear-gradient(to right, cyan, lime);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('rounded_borders')}}
+
+> **Note:** There is a new `{{cssxref("background-clip")}}: border-area` value [being proposed](https://github.com/w3c/csswg-drafts/issues/9456) to address this use case.
+
 ## Specifications
 
 {{Specifications}}
@@ -160,3 +190,4 @@ To match the size of a single diamond, we will use a value of 81 divided by 3, o
 - {{cssxref("background-image")}}
 - {{cssxref("url", "url()")}} function
 - Gradient functions: {{CSSxRef("gradient/conic-gradient", "conic-gradient()")}}, {{CSSxRef("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}, {{CSSxRef("gradient/linear-gradient", "linear-gradient()")}}, {{CSSxRef("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{CSSxRef("gradient/radial-gradient", "radial-gradient()")}}, {{CSSxRef("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
+- [Border images in CSS: A key focus area for Interop 2023](/en-US/blog/border-images-interop-2023/) on MDN blog (2023)

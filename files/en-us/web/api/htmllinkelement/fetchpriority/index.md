@@ -1,35 +1,32 @@
 ---
-title: HTMLLinkElement.fetchPriority
+title: "HTMLLinkElement: fetchPriority property"
+short-title: fetchPriority
 slug: Web/API/HTMLLinkElement/fetchPriority
 page-type: web-api-instance-property
-tags:
-  - API
-  - Element
-  - HTMLLinkElement
-  - Link
-  - Preload API
-  - Property
-  - Reference
-  - fetchPriority
 browser-compat: api.HTMLLinkElement.fetchPriority
 ---
-{{SeeCompatTable}}{{APIRef("HTML DOM")}}
+
+{{APIRef("HTML DOM")}}
 
 The **`fetchPriority`** property of the
 {{domxref("HTMLLinkElement")}} interface represents a hint given to the browser
 on how it should prioritize the preload of the given resource relative to other
-resources of the same type.
+resources of the same
+[type](/en-US/docs/Web/HTML/Attributes/rel/preload#what_types_of_content_can_be_preloaded).
 
 ## Value
 
 A string representing the priority hint. Possible values are:
 
-- **`high`**: Fetch the preload at a high priority relative to other resources
-  of the same type.
-- **`low`**: Fetch the image at a low priority relative to other resources of
-  the same type.
-- **`auto`**: Default mode, which indicates no preference for
-  the fetch priority. The browser decides what is best for the user.
+- `high`
+  - : Fetch the preload resource at a high priority relative to other resources
+    of the same type.
+- `low`
+  - : Fetch the preload resource at a low priority relative to other resources of
+    the same type.
+- `auto`
+  - : Default mode, which indicates no preference for
+    the fetch priority. The browser decides what is best for the user.
 
 The `fetchPriority` property allows you to signal high or low priority preload
 fetches. This can be useful when applied to {{HTMLElement("link")}} elements
@@ -61,3 +58,8 @@ document.head.appendChild(preloadLink);
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("HTMLImageElement.fetchPriority")}}
+- {{domxref("HTMLScriptElement.fetchPriority")}}

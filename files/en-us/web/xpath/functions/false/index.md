@@ -1,25 +1,24 @@
 ---
-title: 'false'
+title: "false"
 slug: Web/XPath/Functions/false
-tags:
-  - XSLT
-  - XSLT_Reference
+page-type: xpath-function
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}
 
 The `false` function returns boolean false.
 
-### Syntax
+## Syntax
 
-```
+```plain
 false()
 ```
 
-### Returns
+### Return value
 
 Boolean `false`.
 
-### Notes
+## Description
 
 This function is useful part of a comparison:
 
@@ -29,10 +28,10 @@ This function is useful part of a comparison:
 </xsl:if>
 ```
 
-### Defined
+## Specifications
 
 [XPath 1.0 4.3](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-false)
 
-### Gecko support
+## Gecko support
 
 Supported.

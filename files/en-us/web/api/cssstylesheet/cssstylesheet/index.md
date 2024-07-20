@@ -1,14 +1,11 @@
 ---
-title: CSSStyleSheet()
+title: "CSSStyleSheet: CSSStyleSheet() constructor"
+short-title: CSSStyleSheet()
 slug: Web/API/CSSStyleSheet/CSSStyleSheet
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - CSSStyleSheet
 browser-compat: api.CSSStyleSheet.CSSStyleSheet
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`CSSStyleSheet()`** constructor creates a new {{domxref("CSSStyleSheet")}} object which represents a single [Stylesheet](/en-US/docs/Glossary/Stylesheet).
@@ -20,7 +17,7 @@ A constructed stylesheet can be shared between a document and its shadow DOM sub
 
 ## Syntax
 
-```js
+```js-nolint
 new CSSStyleSheet()
 new CSSStyleSheet(options)
 ```
@@ -43,8 +40,8 @@ new CSSStyleSheet(options)
 In the following example, a new {{domxref("CSSStyleSheet")}} is constructed with a media rule of `"print"`.
 Printing {{domxref("StyleSheet.media")}} to the console returns a {{domxref("MediaList")}} with a single entry for this print rule.
 
-```css
-let stylesheet = new CSSStyleSheet({media: 'print'});
+```js
+let stylesheet = new CSSStyleSheet({ media: "print" });
 console.log(stylesheet.media);
 ```
 
@@ -56,15 +53,15 @@ The code below shows the sheet being constructed and then {{domxref("CSSStyleShe
 // Create an empty "constructed" stylesheet
 const sheet = new CSSStyleSheet();
 // Apply a rule to the sheet
-sheet.replaceSync('a { color: red; }');
+sheet.replaceSync("a { color: red; }");
 ```
 
 We then create a {{domxref("ShadowRoot")}} and pass the sheet object to the {{domxref("ShadowRoot.adoptedStyleSheets")}} property inside an array.
 
 ```js
 // Create an element in the document and then create a shadow root:
-const node = document.createElement('div');
-const shadow = node.attachShadow({ mode: 'open' });
+const node = document.createElement("div");
+const shadow = node.attachShadow({ mode: "open" });
 
 //Adopt the sheet into the shadow DOM
 shadow.adoptedStyleSheets = [sheet];
@@ -74,8 +71,8 @@ We can modify the stylesheets after they have been added to the array.
 Below we append a new rule to the same sheet using {{domxref("CSSStyleSheet.insertRule()")}}.
 
 ```js
- sheet.insertRule("* { background-color: blue; }");
- // The document will now have blue background.
+sheet.insertRule("* { background-color: blue; }");
+// The document will now have blue background.
 ```
 
 The same sheet can be shared with multiple shadow subtrees in the same document.
@@ -91,6 +88,6 @@ For more examples see {{domxref("ShadowRoot.adoptedStyleSheets")}}.
 
 ## See also
 
-- [Constructable Stylesheets](https://web.dev/constructable-stylesheets/) (web.dev)
-- [Using the Shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM)
+- [Constructable Stylesheets](https://web.dev/articles/constructable-stylesheets) (web.dev)
+- [Using the Shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM)
 - [construct-style-sheets-polyfill](https://www.npmjs.com/package/construct-style-sheets-polyfill)

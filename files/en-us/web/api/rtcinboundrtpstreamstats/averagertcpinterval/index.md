@@ -1,23 +1,11 @@
 ---
-title: RTCInboundRtpStreamStats.averageRtcpInterval
+title: "RTCInboundRtpStreamStats: averageRtcpInterval property"
+short-title: averageRtcpInterval
 slug: Web/API/RTCInboundRtpStreamStats/averageRtcpInterval
 page-type: web-api-instance-property
-tags:
-  - API
-  - Packet
-  - Property
-  - RTCInboundRtpStreamStats
-  - RTCP
-  - RTP
-  - Reference
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - averageRtcpInterval
-  - rate
 browser-compat: api.RTCInboundRtpStreamStats.averageRtcpInterval
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`averageRtcpInterval`** property

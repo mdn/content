@@ -1,19 +1,19 @@
 ---
 title: all
 slug: Web/CSS/all
-tags:
-  - CSS
-  - CSS Cascade
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-shorthand-property
 browser-compat: css.properties.all
 ---
+
 {{CSSRef}}
 
 The **`all`** [shorthand](/en-US/docs/Web/CSS/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property resets all of an element's properties except {{cssxref("unicode-bidi")}}, {{cssxref("direction")}}, and [CSS Custom Properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties). It can set properties to their initial or inherited values, or to the values specified in another cascade layer or stylesheet origin.
 
 {{EmbedInteractiveExample("pages/css/all.html")}}
+
+## Constituent properties
+
+This property is a shorthand for all CSS properties except for {{cssxref("unicode-bidi")}}, {{cssxref("direction")}}, and [custom properties](/en-US/docs/Web/CSS/Using_CSS_custom_properties).
 
 ## Syntax
 
@@ -33,7 +33,7 @@ The `all` property is specified as one of the CSS global keyword values. Note th
 - {{cssxref("initial")}}
   - : Specifies that all the element's properties should be changed to their [initial values](/en-US/docs/Web/CSS/initial_value).
 - {{cssxref("inherit")}}
-  - : Specifies that all the element's properties should be changed to their [inherited values](/en-US/docs/Web/CSS/inheritance).
+  - : Specifies that all the element's properties should be changed to their [inherited values](/en-US/docs/Web/CSS/Inheritance).
 - {{cssxref("unset")}}
   - : Specifies that all the element's properties should be changed to their inherited values if they inherit by default, or to their initial values if not.
 - {{cssxref("revert")}}
@@ -56,7 +56,7 @@ The `all` property is specified as one of the CSS global keyword values. Note th
 
 In this example, the CSS file contains styling for the {{HTMLElement("blockquote")}} element in addition to some styling for the parent `<body>` element. Various outputs in the Results subsection demonstrate how the styling of the `<blockquote>` element is affected when different values are applied to the `all` property inside the `blockquote` rule.
 
-#### HTML
+### HTML
 
 ```html
 <blockquote id="quote">
@@ -65,12 +65,12 @@ In this example, the CSS file contains styling for the {{HTMLElement("blockquote
 Phasellus eget velit sagittis.
 ```
 
-#### CSS
+### CSS
 
 ```css
 body {
   font-size: small;
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
   color: blue;
   margin: 0;
   padding: 0;
@@ -82,17 +82,27 @@ blockquote {
 }
 ```
 
-#### Results
+### Results
 
 #### A. No `all` property
 
 ```html hidden
-<blockquote id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote> Phasellus eget velit sagittis.
+<blockquote id="quote">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</blockquote>
+Phasellus eget velit sagittis.
 ```
 
 ```css hidden
-body { font-size: small; background-color: #F0F0F0; color:blue; }
-blockquote { background-color: skyblue;  color: red; }
+body {
+  font-size: small;
+  background-color: #f0f0f0;
+  color: blue;
+}
+blockquote {
+  background-color: skyblue;
+  color: red;
+}
 ```
 
 {{EmbedLiveSample("a._no_all_property", "200", "125")}}
@@ -102,13 +112,23 @@ This is the scenario in which no `all` property is set inside the `blockquote` r
 #### B. `all: initial`
 
 ```html hidden
-<blockquote id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote> Phasellus eget velit sagittis.
+<blockquote id="quote">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</blockquote>
+Phasellus eget velit sagittis.
 ```
 
 ```css hidden
-body { font-size: small; background-color: #F0F0F0; color:blue; }
-blockquote { background-color: skyblue;  color: red; }
-blockquote { all: initial; }
+body {
+  font-size: small;
+  background-color: #f0f0f0;
+  color: blue;
+}
+blockquote {
+  background-color: skyblue;
+  color: red;
+  all: initial;
+}
 ```
 
 {{EmbedLiveSample("b._all_initial", "200", "125")}}
@@ -118,13 +138,23 @@ With the `all` property set to `initial` in the `blockquote` rule, the {{HTMLEle
 #### C. `all: inherit`
 
 ```html hidden
-<blockquote id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote> Phasellus eget velit sagittis.
+<blockquote id="quote">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</blockquote>
+Phasellus eget velit sagittis.
 ```
 
 ```css hidden
-body { font-size: small; background-color: #F0F0F0; color:blue; }
-blockquote { background-color: skyblue; color: red; }
-blockquote { all: inherit; }
+body {
+  font-size: small;
+  background-color: #f0f0f0;
+  color: blue;
+}
+blockquote {
+  background-color: skyblue;
+  color: red;
+  all: inherit;
+}
 ```
 
 {{EmbedLiveSample("c._all_inherit", "200", "125")}}
@@ -134,13 +164,23 @@ In this case, the {{HTMLElement("blockquote")}} element doesn't use the browser 
 #### D. `all: unset`
 
 ```html hidden
-<blockquote id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote> Phasellus eget velit sagittis.
+<blockquote id="quote">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</blockquote>
+Phasellus eget velit sagittis.
 ```
 
 ```css hidden
-body { font-size: small; background-color: #F0F0F0; color:blue; }
-blockquote { background-color: skyblue;  color: red; }
-blockquote { all: unset; }
+body {
+  font-size: small;
+  background-color: #f0f0f0;
+  color: blue;
+}
+blockquote {
+  background-color: skyblue;
+  color: red;
+  all: unset;
+}
 ```
 
 {{EmbedLiveSample("d._all_unset", "200", "125")}}
@@ -150,13 +190,23 @@ When the `unset` value is applied to the `all` property in the `blockquote` rule
 #### E. `all: revert`
 
 ```html hidden
-<blockquote id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote> Phasellus eget velit sagittis.
+<blockquote id="quote">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</blockquote>
+Phasellus eget velit sagittis.
 ```
 
 ```css hidden
-body { font-size: small; background-color: #F0F0F0; color:blue; }
-blockquote { background-color: skyblue;  color: red; }
-blockquote { all: revert; }
+body {
+  font-size: small;
+  background-color: #f0f0f0;
+  color: blue;
+}
+blockquote {
+  background-color: skyblue;
+  color: red;
+  all: revert;
+}
 ```
 
 {{EmbedLiveSample("e._all_revert", "200", "125")}}
@@ -166,13 +216,23 @@ When the `all` property is set to `revert` in the `blockquote` rule, the `blockq
 #### F. `all: revert-layer`
 
 ```html hidden
-<blockquote id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote> Phasellus eget velit sagittis.
+<blockquote id="quote">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+</blockquote>
+Phasellus eget velit sagittis.
 ```
 
 ```css hidden
-body { font-size: small; background-color: #F0F0F0; color:blue; }
-blockquote { background-color: skyblue;  color: red; }
-blockquote { all: revert-layer; }
+body {
+  font-size: small;
+  background-color: #f0f0f0;
+  color: blue;
+}
+blockquote {
+  background-color: skyblue;
+  color: red;
+  all: revert-layer;
+}
 ```
 
 {{EmbedLiveSample("f._all_revert-layer", "200", "125")}}

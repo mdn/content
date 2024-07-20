@@ -1,21 +1,15 @@
 ---
-title: VREyeParameters.minimumFieldOfView
+title: "VREyeParameters: minimumFieldOfView property"
+short-title: minimumFieldOfView
 slug: Web/API/VREyeParameters/minimumFieldOfView
 page-type: web-api-instance-property
-tags:
-  - API
-
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VREyeParameters
-  - Virtual Reality
-  - WebVR
-  - minimumFieldOfView
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VREyeParameters.minimumFieldOfView
 ---
-{{APIRef("WebVR API")}}{{deprecated_header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`minimumFieldOfView`** read-only property of the {{domxref("VREyeParameters")}} interface describes the minimum supported field of view for the current eye.
 
@@ -37,6 +31,5 @@ Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/Web
 
 ## See also
 
-- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API).
+- [WebVR API](/en-US/docs/Web/API/WebVR_API)
 - {{domxref("VRFieldOfView")}}
-- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.

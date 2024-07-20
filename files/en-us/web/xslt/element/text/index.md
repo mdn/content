@@ -1,17 +1,14 @@
 ---
 title: <xsl:text>
 slug: Web/XSLT/Element/text
-tags:
-  - Element
-  - Reference
-  - Text
-  - XSLT
+page-type: xslt-element
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}
 
 The `<xsl:text>` element writes literal text to the output tree. It may contain `#PCDATA`, literal text, and entity references.
 
-### Syntax
+## Syntax
 
 ```xml
 <xsl:text disable-output-escaping="yes" | "no">
@@ -32,10 +29,10 @@ None.
 
 Instruction, appears within a template.
 
-### Defined
+## Specifications
 
 XSLT, section 7.2
 
-### Gecko support
+## Gecko support
 
 Supported as noted.

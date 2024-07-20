@@ -1,16 +1,9 @@
 ---
 title: Paddle and keyboard controls
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
-tags:
-  - Beginner
-  - Canvas
-  - Controls
-  - Games
-  - Graphics
-  - JavaScript
-  - Tutorial
-  - keyboard
+page-type: guide
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over")}}
@@ -86,11 +79,11 @@ function keyUpHandler(e) {
 
 When we press a key down, this information is stored in a variable. The relevant variable in each case is set to `true`. When the key is released, the variable is set back to `false`.
 
-Both functions take an event as a parameter, represented by the `e` variable. From that you can get useful information: the `key` holds the information about the key that was pressed.  Most browsers use `ArrowRight` and `ArrowLeft` for the left/right cursor keys, but we need to also include `Right` and `Left` checks to support IE/Edge browsers. If the left cursor is pressed, then the `leftPressed` variable is set to `true`, and when it is released, the `leftPressed` variable is set to `false`. The same pattern follows with the right cursor and the `rightPressed` variable.
+Both functions take an event as a parameter, represented by the `e` variable. From that you can get useful information: the `key` holds the information about the key that was pressed. Most browsers use `ArrowRight` and `ArrowLeft` for the left/right cursor keys, but we need to also include `Right` and `Left` checks to support IE/Edge browsers. If the left cursor is pressed, then the `leftPressed` variable is set to `true`, and when it is released, the `leftPressed` variable is set to `false`. The same pattern follows with the right cursor and the `rightPressed` variable.
 
 ### The paddle moving logic
 
-We've now set up the variables for storing the info about the pressed keys, event listeners, and relevant functions. Next we'll get into the code to use all of the things we just set up and to move the paddle on the screen. Inside the `draw()` function, we will check if the left or right cursor keys are pressed when each frame is rendered. Our code might look like this:
+We've now set up the variables for storing the info about the pressed keys, event listeners, and relevant functions. Next we'll get into the code to use all the things we just set up and to move the paddle on the screen. Inside the `draw()` function, we will check if the left or right cursor keys are pressed when each frame is rendered. Our code might look like this:
 
 ```js
 if (rightPressed) {
@@ -122,14 +115,114 @@ drawPaddle();
 
 ## Compare your code
 
-Here's the working code for you to compare yours against:
+See how your code compares to the live sample below:
 
-{{JSFiddleEmbed("https://jsfiddle.net/L9xfn4up/1/","","395")}}
+```html hidden
+<canvas id="myCanvas" width="480" height="320"></canvas>
+<button id="runButton">Start game</button>
+```
+
+```css hidden
+canvas {
+  background: #eee;
+}
+button {
+  display: block;
+}
+```
+
+```js hidden
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
+const ballRadius = 10;
+let x = canvas.width / 2;
+let y = canvas.height - 30;
+let dx = 2;
+let dy = -2;
+const paddleHeight = 10;
+const paddleWidth = 75;
+let paddleX = (canvas.width - paddleWidth) / 2;
+let rightPressed = false;
+let leftPressed = false;
+
+document.addEventListener("keydown", keyDownHandler, false);
+document.addEventListener("keyup", keyUpHandler, false);
+
+function keyDownHandler(e) {
+  if (e.key == "Right" || e.key == "ArrowRight") {
+    rightPressed = true;
+  } else if (e.key == "Left" || e.key == "ArrowLeft") {
+    leftPressed = true;
+  }
+}
+
+function keyUpHandler(e) {
+  if (e.key == "Right" || e.key == "ArrowRight") {
+    rightPressed = false;
+  } else if (e.key == "Left" || e.key == "ArrowLeft") {
+    leftPressed = false;
+  }
+}
+
+function drawBall() {
+  ctx.beginPath();
+  ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
+}
+function drawPaddle() {
+  ctx.beginPath();
+  ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
+}
+
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  drawBall();
+  drawPaddle();
+
+  if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
+    dx = -dx;
+  }
+  if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
+    dy = -dy;
+  }
+
+  if (rightPressed) {
+    paddleX += 7;
+    if (paddleX + paddleWidth > canvas.width) {
+      paddleX = canvas.width - paddleWidth;
+    }
+  } else if (leftPressed) {
+    paddleX -= 7;
+    if (paddleX < 0) {
+      paddleX = 0;
+    }
+  }
+
+  x += dx;
+  y += dy;
+}
+
+function startGame() {
+  setInterval(draw, 10);
+}
+
+document.getElementById("runButton").addEventListener("click", function () {
+  startGame();
+  this.disabled = true;
+});
+```
+
+{{embedlivesample("compare_your_code", 600, 360)}}
 
 > **Note:** Try making the paddle move faster or slower, or change its size.
 
 ## Next steps
 
-Now we have something resembling a game. The only trouble now is that you can just continue hitting the ball with the paddle forever. This will all change in the fifth chapter, [Game over](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over), when we start to add in an endgame state for our game.
+Now we have something resembling a game. The only trouble now is that you can just continue hitting the ball with the paddle and there's no winning or losing implemented. This will all change in the fifth chapter, [Game over](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over), when we start to add in an endgame state for our game.
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over")}}

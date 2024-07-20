@@ -1,18 +1,11 @@
 ---
-title: IntersectionObserver.takeRecords()
+title: "IntersectionObserver: takeRecords() method"
+short-title: takeRecords()
 slug: Web/API/IntersectionObserver/takeRecords
 page-type: web-api-instance-method
-tags:
-  - API
-  - Intersection Observer
-  - Intersection Observer API
-  - IntersectionObserver
-  - Method
-  - NeedsExample
-  - Reference
-  - takeRecords
 browser-compat: api.IntersectionObserver.takeRecords
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 The {{domxref("IntersectionObserver")}} method
@@ -28,7 +21,7 @@ call to the observer's callback.
 
 ## Syntax
 
-```js
+```js-nolint
 takeRecords()
 ```
 

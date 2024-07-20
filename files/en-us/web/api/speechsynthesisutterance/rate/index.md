@@ -1,18 +1,11 @@
 ---
-title: SpeechSynthesisUtterance.rate
+title: "SpeechSynthesisUtterance: rate property"
+short-title: rate
 slug: Web/API/SpeechSynthesisUtterance/rate
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SpeechSynthesisUtterance
-  - Web Speech API
-  - rate
-  - speech
-  - synthesis
 browser-compat: api.SpeechSynthesisUtterance.rate
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`rate`** property of the {{domxref("SpeechSynthesisUtterance")}} interface gets and sets the speed at which the utterance will be spoken at.
@@ -22,7 +15,7 @@ If unset, a default value of 1 will be used.
 ## Value
 
 A float representing the rate value.
-It can range between 0.1 (lowest) and 10 (highest), with 1 being the default pitch for the current platform or voice, which should correspond to a normal speaking rate.
+It can range between 0.1 (lowest) and 10 (highest), with 1 being the default rate for the current platform or voice, which should correspond to a normal speaking rate.
 Other values act as a percentage relative to this, so for example 2 is twice as fast, 0.5 is half as fast, etc.
 
 Some speech synthesis engines or voices may constrain the minimum and maximum rates further.
@@ -41,7 +34,7 @@ In this example we can adjust the playback rate using the slider, then play the 
 
 <div id="rate-control">
   <label for="rate">Rate:</label>
-  <input type="range" min="0.5" max="2" value="1" step="0.1" id="rate">
+  <input type="range" min="0.5" max="2" value="1" step="0.1" id="rate" />
 </div>
 
 <button id="play">Play</button>
@@ -67,23 +60,23 @@ body {
 ```js
 const synth = window.speechSynthesis;
 
-const text = document.querySelector('#text');
-const play = document.querySelector('#play');
-const rate = document.querySelector('#rate');
+const text = document.querySelector("#text");
+const play = document.querySelector("#play");
+const rate = document.querySelector("#rate");
 
 function speak() {
   if (synth.speaking) {
     synth.cancel();
   }
   const utterThis = new SpeechSynthesisUtterance(text.textContent);
-  utterThis.addEventListener('error', () => {
-    console.error('SpeechSynthesisUtterance error');
+  utterThis.addEventListener("error", () => {
+    console.error("SpeechSynthesisUtterance error");
   });
   utterThis.rate = rate.value;
   synth.speak(utterThis);
 }
 
-play.addEventListener('click', speak);
+play.addEventListener("click", speak);
 ```
 
 #### Output

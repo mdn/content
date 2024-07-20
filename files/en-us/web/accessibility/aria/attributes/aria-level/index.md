@@ -1,15 +1,11 @@
 ---
-title: 'aria-level'
+title: aria-level
 slug: Web/Accessibility/ARIA/Attributes/aria-level
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-level
-  - Reference
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-level
 ---
+
+{{AccessibilitySidebar}}
 
 The `aria-level` attribute defines the hierarchical level of an element within a structure.
 
@@ -31,20 +27,20 @@ The `aria-level` attribute is a required attribute of the [`heading`](/en-US/doc
 <div role="heading" aria-level="3">Heading for this sub section</div>
 ```
 
-Opt for using the {{htmlelement('h1')}} thru {{htmlelement('h6')}} elements instead.
+Opt for using the {{htmlelement("Heading_Elements", "h1")}} through {{htmlelement("Heading_Elements", "h6")}} elements instead.
 
 ### Within `treegrid` role
 
 In the case of a [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role), `aria-level` is supported on elements with the role [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role), not elements with role [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role). Rows act as leaf nodes within the vertical orientation of the grid. Gridcells are leaf nodes within the horizontal orientation of each row. `Aria-level` is not supported on cells within rows. So, in treegrids, the `aria-level` attribute is applied to the element with the role `row`.
 
-If a complete set of available nodes is not present in the DOM due to dynamic loading as the user moves focus in or scrolls the tree, each node has `aria-level`, [`aria-setsize`](/en-US/docs/Web/Accessibility/Attributes/aria-setsize), and [`aria-posinset`](/en-US/docs/Web/Accessibility/Attributes/aria-posinset) included.
+If a complete set of available nodes is not present in the DOM due to dynamic loading as the user moves focus in or scrolls the tree, each node has `aria-level`, [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-setsize), and [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-posinset) included.
 
 ## Values
 
 - `<integer>`
   - : An integer greater than or equal to 1
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaLevel")}}
   - : The [`ariaLevel`](/en-US/docs/Web/API/Element/ariaLevel) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-level` attribute.
@@ -55,7 +51,7 @@ If a complete set of available nodes is not present in the DOM due to dynamic lo
 
 Used in roles:
 
-- [`associationlistitemkey`](/en-US/docs/Web/Accessibility/ARIA/Roles/associationlistitemkey_role)
+- [`associationlistitemkey`](/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles)
 - [`comment`](/en-US/docs/Web/Accessibility/ARIA/Roles/comment_role)
 - [`heading`](/en-US/docs/Web/Accessibility/ARIA/Roles/heading_role)
 - [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role)
@@ -64,11 +60,6 @@ Used in roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
-- [`<h1>` thru `<h6>`: The HTML Section Heading elements](/en-US/docs/Web/HTML/Element/Heading_Elements) ({{htmlelement('h1')}}, {{htmlelement('h2')}}, {{htmlelement('h3')}}, {{htmlelement('h4')}}, {{htmlelement('h5')}}, and {{htmlelement('h6')}})
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>
+- [`<h1>` through `<h6>`: The HTML Section Heading elements](/en-US/docs/Web/HTML/Element/Heading_Elements) ({{htmlelement("Heading_Elements", "h1")}}, {{htmlelement("Heading_Elements", "h2")}}, {{htmlelement("Heading_Elements", "h3")}}, {{htmlelement("Heading_Elements", "h4")}}, {{htmlelement("Heading_Elements", "h5")}}, and {{htmlelement("Heading_Elements", "h6")}})

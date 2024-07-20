@@ -1,19 +1,15 @@
 ---
-title: VRDisplayEvent()
+title: "VRDisplayEvent: VRDisplayEvent() constructor"
+short-title: VRDisplayEvent()
 slug: Web/API/VRDisplayEvent/VRDisplayEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Deprecated
-  - Reference
-  - VR
-  - VRDisplayEvent
-  - Virtual Reality
-  - WebVR
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRDisplayEvent.VRDisplayEvent
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`VRDisplayEvent()`** constructor creates a {{domxref("VRDisplayEvent")}} object.
 
@@ -21,8 +17,8 @@ The **`VRDisplayEvent()`** constructor creates a {{domxref("VRDisplayEvent")}} o
 
 ## Syntax
 
-```js
-new VRDisplayEvent(type, options);
+```js-nolint
+new VRDisplayEvent(type, options)
 ```
 
 ### Parameters
@@ -45,9 +41,9 @@ A new {{domxref("VRDisplayEvent")}} object.
 ## Examples
 
 ```js
-const myEventObject = new VRDisplayEvent('custom', {
+const myEventObject = new VRDisplayEvent("custom", {
   display: vrDisplay,
-  reason: 'Custom reason'
+  reason: "Custom reason",
 });
 ```
 
@@ -63,5 +59,4 @@ Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/Web
 
 ## See also
 
-- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.
+- [WebVR API](/en-US/docs/Web/API/WebVR_API)

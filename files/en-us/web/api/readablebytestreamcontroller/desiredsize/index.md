@@ -1,17 +1,12 @@
 ---
-title: ReadableByteStreamController.desiredSize
+title: "ReadableByteStreamController: desiredSize property"
+short-title: desiredSize
 slug: Web/API/ReadableByteStreamController/desiredSize
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - ReadableByteStreamController
-  - Reference
-  - Streams
-  - desiredSize
 browser-compat: api.ReadableByteStreamController.desiredSize
 ---
-{{APIRef("Streams")}}
+
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`desiredSize`** read-only property of the {{domxref("ReadableByteStreamController")}} interface returns the number of bytes required to fill the stream's internal queue to its "desired size".
 
@@ -39,3 +34,8 @@ While the example uses a default source, the concepts are exactly the same as fo
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Using readable byte streams](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams)
+- {{domxref("ReadableByteStreamController")}}

@@ -1,17 +1,11 @@
 ---
-title: HTMLLabelElement.form
+title: "HTMLLabelElement: form property"
+short-title: form
 slug: Web/API/HTMLLabelElement/form
 page-type: web-api-instance-property
-tags:
-  - Forms
-  - HTML DOM
-  - HTMLLabelElement
-  - Property
-  - Read-only
-  - Reference
-  - form
 browser-compat: api.HTMLLabelElement.form
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **`HTMLLabelElement.form`** property returns an

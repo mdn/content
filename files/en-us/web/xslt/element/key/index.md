@@ -1,17 +1,14 @@
 ---
 title: <xsl:key>
 slug: Web/XSLT/Element/key
-tags:
-  - Element
-  - Key
-  - Reference
-  - XSLT
+page-type: xslt-element
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}
 
 The `<xsl:key>` element declares a named key which can be used elsewhere in the stylesheet with the `key( )` function.
 
-### Syntax
+## Syntax
 
 ```xml
 <xsl:key name=NAME match=EXPRESSION
@@ -35,10 +32,10 @@ None.
 
 Top-level, must be the child of `<xsl:stylesheet>` or `<xsl:transform>`.
 
-### Defined
+## Specifications
 
 XSLT, section 12.2.
 
-### Gecko support
+## Gecko support
 
 Supported.

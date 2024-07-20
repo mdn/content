@@ -1,19 +1,12 @@
 ---
-title: 'RTCDTMFSender: tonechange event'
+title: "RTCDTMFSender: tonechange event"
+short-title: tonechange
 slug: Web/API/RTCDTMFSender/tonechange_event
 page-type: web-api-event
-tags:
-  - DTMF
-  - RTCDTMFSender
-  - Reference
-  - Touch-tone
-  - WebRTC
-  - WebRTC API
-  - Event
-  - tonechange
 browser-compat: api.RTCDTMFSender.tonechange_event
 ---
-{{WebRTCSidebar}}
+
+{{APIRef("WebRTC")}}
 
 The **`tonechange`** event is sent to an {{domxref("RTCDTMFSender")}} by the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) to indicate when {{Glossary("DTMF")}} tones previously queued for sending (by calling {{domxref("RTCDTMFSender.insertDTMF()")}}) begin and end.
 
@@ -26,9 +19,9 @@ This event is not cancelable and does not bubble.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('tonechange', (event) => { });
+addEventListener("tonechange", (event) => {});
 
-ontonechange = (event) => { };
+ontonechange = (event) => {};
 ```
 
 ## Event type
@@ -41,24 +34,28 @@ An {{domxref("RTCDTMFToneChangeEvent")}}. Inherits from {{domxref("Event")}}.
 
 _In addition to the properties of {{domxref("Event")}}, this interface offers the following:_
 
-- {{domxref("RTCDTMFToneChangeEvent.tone")}} {{readOnlyInline}}
+- {{domxref("RTCDTMFToneChangeEvent.tone")}} {{ReadOnlyInline}}
   - : A string specifying the tone which has begun playing, or an empty string (`""`) if the previous tone has finished playing.
 
 ## Examples
 
-This example establishes a handler for the [`tonechange`](/en-US/docs/Web/API/RTCDTMFSender/tonechange_event) event which updates an element to display the currently playing tone in its content, or, if all tones have played, the string "\<none>".
+This example establishes a handler for the `tonechange` event which updates an element to display the currently playing tone in its content, or, if all tones have played, the string "\<none>".
 
 This can be done using {{domxref("EventTarget.addEventListener", "addEventListener()")}}:
 
 ```js
-dtmfSender.addEventListener("tonechange", (ev) => {
-  let tone = ev.tone;
-  if (tone === "") {
-    tone = "&lt;none&gt;";
-  }
+dtmfSender.addEventListener(
+  "tonechange",
+  (ev) => {
+    let tone = ev.tone;
+    if (tone === "") {
+      tone = "&lt;none&gt;";
+    }
 
-  document.getElementById("playingTone").innerText = tone;
-}, false);
+    document.getElementById("playingTone").innerText = tone;
+  },
+  false,
+);
 ```
 
 You can also just set the `ontonechange` event handler property directly:
@@ -67,7 +64,7 @@ You can also just set the `ontonechange` event handler property directly:
 dtmfSender.ontonechange = (ev) => {
   let tone = ev.tone;
   if (tone === "") {
-    tone = "&lt;none&gt;"
+    tone = "&lt;none&gt;";
   }
 
   document.getElementById("playingTone").innerText = tone;

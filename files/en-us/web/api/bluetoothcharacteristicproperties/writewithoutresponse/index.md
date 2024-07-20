@@ -1,19 +1,13 @@
 ---
-title: BluetoothCharacteristicProperties.writeWithoutResponse
+title: "BluetoothCharacteristicProperties: writeWithoutResponse property"
+short-title: writeWithoutResponse
 slug: Web/API/BluetoothCharacteristicProperties/writeWithoutResponse
 page-type: web-api-instance-property
-tags:
-  - API
-  - Bluetooth
-  - BluetoothCharacteristicProperties
-  - Experimental
-  - NeedsExample
-  - Property
-  - Reference
-  - Web Bluetooth API
-  - writeWithoutResponse
+status:
+  - experimental
 browser-compat: api.BluetoothCharacteristicProperties.writeWithoutResponse
 ---
+
 {{securecontext_header}}{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`writeWithoutResponse`** read-only

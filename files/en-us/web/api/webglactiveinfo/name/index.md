@@ -1,14 +1,11 @@
 ---
-title: WebGLActiveInfo.name
+title: "WebGLActiveInfo: name property"
+short-title: name
 slug: Web/API/WebGLActiveInfo/name
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - WebGL
 browser-compat: api.WebGLActiveInfo.name
 ---
+
 {{APIRef("WebGL")}}
 
 The read-only **`WebGLActiveInfo.name`** property represents the name of the requested data returned by calling the {{domxref("WebGLRenderingContext.getActiveAttrib()", "getActiveAttrib()")}} or {{domxref("WebGLRenderingContext.getActiveUniform()", "getActiveUniform()")}} methods.

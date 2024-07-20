@@ -1,22 +1,16 @@
 ---
 title: Publishing games
 slug: Games/Publishing_games
-tags:
-  - Games
-  - HTML5
-  - JavaScript
-  - Monetization
-  - Promotion
-  - distribution
-  - publishing
+page-type: guide
 ---
+
 {{GamesSidebar}}
 
-HTML5 games have a huge advantage over native in terms of publishing and distribution — you have the freedom of distribution, promotion and monetization of your game on the Web, rather than each version being locked into a single store controlled by one company. You can benefit from the web being truly multiplatform. This series of articles looks at the options you have when you want to publish and distribute your game, and earn something out of it while you wait for it to become famous.
+HTML games have a huge advantage over native in terms of publishing and distribution — you have the freedom of distribution, promotion and monetization of your game on the Web, rather than each version being locked into a single store controlled by one company. You can benefit from the web being truly multiplatform. This series of articles looks at the options you have when you want to publish and distribute your game, and earn something out of it while you wait for it to become famous.
 
 ## Game distribution
 
-So you've followed a [tutorial](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) or [two](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser) and created an HTML5 game — that's great! [Game distribution](/en-US/docs/Games/Publishing_games/Game_distribution) provides all you need to know about the ways you can distribute your newly created game into the wild — including hosting it yourself online, submitting it to open marketplaces, and submitting it to closed ones like Google Play or the iOS App Store.
+So you've followed a [tutorial](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) or [two](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser) and created an HTML game — that's great! [Game distribution](/en-US/docs/Games/Publishing_games/Game_distribution) provides all you need to know about the ways you can distribute your newly created game into the wild — including hosting it yourself online, submitting it to open marketplaces, and submitting it to closed ones like Google Play or the iOS App Store.
 
 ## Game promotion
 

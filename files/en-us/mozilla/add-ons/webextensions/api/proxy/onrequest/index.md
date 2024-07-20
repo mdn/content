@@ -1,18 +1,11 @@
 ---
 title: proxy.onRequest
 slug: Mozilla/Add-ons/WebExtensions/API/proxy/onRequest
-tags:
-  - API
-  - Add-ons
-  - Event
-  - Extensions
-  - Proxy
-  - Reference
-  - WebExtensions
-  - onRequest
+page-type: webextension-api-event
 browser-compat: webextensions.api.proxy.onRequest
 ---
-{{AddonSidebar()}}
+
+{{AddonSidebar}}
 
 Fired when a web request is about to be made, to give the extension an opportunity to proxy it.
 
@@ -30,7 +23,7 @@ To use `proxy.onRequest`, an extension must have the "proxy" [API permission](/e
 
 ## Syntax
 
-```js
+```js-nolint
 browser.proxy.onRequest.addListener(
   listener,             //  function
   filter,               //  object
@@ -89,12 +82,14 @@ function shouldProxyRequest(requestInfo) {
 function handleProxyRequest(requestInfo) {
   if (shouldProxyRequest(requestInfo)) {
     console.log(`Proxying: ${requestInfo.url}`);
-    return {type: "http", host: "127.0.0.1", port: 65535};
+    return { type: "http", host: "127.0.0.1", port: 65535 };
   }
-  return {type: "direct"};
+  return { type: "direct" };
 }
 
-browser.proxy.onRequest.addListener(handleProxyRequest, {urls: ["<all_urls>"]});
+browser.proxy.onRequest.addListener(handleProxyRequest, {
+  urls: ["<all_urls>"],
+});
 ```
 
 {{WebExtExamples}}

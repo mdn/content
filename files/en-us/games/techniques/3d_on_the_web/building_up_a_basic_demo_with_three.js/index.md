@@ -1,57 +1,62 @@
 ---
 title: Building up a basic demo with Three.js
 slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js
-tags:
-  - 3D
-  - Animation
-  - Beginner
-  - Canvas
-  - Games
-  - Tutorial
-  - WebGL
-  - camera
-  - lighting
-  - rendering
-  - three.js
+page-type: guide
 ---
+
 {{GamesSidebar}}
 
 A typical 3D scene in a game — even the simplest one — contains standard items like shapes located in a coordinate system, a camera to actually see them, lights and materials to make it look better, animations to make it look alive, etc. **Three.js**, as with any other 3D library, provides built-in helper functions to help you implement common 3D functionality more quickly. In this article we'll take you through the real basics of using Three, including setting up a development environment, structuring the necessary HTML, the fundamental objects of Three, and how to build up a basic demo.
 
-> **Note:** We chose Three because it is one of the most popular [WebGL](/en-US/docs/Web/API/WebGL_API) libraries, and it is easy to get started with. We are not trying to say it is better than any other WebGL library available, and you should feel free to try another library, such as [CopperLicht](https://www.ambiera.com/copperlicht/index.html), [GLGE](http://www.glge.org/), or [PlayCanvas](https://playcanvas.com/).
+> **Note:** We chose Three because it is one of the most popular [WebGL](/en-US/docs/Web/API/WebGL_API) libraries, and it is easy to get started with. We are not trying to say it is better than any other WebGL library available, and you should feel free to try another library, such as [CopperLicht](https://www.ambiera.com/copperlicht/index.html) or [PlayCanvas](https://playcanvas.com/).
 
 ## Environment setup
 
-To start developing with Three.js, you don't need much. You should:
+To start developing with Three.js, you should make sure you are using a modern browser with good [WebGL](/en-US/docs/Web/API/WebGL_API) support, such as the latest Firefox or Chrome.
 
-- Make sure you are using a modern browser with good [WebGL](/en-US/docs/Web/API/WebGL_API) support, such as the latest Firefox or Chrome.
-- Create a directory to store your experiments in.
-- Save a copy of the [latest minimized Three.js library](https://threejs.org/build/three.min.js) inside your directory.
-- Open the [Three.js documentation](https://threejs.org/docs/) in a separate tab — it is useful to refer to.
+You can download the [latest Three.js library](https://github.com/mrdoob/three.js/archive/master.zip) and copy the minified version of Three.js from the uncompressed archive at `build/three.module.min.js` into your project.
+Bear in mind that the archives include source files, which makes the download size approximately 350MB.
+
+Alternatively, you can import Three.js [using a CDN or use Node.js](https://threejs.org/docs/#manual/en/introduction/Installation).
+A Node.js setup with Three.js installed as a dependency is convenient if you want to track versions and it can speed up collaboration and deployment:
+
+```bash
+npm install --save three
+npm install --save-dev vite # For development
+npx vite
+```
+
+Whichever way you choose to get started, make sure you have the [Three.js documentation](https://threejs.org/docs/) open somewhere while you're working for reference.
 
 ## HTML structure
 
 Here's the HTML structure we will use:
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-GB">
-<head>
-  <meta charset="utf-8">
-  <title>MDN Games: Three.js demo</title>
-  <style>
-    body { margin: 0; padding: 0; }
-    canvas { width: 100%; height: 100%; }
-  </style>
-</head>
-<body>
-<script src="three.min.js"></script>
-<script>
-  const WIDTH = window.innerWidth;
-  const HEIGHT = window.innerHeight;
-  /* all our JavaScript code goes here */
-</script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>MDN Games: Three.js demo</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      canvas {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="three.min.js"></script>
+    <script>
+      const WIDTH = window.innerWidth;
+      const HEIGHT = window.innerHeight;
+      /* all our JavaScript code goes here */
+    </script>
+  </body>
 </html>
 ```
 
@@ -64,9 +69,9 @@ Before reading further, copy this code to a new text file, and save it in your w
 A renderer is a tool which displays scenes right in your browser. There are a few different renderers: WebGL is the default, and others you can use are Canvas, SVG, CSS, and DOM. They differ in how everything is rendered, so the WebGL implementation will implement differently than the CSS one. Despite the variety of ways they achieve the goal, the experience will look the same for the user. Thanks to this approach, a fallback can be used, if a desired technology is not supported by the browser.
 
 ```js
-const renderer = new THREE.WebGLRenderer({antialias:true});
+const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(WIDTH, HEIGHT);
-renderer.setClearColor(0xDDDDDD, 1);
+renderer.setClearColor(0xdddddd, 1);
 document.body.appendChild(renderer.domElement);
 ```
 
@@ -89,7 +94,7 @@ Later, we will be using the `.add()` method, to add objects to this scene.
 We have the rendered scene, but we still need to add a camera to view our handiwork — imagine a movie set without any cameras. The following lines put the camera in place in the 3D coordinate system, and point it in the direction of our scene, so we can finally see something:
 
 ```js
-const camera = new THREE.PerspectiveCamera(70, WIDTH/HEIGHT);
+const camera = new THREE.PerspectiveCamera(70, WIDTH / HEIGHT);
 camera.position.z = 50;
 scene.add(camera);
 ```
@@ -108,7 +113,7 @@ You should experiment with these values and see how they change what you see in 
 
 ## Rendering the scene
 
-Everything is ready, but we still can't see anything. Although we've set up the renderer, we still need to render everything. Our `render()` function will do this job, with a little help from [`requestAnimationFrame()`](/en-US/docs/Web/API/window/requestAnimationFrame), which causes the scene to be re-rendered constantly on every frame:
+Everything is ready, but we still can't see anything. Although we've set up the renderer, we still need to render everything. Our `render()` function will do this job, with a little help from [`requestAnimationFrame()`](/en-US/docs/Web/API/Window/requestAnimationFrame), which causes the scene to be re-rendered constantly on every frame:
 
 ```js
 function render() {
@@ -137,7 +142,7 @@ In this case, we define a simple cube that is 10 x 10 x 10 units. The geometry i
 A material is what covers an object, the colors, or textures on its surface. In our case, we will choose a simple blue color to paint our box. There are a number of predefined materials which can be used: Basic, Phong, Lambert. Let's play with the last two later, but for now, the Basic one should be enough:
 
 ```js
-const basicMaterial = new THREE.MeshBasicMaterial({color: 0x0095DD});
+const basicMaterial = new THREE.MeshBasicMaterial({ color: 0x0095dd });
 ```
 
 Add this line below the previously added.
@@ -190,7 +195,7 @@ Now onto more shapes and materials. What might happen when you add a torus, wrap
 
 ```js
 const torusGeometry = new THREE.TorusGeometry(7, 1, 6, 12);
-const phongMaterial = new THREE.MeshPhongMaterial({color: 0xFF9500});
+const phongMaterial = new THREE.MeshPhongMaterial({ color: 0xff9500 });
 const torus = new THREE.Mesh(torusGeometry, phongMaterial);
 scene.add(torus);
 ```
@@ -201,7 +206,7 @@ We can choose more fun predefined shapes. Let's play some more. Add the followin
 
 ```js
 const dodecahedronGeometry = new THREE.DodecahedronGeometry(7);
-const lambertMaterial = new THREE.MeshLambertMaterial({color: 0xEAEFF2});
+const lambertMaterial = new THREE.MeshLambertMaterial({ color: 0xeaeff2 });
 const dodecahedron = new THREE.Mesh(dodecahedronGeometry, lambertMaterial);
 dodecahedron.position.x = 25;
 scene.add(dodecahedron);
@@ -216,7 +221,7 @@ As mentioned above, the new objects currently just look black. To have both, the
 There are various types of light sources available in Three.js. The most basic is `PointLight`, which works like a flashlight, shining a spotlight in a defined direction. Add the following lines, below your shape definitions:
 
 ```js
-const light = new THREE.PointLight(0xFFFFFF);
+const light = new THREE.PointLight(0xffffff);
 light.position.set(-10, 15, 50);
 scene.add(light);
 ```
@@ -265,7 +270,7 @@ Now, onto movement.
 Aside from rotation, and scaling, we can additionally move objects around the scene. Add the following, again just below our `requestAnimationFrame()` invocation:
 
 ```js
-dodecahedron.position.y = -7*Math.sin(t*2);
+dodecahedron.position.y = -7 * Math.sin(t * 2);
 ```
 
 This will move the dodecahedron up and down, by applying the `sin()` value to the y-axis on each frame, and a little adjustment to make it look cooler. Try changing these values, to see how it affects the animations.

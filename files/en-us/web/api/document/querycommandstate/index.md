@@ -1,22 +1,21 @@
 ---
-title: Document.queryCommandState()
+title: "Document: queryCommandState() method"
+short-title: queryCommandState()
 slug: Web/API/Document/queryCommandState
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Reference
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Document.queryCommandState
 ---
+
 {{ApiRef("DOM")}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`queryCommandState()`** method will tell you if the current selection has a certain {{domxref("Document.execCommand()")}} command applied.
 
 ## Syntax
 
-```js
+```js-nolint
 queryCommandState(command)
 ```
 
@@ -36,13 +35,14 @@ queryCommandState(command)
 <div contenteditable="true">Select a part of this text!</div>
 <button onclick="makeBold();">Test the state of the 'bold' command</button>
 
-<hr>
+<hr />
 
 <div id="output"></div>
 ```
 
 ```css hidden
-hr, button {
+hr,
+button {
   margin: 1rem 0;
 }
 ```
@@ -65,7 +65,7 @@ function makeBold() {
       break;
   }
   document.querySelector("#output").textContent = `Output: ${message}`;
-  document.execCommand('bold');
+  document.execCommand("bold");
 }
 ```
 

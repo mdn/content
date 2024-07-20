@@ -1,16 +1,9 @@
 ---
 title: Server-side website programming
 slug: Learn/Server-side
-tags:
-  - Beginner
-  - CodingScripting
-  - Intro
-  - Landing
-  - Learn
-  - Server
-  - Server-side programming
-  - Topic
+page-type: learn-topic
 ---
+
 {{LearnSidebar}}
 
 The **_Dynamic Websites_** – **Server-side programming** topic is a series of modules that show how to create dynamic websites; websites that deliver customized information in response to HTTP requests. The modules provide a general introduction to server-side programming, along with specific beginner-level guides on how to use the Django (Python) and Express (Node.js/JavaScript) web frameworks to create basic applications.
@@ -27,9 +20,9 @@ Basic knowledge of programming concepts (or of a particular programming language
 
 You will need to understand "how the web works". We recommend that you first read the following topics:
 
-- [What is a web server](/en-US/docs/Learn/Common_questions/What_is_a_web_server)
-- [What software do I need to build a website?](/en-US/docs/Learn/Common_questions/What_software_do_I_need)
-- [How do you upload files to a web server?](/en-US/docs/Learn/Common_questions/Upload_files_to_a_web_server)
+- [What is a web server](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
+- [What software do I need to build a website?](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need)
+- [How do you upload files to a web server?](/en-US/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)
 
 With that basic understanding, you'll be ready to work your way through the modules in this section.
 
@@ -49,4 +42,7 @@ This topic contains the following modules. You should start with the first modul
 - [Node server without framework](/en-US/docs/Learn/Server-side/Node_server_without_framework)
   - : This article provides a simple static file server built with pure Node.js, for those of you not wanting to use a framework.
 - [Properly configuring server MIME types](/en-US/docs/Learn/Server-side/Configuring_server_MIME_types)
-  - : Configuring your server to send the correct {{Glossary("MIME type", "MIME types")}} (also known as media types or content types) to browsers is important for browsers to be able to properly process and display the content. It is also important to prevent malicious content from masquerading as benign content.
+  - : Configuring your server to send the correct {{Glossary("MIME type", "MIME types")}} (also known as media types or content types) to browsers is important for browsers to be able to properly process and display the content.
+    It is also important to prevent malicious content from masquerading as benign content.
+- [Apache Configuration: .htaccess](/en-US/docs/Learn/Server-side/Apache_Configuration_htaccess)
+  - : Apache .htaccess files allow users to configure directories of the web server they control without modifying the main configuration file.

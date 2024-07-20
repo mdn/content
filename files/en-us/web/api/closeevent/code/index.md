@@ -1,21 +1,18 @@
 ---
-title: CloseEvent.code
+title: "CloseEvent: code property"
+short-title: code
 slug: Web/API/CloseEvent/code
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - closeEvent
 browser-compat: api.CloseEvent.code
 ---
+
 {{APIRef("Websockets API")}}
 
 The **`code`** read-only property of the {{domxref("CloseEvent")}} interface returns a [WebSocket connection close code](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.5) indicating the reason the server gave for closing the connection.
 
 ## Value
 
-An integer [WebSocket connection close code](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.5) in the range `1000`-`4999`, indicating the reason the server gave for closing the connection.
+An integer [WebSocket connection close code](https://www.rfc-editor.org/rfc/rfc6455.html#section-7.1.5) in the range `1000` - `4999`, indicating the reason the server gave for closing the connection.
 
 <table class="no-markdown">
   <thead>
@@ -130,14 +127,14 @@ An integer [WebSocket connection close code](https://www.rfc-editor.org/rfc/rfc6
     </tr>
     <tr>
       <td><code>1012</code></td>
-      <td><a href="http://www.ietf.org/mail-archive/web/hybi/current/msg09670.html">Service Restart</a></td>
+      <td><a href="https://www.ietf.org/mail-archive/web/hybi/current/msg09670.html">Service Restart</a></td>
       <td>
         The server is terminating the connection because it is restarting.
       </td>
     </tr>
     <tr>
       <td><code>1013</code></td>
-      <td><a href="http://www.ietf.org/mail-archive/web/hybi/current/msg09670.html">Try Again Later</a></td>
+      <td><a href="https://www.ietf.org/mail-archive/web/hybi/current/msg09670.html">Try Again Later</a></td>
       <td>
         The server is terminating the connection due to a temporary condition,
         e.g. it is overloaded and is casting off some of its clients.
@@ -179,7 +176,7 @@ An integer [WebSocket connection close code](https://www.rfc-editor.org/rfc/rfc6
       <td><code>4000</code>–<code>4999</code></td>
       <td></td>
       <td>
-         For private use, and thus can't be registered. Such codes can be used by prior agreements between WebSocket applications.  The interpretation of these codes is undefined by the WebSocket protocol.
+         For private use, and thus can't be registered. Such codes can be used by prior agreements between WebSocket applications. The interpretation of these codes is undefined by the WebSocket protocol.
       </td>
     </tr>
   </tbody>

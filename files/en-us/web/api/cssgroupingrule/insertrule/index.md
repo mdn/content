@@ -1,15 +1,11 @@
 ---
-title: CSSGroupingRule.insertRule()
+title: "CSSGroupingRule: insertRule() method"
+short-title: insertRule()
 slug: Web/API/CSSGroupingRule/insertRule
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM
-  - CSSGroupingRule
-  - Method
-  - Reference
 browser-compat: api.CSSGroupingRule.insertRule
 ---
+
 {{ APIRef("CSSOM") }}
 
 The **`insertRule()`** method of the
@@ -17,7 +13,7 @@ The **`insertRule()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 insertRule(rule)
 insertRule(rule, index)
 ```
@@ -47,7 +43,10 @@ The index of the new rule.
 
 ```js
 let myRules = document.styleSheets[0].cssRules;
-myRules[0].insertRule('html {background-color: blue;}',0); /* inserts a rule for the HTML element at position 0 */
+myRules[0].insertRule(
+  "html {background-color: blue;}",
+  0,
+); /* inserts a rule for the HTML element at position 0 */
 ```
 
 ## Specifications

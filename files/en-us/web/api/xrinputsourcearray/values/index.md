@@ -1,30 +1,14 @@
 ---
-title: XRInputSourceArray.values()
+title: "XRInputSourceArray: values() method"
+short-title: values()
 slug: Web/API/XRInputSourceArray/values
 page-type: web-api-instance-method
-tags:
-  - API
-  - AR
-  - Input Sources
-  - Inputs
-  - Iterator
-  - Method
-  - Mixed
-  - Reality
-  - Reference
-  - Sources
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR API Reference
-  - XR
-  - XRInputSourceArray
-  - augmented
-  - values
+status:
+  - experimental
 browser-compat: api.XRInputSourceArray.values
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The {{domxref("XRInputSourceArray")}}
 method **`values()`** returns a {{Glossary("JavaScript")}}
@@ -34,7 +18,7 @@ array, from first to last.
 
 ## Syntax
 
-```js
+```js-nolint
 values()
 ```
 
@@ -53,7 +37,7 @@ list.
 ## Examples
 
 This example snippet walks through each input and calls the
-function `checkInput()`  with each returned value.
+function `checkInput()` with each returned value.
 
 ```js
 for (const source of xrSession.inputSources.values()) {
@@ -78,8 +62,7 @@ once every input has been delivered to `checkInput()`.
 ## See also
 
 - [Inputs and input sources](/en-US/docs/Web/API/WebXR_Device_API/Inputs)
-- The {{domxref("XRInputSourceArray")}} method {{domxref("XRInputSourceArray.keys",
-    "keys()")}}
+- The {{domxref("XRInputSourceArray")}} method {{domxref("XRInputSourceArray.keys", "keys()")}}
 - The
   [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) method `values()`
 - {{domxref("XRInputSource")}}

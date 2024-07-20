@@ -1,17 +1,14 @@
 ---
 title: <xsl:processing-instruction>
 slug: Web/XSLT/Element/processing-instruction
-tags:
-  - Element
-  - Reference
-  - XSLT
-  - processing-instruction
+page-type: xslt-element
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}
 
 The `<xsl:processing-instruction>` element writes a processing instruction to the output document.
 
-### Syntax
+## Syntax
 
 `<xsl:processing-instruction name=NAME> TEMPLATE </xsl:processing-instruction>`
 
@@ -28,10 +25,10 @@ None.
 
 Instruction, appears within a template.
 
-### Defined
+## Specifications
 
 XSLT, section 7.3
 
-### Gecko support
+## Gecko support
 
 Supported.

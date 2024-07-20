@@ -1,24 +1,16 @@
 ---
 title: Bounce off the walls
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
-tags:
-  - Animation
-  - Beginner
-  - Canvas
-  - Example
-  - Games
-  - Graphics
-  - Tutorial
-  - collision
-  - detection
+page-type: guide
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}
 
 This is the **3rd step** out of 10 of the [Gamedev Canvas tutorial](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). You can find the source code as it should look after completing this lesson at [Gamedev-Canvas-workshop/lesson3.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson03.html).
 
-It is nice to see our ball moving, but it quickly disappears from the screen, limiting the fun we can have with it! To overcome that we will implement some very simple collision detection (which will be explained [later](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection) in more detail) to make the ball bounce off the four edges of the Canvas.
+It is nice to see our ball moving, but it quickly disappears from the screen, limiting the fun we can have with it! To overcome that we will implement some collision detection (which will be explained [later](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection) in more detail) to make the ball bounce off the four edges of the Canvas.
 
 ## Simple collision detection
 
@@ -93,10 +85,10 @@ Test your code at this point, and you will be impressed — now we have a ball t
 This is because we're calculating the collision point of the wall and the center of the ball, while we should be doing it for its circumference. The ball should bounce right after if touches the wall, not when it's already halfway in the wall, so let's adjust our statements a bit to include that. Update the last code you added to this:
 
 ```js
-if (x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
+if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
   dx = -dx;
 }
-if (y + dy > canvas.height-ballRadius || y + dy < ballRadius) {
+if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
   dy = -dy;
 }
 ```
@@ -107,7 +99,63 @@ When the distance between the center of the ball and the edge of the wall is exa
 
 Let's again check the finished code for this part against what you've got, and have a play:
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/redj37dc/","","395")}}
+```html hidden
+<canvas id="myCanvas" width="480" height="320"></canvas>
+<button id="runButton">Start game</button>
+```
+
+```css hidden
+canvas {
+  background: #eee;
+}
+button {
+  display: block;
+}
+```
+
+```js
+const canvas = document.getElementById("myCanvas");
+const ctx = canvas.getContext("2d");
+const ballRadius = 10;
+let x = canvas.width / 2;
+let y = canvas.height - 30;
+let dx = 2;
+let dy = -2;
+
+function drawBall() {
+  ctx.beginPath();
+  ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
+  ctx.fillStyle = "#0095DD";
+  ctx.fill();
+  ctx.closePath();
+}
+
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  drawBall();
+
+  if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
+    dx = -dx;
+  }
+  if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
+    dy = -dy;
+  }
+
+  x += dx;
+  y += dy;
+}
+
+function startGame() {
+  setInterval(draw, 10);
+}
+
+document.getElementById("runButton").addEventListener("click", function () {
+  startGame();
+  this.disabled = true;
+});
+```
+
+{{embedlivesample("compare_your_code", 600, 360)}}
 
 > **Note:** Try changing the color of the ball to a random color every time it hits the wall.
 

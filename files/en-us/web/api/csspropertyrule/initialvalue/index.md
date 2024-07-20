@@ -1,18 +1,11 @@
 ---
-title: CSSPropertyRule.initialValue
+title: "CSSPropertyRule: initialValue property"
+short-title: initialValue
 slug: Web/API/CSSPropertyRule/initialvalue
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSS
-  - CSS Properties and Values API
-  - CSSPropertyRule
-  - Houdini
-  - Property
-  - Reference
-  - Read-only
 browser-compat: api.CSSPropertyRule.initialValue
 ---
+
 {{APIRef("CSS Properties and Values API")}}
 
 The read-only **`initialValue`** nullable property of the {{domxref("CSSPropertyRule")}} interface returns the initial value of the custom property registration represented by the {{cssxref("@property")}} rule, controlling the property's initial value.
@@ -28,7 +21,7 @@ This stylesheet contains a single {{cssxref("@property")}} rule. The first {{dom
 
 ```css
 @property --property-name {
-  syntax: '<color>';
+  syntax: "<color>";
   inherits: false;
   initial-value: #c0ffee;
 }

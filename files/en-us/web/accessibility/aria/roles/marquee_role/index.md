@@ -1,17 +1,11 @@
 ---
-title: 'ARIA: marquee role'
+title: "ARIA: marquee role"
 slug: Web/Accessibility/ARIA/Roles/marquee_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - marquee
-  - ARIA marquee
-  - marquee role
+page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#marquee
 ---
+
+{{AccessibilitySidebar}}
 
 A `marquee` is a type of [live region](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) containing non-essential information which changes frequently.
 
@@ -21,7 +15,7 @@ The `marquee` role defines an area as a type of live region that presents non-es
 
 Elements with the role marquee have an implicit [aria-live](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) value of `off`.
 
-The marquee is required to have an accessible name.  Use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) if a visible label is present, otherwise use [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label).
+The marquee is required to have an accessible name. Use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) if a visible label is present, otherwise use [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label).
 
 ### Associated WAI-ARIA roles, states, and properties
 
@@ -31,24 +25,16 @@ The marquee is required to have an accessible name.  Use [`aria-labelledby`](/en
 
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
 
-  - : The `marquee` is required to have an accessible name.  Use `aria-labelledby` if a visible label is present, otherwise use `aria-label`.
+  - : The `marquee` is required to have an accessible name. Use `aria-labelledby` if a visible label is present, otherwise use `aria-label`.
 
 ## Specifications
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [ARIA: `alert` role](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role)
 - [ARIA: `log` role](/en-US/docs/Web/Accessibility/ARIA/Roles/log_role)
 - [ARIA: `status` role](/en-US/docs/Web/Accessibility/ARIA/Roles/status_role)
 - [ARIA: `timer` role](/en-US/docs/Web/Accessibility/ARIA/Roles/timer_role)
 - [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
-
-</section>

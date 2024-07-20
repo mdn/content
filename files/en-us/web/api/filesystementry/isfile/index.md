@@ -1,18 +1,11 @@
 ---
-title: FileSystemEntry.isFile
+title: "FileSystemEntry: isFile property"
+short-title: isFile
 slug: Web/API/FileSystemEntry/isFile
 page-type: web-api-instance-property
-tags:
-  - API
-  - File and Directory Entries API
-  - FileSystemEntry
-  - Files
-  - Offline
-  - Property
-  - Reference
-  - isFile
 browser-compat: api.FileSystemEntry.isFile
 ---
+
 {{APIRef("File and Directory Entries API")}}
 
 The read-only **`isFile`** property of
@@ -23,7 +16,7 @@ represents a file (meaning it's a {{domxref("FileSystemFileEntry")}}) and
 You can also use {{domxref("FileSystemEntry.isDirectory", "isDirectory")}} to determine
 if the entry is a directory.
 
-> **Warning:** You should not assume that any entry which isn't a file is a directory or vice-versa.
+> **Warning:** You should not assume that any entry which isn't a file is a directory or vice versa.
 > There are other types of file descriptors on many operating systems. Be sure to use
 > both `isDirectory` and `isFile` as needed to ensure that the
 > entry is something you know how to work with.

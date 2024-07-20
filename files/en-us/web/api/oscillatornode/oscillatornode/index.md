@@ -1,17 +1,11 @@
 ---
-title: OscillatorNode()
+title: "OscillatorNode: OscillatorNode() constructor"
+short-title: OscillatorNode()
 slug: Web/API/OscillatorNode/OscillatorNode
 page-type: web-api-constructor
-tags:
-  - Audio
-  - Constructor
-  - Media
-  - OscillatorNode
-  - Reference
-  - Web Audio
-  - Web Audio API
 browser-compat: api.OscillatorNode.OscillatorNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`OscillatorNode()`** constructor of the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) creates a new
@@ -25,7 +19,7 @@ If the default values of the properties are acceptable, you can optionally use t
 
 ## Syntax
 
-```js
+```js-nolint
 new OscillatorNode(context, options)
 ```
 

@@ -1,15 +1,11 @@
 ---
-title: WebGLRenderingContext.cullFace()
+title: "WebGLRenderingContext: cullFace() method"
+short-title: cullFace()
 slug: Web/API/WebGLRenderingContext/cullFace
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.cullFace
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.cullFace()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) specifies whether or not front-
@@ -17,7 +13,7 @@ and/or back-facing polygons can be culled.
 
 ## Syntax
 
-```js
+```js-nolint
 cullFace(mode)
 ```
 

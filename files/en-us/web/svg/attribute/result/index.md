@@ -1,12 +1,10 @@
 ---
 title: result
 slug: Web/SVG/Attribute/result
-tags:
-  - NeedsCompatTable
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 spec-urls: https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-primitive-result
 ---
+
 {{SVGRef}}
 
 The **`result`** attribute defines the assigned name for this filter primitive. If supplied, then graphics that result from processing this filter primitive can be referenced by an {{SVGAttr("in")}} attribute on a subsequent filter primitive within the same {{SVGElement("filter")}} element. If no value is provided, the output will only be available for re-use as the implicit input into the next filter primitive if that filter primitive provides no value for its `in` attribute.
@@ -34,7 +32,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -42,14 +42,20 @@ html, body, svg {
 ```html
 <svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
   <filter id="displacementFilter">
-    <feTurbulence type="turbulence" baseFrequency="0.05"
-        numOctaves="2" result="turbulence"/>
-    <feDisplacementMap in2="turbulence" in="SourceGraphic"
-        scale="50" xChannelSelector="R" yChannelSelector="G"/>
+    <feTurbulence
+      type="turbulence"
+      baseFrequency="0.05"
+      numOctaves="2"
+      result="turbulence" />
+    <feDisplacementMap
+      in2="turbulence"
+      in="SourceGraphic"
+      scale="50"
+      xChannelSelector="R"
+      yChannelSelector="G" />
   </filter>
 
-  <circle cx="100" cy="100" r="100"
-      style="filter: url(#displacementFilter)"/>
+  <circle cx="100" cy="100" r="100" style="filter: url(#displacementFilter)" />
 </svg>
 ```
 

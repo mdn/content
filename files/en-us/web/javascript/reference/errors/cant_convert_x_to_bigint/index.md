@@ -1,19 +1,16 @@
 ---
-title: 'TypeError: can''t convert x to BigInt'
+title: "TypeError: can't convert x to BigInt"
 slug: Web/JavaScript/Reference/Errors/Cant_convert_x_to_BigInt
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - TypeError
+page-type: javascript-error
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "x can't be converted to BigInt" occurs when attempting to convert a {{jsxref("Symbol")}}, [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), or {{jsxref("undefined")}} value to a {{jsxref("BigInt")}}, or if an operation expecting a BigInt parameter receives a number.
 
 ## Message
 
-```
+```plain
 TypeError: Cannot convert null to a BigInt (V8-based)
 TypeError: can't convert null to BigInt (Firefox)
 TypeError: Invalid argument type in ToBigInt operation (Safari)
@@ -67,4 +64,4 @@ const b = new BigInt64Array(3).fill(3n);
 
 ## See also
 
-- [`BigInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt)
+- [`BigInt()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt)

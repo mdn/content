@@ -1,13 +1,10 @@
 ---
 title: optional_permissions
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions
-tags:
-  - Add-ons
-  - WebExtensions
-  - manifest.json
-  - optional_permissions
+page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.optional_permissions
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -30,8 +27,7 @@ browser-compat: webextensions.manifest.optional_permissions
         <pre class="brush: json">
 "optional_permissions": [
   "webRequest"
-]</pre
-        >
+]</pre>
       </td>
     </tr>
   </tbody>
@@ -43,7 +39,7 @@ The [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/perm
 
 For advice on designing your request for runtime permissions, to maximize the likelihood that users grant them, see [Request permissions at runtime](https://extensionworkshop.com/documentation/develop/request-the-right-permissions/#request_permissions_at_runtime).
 
-Starting with Firefox 84, users will be able to manage optional permissions from the Firefox Add-ons Manager. Extensions that use optional permissions should listen for [browser.permissions.onAdded](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions/onAdded) and [browser.permissions.onRemoved](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions/onRemoved) API events to know when a user grants or revokes these permissions.
+Starting with Firefox 84, users can manage optional permissions from the Firefox Add-ons Manager. Extensions that use optional permissions can listen for [browser.permissions.onAdded](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions/onAdded) and [browser.permissions.onRemoved](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/permissions/onRemoved) API events to know when a user grants or revokes these permissions.
 
 The key can contain two kinds of permissions: host permissions and API permissions.
 
@@ -51,10 +47,7 @@ The key can contain two kinds of permissions: host permissions and API permissio
 
 These are the same as the host permissions you can specify in the [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) key.
 
-> **Note:** When using Manifest V3 or higher:
->
-> - in Chrome, host permissions must be specified in the [`host_permission`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) manifest key.
-> - in Firefox, during the Manifest V3 developer preview, hosts can be in either `host_permissions` or `optional_permissions`. Subject to completion of [bug 1766026](https://bugzilla.mozilla.org/show_bug.cgi?id=1766026), hosts will be specified in either `host_permissions` or `optional_host_permissions`.
+> **Note:** When using Manifest V3 or higher optional host permissions should be specified using the [`optional_host_permission`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_host_permissions) manifest key. Firefox introduced `optional_host_permission`in release 128, see [bug 1766026](https://bugzil.la/1766026), and allows for the continued use of `optional_permissions` to specify optional hosts. Use of `optional_host_permission` however is recommended.
 
 ## API permissions
 
@@ -64,12 +57,17 @@ You can include any of the following here, but not in all browsers: check the co
 - `background`
 - `bookmarks`
 - `browserSettings`
+- `browsingData`
 - `clipboardRead`
 - `clipboardWrite`
 - `contentSettings`
 - `contextMenus`
 - `cookies`
 - `debugger`
+- `declarativeNetRequest`
+- `declarativeNetRequestFeedback`
+- `declarativeNetRequestWithHostAccess`
+- `devtools`
 - `downloads`
 - `downloads.open`
 - `find`
@@ -80,14 +78,20 @@ You can include any of the following here, but not in all browsers: check the co
 - `nativeMessaging`
 - `notifications`
 - `pageCapture`
+- `pkcs11`
 - `privacy`
-- `scripting` (Manifest V3 or higher)
+- `proxy`
+- `scripting`
+- `search`
+- `sessions`
 - `tabHide`
 - `tabs`
 - `topSites`
 - `webNavigation`
 - `webRequest`
 - `webRequestBlocking`
+- `webRequestFilterResponse`
+- `webRequestFilterResponse.serviceWorkerScript`
 
 Note that this is a subset of the API permissions allowed in [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions).
 
@@ -98,6 +102,8 @@ Of this set, the following permissions are granted silently, without a user prom
 - `idle`
 - `webRequest`
 - `webRequestBlocking`
+- `webRequestFilterResponse`
+- `webRequestFilterResponse.serviceWorkerScript`
 
 ## Example
 

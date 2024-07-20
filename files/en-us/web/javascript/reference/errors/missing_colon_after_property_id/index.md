@@ -1,12 +1,9 @@
 ---
-title: 'SyntaxError: missing : after property id'
+title: "SyntaxError: missing : after property id"
 slug: Web/JavaScript/Reference/Errors/Missing_colon_after_property_id
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
+page-type: javascript-error
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "missing : after property id" occurs when objects are created
@@ -16,7 +13,7 @@ object's properties. Somehow, this colon is missing or misplaced.
 
 ## Message
 
-```
+```plain
 SyntaxError: Invalid shorthand property initializer (V8-based)
 SyntaxError: missing : after property id (Firefox)
 SyntaxError: Unexpected token '='. Expected a ':' following the property name 'x'. (Safari)
@@ -33,7 +30,7 @@ When creating objects with the [object initializer](/en-US/docs/Web/JavaScript/R
 a colon (`:`) separates keys and values for the object's properties.
 
 ```js
-const obj = { propertyKey: 'value' };
+const obj = { propertyKey: "value" };
 ```
 
 ## Examples
@@ -43,8 +40,8 @@ const obj = { propertyKey: 'value' };
 This code fails, as the equal sign can't be used this way in this object initializer
 syntax.
 
-```js example-bad
-const obj = { propertyKey = 'value' };
+```js-nolint example-bad
+const obj = { propertyKey = "value" };
 // SyntaxError: missing : after property id
 ```
 
@@ -52,12 +49,14 @@ Correct would be to use a colon, or to use square brackets to assign a new prope
 after the object has been created already.
 
 ```js example-good
-const obj = { propertyKey: 'value' };
+const obj = { propertyKey: "value" };
+```
 
-// or alternatively
+Or alternatively:
 
+```js
 const obj = {};
-obj['propertyKey'] = 'value';
+obj.propertyKey = "value";
 ```
 
 ### Computed properties
@@ -65,15 +64,15 @@ obj['propertyKey'] = 'value';
 If you create a property key from an expression, you need to use square brackets.
 Otherwise the property name can't be computed:
 
-```js example-bad
-const obj = { 'b'+'ar': 'foo' };
+```js-nolint example-bad
+const obj = { "b"+"ar": "foo" };
 // SyntaxError: missing : after property id
 ```
 
-Put the expression in brackets `[]`:
+Put the expression in square brackets `[]`:
 
 ```js example-good
-const obj = { ['b'+'ar']: 'foo' };
+const obj = { ["b" + "ar"]: "foo" };
 ```
 
 ## See also

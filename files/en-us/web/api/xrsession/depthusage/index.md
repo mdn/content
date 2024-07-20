@@ -1,23 +1,16 @@
 ---
-title: XRSession.depthUsage
+title: "XRSession: depthUsage property"
+short-title: depthUsage
 slug: Web/API/XRSession/depthUsage
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Experimental
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR Device API
-  - XRSession
+status:
+  - experimental
 browser-compat: api.XRSession.depthUsage
 ---
-{{APIRef("WebXR Device API")}}
 
-The *read-only* **`depthUsage`** property of an `immersive-ar`
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+
+The _read-only_ **`depthUsage`** property of an `immersive-ar`
 {{DOMxRef("XRSession")}} describes which depth-sensing usage is used.
 
 ## Value
@@ -38,8 +31,8 @@ navigator.xr.requestSession("immersive-ar", {
   requiredFeatures: ["depth-sensing"],
   depthSensing: {
     usagePreference: ["cpu-optimized", "gpu-optimized"],
-    formatPreference: ["luminance-alpha", "float32"]
-  }
+    formatPreference: ["luminance-alpha", "float32"],
+  },
 });
 ```
 

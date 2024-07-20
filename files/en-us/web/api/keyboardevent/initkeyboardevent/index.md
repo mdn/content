@@ -1,28 +1,26 @@
 ---
-title: KeyboardEvent.initKeyboardEvent()
+title: "KeyboardEvent: initKeyboardEvent() method"
+short-title: initKeyboardEvent()
 slug: Web/API/KeyboardEvent/initKeyboardEvent
 page-type: web-api-instance-method
-tags:
-  - API
-  - Deprecated
-  - KeyboardEvent
-  - Method
-  - Reference
+status:
+  - deprecated
 browser-compat: api.KeyboardEvent.initKeyboardEvent
 ---
+
 {{APIRef("UI Events")}}{{Deprecated_Header}}
 
 The **`KeyboardEvent.initKeyboardEvent()`** method initializes
 the attributes of a keyboard event object. This method was introduced in draft of DOM
 Level 3 Events, but deprecated in newer draft. Gecko won't support this feature since
-implementing this method as experimental broke existing web apps (see {{bug(999645)}}).
+implementing this method as experimental broke existing web apps (see [Firefox bug 999645](https://bugzil.la/999645)).
 Web applications should use constructor instead of this if it's available.
 
 ## Syntax
 
-```js
+```js-nolint
 initKeyboardEvent(type, canBubble, cancelable,
-                  view,  key, location, ctrlKey,
+                  view, key, location, ctrlKey,
                   altKey, shiftKey, metaKey)
 ```
 
@@ -36,7 +34,7 @@ initKeyboardEvent(type, canBubble, cancelable,
 - `cancelable` {{optional_inline}}
   - : Indicates whether or not the event can be canceled. Defaults to `false`.
 - `view` {{optional_inline}}
-  - : The {{domxref("WindowProxy")}} it is associated to. Defaults to `null`.
+  - : The {{glossary("WindowProxy")}} it is associated to. Defaults to `null`.
 - `key` {{optional_inline}}
   - : The value of the key attribute. Defaults to `""`.
 - `location` {{optional_inline}}

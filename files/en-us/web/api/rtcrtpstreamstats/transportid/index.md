@@ -1,21 +1,11 @@
 ---
-title: RTCRtpStreamStats.transportId
+title: "RTCRtpStreamStats: transportId property"
+short-title: transportId
 slug: Web/API/RTCRtpStreamStats/transportId
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - RTCRtpStreamStats
-  - RTP
-  - Reference
-  - Transport
-  - WebRTC
-  - WebRTC API
-  - id
-  - rtc
-  - transportID
 browser-compat: api.RTCRtpStreamStats.transportId
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCRtpStreamStats")}} dictionary's

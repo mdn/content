@@ -2,34 +2,22 @@
 title: TextTrackCue
 slug: Web/API/TextTrackCue
 page-type: web-api-interface
-tags:
-  - API
-  - Accessibility
-  - Draft
-  - HTML5
-  - Interface
-  - Media
-  - NeedsContent
-  - TextTrack
-  - TextTrackCue
-  - WebVTT
-  - a11y
-  - cue
-  - track
-  - vtt
 browser-compat: api.TextTrackCue
 ---
+
 {{APIRef("WebVTT")}}
 
-**`TextTrackCue`** is an abstract class which is used as the basis for the various derived cue types, such as {{domxref("VTTCue")}}; you will instead work with those derived types. These cues represent strings of text presented for some duration of time during the performance of a {{domxref("TextTrack")}}. The cue includes the start time (the time at which the text will be displayed) and the end time (the time at which it will be removed from the display), as well as other information.
+The **`TextTrackCue`** interface of the [WebVTT API](/en-US/docs/Web/API/WebVTT_API) is the abstract base class for the various derived cue types, such as {{domxref("VTTCue")}}; you will work with these derived types rather than the base class.
+
+These cues represent strings of text presented for some duration of time during the performance of a {{domxref("TextTrack")}}. The cue includes the start time (the time at which the text will be displayed) and the end time (the time at which it will be removed from the display), as well as other information.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from {{domxref("EventTarget")}}._
 
-- {{domxref("TextTrackCue.track")}} {{readOnlyInline}}
+- {{domxref("TextTrackCue.track")}} {{ReadOnlyInline}}
   - : The {{domxref("TextTrack")}} that this cue belongs to, or `null` if it doesn't belong to any.
 - {{domxref("TextTrackCue.id")}}
   - : A string that identifies the cue.

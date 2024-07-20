@@ -2,14 +2,9 @@
 title: SVGFETurbulenceElement
 slug: Web/API/SVGFETurbulenceElement
 page-type: web-api-interface
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGFETurbulenceElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGFETurbulenceElement`** interface corresponds to the {{SVGElement("feTurbulence")}} element.
@@ -80,7 +75,7 @@ The **`SVGFETurbulenceElement`** interface corresponds to the {{SVGElement("feTu
   </tbody>
 </table>
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
 
@@ -107,7 +102,7 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 - {{domxref("SVGFETurbulenceElement.y")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("y")}} attribute of the given element.
 
-## Methods
+## Instance methods
 
 _This interface does not provide any specific methods, but implements those of its parent, {{domxref("SVGElement")}}._
 

@@ -1,16 +1,11 @@
 ---
-title: CSSKeyframeRule.keyText
+title: "CSSKeyframeRule: keyText property"
+short-title: keyText
 slug: Web/API/CSSKeyframeRule/keyText
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - CSSKeyframeRule
-  - CSS Animations
-  - Property
-  - Reference
 browser-compat: api.CSSKeyframeRule.keyText
 ---
+
 {{APIRef("CSSOM") }}
 
 The **`keyText`** property of the {{domxref("CSSKeyframeRule")}} interface represents the keyframe selector as a comma-separated list of percentage values. The from and to keywords map to 0% and 100%, respectively.
@@ -27,7 +22,7 @@ A string.
 ## Examples
 
 The CSS includes a keyframes at-rule. This will be the first {{domxref("CSSRule")}} returned by `document.styleSheets[0].cssRules`.
-`myRules[0]` returns a {{domxref("CSSKeyframesRule")}} object, which will contain individual {{domxref("CSSKeyFrame")}} objects for each keyframe.
+`myRules[0]` returns a {{domxref("CSSKeyframesRule")}} object, which will contain individual {{domxref("CSSKeyFrameRule")}} objects for each keyframe.
 
 ```css
 @keyframes slidein {

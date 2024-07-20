@@ -2,11 +2,9 @@
 title: Selection API
 slug: Web/API/Selection_API
 page-type: web-api-overview
-tags:
-  - API
-  - Selection
 spec-urls: https://w3c.github.io/selection-api/#selection-interface
 ---
+
 {{DefaultAPISidebar("Selection API")}}
 
 > **Note:** This API is _not available_ in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) (not exposed via {{domxref("WorkerNavigator")}}).
@@ -21,7 +19,7 @@ The {{domxref("Window/getSelection()", "Window.getSelection()")}} and {{domxref(
 
 The Selection API also provides two events, both firing on {{domxref("Document")}}:
 
-- the {{domxref("Document/selectstart_event", "selectstart")}} event is fired when the user starts to make a new selection
+- the {{domxref("Node/selectstart_event", "selectstart")}} event is fired when the user starts to make a new selection
 - the {{domxref("Document/selectionchange_event", "selectionchange")}} event is fired when the current selection changes.
 
 ## Interfaces
@@ -34,7 +32,7 @@ The Selection API also provides two events, both firing on {{domxref("Document")
   - : A method returning a `Selection` object representing the current selection or current position of the caret.
 - {{domxref("Document/selectionchange_event", "Document.selectionchange")}}
   - : An event which is fired when the current selection is changed.
-- {{domxref("Document/selectstart_event", "Document.selectstart")}}
+- {{domxref("Node/selectstart_event", "Node.selectstart")}}
   - : An event which is fired when a user starts a new selection.
 
 ## Specifications

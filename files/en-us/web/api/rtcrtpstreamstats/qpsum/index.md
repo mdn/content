@@ -1,28 +1,11 @@
 ---
-title: RTCRtpStreamStats.qpSum
+title: "RTCRtpStreamStats: qpSum property"
+short-title: qpSum
 slug: Web/API/RTCRtpStreamStats/qpSum
 page-type: web-api-instance-property
-tags:
-  - API
-  - Media
-  - Parameter
-  - Property
-  - QP
-  - Quantization
-  - Quantization Parameter
-  - RTCRtpStreamStats
-  - RTP
-  - Reference
-  - Statistics
-  - Stats
-  - Video
-  - WebRTC
-  - WebRTC API
-  - compression
-  - qpSum
-  - rtc
 browser-compat: api.RTCRtpStreamStats.qpSum
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`qpSum`** property of the
@@ -79,7 +62,7 @@ describe an RTP stream.
 function calculateAverageQP(stats) {
   let frameCount = 0;
 
-  switch(stats.type) {
+  switch (stats.type) {
     case "inbound-rtp":
     case "remote-inbound-rtp":
       frameCount = stats.framesDecoded;

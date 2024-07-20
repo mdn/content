@@ -1,15 +1,11 @@
 ---
-title: FormDataEvent.formData
+title: "FormDataEvent: formData property"
+short-title: formData
 slug: Web/API/FormDataEvent/formData
 page-type: web-api-instance-property
-tags:
-  - API
-  - FormDataEvent
-  - Forms
-  - Property
-  - Reference
 browser-compat: api.FormDataEvent.formData
 ---
+
 {{APIRef("DOM")}}
 
 The `formData` read-only property of the {{domxref("FormDataEvent")}}
@@ -25,11 +21,11 @@ A {{domxref("FormData")}} object.
 ```js
 // grab reference to form
 
-const formElem = document.querySelector('form');
+const formElem = document.querySelector("form");
 
 // submit handler
 
-formElem.addEventListener('submit', (e) => {
+formElem.addEventListener("submit", (e) => {
   // on form submission, prevent default
   e.preventDefault();
 
@@ -39,12 +35,12 @@ formElem.addEventListener('submit', (e) => {
 
 // formdata handler to retrieve data
 
-formElem.addEventListener('formdata', (e) => {
-  console.log('formdata fired');
+formElem.addEventListener("formdata", (e) => {
+  console.log("formdata fired");
 
   // Get the form data from the event object
   let data = e.formData;
-  for (let value of data.values()) {
+  for (const value of data.values()) {
     console.log(value);
   }
 
@@ -66,6 +62,6 @@ formElem.addEventListener('formdata', (e) => {
 ## See also
 
 - {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
-- [Using FormData objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
+- [Using FormData objects](/en-US/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

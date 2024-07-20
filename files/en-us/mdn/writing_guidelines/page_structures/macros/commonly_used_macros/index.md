@@ -2,23 +2,21 @@
 title: Commonly-used macros
 slug: MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros
 page-type: mdn-writing-guide
-tags:
-  - meta
-  - writing-guide
 ---
+
 {{MDNSidebar}}
 
 This page lists many of the general-purpose macros created for use on MDN.
-For additional how-to information on using these macros, see [Using macros](/en-US/docs/MDN/Structures/Macros).
+For additional how-to information on using these macros, see [Using macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros).
 
-See [Other macros](/en-US/docs/MDN/Structures/Macros/Other) for information on macros that are infrequently used, are used only in special contexts, or are deprecated.
+See [Other macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Other) for information on macros that are infrequently used, are used only in special contexts, or are deprecated.
 
 ## Linking
 
 MDN provides a number of link macros for easing the creation of links to reference pages, glossary entries, and other topics.
 
-Link macros are recommended over normal HTML links because they are succinct and translation-friendly.
-For example a glossary or reference link created using a macro does not need to be translated: in other locales it will automatically link to the correct version of the file.
+Link macros are recommended over normal Markdown links because they are succinct and translation-friendly.
+For example, a glossary or reference link created using a macro does not need to be translated: in other locales it will automatically link to the correct version of the file.
 
 ### Glossary links
 
@@ -30,7 +28,7 @@ This macro accepts one required parameter and one optional parameter:
 
 ### Linking to pages in references
 
-There are macros for locale-independent linking to pages in specific reference areas of MDN: Javascript, CSS, HTML elements, SVG etc.
+There are macros for locale-independent linking to pages in specific reference areas of MDN: JavaScript, CSS, HTML elements, SVG, etc.
 
 The macros are easy to use.
 Minimally all you need to do is specify the name of the item to link to in the first argument.
@@ -77,20 +75,6 @@ Most macros will also take a second argument allowing you to change the display 
       </td>
       <td>
         <code>\{{HTMLElement("select")}}</code> results in {{HTMLElement("select")}}
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/htmlattrxref.ejs"
-          >HTMLAttrxRef</a>
-      </td>
-      <td>
-        <a href="/en-US/docs/Web/HTML/Global_attributes">HTML global attribute description</a>
-        if you only specify the attribute name.<br />Attribute associated with a specific HTML element if you specify an attribute name and an element name.
-      </td>
-      <td>
-        <code>\{{HTMLAttrxRef("lang")}} </code>links to the global attribute description {{HTMLAttrxRef("lang")}}.<br />
-        <code>\{{HTMLAttrxRef("type","input")}}</code> result in a link to the {{htmlattrxref("type","input")}} attribute (on the {{HTMLElement("input")}} element).
       </td>
     </tr>
     <tr>
@@ -160,34 +144,24 @@ Most macros will also take a second argument allowing you to change the display 
         <code>\{{HTTPStatus("404")}}</code> results in {{HTTPStatus("404")}}
       </td>
     </tr>
-    </tr>
   </tbody>
 </table>
-
-### Linking to bugs
-
-- Bugs
-
-  - [`bug`](https://github.com/mdn/yari/blob/main/kumascript/macros/bug.ejs) allows you to link to a bug on bugzilla.mozilla.org easily using this syntax: `\{{Bug(123456)}}`.
-    This gives you: {{Bug(123456)}}.
-  - [`WebkitBug`](https://github.com/mdn/yari/blob/main/kumascript/macros/WebkitBug.ejs) inserts a link to a bug in the WebKit bug database.
-    For example, `\{{WebkitBug(31277)}}` inserts {{WebkitBug(31277)}}.
 
 ### Navigation aids for multi-page guides
 
 [`Previous`](https://github.com/mdn/yari/blob/main/kumascript/macros/Previous.ejs), [`Next`](https://github.com/mdn/yari/blob/main/kumascript/macros/Next.ejs), and [`PreviousNext`](https://github.com/mdn/yari/blob/main/kumascript/macros/PreviousNext.ejs) provide navigation controls for articles which are part of sequences.
 For the single-way templates, the only parameter needed is the wiki location of the previous or next article in the sequence.
 For [`PreviousNext`](https://github.com/mdn/yari/blob/main/kumascript/macros/PreviousNext.ejs), the two parameters needed are the wiki locations of the appropriate articles.
-The first parameter is for the previous article and the second is for the next article.
+The first parameter is for the previous article, and the second is for the next article.
 
 ## Code samples
 
 ### Live samples
 
-- [`EmbedLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedLiveSample.ejs) lets you embed the output of a code sample on a page, as described in [Live samples](/en-US/docs/MDN/Structures/Live_samples).
-- [`LiveSampleLink`](https://github.com/mdn/yari/blob/main/kumascript/macros/LiveSampleLink.ejs) creates a link to a page containing the output of a code sample on a page, as described in [Live samples](/en-US/docs/MDN/Structures/Live_samples).
+- [`EmbedLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedLiveSample.ejs) lets you embed the output of a code sample on a page, as described in [Live samples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples).
+- [`LiveSampleLink`](https://github.com/mdn/yari/blob/main/kumascript/macros/LiveSampleLink.ejs) creates a link to a page containing the output of a code sample on a page, as described in [Live samples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples).
 - [`EmbedGHLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedGHLiveSample.ejs) allows to embed live samples from GitHub pages.
-  You can get more information at [GitHub live samples](/en-US/docs/MDN/Structures/Code_examples#github_live_samples).
+  You can get more information at [GitHub live samples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples#github_live_samples).
 
 ## Sidebar generation
 
@@ -195,7 +169,7 @@ There are templates for almost every large collection of pages.
 They typically link back to the main page of the reference/guide/tutorial (this is often needed because our breadcrumbs sometimes can't do this) and put the article in the appropriate category.
 
 - [`CSSRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/CSSRef.ejs) generates the sidebar for CSS reference pages.
-- [`HTMLRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLRef.ejs) generates the sidebar for HTML reference pages.
+- [`HTMLSidebar`](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLSidebar.ejs) generates the sidebar for HTML reference pages.
 - [`APIRef`](https://github.com/mdn/yari/blob/main/kumascript/macros/APIRef.ejs) generates the sidebar for Web API reference pages.
 
 ## General-purpose formatting
@@ -231,6 +205,7 @@ Example:
 #### Experimental
 
 [`experimental_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/experimental_inline.ejs) inserts an in-line mark indicating the API is not widely implemented and may change in the future.
+For more information on the definition **experimental**, see the [Experimental, deprecated, and obsolete](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete) documentation.
 
 ##### Syntax
 
@@ -245,6 +220,7 @@ Example:
 #### Deprecated
 
 [`deprecated_inline`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Inline.ejs) inserts an in-line deprecated mark ({{Deprecated_Inline}}) to discourage the use of an API that is officially deprecated (or has been removed).
+For more information on the definition **deprecated**, see the [Experimental, deprecated, and obsolete](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete) documentation.
 
 ##### Syntax
 
@@ -261,26 +237,46 @@ The templates should be placed directly underneath the main page title (or bread
 They can also be used to mark up a section on a page.
 
 - [`non-standard_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Non-standard_Header.ejs): `\{{Non-standard_Header}}` {{Non-standard_Header}}
-- [`SeeCompatTable`](https://github.com/mdn/yari/blob/main/kumascript/macros/SeeCompatTable.ejs) should be used on pages that document [experimental features](/en-US/docs/MDN/Guidelines/Conventions_definitions#experimental).
+- [`SeeCompatTable`](https://github.com/mdn/yari/blob/main/kumascript/macros/SeeCompatTable.ejs) used on pages
+  that document [experimental features](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
   Example: `\{{SeeCompatTable}}` {{SeeCompatTable}}
 - [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs): `\{{Deprecated_Header}}` {{Deprecated_Header}}
 - [`secureContext_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/secureContext_header.ejs).
-  Should be used on main pages like interface pages, API overview pages, and API entry points (e.g. `navigator.xyz`) but usually not on sub-pages like method and property pages.
+  Should be used on main pages like interface pages, API overview pages, and API entry points (e.g. `navigator.xyz`) but usually not on subpages like method and property pages.
   Example: `\{{SecureContext_Header}}` {{SecureContext_Header}}
 
-### Indicating that a feature is available in web workers
+#### Indicating that a feature is available in web workers
 
 The [`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macros/AvailableInWorkers.ejs) macro inserts a localized note box indicating that a feature is available in a [Web worker](/en-US/docs/Web/API/Web_Workers_API) context.
-You can use the argument `notservice` to indicate that a feature works in web workers except for service workers.
+You can use the argument `window_and_worker_except_service` to indicate that a feature works in web workers except for service workers.
 
 ##### Syntax
 
 ```plain
 \{{AvailableInWorkers}}
-\{{AvailableInWorkers("notservice")}}
+\{{AvailableInWorkers("window_and_worker_except_service")}}
 ```
 
 ##### Examples
 
 {{AvailableInWorkers}}
-{{AvailableInWorkers("notservice")}}
+{{AvailableInWorkers("window_and_worker_except_service")}}
+
+## Browser compatibility and specification macros
+
+The following macros are included on all reference pages, but are also supported by all page types:
+
+- `\{{Compat}}` / `\{{Compat(&lt;feature>)}}` / `\{{Compat(&lt;feature>, &lt;depth>)}}`
+
+  - : Generates a [compatibility table](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables) for the feature passed as the parameter. If no parameter is included, it defaults to the features defined by `browser-compat` in the frontmatter. An optional depth parameter sets how deep sub features should be added to the table. The depth, if omitted, defaults to 1, meaning only the first level of sub feature data from BCD will be included.
+
+- `\{{Specifications}}` / `\{{Specifications(&lt;feature>)}}`
+  - : Includes the specification for the feature specified in the parameter. If no parameter is passed, the specification listed is defined by the value for `spec_urls` in the frontmatter, if present, or from the specification listed in browser compatibility data defined by `browser-compat` in the frontmatter. The specification is rendered as an external link.
+
+## See also
+
+- [Sidebar macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars)
+- [Page templates](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types#page_templates)
+- [Page components](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#page_components)
+- [Feature status macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status)
+- [List of macros](https://github.com/mdn/yari/tree/main/kumascript/macros) on GitHub

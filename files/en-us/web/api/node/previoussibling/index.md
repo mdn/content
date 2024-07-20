@@ -1,13 +1,11 @@
 ---
-title: Node.previousSibling
+title: "Node: previousSibling property"
+short-title: previousSibling
 slug: Web/API/Node/previousSibling
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Reference
-  - Read-only
 browser-compat: api.Node.previousSibling
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`previousSibling`** property of the {{domxref("Node")}} interface
@@ -41,11 +39,11 @@ The following examples demonstrate how `previousSibling` works with and without 
 In this example, we have a series of `img` elements directly adjacent to each other, with no whitespace between them.
 
 ```html
-<img id="b0"><img id="b1"><img id="b2">
+<img id="b0" /><img id="b1" /><img id="b2" />
 ```
 
 ```js
-document.getElementById("b1").previousSibling;    // <img id="b0">
+document.getElementById("b1").previousSibling; // <img id="b0">
 document.getElementById("b2").previousSibling.id; // "b1"
 ```
 
@@ -54,17 +52,17 @@ document.getElementById("b2").previousSibling.id; // "b1"
 In this example, there are whitespace text nodes (line breaks) between the `img` elements.
 
 ```html
-<img id="b0">
-<img id="b1">
-<img id="b2">
+<img id="b0" />
+<img id="b1" />
+<img id="b2" />
 ```
 
 ```js
-document.getElementById("b1").previousSibling;                 // #text
+document.getElementById("b1").previousSibling; // #text
 document.getElementById("b1").previousSibling.previousSibling; // <img id="b0">
 document.getElementById("b2").previousSibling.previousSibling; // <img id="b1">
-document.getElementById("b2").previousSibling;                 // #text
-document.getElementById("b2").previousSibling.id;              // undefined
+document.getElementById("b2").previousSibling; // #text
+document.getElementById("b2").previousSibling.id; // undefined
 ```
 
 ## Specifications

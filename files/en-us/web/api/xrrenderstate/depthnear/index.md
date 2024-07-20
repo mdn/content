@@ -1,23 +1,14 @@
 ---
-title: XRRenderState.depthNear
+title: "XRRenderState: depthNear property"
+short-title: depthNear
 slug: Web/API/XRRenderState/depthNear
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Experimental
-  - Property
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XRRenderState
-  - depthNear
+status:
+  - experimental
 browser-compat: api.XRRenderState.depthNear
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`depthNear`** read-only property of the
 {{domxref("XRRenderState")}} interface returns the distance in meters of the near clip

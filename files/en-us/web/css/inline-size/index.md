@@ -1,14 +1,10 @@
 ---
 title: inline-size
 slug: Web/CSS/inline-size
-tags:
-  - CSS
-  - CSS Logical Property
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.inline-size
 ---
+
 {{CSSRef}}
 
 The **`inline-size`** [CSS](/en-US/docs/Web/CSS) property defines the horizontal or vertical size of an element's block, depending on its writing mode. It corresponds to either the {{cssxref("width")}} or the {{cssxref("height")}} property, depending on the value of {{cssxref("writing-mode")}}.
@@ -23,6 +19,8 @@ If the writing mode is vertically oriented, the value of `inline-size` relates t
 /* <length> values */
 inline-size: 300px;
 inline-size: 25em;
+inline-size: anchor-size(width);
+inline-size: anchor-size(--myAnchor inline);
 
 /* <percentage> values */
 inline-size: 75%;
@@ -30,6 +28,7 @@ inline-size: 75%;
 /* Keyword values */
 inline-size: max-content;
 inline-size: min-content;
+inline-size: fit-content;
 inline-size: fit-content(20em);
 inline-size: auto;
 

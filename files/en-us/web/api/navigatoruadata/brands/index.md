@@ -1,16 +1,14 @@
 ---
-title: NavigatorUAData.brands
+title: "NavigatorUAData: brands property"
+short-title: brands
 slug: Web/API/NavigatorUAData/brands
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - brands
-  - NavigatorUAData
+status:
+  - experimental
 browser-compat: api.NavigatorUAData.brands
 ---
-{{DefaultAPISidebar("User-Agent Client Hints API")}}
+
+{{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 The **`brands`** read-only property of the {{domxref("NavigatorUAData")}} interface returns an array of brand information.
 
@@ -25,7 +23,7 @@ An array containing the following information for each brand:
 
 ## Examples
 
-The following example prints the value of {{domxref("NavigatorUAData.brands")}} to the console.
+The following example prints the value of `brands` to the console.
 
 ```js
 console.log(navigator.userAgentData.brands);

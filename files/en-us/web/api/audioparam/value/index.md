@@ -1,18 +1,11 @@
 ---
-title: AudioParam.value
+title: "AudioParam: value property"
+short-title: value
 slug: Web/API/AudioParam/value
 page-type: web-api-instance-property
-tags:
-  - API
-  - AudioParam
-  - Parameter
-  - Property
-  - Reference
-  - Web Audio API
-  - sound
-  - value
 browser-compat: api.AudioParam.value
 ---
+
 {{APIRef("Web Audio API")}}
 
 The [Web Audio API's](/en-US/docs/Web/API/Web_Audio_API)
@@ -28,8 +21,7 @@ property.
 
 A floating-point {{jsxref("Number")}} indicating the parameter's value as of the
 current time. This value will be between the values specified by the
-{{domxref("AudioParam.minValue", "minValue")}} and {{domxref("AudioParam.maxValue",
-  "maxValue")}} properties.
+{{domxref("AudioParam.minValue", "minValue")}} and {{domxref("AudioParam.maxValue", "maxValue")}} properties.
 
 ## Usage notes
 
@@ -90,10 +82,10 @@ the value of a parameter:
 - If any graduated or ramped value changing methods have been called and the current
   time is within the time range over which the graduated change should occur, the value
   is updated based on the appropriate algorithm. These ramped or graduated
-  value-changing methods include {{domxref("AudioParam.linearRampToValueAtTime",
-    "linearRampToValueAtTime()")}}, {{domxref("AudioParam.setTargetAtTime",
-    "setTargetAtTime()")}}, and {{domxref("AudioParam.setValueCurveAtTime",
-    "setValueCurveAtTime()")}}.
+  value-changing methods include
+  {{domxref("AudioParam.linearRampToValueAtTime", "linearRampToValueAtTime()")}},
+  {{domxref("AudioParam.setTargetAtTime", "setTargetAtTime()")}}, and
+  {{domxref("AudioParam.setValueCurveAtTime", "setValueCurveAtTime()")}}.
 
 Thus, the `value` of a parameter is maintained to accurately reflect the
 state of the parameter over time.

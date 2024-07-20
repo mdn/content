@@ -1,12 +1,10 @@
 ---
 title: markerUnits
 slug: Web/SVG/Attribute/markerUnits
-tags:
-  - NeedsExample
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.marker.markerUnits
 ---
+
 {{SVGRef}}
 
 The **`markerUnits`** attribute defines the coordinate system for the {{SVGAttr("markerWidth")}} and {{SVGAttr("markerHeight")}} attributes and the contents of the {{SVGElement("marker")}}.

@@ -1,13 +1,12 @@
 ---
 title: Inline formatting context
 slug: Web/CSS/Inline_formatting_context
-tags:
-  - CSS
-  - Formatting context
-  - Guide
-  - Reference
+page-type: guide
 ---
-This article explains the inline formatting context
+
+{{CSSRef}}
+
+This article explains the inline formatting context.
 
 ## Core concepts
 
@@ -16,11 +15,11 @@ The inline formatting context is part of the visual rendering of a web page. Inl
 - In a horizontal writing mode, boxes are laid out horizontally, starting on the left.
 - In a vertical writing mode they would be laid out vertically starting at the top.
 
-In the example below, the two ({{HTMLElement("div")}}) elements with the black borders form a [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context), inside which each word participates in an inline formatting context. The boxes in the horizontal writing mode run horizontally, and the vertical writing mode boxes run vertically.
+In the example below, the two ({{HTMLElement("div")}}) elements with the black borders form a [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context), inside which each word participates in an inline formatting context. The boxes in the horizontal writing mode run horizontally, and the vertical writing mode boxes run vertically.
 
 {{EmbedGHLiveSample("css-examples/inline-formatting/inline.html", '100%', 720)}}
 
-Boxes forming a line are contained by a rectangular area called a line box. This box will be large enough to contain all of the inline boxes in that line; when there is no more room in the inline direction another line will be created. Therefore a paragraph is a set of inline line boxes, stacked in the block direction.
+Boxes forming a line are contained by a rectangular area called a line box. This box will be large enough to contain all of the inline boxes in that line; when there is no more room in the inline direction another line will be created. Therefore, a paragraph is a set of inline line boxes, stacked in the block direction.
 
 When an inline box is split, margins, borders, and padding have no visual effect where the split occurs. In the next example there is a ({{HTMLElement("span")}}) element wrapping a set of words wrapping onto two lines. The border on the `<span>` breaks at the wrapping point.
 
@@ -30,7 +29,7 @@ Margins, borders, and padding in the inline direction are respected. In the exam
 
 {{EmbedGHLiveSample("css-examples/inline-formatting/mbp.html", '100%', 920)}}
 
-> **Note:** I am using the logical, flow-relative properties — {{cssxref("padding-inline-start")}} rather than {{cssxref("padding-left")}} — so that they work in the inline dimension whether the text is horizontal or vertical. Read more about these properties in [Logical Properties and Values](/en-US/docs/Web/CSS/CSS_Logical_Properties).
+> **Note:** I am using the logical, flow-relative properties — {{cssxref("padding-inline-start")}} rather than {{cssxref("padding-left")}} — so that they work in the inline dimension whether the text is horizontal or vertical. Read more about these properties in [Logical Properties and Values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values).
 
 ## Alignment in the block direction
 
@@ -52,5 +51,5 @@ Line boxes usually have the same size in the inline direction, therefore the sam
 
 ## See also
 
-- [Block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context)
+- [Block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context)
 - [Visual Formatting Model](/en-US/docs/Web/CSS/Visual_formatting_model)

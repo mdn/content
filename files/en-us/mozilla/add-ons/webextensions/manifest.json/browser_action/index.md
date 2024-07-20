@@ -1,12 +1,10 @@
 ---
 title: browser_action
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
-tags:
-  - Add-ons
-  - Extensions
-  - WebExtensions
+page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.browser_action
 ---
+
 {{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
@@ -28,7 +26,6 @@ browser-compat: webextensions.manifest.browser_action
       <td>
         <pre class="brush: json">
 "browser_action": {
-  "browser_style": true,
   "default_icon": {
     "16": "button/geo-16.png",
     "32": "button/geo-32.png"
@@ -55,9 +52,9 @@ A browser action is a button that your extension adds to the browser's toolbar. 
 
 This key is replaced by [`action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) in Manifest V3 extensions.
 
-If you supply a popup, then the popup is opened when the user clicks the button, and your JavaScript running in the popup can handle the user's interaction with it. If you don't supply a popup, then a click event is dispatched to your extension's [background scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) when the user clicks the button.
+You must specify this key to include a browser toolbar button in your extension. When specified, you can manipulate the button programmatically using the {{WebExtAPIRef("browserAction")}} API.
 
-You can also create and manipulate browser actions programmatically using the [browserAction API](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction).
+If you supply a popup, then the popup is opened when the user clicks the button, and your JavaScript running in the popup can handle the user's interaction with it. If you don't supply a popup, then a click event is dispatched to your extension's [background scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) when the user clicks the button.
 
 ## Syntax
 
@@ -74,29 +71,26 @@ The `browser_action` key is an object that may have any of the following propert
   <tbody>
     <tr>
       <td>
-        <code
-          ><a
-            href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles"
-            >browser_style</a
-          ></code
-        >
+        <code>
+          <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles">
+            browser_style
+          </a>
+        </code>
+        <br />{{optional_inline}}
       </td>
       <td><code>Boolean</code></td>
       <td>
         <p>Optional, defaulting to <code>false</code>.</p>
-        <p>
-          Use this to include a stylesheet in your popup that will make its look
-          consistent with the browser's UI and with other extensions that use
-          the <code>browser_style</code> property. Although this key defaults to
-          <code>false</code>, it's recommended that you include it and set it to
-          <code>true</code> in order to make your popups consistent with the
-          look of the rest of the browser user interface.
-        </p>
+        <div class="notecard warning">
+          <p>
+            Do not set <code>browser_style</code> to true: it isn't supported in Manifest V3, starting with Firefox 118. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles#manifest_v3_migration">Manifest V3 migration for <code>browser_style</code></a>.
+          </p>
+        </div>
         <p>
           In Firefox, the stylesheet can be seen at
-          chrome://browser/content/extension.css, or
+          chrome://browser/content/extension.css or
           chrome://browser/content/extension-mac.css on macOS. When setting
-          dimensions, be aware that this style sheet currently sets
+          dimensions, be aware that this stylesheet sets
           <code>box-sizing: border-box</code> (see
           <a href="/en-US/docs/Web/CSS/box-sizing">box-sizing</a>).
         </p>
@@ -104,13 +98,13 @@ The `browser_action` key is an object that may have any of the following propert
           <a
             href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles"
             >Browser styles</a
-          > describes the classes you can apply to elements in the popup in
-          order to get particular styles.
+          > describes the classes you can apply to elements in the popup
+          to get particular styles.
         </p>
         <p>
           The
           <a
-            href="https://github.com/mdn/webextensions-examples/tree/master/latest-download"
+            href="https://github.com/mdn/webextensions-examples/tree/main/latest-download"
             >latest-download</a
           >
           example extension uses <code>browser_style</code> in its popup.
@@ -120,12 +114,12 @@ The `browser_action` key is an object that may have any of the following propert
             <strong>Note:</strong> Setting <code>browser_style</code> to
             <code>true</code> prevents users from selecting text in an
             extension's popup or sidebar content. This is normal behavior. You
-            can't select parts of the UI in the browser. However, You can work
+            can't select parts of the UI in the browser. However, you can work
             around this limitation to allow your users to select text in two
             ways:
           </p>
           <ol>
-            <li>Set <code>browser_style</code> to <code>false</code></li>
+            <li>Set <code>browser_style</code> to <code>false</code>.</li>
             <li>
               Use CSS styling on the body of your sidebar or popup's HTML to
               allow text selection by adding the rule
@@ -137,7 +131,8 @@ The `browser_action` key is an object that may have any of the following propert
       </td>
     </tr>
     <tr>
-      <td><code>default_area</code></td>
+      <td><code>default_area</code>
+      <br />{{optional_inline}}</td>
       <td><code>String</code></td>
       <td>
         <p>
@@ -159,7 +154,7 @@ The `browser_action` key is an object that may have any of the following propert
           </li>
         </ul>
         <p>This property is only supported in Firefox.</p>
-        <p>This property is optional, and defaults to "navbar".</p>
+        <p>This property is optional, and defaults to "menupanel".</p>
         <p>
           Firefox remembers the <code>default_area</code> setting for an
           extension, even if that extension is uninstalled and subsequently
@@ -174,7 +169,8 @@ The `browser_action` key is an object that may have any of the following propert
       </td>
     </tr>
     <tr>
-      <td><code>default_icon</code></td>
+      <td><code>default_icon</code>
+      <br />{{optional_inline}}</td>
       <td><code>Object</code> or <code>String</code></td>
       <td>
         <p>
@@ -200,7 +196,7 @@ The `browser_action` key is an object that may have any of the following propert
         <p>
           You cannot specify multiple icons of the same sizes.<br /><br />See
           <a
-            href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes"
+            href="#choosing_icon_sizes"
             >Choosing icon sizes</a
           >
           for more guidance on this.
@@ -208,7 +204,8 @@ The `browser_action` key is an object that may have any of the following propert
       </td>
     </tr>
     <tr>
-      <td><code>default_popup</code></td>
+      <td><code>default_popup</code>
+      <br />{{optional_inline}}</td>
       <td><code>String</code></td>
       <td>
         <p>
@@ -263,7 +260,8 @@ The `browser_action` key is an object that may have any of the following propert
       </td>
     </tr>
     <tr>
-      <td><code>default_title</code></td>
+      <td><code>default_title</code>
+      <br />{{optional_inline}}</td>
       <td><code>String</code></td>
       <td>
         <p>
@@ -281,7 +279,8 @@ The `browser_action` key is an object that may have any of the following propert
       </td>
     </tr>
     <tr>
-      <td><code>theme_icons</code></td>
+      <td><code>theme_icons</code>
+      <br />{{optional_inline}}</td>
       <td><code>Array</code></td>
       <td>
         <p>
@@ -367,7 +366,7 @@ If Firefox can't find an exact match for the size it wants, then it will pick th
 A browser action with just an icon, specified in 2 different sizes. The extension's background scripts can receive click events when the user clicks the icon using code like this:
 
 ```js
- browser.browserAction.onClicked.addListener(handleClick);
+browser.browserAction.onClicked.addListener(handleClick);
 ```
 
 ```json

@@ -1,23 +1,18 @@
 ---
-title: TextEncoder()
+title: "TextEncoder: TextEncoder() constructor"
+short-title: TextEncoder()
 slug: Web/API/TextEncoder/TextEncoder
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Encoding
-  - Reference
-  - TextEncoder
 browser-compat: api.TextEncoder.TextEncoder
 ---
+
 {{APIRef("Encoding API")}}
 
-The **`TextEncoder()`** constructor returns a newly created
-{{DOMxRef("TextEncoder")}} object that will generate a byte stream with UTF-8 encoding.
+The **`TextEncoder()`** constructor returns a newly created {{DOMxRef("TextEncoder")}} object that will generate a byte stream with UTF-8 encoding.
 
 ## Syntax
 
-```js
+```js-nolint
 new TextEncoder()
 ```
 

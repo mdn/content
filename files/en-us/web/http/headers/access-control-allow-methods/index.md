@@ -1,13 +1,10 @@
 ---
 title: Access-Control-Allow-Methods
 slug: Web/HTTP/Headers/Access-Control-Allow-Methods
-tags:
-  - CORS
-  - HTTP
-  - Reference
-  - header
+page-type: http-header
 browser-compat: http.headers.Access-Control-Allow-Methods
 ---
+
 {{HTTPSidebar}}
 
 The **`Access-Control-Allow-Methods`** response header
@@ -29,7 +26,7 @@ specifies one or more methods allowed when accessing a resource in response to a
 
 ## Syntax
 
-```
+```http
 Access-Control-Allow-Methods: <method>, <method>, …
 Access-Control-Allow-Methods: *
 ```
@@ -45,8 +42,8 @@ Access-Control-Allow-Methods: *
 
 ## Examples
 
-```
-Access-Control-Allow-Methods: POST, GET, OPTIONS
+```http
+Access-Control-Allow-Methods: GET, POST
 Access-Control-Allow-Methods: *
 ```
 

@@ -1,15 +1,11 @@
 ---
-title: Document.body
+title: "Document: body property"
+short-title: body
 slug: Web/API/Document/body
 page-type: web-api-instance-property
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
 browser-compat: api.Document.body
 ---
+
 {{APIRef("DOM")}}
 
 The **`Document.body`** property represents the
@@ -18,10 +14,10 @@ The **`Document.body`** property represents the
 
 ## Value
 
-One of the followings:
+One of the following:
 
-- {{HTMLElement("body")}}
-- {{HTMLElement("frameset")}}
+- {{domxref("HTMLBodyElement")}}
+- {{domxref("HTMLFrameSetElement")}}
 - `null`
 
 ## Examples

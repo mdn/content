@@ -1,17 +1,11 @@
 ---
-title: 'HTMLInputElement: invalid event'
+title: "HTMLInputElement: invalid event"
+short-title: invalid
 slug: Web/API/HTMLInputElement/invalid_event
 page-type: web-api-event
-tags:
-  - API
-  - Constraint Validation API
-  - Constraint validation
-  - Event
-  - Forms
-  - Reference
-  - invalid
 browser-compat: api.HTMLInputElement.invalid_event
 ---
+
 {{APIRef}}
 
 The **`invalid`** event fires when a submittable element has been checked for validity and doesn't satisfy its constraints.
@@ -25,9 +19,9 @@ It is not checked on {{domxref("Element/blur_event", "blur")}}.
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('invalid', (event) => {});
+addEventListener("invalid", (event) => {});
 
-oninvalid = (event) => { };
+oninvalid = (event) => {};
 ```
 
 ## Event type
@@ -45,12 +39,12 @@ If a form is submitted with an invalid value, the submittable elements are check
   <div>
     <label>
       Enter an integer between 1 and 10:
-      <input type="number" min="1" max="10" required>
+      <input type="number" min="1" max="10" required />
     </label>
   </div>
-  <div><input type="submit" value="submit"></div>
+  <div><input type="submit" value="submit" /></div>
 </form>
-<hr>
+<hr />
 Invalid values:
 <ul id="log"></ul>
 ```
@@ -58,15 +52,14 @@ Invalid values:
 ### JavaScript
 
 ```js
-const input = document.querySelector('input')
-const log = document.getElementById('log')
+const input = document.querySelector("input");
+const log = document.getElementById("log");
 
-input.addEventListener('invalid', (e) => {
-  log.appendChild(Object.assign(
-    document.createElement('li'),
-    { textContent: JSON.stringify(e.target.value) }
-  ))
-})
+input.addEventListener("invalid", (e) => {
+  log.appendChild(document.createElement("li")).textContent = JSON.stringify(
+    e.target.value,
+  );
+});
 ```
 
 ### Result

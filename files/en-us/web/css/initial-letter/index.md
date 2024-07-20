@@ -1,30 +1,26 @@
 ---
 title: initial-letter
 slug: Web/CSS/initial-letter
-tags:
-  - CSS
-  - CSS Inline
-  - CSS Property
-  - Experimental
-  - Graphics
-  - Layout
-  - Reference
-  - Web
-  - recipe:css-property
+page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.initial-letter
 ---
-{{CSSRef}}
+
+{{CSSRef}}{{SeeCompatTable}}
 
 The `initial-letter` CSS property sets styling for dropped, raised, and sunken initial letters.
+
+## Syntax
 
 ```css
 /* Keyword values */
 initial-letter: normal;
 
 /* Numeric values */
-initial-letter: 1.5;    /* Initial letter occupies 1.5 lines */
-initial-letter: 3.0;    /* Initial letter occupies 3 lines */
-initial-letter: 3.0 2;  /* Initial letter occupies 3 lines and
+initial-letter: 1.5; /* Initial letter occupies 1.5 lines */
+initial-letter: 3; /* Initial letter occupies 3 lines */
+initial-letter: 3 2; /* Initial letter occupies 3 lines and
                            sinks 2 lines */
 
 /* Global values */
@@ -34,8 +30,6 @@ initial-letter: revert;
 initial-letter: revert-layer;
 initial-letter: unset;
 ```
-
-## Syntax
 
 The keyword value `normal`, or a `<number>` optionally followed by an `<integer>`.
 
@@ -82,8 +76,8 @@ The keyword value `normal`, or a `<number>` optionally followed by an `<integer>
 }
 
 .three::first-letter {
-  -webkit-initial-letter: 3.0;
-  initial-letter: 3.0;
+  -webkit-initial-letter: 3;
+  initial-letter: 3;
 }
 ```
 
@@ -99,5 +93,6 @@ The keyword value `normal`, or a `<number>` optionally followed by an `<integer>
 
 {{Compat}}
 
-- {{cssxref("initial-letter-align")}}
+## See also
+
 - [Drop caps in CSS](https://www.oddbird.net/2017/01/03/initial-letter/)

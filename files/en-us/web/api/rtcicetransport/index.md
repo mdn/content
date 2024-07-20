@@ -2,19 +2,9 @@
 title: RTCIceTransport
 slug: Web/API/RTCIceTransport
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - Interface
-  - Media
-  - RTCIceTransport
-  - Reference
-  - Video
-  - WebRTC
-  - WebRTC API
-  - rtc
 browser-compat: api.RTCIceTransport
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCIceTransport`** interface provides access to information about the {{Glossary("ICE")}} transport layer over which the data is being sent and received.
@@ -22,7 +12,7 @@ This is particularly useful if you need to access state information about the co
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _The `RTCIceTransport` interface inherits properties from its parent, {{domxref("EventTarget")}}. It also offers the following properties:_
 
@@ -35,7 +25,7 @@ _The `RTCIceTransport` interface inherits properties from its parent, {{domxref(
 - {{domxref("RTCIceTransport.state", "state")}} {{ReadOnlyInline}}
   - : A string indicating what the current state of the ICE agent is. The value of `state` can be used to determine whether the ICE agent has made an initial connection using a viable candidate pair (`"connected"`), made its final selection of candidate pairs (`"completed"`), or in an error state (`"failed"`), among other states.
 
-## Methods
+## Instance methods
 
 _Also includes methods from {{domxref("EventTarget")}}, the parent interface._
 

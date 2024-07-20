@@ -1,19 +1,13 @@
 ---
-title: USBConfiguration()
+title: "USBConfiguration: USBConfiguration() constructor"
+short-title: USBConfiguration()
 slug: Web/API/USBConfiguration/USBConfiguration
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Experimental
-  - NeedsE
-  - Reference
-  - USB
-  - USBConfiguration
-  - WebUSB
-  - WebUSB API
+status:
+  - experimental
 browser-compat: api.USBConfiguration.USBConfiguration
 ---
+
 {{securecontext_header}}{{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
 The **`USBConfiguration()`** constructor
@@ -22,7 +16,7 @@ the configuration on the provided USBDevice with the given configuration value.
 
 ## Syntax
 
-```js
+```js-nolint
 new USBConfiguration(device, configurationValue)
 ```
 

@@ -1,15 +1,11 @@
 ---
-title: StyleSheet.title
+title: "StyleSheet: title property"
+short-title: title
 slug: Web/API/StyleSheet/title
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - NeedsSpecTable
-  - Property
-  - Reference
 browser-compat: api.StyleSheet.title
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`title`** property of the {{domxref("StyleSheet")}} interface returns the advisory title of the current style sheet.

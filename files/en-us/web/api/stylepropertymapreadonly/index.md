@@ -2,26 +2,19 @@
 title: StylePropertyMapReadOnly
 slug: Web/API/StylePropertyMapReadOnly
 page-type: web-api-interface
-tags:
-  - API
-  - CSS Typed Object Model API
-  - Experimental
-  - Houdini
-  - Interface
-  - Reference
-  - StylePropertyMapReadOnly
 browser-compat: api.StylePropertyMapReadOnly
 ---
-{{SeeCompatTable}}{{APIRef("CSS Typed Object Model API")}}
+
+{{APIRef("CSS Typed Object Model API")}}
 
 The **`StylePropertyMapReadOnly`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model#css_typed_object_model) provides a read-only representation of a CSS declaration block that is an alternative to {{domxref("CSSStyleDeclaration")}}. Retrieve an instance of this interface using {{domxref('Element.computedStyleMap','Element.computedStyleMap()')}}.
 
-## Properties
+## Instance properties
 
 - {{domxref('StylePropertyMapReadOnly.size')}}
   - : Returns an unsigned long integer containing the size of the `StylePropertyMapReadOnly` object.
 
-## Methods
+## Instance methods
 
 - {{domxref('StylePropertyMapReadOnly.entries()')}}
   - : Returns an array of a given object's own enumerable property `[key, value]` pairs, in the same order as that provided by a {{jsxref("Statements/for...in", "for...in")}} loop (the difference being that a for-in loop enumerates properties in the prototype chain as well).
@@ -44,8 +37,8 @@ We have to have an element to observe:
 
 ```html
 <p>
-   This is a paragraph with some text. We can add some CSS, or not. The
-   style map will include all the default and inherited CSS property values.
+  This is a paragraph with some text. We can add some CSS, or not. The style map
+  will include all the default and inherited CSS property values.
 </p>
 <dl id="output"></dl>
 ```
@@ -54,10 +47,10 @@ We add a touch of CSS with a custom property to better demonstrate the output:
 
 ```css
 p {
-   --someVariable: 1.6em;
-   --someOtherVariable: translateX(33vw);
-   --anotherVariable: 42;
-   line-height: var(--someVariable);
+  --someVariable: 1.6em;
+  --someOtherVariable: translateX(33vw);
+  --anotherVariable: 42;
+  line-height: var(--someVariable);
 }
 ```
 
@@ -65,23 +58,23 @@ We add JavaScript to grab our paragraph and return back a definition list of all
 
 ```js
 // get the element
-const myElement = document.querySelector('p');
+const myElement = document.querySelector("p");
 
 // get the <dl> we'll be populating
-const stylesList = document.querySelector('#output');
+const stylesList = document.querySelector("#output");
 
 // Retrieve all computed styles with computedStyleMap()
 const stylePropertyMap = myElement.computedStyleMap();
 
-// iterate thru the map of all the properties and values, adding a <dt> and <dd> for each
+// iterate through the map of all the properties and values, adding a <dt> and <dd> for each
 for (const [prop, val] of stylePropertyMap) {
   // properties
-  const cssProperty = document.createElement('dt');
+  const cssProperty = document.createElement("dt");
   cssProperty.innerText = prop;
   stylesList.appendChild(cssProperty);
 
   // values
-  const cssValue = document.createElement('dd');
+  const cssValue = document.createElement("dd");
   cssValue.innerText = val;
   stylesList.appendChild(cssValue);
 }

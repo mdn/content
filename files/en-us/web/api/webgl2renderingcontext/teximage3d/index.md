@@ -1,15 +1,11 @@
 ---
-title: WebGL2RenderingContext.texImage3D()
+title: "WebGL2RenderingContext: texImage3D() method"
+short-title: texImage3D()
 slug: Web/API/WebGL2RenderingContext/texImage3D
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.texImage3D
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.texImage3D()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) specifies a three-dimensional
@@ -17,7 +13,7 @@ texture image.
 
 ## Syntax
 
-```js
+```js-nolint
 texImage3D(target, level, internalformat, width, height, depth, border, format, type, offset)
 texImage3D(target, level, internalformat, width, height, depth, border, format, type, source)
 texImage3D(target, level, internalformat, width, height, depth, border, format, type, srcData)
@@ -36,7 +32,7 @@ texImage3D(target, level, internalformat, width, height, depth, border, format, 
 
 - `level`
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the level of detail. Level 0 is the base image
-    level and level _n_ is the *n*th mipmap reduction level.
+    level and level _n_ is the n-th mipmap reduction level.
 - `internalformat`
 
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the color components in the texture. Possible
@@ -111,6 +107,7 @@ texImage3D(target, level, internalformat, width, height, depth, border, format, 
       [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null))
 
 - `source`
+
   - : One of the following objects can be used as a pixel source for the texture:
 
     - {{domxref("ImageBitmap")}},
@@ -120,6 +117,7 @@ texImage3D(target, level, internalformat, width, height, depth, border, format, 
     - {{domxref("HTMLVideoElement")}}.
 
 - `srcData`
+
   - : A {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} object.
 
 - `offset`
@@ -134,16 +132,18 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-gl.texImage3D(gl.TEXTURE_3D,
-              0,                                          // level
-              gl.RGBA,                                    // internalFormat
-              1,                                          // width
-              1,                                          // height
-              1,                                          // depth
-              0,                                          // border
-              gl.RGBA,                                    // format
-              gl.UNSIGNED_BYTE,                           // type
-              new Uint8Array([0xff, 0x00, 0x00, 0x00]));  // data
+gl.texImage3D(
+  gl.TEXTURE_3D,
+  0, // level
+  gl.RGBA, // internalFormat
+  1, // width
+  1, // height
+  1, // depth
+  0, // border
+  gl.RGBA, // format
+  gl.UNSIGNED_BYTE, // type
+  new Uint8Array([0xff, 0x00, 0x00, 0x00]),
+); // data
 ```
 
 ## Specifications

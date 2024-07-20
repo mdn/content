@@ -1,13 +1,10 @@
 ---
 title: radius
 slug: Web/SVG/Attribute/radius
-tags:
-  - Filters
-  - NeedsExample
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.elements.feMorphology.radius
 ---
+
 {{SVGRef}}
 
 The **`radius`** attribute represents the radius (or radii) for the operation on a given {{SVGElement("feMorphology")}} filter primitive.

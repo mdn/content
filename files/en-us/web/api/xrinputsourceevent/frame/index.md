@@ -1,29 +1,12 @@
 ---
-title: XRInputSourceEvent.frame
+title: "XRInputSourceEvent: frame property"
+short-title: frame
 slug: Web/API/XRInputSourceEvent/frame
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Input Sources
-  - Inputs
-  - Mixed
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRInputSourceEvent
-  - augmented
-  - events
 browser-compat: api.XRInputSourceEvent.frame
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The read-only {{domxref("XRInputSourceEvent")}} property
 **`frame`** specifies an {{domxref("XRFrame")}} object
@@ -52,8 +35,7 @@ list.
 
 ## Examples
 
-This code shows a handler for the {{domxref("XRSession.selectstart_event",
-  "selectstart")}} event which gets the target ray's pose from the frame, mapping the pose
+This code shows a handler for the {{domxref("XRSession.selectstart_event", "selectstart")}} event which gets the target ray's pose from the frame, mapping the pose
 representing the ray (`event.inputSource.targetRaySpace`) to the overall
 reference space `myRefSpace`.
 
@@ -63,8 +45,10 @@ at anything when the select was triggered.
 
 ```js
 xrSession.onselectstart = (event) => {
-  let targetRayPose = event.frame.getPose(event.inputSource.targetRaySpace,
-                            myRefSpace);
+  let targetRayPose = event.frame.getPose(
+    event.inputSource.targetRaySpace,
+    myRefSpace,
+  );
   if (targetRayPose) {
     checkAndHandleHit(targetRayPose.transform);
   }

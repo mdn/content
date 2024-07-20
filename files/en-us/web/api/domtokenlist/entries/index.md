@@ -1,12 +1,11 @@
 ---
-title: DOMTokenList.entries()
+title: "DOMTokenList: entries() method"
+short-title: entries()
 slug: Web/API/DOMTokenList/entries
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.DOMTokenList.entries
 ---
+
 {{APIRef("DOM")}}
 
 The **`entries()`** method of the {{domxref("DOMTokenList")}} interface
@@ -16,8 +15,8 @@ to go through all key/value pairs contained in this object. The values are
 
 ## Syntax
 
-```js
-entries();
+```js-nolint
+entries()
 ```
 
 ### Return value
@@ -46,7 +45,7 @@ const span = document.querySelector("span");
 const classes = span.classList;
 const iterator = classes.entries();
 
-for (let value of iterator) {
+for (const value of iterator) {
   span.textContent += `(${value})`;
 }
 ```

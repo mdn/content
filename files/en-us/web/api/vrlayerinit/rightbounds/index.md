@@ -1,18 +1,12 @@
 ---
-title: VRLayerInit.rightBounds
+title: "VRLayerInit: rightBounds property"
+short-title: rightBounds
 slug: Web/API/VRLayerInit/rightBounds
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRLayerInit
-  - Virtual Reality
-  - WebVR
-  - rightBounds
+status:
+  - deprecated
 ---
+
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
 The **`rightBounds`** property of the {{domxref("VRLayerInit")}} interface (dictionary) defines the right texture bounds of the canvas whose contents will be presented by the {{domxref("VRDisplay")}}.
@@ -42,5 +36,4 @@ Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/Web
 
 ## See also
 
-- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.
+- [WebVR API](/en-US/docs/Web/API/WebVR_API)

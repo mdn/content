@@ -1,19 +1,13 @@
 ---
-title: USBConfiguration.configurationName
+title: "USBConfiguration: configurationName property"
+short-title: configurationName
 slug: Web/API/USBConfiguration/configurationName
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - USB
-  - USBConfiguration
-  - WebUSB
-  - WebUSB API
-  - configurationName
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USBConfiguration.configurationName
 ---
+
 {{securecontext_header}}{{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
 The **`configurationName`** read-only property

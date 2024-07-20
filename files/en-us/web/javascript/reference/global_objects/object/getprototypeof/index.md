@@ -1,17 +1,13 @@
 ---
 title: Object.getPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Object
-  - Polyfill
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.getPrototypeOf
 ---
+
 {{JSRef}}
 
-The **`Object.getPrototypeOf()`** method returns the prototype
+The **`Object.getPrototypeOf()`** static method returns the prototype
 (i.e. the value of the internal `[[Prototype]]` property) of the specified
 object.
 
@@ -19,7 +15,7 @@ object.
 
 ## Syntax
 
-```js
+```js-nolint
 Object.getPrototypeOf(obj)
 ```
 
@@ -49,9 +45,9 @@ parameter isn't an object. In ES2015, the parameter will be coerced to an
 {{jsxref("Object")}}.
 
 ```js
-Object.getPrototypeOf('foo');
+Object.getPrototypeOf("foo");
 // TypeError: "foo" is not an object (ES5 code)
-Object.getPrototypeOf('foo');
+Object.getPrototypeOf("foo");
 // String.prototype                  (ES2015 code)
 ```
 
@@ -68,6 +64,6 @@ Object.getPrototypeOf('foo');
 - [Polyfill of `Object.getPrototypeOf` in `core-js`](https://github.com/zloirock/core-js#ecmascript-object)
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Object.setPrototypeOf()")}}
-- {{jsxref("Object/proto","Object.prototype.__proto__")}}
-- John Resig's post on [getPrototypeOf](https://johnresig.com/blog/objectgetprototypeof/)
+- [`Object.prototype.__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)
 - {{jsxref("Reflect.getPrototypeOf()")}}
+- [Object.getPrototypeOf](https://johnresig.com/blog/objectgetprototypeof/) by John Resig (2008)

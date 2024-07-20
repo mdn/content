@@ -1,20 +1,14 @@
 ---
-title: XRLightProbe.probeSpace
+title: "XRLightProbe: probeSpace property"
+short-title: probeSpace
 slug: Web/API/XRLightProbe/probeSpace
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Experimental
-  - Property
-  - Reference
-  - VR
-  - WebXR
-  - WebXR Device API
+status:
+  - experimental
 browser-compat: api.XRLightProbe.probeSpace
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The _read-only_ **`probeSpace`** property of the {{DOMxRef("XRLightProbe")}} interface returns an {{domxref("XRSpace")}} tracking the position and orientation that the lighting estimations are relative to.
 

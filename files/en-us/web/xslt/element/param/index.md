@@ -1,17 +1,14 @@
 ---
 title: <xsl:param>
 slug: Web/XSLT/Element/param
-tags:
-  - Element
-  - Reference
-  - XSLT
-  - param
+page-type: xslt-element
 ---
-{{ XsltRef() }}
 
-The `<xsl:param>` element establishes a parameter by name and, optionally, a default value for that parameter. When used as a top-level element, the parameter is global . When used inside an `<xsl:template>` element, the parameter is local to that template. In this case it must be the first child element of the template.
+{{XsltSidebar}}
 
-### Syntax
+The `<xsl:param>` element establishes a parameter by name and, optionally, a default value for that parameter. When used as a top-level element, the parameter is global. When used inside an `<xsl:template>` element, the parameter is local to that template. In this case it must be the first child element of the template.
+
+## Syntax
 
 ```xml
 <xsl:param name=NAME select=EXPRESSION>
@@ -33,10 +30,10 @@ The `<xsl:param>` element establishes a parameter by name and, optionally, a def
 
 Instruction, can appear as a top-level element or within a template.
 
-### Defined
+## Specifications
 
 XSLT, section 11.
 
-### Gecko support
+## Gecko support
 
 Supported.

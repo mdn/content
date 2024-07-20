@@ -1,15 +1,11 @@
 ---
-title: Window.moveBy()
+title: "Window: moveBy() method"
+short-title: moveBy()
 slug: Web/API/Window/moveBy
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSOM View
-  - Method
-  - Reference
-  - Window
 browser-compat: api.Window.moveBy
 ---
+
 {{APIRef}}
 
 The **`moveBy()`** method of the {{domxref("Window")}}
@@ -21,7 +17,7 @@ interface moves the current window by a specified amount.
 
 ## Syntax
 
-```js
+```js-nolint
 moveBy(deltaX, deltaY)
 ```
 
@@ -54,10 +50,15 @@ function budge() {
 
 {{Compat}}
 
-As of Firefox 7, websites can no longer move a browser window [in the following cases](https://bugzilla.mozilla.org/show_bug.cgi?id=565541#c24):
+As of Firefox 7, websites can no longer move a browser window [in the following cases](https://bugzil.la/565541#c24):
 
 1. You can't move a window or tab that wasn't created by {{domxref("Window.open()")}}.
 2. You can't move a window or tab when it's in a window with more than one tab.
+
+> **Note:** This function might not move the window synchronously.
+> In some environments (like Wayland, or mobile) it might not move the window
+> at all. Currently there's no way to listen to a move event, see
+> [CSS Working Group issue #7693](https://github.com/w3c/csswg-drafts/issues/7693).
 
 ## See also
 

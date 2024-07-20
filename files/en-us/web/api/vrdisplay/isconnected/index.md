@@ -1,20 +1,15 @@
 ---
-title: VRDisplay.isConnected
+title: "VRDisplay: isConnected property"
+short-title: isConnected
 slug: Web/API/VRDisplay/isConnected
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-  - isConnected
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRDisplay.isConnected
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`isConnected`** read-only property of the {{domxref("VRDisplay")}} interface returns a boolean value indicating whether the `VRDisplay` is connected to the computer.
 
@@ -33,14 +28,14 @@ navigator.getVRDisplays().then((displays) => {
     vrDisplay = displays[0];
 
     // Starting the presentation when the button is clicked: It can only be called in response to a user gesture
-    btn.addEventListener('click', () => {
+    btn.addEventListener("click", () => {
       // Only request presentation if the display is still connected.
       if (vrDisplay.isConnected) {
         vrDisplay.requestPresent([{ source: canvas }]).then(() => {
           // start rendering the app, etc.
         });
       } else {
-        console.log('Connection to display lost');
+        console.log("Connection to display lost");
       }
     });
   }
@@ -59,5 +54,4 @@ Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/Web
 
 ## See also
 
-- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.
+- [WebVR API](/en-US/docs/Web/API/WebVR_API)

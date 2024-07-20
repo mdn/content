@@ -1,16 +1,15 @@
 ---
-title: PushManager.registrations()
+title: "PushManager: registrations() method"
+short-title: registrations()
 slug: Web/API/PushManager/registrations
 page-type: web-api-instance-method
-tags:
-  - API
-  - Deprecated
-  - Method
-  - Reference
-  - Simple Push API
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.PushManager.registrations
 ---
-{{deprecated_header}}{{ApiRef("Push API")}}
+
+{{ApiRef("Push API")}}{{deprecated_header}}{{non-standard_header}}{{AvailableInWorkers}}
 
 The **`registrations`** method is used to ask the system about
 existing push endpoint registrations.
@@ -19,7 +18,7 @@ existing push endpoint registrations.
 
 ## Syntax
 
-```js
+```js-nolint
 registrations()
 ```
 
@@ -51,7 +50,9 @@ const req = navigator.push.registrations();
 req.onsuccess = (e) => {
   if (req.result.length > 0) {
     req.result.forEach((result) => {
-      console.log(`Existing registration ${result.pushEndpoint} ${result.version}`);
+      console.log(
+        `Existing registration ${result.pushEndpoint} ${result.version}`,
+      );
     });
     // Reuse existing endpoints.
   } else {
@@ -59,9 +60,9 @@ req.onsuccess = (e) => {
     const register = navigator.push.register();
     register.onsuccess = (e) => {
       console.log(`Registered new endpoint: ${register.result}`);
-    }
+    };
   }
-}
+};
 ```
 
 ## Specifications

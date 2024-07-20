@@ -1,15 +1,11 @@
 ---
-title: 'aria-hidden'
+title: aria-hidden
 slug: Web/Accessibility/ARIA/Attributes/aria-hidden
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-hidden
-  - Reference
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-hidden
 ---
+
+{{AccessibilitySidebar}}
 
 The `aria-hidden` state indicates whether the element is exposed to an accessibility API.
 
@@ -57,9 +53,7 @@ Adding `aria-hidden="true"` to the icon hides the icon character from being incl
 ```html
 <button>
   <span class="fa fa-tweet" aria-hidden="true"></span>
-  <span class="label">
-    Tweet
-  </span>
+  <span class="label"> Tweet </span>
 </button>
 ```
 
@@ -74,7 +68,7 @@ We have a button with [a Font Awesome icon](https://fontawesome.com/). We hide t
 - `undefined` (default)
   - : The element's hidden state is determined by the user agent based on whether it is rendered.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaHidden")}}
   - : The [`ariaHidden`](/en-US/docs/Web/API/Element/ariaHidden) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-hidden` attribute, which Indicates whether the element is exposed to an accessibility API.
@@ -89,7 +83,7 @@ Used in **ALL** roles
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`aria-disabled`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-disabled)
 - [`aria-modal`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-modal)
@@ -97,8 +91,3 @@ Used in **ALL** roles
 - HTML [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hidden) attribute
 - CSS {{CSSXref('display')}} property
 - CSS {{CSSXref('visibility')}} property
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

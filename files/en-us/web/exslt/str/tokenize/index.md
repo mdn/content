@@ -1,18 +1,16 @@
 ---
 title: str:tokenize()
 slug: Web/EXSLT/str/tokenize
-tags:
-  - EXSLT
-  - NeedsSpecTable
-  - Reference
+page-type: exslt-function
 ---
+
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 
 `str:tokenize()` splits a string using a set of characters as delimiters that determine where the splits should occur, returning a node-set containing the resulting strings.
 
 ## Syntax
 
-```js
+```plain
 str:tokenize(string, delimiters)
 ```
 
@@ -23,13 +21,13 @@ str:tokenize(string, delimiters)
 - `delimiters`
   - : Each character in this string is used as a word separator while tokenizing.
 
-### Returns
+### Return value
 
 A node-set of `token` elements, each containing one token from the `string`.
 
-## Example:
+## Example
 
-```js
+```plain
 str:tokenize('2007-09-14-03T11:40:23', '-T:')
 ```
 
@@ -46,7 +44,7 @@ Returns a node set like this:
 
 ## Specifications
 
-[EXSLT - STR:TOKENIZE](http://exslt.org/str/functions/tokenize/index.html)
+[EXSLT - STR:TOKENIZE](https://exslt.github.io/str/functions/tokenize/index.html)
 
 ## See also
 

@@ -1,22 +1,18 @@
 ---
-title: FontFaceSet.keys()
+title: "FontFaceSet: keys() method"
+short-title: keys()
 slug: Web/API/FontFaceSet/keys
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - keys
-  - FontFaceSet
 browser-compat: api.FontFaceSet.keys
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
 The **`keys()`** method of the {{domxref("FontFaceSet")}} interface is an alias for {{domxref("FontFaceSet.values")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 keys()
 ```
 

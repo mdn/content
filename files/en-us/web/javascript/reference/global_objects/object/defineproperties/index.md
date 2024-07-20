@@ -1,23 +1,20 @@
 ---
 title: Object.defineProperties()
 slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
-tags:
-  - ECMAScript 5
-  - JavaScript
-  - Method
-  - Object
+page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.defineProperties
 ---
+
 {{JSRef}}
 
-The **`Object.defineProperties()`** method defines new or
+The **`Object.defineProperties()`** static method defines new or
 modifies existing properties directly on an object, returning the object.
 
 {{EmbedInteractiveExample("pages/js/object-defineproperties.html")}}
 
 ## Syntax
 
-```js
+```js-nolint
 Object.defineProperties(obj, props)
 ```
 
@@ -47,12 +44,11 @@ Object.defineProperties(obj, props)
 
     - `value`
       - : The value associated with the property. Can be any valid JavaScript value
-        (number, object, function, etc).
+        (number, object, function, etc.).
         **Defaults to {{jsxref("undefined")}}.**
     - `writable`
       - : `true` if and only if the value associated with the property may be
-        changed with an {{jsxref("Operators#assignment_operators", "assignment operator",
-        "", 1)}}.
+        changed with an {{jsxref("Operators", "assignment operator", "assignment_operators", 1)}}.
         **Defaults to `false`.**
 
     An accessor descriptor also has the following optional keys:
@@ -84,14 +80,14 @@ The object that was passed to the function.
 ```js
 const obj = {};
 Object.defineProperties(obj, {
-  'property1': {
+  property1: {
     value: true,
-    writable: true
+    writable: true,
   },
-  'property2': {
-    value: 'Hello',
-    writable: false
-  }
+  property2: {
+    value: "Hello",
+    writable: false,
+  },
   // etc. etc.
 });
 ```

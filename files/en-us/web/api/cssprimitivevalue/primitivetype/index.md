@@ -1,17 +1,13 @@
 ---
-title: CSSPrimitiveValue.primitiveType
+title: "CSSPrimitiveValue: primitiveType property"
+short-title: primitiveType
 slug: Web/API/CSSPrimitiveValue/primitiveType
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSPrimitiveValue
-  - Property
-  - Read-only
-  - Reference
-  - Deprecated
-  - primitiveValue
+status:
+  - deprecated
 browser-compat: api.CSSPrimitiveValue.primitiveType
 ---
+
 {{APIRef("CSSOM")}}{{deprecated_header}}
 
 The **`primitiveType`** read-only property of the
@@ -56,7 +52,7 @@ An `unsigned short` representing the type of the value. Possible values are:
       <td><code>CSS_COUNTER</code></td>
       <td>
         The value is a
-        <a href="/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters"
+        <a href="/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters"
           >counter or counters</a
         >
         function. The value can be obtained by using the

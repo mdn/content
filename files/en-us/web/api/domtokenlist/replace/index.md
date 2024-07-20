@@ -1,15 +1,11 @@
 ---
-title: DOMTokenList.replace()
+title: "DOMTokenList: replace() method"
+short-title: replace()
 slug: Web/API/DOMTokenList/replace
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Document
-  - Method
-  - Reference
 browser-compat: api.DOMTokenList.replace
 ---
+
 {{APIRef("DOM")}}
 
 The **`replace()`** method of the {{domxref("DOMTokenList")}} interface
@@ -19,7 +15,7 @@ without adding the new token to the token list.
 
 ## Syntax
 
-```js
+```js-nolint
 replace(oldToken, newToken)
 ```
 
@@ -56,11 +52,7 @@ const classes = span.classList;
 
 const result = classes.replace("c", "z");
 
-if (result) {
-  span.textContent = classes;
-} else {
-  span.textContent = 'token not replaced successfully';
-}
+span.textContent = result ? classes : "token not replaced successfully";
 ```
 
 The output looks like this:

@@ -1,21 +1,11 @@
 ---
-title: 'Window: pageshow event'
+title: "Window: pageshow event"
+short-title: pageshow
 slug: Web/API/Window/pageshow_event
 page-type: web-api-event
-tags:
-  - API
-  - Document
-  - Event
-  - History
-  - Navigation
-  - Page
-  - PageTransitionEvent
-  - Reference
-  - Window
-  - pageshow
-  - show
 browser-compat: api.Window.pageshow_event
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`pageshow`** event is sent to a {{domxref("Window")}} when the browser displays the window's document due to navigation.
@@ -34,8 +24,8 @@ This includes:
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('pageshow', (event) => { });
-onpageshow = (event) => { };
+addEventListener("pageshow", (event) => {});
+onpageshow = (event) => {};
 ```
 
 ## Event type
@@ -46,7 +36,7 @@ A {{domxref("PageTransitionEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Event properties
 
-- {{domxref("PageTransitionEvent.persisted")}} {{readonlyInline}}
+- {{domxref("PageTransitionEvent.persisted")}} {{ReadOnlyInline}}
   - : Indicates if the document is loading from a cache.
 
 ## Event handler aliases
@@ -86,9 +76,11 @@ events.forEach((eventName) => window.addEventListener(eventName, eventLogger));
 ### HTML
 
 ```html
-<p>Open the console and watch the output as you navigate to and from
-this page. Try loading new pages into this tab, then navigating forward
-and backward through history, noting the events' output to the log.</p>
+<p>
+  Open the console and watch the output as you navigate to and from this page.
+  Try loading new pages into this tab, then navigating forward and backward
+  through history, noting the events' output to the log.
+</p>
 ```
 
 ### Results

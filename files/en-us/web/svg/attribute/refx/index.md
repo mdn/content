@@ -1,13 +1,12 @@
 ---
 title: refX
 slug: Web/SVG/Attribute/refX
-tags:
-  - NeedsBrowserCompatibility
-  - NeedsExample
+page-type: svg-attribute
 spec-urls:
   - https://svgwg.org/svg2-draft/painting.html#MarkerElementRefXAttribute
   - https://svgwg.org/svg2-draft/struct.html#SymbolElementRefXAttribute
 ---
+
 {{SVGRef}}
 
 The **`refX`** attribute defines the x coordinate of an element's reference point.
@@ -43,9 +42,11 @@ For {{SVGElement("marker")}}, `refX` defines the x coordinate of the marker's re
 </table>
 
 - `<length-percentage>`
+
   - : Lengths are interpreted as being in the coordinate system of the marker contents, after application of the {{SVGAttr("viewBox")}} and {{SVGAttr("preserveAspectRatio")}} attributes.
 
     Percentage values are interpreted as being a percentage of the {{SVGAttr("viewBox")}} width.
+
 - `<number>`
   - : Numbers are interpreted as being in the coordinate system of the marker contents, after application of the {{SVGAttr("viewBox")}} and {{SVGAttr("preserveAspectRatio")}} attributes.
 - `left`
@@ -84,9 +85,11 @@ Unlike other positioning attributes, `refX` is interpreted as being in the coord
 </table>
 
 - `<length-percentage>`
+
   - : Lengths are interpreted as being in the coordinate system of the marker contents, after application of the {{SVGAttr("viewBox")}} and {{SVGAttr("preserveAspectRatio")}} attributes.
 
     Percentage values are interpreted as being a percentage of the {{SVGAttr("viewBox")}} width.
+
 - `<number>`
   - : Numbers are interpreted as being in the coordinate system of the marker contents, after application of the {{SVGAttr("viewBox")}} and {{SVGAttr("preserveAspectRatio")}} attributes.
 - `left`

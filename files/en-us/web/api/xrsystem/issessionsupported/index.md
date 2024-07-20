@@ -1,23 +1,14 @@
 ---
-title: 'XRSystem: isSessionSupported()'
+title: "XRSystem: isSessionSupported() method"
+short-title: isSessionSupported()
 slug: Web/API/XRSystem/isSessionSupported
 page-type: web-api-instance-method
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Experimental
-  - Method
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XR
-  - isSessionSupported
+status:
+  - experimental
 browser-compat: api.XRSystem.isSessionSupported
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The {{domxref("XRSystem")}} method
 **`isSessionSupported()`** returns a promise which resolves to
@@ -30,7 +21,7 @@ to use the XR device, the promise is rejected with an appropriate
 
 ## Syntax
 
-```js
+```js-nolint
 isSessionSupported(mode)
 ```
 
@@ -41,7 +32,7 @@ isSessionSupported(mode)
   - : A {{jsxref("String")}} specifying the WebXR session mode for which support is to
     be checked. Possible modes to check for:
 
-    - `immersive-ar` {{experimental_inline}}
+    - `immersive-ar` {{Experimental_Inline}}
     - `immersive-vr`
     - `inline`
 
@@ -57,8 +48,7 @@ returned promise, passing to the rejection handler a {{domxref("DOMException")}}
 `name` is one of the following strings.
 
 - `SecurityError`
-  - : The document's origin does not have permission to use the
-    `xr-spatial-tracking` [feature policy](/en-US/docs/Web/HTTP/Feature_Policy).
+  - : Use of this feature is blocked by an `xr-spatial-tracking` [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 
 ## Examples
 
@@ -75,11 +65,10 @@ down the WebXR session.
 
 ```js
 if (navigator.xr) {
-  navigator.xr.isSessionSupported('immersive-vr')
-  .then((isSupported) => {
+  navigator.xr.isSessionSupported("immersive-vr").then((isSupported) => {
     if (isSupported) {
-      userButton.addEventListener('click', onButtonClicked);
-      userButton.textContent = 'Enter XR';
+      userButton.addEventListener("click", onButtonClicked);
+      userButton.textContent = "Enter XR";
       userButton.disabled = false;
     }
   });
@@ -87,8 +76,7 @@ if (navigator.xr) {
 
 function onButtonClicked() {
   if (!xrSession) {
-    navigator.xr.requestSession('immersive-vr')
-    .then((session) => {
+    navigator.xr.requestSession("immersive-vr").then((session) => {
       xrSession = session;
       // onSessionStarted() not shown for reasons of brevity and clarity.
       onSessionStarted(xrSession);

@@ -1,13 +1,12 @@
 ---
 title: method
 slug: Web/SVG/Attribute/method
-tags:
-  - Experimental
-  - NeedsExample
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - experimental
 spec-urls: https://svgwg.org/svg2-draft/text.html#TextPathElementMethodAttribute
 ---
+
 {{SVGRef}}{{SeeCompatTable}}
 
 The **`method`** attribute indicates the method by which text should be rendered along the path of a {{SVGElement("textPath")}} element.

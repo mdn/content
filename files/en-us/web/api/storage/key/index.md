@@ -1,15 +1,11 @@
 ---
-title: Storage.key()
+title: "Storage: key() method"
+short-title: key()
 slug: Web/API/Storage/key
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - Storage
-  - Web Storage
 browser-compat: api.Storage.key
 ---
+
 {{APIRef("Web Storage API")}}
 
 The **`key()`** method of the {{domxref("Storage")}} interface,
@@ -18,7 +14,7 @@ object. The order of keys is user-agent defined, so you should not rely on it.
 
 ## Syntax
 
-```js
+```js-nolint
 key(index)
 ```
 
@@ -54,7 +50,7 @@ for (let i = 0; i < localStorage.length; i++) {
 }
 ```
 
-> **Note:** For a real world example, see our [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
+> **Note:** For a real-world example, see our [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
 
 ## Specifications
 

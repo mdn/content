@@ -1,13 +1,10 @@
 ---
 title: 307 Temporary Redirect
 slug: Web/HTTP/Status/307
-tags:
-  - HTTP
-  - HTTP Status Code
-  - Reference
-  - redirects
-browser-compat: http.status.307
+page-type: http-status-code
+spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.307
 ---
+
 {{HTTPSidebar}}
 
 {{Glossary("HTTP")}} **`307 Temporary Redirect`** redirect
@@ -30,17 +27,13 @@ identical.
 
 ## Status
 
-```
+```http
 307 Temporary Redirect
 ```
 
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

@@ -1,17 +1,12 @@
 ---
-title: CookieChangeEvent.deleted
+title: "CookieChangeEvent: deleted property"
+short-title: deleted
 slug: Web/API/CookieChangeEvent/deleted
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - deleted
-  - CookieChangeEvent
-  - Experimental
 browser-compat: api.CookieChangeEvent.deleted
 ---
-{{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
+
+{{securecontext_header}}{{APIRef("Cookie Store API")}}
 
 The **`deleted`** read-only property of the {{domxref("CookieChangeEvent")}} interface returns an array of the cookies that have been deleted by the given `CookieChangeEvent` instance.
 
@@ -28,12 +23,12 @@ An array of objects containing the deleted cookie(s). Each object contains the f
 - `path`
   - : A string containing the path of the cookie.
 - `expires`
-  - : A {{domxref("DOMTimeStamp")}} containing the expiration date of the cookie.
+  - : A timestamp, given as {{glossary("Unix time")}} in milliseconds, containing the expiration date of the cookie.
 - `secure`
-  - : A {{jsxref("boolean")}} indicating whether the cookie is from a site with a secure context (HTTPS rather than HTTP).
+  - : A {{jsxref("boolean")}} indicating whether the cookie is used only in a secure context (HTTPS rather than HTTP).
 - `sameSite`
 
-  - : One of the following [SameSite](/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) values:
+  - : One of the following [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) values:
 
     - `"strict"`
       - : Cookies will only be sent in a first-party context and not be sent with requests initiated by third party websites.
@@ -42,14 +37,15 @@ An array of objects containing the deleted cookie(s). Each object contains the f
     - `"none"`
       - : Cookies will be sent in all contexts.
 
-    > **Note:** For more information on SameSite cookies see [SameSite cookies explained](https://web.dev/samesite-cookies-explained/).
+- `partitioned`
+  - : A boolean indicating whether the cookie is a partitioned cookie (`true`) or not (`false`). See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies) for more information.
 
 ## Examples
 
-In this example when the cookie is deleted the event listener logs the first item in the `CookieChangeEvent.deleted` property to the console. It contains an object representing the cookie that has just been deleted.
+In this example, when the cookie is deleted, the event listener logs the first item in the `CookieChangeEvent.deleted` property to the console. It contains an object representing the cookie that has just been deleted.
 
 ```js
-cookieStore.addEventListener('change', (event) => {
+cookieStore.addEventListener("change", (event) => {
   console.log(event.deleted[0]);
 });
 ```

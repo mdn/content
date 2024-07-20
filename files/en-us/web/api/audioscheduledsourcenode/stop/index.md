@@ -1,19 +1,11 @@
 ---
-title: AudioScheduledSourceNode.stop()
+title: "AudioScheduledSourceNode: stop() method"
+short-title: stop()
 slug: Web/API/AudioScheduledSourceNode/stop
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - AudioScheduledSourceNode
-  - Media
-  - Method
-  - Reference
-  - Web Audio API
-  - sound
-  - stop
 browser-compat: api.AudioScheduledSourceNode.stop
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `stop()` method on {{domxref("AudioScheduledSourceNode")}} schedules a
@@ -29,7 +21,7 @@ stopped, this method has no effect.
 
 ## Syntax
 
-```js
+```js-nolint
 stop()
 stop(when)
 ```
@@ -50,8 +42,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `InvalidStateNode` {{domxref("DOMException")}}
-  - : Thrown if the node has not been started by calling {{domxref("AudioScheduledSourceNode.start",
-    "start()")}}.
+  - : Thrown if the node has not been started by calling {{domxref("AudioScheduledSourceNode.start", "start()")}}.
 - {{jsxref("RangeError")}}
   - : Thrown if the value specified for `when` is negative.
 

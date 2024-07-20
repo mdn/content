@@ -1,26 +1,11 @@
 ---
-title: RTCIceCandidatePairStats.availableOutgoingBitrate
+title: "RTCIceCandidatePairStats: availableOutgoingBitrate property"
+short-title: availableOutgoingBitrate
 slug: Web/API/RTCIceCandidatePairStats/availableOutgoingBitrate
 page-type: web-api-instance-property
-tags:
-  - API
-  - Bandwidth
-  - Bit Rate
-  - Bitrate
-  - Candidate
-  - Connection
-  - ICE
-  - Network
-  - Pair
-  - Property
-  - RTCIceCandidatePairStats
-  - Reference
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-browser-compat: api.RTCIceCandidatePairStats.availableOutgoingBitrate
+browser-compat: api.RTCStatsReport.type_candidate-pair.availableOutgoingBitrate
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidatePairStats")}} property
@@ -30,8 +15,7 @@ pair. The higher the value, the more bandwidth you can assume is available for
 outgoing data.
 
 You can get the incoming available bitrate from
-{{domxref("RTCIceCandidatePairStats.availableIncomingBitrate",
-  "availableIncomingBitrate")}}.
+{{domxref("RTCIceCandidatePairStats.availableIncomingBitrate", "availableIncomingBitrate")}}.
 
 ## Value
 

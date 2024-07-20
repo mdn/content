@@ -1,13 +1,10 @@
 ---
 title: <switch>
 slug: Web/SVG/Element/switch
-tags:
-  - Element
-  - NeedsExample
-  - SVG
-  - SVG Container
+page-type: svg-element
 browser-compat: svg.elements.switch
 ---
+
 {{SVGRef}}
 
 The **`<switch>`** [SVG](/en-US/docs/Web/SVG) element evaluates any {{SVGAttr("requiredFeatures")}}, {{SVGAttr("requiredExtensions")}} and {{SVGAttr("systemLanguage")}} attributes on its direct child elements in order, and then renders the first child where these attributes evaluate to true.
@@ -20,18 +17,6 @@ Other direct children will be bypassed and therefore not rendered. If a child el
 
 {{svginfo}}
 
-## Attributes
-
-### Global attributes
-
-- [Conditional processing attributes](/en-US/docs/Web/SVG/Attribute#conditional_processing_attributes)
-- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-- [Graphical event attributes](/en-US/docs/Web/SVG/Attribute#graphical_event_attributes)
-- [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-- {{SVGAttr("transform")}}
-
 ## DOM Interface
 
 This element implements the {{domxref("SVGSwitchElement")}} interface.
@@ -40,7 +25,7 @@ This element implements the {{domxref("SVGSwitchElement")}} interface.
 
 This example demonstrates showing different text content depending on the browser's language settings. The `switch` element will display the first of its child elements whose `systemLanguage` attribute matches the user's language, or the fallback element with no `systemLanguage` attribute if none of them match.
 
-### HTML Content
+### HTML
 
 ```html
 <svg viewBox="0 -20 100 50">

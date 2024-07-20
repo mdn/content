@@ -1,30 +1,14 @@
 ---
-title: XRWebGLLayer.framebufferHeight
+title: "XRWebGLLayer: framebufferHeight property"
+short-title: framebufferHeight
 slug: Web/API/XRWebGLLayer/framebufferHeight
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Buffer
-  - Frame
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRWebGLLayer
-  - augmented
-  - framebufferHeight
-  - height
-  - size
+status:
+  - experimental
 browser-compat: api.XRWebGLLayer.framebufferHeight
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The read-only {{domxref("XRWebGLLayer")}} property
 **`framebufferHeight`** indicates the height of the
@@ -62,4 +46,3 @@ frameHeight = glLayer.framebufferHeight;
 ## See also
 
 - [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)
-- {{domxref("WebGLLayerInit")}}

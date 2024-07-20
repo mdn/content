@@ -1,14 +1,10 @@
 ---
 title: paint-order
 slug: Web/CSS/paint-order
-tags:
-  - CSS
-  - Reference
-  - SVG
-  - Web
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.paint-order
 ---
+
 {{CSSRef}}
 
 The **`paint-order`** [CSS](/en-US/docs/Web/CSS) property lets you control the order in which the fill and stroke (and painting markers) of text content and shapes are drawn.
@@ -31,6 +27,7 @@ paint-order: markers stroke fill; /* draw markers, then stroke, then fill */
 paint-order: inherit;
 paint-order: initial;
 paint-order: revert;
+paint-order: revert-layer;
 paint-order: unset;
 ```
 
@@ -90,6 +87,40 @@ text {
 #### Result
 
 {{EmbedLiveSample("Reversing_the_paint_order_of_stroke_and_fill", "100%", 165)}}
+
+### Reversing the paint order of stroke and fill using HTML
+
+To control the fill and stroke order in HTML, you can use the {{cssxref("-webkit-text-stroke-color")}} and {{cssxref("-webkit-text-stroke-width")}} CSS properties.
+
+#### HTML
+
+```html
+<div>stroke in front</div>
+<div class="stroke-behind">stroke behind</div>
+```
+
+#### CSS
+
+```css
+div {
+  font-family: sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  fill: black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  -webkit-text-stroke-color: red;
+  -webkit-text-stroke-width: 4px;
+}
+
+.stroke-behind {
+  paint-order: stroke fill;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("Reversing_the_paint_order_of_stroke_and_fill_using_HTML", "100%", 165)}}
 
 ## Specifications
 

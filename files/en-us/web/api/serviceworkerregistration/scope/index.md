@@ -1,28 +1,18 @@
 ---
-title: ServiceWorkerRegistration.scope
+title: "ServiceWorkerRegistration: scope property"
+short-title: scope
 slug: Web/API/ServiceWorkerRegistration/scope
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Service Workers
-  - ServiceWorkerRegistration
-  - scope
 browser-compat: api.ServiceWorkerRegistration.scope
 ---
-{{APIRef("Service Workers API")}}
 
-The **`scope`** read-only property of the
-{{domxref("ServiceWorkerRegistration")}} interface returns a unique identifier for a
-service worker registration. The service worker must be on the same origin as the
-document that registers the {{domxref("ServiceWorker")}}.
+{{APIRef("Service Workers API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
-> **Note:** This feature is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
+The **`scope`** read-only property of the {{domxref("ServiceWorkerRegistration")}} interface returns a string representing a URL that defines a service worker's registration scope; that is, the range of URLs a service worker can control. This is set using the `scope` parameter specified in the call to {{domxref('ServiceWorkerContainer.register()')}} which registered the service worker.
 
 ## Value
 
-A unique identifier.
+Returns a string representing a URL that defines a service worker's registration scope.
 
 ## Specifications
 
@@ -35,7 +25,5 @@ A unique identifier.
 ## See also
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/sw-test)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise")}}
+- [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
 - [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

@@ -1,12 +1,9 @@
 ---
-title: 'RangeError: radix must be an integer'
+title: "RangeError: radix must be an integer"
 slug: Web/JavaScript/Reference/Errors/Bad_radix
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - RangeError
+page-type: javascript-error
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "radix must be an integer at least 2 and no greater than 36"
@@ -17,7 +14,7 @@ and 36.
 
 ## Message
 
-```
+```plain
 RangeError: toString() radix argument must be between 2 and 36 (V8-based & Safari)
 RangeError: radix must be an integer at least 2 and no greater than 36 (Firefox)
 ```
@@ -56,16 +53,16 @@ The most common radixes:
 (42).toString(37);
 (42).toString(150);
 // You cannot use a string like this for formatting:
-(12071989).toString('MM-dd-yyyy');
+(12071989).toString("MM-dd-yyyy");
 ```
 
 ### Valid cases
 
 ```js example-good
-(42).toString(2);     // "101010" (binary)
-(13).toString(8);     // "15"     (octal)
-(0x42).toString(10);  // "66"     (decimal)
-(100000).toString(16) // "186a0"  (hexadecimal)
+(42).toString(2); // "101010" (binary)
+(13).toString(8); // "15" (octal)
+(0x42).toString(10); // "66" (decimal)
+(100000).toString(16); // "186a0" (hexadecimal)
 ```
 
 ## See also

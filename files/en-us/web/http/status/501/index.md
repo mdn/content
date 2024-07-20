@@ -1,12 +1,10 @@
 ---
 title: 501 Not Implemented
 slug: Web/HTTP/Status/501
-tags:
-  - HTTP
-  - Server error
-  - Status code
-browser-compat: http.status.501
+page-type: http-status-code
+spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.501
 ---
+
 {{HTTPSidebar}}
 
 The HyperText Transfer Protocol (HTTP) **`501 Not Implemented`** server error response code means that **the server does not support the functionality required to fulfill the request**.
@@ -24,14 +22,10 @@ If the server _does_ recognize the method, but intentionally does not support it
 
 ## Status
 
-```
+```http
 501 Not Implemented
 ```
 
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}

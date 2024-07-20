@@ -1,15 +1,11 @@
 ---
-title: SVGStyleElement.media
+title: "SVGStyleElement: media property"
+short-title: media
 slug: Web/API/SVGStyleElement/media
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGStyleElement.media
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGStyleElement.media`** property is a media query string corresponding to the [`media`](/en-US/docs/Web/SVG/Element/style#media) attribute of the given SVG style element.
@@ -27,27 +23,29 @@ The value is initialized with the string specified in the corresponding style's 
 
 This example demonstrates programmatically getting and setting the media property on a style that was defined in an SVG definition.
 
-#### HTML
+### HTML
 
 The HTML contains an SVG definition for a [`<circle>`](/en-US/docs/Web/SVG/Element/circle) with a [`<style>`](/en-US/docs/Web/SVG/Element/style) element that is conditional on the media query `"all and (min-width: 600px)"`.
 We also define a `button` that will be used to display the current style and change the style.
 
 ```html
 <button></button>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink">
   <circle cx="60" cy="60" r="50" />
 </svg>
 ```
 
-#### JavaScript
+### JavaScript
 
 The code below gets the `style` element (an `SVGStyleElement`) using its id.
 
 ```js
 const svg = document.querySelector("svg");
 // Create the `style` element in the SVG namespace
-const style = document.createElementNS('http://www.w3.org/2000/svg', 'style');
-const node = document.createTextNode('circle { fill: red; }');
+const style = document.createElementNS("http://www.w3.org/2000/svg", "style");
+const node = document.createTextNode("circle { fill: red; }");
 svg.appendChild(style);
 style.appendChild(node);
 ```
@@ -57,26 +55,24 @@ This function is called to set the initial button text, and also when the window
 The button event handler also sets the value of the style's `media` property.
 
 ```js
-const button = document.querySelector('button');
+const button = document.querySelector("button");
 
 function setButtonText() {
   button.textContent = `Media: ${style.media} (Width: ${window.innerWidth})`;
 }
 setButtonText();
 
-
-addEventListener('resize', () => {
-    setButtonText();
+addEventListener("resize", () => {
+  setButtonText();
 });
 
-
-button.addEventListener('click', () => {
-   style.media = "all and (min-width: 700px)";
-   setButtonText();
-   });
+button.addEventListener("click", () => {
+  style.media = "all and (min-width: 700px)";
+  setButtonText();
+});
 ```
 
-#### Result
+### Result
 
 The result is shown below.
 The button text shows the value of the media attribute originally applied to the SVG style along with the width of the current frame (since the code is run in a frame).

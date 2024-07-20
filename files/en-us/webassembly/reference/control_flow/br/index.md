@@ -1,13 +1,9 @@
 ---
 title: br
 slug: WebAssembly/Reference/Control_flow/br
-tags:
-  - WebAssembly
-  - wasm
-  - Landing page
-  - Reference
-  - Control flow
+page-type: webassembly-instruction
 ---
+
 {{WebAssemblySidebar}}
 
 The **`br`** statement branches to a loop, block, or if.

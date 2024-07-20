@@ -1,16 +1,10 @@
 ---
-title: ':focus'
+title: ":focus"
 slug: Web/CSS/:focus
-tags:
-  - ':focus'
-  - CSS
-  - Layout
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
+page-type: css-pseudo-class
 browser-compat: css.selectors.focus
 ---
+
 {{CSSRef}}
 
 The **`:focus`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents an element (such as a form input) that has received focus. It is generally triggered when the user clicks or taps on an element or selects it with the keyboard's <kbd>Tab</kbd> key.
@@ -21,8 +15,10 @@ The **`:focus`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/P
 
 ## Syntax
 
-```
-:focus
+```css
+:focus {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -30,8 +26,8 @@ The **`:focus`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/P
 ### HTML
 
 ```html
-<div><input class="red-input" value="I'll be red when focused."></div>
-<div><input class="blue-input" value="I'll be blue when focused."></div>
+<div><input class="red-input" value="I'll be red when focused." /></div>
+<div><input class="blue-input" value="I'll be blue when focused." /></div>
 ```
 
 ### CSS
@@ -54,7 +50,7 @@ The **`:focus`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/P
 
 ## Accessibility concerns
 
-Make sure the visual focus indicator can be seen by people with low vision.  This will also benefit anyone use a screen in a brightly lit space (like outside in the sun). [WCAG 2.1 SC 1.4.11 Non-Text Contrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) requires that the visual focus indicator be at least 3 to 1.
+Make sure the visual focus indicator can be seen by people with low vision. This will also benefit anyone use a screen in a brightly lit space (like outside in the sun). [WCAG 2.1 SC 1.4.11 Non-Text Contrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html) requires that the visual focus indicator be at least 3 to 1.
 
 - Accessible Visual Focus Indicators: [Give Your Site Some Focus! Tips for Designing Useful and Usable Focus Indicators](https://www.deque.com/blog/give-site-focus-tips-designing-usable-focus-indicators/)
 

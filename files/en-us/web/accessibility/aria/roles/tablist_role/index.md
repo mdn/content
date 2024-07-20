@@ -1,17 +1,11 @@
 ---
-title: 'ARIA: tablist role'
+title: "ARIA: tablist role"
 slug: Web/Accessibility/ARIA/Roles/tablist_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - tablist role
-  - composite widget role
-  - tablist
+page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#tablist
 ---
+
+{{AccessibilitySidebar}}
 
 The `tablist` role identifies the element that serves as the container for a set of `tabs`. The tab content are referred to as `tabpanel` elements.
 
@@ -46,7 +40,7 @@ Elements with the `tablist` role have an implicit [`aria-orientation`](/en-US/do
 - [`aria-multiselectable`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable)
   - : When set to `true`, indicates the user may select more than one `tab` from the `tablist` descendants.
 - [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-orientation)
-  - :  If the tablist element is vertically oriented, set `aria-orientation="vertical"`. The default is `horizontal`.
+  - : If the tablist element is vertically oriented, set `aria-orientation="vertical"`. The default is `horizontal`.
 
 ### Keyboard interactions
 
@@ -87,28 +81,22 @@ When focus is on a tab in a tablist with either horizontal or vertical orientati
 <!--
 ### Required JavaScript features
 
-## Examples
-
-## Accessibility Concerns
+## Accessibility concerns
 
 ## Best Practices
 
 ### Prefer HTML
 -->
 
+## Examples
+
+See the [`tabpanel`, `tab`, and `tablist` example](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role#example) in the [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) role definition.
+
 ## Specifications
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`tab` role](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role)
 - [`tabpanel` role](/en-US/docs/Web/Accessibility/ARIA/Roles/tabpanel_role)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
-
-</section>

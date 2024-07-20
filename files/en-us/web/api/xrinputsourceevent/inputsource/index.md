@@ -1,30 +1,12 @@
 ---
-title: XRInputSourceEvent.inputSource
+title: "XRInputSourceEvent: inputSource property"
+short-title: inputSource
 slug: Web/API/XRInputSourceEvent/inputSource
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Controller
-  - Input
-  - Mixed
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRInputSourceEvent
-  - augmented
-  - inputSource
-  - source
 browser-compat: api.XRInputSourceEvent.inputSource
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The {{domxref("XRInputSourceEvent")}} interface's read-only
 **`inputSource`** property specifies the
@@ -40,8 +22,7 @@ as a hand controller, motion sensing device, or other input apparatus.
 
 ## Examples
 
-The snippet below shows a handler for the {{domxref("XRSession.select_event",
-  "select")}} event which looks specifically for events which happen on `gaze`
+The snippet below shows a handler for the {{domxref("XRSession.select_event", "select")}} event which looks specifically for events which happen on `gaze`
 input devices. The device type is identified by looking at the
 {{domxref("XRInputSource")}} in `inputSource` and its
 {{domxref("XRInputSource.targetRayMode", "targetRayMode")}} property.

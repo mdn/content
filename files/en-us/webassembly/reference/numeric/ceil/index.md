@@ -1,13 +1,9 @@
 ---
 title: Ceil
 slug: WebAssembly/Reference/Numeric/Ceil
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
-  - Something
+page-type: webassembly-instruction
 ---
+
 {{WebAssemblySidebar}}
 
 The **`ceil`** instructions, are used for getting the value of a number rounded up to the next integer.

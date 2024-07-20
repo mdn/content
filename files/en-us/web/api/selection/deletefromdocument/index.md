@@ -1,16 +1,11 @@
 ---
-title: Selection.deleteFromDocument()
+title: "Selection: deleteFromDocument() method"
+short-title: deleteFromDocument()
 slug: Web/API/Selection/deleteFromDocument
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTML Editing
-  - Method
-  - Reference
-  - Selection
-  - deleteFromDocument
 browser-compat: api.Selection.deleteFromDocument
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`deleteFromDocument()`** method of the
@@ -18,7 +13,7 @@ The **`deleteFromDocument()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 deleteFromDocument()
 ```
 
@@ -40,15 +35,18 @@ button, the
 ### HTML
 
 ```html
-<p>Try highlighting some of the text in this paragraph. Once you do, you can remove the selected content by clicking the button below.</p>
+<p>
+  Try highlighting some of the text in this paragraph. Once you do, you can
+  remove the selected content by clicking the button below.
+</p>
 <button>Delete selected text</button>
 ```
 
 ### JavaScript
 
 ```js
-let button = document.querySelector('button');
-button.addEventListener('click', deleteSelection);
+let button = document.querySelector("button");
+button.addEventListener("click", deleteSelection);
 
 function deleteSelection() {
   let selection = window.getSelection();

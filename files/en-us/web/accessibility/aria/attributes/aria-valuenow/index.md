@@ -1,15 +1,11 @@
 ---
-title: 'aria-valuenow'
+title: aria-valuenow
 slug: Web/Accessibility/ARIA/Attributes/aria-valuenow
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-valuenow
-  - Reference
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-valuenow
 ---
+
+{{AccessibilitySidebar}}
 
 The `aria-valuenow` attribute defines the current value for a `range` widget.
 
@@ -23,14 +19,14 @@ When creating a range type role, including [`meter`](/en-US/docs/Web/Accessibili
 
 ```html
 <p id="birthyearLabel">What year were you born?</p>
-<div role="spinbutton" tabindex="-1"
+<div
+  role="spinbutton"
+  tabindex="-1"
   aria-valuenow="1984"
   aria-valuemin="1900"
   aria-valuemax="2021"
   aria-labelledby="birthyearLabel">
-  <span class="value">
-    1984
-  </span>
+  <span class="value"> 1984 </span>
   <span role="button">
     <span aria-hidden="true">+</span>
     Increment year by 1
@@ -46,12 +42,7 @@ Use semantic HTML elements when you can:
 
 ```html
 <label for="birthyear">What year were you born?</label>
-<input
-  type="number"
-  id="birthyear"
-  value="1984"
-  min="1900"
-  max="2021">
+<input type="number" id="birthyear" value="1984" min="1900" max="2021" />
 ```
 
 If there is no known value, like when a progress bar is in an indeterminate state, don't set an `aria-valuenow` attribute.
@@ -67,14 +58,14 @@ When the value to be announced, either the actual value or the value as a percen
 ## Examples
 
 ```html
-<p id="temperatureLabel">
-  Oven Temperature
-</p>
-<div role="meter" id="temperature"
-     aria-valuenow="205"
-     aria-valuemin="70"
-     aria-valuemax="250"
-     aria-labelledby="temperatureLabel">
+<p id="temperatureLabel">Oven Temperature</p>
+<div
+  role="meter"
+  id="temperature"
+  aria-valuenow="205"
+  aria-valuemin="70"
+  aria-valuemax="250"
+  aria-labelledby="temperatureLabel">
   <div class="meter-color" aria-hidden="true"></div>
 </div>
 ```
@@ -97,7 +88,7 @@ If we employ native HTML semantics with {{HTMLElement('input')}} we get styles a
 - `<number>`
   - : A decimal number, between the minimum and maximum values.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaValueNow")}}
   - : The [`ariaValueNow`](/en-US/docs/Web/API/Element/ariaValueNow) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-valuenow` attribute.
@@ -126,15 +117,10 @@ Inherited into roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`range` role](/en-US/docs/Web/Accessibility/ARIA/Roles/range_role)
 - [`<input type="range>` element `value` attribute](/en-US/docs/Web/HTML/Element/input/range#value)
 - [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext)
 - [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax)
 - [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin).
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

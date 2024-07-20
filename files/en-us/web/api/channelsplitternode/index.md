@@ -2,22 +2,14 @@
 title: ChannelSplitterNode
 slug: Web/API/ChannelSplitterNode
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - ChannelSplitterNode
-  - Interface
-  - Reference
-  - Splitter
-  - Web Audio
-  - Web Audio API
 browser-compat: api.ChannelSplitterNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The `ChannelSplitterNode` interface, often used in conjunction with its opposite, {{domxref("ChannelMergerNode")}}, separates the different channels of an audio source into a set of mono outputs. This is useful for accessing each channel separately, e.g. for performing channel mixing where gain must be separately controlled on each channel.
 
-![](webaudiosplitter.png)
+![Default channel splitter node with a single input splitting to form 6 mono outputs.](webaudiosplitter.png)
 
 If your `ChannelSplitterNode` always has one single input, the amount of outputs is defined by a parameter on its constructor and the call to {{domxref("BaseAudioContext/createChannelSplitter", "AudioContext.createChannelSplitter()")}}. In the case that no value is given, it will default to `6`. If there are fewer channels in the input than there are outputs, supernumerary outputs are silent.
 
@@ -36,7 +28,7 @@ If your `ChannelSplitterNode` always has one single input, the amount of outputs
     <tr>
       <th scope="row">Channel count mode</th>
       <td>
-        <code>"explicit</code>" Older implementations, as per earlier versions
+        <code>"explicit"</code> Older implementations, as per earlier versions
         of the spec use <code>"max"</code>.
       </td>
     </tr>
@@ -60,17 +52,17 @@ If your `ChannelSplitterNode` always has one single input, the amount of outputs
 - {{domxref("ChannelSplitterNode.ChannelSplitterNode()","ChannelSplitterNode()")}}
   - : Creates a new `ChannelSplitterNode` object instance.
 
-## Properties
+## Instance properties
 
 _No specific property; inherits properties from its parent, {{domxref("AudioNode")}}_.
 
-## Methods
+## Instance methods
 
 _No specific method; inherits methods from its parent, {{domxref("AudioNode")}}_.
 
 ## Example
 
-See [`BaseAudioContext.createChannelSplitter()`](/en-US/docs/Web/API/BaseAudioContext/createChannelSplitter#example) for example code.
+See [`BaseAudioContext.createChannelSplitter()`](/en-US/docs/Web/API/BaseAudioContext/createChannelSplitter#examples) for example code.
 
 ## Specifications
 

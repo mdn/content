@@ -1,14 +1,10 @@
 ---
 title: border-left-width
 slug: Web/CSS/border-left-width
-tags:
-  - CSS
-  - CSS Borders
-  - CSS Property
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.border-left-width
 ---
+
 {{CSSRef}}
 
 The **`border-left-width`** [CSS](/en-US/docs/Web/CSS) property sets the width of the left border of an element.

@@ -1,16 +1,11 @@
 ---
-title: OES_vertex_array_object.bindVertexArrayOES()
+title: "OES_vertex_array_object: bindVertexArrayOES() method"
+short-title: bindVertexArrayOES()
 slug: Web/API/OES_vertex_array_object/bindVertexArrayOES
 page-type: webgl-extension-method
-tags:
-  - API
-  - Method
-  - Reference
-  - VAO
-  - WebGL
-  - WebGL extension
 browser-compat: api.OES_vertex_array_object.bindVertexArrayOES
 ---
+
 {{APIRef("WebGL")}}
 
 The **`OES_vertex_array_object.bindVertexArrayOES()`** method
@@ -19,7 +14,7 @@ passed {{domxref("WebGLVertexArrayObject")}} object to the buffer.
 
 ## Syntax
 
-```js
+```js-nolint
 bindVertexArrayOES(arrayObject)
 ```
 
@@ -35,7 +30,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-const ext = gl.getExtension('OES_vertex_array_object');
+const ext = gl.getExtension("OES_vertex_array_object");
 const vao = ext.createVertexArrayOES();
 ext.bindVertexArrayOES(vao);
 

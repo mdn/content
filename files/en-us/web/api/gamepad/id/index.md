@@ -1,18 +1,12 @@
 ---
-title: Gamepad.id
+title: "Gamepad: id property"
+short-title: id
 slug: Web/API/Gamepad/id
 page-type: web-api-instance-property
-tags:
-  - API
-  - Gamepad API
-  - Games
-  - NeedsBetterSpecLink
-  - NeedsMarkupWork
-  - Property
-  - Reference
 browser-compat: api.Gamepad.id
 ---
-{{APIRef("Gamepad API")}}
+
+{{APIRef("Gamepad API")}}{{SecureContext_Header}}
 
 The **`Gamepad.id`** property of the {{domxref("Gamepad") }}
 interface returns a string containing some information about the controller.
@@ -31,7 +25,7 @@ device as well as display useful feedback to the user.
 
 ## Value
 
-A string.
+A string primitive.
 
 ## Examples
 
@@ -41,10 +35,6 @@ window.addEventListener("gamepadconnected", () => {
   gamepadInfo.textContent = `Gamepad connected at index ${gp.index}: ${gp.id}.`;
 });
 ```
-
-## Value
-
-A {{jsxref("String")}}.
 
 ## Specifications
 

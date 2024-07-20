@@ -1,12 +1,12 @@
 ---
 title: xlink:href
 slug: Web/SVG/Attribute/xlink:href
-tags:
-  - NeedsCompatTable
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.a.xlink_href
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`xlink:href`** attribute defines a reference to a resource as a reference [IRI](/en-US/docs/Web/SVG/Content_type#iri). The exact meaning of that link depends on the context of each element using it.
@@ -16,9 +16,7 @@ The **`xlink:href`** attribute defines a reference to a resource as a reference 
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("a")}}
-- {{SVGElement("altGlyph")}}
 - {{SVGElement("animate")}}
-- {{SVGElement("animateColor")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
 - {{SVGElement("cursor")}}
@@ -40,14 +38,18 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
 
 ```html
 <svg viewBox="0 0 160 40" xmlns="http://www.w3.org/2000/svg">
-  <a xlink:href="https://developer.mozilla.org/"><text x="10" y="25">MDN Web Docs</text></a>
+  <a xlink:href="https://developer.mozilla.org/">
+    <text x="10" y="25">MDN Web Docs</text>
+  </a>
 </svg>
 ```
 
@@ -78,38 +80,9 @@ For {{SVGElement("a")}}, `xlink:href` defines the location of the referenced obj
   </tbody>
 </table>
 
-## altGlyph
+## animate, animateMotion, animateTransform, set
 
-For {{SVGElement("altGlyph")}}, `xlink:href` defines the reference either to a {{SVGElement("glyph")}} element in an SVG document fragment or to an {{SVGElement("altGlyphDef")}} element.
-
-If the reference is to a `<glyph>` element and that {{Glossary("glyph")}} is available, then that glyph is rendered instead of the characters that are inside of the `<altGlyph>` element.
-
-If the reference is to an `<altGlyphDef>` element, then if an appropriate set of alternate glyphs is located from processing the `<altGlyphDef>` element, then those alternate glyphs are rendered instead of the characters that are inside of the `<altGlyph>` element.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td>
-        <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#iri">&#x3C;iri></a></code
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td><em>None</em></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>No</td>
-    </tr>
-  </tbody>
-</table>
-
-## animate, animateColor, animateMotion, animateTransform, set
-
-For {{SVGElement("animate")}}, {{SVGElement("animateColor")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, and {{SVGElement("set")}}, `xlink:href` defines the reference to the element which is the target of this animation and which therefore will be modified over time.
+For {{SVGElement("animate")}}, {{SVGElement("animateMotion")}}, {{SVGElement("animateTransform")}}, and {{SVGElement("set")}}, `xlink:href` defines the reference to the element which is the target of this animation and which therefore will be modified over time.
 
 The target element must be part of the current SVG document fragment.
 

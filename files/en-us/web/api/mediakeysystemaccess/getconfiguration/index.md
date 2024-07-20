@@ -1,39 +1,29 @@
 ---
-title: MediaKeySystemAccess.getConfiguration()
+title: "MediaKeySystemAccess: getConfiguration() method"
+short-title: getConfiguration()
 slug: Web/API/MediaKeySystemAccess/getConfiguration
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - EncryptedMediaExtensions
-  - Media
-  - MediaKeySystemAccess
-  - Method
-  - NeedsExample
-  - Reference
-  - Video
-  - getConfiguration
 browser-compat: api.MediaKeySystemAccess.getConfiguration
 ---
-{{APIRef("EncryptedMediaExtensions")}}{{SeeCompatTable}}
 
-The `MediaKeySystemAccess.getConfiguration()` method returns an object with the supported combination of
-the following configuration options:
+{{APIRef("Encrypted Media Extensions")}}{{SecureContext_Header}}
 
-- `initDataTypes` {{readonlyinline}}
+The **`getConfiguration()`** method of the {{domxref("MediaKeySystemAccess")}} interface returns an object with the supported combination of the following configuration options:
+
+- `initDataTypes` {{ReadOnlyInline}}
   - : Returns a list of supported initialization data type names. An initialization data type is a string indicating the format of the initialization data.
-- `audioCapabilities` {{readonlyinline}}
+- `audioCapabilities` {{ReadOnlyInline}}
   - : Returns a list of supported audio type and capability pairs.
-- `videoCapabilities` {{readonlyinline}}
+- `videoCapabilities` {{ReadOnlyInline}}
   - : Returns a list of supported video type and capability pairs.
-- `distinctiveIdentifier` {{readonlyinline}}
+- `distinctiveIdentifier` {{ReadOnlyInline}}
   - : Indicates whether a persistent distinctive identifier is required.
-- `persistentState` {{readonlyinline}}
+- `persistentState` {{ReadOnlyInline}}
   - : Indicates whether the ability to persist state is required.
 
 ## Syntax
 
-```js
+```js-nolint
 getConfiguration()
 ```
 

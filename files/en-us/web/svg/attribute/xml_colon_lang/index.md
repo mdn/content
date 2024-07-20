@@ -1,12 +1,13 @@
 ---
 title: xml:lang
 slug: Web/SVG/Attribute/xml:lang
-tags:
-  - SVG
-  - SVG Attribute
-browser-compat: svg.attributes.core.xml_lang
+page-type: svg-attribute
+status:
+  - deprecated
+browser-compat: svg.global_attributes.xml_lang
 ---
-{{SVGRef}}
+
+{{SVGRef}}{{Deprecated_Header}}
 
 The **`xml:lang`** attribute specifies the primary language used in contents and attributes containing text content of particular elements.
 
@@ -14,15 +15,9 @@ It is a universal attribute allowed in all XML dialects to mark up the natural h
 
 There is also a {{SVGAttr("lang")}} attribute (without namespace). If both of them are defined, the one with namespace is used and the one without is ignored.
 
+## Elements
+
 You can use this attribute with any SVG element.
-
-## Example
-
-```html
-<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
-  <text xml:lang="en-US">This is some English text</text>
-</svg>
-```
 
 ## Usage notes
 
@@ -44,9 +39,18 @@ You can use this attribute with any SVG element.
 </table>
 
 - `<language-tag>`
+
   - : This value specifies the language used for the element. The syntax of this value is defined in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
 
     The most common syntax is a value formed by a lowercase two-character part for the language and an uppercase two-character part for the region or country, separated by a minus sign, e.g. `en-US` for US English or `de-AT` for Austrian German.
+
+## Examples
+
+```html
+<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+  <text xml:lang="en-US">This is some English text</text>
+</svg>
+```
 
 ## Specifications
 

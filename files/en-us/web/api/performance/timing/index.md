@@ -1,19 +1,14 @@
 ---
-title: Performance.timing
+title: "Performance: timing property"
+short-title: timing
 slug: Web/API/Performance/timing
 page-type: web-api-instance-property
-tags:
-  - API
-  - Backwards compatibility
-  - Deprecated
-  - Navigation Timing
-  - Performance
-  - Property
-  - Read-only
-  - legacy
+status:
+  - deprecated
 browser-compat: api.Performance.timing
 ---
-{{APIRef("Navigation Timing")}}{{deprecated_header}}
+
+{{APIRef("Performance API")}}{{deprecated_header}}
 
 The legacy
 **`Performance.timing`** read-only

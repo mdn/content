@@ -1,16 +1,13 @@
 ---
 title: grid-auto-rows
 slug: Web/CSS/grid-auto-rows
-tags:
-  - CSS
-  - CSS Grid
-  - CSS Property
-  - Reference
+page-type: css-property
 browser-compat: css.properties.grid-auto-rows
 ---
+
 {{CSSRef}}
 
-The **`grid-auto-rows`** CSS property specifies the size of an implicitly-created grid row {{glossary("grid tracks", "track")}} or pattern of tracks.
+The **`grid-auto-rows`** [CSS](/en-US/docs/Web/CSS) property specifies the size of an implicitly-created grid row {{glossary("grid tracks", "track")}} or pattern of tracks.
 
 {{EmbedInteractiveExample("pages/css/grid-auto-rows.html")}}
 
@@ -41,6 +38,11 @@ grid-auto-rows: 3fr;
 grid-auto-rows: minmax(100px, auto);
 grid-auto-rows: minmax(max-content, 2fr);
 grid-auto-rows: minmax(20%, 80vmax);
+
+/* fit-content() values */
+grid-auto-rows: fit-content(400px);
+grid-auto-rows: fit-content(5cm);
+grid-auto-rows: fit-content(20%);
 
 /* multiple track-size values */
 grid-auto-rows: min-content max-content auto;
@@ -80,9 +82,13 @@ grid-auto-rows: unset;
   - : Represents the formula `min(max-content, max(auto, argument))`, which is calculated similar to `auto` (i.e. `minmax(auto, max-content)`), except that the track size is clamped at _argument_ if it is greater than the `auto` minimum.
 - `auto`
 
-  - : Is a keyword that is identical to maximal content if it's a maximum. As a minimum it represents the largest minimum size (as specified by {{cssxref("min-width")}}/{{cssxref("min-height")}}) of the grid items occupying the grid track.
+  - : As a maximum represents the largest {{cssxref("max-content")}} size of the items in that track.
 
-    Note: `auto` track sizes (and only `auto` track sizes) can be stretched by the {{cssxref("align-content")}} and {{cssxref("justify-content")}} properties.
+    As a minimum represents the largest minimum size of items in that track (specified by the {{cssxref("min-width")}}/{{cssxref("min-height")}} of the items). This is often, though not always, the {{cssxref("min-content")}} size.
+
+    If used outside of {{cssxref("minmax", "minmax()")}} notation, `auto` represents the range between the minimum and maximum described above. This behaves similarly to `minmax(min-content,max-content)` in most cases.
+
+    > **Note:** `auto` track sizes (and only `auto` track sizes) can be stretched by the {{cssxref("align-content")}} and {{cssxref("justify-content")}} properties. Therefore by default, an `auto` sized track will take up any remaining space in the grid container.
 
 ## Formal definition
 
@@ -136,6 +142,8 @@ grid-auto-rows: unset;
 
 ## See also
 
-- Related CSS properties: {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-flow")}}, {{cssxref("grid")}}
-- Grid Layout Guide: _[Auto-placement in grid layout - sizing rows in the implicit grid](/en-US/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout#sizing_rows_in_the_implicit_grid)_
-- Video tutorial: _[Introducing Grid auto-placement and order](https://gridbyexample.com/video/series-auto-placement-order/)_
+- {{cssxref("grid-auto-columns")}}
+- {{cssxref("grid-auto-flow")}}
+- {{cssxref("grid")}}
+- [Auto-placement in grid layout - sizing rows in the implicit grid](/en-US/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout#sizing_rows_in_the_implicit_grid)
+- Video: [Introducing grid auto-placement and order](https://gridbyexample.com/video/series-auto-placement-order/)

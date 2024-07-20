@@ -1,17 +1,11 @@
 ---
-title: Element.ariaPressed
+title: "Element: ariaPressed property"
+short-title: ariaPressed
 slug: Web/API/Element/ariaPressed
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaPressed
-  - AriaAttributes
-  - AriaMixin
-  - Element
 browser-compat: api.Element.ariaPressed
 ---
+
 {{DefaultAPISidebar("DOM")}}
 
 The **`ariaPressed`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) attribute, which indicates the current "pressed" state of toggle buttons.
@@ -40,9 +34,9 @@ In this example the `aria-pressed` attribute on the element with an ID of `saveC
 ```
 
 ```js
-let el = document.getElementById('saveChanges');
+let el = document.getElementById("saveChanges");
 console.log(el.ariaPressed); // "false"
-el.ariaPressed = "true"
+el.ariaPressed = "true";
 console.log(el.ariaPressed); // "true"
 ```
 

@@ -1,12 +1,11 @@
 ---
-title: Node.firstChild
+title: "Node: firstChild property"
+short-title: firstChild
 slug: Web/API/Node/firstChild
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Reference
 browser-compat: api.Node.firstChild
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`firstChild`** property of the {{domxref("Node")}} interface
@@ -36,7 +35,7 @@ might interfere with using this property.
 </p>
 
 <script>
-  const p01 = document.getElementById('para-01');
+  const p01 = document.getElementById("para-01");
   console.log(p01.firstChild.nodeName);
 </script>
 ```
@@ -49,7 +48,7 @@ will create a `#text` node, from a single space to multiple spaces, returns,
 tabs, and so on.
 
 Another `#text` node is inserted between the closing
-`</span>` and `</p>`tags.
+`</span>` and `</p>` tags.
 
 If this whitespace is removed from the source, the #text nodes are not inserted and the
 span element becomes the paragraph's first child.
@@ -58,7 +57,7 @@ span element becomes the paragraph's first child.
 <p id="para-01"><span>First span</span></p>
 
 <script>
-  const p01 = document.getElementById('para-01');
+  const p01 = document.getElementById("para-01");
   console.log(p01.firstChild.nodeName);
 </script>
 ```

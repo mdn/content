@@ -1,21 +1,14 @@
 ---
-title: Window.mozInnerScreenX
+title: "Window: mozInnerScreenX property"
+short-title: mozInnerScreenX
 slug: Web/API/Window/mozInnerScreenX
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML DOM
-  - NeedsExample
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Property
-  - Reference
-  - Window
+status:
+  - non-standard
 browser-compat: api.Window.mozInnerScreenX
 ---
-{{APIRef}}
 
-## Summary
+{{APIRef}}{{Non-standard_Header}}
 
 Gets the X coordinate of the top-left corner of the window's viewport, in screen
 coordinates.

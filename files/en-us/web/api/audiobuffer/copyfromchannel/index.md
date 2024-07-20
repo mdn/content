@@ -1,23 +1,11 @@
 ---
-title: AudioBuffer.copyFromChannel()
+title: "AudioBuffer: copyFromChannel() method"
+short-title: copyFromChannel()
 slug: Web/API/AudioBuffer/copyFromChannel
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - AudioBuffer
-  - Copying
-  - Frames
-  - Method
-  - Reference
-  - Samples
-  - Web Audio
-  - Web Audio API
-  - copy
-  - copyFromChannel
-  - sound
 browser-compat: api.AudioBuffer.copyFromChannel
 ---
+
 {{APIRef("Web Audio API")}}
 
 The
@@ -28,7 +16,7 @@ channel of the `AudioBuffer` to a specified
 
 ## Syntax
 
-```js
+```js-nolint
 copyFromChannel(destination, channelNumber, startInChannel)
 ```
 

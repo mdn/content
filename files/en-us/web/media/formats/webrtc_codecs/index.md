@@ -1,23 +1,16 @@
 ---
 title: Codecs used by WebRTC
 slug: Web/Media/Formats/WebRTC_codecs
-tags:
-  - Audio
-  - Codecs
-  - Guide
-  - Intermediate
-  - Media
-  - Video
-  - WebRTC
-  - WebRTC API
+page-type: guide
 ---
+
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
 
-The [WebRTC API](/en-US/docs/Web/API/WebRTC_API) makes it possible to construct web sites and apps that let users communicate in real time, using audio and/or video as well as optional data and other information. To communicate, the two devices need to be able to agree upon a mutually-understood codec for each track so they can successfully communicate and present the shared media. This guide reviews the codecs that browsers are required to implement as well as other codecs that some or all browsers support for WebRTC.
+The [WebRTC API](/en-US/docs/Web/API/WebRTC_API) makes it possible to construct websites and apps that let users communicate in real time, using audio and/or video as well as optional data and other information. To communicate, the two devices need to be able to agree upon a mutually-understood codec for each track so they can successfully communicate and present the shared media. This guide reviews the codecs that browsers are required to implement as well as other codecs that some or all browsers support for WebRTC.
 
 ## Containerless media
 
-WebRTC uses bare {{domxref("MediaStreamTrack")}} objects for each track being shared from one peer to another, without a container or even a {{domxref("MediaStream")}} associated with the tracks. Which codecs can be within those tracks is not mandated by the WebRTC specification. However, {{RFC(7742)}} specifies that all WebRTC-compatible browsers must support [VP8](/en-US/docs/Web/Media/Formats/Video_codecs#vp8) and [H.264](</en-US/docs/Web/Media/Formats/Video_codecs#avc_(h.264)>)'s Constrained Baseline profile for video, and {{RFC(7874)}} specifies that browsers must support at least the [Opus](/en-US/docs/Web/Media/Formats/Audio_codecs#opus) codec as well as [G.711](/en-US/docs/Web/Media/Formats/Audio_codecs#g.711_pulse_code_modulation_of_voice_frequencies)'s PCMA and PCMU formats.
+WebRTC uses bare {{domxref("MediaStreamTrack")}} objects for each track being shared from one peer to another, without a container or even a {{domxref("MediaStream")}} associated with the tracks. Which codecs can be within those tracks is not mandated by the WebRTC specification. However, {{RFC(7742)}} specifies that all WebRTC-compatible browsers must support [VP8](/en-US/docs/Web/Media/Formats/Video_codecs#vp8) and [H.264](/en-US/docs/Web/Media/Formats/Video_codecs#avc_h.264)'s Constrained Baseline profile for video, and {{RFC(7874)}} specifies that browsers must support at least the [Opus](/en-US/docs/Web/Media/Formats/Audio_codecs#opus) codec as well as [G.711](/en-US/docs/Web/Media/Formats/Audio_codecs#g.711_pulse_code_modulation_of_voice_frequencies)'s PCMA and PCMU formats.
 
 These two RFCs also lay out options that must be supported for each codec, as well as specific user comfort features such as echo cancellation. This guide reviews the codecs that browsers are required to implement as well as other codecs that some or all browsers support for WebRTC.
 
@@ -55,7 +48,7 @@ Below are the video codecs which are _required_ in any fully WebRTC-compliant br
       <td>Chrome, Edge, Firefox, Safari (12.1+)</td>
     </tr>
     <tr>
-      <th scope="row"><a href="#avc">AVC / H.264</a></th>
+      <th scope="row"><a href="#avc_h.264">AVC / H.264</a></th>
       <td>Constrained Baseline (CB)</td>
       <td>
         <p>Chrome (52+), Edge, Firefox, Safari</p>
@@ -107,7 +100,7 @@ In addition to the mandatory codecs, some browsers support additional codecs as 
 
 VP8, which we [describe in general](/en-US/docs/Web/Media/Formats/Video_codecs#vp8) in the main [guide to video codecs used on the web](/en-US/docs/Web/Media/Formats/Video_codecs), has some specific requirements that must be followed when using it to encode or decode a video track on a WebRTC connection.
 
-Unless signaled otherwise, VP8 will use square pixels (that is, pixels with an aspect ratio of 1:1).
+Unless signaled otherwise, VP8 will use square pixels (that is, pixels with an {{glossary("aspect ratio")}} of 1:1).
 
 #### Other notes
 
@@ -117,7 +110,7 @@ The network payload format for sharing VP8 using {{Glossary("RTP")}} (such as wh
 
 Support for AVC's Constrained Baseline (CB) profile is required in all fully-compliant WebRTC implementations. CB is a subset of the main profile, and is specifically designed for low-complexity, low-delay applications such as mobile video and videoconferencing, as well as for platforms with lower performing video processing capabilities.
 
-Our [overview of AVC](</en-US/docs/Web/Media/Formats/Video_codecs#avc_(h.264)>) and its features can be found in the main video codec guide.
+Our [overview of AVC](/en-US/docs/Web/Media/Formats/Video_codecs#avc_h.264) and its features can be found in the main video codec guide.
 
 #### Special parameter support requirements
 
@@ -290,13 +283,14 @@ Due to its low sample rate and sample size, G.711 audio quality is generally con
 
 Because a given browser and platform may have different availability among the potential codecs—and may have multiple profiles or levels supported for a given codec—the first step when configuring codecs for an {{domxref("RTCPeerConnection")}} is to get the list of available codecs. To do this, you first have to establish a connection on which to get the list.
 
-There are a couple of ways you can do this. The most efficient way is to use the static method {{domxref("RTCRtpSender.getCapabilities()")}} (or the equivalent {{domxref("RTCRtpReceiver.getCapabilities()")}} for a receiver), specifying the type of media as the input parameter. For example, to determine the supported codecs for video, you can do this:
+There are a couple of ways you can do this. The most efficient way is to use the static method {{domxref("RTCRtpSender/getCapabilities_static", "RTCRtpSender.getCapabilities()")}} (or the equivalent {{domxref("RTCRtpReceiver/getCapabilities_static", "RTCRtpReceiver.getCapabilities()")}} for a receiver), specifying the type of media as the input parameter. For example, to determine the supported codecs for video, you can do this:
 
 ```js
 codecList = RTCRtpSender.getCapabilities("video").codecs;
 ```
 
-Now `codecList` is an array of {{domxref("RTCRtpCodecCapability")}} objects, each describing one codec configuration. Also present in the list will be entries for retransmission (RTX), redundant coding (RED), and forward error correction (FEC).
+Now `codecList` is an array [`codec`](/en-US/docs/Web/API/RTCRtpSender/getCapabilities_static#codecs) objects, each describing one codec configuration.
+Also present in the list will be entries for [retransmission](/en-US/docs/Web/API/RTCRtpSender/getCapabilities_static#rtx_retransmission) (RTX), [redundant coding](/en-US/docs/Web/API/RTCRtpSender/getCapabilities_static#red_redundant_audio_data) (RED), and [forward error correction](/en-US/docs/Web/API/RTCRtpSender/getCapabilities_static#fec_forward_error_correction) (FEC).
 
 If the connection is in the process of starting up, you can use the {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}} event to watch for the completion of {{Glossary("ICE")}} candidate gathering, then fetch the list.
 
@@ -321,7 +315,8 @@ peerConnection.addEventListener("icegatheringstatechange", (event) => {
 
 The event handler for `icegatheringstatechange` is established; in it, we look to see if the ICE gathering state is `complete`, indicating that no further candidates will be collected. The method {{domxref("RTCPeerConnection.getSenders()")}} is called to get a list of all the {{domxref("RTCRtpSender")}} objects used by the connection.
 
-With that in hand, we walk through the list of senders, looking for the first one whose {{domxref("MediaStreamTrack")}} indicates that it's {{domxref("MediaStreamTrack.track", "track")}}'s {{domxref("MediaStreamTrack.kind", "kind")}} is `video`, indicating that the track's data is video media. We then call that sender's {{domxref("RTCRtpSender.getParameters", "getParameters()")}} method and, from the returned {{domxref("RTCRtpSendParameters")}} object, we set `codecList` to the {{domxref("RTCRtpParameters.codecs", "codecs")}} property and return to the caller.
+With that in hand, we walk through the list of senders, looking for the first one whose {{domxref("MediaStreamTrack")}} indicates that its {{domxref("MediaStreamTrack.kind", "kind")}} is `video`, indicating that the track's data is video media.
+We then call that sender's {{domxref("RTCRtpSender.getParameters", "getParameters()")}} method and set `codecList` to the `codecs` property in the returned object, and then return to the caller.
 
 If no video track is found, we set `codecList` to `null`.
 
@@ -445,7 +440,7 @@ There are a number of factors that come into play when deciding upon a video cod
 
 #### Licensing terms
 
-Before choosing a video codec, make sure you're aware of any licensing requirements around the codec you select; you can find information about possible licensing concerns in our main [guide to video codecs used on the web](/en-US/docs/Web/Media/Formats/Video_codecs). Of the two mandatory codecs for video—VP8 and AVC/H.264—only VP8 is completely free of licensing requirements. If you select AVC, make sure you're; aware of any potential fees you may need to pay; that said, the patent holders have generally said that most typical web site developers shouldn't need to worry about paying the license fees, which are typically focused more on the developers of the encoding and decoding software.
+Before choosing a video codec, make sure you're aware of any licensing requirements around the codec you select; you can find information about possible licensing concerns in our main [guide to video codecs used on the web](/en-US/docs/Web/Media/Formats/Video_codecs). Of the two mandatory codecs for video—VP8 and AVC/H.264—only VP8 is completely free of licensing requirements. If you select AVC, make sure you're; aware of any potential fees you may need to pay; that said, the patent holders have generally said that most typical website developers shouldn't need to worry about paying the license fees, which are typically focused more on the developers of the encoding and decoding software.
 
 > **Warning:** The information here does _not_ constitute legal advice! Be sure to confirm your exposure to liability before making any final decisions where potential exists for licensing issues.
 

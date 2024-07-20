@@ -1,12 +1,9 @@
 ---
 title: Implement a settings page
 slug: Mozilla/Add-ons/WebExtensions/Implement_a_settings_page
-tags:
-  - Guide
-  - JavaScript
-  - Web
-  - WebExtensions
+page-type: guide
 ---
+
 {{AddonSidebar}}
 
 A settings page gives users a way to see and change settings (sometimes also called "preferences" or "options") for the extension.
@@ -28,7 +25,6 @@ Create a new directory called `settings`, then create a file called `manifest.js
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "Settings example",
   "version": "1.0",
@@ -39,7 +35,6 @@ Create a new directory called `settings`, then create a file called `manifest.js
       "js": ["borderify.js"]
     }
   ]
-
 }
 ```
 
@@ -63,7 +58,6 @@ First, update `manifest.json` so it has these contents:
 
 ```json
 {
-
   "manifest_version": 2,
   "name": "Settings example",
   "version": "1.0",
@@ -86,7 +80,6 @@ First, update `manifest.json` so it has these contents:
       "id": "addon@example.com"
     }
   }
-
 }
 ```
 
@@ -102,24 +95,20 @@ We've added three new manifest keys:
 Next, because we've promised to provide `options.html`, let's create it. Create a file with that name inside the `settings` directory, and give it the following contents:
 
 ```html
-<!DOCTYPE html>
-
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
   </head>
 
   <body>
-
     <form>
-        <label>Border color <input type="text" id="color" name="color"></label>
-        <button type="submit">Save</button>
+      <label>Border color <input type="text" id="color" name="color" /></label>
+      <button type="submit">Save</button>
     </form>
 
     <script src="options.js"></script>
-
   </body>
-
 </html>
 ```
 
@@ -131,12 +120,11 @@ Create `options.js`, again in the `settings` directory, and give it the followin
 function saveOptions(e) {
   e.preventDefault();
   browser.storage.sync.set({
-    color: document.querySelector("#color").value
+    color: document.querySelector("#color").value,
   });
 }
 
 function restoreOptions() {
-
   function setCurrentChoice(result) {
     document.querySelector("#color").value = result.color || "blue";
   }
@@ -162,7 +150,7 @@ This does two things:
 
 You could store the settings values in local storage instead if you feel that local storage is preferable for your extension.
 
-> **Note:** The implementation of `storage.sync` in Firefox relies on the Add-on ID. If you use `storage.sync`, you must set an ID for your extension using the [`browser_specific_settings`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in `manifest.json`, as shown in the example manifest above. See {{bug(1323228)}} for related information.
+> **Note:** The implementation of `storage.sync` in Firefox relies on the Add-on ID. If you use `storage.sync`, you must set an ID for your extension using the [`browser_specific_settings`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in `manifest.json`, as shown in the example manifest above. See [Firefox bug 1323228](https://bugzil.la/1323228) for related information.
 
 Finally, update `borderify.js` to read the border color from storage:
 
@@ -185,7 +173,7 @@ getting.then(onGot, onError);
 
 At this point, the complete extension should look like this:
 
-```
+```plain
 settings/
     borderify.js
     manifest.json
@@ -207,4 +195,4 @@ Now:
 - open the settings page directly from your extension using the [`runtime.openOptionsPage()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage) API
 - Settings page example:
 
-  - [favourite-colour](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour)
+  - [favourite-colour](https://github.com/mdn/webextensions-examples/tree/main/favourite-colour)

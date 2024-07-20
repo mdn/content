@@ -1,28 +1,9 @@
 ---
 title: Web audio codec guide
 slug: Web/Media/Formats/Audio_codecs
-tags:
-  - AAC
-  - ALAC
-  - Apple Lossless
-  - Audio
-  - Codecs
-  - Compress
-  - Decompress
-  - Encoding
-  - FLAC
-  - Guide
-  - Media
-  - Opus
-  - Vorbis
-  - Web
-  - data
-  - decoding
-  - formats
-  - mp3
-  - mp4
-  - sound
+page-type: guide
 ---
+
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
 
 Even modest quality, high-fidelity stereo sound can use a substantial amount of disk space. For web developers, an even bigger concern is the network bandwidth needed in order to transfer audio, whether for streaming or to download it for use during gameplay. The processing of audio data to encode and decode it is handled by an audio **{{Glossary("codec")}}** (**CO**der/**DEC**oder). In this article, we look at audio codecs used on the web to compress and decompress audio, what their capabilities and use cases are, and offer guidance when choosing audio codecs to use for your content.
@@ -160,7 +141,7 @@ Because encoded audio inherently uses fewer bits to represent each sample, the s
     <tr>
       <th scope="row">
         <a
-          href="/en-US/docs/Web/Media/Formats/Audio_concepts#Audio_data_format_and_structure"
+          href="/en-US/docs/Web/Media/Formats/Audio_concepts#audio_data_format_and_structure"
           >Channel count</a
         >
       </th>
@@ -188,7 +169,7 @@ Because encoded audio inherently uses fewer bits to represent each sample, the s
     </tr>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Media/Formats/Audio_concepts#Sampling_audio"
+        <a href="/en-US/docs/Web/Media/Formats/Audio_concepts#sampling_audio"
           >Sample rate</a
         >
       </th>
@@ -203,7 +184,7 @@ Because encoded audio inherently uses fewer bits to represent each sample, the s
     <tr>
       <th scope="row">
         <a
-          href="/en-US/docs/Web/Media/Formats/Audio_concepts#Audio_data_format_and_structure"
+          href="/en-US/docs/Web/Media/Formats/Audio_concepts#audio_data_format_and_structure"
           >Sample size</a
         >
       </th>
@@ -223,7 +204,7 @@ Because encoded audio inherently uses fewer bits to represent each sample, the s
 
 Of course, these effects can be altered by decisions made while encoding the audio. For example, if the encoder is configured to reduce the sample rate, the sample rate's effect on the output file will be reduced in kind.
 
-For more information about these and other features of audio data, see {{SectionOnPage("/en-US/docs/Web/Media/Formats/Audio_concepts", "Audio data format and structure")}}.
+For more information about these and other features of audio data, see [Audio data format and structure](/en-US/docs/Web/Media/Formats/Audio_concepts#audio_data_format_and_structure).
 
 ### The effect of codec configuration on encoded audio output
 
@@ -244,7 +225,7 @@ Audio codecs typically employ cleverly-designed and highly-complex mathematical 
     <tr>
       <th scope="row">
         <a
-          href="/en-US/docs/Web/Media/Formats/Audio_concepts#lossy_vs_lossless_compression"
+          href="/en-US/docs/Web/Media/Formats/Audio_concepts#lossy_vs._lossless_compression"
           >Lossless compression</a
         >
       </th>
@@ -254,7 +235,7 @@ Audio codecs typically employ cleverly-designed and highly-complex mathematical 
     <tr>
       <th scope="row">
         <a
-          href="/en-US/docs/Web/Media/Formats/Audio_concepts#lossy_vs_lossless_compression"
+          href="/en-US/docs/Web/Media/Formats/Audio_concepts#lossy_vs._lossless_compression"
           >Lossy compression</a
         >
       </th>
@@ -263,20 +244,6 @@ Audio codecs typically employ cleverly-designed and highly-complex mathematical 
         loss
       </td>
       <td>Compression of up to 80-95% possible</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        <a href="/en-US/docs/Web/Media/Formats/Audio_concepts#quality"
-          >Quality setting</a
-        >
-      </th>
-      <td>
-        The higher the quality, the better the fidelity of the encoded audio
-      </td>
-      <td>
-        The higher the fidelity, the larger the resulting file becomes, though
-        the amount of change varies from codec to codec
-      </td>
     </tr>
     <tr>
       <th scope="row">
@@ -308,7 +275,7 @@ Audio codecs typically employ cleverly-designed and highly-complex mathematical 
     <tr>
       <th scope="row">
         <a
-          href="/en-US/docs/Web/Media/Formats/Audio_concepts#stereo_coding_method"
+          href="/en-US/docs/Web/Media/Formats/Audio_concepts#joint_stereo"
           >Stereo coding</a
         >
       </th>
@@ -420,28 +387,6 @@ As a patent-encumbered format, AAC support is somewhat less predictable. For exa
     <tr>
       <th scope="row">Browser compatibility</th>
       <td>
-        <table class="standard-table">
-          <tbody>
-            <tr>
-              <th scope="row">Feature</th>
-              <th scope="col">Chrome</th>
-              <th scope="col">Edge</th>
-              <th scope="col">Firefox</th>
-              <th scope="col">Internet Explorer</th>
-              <th scope="col">Opera</th>
-              <th scope="col">Safari</th>
-            </tr>
-            <tr>
-              <th scope="row">AAC support</th>
-              <td>Yes</td>
-              <td>Yes</td>
-              <td>Yes</td>
-              <td>9</td>
-              <td>Yes</td>
-              <td>3.1</td>
-            </tr>
-          </tbody>
-        </table>
         <p>
           Due to patent issues, Firefox does not directly support AAC. Instead,
           Firefox relies upon a platform's native support for AAC. This
@@ -472,39 +417,6 @@ As a patent-encumbered format, AAC support is somewhat less predictable. For exa
         developers of codecs are required to obtain a patent license through
         <a href="https://www.via-corp.com/licensing/aac/">VIA Licensing</a>
       </td>
-    </tr>
-  </tbody>
-</table>
-
-<table class="standard-table" style="margin-left: 4em; max-width: 30em">
-  <caption>
-    AAC support in Firefox using external library, by platform
-  </caption>
-  <thead>
-    <tr>
-      <th scope="row">Platform</th>
-      <th scope="col">First Firefox version<br />with AAC support</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">Windows (Vista and later)</th>
-      <td>22</td>
-    </tr>
-    <tr>
-      <th scope="row">Android</th>
-      <td>20</td>
-    </tr>
-    <tr>
-      <th scope="row">
-        Linux (depends on
-        <a href="https://gstreamer.freedesktop.org/">GStreamer</a>)
-      </th>
-      <td>26</td>
-    </tr>
-    <tr>
-      <th scope="row">macOS</th>
-      <td>35</td>
     </tr>
   </tbody>
 </table>
@@ -568,13 +480,11 @@ Keep in mind, however, that lossless codecs require substantially more bandwidth
               <th scope="col">Chrome</th>
               <th scope="col">Edge</th>
               <th scope="col">Firefox</th>
-              <th scope="col">Internet Explorer</th>
               <th scope="col">Opera</th>
               <th scope="col">Safari</th>
             </tr>
             <tr>
               <th scope="row">ALAC support</th>
-              <td>No</td>
               <td>No</td>
               <td>No</td>
               <td>No</td>
@@ -622,7 +532,7 @@ As a speech-specific codec, AMR is essentially useless for any other content, in
       <th rowspan="2" scope="row">Supported bit rates</th>
       <td>
         <strong>Half Rate (HR) and Full Rate (FR):</strong> 1.8 kbps, 4.75 kbps,
-        5.15 kbpz, 5.9 kbps, 6.7 kbps, 7.4 kbps, 7.95 kbps
+        5.15 kbps, 5.9 kbps, 6.7 kbps, 7.4 kbps, 7.95 kbps
       </td>
     </tr>
     <tr>
@@ -670,7 +580,6 @@ As a speech-specific codec, AMR is essentially useless for any other content, in
               <th scope="col">Chrome</th>
               <th scope="col">Edge</th>
               <th scope="col">Firefox</th>
-              <th scope="col">Internet Explorer</th>
               <th scope="col">Opera</th>
               <th scope="col">Safari</th>
             </tr>
@@ -679,14 +588,13 @@ As a speech-specific codec, AMR is essentially useless for any other content, in
               <td>No</td>
               <td>?</td>
               <td>No</td>
-              <td>?</td>
               <td>No</td>
               <td>?</td>
             </tr>
           </tbody>
         </table>
         <p>
-          While the Chrome browser does not support AMR, Chrome OS supports
+          While the Chrome browser does not support AMR, ChromeOS supports
           AMR-NB (narrowband) and AMR-WB (wideband).
         </p>
       </td>
@@ -772,7 +680,6 @@ FLAC is a great choice for smaller audio effects files where pristine quality an
               <th scope="col">Chrome</th>
               <th scope="col">Edge</th>
               <th scope="col">Firefox</th>
-              <th scope="col">Internet Explorer</th>
               <th scope="col">Opera</th>
               <th scope="col">Safari</th>
             </tr>
@@ -781,8 +688,7 @@ FLAC is a great choice for smaller audio effects files where pristine quality an
               <td>Yes</td>
               <td>Yes</td>
               <td>51 (desktop)<br />58 (mobile)</td>
-              <td>No</td>
-              <td>No</td>
+              <td>Yes</td>
               <td>11</td>
             </tr>
           </tbody>
@@ -865,7 +771,6 @@ This codec is required to be supported by all [WebRTC](/en-US/docs/Web/API/WebRT
               <th scope="col">Chrome</th>
               <th scope="col">Edge</th>
               <th scope="col">Firefox</th>
-              <th scope="col">Internet Explorer</th>
               <th scope="col">Opera</th>
               <th scope="col">Safari</th>
             </tr>
@@ -874,7 +779,6 @@ This codec is required to be supported by all [WebRTC](/en-US/docs/Web/API/WebRT
               <td>23</td>
               <td>15</td>
               <td>22</td>
-              <td>No</td>
               <td>43</td>
               <td>11</td>
             </tr>
@@ -968,7 +872,6 @@ G.722 is primarily used with WebRTC connections, as it's one of the audio codecs
               <th scope="col">Chrome</th>
               <th scope="col">Edge</th>
               <th scope="col">Firefox</th>
-              <th scope="col">Internet Explorer</th>
               <th scope="col">Opera</th>
               <th scope="col">Safari</th>
             </tr>
@@ -977,7 +880,6 @@ G.722 is primarily used with WebRTC connections, as it's one of the audio codecs
               <td>Yes</td>
               <td>Yes</td>
               <td>Yes</td>
-              <td>No</td>
               <td>Yes</td>
               <td>Yes</td>
             </tr>
@@ -1088,7 +990,6 @@ The patents behind MP3 have expired, removing many or most licensing concerns ar
               <th scope="col">Chrome</th>
               <th scope="col">Edge</th>
               <th scope="col">Firefox</th>
-              <th scope="col">Internet Explorer</th>
               <th scope="col">Opera</th>
               <th scope="col">Safari</th>
             </tr>
@@ -1097,7 +998,6 @@ The patents behind MP3 have expired, removing many or most licensing concerns ar
               <td>Yes</td>
               <td>Yes</td>
               <td>Yes</td>
-              <td>9</td>
               <td>Yes</td>
               <td>3.1</td>
             </tr>
@@ -1163,7 +1063,7 @@ For patent reasons, Firefox did not directly support MP3 prior to version 71; in
 
 ### Opus
 
-The [Opus](https://en.wikipedia.org/wiki/Opus_(audio_format)) audio format was created by the Xiph.org Foundation as a fully open audio format; it has been standardized by [IETF](https://www.ietf.org/) as {{RFC(6716)}}. It's a good general-purpose audio codec that can efficiently handle both low-complexity audio such as speech as well as music and other high-complexity sounds.
+The [Opus](<https://en.wikipedia.org/wiki/Opus_(audio_format)>) audio format was created by the Xiph.org Foundation as a fully open audio format; it has been standardized by [IETF](https://www.ietf.org/) as {{RFC(6716)}}. It's a good general-purpose audio codec that can efficiently handle both low-complexity audio such as speech as well as music and other high-complexity sounds.
 
 Opus supports multiple compression algorithms, and can even use more than one algorithm in the same audio file, since the encoder can choose the bit rate, audio bandwidth, algorithm, and other details of the compression settings for each frame of audio.
 
@@ -1293,7 +1193,6 @@ Opus is a good all-around audio codec for use in your web applications, and can 
               <th scope="col">Chrome</th>
               <th scope="col">Edge</th>
               <th scope="col">Firefox</th>
-              <th scope="col">Internet Explorer</th>
               <th scope="col">Opera</th>
               <th scope="col">Safari</th>
             </tr>
@@ -1302,7 +1201,6 @@ Opus is a good all-around audio codec for use in your web applications, and can 
               <td>33</td>
               <td>14</td>
               <td>15</td>
-              <td>No</td>
               <td>20</td>
               <td>11</td>
             </tr>
@@ -1395,7 +1293,6 @@ Generally, Vorbis is more efficient in terms of size and bit rate than MP3 at si
               <th scope="col">Chrome</th>
               <th scope="col">Edge</th>
               <th scope="col">Firefox</th>
-              <th scope="col">Internet Explorer</th>
               <th scope="col">Opera</th>
               <th scope="col">Safari</th>
             </tr>
@@ -1404,7 +1301,6 @@ Generally, Vorbis is more efficient in terms of size and bit rate than MP3 at si
               <td>4</td>
               <td>17</td>
               <td>3.5</td>
-              <td>No</td>
               <td>11.5</td>
               <td>No</td>
             </tr>
@@ -1519,7 +1415,7 @@ A few popular options:
 - [Handbrake](https://handbrake.fr/)
   - : A highly popular open source front-end to FFmpeg which adds a graphical user interface that makes it much easier to control the wide variety of options FFmpeg offers while encoding audio and/or video. Binaries are available for macOS, Linux, and Windows.
 - [Audacity](https://www.audacityteam.org/)
-  - : An open source audio editor that supports loading audio from many different formats, editing, filtering, and adjusting the audio, and saving it back out in either the original format or a new format.  Available for macOS, Linux, and Windows.
+  - : An open source audio editor that supports loading audio from many different formats, editing, filtering, and adjusting the audio, and saving it back out in either the original format or a new format. Available for macOS, Linux, and Windows.
 - [LAME](https://lame.sourceforge.io/)
   - : A high quality open source MP3 encoder with support for CBR, ABR, and VBR encoding as well as a variety of other options. Distributed only in source form by the LAME project, but can be installed using [Homebrew](https://brew.sh/) or similar tools.
 

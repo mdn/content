@@ -1,15 +1,11 @@
 ---
-title: WebGL2RenderingContext.beginTransformFeedback()
+title: "WebGL2RenderingContext: beginTransformFeedback() method"
+short-title: beginTransformFeedback()
 slug: Web/API/WebGL2RenderingContext/beginTransformFeedback
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.beginTransformFeedback
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.beginTransformFeedback()`**
@@ -18,7 +14,7 @@ feedback operation.
 
 ## Syntax
 
-```js
+```js-nolint
 beginTransformFeedback(primitiveMode)
 ```
 

@@ -1,16 +1,13 @@
 ---
-title: WorkerNavigator.appName
+title: "WorkerNavigator: appName property"
+short-title: appName
 slug: Web/API/WorkerNavigator/appName
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - WorkerNavigator
-  - Property
-  - Reference
+status:
+  - deprecated
 browser-compat: api.WorkerNavigator.appName
 ---
+
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
 The value of the **`WorkerNavigator.appName`** property is always

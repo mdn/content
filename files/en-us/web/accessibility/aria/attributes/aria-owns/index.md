@@ -1,15 +1,11 @@
 ---
-title: 'aria-owns'
+title: aria-owns
 slug: Web/Accessibility/ARIA/Attributes/aria-owns
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-owns
-  - Reference
+page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-owns
 ---
+
+{{AccessibilitySidebar}}
 
 The `aria-owns` attribute identifies an element (or elements) in order to define a visual, functional, or contextual relationship between a parent and its child elements when the DOM hierarchy cannot be used to represent the relationship.
 
@@ -21,7 +17,7 @@ There are circumstances where the layout that appears on screen may differ from 
 
 When elements appear to be related visually but are not associated in the DOM, the `aria-owns` attribute enables creating the relationship that appears on screen in the accessibility layer for use by assistive technology. The **only** reason to include `aria-owns` is to expose a parent/child contextual relationship to assistive technology when the DOM's construction can't provide that relationship.
 
-An "owning element" is any DOM ancestor of an element. If an element visually, functionally, or contextually appears to "own" (be an ancestor of) an element, but isn't actually an ancestor the element in the DOM, include the `aria-owns` to create that relationship. Add the attribute to the owning element with reference to the non-child owned element (or elements) to tell assistive technology that an element should be treated as a child.
+An "owning element" is any DOM ancestor of an element. If an element visually, functionally, or contextually appears to "own" (be an ancestor of) an element, but isn't actually an ancestor of the element in the DOM, include the `aria-owns` to create that relationship. Add the attribute to the owning element with reference to the non-child owned element (or elements) to tell assistive technology that an element should be treated as a child.
 
 Referencing the ID of one or more elements allows any element to "own" any other element with an `aria-owns` declaration. The value of the `aria-owns` attribute is a space-separated ID reference list that references the IDs of one or more elements in the document.
 
@@ -48,7 +44,7 @@ The {{CSSXRef('order')}} property, part of flex or grid layouts, can be used to 
 
 Make sure your owned elements have only one owner. Do not specify the `id` of an element in more than one other element's `aria-owns` attribute. An element can have only one owner.
 
-> **Warning:** At the time of this writing, [`aria-owns` is not supported](https://a11ysupport.io/tech/aria/aria-owns_attribute) on MacOS and iOS with VoiceOver.
+> **Warning:** While [`aria-owns` is now supported](https://a11ysupport.io/tech/aria/aria-owns_attribute) in all modern browsers, `aria-owns` may not be exposed to users of MacOS and iOS using VoiceOver prior to iOS 17.3 and macOS 14.3.
 
 ## Values
 
@@ -63,12 +59,7 @@ Used in **ALL** roles.
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`aria-controls`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-controls)
 - [`aria-owns` browser support](https://a11ysupport.io/tech/aria/aria-owns_attribute)
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

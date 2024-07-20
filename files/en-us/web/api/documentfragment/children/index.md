@@ -1,16 +1,11 @@
 ---
-title: DocumentFragment.children
+title: "DocumentFragment: children property"
+short-title: children
 slug: Web/API/DocumentFragment/children
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - Element
-  - HTMLCollection
-  - Property
-  - children
 browser-compat: api.DocumentFragment.children
 ---
+
 {{ APIRef("DOM") }}
 
 The read-only **`children`** property returns a live {{domxref("HTMLCollection")}}
@@ -30,11 +25,11 @@ If the document fragment has no element children, then `children` is an empty li
 ## Examples
 
 ```js
-let fragment = new DocumentFragment()
+let fragment = new DocumentFragment();
 fragment.children; // HTMLCollection []
 
-let paragraph = document.createElement('p')
-fragment.appendChild(paragraph)
+let paragraph = document.createElement("p");
+fragment.appendChild(paragraph);
 
 fragment.children; // HTMLCollection [<p>]
 ```

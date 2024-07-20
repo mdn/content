@@ -1,32 +1,24 @@
 ---
-title: IDBDatabase.deleteObjectStore()
+title: "IDBDatabase: deleteObjectStore() method"
+short-title: deleteObjectStore()
 slug: Web/API/IDBDatabase/deleteObjectStore
 page-type: web-api-instance-method
-tags:
-  - API
-  - Database
-  - IDBDatabase
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
 browser-compat: api.IDBDatabase.deleteObjectStore
 ---
-{{ APIRef("IndexedDB") }}
+
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`deleteObjectStore()`** method of the
 {{domxref("IDBDatabase")}} interface destroys the object store with the given name in
 the connected database, along with any indexes that reference it.
 
 As with {{ domxref("IDBDatabase.createObjectStore") }}, this method can be called
-_only_ within a [`versionchange`](/en-US/docs/Web/API/IDBTransaction#version_change)
+_only_ within a [`versionchange`](/en-US/docs/Web/API/IDBDatabase/versionchange_event)
 transaction.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 
-```js
+```js-nolint
 deleteObjectStore(name)
 ```
 
@@ -34,7 +26,7 @@ deleteObjectStore(name)
 
 - `name`
   - : The name of the object store you want to delete. Names are
-        case sensitive.
+    case sensitive.
 
 ### Return value
 
@@ -87,4 +79,4 @@ request.onupgradeneeded = (event) => {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

@@ -2,17 +2,12 @@
 title: CSSPositionValue
 slug: Web/API/CSSPositionValue
 page-type: web-api-interface
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSPositionValue
-  - Houdini
-  - Interface
-  - Reference
-  - Deprecated
-  - Non-standard
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.CSSPositionValue
 ---
+
 {{deprecated_header}}{{APIRef("CSS Typed Object Model API")}}{{Non-standard_header}}
 
 The **`CSSPositionValue`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model#css_typed_object_model) represents values for properties that take a position, for example {{cssxref('object-position')}}.
@@ -22,14 +17,14 @@ The **`CSSPositionValue`** interface of the [CSS Typed Object Model API](/en-US/
 - {{domxref("CSSPositionValue.CSSPositionValue", "CSSPositionValue()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Creates a new `CSSPositionValue` object.
 
-## Properties
+## Instance properties
 
 - {{domxref('CSSPositionValue.x')}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Returns the item's position along the web page's horizontal axis.
 - {{domxref('CSSPositionValue.y')}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Returns the item's position along the vertical axis.
 
-## Methods
+## Instance methods
 
 None.
 
@@ -38,12 +33,12 @@ None.
 The following example positions a container `<div>` 5 pixels from the top and 10 pixels from the left of the page.
 
 ```js
-const replacedEl = document.getElementById('image');
+const replacedEl = document.getElementById("image");
 const position = new CSSPositionValue(CSS.px(35), CSS.px(40));
 
-replacedEl.attributeStyleMap.set('object-position', position);
+replacedEl.attributeStyleMap.set("object-position", position);
 console.log(position.x.value, position.y.value);
-console.log(replacedEl.computedStyleMap().get('object-position'));
+console.log(replacedEl.computedStyleMap().get("object-position"));
 ```
 
 We set the {{cssxref('object-position')}} property, then check the values returned.
@@ -59,8 +54,11 @@ We set the {{cssxref('object-position')}} property, then check the values return
 ```
 
 ```html hidden
-<p>Check the developer tools to see the log in the console and to inspect the style attribute on the image.</p>
-<img id="image" src="mdn.svg" alt="MDN Logo"/>
+<p>
+  Check the developer tools to see the log in the console and to inspect the
+  style attribute on the image.
+</p>
+<img id="image" src="mdn.svg" alt="MDN Logo" />
 ```
 
 {{EmbedLiveSample("Examples", 300, 300)}}

@@ -1,13 +1,9 @@
 ---
 title: OR
 slug: WebAssembly/Reference/Numeric/OR
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
-  - Bitwise
+page-type: webassembly-instruction
 ---
+
 {{WebAssemblySidebar}}
 
 The **`or`** instructions, are used for performing a bitwise OR, similar to the **`|`** operator in other languages.

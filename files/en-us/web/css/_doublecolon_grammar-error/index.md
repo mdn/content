@@ -1,15 +1,11 @@
 ---
-title: '::grammar-error'
+title: "::grammar-error"
 slug: Web/CSS/::grammar-error
-tags:
-  - CSS
-  - Experimental
-  - Pseudo-element
-  - Reference
-  - Selector
+page-type: css-pseudo-element
 browser-compat: css.selectors.grammar-error
 ---
-{{CSSRef}}{{SeeCompatTable}}
+
+{{CSSRef}}
 
 The **`::grammar-error`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents a text segment which the {{glossary("user agent")}} has flagged as grammatically incorrect.
 
@@ -29,7 +25,9 @@ Only a small subset of CSS properties can be used in a rule with `::grammar-erro
 ## Syntax
 
 ```css
-::grammar-error
+::grammar-error {
+  /* ... */
+}
 ```
 
 ## Examples
@@ -41,7 +39,9 @@ In this example, eventual supporting browsers should highlight any flagged gramm
 #### HTML
 
 ```html
-<p>My friends is coming to the party tonight.</p>
+<p contenteditable spellcheck="true">
+  My friends is coming to the party tonight.
+</p>
 ```
 
 #### CSS

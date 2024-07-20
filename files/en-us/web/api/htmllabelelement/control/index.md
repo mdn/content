@@ -1,17 +1,11 @@
 ---
-title: HTMLLabelElement.control
+title: "HTMLLabelElement: control property"
+short-title: control
 slug: Web/API/HTMLLabelElement/control
 page-type: web-api-instance-property
-tags:
-  - Forms
-  - HTML DOM
-  - HTMLLabelElement
-  - Property
-  - Read-only
-  - Reference
-  - control
 browser-compat: api.HTMLLabelElement.control
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only **`HTMLLabelElement.control`** property returns a

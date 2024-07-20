@@ -1,23 +1,12 @@
 ---
-title: XRInputSource.gripSpace
+title: "XRInputSource: gripSpace property"
+short-title: gripSpace
 slug: Web/API/XRInputSource/gripSpace
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Augmented Reality
-  - Experimental
-  - Property
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebXR
-  - WebXR Device API
-  - XRInputSession
-  - gripSpace
 browser-compat: api.XRInputSource.gripSpace
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The read-only {{domxref("XRInputSource")}} property **`gripSpace`** returns an {{domxref("XRSpace")}} whose native origin tracks the pose used to render virtual objects so they appear to be held in (or part of) the user's hand. For example, if a user were holding a virtual straight rod, the native origin of this `XRSpace` would be located at the approximate center of mass of the user's fist.
 
@@ -25,9 +14,8 @@ The read-only {{domxref("XRInputSource")}} property **`gripSpace`** returns an {
 
 An {{domxref("XRSpace")}} object representing the position and orientation of the input
 device in virtual space, suitable for rendering an image of the device into the scene.
-`gripSpace` is `null` if the input source is inherently
-untrackable. For example, only inputs whose {{domxref("XRInputSource.targetRayMode",
-  "targetRayMode")}} is `tracked-pointer` provide a `gripSpace`.
+`gripSpace` is `null` if the input source is not inherently
+trackable. For example, only inputs whose {{domxref("XRInputSource.targetRayMode", "targetRayMode")}} is `tracked-pointer` provide a `gripSpace`.
 
 Imagine that the controller is shaped like a straight rod, held in the user's fist. The
 native origin of the grip space is located at the centroid—the center of mass—of the
@@ -60,9 +48,9 @@ used to render a mesh that represents the position and orientation of the contro
 the virtual environment.
 
 ```js
-for (let source in xrSession.inputSources) {
+for (const source in xrSession.inputSources) {
   if (source.gripSpace) {
-    let gripPose = frame.getPose(source.gripSpace, xrRefSpace);
+    const gripPose = frame.getPose(source.gripSpace, xrRefSpace);
 
     if (gripPose) {
       myDrawMeshUsingTransform(controllerMesh, gripPose.transform.matrix);

@@ -1,20 +1,15 @@
 ---
-title: VRDisplay.capabilities
+title: "VRDisplay: capabilities property"
+short-title: capabilities
 slug: Web/API/VRDisplay/capabilities
 page-type: web-api-instance-property
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-  - capabilities
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRDisplay.capabilities
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`capabilities`** read-only property of the {{domxref("VRDisplay")}} interface returns a {{domxref("VRDisplayCapabilities")}} object that indicates the various capabilities of the `VRDisplay`.
 
@@ -40,5 +35,4 @@ Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/Web
 
 ## See also
 
-- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.
+- [WebVR API](/en-US/docs/Web/API/WebVR_API)

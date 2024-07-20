@@ -1,16 +1,11 @@
 ---
-title: ANGLE_instanced_arrays.drawElementsInstancedANGLE()
+title: "ANGLE_instanced_arrays: drawElementsInstancedANGLE() method"
+short-title: drawElementsInstancedANGLE()
 slug: Web/API/ANGLE_instanced_arrays/drawElementsInstancedANGLE
 page-type: web-api-instance-method
-tags:
-  - ANGLE_instanced_arrays
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL extension
 browser-compat: api.ANGLE_instanced_arrays.drawElementsInstancedANGLE
 ---
+
 {{APIRef("WebGL")}}
 
 The **`ANGLE_instanced_arrays.drawElementsInstancedANGLE()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) renders primitives from array data like the {{domxref("WebGLRenderingContext.drawElements()", "gl.drawElements()")}} method. In addition, it can execute multiple instances of a set of elements.
@@ -19,7 +14,7 @@ The **`ANGLE_instanced_arrays.drawElementsInstancedANGLE()`** method of the [Web
 
 ## Syntax
 
-```js
+```js-nolint
 drawElementsInstancedANGLE(mode, count, type, offset, primcount)
 ```
 
@@ -59,13 +54,13 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - If `mode` is not one of the accepted values, a `gl.INVALID_ENUM` error is thrown.
-- If `offset` is a invalid multiple of the size of the given type, a `gl.INVALID_OPERATION` error is thrown.
+- If `offset` is an invalid multiple of the size of the given type, a `gl.INVALID_OPERATION` error is thrown.
 - If `count` or `primcount` are negative, a `gl.INVALID_VALUE` error is thrown.
 
 ## Examples
 
 ```js
-const ext = gl.getExtension('ANGLE_instanced_arrays');
+const ext = gl.getExtension("ANGLE_instanced_arrays");
 ext.drawElementsInstancedANGLE(gl.POINTS, 2, gl.UNSIGNED_SHORT, 0, 4);
 ```
 

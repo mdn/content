@@ -1,18 +1,11 @@
 ---
-title: WebGLRenderingContext.isContextLost()
+title: "WebGLRenderingContext: isContextLost() method"
+short-title: isContextLost()
 slug: Web/API/WebGLRenderingContext/isContextLost
 page-type: web-api-instance-method
-tags:
-  - API
-  - Context
-  - Lost
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
-  - isContextLost
 browser-compat: api.WebGLRenderingContext.isContextLost
 ---
+
 {{APIRef("WebGL")}}
 
 The
@@ -22,7 +15,7 @@ must be re-established before rendering can resume.
 
 ## Syntax
 
-```js
+```js-nolint
 isContextLost()
 ```
 

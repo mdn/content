@@ -1,18 +1,11 @@
 ---
-title: HTMLImageElement.currentSrc
+title: "HTMLImageElement: currentSrc property"
+short-title: currentSrc
 slug: Web/API/HTMLImageElement/currentSrc
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLImageElement
-  - Image
-  - Property
-  - Reference
-  - URL
-  - currentSrc
-  - source
 browser-compat: api.HTMLImageElement.currentSrc
 ---
+
 {{APIRef("HTML DOM")}}
 
 The read-only {{domxref("HTMLImageElement")}} property
@@ -31,7 +24,7 @@ determine which image from the set of provided images was selected by the browse
 ## Examples
 
 In this example, two different sizes are provided for an image of a clock. One is 200px
-wide and the other is 400px wide. The {{htmlattrxref("sizes", "img")}} attribute is
+wide and the other is 400px wide. The [`sizes`](/en-US/docs/Web/HTML/Element/img#sizes) attribute is
 provided to indicate that the image should be drawn at 50% of the document width if the
 viewport is under 400px wide; otherwise, the image is drawn at 90% width of the
 document.
@@ -39,23 +32,25 @@ document.
 ### HTML
 
 ```html
- <img src="/files/16797/clock-demo-400px.png"
-      alt="Clock"
-      srcset="/en-US/docs/Web/HTML/Element/img/clock-demo-200px.png 200w, /en-US/docs/Web/HTML/Element/img/clock-demo-400px.png 400w"
-      sizes="(max-width: 400px) 50%, 90%">
+<img
+  src="/en-US/docs/Web/HTML/Element/img/clock-demo-400px.png"
+  alt="Clock"
+  srcset="
+    /en-US/docs/Web/HTML/Element/img/clock-demo-200px.png 200w,
+    /en-US/docs/Web/HTML/Element/img/clock-demo-400px.png 400w
+  "
+  sizes="(max-width: 400px) 50%, 90%" />
 ```
 
 ### JavaScript
 
 ```js
 const clockImage = document.querySelector("img");
-let p = document.createElement("p");
+const p = document.createElement("p");
 
-if (!clockImage.currentSrc.endsWith("200px.png")) {
-  p.innerText = "Using the 200px image.";
-} else {
-  p.innerText = "Using the 400px image!";
-}
+p.textContent = clockImage.currentSrc.endsWith("200px.png")
+  ? "Using the 200px image!"
+  : "Using the 400px image.";
 document.body.appendChild(p);
 ```
 

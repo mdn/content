@@ -1,15 +1,9 @@
 ---
 title: Block and inline layout in normal flow
-slug: Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow
-tags:
-  - CSS
-  - CSS Flow Layout
-  - Guide
-  - Intermediate
-  - Layout
-  - Margins
-  - flow
+slug: Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow
+page-type: guide
 ---
+
 {{CSSRef}}
 
 In this guide, we will explore the basics of how Block and Inline elements behave when they are part of the normal flow.
@@ -18,8 +12,7 @@ Normal Flow is defined in the [CSS 2.1 specification](https://www.w3.org/TR/CSS2
 
 The behavior of elements which have a block or inline formatting context is also defined in this specification. For elements with a block formatting context, the spec says:
 
-> "In a block formatting context, boxes are laid out one after the other, vertically, beginning at the top of a containing block. The vertical distance between two sibling boxes is determined by the 'margin' properties. Vertical margins between adjacent block-level boxes in a block formatting context collapse.
->
+> "In a block formatting context, boxes are laid out one after the other, vertically, beginning at the top of a containing block. The vertical distance between two sibling boxes is determined by the 'margin' properties. Vertical margins between adjacent block-level boxes in a block formatting context collapse.\
 > In a block formatting context, each box's left outer edge touches the left edge of the containing block (for right-to-left formatting, right edges touch)." - 9.4.1
 
 For elements with an inline formatting context:
@@ -30,7 +23,7 @@ Note that the CSS 2.1 specification describes documents as being in a horizontal
 
 ## Elements participating in a block formatting context
 
-Block elements in a horizontal writing mode such as English, layout vertically, one below the other.
+Block elements in a horizontal writing mode such as English, lay out vertically, one below the other.
 
 ![Inline direction is horizontal. Block direction is vertical.](mdn-horizontal.png)
 
@@ -60,7 +53,7 @@ In the example below, the paragraphs have a top margin of `20px` and a bottom ma
 
 {{EmbedGHLiveSample("css-examples/flow/block-inline/normal-flow-collapsing.html", '100%', 500)}}
 
-You can read more about margin collapsing in our article [Mastering Margin Collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing).
+You can read more about margin collapsing in our article [Mastering Margin Collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing).
 
 > **Note:** If you are not sure whether margins are collapsing, check the Box Model values in your browser DevTools. This will give you the actual size of the margin which can help you to identify what is happening.
 >
@@ -74,9 +67,9 @@ In the following example, we have three inline boxes created by a paragraph with
 
 {{EmbedGHLiveSample("css-examples/flow/block-inline/inline.html", '100%', 500)}}
 
-The boxes around the words before the `<strong>` element and after the `<strong>` element are referred to as anonymous boxes, boxes introduced to ensure that everything is wrapped in a box, but ones that we cannot target directly.
+The boxes around the words before the `<strong>` element and after the `</strong>` element are referred to as anonymous boxes, boxes introduced to ensure that everything is wrapped in a box, but ones that we cannot target directly.
 
-The line box size in the block direction (so the height when working in English) is defined by the tallest box inside it. In the next example, I have made the `<strong>` element 300%; that content now defines the height of the line box on that line.
+The line box size in the block direction (so the height when working in English) is defined by the tallest box inside it. In the next example, the `<strong>` element is 300%; since that content spans two lines, it now defines the height of the line boxes of those two lines.
 
 {{EmbedGHLiveSample("css-examples/flow/block-inline/line-box.html", '100%', 500)}}
 
@@ -94,11 +87,11 @@ The flex items however are participating in a flex formatting context, because t
 
 Therefore you can think of every box in CSS working in this way. The box itself has an outer display type, so it knows how to behave alongside other boxes. It then has an inner display type which changes the way its children behave. Those children then have an outer and inner display type too. The flex items in the previous example become flex level boxes, so their outer display type is dictated by way of them being part of the flex formatting context. They have an inner display type of _flow_ however, meaning that their children participate in normal flow. Items nested inside our flex item lay themselves out as block and inline elements unless something changes their display type.
 
-This concept of the outer and inner display type is important as this tells us that a container using a layout method such as Flexbox (`display: flex`) and Grid Layout (`display: grid`) is still participating in block and inline layout, due to the outer display type of those methods being `block`.
+This concept of the outer and inner display type is important as this tells us that a container using a layout method such as flexbox (`display: flex`) and grid layout (`display: grid`) is still participating in block and inline layout, due to the outer display type of those methods being `block`.
 
 ### Changing the Formatting Context an element participates in
 
-Browsers display items as part of a block or inline formatting context in terms of what normally makes sense for that element. For example, a {{HTMLElement("strong")}} element is used to highlight a word and displays bold in browsers. It would not generally make sense for that `<strong>` element to be displayed as a block level element, breaking onto a new line. If you did want all `<strong>` elements to display as block elements, you could do so by setting `display: block` on `<strong>`. This means that you can always use most of the semantic HTML elements to markup your content, and then change the way it displays using CSS.
+Browsers display items in block or inline formatting contexts based on what normally makes sense for that element. For example, a {{HTMLElement("strong")}} element is used to strongly emphasize a span of content and is displayed in bold in browsers by default. It would not generally make sense for that `<strong>` element to be displayed as a block-level element, breaking onto a new line. If you did want all `<strong>` elements to display as block boxes, you could do so by setting `strong { display: block; }`. The ability to style content with CSS means you can always use the most appropriate semantic HTML elements to mark up your content and then change how they are displayed with CSS.
 
 {{EmbedGHLiveSample("css-examples/flow/block-inline/change-formatting.html", '100%', 500)}}
 
@@ -108,7 +101,7 @@ In this guide, we have looked at how elements display in normal flow, as block a
 
 ## See also
 
-- [CSS Basic Box Model](/en-US/docs/Web/CSS/CSS_Box_Model)
+- [CSS Basic Box Model](/en-US/docs/Web/CSS/CSS_box_model)
 - _[Normal Flow](/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow)_ - Learn Layout
-- [Inline elements](/en-US/docs/Web/HTML/Inline_elements)
-- [Block-level elements](/en-US/docs/Web/HTML/Block-level_elements)
+- [Inline-level elements](/en-US/docs/Glossary/Inline-level_content)
+- [Block-level elements](/en-US/docs/Glossary/Block-level_content)

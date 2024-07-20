@@ -1,15 +1,11 @@
 ---
-title: WebGLRenderingContext.renderbufferStorage()
+title: "WebGLRenderingContext: renderbufferStorage() method"
+short-title: renderbufferStorage()
 slug: Web/API/WebGLRenderingContext/renderbufferStorage
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.renderbufferStorage
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.renderbufferStorage()`** method of
@@ -18,7 +14,7 @@ renderbuffer object's data store.
 
 ## Syntax
 
-```js
+```js-nolint
 renderbufferStorage(target, internalFormat, width, height)
 ```
 
@@ -42,39 +38,39 @@ renderbufferStorage(target, internalFormat, width, height)
     - `gl.DEPTH_COMPONENT16`: 16 depth bits.
     - `gl.STENCIL_INDEX8`: 8 stencil bits.
     - `gl.DEPTH_STENCIL`
-    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
-      the following values are available additionally:
 
-      - `gl.R8`
-      - `gl.R8UI`
-      - `gl.R8I`
-      - `gl.R16UI`
-      - `gl.R16I`
-      - `gl.R32UI`
-      - `gl.R32I`
-      - `gl.RG8`
-      - `gl.RG8UI`
-      - `gl.RG8I`
-      - `gl.RG16UI`
-      - `gl.RG16I`
-      - `gl.RG32UI`
-      - `gl.RG32I`
-      - `gl.RGB8`
-      - `gl.RGBA8`
-      - `gl.SRGB8_ALPHA8` (also available as an extension for WebGL 1,
-        see below)
-      - `gl.RGB10_A2`
-      - `gl.RGBA8UI`
-      - `gl.RGBA8I`
-      - `gl.RGB10_A2UI`
-      - `gl.RGBA16UI`
-      - `gl.RGBA16I`
-      - `gl.RGBA32I`
-      - `gl.RGBA32UI`
-      - `gl.DEPTH_COMPONENT24`
-      - `gl.DEPTH_COMPONENT32F`
-      - `gl.DEPTH24_STENCIL8`
-      - `gl.DEPTH32F_STENCIL8`
+    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
+    the following values are available additionally:
+
+    - `gl.R8`
+    - `gl.R8UI`
+    - `gl.R8I`
+    - `gl.R16UI`
+    - `gl.R16I`
+    - `gl.R32UI`
+    - `gl.R32I`
+    - `gl.RG8`
+    - `gl.RG8UI`
+    - `gl.RG8I`
+    - `gl.RG16UI`
+    - `gl.RG16I`
+    - `gl.RG32UI`
+    - `gl.RG32I`
+    - `gl.RGB8`
+    - `gl.RGBA8`
+    - `gl.SRGB8_ALPHA8` (also available as an extension for WebGL 1, see below)
+    - `gl.RGB10_A2`
+    - `gl.RGBA8UI`
+    - `gl.RGBA8I`
+    - `gl.RGB10_A2UI`
+    - `gl.RGBA16UI`
+    - `gl.RGBA16I`
+    - `gl.RGBA32I`
+    - `gl.RGBA32UI`
+    - `gl.DEPTH_COMPONENT24`
+    - `gl.DEPTH_COMPONENT32F`
+    - `gl.DEPTH24_STENCIL8`
+    - `gl.DEPTH32F_STENCIL8`
 
     When using the {{domxref("WEBGL_color_buffer_float")}} extension:
 
@@ -86,7 +82,7 @@ renderbufferStorage(target, internalFormat, width, height)
     - `ext.SRGB8_ALPHA8_EXT`: 8-bit sRGB and alpha.
 
     When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} and
-      the {{domxref("EXT_color_buffer_float")}} extension:
+    the {{domxref("EXT_color_buffer_float")}} extension:
 
     - `gl.R16F`
     - `gl.RG16F`

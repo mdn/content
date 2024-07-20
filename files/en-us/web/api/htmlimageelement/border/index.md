@@ -1,20 +1,13 @@
 ---
-title: HTMLImageElement.border
+title: "HTMLImageElement: border property"
+short-title: border
 slug: Web/API/HTMLImageElement/border
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTML
-  - HTML DOM
-  - HTMLImageElement
-  - Image
-  - Property
-  - Reference
-  - border
-  - img
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.HTMLImageElement.border
 ---
+
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
 The obsolete {{domxref("HTMLImageElement")}}
@@ -22,7 +15,7 @@ property **`border`** specifies the number of pixels thick the
 border surrounding the image should be. A value of 0, the default, indicates that no
 border should be drawn.
 
-You should *not* use this property! Instead, you should use CSS to style the
+You should _not_ use this property! Instead, you should use CSS to style the
 border. The {{cssxref("border")}} property or its longhand properties to not only set
 the thickness of the border but to potentially apply a wide variety of other styling
 options to it.
@@ -41,7 +34,9 @@ For compatibility (or perhaps other) reasons, you can use the older properties i
 A string containing an integer value specifying the thickness of the
 border that should surround the image, in CSS pixels. A value of `0`, or an
 empty string, indicates that there should be no border drawn. The default value of
-`border` is `0`
+`border` is `0`.
+
+When set to the `null` value, that `null` value is converted to the empty string (`""`), so `elt.border = null` is equivalent to `elt.border = ""`.
 
 ## Usage notes
 
@@ -52,21 +47,21 @@ images.
 For example, if you have the following HTML:
 
 ```html
-<img src="image.png" border="2">
+<img src="image.png" border="2" />
 ```
 
 The following will provide the same appearance using CSS instead of this obsolete
 property:
 
 ```html
-<img src="image.png" style="border: 2px;">
+<img src="image.png" style="border: 2px;" />
 ```
 
 You can further provide additional information to change the color and other features
 of the border:
 
 ```html
-<img src="image.png" style="border: dashed 2px #333388;">
+<img src="image.png" style="border: dashed 2px #333388;" />
 ```
 
 ## Specifications

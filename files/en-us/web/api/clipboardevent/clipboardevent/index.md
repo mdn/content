@@ -1,29 +1,18 @@
 ---
-title: ClipboardEvent()
+title: "ClipboardEvent: ClipboardEvent() constructor"
+short-title: ClipboardEvent()
 slug: Web/API/ClipboardEvent/ClipboardEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Clipboard
-  - Clipboard API
-  - ClipboardEvent
-  - Constructor
-  - Cut
-  - Reference
-  - copy
-  - paste
 browser-compat: api.ClipboardEvent.ClipboardEvent
 ---
+
 {{APIRef("Clipboard API")}}
 
-The **`ClipboardEvent()`** constructor returns a new {{domxref("ClipboardEvent")}},
-representing an event providing information related to modification of the clipboard,
-that is {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event", "copy")}}, and
-{{domxref("Element/paste_event", "paste")}} events.
+The **`ClipboardEvent()`** constructor returns a new {{domxref("ClipboardEvent")}}, representing an event providing information related to modification of the clipboard, that is {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event", "copy")}}, and {{domxref("Element/paste_event", "paste")}} events.
 
 ## Syntax
 
-```js
+```js-nolint
 new ClipboardEvent(type)
 new ClipboardEvent(type, options)
 ```

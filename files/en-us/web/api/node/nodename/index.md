@@ -1,13 +1,11 @@
 ---
-title: Node.nodeName
+title: "Node: nodeName property"
+short-title: nodeName
 slug: Web/API/Node/nodeName
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Read-only
-  - Reference
 browser-compat: api.Node.nodeName
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`nodeName`** property of {{domxref("Node")}} returns the name of the current node as a string.
@@ -44,27 +42,26 @@ This example displays the node names of several nodes
 This is some HTML:
 <div id="d1">Hello world</div>
 <!-- Example of comment -->
-Text <span>Text</span>
-Text<br/>
+Text <span>Text</span> Text<br />
 <svg height="20" width="20">
   <circle cx="10" cy="10" r="5" stroke="black" stroke-width="1" fill="red" />
 </svg>
-<hr>
+<hr />
 <output id="result">Not calculated yet.</output>
 ```
 
 and the following script:
 
 ```js
-let node = document.getElementsByTagName("body")[0].firstChild;
-let result = "Node names are:<br/>";
+let node = document.querySelector("body").firstChild;
+let result = "Node names are:\n";
 while (node) {
-  result += `${node.nodeName}<br/>`;
-  node = node.nextSibling
+  result += `${node.nodeName}\n`;
+  node = node.nextSibling;
 }
 
 const output = document.getElementById("result");
-output.innerHTML = result;
+output.innerText = result;
 ```
 
 {{ EmbedLiveSample("Example", "100%", "450")}}

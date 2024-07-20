@@ -1,28 +1,21 @@
 ---
-title: URL.toJSON()
+title: "URL: toJSON() method"
+short-title: toJSON()
 slug: Web/API/URL/toJSON
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - URL
-  - URL API
-  - Polyfill
 browser-compat: api.URL.toJSON
 ---
-{{APIRef("URL API")}}
+
+{{APIRef("URL API")}} {{AvailableInWorkers}}
 
 The **`toJSON()`** method of the {{domxref("URL")}} interface
 returns a string containing a serialized version of the URL,
 although in practice it seems to have the same effect as
 {{domxref("URL.toString()")}}.
 
-{{AvailableInWorkers}}
-
 ## Syntax
 
-```js
+```js-nolint
 toJSON()
 ```
 
@@ -37,7 +30,9 @@ A string.
 ## Examples
 
 ```js
-const url = new URL("https://developer.mozilla.org/en-US/docs/Web/API/URL/toString");
+const url = new URL(
+  "https://developer.mozilla.org/en-US/docs/Web/API/URL/toString",
+);
 url.toJSON(); // should return the URL as a string
 ```
 

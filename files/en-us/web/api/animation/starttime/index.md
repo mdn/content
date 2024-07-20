@@ -1,23 +1,16 @@
 ---
-title: Animation.startTime
+title: "Animation: startTime property"
+short-title: startTime
 slug: Web/API/Animation/startTime
 page-type: web-api-instance-property
-tags:
-  - API
-  - Animation
-  - Interface
-  - Property
-  - Reference
-  - Web Animations
-  - startTime
-  - web animations api
 browser-compat: api.Animation.startTime
 ---
+
 {{ APIRef("Web Animations") }}
 
 The **`Animation.startTime`** property of the {{domxref("Animation")}} interface is a double-precision floating-point value which indicates the scheduled time when an animation's playback should begin.
 
-An animation's **start time** is the time value of its {{domxref("timeline", "DocumentTimeline")}} when its target {{domxref("KeyframeEffect")}} is scheduled to begin playback. An animation's **start time** is initially unresolved (meaning that it's `null` because it has no value).
+An animation's **start time** is the time value of its {{domxref("DocumentTimeline","timeline")}} when its target {{domxref("KeyframeEffect")}} is scheduled to begin playback. An animation's **start time** is initially unresolved (meaning that it's `null` because it has no value).
 
 ## Value
 
@@ -25,13 +18,15 @@ A floating-point number representing the current time in milliseconds, or `null`
 
 ## Examples
 
-In the [Running on Web Animations API example](https://codepen.io/rachelnabors/pen/zxYexJ?editors=0010), the we can sync all new animated cats by giving them all the same `startTime` as the original running cat:
+In the [Running on Web Animations API example](https://codepen.io/rachelnabors/pen/zxYexJ?editors=0010), we can sync all new animated cats by giving them all the same `startTime` as the original running cat:
 
 ```js
-const catRunning = document.getElementById ("withWAAPI").animate(keyframes, timing);
+const catRunning = document
+  .getElementById("withWAAPI")
+  .animate(keyframes, timing);
 
 /* A function that makes new cats. */
-function addCat(){
+function addCat() {
   const newCat = document.createElement("div");
   newCat.classList.add("cat");
   return newCat;
@@ -55,12 +50,14 @@ function animateNewCatWithWAAPI() {
 
 ## Reduced time precision
 
-To offer protection against timing attacks and fingerprinting, the precision of `animation.startTime` might get rounded depending on browser settings.
-In Firefox, the `privacy.reduceTimerPrecision`  preference is enabled by default and defaults to 20us in Firefox 59; in 60 it will be 2ms.
+To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), the precision of `animation.startTime` might get rounded depending on browser settings. In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by default and defaults to 2ms. You can also enable `privacy.resistFingerprinting`, in which case the precision will be 100ms or the value of `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever is larger.
+
+For example, with reduced time precision, the result of `animation.startTime` will always be a multiple of 0.002, or a multiple of 0.1 (or `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`) with `privacy.resistFingerprinting` enabled.
 
 ```js
 // reduced time precision (2ms) in Firefox 60
 animation.startTime;
+// Might be:
 // 23.404
 // 24.192
 // 25.514
@@ -68,13 +65,12 @@ animation.startTime;
 
 // reduced time precision with `privacy.resistFingerprinting` enabled
 animation.startTime;
+// Might be:
 // 49.8
 // 50.6
 // 51.7
 // …
 ```
-
-In Firefox, you can also enabled `privacy.resistFingerprinting`, the precision will be 100ms or the value of `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever is larger.
 
 ## Specifications
 

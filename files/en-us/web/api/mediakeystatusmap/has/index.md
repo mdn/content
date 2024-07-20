@@ -1,25 +1,20 @@
 ---
-title: MediaKeyStatusMap.has()
+title: "MediaKeyStatusMap: has() method"
+short-title: has()
 slug: Web/API/MediaKeyStatusMap/has
 page-type: web-api-instance-method
-tags:
-  - API
-  - EncryptedMediaExtensions
-  - MediaKeyStatusMap
-  - Method
-  - Reference
-  - has()
 browser-compat: api.MediaKeyStatusMap.has
 ---
-{{APIRef("EncryptedMediaExtensions API")}}{{SeeCompatTable}}
 
-The **`has`** property of the
+{{APIRef("Encrypted Media Extensions")}}{{SecureContext_Header}}
+
+The **`has()`** method of the
 {{domxref("MediaKeyStatusMap")}} interface returns a {{jsxref('Boolean')}}, asserting
 whether a value has been associated with the given key.
 
 ## Syntax
 
-```js
+```js-nolint
 has(key)
 ```
 

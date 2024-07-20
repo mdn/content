@@ -1,17 +1,11 @@
 ---
-title: SVGAnimationElement.targetElement
+title: "SVGAnimationElement: targetElement property"
+short-title: targetElement
 slug: Web/API/SVGAnimationElement/targetElement
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - NeedsExample
-  - Property
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGAnimationElement.targetElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGAnimationElement.targetElement`** property refers to

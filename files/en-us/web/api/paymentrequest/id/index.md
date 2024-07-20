@@ -1,19 +1,12 @@
 ---
-title: PaymentRequest.id
+title: "PaymentRequest: id property"
+short-title: id
 slug: Web/API/PaymentRequest/id
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Payment Request
-  - Payment Request API
-  - PaymentRequest
-  - Reference
-  - Secure context
-  - id
 browser-compat: api.PaymentRequest.id
 ---
-{{SeeCompatTable}}{{APIRef("Payment Request API")}}
+
+{{securecontext_header}}{{APIRef("Payment Request API")}}
 
 The **`id`** read-only attribute of the
 {{domxref("PaymentRequest")}} interface returns a unique identifier for a particular
@@ -48,7 +41,7 @@ console.log(response.requestId === request.id);
 
 // And in serialized form too
 const json = response.toJSON();
-console.log(json.requestId,response.requestId, request.id);
+console.log(json.requestId, response.requestId, request.id);
 ```
 
 ## Value

@@ -3,10 +3,10 @@ name: System file changes
 on:
   pull_request_target:
     paths:
-      - '.github/workflows/**'
-      - '.github/CODEOWNERS'
-      - '.github/dependabot.yml'
-      - 'scripts/**'
+      - ".github/workflows/**"
+      - ".github/CODEOWNERS"
+      - ".github/dependabot.yml"
+      - "scripts/**"
       - package.json
       - yarn.lock
 

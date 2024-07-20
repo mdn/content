@@ -1,15 +1,11 @@
 ---
-title: WebGL2RenderingContext.renderbufferStorageMultisample()
+title: "WebGL2RenderingContext: renderbufferStorageMultisample() method"
+short-title: renderbufferStorageMultisample()
 slug: Web/API/WebGL2RenderingContext/renderbufferStorageMultisample
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.renderbufferStorageMultisample
 ---
+
 {{APIRef("WebGL")}}
 
 The
@@ -20,7 +16,7 @@ samples to be used.
 
 ## Syntax
 
-```js
+```js-nolint
 renderbufferStorageMultisample(target, samples, internalFormat, width, height)
 ```
 
@@ -40,7 +36,7 @@ renderbufferStorageMultisample(target, samples, internalFormat, width, height)
 - `internalFormat`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the internal format of the renderbuffer. Possible
-    values (\`gl.DEPTH_STENCIL\` is not supported):
+    values (`gl.DEPTH_STENCIL` is not supported):
 
     - `gl.R8`
     - `gl.R8UI`
@@ -90,7 +86,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-gl.renderbufferStorageMultisample(gl.RENDERBUFFER, 4, gl.RBGA4, 256, 256);
+gl.renderbufferStorageMultisample(gl.RENDERBUFFER, 4, gl.RGBA4, 256, 256);
 ```
 
 ## Specifications

@@ -1,21 +1,15 @@
 ---
-title: VRDisplay.getLayers()
+title: "VRDisplay: getLayers() method"
+short-title: getLayers()
 slug: Web/API/VRDisplay/getLayers
 page-type: web-api-instance-method
-tags:
-  - API
-  - Deprecated
-  - Deprecated
-  - Method
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-  - getLayers()
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRDisplay.getLayers
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`getLayers()`** method of the {{domxref("VRDisplay")}} interface returns the layers currently being presented by the `VRDisplay`.
 
@@ -23,7 +17,7 @@ The **`getLayers()`** method of the {{domxref("VRDisplay")}} interface returns t
 
 ## Syntax
 
-```js
+```js-nolint
 getLayers()
 ```
 
@@ -51,5 +45,4 @@ Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/Web
 
 ## See also
 
-- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.
+- [WebVR API](/en-US/docs/Web/API/WebVR_API)

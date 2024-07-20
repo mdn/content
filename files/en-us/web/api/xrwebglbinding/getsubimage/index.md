@@ -1,23 +1,20 @@
 ---
-title: XRWebGLBinding.getSubImage()
+title: "XRWebGLBinding: getSubImage() method"
+short-title: getSubImage()
 slug: Web/API/XRWebGLBinding/getSubImage
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - AR
-  - XR
-  - WebXR
+status:
+  - experimental
 browser-compat: api.XRWebGLBinding.getSubImage
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The **`getSubImage()`** method of the {{domxref("XRWebGLBinding")}} interface returns a {{domxref("XRWebGLSubImage")}} object representing the WebGL texture to render.
 
 ## Syntax
 
-```js
+```js-nolint
 getSubImage(layer, frame)
 getSubImage(layer, frame, eye)
 ```
@@ -36,7 +33,7 @@ getSubImage(layer, frame, eye)
       - : The view represents the viewer's right eye.
     - `none`
       - : The view describes a monoscopic view, or the view otherwise doesn't represent a particular eye's point-of-view.
-    Defaults to `none`.
+        Defaults to `none`.
 
 ### Return value
 
@@ -62,11 +59,11 @@ const xrGlBinding = new XRWebGLBinding(xrSession, gl);
 const quadLayer = xrGlBinding.createQuadLayer({
   space: xrReferenceSpace,
   viewPixelWidth: 512,
-  viewPixelHeight: 512
+  viewPixelHeight: 512,
 });
 
 // Position 2 meters away from the origin with a width and height of 1.5 meters
-quadLayer.transform = new XRRigidTransform({z: -2});
+quadLayer.transform = new XRRigidTransform({ z: -2 });
 quadLayer.width = 1.5;
 quadLayer.height = 1.5;
 
@@ -79,7 +76,12 @@ function onXRFrame(time, xrFrame) {
 
   gl.bindFramebuffer(gl.FRAMEBUFFER, framebuffer);
   let subImage = xrGlBinding.getSubImage(quadLayer, xrFrame);
-  gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, subImage.colorTexture, 0);
+  gl.framebufferTexture2D(
+    gl.FRAMEBUFFER,
+    gl.COLOR_ATTACHMENT0,
+    subImage.colorTexture,
+    0,
+  );
   let viewport = subImage.viewport;
   gl.viewport(viewport.x, viewport.y, viewport.width, viewport.height);
 

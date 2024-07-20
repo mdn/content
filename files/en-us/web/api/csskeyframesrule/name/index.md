@@ -1,16 +1,11 @@
 ---
-title: CSSKeyframesRule.name
+title: "CSSKeyframesRule: name property"
+short-title: name
 slug: Web/API/CSSKeyframesRule/name
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM
-  - CSSKeyframesRule
-  - CSS Animations
-  - Property
-  - Reference
 browser-compat: api.CSSKeyframesRule.name
 ---
+
 {{APIRef("CSSOM") }}
 
 The **`name`** property of the {{domxref("CSSKeyframeRule")}} interface gets and sets the name of the animation as used by the {{cssxref("animation-name")}} property.

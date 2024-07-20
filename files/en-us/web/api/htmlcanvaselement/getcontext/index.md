@@ -1,15 +1,11 @@
 ---
-title: HTMLCanvasElement.getContext()
+title: "HTMLCanvasElement: getContext() method"
+short-title: getContext()
 slug: Web/API/HTMLCanvasElement/getContext
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - HTMLCanvasElement
-  - Method
-  - Reference
 browser-compat: api.HTMLCanvasElement.getContext
 ---
+
 {{APIRef("Canvas API")}}
 
 The
@@ -24,7 +20,7 @@ different drawing context object on a given canvas element.
 
 ## Syntax
 
-```js
+```js-nolint
 getContext(contextType)
 getContext(contextType, contextAttributes)
 ```
@@ -46,6 +42,9 @@ getContext(contextType, contextAttributes)
       object representing a three-dimensional rendering context. This context is only
       available on browsers that implement [WebGL](/en-US/docs/Web/API/WebGL_API)
       version 2 (OpenGL ES 3.0). {{experimental_inline}}
+    - `"webgpu"`, which will create a
+      {{domxref("GPUCanvasContext")}} object representing a three-dimensional
+      rendering context for WebGPU render pipelines. This context is only available on browsers that implement [The WebGPU API](/en-US/docs/Web/API/WebGPU_API).
     - `"bitmaprenderer"` which will create an
       {{domxref("ImageBitmapRenderingContext")}} which only provides functionality to
       replace the content of the canvas with a given {{domxref("ImageBitmap")}}.
@@ -54,7 +53,7 @@ getContext(contextType, contextAttributes)
     > in new implementations of WebGL. These implementations have either not reached
     > test suite conformance, or the graphics drivers on the platform are not yet
     > stable. The [Khronos Group](https://www.khronos.org/) certifies WebGL
-    > implementations under certain [conformance > rules](https://www.khronos.org/registry/webgl/sdk/tests/CONFORMANCE_RULES.txt).
+    > implementations under certain [conformance rules](https://www.khronos.org/registry/webgl/sdk/tests/CONFORMANCE_RULES.txt).
 
 - `contextAttributes` {{optional_inline}}
 
@@ -62,9 +61,9 @@ getContext(contextType, contextAttributes)
     example:
 
     ```js
-    const gl = canvas.getContext('webgl', {
+    const gl = canvas.getContext("webgl", {
       antialias: false,
-      depth: false
+      depth: false,
     });
     ```
 
@@ -75,6 +74,10 @@ getContext(contextType, contextAttributes)
         contains an alpha channel. If set to `false`, the browser now knows
         that the backdrop is always opaque, which can speed up drawing of transparent
         content and images.
+    - `colorSpace` {{optional_inline}}
+      - : Specifies the color space of the rendering context. Possible values are:
+        - `"srgb"` selects the [sRGB color space](https://en.wikipedia.org/wiki/SRGB). This is the default value.
+        - `"display-p3"` selects the [display-p3 color space](https://en.wikipedia.org/wiki/DCI-P3).
     - `desynchronized`
       - : A boolean value that hints the user agent
         to reduce the latency by desynchronizing the canvas paint cycle from the event
@@ -109,6 +112,7 @@ getContext(contextType, contextAttributes)
         indicates if a context will be created if the system performance is low or if no
         hardware GPU is available.
     - `powerPreference`
+
       - : A hint to the user agent
         indicating what configuration of GPU is suitable for the WebGL context. Possible
         values are:
@@ -139,6 +143,8 @@ getContext(contextType, contextAttributes)
         {{domxref("WebGLRenderingContext.makeXRCompatible()")}} method the moment you
         intend to start an XR session.
 
+    > **Note:** The WebGPU specification does not define any specific context attributes for `getContext()`. Instead, it provides configuration options via the {{domxref("GPUCanvasContext.configure()")}} method.
+
 ### Return value
 
 A rendering context which is either a
@@ -146,7 +152,8 @@ A rendering context which is either a
 - {{domxref("CanvasRenderingContext2D")}} for `"2d"`,
 - {{domxref("WebGLRenderingContext")}} for `"webgl"` and
   `"experimental-webgl"`,
-- {{domxref("WebGL2RenderingContext")}} for `"webgl2"` or
+- {{domxref("WebGL2RenderingContext")}} for `"webgl2"`
+- {{domxref("GPUCanvasContext")}} for `"webgpu"` or
 - {{domxref("ImageBitmapRenderingContext")}} for `"bitmaprenderer"`.
 
 If the `contextType` doesn't match a possible drawing context, or differs
@@ -163,8 +170,8 @@ Given this {{HTMLElement("canvas")}} element:
 You can get a `2d` context of the canvas with the following code:
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 console.log(ctx); // CanvasRenderingContext2D { /* … */ }
 ```
 
@@ -180,10 +187,10 @@ Now you have the [2D rendering context](/en-US/docs/Web/API/CanvasRenderingConte
 
 ## See also
 
-- {{domxref("CanvasRenderingContext2D.getContextAttributes()")}}
-- {{domxref("WebGLRenderingContext.getContextAttributes()")}}
-- The interface defining it, {{domxref("HTMLCanvasElement")}}.
+- {{domxref("HTMLCanvasElement")}}: Interface used to define the `HTMLCanvasElement.getContext()` method
 - {{domxref("OffscreenCanvas.getContext()")}}
-- Available rendering contexts: {{domxref("CanvasRenderingContext2D")}},
-  {{domxref("WebGLRenderingContext")}} and {{domxref("WebGL2RenderingContext")}} and
-  {{domxref("ImageBitmapRenderingContext")}}.
+- {{domxref("CanvasRenderingContext2D.getContextAttributes()")}}, {{domxref("WebGLRenderingContext.getContextAttributes()")}}
+- {{domxref("CanvasRenderingContext2D")}}, {{domxref("ImageBitmapRenderingContext")}},
+  {{domxref("WebGLRenderingContext")}}, {{domxref("WebGL2RenderingContext")}}, {{domxref("GPUCanvasContext")}}: Available rendering contexts
+- [DCI-P3 color space](https://en.wikipedia.org/wiki/DCI-P3) on Wikipedia
+- [sRGB color space](https://en.wikipedia.org/wiki/SRGB) on Wikipedia

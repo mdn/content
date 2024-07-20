@@ -1,17 +1,12 @@
 ---
-title: MediaRecorder.audioBitsPerSecond
+title: "MediaRecorder: audioBitsPerSecond property"
+short-title: audioBitsPerSecond
 slug: Web/API/MediaRecorder/audioBitsPerSecond
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Media Recorder API
-  - MediaRecorder
-  - Property
-  - Reference
 browser-compat: api.MediaRecorder.audioBitsPerSecond
 ---
-{{SeeCompatTable}}{{APIRef("MediaStream Recording")}}
+
+{{APIRef("MediaStream Recording")}}
 
 The **`audioBitsPerSecond`** read-only
 property of the {{domxref("MediaRecorder")}} interface returns the audio encoding bit

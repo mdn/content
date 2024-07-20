@@ -1,19 +1,12 @@
 ---
-title: XMLHttpRequest.open()
+title: "XMLHttpRequest: open() method"
+short-title: open()
 slug: Web/API/XMLHttpRequest/open
 page-type: web-api-instance-method
-tags:
-  - API
-  - HTTP
-  - Method
-  - NeedsExample
-  - Reference
-  - XHR
-  - XMLHttpRequest
-  - open
 browser-compat: api.XMLHttpRequest.open
 ---
-{{APIRef('XMLHttpRequest')}}
+
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
 The {{domxref("XMLHttpRequest")}} method **`open()`**
 initializes a newly-created request, or re-initializes an existing one.
@@ -24,7 +17,7 @@ initializes a newly-created request, or re-initializes an existing one.
 
 ## Syntax
 
-```js
+```js-nolint
 open(method, url)
 open(method, url, async)
 open(method, url, async, user)
@@ -38,7 +31,7 @@ open(method, url, async, user, password)
     `"GET"`, `"POST"`, `"PUT"`, `"DELETE"`,
     etc. Ignored for non-HTTP(S) URLs.
 - `url`
-  - : A string representing the URL to send the request to.
+  - : A string or any other object with a {{Glossary("stringifier")}} — including a {{domxref("URL")}} object — that provides the URL of the resource to send the request to.
 - `async` {{optional_inline}}
 
   - : An optional Boolean parameter, defaulting to `true`, indicating whether
@@ -74,8 +67,8 @@ None ({{jsxref("undefined")}}).
 
 ## See also
 
-- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
 - Related {{domxref("XMLHttpRequest")}} methods:
-  {{domxref("XMLHttpRequest.setRequestHeader",
-    "setRequestHeader()")}}, {{domxref("XMLHttpRequest.send", "send()")}}, and
+  {{domxref("XMLHttpRequest.setRequestHeader","setRequestHeader()")}},
+  {{domxref("XMLHttpRequest.send", "send()")}}, and
   {{domxref("XMLHttpRequest.abort", "abort()")}}

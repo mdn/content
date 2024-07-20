@@ -2,19 +2,14 @@
 title: AesCbcParams
 slug: Web/API/AesCbcParams
 page-type: web-api-interface
-tags:
-  - API
-  - AesCbcParams
-  - Dictionary
-  - Reference
-  - Web Crypto API
 spec-urls: https://w3c.github.io/webcrypto/#dfn-AesCbcParams
 ---
+
 {{ APIRef("Web Crypto API") }}
 
 The **`AesCbcParams`** dictionary of the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) represents the object that should be passed as the `algorithm` parameter into {{domxref("SubtleCrypto.encrypt()")}}, {{domxref("SubtleCrypto.decrypt()")}}, {{domxref("SubtleCrypto.wrapKey()")}}, or {{domxref("SubtleCrypto.unwrapKey()")}}, when using the [AES-CBC](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc) algorithm.
 
-## Properties
+## Instance properties
 
 - `name`
   - : A string. This should be set to `AES-CBC`.

@@ -2,14 +2,9 @@
 title: AesCtrParams
 slug: Web/API/AesCtrParams
 page-type: web-api-interface
-tags:
-  - API
-  - AesCtrParams
-  - Dictionary
-  - Reference
-  - Web Crypto API
 spec-urls: https://w3c.github.io/webcrypto/#dfn-AesCtrParams
 ---
+
 {{ APIRef("Web Crypto API") }}
 
 The **`AesCtrParams`** dictionary of the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) represents the object that should be passed as the `algorithm` parameter into {{domxref("SubtleCrypto.encrypt()")}}, {{domxref("SubtleCrypto.decrypt()")}}, {{domxref("SubtleCrypto.wrapKey()")}}, or {{domxref("SubtleCrypto.unwrapKey()")}}, when using the [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr) algorithm.
@@ -30,7 +25,7 @@ Essentially: the nonce should ensure that counter blocks are not reused from one
 
 > **Note:** See [Appendix B of the NIST SP800-38A standard](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38a.pdf#%5B%7B%22num%22%3A70%2C%22gen%22%3A0%7D%2C%7B%22name%22%3A%22Fit%22%7D%5D) for more information.
 
-## Properties
+## Instance properties
 
 - `name`
   - : A string. This should be set to `AES-CTR`.

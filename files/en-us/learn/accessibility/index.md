@@ -1,19 +1,9 @@
 ---
 title: Accessibility
 slug: Learn/Accessibility
-tags:
-  - ARIA
-  - Accessibility
-  - Articles
-  - Beginner
-  - CSS
-  - CodingScripting
-  - HTML
-  - JavaScript
-  - Landing
-  - Learn
-  - Module
+page-type: learn-module
 ---
+
 {{LearnSidebar}}
 
 Learning some HTML, CSS, and JavaScript is useful if you want to become a web developer. Beyond mechanical use, it's important to learn how to use these technologies **responsibly** so that all readers might use your creations on the web. To help you achieve this, this module will cover general best practices (which are demonstrated throughout the [HTML](/en-US/docs/Learn/HTML), [CSS](/en-US/docs/Learn/CSS), and [JavaScript](/en-US/docs/Learn/JavaScript) topics), [cross browser testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing), and some tips on enforcing accessibility from the start. We'll cover accessibility in special detail.
@@ -31,15 +21,6 @@ When someone describes a site as "accessible", they mean that any user can use a
 The Firefox Accessibility Inspector is a very useful tool for checking out accessibility issues on web pages. The following video provides a nice introduction to it:
 
 {{EmbedYouTube("7mqqgIxX_NU")}}
-
-> **Callout:**
->
-> #### Looking to become a front-end web developer?
->
-> We have put together a course that includes all the essential information you need to
-> work towards your goal.
->
-> [**Get started**](/en-US/docs/Learn/Front-end_web_developer)
 
 ## Prerequisites
 

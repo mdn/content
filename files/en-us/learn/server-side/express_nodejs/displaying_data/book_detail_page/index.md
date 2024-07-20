@@ -1,13 +1,9 @@
 ---
 title: Book detail page
 slug: Learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_page
-tags:
-  - Express
-  - Node
-  - displaying data
-  - part 5
-  - server-side
+page-type: learn-module-chapter
 ---
+
 The _Book detail page_ needs to display the information for a specific `Book` (identified using its automatically generated `_id` field value), along with information about each associated copy in the library (`BookInstance`). Wherever we display an author, genre, or book instance, these should be linked to the associated detail page for that item.
 
 ## Controller
@@ -16,43 +12,35 @@ Open **/controllers/bookController.js**. Find the exported `book_detail()` contr
 
 ```js
 // Display detail page for a specific book.
-exports.book_detail = (req, res, next) => {
-  async.parallel(
-    {
-      book(callback) {
-        Book.findById(req.params.id)
-          .populate("author")
-          .populate("genre")
-          .exec(callback);
-      },
-      book_instance(callback) {
-        BookInstance.find({ book: req.params.id }).exec(callback);
-      },
-    },
-    (err, results) => {
-      if (err) {
-        return next(err);
-      }
-      if (results.book == null) {
-        // No results.
-        const err = new Error("Book not found");
-        err.status = 404;
-        return next(err);
-      }
-      // Successful, so render.
-      res.render("book_detail", {
-        title: results.book.title,
-        book: results.book,
-        book_instances: results.book_instance,
-      });
-    }
-  );
-};
+exports.book_detail = asyncHandler(async (req, res, next) => {
+  // Get details of books, book instances for specific book
+  const [book, bookInstances] = await Promise.all([
+    Book.findById(req.params.id).populate("author").populate("genre").exec(),
+    BookInstance.find({ book: req.params.id }).exec(),
+  ]);
+
+  if (book === null) {
+    // No results.
+    const err = new Error("Book not found");
+    err.status = 404;
+    return next(err);
+  }
+
+  res.render("book_detail", {
+    title: book.title,
+    book: book,
+    book_instances: bookInstances,
+  });
+});
 ```
 
-> **Note:** We don't need to require `async` and `BookInstance` in this step, as we already imported those modules when we implemented the home page controller.
+> **Note:** We don't need to require any additional modules in this step, as we already imported the dependencies when we implemented the home page controller.
 
-The method uses `async.parallel()` to find the `Book` and its associated copies (`BookInstances`) in parallel. The approach is exactly the same as described for the [Genre detail page](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page). Since the key 'title' is used to give name to the webpage (as defined in the header in 'layout.pug'), this time we are passing `results.book.title` while rendering the webpage.
+The approach is exactly the same as described for the [Genre detail page](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page).
+The route controller function uses `Promise.all()` to query the specified `Book` and its associated copies (`BookInstance`) in parallel.
+If no matching book is found an Error object is returned with a "404: Not Found" error.
+If the book is found, then the retrieved database information is rendered using the "book_detail" template.
+Since the key 'title' is used to give name to the webpage (as defined in the header in 'layout.pug'), this time we are passing `results.book.title` while rendering the webpage.
 
 ## View
 
@@ -64,18 +52,18 @@ extends layout
 block content
   h1 Title: #{book.title}
 
-  p #[strong Author:]
+  p #[strong Author: ]
     a(href=book.author.url) #{book.author.name}
   p #[strong Summary:] #{book.summary}
   p #[strong ISBN:] #{book.isbn}
-  p #[strong Genre:]
+  p #[strong Genre: ]
     each val, index in book.genre
       a(href=val.url) #{val.name}
       if index < book.genre.length - 1
-        |,
+        |,&nbsp;
 
   div(style='margin-left:20px;margin-top:20px')
-    h4 Copies
+    h2(style='font-size: 1.5rem;') Copies
 
     each val in book_instances
       hr
@@ -88,7 +76,7 @@ block content
       p #[strong Imprint:] #{val.imprint}
       if val.status!='Available'
         p #[strong Due back:] #{val.due_back}
-      p #[strong Id:]
+      p #[strong Id: ]
         a(href=val.url) #{val._id}
 
     else
@@ -97,14 +85,14 @@ block content
 
 Almost everything in this template has been demonstrated in previous sections.
 
-> **Note:** The list of genres associated with the book is implemented in the template as below. This adds a comma after every genre associated with the book except for the last one.
+> **Note:** The list of genres associated with the book is implemented in the template as below. This adds a comma and a non breaking space after every genre associated with the book except for the last one.
 >
-> ```plain
->   p #[strong Genre:]
+> ```pug
+>   p #[strong Genre: ]
 >     each val, index in book.genre
 >       a(href=val.url) #{val.name}
 >       if index < book.genre.length - 1
->         |,
+>         |,&nbsp;
 > ```
 
 ## What does it look like?

@@ -1,14 +1,10 @@
 ---
 title: Retry-After
 slug: Web/HTTP/Headers/Retry-After
-tags:
-  - HTTP
-  - Reference
-  - Response
-  - Response Header
-  - header
+page-type: http-header
 browser-compat: http.headers.Retry-After
 ---
+
 {{HTTPSidebar}}
 
 The **`Retry-After`** response HTTP header indicates how long
@@ -38,7 +34,7 @@ this header is used:
 
 ## Syntax
 
-```
+```http
 Retry-After: <http-date>
 Retry-After: <delay-seconds>
 ```
@@ -62,7 +58,7 @@ inconsistent. However, some crawlers and spiders, like the Googlebot, honor the
 {{HTTPStatus(503)}} (Service Unavailable) response, so that search engines will keep
 indexing your site when the downtime is over.
 
-```
+```http
 Retry-After: Wed, 21 Oct 2015 07:28:00 GMT
 Retry-After: 120
 ```

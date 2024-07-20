@@ -1,22 +1,9 @@
 ---
 title: Tools and testing
 slug: Learn/Tools_and_testing
-tags:
-  - Accessibility
-  - Automation
-  - Beginner
-  - CSS
-  - CodingScripting
-  - HTML
-  - JavaScript
-  - Landing
-  - Learn
-  - Testing
-  - Tools
-  - Topic
-  - cross browser
-  - user testing
+page-type: learn-topic
 ---
+
 {{LearnSidebar}}
 
 Once you've started to become comfortable programming with core web technologies (like HTML, CSS, and JavaScript), and you start to get more experience, read more resources, and learn more tips and tricks, you'll start to come across all kind of tools, from JavaScript frameworks, to testing and automation tools, and more besides. As your web projects become larger and more complex, you'll want to start taking advantage of some of these tools, working out a reliable toolchain to give your development process superpowers.
@@ -26,15 +13,6 @@ On top of that, we still need to keep cross-browser support in the forefront of 
 Working out what tools you should be using can be a difficult process, so we have written this set of articles to inform you of what types of tool are available, what they can do for you, and how to make use of the current industry favorites.
 
 > **Note:** We have referenced a number of tools in this topic, not because we endorse them or think they are the best, but because we know they work and have good industry support. In most cases there are other tools available, old ones will go out of fashion, and new ones will no doubt appear.
-
-> **Callout:**
->
-> #### Looking to become a front-end web developer?
->
-> We have put together a course that includes all the essential information you need to
-> work towards your goal.
->
-> [**Get started**](/en-US/docs/Learn/Front-end_web_developer)
 
 ## Prerequisites
 

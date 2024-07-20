@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Column and row span</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 15px;
+        width: max-content;
+        font-family: "Arial", sans-serif;
+        font-size: 14px;
+        letter-spacing: 0.05em;
+        color: #15141a;
+        background: #ffffff;
+      }
+
+      table {
+        border-collapse: collapse;
+        border: 2px solid rgb(140, 140, 140);
+      }
+
+      caption {
+        padding-bottom: 10px;
+        font-weight: bold;
+      }
+
+      tbody {
+        background-color: #e4f0f5;
+      }
+
+      td {
+        box-sizing: border-box;
+        isolation: isolate;
+        position: relative;
+        border: 1px solid rgb(160 160 160);
+        width: 130px;
+        height: 65px;
+        text-align: center;
+        vertical-align: middle;
+        color: #ffffff;
+      }
+
+      td .separator {
+        z-index: -2;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        left: 0;
+        border: 1px dashed rgb(160 160 160 / 0.3);
+      }
+
+      tr:first-of-type td:nth-child(2) .separator {
+        top: 0;
+        right: auto;
+        bottom: 0;
+        left: 50%;
+      }
+
+      tr:first-of-type td::before,
+      .cell::before {
+        content: "";
+        z-index: -1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        width: 26px;
+        aspect-ratio: 1 / 1;
+        background-color: #2c5e77;
+      }
+
+      tr:last-of-type td::before {
+        content: "";
+        z-index: -1;
+        position: absolute;
+        inset: 0;
+        background: repeating-linear-gradient(
+          45deg,
+          #64696b,
+          #64696b 10px,
+          #4a4d4e 10px,
+          #4a4d4e 20px
+        );
+      }
+
+      tr:first-of-type td::after {
+        content: "⟵ rowspan 2 ⟶";
+        position: absolute;
+        left: 40%;
+        rotate: -90deg;
+        width: 100%;
+        font-weight: bold;
+        text-align: center;
+        color: #15141a;
+      }
+
+      tr:first-of-type td:nth-child(2):after {
+        content: "⟵ colspan 2 ⟶";
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        rotate: unset;
+      }
+
+      .cells {
+        display: flex;
+        gap: 15px;
+        margin-top: 15px;
+        margin-left: 15px;
+      }
+
+      .cell {
+        box-sizing: border-box;
+        isolation: isolate;
+        position: relative;
+        border: 1px solid rgb(160, 160, 160);
+        display: grid;
+        place-items: center;
+        width: 130px;
+        height: 65px;
+        text-align: center;
+        color: #ffffff;
+        background-color: #e4f0f5;
+      }
+
+      .cell::after {
+        content: "⇡";
+        position: absolute;
+        top: 0;
+        left: 86%;
+        transform: translateY(-56%);
+        rotate: 30deg;
+        font-weight: bold;
+        font-size: 30px;
+        color: #15141a;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <caption>
+        Illustration demonstrating column and row spanning of table cells
+      </caption>
+      <tr>
+        <td rowspan="2"><span class="separator"></span>1</td>
+        <td colspan="2"><span class="separator"></span>2</td>
+        <td rowspan="2"><span class="separator"></span>3</td>
+        <td rowspan="2"><span class="separator"></span>4</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+    <div class="cells">
+      <div class="cell">5</div>
+      <div class="cell">6</div>
+    </div>
+  </body>
+</html>

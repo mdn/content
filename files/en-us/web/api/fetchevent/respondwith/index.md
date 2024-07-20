@@ -1,19 +1,12 @@
 ---
-title: FetchEvent.respondWith()
+title: "FetchEvent: respondWith() method"
+short-title: respondWith()
 slug: Web/API/FetchEvent/respondWith
 page-type: web-api-instance-method
-tags:
-  - API
-  - FetchEvent
-  - Method
-  - Offline
-  - Reference
-  - Service Workers
-  - Workers
-  - respondWith
 browser-compat: api.FetchEvent.respondWith
 ---
-{{APIRef("Service Workers API")}}
+
+{{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
 
 The **`respondWith()`** method of
 {{domxref("FetchEvent")}} prevents the browser's default fetch handling, and
@@ -23,15 +16,15 @@ In most cases you can provide any response that the receiver understands. For ex
 if an {{HTMLElement('img')}} initiates the request, the response body needs to be
 image data. For security reasons, there are a few global rules:
 
-- You can only return {{domxref("Response")}} objects of {{domxref("Response.type",
-  "type")}} "`opaque`" if the {{domxref("fetchEvent.request")}} object's
+- You can only return {{domxref("Response")}} objects of {{domxref("Response.type", "type")}}
+  "`opaque`" if the {{domxref("fetchEvent.request")}} object's
   {{domxref("request.mode", "mode")}} is "`no-cors`". This prevents the
   leaking of private data.
-- You can only return {{domxref("Response")}} objects of {{domxref("Response.type",
-  "type")}} "`opaqueredirect`" if the {{domxref("fetchEvent.request")}}
+- You can only return {{domxref("Response")}} objects of {{domxref("Response.type", "type")}}
+  "`opaqueredirect`" if the {{domxref("fetchEvent.request")}}
   object's {{domxref("request.mode", "mode")}} is "`manual`".
-- You cannot return {{domxref("Response")}} objects of {{domxref("Response.type",
-  "type")}} "`cors`" if the {{domxref("fetchEvent.request")}} object's
+- You cannot return {{domxref("Response")}} objects of {{domxref("Response.type", "type")}}
+  "`cors`" if the {{domxref("fetchEvent.request")}} object's
   {{domxref("request.mode", "mode")}} is "`same-origin`".
 
 ### Specifying the final URL of a resource
@@ -50,7 +43,7 @@ This means, for example, if a service worker intercepts a stylesheet or worker s
 then the provided {{domxref("Response.url")}} will be used to resolve any relative
 {{cssxref("@import")}} or
 {{domxref("WorkerGlobalScope.importScripts()","importScripts()")}} subresource loads
-({{bug(1222008)}}).
+([Firefox bug 1222008](https://bugzil.la/1222008)).
 
 For most types of network request this change has no impact because you can't observe
 the final URL. There are a few, though, where it does matter:
@@ -72,7 +65,7 @@ resulting {{domxref("Window.location")}}. This means sites can still provide an
 
 ## Syntax
 
-```js
+```js-nolint
 respondWith(response)
 ```
 
@@ -80,7 +73,7 @@ respondWith(response)
 
 - `response`
   - : A {{domxref("Response")}} or a {{jsxref("Promise")}} that resolves to a
-`Response`. Otherwise, a network error is returned to Fetch.
+    `Response`. Otherwise, a network error is returned to Fetch.
 
 ### Return value
 
@@ -103,16 +96,18 @@ This fetch event tries to return a response from the cache API, falling back to 
 network otherwise.
 
 ```js
-addEventListener('fetch', (event) => {
+addEventListener("fetch", (event) => {
   // Prevent the default, and handle the request ourselves.
-  event.respondWith((async () => {
-    // Try to get the response from a cache.
-    const cachedResponse = await caches.match(event.request);
-    // Return it if we found one.
-    if (cachedResponse) return cachedResponse;
-    // If we didn't find a match in the cache, use the network.
-    return fetch(event.request);
-  })());
+  event.respondWith(
+    (async () => {
+      // Try to get the response from a cache.
+      const cachedResponse = await caches.match(event.request);
+      // Return it if we found one.
+      if (cachedResponse) return cachedResponse;
+      // If we didn't find a match in the cache, use the network.
+      return fetch(event.request);
+    })(),
+  );
 });
 ```
 
@@ -133,6 +128,4 @@ addEventListener('fetch', (event) => {
 ## See also
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise")}}
 - [Fetch API](/en-US/docs/Web/API/Fetch_API)

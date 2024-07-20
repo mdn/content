@@ -1,23 +1,16 @@
 ---
-title: XPathResult.resultType
+title: "XPathResult: resultType property"
+short-title: resultType
 slug: Web/API/XPathResult/resultType
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM XPath API
-  - Property
-  - Reference
-  - XPath
-  - XPathResult
 browser-compat: api.XPathResult.resultType
 ---
-{{APIRef("DOM XPath")}}
+
+{{APIRef("DOM XPath")}} {{AvailableInWorkers}}
 
 The read-only **`resultType`** property of the
 {{domxref("XPathResult")}} interface represents the type of the result, as defined by
 the type constants.
-
-{{AvailableInWorkers}}
 
 ## Value
 
@@ -135,7 +128,13 @@ The following example shows the use of the `resultType` property.
 
 ```js
 const xpath = "//div";
-const result = document.evaluate(xpath, document, null, XPathResult.ANY_TYPE, null);
+const result = document.evaluate(
+  xpath,
+  document,
+  null,
+  XPathResult.ANY_TYPE,
+  null,
+);
 document.querySelector("output").textContent =
   result.resultType >= XPathResult.UNORDERED_NODE_ITERATOR_TYPE &&
   result.resultType <= XPathResult.FIRST_ORDERED_NODE_TYPE;

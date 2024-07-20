@@ -1,16 +1,11 @@
 ---
-title: SubtleCrypto.verify()
+title: "SubtleCrypto: verify() method"
+short-title: verify()
 slug: Web/API/SubtleCrypto/verify
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - SubtleCrypto
-  - Web Crypto API
-  - verify
 browser-compat: api.SubtleCrypto.verify
 ---
+
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
 The **`verify()`** method of the {{domxref("SubtleCrypto")}}
@@ -23,7 +18,7 @@ indicating whether the signature is valid.
 
 ## Syntax
 
-```js
+```js-nolint
 verify(algorithm, key, signature, data)
 ```
 
@@ -33,7 +28,7 @@ verify(algorithm, key, signature, data)
   - : A string or object defining the algorithm to use, and for some algorithm choices, some extra parameters.
     The values given for the extra parameters must match those passed into the corresponding {{domxref("SubtleCrypto.sign()", "sign()")}} call.
     - To use [RSASSA-PKCS1-v1_5](/en-US/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5),
-    pass the string `"RSASSA-PKCS1-v1_5"` or an object of the form `{ "name": "RSASSA-PKCS1-v1_5" }`.
+      pass the string `"RSASSA-PKCS1-v1_5"` or an object of the form `{ "name": "RSASSA-PKCS1-v1_5" }`.
     - To use [RSA-PSS](/en-US/docs/Web/API/SubtleCrypto/sign#rsa-pss), pass an {{domxref("RsaPssParams")}} object.
     - To use [ECDSA](/en-US/docs/Web/API/SubtleCrypto/sign#ecdsa), pass an {{domxref("EcdsaParams")}} object.
     - To use [HMAC](/en-US/docs/Web/API/SubtleCrypto/sign#hmac), pass the string `"HMAC"` or an object of the form `{ "name": "HMAC" }`.
@@ -48,8 +43,8 @@ verify(algorithm, key, signature, data)
 ### Return value
 
 A {{jsxref("Promise")}} that fulfills with a
-  boolean value: `true` if the signature is valid, `false`
-  otherwise.
+boolean value: `true` if the signature is valid, `false`
+otherwise.
 
 ### Exceptions
 
@@ -73,7 +68,7 @@ method.
 ### RSASSA-PKCS1-v1_5
 
 This code uses a public key to verify a signature.
-[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/rsassa-pkcs1.js)
+[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/sign-verify/rsassa-pkcs1.js)
 
 ```js
 /*
@@ -93,7 +88,9 @@ Fetch the encoded message-to-sign and verify it against the stored signature.
 * Otherwise set the "invalid" class.
 */
 async function verifyMessage(publicKey) {
-  const signatureValue = document.querySelector(".rsassa-pkcs1 .signature-value");
+  const signatureValue = document.querySelector(
+    ".rsassa-pkcs1 .signature-value",
+  );
   signatureValue.classList.remove("valid", "invalid");
 
   let encoded = getMessageEncoding();
@@ -101,7 +98,7 @@ async function verifyMessage(publicKey) {
     "RSASSA-PKCS1-v1_5",
     publicKey,
     signature,
-    encoded
+    encoded,
   );
 
   signatureValue.classList.add(result ? "valid" : "invalid");
@@ -111,7 +108,7 @@ async function verifyMessage(publicKey) {
 ### RSA-PSS
 
 This code uses a public key to verify a signature.
-[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/rsa-pss.js)
+[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/sign-verify/rsa-pss.js)
 
 ```js
 /*
@@ -142,7 +139,7 @@ async function verifyMessage(publicKey) {
     },
     publicKey,
     signature,
-    encoded
+    encoded,
   );
 
   signatureValue.classList.add(result ? "valid" : "invalid");
@@ -152,7 +149,7 @@ async function verifyMessage(publicKey) {
 ### ECDSA
 
 This code uses a public key to verify a signature.
-[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/ecdsa.js)
+[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/sign-verify/ecdsa.js)
 
 ```js
 /*
@@ -179,11 +176,11 @@ async function verifyMessage(publicKey) {
   let result = await window.crypto.subtle.verify(
     {
       name: "ECDSA",
-      hash: {name: "SHA-384"},
+      hash: { name: "SHA-384" },
     },
     publicKey,
     signature,
-    encoded
+    encoded,
   );
 
   signatureValue.classList.add(result ? "valid" : "invalid");
@@ -193,7 +190,7 @@ async function verifyMessage(publicKey) {
 ### HMAC
 
 This code uses a secret key to verify a signature.
-[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/master/web-crypto/sign-verify/hmac.js)
+[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/sign-verify/hmac.js)
 
 ```js
 /*
@@ -201,10 +198,10 @@ Fetch the contents of the "message" textbox, and encode it
 in a form we can use for sign operation.
 */
 function getMessageEncoding() {
-   const messageBox = document.querySelector(".hmac #message");
-   let message = messageBox.value;
-   let enc = new TextEncoder();
-   return enc.encode(message);
+  const messageBox = document.querySelector(".hmac #message");
+  let message = messageBox.value;
+  let enc = new TextEncoder();
+  return enc.encode(message);
 }
 
 /*
@@ -213,18 +210,18 @@ Fetch the encoded message-to-sign and verify it against the stored signature.
 * Otherwise set the "invalid" class.
 */
 async function verifyMessage(key) {
-   const signatureValue = document.querySelector(".hmac .signature-value");
-   signatureValue.classList.remove("valid", "invalid");
+  const signatureValue = document.querySelector(".hmac .signature-value");
+  signatureValue.classList.remove("valid", "invalid");
 
-   let encoded = getMessageEncoding();
-   let result = await window.crypto.subtle.verify(
-     "HMAC",
-     key,
-     signature,
-     encoded
-   );
+  let encoded = getMessageEncoding();
+  let result = await window.crypto.subtle.verify(
+    "HMAC",
+    key,
+    signature,
+    encoded,
+  );
 
-   signatureValue.classList.add(result ? "valid" : "invalid");
+  signatureValue.classList.add(result ? "valid" : "invalid");
 }
 ```
 

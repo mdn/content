@@ -1,18 +1,12 @@
 ---
-title: Notification.body
+title: "Notification: body property"
+short-title: body
 slug: Web/API/Notification/body
 page-type: web-api-instance-property
-tags:
-  - API
-  - BODY
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
 browser-compat: api.Notification.body
 ---
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+
+{{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
 
 The **`body`** read-only property of the
 {{domxref("Notification")}} interface indicates the body string of the notification, as
@@ -28,9 +22,9 @@ A string.
 ```js
 function spawnNotification(theBody, theIcon, theTitle) {
   const options = {
-      body: theBody,
-      icon: theIcon
-  }
+    body: theBody,
+    icon: theIcon,
+  };
   const n = new Notification(theTitle, options);
 
   console.log(n.body);

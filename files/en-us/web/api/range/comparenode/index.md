@@ -1,19 +1,14 @@
 ---
-title: Range.compareNode()
+title: "Range: compareNode() method"
+short-title: compareNode()
 slug: Web/API/Range/compareNode
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Method
-  - Non-standard
-  - Deprecated
-  - Range
-  - Reference
-  - compareNode
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Range.compareNode
 ---
+
 {{APIRef("DOM")}}{{deprecated_header}}{{Non-standard_Header}}
 
 The **`Range.compareNode()`** returns a constant indicating the
@@ -43,19 +38,17 @@ function rangeCompareNode(range, node) {
   const nodeRange = node.ownerDocument.createRange();
   try {
     nodeRange.selectNode(node);
-  }
-  catch (e) {
+  } catch (e) {
     nodeRange.selectNodeContents(node);
   }
-  const nodeIsBefore = range.compareBoundaryPoints(Range.START_TO_START, nodeRange) === 1;
-  const nodeIsAfter = range.compareBoundaryPoints(Range.END_TO_END, nodeRange) === -1;
+  const nodeIsBefore =
+    range.compareBoundaryPoints(Range.START_TO_START, nodeRange) === 1;
+  const nodeIsAfter =
+    range.compareBoundaryPoints(Range.END_TO_END, nodeRange) === -1;
 
-  if (nodeIsBefore && !nodeIsAfter)
-    return 0;
-  if (!nodeIsBefore && nodeIsAfter)
-    return 1;
-  if (nodeIsBefore && nodeIsAfter)
-    return 2;
+  if (nodeIsBefore && !nodeIsAfter) return 0;
+  if (!nodeIsBefore && nodeIsAfter) return 1;
+  if (nodeIsBefore && nodeIsAfter) return 2;
 
   return 3;
 }
@@ -63,7 +56,7 @@ function rangeCompareNode(range, node) {
 
 ## Syntax
 
-```js
+```js-nolint
 compareNode(referenceNode)
 ```
 

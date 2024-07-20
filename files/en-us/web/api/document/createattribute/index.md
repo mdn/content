@@ -1,14 +1,11 @@
 ---
-title: Document.createAttribute()
+title: "Document: createAttribute() method"
+short-title: createAttribute()
 slug: Web/API/Document/createAttribute
 page-type: web-api-instance-method
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
 browser-compat: api.Document.createAttribute
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Document.createAttribute()`** method creates a new
@@ -20,13 +17,14 @@ added to a particular element in this manner.
 
 ## Syntax
 
-```js
+```js-nolint
 createAttribute(name)
 ```
 
 ### Parameters
 
-- `name` is a string containing the name of the attribute.
+- `name`
+  - : A string containing the name of the attribute.
 
 ### Return value
 

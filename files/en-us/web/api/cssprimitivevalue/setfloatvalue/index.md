@@ -1,16 +1,13 @@
 ---
-title: CSSPrimitiveValue.setFloatValue()
+title: "CSSPrimitiveValue: setFloatValue() method"
+short-title: setFloatValue()
 slug: Web/API/CSSPrimitiveValue/setFloatValue
 page-type: web-api-instance-method
-tags:
-  - API
-  - CSSPrimitiveValue
-  - Method
-  - NeedsExample
-  - setFloatValue
-  - Deprecated
+status:
+  - deprecated
 browser-compat: api.CSSPrimitiveValue.setFloatValue
 ---
+
 {{APIRef("CSSOM")}}{{deprecated_header}}
 
 The **`setFloatValue()`** method of the
@@ -28,7 +25,7 @@ will be unchanged and a {{domxref("DOMException")}} will be raised.
 
 ## Syntax
 
-```js
+```js-nolint
 setFloatValue(unitType, floatValue)
 ```
 
@@ -39,26 +36,26 @@ setFloatValue(unitType, floatValue)
   - : An `unsigned short` representing the code for the unit type, in which the
     value should be returned. Valid values are:
 
-    | Constant         | Description                                                                                                                        |
-    | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-    | `CSS_CM`         | The value is a {{cssxref("&lt;length&gt;")}} in centimeters.                                                            |
-    | `CSS_DEG`        | The value is an {{cssxref("&lt;angle&gt;")}} in degrees.                                                                   |
-    | `CSS_DIMENSION`  | The value is a {{cssxref("&lt;number&gt;")}} with an unknown dimension.                                                 |
-    | `CSS_EMS`        | The value is a {{cssxref("&lt;length&gt;")}} in em units.                                                               |
-    | `CSS_EXS`        | The value is a {{cssxref("&lt;length&gt;")}} in ex units.                                                               |
-    | `CSS_GRAD`       | The value is an {{cssxref("&lt;angle&gt;")}} in grads.                                                                     |
+    | Constant         | Description                                                                                                            |
+    | ---------------- | ---------------------------------------------------------------------------------------------------------------------- |
+    | `CSS_CM`         | The value is a {{cssxref("&lt;length&gt;")}} in centimeters.                                                           |
+    | `CSS_DEG`        | The value is an {{cssxref("&lt;angle&gt;")}} in degrees.                                                               |
+    | `CSS_DIMENSION`  | The value is a {{cssxref("&lt;number&gt;")}} with an unknown dimension.                                                |
+    | `CSS_EMS`        | The value is a {{cssxref("&lt;length&gt;")}} in em units.                                                              |
+    | `CSS_EXS`        | The value is a {{cssxref("&lt;length&gt;")}} in ex units.                                                              |
+    | `CSS_GRAD`       | The value is an {{cssxref("&lt;angle&gt;")}} in grads.                                                                 |
     | `CSS_HZ`         | The value is a {{cssxref("&lt;frequency&gt;")}} in Hertz. The value can be obtained by using the getFloatValue method. |
-    | `CSS_IN`         | The value is a {{cssxref("&lt;length&gt;")}} in inches.                                                                 |
+    | `CSS_IN`         | The value is a {{cssxref("&lt;length&gt;")}} in inches.                                                                |
     | `CSS_KHZ`        | The value is a {{cssxref("&lt;frequency&gt;")}} in Kilohertz.                                                          |
-    | `CSS_MM`         | The value is a {{cssxref("&lt;length&gt;")}} in millimeters.                                                            |
-    | `CSS_MS`         | The value is a {{cssxref("&lt;time&gt;")}} in milliseconds.                                                               |
-    | `CSS_NUMBER`     | The value is a simple {{cssxref("&lt;number&gt;")}}.                                                                    |
-    | `CSS_PC`         | The value is a {{cssxref("&lt;length&gt;")}} in picas.                                                                  |
-    | `CSS_PERCENTAGE` | The value is a {{cssxref("&lt;percentage&gt;")}}.                                                                       |
-    | `CSS_PT`         | The value is a {{cssxref("&lt;length&gt;")}} in points.                                                                 |
-    | `CSS_PX`         | The value is a {{cssxref("&lt;length&gt;")}} in pixels.                                                                 |
-    | `CSS_RAD`        | The value is an {{cssxref("&lt;angle&gt;")}} in radians.                                                                   |
-    | `CSS_S`          | The value is a {{cssxref("&lt;time&gt;")}} in seconds.                                                                    |
+    | `CSS_MM`         | The value is a {{cssxref("&lt;length&gt;")}} in millimeters.                                                           |
+    | `CSS_MS`         | The value is a {{cssxref("&lt;time&gt;")}} in milliseconds.                                                            |
+    | `CSS_NUMBER`     | The value is a simple {{cssxref("&lt;number&gt;")}}.                                                                   |
+    | `CSS_PC`         | The value is a {{cssxref("&lt;length&gt;")}} in picas.                                                                 |
+    | `CSS_PERCENTAGE` | The value is a {{cssxref("&lt;percentage&gt;")}}.                                                                      |
+    | `CSS_PT`         | The value is a {{cssxref("&lt;length&gt;")}} in points.                                                                |
+    | `CSS_PX`         | The value is a {{cssxref("&lt;length&gt;")}} in pixels.                                                                |
+    | `CSS_RAD`        | The value is an {{cssxref("&lt;angle&gt;")}} in radians.                                                               |
+    | `CSS_S`          | The value is a {{cssxref("&lt;time&gt;")}} in seconds.                                                                 |
 
 - `floatValue`
   - : A `float` representing the new float value.

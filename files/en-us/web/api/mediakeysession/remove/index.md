@@ -1,25 +1,18 @@
 ---
-title: MediaKeySession.remove()
+title: "MediaKeySession: remove() method"
+short-title: remove()
 slug: Web/API/MediaKeySession/remove
 page-type: web-api-instance-method
-tags:
-  - API
-  - EncryptedMediaExtensions
-  - Experimental
-  - MediaKeySession
-  - Method
-  - NeedsExample
-  - Reference
-  - remove
 browser-compat: api.MediaKeySession.remove
 ---
-{{APIRef("EncryptedMediaExtensions")}}
 
-The `MediaKeySession.remove()` method returns a {{jsxref('Promise')}} after removing any session data associated with the current object.
+{{APIRef("Encrypted Media Extensions")}}{{SecureContext_Header}}
+
+The `remove()` method of the {{domxref('MediaKeySession')}} interface returns a {{jsxref('Promise')}} after removing any session data associated with the current object.
 
 ## Syntax
 
-```js
+```js-nolint
 remove()
 ```
 
@@ -29,11 +22,7 @@ None.
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
-
-## Return value
-
-A {{jsxref('Promise')}} that resolves to a boolean indicating whether the load succeeded or failed.
+A {{jsxref('Promise')}} that resolves to {{jsxref("undefined")}}.
 
 ## Specifications
 

@@ -2,28 +2,25 @@
 title: SVGClipPathElement
 slug: Web/API/SVGClipPathElement
 page-type: web-api-interface
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGClipPathElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGClipPathElement`** interface provides access to the properties of {{SVGElement("clipPath")}} elements, as well as methods to manipulate them.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _This interface also inherits properties from its parent, {{domxref("SVGElement")}}._
 
 - {{domxref("SVGClipPathElement.clipPathUnits")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("clipPathUnits")}} attribute of the given {{SVGElement("clipPath")}} element. Takes one of the constants defined in {{domxref("SVGUnitTypes")}}.
+  - : Returns an {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("clipPathUnits")}} attribute of the associated {{SVGElement("clipPath")}} element. Takes one of the constants defined in {{domxref("SVGUnitTypes")}}.
+- {{domxref("SVGClipPathElement.transform")}} {{ReadOnlyInline}}
+  - : Returns an {{domxref("SVGAnimatedTransformList")}} corresponding to the {{SVGAttr("transform")}} attribute of the associated {{SVGElement("clipPath")}} element.
 
-## Methods
+## Instance methods
 
 _This interface doesn't implement any specific methods, but inherits methods from its parent, {{domxref("SVGElement")}}._
 

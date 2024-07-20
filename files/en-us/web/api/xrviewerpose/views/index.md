@@ -1,26 +1,12 @@
 ---
-title: XRViewerPose.views
+title: "XRViewerPose: views property"
+short-title: views
 slug: Web/API/XRViewerPose/views
 page-type: web-api-instance-property
-tags:
-  - 3D
-  - API
-  - AR
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR Device API
-  - XR
-  - XRViewerPose
-  - augmented
-  - pose
-  - views
 browser-compat: api.XRViewerPose.views
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The read-only {{domxref("XRViewerPose")}} property **`views`**
 returns an array which contains every {{domxref("XRView")}} which must be rendered in

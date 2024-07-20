@@ -1,15 +1,11 @@
 ---
-title: Element.clientHeight
+title: "Element: clientHeight property"
+short-title: clientHeight
 slug: Web/API/Element/clientHeight
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - NeedsMarkupWork
-  - Property
-  - Reference
 browser-compat: api.Element.clientHeight
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.clientHeight`** read-only property is zero for
@@ -33,16 +29,11 @@ A number.
 
 ## Examples
 
-![](dimensions-client.png)
+![How clientHeight property determines the inner height of an element considering the height and padding](dimensions-client.png)
 
 ## Specifications
 
 {{Specifications}}
-
-### Notes
-
-`clientHeight` is a property introduced in the Internet Explorer object
-model.
 
 ## Browser compatibility
 

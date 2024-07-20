@@ -1,17 +1,12 @@
 ---
-title: IdleDeadline.timeRemaining()
+title: "IdleDeadline: timeRemaining() method"
+short-title: timeRemaining()
 slug: Web/API/IdleDeadline/timeRemaining
 page-type: web-api-instance-method
-tags:
-  - API
-  - Background Tasks API
-  - IdleDeadline
-  - Method
-  - Reference
-  - timeRemaining
 browser-compat: api.IdleDeadline.timeRemaining
 ---
-{{APIRef("Background Tasks")}}{{SeeCompatTable}}
+
+{{APIRef("Background Tasks")}}
 
 The **`timeRemaining()`** method
 on the {{domxref("IdleDeadline")}} interface returns the estimated number of
@@ -27,7 +22,7 @@ should return control to the user agent's event loop.
 
 ## Syntax
 
-```js
+```js-nolint
 timeRemaining()
 ```
 
@@ -41,8 +36,8 @@ A {{domxref("DOMHighResTimeStamp")}} value (which is a floating-point number)
 representing the number of milliseconds the user agent estimates are left in the current
 idle period. The value is ideally accurate to within about 5 microseconds.
 
-If the {{domxref("IdleDeadline")}} object's {{domxref("IdleDeadline.didTimeout",
-  "didTimeout")}} property is true, this method returns zero.
+If the {{domxref("IdleDeadline")}} object's {{domxref("IdleDeadline.didTimeout", "didTimeout")}}
+property is true, this method returns zero.
 
 ## Examples
 

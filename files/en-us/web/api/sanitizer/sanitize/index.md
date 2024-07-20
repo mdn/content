@@ -1,14 +1,14 @@
 ---
-title: Sanitizer.sanitize()
+title: "Sanitizer: sanitize() method"
+short-title: sanitize()
 slug: Web/API/Sanitizer/sanitize
 page-type: web-api-instance-method
-tags:
-  - HTML Sanitizer API
-  - Method
-  - sanitize
+status:
+  - deprecated
 browser-compat: api.Sanitizer.sanitize
 ---
-{{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("HTML Sanitizer API")}}
+
+{{APIRef("HTML Sanitizer API")}}{{SecureContext_Header}}{{deprecated_header}}
 
 The **`sanitize()`** method of the {{domxref("Sanitizer")}} interface is used to sanitize a tree of DOM nodes, removing any unwanted elements or attributes.
 
@@ -18,12 +18,12 @@ For example when sanitizing a `Document` instance in a frame.
 The default `Sanitizer()` configuration strips out XSS-relevant input by default, including {{HTMLElement("script")}} tags, custom elements, and comments.
 The sanitizer configuration may be customized using {{domxref("Sanitizer.Sanitizer","Sanitizer()")}} constructor options.
 
-> **Note:** To sanitize strings, instead use {{domxref("Element.setHTML()")}} or {{domxref("Sanitizer.sanitizeFor()")}}.
+> **Note:** To sanitize strings, instead use {{domxref("Element.setHTML()")}}.
 > See {{domxref('HTML Sanitizer API')}} for more information.
 
 ## Syntax
 
-```js
+```js-nolint
 sanitize(input)
 ```
 
@@ -45,10 +45,10 @@ None.
 To sanitize data from an iframe with id `userFrame`:
 
 ```js
-const sanitizer = new Sanitizer();  // Default sanitizer;
+const sanitizer = new Sanitizer(); // Default sanitizer;
 
 // Get the frame and its Document object
-const frame_element = document.getElementById("userFrame")
+const frame_element = document.getElementById("userFrame");
 const unsanitized_frame_tree = frame_element.contentWindow.document;
 
 // Sanitize the document tree and update the frame.

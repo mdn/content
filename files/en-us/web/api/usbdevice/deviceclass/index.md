@@ -1,20 +1,14 @@
 ---
-title: USBDevice.deviceClass
+title: "USBDevice: deviceClass property"
+short-title: deviceClass
 slug: Web/API/USBDevice/deviceClass
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - USB
-  - USBDevice
-  - WebUSB
-  - WebUSB API
-  - deviceClass
-  - Experimental
+status:
+  - experimental
 browser-compat: api.USBDevice.deviceClass
 ---
-{{SeeCompatTable}}{{APIRef("WebUSB API")}}
+
+{{SeeCompatTable}}{{APIRef("WebUSB API")}}{{SecureContext_Header}}
 
 The **`deviceClass`** read only property of the
 {{domxref("USBDevice")}} interface one of three properties that identify USB devices for

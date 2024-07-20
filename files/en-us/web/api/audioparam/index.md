@@ -2,17 +2,9 @@
 title: AudioParam
 slug: Web/API/AudioParam
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - AudioParam
-  - Interface
-  - Parameter
-  - Reference
-  - Web Audio API
-  - sound
 browser-compat: api.AudioParam
 ---
+
 {{APIRef("Web Audio API")}}
 
 The Web Audio API's `AudioParam` interface represents an audio-related parameter, usually a parameter of an {{domxref("AudioNode")}} (such as {{ domxref("GainNode.gain") }}).
@@ -27,24 +19,24 @@ There are two `AudioParam` kinds: _a-rate_ and _k-rate_ parameters. Each {{domxr
 
 ### a-rate
 
-An _a-rate_ `AudioParam` takes the current audio parameter value for each [sample frame](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_buffers.3a_frames.2c_samples_and_channels) of the audio signal.
+An _a-rate_ `AudioParam` takes the current audio parameter value for each [sample frame](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_buffers_frames_samples_and_channels) of the audio signal.
 
 ### k-rate
 
 A _k-rate_ `AudioParam` uses the same initial audio parameter value for the whole block processed; that is, 128 sample frames. In other words, the same value applies to every frame in the audio as it's processed by the node.
 
-## Properties
+## Instance properties
 
-- {{domxref("AudioParam.defaultValue")}} {{readonlyInline}}
+- {{domxref("AudioParam.defaultValue")}} {{ReadOnlyInline}}
   - : Represents the initial value of the attribute as defined by the specific {{domxref("AudioNode")}} creating the `AudioParam`.
-- {{domxref("AudioParam.maxValue")}} {{readonlyInline}}
+- {{domxref("AudioParam.maxValue")}} {{ReadOnlyInline}}
   - : Represents the maximum possible value for the parameter's nominal (effective) range.
-- {{domxref("AudioParam.minValue")}} {{readonlyinline}}
+- {{domxref("AudioParam.minValue")}} {{ReadOnlyInline}}
   - : Represents the minimum possible value for the parameter's nominal (effective) range.
 - {{domxref("AudioParam.value")}}
   - : Represents the parameter's current value as of the current time; initially set to the value of {{domxref("AudioParam.defaultValue", "defaultValue")}}.
 
-## Methods
+## Instance methods
 
 - {{domxref("AudioParam.setValueAtTime()")}}
   - : Schedules an instant change to the value of the `AudioParam` at a precise time, as measured against {{domxref("BaseAudioContext/currentTime", "AudioContext.currentTime")}}. The new value is given by the `value` parameter.

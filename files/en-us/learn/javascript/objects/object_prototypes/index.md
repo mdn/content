@@ -1,10 +1,9 @@
 ---
 title: Object prototypes
 slug: Learn/JavaScript/Objects/Object_prototypes
-tags:
-  - JavaScript
-  - Learn
+page-type: learn-module-chapter
 ---
+
 {{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Basics", "Learn/JavaScript/Objects/Object-oriented_programming", "Learn/JavaScript/Objects")}}
 
 Prototypes are the mechanism by which JavaScript objects inherit features from one another. In this article, we explain what a prototype is, how prototype chains work, and how a prototype for an object can be set.
@@ -41,18 +40,18 @@ In the browser's console, try creating an object literal:
 
 ```js
 const myObject = {
-  city: 'Madrid',
+  city: "Madrid",
   greet() {
     console.log(`Greetings from ${this.city}`);
-  }
-}
+  },
+};
 
 myObject.greet(); // Greetings from Madrid
 ```
 
 This is an object with one data property, `city`, and one method, `greet()`. If you type the object's name _followed by a period_ into the console, like `myObject.`, then the console will pop up a list of all the properties available to this object. You'll see that as well as `city` and `greet`, there are lots of other properties!
 
-```
+```plain
 __defineGetter__
 __defineSetter__
 __lookupGetter__
@@ -66,7 +65,7 @@ isPrototypeOf
 propertyIsEnumerable
 toLocaleString
 toString
-toValueOf
+valueOf
 ```
 
 Try accessing one of them:
@@ -81,7 +80,7 @@ What are these extra properties, and where do they come from?
 
 Every object in JavaScript has a built-in property, which is called its **prototype**. The prototype is itself an object, so the prototype will have its own prototype, making what's called a **prototype chain**. The chain ends when we reach a prototype that has `null` for its own prototype.
 
-> **Note:** The property of an object that points to its prototype is **not** called `prototype`. Its name is not standard, but in practice all browsers use {{jsxref("Object/__proto__", "__proto__")}}. The standard way to access an object's prototype is the {{jsxref("Object/getPrototypeOf", "Object.getPrototypeOf()")}} method.
+> **Note:** The property of an object that points to its prototype is **not** called `prototype`. Its name is not standard, but in practice all browsers use [`__proto__`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto). The standard way to access an object's prototype is the {{jsxref("Object/getPrototypeOf", "Object.getPrototypeOf()")}} method.
 
 When you try to access a property of an object: if the property can't be found in the object itself, the prototype is searched for the property. If the property still can't be found, then the prototype's prototype is searched, and so on until either the property is found, or the end of the chain is reached, in which case `undefined` is returned.
 
@@ -121,7 +120,7 @@ This code creates a `Date` object, then walks up the prototype chain, logging th
 
 ![Prototype chain for myDate](mydate-prototype-chain.svg)
 
-In fact, when you call familiar methods, like `myDate2.getMonth()`,
+In fact, when you call familiar methods, like `myDate2.getTime()`,
 you are calling a method that's defined on `Date.prototype`.
 
 ## Shadowing properties
@@ -131,16 +130,16 @@ What happens if you define a property in an object, when a property with the sam
 ```js
 const myDate = new Date(1995, 11, 17);
 
-console.log(myDate.getYear()); // 95
+console.log(myDate.getTime()); // 819129600000
 
-myDate.getYear = function() {
-  console.log('something else!')
+myDate.getTime = function () {
+  console.log("something else!");
 };
 
-myDate.getYear(); // 'something else!'
+myDate.getTime(); // 'something else!'
 ```
 
-This should be predictable, given the description of the prototype chain. When we call `getYear()` the browser first looks in `myDate` for a property with that name, and only checks the prototype if `myDate` does not define it. So when we add `getYear()` to `myDate`, then the version in `myDate` is called.
+This should be predictable, given the description of the prototype chain. When we call `getTime()` the browser first looks in `myDate` for a property with that name, and only checks the prototype if `myDate` does not define it. So when we add `getTime()` to `myDate`, then the version in `myDate` is called.
 
 This is called "shadowing" the property.
 
@@ -157,12 +156,12 @@ Here's an example:
 ```js
 const personPrototype = {
   greet() {
-    console.log('hello!');
-  }
-}
+    console.log("hello!");
+  },
+};
 
 const carl = Object.create(personPrototype);
-carl.greet();  // hello!
+carl.greet(); // hello!
 ```
 
 Here we create an object `personPrototype`, which has a `greet()` method. We then use `Object.create()` to create a new object with `personPrototype` as its prototype. Now we can call `greet()` on the new object, and the prototype provides its implementation.
@@ -177,8 +176,8 @@ So if we set the `prototype` of a constructor, we can ensure that all objects cr
 const personPrototype = {
   greet() {
     console.log(`hello, my name is ${this.name}!`);
-  }
-}
+  },
+};
 
 function Person(name) {
   this.name = name;
@@ -199,7 +198,7 @@ We then put the methods defined in `personPrototype` onto the `Person` function'
 After this code, objects created using `Person()` will get `Person.prototype` as their prototype, which automatically contains the `greet` method.
 
 ```js
-const reuben = new Person('Reuben');
+const reuben = new Person("Reuben");
 reuben.greet(); // hello, my name is Reuben!
 ```
 
@@ -217,10 +216,10 @@ It's common to see this pattern, in which methods are defined on the prototype, 
 Properties that are defined directly in the object, like `name` here, are called **own properties**, and you can check whether a property is an own property using the static {{jsxref("Object/hasOwn", "Object.hasOwn()")}} method:
 
 ```js
-const irma = new Person('Irma');
+const irma = new Person("Irma");
 
-console.log(Object.hasOwn(irma, 'name')); // true
-console.log(Object.hasOwn(irma, 'greet')); // false
+console.log(Object.hasOwn(irma, "name")); // true
+console.log(Object.hasOwn(irma, "greet")); // false
 ```
 
 > **Note:** You can also use the non-static {{jsxref("Object/hasOwnProperty", "Object.hasOwnProperty()")}} method here, but we recommend that you use `Object.hasOwn()` if you can.
@@ -244,13 +243,3 @@ This article has covered JavaScript object prototypes, including how prototype o
 In the next article we'll look at the concepts underlying object-oriented programming.
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Basics", "Learn/JavaScript/Objects/Object-oriented_programming", "Learn/JavaScript/Objects")}}
-
-## In this module
-
-- [Object basics](/en-US/docs/Learn/JavaScript/Objects/Basics)
-- **Object prototypes**
-- [Object-oriented programming concepts](/en-US/docs/Learn/JavaScript/Objects/Object-oriented_programming)
-- [Classes in JavaScript](/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)
-- [Working with JSON data](/en-US/docs/Learn/JavaScript/Objects/JSON)
-- [Object building practice](/en-US/docs/Learn/JavaScript/Objects/Object_building_practice)
-- [Adding features to our bouncing balls demo](/en-US/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)

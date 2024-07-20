@@ -1,17 +1,14 @@
 ---
-title: PresentationRequest()
+title: "PresentationRequest: PresentationRequest() constructor"
+short-title: PresentationRequest()
 slug: Web/API/PresentationRequest/PresentationRequest
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Experimental
-  - Presentation API
-  - PresentationRequest
-  - Reference
+status:
+  - experimental
 browser-compat: api.PresentationRequest.PresentationRequest
 ---
-{{DefaultAPISidebar("Presentation API")}}{{Non-standard_header}}
+
+{{APIRef("Presentation API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`PresentationRequest()`**
 constructor creates a new {{domxref("PresentationRequest")}} object which creates a
@@ -19,7 +16,7 @@ new PresentationRequest.
 
 ## Syntax
 
-```js
+```js-nolint
 new PresentationRequest(url)
 new PresentationRequest(urls)
 ```

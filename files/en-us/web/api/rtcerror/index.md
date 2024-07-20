@@ -2,21 +2,9 @@
 title: RTCError
 slug: Web/API/RTCError
 page-type: web-api-interface
-tags:
-  - API
-  - Audio
-  - Error
-  - Error Handling
-  - Interface
-  - Media
-  - RTCError
-  - Reference
-  - Video
-  - WebRTC
-  - WebRTC API
-  - WebRTC Device API
 browser-compat: api.RTCError
 ---
+
 {{DefaultAPISidebar("WebRTC")}}
 
 The **`RTCError`** interface describes an error which has occurred while handling [WebRTC](/en-US/docs/Web/API/WebRTC_API) operations. It's based upon the standard {{domxref("DOMException")}} interface that describes general DOM errors.
@@ -28,7 +16,7 @@ The **`RTCError`** interface describes an error which has occurred while handlin
 - {{domxref("RTCError.RTCError", "RTCError()")}}
   - : Creates and returns a new `RTCError` object initialized with the different parameters and, optionally, a string to use as the value of the error's {{domxref("DOMException.message", "message")}} property.
 
-## Properties
+## Instance properties
 
 _In addition to the properties defined by the parent interface, {{domxref("DOMException")}}, `RTCError` includes the following properties:_
 
@@ -66,8 +54,8 @@ dataChannel.addEventListener("error", (event) => {
 });
 ```
 
-If the error is an SDP syntax error—indicated by its {{domxref("RTCError.errorDetail",
-  "errorDetail")}} property being `sdp-syntax-error`—, a message string is
+If the error is an SDP syntax error—indicated by its {{domxref("RTCError.errorDetail", "errorDetail")}}
+property being `sdp-syntax-error`—, a message string is
 constructed to present the error message and the line number within the SDP at which the
 error occurred. This message is then displayed using a function called
 `showMyAlertMessage()`, which stands in for whatever output mechanism this
@@ -76,10 +64,9 @@ code might use.
 Any other error is treated as terminal, causing a `terminateMyConnection()`
 function to be called.
 
-The above example uses {{domxref("EventTarget.addEventListener",
-  "addEventListener()")}} to add the handler for `error` events. You can also
-use the `RTCDataChannel` object's {{domxref("RTCDataChannel.error_event",
-  "onerror")}} event handler property, like this:
+The above example uses {{domxref("EventTarget.addEventListener", "addEventListener()")}}
+to add the handler for `error` events. You can also use the `RTCDataChannel` object's
+{{domxref("RTCDataChannel.error_event", "onerror")}} event handler property, like this:
 
 ```js
 dataChannel.onerror = (event) => {

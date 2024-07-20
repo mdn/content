@@ -1,16 +1,12 @@
 ---
-title: URLSearchParams.sort()
+title: "URLSearchParams: sort() method"
+short-title: sort()
 slug: Web/API/URLSearchParams/sort
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - URLSearchParams
-  - sort
 browser-compat: api.URLSearchParams.sort
 ---
-{{APIRef("URL API")}}
+
+{{APIRef("URL API")}} {{AvailableInWorkers}}
 
 The **`URLSearchParams.sort()`** method sorts all key/value
 pairs contained in this object in place and returns `undefined`. The sort
@@ -18,11 +14,9 @@ order is according to unicode code points of the keys. This method uses a stable
 algorithm (i.e. the relative order between key/value pairs with equal keys will be
 preserved).
 
-{{availableinworkers}}
-
 ## Syntax
 
-```js
+```js-nolint
 sort()
 ```
 
@@ -49,7 +43,7 @@ console.log(searchParams.toString());
 
 The result is:
 
-```
+```plain
 a=2&a=1&b=3&c=4
 ```
 

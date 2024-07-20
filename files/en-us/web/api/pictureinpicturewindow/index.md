@@ -2,17 +2,9 @@
 title: PictureInPictureWindow
 slug: Web/API/PictureInPictureWindow
 page-type: web-api-interface
-tags:
-  - API
-  - Advanced
-  - Interface
-  - Picture-in-Picture
-  - Picture-in-Picture API
-  - Reference
-  - Video
-  - pip
 browser-compat: api.PictureInPictureWindow
 ---
+
 {{APIRef("Picture-in-Picture API")}}
 
 The **`PictureInPictureWindow`** interface represents an object able to programmatically obtain the **`width`** and **`height`** and **`resize event`** of the floating video window.
@@ -21,7 +13,7 @@ An object with this interface is obtained using the {{domxref("HTMLVideoElement.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _The `PictureInPictureWindow` interface doesn't inherit any properties._
 
@@ -30,7 +22,7 @@ _The `PictureInPictureWindow` interface doesn't inherit any properties._
 - {{domxref("PictureInPictureWindow.height")}} {{ReadOnlyInline}}
   - : Determines the height of the floating video window.
 
-## Methods
+## Instance methods
 
 _The `PictureInPictureWindow` interface doesn't inherit any methods._
 
@@ -51,7 +43,9 @@ const video = document.querySelector("video");
 
 function printPipWindowDimensions(evt) {
   const pipWindow = evt.target;
-  console.log(`The floating window dimensions are: ${pipWindow.width}x${pipWindow.height}px`);
+  console.log(
+    `The floating window dimensions are: ${pipWindow.width}x${pipWindow.height}px`,
+  );
   // will print:
   // The floating window dimensions are: 640x360px
 }
@@ -73,4 +67,4 @@ button.onclick = () => {
 
 ## See also
 
-- {{DOMxRef("Picture-in-Picture_API")}}
+- {{DOMxRef("Picture-in-Picture_API", "Picture-in-Picture API")}}

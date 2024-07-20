@@ -1,15 +1,11 @@
 ---
-title: Selection.type
+title: "Selection: type property"
+short-title: type
 slug: Web/API/Selection/type
 page-type: web-api-instance-property
-tags:
-  - API
-  - Property
-  - Reference
-  - Selection
-  - Type
 browser-compat: api.Selection.type
 ---
+
 {{APIRef("DOM")}}
 
 The **`type`** read-only property of the
@@ -40,7 +36,7 @@ text, or a range has been selected.
 let selection;
 
 document.onselectionchange = () => {
-  console.log('New selection made');
+  console.log("New selection made");
   selection = document.getSelection();
   console.log(selection.type);
 };

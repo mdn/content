@@ -1,12 +1,9 @@
 ---
 title: Global get
 slug: WebAssembly/Reference/Variables/Global_get
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Variable
+page-type: webassembly-instruction
 ---
+
 {{WebAssemblySidebar}}
 
 The **`global.get`** instruction loads the value of a global variable onto the stack.

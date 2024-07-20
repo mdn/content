@@ -1,19 +1,16 @@
 ---
 title: SVG
 slug: Glossary/SVG
-tags:
-  - Beginner
-  - CodingScripting
-  - Glossary
-  - Graphics
-  - SVG
-  - l10n:priority
+page-type: glossary-definition
 ---
+
+{{GlossarySidebar}}
+
 _Scalable Vector Graphics_ (**SVG**) is a 2D vector image format based on an {{Glossary("XML")}} syntax.
 
 The {{Glossary("W3C")}} began work on SVG in the late 1990s, but SVG only became popular when {{Glossary("Microsoft Internet Explorer", "Internet Explorer")}} 9 came out with SVG support. All major {{Glossary("browser","browsers")}} now support SVG.
 
-Based on an {{Glossary("XML")}} syntax, SVG can be styled with {{Glossary("CSS")}} and made interactive using {{Glossary("JavaScript")}}. HTML5 now allows direct embedding of SVG {{Glossary("Tag","tags")}} in an {{Glossary("HTML")}} document.
+Based on an {{Glossary("XML")}} syntax, SVG can be styled with {{Glossary("CSS")}} and made interactive using {{Glossary("JavaScript")}}. HTML allows direct embedding of SVG {{Glossary("Tag","tags")}} in an {{Glossary("HTML")}} document.
 
 As a [vector image format](https://en.wikipedia.org/wiki/Vector_graphics), SVG graphics can scale infinitely, making them invaluable in {{Glossary("responsive web design", "responsive design")}}, since you can create interface elements and graphics that scale to any screen size. SVG also provides a useful set of tools, such as clipping, masking, filters, and animations.
 

@@ -1,19 +1,14 @@
 ---
-title: 'XREquirectLayer: redraw event'
+title: "XREquirectLayer: redraw event"
+short-title: redraw
 slug: Web/API/XREquirectLayer/redraw_event
 page-type: web-api-event
-tags:
-  - API
-  - Event
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
+status:
+  - experimental
 browser-compat: api.XREquirectLayer.redraw_event
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The `redraw` event is sent to the `XREquirectLayer` object when the underlying resources of the layer are lost or when the XR Compositor can no longer reproject the layer. If this event is sent, authors should redraw the content of the layer in the next XR animation frame.
 
@@ -24,9 +19,9 @@ See also the {{domxref("XRCompositionLayer.needsRedraw")}} property which is als
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js
-addEventListener('redraw', (event) => { })
+addEventListener("redraw", (event) => {});
 
-onredraw = (event) => { }
+onredraw = (event) => {};
 ```
 
 ## Event type
@@ -56,8 +51,8 @@ Alternatively, you can use the `onredraw` event handler property to establish a 
 
 ```js
 equirectLayer.onredraw = (event) => {
- // redraw the layer
-}
+  // redraw the layer
+};
 ```
 
 ## Specifications

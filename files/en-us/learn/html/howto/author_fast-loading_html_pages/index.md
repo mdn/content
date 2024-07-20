@@ -1,15 +1,11 @@
 ---
 title: Tips for authoring fast-loading HTML pages
 slug: Learn/HTML/Howto/Author_fast-loading_HTML_pages
-tags:
-  - Advanced
-  - Guide
-  - HTML
-  - NeedsUpdate
-  - Performance
-  - Web
-  - Web Performance
+page-type: learn-faq
 ---
+
+{{QuickLinksWithSubpages("/en-US/docs/Learn/HTML/Howto")}}
+
 These tips are based on common knowledge and experimentation.
 
 An optimized web page not only provides for a more responsive site for your visitors but also reduces the load on your web servers and internet connection. This can be crucial for high volume sites or sites which have a spike in traffic due to unusual circumstances such as breaking news stories.
@@ -73,7 +69,7 @@ Any dynamic features that require the page to complete loading before being used
 
 ### Reduce the number of inline scripts
 
-Inline scripts can be expensive for page loading since the parser must assume that an inline script could modify the page structure while parsing is in progress. Reducing the use of inline scripts in general, and reducing the use of `document.write()` to output content in particular, can improve overall page loading. Use modern [AJAX](/en-US/docs/Web/Guide/AJAX) methods to manipulate page content for modern browsers, rather than the older approaches based on `document.write()`.
+Inline scripts can be expensive for page loading since the parser must assume that an inline script could modify the page structure while parsing is in progress. Reducing the use of inline scripts in general, and reducing the use of `document.write()` to output content in particular, can improve overall page loading. Use [DOM APIs to manipulate page content](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents), rather than `document.write()`.
 
 ### Use modern CSS and valid markup
 
@@ -81,7 +77,7 @@ Use of modern CSS reduces the amount of markup, can reduce the need for (spacer)
 
 Using valid markup has other advantages. First, browsers will have no need to perform error-correction when parsing the HTML (this is aside from the philosophical issue of whether to allow format variation in user input and then programmatically "correct" or normalize it; or whether, instead, to enforce a strict, no-tolerance input format).
 
-Moreover, valid markup allows for the free use of other tools which can _pre-process_ your web pages. For example, [HTML Tidy](http://tidy.sourceforge.net/) can remove whitespace and optional ending tags; however, it will refuse to run on a page with serious markup errors.
+Moreover, valid markup allows for the free use of other tools that can _pre-process_ your web pages. For example, [HTML Tidy](https://www.html-tidy.org/) can remove whitespace and optional ending tags; however, it will refuse to run on a page with serious markup errors.
 
 ### Chunk your content
 
@@ -95,7 +91,7 @@ Rather than deeply nesting tables as in:
 <table>
   <table>
     <table>
-          …
+      …
     </table>
   </table>
 </table>
@@ -104,12 +100,18 @@ Rather than deeply nesting tables as in:
 use non-nested tables or divs as in
 
 ```html
-<table>…</table>
-<table>…</table>
-<table>…</table>
+<table>
+  …
+</table>
+<table>
+  …
+</table>
+<table>
+  …
+</table>
 ```
 
-See also: [CSS Flexible Box Layout](https://www.w3.org/TR/css-flexbox-1/) and [CSS Grid Layout](https://www.w3.org/TR/css-grid-1/) specifications.
+See also: [CSS flexible box layout](https://www.w3.org/TR/css-flexbox-1/) and [CSS grid layout](https://www.w3.org/TR/css-grid-1/) specifications.
 
 ### Minify and compress SVG assets
 
@@ -133,12 +135,12 @@ and should specify widths of columns using the [`<col>`](/en-US/docs/Web/HTML/El
 
 ### Use lazy loading for images
 
-By default, images are loaded **eagerly**; that is, the image is fetched and rendered as soon as it's processed in the HTML. All eagerly loaded images are rendered before the document's {{domxref("Document.load_event", "load")}} event is sent. Switching to lazy loading of images tells the browser to hold off on loading images until they're about to be needed to draw the {{Glossary("visual viewport")}}.
+By default, images are loaded **eagerly**; that is, the image is fetched and rendered as soon as it's processed in the HTML. All eagerly loaded images are rendered before the window's [`load`](/en-US/docs/Web/API/Window/load_event) event is sent. Switching to lazy loading of images tells the browser to hold off on loading images until they're about to be needed to draw the {{Glossary("visual viewport")}}.
 
-To mark an image for lazy loading, specify its {{htmlattrxref("loading", "img")}} attribute with a value of `lazy`. With this set, the image will only be loaded when it's needed.
+To mark an image for lazy loading, specify its [`loading`](/en-US/docs/Web/HTML/Element/img#loading) attribute with a value of `lazy`. With this set, the image will only be loaded when it's needed.
 
 ```html
-<img src="./images/footerlogo.jpg" loading="lazy" alt="MDN logo">
+<img src="./images/footerlogo.jpg" loading="lazy" alt="MDN logo" />
 ```
 
 Note that lazily-loaded images may not be available when the `load` event is fired. You can determine if a given image is loaded by checking to see if the value of its Boolean {{domxref("HTMLImageElement.complete", "complete")}} property is `true`.
@@ -147,7 +149,7 @@ Note that lazily-loaded images may not be available when the `load` event is fir
 
 To achieve the greatest improvements in page design, make sure that reasonable user-agent requirements are specified for projects. Do not require your content to appear pixel-perfect in all browsers, especially not in down-version browsers.
 
-Ideally, your basic minimum requirements should be based on the consideration of modern browsers that support the relevant standards. This can include recent versions of Firefox, Internet Explorer, Google Chrome, Opera, and Safari.
+Ideally, your basic minimum requirements should be based on the consideration of modern browsers that support the relevant standards. This can include recent versions of Firefox, Google Chrome, Opera, and Safari.
 
 Note, however, that many of the tips listed in this article are common-sense techniques which apply to any user agent, and can be applied to any web page, regardless of browser-support requirements.
 
@@ -188,5 +190,5 @@ Note: Even though these attributes do help a lot the first time a page is loaded
 ## See also
 
 - Book: ["Speed Up Your Site" by Andy King](http://www.websiteoptimization.com/)
-- The excellent and very complete [Best Practices for Speeding Up Your Web Site](https://developer.yahoo.com/performance/rules.html) (Yahoo!)
+- The excellent and very complete [Best Practices for Speeding Up Your Website](https://developer.yahoo.com/performance/rules.html) (Yahoo!)
 - Tools for analyzing and optimizing performance: [Google PageSpeed Tools](https://developers.google.com/speed)

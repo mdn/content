@@ -1,18 +1,16 @@
 ---
 title: Updating add-ons for Firefox 9
 slug: Mozilla/Firefox/Releases/9/Updating_add-ons
-tags:
-  - Extensions
-  - Firefox 9
-  - Guide
+page-type: guide
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 9 doesn't have a lot of changes that should be compatibility issues for add-on developers. However, there are a few possible items that might trip you up, so let's take a look.
 
 ## Do you need to do anything at all?
 
-If your add-on is distributed on [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/) (AMO), it's been checked by an automated compatibility verification tool. Add-ons that don't use APIs that changed in Firefox 8, and have no binary components (which [need to be recompiled for every major Firefox release](/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces)), have automatically been updated on AMO to indicate that they work in Firefox 9.
+If your add-on is distributed on [addons.mozilla.org](https://addons.mozilla.org/en-US/firefox/) (AMO), it's been checked by an automated compatibility verification tool. Add-ons that don't use APIs that changed in Firefox 8, and have no binary components (which need to be recompiled for every major Firefox release), have automatically been updated on AMO to indicate that they work in Firefox 9.
 
 So you should start by visiting AMO and looking to see if your add-on needs any work done at all.
 
@@ -27,7 +25,9 @@ If your add-on uses `nsIChromeFrameMessageManager.loadFrameScript()` with the de
 Starting in Firefox 9, you should call the new `nsIChromeFrameMessageManager.removeDelayedFrameScript()` method to stop loading your script in newly-created frames. You do this like this, for example:
 
 ```js
-browser.messageManager.removeDelayedFrameScript("chrome://myextension/content/somescript.js");
+browser.messageManager.removeDelayedFrameScript(
+  "chrome://myextension/content/somescript.js",
+);
 ```
 
 ## Interface changes

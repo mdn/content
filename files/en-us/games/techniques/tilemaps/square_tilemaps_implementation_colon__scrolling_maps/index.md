@@ -1,21 +1,14 @@
 ---
-title: 'Square tilemaps implementation: Scrolling maps'
+title: "Square tilemaps implementation: Scrolling maps"
 slug: Games/Techniques/Tilemaps/Square_tilemaps_implementation:_Scrolling_maps
-tags:
-  - Canvas
-  - Games
-  - JavaScript
-  - atlas
-  - scrolling
-  - spritesheet
-  - tilemap
-  - tiles
+page-type: guide
 ---
+
 {{GamesSidebar}}
 
 This article covers how to implement scrolling square tilemaps using the [Canvas API](/en-US/docs/Web/API/Canvas_API).
 
-> **Note:** When writing this article, we assumed previous reader knowledge of canvas basics such as how get a 2D canvas context, load images, etc., which is all explained in the [Canvas API tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial), as well as the basic information included in our [Tilemaps](/en-US/docs/Games/Techniques/Tilemaps) introduction article. This article also builds upon [implementing static square tilemaps](/en-US/docs/Games/Techniques/Tilemaps/Square_tilemaps_implementation%3A_Static_maps) — you should read that too if you've not done so already.
+> **Note:** When writing this article, we assumed previous reader knowledge of canvas basics such as how get a 2D canvas context, load images, etc., which is all explained in the [Canvas API tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial), as well as the basic information included in our [Tilemaps](/en-US/docs/Games/Techniques/Tilemaps) introduction article. This article also builds upon [implementing static square tilemaps](/en-US/docs/Games/Techniques/Tilemaps/Square_tilemaps_implementation:_Static_maps) — you should read that too if you've not done so already.
 
 ## The camera
 
@@ -31,9 +24,7 @@ Regardless of the type of camera, we would always need information regarding its
 
 There are two main differences between rendering scrolling maps vs. static maps:
 
-- **Partial tiles might be shown**. In static maps, usually the rendering starts at the top left corner of a tile situated at the top left corner of a viewport. While rendering scrolling tilemaps, the first tile will often be clipped.
-
-TODO: show a diagram here explaining this.
+- **Partial tiles might be shown**. In static maps, usually the rendering starts in the top left corner of a tile situated in the top left corner of a viewport. While rendering scrolling tilemaps, the first tile will often be clipped.
 
 - **Only a section of the map will be rendered**. If the map is bigger than the viewport, we can obviously only display a part of it at a time, whereas non-scrolling maps are usually rendered wholly.
 
@@ -61,17 +52,18 @@ for (let c = startCol; c <= endCol; c++) {
     const tile = map.getTile(c, r);
     const x = (c - startCol) * map.tsize + offsetX;
     const y = (r - startRow) * map.tsize + offsetY;
-    if (tile !== 0) { // 0 => empty tile
+    if (tile !== 0) {
+      // 0 => empty tile
       this.ctx.drawImage(
         this.tileAtlas, // image
         (tile - 1) * map.tsize, // source x
         0, // source y
         map.tsize, // source width
         map.tsize, // source height
-        Math.round(x),  // target x
+        Math.round(x), // target x
         Math.round(y), // target y
         map.tsize, // target width
-        map.tsize // target height
+        map.tsize, // target height
       );
     }
   }

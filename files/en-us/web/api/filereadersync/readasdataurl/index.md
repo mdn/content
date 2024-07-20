@@ -1,18 +1,19 @@
 ---
-title: FileReaderSync.readAsDataURL()
+title: "FileReaderSync: readAsDataURL() method"
+short-title: readAsDataURL()
 slug: Web/API/FileReaderSync/readAsDataURL
 page-type: web-api-instance-method
 browser-compat: api.FileReaderSync.readAsDataURL
 ---
-{{APIRef("File API")}}
 
-The `readAsDataURL()` method of the {{DOMxRef("FileReaderSync")}} interface allows to read {{DOMxRef("File")}} or {{DOMxRef("Blob")}} objects in a synchronous way into a string representing a data URL. This interface is [only available](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers) in [workers](/en-US/docs/Web/API/Worker) as it enables synchronous I/O that could potentially block.
+{{APIRef("File API")}} {{AvailableInWorkers("worker_except_service")}}
+
+The **`readAsDataURL()`** method of the {{DOMxRef("FileReaderSync")}} interface allows to read {{DOMxRef("File")}} or {{DOMxRef("Blob")}} objects in a synchronous way into a string representing a data URL. This interface is [only available](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers) in [workers](/en-US/docs/Web/API/Worker) as it enables synchronous I/O that could potentially block.
 
 ## Syntax
 
-```js
-readAsDataURL(File);
-readAsDataURL(Blob);
+```js-nolint
+readAsDataURL(blob)
 ```
 
 ### Parameters
@@ -24,7 +25,7 @@ readAsDataURL(Blob);
 
 A string representing the input data as a data URL.
 
-## Exceptions
+### Exceptions
 
 The following exceptions can be raised by this method:
 
@@ -54,4 +55,4 @@ The following exceptions can be raised by this method:
 - {{DOMxRef("File")}}
 - {{DOMxRef("FileReaderSync")}}
 - {{DOMxRef("FileReader")}}
-- {{DOMxRef("BlobBuilder")}}, {{ domxref("Blob") }}
+- {{ domxref("Blob") }}

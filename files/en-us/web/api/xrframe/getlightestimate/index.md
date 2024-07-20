@@ -1,23 +1,20 @@
 ---
-title: XRFrame.getLightEstimate()
+title: "XRFrame: getLightEstimate() method"
+short-title: getLightEstimate()
 slug: Web/API/XRFrame/getLightEstimate
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - AR
-  - XR
-  - WebXR
+status:
+  - experimental
 browser-compat: api.XRFrame.getLightEstimate
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`getLightEstimate()`** method of the {{domxref("XRFrame")}} interface returns an {{domxref("XRLightEstimate")}} object containing estimated lighting values for a given {{domxref("XRLightProbe")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 getLightEstimate(lightProbe)
 ```
 

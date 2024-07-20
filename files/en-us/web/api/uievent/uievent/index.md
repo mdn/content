@@ -1,14 +1,11 @@
 ---
-title: UIEvent()
+title: "UIEvent: UIEvent() constructor"
+short-title: UIEvent()
 slug: Web/API/UIEvent/UIEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - UIEvent
 browser-compat: api.UIEvent.UIEvent
 ---
+
 {{APIRef("UI Events")}}
 
 The **`UIEvent()`** constructor creates a new {{domxref("UIEvent")}} object.
@@ -18,7 +15,7 @@ The **`UIEvent()`** constructor creates a new {{domxref("UIEvent")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 new UIEvent(type)
 new UIEvent(type, options)
 ```
@@ -32,7 +29,7 @@ new UIEvent(type, options)
 
   - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:
     - `detail` {{optional_inline}}
-      - : A number that is a event-dependent value associated with the event.
+      - : A number that is an event-dependent value associated with the event.
         It defaults to `0` and {{domxref("UIEvent.detail")}} lists the semantic for standard events.
     - `view` {{optional_inline}}
       - : The {{domxref("Window")}} associated with the event. Its default value is `null`.

@@ -1,18 +1,20 @@
 ---
 title: Media Capture and Streams API (Media Stream)
 slug: Web/API/Media_Capture_and_Streams_API
-tags:
-  - API
-  - Audio
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - Overview
-  - Video
-browser-compat: api.MediaStream
 page-type: web-api-overview
+browser-compat:
+  - api.MediaStream
+  - api.MediaStreamTrack
+  - api.MediaDevices
+  - api.MediaDeviceInfo
+  - api.InputDeviceInfo
+  - api.CanvasCaptureMediaStreamTrack
+spec-urls:
+  - https://w3c.github.io/mediacapture-main/
+  - https://w3c.github.io/mediacapture-fromelement/
 ---
-{{APIRef("Media Capture and Streams")}}
+
+{{DefaultAPISidebar("Media Capture and Streams")}}
 
 The **Media Capture and Streams** API, often called the **Media Streams API** or **MediaStream API**, is an API related to [WebRTC](/en-US/docs/Web/API/WebRTC_API) which provides support for streaming audio and video data.
 
@@ -34,30 +36,21 @@ In these reference articles, you'll find the fundamental information you'll need
 
 - {{domxref("CanvasCaptureMediaStreamTrack")}}
 - {{domxref("InputDeviceInfo")}}
-- {{domxref("MediaDeviceKind")}}
 - {{domxref("MediaDeviceInfo")}}
 - {{domxref("MediaDevices")}}
 - {{domxref("MediaStream")}}
-- {{domxref("MediaStreamEvent")}}
 - {{domxref("MediaStreamTrack")}}
 - {{domxref("MediaStreamTrackEvent")}}
-- {{domxref("MediaTrackCapabilities")}}
 - {{domxref("MediaTrackConstraints")}}
 - {{domxref("MediaTrackSettings")}}
 - {{domxref("MediaTrackSupportedConstraints")}}
-- {{domxref("NavigatorUserMedia")}}
-- {{domxref("NavigatorUserMediaError")}}
 - {{domxref("OverconstrainedError")}}
-- {{domxref("URL")}}
-
-Early versions of the Media Capture and Streams API specification included separate `AudioStreamTrack` and `VideoStreamTrack` interfaces—each based upon {{domxref("MediaStreamTrack")}}—which represented streams of those types. These no longer exist, and you should update any existing code to instead use `MediaStreamTrack` directly.
 
 ## Events
 
 - {{domxref("MediaStream/addtrack_event", "addtrack")}}
 - {{domxref("MediaStreamTrack/ended_event", "ended")}}
 - {{domxref("MediaStreamTrack/mute_event", "mute")}}
-- {{domxref("MediaStreamTrack.overconstrained_event", "overconstrained")}}
 - {{domxref("MediaStream/removetrack_event", "removetrack")}}
 - {{domxref("MediaStreamTrack/unmute_event", "unmute")}}
 
@@ -74,5 +67,4 @@ The [Taking still photos with getUserMedia()](/en-US/docs/Web/API/Media_Capture_
 ## See also
 
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API) - the introductory page to the API
-- {{domxref("mediaDevices.getUserMedia()")}}
 - [Taking still photos with WebRTC](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos): a demonstration and tutorial about using `getUserMedia()`.

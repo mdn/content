@@ -1,18 +1,11 @@
 ---
-title: IIRFilterNode.getFrequencyResponse()
+title: "IIRFilterNode: getFrequencyResponse() method"
+short-title: getFrequencyResponse()
 slug: Web/API/IIRFilterNode/getFrequencyResponse
 page-type: web-api-instance-method
-tags:
-  - API
-  - Audio
-  - IIRFilterNode
-  - Method
-  - Reference
-  - Web Audio API
-  - filter
-  - getFrequencyResponse
 browser-compat: api.IIRFilterNode.getFrequencyResponse
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `getFrequencyResponse()` method of the {{ domxref("IIRFilterNode") }}
@@ -26,7 +19,7 @@ must be the same size as the array of input frequency values
 
 ## Syntax
 
-```js
+```js-nolint
 getFrequencyResponse(frequencyArray, magResponseOutput, phaseResponseOutput)
 ```
 
@@ -55,7 +48,7 @@ None ({{jsxref("undefined")}}).
 
 In the following example we are using an IIR filter on a media stream (for a complete
 full demo, see our [stream-source-buffer demo](https://mdn.github.io/webaudio-examples/stream-source-buffer/) live,
-or [read its source](https://github.com/mdn/webaudio-examples/blob/master/stream-source-buffer/index.html)). As part of this demo, we get the frequency responses for this IIR
+or [read its source](https://github.com/mdn/webaudio-examples/blob/main/stream-source-buffer/index.html)). As part of this demo, we get the frequency responses for this IIR
 filter, for five sample frequencies. We first create the {{jsxref("Float32Array")}}
 objects we need, one containing the input frequencies, and two to receive the output
 magnitude and phase values:
@@ -76,13 +69,12 @@ Next we create a {{ htmlelement("ul") }} element in our HTML to contain our resu
 and grab a reference to it in our JavaScript:
 
 ```html
-<p>IIR filter frequency response for: </p>
-<ul class="freq-response-output">
-</ul>
+<p>IIR filter frequency response for:</p>
+<ul class="freq-response-output"></ul>
 ```
 
 ```js
-const freqResponseOutput = document.querySelector('.freq-response-output');
+const freqResponseOutput = document.querySelector(".freq-response-output");
 ```
 
 Finally, after creating our filter, we use `getFrequencyResponse()` to
@@ -93,15 +85,22 @@ output them in a human-readable list at the bottom of the page:
 const feedforwardCoefficients = [0.1, 0.2, 0.3, 0.4, 0.5];
 const feedbackCoefficients = [0.5, 0.4, 0.3, 0.2, 0.1];
 
-const iirFilter = audioCtx.createIIRFilter(feedforwardCoefficients, feedbackCoefficients);
+const iirFilter = audioCtx.createIIRFilter(
+  feedforwardCoefficients,
+  feedbackCoefficients,
+);
 
 // …
 
 function calcFrequencyResponse() {
-  iirFilter.getFrequencyResponse(myFrequencyArray, magResponseOutput, phaseResponseOutput);
+  iirFilter.getFrequencyResponse(
+    myFrequencyArray,
+    magResponseOutput,
+    phaseResponseOutput,
+  );
 
-  for (i = 0; i <= myFrequencyArray.length-1;i++){
-    const listItem = document.createElement('li');
+  for (let i = 0; i < myFrequencyArray.length; i++) {
+    const listItem = document.createElement("li");
     listItem.textContent = `${myFrequencyArray[i]}Hz: Magnitude ${magResponseOutput[i]}, Phase ${phaseResponseOutput[i]} radians.`;
     freqResponseOutput.appendChild(listItem);
   }

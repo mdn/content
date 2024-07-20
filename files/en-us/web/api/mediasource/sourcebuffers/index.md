@@ -1,21 +1,12 @@
 ---
-title: MediaSource.sourceBuffers
+title: "MediaSource: sourceBuffers property"
+short-title: sourceBuffers
 slug: Web/API/MediaSource/sourceBuffers
 page-type: web-api-instance-property
-tags:
-  - API
-  - Audio
-  - Experimental
-  - MSE
-  - Media Source Extensions
-  - MediaSource
-  - Property
-  - Reference
-  - Video
-  - sourceBuffers
 browser-compat: api.MediaSource.sourceBuffers
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+
+{{APIRef("Media Source Extensions")}}
 
 The **`sourceBuffers`** read-only property of the
 {{domxref("MediaSource")}} interface returns a {{domxref("SourceBufferList")}} object
@@ -37,7 +28,7 @@ function sourceOpen() {
   console.log(this.readyState); // open
   const sourceBuffer = mediaSource.addSourceBuffer(mimeCodec);
   fetchAB(assetURL, (buf) => {
-    sourceBuffer.addEventListener('updateend', () => {
+    sourceBuffer.addEventListener("updateend", () => {
       mediaSource.endOfStream();
       console.log(mediaSource.sourceBuffers); // will contain the source buffer that was added above
       video.play();
@@ -45,7 +36,7 @@ function sourceOpen() {
     });
     sourceBuffer.appendBuffer(buf);
   });
-};
+}
 
 // …
 ```

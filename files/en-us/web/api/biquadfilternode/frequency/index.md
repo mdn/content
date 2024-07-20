@@ -1,16 +1,11 @@
 ---
-title: BiquadFilterNode.frequency
+title: "BiquadFilterNode: frequency property"
+short-title: frequency
 slug: Web/API/BiquadFilterNode/frequency
 page-type: web-api-instance-property
-tags:
-  - API
-  - BiquadFilterNode
-  - Property
-  - Reference
-  - Web Audio API
-  - frequency
 browser-compat: api.BiquadFilterNode.frequency
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `frequency` property of the {{ domxref("BiquadFilterNode") }} interface is an [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} — a double representing a frequency in the current filtering algorithm measured in hertz (Hz).
@@ -25,7 +20,8 @@ An {{domxref("AudioParam")}}.
 
 ## Examples
 
-The following example shows basic usage of an AudioContext to create a Biquad filter node. For a complete working example, check out our [voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/) demo (look at the [source code](https://github.com/mdn/voice-change-o-matic) too).
+The following example shows basic usage of an AudioContext to create a Biquad filter node.
+For a complete working example, check out our [voice-change-o-matic](https://mdn.github.io/webaudio-examples/voice-change-o-matic/) demo (look at the [source code](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic) too).
 
 ```js
 const audioCtx = new AudioContext();

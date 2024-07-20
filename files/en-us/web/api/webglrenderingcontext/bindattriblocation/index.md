@@ -1,15 +1,11 @@
 ---
-title: WebGLRenderingContext.bindAttribLocation()
+title: "WebGLRenderingContext: bindAttribLocation() method"
+short-title: bindAttribLocation()
 slug: Web/API/WebGLRenderingContext/bindAttribLocation
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.bindAttribLocation
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.bindAttribLocation()`** method of
@@ -18,7 +14,7 @@ to an attribute variable.
 
 ## Syntax
 
-```js
+```js-nolint
 bindAttribLocation(program, index, name)
 ```
 
@@ -40,7 +36,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-gl.bindAttribLocation(program, colorLocation, 'vColor');
+gl.bindAttribLocation(program, colorLocation, "vColor");
 ```
 
 ## Specifications

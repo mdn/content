@@ -1,20 +1,16 @@
 ---
-title: Notification.image
+title: "Notification: image property"
+short-title: image
 slug: Web/API/Notification/image
 page-type: web-api-instance-property
-tags:
-  - API
-  - Image
-  - Notification
-  - Notifications
-  - Notifications API
-  - Property
-  - Reference
+status:
+  - experimental
 browser-compat: api.Notification.image
 ---
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
 
-The `image` read-only property of the
+{{APIRef("Web Notifications")}}{{SecureContext_Header}}{{SeeCompatTable}} {{AvailableInWorkers}}
+
+The **`image`** read-only property of the
 {{domxref("Notification")}} interface contains the URL of an image to be displayed as
 part of the notification, as specified in the `image` option of the
 {{domxref("Notification.Notification","Notification()")}} constructor.

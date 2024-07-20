@@ -1,19 +1,11 @@
 ---
-title: TouchEvent.targetTouches
+title: "TouchEvent: targetTouches property"
+short-title: targetTouches
 slug: Web/API/TouchEvent/targetTouches
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Mobile
-  - Property
-  - Read-only
-  - Reference
-  - TouchEvent
-  - touch
 browser-compat: api.TouchEvent.targetTouches
 ---
+
 {{ APIRef("Touch Events") }}
 
 The **`targetTouches`** read-only property is a {{ domxref("TouchList") }} listing all the {{ domxref("Touch") }} objects for touch points that are still in contact with the touch surface **and** whose {{domxref("Element/touchstart_event", "touchstart")}} event occurred inside the same target {{ domxref("element") }} as the current target element.

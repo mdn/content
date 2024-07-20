@@ -1,13 +1,11 @@
 ---
-title: Node.nextSibling
+title: "Node: nextSibling property"
+short-title: nextSibling
 slug: Web/API/Node/nextSibling
 page-type: web-api-instance-property
-tags:
-  - Property
-  - Reference
-  - Read-only
 browser-compat: api.Node.nextSibling
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`nextSibling`** property of the {{domxref("Node")}} interface
@@ -39,24 +37,24 @@ or `null` if there are none.
 ```html
 <div id="div-1">Here is div-1</div>
 <div id="div-2">Here is div-2</div>
-<br/>
+<br />
 <output><em>Not calculated.</em></output>
 ```
 
 ```js
-let el = document.getElementById('div-1').nextSibling,
-i = 1;
+let el = document.getElementById("div-1").nextSibling;
+let i = 1;
 
-let result = "Siblings of div-1:<br/>";
+let result = "Siblings of div-1:\n";
 
 while (el) {
-  result += `${i}. ${el.nodeName}<br/>`;
+  result += `${i}. ${el.nodeName}\n`;
   el = el.nextSibling;
   i++;
 }
 
-const output = document.getElementsByTagName("output")[0];
-output.innerHTML = result;
+const output = document.querySelector("output");
+output.innerText = result;
 ```
 
 {{ EmbedLiveSample("Example", "100%", 500)}}

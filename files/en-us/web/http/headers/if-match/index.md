@@ -1,14 +1,10 @@
 ---
 title: If-Match
 slug: Web/HTTP/Headers/If-Match
-tags:
-  - Conditional Requests
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
+page-type: http-header
 browser-compat: http.headers.If-Match
 ---
+
 {{HTTPSidebar}}
 
 The **`If-Match`** HTTP request header makes a request conditional.
@@ -41,7 +37,7 @@ There are two common use cases:
 
 ## Syntax
 
-```
+```http
 If-Match: <etag_value>
 If-Match: <etag_value>, <etag_value>, …
 ```
@@ -50,7 +46,7 @@ If-Match: <etag_value>, <etag_value>, …
 
 - `<etag_value>`
   - : Entity tags uniquely representing the requested resources.
-    They are a string of ASCII characters placed between double quotes (like `"675af34563dc-tr34"`).
+    They are a string of {{Glossary("ASCII")}} characters placed between double quotes (like `"675af34563dc-tr34"`).
     They may be prefixed by `W/` to indicate that they are "weak", i.e. that they represent the resource semantically but not byte-by-byte.
     However, in an **`If-Match`** header, weak entity tags will never match.
 - `*`

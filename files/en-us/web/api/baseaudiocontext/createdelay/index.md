@@ -1,17 +1,11 @@
 ---
-title: BaseAudioContext.createDelay()
+title: "BaseAudioContext: createDelay() method"
+short-title: createDelay()
 slug: Web/API/BaseAudioContext/createDelay
 page-type: web-api-instance-method
-tags:
-  - API
-  - AudioContext
-  - BaseAudioContext
-  - Method
-  - Reference
-  - Web Audio API
-  - createDelay
 browser-compat: api.BaseAudioContext.createDelay
 ---
+
 {{APIRef("Web Audio API")}}
 
 The `createDelay()` method of the
@@ -24,7 +18,7 @@ which is used to delay the incoming audio signal by a certain amount of time.
 
 ## Syntax
 
-```js
+```js-nolint
 createDelay(maxDelayTime)
 ```
 
@@ -64,15 +58,15 @@ playSynth.onclick = () => {
   synthSource.start();
   synthSource.connect(synthDelay);
   synthDelay.connect(destination);
-  this.setAttribute('disabled', 'disabled');
-}
+  this.setAttribute("disabled", "disabled");
+};
 
 stopSynth.onclick = () => {
   synthSource.disconnect(synthDelay);
   synthDelay.disconnect(destination);
   synthSource.stop();
-  playSynth.removeAttribute('disabled');
-}
+  playSynth.removeAttribute("disabled");
+};
 
 // …
 
@@ -80,7 +74,7 @@ let delay1;
 rangeSynth.oninput = () => {
   delay1 = rangeSynth.value;
   synthDelay.delayTime.setValueAtTime(delay1, audioCtx.currentTime);
-}
+};
 ```
 
 ## Specifications

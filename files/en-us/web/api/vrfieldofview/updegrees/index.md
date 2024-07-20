@@ -1,20 +1,15 @@
 ---
-title: VRFieldOfView.upDegrees
+title: "VRFieldOfView: upDegrees property"
+short-title: upDegrees
 slug: Web/API/VRFieldOfView/upDegrees
 page-type: web-api-instance-property
-tags:
-  - API
-  - Experimental
-  - Property
-  - Reference
-  - VR
-  - VRFieldOfView
-  - Virtual Reality
-  - WebVR
-  - upDegrees
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRFieldOfView.upDegrees
 ---
-{{APIRef("WebVR API")}}{{SeeCompatTable}}{{Deprecated_header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_header}}{{Non-standard_header}}
 
 The **`upDegrees`** read-only property of the {{domxref("VRFieldOfView")}} interface returns the number of degrees upwards that the field of view extends in.
 
@@ -40,5 +35,4 @@ Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/Web
 
 ## See also
 
-- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.
+- [WebVR API](/en-US/docs/Web/API/WebVR_API)

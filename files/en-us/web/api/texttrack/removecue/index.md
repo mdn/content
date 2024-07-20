@@ -1,22 +1,18 @@
 ---
-title: TextTrack.removeCue()
+title: "TextTrack: removeCue() method"
+short-title: removeCue()
 slug: Web/API/TextTrack/removeCue
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - removeCue
-  - TextTrack
 browser-compat: api.TextTrack.removeCue
 ---
+
 {{APIRef("WebVTT")}}
 
 The **`removeCue()`** method of the {{domxref("TextTrack")}} interface removes a cue from the list of cues.
 
 ## Syntax
 
-```js
+```js-nolint
 removeCue(cue)
 ```
 
@@ -41,10 +37,10 @@ Undefined.
 In the following example a cue is added to a video text track using `addCue()`, then removed using `removeCue`.
 
 ```js
-let video = document.querySelector('video');
+let video = document.querySelector("video");
 let track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
-let cue = new VTTCue(0, 0.9, 'Hildy!');
+let cue = new VTTCue(0, 0.9, "Hildy!");
 track.addCue(cue);
 track.removeCue(cue);
 ```

@@ -1,16 +1,12 @@
 ---
 title: Population count
 slug: WebAssembly/Reference/Numeric/Population_count
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Numeric
-  - Bitwise
+page-type: webassembly-instruction
 ---
+
 {{WebAssemblySidebar}}
 
-The **`popcnt`** instructions, short for *population count*, are used to count the amount of `1`s in a numbers binary representation.
+The **`popcnt`** instructions, short for _population count_, are used to count the amount of `1`s in a numbers binary representation.
 
 {{EmbedInteractiveExample("pages/wat/popcnt.html", "tabbed-taller")}}
 
@@ -27,6 +23,6 @@ i32.popcnt
 ```
 
 | Instruction  | Binary opcode |
-| -----------  | ------------- |
+| ------------ | ------------- |
 | `i32.popcnt` | `0x69`        |
 | `i64.popcnt` | `0x7b`        |

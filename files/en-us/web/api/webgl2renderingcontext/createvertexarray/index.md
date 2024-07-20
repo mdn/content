@@ -1,15 +1,11 @@
 ---
-title: WebGL2RenderingContext.createVertexArray()
+title: "WebGL2RenderingContext: createVertexArray() method"
+short-title: createVertexArray()
 slug: Web/API/WebGL2RenderingContext/createVertexArray
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
 browser-compat: api.WebGL2RenderingContext.createVertexArray
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.createVertexArray()`** method of
@@ -20,7 +16,7 @@ data.
 
 ## Syntax
 
-```js
+```js-nolint
 createVertexArray()
 ```
 

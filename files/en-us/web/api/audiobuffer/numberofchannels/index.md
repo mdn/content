@@ -1,16 +1,11 @@
 ---
-title: AudioBuffer.numberOfChannels
+title: "AudioBuffer: numberOfChannels property"
+short-title: numberOfChannels
 slug: Web/API/AudioBuffer/numberOfChannels
 page-type: web-api-instance-property
-tags:
-  - API
-  - AudioBuffer
-  - Property
-  - Reference
-  - Web Audio API
-  - numberOfChannels
 browser-compat: api.AudioBuffer.numberOfChannels
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `numberOfChannels` property of the {{ domxref("AudioBuffer") }}
@@ -46,7 +41,7 @@ button.onclick = () => {
   }
 
   console.log(myArrayBuffer.numberOfChannels);
-}
+};
 ```
 
 ## Specifications

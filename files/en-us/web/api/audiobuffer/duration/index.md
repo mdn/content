@@ -1,21 +1,14 @@
 ---
-title: AudioBuffer.duration
+title: "AudioBuffer: duration property"
+short-title: duration
 slug: Web/API/AudioBuffer/duration
 page-type: web-api-instance-property
-tags:
-  - API
-  - AudioBuffer
-  - Property
-  - Reference
-  - Web Audio API
-  - duration
 browser-compat: api.AudioBuffer.duration
 ---
+
 {{ APIRef("Web Audio API") }}
 
-The **`duration`** property of the {{ domxref("AudioBuffer")
-    }} interface returns a double representing the duration, in seconds, of the PCM data
-stored in the buffer.
+The **`duration`** property of the {{ domxref("AudioBuffer")}} interface returns a double representing the duration, in seconds, of the PCM data stored in the buffer.
 
 ## Value
 
@@ -46,7 +39,7 @@ button.onclick = () => {
   }
 
   console.log(myArrayBuffer.duration);
-}
+};
 ```
 
 ## Specifications

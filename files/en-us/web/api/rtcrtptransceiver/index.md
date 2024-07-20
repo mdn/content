@@ -2,31 +2,24 @@
 title: RTCRtpTransceiver
 slug: Web/API/RTCRtpTransceiver
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Media
-  - MediaStreamTrack
-  - RTCRtpTransceiver
-  - RTP
-  - Reference
-  - SDP
-  - Transceiver
-  - WebRTC
 browser-compat: api.RTCRtpTransceiver
 ---
+
 {{APIRef("WebRTC")}}
 
 The WebRTC interface **`RTCRtpTransceiver`** describes a permanent pairing of an {{domxref("RTCRtpSender")}} and an {{domxref("RTCRtpReceiver")}}, along with some shared state.
 
-Each {{Glossary("SDP")}} media section describes one bidirectional SRTP ("Secure Real Time Protocol") stream (excepting the media section for {{domxref("RTCDataChannel")}}, if present). This pairing of send and receive SRTP streams is significant for some applications, so `RTCRtpTransceiver` is used to represent this pairing, along with other important state from the media section. Each non-disabled SRTP media section is always represented by exactly one transceiver.
+Each {{Glossary("SDP")}} media section describes one bidirectional SRTP ("Secure Real Time Protocol") stream (excepting the media section for {{domxref("RTCDataChannel")}}, if present).
+This pairing of send and receive SRTP streams is significant for some applications, so `RTCRtpTransceiver` is used to represent this pairing, along with other important state from the media section.
+Each non-disabled SRTP media section is always represented by exactly one transceiver.
 
 A transceiver is uniquely identified using its {{domxref("RTCRtpTransceiver.mid", "mid")}} property, which is the same as the media ID (`mid`) of its corresponding m-line. An `RTCRtpTransceiver` is **associated** with an m-line if its `mid` is non-null; otherwise it's considered disassociated.
 
-## Properties
+## Instance properties
 
 - {{domxref("RTCRtpTransceiver.currentDirection", "currentDirection")}} {{ReadOnlyInline}}
-  - : A read-only string which indicates the transceiver's current directionality, or `null` if the transceiver is stopped or has never participated in an exchange of offers and answers. To change the transceiver's directionality, set the value of the {{domxref("RTCRtpTransceiver.direction", "direction")}} property.
+  - : A read-only string which indicates the transceiver's current negotiated directionality, or `null` if the transceiver has never participated in an exchange of offers and answers.
+    To change the transceiver's directionality, set the value of the {{domxref("RTCRtpTransceiver.direction", "direction")}} property.
 - {{domxref("RTCRtpTransceiver.direction", "direction")}}
   - : A string which is used to set the transceiver's desired direction.
 - {{domxref("RTCRtpTransceiver.mid", "mid")}} {{ReadOnlyInline}}
@@ -35,15 +28,16 @@ A transceiver is uniquely identified using its {{domxref("RTCRtpTransceiver.mid"
   - : The {{domxref("RTCRtpReceiver")}} object that handles receiving and decoding incoming media.
 - {{domxref("RTCRtpTransceiver.sender", "sender")}} {{ReadOnlyInline}}
   - : The {{domxref("RTCRtpSender")}} object responsible for encoding and sending data to the remote peer.
-- {{domxref("RTCRtpTransceiver.stopped", "stopped")}}
+- {{domxref("RTCRtpTransceiver.stopped", "stopped")}} {{Deprecated_Inline}}
   - : Indicates whether or not sending and receiving using the paired `RTCRtpSender` and `RTCRtpReceiver` has been permanently disabled, either due to SDP offer/answer, or due to a call to {{domxref("RTCRtpTransceiver.stop", "stop()")}}.
 
-## Methods
+## Instance methods
 
 - {{domxref("RTCRtpTransceiver.setCodecPreferences", "setCodecPreferences()")}}
-  - : A list of {{domxref("RTCRtpCodecParameters")}} objects which override the default preferences used by the {{Glossary("user agent")}} for the transceiver's codecs.
+  - : Configures the transceiver's preferred list of codecs, overriding {{Glossary("user agent")}} settings.
 - {{domxref("RTCRtpTransceiver.stop", "stop()")}}
-  - : Permanently stops the `RTCRtpTransceiver`. The associated sender stops sending data, and the associated receiver likewise stops receiving and decoding incoming data.
+  - : Permanently stops the `RTCRtpTransceiver`.
+    The associated sender stops sending data, and the associated receiver likewise stops receiving and decoding incoming data.
 
 ## Specifications
 

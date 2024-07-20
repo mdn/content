@@ -3,7 +3,8 @@ title: Building an Internet-Connected Phone with PeerJS
 slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs
 page-type: guide
 ---
-{{WebRTCSidebar}}
+
+{{DefaultAPISidebar("WebRTC")}}
 
 {{NextMenu("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Setup")}}
 
@@ -26,16 +27,16 @@ Before you get started, you'll want to make sure you've [installed node](https:/
 
 ### Table of Contents
 
-1. [Setup](Build_a_phone_with_peerjs/Setup)
-2. [Connect Peers](Build_a_phone_with_peerjs/Connect_peers)
+1. [Setup](/en-US/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Setup)
+2. [Connect Peers](/en-US/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers)
 
-    1. [Get Microphone Permission](Build_a_phone_with_peerjs/Connect_peers/Get_microphone_permission)
-    2. [Showing and hiding HTML](Build_a_phone_with_peerjs/Connect_peers/Show_hide_html)
-    3. [Create a Peer Connection](Build_a_phone_with_peerjs/Connect_peers/Create_a_peer_connection)
-    4. [Creating a Call](Build_a_phone_with_peerjs/Connect_peers/Creating_a_call)
-    5. [Answer a Call](Build_a_phone_with_peerjs/Connect_peers/Answer_a_call)
-    6. [End a Call](Build_a_phone_with_peerjs/Connect_peers/End_a_call)
+   1. [Get Microphone Permission](/en-US/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Get_microphone_permission)
+   2. [Showing and hiding HTML](/en-US/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Show_hide_html)
+   3. [Create a Peer Connection](/en-US/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Create_a_peer_connection)
+   4. [Creating a Call](/en-US/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Creating_a_call)
+   5. [Answer a Call](/en-US/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Answer_a_call)
+   6. [End a Call](/en-US/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/End_a_call)
 
-3. [Deployment and Further Reading](Build_a_phone_with_peerjs/Deployment_and_further_reading)
+3. [Deployment and Further Reading](/en-US/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Deployment_and_further_reading)
 
 {{NextMenu("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Setup")}}

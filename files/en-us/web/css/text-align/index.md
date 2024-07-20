@@ -1,14 +1,10 @@
 ---
 title: text-align
 slug: Web/CSS/text-align
-tags:
-  - CSS
-  - CSS Property
-  - CSS Text
-  - Reference
-  - recipe:css-property
+page-type: css-property
 browser-compat: css.properties.text-align
 ---
+
 {{CSSRef}}
 
 The **`text-align`** [CSS](/en-US/docs/Web/CSS) property sets the horizontal alignment of the inline-level content inside a block element or table-cell box. This means it works like {{cssxref("vertical-align")}} but in the horizontal direction.
@@ -28,10 +24,6 @@ text-align: justify;
 text-align: justify-all;
 text-align: match-parent;
 
-/* Character-based alignment in a table column */
-text-align: ".";
-text-align: "." center;
-
 /* Block alignment values (Non-standard syntax) */
 text-align: -moz-center;
 text-align: -webkit-center;
@@ -44,11 +36,7 @@ text-align: revert-layer;
 text-align: unset;
 ```
 
-The `text-align` property is specified in one of the following ways:
-
-- Using the keyword values `start`, `end`, `left`, `right`, `center`, `justify`, `justify-all`, or `match-parent`.
-- Using a `<string>` value only, in which case the other value defaults to `right`.
-- Using both a keyword value and a [`<string>`](#string) value.
+The `text-align` property is specified as a single keyword from the list below.
 
 ### Values
 
@@ -63,13 +51,11 @@ The `text-align` property is specified in one of the following ways:
 - `center`
   - : The inline contents are centered within the line box.
 - `justify`
-  - : The inline contents are justified. Text should be spaced to line up its left and right edges to the left and right edges of the line box, except for the last line.
-- `justify-all` {{experimental_inline}}
+  - : The inline contents are justified. Spaces out the content to line up its left and right edges to the left and right edges of the line box, except for the last line.
+- `justify-all`
   - : Same as `justify`, but also forces the last line to be justified.
 - `match-parent`
   - : Similar to `inherit`, but the values `start` and `end` are calculated according to the parent's {{cssxref("direction")}} and are replaced by the appropriate `left` or `right` value.
-- {{cssxref("&lt;string&gt;")}} {{experimental_inline}}
-  - : When applied to a table cell, specifies the alignment character around which the cell's contents will align.
 
 ## Accessibility concerns
 
@@ -94,9 +80,8 @@ The inconsistent spacing between words created by justified text can be problema
 
 ```html
 <p class="example">
-  Integer elementum massa at nulla placerat varius.
-  Suspendisse in libero risus, in interdum massa.
-  Vestibulum ac leo vitae metus faucibus gravida ac in neque.
+  Integer elementum massa at nulla placerat varius. Suspendisse in libero risus,
+  in interdum massa. Vestibulum ac leo vitae metus faucibus gravida ac in neque.
   Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
 </p>
 ```
@@ -120,9 +105,8 @@ The inconsistent spacing between words created by justified text can be problema
 
 ```html
 <p class="example">
-  Integer elementum massa at nulla placerat varius.
-  Suspendisse in libero risus, in interdum massa.
-  Vestibulum ac leo vitae metus faucibus gravida ac in neque.
+  Integer elementum massa at nulla placerat varius. Suspendisse in libero risus,
+  in interdum massa. Vestibulum ac leo vitae metus faucibus gravida ac in neque.
   Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
 </p>
 ```
@@ -138,7 +122,7 @@ The inconsistent spacing between words created by justified text can be problema
 
 #### Result
 
-{{EmbedLiveSample("Centered_text","100%","100%")}}
+{{EmbedLiveSample("Centered_text", "100%", "100%")}}
 
 ### Example using "justify"
 
@@ -146,9 +130,8 @@ The inconsistent spacing between words created by justified text can be problema
 
 ```html
 <p class="example">
-  Integer elementum massa at nulla placerat varius.
-  Suspendisse in libero risus, in interdum massa.
-  Vestibulum ac leo vitae metus faucibus gravida ac in neque.
+  Integer elementum massa at nulla placerat varius. Suspendisse in libero risus,
+  in interdum massa. Vestibulum ac leo vitae metus faucibus gravida ac in neque.
   Nullam est eros, suscipit sed dictum quis, accumsan a ligula.
 </p>
 ```
@@ -165,6 +148,62 @@ The inconsistent spacing between words created by justified text can be problema
 #### Result
 
 {{EmbedLiveSample('Example using "justify"',"100%","100%")}}
+
+### Table alignment
+
+This example demonstrates how the use of `text-align` on {{htmlelement("table")}} elements, including {{htmlelement("tr")}} rows and {{htmlelement("td")}} cells.
+
+#### HTML
+
+```html
+<table>
+  <tr id="r1">
+    <td id="c11">11</td>
+    <td id="c12">12</td>
+    <td id="c13">13</td>
+  </tr>
+  <tr id="r2">
+    <td id="c21">21</td>
+    <td id="c22">22</td>
+    <td id="c23">23</td>
+  </tr>
+  <tr id="r3">
+    <td id="c31">31</td>
+    <td id="c32">32</td>
+    <td id="c33">33</td>
+  </tr>
+</table>
+```
+
+#### CSS
+
+```css
+table {
+  border-collapse: collapse;
+  border: solid black 1px;
+  width: 250px;
+  height: 150px;
+}
+td {
+  border: solid 1px black;
+}
+#r1 {
+  text-align: right;
+}
+#c12 {
+  text-align: center;
+}
+#r2 {
+  text-align: center;
+}
+#c31 {
+  text-align: right;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Table alignment', "100%", "100%")}}
 
 ## Specifications
 

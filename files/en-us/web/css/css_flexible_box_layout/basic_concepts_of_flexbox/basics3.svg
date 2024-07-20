@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" width="450mm" height="347.782" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round" viewBox="0 0 1275.75 260.869">
+  <defs>
+    <path id="a" d="M300.249 59.965h839.441v159.894H300.249z" />
+  </defs>
+  <path fill="#fff" d="M0 0h1275.75v260.869H0z" />
+  <path fill="#4f79eb" d="M320.235 79.951h119.921v119.921H320.235z" /><text fill="#fff" font-family="Helvetica" font-size="60" transform="translate(363.366 99.934)">
+    <tspan x="0" y="58" textLength="33.369">a</tspan>
+  </text>
+  <path fill="#4f79eb" d="M460.143 79.951h119.92v119.921h-119.92z" /><text fill="#fff" font-family="Helvetica" font-size="60" transform="translate(507.09 99.938)">
+    <tspan x="0" y="58" textLength="33.369">b</tspan>
+  </text>
+  <path fill="#4f79eb" d="M600.05 79.951h119.92v119.921H600.05z" /><text fill="#fff" font-family="Helvetica" font-size="60" transform="translate(646.997 99.938)">
+    <tspan x="0" y="58" textLength="30">c</tspan>
+  </text>
+  <mask id="b" width="845.444" height="165.894" x="297.249" y="56.965" maskUnits="userSpaceOnUse">
+    <path fill="#fff" d="M297.249 56.965h845.444v165.894H297.249z" />
+    <use xlink:href="#a" fill-rule="evenodd" />
+  </mask>
+  <use xlink:href="#a" fill="none" stroke="#000" stroke-dasharray="4" stroke-linecap="butt" stroke-width="6" mask="url(#b)" /><text font-family="Helvetica" font-size="24" transform="translate(80.23 116.802)">
+    <tspan x="85.688" y="23" textLength="113.367">Cross Axis
+    </tspan>
+    <tspan x="3" y="52" textLength="196.055">Flex-direction: row</tspan>
+  </text>
+  <path fill="none" stroke="#000" stroke-linecap="butt" stroke-width="2" d="m280.37 68.96-.108 30.978" />
+  <path d="m287.359 71.985-6.958-12.024-7.042 11.975z" />
+  <path fill="none" stroke="#000" stroke-linecap="butt" stroke-width="2" d="m280.139 216.808.123-30.966" />
+  <path d="m273.151 213.78 6.952 12.028 7.048-11.972z" />
+</svg>

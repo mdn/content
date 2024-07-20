@@ -1,10 +1,7 @@
 ---
 title: HTTP caching
 slug: Web/HTTP/Caching
-tags:
-  - Caching
-  - Guide
-  - HTTP
+page-type: guide
 ---
 
 {{HTTPSidebar}}
@@ -37,8 +34,6 @@ Cache-Control: private
 
 Personalized contents are usually controlled by cookies, but the presence of a cookie does not always indicate that it is private, and thus a cookie alone does not make the response private.
 
-Note that if the response has an `Authorization` header, it cannot be stored in the private cache (or a shared cache, unless `public` is specified).
-
 ### Shared cache
 
 The shared cache is located between the client and the server and can store responses that can be shared among users. And shared caches can be further sub-classified into **proxy caches** and **managed caches**.
@@ -63,7 +58,7 @@ Managed caches are explicitly deployed by service developers to offload the orig
 
 The characteristics of managed caches vary depending on the product deployed. In most cases, you can control the cache's behavior through the `Cache-Control` header and your own configuration files or dashboards.
 
-For example, the HTTP Caching specification essentially does not define a way to explicitly delete a cache — but with a managed cache, the stored response can be deleted at any time through dashboard operations, API calls, restarts,  and so on. That allows for a more proactive caching strategy.
+For example, the HTTP Caching specification essentially does not define a way to explicitly delete a cache — but with a managed cache, the stored response can be deleted at any time through dashboard operations, API calls, restarts, and so on. That allows for a more proactive caching strategy.
 
 It is also possible to ignore the standard HTTP Caching spec protocols in favor of explicit manipulation. For example, the following can be specified to opt-out of a private cache or proxy cache, while using your own strategy to cache only in a managed cache.
 
@@ -128,7 +123,7 @@ For the example response, the meaning of `max-age` is the following:
 
 As long as the stored response remains fresh, it will be used to fulfill client requests.
 
-When a response is stored in a shared cache, it is necessary to inform the client of the response's age. Continuing with the example, if the shared cache stored the response for one day, the shared cache would send the following response to subsequent client requests.
+When a response is stored in a shared cache, it is possible to tell the client the age of the response. Continuing with the example, if the shared cache stored the response for one day, the shared cache would send the following response to subsequent client requests.
 
 ```http
 HTTP/1.1 200 OK
@@ -154,7 +149,7 @@ The `Expires` header specifies the lifetime of the cache using an explicit time 
 Expires: Tue, 28 Feb 2022 22:22:22 GMT
 ```
 
-However, the time format is difficult to parse, many implementation bugs were found, and it is possible to induce problems by intentionally shifting the system clock; therefore,`max-age` — for specifying an elapsed time — was adopted for `Cache-Control` in HTTP/1.1.
+However, the time format is difficult to parse, many implementation bugs were found, and it is possible to induce problems by intentionally shifting the system clock; therefore, `max-age` — for specifying an elapsed time — was adopted for `Cache-Control` in HTTP/1.1.
 
 If both `Expires` and `Cache-Control: max-age` are available, `max-age` is defined to be preferred. So it is not necessary to provide `Expires` now that HTTP/1.1 is widely used.
 
@@ -162,7 +157,11 @@ If both `Expires` and `Cache-Control: max-age` are available, `max-age` is defin
 
 The way that responses are distinguished from one another is essentially based on their URLs:
 
-![keyed with url](keyed-with-url.png)
+| URL                              | Response body            |
+| -------------------------------- | ------------------------ |
+| `https://example.com/index.html` | `<!doctype html>...`     |
+| `https://example.com/style.css`  | `body { ...`             |
+| `https://example.com/script.js`  | `function main () { ...` |
 
 But the contents of responses are not always the same, even if they have the same URL. Especially when content negotiation is performed, the response from the server can depend on the values of the `Accept`, `Accept-Language`, and `Accept-Encoding` request headers.
 
@@ -174,7 +173,12 @@ Vary: Accept-Language
 
 That causes the cache to be keyed based on a composite of the response URL and the `Accept-Language` request header — rather than being based just on the response URL.
 
-![keyed with url and language](keyed-with-url-and-language.png)
+| URL                              | `Accept-Language` | Response body            |
+| -------------------------------- | ----------------- | ------------------------ |
+| `https://example.com/index.html` | `ja-JP`           | `<!doctype html>...`     |
+| `https://example.com/index.html` | `en-US`           | `<!doctype html>...`     |
+| `https://example.com/style.css`  | `ja-JP`           | `body { ...`             |
+| `https://example.com/script.js`  | `ja-JP`           | `function main () { ...` |
 
 Also, if you are providing content optimization (for example, for responsive design) based on the user agent, you may be tempted to include "`User-Agent`" in the value of the `Vary` header. However, the `User-Agent` request header generally has a very large number of variations, which drastically reduces the chance that the cache will be reused. So if possible, instead consider a way to vary behavior based on feature detection rather than based on the `User-Agent` request header.
 
@@ -233,14 +237,14 @@ To solve such problems, the `ETag` response header was standardized as an altern
 
 The value of the `ETag` response header is an arbitrary value generated by the server. There are no restrictions on how the server must generate the value, so servers are free to set the value based on whatever means they choose — such as a hash of the body contents or a version number.
 
-As an example, if a hash value is used for the `ETag` header and the hash value of the `index.html` resource is `deadbeef`, the response will be as follows:
+As an example, if a hash value is used for the `ETag` header and the hash value of the `index.html` resource is `33a64df5`, the response will be as follows:
 
 ```http
 HTTP/1.1 200 OK
 Content-Type: text/html
 Content-Length: 1024
 Date: Tue, 22 Feb 2022 22:22:22 GMT
-ETag: "deadbeef"
+ETag: "33a64df5"
 Cache-Control: max-age=3600
 
 <!doctype html>
@@ -253,18 +257,18 @@ If that response is stale, the client takes the value of the `ETag` response hea
 GET /index.html HTTP/1.1
 Host: example.com
 Accept: text/html
-If-None-Match: "deadbeef"
+If-None-Match: "33a64df5"
 ```
 
 The server will return `304 Not Modified` if the value of the `ETag` header it determines for the requested resource is the same as the `If-None-Match` value in the request.
 
 But if the server determines the requested resource should now have a different `ETag` value, the server will instead respond with a `200 OK` and the latest version of the resource.
 
-> **Note:** When evaluating how to use `ETag` and `Last-Modified`, consider the following:
-> During cache revalidation, if both `ETag` and `Last-Modified` are present, `ETag` takes precedence.
-> Therefore, if you are only considering caching, you may think that `Last-Modified` is unnecessary.
-> However, `Last-Modified` is not just useful for caching; instead, it is a standard HTTP header that is also used by content-management (CMS) systems to display the last-modified time, by crawlers to adjust crawl frequency, and for other various purposes.
-> So considering the overall HTTP ecosystem, it is preferable to provide both `ETag` and `Last-Modified`.
+> **Note:** RFC9110 prefers that servers send both `ETag` and `Last-Modified` for a `200` response if possible.
+> During cache revalidation, if both `If-Modified-Since` and `If-None-Match` are present, then `If-None-Match` takes precedence for the validator.
+> If you are only considering caching, you may think that `Last-Modified` is unnecessary.
+> However, `Last-Modified` is not just useful for caching; it is a standard HTTP header that is also used by content-management (CMS) systems to display the last-modified time, by crawlers to adjust crawl frequency, and for other various purposes.
+> So considering the overall HTTP ecosystem, it is better to provide both `ETag` and `Last-Modified`.
 
 ### Force Revalidation
 
@@ -287,7 +291,7 @@ Cache-Control: no-cache
 
 It is often stated that the combination of `max-age=0` and `must-revalidate` has the same meaning as `no-cache`.
 
-```
+```http
 Cache-Control: max-age=0, must-revalidate
 ```
 
@@ -295,7 +299,7 @@ Cache-Control: max-age=0, must-revalidate
 
 However, that usage of `max-age=0` is a remnant of the fact that many implementations prior to HTTP/1.1 were unable to handle the `no-cache` directive — and so to deal with that limitation, `max-age=0` was used as a workaround.
 
-But now that HTTP/1.1-conformant servers are widely deployed, there's no reason to ever use that `max-age=0`-and-`must-revalidate` combination — you should instead just use `no-cache`.
+But now that HTTP/1.1-conformant servers are widely deployed, there's no reason to ever use that `max-age=0` and `must-revalidate` combination — you should instead just use `no-cache`.
 
 ## Don't cache
 
@@ -351,7 +355,7 @@ As a workaround for outdated implementations that ignore `no-store`, you may see
 Cache-Control: no-store, no-cache, max-age=0, must-revalidate, proxy-revalidate
 ```
 
-It is [recommended](https://docs.microsoft.com/en-us/troubleshoot/developer/browsers/connectivity-navigation/how-to-prevent-caching) to use `no-cache` as an alternative for dealing with such outdated implementations, and it is not a problem if `no-cache` is given from the beginning, since the server will always receive the request.
+It is [recommended](https://docs.microsoft.com/troubleshoot/developer/browsers/connectivity-navigation/how-to-prevent-caching) to use `no-cache` as an alternative for dealing with such outdated implementations, and it is not a problem if `no-cache` is given from the beginning, since the server will always receive the request.
 
 If it is the shared cache that you are concerned about, you can make sure to prevent unintended caching by also adding `private`:
 
@@ -522,7 +526,7 @@ So the HTML above makes it difficult to cache `bundle.js` and `build.css` with `
 
 Therefore, you can serve the JavaScript and CSS with URLs that include a changing part based on a version number or hash value. Some of the ways to do that are shown below.
 
-```
+```plain
 # version in filename
 bundle.v123.js
 
@@ -552,10 +556,10 @@ With that design, both JavaScript and CSS resources can be cached for a long tim
 
 Some commonly-used cache-header values are shown below.
 
-```
+```plain
 36 cache-control max-age=0
-37 cache-control max-age=2592000
-38 cache-control max-age=604800
+37 cache-control max-age=604800
+38 cache-control max-age=2592000
 39 cache-control no-cache
 40 cache-control no-store
 41 cache-control public, max-age=31536000
@@ -574,7 +578,7 @@ The `public` value has the effect of making the response storable even if the `A
 > **Note:** The `public` directive should only be used if there is a need to store the response when the `Authorization` header is set.
 > It is not required otherwise, because a response will be stored in the shared cache as long as `max-age` is given.
 
-So if the response is personalized with basic authentication, the presence of `public` may cause problems. If you are concerned about that, you can choose the second-longest value, `37` (1 month).
+So if the response is personalized with basic authentication, the presence of `public` may cause problems. If you are concerned about that, you can choose the second-longest value, `38` (1 month).
 
 ```http
 # response for bundle.v123.js
@@ -604,7 +608,7 @@ The combined result is shown below.
 
 ```http
 # bundle.v123.js
-200 OK HTTP/1.1
+HTTP/1.1 200 OK
 Content-Type: application/javascript
 Content-Length: 1024
 Cache-Control: public, max-age=31536000, immutable
@@ -642,7 +646,7 @@ For that case, `no-cache` would be appropriate — rather than `no-store` — si
 Furthermore, adding `Last-Modified` and `ETag` will allow clients to send conditional requests, and a `304 Not Modified` can be returned if there have been no updates to the HTML:
 
 ```http
-200 OK HTTP/1.1
+HTTP/1.1 200 OK
 Content-Type: text/html
 Content-Length: 1024
 Cache-Control: no-cache
@@ -653,7 +657,7 @@ ETag: AAPuIbAOdvAGEETbgAAAAAAABAAE
 That setting is appropriate for non-personalized HTML, but for a response that gets personalized using cookies — for example, after a login — don't forget to also specify `private`:
 
 ```http
-200 OK HTTP/1.1
+HTTP/1.1 200 OK
 Content-Type: text/html
 Content-Length: 1024
 Cache-Control: no-cache, private

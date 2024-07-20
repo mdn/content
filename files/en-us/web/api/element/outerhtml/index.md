@@ -1,21 +1,11 @@
 ---
-title: Element.outerHTML
+title: "Element: outerHTML property"
+short-title: outerHTML
 slug: Web/API/Element/outerHTML
 page-type: web-api-instance-property
-tags:
-  - API
-  - DOM
-  - DOM Parsing
-  - Element
-  - NeedsMobileBrowserCompatibility
-  - Parsing
-  - Property
-  - Reference
-  - Serialization
-  - Serializing
-  - outerHTML
 browser-compat: api.Element.outerHTML
 ---
+
 {{APIRef("DOM")}}
 
 The **`outerHTML`** attribute of the {{ domxref("Element") }}
@@ -35,6 +25,8 @@ Setting the value of `outerHTML` replaces the element and all of its
 descendants with a new DOM tree constructed by parsing the specified
 `htmlString`.
 
+When set to the `null` value, that `null` value is converted to the empty string (`""`), so `elt.outerHTML = null` is equivalent to `elt.outerHTML = ""`.
+
 ### Exceptions
 
 - `SyntaxError` {{domxref("DOMException")}}
@@ -46,9 +38,9 @@ descendants with a new DOM tree constructed by parsing the specified
 
 ## Examples
 
-Getting the value of an element's `outerHTML` property:
+### Getting the value of an element's outerHTML property
 
-### HTML
+#### HTML
 
 ```html
 <div id="d">
@@ -57,7 +49,7 @@ Getting the value of an element's `outerHTML` property:
 </div>
 ```
 
-### Javascript
+#### JavaScript
 
 ```js
 const d = document.getElementById("d");
@@ -67,9 +59,9 @@ console.log(d.outerHTML);
 // is written to the console window
 ```
 
-Replacing a node by setting the `outerHTML` property:
+### Replacing a node by setting the outerHTML property
 
-### HTML
+#### HTML
 
 ```html
 <div id="container">
@@ -77,7 +69,7 @@ Replacing a node by setting the `outerHTML` property:
 </div>
 ```
 
-### Javascript
+#### JavaScript
 
 ```js
 const container = document.getElementById("container");
@@ -95,13 +87,12 @@ console.log(container.firstElementChild.nodeName); // logs "P"
 
 ## Notes
 
-If the element has no parent element, setting its `outerHTML` property will
-not change it or its descendants. Many browsers will also throw an exception. For
-example:
+If the element has no parent node, setting its `outerHTML` property will not change it
+or its descendants. For example:
 
 ```js
 const div = document.createElement("div");
-div.outerHTML = "<div class=\"test\">test</div>";
+div.outerHTML = '<div class="test">test</div>';
 console.log(div.outerHTML); // output: "<div></div>"
 ```
 

@@ -1,16 +1,11 @@
 ---
-title: 'ARIA: status role'
+title: "ARIA: status role"
 slug: Web/Accessibility/ARIA/Roles/status_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - ARIA status
-  - status role
+page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#status
 ---
+
+{{AccessibilitySidebar}}
 
 The `status` role defines a [live region](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) containing advisory information for the user that is not important enough to be an [`alert`](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role).
 
@@ -40,18 +35,10 @@ Elements with the role status have an implicit [`aria-live`](/en-US/docs/Web/Acc
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [ARIA: `alert` role](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role)
 - [ARIA: `log` role](/en-US/docs/Web/Accessibility/ARIA/Roles/log_role)
 - [ARIA: `marquee` role](/en-US/docs/Web/Accessibility/ARIA/Roles/marquee_role)
 - [ARIA: `timer` role](/en-US/docs/Web/Accessibility/ARIA/Roles/timer_role)
 - [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
-
-</section>

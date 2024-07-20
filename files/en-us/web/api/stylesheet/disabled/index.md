@@ -1,16 +1,11 @@
 ---
-title: StyleSheet.disabled
+title: "StyleSheet: disabled property"
+short-title: disabled
 slug: Web/API/StyleSheet/disabled
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSS
-  - CSSOM
-  - Disabled
-  - Property
-  - Reference
 browser-compat: api.StyleSheet.disabled
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`disabled`** property of the

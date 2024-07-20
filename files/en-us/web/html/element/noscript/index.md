@@ -1,35 +1,56 @@
 ---
-title: '<noscript>: The Noscript element'
+title: "<noscript>: The Noscript element"
 slug: Web/HTML/Element/noscript
-tags:
-  - Element
-  - HTML
-  - HTML scripting
-  - Reference
-  - Web
+page-type: html-element
 browser-compat: html.elements.noscript
 ---
 
-{{HTMLRef}}
+{{HTMLSidebar}}
 
 The **`<noscript>`** [HTML](/en-US/docs/Web/HTML) element defines a section of HTML to be inserted if a script type on the page is unsupported or if scripting is currently turned off in the browser.
+
+## Attributes
+
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+## Examples
+
+```html
+<noscript>
+  <!-- anchor linking to external file -->
+  <a href="https://www.mozilla.org/">External Link</a>
+</noscript>
+<p>Rocks!</p>
+```
+
+### Result with scripting enabled
+
+Rocks!
+
+### Result with scripting disabled
+
+[External Link](https://www.mozilla.org/)
+
+Rocks!
+
+## Technical summary
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories"
+        <a href="/en-US/docs/Web/HTML/Content_categories"
           >Content categories</a
         >
       </th>
       <td>
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#metadata_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#metadata_content"
           >Metadata content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#flow_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
           >flow content</a
         >,
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >.
       </td>
@@ -45,7 +66,7 @@ The **`<noscript>`** [HTML](/en-US/docs/Web/HTML) element defines a section of H
         disabled and when it isn't a descendant of the
         {{HTMLElement("head")}} element: any
         <a
-          href="/en-US/docs/Web/Guide/HTML/Content_categories#transparent_content_model"
+          href="/en-US/docs/Web/HTML/Content_categories#transparent_content_model"
           >transparent content</a
         >, but no <code>&#x3C;noscript></code> element must be among its
         descendants.<br />Otherwise: flow content or phrasing content.
@@ -53,13 +74,13 @@ The **`<noscript>`** [HTML](/en-US/docs/Web/HTML) element defines a section of H
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
       <td>
         Any element that accepts
-        <a href="/en-US/docs/Web/Guide/HTML/Content_categories#phrasing_content"
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >phrasing content</a
         >, if there are no ancestor <code>&#x3C;noscript></code> element, or in
         a {{HTMLElement("head")}} element (but only for an HTML
@@ -85,30 +106,6 @@ The **`<noscript>`** [HTML](/en-US/docs/Web/HTML) element defines a section of H
     </tr>
   </tbody>
 </table>
-
-## Attributes
-
-This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-## Examples
-
-```html
-<noscript>
-  <!-- anchor linking to external file -->
-  <a href="https://www.mozilla.org/">External Link</a>
-</noscript>
-<p>Rocks!</p>
-```
-
-### Result with scripting enabled
-
-Rocks!
-
-### Result with scripting disabled
-
-[External Link](https://www.mozilla.org/)
-
-Rocks!
 
 ## Specifications
 

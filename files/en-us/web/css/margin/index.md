@@ -1,16 +1,13 @@
 ---
 title: margin
 slug: Web/CSS/margin
-tags:
-  - CSS
-  - CSS Property
-  - Property
-  - recipe:css-shorthand-property
+page-type: css-shorthand-property
 browser-compat: css.properties.margin
 ---
+
 {{CSSRef}}
 
-The **`margin`** [CSS](/en-US/docs/Web/CSS) shorthand property sets the [margin area](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#margin_area) on all four sides of an element.
+The **`margin`** [CSS](/en-US/docs/Web/CSS) shorthand property sets the [margin area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#margin_area) on all four sides of an element.
 
 {{EmbedInteractiveExample("pages/css/margin.html")}}
 
@@ -30,10 +27,10 @@ This property is a shorthand for the following CSS properties:
 margin: 1em;
 margin: -3px;
 
-/* vertical | horizontal */
+/* top and bottom | left and right */
 margin: 5% auto;
 
-/* top | horizontal | bottom */
+/* top | left and right | bottom */
 margin: 1em auto 2em;
 
 /* top | right | bottom | left */
@@ -71,13 +68,13 @@ The top and bottom margins have no effect on _non-[replaced](/en-US/docs/Web/CSS
 
 ### Horizontal centering
 
-To center something horizontally in modern browsers, you can use {{cssxref("display")}}`: flex;` {{cssxref("justify-content")}}`: center;`.
+You can horizontally center an element within its parent by setting `margin: 0 auto;`.
 
-However, in older browsers like IE8-9 that do not support Flexible Box Layout, these are not available. In order to center an element inside its parent, use `margin: 0 auto;`.
+A more common method to center an element horizontally is by setting `display: flex;` and [`justify-content: center;`](/en-US/docs/Web/CSS/justify-content) on a container, which [centers its flex item](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container) children.
 
 ### Margin collapsing
 
-Elements' top and bottom margins are sometimes collapsed into a single margin that is equal to the larger of the two margins. See [Mastering margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing) for more information.
+Elements' top and bottom margins are sometimes collapsed into a single margin that is equal to the larger of the two margins. See [Mastering margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing) for more information.
 
 ## Formal definition
 
@@ -120,27 +117,27 @@ Elements' top and bottom margins are sometimes collapsed into a single margin th
 ### More examples
 
 ```css
-margin: 5%;                 /* All sides: 5% margin */
+margin: 5%; /* All sides: 5% margin */
 
-margin: 10px;               /* All sides: 10px margin */
+margin: 10px; /* All sides: 10px margin */
 
-margin: 1.6em 20px;         /* top and bottom: 1.6em margin */
-                            /* left and right: 20px margin  */
+margin: 1.6em 20px; /* top and bottom: 1.6em margin */
+/* left and right: 20px margin */
 
-margin: 10px 3% -1em;       /* top:            10px margin */
-                            /* left and right: 3% margin   */
-                            /* bottom:         -1em margin */
+margin: 10px 3% -1em; /* top:            10px margin */
+/* left and right: 3% margin   */
+/* bottom:         -1em margin */
 
-margin: 10px 3px 30px 5px;  /* top:    10px margin */
-                            /* right:  3px margin  */
-                            /* bottom: 30px margin */
-                            /* left:   5px margin  */
+margin: 10px 3px 30px 5px; /* top:    10px margin */
+/* right:  3px margin  */
+/* bottom: 30px margin */
+/* left:   5px margin  */
 
-margin: 2em auto;           /* top and bottom: 2em margin   */
-                            /* Box is horizontally centered */
+margin: 2em auto; /* top and bottom: 2em margin   */
+/* Box is horizontally centered */
 
-margin: auto;               /* top and bottom: 0 margin     */
-                            /* Box is horizontally centered */
+margin: auto; /* top and bottom: 0 margin     */
+/* Box is horizontally centered */
 ```
 
 ## Specifications
@@ -153,7 +150,7 @@ margin: auto;               /* top and bottom: 0 margin     */
 
 ## See also
 
-- [Introduction to the CSS basic box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
-- [Margin collapsing](/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+- [Introduction to the CSS basic box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
 - {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, and {{cssxref("margin-left")}}
 - The mapped logical properties: {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}}, and {{cssxref("margin-inline-end")}} and the shorthands {{cssxref("margin-block")}} and {{cssxref("margin-inline")}}

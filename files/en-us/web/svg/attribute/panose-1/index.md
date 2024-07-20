@@ -1,12 +1,12 @@
 ---
 title: panose-1
 slug: Web/SVG/Attribute/panose-1
-tags:
-  - Deprecated
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
+status:
+  - deprecated
 browser-compat: svg.elements.font-face.panose-1
 ---
+
 {{SVGRef}}{{Deprecated_Header}}
 
 The **`panose-1`** attribute indicates the Panose-1 number of a font face.
@@ -25,7 +25,7 @@ You can use this attribute with the following SVG elements:
       <th scope="row">Value</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/SVG/Content_type#Integer">&#x3C;integer></a
+          ><a href="/en-US/docs/Web/SVG/Content_type#integer">&#x3C;integer></a
           >{10}</code
         >
       </td>

@@ -1,21 +1,13 @@
 ---
 title: height
 slug: Web/CSS/height
-tags:
-  - CSS
-  - CSS Property
-  - Layout
-  - Reference
-  - Vertical
-  - dimensions
-  - height
-  - recipe:css-property
-  - size
+page-type: css-property
 browser-compat: css.properties.height
 ---
+
 {{CSSRef}}
 
-The **`height`** CSS property specifies the height of an element. By default, the property defines the height of the [content area](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#content_area). If {{cssxref("box-sizing")}} is set to `border-box`, however, it instead determines the height of the [border area](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#border_area).
+The **`height`** [CSS](/en-US/docs/Web/CSS) property specifies the height of an element. By default, the property defines the height of the [content area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content_area). If {{cssxref("box-sizing")}} is set to `border-box`, however, it instead determines the height of the [border area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#border_area).
 
 {{EmbedInteractiveExample("pages/css/height.html")}}
 
@@ -27,6 +19,10 @@ The {{cssxref("min-height")}} and {{cssxref("max-height")}} properties override 
 /* <length> values */
 height: 120px;
 height: 10em;
+height: 100vh;
+height: anchor-size(height);
+height: anchor-size(--myAnchor self-block, 250px);
+height: clamp(200px, anchor-size(width));
 
 /* <percentage> value */
 height: 75%;
@@ -34,8 +30,10 @@ height: 75%;
 /* Keyword values */
 height: max-content;
 height: min-content;
+height: fit-content;
 height: fit-content(20em);
 height: auto;
+height: minmax(min-content, anchor-size(width));
 
 /* Global values */
 height: inherit;
@@ -48,9 +46,9 @@ height: unset;
 ### Values
 
 - {{cssxref("&lt;length&gt;")}}
-  - : Defines the height as an absolute value.
+  - : Defines the height as a distance value.
 - {{cssxref("&lt;percentage&gt;")}}
-  - : Defines the height as a percentage of the containing block's height.
+  - : Defines the height as a percentage of the [containing block](/en-US/docs/Web/CSS/Containing_block)'s height.
 - `auto`
   - : The browser will calculate and select a height for the specified element.
 - `max-content`
@@ -58,11 +56,9 @@ height: unset;
 - `min-content`
   - : The intrinsic minimum height.
 - `fit-content`
-  - : Box will use the available space, but never more than `max-content`
+  - : Use the available space, but not more than [max-content](/en-US/docs/Web/CSS/max-content), i.e `min(max-content, max(min-content, stretch))`.
 - `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
-  - : Uses the fit-content formula with the available space replaced by the specified argument, i.e. `min(max-content, max(min-content, <length-percentage>))`
-- {{cssxref("clamp", "clamp()")}}
-  - : Enables selecting a middle value within a range of values between a defined minimum and maximum
+  - : Uses the fit-content formula with the available space replaced by the specified argument, i.e. `min(max-content, max(min-content, <length-percentage>))`.
 
 ## Accessibility concerns
 
@@ -89,9 +85,7 @@ Ensure that elements set with a `height` aren't truncated and/or don't obscure o
 <div id="taller">I'm 50 pixels tall.</div>
 <div id="shorter">I'm 25 pixels tall.</div>
 <div id="parent">
-  <div id="child">
-    I'm half the height of my parent.
-  </div>
+  <div id="child">I'm half the height of my parent.</div>
 </div>
 ```
 
@@ -136,8 +130,11 @@ div {
 
 ## See also
 
-- [The box model](/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [The box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - {{cssxref("width")}}
 - {{cssxref("box-sizing")}}
 - {{cssxref("min-height")}}, {{cssxref("max-height")}}
 - The mapped logical properties: {{cssxref("block-size")}}, {{cssxref("inline-size")}}
+- {{cssxref("anchor-size()")}}
+- {{cssxref("clamp", "clamp()")}}
+- {{cssxref("clamp", "minmax()")}}

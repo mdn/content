@@ -1,28 +1,15 @@
 ---
-title: PaymentAddress.postalCode
+title: "PaymentAddress: postalCode property"
+short-title: postalCode
 slug: Web/API/PaymentAddress/postalCode
 page-type: web-api-instance-property
-tags:
-  - API
-  - Address
-  - PIN
-  - PIN Code
-  - Payment Request
-  - Payment Request API
-  - PaymentRequest
-  - Post Code
-  - Postal Code
-  - Property
-  - Read-only
-  - Reference
-  - ZIP
-  - ZIP Code
-  - payment
-  - paymentAddress
-  - postalCode
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.PaymentAddress.postalCode
 ---
-{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
+
+{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`postalCode`** read-only property of the
 {{domxref('PaymentAddress')}} interface returns a string containing a code used by a

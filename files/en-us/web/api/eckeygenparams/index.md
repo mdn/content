@@ -2,19 +2,14 @@
 title: EcKeyGenParams
 slug: Web/API/EcKeyGenParams
 page-type: web-api-interface
-tags:
-  - API
-  - Dictionary
-  - EcKeyGenParams
-  - Reference
-  - Web Crypto API
 spec-urls: https://w3c.github.io/webcrypto/#dfn-EcKeyGenParams
 ---
+
 {{ APIRef("Web Crypto API") }}
 
 The **`EcKeyGenParams`** dictionary of the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) represents the object that should be passed as the `algorithm` parameter into {{domxref("SubtleCrypto.generateKey()")}}, when generating any elliptic-curve-based key pair: that is, when the algorithm is identified as either of [ECDSA](/en-US/docs/Web/API/SubtleCrypto/sign#ecdsa) or [ECDH](/en-US/docs/Web/API/SubtleCrypto/deriveKey#ecdh).
 
-## Properties
+## Instance properties
 
 - `name`
   - : A string. This should be set to `ECDSA` or `ECDH`, depending on the algorithm you want to use.

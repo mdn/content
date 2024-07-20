@@ -2,14 +2,9 @@
 title: TextEncoderStream
 slug: Web/API/TextEncoderStream
 page-type: web-api-interface
-tags:
-  - API
-  - Interface
-  - Encoding
-  - Reference
-  - TextEncoderStream
 browser-compat: api.TextEncoderStream
 ---
+
 {{APIRef("Encoding API")}}
 
 The **`TextEncoderStream`** interface of the {{domxref('Encoding API','','',' ')}} converts a stream of strings into bytes in the UTF-8 encoding. It is the streaming equivalent of {{domxref("TextEncoder")}}.
@@ -19,7 +14,7 @@ The **`TextEncoderStream`** interface of the {{domxref('Encoding API','','',' ')
 - {{domxref("TextEncoderStream.TextEncoderStream","TextEncoderStream()")}}
   - : Creates a new `TextEncoderStream` object.
 
-## Properties
+## Instance properties
 
 - {{DOMxRef("TextEncoderStream.encoding")}} {{ReadOnlyInline}}
   - : Always returns "`utf-8`".

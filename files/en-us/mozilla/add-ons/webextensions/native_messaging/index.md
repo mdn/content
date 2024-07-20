@@ -1,16 +1,16 @@
 ---
 title: Native messaging
 slug: Mozilla/Add-ons/WebExtensions/Native_messaging
-tags:
-  - WebExtensions
+page-type: guide
 ---
+
 {{AddonSidebar}}
 
 **Native messaging** enables an extension to exchange messages with a native application, installed on the user's computer. The native messaging serves the extensions without additional accesses over the web.
 
 Password managers: The native application manages, stores, and encrypts passwords. Then the native application communicates with the extension to populate web forms.
 
-Native messaging also enables extensions to access resources that are not accessible through WebExtension APIs (e.g, particular hardware).
+Native messaging also enables extensions to access resources that are not accessible through WebExtension APIs (e.g., particular hardware).
 
 The native application is not installed or managed by the browser. The native application is installed, using the underlying operating system's installation machinery. Create a JSON file called the "host manifest" or "app manifest". Install the JSON file in a defined location. The app manifest file will describe how the browser can connect to the native application.
 
@@ -18,14 +18,14 @@ The extension must request the `"nativeMessaging"` [permission](/en-US/docs/Mozi
 
 After installing, the extension can exchange JSON messages with the native application. Use a set of functions in the {{WebExtAPIRef("runtime")}} API. On the native app side, messages are received using standard input (`stdin`) and sent using standard output (`stdout`).
 
-![](native-messaging.png)
+![Application flow: the native app JSON file resides on the users computer, providing resource information to the native application. The read and write functions of the native application interact with the browser extension's runtime events.](native-messaging.png)
 
 Support for native messaging in extensions is mostly compatible with Chrome, with two main differences:
 
 - The app manifest lists `allowed_extensions` as an array of app IDs, while Chrome lists `allowed_origins`, as an array of `"chrome-extension"` URLs.
 - The app manifest is stored in a different location [compared to Chrome](https://developer.chrome.com/docs/apps/nativeMessaging/#native-messaging-host-location).
 
-There's a complete example in the ["`native-messaging`" directory](https://github.com/mdn/webextensions-examples/tree/master/native-messaging) of the `"webextensions-examples"` repository on GitHub. Most example code in this article is taken from that example.
+There's a complete example in the ["`native-messaging`" directory](https://github.com/mdn/webextensions-examples/tree/main/native-messaging) of the `"webextensions-examples"` repository on GitHub. Most example code in this article is taken from that example.
 
 ## Setup
 
@@ -40,7 +40,6 @@ Example `manifest.json` file:
 
 ```json
 {
-
   "description": "Native messaging example add-on",
   "manifest_version": 2,
   "name": "Native messaging example",
@@ -65,7 +64,6 @@ Example `manifest.json` file:
   },
 
   "permissions": ["nativeMessaging"]
-
 }
 ```
 
@@ -89,7 +87,7 @@ For example, here's a manifest for the `"ping_pong"` native application:
   "description": "Example host for native messaging",
   "path": "/path/to/native-messaging/app/ping_pong.py",
   "type": "stdio",
-  "allowed_extensions": [ "ping_pong@example.org" ]
+  "allowed_extensions": ["ping_pong@example.org"]
 }
 ```
 
@@ -111,7 +109,7 @@ In the example above, the native application is a Python script. It can be diffi
   "description": "Example host for native messaging",
   "path": "c:\\path\\to\\native-messaging\\app\\ping_pong_win.bat",
   "type": "stdio",
-  "allowed_extensions": [ "ping_pong@example.org" ]
+  "allowed_extensions": ["ping_pong@example.org"]
 }
 ```
 
@@ -129,15 +127,12 @@ python -u "c:\\path\\to\\native-messaging\\app\\ping_pong.py"
 
 The browser finds the extension based on registry keys which are located in a specific location. You need to add them either programmatically with your final application or manually if you are using the example from GitHub. For more details, refer to [Manifest location](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#manifest_location).
 
-Following with the `ping_pong` example, if using Firefox (see [this page for Chrome](https://developer.chrome.com/docs/apps/nativeMessaging/#native-messaging-host-location)), two registry entries should be created for the messaging to work:
+Following with the `ping_pong` example, if using Firefox (see [this page for Chrome](https://developer.chrome.com/docs/apps/nativeMessaging/#native-messaging-host-location)), one of the two registry entries should be created for the messaging to work:
 
 - `HKEY_CURRENT_USER\Software\Mozilla\NativeMessagingHosts\ping_pong`
-
-  - The default value for this key should be the path to the _application_ manifest: ex. `C:\Users\<myusername>\webextensions-examples\native-messaging\app\ping_pong.json`
-
 - `HKEY_LOCAL_MACHINE\Software\Mozilla\NativeMessagingHosts\ping_pong`
 
-  - Idem, the default value for this key should be the path to the application manifest.
+The default value for the key should be the path to the _application_ manifest: ex. `C:\Users\<myusername>\webextensions-examples\native-messaging\app\ping_pong.json`.
 
 > **Note:** If you base your work on the example located on GitHub, please read [this part of the readme](https://github.com/SphinxKnight/webextensions-examples/tree/master/native-messaging#windows-setup) and check the output of `check_config_win.py` before installing the WebExtension on your browser.
 
@@ -224,9 +219,7 @@ On a click on the browser action, send the app a message.
 */
 browser.browserAction.onClicked.addListener(() => {
   console.log("Sending:  ping");
-  let sending = browser.runtime.sendNativeMessage(
-    "ping_pong",
-    "ping");
+  let sending = browser.runtime.sendNativeMessage("ping_pong", "ping");
   sending.then(onResponse, onError);
 });
 ```
@@ -239,69 +232,51 @@ Each message is serialized using JSON, UTF-8 encoded and is preceded with an uns
 
 The maximum size of a single message from the application is 1 MB. The maximum size of a message sent to the application is 4 GB.
 
-You can quickly get started sending and receiving messages with this NodeJS code:
+You can quickly get started sending and receiving messages with this NodeJS code, `nm_nodejs.mjs`:
 
 ```js
-#!/usr/local/bin/node
+#!/usr/bin/env -S /full/path/to/node
 
-(() => {
+import fs from "node:fs/promises";
 
-    let payloadSize = null;
+async function getMessage() {
+  const header = new Uint32Array(1);
+  await readFullAsync(1, header);
+  const message = await readFullAsync(header[0]);
+  return message;
+}
 
-    // A queue to store the chunks as we read them from stdin.
-    // This queue can be flushed when `payloadSize` data has been read
-    let chunks = [];
+async function readFullAsync(length, buffer = new Uint8Array(65536)) {
+  const data = [];
+  while (data.length < length) {
+    const input = await fs.open("/dev/stdin");
+    const { bytesRead } = await input.read({ buffer });
+    await input.close();
+    if (bytesRead === 0) {
+      break;
+    }
+    data.push(...buffer.subarray(0, bytesRead));
+  }
+  return new Uint8Array(data);
+}
 
-    // Only read the size once for each payload
-    const sizeHasBeenRead = () => Boolean(payloadSize);
+async function sendMessage(message) {
+  const header = new Uint32Array([message.length]);
+  const stdout = await fs.open(`/proc/${process.pid}/fd/1`, "w");
+  await stdout.write(header);
+  await stdout.write(message);
+  await stdout.close();
+}
 
-    // All the data has been read, reset everything for the next message
-    const flushChunksQueue = () => {
-        payloadSize = null;
-        chunks.splice(0);
-    };
-
-    const processData = () => {
-        // Create one big buffer with all the chunks
-        const stringData = Buffer.concat(chunks);
-
-        // The browser will emit the size as a header of the payload,
-        // if it hasn't been read yet, do it.
-        // The next time we'll need to read the payload size is when all of the data
-        // of the current payload has been read (ie. data.length >= payloadSize + 4)
-        if (!sizeHasBeenRead()) {
-            payloadSize = stringData.readUInt32LE(0);
-        }
-
-        // If the data we have read so far is >= to the size advertised in the header,
-        // it means we have all of the data sent.
-        // We add 4 here because that's the size of the bytes that old the payloadSize
-        if (stringData.length >= (payloadSize + 4)) {
-            // Remove the header
-            const contentWithoutSize = stringData.slice(4, (payloadSize + 4));
-
-            // Reset the read size and the queued chunks
-            flushChunksQueue();
-
-            const json = JSON.parse(contentWithoutSize);
-            // Do something with the data…
-         }
-    };
-
-    process.stdin.on('readable', () => {
-        // A temporary variable holding the nodejs.Buffer of each
-        // chunk of data read off stdin
-        let chunk = null;
-
-        // Read all of the available data
-        while ((chunk = process.stdin.read()) !== null) {
-            chunks.push(chunk);
-        }
-
-        processData();
-
-    });
-})();
+while (true) {
+  try {
+    const message = await getMessage();
+    await sendMessage(message);
+  } catch (e) {
+    console.error(e);
+    process.exit(1);
+  }
+}
 ```
 
 Here's another example written in Python. It listens for messages from the extension. Note that the file has to be executable on Linux. If the message is `"ping"`, then it responds with a message `"pong"`.
@@ -309,7 +284,7 @@ Here's another example written in Python. It listens for messages from the exten
 This is the Python 2 version:
 
 ```python
-#!/usr/bin/python -u
+#!/usr/bin/env -S python2 -u
 
 # Note that running python with the `-u` flag is required on Windows,
 # in order to ensure that stdin and stdout are opened in binary, rather
@@ -330,7 +305,12 @@ def get_message():
 
 # Encode a message for transmission, given its content.
 def encode_message(message_content):
-    encoded_content = json.dumps(message_content)
+    # https://docs.python.org/3/library/json.html#basic-usage
+    # To get the most compact JSON representation, you should specify
+    # (',', ':') to eliminate whitespace.
+    # We want the most compact representation because the browser rejects
+    # messages that exceed 1 MB.
+    encoded_content = json.dumps(message_content, separators=(',', ':'))
     encoded_length = struct.pack('=I', len(encoded_content))
     return {'length': encoded_length, 'content': encoded_content}
 
@@ -349,43 +329,46 @@ while True:
 In Python 3, the received binary data must be decoded into a string. The content to be sent back to the addon must be encoded into binary data using a struct:
 
 ```python
-#!/usr/bin/python -u
+#!/usr/bin/env -S python3 -u
 
 # Note that running python with the `-u` flag is required on Windows,
 # in order to ensure that stdin and stdout are opened in binary, rather
 # than text, mode.
 
-import json
 import sys
+import json
 import struct
 
 # Read a message from stdin and decode it.
-def get_message():
-    raw_length = sys.stdin.buffer.read(4)
-
-    if not raw_length:
+def getMessage():
+    rawLength = sys.stdin.buffer.read(4)
+    if len(rawLength) == 0:
         sys.exit(0)
-    message_length = struct.unpack('=I', raw_length)[0]
-    message = sys.stdin.buffer.read(message_length).decode("utf-8")
+    messageLength = struct.unpack('@I', rawLength)[0]
+    message = sys.stdin.buffer.read(messageLength).decode('utf-8')
     return json.loads(message)
 
-# Encode a message for transmission, given its content.
-def encode_message(message_content):
-    encoded_content = json.dumps(message_content).encode("utf-8")
-    encoded_length = struct.pack('=I', len(encoded_content))
-    #  use struct.pack("10s", bytes), to pack a string of the length of 10 characters
-    return {'length': encoded_length, 'content': struct.pack(str(len(encoded_content))+"s",encoded_content)}
+# Encode a message for transmission,
+# given its content.
+def encodeMessage(messageContent):
+    # https://docs.python.org/3/library/json.html#basic-usage
+    # To get the most compact JSON representation, you should specify
+    # (',', ':') to eliminate whitespace.
+    # We want the most compact representation because the browser rejects # messages that exceed 1 MB.
+    encodedContent = json.dumps(messageContent, separators=(',', ':')).encode('utf-8')
+    encodedLength = struct.pack('@I', len(encodedContent))
+    return {'length': encodedLength, 'content': encodedContent}
 
-# Send an encoded message to stdout.
-def send_message(encoded_message):
-    sys.stdout.buffer.write(encoded_message['length'])
-    sys.stdout.buffer.write(encoded_message['content'])
+# Send an encoded message to stdout
+def sendMessage(encodedMessage):
+    sys.stdout.buffer.write(encodedMessage['length'])
+    sys.stdout.buffer.write(encodedMessage['content'])
     sys.stdout.buffer.flush()
 
 while True:
-    message = get_message()
-    if message == "ping":
-        send_message(encode_message("pong"))
+    receivedMessage = getMessage()
+    if receivedMessage == "ping":
+        sendMessage(encodeMessage("pong"))
 ```
 
 ## Closing the native app
@@ -395,7 +378,7 @@ If you connected to the native application using `runtime.connectNative()`, then
 To close the native application:
 
 - On \*nix systems like macOS and Linux, the browser sends `SIGTERM` to the native application, then `SIGKILL` after the application has had a chance to exit gracefully. These signals propagate to any subprocesses unless they break away into a new process group.
-- On Windows, the browser puts the native application's process into a [Job object](https://msdn.microsoft.com/library/windows/desktop/ms684161(v=vs.85).aspx) and kills the job. If the native application launches additional processes and wants them to remain open after the native application is killed, then the native application must launch the additional process with the [`CREATE_BREAKAWAY_FROM_JOB`](<https://msdn.microsoft.com/library/windows/desktop/ms684863(v=vs.85).aspx>) flag, such as by using `CreateProcess`.
+- On Windows, the browser puts the native application's process into a [Job object](<https://msdn.microsoft.com/library/windows/desktop/ms684161(v=vs.85).aspx>) and kills the job. If the native application launches additional processes and wants them to remain open after the native application is killed, then the native application must launch the additional process with the [`CREATE_BREAKAWAY_FROM_JOB`](<https://msdn.microsoft.com/library/windows/desktop/ms684863(v=vs.85).aspx>) flag, such as by using `CreateProcess`.
 
 ## Troubleshooting
 
@@ -403,7 +386,7 @@ If something goes wrong, check the [browser console](https://extensionworkshop.c
 
 If you haven't managed to run the application, you should see an error message giving you a clue about the problem.
 
-```
+```plain
 "No such native application <name>"
 ```
 
@@ -413,19 +396,19 @@ If you haven't managed to run the application, you should see an error message g
 - Windows: check that the registry key is in the correct place, and that its name matches the name in the app manifest.
 - Windows: check that the path given in the registry key points to the app manifest.
 
-  ```
+  ```plain
   "Error: Invalid application <name>"
   ```
 
 - Check that the application's name contains no invalid characters.
 
-  ```
+  ```plain
   "'python' is not recognized as an internal or external command, ..."
   ```
 
 - Windows: if your application is a Python script, check that you have Python installed and have your path set up for it.
 
-  ```
+  ```plain
   "File at path <path> does not exist, or is not executable"
   ```
 
@@ -435,19 +418,19 @@ If you haven't managed to run the application, you should see an error message g
 - Check that the app is at the location pointed to by the `"path"` property in the app's manifest.
 - Check that the app is executable.
 
-  ```
+  ```plain
   "This extension does not have permission to use native application <name>"
   ```
 
 - Check that the `"allowed_extensions"` key in the app manifest contains the add-on's ID.
 
-  ```
+  ```plain
       "TypeError: browser.runtime.connectNative is not a function"
   ```
 
 - Check that the extension has the `"nativeMessaging"` permission.
 
-  ```
+  ```plain
   "[object Object]       NativeMessaging.jsm:218"
   ```
 

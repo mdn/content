@@ -1,14 +1,12 @@
 ---
-title: 'CSP: report-uri'
+title: "CSP: report-uri"
 slug: Web/HTTP/Headers/Content-Security-Policy/report-uri
-tags:
-  - CSP
-  - Directive
-  - HTTP
-  - Reference
-  - Security
+page-type: http-csp-directive
+status:
+  - deprecated
 browser-compat: http.headers.Content-Security-Policy.report-uri
 ---
+
 {{HTTPSidebar}}{{deprecated_header}}
 
 The deprecated HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
@@ -16,18 +14,14 @@ The deprecated HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
 attempts to violate the Content Security Policy. These violation reports consist of JSON
 documents sent via an HTTP POST request to the specified URI.
 
-> **Warning:** Though the {{CSP("report-to")}} directive is intended to replace the deprecated **`report-uri`** directive,
-> {{CSP("report-to")}} isn't supported in most browsers yet.
-> So for compatibility with current browsers
-> while also adding forward compatibility when browsers get {{CSP("report-to")}} support,
-> you can specify both **`report-uri`** and {{CSP("report-to")}}:
+> **Warning:** Though the {{CSP("report-to")}} directive is intended to replace the deprecated **`report-uri`** directive, {{CSP("report-to")}} is not yet supported in all browsers.
+> For compatibility, you can specify both **`report-uri`** and {{CSP("report-to")}}:
 >
-> ```html
-> Content-Security-Policy: …; report-uri https://endpoint.com; report-to groupname
+> ```http
+> Content-Security-Policy: …; report-uri https://example.com/endpoint; report-to csp-endpoint
 > ```
 >
-> In browsers that support {{CSP("report-to")}},
-> the **`report-uri`** directive will be ignored.
+> In browsers that support {{CSP("report-to")}}, the **`report-uri`** directive is ignored.
 
 The directive has no effect in and of itself, but only gains meaning in combination
 with other directives.
@@ -53,7 +47,7 @@ with other directives.
 
 ## Syntax
 
-```
+```http
 Content-Security-Policy: report-uri <uri>;
 Content-Security-Policy: report-uri <uri> <uri>;
 ```
@@ -66,7 +60,7 @@ Content-Security-Policy: report-uri <uri> <uri>;
 See {{HTTPHeader("Content-Security-Policy-Report-Only")}} for more information and
 examples.
 
-```
+```http
 Content-Security-Policy: default-src https:; report-uri /csp-violation-report-endpoint/
 ```
 

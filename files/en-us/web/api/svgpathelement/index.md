@@ -2,14 +2,9 @@
 title: SVGPathElement
 slug: Web/API/SVGPathElement
 page-type: web-api-interface
-tags:
-  - API
-  - NeedsExample
-  - Reference
-  - SVG
-  - SVG DOM
 browser-compat: api.SVGPathElement
 ---
+
 {{APIRef("SVG")}}
 
 The **`SVGPathElement`** interface corresponds to the {{SVGElement("path")}} element.
@@ -18,11 +13,11 @@ The **`SVGPathElement`** interface corresponds to the {{SVGElement("path")}} ele
 
 > **Note:** In SVG 2 the `getPathSegAtLength()` and `createSVGPathSeg*` methods were removed and the `pathLength` property and the `getTotalLength()` and `getPointAtLength()` methods were moved to {{domxref("SVGGeometryElement")}}.
 
-## Properties
+## Instance properties
 
 _This interface inherits properties from its parent, {{domxref("SVGGeometryElement")}}._
 
-## Methods
+## Instance methods
 
 _This interface also inherits methods from its parent, {{domxref("SVGGeometryElement")}}._
 

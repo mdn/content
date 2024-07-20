@@ -1,16 +1,9 @@
 ---
 title: Implementing image sprites in CSS
-slug: Web/CSS/CSS_Images/Implementing_image_sprites_in_CSS
-tags:
-  - Advanced
-  - CSS
-  - CSS Images
-  - Graphics
-  - Guide
-  - NeedsContent
-  - Sprites
-  - Web
+slug: Web/CSS/CSS_images/Implementing_image_sprites_in_CSS
+page-type: guide
 ---
+
 {{CSSRef}}
 
 **Image sprites** are used in numerous web apps where multiple images are used. Rather than include each image as a separate image file, it is much more memory- and bandwidth-friendly to send them as a single image; using background position as a way to distinguish between individual images in the same image file, so the number of HTTP requests is reduced.

@@ -1,20 +1,16 @@
 ---
 title: 'ReferenceError: assignment to undeclared variable "x"'
 slug: Web/JavaScript/Reference/Errors/Undeclared_var
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - ReferenceError
-  - Strict Mode
+page-type: javascript-error
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)-only exception "Assignment to undeclared variable" occurs when the value has been assigned to an undeclared variable.
 
 ## Message
 
-```
+```plain
 ReferenceError: x is not defined (V8-based)
 ReferenceError: assignment to undeclared variable x (Firefox)
 ReferenceError: Can't find variable: x (Safari)
@@ -52,7 +48,7 @@ In this case, the variable "bar" is an undeclared variable.
 
 ```js example-bad
 function foo() {
-  'use strict';
+  "use strict";
   bar = true;
 }
 foo(); // ReferenceError: assignment to undeclared variable bar
@@ -64,7 +60,7 @@ To make "bar" a declared variable, you can add a [`let`](/en-US/docs/Web/JavaScr
 
 ```js example-good
 function foo() {
-  'use strict';
+  "use strict";
   const bar = true;
 }
 foo();

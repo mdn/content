@@ -1,22 +1,20 @@
 ---
-title: SerialPort.open()
+title: "SerialPort: open() method"
+short-title: open()
 slug: Web/API/SerialPort/open
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - open
-  - SerialPort
+status:
+  - experimental
 browser-compat: api.SerialPort.open
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Serial API")}}
+
+{{SecureContext_Header}}{{APIRef("Web Serial API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`open()`** method of the {{domxref("SerialPort")}} interface returns a {{jsxref("Promise")}} that resolves when the port is opened. By default the port is opened with 8 data bits, 1 stop bit and no parity checking. The `baudRate` parameter is required.
 
 ## Syntax
 
-```js
+```js-nolint
 open(options)
 ```
 
@@ -28,15 +26,15 @@ open(options)
 
     - `baudRate`
       - : A positive, non-zero value indicating the baud rate at which serial communication should be established.
-    - `bufferSize` {{optional_inline}}
+    - `bufferSize` {{Optional_Inline}}
       - : An unsigned long integer indicating the size of the read and write buffers that are to be established. If not passed, defaults to 255.
-    - `dataBits` {{optional_inline}}
+    - `dataBits` {{Optional_Inline}}
       - : An integer value of 7 or 8 indicating the number of data bits per frame. If not passed, defaults to 8.
-    - `flowControl` {{optional_inline}}
-      - : The flow control type, either `"none"` or `"hardware"`. The default value is `"none:`.
-    - `parity` {{optional_inline}}
+    - `flowControl` {{Optional_Inline}}
+      - : The flow control type, either `"none"` or `"hardware"`. The default value is `"none"`.
+    - `parity` {{Optional_Inline}}
       - : The parity mode, either `"none"`, `"even"`, or `"odd"`. The default value is `"none"`.
-    - `stopBits` {{optional_inline}}
+    - `stopBits` {{Optional_Inline}}
       - : An integer value of 1 or 2 indicating the number of stop bits at the end of the frame. If not passed, defaults to 1.
 
 ### Return value

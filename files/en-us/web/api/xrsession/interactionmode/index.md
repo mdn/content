@@ -1,26 +1,16 @@
 ---
-title: XRSession.interactionMode
+title: "XRSession: interactionMode property"
+short-title: interactionMode
 slug: Web/API/XRSession/interactionMode
 page-type: web-api-instance-property
-tags:
-  - API
-  - AR
-  - Property
-  - Read-only
-  - Reality
-  - Reference
-  - VR
-  - Virtual
-  - WebXR Augmented Reality
-  - WebXR Augmented Reality API
-  - XRSession
-  - augmented
-  - interactionMode
+status:
+  - experimental
 browser-compat: api.XRSession.interactionMode
 ---
-{{APIRef("WebXR Device API")}}
 
-The {{domxref("XRSession")}} interface's *read-only* **`interactionMode`** property
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+
+The {{domxref("XRSession")}} interface's _read-only_ **`interactionMode`** property
 describes the best space (according to the user agent) for the application to draw an interactive UI for the current session.
 
 ## Value

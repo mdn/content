@@ -1,15 +1,11 @@
 ---
-title: CanvasRenderingContext2D.save()
+title: "CanvasRenderingContext2D: save() method"
+short-title: save()
 slug: Web/API/CanvasRenderingContext2D/save
 page-type: web-api-instance-method
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Method
-  - Reference
 browser-compat: api.CanvasRenderingContext2D.save
 ---
+
 {{APIRef}}
 
 The
@@ -37,17 +33,16 @@ The drawing state that gets saved onto a stack consists of:
   {{domxref("CanvasRenderingContext2D.shadowOffsetY", "shadowOffsetY")}},
   {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}},
   {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}},
-  {{domxref("CanvasRenderingContext2D.globalCompositeOperation",
-    "globalCompositeOperation")}}, {{domxref("CanvasRenderingContext2D.font", "font")}},
+  {{domxref("CanvasRenderingContext2D.globalCompositeOperation", "globalCompositeOperation")}},
+  {{domxref("CanvasRenderingContext2D.font", "font")}},
   {{domxref("CanvasRenderingContext2D.textAlign", "textAlign")}},
   {{domxref("CanvasRenderingContext2D.textBaseline", "textBaseline")}},
   {{domxref("CanvasRenderingContext2D.direction", "direction")}},
-  {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled",
-    "imageSmoothingEnabled")}}.
+  {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 save()
 ```
 
@@ -63,9 +58,9 @@ None ({{jsxref("undefined")}}).
 
 ### Saving the drawing state
 
-This example uses the `save()` method to save the default state and
+This example uses the `save()` method to save the current state and
 `restore()` to restore it later, so that you are able to draw a rect with the
-default state later.
+current state later.
 
 #### HTML
 
@@ -76,16 +71,16 @@ default state later.
 #### JavaScript
 
 ```js
-const canvas = document.getElementById('canvas');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
-// Save the default state
+// Save the current state
 ctx.save();
 
-ctx.fillStyle = 'green';
+ctx.fillStyle = "green";
 ctx.fillRect(10, 10, 100, 100);
 
-// Restore the default state
+// Restore to the state saved by the most recent call to save()
 ctx.restore();
 
 ctx.fillRect(150, 40, 100, 100);

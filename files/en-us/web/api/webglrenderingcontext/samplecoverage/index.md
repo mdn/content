@@ -1,15 +1,11 @@
 ---
-title: WebGLRenderingContext.sampleCoverage()
+title: "WebGLRenderingContext: sampleCoverage() method"
+short-title: sampleCoverage()
 slug: Web/API/WebGLRenderingContext/sampleCoverage
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.sampleCoverage
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.sampleCoverage()`** method of the
@@ -18,7 +14,7 @@ parameters for anti-aliasing effects.
 
 ## Syntax
 
-```js
+```js-nolint
 sampleCoverage(value, invert)
 ```
 
@@ -51,7 +47,7 @@ To check the sample coverage values, query the `SAMPLE_COVERAGE_VALUE` and
 `SAMPLE_COVERAGE_INVERT` constants.
 
 ```js
-gl.getParameter(gl.SAMPLE_COVERAGE_VALUE);  // 0.5
+gl.getParameter(gl.SAMPLE_COVERAGE_VALUE); // 0.5
 gl.getParameter(gl.SAMPLE_COVERAGE_INVERT); // false
 ```
 

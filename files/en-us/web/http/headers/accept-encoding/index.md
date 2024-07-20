@@ -1,17 +1,13 @@
 ---
 title: Accept-Encoding
 slug: Web/HTTP/Headers/Accept-Encoding
-tags:
-  - Content Negotiation
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Request header
+page-type: http-header
 browser-compat: http.headers.Accept-Encoding
 ---
+
 {{HTTPSidebar}}
 
-The **`Accept-Encoding`** request HTTP header indicates the content encoding (usually a compression algorithm) that the client can understand.  The server uses [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) to select one of the proposals and informs the client of that choice with the {{HTTPHeader("Content-Encoding")}} response header.
+The **`Accept-Encoding`** request HTTP header indicates the content encoding (usually a compression algorithm) that the client can understand. The server uses [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) to select one of the proposals and informs the client of that choice with the {{HTTPHeader("Content-Encoding")}} response header.
 
 Even if both the client and the server support the same compression algorithms, the server may choose not to compress the body of a response if the `identity` value is also acceptable. Two common cases lead to this:
 
@@ -22,8 +18,8 @@ As long as the `identity;q=0` or `*;q=0` directives do not explicitly forbid the
 
 > **Note:**
 >
-> - An IANA registry maintains [a complete list of official content encodings](https://www.iana.org/assignments/http-parameters/http-parameters.xml#http-parameters-1).
-> - Two other content encodings, namely `bzip` and `bzip2`, are sometimes used, These non-standard encodings implement the algorithm that these two UNIX programs use. Note that `bzip` was discontinued due to patent licensing issues.
+> - An IANA registry maintains [a list of official content encodings](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#content-coding).
+> - The `bzip` and `bzip2` encodings are non-standard, but may be used in some cases, including legacy support.
 
 <table class="properties">
   <tbody>
@@ -40,15 +36,16 @@ As long as the `identity;q=0` or `*;q=0` directives do not explicitly forbid the
 
 ## Syntax
 
-```
+```http
 Accept-Encoding: gzip
 Accept-Encoding: compress
 Accept-Encoding: deflate
 Accept-Encoding: br
+Accept-Encoding: zstd
 Accept-Encoding: identity
 Accept-Encoding: *
 
-// Multiple algorithms, weighted with the {{Glossary("Quality Values", "quality value")}} syntax:
+// Multiple algorithms, weighted with the quality value syntax:
 Accept-Encoding: deflate, gzip;q=1.0, *;q=0.5
 ```
 
@@ -62,6 +59,8 @@ Accept-Encoding: deflate, gzip;q=1.0, *;q=0.5
   - : A compression format that uses the [zlib](https://en.wikipedia.org/wiki/Zlib) structure with the [_deflate_](https://en.wikipedia.org/wiki/DEFLATE) compression algorithm.
 - `br`
   - : A compression format that uses the [Brotli](https://en.wikipedia.org/wiki/Brotli) algorithm.
+- `zstd`
+  - : A compression format that uses the [Zstandard](https://en.wikipedia.org/wiki/Zstd) algorithm.
 - `identity`
   - : Indicates the identity function (that is, without modification or compression). This value is always considered as acceptable, even if omitted.
 - `*`
@@ -71,10 +70,12 @@ Accept-Encoding: deflate, gzip;q=1.0, *;q=0.5
 
 ## Examples
 
-```
+```http
 Accept-Encoding: gzip
 
 Accept-Encoding: gzip, compress, br
+
+Accept-Encoding: gzip, compress, br, zstd
 
 Accept-Encoding: br;q=1.0, gzip;q=0.8, *;q=0.1
 ```
@@ -92,3 +93,6 @@ Accept-Encoding: br;q=1.0, gzip;q=0.8, *;q=0.1
 - HTTP [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation)
 - A header with the result of the content negotiation: {{HTTPHeader("Content-Encoding")}}
 - Other similar headers: {{HTTPHeader("TE")}}, {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}}
+- {{Glossary("Brotli compression")}}
+- {{Glossary("GZip compression")}}
+- {{Glossary("Zstandard compression")}}

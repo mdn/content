@@ -1,17 +1,13 @@
 ---
-title: Element.scrollTopMax
+title: "Element: scrollTopMax property"
+short-title: scrollTopMax
 slug: Web/API/Element/scrollTopMax
 page-type: web-api-instance-property
-tags:
-  - API
-  - CSSOM View
-  - Element
-  - Non-standard
-  - Property
-  - Read-only
-  - Reference
+status:
+  - non-standard
 browser-compat: api.Element.scrollTopMax
 ---
+
 {{APIRef("DOM")}}{{Non-standard_header}}
 
 The **`Element.scrollTopMax`** read-only property returns a

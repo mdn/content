@@ -1,21 +1,14 @@
 ---
-title: Gamepad.buttons
+title: "Gamepad: buttons property"
+short-title: buttons
 slug: Web/API/Gamepad/buttons
 page-type: web-api-instance-property
-tags:
-  - API
-  - Gamepad API
-  - Games
-  - NeedsBetterSpecLink
-  - NeedsMarkupWork
-  - Property
-  - Reference
 browser-compat: api.Gamepad.buttons
 ---
-{{APIRef("Gamepad API")}}
 
-The **`Gamepad.buttons`** property of the {{domxref("Gamepad")
-  }} interface returns an array of {{domxref("gamepadButton")}} objects representing the
+{{APIRef("Gamepad API")}}{{SecureContext_Header}}
+
+The **`Gamepad.buttons`** property of the {{domxref("Gamepad")}} interface returns an array of {{domxref("gamepadButton")}} objects representing the
 buttons present on the device.
 
 Each entry in the array is 0 if the button is not pressed, and non-zero (typically 1.0)
@@ -79,12 +72,8 @@ function gameLoop() {
   ball.style.top = `${b * 2}px`;
 
   const start = rAF(gameLoop);
-};
+}
 ```
-
-## Value
-
-An array of {{domxref("gamepadButton")}} objects.
 
 ## Specifications
 

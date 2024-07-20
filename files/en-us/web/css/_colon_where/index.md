@@ -1,41 +1,27 @@
 ---
-title: ':where()'
+title: ":where()"
 slug: Web/CSS/:where
-tags:
-  - ':where'
-  - CSS
-  - NeedsBrowserCompatibility
-  - NeedsContent
-  - NeedsExample
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Selectors
-  - Web
+page-type: css-pseudo-class
 browser-compat: css.selectors.where
 ---
+
 {{CSSRef}}
 
 The **`:where()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) function takes a selector list as its argument, and selects any element that can be selected by one of the selectors in that list.
 
-```css
-/* Selects any paragraph inside a header, main
-   or footer element that is being hovered */
-:where(header, main, footer) p:hover {
-  color: red;
-  cursor: pointer;
-}
+The difference between `:where()` and {{CSSxRef(":is", ":is()")}} is that `:where()` always has 0 [specificity](/en-US/docs/Web/CSS/Specificity), whereas `:is()` takes on the specificity of the most specific selector in its arguments.
 
-/* The above is equivalent to the following */
-header p:hover,
-main p:hover,
-footer p:hover {
-  color: red;
-  cursor: pointer;
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-where.html", "tabbed-shorter")}}
+
+## Syntax
+
+The `:where()` pseudo-class requires a [selector list](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#selector_list), a comma-separated list of one or more selectors, as its argument. The list must not contain a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements), but any other simple, compound, and complex selectors are allowed.
+
+```css-nolint
+:where(<complex-selector-list>) {
+  /* ... */
 }
 ```
-
-The difference between `:where()` and {{CSSxRef(":is", ":is()")}} is that `:where()` always has 0 [specificity](/en-US/docs/Web/CSS/Specificity), whereas `:is()` takes on the specificity of the most specific selector in its arguments.
 
 ### Forgiving Selector Parsing
 
@@ -52,7 +38,8 @@ In CSS when using a selector list, if any of the selectors are invalid then the 
 Will still parse correctly and match `:valid` even in browsers which don't support `:unsupported`, whereas:
 
 ```css
-:valid, :unsupported {
+:valid,
+:unsupported {
   /* … */
 }
 ```
@@ -71,30 +58,48 @@ Take the following HTML:
 <article>
   <h2>:is()-styled links</h2>
   <section class="is-styling">
-    <p>Here is my main content. This <a href="https://mozilla.org">contains a link</a>.
+    <p>
+      Here is my main content. This
+      <a href="https://mozilla.org">contains a link</a>.
+    </p>
   </section>
 
   <aside class="is-styling">
-    <p>Here is my aside content. This <a href="https://developer.mozilla.org">also contains a link</a>.
+    <p>
+      Here is my aside content. This
+      <a href="https://developer.mozilla.org">also contains a link</a>.
+    </p>
   </aside>
 
   <footer class="is-styling">
-    <p>This is my footer, also containing <a href="https://github.com/mdn">a link</a>.
+    <p>
+      This is my footer, also containing
+      <a href="https://github.com/mdn">a link</a>.
+    </p>
   </footer>
 </article>
 
 <article>
   <h2>:where()-styled links</h2>
   <section class="where-styling">
-    <p>Here is my main content. This <a href="https://mozilla.org">contains a link</a>.
+    <p>
+      Here is my main content. This
+      <a href="https://mozilla.org">contains a link</a>.
+    </p>
   </section>
 
   <aside class="where-styling">
-    <p>Here is my aside content. This <a href="https://developer.mozilla.org">also contains a link</a>.
+    <p>
+      Here is my aside content. This
+      <a href="https://developer.mozilla.org">also contains a link</a>.
+    </p>
   </aside>
 
   <footer class="where-styling">
-    <p>This is my footer, also containing <a href="https://github.com/mdn">a link</a>.
+    <p>
+      This is my footer, also containing
+      <a href="https://github.com/mdn">a link</a>.
+    </p>
   </footer>
 </article>
 ```
@@ -134,12 +139,6 @@ However, selectors inside `:where()` have specificity 0, so the orange footer li
 
 {{EmbedLiveSample('Examples', '100%', 600)}}
 
-## Syntax
-
-```
-:where( <complex-selector-list> )
-```
-
 ## Specifications
 
 {{Specifications}}
@@ -152,4 +151,4 @@ However, selectors inside `:where()` have specificity 0, so the orange footer li
 
 - {{CSSxRef(":is", ":is()")}}
 - [Selector list](/en-US/docs/Web/CSS/Selector_list)
-- [Web components](/en-US/docs/Web/Web_Components)
+- [Web components](/en-US/docs/Web/API/Web_components)

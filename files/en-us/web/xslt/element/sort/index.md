@@ -1,17 +1,14 @@
 ---
 title: <xsl:sort>
 slug: Web/XSLT/Element/sort
-tags:
-  - Element
-  - Reference
-  - XSLT
-  - sort
+page-type: xslt-element
 ---
-{{ XsltRef() }}
+
+{{XsltSidebar}}
 
 The `<xsl:sort>` element defines a sort key for nodes selected by `<xsl:apply-templates>` or `<xsl:for-each>` and determines the order in which they are processed.
 
-### Syntax
+## Syntax
 
 ```xml
 <xsl:sort
@@ -43,10 +40,10 @@ None.
 
 Subinstruction, always appears as a child of \<xsl:for-each>, where it must appear before the template proper or of \<xsl:apply-templates>.
 
-### Defined
+## Specifications
 
 XSLT, section10.
 
-### Gecko support
+## Gecko support
 
 Supported.

@@ -1,28 +1,12 @@
 ---
-title: XRReferenceSpaceEvent()
+title: "XRReferenceSpaceEvent: XRReferenceSpaceEvent() constructor"
+short-title: XRReferenceSpaceEvent()
 slug: Web/API/XRReferenceSpaceEvent/XRReferenceSpaceEvent
 page-type: web-api-constructor
-tags:
-  - API
-  - AR
-  - Constructor
-  - Events
-  - Mixed
-  - Reality
-  - Reference
-  - Reference Space
-  - VR
-  - Virtual
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRReferenceSpaceEvent
-  - augmented
-  - events
 browser-compat: api.XRReferenceSpaceEvent.XRReferenceSpaceEvent
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The **`XRReferenceSpaceEvent()`**
 constructor is used to create a new {{domxref("XRReferenceSpaceEvent")}} object, which
@@ -31,14 +15,14 @@ represents an event regarding the state of a WebXR reference space object,
 
 ## Syntax
 
-```js
+```js-nolint
 new XRReferenceSpaceEvent(type, options)
 ```
 
 ### Parameters
 
 - `type`
-  - :  A string with the name of the event.
+  - : A string with the name of the event.
     It is case-sensitive and browsers always set it to `reset`.
 - `options`
   - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:
@@ -58,7 +42,7 @@ This simple snippet calls the constructor to create a new reference space event 
 ```js
 let refSpaceEvent = new XRReferenceSpaceEvent("reset", {
   referenceSpace: myRefSpace,
-  transform: myTransform
+  transform: myTransform,
 });
 ```
 

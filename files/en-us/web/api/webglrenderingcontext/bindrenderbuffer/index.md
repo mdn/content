@@ -1,15 +1,11 @@
 ---
-title: WebGLRenderingContext.bindRenderbuffer()
+title: "WebGLRenderingContext: bindRenderbuffer() method"
+short-title: bindRenderbuffer()
 slug: Web/API/WebGLRenderingContext/bindRenderbuffer
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.bindRenderbuffer
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.bindRenderbuffer()`** method of
@@ -19,7 +15,7 @@ the [WebGL API](/en-US/docs/Web/API/WebGL_API) binds a given
 
 ## Syntax
 
-```js
+```js-nolint
 bindRenderbuffer(target, renderbuffer)
 ```
 
@@ -50,8 +46,8 @@ A `gl.INVALID_ENUM` error is thrown if `target` is not
 ### Binding a renderbuffer
 
 ```js
-const canvas = document.getElementById('canvas');
-const gl = canvas.getContext('webgl');
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
 const renderbuffer = gl.createRenderbuffer();
 
 gl.bindRenderbuffer(gl.RENDERBUFFER, renderbuffer);

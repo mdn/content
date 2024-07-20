@@ -1,22 +1,18 @@
 ---
-title: WebGLRenderingContext.drawArrays()
+title: "WebGLRenderingContext: drawArrays() method"
+short-title: drawArrays()
 slug: Web/API/WebGLRenderingContext/drawArrays
 page-type: web-api-instance-method
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
 browser-compat: api.WebGLRenderingContext.drawArrays
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.drawArrays()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) renders primitives from array data.
 
 ## Syntax
 
-```js
+```js-nolint
 drawArrays(mode, first, count)
 ```
 
@@ -71,12 +67,9 @@ gl.drawArrays(gl.POINTS, 0, 8);
 ## See also
 
 - {{domxref("WebGLRenderingContext.drawElements()")}}
-- {{domxref("ANGLE_instanced_arrays.drawArraysInstancedANGLE()",
-    "ext.drawArraysInstancedANGLE()")}}
-- {{domxref("ANGLE_instanced_arrays.drawElementsInstancedANGLE()",
-    "ext.drawElementsInstancedANGLE()")}}
-- {{domxref("ANGLE_instanced_arrays.vertexAttribDivisorANGLE()",
-    "ext.vertexAttribDivisorANGLE()")}}
+- {{domxref("ANGLE_instanced_arrays.drawArraysInstancedANGLE()", "ext.drawArraysInstancedANGLE()")}}
+- {{domxref("ANGLE_instanced_arrays.drawElementsInstancedANGLE()", "ext.drawElementsInstancedANGLE()")}}
+- {{domxref("ANGLE_instanced_arrays.vertexAttribDivisorANGLE()", "ext.vertexAttribDivisorANGLE()")}}
 - {{domxref("WebGL2RenderingContext.drawArraysInstanced()")}}
 - {{domxref("WebGL2RenderingContext.drawElementsInstanced()")}}
 - {{domxref("WebGL2RenderingContext.vertexAttribDivisor()")}}

@@ -1,22 +1,20 @@
 ---
-title: Window.sidebar
+title: "Window: sidebar property"
+short-title: sidebar
 slug: Web/API/Window/sidebar
 page-type: web-api-instance-property
-tags:
-  - HTML DOM
-  - Property
-  - Reference
-  - Window
-  - Non-standard
-  - Deprecated
+status:
+  - deprecated
+  - non-standard
 ---
+
 {{APIRef}} {{Deprecated_Header}}
 
 > **Warning:** This non-standard Firefox-only alias of the [`window.external`](/en-US/docs/Web/API/Window/external) property [has been removed](#browser_compatibility).
 
 Returns a sidebar object which contains several methods for registering add-ons with the browser.
 
-## Methods
+## Instance methods
 
 The sidebar object returned has the following methods:
 
@@ -54,7 +52,7 @@ The sidebar object returned has the following methods:
       </td>
       <td colspan="2">
         Dummy function; does nothing. See
-        <a href="/en-US/docs/Web/OpenSearch#Autodiscovery_of_search_plugins"
+        <a href="/en-US/docs/Web/OpenSearch#autodiscovery_of_search_plugins"
           >Autodiscovery of search plugins</a
         >.
       </td>
@@ -70,11 +68,6 @@ The sidebar object returned has the following methods:
       <td colspan="2">
         <p>
           Installs a search engine (Sherlock).
-          <a
-            href="/en-US/docs/Web/API/Window/sidebar/Adding_search_engines_from_Web_pages#Installing_Sherlock_plugins"
-            title="Adding_search_engines_from_web_pages"
-            >Adding Sherlock search engines </a
-          >contains more details.
         </p>
         <div class="note">
           <p>
@@ -101,5 +94,5 @@ Mozilla-specific. Not part of any standard.
 
 ## Browser compatibility
 
-Moved behind preference in Firefox 102.
+Removed in Firefox 102.
 For more information see Firefox compatibility information in [`window.external`](/en-US/docs/Web/API/Window/external#browser_compatibility).

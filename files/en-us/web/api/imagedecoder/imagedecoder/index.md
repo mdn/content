@@ -1,21 +1,20 @@
 ---
-title: ImageDecoder()
+title: "ImageDecoder: ImageDecoder() constructor"
+short-title: ImageDecoder()
 slug: Web/API/ImageDecoder/ImageDecoder
 page-type: web-api-constructor
-tags:
-  - API
-  - Constructor
-  - Reference
-  - ImageDecoder
+status:
+  - experimental
 browser-compat: api.ImageDecoder.ImageDecoder
 ---
-{{securecontext_header}}{{APIRef("WebCodecs API")}}
+
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`ImageDecoder()`** constructor creates a new {{domxref("ImageDecoder")}} object which unpacks and decodes image data.
 
 ## Syntax
 
-```js
+```js-nolint
 new ImageDecoder(init)
 ```
 
@@ -42,6 +41,8 @@ new ImageDecoder(init)
       - : An integer indicating the desired height for the decoded output. Has no effect unless the image codec supports variable resolution decoding.
     - `preferAnimation` {{optional_inline}}
       - : A {{jsxref("Boolean")}} indicating whether the initial track selection should prefer an animated track.
+    - `transfer`
+      - : An array of {{jsxref("ArrayBuffer")}}s that `ImageDecoder` will detach and take ownership of. If the array contains the {{jsxref("ArrayBuffer")}} backing `data`, `ImageDecoder` will use that buffer directly instead of copying from it.
 
 ## Examples
 
@@ -50,7 +51,7 @@ The following example creates a new `ImageDecoder` with the required options.
 ```js
 let init = {
   type: "image/png",
-  data: imageByteStream
+  data: imageByteStream,
 };
 
 let imageDecoder = new ImageDecoder(init);

@@ -2,27 +2,20 @@
 title: StylePropertyMap
 slug: Web/API/StylePropertyMap
 page-type: web-api-interface
-tags:
-  - API
-  - CSS Typed Object Model API
-  - Experimental
-  - Houdini
-  - Interface
-  - Reference
-  - StylePropertyMap
 browser-compat: api.StylePropertyMap
 ---
-{{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
-The **`StylePropertyMap`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model#css_typed_object_model_experimental) provides a representation of a CSS declaration block that is an alternative to {{DOMxRef("CSSStyleDeclaration")}}.
+{{APIRef("CSS Typed Object Model API")}}
+
+The **`StylePropertyMap`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model#css_typed_object_model) provides a representation of a CSS declaration block that is an alternative to {{DOMxRef("CSSStyleDeclaration")}}.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{DOMxRef("StylePropertyMapReadOnly")}}._
 
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{DOMxRef("StylePropertyMapReadOnly")}}._
 

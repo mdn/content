@@ -1,15 +1,11 @@
 ---
-title: HTMLAnchorElement.href
+title: "HTMLAnchorElement: href property"
+short-title: href
 slug: Web/API/HTMLAnchorElement/href
 page-type: web-api-instance-property
-tags:
-  - API
-  - HTMLAnchorElement
-  - Location
-  - Property
-  - Reference
 browser-compat: api.HTMLAnchorElement.href
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAnchorElement.href`** property is a

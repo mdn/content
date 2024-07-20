@@ -1,21 +1,11 @@
 ---
-title: HTMLImageElement.crossOrigin
+title: "HTMLImageElement: crossOrigin property"
+short-title: crossOrigin
 slug: Web/API/HTMLImageElement/crossOrigin
 page-type: web-api-instance-property
-tags:
-  - API
-  - CORS
-  - Cross-Origin
-  - Crossorigin
-  - HTML DOM
-  - HTMLImageElement
-  - Image
-  - Property
-  - Reference
-  - Security
-  - origin
 browser-compat: api.HTMLImageElement.crossOrigin
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("HTMLImageElement")}}
@@ -32,9 +22,9 @@ without CORS (the fetch `no-cors` mode).
 Permitted values are:
 
 - `anonymous`
-  - : Requests by the {{HTMLElement("img")}} element have their {{domxref("Request.mode",
-    "mode")}} set to `cors` and their {{domxref("Request.credentials",
-    "credentials")}} mode set to `same-origin`. This means that CORS is enabled
+  - : Requests by the {{HTMLElement("img")}} element have their
+    {{domxref("Request.mode", "mode")}} set to `cors` and their {{domxref("Request.credentials", "credentials")}}
+    mode set to `same-origin`. This means that CORS is enabled
     and credentials are sent _if_ the image is fetched from the same origin from
     which the document was loaded.
 - `use-credentials`
@@ -63,9 +53,7 @@ const container = document.querySelector(".container");
 
 function loadImage(url) {
   const image = new Image(200, 200);
-  image.addEventListener("load",
-    () => container.prepend(image)
-  );
+  image.addEventListener("load", () => container.prepend(image));
 
   image.addEventListener("error", () => {
     const errMsg = document.createElement("output");
@@ -85,10 +73,11 @@ loadImage(imageUrl);
 
 ```html
 <div class="container">
-  <p>Here's a paragraph. It's a very interesting paragraph. You
-  are captivated by this paragraph. Keep reading this paragraph.
-  Okay, now you can stop reading this paragraph. Thanks for
-  reading me.</p>
+  <p>
+    Here's a paragraph. It's a very interesting paragraph. You are captivated by
+    this paragraph. Keep reading this paragraph. Okay, now you can stop reading
+    this paragraph. Thanks for reading me.
+  </p>
 </div>
 ```
 
@@ -96,7 +85,10 @@ loadImage(imageUrl);
 
 ```css
 body {
-  font: 1.125rem/1.5, Helvetica, sans-serif;
+  font:
+    1.125rem/1.5,
+    Helvetica,
+    sans-serif;
 }
 
 .container {
@@ -111,7 +103,7 @@ img {
 }
 
 output {
-  background: rgba(100, 100, 100, 0.1);
+  background: rgb(100 100 100 / 100%);
   font-family: Courier, monospace;
   width: 95%;
 }
@@ -128,3 +120,9 @@ output {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("HTMLLinkElement.crossOrigin")}}
+- {{domxref("HTMLMediaElement.crossOrigin")}}
+- {{domxref("HTMLScriptElement.crossOrigin")}}

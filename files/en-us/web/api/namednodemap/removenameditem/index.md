@@ -1,12 +1,11 @@
 ---
-title: NamedNodeMap.removeNamedItem()
+title: "NamedNodeMap: removeNamedItem() method"
+short-title: removeNamedItem()
 slug: Web/API/NamedNodeMap/removeNamedItem
 page-type: web-api-instance-method
-tags:
-  - Method
-  - Reference
 browser-compat: api.NamedNodeMap.removeNamedItem
 ---
+
 {{APIRef("DOM")}}
 
 The **`removeNamedItem()`** method of the {{domxref("NamedNodeMap")}} interface
@@ -14,8 +13,8 @@ removes the {{domxref("Attr")}} corresponding to the given name from the map.
 
 ## Syntax
 
-```js
-removeNamedItem(attrName);
+```js-nolint
+removeNamedItem(attrName)
 ```
 
 ### Parameters
@@ -39,7 +38,7 @@ The removed {{domxref("Attr")}}.
 ```
 
 ```js
-const pre = document.getElementsByTagName("pre")[0];
+const pre = document.querySelector("pre");
 const attrMap = pre.attributes;
 
 let result = `The 'test' attribute initially contains '${attrMap["test"].value}'.\n`;
@@ -47,19 +46,16 @@ let result = `The 'test' attribute initially contains '${attrMap["test"].value}'
 result += "We remove it.\n\n";
 attrMap.removeNamedItem("test");
 
-if (attrMap.getNamedItem("test")) {
-  result += "And 'test' still exists.";
-}
-else {
-  result += "And 'test' is no more to be found.";
-}
+result += attrMap.getNamedItem("test")
+  ? "And 'test' still exists."
+  : "And 'test' is no more to be found.";
 
 pre.textContent = result;
 ```
 
 {{EmbedLiveSample("Example", "100%", 120)}}
 
-## Specification
+## Specifications
 
 {{Specifications}}
 

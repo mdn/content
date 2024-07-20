@@ -1,16 +1,9 @@
 ---
 title: Win the game
 slug: Games/Tutorials/2D_breakout_game_Phaser/Win_the_game
-tags:
-  - 2D
-  - Beginner
-  - Canvas
-  - Games
-  - JavaScript
-  - Phaser
-  - Tutorial
-  - winning
+page-type: guide
 ---
+
 {{GamesSidebar}}
 
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/The_score", "Games/Workflows/2D_Breakout_game_Phaser/Extra_lives")}}
@@ -36,7 +29,7 @@ function ballHitBrick(ball, brick) {
     }
   }
   if (count_alive === 0) {
-    alert('You won the game, congratulations!');
+    alert("You won the game, congratulations!");
     location.reload();
   }
 }

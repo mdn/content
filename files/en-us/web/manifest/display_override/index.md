@@ -1,24 +1,19 @@
 ---
 title: display_override
 slug: Web/Manifest/display_override
-tags:
-  - Manifest
-  - Web
-  - display
-  - display_override
+page-type: web-manifest-member
+status:
+  - experimental
 browser-compat: html.manifest.display_override
 ---
-{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
+
+{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}{{SeeCompatTable}}
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Type</th>
       <td><code>Array</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -40,10 +35,25 @@ Display override objects are display-mode strings, the possible values are:
   </thead>
   <tbody>
     <tr>
+      <td><code>browser</code></td>
+      <td>
+        The application opens in a conventional browser tab or new window,
+        depending on the browser and platform. This is the default.
+      </td>
+    </tr>
+    <tr>
       <td><code>fullscreen</code></td>
       <td>
         All of the available display area is used and no user agent
         {{Glossary("chrome")}} is shown.
+      </td>
+    </tr>
+    <tr>
+      <td><code>minimal-ui</code></td>
+      <td>
+        The application will look and feel like a standalone application with
+        a minimal set of UI elements for controlling navigation. The
+        elements will vary by browser.
       </td>
     </tr>
     <tr>
@@ -57,18 +67,9 @@ Display override objects are display-mode strings, the possible values are:
       </td>
     </tr>
     <tr>
-      <td><code>minimal-ui</code></td>
+      <td><code>tabbed</code></td>
       <td>
-        The application will look and feel like a standalone application, but
-        will have a minimal set of UI elements for controlling navigation. The
-        elements will vary by browser.
-      </td>
-    </tr>
-    <tr>
-      <td><code>browser</code></td>
-      <td>
-        The application opens in a conventional browser tab or new window,
-        depending on the browser and platform. This is the default.
+        The application can contain multiple application contexts inside a single OS-level window. Supporting browsers can choose how to display these contexts, but a common approach is to provide a tab bar to switch between them.
       </td>
     </tr>
     <tr>
@@ -92,7 +93,7 @@ In the example below, the browser will consider the following display-mode fallb
 ```json
 {
   "display_override": ["fullscreen", "minimal-ui"],
-  "display": "standalone",
+  "display": "standalone"
 }
 ```
 
@@ -106,5 +107,5 @@ In the example below, the browser will consider the following display-mode fallb
 
 ## See also
 
-- [Preparing for the display modes of tomorrow](https://web.dev/display-override/)
-- [Customize the window controls overlay of your PWA's title bar](https://web.dev/window-controls-overlay/)
+- [Preparing for the display modes of tomorrow](https://developer.chrome.com/docs/capabilities/display-override)
+- [Customize the window controls overlay of your PWA's title bar](https://web.dev/articles/window-controls-overlay)
