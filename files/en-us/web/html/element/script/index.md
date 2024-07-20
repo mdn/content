@@ -41,9 +41,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - Value containing one or more URLs, for example:
 
       ```html
-      <script src="myscript.js"
-              attributionsrc="https://a.example/register-source https://b.example/register-source"
-      >
+      <script
+        src="myscript.js"
+        attributionsrc="https://a.example/register-source https://b.example/register-source"></script>
       ```
 
       This is useful in cases where the requested resource is not on a server you control, or you just want to handle registering the attribution source on a different server. In this case, you can specify one or more URLs as the value of `attributionsrc`. When the resource request occurs the {{httpheader("Attribution-Reporting-Eligible")}} header will be sent to the URL(s) specified in `attributionSrc` in addition to the resource origin. These URLs can then respond with a {{httpheader("Attribution-Reporting-Register-Source")}} or {{httpheader("Attribution-Reporting-Register-Trigger")}} header as appropriate to complete registration.
@@ -166,6 +166,56 @@ And the following examples show how to put (an inline) script inside the `<scrip
   alert("Hello World!");
 </script>
 ```
+
+### async and defer
+
+Scripts loaded using the `async` attribute will download the script without blocking the page while the script is being fetched.
+However, once the download is complete, the script will execute, which blocks the page from rendering. This means that the rest of the content on the web page is prevented from being processed and displayed to the user until the script finishes executing.
+You get no guarantee that scripts will run in any specific order.
+It is best to use `async` when the scripts in the page run independently from each other and depend on no other script on the page.
+
+Scripts loaded with the `defer` attribute will load in the order they appear on the page.
+They won't run until the page content has all loaded, which is useful if your scripts depend on the DOM being in place (e.g. they modify one or more elements on the page).
+
+Here is a visual representation of the different script loading methods and what that means for your page:
+
+![How the three script loading method work: default has parsing blocked while JavaScript is fetched and executed. With async, the parsing pauses for execution only. With defer, parsing isn't paused, but execution on happens after everything is else is parsed.](async-defer.jpg)
+
+_This image is from the [HTML spec](https://html.spec.whatwg.org/images/asyncdefer.svg), copied and cropped to a reduced version, under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) license terms._
+
+For example, if you have the following script elements:
+
+```html
+<script async src="js/vendor/jquery.js"></script>
+<script async src="js/script2.js"></script>
+<script async src="js/script3.js"></script>
+```
+
+You can't rely on the order the scripts will load in.
+`jquery.js` may load before or after `script2.js` and `script3.js` and if this is the case, any functions in those scripts depending on `jquery` will produce an error because `jquery` will not be defined at the time the script runs.
+
+`async` should be used when you have a bunch of background scripts to load in, and you just want to get them in place as soon as possible.
+For example, maybe you have some game data files to load, which will be needed when the game actually begins, but for now you just want to get on with showing the game intro, titles, and lobby, without them being blocked by script loading.
+
+Scripts loaded using the `defer` attribute (see below) will run in the order they appear in the page and execute them as soon as the script and content are downloaded:
+
+```html
+<script defer src="js/vendor/jquery.js"></script>
+<script defer src="js/script2.js"></script>
+<script defer src="js/script3.js"></script>
+```
+
+In the second example, we can be sure that `jquery.js` will load before `script2.js` and `script3.js` and that `script2.js` will load before `script3.js`.
+They won't run until the page content has all loaded, which is useful if your scripts depend on the DOM being in place (e.g. they modify one or more elements on the page).
+
+To summarize:
+
+- `async` and `defer` both instruct the browser to download the script(s) in a separate thread, while the rest of the page (the DOM, etc.) is downloading, so the page loading is not blocked during the fetch process.
+- scripts with an `async` attribute will execute as soon as the download is complete.
+  This blocks the page and does not guarantee any specific execution order.
+- scripts with a `defer` attribute will load in the order they are in and will only execute once everything has finished loading.
+- If your scripts should be run immediately and they don't have any dependencies, then use `async`.
+- If your scripts need to wait for parsing and depend on other scripts and/or the DOM being in place, load them using `defer` and put their corresponding `<script>` elements in the order you want the browser to execute them.
 
 ### Module fallback
 
