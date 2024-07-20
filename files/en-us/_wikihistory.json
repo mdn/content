@@ -40223,10 +40223,6 @@
     "modified": "2020-10-15T22:17:50.694Z",
     "contributors": ["neoncitylights", "sideshowbarker", "ExE-Boss"]
   },
-  "Web/API/HTMLMenuItemElement": {
-    "modified": "2020-10-15T22:17:51.039Z",
-    "contributors": ["neoncitylights", "ExE-Boss"]
-  },
   "Web/API/HTMLMetaElement": {
     "modified": "2020-10-15T21:14:34.115Z",
     "contributors": [
@@ -95762,28 +95758,6 @@
       "McGurk",
       "jswisher",
       "Yann Dìnendal"
-    ]
-  },
-  "Web/HTML/Element/menuitem": {
-    "modified": "2020-11-28T12:02:05.463Z",
-    "contributors": [
-      "mfuji09",
-      "alattalatta",
-      "sideshowbarker",
-      "ExE-Boss",
-      "Rococolate",
-      "Sheppy",
-      "jakubfiala",
-      "teoli",
-      "whirr.click",
-      "rudiedirkx",
-      "Sebastianz",
-      "slimsag",
-      "Sheepy",
-      "dhodder",
-      "Alhadis",
-      "kscarfone",
-      "kohei.yoshino"
     ]
   },
   "Web/HTML/Element/meta": {

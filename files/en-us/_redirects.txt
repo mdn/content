@@ -8554,6 +8554,7 @@
 /en-US/docs/Web/API/HTMLMediaElement/onencrypted	/en-US/docs/Web/API/HTMLMediaElement
 /en-US/docs/Web/API/HTMLMediaElement/onerror	/en-US/docs/Web/API/HTMLMediaElement/error_event
 /en-US/docs/Web/API/HTMLMediaElement/onwaitingforkey	/en-US/docs/Web/API/HTMLMediaElement
+/en-US/docs/Web/API/HTMLMenuItemElement	/en-US/docs/Web/API/HTMLMenuElement
 /en-US/docs/Web/API/HTMLMetaElement/charset	/en-US/docs/Web/HTML/Element/meta#charset
 /en-US/docs/Web/API/HTMLObjectElement/tabIndex	/en-US/docs/Web/API/HTMLObjectElement/type
 /en-US/docs/Web/API/HTMLOptionElement.Option	/en-US/docs/Web/API/HTMLOptionElement/Option
@@ -12248,6 +12249,7 @@
 /en-US/docs/Web/HTML/Element/input/<input_type=_colgroup_>	/en-US/docs/Web/HTML/Element/colgroup
 /en-US/docs/Web/HTML/Element/input/Date_and_time_formats	/en-US/docs/Web/HTML/Date_and_time_formats
 /en-US/docs/Web/HTML/Element/math	/en-US/docs/Web/MathML/Element/math
+/en-US/docs/Web/HTML/Element/menuitem	/en-US/docs/Web/HTML/Element
 /en-US/docs/Web/HTML/Element/s_ource	/en-US/docs/Web/HTML/Element/source
 /en-US/docs/Web/HTML/Element/video/canplay_event	/en-US/docs/Web/API/HTMLMediaElement/canplay_event
 /en-US/docs/Web/HTML/Element/video/durationchange_event	/en-US/docs/Web/API/HTMLMediaElement/durationchange_event
