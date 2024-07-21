@@ -130,6 +130,7 @@ circle2.bind("EnterFrame", function () {
 {{ EmbedLiveSample('Circle_Collision', '700', '300') }}
 
 > [!NOTE]
+>
 > [Here is another example without Canvas or external libraries.](https://jsfiddle.net/jlr7245/teb4znk0/20/)
 
 ## Separating Axis Theorem
