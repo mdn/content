@@ -23,9 +23,8 @@ This property is a shorthand for the following CSS properties:
 
 ```css
 /* Keyword values */
-flex: auto;
-flex: initial;
-flex: none;
+flex: auto; /* 1 1 auto */
+flex: none; /* 0 0 auto */
 
 /* One value, unitless number: flex-grow
 flex-basis is then equal to 0. */
@@ -47,7 +46,7 @@ flex: 2 2 10%;
 
 /* Global values */
 flex: inherit;
-flex: initial;
+flex: initial; /* 0 1 auto */
 flex: revert;
 flex: revert-layer;
 flex: unset;
@@ -78,18 +77,18 @@ The `flex` property may be specified using one, two, or three values.
 
 ### Values
 
-- `initial`
-  - : The item is sized according to its `width` and `height` properties. It shrinks to its minimum size to fit the container, but does not grow to absorb any extra free space in the flex container. This is equivalent to setting `flex: 0 1 auto`.
 - `auto`
   - : The item is sized according to its `width` and `height` properties, but grows to absorb any extra free space in the flex container, and shrinks to its minimum size to fit the container. This is equivalent to setting `flex: 1 1 auto`.
 - `none`
   - : The item is sized according to its `width` and `height` properties. It is fully inflexible: it neither shrinks nor grows in relation to the flex container. This is equivalent to setting `flex: 0 0 auto`.
+- `initial`
+  - : The default value. The item is sized according to its `width` and `height` properties. It shrinks to its minimum size to fit the container, but does not grow to absorb any extra free space in the flex container. This is equivalent to setting `flex: 0 1 auto`.
 - `<'flex-grow'>`
   - : Defines the {{cssxref("flex-grow")}} of the flex item. Negative values are considered invalid. Defaults to `1` when omitted. (initial is `0`)
 - `<'flex-shrink'>`
   - : Defines the {{cssxref("flex-shrink")}} of the flex item. Negative values are considered invalid. Defaults to `1` when omitted. (initial is `1`)
 - `<'flex-basis'>`
-  - : Defines the {{cssxref("flex-basis")}} of the flex item. A preferred size of `0` must have a unit to avoid being interpreted as a flexibility. Defaults to `0` when omitted. Initial is `auto`.
+  - : Defines the {{cssxref("flex-basis")}} of the flex item. A preferred size of `0` must have a unit to avoid being interpreted as a flexibility. Defaults to `0` when omitted. Initial value is `auto`.
 
 ## Description
 
@@ -198,41 +197,48 @@ This example shows how a flex item with `flex: auto` grows to absorb any free sp
 
 ```html
 <div id="flex-container">
-  <div id="flex-auto">flex: auto (click to toggle raw box)</div>
-  <div id="flex-initial">flex: initial</div>
+  <div id="flex-auto">
+    flex: auto (click to remove/add the `flex: initial` box)
+  </div>
+  <div id="default">flex: initial</div>
 </div>
 ```
 
 #### CSS
 
 ```css
-#flex-container {
-  display: flex;
+body * {
+  padding: 1rem;
+  text-select: none;
+  box-sizing: border-box;
   font-family: Consolas, Arial, sans-serif;
 }
 
-#flex-container > div {
-  padding: 1rem;
+#flex-container {
+  border: 2px dashed gray;
+  display: flex;
 }
 
 #flex-auto {
+  cursor: pointer;
+  background-color: wheat;
+
   flex: auto;
-  border: 1px solid #f00;
 }
 
-#flex-initial {
-  border: 1px solid #000;
+#default {
+  background-color: lightblue;
 }
 ```
 
 #### JavaScript
 
 ```js
-const flexAuto = document.getElementById("flex-auto");
-const flexInitial = document.getElementById("flex-initial");
-flexAuto.addEventListener("click", () => {
-  flexInitial.style.display =
-    flexInitial.style.display === "none" ? "block" : "none";
+const flexAutoItem = document.getElementById("flex-auto");
+const defaultItem = document.getElementById("default");
+flexAutoItem.addEventListener("click", () => {
+  defaultItem.style.display =
+    defaultItem.style.display === "none" ? "block" : "none";
 });
 ```
 
@@ -240,14 +246,14 @@ flexAuto.addEventListener("click", () => {
 
 The flex container contains two flex items:
 
-- `flex: auto` has a `flex` value of [`auto`](#auto)
-- `flex: initial` has a `flex` value of [`initial`](#initial)
+- The `#flex-auto` item has a `flex` value of [`auto`](auto). The `auto` value expands to `1 1 auto`, i.e. the item is allowed to expand.
+- The `#default` item has no `flex` value set so it defaults to the [`initial`](#initial) value. The `initial` value expands to `0 1 auto`, i.e. the item is not allowed to expand.
 
-The `flex: initial` item takes up as much space as its width requires, but does not expand to take up any more space. All the remaining space is taken up by `flex: auto`.
+The `#default` item takes up as much space as its width requires, but does not expand to take up any more space. All the remaining space is taken up by the `#flex-auto` item.
 
-When you click `flex: auto`, we set `flex: initial`'s {{cssxref("display")}} property to `none`, removing it from the layout. The `flex: auto` item then expands to occupy all the available space in the container.
+When you click the `#flex-auto` item, we set the `#default` items' {{cssxref("display")}} property to `none`, removing it from the layout. The `#flex-auto` item then expands to occupy all the available space in the container. Clicking the `#flex-auto` item again adds the `#default` item back to the container.
 
-{{EmbedLiveSample('Setting_flex_auto','100%','100')}}
+{{EmbedLiveSample('Setting_flex_auto','100%','150')}}
 
 ## Specifications
 
