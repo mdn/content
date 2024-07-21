@@ -46,7 +46,6 @@ They remain static. The `pannerNode` can then calculate its sound position relat
 Let's create our context and listener and set the listener's position to emulate a person looking into our room:
 
 ```js
-const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioCtx = new AudioContext();
 const listener = audioCtx.listener;
 

@@ -390,7 +390,7 @@ In the previous article, we included quite a lot of discussion about [handling C
 - Chrome/Opera/Safari would use `webkitObject`
 - Microsoft would use `msObject`
 
-Here's an example, taken from our [violent-theremin demo](https://mdn.github.io/webaudio-examples/violent-theremin/) (see [source code](https://github.com/mdn/webaudio-examples/tree/main/violent-theremin)), which uses a combination of the [Canvas API](/en-US/docs/Web/API/Canvas_API) and the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) to create a fun (and noisy) drawing tool:
+Here's an example that uses the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API):
 
 ```js
 const AudioContext = window.AudioContext || window.webkitAudioContext;
