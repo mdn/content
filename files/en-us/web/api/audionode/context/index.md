@@ -21,7 +21,6 @@ used to construct this `AudioNode`.
 ## Examples
 
 ```js
-const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioCtx = new AudioContext();
 
 const oscillator = audioCtx.createOscillator();

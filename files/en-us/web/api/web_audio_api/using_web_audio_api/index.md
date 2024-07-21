@@ -35,9 +35,6 @@ Several audio sources with different channel layouts are supported, even within 
 To be able to do anything with the Web Audio API, we need to create an instance of the audio context. This then gives us access to all the features and functionality of the API.
 
 ```js
-// for legacy browsers
-const AudioContext = window.AudioContext || window.webkitAudioContext;
-
 const audioContext = new AudioContext();
 ```
 

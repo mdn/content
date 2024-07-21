@@ -53,7 +53,7 @@ access to the user's camera, then creates a new
 
 ```js
 // define variables
-const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const audioCtx = new AudioContext();
 
 // getUserMedia block - grab stream
 // put it into a MediaStreamAudioSourceNode

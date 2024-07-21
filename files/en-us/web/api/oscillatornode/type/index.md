@@ -46,7 +46,7 @@ an oscillator node. For an applied example, check out our [Violent Theremin demo
 
 ```js
 // create web audio api context
-const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const audioCtx = new AudioContext();
 
 // create Oscillator node
 const oscillator = audioCtx.createOscillator();

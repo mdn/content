@@ -41,7 +41,7 @@ Objects of these types are designed to hold small audio snippets, typically less
 The following simple example shows how to create an `AudioBuffer` and fill it with random white noise. You can find the full source code at our [webaudio-examples](https://github.com/mdn/webaudio-examples) repository; a [running live](https://mdn.github.io/webaudio-examples/audio-buffer/) version is also available.
 
 ```js
-const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const audioCtx = new AudioContext();
 
 // Create an empty three-second stereo buffer at the sample rate of the AudioContext
 const myArrayBuffer = audioCtx.createBuffer(

@@ -74,7 +74,7 @@ In this example, we create a two-second buffer, fill it with white noise, and th
 > **Note:** You can also [run the code live](https://mdn.github.io/webaudio-examples/audio-buffer/), or [view the source](https://github.com/mdn/webaudio-examples/blob/main/audio-buffer/index.html).
 
 ```js
-const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const audioCtx = new AudioContext();
 
 // Create an empty three-second stereo buffer at the sample rate of the AudioContext
 const myArrayBuffer = audioCtx.createBuffer(
