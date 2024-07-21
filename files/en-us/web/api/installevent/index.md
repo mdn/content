@@ -26,7 +26,7 @@ _Inherits properties from its ancestor, {{domxref("Event")}}_.
 
 _Inherits methods from its parent, {{domxref("ExtendableEvent")}}_.
 
-- {{domxref("InstallEvent.addRoutes()", "addRoutes()")}}
+- {{domxref("InstallEvent.addRoutes()", "addRoutes()")}} {{experimental_inline}}
   - : Specifies one or more static routes, which define rules for fetching specified resources that will be used even before service worker startup.
 
 ## Examples
