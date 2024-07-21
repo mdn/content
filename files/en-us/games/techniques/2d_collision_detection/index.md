@@ -53,6 +53,7 @@ rect2.bind("EnterFrame", function () {
 {{ EmbedLiveSample('Axis-Aligned_Bounding_Box', '700', '300') }}
 
 > [!NOTE]
+>
 > [Another example without Canvas or external libraries](https://jsfiddle.net/jlr7245/217jrozd/3/).
 
 ## Circle Collision
