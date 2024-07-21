@@ -42,7 +42,7 @@ let lastClick;
 addEventListener("click", (event) => (lastClick = event));
 
 function spaNavigate(data) {
-  // Fallback for browsers that don’t support this API:
+  // Fallback for browsers that don't support this API:
   if (!document.startViewTransition) {
     updateTheDOMSomehow(data);
     return;
@@ -64,7 +64,7 @@ function spaNavigate(data) {
 
   // Wait for the pseudo-elements to be created:
   transition.ready.then(() => {
-    // Animate the root’s new view
+    // Animate the root's new view
     document.documentElement.animate(
       {
         clipPath: [

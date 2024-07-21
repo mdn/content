@@ -35,15 +35,19 @@ To pass data into a `<fencedframe>` to be used in a shared storage worklet, the 
 When a `selectURL()` call returns a `FencedFrameConfig`, the frame embedder can pass in data by calling `setSharedStorageContext(data)`:
 
 ```js
-const fencedFrameConfig = await window.sharedStorage.selectURL('creative-rotation', urls, {
-  // …
-  resolveToConfig: true
-});
+const fencedFrameConfig = await window.sharedStorage.selectURL(
+  "creative-rotation",
+  urls,
+  {
+    // …
+    resolveToConfig: true,
+  },
+);
 
-fencedFrameConfig.setSharedStorageContext(‘some-data’);
+fencedFrameConfig.setSharedStorageContext("some-data");
 
 // Navigate the fenced frame to the config.
-document.getElementById('my-fenced-frame').config = fencedFrameConfig;
+document.getElementById("my-fenced-frame").config = fencedFrameConfig;
 ```
 
 `setSharedStorageContext(data)` must be called on the `fencedFrameConfig` before the intended `<fencedframe>` element recipient has its `config` attribute set to `fencedFrameConfig`, as this triggers the frame to navigate.
@@ -53,8 +57,8 @@ Inside a shared storage worklet, `WorkletSharedStorage.context` can then be acce
 ```js
 class ReportingOperation {
   async run() {
-    sharedStorage.set(‘some-data-from-embedder’, sharedStorage.context)
+    sharedStorage.set("some-data-from-embedder", sharedStorage.context);
   }
 }
-register('send-report', ReportingOperation);
+register("send-report", ReportingOperation);
 ```

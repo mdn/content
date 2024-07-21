@@ -84,7 +84,7 @@ console.table(relatedApps);
 const psApp = relatedApps.find((app) => app.id === "com.example.myapp");
 
 if (psApp && doesVersionSendPushMessages(psApp.version)) {
-  // There’s an installed platform-specific app that handles sending push messages
+  // There's an installed platform-specific app that handles sending push messages
   // No need to handle this via the web app
   return;
 }
