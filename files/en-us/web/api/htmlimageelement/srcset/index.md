@@ -132,11 +132,13 @@ the URL selected by the browser from the `srcset`.
 
 ```js
 window.addEventListener("load", () => {
-  let box = document.querySelector(".box");
-  let image = box.querySelector("img");
+  const box = document.querySelector(".box");
+  const image = box.querySelector("img");
 
-  let newElem = document.createElement("p");
-  newElem.innerHTML = `Image: <code>${image.currentSrc}</code>`;
+  const newElem = document.createElement("p");
+  newElem.textContent = "Image: ";
+  newElem.appendChild(document.createElement("code")).textContent =
+    image.currentSrc;
   box.appendChild(newElem);
 });
 ```

@@ -334,10 +334,12 @@ fileSelect.addEventListener(
 fileElem.addEventListener("change", handleFiles, false);
 
 function handleFiles() {
+  fileList.textContent = "";
   if (!this.files.length) {
-    fileList.innerHTML = "<p>No files selected!</p>";
+    const p = document.createElement("p");
+    p.textContent = "No files selected!";
+    fileList.appendChild(p);
   } else {
-    fileList.innerHTML = "";
     const list = document.createElement("ul");
     fileList.appendChild(list);
     for (let i = 0; i < this.files.length; i++) {
@@ -352,7 +354,7 @@ function handleFiles() {
       };
       li.appendChild(img);
       const info = document.createElement("span");
-      info.innerHTML = `${this.files[i].name}: ${this.files[i].size} bytes`;
+      info.textContent = `${this.files[i].name}: ${this.files[i].size} bytes`;
       li.appendChild(info);
     }
   }

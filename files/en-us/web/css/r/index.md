@@ -10,12 +10,12 @@ browser-compat: css.properties.r
 The **`r`** [CSS](/en-US/docs/Web/CSS) property defines the radius of a circle. It can only be used with the SVG {{SVGElement("circle")}} element. If present, it overrides the circle's {{SVGAttr("r")}} attribute.
 
 > [!NOTE]
-> The `r` property only applies {{SVGElement("circle")}} elements nested in an {{SVGElement("svg")}}. It doesn't apply to other SVG elements or HTML elements or pseudo-elements.
+> The `r` property only applies to {{SVGElement("circle")}} elements nested in an {{SVGElement("svg")}}. It doesn't apply to other SVG elements or HTML elements or pseudo-elements.
 
 ## Syntax
 
 ```css
-/* length and percentage values */
+/* Length and percentage values */
 r: 3px;
 r: 20%;
 
@@ -29,11 +29,15 @@ r: unset;
 
 ### Values
 
-- `<length-percentage>`
-  - : Denotes the size of the circle radius. As an absolute length, it can be expressed in any unit allowed by the CSS {{cssxref("&lt;length&gt;")}} data type. Percentages refer to the normalized diagonal of the current SVG viewport, which is calculated as <math><mfrac><msqrt><mrow><msup><mi>&lt;width&gt;</mi><mn>2</mn></msup><mo>+</mo><msup><mi>&lt;height&gt;</mi><mn>2</mn></msup></mrow></msqrt><msqrt><mn>2</mn></msqrt></mfrac></math>. Negative values are invalid.
+The {{cssxref("length")}} and {{cssxref("percentage")}} values define the radius of the circle.
 
-> [!NOTE]
-> Unitless values default to SVG coordinate system pixel units defined by the {{SVGattr("viewBox")}} attribute if present, otherwise, the implicit or explicit `px` is treated as regular viewport pixels.
+- {{cssxref("length")}}
+
+  - : Absolute or relative lengths can be expressed in any unit allowed by the CSS {{cssxref("&lt;length&gt;")}} data type. Negative values are invalid.
+
+- {{cssxref("percentage")}}
+
+  - : Percentages refer to the normalized diagonal of the current SVG viewport, which is calculated as <math><mfrac><msqrt><mrow><msup><mi>&lt;width&gt;</mi><mn>2</mn></msup><mo>+</mo><msup><mi>&lt;height&gt;</mi><mn>2</mn></msup></mrow></msqrt><msqrt><mn>2</mn></msqrt></mfrac></math>.
 
 ## Formal definition
 
@@ -136,9 +140,9 @@ circle:first-of-type {
 
 {{EmbedLiveSample("Defining the radius of a circle using percentages", "300", "360")}}
 
-In both cases, the radius of the circle is `30%` of the normalized diagonal of the SVG viewport. The radius `r` is equal to <math><mn>0.3</mn><mo>&#xd7;</mo><mfrac><msqrt><mrow><msup><mi>&lt;width&gt;</mi><mn>2</mn></msup><mo>+</mo><msup><mi>&lt;height&gt;</mi><mn>2</mn></msup></mrow></msqrt><msqrt><mn>2</mn></msqrt></mfrac></math>. While the first image is using `300` and `150` CSS pixes, and the second is using `200` and `100` SVG viewbox units, 30% is a proportional value, so the `r` is the same; `47.43` viewBox units which resolves to `71.15` CSS pixels.
+In both cases, the circle radius is `30%` of the normalized diagonal of the SVG viewport. The radius `r` is equal to <math><mn>0.3</mn><mo>&#xd7;</mo><mfrac><msqrt><mrow><msup><mi>&lt;width&gt;</mi><mn>2</mn></msup><mo>+</mo><msup><mi>&lt;height&gt;</mi><mn>2</mn></msup></mrow></msqrt><msqrt><mn>2</mn></msqrt></mfrac></math>. While the first image is using `300` and `150` CSS pixels and the second is using `200` and `100` SVG viewbox units, 30% is a proportional value. As a result, the `r` value is the same: `47.43` viewBox units, which resolves to `71.15` CSS pixels.
 
-While the `r` is the same, the center points differ because the second SVG is scaled up 50% pushing its center down and to the right by 50%.
+While the `r` is the same, the center points differ because the second SVG is scaled up by 50%, pushing its center down and to the right by 50%.
 
 ## Specifications
 
