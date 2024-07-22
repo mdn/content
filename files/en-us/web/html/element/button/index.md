@@ -19,10 +19,8 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 - `autofocus`
   - : This Boolean attribute specifies that the button should have input [focus](/en-US/docs/Web/API/HTMLElement/focus) when the page loads. **Only one element in a document can have this attribute.**
-- `disabled`
-
+- [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled)
   - : This Boolean attribute prevents the user from interacting with the button: it cannot be pressed or focused.
-
 - `form`
 
   - : The {{HTMLElement("form")}} element to associate the button with (its _form owner_). The value of this attribute must be the `id` of a `<form>` in the same document. (If this attribute is not set, the `<button>` is associated with its ancestor `<form>` element, if any.)
@@ -105,6 +103,8 @@ A submit button with the attribute `formaction` set, but without an associated f
 If your buttons are not for submitting form data to a server, be sure to set their `type` attribute to `button`. Otherwise, they will try to submit form data and to load the (nonexistent) response, possibly destroying the current state of the document.
 
 While `<button type="button">` has no default behavior, event handlers can be scripted to trigger behaviors. An activated button can perform programmable actions using [JavaScript](/en-US/docs/Learn/JavaScript), such as removing an item from a list.
+
+By default, user agents style buttons as `display: flow-root`, which establishes a new [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context) and centers the button's children both horizontally and vertically as long as they do not overflow. If the button is defined as a flex or grid container, the children will behave as flex or grid items. A button set to `display: inline` will be styled as if the value were set to `display: inline-block`.
 
 ## Accessibility
 

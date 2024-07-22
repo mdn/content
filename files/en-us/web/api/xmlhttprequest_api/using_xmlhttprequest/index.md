@@ -135,7 +135,7 @@ function transferCanceled(evt) {
 }
 ```
 
-Lines 3-6 add event listeners for the various events that are sent while performing a data transfer using `XMLHttpRequest`.
+We add event listeners for the various events that are sent while performing a data transfer using `XMLHttpRequest`.
 
 > **Note:** You need to add the event listeners before calling `open()` on the request. Otherwise the `progress` events will not fire.
 

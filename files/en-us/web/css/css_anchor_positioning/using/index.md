@@ -10,7 +10,7 @@ The **CSS anchor positioning** module defines features that allow you to tether 
 
 CSS anchor positioning also provides CSS-only mechanisms for specifying multiple alternative positions for an anchor-positioned element. For example, if a tooltip is anchored to a form field but the tooltip would otherwise be rendered offscreen in its default position settings, the browser can try rendering it in a different suggested position so it is placed onscreen, or, alternatively, hide it altogether if desired.
 
-This article explains the fundamental anchor positioning concepts, and how to use the module's association, positioning, and sizing features at a basic level. We've included links to reference pages with additional examples and syntax details for each concept discussed below. For information on specifying alternative positions and hiding anchor-positioned elements, see [Handling overflow: try options and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding).
+This article explains the fundamental anchor positioning concepts, and how to use the module's association, positioning, and sizing features at a basic level. We've included links to reference pages with additional examples and syntax details for each concept discussed below. For information on specifying alternative positions and hiding anchor-positioned elements, see [Handling overflow: try fallbacks and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding).
 
 ## Fundamental concepts
 
@@ -167,13 +167,13 @@ anchor(<anchor-element> <anchor-side>, <fallback>)
 
 - [`<anchor-side>`](/en-US/docs/Web/CSS/anchor#anchor-side)
 
-  - : Specifies the position relative to a side, or sides, of the anchor. Valid values include the `center` of the anchor, physical (`top`, `left`, etc.) or logical (`start`, `self-end`, etc.) sides of the anchor, or a `<percentage>` between the start (`0%`) and end (`100%`) of the axis of the inset property `anchor()` is set on. If a physical or logical value is used which is not on the same axis as the inset property on which `anchor()` is set, the fallback value is used.
+  - : Specifies the position relative to a side, or sides, of the anchor. Valid values include the `center` of the anchor, physical (`top`, `left`, etc.) or logical (`start`, `self-end`, etc.) sides of the anchor, or a `<percentage>` between the start (`0%`) and end (`100%`) of the axis of the inset property `anchor()` is set on. If a value is used that is not [compatible](/en-US/docs/Web/CSS/anchor#compatibility_of_inset_properties_and_anchor-side_values) with the inset property on which the `anchor()` function is set, the fallback value is used.
 
 - `<fallback>`
 
-  - : A {{cssxref("length-percentage")}} defining the distance to use as a fallback value if the element is not absolutely or fixed positioned, if the axis of the anchor side is not valid for the property on which the `anchor()` function is set, or if the anchor element doesn't exist.
+  - : A {{cssxref("length-percentage")}} defining the distance to use as a fallback value if the element is not absolutely or fixed positioned, if the `<anchor-side>` value used is not compatible with the inset property on which the `anchor()` function is set, or if the anchor element doesn't exist.
 
-The return value of the `anchor()` function is a length value calculated based on the position of the anchor. If you set a length or percentage directly on an anchor-positioned element's inset property, it is positioned as if it were not bound to the anchor element. This is the same behavior seen if the `<anchor-side>` value is invalid for the inset property on which it is set and the fallback is used. These two declarations are equivalent:
+The return value of the `anchor()` function is a length value calculated based on the position of the anchor. If you set a length or percentage directly on an anchor-positioned element's inset property, it is positioned as if it were not bound to the anchor element. This is the same behavior seen if the `<anchor-side>` value is incompatible with the inset property on which it is set and the fallback is used. These two declarations are equivalent:
 
 ```css example-bad
 bottom: anchor(right, 50px);
@@ -193,7 +193,7 @@ For example, this rule positions the right edge of the positioned element flush 
 }
 ```
 
-The return value of an `anchor()` function is a length or percentage. This means you can use it within a {{cssxref("calc()")}} function. This rule positions the positioned element's logical block end edge `10px` from the anchor element's logical block start edge, adding the spacing using the `calc()` function so we don't need to add a margin:
+The return value of an `anchor()` function is a length. This means you can use it within a {{cssxref("calc()")}} function. This rule positions the positioned element's logical block end edge `10px` from the anchor element's logical block start edge, adding the spacing using the `calc()` function so we don't need to add a margin:
 
 ```css
 .positionedElement {
@@ -283,8 +283,8 @@ The infobox is associated with the anchor via the anchor name and given fixed po
 
 Let's look at the inset property positioning declarations in more detail:
 
-- `inset-block-start: anchor(end)`: This sets the positioned element's block start edge to the position of the anchor's block end edge along the block axis, calculated using the `anchor(end)` function.
-- `inset-inline-start: anchor(self-end)`: This sets the positioned element's inline start edge to the anchor's inline end edge along the inline axis, calculated using the `anchor(self-end)` function.
+- `inset-block-start: anchor(end)`: This sets the positioned element's block start edge to the anchor's block end edge, calculated using the `anchor(end)` function.
+- `inset-inline-start: anchor(self-end)`: This sets the positioned element's inline start edge to the anchor's inline end edge, calculated using the `anchor(self-end)` function.
 
 This gives us the following result:
 
@@ -574,7 +574,7 @@ anchor-size(<anchor-element> <anchor-size>, <length-percentage>)
 
 - `<anchor-element>`
   - : The`<dashed-ident>` name set as the value of the [`anchor-name`](/en-US/docs/Web/CSS/anchor-name) property of the anchor element you want to size the element relative to. If omitted, the element's **default anchor**, which is the anchor referenced in the [`position-anchor`](/en-US/docs/Web/CSS/position-anchor) property, is used.
-- [`<anchor-size>`](/en-US/docs/Web/CSS/anchor#anchor-size)
+- [`<anchor-size>`](/en-US/docs/Web/CSS/anchor-size#anchor-size)
   - : Specifies the dimension of the anchor element that the positioned element will be sized relative to. This can be expressed using physical (`width` or `height`) or logical (`inline`, `block`, `self-inline`, or `self-block`) values.
 - {{cssxref("length-percentage")}}
   - : Specifies the size to use as a fallback value if the element is not absolutely or fixed positioned, or the anchor element doesn't exist.
@@ -691,7 +691,7 @@ Hover over or tab to the anchor element — the positioned element grows as the 
 ## See also
 
 - [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
-- [Handling overflow: try options and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding)
+- [Handling overflow: try fallbacks and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding)
 - [Positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning)
 - [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) module
 - [Sizing items in CSS](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)

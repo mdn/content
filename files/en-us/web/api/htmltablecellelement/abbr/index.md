@@ -11,7 +11,7 @@ browser-compat: api.HTMLTableCellElement.abbr
 The **`abbr`** property of the {{domxref("HTMLTableCellElement")}} interface
 indicates an abbreviation associated with the cell. If the cell does not represent a header cell {{HTMLElement("th")}}, it is ignored.
 
-It reflects the `abbr` attribute of the {{HTMLElement("tr")}} element.
+It reflects the `abbr` attribute of the {{HTMLElement("th")}} element.
 
 > **Note:** this property doesn't have a visual effect in browsers. It adds information to help assistive technology like screenreaders that can use this abbreviation
 

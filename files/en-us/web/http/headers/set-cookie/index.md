@@ -62,16 +62,16 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
     A `<cookie-value>` can optionally be wrapped in double quotes and include any US-ASCII character excluding control characters (ASCII characters 0 up to 31 and ASCII character 127), {{glossary("Whitespace")}}, double quotes, commas, semicolons, and backslashes.
 
-    **Encoding**: Many implementations perform [URL encoding](https://en.wikipedia.org/wiki/URL_encoding) on cookie values.
+    **Encoding**: Many implementations perform {{Glossary("Percent-encoding", "percent-encoding")}} on cookie values.
     However, this is not required by the RFC specification.
-    The URL encoding does help to satisfy the requirements of the characters allowed for `<cookie-value>`.
+    The percent-encoding does help to satisfy the requirements of the characters allowed for `<cookie-value>`.
 
     > **Note:** Some `<cookie-name>` have a specific semantic:
     >
-    > **`__Secure-` prefix**: Cookies with names starting with `__Secure-` (dash is part of the prefix)
-    > must be set with the `secure` flag from a secure page (HTTPS).
+    > **`__Secure-` prefix**: Cookies with names starting with `__Secure-` (dash is part of the prefix) must be set with the `secure` flag from a secure page (HTTPS).
     >
-    > **`__Host-` prefix**: Cookies with names starting with `__Host-` must be set with the `secure` flag, must be from a secure page (HTTPS), must not have a domain specified (and therefore, are not sent to subdomains), and the path must be `/`.
+    > **`__Host-` prefix**: Cookies with names starting with `__Host-` are sent only to the host subdomain or domain that set them, and not to any other host.
+    > They must be set with the `secure` flag, must be from a secure page (HTTPS), must not have a domain specified, and the path must be `/`.
 
 - `Domain=<domain-value>` {{optional_inline}}
 
@@ -150,6 +150,8 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
         ```
 
         > **Note:** A [`Secure`](#secure) cookie is only sent to the server with an encrypted request over the HTTPS protocol. Note that insecure sites (`http:`) can't set cookies with the `Secure` directive, and therefore can't use `SameSite=None`.
+
+        > **Warning:** Cookies with the `SameSite=None; Secure` that do not also have the [`Partitioned`](#partitioned) attribute may be blocked in cross-site contexts on future browser versions. This behavior protects user data from cross-site tracking. See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies) and [Third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies).
 
 - `Secure` {{optional_inline}}
 

@@ -26,11 +26,6 @@ requestAnimationFrame(() => reveal());
 window.onpagehide = () => requestAnimationFrame(() => reveal());
 ```
 
-## Constructor
-
-- {{domxref("PageRevealEvent.PageRevealEvent", "PageRevealEvent()")}}
-  - : Creates a new {{domxref("PageRevealEvent")}} object instance.
-
 ## Instance properties
 
 - {{domxref("PageRevealEvent.viewTransition", "viewTransition")}} {{ReadOnlyInline}} {{Experimental_Inline}}

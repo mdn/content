@@ -15,7 +15,7 @@ The **`@media`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rul
 
 ## Syntax
 
-The `@media` at-rule may be placed at the top level of your code or nested inside any other [conditional group at-rule](/en-US/docs/Web/CSS/At-rule#conditional_group_rules).
+The `@media` at-rule may be placed at the top level of your code or nested inside any other conditional group at-rule.
 
 ```css
 /* At the top level of your code */
@@ -42,7 +42,7 @@ For a discussion of media query syntax, please see [Using media queries](/en-US/
 ### Media types
 
 _Media types_ describe the general category of a device.
-Except when using the `not` or `only` logical operators, the media type is optional and the `all` type is implied.
+Except when using the `only` logical operator, the media type is optional and the `all` type is implied.
 
 - `all`
   - : Suitable for all devices.
@@ -82,7 +82,7 @@ Media feature expressions test for their presence or value, and are entirely opt
 - {{cssxref("@media/device-width", "device-width")}}
   - : Width of the rendering surface of the output device. Deprecated in Media Queries Level 4.
 - {{cssxref("@media/display-mode", "display-mode")}}
-  - : The mode in which an application is being displayed: for example [fullscreen](/en-US/docs/Web/API/Fullscreen_API) or [picture-in-picture](/en-US/docs/Web/API/Document_Picture-in-Picture_API) mode.
+  - : The mode in which an application is being displayed: for example, [fullscreen](/en-US/docs/Web/CSS/@media/display-mode#fullscreen) or [picture-in-picture](/en-US/docs/Web/CSS/@media/display-mode#picture-in-picture) mode.
     Added in Media Queries Level 5.
 - {{cssxref("@media/dynamic-range", "dynamic-range")}}
   - : Combination of brightness, contrast ratio, and color depth that are supported by the user agent and the output device. Added in Media Queries Level 5.
@@ -148,7 +148,6 @@ You can also combine multiple media queries into a single rule by separating the
 
   - : Used to negate a media query, returning `true` if the query would otherwise return `false`.
     If present in a comma-separated list of queries, it will only negate the specific query to which it is applied.
-    If you use the `not` operator, you _must also_ specify a media type.
 
     > **Note:** In Level 3, the `not` keyword can't be used to negate an individual media feature expression, only an entire media query.
 
@@ -173,9 +172,9 @@ They include {{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}} and {{HTTPHeader("Sec
 
 ## Accessibility concerns
 
-To best accommodate people who adjust a site's text size, use [`em`](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#numeric_values)s when you need a {{cssxref("&lt;length&gt;")}} for your [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries).
+To best accommodate people who adjust a site's text size, use [`em`](/en-US/docs/Web/CSS/CSS_Values_and_Units#numeric_data_types)s when you need a {{cssxref("&lt;length&gt;")}} for your [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries).
 
-Both [`em`](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#numeric_values) and [`px`](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#numeric_values) are valid units, but [`em`](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#numeric_values) works better if the user changes the browser text size.
+Both [`em`](/en-US/docs/Web/CSS/CSS_Values_and_Units#numeric_data_types) and [`px`](/en-US/docs/Web/CSS/CSS_Values_and_Units#numeric_data_types) are valid units, but [`em`](/en-US/docs/Web/CSS/CSS_Values_and_Units#numeric_data_types) works better if the user changes the browser text size.
 
 Also consider media queries or [HTTP user agent client hints](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) to improve the user's experience.
 For example, the media query [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) or the equivalent HTTP header {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}) can be used to minimize the amount of animation or motion used based on user preferences.

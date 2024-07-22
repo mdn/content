@@ -271,7 +271,7 @@ Try it now:
 curl https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch
 ```
 
-You won't get an output because the page has been redirected (to [/Web/API/fetch](/en-US/docs/Web/API/fetch)).
+You won't get an output because the page has been redirected (to [/Web/API/fetch](/en-US/docs/Web/API/Window/fetch)).
 We need to explicitly tell `curl` to follow redirects using the `-L` flag.
 
 Let's also look at the headers that `developer.mozilla.org` returns using `curl`'s `-I` flag, and print all the location redirects it sends to the terminal, by piping the output of `curl` into `grep` (we will ask `grep` to return all the lines that contain the word "location").

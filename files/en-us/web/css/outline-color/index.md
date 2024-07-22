@@ -19,9 +19,6 @@ outline-color: #f92525;
 outline-color: rgb(30 222 121);
 outline-color: blue;
 
-/* Keyword value */
-outline-color: auto;
-
 /* Global values */
 outline-color: inherit;
 outline-color: initial;
@@ -36,8 +33,8 @@ The `outline-color` property is specified as any one of the values listed below.
 
 - {{cssxref("&lt;color&gt;")}}
   - : The color of the outline, specified as a `<color>`.
-- `auto`
-  - : Computes to [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) unless [`outline-style`](/en-US/docs/Web/CSS/outline-style) is set to `auto` then it computes to the [accent color](/en-US/docs/Web/CSS/accent-color).
+
+The specification also lists an additional value, `auto`, which is not currently supported in any browsers. When implemented, `auto` will compute to [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) unless [`outline-style`](/en-US/docs/Web/CSS/outline-style) is set to `auto` then it will compute to the [accent color](/en-US/docs/Web/CSS/accent-color).
 
 ## Description
 

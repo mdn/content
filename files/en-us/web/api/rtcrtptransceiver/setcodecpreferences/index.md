@@ -8,11 +8,22 @@ browser-compat: api.RTCRtpTransceiver.setCodecPreferences
 
 {{APIRef("WebRTC")}}
 
-The {{domxref("RTCRtpTransceiver")}} method **`setCodecPreferences()`** configures the transceiver's preferred list of codecs.
+The **`setCodecPreferences()`** method of the {{domxref("RTCRtpTransceiver")}} interface is used to set the codecs that the transceiver allows for decoding _received_ data, in order of decreasing preference.
+
+The preferences set using this method influence what codecs are negotiated with the remote peer for encoding the data that it sends, including those used for retransmission, redundancy, and forward error correction.
+Codecs that are not included in the preferences list will not be part of the negotiation.
+Note that the preferences used by this transceiver for _sending_ content depend on the preferences of the remote peer.
+
+The recommended way to set codec preferences is to first get the array of codecs that are actually supported for decoding received data, then reorder them your in decreasing preference order.
+This ensures that the array is ordered as required, does not contain any unsupported codecs, and also that it also contains codecs that are needed for retransmission, redundancy, and forward error correction.
 
 The specified set of codecs will be used for all future connections that include this transceiver until this method is called again.
 
-When preparing to open an {{domxref("RTCPeerConnection")}}, you can change the codec parameters from the {{Glossary("user agent", "user agent's")}} default configuration by calling `setCodecParameters()` _before_ calling either {{domxref("RTCPeerConnection.createOffer()")}} or {{domxref("RTCPeerConnection.createAnswer", "createAnswer()")}}.
+When preparing to open an {{domxref("RTCPeerConnection")}} the codecs should be set using `setCodecParameters()` _before_ calling either {{domxref("RTCPeerConnection.createOffer()")}} or {{domxref("RTCPeerConnection.createAnswer", "createAnswer()")}}, as these initiate the negotiation (and will use codec parameters from the {{Glossary("user agent", "user agent's")}} default configuration by default).
+
+The codecs can be changed when you have an ongoing communication, but you need to first call `setCodecParameters()` and then kick off a new negotiation.
+A WebRTC application will already have code for this in the [`negotiationneeded` event handler](/en-US/docs/Web/API/RTCPeerConnection/negotiationneeded_event).
+Note however that at time of writing the event is not automatically fired when you call `setCodecParameters()`, so you will have to call `onnegotiationneeded` yourself.
 
 A guide to codecs supported by WebRTC—and each codec's positive and negative characteristics—can be found in [Codecs used by WebRTC](/en-US/docs/Web/Media/Formats/WebRTC_codecs).
 
@@ -65,29 +76,52 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `InvalidAccessError` {{domxref("DOMException")}}
-  - : The `codecs` list includes one or more codecs which are not supported by the transceiver.
+  - : The `codecs` list includes one or more codecs which are not supported by the {{domxref("RTCRtpReceiver")}} associated with the transceiver.
 - `InvalidModificationError` {{domxref("DOMException")}}
   - : The `codecs` list only contains entries for RTX, RED, FEC or Comfort Noise, or is an empty set.
     The codecs must always contain a codec for the media.
 
-## Usage notes
+## Examples
 
-### Getting a list of supported codecs
+### Creating the array of preferred codecs
 
-You can only include in the `codecs` list codecs which the transceiver actually supports.
-That means that either the associated {{domxref("RTCRtpSender")}} or the {{domxref("RTCRtpReceiver")}} needs to support every codec in the list.
-If any unsupported codecs are listed, the browser will throw an `InvalidAccessError` exception when you call this method.
+The recommended way to set codec preferences is to first get the array of codecs that are actually supported for decoding received data, then reorder the list in decreasing preference order.
 
-A good approach to setting codec preferences is to first get the list of codecs that are actually supported, then modify that list to match what you want.
-Pass the altered list into `setCodecPreferences()` to specify your preferences.
+It is important to start with the list of codecs that are supported (and not a hard coded list of your preferred codecs), because you if you include any that aren't supported by the associated {{domxref("RTCRtpReceiver")}} the browser will throw an `InvalidAccessError` exception when you call the `setCodecPreferences()` method.
+In addition, the array has to include appropriate codecs for retransmission, redundancy, and forward error correction, and starting with the list of supported codecs ensures that these are present.
 
-To determine which codecs are supported by the transceiver, call the sender's {{domxref("RTCRtpSender.getCapabilities_static", "getCapabilities()")}} and the receiver's {{domxref("RTCRtpReceiver.getCapabilities_static", "getCapabilities()")}} methods and get the `codecs` array from the results of each.
-
-The following code snippet demonstrates how to get both the list of codecs supported by the transceiver's {{domxref("RTCRtpSender")}} and {{domxref("RTCRtpReceiver")}}.
+You can get the codecs supported for decoding data using the {{domxref("RTCRtpReceiver.getCapabilities_static", "RTCRtpReceiver.getCapabilities()")}} static method as shown:
 
 ```js
-const availSendCodecs = transceiver.sender.getCapabilities("video").codecs;
 const availReceiveCodecs = transceiver.receiver.getCapabilities("video").codecs;
+```
+
+To reorder the codecs array to our preferred order, we can use the sorting fuction below to sort on MIME type (this comes from [setCodecPreferences is now in all browsers!](https://blog.mozilla.org/webrtc/cross-browser-support-for-choosing-webrtc-codecs/) on blog.mozilla.org (2024)).
+
+```js
+function sortByMimeTypes(codecs, preferredOrder) {
+  return codecs.sort((a, b) => {
+    const indexA = preferredOrder.indexOf(a.mimeType);
+    const indexB = preferredOrder.indexOf(b.mimeType);
+    const orderA = indexA >= 0 ? indexA : Number.MAX_VALUE;
+    const orderB = indexB >= 0 ? indexB : Number.MAX_VALUE;
+    return orderA - orderB;
+  });
+}
+```
+
+The method takes the list of supported codecs, and an array containing the preferred MIME types, in decreasing order, and returns the array sorted in place.
+The code below shows how this is used, assuming that you have already set up a peer connection (`peerConnection`):
+
+```js
+// Get supported codecs the sort using preferred codecs
+const supportedCodecs = RTCRtpReceiver.getCapabilities("video").codecs;
+const preferredCodecs = ["video/H264", "video/VP8", "video/VP9"];
+const sortedCodecs = sortByMimeTypes(supportedCodecs, preferredCodecs);
+
+// Get transceiver for connection and set the preferences
+const [transceiver] = peerConnection.getTransceivers();
+transceiver.setCodecPreferences(sortedCodecs); // <---
 ```
 
 ## Specifications
@@ -100,6 +134,7 @@ const availReceiveCodecs = transceiver.receiver.getCapabilities("video").codecs;
 
 ## See also
 
+- [setCodecPreferences is now in all browsers!](https://blog.mozilla.org/webrtc/cross-browser-support-for-choosing-webrtc-codecs/) on blog.mozilla.org (2024)
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
 - [Codecs used by WebRTC](/en-US/docs/Web/Media/Formats/WebRTC_codecs)
 - [Introduction to the Real-time Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)

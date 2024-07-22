@@ -2,7 +2,7 @@
 title: 201 Created
 slug: Web/HTTP/Status/201
 page-type: http-status-code
-browser-compat: http.status.201
+spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.201
 ---
 
 {{HTTPSidebar}}
@@ -25,10 +25,6 @@ request.
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

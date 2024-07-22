@@ -9,7 +9,7 @@ spec-urls: https://httpwg.org/specs/rfc9110.html#status.405
 
 The HyperText Transfer Protocol (HTTP) **`405 Method Not Allowed`** response status code indicates that the server knows the request method, but the target resource doesn't support this method.
 
-The server **must** generate an **`Allow`** header field in a 405 status code response. The field must contain a list of methods that the target resource currently supports.
+The server **must** generate an {{HTTPHeader("Allow")}} header field in a 405 status code response. The field must contain a list of methods that the target resource currently supports.
 
 ## Status
 

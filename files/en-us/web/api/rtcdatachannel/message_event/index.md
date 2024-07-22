@@ -63,7 +63,7 @@ dc.addEventListener(
 );
 ```
 
-Lines 2-4 create the new paragraph element and add the message data to it as a new text node. Line 6 appends the new paragraph to the end of the document's body.
+We first create the new paragraph element and add the message data to it as a new text node. Then we append the new paragraph to the end of the document's body.
 
 You can also use an `RTCDataChannel` object's {{domxref("RTCDataChannel.message_event", "onmessage")}} event handler property to set the event handler:
 

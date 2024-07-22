@@ -45,7 +45,7 @@ All operands, except those of type {{cssxref("&lt;number&gt;")}}, must be suffix
 There's a few points to keep in mind about `calc()`:
 
 - Serializing the arguments inside `calc()` follows the IEEE-754 standard for floating point math, which means there's a few cases to be aware of regarding the `infinity` and `NaN` constants.
-  For more details on how constants are serialized, see the [`calc-constant`](/en-US/docs/Web/CSS/calc-constant) page.
+  For more details on how constants are serialized, see the [`calc-keyword`](/en-US/docs/Web/CSS/calc-keyword) page.
 
 - Math expressions involving percentages for widths and heights on table columns, table column groups, table rows, table row groups, and table cells in both auto and fixed layout tables _may_ be treated as if `auto` is specified.
 
@@ -213,6 +213,6 @@ For another example of using the `calc()` function to derive relative colors, se
 
 ## See also
 
-- {{CSSxRef("&lt;calc-constant&gt;")}}
+- {{CSSxRef("&lt;calc-keyword&gt;")}}
 - [CSS functions](/en-US/docs/Web/CSS/CSS_Functions)
 - [A Complete Guide to calc() in CSS](https://css-tricks.com/a-complete-guide-to-calc-in-css/) (CSS-Tricks)

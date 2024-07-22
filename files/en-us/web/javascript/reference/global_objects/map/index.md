@@ -278,7 +278,7 @@ interface RTCStatsReport {
 
 `Map`-like objects are either read-only or read-writable (see the `readonly` keyword in the IDL above).
 
-- Read-only `Map`-like objects have the property [`size`](#map.prototype.size), and the methods: [`entries()`](#map.prototype.entries), [`forEach()`](#map.prototype.foreach), [`get()`](#map.prototype.get), [`has()`](#map.prototype.has), [`keys()`](#map.prototype.keys), [`values()`](#map.prototype.values), and [`@@iterator`](#map.prototypeiterator).
+- Read-only `Map`-like objects have the property [`size`](#map.prototype.size), and the methods: [`entries()`](#map.prototype.entries), [`forEach()`](#map.prototype.foreach), [`get()`](#map.prototype.get), [`has()`](#map.prototype.has), [`keys()`](#map.prototype.keys), [`values()`](#map.prototype.values), and [`[Symbol.iterator]()`](#map.prototypesymbol.iterator).
 - Writeable `Map`-like objects additionally have the methods: [`clear()`](#map.prototype.clear), [`delete()`](#map.prototype.delete), and [`set()`](#map.prototype.set).
 
 The methods and properties have the same behavior as the equivalent entities in `Map`, except for the restriction on the types of the keys and values.
@@ -299,7 +299,7 @@ The following are examples of read-only `Map`-like browser objects:
 
 ## Static properties
 
-- {{jsxref("Map/@@species", "Map[@@species]")}}
+- [`Map[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.species)
   - : The constructor function that is used to create derived objects.
 
 ## Static methods
@@ -315,8 +315,8 @@ These properties are defined on `Map.prototype` and shared by all `Map` instance
   - : The constructor function that created the instance object. For `Map` instances, the initial value is the {{jsxref("Map/Map", "Map")}} constructor.
 - {{jsxref("Map.prototype.size")}}
   - : Returns the number of key/value pairs in the `Map` object.
-- `Map.prototype[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Map"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+- `Map.prototype[Symbol.toStringTag]`
+  - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Map"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 
@@ -340,7 +340,7 @@ These properties are defined on `Map.prototype` and shared by all `Map` instance
   - : Sets the value for the passed key in the `Map` object. Returns the `Map` object.
 - {{jsxref("Map.prototype.values()")}}
   - : Returns a new Iterator object that contains the values for each element in the `Map` object in insertion order.
-- [`Map.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/@@iterator)
+- [`Map.prototype[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator)
   - : Returns a new Iterator object that contains a two-member array of `[key, value]` for each element in the `Map` object in insertion order.
 
 ## Examples

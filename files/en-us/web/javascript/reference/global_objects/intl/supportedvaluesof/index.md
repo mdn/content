@@ -31,6 +31,8 @@ Intl.supportedValuesOf(key)
 
 A sorted array of unique string values indicating the values supported by the implementation for the given key.
 
+> **Note:** While the IANA database changes from time to time, the Unicode CLDR database (which browsers use) keeps old time zone names for stability purposes. Some browsers may use the legacy name, while others override it with the new name. See {{jsxref("Intl/Locale/getTimeZones", "Intl.Locale.prototype.getTimeZones")}} for more information.
+
 ### Exceptions
 
 - {{jsxref("RangeError")}}

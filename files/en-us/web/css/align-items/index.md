@@ -29,6 +29,7 @@ align-items: flex-start;
 align-items: flex-end;
 align-items: self-start;
 align-items: self-end;
+align-items: anchor-center;
 
 /* Baseline alignment */
 align-items: baseline;
@@ -84,6 +85,10 @@ align-items: unset;
 - `stretch`
 
   - : If the items are smaller than the alignment container, auto-sized items will be equally enlarged to fill the container, respecting the items' width and height limits.
+
+- `anchor-center` {{experimental_inline}}
+
+  - : In the case of [anchor-positioned](/en-US/docs/Web/CSS/CSS_anchor_positioning) elements, aligns the items to the center of the associated anchor element in the block direction. See [Centering on the anchor using `anchor-center`](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#centering_on_the_anchor_using_anchor-center).
 
 - `safe`
 

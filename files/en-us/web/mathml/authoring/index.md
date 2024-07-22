@@ -21,10 +21,10 @@ Each MathML equation is represented by a root [`math`](/en-US/docs/Web/MathML/El
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
-    <title>MathML in HTML5</title>
+    <title>MathML in HTML</title>
   </head>
   <body>
-    <h1>MathML in HTML5</h1>
+    <h1>MathML in HTML</h1>
 
     <p>
       One over square root of two (inline style):
@@ -205,12 +205,12 @@ After running that command, a file `output.html` containing the following HTML o
 
     <p>
       One over square root of two (inline style):
-      <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><annotation encoding="TeX">\frac{1}{\sqrt{2}}</annotation></semantics></math>
+      <math><semantics><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><annotation encoding="TeX">\frac{1}{\sqrt{2}}</annotation></semantics></math>
     </p>
 
     <p>
       One over square root of two (display style):
-      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><annotation encoding="TeX">\frac{1}{\sqrt{2}}</annotation></semantics></math>
+      <math display="block"><semantics><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><annotation encoding="TeX">\frac{1}{\sqrt{2}}</annotation></semantics></math>
     </p>
   </body>
 </html>

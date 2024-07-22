@@ -50,7 +50,7 @@ If you need help or have any questions, feel free to get in touch with one of th
 
 ### Spanish (`es`)
 
-- Discussions: [Matrix (`#mdn-l10n-es`)](https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org), [Telegram (`MDN l10n ES`)](https://t.me/+Dr6qKQCAepw4MjFj)
+- Discussions: [Matrix (`#mdn-l10n-es`)](https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org), [Telegram (`MDN l10n ES`)](https://t.me/+Dr6qKQCAepw4MjFj), [Discord (`#spanish`)](/discord)
 - Current maintainers: [JuanVqz](https://github.com/JuanVqz), [davbrito](https://github.com/davbrito), [Graywolf9](https://github.com/Graywolf9), [Vallejoanderson](https://github.com/Vallejoanderson), [marcelozarate](https://github.com/marcelozarate), [Jalkhov](https://github.com/Jalkhov)
 
 ## See also

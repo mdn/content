@@ -29,7 +29,13 @@ where:
 
 ## Description
 
-Rules within a cascade layer cascade together, giving more control over the cascade to web developers. Any styles not in a layer are gathered together and placed into a single anonymous layer that comes after all the declared layers, named and anonymous. This means that any styles declared outside of a layer will override styles declared in a layer, regardless of specificity.
+Rules within a cascade layer cascade together, giving more control over the cascade to web developers. Styles that are not defined in a layer always override styles declared in named and anonymous layers.
+
+The following diagram shows layer priorities where layers are declared in 1, 2, ..., N order.
+
+![Diagram showing cascade layer priorities](https://mdn.github.io/shared-assets/images/diagrams/css/at-rules/layer-cascade.svg)
+
+The declaration order matters. The first declared layer gets the lowest priority and the last declared layer gets the highest priority. However, the priority is reversed when the [`!important`](/en-US/docs/Web/CSS/important) flag is used.
 
 The `@layer` at-rule is used to create a cascade layer in one of three ways.
 

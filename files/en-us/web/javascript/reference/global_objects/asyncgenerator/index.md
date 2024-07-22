@@ -17,7 +17,7 @@ Async generator methods always yield {{jsxref("Promise")}} objects.
 
 ## Constructor
 
-The `AsyncGenerator` constructor is not available globally. Instances of `AsyncGenerator` must be returned from [async generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/async_function*)
+There's no JavaScript entity that corresponds to the `AsyncGenerator` constructor. Instances of `AsyncGenerator` must be returned from [async generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/async_function*):
 
 ```js
 async function* createAsyncGenerator() {
@@ -31,7 +31,7 @@ asyncGen.next().then((res) => console.log(res.value)); // 2
 asyncGen.next().then((res) => console.log(res.value)); // 3
 ```
 
-In fact, there's no JavaScript entity that corresponds to the `AsyncGenerator` constructor. There's only a hidden object which is the prototype object shared by all objects created by async generator functions. This object is often stylized as `AsyncGenerator.prototype` to make it look like a class, but it should be more appropriately called [`AsyncGeneratorFunction.prototype.prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction), because `AsyncGeneratorFunction` is an actual JavaScript entity.
+There's only a hidden object which is the prototype object shared by all objects created by async generator functions. This object is often stylized as `AsyncGenerator.prototype` to make it look like a class, but it should be more appropriately called {{jsxref("AsyncGeneratorFunction.prototype.prototype")}}, because `AsyncGeneratorFunction` is an actual JavaScript entity. To understand the prototype chain of `AsyncGenerator` instances, see {{jsxref("AsyncGeneratorFunction.prototype.prototype")}}.
 
 ## Instance properties
 
@@ -43,8 +43,8 @@ These properties are defined on `AsyncGenerator.prototype` and shared by all `As
 
     > **Note:** `AsyncGenerator` objects do not store a reference to the async generator function that created them.
 
-- `AsyncGenerator.prototype[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"AsyncGenerator"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+- `AsyncGenerator.prototype[Symbol.toStringTag]`
+  - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"AsyncGenerator"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 

@@ -24,7 +24,7 @@ new constructor(arg1, arg2, /* …, */ argN)
 ### Parameters
 
 - `constructor`
-  - : A class or function that specifies the type of the object instance.
+  - : A class or function that specifies the type of the object instance. The expression can be anything with sufficient [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table), including an identifier, a [property access](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors), or another `new` expression, but [optional chaining](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) is not allowed.
 - `arg1`, `arg2`, …, `argN`
   - : A list of values that the `constructor` will be called with. `new Foo` is equivalent to `new Foo()`, i.e. if no argument list is specified, `Foo` is called without arguments.
 

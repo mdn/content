@@ -12,10 +12,6 @@ This article looks at implementing an effective, cross-browser control system fo
 
 Historically playing games on a console connected to your TV was always a totally different experience to gaming on the PC, mostly because of the unique controls. Eventually, extra drivers and plugins allowed us to use console gamepads with desktop games — either native games or those running in the browser. Now we have the [Gamepad API](/en-US/docs/Web/API/Gamepad_API), which gives us the ability to play browser-based games using gamepad controllers without any plugins. The Gamepad API achieves this by providing an interface exposing button presses and axis changes that can be used inside JavaScript code to handle the input. These are good times for browser gaming.
 
-## API status and browser support
-
-The [Gamepad API](https://www.w3.org/TR/gamepad/) is still at the Working Draft stage in the W3C process, which means its implementation might still change, but saying that the [browser support](https://caniuse.com/gamepad) is already quite good. Firefox 29+ and Chrome 35+ support it out of the box. Opera supports the API in version 22+ (not surprising given that they now use Chrome's Blink engine.) And Microsoft implemented support for the API in Edge recently, which means four main browsers now supporting the Gamepad API.
-
 ## Which gamepads are best?
 
 The most popular gamepads right now are those from the Xbox 360, Xbox One, PS3 and PS4 — they have been heavily tested and work well with the Gamepad API implementation in browsers across Windows and macOS.

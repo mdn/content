@@ -295,7 +295,7 @@ When compiling the app, Svelte changes our `h1` styles definition to `h1.svelte-
 ## Making a couple of changes
 
 Now that we have a general idea of how it all fits together, we can start making a few changes.
-At this point you can try updating your `App.svelte` component — for example change the `<h1>` element on line 6 of `App.svelte` so that it reads like this:
+At this point you can try updating your `App.svelte` component — for example change the `<h1>` element in `App.svelte` so that it reads like this:
 
 ```html
 <h1>Hello {name} from MDN!</h1>
@@ -357,7 +357,7 @@ const app = new App({
 export default app;
 ```
 
-`main.js` starts by importing the Svelte component that we are going to use. Then in line 3 it instantiates it, passing an option object with the following properties:
+`main.js` starts by importing the Svelte component that we are going to use. Then it gets instantiated with `new App`, passing an option object with the following properties:
 
 - `target`: The DOM element inside which we want the component to be rendered, in this case the `<body>` element.
 - `props`: the values to assign to each prop of the `App` component.

@@ -22,12 +22,13 @@ If a specified image cannot be drawn (for example, when the file denoted by the 
 ## Syntax
 
 ```css
-background-image: linear-gradient(
-    to bottom,
-    rgb(255 255 0 / 50%),
-    rgb(0 0 255 / 50%)
-  ),
-  url("catfront.png");
+/* single image */
+background-image: linear-gradient(black, white);
+background-image: url("catfront.png");
+
+/* multiple images */
+background-image: radial-gradient(circle, #0000 45%, #000f 48%),
+  radial-gradient(ellipse farthest-corner, #fc1c14 20%, #cf15cf 80%);
 
 /* Global values */
 background-image: inherit;
@@ -124,20 +125,29 @@ div {
 
 ## See also
 
-- [Implementing image sprites in CSS](/en-US/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS)
 - {{HTMLElement("img")}}
-- Image-related data types: {{cssxref("&lt;image&gt;")}}, {{cssxref("&lt;gradient&gt;")}}
 - Image-related functions:
-
-  - {{cssxref("cross-fade", "cross-fade()")}}
-  - {{cssxref("element", "element()")}}
-  - {{cssxref("image/image", "image()")}}
-  - {{cssxref("image/image-set", "image-set()")}}
   - {{cssxref("gradient/linear-gradient", "linear-gradient()")}}
   - {{cssxref("gradient/radial-gradient", "radial-gradient()")}}
   - {{cssxref("gradient/conic-gradient", "conic-gradient()")}}
   - {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}
   - {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
   - {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
-  - {{cssxref("image/paint", "paint()")}}
   - {{cssxref("url", "url()")}}
+- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients)
+- [Implementing image sprites in CSS](/en-US/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS)
+- [CSS images](/en-US/docs/Web/CSS/CSS_images) module
+
+- Background-related properties
+  - {{cssxref("background-attachment")}}
+  - {{cssxref("background-clip")}}
+  - {{cssxref("background-color")}}
+  - {{cssxref("background-origin")}}
+  - {{cssxref("background-position")}}
+  - {{cssxref("background-repeat")}}
+  - {{cssxref("background-size")}}
+  - {{cssxref("background")}} shorthand
+- [Learn CSS: background and borders](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+- [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
+- [Resizing background images](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
+- [CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders) module

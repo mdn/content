@@ -27,7 +27,7 @@ TypeError: String.prototype.replaceAll argument must not be a non-global regular
 
 The {{jsxref("String.prototype.matchAll()")}} and {{jsxref("String.prototype.replaceAll()")}} methods require a {{jsxref("RegExp")}} object with the {{jsxref("RegExp/global", "global")}} flag set. This flag indicates that the regular expression can match all locations of the input string, instead of stopping at the first match. Although the `g` flag is redundant when using these methods (because these methods always do a global replacement), they are still required to make the intention clear.
 
-It's worth noting that the `g` flag validation is done in the `matchAll` and `replaceAll` methods. If you use the [`@@matchAll`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll) method of `RegExp` instead, you won't get this error, but there will only be a single match.
+It's worth noting that the `g` flag validation is done in the `matchAll` and `replaceAll` methods. If you use the [`[Symbol.matchAll]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll) method of `RegExp` instead, you won't get this error, but there will only be a single match.
 
 ## Examples
 
@@ -54,7 +54,7 @@ const newPattern = new RegExp(
 "abc".replaceAll(newPattern, "f"); // "fff"
 ```
 
-If you only intend to do a single matching/replacement: use {{jsxref("String.prototype.match()")}} or {{jsxref("String.prototype.replace()")}} instead. You can also use the `@@matchAll` method if you want an iterator like `matchAll` returns that only contains one match, but doing so will be very confusing.
+If you only intend to do a single matching/replacement: use {{jsxref("String.prototype.match()")}} or {{jsxref("String.prototype.replace()")}} instead. You can also use the `[Symbol.matchAll]()` method if you want an iterator like `matchAll` returns that only contains one match, but doing so will be very confusing.
 
 ```js example-good
 "abc".match(/./); // [ "a" ]

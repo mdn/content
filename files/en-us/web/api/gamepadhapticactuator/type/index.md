@@ -3,10 +3,12 @@ title: "GamepadHapticActuator: type property"
 short-title: type
 slug: Web/API/GamepadHapticActuator/type
 page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.GamepadHapticActuator.type
 ---
 
-{{APIRef("Gamepad")}}
+{{APIRef("Gamepad")}}{{deprecated_header}}
 
 The **`type`** read-only property of the {{domxref("GamepadHapticActuator")}} interface returns an enum representing the type of the haptic hardware.
 

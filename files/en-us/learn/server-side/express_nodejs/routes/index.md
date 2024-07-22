@@ -688,10 +688,10 @@ To test the routes, first start the website using your usual approach
 - The default method
 
   ```bash
-  // Windows
+  # Windows
   SET DEBUG=express-locallibrary-tutorial:* & npm start
 
-  // macOS or Linux
+  # macOS or Linux
   DEBUG=express-locallibrary-tutorial:* npm start
   ```
 

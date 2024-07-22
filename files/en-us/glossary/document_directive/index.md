@@ -14,15 +14,12 @@ See [Document directives](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#d
 
 ## See also
 
-- [Glossary](/en-US/docs/Glossary)
-
+- Related glossary terms:
   - {{Glossary("CSP")}}
   - {{Glossary("Reporting directive")}}
   - {{Glossary("Fetch directive")}}
   - {{Glossary("Navigation directive")}}
-
 - Reference
-
   - <https://www.w3.org/TR/CSP/#directives-document>
   - {{HTTPHeader("Content-Security-Policy/upgrade-insecure-requests", "upgrade-insecure-requests")}}
   - {{HTTPHeader("Content-Security-Policy/block-all-mixed-content", "block-all-mixed-content")}}

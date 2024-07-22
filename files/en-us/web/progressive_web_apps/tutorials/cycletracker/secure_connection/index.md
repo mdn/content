@@ -9,7 +9,8 @@ page-type: tutorial-chapter
 
 {{PWASidebar}}
 
-PWAs are [restricted to secure contexts](/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts). Secure contexts include TLS contexts served with the `https://` protocol and locally-delivered resources, including `127.0.0.1` and `localhost` URLs served with the `http://` protocol. In this section, we will discuss ways of serving the application locally and remotely with a secure connection.
+PWAs can only be installed using a manifest file when served with the `https://` protocol, or when served locally from `127.0.0.1` and `localhost` URLs with the `http://` protocol.
+They also commonly use APIs that are [restricted to secure contexts](/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts).
 
 In the previous section, we used HTML and CSS to create the shell of our period tracking application. In this section, we'll open the CycleTracker static content in a browser, view the content from a locally started development environment, and view the content on a remote, secure server.
 
@@ -21,13 +22,14 @@ With the `index.html` updated, and the `style.css` housed in the same directory,
 
 ![Light green web page with a large header, a form with a legend, two date pickers and a button. The bottom shows two placeholder menstrual cycles and a header.](filefile.jpg)
 
-We are viewing our page using the `file://` protocol. This works for the current state of our codebase but not suffice as we [add JavaScript functionality](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality).
-The reason for this is that PWAs and some of their commonly used APIs, such as the Service Worker API, require a secure connection.
-For this reason PWAs must be served using the `https` protocol, or from a local development environment using `localhost` or `127.0.0.1` — with or without a port number. If we view our finished app using the `file://` protocol, our [manifest file](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file) will be ignored and any [service workers](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers) we add will fail.
+We are viewing our page using the `file://` protocol, which provides a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
+This ensures that the pages can be viewed with the current state of our codebase, and will continue to work as we [add JavaScript functionality](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality) that requires a secure context.
 
 > **Note:** Serving your app over `https` isn't only good for PWAs, but for all websites as it ensures the information that transits between your web server and the user's browser is encrypted end to end. Several [Web APIs require secure contexts](/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts). Even if you aren't creating installable PWAs, as you add features to any web app, you may run into cases where a secure context is required.
 
-We need a local development environment to work through the tutorial. Part of [making a PWA installable](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable) is a secure server. The files will need to be served over a secure connection on the web to access the benefits PWAs provide and to distribute our application as a PWA.
+While we can view and test most application functionality using the `file://` protocol, we can't use it to test application installation using our [manifest file](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file).
+
+We need a local development environment to test the whole tutorial including installation. Part of [making a PWA installable](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable) is a secure server. The files will need to be served over a secure connection on the web to access the benefits PWAs provide and to distribute our application as a PWA.
 
 ## localhost
 

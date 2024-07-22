@@ -265,7 +265,6 @@ To deal with regularly updating regions of content, you can use the `aria-live` 
 - `off:` The default. Updates should not be announced.
 - `polite`: Updates should be announced only if the user is idle.
 - `assertive`: Updates should be announced to the user as soon as possible.
-- `rude`: Updates should be announced straight away, even if this interrupts the user.
 
 Here's an example:
 
@@ -325,7 +324,7 @@ Let's go through some tests with a couple of different screen readers to give yo
 
 #### VoiceOver
 
-VoiceOver (VO) comes free with your Mac/iPhone/iPad, so it's useful for testing on desktop/mobile if you use Apple products. We'll be testing it on Mac OS X on a MacBook Pro.
+VoiceOver (VO) comes free with your Mac/iPhone/iPad, so it's useful for testing on desktop/mobile if you use Apple products. We'll be testing it on macOS on a MacBook Pro.
 
 To turn it on, press Cmd + F5. If you've not used VO before, you will be given a welcome screen where you can choose to start VO or not, and run through a rather useful tutorial to learn how to use it. To turn it off again, press Cmd + F5 again.
 
