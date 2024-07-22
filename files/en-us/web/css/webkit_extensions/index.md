@@ -156,6 +156,8 @@ For each of them, use the standard equivalent provided.
   - : Use the [CSS multicolumn layout](/en-US/docs/Web/CSS/CSS_multicol_layout) with the standard {{cssxref("break-before")}} property instead.
 - `-webkit-column-break-inside`
   - : Use the [CSS multicolumn layout](/en-US/docs/Web/CSS/CSS_multicol_layout) with the standard {{cssxref("break-inside")}} property instead.
+- `-webkit-font-feature-settings`
+  - : Use the [`font-feature-settings`](/en-US/docs/Web/CSS/font-feature-settings) property instead.
 - `-webkit-hyphenate-character`
   - : Use the standard {{cssxref("hyphenate-character")}} property instead.
 - `-webkit-initial-letter`
@@ -163,7 +165,7 @@ For each of them, use the standard equivalent provided.
 
 ### J-Z
 
-- `webkit-margin-end`
+- `-webkit-margin-end`
   - : Use the standard {{CSSxRef("margin-block-end")}} property instead.
 - `-webkit-margin-start`
 
