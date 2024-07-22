@@ -60,7 +60,7 @@ In this example pressing the button runs some code. First, it changes the text o
 
 ### Without a variable
 
-To understand why this is so useful, let's think about how we'd write this example without using a variable. It would end up looking something like this:
+To understand why this is so useful, let's think about how we'd write this example without using a variable to store the count. It would end up looking something like this:
 
 ```html example-bad
 <button id="button_B">Press me</button>
@@ -199,7 +199,7 @@ Again, this is a sensible language decision. There is no reason to redeclare var
 
 For these reasons and more, we recommend that you use `let` in your code, rather than `var`. Unless you are explicitly writing support for ancient browsers, there is no longer any reason to use `var` as all modern browsers have supported `let` since 2015.
 
-> **Note:** If you are trying this code in your browser's console, prefer to copy & paste each of the code blocks here as a whole. There's a [feature in Chrome's console](https://goo.gle/devtools-const-repl) where variable re-declarations with `let` and `const` are allowed:
+> **Note:** If you are trying this code in your browser's console, prefer to copy & paste each of the code blocks here as a whole. There's a [feature in Chrome's console](https://docs.google.com/document/d/1NP_FnHr4WCZRp7exgUklvNiXrH3nujcfwvp2pzMQ8-0/edit#heading=h.7y5hynxk52e9) where variable re-declarations with `let` and `const` are allowed:
 >
 > ```plain
 > > let myName = "Chris";

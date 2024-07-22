@@ -197,7 +197,7 @@ const oscList = [];
 let mainGainNode = null;
 ```
 
-1. `audioContext` is set to reference the global {{domxref("AudioContext")}} object (or `webkitAudioContext` if necessary).
+1. `audioContext` is created as an instance of {{domxref("AudioContext")}}.
 2. `oscList` is set up to be ready to contain a list of all currently-playing oscillators. It starts off empty, since there are none playing yet.
 3. `mainGainNode` is set to null; during the setup process, it will be configured to contain a {{domxref("GainNode")}} which all playing oscillators will connect to and play through to allow the overall volume to be controlled using a single slider control.
 
@@ -484,8 +484,8 @@ function createKey(note, octave, freq) {
   keyElement.dataset["octave"] = octave;
   keyElement.dataset["note"] = note;
   keyElement.dataset["frequency"] = freq;
-
-  labelElement.innerHTML = `${note}<sub>${octave}</sub>`;
+  labelElement.appendChild(document.createTextNode(note));
+  labelElement.appendChild(document.createElement("sub")).textContent = octave;
   keyElement.appendChild(labelElement);
 
   keyElement.addEventListener("mousedown", notePressed, false);
