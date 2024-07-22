@@ -59,11 +59,60 @@ path("M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80");
 path(evenodd,"M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80");
 ```
 
-### Use as the value of offset-path
+### Use as an offset-path value
 
-The `path()` function is used to create a path for the item to travel round. Changing any of the values will cause the path to not neatly run round the circle.
+In the following example, the `path()` function has been used to create a circular path for the ball to move on. Changing any of the values will cause the path to not neatly run round the circle.
 
-{{EmbedGHLiveSample("css-examples/path/offset-path.html", '100%', 960)}}
+```html
+<div id="path">
+  <div id="ball"></div>
+</div>
+<button>animate</button>
+```
+
+```css
+#path {
+  margin: 40px;
+  width: 400px;
+  height: 200px;
+
+  /* draw the gray ramp */
+  background: radial-gradient(at 50% 0%, transparent 70%, grey 70%, grey 100%);
+}
+
+#ball {
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  border-radius: 50%;
+
+  /* mark the elliptical path */
+  offset-path: path("M 15 15 A 6 5.5 10 0 0 385 15");
+}
+```
+
+```js
+const btn = document.querySelector("button");
+const ball = document.getElementById("ball");
+
+btn.addEventListener("click", () => {
+  btn.setAttribute("disabled", true);
+  setTimeout(() => btn.removeAttribute("disabled"), 6000);
+
+  ball.animate(
+    // animate the offset path
+    { offsetDistance: [0, "100%"] },
+    {
+      duration: 1500,
+      iterations: 4,
+      easing: "cubic-bezier(.6,.01,.4,1.01)",
+      direction: "alternate",
+    },
+  );
+});
+```
+
+{{EmbedLiveSample("Use as the value of offset-path", "100%", 350)}}
 
 ### Modify the value of the SVG path d attribute
 
