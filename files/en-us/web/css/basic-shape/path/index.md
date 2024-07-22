@@ -61,7 +61,7 @@ path(evenodd,"M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80");
 
 ### Use as an offset-path value
 
-In the following example, the `path()` function has been used to create a circular path for the ball to move on. Changing any of the values will cause the path to not neatly run round the circle.
+The `path()` function has been used in the following example to create an elliptical path for the ball to move on.
 
 ```html
 <div id="path">
@@ -105,7 +105,7 @@ btn.addEventListener("click", () => {
     {
       duration: 1500,
       iterations: 4,
-      easing: "cubic-bezier(.6,.01,.4,1.01)",
+      easing: "cubic-bezier(.667,0.01,.333,.99)",
       direction: "alternate",
     },
   );
