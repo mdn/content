@@ -20,21 +20,26 @@ Broadly, one window may obtain a reference to another (_e.g.,_ via `targetWindow
 
 ```js-nolint
 postMessage(message)
-postMessage(message, options)
 postMessage(message, targetOrigin)
 postMessage(message, targetOrigin, transfer)
+
+postMessage(message, options)
 ```
 
 ### Parameters
 
 - `message`
   - : Data to be dispatched to the other window. The data is serialized using the {{domxref("Web_Workers_API/Structured_clone_algorithm", "structured clone algorithm", "", 1)}}. This means you can pass a broad variety of data objects safely to the destination window without having to serialize them yourself.
-- `options` {{optional_Inline}}
-  - : An optional object containing a `transfer` field with a sequence of [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) to transfer ownership of, and an optional `targetOrigin` field with a string which restricts the message to the intended target only.
 - `targetOrigin` {{optional_Inline}}
   - : Specifies what the origin of the intended recipient window's document must be for the event to be dispatched, either as the literal string `"*"` (indicating no preference) or as a URI. If at the time the event is scheduled to be dispatched the scheme, hostname, or port of this window's document does not match that provided in `targetOrigin`, the event will not be dispatched; only if all three match will the event be dispatched. This mechanism provides control over where messages are sent; for example, if `postMessage()` was used to transmit a password, it would be absolutely critical that this argument be a URI whose origin is the same as the intended receiver of the message containing the password, to prevent interception of the password by a malicious third party. **Always provide a specific `targetOrigin`, not `*`, if you know where the other window's document should be located. Failing to provide a specific target could disclose the data you send to a malicious site.**
-- `transfer` {{optional_Inline}}
-  - : A sequence of [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) that are transferred with the message. The ownership of these objects is given to the destination side and they are no longer usable on the sending side.
+- `transfer` {{optional_inline}}
+  - : An optional [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) to transfer ownership of. The ownership of these objects is given to the destination side and they are no longer usable on the sending side. These transferable objects should be attached to the message; otherwise they would be moved but not actually accessible on the receiving end.
+- `options` {{optional_inline}}
+  - : An optional object containing the following properties:
+    - `transfer` {{optional_inline}}
+      - : Has the same meaning as the `transfer` parameter.
+    - `targetOrigin` {{optional_inline}}
+      - : Has the same meaning as the `targetOrigin` parameter.
 
 ### Return value
 

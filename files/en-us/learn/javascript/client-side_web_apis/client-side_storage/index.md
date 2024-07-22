@@ -732,7 +732,7 @@ Inside the handler, we first log the URL of the requested asset. We then provide
 
 Inside this block, we use {{domxref("CacheStorage.match()")}} to check whether a matching request (i.e. matches the URL) can be found in any cache. This promise fulfills with the matching response if a match is found, or `undefined` if it isn't.
 
-If a match is found, we return it as the custom response. If not, we [fetch()](/en-US/docs/Web/API/fetch) the response from the network and return that instead.
+If a match is found, we return it as the custom response. If not, we [fetch()](/en-US/docs/Web/API/Window/fetch) the response from the network and return that instead.
 
 ```js
 self.addEventListener("fetch", (e) => {

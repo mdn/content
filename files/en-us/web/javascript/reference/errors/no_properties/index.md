@@ -1,5 +1,5 @@
 ---
-title: 'TypeError: "x" has no properties'
+title: "TypeError: null/undefined has no properties"
 slug: Web/JavaScript/Reference/Errors/No_properties
 page-type: javascript-error
 ---

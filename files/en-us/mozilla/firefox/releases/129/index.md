@@ -18,6 +18,8 @@ This article provides information about the changes in Firefox 129 that affect d
 
 ### CSS
 
+- The [@starting-style](/en-US/docs/Web/CSS/@starting-style) CSS at-rule is supported. This lets you define starting values for properties set on an element that you want to transition from when the element receives its first style update. Currently animating from `display: none;` is not supported ([Firefox bug 1834876](https://bugzil.la/1834876) and [Firefox bug 1834877](https://bugzil.la/1834877)).
+
 #### Removals
 
 ### JavaScript
@@ -39,6 +41,10 @@ This article provides information about the changes in Firefox 129 that affect d
 ### APIs
 
 - The {{domxref('Navigator.vibrate()')}} method has not worked some years, and has been removed so that feature detection does not indicate that it is supported. ([Firefox bug 1653318](https://bugzil.la/1653318), [Firefox bug 1900037](https://bugzil.la/1900037)).
+- The deprecated {{domxref("TextEvent", "textInput")}} event is now supported, enabling web apps that use legacy libraries or frameworks that rely on these events.
+  The [`beforeinput` event](/en-US/docs/Web/API/Element/beforeinput_event) supersedes `textInput`, and should always be used by new applications.
+  ([Firefox bug 1901923](https://bugzil.la/1901923).)
+- The default `.toJSON()` methods {{domxref("GeolocationCoordinates.toJSON()")}} and {{domxref("GeolocationPosition.toJSON()")}} are now supported, enabling serialization of `GeolocationCoordinates` and `GeolocationPosition` objects with {{jsxref("JSON.stringify()")}} ([Firefox bug 1890706](https://bugzil.la/1890706)).
 
 #### DOM
 

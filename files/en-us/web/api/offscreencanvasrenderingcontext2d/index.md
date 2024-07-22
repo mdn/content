@@ -10,7 +10,7 @@ browser-compat: api.OffscreenCanvasRenderingContext2D
 The **`OffscreenCanvasRenderingContext2D`** interface is a {{domxref("CanvasRenderingContext2D")}} rendering context for drawing to the bitmap of an `OffscreenCanvas` object.
 It is similar to the `CanvasRenderingContext2D` object, with the following differences:
 
-- there is no support for user-interface features (`drawFocusIfNeeded`, and `scrollPathIntoView`)
+- there is no support for user-interface features (`drawFocusIfNeeded`)
 - its `canvas` attribute refers to an `OffscreenCanvas` object rather than a {{HtmlElement("canvas")}} element
 - the bitmap for the placeholder {{HtmlElement("canvas")}} element belonging to the `OffscreenCanvas` object is updated during the rendering update of the `Window` or `Worker` that owns the `OffscreenCanvas`
 
@@ -49,12 +49,10 @@ The following method is new to the `OffscreenCanvasRenderingContext2D` interface
 
 ## Unsupported features
 
-The following user interface methods are **not supported** by the `OffscreenCanvasRenderingContext2D` interface:
+The following user interface method is **not supported** by the `OffscreenCanvasRenderingContext2D` interface:
 
 - {{domxref("CanvasRenderingContext2D.drawFocusIfNeeded()")}}
   - : If a given element is focused, this method draws a focus ring around the current path.
-- {{domxref("CanvasRenderingContext2D.scrollPathIntoView()")}} {{Experimental_Inline}}
-  - : Scrolls the current path or a given path into the view.
 
 ## Inherited properties and methods
 
@@ -273,12 +271,10 @@ The `CanvasRenderingContext2D` rendering context contains a variety of drawing s
 
 ## Unsupported properties and methods
 
-The following methods are **not supported** in the `OffscreenCanvasRenderingContext2D` interface:
+The following method is **not supported** in the `OffscreenCanvasRenderingContext2D` interface:
 
 - {{domxref("CanvasRenderingContext2D.drawFocusIfNeeded()")}}
   - : If a given element is focused, this method draws a focus ring around the current path.
-- {{domxref("CanvasRenderingContext2D.scrollPathIntoView()")}} {{Experimental_Inline}}
-  - : Scrolls the current path or a given path into the view.
 
 ## Specifications
 

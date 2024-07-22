@@ -278,7 +278,7 @@ interface RTCStatsReport {
 
 `Map`-like objects are either read-only or read-writable (see the `readonly` keyword in the IDL above).
 
-- Read-only `Map`-like objects have the property [`size`](#map.prototype.size), and the methods: [`entries()`](#map.prototype.entries), [`forEach()`](#map.prototype.foreach), [`get()`](#map.prototype.get), [`has()`](#map.prototype.has), [`keys()`](#map.prototype.keys), [`values()`](#map.prototype.values), and [`[Symbol.iterator]()`](#map.prototypeiterator).
+- Read-only `Map`-like objects have the property [`size`](#map.prototype.size), and the methods: [`entries()`](#map.prototype.entries), [`forEach()`](#map.prototype.foreach), [`get()`](#map.prototype.get), [`has()`](#map.prototype.has), [`keys()`](#map.prototype.keys), [`values()`](#map.prototype.values), and [`[Symbol.iterator]()`](#map.prototypesymbol.iterator).
 - Writeable `Map`-like objects additionally have the methods: [`clear()`](#map.prototype.clear), [`delete()`](#map.prototype.delete), and [`set()`](#map.prototype.set).
 
 The methods and properties have the same behavior as the equivalent entities in `Map`, except for the restriction on the types of the keys and values.

@@ -37,23 +37,16 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```html
-<html lang="en">
-  <head>
-    <title>Write example</title>
+<p>Some original document content.</p>
+<button onclick="newContent()">Replace document content</button>
+```
 
-    <script>
-      function newContent() {
-        document.open();
-        document.write("<h1>Out with the old, in with the new!</h1>");
-        document.close();
-      }
-    </script>
-  </head>
-
-  <body onload="newContent();">
-    <p>Some original document content.</p>
-  </body>
-</html>
+```js
+function newContent() {
+  document.open();
+  document.write("<h1>Out with the old, in with the new!</h1>");
+  document.close();
+}
 ```
 
 {{EmbedLiveSample("Examples")}}
@@ -72,13 +65,13 @@ If the `document.write()` call is embedded within an inline HTML `<script>` tag,
 </script>
 ```
 
-> **Note:** `document.write()` and {{domxref("document.writeln")}} do not work in XHTML documents (you'll get an "Operation is not supported" \[`NS_ERROR_DOM_NOT_SUPPORTED_ERR`] error in the error console). This happens when opening a local file with the .xhtml file extension or for any document served with an `application/xhtml+xml` {{Glossary("MIME type")}}. More information is available in the [W3C XHTML FAQ](https://www.w3.org/MarkUp/2004/xhtml-faq#docwrite).
+`document.write()` and {{domxref("document.writeln")}} do not work in XHTML documents (you'll get an "Operation is not supported" (`NS_ERROR_DOM_NOT_SUPPORTED_ERR`) error in the error console). This happens when opening a local file with the .xhtml file extension or for any document served with an `application/xhtml+xml` {{Glossary("MIME type")}}. More information is available in the [W3C XHTML FAQ](https://www.w3.org/MarkUp/2004/xhtml-faq#docwrite).
 
-> **Note:** Using `document.write()` in [deferred](/en-US/docs/Web/HTML/Element/script#defer) or [asynchronous](/en-US/docs/Web/HTML/Element/script#async) scripts will be ignored and you'll get a message like "A call to `document.write()` from an asynchronously-loaded external script was ignored" in the error console.
+Using `document.write()` in [deferred](/en-US/docs/Web/HTML/Element/script#defer) or [asynchronous](/en-US/docs/Web/HTML/Element/script#async) scripts will be ignored and you'll get a message like "A call to `document.write()` from an asynchronously-loaded external script was ignored" in the error console.
 
-> **Note:** In Edge only, calling `document.write()` more than once in an {{HTMLElement("iframe")}} causes the error "SCRIPT70: Permission denied".
+In Edge only, calling `document.write()` more than once in an {{HTMLElement("iframe")}} causes the error "SCRIPT70: Permission denied".
 
-> **Note:** Starting with version 55, Chrome will not execute `<script>` elements injected via `document.write()` when specific conditions are met. For more information, refer to [Intervening against document.write()](https://developer.chrome.com/blog/removing-document-write/).
+Starting with version 55, Chrome will not execute `<script>` elements injected via `document.write()` when specific conditions are met. For more information, refer to [Intervening against document.write()](https://developer.chrome.com/blog/removing-document-write/).
 
 ## Specifications
 
