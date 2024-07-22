@@ -325,6 +325,7 @@
         "CSSMediaRule",
         "CSSNamespaceRule",
         "CSSPageRule",
+        "CSSPageDescriptors",
         "CSSFontFeatureValuesRule",
         "CSSFontPaletteValuesRule",
         "CSSPropertyRule",
