@@ -340,7 +340,7 @@ function updateSelection(start, end) {
 }
 ```
 
-You can see the code for the `fromSelectionToOffsets()` function in the [converter.js](<(https://github.com/mdn/dom-examples/tree/main/edit-context/html-editor/converter.js)>) file.
+You can see the code for the `fromSelectionToOffsets()` function in the [converter.js](https://github.com/mdn/dom-examples/tree/main/edit-context/html-editor/converter.js) file.
 
 ## Calculating character bounds
 
@@ -374,7 +374,7 @@ editContext.addEventListener("characterboundsupdate", (e) => {
 });
 ```
 
-You can see the code for the `fromOffsetsToRenderedTokenNodes()` function in the [converter.js](<(https://github.com/mdn/dom-examples/tree/main/edit-context/html-editor/converter.js)>) file.
+You can see the code for the `fromOffsetsToRenderedTokenNodes()` function in the [converter.js](https://github.com/mdn/dom-examples/tree/main/edit-context/html-editor/converter.js) file.
 
 ## Applying IME composition text formats
 
