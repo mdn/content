@@ -44,6 +44,9 @@ This article provides information about the changes in Firefox 129 that affect d
   The [`beforeinput` event](/en-US/docs/Web/API/Element/beforeinput_event) supersedes `textInput`, and should always be used by new applications.
   ([Firefox bug 1901923](https://bugzil.la/1901923).)
 - The default `.toJSON()` methods {{domxref("GeolocationCoordinates.toJSON()")}} and {{domxref("GeolocationPosition.toJSON()")}} are now supported, enabling serialization of `GeolocationCoordinates` and `GeolocationPosition` objects with {{jsxref("JSON.stringify()")}} ([Firefox bug 1890706](https://bugzil.la/1890706)).
+- {{domxref("CSSPageDescriptors")}} is now supported, and is used as the type for {{domxref("CSSPageRule.style")}} instead of {{domxref("CSSStyleDeclaration")}} — matching the current specification.
+  Among other things this fixes bugs where setting the page [`size`](/en-US/docs/Web/CSS/@page#size) in a CSS `@page` rule was not reflected in `CSSPageRule.style`.
+  ([Firefox bug 1890842](https://bugzil.la/1890842), [Firefox bug 1867106](https://bugzil.la/1867106).)
 
 #### DOM
 
