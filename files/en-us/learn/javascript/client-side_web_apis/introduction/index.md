@@ -128,7 +128,6 @@ Next, let's look at the JavaScript for this example.
 We start by creating an `AudioContext` instance inside which to manipulate our track:
 
 ```js
-const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioCtx = new AudioContext();
 ```
 

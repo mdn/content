@@ -18,6 +18,8 @@ This article provides information about the changes in Firefox 129 that affect d
 
 ### CSS
 
+- The [@starting-style](/en-US/docs/Web/CSS/@starting-style) CSS at-rule is supported. This lets you define starting values for properties set on an element that you want to transition from when the element receives its first style update. Currently animating from `display: none;` is not supported ([Firefox bug 1834876](https://bugzil.la/1834876) and [Firefox bug 1834877](https://bugzil.la/1834877)).
+
 #### Removals
 
 ### JavaScript
@@ -38,6 +40,10 @@ This article provides information about the changes in Firefox 129 that affect d
 
 ### APIs
 
+- The deprecated {{domxref("TextEvent", "textInput")}} event is now supported, enabling web apps that use legacy libraries or frameworks that rely on these events.
+  The [`beforeinput` event](/en-US/docs/Web/API/Element/beforeinput_event) supersedes `textInput`, and should always be used by new applications.
+  ([Firefox bug 1901923](https://bugzil.la/1901923).)
+- The default `.toJSON()` methods {{domxref("GeolocationCoordinates.toJSON()")}} and {{domxref("GeolocationPosition.toJSON()")}} are now supported, enabling serialization of `GeolocationCoordinates` and `GeolocationPosition` objects with {{jsxref("JSON.stringify()")}} ([Firefox bug 1890706](https://bugzil.la/1890706)).
 - {{domxref('MediaCapabilities.decodingInfo()')}} can now get decoding information for a particular _encrypted media_ configuration as well unencrypted media, allowing applications to tell ahead of time if the configuration is supported, and whether it will play the content smoothly and be power efficient. Changes include a new property `keySystemConfiguration` on the method's `configuration` argument that defines the properties of the key system used to encrypt the media, and a new `keySystemAccess` property on the returned object, which is a {{domxref('MediaKeySystemAccess')}} object that can be used to create keys and decode the content for playback. ([Firefox bug 1898344](https://bugzil.la/1898344)).
 
 #### DOM

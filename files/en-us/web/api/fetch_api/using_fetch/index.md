@@ -51,7 +51,7 @@ To make a request, call `fetch()`, passing in:
    - a {{domxref("Request")}} instance
 2. optionally, an object containing options to configure the request.
 
-In this section we'll look at some of the most commonly-used options. To read about all the options that can be given, see the [`fetch()`](/en-US/docs/Web/API/fetch) reference page.
+In this section we'll look at some of the most commonly-used options. To read about all the options that can be given, see the [`fetch()`](/en-US/docs/Web/API/Window/fetch) reference page.
 
 ### Setting the method
 

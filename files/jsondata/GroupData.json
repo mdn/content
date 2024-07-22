@@ -518,7 +518,7 @@
       "overview": ["Fetch API"],
       "guides": ["/docs/Web/API/Fetch_API/Using_Fetch"],
       "interfaces": ["Headers", "Request", "RequestInit", "Response"],
-      "methods": ["fetch()"],
+      "methods": ["Window.fetch()", "WorkerGlobalScope.fetch()"],
       "properties": [],
       "events": []
     },
@@ -965,12 +965,12 @@
       "guides": [
         "/docs/Web/API/Media_Capabilities_API/Using_the_Media_Capabilities_API"
       ],
-      "interfaces": ["MediaCapabilities", "Screen"],
-      "methods": [
-        "MediaCapabilities.decodingInfo()",
-        "MediaCapabilities.encodingInfo()"
+      "interfaces": ["MediaCapabilities"],
+      "methods": [],
+      "properties": [
+        "Navigator.mediaCapabilities",
+        "WorkerNavigator.mediaCapabilities"
       ],
-      "properties": ["Navigator.mediaCapabilities"],
       "events": []
     },
     "Media Capture and Streams": {
@@ -1667,6 +1667,7 @@
         "MouseEvent",
         "MouseScrollEvent",
         "MutationEvent",
+        "TextEvent",
         "UIEvent",
         "WheelEvent"
       ],

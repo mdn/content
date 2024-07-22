@@ -2,9 +2,7 @@
 title: At-rules
 slug: Web/CSS/At-rule
 page-type: guide
-spec-urls:
-  - https://drafts.csswg.org/css-conditional-3/
-  - https://compat.spec.whatwg.org/#css-at-rules
+spec-urls: https://drafts.csswg.org/css-conditional/
 ---
 
 {{CSSRef}}
@@ -26,13 +24,13 @@ spec-urls:
 Statement at-rules end in a semicolon. There are several statement at-rules, designated by their identifiers, each with a different syntax:
 
 - {{cssxref("@charset")}}
-  - : Defines the character set used by the style sheet.
+  - : An algorithm (has the syntactic form of an at-rule, but isn't a definition) that determines the fallback character set used by the style sheet ([CSS Syntax](/en-US/docs/Web/CSS/CSS_syntax)).
 - {{cssxref("@import")}}
-  - : Tells the CSS engine to include an external style sheet.
+  - : Tells the CSS engine to include an external style sheet ([CSS cascade and inheritance](/en-US/docs/Web/CSS/CSS_cascade)).
+- {{cssxref("@layer")}}
+  - : Defines the order of precedence in case of multiple cascade layers ([CSS cascade and inheritance](/en-US/docs/Web/CSS/CSS_cascade)). Also used as a [block at-rule](#layer_2) to define a layer's styles.
 - {{cssxref("@namespace")}}
-  - : Tells the CSS engine that all its content must be considered prefixed with an XML namespace.
-
-> **Note:** Strictly speaking, `@charset` is not an at-rule, but a special byte sequence that's stripped before processing the content. Read its reference for more information.
+  - : Defines a default namespace for a style sheet or a namespace prefix that a selector only matches if the namespace and other selector components match ([CSS namespaces](/en-US/docs/Web/CSS/CSS_namespaces)).
 
 ### Block at-rules
 
@@ -41,32 +39,36 @@ Statement at-rules end in a semicolon. There are several statement at-rules, des
 }
 ```
 
-Block at-rules end in {}-block containing a subset of nested statements, which can be used as a statement of a style sheet as well as inside of conditional group rules.
+Block at-rules end in a `{}`-block that contain nested rules, other at-rules, or property or descriptor declarations.
 
 - {{cssxref("@counter-style")}}
-  - : Defines specific counter styles that are not part of the predefined set of styles.
+  - : Define custom counter styles and extend predefined list styles ([CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles)).
 - {{cssxref("@container")}}
-  - : A conditional group rule that will apply its content if the container meets the [`<container-condition>`](/en-US/docs/Web/CSS/@container#container-condition)s.
+  - : A conditional group rule that applies its content if the container meets the [`<container-condition>`](/en-US/docs/Web/CSS/@container#container-condition)s ([CSS containment](/en-US/docs/Web/CSS/CSS_containment)).
 - {{cssxref("@font-face")}}
-  - : Describes the aspect of an external font to be downloaded.
+  - : Defines font resource locations, both local and external, along with the style characteristics for when those resources are used with a declared {{cssxref("font-family")}} ([CSS fonts](/en-US/docs/Web/CSS/CSS_fonts)).
 - {{cssxref("@font-feature-values")}} (plus `@swash`, `@ornaments`, `@annotation`, `@stylistic`, `@styleset` and `@character-variant`)
-  - : Define common names in {{cssxref("font-variant-alternates")}} for feature activated differently in OpenType.
-- {{cssxref("@keyframes")}}
-  - : Describes the aspect of intermediate steps in a CSS animation sequence.
+  - : Controls font display per font-family by defining font-specific alternates, or custom names, to feature indexes in {{cssxref("font-variant-alternates")}} in OpenType ([CSS fonts](/en-US/docs/Web/CSS/CSS_fonts)).
+- {{cssxref("@keyframes")}} (and the `@-webkit-keyframes` alias)
+  - : Define a named animation by describing defining CSS styles for intermediate steps (or keyframes) in the animation sequence ([CSS animations](/en-US/docs/Web/CSS/CSS_animations)).
 - {{cssxref("@layer")}}
-  - : Declares a cascade layer and defines the order of precedence in case of multiple cascade layers.
+  - : Creates a named cascade layer with the CSS rules for that layer inside ([CSS cascade and inheritance](/en-US/docs/Web/CSS/CSS_cascade)). Also used as a [statement at-rule](#layer) to define the order of precedence in case of multiple cascade layers
 - {{cssxref("@media")}}
-  - : A conditional group rule that will apply its content if the device meets the criteria of the condition defined using a _media query_.
+  - : A conditional group rule that applies its content if the device meets the criteria of the condition defined using a _media query_ ([CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules)).
 - {{cssxref("@page")}}
-  - : Describes the aspect of layout changes that will be applied when printing the document.
+  - : Specifies aspects of a page to be printed, such as its dimensions, orientation, and margins ([CSS paged media](/en-US/docs/Web/CSS/CSS_paged_media)).
+- {{cssxref("@position-try")}}
+  - : Defines custom position options which can be used to define fallback positioning and alignment options for anchor-positioned elements ([CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning)).
 - {{cssxref("@property")}}
-  - : Describes the aspect of custom properties and variables.
+  - : Defines a [CSS custom property](/en-US/docs/Web/CSS/Using_CSS_custom_properties), allowing for property type checking and constraining, setting default values, and defining whether a custom property can inherit values or not ([CSS custom properties for cascading variables](/en-US/docs/Web/CSS/CSS_cascading_variables)).
 - {{cssxref("@scope")}}
-  - : A conditional group rule that will apply its content if the device meets the criteria of the given condition.
+  - : Defines a scope in which to apply them to selected elements and the styles to apply to the elements in that scope ([CSS cascade and inheritance](/en-US/docs/Web/CSS/CSS_cascade)).
 - {{cssxref("@starting-style")}}
-  - : A conditional group rule that will apply starting transition if the browser meets the criteria of the given condition.
+  - : Define the starting property values for an element to transition from when the element receives its first style update, such as when transitioning from `display: none` ([CSS transitions](/en-US/docs/Web/CSS/CSS_transitions)).
 - {{cssxref("@supports")}}
-  - : A conditional group rule that will apply its content if the browser meets the criteria of the given condition.
+  - : A conditional group rule applies its content if the browser supports the CSS features of the given condition ([CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules)).
+- {{cssxref("@view-transition")}}
+  - : Opts the current document into a [view transition](/en-US/docs/Web/API/View_Transitions_API), and the destination document as well in the case of cross-document navigation transitions.
 
 ## Index
 
@@ -83,10 +85,12 @@ Block at-rules end in {}-block containing a subset of nested statements, which c
 - {{cssxref("@media")}}
 - {{cssxref("@namespace")}}
 - {{cssxref("@page")}}
+- {{cssxref("@position-try")}}
 - {{cssxref("@property")}}
 - {{cssxref("@scope")}}
 - {{cssxref("@starting-style")}}
 - {{cssxref("@supports")}}
+- {{cssxref("@view-transition")}}
 
 ## Specifications
 
@@ -94,21 +98,11 @@ Block at-rules end in {}-block containing a subset of nested statements, which c
 
 ## See also
 
-- CSS key concepts:
-  - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
-  - [Comments](/en-US/docs/Web/CSS/Comments)
-  - [Specificity](/en-US/docs/Web/CSS/Specificity)
-  - [Inheritance](/en-US/docs/Web/CSS/Inheritance)
-  - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
-  - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
-  - [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-  - Values
-    - [Initial values](/en-US/docs/Web/CSS/initial_value)
-    - [Computed values](/en-US/docs/Web/CSS/computed_value)
-    - [Used values](/en-US/docs/Web/CSS/used_value)
-    - [Actual values](/en-US/docs/Web/CSS/actual_value)
-  - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
-  - [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
-  - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
-  - [CSS nesting module](/en-US/docs/Web/CSS/CSS_nesting)
+- [CSS at-rule functions](/en-US/docs/Web/CSS/At-rule-functions)
+- [Nesting CSS at-rules](/en-US/docs/Web/CSS/CSS_nesting/Nesting_at-rules)
+- [CSS statements](/en-US/docs/Web/CSS/Syntax#css_statements)
+- [CSSRule](/en-US/docs/Web/API/CSSRule) interface
+- [CSS conditional rules](/en-US/docs/Web/CSS/CSS_conditional_rules) module
+- [CSS syntax](/en-US/docs/Web/CSS/Syntax)
+- [Specificity](/en-US/docs/Web/CSS/Specificity)
+- [Inheritance](/en-US/docs/Web/CSS/Inheritance)

@@ -62,7 +62,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
     A `<cookie-value>` can optionally be wrapped in double quotes and include any US-ASCII character excluding control characters (ASCII characters 0 up to 31 and ASCII character 127), {{glossary("Whitespace")}}, double quotes, commas, semicolons, and backslashes.
 
-    **Encoding**: Many implementations perform [percent-encoding](https://en.wikipedia.org/wiki/Percent-encoding) on cookie values.
+    **Encoding**: Many implementations perform {{Glossary("Percent-encoding", "percent-encoding")}} on cookie values.
     However, this is not required by the RFC specification.
     The percent-encoding does help to satisfy the requirements of the characters allowed for `<cookie-value>`.
 

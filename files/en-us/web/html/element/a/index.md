@@ -297,7 +297,9 @@ Spacing may be created using CSS properties like {{CSSxRef("margin")}}.
 ```html
 <a href="//example.com">Scheme-relative URL</a>
 <a href="/en-US/docs/Web/HTML">Origin-relative URL</a>
+<a href="p">Directory-relative URL</a>
 <a href="./p">Directory-relative URL</a>
+<a href="../p">Parent-directory-relative URL</a>
 ```
 
 ```css hidden
