@@ -44,6 +44,7 @@ This article provides information about the changes in Firefox 129 that affect d
   The [`beforeinput` event](/en-US/docs/Web/API/Element/beforeinput_event) supersedes `textInput`, and should always be used by new applications.
   ([Firefox bug 1901923](https://bugzil.la/1901923).)
 - The default `.toJSON()` methods {{domxref("GeolocationCoordinates.toJSON()")}} and {{domxref("GeolocationPosition.toJSON()")}} are now supported, enabling serialization of `GeolocationCoordinates` and `GeolocationPosition` objects with {{jsxref("JSON.stringify()")}} ([Firefox bug 1890706](https://bugzil.la/1890706)).
+- Firefox now fires events for a synchronous {{domxref("XMLHttpRequest")}} before firing the events for any ongoing asynchronous `XMLHttpRequest`. This fixes a long-standing behavioral difference with other browsers. Note that while this should fix some sites, it may also cause degraded performance on sites that expect the old "non-blocking" behaviour for a synchronous `XMLHttpRequest`. Please [file a bug](https://bugzil.la/) if your website should have been fixed by this change but still appears to have related issues. ([Firefox bug 697151](https://bugzil.la/697151).)
 
 #### DOM
 
