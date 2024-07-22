@@ -176,11 +176,11 @@ The attribute value is either the keyword `off` or `on`, or a space-separated `<
     - "`photo`"
       - : The URL of an image representing the person, company, or contact information given in the other fields in the form.
     - "`home`"
-      - : It means that the field is for contacting someone at their residence.
+      - : The field is for contacting someone at their residence.
     - "`work`"
-      - : It means that the field is for contacting someone at their work.
+      - : The field is for contacting someone at their work.
     - "`mobile`"
-      - : It means that the field is for contacting someone regardless of location.
+      - : The field is for contacting someone regardless of location.
     - "`fax`"
       - : Fax machine's contact details.
     - "`page`"
