@@ -1298,7 +1298,8 @@ For {{SVGElement('use')}}, `x` defines the x coordinate of the upper left corner
 </table>
 
 > [!Note]
-> Declaring a `<length>` or `<percentage>` value in CSS using the {{cssxref("x")}} _geometry property_ overrides the x-axis coordinate of the `<use>` set by the `x` attribute in some browsers. This behavior is at-risk.
+> Declaring a `<length>` or `<percentage>` value in CSS using the {{cssxref("x")}} _geometry property_ overrides the x-axis coordinate of the `<use>` set by the `x` attribute in some browsers.
+> This behavior is non-standard, deprecated, and likely to be removed in future browser versions.
 
 ## Examples
 
