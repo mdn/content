@@ -124,7 +124,7 @@ There are two multipart types:
 - `application/xml`: This is recommended as of [RFC 7303](https://datatracker.ietf.org/doc/html/rfc7303#section-4.1) (section 4.1), but `text/xml` is still used sometimes. You can assign a specific MIME type to a file with `.xml` extension depending on how its contents are meant to be interpreted. For instance, an Atom feed is `application/atom+xml`, and XHTML is `application/xhtml+xml`, but `application/xml` serves as a valid default.
 - `application/json`: JSON data. It also accepts subtypes, such as `application/ld+json` for Linked Data JSON (JSON-LD).
 - `application/pdf`: Adobe [Portable Document Format](https://www.adobe.com/acrobat/about-adobe-pdf.html) (PDF)
-- `application/zip`: This is the standard, but beware that Windows uploads .zip with MIME type `application/x-zip-compressed`.
+- `application/zip`: This is the standard, but beware that Windows uploads .zip files with `application/x-zip-compressed` MIME type.
 
 There are a lot of other `application/` types. Some of them are summarized in [the table below](#other_common_types).
 
