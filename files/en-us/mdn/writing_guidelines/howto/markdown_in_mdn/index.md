@@ -250,6 +250,7 @@ This HTML will be rendered as a highlighted box:
 
 ```md
 > [!CALLOUT]
+>
 > **This is how you write a callout.**
 >
 > It can have multiple paragraphs.
@@ -267,6 +268,7 @@ This will produce the following HTML:
 This HTML will be rendered as a highlighted box:
 
 > [!CALLOUT]
+>
 > **This is how you write a callout.**
 >
 > It can have multiple paragraphs.
