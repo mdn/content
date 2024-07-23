@@ -91,7 +91,7 @@ Here we look at how the runtime functions in slightly more detail.
 
 ### Event loops
 
-Each agent is driven by an **event loop**, which collects any user and other events, enqueuing tasks to handle each callback. It then runs at most one pending JavaScript task, then any pending microtasks, then performs any needed rendering and painting before looping again to check for pending tasks.
+Each agent is driven by an **event loop**, which is repeatedly processed. During each iteration, it runs at most one pending JavaScript task, then any pending microtasks, then performs any needed rendering and painting before looping again.
 
 Your website or app's code runs in the same **{{Glossary("thread")}}**, sharing the same **event loop**, as the user interface of the web browser itself. This is the **{{Glossary("main thread")}}**, and in addition to running your site's main code body, it handles receiving and dispatching user and other events, rendering and painting web content, and so forth.
 
@@ -118,7 +118,7 @@ The specifics may vary from browser to browser, depending on how they're impleme
 
 #### Tasks vs. microtasks
 
-A **task** is any JavaScript scheduled to be run by the standard mechanisms such as initially starting to execute a program, an event triggering a callback, and so forth. Other than by using events, you can enqueue a task by using {{domxref("setTimeout()")}} or {{domxref("setInterval()")}}.
+A **task** is anything scheduled to be run by the standard mechanisms such as initially starting to execute a script, asynchronously dispatching an event, and so forth. Other than by using events, you can enqueue a task by using {{domxref("setTimeout()")}} or {{domxref("setInterval()")}}.
 
 The difference between the task queue and the microtask queue is simple but very important:
 

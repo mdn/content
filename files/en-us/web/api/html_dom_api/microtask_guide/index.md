@@ -18,12 +18,12 @@ To properly discuss microtasks, it's first useful to know what a JavaScript task
 
 ### Tasks
 
-A **task** is any JavaScript code which is scheduled to be run by the standard mechanisms such as initially starting to run a program, an event callback being run, or an interval or timeout being fired. These all get scheduled on the **task queue**.
+A **task** is anything which is scheduled to be run by the standard mechanisms such as initially starting to run a program, an event being dispatched asynchronously, or an interval or timeout being fired. These all get scheduled on the **task queue**.
 
-Tasks get added to the task queue when:
+For example, tasks get added to the task queue when:
 
 - A new JavaScript program or subprogram is executed (such as from a console, or by running the code in a {{HTMLElement("script")}} element) directly.
-- An event fires, adding the event's callback function to the task queue.
+- The user clicks an element. A task is then created and executes all event callbacks.
 - A timeout or interval created with {{domxref("setTimeout()")}} or {{domxref("setInterval()")}} is reached, causing the corresponding callback to be added to the task queue.
 
 The event loop driving your code handles these tasks one after another, in the order in which they were enqueued. The oldest runnable task in the task queue will be executed during a single iteration of the event loop. After that, microtasks will be executed until the microtask queue is empty, and then the browser may choose to update rendering. Then the browser moves on to the next iteration of event loop.
