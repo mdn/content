@@ -15,9 +15,9 @@ The **`outline`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/We
 
 This property is a shorthand for the following CSS properties:
 
-- {{cssxref("outline-color")}}
-- {{cssxref("outline-style")}}
 - {{cssxref("outline-width")}}
+- {{cssxref("outline-style")}}
+- {{cssxref("outline-color")}}
 
 ## Syntax
 
@@ -25,14 +25,14 @@ This property is a shorthand for the following CSS properties:
 /* style */
 outline: solid;
 
-/* color | style */
-outline: #f66 dashed;
+/* style | color */
+outline: dashed #f66;
 
-/* style | width */
-outline: inset thick;
+/* width | style */
+outline: thick inset;
 
-/* color | style | width */
-outline: green solid 3px;
+/* width | style | color*/
+outline: 3px solid green;
 
 /* Global values */
 outline: inherit;
@@ -48,12 +48,12 @@ The `outline` property may be specified using one, two, or three of the values l
 
 ### Values
 
-- `<'outline-color'>`
-  - : Sets the color of the outline. Defaults to `invert` for browsers supporting it, `currentcolor` for the others. See {{cssxref("outline-color")}}.
-- `<'outline-style'>`
-  - : Sets the style of the outline. Defaults to `none` if absent. See {{cssxref("outline-style")}}.
 - `<'outline-width'>`
   - : Sets the thickness of the outline. Defaults to `medium` if absent. See {{cssxref("outline-width")}}.
+- `<'outline-style'>`
+  - : Sets the style of the outline. Defaults to `none` if absent. See {{cssxref("outline-style")}}.
+- `<'outline-color'>`
+  - : Sets the color of the outline. Defaults to `invert` for browsers supporting it, `currentcolor` for the others. See {{cssxref("outline-color")}}.
 
 ## Description
 
@@ -120,6 +120,7 @@ a:focus {
 
 ## See also
 
-- {{cssxref("outline-color")}}
-- {{cssxref("outline-style")}}
 - {{cssxref("outline-width")}}
+- {{cssxref("outline-style")}}
+- {{cssxref("outline-color")}}
+- {{Cssxref("border")}}
