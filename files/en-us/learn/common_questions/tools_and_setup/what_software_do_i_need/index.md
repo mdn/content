@@ -151,6 +151,7 @@ All desktop operating systems come with a basic text editor. These editors are a
         <ul>
           <li><a href="https://www.gnu.org/software/emacs/">Emacs</a></li>
           <li><a href="https://www.vim.org/" rel="external">Vim</a></li>
+          <li><a href="https://neovim.io/" rel="external">Neovim</a></li>
           <li>
             <a href="https://code.visualstudio.com/">Visual Studio Code</a>
           </li>
