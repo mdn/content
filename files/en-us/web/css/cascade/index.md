@@ -283,7 +283,7 @@ p {
 
 Now the paragraph will be blue. The `!important` in the earliest declared layer takes precedence of subsequent layers and unlayered important declarations. If the inline style contained !important, such as `<p style="color: black !important">`, again the paragraph would be black. Inline importance does take precedence over all other author declared `!important` declarations, no matter the specificity.
 
-> **Note:** `!important` reverses the precedence of cascade layers. For this reason, rather than using `!important` to override external styles, import frameworks, third party styles, widget stylesheets, etc., into layers, demoting their precedence. `!important` should only be used sparingly, if ever, to guard required styles against later overrides, in the first declared layer.
+> **Note:** `!important` reverses the precedence of cascade layers. For this reason, try not to use `!important` to override external styles. Instead, import the external style sheets(from frameworks, widget stylesheets, libraries, etc.) into initial layers, which will demote their precedence, and author-defined layers will have higher precedence. `!important` should only be used sparingly, if ever, to guard required styles against later overrides, in the first declared layer.
 
 Styles that are transitioning take precedence over all important styles, no matter who or how they are declared.
 
