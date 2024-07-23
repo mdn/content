@@ -11,10 +11,8 @@ browser-compat: api.SubtleCrypto.verify
 The **`verify()`** method of the {{domxref("SubtleCrypto")}}
 interface verifies a digital {{glossary("signature")}}.
 
-It takes as its arguments a {{glossary("key")}} to verify the signature with, some
-algorithm-specific parameters, the signature, and the original signed data. It returns a
-{{jsxref("Promise")}} which will be fulfilled with a boolean value
-indicating whether the signature is valid.
+It takes as its arguments a {{glossary("key")}} to verify the signature with, some algorithm-specific parameters, the signature, and the original signed data.
+It returns a {{jsxref("Promise")}} which will be fulfilled with a boolean value indicating whether the signature is valid.
 
 ## Syntax
 
@@ -32,6 +30,7 @@ verify(algorithm, key, signature, data)
     - To use [RSA-PSS](/en-US/docs/Web/API/SubtleCrypto/sign#rsa-pss), pass an {{domxref("RsaPssParams")}} object.
     - To use [ECDSA](/en-US/docs/Web/API/SubtleCrypto/sign#ecdsa), pass an {{domxref("EcdsaParams")}} object.
     - To use [HMAC](/en-US/docs/Web/API/SubtleCrypto/sign#hmac), pass the string `"HMAC"` or an object of the form `{ "name": "HMAC" }`.
+    - To use [Ed25519](/en-US/docs/Web/API/SubtleCrypto/sign##ed25519), pass an object of the form `{ "name": "Ed25519" }`.
 - `key`
   - : A {{domxref("CryptoKey")}} containing the key that will be used to verify the signature.
     It is the secret key for a symmetric algorithm and the public key for a public-key system.
@@ -51,15 +50,11 @@ otherwise.
 The promise is rejected when the following exception is encountered:
 
 - `InvalidAccessError` {{domxref("DOMException")}}
-  - : Raised when the encryption key is not a key for the requested verifying algorithm or
-    when trying to use an algorithm that is either unknown or isn't suitable for a verify
-    operation.
+  - : Raised when the encryption key is not a key for the requested verifying algorithm or when trying to use an algorithm that is either unknown or isn't suitable for a verify operation.
 
 ## Supported algorithms
 
-The `verify()` method supports the same algorithms as the
-[`sign()`](/en-US/docs/Web/API/SubtleCrypto/sign#supported_algorithms)
-method.
+The `verify()` method supports the same algorithms as the [`sign()`](/en-US/docs/Web/API/SubtleCrypto/sign#supported_algorithms) method.
 
 ## Examples
 

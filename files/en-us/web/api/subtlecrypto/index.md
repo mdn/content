@@ -87,7 +87,8 @@ The inverse of `wrapKey()` is {{DOMxRef("SubtleCrypto.unwrapKey","unwrapKey()")}
 
 #### Storing keys
 
-`CryptoKey` objects can be stored using the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm), meaning that you can store and retrieve them using standard web storage APIs. The specification expects that most developers will use the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) to store `CryptoKey` objects.
+`CryptoKey` is a {{glossary("serializable object")}}, which allows keys to be stored and retrieved using standard web storage APIs.
+The specification expects that most developers will use the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API), sotring `CryptoKey` objects against some key string identifier that is meaningful to the application, along with any other metadata it finds useful.
 
 ### Supported algorithms
 
@@ -100,101 +101,155 @@ The table below summarizes which algorithms are suitable for which cryptographic
     <tr>
       <th scope="row"></th>
       <th scope="col">
-        <a href="/en-US/docs/Web/API/SubtleCrypto/sign">sign()</a><br /><a
-          href="/en-US/docs/Web/API/SubtleCrypto/verify"
-          >verify()</a
-        >
+        <a href="/en-US/docs/Web/API/SubtleCrypto/sign">sign()</a><br /><a href="/en-US/docs/Web/API/SubtleCrypto/verify">verify()</a>
       </th>
       <th scope="col">
-        <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt">encrypt()</a><br /><a
-          href="/en-US/docs/Web/API/SubtleCrypto/decrypt"
-          >decrypt()</a
-        >
+        <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt">encrypt()</a><br /><a href="/en-US/docs/Web/API/SubtleCrypto/decrypt">decrypt()</a>
       </th>
       <th scope="col">
         <a href="/en-US/docs/Web/API/SubtleCrypto/digest">digest()</a>
       </th>
       <th scope="col">
-        <a href="/en-US/docs/Web/API/SubtleCrypto/deriveBits">deriveBits()</a
-        ><br /><a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey"
-          >deriveKey()</a
-        >
+        <a href="/en-US/docs/Web/API/SubtleCrypto/deriveBits">deriveBits()</a><br /><a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey">deriveKey()</a>
       </th>
       <th scope="col">
-        <a href="/en-US/docs/Web/API/SubtleCrypto/wrapKey">wrapKey()</a><br /><a
-          href="/en-US/docs/Web/API/SubtleCrypto/unwrapKey"
-          >unwrapKey()</a
-        >
+        <a href="/en-US/docs/Web/API/SubtleCrypto/wrapKey">wrapKey()</a><br /><a href="/en-US/docs/Web/API/SubtleCrypto/unwrapKey">unwrapKey()</a>
+      </th>
+      <th scope="col">
+        <a href="/en-US/docs/Web/API/SubtleCrypto/generateKey">generateKey()</a><br /><a href="/en-US/docs/Web/API/SubtleCrypto/importKey">importKey()</a><br /><a href="/en-US/docs/Web/API/SubtleCrypto/exportKey">exportKey()</a>
       </th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th scope="row">RSASSA-PKCS1-v1_5</th>
+      <th scope="row"><a href="/en-US/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5">RSASSA-PKCS1-v1_5></a></th>
       <td>✓</td>
       <td></td>
       <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <th scope="row">RSA-PSS</th>
-      <td>✓</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <th scope="row">ECDSA</th>
-      <td>✓</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <th scope="row">HMAC</th>
-      <td>✓</td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <th scope="row">RSA-OAEP</th>
-      <td></td>
-      <td>✓</td>
       <td></td>
       <td></td>
       <td>✓</td>
     </tr>
     <tr>
-      <th scope="row">AES-CTR</th>
-      <td></td>
+      <th scope="row"><a href="/en-US/docs/Web/API/SubtleCrypto/sign#rsa-pss">RSA-PSS</a></th>
       <td>✓</td>
       <td></td>
       <td></td>
-      <td>✓</td>
-    </tr>
-    <tr>
-      <th scope="row">AES-CBC</th>
-      <td></td>
-      <td>✓</td>
       <td></td>
       <td></td>
       <td>✓</td>
     </tr>
     <tr>
-      <th scope="row">AES-GCM</th>
-      <td></td>
+      <th scope="row"><a href="/en-US/docs/Web/API/SubtleCrypto/sign#ecdsa">ECDSA</a></th>
       <td>✓</td>
+      <td></td>
+      <td></td>
       <td></td>
       <td></td>
       <td>✓</td>
     </tr>
     <tr>
-      <th scope="row">SHA-1</th>
+      <th scope="row"><a href="/en-US/docs/Web/API/SubtleCrypto/sign#ed25519">Ed25519</a></th>
+      <td>✓</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>✓</td>
+      <td>✓</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/en-US/docs/Web/API/SubtleCrypto/sign#hmac">HMAC</a></th>
+      <td>✓</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>✓</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep">RSA-OAEP</a></th>
+      <td></td>
+      <td>✓</td>
+      <td></td>
+      <td></td>
+      <td>✓</td>
+      <td>✓</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr">AES-CTR</a></th>
+      <td></td>
+      <td>✓</td>
+      <td></td>
+      <td></td>
+      <td>✓</td>
+      <td>✓</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc">AES-CBC</a></th>
+      <td></td>
+      <td>✓</td>
+      <td></td>
+      <td></td>
+      <td>✓</td>
+      <td>✓</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm">AES-GCM</a></th>
+      <td></td>
+      <td>✓</td>
+      <td></td>
+      <td></td>
+      <td>✓</td>
+      <td>✓</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/en-US/docs/Web/API/SubtleCrypto/wrapKey#aes-kw">AES-KW</a></th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>✓</td>
+      <td>✓</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/en-US/docs/Web/API/SubtleCrypto/digest#supported_algorithms">SHA-1</a></th>
+      <td></td>
+      <td></td>
+      <td>✓</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/en-US/docs/Web/API/SubtleCrypto/digest#supported_algorithms">SHA-256</a></th>
+      <td></td>
+      <td></td>
+      <td>✓</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/en-US/docs/Web/API/SubtleCrypto/digest#supported_algorithms">SHA-384</a></th>
+      <td></td>
+      <td></td>
+      <td>✓</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/en-US/docs/Web/API/SubtleCrypto/digest#supported_algorithms">SHA-512</a></th>
+      <td></td>
+      <td></td>
+      <td>✓</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#ecdh">ECDH</a></th>
+      <td></td>
       <td></td>
       <td></td>
       <td>✓</td>
@@ -202,7 +257,8 @@ The table below summarizes which algorithms are suitable for which cryptographic
       <td></td>
     </tr>
     <tr>
-      <th scope="row">SHA-256</th>
+      <th scope="row"><a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#hkdf">HKDF</a></th>
+      <td></td>
       <td></td>
       <td></td>
       <td>✓</td>
@@ -210,7 +266,8 @@ The table below summarizes which algorithms are suitable for which cryptographic
       <td></td>
     </tr>
     <tr>
-      <th scope="row">SHA-384</th>
+      <th scope="row"><a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#pbkdf2">PBKDF2</a></th>
+      <td></td>
       <td></td>
       <td></td>
       <td>✓</td>
@@ -218,43 +275,12 @@ The table below summarizes which algorithms are suitable for which cryptographic
       <td></td>
     </tr>
     <tr>
-      <th scope="row">SHA-512</th>
-      <td></td>
-      <td></td>
-      <td>✓</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <th scope="row">ECDH</th>
+      <th scope="row"><a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#x25519">X25519</a></th>
       <td></td>
       <td></td>
       <td></td>
       <td>✓</td>
-      <td></td>
-    </tr>
-    <tr>
-      <th scope="row">HKDF</th>
-      <td></td>
-      <td></td>
-      <td></td>
       <td>✓</td>
-      <td></td>
-    </tr>
-    <tr>
-      <th scope="row">PBKDF2</th>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td>✓</td>
-      <td></td>
-    </tr>
-    <tr>
-      <th scope="row">AES-KW</th>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
       <td>✓</td>
     </tr>
   </tbody>
