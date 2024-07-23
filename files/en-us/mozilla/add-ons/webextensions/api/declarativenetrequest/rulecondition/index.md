@@ -14,7 +14,7 @@ Details of the condition that determines whether a rule matches a request, as th
 Values of this type are objects. They contain these properties:
 
 - `domainType` {{optional_inline}}
-  - : A `string`. Specifies whether the network request is first-party or third-party to the domain from where it originated. If omitted, all requests are accepted. Possible values are `"firstParty"` and `"thirdParty"`.
+  - : A `string`. Specifies whether the network request is first-party or third-party. The request is considered first-party if it's for the same domain as the document or subdocument that initiates the request. Otherwise, it's considered third-party. If omitted, all requests are accepted. Possible values are `"firstParty"` and `"thirdParty"`.
 - `domains` {{deprecated_inline}} {{optional_inline}}
   - : An array of `string`. Use [`initiatorDomains`](#initiatordomains) instead. The rule only matches network requests originating from this list of domains.
 - `excludedDomains` {{deprecated_inline}} {{optional_inline}}

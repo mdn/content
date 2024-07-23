@@ -456,7 +456,7 @@ We have encountered many ways to create objects and change their prototype chain
 ```js
 const o = { a: 1 };
 // The newly created object o has Object.prototype as its [[Prototype]]
-// Object.prototype has null as its prototype.
+// Object.prototype has null as its [[Prototype]].
 // o ---> Object.prototype ---> null
 
 const b = ["yo", "whadup", "?"];
