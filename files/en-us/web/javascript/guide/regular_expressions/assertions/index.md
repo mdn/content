@@ -26,7 +26,8 @@ Assertions include boundaries, which indicate the beginnings and endings of line
       <td><code>^</code></td>
       <td>
         <p>
-          Matches the beginning of input. If the multiline flag is set to true,
+          <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Input_boundary_assertion"><strong>Input boundary beginning assertion:</strong></a>
+          Matches the beginning of input. If the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/multiline"><code>multiline</code></a> (m) flag is enabled,
           also matches immediately after a line break character. For example,
           <code>/^A/</code> does not match the "A" in "an A", but does match the
           first "A" in "An A".
@@ -47,7 +48,8 @@ Assertions include boundaries, which indicate the beginnings and endings of line
       <td><code>$</code></td>
       <td>
         <p>
-          Matches the end of input. If the multiline flag is set to true, also
+          <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Input_boundary_assertion"><strong>Input boundary end assertion:</strong></a>
+          Matches the end of input. If the <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/multiline"><code>multiline</code></a> (m) flag is enabled, also
           matches immediately before a line break character. For example,
           <code>/t$/</code> does not match the "t" in "eater", but does match it
           in "eat".
@@ -58,6 +60,7 @@ Assertions include boundaries, which indicate the beginnings and endings of line
       <td><code>\b</code></td>
       <td>
         <p>
+          <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Word_boundary_assertion"><strong>Word boundary assertion:</strong></a>
           Matches a word boundary. This is the position where a word character
           is not followed or preceded by another word-character, such as between
           a letter and a space. Note that a matched word boundary is not
@@ -94,6 +97,7 @@ Assertions include boundaries, which indicate the beginnings and endings of line
       <td><code>\B</code></td>
       <td>
         <p>
+          <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Word_boundary_assertion"><strong>Non-word-boundary assertion:</strong></a>
           Matches a non-word boundary. This is a position where the previous and
           next character are of the same type: Either both must be words, or
           both must be non-words, for example between two letters or between two
@@ -124,7 +128,8 @@ Assertions include boundaries, which indicate the beginnings and endings of line
       <td><code>x(?=y)</code></td>
       <td>
         <p>
-          <strong>Lookahead assertion: </strong>Matches "x" only if "x" is
+          <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion"><strong>Lookahead assertion:</strong></a>
+          Matches "x" only if "x" is
           followed by "y". For example, <code>/Jack(?=Sprat)/</code> matches
           "Jack" only if it is followed by "Sprat".<br /><code
             >/Jack(?=Sprat|Frost)/</code
@@ -138,7 +143,8 @@ Assertions include boundaries, which indicate the beginnings and endings of line
       <td><code>x(?!y)</code></td>
       <td>
         <p>
-          <strong>Negative lookahead assertion: </strong>Matches "x" only if "x"
+          <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion"><strong>Negative lookahead assertion:</strong></a>
+          Matches "x" only if "x"
           is not followed by "y". For example, <code>/\d+(?!\.)/</code> matches
           a number only if it is not followed by a decimal point. <code
             >/\d+(?!\.)/.exec('3.141')</code
@@ -151,7 +157,8 @@ Assertions include boundaries, which indicate the beginnings and endings of line
       <td><code>(?&#x3C;=y)x</code></td>
       <td>
         <p>
-          <strong>Lookbehind assertion: </strong>Matches "x" only if "x" is
+          <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookbehind_assertion"><strong>Lookbehind assertion:</strong></a>
+          Matches "x" only if "x" is
           preceded by "y". For example,
           <code>/(?&#x3C;=Jack)Sprat/</code> matches "Sprat" only if it is
           preceded by "Jack". <code>/(?&#x3C;=Jack|Tom)Sprat/</code> matches
@@ -164,7 +171,8 @@ Assertions include boundaries, which indicate the beginnings and endings of line
       <td><code>(?&#x3C;!y)x</code></td>
       <td>
         <p>
-          <strong>Negative lookbehind assertion: </strong>Matches "x" only if
+          <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookbehind_assertion"><strong>Negative lookbehind assertion:</strong></a>
+          Matches "x" only if
           "x" is not preceded by "y". For example,
           <code>/(?&#x3C;!-)\d+/</code> matches a number only if it is not
           preceded by a minus sign. <code>/(?&#x3C;!-)\d+/.exec('3')</code>
@@ -204,7 +212,7 @@ console.log(4, fixedMultiline); // fix 'greon' => 'green' but do not touch 'on'.
 
 ### Matching the beginning of input using a ^ control character
 
-Use `^` for matching at the beginning of input. In this example, we can get the fruits that start with 'A' by a `/^A/` regex. For selecting appropriate fruits we can use the [filter](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) method with an [arrow](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) function.
+Use `^` for matching at the beginning of input. In this example, we can get the fruits that start with 'A' by a `/^A/` regex. For selecting appropriate fruits we can use the [`filter`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) method with an [arrow](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) function.
 
 ```js
 const fruits = ["Apple", "Watermelon", "Orange", "Avocado", "Strawberry"];
@@ -232,7 +240,11 @@ const fruitsStartsWithNotA = fruits.filter((fruit) => /^[^A]/.test(fruit));
 console.log(fruitsStartsWithNotA); // [ 'Watermelon', 'Orange', 'Strawberry' ]
 ```
 
+See more examples in the [input boundary assertion](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Input_boundary_assertion) reference.
+
 ### Matching a word boundary
+
+In this example, we match fruit names containing a word that ends in "en" or "ed".
 
 ```js
 const fruitsWithDescription = ["Red apple", "Orange orange", "Green Avocado"];
@@ -245,11 +257,13 @@ const enEdSelection = fruitsWithDescription.filter((descr) =>
 console.log(enEdSelection); // [ 'Red apple', 'Green Avocado' ]
 ```
 
+See more examples in the [word boundary assertion](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Word_boundary_assertion) reference.
+
 ### Lookahead assertion
 
-```js
-// JS Lookahead assertion x(?=y)
+In this example, we match the word "First" only if it is followed by the word "test", but we do not include "test" in the match results.
 
+```js
 const regex = /First(?= test)/g;
 
 console.log("First test".match(regex)); // [ 'First' ]
@@ -258,6 +272,8 @@ console.log("This is a First test in a year.".match(regex)); // [ 'First' ]
 console.log("This is a First peach in a month.".match(regex)); // null
 ```
 
+See more examples in the [lookahead assertion](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion) reference.
+
 ### Basic negative lookahead assertion
 
 For example, `/\d+(?!\.)/` matches a number only if it is not followed by a decimal point. `/\d+(?!\.)/.exec('3.141')` matches "141" but not "3.
@@ -265,6 +281,8 @@ For example, `/\d+(?!\.)/` matches a number only if it is not followed by a deci
 ```js
 console.log(/\d+(?!\.)/g.exec("3.141")); // [ '141', index: 2, input: '3.141' ]
 ```
+
+See more examples in the [lookahead assertion](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion) reference.
 
 ### Different meaning of '?!' combination usage in assertions and character classes
 
@@ -284,12 +302,18 @@ console.log(orangeNotLemon.match(selectNotOrangeRegex)); // [ ' Yes, I do not wa
 
 ### Lookbehind assertion
 
+In this example, we replace the word "orange" with "apple" only if it is preceded by the word "ripe".
+
 ```js
 const oranges = ["ripe orange A", "green orange B", "ripe orange C"];
 
-const ripeOranges = oranges.filter((fruit) => /(?<=ripe )orange/.test(fruit));
-console.log(ripeOranges); // [ 'ripe orange A', 'ripe orange C' ]
+const newFruits = oranges.map((fruit) =>
+  fruit.replace(/(?<=ripe )orange/, "apple"),
+);
+console.log(newFruits); // ['ripe apple A', 'green orange B', 'ripe apple C']
 ```
+
+See more examples in the [lookbehind assertion](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookbehind_assertion) reference.
 
 ## See also
 
@@ -298,3 +322,8 @@ console.log(ripeOranges); // [ 'ripe orange A', 'ripe orange C' ]
 - [Quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers) guide
 - [Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences) guide
 - [`RegExp`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
+- [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) reference
+- [Input boundary assertion: `^`, `$`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Input_boundary_assertion)
+- [Lookahead assertion: `(?=...)`, `(?!...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion)
+- [Lookbehind assertion: `(?<=...)`, `(?<!...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookbehind_assertion)
+- [Word boundary assertion: `\b`, `\B`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Word_boundary_assertion)

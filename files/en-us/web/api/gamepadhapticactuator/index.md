@@ -13,7 +13,7 @@ This interface is accessible through the {{domxref("Gamepad.hapticActuators")}} 
 
 ## Instance properties
 
-- {{domxref("GamepadHapticActuator.type")}} {{ReadOnlyInline}}
+- {{domxref("GamepadHapticActuator.type")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : Returns an enum representing the type of the haptic hardware.
 
 ## Instance methods
@@ -22,7 +22,7 @@ This interface is accessible through the {{domxref("Gamepad.hapticActuators")}} 
 
   - : Makes the hardware pulse at a certain intensity for a specified duration.
 
-- {{domxref("GamepadHapticActuator.playEffect()")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
+- {{domxref("GamepadHapticActuator.playEffect()")}} {{ReadOnlyInline}}
   - : Makes the hardware play a specific vibration pattern.
 
 ## Examples

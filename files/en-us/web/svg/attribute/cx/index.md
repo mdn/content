@@ -63,7 +63,8 @@ For {{SVGElement('circle')}}, `cx` defines the x-axis coordinate of the center o
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2 `cx`, is a _Geometry Property_, meaning this attribute can also be used as CSS property for circles.
+> [!Note]
+> The x-axis coordinate of the center of the `<circle>` can also be defined with the {{cssxref("cx")}} _geometry property_. If set in CSS, the `cx` property value overrides the `cx` attribute value.
 
 ## ellipse
 
@@ -86,7 +87,8 @@ For {{SVGElement('ellipse')}}, `cx` defines the x-axis coordinate of the center 
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2 `cx`, is a _Geometry Property_, meaning this attribute can also be used as CSS property for ellipses.
+> [!Note]
+> The x-axis coordinate of the center of the `<ellipse>` can also be defined with the {{cssxref("cx")}} _geometry property_. If set in CSS, the `cx` property value overrides the `cx` attribute value.
 
 ## radialGradient
 

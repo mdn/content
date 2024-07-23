@@ -231,8 +231,7 @@ async function signIn() {
   } catch (e) {
     // Handle the error in some way, for example provide information
     // to help the user succeed in a future sign-in attempt
-    const code = e.code;
-    const url = e.url;
+    console.error(e);
   }
 }
 ```

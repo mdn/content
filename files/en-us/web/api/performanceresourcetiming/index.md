@@ -51,7 +51,7 @@ This interface extends the following {{domxref("PerformanceEntry")}} properties 
 
 The interface supports the following timestamp properties which you can see in the diagram and are listed in the order in which they are recorded for the fetching of a resource. An alphabetical listing is shown in the navigation, at left.
 
-![Timestamp diagram listing timestamps in the order in which they are recorded for the fetching of a resource](timestamp-diagram.svg)
+![Timestamp diagram listing timestamps in the order in which they are recorded for the fetching of a resource](https://mdn.github.io/shared-assets/images/diagrams/api/performance/timestamp-diagram.svg)
 
 - {{domxref('PerformanceResourceTiming.redirectStart')}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} that represents the start time of the fetch which initiates the redirect.
@@ -94,7 +94,7 @@ Additionally, this interface exposes the following properties containing more in
   - : A string representing the network protocol used to fetch the resource, as identified by the [ALPN Protocol ID (RFC7301)](https://datatracker.ietf.org/doc/html/rfc7301).
 - {{domxref('PerformanceResourceTiming.renderBlockingStatus')}} {{ReadOnlyInline}}
   - : A string representing the render-blocking status. Either "`blocking`" or "`non-blocking`".
-- {{domxref('PerformanceResourceTiming.responseStatus')}} {{experimental_inline}} {{ReadOnlyInline}}
+- {{domxref('PerformanceResourceTiming.responseStatus')}} {{ReadOnlyInline}}
   - : A number representing the HTTP response status code returned when fetching the resource.
 - {{domxref('PerformanceResourceTiming.transferSize')}} {{ReadOnlyInline}}
   - : A number representing the size (in octets) of the fetched resource. The size includes the response header fields plus the response payload body.

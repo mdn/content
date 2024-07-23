@@ -35,7 +35,7 @@ function addData(e) {
   e.preventDefault();
 
   if (!title.value || !hours.value || !minutes.value || !day.value || !month.value || !year.value) {
-    note.innerHTML += '<li>Data not submitted — form incomplete.</li>';
+    note.appendChild(document.createElement("li")).textContent = "Data not submitted — form incomplete.";
     return;
   }
 ```
@@ -61,11 +61,13 @@ In this segment, we check to see if the form fields have all been filled in. If 
 
     // report on the success of opening the transaction
     transaction.oncomplete = (event) => {
-      note.innerHTML += '<li>Transaction opened for task addition.</li>';
+      note.appendChild(document.createElement("li")).textContent =
+        "Transaction opened for task addition.";
     };
 
     transaction.onerror = (event) => {
-      note.innerHTML += '<li>Transaction not opened due to error. Duplicate items not allowed.</li>';
+      note.appendChild(document.createElement("li")).textContent =
+        "Transaction not opened due to error. Duplicate items not allowed.";
     };
 
     // create an object store on the transaction
@@ -82,13 +84,13 @@ In this section we create an object called `newItem` that stores the data in the
 ```js
     request.onsuccess = (event) => {
 
-      note.innerHTML += '<li>New item added to database.</li>';
+      note.appendChild(document.createElement("li")).textContent = "New item added to database.";
 
-      title.value = '';
+      title.value = "";
       hours.value = null;
       minutes.value = null;
-      day.value = '01';
-      month.value = 'January';
+      day.value = "01";
+      month.value = "January";
       year.value = 2020;
     };
   }
@@ -186,7 +188,7 @@ The `notified === "no"` check is designed to make sure you will only get one not
     // first open up a transaction as usual
     const objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');
 
-    // get the to-do list object that has this title as it's title
+    // get the to-do list object that has this title as its title
     const request = objectStore.get(title);
 
     request.onsuccess = () => {

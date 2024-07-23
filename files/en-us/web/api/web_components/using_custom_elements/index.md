@@ -14,7 +14,10 @@ This article introduces custom elements, and walks through some examples.
 
 There are two types of custom element:
 
-- **Customized built-in elements** inherit from standard HTML elements such as {{domxref("HTMLImageElement")}} or {{domxref("HTMLParagraphElement")}}. Their implementation customizes the behavior of the standard element.
+- **Customized built-in elements** inherit from standard HTML elements such as {{domxref("HTMLImageElement")}} or {{domxref("HTMLParagraphElement")}}. Their implementation extends the behavior of select instances of the standard element.
+
+  > **Note:** Please see the [`is`](/en-US/docs/Web/HTML/Global_attributes/is) attribute reference for caveats on implementation reality of custom built-in elements.
+
 - **Autonomous custom elements** inherit from the HTML element base class {{domxref("HTMLElement")}}. You have to implement their behavior from scratch.
 
 ## Implementing a custom element
@@ -422,6 +425,8 @@ Now let's have a look at a customized built in element example. This example ext
 
 - [See the example running live](https://mdn.github.io/web-components-examples/expanding-list-web-component/)
 - [See the source code](https://github.com/mdn/web-components-examples/tree/main/expanding-list-web-component)
+
+> **Note:** Please see the [`is`](/en-US/docs/Web/HTML/Global_attributes/is) attribute reference for caveats on implementation reality of custom built-in elements.
 
 First of all, we define our element's class:
 

@@ -250,7 +250,7 @@ If you open your project's **package.json** file you'll now see a new section wi
 
 ```json
  "devDependencies": {
-    "nodemon": "^2.0.4"
+    "nodemon": "^3.1.3"
 }
 ```
 
@@ -339,19 +339,15 @@ The **package.json** file defines the application dependencies and other informa
     "pug": "2.0.0-beta11"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "nodemon": "^3.1.3"
   }
 }
 ```
 
-The dependencies include the _express_ package and the package for our selected view engine (_pug_). In addition, we have the following packages that are useful in many web applications:
-
-- [cookie-parser](https://www.npmjs.com/package/cookie-parser): Used to parse the cookie header and populate `req.cookies` (essentially provides a convenient method for accessing cookie information).
-- [debug](https://www.npmjs.com/package/debug): A tiny node debugging utility modeled after node core's debugging technique.
-- [morgan](https://www.npmjs.com/package/morgan): An HTTP request logger middleware for node.
-- [http-errors](https://www.npmjs.com/package/http-errors): Create HTTP errors where needed (for express error handling).
-
 The scripts section first defines a "_start_" script, which is what we are invoking when we call `npm start` to start the server (this script was added by the _Express Application Generator_). From the script definition, you can see that this actually starts the JavaScript file **./bin/www** with _node_.
+
+We already modified this section in [Enable server restart on file changes](#enable_server_restart_on_file_changes) by adding the _devstart_ and _serverstart_ scripts.
+These can be used to start the same **./bin/www** file with _nodemon_ rather than _node_ (this version of the scripts is for Linux and macOS, as discussed above).
 
 ```json
   "scripts": {
@@ -361,7 +357,45 @@ The scripts section first defines a "_start_" script, which is what we are invok
   },
 ```
 
-The _devstart_ and _serverstart_ scripts can be used to start the same **./bin/www** file with _nodemon_ rather than _node_ (this example is for Linux and macOS, as discussed above in [Enable server restart on file changes](#enable_server_restart_on_file_changes)).
+The dependencies include the _express_ package and the package for our selected view engine (_pug_).
+In addition, we have the following packages that are useful in many web applications:
+
+- [cookie-parser](https://www.npmjs.com/package/cookie-parser): Used to parse the cookie header and populate `req.cookies` (essentially provides a convenient method for accessing cookie information).
+- [debug](https://www.npmjs.com/package/debug): A tiny node debugging utility modeled after node core's debugging technique.
+- [morgan](https://www.npmjs.com/package/morgan): An HTTP request logger middleware for node.
+- [http-errors](https://www.npmjs.com/package/http-errors): Create HTTP errors where needed (for express error handling).
+
+The default versions in the generated project are a little out of date.
+Replace the dependencies section of your `package.json` file with the following text, which specifies the latest versions of these libraries at the time of writing:
+
+```json
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "debug": "^4.3.5",
+    "express": "^4.19.2",
+    "http-errors": "~2.0.0",
+    "morgan": "^1.10.0",
+    "pug": "3.0.3"
+  },
+```
+
+Then update your installed dependencies using the command:
+
+```bash
+npm install
+```
+
+> **Note:** It is a good idea to regularly update to the latest compatible versions of your dependency libraries — this may even be done automatically or semi-automatically as part of a continuous integration setup.
+>
+> Usually library updates to the minor and patch version remain compatible.
+> We've prefixed each version with `^` above so that we can automatically update to the latest `minor.patch` version by running:
+>
+> ```bash
+> npm update --save
+> ```
+>
+> Major versions change the compatibility.
+> For those updates we'll need to manually update the `package.json`and code that uses the library, and extensively re-test the project.
 
 ### www file
 

@@ -134,7 +134,7 @@ Code executed by `setTimeout()` is called from an execution context separate
 from the function from which `setTimeout` was called. The usual rules for
 setting the `this` keyword for the called function apply, and if you have not
 set `this` in the call or with `bind`, it will default to
-the `window` (or `global`) object. It will not be the same as the
+the `window` (or `global`) object, even in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode). It will not be the same as the
 `this` value for the function that called `setTimeout`.
 
 See the following example:
@@ -384,8 +384,22 @@ API instead.
 ### Maximum delay value
 
 Browsers store the delay as a 32-bit signed integer internally. This causes an integer
-overflow when using delays larger than 2,147,483,647 ms (about 24.8 days), resulting in
-the timeout being executed immediately.
+overflow when using delays larger than 2,147,483,647 ms (about 24.8 days). So for example, this code:
+
+```js
+setTimeout(() => console.log("hi!"), 2 ** 32 - 5000);
+```
+
+…results in the timeout being executed immediately (since `2**32 - 5000` overflows to a negative number), while the following code:
+
+```js
+setTimeout(() => console.log("hi!"), 2 ** 32 + 5000);
+```
+
+…results in the timeout being executed after approximately 5 seconds.
+
+**Note**: That doesn't match `setTimeout` behavior in Node.js, where any timeout larger than 2,147,483,647 ms
+results in an immediate execution.
 
 ## Examples
 

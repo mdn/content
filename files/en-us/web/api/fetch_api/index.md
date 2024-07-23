@@ -21,7 +21,7 @@ Once a {{DOMxRef("Response")}} is retrieved, there are a number of methods avail
 
 You can create a request and response directly using the {{DOMxRef("Request.Request", "Request()")}} and {{DOMxRef("Response.Response", "Response()")}} constructors, but it's uncommon to do this directly. Instead, these are more likely to be created as results of other API actions (for example, {{DOMxRef("FetchEvent.respondWith()")}} from service workers).
 
-Find out more about using the Fetch API features in [Using Fetch](/en-US/docs/Web/API/Fetch_API/Using_Fetch), and study concepts in [Fetch basic concepts](/en-US/docs/Web/API/Fetch_API/Basic_concepts).
+Find out more about using the Fetch API features in [Using Fetch](/en-US/docs/Web/API/Fetch_API/Using_Fetch).
 
 ## Fetch Interfaces
 
@@ -49,4 +49,3 @@ Find out more about using the Fetch API features in [Using Fetch](/en-US/docs/We
 - [HTTP access control (CORS)](/en-US/docs/Web/HTTP/CORS)
 - [HTTP](/en-US/docs/Web/HTTP)
 - [Fetch polyfill](https://github.com/github/fetch)
-- [Fetch basic concepts](/en-US/docs/Web/API/Fetch_API/Basic_concepts)

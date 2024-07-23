@@ -7,7 +7,7 @@ browser-compat: css.properties.white-space
 
 {{CSSRef}}
 
-The **`white-space`** CSS property sets how {{Glossary("whitespace", "white space")}} inside an element is handled.
+The **`white-space`** [CSS](/en-US/docs/Web/CSS) property sets how {{Glossary("whitespace", "white space")}} inside an element is handled.
 
 {{EmbedInteractiveExample("pages/css/white-space.html")}}
 

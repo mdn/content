@@ -20,7 +20,7 @@ In XML, a CDATA section looks like:
 
 For example:
 
-```html
+```xml
 <foo>
   Here is a CDATA section: <![CDATA[ < > & ]]> with all kinds of unescaped text.
 </foo>

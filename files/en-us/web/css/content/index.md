@@ -325,6 +325,8 @@ a::before {
 
 {{EmbedLiveSample('Adding_an_image_with_alternative_text', '100%', 60)}}
 
+> **Note:** If the alternative text syntax is supported, the value will be exposed in the browser's accessibility tree. Refer to the [See also](#see_also) section for browser-specific accessibility panels.
+
 If using a screen reader, it should speak the word "MOZILLA" when it reaches the image. If supported (if the "alt text is not supported" is not showing), you can select the `::before` pseudo-element with your developer tools selection tool, and view the {{glossary("accessible name")}} in the accessibility panel.
 
 In browsers that don't support the alternative text syntax the whole declaration containing the alt text is invalid. In this case, the previous `content` value will be used, showing the image and "alt text is not supported" text.
@@ -462,3 +464,5 @@ If inserted content is not decorative, check that the information is provided to
 - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
 - [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content) module
 - [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
+
+- Browser accessibility panels: [Firefox Accessibility inspector](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/), [Chrome Accessibility pane](https://developer.chrome.com/docs/devtools/accessibility/reference#pane), and [Safari Accessibility tree](https://webflow.com/glossary/accessibility-tree#:~:text=To%20view%20a%20website%E2%80%99s%20accessibility%20tree%20in%20Safari)

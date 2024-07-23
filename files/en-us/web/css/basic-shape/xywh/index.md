@@ -96,8 +96,8 @@ In the example below, the {{cssxref("offset-path")}} property uses the `xywh()` 
 
 ## See also
 
-- [`inset()`](/en-US/docs/Web/CSS/basic-shape#inset) function
-- [`rect()`](/en-US/docs/Web/CSS/basic-shape#rect) function
+- {{cssxref("basic-shape/inset","inset()")}} function
+- {{cssxref("basic-shape/rect","rect()")}} function
 - {{cssxref("clip-path")}} property
 - {{cssxref("offset-path")}} property
 - {{cssxref("&lt;basic-shape&gt;")}} data type

@@ -7,7 +7,7 @@ browser-compat: api.CSSUnitValue
 
 {{APIRef("CSS Typed Object Model API")}}
 
-The **`CSSUnitValue`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} represents values that contain a single unit type. For example, "42px" would be represented by a `CSSNumericValue`.
+The **`CSSUnitValue`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model#css_typed_object_model) represents values that contain a single unit type. For example, "42px" would be represented by a `CSSNumericValue`.
 
 {{InheritanceDiagram}}
 

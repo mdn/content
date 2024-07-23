@@ -42,13 +42,12 @@ The `-moz-user-modify` property is specified as one of the keyword values from t
 - `write-only`
   - : The user is able to edit the content, but not to read it.
 
-## Formal definition
-
-{{CSSInfo}}
-
 ## Formal syntax
 
-{{CSSSyntax}}
+```plain
+user-modify =
+  read-only | read-write | read-write-plaintext-only | write-only
+```
 
 ## Examples
 

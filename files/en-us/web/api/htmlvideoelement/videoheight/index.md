@@ -20,7 +20,7 @@ If the element's {{domxref("HTMLMediaElement.readyState", "readyState")}} is `HT
 
 A {{Glossary("user agent")}} calculates the intrinsic width and height of the element's media by starting with the media's raw pixel width and height, then taking into account factors including:
 
-- The media's aspect ratio.
+- The media's {{glossary("aspect ratio")}}.
 - The media's clean aperture (the sub-rectangle centered within the media that matches
   the target aspect ratio).
 - The target device's resolution.

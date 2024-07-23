@@ -18,13 +18,13 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}_.
 - {{domxref("HTMLIFrameElement.align")}} {{Deprecated_Inline}}
   - : A string that specifies the alignment of the frame with respect to the surrounding context.
 - {{domxref("HTMLIFrameElement.allow")}}
-  - : A list of origins the frame is allowed to display content from. This attribute also accepts the values `self` and `src` which represent the origin in the iframe's src attribute. The default value is `src`.
+  - : A string that indicates the [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) specified for this `<iframe>`.
 - {{domxref("HTMLIFrameElement.allowFullscreen")}}
   - : A boolean value indicating whether the inline frame is willing to be placed into full screen mode. See [Using fullscreen mode](/en-US/docs/Web/API/Fullscreen_API) for details.
 - {{domxref("HTMLIFrameElement.allowPaymentRequest")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : A boolean value indicating whether the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) may be invoked inside a cross-origin iframe.
 - {{domxref("HTMLIFrameElement.browsingTopics")}} {{Experimental_Inline}} {{non-standard_inline}}
-  - : A boolean property specifying that that the selected topics for the current user should be sent with the request for the associated {{htmlelement("iframe")}}'s source. This reflects the `browsingtopics` content attribute value.
+  - : A boolean property specifying that the selected topics for the current user should be sent with the request for the associated {{htmlelement("iframe")}}'s source. This reflects the `browsingtopics` content attribute value.
 - {{domxref("HTMLIFrameElement.contentDocument")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("Document")}}, the active document in the inline frame's nested browsing context.
 - {{domxref("HTMLIFrameElement.contentWindow")}} {{ReadOnlyInline}}

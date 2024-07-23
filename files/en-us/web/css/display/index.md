@@ -93,7 +93,7 @@ The keyword values can be grouped into six value categories.
 
       - : The element lays out its contents using flow layout (block-and-inline layout).
 
-        If its outer display type is `inline` or `run-in`, and it is participating in a block or inline formatting context, then it generates an inline box. Otherwise it generates a block container box.
+        If its outer display type is `inline`, and it is participating in a block or inline formatting context, then it generates an inline box. Otherwise it generates a block container box.
 
         Depending on the value of other properties (such as {{CSSxRef("position")}}, {{CSSxRef("float")}}, or {{CSSxRef("overflow")}}) and whether it is itself participating in a block or inline formatting context, it either establishes a new [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context) (BFC) for its contents or integrates its contents into its parent formatting context.
 
@@ -241,25 +241,25 @@ The individual pages for the different types of value that `display` can have se
 
 ### CSS Flow Layout (display: block, display: inline)
 
-- [Block and Inline Layout in Normal Flow](/en-US/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)
-- [Flow Layout and Overflow](/en-US/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_overflow)
-- [Flow Layout and Writing Modes](/en-US/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes)
-- [Formatting Contexts Explained](/en-US/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)
-- [In Flow and Out of Flow](/en-US/docs/Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow)
+- [Block and inline layout in normal flow](/en-US/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)
+- [Flow layout and overflow](/en-US/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_overflow)
+- [Flow layout and writing modes](/en-US/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes)
+- [Formatting contexts explained](/en-US/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)
+- [In flow and out of flow](/en-US/docs/Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow)
 
 ### display: flex
 
 - [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [Aligning Items in a Flex Container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
-- [Controlling Ratios of Flex Items Along the Main Axis](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
-- [Mastering Wrapping of Flex Items](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
-- [Ordering Flex Items](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)
+- [Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
+- [Controlling ratios of flex items along the main axis](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
+- [Mastering wrapping of flex items](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
+- [Ordering flex items](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)
 - [Relationship of flexbox to other layout methods](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods)
-- [Typical use cases of Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)
+- [Typical use cases of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)
 
 ### display: grid
 
-- [Basic Concepts of Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+- [Basic concepts of grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
 - [Relationship to other layout methods](/en-US/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
 - [Line-based placement](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
 - [Grid template areas](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
@@ -267,8 +267,8 @@ The individual pages for the different types of value that `display` can have se
 - [Auto-placement in grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
 - [Box alignment in grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
 - [Grids, logical values and writing modes](/en-US/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
-- [CSS Grid Layout and Accessibility](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
-- [CSS Grid Layout and Progressive Enhancement](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
+- [CSS grid layout and accessibility](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
+- [CSS grid layout and progressive enhancement](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
 - [Realizing common layouts using grids](/en-US/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
 
 ### Animating display
@@ -297,7 +297,9 @@ For examples of transitioning the `display` property, see the [`@starting-style`
 
 Using a `display` value of `none` on an element will remove it from the [accessibility tree](/en-US/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis). This will cause the element and all its descendant elements to no longer be announced by screen reading technology.
 
-If you want to visually hide the element, a more accessible alternative is to use [a combination of properties](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link) to remove it visually from the screen but keep it parsable by assistive technology such as screen readers.
+If you want to visually hide the element, a more accessible alternative is to use [a combination of properties](https://webaim.org/techniques/css/invisiblecontent/) to remove it visually from the screen but still make it available to assistive technology such as screen readers.
+
+While `display: none` hides content from the accessibility tree, elements that are hidden but are referenced from visible elements' `aria-describedby` or `aria-labelledby` attributes are exposed to assistive technologies.
 
 ### display: contents
 

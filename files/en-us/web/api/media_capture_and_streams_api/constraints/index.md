@@ -56,7 +56,7 @@ const constraints = {
 myTrack.applyConstraints(constraints);
 ```
 
-In this case, the constraints indicate that any values are fine for nearly all properties, but that a standard high definition (HD) video size is desired, with the standard 16:9 aspect ratio. There's no guarantee that the resulting track will match any of these, but the user agent should do its best to match as many as possible.
+In this case, the constraints indicate that any values are fine for nearly all properties, but that a standard high definition (HD) video size is desired, with the standard 16:9 {{glossary("aspect ratio")}}. There's no guarantee that the resulting track will match any of these, but the user agent should do its best to match as many as possible.
 
 The prioritization of the properties is simple: if two properties' requested values are mutually exclusive, then the one listed first in the constraint set will be used. As an example, if the browser running the code above couldn't provide a 1920x1080 track but could do 1920x900, then that's what would be provided.
 
@@ -350,7 +350,7 @@ audioConstraintEditor.value = audioDefaultConstraintString;
 
 ### Updating the settings display
 
-To the right of each of the constraint set editors is a second text box which we use to display the current configuration of the track's configurable properties. This display is updated by the function `getCurrentSettings()`, which gets the current settings for the audio and video tracks and inserts the corresponding code into the tracks' settings display boxes by setting their [`value`](/en-US/docs/Web/HTML/Element/textarea#value).
+To the right of each of the constraint set editors is a second text box which we use to display the current configuration of the track's configurable properties. This display is updated by the function `getCurrentSettings()`, which gets the current settings for the audio and video tracks and inserts the corresponding code into the tracks' settings display boxes by setting their [`value`](/en-US/docs/Web/API/HTMLTextAreaElement/value).
 
 ```js
 function getCurrentSettings() {

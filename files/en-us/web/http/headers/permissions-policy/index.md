@@ -72,6 +72,10 @@ You can specify
 
   - : Controls whether the current document is allowed to gather information about the amount of light in the environment around the device through the {{DOMxRef("AmbientLightSensor")}} interface.
 
+- {{httpheader('Permissions-Policy/attribution-reporting','attribution-reporting')}} {{Experimental_Inline}}
+
+  - : Controls whether the current document is allowed to use the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API).
+
 - {{httpheader('Permissions-Policy/autoplay','autoplay')}} {{Experimental_Inline}}
 
   - : Controls whether the current document is allowed to autoplay media requested through the {{domxref("HTMLMediaElement")}} interface. When this policy is disabled and there were no user gestures, the {{jsxref("Promise")}} returned by {{domxref("HTMLMediaElement.play()")}} will reject with a `NotAllowedError` {{domxref("DOMException")}}. The autoplay attribute on {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements will be ignored.
@@ -92,6 +96,10 @@ You can specify
 
   - : Controls whether the current document is allowed to use video input devices. When this policy is disabled, the {{jsxref("Promise")}} returned by {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} will reject with a `NotAllowedError` {{DOMxRef("DOMException")}}.
 
+- {{httpheader('Permissions-Policy/compute-pressure','compute-pressure')}} {{Experimental_Inline}}
+
+  - : Controls access to the [Compute Pressure API](/en-US/docs/Web/API/Compute_Pressure_API).
+
 - {{HTTPHeader('Permissions-Policy/display-capture', 'display-capture')}}
 
   - : Controls whether or not the current document is permitted to use the {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} method to capture screen contents. When this policy is disabled, the promise returned by `getDisplayMedia()` will reject with a `NotAllowedError` {{DOMxRef("DOMException")}} if permission is not obtained to capture the display's contents.
@@ -103,14 +111,6 @@ You can specify
 - {{httpheader('Permissions-Policy/encrypted-media', 'encrypted-media')}} {{Experimental_Inline}}
 
   - : Controls whether the current document is allowed to use the [Encrypted Media Extensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API) (EME). When this policy is disabled, the {{jsxref("Promise")}} returned by {{domxref("Navigator.requestMediaKeySystemAccess()")}} will reject with a `SecurityError` {{domxref("DOMException")}}.
-
-- {{httpheader('Permissions-Policy/execution-while-not-rendered', 'execution-while-not-rendered')}} {{Experimental_Inline}}
-
-  - : Controls whether tasks should execute in frames while they're not being rendered (e.g. if an iframe is [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hidden) or has `display: none` set).
-
-- {{httpheader('Permissions-Policy/execution-while-out-of-viewport', 'execution-while-out-of-viewport')}} {{Experimental_Inline}}
-
-  - : Controls whether tasks should execute in frames while they're outside of the visible viewport.
 
 - {{httpheader('Permissions-Policy/fullscreen','fullscreen')}}
 

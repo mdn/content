@@ -21,7 +21,7 @@ math:max(nodeSet)
 - `nodeSet`
   - : The node-set whose highest value is to be returned.
 
-### Returns
+### Return value
 
 A result tree fragment representing the highest valued node's numeric value as a string.
 

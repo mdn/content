@@ -10,6 +10,8 @@ browser-compat: http.headers.DNT
 
 {{HTTPSidebar}}{{Deprecated_header}}{{non-standard_header}}
 
+> **Note:** The DNT (Do Not Track) specification has been discontinued. See {{domxref("Navigator.doNotTrack")}} for more information.
+
 The **`DNT`** (**D**o **N**ot
 **T**rack) request header indicates the user's tracking preference. It lets
 users indicate whether they would prefer privacy rather than personalized content.
@@ -59,7 +61,7 @@ navigator.doNotTrack; // "0", "1" or null
 
 ## Specifications
 
-{{Specifications}}
+Part of the discontinued [Tracking Preference Expression (DNT)](https://www.w3.org/TR/tracking-dnt/#dnt-header-field) specification.
 
 ## Browser compatibility
 

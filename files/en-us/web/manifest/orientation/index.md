@@ -2,12 +2,10 @@
 title: orientation
 slug: Web/Manifest/orientation
 page-type: web-manifest-member
-status:
-  - experimental
 browser-compat: html.manifest.orientation
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}{{SeeCompatTable}}
+{{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
 <table class="properties">
   <tbody>
@@ -22,7 +20,7 @@ The `orientation` member defines the default orientation for all the website's t
 
 > **Note:** `orientation` and/or its specific values might not be supported by a user agent on various display modes because supporting them does not make sense for the particular context.
 
-> **Note:** The orientation can be changed at runtime via the [Screen Orientation API](/en-US/docs/Web/API/Screen/orientation).
+> **Note:** The orientation can be changed at runtime via the [Screen Orientation API](/en-US/docs/Web/API/Screen_Orientation_API).
 
 ## Values
 

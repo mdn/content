@@ -20,7 +20,7 @@ unsubscribe(subscriptions)
 
 - `subscriptions`
 
-  - : An object containing:
+  - : An object list, each object containing:
 
     - `name`
       - : A string with the name of a cookie.

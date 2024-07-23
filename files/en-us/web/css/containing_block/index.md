@@ -250,22 +250,19 @@ p {
 
 ## See also
 
-- The {{cssxref("all")}} property resets all CSS declarations to a given known state
-- CSS key concepts:
-  - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
-  - [At-rules](/en-US/docs/Web/CSS/At-rule)
-  - [Comments](/en-US/docs/Web/CSS/Comments)
-  - [Specificity](/en-US/docs/Web/CSS/Specificity)
-  - [Inheritance](/en-US/docs/Web/CSS/Inheritance)
-  - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
-  - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
-  - [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-  - Values
-    - [Initial values](/en-US/docs/Web/CSS/initial_value)
-    - [Computed values](/en-US/docs/Web/CSS/computed_value)
-    - [Used values](/en-US/docs/Web/CSS/used_value)
-    - [Actual values](/en-US/docs/Web/CSS/actual_value)
-  - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
-  - [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
-  - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
+- {{cssxref("all")}} property
+- {{cssxref("contain")}} property
+- {{cssxref("aspect-ratio")}} property
+- {{cssxref("box-sizing")}} property
+- {{cssxref("min-content")}} and {{cssxref("max-content")}} size values
+- [Building block: sizing items in CSS](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+- [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module
+- [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
+- [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
+- [Block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context)
+- [Stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)
+- [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+- [Initial](/en-US/docs/Web/CSS/initial_value), [computed](/en-US/docs/Web/CSS/computed_value), [used](/en-US/docs/Web/CSS/used_value), and [actual](/en-US/docs/Web/CSS/actual_value) values
+- [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
+- {{glossary("Intrinsic size")}}

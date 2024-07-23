@@ -114,13 +114,27 @@ printMagicIndex([0, 1, 2, 3, 4, 5]); // undefined
 printMagicIndex(); // undefined; if not using ?., this would throw an error: "Cannot read properties of undefined (reading '42')"
 ```
 
-### Optional chaining not valid on the left-hand side of an assignment
+### Invalid optional chaining
 
 It is invalid to try to assign to the result of an optional chaining expression:
 
 ```js-nolint example-bad
 const object = {};
 object?.property = 1; // SyntaxError: Invalid left-hand side in assignment
+```
+
+[Template literal tags](/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_templates) cannot be an optional chain (see [SyntaxError: tagged template cannot be used with optional chain](/en-US/docs/Web/JavaScript/Reference/Errors/Bad_optional_template)):
+
+```js-nolint example-bad
+String?.raw`Hello, world!`;
+String.raw?.`Hello, world!`; // SyntaxError: Invalid tagged template on optional chain
+```
+
+The constructor of {{jsxref("Operators/new", "new")}} expressions cannot be an optional chain (see [SyntaxError: new keyword cannot be used with an optional chain](/en-US/docs/Web/JavaScript/Reference/Errors/Bad_new_optional)):
+
+```js-nolint example-bad
+new Intl?.DateTimeFormat(); // SyntaxError: Invalid optional chain from new expression
+new Map?.();
 ```
 
 ### Short-circuiting

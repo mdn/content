@@ -69,9 +69,9 @@ See also [Permissions > Relationship to the Permissions Policy specification](ht
 An allowlist is a list of origins that takes one or more of the following values contained in parentheses, separated by spaces:
 
 - `*`: The feature will be allowed in this document, and all nested browsing contexts (`<iframe>`s) regardless of their origin.
-- `()` (empty allowlist): The feature is disabled in top-level and nested browsing contexts. The equivalent for `<iframe>` `allow` attributes is `'none'`.
-- `self`: The feature will be allowed in this document, and in all nested browsing contexts (`<iframe>`s) in the same origin only. The feature is not allowed in cross-origin documents in nested browsing contexts. `self` can be considered shorthand for `https://your-site.example.com`. The equivalent for `<iframe>` `allow` attributes is `self`.
-- `src`: The feature will be allowed in this `<iframe>`, as long as the document loaded into it comes from the same origin as the URL in its {{HTMLElement('iframe','src','#Attributes')}} attribute. This value is only used in the `<iframe>` `allow` attribute, and is the _default_ `allowlist` value in `<iframe>`s.
+- `()` (empty allowlist): The feature is disabled in top-level and nested browsing contexts. The equivalent for `<iframe>` `allow` attribute is `'none'`.
+- `self`: The feature will be allowed in this document, and in all nested browsing contexts (`<iframe>`s) in the same origin only. The feature is not allowed in cross-origin documents in nested browsing contexts. `self` can be considered shorthand for `https://your-site.example.com`. The equivalent for `<iframe>` `allow` attribute is `'self'`.
+- `'src'`: The feature will be allowed in this `<iframe>`, as long as the document loaded into it comes from the same origin as the URL in its {{HTMLElement('iframe','src','#Attributes')}} attribute. This value is only used in the `<iframe>` `allow` attribute, and is the _default_ allowlist value in `<iframe>`s.
 - `"<origin>"`: The feature is allowed for specific origins (for example, `"https://a.example.com"`). Origins should be separated by spaces. Note that origins in `<iframe>` allow attributes are not quoted.
 
 The values `*` and `()` may only be used on their own, while `self` and `src` may be used in combination with one or more origins.
@@ -131,10 +131,10 @@ Several features can be controlled at the same time by sending the header with a
 For example, the following are equivalent:
 
 ```http
-Permissions-Policy: picture-in-picture=(), geolocation=(self https://example.com), camera=*;
+Permissions-Policy: picture-in-picture=(), geolocation=(self "https://example.com"), camera=*;
 
 Permissions-Policy: picture-in-picture=()
-Permissions-Policy: geolocation=(self https://example.com)
+Permissions-Policy: geolocation=(self "https://example.com")
 Permissions-Policy: camera=*
 ```
 
@@ -203,7 +203,7 @@ Disabling a feature in a policy is a one-way toggle. If a feature has been disab
 For example, let's say that we wanted to enable geolocation usage on our own origin, and in embedded content coming from our trusted ad network. We could set up the page-wide Permissions Policy like this:
 
 ```http
-Permissions-Policy: geolocation=(self https://trusted-ad-network.com)
+Permissions-Policy: geolocation=(self "https://trusted-ad-network.com")
 ```
 
 Over in our ad `<iframe>`s, we could set access to the `https://trusted-ad-network.com` origin like this:

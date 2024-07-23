@@ -28,7 +28,7 @@ There are two types of container queries: _container size queries_ and _containe
 
 In this guide, we learn the basics of container queries by looking at:
 
-1. [container size queries](#container-size-queries),
+1. [container size queries](#container_size_queries_2),
 2. [naming containers](#naming_containers) to limit their scope, and
 3. using the `style()` functional notation within the {{cssxref("@container")}} at rule's `<container-condition>` to create [style queries with custom properties](#style_queries_for_custom_properties).
 
@@ -431,5 +431,6 @@ These features are not yet supported in any browser.
 - CSS {{Cssxref("contain")}} property
 - CSS {{Cssxref("container")}} shorthand property
 - CSS {{Cssxref("container-name")}} property
+- [Understanding `aspect-ratio`](/en-US/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
 - [Getting Started with Style Queries](https://developer.chrome.com/docs/css-ui/style-queries) (2022)
 - [Style queries](https://una.im/style-queries/) via una.im (2022)

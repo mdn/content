@@ -33,5 +33,5 @@ The following demos mix MathML with other Web technologies to produce advanced c
   - : A greek article about the Riemann zeta function, with [Web fonts](/en-US/docs/Learn/CSS/Styling_text/Web_fonts) from the [Greek Font Society](https://greekfontsociety-gfs.gr/).
 - [Pell's equation](https://people.igalia.com/fwang/pell-bigint-mathml/)
   - : A JavaScript program to solve Pell's equation using [`BigInt`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt).
-- [Lovelace's program for Bernouilli numbers](https://people.igalia.com/fwang/lovelace-jsclass-mathml/)
-  - : An emulator for Ada Lovelace's program to calculate Bernouilli numbers, using [Private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties).
+- [Lovelace's program for Bernoulli numbers](https://people.igalia.com/fwang/lovelace-jsclass-mathml/)
+  - : An emulator for Ada Lovelace's program to calculate Bernoulli numbers, using [Private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties).

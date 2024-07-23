@@ -12,7 +12,7 @@ The **`<ratio>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS
 
 ## Syntax
 
-The `<ratio>` date type is a {{cssxref("&lt;number&gt;")}} followed by a forward slash ('/', Unicode `U+002F SOLIDUS`) and a second {{cssxref("&lt;number&gt;")}}. Both numbers must be positive. Spaces before and after the slash are optional. The first number represents the width, while the second represents the height. In addition a single {{cssxref("&lt;number&gt;")}} as a value is allowable.
+The `<ratio>` data type is a {{cssxref("&lt;number&gt;")}} followed by a forward slash ('/', Unicode `U+002F SOLIDUS`) and a second {{cssxref("&lt;number&gt;")}}. Both numbers must be positive. Spaces before and after the slash are optional. The first number represents the width, while the second represents the height. In addition a single {{cssxref("&lt;number&gt;")}} as a value is allowable.
 
 ### Common aspect ratios
 
@@ -71,6 +71,7 @@ The `<ratio>` date type is a {{cssxref("&lt;number&gt;")}} followed by a forward
 ## See also
 
 - [`aspect-ratio`](/en-US/docs/Web/CSS/@media/aspect-ratio) media descriptor
+- [Understanding aspect ratios](/en-US/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
 - [CSS container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries) guide
 - [Using container size and style queries](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries) guide
 - [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) module

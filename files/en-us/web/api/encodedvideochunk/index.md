@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.EncodedVideoChunk
 ---
 
-{{APIRef("WebCodecs API")}}
+{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`EncodedVideoChunk`** interface of the {{domxref('WebCodecs API','','',' ')}} represents a chunk of encoded video data.
 

@@ -39,11 +39,11 @@ To center the grid horizontally on the page you can set a `max-width` along with
 
 ## Accessibility concerns
 
-Although CSS grid enables positioning items anywhere (within reason), ensuring that your underlying markup follows a logical order is important (see [CSS Grid layout and accessibility](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility) for more details).
+Although CSS grid enables positioning items anywhere (within reason), ensuring that your underlying markup follows a logical order is important (see [CSS grid layout and accessibility](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility) for more details).
 
 ## See also
 
 - {{Cssxref("grid-template-columns")}} property
 - [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module
-- [CSS Grid: More flexibility with minmax()](https://css-irl.info/more-flexibility-with-minmax/) (2018)
+- [CSS grid: More flexibility with `minmax()`](https://css-irl.info/more-flexibility-with-minmax/) (2018)
 - [Breaking out with CSS grid](https://rachelandrew.co.uk/archives/2017/06/01/breaking-out-with-css-grid-explained/) (2017)

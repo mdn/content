@@ -10,9 +10,7 @@ The **baseline** is a term used in European and West Asian typography meaning an
 
 East Asian scripts have no baseline; each glyph sits in a square box, with neither ascenders nor descenders. When mixed with scripts with a low baseline, East Asian characters should be set so that the bottom of the character is between the baseline and the descender height.
 
-{{GlossaryDisambiguation}}
-
 ## See also
 
+- [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment#types_of_alignment)
 - [Baseline (Typography)](<https://en.wikipedia.org/wiki/Baseline_(typography)>) on Wikipedia
-- [CSS Box Alignment](/en-US/docs/Web/CSS/CSS_box_alignment#types_of_alignment) on MDN

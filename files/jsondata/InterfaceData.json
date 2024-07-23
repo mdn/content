@@ -648,8 +648,8 @@
       "inh": "CSSRule",
       "impl": []
     },
-    "CSSNestRule": {
-      "inh": "CSSGroupingRule",
+    "CSSNestedDeclarations": {
+      "inh": "CSSRule",
       "impl": []
     },
     "CSSNumericArray": {
@@ -862,6 +862,10 @@
     },
     "DeprecationReportBody": {
       "inh": "ReportBody",
+      "impl": []
+    },
+    "DeviceChangeEvent": {
+      "inh": "Event",
       "impl": []
     },
     "DeviceMotionEvent": {
@@ -1442,6 +1446,18 @@
     },
     "Gyroscope": {
       "inh": "Sensor",
+      "impl": []
+    },
+    "HandwritingDrawing": {
+      "inh": "",
+      "impl": []
+    },
+    "HandwritingRecognizer": {
+      "inh": "",
+      "impl": []
+    },
+    "HandwritingStroke": {
+      "inh": "",
       "impl": []
     },
     "HashChangeEvent": {
@@ -2860,6 +2876,10 @@
       "inh": "",
       "impl": []
     },
+    "RTCIceCandidatePair": {
+      "inh": "",
+      "impl": []
+    },
     "RTCIceTransport": {
       "inh": "EventTarget",
       "impl": []
@@ -3121,6 +3141,10 @@
       "impl": []
     },
     "Storage": {
+      "inh": "",
+      "impl": []
+    },
+    "StorageAccessHandle": {
       "inh": "",
       "impl": []
     },
@@ -3817,6 +3841,10 @@
       "impl": []
     },
     "VideoTrackList": {
+      "inh": "EventTarget",
+      "impl": []
+    },
+    "Viewport": {
       "inh": "EventTarget",
       "impl": []
     },

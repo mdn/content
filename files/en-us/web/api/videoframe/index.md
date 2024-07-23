@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.VideoFrame
 ---
 
-{{APIRef("Web Codecs API")}}
+{{APIRef("Web Codecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`VideoFrame`** interface of the [Web Codecs API](/en-US/docs/Web/API/WebCodecs_API) represents a frame of a video.
 
@@ -46,7 +46,7 @@ Created frames may then turned into a media track, for example with the {{domxre
 - {{domxref("VideoFrame.visibleRect")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("DOMRectReadOnly")}} describing the visible rectangle of pixels for this `VideoFrame`.
 - {{domxref("VideoFrame.displayWidth")}} {{ReadOnlyInline}}
-  - : Returns the width of the `VideoFrame` when displayed after applying aspect ratio adjustments.
+  - : Returns the width of the `VideoFrame` when displayed after applying {{glossary("aspect ratio")}} adjustments.
 - {{domxref("VideoFrame.displayHeight")}} {{ReadOnlyInline}}
   - : Returns the height of the `VideoFrame` when displayed after applying aspect ratio adjustments.
 - {{domxref("VideoFrame.duration")}} {{ReadOnlyInline}}

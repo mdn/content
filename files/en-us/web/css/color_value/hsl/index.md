@@ -14,7 +14,7 @@ The **`hsl()`** functional notation expresses a color in the {{glossary("RGB", "
 
 {{EmbedInteractiveExample("pages/css/function-hsl.html")}}
 
-Defining _complementary colors_ with `hsl()` can be done by adding or subtracting 180 degrees from the hue value, as they are positioned on the same diameter of the {{glossary("color wheel")}}. For example, if the hue angle of a color is `1θdeg`, its complementary has `190deg` as its hue angle.
+Defining _complementary colors_ with `hsl()` can be done by adding or subtracting 180 degrees from the hue value, as they are positioned on the same diameter of the {{glossary("color wheel")}}. For example, if the hue angle of a color is `10deg`, its complementary has `190deg` as its hue angle.
 
 ## Syntax
 

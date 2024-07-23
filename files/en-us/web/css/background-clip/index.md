@@ -47,7 +47,7 @@ background-clip: unset;
 
 ## Accessibility concerns
 
-When using `background-clip: text` check that the contrast ratio between the background color and the color of the text placed over it is high enough that people experiencing low vision conditions will be able to read the content of the page.
+When using `background-clip: text`, check that the contrast ratio between the background color and the color of the text placed over it is high enough that people experiencing low vision conditions will be able to read the content of the page.
 
 If the background image does not load, this could also lead to the text becoming unreadable. Add a fallback {{cssxref("background-color")}} to prevent this from happening, and test without the image.
 
@@ -101,7 +101,6 @@ p {
 
 .text {
   background-clip: text;
-  -webkit-background-clip: text;
   color: rgb(0 0 0 / 20%);
 }
 ```

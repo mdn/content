@@ -48,18 +48,18 @@ Creates a new `DirectoryReaderSync` to read entries from this directory.
 
 #### Syntax
 
-```js
-createReader();
+```js-nolint
+createReader()
 ```
 
-##### Returns
+##### Parameters
+
+None
+
+##### Return value
 
 - [`DirectoryReaderSync`](/en-US/docs/Web/API/DirectoryReaderSync)
   - : Represents a directory in a file system.
-
-##### Parameter
-
-None
 
 ##### Exceptions
 
@@ -81,7 +81,7 @@ getFile(path)
 getFile(path, options)
 ```
 
-##### Parameter
+##### Parameters
 
 - `path`
   - : Either an absolute path or a relative path from the directory to the file to be looked up or created. You cannot create a file whose immediate parent does not exist. Create the parent directory first.
@@ -131,7 +131,7 @@ getFile(path, options)
   </tbody>
 </table>
 
-##### Returns
+##### Return value
 
 - [`FileEntrySync`](/en-US/docs/Web/API/FileEntrySync)
   - : Represents a file in a file system.
@@ -161,7 +161,7 @@ getDirectory(path)
 getDirectory(path, options)
 ```
 
-##### Parameter
+##### Parameters
 
 - `path`
   - : Either an absolute path or a relative path from the directory to the file to be looked up or created. You cannot create a file whose immediate parent does not exist. Create the parent directory first.
@@ -213,7 +213,7 @@ getDirectory(path, options)
   </tbody>
 </table>
 
-##### Returns
+##### Return value
 
 - [`DirectoryEntrySync`](/en-US/docs/Web/API/DirectoryReaderSync)
   - : Represents a directory in a file system.
@@ -244,11 +244,11 @@ If you delete a directory that contains a file that cannot be removed or if an e
 removeRecursively()
 ```
 
-##### Parameter
+##### Parameters
 
 None
 
-##### Returns
+##### Return value
 
 {{jsxref('undefined')}}
 

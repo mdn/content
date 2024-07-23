@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.TrustedTypePolicyFactory.isHTML
 ---
 
-{{DefaultAPISidebar("Trusted Types API")}}
+{{APIRef("Trusted Types API")}}{{AvailableInWorkers}}
 
 The **`isHTML()`** method of the {{domxref("TrustedTypePolicyFactory")}} interface returns true if it is passed a valid {{domxref("TrustedHTML")}} object.
 

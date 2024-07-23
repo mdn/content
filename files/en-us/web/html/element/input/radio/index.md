@@ -131,7 +131,7 @@ In addition to the common attributes shared by all {{HTMLElement("input")}} elem
 
   - : The `value` attribute is one which all {{HTMLElement("input")}}s share; however, it serves a special purpose for inputs of type `radio`: when a form is submitted, only radio buttons which are currently checked are submitted to the server, and the reported value is the value of the `value` attribute. If the `value` is not otherwise specified, it is the string `on` by default. This is demonstrated in the section [Value](#value) above.
 
-- `required`
+- [`required`](/en-US/docs/Web/HTML/Attributes/required)
   - : The `required` attribute is one which most {{HTMLElement("input")}}s share. If any radio button in a same-named group of radio buttons has the `required` attribute, a radio button in that group must be checked, although it doesn't have to be the one with the attribute applied.
 
 ## Using radio inputs
@@ -182,7 +182,7 @@ Beyond accessibility, this is another good reason to properly set up `<label>` e
 
 ## Validation
 
-Radio buttons don't participate in constraint validation; they have no real value to be constrained.
+In the case of a radio button with the [`required`](/en-US/docs/Web/HTML/Attributes/required) attribute set, or a same-named group of radio buttons in which at least one member has `required` set, a radio button needs to be selected for the control to be considered valid. If no radio button is checked, the [`valueMissing`](/en-US/docs/Web/API/ValidityState/valueMissing) property of a {{domxref("ValidityState")}} object will return `true` during validation, and the browser will ask the user to select an option.
 
 ## Styling radio inputs
 

@@ -16,7 +16,7 @@ When working with files, you are looking at either grabbing the file from an {{d
 
 Media elements have streaming support out of the box. The audio will start playing when the browser determines it can load the rest of the file before playing finishes. You can see an example of how to use this with the Web Audio API in the [Using the Web Audio API tutorial](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API).
 
-You will, however, have more control if you use a buffer node. You have to request the file and wait for it to load ([this section of our advanced article](/en-US/docs/Web/API/Web_Audio_API/Advanced_techniques#Dial_up_%E2%80%94_loading_a_sound_sample) shows a good way to do it), but then you have access to the data directly, which means more precision, and more precise manipulation.
+You will, however, have more control if you use a buffer node. You have to request the file and wait for it to load ([this section of our advanced article](/en-US/docs/Web/API/Web_Audio_API/Advanced_techniques#dial-up_—_loading_a_sound_sample) shows a good way to do it), but then you have access to the data directly, which means more precision, and more precise manipulation.
 
 If you're looking to work with audio from the user's camera or microphone you can access it via the [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API) and the {{domxref("MediaStreamAudioSourceNode")}} interface. This is good for WebRTC and situations where you might want to record or possibly analyze audio.
 

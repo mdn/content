@@ -40,7 +40,7 @@ The {{domxref("MediaCapabilities.decodingInfo()")}} method takes as a parameter 
 In our example, we are testing the decoding capabilities of a video configuration. The configuration requires the type of media being tested — e.g. a plain `file` or {{domxref("MediaSource")}} — and a video configuration object that includes values for the `contentType`, `width`, `height`, `bitrate`, and `framerate`:
 
 - The `contentType` must be a string specifying a [valid video MIME type](/en-US/docs/Web/Media/Formats/Video_codecs).
-- The `width` and `height` are the horizontal and vertical dimensions of the video; these are also used to determine the aspect ratio.
+- The `width` and `height` are the horizontal and vertical dimensions of the video; these are also used to determine the {{glossary("aspect ratio")}}.
 - The `bitrate` is the number of bits used to encode one second of video.
 - The `framerate` is the number of frames which are played per second of time when playing the video.
 
@@ -82,7 +82,8 @@ Now that we've created a video decoding configuration we can pass it as a parame
 let promise = navigator.mediaCapabilities.decodingInfo(videoConfiguration);
 ```
 
-The `decodingInfo()` and {{domxref("MediaCapabilities.encodingInfo", "encodingInfo()")}} methods both return promises. Once the promises state is fulfilled, you can access the `supported`, `smooth`, and `powerEfficient` properties from the returned object.
+The `decodingInfo()` and {{domxref("MediaCapabilities.encodingInfo", "encodingInfo()")}} methods both return promises.
+Once the promise states are fulfilled, you can access the `supported`, `smooth`, and `powerEfficient` properties from the returned object.
 
 ### Handling the response
 
@@ -227,7 +228,7 @@ let mc = {
           result.powerEfficient ? " IS " : " IS NOT "
         }power efficient.`;
         const ul = document.getElementById("results");
-        li.innerHTML = content;
+        li.textContent = content;
         ul.appendChild(li);
       })
       .catch((error) => {

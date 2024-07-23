@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.EventTarget.dispatchEvent
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The **`dispatchEvent()`** method of the {{domxref("EventTarget")}} sends an {{domxref("Event")}} to the object, (synchronously) invoking the affected
 event listeners in the appropriate order. The normal event processing
@@ -29,7 +29,7 @@ handlers are called and return before `dispatchEvent()` returns.
 dispatchEvent(event)
 ```
 
-### Parameter
+### Parameters
 
 - `event`
   - : The {{domxref("Event")}} object to dispatch. Its {{domxref("Event.target")}} property will be set to the current {{domxref("EventTarget")}}.

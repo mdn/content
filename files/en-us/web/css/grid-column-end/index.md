@@ -7,7 +7,7 @@ browser-compat: css.properties.grid-column-end
 
 {{CSSRef}}
 
-The **`grid-column-end`** CSS property specifies a grid item's end position within the grid column by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the block-end edge of its {{glossary("grid areas", "grid area")}}.
+The **`grid-column-end`** [CSS](/en-US/docs/Web/CSS) property specifies a grid item's end position within the grid column by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the block-end edge of its {{glossary("grid areas", "grid area")}}.
 
 {{EmbedInteractiveExample("pages/css/grid-column-end.html")}}
 
@@ -155,6 +155,10 @@ grid-column-end: unset;
 
 ## See also
 
-- Related CSS properties: {{cssxref("grid-column-start")}}, {{cssxref("grid-column")}}, {{cssxref("grid-row-start")}}, {{cssxref("grid-row-end")}}, {{cssxref("grid-row")}}
-- Grid Layout Guide: _[Line-based placement with CSS Grid](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)_
-- Video tutorial: _[Line-based placement](https://gridbyexample.com/video/series-line-based-placement/)_
+- {{cssxref("grid-column-start")}}
+- {{cssxref("grid-column")}}
+- {{cssxref("grid-row-start")}}
+- {{cssxref("grid-row-end")}}
+- {{cssxref("grid-row")}}
+- [Line-based placement with CSS grid](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
+- Video: [Line-based placement](https://gridbyexample.com/video/series-line-based-placement/)

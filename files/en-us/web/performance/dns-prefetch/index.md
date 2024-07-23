@@ -50,7 +50,7 @@ There are 3 main things to keep in mind:
 Link: <https://fonts.googleapis.com/>; rel=dns-prefetch
 ```
 
-**Third**, while `dns-prefetch` only performs a DNS lookup, `preconnect` establishes a connection to a server. This process includes DNS resolution, as well as establishing the TCP connection, and performing the [TLS](/en-US/docs/Glossary/TLS) handshake—if a site is served over HTTPS. Using `preconnect` provides an opportunity to further reduce the perceived latency of [cross-origin requests](/en-US/docs/Web/HTTP/CORS). You can use it as an [HTTP header](/en-US/docs/Web/HTTP/Headers) by using the [HTTP Link field](/en-US/docs/Web/HTTP/Headers/Link):
+**Third**, while `dns-prefetch` only performs a DNS lookup, [`preconnect`](/en-US/docs/Web/HTML/Attributes/rel/preconnect) establishes a connection to a server. This process includes DNS resolution, as well as establishing the TCP connection, and performing the [TLS](/en-US/docs/Glossary/TLS) handshake—if a site is served over HTTPS. Using `preconnect` provides an opportunity to further reduce the perceived latency of [cross-origin requests](/en-US/docs/Web/HTTP/CORS). You can use it as an [HTTP header](/en-US/docs/Web/HTTP/Headers) by using the [HTTP Link field](/en-US/docs/Web/HTTP/Headers/Link):
 
 ```http
 Link: <https://fonts.googleapis.com/>; rel=preconnect
@@ -72,6 +72,7 @@ Some resources such as fonts are loaded in anonymous mode. In such cases you sho
 
 - [\<link>](/en-US/docs/Web/HTML/Element/link)
 - [HTML attribute: rel](/en-US/docs/Web/HTML/Attributes/rel)
+- [HTML rel attribute: preconnect](/en-US/docs/Web/HTML/Attributes/rel/preconnect)
 - [crossorigin](/en-US/docs/Web/HTML/Attributes/crossorigin)
 - [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS)
 - [HTTP headers](/en-US/docs/Web/HTTP/Headers)

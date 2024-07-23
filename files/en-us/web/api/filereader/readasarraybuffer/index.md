@@ -10,9 +10,9 @@ browser-compat: api.FileReader.readAsArrayBuffer
 
 The **`readAsArrayBuffer()`** method of the {{domxref("FileReader")}} interface is used to start reading the
 contents of a specified {{domxref("Blob")}} or {{domxref("File")}}. When the read
-operation is finished, the {{domxref("FileReader.readyState","readyState")}} becomes
-`DONE`, and the {{domxref("FileReader/loadend_event", "loadend")}} is
-triggered. At that time, the {{domxref("FileReader.result","result")}} attribute
+operation is finished, the {{domxref("FileReader.readyState","readyState")}} property becomes
+`DONE`, and the {{domxref("FileReader/loadend_event", "loadend")}} event is
+triggered. At that time, the {{domxref("FileReader.result","result")}} property
 contains an {{jsxref("ArrayBuffer")}} representing the file's data.
 
 > **Note:** The {{domxref("Blob.arrayBuffer()")}} method is a newer promise-based API to read a

@@ -14,6 +14,10 @@ The JavaScript exception "invalid assignment left-hand side" occurs when there w
 SyntaxError: Invalid left-hand side in assignment (V8-based)
 SyntaxError: invalid assignment left-hand side (Firefox)
 SyntaxError: Left side of assignment is not a reference. (Safari)
+
+ReferenceError: Invalid left-hand side in assignment (V8-based)
+ReferenceError: cannot assign to function call (Firefox)
+ReferenceError: Left side of assignment is not a reference. (Safari)
 ```
 
 ## Error type

@@ -8,7 +8,7 @@ browser-compat: api.IDBRequest.error_event
 
 {{APIRef("IndexedDB")}}
 
-The `error` handler is executed when an error caused a request to fail.
+The `error` handler is executed when an error caused a request to fail. In the `error` event handler, you can access the error of the request, as well as place more requests to the same transaction.
 
 This event is not cancelable and does not bubble.
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.FetchEvent.replacesClientId
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
 
 The **`replacesClientId`** read-only property of the
 {{domxref("FetchEvent")}} interface is the {{domxref("Client.id", "id")}} of the

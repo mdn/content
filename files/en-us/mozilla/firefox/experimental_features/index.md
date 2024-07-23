@@ -94,7 +94,7 @@ HTML password input elements ([`<input type="password">`](/en-US/docs/Web/HTML/E
     </tr>
     <tr>
       <th>Preference name</th>
-      <td colspan="2"><code>layout.forms.input-type-show-password-button.enabled</code></td>
+      <td colspan="2"><code>layout.forms.reveal-password-button.enabled</code></td>
     </tr>
   </tbody>
 </table>
@@ -184,10 +184,11 @@ The {{cssxref("initial-letter")}} CSS property is part of the [CSS Inline Layout
   </tbody>
 </table>
 
-### content-visibility: auto value
+### `from` keyword for relative colors
 
-The [`content-visibility`](/en-US/docs/Web/CSS/content-visibility) CSS property value `auto` allows content to skip rendering if it is not [relevant to the user](/en-US/docs/Web/CSS/CSS_containment#relevant_to_the_user).
-(See [Firefox bug 1798485](https://bugzil.la/1798485) for more details.)
+The `from` keyword is now parsed as valid CSS syntax when the `layout.css.relative-color-syntax.enabled` preference is set to `true`.
+Although this keyword currently has no effect, it will not produce syntax errors when used in valid places in CSS color functions, thereby supporting the ongoing work on [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors).
+See [Firefox bug 1889133](https://bugzil.la/1889133) for more details.
 
 <table>
   <thead>
@@ -200,38 +201,30 @@ The [`content-visibility`](/en-US/docs/Web/CSS/content-visibility) CSS property 
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>113</td>
-      <td>Yes</td>
+      <td>126</td>
+      <td>No</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
-      <td>109</td>
+      <td>126</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Beta</th>
-      <td>109</td>
+      <td>126</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Release</th>
-      <td>109</td>
+      <td>126</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Preference name</th>
-      <td colspan="2"><code>layout.css.content-visibility.enabled</code></td>
+      <td colspan="2"><code>layout.css.relative-color-syntax.enabled</code></td>
     </tr>
   </tbody>
 </table>
-
-Note:
-
-- The related {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} event and associated {{domxref("ContentVisibilityAutoStateChangeEvent")}} interface were added in version 110, and are gated by the same preference.
-  These can be used by application code to monitor visibility changes and stop processes related to rendering the element when the user agent is [skipping its contents](/en-US/docs/Web/CSS/CSS_containment#skips_its_contents).
-  (See [Firefox bug 1791759](https://bugzil.la/1791759) for more details.)
-- The {{domxref("Element.checkVisibility()")}} `options` object parameter now takes the property `contentVisibilityAuto`, which can be set `true` to test if the element has `content-visibility: auto` set and is currently skipping rendering its content (the `options` object also takes new values `opacityProperty` and `visibilityProperty` but these are not related to `content-visibility`).
-  (See [Firefox bug 1859852](https://bugzil.la/1859852) for more details).
 
 ### Single numbers as aspect ratio in media queries
 
@@ -309,48 +302,6 @@ The {{cssxref("backdrop-filter")}} property applies filter effects to the area b
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>layout.css.backdrop-filter.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
-### Masonry grid layout
-
-Adds support for a [masonry-style layout](/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout) based on grid layout where one axis has a masonry layout and the other has a normal grid layout. This allows developers to easily create gallery style layouts like on Pinterest. See [Firefox bug 1607954](https://bugzil.la/1607954) for more details.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>77</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>77</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>77</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>77</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2">
-        <code>layout.css.grid-template-masonry-value.enabled</code>
-      </td>
     </tr>
   </tbody>
 </table>
@@ -443,6 +394,46 @@ For more information, see [Firefox bug 1807685](https://bugzil.la/1807685), [Fir
   </tbody>
 </table>
 
+### @scope at-rule
+
+The [@scope](/en-US/docs/Web/CSS/@scope) [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) allows you to select specific child elements without having to overly increase the specificity of CSS selectors ([Firefox bug 1886441](https://bugzil.la/1886441)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>128</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>128</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>128</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>128</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.at-scope.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ### @font-face src feature checking
 
 The `@font-face` [`src` descriptor](/en-US/docs/Web/CSS/@font-face/src) now supports the `tech()` function, allowing fallback of whether a font resource is downloaded based on whether the user-agent supports a particular font feature or technology.
@@ -484,7 +475,7 @@ See [Firefox bug 1715546](https://bugzil.la/1715546) for more details.
   </tbody>
 </table>
 
-### font-variant-emoji
+### font-variant-emoji property
 
 The CSS [`font-variant-emoji`](/en-US/docs/Web/CSS/font-variant-emoji) property allows you to set a default presentation style for displaying emojis.
 See ([Firefox bug 1461589](https://bugzil.la/1461589)) for more details.
@@ -525,7 +516,7 @@ See ([Firefox bug 1461589](https://bugzil.la/1461589)) for more details.
   </tbody>
 </table>
 
-### page-orientation
+### page-orientation descriptor
 
 The **`page-orientation`** [CSS](/en-US/docs/Web/CSS) descriptor for the {{cssxref("@page")}} at-rule controls the rotation of a printed page. It handles the flow of content across pages when the orientation of a page is changed. This behavior differs from the [`size`](/en-US/docs/Web/CSS/@page/size) descriptor in that a user can define the direction in which to rotate the page.
 See ([Firefox bug 1673987](https://bugzil.la/1673987)) for more details.
@@ -962,6 +953,167 @@ The `<h1>` heading doesn't decrease in font size now when nested within [section
   </tbody>
 </table>
 
+### `shape()` function
+
+The CSS [`shape()`](/en-US/docs/Web/CSS/basic-shape/shape) function is a [`<basic-shape>`](/en-US/docs/Web/CSS/basic-shape) data type that enables you to define a shape in the {{cssxref("clip-path")}} and {{cssxref("offset-path")}} properties using one or more "shape commands". These commands are very similar to the [SVG path commands](/en-US/docs/Web/SVG/Attribute/d#path_commands). The `shape()` function is similar in some respects to the `{{cssxref("basic-shape/path","path()")}}` function, but unlike `path()`, which uses the [SVG path](/en-US/docs/Web/SVG/Element/path) syntax, `shape()` uses standard CSS syntax. This enables you to easily create and edit shapes and also allows the use of CSS math functions.
+For more details, see [Firefox bug 1823463](https://bugzil.la/1823463) for the `shape()` function support in `clip-path`, [Firefox bug 1884424](https://bugzil.la/1884424) for the function's support in `offset-path`, and [Firefox bug 1884425](https://bugzil.la/1884425) for its interpolation support.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>126</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>126</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>126</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>126</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.basic-shape-shape.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### `@starting-style` at-rule
+
+The CSS [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) at-rule allows you to set the starting styles of an element for a CSS transition, when the element has no default initial style. This is particularly useful for elements that are hidden from view on the first paint such as [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) or ['dialog'](/en-US/docs/Web/HTML/Element/dialog). Does not yet support animating from `display: none`. For more details, see [Firefox bug 1834876](https://bugzil.la/1834876) and [Firefox bug 1834877](https://bugzil.la/1834877).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>127</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>127</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>127</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>127</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.starting-style-at-rules.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### Symmetrical `letter-spacing`
+
+The CSS {{cssxref("letter-spacing")}} property now splits the specified letter spacing evenly on both sides of each character. This is unlike the current behavior where spacing is added primarily to one side. This approach can improve text spacing, especially in mixed-directional text [Firefox bug 1891446](https://bugzil.la/1891446).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>128</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>127</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>127</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>127</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.letter-spacing.model</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### `calc()` color channel support in relative colors
+
+The CSS [`calc()`](/en-US/docs/Web/CSS/calc) function can now parse color channels in [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors#using_math_functions), allowing you to correctly calculate changes to colors in different color spaces or while using different functional notations [Firefox bug 1889561](https://bugzil.la/1889561).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>127</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>127</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>127</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>127</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.relative-color-syntax.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ## SVG
 
 ### transition-behavior property
@@ -1051,55 +1203,11 @@ This includes: `SVGPathSegList`, [SVGPathElement.getPathSegAtLength()](/en-US/do
 
 ## JavaScript
 
-### SharedArrayBuffer is growable
+### Float16Array Typed Arrays
 
-The {{jsxref("SharedArrayBuffer")}} is now growable using the {{jsxref("SharedArrayBuffer.prototype.grow()")}} method.
-The maximum allowed size of the buffer is specified using the `options.maxByteLength` parameter to the [`SharedArrayBuffer()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffer#maxbytelength).
-The {{jsxref("SharedArrayBuffer.prototype.growable")}} and {{jsxref("SharedArrayBuffer.prototype.maxByteLength")}} properties indicate whether the buffer can be grow, and its maximum allowed size, respectively.
-([Firefox bug 1842773](https://bugzil.la/1842773)).
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>124</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>124</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>124</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>124</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>javascript.options.experimental.sharedarraybuffer_growable</code></td>
-    </tr>
-  </tbody>
-</table>
-
-### ArrayBuffer is resizable
-
-The {{jsxref("ArrayBuffer")}} can now be resized using the {{jsxref("ArrayBuffer.prototype.resize()")}} method.
-The maximum allowed size of the buffer is specified using the `options.maxByteLength` parameter to the [`ArrayBuffer()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer#maxbytelength).
-The {{jsxref("ArrayBuffer.prototype.resizable")}} and {{jsxref("ArrayBuffer.prototype.maxByteLength")}} properties indicate whether the buffer can be resized, and its maximum allowed size, respectively.
-([Firefox bug 1842773](https://bugzil.la/1842773).)
+{{jsxref("Float16Array")}} typed arrays are now supported, along with {{jsxref("DataView.prototype.getFloat16()")}} and {{jsxref("DataView.prototype.setFloat16()")}} for reading and setting `Float16Array` values from a {{jsxref("DataView")}}, and the {{jsxref("Math.f16round()")}} static method, which can be used to round numbers to 16 bits.
+The new type is useful for sharing data with a GPU, in particular for use cases where it makes sense to trade off precision for memory consumption.
+([Firefox bug 1833647](https://bugzil.la/1833647).)
 
 <table>
   <thead>
@@ -1112,27 +1220,27 @@ The {{jsxref("ArrayBuffer.prototype.resizable")}} and {{jsxref("ArrayBuffer.prot
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>124</td>
+      <td>127</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
-      <td>124</td>
+      <td>127</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Beta</th>
-      <td>124</td>
+      <td>127</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Release</th>
-      <td>124</td>
+      <td>127</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Preference name</th>
-      <td colspan="2"><code>javascript.options.experimental.arraybuffer_resizable</code></td>
+      <td colspan="2"><code>javascript.options.experimental.float16array</code></td>
     </tr>
   </tbody>
 </table>
@@ -1359,7 +1467,7 @@ Note that, as shown below, the feature is only available on Nightly builds (irre
   </tbody>
 </table>
 
-#### OpenFont COLRv1 fonts
+### OpenFont COLRv1 fonts
 
 This feature provides support for the [OpenFont COLRv1 font specification](https://docs.microsoft.com/en-us/typography/opentype/spec/).
 This enables compression-friendly color vector fonts with gradients, compositing and blending to be loaded using the CSS [`@font-face`](/en-US/docs/Web/CSS/@font-face) rule, or the [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API).
@@ -1401,49 +1509,7 @@ See [Firefox bug 1740530](https://bugzil.la/1740530) for more details.
   </tbody>
 </table>
 
-#### CSS Properties and Values API
-
-The [CSS Properties and Values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API) allows developers to register custom CSS properties through JavaScript via [`registerProperty()`](/en-US/docs/Web/API/CSS/registerProperty_static) or in CSS using the [`@property`](/en-US/docs/Web/CSS/@property) at-rule.
-Registering properties using these two methods allows for type checking, default values, and properties that do or do not inherit values from their parent elements.
-See [Firefox bug 1840480](https://bugzil.la/1840480) for more details.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>116</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>116</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>116</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>116</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>layout.css.property-and-value-api.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
-#### CSS Custom Highlight API
+### CSS Custom Highlight API
 
 The [CSS Custom Highlight API](/en-US/docs/Web/API/CSS_Custom_Highlight_API) provides a mechanism for styling arbitrary text ranges in a document (generalizing the behavior of other highlight pseudo-elements such as {{cssxref('::selection')}}, {{cssxref('::spelling-error')}}, {{cssxref('::grammar-error')}}, and {{cssxref('::target-text')}}).
 The ranges are defined in JavaScript using [`Range`](/en-US/docs/Web/API/Range) instances grouped in a [`Highlight`](/en-US/docs/Web/API/Highlight), and then registered with a name using [`HighlightRegistry`](/en-US/docs/Web/API/HighlightRegistry).
@@ -1574,21 +1640,51 @@ It is disabled by default on all builds [Firefox bug 1750902](https://bugzil.la/
 
 ### HTML DOM API
 
-#### Shadow DOM
+#### Selections crossing shadow DOM boundary
 
-Firefox now supports the `clonable` option and property for shadow DOM.
+The {{domxref("Selection.getComposedRanges()")}} method can be used to get an array of {{domxref("StaticRange")}} objects representing the current selected range or ranges.
+Unlike {{domxref("Selection.getRangeAt()")}}, this method can return ranges with anchor or focus nodes inside a shadow DOM, but only if it is passed the {{domxref("ShadowRoot")}} objects that contain those nodes.
+Otherwise, it will return a range that has been re-scoped to include the host node of the shadow root that contains the node.
+The `Selection` methods {{domxref("Selection.setBaseAndExtent()","setBaseAndExtent()")}}, {{domxref("Selection.collapse()","collapse()")}}, and {{domxref("Selection.extend()","extend()")}} have also been modified to accept nodes inside a shadow root.
 
-- The {{domxref("Element.attachShadow()")}} method's `clonable` boolean option specifies whether the created shadow root is clonable: the default value is `false` but when set to `true`, the shadow host cloned with {{domxref("Node.cloneNode()")}} or {{domxref("Document.importNode()")}} will include shadow root in the copy.
-- The {{domxref("ShadowRoot")}} interface's {{domxref("ShadowRoot.clonable", "clonable")}} read-only property returns `true` if the shadow root is clonable, and `false` otherwise.
+User selection via mouse, keyboard, and so on, can start and end anywhere in the document, including inside any open or closed shadow trees.
+([Firefox bug 1867058](https://bugzil.la/1867058)).
 
-When shadow root is created via declarative shadow DOM, the `clonable` option is set to `true` by default, and the `clonable` property returns `true`. ([Firefox bug 1868428](https://bugzil.la/1868428))
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 122           | Yes                 |
-| Developer Edition | NA            | No                  |
-| Beta              | NA            | No                  |
-| Release           | NA            | No                  |
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>126</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>126</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>126</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>126</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>dom.shadowdom.selection_across_boundary.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
 
 #### HTMLMediaElement method: setSinkId()
 
@@ -1670,91 +1766,10 @@ Enabling this feature adds the {{domxref("HTMLMediaElement.audioTracks")}} and {
   </tbody>
 </table>
 
-#### ClipboardItem
-
-The {{domxref('ClipboardItem')}} interface of the {{domxref('Clipboard API')}} is now supported. It is available in nightly or early beta builds.
-(See [Firefox bug 1809106](https://bugzil.la/1809106) for more details.)
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>122</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>87</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>122</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>87</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.events.asyncClipboard.clipboardItem</code></td>
-    </tr>
-  </tbody>
-</table>
-
-#### Clipboard read and write
-
-The [Clipboard.read()](/en-US/docs/Web/API/Clipboard/read), [Clipboard.readText()](/en-US/docs/Web/API/Clipboard/readText), and [Clipboard.write()](/en-US/docs/Web/API/Clipboard/write) methods of the {{domxref('Clipboard')}} interface are now available in nightly and early beta builds
-(See [Firefox bug 1809106](https://bugzil.la/1809106) for more details.)
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>122</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>90</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>122</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>90</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.events.asyncClipboard.readText</code> and <code>dom.events.asyncClipboard.clipboardItem</code></td>
-    </tr>
-  </tbody>
-</table>
-
 #### HTML Sanitizer API
 
-The {{domxref('HTML Sanitizer API')}} allow developers to take untrusted strings of HTML and sanitize them for safe insertion into a document's DOM. Default elements within each configuration property (those to be sanitized) are still under consideration. Due to this the config parameter has not been implemented (see {{domxref('Sanitizer.sanitizer()', 'the constructor')}} for more information). See [Firefox bug 1673309](https://bugzil.la/1673309) for more details.
+The {{domxref('HTML Sanitizer API')}} allow developers to take untrusted strings of HTML and sanitize them for safe insertion into a document's DOM. Default elements within each configuration property (those to be sanitized) are still under consideration.
+Due to this the config parameter has not been implemented (see {{domxref('Sanitizer.sanitizer()', 'the constructor')}} for more information). See [Firefox bug 1673309](https://bugzil.la/1673309) for more details.
 
 <table>
   <thead>
@@ -2181,50 +2196,6 @@ These two preferences add a "Not secure" text label in the address bar next to t
   </tbody>
 </table>
 
-### Upgrading mixed display content
-
-When enabled, this preference causes Firefox to automatically upgrade requests for media content from HTTP to HTTPS on secure pages. The intent is to prevent mixed-content conditions in which some content is loaded securely while other content is insecure. If the upgrade fails (because the media's host doesn't support HTTPS), the media is not loaded. (See [Firefox bug 1435733](https://bugzil.la/1435733) for more details.)
-
-This also changes the console warning; if the upgrade succeeds, the message indicates that the request was upgraded, instead of showing a warning.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>84</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>60</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>60</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>60</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2">
-        <code>security.mixed_content.upgrade_display_content</code>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ### Permissions Policy / Feature policy
 
 [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) allows web developers to selectively enable, disable, and modify the behavior of certain features and APIs in the browser. It is similar to CSP but controls features instead of security behavior.
@@ -2315,6 +2286,90 @@ The [`Clear-Site-Data`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data) HTTP respo
 </table>
 
 ## HTTP
+
+### Cookies Having Independent Partitioned State (CHIPS)
+
+[CHIPS](/en-US/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies), or "partitioned cookies", allow developers to opt a cookie into partitioned storage, with separate cookie storage for each top-level site. Partitioned cookies can only be read within the same top-level site they were set on and its subdomains. This blocks cross-site tracking, while still enabling legitimate uses of third-party cookies such as persisting state of embedded maps or chat widgets across different subdomains of a site. Partitioned cookies are set using the [`partitioned`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#partitioned) directive of the `Set-Cookie` HTTP header. ([Firefox bug 1898253](https://bugzil.la/1898253)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>128</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>128</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>128</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>128</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2">
+        <code>network.cookie.CHIPS.enabled</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### Accept header with MIME type image/jxl
+
+The HTTP [`Accept`](/en-US/docs/Web/HTTP/Headers/Accept) header in [default requests and image requests](/en-US/docs/Web/HTTP/Content_negotiation/List_of_default_Accept_values) can be configured via a preference to indicate support for the `image/jxl` MIME type.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>128</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>128</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>128</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>128</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2">
+        <code>image.jxl.enabled</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ### SameSite=Lax by default
 

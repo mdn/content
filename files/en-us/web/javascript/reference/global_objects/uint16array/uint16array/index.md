@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Uint16Array.Uint16Array
 
 {{JSRef}}
 
-The **`Uint16Array()`** constructor creates {{jsxref("Uint16Array")}} objects. The contents are initialized to `0`.
+The **`Uint16Array()`** constructor creates {{jsxref("Uint16Array")}} objects. The contents are initialized to `0` unless initialization data is explicitly provided.
 
 ## Syntax
 

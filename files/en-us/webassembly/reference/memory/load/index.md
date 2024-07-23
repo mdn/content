@@ -13,7 +13,7 @@ The **`load`** [memory instructions](/en-US/docs/WebAssembly/Reference/Memory) a
 
 There are `load` instructions for loading from a memory into an `i32`, `i64`, `f32`, and `f64`.
 For the integer numbers, there are separate instruction variants for loading a narrower signed number and unsigned number from memory and extending it into a wider type.
-For example, you can load an unsigned 8-bit number and convert it into an i32 usoing `i32.load8_u`.
+For example, you can load an unsigned 8-bit number and convert it into an i32 using `i32.load8_u`.
 All the variants are [listed below](#instructions_and_opcodes).
 
 {{EmbedInteractiveExample("pages/wat/load.html", "tabbed-taller")}}

@@ -2,7 +2,7 @@
 title: 412 Precondition Failed
 slug: Web/HTTP/Status/412
 page-type: http-status-code
-browser-compat: http.status.412
+spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.412
 ---
 
 {{HTTPSidebar}}
@@ -55,10 +55,6 @@ If the hashes don't match, it means that the document has been edited in-between
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

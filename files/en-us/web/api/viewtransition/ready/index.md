@@ -3,17 +3,15 @@ title: "ViewTransition: ready property"
 short-title: ready
 slug: Web/API/ViewTransition/ready
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.ViewTransition.ready
 ---
 
-{{APIRef("View Transitions API")}}{{SeeCompatTable}}
+{{APIRef("View Transitions API")}}
 
 The **`ready`** read-only property of the
 {{domxref("ViewTransition")}} interface is a {{jsxref("Promise")}} that fulfills once the pseudo-element tree is created and the transition animation is about to start.
 
-`ready` will reject if the transition cannot begin. This can be due to misconfiguration, for example duplicate {{cssxref("view-transition-name")}}s, or if the callback passed to {{domxref("Document.startViewTransition()")}} throws or returns a promise that rejects.
+`ready` will reject if the transition cannot begin. This can be due to misconfiguration, for example, duplicate {{cssxref("view-transition-name")}}s, or if the callback passed to {{domxref("Document.startViewTransition()")}} throws or returns a promise that rejects.
 
 ## Value
 

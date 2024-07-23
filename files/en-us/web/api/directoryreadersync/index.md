@@ -106,13 +106,13 @@ Returns a list of entries from a specific directory. Call this method until an e
 readEntries()
 ```
 
+##### Parameters
+
+None.
+
 ##### Return value
 
-Array containing [`FileEntrySync`](/en-US/docs/Web/API/FileEntrySync) and [`DirectoryEntrySync`](/en-US/docs/Web/API/DirectoryEntrySync)
-
-##### Parameter
-
-None
+Array containing [`FileEntrySync`](/en-US/docs/Web/API/FileEntrySync) and [`DirectoryEntrySync`](/en-US/docs/Web/API/DirectoryEntrySync).
 
 ##### Exceptions
 

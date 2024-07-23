@@ -24,10 +24,7 @@ is. This can be no larger than the value of {{DOMxRef("Screen.height", "window.s
 and will be less if the device or user agent reserves any
 vertical space for itself.
 
-For instance, on a Mac whose Dock is located at the bottom of screen (which is the
-default), the value of `availHeight` is approximately the value of
-`height` (the total height of the screen in CSS pixels) minus the heights of
-the Dock and menu bar, as seen in the diagram below.
+For instance, on a Mac whose Dock is located at the bottom of screen (which is the default), the value of `availHeight` is approximately the value of `height` (the total height of the screen in CSS pixels) minus the heights of the Dock and menu bar, as seen in the diagram below. They only take up `availHeight` if they are always shown: if the page is fullscreened, or if the dock is configured to automatically hide and show, then they won't be counted in `availHeight`.
 
 [![Diagram showing how Screen.availHeight relates to Screen.height and the screen's contents](availheight-diagram.svg)](availheight-diagram.svg)
 

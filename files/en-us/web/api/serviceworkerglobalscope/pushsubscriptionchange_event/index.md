@@ -45,7 +45,7 @@ self.addEventListener(
   "pushsubscriptionchange",
   (event) => {
     const conv = (val) =>
-      btoa(String.fromCharCode.apply(null, new Uint8Array(val)));
+      self.btoa(String.fromCharCode.apply(null, new Uint8Array(val)));
     const getPayload = (subscription) => ({
       endpoint: subscription.endpoint,
       publicKey: conv(subscription.getKey("p256dh")),

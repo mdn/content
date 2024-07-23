@@ -58,6 +58,8 @@ This module contains the following articles, which cover the most essential part
   - : In this lesson we will take a look at how certain special elements are treated in CSS. Images, other media, and form elements behave a little differently in terms of your ability to style them with CSS than regular boxes. Understanding what is and isn't possible can save some frustration, and this lesson will highlight some of the main things that you need to know.
 - [Styling tables](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables)
   - : Styling an HTML table isn't the most glamorous job in the world, but sometimes we all have to do it. This article provides a guide to making HTML tables look good, with some specific table styling techniques highlighted.
+- [Advanced styling effects](/en-US/docs/Learn/CSS/Building_blocks/Advanced_styling_effects)
+  - : This article acts as a box of tricks, providing an introduction to some interesting advanced styling features such as box shadows, blend modes, and filters.
 - [Debugging CSS](/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS)
   - : Sometimes when writing CSS you will encounter an issue where your CSS doesn't seem to be doing what you expect. This article will give you guidance on how to go about debugging a CSS problem, and show you how the DevTools included in all modern browsers can help you find out what is going on.
 - [Organizing your CSS](/en-US/docs/Learn/CSS/Building_blocks/Organizing)
@@ -73,8 +75,3 @@ The following assessments will test your understanding of the CSS covered in the
   - : If you want to make the right impression, writing a letter on nice letterheaded paper can be a really good start. In this assessment, we'll challenge you to create an online template to achieve such a look.
 - [A cool looking box](/en-US/docs/Learn/CSS/Building_blocks/A_cool_looking_box)
   - : Here you'll get some practice in using background and border styling to create an eye-catching box.
-
-## See also
-
-- [Advanced styling effects](/en-US/docs/Learn/CSS/Building_blocks/Advanced_styling_effects)
-  - : This article acts as a box of tricks, providing an introduction to some interesting advanced styling features such as box shadows, blend modes, and filters.

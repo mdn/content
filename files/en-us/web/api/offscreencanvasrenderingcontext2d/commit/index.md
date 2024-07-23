@@ -3,10 +3,13 @@ title: "OffscreenCanvasRenderingContext2D: commit() method"
 short-title: commit()
 slug: Web/API/OffscreenCanvasRenderingContext2D/commit
 page-type: web-api-instance-method
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.OffscreenCanvasRenderingContext2D.commit
 ---
 
-{{APIRef("Canvas API")}}{{AvailableInWorkers}}
+{{APIRef("Canvas API")}}{{AvailableInWorkers}}{{deprecated_header}}{{non-standard_header}}
 
 The
 **`OffscreenCanvasRenderingContext2D.commit()`**

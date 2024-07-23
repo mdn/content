@@ -134,7 +134,8 @@ function draw() {
 
 You can check the finished code for this article in the live demo below and play with it to understand better how it works.
 
-> **Note:** Live samples run automatically on these pages, so we've added a "start game" button.
+> [!NOTE]
+> Live samples run automatically on these pages, so we've added a "start game" button.
 > This is useful to avoid games starting automatically and triggering alerts or other events too often.
 
 ```html
@@ -175,7 +176,7 @@ function draw() {
 }
 
 function startGame() {
-  const interval = setInterval(draw, 10);
+  setInterval(draw, 10);
 }
 
 document.getElementById("runButton").addEventListener("click", function () {
@@ -186,7 +187,8 @@ document.getElementById("runButton").addEventListener("click", function () {
 
 {{embedlivesample("compare_your_code", 600, 350)}}
 
-> **Note:** Try changing the speed of the moving ball, or the direction it moves in.
+> [!NOTE]
+> Try changing the speed of the moving ball, or the direction it moves in.
 
 ## Next steps
 

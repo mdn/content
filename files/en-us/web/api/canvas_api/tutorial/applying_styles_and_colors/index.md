@@ -392,10 +392,8 @@ function draw() {
   ctx.lineWidth = 10;
 
   // check input
-  if (document.getElementById("miterLimit").value.match(/\d+(\.\d+)?/)) {
+  if (document.getElementById("miterLimit").checkValidity()) {
     ctx.miterLimit = parseFloat(document.getElementById("miterLimit").value);
-  } else {
-    alert("Value must be a positive number");
   }
 
   // Draw lines
@@ -419,11 +417,9 @@ function draw() {
     <td>
       Change the <code>miterLimit</code> by entering a new value below and
       clicking the redraw button.<br /><br />
-      <form onsubmit="return draw();">
-        <label for="miterLimit">Miter limit</label>
-        <input type="number" size="3" id="miterLimit" />
-        <input type="submit" value="Redraw" />
-      </form>
+      <label for="miterLimit">Miter limit</label>
+      <input type="number" id="miterLimit" size="3" min="1" />
+      <input type="submit" id="redraw" value="Redraw" />
     </td>
   </tr>
 </table>
@@ -434,6 +430,9 @@ document.getElementById("miterLimit").value = document
   .getElementById("canvas")
   .getContext("2d").miterLimit;
 draw();
+
+const redraw = document.getElementById("redraw");
+redraw.addEventListener("click", draw);
 ```
 
 {{EmbedLiveSample("A_demo_of_the_miterLimit_property", "", "180")}}
@@ -655,7 +654,7 @@ The second gradient is also positioned at the center of it's second rectangle. T
 In one of the examples on the previous page, we used a series of loops to create a pattern of images. There is, however, a much simpler method: the `createPattern()` method.
 
 - {{domxref("CanvasRenderingContext2D.createPattern", "createPattern(image, type)")}}
-  - : Creates and returns a new canvas pattern object. `image` is a the source of the image (that is, an {{domxref("HTMLImageElement")}}, a {{domxref("SVGImageElement")}}, another {{domxref("HTMLCanvasElement")}} or a {{domxref("OffscreenCanvas")}}, an {{domxref("HTMLVideoElement")}} or a {{domxref("VideoFrame")}}, or an {{domxref("ImageBitmap")}}). `type` is a string indicating how to use the image.
+  - : Creates and returns a new canvas pattern object. `image` is the source of the image (that is, an {{domxref("HTMLImageElement")}}, a {{domxref("SVGImageElement")}}, another {{domxref("HTMLCanvasElement")}} or a {{domxref("OffscreenCanvas")}}, an {{domxref("HTMLVideoElement")}} or a {{domxref("VideoFrame")}}, or an {{domxref("ImageBitmap")}}). `type` is a string indicating how to use the image.
 
 The type specifies how to use the image in order to create the pattern, and must be one of the following string values:
 

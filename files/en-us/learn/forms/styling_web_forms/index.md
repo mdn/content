@@ -32,7 +32,7 @@ In the previous few articles, we showed how to create web forms in HTML. Now, we
 
 ### History
 
-In 1995, [the HTML 2 specification](https://www.ietf.org/rfc/rfc1866.txt) introduced form controls (a.k.a. "form widgets", or "form elements"). But CSS wasn't released until late 1996, and wasn't supported by most browsers until years afterward; so, in the interim, browsers relied on the underlying operating system to render form widgets.
+In 1995, [the HTML 2 specification](https://datatracker.ietf.org/doc/html/rfc1866) introduced form controls (a.k.a. "form widgets", or "form elements"). But CSS wasn't released until late 1996, and wasn't supported by most browsers until years afterward; so, in the interim, browsers relied on the underlying operating system to render form widgets.
 
 Even with CSS available, browser vendors were reluctant at first to make form elements stylable, because users were so accustomed to the looks of their respective browsers. But things have changed, and forms widgets are now mostly stylable, with a few exceptions.
 
@@ -255,7 +255,7 @@ form {
 }
 ```
 
-Notice that we've used some [CSS Grid](/en-US/docs/Web/CSS/CSS_grid_layout) and [Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) to lay out the form. Using this we can easily position our elements, including the title and all the form elements:
+Notice that we've used some [CSS grid](/en-US/docs/Web/CSS/CSS_grid_layout) and [Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) to lay out the form. Using this we can easily position our elements, including the title and all the form elements:
 
 ```css
 h1 {

@@ -18,7 +18,7 @@ Pointer lock lets you access mouse events even when the cursor goes past the bou
 
 ## Basic concepts
 
-Pointer lock is related to [mouse capture](/en-US/docs/Web/API/Element/setCapture). Mouse capture provides continued delivery of events to a target element while a mouse is being dragged, but it stops when the mouse button is released. Pointer lock is different from mouse capture in the following ways:
+Pointer lock is related to [pointer capture](/en-US/docs/Web/API/Pointer_events#pointer_capture). Pointer capture provides continued delivery of events to a target element while a mouse is being dragged, but it stops when the mouse button is released. Pointer lock is different from pointer capture in the following ways:
 
 - It is persistent: Pointer lock does not release the mouse until an explicit API call is made or the user uses a specific release gesture.
 - It is not limited by browser or screen boundaries.
@@ -196,7 +196,7 @@ function lockChangeAlert() {
 }
 ```
 
-The `updatePosition()` function updates the position of the ball on the canvas (`x` and `y`), and also includes `if ()` statements to check whether the ball has gone off the edges of the canvas. If so, it makes the ball wrap around to the opposite edge. It also includes a check whether a [`requestAnimationFrame()`](/en-US/docs/Web/API/window/requestAnimationFrame) call has previously been made, and if so, calls it again as required, and calls the `canvasDraw()` function that updates the canvas scene. A tracker is also set up to write out the X and Y values to the screen, for reference.
+The `updatePosition()` function updates the position of the ball on the canvas (`x` and `y`), and also includes `if ()` statements to check whether the ball has gone off the edges of the canvas. If so, it makes the ball wrap around to the opposite edge. It also includes a check whether a [`requestAnimationFrame()`](/en-US/docs/Web/API/Window/requestAnimationFrame) call has previously been made, and if so, calls it again as required, and calls the `canvasDraw()` function that updates the canvas scene. A tracker is also set up to write out the X and Y values to the screen, for reference.
 
 ```js
 const tracker = document.getElementById("tracker");

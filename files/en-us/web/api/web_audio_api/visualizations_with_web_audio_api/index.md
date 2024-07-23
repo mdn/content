@@ -46,7 +46,7 @@ const bufferLength = analyser.frequencyBinCount;
 const dataArray = new Uint8Array(bufferLength);
 ```
 
-To actually retrieve the data and copy it into our array, we then call the data collection method we want, with the array passed as it's argument. For example:
+To actually retrieve the data and copy it into our array, we then call the data collection method we want, with the array passed as its argument. For example:
 
 ```js
 analyser.getByteTimeDomainData(dataArray);

@@ -30,7 +30,7 @@ new DecompressionStream(format)
     - `"deflate-raw"`
       - : Decompress the stream using the [DEFLATE](https://www.rfc-editor.org/rfc/rfc1951) algorithm without a header and trailing checksum.
 
-## Exceptions
+### Exceptions
 
 - {{jsxref("TypeError")}}
   - : Thrown if the format passed to the constructor is not supported.

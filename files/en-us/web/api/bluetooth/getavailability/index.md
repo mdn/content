@@ -35,7 +35,7 @@ A {{JSxRef("Promise")}} that resolves with a {{JSxRef("Boolean")}}.
 The {{JSxRef("Promise")}} will resolve with a value of `false` if access is disallowed by [`Permissions-Policy: bluetooth`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/bluetooth), if the user has configured the browser to always resolve with `false`, or if the device does not have a Bluetooth adapter.
 Otherwise it will resolve with `true`.
 
-## Exceptions
+### Exceptions
 
 None.
 

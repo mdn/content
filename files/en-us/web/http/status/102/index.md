@@ -23,6 +23,10 @@ This status code is only sent if the server expects the request to take signific
 
 {{Specifications}}
 
+## Browser compatibility
+
+This feature is deprecated and browsers will ignore this response header.
+
 ## See also
 
 - {{HTTPHeader("Expect")}}
