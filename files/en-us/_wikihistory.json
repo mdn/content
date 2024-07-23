@@ -100101,10 +100101,6 @@
     "modified": "2020-10-15T22:10:28.577Z",
     "contributors": ["bershanskiy", "Sheppy", "fscholz"]
   },
-  "Web/HTTP/Headers/Permissions-Policy/battery": {
-    "modified": "2020-10-15T22:24:54.886Z",
-    "contributors": ["mfuji09", "Malvoz", "bershanskiy"]
-  },
   "Web/HTTP/Headers/Permissions-Policy/camera": {
     "modified": "2020-10-15T22:10:24.420Z",
     "contributors": ["bershanskiy", "Sheppy", "fscholz"]

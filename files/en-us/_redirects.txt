@@ -12317,7 +12317,6 @@
 /en-US/docs/Web/HTTP/Headers/Feature-Policy/accelerometer	/en-US/docs/Web/HTTP/Headers/Permissions-Policy/accelerometer
 /en-US/docs/Web/HTTP/Headers/Feature-Policy/ambient-light-sensor	/en-US/docs/Web/HTTP/Headers/Permissions-Policy/ambient-light-sensor
 /en-US/docs/Web/HTTP/Headers/Feature-Policy/autoplay	/en-US/docs/Web/HTTP/Headers/Permissions-Policy/autoplay
-/en-US/docs/Web/HTTP/Headers/Feature-Policy/battery	/en-US/docs/Web/HTTP/Headers/Permissions-Policy/battery
 /en-US/docs/Web/HTTP/Headers/Feature-Policy/camera	/en-US/docs/Web/HTTP/Headers/Permissions-Policy/camera
 /en-US/docs/Web/HTTP/Headers/Feature-Policy/display-capture	/en-US/docs/Web/HTTP/Headers/Permissions-Policy/display-capture
 /en-US/docs/Web/HTTP/Headers/Feature-Policy/document-domain	/en-US/docs/Web/HTTP/Headers/Permissions-Policy/document-domain
