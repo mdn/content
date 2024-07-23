@@ -1408,7 +1408,7 @@ Firefox uses the following heuristics to determine the locale to validate the us
   </tbody>
 </table>
 
-## Accessibility concerns
+## Accessibility
 
 ### Labels
 
