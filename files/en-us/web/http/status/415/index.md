@@ -7,8 +7,7 @@ spec-urls: https://httpwg.org/specs/rfc9110.html#status.415
 
 {{HTTPSidebar}}
 
-The HTTP **`415 Unsupported Media Type`** status response code indicates that the server refused to accept the request because the payload format is not supported.
-It is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses).
+The HTTP **`415 Unsupported Media Type`** [client error response](/en-US/docs/Web/HTTP/Status#client_error_responses) status code indicates that the server refused to accept the request because the payload format is not supported.
 
 The format problem might be due to the request's indicated {{HTTPHeader("Content-Type")}} or {{HTTPHeader("Content-Encoding")}}, or as a result of processing the request payload.
 Some servers may be strict about the expected `Content-Type` of requests.
@@ -32,7 +31,7 @@ Host: example.com
 Content-Length: 23
 
 {
-  "user": "brian",
+  "user": "belgin",
   "comment": "LGTM!"
 }
 ```

@@ -7,8 +7,7 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.409
 
 {{HTTPSidebar}}
 
-The HTTP **`409 Conflict`** status response code indicates a request conflict with the current state of the target resource.
-It is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses).
+The HTTP **`409 Conflict`** [client error response](/en-US/docs/Web/HTTP/Status#client_error_responses) status code indicates a request conflict with the current state of the target resource.
 
 In {{glossary("WebDAV")}} remote web authoring, 409 conflict responses are errors sent to the client so that a user might be able to resolve a conflict and resubmit the request.
 For example, conflicts occur if a request to create collection `/a/b/c/d/` is made, and `/a/b/c/` does not exist, the request must fail with a 409.

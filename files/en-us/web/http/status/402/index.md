@@ -7,8 +7,7 @@ spec-urls: https://httpwg.org/specs/rfc9110.html#status.402
 
 {{HTTPSidebar}}
 
-The HTTP **`402 Payment Required`** status response code is a **nonstandard** response status code reserved for future use.
-It is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses).
+The HTTP **`402 Payment Required`** [client error response](/en-US/docs/Web/HTTP/Status#client_error_responses) status code is a **nonstandard** response status code reserved for future use.
 
 This status code was created to enable digital cash or (micro) payment systems and would indicate that requested content is not available until the client makes a payment.
 No standard use convention exists and different systems use it in different contexts.

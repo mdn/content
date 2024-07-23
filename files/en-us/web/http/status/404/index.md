@@ -7,12 +7,11 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.404
 
 {{HTTPSidebar}}
 
-The HTTP **`404 Not Found`** status response code indicates that the server cannot find the requested resource.
-It is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses).
+The HTTP **`404 Not Found`** [client error response](/en-US/docs/Web/HTTP/Status#client_error_responses) status code indicates that the server cannot find the requested resource.
 Links that lead to a 404 page are often called broken or dead links and can be subject to [link rot](https://en.wikipedia.org/wiki/Link_rot).
 
 A 404 status code only indicates that the resource is missing without indicating if this is temporary or permanent.
-If a resource is permanently removed, servers should send the {{HTTPStatus("410")}} (`Gone`) status instead.
+If a resource is permanently removed, servers should send the {{HTTPStatus("410", "410 Gone")}} status instead.
 
 404 errors on a website can lead to a poor user experience for your visitors, so the number of broken links (internal and external) should be minimized to prevent frustration for readers.
 Common causes of 404 responses are mistyped URLs or pages that are moved or deleted without redirection.

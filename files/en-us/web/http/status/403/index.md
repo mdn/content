@@ -7,9 +7,7 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.403
 
 {{HTTPSidebar}}
 
-The HTTP **`403 Forbidden`** status response code indicates that the server understood the request but refused to process it.
-It is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses).
-
+The HTTP **`403 Forbidden`** [client error response](/en-US/docs/Web/HTTP/Status#client_error_responses) status code indicates that the server understood the request but refused to process it.
 This status is similar to {{HTTPStatus("401")}}, except that for **`403 Forbidden`** responses, authenticating or re-authenticating makes no difference.
 The request failure is tied to application logic, such as insufficient permissions to a resource or action.
 

@@ -7,11 +7,10 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc6585#section-3
 
 {{HTTPSidebar}}
 
-The HTTP **`428 Precondition Required`** status response code indicates that the server requires the request to be [conditional](/en-US/docs/Web/HTTP/Conditional_requests).
-It is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses).
+The HTTP **`428 Precondition Required`** [client error response](/en-US/docs/Web/HTTP/Status#client_error_responses) status code indicates that the server requires the request to be [conditional](/en-US/docs/Web/HTTP/Conditional_requests).
 
 Typically, a 428 response means that a required precondition header such as {{HTTPHeader("If-Match")}} **is missing**.
-When a precondition header is **not matching** the server side state, the response should be {{HTTPStatus(412)}} `Precondition Failed`.
+When a precondition header is **not matching** the server side state, the response should be {{HTTPStatus("412", "412 Precondition Failed")}}.
 
 ## Status
 

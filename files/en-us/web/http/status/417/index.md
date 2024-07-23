@@ -7,9 +7,7 @@ spec-urls: https://httpwg.org/specs/rfc9110.html#status.417
 
 {{HTTPSidebar}}
 
-The HTTP **`417 Expectation Failed`** status response code indicates that the expectation given in the request's {{HTTPHeader("Expect")}} header could not be met.
-It is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses).
-
+The HTTP **`417 Expectation Failed`** [client error response](/en-US/docs/Web/HTTP/Status#client_error_responses) status code indicates that the expectation given in the request's {{HTTPHeader("Expect")}} header could not be met.
 After receiving a 417 response, a client should repeat the request without an `Expect` request header, including the file as a payload in the request body without waiting for a {{HTTPStatus("100")}} response.
 See the {{HTTPHeader("Expect")}} header documentation for more details.
 
@@ -59,4 +57,5 @@ Content-Length: 1234567890987
 ## See also
 
 - [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
+- {{HTTPStatus("100", "100 Continue")}}
 - {{HTTPHeader("Expect")}}

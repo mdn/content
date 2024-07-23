@@ -7,11 +7,10 @@ spec-urls: https://httpwg.org/specs/rfc9110.html#status.408
 
 {{HTTPSidebar}}
 
-The HTTP **`408 Request Timeout`** status response code indicates that the server would like to shut down this unused connection.
-It is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses).
+The HTTP **`408 Request Timeout`** [client error response](/en-US/docs/Web/HTTP/Status#client_error_responses) status code indicates that the server would like to shut down this unused connection.
 A `408` is sent on an idle connection by some servers, _even without any previous request by the client_.
 
-A server should send the "close" {{HTTPHeader("Connection")}} header field in the response, since `408` implies that the server has decided to close the connection rather than continue waiting.
+A server should send the {{HTTPHeader("Connection", "Connection: close")}} header field in the response, since `408` implies that the server has decided to close the connection rather than continue waiting.
 
 This response is used much more since some browsers, like Chrome and Firefox, use HTTP pre-connection mechanisms to speed up surfing.
 

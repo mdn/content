@@ -7,9 +7,7 @@ spec-urls: https://httpwg.org/specs/rfc9110.html#status.405
 
 {{HTTPSidebar}}
 
-The HTTP **`405 Method Not Allowed`** status response code indicates that the server knows the request method, but the target resource doesn't support this method.
-It is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses).
-
+The HTTP **`405 Method Not Allowed`** [client error response](/en-US/docs/Web/HTTP/Status#client_error_responses) status code indicates that the server knows the request method, but the target resource doesn't support this method.
 The server **must** generate an {{HTTPHeader("Allow")}} header in a 405 response with a list of methods that the target resource currently supports.
 
 Improper server-side permissions set on files or directories may cause a 405 response when the request would otherwise be expected to succeed.
@@ -48,6 +46,7 @@ Allow: GET, POST, HEAD
 
 - [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
 - {{HTTPHeader("Allow")}}
+- {{HTTPStatus("501", "501 Not Implemented")}}, {{HTTPStatus("510", "510 Not Extended")}}
 - [HTTP Status Code Definitions](https://httpwg.org/specs/rfc9110.html#status.405)
 - [How to Fix 405 Method Not Allowed](https://kinsta.com/blog/405-method-not-allowed-error/)
 - [Troubleshooting HTTP 405](https://docs.microsoft.com/aspnet/web-api/overview/testing-and-debugging/troubleshooting-http-405-errors-after-publishing-web-api-applications)

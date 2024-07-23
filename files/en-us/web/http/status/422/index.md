@@ -7,8 +7,7 @@ spec-urls: https://httpwg.org/specs/rfc9110.html#status.422
 
 {{HTTPSidebar}}
 
-The HTTP **`422 Unprocessable Content`** status response code indicates that the server understood the content type of the request entity, and the syntax of the request entity was correct, but it was unable to process the contained instructions.
-It is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses).
+The HTTP **`422 Unprocessable Content`** [client error response](/en-US/docs/Web/HTTP/Status#client_error_responses) status code indicates that the server understood the content type of the request entity, and the syntax of the request entity was correct, but it was unable to process the contained instructions.
 
 Clients that receive a `422` response should expect that repeating the request without modification will fail with the same error.
 

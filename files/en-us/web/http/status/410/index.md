@@ -7,11 +7,10 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.410
 
 {{HTTPSidebar}}
 
-The HTTP **`410 Gone`** status response code indicates that the target resource is no longer available at the origin server and that this condition is likely to be permanent.
-It is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses).
+The HTTP **`410 Gone`** [client error response](/en-US/docs/Web/HTTP/Status#client_error_responses) status code indicates that the target resource is no longer available at the origin server and that this condition is likely to be permanent.
 A 410 response is cacheable by default.
 
-Clients should not repeat requests for resources that return a 401 response, and website owners should remove or replace links that return this code.
+Clients should not repeat requests for resources that return a 410 response, and website owners should remove or replace links that return this code.
 If server owners don't know whether this condition is temporary or permanent, a {{HTTPStatus(404)}} status code should be used instead.
 
 ## Status

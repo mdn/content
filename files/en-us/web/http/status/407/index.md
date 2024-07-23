@@ -7,8 +7,7 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.407
 
 {{HTTPSidebar}}
 
-The HTTP **`407 Proxy Authentication Required`** status response code indicates that the request did not succeed because it lacks valid authentication credentials for a {{Glossary("proxy server")}} that is between the client and the server that can access the requested resource.
-It is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses).
+The HTTP **`407 Proxy Authentication Required`** [client error response](/en-US/docs/Web/HTTP/Status#client_error_responses) status code indicates that the request did not succeed because it lacks valid authentication credentials for a {{Glossary("proxy server")}} that sits between the client and the server with access to the requested resource.
 
 This response is sent with a {{HTTPHeader("Proxy-Authenticate")}} header that contains information on how to authorize correctly.
 The client may repeat the request with a new or replaced {{HTTPHeader("Proxy-Authorization")}} header field.

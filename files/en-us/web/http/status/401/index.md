@@ -7,9 +7,7 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.401
 
 {{HTTPSidebar}}
 
-The HTTP **`401 Unauthorized`** status response code indicates that a request was not successful because it lacks valid authentication credentials for the requested resource.
-It is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses).
-
+The HTTP **`401 Unauthorized`** [client error response](/en-US/docs/Web/HTTP/Status#client_error_responses) status code indicates that a request was not successful because it lacks valid authentication credentials for the requested resource.
 This status code is sent with an HTTP {{HTTPHeader("WWW-Authenticate")}} response header that contains information on the [authentication scheme](/en-US/docs/Web/HTTP/Authentication#authentication_schemes) the server expects the client to include to make the request successfully.
 
 A `401 Unauthorized` is similar to the {{HTTPStatus("403", "403 Forbidden")}} response, except that a 403 is returned when a request contains valid credentials, but the client does not have permissions to perform a certain action.

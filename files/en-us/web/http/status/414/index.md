@@ -7,10 +7,9 @@ spec-urls: https://httpwg.org/specs/rfc9110.html#status.414
 
 {{HTTPSidebar}}
 
-The HTTP **`414 URI Too Long`** status response code indicates that a URI requested by the client was longer than the server is willing to interpret.
-It is part of the `400`-`499` class of [client error responses](/en-US/docs/Web/HTTP/Status#client_error_responses).
+The HTTP **`414 URI Too Long`** [client error response](/en-US/docs/Web/HTTP/Status#client_error_responses) status code indicates that a URI requested by the client was longer than the server is willing to interpret.
 
-There are a few rare conditions when this might occur:
+There are a few rare conditions when this error might occur:
 
 - a client has improperly converted a {{HTTPMethod("POST")}} request to a {{HTTPMethod("GET")}} request with long query information,
 - a client has descended into a loop of redirection (for example, a redirected URI prefix that points to a suffix of itself), or
