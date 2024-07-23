@@ -59,7 +59,7 @@ When set on a file input type, the native file picker that opens up should only 
 
 {{EmbedLiveSample('Examples', '100%', 200)}}
 
-Note the last example allows you to select multiple images. See the [`multiple`](multiple) attribute for more information.
+Note the last example allows you to select multiple images. See the [`multiple`](/en-US/docs/Web/HTML/Element/input#multiple) attribute for more information.
 
 ## Unique file type specifiers
 
@@ -107,7 +107,7 @@ This produces the following output:
 
 Regardless of the user's device or operating system, the file input provides a button that opens up a file picker dialog that allows the user to choose a file.
 
-Including the [`multiple`](multiple) attribute, as shown above, specifies that multiple files can be chosen at once. The user can choose multiple files from the file picker in any way that their chosen platform allows (e.g. by holding down <kbd>Shift</kbd> or <kbd>Control</kbd>, and then clicking). If you only want the user to choose a single file per `<input>`, omit the `multiple` attribute.
+Including the [`multiple`](/en-US/docs/Web/HTML/Element/input#multiple) attribute, as shown above, specifies that multiple files can be chosen at once. The user can choose multiple files from the file picker in any way that their chosen platform allows (e.g. by holding down <kbd>Shift</kbd> or <kbd>Control</kbd>, and then clicking). If you only want the user to choose a single file per `<input>`, omit the `multiple` attribute.
 
 ### Limiting accepted file types
 

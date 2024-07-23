@@ -296,7 +296,7 @@ The palpable elements are:
 - {{HtmlElement("main")}}
 - {{HtmlElement("map")}}
 - {{HtmlElement("mark")}}
-- {{MathMLElement("math")}} from [MathML](/en-us/doc/Web/MathML)
+- {{MathMLElement("math")}} from [MathML](/en-US/docs/Web/MathML)
 - {{HtmlElement("meter")}}
 - {{HtmlElement("nav")}}
 - {{HtmlElement("object")}}
