@@ -219,14 +219,14 @@ Uploading files to a web server is a very important step while creating a websit
         <ul>
           <li>
             <a
-              href="https://wiki.gnome.org/action/show/Apps/Files?action=show&#x26;redirect=Apps%2FNautilus"
+              href="https://apps.gnome.org/Nautilus/"
               rel="external"
               >Nautilus/Files</a
             >
             (Gnome)
           </li>
           <li>
-            <a href="https://dolphin.com/" rel="external">Dolphin</a> (KDE)
+            <a href="https://apps.kde.org/dolphin/" rel="external">Dolphin</a> (KDE)
           </li>
         </ul>
       </td>
