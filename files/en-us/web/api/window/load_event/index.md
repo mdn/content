@@ -49,6 +49,8 @@ window.onload = (event) => {
 };
 ```
 
+> **Note:** `window.onload` is able to be overwritten by other sources (potentially a race condition). To attach more than one listener to the `Window` and prevent listeners from being inadvertently overwritten, prefer using `addEventListener`.
+
 ### Live example
 
 #### HTML
