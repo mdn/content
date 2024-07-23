@@ -63,7 +63,7 @@ There are a few properties that affect an outline's appearance. It is possible t
 
 An outline is not required to be rectangular: While dealing with multiline text, some browsers will draw an outline for each line box separately, while others will wrap the whole text with a single outline.
 
-## Accessibility concerns
+## Accessibility
 
 Assigning `outline` a value of `0` or `none` will remove the browser's default focus style. If an element can be interacted with it must have a visible focus indicator. Provide obvious focus styling if the default focus style is removed.
 

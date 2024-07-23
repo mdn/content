@@ -49,7 +49,7 @@ To specify multiple background images, supply multiple values, separated by a co
 - `<image>`
   - : Is an {{cssxref("&lt;image&gt;")}} denoting the image to display. There can be several of them, separated by commas, as [multiple backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds) are supported.
 
-## Accessibility concerns
+## Accessibility
 
 Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.
 

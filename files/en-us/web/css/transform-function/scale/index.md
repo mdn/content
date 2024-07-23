@@ -81,7 +81,7 @@ scale(sx, sy)
   </tbody>
 </table>
 
-## Accessibility concerns
+## Accessibility
 
 Scaling/zooming animations are problematic for accessibility, as they are a common trigger for certain types of
 migraine. If you need to include such animations on your website, you should provide a control to allow users to turn
