@@ -65,15 +65,18 @@ function reportDisplays() {
       const cap = display.capabilities;
       // cap is a VRDisplayCapabilities object
       const listItem = document.createElement("li");
-      listItem.innerHTML =
-        `<strong>Display ${i + 1}</strong><br>` +
-        `VR Display ID: ${display.displayId}<br>` +
-        `VR Display Name: ${display.displayName}<br>` +
-        `Display can present content: ${cap.canPresent}<br>` +
-        `Display is separate from the computer's main display: ${cap.hasExternalDisplay}<br>` +
-        `Display can return position info: ${cap.hasPosition}<br>` +
-        `Display can return orientation info: ${cap.hasOrientation}<br>` +
-        `Display max layers: ${cap.maxLayers}`;
+      listItem.innerText = `
+VR Display ID: ${display.displayId}
+VR Display Name: ${display.displayName}
+Display can present content: ${cap.canPresent}
+Display is separate from the computer's main display: ${cap.hasExternalDisplay}
+Display can return position info: ${cap.hasPosition}
+Display can return orientation info: ${cap.hasOrientation}
+Display max layers: ${cap.maxLayers}`;
+      listItem.insertBefore(
+        document.createElement("strong"),
+        listItem.firstChild,
+      ).textContent = `Display ${i + 1}`;
       list.appendChild(listItem);
     });
 
@@ -98,13 +101,17 @@ function reportGamepads() {
   for (const gp of gamepads) {
     const listItem = document.createElement("li");
     listItem.classList = "gamepad";
-    listItem.innerHTML =
-      `<strong>Gamepad ${gp.index}</strong> (${gp.id})<br>` +
-      `Associated with VR Display ID: ${gp.displayId}<br>` +
-      `Gamepad associated with which hand: ${gp.hand}<br>` +
-      `Available haptic actuators: ${gp.hapticActuators.length}<br>` +
-      `Gamepad can return position info: ${gp.pose.hasPosition}<br>` +
-      `Gamepad can return orientation info: ${gp.pose.hasOrientation}`;
+    listItem.innerText = `
+Associated with VR Display ID: ${gp.displayId}
+Gamepad associated with which hand: ${gp.hand}
+Available haptic actuators: ${gp.hapticActuators.length}
+Gamepad can return position info: ${gp.pose.hasPosition}
+Gamepad can return orientation info: ${gp.pose.hasOrientation}`;
+    listItem.insertBefore(
+      document.createElement("strong"),
+      }),
+      listItem.firstChild,
+    ).textContent = `Gamepad ${gp.index}`;
     list.appendChild(listItem);
   }
   initialRun = false;

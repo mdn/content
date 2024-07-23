@@ -32,7 +32,7 @@ This might trigger, for example, pausing or unpausing playback.
 
 ## Interfaces
 
-### Extensions to interfaces
+### Extensions to other interfaces
 
 The Audio Output Devices API extends the following APIs, adding the listed features:
 

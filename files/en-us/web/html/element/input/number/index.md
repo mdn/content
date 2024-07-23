@@ -148,6 +148,8 @@ One issue with number inputs is that their step size is 1 by default. If you try
 
 See that this example allows any value between `0.0` and `10.0`, with decimals to two places. For example, "9.52" is valid, but "9.521" is not.
 
+If you want to allow arbitrary decimal values, you can set the `step` value to `"any"`.
+
 ### Controlling input size
 
 {{HTMLElement("input")}} elements of type `number` don't support form sizing attributes such as [`size`](/en-US/docs/Web/HTML/Element/input#size). You'll have to resort to [CSS](/en-US/docs/Web/CSS) to change the size of these controls.
