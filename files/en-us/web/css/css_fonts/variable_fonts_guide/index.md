@@ -168,7 +168,7 @@ p {
 @font-face {
   font-family: "SlantFont";
   font-style: oblique -15 15;
-  src: url("https://github.com/mdn/shared-assets/raw/d1fad181a5ea4a30503c3f6e48739c1bdf5ab722/fonts/font_with_slant_axis.woff2")
+  src: url("https://mdn.github.io/shared-assets/fonts/font_with_slant_axis.woff2")
     format("woff2");
 }
 
@@ -201,7 +201,7 @@ angle.addEventListener("input", (e) => {
 });
 ```
 
-{{EmbedLiveSample("slant", "100%", "300")}}
+{{EmbedLiveSample("slant", "100%", "350")}}
 
 ### Optical size
 
