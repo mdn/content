@@ -57,7 +57,7 @@ This example demonstrates the basic use case of `fill-opacity`, and how the CSS 
 
 #### HTML
 
-We include several diverent SVG graphic elements; setting each element's `fill-opacity` attribute to `1`, meaning the fill of each element is opaque, except for the {{SVGElement("line")}} element as the `fill-opacity` SVG attribute does not apply to `<line>`.
+We include several different SVG graphic elements; setting the `fill-opacity` attribute of each element (except `line`) to `1`, meaning the fill of each element is opaque. The `fill-opacity` SVG attribute does not apply to {{SVGElement("line")}}.
 
 ```html
 <svg viewbox="0 0 100 150" xmlns="http://www.w3.org/2000/svg">
@@ -65,13 +65,7 @@ We include several diverent SVG graphic elements; setting each element's `fill-o
   <rect x="60" y="10" rx="10" ry="10" width="30" height="30" fill-opacity="1" />
   <circle cx="25" cy="75" r="20" fill-opacity="1" />
   <ellipse cx="75" cy="75" rx="20" ry="10" fill-opacity="1" />
-  <line
-    x1="50"
-    x2="90"
-    y1="40"
-    y2="60"
-    stroke="black"
-    stroke-width="5" />
+  <line x1="50" x2="90" y1="40" y2="60" stroke="black" stroke-width="5" />
   <polyline
     points="60 90 65 100 70 95 75 110 80 105 85 120 90 115 95 130 100 125"
     fill-opacity="1" />
@@ -81,7 +75,7 @@ We include several diverent SVG graphic elements; setting each element's `fill-o
 
 #### CSS
 
-With CSS, we use the `fill-opacity` property to override the value of the SVG {{SVGAttr("fill-opacity")}} attribute, giving each SVG element a different value. The SVG styles, including a background image set to better enable perceiving the translucency of each element, are not shown for the sake of brevity.
+With CSS, we use the `fill-opacity` property to override the value of the SVG {{SVGAttr("fill-opacity")}} attribute, giving each SVG element a different value. We added a {{cssxref("stroke")}} to the circle and ellipse, demonstrating that the stroke is not impacted by the `fill-opacity` property. The SVG styles, including a background image set to better enable perceiving the translucency of each element, are not shown for the sake of brevity.
 
 ```css hidden
 svg {
@@ -116,6 +110,12 @@ polyline {
 }
 path {
   fill-opacity: 0.5;
+}
+
+circle,
+ellipse {
+  stroke: black;
+  stroke-width: 3px;
 }
 ```
 
