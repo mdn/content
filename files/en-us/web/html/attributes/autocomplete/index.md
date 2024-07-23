@@ -250,7 +250,7 @@ With {{htmlelement("input")}} and {{htmlelement("textarea")}}, the `webauthn` to
 </div>
 ```
 
-## Administrative levels in addresses
+### Administrative levels in addresses
 
 The four administrative level fields (`address-level1` through `address-level4`) describe the address in terms of increasing levels of precision within the country in which the address is located. Each country has its own system of administrative levels, and may arrange the levels in different orders when addresses are written.
 
