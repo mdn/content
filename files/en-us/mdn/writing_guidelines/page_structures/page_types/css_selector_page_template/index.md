@@ -92,6 +92,11 @@ The summary paragraph — start by naming the selector and saying what it does. 
 
 _To use this macro, remove the backticks and backslash in the markdown file._
 
+## Accessibility
+
+Warn of any potential accessibility concerns with using this selector and how to work around them.
+Remove this section if there is no list.
+
 ## Examples
 
 Note that we use the plural "Examples" even if the page only contains one example.
@@ -130,11 +135,6 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 >
 > For examples of this API, see [the page on fetch()](https://example.org).
 > ```
-
-## Accessibility concerns
-
-Optionally, warn of any potential accessibility concerns with using this selector and how to work around them.
-Remove this section if there is no list.
 
 ## Specifications
 

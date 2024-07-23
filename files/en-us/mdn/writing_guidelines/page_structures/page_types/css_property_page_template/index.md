@@ -125,6 +125,11 @@ _To use this macro, remove the backticks and backslash in the markdown file._
 
 _To use this macro, remove the backticks and backslash in the markdown file._
 
+## Accessibility
+
+Warn of any potential accessibility concerns with using this property and how to work around them.
+Remove this section if there is no list.
+
 ## Examples
 
 Note that we use the plural "Examples" even if the page only contains one example.
@@ -163,10 +168,6 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 >
 > For examples of this API, see [the page on fetch()](https://example.org).
 > ```
-
-## Accessibility concerns
-
-This is an optional section. You can include any warnings here for accessibility concerns that developers should be aware of while using this property. You can also include workarounds for these accessibility concerns if there are any.
 
 ## Specifications
 
