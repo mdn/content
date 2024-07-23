@@ -235,7 +235,7 @@ Uploading files to a web server is a very important step while creating a websit
       <td>Mac OS</td>
       <td>
         <ul>
-          <li><a href="https://cyberduck.de/">Cyberduck</a></li>
+          <li><a href="https://cyberduck.io/">Cyberduck</a></li>
         </ul>
       </td>
     </tr>
