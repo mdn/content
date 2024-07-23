@@ -7,8 +7,8 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc4918#section-11.1
 
 {{HTTPSidebar}}
 
-The HTTP **`207 Multi-Status`** status response code indicates a mixture of responses. This response is used exclusively in the context of Web Distributed Authoring and Versioning ({{Glossary("WebDAV")}}).
-It is part of the `200`-`299` class of [successful responses](/en-US/docs/Web/HTTP/Status#successful_responses).
+The HTTP **`207 Multi-Status`** [successful response](/en-US/docs/Web/HTTP/Status#successful_responses) status code indicates a mixture of responses.
+This response is used exclusively in the context of Web Distributed Authoring and Versioning ({{Glossary("WebDAV")}}).
 
 The response body is a `text/xml` or `application/xml` HTTP entity with a `multistatus` root element that lists individual response codes.
 

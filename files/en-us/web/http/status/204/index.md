@@ -7,9 +7,8 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.204
 
 {{HTTPSidebar}}
 
-The HTTP **`204 No Content`** status response code indicates that a request has succeeded, but the client doesn't need to navigate away from its current page.
+The HTTP **`204 No Content`** [successful response](/en-US/docs/Web/HTTP/Status#successful_responses) status code indicates that a request has succeeded, but the client doesn't need to navigate away from its current page.
 A `204` response is cacheable by default, and an {{HTTPHeader("ETag")}} header is included in such cases.
-It is part of the `200`-`299` class of [successful responses](/en-US/docs/Web/HTTP/Status#successful_responses).
 
 A `204 No Content` in response to these request methods has the following meaning and results:
 

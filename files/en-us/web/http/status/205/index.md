@@ -7,8 +7,7 @@ spec-urls: https://httpwg.org/specs/rfc9110.html#status.205
 
 {{HTTPSidebar}}
 
-The HTTP **`205 Reset Content`** status response code indicates that the request has been successfully processed and the client should reset the document view.
-It is part of the `200`-`299` class of [successful responses](/en-US/docs/Web/HTTP/Status#successful_responses).
+The HTTP **`205 Reset Content`** [successful response](/en-US/docs/Web/HTTP/Status#successful_responses) status code indicates that the request has been successfully processed and the client should reset the document view.
 
 This response is intended to support use cases where the user receives content that supports data entry, submits user-edited data in a request, and the content needs to be reset for the next entry.
 The instruction to "reset content" can mean clearing the contents of a form, resetting a canvas state, or refreshing a UI; the implementation depends on the client.

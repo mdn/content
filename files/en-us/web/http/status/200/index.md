@@ -7,11 +7,11 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.200
 
 {{HTTPSidebar}}
 
-The HTTP **`200 OK`** status response code indicates that a request has succeeded.
-It is part of the `200`-`299` class of [successful responses](/en-US/docs/Web/HTTP/Status#successful_responses).
+The HTTP **`200 OK`** [successful response](/en-US/docs/Web/HTTP/Status#successful_responses) status code indicates that a request has succeeded.
 A `200 OK` response is cacheable by default.
 
-A `200 OK` response has a different meaning and format depending on the HTTP request method. Here's how they vary for different methods:
+A `200 OK` response has a different meaning and format depending on the HTTP request method.
+Here's how they vary for different methods:
 
 - {{HTTPMethod("GET")}}: A resource was retrieved by the server and included in the response body.
 - {{HTTPMethod("POST")}}: An action succeeded; the response has a message body describing the result.
