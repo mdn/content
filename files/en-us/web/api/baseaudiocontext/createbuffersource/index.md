@@ -41,7 +41,7 @@ what is going on.
 > or [view the source](https://github.com/mdn/webaudio-examples/blob/main/audio-buffer/index.html).
 
 ```js
-const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const audioCtx = new AudioContext();
 const button = document.querySelector("button");
 const pre = document.querySelector("pre");
 const myScript = document.querySelector("script");

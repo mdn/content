@@ -403,7 +403,7 @@ Remote XUL is no longer supported; this affects XUL documents being served throu
 - New `TabPinned` and `TabUnpinned` events are available, allowing you to detect when tabs are pinned and unpinned.
 - The new `TabAttrModified` event is sent when a tab's `label`, `crop`, `busy`, `image`, or `selected` attributes change.
 - `<xul:tab>` elements now have a `pinned` attribute, letting you determine whether or not a tab is currently pinned.
-- The `setDirectionIndicator` class on `<xul:tree> elements hasn't done anything for some time now; now it's not used at all anymore.
+- The `setDirectionIndicator` class on `<xul:tree>` elements hasn't done anything for some time now; now it's not used at all anymore.
 - The `<xul:window>` element now has a `chromemargin` attribute that lets you set the margin between chrome and content on each side of a window; you can use this to draw into the title bar, for example.
 - The `<xul:window>` element now has a `disablechrome` attribute; this is used to hide most of the chrome in a window when it's being used to display in-browser UI, such as `about:addons`.
 - The `<xul:window>` element now has a `disablefastfind` attribute, which lets you disable the find bar in a window when the content doesn't support it. This is used, for example, by the add-ons panel.
