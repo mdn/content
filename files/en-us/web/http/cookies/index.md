@@ -157,7 +157,7 @@ The `Domain` and `Path` attributes define the _scope_ of a cookie: what URLs the
   If the `Set-Cookie` header does not specify a `Domain` attribute, the cookies are available on the server that sets it _but not on its subdomains_. Therefore, specifying `Domain` is less restrictive than omitting it.
   Note that a server can only set the `Domain` attribute to its own domain or a parent domain, not to a subdomain or some other domain.
   So, for example, a server with domain `foo.example.com` could set the attribute to `example.com` or `foo.example.com`, but not `bar.foo.example.com` or `elsewhere.com` (the cookies would still be _sent_ to subdomains such as `bar.foo.example.com` though).
-See [Invalid domains](/en-US/docs/Web/HTTP/Headers/Set-Cookie#invalid_domains) for more details.
+  See [Invalid domains](/en-US/docs/Web/HTTP/Headers/Set-Cookie#invalid_domains) for more details.
 
 - The `Path` attribute indicates a URL path that must exist in the requested URL in order to send the `Cookie` header. For example:
 
