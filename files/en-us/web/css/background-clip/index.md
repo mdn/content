@@ -45,7 +45,7 @@ background-clip: unset;
 - `text`
   - : The background is painted within (clipped to) the foreground text.
 
-## Accessibility concerns
+## Accessibility
 
 When using `background-clip: text`, check that the contrast ratio between the background color and the color of the text placed over it is high enough that people experiencing low vision conditions will be able to read the content of the page.
 

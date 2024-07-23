@@ -170,7 +170,7 @@ This demo loads with `font-weight: 500;` set. Change the value of the `font-weig
 
 {{EmbedGHLiveSample("css-examples/variable-fonts/font-weight.html", '100%', 860)}}
 
-## Accessibility concerns
+## Accessibility
 
 People experiencing low vision conditions may have difficulty reading text set with a `font-weight` value of `100` (Thin/Hairline) or `200` (Extra Light), especially if the font has a [low contrast color ratio](/en-US/docs/Web/CSS/color#accessibility_concerns).
 

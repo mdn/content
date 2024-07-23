@@ -63,7 +63,7 @@ The `border-image` property may be specified with anywhere from one to five of t
 - `<'border-image-repeat'>`
   - : Defines how the edge regions of the source image are adjusted to fit the dimensions of the border image. Up to two values may be specified. See {{cssxref("border-image-repeat")}}.
 
-## Accessibility concerns
+## Accessibility
 
 Assistive technology cannot parse border images. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.
 

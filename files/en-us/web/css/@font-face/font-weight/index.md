@@ -63,7 +63,7 @@ Most fonts have a particular weight which corresponds to one of the numbers in [
 
 For TrueType or OpenType variable fonts, the "wght" variation is used to implement varying weights.
 
-## Accessibility concerns
+## Accessibility
 
 People experiencing low vision conditions may have difficulty reading text set with a `font-weight` value of `100` (Thin/Hairline) or `200` (Extra Light), especially if the font has a [low contrast color ratio](/en-US/docs/Web/CSS/color#accessibility_concerns).
 

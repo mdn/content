@@ -107,7 +107,7 @@ Most fonts have a particular width which corresponds to one of the keyterm value
 
 For TrueType or OpenType variable fonts, the "wdth" variation is used to implement varying glyph widths.
 
-## Accessibility concerns
+## Accessibility
 
 People with dyslexia and other cognitive conditions may have difficulty reading fonts that are too condensed, especially if the font has a [low contrast color ratio](/en-US/docs/Web/CSS/color#accessibility_concerns).
 
