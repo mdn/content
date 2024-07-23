@@ -175,7 +175,7 @@ Note that JavaScript is [single-threaded](/en-US/docs/Glossary/Thread) by nature
 
 ## Static properties
 
-- {{jsxref("Promise/@@species", "Promise[@@species]")}}
+- [`Promise[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Symbol.species)
   - : Returns the constructor used to construct return values from promise methods.
 
 ## Static methods
@@ -192,6 +192,8 @@ Note that JavaScript is [single-threaded](/en-US/docs/Glossary/Thread) by nature
   - : Returns a new `Promise` object that is rejected with the given reason.
 - {{jsxref("Promise.resolve()")}}
   - : Returns a `Promise` object that is resolved with the given value. If the value is a thenable (i.e. has a `then` method), the returned promise will "follow" that thenable, adopting its eventual state; otherwise, the returned promise will be fulfilled with the value.
+- {{jsxref("Promise.try()")}}
+  - : Takes a callback of any kind (returns or throws, synchronously or asynchronously) and wraps its result in a `Promise`.
 - {{jsxref("Promise.withResolvers()")}}
   - : Returns an object containing a new `Promise` object and two functions to resolve or reject it, corresponding to the two parameters passed to the executor of the {{jsxref("Promise/Promise", "Promise()")}} constructor.
 
@@ -201,8 +203,8 @@ These properties are defined on `Promise.prototype` and shared by all `Promise` 
 
 - {{jsxref("Object/constructor", "Promise.prototype.constructor")}}
   - : The constructor function that created the instance object. For `Promise` instances, the initial value is the {{jsxref("Promise/Promise", "Promise")}} constructor.
-- `Promise.prototype[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Promise"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+- `Promise.prototype[Symbol.toStringTag]`
+  - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Promise"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 

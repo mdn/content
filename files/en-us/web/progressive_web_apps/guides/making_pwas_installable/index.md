@@ -22,7 +22,7 @@ We'll discuss each of these features in this guide. First, though, we'll discuss
 For a web app to be promoted for installation by a supporting browser, it needs to meet some technical requirements. We can consider these the minimum requirements for a web app to be a PWA.
 
 > **Note:** While not a requirement for a PWA to be installable, many PWAs use [service workers](/en-US/docs/Web/API/Service_Worker_API) to provide an offline experience.
-> See the [CycleTracker: Service workers](en-us/web/progressive_web_apps/tutorials/cycletracker/service_workers/index.md) tutorial for more information.
+> See the [CycleTracker: Service workers](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers) tutorial for more information.
 
 ### The web app manifest
 
@@ -110,8 +110,8 @@ Support for PWA installation promotion from the web varies by browser and by pla
 
 On desktop:
 
-- Firefox and Safari do not support installing PWAs on any desktop operating systems. See [Installing sites as apps](#installing_sites_as_apps), below.
-- Chrome and Edge support installing PWAs on Linux, Windows, macOS, and Chromebooks.
+- Chromium browsers support installing PWAs that have a manifest file on all supported desktop operating systems.
+- Firefox and Safari do not support installing PWAs using a manifest file.
 
 On mobile:
 
@@ -121,7 +121,8 @@ On mobile:
 
 ### Installing sites as apps
 
-Safari for desktop and mobile, and Edge for desktop also support installing any website as an app. However, this is not specific to PWA because the site doesn't need to meet the installability criteria described in this guide, and because the browser doesn't proactively promote the site for installation.
+Chrome for desktop and Android, Safari for desktop, and Edge for desktop also support users installing any website as an app, whether or not it has a manifest file, and without regard to the installability criteria for the manifest file.
+The benefit of using a manifest file is that the browser will actively promote the site for installation when it is visited, and developers can customize installation behavior.
 
 ### Triggering the install prompt
 

@@ -6,6 +6,7 @@ browser-compat:
   - html.elements.link.rel
   - html.elements.a.rel
   - html.elements.area.rel
+  - html.elements.form.rel
 ---
 
 {{HTMLSidebar}}
@@ -123,7 +124,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
   - : Relevant to {{htmlelement('form')}}, {{htmlelement('a')}}, and {{htmlelement('area')}}, it indicates the referenced document is not part of the current site. This can be used with attribute selectors to style external links in a way that indicates to the user that they will be leaving the current site.
 - `expect` {{experimental_inline}}
 
-  - : Allows the page to be [render-blocked](/en-US/docs/Glossary/Render_blocking) until the essential parts of the document are parsed so it will render consistently. Note that render-blocking occurs only when supplemented with the [`blocking="render"`](#blocking) attribute.
+  - : Allows the page to be [render-blocked](/en-US/docs/Glossary/Render_blocking) until the essential parts of the document are parsed so it will render consistently. Note that render-blocking occurs only when supplemented with the [`blocking="render"`](/en-US/docs/Web/HTML/Element/link#blocking) attribute.
 
     > **Note:** See [Stabilizing page state to make cross-document transitions consistent](/en-US/docs/Web/API/View_Transitions_API/Using#stabilizing_page_state_to_make_cross-document_transitions_consistent) for more information on its use.
 
@@ -158,7 +159,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
 
     > **Note:** Although recognized, the synonym `copyright` is incorrect and must be avoided.
 
-- `manifest` {{Experimental_Inline}}
+- `manifest`
   - : [Web app manifest](/en-US/docs/Web/Manifest). Requires the use of the CORS protocol for cross-origin fetching.
 - `modulepreload`
   - : Useful for improved performance, and relevant to the {{htmlelement('link')}} anywhere in the document, setting `rel="modulepreload"` tells the browser to preemptively fetch the script (and dependencies) and store it in the document's module map for later evaluation. `modulepreload` links can ensure network fetching is done with the module ready (but not evaluated) in the module map before it is necessarily needed. See also [`modulepreload`](/en-US/docs/Web/HTML/Attributes/rel/modulepreload).
@@ -205,7 +206,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
 
 - `stylesheet`
 
-  - : Valid for the {{htmlelement('link')}} element, it imports an external resource to be used as a stylesheet. The [`type`](/en-US/docs/Web/HTML/Element/link#type) attribute is not needed as it's a `text/css` stylesheet, as that is the default value. If it's not a stylesheet of type `text/css` it is best to declare the type.
+  - : Valid for the {{htmlelement('link')}} element, it imports an external resource to be used as a stylesheet. The [`type`](/en-US/docs/Web/HTML/Element/link#type) attribute is not needed if it's a `text/css` stylesheet, as that is the default value. If it's not a stylesheet of type `text/css` it is best to declare the type.
 
     While this attribute defines the link as being a stylesheet, the interaction with other attributes and other key terms within the rel value impact whether the stylesheet is downloaded and/or used.
 
@@ -225,7 +226,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
 
 ### Non-standard values
 
-- `apple-touch-icon`
+- [`apple-touch-icon`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4)
   - : Specifies the icon for a web application on an iOS device.
 
 ## Specifications

@@ -112,14 +112,6 @@ You can specify
 
   - : Controls whether the current document is allowed to use the [Encrypted Media Extensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API) (EME). When this policy is disabled, the {{jsxref("Promise")}} returned by {{domxref("Navigator.requestMediaKeySystemAccess()")}} will reject with a `SecurityError` {{domxref("DOMException")}}.
 
-- {{httpheader('Permissions-Policy/execution-while-not-rendered', 'execution-while-not-rendered')}} {{Experimental_Inline}}
-
-  - : Controls whether tasks should execute in frames while they're not being rendered (e.g. if an iframe is [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hidden) or has `display: none` set).
-
-- {{httpheader('Permissions-Policy/execution-while-out-of-viewport', 'execution-while-out-of-viewport')}} {{Experimental_Inline}}
-
-  - : Controls whether tasks should execute in frames while they're outside of the visible viewport.
-
 - {{httpheader('Permissions-Policy/fullscreen','fullscreen')}}
 
   - : Controls whether the current document is allowed to use {{DOMxRef("Element.requestFullscreen()")}}. When this policy is disabled, the returned {{JSxRef("Promise")}} rejects with a {{JSxRef("TypeError")}}.

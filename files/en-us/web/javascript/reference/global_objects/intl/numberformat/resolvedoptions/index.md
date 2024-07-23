@@ -45,7 +45,7 @@ The resulting object has the following properties:
     This is the value provided in the [`options.currencySign`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#currencysign) argument of the constructor, or the default value: `"standard"`.
 - `locale`
   - : The BCP 47 language tag for the locale that was actually used.
-    The key-value pairs that were requested in the constructor [`locale`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#local) and are supported for this locale are included.
+    Matches one of the locales that were requested in the constructor [`locales`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#locales).
 - `notation`
   - : The formatting that should be applied to the number, such as `standard` or `engineering`.
     This is the value provided in the [`options.notation`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#notation) argument of the constructor, or the default value: `"standard"`.

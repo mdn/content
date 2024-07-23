@@ -186,8 +186,8 @@ In this simple example, we see that enqueueing a microtask causes the microtask'
 #### JavaScript
 
 ```js hidden
-let logElem = document.getElementById("log");
-let log = (s) => (logElem.innerHTML += `${s}<br>`);
+const logElem = document.getElementById("log");
+const log = (s) => (logElem.innerText += `${s}\n`);
 ```
 
 In the following code, we see a call to {{domxref("queueMicrotask()")}} used to schedule a microtask to run. This call is bracketed by calls to `log()`, a custom function that outputs text to the screen.
@@ -215,8 +215,8 @@ In this example, a timeout is scheduled to fire after zero milliseconds (or "as 
 #### JavaScript
 
 ```js hidden
-let logElem = document.getElementById("log");
-let log = (s) => (logElem.innerHTML += `${s}<br>`);
+const logElem = document.getElementById("log");
+const log = (s) => (logElem.innerText += `${s}\n`);
 ```
 
 In the following code, we see a call to {{domxref("queueMicrotask()")}} used to schedule a microtask to run. This call is bracketed by calls to `log()`, a custom function that outputs text to the screen.
@@ -224,9 +224,9 @@ In the following code, we see a call to {{domxref("queueMicrotask()")}} used to 
 The code below schedules a timeout to occur in zero milliseconds, then enqueues a microtask. This is bracketed by calls to `log()` to output additional messages.
 
 ```js
-let callback = () => log("Regular timeout callback has run");
+const callback = () => log("Regular timeout callback has run");
 
-let urgentCallback = () => log("*** Oh noes! An urgent callback has run!");
+const urgentCallback = () => log("*** Oh noes! An urgent callback has run!");
 
 log("Main program started");
 setTimeout(callback, 0);
@@ -251,18 +251,18 @@ This example expands slightly on the previous one by adding a function that does
 #### JavaScript
 
 ```js hidden
-let logElem = document.getElementById("log");
-let log = (s) => (logElem.innerHTML += `${s}<br>`);
+const logElem = document.getElementById("log");
+const log = (s) => (logElem.innerText += `${s}\n`);
 ```
 
 The main program code follows. The `doWork()` function here calls `queueMicrotask()`, yet the microtask still doesn't fire until the entire program exits, since that's when the task exits and there's nothing else on the execution stack.
 
 ```js
-let callback = () => log("Regular timeout callback has run");
+const callback = () => log("Regular timeout callback has run");
 
-let urgentCallback = () => log("*** Oh noes! An urgent callback has run!");
+const urgentCallback = () => log("*** Oh noes! An urgent callback has run!");
 
-let doWork = () => {
+const doWork = () => {
   let result = 1;
 
   queueMicrotask(urgentCallback);

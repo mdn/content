@@ -59,7 +59,7 @@ Attribution-Reporting-Register-Source: <json-string>
     - `"debug_reporting"` {{optional_inline}}
       - : A boolean value. If a `debug_key` is set, set this to `true` to specify that the generated debug report should be a verbose debug report.
     - `"event_level_epsilon"` {{optional_inline}}
-      - : A number equal to or greater than `0`, which controls the amount of [noise added to reports](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#how_noise_is_added_to_reports). Lower values of epsilon result in more noise and therefore provide greater privacy protection. The maximum and default values will vary across implementations; Chrome for example has a maximum and default value of `14`.
+      - : A number equal to or greater than `0`, which controls the amount of [noise added to reports](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#adding_noise_to_reports). Lower values of epsilon result in more noise and therefore provide greater privacy protection. The maximum and default values will vary across implementations; Chrome for example has a maximum and default value of `14`.
     - `"event_report_window"` {{optional_inline}}
       - : A string representing a time in seconds, after which subsequent triggers won't be attributable to this source for the purpose of producing event-level reports (this is called a **report window**). If not set, the event report window falls back to the `"expiry"` value.
         > **Note:** If `"event_report_window"` is specified, `"event_report_windows"` cannot be specified, otherwise the source registration will fail.

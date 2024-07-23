@@ -79,7 +79,7 @@ console.log(str.charAt(0)); // "\ud842", which is not a valid Unicode character
 console.log(str.charAt(1)); // "\udfb7", which is not a valid Unicode character
 ```
 
-To get the full Unicode code point at the given index, use an indexing method that splits by Unicode code points, such as {{jsxref("String.prototype.codePointAt()")}} and [spreading strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator) into an array of Unicode code points.
+To get the full Unicode code point at the given index, use an indexing method that splits by Unicode code points, such as {{jsxref("String.prototype.codePointAt()")}} and [spreading strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator) into an array of Unicode code points.
 
 ```js
 const str = "𠮷𠮾";

@@ -24,17 +24,17 @@ Let's run through some examples that explain how to use the WebAssembly JavaScri
 
    ```wasm
    (module
-     (func $i (import "imports" "imported_func") (param i32))
+     (func $i (import "my_namespace" "imported_func") (param i32))
      (func (export "exported_func")
        i32.const 42
        call $i))
    ```
 
-4. In the second line, you will see that the import has a two-level namespace — the internal function `$i` is imported from `imports.imported_func`. We need to reflect this two-level namespace in JavaScript when writing the object to be imported into the Wasm module. Create a `<script></script>` element in your HTML file, and add the following code to it:
+4. In the second line, you will see that the import has a two-level namespace — the internal function `$i` is imported from `my_namespace.imported_func`. We need to reflect this two-level namespace in JavaScript when writing the object to be imported into the Wasm module. Create a `<script></script>` element in your HTML file, and add the following code to it:
 
    ```js
    const importObject = {
-     imports: { imported_func: (arg) => console.log(arg) },
+     my_namespace: { imported_func: (arg) => console.log(arg) },
    };
    ```
 
@@ -237,9 +237,9 @@ const output = document.getElementById("output");
 function assertEq(msg, got, expected) {
   const result =
     got === expected
-      ? `SUCCESS! Got: ${got}<br>`
-      : `FAIL!<br>Got: ${got}<br>Expected: ${expected}<br>`;
-  output.innerHTML += `Testing ${msg}: ${result}`;
+      ? `SUCCESS! Got: ${got}\n`
+      : `FAIL!\nGot: ${got}\nExpected: ${expected}\n`;
+  output.innerText += `Testing ${msg}: ${result}`;
 }
 
 assertEq("WebAssembly.Global exists", typeof WebAssembly.Global, "function");

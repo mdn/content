@@ -86,7 +86,7 @@ Inside the `<map>` element, we need {{htmlelement('area')}} elements. An `<area>
 
 - [`alt`](/en-US/docs/Web/HTML/Element/area#alt)
 
-  - : A mandatory attribute, telling people where the link goes or what it does. `alt` text only displays when the image is unavailable. Please refer to our [guidelines for writing accessible link text.](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#writing_accessible_link_text)
+  - : A mandatory attribute, telling people where the link goes or what it does. `alt` text only displays when the image is unavailable. Please refer to our [guidelines for writing accessible link text.](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#use_clear_link_wording)
 
     You may write `alt=""` if the `href` attribute is blank _and_ the entire image already has an `alt` attribute.
 

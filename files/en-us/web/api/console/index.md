@@ -17,8 +17,6 @@ The `console` object can be accessed from any global object. {{domxref("Window")
 console.log("Failed to open the specified link");
 ```
 
-This page documents the [Methods](#methods) available on the `console` object and gives a few [Usage](#usage) examples.
-
 ## Instance methods
 
 - {{domxref("console/assert_static", "console.assert()")}}
@@ -216,7 +214,9 @@ The properties usable along with the `%c` syntax are as follows (at least, in Fi
 - {{cssxref("word-spacing")}} and {{cssxref("word-break")}}
 - {{cssxref("writing-mode")}}
 
-> **Note:** The console message behaves like an inline element by default. To see the effects of `padding`, `margin`, etc. you should set it to for example `display: inline-block`.
+> **Note:** Each console message behaves like an inline element by default. If you want properties such as `padding`, `margin`, and so on to have any effect, you can set the `display` property to `display: inline-block`.
+
+> **Note:** In order to support both light and dark color schemes, {{cssxref("color_value/light-dark")}} can be used when specifying colors; for example: `color: light-dark(#D00000, #FF4040);`
 
 ### Using groups in the console
 

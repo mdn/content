@@ -62,8 +62,8 @@ The following nuances should be kept in mind while using the various keywords fo
 
 - Specifying a value other than `visible` (the default) or `clip` for `overflow` creates a new [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context). This is necessary for technical reasons; if a float intersects with a scrolling element, it would forcibly rewrap the content after each scroll step, leading to a slow scrolling experience.
 - For an `overflow` setting to create the desired effect, the block-level element must have either a set height ({{cssxref("height")}} or {{cssxref("max-height")}}) if the overflow is in the vertical direction, a set width ({{cssxref("width")}} or {{cssxref("max-width")}}) if the overflow is in the horizontal direction, a set block-size (({{cssxref("block-size")}} or {{cssxref("max-block-size")}}) if the overflow is in the block direction, or a a set inline-size (({{cssxref("inline-size")}} or {{cssxref("max-inline-size")}}) or {{cssxref("white-space")}} set to `nowrap` if the overflow is in the inline direction.
-- Setting one direction to `visible` (the default) while setting the other to a _different_ value results in `visible` behaving as `auto`.
-- Setting one direction to `clip` while setting the other to a _different_ value results in `clip` behaving as `hidden`.
+- Setting overflow to `visible` in one direction (i.e. `overflow-x` or `overflow-y`) when it isn't set to `visible` or `clip` in the other direction results in the `visible` value behaving as `auto`.
+- Setting overflow to `clip` in one direction when it isn't set to `visible` or `clip` in the other direction results in the `clip` value behaving as `hidden`.
 - The JavaScript {{domxref("Element.scrollTop")}} property may be used to scroll through content in a scroll container, except when `overflow` is set to `clip`.
 
 ## Formal definition
@@ -192,7 +192,7 @@ p.overlay {
 
 #### Result
 
-{{EmbedLiveSample("Demonstrating results of various overflow keywords", "500", "600")}}
+{{EmbedLiveSample("Demonstrating results of various overflow keywords", "500", "620")}}
 
 ## Accessibility concerns
 

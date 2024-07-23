@@ -35,7 +35,13 @@ For a cross-document view transition to work, the current and destination docume
 
 ## Examples
 
-### Basic usage
+### Transitioning page view
+
+The following code snippets show key concepts used in a page transition demo.
+The demo uses cross-document view-transitions; a half second transition that occurs when navigating between two pages of a site.
+For the full demo, see the [View transitions multi-page app demo](https://mdn.github.io/dom-examples/view-transitions/mpa/).
+
+The `@view-transition` at-rule is specified in the CSS for both your current and destination documents of a navigation to opt them both in to the view transition:
 
 ```css
 @view-transition {
@@ -43,9 +49,41 @@ For a cross-document view transition to work, the current and destination docume
 }
 ```
 
-You need to specify the above `@view-transition` at-rule in the CSS for both the current and destination documents of a navigation to opt them in to the view transition.
+In addition to the `@view-transition` at-rule, we define two {{cssxref("@keyframe")}} animations and use the {{cssxref("animation")}} shorthand property to apply those keyframe animations to the elements in the outbound ({{cssxref("::view-transition-old()")}}) and inbound ({{cssxref("::view-transition-new()")}}) pages that we want to animate.
 
-> **Note:** Our [View Transitions MPA demo](https://mdn.github.io/dom-examples/view-transitions/mpa/) shows this at-rule in action, and additionally demonstrates how to customize the outbound and inbound animations of the view transition.
+```css
+/* Create a custom animation */
+@keyframes move-out {
+  from {
+    transform: translateY(0%);
+  }
+
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes move-in {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0%);
+  }
+}
+
+/* Apply the custom animation to the old and new page states */
+::view-transition-old(root) {
+  animation: 0.4s ease-in both move-out;
+}
+
+::view-transition-new(root) {
+  animation: 0.4s ease-in both move-in;
+}
+```
+
+See this [transitions multi-page app](https://mdn.github.io/dom-examples/view-transitions/mpa/) demo live.
 
 ## Specifications
 
@@ -57,4 +95,11 @@ You need to specify the above `@view-transition` at-rule in the CSS for both the
 
 ## See also
 
+- {{cssxref("::view-transition", "::view-transition")}}
+- {{cssxref("::view-transition-new", "::view-transition-new()")}}
+- {{cssxref("::view-transition-old", "::view-transition-old()")}}
+- {{cssxref("::view-transition-group", "::view-transition-group()")}}
+- {{cssxref("::view-transition-image-pair", "::view-transition-image-pair()")}}
 - [View Transitions API](/en-US/docs/Web/API/View_Transitions_API)
+- [CSS at-rules](/en-US/docs/Web/CSS/At-rule)
+- [CSS at-rule functions](/en-US/docs/Web/CSS/At-rule_functions)

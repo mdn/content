@@ -24,7 +24,7 @@ The `name` value is logged to the console, showing that [keywords](/en-US/docs/W
 
 ```js
 // given <meta name="keywords" content="documentation, HTML, web technologies">
-let meta = document.querySelector("meta");
+const meta = document.querySelector("meta");
 console.log(meta.name);
 // "keywords"
 ```

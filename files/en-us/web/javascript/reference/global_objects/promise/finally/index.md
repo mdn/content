@@ -56,7 +56,7 @@ promise.then(
 );
 ```
 
-Because `finally()` calls `then()`, it supports subclassing. Moreover, notice the {{jsxref("Promise.resolve()")}} call above — in reality, `onFinally()`'s return value is resolved using the same algorithm as `Promise.resolve()`, but the actual constructor used to construct the resolved promise will be the subclass. `finally()` gets this constructor through [`promise.constructor[@@species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/@@species).
+Because `finally()` calls `then()`, it supports subclassing. Moreover, notice the {{jsxref("Promise.resolve()")}} call above — in reality, `onFinally()`'s return value is resolved using the same algorithm as `Promise.resolve()`, but the actual constructor used to construct the resolved promise will be the subclass. `finally()` gets this constructor through [`promise.constructor[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Symbol.species).
 
 ## Examples
 

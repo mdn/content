@@ -13,7 +13,7 @@ The difference between {{HTTPMethod("PUT")}} and `POST` is that `PUT` is idempot
 
 A `POST` request is typically sent via an [HTML form](/en-US/docs/Learn/Forms) and results in a change on the server. In this case, the content type is selected by putting the adequate string in the [`enctype`](/en-US/docs/Web/HTML/Element/form#enctype) attribute of the {{HTMLElement("form")}} element or the [`formenctype`](/en-US/docs/Web/HTML/Element/input#formenctype) attribute of the {{HTMLElement("input") }} or {{HTMLElement("button")}} elements:
 
-- `application/x-www-form-urlencoded`: the keys and values are encoded in key-value tuples separated by `'&'`, with a `'='` between the key and the value. Non-alphanumeric characters in both keys and values are [URL encoded](https://en.wikipedia.org/wiki/URL_encoding): this is the reason why this type is not suitable to use with binary data (use `multipart/form-data` instead)
+- `application/x-www-form-urlencoded`: the keys and values are encoded in key-value tuples separated by `'&'`, with a `'='` between the key and the value. Non-alphanumeric characters in both keys and values are {{Glossary("Percent-encoding", "percent-encoded")}}: this is the reason why this type is not suitable to use with binary data (use `multipart/form-data` instead)
 - `multipart/form-data`: each value is sent as a block of data ("body part"), with a user agent-defined delimiter ("boundary") separating each part. The keys are given in the `Content-Disposition` header of each part.
 - `text/plain`
 

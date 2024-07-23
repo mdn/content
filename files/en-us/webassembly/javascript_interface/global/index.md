@@ -22,8 +22,8 @@ All `Global` instances inherit from the `Global()` constructor's prototype objec
 
 - `Global.prototype.constructor`
   - : Returns the function that created this object's instance. By default this is the [`WebAssembly.Global()`](/en-US/docs/WebAssembly/JavaScript_interface/Global/Global) constructor.
-- `Global.prototype[@@toStringTag]`
-  - : The initial value of the [@@toStringTag](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the String value "WebAssembly.Global".
+- `Global.prototype[Symbol.toStringTag]`
+  - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the String value "WebAssembly.Global".
 - `Global.prototype.value`
   - : The value contained inside the global variable — this can be used to directly set and get the global's value.
 
@@ -46,9 +46,9 @@ const output = document.getElementById("output");
 function assertEq(msg, got, expected) {
   const result =
     got === expected
-      ? `SUCCESS! Got: ${got}<br>`
-      : `FAIL!<br>Got: ${got}<br>Expected: ${expected}<br>`;
-  output.innerHTML += `Testing ${msg}: ${result}`;
+      ? `SUCCESS! Got: ${got}\n`
+      : `FAIL!\nGot: ${got}\nExpected: ${expected}\n`;
+  output.innerText += `Testing ${msg}: ${result}`;
 }
 
 assertEq("WebAssembly.Global exists", typeof WebAssembly.Global, "function");

@@ -6,7 +6,7 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 129 that affect developers. Firefox 129 is the current [Nightly version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly) and ships on [August 6, 2024](https://whattrainisitnow.com/release/?version=129).
+This article provides information about the changes in Firefox 129 that affect developers. Firefox 129 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [August 6, 2024](https://whattrainisitnow.com/release/?version=129).
 
 ## Changes for web developers
 
@@ -17,6 +17,8 @@ This article provides information about the changes in Firefox 129 that affect d
 #### Removals
 
 ### CSS
+
+- The [@starting-style](/en-US/docs/Web/CSS/@starting-style) CSS at-rule is supported. This lets you define starting values for properties set on an element that you want to transition from when the element receives its first style update. Currently animating from `display: none;` is not supported ([Firefox bug 1834876](https://bugzil.la/1834876) and [Firefox bug 1834877](https://bugzil.la/1834877)).
 
 #### Removals
 
@@ -37,6 +39,11 @@ This article provides information about the changes in Firefox 129 that affect d
 #### Removals
 
 ### APIs
+
+- The deprecated {{domxref("TextEvent", "textInput")}} event is now supported, enabling web apps that use legacy libraries or frameworks that rely on these events.
+  The [`beforeinput` event](/en-US/docs/Web/API/Element/beforeinput_event) supersedes `textInput`, and should always be used by new applications.
+  ([Firefox bug 1901923](https://bugzil.la/1901923).)
+- The default `.toJSON()` methods {{domxref("GeolocationCoordinates.toJSON()")}} and {{domxref("GeolocationPosition.toJSON()")}} are now supported, enabling serialization of `GeolocationCoordinates` and `GeolocationPosition` objects with {{jsxref("JSON.stringify()")}} ([Firefox bug 1890706](https://bugzil.la/1890706)).
 
 #### DOM
 

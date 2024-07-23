@@ -232,7 +232,7 @@ pre.target:hover {
 
 ### Example: Blurred Text
 
-In order to blur text, Webkit based browsers have a (prefixed) CSS filter called blur (see also [CSS filter](/en-US/docs/Web/CSS/filter#blur%28%29_2)). You can achieve the same effect using SVG filters.
+In order to blur text, there is a CSS filter function called [`blur()`](/en-US/docs/Web/CSS/filter-function/blur). You can achieve the same effect using SVG filters.
 
 ```html
 <p class="blur">Time to clean my glasses</p>

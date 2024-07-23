@@ -64,7 +64,7 @@ Many WebVR hardware setups feature controllers that go along with the headset. T
 - {{DOMxRef("VRDisplayCapabilities")}}
   - : Describes the capabilities of a {{DOMxRef("VRDisplay")}} — its features can be used to perform VR device capability tests, for example can it return position information.
 - {{DOMxRef("VRDisplayEvent")}}
-  - : Represents the event object of WebVR-related events (see the [window object extensions](#window) listed below).
+  - : Represents the event object of WebVR-related events (see the [window events](#window_events) listed below).
 - {{DOMxRef("VRFrameData")}}
   - : Represents all the information needed to render a single frame of a VR scene; constructed by {{DOMxRef("VRDisplay.getFrameData()")}}.
 - {{DOMxRef("VRPose")}}

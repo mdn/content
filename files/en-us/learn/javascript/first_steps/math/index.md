@@ -41,7 +41,7 @@ We even have different types of number systems! Decimal is base 10 (meaning it u
 
 - **Binary** — The lowest level language of computers; 0s and 1s.
 - **Octal** — Base 8, uses 0–7 in each digit.
-- **Hexadecimal** — Base 16, uses 0–9 and then a–f in each digit. You may have encountered these numbers before when setting [colors in CSS](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#hexadecimal_values).
+- **Hexadecimal** — Base 16, uses 0–9 and then a–f in each digit. You may have encountered these numbers before when setting [colors in CSS](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#hexadecimal_rgb_values).
 
 **Before you start to get worried about your brain melting, stop right there!** For a start, we are just going to stick to decimal numbers throughout this course; you'll rarely come across a need to start thinking about other types, if ever.
 

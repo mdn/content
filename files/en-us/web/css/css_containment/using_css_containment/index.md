@@ -117,7 +117,7 @@ The main use case for the `style` value is to prevent situations where a [CSS co
 
 Using `contain: style` ensures the {{cssxref("counter-increment")}} and {{cssxref("counter-set")}} properties create new counters scoped to that subtree only.
 
-You can include more than one containment type by including multiple space-separated values, such as `contain: layout paint` or by using one of the two [special values](#special-values).
+You can include more than one containment type by including multiple space-separated values, such as `contain: layout paint` or by using one of the two [special values](#special_values).
 
 #### Special values
 
@@ -157,7 +157,7 @@ The {{cssxref("content-visibility")}} property controls whether or not an elemen
 Its possible values are:
 
 - `visible`: The default behavior — an element's contents are laid out and rendered as normal.
-- `hidden`: The element [skips its contents](#skips-its-contents). The skipped contents will not be accessible to user agent features such as find-in-page, tab-order navigation, etc., nor be selectable or focusable.
+- `hidden`: The element [skips its contents](#skips_its_contents). The skipped contents will not be accessible to user agent features such as find-in-page, tab-order navigation, etc., nor be selectable or focusable.
 - `auto`: The element turns on layout containment, style containment, and paint containment, as if `contain: content` was set. If the element is not [relevant to the user](#relevant_to_the_user), it also skips its contents. Unlike `hidden`, the skipped content is still available for user interactions, remaining focusable, selectable, in regular tab order, and available to in-content search.
 
 ### Relevant to the user

@@ -31,9 +31,12 @@ A number representing the [timestamp](/en-US/docs/Web/JavaScript/Reference/Globa
 
 To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), the precision of `Date.now()` might get rounded depending on browser settings. In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by default and defaults to 2ms. You can also enable `privacy.resistFingerprinting`, in which case the precision will be 100ms or the value of `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever is larger.
 
+For example, with reduced time precision, the result of `Date.now()` will always be a multiple of 2, or a multiple of 100 (or `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`) with `privacy.resistFingerprinting` enabled.
+
 ```js
 // reduced time precision (2ms) in Firefox 60
 Date.now();
+// Might be:
 // 1519211809934
 // 1519211810362
 // 1519211811670
@@ -41,6 +44,7 @@ Date.now();
 
 // reduced time precision with `privacy.resistFingerprinting` enabled
 Date.now();
+// Might be:
 // 1519129853500
 // 1519129858900
 // 1519129864400

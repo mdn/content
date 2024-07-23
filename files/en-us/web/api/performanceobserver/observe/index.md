@@ -32,7 +32,7 @@ observe(options)
       - : A {{domxref("DOMHighResTimeStamp")}} defining the threshold for {{domxref("PerformanceEventTiming")}} entries. Defaults to 104ms and is rounded to the nearest of 8ms. Lowest possible threshold is 16ms. May not be used together with the `entryTypes` option.
     - `entryTypes`
 
-      - : An array of string objects, each specifying one performance entry type to observe. May not be used together with
+      - : An array of strings, each specifying one performance entry type to observe. May not be used together with
         the "`type`", "`buffered`", or "`durationThreshold`" options.
 
         See {{domxref("PerformanceEntry.entryType")}} for a list of valid performance entry type names. Unrecognized types are ignored, though the browser may output a warning message to the console to help developers debug their code. If no valid types are found, `observe()` has no effect.

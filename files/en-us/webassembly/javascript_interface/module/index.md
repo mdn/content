@@ -45,7 +45,7 @@ The worker function [`wasm_worker.js`](https://github.com/mdn/webassembly-exampl
 
 ```js
 const importObject = {
-  imports: {
+  my_namespace: {
     imported_func(arg) {
       console.log(arg);
     },

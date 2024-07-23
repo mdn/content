@@ -27,7 +27,7 @@ registerPaint(name, classRef)
 - `classRef`
   - : A reference to the class that implements the worklet.
 
-## Return value
+### Return value
 
 None ({{jsxref("undefined")}}).
 

@@ -27,7 +27,7 @@ A new [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Obj
 
 ## Description
 
-`Array.prototype.values()` is the default implementation of [`Array.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator).
+`Array.prototype.values()` is the default implementation of [`Array.prototype[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator).
 
 ```js
 Array.prototype.values === Array.prototype[Symbol.iterator]; // true
@@ -176,6 +176,6 @@ for (const entry of Array.prototype.values.call(arrayLike)) {
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.entries()")}}
 - {{jsxref("Array.prototype.keys()")}}
-- [`Array.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
+- [`Array.prototype[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)
 - {{jsxref("TypedArray.prototype.values()")}}
 - [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)

@@ -78,98 +78,134 @@ Below is a screenshot of how it is rendered by a browser:
 Here is a simple exercise to verify whether you understood the relation between a MathML subtree and its visual rendering. The document contains a MathML formula and you must check all subtrees corresponding to a subtree in that MathML formula. Once you are done, you can inspect the source of the MathML formula and verify if it matches your expectation.
 
 ```html hidden
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <title>My page with math characters</title>
-    <link rel="stylesheet" href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css">
+    <link
+      rel="stylesheet"
+      href="https://fred-wang.github.io/MathFonts/LatinModern/mathfonts.css" />
   </head>
   <body>
-  <p>
-    <math>
-    <mfrac id="mfrac1">
-      <msqrt id="msqrt1">
-        <mn>2</mn>
-      </msqrt>
-      <mroot id="mroot1">
-        <mn>4</mn>
-        <mn>3</mn>
-      </mroot>
-    </mfrac>
-    <mo>+</mo>
-    <mroot id="mroot2">
-      <mn>5</mn>
-      <mfrac id="mfrac2">
-        <mn>6</mn>
-        <mn>7</mn>
-      </mfrac>
-    </mroot>
-    <mo>+</mo>
-    <msqrt id="msqrt2">
-      <mn>8</mn>
-      <mo>−</mo>
-      <mn>9</mn>
-    </msqrt>
-  </p>
+    <p>
+      <math>
+        <mfrac id="mfrac1">
+          <msqrt id="msqrt1">
+            <mn>2</mn>
+          </msqrt>
+          <mroot id="mroot1">
+            <mn>4</mn>
+            <mn>3</mn>
+          </mroot>
+        </mfrac>
+        <mo>+</mo>
+        <mroot id="mroot2">
+          <mn>5</mn>
+          <mfrac id="mfrac2">
+            <mn>6</mn>
+            <mn>7</mn>
+          </mfrac>
+        </mroot>
+        <mo>+</mo>
+        <msqrt id="msqrt2">
+          <mn>8</mn>
+          <mo>−</mo>
+          <mn>9</mn>
+        </msqrt>
+      </math>
+    </p>
 
-  <ol id="options">
-    <li>
-      <input type="checkbox" data-comment="Verify the order of children in an mfrac!">
-      An mfrac with an mroot as its first child and an msqrt as its second child.
-    </li>
-    <li>
-      <input type="checkbox" data-highlight="mroot2" data-comment="The '6 over 7'-th root of five.">
-      An mroot with an mn as its first child and mfrac as its second child.
-    </li>
-    <li>
-      <input type="checkbox" data-comment="This formula does not contain any fraction inside a square root!">
-      An msqrt containing an mfrac element.
-   </li>
-    <li>
-      <input type="checkbox" data-comment="The square root of two." data-highlight="msqrt1">
-      An msqrt with one mn child.
-    </li>
-    <li>
-      <input type="checkbox" data-comment="Verify the order of children in an mroot!">
-      An mroot with an mfrac as its first child and mn as its second child.
-    </li>
-    <li>
-      <input type="checkbox" data-comment="The square root of 'eight minus nine'." data-highlight="msqrt2">
-      An msqrt with the following list of children: mn, mo, mn.
-    </li>
-    <li>
-      <input type="checkbox" data-comment="The square root of two over the cubic root of four." data-highlight="mfrac1">
-      An mfrac with an msqrt as its first child and an mroot as its second child.
-    </li>
-    <li>
-      <input type="checkbox" data-comment="mfrac must have exactly two children!">
-      An mfrac with the following list of children: msqrt, mn, msqrt.
-    </li>
-    <li>
-      <input type="checkbox" data-comment="mroot must have exactly two children!">
-      An mroot with one mn child.
-    </li>
-    <li>
-      <input type="checkbox" data-comment="The fraction six over seven." data-highlight="mfrac2">
-      An mfrac with two mn children.
-    </li>
-    <li>
-      <input type="checkbox" data-comment="This formula does not contain any square root with more than two numbers!">
-      An msqrt with five mn children.
-    </li>
-    <li>
-      <input type="checkbox" data-highlight="mroot1" data-comment="The cubic root of four.">
-      An mroot with two mn children.
-    </li>
-  </ol>
-  <p>
-    <strong id="comment"></strong>
-  </p>
-  <p>
-    <strong id="status"></strong>
-  </p>
+    <ol id="options">
+      <li>
+        <input
+          type="checkbox"
+          data-comment="Verify the order of children in an mfrac!" />
+        An mfrac with an mroot as its first child and an msqrt as its second
+        child.
+      </li>
+      <li>
+        <input
+          type="checkbox"
+          data-highlight="mroot2"
+          data-comment="The '6 over 7'-th root of five." />
+        An mroot with an mn as its first child and mfrac as its second child.
+      </li>
+      <li>
+        <input
+          type="checkbox"
+          data-comment="This formula does not contain any fraction inside a square root!" />
+        An msqrt containing an mfrac element.
+      </li>
+      <li>
+        <input
+          type="checkbox"
+          data-comment="The square root of two."
+          data-highlight="msqrt1" />
+        An msqrt with one mn child.
+      </li>
+      <li>
+        <input
+          type="checkbox"
+          data-comment="Verify the order of children in an mroot!" />
+        An mroot with an mfrac as its first child and mn as its second child.
+      </li>
+      <li>
+        <input
+          type="checkbox"
+          data-comment="The square root of 'eight minus nine'."
+          data-highlight="msqrt2" />
+        An msqrt with the following list of children: mn, mo, mn.
+      </li>
+      <li>
+        <input
+          type="checkbox"
+          data-comment="The square root of two over the cubic root of four."
+          data-highlight="mfrac1" />
+        An mfrac with an msqrt as its first child and an mroot as its second
+        child.
+      </li>
+      <li>
+        <input
+          type="checkbox"
+          data-comment="mfrac must have exactly two children!" />
+        An mfrac with the following list of children: msqrt, mn, msqrt.
+      </li>
+      <li>
+        <input
+          type="checkbox"
+          data-comment="mroot must have exactly two children!" />
+        An mroot with one mn child.
+      </li>
+      <li>
+        <input
+          type="checkbox"
+          data-comment="The fraction six over seven."
+          data-highlight="mfrac2" />
+        An mfrac with two mn children.
+      </li>
+      <li>
+        <input
+          type="checkbox"
+          data-comment="This formula does not contain any square root with more than two numbers!" />
+        An msqrt with five mn children.
+      </li>
+      <li>
+        <input
+          type="checkbox"
+          data-highlight="mroot1"
+          data-comment="The cubic root of four." />
+        An mroot with two mn children.
+      </li>
+    </ol>
+    <p>
+      <strong id="comment"></strong>
+    </p>
+    <p>
+      <strong id="status"></strong>
+    </p>
   </body>
+</html>
 ```
 
 ```css hidden

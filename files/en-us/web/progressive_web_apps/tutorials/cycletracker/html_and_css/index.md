@@ -61,7 +61,7 @@ Copy this HTML and save it in a file called `index.html`.
 
 ## HTML content
 
-Even if the HTML in `index.html` is familiar to you, we recommend reading through this section before adding some [temporary hard-coded data](#temporary-hard-coded-results-text), adding CSS to a [`style.css`](#css_content) external stylesheet, and creating `app.js`, the [application's JavaScript](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality) that makes this web page function.
+Even if the HTML in `index.html` is familiar to you, we recommend reading through this section before adding some [temporary hard-coded data](#temporary_hard-coded_results_text), adding CSS to a [`style.css`](#css_content) external stylesheet, and creating `app.js`, the [application's JavaScript](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality) that makes this web page function.
 
 The HTML's first line is a {{glossary("doctype")}} preamble, which ensures the content behaves correctly.
 
@@ -194,7 +194,7 @@ This content, other than the container `<section id="past-periods"></section>`, 
 
 ### JavaScript link
 
-Before closing the `</body>`, we include a link to the yet-to-be-written `app.js` JavaScript file. We include the [`defer`](/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript#async_and_defer) attribute to defer the loading of this script and ensure the JavaScript is executed after the document's HTML has been parsed.
+Before closing the `</body>`, we include a link to the yet-to-be-written `app.js` JavaScript file. We include the [`defer`](/en-US/docs/Web/HTML/Element/script#defer) attribute to defer the loading of this script and ensure the JavaScript is executed after the document's HTML has been parsed.
 
 ```html
 <script src="app.js" defer></script>
