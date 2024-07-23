@@ -144,8 +144,7 @@ _To use this macro, remove the backticks and backslash in the markdown file._
 
 ## Accessibility
 
-Warn of any potential accessibility concerns with using this function and how to work around them.
-Remove this section if there is no list.
+This is an optional section. Include accessibility guidelines, best practices, and potential concerns that developers should be aware of while using this property. You can also include workarounds or solutions where applicable.
 
 ## Examples
 
