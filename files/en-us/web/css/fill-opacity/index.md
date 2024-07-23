@@ -57,7 +57,7 @@ This example demonstrates the basic use case of `fill-opacity`, and how the CSS 
 
 #### HTML
 
-We include several diverent SVG graphic elements; setting each element's `fill-opacity` attribute to `1`, meaning the fill of each element is opaque.
+We include several diverent SVG graphic elements; setting each element's `fill-opacity` attribute to `1`, meaning the fill of each element is opaque, except for the {{SVGElement("line")}} element as the `fill-opacity` SVG attribute does not apply to `<line>`.
 
 ```html
 <svg viewbox="0 0 100 150" xmlns="http://www.w3.org/2000/svg">
@@ -71,8 +71,7 @@ We include several diverent SVG graphic elements; setting each element's `fill-o
     y1="40"
     y2="60"
     stroke="black"
-    stroke-width="5"
-    fill-opacity="1" />
+    stroke-width="5" />
   <polyline
     points="60 90 65 100 70 95 75 110 80 105 85 120 90 115 95 130 100 125"
     fill-opacity="1" />
