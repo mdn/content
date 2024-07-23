@@ -268,7 +268,8 @@ document.getElementById("runButton").addEventListener("click", function () {
 
 {{embedlivesample("compare_your_code", 600, 360)}}
 
-> **Note:** Try adding more points per brick hit, print out the number of collected points in the end game alert box.
+> [!NOTE]
+> Try adding more points per brick hit, print out the number of collected points in the end game alert box.
 
 ## Next steps
 

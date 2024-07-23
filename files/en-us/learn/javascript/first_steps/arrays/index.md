@@ -294,8 +294,8 @@ Let's return to the example we described earlier — printing out product names 
 const list = document.querySelector('.output ul');
 const totalBox = document.querySelector('.output p');
 let total = 0;
-list.innerHTML = '';
-totalBox.textContent = '';
+list.textContent = "";
+totalBox.textContent = "";
 // number 1
                 'Underpants:6.99'
                 'Socks:5.99'
@@ -360,8 +360,8 @@ solution.addEventListener("click", () => {
 const jsSolution = `const list = document.querySelector('.output ul');
 const totalBox = document.querySelector('.output p');
 let total = 0;
-list.innerHTML = '';
-totalBox.textContent = '';
+list.textContent = "";
+totalBox.textContent = "";
 
 const products = [
   'Underpants:6.99',
@@ -489,7 +489,7 @@ const list = document.querySelector('.output ul');
 const searchInput = document.querySelector('.output input');
 const searchBtn = document.querySelector('.output button');
 
-list.innerHTML = '';
+list.textContent = "";
 
 const myHistory = [];
 const MAX_HISTORY = 5;
@@ -501,7 +501,7 @@ searchBtn.onclick = () => {
 
     // empty the list so that we don't display duplicate entries
     // the display is regenerated every time a search term is entered.
-    list.innerHTML = '';
+    list.textContent = "";
 
     // loop through the array, and display all the search terms in the list
     for (const itemText of myHistory) {
@@ -584,7 +584,7 @@ const jsSolution = `const list = document.querySelector('.output ul');
 const searchInput = document.querySelector('.output input');
 const searchBtn = document.querySelector('.output button');
 
-list.innerHTML = '';
+list.textContent = "";
 
 const myHistory = [];
 const MAX_HISTORY = 5;
@@ -596,7 +596,7 @@ searchBtn.onclick = () => {
 
     // empty the list so that we don't display duplicate entries
     // the display is regenerated every time a search term is entered.
-    list.innerHTML = '';
+    list.textContent = "";
 
     // loop through the array, and display all the search terms in the list
     for (const itemText of myHistory) {

@@ -237,7 +237,7 @@ Think about how you could test whether the message in each case is a Christmas m
 
 <textarea id="code" class="playable-code" style="height: 290px; width: 95%">
 const list = document.querySelector('.output ul');
-list.innerHTML = '';
+list.textContent = "";
 const greetings = ['Happy Birthday!',
                  'Merry Christmas my love',
                  'A happy Christmas to all the family',
@@ -314,7 +314,7 @@ solution.addEventListener("click", () => {
 });
 
 const jsSolution = `const list = document.querySelector('.output ul');
-list.innerHTML = '';
+list.textContent = "";
 const greetings = [
   'Happy Birthday!',
   'Merry Christmas my love',
@@ -411,7 +411,7 @@ In this exercise, we have the names of cities in the United Kingdom, but the cap
 
 <textarea id="code" class="playable-code" style="height: 250px; width: 95%">
 const list = document.querySelector('.output ul');
-list.innerHTML = '';
+list.textContent = "";
 const cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
 
 for (const city of cities) {
@@ -483,7 +483,7 @@ solution.addEventListener("click", function () {
 });
 
 const jsSolution = `const list = document.querySelector('.output ul');
-list.innerHTML = '';
+list.textContent = "";
 const cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
 
 for (const city of cities) {
@@ -586,7 +586,7 @@ We'd recommend doing it like this:
 
 <textarea id="code" class="playable-code" style="height: 285px; width: 95%">
 const list = document.querySelector('.output ul');
-list.innerHTML = '';
+list.textContent = "";
 const stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
                   'GNF576746573fhdg4737dh4;Greenfield',
                   'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street',
@@ -662,7 +662,7 @@ solution.addEventListener("click", function () {
 });
 
 const jsSolution = `const list = document.querySelector('.output ul');
-list.innerHTML = '';
+list.textContent = '';
 const stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
                   'GNF576746573fhdg4737dh4;Greenfield',
                   'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street',

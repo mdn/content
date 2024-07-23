@@ -247,7 +247,8 @@ document.getElementById("runButton").addEventListener("click", function () {
 
 {{embedlivesample("compare_your_code", 600, 360)}}
 
-> **Note:** Try changing the number of bricks in a row or a column, or their positions.
+> [!NOTE]
+> Try changing the number of bricks in a row or a column, or their positions.
 
 ## Next steps
 
