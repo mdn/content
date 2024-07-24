@@ -77,18 +77,21 @@ The `flex` property may be specified using one, two, or three values.
 
 ### Values
 
-- `auto`
-  - : The item is sized according to its `width` and `height` properties, but grows to absorb any extra free space in the flex container, and shrinks to its minimum size to fit the container. This is equivalent to setting `flex: 1 1 auto`.
-- `none`
-  - : The item is sized according to its `width` and `height` properties. It is fully inflexible: it neither shrinks nor grows in relation to the flex container. This is equivalent to setting `flex: 0 0 auto`.
-- `initial`
-  - : The default value. The item is sized according to its `width` and `height` properties. It shrinks to its minimum size to fit the container, but does not grow to absorb any extra free space in the flex container. This is equivalent to setting `flex: 0 1 auto`.
 - `<'flex-grow'>`
   - : Defines the {{cssxref("flex-grow")}} of the flex item. Negative values are considered invalid. Defaults to `1` when omitted. (initial is `0`)
 - `<'flex-shrink'>`
   - : Defines the {{cssxref("flex-shrink")}} of the flex item. Negative values are considered invalid. Defaults to `1` when omitted. (initial is `1`)
 - `<'flex-basis'>`
-  - : Defines the {{cssxref("flex-basis")}} of the flex item. A preferred size of `0` must have a unit to avoid being interpreted as a flexibility. Defaults to `0` when omitted. Initial value is `auto`.
+  - : Defines the {{cssxref("flex-basis")}} of the flex item. A preferred size of `0` must have a unit to avoid being interpreted as a flexibility. Defaults to `0` when omitted. The initial value is `auto`.
+- `none`
+  - : The item is sized according to its `width` and `height` properties. It is fully inflexible: it neither shrinks nor grows in relation to the flex container. This is equivalent to setting `flex: 0 0 auto`.
+
+Commonly desired flex effects can be achieved using the following flex values:
+
+- `initial`: Don't grow but shrink. It is the default value and expands to `flex: 0 1 auto`. The item is sized according to its `width` and `height` properties. It shrinks to its minimum size to fit the container but does not grow to absorb any extra free space in the flex container.
+- `auto`: Grow as well as shrink. Expands to `flex: 1 1 auto`. The item is sized according to its `width` and `height` properties but grows to absorb any extra free space in the flex container and shrinks to its minimum size to fit the container. The flex item becomes fully flexible.
+- `none`: Don't grow and don't shrink. Expands to `flex: 0 0 auto`. The item is sized according to its `width` and `height` properties but doesn't grow or shrink. The flex item becomes fully inflexible.
+- `flex: <number [1,∞]>`: Grow in equal proportion. Expands to `fles: <number [1,∞]> 1 0`. It makes the flex item flexible and sets `flex-basis` to zero. If all the flex items use this pattern, then all the items will be sized in proportion.
 
 ## Description
 
