@@ -69,7 +69,7 @@ The `transform` property may be specified as either the keyword value `none` or 
 - `none`
   - : Specifies that no transform should be applied.
 
-## Accessibility concerns
+## Accessibility
 
 Scaling/zooming animations are problematic for accessibility, as they are a common trigger for certain types of migraine.
 If you need to include such animations on your website, you should provide a control to allow users to turn off animations, preferably site-wide.

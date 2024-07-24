@@ -201,7 +201,7 @@ In our function, the first four lines use the Fetch API to fetch the JSON from t
 
 - we declare the `requestURL` variable to store the GitHub URL
 - we use the URL to initialize a new {{domxref("Request")}} object.
-- we make the network request using the {{domxref("fetch", "fetch()")}} function, and this returns a {{domxref("Response")}} object
+- we make the network request using the {{domxref("Window/fetch", "fetch()")}} function, and this returns a {{domxref("Response")}} object
 - we retrieve the response as JSON using the {{domxref("Response/json", "json()")}} function of the `Response` object.
 
 > **Note:** The `fetch()` API is **asynchronous**. We'll learn a lot about asynchronous functions in [the next module](/en-US/docs/Learn/JavaScript/Asynchronous), but for now, we'll just say that we need to add the keyword {{jsxref("Statements/async_function", "async")}} before the name of the function that uses the fetch API, and add the keyword {{jsxref("Operators/await", "await")}} before the calls to any asynchronous functions.

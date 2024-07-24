@@ -64,7 +64,7 @@ This includes HTTP requests resulting from the following elements (this list is 
 - {{HTMLElement("script")}} where origin is set via `src` attribute
 - {{HTMLElement("link")}} where the origin is set in the `href` attribute, and includes stylesheets
 - {{HTMLElement("iframe")}} where origin is set via `src` attribute
-- {{domxref("fetch()")}} requests
+- {{domxref("Window/fetch", "fetch()")}} requests
 - {{domxref("XMLHttpRequest")}} requests
 - All cases in CSS where a {{cssxref("url", "url()")}} value is used ({{cssxref("@font-face")}}, {{cssxref("cursor")}}, {{cssxref("background-image")}}, and so forth).
 - {{HTMLElement("object")}} (`data` attribute)

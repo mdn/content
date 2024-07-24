@@ -12,7 +12,7 @@ The **`put()`** method of the
 {{domxref("Cache")}} interface allows key/value pairs to be added to the current
 {{domxref("Cache")}} object.
 
-Often, you will just want to {{domxref("fetch()")}}
+Often, you will just want to {{domxref("Window/fetch", "fetch()")}}
 one or more requests, then add the result straight to your cache. In such cases you are
 better off using
 {{domxref("Cache.add","Cache.add()")}}/{{domxref("Cache.addAll","Cache.addAll()")}}, as
