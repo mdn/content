@@ -3844,6 +3844,10 @@
       "inh": "EventTarget",
       "impl": []
     },
+    "Viewport": {
+      "inh": "EventTarget",
+      "impl": []
+    },
     "ViewTimeline": {
       "inh": "ScrollTimeline",
       "impl": []

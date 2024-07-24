@@ -136,7 +136,7 @@ A [custom element](/en-US/docs/Web/API/Web_components/Using_custom_elements) can
 </html>
 ```
 
-For authors not familiar with LaTeX, alternative input methods are available such as the [ASCIIMath](http://asciimath.org/#syntax) or [jqMath](https://mathscribe.com/author/jqmath.html) syntax. Be sure to load the JavaScript libraries and use the proper delimiters:
+For authors not familiar with LaTeX, alternative input methods are available such as the [ASCIIMath](https://asciimath.org/#syntax) or [jqMath](https://mathscribe.com/author/jqmath.html) syntax. Be sure to load the JavaScript libraries and use the proper delimiters:
 
 ```html
 <!doctype html>

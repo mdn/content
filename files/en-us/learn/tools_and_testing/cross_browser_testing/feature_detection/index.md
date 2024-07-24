@@ -81,7 +81,7 @@ if (CSS.supports("grid-template-columns", "subgrid")) {
 }
 ```
 
-In our conditional statement, we test to see if the{{cssxref("grid-template-columns")}} property supports the `subgrid` value using [`CSS.supports()`](/en-US/docs/Web/API/CSS/supports_static).
+In our conditional statement, we test to see if the {{cssxref("grid-template-columns")}} property supports the `subgrid` value using [`CSS.supports()`](/en-US/docs/Web/API/CSS/supports_static).
 
 #### @supports
 

@@ -15,7 +15,7 @@ The **`@media`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rul
 
 ## Syntax
 
-The `@media` at-rule may be placed at the top level of your code or nested inside any other [conditional group at-rule](/en-US/docs/Web/CSS/At-rule#conditional_group_rules).
+The `@media` at-rule may be placed at the top level of your code or nested inside any other conditional group at-rule.
 
 ```css
 /* At the top level of your code */
@@ -170,7 +170,7 @@ Some media queries have corresponding [user agent client hints](/en-US/docs/Web/
 These are HTTP headers that request content that is pre-optimized for the particular media requirement.
 They include {{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}} and {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}.
 
-## Accessibility concerns
+## Accessibility
 
 To best accommodate people who adjust a site's text size, use [`em`](/en-US/docs/Web/CSS/CSS_Values_and_Units#numeric_data_types)s when you need a {{cssxref("&lt;length&gt;")}} for your [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries).
 

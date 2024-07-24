@@ -58,11 +58,13 @@ const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // these two event handlers act on the database being opened successfully, or not
 DBOpenRequest.onerror = (event) => {
-  note.innerHTML += "<li>Error loading database.</li>";
+  note.appendChild(document.createElement("li")).textContent =
+    "Error loading database.";
 };
 
 DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += "<li>Database initialized.</li>";
+  note.appendChild(document.createElement("li")).textContent =
+    "Database initialized.";
 
   // store the result of opening the database in the db variable. This is used a lot below
   db = event.target.result;
@@ -79,7 +81,8 @@ DBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
   db.onerror = (event) => {
-    note.innerHTML += "<li>Error loading database.</li>";
+    note.appendChild(document.createElement("li")).textContent =
+      "Error loading database.";
   };
 
   // Create an objectStore for this database

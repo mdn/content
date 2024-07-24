@@ -283,7 +283,7 @@ p {
 
 Now the paragraph will be blue. The `!important` in the earliest declared layer takes precedence of subsequent layers and unlayered important declarations. If the inline style contained !important, such as `<p style="color: black !important">`, again the paragraph would be black. Inline importance does take precedence over all other author declared `!important` declarations, no matter the specificity.
 
-> **Note:** `!important` reverses the precedence of cascade layers. For this reason, rather than using `!important` to override external styles, import frameworks, third party styles, widget stylesheets, etc., into layers, demoting their precedence. `!important` should only be used sparingly, if ever, to guard required styles against later overrides, in the first declared layer.
+> **Note:** The `!important` flag reverses the precedence of cascade layers. For this reason, try not to use `!important` to override external styles. Instead, use {{cssxref("@import")}} together with the `layer` keyword or `layer()` function to import external style sheets (from frameworks, widget stylesheets, libraries, etc.) into layers. Importing stylesheets into a layer as the first declaration in your CSS demotes their precedence, and author-defined layers, defined later in your CSS, will have higher precedence. The `!important` flag should only be used sparingly, if ever, to guard required styles against later overrides, in the first declared layer.
 
 Styles that are transitioning take precedence over all important styles, no matter who or how they are declared.
 
@@ -343,7 +343,7 @@ Finally, {{cssxref("@charset")}} obeys specific algorithms and isn't affected by
 
 Presentational attributes are attributes in the source document that can affect styling. For example, when included, the deprecated `align` attribute sets the alignment on several HTML elements and the `fill` attribute defines the color used to paint SVG shapes and text and defines the final state for SVG animations. While they are author styles, presentational attributes do not participate in the cascade.
 
-If the HTML presentation attribute is supported by the user agent, valid presentational attributes included in HTML are translated to the corresponding CSS rules, such as the {{cssxref("align")}} or `fill` property (all SVG presentation attributes can be used as a CSS property) inserted in the author stylesheet prior to any other styles with a specificity equal to `0`.
+If the HTML presentation attribute is supported by the user agent, valid presentational attributes included in HTML and SVG, such as the [`align`](/en-US/docs/Web/HTML/Element/img#align) or [`fill`](/en-US/docs/Web/SVG/Attribute/fill) attributes, are translated to the corresponding CSS rules (all SVG presentation attributes are supported as CSS properties) and inserted in the author stylesheet prior to any other styles with a specificity equal to `0`.
 
 Presentational attributes cannot be declared `!important`.
 
@@ -404,22 +404,11 @@ After your content has finished altering styles, it may find itself in a situati
 
 ## See also
 
-- [A very simple introduction to the CSS cascade](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-- CSS key concepts:
-  - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
-  - [At-rules](/en-US/docs/Web/CSS/At-rule)
-  - [Comments](/en-US/docs/Web/CSS/Comments)
-  - [Specificity](/en-US/docs/Web/CSS/Specificity)
-  - [Inheritance](/en-US/docs/Web/CSS/Inheritance)
-  - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
-  - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
-  - [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-  - Values
-    - [Initial values](/en-US/docs/Web/CSS/initial_value)
-    - [Computed values](/en-US/docs/Web/CSS/computed_value)
-    - [Used values](/en-US/docs/Web/CSS/used_value)
-    - [Actual values](/en-US/docs/Web/CSS/actual_value)
-  - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
-  - [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
-  - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
+- [Building blocks: the CSS cascade](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+- [Building blocks: cascade layers](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers)
+- [CSS cascade and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
+- [CSS syntax](/en-US/docs/Web/CSS/Syntax)
+- [Specificity](/en-US/docs/Web/CSS/Specificity)
+- [Inheritance](/en-US/docs/Web/CSS/Inheritance)
+- [At-rules](/en-US/docs/Web/CSS/At-rule)
+- [Initial](/en-US/docs/Web/CSS/initial_value), [computed](/en-US/docs/Web/CSS/computed_value), [used](/en-US/docs/Web/CSS/used_value), and [actual](/en-US/docs/Web/CSS/actual_value) values

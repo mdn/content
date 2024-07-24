@@ -46,8 +46,8 @@ These properties are defined on `WeakMap.prototype` and shared by all `WeakMap` 
 
 - {{jsxref("Object/constructor", "WeakMap.prototype.constructor")}}
   - : The constructor function that created the instance object. For `WeakMap` instances, the initial value is the {{jsxref("WeakMap/WeakMap", "WeakMap")}} constructor.
-- `WeakMap.prototype[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"WeakMap"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+- `WeakMap.prototype[Symbol.toStringTag]`
+  - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"WeakMap"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 
@@ -198,7 +198,7 @@ thing.showPrivate();
 
 ### Associating metadata
 
-A {{jsxref("WeakMap")}} can be used to associate metadata with an object, without affecting the lifetime of the object itself. This is very similar to the private members example, since private members are also modelled as external metadata that doesn't participate in [prototypical inheritance](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
+A `WeakMap` can be used to associate metadata with an object, without affecting the lifetime of the object itself. This is very similar to the private members example, since private members are also modelled as external metadata that doesn't participate in [prototypical inheritance](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
 This use case can be extended to already-created objects. For example, on the web, we may want to associate extra data with a DOM element, which the DOM element may access later. A common approach is to attach the data as a property:
 

@@ -580,7 +580,7 @@ Let's walk through the most interesting parts of the example. We won't look at i
    }
    ```
 
-3. The following snippet is taken from inside `fetchVideoFromNetwork()` — here we fetch MP4 and WebM versions of the video using two separate {{domxref("fetch()")}} requests. We then use the {{domxref("Response.blob()")}} method to extract each response's body as a blob, giving us an object representation of the videos that can be stored and displayed later on.
+3. The following snippet is taken from inside `fetchVideoFromNetwork()` — here we fetch MP4 and WebM versions of the video using two separate {{domxref("Window/fetch", "fetch()")}} requests. We then use the {{domxref("Response.blob()")}} method to extract each response's body as a blob, giving us an object representation of the videos that can be stored and displayed later on.
 
    We have a problem here though — these two requests are both asynchronous, but we only want to try to display or store the video when both promises have fulfilled. Fortunately there is a built-in method that handles such a problem — {{jsxref("Promise.all()")}}. This takes one argument — references to all the individual promises you want to check for fulfillment placed in an array — and returns a promise which is fulfilled when all the individual promises are fulfilled.
 
@@ -732,7 +732,7 @@ Inside the handler, we first log the URL of the requested asset. We then provide
 
 Inside this block, we use {{domxref("CacheStorage.match()")}} to check whether a matching request (i.e. matches the URL) can be found in any cache. This promise fulfills with the matching response if a match is found, or `undefined` if it isn't.
 
-If a match is found, we return it as the custom response. If not, we [fetch()](/en-US/docs/Web/API/fetch) the response from the network and return that instead.
+If a match is found, we return it as the custom response. If not, we [fetch()](/en-US/docs/Web/API/Window/fetch) the response from the network and return that instead.
 
 ```js
 self.addEventListener("fetch", (e) => {

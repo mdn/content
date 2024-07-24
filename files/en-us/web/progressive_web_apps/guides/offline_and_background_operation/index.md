@@ -398,7 +398,7 @@ The pattern for subscribing to push messages looks like this:
      - The [endpoint](/en-US/docs/Web/API/PushSubscription/endpoint) for the push service: this is how the app server knows where to send push messages.
      - The [public encryption key](/en-US/docs/Web/API/PushSubscription/getKey) that your server will use to encrypt messages to the push service.
 
-3. The app sends the endpoint and public encryption key to your server (for example, using {{domxref("fetch()")}}).
+3. The app sends the endpoint and public encryption key to your server (for example, using {{domxref("WorkerGlobalScope/fetch", "fetch()")}}).
 
 After this, the app server is able to start sending push messages.
 

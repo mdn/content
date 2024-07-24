@@ -173,7 +173,7 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
 - {{DOMxRef("Document.adoptNode()")}}
   - : Adopt node from an external document.
 - {{DOMxRef("Document.append()")}}
-  - : Inserts a set of {{domxref("Node")}} objects or string objects after the last child of the document.
+  - : Inserts a set of {{domxref("Node")}} objects or strings after the last child of the document.
 - {{DOMxRef("Document.browsingTopics()")}} {{Experimental_Inline}} {{non-standard_inline}}
   - : Returns a promise that fulfills with an array of objects representing the top topics for the user, one from each of the last three epochs. By default, the method also causes the browser to record the current page visit as observed by the caller, so the page's hostname can later be used in topics calculation. See the [Topics API](/en-US/docs/Web/API/Topics_API) for more details.
 - {{DOMxRef("Document.captureEvents()")}} {{Deprecated_Inline}}
@@ -247,7 +247,7 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
 - {{DOMxRef("Document.mozSetImageElement()")}} {{Non-standard_Inline}}
   - : Allows you to change the element being used as the background image for a specified element ID.
 - {{DOMxRef("Document.prepend()")}}
-  - : Inserts a set of {{domxref("Node")}} objects or string objects before the first child of the document.
+  - : Inserts a set of {{domxref("Node")}} objects or strings before the first child of the document.
 - {{DOMxRef("Document.querySelector()")}}
   - : Returns the first Element node within the document, in document order, that matches the specified selectors.
 - {{DOMxRef("Document.querySelectorAll()")}}

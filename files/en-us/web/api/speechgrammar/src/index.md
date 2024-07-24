@@ -10,9 +10,8 @@ browser-compat: api.SpeechGrammar.src
 
 {{APIRef("Web Speech API")}}{{SeeCompatTable}}
 
-The **`src`** property of the {{domxref("SpeechGrammar")}}
-interface sets and returns a string containing the grammar from within in the
-`SpeechGrammar` object.
+The **`src`** property of the {{domxref("SpeechGrammar")}} interface
+is used to get or set a string that contains the grammar within the `SpeechGrammar` object.
 
 ## Value
 

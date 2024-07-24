@@ -38,7 +38,7 @@ text-decoration-color: unset;
 - {{cssxref("&lt;color&gt;")}}
   - : The color of the line decoration.
 
-## Accessibility concerns
+## Accessibility
 
 It is important to ensure that the contrast ratio between the color of the text, the background the text is placed over, and the text decoration line is high enough that people experiencing low vision conditions will be able to read the content of the page. Color contrast ratio is determined by comparing the luminosity of the text and background color values.
 

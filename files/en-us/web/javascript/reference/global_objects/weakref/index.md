@@ -53,8 +53,8 @@ These properties are defined on `WeakRef.prototype` and shared by all `WeakRef` 
 
     > **Note:** This property is marked as "normative optional" in the specification, which means a conforming implementation may not expose the `constructor` property. This prevents arbitrary code from obtaining the `WeakRef` constructor and being able to observe garbage collection. However, all major engines do expose it by default.
 
-- `WeakRef.prototype[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"WeakRef"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+- `WeakRef.prototype[Symbol.toStringTag]`
+  - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"WeakRef"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 
