@@ -76,6 +76,7 @@ The `<token-list>` options include, in order:
 1. [Group naming token](#name_groups)
 2. [Grouping identifier](#grouping_identifier)
 3. [Detail tokens](#detail_tokens)
+4. [Web authorization](#web_authorization_token)
 
 #### Named groups
 
