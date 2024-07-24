@@ -257,19 +257,7 @@ The basic syntax is the same, but the font technology can be specified, and allo
 }
 ```
 
-#### Example for a font that includes both upright and italics
-
-```css
-@font-face {
-  font-family: "MyVariableFontName";
-  src: url("path/to/font/file/myvariablefont.woff2") format("woff2-variations");
-  font-weight: 125 950;
-  font-stretch: 75% 125%;
-  font-style: oblique 0deg 20deg;
-}
-```
-
-> **Note:** there is no set specific value for the upper-end degree measurement in this case; they indicate that there is an axis so the browser can know to render upright or italic (remember that italics are only on or off)
+In this case, the `normal` value indicates that this font file should be used when in a style rule the `font-family` property is `MyVariableFontName` and the [font-style](/en-US/docs/Web/CSS/font-style) property is `normal`. The `oblique 0deg` and `oblique 0deg 20deg` values, because of the `0deg`, also indicate the font has normal upright glyphs.
 
 #### Example for a font that contains only italics and no upright characters
 
@@ -283,6 +271,8 @@ The basic syntax is the same, but the font technology can be specified, and allo
 }
 ```
 
+In this case, the `italic` value indicates that this font file should be used when in a style rule the `font-family` property is `MyVariableFontName` and the [font-style](/en-US/docs/Web/CSS/font-style) property is `italic`. The `oblique 14deg` value also indicates the font has italic glyphs.
+
 #### Example for a font that contains an oblique (slant) axis
 
 ```css
@@ -294,6 +284,8 @@ The basic syntax is the same, but the font technology can be specified, and allo
   font-style: oblique 0deg 12deg;
 }
 ```
+
+In this case, the `oblique 0deg 12deg` value indicates that this font file should be used when in a style rule the `font-family` property is `MyVariableFontName` and the [font-style](/en-US/docs/Web/CSS/font-style) property is oblique with an angle between zero and 12 degrees inclusive.
 
 > **Note:** Not all browsers have implemented the full syntax for font format, so test carefully. All browsers that support variable fonts will still render them if you set the format to just the file format, rather than format-variations (i.e. `woff2` instead of `woff2-variations`), but it's best to use the proper syntax if possible.
 
