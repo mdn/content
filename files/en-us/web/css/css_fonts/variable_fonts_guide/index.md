@@ -121,7 +121,7 @@ font-style: oblique 14deg;
 font-variation-settings: "slnt" -14;
 ```
 
-Prefer the `font-style` property over `font-variation-settings` property. The `deg` keyword is not used when using the `font-variation-settings` property. Also, in the case of the `font-variation-settings` property, a positive angle means counter-clockwise slant.
+Prefer the `font-style` property over  the `font-variation-settings` property. The `deg` keyword is not used when using the `font-variation-settings` property. Also, in the case of the `font-variation-settings` property, a positive angle means a counter-clockwise slant.
 
 In the following live example, you can adjust the slant.
 
