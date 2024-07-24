@@ -61,7 +61,7 @@ if ("index" in registration) {
 
 ### Adding to the content index
 
-Here we're declaring an item in the correct format and creating an asynchronous function which uses the {{domxref('ContentIndex.add','add()')}} method to register it with the {{domxref('Content Index API','content index')}}.
+Here we're declaring an item in the correct format and creating an asynchronous function which uses the {{domxref('ContentIndex.add','add()')}} method to register it with the content index.
 
 ```js
 // our content
