@@ -72,13 +72,13 @@ Content-Type: multipart/form-data; boundary=ExampleBoundaryString
 
 ### Serving assets with correct content type
 
-In the following two example responses, JavaScript and CSS assets are served using `application/javascript` for JavaScript and `text/css` for CSS.
+In the following two example responses, JavaScript and CSS assets are served using `text/javascript` for JavaScript and `text/css` for CSS.
 The correct content type for these resources helps the browser handle them more securely and with better performance:
 
 ```http
 HTTP/1.1 200
 content-encoding: br
-content-type: application/javascript; charset=UTF-8
+content-type: text/javascript; charset=UTF-8
 vary: Accept-Encoding
 date: Fri, 21 Jun 2024 14:02:25 GMT
 content-length: 2978
