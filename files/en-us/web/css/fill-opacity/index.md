@@ -7,7 +7,7 @@ browser-compat: css.properties.fill-opacity
 
 {{CSSRef}}
 
-The **`fill-opacity`** [CSS](/en-US/docs/Web/CSS) property defines the opacity of the painting operation (color, gradient, pattern, etc.) applied to SVG shapes or text content elements to fill the element. If present, it overrides the element's {{SVGAttr("fill-opacity")}} attribute.
+The **`fill-opacity`** [CSS](/en-US/docs/Web/CSS) property defines the opacity of the painting operation (color, gradient, pattern, etc.) applied to SVG shapes or text content elements to fill the element. The property defines the opacity of the element's `fill` only; having no effect on the stroke, if any. If present, it overrides the element's {{SVGAttr("fill-opacity")}} attribute.
 
 > [!NOTE]
 > The `fill-opacity` property only applies to {{SVGElement('circle')}}, {{SVGElement('ellipse')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, and {{SVGElement('tspan')}} elements nested in an {{SVGElement("svg")}}. It doesn't apply other SVG, HTML, or pseudo-elements.
@@ -29,7 +29,7 @@ fill-opacity: unset;
 
 ### Values
 
-The {{cssxref("number")}} and {{cssxref("percentage")}} values denotes the opacity of the `file` of the element.
+The {{cssxref("number")}} and {{cssxref("percentage")}} values denotes the opacity of the `fill` of the element.
 
 - {{cssxref("number")}}
 
@@ -53,7 +53,7 @@ With `0` or `0%`, the element is fully transparent (that is, invisible). With `1
 
 ### Defining the fill opacity of SVG elements
 
-This example demonstrates the basic use case of `fill-opacity`, and how the CSS `fill-opacity` property takes precedence over the `fill-opacity` attribute.
+This example demonstrates the basic use case of `fill-opacity`, and how the CSS `fill-opacity` property takes precedence over the `fill-opacity` attribute and has no effect on any `stroke` applied a shape.
 
 #### HTML
 
@@ -75,7 +75,11 @@ We include several different SVG graphic elements; setting the `fill-opacity` at
 
 #### CSS
 
-With CSS, we use the `fill-opacity` property to override the value of the SVG {{SVGAttr("fill-opacity")}} attribute, giving each SVG element a different value. We added a {{cssxref("stroke")}} to the circle and ellipse, demonstrating that the stroke is not impacted by the `fill-opacity` property. The SVG styles, including a background image set to better enable perceiving the translucency of each element, are not shown for the sake of brevity.
+With CSS, we use the `fill-opacity` property to override the value of the SVG {{SVGAttr("fill-opacity")}} attribute, giving each SVG element a different value.
+
+We add a {{cssxref("stroke")}} to the circle and ellipse, to demonstrate that the opacity of the stroke is not impacted by the `fill-opacity` property.
+
+The SVG styles, including a background image set to better enable perceiving the translucency of each element, are not shown for the sake of brevity.
 
 ```css hidden
 svg {
