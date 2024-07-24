@@ -262,12 +262,12 @@ These properties are own properties of each `String` instance.
 - {{jsxref("String.prototype.includes()")}}
   - : Determines whether the calling string contains `searchString`.
 - {{jsxref("String.prototype.indexOf()")}}
-  - : Returns the index within the calling {{jsxref("String")}} object of the first
+  - : Returns the index within this string of the first
     occurrence of `searchValue`, or `-1` if not found.
 - {{jsxref("String.prototype.isWellFormed()")}}
   - : Returns a boolean indicating whether this string contains any [lone surrogates](#utf-16_characters_unicode_code_points_and_grapheme_clusters).
 - {{jsxref("String.prototype.lastIndexOf()")}}
-  - : Returns the index within the calling {{jsxref("String")}} object of the last
+  - : Returns the index within this string of the last
     occurrence of `searchValue`, or `-1` if not found.
 - {{jsxref("String.prototype.localeCompare()")}}
   - : Returns a number indicating whether the reference string

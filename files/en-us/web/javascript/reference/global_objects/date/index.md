@@ -248,7 +248,7 @@ These properties are defined on `Date.prototype` and shared by all `Date` instan
 - {{jsxref("Date.prototype.setSeconds()")}}
   - : Sets the seconds for a specified date according to local time.
 - {{jsxref("Date.prototype.setTime()")}}
-  - : Sets the {{jsxref("Date")}} object to the time represented by the number of milliseconds since January 1, 1970 00:00:00 UTC. Use negative numbers for times prior.
+  - : Sets the `Date` object to the time represented by the number of milliseconds since January 1, 1970 00:00:00 UTC. Use negative numbers for times prior.
 - {{jsxref("Date.prototype.setUTCDate()")}}
   - : Sets the day of the month for a specified date according to universal time.
 - {{jsxref("Date.prototype.setUTCFullYear()")}}
@@ -266,11 +266,11 @@ These properties are defined on `Date.prototype` and shared by all `Date` instan
 - {{jsxref("Date.prototype.setYear()")}} {{deprecated_inline}}
   - : Sets the year (usually 2–3 digits) for a specified date according to local time. Use {{jsxref("Date/setFullYear", "setFullYear()")}} instead.
 - {{jsxref("Date.prototype.toDateString()")}}
-  - : Returns the "date" portion of the {{jsxref("Date")}} as a human-readable string like `'Thu Apr 12 2018'`.
+  - : Returns the "date" portion of the `Date` as a human-readable string like `'Thu Apr 12 2018'`.
 - {{jsxref("Date.prototype.toISOString()")}}
   - : Converts a date to a string following the ISO 8601 Extended Format.
 - {{jsxref("Date.prototype.toJSON()")}}
-  - : Returns a string representing the {{jsxref("Date")}} using {{jsxref("Date/toISOString", "toISOString()")}}. Intended for use by {{jsxref("JSON.stringify()")}}.
+  - : Returns a string representing the `Date` using {{jsxref("Date/toISOString", "toISOString()")}}. Intended for use by {{jsxref("JSON.stringify()")}}.
 - {{jsxref("Date.prototype.toLocaleDateString()")}}
   - : Returns a string with a locality sensitive representation of the date portion of this date based on system settings.
 - {{jsxref("Date.prototype.toLocaleString()")}}
@@ -278,13 +278,13 @@ These properties are defined on `Date.prototype` and shared by all `Date` instan
 - {{jsxref("Date.prototype.toLocaleTimeString()")}}
   - : Returns a string with a locality-sensitive representation of the time portion of this date, based on system settings.
 - {{jsxref("Date.prototype.toString()")}}
-  - : Returns a string representing the specified {{jsxref("Date")}} object. Overrides the {{jsxref("Object.prototype.toString()")}} method.
+  - : Returns a string representing the specified `Date` object. Overrides the {{jsxref("Object.prototype.toString()")}} method.
 - {{jsxref("Date.prototype.toTimeString()")}}
-  - : Returns the "time" portion of the {{jsxref("Date")}} as a human-readable string.
+  - : Returns the "time" portion of the `Date` as a human-readable string.
 - {{jsxref("Date.prototype.toUTCString()")}}
   - : Converts a date to a string using the UTC timezone.
 - {{jsxref("Date.prototype.valueOf()")}}
-  - : Returns the primitive value of a {{jsxref("Date")}} object. Overrides the {{jsxref("Object.prototype.valueOf()")}} method.
+  - : Returns the primitive value of a `Date` object. Overrides the {{jsxref("Object.prototype.valueOf()")}} method.
 - [`Date.prototype[Symbol.toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Symbol.toPrimitive)
   - : Converts this `Date` object to a primitive value.
 
