@@ -2,7 +2,6 @@
 title: Column layouts
 slug: Web/CSS/Layout_cookbook/Column_layouts
 page-type: guide
-browser-compat: css.properties.flex
 ---
 
 {{CSSRef}}
@@ -15,9 +14,9 @@ You will often need to create a layout which has a number of columns, and CSS pr
 
 There are a number of design patterns you might want to achieve with your columns:
 
-- [A continuous thread of content broken up into newspaper-style columns](#a-continuous-thread-of-content--multi-column-layout).
-- [A single row of items arranged as columns, with all heights being equal](#a-single-row-of-items-with-equal-heights--flexbox).
-- [Multiple rows of columns lined up by row and column](#lining-items-up-in-rows-and-columns--grid-layout).
+- [A continuous thread of content broken up into newspaper-style columns](#a_continuous_thread_of_content_—_multi-column_layout).
+- [A single row of items arranged as columns, with all heights being equal](#a_single_row_of_items_with_equal_heights_—_flexbox).
+- [Multiple rows of columns lined up by row and column](#lining_items_up_in_rows_and_columns_—_grid_layout).
 
 ## The recipes
 
@@ -71,7 +70,7 @@ Use flexbox:
 
 ### Lining items up in rows and columns — grid layout
 
-If you want a two-dimensional grid where items line up in rows _and_ columns, then you should choose CSS Grid Layout. Similar to how flexbox works on the direct children of the flex container, grid layout works on the direct children of the grid container. Just set {{cssxref("display", "display: grid;")}} on the container. Properties set on this container — like {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}} — define how the items are distributed along rows and columns.
+If you want a two-dimensional grid where items line up in rows _and_ columns, then you should choose CSS grid layout. Similar to how flexbox works on the direct children of the flex container, grid layout works on the direct children of the grid container. Just set {{cssxref("display", "display: grid;")}} on the container. Properties set on this container — like {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}} — define how the items are distributed along rows and columns.
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/columns-grid.html", '100%', 720)}}
 
@@ -79,7 +78,7 @@ If you want a two-dimensional grid where items line up in rows _and_ columns, th
 >
 > [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/columns-grid--download.html)
 
-Use Grid:
+Use grid:
 
 - For multiple rows or columns of items.
 - When you want to be able to align the items on the block and inline axes.
@@ -88,5 +87,5 @@ Use Grid:
 ## Resources on MDN
 
 - [Guide to Multi-column Layout](/en-US/docs/Web/CSS/CSS_multicol_layout)
-- [Guide to Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout)
-- [Guide to CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout)
+- [Guide to flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout)
+- [Guide to CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout)

@@ -35,7 +35,7 @@ These articles provide guidance on selecting and configuring image types.
 - [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types)
   - : A guide to the various image file types commonly supported by web browsers including details about their individual use cases, capabilities, and compatibility factors. Additionally, this article provides guidance for selecting the best image file type for a given situation.
 - [Including `width` and `height` attributes helps avoid jank](/en-US/docs/Learn/Performance/Multimedia#rendering_strategy_preventing_jank_when_loading_images)
-  - : This changes how browsers load images so their aspect ratios are calculated by the browser early on and can later be used to reserve the display size of an image before it's loaded.
+  - : This changes how browsers load images so their {{glossary("aspect ratio", "aspect ratios")}} are calculated by the browser early on and can later be used to reserve the display size of an image before it's loaded.
 
 ## Other topics
 

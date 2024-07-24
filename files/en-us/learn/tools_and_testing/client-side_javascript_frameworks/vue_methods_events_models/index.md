@@ -255,14 +255,18 @@ In the `onSubmit` event handler of our `ToDoForm`, let's add a `todo-added` even
      data() {
        return {
          ToDoItems: [
-           { id: uniqueId("todo-"), label: "Learn Vue", done: false },
+           { id: "todo-" + nanoid(), label: "Learn Vue", done: false },
            {
-             id: uniqueId("todo-"),
+             id: "todo-" + nanoid(),
              label: "Create a Vue project with the CLI",
              done: true,
            },
-           { id: uniqueId("todo-"), label: "Have fun", done: true },
-           { id: uniqueId("todo-"), label: "Create a to-do list", done: false },
+           { id: "todo-" + nanoid(), label: "Have fun", done: true },
+           {
+             id: "todo-" + nanoid(),
+             label: "Create a to-do list",
+             done: false,
+           },
          ],
        };
      },
@@ -314,7 +318,7 @@ Now that we have the data from `ToDoForm` available in `App.vue`, we need to add
 
    ```js
    addToDo(toDoLabel) {
-     this.ToDoItems.push({id:uniqueId('todo-'), label: toDoLabel, done: false});
+     this.ToDoItems.push({id: "todo-" + nanoid(), label: toDoLabel, done: false});
    }
    ```
 

@@ -62,7 +62,7 @@ This example includes four hot pink squares, with fully opaque or semi-transpare
 
 #### CSS
 
-The hot pink background colors are created using the three-, four-, size-, and eight-value hex notations, using both uppercase and lowercase letters.
+The hot pink background colors are created using the three-, four-, six-, and eight-value hex notations, using both uppercase and lowercase letters.
 
 ```css hidden
 body {

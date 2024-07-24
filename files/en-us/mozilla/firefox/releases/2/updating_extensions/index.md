@@ -38,6 +38,6 @@ Be sure to test your extension carefully on Firefox 2 before you release it to t
 
 ## Step 4: Release
 
-Update your extension's entry on [http://addons.mozilla.org](https://addons.mozilla.org). This will ensure that users can find it.
+Update your extension's entry on [https://addons.mozilla.org](https://addons.mozilla.org). This will ensure that users can find it.
 
 In addition, if your extension provides an [`updateURL`](/en-US/Install_Manifests#updateurl) in the install manifest, be sure to update the update manifest so that the new version of your extension can be found automatically by Firefox. By doing this, the first time the user runs your extension after upgrading to Firefox 2, Firefox can offer to automatically install it for them.

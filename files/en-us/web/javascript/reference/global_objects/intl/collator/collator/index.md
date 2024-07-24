@@ -76,7 +76,7 @@ Intl.Collator(locales, options)
         The default is `"variant"` for usage `"sort"`; it's locale dependent for usage `"search"` per spec, but the core functionality of `"search"` is accent-insensitive and case-insensitive filtering, so `"base"` makes the most sense (and perhaps `"case"`).
 
     - `ignorePunctuation`
-      - : Whether punctuation should be ignored. Possible values are `true` and `false`; the default is `false`.
+      - : Whether punctuation should be ignored. Possible values are `true` and `false`. The default is `true` for Thai (`th`) and `false` for all other languages.
 
 ### Exceptions
 

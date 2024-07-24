@@ -5,6 +5,8 @@ page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#link
 ---
 
+{{AccessibilitySidebar}}
+
 A `link` widget provides an interactive reference to a resource. The target resource can be either external or local; i.e., either outside or within the current page or application.
 
 > **Note:** Where possible, it is recommended that you use a native {{HTMLElement("a")}} element rather than the `link` role, as native elements are more widely supported by user agents and assistive technology. Native {{HTMLElement("a")}} elements also support keyboard and focus requirements by default, without need for additional customization.
@@ -96,11 +98,3 @@ Using the {{HTMLElement('a')}} instead.
 - The {{HTMLElement('button')}} element
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)
 - [ARIA practices `link` role examples](https://www.w3.org/WAI/ARIA/apg/patterns/link/examples/link/)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

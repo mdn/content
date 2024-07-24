@@ -40,6 +40,10 @@ document.onbeforescriptexecute = starting;
 
 [View Live Example](https://mdn.dev/archives/media/samples/html/currentScript.html)
 
+## Specifications
+
+Not part of any specification.
+
 ## Browser compatibility
 
 {{Compat}}

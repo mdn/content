@@ -150,7 +150,7 @@ Extensions that attempt to overlay onto the "appcontent" box try to float chrome
 _Add simple changes you had to make while updating your extension to work with Firefox 3 here._
 
 - `chrome://browser/base/utilityOverlay.js` is no longer supported for security reasons. If you were previously using this, you should switch to `chrome://browser/content/utilityOverlay.js`.
-- `nsIAboutModule` implementations are now required to support the `getURIFlags` method. See [nsIAboutModule.idl](https://dxr.mozilla.org/mozilla-central/source/netwerk/protocol/about/nsIAboutModule.idl) for documentation. This affects extensions that provide new `about:` URIs. ([Firefox bug 337746](https://bugzil.la/337746))
+- `nsIAboutModule` implementations are now required to support the `getURIFlags` method. See [nsIAboutModule.idl](https://searchfox.org/mozilla-central/source/netwerk/protocol/about/nsIAboutModule.idl) for documentation. This affects extensions that provide new `about:` URIs. ([Firefox bug 337746](https://bugzil.la/337746))
 - The [`<xul:tabbrowser>`](/en-US/docs/Mozilla/Tech/XUL/tabbrowser) element is no longer part of "toolkit" ([Firefox bug 339964](https://bugzil.la/339964)). This means this element is no longer available to XUL applications and extensions. It continues to be used in the main Firefox window (browser.xul).
 - Changes to `nsISupports_proxies` and possibly to threading-related interfaces need to be documented.
 - If you use XML processing instructions, such as `<?xml-stylesheet ?>` in your XUL files, be aware of the changes made in [Firefox bug 319654](https://bugzil.la/319654):

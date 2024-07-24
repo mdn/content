@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-haspopup
 ---
 
+{{AccessibilitySidebar}}
+
 The `aria-haspopup` attribute indicates the availability and type of interactive popup element that can be triggered by the element on which the attribute is set.
 
 ## Description
@@ -85,8 +87,3 @@ Inherited into roles:
 - [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role)
 - [`dialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role)
 - [Toolbar example](https://www.w3.org/WAI/ARIA/apg/patterns/toolbar/examples/toolbar/) - W3C WAI ARIA practices
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

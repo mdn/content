@@ -80,7 +80,7 @@ To enable first-style transitions, `@starting-style` rules are needed. In the ab
 
 Setting `transition-behavior: allow-discrete` is required to transition to `display: none`. See the [`transition-behavior`](/en-US/docs/Web/CSS/transition-behavior) property for more details.
 
-## Accessibility concerns
+## Accessibility
 
 If text opacity is adjusted, it is important to ensure that the contrast ratio between the color of the text and the background the text is placed over is high enough that people experiencing low vision conditions will be able to read the content of the page.
 

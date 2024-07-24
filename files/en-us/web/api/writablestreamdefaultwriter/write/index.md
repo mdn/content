@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WritableStreamDefaultWriter.write
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`write()`** method of the
 {{domxref("WritableStreamDefaultWriter")}} interface writes a passed chunk of data to a

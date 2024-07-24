@@ -6,9 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.Permissions.query
 ---
 
-{{APIRef("Permissions API")}}
+{{APIRef("Permissions API")}}{{AvailableInWorkers}}
 
-The **`Permissions.query()`** method of the {{domxref("Permissions")}} interface returns the state of a user permission on the global scope.
+The **`query()`** method of the {{domxref("Permissions")}} interface returns the state of a user permission on the global scope.
 
 ## Syntax
 
@@ -26,7 +26,7 @@ query(permissionDescriptor)
       - : The name of the API whose permissions you want to query. Each browser supports a different set of values. You'll find Firefox values [there](https://searchfox.org/mozilla-central/source/dom/webidl/Permissions.webidl#10), Chromium values [there](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/third_party/blink/renderer/modules/permissions/permission_descriptor.idl), and WebKit values [there](https://github.com/WebKit/WebKit/blob/main/Source/WebCore/Modules/permissions/PermissionName.idl).
     - `userVisibleOnly`
       - : (Push only, not supported in Firefox — see the Browser Support section below) Indicates whether you want to show a notification for every message or be able to send silent push notifications. The default is `false`.
-    - `sysex` (Midi only)
+    - `sysex` (MIDI only)
       - : Indicates whether you need and/or receive system exclusive messages. The default is `false`.
 
 > **Note:** As of Firefox 44, the permissions for [Notifications](/en-US/docs/Web/API/Notifications_API) and [Push](/en-US/docs/Web/API/Push_API) have been merged. If permission is granted (e.g. by the user, in the relevant permissions dialog), `navigator.permissions.query()` will return `true` for both `notifications` and `push`.

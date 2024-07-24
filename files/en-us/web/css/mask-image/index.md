@@ -24,7 +24,8 @@ mask-image: linear-gradient(rgb(0 0 0 / 100%), transparent);
 mask-image: image(url(mask.png), skyblue);
 
 /* Multiple values */
-mask-image: image(url(mask.png), skyblue), linear-gradient(rgb(0 0 0 / 100%), transparent);
+mask-image: image(url(mask.png), skyblue),
+  linear-gradient(rgb(0 0 0 / 100%), transparent);
 
 /* Global values */
 mask-image: inherit;

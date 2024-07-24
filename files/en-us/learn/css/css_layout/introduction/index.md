@@ -73,7 +73,7 @@ For many of the elements on your page, the normal flow will create exactly the l
 
 The methods that can change how elements are laid out in CSS are:
 
-- **The {{cssxref("display")}} property** — Standard values such as `block`, `inline` or `inline-block` can change how elements behave in normal flow, for example, by making a block-level element behave like an inline-level element (see [Types of CSS boxes](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#block_and_inline_boxes) for more information). We also have entire layout methods that are enabled via specific `display` values, for example, [CSS Grid](/en-US/docs/Learn/CSS/CSS_layout/Grids) and [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox), which alter how child elements are laid out inside their parents.
+- **The {{cssxref("display")}} property** — Standard values such as `block`, `inline` or `inline-block` can change how elements behave in normal flow, for example, by making a block-level element behave like an inline-level element (see [Types of CSS boxes](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#block_and_inline_boxes) for more information). We also have entire layout methods that are enabled via specific `display` values, for example, [CSS grid](/en-US/docs/Learn/CSS/CSS_layout/Grids) and [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox), which alter how child elements are laid out inside their parents.
 - **Floats** — Applying a {{cssxref("float")}} value such as `left` can cause block-level elements to wrap along one side of an element, like the way images sometimes have text floating around them in magazine layouts.
 - **The {{cssxref("position")}} property** — Allows you to precisely control the placement of boxes inside other boxes. `static` positioning is the default in normal flow, but you can cause elements to be laid out differently using other values, for example, as fixed to the top of the browser viewport.
 - **Table layout** — Features designed for styling parts of an HTML table can be used on non-table elements using `display: table` and associated properties.
@@ -161,7 +161,7 @@ As a simple example, we can add the {{cssxref("flex")}} property to all of our c
 
 {{ EmbedLiveSample('Setting_the_flex_property', '300', '200') }}
 
-> **Note:** This has been a very short introduction to what is possible in Flexbox. To find out more, see our [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox) article.
+> **Note:** This has been a very short introduction to what is possible in flexbox. To find out more, see our [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox) article.
 
 ## Grid Layout
 
@@ -169,7 +169,7 @@ While flexbox is designed for one-dimensional layout, Grid Layout is designed fo
 
 ### Setting display: grid
 
-Similar to flexbox, we enable Grid Layout with its specific display value — `display: grid`. The below example uses similar markup to the flex example, with a container and some child elements. In addition to using `display: grid`, we also define some row and column _tracks_ for the parent using the {{cssxref("grid-template-rows")}} and {{cssxref("grid-template-columns")}} properties respectively. We've defined three columns, each of `1fr`, as well as two rows of `100px`. We don't need to put any rules on the child elements; they're automatically placed into the cells our grid's created.
+Similar to flexbox, we enable grid layout with its specific display value — `display: grid`. The below example uses similar markup to the flex example, with a container and some child elements. In addition to using `display: grid`, we also define some row and column _tracks_ for the parent using the {{cssxref("grid-template-rows")}} and {{cssxref("grid-template-columns")}} properties respectively. We've defined three columns, each of `1fr`, as well as two rows of `100px`. We don't need to put any rules on the child elements; they're automatically placed into the cells our grid's created.
 
 ```css hidden
 * {
@@ -255,7 +255,7 @@ Once you have a grid, you can explicitly place your items on it, rather than rel
 
 {{ EmbedLiveSample('Placing_items_on_the_grid', '300', '330') }}
 
-> **Note:** These two examples reveal just a small sample of the power of Grid layout. To learn more, see our [Grid Layout](/en-US/docs/Learn/CSS/CSS_layout/Grids) article.
+> **Note:** These two examples reveal just a small sample of the power of grid layout. To learn more, see our [Grid Layout](/en-US/docs/Learn/CSS/CSS_layout/Grids) article.
 
 The rest of this guide covers other layout methods that are less important for the main layout of your page, but still help to achieve specific tasks. By understanding the nature of each layout task you will soon find that when you look at a particular component of your design, the type of layout most suitable for it will often be clear.
 
@@ -321,7 +321,7 @@ p {
 
 {{ EmbedLiveSample('Floats', '100%', 600) }}
 
-> **Note:** Floats are fully explained in our lesson on the [float and clear](/en-US/docs/Learn/CSS/CSS_layout/Floats) properties. Prior to techniques such as Flexbox and Grid Layout, floats were used as a method of creating column layouts. You may still come across these methods on the web; we will cover these in the lesson on [legacy layout methods](/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods).
+> **Note:** Floats are fully explained in our lesson on the [float and clear](/en-US/docs/Learn/CSS/CSS_layout/Floats) properties. Prior to techniques such as flexbox and grid layout, floats were used as a method of creating column layouts. You may still come across these methods on the web; we will cover these in the lesson on [legacy layout methods](/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods).
 
 ## Positioning techniques
 
@@ -599,13 +599,11 @@ body {
 
 ## Table layout
 
-HTML tables are fine for displaying tabular data, but many years ago — before even basic CSS was supported reliably across browsers — web developers used to also use tables for entire web page layouts, putting their headers, footers, columns, etc. into various table rows and columns. This worked at the time, but it has many problems: table layouts are inflexible, very heavy on markup, difficult to debug, and semantically wrong (e.g., screen reader users have problems navigating table layouts).
+When looking at the source code on older websites, you may discover that tables have been used for laying out forms. HTML tables should be reserved for displaying tabular data. Using tables for anything other than tabular data has many problems: table layouts are inflexible, very heavy on markup, difficult to debug, and semantically wrong (e.g., screen reader users have problems navigating table layouts).
 
-The way that a table looks on a webpage when you use table markup is due to a set of CSS properties that define table layout. These same properties can also be used to lay out elements that aren't tables, a use which is sometimes described as "using CSS tables".
+The appearance of a table on a webpage when you use table markup is due to a set of CSS properties that define its layout. These same properties can also be used to lay out elements that aren't tables, a use which is sometimes described as "using CSS tables". The example below shows one such use.
 
-The example below shows one such use. It must be noted, that using CSS tables for layout should be considered a legacy method at this point, and should only be used to support old browsers that lack support for Flexbox or Grid.
-
-Let's look at an example. First, some simple markup that creates an HTML form. Each input element has a label, and we've also included a caption inside a paragraph. Each label/input pair is wrapped in a {{htmlelement("div")}} for layout purposes.
+Let's look at an example. First, some simple markup that creates an HTML form. Each input element has a label. We also included a caption inside a paragraph; though another option is using a {{htmlelement("fieldset")}} with a {{htmlelement("legend")}}. Each label/input pair is wrapped in a {{htmlelement("div")}} for layout purposes.
 
 ```html
 <form>
@@ -674,7 +672,7 @@ This gives us the following result:
 
 You can also see this example live at [css-tables-example.html](https://mdn.github.io/learning-area/css/styling-boxes/box-model-recap/css-tables-example.html) (see the [source code](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/box-model-recap/css-tables-example.html) too.)
 
-> **Note:** Table layout, unlike the other topics of this page, won't be further covered in this module due to its legacy application.
+> **Note:** Table layout, unlike the other topics of this page, won't be further covered in this module. Use [grid layout](#grid_layout) instead.
 
 ## Multi-column layout
 

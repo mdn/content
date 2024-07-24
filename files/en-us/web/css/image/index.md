@@ -25,7 +25,7 @@ The `<image>` data type can be represented with any of the following:
 CSS can handle the following kinds of images:
 
 - Images with _intrinsic dimensions_ (a natural size), like a JPEG, PNG, or other [raster format](https://en.wikipedia.org/wiki/Raster_graphics).
-- Images with _multiple intrinsic dimensions_, existing in multiple versions inside a single file, like some .ico formats. (In this case, the intrinsic dimensions will be those of the image largest in area and the aspect ratio most similar to the containing box.)
+- Images with _multiple intrinsic dimensions_, existing in multiple versions inside a single file, like some .ico formats. (In this case, the intrinsic dimensions will be those of the image largest in area and the {{glossary("aspect ratio")}} most similar to the containing box.)
 - Images with no intrinsic dimensions but with _an intrinsic aspect ratio_ between its width and height, like an SVG or other [vector format](https://en.wikipedia.org/wiki/Vector_graphics).
 - Images with _neither intrinsic dimensions, nor an intrinsic aspect ratio_, like a CSS gradient.
 
@@ -51,7 +51,7 @@ The concrete object size is calculated using the following algorithm:
 
 > **Note:** Not all browsers support every type of image on every property. See the [browser compatibility section](#browser_compatibility) for details.
 
-## Accessibility concerns
+## Accessibility
 
 Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.
 

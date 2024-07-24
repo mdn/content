@@ -407,8 +407,8 @@ div {
   transition:
     opacity 0.7s,
     scale 0.7s,
-    display 0.7s allow-discrete;
-    all 0.7s allow-discrete
+    display 0.7s allow-discrete,
+    all 0.7s allow-discrete;
   /* Equivalent to
   transition: all 0.7s allow-discrete; */
 }

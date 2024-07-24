@@ -17,21 +17,23 @@ file handle.
 ## Syntax
 
 ```js-nolint
-requestPermission(fileSystemHandlePermissionDescriptor)
+requestPermission(descriptor)
 ```
 
 ### Parameters
 
-- FileSystemHandlePermissionDescriptor {{optional_inline}}
+- `descriptor` {{optional_inline}}
 
   - : An object which specifies the permission mode to query for. Options are as follows:
 
-    - `'mode'`: Can be either `'read'` or
-      `'readwrite'`.
+    - `'mode'` {{optional_inline}}
+
+      - : Can be either `'read'` or `'readwrite'`.
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves to a {{domxref("PermissionStatus")}} object.
+{{domxref('PermissionStatus.state')}} which is one of `'granted'`,
+`'denied'` or `'prompt'`.
 
 ### Exceptions
 

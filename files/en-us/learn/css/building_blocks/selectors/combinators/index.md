@@ -57,7 +57,7 @@ The **child combinator** (`>`) is placed between two CSS selectors. It matches o
 article > p
 ```
 
-In this next example, we have an unordered list, nested inside of which is an ordered list. The child combinator selects only those `<li>` elements which are direct children of a `<ul>`, and styles them with a top border.
+In this next example, we have an ordered list ({{htmlelement("ol")}}) nested inside an unordered list ({{htmlelement("ul")}}). The child combinator selects only those `<li>` elements which are direct children of a `<ul>`, and styles them with a top border.
 
 If you remove the `>` that designates this as a child combinator, you end up with a descendant selector and all `<li>` elements will get a red border.
 

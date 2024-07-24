@@ -25,7 +25,7 @@ querySelectorAll(selectors)
 
   - : A string containing one or more selectors to match against. This
     string must be a valid [CSS selector](/en-US/docs/Web/CSS/CSS_selectors)
-    string; if it's not, a `SyntaxError` exception is thrown. See [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors) for more information about using selectors to
+    string; if it's not, a `SyntaxError` exception is thrown. See [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors) for more information about using selectors to
     identify elements. Multiple selectors may be specified by separating them using
     commas.
 
@@ -153,10 +153,10 @@ In this example the HTML contains:
 <button id="select-scope">Select with :scope</button>
 
 <div id="outer">
-  .outer
+  #outer
   <div id="subject">
-    .subject
-    <div id="inner">.inner</div>
+    #subject
+    <div id="inner">#inner</div>
   </div>
 </div>
 
@@ -221,7 +221,7 @@ When we press "Select with :scope", the `:scope` pseudo-class restricts the sele
 
 ## See also
 
-- [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+- [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
 - [Attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) in the CSS
   Guide
 - [Attribute selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors) in the MDN Learning Area

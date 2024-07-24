@@ -7,7 +7,7 @@ browser-compat: css.properties.transition-timing-function
 
 {{CSSRef}}
 
-The **`transition-timing-function`** CSS property sets how intermediate values are calculated for CSS properties being affected by a [transition effect](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions).
+The **`transition-timing-function`** [CSS](/en-US/docs/Web/CSS) property sets how intermediate values are calculated for CSS properties being affected by a [transition effect](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions).
 
 {{EmbedInteractiveExample("pages/css/transition-timing-function.html")}}
 
@@ -94,7 +94,7 @@ transition-timing-function: unset;
     - `step-end`
       - : Equal to `steps(1, jump-end)`
 
-## Accessibility concerns
+## Accessibility
 
 Some animations can be helpful such as to guide users to understand what actions are expected, to show relationships within the user interface, and to inform users as to what actions have occurred. Animations can help reduce cognitive load, prevent change blindness, and establish better recall in spatial relationships. However, some animations can be problematic for people with cognitive concerns such as Attention Deficit Hyperactivity Disorder (ADHD) and certain kinds of motion can be a trigger for Vestibular disorders, epilepsy, and migraine and Scotopic sensitivity.
 

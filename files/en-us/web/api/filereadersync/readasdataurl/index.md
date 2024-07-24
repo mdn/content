@@ -13,8 +13,7 @@ The **`readAsDataURL()`** method of the {{DOMxRef("FileReaderSync")}} interface 
 ## Syntax
 
 ```js-nolint
-readAsDataURL(File)
-readAsDataURL(Blob)
+readAsDataURL(blob)
 ```
 
 ### Parameters
@@ -26,7 +25,7 @@ readAsDataURL(Blob)
 
 A string representing the input data as a data URL.
 
-## Exceptions
+### Exceptions
 
 The following exceptions can be raised by this method:
 

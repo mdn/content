@@ -30,7 +30,7 @@ Try updating the live code below to recreate the finished example:
 
 ## Task 2
 
-In this task, we want you to use logical properties to replace `width` and `height` in order to maintain the aspect ratio of the box as it is turned vertically.
+In this task, we want you to use logical properties to replace `width` and `height` in order to maintain the {{glossary("aspect ratio")}} of the box as it is turned vertically.
 
 Your final result should look like the image below:
 

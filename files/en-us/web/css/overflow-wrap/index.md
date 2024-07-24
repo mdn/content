@@ -138,6 +138,7 @@ p {
 ## See also
 
 - {{cssxref("word-break")}}
+- {{cssxref("white-space")}}
 - {{cssxref("hyphens")}}
 - {{cssxref("text-overflow")}}
 - [Guide to wrapping and breaking text](/en-US/docs/Web/CSS/CSS_text/Wrapping_breaking_text)

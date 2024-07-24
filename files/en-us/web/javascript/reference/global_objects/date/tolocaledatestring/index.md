@@ -47,7 +47,7 @@ A string representing the date portion of the given date according to language-s
 
 In implementations with `Intl.DateTimeFormat`, this is equivalent to `new Intl.DateTimeFormat(locales, options).format(date)`, where `options` has been normalized as described above.
 
-> **Note:** Most of the time, the formatting returned by `toLocaleDateString()` is consistent. However, the output may vary with time, language, and implementation — output variations are by design and allowed by the specification. You should not compare the results of `toLocaleDateString()` to static values.
+> **Note:** Most of the time, the formatting returned by `toLocaleDateString()` is consistent. However, the output may vary between implementations, even within the same locale — output variations are by design and allowed by the specification. It may also not be what you expect. For example, the string may use non-breaking spaces or be surrounded by bidirectional control characters. You should not compare the results of `toLocaleDateString()` to hardcoded constants.
 
 ## Examples
 

@@ -93,7 +93,7 @@ To illustrate this, consider the HTML below:
 
 After loading the HTML and constructing the DOM representation of the document, the resulting DOM tree looks like this:
 
-[![Diagram of the DOM for a simple web page](simpledom.svg)](simpledom.svg)
+![Diagram of the DOM for a simple web page](simpledom.svg)
 
 In this diagram, the nodes representing HTML elements are shown in green. Each row beneath them shows the next layer of depth into the DOM tree. Blue nodes are text nodes, containing the text that gets shown onscreen. Each element's contents are linked below it in the tree, potentially spawning a series of branches below as elements include other elements and text nodes.
 

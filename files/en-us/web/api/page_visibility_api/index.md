@@ -13,7 +13,7 @@ This is especially useful for saving resources and improving performance by lett
 
 ## Concepts and usage
 
-When the user minimizes the window or switches to another tab, the API sends a {{domxref("document.visibilitychange_event", "visibilitychange")}} event to let listeners know the state of the page has changed. You can detect the event and perform some actions or behave differently. For example, if your web app is playing a video, it can pause the video when the user puts the tab into the background, and resume playback when the user returns to the tab. The user doesn't lose their place in the video, the video's soundtrack doesn't interfere with audio in the new foreground tab, and the user doesn't miss any of the video in the meantime.
+When the user minimizes the window, switches to another tab, or the document is entirely obscured by another window, the API sends a {{domxref("document.visibilitychange_event", "visibilitychange")}} event to let listeners know the state of the page has changed. You can detect the event and perform some actions or behave differently. For example, if your web app is playing a video, it can pause the video when the user puts the tab into the background, and resume playback when the user returns to the tab. The user doesn't lose their place in the video, the video's soundtrack doesn't interfere with audio in the new foreground tab, and the user doesn't miss any of the video in the meantime.
 
 Visibility states of an {{HTMLElement("iframe")}} are the same as the parent document. Hiding an `<iframe>` using CSS properties (such as {{cssxref("display", "display: none;")}}) doesn't trigger visibility events or change the state of the document contained within the frame.
 
@@ -23,7 +23,6 @@ Let's consider a few use cases for the Page Visibility API.
 
 - A site has an image carousel that shouldn't advance to the next slide unless the user is viewing the page
 - An application showing a dashboard of information doesn't want to poll the server for updates when the page isn't visible
-- A page wants to detect when it is being prerendered so it can keep accurate count of page views
 - A site wants to switch off sounds when a device is in standby mode (user pushes power button to turn screen off)
 
 Developers have historically used imperfect proxies to detect this. For example, watching for {{domxref("Window/blur_event", "blur")}} and {{domxref("Window/focus_event", "focus")}} events on the window helps you know when your page is not the active page, but it does not tell you that your page is actually hidden to the user. The Page Visibility API addresses this.
@@ -78,7 +77,15 @@ The Page Visibility API adds the following events to the {{domxref("Document")}}
 
 ### Pausing audio on page hide
 
-This example pauses audio when the user switches to a different tab, and plays when they switch back.
+This example pauses playing audio when the page is hidden and resumes playing when the page becomes visible again.
+The `<audio>` element controls allow the user to toggle between playing and paused audio.
+The boolean `playingOnHide` is used to prevent audio from playing if the page changes to a `visible` state, but the media wasn't playing on page hide.
+
+```css hidden
+audio {
+  width: 100%;
+}
+```
 
 #### HTML
 
@@ -93,23 +100,24 @@ This example pauses audio when the user switches to a different tab, and plays w
 ```js
 const audio = document.querySelector("audio");
 
-// Handle page visibility change:
-// - If the page is hidden, pause the audio
-// - If the page is shown, play the audio
+let playingOnHide = false;
+
 document.addEventListener("visibilitychange", () => {
   if (document.hidden) {
+    playingOnHide = !audio.paused;
     audio.pause();
   } else {
-    audio.play();
+    // Page became visible! Resume playing if audio was "playing on hide"
+    if (playingOnHide) {
+      audio.play();
+    }
   }
 });
 ```
 
 #### Result
 
-{{EmbedLiveSample("Pausing audio on page hide", "", 100)}}
-
-Try playing the audio, then switching to a different tab and back again.
+{{EmbedLiveSample("Pausing audio on page hide", "", 50)}}
 
 ## Specifications
 
@@ -118,3 +126,10 @@ Try playing the audio, then switching to a different tab and back again.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("Document.visibilityState")}}
+- {{domxref("Document.hidden")}}
+- [PerformanceEventTiming: Reporting the First Input Delay (FID)](/en-US/docs/Web/API/PerformanceEventTiming#reporting_the_first_input_delay_fid)
+- [Timing element visibility with the Intersection Observer API](/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility)

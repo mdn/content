@@ -192,18 +192,18 @@ The `fragment` object contains an array of objects, each of which can contain th
 
       - : One or more {{glossary("bitwise flags")}} defining the write mask to apply to the color target state. Possible flag values are:
 
-        - `GPUFlagsConstant.RED`
-        - `GPUFlagsConstant.GREEN`
-        - `GPUFlagsConstant.BLUE`
-        - `GPUFlagsConstant.ALPHA`
-        - `GPUFlagsConstant.ALL`
+        - `GPUColorWrite.RED`
+        - `GPUColorWrite.GREEN`
+        - `GPUColorWrite.BLUE`
+        - `GPUColorWrite.ALPHA`
+        - `GPUColorWrite.ALL`
 
-        If omitted, `writeMask` defaults to `GPUFlagsConstant.ALL`.
+        If omitted, `writeMask` defaults to `GPUColorWrite.ALL`.
 
         Note that multiple flags can be specified by separating values with pipe symbols, for example:
 
         ```js
-        writeMask: GPUFlagsConstant.RED | GPUFlagsConstant.ALPHA;
+        writeMask: GPUColorWrite.RED | GPUColorWrite.ALPHA;
         ```
 
 ### `multisample` object structure

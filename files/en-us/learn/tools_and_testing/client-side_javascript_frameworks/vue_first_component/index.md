@@ -307,26 +307,26 @@ Try changing `true` to `false` and back again, reloading your app in between to 
 
 Great! We now have a working checkbox where we can set the state programmatically. However, we can currently only add one `ToDoList` component to the page because the `id` is hardcoded. This would result in errors with assistive technology since the `id` is needed to correctly map labels to their checkboxes. To fix this, we can programmatically set the `id` in the component data.
 
-We can use the [lodash](https://www.npmjs.com/package/lodash) package's `uniqueid()` method to help keep the index unique. This package exports a function that takes in a string and appends a unique integer to the end of the prefix. This will be sufficient for keeping component `id`s unique.
+We can use the [nanoid](https://github.com/ai/nanoid) package to help keep the index unique. This package exports a function `nanoid()` that generates a unique string. This will be sufficient for keeping component `id`s unique.
 
 Let's add the package to our project with npm; stop your server and enter the following command into your terminal:
 
 ```bash
-npm install --save lodash.uniqueid
+npm install --save nanoid
 ```
 
-> **Note:** If you prefer yarn, you could instead use `yarn add lodash.uniqueid`.
+> **Note:** If you prefer yarn, you could instead use `yarn add nanoid`.
 
 We can now import this package into our `ToDoItem` component. Add the following line at the top of `ToDoItem.vue`'s `<script>` element:
 
 ```js
-import uniqueId from "lodash.uniqueid";
+import { nanoid } from "nanoid";
 ```
 
-Next, add an `id` field to our data property, so the component object ends up looking like so (`uniqueId()` returns the specified prefix — `todo-` — with a unique string appended to it):
+Next, add an `id` field to our data property, so the component object ends up looking like so (`nanoid()` returns a unique string with the specified prefix — `todo-`):
 
 ```js
-import uniqueId from "lodash.uniqueid";
+import { nanoid } from "nanoid";
 
 export default {
   props: {
@@ -336,7 +336,7 @@ export default {
   data() {
     return {
       isDone: this.done,
-      id: uniqueId("todo-"),
+      id: "todo-" + nanoid(),
     };
   },
 };

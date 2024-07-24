@@ -36,11 +36,7 @@ text-align: revert-layer;
 text-align: unset;
 ```
 
-The `text-align` property is specified in one of the following ways:
-
-- Using the keyword values `start`, `end`, `left`, `right`, `center`, `justify`, `justify-all`, or `match-parent`.
-- Using a `<string>` value only, in which case the other value defaults to `right`.
-- Using both a keyword value and a [`<string>`](#string) value.
+The `text-align` property is specified as a single keyword from the list below.
 
 ### Values
 
@@ -61,7 +57,7 @@ The `text-align` property is specified in one of the following ways:
 - `match-parent`
   - : Similar to `inherit`, but the values `start` and `end` are calculated according to the parent's {{cssxref("direction")}} and are replaced by the appropriate `left` or `right` value.
 
-## Accessibility concerns
+## Accessibility
 
 The inconsistent spacing between words created by justified text can be problematic for people with cognitive concerns such as Dyslexia.
 

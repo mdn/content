@@ -55,7 +55,7 @@ For TrueType or OpenType variable fonts, the `"slnt"` variation is used to imple
 
 {{EmbedGHLiveSample("css-examples/variable-fonts/oblique.html", '100%', 860)}}
 
-## Accessibility concerns
+## Accessibility
 
 Large sections of text set with a `font-style` value of `italic` may be difficult for people with cognitive concerns such as Dyslexia to read.
 

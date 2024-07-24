@@ -4,7 +4,7 @@ slug: Web/Accessibility/Understanding_WCAG/Understandable
 page-type: guide
 ---
 
-{{QuicklinksWithSubPages("Web/Accessibility/Understanding_WCAG")}}
+{{AccessibilitySidebar}}
 
 This article provides practical advice on how to write your web content so that it conforms to the success criteria outlined in the **Understandable** principle of the Web Content Accessibility Guidelines (WCAG) 2.0 and 2.1. Understandable states that information and the operation of user interface must be understandable.
 
@@ -148,7 +148,7 @@ This guideline focuses on making text content as understandable as possible.
           >Video and audio content</a
         >, and
         <a
-          href="http://www.oxfordlearnersdictionaries.com/us/about/pronunciation_english.html"
+          href="https://www.oxfordlearnersdictionaries.com/us/about/pronunciation_english.html"
           >Pronunciation Guide for English Dictionary</a
         >
       </td>

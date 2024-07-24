@@ -23,16 +23,26 @@ x -= y
 
 ## Examples
 
-### Using subtraction assignment
+### Subtraction assignment using numbers
 
 ```js
 let bar = 5;
 
 bar -= 2; // 3
-bar -= "foo"; // NaN
+```
 
+Other non-BigInt values are coerced to numbers:
+
+```js
+bar -= "foo"; // NaN
+```
+
+### Subtraction assignment using BigInts
+
+```js
 let foo = 3n;
 foo -= 2n; // 1n
+foo -= 1; // TypeError: Cannot mix BigInt and other types, use explicit conversions
 ```
 
 ## Specifications

@@ -4,9 +4,7 @@ slug: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
 page-type: guide
 ---
 
-<section id="Quick_links">
-  {{ListSubpagesForSidebar("Web/Accessibility", 1)}}
-</section>
+{{AccessibilitySidebar}}
 
 Web applications often use JavaScript to mimic desktop widgets such as menus, tree views, rich text fields, and tab panels. These widgets are typically composed of {{ HTMLElement("div") }} and {{ HTMLElement("span") }} elements that do not, by nature, offer the same keyboard functionality that their desktop counterparts do. This document describes techniques to make JavaScript widgets accessible with the keyboard.
 
@@ -148,7 +146,7 @@ To ensure that the user experience is consistent regardless of input device, key
 
 ### Ensure that the keyboard can be used to activate element
 
-To ensure that the keyboard can be used to activate elements, any handlers bound to mouse events should also be bound to keyboard events. For example, to ensure that the Enter key will activate an element, if you have an `onclick="doSomething()"`, you should bind `doSomething()` to the key down event as well: `onkeydown="return event.keyCode !== 13 || doSomething();"`.
+To ensure that the keyboard can be used to activate elements, any handlers bound to mouse events should also be bound to keyboard events. For example, to ensure that the Enter key will activate an element, if you have an `onclick="doSomething()"`, you should bind `doSomething()` to the key down event as well: `onkeydown="event.code === "Enter" && doSomething();"`.
 
 ### Always draw the focus for tabindex="-1" items and elements that receive focus programmatically
 

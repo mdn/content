@@ -25,6 +25,9 @@ A stacking context is formed, anywhere in the document, by any element in the fo
 - Element with any of the following properties with value other than `none`:
 
   - {{cssxref("transform")}}
+  - {{cssxref("scale")}}
+  - {{cssxref("rotate")}}
+  - {{cssxref("translate")}}
   - {{cssxref("filter")}}
   - {{cssxref("backdrop-filter")}}
   - {{cssxref("perspective")}}

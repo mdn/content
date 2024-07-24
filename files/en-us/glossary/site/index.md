@@ -43,5 +43,6 @@ These are the same site, or different sites if the scheme is considered:
 ## See also
 
 - [What is a URL](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
-- {{Glossary("Origin")}}
+- Related glossary terms:
+  - {{Glossary("Origin")}}
 - [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)

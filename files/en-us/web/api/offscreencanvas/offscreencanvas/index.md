@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.OffscreenCanvas.OffscreenCanvas
 ---
 
-{{APIRef("Canvas API")}}
+{{APIRef("Canvas API")}}{{AvailableInWorkers}}
 
 The **`OffscreenCanvas()`** constructor returns a newly instantiated {{domxref("OffscreenCanvas")}} object.
 

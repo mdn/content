@@ -37,7 +37,7 @@ _This interface has no parent, and doesn't inherit or implement other properties
 - {{domxref("Touch.pageX")}} {{ReadOnlyInline}}
   - : Returns the X coordinate of the touch point relative to the left edge of the document. Unlike `clientX`, this value includes the horizontal scroll offset, if any.
 - {{domxref("Touch.pageY")}} {{ReadOnlyInline}}
-  - : Returns the Y coordinate of the touch point relative to the top of the document. Unlike `clientY,` this value includes the vertical scroll offset, if any.
+  - : Returns the Y coordinate of the touch point relative to the top of the document. Unlike `clientY`, this value includes the vertical scroll offset, if any.
 - {{domxref("Touch.target")}} {{ReadOnlyInline}}
   - : Returns the {{ domxref("Element")}} on which the touch point started when it was first placed on the surface, even if the touch point has since moved outside the interactive area of that element or even been removed from the document.
 

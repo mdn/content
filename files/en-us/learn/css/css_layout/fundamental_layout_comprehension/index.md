@@ -21,7 +21,7 @@ If you have worked through this module then you will have already covered the ba
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To test comprehension of CSS layout methods using Flexbox, Grid, Floating and Positioning.
+        To test comprehension of CSS layout methods using flexbox, grid, floating and positioning.
       </td>
     </tr>
   </tbody>

@@ -24,11 +24,7 @@ iterating over.
 In this simple fragment we create a transaction, retrieve an object store, then use a
 cursor to iterate through all the records in the object store. Within each iteration we
 log the source of the cursor, which will log our {{domxref("IDBObjectStore")}} object to
-the console, something like this:
-
-```json
-IDBObjectStore {autoIncrement: false, transaction: IDBTransaction, indexNames: DOMStringList, keyPath: "albumTitle", name: "rushAlbumList"…}
-```
+the console.
 
 The cursor does not require us to select the data based
 on a key; we can just grab all of it. Also note that in each iteration of the loop,

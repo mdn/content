@@ -4,11 +4,11 @@ short-title: sanitize()
 slug: Web/API/Sanitizer/sanitize
 page-type: web-api-instance-method
 status:
-  - experimental
+  - deprecated
 browser-compat: api.Sanitizer.sanitize
 ---
 
-{{APIRef("HTML Sanitizer API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("HTML Sanitizer API")}}{{SecureContext_Header}}{{deprecated_header}}
 
 The **`sanitize()`** method of the {{domxref("Sanitizer")}} interface is used to sanitize a tree of DOM nodes, removing any unwanted elements or attributes.
 

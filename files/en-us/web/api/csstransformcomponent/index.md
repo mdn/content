@@ -7,7 +7,7 @@ browser-compat: api.CSSTransformComponent
 
 {{APIRef("CSS Typed OM")}}
 
-The **`CSSTransformComponent`** interface of the {{domxref('CSS_Object_Model#css_typed_object_model','','',' ')}} is part of the {{domxref('CSSTransformValue')}} interface.
+The **`CSSTransformComponent`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model) is part of the {{domxref('CSSTransformValue')}} interface.
 
 ## Instance properties
 

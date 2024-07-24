@@ -14,45 +14,9 @@ The deprecated **`KeyboardEvent.keyCode`** read-only property represents a syste
 
 This is usually the decimal ASCII ({{RFC(20)}}) or Windows 1252 code corresponding to the key. If the key can't be identified, this value is `0`.
 
-You should avoid using this if possible; it's been deprecated for some time. Instead, you should use {{domxref("KeyboardEvent.code")}}, if it's implemented. Unfortunately, some browsers still don't have it, so you'll have to be careful to make sure you use one which is supported on all target browsers.
+You should avoid using this if possible; it's been deprecated for some time. Instead, you should use {{domxref("KeyboardEvent.code")}} (for the physical key pressed) or {{domxref("KeyboardEvent.key")}} (for the character the key maps to). Check compatibility for either property if you target very old browsers.
 
-> **Note:** Web developers shouldn't use the `keyCode` attribute for printable characters when handling `keydown` and `keyup` events. As described above, the `keyCode` attribute is not useful for printable characters, especially those input with the <kbd>Shift</kbd> or <kbd>Alt</kbd> key pressed. When implementing a shortcut key handler, the {{domxref("Element/keypress_event", "keypress")}} event is usually better (at least when Gecko is the runtime in use).
-
-## Examples
-
-```js
-window.addEventListener(
-  "keydown",
-  (event) => {
-    if (event.defaultPrevented) {
-      return; // Should do nothing if the default action has been cancelled
-    }
-
-    let handled = false;
-    if (event.key !== undefined) {
-      // Handle the event with KeyboardEvent.key
-      handled = true;
-    } else if (event.keyCode !== undefined) {
-      // Handle the event with KeyboardEvent.keyCode
-      handled = true;
-    }
-
-    if (handled) {
-      // Suppress "double action" if event handled
-      event.preventDefault();
-    }
-  },
-  true,
-);
-```
-
-## Specifications
-
-{{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
+> **Note:** Web developers shouldn't use the `keyCode` attribute for printable characters when handling `keydown` and `keyup` events. As described above, the `keyCode` attribute is not useful for printable characters, especially those input with the <kbd>Shift</kbd> or <kbd>Alt</kbd> key pressed.
 
 ## Value of keyCode
 
@@ -74,11 +38,11 @@ Firefox gets `keyCode` values from {{Glossary("ASCII")}} characters inputtable b
 6. If the pressed key inputs a different ASCII character with a Shift key modifier, use a keycode for it.
 7. Otherwise, i.e., pressed key inputs a unicode character:
 
-   1. If the keyboard layout is ASCII-capable (i.e., can input ASCII alphabets), use 0 or compute with [the following additional rules](#keycode_of_punctuation_keys_on_some_keyboard_layout).
+   1. If the keyboard layout is ASCII-capable (i.e., can input ASCII alphabets), use 0 or compute with the following additional rules.
    2. Otherwise, i.e., the keyboard layout isn't ASCII capable, use the ASCII capable keyboard layout installed on the environment with the highest priority:
 
       1. If the pressed key on the alternative keyboard layout inputs an ASCII alphabetic or numeric character, use a keycode for it.
-      2. Otherwise, use 0 or compute with [the following additional rules](#keycode_of_punctuation_keys_on_some_keyboard_layout).
+      2. Otherwise, use 0 or compute with the following additional rules.
 
 Gecko sets `keyCode` values of punctuation keys as far as possible (when points 7.1 or 7.2 in the above list are reached) with the following rules:
 
@@ -3298,6 +3262,42 @@ Gecko defines a lot of `keyCode` values in `KeyboardEvent` for making the mappin
     </tr>
   </tbody>
 </table>
+
+## Examples
+
+```js
+window.addEventListener(
+  "keydown",
+  (event) => {
+    if (event.defaultPrevented) {
+      return; // Should do nothing if the default action has been cancelled
+    }
+
+    let handled = false;
+    if (event.key !== undefined) {
+      // Handle the event with KeyboardEvent.key
+      handled = true;
+    } else if (event.keyCode !== undefined) {
+      // Handle the event with KeyboardEvent.keyCode
+      handled = true;
+    }
+
+    if (handled) {
+      // Suppress "double action" if event handled
+      event.preventDefault();
+    }
+  },
+  true,
+);
+```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ### OEM specific keys on Windows
 

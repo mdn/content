@@ -38,15 +38,18 @@ function reportDisplays() {
       const cap = display.capabilities;
       // cap is a VRDisplayCapabilities object
       const listItem = document.createElement("li");
-      listItem.innerHTML =
-        `<strong>Display ${i + 1}</strong><br>` +
-        `VR Display ID: ${display.displayId}<br>` +
-        `VR Display Name: ${display.displayName}<br>` +
-        `Display can present content: ${cap.canPresent}<br>` +
-        `Display is separate from the computer's main display: ${cap.hasExternalDisplay}<br>` +
-        `Display can return position info: ${cap.hasPosition}<br>` +
-        `Display can return orientation info: ${cap.hasOrientation}<br>` +
-        `Display max layers: ${cap.maxLayers}`;
+      listItem.innerText = `
+VR Display ID: ${display.displayId}
+VR Display Name: ${display.displayName}
+Display can present content: ${cap.canPresent}
+Display is separate from the computer's main display: ${cap.hasExternalDisplay}
+Display can return position info: ${cap.hasPosition}
+Display can return orientation info: ${cap.hasOrientation}
+Display max layers: ${cap.maxLayers}`;
+      listItem.insertBefore(
+        document.createElement("strong"),
+        listItem.firstChild,
+      ).textContent = `Display ${i + 1}`;
       list.appendChild(listItem);
     });
   });

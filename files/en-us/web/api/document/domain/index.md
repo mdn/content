@@ -41,7 +41,7 @@ there are some exceptions:
 
 - If the page has an opaque {{glossary("origin")}}, e.g. for a page with a [data URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs), then it will
   return the empty string.
-- If the `document.domain` [setter](#setter) has been used, then
+- If the `document.domain` [setter](#setting_the_domain) has been used, then
   it will return the value that was set.
 
 Although the getter is not dangerous in the same way that the setter is, it is likely
@@ -56,7 +56,7 @@ For the URL `https://developer.mozilla.org/en-US/docs/Web`,
 `currentHostname` is also the string "`developer.mozilla.org`".
 Other alternatives that provide slightly different information are
 {{domxref("Location.host")}}, which includes the port, and
-{{domxref("origin")}}, which provides the full origin.
+{{domxref("Window.origin")}}, which provides the full origin.
 
 ### Setting the domain
 
@@ -156,4 +156,4 @@ Affected APIs include (but are not limited to):
 - [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)
 - {{domxref("Location.hostname")}}
 - {{domxref("Location.host")}}
-- {{domxref("origin")}}
+- {{domxref("Window.origin")}}

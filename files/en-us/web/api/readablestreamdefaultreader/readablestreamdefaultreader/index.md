@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.ReadableStreamDefaultReader.ReadableStreamDefaultReader
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`ReadableStreamDefaultReader()`**
 constructor creates and returns a `ReadableStreamDefaultReader` object

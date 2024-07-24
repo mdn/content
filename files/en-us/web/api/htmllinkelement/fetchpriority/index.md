@@ -58,3 +58,8 @@ document.head.appendChild(preloadLink);
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("HTMLImageElement.fetchPriority")}}
+- {{domxref("HTMLScriptElement.fetchPriority")}}

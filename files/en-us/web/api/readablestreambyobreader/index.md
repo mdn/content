@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.ReadableStreamBYOBReader
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The `ReadableStreamBYOBReader` interface of the [Streams API](/en-US/docs/Web/API/Streams_API) defines a reader for a {{domxref("ReadableStream")}} that supports zero-copy reading from an underlying byte source.
 It is used for efficient copying from underlying sources where the data is delivered as an "anonymous" sequence of bytes, such as files.

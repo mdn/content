@@ -27,6 +27,13 @@ _This interface provides the following properties._
 - {{domxref("ClipboardItem.presentationStyle", "presentationStyle")}} {{ReadOnlyInline}}
   - : Returns one of the following: `"unspecified"`, `"inline"` or `"attachment"`.
 
+## Static methods
+
+_This interface defines the following methods._
+
+- {{domxref("ClipboardItem.supports_static", "ClipboardItem.supports()")}}
+  - : Checks whether a given {{Glossary("MIME type")}} is supported by the clipboard. This enables a website to detect whether a MIME type is supported by the clipboard before attempting to write data.
+
 ## Instance methods
 
 _This interface defines the following methods._
@@ -38,21 +45,25 @@ _This interface defines the following methods._
 
 ### Writing to the clipboard
 
-Here we're writing a new {{domxref("ClipboardItem.ClipboardItem", "ClipboardItem()")}} to the system clipboard by requesting a PNG image using the {{domxref("Fetch API")}}, and in turn, the {{domxref("Response.blob()", "responses' blob()")}} method, to create the new `ClipboardItem`.
+Here we use {{domxref("ClipboardItem.supports_static", "supports()")}} to check whether the `image/svg+xml` MIME data type is supported.
+If it is, we fetch the image with the ["Fetch API"](/en-US/docs/Web/API/Fetch_API), and then read it into a {{domxref("Blob")}}, which we can use to create a `ClipboardItem` that is written to the clipboard.
 
 ```js
 async function writeClipImg() {
   try {
-    const imgURL = "/myimage.png";
-    const data = await fetch(imgURL);
-    const blob = await data.blob();
-
-    await navigator.clipboard.write([
-      new ClipboardItem({
-        [blob.type]: blob,
-      }),
-    ]);
-    console.log("Fetched image copied.");
+    if (ClipboardItem.supports("image/svg+xml")) {
+      const imgURL = "/myimage.svg";
+      const data = await fetch(imgURL);
+      const blob = await data.blob();
+      await navigator.clipboard.write([
+        new ClipboardItem({
+          [blob.type]: blob,
+        }),
+      ]);
+      console.log("Fetched image copied.");
+    } else {
+      console.log("SVG images are not supported by the clipboard.");
+    }
   } catch (err) {
     console.error(err.name, err.message);
   }

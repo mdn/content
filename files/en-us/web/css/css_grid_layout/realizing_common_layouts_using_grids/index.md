@@ -6,7 +6,7 @@ page-type: guide
 
 {{CSSRef}}
 
-To round off this set of guides to CSS Grid Layout, we're going to walk through a few different layouts, which demonstrate some of the different techniques you can use when designing with grid layout. We will look at an example using [grid-template-areas](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_template_areas), a typical 12-column flexible grid system, and also a product listing using auto-placement. As you can see from this set of examples, there is often more than one way to achieve the result you want with grid layout. Choose the method you find most helpful for the problems that you are solving and the designs that you need to implement.
+To round off this set of guides to CSS grid layout, we're going to walk through a few different layouts, which demonstrate some of the different techniques you can use when designing with grid layout. We will look at an example using [grid-template-areas](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_template_areas), a typical 12-column flexible grid system, and also a product listing using auto-placement. As you can see from this set of examples, there is often more than one way to achieve the result you want with grid layout. Choose the method you find most helpful for the problems that you are solving and the designs that you need to implement.
 
 ## A responsive layout with 1 to 3 fluid columns using `grid-template-areas`
 
@@ -158,7 +158,7 @@ This is a simple example but demonstrates how we can use a grid layout to rearra
 
 ## A flexible 12-column layout
 
-If you have been working with one of the many frameworks or grid systems you may be accustomed to laying out your site on a 12- or 16-column flexible grid. We can create this type of system using CSS Grid Layout. As a simple example, let's create a 12-column flexible grid that has 12 `1fr`-unit column tracks, they all have a start line named `col-start`. This means that we will have twelve grid lines named `col-start`.
+If you have been working with one of the many frameworks or grid systems you may be accustomed to laying out your site on a 12- or 16-column flexible grid. We can create this type of system using CSS grid layout. As a simple example, let's create a 12-column flexible grid that has 12 `1fr`-unit column tracks, they all have a start line named `col-start`. This means that we will have twelve grid lines named `col-start`.
 
 ```css hidden
 .wrapper {
@@ -224,11 +224,11 @@ We can then place these on the grid using the named lines, and also the span key
 
 As described in the [guide to named lines](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines), we are using the named line to place our item. As we have 12 lines all with the same name we use the name, and then the index of the line. You could also use the line index itself if you prefer and avoid using named lines at all.
 
-Rather than setting the end line number, I have chosen to say how many tracks this element should span, using the `span` keyword. I like this approach as when working with a multiple-column layout system we usually think of blocks in terms of the number of tracks of the grid they span, and adjust that for different breakpoints. To see how the blocks align themselves to the tracks, use the [Firefox Grid Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html). It clearly demonstrates how our items are placed.
+Rather than setting the end line number, I have chosen to say how many tracks this element should span, using the `span` keyword. I like this approach as when working with a multiple-column layout system we usually think of blocks in terms of the number of tracks of the grid they span, and adjust that for different breakpoints. To see how the blocks align themselves to the tracks, use the [Firefox grid inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html). It clearly demonstrates how our items are placed.
 
 ![Showing the items placed on the grid with grid tracks highlighted.](11-grid-inspector-12col.png)
 
-There are some key differences with how a grid layout works over the grid systems you may have used previously. As you can see, we do not need to add any markup to create a row, grid systems need to do this to stop elements popping up into the row above. With CSS Grid Layout, we can place things into rows, with no danger of them rising up into the row above if it is left empty. Due to this _strict_ column and row placement we can also easily leave white space in our layout. We also don't need special classes to pull or push things, to indent them into the grid. All we need to do is specify the start and end line for the item.
+There are some key differences with how a grid layout works over the grid systems you may have used previously. As you can see, we do not need to add any markup to create a row, grid systems need to do this to stop elements popping up into the row above. With CSS grid layout, we can place things into rows, with no danger of them rising up into the row above if it is left empty. Due to this _strict_ column and row placement we can also easily leave white space in our layout. We also don't need special classes to pull or push things, to indent them into the grid. All we need to do is specify the start and end line for the item.
 
 ## Building a layout using the 12-column system
 
@@ -370,7 +370,7 @@ Something to note as we create this layout is that we haven't needed to explicit
 
 ## A product listing with auto-placement
 
-Many layouts are essentially sets of "cards" – product listings, image galleries, and so on. A grid can make it very easy to create these listings in a way that is responsive without needing to add [media queries](/en-US/docs/Web/CSS/CSS_media_queries) to make it so. In this next example I'm combining CSS Grid and Flexbox Layouts to make a simple product listing layout.
+Many layouts are essentially sets of "cards" – product listings, image galleries, and so on. A grid can make it very easy to create these listings in a way that is responsive without needing to add [media queries](/en-US/docs/Web/CSS/CSS_media_queries) to make it so. In this next example I'm combining CSS grid and flexbox layouts to make a simple product listing layout.
 
 The markup for my listing is an unordered list of items. Each item contains a heading, some text of varying height, and a call to action link.
 

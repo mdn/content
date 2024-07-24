@@ -8,9 +8,11 @@ browser-compat: api.Document.hasStorageAccess
 
 {{APIRef("Storage Access API")}}
 
-The **`hasStorageAccess()`** method of the {{domxref("Document")}} interface returns a {{jsxref("Promise")}} that resolves with a boolean value indicating whether the document has access to [third-party](/en-US/docs/Web/HTTP/Cookies#third-party_cookies), [unpartitioned](/en-US/docs/Web/API/Storage_Access_API#unpartitioned_versus_partitioned_cookies) cookies.
+The **`hasStorageAccess()`** method of the {{domxref("Document")}} interface returns a {{jsxref("Promise")}} that resolves with a boolean value indicating whether the document has access to [third-party](/en-US/docs/Web/Privacy/Third-party_cookies), [unpartitioned](/en-US/docs/Web/API/Storage_Access_API#unpartitioned_versus_partitioned_cookies) cookies.
 
 This method is part of the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
+
+> **Note:** This method is another name for {{DOMxRef("Document.hasUnpartitionedCookieAccess()")}}. There are no current plans to remove this method in favor of {{DOMxRef("Document.hasUnpartitionedCookieAccess()")}}.
 
 ## Syntax
 
@@ -44,9 +46,11 @@ The result returned by this method can be inaccurate in a couple of circumstance
 document.hasStorageAccess().then((hasAccess) => {
   if (hasAccess) {
     // storage access has been granted already.
+    console.log("cookie access granted");
   } else {
     // storage access hasn't been granted already;
     // you may want to call requestStorageAccess().
+    console.log("cookie access denied");
   }
 });
 ```
@@ -63,6 +67,6 @@ document.hasStorageAccess().then((hasAccess) => {
 
 ## See also
 
-- {{domxref("Document.requestStorageAccess()")}}, {{domxref("Document.requestStorageAccessFor()")}}
+- {{domxref("Document.hasUnpartitionedCookieAccess()")}}, {{domxref("Document.requestStorageAccess()")}}, {{domxref("Document.requestStorageAccessFor()")}}
 - [Using the Storage Access API](/en-US/docs/Web/API/Storage_Access_API/Using)
 - [Introducing Storage Access API](https://webkit.org/blog/8124/introducing-storage-access-api/) (WebKit blog)

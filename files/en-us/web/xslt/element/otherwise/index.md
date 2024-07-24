@@ -8,7 +8,7 @@ page-type: xslt-element
 
 The `<xsl:otherwise>` element is used to define the action that should be taken when none of the `<xsl:when>` conditions apply. It is similar to the `else` or `default` case in other programming languages.
 
-### Syntax
+## Syntax
 
 ```xml
 <xsl:otherwise>
@@ -28,10 +28,10 @@ None.
 
 Subinstruction, must appear as the last child of an `<xsl:choose>` element, within a template.
 
-### Defined
+## Specifications
 
 XSLT, section 9.2
 
-### Gecko support
+## Gecko support
 
 Supported.

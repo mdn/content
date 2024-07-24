@@ -5,6 +5,8 @@ page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#slider
 ---
 
+{{AccessibilitySidebar}}
+
 The `slider` role defines an input where the user selects a value from within a given range.
 
 ## Description
@@ -209,11 +211,3 @@ It is recommended to use a native {{HTMLElement("input")}} of type `range`, [`<i
   - [Horizontal Multi-Thumb Slider](https://www.w3.org/TR/2019/WD-wai-aria-practices-1.2-20191218/examples/slider/multithumb-slider.html)
   - [Horizontal Slider](https://www.w3.org/TR/2019/WD-wai-aria-practices-1.2-20191218/examples/slider/slider-1.html)
   - [Slider with `aria-orientation` and `aria-valuetext`](https://www.w3.org/TR/2019/WD-wai-aria-practices-1.2-20191218/examples/slider/slider-2.html)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

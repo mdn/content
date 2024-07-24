@@ -37,7 +37,7 @@ The underlying value is an object. When setting this object, all properties are 
     Hosts `localhost`, `127.0.0.1`, and `[::1]` are never proxied.
 
 - `proxyDNS` {{optional_inline}}
-  - : `boolean`. Proxy DNS when using SOCKS5. Defaults to `false`.
+  - : `boolean`. Whether to proxy DNS when using a SOCKS proxy. Defaults to `true` when using SOCKS5 and `false` when using SOCKS4. Prior to Firefox 128, it defaulted to `false` for SOCKS4 and SOCKS5.
 - `proxyType` {{optional_inline}}
   - : `string`. The type of proxy to use. This may take: "none", "autoDetect", "system", "manual", "autoConfig". Defaults to "system".
 - `socks` {{optional_inline}}

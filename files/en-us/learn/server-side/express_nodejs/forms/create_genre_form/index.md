@@ -71,7 +71,9 @@ exports.genre_create_post = [
     } else {
       // Data from form is valid.
       // Check if Genre with same name already exists.
-      const genreExists = await Genre.findOne({ name: req.body.name }).exec();
+      const genreExists = await Genre.findOne({ name: req.body.name })
+        .collation({ locale: "en", strength: 2 })
+        .exec();
       if (genreExists) {
         // Genre exists, redirect to its detail page.
         res.redirect(genreExists.url);

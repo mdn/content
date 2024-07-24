@@ -628,10 +628,8 @@ The HTML for the example is shown below.
       From the fiery warmth of reds to the calming coolness of blues, they bring
       unparalleled richness to our world. Colors stir emotions, ignite
       creativity, and shape perceptions, acting as a universal language of
-      expression. Whether in a breathtaking sunset, a bustling marketplace, or
-      an artist's canvas, colors transcend the visual spectrum, turning the
-      ordinary into the extraordinary. In their brilliance, colors create a
-      visually enchanting tapestry that invites admiration and sparks joy.
+      expression. In their brilliance, colors create a visually enchanting
+      tapestry that invites admiration and sparks joy.
     </p>
   </section>
   <form>
@@ -666,42 +664,31 @@ html {
   font-family: sans-serif;
 }
 
-body {
-  margin: 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 main {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
+  width: 80vw;
+  margin: 2rem auto;
 }
 
-form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 40px;
-  width: 50%;
-  padding: 10px;
-}
-
-label {
-  padding-right: 10px;
+h1 {
+  text-align: center;
+  margin: 0;
+  color: black;
+  border-radius: 16px 16px 0 0;
+  font-size: 3rem;
+  letter-spacing: -1px;
 }
 
 p {
   line-height: 1.5;
   margin: 0;
-  padding: 20px;
+  padding: 1.2rem;
 }
 
-main {
-  width: 600px;
+form {
+  width: fit-content;
+  display: flex;
+  margin: 2rem auto;
+  padding: 0.4rem;
 }
 ```
 
@@ -715,7 +702,7 @@ main {
   --bg-color: lch(from var(--base-color) calc(l + 40) c h);
   --complementary-color: lch(from var(--base-color) l c calc(h + 180));
 
-  background: radial-gradient(ellipse at center, white 40%, var(--base-color));
+  background: radial-gradient(ellipse at center, white 20%, var(--base-color));
 }
 
 /* Use @supports to add in support for --complementary-color with old
@@ -737,14 +724,7 @@ section {
 }
 
 h1 {
-  text-align: center;
-  margin: 0;
-  padding: 20px;
   background-color: var(--base-color);
-  color: black;
-  border-radius: 16px 16px 0 0;
-  font-size: 3rem;
-  letter-spacing: -1px;
   text-shadow:
     1px 1px 1px var(--complementary-color),
     -1px -1px 1px var(--complementary-color),
@@ -759,7 +739,7 @@ form {
 }
 
 input {
-  accent-color: var(--base-color);
+  accent-color: var(--complementary-color);
 }
 ```
 
@@ -774,7 +754,6 @@ const slider = document.getElementById("hue-adjust");
 slider.addEventListener("input", setHue);
 
 function setHue(e) {
-  console.log("hue changed");
   rootElem.style.setProperty("--hue", e.target.value);
 }
 ```
@@ -783,7 +762,7 @@ function setHue(e) {
 
 The output is shown below. Relative CSS colors are being used here to control the color scheme of an entire UI, which can be adjusted live as a single value is modified.
 
-{{ EmbedLiveSample("Live UI color scheme updater", "100%", "500") }}
+{{ EmbedLiveSample("Live UI color scheme updater", "100%", "400") }}
 
 ## See also
 

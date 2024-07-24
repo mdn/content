@@ -6,9 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.CookieStore.getAll
 ---
 
-{{securecontext_header}}{{APIRef("Cookie Store API")}} {{AvailableInWorkers}}
+{{securecontext_header}}{{APIRef("Cookie Store API")}}{{AvailableInWorkers("window_and_service")}}
 
-The **`getAll()`** method of the {{domxref("CookieStore")}} interface returns a list of cookies that match the name or options passed to it. Passing no parameters will return all cookies for the current context.
+The **`getAll()`** method of the {{domxref("CookieStore")}} interface returns a list of cookies that match the `name` or `options` passed to it. Passing no parameters will return all cookies for the current context.
 
 ## Syntax
 
@@ -37,7 +37,7 @@ Or
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with an array of objects representing cookies that match the given name or options.
+A {{jsxref("Promise")}} that resolves with an array of objects representing cookies that match the given `name` or `options`.
 
 Each object contains the following properties:
 

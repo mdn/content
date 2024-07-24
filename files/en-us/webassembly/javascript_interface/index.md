@@ -34,7 +34,7 @@ The primary uses for the `WebAssembly` object are:
 - [`WebAssembly.Module()`](/en-US/docs/WebAssembly/JavaScript_interface/Module/Module)
   - : Contains stateless WebAssembly code that has already been compiled by the browser and can be efficiently [shared with Workers](/en-US/docs/Web/API/Worker/postMessage), and instantiated multiple times.
 - [`WebAssembly.RuntimeError()`](/en-US/docs/WebAssembly/JavaScript_interface/RuntimeError/RuntimeError)
-  - : Error type that is thrown whenever WebAssembly specifies a [trap](https://webassembly.github.io/spec/core/exec/index.html).
+  - : Error type that is thrown whenever WebAssembly specifies a [trap](https://webassembly.github.io/simd/core/intro/overview.html#trap).
 - [`WebAssembly.Table()`](/en-US/docs/WebAssembly/JavaScript_interface/Table/Table)
   - : An array-like structure representing a WebAssembly Table, which stores [references](https://webassembly.github.io/spec/core/syntax/types.html#syntax-reftype), such as function references.
 - [`WebAssembly.Tag()`](/en-US/docs/WebAssembly/JavaScript_interface/Tag/Tag)
@@ -59,10 +59,12 @@ The primary uses for the `WebAssembly` object are:
 
 ### Stream a Wasm module then compile and instantiate it
 
-The following example (see our [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/instantiate-streaming.html) demo on GitHub, and [view it live](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html) also) directly streams a Wasm module from an underlying source then compiles and instantiates it, the promise fulfilling with a `ResultObject`. Because the `instantiateStreaming()` function accepts a promise for a [`Response`](/en-US/docs/Web/API/Response) object, you can directly pass it a [`fetch()`](/en-US/docs/Web/API/fetch) call, and it will pass the response into the function when it fulfills.
+The following example (see our [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/instantiate-streaming.html) demo on GitHub, and [view it live](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html) also) directly streams a Wasm module from an underlying source then compiles and instantiates it, the promise fulfilling with a `ResultObject`. Because the `instantiateStreaming()` function accepts a promise for a [`Response`](/en-US/docs/Web/API/Response) object, you can directly pass it a [`fetch()`](/en-US/docs/Web/API/Window/fetch) call, and it will pass the response into the function when it fulfills.
 
 ```js
-const importObject = { imports: { imported_func: (arg) => console.log(arg) } };
+const importObject = {
+  my_namespace: { imported_func: (arg) => console.log(arg) },
+};
 
 WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
   (obj) => obj.instance.exports.exported_func(),

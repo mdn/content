@@ -5,6 +5,8 @@ page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#spinbutton
 ---
 
+{{AccessibilitySidebar}}
+
 The `spinbutton` role defines a type of range that expects the user to select a value from among discrete choices.
 
 ## Description
@@ -159,11 +161,3 @@ It is recommended to use the native {{HTMLElement("input")}} element of type `nu
 - Working examples:
   - [Date picker spin button example](https://www.w3.org/WAI/ARIA/apg/patterns/spinbutton/examples/datepicker-spinbuttons/)
   - [Toolbar example: font-size picker](https://www.w3.org/WAI/ARIA/apg/patterns/toolbar/examples/toolbar/)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

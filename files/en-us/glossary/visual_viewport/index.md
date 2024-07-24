@@ -13,5 +13,6 @@ The portion of the {{Glossary("viewport")}} that is currently visible is called 
 - [Visual Viewport API](/en-US/docs/Web/API/Visual_Viewport_API)
 - [Viewport](https://en.wikipedia.org/wiki/Viewport) on Wikipedia
 - [A tale of two viewports](https://www.quirksmode.org/mobile/viewports.html) (Quirksmode)
-- {{Glossary("Viewport")}} in the MDN Glossary
-- {{Glossary("Layout viewport")}} in the MDN Glossary
+- Related glossary terms:
+  - {{Glossary("Viewport")}}
+  - {{Glossary("Layout viewport")}}

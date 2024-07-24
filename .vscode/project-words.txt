@@ -58,7 +58,9 @@ okan
 Oklab
 oklch
 Paciello
+Pinia
 prophoto
+reprioritize
 rgba
 ripgrep
 rustc

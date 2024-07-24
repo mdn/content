@@ -12,11 +12,11 @@ WebAssembly has an S-expression-based textual representation, an intermediate fo
 
 ## A first look at the text format
 
-Let's look at a simple example of this — the following program imports a function called `imported_func` from a module called `imports`, and exports a function called `exported_func`:
+Let's look at a simple example of this — the following program imports a function called `imported_func` from a module called `my_namespace`, and exports a function called `exported_func`:
 
 ```wasm
 (module
-  (func $i (import "imports" "imported_func") (param i32))
+  (func $i (import "my_namespace" "imported_func") (param i32))
   (func (export "exported_func")
     i32.const 42
     call $i

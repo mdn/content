@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.DedicatedWorkerGlobalScope.close
 ---
 
-{{APIRef("Web Workers API")}}
+{{APIRef("Web Workers API")}}{{AvailableInWorkers("dedicated")}}
 
 The **`close()`** method of the {{domxref("DedicatedWorkerGlobalScope")}} interface discards any tasks queued in the `DedicatedWorkerGlobalScope`'s event loop, effectively closing this particular scope.
 

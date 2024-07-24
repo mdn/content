@@ -6,13 +6,13 @@ page-type: web-api-instance-method
 browser-compat: api.Cache.put
 ---
 
-{{APIRef("Service Workers API")}}{{SecureContext_Header}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`put()`** method of the
 {{domxref("Cache")}} interface allows key/value pairs to be added to the current
 {{domxref("Cache")}} object.
 
-Often, you will just want to {{domxref("fetch()")}}
+Often, you will just want to {{domxref("Window/fetch", "fetch()")}}
 one or more requests, then add the result straight to your cache. In such cases you are
 better off using
 {{domxref("Cache.add","Cache.add()")}}/{{domxref("Cache.addAll","Cache.addAll()")}}, as
@@ -99,4 +99,4 @@ const cachedResponse = caches
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
-- {{domxref("caches")}}
+- {{domxref("Window.caches")}} and {{domxref("WorkerGlobalScope.caches")}}

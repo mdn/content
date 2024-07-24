@@ -296,6 +296,12 @@ URL patterns and selectors can also contain wildcard (`*`) characters, allowing 
 { "where": { "href_matches": "/user/*" } }
 ```
 
+[Search parameters (or query strings)](/en-US/docs/Web/API/URL/search) can also be targeted in `href_matches`. For example, the object below could match all same-origin URLs with a `category` search parameter (as the first or a subsequent parameter):
+
+```json
+{ "where": { "href_matches": "/*\\?*(^|&)category=*" } }
+```
+
 Any condition can be negated by placing it inside a `"not"` condition — this means that, when matched, a link _won't_ have the speculation rule applied to it, but when _not_ matched, it _will_. The following example will cause all links that _don't_ match the URL pattern `/logout` to have the rule applied to them, but not links that match `/logout`:
 
 ```json
@@ -408,7 +414,7 @@ How does this affect speculation rules? Consider the following code:
 
 What would happen in this case when the user starts a navigation to `/users?id=345` when the headers for the prefetch of `/users` have not been received yet? At this point, the browser doesn't know what the `No-Vary-Search` value will be, if anything. If there was no `No-Vary-Search` value set, and the application behavior was more like Option 1 above, the prefetch would be wasted and the browser would need to go and fetch the separate `/users?id=345` page from scratch.
 
-To solve this, we can provide a hint as to what the page author expects the `No-Vary-Search` value to be. A speculation rule can have an `"expects_no_vary_search"` field, which contains a string representation of the the expected header value:
+To solve this, we can provide a hint as to what the page author expects the `No-Vary-Search` value to be. A speculation rule can have an `"expects_no_vary_search"` field, which contains a string representation of the expected header value:
 
 ```html
 <script type="speculationrules">

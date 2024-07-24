@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.CustomEvent
 ---
 
-{{APIRef("DOM")}} {{AvailableInWorkers}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The **`CustomEvent`** interface represents events initialized by an application for any purpose.
 

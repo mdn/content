@@ -5,6 +5,8 @@ page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#log
 ---
 
+{{AccessibilitySidebar}}
+
 The `log` role is used to identify an element that creates a [live region](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) where new information is added in a meaningful order and old information may disappear.
 
 ## Description
@@ -44,11 +46,3 @@ With an area that has scrolling text, such as a stock ticker, the [`marquee`](/e
 - [ARIA: `status` role](/en-US/docs/Web/Accessibility/ARIA/Roles/status_role)
 - [ARIA: `timer` role](/en-US/docs/Web/Accessibility/ARIA/Roles/timer_role)
 - [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

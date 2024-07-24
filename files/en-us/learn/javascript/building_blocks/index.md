@@ -27,7 +27,9 @@ Before starting this module, you should have some familiarity with the basics of
 - [Function return values](/en-US/docs/Learn/JavaScript/Building_blocks/Return_values)
   - : The last essential concept you must know about a function is return values. Some functions don't return a significant value after completion, but others do. It's important to understand what their values are, how to make use of them in your code, and how to make your own custom functions return useful values.
 - [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events)
-  - : Events are actions or occurrences that happen in the system you are programming, which the system tells you about so you can respond to them in some way if desired. For example if the user clicks a button on a webpage, you might want to respond to that action by displaying an information box. In this final article we will discuss some important concepts surrounding events, and look at how they work in browsers.
+  - : Events are actions or occurrences that happen in the system you are programming, which the system tells you about so you can respond to them in some way if desired. For example if the user clicks a button on a webpage, you might want to respond to that action by displaying an information box. In this article we will discuss some important concepts surrounding events, and look at how they work in browsers.
+- [Event bubbling](/en-US/docs/Learn/JavaScript/Building_blocks/Event_bubbling)
+  - : This guide introduces the concepts of event bubbling, event capture, and event delegation, which are all about what happens when you add a listener to an element that contains another element, and an event then happens to the contained element.
 
 ## Assessments
 

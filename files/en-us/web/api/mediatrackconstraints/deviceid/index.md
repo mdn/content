@@ -3,7 +3,7 @@ title: "MediaTrackConstraints: deviceId property"
 short-title: deviceId
 slug: Web/API/MediaTrackConstraints/deviceId
 page-type: web-api-instance-property
-browser-compat: api.MediaTrackConstraints.deviceId
+browser-compat: api.MediaStreamTrack.applyConstraints.deviceId_constraint
 ---
 
 {{APIRef("Media Capture and Streams")}}

@@ -19,30 +19,29 @@ A block formatting context is created by at least one of the following:
 - Table captions (elements with {{ cssxref("display") }}`: table-caption`, which is the default for HTML table captions).
 - Anonymous table cells implicitly created by the elements with {{ cssxref("display") }}`: table`, `table-row`, `table-row-group`, `table-header-group`, `table-footer-group` (which is the default for HTML tables, table rows, table bodies, table headers, and table footers, respectively), or `inline-table`.
 - Block elements where {{ cssxref("overflow") }} has a value other than `visible` and `clip`.
-- {{ cssxref("display") }}`: flow-root`.
+- Elements with {{ cssxref("display") }}`: flow-root`.
+- {{htmlelement("button")}} elements and button {{htmlelement("input")}} types defaulting to `display: flow-root`.
 - Elements with {{ cssxref("contain") }}`: layout`, `content`, or `paint`.
 - Flex items (direct children of the element with {{ cssxref("display") }}`: flex` or `inline-flex`) if they are neither [flex](/en-US/docs/Glossary/Flex_Container) nor [grid](/en-US/docs/Glossary/Grid_Container) nor [table](/en-US/docs/Web/CSS/CSS_table) containers themselves.
 - Grid items (direct children of the element with {{ cssxref("display") }}`: grid` or `inline-grid`) if they are neither [flex](/en-US/docs/Glossary/Flex_Container) nor [grid](/en-US/docs/Glossary/Grid_Container) nor [table](/en-US/docs/Web/CSS/CSS_table) containers themselves.
 - Multicol containers (elements where {{ cssxref("column-count") }} or {{ cssxref("column-width") }} isn't `auto`, including elements with `column-count: 1`).
-- {{ cssxref("column-span") }}`: all` should always create a new formatting context, even when the `column-span: all` element isn't contained by a multicol container ([Spec change](https://github.com/w3c/csswg-drafts/commit/a8634b96900279916bd6c505fda88dda71d8ec51), [Chrome bug](https://crbug.com/709362)).
+- {{ cssxref("column-span") }}`: all`, even when the `column-span: all` element isn't contained by a multicol container.
 
-Formatting contexts affect layout, but typically, we create a new block formatting context for the positioning and clearing floats rather than changing the layout, because an element that establishes a new block formatting context will:
+Formatting contexts affect layout because an element that establishes a new block formatting context will:
 
 - contain internal floats.
 - exclude external floats.
 - suppress [margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing).
 
-> **Note:** A Flex/Grid container({{ cssxref("display") }}: flex/grid/inline-flex/inline-grid) establishes a new Flex/Grid formatting context, which is similar to block formatting context except layout. There's no floating children available inside a flex/grid container, but exclude external floats and suppress margin collapsing still works.
+Flex and grid containers, defined by setting an element's ({{ cssxref("display") }} to `flex`, `grid`, `inline-flex`, or `inline-grid`, establishes a new flex or grid formatting context. These are similar to block formatting context except there are no floating children available inside a flex or grid container, but these formatting contexts do exclude external floats and suppress margin collapsing.
 
 ## Examples
 
-### Contain internal floats
-
-Make float content and alongside content the same height.
-
 Let's have a look at a couple of these in order to see the effect creating a new BFC.
 
-In the following example, we have a floated element inside a `<div>` with a `border` applied. The content of that `<div>` has floated alongside the floated element. As the content of the float is taller than the content alongside it, the border of the `<div>` now runs through the float. As explained in the [guide to in-flow and out of flow elements](/en-US/docs/Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow), the float has been taken out of flow so the `background` and `border` of the `<div>` only contain the content and not the float.
+### Contain internal floats
+
+In the following example, we have float content that is the same height as the content alongside it. We have a floated element inside a `<div>` with a `border` applied. The content of that `<div>` has floated alongside the floated element. As the content of the float is taller than the content alongside it, the border of the `<div>` now runs through the float. As explained in the [guide to in-flow and out of flow elements](/en-US/docs/Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow), the float has been taken out of flow so the `background` and `border` of the `<div>` only contain the content and not the float.
 
 **using `overflow: auto`**
 
@@ -52,11 +51,13 @@ The problem with using `overflow` to create a new BFC is that the `overflow` pro
 
 **using `display: flow-root`**
 
-A newer value of `display` lets us create a new BFC without any other potentially problematic side-effects. Using `display: flow-root` on the containing block creates a new BFC .
+The `display: flow-root` value lets us create a new BFC without any other potentially problematic side-effects. Using `display: flow-root` on the containing block creates a new BFC .
 
 With `display: flow-root;` on the `<div>`, everything inside that container participates in the block formatting context of that container, and floats will not poke out of the bottom of the element.
 
 The value name of `flow-root` makes sense when you understand you are creating something that acts like the `root` element (`<html>` element in browser) in terms of how it creates a new context for the flow layout inside it.
+
+This is the default rendering for {{htmlelement("button")}} elements and button {{htmlelement("input")}} types meaning button's create a new BFC as long as their `display` value isn't set to a value that doesn't automatically create a new BFC.
 
 #### HTML
 
@@ -109,7 +110,7 @@ section {
 
 ### Exclude external floats
 
-In the following example, we are using `display:flow-root` and floats to implement double columns layout. We are able to do this because an element in the normal flow that establishes a new BFC does not overlap the margin box of any floats in the same block formatting context as the element itself.
+In the following example, we are using `display:flow-root` and floats, creating two side-by-side boxes demonstrating that an element in the normal flow establishes a new BFC and does not overlap the margin box of any floats in the same block formatting context as the element itself.
 
 #### HTML
 
@@ -155,17 +156,13 @@ section {
 
 {{EmbedLiveSample("Exclude_external_floats", 200, 330)}}
 
-Rather than inline-blocks with width:\<percentage>, in this case we don't have to specify the width of the right div.
-
-Note that flexbox is a more efficient way to implement multi-column layout in modern CSS.
-
 ### Prevent margin collapsing
 
 You can create a new BFC to avoid [margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing) between two neighbor elements.
 
 #### Margin collapsing example
 
-In this example we have two adjacent {{HTMLElement("div")}} elements, which each have a vertical margin of `10px`. Because of margin collapsing, the vertical gap between them is 10 pixels, not the 20 we might expect.
+In this example we have two adjacent {{HTMLElement("div")}} elements, which each have a vertical margin of `10px`. Because of margin collapsing, the vertical gap between them is `10px`, not the `20px` we might expect.
 
 ```html
 <div class="blue"></div>
@@ -192,7 +189,7 @@ In this example we have two adjacent {{HTMLElement("div")}} elements, which each
 
 #### Preventing margin collapsing
 
-In this example we wrap the second `<div>` in an outer one, to create a new BFC and prevent margin collapsing.
+In this example, we wrap the second `<div>` in an outer `<div>`, and create a new BFC by using `overflow: hidden` on the outer `<div>`. This new BFC prevents the margins of the nested `<div>` from collapsing with those of the outer `<div>`.
 
 ```html
 <div class="blue"></div>
@@ -230,22 +227,13 @@ In this example we wrap the second `<div>` in an outer one, to create a new BFC 
 
 ## See also
 
-- {{ cssxref("float") }}, {{ cssxref("clear") }}
-- CSS key concepts:
-  - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
-  - [At-rules](/en-US/docs/Web/CSS/At-rule)
-  - [Comments](/en-US/docs/Web/CSS/Comments)
-  - [Specificity](/en-US/docs/Web/CSS/Specificity)
-  - [Inheritance](/en-US/docs/Web/CSS/Inheritance)
-  - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
-  - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
-  - [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-  - Values
-    - [Initial values](/en-US/docs/Web/CSS/initial_value)
-    - [Computed values](/en-US/docs/Web/CSS/computed_value)
-    - [Used values](/en-US/docs/Web/CSS/used_value)
-    - [Actual values](/en-US/docs/Web/CSS/actual_value)
-  - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
-  - [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
-  - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
+- [CSS syntax](/en-US/docs/Web/CSS/Syntax)
+- [Specificity](/en-US/docs/Web/CSS/Specificity)
+- [Inheritance](/en-US/docs/Web/CSS/Inheritance)
+- [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
+- [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
+- [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+- [Initial](/en-US/docs/Web/CSS/initial_value), [computed](/en-US/docs/Web/CSS/computed_value), [used values](/en-US/docs/Web/CSS/used_value), and [actual](/en-US/docs/Web/CSS/actual_value) values
+- [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
+- [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)

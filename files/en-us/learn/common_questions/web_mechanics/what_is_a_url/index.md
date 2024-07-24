@@ -121,80 +121,17 @@ The required parts of a URL depend to a great extent on the context in which the
 
 When a URL is used within a document, such as in an HTML page, things are a bit different. Because the browser already has the document's own URL, it can use this information to fill in the missing parts of any URL available inside that document. We can differentiate between an _absolute URL_ and a _relative URL_ by looking only at the _path_ part of the URL. If the path part of the URL starts with the "`/`" character, the browser will fetch that resource from the top root of the server, without reference to the context given by the current document.
 
-Let's look at some examples to make this clearer.
+Let's look at some examples to make this clearer. Let's assume that the URLs are defined from within the document located at the following URL: `https://developer.mozilla.org/en-US/docs/Learn`.
 
-### Examples of absolute URLs
+`https://developer.mozilla.org/en-US/docs/Learn` itself is an absolute URL. It has all necessary parts needed to locate the resource it points to.
 
-<table>
-  <tbody>
-    <tr>
-      <td>Full URL (the same as the one we used before)</td>
-      <td><pre>https://developer.mozilla.org/en-US/docs/Learn</pre></td>
-    </tr>
-    <tr>
-      <td>Implicit protocol</td>
-      <td>
-        <pre>//developer.mozilla.org/en-US/docs/Learn</pre>
-        <p>
-          In this case, the browser will call that URL with the same protocol as
-          the one used to load the document hosting that URL.
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td>Implicit domain name</td>
-      <td>
-        <pre>/en-US/docs/Learn</pre>
-        <p>
-          This is the most common use case for an absolute URL within an HTML
-          document. The browser will use the same protocol and the same domain
-          name as the one used to load the document hosting that URL.
-          <strong>Note:</strong>
-          <em
-            >it isn't possible to omit the domain name without omitting the
-            protocol as well</em
-          >.
-        </p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+All of the following URLs are relative URLs:
 
-### Examples of relative URLs
-
-To better understand the following examples, let's assume that the URLs are called from within the document located at the following URL: `https://developer.mozilla.org/en-US/docs/Learn`
-
-<table>
-  <tbody>
-    <tr>
-      <td>Sub-resources</td>
-      <td>
-        <pre>Skills/Infrastructure/Understanding_URLs</pre>
-        <p>
-          Because that URL does not start with <code>/</code>, the browser will
-          attempt to find the document in a subdirectory of the one containing
-          the current resource. So in this example, we really want to reach
-          this URL:
-          https://developer.mozilla.org/en-US/docs/Learn/Skills/Infrastructure/Understanding_URLs.
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td>Going back in the directory tree</td>
-      <td>
-        <pre>../CSS/display</pre>
-        <p>
-          In this case, we use the <code>../</code> writing convention —
-          inherited from the UNIX file system world — to tell the browser we
-          want to go up from one directory. Here we want to reach this URL:
-          https://developer.mozilla.org/en-US/docs/Learn/../CSS/display, which
-          can be simplified to:
-          https://developer.mozilla.org/en-US/docs/CSS/display.
-        </p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+- Scheme-relative URL: `//developer.mozilla.org/en-US/docs/Learn` — only the protocol is missing. The browser will use the same protocol as the one used to load the document hosting that URL.
+- Domain-relative URL: `/en-US/docs/Learn` — the protocol and the domain name are both missing. The browser will use the same protocol and the same domain name as the one used to load the document hosting that URL.
+- Sub-resources: `Common_questions/Web_mechanics/What_is_a_URL` — the protocol and domain name are missing, and the path doesn't begin with `/`. The browser will attempt to find the document in a subdirectory of the one containing the current resource. In this case, we really want to reach this URL: `https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL`.
+- Going back in the directory tree: `../CSS/display` — the protocol and domain name are missing, and the path begins with `..`. This is inherited from the UNIX file system world — to tell the browser we want to go up by one level. Here we want to reach this URL: `https://developer.mozilla.org/en-US/docs/Learn/../CSS/display`, which can be simplified to: `https://developer.mozilla.org/en-US/docs/CSS/display`.
+- Anchor-only: `#semantic_urls` - all parts are missing except the anchor. The browser will use the current document's URL and replace or add the anchor part to it. This is useful when you want to link to a specific part of the current document.
 
 ## Semantic URLs
 

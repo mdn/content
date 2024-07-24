@@ -19,7 +19,7 @@ You can use this attribute with any SVG element.
   <tbody>
     <tr>
       <td><strong>Values</strong></td>
-      <td>{{csssyntax("transform-origin")}}</td>
+      <td>See {{cssxref("transform-origin", "", "#formal_syntax")}}</td>
     </tr>
     <tr>
       <td><strong>Default value</strong></td>

@@ -194,24 +194,6 @@ Try updating both lines like this, then save and refresh — the game should now
 
 There are other common errors you'll come across in your code. This section highlights most of them.
 
-### SyntaxError: missing ; before statement
-
-This error generally means that you have missed a semicolon at the end of one of your lines of code, but it can sometimes be more cryptic. For example, if we change this line inside the `checkGuess()` function:
-
-```js
-const userGuess = Number(guessField.value);
-```
-
-to
-
-```js example-bad
-const userGuess === Number(guessField.value);
-```
-
-It throws this error because it thinks you are trying to do something different. You should make sure that you don't mix up the assignment operator (`=`) — which sets a variable to be equal to a value — with the strict equality operator (`===`), which tests whether one value is equal to another, and returns a `true`/`false` result.
-
-> **Note:** See our [SyntaxError: missing ; before statement](/en-US/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement) reference page for more details about this error.
-
 ### The program always says you've won, regardless of the guess you enter
 
 This could be another symptom of mixing up the assignment and strict equality operators. For example, if we were to change this line inside `checkGuess()`:
@@ -254,13 +236,13 @@ This has caused the browser to think that we are trying to pass the contents of 
 
 This is easy — it generally means that you've missed one of your curly braces from a function or conditional structure. We got this error by deleting one of the closing curly braces near the bottom of the `checkGuess()` function.
 
-### SyntaxError: expected expression, got '_string_' or SyntaxError: unterminated string literal
+### SyntaxError: expected expression, got '_string_' or SyntaxError: string literal contains an unescaped line break
 
 These errors generally mean that you've left off a string value's opening or closing quote mark. In the first error above, _string_ would be replaced with the unexpected character(s) that the browser found instead of a quote mark at the start of a string. The second error means that the string has not been ended with a quote mark.
 
 For all of these errors, think about how we tackled the examples we looked at in the walkthrough. When an error arises, look at the line number you are given, go to that line and see if you can spot what's wrong. Bear in mind that the error is not necessarily going to be on that line, and also that the error might not be caused by the exact same problem we cited above!
 
-> **Note:** See our [SyntaxError: Unexpected token](/en-US/docs/Web/JavaScript/Reference/Errors/Unexpected_token) and [SyntaxError: unterminated string literal](/en-US/docs/Web/JavaScript/Reference/Errors/Unterminated_string_literal) reference pages for more details about these errors.
+> **Note:** See our [SyntaxError: Unexpected token](/en-US/docs/Web/JavaScript/Reference/Errors/Unexpected_token) and [SyntaxError: string literal contains an unescaped line break](/en-US/docs/Web/JavaScript/Reference/Errors/String_literal_EOL) reference pages for more details about these errors.
 
 ## Summary
 

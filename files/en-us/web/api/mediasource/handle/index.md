@@ -3,12 +3,10 @@ title: "MediaSource: handle property"
 short-title: handle
 slug: Web/API/MediaSource/handle
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.MediaSource.handle
 ---
 
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}} {{AvailableInWorkers}}
+{{APIRef("Media Source Extensions")}} {{AvailableInWorkers}}
 
 The **`handle`** read-only property of the {{domxref("MediaSource")}} interface returns a {{domxref("MediaSourceHandle")}} object, a proxy for the `MediaSource` that can be transferred from a dedicated worker back to the main thread and attached to a media element via its {{domxref("HTMLMediaElement.srcObject")}} property.
 

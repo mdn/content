@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.ReadableByteStreamController.error
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`error()`** method of the {{domxref("ReadableByteStreamController")}} interface causes any future interactions with the associated stream to error with the specified reason.
 

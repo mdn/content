@@ -21,10 +21,10 @@ Each MathML equation is represented by a root [`math`](/en-US/docs/Web/MathML/El
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
-    <title>MathML in HTML5</title>
+    <title>MathML in HTML</title>
   </head>
   <body>
-    <h1>MathML in HTML5</h1>
+    <h1>MathML in HTML</h1>
 
     <p>
       One over square root of two (inline style):
@@ -136,7 +136,7 @@ A [custom element](/en-US/docs/Web/API/Web_components/Using_custom_elements) can
 </html>
 ```
 
-For authors not familiar with LaTeX, alternative input methods are available such as the [ASCIIMath](http://asciimath.org/#syntax) or [jqMath](https://mathscribe.com/author/jqmath.html) syntax. Be sure to load the JavaScript libraries and use the proper delimiters:
+For authors not familiar with LaTeX, alternative input methods are available such as the [ASCIIMath](https://asciimath.org/#syntax) or [jqMath](https://mathscribe.com/author/jqmath.html) syntax. Be sure to load the JavaScript libraries and use the proper delimiters:
 
 ```html
 <!doctype html>
@@ -205,12 +205,12 @@ After running that command, a file `output.html` containing the following HTML o
 
     <p>
       One over square root of two (inline style):
-      <math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><annotation encoding="TeX">\frac{1}{\sqrt{2}}</annotation></semantics></math>
+      <math><semantics><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><annotation encoding="TeX">\frac{1}{\sqrt{2}}</annotation></semantics></math>
     </p>
 
     <p>
       One over square root of two (display style):
-      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><annotation encoding="TeX">\frac{1}{\sqrt{2}}</annotation></semantics></math>
+      <math display="block"><semantics><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><annotation encoding="TeX">\frac{1}{\sqrt{2}}</annotation></semantics></math>
     </p>
   </body>
 </html>

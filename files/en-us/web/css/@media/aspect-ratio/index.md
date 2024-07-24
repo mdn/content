@@ -7,7 +7,7 @@ browser-compat: css.at-rules.media.aspect-ratio
 
 {{CSSRef}}
 
-The **`aspect-ratio`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to test the aspect ratio of the {{glossary("viewport")}}.
+The **`aspect-ratio`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) can be used to test the {{glossary("aspect ratio")}} of the {{glossary("viewport")}}.
 
 ## Syntax
 
@@ -99,3 +99,4 @@ h.onchange = h.oninput = () => {
 
 - [Using Media Queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - [@media](/en-US/docs/Web/CSS/@media)
+- [Understanding `aspect-ratio`](/en-US/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)

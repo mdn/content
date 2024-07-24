@@ -75,7 +75,7 @@ In the initial planning phase, you will probably have several planning meetings 
 
 Once you've got an idea of the required feature set, and what technologies you will likely build these features with, you should start exploring the target audience — what browsers, devices, etc. will the target audience for this site be using? The client might already have data about this from previous research they've done, e.g. from other websites they own, or from previous versions of the website you are now working on. If not, you will be able to get a good idea by looking at other sources, such as usage stats for competitors, or countries the site will be serving. You can also use a bit of intuition.
 
-So for example, you might be building an e-commerce site that serves customers in North America. The site should work entirely in the last few versions of the most popular desktop and mobile (iOS, Android, Windows phone) browsers — this should include Chrome (and Opera as it is based on the same rendering engine as Chrome), Firefox, Edge, and Safari.
+So for example, you might be building an e-commerce site that serves customers in North America. The site should work entirely in the last few versions of the most popular desktop and mobile browsers — this should include Chrome (and Edge, Opera as they are based on the same rendering engine as Chrome), Firefox, and Safari.
 It should also be accessible with WCAG AA compliance.
 
 Now you know your target testing platforms, you should go back and review the required feature set and what technologies you are going to use.
@@ -109,7 +109,7 @@ After each implementation phase, you will need to test the new functionality. To
 
 At this point, fix any problems you find with your new code.
 
-Next, you should try expanding your list of test browsers to a full list of target audience browsers and start concentrating on weeding out cross-browser issues (see the next article for more information on [determining your target browsers](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#gotta_test_em_all)). For example:
+Next, you should try expanding your list of test browsers to a full list of target audience browsers and start concentrating on weeding out cross-browser issues (see the next article for more information on [determining your target browsers](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)). For example:
 
 - Try to test the latest change on all the modern desktop browsers you can — including Firefox, Chrome, Opera, Edge, and Safari on desktop (Mac, Windows, and Linux, ideally).
 - Test it in common phone and tablet browsers (e.g. iOS Safari on iPhone/iPad, Chrome and Firefox on iPhone/iPad/Android),
@@ -157,7 +157,6 @@ Once a fix has been made, you'll want to repeat your testing process to make sur
 Just to reiterate on what was said above, if you discover bugs in browsers, you should report them:
 
 - [Firefox Bugzilla](https://bugzilla.mozilla.org/)
-- [EdgeHTML issue tracker](https://developer.microsoft.com/en-us/microsoft-edge/)
 - [Safari](https://bugs.webkit.org/)
 - [Chrome](https://bugs.chromium.org/p/chromium/issues/list)
 - [Opera](https://opera.atlassian.net/servicedesk/customer/portal/9)

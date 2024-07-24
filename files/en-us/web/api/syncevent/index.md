@@ -33,6 +33,10 @@ _Inherits methods from its parent, {{domxref("ExtendableEvent")}} and {{domxref(
 
 None.
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

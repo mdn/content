@@ -121,7 +121,7 @@ As `browser_style` is a deprecated in Manifest V3 you may want to remove support
 - Does the appearance of your extensions UI change?
   - If the appearance doesn't change, remove the key.
   - If the appearance changes, experiment to determine what dependency exist and add the relevant properties in the extension's stylesheet. The styles are most likely to cause layout changes are `box-sizing:`, `border-box`, and `display: flex`.
-    If you cannot identify the dependencies, include the content of [extension.css](https://hg.mozilla.org/mozilla-central/raw-file/a445f1762c895000bcdabd9d95697522359d41ed/browser/components/extensions/extension.css) with the extension and delete all parts that aren't relevant, usually the `body` and `body *` blocks as most extensions don't use the `browser-style` class.
+    If you cannot identify the dependencies, include the content of [extension.css](https://searchfox.org/mozilla-central/source/browser/components/extensions/extension.css) with the extension and delete all parts that aren't relevant, usually the `body` and `body *` blocks as most extensions don't use the `browser-style` class.
 
 ## Firefox panel components (legacy)
 

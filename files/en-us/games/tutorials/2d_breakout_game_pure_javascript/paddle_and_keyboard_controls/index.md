@@ -208,7 +208,7 @@ function draw() {
 }
 
 function startGame() {
-  const interval = setInterval(draw, 10);
+  setInterval(draw, 10);
 }
 
 document.getElementById("runButton").addEventListener("click", function () {
@@ -219,7 +219,8 @@ document.getElementById("runButton").addEventListener("click", function () {
 
 {{embedlivesample("compare_your_code", 600, 360)}}
 
-> **Note:** Try making the paddle move faster or slower, or change its size.
+> [!NOTE]
+> Try making the paddle move faster or slower, or change its size.
 
 ## Next steps
 

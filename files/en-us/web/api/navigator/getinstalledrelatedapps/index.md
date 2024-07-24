@@ -8,7 +8,7 @@ status:
 browser-compat: api.Navigator.getInstalledRelatedApps
 ---
 
-{{ ApiRef() }}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`getInstalledRelatedApps()`** method returns a promise that resolves with an array of objects representing any related platform-specific apps or [Progressive Web Apps](/en-US/docs/Web/Progressive_web_apps) that the user has installed. This could be used for content personalization such as removing "install our app" banners from the web app if the platform-specific app and/or PWA is already installed.
 
@@ -84,7 +84,7 @@ console.table(relatedApps);
 const psApp = relatedApps.find((app) => app.id === "com.example.myapp");
 
 if (psApp && doesVersionSendPushMessages(psApp.version)) {
-  // There’s an installed platform-specific app that handles sending push messages
+  // There's an installed platform-specific app that handles sending push messages
   // No need to handle this via the web app
   return;
 }

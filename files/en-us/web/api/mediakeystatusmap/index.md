@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.MediaKeyStatusMap
 ---
 
-{{APIRef("EncryptedMediaExtensions")}}{{SecureContext_Header}}
+{{APIRef("Encrypted Media Extensions")}}{{SecureContext_Header}}
 
 The **`MediaKeyStatusMap`** interface of the [Encrypted Media Extensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API) is a read-only map of media key statuses by key IDs.
 
@@ -28,7 +28,7 @@ The **`MediaKeyStatusMap`** interface of the [Encrypted Media Extensions API](/e
   - : Returns a new `Iterator` object containing keys for each element in the status map, in insertion order.
 - {{domxref("MediaKeyStatusMap.values()")}} {{ReadOnlyInline}}
   - : Returns a new `Iterator` object containing values for each element in the status map, in insertion order.
-- {{domxref("MediaKeyStatusMap.[@@iterator]()")}} {{ReadOnlyInline}}
+- `MediaKeyStatusMap[Symbol.iterator]()` {{ReadOnlyInline}}
   - : Returns a new `Iterator` object containing an array of `[key, value]` for each element in the status map, in insertion order.
 
 ## Specifications
