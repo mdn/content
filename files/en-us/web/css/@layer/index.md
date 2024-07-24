@@ -40,9 +40,9 @@ The following diagram shows layer priorities where layers are declared in 1, 2, 
 
 The declaration order matters. The first declared layer gets the lowest priority and the last declared layer gets the highest priority. However, the priority is reversed when the [`!important`](/en-US/docs/Web/CSS/important) flag is used.
 
-The `@layer` at-rule is used to create an inline cascade layer in one of three ways.
+The `@layer` at-rule is used to create a cascade layer in one of three ways.
 
-The first way is to use block at-rule to create a named cascade layer with the CSS rules for that layer inside, like so:
+The first way is to use a `@layer` block at-rule to create a named cascade layer with the CSS rules for that layer inside, like so:
 
 ```css
 @layer utilities {
@@ -56,7 +56,7 @@ The first way is to use block at-rule to create a named cascade layer with the C
 }
 ```
 
-The second way is to use statement at-rule to create a named cascade layer without assigning any styles. This can be a single layer, as shown below:
+The second way is to use a `@layer` statement at-rule to create one or more comma-separated named cascade layers without assigning any styles. This can be a single layer, as shown below:
 
 ```css
 @layer utilities;
@@ -74,7 +74,7 @@ A rule in `utilities` would be applied _even if it has lower specificity_ than t
 
 > **Note:** Having declared your layer names, thus setting their order, you can add CSS rules to the layer by re-declaring the name. The styles are then appended to the layer and the layer order will not be changed.
 
-The third way is to use block at-rule without a layer name. For example:
+The third way is to create an unnamed layer using a `@layer` block at-rule without including a layer name. For example:
 
 ```css
 @layer {

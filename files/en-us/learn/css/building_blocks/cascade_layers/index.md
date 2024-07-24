@@ -348,7 +348,7 @@ Transitioning styles have the highest precedence. When a normal property value i
 
 {{EmbedGHLiveSample("css-examples/learn/layers/layer-precedence.html", '100%', 500)}}
 
-In this example, there are two layers `A` and `B`, first defined using an `@layer` statement at-rule(without styles) and then using two `@layer` blocks at-rules. There is also a CSS rule without a layer.
+In this example, two layers (`A` and `B`) are initially defined using an `@layer` statement at-rule without any styles. The layer styles are defined in two `@layer` block at-rules appearing after the `h1` CSS rule declared outside of any layer.
 
 The inline styles added on the `h1` element using the `style` attribute, set a normal `color` and an important `background-color`. Normal inline styles override all layered and unlayered normal styles. Important inline styles override all layered and unlayered normal and important author styles. There is no way for author styles to override important inline styles.
 
