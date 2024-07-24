@@ -27,7 +27,7 @@ The `glyphRef` element provides a single possible glyph to the referencing `<alt
 
 ## DOM Interface
 
-This element implements the [`SVGGlyphRefElement`](/en-US/docs/DOM/SVGGlyphRefElement) interface.
+This element implements the [`SVGGlyphRefElement`](/en-US/docs/Web/API/SVGGlyphRefElement) interface.
 
 ## Specifications
 
