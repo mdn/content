@@ -158,8 +158,6 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns an object with functions for adding external search providers to the browser.
 - {{domxref("Window.orientation")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Returns the orientation in degrees (in 90 degree increments) of the viewport relative to the device's natural orientation.
-- {{domxref("Window.sidebar")}} {{Deprecated_Inline}} {{Non-standard_Inline}} {{ReadOnlyInline}}
-  - : Returns a reference to the window object of the sidebar
 - {{domxref("Window.status")}} {{Deprecated_Inline}}
   - : Gets/sets the text in the statusbar at the bottom of the browser.
 
