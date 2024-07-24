@@ -12,7 +12,7 @@ At times, you may need to parse {{Glossary("XML")}} content and convert it into 
   - : Serializes DOM trees, converting them into strings containing XML.
 - {{domxref("DOMParser")}}
   - : Constructs a DOM tree by parsing a string containing XML, returning a {{domxref("XMLDocument")}} or {{domxref("Document")}} as appropriate based on the input data.
-- {{domxref("fetch()")}}
+- {{domxref("Window/fetch", "fetch()")}}
   - : Loads content from a URL. XML content is returned as a text string which you can parse using `DOMParser`.
 - {{domxref("XMLHttpRequest")}}
   - : The precursor to `fetch()`. Unlike the `fetch()` API, `XMLHttpRequest` can return a resource as a `Document`, via its {{domxref("XMLHttpRequest.responseXML", "responseXML")}} property.
@@ -70,7 +70,7 @@ Use the following approaches to serialize the contents of the XML document you c
 
 ### Serializing DOM trees to strings
 
-First, create a DOM tree as described in [Using the Document Object Model](/en-US/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model). Alternatively, use a DOM tree obtained from {{ domxref("fetch()") }}.
+First, create a DOM tree as described in [Using the Document Object Model](/en-US/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model). Alternatively, use a DOM tree obtained from {{ domxref("Window/fetch", "fetch()") }}.
 
 To serialize the DOM tree `doc` into XML text, call {{domxref("XMLSerializer.serializeToString()")}}:
 
@@ -98,6 +98,6 @@ const docOuterHtml = document.documentElement.outerHTML;
 ## See also
 
 - [XPath](/en-US/docs/Web/XPath)
-- {{domxref("fetch()")}}
+- {{domxref("Window/fetch", "fetch()")}}
 - {{domxref("XMLHttpRequest")}}
 - {{domxref("Document")}}, {{domxref("XMLDocument")}}, and {{domxref("HTMLDocument")}}

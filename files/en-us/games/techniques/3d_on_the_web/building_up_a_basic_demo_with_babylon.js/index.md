@@ -104,7 +104,8 @@ const camera = new BABYLON.FreeCamera(
 
 There are many [cameras](https://doc.babylonjs.com/divingDeeper/cameras) available in Babylon.js; `FreeCamera` is the most basic and universal one. To initialize it you need to pass it three parameters: any name you want to use for it, the coordinates where you want it to be positioned in the 3D space, and the scene you want to add it to.
 
-> **Note:** You probably noticed the `BABYLON.Vector3()` method in use here — this defines a 3D position on the scene. Babylon.js is bundled with a complete math library for handling vectors, colors, matrices etc.
+> [!NOTE]
+> You probably noticed the `BABYLON.Vector3()` method in use here — this defines a 3D position on the scene. Babylon.js is bundled with a complete math library for handling vectors, colors, matrices etc.
 
 ## Let there be light
 
@@ -130,7 +131,8 @@ const box = BABYLON.Mesh.CreateBox("box", 2, scene);
 
 A mesh is a way the engine creates geometric shapes, so material can be easily applied to them later on. In this case we're creating a box using the `Mesh.CreateBox` method with its own name, a size of 2, and a declaration of which scene we want it added to.
 
-> **Note:** The size or position values (e.g. for the box size) are unitless, and can basically be anything you deem suitable for your scene — millimeters, meters, feet, or miles — it's up to you.
+> [!NOTE]
+> The size or position values (e.g. for the box size) are unitless, and can basically be anything you deem suitable for your scene — millimeters, meters, feet, or miles — it's up to you.
 
 If you save and refresh now, your object will look like a square, because it's facing the camera. The good thing about objects is that we can move them on the scene however we want, for example rotating and scaling. Let's apply a little rotation to the box, so we can see more than one face — again, add these lines below the previous one:
 

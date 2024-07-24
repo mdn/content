@@ -56,7 +56,7 @@ max-width: unset;
 - `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
   - : Uses the `fit-content` formula with the available space replaced by the specified argument, i.e. `min(max-content, max(min-content, argument))`.
 
-## Accessibility concerns
+## Accessibility
 
 Ensure that elements set with a `max-width` are not truncated and/or do not obscure other content when the page is zoomed to increase text size.
 

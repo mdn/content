@@ -132,7 +132,7 @@ fetch(url)
 
 There's quite a lot to unpack in here.
 
-First, the entry point to the Fetch API is a global function called {{domxref("fetch", "fetch()")}}, that takes the URL as a parameter (it takes another optional parameter for custom settings, but we're not using that here).
+First, the entry point to the Fetch API is a global function called {{domxref("Window/fetch", "fetch()")}}, that takes the URL as a parameter (it takes another optional parameter for custom settings, but we're not using that here).
 
 Next, `fetch()` is an asynchronous API which returns a {{jsxref("Promise")}}. If you don't know what that is, read the module on [asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous), and in particular the article on [promises](/en-US/docs/Learn/JavaScript/Asynchronous/Promises), then come back here. You'll find that article also talks about the `fetch()` API!
 

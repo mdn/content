@@ -200,7 +200,7 @@ Only use {{HTMLElement('table')}}, {{HTMLElement('tbody')}}, {{HTMLElement('thea
 </table>
 ```
 
-Above is the semantic way of writing a table. The ARIA roles are only necessary if the native semantics of the table, and therefore the table rows, are obliterated, such as via setting the [display property to flex or grid](/en-US/docs/Web/CSS/display#accessibility_concerns).
+Above is the semantic way of writing a table. The ARIA roles are only necessary if the native semantics of the table, and therefore the table rows, are obliterated, such as via setting the [display property to flex or grid](/en-US/docs/Web/CSS/display#accessibility).
 
 ### Added benefits
 

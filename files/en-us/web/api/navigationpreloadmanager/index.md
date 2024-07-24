@@ -25,7 +25,7 @@ The result of a preload fetch request is waited on using the promise returned by
 
 ## Description
 
-Service workers handle {{domxref("fetch()")}} events on behalf of a site, for pages within a given scope.
+Service workers handle {{domxref("Window/fetch", "fetch()")}} events on behalf of a site, for pages within a given scope.
 When a user navigates to a page that uses a service worker, the browser boots up the worker (if it isn't already running), then sends it a fetch event and waits for the result.
 On receiving an event, the worker returns the resource from a cache if it is present, or otherwise fetches the resource from the remote server (storing a copy for returning in future requests).
 

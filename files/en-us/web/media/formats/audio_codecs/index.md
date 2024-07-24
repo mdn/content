@@ -520,7 +520,7 @@ Keep in mind, however, that lossless codecs require substantially more bandwidth
 
 ### AMR (Adaptive Multi-Rate)
 
-The **[Adaptive Multi-Rate audio codec](http://www.voiceage.com/AMR-NB.AMR.html)** is optimized for encoding human speech efficiently. It was standardized in 1999 as part of the 3GPP audio standard used for both [GSM](https://en.wikipedia.org/wiki/GSM) and [UMTS](https://en.wikipedia.org/wiki/UMTS) cellular telephony, and uses a multi-rate narrowband algorithm to encode audio frequencies at a telephony-grade quality level at around 7.4 kbps. In addition to being used for real-time telephony, AMR audio may be used for voicemail and other short audio recordings.
+The **[Adaptive Multi-Rate audio codec](https://voiceage.com/AMR-NB.AMR.html)** is optimized for encoding human speech efficiently. It was standardized in 1999 as part of the 3GPP audio standard used for both [GSM](https://en.wikipedia.org/wiki/GSM) and [UMTS](https://en.wikipedia.org/wiki/UMTS) cellular telephony, and uses a multi-rate narrowband algorithm to encode audio frequencies at a telephony-grade quality level at around 7.4 kbps. In addition to being used for real-time telephony, AMR audio may be used for voicemail and other short audio recordings.
 
 AMR audio which is stored in files may be typed `.amr`, but may also be encapsulated in `.3gp` files.
 
@@ -614,7 +614,7 @@ As a speech-specific codec, AMR is essentially useless for any other content, in
       <th scope="row">Licensing</th>
       <td>
         Non-free; license fees and annual royalties apply. See
-        <a href="http://www.voiceage.com/Overview-lic.html"
+        <a href="https://voiceage.com/Overview-lic.html"
           >VoiceAge licensing</a
         >
         for details

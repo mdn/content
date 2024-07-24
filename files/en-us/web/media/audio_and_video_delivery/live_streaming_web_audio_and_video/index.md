@@ -84,7 +84,7 @@ A couple of HTTP-based livestreaming video formats are beginning to see support 
 
 DASH stands for Dynamic Adaptive Streaming over HTTP. It is supported via Media Source Extensions which are used by JavaScript libraries such as [DASH.js](https://github.com/Dash-Industry-Forum/dash.js/). This approach allows us to download chunks of the video stream using XHR and "append" the chunks to the stream that's played by the {{ htmlelement("video") }} element. So for example, if we detect that the network is slow, we can start requesting lower quality (smaller) chunks for the next segment. This technology also allows an advertising segment to be appended/inserted into the stream.
 
-> **Note:** You can also [use WebM with the MPEG DASH adaptive streaming system](http://wiki.webmproject.org/adaptive-streaming/webm-dash-specification).
+> **Note:** You can also [use WebM with the MPEG DASH adaptive streaming system](https://wiki.webmproject.org/adaptive-streaming/webm-dash-specification).
 
 ### HLS
 
