@@ -26,7 +26,7 @@ For an in-depth guide to the XMLHttpRequest API, see [Using XMLHttpRequest](/en-
 ## Interfaces
 
 - {{domxref("FormData")}}
-  - : An object representing {{htmlelement("form")}} fields and their values, which can be sent to a server using {{domxref("XMLHttpRequest")}} or {{domxref("fetch()")}}.
+  - : An object representing {{htmlelement("form")}} fields and their values, which can be sent to a server using {{domxref("XMLHttpRequest")}} or {{domxref("Window/fetch", "fetch()")}}.
 - {{domxref("ProgressEvent")}}
   - : A subclass of {{domxref("Event")}} which is passed into the {{domxref("XMLHttpRequest.progress_event", "progress")}}, and which contains information about how much of the request has been completed.
 - {{domxref("XMLHttpRequest")}}

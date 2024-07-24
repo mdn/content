@@ -139,7 +139,7 @@ customElement.prototype.getData = (url) => {
 };
 ```
 
-This balances the clauses by having both situations handle the setting of `data` and firing of the `load` event within a microtask (using `queueMicrotask()` in the `if` clause and using the promises used by {{domxref("fetch()")}} in the `else` clause).
+This balances the clauses by having both situations handle the setting of `data` and firing of the `load` event within a microtask (using `queueMicrotask()` in the `if` clause and using the promises used by {{domxref("Window/fetch", "fetch()")}} in the `else` clause).
 
 #### Batching operations
 
@@ -167,7 +167,7 @@ When `sendMessage()` gets called, the specified message is first pushed onto the
 
 If the message we just added to the array is the first one, we enqueue a microtask that will send a batch. The microtask will execute, as always, when the JavaScript execution path reaches the top level, just before running callbacks. That means that any further calls to `sendMessage()` made in the interim will push their messages onto the message queue, but because of the array length check before adding a microtask, no new microtask is enqueued.
 
-When the microtask runs, then, it has an array of potentially many messages waiting for it. It starts by encoding it as JSON using the {{jsxref("JSON.stringify()")}} method. After that, the array's contents aren't needed anymore, so we empty the `messageQueue` array. Finally, we use the {{domxref("fetch()")}} method to send the JSON string to the server.
+When the microtask runs, then, it has an array of potentially many messages waiting for it. It starts by encoding it as JSON using the {{jsxref("JSON.stringify()")}} method. After that, the array's contents aren't needed anymore, so we empty the `messageQueue` array. Finally, we use the {{domxref("Window/fetch", "fetch()")}} method to send the JSON string to the server.
 
 This lets every call to `sendMessage()` made during the same iteration of the event loop add their messages to the same `fetch()` operation, without potentially having other tasks such as timeouts or the like delay the transmission.
 

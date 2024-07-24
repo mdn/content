@@ -335,7 +335,7 @@ Method pages need the following sections:
 The following are exemplary examples of method pages:
 
 - {{domxref("Document.getAnimations")}} from the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API).
-- {{domxref("fetch()")}} from the [Fetch API](/en-US/docs/Web/API/Fetch_API).
+- {{domxref("Window/fetch", "fetch()")}} from the [Fetch API](/en-US/docs/Web/API/Fetch_API).
 
 ## Sidebars
 

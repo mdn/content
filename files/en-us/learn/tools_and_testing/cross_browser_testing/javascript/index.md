@@ -123,7 +123,7 @@ function showHeroes(jsonObj) {
 }
 ```
 
-So the code falls over as soon as we try to use `jsonObj` (which as you might expect, is supposed to be a [JSON object](/en-US/docs/Learn/JavaScript/Objects/JSON)). This is supposed to be fetched from an external `.json` file using the following {{domxref("fetch()")}} call:
+So the code falls over as soon as we try to use `jsonObj` (which as you might expect, is supposed to be a [JSON object](/en-US/docs/Learn/JavaScript/Objects/JSON)). This is supposed to be fetched from an external `.json` file using the following {{domxref("Window/fetch", "fetch()")}} call:
 
 ```js
 const requestURL =
