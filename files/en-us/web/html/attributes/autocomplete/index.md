@@ -76,7 +76,6 @@ The `<token-list>` options include, in order:
 1. [Group naming token](#name_groups)
 2. [Grouping identifier](#grouping_identifier)
 3. [Detail tokens](#detail_tokens)
-4. [Web authorization](#web_authorization)
 
 #### Named groups
 
@@ -234,7 +233,7 @@ When the form field is not a phone number, email address, or instant messaging p
 - "`photo`"
   - : The URL of an image representing the person, company, or contact information given in the other fields in the form.
 
-#### Web authorization
+#### Web authorization token
 
 With {{htmlelement("input")}} and {{htmlelement("textarea")}}, the `webauthn` token can be included last to indicate the user agent should show public key credentials when the user is interacting with the control.
 
