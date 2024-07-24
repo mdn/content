@@ -45,7 +45,7 @@ _Inherits events from its parent interface, {{domxref("AudioScheduledSourceNode"
 > **Note:** Some browsers' implementations of these events are part of the {{domxref("AudioScheduledSourceNode")}} interface.
 
 - {{domxref("AudioScheduledSourceNode.ended_event","ended")}}
-  - : Fired whenever the {{domxref('ConstantSourceNode')}} data has stopped playing.
+  - : Fired whenever the `ConstantSourceNode` data has stopped playing.
 
 ## Instance methods
 

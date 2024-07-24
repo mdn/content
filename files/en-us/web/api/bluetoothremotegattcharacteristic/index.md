@@ -46,7 +46,7 @@ The `BluetoothRemoteGattCharacteristic` interface of the [Web Bluetooth API](/en
 ## Events
 
 - {{DOMxRef("BluetoothRemoteGATTCharacteristic/characteristicvaluechanged_event", "characteristicvaluechanged")}} {{Experimental_Inline}}
-  - : Fired on a {{domxref("BluetoothRemoteGATTCharacteristic")}} when its value changes.
+  - : Fired on a `BluetoothRemoteGATTCharacteristic` when its value changes.
 
 ## Specifications
 

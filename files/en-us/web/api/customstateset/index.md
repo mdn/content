@@ -46,7 +46,7 @@ These states can then be used as custom state pseudo-class selectors in a simila
 
 ### Setting custom element states
 
-To make the {{domxref("CustomStateSet")}} available, a custom element must first call {{domxref("HTMLElement.attachInternals()")}} in order to attach an {{domxref("ElementInternals")}} object.
+To make the `CustomStateSet` available, a custom element must first call {{domxref("HTMLElement.attachInternals()")}} in order to attach an {{domxref("ElementInternals")}} object.
 `CustomStateSet` is then returned by {{domxref("ElementInternals.states")}}.
 Note that `ElementInternals` cannot be attached to a custom element based on a built-in element, so this feature only works for autonomous custom elements (see [github.com/whatwg/html/issues/5166](https://github.com/whatwg/html/issues/5166)).
 
