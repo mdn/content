@@ -205,7 +205,7 @@ To limit the styles to devices with a screen, you can chain the media features t
 
 You can use a comma-separated list of media queries to apply styles when the user's device matches any one of various media types, features, or states.
 
-The following rule contains two media queries. The block's styles will apply if either the user's device has a height of 680px or more _or_ is if the browser viewport is in portrait mode (the viewport height is greater than the viewport width):
+The following rule contains two media queries. The block's styles will apply if either the user's device has a height of 680px or more _or_ if the browser viewport is in portrait mode (the viewport height is greater than the viewport width):
 
 ```css
 @media (min-height: 680px), screen and (orientation: portrait) {
