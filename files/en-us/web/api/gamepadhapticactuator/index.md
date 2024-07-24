@@ -13,7 +13,7 @@ This interface is accessible through the {{domxref("Gamepad.hapticActuators")}} 
 
 ## Instance properties
 
-- {{domxref("GamepadHapticActuator.type")}} {{ReadOnlyInline}}
+- {{domxref("GamepadHapticActuator.type")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : Returns an enum representing the type of the haptic hardware.
 
 ## Instance methods

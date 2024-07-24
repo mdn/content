@@ -132,6 +132,6 @@ Used in **ALL** roles.
 
 ## See also
 
-- [`aria-keyshortcuts` best practices](https://www.w3.org/TR/wai-aria-practices-1.2/#kbd_shortcuts)
+- [Keyboard Shortcuts](https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/#keyboardshortcuts) section in ARIA Authoring Practices
 - HTML [`accesskey`](/en-US/docs/Web/HTML/Global_attributes#accesskey) attribute
 - [Issues with `accesskey`](https://webaim.org/techniques/keyboard/accesskey#spec)

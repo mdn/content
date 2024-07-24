@@ -135,7 +135,7 @@ Now open the CSS file and have a look inside. The CSS for the example is not too
 
 - We start off with the {{cssxref("visibility")}} of the custom controls set to `hidden`. In our JavaScript later on, we will set the controls to `visible`, and remove the `controls` attribute from the `<video>` element. This is so that, if the JavaScript doesn't load for some reason, users can still use the video with the native controls.
 - We give the controls an {{cssxref("opacity")}} of 0.5 by default, so that they are less distracting when you are trying to watch the video. Only when you are hovering/focusing over the player do the controls appear at full opacity.
-- We lay out the buttons inside the control bar using Flexbox ({{cssxref("display")}}: flex), to make things easier.
+- We lay out the buttons inside the control bar using flexbox ({{cssxref("display")}}: flex), to make things easier.
 
 Next, let's look at our button icons:
 

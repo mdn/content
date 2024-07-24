@@ -229,7 +229,7 @@ function ongoingTouchIndexById(idToFind) {
 ```js
 function log(msg) {
   const p = document.getElementById("log");
-  p.innerHTML = `${msg}\n${p.innerHTML}`;
+  p.innerText = `${msg}\n${p.innerText}`;
 }
 ```
 

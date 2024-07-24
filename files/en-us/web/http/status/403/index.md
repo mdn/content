@@ -2,7 +2,7 @@
 title: 403 Forbidden
 slug: Web/HTTP/Status/403
 page-type: http-status-code
-browser-compat: http.status.403
+spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.403
 ---
 
 {{HTTPSidebar}}
@@ -27,10 +27,6 @@ Date: Wed, 21 Oct 2015 07:28:00 GMT
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

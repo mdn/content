@@ -8,9 +8,7 @@ browser-compat: api.Window.getSelection
 
 {{APIRef("Selection API")}}
 
-The **`Window.getSelection()`** method returns a
-{{domxref("Selection")}} object representing the range of text selected by the user or
-the current position of the caret.
+The **`getSelection()`** method of the {{domxref("Window")}} interface returns the {{domxref("Selection")}} object associated with the window's {{domxref("document")}}, representing the range of text selected by the user or the current position of the caret.
 
 ## Syntax
 
@@ -24,15 +22,9 @@ None.
 
 ### Return value
 
-A {{domxref("Selection")}} object.
+A {{domxref("Selection")}} object, or `null` if the associated document has no [browsing context](/en-US/docs/Glossary/Browsing_context) (for example, the window is an {{htmlelement("iframe")}} that is not attached to a document).
 
-When cast to string, either by appending an empty string (`""`) or using
-{{domxref("Selection.toString()")}}, this object returns the text selected.
-
-When called on an {{htmlelement("iframe")}} that is not displayed (e.g., where
-`display: none` is set) Firefox will return `null`, whereas other
-browsers will return a {{domxref("Selection")}} object with
-{{domxref("Selection.type")}} set to `None`.
+When called on an {{htmlelement("iframe")}} that is not displayed (e.g., where `display: none` is set) Firefox returns `null`, whereas other browsers returns a {{domxref("Selection")}} object with {{domxref("Selection.type")}} set to `None`.
 
 ## Examples
 

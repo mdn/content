@@ -37,7 +37,7 @@ viewport(x, y, width, height)
 
 None ({{jsxref("undefined")}}).
 
-### Errors thrown
+### Exceptions
 
 If either _width_ or _height_ is a negative value, a
 `gl.INVALID_VALUE` error is thrown.

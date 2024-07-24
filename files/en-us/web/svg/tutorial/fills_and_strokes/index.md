@@ -16,10 +16,23 @@ There are several ways to color shapes (including specifying attributes on the o
 
 Basic coloring can be done by setting two attributes on the node: `fill` and `stroke`. Using `fill` sets the color inside the object and `stroke` sets the color of the line drawn around the object. You can use the same CSS color naming schemes that you use in HTML, whether that's color names (like `red`), rgb values (like `rgb(255 0 0)`), hex values, etc.
 
-```xml
- <rect x="10" y="10" width="100" height="100" stroke="blue" fill="purple"
-       fill-opacity="0.5" stroke-opacity="0.8"/>
+```html
+<?xml version="1.0" standalone="no"?>
+<svg width="160" height="140" xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <rect
+    x="10"
+    y="10"
+    width="100"
+    height="100"
+    stroke="blue"
+    fill="purple"
+    fill-opacity="0.5"
+    stroke-opacity="0.8"
+    stroke-width="15" />
+</svg>
 ```
+
+{{EmbedLiveSample("Painting", "100%", 150)}}
 
 In addition, you can specify the opacity of either the `fill` or `stroke` separately in SVG. These are controlled by the `fill-opacity` and `stroke-opacity` attributes.
 
@@ -88,6 +101,34 @@ The first number specifies a distance for the filled area, and the second a dist
 
 There are additional `stroke` and `fill` properties available, including `fill-rule,` which specifies how to color in shapes that overlap themselves; [`stroke-miterlimit`](/en-US/docs/Web/SVG/Attribute/stroke-miterlimit), which determines if a stroke should draw miters; and [stroke-dashoffset](/en-US/docs/Web/SVG/Attribute/stroke-dashoffset), which specifies where to start a dasharray on a line.
 
+### Paint order
+
+The order in which fill and stroke are painted can be controlled using the [`paint-order`](/en-US/docs/Web/SVG/Attribute/paint-order) attribute.
+
+```html
+<?xml version="1.0" standalone="no"?>
+<svg width="400" height="180" xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <polyline
+    points="40 80 80 40 120 80"
+    stroke-width="15"
+    stroke="black"
+    fill="coral"
+    paint-order="fill" />
+
+  <polyline
+    points="40 140 80 100 120 140"
+    stroke-width="15"
+    stroke="black"
+    fill="coral"
+    paint-order="stroke" />
+</svg>
+```
+
+{{EmbedLiveSample("Paint order", "100%", 180)}}
+
+In case of the first shape, fill has been rendered before stroke, so the black stroke appears above fill.
+In case of second shape, stroke has been rendered before fill.
+
 ## Using CSS
 
 In addition to setting attributes on objects, you can also use CSS to style fills and strokes. Not all attributes can be set via CSS. Attributes that deal with painting and filling are usually available, so `fill`, `stroke`, `stroke-dasharray`, etc. can all be set this way, in addition to the gradient and pattern versions of those shown below. Attributes like `width`, `height`, or {{SVGElement("path")}} commands cannot be set through CSS. It's easiest just to test and find out what is available and what isn't.
@@ -112,6 +153,7 @@ Or it can be moved to a special style section that you include. Instead of shovi
        #MyRect {
          stroke: black;
          fill: red;
+         paint-order: stroke;
        }
     ]]></style>
   </defs>

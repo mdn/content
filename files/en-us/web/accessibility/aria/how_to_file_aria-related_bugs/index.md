@@ -30,8 +30,8 @@ The state of ARIA technology has always depended on the community. If you notice
    <td></td>
   </tr>
   <tr>
-   <td><a href="http://www.nvda-project.org/">Non Visual Desktop Access (NVDA)</a></td>
-   <td><a href="http://www.nvda-project.org/wiki/ReportingIssues">File NVDA bugs</a></td>
+   <td><a href="https://www.nvaccess.org/">Non Visual Desktop Access (NVDA)</a></td>
+   <td><a href="https://github.com/nvaccess/nvda">File NVDA bugs</a></td>
    <td>Discuss NVDA issues</td>
   </tr>
   </tbody>

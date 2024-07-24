@@ -26,6 +26,15 @@ None.
 
 A Promise that resolves with a {{jsxref("String")}}.
 
+### Exceptions
+
+- {{domxref("DOMException")}} `AbortError`
+  - : The request was [aborted](/en-US/docs/Web/API/Fetch_API/Using_Fetch#canceling_a_request).
+- {{jsxref("TypeError")}}
+  - : Thrown for one of the following reasons:
+    - The response body is [disturbed or locked](/en-US/docs/Web/API/Fetch_API/Using_Fetch#locked_and_disturbed_streams).
+    - There was an error decoding the body content (for example, because the {{httpheader("Content-Encoding")}} header is incorrect).
+
 ## Examples
 
 In our [fetch text example](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-text) (run [fetch text live](https://mdn.github.io/dom-examples/fetch/fetch-text/)), we have an {{htmlelement("article")}} element and three links (stored in the `myLinks` array.)

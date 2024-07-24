@@ -94,6 +94,15 @@ Groups group multiple patterns as a whole, and capturing groups provide extra su
       </td>
     </tr>
     <tr>
+      <td><code>(?<em>flags</em>:<em>x</em>)</code>, <code>(?:<em>flags</em>-<em>flags</em>:<em>x</em>)</code></td>
+      <td>
+        <p>
+          <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Modifier"><strong>Modifier:</strong></a>
+          Enables or disables the specified flags only to the enclosed pattern. Only the <code>i</code>, <code>m</code>, and <code>s</code> flags can be used in a modifier.
+        </p>
+      </td>
+    </tr>
+    <tr>
       <td>
         <code>\<em>n</em></code>
       </td>

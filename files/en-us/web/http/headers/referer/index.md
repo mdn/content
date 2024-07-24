@@ -69,6 +69,5 @@ Referer: https://example.com/
 
 - [HTTP referer on Wikipedia](https://en.wikipedia.org/wiki/HTTP_referer)
 - [Fetch](/en-US/docs/Web/API/Fetch_API): {{domxref("Request.referrerPolicy")}}
-- The obsolete {{HTTPHeader("Content-Security-Policy")}} {{HTTPHeader("Content-Security-Policy/referrer", "referrer")}} {{deprecated_inline}} directive.
 - [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)
 - [Tighter Control Over Your Referrers – Mozilla Security Blog](https://blog.mozilla.org/security/2015/01/21/meta-referrer/)

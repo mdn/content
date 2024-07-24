@@ -21,7 +21,7 @@ math:lowest(nodeSet)
 - `nodeSet`
   - : The node-set whose lowest value is to be returned.
 
-### Returns
+### Return value
 
 A result tree fragment consisting of copies of the nodes returned by [`math:min()`](/en-US/docs/Web/EXSLT/math/min).
 

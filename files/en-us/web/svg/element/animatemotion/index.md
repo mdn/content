@@ -68,7 +68,7 @@ svg {
   - : {{SVGAttr("calcMode")}}, {{SVGAttr("values")}}, {{SVGAttr("keyTimes")}}, {{SVGAttr("keySplines")}}, {{SVGAttr("from")}}, {{SVGAttr("to")}}, {{SVGAttr("by")}}
 - [Other Animation attributes](/en-US/docs/Web/SVG/Attribute#animation_attributes)
   - : Most notably: {{SVGAttr("attributeName")}}, {{SVGAttr("additive")}}, {{SVGAttr("accumulate")}}
-- [Animation event attributes](/en-US/docs/Web/SVG/Attribute#animation_event_attributes)
+- [Animation event attributes](/en-US/docs/Web/SVG/Attribute#event_attributes)
   - : Most notably: {{SVGAttr("onbegin")}}, {{SVGAttr("onend")}}, {{SVGAttr("onrepeat")}}
 
 ## Usage notes

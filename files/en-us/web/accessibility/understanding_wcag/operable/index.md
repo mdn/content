@@ -348,7 +348,7 @@ The conformance criteria under this guideline relate to ways in which users can 
         Most of these mechanisms can be created using simple HTML features, for
         example see
         <a
-          href="/en-US/docs/Learn/Forms/Basic_native_form_controls#search_field"
+          href="/en-US/docs/Learn/Forms/HTML5_input_types#search_field"
           >Search field</a
         >,
         <a
@@ -382,7 +382,7 @@ The conformance criteria under this guideline relate to ways in which users can 
             >The basics of headings and paragraphs</a
           >,
           <a
-            href="/en-US/docs/Learn/Forms/How_to_structure_a_web_form#the_%3clabel%3e_element"
+            href="/en-US/docs/Learn/Forms/How_to_structure_a_web_form#the_label_element"
             >The &#x3C;label> element</a
           >.
         </p>

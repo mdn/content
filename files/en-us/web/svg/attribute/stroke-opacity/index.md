@@ -90,3 +90,9 @@ It's important to know that the stroke partially covers the fill of a shape, so 
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{SVGAttr("opacity")}}
+- {{SVGAttr("fill-opacity")}}
+- {{SVGAttr("stop-opacity")}}

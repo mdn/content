@@ -8,25 +8,25 @@ page-type: xpath-function
 
 The `normalize-space` function strips leading and trailing white-space from a string, replaces sequences of whitespace characters by a single space, and returns the resulting string.
 
-### Syntax
+## Syntax
 
 ```plain
 normalize-space( [string] )
 ```
 
-### Arguments
+### Parameters
 
 - `string` (optional)
   - : The string to be normalized. If omitted, string used will be the same as the context node converted to a string.
 
-### Returns
+### Return value
 
 The normalized string.
 
-### Defined
+## Specifications
 
 [XPath 1.0 4.2](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-normalize-space)
 
-### Gecko support
+## Gecko support
 
 Supported.

@@ -8,7 +8,7 @@ browser-compat: api.ScreenOrientation.lock
 
 {{APIRef("Screen Orientation")}}
 
-The **`lock()`** property of the {{domxref("ScreenOrientation")}} interface locks the orientation of the containing document to the specified orientation.
+The **`lock()`** method of the {{domxref("ScreenOrientation")}} interface locks the orientation of the containing document to the specified orientation.
 
 Typically orientation locking is only enabled on mobile devices, and when the browser context is full screen.
 If locking is supported, then it must work for all the parameter values listed below.

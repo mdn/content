@@ -14,6 +14,7 @@ Examples of identity providers on the web include Google, Microsoft, and Faceboo
 
 ## See also
 
-- {{glossary("Federated identity")}}
-- {{glossary("Relying party")}}
+- Related glossary terms:
+  - {{glossary("Federated identity")}}
+  - {{glossary("Relying party")}}
 - [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API)

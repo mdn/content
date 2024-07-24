@@ -8,25 +8,25 @@ page-type: xpath-function
 
 The `string-length` function returns a number equal to the number of characters in a given string.
 
-### Syntax
+## Syntax
 
 ```plain
 string-length( [string] )
 ```
 
-### Arguments
+### Parameters
 
 - `string` (optional)
   - : The string to evaluate. If omitted, string used will be the same as the context node converted to a string.
 
-### Returns
+### Return value
 
 An integer equal to the number of characters in the string.
 
-### Defined
+## Specifications
 
 [XPath 1.0 4.2](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-string-length)
 
-### Gecko support
+## Gecko support
 
 Supported.

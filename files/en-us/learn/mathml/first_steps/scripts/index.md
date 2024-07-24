@@ -172,8 +172,8 @@ The following MathML formula contains a more complex expression, nesting fractio
       </mroot>
       <mo>+</mo>
       <mfrac>
-        <mrow
-          ><mo>|</mo>
+        <mrow>
+          <mo>|</mo>
           <mover>
             <mi>α</mi>
             <mo>→</mo>
@@ -249,7 +249,7 @@ scriptedElements.forEach((scripted) => {
 });
 document.getElementById("clearOutput").addEventListener("click", () => {
   clearHighlight();
-  outputDiv.innerHTML = "";
+  outputDiv.textContent = "";
 });
 ```
 
@@ -261,7 +261,7 @@ We have previously seen some [properties of the `<mo>` element](/en-US/docs/Lear
 
 ### Stretching in horizontal direction
 
-Let's first perform the substitutions <math> <mi>β</mi> <mo>≔</mo> <mrow> <msub> <mi>z</mi> <mn>1</mn> </msub> <mo>+</mo> <msub> <mi>z</mi> <mn>2</mn> </msub> </mrow> </math> and <math> <mi>α</mi> <mo>≔</mo> <mrow> <msub> <mi>v</mi> <mn>1</mn> </msub> <mo>+</mo> <msub> <mi>v</mi> <mn>2</mn> </msub> </mrow> </math>:
+Let's first perform the substitutions <math><mi>β</mi><mo>≔</mo><mrow><msub><mi>z</mi><mn>1</mn></msub><mo>+</mo><msub><mi>z</mi><mn>2</mn></msub></mrow><annotation encoding="TeX">\beta := z*{1} + z*{2}</annotation></math> and <math><mi>α</mi><mo>≔</mo><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>+</mo><msub><mi>v</mi><mn>2</mn></msub></mrow><annotation encoding="TeX">\alpha := v*{1} + v*{2}</annotation></math>:
 
 ```html hidden
 <!doctype html>
@@ -296,8 +296,8 @@ Let's first perform the substitutions <math> <mi>β</mi> <mo>≔</mo> <mrow> <ms
       </mroot>
       <mo>+</mo>
       <mfrac>
-        <mrow
-          ><mo>|</mo>
+        <mrow>
+          <mo>|</mo>
           <mover>
             <mrow>
               <msub>
@@ -402,8 +402,8 @@ So far our example has actually been rendered with the [`display="block"`](/en-U
       </mroot>
       <mo>+</mo>
       <mfrac>
-        <mrow
-          ><mo>|</mo>
+        <mrow>
+          <mo>|</mo>
           <mover>
             <mrow>
               <msub>

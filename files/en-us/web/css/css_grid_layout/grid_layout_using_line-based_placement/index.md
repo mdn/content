@@ -14,9 +14,9 @@ Starting your exploration of grid with numbered lines is the most logical place 
 
 As a very simple example we can take a grid with 3 column tracks and 3 row tracks. This gives us 4 lines in each dimension.
 
-Inside our grid container, we have four child elements. If we do not place these on to the grid in any way they will lay out according to the auto-placement rules, one item in each of the first four cells. If you use the [Firefox Grid Highlighter](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) you can see how the grid has defined columns and rows.
+Inside our grid container, we have four child elements. If we do not place these on to the grid in any way they will lay out according to the auto-placement rules, one item in each of the first four cells. If you use the [Firefox grid highlighter](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) you can see how the grid has defined columns and rows.
 
-![Our Grid highlighted in DevTools](highlighted_grid.png)
+![Our grid highlighted in DevTools](highlighted_grid.png)
 
 ```css hidden
 * {
@@ -72,7 +72,7 @@ We can use line-based placement to control where these items sit on the grid. We
 
 As you position some items, other items on the grid will continue to be laid out using the auto-placement rules. We will take a proper look at how these work in a later guide but you can see as you work that grid is laying out un-placed items into empty cells of the grid.
 
-Addressing each item individually we can place all four items spanning row and column tracks. Note that we can leave cells empty if we wish. One of the very nice things about Grid Layout is the ability to have white space in our designs without having to push things around using margins to prevent floats from rising up into the space we have left.
+Addressing each item individually we can place all four items spanning row and column tracks. Note that we can leave cells empty if we wish. One of the very nice things about grid layout is the ability to have white space in our designs without having to push things around using margins to prevent floats from rising up into the space we have left.
 
 ```css hidden
 * {
@@ -461,7 +461,7 @@ Being able to address the start and end lines of the grid is useful as you can t
 
 ## Gutters or Alleys
 
-The CSS Grid Specification includes the ability to add gutters between column and row tracks with the {{cssxref("column-gap")}} and {{cssxref("row-gap")}} properties. These specify a gap that acts much like the {{cssxref("column-gap")}} property in multi-column layout.
+The CSS grid specification includes the ability to add gutters between column and row tracks with the {{cssxref("column-gap")}} and {{cssxref("row-gap")}} properties. These specify a gap that acts much like the {{cssxref("column-gap")}} property in multi-column layout.
 
 > **Note:** When grid first shipped in browsers the {{cssxref("column-gap")}}, {{cssxref("row-gap")}} and {{cssxref("gap")}} properties were prefixed with the `grid-` prefix as `grid-column-gap`, `grid-row-gap` and `grid-gap` respectively.
 >
@@ -601,7 +601,7 @@ In addition to specifying the start and end lines by number, you can specify a s
 
 {{ EmbedLiveSample('Using_the_span_keyword', '300', '330') }}
 
-You can also use the `span` keyword in the value of `grid-row-start`/`grid-row-end` and `grid-column-start/grid-column-end`. The following two examples will create the same grid area. In the first we set the start row line, then the end line we explain that we want to span 3 lines. The area will start at line 1 and span 3 lines to line 4.
+You can also use the `span` keyword in the value of `grid-row-start`/`grid-row-end` and `grid-column-start/grid-column-end`. The following two examples will create the same grid area. In the first we set the start row line, then the end line we specify that we want the area to cover 3 tracks. The area will start at line 1 and end 3 lines from line 1; that is, the area will end at line 4.
 
 ```css
 .box1 {
@@ -623,4 +623,4 @@ In the second example, we specify the end row line we want the item to finish at
 
 To become familiar with line based positioning in grid try to build a few common layouts by placing items onto grids with varying numbers of columns. Remember that if you do not place all of the items, any leftover items will be placed according to auto-placement rules. This may result in the layout you want, but if something is appearing somewhere unexpected, check that you have set a position for it.
 
-Also, remember that items on the grid can overlap each other when you place them explicitly like this. That can create some nice effects, however you can also end up with things overlapping incorrectly if you specify the wrong start or end line. The [Firefox Grid Highlighter](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) can be very useful as you learn, especially if your grid is quite complicated.
+Also, remember that items on the grid can overlap each other when you place them explicitly like this. That can create some nice effects, however you can also end up with things overlapping incorrectly if you specify the wrong start or end line. The [Firefox grid highlighter](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) can be very useful as you learn, especially if your grid is quite complicated.

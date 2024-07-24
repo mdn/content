@@ -84,7 +84,7 @@ CIELab color spaces, including Lab, Lch, Oklab, and Oklch, are device-independen
 
 While combinations of red, green, and blue work well for representing colors on screen, sRGB doesn't directly correspond to how humans perceive color. Created by the International Commission on Illumination (CIE) in 1931, the CIE 1931 XYZ (or XYZ for short) color spaces are the first defined quantitative links between distributions of wavelengths in the electromagnetic visible spectrum and perceived colors in human vision.
 
-People with normal vision have three kinds of cone cells that sense light, having peaks of spectral sensitivity in differing wavelengths. The CIE X, Y, and Z parameters correspond to levels of stimuli of the three kinds of cone cells which, in principle, describe every color. The CIE 1931 XYZ color space, with its tri-stimulus values, encompasses all visible colors.
+People with normal vision have three kinds of cone cells that sense light, having peaks of spectral sensitivity in differing wavelengths. The CIE X, Y, and Z parameters correspond to levels of stimuli of the three kinds of cone cells which, in principle, describe every visible color. The `Y` channel represents the luminance of a color. The `Z` channel reflects the amount of blue in the color but is not the same as the `B` in RGB. The `X` axis is orthogonal to the Y- and Z- axis of the XYZ color 3D coordinate system.
 
 - `xyz` and `xyz-d65` color space
 

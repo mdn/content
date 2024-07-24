@@ -328,11 +328,11 @@ class SomeClass {
 
   someMethod(e) {
     console.log(this.name);
-    switch (e.keyCode) {
-      case 5:
+    switch (e.code) {
+      case "ArrowUp":
         // some code here…
         break;
-      case 6:
+      case "ArrowDown":
         // some code here…
         break;
     }
@@ -628,6 +628,9 @@ also available to the event handler when using an arrow function.
     </a>
   </div>
 </div>
+<hr />
+<button class="clear-button">Clear logs</button>
+<section class="demo-logs"></section>
 ```
 
 #### CSS
@@ -660,7 +663,30 @@ also available to the event handler when using an arrow function.
 }
 ```
 
+```css hidden
+.demo-logs {
+  width: 530px;
+  height: 16rem;
+  background-color: #ddd;
+  overflow-x: auto;
+  padding: 1rem;
+}
+```
+
 #### JavaScript
+
+```js hidden
+const clearBtn = document.querySelector(".clear-button");
+const demoLogs = document.querySelector(".demo-logs");
+
+function log(msg) {
+  demoLogs.innerText += `${msg}\n`;
+}
+
+clearBtn.addEventListener("click", () => {
+  demoLogs.innerText = "";
+});
+```
 
 ```js
 const outer = document.querySelector(".outer");
@@ -695,27 +721,27 @@ inner1.addEventListener("click", passiveHandler, passive);
 inner2.addEventListener("click", nonePassiveHandler, nonePassive);
 
 function onceHandler(event) {
-  alert("outer, once");
+  log("outer, once");
 }
 function noneOnceHandler(event) {
-  alert("outer, none-once, default");
+  log("outer, none-once, default\n");
 }
 function captureHandler(event) {
   //event.stopImmediatePropagation();
-  alert("middle, capture");
+  log("middle, capture");
 }
 function noneCaptureHandler(event) {
-  alert("middle, none-capture, default");
+  log("middle, none-capture, default");
 }
 function passiveHandler(event) {
   // Unable to preventDefault inside passive event listener invocation.
   event.preventDefault();
-  alert("inner1, passive, open new page");
+  log("inner1, passive, open new page");
 }
 function nonePassiveHandler(event) {
   event.preventDefault();
   //event.stopPropagation();
-  alert("inner2, none-passive, default, not open new page");
+  log("inner2, none-passive, default, not open new page");
 }
 ```
 
@@ -723,7 +749,7 @@ function nonePassiveHandler(event) {
 
 Click the outer, middle, inner containers respectively to see how the options work.
 
-{{ EmbedLiveSample('Example_of_options_usage', 600, 310, '') }}
+{{ EmbedLiveSample('Example_of_options_usage', 600, 630) }}
 
 Before using a particular value in the `options` object, it's a
 good idea to ensure that the user's browser supports it, since these are an addition

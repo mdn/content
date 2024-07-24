@@ -7,7 +7,7 @@ browser-compat: api.Selection
 
 {{ApiRef("Selection API")}}
 
-A **`Selection`** object represents the range of text selected by the user or the current position of the caret. To obtain a `Selection` object for examination or manipulation, call {{DOMxRef("window.getSelection()")}}.
+A **`Selection`** object represents the range of text selected by the user or the current position of the caret. Each {{domxref("document")}} is associated with a unique selection object, which can be retrieved by {{DOMxRef("document.getSelection()")}} or {{domxref("window.getSelection()")}} and then be examined and modified.
 
 A user may make a selection from left to right (in document order) or right to left (reverse of document order). The **_anchor_** is where the user began the selection and the **_focus_** is where the user ends the selection. If you make a selection with a desktop mouse, the anchor is placed where you pressed the mouse button, and the focus is placed where you released the mouse button.
 

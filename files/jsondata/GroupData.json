@@ -397,10 +397,9 @@
       "overview": ["Document Object Model"],
       "guides": [
         "/docs/Web/API/Document_Object_Model/Introduction",
-        "/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core",
+        "/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model",
         "/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces",
         "/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors",
-        "/docs/Web/API/Document_Object_Model/How_to_create_a_DOM_tree",
         "/docs/Web/API/Document_Object_Model/Events",
         "/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM",
         "/docs/Web/API/Document_Object_Model/Examples"
@@ -517,13 +516,9 @@
     },
     "Fetch API": {
       "overview": ["Fetch API"],
-      "guides": [
-        "/docs/Web/API/Fetch_API/Using_Fetch",
-        "/docs/Web/API/Fetch_API/Basic_concepts",
-        "/docs/Web/API/Fetch_API/Cross-global_fetch_usage"
-      ],
-      "interfaces": ["Headers", "Request", "Response"],
-      "methods": ["fetch()"],
+      "guides": ["/docs/Web/API/Fetch_API/Using_Fetch"],
+      "interfaces": ["Headers", "Request", "RequestInit", "Response"],
+      "methods": ["Window.fetch()", "WorkerGlobalScope.fetch()"],
       "properties": [],
       "events": []
     },
@@ -771,6 +766,8 @@
         "MessageEvent",
         "MessagePort",
         "Navigator",
+        "PageRevealEvent",
+        "PageSwapEvent",
         "PageTransitionEvent",
         "Plugin",
         "PluginArray",
@@ -968,12 +965,12 @@
       "guides": [
         "/docs/Web/API/Media_Capabilities_API/Using_the_Media_Capabilities_API"
       ],
-      "interfaces": ["MediaCapabilities", "Screen"],
-      "methods": [
-        "MediaCapabilities.decodingInfo()",
-        "MediaCapabilities.encodingInfo()"
+      "interfaces": ["MediaCapabilities"],
+      "methods": [],
+      "properties": [
+        "Navigator.mediaCapabilities",
+        "WorkerNavigator.mediaCapabilities"
       ],
-      "properties": ["Navigator.mediaCapabilities"],
       "events": []
     },
     "Media Capture and Streams": {
@@ -1040,6 +1037,7 @@
       "interfaces": [
         "NavigateEvent",
         "Navigation",
+        "NavigationActivation",
         "NavigationCurrentEntryChangeEvent",
         "NavigationDestination",
         "NavigationHistoryEntry",
@@ -1669,6 +1667,7 @@
         "MouseEvent",
         "MouseScrollEvent",
         "MutationEvent",
+        "TextEvent",
         "UIEvent",
         "WheelEvent"
       ],
@@ -1740,10 +1739,11 @@
     },
     "View Transitions API": {
       "overview": ["View Transitions API"],
+      "guides": ["/docs/Web/API/View_Transitions_API/Using"],
       "interfaces": ["ViewTransition"],
       "methods": ["Document.startViewTransition()"],
       "properties": [],
-      "events": []
+      "events": ["Window: pagereveal", "Window: pageswap"]
     },
     "VirtualKeyboard API": {
       "overview": ["VirtualKeyboard API"],
@@ -2368,7 +2368,7 @@
     },
     "WebVTT": {
       "overview": ["WebVTT API"],
-      "guides": ["/docs/Web/API/Web_Video_Text_Tracks_Format"],
+      "guides": ["/docs/Web/API/WebVTT_API/Web_Video_Text_Tracks_Format"],
       "interfaces": [
         "VTTCue",
         "VTTRegion",

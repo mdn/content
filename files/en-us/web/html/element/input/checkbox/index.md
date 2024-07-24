@@ -290,14 +290,14 @@ otherCheckbox.addEventListener("change", () => {
     </tr>
     <tr>
       <td><strong>Supported common attributes</strong></td>
-      <td><code>checked</code></td>
+      <td><code><a href="#checked">checked</a></code></td>
     </tr>
     <tr>
       <td><strong>IDL attributes</strong></td>
       <td>
-        <code><a href="#checked">checked</a></code>,
-        <code><a href="#indeterminate">indeterminate</a></code> and
-        <code><a href="#value">value</a></code>
+        <code><a href="/en-US/docs/Web/API/HTMLInputElement/checked">checked</a></code>,
+        <code><a href="/en-US/docs/Web/API/HTMLInputElement/indeterminate">indeterminate</a></code> and
+        <code><a href="/en-US/docs/Web/API/HTMLInputElement/value">value</a></code>
       </td>
     </tr>
     <tr>

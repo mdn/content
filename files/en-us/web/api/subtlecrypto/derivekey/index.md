@@ -256,7 +256,7 @@ function getKey(keyMaterial, salt) {
     {
       name: "HKDF",
       salt: salt,
-      info: new Uint8Array("Encryption example"),
+      info: new TextEncoder().encode("Encryption example"),
       hash: "SHA-256",
     },
     keyMaterial,

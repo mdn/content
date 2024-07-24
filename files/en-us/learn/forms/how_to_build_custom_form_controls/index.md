@@ -675,8 +675,8 @@ To achieve this, we need two things:
 First, we need to add a regular {{HTMLElement("select")}} element before each instance of our custom control. There is a benefit to having this "extra" select even if our JavaScript works as hoped: we will use this select to send data from our custom control along with the rest of our form data. We will discuss this in greater depth later.
 
 ```html
-<body>
-  <form class="no-widget">
+<body class="no-widget">
+  <form>
     <select name="myFruit">
       <option>Cherry</option>
       <option>Lemon</option>
@@ -1309,7 +1309,7 @@ function updateValue(select, index) {
   nativeWidget.selectedIndex = index;
 
   // We update the value placeholder accordingly
-  value.innerHTML = optionList[index].innerHTML;
+  value.textContent = optionList[index].textContent;
 
   // And we highlight the corresponding option of our custom control
   highlightOption(select, optionList[index]);
@@ -1571,7 +1571,7 @@ function updateValue(select, index) {
   const optionList = select.querySelectorAll(".option");
 
   nativeWidget.selectedIndex = index;
-  value.innerHTML = optionList[index].innerHTML;
+  value.textContent = optionList[index].textContent;
   highlightOption(select, optionList[index]);
 }
 
@@ -1708,7 +1708,7 @@ function updateValue(select, index) {
   optionList[index].setAttribute("aria-selected", "true");
 
   nativeWidget.selectedIndex = index;
-  value.innerHTML = optionList[index].innerHTML;
+  value.textContent = optionList[index].textContent;
   highlightOption(select, optionList[index]);
 }
 ```
@@ -1902,7 +1902,7 @@ function updateValue(select, index) {
   optionList[index].setAttribute("aria-selected", "true");
 
   nativeWidget.selectedIndex = index;
-  value.innerHTML = optionList[index].innerHTML;
+  value.textContent = optionList[index].textContent;
   highlightOption(select, optionList[index]);
 }
 

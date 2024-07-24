@@ -23,6 +23,8 @@ Any time you would normally use `max-height` or `max-width`, you should instead 
 /* <length> values */
 max-block-size: 300px;
 max-block-size: 25em;
+max-block-size: anchor-size(--myAnchor self-inline, 250px);
+max-block-size: calc(anchor-size(width) / 2);
 
 /* <percentage> values */
 max-block-size: 75%;

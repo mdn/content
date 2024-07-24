@@ -147,7 +147,7 @@ _No change._
 New constants have been added to `nsIContentPolicy` to allow Gecko internals and add-on code to better differentiate different types of requests. These are:
 
 - `TYPE_FETCH`
-  - : Indicates a content load request initiated by the {{domxref("fetch()")}} method.
+  - : Indicates a content load request initiated by the {{domxref("Window/fetch", "fetch()")}} method.
 - `TYPE_IMAGESET`
   - : Indicates a request to load an {{HTMLElement("img")}} (with the [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) attribute or {{HTMLElement("picture")}} element.
 

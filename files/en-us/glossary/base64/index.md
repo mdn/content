@@ -14,8 +14,7 @@ When the term "Base64" is used on its own to refer to a specific {{glossary("alg
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
 ```
 
-A common variant is "Base64 URL safe", which omits the padding and replaces `+/` with `-_` to avoid characters that might cause problems in
-{{glossary("URL")}} path segments or query parameters.
+A common variant is "Base64 URL safe", which omits the padding and replaces `+/` with `-_` to avoid characters that might cause problems in {{glossary("URL")}} path segments or query parameters. You don't need this encoding if you are not putting the data in a path segment or query parameter — for example, [data URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) have neither and can use the standard Base64 encoding.
 
 Base64 encoding schemes are commonly used to encode binary data for storage or transfer over media that can only deal with ASCII text (or some superset of ASCII that still falls short of accepting arbitrary binary data). This ensures that the data remains intact without modification during transport. Common applications of Base64 include:
 

@@ -172,7 +172,7 @@ HTTP requests are never displayed to the user (if you want to see them, you need
 2. Select "Network"
 3. Select "All"
 4. Select "foo.com" in the "Name" tab
-5. Select "Headers"
+5. Select "Request" (Firefox) or "Payload" (Chrome/Edge)
 
 You can then get the form data, as shown in the image below.
 

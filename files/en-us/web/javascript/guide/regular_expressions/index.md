@@ -357,6 +357,8 @@ and get the same result.
 The `m` flag is used to specify that a multiline input string should be treated as multiple lines.
 If the `m` flag is used, `^` and `$` match at the start or end of any line within the input string instead of the start or end of the entire string.
 
+The `i`, `m`, and `s` flags can be enabled or disabled for specific parts of a regex using the [modifier](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Modifier) syntax.
+
 #### Using the global search flag with exec()
 
 {{jsxref("RegExp.prototype.exec()")}} method with the `g` flag returns each match and its position iteratively.

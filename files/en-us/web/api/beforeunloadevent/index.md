@@ -24,46 +24,6 @@ _Inherits properties from its parent, {{DOMxRef("Event")}}._
 
 _Inherits methods from its parent, {{DOMxRef("Event")}}._
 
-## Examples
-
-In the following example we have an HTML text {{htmlelement("input")}} to represent some data that could be changed and require saving:
-
-```html
-<form>
-  <input type="text" name="name" id="name" />
-</form>
-```
-
-Our JavaScript attaches an {{domxref("Element/input_event", "input")}} event listener to the `<input>` element that listens for changes in the inputted value. When the value is updated to a non-empty value, a {{domxref("Window.beforeunload_event", "beforeunload")}} event listener is attached to the {{domxref("Window")}} object.
-
-If the value becomes an empty string again (i.e. the value is deleted), the `beforeunload` event listener is removed again — as mentioned above in the [Usage notes](#usage_notes), the listener should be removed when there is no unsaved data to warn about.
-
-The `beforeunload` event handler function invokes `event.preventDefault()` to trigger the warning dialog when the user closes or navigates the tab. We have also included `event.returnValue = true` in the handler function so that any browsers that don't support the `event.preventDefault()` mechanism will still run the demo correctly.
-
-```js
-const beforeUnloadHandler = (event) => {
-  // Recommended
-  event.preventDefault();
-
-  // Included for legacy support, e.g. Chrome/Edge < 119
-  event.returnValue = true;
-};
-
-const nameInput = document.querySelector("#name");
-
-nameInput.addEventListener("input", (event) => {
-  if (event.target.value !== "") {
-    window.addEventListener("beforeunload", beforeUnloadHandler);
-  } else {
-    window.removeEventListener("beforeunload", beforeUnloadHandler);
-  }
-});
-```
-
-When the `<input>` value is non-empty, if you try to close, navigate, or reload the page the browser displays the warning dialog. Try it out:
-
-{{EmbedLiveSample("Examples", "100%", 50)}}
-
 ## Specifications
 
 {{Specifications}}

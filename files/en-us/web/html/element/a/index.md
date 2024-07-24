@@ -89,7 +89,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     - `strict-origin-when-cross-origin` (default): Send a full URL when performing a same-origin request, only send the origin when the protocol security level stays the same (HTTPS→HTTPS), and send no header to a less secure destination (HTTPS→HTTP).
     - `unsafe-url`: The referrer will include the origin _and_ the path (but not the [fragment](/en-US/docs/Web/API/HTMLAnchorElement/hash), [password](/en-US/docs/Web/API/HTMLAnchorElement/password), or [username](/en-US/docs/Web/API/HTMLAnchorElement/username)). **This value is unsafe**, because it leaks origins and paths from TLS-protected resources to insecure origins.
 
-- `rel`
+- [`rel`](/en-US/docs/Web/HTML/Attributes/rel)
   - : The relationship of the linked URL as space-separated link types.
 - `target`
 
@@ -130,168 +130,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
     > **Note:** Use the {{HTMLElement("area")}} element for image maps instead.
 
-## Examples
-
-### Linking to an absolute URL
-
-#### HTML
-
-```html
-<a href="https://www.mozilla.com">Mozilla</a>
-```
-
-#### Result
-
-{{EmbedLiveSample('Linking_to_an_absolute_URL')}}
-
-### Linking to relative URLs
-
-#### HTML
-
-```html
-<a href="//example.com">Scheme-relative URL</a>
-<a href="/en-US/docs/Web/HTML">Origin-relative URL</a>
-<a href="./p">Directory-relative URL</a>
-```
-
-```css hidden
-a {
-  display: block;
-  margin-bottom: 0.5em;
-}
-```
-
-#### Result
-
-{{EmbedLiveSample('Linking_to_relative_URLs')}}
-
-### Linking to an element on the same page
-
-```html
-<!-- <a> element links to the section below -->
-<p><a href="#Section_further_down">Jump to the heading below</a></p>
-
-<!-- Heading to link to -->
-<h2 id="Section_further_down">Section further down</h2>
-```
-
-#### Result
-
-{{EmbedLiveSample('Linking to an element on the same page')}}
-
-> **Note:** You can use `href="#top"` or the empty fragment (`href="#"`) to link to the top of the current page, [as defined in the HTML specification](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier).
-
-### Linking to an email address
-
-To create links that open in the user's email program to let them send a new message, use the `mailto:` scheme:
-
-```html
-<a href="mailto:nowhere@mozilla.org">Send email to nowhere</a>
-```
-
-#### Result
-
-{{EmbedLiveSample('Linking to an email address')}}
-
-For details about `mailto:` URLs, such as including a subject or body, see [Email links](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#email_links) or {{RFC(6068)}}.
-
-### Linking to telephone numbers
-
-```html
-<a href="tel:+49.157.0156">+49 157 0156</a>
-<a href="tel:+1(800)555-0123">(800) 555-0123</a>
-```
-
-#### Result
-
-{{EmbedLiveSample('Linking to telephone numbers')}}
-
-`tel:` link behavior varies with device capabilities:
-
-- Cellular devices autodial the number.
-- Most operating systems have programs that can make calls, like Skype or FaceTime.
-- Websites can make phone calls with {{domxref("Navigator/registerProtocolHandler", "registerProtocolHandler")}}, such as `web.skype.com`.
-- Other behaviors include saving the number to contacts, or sending the number to another device.
-
-See {{RFC(3966)}} for syntax, additional features, and other details about the `tel:` URL scheme.
-
-### Using the download attribute to save a \<canvas> as a PNG
-
-To save a {{HTMLElement("canvas")}} element's contents as an image, you can create a link where the `href` is the canvas data as a `data:` URL created with JavaScript and the `download` attribute provides the file name for the downloaded PNG file:
-
-#### Example painting app with save link
-
-##### HTML
-
-```html
-<p>
-  Paint by holding down the mouse button and moving it.
-  <a href="" download="my_painting.png">Download my painting</a>
-</p>
-
-<canvas width="300" height="300"></canvas>
-```
-
-##### CSS
-
-```css
-html {
-  font-family: sans-serif;
-}
-canvas {
-  background: #fff;
-  border: 1px dashed;
-}
-a {
-  display: inline-block;
-  background: #69c;
-  color: #fff;
-  padding: 5px 10px;
-}
-```
-
-##### JavaScript
-
-```js
-const canvas = document.querySelector("canvas");
-const c = canvas.getContext("2d");
-c.fillStyle = "hotpink";
-let isDrawing;
-
-function draw(x, y) {
-  if (isDrawing) {
-    c.beginPath();
-    c.arc(x, y, 10, 0, Math.PI * 2);
-    c.closePath();
-    c.fill();
-  }
-}
-
-canvas.addEventListener("mousemove", (event) =>
-  draw(event.offsetX, event.offsetY),
-);
-canvas.addEventListener("mousedown", () => (isDrawing = true));
-canvas.addEventListener("mouseup", () => (isDrawing = false));
-
-document
-  .querySelector("a")
-  .addEventListener(
-    "click",
-    (event) => (event.target.href = canvas.toDataURL()),
-  );
-```
-
-##### Result
-
-{{EmbedLiveSample('Example_painting_app_with_save_link', '100%', '400')}}
-
-## Security and privacy
-
-`<a>` elements can have consequences for users' security and privacy. See [`Referer` header: privacy and security concerns](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns) for information.
-
-Using `target="_blank"` without [`rel="noreferrer"`](/en-US/docs/Web/HTML/Attributes/rel/noreferrer) and [`rel="noopener"`](/en-US/docs/Web/HTML/Attributes/rel/noopener) makes the website vulnerable to {{domxref("window.opener")}} API exploitation attacks, although note that, in newer browser versions setting `target="_blank"` implicitly provides the same protection as setting `rel="noopener"`. See [browser compatibility](#browser_compatibility) for details.
-
-## Accessibility concerns
+## Accessibility
 
 ### Strong link text
 
@@ -436,6 +275,169 @@ Interactive elements, like links, placed in close visual proximity should have s
 Spacing may be created using CSS properties like {{CSSxRef("margin")}}.
 
 - [Hand tremors and the giant-button-problem](https://axesslab.com/hand-tremors/)
+
+## Examples
+
+### Linking to an absolute URL
+
+#### HTML
+
+```html
+<a href="https://www.mozilla.com">Mozilla</a>
+```
+
+#### Result
+
+{{EmbedLiveSample('Linking_to_an_absolute_URL')}}
+
+### Linking to relative URLs
+
+#### HTML
+
+```html
+<a href="//example.com">Scheme-relative URL</a>
+<a href="/en-US/docs/Web/HTML">Origin-relative URL</a>
+<a href="p">Directory-relative URL</a>
+<a href="./p">Directory-relative URL</a>
+<a href="../p">Parent-directory-relative URL</a>
+```
+
+```css hidden
+a {
+  display: block;
+  margin-bottom: 0.5em;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Linking_to_relative_URLs')}}
+
+### Linking to an element on the same page
+
+```html
+<!-- <a> element links to the section below -->
+<p><a href="#Section_further_down">Jump to the heading below</a></p>
+
+<!-- Heading to link to -->
+<h2 id="Section_further_down">Section further down</h2>
+```
+
+#### Result
+
+{{EmbedLiveSample('Linking to an element on the same page')}}
+
+> **Note:** You can use `href="#top"` or the empty fragment (`href="#"`) to link to the top of the current page, [as defined in the HTML specification](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier).
+
+### Linking to an email address
+
+To create links that open in the user's email program to let them send a new message, use the `mailto:` scheme:
+
+```html
+<a href="mailto:nowhere@mozilla.org">Send email to nowhere</a>
+```
+
+#### Result
+
+{{EmbedLiveSample('Linking to an email address')}}
+
+For details about `mailto:` URLs, such as including a subject or body, see [Email links](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#email_links) or {{RFC(6068)}}.
+
+### Linking to telephone numbers
+
+```html
+<a href="tel:+49.157.0156">+49 157 0156</a>
+<a href="tel:+1(800)555-0123">(800) 555-0123</a>
+```
+
+#### Result
+
+{{EmbedLiveSample('Linking to telephone numbers')}}
+
+`tel:` link behavior varies with device capabilities:
+
+- Cellular devices autodial the number.
+- Most operating systems have programs that can make calls, like Skype or FaceTime.
+- Websites can make phone calls with {{domxref("Navigator/registerProtocolHandler", "registerProtocolHandler")}}, such as `web.skype.com`.
+- Other behaviors include saving the number to contacts, or sending the number to another device.
+
+See {{RFC(3966)}} for syntax, additional features, and other details about the `tel:` URL scheme.
+
+### Using the download attribute to save a \<canvas> as a PNG
+
+To save a {{HTMLElement("canvas")}} element's contents as an image, you can create a link where the `href` is the canvas data as a `data:` URL created with JavaScript and the `download` attribute provides the file name for the downloaded PNG file:
+
+#### Example painting app with save link
+
+##### HTML
+
+```html
+<p>
+  Paint by holding down the mouse button and moving it.
+  <a href="" download="my_painting.png">Download my painting</a>
+</p>
+
+<canvas width="300" height="300"></canvas>
+```
+
+##### CSS
+
+```css
+html {
+  font-family: sans-serif;
+}
+canvas {
+  background: #fff;
+  border: 1px dashed;
+}
+a {
+  display: inline-block;
+  background: #69c;
+  color: #fff;
+  padding: 5px 10px;
+}
+```
+
+##### JavaScript
+
+```js
+const canvas = document.querySelector("canvas");
+const c = canvas.getContext("2d");
+c.fillStyle = "hotpink";
+let isDrawing;
+
+function draw(x, y) {
+  if (isDrawing) {
+    c.beginPath();
+    c.arc(x, y, 10, 0, Math.PI * 2);
+    c.closePath();
+    c.fill();
+  }
+}
+
+canvas.addEventListener("mousemove", (event) =>
+  draw(event.offsetX, event.offsetY),
+);
+canvas.addEventListener("mousedown", () => (isDrawing = true));
+canvas.addEventListener("mouseup", () => (isDrawing = false));
+
+document
+  .querySelector("a")
+  .addEventListener(
+    "click",
+    (event) => (event.target.href = canvas.toDataURL()),
+  );
+```
+
+##### Result
+
+{{EmbedLiveSample('Example_painting_app_with_save_link', '100%', '400')}}
+
+## Security and privacy
+
+`<a>` elements can have consequences for users' security and privacy. See [`Referer` header: privacy and security concerns](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns) for information.
+
+Using `target="_blank"` without [`rel="noreferrer"`](/en-US/docs/Web/HTML/Attributes/rel/noreferrer) and [`rel="noopener"`](/en-US/docs/Web/HTML/Attributes/rel/noopener) makes the website vulnerable to {{domxref("window.opener")}} API exploitation attacks, although note that, in newer browser versions setting `target="_blank"` implicitly provides the same protection as setting `rel="noopener"`. See [browser compatibility](#browser_compatibility) for details.
 
 ## Technical summary
 

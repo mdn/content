@@ -146,7 +146,7 @@ function draw() {
 }
 
 function startGame() {
-  const interval = setInterval(draw, 10);
+  setInterval(draw, 10);
 }
 
 document.getElementById("runButton").addEventListener("click", function () {
@@ -157,7 +157,8 @@ document.getElementById("runButton").addEventListener("click", function () {
 
 {{embedlivesample("compare_your_code", 600, 360)}}
 
-> **Note:** Try changing the color of the ball to a random color every time it hits the wall.
+> [!NOTE]
+> Try changing the color of the ball to a random color every time it hits the wall.
 
 ## Next steps
 

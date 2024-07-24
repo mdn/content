@@ -8,14 +8,14 @@ page-type: guide
 
 **HTTP** is a {{Glossary("protocol")}} for fetching resources such as HTML documents.
 It is the foundation of any data exchange on the Web and it is a client-server protocol, which means requests are initiated by the recipient, usually the Web browser.
-A complete document is reconstructed from the different sub-documents fetched, for instance, text, layout description, images, videos, scripts, and more.
+A complete document is typically constructed from resources such as text content, layout instructions, images, videos, scripts, and more.
 
-![A Web document is the composition of different resources](fetching_a_page.png)
+![A single Web document composed from multiple resources from different servers.](https://mdn.github.io/shared-assets/images/diagrams/http/overview/fetching-a-page.svg)
 
 Clients and servers communicate by exchanging individual messages (as opposed to a stream of data).
-The messages sent by the client, usually a Web browser, are called _requests_ and the messages sent by the server as an answer are called _responses_.
+The messages sent by the client are called _requests_ and the messages sent by the server as an answer are called _responses_.
 
-![HTTP as an application layer protocol, on top of TCP (transport layer) and IP (network layer) and below the presentation layer.](http-layers.png)
+![HTTP as an application layer protocol, on top of TCP (transport layer) and IP (network layer) and below the presentation layer.](https://mdn.github.io/shared-assets/images/diagrams/http/overview/http-layers.svg)
 
 Designed in the early 1990s, HTTP is an extensible protocol which has evolved over time.
 It is an application layer protocol that is sent over {{Glossary("TCP")}}, or over a {{Glossary("TLS")}}-encrypted TCP connection, though any reliable transport protocol could theoretically be used.
@@ -30,7 +30,7 @@ Most of the time the user-agent is a Web browser, but it can be anything, for ex
 Each individual request is sent to a server, which handles it and provides an answer called the _response_.
 Between the client and the server there are numerous entities, collectively called {{Glossary("Proxy_server", "proxies")}}, which perform different operations and act as gateways or {{Glossary("Cache", "caches")}}, for example.
 
-![Client server chain](client-server-chain.png)
+![A HTTP request from a client forwarded by several proxies to a server and a response taking the same route back to the client.](https://mdn.github.io/shared-assets/images/diagrams/http/overview/client-server-chain.svg)
 
 In reality, there are more computers between a browser and the server handling the request: there are routers, modems, and more.
 Thanks to the layered design of the Web, these are hidden in the network and transport layers.
@@ -193,7 +193,7 @@ There are two types of HTTP messages, requests and responses, each with its own 
 
 An example HTTP request:
 
-![A basic HTTP request](http_request.png)
+![Overview of a HTTP GET request with headers](https://mdn.github.io/shared-assets/images/diagrams/http/overview/http-request.svg)
 
 Requests consist of the following elements:
 
@@ -208,7 +208,7 @@ Requests consist of the following elements:
 
 An example response:
 
-![HTTP Response image](http_response.png)
+![Overview of a '200 OK' HTTP response to a GET request including response headers.](https://mdn.github.io/shared-assets/images/diagrams/http/overview/http-response.svg)
 
 Responses consist of the following elements:
 
@@ -232,4 +232,4 @@ HTTP is an extensible protocol that is easy to use.
 The client-server structure, combined with the ability to add headers, allows HTTP to advance along with the extended capabilities of the Web.
 
 Though HTTP/2 adds some complexity by embedding HTTP messages in frames to improve performance, the basic structure of messages has stayed the same since HTTP/1.0.
-Session flow remains simple, allowing it to be investigated and debugged with a simple [HTTP message monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html).
+Session flow remains basic, allowing it to be investigated and debugged with a [HTTP network monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html).

@@ -32,15 +32,7 @@ A few guidelines and tips for composing good titles:
 - Don't use "keyword blobs." If your title is just a list of words, algorithms often reduce your page's position in the search results.
 - Try to make sure your titles are as unique as possible within your own site. Duplicate—or near-duplicate—titles can contribute to inaccurate search results.
 
-## Examples
-
-```html
-<title>Awesome interesting stuff</title>
-```
-
-This example establishes a page whose title (as displayed at the top of the window or in the window's tab) as "Awesome interesting stuff".
-
-## Accessibility concerns
+## Accessibility
 
 It is important to provide an accurate and concise title to describe the page's purpose.
 
@@ -64,6 +56,14 @@ If a form submission contains errors and the submission re-renders the current p
 
 - [MDN Understanding WCAG, Guideline 2.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_—_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
 - [Understanding Success Criterion 2.4.2 | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html)
+
+## Examples
+
+```html
+<title>Awesome interesting stuff</title>
+```
+
+This example establishes a page whose title (as displayed at the top of the window or in the window's tab) as "Awesome interesting stuff".
 
 ## Technical summary
 
