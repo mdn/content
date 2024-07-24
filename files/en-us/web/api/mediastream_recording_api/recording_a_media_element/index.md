@@ -129,7 +129,7 @@ Next, we create some utility functions that will get used later.
 
 ```js
 function log(msg) {
-  logElement.innerHTML += `${msg}\n`;
+  logElement.innerText += `${msg}\n`;
 }
 ```
 

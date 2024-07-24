@@ -9,7 +9,7 @@ browser-compat: http.headers.Access-Control-Allow-Origin
 
 **Cross-Origin Resource Sharing** ({{Glossary("CORS")}}) is an {{Glossary("HTTP")}}-header based mechanism that allows a server to indicate any {{glossary("origin", "origins")}} (domain, scheme, or port) other than its own from which a browser should permit loading resources. CORS also relies on a mechanism by which browsers make a "preflight" request to the server hosting the cross-origin resource, in order to check that the server will permit the actual request. In that preflight, the browser sends headers that indicate the HTTP method and headers that will be used in the actual request.
 
-An example of a cross-origin request: the front-end JavaScript code served from `https://domain-a.com` uses {{domxref("fetch()")}} to make a request for `https://domain-b.com/data.json`.
+An example of a cross-origin request: the front-end JavaScript code served from `https://domain-a.com` uses {{domxref("Window/fetch", "fetch()")}} to make a request for `https://domain-b.com/data.json`.
 
 For security reasons, browsers restrict cross-origin HTTP requests initiated from scripts. For example, `fetch()` and {{domxref("XMLHttpRequest")}} follow the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy). This means that a web application using those APIs can only request resources from the same origin the application was loaded from unless the response from other origins includes the right CORS headers.
 
@@ -39,13 +39,13 @@ Subsequent sections discuss scenarios, as well as provide a breakdown of the HTT
 
 ## Examples of access control scenarios
 
-We present three scenarios that demonstrate how Cross-Origin Resource Sharing works. All these examples use {{domxref("fetch()")}}, which can make cross-origin requests in any supporting browser.
+We present three scenarios that demonstrate how Cross-Origin Resource Sharing works. All these examples use {{domxref("Window/fetch", "fetch()")}}, which can make cross-origin requests in any supporting browser.
 
 ### Simple requests
 
 Some requests don't trigger a {{Glossary("Preflight_request","CORS preflight")}}. Those are called _simple requests_ from the obsolete [CORS spec](https://www.w3.org/TR/2014/REC-cors-20140116/#terminology), though the [Fetch spec](https://fetch.spec.whatwg.org/) (which now defines CORS) doesn't use that term.
 
-The motivation is that the {{HTMLElement("form")}} element from HTML 4.0 (which predates cross-site {{domxref("fetch()")}} and {{domxref("XMLHttpRequest")}}) can submit simple requests to any origin, so anyone writing a server must already be protecting against {{Glossary("CSRF", "cross-site request forgery")}} (CSRF). Under this assumption, the server doesn't have to opt-in (by responding to a preflight request) to receive any request that looks like a form submission, since the threat of CSRF is no worse than that of form submission. However, the server still must opt-in using {{HTTPHeader("Access-Control-Allow-Origin")}} to _share_ the response with the script.
+The motivation is that the {{HTMLElement("form")}} element from HTML 4.0 (which predates cross-site {{domxref("Window/fetch", "fetch()")}} and {{domxref("XMLHttpRequest")}}) can submit simple requests to any origin, so anyone writing a server must already be protecting against {{Glossary("CSRF", "cross-site request forgery")}} (CSRF). Under this assumption, the server doesn't have to opt-in (by responding to a preflight request) to receive any request that looks like a form submission, since the threat of CSRF is no worse than that of form submission. However, the server still must opt-in using {{HTTPHeader("Access-Control-Allow-Origin")}} to _share_ the response with the script.
 
 A _simple request_ is one that **meets all the following conditions**:
 
@@ -277,7 +277,7 @@ However, if the request is one that triggers a preflight due to the presence of 
 
 > **Note:** When making credentialed requests to a different domain, third-party cookie policies will still apply. The policy is always enforced regardless of any setup on the server and the client as described in this chapter.
 
-The most interesting capability exposed by both {{domxref("fetch()")}} or {{domxref("XMLHttpRequest")}} and CORS is the ability to make "credentialed" requests that are aware of [HTTP cookies](/en-US/docs/Web/HTTP/Cookies) and HTTP Authentication information. By default, in cross-origin `fetch()` or `XMLHttpRequest` calls, browsers will _not_ send credentials.
+The most interesting capability exposed by both {{domxref("Window/fetch", "fetch()")}} or {{domxref("XMLHttpRequest")}} and CORS is the ability to make "credentialed" requests that are aware of [HTTP cookies](/en-US/docs/Web/HTTP/Cookies) and HTTP Authentication information. By default, in cross-origin `fetch()` or `XMLHttpRequest` calls, browsers will _not_ send credentials.
 
 To ask for a `fetch()` request to include credentials, set the [`credentials`](/en-US/docs/Web/API/RequestInit#credentials) option to `"include"`.
 

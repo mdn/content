@@ -15,7 +15,7 @@ A readable stream is a data source represented in JavaScript by a {{domxref("Rea
 There are two types of underlying sources:
 
 - **Push sources** constantly push data at you when you've accessed them, and it is up to you to start, pause, or cancel access to the stream. Examples include video streams and TCP/[Web sockets](/en-US/docs/Web/API/WebSockets_API).
-- **Pull sources** require you to explicitly request data from them once connected to. Examples include a file access operation via a {{domxref("fetch()")}} request.
+- **Pull sources** require you to explicitly request data from them once connected to. Examples include a file access operation via a {{domxref("Window/fetch", "fetch()")}} request.
 
 ### Chunks
 

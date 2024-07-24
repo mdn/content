@@ -1309,7 +1309,7 @@ function updateValue(select, index) {
   nativeWidget.selectedIndex = index;
 
   // We update the value placeholder accordingly
-  value.innerHTML = optionList[index].innerHTML;
+  value.textContent = optionList[index].textContent;
 
   // And we highlight the corresponding option of our custom control
   highlightOption(select, optionList[index]);
@@ -1571,7 +1571,7 @@ function updateValue(select, index) {
   const optionList = select.querySelectorAll(".option");
 
   nativeWidget.selectedIndex = index;
-  value.innerHTML = optionList[index].innerHTML;
+  value.textContent = optionList[index].textContent;
   highlightOption(select, optionList[index]);
 }
 
@@ -1708,7 +1708,7 @@ function updateValue(select, index) {
   optionList[index].setAttribute("aria-selected", "true");
 
   nativeWidget.selectedIndex = index;
-  value.innerHTML = optionList[index].innerHTML;
+  value.textContent = optionList[index].textContent;
   highlightOption(select, optionList[index]);
 }
 ```
@@ -1902,7 +1902,7 @@ function updateValue(select, index) {
   optionList[index].setAttribute("aria-selected", "true");
 
   nativeWidget.selectedIndex = index;
-  value.innerHTML = optionList[index].innerHTML;
+  value.textContent = optionList[index].textContent;
   highlightOption(select, optionList[index]);
 }
 

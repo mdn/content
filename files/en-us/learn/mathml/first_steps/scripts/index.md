@@ -249,7 +249,7 @@ scriptedElements.forEach((scripted) => {
 });
 document.getElementById("clearOutput").addEventListener("click", () => {
   clearHighlight();
-  outputDiv.innerHTML = "";
+  outputDiv.textContent = "";
 });
 ```
 

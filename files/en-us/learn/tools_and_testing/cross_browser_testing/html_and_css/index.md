@@ -61,7 +61,7 @@ CSS has a similar story — you need to check that your property names are spell
 
 Another good option to choose is a so-called Linter application, which not only points out errors, but can also flag up warnings about bad practices in your CSS, and other points besides. Linters can generally be customized to be stricter or more relaxed in their error/warning reporting.
 
-There are many online linter applications, the best of which are probably [Dirty Markup](https://www.10bestdesign.com/dirtymarkup/) (HTML, CSS, JavaScript), and [CSS Lint](http://csslint.net/) (CSS only). These allows you to paste your code into a window, and it will flag up any errors with crosses, which can then be hovered to get an error message informing you what the problem is. Dirty Markup also allows you to make fixes to your markup using the _Clean_ button.
+There are many online linter applications, such as [Dirty Markup](https://www.10bestdesign.com/dirtymarkup/) for HTML, CSS, and JavaScript. These allows you to paste your code into a window, and it will flag up any errors with crosses, which can then be hovered to get an error message informing you what the problem is. Dirty Markup also allows you to make fixes to your markup using the _Clean_ button.
 
 ![Dirty Markup application displaying the message "Unexpected character in unquoted attribute" over the following incorrect HTML markup: <div id=combinators">](dirty-markup.png)
 
