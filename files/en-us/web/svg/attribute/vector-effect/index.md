@@ -103,6 +103,10 @@ You can use this attribute with the following SVG elements:
 
 {{Specifications}}
 
+## See Also
+
+- CSS {{cssxref("vector-effect")}} property
+
 ## Browser compatibility
 
 {{Compat}}
