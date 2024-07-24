@@ -23,7 +23,6 @@ This attribute has the same parameter values and meaning as the {{cssxref("overf
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("foreignObject")}}
-- {{SVGElement("iframe")}}
 - {{SVGElement("image")}}
 - {{SVGElement("marker")}}
 - {{SVGElement("pattern")}}

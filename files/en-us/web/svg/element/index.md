@@ -66,11 +66,6 @@ SVG drawings and images are created using a wide array of elements which are ded
 
 - {{SVGElement("g")}}
 
-### H
-
-- {{SVGElement("hatch")}}
-- {{SVGElement("hatchpath")}}
-
 ### I
 
 - {{SVGElement("image")}}
@@ -170,11 +165,11 @@ SVG drawings and images are created using a wide array of elements which are ded
 
 ### Never-rendered elements
 
-{{SVGElement("clipPath")}}, {{SVGElement("defs")}}, {{SVGElement("hatch")}}, {{SVGElement("linearGradient")}}, {{SVGElement("marker")}}, {{SVGElement("mask")}}, {{SVGElement("metadata")}}, {{SVGElement("pattern")}}, {{SVGElement("radialGradient")}}, {{SVGElement("script")}}, {{SVGElement("style")}}, {{SVGElement("symbol")}}, {{SVGElement("title")}}
+{{SVGElement("clipPath")}}, {{SVGElement("defs")}}, {{SVGElement("linearGradient")}}, {{SVGElement("marker")}}, {{SVGElement("mask")}}, {{SVGElement("metadata")}}, {{SVGElement("pattern")}}, {{SVGElement("radialGradient")}}, {{SVGElement("script")}}, {{SVGElement("style")}}, {{SVGElement("symbol")}}, {{SVGElement("title")}}
 
 ### Paint server elements
 
-{{SVGElement("hatch")}}, {{SVGElement("linearGradient")}}, {{SVGElement("pattern")}}, {{SVGElement("radialGradient")}}, {{SVGElement("solidcolor")}}
+{{SVGElement("linearGradient")}}, {{SVGElement("pattern")}}, {{SVGElement("radialGradient")}}
 
 ### Renderable elements
 
@@ -200,7 +195,7 @@ SVG drawings and images are created using a wide array of elements which are ded
 
 ### Uncategorized elements
 
-{{SVGElement("clipPath")}}, {{SVGElement("cursor")}}, {{SVGElement("filter")}}, {{SVGElement("foreignObject")}}, {{SVGElement("hatchpath")}}, {{SVGElement("script")}}, {{SVGElement("style")}}, {{SVGElement("view")}}
+{{SVGElement("clipPath")}}, {{SVGElement("cursor")}}, {{SVGElement("filter")}}, {{SVGElement("foreignObject")}}, {{SVGElement("script")}}, {{SVGElement("style")}}, {{SVGElement("view")}}
 
 ## Obsolete and deprecated elements
 
