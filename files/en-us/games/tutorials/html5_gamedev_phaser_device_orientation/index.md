@@ -83,7 +83,8 @@ The line above will initialize the Phaser instance — the arguments are the wid
 
 The important thing to remember is that the framework is setting up helpful methods to speed up a lot of things like image manipulation or assets management, which would be a lot harder to do manually.
 
-> **Note:** You can read the [Building Monster Wants Candy](https://gamedevelopment.tutsplus.com/tutorials/getting-started-with-phaser-building-monster-wants-candy--cms-21723) article for the in-depth introduction to the basic Phaser-specific functions and methods.
+> [!NOTE]
+> You can read the [Building Monster Wants Candy](https://gamedevelopment.tutsplus.com/tutorials/getting-started-with-phaser-building-monster-wants-candy--cms-21723) article for the in-depth introduction to the basic Phaser-specific functions and methods.
 
 Back to game states: the line below is adding a new state called `Boot` to the game:
 
@@ -324,7 +325,8 @@ The more you tilt the device, the more force is applied to the ball, therefore t
 
 ![An explanation of the X, Y and Z axes of a Flame mobile device with the Cyber Orb game demo on the screen.](cyber-orb-flame-orientation.png)
 
-> **Note:** To find out more about implementing device orientation and what raw code would look like, read [Keep it level: responding to device orientation changes](/en-US/docs/Web/Apps/Fundamentals/gather_and_modify_data/responding_to_device_orientation_changes).
+> [!NOTE]
+> To find out more about implementing device orientation and what raw code would look like, read [Keep it level: responding to device orientation changes](/en-US/docs/Web/Apps/Fundamentals/gather_and_modify_data/responding_to_device_orientation_changes).
 
 #### Adding the hole
 

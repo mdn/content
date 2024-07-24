@@ -182,7 +182,7 @@ Script-based attribution sources are more versatile than HTML-based attribution 
 
 To set up a script-based attribution source, you can either:
 
-- Send a {{domxref("fetch()")}} request containing the `attributionReporting` option:
+- Send a {{domxref("Window/fetch", "fetch()")}} request containing the `attributionReporting` option:
 
   ```js
   const attributionReporting = {

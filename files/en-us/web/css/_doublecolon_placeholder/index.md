@@ -23,7 +23,7 @@ Only the subset of CSS properties that apply to the {{cssxref("::first-line")}} 
 }
 ```
 
-## Accessibility concerns
+## Accessibility
 
 ### Color contrast
 

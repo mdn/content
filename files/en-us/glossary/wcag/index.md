@@ -16,7 +16,7 @@ WCAG uses three levels of conformance:
 - Priority 2: Web developers **should** satisfy these requirements, otherwise some groups will find it difficult to access the Web content. Conformance to this level is described as AA or Double-A.
 - Priority 3: Web developers **may** satisfy these requirements, in order to make it easier for some groups to access the Web content. Conformance to this level is described as AAA or Triple-A.
 
-Work is proceeding on both [WCAG 2.2](https://www.w3.org/TR/WCAG22/) and [WCAG) 3.0](https://www.w3.org/TR/wcag-3.0/).
+Work is proceeding on both [WCAG 2.2](https://www.w3.org/TR/WCAG22/) and [WCAG 3.0](https://www.w3.org/TR/wcag-3.0/).
 
 ## See also
 

@@ -9,13 +9,15 @@ spec-urls:
 
 {{SVGRef}}
 
-The **`cy`** attribute define the y-axis coordinate of a center point.
+The **`cy`** attribute defines the y-axis coordinate of a center point.
 
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("circle")}}
 - {{SVGElement("ellipse")}}
 - {{SVGElement("radialGradient")}}
+
+> **Note:** As a _geometry property_, {{cssxref("cy")}} can also be used as CSS property for `<circle>` and `<ellipse>`.
 
 ## Example
 
@@ -177,3 +179,6 @@ svg {
 
 - {{SVGAttr("cx")}}
 - {{SVGAttr("r")}}
+- {{SVGAttr("rx")}}
+- {{SVGAttr("ry")}}
+- Geometry properties: {{cssxref("cx")}}, {{cssxref("cy")}}, {{cssxref("r")}}, {{cssxref("rx")}}, {{cssxref("ry")}}, {{cssxref("x")}}, {{cssxref("y")}}, {{cssxref("width")}}, {{cssxref("height")}}

@@ -7,7 +7,7 @@ spec-urls: https://html.spec.whatwg.org/multipage/#workers
 
 {{DefaultAPISidebar("Web Workers API")}}
 
-Web Workers are a simple means for web content to run scripts in background threads. The worker thread can perform tasks without interfering with the user interface. In addition, they can make network requests using the {{domxref("fetch()")}} or {{domxref("XMLHttpRequest")}} APIs. Once created, a worker can send messages to the JavaScript code that created it by posting messages to an event handler specified by that code (and vice versa).
+Web Workers are a simple means for web content to run scripts in background threads. The worker thread can perform tasks without interfering with the user interface. In addition, they can make network requests using the {{domxref("WorkerGlobalScope/fetch", "fetch()")}} or {{domxref("XMLHttpRequest")}} APIs. Once created, a worker can send messages to the JavaScript code that created it by posting messages to an event handler specified by that code (and vice versa).
 
 This article provides a detailed introduction to using web workers.
 
@@ -25,7 +25,7 @@ Data is sent between workers and the main thread via a system of messages — bo
 
 Workers may in turn spawn new workers, as long as those workers are hosted within the same {{glossary("origin")}} as the parent page.
 
-In addition, workers can make network requests using the {{domxref("fetch()")}} or [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) APIs (although note that the {{domxref("XMLHttpRequest.responseXML", "responseXML")}} attribute of `XMLHttpRequest` will always be `null`).
+In addition, workers can make network requests using the {{domxref("WorkerGlobalScope/fetch", "fetch()")}} or [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) APIs (although note that the {{domxref("XMLHttpRequest.responseXML", "responseXML")}} attribute of `XMLHttpRequest` will always be `null`).
 
 ## Dedicated workers
 
@@ -809,7 +809,7 @@ To learn how to debug web workers, see the documentation for each browser's Java
 You can use most standard JavaScript features inside a web worker, including:
 
 - {{domxref("Navigator")}}
-- {{domxref("fetch()")}}
+- {{domxref("WorkerGlobalScope/fetch", "fetch()")}}
 - {{jsxref("Global_Objects/Array", "Array")}}, {{jsxref("Global_Objects/Date", "Date")}}, {{jsxref("Global_Objects/Math", "Math")}}, and {{jsxref("Global_Objects/String", "String")}}
 - {{domxref("setTimeout()")}} and {{domxref("setInterval()")}}
 
