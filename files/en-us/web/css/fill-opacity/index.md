@@ -29,7 +29,7 @@ fill-opacity: unset;
 
 ### Values
 
-The {{cssxref("number")}} and {{cssxref("percentage")}} values denotes the opacity of the element.
+The {{cssxref("number")}} and {{cssxref("percentage")}} values denotes the opacity of the `file` of the element.
 
 - {{cssxref("number")}}
 
