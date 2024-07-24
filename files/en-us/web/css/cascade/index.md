@@ -283,7 +283,7 @@ p {
 
 Now the paragraph will be blue. The `!important` in the earliest declared layer takes precedence of subsequent layers and unlayered important declarations. If the inline style contained !important, such as `<p style="color: black !important">`, again the paragraph would be black. Inline importance does take precedence over all other author declared `!important` declarations, no matter the specificity.
 
-> **Note:** `!important` reverses the precedence of cascade layers. For this reason, try not to use `!important` to override external styles. Instead, import the external style sheets(from frameworks, widget stylesheets, libraries, etc.) into initial layers, which will demote their precedence, and author-defined layers will have higher precedence. `!important` should only be used sparingly, if ever, to guard required styles against later overrides, in the first declared layer.
+> **Note:** The `!important` flag reverses the precedence of cascade layers. For this reason, try not to use `!important` to override external styles. Instead, use {{cssxref("@import")}} together with the `layer` keyword or `layer()` function to import external style sheets (from frameworks, widget stylesheets, libraries, etc.) into layers. Importing stylesheets into a layer as the first declaration in your CSS demotes their precedence, and author-defined layers, defined later in your CSS, will have higher precedence. The `!important` flag should only be used sparingly, if ever, to guard required styles against later overrides, in the first declared layer.
 
 Styles that are transitioning take precedence over all important styles, no matter who or how they are declared.
 
@@ -343,7 +343,7 @@ Finally, {{cssxref("@charset")}} obeys specific algorithms and isn't affected by
 
 Presentational attributes are attributes in the source document that can affect styling. For example, when included, the deprecated `align` attribute sets the alignment on several HTML elements and the `fill` attribute defines the color used to paint SVG shapes and text and defines the final state for SVG animations. While they are author styles, presentational attributes do not participate in the cascade.
 
-If the HTML presentation attribute is supported by the user agent, valid presentational attributes included in HTML are translated to the corresponding CSS rules, such as the [`align`](/en-US/docs/Web/API/HTMLImageElement/align) or [`fill`](/en-US/docs/Web/SVG/Attribute/fill) property (all SVG presentation attributes can be used as a CSS property) inserted in the author stylesheet prior to any other styles with a specificity equal to `0`.
+If the HTML presentation attribute is supported by the user agent, valid presentational attributes included in HTML are translated to the corresponding CSS rules, such as the [`align`](/en-US/docs/Web/HTML/Element/img#align) or [`fill`](/en-US/docs/Web/SVG/Attribute/fill) property (all SVG presentation attributes can be used as a CSS property) inserted in the author stylesheet prior to any other styles with a specificity equal to `0`.
 
 Presentational attributes cannot be declared `!important`.
 
