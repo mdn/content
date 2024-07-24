@@ -127,7 +127,7 @@ These properties are defined on `Boolean.prototype` and shared by all `Boolean` 
 - {{jsxref("Boolean.prototype.toString()")}}
   - : Returns a string of either `true` or `false` depending upon the value of the object. Overrides the {{jsxref("Object.prototype.toString()")}} method.
 - {{jsxref("Boolean.prototype.valueOf()")}}
-  - : Returns the primitive value of the {{jsxref("Boolean")}} object. Overrides the {{jsxref("Object.prototype.valueOf()")}} method.
+  - : Returns the primitive value of the `Boolean` object. Overrides the {{jsxref("Object.prototype.valueOf()")}} method.
 
 ## Examples
 

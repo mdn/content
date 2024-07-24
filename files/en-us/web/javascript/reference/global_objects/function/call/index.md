@@ -100,7 +100,7 @@ const slice = Array.prototype.slice;
 slice.call(arguments);
 ```
 
-Note that you can't save `slice.call` and call it as a plain function, because the `call()` method also reads its `this` value, which is the function it should call. In this case, you can use {{jsxref("Function/bind", "bind()")}} to bind the value of `this` for `call()`. In the following piece of code, `slice()` is a bound version of {{jsxref("Function.prototype.call()")}}, with the `this` value bound to {{jsxref("Array.prototype.slice()")}}. This means that additional `call()` calls can be eliminated:
+Note that you can't save `slice.call` and call it as a plain function, because the `call()` method also reads its `this` value, which is the function it should call. In this case, you can use {{jsxref("Function/bind", "bind()")}} to bind the value of `this` for `call()`. In the following piece of code, `slice()` is a bound version of `Function.prototype.call()`, with the `this` value bound to {{jsxref("Array.prototype.slice()")}}. This means that additional `call()` calls can be eliminated:
 
 ```js
 // Same as "slice" in the previous example
