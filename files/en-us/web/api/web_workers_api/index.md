@@ -19,7 +19,7 @@ Data is sent between workers and the main thread via a system of messages — bo
 
 Workers may in turn spawn new workers, as long as those workers are hosted within the same {{glossary("origin")}} as the parent page.
 
-In addition, workers can make network requests using the {{domxref("fetch()")}} or {{domxref("XMLHttpRequest")}} APIs (although note that the {{domxref("XMLHttpRequest.responseXML", "responseXML")}} attribute of `XMLHttpRequest` will always be `null`).
+In addition, workers can make network requests using the {{domxref("WorkerGlobalScope/fetch", "fetch()")}} or {{domxref("XMLHttpRequest")}} APIs (although note that the {{domxref("XMLHttpRequest.responseXML", "responseXML")}} attribute of `XMLHttpRequest` will always be `null`).
 
 ### Worker types
 
@@ -47,7 +47,7 @@ Some of the functions (a subset) that are common to all workers and to the main 
 - {{domxref("clearTimeout()")}}
 - {{domxref("createImageBitmap()")}}
 - {{domxref("WorkerGlobalScope.dump()", "dump()")}} {{non-standard_inline}}
-- {{domxref("fetch()")}}
+- {{domxref("WorkerGlobalScope/fetch", "fetch()")}}
 - {{domxref("queueMicrotask()")}}
 - {{domxref("reportError()")}}
 - {{domxref("setInterval()")}}

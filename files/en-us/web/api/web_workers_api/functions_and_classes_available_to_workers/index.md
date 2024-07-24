@@ -24,7 +24,7 @@ Some of the functions (a subset) that are common to all workers and to the main 
 - {{domxref("clearTimeout()")}}
 - {{domxref("createImageBitmap()")}}
 - {{domxref("WorkerGlobalScope.dump()", "dump()")}} {{non-standard_inline}}
-- {{domxref("fetch()")}}
+- {{domxref("WorkerGlobalScope/fetch", "fetch()")}}
 - {{domxref("queueMicrotask()")}}
 - {{domxref("reportError()")}}
 - {{domxref("setInterval()")}}

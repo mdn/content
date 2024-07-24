@@ -53,7 +53,7 @@ The `line-height` property is specified as any one of the following:
 - `<percentage>`
   - : Relative to the font size of the element itself. The computed value is this {{cssxref("&lt;percentage&gt;")}} multiplied by the element's computed font size. **Percentage** values may produce unexpected results (see the second example below).
 
-## Accessibility concerns
+## Accessibility
 
 Use a minimum value of `1.5` for `line-height` for main paragraph content. This will help people experiencing low vision conditions, as well as people with cognitive concerns such as Dyslexia. If the page is zoomed to increase the text size, using a unitless value ensures that the line height will scale proportionately.
 
