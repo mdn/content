@@ -301,7 +301,7 @@ While the [visual result](#result_2) is unchanged from the [previous example tab
       <td>
         The start tag is mandatory.<br />The end tag may be omitted, if it is
         immediately followed by a {{HTMLElement("th")}} or
-        {{HTMLElement("td")}} element or if there are no more data in its
+        <code>&lt;td&gt;</code> element or if there are no more data in its
         parent element.
       </td>
     </tr>

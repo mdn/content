@@ -99,7 +99,7 @@ This example establishes a page whose title (as displayed at the top of the wind
       <th scope="row">Permitted parents</th>
       <td>
         A {{ HTMLElement("head") }} element that contains no other
-        {{ HTMLElement("title") }} element.
+        <code>&lt;title&gt;</code> element.
       </td>
     </tr>
     <tr>

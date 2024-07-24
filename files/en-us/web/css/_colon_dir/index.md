@@ -79,6 +79,6 @@ The `:dir()` pseudo-class requires one parameter, representing the text directio
 
 ## See also
 
-- Language-related pseudo-classes: {{cssxref(":lang")}}, {{cssxref(":dir")}}
+- Language-related pseudo-classes: {{cssxref(":lang")}}
 - HTML [`lang`](/en-US/docs/Web/HTML/Global_attributes#lang) attribute
 - HTML [`translate`](/en-US/docs/Web/HTML/Global_attributes#translate) attribute

@@ -201,7 +201,7 @@ There are no native methods for sorting the rows (`<tr>` elements) of a {{HTMLEl
 
 #### HTML
 
-A {{HTMLElement("tbody")}} element is used in this basic table to mark the body section of the table and to include three rows ({{HTMLElement("tr")}} elements) with data ({{HTMLElement("td")}} elements), creating one column with numbers in descending order.
+A {{HTMLElement("tbody")}} element is used in this basic table to mark the body section of the table and to include three rows (`<tr>` elements) with data ({{HTMLElement("td")}} elements), creating one column with numbers in descending order.
 
 ```html
 <table>
@@ -371,8 +371,8 @@ th {
       <th scope="row">Tag omission</th>
       <td>
         Start tag is mandatory. End tag may be omitted if the
-        {{HTMLElement("tr")}} element is immediately followed by a
-        {{HTMLElement("tr")}} element, or if the row is the last element
+        <code>&lt;tr&gt;</code> element is immediately followed by a
+        <code>&lt;tr&gt;</code> element, or if the row is the last element
         in its parent table group ({{HTMLElement("thead")}},
         {{HTMLElement("tbody")}} or {{HTMLElement("tfoot")}})
         element.

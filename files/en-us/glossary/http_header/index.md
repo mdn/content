@@ -57,7 +57,6 @@ X-Cache-Info: cached
 - [List of all HTTP headers](/en-US/docs/Web/HTTP/Headers)
 - Syntax of [headers](https://datatracker.ietf.org/doc/html/rfc7230#section-3.2) in the HTTP specification
 - Related glossary terms:
-  - {{Glossary("HTTP header")}}
   - {{Glossary("Request header")}}
   - {{Glossary("Response header")}}
   - {{Glossary("Representation header")}}

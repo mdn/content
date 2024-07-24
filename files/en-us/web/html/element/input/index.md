@@ -699,7 +699,7 @@ The following non-standard attributes are also available on some browsers. As a 
 
 - `results` {{non-standard_inline}}
 
-  - : The `results` attribute—supported only by Safari—is a numeric value that lets you override the maximum number of entries to be displayed in the {{HTMLElement("input")}} element's natively-provided drop-down menu of previous search queries.
+  - : The `results` attribute—supported only by Safari—is a numeric value that lets you override the maximum number of entries to be displayed in the `<input>` element's natively-provided drop-down menu of previous search queries.
 
     The value must be a non-negative decimal number. If not provided, or an invalid value is given, the browser's default maximum number of entries is used.
 
@@ -1043,7 +1043,7 @@ Specific attributes and their values can lead to a specific error {{domxref('Val
 
 <table class="no-markdown">
   <caption>
-    Validity object errors depend on the {{htmlelement('input')}}
+    Validity object errors depend on the <code>&lt;input&gt;</code>
     attributes and their values:
   </caption>
   <thead>

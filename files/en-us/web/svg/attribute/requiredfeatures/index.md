@@ -182,7 +182,7 @@ The following are the feature strings for the `requiredFeatures` attribute. Thes
 - `http://www.w3.org/TR/SVG11/feature#ContainerAttribute`
   - : The browser supports the {{SVGAttr("enable-background")}} attribute
 - `http://www.w3.org/TR/SVG11/feature#ConditionalProcessing`
-  - : The browser supports the {{SVGElement("switch")}} element, and the {{SVGAttr("requiredFeatures")}}, {{SVGAttr("requiredExtensions")}}, {{SVGAttr("systemLanguage")}} attributes
+  - : The browser supports the {{SVGElement("switch")}} element, and the `requiredFeatures`, {{SVGAttr("requiredExtensions")}}, {{SVGAttr("systemLanguage")}} attributes
 - `http://www.w3.org/TR/SVG11/feature#Image`
   - : The browser supports the {{SVGElement("image")}} element.
 - `http://www.w3.org/TR/SVG11/feature#Style`

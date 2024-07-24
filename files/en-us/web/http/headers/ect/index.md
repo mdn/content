@@ -31,7 +31,7 @@ The value represents the "network profile" that best matches the connection's la
 
 The hint allows a server to choose what information is sent based on the broad characteristics of the network. For example, a server might choose to send smaller versions of images and other resources on less capable connections. The value might also be used as a starting point for determining what information is sent, which is further refined using information in {{HTTPHeader("RTT")}} and {{HTTPHeader("Downlink")}} hints.
 
-> **Note:** A server that specifies {{HTTPHeader("ECT")}} in {{HTTPHeader("Accept-CH")}} may also specify it in {{HTTPHeader("Vary")}} to indicate that responses should be cached for different ECT values.
+> **Note:** A server that specifies `ECT` in {{HTTPHeader("Accept-CH")}} may also specify it in {{HTTPHeader("Vary")}} to indicate that responses should be cached for different ECT values.
 
 ## Syntax
 

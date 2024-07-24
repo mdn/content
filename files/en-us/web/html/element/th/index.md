@@ -329,7 +329,7 @@ The [visual result](#result_2) is unchanged from the [previous example table](#c
       <th scope="row">Tag omission</th>
       <td>
         The start tag is mandatory.<br />The end tag may be omitted, if it is
-        immediately followed by a {{HTMLElement("th")}} or
+        immediately followed by a <code>&lt;th&gt;</code> or
         {{HTMLElement("td")}} element or if there are no more data in its
         parent element.
       </td>
