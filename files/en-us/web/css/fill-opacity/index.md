@@ -95,7 +95,7 @@ svg {
 
 ```css
 svg > * {
-  fill:;
+  fill: black;
 }
 rect:last-of-type {
   fill-opacity: 0.1;
