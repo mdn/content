@@ -18,8 +18,7 @@ The `Content-Type` header differs from {{HTTPHeader("Content-Encoding")}} in tha
 > [!NOTE]
 > This value may be ignored if browsers perform [MIME sniffing](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#mime_sniffing) (or content sniffing) on responses.
 > To prevent browsers from using MIME sniffing, set the {{HTTPHeader("X-Content-Type-Options")}} header value to `nosniff`.
->
-> See [MIME type verification](/en-US/docs/Web/Security/Practical_implementation_guides/MIME_types) and [Properly configuring server MIME types](/en-US/docs/Learn/Server-side/Configuring_server_MIME_types) for more information.
+> See [MIME type verification](/en-US/docs/Web/Security/Practical_implementation_guides/MIME_types) for more details.
 
 <table class="properties">
   <tbody>
@@ -73,7 +72,8 @@ Content-Type: multipart/form-data; boundary=ExampleBoundaryString
 ### Serving assets with correct content type
 
 In the following two example responses, JavaScript and CSS assets are served using `text/javascript` for JavaScript and `text/css` for CSS.
-The correct content type for these resources helps the browser handle them more securely and with better performance:
+The correct content type for these resources helps the browser handle them more securely and with better performance.
+See [Properly configuring server MIME types](/en-US/docs/Learn/Server-side/Configuring_server_MIME_types) for more information.
 
 ```http
 HTTP/1.1 200
