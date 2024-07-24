@@ -2,7 +2,7 @@
 title: 200 OK
 slug: Web/HTTP/Status/200
 page-type: http-status-code
-browser-compat: http.status.200
+spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.200
 ---
 
 {{HTTPSidebar}}
@@ -27,10 +27,6 @@ The successful result of a {{HTTPMethod("PUT")}} or a {{HTTPMethod("DELETE")}} i
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

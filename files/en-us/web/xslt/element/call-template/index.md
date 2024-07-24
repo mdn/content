@@ -8,7 +8,7 @@ page-type: xslt-element
 
 The `<xsl:call-template>` element invokes a named template.
 
-### Syntax
+## Syntax
 
 ```xml
 <xsl:call-template name=NAME>
@@ -29,10 +29,10 @@ None.
 
 Instruction, appears within a template.
 
-### Defined
+## Specifications
 
 XSLT, section 6.
 
-### Gecko support
+## Gecko support
 
 Supported.

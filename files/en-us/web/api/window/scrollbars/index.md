@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Window.scrollbars
 ---
 
-{{APIRef()}}
+{{APIRef}}
 
 Returns the `scrollbars` object.
 

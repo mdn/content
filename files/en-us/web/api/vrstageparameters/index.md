@@ -40,11 +40,14 @@ navigator.getVRDisplays().then((displays) => {
     info.textContent =
       "Your VR Hardware does not support room-scale experiences.";
   } else {
-    info.innerHTML =
-      `<strong>Display stage parameters</strong><br>` +
-      `Sitting to standing transform: ${stageParams.sittingToStandingTransform}<br>` +
-      `Play area width (m): ${stageParams.sizeX}<br>` +
-      `Play area depth (m): ${stageParams.sizeY}`;
+    info.innerText = `
+Sitting to standing transform: ${stageParams.sittingToStandingTransform}
+Play area width (m): ${stageParams.sizeX}
+Play area depth (m): ${stageParams.sizeY}`;
+    info.insertBefore(
+      document.createElement("strong"),
+      info.firstChild,
+    ).textContent = "Display stage parameters";
   }
 });
 ```

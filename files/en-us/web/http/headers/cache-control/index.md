@@ -104,7 +104,7 @@ Cache-Control: max-age=604800
 Indicates that caches can store this response and reuse it for subsequent requests while it's [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age).
 
 Note that `max-age` is not the elapsed time since the response was received; it is the elapsed time since the response was generated on the origin server.
-So if the other cache(s) — on the network route taken by the response — store the response for 100 seconds (indicated using the `Age` response header field), the browser cache would deduct 100 seconds from its [freshness lifetime](/en-US/docs/Web/HTTP/Caching#freshness_lifetime).
+So if the other cache(s) — on the network route taken by the response — store the response for 100 seconds (indicated using the `Age` response header field), the browser cache would deduct 100 seconds from its [freshness lifetime](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age).
 
 ```http
 Cache-Control: max-age=604800
@@ -303,12 +303,13 @@ In other words, for any `max-age` value that isn't an integer or isn't non-negat
 #### `max-stale`
 
 The `max-stale=N` request directive indicates that the client allows a stored response that is [stale](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age) within _N_ seconds.
+If no _N_ value is specified, the client will accept a stale response of any age.
 
 ```http
 Cache-Control: max-stale=3600
 ```
 
-In the case above, if the response with `Cache-Control: max-age=604800` was generated more than 3 hours ago (calculated from `max-age` and the `Age` header), the cache couldn't reuse that response.
+For example, a request with the header above indicates that the browser will accept a stale response from the cache that has expired within the last hour.
 
 Clients can use this header when the origin server is down or too slow and can accept cached responses from caches even if they are a bit old.
 

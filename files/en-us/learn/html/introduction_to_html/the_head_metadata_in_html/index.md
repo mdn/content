@@ -203,37 +203,40 @@ Here is an example of a favicon in a bookmarks panel:
 
 ![The Firefox bookmarks panel, showing a bookmarked example with a favicon displayed next to it.](bookmark-favicon.png)
 
-There are lots of other icon types to consider these days as well. For example, you'll find this in the source code of the MDN Web Docs homepage:
+You may also need different icons for different contexts. For example, you'll find this in the source code of the MDN Web Docs homepage:
 
 ```html
-<!-- third-generation iPad with high-resolution Retina display: -->
+<link rel="icon" href="/favicon-48x48.[some hex hash].png" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.[some hex hash].png" />
+```
+
+This is a way to make the site show an icon when saved to an Apple device's home screen. You may even want to provide different icons for different devices, to ensure that the icon looks good on all devices. For example:
+
+```html
+<!-- iPad Pro with high-resolution Retina display: -->
 <link
   rel="apple-touch-icon"
-  sizes="144x144"
-  href="https://developer.mozilla.org/static/img/favicon144.png" />
-<!-- iPhone with high-resolution Retina display: -->
+  sizes="167x167"
+  href="/apple-touch-icon-167x167.png" />
+<!-- 3x resolution iPhone: -->
 <link
   rel="apple-touch-icon"
-  sizes="114x114"
-  href="https://developer.mozilla.org/static/img/favicon114.png" />
-<!-- first- and second-generation iPad: -->
+  sizes="180x180"
+  href="/apple-touch-icon-180x180.png" />
+<!-- non-Retina iPad, iPad mini, etc.: -->
 <link
   rel="apple-touch-icon"
-  sizes="72x72"
-  href="https://developer.mozilla.org/static/img/favicon72.png" />
-<!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-<link
-  rel="apple-touch-icon"
-  href="https://developer.mozilla.org/static/img/favicon57.png" />
+  sizes="152x152"
+  href="/apple-touch-icon-152x152.png" />
+<!-- 2x resolution iPhone and other devices: -->
+<link rel="apple-touch-icon" href="/apple-touch-icon-120x120.png" />
 <!-- basic favicon -->
-<link
-  rel="icon"
-  href="https://developer.mozilla.org/static/img/favicon32.png" />
+<link rel="icon" href="/favicon.ico" />
 ```
 
 The comments explain what each icon is used for — these elements cover things like providing a nice high resolution icon to use when the website is saved to an iPad's home screen.
 
-Don't worry too much about implementing all these types of icon right now — this is a fairly advanced feature, and you won't be expected to have knowledge of this to progress through the course. The main purpose here is to let you know what such things are, in case you come across them while browsing other websites' source code.
+Don't worry too much about implementing all these types of icon right now — this is a fairly advanced feature, and you won't be expected to have knowledge of this to progress through the course. The main purpose here is to let you know what such things are, in case you come across them while browsing other websites' source code. If you do want to learn more about all these values and how to choose them, read the {{HTMLElement("link")}} element's reference page.
 
 > **Note:** If your site uses a Content Security Policy (CSP) to enhance its security, the policy applies to the favicon. If you encounter problems with the favicon not loading, verify that the {{HTTPHeader("Content-Security-Policy")}} header's [`img-src` directive](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) is not preventing access to it.
 

@@ -18,6 +18,8 @@ The **`max-height`** [CSS](/en-US/docs/Web/CSS) property sets the maximum height
 ```css
 /* <length> value */
 max-height: 3.5em;
+max-height: anchor-size(height);
+max-height: calc(anchor-size(--myAnchor self-block, 250px) + 2em);
 
 /* <percentage> value */
 max-height: 75%;
@@ -54,7 +56,7 @@ max-height: unset;
 - `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
   - : Uses the `fit-content` formula with the available space replaced by the specified argument, i.e. `min(max-content, max(min-content, argument))`.
 
-## Accessibility concerns
+## Accessibility
 
 Ensure that elements set with a `max-height` are not truncated and/or do not obscure other content when the page is zoomed to increase text size.
 

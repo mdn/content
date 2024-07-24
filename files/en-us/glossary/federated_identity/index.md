@@ -25,6 +25,7 @@ Although federated identity makes logging into multiple different accounts much 
 
 ## See also
 
-- {{glossary("Relying party")}}
-- {{glossary("Identity provider")}}
+- Related glossary terms:
+  - {{glossary("Relying party")}}
+  - {{glossary("Identity provider")}}
 - [Federated Credential Management (FedCM) API](/en-US/docs/Web/API/FedCM_API)

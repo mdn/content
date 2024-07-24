@@ -62,7 +62,8 @@ This example shows a variety of different uses of object stores, from updating t
 const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += "<li>Database initialized.</li>";
+  note.appendChild(document.createElement("li")).textContent =
+    "Database initialized.";
 
   // store the result of opening the database in db.
   db = DBOpenRequest.result;
@@ -76,7 +77,8 @@ DBOpenRequest.onupgradeneeded = (event) => {
   const db = event.target.result;
 
   db.onerror = (event) => {
-    note.innerHTML += "<li>Error loading database.</li>";
+    note.appendChild(document.createElement("li")).textContent =
+      "Error loading database.";
   };
 
   // Create an objectStore for this database
@@ -95,7 +97,8 @@ DBOpenRequest.onupgradeneeded = (event) => {
 
   objectStore.createIndex("notified", "notified", { unique: false });
 
-  note.innerHTML += "<li>Object store created.</li>";
+  note.appendChild(document.createElement("li")).textContent =
+    "Object store created.";
 };
 
 // Create a new item to add in to the object store
@@ -116,12 +119,13 @@ const transaction = db.transaction(["toDoList"], "readwrite");
 
 // report on the success of the transaction completing, when everything is done
 transaction.oncomplete = (event) => {
-  note.innerHTML += "<li>Transaction completed.</li>";
+  note.appendChild(document.createElement("li")).textContent =
+    "Transaction completed.";
 };
 
 transaction.onerror = (event) => {
-  note.innerHTML +=
-    "<li>Transaction not opened due to error. Duplicate items not allowed.</li>";
+  note.appendChild(document.createElement("li")).textContent =
+    "Transaction not opened due to error. Duplicate items not allowed.";
 };
 
 // create an object store on the transaction
@@ -130,7 +134,8 @@ const objectStore = transaction.objectStore("toDoList");
 const objectStoreRequest = objectStore.add(newItem[0]);
 
 objectStoreRequest.onsuccess = (event) => {
-  note.innerHTML += "<li>Request successful .</li>";
+  note.appendChild(document.createElement("li")).textContent =
+    "Request successful.";
 };
 ```
 

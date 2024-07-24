@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.MediaEncryptedEvent.MediaEncryptedEvent
 ---
 
-{{APIRef("EncryptedMediaExtensions")}}
+{{APIRef("Encrypted Media Extensions")}}
 
 The **`MediaEncryptedEvent`** constructor creates a new {{domxref("MediaEncryptedEvent")}} object.
 

@@ -8,7 +8,7 @@ status:
 browser-compat: api.Window.captureEvents
 ---
 
-{{ ApiRef() }} {{Deprecated_Header}}
+{{APIRef}} {{Deprecated_Header}}
 
 The **`Window.captureEvents()`** method does nothing.
 

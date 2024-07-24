@@ -33,7 +33,7 @@ createBuffer(numOfChannels, length, sampleRate)
 ### Parameters
 
 > **Note:** For an in-depth explanation of how audio buffers work, and
-> what these parameters mean, read [Audio buffers: frames, samples and channels](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_buffers.3a_frames.2c_samples_and_channels) from our Basic concepts guide.
+> what these parameters mean, read [Audio buffers: frames, samples and channels](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#audio_buffers_frames_samples_and_channels) from our Basic concepts guide.
 
 - `numOfChannels`
   - : An integer representing the number of channels this buffer should have. The default
@@ -96,7 +96,7 @@ create a three-second buffer, fill it with white noise, and then play it via an 
 You can also [run the code live](https://mdn.github.io/webaudio-examples/audio-buffer/), or [view the source](https://github.com/mdn/webaudio-examples/blob/main/audio-buffer/index.html).
 
 ```js
-const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const audioCtx = new AudioContext();
 
 // Create an empty three-second stereo buffer at the sample rate of the AudioContext
 const myArrayBuffer = audioCtx.createBuffer(

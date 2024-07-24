@@ -29,7 +29,8 @@ A string containing an unpartitioned object URL that can be used to reference th
 
 - `SecurityError` {{domxref("DomException")}}
   - : Thrown if access was not granted.
-- See {{domxref("URL.createObjectURL_static", "createObjectURL()")}}
+
+See {{domxref("URL.createObjectURL_static", "createObjectURL()")}}
 
 ## Examples
 

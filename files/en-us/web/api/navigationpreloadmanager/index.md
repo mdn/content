@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.NavigationPreloadManager
 ---
 
-{{APIRef("Service Workers API")}}{{SecureContext_Header}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`NavigationPreloadManager`** interface of the [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) provides methods for managing the preloading of resources in parallel with service worker bootup.
 
@@ -25,7 +25,7 @@ The result of a preload fetch request is waited on using the promise returned by
 
 ## Description
 
-Service workers handle {{domxref("fetch()")}} events on behalf of a site, for pages within a given scope.
+Service workers handle {{domxref("Window/fetch", "fetch()")}} events on behalf of a site, for pages within a given scope.
 When a user navigates to a page that uses a service worker, the browser boots up the worker (if it isn't already running), then sends it a fetch event and waits for the result.
 On receiving an event, the worker returns the resource from a cache if it is present, or otherwise fetches the resource from the remote server (storing a copy for returning in future requests).
 

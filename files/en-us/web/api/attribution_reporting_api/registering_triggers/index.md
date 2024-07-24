@@ -99,7 +99,7 @@ However, what happens behind the scenes to register triggers, look for matches, 
    - The trigger's filters do not match the source's filter data (See [Filters](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#filters) for more details).
    - The source's [`"trigger_data_matching"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#trigger_data_matching) setting results in no match occurring.
    - The source's [`"max_event_level_reports"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#max_event_level_reports) limit has been reached.
-   - A successful match is not reported due to the browser's randomized response algorithm. See [How noise is added to reports](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#how_noise_is_added_to_reports) for more details.
+   - A successful match is not reported due to the browser's randomized response algorithm. See [Adding noise to reports](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#adding_noise_to_reports) for more details.
 
 4. If a successful match is found, the browser [generates a report](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports) based on the source and trigger data, and sends it to a reporting endpoint.
 
@@ -151,7 +151,7 @@ JavaScript-based attribution triggers are more versatile than HTML-based attribu
 
 To register a script-based attribution trigger, you can either:
 
-- Send a {{domxref("fetch()")}} request containing the `attributionReporting` option:
+- Send a {{domxref("Window/fetch", "fetch()")}} request containing the `attributionReporting` option:
 
   ```js
   const attributionReporting = {
@@ -206,7 +206,7 @@ In this case, the browser will attempt to match the trigger with a stored attrib
 
 In the above examples, the `attributionsrc` attribute is left blank, taking the value of an empty string. This is fine if the server that holds the requested resource is the same server that you also want to handle the registration, i.e. receive the {{httpheader("Attribution-Reporting-Eligible")}} header and respond with the {{httpheader("Attribution-Reporting-Register-Trigger")}} header.
 
-However, it might be the case that the requested resource is not on a server you control, or you just want to handle registering the attribution trigger on a diffferent server. In such cases, you can specify one or more URLs as the value of `attributionsrc`. When the resource request occurs, the {{httpheader("Attribution-Reporting-Eligible")}} header will be sent to the URLs specified in `attributionsrc` in addition to the resource origin; the URLs can then respond with the {{httpheader("Attribution-Reporting-Register-Trigger")}} to complete registration.
+However, it might be the case that the requested resource is not on a server you control, or you just want to handle registering the attribution trigger on a different server. In such cases, you can specify one or more URLs as the value of `attributionsrc`. When the resource request occurs, the {{httpheader("Attribution-Reporting-Eligible")}} header will be sent to the URLs specified in `attributionsrc` in addition to the resource origin; the URLs can then respond with the {{httpheader("Attribution-Reporting-Register-Trigger")}} to complete registration.
 
 For example, in the case of an `<img>` element you could declare the URL in the `attributionsrc` attribute:
 

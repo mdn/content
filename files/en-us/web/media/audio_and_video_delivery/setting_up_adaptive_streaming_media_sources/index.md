@@ -270,7 +270,6 @@ Further resources on adaptive streaming.
 - [MP4Box](https://github.com/gpac/gpac/wiki/MP4Box)
 - [DASH.js Wiki](https://github.com/Dash-Industry-Forum/dash.js/wiki)
 - [DASH.js Google Group](https://groups.google.com/forum/#!forum/dashjs)
-- [Akamai Dash Diagnostic Player](http://mediapm.edgesuite.net/dash/public/support-player/current/index.html)
 
 Adaptive streaming examples
 

@@ -26,6 +26,8 @@ All [hop-by-hop headers](/en-US/docs/Web/HTTP/Compression#hop-by-hop_compression
 header, so that the first proxy knows it has to consume them and not forward them
 further.
 
+The default value of `Connection` changed between HTTP/1.0 and HTTP/1.1. Therefore, to ensure backwards compatibility, browsers often send `Connection: keep-alive` explicitly despite that being the default in HTTP/1.1.
+
 <table class="properties">
   <tbody>
     <tr>

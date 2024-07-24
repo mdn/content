@@ -140,9 +140,7 @@ A-grade:
 - The information box should animate smoothly as it appears/disappears.
 - The gradient and text shadow should appear to enhance the look of the box.
 
-You may notice from the text in the example that it won't work in IE8 — this is a problem according to our support chart, which you'll have to work on, perhaps by using a feature detection library to implement the functionality in a different way if the browser doesn't support CSS transitions (see Implementing feature detection, later on in the course).
-
-You might also notice that the button isn't usable using only the keyboard — this also needs to be remedied. Maybe we could use some JavaScript to implement a keyboard control for the toggle, or use some other method entirely?
+You might notice that the button isn't usable with only the keyboard. We could remedy this using JavaScript to implement a keyboard control for the toggle, or use some other approach.
 
 These test criteria are useful, because:
 

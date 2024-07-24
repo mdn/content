@@ -40,7 +40,7 @@ In the code above, `newCookie` is a string of form `key=value`, specifying the c
     > **Note:** The domain _must_ match the domain of the JavaScript origin.
     > Setting cookies to foreign domains will be silently ignored.
 
-  - `;expires=date-in-GMTString-format`: The expiry date of the cookie. If neither `expires` nor `max-age` is specified, it will expire at the end of session.
+  - `;expires=date-in-UTCString-format`: The expiry date of the cookie. If neither `expires` nor `max-age` is specified, it will expire at the end of session.
 
     > **Warning:** When user privacy is a concern, it's important that any web app implementation invalidate cookie data after a certain timeout instead of relying on the browser to do it.
     > Many browsers let users specify that cookies should never expire, which is not necessarily safe.

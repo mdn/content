@@ -57,11 +57,11 @@ There are also a number of sites that have video learning content on them. YouTu
 
 You might be the kind of person that prefers minimal instructions and would prefer to jump straight in and start playing with code. This is also a reasonable approach, and some learning sites tend to favor it. [Codecademy](https://www.codecademy.com/) for example is a learning site where the tutorials mainly consist of interactive code editors where you have to directly write code and see if the desired result was achieved.
 
-Many MDN Web docs reference pages provide interactive examples too, where you can alter the code and see how the live result changes. And there is also nothing wrong with creating your own code examples on your computer, or in an online code editor like [JSBin](https://jsbin.com/?html,css,js,output), [Codepen](https://codepen.io/), or [Glitch](https://glitch.com/). In fact, you'll be called to do so as part of this course when you are learning!
+Many MDN Web docs reference pages provide interactive examples too, where you can alter the code, see how the live result changes, and explore the example in the [MDN Playground](/en-US/play). And there is also nothing wrong with creating your own code examples on your computer, or in an online code editor like [JSFiddle](https://jsfiddle.net/), [Codepen](https://codepen.io/), or [Glitch](https://glitch.com/). In fact, you'll be called to do so as part of this course when you are learning!
 
 > **Note:** Online code editors are also really useful for sharing code you've written, for example, if you are collaborating on learning with someone else who isn't in the same location, or are sending it to someone to ask for help with it. You can share the web address of the example with them so they can see it.
-
-> **Note:** You might favor one learning method over the others, but realistically a hybrid approach is probably what you will end up with. And you'll probably come up with other methods than the three we covered above.
+>
+> You might favor one learning method over the others, but realistically a hybrid approach is probably what you will end up with. And you'll probably come up with other methods than the three we covered above.
 
 ### Making a plan
 
@@ -201,9 +201,9 @@ When you find solutions to such problems, it is worth writing down notes on what
 
 In addition, the web has [developer tools](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) that allow you to look at the code used to build any site on the web. If you don't have a solution to hand, one good research method is to find websites with similar features in the wild, and find out how they did it.
 
-> **Note:** Notice how above we talked about the problem we are trying to solve first, and the technology used to solve it second. This is pretty much always the best way to do it — don't start with a cool new technology that you want to use, and try to shoehorn it into the use case.
-
-> **Note:** The simplest solution is often the best.
+> **Note:**
+> See how we talked about the problem we are trying to solve first, and the technology used to solve it second. This is pretty much always the best way to do it — don't start with a cool new technology that you want to use, and try to shoehorn it into the use case.
+> The simplest solution is often the best.
 
 ### Getting practice
 
@@ -260,7 +260,7 @@ We already mentioned Stack Overflow, but there are other online resources that c
 
 It is good to find a community to be part of, and you'll get a lot of respect if you try to help others answer their questions as well as asking your own. Other good examples include:
 
-- [MDN Discourse](/en-US/docs/MDN/Community/Communication_channels#forums)
+- [MDN community channels](/en-US/docs/MDN/Community/Communication_channels)
 - [Sitepoint Forums](https://www.sitepoint.com/community/)
 - [webdeveloper.com Forums](https://webdeveloper.com/)
 

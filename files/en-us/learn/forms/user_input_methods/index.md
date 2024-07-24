@@ -78,7 +78,7 @@ If you need slightly different layouts depending on whether the user is in portr
 
 When screen orientation matters for your form, you can read the screen orientation state, be informed when this state changes, and able to lock the screen orientation to a specific state (usually portrait or landscape) through the [Screen Orientation API](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation).
 
-- Orientation data can be retrieved through {{domxref("screenOrientation.type")}} or with CSS through the [`orientation`](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#orientation) media feature.
+- Orientation data can be retrieved through {{domxref("screenOrientation.type")}} or with CSS through the [`orientation`](/en-US/docs/Web/CSS/@media/orientation) media feature.
 - When the screen orientation changes, the {{domxref("ScreenOrientation.change_event", "change")}} event is fired on the screen object.
 - Locking the screen orientation is made possible by invoking the {{domxref("ScreenOrientation.lock()")}} method.
 - The {{domxref("ScreenOrientation.unlock()")}} method removes all the previous screen locks that have been set.

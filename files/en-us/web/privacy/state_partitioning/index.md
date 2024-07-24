@@ -75,7 +75,7 @@ efforts as the Work Item is standardized.
 ### Status of partitioning in Firefox
 
 - [**Network Partitioning**](#network_partitioning): Enabled by default for all users since Firefox 85.
-- [**Dynamic State Partitioning**](#dynamic_state_partitioning):
+- [**Dynamic Partitioning**](#dynamic_partitioning):
   - Since Firefox 86: Enabled for users that have
     ["Strict" privacy protections](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop#w_strict-enhanced-tracking-protection) enabled.
   - Since Firefox 90: Enabled in private browsing.
@@ -254,10 +254,10 @@ The following preferences can be used to disable individual storage access
 heuristics via the
 [config editor](https://support.mozilla.org/en-US/kb/about-config-editor-firefox):
 
-- Enable / disable the [redirect heuristics](#storage_access_redirect_heuristics):
+- Enable / disable the [redirect heuristics](#redirect_heuristics):
   `privacy.restrict3rdpartystorage.heuristic.recently_visited`,
   `privacy.restrict3rdpartystorage.heuristic.redirect`
-- Enable / disable the [window open heuristics](#storage_access_window_open_heuristics):
+- Enable / disable the [window open heuristics](#opener_heuristics):
   `privacy.restrict3rdpartystorage.heuristic.window_open`,
   `privacy.restrict3rdpartystorage.heuristic.opened_window_after_interaction`
 

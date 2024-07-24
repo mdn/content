@@ -7,7 +7,7 @@ browser-compat: css.properties.outline-color
 
 {{CSSRef}}
 
-The **`outline-color`** CSS property sets the color of an element's outline.
+The **`outline-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of an element's outline.
 
 {{EmbedInteractiveExample("pages/css/outline-color.html")}}
 
@@ -18,9 +18,6 @@ The **`outline-color`** CSS property sets the color of an element's outline.
 outline-color: #f92525;
 outline-color: rgb(30 222 121);
 outline-color: blue;
-
-/* Keyword value */
-outline-color: auto;
 
 /* Global values */
 outline-color: inherit;
@@ -36,8 +33,8 @@ The `outline-color` property is specified as any one of the values listed below.
 
 - {{cssxref("&lt;color&gt;")}}
   - : The color of the outline, specified as a `<color>`.
-- `auto`
-  - : Computes to [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) unless [`outline-style`](/en-US/docs/Web/CSS/outline-style) is set to `auto` then it computes to the [accent color](/en-US/docs/Web/CSS/accent-color).
+
+The specification also lists an additional value, `auto`, which is not currently supported in any browsers. When implemented, `auto` will compute to [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) unless [`outline-style`](/en-US/docs/Web/CSS/outline-style) is set to `auto` then it will compute to the [accent color](/en-US/docs/Web/CSS/accent-color).
 
 ## Description
 
@@ -45,7 +42,7 @@ An outline is a line that is drawn around an element, outside the {{cssxref("bor
 
 It is often more convenient to use the shorthand property {{cssxref("outline")}} when defining the appearance of an outline.
 
-## Accessibility concerns
+## Accessibility
 
 Custom [focus styles](/en-US/docs/Web/CSS/:focus) commonly involve making adjustments to the {{cssxref("outline")}} property. If the color of the outline is adjusted, it is important to ensure that the contrast ratio between it and the background the outline is placed over is high enough that people experiencing low vision conditions will be able to perceive it.
 
@@ -98,8 +95,7 @@ p {
 ## See also
 
 - {{cssxref("outline")}}
-- {{cssxref("outline-color")}}
-- {{cssxref("outline-style")}}
 - {{cssxref("outline-width")}}
+- {{cssxref("outline-style")}}
 - The {{cssxref("&lt;color&gt;")}} data type
 - Other color-related properties: {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}

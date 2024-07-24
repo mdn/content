@@ -17,8 +17,7 @@ When `F` is said to be a _method_ of `O`, it often means that `F` uses `O` as it
 - [Method (computer programming)](<https://en.wikipedia.org/wiki/Method_(computer_programming)>) in Wikipedia
 - [Defining a method in JavaScript](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) (comparison of the traditional syntax and the new shorthand)
 - [List of JavaScript built-in methods](/en-US/docs/Web/JavaScript/Reference)
-- [MDN Web Docs Glossary](/en-US/docs/Glossary)
-
+- Related glossary terms:
   - {{Glossary("function")}}
   - {{Glossary("object")}}
   - {{Glossary("property")}}

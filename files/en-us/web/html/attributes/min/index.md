@@ -15,7 +15,7 @@ Some input types have a default minimum. If the input has no default minimum and
 
 It is valid for the input types including: {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}} and {{HTMLElement("input/range", "range")}} types, and the {{htmlelement('meter')}} element.
 
-### Syntax
+## Syntax
 
 <table class="no-markdown">
   <caption>

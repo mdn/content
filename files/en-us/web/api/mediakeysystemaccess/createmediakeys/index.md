@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.MediaKeySystemAccess.createMediaKeys
 ---
 
-{{APIRef("EncryptedMediaExtensions")}}{{SecureContext_Header}}
+{{APIRef("Encrypted Media Extensions")}}{{SecureContext_Header}}
 
 The `MediaKeySystemAccess.createMediaKeys()` method returns a
 {{jsxref('Promise')}} that resolves to a new {{domxref('MediaKeys')}} object.

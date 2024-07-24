@@ -2,7 +2,7 @@
 title: 206 Partial Content
 slug: Web/HTTP/Status/206
 page-type: http-status-code
-browser-compat: http.status.206
+spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.206
 ---
 
 {{HTTPSidebar}}
@@ -64,10 +64,6 @@ Content-Range: bytes 4590-7999/8000
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

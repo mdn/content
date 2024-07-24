@@ -53,4 +53,4 @@ ul.addEventListener("click", hide, false);
 
 ## See also
 
-- [Comparison of Event Targets](/en-US/docs/Web/API/Event/Comparison_of_Event_Targets)
+- [Event bubbling](/en-US/docs/Learn/JavaScript/Building_blocks/Event_bubbling)

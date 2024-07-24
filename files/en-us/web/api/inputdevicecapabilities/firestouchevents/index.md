@@ -23,7 +23,7 @@ touch events on mobile browsers.
 const boolean = InputDeviceCapabilities.firesTouchEvents
 ```
 
-### Returns
+### Return value
 
 A {{jsxref('Boolean')}}
 

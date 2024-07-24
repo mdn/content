@@ -7,9 +7,7 @@ browser-compat: http.headers.Accept-CH
 
 {{HTTPSidebar}}{{securecontext_header}}
 
-The **`Accept-CH`** header may be set by a server to specify
-which [client hints](/en-US/docs/Web/HTTP/Client_hints) headers a client
-should include in subsequent requests.
+The **`Accept-CH`** header may be set by a server to specify which [client hints](/en-US/docs/Web/HTTP/Client_hints) headers a client should include in subsequent requests.
 
 <table class="properties">
   <tbody>
@@ -30,8 +28,7 @@ should include in subsequent requests.
   </tbody>
 </table>
 
-> **Note:** Client hints are accessible only on secure origins (via TLS).
-> `Accept-CH` (and `Accept-CH-Lifetime`) headers should be persisted for all secure requests to ensure client hints are sent reliably.
+> **Note:** Client hints are accessible only on secure origins (via TLS). The `Accept-CH` header should be persisted for all secure requests to ensure client hints are sent reliably.
 
 ## Syntax
 

@@ -17,7 +17,7 @@ This guide briefly examines the syntax of the media type `codecs` parameter and 
 The MIME type for a container format is expressed by stating the type of media (`audio`, `video`, etc.), then a slash character (`/`), then the format used to contain the media:
 
 - `audio/mpeg`
-  - : An audio file using the [MPEG](/en-US/docs/Web/Media/Formats/Containers#mpeg) file type, such as an MP3.
+  - : An audio file using the [MPEG](/en-US/docs/Web/Media/Formats/Containers#mpegmpeg-2) file type, such as an MP3.
 - `video/ogg`
   - : A video file using the [Ogg](/en-US/docs/Web/Media/Formats/Containers#ogg) file type.
 - `video/mp4`
@@ -36,7 +36,7 @@ You can add the `codecs` parameter to the media type. To do so, append a semicol
 - `video/webm; codecs="vp8, vorbis"`
   - : A [WebM](/en-US/docs/Web/Media/Formats/Containers#webm) file containing [VP8](/en-US/docs/Web/Media/Formats/Video_codecs#vp8) video and/or [Vorbis](/en-US/docs/Web/Media/Formats/Audio_codecs#vorbis) audio.
 - `video/mp4; codecs="avc1.4d002a"`
-  - : An [MPEG-4](/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4) file containing [AVC](</en-US/docs/Web/Media/Formats/Video_codecs#avc_(h.264)>) (H.264) video, Main Profile, Level 4.2.
+  - : An [MPEG-4](/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4) file containing [AVC](/en-US/docs/Web/Media/Formats/Video_codecs#avc_h.264) (H.264) video, Main Profile, Level 4.2.
 
 As is the case with any MIME type parameter, `codecs` must be changed to `codecs*` (note the asterisk character, `*`) if any of the properties of the codec use special characters which must be percent-encoded per {{RFC(2231, "MIME Parameter Value and Encoded Word Extensions", 4)}}. You can use the JavaScript {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} function to encode the parameter list; similarly, you can use {{jsxref("Global_Objects/decodeURI", "decodeURI()")}} to decode a previously encoded parameter list.
 
@@ -576,7 +576,7 @@ All media types based upon the [ISO Base Media File Format](https://en.wikipedia
 
 Each codec described by the `codecs` parameter can be specified either as the container's name (`3gp`, `mp4`, `quicktime`, etc.) or as the container name plus additional parameters to specify the codec and its configuration. Each entry in the codec list may contain some number of components, separated by periods (`.`).
 
-The syntax for the value of `codecs` varies by codec; however, it always starts with the codec's four-character identifier, a period separator (`.`), followed by the Object Type Indication (OTI) value for the specific data format. For most codecs, the OTI is a two-digit hexadecimal number; however, it's six hexadecimal digits for [AVC (H.264)](</en-US/docs/Web/Media/Formats/Video_codecs#avc_(h.264)>).
+The syntax for the value of `codecs` varies by codec; however, it always starts with the codec's four-character identifier, a period separator (`.`), followed by the Object Type Indication (OTI) value for the specific data format. For most codecs, the OTI is a two-digit hexadecimal number; however, it's six hexadecimal digits for [AVC (H.264)](/en-US/docs/Web/Media/Formats/Video_codecs#avc_h.264).
 
 Thus, the syntaxes for each of the supported codecs look like this:
 

@@ -84,7 +84,7 @@ You may need to test support for more than one property in your feature query. T
 }
 ```
 
-For example, if the CSS you want to run requires that the browser supports CSS Shapes and CSS Grid, you could create a rule that tests browser support for both of these features. The following rule will only return true if `shape-outside: circle()` and `display: grid` are both supported by the browser.
+For example, if the CSS you want to run requires that the browser supports CSS Shapes and CSS grid, you could create a rule that tests browser support for both of these features. The following rule will only return true if `shape-outside: circle()` and `display: grid` are both supported by the browser.
 
 {{EmbedGHLiveSample("css-examples/feature-queries/and.html", '100%', 600)}}
 

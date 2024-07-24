@@ -53,6 +53,8 @@ You can create a new `Request` object using the {{domxref("Request.Request","Req
   - : Returns a promise that resolves with an {{jsxref("ArrayBuffer")}} representation of the request body.
 - {{domxref("Request.blob()")}}
   - : Returns a promise that resolves with a {{domxref("Blob")}} representation of the request body.
+- {{domxref("Request.bytes()")}}
+  - : Returns a promise that resolves with a {{jsxref("Uint8Array")}} representation of the request body.
 - {{domxref("Request.clone()")}}
   - : Creates a copy of the current `Request` object.
 - {{domxref("Request.formData()")}}
@@ -76,7 +78,7 @@ const method = request.method;
 const credentials = request.credentials;
 ```
 
-You could then fetch this request by passing the `Request` object in as a parameter to a {{domxref("fetch()")}} call, for example:
+You could then fetch this request by passing the `Request` object in as a parameter to a {{domxref("Window/fetch", "fetch()")}} call, for example:
 
 ```js
 fetch(request)
@@ -102,7 +104,7 @@ const bodyUsed = request.bodyUsed;
 
 > **Note:** The body can only be a {{domxref("Blob")}}, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}}, a {{domxref("FormData")}}, a {{domxref("URLSearchParams")}}, a {{domxref("ReadableStream")}}, or a {{jsxref("String")}} object, as well as a string literal, so for adding a JSON object to the payload you need to stringify that object.
 
-You could then fetch this API request by passing the `Request` object in as a parameter to a {{domxref("fetch()")}} call, for example and get the response:
+You could then fetch this API request by passing the `Request` object in as a parameter to a {{domxref("Window/fetch", "fetch()")}} call, for example and get the response:
 
 ```js
 fetch(request)

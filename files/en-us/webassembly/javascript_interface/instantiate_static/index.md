@@ -102,7 +102,7 @@ that is exported by the `Instance`.
 
 ```js
 const importObject = {
-  imports: {
+  my_namespace: {
     imported_func(arg) {
       console.log(arg);
     },
@@ -143,7 +143,7 @@ exported function from inside it.
 
 ```js
 const importObject = {
-  imports: {
+  my_namespace: {
     imported_func(arg) {
       console.log(arg);
     },

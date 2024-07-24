@@ -106,7 +106,7 @@ const b = 2;
 () => a + b + 100;
 ```
 
-The braces can only be omitted if the function directly returns an expression. If the body has additional lines of processing, the braces are required — and so is the `return` keyword. Arrow functions cannot guess what or when you want to return.
+The braces can only be omitted if the function directly returns an expression. If the body has statements, the braces are required — and so is the `return` keyword. Arrow functions cannot guess what or when you want to return.
 
 ```js
 // Traditional anonymous function
@@ -122,7 +122,7 @@ The braces can only be omitted if the function directly returns an expression. I
 };
 ```
 
-Arrow functions are always unnamed. If the arrow function needs to call itself, use a named function expression instead. You can also assign the arrow function to a variable so it has a name.
+Arrow functions are not inherently associated with a name. If the arrow function needs to call itself, use a named function expression instead. You can also assign the arrow function to a variable, allowing you to refer to it through that variable.
 
 ```js
 // Traditional Function

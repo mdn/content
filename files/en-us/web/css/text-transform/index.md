@@ -7,7 +7,7 @@ browser-compat: css.properties.text-transform
 
 {{CSSRef}}
 
-The **`text-transform`** CSS property specifies how to capitalize an element's text. It can be used to make text appear in all-uppercase or all-lowercase, or with each word capitalized. It also can help improve legibility for ruby.
+The **`text-transform`** [CSS](/en-US/docs/Web/CSS) property specifies how to capitalize an element's text. It can be used to make text appear in all-uppercase or all-lowercase, or with each word capitalized. It also can help improve legibility for ruby.
 
 {{EmbedInteractiveExample("pages/css/text-transform.html")}}
 
@@ -62,7 +62,7 @@ text-transform: unset;
 - `full-size-kana`
   - : Generally used for {{htmlelement("ruby")}} annotation text, the keyword converts all small Kana characters to the equivalent full-size Kana, to compensate for legibility issues at the small font sizes typically used in ruby.
 
-## Accessibility concerns
+## Accessibility
 
 Large sections of text set with a `text-transform` value of `uppercase` may be difficult for people with cognitive concerns such as Dyslexia to read.
 

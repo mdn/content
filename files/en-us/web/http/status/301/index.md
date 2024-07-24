@@ -2,7 +2,7 @@
 title: 301 Moved Permanently
 slug: Web/HTTP/Status/301
 page-type: http-status-code
-browser-compat: http.status.301
+spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.301
 ---
 
 {{HTTPSidebar}}
@@ -36,10 +36,6 @@ Location: http://www.example.org/index.asp
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

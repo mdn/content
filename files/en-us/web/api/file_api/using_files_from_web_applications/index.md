@@ -334,10 +334,12 @@ fileSelect.addEventListener(
 fileElem.addEventListener("change", handleFiles, false);
 
 function handleFiles() {
+  fileList.textContent = "";
   if (!this.files.length) {
-    fileList.innerHTML = "<p>No files selected!</p>";
+    const p = document.createElement("p");
+    p.textContent = "No files selected!";
+    fileList.appendChild(p);
   } else {
-    fileList.innerHTML = "";
     const list = document.createElement("ul");
     fileList.appendChild(list);
     for (let i = 0; i < this.files.length; i++) {
@@ -352,7 +354,7 @@ function handleFiles() {
       };
       li.appendChild(img);
       const info = document.createElement("span");
-      info.innerHTML = `${this.files[i].name}: ${this.files[i].size} bytes`;
+      info.textContent = `${this.files[i].name}: ${this.files[i].size} bytes`;
       li.appendChild(info);
     }
   }
@@ -400,7 +402,7 @@ function sendFiles() {
 }
 ```
 
-Line 2 fetches a {{DOMxRef("NodeList")}}, called `imgs`, of all the elements in the document with the CSS class `obj`. In our case, these will be all of the image thumbnails. Once we have that list, it's trivial to go through it and create a new `FileUpload` instance for each. Each of these handles uploading the corresponding file.
+`document.querySelectorAll` fetches a {{DOMxRef("NodeList")}} of all the elements in the document with the CSS class `obj`. In our case, these will be all of the image thumbnails. Once we have that list, it's trivial to go through it and create a new `FileUpload` instance for each. Each of these handles uploading the corresponding file.
 
 ### Handling the upload process for a file
 

@@ -68,7 +68,7 @@ See [Options and constraints](#options_and_constraints), below, for more on both
 
 ### Example of a window allowing the user to select a display surface to capture
 
-[![Screenshot of Chrome's window for picking a source surface](chrome-screen-capture-window.png)](chrome-screen-capture-window.png)
+![Screenshot of Chrome's window for picking a source surface](chrome-screen-capture-window.png)
 
 You can then use the captured stream, `captureStream`, for anything that accepts a stream as input. The [examples](#examples) below show a few ways to make use of the stream.
 
@@ -217,7 +217,7 @@ console.error = (msg) =>
   (logElem.textContent = `${logElem.textContent}\nError: ${msg}`);
 ```
 
-This allows us to use {{domxref("console/log_static", "console/log()")}} and {{domxref("console.error_static", "console.error()")}} to log information to the log box in the document.
+This allows us to use {{domxref("console/log_static", "console.log()")}} and {{domxref("console.error_static", "console.error()")}} to log information to the log box in the document.
 
 ##### Starting display capture
 
@@ -225,7 +225,7 @@ The `startCapture()` method, below, starts the capture of a {{domxref("MediaStre
 
 ```js
 async function startCapture() {
-  logElem.innerHTML = "";
+  logElem.textContent = "";
 
   try {
     videoElem.srcObject =

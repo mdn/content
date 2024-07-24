@@ -21,11 +21,9 @@ This property is a shorthand for the following CSS properties:
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Positional alignment */
 place-self: auto center;
 place-self: normal start;
-
-/* Positional alignment */
 place-self: center normal;
 place-self: start auto;
 place-self: end normal;
@@ -33,6 +31,7 @@ place-self: self-start auto;
 place-self: self-end normal;
 place-self: flex-start auto;
 place-self: flex-end normal;
+place-self: anchor-center;
 
 /* Baseline alignment */
 place-self: baseline normal;
@@ -77,6 +76,8 @@ place-self: unset;
     The fallback alignment for `first baseline` is `start`, the one for `last baseline` is `end`.
 - `stretch`
   - : If the combined size of the items along the cross axis is less than the size of the alignment container and the item is `auto`-sized, its size is increased equally (not proportionally), while still respecting the constraints imposed by {{cssxref("max-height")}}/{{cssxref("max-width")}} (or equivalent functionality), so that the combined size of all `auto`-sized items exactly fills the alignment container along the cross axis.
+- `anchor-center` {{experimental_inline}}
+  - : In the case of [anchor-positioned](/en-US/docs/Web/CSS/CSS_anchor_positioning) elements, aligns the item to the center of the associated anchor element in the block and inline direction. See [Centering on the anchor using `anchor-center`](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#centering_on_the_anchor_using_anchor-center).
 
 ## Formal definition
 
@@ -163,9 +164,9 @@ span {
 
 ## See also
 
-- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
-- CSS Flexbox Guide: _[Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)_
-- CSS Grid Guide: _[Box alignment in CSS Grid layouts](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)_
-- [CSS Box Alignment](/en-US/docs/Web/CSS/CSS_box_alignment)
-- The {{cssxref("align-self")}} property
-- The {{cssxref("justify-self")}} property
+- {{cssxref("align-self")}}
+- {{cssxref("justify-self")}}
+- [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
+- [Box alignment in CSS grid layouts](/en-US/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
+- [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module

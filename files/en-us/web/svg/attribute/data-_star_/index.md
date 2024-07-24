@@ -7,7 +7,7 @@ browser-compat: svg.global_attributes.data
 
 {{SVGRef}}
 
-The **`data-*`** SVG attributes are called custom data attributes. They let SVG markup and its resulting DOM share information that standard attributes can't, usually for scripting purposes. Their custom data are available via the {{domxref("SVGElement")}} interface of the element the attributes belong to, with the {{domxref("HTMLElement.dataset")}} property.
+The **`data-*`** SVG attributes are called custom data attributes. They let SVG markup and its resulting DOM share information that standard attributes can't, usually for scripting purposes. Their custom data are available via the {{domxref("SVGElement")}} interface of the element the attributes belong to, with the {{domxref("SVGElement.dataset")}} property.
 
 The `*` can be replaced by any characters allowed in [XML's rules for names](https://www.w3.org/TR/REC-xml/#NT-Name), with the following restrictions:
 
@@ -15,7 +15,7 @@ The `*` can be replaced by any characters allowed in [XML's rules for names](htt
 - No semicolons (`;`, `U+003A`).
 - No capital `A` to `Z` letters.
 
-> **Note:** The {{domxref("HTMLElement.dataset")}} property is a {{domxref("DOMStringMap")}} that provides the attribute `data-test-value` via `SVGElement.dataset.testValue`. Hyphen characters (`-`, `U+002D`) are removed and the next letter is capitalized, resulting in the {{Glossary("camel_case", "camel case")}} format.
+> **Note:** The {{domxref("SVGElement.dataset")}} property is a {{domxref("DOMStringMap")}} that provides the attribute `data-test-value` via `SVGElement.dataset.testValue`. Hyphen characters (`-`, `U+002D`) are removed and the next letter is capitalized, resulting in the {{Glossary("camel_case", "camel case")}} format.
 
 You can use this attribute with any SVG element.
 
@@ -30,5 +30,5 @@ You can use this attribute with any SVG element.
 ## See also
 
 - {{domxref("SVGElement")}}
-- The {{domxref("HTMLElement.dataset")}} property used to access these attributes from scripts.
+- The {{domxref("SVGElement.dataset")}} property used to access these attributes from scripts.
 - [Using data attributes](/en-US/docs/Learn/HTML/Howto/Use_data_attributes)

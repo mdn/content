@@ -44,15 +44,23 @@ In these articles, we won't answer every question about web tooling, but we will
 
 Today's modern developer tooling ecosystem is huge, so it's useful to have a broad idea of what main problems the tools are solving. If you jump on your favorite search engine and look for "front-end developer tools" you're going to hit a huge spectrum of results ranging from text editors, to browsers, to the type of pens you can use to take notes.
 
-Though your choice of code editor is certainly a tooling choice, this series of articles will go beyond that, focusing on developer tools that help you produce web code more efficiently.
+Though your choice of code editor is certainly a tooling choice, this series of articles will go beyond that, focusing on developer tools that help you produce web code more efficiently. We'll recommend a few particular tools and the following tutorials will show you how to use them. They are tools that are popular and standard at the time of writing. This does not preclude you from using other tools, if you are aware of their relative advantages.
 
-From a high-level perspective, you can put client-side tools into the following three broad categories of problems to solve:
+From a high-level perspective, you can put client-side tools into the following four broad categories of problems to solve:
 
+- **Environment** — Tools that help you set up your development environment, such as installing and running other tools.
 - **Safety net** — Tools that are useful during your code development.
 - **Transformation** — Tools that transform code in some way, e.g. turning an intermediate language into JavaScript that a browser can understand.
 - **Post-development** — Tools that are useful after you have written your code, such as testing and deployment tools.
 
 Let's look at each one of these in more detail.
+
+### Environment
+
+The editor, operating system, and browser are all development environments. We will assume that you have already settled down with a choice you are most comfortable with. However, before installing and running other tools, there are yet two choices to make:
+
+- Where you are going to run the tools on. Most tools that are run locally are written in JavaScript, so you need a JavaScript interpreter on your computer that can be invoked from the command line (not the one in your browser). [Node.js](https://nodejs.org/) remains the industry standard and we will use it. [Bun](https://bun.sh/) is intended as a drop-in replacement for Node.js, known for its speed and powerful APIs.
+- How you are going to install the tools, in other words, the _package manager_. Node provides [npm](https://www.npmjs.com/) by default, so we will use it. [Yarn](https://yarnpkg.com/) and [pnpm](https://pnpm.io/) are other popular choices, each with their own advantages such as speed, project management, etc.
 
 ### Safety net
 
@@ -70,9 +78,7 @@ A few very common safety net tool types you will find being used by developers a
 
 [ESLint](https://eslint.org/) is the industry standard JavaScript linter — a highly configurable tool for catching potential syntax errors and encouraging "best practices" throughout your code. Some companies and projects have also [shared their ESLint configs](https://www.npmjs.com/search?q=keywords:eslintconfig).
 
-You can also find linting tools for other languages, such as [csslint](http://csslint.net/).
-
-Also well-worth looking at is [webhint](https://webhint.io/), a configurable, open-source linter for the web that surfaces best practices including approaches to accessibility, performance, cross-browser compatibility via [MDN's browser compatibility data](https://github.com/mdn/browser-compat-data), security, testing for PWAs, and more. It is available as a [Node.js command-line tool](https://webhint.io/docs/user-guide/) and a [VS Code extension](https://marketplace.visualstudio.com/items?itemName=webhint.vscode-webhint).
+You can also find linting tools for other languages, such as [stylelint](https://stylelint.io).
 
 #### Source code control
 
@@ -88,19 +94,17 @@ Code formatters are somewhat related to linters, except that rather than point o
 
 [Prettier](https://prettier.io/) is a very popular example of a code formatter, which we'll make use of later on in the module.
 
-#### Bundlers/packagers
+#### Type checkers
 
-These are tools that get your code ready for production, for example by "tree-shaking" to make sure only the parts of your code libraries that you are actually using are put into your final production code, or "minifying" to remove all the whitespace in your production code, making it as small as possible before it is uploaded to a server.
+Type checkers are tools that help you write more reliable code by checking that your code is using the right types of data in the right places. This prevents common classes of bugs such as accessing nonexistent properties, unexpected `undefined`, etc.
 
-[Parcel](https://parceljs.org/) is a particularly clever tool that fits into this category — it can do the above tasks, but also helps to package assets like HTML, CSS, and image files into convenient bundles that you can then go on to deploy, and also adds dependencies for you automatically whenever you try to use them. It can even handle some code transformation duties for you.
-
-[Webpack](https://webpack.js.org/) is another very popular packaging tool that does similar things.
+[TypeScript](https://www.typescriptlang.org/) is the de facto standard type checker for JavaScript. It provides its own type annotation syntax and is somewhat a language in its own right, so we won't be covering it in this module.
 
 ### Transformation
 
-This stage of your web app lifecycle typically allows you to code in either "future code" (such as the latest CSS or JavaScript features that might not have native support in browsers yet) or code using another language entirely, such as [TypeScript](https://www.typescriptlang.org/). Transformation tools will then generate browser-compatible code for you, to be used in production.
+This stage of your web app lifecycle typically allows you to code in either "future code" (such as the latest CSS or JavaScript features that might not have native support in browsers yet) or code using another language entirely, such as TypeScript. Transformation tools will then generate browser-compatible code for you, to be used in production.
 
-Generally, web development is thought of as three languages: [HTML](/en-US/docs/Learn/HTML), [CSS](/en-US/docs/Learn/CSS), and [JavaScript](/en-US/docs/Learn/JavaScript), and there are transformation tools for all of these languages. Transformation offers two main benefits (amongst others):
+Generally, web development is thought of as three languages: [HTML](/en-US/docs/Learn/HTML), [CSS](/en-US/docs/Learn/CSS), and [JavaScript](/en-US/docs/Learn/JavaScript), and there are transformation tools for all of these languages. Transformation offers three main benefits (amongst others):
 
 1. The ability to write code using the latest language features and have that transformed into code that works on everyday devices. For example, you might want to write JavaScript using cutting-edge new language features, but still have your final production code work on older browsers that don't support those features. Good examples here include:
 
@@ -112,6 +116,11 @@ Generally, web development is thought of as three languages: [HTML](/en-US/docs/
    - [Sass/SCSS](https://sass-lang.com/): This CSS extension allows you to use variables, nested rules, mixins, functions, and many other features, some of which are available in native CSS (such as variables), and some of which aren't.
    - [TypeScript](https://www.typescriptlang.org/): TypeScript is a superset of JavaScript that offers a bunch of additional features. The TypeScript compiler converts TypeScript code to JavaScript when building for production.
    - Frameworks such as [React](https://react.dev/), [Ember](https://emberjs.com/), and [Vue](https://vuejs.org/): Frameworks provide a lot of functionality for free and allow you to use it via custom syntax built on top of vanilla JavaScript. In the background, the framework's JavaScript code works hard to interpret this custom syntax and render it as a final web app.
+
+3. Optimization. This is provided by _bundlers_, which are tools that get your code ready for production, for example by "[tree-shaking](/en-US/docs/Glossary/Tree_shaking)" to make sure only the parts of your code libraries that you are actually using are put into your final production code, or "[minifying](/en-US/docs/Glossary/Minification)" to remove all the whitespace in your production code, making it as small as possible before it is uploaded to a server. For example:
+
+   - [Webpack](https://webpack.js.org/) has been the most popular bundler for a long time, featuring a huge number of plugins and a powerful configuration system. However, it is also known for being quite complex to set up, and is slow compared to more modern alternatives.
+   - [Vite](https://vitejs.dev/) is a more modern build tool that is popular for its speed, simplicity, and richness of features.
 
 ### Post development
 
@@ -130,7 +139,7 @@ These generally take the form of a tool that will automatically run tests agains
 
 Deployment systems allow you to get your website published, are available for both static and dynamic sites, and commonly tend to work alongside testing systems. For example, a typical toolchain will wait for you to push changes to a remote repo, run some tests to see if the changes are OK, and then if the tests pass, automatically deploy your app to a production site.
 
-[Netlify](https://www.netlify.com/) is one of the most popular deployment tools right now, but others include [Vercel](https://vercel.com/) and [GitHub Pages](https://pages.github.com/).
+[GitHub Pages](https://pages.github.com/) is nicely integrated with GitHub itself and is free for all public repos. Other services, such as [Netlify](https://www.netlify.com/) and [Vercel](https://vercel.com/), are also very popular, featuring generous free tier quotas, smooth deployment workflows, and GitHub integration.
 
 #### Others
 

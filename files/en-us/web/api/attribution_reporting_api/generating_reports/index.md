@@ -61,7 +61,7 @@ The properties are as follows:
 - `"source_type"`
   - : A string equal to either `"navigation"` or `"event"`, which respectively indicate whether the associated attribution source is [navigation-based](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#navigation-based_attribution_sources), or [event-based](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#event-based_attribution_sources).
 - `"randomized_trigger_rate"`
-  - : A random number between 0 and 1 indicating how often [noise](#how_noise_is_added_to_reports) is applied for this particular source configuration.
+  - : A random number between 0 and 1 indicating how often [noise](#adding_noise_to_reports) is applied for this particular source configuration.
 - `"scheduled_report_time"`
   - : A string representing the number of seconds from the Unix Epoch until the browser initially scheduled the report to be sent (to avoid inaccuracies as a result of offline devices reporting late).
 - `"source_debug_key"` {{optional_inline}}

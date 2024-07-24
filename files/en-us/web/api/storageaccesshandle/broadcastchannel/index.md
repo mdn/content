@@ -29,7 +29,8 @@ An unpartitioned {{domxref("BroadcastChannel")}} object.
 
 - `SecurityError` {{domxref("DomException")}}
   - : Thrown if access was not granted.
-- See {{domxref("BroadcastChannel.BroadcastChannel", "BroadcastChannel()")}}
+
+See {{domxref("BroadcastChannel.BroadcastChannel", "BroadcastChannel()")}}
 
 ## Examples
 

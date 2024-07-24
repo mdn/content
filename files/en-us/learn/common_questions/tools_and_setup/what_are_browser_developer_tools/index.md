@@ -82,7 +82,7 @@ You'll notice a number of clickable tabs at the top of the CSS Viewer:
 - _Layout_: In Firefox, this area includes two sections:
 
   - _Box Model_: represents visually the current element's box model, so you can see at a glance what padding, border and margin is applied to it, and how big its content is.
-  - _Grid_: If the page you are inspecting uses CSS Grid, this section allows you to view the grid details.
+  - _Grid_: If the page you are inspecting uses CSS grid, this section allows you to view the grid details.
 
 - _Fonts_: In Firefox, the _Fonts_ tab shows the fonts applied to the current element.
 

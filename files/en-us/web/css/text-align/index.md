@@ -57,7 +57,7 @@ The `text-align` property is specified as a single keyword from the list below.
 - `match-parent`
   - : Similar to `inherit`, but the values `start` and `end` are calculated according to the parent's {{cssxref("direction")}} and are replaced by the appropriate `left` or `right` value.
 
-## Accessibility concerns
+## Accessibility
 
 The inconsistent spacing between words created by justified text can be problematic for people with cognitive concerns such as Dyslexia.
 
