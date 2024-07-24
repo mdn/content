@@ -434,7 +434,7 @@ Follow similar style when linking to a section on a page, as shown below:
 
 If the section you're linking to is on the same page, you can hint at the location of the section using the words "above" or "below".
 
-- **Correct**: "This concept is described in more detail in the [Accessibility concerns](/en-US/docs/Web/CSS/gradient/repeating-conic-gradient#accessibility_concerns) section below."
+- **Correct**: "This concept is described in more detail in the [Accessibility](/en-US/docs/Web/CSS/gradient/repeating-conic-gradient#accessibility) section below."
 
 You can link part of a sentence to an article or the section of an article. Be mindful to use descriptive phrases as link texts to provide enough context for the page being linked.
 

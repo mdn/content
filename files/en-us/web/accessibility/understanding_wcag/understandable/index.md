@@ -148,7 +148,7 @@ This guideline focuses on making text content as understandable as possible.
           >Video and audio content</a
         >, and
         <a
-          href="http://www.oxfordlearnersdictionaries.com/us/about/pronunciation_english.html"
+          href="https://www.oxfordlearnersdictionaries.com/us/about/pronunciation_english.html"
           >Pronunciation Guide for English Dictionary</a
         >
       </td>

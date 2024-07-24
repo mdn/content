@@ -8,7 +8,7 @@
         "/docs/Web/API/Attribution_Reporting_API/Generating_reports"
       ],
       "methods": [
-        "fetch()",
+        "Window.fetch()",
         "XMLHttpRequest.setAttributionReporting()",
         "Window.open()"
       ],
@@ -1484,7 +1484,7 @@
         "WritableStreamDefaultController",
         "WritableStreamDefaultWriter"
       ],
-      "methods": ["fetch()"],
+      "methods": ["Window.fetch()"],
       "properties": ["Response.body"],
       "events": []
     },
@@ -1620,7 +1620,7 @@
       "overview": ["Topics API"],
       "guides": ["/docs/Web/API/Topics_API/Using"],
       "interfaces": [],
-      "methods": ["Document.browsingTopics()", "fetch()"],
+      "methods": ["Document.browsingTopics()", "Window.fetch()"],
       "properties": ["HTMLIFrameElement.browsingTopics"],
       "events": []
     },
@@ -2165,7 +2165,6 @@
         "RTCEncodedVideoFrame",
         "RTCEncodedAudioFrame",
         "RTCTransformEvent",
-        "RTCRtpCodecParameters",
         "RTCIceParameters",
         "RTCIceCandidatePair",
         "RTCIceCandidatePairStats",

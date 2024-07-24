@@ -124,4 +124,6 @@ Learn about the [ICE restart](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ic
 
 ## The entire exchange in a complicated diagram
 
-[![A complete architectural diagram showing the whole WebRTC process.](webrtc-complete-diagram.png)](https://hacks.mozilla.org/2013/07/webrtc-and-the-ocean-of-acronyms/)
+![A complete architectural diagram showing the whole WebRTC process.](webrtc-complete-diagram.png)
+
+[Original source](https://hacks.mozilla.org/2013/07/webrtc-and-the-ocean-of-acronyms/)

@@ -60,7 +60,7 @@ The `touch-action` property may be specified as either:
 - `pinch-zoom`
   - : Enable multi-finger panning and zooming of the page. This may be combined with any of the **pan-** values.
 
-## Accessibility concerns
+## Accessibility
 
 A declaration of `touch-action: none;` may inhibit operating a browser's zooming capabilities. This will prevent people experiencing low vision conditions from being able to read and understand page content.
 
