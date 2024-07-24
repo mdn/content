@@ -62,7 +62,7 @@ document.getElementById("container").appendChild(newNode);
 
 Before they can be inserted into the current document, nodes from external documents should either be:
 
-- cloned using {{domXref("document.importNode()")}}; or
+- cloned using `document.importNode()`; or
 - adopted using {{domXref("document.adoptNode()")}}.
 
 > **Note:** Although Firefox doesn't currently enforce this rule, we encourage you to follow this rule for improved future compatibility.
