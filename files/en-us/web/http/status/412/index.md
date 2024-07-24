@@ -29,7 +29,7 @@ ETag: W/"0815"
 ### Avoiding mid-air collisions
 
 With the help of the `ETag` and the {{HTTPHeader("If-Match")}} headers, you can prevent conflicts or mid-air collisions.
-For example, when editing some wiki pages, content is hashed and put into an `Etag` in successful responses:
+For example, when editing some wiki pages, content is hashed and put into an `ETag` in successful responses:
 
 ```http
 ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
