@@ -37,7 +37,7 @@ _Also inherits methods from its parent interface, {{domxref("BaseAudioContext")}
 - {{domxref("OfflineAudioContext.resume()")}}
   - : Resumes the progression of time in an audio context that has previously been suspended.
 
-> **Note:** The `resume()` method is still available — it is now defined on the {{domxref("BaseAudioContext")}} interface (see {{domxref("AudioContext.resume")}}) and thus can be accessed by both the {{domxref("AudioContext")}} and {{domxref("OfflineAudioContext")}} interfaces.
+> **Note:** The `resume()` method is still available — it is now defined on the {{domxref("BaseAudioContext")}} interface (see {{domxref("AudioContext.resume")}}) and thus can be accessed by both the {{domxref("AudioContext")}} and `OfflineAudioContext` interfaces.
 
 ## Events
 

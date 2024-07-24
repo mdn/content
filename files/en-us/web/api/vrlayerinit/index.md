@@ -53,7 +53,7 @@ if (navigator.getVRDisplays) {
 }
 ```
 
-{{domxref("VRLayerInit")}} objects look something like this:
+`VRLayerInit` objects look something like this:
 
 ```js
 {
