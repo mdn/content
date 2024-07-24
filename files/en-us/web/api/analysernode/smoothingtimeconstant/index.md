@@ -28,7 +28,7 @@ For more complete applied examples/information, check out our [Voice-change-O-ma
 If you are curious about the effect the `smoothingTimeConstant()` has, try cloning the above example and setting `analyser.smoothingTimeConstant = 0;` instead. You'll notice that the value changes are much more jarring.
 
 ```js
-const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const audioCtx = new AudioContext();
 const analyser = audioCtx.createAnalyser();
 analyser.minDecibels = -90;
 analyser.maxDecibels = -10;

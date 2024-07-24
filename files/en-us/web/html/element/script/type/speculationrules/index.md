@@ -414,7 +414,7 @@ How does this affect speculation rules? Consider the following code:
 
 What would happen in this case when the user starts a navigation to `/users?id=345` when the headers for the prefetch of `/users` have not been received yet? At this point, the browser doesn't know what the `No-Vary-Search` value will be, if anything. If there was no `No-Vary-Search` value set, and the application behavior was more like Option 1 above, the prefetch would be wasted and the browser would need to go and fetch the separate `/users?id=345` page from scratch.
 
-To solve this, we can provide a hint as to what the page author expects the `No-Vary-Search` value to be. A speculation rule can have an `"expects_no_vary_search"` field, which contains a string representation of the the expected header value:
+To solve this, we can provide a hint as to what the page author expects the `No-Vary-Search` value to be. A speculation rule can have an `"expects_no_vary_search"` field, which contains a string representation of the expected header value:
 
 ```html
 <script type="speculationrules">

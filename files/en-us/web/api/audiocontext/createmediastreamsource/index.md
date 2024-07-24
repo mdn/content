@@ -98,7 +98,7 @@ if (navigator.mediaDevices) {
 
 // dump script to pre element
 
-pre.innerHTML = myScript.innerHTML;
+pre.textContent = myScript.textContent;
 ```
 
 > **Note:** As a consequence of calling

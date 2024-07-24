@@ -996,7 +996,7 @@ For more details, see [Firefox bug 1823463](https://bugzil.la/1823463) for the `
 
 ### `@starting-style` at-rule
 
-The CSS [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) at-rule allows you to set the starting styles of an element for a CSS transition, when the element has no default initial style. This is particularly useful for elements that are hidden from view on the first paint such as [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) or ['dialog'](/en-US/docs/Web/HTML/Element/dialog). For more details, see [Firefox bug 1834876](https://bugzil.la/1834876).
+The CSS [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) at-rule allows you to set the starting styles of an element for a CSS transition, when the element has no default initial style. This is particularly useful for elements that are hidden from view on the first paint such as [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) or ['dialog'](/en-US/docs/Web/HTML/Element/dialog). Does not yet support animating from `display: none`. For more details, see [Firefox bug 1834876](https://bugzil.la/1834876) and [Firefox bug 1834877](https://bugzil.la/1834877).
 
 <table>
   <thead>
@@ -1202,48 +1202,6 @@ This includes: `SVGPathSegList`, [SVGPathElement.getPathSegAtLength()](/en-US/do
 </table>
 
 ## JavaScript
-
-### Float16Array Typed Arrays
-
-{{jsxref("Float16Array")}} typed arrays are now supported, along with {{jsxref("DataView.prototype.getFloat16()")}} and {{jsxref("DataView.prototype.setFloat16()")}} for reading and setting `Float16Array` values from a {{jsxref("DataView")}}, and the {{jsxref("Math.f16round()")}} static method, which can be used to round numbers to 16 bits.
-The new type is useful for sharing data with a GPU, in particular for use cases where it makes sense to trade off precision for memory consumption.
-([Firefox bug 1833647](https://bugzil.la/1833647).)
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>127</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>127</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>127</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>127</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>javascript.options.experimental.float16array</code></td>
-    </tr>
-  </tbody>
-</table>
 
 ## APIs
 
@@ -2280,6 +2238,48 @@ The [`Clear-Site-Data`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data) HTTP respo
       <th>Preference name</th>
       <td colspan="2">
         <code>privacy.clearsitedata.cache.enabled</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### Privacy Preserving Attribution API (PPA)
+
+[PPA API](https://support.mozilla.org/kb/privacy-preserving-attribution) provides an alternative to user tracking for ad attribution using the new `navigator.privateAttribution` object with `saveImpression()` and `measureConversion()` methods. Read more about PPA [in the explainer](https://github.com/mozilla/explainers/tree/main/ppa-experiment). This experiment can be enabled for websites via [origin trial](https://wiki.mozilla.org/Origin_Trials) or in the browser by setting the preference to `1`. ([Firefox bug 1900929](https://bugzil.la/1900929)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>128</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>128</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>128</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>128</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2">
+        <code>dom.origin-trials.private-attribution.state</code>
       </td>
     </tr>
   </tbody>

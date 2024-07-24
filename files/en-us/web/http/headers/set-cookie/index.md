@@ -62,9 +62,9 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
     A `<cookie-value>` can optionally be wrapped in double quotes and include any US-ASCII character excluding control characters (ASCII characters 0 up to 31 and ASCII character 127), {{glossary("Whitespace")}}, double quotes, commas, semicolons, and backslashes.
 
-    **Encoding**: Many implementations perform [URL encoding](https://en.wikipedia.org/wiki/URL_encoding) on cookie values.
+    **Encoding**: Many implementations perform {{Glossary("Percent-encoding", "percent-encoding")}} on cookie values.
     However, this is not required by the RFC specification.
-    The URL encoding does help to satisfy the requirements of the characters allowed for `<cookie-value>`.
+    The percent-encoding does help to satisfy the requirements of the characters allowed for `<cookie-value>`.
 
     > **Note:** Some `<cookie-name>` have a specific semantic:
     >
@@ -101,7 +101,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 - `HttpOnly` {{optional_inline}}
 
   - : Forbids JavaScript from accessing the cookie, for example, through the {{domxref("Document.cookie")}} property.
-    Note that a cookie that has been created with `HttpOnly` will still be sent with JavaScript-initiated requests, for example, when calling {{domxref("XMLHttpRequest.send()")}} or {{domxref("fetch()")}}.
+    Note that a cookie that has been created with `HttpOnly` will still be sent with JavaScript-initiated requests, for example, when calling {{domxref("XMLHttpRequest.send()")}} or {{domxref("Window/fetch", "fetch()")}}.
     This mitigates attacks against cross-site scripting ({{Glossary("Cross-site_scripting", "XSS")}}).
 
 - `Max-Age=<number>` {{optional_inline}}

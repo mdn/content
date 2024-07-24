@@ -65,7 +65,7 @@ Many CJK punctuation characters include glyph-internal spacing. For example, the
 When pairs of punctuation characters are adjacent to one another, the space between them is collapsed according to the following rules:
 
 - Set a full-width opening punctuation character to half-width if the previous character is a fullwidth opening punctuation character, a fullwidth middle dot, an ideographic space (U+3000), a fullwidth closing punctuation character of an equivalent or larger font size, or a character belonging to [Unicode general category "Open punctuation" Ps](https://www.compart.com/en/unicode/category/Ps). Otherwise, set it to full-width.
-- Set a full-width closing punctuation character to half-width if the next character is a fullwidth closing punctuation character, a fullwidth middle dot, an ideographic space (U+3000), a fullwidth opening punctuation character with a larger font size, or a character belonging to [Unicode general category "Close punctuation" (Pe)](https://www.compart.com/en/unicode/category/Pe). Otherwise, set it to full-width.
+- Set a full-width closing punctuation character to half-width if the next character is a fullwidth closing punctuation character, a fullwidth middle dot, an ideographic space (U+3000), a fullwidth opening punctuation character with larger font size, or a character belonging to [Unicode general category "Close punctuation" (Pe)](https://www.compart.com/en/unicode/category/Pe). Otherwise, set it to full-width.
 
 ## Formal definition
 
@@ -79,7 +79,7 @@ When pairs of punctuation characters are adjacent to one another, the space betw
 
 ### `text-spacing-trim` value comparison
 
-This example compares the effect of four different `text-spacing-trim` properties, applying them to four identical paragraphs so you can see the visual differences betwene each one.
+This example compares the effect of four different `text-spacing-trim` properties, applying them to four identical paragraphs so you can see the visual differences between each one.
 
 #### HTML
 

@@ -119,7 +119,7 @@ We set the source of the video depending on the type of video file the browser s
 
 ## Web Audio API
 
-In this example we retrieve an MP3 file using the {{domxref("fetch()")}} API, load it into a source, and play it.
+In this example we retrieve an MP3 file using the {{domxref("Window/fetch", "fetch()")}} API, load it into a source, and play it.
 
 ```js
 let audioCtx;

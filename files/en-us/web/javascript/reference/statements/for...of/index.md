@@ -29,7 +29,7 @@ for (variable of iterable)
 
 A `for...of` loop operates on the values sourced from an iterable one by one in sequential order. Each operation of the loop on a value is called an _iteration_, and the loop is said to _iterate over the iterable_. Each iteration executes statements that may refer to the current sequence value.
 
-When a `for...of` loop iterates over an iterable, it first calls the iterable's [`[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) method, which returns an [iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol), and then repeatedly calls the resulting iterator's [`next()`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol) method to produce the sequence of values to be assigned to `variable`.
+When a `for...of` loop iterates over an iterable, it first calls the iterable's [`[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) method, which returns an [iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol), and then repeatedly calls the resulting iterator's [`next()`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol) method to produce the sequence of values to be assigned to `variable`.
 
 A `for...of` loop exits when the iterator has completed (the `next()` result is an object with `done: true`). Like other looping statements, you can use [control flow statements](/en-US/docs/Web/JavaScript/Reference/Statements#control_flow) inside `statement`:
 
@@ -82,7 +82,7 @@ for (const value of iterable) {
 
 ### Iterating over a string
 
-Strings are [iterated by Unicode code points](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator).
+Strings are [iterated by Unicode code points](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator).
 
 ```js
 const iterable = "boo";
@@ -174,7 +174,7 @@ for (const paragraph of articleParagraphs) {
 
 ### Iterating over a user-defined iterable
 
-Iterating over an object with an `@@iterator` method that returns a custom iterator:
+Iterating over an object with an `[Symbol.iterator]()` method that returns a custom iterator:
 
 ```js
 const iterable = {
@@ -199,7 +199,7 @@ for (const value of iterable) {
 // 3
 ```
 
-Iterating over an object with an `@@iterator` generator method:
+Iterating over an object with an `[Symbol.iterator]()` generator method:
 
 ```js
 const iterable = {
@@ -218,7 +218,7 @@ for (const value of iterable) {
 // 3
 ```
 
-_Iterable iterators_ (iterators with a `[@@iterator]()` method that returns `this`) are a fairly common technique to make iterators usable in syntaxes expecting iterables, such as `for...of`.
+_Iterable iterators_ (iterators with a `[Symbol.iterator]()` method that returns `this`) are a fairly common technique to make iterators usable in syntaxes expecting iterables, such as `for...of`.
 
 ```js
 let i = 1;
@@ -363,7 +363,7 @@ The `for...in` loop logs only [enumerable properties](/en-US/docs/Web/JavaScript
 
 The second loop is similar to the first one, but it uses {{jsxref("Object.hasOwn()")}} to check if the found enumerable property is the object's own, i.e. not inherited. If it is, the property is logged. Properties `0`, `1`, `2` and `foo` are logged because they are own properties. Properties `arrCustom` and `objCustom` are not logged because they are inherited.
 
-The `for...of` loop iterates and logs _values_ that `iterable`, as an array (which is [iterable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)), defines to be iterated over. The object's _elements_ `3`, `5`, `7` are shown, but none of the object's _properties_ are.
+The `for...of` loop iterates and logs _values_ that `iterable`, as an array (which is [iterable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)), defines to be iterated over. The object's _elements_ `3`, `5`, `7` are shown, but none of the object's _properties_ are.
 
 ## Specifications
 

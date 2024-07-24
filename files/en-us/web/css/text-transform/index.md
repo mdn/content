@@ -62,7 +62,7 @@ text-transform: unset;
 - `full-size-kana`
   - : Generally used for {{htmlelement("ruby")}} annotation text, the keyword converts all small Kana characters to the equivalent full-size Kana, to compensate for legibility issues at the small font sizes typically used in ruby.
 
-## Accessibility concerns
+## Accessibility
 
 Large sections of text set with a `text-transform` value of `uppercase` may be difficult for people with cognitive concerns such as Dyslexia to read.
 

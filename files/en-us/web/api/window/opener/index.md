@@ -46,7 +46,7 @@ To be exact, for cross-origin opener objects, the following properties are avail
 - {{domxref("Window.postMessage", "postMessage")}}
 - `window[0]`, `window[1]`, etc.
 
-In addition, there are a few properties: [`then`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables), {{jsxref("Symbol.toStringTag", "@@toStringTag")}}, {{jsxref("Symbol.hasInstance", "@@hasInstance")}}, {{jsxref("Symbol.isConcatSpreadable", "@@isConcatSpreadable")}}, which are used by various JavaScript operations. These properties have values `undefined`. All other properties generate a `SecurityError` {{domxref("DOMException")}} when accessed.
+In addition, there are a few properties: [`then`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables), {{jsxref("Symbol/toStringTag", "[Symbol.toStringTag]")}}, {{jsxref("Symbol/hasInstance", "[Symbol.hasInstance]")}}, {{jsxref("Symbol/isConcatSpreadable", "[Symbol.isConcatSpreadable]")}}, which are used by various JavaScript operations. These properties have values `undefined`. All other properties generate a `SecurityError` {{domxref("DOMException")}} when accessed.
 
 In the following cases, the browser does not populate `window.opener`, but
 leaves it [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null):

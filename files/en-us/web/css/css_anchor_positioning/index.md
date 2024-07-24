@@ -21,9 +21,9 @@ In addition, the specification provides CSS-only mechanisms to:
 - {{cssxref("anchor-name")}}
 - {{cssxref("inset-area")}}
 - {{cssxref("position-anchor")}}
-- {{cssxref("position-try")}}
 - {{cssxref("position-try-fallbacks")}}
 - {{cssxref("position-try-order")}}
+- {{cssxref("position-try")}} shorthand
 - {{cssxref("position-visibility")}}
 
 > [!NOTE]

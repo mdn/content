@@ -69,7 +69,7 @@ We now see a monochromatic palette based on the color we picked from the Mars ph
 
 ![Now with complementary colors included.](paletton3.png)
 
-If the proposed color doesn't work for your needs, you can change the color scheme. For example, if the proposed greenish-blue color doesn't work, select the Triad color scheme icon, which results in the the following:
+If the proposed color doesn't work for your needs, you can change the color scheme. For example, if the proposed greenish-blue color doesn't work, select the Triad color scheme icon, which results in the following:
 
 ![Triad color scheme selected](paletton4.png)
 
@@ -77,7 +77,7 @@ Click on the greyish blue in the top-right. The color is `#556E8D`. This can be 
 
 ![Triad color scheme selected](paletton-color-detail.png)
 
-Now we have our base color and our accent. We also have a few complementary shades of both, which can be used to create gradients gradients or as an accent color to indicate focus, such as for link hover states. The colors can be exported in several formats for you to use.
+Now we have our base color and our accent. We also have a few complementary shades of both, which can be used to create gradients or as an accent color to indicate focus, such as for link hover states. The colors can be exported in several formats for you to use.
 
 You should also select neutral colors. Find a color that provides enough contrast for your text to be crisp and readable while ensuring it isn't harsh for the eyes. If the contrast is too low, your text will be washed out by the background, leaving it unreadable, but if your contrast is too high, the user may find your site garish and unpleasant to look at.
 

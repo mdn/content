@@ -56,7 +56,7 @@ The following snippet shows how we might use a signal to abort downloading a vid
 
 We first create an abort controller using the {{domxref("AbortController.AbortController","AbortController()")}} constructor, then grab a reference to its associated {{domxref("AbortSignal")}} object using the {{domxref("AbortController.signal")}} property.
 
-When the [fetch request](/en-US/docs/Web/API/fetch) is initiated, we pass in the `AbortSignal` as an option inside the request's options object (the `{signal}` below). This associates the signal and controller with the fetch request, and allows us to abort it by calling {{domxref("AbortController.abort()")}}.
+When the [fetch request](/en-US/docs/Web/API/Window/fetch) is initiated, we pass in the `AbortSignal` as an option inside the request's options object (the `{signal}` below). This associates the signal and controller with the fetch request, and allows us to abort it by calling {{domxref("AbortController.abort()")}}.
 Below you can see that the fetch operation is aborted in the second event listener, which triggered when the abort button (`abortBtn`) is clicked.
 
 When `abort()` is called, the `fetch()` promise rejects with a `DOMException` named `AbortError`.
@@ -144,7 +144,7 @@ try {
 
 ### Aborting a fetch with timeout or explicit abort
 
-If you want to abort from multiple signals, you can use {{domxref("AbortSignal/any_static", "AbortSignal.any()")}} to combine them into a single signal. The following example shows this using {{domxref("fetch")}}:
+If you want to abort from multiple signals, you can use {{domxref("AbortSignal/any_static", "AbortSignal.any()")}} to combine them into a single signal. The following example shows this using {{domxref("Window/fetch", "fetch")}}:
 
 ```js
 try {

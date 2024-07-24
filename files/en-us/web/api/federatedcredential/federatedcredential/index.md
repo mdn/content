@@ -13,7 +13,7 @@ browser-compat: api.FederatedCredential.FederatedCredential
 The **`FederatedCredential()`**
 constructor creates a new {{domxref("FederatedCredential")}} object. In
 supporting browsers, an instance of this class may be passed the `credential`
-received from the `init` object for global {{domxref('fetch()')}}.
+received from the `init` object for global {{domxref("Window/fetch", "fetch()")}}.
 
 ## Syntax
 
