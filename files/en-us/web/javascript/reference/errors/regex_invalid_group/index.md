@@ -8,7 +8,7 @@ page-type: javascript-error
 
 The JavaScript exception "invalid regexp group" occurs when the sequence `(?` does not start a valid group syntax. Recognized group syntaxes that start with `(?` include:
 
-- `(?:` for [non-capturing groups](//en-US/docs/Web/JavaScript/Reference/Regular_expressions/Non-capturing_group)
+- `(?:` for [non-capturing groups](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Non-capturing_group)
 - `(?=` for [positive lookahead](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion)
 - `(?!` for negative lookahead
 - `(?<=` for [positive lookbehind](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookbehind_assertion)

@@ -18,7 +18,7 @@ In this article, we will further enhance the [WebSocket chat](https://webrtc-fro
 
 Establishing a WebRTC connection between two devices requires the use of a **signaling server** to resolve how to connect them over the internet. A signaling server's job is to serve as an intermediary to let two peers find and establish a connection while minimizing exposure of potentially private information as much as possible. How do we create this server and how does the signaling process actually work?
 
-First we need the signaling server itself. WebRTC doesn't specify a transport mechanism for the signaling information. You can use anything you like, from [WebSocket](/en-US/docs/Web/API/WebSockets_API) to {{domxref("fetch()")}} to carrier pigeons to exchange the signaling information between the two peers.
+First we need the signaling server itself. WebRTC doesn't specify a transport mechanism for the signaling information. You can use anything you like, from [WebSocket](/en-US/docs/Web/API/WebSockets_API) to {{domxref("Window/fetch", "fetch()")}} to carrier pigeons to exchange the signaling information between the two peers.
 
 It's important to note that the server doesn't need to understand or interpret the signaling data content. Although it's {{Glossary("SDP")}}, even this doesn't matter so much: the content of the message going through the signaling server is, in effect, a black box. What does matter is when the {{Glossary("ICE")}} subsystem instructs you to send signaling data to the other peer, you do so, and the other peer knows how to receive this information and deliver it to its own ICE subsystem. All you have to do is channel the information back and forth. The contents don't matter at all to the signaling server.
 
@@ -123,7 +123,7 @@ The signaling process involves this exchange of messages between two peers using
 
 Imagine that Naomi and Priya are engaged in a discussion using the chat software, and Naomi decides to open a video call between the two. Here's the expected sequence of events:
 
-[![Diagram of the signaling process](webrtc_-_signaling_diagram.svg)](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling/webrtc_-_signaling_diagram.svg)
+![Diagram of the signaling process](webrtc_-_signaling_diagram.svg)
 
 We'll see this detailed more over the course of this article.
 
@@ -131,7 +131,7 @@ We'll see this detailed more over the course of this article.
 
 When each peer's ICE layer begins to send candidates, it enters into an exchange among the various points in the chain that looks like this:
 
-[![Diagram of ICE candidate exchange process](webrtc_-_ice_candidate_exchange.svg)](webrtc_-_ice_candidate_exchange.svg)
+![Diagram of ICE candidate exchange process](webrtc_-_ice_candidate_exchange.svg)
 
 Each side sends candidates to the other as it receives them from their local ICE layer; there is no taking turns or batching of candidates. As soon as the two peers agree upon one candidate that they can both use to exchange the media, media begins to flow. Each peer continues to send candidates until it runs out of options, even after the media has already begun to flow. This is done in hopes of identifying even better options than the one initially selected.
 

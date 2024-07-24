@@ -291,7 +291,7 @@ When animating `display` with [CSS transitions](/en-US/docs/Web/CSS/CSS_transiti
 
 For examples of transitioning the `display` property, see the [`@starting-style`](/en-US/docs/Web/CSS/@starting-style#examples) and [`transition-behavior`](/en-US/docs/Web/CSS/transition-behavior#examples) pages.
 
-## Accessibility concerns
+## Accessibility
 
 ### display: none
 

@@ -65,7 +65,7 @@ When animating `content-visibility` with [CSS transitions](/en-US/docs/Web/CSS/C
 
 {{CSSSyntax}}
 
-## Accessibility concerns
+## Accessibility
 
 Off-screen content within a `content-visibility: auto` property remains in the document object model and the accessibility tree. This allows improving page performance with `content-visibility: auto` without negatively impacting accessibility.
 

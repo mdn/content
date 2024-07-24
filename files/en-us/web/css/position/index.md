@@ -74,7 +74,7 @@ Except for the case just described (of absolutely positioned elements filling th
 - If both `top` and `bottom` are specified (technically, not `auto`), `top` wins.
 - If both `left` and `right` are specified, `left` wins when {{Cssxref("direction")}} is `ltr` (English, horizontal Japanese, etc.) and `right` wins when {{Cssxref("direction")}} is `rtl` (Persian, Arabic, Hebrew, etc.).
 
-## Accessibility concerns
+## Accessibility
 
 Ensure that elements positioned with an `absolute` or `fixed` value do not obscure other content when the page is zoomed to increase text size.
 

@@ -60,7 +60,7 @@ width: unset;
 - `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
   - : Uses the fit-content formula with the available space replaced by the specified argument, i.e. `min(max-content, max(min-content, <length-percentage>))`.
 
-## Accessibility concerns
+## Accessibility
 
 Ensure that elements set with a `width` aren't truncated and/or don't obscure other content when the page is zoomed to increase text size.
 

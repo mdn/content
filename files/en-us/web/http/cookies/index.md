@@ -122,7 +122,7 @@ console.log(document.cookie);
 // logs "tasty_cookie=strawberry; yummy_cookie=blueberry"
 ```
 
-Note that, for security purposes, you can't change cookie values by sending an updated `Cookie` header directly when initiating a request, i.e. via {{domxref("fetch()")}} or {{domxref("XMLHttpRequest")}}. Note that there are also good reasons why you shouldn't allow JavaScript to modify cookies — i.e. set `HttpOnly` during creation. See the [Security](#security) section for more details.
+Note that, for security purposes, you can't change cookie values by sending an updated `Cookie` header directly when initiating a request, i.e. via {{domxref("Window/fetch", "fetch()")}} or {{domxref("XMLHttpRequest")}}. Note that there are also good reasons why you shouldn't allow JavaScript to modify cookies — i.e. set `HttpOnly` during creation. See the [Security](#security) section for more details.
 
 ## Security
 
@@ -154,7 +154,10 @@ The `Domain` and `Path` attributes define the _scope_ of a cookie: what URLs the
   Set-Cookie: id=a3fWa; Expires=Thu, 21 Oct 2021 07:28:00 GMT; Secure; HttpOnly; Domain=mozilla.org
   ```
 
-  If the `Set-Cookie` header does not specify a `Domain` attribute, the cookies are available on the server that sets it _but not on its subdomains_. Therefore, specifying `Domain` is less restrictive than omitting it. However, it can be helpful when subdomains need to share information about a user. Note that you can't set a different domain to the one the header is set from, or one of its subdomains; see [Invalid domains](/en-US/docs/Web/HTTP/Headers/Set-Cookie#invalid_domains) for more details.
+  If the `Set-Cookie` header does not specify a `Domain` attribute, the cookies are available on the server that sets it _but not on its subdomains_. Therefore, specifying `Domain` is less restrictive than omitting it.
+  Note that a server can only set the `Domain` attribute to its own domain or a parent domain, not to a subdomain or some other domain.
+  So, for example, a server with domain `foo.example.com` could set the attribute to `example.com` or `foo.example.com`, but not `bar.foo.example.com` or `elsewhere.com` (the cookies would still be _sent_ to subdomains such as `bar.foo.example.com` though).
+  See [Invalid domains](/en-US/docs/Web/HTTP/Headers/Set-Cookie#invalid_domains) for more details.
 
 - The `Path` attribute indicates a URL path that must exist in the requested URL in order to send the `Cookie` header. For example:
 

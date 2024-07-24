@@ -110,7 +110,7 @@ For this project, we'll use the [Pug](https://pugjs.org/api/getting-started.html
 
 ### What CSS stylesheet engine should I use?
 
-The _Express Application Generator_ allows you to create a project that is configured to use the most common CSS stylesheet engines: [LESS](https://lesscss.org/), [SASS](https://sass-lang.com/), [Compass](http://compass-style.org/), [Stylus](https://stylus-lang.com/).
+The _Express Application Generator_ allows you to create a project that is configured to use the most common CSS stylesheet engines: [LESS](https://lesscss.org/), [SASS](https://sass-lang.com/), [Stylus](https://stylus-lang.com/).
 
 > **Note:** CSS has some limitations that make certain tasks difficult. CSS stylesheet engines allow you to use more powerful syntax for defining your CSS and then compile the definition into plain-old CSS for browsers to use.
 

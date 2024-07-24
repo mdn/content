@@ -51,7 +51,7 @@ The concrete object size is calculated using the following algorithm:
 
 > **Note:** Not all browsers support every type of image on every property. See the [browser compatibility section](#browser_compatibility) for details.
 
-## Accessibility concerns
+## Accessibility
 
 Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.
 
