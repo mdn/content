@@ -2,7 +2,17 @@
 title: fill
 slug: Web/SVG/Attribute/fill
 page-type: svg-attribute
-browser-compat: svg.global_attributes.fill
+browser-compat:
+  - svg.elements.circle.fill
+  - svg.elements.ellipse.fill
+  - svg.elements.path.fill
+  - svg.elements.polygon.fill
+  - svg.elements.polyline.fill
+  - svg.elements.rect.fill
+  - svg.elements.text.fill
+  - svg.elements.textPath.fill
+  - svg.elements.tref.fill
+  - svg.elements.tspan.fill
 ---
 
 {{SVGRef}}
