@@ -44,8 +44,8 @@ RegExp["$&"]; // "hi"
 
 ## See also
 
-- {{jsxref("RegExp/input", "RegExp.input ($_)")}}
-- {{jsxref("RegExp/lastParen", "RegExp.lastParen ($+)")}}
-- {{jsxref("RegExp/leftContext", "RegExp.leftContext ($`)")}}
-- {{jsxref("RegExp/rightContext", "RegExp.rightContext ($')")}}
-- {{jsxref("RegExp/n", "RegExp.$1, …, RegExp.$9")}}
+- [`RegExp.input` (`$_`)](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/input)
+- [`RegExp.lastParen` (`$+`)](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastParen)
+- [`RegExp.leftContext` (`` $` ``)](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/leftContext)
+- [`RegExp.rightContext` (`$'`)](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/rightContext)
+- [`RegExp.$1`, …, `RegExp.$9`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/n)

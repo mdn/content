@@ -40,17 +40,17 @@ console.log("b");
 
 The following properties are deprecated. This does not affect their use in [replacement strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace):
 
-- {{jsxref("RegExp/n", "$1–$9")}}
+- [`$1–$9`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/n)
   - : Parenthesized substring matches, if any.
-- {{jsxref("RegExp/input", "input, $_")}}
+- [`input`, `$_`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/input)
   - : The string against which a regular expression is matched.
-- {{jsxref("RegExp/lastMatch", "lastMatch, $&amp;")}}
+- [`lastMatch`, `$&`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastMatch)
   - : The last matched substring.
-- {{jsxref("RegExp/lastParen", "lastParen, $+")}}
+- [`lastParen`, `$+`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastParen)
   - : The last parenthesized substring match, if any.
-- {{jsxref("RegExp/leftContext", "leftContext, $`")}}
+- [`leftContext`, `` $` ``](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/leftContext)
   - : The substring preceding the most recent match.
-- {{jsxref("RegExp/rightContext", "rightContext, $'")}}
+- [`rightContext`, `$'`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/rightContext)
   - : The substring following the most recent match.
 
 > **Warning:** Avoid using these static properties, as they can cause [issues when interacting with external code](https://github.com/tc39/proposal-regexp-legacy-features/blob/master/subclass-restriction-motivation.md#legacy-static-properties-regexp1-etc)!

@@ -487,7 +487,7 @@ iframe.tiktok {
 
 ### Making grid cells square
 
-A grid of square cells can be created by defining fixed {{cssxref("grid-template-columns", "column track sizes")}}, ensuring each row matches the size of the column track. However, when creating responsive grids using `auto-fill` to fit as many column tracks as possible within the container, the width of each item becomes uncertain. This makes it challenging to determine the appropriate height for creating square items.
+A grid of square cells can be created by defining fixed [column track sizes](/en-US/docs/Web/CSS/grid-template-columns), ensuring each row matches the size of the column track. However, when creating responsive grids using `auto-fill` to fit as many column tracks as possible within the container, the width of each item becomes uncertain. This makes it challenging to determine the appropriate height for creating square items.
 
 By setting an aspect ratio on the items, we can ensure when the grid items are laid out, each grid item will be as tall as it is wide, creating square grid items regardless of the container's dimensions.
 
