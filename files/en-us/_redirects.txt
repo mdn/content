@@ -3512,6 +3512,7 @@
 /en-US/docs/Games/Techniques/Publishing_games/Game_promotion	/en-US/docs/Games/Publishing_games/Game_promotion
 /en-US/docs/Games/Techniques/Tilemaps/SquareTiles	/en-US/docs/Games/Techniques/Tilemaps
 /en-US/docs/Games/Techniques/Tilemaps/SquareTiles/Square_tilemaps_implementation:_Static_maps	/en-US/docs/Games/Techniques/Tilemaps/Square_tilemaps_implementation:_Static_maps
+/en-US/docs/Games/Tutorials/Touch_Event_Horizon	/en-US/docs/Games/Tutorials
 /en-US/docs/Games/WebRTC_data_channels	/en-US/docs/Games/Techniques/WebRTC_data_channels
 /en-US/docs/Games/Workflows	/en-US/docs/Games/Tutorials
 /en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript	/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript
@@ -3554,7 +3555,7 @@
 /en-US/docs/Games/Workflows/Breakout_game_from_scratch/Paddle_and_keyboard_controls	/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
 /en-US/docs/Games/Workflows/Breakout_game_from_scratch/Track_the_score_and_win	/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win
 /en-US/docs/Games/Workflows/HTML5_Gamedev_Phaser_Device_Orientation	/en-US/docs/Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation
-/en-US/docs/Games/Workflows/Touch_Event_Horizon	/en-US/docs/Games/Tutorials/Touch_Event_Horizon
+/en-US/docs/Games/Workflows/Touch_Event_Horizon	/en-US/docs/Games/Tutorials
 /en-US/docs/Games/visual_typescript_game_engine	/en-US/docs/Games
 /en-US/docs/Getting_Started_With_NSS	https://firefox-source-docs.mozilla.org/security/nss/index.html
 /en-US/docs/Getting_started_on_MDN	/en-US/docs/MDN/Community/Contributing/Getting_started
