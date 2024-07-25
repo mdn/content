@@ -50,7 +50,8 @@ svg {
 
 ## Usage notes
 
-> **Warning:** This property is deprecated. Use {{cssxref("clip-path")}} instead.
+> [!WARNING]
+> This property is deprecated. Use {{cssxref("clip-path")}} instead.
 
 <table class="properties">
   <tbody>

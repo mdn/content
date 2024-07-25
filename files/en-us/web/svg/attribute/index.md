@@ -365,7 +365,8 @@ Below is a list of all of the attributes available in SVG along with links to re
 
 ### Presentation attributes
 
-> **Note:** All SVG presentation attributes can be used as CSS properties.
+> [!NOTE]
+> All SVG presentation attributes can be used as CSS properties.
 
 - {{SVGAttr("alignment-baseline")}}
 - {{SVGAttr("baseline-shift")}}
