@@ -74,7 +74,8 @@ instance.#privateField; // Syntax error
 
 JavaScript, being a dynamic language, is able to perform this compile-time check because of the special hash identifier syntax, making it different from normal properties on the syntax level.
 
-> **Note:** Code run in the Chrome console can access private properties outside the class. This is a DevTools-only relaxation of the JavaScript syntax restriction.
+> [!NOTE]
+> Code run in the Chrome console can access private properties outside the class. This is a DevTools-only relaxation of the JavaScript syntax restriction.
 
 If you access a private property from an object that doesn't have the property, a {{jsxref("TypeError")}} is thrown, instead of returning `undefined` as normal properties do.
 
@@ -153,7 +154,7 @@ class Subclass extends ClassWithPrivateField {
 new Subclass(); // In some dev tools, it shows Subclass {#privateField: 42, #subPrivateField: 23}
 ```
 
-> **Note:** `#privateField` from the `ClassWithPrivateField` base class is private to `ClassWithPrivateField` and is not accessible from the derived `Subclass`.
+> [!NOTE] > `#privateField` from the `ClassWithPrivateField` base class is private to `ClassWithPrivateField` and is not accessible from the derived `Subclass`.
 
 #### Returning overriding object
 
@@ -187,7 +188,8 @@ console.log(obj instanceof Stamper); // false
 new Stamper(obj); // Error: Initializing an object twice is an error with private fields
 ```
 
-> **Warning:** This is a potentially very confusing thing to do. You are generally advised to avoid returning anything from the constructor — especially something unrelated to `this`.
+> [!WARNING]
+> This is a potentially very confusing thing to do. You are generally advised to avoid returning anything from the constructor — especially something unrelated to `this`.
 
 #### Private static fields
 

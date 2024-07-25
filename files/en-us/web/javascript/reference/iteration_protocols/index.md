@@ -59,7 +59,8 @@ Optionally, the iterator can also implement the **`return(value)`** and **`throw
 - `throw(exception)` {{optional_inline}}
   - : A function that accepts zero or one argument and returns an object conforming to the `IteratorResult` interface, typically with `done` equal to `true`. Calling this method tells the iterator that the caller detects an error condition, and `exception` is typically an {{jsxref("Error")}} instance. No built-in language feature calls `throw()` for cleanup purposes — it's a special feature of generators for the symmetry of `return`/`throw`.
 
-> **Note:** It is not possible to know reflectively (i.e. without actually calling `next()` and validating the returned result) whether a particular object implements the iterator protocol.
+> [!NOTE]
+> It is not possible to know reflectively (i.e. without actually calling `next()` and validating the returned result) whether a particular object implements the iterator protocol.
 
 It is very easy to make an iterator also iterable: just implement an `[Symbol.iterator]()` method that returns `this`.
 
