@@ -51,6 +51,8 @@ animation-fill-mode: unset;
     | `alternate-reverse`   | even                        | `100%` or `to`            |
     | `alternate-reverse`   | odd                         | `0%` or `from`            |
 
+    The properties that had been animated keep on having [`will-change`](/en-US/docs/Web/CSS/will-change) status. If new stacking context was created during the animation, then the target element keeps on having the staking context after the animation.
+
 - `backwards`
 
   - : The animation will apply the values defined in the first relevant [keyframe](/en-US/docs/Web/CSS/@keyframes) as soon as it is applied to the target, and retain this during the {{cssxref("animation-delay")}} period. The first relevant keyframe depends on the value of {{cssxref("animation-direction")}}:
