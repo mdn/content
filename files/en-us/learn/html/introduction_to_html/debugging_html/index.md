@@ -161,7 +161,6 @@ The error messages are usually helpful, but sometimes they are not so helpful; w
   ```
 
   > [!NOTE]
-  >
   > An attribute missing a closing quote can result in an open element because the rest of the document is interpreted as the attribute's content.
 
 - "Unclosed element `ul`": This is not very helpful, as the {{htmlelement("ul")}} element _is_ closed correctly. This error comes up because the {{htmlelement("a")}} element is not closed, due to the missing closing quote mark.
