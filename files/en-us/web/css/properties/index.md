@@ -181,6 +181,7 @@ page-type: guide
 - {{cssxref("justify-items")}}
 - {{cssxref("justify-self")}}
 - {{cssxref("left")}}
+- {{cssxref("length")}}
 - {{cssxref("letter-spacing")}}
 - {{cssxref("lighting-color")}}
 - {{cssxref("line-break")}}
@@ -300,6 +301,7 @@ page-type: guide
 - {{cssxref("stroke-width")}}
 - {{cssxref("tab-size")}}
 - {{cssxref("table-layout")}}
+- {{cssxref("text")}}
 - {{cssxref("text-align")}}
 - {{cssxref("text-align-last")}}
 - {{cssxref("text-anchor")}}
