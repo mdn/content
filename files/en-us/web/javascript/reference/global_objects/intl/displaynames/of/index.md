@@ -34,7 +34,7 @@ of(code)
 
 A language-specific formatted string, or `undefined` if there's no data for the input and `fallback` is `"none"`.
 
-> [!NOTE] > `fallback` is only used if `code` is structurally valid. See [using fallback](#using_fallback).
+> **Note:** `fallback` is only used if `code` is structurally valid. See [using fallback](#using_fallback).
 
 ### Exceptions
 

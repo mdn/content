@@ -25,7 +25,7 @@ Array(element1, element2, /* …, */ elementN)
 Array(arrayLength)
 ```
 
-> [!NOTE] > `Array()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `Array` instance.
+> **Note:** `Array()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `Array` instance.
 
 ### Parameters
 

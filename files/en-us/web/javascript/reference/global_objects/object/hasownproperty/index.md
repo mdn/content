@@ -11,7 +11,7 @@ The **`hasOwnProperty()`** method of {{jsxref("Object")}} instances returns a bo
 object has the specified property as its own property (as opposed to inheriting
 it).
 
-> [!NOTE] > {{jsxref("Object.hasOwn()")}} is recommended over
+> **Note:** {{jsxref("Object.hasOwn()")}} is recommended over
 > `hasOwnProperty()`, in browsers where it is supported.
 
 {{EmbedInteractiveExample("pages/js/object-prototype-hasownproperty.html")}}

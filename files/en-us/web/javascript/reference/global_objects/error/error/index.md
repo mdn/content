@@ -25,7 +25,7 @@ Error(message, fileName)
 Error(message, fileName, lineNumber)
 ```
 
-> [!NOTE] > `Error()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `Error` instance.
+> **Note:** `Error()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `Error` instance.
 
 ### Parameters
 

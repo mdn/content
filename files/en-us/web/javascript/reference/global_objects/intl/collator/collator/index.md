@@ -23,7 +23,7 @@ Intl.Collator(locales)
 Intl.Collator(locales, options)
 ```
 
-> [!NOTE] > `Intl.Collator()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `Intl.Collator` instance.
+> **Note:** `Intl.Collator()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `Intl.Collator` instance.
 
 ### Parameters
 

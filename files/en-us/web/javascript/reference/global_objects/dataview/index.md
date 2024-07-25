@@ -25,7 +25,7 @@ const littleEndian = (() => {
 console.log(littleEndian); // true or false
 ```
 
-> [!NOTE] > `DataView` defaults to big-endian read and write, but most platforms use little-endian.
+> **Note:** `DataView` defaults to big-endian read and write, but most platforms use little-endian.
 
 ## Constructor
 

@@ -19,7 +19,7 @@ new Intl.DurationFormat(locales)
 new Intl.DurationFormat(locales, options)
 ```
 
-> [!NOTE] > `Intl.DurationFormat()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> **Note:** `Intl.DurationFormat()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 

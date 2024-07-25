@@ -22,7 +22,7 @@ new Uint8ClampedArray(buffer, byteOffset)
 new Uint8ClampedArray(buffer, byteOffset, length)
 ```
 
-> [!NOTE] > `Uint8ClampedArray()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> **Note:** `Uint8ClampedArray()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 

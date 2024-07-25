@@ -17,7 +17,7 @@ The **`Promise()`** constructor creates {{jsxref("Promise")}} objects. It is pri
 new Promise(executor)
 ```
 
-> [!NOTE] > `Promise()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> **Note:** `Promise()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 

@@ -25,7 +25,7 @@ URIError(message, fileName)
 URIError(message, fileName, lineNumber)
 ```
 
-> [!NOTE] > `URIError()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `URIError` instance.
+> **Note:** `URIError()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `URIError` instance.
 
 ### Parameters
 
