@@ -237,7 +237,6 @@ On to the next parameter. This one is going to involve slightly more work — we
 1. First of all, download the icons needed for this exercise ([warning](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/icons/warning.png) and [chat](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/icons/chat.png)) from GitHub. Save them in a new folder called `icons` in the same location as your HTML file.
 
    > [!NOTE]
-   >
    > The warning and chat icons were originally found on [iconfinder.com](https://www.iconfinder.com/), and designed by [Nazarrudin Ansyari](https://www.iconfinder.com/nazarr) — Thanks! (The actual icon pages were since moved or removed.)
 
 2. Next, find the CSS inside your HTML file. We'll make a few changes to make way for the icons. First, update the `.msgBox` width from:
