@@ -295,7 +295,7 @@ Once you have generated a data URL from your canvas, you are able to use it as t
 
 You can also create a {{domxref("Blob")}} from the canvas.
 
-- {{domxref("HTMLCanvasElement.toBlob", "canvas.toBlob(_callback_, _type_, _encoderOptions_)")}}
+- {{domxref("HTMLCanvasElement.toBlob", "canvas.toBlob(callback, type, encoderOptions)")}}
   - : Creates a `Blob` object representing the image contained in the canvas.
 
 ## See also

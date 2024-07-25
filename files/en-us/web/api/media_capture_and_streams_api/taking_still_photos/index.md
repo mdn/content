@@ -213,7 +213,7 @@ function takepicture() {
 }
 ```
 
-As is the case any time we need to work with the contents of a canvas, we start by getting the {{domxref("CanvasRenderingContext2D","2D drawing context")}} for the hidden canvas.
+As is the case any time we need to work with the contents of a canvas, we start by getting the [2D drawing context](/en-US/docs/Web/API/CanvasRenderingContext2D) for the hidden canvas.
 
 Then, if the width and height are both non-zero (meaning that there's at least potentially valid image data), we set the width and height of the canvas to match that of the captured frame, then call {{domxref("CanvasRenderingContext2D.drawImage()", "drawImage()")}} to draw the current frame of the video into the context, filling the entire canvas with the frame image.
 

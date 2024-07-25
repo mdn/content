@@ -28,7 +28,7 @@ new AudioWorkletProcessor(options)
 - `options`
 
   - : An object that is passed as _options_ parameter to the
-    {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode constructor")}} and
+    {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode()")}} constructor and
     passed through [the structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
     Available properties are as follows:
 
@@ -46,7 +46,7 @@ new AudioWorkletProcessor(options)
       - : Any additional data that can be used for custom initialization of the underlying {{domxref("AudioWorkletProcessor")}}.
 
     Note that there are default values for the first two properties, so even if there are no
-    _options_ object passed to the {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode constructor")}}, the _options_ object passed by the node to the `AudioWorkletProcessor` constructor will exist and at minimum have `numberOfInputs` and `numberOfOutputs`.
+    _options_ object passed to the {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode()")}} constructor, the _options_ object passed by the node to the `AudioWorkletProcessor` constructor will exist and at minimum have `numberOfInputs` and `numberOfOutputs`.
 
 ### Return value
 
@@ -55,7 +55,7 @@ The newly constructed {{domxref("AudioWorkletProcessor")}} instance.
 ## Examples
 
 In this example we pass custom options to the
-{{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode constructor")}} and
+{{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode()")}} constructor and
 observe how a [structured clone](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) of them gets passed to our `AudioWorkletProcessor` constructor.
 
 First, we need to define a custom {{domxref("AudioWorkletProcessor")}} and register it.
