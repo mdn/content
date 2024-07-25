@@ -176,7 +176,7 @@ p:read-write {
 }
 ```
 
-{{EmbedLiveSample('Styling_read-only_non-form_controls', '100%', 400)}}
+{{EmbedLiveSample('Styling_read-only_non-form_controls', '100%', 200)}}
 
 ## Specifications
 
