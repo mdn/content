@@ -16,7 +16,7 @@ interface returns the actual text of a {{domxref("CSSStyleSheet")}} style-rule.
 
 Be aware that this property can no longer be set directly, as it is [now specified](https://www.w3.org/TR/cssom-1/#changes-from-5-december-2013)
 to be _functionally_ modify-only, and silently so. In other words, attempting to
-set it _does absolutely nothing_, and doesn't even omit a warning or error.
+set it _does absolutely nothing_, and doesn't even emit a warning or error.
 Furthermore, it has no settable sub-properties. Therefore, to modify it, use the
 stylesheet's {{domxref("CSSRuleList", "cssRules")}}`[index]` properties
 {{domxref("CSSStyleRule.selectorText", ".selectorText")}} and
