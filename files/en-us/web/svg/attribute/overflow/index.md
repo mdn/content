@@ -9,7 +9,7 @@ browser-compat: svg.global_attributes.overflow
 
 The **`overflow`** attribute sets what to do when an element's content is too big to fit in its block formatting context. **This feature is not widely implemented yet**.
 
-This attribute has the same parameter values and meaning as the {{cssxref("overflow", "CSS overflow property")}}, however, the following additional points apply:
+This attribute has the same parameter values and meaning as the CSS {{cssxref("overflow")}} property, however, the following additional points apply:
 
 - If it has a value of `visible`, the attribute has no effect (i.e., a clipping rectangle is not created).
 - If the `overflow` property has the value `hidden` or `scroll`, a clip of the exact size of the SVG viewport is applied.
@@ -72,7 +72,7 @@ svg {
   </tbody>
 </table>
 
-For a description of the values, please see the {{cssxref("overflow", "CSS overflow")}} property.
+For a description of the values, please see the CSS {{cssxref("overflow")}} property.
 
 ## Specifications
 
@@ -84,4 +84,4 @@ For a description of the values, please see the {{cssxref("overflow", "CSS overf
 
 ## See also
 
-- {{cssxref("overflow", "CSS overflow")}}
+- {{cssxref("overflow")}}

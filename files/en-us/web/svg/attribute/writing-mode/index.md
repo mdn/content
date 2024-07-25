@@ -57,4 +57,4 @@ You can use this attribute with the following SVG elements:
 
 ## See also
 
-- {{cssxref("writing-mode", "CSS writing-mode")}}
+- {{cssxref("writing-mode")}}

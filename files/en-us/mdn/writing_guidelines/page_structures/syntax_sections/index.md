@@ -49,7 +49,7 @@ A few rules to follow in terms of markup within the syntax block:
 
 #### Syntax block
 
-Start with a syntax block, like this (from the {{DOMxRef("IntersectionObserver.IntersectionObserver", "IntersectionObserver constructor")}} page):
+Start with a syntax block, like this (from the {{DOMxRef("IntersectionObserver.IntersectionObserver", "IntersectionObserver()")}} constructor page):
 
 ```js-nolint
 new IntersectionObserver(callback, options)
