@@ -55,7 +55,7 @@ A `GPUCommandEncoder` object instance is created via the {{domxref("GPUDevice.cr
 
 ## Examples
 
-In our [basic render demo](https://mdn.github.io/dom-examples/webgpu-render-demo/), several commands are recorded via a {{domxref("GPUCommandEncoder")}}:
+In our [basic render demo](https://mdn.github.io/dom-examples/webgpu-render-demo/), several commands are recorded via a `GPUCommandEncoder`:
 
 ```js
 // ...
@@ -91,7 +91,7 @@ passEncoder.end();
 // ...
 ```
 
-The commands encoded by the {{domxref("GPUCommandEncoder")}} are recoded into a {{domxref("GPUCommandBuffer")}} using the {{domxref("GPUCommandEncoder.finish()")}} method. The command buffer is then passed into the queue via a {{domxref("GPUQueue.submit", "submit()")}} call, ready to be processed by the GPU.
+The commands encoded by the `GPUCommandEncoder` are recoded into a {{domxref("GPUCommandBuffer")}} using the {{domxref("GPUCommandEncoder.finish()")}} method. The command buffer is then passed into the queue via a {{domxref("GPUQueue.submit", "submit()")}} call, ready to be processed by the GPU.
 
 ```js
 device.queue.submit([commandEncoder.finish()]);

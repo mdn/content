@@ -65,7 +65,7 @@ body {
 }
 ```
 
-{{ EmbedLiveSample('No_bdi_with_only_LTR','','120','','','bdi-example') }}
+{{ EmbedLiveSample('No_bdi_with_only_LTR','','120') }}
 
 ### No bdi with RTL text
 
@@ -88,7 +88,7 @@ body {
 }
 ```
 
-{{ EmbedLiveSample('No_bdi_with_RTL_text','','120','','','bdi-example') }}
+{{ EmbedLiveSample('No_bdi_with_RTL_text','','120') }}
 
 ### Using bdi with LTR and RTL text
 
@@ -111,7 +111,7 @@ body {
 }
 ```
 
-{{ EmbedLiveSample('Using_bdi_with_LTR_and_RTL_text','','120','','','bdi-example') }}
+{{ EmbedLiveSample('Using_bdi_with_LTR_and_RTL_text','','120') }}
 
 ## Technical summary
 

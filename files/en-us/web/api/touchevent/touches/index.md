@@ -27,12 +27,12 @@ time.
 ## Examples
 
 This example illustrates the {{domxref("TouchEvent")}} object's
-{{domxref("TouchEvent.touches")}} property. The {{domxref("TouchEvent.touches")}}
+`TouchEvent.touches` property. The `TouchEvent.touches`
 property is a {{domxref("TouchList")}} object and containing a list of
 {{domxref("Touch")}} objects for every point of contact currently touching the surface.
 
 In following code snippet, the {{domxref("Element/touchstart_event", "touchstart")}} event handler checks the length
-of the {{domxref("TouchEvent.touches")}} list to determine the number of touch points
+of the `TouchEvent.touches` list to determine the number of touch points
 that were activated and then invokes different handlers depending on the number of touch
 points.
 

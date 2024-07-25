@@ -14,7 +14,7 @@ The **`MediaStreamEvent`** interface represents events that occurs in relation t
 
 ## Instance properties
 
-_A {{domxref("MediaStreamEvent")}} being an {{domxref("Event")}}, this event also implements these properties_.
+_A `MediaStreamEvent` being an {{domxref("Event")}}, this event also implements these properties_.
 
 - {{domxref("MediaStreamEvent.stream")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Contains the {{domxref("MediaStream")}} containing the stream associated with the event.
@@ -26,7 +26,7 @@ _A {{domxref("MediaStreamEvent")}} being an {{domxref("Event")}}, this event als
 
 ## Instance methods
 
-A {{domxref("MediaStreamEvent")}} being an {{domxref("Event")}}, this event also implements these properties. There is no specific {{domxref("MediaStreamEvent")}} method.
+A `MediaStreamEvent` being an {{domxref("Event")}}, this event also implements these properties. There is no specific `MediaStreamEvent` method.
 
 ## Examples
 

@@ -57,8 +57,8 @@ On an ongoing basis, the browser will:
 
 The following features all serve a dual purpose — they return the user's top topics to the caller and they trigger the browser to record the current page visit as observed by the caller, so the page's hostname can later be used in topics calculation. To do so, they need to be included in a calling ad tech's `<iframe>`; the `<iframe>` then has to be embedded on the pages where you want topics observed.
 
-- You can specify a `browsingTopics: true` option in the options object of a {{domxref("fetch()")}} call to the ad tech platform.
-- You could also pass `browsingTopics: true` into the options object of a {{domxref("Request.Request", "Request()")}} constructor call, and pass the resulting {{domxref("Request")}} object into the {{domxref("fetch()")}} call.
+- You can specify a `browsingTopics: true` option in the options object of a {{domxref("Window/fetch", "fetch()")}} call to the ad tech platform.
+- You could also pass `browsingTopics: true` into the options object of a {{domxref("Request.Request", "Request()")}} constructor call, and pass the resulting {{domxref("Request")}} object into the {{domxref("Window/fetch", "fetch()")}} call.
 - You can set a `browsingtopics` attribute on the `<iframe>`, at the same time or before setting the `src` attribute to load the source. This could be done:
 
   - Declaratively on the HTML:

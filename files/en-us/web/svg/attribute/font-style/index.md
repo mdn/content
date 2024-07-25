@@ -9,7 +9,7 @@ browser-compat: svg.global_attributes.font-style
 
 The **`font-style`** attribute specifies whether the text is to be rendered using a normal, italic, or oblique face.
 
-> **Note:** As a presentation attribute, `font-style` can be used as a CSS property. See the {{cssxref("font-style", "CSS font-style")}} property for more information.
+> **Note:** As a presentation attribute, `font-style` can be used as a CSS property. See the CSS {{cssxref("font-style")}} property for more information.
 
 You can use this attribute with the following SVG elements:
 
@@ -68,4 +68,4 @@ For a description of the values, please refer to the [CSS `font-style`](/en-US/d
 
 ## See also
 
-- {{cssxref("font-style", "CSS font-style")}}
+- {{cssxref("font-style")}}
