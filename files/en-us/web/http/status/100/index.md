@@ -44,7 +44,7 @@ HTTP/1.1 100 Continue
 The client completes the request by sending the actual data:
 
 ```http
-[Video data as a payload for PUT request]
+[Video data as content for PUT request]
 ```
 
 ## Specifications
