@@ -68,23 +68,23 @@ Note: Check the [compatibility table](#browser_compatibility) for their support;
 
 This section defines the terms used in this document, some of which are from the specification.
 
-- `(HTTP) cache`
+- (HTTP) cache
   - : Implementation that holds requests and responses for reusing in subsequent requests. It can be either a shared cache or a private cache.
-- `Shared cache`
+- Shared cache
   - : Cache that exists between the origin server and clients (e.g. Proxy, CDN). It stores a single response and reuses it with multiple users — so developers should avoid storing personalized contents to be cached in the shared cache.
-- `Private cache`
+- Private cache
   - : Cache that exists in the client. It is also called _local cache_ or _browser cache_. It can store and reuse personalized content for a single user.
-- `Store response`
+- Store response
   - : Store a response in caches when the response is cacheable. However, the cached response is not always reused as-is. (Usually, "cache" means storing a response.)
-- `Reuse response`
+- Reuse response
   - : Reuse cached responses for subsequent requests.
-- `Revalidate response`
+- Revalidate response
   - : Ask the origin server whether or not the stored response is still [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age). Usually, the revalidation is done through a conditional request.
-- `Fresh response`
+- Fresh response
   - : Indicates that the response is [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age). This usually means the response can be reused for subsequent requests, depending on request directives.
-- `Stale response`
+- Stale response
   - : Indicates that the response is a [stale response](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age). This usually means the response can't be reused as-is. Cache storage isn't required to remove stale responses immediately because revalidation could change the response from being stale to being [fresh](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age) again.
-- `Age`
+- Age
   - : The time since a response was generated. It is a criterion for whether a response is [fresh or stale](/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age).
 
 ## Directives

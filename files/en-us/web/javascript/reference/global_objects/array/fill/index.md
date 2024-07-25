@@ -47,7 +47,8 @@ The `fill()` method fills empty slots in [sparse](/en-US/docs/Web/JavaScript/Gui
 
 The `fill()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property. Although strings are also array-like, this method is not suitable to be applied on them, as strings are immutable.
 
-> **Note:** Using `Array.prototype.fill()` on an empty array (`length = 0`) would not modify it as the array has nothing to be modified.
+> [!NOTE]
+> Using `Array.prototype.fill()` on an empty array (`length = 0`) would not modify it as the array has nothing to be modified.
 > To use `Array.prototype.fill()` when declaring an array, make sure the array has non-zero `length`.
 > [See example](#using_fill_to_populate_an_empty_array).
 

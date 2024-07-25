@@ -9,7 +9,8 @@ spec-urls: https://w3c.github.io/aria/#structure
 
 The `structure` role is for document structural elements.
 
-> **Note:** The `structure` role is an [abstract role](/en-US/docs/Web/Accessibility/ARIA/Roles#6._abstract_roles). It is included here for completeness of documentation. It should not be used by web authors.
+> [!NOTE]
+> The `structure` role is an [abstract role](/en-US/docs/Web/Accessibility/ARIA/Roles#6._abstract_roles). It is included here for completeness of documentation. It should not be used by web authors.
 
 ## Description
 

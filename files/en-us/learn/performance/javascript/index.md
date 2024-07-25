@@ -66,7 +66,8 @@ Before looking at the tips contained in this section, it is important to talk ab
 4. Slightly later on, the browser works out how each HTML element should be styled, given the CSS applied to it.
 5. The styled result is then painted to the screen.
 
-> **Note:** This is a very simplified account of what happens, but it does give you an idea.
+> [!NOTE]
+> This is a very simplified account of what happens, but it does give you an idea.
 
 The key step here is Step 3. By default, JavaScript parsing and execution are render-blocking. This means that the browser blocks the parsing of any HTML that appears after the JavaScript is encountered, until the script has been handled. As a result, styling and painting are blocked too. This means that you need to think carefully not only about what you are downloading, but also about when and how that code is being executed.
 
@@ -110,7 +111,8 @@ or inside your script, in the case of a JavaScript module:
 import { function } from "important-module.js";
 ```
 
-> **Note:** Preloading does not guarantee that the script will be loaded by the time you include it, but it does mean that it will start being downloaded sooner. Render-blocking time will still be shortened, even if it is not completely removed.
+> [!NOTE]
+> Preloading does not guarantee that the script will be loaded by the time you include it, but it does mean that it will start being downloaded sooner. Render-blocking time will still be shortened, even if it is not completely removed.
 
 ## Deferring execution of non-critical JavaScript
 
@@ -128,7 +130,8 @@ First of all, you can add the `async` attribute to your `<script>` elements:
 
 This causes the script to be fetched in parallel with the DOM parsing, so it will be ready at the same time and won't block rendering.
 
-> **Note:** There is another attribute, `defer`, which causes the script to be executed after the document has been parsed, but before firing the [`DOMContentLoaded`](/en-US/docs/Web/API/Document/DOMContentLoaded_event) event. This has a similar effect to `async`.
+> [!NOTE]
+> There is another attribute, `defer`, which causes the script to be executed after the document has been parsed, but before firing the [`DOMContentLoaded`](/en-US/docs/Web/API/Document/DOMContentLoaded_event) event. This has a similar effect to `async`.
 
 You could also just not load the JavaScript at all until an event occurs when it is needed. This could be done via DOM scripting, for example:
 

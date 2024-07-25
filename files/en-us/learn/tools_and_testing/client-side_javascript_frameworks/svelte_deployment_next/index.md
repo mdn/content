@@ -92,7 +92,8 @@ Our whole app is now just 21 KB — 8.3 KB when gzipped. There are no additional
 
 By default, when you create a new app with `npx degit sveltejs/template my-svelte-project`, Svelte will use [rollup](https://rollupjs.org/) as the module bundler.
 
-> **Note:** There is also an official template for using [webpack](https://webpack.js.org/) and also many [community-maintained plugins](https://github.com/sveltejs/integrations#bundler-plugins) for other bundlers.
+> [!NOTE]
+> There is also an official template for using [webpack](https://webpack.js.org/) and also many [community-maintained plugins](https://github.com/sveltejs/integrations#bundler-plugins) for other bundlers.
 
 In the file `package.json` you can see that the `build` and `dev` scripts are just calling rollup:
 
@@ -158,7 +159,8 @@ There are [many plugins for rollup](https://github.com/rollup/awesome) that allo
 
 From the point of view of a web server, a Svelte application is nothing more than a bunch of HTML, CSS, and JavaScript files. All you need is a web server capable of serving static files, which means you have plenty of options to choose from. Let's look at a couple of examples.
 
-> **Note:** the following section could be applied to any client-side static website requiring a build step, not just Svelte apps.
+> [!NOTE]
+> the following section could be applied to any client-side static website requiring a build step, not just Svelte apps.
 
 ### Deploying with Vercel
 
@@ -198,7 +200,8 @@ To deploy our app, follow these steps.
 
 You can also [import a Svelte git project](https://vercel.com/import/svelte) into Vercel from [GitHub](https://github.com/), [GitLab](https://about.gitlab.com/), or [BitBucket](https://bitbucket.org/product).
 
-> **Note:** you can globally install Vercel with `npm i -g vercel` so you don't have to use `npx` to run it.
+> [!NOTE]
+> you can globally install Vercel with `npm i -g vercel` so you don't have to use `npx` to run it.
 
 ### Automatic deployment to GitLab pages
 

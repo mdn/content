@@ -47,20 +47,23 @@ The production environment is the environment provided by the server computer wh
 - Application server that passes "dynamic" requests between your Django website and the web server.
 - Databases on which your website is dependent.
 
-> **Note:** Depending on how your production environment is configured you might also have a reverse proxy, load balancer, and so on.
+> [!NOTE]
+> Depending on how your production environment is configured you might also have a reverse proxy, load balancer, and so on.
 
 The server computer could be located on your premises and connected to the internet by a fast link, but it is far more common to use a computer that is hosted "in the cloud". What this actually means is that your code is run on some remote computer (or possibly a "virtual" computer) in your hosting company's data center(s). The remote server will usually offer some guaranteed level of computing resources (CPU, RAM, storage memory, etc.) and internet connectivity for a certain price.
 
 This sort of remotely accessible computing/networking hardware is referred to as _Infrastructure as a Service (IaaS)_. Many IaaS vendors provide options to preinstall a particular operating system, onto which you must install the other components of your production environment. Other vendors allow you to select more fully-featured environments, perhaps including a complete Django and web-server setup.
 
-> **Note:** Pre-built environments can make setting up your website very easy because they reduce the configuration, but the available options may limit you to an unfamiliar server (or other components) and may be based on an older version of the OS. Often it is better to install components yourself, so that you get the ones that you want, and when you need to upgrade parts of the system, you have some idea of where to start!
+> [!NOTE]
+> Pre-built environments can make setting up your website very easy because they reduce the configuration, but the available options may limit you to an unfamiliar server (or other components) and may be based on an older version of the OS. Often it is better to install components yourself, so that you get the ones that you want, and when you need to upgrade parts of the system, you have some idea of where to start!
 
 Other hosting providers support Django as part of a _Platform as a Service_ (PaaS) offering. In this sort of hosting you don't need to worry about most of your production environment (web server, application server, load balancers) as the host platform takes care of those for you — along with most of what you need to do in order to scale your application.
 That makes deployment quite easy, because you just need to concentrate on your web application and not all the other server infrastructure.
 
 Some developers will choose the increased flexibility provided by IaaS over PaaS, while others will appreciate the reduced maintenance overhead and easier scaling of PaaS. When you're getting started, setting up your website on a PaaS system is much easier, and so that is what we'll do in this tutorial.
 
-> **Note:** If you choose a Python/Django-friendly hosting provider they should provide instructions on how to set up a Django website using different configurations of web server, application server, reverse proxy, and so on. (this won't be relevant if you choose a PaaS). For example, there are many step-by-step guides for various configurations in the [Digital Ocean Django community docs](https://www.digitalocean.com/community/tutorials?q=django).
+> [!NOTE]
+> If you choose a Python/Django-friendly hosting provider they should provide instructions on how to set up a Django website using different configurations of web server, application server, reverse proxy, and so on. (this won't be relevant if you choose a PaaS). For example, there are many step-by-step guides for various configurations in the [Digital Ocean Django community docs](https://www.digitalocean.com/community/tutorials?q=django).
 
 ## Choosing a hosting provider
 
@@ -87,13 +90,15 @@ Popular choices in this category include [Vultr Cloud Compute](https://www.vultr
 Most providers also offer a "basic" tier that is intended for small production sites, and which provide more useful levels of computing power and fewer limitations.
 [Railway](https://railway.app/), [Heroku](https://www.heroku.com/), and [Digital Ocean](https://www.digitalocean.com/) are examples of popular hosting providers that have a relatively inexpensive basic computing tier (in the $5 to $10 USD per month range).
 
-> **Note:** Remember that price is not the only selection criterion. If your website is successful, it may turn out that scalability is the most important consideration.
+> [!NOTE]
+> Remember that price is not the only selection criterion. If your website is successful, it may turn out that scalability is the most important consideration.
 
 ## Getting your website ready to publish
 
 The [Django skeleton website](/en-US/docs/Learn/Server-side/Django/skeleton_website) created using the _django-admin_ and _manage.py_ tools are configured to make development easier. Many of the Django project settings (specified in **settings.py**) should be different for production, either for security or performance reasons.
 
-> **Note:** It is common to have a separate **settings.py** file for production, and/or to conditionally import sensitive settings from a separate file or an environment variable. This file should then be protected, even if the rest of the source code is available on a public repository.
+> [!NOTE]
+> It is common to have a separate **settings.py** file for production, and/or to conditionally import sensitive settings from a separate file or an environment variable. This file should then be protected, even if the rest of the source code is available on a public repository.
 
 The critical settings that you must check are:
 
@@ -126,7 +131,8 @@ load_dotenv(env_path)
 This loads the `.env` file from the root of the web application.
 Variables defined as `KEY=VALUE` in the file are imported when the key is used in `os.environ.get('<KEY>'', '<DEFAULT VALUE>')`, if defined.
 
-> **Note:** Any values that you add to **.env** are likely to be _secrets_!
+> [!NOTE]
+> Any values that you add to **.env** are likely to be _secrets_!
 > You must not save them to GitHub, and you should add `.env` to your `.gitignore` file so that it is not added by accident.
 
 Next disable the original `SECRET_KEY` configuration and add the new lines as shown below.
@@ -592,7 +598,8 @@ This is a Django security error that is raised because our source code is not ru
 
 ![A detailed error page with a full traceback of an invalid HTTP_HOST header](python_anywhere_error_disallowed_host.png)
 
-> **Note:** This kind of debug information is very useful when you're getting set up, but is a security risk in a deployed site.
+> [!NOTE]
+> This kind of debug information is very useful when you're getting set up, but is a security risk in a deployed site.
 > In the next section we'll show you how to disable this level of logging on the live site using [environment variables](#using_environment_variables_on_pythonanywhere).
 
 Open **/locallibrary/settings.py** in your GitHub project and change the [ALLOWED_HOSTS](https://docs.djangoproject.com/en/5.0/ref/settings/#allowed-hosts) setting to include your PythonAnywhere site URL:
@@ -674,7 +681,8 @@ This section provides a practical demonstration of how to install _LocalLibrary_
 
 ### Why Railway?
 
-> **Warning:** Railway no longer has a completely free starter tier.
+> [!WARNING]
+> Railway no longer has a completely free starter tier.
 > We've kept these instructions because Railway has some great features, and will be a better option for some users.
 
 Railway is an attractive hosting option for several reasons:
@@ -750,7 +758,8 @@ Create the file in the root of the repo and add the following text:
 python-3.10.2
 ```
 
-> **Note:** Hosting providers do not necessarily support every Python runtime minor version.
+> [!NOTE]
+> Hosting providers do not necessarily support every Python runtime minor version.
 > They will generally use the closest supported version to the value that you specify.
 
 #### Re-test and save changes to GitHub
@@ -820,7 +829,8 @@ This is a Django security error that is raised because our source code is not ru
 
 ![A detailed error page with a full traceback of an invalid HTTP_HOST header](site_error_dissallowed_host.png)
 
-> **Note:** This kind of debug information is very useful when you're getting set up, but is a security risk in a deployed site.
+> [!NOTE]
+> This kind of debug information is very useful when you're getting set up, but is a security risk in a deployed site.
 > We'll show you how to disable it once the site is up and running.
 
 Open **/locallibrary/settings.py** in your GitHub project and change the [ALLOWED_HOSTS](https://docs.djangoproject.com/en/5.0/ref/settings/#allowed-hosts) setting to include your Railway site URL:
@@ -902,7 +912,8 @@ You can get a list of all the possible commands by entering the following in a t
 railway help
 ```
 
-> **Note:** In the following section we use `railway login` and `railway link` to link the current project to a directory.
+> [!NOTE]
+> In the following section we use `railway login` and `railway link` to link the current project to a directory.
 > If you are logged out by the system, you will need to call both commands again to re-link the project.
 
 ### Configure a superuser

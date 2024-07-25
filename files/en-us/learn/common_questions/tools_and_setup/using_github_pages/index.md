@@ -42,7 +42,8 @@ The best way to upload your code to GitHub is via the command line — this is a
 
 ![Terminal/command prompt opened. No command has been entered.](command-line.png)
 
-> **Note:** You could also consider using a [Git graphical user interface](https://git-scm.com/downloads/guis) to do the same work, if you feel uncomfortable with the command line.
+> [!NOTE]
+> You could also consider using a [Git graphical user interface](https://git-scm.com/downloads/guis) to do the same work, if you feel uncomfortable with the command line.
 
 Every operating system comes with a command line tool:
 

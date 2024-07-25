@@ -381,7 +381,8 @@ You can determine when a style sheet has been loaded by watching for a `load` ev
 </script>
 ```
 
-> **Note:** The `load` event fires once the stylesheet and all of its imported content has been loaded and parsed, and immediately before the styles start being applied to the content.
+> [!NOTE]
+> The `load` event fires once the stylesheet and all of its imported content has been loaded and parsed, and immediately before the styles start being applied to the content.
 
 ### Preload examples
 

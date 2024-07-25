@@ -13,7 +13,8 @@ The **`tabindex`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) al
 
 It accepts an integer as a value, with different results depending on the integer's value:
 
-> **Note:** If an HTML element renders and has `tabindex` attribute with any valid integer value, the element can be focused with JavaScript (by calling the [`focus()`](/en-US/docs/Web/API/HTMLElement/focus) method) or visually by clicking with the mouse. The particular `tabindex` value controls whether the element is `tabbable` (i.e. reachable via sequential keyboard navigation, usually with the <kbd>Tab</kbd> key).
+> [!NOTE]
+> If an HTML element renders and has `tabindex` attribute with any valid integer value, the element can be focused with JavaScript (by calling the [`focus()`](/en-US/docs/Web/API/HTMLElement/focus) method) or visually by clicking with the mouse. The particular `tabindex` value controls whether the element is `tabbable` (i.e. reachable via sequential keyboard navigation, usually with the <kbd>Tab</kbd> key).
 
 - A _negative value_ (the exact negative value doesn't actually matter, usually `tabindex="-1"`) means that the element is not reachable via sequential keyboard navigation.
 
@@ -27,7 +28,8 @@ It accepts an integer as a value, with different results depending on the intege
 
 Some focusable HTML elements have a default `tabindex` value of `0` set under the hood by the [user agent](/en-US/docs/Glossary/User_agent). These elements are an {{HTMLElement("a")}} or {{HTMLElement("area")}} with `href` attribute, {{HTMLElement("button")}}, {{HTMLElement("frame")}} {{deprecated_inline}}, {{HTMLElement("iframe")}}, {{HTMLElement("input")}}, {{HTMLElement("object")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}}, and SVG {{SVGElement("a")}} element, or a {{HTMLElement("summary")}} element that provides summary for a {{HTMLElement("details")}} element. Developers shouldn't add the `tabindex` attribute to these elements unless it changes the default behavior (for example, including a negative value will remove the element from the focus navigation order).
 
-> **Warning:** The tabindex attribute must not be used on the {{HTMLElement("dialog")}} element.
+> [!WARNING]
+> The tabindex attribute must not be used on the {{HTMLElement("dialog")}} element.
 
 ## Accessibility concerns
 

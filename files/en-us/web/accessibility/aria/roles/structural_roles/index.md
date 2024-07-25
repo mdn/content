@@ -11,7 +11,8 @@ ARIA document-structure roles are used to provide a structural description for a
 
 Structural ARIA roles were originally created as a bridge to inform assistive technologies of HTML5 elements that were not yet fully supported in browsers. Some roles, like `presentation`, `toolbar` and `tooltip`, provide information on the document structure to assistive technologies in cases where equivalent native HTML elements don't exist. Other roles, including those listed in the table below, are not needed, as there are semantic HTML elements with the same meanings. In many cases, these equivalent HTML elements have always been supported.
 
-> **Note:** These structural roles all have semantic HTML equivalents. They are included here for completeness of documentation. Preferably, they should not be used by web authors.
+> [!NOTE]
+> These structural roles all have semantic HTML equivalents. They are included here for completeness of documentation. Preferably, they should not be used by web authors.
 
 Some structural roles, like [`suggestion`](/en-US/docs/Web/Accessibility/ARIA/Roles/suggestion_role), don't have HTML equivalents, and therefore have separate documentation. Some structural roles with HTML equivalents, like [`heading`](/en-US/docs/Web/Accessibility/ARIA/Roles/heading_role), have ARIA-attribute requirements. They are listed below with links to their individual role documentation.
 
@@ -47,7 +48,8 @@ The structure roles with HTML equivalents are listed below:
 | [`term`](/en-US/docs/Web/Accessibility/ARIA/Roles/term_role)<br/>Word or phrase with an optional corresponding definition.<br/> Prohibited attributes: `aria-label` and `aria-labelledby`.<br/>See [`term` role](/en-US/docs/Web/Accessibility/ARIA/Roles/term_role) for more information.                                               | {{HTMLElement('dfn')}}                                                                                                                                                                                                                                               |
 | **`time`** <br> A valid date or time string format list a specific point in time.<br/> Prohibited attributes: `aria-label` and `aria-labelledby`.                                                                                                                                                                                        | {{HTMLElement('time')}}                                                                                                                                                                                                                                              |
 
-> **Note:** The `aria-label` and `aria-labelledby` attributes are prohibited on `code`, `caption`, `deletion`, `emphasis`, `generic`, `insertion`, `mark`, `paragraph`, `presentation`, `none`, `strong`, `subscript`, `superscript`, `suggestion`, `term`, and `time`, and should only be used on interactive content.
+> [!NOTE]
+> The `aria-label` and `aria-labelledby` attributes are prohibited on `code`, `caption`, `deletion`, `emphasis`, `generic`, `insertion`, `mark`, `paragraph`, `presentation`, `none`, `strong`, `subscript`, `superscript`, `suggestion`, `term`, and `time`, and should only be used on interactive content.
 
 ## Best Practices
 

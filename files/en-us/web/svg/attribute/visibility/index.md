@@ -13,7 +13,7 @@ The **`visibility`** attribute lets you control the visibility of graphical elem
 
 Depending on the value of attribute {{SVGAttr("pointer-events")}}, graphics elements which have their `visibility` attribute set to `hidden` still might receive events.
 
-> **Note:** As a presentation attribute, `visibility` can be used as a CSS property. See the {{cssxref("visibility", "CSS visibility")}} property for more information.
+> **Note:** As a presentation attribute, `visibility` can be used as a CSS property. See the CSS {{cssxref("visibility")}} property for more information.
 
 ## Elements
 
@@ -167,4 +167,4 @@ button.addEventListener("click", (evt) => {
 ## See also
 
 - {{SVGAttr("display")}} attribute
-- {{cssxref("visibility", "CSS visibility")}}
+- {{cssxref("visibility")}}

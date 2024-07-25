@@ -28,7 +28,8 @@ SyntaxError: Unexpected keyword 'yield'. Cannot use yield expression within para
 
 The default expression must be able to evaluate _synchronously_. If it contains an `await` or `yield` expression, it will pause the evaluation of the default expression, which is not allowed.
 
-> **Note:** This error is only generated when `await` or `yield` are valid operators in this function context. Otherwise, `await` or `yield` would be parsed as an identifier, and either not cause an error, or cause an error like "reserved identifier", or "unexpected token" if there's an expression following it.
+> [!NOTE]
+> This error is only generated when `await` or `yield` are valid operators in this function context. Otherwise, `await` or `yield` would be parsed as an identifier, and either not cause an error, or cause an error like "reserved identifier", or "unexpected token" if there's an expression following it.
 
 ## Examples
 
