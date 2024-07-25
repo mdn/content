@@ -46,7 +46,7 @@ while (x < 10) {
 
 Here, `{ x++; }` is the block statement.
 
-> [!NOTE] > [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var)-declared variables are not block-scoped, but are scoped to the containing function or script, and the effects of setting them persist beyond the block itself. For example:
+> **Note:** [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var)-declared variables are not block-scoped, but are scoped to the containing function or script, and the effects of setting them persist beyond the block itself. For example:
 >
 > ```js
 > var x = 1;

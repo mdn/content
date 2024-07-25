@@ -141,7 +141,7 @@ If you want to look at all the special characters that can be used in regular ex
   </tbody>
 </table>
 
-> [!NOTE] > [A larger cheat sheet is also available](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Cheatsheet) (only aggregating parts of those individual articles).
+> **Note:** [A larger cheat sheet is also available](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Cheatsheet) (only aggregating parts of those individual articles).
 
 ### Escaping
 
