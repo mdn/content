@@ -11,7 +11,7 @@ browser-compat: html.elements.input.type_checkbox
 
 {{EmbedInteractiveExample("pages/tabbed/input-checkbox.html", "tabbed-standard")}}
 
-> [!NOTE] > [Radio buttons](/en-US/docs/Web/HTML/Element/input/radio) are similar to checkboxes, but with an important distinction — [same-named radio buttons](/en-US/docs/Web/HTML/Element/input/radio#defining_a_radio_group) are grouped into a set in which only one radio button can be selected at a time, whereas checkboxes allow you to turn single values on and off. Where multiple same-named controls exist, radio buttons allow one to be selected out of them all, whereas checkboxes allow multiple values to be selected.
+> **Note:** [Radio buttons](/en-US/docs/Web/HTML/Element/input/radio) are similar to checkboxes, but with an important distinction — [same-named radio buttons](/en-US/docs/Web/HTML/Element/input/radio#defining_a_radio_group) are grouped into a set in which only one radio button can be selected at a time, whereas checkboxes allow you to turn single values on and off. Where multiple same-named controls exist, radio buttons allow one to be selected out of them all, whereas checkboxes allow multiple values to be selected.
 
 ## Value
 
