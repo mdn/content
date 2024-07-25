@@ -15,7 +15,7 @@ The HTML specification defines the following set of standard metadata names:
 
 - `application-name`: the name of the application running in the web page.
 
-  > **Note:**
+  > [!NOTE]
   >
   > - Browsers may use this to identify the application. It is different from the {{HTMLElement("title")}} element, which usually contain the application name, but may also contain information like the document name or a status.
   > - Simple web pages shouldn't define an application-name.
@@ -90,7 +90,7 @@ The HTML specification defines the following set of standard metadata names:
     </tbody>
   </table>
 
-  > **Note:**
+  > [!NOTE]
   >
   > - Dynamically inserting `<meta name="referrer">` (with {{domxref("Document.write", "document.write()")}} or {{domxref("Node.appendChild", "appendChild()")}}) makes the referrer behavior unpredictable.
   > - When several conflicting policies are defined, the `no-referrer` policy is applied.
@@ -208,7 +208,7 @@ The CSS Device Adaptation specification defines the following metadata name:
     </tbody>
   </table>
 
-  > **Warning:**
+  > [!WARNING]
   >
   > Disabling zooming capabilities by setting `user-scalable` to a value of `no` prevents people experiencing low vision conditions from being able to read and understand page content.
   >
@@ -237,7 +237,7 @@ The [WHATWG Wiki MetaExtensions page](https://wiki.whatwg.org/wiki/MetaExtension
   | `noimageindex` | Requests this page not to appear as the referring page of an indexed image. | [Google](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag)                                                                                                                                                                    |
   | `nocache`      | Synonym of `noarchive`.                                                     | [Bing](https://www.bing.com/webmasters/help/which-robots-metatags-does-bing-support-5198d240)                                                                                                                                                          |
 
-  > **Note:**
+  > [!NOTE]
   >
   > - Only cooperative robots follow these rules. Do not expect to prevent email harvesters with them.
   > - The robot still needs to access the page in order to read these rules. To prevent bandwidth consumption, consider if using a _{{Glossary("robots.txt")}}_ file is more appropriate.
