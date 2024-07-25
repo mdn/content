@@ -41,7 +41,7 @@ Connection: upgrade
 Upgrade: example/1, foo/2
 ```
 
-> [!NOTE] > `Connection: upgrade` must be set whenever `Upgrade` is sent.
+> **Note:** `Connection: upgrade` must be set whenever `Upgrade` is sent.
 
 The server can choose to ignore the request, for any reason, in which case it should just respond as though the `Upgrade` header had not been sent (for example, with a {{HTTPStatus(200, "200 OK")}}).
 

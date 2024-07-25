@@ -60,7 +60,7 @@ You can specify
 ("https://example.com" "https://*.example.com")
 ```
 
-> [!NOTE] > `"https://*.example.com"` does not match `"https://example.com"`.
+> **Note:** `"https://*.example.com"` does not match `"https://example.com"`.
 
 ## Directives
 

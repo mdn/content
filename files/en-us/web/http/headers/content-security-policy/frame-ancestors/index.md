@@ -11,7 +11,7 @@ The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`frame-ancestors`** d
 
 Setting this directive to `'none'` is similar to {{HTTPHeader("X-Frame-Options")}}`: deny` (which is also supported in older browsers).
 
-> [!NOTE] > **`frame-ancestors`** allows you to specify what parent source may embed a page.
+> **Note:** **`frame-ancestors`** allows you to specify what parent source may embed a page.
 > This differs from **`frame-src`**, which allows you to specify where iframes in a page may be loaded from.
 
 <table class="properties">

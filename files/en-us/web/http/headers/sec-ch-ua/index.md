@@ -44,7 +44,7 @@ Unless blocked by a user agent permission policy, it is sent by default, without
 The header may include "fake" brands in any position and with any name.
 This is a feature designed to prevent servers from rejecting unknown user agents outright, forcing user agents to lie about their brand identity.
 
-> [!NOTE] > {{HTTPHeader("Sec-CH-UA-Full-Version-List")}} is the same as **`Sec-CH-UA`**, but includes the full version number rather than the significant version number for each brand.
+> **Note:** {{HTTPHeader("Sec-CH-UA-Full-Version-List")}} is the same as **`Sec-CH-UA`**, but includes the full version number rather than the significant version number for each brand.
 
 ## Syntax
 

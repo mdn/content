@@ -14,7 +14,7 @@ implementation-specific header that may have various effects along the request-r
 chain. This header serves for backwards compatibility with the HTTP/1.0 caches that do not have a
 {{HTTPHeader("Cache-Control")}} HTTP/1.1 header.
 
-> [!NOTE] > `Pragma` is not specified for HTTP responses and is
+> **Note:** `Pragma` is not specified for HTTP responses and is
 > therefore not a reliable replacement for the general HTTP/1.1
 > `Cache-Control` header, although its behavior is the same as
 > `Cache-Control: no-cache` if the `Cache-Control` header field

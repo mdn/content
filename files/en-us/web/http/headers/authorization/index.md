@@ -126,7 +126,7 @@ For `"Basic"` authentication the credentials are constructed by first combining 
 Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 ```
 
-> [!WARNING] > {{Glossary("Base64")}}-encoding can easily be reversed to obtain the original name and password, so Basic authentication is completely insecure.
+> **Warning:** {{Glossary("Base64")}}-encoding can easily be reversed to obtain the original name and password, so Basic authentication is completely insecure.
 > {{Glossary("HTTPS")}} is always recommended when using authentication, but is even more so when using `Basic` authentication.
 
 See also [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) for examples on how to configure Apache or Nginx servers to password protect your site with HTTP basic authentication.
