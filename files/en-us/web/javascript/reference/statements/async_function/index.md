@@ -27,7 +27,8 @@ async function name(param0, param1, /* …, */ paramN) {
 }
 ```
 
-> **Note:** There cannot be a line terminator between `async` and `function`, otherwise a semicolon is [automatically inserted](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion), causing `async` to become an identifier and the rest to become a `function` declaration.
+> [!NOTE]
+> There cannot be a line terminator between `async` and `function`, otherwise a semicolon is [automatically inserted](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion), causing `async` to become an identifier and the rest to become a `function` declaration.
 
 ### Parameters
 
@@ -45,11 +46,13 @@ An `async function` declaration creates an {{jsxref("AsyncFunction")}} object. E
 
 Async functions can contain zero or more {{jsxref("Operators/await", "await")}} expressions. Await expressions make promise-returning functions behave as though they're synchronous by suspending execution until the returned promise is fulfilled or rejected. The resolved value of the promise is treated as the return value of the await expression. Use of `async` and `await` enables the use of ordinary `try` / `catch` blocks around asynchronous code.
 
-> **Note:** The `await` keyword is only valid inside async functions within regular JavaScript code. If you use it outside of an async function's body, you will get a {{jsxref("SyntaxError")}}.
+> [!NOTE]
+> The `await` keyword is only valid inside async functions within regular JavaScript code. If you use it outside of an async function's body, you will get a {{jsxref("SyntaxError")}}.
 >
 > `await` can be used on its own with [JavaScript modules.](/en-US/docs/Web/JavaScript/Guide/Modules)
 
-> **Note:** The purpose of `async`/`await` is to simplify the syntax
+> [!NOTE]
+> The purpose of `async`/`await` is to simplify the syntax
 > necessary to consume promise-based APIs. The behavior
 > of `async`/`await` is similar to combining [generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators) and
 > promises.
@@ -73,7 +76,7 @@ function foo() {
 }
 ```
 
-> **Note:**
+> [!NOTE]
 >
 > Even though the return value of an async function behaves as if it's wrapped in a `Promise.resolve`, they are not equivalent.
 >
@@ -286,7 +289,8 @@ the fastest timer is processed after the slowest.
 If you wish to safely perform other jobs after two or more jobs run concurrently and are complete, you must await a call
 to {{jsxref("Promise.all()")}} or {{jsxref("Promise.allSettled()")}} before that job.
 
-> **Warning:** The functions `sequentialWait` and `concurrent1`
+> [!WARNING]
+> The functions `sequentialWait` and `concurrent1`
 > are not functionally equivalent.
 >
 > In `sequentialWait`, if promise `fast` rejects before promise
