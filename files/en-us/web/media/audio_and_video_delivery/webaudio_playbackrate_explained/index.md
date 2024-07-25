@@ -61,7 +61,7 @@ window.onload = () => {
 
 Finally, we listen for the `input` event firing on the {{ htmlelement("input") }} element, allowing us to react to the playback rate control being changed.
 
-> [!NOTE] > [Try out this example live](https://jsbin.com/UGIxoJis/1/edit), and try adjusting the playback rate control to see the effect.
+> **Note:** [Try out this example live](https://jsbin.com/UGIxoJis/1/edit), and try adjusting the playback rate control to see the effect.
 
 ## defaultPlaybackRate and ratechange
 
