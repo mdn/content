@@ -18,9 +18,10 @@ browser-compat: html.manifest.orientation
 
 The `orientation` member defines the default orientation for all the website's top-level {{Glossary("Browsing context", "browsing contexts")}}.
 
-> **Note:** `orientation` and/or its specific values might not be supported by a user agent on various display modes because supporting them does not make sense for the particular context.
+> [!NOTE] > `orientation` and/or its specific values might not be supported by a user agent on various display modes because supporting them does not make sense for the particular context.
 
-> **Note:** The orientation can be changed at runtime via the [Screen Orientation API](/en-US/docs/Web/API/Screen_Orientation_API).
+> [!NOTE]
+> The orientation can be changed at runtime via the [Screen Orientation API](/en-US/docs/Web/API/Screen_Orientation_API).
 
 ## Values
 
