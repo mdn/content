@@ -68,7 +68,8 @@ For example, the date picker calendar, and the button on \<select> that displays
 
 The articles [Advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling) and [How to build custom form controls](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls) describe how to style these.
 
-> **Note:** some proprietary CSS pseudo-elements, such as {{cssxref('::-moz-range-track')}}, are capable of styling such internal components, but these aren't consistent across browsers, so aren't very reliable. We will mention these later.
+> [!NOTE]
+> some proprietary CSS pseudo-elements, such as {{cssxref('::-moz-range-track')}}, are capable of styling such internal components, but these aren't consistent across browsers, so aren't very reliable. We will mention these later.
 
 ## Styling simple form widgets
 
@@ -150,7 +151,8 @@ The `<fieldset>` needs to be positioned too, so that the `<legend>` is positione
 
 The {{HTMLElement("legend")}} element is very important for accessibility — it will be spoken by assistive technologies as part of the label of each form element inside the fieldset — but using a technique like the one above is fine. The legend contents will still be spoken in the same way; it is just the visual position that has changed.
 
-> **Note:** You could also use the {{cssxref("transform")}} property to help you with positioning your `<legend>`. However, when you position it with for example a `transform: translateY();`, it moves but leaves an ugly gap in the `<fieldset>` border, which is not easy to get rid of.
+> [!NOTE]
+> You could also use the {{cssxref("transform")}} property to help you with positioning your `<legend>`. However, when you position it with for example a `transform: translateY();`, it moves but leaves an ugly gap in the `<fieldset>` border, which is not easy to get rid of.
 
 ## A specific styling example
 
@@ -368,7 +370,8 @@ And voilà! Your form should now look like this:
 
 ![The final look and layout of the form after applying all styling and tweaking to it as described above](updated-form-screenshot.jpg)
 
-> **Note:** If your example does not work quite as you expected and you want to check it against our version, you can find it on GitHub — see it [running live](https://mdn.github.io/learning-area/html/forms/postcard-example/) (also see [the source code](https://github.com/mdn/learning-area/tree/main/html/forms/postcard-example)).
+> [!NOTE]
+> If your example does not work quite as you expected and you want to check it against our version, you can find it on GitHub — see it [running live](https://mdn.github.io/learning-area/html/forms/postcard-example/) (also see [the source code](https://github.com/mdn/learning-area/tree/main/html/forms/postcard-example)).
 
 ## Test your skills
 
