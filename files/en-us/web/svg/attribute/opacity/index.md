@@ -14,13 +14,10 @@ The **`opacity`** attribute specifies the transparency of an object or of a grou
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("a")}}
-- {{SVGElement("audio")}}
-- {{SVGElement("canvas")}}
 - {{SVGElement("circle")}}
 - {{SVGElement("ellipse")}}
 - {{SVGElement("foreignObject")}}
 - {{SVGElement("g")}}
-- {{SVGElement("iframe")}}
 - {{SVGElement("image")}}
 - {{SVGElement("line")}}
 - {{SVGElement("marker")}}
@@ -35,8 +32,6 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("textPath")}}
 - {{SVGElement("tspan")}}
 - {{SVGElement("use")}}
-- {{SVGElement("unknown")}}
-- {{SVGElement("video")}}
 
 Unlike {{SVGAttr("fill-opacity")}}, {{SVGAttr("stroke-opacity")}}, and {{SVGAttr("stop-opacity")}}, which are applied to individual operations and are rendered _when_ the element is rendered, `opacity` is applied to whole objects or groups, and is more like a post-processing operation on the rendered image of the object or group. Therefore, when you have both `opacity` and the other opacity attributes in the same area, they will be overlaid on top of each other and cause the opacity to be multiplied.
 
