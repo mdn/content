@@ -71,7 +71,7 @@ As we said in the [previous article](/en-US/docs/Learn/Tools_and_testing/Cross_b
 
 - Making sure [asynchronous operations](/en-US/docs/Learn/JavaScript/Asynchronous) have completed before trying to use the values they return. This usually means understanding how to use _promises_: using [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) appropriately or running the code to handle the result of an asynchronous call in the promise's {{jsxref("Promise.then()", "then()")}} handler. See [How to use promises](/en-US/docs/Learn/JavaScript/Asynchronous/Promises) for an introduction to this topic.
 
-> [!NOTE] > [Buggy JavaScript Code: The 10 Most Common Mistakes JavaScript Developers Make](https://www.toptal.com/javascript/10-most-common-javascript-mistakes) has some nice discussions of these common mistakes and more.
+> **Note:** [Buggy JavaScript Code: The 10 Most Common Mistakes JavaScript Developers Make](https://www.toptal.com/javascript/10-most-common-javascript-mistakes) has some nice discussions of these common mistakes and more.
 
 ### Linters
 
