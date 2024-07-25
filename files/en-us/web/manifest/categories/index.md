@@ -18,9 +18,9 @@ browser-compat: html.manifest.categories
 
 The `categories` member is an array of strings defining the names of categories that the application supposedly belongs to. There is no standard list of possible values, but the W3C maintains [a list of known categories](https://github.com/w3c/manifest/wiki/Categories).
 
-> [!NOTE] > `categories` are used only as hints for catalogs or stores listing web applications. Like search engines and meta keywords, catalogs and stores are free to ignore them.
+> **Note:** `categories` are used only as hints for catalogs or stores listing web applications. Like search engines and meta keywords, catalogs and stores are free to ignore them.
 
-> [!NOTE] > `categories` values are lower-cased by the stores and catalogs before processing, so "News" and "news" are treated as the same value. Developers are encouraged to use lower case in the first place.
+> **Note:** `categories` values are lower-cased by the stores and catalogs before processing, so "News" and "news" are treated as the same value. Developers are encouraged to use lower case in the first place.
 
 ## Example
 
