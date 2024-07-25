@@ -52,7 +52,8 @@ html(lang='en')
 
 The template uses (and includes) JavaScript and CSS from [Bootstrap](https://getbootstrap.com/) to improve the layout and presentation of the HTML page. Using Bootstrap or another client-side web framework is a quick way to create an attractive page that can scale well on different browser sizes, and it also allows us to deal with the page presentation without having to get into any of the details—we just want to focus on the server-side code here!
 
-> **Note:** The scripts are loaded cross-origin, so later in the tutorial, when we add security middleware, we will need to explicitly allow these files to be loaded.
+> [!NOTE]
+> The scripts are loaded cross-origin, so later in the tutorial, when we add security middleware, we will need to explicitly allow these files to be loaded.
 > For more information see [Deployment > Use Helmet to protect against well known vulnerabilities](/en-US/docs/Learn/Server-side/Express_Nodejs/deployment#use_helmet_to_protect_against_well_known_vulnerabilities).
 
 The layout should be fairly obvious if you've read our above [Template primer](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer). Note the use of `block content` as a placeholder for where the content for our individual pages will be placed.

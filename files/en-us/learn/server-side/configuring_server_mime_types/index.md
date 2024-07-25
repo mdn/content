@@ -61,7 +61,8 @@ When looking for information about JavaScript MIME types, you may see several MI
 
 While browsers may support any, some, or all of these alternative MIME types, you should **only** use `text/javascript` to indicate the MIME type of JavaScript files.
 
-> **Note:** See [MIME types (IANA media types)](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) for more information.
+> [!NOTE]
+> See [MIME types (IANA media types)](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) for more information.
 
 ## How to determine the MIME type to set
 

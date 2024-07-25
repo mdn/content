@@ -30,7 +30,8 @@ Protecting user data is an essential part of any website design. We previously e
 
 The [Website security](/en-US/docs/Web/Security) topic provides an overview of what website security means for server-side design, and some of the more common threats that you should protect against. One of the key messages in that article is that almost all attacks are successful when the web application trusts data from the browser.
 
-> **Warning:** The single most important lesson you can learn about website security is to **never trust data from the browser**. This includes `GET` request data in URL parameters, `POST` data, HTTP headers and cookies, user-uploaded files, etc. Always check and sanitize all incoming data. Always assume the worst.
+> [!WARNING]
+> The single most important lesson you can learn about website security is to **never trust data from the browser**. This includes `GET` request data in URL parameters, `POST` data, HTTP headers and cookies, user-uploaded files, etc. Always check and sanitize all incoming data. Always assume the worst.
 
 The good news for Django users is that many of the more common threats are handled by the framework! The [Security in Django](https://docs.djangoproject.com/en/5.0/topics/security/) (Django docs) article explains Django's security features and how to secure a Django-powered website.
 
@@ -74,7 +75,8 @@ It is also possible for XSS attacks to originate from other untrusted source of 
 
 CSRF attacks allow a malicious user to execute actions using the credentials of another user without that user's knowledge or consent. For example consider the case where we have a hacker who wants to create additional authors for our LocalLibrary.
 
-> **Note:** Obviously our hacker isn't in this for the money! A more ambitious hacker could use the same approach on other sites to perform much more harmful tasks (such as transferring money to their own accounts, and so on.)
+> [!NOTE]
+> Obviously our hacker isn't in this for the money! A more ambitious hacker could use the same approach on other sites to perform much more harmful tasks (such as transferring money to their own accounts, and so on.)
 
 In order to do this, they might create an HTML file like the one below, which contains an author-creation form (like the one we used in the previous section) that is submitted as soon as the file is loaded.
 They would then send the file to all the Librarians and suggest that they open the file (it contains some harmless information, honest!). If the file is opened by any logged in librarian, then the form would be submitted with their credentials and a new author would be created.
