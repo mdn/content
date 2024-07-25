@@ -106,3 +106,4 @@ value2
 - {{HTTPHeader("Content-Type")}}
 - {{HTTPHeader("Content-Disposition")}}
 - {{HTTPMethod("GET")}}
+- {{HTTPMethod("QUERY")}}
