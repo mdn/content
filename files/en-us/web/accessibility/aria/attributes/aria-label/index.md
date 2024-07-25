@@ -32,7 +32,7 @@ The code below shows an example of how to use the `aria-label` attribute to prov
 </button>
 ```
 
-> [!NOTE] > `aria-label` is intended for interactive elements or for elements made interactive via other ARIA declarations when there's no visible text in the DOM to serve as a label.
+> **Note:** `aria-label` is intended for interactive elements or for elements made interactive via other ARIA declarations when there's no visible text in the DOM to serve as a label.
 
 Most content has an accessible name generated from its immediate wrapping element's text content. Accessible names can also be created by certain attributes or associated elements.
 
