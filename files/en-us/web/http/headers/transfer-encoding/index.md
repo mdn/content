@@ -7,7 +7,7 @@ browser-compat: http.headers.Transfer-Encoding
 
 {{HTTPSidebar}}
 
-The **`Transfer-Encoding`** header specifies the form of encoding used to safely transfer messages across the network.
+The **`Transfer-Encoding`** header specifies the form of encoding used to safely transfer messages between nodes on the network.
 
 > **Warning:** [HTTP/2](https://en.wikipedia.org/wiki/HTTP/2) disallows all uses of the `Transfer-Encoding` header other than the HTTP/2 specific: `"trailers"`.
 > HTTP/2 provides more efficient mechanisms for data streaming than chunked transfer and forbids the use of the header. Usage of the header in HTTP/2 may likely result in a specific `protocol error` as HTTP/2 Protocol prohibits the use.

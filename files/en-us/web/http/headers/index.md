@@ -20,7 +20,7 @@ Headers can be grouped according to their contexts:
 - {{Glossary("Representation header", "Representation headers")}}
   - : Contain information about the body of the resource, like its [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types), or encoding/compression applied.
 - {{Glossary("Content header","Content headers")}}
-  - : Contain representation-independent information about content data, including content length and the encoding used for transport.
+  - : Contain representation-independent information about {{Glossary("HTTP Content", "content"))}}, including content length and the encoding used for transport.
 
 Headers can also be grouped according to how {{Glossary("Proxy_server", "proxies")}} handle them:
 
