@@ -99,17 +99,17 @@ Note that several of the `RegExp` properties have both long and short (Perl-like
 
 ## Static properties
 
-- {{jsxref("RegExp/n", "RegExp.$1, …, RegExp.$9")}} {{deprecated_inline}}
+- [`RegExp.$1`, …, `RegExp.$9`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/n) {{deprecated_inline}}
   - : Static read-only properties that contain parenthesized substring matches.
-- {{jsxref("RegExp/input", "RegExp.input ($_)")}} {{deprecated_inline}}
+- [`RegExp.input` (`$_`)](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/input) {{deprecated_inline}}
   - : A static property that contains the last string against which a regular expression was successfully matched.
-- {{jsxref("RegExp/lastMatch", "RegExp.lastMatch ($&)")}} {{deprecated_inline}}
+- [`RegExp.lastMatch` (`$&`)](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastMatch) {{deprecated_inline}}
   - : A static read-only property that contains the last matched substring.
-- {{jsxref("RegExp/lastParen", "RegExp.lastParen ($+)")}} {{deprecated_inline}}
+- [`RegExp.lastParen` (`$+`)](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastParen) {{deprecated_inline}}
   - : A static read-only property that contains the last parenthesized substring match.
-- {{jsxref("RegExp/leftContext", "RegExp.leftContext ($`)")}} {{deprecated_inline}}
+- [`RegExp.leftContext` (`` $` ``)](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/leftContext) {{deprecated_inline}}
   - : A static read-only property that contains the substring preceding the most recent match.
-- {{jsxref("RegExp/rightContext", "RegExp.rightContext ($')")}} {{deprecated_inline}}
+- [`RegExp.rightContext` (`$'`)](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/rightContext) {{deprecated_inline}}
   - : A static read-only property that contains the substring following the most recent match.
 - [`RegExp[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.species)
   - : The constructor function that is used to create derived objects.
