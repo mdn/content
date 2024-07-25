@@ -64,7 +64,7 @@ The example below uses `notfound.html` as a page to show visitors on 404s, altho
 ErrorDocument 404 /notfound.html
 ```
 
-> **Note:**
+> [!NOTE]
 > Custom 404 page design is a good thing in moderation.
 > Feel free to make your 404 page humorous and human, but don't confuse your visitors as to why they are seeing something unexpected.
 >
