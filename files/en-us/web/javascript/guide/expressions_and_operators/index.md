@@ -1038,7 +1038,7 @@ if the specified object is of the specified object type. The syntax is:
 object instanceof objectType
 ```
 
-where `object` is the object to test against `objectType`, and `objectType` is an object type, such as {{jsxref("Date")}} or {{jsxref("Array")}}.
+where `object` is the object to test against `objectType`, and `objectType` is a constructor representing a type, such as {{jsxref("Date")}} or {{jsxref("Array")}}.
 
 Use `instanceof` when you need to confirm the type of an object at runtime.
 For example, when catching exceptions, you can branch to different exception-handling code depending on the type of exception thrown.
