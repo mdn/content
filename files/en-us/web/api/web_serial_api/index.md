@@ -27,9 +27,9 @@ Examples of serial devices include 3D printers, and microcontrollers such as the
 ## Extensions to other interfaces
 
 - {{domxref("Navigator.serial")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns a {{domxref("Serial")}} object, which represents the entry point into the {{domxref("Web Serial API")}} to enable the control of serial ports.
+  - : Returns a {{domxref("Serial")}} object, which represents the entry point into the Web Serial API to enable the control of serial ports.
 - {{domxref("WorkerNavigator.serial")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns a {{domxref("Serial")}} object, which represents the entry point into the {{domxref("Web Serial API")}} to enable the control of serial ports.
+  - : Returns a {{domxref("Serial")}} object, which represents the entry point into the Web Serial API to enable the control of serial ports.
 
 ## Examples
 

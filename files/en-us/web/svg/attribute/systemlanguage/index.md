@@ -15,8 +15,6 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("animate")}}
 - {{SVGElement("animateMotion")}}
 - {{SVGElement("animateTransform")}}
-- {{SVGElement("audio")}}
-- {{SVGElement("canvas")}}
 - {{SVGElement("circle")}}
 - {{SVGElement("clipPath")}}
 - {{SVGElement("cursor")}}
@@ -24,7 +22,6 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("ellipse")}}
 - {{SVGElement("foreignObject")}}
 - {{SVGElement("g")}}
-- {{SVGElement("iframe")}}
 - {{SVGElement("image")}}
 - {{SVGElement("line")}}
 - {{SVGElement("mask")}}
@@ -40,9 +37,7 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("textPath")}}
 - {{SVGElement("tref")}}
 - {{SVGElement("tspan")}}
-- {{SVGElement("unknown")}}
 - {{SVGElement("use")}}
-- {{SVGElement("video")}}
 
 ## Usage notes
 

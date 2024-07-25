@@ -46,7 +46,7 @@ The **`PublicKeyCredential`** interface provides information about a public key 
 - {{domxref("PublicKeyCredential.getClientExtensionResults()")}}
   - : If any extensions were requested, this method will return the results of processing those extensions.
 - {{domxref("PublicKeyCredential.toJSON()")}} {{experimental_inline}}
-  - : Convenience method for creating a JSON string representation of a {{domxref("PublicKeyCredential")}} for sending to the server when [registering a user with credentials](/en-US/docs/Web/API/Web_Authentication_API#creating_a_key_pair_and_registering_a_user) and [authenticating a registered user](/en-US/docs/Web/API/Web_Authentication_API#authenticating_a_user).
+  - : Convenience method for creating a JSON string representation of a `PublicKeyCredential` for sending to the server when [registering a user with credentials](/en-US/docs/Web/API/Web_Authentication_API#creating_a_key_pair_and_registering_a_user) and [authenticating a registered user](/en-US/docs/Web/API/Web_Authentication_API#authenticating_a_user).
 
 ## Examples
 

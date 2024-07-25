@@ -35,7 +35,7 @@ Our [basic compute demo](https://mdn.github.io/dom-examples/webgpu-compute-demo/
 
 - Creating a bind group layout with {{domxref("GPUDevice.createBindGroupLayout()")}}.
 - Feeding the `bindGroupLayout` into {{domxref("GPUDevice.createPipelineLayout()")}} to create a {{domxref("GPUPipelineLayout")}}.
-- Using that value immediately in a `createComputePipeline()` call to create a {{domxref("GPUComputePipeline")}}.
+- Using that value immediately in a `createComputePipeline()` call to create a `GPUComputePipeline`.
 
 ```js
 // ...
