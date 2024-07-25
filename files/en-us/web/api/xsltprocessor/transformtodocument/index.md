@@ -43,4 +43,4 @@ A {{domxref("Document")}}. The actual interface depends on the [output method](h
 
 ## See also
 
-- `XSLTProcessor.transformToDocument()`
+- {{domxref("XSLTProcessor.transformToFragment()")}}
