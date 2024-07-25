@@ -26,69 +26,69 @@ The HTML specification defines the following set of standard metadata names:
 - `keywords`: words relevant to the page's content separated by commas.
 - `referrer`: controls the HTTP {{httpheader("Referer")}} header of requests sent from the document:
 
-  <table class="standard-table">
-    <caption>
-      Values for the
-      <code>content</code>
-      attribute of
-      <code>&#x3C;meta name="referrer"></code>
-    </caption>
-    <tbody>
-      <tr>
-        <td><code>no-referrer</code></td>
-        <td>Do not send a HTTP {{httpheader("Referer")}} header.</td>
-      </tr>
-      <tr>
-        <td><code>origin</code></td>
-        <td>Send the {{glossary("origin")}} of the document.</td>
-      </tr>
-      <tr>
-        <td><code>no-referrer-when-downgrade</code></td>
-        <td>
-          Send the full URL when the destination is at least as secure as the
-          current page (HTTP(S)→HTTPS), but send no referrer when it's less secure
-          (HTTPS→HTTP). This is the default behavior.
-        </td>
-      </tr>
-      <tr>
-        <td><code>origin-when-cross-origin</code></td>
-        <td>
-          Send the full URL (stripped of parameters) for same-origin requests, but
-          only send the origin for other cases.
-        </td>
-      </tr>
-      <tr>
-        <td><code>same-origin</code></td>
-        <td>
-          Send the full URL (stripped of parameters) for same-origin requests.
-          Cross-origin requests will contain no referrer header.
-        </td>
-      </tr>
-      <tr>
-        <td><code>strict-origin</code></td>
-        <td>
-          Send the origin when the destination is at least as secure as the
-          current page (HTTP(S)→HTTPS), but send no referrer when it's less secure
-          (HTTPS→HTTP).
-        </td>
-      </tr>
-      <tr>
-        <td><code>strict-origin-when-cross-origin</code></td>
-        <td>
-          Send the full URL (stripped of parameters) for same-origin requests.
-          Send the origin when the destination is at least as secure as the
-          current page (HTTP(S)→HTTPS). Otherwise, send no referrer.
-        </td>
-      </tr>
-      <tr>
-        <td><code>unsafe-URL</code></td>
-        <td>
-          Send the full URL (stripped of parameters) for same-origin or
-          cross-origin requests.
-        </td>
-      </tr>
-    </tbody>
-  </table>
+    <table class="standard-table">
+      <caption>
+        Values for the
+        <code>content</code>
+        attribute of
+        <code>&#x3C;meta name="referrer"></code>
+      </caption>
+      <tbody>
+        <tr>
+          <td><code>no-referrer</code></td>
+          <td>Do not send a HTTP {{httpheader("Referer")}} header.</td>
+        </tr>
+        <tr>
+          <td><code>origin</code></td>
+          <td>Send the {{glossary("origin")}} of the document.</td>
+        </tr>
+        <tr>
+          <td><code>no-referrer-when-downgrade</code></td>
+          <td>
+            Send the full URL when the destination is at least as secure as the
+            current page (HTTP(S)→HTTPS), but send no referrer when it's less secure
+            (HTTPS→HTTP). This is the default behavior.
+          </td>
+        </tr>
+        <tr>
+          <td><code>origin-when-cross-origin</code></td>
+          <td>
+            Send the full URL (stripped of parameters) for same-origin requests, but
+            only send the origin for other cases.
+          </td>
+        </tr>
+        <tr>
+          <td><code>same-origin</code></td>
+          <td>
+            Send the full URL (stripped of parameters) for same-origin requests.
+            Cross-origin requests will contain no referrer header.
+          </td>
+        </tr>
+        <tr>
+          <td><code>strict-origin</code></td>
+          <td>
+            Send the origin when the destination is at least as secure as the
+            current page (HTTP(S)→HTTPS), but send no referrer when it's less secure
+            (HTTPS→HTTP).
+          </td>
+        </tr>
+        <tr>
+          <td><code>strict-origin-when-cross-origin</code></td>
+          <td>
+            Send the full URL (stripped of parameters) for same-origin requests.
+            Send the origin when the destination is at least as secure as the
+            current page (HTTP(S)→HTTPS). Otherwise, send no referrer.
+          </td>
+        </tr>
+        <tr>
+          <td><code>unsafe-URL</code></td>
+          <td>
+            Send the full URL (stripped of parameters) for same-origin or
+            cross-origin requests.
+          </td>
+        </tr>
+      </tbody>
+    </table>
 
   > **Note:**
   >
@@ -123,90 +123,90 @@ The CSS Device Adaptation specification defines the following metadata name:
 
 - `viewport`: gives hints about the size of the initial size of the {{glossary("viewport")}}.
 
-  <table class="fullwidth-table">
-    <caption>
-      Values for the content of
-      <code>&#x3C;meta name="viewport"></code>
-    </caption>
-    <thead>
-      <tr>
-        <th scope="col">Value</th>
-        <th scope="col">Possible subvalues</th>
-        <th scope="col">Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><code>width</code></td>
-        <td>A positive integer number, or the text <code>device-width</code></td>
-        <td>
-          Defines the pixel width of the viewport that you want the website to be
-          rendered at.
-        </td>
-      </tr>
-      <tr>
-        <td><code>height</code></td>
-        <td>A positive integer, or the text <code>device-height</code></td>
-        <td>Defines the height of the viewport. Not used by any browser.</td>
-      </tr>
-      <tr>
-        <td><code>initial-scale</code></td>
-        <td>A positive number between <code>0.0</code> and <code>10.0</code></td>
-        <td>
-          Defines the ratio between the device width (<code>device-width</code> in
-          portrait mode or <code>device-height</code> in landscape mode) and the
-          viewport size.
-        </td>
-      </tr>
-      <tr>
-        <td><code>maximum-scale</code></td>
-        <td>A positive number between <code>0.0</code> and <code>10.0</code></td>
-        <td>
-          Defines the maximum amount to zoom in. It must be greater or equal to
-          the <code>minimum-scale</code> or the behavior is undefined. Browser
-          settings can ignore this rule and iOS10+ ignores it by default.
-        </td>
-      </tr>
-      <tr>
-        <td><code>minimum-scale</code></td>
-        <td>A positive number between <code>0.0</code> and <code>10.0</code></td>
-        <td>
-          Defines the minimum zoom level. It must be smaller or equal to the
-          <code>maximum-scale</code> or the behavior is undefined. Browser
-          settings can ignore this rule and iOS10+ ignores it by default.
-        </td>
-      </tr>
-      <tr>
-        <td><code>user-scalable</code></td>
-        <td><code>yes</code> or <code>no</code></td>
-        <td>
-          If set to <code>no</code>, the user is not able to zoom in the webpage.
-          The default is <code>yes</code>. Browser settings can ignore this rule,
-          and iOS10+ ignores it by default.
-        </td>
-      </tr>
-      <tr>
-        <td><code>viewport-fit</code></td>
-        <td><code>auto</code>, <code>contain</code> or <code>cover</code></td>
-        <td>
-          <p>
-            The <code>auto</code> value doesn't affect the initial layout
-            viewport, and the whole web page is viewable.
-          </p>
-          <p>
-            The <code>contain</code> value means that the viewport is scaled to
-            fit the largest rectangle inscribed within the display.
-          </p>
-          <p>
-            The <code>cover</code> value means that the viewport is scaled to fill
-            the device display. It is highly recommended to make use of the
-            <a href="/en-US/docs/Web/CSS/env">safe area inset</a> variables to
-            ensure that important content doesn't end up outside the display.
-          </p>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+    <table class="fullwidth-table">
+      <caption>
+        Values for the content of
+        <code>&#x3C;meta name="viewport"></code>
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">Value</th>
+          <th scope="col">Possible subvalues</th>
+          <th scope="col">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>width</code></td>
+          <td>A positive integer number, or the text <code>device-width</code></td>
+          <td>
+            Defines the pixel width of the viewport that you want the website to be
+            rendered at.
+          </td>
+        </tr>
+        <tr>
+          <td><code>height</code></td>
+          <td>A positive integer, or the text <code>device-height</code></td>
+          <td>Defines the height of the viewport. Not used by any browser.</td>
+        </tr>
+        <tr>
+          <td><code>initial-scale</code></td>
+          <td>A positive number between <code>0.0</code> and <code>10.0</code></td>
+          <td>
+            Defines the ratio between the device width (<code>device-width</code> in
+            portrait mode or <code>device-height</code> in landscape mode) and the
+            viewport size.
+          </td>
+        </tr>
+        <tr>
+          <td><code>maximum-scale</code></td>
+          <td>A positive number between <code>0.0</code> and <code>10.0</code></td>
+          <td>
+            Defines the maximum amount to zoom in. It must be greater or equal to
+            the <code>minimum-scale</code> or the behavior is undefined. Browser
+            settings can ignore this rule and iOS10+ ignores it by default.
+          </td>
+        </tr>
+        <tr>
+          <td><code>minimum-scale</code></td>
+          <td>A positive number between <code>0.0</code> and <code>10.0</code></td>
+          <td>
+            Defines the minimum zoom level. It must be smaller or equal to the
+            <code>maximum-scale</code> or the behavior is undefined. Browser
+            settings can ignore this rule and iOS10+ ignores it by default.
+          </td>
+        </tr>
+        <tr>
+          <td><code>user-scalable</code></td>
+          <td><code>yes</code> or <code>no</code></td>
+          <td>
+            If set to <code>no</code>, the user is not able to zoom in the webpage.
+            The default is <code>yes</code>. Browser settings can ignore this rule,
+            and iOS10+ ignores it by default.
+          </td>
+        </tr>
+        <tr>
+          <td><code>viewport-fit</code></td>
+          <td><code>auto</code>, <code>contain</code> or <code>cover</code></td>
+          <td>
+            <p>
+              The <code>auto</code> value doesn't affect the initial layout
+              viewport, and the whole web page is viewable.
+            </p>
+            <p>
+              The <code>contain</code> value means that the viewport is scaled to
+              fit the largest rectangle inscribed within the display.
+            </p>
+            <p>
+              The <code>cover</code> value means that the viewport is scaled to fill
+              the device display. It is highly recommended to make use of the
+              <a href="/en-US/docs/Web/CSS/env">safe area inset</a> variables to
+              ensure that important content doesn't end up outside the display.
+            </p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
 
   > **Warning:**
   >
