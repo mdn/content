@@ -200,7 +200,7 @@ Like all other HTML elements, this element supports the [global attributes](/en-
     </tr>
     <tr>
       <td>
-        {{domxref("HTMLMediaElement.playing_event", 'playing ')}}
+        {{domxref("HTMLMediaElement.playing_event", 'playing')}}
       </td>
       <td>
         Playback is ready to start after having been paused or delayed due to

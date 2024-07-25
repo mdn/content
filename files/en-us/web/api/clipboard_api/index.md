@@ -44,11 +44,11 @@ The Clipboard API extends the following APIs, adding the listed features.
 
 - {{domxref("Navigator.clipboard")}} {{readonlyinline}} {{securecontext_inline}}
   - : Returns a {{domxref("Clipboard")}} object that provides read and write access to the system clipboard.
-- [`Element: copy`](/en-US/docs/Web/API/Element/copy_event) event
+- `Element` [`copy`](/en-US/docs/Web/API/Element/copy_event) event
   - : An event fired whenever the user initiates a copy action.
-- [`Element: cut`](/en-US/docs/Web/API/Element/cut_event) event
+- `Element` [`cut`](/en-US/docs/Web/API/Element/cut_event) event
   - : An event fired whenever the user initiates a cut action.
-- [`Element: paste`](/en-US/docs/Web/API/Element/paste_event) event
+- `Element` [`paste`](/en-US/docs/Web/API/Element/paste_event) event
   - : An event fired whenever the user initiates a paste action.
 
 <!-- Note `Window: clipboardchange` event is in spec but not implemented -->

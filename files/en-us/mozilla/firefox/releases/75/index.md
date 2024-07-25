@@ -37,7 +37,8 @@ New [ARIA](/en-US/docs/Web/Accessibility/ARIA) roles and attributes are now expo
 - [`role="comment"`](/en-US/docs/Web/Accessibility/ARIA/Roles/comment_role) ([Firefox bug 1608969](https://bugzil.la/1608969)).
 - Multiple IDs on `aria-details` ([Firefox bug 1608883](https://bugzil.la/1608883)).
 
-> **Note:** On macOS, we are first waiting for Apple to define what Safari will expose as Apple-dialect attributes to VoiceOver, and will then follow suit.
+> [!NOTE]
+> On macOS, we are first waiting for Apple to define what Safari will expose as Apple-dialect attributes to VoiceOver, and will then follow suit.
 
 ### JavaScript
 

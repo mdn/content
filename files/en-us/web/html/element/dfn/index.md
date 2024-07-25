@@ -33,7 +33,8 @@ The term being defined is identified following these rules:
 2. If the `<dfn>` contains a single child element and does not have any text content of its own, and the child element is an {{HTMLElement("abbr")}} element with a `title` attribute itself, then the exact value of the `<abbr>` element's `title` is the term being defined.
 3. Otherwise, the text content of the `<dfn>` element is the term being defined. This is shown [in the first example below](#basic_identification_of_a_term).
 
-> **Note:** If the `<dfn>` element has a `title` attribute, it _must_ contain the term being defined and no other text.
+> [!NOTE]
+> If the `<dfn>` element has a `title` attribute, it _must_ contain the term being defined and no other text.
 
 ### Links to `<dfn>` elements
 

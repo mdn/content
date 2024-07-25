@@ -229,7 +229,8 @@ const mergedObj = { ...obj1, ...obj2 };
 // { foo: "baz", x: 42, y: 13 }
 ```
 
-> **Warning:** Note that {{jsxref("Object.assign()")}} triggers [setters](/en-US/docs/Web/JavaScript/Reference/Functions/set), whereas the spread syntax doesn't!
+> [!WARNING]
+> Note that {{jsxref("Object.assign()")}} triggers [setters](/en-US/docs/Web/JavaScript/Reference/Functions/set), whereas the spread syntax doesn't!
 
 ### Prototype setter
 

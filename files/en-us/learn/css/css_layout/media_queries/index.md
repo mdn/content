@@ -66,11 +66,14 @@ The following media query will only set the body to 12pt if the page is printed.
 }
 ```
 
-> **Note:** The media type here is different from the so-called {{glossary("MIME type")}}.
+> [!NOTE]
+> The media type here is different from the so-called {{glossary("MIME type")}}.
 
-> **Note:** There were a number of other media types defined in the Level 3 Media Queries specification; these have been deprecated and should be avoided.
+> [!NOTE]
+> There were a number of other media types defined in the Level 3 Media Queries specification; these have been deprecated and should be avoided.
 
-> **Note:** Media types are optional; if you do not indicate a media type in your media query, then the media query will default to being for all media types.
+> [!NOTE]
+> Media types are optional; if you do not indicate a media type in your media query, then the media query will default to being for all media types.
 
 ### Media feature rules
 

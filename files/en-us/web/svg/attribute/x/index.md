@@ -872,7 +872,8 @@ For {{SVGElement('foreignObject')}}, `x` defines the x coordinate of the upper l
 
 ### `<glyphRef>`
 
-> **Warning:** As of SVG2 {{SVGElement('glyphRef')}} is deprecated and shouldn't be used.
+> [!WARNING]
+> As of SVG2 {{SVGElement('glyphRef')}} is deprecated and shouldn't be used.
 
 For {{SVGElement('glyphRef')}}, `x` defines the x-axis coordinate of the glyph.
 
@@ -1150,7 +1151,8 @@ line {
 
 ### `<tref>`
 
-> **Warning:** As of SVG2 {{SVGElement('tref')}} is deprecated and shouldn't be used.
+> [!WARNING]
+> As of SVG2 {{SVGElement('tref')}} is deprecated and shouldn't be used.
 
 For {{SVGElement('tref')}}, if it contains a single value, `x` defines the x coordinate where the _content text position_ must be placed. The _content text position_ is usually a point on the baseline of the first line of text. The exact _content text position_ is influenced by other properties, such as {{SVGAttr('text-anchor')}} or {{cssxref('direction')}}.
 

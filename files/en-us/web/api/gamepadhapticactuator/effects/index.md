@@ -3,10 +3,12 @@ title: "GamepadHapticActuator: effects property"
 short-title: effects
 slug: Web/API/GamepadHapticActuator/effects
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.GamepadHapticActuator.effects
 ---
 
-{{APIRef("Gamepad API")}}
+{{APIRef("Gamepad API")}}{{SeeCompatTable}}
 
 The **`effects`** read-only property of the {{domxref("GamepadHapticActuator")}} interface returns an array of enumerated values representing the different haptic effects that the actuator supports.
 

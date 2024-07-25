@@ -106,7 +106,6 @@ para.onpointercancel = (event) => {
   - {{domxref('Element/pointerdown_event', 'pointerdown')}}
   - {{domxref('Element/pointermove_event', 'pointermove')}}
   - {{domxref('Element/pointerup_event', 'pointerup')}}
-  - {{domxref('Element/pointercancel_event', 'pointercancel')}}
   - {{domxref('Element/pointerout_event', 'pointerout')}}
   - {{domxref('Element/pointerleave_event', 'pointerleave')}}
   - {{domxref('Element/pointerrawupdate_event', 'pointerrawupdate')}}

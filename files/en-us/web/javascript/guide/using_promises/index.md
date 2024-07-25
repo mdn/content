@@ -57,7 +57,8 @@ const promise2 = promise.then(successCallback, failureCallback);
 
 This second promise (`promise2`) represents the completion not just of `doSomething()`, but also of the `successCallback` or `failureCallback` you passed in — which can be other asynchronous functions returning a promise. When that's the case, any callbacks added to `promise2` get queued behind the promise returned by either `successCallback` or `failureCallback`.
 
-> **Note:** If you want a working example to play with, you can use the following template to create any function returning a promise:
+> [!NOTE]
+> If you want a working example to play with, you can use the following template to create any function returning a promise:
 >
 > ```js
 > function doSomething() {
@@ -102,7 +103,8 @@ doSomething()
   .catch(failureCallback);
 ```
 
-> **Note:** Arrow function expressions can have an [implicit return](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#function_body); so, `() => x` is short for `() => { return x; }`.
+> [!NOTE]
+> Arrow function expressions can have an [implicit return](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions#function_body); so, `() => x` is short for `() => { return x; }`.
 
 `doSomethingElse` and `doThirdThing` can return any value — if they return promises, that promise is first waited until it settles, and the next callback receives the fulfillment value, not the promise itself. It is important to always return promises from `then` callbacks, even if the promise always resolves to `undefined`. If the previous handler started a promise but did not return it, there's no way to track its settlement anymore, and the promise is said to be "floating".
 
@@ -202,7 +204,8 @@ Note how the code looks exactly like synchronous code, except for the `await` ke
 
 `async`/`await` builds on promises — for example, `doSomething()` is the same function as before, so there's minimal refactoring needed to change from promises to `async`/`await`. You can read more about the `async`/`await` syntax in the [async functions](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) and [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) references.
 
-> **Note:** async/await has the same concurrency semantics as normal promise chains. `await` within one async function does not stop the entire program, only the parts that depend on its value, so other async jobs can still run while the `await` is pending.
+> [!NOTE]
+> async/await has the same concurrency semantics as normal promise chains. `await` within one async function does not stop the entire program, only the parts that depend on its value, so other async jobs can still run while the `await` is pending.
 
 ## Error handling
 
@@ -286,7 +289,8 @@ async function main() {
 }
 ```
 
-> **Note:** If you don't have sophisticated error handling, you very likely don't need nested `then` handlers. Instead, use a flat chain and put the error handling logic at the end.
+> [!NOTE]
+> If you don't have sophisticated error handling, you very likely don't need nested `then` handlers. Instead, use a flat chain and put the error handling logic at the end.
 
 ### Chaining after a catch
 
@@ -315,7 +319,8 @@ Do that
 Do this, no matter what happened before
 ```
 
-> **Note:** The text "Do this" is not displayed because the "Something failed" error caused a rejection.
+> [!NOTE]
+> The text "Do this" is not displayed because the "Something failed" error caused a rejection.
 
 In `async`/`await`, this code looks like:
 

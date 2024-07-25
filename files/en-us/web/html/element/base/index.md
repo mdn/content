@@ -15,7 +15,8 @@ A document's used base URL can be accessed by scripts with {{domxref('Node.baseU
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-> **Warning:** A `<base>` element must have an `href` attribute, a `target` attribute, or both.
+> [!WARNING]
+> A `<base>` element must have an `href` attribute, a `target` attribute, or both.
 > If at least one of these attributes are specified, the `<base>` element **must** come before other elements with attribute values that are URLs, such as a {{HTMLElement("link")}}'s `href` attribute.
 
 - `href`

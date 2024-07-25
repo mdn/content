@@ -125,7 +125,8 @@ If the bug is small, such as a typo or a minor sentence improvement, or involves
 For all other type of bugs, begin by [opening the issue](#guidelines_for_reporting_an_issue). Add a comment about your intent to work on the issue and if possible, describe your proposed solution or steps to fix the issue.
 Wait for the issue to be triaged, so that the MDN Web Docs team can verify that the issue is legit and approves your proposed solution.
 
-> **Note:** If you open a pull request before the issue has been triaged, your time and effort might go waste if the linked issue is deemed invalid or the solution does not match the one expected by the MDN Web Docs team.
+> [!NOTE]
+> If you open a pull request before the issue has been triaged, your time and effort might go waste if the linked issue is deemed invalid or the solution does not match the one expected by the MDN Web Docs team.
 > After the issue is triaged, assign the issue to yourself.
 
 Using the [guidelines on working on an issue](#guidelines_for_working_on_an_issue), try to fix the problem by updating the appropriate source, such as:

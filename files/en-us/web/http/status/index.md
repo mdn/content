@@ -18,7 +18,8 @@ Responses are grouped in five classes:
 
 The status codes listed below are defined by [RFC 9110](https://httpwg.org/specs/rfc9110.html#overview.of.status.codes).
 
-> **Note:** If you receive a response that is not in [this list](#information_responses), it is a non-standard response, possibly custom to the server's software.
+> [!NOTE]
+> If you receive a response that is not in [this list](#information_responses), it is a non-standard response, possibly custom to the server's software.
 
 ## Information responses
 

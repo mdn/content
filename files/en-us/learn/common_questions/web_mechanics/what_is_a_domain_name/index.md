@@ -80,7 +80,8 @@ Instead, you pay for the right to use a domain name for one or more years. You c
 
 Companies called registrars use domain name registries to keep track of technical and administrative information connecting you to your domain name.
 
-> **Note:** For some domain name, it might not be a registrar which is in charge of keeping track. For instance, every domain name under `.fire` is managed by Amazon.
+> [!NOTE]
+> For some domain name, it might not be a registrar which is in charge of keeping track. For instance, every domain name under `.fire` is managed by Amazon.
 
 #### Finding an available domain name
 
@@ -144,7 +145,8 @@ The process is quite straightforward:
 3. Fill out the form with all required details. Make sure, especially, that you have not misspelled your desired domain name. Once it's paid for, it's too late!
 4. The registrar will let you know when the domain name is properly registered. Within a few hours, all DNS servers will have received your DNS information.
 
-> **Note:** In this process the registrar asks you for your real-world address. Make sure you fill it properly, since in some countries registrars may be forced to close the domain if they cannot provide a valid address.
+> [!NOTE]
+> In this process the registrar asks you for your real-world address. Make sure you fill it properly, since in some countries registrars may be forced to close the domain if they cannot provide a valid address.
 
 #### DNS refreshing
 

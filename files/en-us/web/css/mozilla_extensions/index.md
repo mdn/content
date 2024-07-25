@@ -441,8 +441,8 @@ Properties: {{CSSxRef("width")}}, {{CSSxRef("min-width")}}, and {{CSSxRef("max-w
 - {{CSSxRef("::-moz-list-bullet")}}
 - {{CSSxRef("::-moz-list-number")}}
 - {{CSSxRef(":-moz-loading")}}
-- {{CSSxRef(":dir_ltr", ":-moz-locale-dir(ltr)")}}
-- {{CSSxRef(":dir_rtl", ":-moz-locale-dir(rtl)")}}
+- {{CSSxRef(":-moz-locale-dir_ltr", ":-moz-locale-dir(ltr)")}}
+- {{CSSxRef(":-moz-locale-dir_rtl", ":-moz-locale-dir(rtl)")}}
 - {{CSSxRef(":-moz-lwtheme")}}
 - {{CSSxRef(":-moz-lwtheme-brighttext")}}
 - {{CSSxRef(":-moz-lwtheme-darktext")}}

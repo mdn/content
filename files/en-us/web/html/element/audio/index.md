@@ -287,7 +287,8 @@ You can detect when tracks are added to and removed from an `<audio>` element us
 - {{domxref("HTMLMediaElement.textTracks")}}
   - : Add an `addtrack` event listener to this {{domxref("TextTrackList")}} to be notified when new text tracks are added to the element.
 
-> **Note:** Even though it's an `<audio>` element, it still has video and text track lists, and can in fact be used to present video, although the user interface implications can be odd.
+> [!NOTE]
+> Even though it's an `<audio>` element, it still has video and text track lists, and can in fact be used to present video, although the user interface implications can be odd.
 
 For example, to detect when audio tracks are added to or removed from an `<audio>` element, you can use code like this:
 

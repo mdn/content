@@ -30,7 +30,8 @@ Allow any site to read the contents of a JavaScript library:
 Access-Control-Allow-Origin: *
 ```
 
-> **Note:** This setting is required for [Subresource integrity](/en-US/docs/Web/Security/Practical_implementation_guides/SRI) to work.
+> [!NOTE]
+> This setting is required for [Subresource integrity](/en-US/docs/Web/Security/Practical_implementation_guides/SRI) to work.
 
 Allow `https://random-dashboard.example.org` to read the returned results of an API:
 

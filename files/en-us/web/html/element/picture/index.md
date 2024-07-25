@@ -39,7 +39,8 @@ This element includes only [global attributes](/en-US/docs/Web/HTML/Global_attri
 
 You can use the {{cssxref("object-position")}} property to adjust the positioning of the image within the element's frame, and the {{cssxref("object-fit")}} property to control how the image is resized to fit within the frame.
 
-> **Note:** Use these properties on the child `<img>` element, **not** the `<picture>` element.
+> [!NOTE]
+> Use these properties on the child `<img>` element, **not** the `<picture>` element.
 
 ## Examples
 

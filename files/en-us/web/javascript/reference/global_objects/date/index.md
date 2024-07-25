@@ -9,7 +9,8 @@ browser-compat: javascript.builtins.Date
 
 JavaScript **`Date`** objects represent a single moment in time in a platform-independent format. `Date` objects encapsulate an integral number that represents milliseconds since the midnight at the beginning of January 1, 1970, UTC (the _epoch_).
 
-> **Note:** TC39 is working on [Temporal](https://tc39.es/proposal-temporal/docs/index.html), a new Date/Time API. Read more about it on the [Igalia blog](https://blogs.igalia.com/compilers/2020/06/23/dates-and-times-in-javascript/). It is not yet ready for production use!
+> [!NOTE]
+> TC39 is working on [Temporal](https://tc39.es/proposal-temporal/docs/index.html), a new Date/Time API. Read more about it on the [Igalia blog](https://blogs.igalia.com/compilers/2020/06/23/dates-and-times-in-javascript/). It is not yet ready for production use!
 
 ## Description
 
@@ -17,7 +18,8 @@ JavaScript **`Date`** objects represent a single moment in time in a platform-in
 
 A JavaScript date is fundamentally specified as the time in milliseconds that has elapsed since the [epoch](https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-time-values-and-time-range), which is defined as the midnight at the beginning of January 1, 1970, UTC (equivalent to the [UNIX epoch](/en-US/docs/Glossary/Unix_time)). This timestamp is _timezone-agnostic_ and uniquely defines an instant in history.
 
-> **Note:** While the time value at the heart of a Date object is UTC, the basic methods to fetch the date and time or its components all work in the local (i.e. host system) time zone and offset.
+> [!NOTE]
+> While the time value at the heart of a Date object is UTC, the basic methods to fetch the date and time or its components all work in the local (i.e. host system) time zone and offset.
 
 The maximum timestamp representable by a `Date` object is slightly smaller than the maximum safe integer ({{jsxref("Number.MAX_SAFE_INTEGER")}}, which is 9,007,199,254,740,991). A `Date` object can represent a maximum of ±8,640,000,000,000,000 milliseconds, or ±100,000,000 (one hundred million) days, relative to the epoch. This is the range from April 20, 271821 BC to September 13, 275760 AD. Any attempt to represent a time outside this range results in the `Date` object holding a timestamp value of [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN), which is an "Invalid Date".
 
@@ -37,7 +39,8 @@ There are various methods that allow you to interact with the timestamp stored i
 
 A date is represented internally as a single number, the _timestamp_. When interacting with it, the timestamp needs to be interpreted as a structured date-and-time representation. There are always two ways to interpret a timestamp: as a local time or as a Coordinated Universal Time (UTC), the global standard time defined by the World Time Standard. The local timezone is not stored in the date object, but is determined by the host environment (user's device).
 
-> **Note:** UTC should not be confused with the [Greenwich Mean Time](https://en.wikipedia.org/wiki/Greenwich_Mean_Time) (GMT), because they are not always equal — this is explained in more detail in the linked Wikipedia page.
+> [!NOTE]
+> UTC should not be confused with the [Greenwich Mean Time](https://en.wikipedia.org/wiki/Greenwich_Mean_Time) (GMT), because they are not always equal — this is explained in more detail in the linked Wikipedia page.
 
 For example, the timestamp 0 represents a unique instant in history, but it can be interpreted in two ways:
 
@@ -124,7 +127,8 @@ There are two groups of `Date` methods: one group gets and sets various date com
 
 The {{jsxref("Date/Date", "Date()")}} constructor can be called with two or more arguments, in which case they are interpreted as the year, month, day, hour, minute, second, and millisecond, respectively, in local time. {{jsxref("Date.UTC()")}} works similarly, but it interprets the components as UTC time and also accepts a single argument representing the year.
 
-> **Note:** Some methods, including the `Date()` constructor, `Date.UTC()`, and the deprecated {{jsxref("Date/getYear", "getYear()")}}/{{jsxref("Date/setYear", "setYear()")}} methods, interpret a two-digit year as a year in the 1900s. For example, `new Date(99, 5, 24)` is interpreted as June 24, 1999, not June 24, 99. See [Interpretation of two-digit years](#interpretation_of_two-digit_years) for more information.
+> [!NOTE]
+> Some methods, including the `Date()` constructor, `Date.UTC()`, and the deprecated {{jsxref("Date/getYear", "getYear()")}}/{{jsxref("Date/setYear", "setYear()")}} methods, interpret a two-digit year as a year in the 1900s. For example, `new Date(99, 5, 24)` is interpreted as June 24, 1999, not June 24, 99. See [Interpretation of two-digit years](#interpretation_of_two-digit_years) for more information.
 
 When a segment overflows or underflows its expected range, it usually "carries over to" or "borrows from" the higher segment. For example, if the month is set to 12 (months are zero-based, so December is 11), it become the January of the next year. If the day of month is set to 0, it becomes the last day of the previous month. This also applies to dates specified with the [date time string format](#date_time_string_format).
 
@@ -159,7 +163,8 @@ When the time zone offset is absent, **date-only forms are interpreted as a UTC 
 
 The {{jsxref("Date/toISOString", "toISOString()")}} method returns a string representation of the date in the date time string format, with the time zone offset always set to `Z` (UTC).
 
-> **Note:** You are encouraged to make sure your input conforms to the date time string format above for maximum compatibility, because support for other formats is not guaranteed. However, there are some formats that are supported in all major implementations — like {{rfc(2822)}} format — in which case their usage can be acceptable. Always conduct [cross-browser tests](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing) to ensure your code works in all target browsers. A library can help if many different formats are to be accommodated.
+> [!NOTE]
+> You are encouraged to make sure your input conforms to the date time string format above for maximum compatibility, because support for other formats is not guaranteed. However, there are some formats that are supported in all major implementations — like {{rfc(2822)}} format — in which case their usage can be acceptable. Always conduct [cross-browser tests](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing) to ensure your code works in all target browsers. A library can help if many different formats are to be accommodated.
 
 Non-standard strings can be parsed in any way as desired by the implementation, including the time zone — most implementations use the local time zone by default. Implementations are not required to return invalid date for out-of-bounds date components, although they usually do. A string may have in-bounds date components (with the bounds defined above), but does not represent a date in reality (for example, "February 30"). Implementations behave inconsistently in this case. The [`Date.parse()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse#examples) page offers more examples about these non-standard cases.
 
@@ -294,7 +299,8 @@ These properties are defined on `Date.prototype` and shared by all `Date` instan
 
 The following examples show several ways to create JavaScript dates:
 
-> **Note:** Creating a date from a string has a lot of behavior inconsistencies. See [date time string format](#date_time_string_format) for caveats on using different formats.
+> [!NOTE]
+> Creating a date from a string has a lot of behavior inconsistencies. See [date time string format](#date_time_string_format) for caveats on using different formats.
 
 ```js
 const today = new Date();
@@ -409,7 +415,8 @@ function printElapsedTime(testFn) {
 const yourFunctionReturn = printElapsedTime(yourFunction);
 ```
 
-> **Note:** In browsers that support the {{domxref("Performance API", "", "", "nocode")}}'s high-resolution time feature, {{domxref("Performance.now()")}} can provide more reliable and precise measurements of elapsed time than {{jsxref("Date.now()")}}.
+> [!NOTE]
+> In browsers that support the {{domxref("Performance API", "", "", "nocode")}}'s high-resolution time feature, {{domxref("Performance.now()")}} can provide more reliable and precise measurements of elapsed time than {{jsxref("Date.now()")}}.
 
 ### Get the number of seconds since the ECMAScript Epoch
 

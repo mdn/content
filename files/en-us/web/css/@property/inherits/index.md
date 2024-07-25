@@ -42,7 +42,7 @@ The **`inherits`** [CSS](/en-US/docs/Web/CSS) descriptor is required when using 
 
 ## Examples
 
-Add type checking to `--my-color` {{cssxref('--*', 'custom property')}}, as a color, a default value, and not allow it to inherit its value:
+Add type checking to `--my-color` [custom property](/en-US/docs/Web/CSS/--*), as a color, a default value, and not allow it to inherit its value:
 
 Using [CSS](/en-US/docs/Web/CSS) {{cssxref('@property')}} [at-rule](/en-US/docs/Web/CSS/At-rule):
 

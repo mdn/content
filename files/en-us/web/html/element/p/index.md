@@ -17,7 +17,8 @@ Paragraphs are [block-level elements](/en-US/docs/Glossary/Block-level_content),
 
 This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-> **Note:** The `align` attribute on `<p>` tags is obsolete and shouldn't be used.
+> [!NOTE]
+> The `align` attribute on `<p>` tags is obsolete and shouldn't be used.
 
 ## Accessibility
 

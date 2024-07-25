@@ -47,7 +47,8 @@ X-Cache: Hit from cloudfront
 X-Cache-Info: cached
 ```
 
-> **Note:** Older versions of the specification referred to:
+> [!NOTE]
+> Older versions of the specification referred to:
 >
 > - {{Glossary("General header")}}: Headers applying to both requests and responses but with no relation to the data eventually transmitted in the body.
 > - {{Glossary("Entity header")}}: Headers containing more information about the body of the entity, like its content length or its MIME-type (this is a superset of what are now referred to as the Representation metadata headers)

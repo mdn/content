@@ -24,7 +24,7 @@ objectStore1.put("1", "key");
 
 After the code is executed the object store should contain the value "2", since `trans2` should run after `trans1`.
 
-A transaction alternates between _active_ and _inactive_ states between event loop tasks. It's active in the task when it was created, and in each task of the requests' [`success`](/en-US/docs/Web/API/IDBRequest/success) or [`error`](/en-US/docs/Web/API/IDBRequest/error) event handlers. It's inactive in all other tasks, in which case placing requests will fail. If no new requests are placed when the transaction is active, and there are no other outstanding requests, the transaction will automatically commit.
+A transaction alternates between _active_ and _inactive_ states between event loop tasks. It's active in the task when it was created, and in each task of the requests' [`success`](/en-US/docs/Web/API/IDBRequest/success_event) or [`error`](/en-US/docs/Web/API/IDBRequest/error_event) event handlers. It's inactive in all other tasks, in which case placing requests will fail. If no new requests are placed when the transaction is active, and there are no other outstanding requests, the transaction will automatically commit.
 
 ## Transaction failures
 
