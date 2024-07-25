@@ -58,3 +58,9 @@ meter {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{cssxref("::-webkit-meter-bar")}}
+- {{cssxref("appearance")}}
+- {{cssxref("accent-color")}}
