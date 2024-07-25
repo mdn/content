@@ -51,8 +51,6 @@ each descendant node that matches at least one of the specified selectors.
 
 ## Examples
 
-### dataset selector & attribute selectors
-
 ```html
 <section class="box" id="sect1">
   <div data-name="funnel-chart-percent1">10.900%</div>
@@ -62,16 +60,9 @@ each descendant node that matches at least one of the specified selectors.
 ```
 
 ```js
-// dataset selectors
 const refs = [
   ...document.querySelectorAll(`[data-name*="funnel-chart-percent"]`),
 ];
-
-// attribute selectors
-// const refs = [...document.querySelectorAll(`[data-name*="funnel-chart-percent"]`)];
-// const refs = [...document.querySelectorAll(`[data-name^="funnel-chart-percent"]`)];
-// const refs = [...document.querySelectorAll(`[data-name$="funnel-chart-percent"]`)];
-// const refs = [...document.querySelectorAll(`[data-name~="funnel-chart-percent"]`)];
 ```
 
 ### Obtaining a list of matches
