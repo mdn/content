@@ -33,7 +33,7 @@ Returns a promise which:
 - If `moduleName` refers to a module that doesn't exist, rejects with an implementation-defined error (Node uses a generic `Error`, while all browsers use `TypeError`).
 - If evaluation of the referenced module throws, rejects with the thrown error.
 
-> [!NOTE] > `import()` never synchronously throws an error.
+> **Note:** `import()` never synchronously throws an error.
 
 ## Description
 
