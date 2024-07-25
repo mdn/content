@@ -239,7 +239,7 @@ If you want to search for something that has less obvious buzzwords, you need to
 
 If you are having a problem with some code and a specific error message is coming up, it is often a good idea to just copy the error message into your search engine and use it as the search term. If other people have had the same problem, there'll likely be some articles or blog posts about it in places like MDN or Stack Overflow.
 
-> [!NOTE] > [Stack Overflow](https://stackoverflow.com/) is a really useful website — it is basically a huge database of curated questions and answers on various technologies and related techniques. You'll probably find an answer that answers your question. If not, you can ask a question and see if anyone can help you.
+> **Note:** [Stack Overflow](https://stackoverflow.com/) is a really useful website — it is basically a huge database of curated questions and answers on various technologies and related techniques. You'll probably find an answer that answers your question. If not, you can ask a question and see if anyone can help you.
 
 #### Browser testing
 
