@@ -23,7 +23,8 @@ The `article` role indicates a section of a page that could easily stand on its 
 
 This example shows two articles side by side on one page that could be structured similarly and are related.
 
-> **Note:** Instead of a `<div>` with an `article` role, use the {{HTMLElement('article')}} element. **Always use native element if available**
+> [!NOTE]
+> Instead of a `<div>` with an `article` role, use the {{HTMLElement('article')}} element. **Always use native element if available**
 
 Don't use `role="article"`. Instead use the `<article>` element.
 
@@ -69,7 +70,7 @@ This role does not support any specific keyboard interaction.
 - Changing attribute values
   - : When constructing a feed, set the `aria-posinset` and `aria-setsize` attributes on each article role to the appropriate values, bearing in mind that `aria-posinset` is 1-based.
 
-> **Note:** **Always use native element if available.** Instead of a `<div>` with the `article` role, the `<article>` element should be used.
+> [!NOTE] > **Always use native element if available.** Instead of a `<div>` with the `article` role, the `<article>` element should be used.
 
 ## Examples
 

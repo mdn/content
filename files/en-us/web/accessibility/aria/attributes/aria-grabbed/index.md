@@ -23,7 +23,8 @@ When `aria-grabbed` is set to `true`, the [`aria-dropeffect`](/en-US/docs/Web/Ac
 
 The `aria-grabbed` property is expected to be replaced by a new feature in a future version of WAI-ARIA and is considered deprecated.
 
-> **Note:** ARIA does not enable accessible functionality. ARIA only conveys the intended behavior of your functionality.
+> [!NOTE]
+> ARIA does not enable accessible functionality. ARIA only conveys the intended behavior of your functionality.
 
 ## Values
 

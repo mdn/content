@@ -32,7 +32,7 @@ The code below shows an example of how to use the `aria-label` attribute to prov
 </button>
 ```
 
-> **Note:** `aria-label` is intended for interactive elements or for elements made interactive via other ARIA declarations when there's no visible text in the DOM to serve as a label.
+> [!NOTE] > `aria-label` is intended for interactive elements or for elements made interactive via other ARIA declarations when there's no visible text in the DOM to serve as a label.
 
 Most content has an accessible name generated from its immediate wrapping element's text content. Accessible names can also be created by certain attributes or associated elements.
 
@@ -40,7 +40,8 @@ By default, a button's accessible name is the content between the opening and cl
 
 If none of these options are available or if the default accessible name is not appropriate, use the `aria-label` attribute to define the accessible name of an element.
 
-> **Note:** While `aria-label` can be used on any element that can have an accessible name, in practice however, it is supported only on interactive elements, [widgets](/en-US/docs/Web/Accessibility/ARIA/Roles#2._widget_roles), [landmarks](/en-US/docs/Web/Accessibility/ARIA/Roles#3._landmark_roles), images, and iframes.
+> [!NOTE]
+> While `aria-label` can be used on any element that can have an accessible name, in practice however, it is supported only on interactive elements, [widgets](/en-US/docs/Web/Accessibility/ARIA/Roles#2._widget_roles), [landmarks](/en-US/docs/Web/Accessibility/ARIA/Roles#3._landmark_roles), images, and iframes.
 
 When using `aria-label`, you also need to consider [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby):
 
