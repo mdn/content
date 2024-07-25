@@ -33,7 +33,7 @@ This can happen when the element switches from displaying the poster frame to di
 
 ## Examples
 
-This example creates a handler for the {{domxref("HTMLVideoElement.resize", "resize")}} event that resizes the {{HTMLElement("video")}} element to match the intrinsic size of its contents.
+This example creates a handler for the {{domxref("HTMLVideoElement.resize_event", "resize")}} event that resizes the {{HTMLElement("video")}} element to match the intrinsic size of its contents.
 
 ```js
 let v = document.getElementById("myVideo");
