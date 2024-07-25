@@ -141,7 +141,7 @@ If you want to look at all the special characters that can be used in regular ex
   </tbody>
 </table>
 
-> **Note:** [A larger cheat sheet is also available](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Cheatsheet) (only aggregating parts of those individual articles).
+> [!NOTE] > [A larger cheat sheet is also available](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Cheatsheet) (only aggregating parts of those individual articles).
 
 ### Escaping
 
@@ -391,7 +391,8 @@ Unicode regular expressions have different execution behavior as well. [`RegExp.
 
 ## Examples
 
-> **Note:** Several examples are also available in:
+> [!NOTE]
+> Several examples are also available in:
 >
 > - The reference pages for {{jsxref("RegExp/exec", "exec()")}}, {{jsxref("RegExp/test", "test()")}}, {{jsxref("String/match", "match()")}}, {{jsxref("String/matchAll", "matchAll()")}}, {{jsxref("String/search", "search()")}}, {{jsxref("String/replace", "replace()")}}, {{jsxref("String/split", "split()")}}
 > - The guide articles: [character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes), [assertions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions), [groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences), [quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)

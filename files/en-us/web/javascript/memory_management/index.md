@@ -101,7 +101,8 @@ In this context, the notion of an "object" is extended to something broader than
 
 ### Reference-counting garbage collection
 
-> **Note:** no modern JavaScript engine uses reference-counting for garbage collection anymore.
+> [!NOTE]
+> no modern JavaScript engine uses reference-counting for garbage collection anymore.
 
 This is the most naïve garbage collection algorithm. This algorithm reduces the problem from determining whether or not an object is still needed to determining if an object still has any other objects referencing it. An object is said to be "garbage", or collectible if there are zero references pointing to it.
 
@@ -215,7 +216,8 @@ If `key` is stored as an actual reference, it would create a cyclic reference an
 
 As a rough mental model, think of a `WeakMap` as the following implementation:
 
-> **Warning:** This is not a polyfill nor is anywhere close to how it's implemented in the engine (which hooks into the garbage collection mechanism).
+> [!WARNING]
+> This is not a polyfill nor is anywhere close to how it's implemented in the engine (which hooks into the garbage collection mechanism).
 
 ```js
 class MyWeakMap {
@@ -241,7 +243,7 @@ For more information on their APIs, see the [keyed collections](/en-US/docs/Web/
 
 ### WeakRefs and FinalizationRegistry
 
-> **Note:** `WeakRef` and `FinalizationRegistry` offer direct introspection into the garbage collection machinery. [Avoid using them where possible](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#avoid_where_possible) because the runtime semantics are almost completely unguaranteed.
+> [!NOTE] > `WeakRef` and `FinalizationRegistry` offer direct introspection into the garbage collection machinery. [Avoid using them where possible](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#avoid_where_possible) because the runtime semantics are almost completely unguaranteed.
 
 All variables with an object as value are references to that object. However, such references are _strong_ — their existence would prevent the garbage collector from marking the object as eligible for collection. A [`WeakRef`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef) is a _weak reference_ to an object that allows the object to be garbage collected, while still retaining the ability to read the object's content during its lifetime.
 
