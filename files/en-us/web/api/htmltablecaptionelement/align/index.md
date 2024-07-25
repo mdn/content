@@ -3,6 +3,8 @@ title: "HTMLTableCaptionElement: align property"
 short-title: align
 slug: Web/API/HTMLTableCaptionElement/align
 page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.HTMLTableCaptionElement.align
 ---
 

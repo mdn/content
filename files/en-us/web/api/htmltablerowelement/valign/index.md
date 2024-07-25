@@ -3,6 +3,8 @@ title: "HTMLTableRowElement: vAlign property"
 short-title: vAlign
 slug: Web/API/HTMLTableRowElement/vAlign
 page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.HTMLTableRowElement.vAlign
 ---
 
