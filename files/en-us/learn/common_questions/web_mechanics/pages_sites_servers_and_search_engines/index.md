@@ -73,7 +73,8 @@ A **web page** is a simple document displayable by a {{Glossary("browser")}}. Su
 - _scripts_ — which add interactivity to the page
 - _media_ — images, sounds, and videos.
 
-> **Note:** Browsers can also display other documents such as {{Glossary("PDF")}} files or images, but the term **web page** specifically refers to HTML documents. Otherwise, we only use the term **document**.
+> [!NOTE]
+> Browsers can also display other documents such as {{Glossary("PDF")}} files or images, but the term **web page** specifically refers to HTML documents. Otherwise, we only use the term **document**.
 
 All web pages available on the web are reachable through a unique address. To access a page, just type its address in your browser address bar:
 
