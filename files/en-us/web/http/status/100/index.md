@@ -24,7 +24,7 @@ Waiting for a 100 Continue response can be helpful if a client anticipates that 
 ### PUT request with 100 Continue
 
 The following {{HTTPMethod("PUT")}} request sends information to a server about a file upload.
-The client is indicating that it will proceed with the payload if it receives a 100 response to avoid sending data over the network that could result in an error like {{HTTPStatus("405")}}, {{HTTPStatus("401")}}, or {{HTTPStatus("403")}}.
+The client is indicating that it will proceed with the content if it receives a 100 response to avoid sending data over the network that could result in an error like {{HTTPStatus("405")}}, {{HTTPStatus("401")}}, or {{HTTPStatus("403")}}.
 At first, the client sends headers only, including an {{HTTPHeader("Expect", "Expect: 100-continue")}} header:
 
 ```http
@@ -41,7 +41,7 @@ The server indicates that the request can proceed:
 HTTP/1.1 100 Continue
 ```
 
-The client completes the request by sending the payload data:
+The client completes the request by sending the actual data:
 
 ```http
 [Video data as a payload for PUT request]

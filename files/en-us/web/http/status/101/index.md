@@ -11,7 +11,7 @@ The HTTP **`101 Switching Protocols`** [informational response](/en-US/docs/Web/
 The protocol is specified in the {{HTTPHeader("Upgrade")}} request header received from a client.
 
 The server includes an {{HTTPHeader("Upgrade")}} header in this response to indicate the protocol it has agreed to switch to.
-The process is described in detail in the [Protocol upgrade mechanism](/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism) article.
+The process is described in detail in the [Protocol upgrade mechanism](/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism) guide.
 
 ## Status
 

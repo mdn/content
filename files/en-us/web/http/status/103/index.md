@@ -7,7 +7,7 @@ browser-compat: http.status.103
 
 {{HTTPSidebar}}
 
-The HTTP **`103 Early Hints`** [informational response](/en-US/docs/Web/HTTP/Status#information_responses) may be sent by a server while it is still preparing a response, with hints about the sites and resources that the server is expecting the final response will link.
+The HTTP **`103 Early Hints`** [informational response](/en-US/docs/Web/HTTP/Status#information_responses) may be sent by a server while it is still preparing a response, with hints about the sites and resources that the server expects the final response will link to.
 This allows a browser to [preconnect](/en-US/docs/Web/HTML/Attributes/rel/preconnect) to sites or start [preloading](/en-US/docs/Web/HTML/Attributes/rel/preload) resources even before the server has prepared and sent a final response.
 
 The early hint response is primarily intended for use with the {{HTTPHeader("Link")}} header, which indicates the resources to be loaded.
@@ -18,7 +18,7 @@ Browsers only process the first early hint response, and this response must be d
 Preloaded resources from the early hint are effectively prepended to the `Document`'s head element, and then followed by the resources loaded in the final response.
 
 > **Note:**
-> For compatibility reasons [it is recommended](https://www.rfc-editor.org/rfc/rfc8297#section-3) to only send HTTP `103 Early Hints` responses over HTTP/2 or later, unless the client is known to handle informational responses correctly.
+> For compatibility and security reasons, it is recommended to [only send HTTP `103 Early Hints` responses over HTTP/2 or later]((https://www.rfc-editor.org/rfc/rfc8297#section-3) unless the client is known to handle informational responses correctly.
 >
 > Most browsers limit support to HTTP/2 or later for this reason. See [browser compatibility](#browser_compatibility) below.
 > Despite this, the examples below use HTTP/1.1-style notation as per usual convention.
@@ -125,6 +125,6 @@ Content-Type: text/html
 - {{HTTPHeader("Link")}}
 - [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS)
 - [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP)
-- [rel=preconnect](/en-US/docs/Web/HTML/Attributes/rel/preconnect) ({{htmlelement("link")}} element attribute)
-- [rel=preload](/en-US/docs/Web/HTML/Attributes/rel/preload) ({{htmlelement("link")}} element attribute)
+- [`rel="preconnect"`](/en-US/docs/Web/HTML/Attributes/rel/preconnect) ({{htmlelement("link")}} attribute)
+- [`rel="preload"`](/en-US/docs/Web/HTML/Attributes/rel/preload) ({{htmlelement("link")}} attribute)
 - [Early Hints update: How Cloudflare, Google, and Shopify are working together to build a faster Internet for everyone](https://blog.cloudflare.com/early-hints-performance/) from the CloudFlare blog
