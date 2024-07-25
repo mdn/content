@@ -1,13 +1,13 @@
 ---
-title: Content (HTTP)
+title: Content
 slug: Glossary/HTTP_Content
 page-type: glossary-definition
 ---
 
 {{GlossarySidebar}}
 
-In HTTP, **Content** describes the 'information part' of data sent after the header section when message framing has been removed (like chunked transfer encoding in HTTP/1.1).
-The _content_ used to be described as a "payload" in HTTP/1.1, but this has been replaced with "content" to avoid confusion with frame payloads in HTTP/2 and HTTP/3.
+In HTTP, **content** describes the 'information part' of data sent after the header section when message framing has been removed (like chunked transfer encoding in HTTP/1.1).
+This used to be described as a "payload" in HTTP/1.1, but this has been replaced with "content" to avoid confusion with frame payloads in HTTP/2 and HTTP/3.
 
 The purpose of content in HTTP requests and responses depends on the request method and response status code.
 For example, in a {{HTTPMethod("PUT")}} request, the content represents the desired state of the resource, but in a {{HTTPMethod("POST")}} request, it is information to be processed.
@@ -44,7 +44,6 @@ Network\r\n
 
 ## See also
 
-- Related glossary terms:
-  - {{Glossary("Payload")}}
 - {{HTTPHeader("Content-Location")}}
-- [RFC 9110, section 6.4: Content](https://httpwg.org/specs/rfc9110.html#rfc.section.6.4) (obsoletes [RFC 7231](https://datatracker.ietf.org/doc/html/rfc7231#section-3.3) payload semantics)
+- [RFC 9110, section 6.4: Content](https://httpwg.org/specs/rfc9110.html#rfc.section.6.4) (obsoletes [RFC 7231](https://datatracker.ietf.org/doc/html/rfc7231#section-3.3) Payload Semantics)
+  - [Changes from RFC 7231](https://httpwg.org/specs/rfc9110.html#changes.from.rfc.7231)
