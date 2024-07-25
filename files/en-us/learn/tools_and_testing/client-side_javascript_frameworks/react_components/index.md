@@ -208,7 +208,8 @@ We had unique `id` attributes before we created the `<Todo />` component. Let's 
 <Todo name="Repeat" id="todo-2" />
 ```
 
-> **Note:** The `completed` prop is last here because it is a boolean with no assignment. This is purely a stylistic convention. The order of props does not matter because props are JavaScript objects, and JavaScript objects are unordered.
+> [!NOTE]
+> The `completed` prop is last here because it is a boolean with no assignment. This is purely a stylistic convention. The order of props does not matter because props are JavaScript objects, and JavaScript objects are unordered.
 
 Now go back to `Todo.jsx` and make use of the `id` prop. It needs to replace the `<input />` element's `id` attribute value, as well as its `<label>`'s `htmlFor` attribute value:
 
@@ -243,7 +244,8 @@ const DATA = [
 ];
 ```
 
-> **Note:** If your text editor has an [ESLint](https://eslint.org/) plugin, you may see a warning on this `DATA` const. This warning comes from the ESLint configuration supplied by the Vite template we used, and it doesn't apply to this code. You can safely suppress the warning by adding `// eslint-disable-next-line` to the line above the `DATA` const.
+> [!NOTE]
+> If your text editor has an [ESLint](https://eslint.org/) plugin, you may see a warning on this `DATA` const. This warning comes from the ESLint configuration supplied by the Vite template we used, and it doesn't apply to this code. You can safely suppress the warning by adding `// eslint-disable-next-line` to the line above the `DATA` const.
 
 Next, we'll pass `DATA` to `<App />` as a prop, called `tasks`. Update your `<App />` component call inside `src/main.jsx` to read like this:
 
@@ -383,7 +385,8 @@ function FilterButton() {
 export default FilterButton;
 ```
 
-> **Note:** You might notice that we are making the same mistake here as we first made for the `<Todo />` component, in that each button will be the same. That's fine! We're going to fix up this component later on, in [Back to the filter buttons](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering#back_to_the_filter_buttons).
+> [!NOTE]
+> You might notice that we are making the same mistake here as we first made for the `<Todo />` component, in that each button will be the same. That's fine! We're going to fix up this component later on, in [Back to the filter buttons](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering#back_to_the_filter_buttons).
 
 ## Importing all our components
 
