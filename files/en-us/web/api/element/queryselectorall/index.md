@@ -51,9 +51,9 @@ each descendant node that matches at least one of the specified selectors.
 
 ## Examples
 
-### Using attribute selectors
+### Getting all elements with a custom data value
 
-For more information about attribute selectors, read the [CSS attribute selector](/en-US/docs/Web/CSS/Attribute_selectors) reference.
+This example uses the [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors) to select multiple elements with a `data-name` data attribute that contains "funnel-chart-percent".
 
 ```html
 <section class="box" id="sect1">
