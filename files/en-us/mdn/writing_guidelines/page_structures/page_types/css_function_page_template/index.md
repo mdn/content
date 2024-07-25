@@ -7,7 +7,7 @@ browser-compat: css.functions.NameOfTheFunction
 
 {{MDNSidebar}}
 
-> **Note:** _Remove this note block before publishing._
+> [!NOTE] > _Remove this note block before publishing._
 >
 > ---
 >
@@ -152,7 +152,8 @@ Each example must have an H3 heading (`###`) naming the example. The heading sho
 
 See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples) for more information.
 
-> **Note:** Sometimes you will want to link to examples given on another page.
+> [!NOTE]
+> Sometimes you will want to link to examples given on another page.
 >
 > **Scenario 1:** If you have some examples on this page and some more examples on another page:
 >

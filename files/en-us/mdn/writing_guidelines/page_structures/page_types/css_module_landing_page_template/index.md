@@ -6,7 +6,7 @@ page-type: mdn-writing-guide
 
 {{MDNSidebar}}
 
-> **Note:** _Remember to remove this note block before publishing._
+> [!NOTE] > _Remember to remove this note block before publishing._
 >
 > ---
 >

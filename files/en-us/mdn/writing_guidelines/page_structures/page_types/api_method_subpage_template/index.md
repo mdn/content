@@ -7,7 +7,7 @@ browser-compat: path.to.feature.NameOfTheMethod
 
 {{MDNSidebar}}
 
-> **Note:** _Remove this whole explanatory note before publishing._
+> [!NOTE] > _Remove this whole explanatory note before publishing._
 >
 > ---
 >
@@ -98,7 +98,8 @@ Fill in a syntax box, according to the guidance in our [syntax sections](/en-US/
 - `parameter2`
   - : etc.
 
-> **Note:** This section is mandatory. If there aren't any parameters, put `None.` instead of the definition list.
+> [!NOTE]
+> This section is mandatory. If there aren't any parameters, put `None.` instead of the definition list.
 
 ### Return value
 
@@ -139,7 +140,8 @@ Each example must have an H3 heading naming the example. The heading should be d
 
 See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples) for more information.
 
-> **Note:** Sometimes you will want to link to examples given on another page.
+> [!NOTE]
+> Sometimes you will want to link to examples given on another page.
 >
 > **Scenario 1:** If you have some examples on this page and some more examples on another page:
 >
