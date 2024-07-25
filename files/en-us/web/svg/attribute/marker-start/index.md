@@ -95,3 +95,4 @@ svg {
 - {{SVGElement("marker")}}
 - {{SVGAttr("marker-end")}}
 - {{SVGAttr("marker-mid")}}
+- CSS {{cssxref('marker-start')}} property
