@@ -190,7 +190,6 @@ Let's look at a simple table example — a WebAssembly module that creates and e
 1. Make a local copy of `table.wasm` in a new directory.
 
    > [!NOTE]
-   >
    > You can see the module's text representation at [table.wat](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/table.wat).
 
 2. Create a new copy of our [HTML template](https://github.com/mdn/webassembly-examples/blob/main/template/template.html) in the same directory and call it `table.html`.
