@@ -16,7 +16,7 @@ new String(thing)
 String(thing)
 ```
 
-> **Note:** `String()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new), but with different effects. See [Return value](#return_value).
+> [!NOTE] > `String()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new), but with different effects. See [Return value](#return_value).
 
 ### Parameters
 
@@ -29,7 +29,8 @@ When `String()` is called as a function (without [`new`](/en-US/docs/Web/JavaScr
 
 When `String()` is called as a constructor (with `new`), it coerces `value` to a string primitive (without special symbol handling) and returns a wrapping {{jsxref("String")}} object, which is **not** a primitive.
 
-> **Warning:** You should rarely find yourself using `String` as a constructor.
+> [!WARNING]
+> You should rarely find yourself using `String` as a constructor.
 
 ## Examples
 

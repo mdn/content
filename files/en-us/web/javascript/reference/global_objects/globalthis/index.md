@@ -17,7 +17,8 @@ The global `this` object.
 
 {{js_property_attributes(1, 0, 1)}}
 
-> **Note:** The `globalThis` property is configurable and writable so that code authors can hide it when executing untrusted code and prevent exposing the global object.
+> [!NOTE]
+> The `globalThis` property is configurable and writable so that code authors can hide it when executing untrusted code and prevent exposing the global object.
 
 ## Description
 
@@ -25,7 +26,7 @@ Historically, accessing the global object has required different syntax in diffe
 
 The `globalThis` property provides a standard way of accessing the global `this` value (and hence the global object itself) across environments. Unlike similar properties such as `window` and `self`, it's guaranteed to work in window and non-window contexts. In this way, you can access the global object in a consistent manner without having to know which environment the code is being run in. To help you remember the name, just remember that in global scope the `this` value is `globalThis`.
 
-> **Note:** `globalThis` is generally the same concept as the global object (i.e. adding properties to `globalThis` makes them global variables) — this is the case for browsers and Node — but hosts are allowed to provide a different value for `globalThis` that's unrelated to the global object.
+> [!NOTE] > `globalThis` is generally the same concept as the global object (i.e. adding properties to `globalThis` makes them global variables) — this is the case for browsers and Node — but hosts are allowed to provide a different value for `globalThis` that's unrelated to the global object.
 
 ### HTML and the WindowProxy
 

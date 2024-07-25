@@ -377,7 +377,8 @@ These properties are own properties of each `Array` instance.
 
 This section provides some examples of common array operations in JavaScript.
 
-> **Note:** If you're not yet familiar with array basics, consider first reading [JavaScript First Steps: Arrays](/en-US/docs/Learn/JavaScript/First_steps/Arrays), which [explains what arrays are](/en-US/docs/Learn/JavaScript/First_steps/Arrays#what_is_an_array), and includes other examples of common array operations.
+> [!NOTE]
+> If you're not yet familiar with array basics, consider first reading [JavaScript First Steps: Arrays](/en-US/docs/Learn/JavaScript/First_steps/Arrays), which [explains what arrays are](/en-US/docs/Learn/JavaScript/First_steps/Arrays#what_is_an_array), and includes other examples of common array operations.
 
 ### Create an array
 
@@ -484,7 +485,7 @@ console.log(removedItem);
 // Orange
 ```
 
-> **Note:** `pop()` can only be used to remove the last item from an array. To remove multiple items from the end of an array, see the next example.
+> [!NOTE] > `pop()` can only be used to remove the last item from an array. To remove multiple items from the end of an array, see the next example.
 
 ### Remove multiple items from the end of an array
 
@@ -527,7 +528,7 @@ console.log(removedItem);
 // Apple
 ```
 
-> **Note:** `shift()` can only be used to remove the first item from an array. To remove multiple items from the beginning of an array, see the next example.
+> [!NOTE] > `shift()` can only be used to remove the first item from an array. To remove multiple items from the beginning of an array, see the next example.
 
 ### Remove multiple items from the beginning of an array
 
@@ -796,7 +797,8 @@ For more information about the result of a match, see the {{jsxref("RegExp.proto
 - Changes to already-visited indexes do not cause `callbackFn` to be invoked on them again.
 - If an existing, yet-unvisited element of the array is changed by `callbackFn`, its value passed to the `callbackFn` will be the value at the time that element gets visited. Removed elements are not visited.
 
-> **Warning:** Concurrent modifications of the kind described above frequently lead to hard-to-understand code and are generally to be avoided (except in special cases).
+> [!WARNING]
+> Concurrent modifications of the kind described above frequently lead to hard-to-understand code and are generally to be avoided (except in special cases).
 
 The following examples use the `forEach` method as an example, but other methods that visit indexes in ascending order work in the same way. We will first define a helper function:
 

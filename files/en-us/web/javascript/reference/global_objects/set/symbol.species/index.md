@@ -23,7 +23,8 @@ The value of the constructor (`this`) on which `get [Symbol.species]` was called
 
 The `[Symbol.species]` accessor property returns the default constructor for `Set` objects. Subclass constructors may override it to change the constructor assignment.
 
-> **Note:** This property is currently unused by all `Set` methods.
+> [!NOTE]
+> This property is currently unused by all `Set` methods.
 
 ## Examples
 

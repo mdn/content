@@ -16,7 +16,7 @@ new Number(value)
 Number(value)
 ```
 
-> **Note:** `Number()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new), but with different effects. See [Return value](#return_value).
+> [!NOTE] > `Number()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new), but with different effects. See [Return value](#return_value).
 
 ### Parameters
 
@@ -29,7 +29,8 @@ When `Number()` is called as a function (without [`new`](/en-US/docs/Web/JavaScr
 
 When `Number()` is called as a constructor (with `new`), it uses the coercion process above and returns a wrapping {{jsxref("Number")}} object, which is **not** a primitive.
 
-> **Warning:** You should rarely find yourself using `Number` as a constructor.
+> [!WARNING]
+> You should rarely find yourself using `Number` as a constructor.
 
 ## Examples
 

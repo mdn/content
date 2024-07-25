@@ -17,7 +17,7 @@ The **`Intl.DisplayNames()`** constructor creates {{jsxref("Intl.DisplayNames")}
 new Intl.DisplayNames(locales, options)
 ```
 
-> **Note:** `Intl.DisplayNames()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE] > `Intl.DisplayNames()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
