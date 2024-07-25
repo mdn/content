@@ -18,7 +18,7 @@ A relative CSS color value has the following general syntax structure:
 color-function(from origin-color channel1 channel2 channel3)
 color-function(from origin-color channel1 channel2 channel3 / alpha)
 
-// color space included in the case of color() functions
+/* color space included in the case of color() functions */
 color(from origin-color colorspace channel1 channel2 channel3)
 color(from origin-color colorspace channel1 channel2 channel3 / alpha)
 ```
