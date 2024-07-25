@@ -52,7 +52,8 @@ Svelte sticks closely to the classic web development model of HTML, CSS, and JS,
 
 Its main current disadvantages are that it is a young framework — its ecosystem is therefore more limited in terms of tooling, support, plugins, clear usage patterns, etc. than more mature frameworks, and there are also fewer job opportunities. But its advantages should be enough to make you interested to explore it.
 
-> **Note:** Svelte has [official TypeScript support](https://svelte.dev/docs/typescript). We'll look at it later on in this tutorial series.
+> [!NOTE]
+> Svelte has [official TypeScript support](https://svelte.dev/docs/typescript). We'll look at it later on in this tutorial series.
 
 We encourage you to go through the [Svelte tutorial](https://learn.svelte.dev/) for a really quick introduction to the basic concepts, before returning to this tutorial series to learn how to build something slightly more in-depth.
 
@@ -108,7 +109,8 @@ npm install
 npm run dev
 ```
 
-> **Note:** degit doesn't do any kind of magic — it just lets you download and unzip the latest version of a git repo's contents. This is much quicker than using `git clone` because it will not download all the history of the repo, or create a complete local clone.
+> [!NOTE]
+> degit doesn't do any kind of magic — it just lets you download and unzip the latest version of a git repo's contents. This is much quicker than using `git clone` because it will not download all the history of the repo, or create a complete local clone.
 
 After running `npm run dev`, Svelte will compile and build your application. It will start a local server at `localhost:8080`. Svelte will watch for file updates, and automatically recompile and refresh the app for you when changes are made to the source files. Your browser will display something like this:
 
@@ -184,7 +186,8 @@ All three sections — `<script>`, `<style>`, and markup — are optional, and c
 <!-- markup (zero or more HTML elements) goes here -->
 ```
 
-> **Note:** For more information on the component format, have a look at the [Svelte Components documentation](https://svelte.dev/docs/svelte-components).
+> [!NOTE]
+> For more information on the component format, have a look at the [Svelte Components documentation](https://svelte.dev/docs/svelte-components).
 
 With this in mind, let's have a look at the `src/App.svelte` file that came with the starter template. You should see something like the following:
 
@@ -290,7 +293,8 @@ You can see this in action by opening `localhost:8080` in a new browser tab, rig
 
 When compiling the app, Svelte changes our `h1` styles definition to `h1.svelte-1tky8bj`, and then modifies every `<h1>` element in our component to `<h1 class="svelte-1tky8bj">`, so that it picks up the styles as required.
 
-> **Note:** You can override this behavior and apply styles to a selector globally using the `:global()` modifier (see the [Svelte `<style>` docs](https://svelte.dev/docs/svelte-components#style) for more information).
+> [!NOTE]
+> You can override this behavior and apply styles to a selector globally using the `:global()` modifier (see the [Svelte `<style>` docs](https://svelte.dev/docs/svelte-components#style) for more information).
 
 ## Making a couple of changes
 
@@ -426,7 +430,8 @@ npm run dev
 
 If you want lo learn more about git and GitHub, we've compiled a list of links to useful guides — see [Git and GitHub](/en-US/docs/Learn/Tools_and_testing/GitHub).
 
-> **Note:** If you just want to download the files without cloning the git repo, you can use the degit tool like this — `npx degit opensas/mdn-svelte-tutorial`. You can also download a specific folder with `npx degit opensas/mdn-svelte-tutorial/01-getting-started`. Degit won't create a local git repo, it will just download the files of the specified folder.
+> [!NOTE]
+> If you just want to download the files without cloning the git repo, you can use the degit tool like this — `npx degit opensas/mdn-svelte-tutorial`. You can also download a specific folder with `npx degit opensas/mdn-svelte-tutorial/01-getting-started`. Degit won't create a local git repo, it will just download the files of the specified folder.
 
 ### Using the Svelte REPL
 
@@ -455,11 +460,13 @@ To start a REPL, open your browser and navigate to <https://svelte.dev/repl>.
 
 Whenever you change any file on the REPL, Svelte will recompile the app and update the Result tab. To share your app, share the URL. For example, here's the link for a REPL running our complete app: <https://svelte.dev/repl/378dd79e0dfe4486a8f10823f3813190?version=3.23.2>.
 
-> **Note:** Notice how you can specify Svelte's version in the URL. This is useful when reporting issues related to a specific version of Svelte.
+> [!NOTE]
+> Notice how you can specify Svelte's version in the URL. This is useful when reporting issues related to a specific version of Svelte.
 
 We will provide a REPL at the beginning and end of each article so that you can start coding with us right away.
 
-> **Note:** At the moment the REPL can't handle folder names properly. If you are following the tutorial on the REPL, just create all your components inside the root folder. Then when you see a path in the code, for example `import Todos from './components/Todos.svelte'`, just replace it with a flat URL, e.g. `import Todos from './Todos.svelte'`.
+> [!NOTE]
+> At the moment the REPL can't handle folder names properly. If you are following the tutorial on the REPL, just create all your components inside the root folder. Then when you see a path in the code, for example `import Todos from './components/Todos.svelte'`, just replace it with a flat URL, e.g. `import Todos from './Todos.svelte'`.
 
 ## The code so far
 

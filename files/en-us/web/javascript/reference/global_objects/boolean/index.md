@@ -63,7 +63,8 @@ const myString = new String("Hello"); // myString is a String object
 const s = Boolean(myString); // s is true
 ```
 
-> **Warning:** You should rarely find yourself using `Boolean` as a constructor.
+> [!WARNING]
+> You should rarely find yourself using `Boolean` as a constructor.
 
 ### Boolean coercion
 
@@ -78,9 +79,11 @@ Many built-in operations that expect booleans first coerce their arguments to bo
 - [Symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) turn into `true`.
 - All objects become `true`.
 
-> **Note:** A legacy behavior makes [`document.all`](/en-US/docs/Web/API/Document/all) return `false` when used as a boolean, despite it being an object. This property is legacy and non-standard and should not be used.
+> [!NOTE]
+> A legacy behavior makes [`document.all`](/en-US/docs/Web/API/Document/all) return `false` when used as a boolean, despite it being an object. This property is legacy and non-standard and should not be used.
 
-> **Note:** Unlike other type conversions like [string coercion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion) or [number coercion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), boolean coercion does not attempt to [convert objects to primitives](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion) by calling user methods.
+> [!NOTE]
+> Unlike other type conversions like [string coercion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion) or [number coercion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), boolean coercion does not attempt to [convert objects to primitives](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion) by calling user methods.
 
 In other words, there are only a handful of values that get coerced to `false` — these are called [falsy](/en-US/docs/Glossary/Falsy) values. All other values are called [truthy](/en-US/docs/Glossary/Truthy) values. A value's truthiness is important when used with logical operators, conditional statements, or any boolean context.
 

@@ -40,7 +40,8 @@ An element with `role="rowgroup"` is a group of [rows](/en-US/docs/Web/Accessibi
 
 To create an ARIA table header, table footer or table body, add `role="rowgroup"` to the element. That rowgroup should be nested within a grid, table or treegrid, encompassing a group of one or more rows. Each row, in turn, contains child cells. These cells can be of different types, depending on whether they are column or row headers, or plain or grid cells.
 
-> **Note:** Using the native HTML table element ({{HTMLElement('table')}}) along with the table header ({{HTMLElement('thead')}}), footer ({{HTMLElement('tfoot')}}), and body ({{HTMLElement('tbody')}}) elements whenever possible is strongly encouraged.
+> [!NOTE]
+> Using the native HTML table element ({{HTMLElement('table')}}) along with the table header ({{HTMLElement('thead')}}), footer ({{HTMLElement('tfoot')}}), and body ({{HTMLElement('tbody')}}) elements whenever possible is strongly encouraged.
 
 ### Associated WAI-ARIA roles, states, and properties
 
@@ -66,7 +67,8 @@ None
 
 None.
 
-> **Note:** The first rule of ARIA use is if you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and **adding** an ARIA role, state or property to make it accessible, then do so. Employ the HTML `<table>` element instead of the ARIA role of table whenever possible.
+> [!NOTE]
+> The first rule of ARIA use is if you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and **adding** an ARIA role, state or property to make it accessible, then do so. Employ the HTML `<table>` element instead of the ARIA role of table whenever possible.
 
 ## Examples
 

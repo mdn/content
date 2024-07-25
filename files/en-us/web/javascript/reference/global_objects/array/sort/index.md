@@ -58,7 +58,8 @@ Unicode order. All `undefined` elements are sorted to the end of the array.
 
 The `sort()` method preserves empty slots. If the source array is [sparse](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), the empty slots are moved to the end of the array, and always come after all the `undefined`.
 
-> **Note:** In UTF-16, Unicode characters above `\uFFFF` are
+> [!NOTE]
+> In UTF-16, Unicode characters above `\uFFFF` are
 > encoded as two surrogate code units, of the range
 > `\uD800` - `\uDFFF`. The value of each code unit is taken
 > separately into account for the comparison. Thus the character formed by the surrogate

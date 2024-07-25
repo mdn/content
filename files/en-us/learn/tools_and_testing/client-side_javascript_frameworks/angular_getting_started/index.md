@@ -8,7 +8,7 @@ page-type: learn-module-chapter
 
 It is now time to look at Google's Angular framework, another popular option that you'll come across often. In this article we look at what Angular has to offer, install the prerequisites and set up a sample app, and look at Angular's basic architecture.
 
-> **Note:**
+> [!NOTE]
 > This tutorial targets [Angular version 17](https://angular.io/guide/update-to-version-17) and was last revised in March 2024 (`Angular CLI: 17.3.0`).
 
 <table>
@@ -191,7 +191,8 @@ You use a selector just like regular HTML tags by placing it within other templa
 When a selector is in a template, the browser renders the template of that component whenever an instance of the selector is encountered.
 This tutorial guides you through creating two components and using one within the other.
 
-> **Note:** The name of the component above is `ItemComponent` which is also the name of the class.
+> [!NOTE]
+> The name of the component above is `ItemComponent` which is also the name of the class.
 > The names are the same simply because a component is nothing but a class supplemented by a TypeScript decorator.
 
 Angular's component model offers strong encapsulation and an intuitive application structure.

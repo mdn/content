@@ -46,7 +46,8 @@ You will return to build demos many times through the course of documenting an A
 
 When an API has changed, you need to be careful that existing demos you refer to or learn from are not out of date. Check the main constructs that are used in the demo to see if they match up to the latest spec. They may also not work in up-to-date browsers, but this is not a very reliable test, as often the old features continue to be supported for backwards compatibility.
 
-> **Note:** If the spec has been recently updated so that, say, a method is now defined differently, but the old method still works in browsers, you will often have to document both in the same place, so that the old and new methods are covered.
+> [!NOTE]
+> If the spec has been recently updated so that, say, a method is now defined differently, but the old method still works in browsers, you will often have to document both in the same place, so that the old and new methods are covered.
 > If you need help, refer to demos you have found, or ask an engineering contact.
 
 ### Create the list of documents you need to write or update
@@ -64,7 +65,8 @@ Before you start you should write down a list of all the pages you should create
 7. Concept/guide pages
 8. Examples
 
-> **Note:** We'll be referring to the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) for examples in this article.
+> [!NOTE]
+> We'll be referring to the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) for examples in this article.
 
 #### Overview pages
 
@@ -95,7 +97,8 @@ Examples:
 - Slug: _AudioNode_
 - URL: [https://developer.mozilla.org/en-US/docs/Web/API/AudioNode](/en-US/docs/Web/API/AudioNode)
 
-> **Note:** We document every member appearing in the interface. You should bear the following rules in mind:
+> [!NOTE]
+> We document every member appearing in the interface. You should bear the following rules in mind:
 
 - We document methods defined on the prototype of an object implementing this interface (instance methods), and methods defined on the actual class itself (static methods).
   On the rare occasions that they both exist on the same interface, you should list them in separate sections on the page (Static methods/Instance methods).

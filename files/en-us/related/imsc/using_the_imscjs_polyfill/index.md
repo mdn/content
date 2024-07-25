@@ -202,7 +202,8 @@ While we loop through the `timeEvents` we can take the value of the time event a
 myCue = new Cue(timeEvents[i], timeEvents[i + 1], "");
 ```
 
-> **Note:** In most browsers text track cues are currently only implemented for the WebVTT format. So usually you create a cue with all WebVTT properties including the WebVTT text property. We never use these properties but it is important to remember that they are still there. In the constructor we also have to add the VTTCue text as a third parameter.
+> [!NOTE]
+> In most browsers text track cues are currently only implemented for the WebVTT format. So usually you create a cue with all WebVTT properties including the WebVTT text property. We never use these properties but it is important to remember that they are still there. In the constructor we also have to add the VTTCue text as a third parameter.
 
 But how should we calculate the end time of the last time event? It does not have a "next" time event we can take the end time from.
 

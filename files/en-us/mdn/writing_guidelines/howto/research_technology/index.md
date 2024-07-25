@@ -45,7 +45,8 @@ In addition, we have the [Information contained in a WebIDL file](/en-US/docs/MD
 
 You will return to writing code examples or building demos many times through the course of documenting a technology, but it is very useful to start by spending time familiarizing yourself with how the technology works. This is a really valuable exercise because it gives you a good understanding of what the use cases are (_why_ a developer would use this technology) and help with creating some code examples at the same time.
 
-> **Note:** If the specification has been recently updated so that, say, a method is now defined differently, but the old method still works in browsers, you will often have to document both in the same place so that the old and new methods are covered.
+> [!NOTE]
+> If the specification has been recently updated so that, say, a method is now defined differently, but the old method still works in browsers, you will often have to document both in the same place so that the old and new methods are covered.
 > If you need help, refer to demos you have found, or ask an engineering contact.
 
 ## Creating the list of pages to write or update

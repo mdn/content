@@ -13,7 +13,8 @@ The `aria-roledescription` attribute defines a human-readable, author-localized 
 
 Some assistive technologies (<abbr>AT</abbr>), such as screen readers, present the role of an element as part of the user experience. The `aria-roledescription` attribute provides a way to define a different human-readable name to be presented by AT as the role of an element.
 
-> **Note:** Only use aria-roledescription to clarify the purpose of non-interactive container roles and to provide a more specific description to a widget.
+> [!NOTE]
+> Only use aria-roledescription to clarify the purpose of non-interactive container roles and to provide a more specific description to a widget.
 
 Users depend on the presentation of known role name to understand the purpose of the element and, if it is a widget, how to interact with it. So, only use `aria-roledescription` to clarify the purpose of non-interactive container roles like `group` or `region` and to provide a more specific description to a widget.
 

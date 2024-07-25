@@ -68,7 +68,8 @@ const fakeArray = {
 x.concat(fakeArray); // [1, 2, 3, "hello", "world"]
 ```
 
-> **Note:** The `length` property is used to control the number of object properties to be added. In the above example, `length:2` indicates two properties has to be added.
+> [!NOTE]
+> The `length` property is used to control the number of object properties to be added. In the above example, `length:2` indicates two properties has to be added.
 
 ## Specifications
 
