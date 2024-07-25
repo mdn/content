@@ -90,7 +90,8 @@ import("/my-module.js").then((mod2) => {
 });
 ```
 
-> **Warning:** Do not export a function called `then()` from a module. This will cause the module to behave differently when imported dynamically than when imported statically.
+> [!WARNING]
+> Do not export a function called `then()` from a module. This will cause the module to behave differently when imported dynamically than when imported statically.
 
 ## Examples
 
