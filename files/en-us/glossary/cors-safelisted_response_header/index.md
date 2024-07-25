@@ -20,9 +20,7 @@ By default, the safelist includes the following response headers:
 
 Additional headers can be added to the safelist using {{HTTPHeader("Access-Control-Expose-Headers")}}.
 
-> [!NOTE]
->
-> {{HTTPHeader("Content-Length")}} was not part of the original set of safelisted response headers \[[ref](https://github.com/whatwg/fetch/pull/626)]
+> **Note:** {{HTTPHeader("Content-Length")}} was not part of the original set of safelisted response headers \[[ref](https://github.com/whatwg/fetch/pull/626)]
 
 ## Examples
 
