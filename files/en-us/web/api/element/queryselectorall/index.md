@@ -51,6 +51,10 @@ each descendant node that matches at least one of the specified selectors.
 
 ## Examples
 
+### Using attribute selectors
+
+For more information about attribute selectors, read the [CSS attribute selector](/en-US/docs/Web/CSS/Attribute_selectors) reference.
+
 ```html
 <section class="box" id="sect1">
   <div data-name="funnel-chart-percent1">10.900%</div>
