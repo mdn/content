@@ -3,6 +3,8 @@ title: "HTMLTableRowElement: align property"
 short-title: align
 slug: Web/API/HTMLTableRowElement/align
 page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.HTMLTableRowElement.align
 ---
 
