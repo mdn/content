@@ -310,7 +310,7 @@ There are several general best practices that will make your code run more effic
     }
     ```
 
-  - Do work that is only needed once outside the loop. This may sound a bit obvious, but it is easy to overlook. Take the following snippet, which fetches a JSON object containing data to be processed in some way. In this case the {{domxref("fetch()")}} operation is being done on every iteration of the loop, which is a waste of computing power. The fetching, which does not depend on `i`, could be moved outside the loop, so it is only done once.
+  - Do work that is only needed once outside the loop. This may sound a bit obvious, but it is easy to overlook. Take the following snippet, which fetches a JSON object containing data to be processed in some way. In this case the {{domxref("Window/fetch", "fetch()")}} operation is being done on every iteration of the loop, which is a waste of computing power. The fetching, which does not depend on `i`, could be moved outside the loop, so it is only done once.
 
     ```js
     async function returnResults(number) {

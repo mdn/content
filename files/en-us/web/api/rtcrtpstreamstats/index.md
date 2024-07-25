@@ -7,7 +7,7 @@ browser-compat: api.RTCRtpStreamStats
 
 {{APIRef("WebRTC")}}
 
-The {{domxref("RTCRtpStreamStats")}} dictionary is returned by the {{domxref("RTCPeerConnection.getStats()")}}, {{domxref("RTCRtpSender.getStats()")}}, and {{domxref("RTCRtpReceiver.getStats()")}} methods to provide detailed statistics about WebRTC connectivity.
+The **`RTCRtpStreamStats`** dictionary is returned by the {{domxref("RTCPeerConnection.getStats()")}}, {{domxref("RTCRtpSender.getStats()")}}, and {{domxref("RTCRtpReceiver.getStats()")}} methods to provide detailed statistics about WebRTC connectivity.
 
 While the dictionary has a base set of properties that are present in each of these cases, there are also additional properties added depending on which interface the method is called on.
 

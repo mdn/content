@@ -25,7 +25,7 @@ The result of a preload fetch request is waited on using the promise returned by
 
 ## Description
 
-Service workers handle {{domxref("fetch()")}} events on behalf of a site, for pages within a given scope.
+Service workers handle {{domxref("Window/fetch", "fetch()")}} events on behalf of a site, for pages within a given scope.
 When a user navigates to a page that uses a service worker, the browser boots up the worker (if it isn't already running), then sends it a fetch event and waits for the result.
 On receiving an event, the worker returns the resource from a cache if it is present, or otherwise fetches the resource from the remote server (storing a copy for returning in future requests).
 
@@ -35,7 +35,7 @@ Service workers are often already started (they remain active for some time afte
 Even if a service worker does have to boot, much of the time it may be returning values from a cache, which is very fast.
 However, in those cases where a worker has to boot before it can start fetching a remote resource, then the delay can be significant.
 
-The {{domxref("NavigationPreloadManager")}} provides a mechanism to allow fetching of the resources to run in parallel with service worker boot, so that by the time the worker is able to handle the fetch request from the browser, the resource may already have been fully or partially downloaded.
+The `NavigationPreloadManager` provides a mechanism to allow fetching of the resources to run in parallel with service worker boot, so that by the time the worker is able to handle the fetch request from the browser, the resource may already have been fully or partially downloaded.
 This makes the case where the worker has to start up "no worse" than when the worker is already started, and in some cases better.
 
 The preload manager sends the {{HTTPHeader("Service-Worker-Navigation-Preload")}} HTTP header with preload requests, allowing responses to be customized for preload requests.

@@ -45,7 +45,7 @@ None ({{jsxref("undefined")}}).
 This example shows the use of the {{domxref("DataTransfer")}} object's
 {{domxref("DataTransfer.getData()","getData()")}},
 {{domxref("DataTransfer.setData()","setData()")}} and
-{{domxref("DataTransfer.clearData()","clearData()")}} methods.
+`clearData()` methods.
 
 ### HTML
 

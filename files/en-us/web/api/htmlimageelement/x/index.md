@@ -44,7 +44,7 @@ left edge of the content area.
 ## Example
 
 The example below demonstrates the use of the `HTMLImageElement` properties
-{{domxref("HTMLImageElement.x", "x")}} and {{domxref("HTMLImageElement.y", "y")}}.
+`x` and {{domxref("HTMLImageElement.y", "y")}}.
 
 ### HTML
 

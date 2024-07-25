@@ -23,7 +23,7 @@ These elements only include the [global attributes](/en-US/docs/Web/HTML/Global_
 
 ### Avoid using multiple `<h1>` elements on one page
 
-While using multiple `<h1>` elements on one page is allowed by the HTML standard (as long as they are not [nested](#nesting)), this is not considered a best practice. A page should generally have a single `<h1>` element that describes the content of the page (similar to the document's [`<title> element`](/en-US/docs/Web/HTML/Element/title)).
+While using multiple `<h1>` elements on one page is allowed by the HTML standard (as long as they are not [nested](#nesting)), this is not considered a best practice. A page should generally have a single `<h1>` element that describes the content of the page (similar to the document's [`<title>`](/en-US/docs/Web/HTML/Element/title) element).
 
 > **Note:** Nesting multiple `<h1>` elements in nested [sectioning elements](/en-US/docs/Web/HTML/Element#content_sectioning) was allowed in older versions of the HTML standard. However, this was never considered a best practice and is now non-conforming. Read more in [There Is No Document Outline Algorithm](https://adrianroselli.com/2016/08/there-is-no-document-outline-algorithm.html).
 

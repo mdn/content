@@ -122,7 +122,7 @@ console.log(document.cookie);
 // logs "tasty_cookie=strawberry; yummy_cookie=blueberry"
 ```
 
-Note that, for security purposes, you can't change cookie values by sending an updated `Cookie` header directly when initiating a request, i.e. via {{domxref("fetch()")}} or {{domxref("XMLHttpRequest")}}. Note that there are also good reasons why you shouldn't allow JavaScript to modify cookies — i.e. set `HttpOnly` during creation. See the [Security](#security) section for more details.
+Note that, for security purposes, you can't change cookie values by sending an updated `Cookie` header directly when initiating a request, i.e. via {{domxref("Window/fetch", "fetch()")}} or {{domxref("XMLHttpRequest")}}. Note that there are also good reasons why you shouldn't allow JavaScript to modify cookies — i.e. set `HttpOnly` during creation. See the [Security](#security) section for more details.
 
 ## Security
 

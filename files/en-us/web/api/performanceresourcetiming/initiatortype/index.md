@@ -29,7 +29,7 @@ The `initiatorType` property can have the following values, or `other` if none o
 - `embed`
   - : If the request was initiated by an {{HTMLElement("embed")}} element's `src` attribute.
 - `fetch`
-  - : If the request was initiated by a {{domxref("fetch()")}} method.
+  - : If the request was initiated by a {{domxref("Window/fetch", "fetch()")}} method.
 - `frame`
   - : If the request was initiated by loading a {{HTMLElement("frame")}} element.
 - `iframe`

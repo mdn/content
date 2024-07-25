@@ -20,7 +20,7 @@ By default, all messages sent from a page's controlling service worker to the pa
 (using {{domxref("Client.postMessage()")}}) are queued while the page is loading, and
 get dispatched once the page's HTML document has been loaded and parsed (i.e. after the
 {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} event fires). It's possible to start dispatching these
-messages earlier by calling {{domxref("ServiceWorkerContainer.startMessages()")}}, for
+messages earlier by calling `ServiceWorkerContainer.startMessages()`, for
 example if you've invoked a message handler using
 {{domxref("EventTarget.addEventListener()")}} before the page has finished loading, but
 want to start processing the messages right away.
