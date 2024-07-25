@@ -2235,7 +2235,7 @@
 /en-US/docs/DOM/window.setInterval	/en-US/docs/Web/API/setInterval
 /en-US/docs/DOM/window.setTimeout	/en-US/docs/Web/API/setTimeout
 /en-US/docs/DOM/window.showModalDialog	/en-US/docs/Web/API/Window/showModalDialog
-/en-US/docs/DOM/window.sidebar	/en-US/docs/Web/API/Window/sidebar
+/en-US/docs/DOM/window.sidebar	/en-US/docs/Web/API/Window/external
 /en-US/docs/DOM/window.sizeToContent	/en-US/docs/Web/API/Window/sizeToContent
 /en-US/docs/DOM/window.status	/en-US/docs/Web/API/Window/status
 /en-US/docs/DOM/window.statusbar	/en-US/docs/Web/API/Window/statusbar
@@ -2657,7 +2657,7 @@
 /en-US/docs/DOM:window.setInterval	/en-US/docs/Web/API/setInterval
 /en-US/docs/DOM:window.setTimeout	/en-US/docs/Web/API/setTimeout
 /en-US/docs/DOM:window.showModalDialog	/en-US/docs/Web/API/Window/showModalDialog
-/en-US/docs/DOM:window.sidebar	/en-US/docs/Web/API/Window/sidebar
+/en-US/docs/DOM:window.sidebar	/en-US/docs/Web/API/Window/external
 /en-US/docs/DOM:window.sizeToContent	/en-US/docs/Web/API/Window/sizeToContent
 /en-US/docs/DOM:window.status	/en-US/docs/Web/API/Window/status
 /en-US/docs/DOM:window.statusbar	/en-US/docs/Web/API/Window/statusbar
@@ -3376,7 +3376,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.setInterval	/en-US/docs/Web/API/setInterval
 /en-US/docs/Document_Object_Model_(DOM)/window.setTimeout	/en-US/docs/Web/API/setTimeout
 /en-US/docs/Document_Object_Model_(DOM)/window.showModalDialog	/en-US/docs/Web/API/Window/showModalDialog
-/en-US/docs/Document_Object_Model_(DOM)/window.sidebar	/en-US/docs/Web/API/Window/sidebar
+/en-US/docs/Document_Object_Model_(DOM)/window.sidebar	/en-US/docs/Web/API/Window/external
 /en-US/docs/Document_Object_Model_(DOM)/window.sizeToContent	/en-US/docs/Web/API/Window/sizeToContent
 /en-US/docs/Document_Object_Model_(DOM)/window.status	/en-US/docs/Web/API/Window/status
 /en-US/docs/Document_Object_Model_(DOM)/window.statusbar	/en-US/docs/Web/API/Window/statusbar
@@ -10217,6 +10217,7 @@
 /en-US/docs/Web/API/Window/restore	/en-US/docs/Web/API/Window/moveTo
 /en-US/docs/Web/API/Window/setInterval	/en-US/docs/Web/API/setInterval
 /en-US/docs/Web/API/Window/setTimeout	/en-US/docs/Web/API/setTimeout
+/en-US/docs/Web/API/Window/sidebar	/en-US/docs/Web/API/Window/external
 /en-US/docs/Web/API/Window/sidebar/Adding_search_engines_from_Web_pages	/en-US/docs/Web/OpenSearch
 /en-US/docs/Web/API/Window/transitioncancel_event	/en-US/docs/Web/API/Element/transitioncancel_event
 /en-US/docs/Web/API/Window/transitionend_event	/en-US/docs/Web/API/Element/transitionend_event
@@ -10938,7 +10939,7 @@
 /en-US/docs/Web/API/window.setInterval	/en-US/docs/Web/API/setInterval
 /en-US/docs/Web/API/window.setTimeout	/en-US/docs/Web/API/setTimeout
 /en-US/docs/Web/API/window.showModalDialog	/en-US/docs/Web/API/Window/showModalDialog
-/en-US/docs/Web/API/window.sidebar	/en-US/docs/Web/API/Window/sidebar
+/en-US/docs/Web/API/window.sidebar	/en-US/docs/Web/API/Window/external
 /en-US/docs/Web/API/window.sizeToContent	/en-US/docs/Web/API/Window/sizeToContent
 /en-US/docs/Web/API/window.status	/en-US/docs/Web/API/Window/status
 /en-US/docs/Web/API/window.statusbar	/en-US/docs/Web/API/Window/statusbar
@@ -10951,7 +10952,7 @@
 /en-US/docs/Web/API/window/onscroll	/en-US/docs/Web/API/Element/scroll_event
 /en-US/docs/Web/API/window/onscroll-temp	/en-US/docs/Web/API/Element/scroll_event
 /en-US/docs/Web/API/x-ms-aria-flowfrom	/en-US/docs/Web/Accessibility/ARIA
-/en-US/docs/Web/APIWwindow.sidebar	/en-US/docs/Web/API/Window/sidebar
+/en-US/docs/Web/APIWwindow.sidebar	/en-US/docs/Web/API/Window/external
 /en-US/docs/Web/APIr	/en-US/docs/Web/API/Document/dir
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Examples	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Complementary_role	/en-US/docs/Web/Accessibility/ARIA/Roles/Complementary_role
@@ -13804,7 +13805,7 @@
 /en-US/docs/window.scrollbars	/en-US/docs/Web/API/Window/scrollbars
 /en-US/docs/window.setInterval	/en-US/docs/Web/API/setInterval
 /en-US/docs/window.setTimeout	/en-US/docs/Web/API/setTimeout
-/en-US/docs/window.sidebar	/en-US/docs/Web/API/Window/sidebar
+/en-US/docs/window.sidebar	/en-US/docs/Web/API/Window/external
 /en-US/docs/window.sizeToContent	/en-US/docs/Web/API/Window/sizeToContent
 /en-US/docs/window.status	/en-US/docs/Web/API/Window/status
 /en-US/docs/window.statusbar	/en-US/docs/Web/API/Window/statusbar

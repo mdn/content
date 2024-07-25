@@ -68910,29 +68910,6 @@
     "modified": "2020-12-12T15:24:20.525Z",
     "contributors": ["Rumyra"]
   },
-  "Web/API/Window/sidebar": {
-    "modified": "2020-10-15T21:13:22.168Z",
-    "contributors": [
-      "wbamberg",
-      "mfuji09",
-      "chrisdavidmills",
-      "connorshea",
-      "IsaacSchemm",
-      "teoli",
-      "fscholz",
-      "iamanupmenon",
-      "kohei.yoshino",
-      "Sheppy",
-      "ethertank",
-      "Mnyromyr",
-      "Deltab",
-      "Mgjbot",
-      "Jabez",
-      "Nickolay",
-      "Dria",
-      "JesseW"
-    ]
-  },
   "Web/API/Window/sizeToContent": {
     "modified": "2020-12-03T06:15:03.807Z",
     "contributors": [
