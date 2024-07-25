@@ -395,7 +395,8 @@ In this exercise, we have the names of cities in the United Kingdom, but the cap
 3. Using this latest variable as a substring, replace the first letter of the lowercase string with the first letter of the lowercase string changed to upper case. Store the result of this replacement procedure in another new variable.
 4. Change the value of the `result` variable to equal to the final result, not the `city`.
 
-> **Note:** A hint — the parameters of the string methods don't have to be string literals; they can also be variables, or even variables with a method being invoked on them.
+> [!NOTE]
+> A hint — the parameters of the string methods don't have to be string literals; they can also be variables, or even variables with a method being invoked on them.
 
 ```html hidden
 <h2>Live output</h2>

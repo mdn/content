@@ -15,7 +15,8 @@ Similar to the `rowspan` attribute of the {{HTMLElement('td')}} and {{HTMLElemen
 
 This attribute is intended for cells and gridcells which are **not** part of an HTML {{HTMLElement('table')}}. When a cell is nested in a semantic `<table>`, the `rowspan` attribute should be used when a <td> or <th> spans more than one row. If both are present, `rowspan` takes precedence over `aria-rowspan`. But, like all ARIA attributes, `aria-rowspan` only impacts the accessibility tree. It doesn't change your layout.
 
-> **Note:** ARIA modifies the accessibility tree and how assistive technology presents content to your users. ARIA doesn't change anything about an element's function, behavior, or appearance. When using non-semantic elements, you must use CSS to manage layout and appearance.
+> [!NOTE]
+> ARIA modifies the accessibility tree and how assistive technology presents content to your users. ARIA doesn't change anything about an element's function, behavior, or appearance. When using non-semantic elements, you must use CSS to manage layout and appearance.
 
 The value of `aria-rowspan` is an integer greater than or equal to 0 and less than the value which would cause the cell or gridcell to overlap the next cell or gridcell in the same column. Setting the value to `0` indicates that the cell or gridcell is to span all the remaining rows in the row group. The default value is `1`.
 

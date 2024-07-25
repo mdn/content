@@ -24,7 +24,7 @@ Media Object pattern needs some or all of the following characteristics:
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/media-objects.html", '100%', 2700)}}
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/media-objects--download.html)
 

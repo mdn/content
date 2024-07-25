@@ -11,7 +11,8 @@ The HyperText Transfer Protocol (HTTP) **`503 Service Unavailable`** server erro
 
 Common causes are a server that is down for maintenance or that is overloaded. This response should be used for temporary conditions and the {{HTTPHeader("Retry-After")}} HTTP header should, if possible, contain the estimated time for the recovery of the service.
 
-> **Note:** together with this response, a user-friendly page explaining the problem should be sent.
+> [!NOTE]
+> together with this response, a user-friendly page explaining the problem should be sent.
 
 Caching-related headers that are sent along with this response should be taken care of, as a 503 status is often a temporary condition and responses shouldn't usually be cached.
 

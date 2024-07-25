@@ -56,7 +56,8 @@ Typically the right side of a control will also have an arrow pointing to the pr
 The types {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/time", "time")}} and {{HTMLElement("input/datetime-local", "datetime-local")}} can show an interface that allows a convenient selection of a date and time.
 Predefined values can be shown there, allowing the user to quickly fill the control value.
 
-> **Note:** When type is not supported, `text` type creating simple text field will be used instead. That field will correctly recognize recommended values and display them to the user in a drop-down menu.
+> [!NOTE]
+> When type is not supported, `text` type creating simple text field will be used instead. That field will correctly recognize recommended values and display them to the user in a drop-down menu.
 
 ```html
 <input type="time" list="popularHours" />

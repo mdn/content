@@ -11,7 +11,8 @@ The **`WebAssembly.instantiateStreaming()`** static method compiles
 and instantiates a WebAssembly module directly from a streamed underlying source. This
 is the most efficient, optimized way to load Wasm code.
 
-> **Note:** Webpages that have strict [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) might block WebAssembly from compiling and executing modules.
+> [!NOTE]
+> Webpages that have strict [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) might block WebAssembly from compiling and executing modules.
 > For more information on allowing WebAssembly compilation and execution, see the [script-src CSP](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src).
 
 ## Syntax
@@ -78,7 +79,8 @@ WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
 The `ResultObject`'s instance member is then accessed, and the contained
 exported function invoked.
 
-> **Note:** For this to work, `.wasm` files should be returned
+> [!NOTE]
+> For this to work, `.wasm` files should be returned
 > with an `application/wasm` MIME type by the server.
 
 ## Specifications

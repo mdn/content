@@ -14,7 +14,8 @@ If your add-on is distributed on [addons.mozilla.org](https://addons.mozilla.org
 
 So you should start by visiting AMO and looking to see if your add-on needs any work done at all.
 
-> **Note:** You should still test your add-on on Firefox 5, even if it's been automatically upgraded. There are edge cases that may not be automatically detected.
+> [!NOTE]
+> You should still test your add-on on Firefox 5, even if it's been automatically upgraded. There are edge cases that may not be automatically detected.
 
 Once you've confirmed that you need to make changes, come on back to this page and read on.
 
@@ -43,7 +44,8 @@ The following keywords are now reserved in JavaScript, even when you're not in [
 
 Don't use those keywords anywhere in your code, even as object property names.
 
-> **Note:** This is one of those things that AMO's automatically upgrade tool may not always catch, so check your code for these if your add-on was automatically upgraded but is still not working properly.
+> [!NOTE]
+> This is one of those things that AMO's automatically upgrade tool may not always catch, so check your code for these if your add-on was automatically upgraded but is still not working properly.
 
 ## Interface changes
 

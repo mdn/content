@@ -14,7 +14,8 @@ The deprecated HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
 attempts to violate the Content Security Policy. These violation reports consist of JSON
 documents sent via an HTTP POST request to the specified URI.
 
-> **Warning:** Though the {{CSP("report-to")}} directive is intended to replace the deprecated **`report-uri`** directive, {{CSP("report-to")}} is not yet supported in all browsers.
+> [!WARNING]
+> Though the {{CSP("report-to")}} directive is intended to replace the deprecated **`report-uri`** directive, {{CSP("report-to")}} is not yet supported in all browsers.
 > For compatibility, you can specify both **`report-uri`** and {{CSP("report-to")}}:
 >
 > ```http
