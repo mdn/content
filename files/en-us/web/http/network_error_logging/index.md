@@ -33,9 +33,9 @@ The following object keys can be specified in the NEL header:
 - include_subdomains
   - : If true, the policy applies to all subdomains under the origin that the policy header is set. The reporting group should also be set to include subdomains, if this option is to be enabled.
 - success_fraction
-  - : Floating point value between 0 and 1 which specifies the proportion of **successful** network requests to report. Defaults to 0, so that no successful network requests will be reported if the key is not present in the JSON payload.
+  - : Floating point value between 0 and 1 which specifies the proportion of **successful** network requests to report. Defaults to 0, so that no successful network requests will be reported if the key is not present in the JSON content.
 - failure_fraction
-  - : Floating point value between 0 and 1 which specifies the proportion of **failed** network requests to report. Defaults to 1, so that all failed network requests will be reported if the key is not present in the JSON payload.
+  - : Floating point value between 0 and 1 which specifies the proportion of **failed** network requests to report. Defaults to 1, so that all failed network requests will be reported if the key is not present in the JSON content.
 
 The reporting group referenced above is defined in the usual manner within the {{HTTPHeader("Report-To")}} header, for example:
 
@@ -50,7 +50,7 @@ Report-To: { "group": "nel",
 
 ## Error reports
 
-In these examples, the entire reporting API payload is shown. The top-level **`"body"`** key contains the network error report.
+In these examples, the entire reporting API content is shown. The top-level **`"body"`** key contains the network error report.
 
 ### HTTP 400 (Bad Request) response
 
