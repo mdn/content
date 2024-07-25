@@ -30,7 +30,8 @@ The `autocomplete` attribute provides a hint to the user agent specifying how to
 
 If an {{HTMLElement("input")}}, {{HTMLElement("select")}} or {{HTMLElement("textarea")}} element has no `autocomplete` attribute, the browser will use the [`autocomplete` attribute of the element's **owning form**](/en-US/docs/Web/HTML/Element/form#autocomplete). The owning form is either the {{HTMLElement("form")}} matching the `id` specified by the [`form`](/en-US/docs/Web/HTML/Element/input#form) attribute of the element (if present) or, more commonly, the `<form>` the element is nested in.
 
-> **Note:** In order to provide autocompletion, user-agents might require `<input>`/`<select>`/`<textarea>` elements to:
+> [!NOTE]
+> In order to provide autocompletion, user-agents might require `<input>`/`<select>`/`<textarea>` elements to:
 >
 > 1. Have a `name` and/or `id` attribute
 > 2. Be descendants of a `<form>` element

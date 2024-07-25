@@ -15,7 +15,8 @@ There are two parts to adding support for file handling:
 - Declare support for certain file types using the [`file_handlers`](/en-US/docs/Web/Manifest/file_handlers) web app manifest member.
 - Handling files using the {{domxref("LaunchQueue")}} interface.
 
-> **Note:** At present this feature is only available on Chromium-based browsers, and only on desktop operating systems.
+> [!NOTE]
+> At present this feature is only available on Chromium-based browsers, and only on desktop operating systems.
 
 ## Declaring support for file types
 

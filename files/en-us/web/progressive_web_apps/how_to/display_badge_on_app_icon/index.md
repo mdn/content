@@ -20,7 +20,8 @@ Displaying and updating a badge is done by using the [Badging API](/en-US/docs/W
 
 App badges are only supported when a PWA is installed on its host operating system. Badges appear on the app icon which only exists after the app has been installed.
 
-> **Note:** This article focuses on the {{domxref("Navigator.setAppBadge()")}} and {{domxref("Navigator.clearAppBadge()")}} methods from the Badging API and ignores the `Navigator.setClientBadge` and `Navigator.clearClientBadge`. Although these methods are defined in the [Badging API specification](https://w3c.github.io/badging/) too, they are for displaying badges on documents, not on application icons.
+> [!NOTE]
+> This article focuses on the {{domxref("Navigator.setAppBadge()")}} and {{domxref("Navigator.clearAppBadge()")}} methods from the Badging API and ignores the `Navigator.setClientBadge` and `Navigator.clearClientBadge`. Although these methods are defined in the [Badging API specification](https://w3c.github.io/badging/) too, they are for displaying badges on documents, not on application icons.
 
 ### Desktop support
 

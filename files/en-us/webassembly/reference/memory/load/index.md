@@ -168,7 +168,8 @@ The WAT files could be loaded using the same JavaScript code as the first exampl
 
 ## Browser compatibility
 
-> **Note:** Memory support in Wasm modules matches the [`WebAssembly.Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) JavaScript API.
+> [!NOTE]
+> Memory support in Wasm modules matches the [`WebAssembly.Memory`](/en-US/docs/WebAssembly/JavaScript_interface/Memory) JavaScript API.
 > The [multiMemory](#webassembly.multimemory) key indicates versions in which `load` can be used with a specified memory.
 
 {{Compat}}

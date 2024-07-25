@@ -89,7 +89,8 @@ You can add properties using the DevTools. Perhaps you have realized that you do
 
 ![The DevTools Panel, adding a new property to the rules, with the autocomplete for font- open](inspecting3-font-size.png)
 
-> **Note:** There are other useful features in the Rules view too, for example declarations with invalid values are crossed out. You can find out more at [Examine and edit CSS](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html).
+> [!NOTE]
+> There are other useful features in the Rules view too, for example declarations with invalid values are crossed out. You can find out more at [Examine and edit CSS](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html).
 
 ## Understanding the box model
 
@@ -105,7 +106,8 @@ The element with a class of `box2` is using `border-box`, so here the padding an
 
 ![The Layout section of the DevTools](inspecting4-box-model.png)
 
-> **Note:** Find out more in [Examining and Inspecting the Box Model](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_the_box_model/index.html).
+> [!NOTE]
+> Find out more in [Examining and Inspecting the Box Model](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_the_box_model/index.html).
 
 ## Solving specificity issues
 

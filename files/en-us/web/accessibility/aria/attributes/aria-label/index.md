@@ -40,7 +40,8 @@ By default, a button's accessible name is the content between the opening and cl
 
 If none of these options are available or if the default accessible name is not appropriate, use the `aria-label` attribute to define the accessible name of an element.
 
-> **Note:** While `aria-label` can be used on any element that can have an accessible name, in practice however, it is supported only on interactive elements, [widgets](/en-US/docs/Web/Accessibility/ARIA/Roles#2._widget_roles), [landmarks](/en-US/docs/Web/Accessibility/ARIA/Roles#3._landmark_roles), images, and iframes.
+> [!NOTE]
+> While `aria-label` can be used on any element that can have an accessible name, in practice however, it is supported only on interactive elements, [widgets](/en-US/docs/Web/Accessibility/ARIA/Roles#2._widget_roles), [landmarks](/en-US/docs/Web/Accessibility/ARIA/Roles#3._landmark_roles), images, and iframes.
 
 When using `aria-label`, you also need to consider [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby):
 

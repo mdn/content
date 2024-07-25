@@ -1880,7 +1880,8 @@ First, let's look at the best options for videos presented on a typical website 
    </video>
    ```
 
-> **Note:** The {{HTMLElement("video")}} element requires a closing `</video>` tag, whether or not you have any {{HTMLElement("source")}} elements inside it.
+> [!NOTE]
+> The {{HTMLElement("video")}} element requires a closing `</video>` tag, whether or not you have any {{HTMLElement("source")}} elements inside it.
 
 ### Recommendations for high-quality video presentation
 

@@ -18,7 +18,7 @@ To place an item into the center of another box horizontally and vertically.
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/center.html", '100%', 720)}}
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/center--download.html)
 

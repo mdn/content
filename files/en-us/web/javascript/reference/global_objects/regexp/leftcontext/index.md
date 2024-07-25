@@ -9,7 +9,8 @@ browser-compat: javascript.builtins.RegExp.leftContext
 
 {{JSRef}} {{Deprecated_Header}}
 
-> **Note:** All `RegExp` static properties that expose the last match state globally are deprecated. See [deprecated RegExp features](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp) for more information.
+> [!NOTE]
+> All `RegExp` static properties that expose the last match state globally are deprecated. See [deprecated RegExp features](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp) for more information.
 
 The **`RegExp.leftContext`** static accessor property returns the substring preceding the most recent match. ``RegExp["$`"]`` is an alias for this property.
 

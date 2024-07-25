@@ -33,7 +33,8 @@ Working with forms can be complicated! Developers need to write HTML for the for
 
 In this tutorial, we're going to show you how the above operations may be performed in _Express_. Along the way, we'll extend the _LocalLibrary_ website to allow users to create, edit and delete items from the library.
 
-> **Note:** We haven't looked at how to restrict particular routes to authenticated or authorized users, so at this point, any user will be able to make changes to the database.
+> [!NOTE]
+> We haven't looked at how to restrict particular routes to authenticated or authorized users, so at this point, any user will be able to make changes to the database.
 
 ### HTML Forms
 
@@ -108,7 +109,8 @@ npm install express-validator
 
 #### Using express-validator
 
-> **Note:** The [express-validator](https://express-validator.github.io/docs/#basic-guide) guide on GitHub provides a good overview of the API. We recommend you read that to get an idea of all its capabilities (including using [schema validation](https://express-validator.github.io/docs/guides/schema-validation) and [creating custom validators](https://express-validator.github.io/docs/guides/customizing#custom-validators-and-sanitizers)). Below we cover just a subset that is useful for the _LocalLibrary_.
+> [!NOTE]
+> The [express-validator](https://express-validator.github.io/docs/#basic-guide) guide on GitHub provides a good overview of the API. We recommend you read that to get an idea of all its capabilities (including using [schema validation](https://express-validator.github.io/docs/guides/schema-validation) and [creating custom validators](https://express-validator.github.io/docs/guides/customizing#custom-validators-and-sanitizers)). Below we cover just a subset that is useful for the _LocalLibrary_.
 
 To use the validator in our controllers, we specify the particular functions we want to import from the [express-validator](https://www.npmjs.com/package/express-validator) module, as shown below:
 
@@ -194,7 +196,8 @@ For this project we will simplify the implementation by stating that a form can 
 - Create an object using objects that already exist (so users will have to create any required `Author` and `Genre` instances before attempting to create any `Book` objects).
 - Delete an object if it is not referenced by other objects (so for example, you won't be able to delete a `Book` until all associated `BookInstance` objects have been deleted).
 
-> **Note:** A more flexible implementation might allow you to create the dependent objects when creating a new object, and delete any object at any time (for example, by deleting dependent objects, or by removing references to the deleted object from the database).
+> [!NOTE]
+> A more flexible implementation might allow you to create the dependent objects when creating a new object, and delete any object at any time (for example, by deleting dependent objects, or by removing references to the deleted object from the database).
 
 ### Routes
 

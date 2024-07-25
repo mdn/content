@@ -38,7 +38,8 @@ Here's just a few things to consider for this particular project:
 - Running tests: These can range from "is this code formatted properly?" to "does this thing do what I expect?", and ensuring failing tests prevent deployment.
 - Actually deploying the updated code to a live URL: Or potentially a staging URL so it can be reviewed first.
 
-> **Note:** Cache busting is a new term that we haven't met before in the module. This is the strategy of breaking a browser's own caching mechanism, which forces the browser to download a new copy of your code. Vite (and indeed many other tools) will generate filenames that are unique to each new build. This unique filename "busts" your browser's cache, thereby making sure the browser downloads the fresh code each time an update is made to the deployed code.
+> [!NOTE]
+> Cache busting is a new term that we haven't met before in the module. This is the strategy of breaking a browser's own caching mechanism, which forces the browser to download a new copy of your code. Vite (and indeed many other tools) will generate filenames that are unique to each new build. This unique filename "busts" your browser's cache, thereby making sure the browser downloads the fresh code each time an update is made to the deployed code.
 
 The above tasks also break down into further tasks; note that most web development teams will have their own terms and processes for at least some part of the post-development phase.
 
@@ -132,11 +133,13 @@ Now we have three tasks ahead of us:
 
    At this point, you'll be prompted to enter a username and password before Git will allow the push to be sent. This is because we used the HTTPS option rather than the SSH option, as seen in the screenshot earlier. For this, you need your GitHub username and then — if you do not have two-factor authentication (2FA) turned on — your GitHub password. We would always encourage you to use 2FA if possible, but bear in mind that if you do, you'll also need to use a "personal access token". GitHub help pages has an [excellent and simple walkthrough covering how to get one](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
 
-> **Note:** If you are interested in using the SSH option, thereby avoiding the need to enter your username and password every time you push to GitHub, [this tutorial walks you through how](https://docs.github.com/en/authentication/connecting-to-github-with-ssh).
+> [!NOTE]
+> If you are interested in using the SSH option, thereby avoiding the need to enter your username and password every time you push to GitHub, [this tutorial walks you through how](https://docs.github.com/en/authentication/connecting-to-github-with-ssh).
 
 This final command instructs git to push the code to the "remote" location that we called `origin` (that's the repository hosted on github.com — we could have called it anything we like) using the branch `main`. We've not encountered branches at all, but the "main" branch is the default place for our work and it's what git starts on. When we define the action triggered to build the website, we'll also let it watch for changes on the "main" branch.
 
-> **Note:** Until October 2020 the default branch on GitHub was `master`, which for various social reasons was switched to `main`. You should be aware that this older default branch may appear in various projects you encounter, but we'd suggest using `main` for your own projects.
+> [!NOTE]
+> Until October 2020 the default branch on GitHub was `master`, which for various social reasons was switched to `main`. You should be aware that this older default branch may appear in various projects you encounter, but we'd suggest using `main` for your own projects.
 
 So with our project committed in git and pushed to our GitHub repository, the next step in the toolchain is to define a build action so our project can be deployed live on the web!
 

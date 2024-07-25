@@ -472,7 +472,8 @@ console.log(clone.get(1)); // one
 console.log(original === clone); // false (useful for shallow comparison)
 ```
 
-> **Note:** Keep in mind that _the data itself_ is not cloned.
+> [!NOTE]
+> Keep in mind that _the data itself_ is not cloned.
 
 Maps can be merged, maintaining key uniqueness:
 

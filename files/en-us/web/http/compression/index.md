@@ -27,7 +27,8 @@ Some formats can be used for both loss-less or lossy compression, like `webp`, a
 
 Lossy compression algorithms are usually more efficient than loss-less ones.
 
-> **Note:** As compression works better on a specific kind of files, it usually provides nothing to compress them a second time. In fact, this is often counterproductive as the cost of the overhead (algorithms usually need a dictionary that adds to the initial size) can be higher than the extra gain in compression resulting in a larger file. Do not use the two following techniques for files in a compressed format.
+> [!NOTE]
+> As compression works better on a specific kind of files, it usually provides nothing to compress them a second time. In fact, this is often counterproductive as the cost of the overhead (algorithms usually need a dictionary that adds to the initial size) can be higher than the extra gain in compression resulting in a larger file. Do not use the two following techniques for files in a compressed format.
 
 ## End-to-end compression
 

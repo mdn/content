@@ -18,7 +18,7 @@ Display the hierarchy of the site by displaying inline links, with a separator b
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/breadcrumb-navigation.html", '100%', 530)}}
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/breadcrumb-navigation--download.html)
 
