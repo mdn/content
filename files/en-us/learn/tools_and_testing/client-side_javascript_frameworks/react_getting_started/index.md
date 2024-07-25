@@ -81,7 +81,8 @@ const header = (
 );
 ```
 
-> **Note:** The parentheses in the previous snippet aren't unique to JSX, and don't have any effect on your application. They're a signal to you (and your computer) that the multiple lines of code inside are part of the same expression. You could just as well write the header expression like this:
+> [!NOTE]
+> The parentheses in the previous snippet aren't unique to JSX, and don't have any effect on your application. They're a signal to you (and your computer) that the multiple lines of code inside are part of the same expression. You could just as well write the header expression like this:
 >
 > ```jsx-nolint
 > const header = <header>
@@ -147,7 +148,8 @@ npm create vite@latest moz-todo-react -- --template react
 
 This creates a `moz-todo-react` directory using Vite's `react` template.
 
-> **Note:** The `--` is necessary to pass arguments to npm commands such as `create`, and the `--template react` argument tells Vite to use its React template.
+> [!NOTE]
+> The `--` is necessary to pass arguments to npm commands such as `create`, and the `--template react` argument tells Vite to use its React template.
 
 Your terminal will have printed some messages if this command was successful. You should see text prompting you to `cd` to your new directory, install the app's dependencies, and run the app locally. Let's start with two of those commands. Run the following in your terminal:
 
@@ -209,7 +211,8 @@ Before we move on, you might want to change your `package.json` file a little bi
 
 With this in place, your app will open in your browser at `http://localhost:3000` every time you run `npm run dev`.
 
-> **Note:** You _don't_ need the extra `--` here because we're passing arguments directly to `vite`, rather than to a pre-defined npm script.
+> [!NOTE]
+> You _don't_ need the extra `--` here because we're passing arguments directly to `vite`, rather than to a pre-defined npm script.
 
 ## Exploring our first React component — `<App />`
 
@@ -350,7 +353,7 @@ We then import our `App()` function and `index.css`, which holds global styles t
 
 We then call the `ReactDOM.createRoot()` function, which defines the root node of our application. This takes as an argument the DOM element inside which we want our React app to be rendered. In this case, that's the DOM element with an ID of `root`. Finally, we chain the `render()` method onto the `createRoot()` call, passing it the JSX expression that we want to render inside our root. By writing `<App />` as this JSX expression, we're telling React to call the `App()` _function_ which renders the `App` _component_ inside the root node.
 
-> **Note:** `<App />` is rendered inside a special `<React.StrictMode>` component. This component helps developers catch potential problems in their code.
+> [!NOTE] > `<App />` is rendered inside a special `<React.StrictMode>` component. This component helps developers catch potential problems in their code.
 
 You can read up on these React APIs, if you'd like:
 
@@ -462,7 +465,8 @@ function App(props) {
 
 Save your file and check your browser. You'll see a blank background with no content. This is because we're trying to read a `subject` variable that's no longer defined. Fix this by commenting out the `<h1>Hello {subject}!</h1>` line.
 
-> **Note:** If your code editor understands how to parse JSX (most modern editors do!), you can use its built-in commenting shortcut — `Ctrl + /` (on Windows) or `Cmd + /` (on macOS) — to create comments more quickly.
+> [!NOTE]
+> If your code editor understands how to parse JSX (most modern editors do!), you can use its built-in commenting shortcut — `Ctrl + /` (on Windows) or `Cmd + /` (on macOS) — to create comments more quickly.
 
 Save the file with that line commented out. This time, you should see your
 "Click me!" button rendered by itself. If you open your browser's developer console, you'll see a message that looks like this:

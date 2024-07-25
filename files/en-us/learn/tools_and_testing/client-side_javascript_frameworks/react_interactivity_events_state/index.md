@@ -167,7 +167,7 @@ This is where **state** comes in. If we think of props as a way to communicate b
 
 React provides a special function for introducing state to a component, aptly named `useState()`.
 
-> **Note:** `useState()` is part of a special category of functions called **hooks**, each of which can be used to add new functionality to a component. We'll learn about other hooks later on.
+> [!NOTE] > `useState()` is part of a special category of functions called **hooks**, each of which can be used to add new functionality to a component. We'll learn about other hooks later on.
 
 To use `useState()`, we need to import it from the React module. Add the following line to the top of your `Form.jsx` file, above the `Form()` function definition:
 
@@ -314,7 +314,8 @@ function Form(props) {
 export default Form;
 ```
 
-> **Note:** You'll notice that you are able to submit empty tasks by just pressing the `Add` button without entering a task name. Can you think of a way to prevent this? As a hint, you probably need to add some kind of check into the `handleSubmit()` function.
+> [!NOTE]
+> You'll notice that you are able to submit empty tasks by just pressing the `Add` button without entering a task name. Can you think of a way to prevent this? As a hint, you probably need to add some kind of check into the `handleSubmit()` function.
 
 ## Putting it all together: Adding a task
 
@@ -376,7 +377,8 @@ Make sure you're in the root directory of your application and run the following
 npm install nanoid
 ```
 
-> **Note:** If you're using yarn, you'll need the following instead: `yarn add nanoid`.
+> [!NOTE]
+> If you're using yarn, you'll need the following instead: `yarn add nanoid`.
 
 Now we can use `nanoid` to create unique IDs for our new tasks. First of all, import it by including the following line at the top of `App.jsx`:
 

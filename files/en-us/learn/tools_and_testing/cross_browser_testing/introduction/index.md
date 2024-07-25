@@ -37,7 +37,7 @@ Cross-browser testing is the practice of ensuring that a website works across va
 
 Remember that you are not your users — just because your site works on your MacBook Pro or high-end Galaxy Nexus, doesn't mean it will work for all your users!
 
-> **Note:** [Make the web work for everyone](https://hacks.mozilla.org/2016/07/make-the-web-work-for-everyone/) discusses the different browsers, their market share, and related cross-browser compatibility issues.
+> [!NOTE] > [Make the web work for everyone](https://hacks.mozilla.org/2016/07/make-the-web-work-for-everyone/) discusses the different browsers, their market share, and related cross-browser compatibility issues.
 
 Websites should be accessible across different browsers and devices, and to people with disabilities (e.g. screen-reader-friendly). A site doesn't need to deliver the exact same experience on all browsers and devices, as long as the core functionality is accessible in some way. For example, a modern browser might have something animated, 3D and shiny, while older browsers might just show a flat graphic with the same information.
 
@@ -83,7 +83,8 @@ For example, if the e-commerce site owner wants a WebGL-powered 3D tour of each 
 
 You should compile a list of the potential problem areas.
 
-> **Note:** You can find browser support information for technologies by looking up the different features on MDN — the site you're on! You should also consult [caniuse.com](https://caniuse.com/), for some further useful details.
+> [!NOTE]
+> You can find browser support information for technologies by looking up the different features on MDN — the site you're on! You should also consult [caniuse.com](https://caniuse.com/), for some further useful details.
 
 Once you've agreed on these details, you can go ahead and start developing the site.
 
