@@ -16,7 +16,8 @@ In the example below we have given the parent container `display: flex`; then se
 
 {{EmbedGHLiveSample("css-examples/howto/center.html", '100%', 700)}}
 
-> **Note:** You can use this technique to do any kind of alignment of one or more elements inside another. In the example above you can try changing the values to any valid values for {{cssxref("justify-content")}} and {{cssxref("align-items")}}.
+> [!NOTE]
+> You can use this technique to do any kind of alignment of one or more elements inside another. In the example above you can try changing the values to any valid values for {{cssxref("justify-content")}} and {{cssxref("align-items")}}.
 
 ## See also
 

@@ -33,7 +33,8 @@ An integer parsed from the given `string`, or {{jsxref("NaN")}} when
 - the `radix` as a 32-bit integer is smaller than `2` or bigger than `36`, or
 - the first non-whitespace character cannot be converted to a number.
 
-> **Note:** JavaScript does not have the distinction of "floating point numbers" and "integers" on the language level. `parseInt()` and [`parseFloat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat) only differ in their parsing behavior, but not necessarily their return values. For example, `parseInt("42")` and `parseFloat("42")` would return the same value: a {{jsxref("Number")}} 42.
+> [!NOTE]
+> JavaScript does not have the distinction of "floating point numbers" and "integers" on the language level. `parseInt()` and [`parseFloat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat) only differ in their parsing behavior, but not necessarily their return values. For example, `parseInt("42")` and `parseFloat("42")` would return the same value: a {{jsxref("Number")}} 42.
 
 ## Description
 
@@ -46,7 +47,8 @@ The `radix` argument is [converted to a number](/en-US/docs/Web/JavaScript/Refer
 1. If the input `string`, with leading whitespace and possible `+`/`-` signs removed, begins with `0x` or `0X` (a zero, followed by lowercase or uppercase X), `radix` is assumed to be `16` and the rest of the string is parsed as a hexadecimal number.
 2. If the input `string` begins with any other value, the radix is `10` (decimal).
 
-> **Note:** Other prefixes like `0b`, which are valid in [number literals](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#binary), are treated as normal digits by `parseInt()`. `parseInt()` does _not_ treat strings beginning with a `0` character as octal values either. The only prefix that `parseInt()` recognizes is `0x` or `0X` for hexadecimal values — everything else is parsed as a decimal value if `radix` is missing. [`Number()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/Number) or [`BigInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) can be used instead to parse these prefixes.
+> [!NOTE]
+> Other prefixes like `0b`, which are valid in [number literals](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#binary), are treated as normal digits by `parseInt()`. `parseInt()` does _not_ treat strings beginning with a `0` character as octal values either. The only prefix that `parseInt()` recognizes is `0x` or `0X` for hexadecimal values — everything else is parsed as a decimal value if `radix` is missing. [`Number()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/Number) or [`BigInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt) can be used instead to parse these prefixes.
 
 If the radix is `16`, `parseInt()` allows the string to be optionally prefixed by `0x` or `0X` after the optional sign character (`+`/`-`).
 

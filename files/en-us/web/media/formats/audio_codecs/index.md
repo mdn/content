@@ -1364,7 +1364,8 @@ For general music playback, the three most likely candidates are MP3, AAC, and V
 
 If you need to minimize latency during music playback, you should strongly consider Opus, which has the lowest range of latencies of the general-purpose codecs (5 ms to 66.5 ms, compared to at least 100 ms for the others).
 
-> **Note:** Compatibility information described here is generally correct as of the time this article was written; however, there may be caveats and exceptions. Be sure to refer to the compatibility tables before committing to a given media format.
+> [!NOTE]
+> Compatibility information described here is generally correct as of the time this article was written; however, there may be caveats and exceptions. Be sure to refer to the compatibility tables before committing to a given media format.
 
 Based on this, AAC is likely your best choice if you can only support one audio format. Of course, if you can provide multiple formats (for example, by using the {{HTMLElement("source")}} element within your {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements), you can avoid many or all of those exceptions.
 
@@ -1384,7 +1385,8 @@ The voice-specific codecs are all inherently very lossy, however, and any sound 
 
 Voice recording and playback usually needs to be low-latency in order to synchronize with video tracks, or in order to avoid cross-talk or other problems. Fortunately, the characteristics that lead to speech codecs being so efficient storage space-wise also make them tend to be very low latency. If you're working with WebRTC, [G.722](#g.722_64_kbps_7_khz_audio_coding), for example, has 4 ms latency (compared with over 100 ms for MP3), and [AMR](#amr_adaptive_multi-rate)'s latency is around 25 ms.
 
-> **Note:** For more about WebRTC and the codecs it can use, see [Codecs used by WebRTC](/en-US/docs/Web/Media/Formats/WebRTC_codecs).
+> [!NOTE]
+> For more about WebRTC and the codecs it can use, see [Codecs used by WebRTC](/en-US/docs/Web/Media/Formats/WebRTC_codecs).
 
 The codecs generally used on the web that are used for voice-only encoding are G.722 and AMR. AMR is a narrowband codec, encoding only the frequencies between 200 Hz and 3,400 Hz at bit rates typically around 7.4 kbps, while G.722 is a wideband codec that expands the audio bandwidth to 50 Hz to 7,000 Hz at much higher bit rates—usually 64 kbps.
 

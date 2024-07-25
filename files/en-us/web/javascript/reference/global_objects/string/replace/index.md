@@ -76,7 +76,8 @@ The replacement string can include the following special replacement patterns:
 
 You can specify a function as the second parameter. In this case, the function will be invoked after the match has been performed. The function's result (return value) will be used as the replacement string.
 
-> **Note:** The above-mentioned special replacement patterns do _not_ apply for strings returned from the replacer function.
+> [!NOTE]
+> The above-mentioned special replacement patterns do _not_ apply for strings returned from the replacer function.
 
 The function has the following signature:
 
@@ -128,7 +129,8 @@ console.log(newstr); // Twas the night before Christmas...
 
 This logs `'Twas the night before Christmas...'`.
 
-> **Note:** See [the regular expression guide](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) for more explanations about regular expressions.
+> [!NOTE]
+> See [the regular expression guide](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) for more explanations about regular expressions.
 
 ### Using the global and ignoreCase flags with replace()
 

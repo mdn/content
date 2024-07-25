@@ -8,7 +8,8 @@ page-type: learn-module-chapter
 
 Let's say that we've been tasked with creating a proof-of-concept in React – an app that allows users to add, edit, and delete tasks they want to work on, and also mark tasks as complete without deleting them. This article will walk you through the basic structure and styling of such an application, ready for individual component definition and interactivity, which we'll add later.
 
-> **Note:** If you need to check your code against our version, you can find a finished version of the sample React app code in our [todo-react repository](https://github.com/mdn/todo-react). For a running live version, see <https://mdn.github.io/todo-react/>.
+> [!NOTE]
+> If you need to check your code against our version, you can find a finished version of the sample React app code in our [todo-react repository](https://github.com/mdn/todo-react). For a running live version, see <https://mdn.github.io/todo-react/>.
 
 <table>
   <tbody>
@@ -67,7 +68,8 @@ echo -n > App.jsx && echo -n > index.css
 cd ..
 ```
 
-> **Note:** If you stopped your server to do the terminal tasks mentioned above, you'll have to start it again using `npm run dev`.
+> [!NOTE]
+> If you stopped your server to do the terminal tasks mentioned above, you'll have to start it again using `npm run dev`.
 
 ## Project starter code
 
@@ -248,7 +250,8 @@ Because JSX is JavaScript, there's a gotcha to be aware of with boolean attribut
 
 If you'd like, you can practice writing boolean attributes with another attribute you may have seen before, [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hidden), which prevents elements from being rendered on the page. Try adding `hidden` to the `<h1>` element in `App.jsx` to see what happens, then try explicitly setting its value to `{false}`. Note, again, that writing `hidden="false"` results in a truthy value so the `<h1>` _will_ hide. Don't forget to remove this code when you're done.
 
-> **Note:** The `aria-pressed` attribute used in our earlier code snippet has a value of `"true"` because `aria-pressed` is not a true boolean attribute in the way `checked` is.
+> [!NOTE]
+> The `aria-pressed` attribute used in our earlier code snippet has a value of `"true"` because `aria-pressed` is not a true boolean attribute in the way `checked` is.
 
 ### Implementing our styles
 

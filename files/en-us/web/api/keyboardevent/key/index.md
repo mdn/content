@@ -22,7 +22,7 @@ Its value is determined as follows:
 - Some specialty keyboard keys (such as the extended keys for controlling media on multimedia keyboards) don't generate key codes on Windows; instead, they trigger `WM_APPCOMMAND` events. These events get mapped to DOM keyboard events, and are listed among the "Virtual key codes" for Windows, even though they aren't actually key codes.
 - If the key cannot be identified, the returned value is `Unidentified`.
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [See a full list of key values](/en-US/docs/Web/API/UI_Events/Keyboard_event_key_values).
 

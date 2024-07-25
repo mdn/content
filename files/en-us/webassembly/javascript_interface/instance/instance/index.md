@@ -13,7 +13,8 @@ The **`WebAssembly.Instance()`** constructor creates a new
 
 ## Syntax
 
-> **Warning:** Since instantiation for large modules can be expensive,
+> [!WARNING]
+> Since instantiation for large modules can be expensive,
 > developers should only use the `Instance()` constructor when synchronous
 > instantiation is absolutely required; the asynchronous
 > [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) method should be used at all other
