@@ -103,14 +103,10 @@ Here are the DOM APIs for data types used in the definitions of SVG properties a
 #### Static type
 
 - {{DOMxRef("SVGAngle")}}
-- {{DOMxRef("SVGElementInstance")}}
-- {{DOMxRef("SVGElementInstanceList")}}
 - {{DOMxRef("SVGLength")}}
 - {{DOMxRef("SVGLengthList")}}
-- {{DOMxRef("SVGNameList")}}
 - {{DOMxRef("SVGNumber")}}
 - {{DOMxRef("SVGNumberList")}}
-- {{DOMxRef("SVGPaint")}}
 - {{DOMxRef("SVGPreserveAspectRatio")}}
 - {{DOMxRef("SVGStringList")}}
 - {{DOMxRef("SVGTransform")}}
@@ -138,9 +134,7 @@ Here are the DOM APIs for data types used in the definitions of SVG properties a
 
 ### Other SVG interfaces
 
-- {{DOMxRef("GetSVGDocument")}}
 - {{DOMxRef("ShadowAnimation")}}
-- {{DOMxRef("SVGDocument")}}
 - {{DOMxRef("SVGUnitTypes")}}
 - {{DOMxRef("SVGUseElementShadowRoot")}}
 
