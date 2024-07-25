@@ -156,7 +156,6 @@ These interfaces represent specific HTML elements (or sets of related elements w
 - {{DOMxRef("HTMLFontElement")}} {{deprecated_inline}}
 - {{DOMxRef("HTMLFrameElement")}} {{deprecated_inline}}
 - {{DOMxRef("HTMLFrameSetElement")}} {{deprecated_inline}}
-- {{DOMxRef("HTMLIsIndexElement")}} {{deprecated_inline}}
 
 ### Web app and browser integration interfaces
 
