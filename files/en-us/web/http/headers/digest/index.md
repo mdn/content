@@ -10,7 +10,8 @@ browser-compat: http.headers.Digest
 
 {{HTTPSidebar}}{{Deprecated_Header}}{{non-standard_header}}
 
-> **Note:** This header was removed from the specification in [draft 8](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-digest-headers-08).
+> [!NOTE]
+> This header was removed from the specification in [draft 8](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-digest-headers-08).
 > Use {{HTTPHeader("Content-Digest")}} instead.
 > For `id-*` digest algorithms, use {{HTTPHeader("Repr-Digest")}}.
 
@@ -22,7 +23,8 @@ The _selected representation_ is the actual format of a resource that is returne
 The digest applies to the whole representation of a resource, not to a particular message.
 It can be used to verify that the representation data has not been modified during transmission.
 
-> **Note:** While a representation may be fully contained in the message body of a single response, it can also be sent using multiple messages in response to a [range request](/en-US/docs/Web/HTTP/Range_requests), or omitted altogether in response to a {{HTTPMethod("HEAD")}} request.
+> [!NOTE]
+> While a representation may be fully contained in the message body of a single response, it can also be sent using multiple messages in response to a [range request](/en-US/docs/Web/HTTP/Range_requests), or omitted altogether in response to a {{HTTPMethod("HEAD")}} request.
 
 <table class="properties">
   <tbody>
