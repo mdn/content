@@ -13,7 +13,7 @@ In responses, the `Content-Type` header informs the client about the media type 
 In requests such as {{HTTPMethod("POST")}} or {{HTTPMethod("PUT")}}, the client uses the `Content-Type` header to specify the type of payload data being sent to the server.
 If a server implementation or configuration is strict about content type handling, a {{HTTPStatus("415")}} client error response may be returned.
 
-The `Content-Type` header differs from {{HTTPHeader("Content-Encoding")}} in that `Content-Encoding` helps the client understand how to decode data back to its original form.
+The `Content-Type` header differs from {{HTTPHeader("Content-Encoding")}} in that `Content-Encoding` helps the recipient understand how to decode data to its original form.
 
 > [!NOTE]
 > This value may be ignored if browsers perform [MIME sniffing](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#mime_sniffing) (or content sniffing) on responses.
