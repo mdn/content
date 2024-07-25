@@ -69,7 +69,8 @@ In addition to the basic HTML global attributes, the following global attributes
 - [`is`](/en-US/docs/Web/HTML/Global_attributes/is)
   - : Allows you to specify that a standard HTML element should behave like a registered custom built-in element (see [Using custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements) for more details).
 
-> **Note:** The `item*` attributes are part of the [WHATWG HTML Microdata feature](https://html.spec.whatwg.org/multipage/microdata.html#microdata).
+> [!NOTE]
+> The `item*` attributes are part of the [WHATWG HTML Microdata feature](https://html.spec.whatwg.org/multipage/microdata.html#microdata).
 
 - [`itemid`](/en-US/docs/Web/HTML/Global_attributes/itemid)
   - : The unique, global identifier of an item.
