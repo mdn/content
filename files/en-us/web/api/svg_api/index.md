@@ -65,8 +65,6 @@ The SVG API is a set of interfaces that have been categorized into the following
 - {{DOMxRef("SVGGeometryElement")}}
 - {{DOMxRef("SVGGradientElement")}}
 - {{DOMxRef("SVGGraphicsElement")}}
-- {{DOMxRef("SVGHatchElement")}} {{Experimental_Inline}}
-- {{DOMxRef("SVGHatchpathElement")}} {{Experimental_Inline}}
 - {{DOMxRef("SVGImageElement")}}
 - {{DOMxRef("SVGLinearGradientElement")}}
 - {{DOMxRef("SVGLineElement")}}
