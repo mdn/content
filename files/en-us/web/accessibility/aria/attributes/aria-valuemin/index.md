@@ -60,4 +60,4 @@ Inherited into roles:
 - [`range` role](/en-US/docs/Web/Accessibility/ARIA/Roles/range_role)
 - [`<input type="range>` element `min` attribute](/en-US/docs/Web/HTML/Element/input/range#min)
 - [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax)
-- [`aria-aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-aria-valuenow).
+- [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow)

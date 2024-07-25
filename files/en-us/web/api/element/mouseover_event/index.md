@@ -150,7 +150,6 @@ test.addEventListener(
 - {{domxref("Element/mousemove_event", "mousemove")}}
 - {{domxref("Element/click_event", "click")}}
 - {{domxref("Element/dblclick_event", "dblclick")}}
-- {{domxref("Element/mouseover_event", "mouseover")}}
 - {{domxref("Element/mouseout_event", "mouseout")}}
 - {{domxref("Element/mouseenter_event", "mouseenter")}}
 - {{domxref("Element/mouseleave_event", "mouseleave")}}

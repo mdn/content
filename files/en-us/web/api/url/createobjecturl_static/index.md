@@ -61,7 +61,7 @@ In older versions of the Media Source specification, attaching a stream to a
 support for doing this.
 
 > **Warning:** If you still have code that relies on
-> {{domxref("URL.createObjectURL_static", "createObjectURL()")}} to attach streams to media
+> `createObjectURL()` to attach streams to media
 > elements, you need to update your code to set {{domxref("HTMLMediaElement.srcObject", "srcObject")}} to the `MediaStream` directly.
 
 ## Specifications

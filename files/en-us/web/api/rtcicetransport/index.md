@@ -17,7 +17,7 @@ This is particularly useful if you need to access state information about the co
 _The `RTCIceTransport` interface inherits properties from its parent, {{domxref("EventTarget")}}. It also offers the following properties:_
 
 - {{domxref("RTCIceTransport.component", "component")}} {{ReadOnlyInline}}
-  - : The ICE component being used by the transport. The value is one of the strings from the {{domxref("RTCIceTransport")}} enumerated type: `{{Glossary("RTP", '"RTP"')}}` or `"RTSP"`.
+  - : The ICE component being used by the transport. The value is one of the strings from the `RTCIceTransport` enumerated type: `{{Glossary("RTP", '"RTP"')}}` or `"RTSP"`.
 - {{domxref("RTCIceTransport.gatheringState", "gatheringState")}} {{ReadOnlyInline}}
   - : A string indicating which current gathering state of the ICE agent: `"new"`, `"gathering"`, or `"complete"`.
 - {{domxref("RTCIceTransport.role", "role")}} {{ReadOnlyInline}}
@@ -45,7 +45,7 @@ _Also includes methods from {{domxref("EventTarget")}}, the parent interface._
 Listen to these events using {{domxref("EventTarget.addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface.
 
 - {{domxref("RTCIceTransport.gatheringstatechange_event", "gatheringstatechange")}}
-  - : Sent to the {{domxref("RTCIceTransport")}} object to indicate that the value of the {{domxref("RTCIceTransport.gatheringState", "gatheringState")}} property has changed, indicating a change in this transport's ICE candidate negotiation process.
+  - : Sent to the `RTCIceTransport` object to indicate that the value of the {{domxref("RTCIceTransport.gatheringState", "gatheringState")}} property has changed, indicating a change in this transport's ICE candidate negotiation process.
     Also available through the {{domxref("RTCIceTransport.gatheringstatechange_event", "ongatheringstatechange")}} event handler property.
 - {{domxref("RTCIceTransport.selectedcandidatepairchange_event", "selectedcandidatepairchange")}}
   - : Sent to the `RTCIceTransport` when a new, better pair of candidates has been selected to describe the connectivity between the two peers. This occurs during negotiation or renegotiation, including after an ICE restart, which reuses the existing `RTCIceTransport` objects. The current candidate pair can be obtained using {{domxref("RTCIceTransport.getSelectedCandidatePair", "getSelectedCandidatePair()")}}.

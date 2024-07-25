@@ -32,7 +32,3 @@ The first {{domxref("Element")}} in the {{domxref("HTMLAllCollection")}} matchin
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- {{domxref("HTMLAllCollection.namedItem()")}}

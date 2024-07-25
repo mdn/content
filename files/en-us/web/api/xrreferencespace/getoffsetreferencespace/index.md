@@ -92,7 +92,7 @@ mouse to change the viewing angle.
 
 First, we add an event handler for {{domxref("Element.mousemove_event", "mousemove")}}
 events, which calls our code to perform the rotation if the right mouse button is down.
-Note also that we set {{domxref("Element.oncontextmenu", "oncontextmenu")}} up to be
+Note also that we set {{domxref("Element.contextmenu_event", "oncontextmenu")}} up to be
 ignored by calling {{domxref("Event.preventDefault", "preventDefault()")}} on those
 events. This prevents the right-clicks from causing the context menu from appearing in
 the browser.
