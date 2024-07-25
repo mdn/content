@@ -161,7 +161,9 @@ Finally, you can also use a 4-value syntax to indicate a distance from certain e
 
 {{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/position.html", '100%', 600)}}
 
-> [!NOTE] > `background-position` is a shorthand for {{cssxref("background-position-x")}} and {{cssxref("background-position-y")}}, which allow you to set the different axis position values individually.
+> [!NOTE]
+>
+> `background-position` is a shorthand for {{cssxref("background-position-x")}} and {{cssxref("background-position-y")}}, which allow you to set the different axis position values individually.
 
 ### Gradient backgrounds
 
