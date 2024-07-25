@@ -23,7 +23,7 @@ If you are not sure about committing to learning web development in-depth and wa
 
 > **Note:** Our [glossary](/en-US/docs/Glossary) provides terminology definitions. Besides, if you have a specific question about web development, our [Common questions](/en-US/docs/Learn/Common_questions) section may have something to help you.
 
-> **Callout:**
+> [!CALLOUT]
 >
 > #### Looking to become a front-end web developer?
 >

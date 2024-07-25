@@ -25,7 +25,7 @@ Try updating the live code below to recreate the finished example:
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/variables/variables1.html", '100%', 400)}}
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/variables/variables1-download.html) to work in your own editor or in an online editor.
 
@@ -37,7 +37,7 @@ Try updating the live code below to recreate the finished example:
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/variables/variables2.html", '100%', 400)}}
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/variables/variables2-download.html) to work in your own editor or in an online editor.
 
@@ -49,6 +49,6 @@ Try updating the live code below to recreate the finished example:
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/variables/variables3.html", '100%', 400)}}
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/variables/variables3-download.html) to work in your own editor or in an online editor.

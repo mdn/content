@@ -111,7 +111,7 @@ imports) only.
 
 ### Importing defaults
 
-You need to destructure and rename the "default" key from the returned object.
+If you are destructuring the imported module namespace object, then you must rename the `default` key because `default` is a reserved word.
 
 ```js
 (async () => {

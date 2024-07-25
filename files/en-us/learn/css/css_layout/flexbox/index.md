@@ -96,7 +96,8 @@ flex-direction: column;
 
 You'll see that this puts the items back in a column layout, much like they were before we added any CSS. Before you move on, delete this declaration from your example.
 
-> **Note:** You can also lay out flex items in a reverse direction using the `row-reverse` and `column-reverse` values. Experiment with these values too!
+> [!NOTE]
+> You can also lay out flex items in a reverse direction using the `row-reverse` and `column-reverse` values. Experiment with these values too!
 
 ## Wrapping
 

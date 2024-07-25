@@ -31,7 +31,7 @@ To pass this test, `finalResult` should have a value of `48` and `evenOddResult`
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/math/math1.html", '100%', 400)}}
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/math/math1-download.html) to work in your own editor or in an online editor.
 
@@ -50,7 +50,7 @@ To pass this test, `finalNumber` should have a result of `4633.33`.
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/math/math2.html", '100%', 400)}}
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/math/math2-download.html) to work in your own editor or in an online editor.
 
@@ -63,6 +63,6 @@ Store the results of those tests in variables called `weightComparison`, `height
 
 {{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/math/math3.html", '100%', 550)}}
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/tasks/math/math3-download.html) to work in your own editor or in an online editor.

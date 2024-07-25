@@ -27,7 +27,7 @@ Try updating the live code below to recreate the finished example:
 
 {{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/functions/functions1.html", '100%', 400)}}
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/functions/functions1-download.html) to work in your own editor or in an online editor.
 
@@ -47,7 +47,7 @@ Try updating the live code below to recreate the finished example:
 
 {{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/functions/functions2.html", '100%', 700)}}
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/functions/functions2-download.html) to work in your own editor or in an online editor.
 
@@ -63,7 +63,7 @@ Try updating the live code below to recreate the finished example:
 
 {{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/functions/functions3.html", '100%', 400)}}
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/functions/functions3-download.html) to work in your own editor or in an online editor.
 
@@ -75,6 +75,6 @@ We'd like you to change this into an arrow function. See how compact you can mak
 
 {{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/functions/functions4.html", '100%', 400)}}
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/functions/functions4-download.html) to work in your own editor or in an online editor.
