@@ -261,7 +261,6 @@ Just about all websites you'll use in the modern day will employ {{glossary("CSS
   ```
 
   > [!NOTE]
-  >
   > The `<script>` element may look like a {{glossary("void element")}}, but it's not, and so needs a closing tag. Instead of pointing to an external script file, you can also choose to put your script inside the `<script>` element.
 
 ### Active learning: applying CSS and JavaScript to a page
