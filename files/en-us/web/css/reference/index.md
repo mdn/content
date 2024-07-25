@@ -99,7 +99,7 @@ Combinators are selectors that establish a relationship between two or more simp
 - [Pseudo elements](/en-US/docs/Web/CSS/Pseudo-elements) `::`
   - : Represents entities that are not included in HTML.
 
-> **Callout:**
+> [!CALLOUT]
 >
 > See also [selectors in the Selectors specification](https://drafts.csswg.org/selectors/) and the [pseudo-element specification](https://drafts.csswg.org/css-pseudo/).
 

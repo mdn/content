@@ -387,7 +387,8 @@ If the partials are all loaded into an index file, as implied above, you can the
 @use "foundation";
 ```
 
-> **Note:** A simple way to try out Sass is to use [CodePen](https://codepen.io) — you can enable Sass for your CSS in the Settings for a Pen, and CodePen will then run the Sass parser for you in order that you can see the resulting webpage with regular CSS applied. Sometimes you will find that CSS tutorials have used Sass rather than plain CSS in their CodePen demos, so it is handy to know a little bit about it.
+> [!NOTE]
+> A simple way to try out Sass is to use [CodePen](https://codepen.io) — you can enable Sass for your CSS in the Settings for a Pen, and CodePen will then run the Sass parser for you in order that you can see the resulting webpage with regular CSS applied. Sometimes you will find that CSS tutorials have used Sass rather than plain CSS in their CodePen demos, so it is handy to know a little bit about it.
 
 #### Post-processing for optimization
 

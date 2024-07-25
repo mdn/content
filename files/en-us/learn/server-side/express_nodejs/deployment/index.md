@@ -51,19 +51,22 @@ The server computer could be located on your premises and connected to the Inter
 
 This sort of remotely accessible computing/networking hardware is referred to as _Infrastructure as a Service (IaaS)_. Many IaaS vendors provide options to preinstall a particular operating system, onto which you must install the other components of your production environment. Other vendors allow you to select more fully-featured environments, perhaps including a complete Node setup.
 
-> **Note:** Pre-built environments can make setting up your website very easy because they reduce the configuration, but the available options may limit you to an unfamiliar server (or other components) and may be based on an older version of the OS. Often it is better to install components yourself so that you get the ones that you want, and when you need to upgrade parts of the system, you have some idea of where to start!
+> [!NOTE]
+> Pre-built environments can make setting up your website very easy because they reduce the configuration, but the available options may limit you to an unfamiliar server (or other components) and may be based on an older version of the OS. Often it is better to install components yourself so that you get the ones that you want, and when you need to upgrade parts of the system, you have some idea of where to start!
 
 Other hosting providers support Express as part of a _Platform as a Service_ (_PaaS_) offering. When using this sort of hosting you don't need to worry about most of your production environment (servers, load balancers, etc.) as the host platform takes care of those for you. That makes deployment quite easy because you just need to concentrate on your web application and not any other server infrastructure.
 
 Some developers will choose the increased flexibility provided by IaaS over PaaS, while others will appreciate the reduced maintenance overhead and easier scaling of PaaS. When you're getting started, setting up your website on a PaaS system is much easier, so that is what we'll do in this tutorial.
 
-> **Note:** If you choose a Node/Express-friendly hosting provider they should provide instructions on how to set up an Express website using different configurations of web server, application server, reverse proxy, etc. For example, there are many step-by-step guides for various configurations in the [Digital Ocean Node community docs](https://www.digitalocean.com/community/tutorials?q=node).
+> [!NOTE]
+> If you choose a Node/Express-friendly hosting provider they should provide instructions on how to set up an Express website using different configurations of web server, application server, reverse proxy, etc. For example, there are many step-by-step guides for various configurations in the [Digital Ocean Node community docs](https://www.digitalocean.com/community/tutorials?q=node).
 
 ## Choosing a hosting provider
 
 There are numerous hosting providers that are known to either actively support or work well with _Node_ (and _Express_). These vendors provide different types of environments (IaaS, PaaS), and different levels of computing and network resources at different prices.
 
-> **Note:** There are a lot of hosting solutions, and their services and pricing can change over time. While we introduce a few options below, it is worth checking both these and other options before selecting a hosting provider.
+> [!NOTE]
+> There are a lot of hosting solutions, and their services and pricing can change over time. While we introduce a few options below, it is worth checking both these and other options before selecting a hosting provider.
 
 Some of the things to consider when choosing a host:
 
@@ -85,7 +88,8 @@ Popular choices in this category include [Glitch](https://glitch.com/), [Python 
 Most providers also offer a "basic" or "hobby" tier that is intended for small production sites, and which provide more useful levels of computing power and fewer limitations.
 [Railway](https://railway.app/), [Heroku](https://www.heroku.com/), [Digital Ocean](https://www.digitalocean.com/) and [Python Anywhere](https://www.pythonanywhere.com/) are examples of popular hosting providers that have a relatively inexpensive basic computing tier (in the $5 to $10 USD per month range).
 
-> **Note:** Remember that price is not the only selection criterion.
+> [!NOTE]
+> Remember that price is not the only selection criterion.
 > If your website is successful, it may turn out that scalability is the most important consideration.
 
 ## Getting your website ready to publish
@@ -95,7 +99,8 @@ At the bare minimum, you will want to modify the database configuration so that 
 
 In the following subsections, we outline the most important changes that you should make to your app.
 
-> **Note:** There are other useful tips in the Express docs — see [Production best practices: performance and reliability](https://expressjs.com/en/advanced/best-practice-performance.html) and [Production Best Practices: Security](https://expressjs.com/en/advanced/best-practice-security.html).
+> [!NOTE]
+> There are other useful tips in the Express docs — see [Production best practices: performance and reliability](https://expressjs.com/en/advanced/best-practice-performance.html) and [Production Best Practices: Security](https://expressjs.com/en/advanced/best-practice-security.html).
 
 ### Database configuration
 
@@ -133,7 +138,8 @@ async function main() {
 }
 ```
 
-> **Note:** Another common way to keep production database credentials separate from source code is to read them from an `.env` file that is separately deployed to the file system (for example, they might be read using the npm [dotenv](https://www.npmjs.com/package/dotenv) module).
+> [!NOTE]
+> Another common way to keep production database credentials separate from source code is to read them from an `.env` file that is separately deployed to the file system (for example, they might be read using the npm [dotenv](https://www.npmjs.com/package/dotenv) module).
 
 ### Set NODE_ENV to 'production'
 
@@ -141,7 +147,8 @@ We can remove stack traces in error pages by setting the `NODE_ENV` environment 
 
 This change can be made either by using `export`, an environment file, or the OS initialization system.
 
-> **Note:** This is actually a change you make in your environment setup rather than your app, but important enough to note here! We'll show how this is set for our hosting example below.
+> [!NOTE]
+> This is actually a change you make in your environment setup rather than your app, but important enough to note here! We'll show how this is set for our hosting example below.
 
 ### Log appropriately
 
@@ -180,7 +187,8 @@ set DEBUG=author,book
 export DEBUG="author,book"
 ```
 
-> **Note:** Calls to `debug` can replace logging you might previously have done using `console.log()` or `console.error()`. Replace any `console.log()` calls in your code with logging via the [debug](https://www.npmjs.com/package/debug) module. Turn the logging on and off in your development environment by setting the DEBUG variable and observe the impact this has on logging.
+> [!NOTE]
+> Calls to `debug` can replace logging you might previously have done using `console.log()` or `console.error()`. Replace any `console.log()` calls in your code with logging via the [debug](https://www.npmjs.com/package/debug) module. Turn the logging on and off in your development environment by setting the DEBUG variable and observe the impact this has on logging.
 
 If you need to log website activity you can use a logging library like _Winston_ or _Bunyan_. For more information on this topic see: [Production best practices: performance and reliability](https://expressjs.com/en/advanced/best-practice-performance.html).
 
@@ -216,7 +224,8 @@ app.use("/catalog", catalogRouter); // Add catalog routes to middleware chain.
 // …
 ```
 
-> **Note:** For a high-traffic website in production you wouldn't use this middleware. Instead, you would use a reverse proxy like [Nginx](https://nginx.org/).
+> [!NOTE]
+> For a high-traffic website in production you wouldn't use this middleware. Instead, you would use a reverse proxy like [Nginx](https://nginx.org/).
 
 ### Use Helmet to protect against well known vulnerabilities
 
@@ -293,7 +302,8 @@ app.use(limiter);
 
 The command above limits all requests to 20 per minute (you can change this as needed).
 
-> **Note:** Third-party services like [Cloudflare](https://www.cloudflare.com/) can also be used if you need more advanced protection against denial of service or other types of attacks.
+> [!NOTE]
+> Third-party services like [Cloudflare](https://www.cloudflare.com/) can also be used if you need more advanced protection against denial of service or other types of attacks.
 
 #### Set node version
 
@@ -338,7 +348,8 @@ This can make deployment and iterative development much easier.
 
 For this tutorial we'll set up a [GitHub](https://github.com/) account and repository for the library, and use the **git** tool to upload our source code.
 
-> **Note:** You can skip this step if you're already using GitHub to manage your source code!
+> [!NOTE]
+> You can skip this step if you're already using GitHub to manage your source code!
 >
 > Note that using source code management tools is good software development practice, as it allows you to try out changes, and switch between your experiments and "known good code" when you need to!
 
@@ -438,7 +449,8 @@ git pull upstream main # Merge the latest changes from GitHub
 git checkout -b my_changes # Create a new branch
 ```
 
-> **Note:** Git is incredibly powerful!
+> [!NOTE]
+> Git is incredibly powerful!
 > To learn more, see [Learning Git](https://docs.github.com/en/get-started/quickstart/git-and-github-learning-resources).
 
 ## Example: Hosting on Glitch
@@ -511,7 +523,8 @@ Glitch [plans to update node and keep it better updated in future](https://blog.
 Instead of downgrading the `node` version, you could upload your project to see if it builds.
 If there are errors and your application doesn't load, you should try setting the `node` version to `>=v16` in your `package.json` in the Glitch editor.
 
-> **Note:** You can also check the supported versions by entering the following command into the terminal of any Glitch project:
+> [!NOTE]
+> You can also check the supported versions by entering the following command into the terminal of any Glitch project:
 >
 > ```sh
 > ls -l /opt/nvm/versions/node | grep '^d' | awk '{ print $9 }'
@@ -543,7 +556,8 @@ You can get the live site URL by selecting the **Share** button.
 Open a new browser tab and copy the link for the live site into the address bar.
 The local library site should open and display data from the development database.
 
-> **Note:** This process was a one-off import from GitHub.
+> [!NOTE]
+> This process was a one-off import from GitHub.
 > You can also use GitHub actions such as [glitch-project-sync](https://github.com/marketplace/actions/glitch-project-sync) to keep Glitch and > your project synchronized.
 
 ### Use a production MongoDB database
@@ -559,7 +573,8 @@ The site updates as you enter values into the editor.
 
 ![Glitch .env file editor for private data with production variables](glitch_env.png)
 
-> **Note:** We didn't create this file.
+> [!NOTE]
+> We didn't create this file.
 > It is intended for [private data](https://help.glitch.com/hc/en-us/articles/16287550167437-Adding-Private-Data) and was created automatically on import to Glitch.
 > It is never exported or copied.
 
@@ -572,7 +587,8 @@ Open `.env` and add a `NODE_ENV` variable with value `production` (see the scree
 The local library application is now set up and configured for production use.
 You can add data through the website interface, and it should work as it did during development (though with less debug information exposed for invalid pages).
 
-> **Note:** If you only want to add some data for testing, you might use the `populatedb` script (with your MongoDB production database URL) as discussed in the section [Express Tutorial Part 3: Using a Database (with Mongoose) Testing — create some items](/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose#testing_%E2%80%94_create_some_items).
+> [!NOTE]
+> If you only want to add some data for testing, you might use the `populatedb` script (with your MongoDB production database URL) as discussed in the section [Express Tutorial Part 3: Using a Database (with Mongoose) Testing — create some items](/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose#testing_%E2%80%94_create_some_items).
 
 ### Debugging Express apps on Glitch
 
@@ -591,7 +607,8 @@ This section provides a practical demonstration of how to install _LocalLibrary_
 
 ### Why Railway?
 
-> **Warning:** Railway no longer has a completely free starter tier.
+> [!WARNING]
+> Railway no longer has a completely free starter tier.
 > We've kept these instructions because Railway has some great features, and will be a better option for some users.
 
 Railway is an attractive hosting option for several reasons:
@@ -616,7 +633,8 @@ For example, Railway recognizes node applications because they have a **package.
 For example, if the application includes the file **package-lock.json** Railway knows to use _npm_ to install the packages, whereas if it finds **yarn.lock** it knows to use _yarn_.
 Having installed all the dependencies, Railway will look for scripts named "build" and "start" in the package file, and use these to build and run the code.
 
-> **Note:** Railway uses [Nixpacks](https://nixpacks.com/docs/) to recognize various web application frameworks written in different programming languages.
+> [!NOTE]
+> Railway uses [Nixpacks](https://nixpacks.com/docs/) to recognize various web application frameworks written in different programming languages.
 > You don't need to know anything else for this tutorial, but you can find out more about options for deploying node applications in [Nixpacks Node](https://nixpacks.com/docs/providers/node).
 
 Once the application is running it can configure itself using information provided in [environment variables](https://docs.railway.app/develop/variables).
@@ -735,7 +753,8 @@ Then press the **Add** button.
 The local library application is now setup and configured for production use.
 You can add data through the website interface and it should work in the same way that it did during development (though with less debug information exposed for invalid pages).
 
-> **Note:** If you just want to add some data for testing you might use the `populatedb` script (with your MongoDB production database URL) as discussed in the section [Express Tutorial Part 3: Using a Database (with Mongoose) Testing — create some items](/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose#testing_%E2%80%94_create_some_items).
+> [!NOTE]
+> If you just want to add some data for testing you might use the `populatedb` script (with your MongoDB production database URL) as discussed in the section [Express Tutorial Part 3: Using a Database (with Mongoose) Testing — create some items](/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose#testing_%E2%80%94_create_some_items).
 
 ### Install the client
 
