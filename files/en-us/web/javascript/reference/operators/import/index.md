@@ -33,7 +33,7 @@ Returns a promise which:
 - If `moduleName` refers to a module that doesn't exist, rejects with an implementation-defined error (Node uses a generic `Error`, while all browsers use `TypeError`).
 - If evaluation of the referenced module throws, rejects with the thrown error.
 
-> **Note:** `import()` never synchronously throws an error.
+> [!NOTE] > `import()` never synchronously throws an error.
 
 ## Description
 
@@ -90,7 +90,8 @@ import("/my-module.js").then((mod2) => {
 });
 ```
 
-> **Warning:** Do not export a function called `then()` from a module. This will cause the module to behave differently when imported dynamically than when imported statically.
+> [!WARNING]
+> Do not export a function called `then()` from a module. This will cause the module to behave differently when imported dynamically than when imported statically.
 
 ## Examples
 
