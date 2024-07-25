@@ -7,7 +7,7 @@ browser-compat: path.to.feature.NameOfTheElement
 
 {{MDNSidebar}}
 
-> [!NOTE] > _Remove this whole explanatory note before publishing_
+> **Note:** _Remove this whole explanatory note before publishing_
 >
 > ---
 >

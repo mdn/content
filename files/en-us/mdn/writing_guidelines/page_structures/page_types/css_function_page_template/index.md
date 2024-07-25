@@ -7,7 +7,7 @@ browser-compat: css.functions.NameOfTheFunction
 
 {{MDNSidebar}}
 
-> [!NOTE] > _Remove this note block before publishing._
+> **Note:** _Remove this note block before publishing._
 >
 > ---
 >
