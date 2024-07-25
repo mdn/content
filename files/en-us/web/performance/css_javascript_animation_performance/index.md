@@ -21,7 +21,8 @@ In terms of performance, there is no difference between implementing an animatio
 
 The {{domxref("Window.requestAnimationFrame","requestAnimationFrame()")}} API provides an efficient way to make animations in JavaScript. The callback function of the method is called by the browser before the next repaint on each frame. Compared to {{domxref("setTimeout()")}}/{{domxref("setInterval()")}}, which need a specific delay parameter, `requestAnimationFrame()` is much more efficient. Developers can create an animation by changing an element's style each time the loop is called (or updating the Canvas draw, or whatever.)
 
-> **Note:** Like CSS transitions and animations, `requestAnimationFrame()` pauses when the current tab is pushed into the background.
+> [!NOTE]
+> Like CSS transitions and animations, `requestAnimationFrame()` pauses when the current tab is pushed into the background.
 
 For more details read [animating with JavaScript from setInterval to requestAnimationFrame](https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/).
 
@@ -176,7 +177,8 @@ To enable the OMTA (Off Main Thread Animation) in Firefox, you can go to _about:
 
 After enabling OMTA, try running the above test again. You should see that the FPS of the CSS animations will now be significantly higher.
 
-> **Note:** In Nightly/Developer Edition, you should see that OMTA is enabled by default, so you might have to do the tests the other way around (test with it enabled first, then disable to test without OMTA.)
+> [!NOTE]
+> In Nightly/Developer Edition, you should see that OMTA is enabled by default, so you might have to do the tests the other way around (test with it enabled first, then disable to test without OMTA.)
 
 ## Summary
 
