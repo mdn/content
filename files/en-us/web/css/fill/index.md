@@ -17,14 +17,22 @@ The areas inside the outline of the SVG shape or text are painted. For complex s
 ## Syntax
 
 ```css
-/* keyword */
+/* keywords */
 fill: none;
 fill: context-fill;
 fill: context-stroke;
 
 /* <color> values */
+fill: red;
+fill: hsl(120deg 75% 25% / 60%);
 
 /* <url> values */
+fill: url(#gradientElementID);
+fill: url(star.png);
+
+/* <url> with fallback */
+fill: url(#gradientElementID) blue;
+fill: url(star.png) none;
 
 /* Global values */
 fill: inherit;
@@ -40,6 +48,14 @@ fill: unset;
 
   - : No `fill` is painted; the areas inside the stroke, if any, are transparent.
 
+- `context-fill`
+
+  - : Uses the paint value of `fill` from a context element.
+
+- `context-stroke`
+
+  - : Uses the paint value of `stroke` from a context element.
+
 - {{cssxref("color_value", "&lt;color>")}}
 
   - : The color of the fill as any valid CSS {{cssxref("color_value", "&lt;color>")}} value.
@@ -47,14 +63,6 @@ fill: unset;
 - `<url>`
 
   - : A URL reference to an SVG paint server element, such as {{SVGElement("linearGradient")}}, {{SVGElement("radialGradient")}}, or {{SVGElement("pattern")}} element. The resource reference can optionally be followed by a fall-back `<color>` or `none` which will be used as a fallback if the paint server referenced doesn't resolve.
-
-- `context-fill`
-
-  - : something
-
-- `context-stroke`
-
-  - : something
 
 ## Formal definition
 
