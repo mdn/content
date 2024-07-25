@@ -154,7 +154,7 @@ class Subclass extends ClassWithPrivateField {
 new Subclass(); // In some dev tools, it shows Subclass {#privateField: 42, #subPrivateField: 23}
 ```
 
-> [!NOTE] > `#privateField` from the `ClassWithPrivateField` base class is private to `ClassWithPrivateField` and is not accessible from the derived `Subclass`.
+> **Note:** `#privateField` from the `ClassWithPrivateField` base class is private to `ClassWithPrivateField` and is not accessible from the derived `Subclass`.
 
 #### Returning overriding object
 
