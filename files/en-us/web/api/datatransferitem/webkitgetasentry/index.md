@@ -170,7 +170,7 @@ Now it's time to start building the list. First, the list is emptied by setting 
 That leaves us with an empty {{HTMLElement("ul")}} to begin inserting directory entries into.
 
 Then we iterate over the items in the list of dropped items.
-For each one, we call its {{domxref("DataTransferItem.webkitGetAsEntry", "webkitGetAsEntry()")}} method to obtain a {{domxref("FileSystemEntry")}} representing the file.
+For each one, we call its `webkitGetAsEntry()` method to obtain a {{domxref("FileSystemEntry")}} representing the file.
 If that's successful, we call `scanFiles()` to process the item—either by adding it to the list if it's just a file or by adding it and walking down into it if it's a directory.
 
 ### Result

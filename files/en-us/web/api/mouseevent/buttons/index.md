@@ -15,7 +15,7 @@ If more than one button is pressed, the button values are added together to prod
 For example, if the secondary (`2`) and auxiliary (`4`) buttons are pressed simultaneously, the value is `6` (i.e., `2 + 4`).
 
 > **Note:** Do not confuse this property with the {{domxref("MouseEvent.button")}} property.
-> The {{domxref("MouseEvent.buttons")}} property indicates the state of buttons pressed during any kind of mouse event,
+> The `MouseEvent.buttons` property indicates the state of buttons pressed during any kind of mouse event,
 > while the {{domxref("MouseEvent.button")}} property only guarantees the correct value for mouse events caused by pressing or releasing one or multiple buttons.
 
 ## Value
