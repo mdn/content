@@ -142,4 +142,4 @@ For object alignment in other elements (such as {{SVGElement("text")}}), see {{S
 
 ## See also
 
-- {{cssxref("CSS_Box_Alignment#baseline_alignment", "CSS alignment-baseline")}}
+- [CSS baseline alignment](/en-US/docs/Web/CSS/CSS_box_alignment#baseline_alignment)

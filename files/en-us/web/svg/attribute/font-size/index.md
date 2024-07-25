@@ -9,7 +9,7 @@ browser-compat: svg.global_attributes.font-size
 
 The **`font-size`** attribute refers to the size of the font from {{Glossary("baseline/typography", "baseline")}} to baseline when multiple lines of text are set solid in a multiline layout environment.
 
-> **Note:** As a presentation attribute, `font-size` can be used as a CSS property. See the {{cssxref("font-size", "CSS font-size")}} property for more information.
+> **Note:** As a presentation attribute, `font-size` can be used as a CSS property. See the CSS {{cssxref("font-size")}} property for more information.
 
 You can use this attribute with the following SVG elements:
 
@@ -71,4 +71,4 @@ For a description of the values, please refer to the [CSS `font-size`](/en-US/do
 
 ## See also
 
-- {{cssxref("font-size", "CSS font-size")}}
+- {{cssxref("font-size")}}

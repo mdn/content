@@ -221,7 +221,7 @@ div {
 }
 ```
 
-[`CSS Transitions`](https://www.w3.org/TR/css-transitions-1/) can be used to set the duration to zero for the initial stage of animation.
+[CSS transitions](/en-US/docs/Web/CSS/CSS_transitions) can be used to set the duration to zero for the initial stage of animation.
 
 ```css
 div {
