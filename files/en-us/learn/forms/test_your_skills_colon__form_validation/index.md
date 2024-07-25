@@ -22,7 +22,7 @@ In this task, we are providing you with a simple support query form, and we want
 
 Try submitting your form — it should refuse to submit until the above constraints are followed, and give suitable error messages. To help, you might want to consider adding some simple CSS to show when a form field is valid or invalid.
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/form-validation/form-validation1-download.html) to work in your own editor or in an online editor.
 
@@ -38,7 +38,7 @@ Now we want you to take the same form you saw in the previous task (use your pre
 
 Again, to help you might want to consider adding some simple CSS to show when a form field is valid or invalid.
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/form-validation/form-validation2-download.html) to work in your own editor or in an online editor.
 
@@ -49,6 +49,6 @@ In our final task for this set, we are providing you with a similar example to w
 1. Make the input mandatory to fill in, and give it a minimum length of 10 characters.
 2. Add an event listener that checks whether the inputted value is an email address, and whether it is long enough. If it doesn't look like an email address or is too short, provide the user with appropriate custom error messages.
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/form-validation/form-validation3-download.html) to work in your own editor or in an online editor.

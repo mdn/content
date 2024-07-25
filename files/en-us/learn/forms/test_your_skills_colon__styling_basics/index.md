@@ -20,6 +20,6 @@ Our basic form styling assessment is fairly free-form, and you have a lot of fle
 2. On top of that, add in some nice, consistent styling for the inputs and button.
 3. Use some kind of layout technique to make the inputs and labels line up neatly.
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/styling-basics/styling-basics1-download.html) to work in your own editor or in an online editor.

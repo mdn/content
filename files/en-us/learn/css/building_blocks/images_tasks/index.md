@@ -24,7 +24,7 @@ Try updating the live code below to recreate the finished example:
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/images/object-fit.html", '100%', 1000)}}
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/images/object-fit-download.html) to work in your own editor or in an online editor.
 
@@ -45,6 +45,6 @@ Try updating the live code below to recreate the finished example:
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/images/form.html", '100%', 600)}}
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/images/form-download.html) to work in your own editor or in an online editor.

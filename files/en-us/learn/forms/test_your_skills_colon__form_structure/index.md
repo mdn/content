@@ -22,6 +22,6 @@ In this task we want you to structure the provided form features:
 
 {{EmbedGHLiveSample("learning-area/html/forms/tasks/form-structure/form-structure1.html", '100%', 700)}}
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/form-structure/form-structure1-download.html) to work in your own editor or in an online editor.

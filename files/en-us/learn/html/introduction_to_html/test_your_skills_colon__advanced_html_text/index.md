@@ -24,7 +24,7 @@ Try updating the live code below to recreate the finished example:
 
 {{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/advanced-text/advanced-text1.html", '100%', 700)}}
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/advanced-text/advanced-text1-download.html) to work in your own editor or in an online editor.
 
@@ -45,6 +45,6 @@ Try updating the live code below to recreate the finished example:
 
 {{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/advanced-text/advanced-text2.html", '100%', 700)}}
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/advanced-text/advanced-text2-download.html) to work in your own editor or in an online editor.

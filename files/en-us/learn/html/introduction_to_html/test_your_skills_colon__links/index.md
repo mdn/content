@@ -27,7 +27,7 @@ Try updating the live code below to recreate the finished example:
 
 {{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/links/links1.html", '100%', 700)}}
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/links/links1-download.html) to work in your own editor or in an online editor.
 
@@ -46,7 +46,7 @@ Try updating the live code below to recreate the finished example:
 
 {{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/links/links2.html", '100%', 800)}}
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/links/links2-download.html) to work in your own editor or in an online editor.
 
@@ -63,6 +63,6 @@ Try updating the live code below to recreate the finished example:
 
 {{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/links/links3.html", '100%', 700)}}
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/links/links3-download.html) to work in your own editor or in an online editor.

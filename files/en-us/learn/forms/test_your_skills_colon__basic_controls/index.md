@@ -24,7 +24,7 @@ Try updating the live code below to recreate the finished example:
 
 {{EmbedGHLiveSample("learning-area/html/forms/tasks/basic-controls/basic-controls1.html", '100%', 700)}}
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/basic-controls/basic-controls1-download.html) to work in your own editor or in an online editor.
 
@@ -41,7 +41,7 @@ Try updating the live code below to recreate the finished example:
 
 {{EmbedGHLiveSample("learning-area/html/forms/tasks/basic-controls/basic-controls2.html", '100%', 700)}}
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/basic-controls/basic-controls2-download.html) to work in your own editor or in an online editor.
 
@@ -57,6 +57,6 @@ Try updating the live code below to recreate the finished example:
 
 {{EmbedGHLiveSample("learning-area/html/forms/tasks/basic-controls/basic-controls3.html", '100%', 700)}}
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/basic-controls/basic-controls3-download.html) to work in your own editor or in an online editor.

@@ -28,7 +28,7 @@ Try updating the live code below to recreate the finished example:
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/backgrounds/backgrounds1.html", '100%', 700)}}
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/backgrounds/backgrounds1-download.html) to work in your own editor or in an online editor.
 
@@ -48,6 +48,6 @@ Try updating the live code below to recreate the finished example:
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/backgrounds/backgrounds2.html", '100%', 700)}}
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/backgrounds/backgrounds2-download.html) to work in your own editor or in an online editor.

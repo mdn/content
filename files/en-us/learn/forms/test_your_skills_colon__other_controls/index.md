@@ -25,7 +25,7 @@ To create the input, update the HTML code in the editor below:
 
 {{EmbedGHLiveSample("learning-area/html/forms/tasks/other-controls/other-controls1.html", '100%', 500)}}
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/other-controls/other-controls1-download.html) to work in your own editor or in an online editor.
 
@@ -41,7 +41,7 @@ To create the menu, update the HTML code in the editor below:
 
 {{EmbedGHLiveSample("learning-area/html/forms/tasks/other-controls/other-controls2.html", '100%', 500)}}
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/other-controls/other-controls2-download.html) to work in your own editor or in an online editor.
 
@@ -57,6 +57,6 @@ To create the input, update the HTML code in the editor below:
 
 {{EmbedGHLiveSample("learning-area/html/forms/tasks/other-controls/other-controls3.html", '100%', 500)}}
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/other-controls/other-controls3-download.html) to work in your own editor or in an online editor.

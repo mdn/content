@@ -24,7 +24,7 @@ Try updating the live code below to recreate the finished example:
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/multicol/multicol1.html", '100%', 1000)}}
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/multicol/multicol1-download.html) to work in your own editor or in an online editor.
 
@@ -40,7 +40,7 @@ Try updating the live code below to recreate the finished example:
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/multicol/multicol2.html", '100%', 1000)}}
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/multicol/multicol2-download.html) to work in your own editor or in an online editor.
 
@@ -54,6 +54,6 @@ Try updating the live code below to recreate the finished example:
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/multicol/multicol3.html", '100%', 1000)}}
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/multicol/multicol3-download.html) to work in your own editor or in an online editor.

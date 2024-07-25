@@ -28,7 +28,7 @@ Additional question:
 
 - As an extra challenge, can you change the target to display underneath the text?
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/position/position1-download.html) to work in your own editor or in an online editor.
 
@@ -42,6 +42,6 @@ Try updating the live code below to recreate the finished example:
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/position/position2.html", '100%', 1300)}}
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/position/position2-download.html) to work in your own editor or in an online editor.

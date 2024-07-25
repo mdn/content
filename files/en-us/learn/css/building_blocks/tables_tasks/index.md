@@ -38,6 +38,6 @@ Additional question:
 
 - What can you do to make the table layout behave a bit more predictably? Think of how table columns are sized by default and how we can change this behavior to size the columns according to the width of their headings.
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/tables/table-download.html) to work in your own editor or in an online editor.
