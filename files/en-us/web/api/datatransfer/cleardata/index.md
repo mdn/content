@@ -9,7 +9,7 @@ browser-compat: api.DataTransfer.clearData
 {{APIRef("HTML Drag and Drop API")}}
 
 The **`DataTransfer.clearData()`** method removes the drag
-operation's {{domxref("DataTransfer","drag data")}} for the given type. If data for the
+operation's [drag data](/en-US/docs/Web/API/DataTransfer) for the given type. If data for the
 given type does not exist, this method does nothing.
 
 If this method is called with no arguments or the format is an empty

@@ -100,7 +100,7 @@ await (await navigator.storage.getDirectory()).remove({ recursive: true });
 
 ### Listing the contents of a folder
 
-{{domxref("FileSystemDirectoryHandle")}} is an [asynchronous iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols). As such, you can iterate over it with a [`for await…of`](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of) loop and standard methods such as [`entries()`](/en-US/docs/Web/API/FileSystemDirectoryHandle/entries), [`values()`](/en-US/docs/Web/API/FileSystemDirectoryHandle/entries), and [`keys()`](/en-US/docs/Web/API/FileSystemDirectoryHandle/entries).
+{{domxref("FileSystemDirectoryHandle")}} is an [asynchronous iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols). As such, you can iterate over it with a [`for await...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of) loop and standard methods such as [`entries()`](/en-US/docs/Web/API/FileSystemDirectoryHandle/entries), [`values()`](/en-US/docs/Web/API/FileSystemDirectoryHandle/entries), and [`keys()`](/en-US/docs/Web/API/FileSystemDirectoryHandle/entries).
 
 For example:
 
