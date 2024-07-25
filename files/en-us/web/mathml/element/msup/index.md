@@ -18,7 +18,8 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 - `superscriptshift` {{deprecated_inline}} {{Non-standard_Inline}}
   - : A {{cssxref("length-percentage")}} indicating the minimum amount to shift the baseline of the superscript up.
 
-> **Note:** For the `superscriptshift` attribute, some browsers may also accept [legacy MathML lengths](/en-US/docs/Web/MathML/Values#legacy_mathml_lengths).
+> [!NOTE]
+> For the `superscriptshift` attribute, some browsers may also accept [legacy MathML lengths](/en-US/docs/Web/MathML/Values#legacy_mathml_lengths).
 
 ## Examples
 
