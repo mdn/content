@@ -102,7 +102,8 @@ This works better with longer pieces of audio or video, but press play and click
 
 ![A simple audio player with play button, seek bar and volume control, with a series of red rectangles beneath it representing time ranges.](bufferedtimeranges.png)
 
-> **Note:** You can see the [timerange code running live on JS Bin](https://jsbin.com/memazaro/1/edit).
+> [!NOTE]
+> You can see the [timerange code running live on JS Bin](https://jsbin.com/memazaro/1/edit).
 
 ## Seekable
 
@@ -121,7 +122,7 @@ If we wish to create our own custom player, we may want to provide feedback on h
 const seekableEnd = audio.seekable.end(audio.seekable.length - 1);
 ```
 
-> **Note:** `audio.seekable.end(audio.seekable.length - 1)` actually tells us the end point of the last time range that is seekable (not all seekable media). In practice this is good enough as the browser either enables range requests or it doesn't. If it doesn't then `audio.seekable` will be equivalent to `audio.buffered`, which will give a valid indication of the end of seekable media. If range requests are enabled this value usually becomes the duration of the media almost instantly.
+> [!NOTE] > `audio.seekable.end(audio.seekable.length - 1)` actually tells us the end point of the last time range that is seekable (not all seekable media). In practice this is good enough as the browser either enables range requests or it doesn't. If it doesn't then `audio.seekable` will be equivalent to `audio.buffered`, which will give a valid indication of the end of seekable media. If range requests are enabled this value usually becomes the duration of the media almost instantly.
 
 It is better perhaps to give an indication of how much media has actually downloaded — this what the browser's native players seem to display.
 
@@ -213,7 +214,8 @@ This should give you results similar to the following, where the light grey bar 
 
 ![A simple audio player with play button, seek bar, and volume control, and a progress bar below the controls. The progress bar has a green portion to show played video and a light grey portion to show how much has been buffered.](bufferedprogress.png)
 
-> **Note:** You can see the [buffering code running live on JS Bin](https://jsbin.com/badimipi/1/edit).
+> [!NOTE]
+> You can see the [buffering code running live on JS Bin](https://jsbin.com/badimipi/1/edit).
 
 ## A quick word about Played
 
