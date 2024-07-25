@@ -10,7 +10,7 @@ browser-compat: http.headers.Content-Type
 The **`Content-Type`** {{Glossary("representation header")}} is used to indicate the original {{Glossary("MIME type", "media type")}} of the resource prior to any content encoding applied before transmission.
 
 In responses, the `Content-Type` header informs the client about the media type of the returned data.
-In requests such as {{HTTPMethod("POST")}} or {{HTTPMethod("PUT")}}, the client uses the `Content-Type` header to specify the type of payload data being sent to the server.
+In requests such as {{HTTPMethod("POST")}} or {{HTTPMethod("PUT")}}, the client uses the `Content-Type` header to specify the type of content being sent to the server.
 If a server implementation or configuration is strict about content type handling, a {{HTTPStatus("415")}} client error response may be returned.
 
 The `Content-Type` header differs from {{HTTPHeader("Content-Encoding")}} in that `Content-Encoding` helps the recipient understand how to decode data to its original form.
