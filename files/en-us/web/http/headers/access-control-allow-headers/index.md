@@ -11,7 +11,7 @@ The **`Access-Control-Allow-Headers`** response header is used in response to a 
 
 This header is required if the request has an {{HTTPHeader("Access-Control-Request-Headers")}} header.
 
-> **Note:** {{glossary("CORS-safelisted_request_header", "CORS-safelisted request headers")}} are always allowed and usually aren't listed in `Access-Control-Allow-Headers` (unless there is a need to circumvent the safelist [additional restrictions](/en-US/docs/Glossary/CORS-safelisted_request_header#additional_restrictions)).
+> [!NOTE] > {{glossary("CORS-safelisted_request_header", "CORS-safelisted request headers")}} are always allowed and usually aren't listed in `Access-Control-Allow-Headers` (unless there is a need to circumvent the safelist [additional restrictions](/en-US/docs/Glossary/CORS-safelisted_request_header#additional_restrictions)).
 
 <table class="properties">
   <tbody>

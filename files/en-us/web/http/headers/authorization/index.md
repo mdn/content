@@ -16,7 +16,8 @@ The user-agent should select the most secure authentication scheme that it suppo
 
 This header is stripped from cross-origin redirects.
 
-> **Note:** This header is part of the [General HTTP authentication framework](/en-US/docs/Web/HTTP/Authentication#the_general_http_authentication_framework).
+> [!NOTE]
+> This header is part of the [General HTTP authentication framework](/en-US/docs/Web/HTTP/Authentication#the_general_http_authentication_framework).
 > It can be used with a number of [authentication schemes](/en-US/docs/Web/HTTP/Authentication#authentication_schemes).
 
 <table class="properties">
@@ -125,7 +126,7 @@ For `"Basic"` authentication the credentials are constructed by first combining 
 Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 ```
 
-> **Warning:** {{Glossary("Base64")}}-encoding can easily be reversed to obtain the original name and password, so Basic authentication is completely insecure.
+> [!WARNING] > {{Glossary("Base64")}}-encoding can easily be reversed to obtain the original name and password, so Basic authentication is completely insecure.
 > {{Glossary("HTTPS")}} is always recommended when using authentication, but is even more so when using `Basic` authentication.
 
 See also [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) for examples on how to configure Apache or Nginx servers to password protect your site with HTTP basic authentication.

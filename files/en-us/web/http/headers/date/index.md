@@ -10,7 +10,7 @@ browser-compat: http.headers.Date
 The **`Date`** general HTTP header contains the date and time
 at which the message originated.
 
-> **Warning:** `Date` is listed
+> [!WARNING] > `Date` is listed
 > in the [forbidden header names](https://fetch.spec.whatwg.org/#forbidden-header-name)
 > in the fetch spec, so this code will not send the `Date` header:
 >

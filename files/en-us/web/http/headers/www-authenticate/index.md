@@ -9,7 +9,8 @@ browser-compat: http.headers.WWW-Authenticate
 
 The HTTP **`WWW-Authenticate`** response header defines the [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) methods ("challenges") that might be used to gain access to a specific resource.
 
-> **Note:** This header is part of the [General HTTP authentication framework](/en-US/docs/Web/HTTP/Authentication#the_general_http_authentication_framework), which can be used with a number of [authentication schemes](/en-US/docs/Web/HTTP/Authentication#authentication_schemes).
+> [!NOTE]
+> This header is part of the [General HTTP authentication framework](/en-US/docs/Web/HTTP/Authentication#the_general_http_authentication_framework), which can be used with a number of [authentication schemes](/en-US/docs/Web/HTTP/Authentication#authentication_schemes).
 > Each "challenge" lists a scheme supported by the server and additional parameters that are defined for that scheme type.
 
 A server using [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) will respond with a {{HTTPStatus("401")}} `Unauthorized` response to a request for a protected resource.
@@ -166,11 +167,13 @@ Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 
 For `"Basic"` authentication the credentials are constructed by first combining the username and the password with a colon (`aladdin:opensesame`), and then by encoding the resulting string in [`base64`](/en-US/docs/Glossary/Base64) (`YWxhZGRpbjpvcGVuc2VzYW1l`).
 
-> **Note:** See also [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) for examples on how to configure Apache or Nginx servers to password protect your site with HTTP basic authentication.
+> [!NOTE]
+> See also [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) for examples on how to configure Apache or Nginx servers to password protect your site with HTTP basic authentication.
 
 ### Digest authentication with SHA-256 and MD5
 
-> **Note:** This example is taken from {{RFC("7616")}} "HTTP Digest Access Authentication" (other examples in the specification show the use of `SHA-512`, `charset`, and `userhash`).
+> [!NOTE]
+> This example is taken from {{RFC("7616")}} "HTTP Digest Access Authentication" (other examples in the specification show the use of `SHA-512`, `charset`, and `userhash`).
 
 The client attempts to access a document at URI `http://www.example.org/dir/index.html` that is protected via digest authentication.
 The username for this document is "Mufasa" and the password is "Circle of Life" (note the single space between each of the words).
