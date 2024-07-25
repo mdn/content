@@ -70,7 +70,7 @@ A live region includes the element and all its descendants. When not set on upda
 
 - {{domxref("Element.ariaLive")}}
   - : The [`ariaLive`](/en-US/docs/Web/API/Element/ariaLive) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-live` attribute.
-- {{domxref("ElementInternals.aria-live")}}
+- {{domxref("ElementInternals.ariaLive")}}
   - : The [`ariaLive`](/en-US/docs/Web/API/ElementInternals/ariaLive) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-live` attribute.
 
 ## Associated roles
