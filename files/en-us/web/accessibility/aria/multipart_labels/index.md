@@ -46,7 +46,8 @@ body {
 
 JAWS 8.0 has its own logic to find labels, causing it to always override the accessibleName the textbox of an HTML document gets. With JAWS 8, I have not found a way to make it to accept the label from the example above. But NVDA and Window-Eyes do it just fine, and Orca on Linux also has no problems.
 
-> **Note:** TBD: add more compatibility info
+> [!NOTE]
+> TBD: add more compatibility info
 
 ## Can this be done without ARIA?
 
