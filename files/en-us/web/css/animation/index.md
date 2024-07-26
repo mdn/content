@@ -49,11 +49,11 @@ Each individual animation is specified as:
 
 - zero or one occurrences of the following values:
 
-  - {{cssxref("animation", "&lt;single-easing-function&gt;", "#single-easing-function")}}
-  - {{cssxref("animation", "&lt;single-animation-iteration-count&gt;", "#single-animation-iteration-count")}}
-  - {{cssxref("animation", "&lt;single-animation-direction&gt;", "#single-animation-direction")}}
-  - {{cssxref("animation", "&lt;single-animation-fill-mode&gt;", "#single-animation-fill-mode")}}
-  - {{cssxref("animation", "&lt;single-animation-play-state&gt;", "#single-animation-play-state")}}
+  - [`<single-easing-function>`](#single-easing-function)
+  - [`<single-animation-iteration-count>`](#single-animation-iteration-count)
+  - [`<single-animation-direction>`](#single-animation-direction)
+  - [`<single-animation-fill-mode>`](#single-animation-fill-mode)
+  - [`<single-animation-play-state>`](#single-animation-play-state)
 
 - an optional name for the animation, which may be `none`, a {{cssxref("&lt;custom-ident&gt;")}}, or a {{cssxref("&lt;string&gt;")}}
 
@@ -104,7 +104,8 @@ Consider providing a mechanism for pausing or disabling animation as well as usi
 
 ## Examples
 
-> **Note:** Animating [CSS Box Model](/en-US/docs/Web/CSS/CSS_box_model) properties is discouraged. Animating any box model property is inherently CPU intensive; consider animating the [transform](/en-US/docs/Web/CSS/transform) property instead.
+> [!NOTE]
+> Animating [CSS Box Model](/en-US/docs/Web/CSS/CSS_box_model) properties is discouraged. Animating any box model property is inherently CPU intensive; consider animating the [transform](/en-US/docs/Web/CSS/transform) property instead.
 
 ### Sun Rise
 

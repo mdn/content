@@ -26,7 +26,8 @@ Functional notation: `color-mix(method, color1[ p1], color2[ p2])`
 
   - : The method is the {{CSSXref("&lt;color-interpolation-method&gt;")}}, including the {{glossary("color space")}} preceded by `in`, optionally followed by a {{CSSXref("&lt;hue-interpolation-method&gt;")}}.
 
-> **Note:** When browsers support {{cssxref("@color-profile")}}, custom color spaces may be supported. Currently, the color space must be one of the available color spaces listed in the [formal_syntax](#formal_syntax).
+> [!NOTE]
+> When browsers support {{cssxref("@color-profile")}}, custom color spaces may be supported. Currently, the color space must be one of the available color spaces listed in the [formal_syntax](#formal_syntax).
 
 - `color1`, `color2`
 

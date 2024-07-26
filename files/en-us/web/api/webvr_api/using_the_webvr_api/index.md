@@ -187,7 +187,7 @@ canvas.width = Math.max(leftEye.renderWidth, rightEye.renderWidth) * 2;
 canvas.height = Math.max(leftEye.renderHeight, rightEye.renderHeight);
 ```
 
-Next, we {{domxref("Window.cancelAnimationFrame()", "cancel the animation loop")}} previously set in motion by the {{domxref("Window.requestAnimationFrame()")}} call inside the `drawScene()` function, and instead invoke `drawVRScene()`. This function renders the same scene as before, but with some special WebVR magic going on. The loop inside here is maintained by WebVR's special {{domxref("VRDisplay.requestAnimationFrame")}} method.
+Next, we [cancel the animation loop](/en-US/docs/Web/API/Window/cancelAnimationFrame) previously set in motion by the {{domxref("Window.requestAnimationFrame()")}} call inside the `drawScene()` function, and instead invoke `drawVRScene()`. This function renders the same scene as before, but with some special WebVR magic going on. The loop inside here is maintained by WebVR's special {{domxref("VRDisplay.requestAnimationFrame")}} method.
 
 ```js
 // stop the normal presentation, and start the vr presentation
@@ -474,7 +474,7 @@ window.addEventListener("vrdisplaypresentchange", (e) => {
 });
 ```
 
-As you can see, the {{domxref("VRDisplayEvent", "event object")}} provides two useful properties — {{domxref("VRDisplayEvent.display")}}, which contains a reference to the {{domxref("VRDisplay")}} the event was fired in response to, and {{domxref("VRDisplayEvent.reason")}}, which contains a human-readable reason why the event was fired.
+As you can see, the {{domxref("VRDisplayEvent")}} object provides two useful properties — {{domxref("VRDisplayEvent.display")}}, which contains a reference to the {{domxref("VRDisplay")}} the event was fired in response to, and {{domxref("VRDisplayEvent.reason")}}, which contains a human-readable reason why the event was fired.
 
 This is a very useful event; you could use it to handle cases where the display gets disconnected unexpectedly, stopping errors from being thrown and making sure the user is aware of the situation. In Google's Webvr.info presentation demo, the event is used to run an [`onVRPresentChange()` function](https://github.com/toji/webvr.info/blob/master/samples/03-vr-presentation.html#L174), which updates the UI controls as appropriate and resizes the canvas.
 

@@ -28,7 +28,7 @@ You should provide alternate content inside the `<canvas>` block. That content w
 
 ### Closing `</canvas>` tag
 
-Unlike the {{HTMLElement("img")}} element, the {{HTMLElement("canvas")}} element **requires** the closing tag (`</canvas>`).
+Unlike the {{HTMLElement("img")}} element, the `<canvas>` element **requires** the closing tag (`</canvas>`).
 
 ### Sizing the canvas using CSS versus HTML
 

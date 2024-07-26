@@ -109,7 +109,7 @@ The `<header>` element defines a [`banner`](/en-US/docs/Web/Accessibility/ARIA/R
         >. Note that a <code>&#x3C;header></code> element must not be a
         descendant of an {{HTMLElement("address")}},
         {{HTMLElement("footer")}} or another
-        {{HTMLElement("header")}} element.
+        <code>&lt;header&gt;</code> element.
       </td>
     </tr>
     <tr>
