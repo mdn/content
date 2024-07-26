@@ -20,7 +20,8 @@ To enable monitoring bfcache blocking reasons, the [`PerformanceNavigationTiming
 - Reasons why bfcache usage was blocked.
 - Details such as frame `id` and `name`, to help identify `<iframe>`s in the HTML.
 
-> **Note:** Historically, the deprecated {{domxref("PerformanceNavigation.type")}} property was used to monitor the bfcache, with developers testing for a `type` of "`TYPE_BACK_FORWARD`" to get an indication of the bfcache hit rate. This however did not provide any reasons for bfcache blocking, or any other data. The `notRestoredReasons` property should be used to monitor bfcache blocking, going forward.
+> [!NOTE]
+> Historically, the deprecated {{domxref("PerformanceNavigation.type")}} property was used to monitor the bfcache, with developers testing for a `type` of "`TYPE_BACK_FORWARD`" to get an indication of the bfcache hit rate. This however did not provide any reasons for bfcache blocking, or any other data. The `notRestoredReasons` property should be used to monitor bfcache blocking, going forward.
 
 ## Logging bfcache blocking reasons
 
@@ -187,4 +188,5 @@ Additional blocking reasons may be used by some browsers, for example:
 - {{domxref("PerformanceNavigationTiming.notRestoredReasons")}}
 - {{domxref("NotRestoredReasons")}}
 
-> **Note:** This article is adapted from [Back/forward cache notRestoredReasons API](https://developer.chrome.com/docs/web-platform/bfcache-notrestoredreasons/) by Chris Mills and Barry Pollard, originally published on `developer.chrome.com` in 2023 under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/).
+> [!NOTE]
+> This article is adapted from [Back/forward cache notRestoredReasons API](https://developer.chrome.com/docs/web-platform/bfcache-notrestoredreasons/) by Chris Mills and Barry Pollard, originally published on `developer.chrome.com` in 2023 under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/).
