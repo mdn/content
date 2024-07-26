@@ -156,7 +156,7 @@ CSS anchor positioning changes this paradigm, enabling anchor-positioned element
 
 The function components look like this:
 
-```text
+```plain
 anchor(<anchor-element> <anchor-side>, <fallback>)
 ```
 
@@ -568,7 +568,7 @@ Sizing properties that can accept an `anchor-size()` value include:
 
 `anchor-size()` functions resolve to {{cssxref("length")}} values. Their syntax looks like this:
 
-```text
+```plain
 anchor-size(<anchor-element> <anchor-size>, <length-percentage>)
 ```
 
