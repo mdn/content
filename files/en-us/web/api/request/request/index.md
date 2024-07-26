@@ -144,7 +144,8 @@ constructor to create a copy of the Request (This is similar to calling the
 const copy = new Request(req);
 ```
 
-> **Note:** This last usage is probably only useful in [ServiceWorkers](/en-US/docs/Web/API/Service_Worker_API).
+> [!NOTE]
+> This last usage is probably only useful in [ServiceWorkers](/en-US/docs/Web/API/Service_Worker_API).
 
 ## Specifications
 
