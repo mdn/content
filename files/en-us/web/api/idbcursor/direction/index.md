@@ -37,7 +37,7 @@ cursor to iterate through all the records in the object store. Within each itera
 log the direction of the cursor.
 
 > [!NOTE]
-> we can't change the direction of travel of the cursor using
+> We can't change the direction of travel of the cursor using
 > the `direction` property, as it is read-only. We specify the direction of
 > travel using the 2nd argument of {{domxref("IDBObjectStore.openCursor")}}.
 

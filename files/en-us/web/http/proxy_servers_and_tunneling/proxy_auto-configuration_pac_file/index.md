@@ -308,8 +308,7 @@ myIpAddress()
 
 Returns the server IP address of the machine Firefox is running on, as a string in the dot-separated integer format.
 
-> [!WARNING]
-> myIpAddress() returns the same IP address as the server address returned by **`nslookup localhost`** on a Linux machine. It does not return the public IP address.
+> **Warning:** `myIpAddress()` returns the same IP address as the server address returned by **`nslookup localhost`** on a Linux machine. It does not return the public IP address.
 
 #### Example
 
