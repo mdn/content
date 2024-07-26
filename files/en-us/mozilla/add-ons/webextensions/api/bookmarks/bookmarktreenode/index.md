@@ -23,7 +23,8 @@ An {{jsxref("object")}} with the following properties:
   - : A {{jsxref("string")}} which uniquely identifies the node. Each ID is unique within the user's profile and remains unchanged across browser restarts.
 - `index` {{optional_inline}}
   - : A number which represents the zero-based position of this node within its parent folder, where zero represents the first entry.
-    > **Note:** If you create or move multiple bookmarks, because the {{WebExtAPIRef("bookmarks.create()")}} and {{WebExtAPIRef("bookmarks.move()")}} methods are asynchronous, the requests may get processed in any order. Consequently, the value of each bookmark's index may change or be unknown until all the requests are completed. If the index associated with a bookmark matters to your extension, then – when creating or moving multiple bookmarks – the extension should wait for each `bookmarks.create` or `bookmarks.move` call to complete before creating or moving the next bookmark. Waiting ensures that the index associated with each bookmark is not affected by a create or move call executing concurrently while the original call is in progress.
+    > [!NOTE]
+    > If you create or move multiple bookmarks, because the {{WebExtAPIRef("bookmarks.create()")}} and {{WebExtAPIRef("bookmarks.move()")}} methods are asynchronous, the requests may get processed in any order. Consequently, the value of each bookmark's index may change or be unknown until all the requests are completed. If the index associated with a bookmark matters to your extension, then – when creating or moving multiple bookmarks – the extension should wait for each `bookmarks.create` or `bookmarks.move` call to complete before creating or moving the next bookmark. Waiting ensures that the index associated with each bookmark is not affected by a create or move call executing concurrently while the original call is in progress.
 - `parentId` {{optional_inline}}
   - : A {{jsxref("string")}} which specifies the ID of the parent folder. This property is not present in the root node.
 - `title`
@@ -41,7 +42,8 @@ An {{jsxref("object")}} with the following properties:
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/bookmarks/#type-BookmarkTreeNode) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/bookmarks/#type-BookmarkTreeNode) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
