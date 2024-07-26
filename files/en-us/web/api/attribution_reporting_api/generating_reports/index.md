@@ -77,7 +77,8 @@ An aggregatable report by default is generated and scheduled to be sent after a 
 
 The expiry time is defined by the `expiry` value set in the associated {{httpheader("Attribution-Reporting-Register-Source")}} header, which defaults to 30 days after registration if not explicitly set. Bear in mind that the length of the report window can be further modified by setting an `aggregatable_report_window` value in the `Attribution-Reporting-Register-Source` header. See [Custom report windows](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/custom-report-windows) for more details.
 
-> **Note:** To further protect user privacy, the summary report values associated with each attribution source have a finite total value — this is called the **contribution budget**. This value may very across different implementations of the API; in Chrome it is 65,536. Any conversions that would generate reports adding values over that limit are not recorded. Make sure you keep track of the budget and share it between the different metrics you are trying to measure.
+> [!NOTE]
+> To further protect user privacy, the summary report values associated with each attribution source have a finite total value — this is called the **contribution budget**. This value may very across different implementations of the API; in Chrome it is 65,536. Any conversions that would generate reports adding values over that limit are not recorded. Make sure you keep track of the budget and share it between the different metrics you are trying to measure.
 
 A typical aggregatable report might look like this:
 
@@ -205,7 +206,8 @@ Different source types have different default limits:
 - [Navigation-based attribution sources](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#navigation-based_attribution_sources) have a three-report limit by default. For example, say a user clicks an ad and converts four times: they visit the advertiser site homepage, then visit a product page, sign up to the newsletter, and finally make a purchase. The purchase report would be dropped, as it comes from the fourth conversion.
 - [Event-based attribution sources](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#event-based_attribution_sources) have a one-report limit by default.
 
-> **Note:** The report limit can be adjusted by setting a different number of `"end_times"` in the [`"event_report_windows"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#event_report_windows) fields of the associated `Attribution-Reporting-Register-Source` header.
+> [!NOTE]
+> The report limit can be adjusted by setting a different number of `"end_times"` in the [`"event_report_windows"`](/en-US/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source#event_report_windows) fields of the associated `Attribution-Reporting-Register-Source` header.
 
 When an attribution is triggered for a given source event, if the maximum number of attributions (three for clicks, one for images/scripts) has been reached for this source the browser will:
 
@@ -298,7 +300,8 @@ There are two different types of debug report:
 - **Success debug reports** track successful generation of a specific attribution report. Success debug reports are generated and sent as soon as the corresponding trigger is registered.
 - **Verbose debug reports** give you more visibility into the attribution source and attribution trigger events associated with an attribution report. They enable you to ensure that sources were registered successfully, or track missing reports and determine why they're missing (for example due to failure in source or trigger event registration or failure when sending or generating the report). Verbose debug reports are sent immediately upon source or trigger registration.
 
-> **Note:** To use debug reports, the reporting origin needs to set a cookie. If the origin configured to receive reports is a third party, this cookie will be a [third-party cookie](/en-US/docs/Web/Privacy/Third-party_cookies), which means that debug reports will not be available in browsers where third-party cookies are disabled/not available.
+> [!NOTE]
+> To use debug reports, the reporting origin needs to set a cookie. If the origin configured to receive reports is a third party, this cookie will be a [third-party cookie](/en-US/docs/Web/Privacy/Third-party_cookies), which means that debug reports will not be available in browsers where third-party cookies are disabled/not available.
 
 ### Using debug reports
 
@@ -318,7 +321,8 @@ To use debug reports, you need to:
    }
    ```
 
-   > **Note:** Make the source-side debug key different from the `source_event_id`, so that you can differentiate individual reports that have the same source event ID.
+   > [!NOTE]
+   > Make the source-side debug key different from the `source_event_id`, so that you can differentiate individual reports that have the same source event ID.
 
 3. Optionally, set the `debug_reporting` field to `true`, in both the `Attribution-Reporting-Register-Source` and `Attribution-Reporting-Register-Trigger` headers. If you do this, a verbose debug report will be generated. If you don't do this, a success debug report will be generated that mirrors the type of attribution report you are generating (event-level or aggregatable).
 
