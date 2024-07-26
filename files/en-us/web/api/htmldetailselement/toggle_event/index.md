@@ -12,7 +12,7 @@ The **`toggle`** event fires when the `open`/`closed` state of a {{HtmlElement("
 
 This event is not cancelable and does not bubble.
 
-> **Note:** The `toggle` event is also available in a different form on {{domxref("HTMLElement")}}; this version fires on [popover elements](/en-US/docs/Web/API/Popover_API) just after they are shown or hidden. See the `HTMLElement` {{domxref("HTMLElement.toggle_event", "toggle event")}} page for more information.
+> **Note:** The `toggle` event is also available in a different form on {{domxref("HTMLElement")}}; this version fires on [popover elements](/en-US/docs/Web/API/Popover_API) just after they are shown or hidden. See the `HTMLElement` {{domxref("HTMLElement.toggle_event", "toggle")}} event page for more information.
 
 ## Syntax
 

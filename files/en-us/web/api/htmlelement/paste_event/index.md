@@ -82,5 +82,5 @@ editor.onpaste = logPaste;
 ## See also
 
 - Related events
-  - {{domxref("HTMLElement.copy_event")}}
-  - {{domxref("HTMLElement.cut_event")}}
+  - {{domxref("HTMLElement.copy_event", "copy")}} event
+  - {{domxref("HTMLElement.cut_event", "cut")}} event

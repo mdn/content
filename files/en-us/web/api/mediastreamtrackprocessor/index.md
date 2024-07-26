@@ -7,7 +7,7 @@ browser-compat: api.MediaStreamTrackProcessor
 
 {{APIRef("Insertable Streams for MediaStreamTrack API")}}
 
-The **`MediaStreamTrackProcessor`** interface of the {{domxref('Insertable Streams for MediaStreamTrack API')}} consumes a {{domxref("MediaStreamTrack")}} object's source and generates a stream of media frames.
+The **`MediaStreamTrackProcessor`** interface of the [Insertable Streams for MediaStreamTrack API](/en-US/docs/Web/API/Insertable_Streams_for_MediaStreamTrack_API) consumes a {{domxref("MediaStreamTrack")}} object's source and generates a stream of media frames.
 
 ## Constructor
 

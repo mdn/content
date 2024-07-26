@@ -388,7 +388,7 @@ Here are some _best practices_ to consider when using pointer events:
 
 {{Compat}}
 
-Some additional values have been defined for the {{cssxref("touch-action", "CSS touch-action")}} property as part of the [Pointer Events](https://w3c.github.io/pointerevents/) specification, but currently those values have limited implementation support.
+Some additional values have been defined for the CSS {{cssxref("touch-action")}} property as part of the [Pointer Events](https://w3c.github.io/pointerevents/) specification, but currently those values have limited implementation support.
 
 ## See also
 
