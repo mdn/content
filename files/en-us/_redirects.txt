@@ -11729,7 +11729,6 @@
 /en-US/docs/Web/CSS/symbols()	/en-US/docs/Web/CSS/symbols
 /en-US/docs/Web/CSS/symbols-descriptor	/en-US/docs/Web/CSS/@counter-style/symbols
 /en-US/docs/Web/CSS/system	/en-US/docs/Web/CSS/@counter-style/system
-/en-US/docs/Web/CSS/text-anchor	/en-US/docs/Web/SVG/Attribute/text-anchor
 /en-US/docs/Web/CSS/text-combine-horizontal	/en-US/docs/Web/CSS/text-combine-upright
 /en-US/docs/Web/CSS/time-function	/en-US/docs/Web/CSS/easing-function
 /en-US/docs/Web/CSS/timing-function	/en-US/docs/Web/CSS/easing-function
