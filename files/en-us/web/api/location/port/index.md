@@ -1,5 +1,5 @@
 ---
-title: "location: port property"
+title: "Location: port property"
 short-title: port
 slug: Web/API/Location/port
 page-type: web-api-instance-property

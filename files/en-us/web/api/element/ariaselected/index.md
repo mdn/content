@@ -19,7 +19,7 @@ A string with one of the following values:
 - `"false"`
   - : The item is not selected.
 - `"undefined"`
-  - : The item is not
+  - : The item is not selectable.
 
 ## Examples
 

@@ -31,7 +31,8 @@ _In addition to the properties defined by the parent interface, {{domxref("DOMEx
 - {{domxref("RTCError.sentAlert", "sentAlert")}} {{ReadOnlyInline}}
   - : If `errorDetail` is `dtls-failure`, this property is an unsigned long integer indicating the fatal DTLS error that was sent out by this device. If `null`, no DTLS error was transmitted.
 
-> **Note:** All `RTCError` objects have their {{domxref("DOMException.name", "name")}} set to `OperationError`.
+> [!NOTE]
+> All `RTCError` objects have their {{domxref("DOMException.name", "name")}} set to `OperationError`.
 
 ## Examples
 
@@ -54,8 +55,8 @@ dataChannel.addEventListener("error", (event) => {
 });
 ```
 
-If the error is an SDP syntax error—indicated by its {{domxref("RTCError.errorDetail",
-  "errorDetail")}} property being `sdp-syntax-error`—, a message string is
+If the error is an SDP syntax error—indicated by its {{domxref("RTCError.errorDetail", "errorDetail")}}
+property being `sdp-syntax-error`—, a message string is
 constructed to present the error message and the line number within the SDP at which the
 error occurred. This message is then displayed using a function called
 `showMyAlertMessage()`, which stands in for whatever output mechanism this
@@ -64,10 +65,9 @@ code might use.
 Any other error is treated as terminal, causing a `terminateMyConnection()`
 function to be called.
 
-The above example uses {{domxref("EventTarget.addEventListener",
-  "addEventListener()")}} to add the handler for `error` events. You can also
-use the `RTCDataChannel` object's {{domxref("RTCDataChannel.error_event",
-  "onerror")}} event handler property, like this:
+The above example uses {{domxref("EventTarget.addEventListener", "addEventListener()")}}
+to add the handler for `error` events. You can also use the `RTCDataChannel` object's
+{{domxref("RTCDataChannel.error_event", "onerror")}} event handler property, like this:
 
 ```js
 dataChannel.onerror = (event) => {

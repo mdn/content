@@ -8,7 +8,8 @@ page-type: firefox-release-notes
 
 Firefox 10 shipped on January 31, 2012. This article provides information about the new features and key bugs fixed in this release, as well as links to more detailed documentation for both web developers and add-on developers.
 
-> **Note:** Firefox 10 is the first release of this browser with two digits. This may lead to problem with some UA-sniffing scripts. Be sure to check them, and those contained in 3rd-party software you embed in your pages, like libraries. For more information about this, look at the [Firefox goes 2-digit article on hack.mozilla.org](https://hacks.mozilla.org/2012/01/firefox-goes-2-digit-time-to-check-your-ua-sniffing-scripts/).
+> [!NOTE]
+> Firefox 10 is the first release of this browser with two digits. This may lead to problem with some UA-sniffing scripts. Be sure to check them, and those contained in 3rd-party software you embed in your pages, like libraries. For more information about this, look at the [Firefox goes 2-digit article on hack.mozilla.org](https://hacks.mozilla.org/2012/01/firefox-goes-2-digit-time-to-check-your-ua-sniffing-scripts/).
 
 ## Changes for Web developers
 
@@ -21,7 +22,7 @@ Firefox 10 shipped on January 31, 2012. This article provides information about 
 
 - The method `WeakMap.set()` now returns `undefined`, instead of itself.
 - A bug was introduced in regular expression handling in Firefox 7; this has been fixed. See [Firefox bug 683838](https://bugzil.la/683838) if you want the gory details.
-- You can no longer use [E4X](/en-US/docs/E4X) syntax while in [ECMAScript 5 strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) (that is, after `"use strict;"`).
+- You can no longer use the deprecated EcmaScript for XML (E4X) syntax while in [ECMAScript 5 strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) (that is, after `"use strict;"`).
 
 ### DOM
 
@@ -109,14 +110,15 @@ Great progress has been made to update IndexedDB to the latest draft specificati
 
 ### Developer tools
 
-- The {{ domxref("console") }} object has two new methods, {{ domxref("console.time()") }} and {{ domxref("console.timeEnd()") }}, which can be used to set timers on a page.
+- The {{ domxref("console") }} object has two new methods, {{ domxref("console/time_static", "console.time()") }} and {{ domxref("console/timeEnd_static", "console.timeEnd()") }}, which can be used to set timers on a page.
 - The new [Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html) has been added, providing an excellent way to examine and manipulate the HTML and CSS behind your content.
 
 ## Changes for Mozilla and add-on developers
 
 For an overview of likely issues that may arise when updating your add-ons to support Firefox 10, see [Updating add-ons for Firefox 10](/en-US/docs/Mozilla/Firefox/Updating_add-ons_for_Firefox_10).
 
-> **Note:** The old [`PRBool`](/en-US/docs/PRBool) data type has been retired! Anywhere in the documentation that refers to it now uses the standard C++ `bool` type instead. Documentation will be updated in the future, but for now, just keep this in mind.
+> [!NOTE]
+> The old [`PRBool`](/en-US/docs/PRBool) data type has been retired! Anywhere in the documentation that refers to it now uses the standard C++ `bool` type instead. Documentation will be updated in the future, but for now, just keep this in mind.
 
 ### Manifests
 

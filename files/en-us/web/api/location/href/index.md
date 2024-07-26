@@ -1,5 +1,5 @@
 ---
-title: "location: href property"
+title: "Location: href property"
 short-title: href
 slug: Web/API/Location/href
 page-type: web-api-instance-property

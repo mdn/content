@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.String.codePointAt
 
 The **`codePointAt()`** method of {{jsxref("String")}} values returns a non-negative integer that is the Unicode code point value of the character starting at the given index. Note that the index is still based on UTF-16 code units, not Unicode code points.
 
-{{EmbedInteractiveExample("pages/js/string-codepointat.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/string-codepointat.html", "shorter")}}
 
 ## Syntax
 
@@ -68,7 +68,7 @@ for (let i = 0; i < str.length; i++) {
 // '1f40e', 'dc0e', '1f471', 'dc71', '2764'
 ```
 
-Instead, use a [`for...of`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement) statement or [spread the string](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax), both of which invoke the string's [`@@iterator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator), which iterates by code points. Then, use `codePointAt(0)` to get the code point of each element.
+Instead, use a [`for...of`](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement) statement or [spread the string](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax), both of which invoke the string's [`[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator), which iterates by code points. Then, use `codePointAt(0)` to get the code point of each element.
 
 ```js
 for (const codePoint of str) {

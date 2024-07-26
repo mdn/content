@@ -43,7 +43,7 @@ To identify your PWA, the JSON must include a `name` or `short_name` member, or 
 When both the `name` and `short_name` are present, the `name` is used in most instances, with the `short_name` used when there is a limited space to display the application name.
 
 - [`description`](/en-US/docs/Web/Manifest/description)
-  - : Explanation of what the application does. It provides an [accessible description](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-description) of the application's purpose and function.
+  - : Explanation of what the application does. It provides an {{glossary("accessible description")}} of the application's purpose and function.
 
 ### Task
 
@@ -87,7 +87,7 @@ Add presentation definitions to the manifest file you began creating in the prev
 
 As the example application is a single page, we can use `"/"` as the `start_url`, or omit the member altogether. For that same reason, we can display the app without the browser UI by setting the `display` to `standalone`.
 
-In [our CSS](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS#css_file), the `background-color: #efe;` is set on the `body` element selector. We use `#eeffee` to ensure a smooth transition from placeholder appearance to app load.
+In [our CSS](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS#css_content), the `background-color: #efe;` is set on the `body` element selector. We use `#eeffee` to ensure a smooth transition from placeholder appearance to app load.
 
 ```js
 {
@@ -132,7 +132,7 @@ Within the manifest JSON object, the `icons` member specifies an array of one or
 }
 ```
 
-All icons should have the same look and feel to ensure users recognize your PWA, but the larger the icon, the greater the detail it can contain. While all icon files are squares, some operating systems render different shapes, cutting sections off, or "masking" the icon, to meet the UI, or shrinking and centering the icon with a background if the icon is not maskable. The [safe zone](/en-US/docs/Web/Progressive_web_apps/How_to/Define_app_icons#support-masking), the area that will render okay if the icon is masked as a circle, is the inner 80% of the image file. Icons are labeled as safe to be masked by the `purpose` member which, when set to `maskable`, defines the [icon as adaptive](https://web.dev/maskable-icons/).
+All icons should have the same look and feel to ensure users recognize your PWA, but the larger the icon, the greater the detail it can contain. While all icon files are squares, some operating systems render different shapes, cutting sections off, or "masking" the icon, to meet the UI, or shrinking and centering the icon with a background if the icon is not maskable. The [safe zone](/en-US/docs/Web/Progressive_web_apps/How_to/Define_app_icons#support_masking), the area that will render okay if the icon is masked as a circle, is the inner 80% of the image file. Icons are labeled as safe to be masked by the `purpose` member which, when set to `maskable`, defines the [icon as adaptive](https://web.dev/articles/maskable-icon).
 
 In Safari, and therefor for iOS and iPadOS, if you include the [non-standard `apple-touch-icon`](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#adding_custom_icons_to_your_site) in the {{HTMLElement("head")}} of the HTML document via {{HTMLElement("link")}}, they will take precedence over manifest-declared icons.
 
@@ -215,13 +215,13 @@ The `<link>` element is most commonly used to link to stylesheets and, with PWAs
 
 When using the `.webmanifest` extension, set `type="application/manifest+json"` if your server doesn't support that MIME type.
 
-#### Task
+### Task
 
 Save the manifest file that you have created in the steps above, then link to it from the `index.html` file.
 
 Optionally, link to a shortcut icon from your HTML as well.
 
-#### Example solution
+### Example solution
 
 The {{HTMLelement("head")}} of `index.html` may now look similar to:
 
@@ -236,9 +236,9 @@ The {{HTMLelement("head")}} of `index.html` may now look similar to:
 </head>
 ```
 
-View the [`cycletracker.json` file](https://mdn.github.io/pwa-examples/cycletracker/Manifest_file/cycletracker.json) and view the [project source code](https://github.com/mdn/pwa-examples/tree/master/cycletracker/Manifest_file) on GitHub.
+View the [`cycletracker.json` file](https://mdn.github.io/pwa-examples/cycletracker/manifest_file/cycletracker.json) and view the [project source code](https://github.com/mdn/pwa-examples/blob/main/cycletracker/manifest_file/) on GitHub.
 
-With a manifest file, Safari will recognize your site as a web app. For the web app to be a full PWA, we will still need to add a service worker.
+With a manifest file and when loaded from an `https://` URL (or `localhost`), [most browsers](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#browser_support) will recognize your site as a PWA and some will prompt to install it. To make our PWA work offline, we'll still need to add a service worker.
 
 ## Debugging manifest files
 
@@ -250,9 +250,7 @@ The Manifest App pane provides the name of the manifest file as a link, and iden
 
 ![The identity and presentation manifest members along with values, if present.](manifest_identity_and_presentation.jpg)
 
-Supported manifest members are displayed, along with all included values. In this screenshot, while we did not include the `orientation` or `id` members, they are listed. The App panel can be used to see the manifest members and even learn: in this example, we learn that to specify an App Id that matches the current identity, set the `id` field to /".
-
-![Installability shows that because we don't have a service worker, our app is not an installable PWA. yet.](manifest_installability.jpg)
+Supported manifest members are displayed, along with all included values. In this screenshot, while we did not include the `orientation` or `id` members, they are listed. The App panel can be used to see the manifest members and even learn: in this example, we learn that to specify an App Id that matches the current identity, set the `id` field to "/".
 
 Chrome and Edge also provide errors and warnings, protocol handlers, and information to improve the manifest and icons.
 
@@ -268,6 +266,6 @@ The developer tools are useful in identifying which manifest members are support
 
 ## Up next
 
-To get the PWA benefits from other browsers and all operating systems that support PWAs, we need to [add a service worker](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers), which we'll do without using a framework.
+To make our PWA work offline, we need to [add a service worker](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers), which we'll do without using a framework.
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality", "Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}

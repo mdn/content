@@ -9,7 +9,8 @@ browser-compat: svg.elements.feColorMatrix
 
 The **`<feColorMatrix>`** SVG filter element changes colors based on a transformation matrix. Every pixel's color value `[R,G,B,A]` is [matrix multiplied](https://en.wikipedia.org/wiki/Matrix_multiplication) by a 5 by 5 color matrix to create new color `[R',G',B',A']`.
 
-> **Note:** The prime symbol **`'`** is used in mathematics indicate the result of a transformation.
+> [!NOTE]
+> The prime symbol **`'`** is used in mathematics indicate the result of a transformation.
 
 ```plain
 | R' |     | r1 r2 r3 r4 r5 |   | R |
@@ -64,16 +65,6 @@ In it, every new value is exactly 1 times its old value, with nothing else added
 {{svginfo}}
 
 ## Attributes
-
-### Global attributes
-
-- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-- [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
-- [Filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes), including the `x`, `y`, `width`, `height`, and `result` attributes.
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-
-### Specific attributes
 
 - {{SVGAttr("in")}}: Values include `SourceGraphic`, `SourceAlpha`, `BackgroundImage`, `BackgroundAlpha`, `FillPaint`, `StrokePaint`, or a reference to another filter primitive.
 - {{SVGAttr("type")}}: Values include `matrix`, `saturate`, `hueRotate`, and `luminanceToAlpha`.
@@ -169,7 +160,7 @@ This element implements the {{domxref("SVGFEColorMatrixElement")}} interface.
 
 ### Result
 
-{{EmbedLiveSample("Example", "100%", 700, "/files/4371/test.png")}}
+{{EmbedLiveSample("Example", "100%", "700")}}
 
 ## Specifications
 
@@ -181,6 +172,7 @@ This element implements the {{domxref("SVGFEColorMatrixElement")}} interface.
 
 ## See also
 
+- [SVG filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes)
 - {{SVGElement("filter")}}
 - {{SVGElement("animate")}}
 - {{SVGElement("set")}}

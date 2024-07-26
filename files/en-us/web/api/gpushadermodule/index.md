@@ -7,7 +7,7 @@ status:
 browser-compat: api.GPUShaderModule
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`GPUShaderModule`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} represents an internal shader module object, a container for [WGSL](https://gpuweb.github.io/gpuweb/wgsl/) shader code that can be submitted to the GPU for execution by a pipeline.
 

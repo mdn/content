@@ -9,13 +9,17 @@ browser-compat: javascript.builtins.Date.toTimeString
 
 The **`toTimeString()`** method of {{jsxref("Date")}} instances returns a string representing the time portion of this date interpreted in the local timezone.
 
-{{EmbedInteractiveExample("pages/js/date-totimestring.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/date-totimestring.html", "shorter")}}
 
 ## Syntax
 
 ```js-nolint
 toTimeString()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

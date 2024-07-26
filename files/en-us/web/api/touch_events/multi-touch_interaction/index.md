@@ -49,7 +49,7 @@ The application uses {{HTMLElement("div")}} elements to represent four touch are
 
 ```js
 // Log events flag
-const logEvents = false;
+let logEvents = false;
 
 // Touch Point cache
 const tpCache = [];
@@ -111,7 +111,7 @@ function handle_pinch_zoom(ev) {
         ev.target.style.background = "green";
     } else {
       // empty tpCache
-      tpCache = [];
+      tpCache.length = 0;
     }
   }
 }
@@ -208,7 +208,7 @@ These functions support the application but aren't directly involved with the ev
 
 #### Update background color
 
-The background color of the touch areas will change as follows: no touch is `white`; one touch is `yellow`; two simultaneous touches is `pink`, and three or more simultaneous touches is `lightblue`. See [touch move](#touch_move) for information about the background color changing when a 2-finger move/pinch/zoom is detected.
+The background color of the touch areas will change as follows: no touch is `white`; one touch is `yellow`; two simultaneous touches is `pink`, and three or more simultaneous touches is `lightblue`. See [touch move handler](#touch_move_handler) for information about the background color changing when a 2-finger move/pinch/zoom is detected.
 
 ```js
 function update_background(ev) {
@@ -248,20 +248,20 @@ function log(name, ev, printTargetIds) {
     `${name}: touches = ${ev.touches.length} ; ` +
     `targetTouches = ${ev.targetTouches.length} ; ` +
     `changedTouches = ${ev.changedTouches.length}`;
-  o.innerHTML += `${s}<br>`;
+  o.innerText += `${s}\n`;
 
   if (printTargetIds) {
     s = "";
     for (let i = 0; i < ev.targetTouches.length; i++) {
-      s += `... id = ${ev.targetTouches[i].identifier}<br>`;
+      s += `... id = ${ev.targetTouches[i].identifier}\n`;
     }
-    o.innerHTML += s;
+    o.innerText += s;
   }
 }
 
 function clearLog(event) {
   const o = document.getElementsByTagName("output")[0];
-  o.innerHTML = "";
+  o.textContent = "";
 }
 ```
 

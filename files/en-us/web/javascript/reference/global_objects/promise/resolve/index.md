@@ -32,14 +32,17 @@ A {{jsxref("Promise")}} that is resolved with the given value, or the promise pa
 
 `Promise.resolve()` _resolves_ a promise, which is not the same as fulfilling or rejecting the promise. See [Promise description](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#description) for definitions of the terminology. In brief, `Promise.resolve()` returns a promise whose eventual state depends on another promise, thenable object, or other value.
 
+> [!NOTE]
+> If evaluating the `value` expression may synchronously throw an error, this error won't be caught and wrapped in a rejected promise by `Promise.resolve()`. Consider using {{jsxref("Promise/try", "Promise.try(() => value)")}} in this case.
+
 `Promise.resolve()` is generic and supports subclassing, which means it can be called on subclasses of `Promise`, and the result will be a promise of the subclass type. To do so, the subclass's constructor must implement the same signature as the [`Promise()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) constructor — accepting a single `executor` function that can be called with the `resolve` and `reject` callbacks as parameters.
 
 `Promise.resolve()` special-cases native `Promise` instances. If `value` belongs to `Promise` or a subclass, and `value.constructor === Promise`, then `value` is directly returned by `Promise.resolve()`, without creating a new `Promise` instance. Otherwise, `Promise.resolve()` is essentially a shorthand for `new Promise((resolve) => resolve(value))`.
 
-The bulk of the resolving logic is actually implemented by the [resolver function](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise#resolver_function) passed by the `Promise()` constructor. In summary:
+The bulk of the resolving logic is actually implemented by [the `resolve` function](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise#the_resolve_function) passed by the `Promise()` constructor. In summary:
 
 - If a non-[thenable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables) value is passed, the returned promise is already fulfilled with that value.
-- If a thenable is passed, the returned promise will adopt the state of that thenable by calling the `then` method and passing a pair of resolving functions as arguments. (But because native promises directly pass through `Promise.resolve()` without creating a wrapper, the `then` method is not called on native promises.) If the resolver function receives another thenable object, it will be resolved again, so that the eventual fulfillment value of the promise will never be thenable.
+- If a thenable is passed, the returned promise will adopt the state of that thenable by calling the `then` method and passing a pair of resolving functions as arguments. (But because native promises directly pass through `Promise.resolve()` without creating a wrapper, the `then` method is not called on native promises.) If the `resolve` function receives another thenable object, it will be resolved again, so that the eventual fulfillment value of the promise will never be thenable.
 
 ## Examples
 
@@ -104,16 +107,13 @@ p1.then(
   },
 );
 
-// Thenable throws before callback
+// Thenable throws
 // Promise rejects
-const thenable = {
-  then(onFulfilled) {
+const p2 = Promise.resolve({
+  then() {
     throw new TypeError("Throwing");
-    onFulfilled("Resolving");
   },
-};
-
-const p2 = Promise.resolve(thenable);
+});
 p2.then(
   (v) => {
     // not called
@@ -125,14 +125,12 @@ p2.then(
 
 // Thenable throws after callback
 // Promise resolves
-const thenable = {
+const p3 = Promise.resolve({
   then(onFulfilled) {
     onFulfilled("Resolving");
     throw new TypeError("Throwing");
   },
-};
-
-const p3 = Promise.resolve(thenable);
+});
 p3.then(
   (v) => {
     console.log(v); // "Resolving"
@@ -162,7 +160,8 @@ Promise.resolve(thenable).then((v) => {
 });
 ```
 
-> **Warning:** Do not call `Promise.resolve()` on a thenable that resolves to itself. That leads to infinite recursion, because it attempts to flatten an infinitely-nested promise.
+> [!WARNING]
+> Do not call `Promise.resolve()` on a thenable that resolves to itself. That leads to infinite recursion, because it attempts to flatten an infinitely-nested promise.
 
 ```js example-bad
 const thenable = {
@@ -193,7 +192,7 @@ class NotPromise {
 Promise.resolve.call(NotPromise, "foo"); // Logs "Resolved foo"
 ```
 
-The ability to flatten nested thenables is implemented by the resolver function of the `Promise()` constructor, so if you call it on another constructor, nested thenables may not be flattened, depending on how that constructor implements its resolver.
+The ability to flatten nested thenables is implemented by the `resolve` function of the `Promise()` constructor, so if you call it on another constructor, nested thenables may not be flattened, depending on how that constructor implements its `resolve` function.
 
 ```js
 const thenable = {

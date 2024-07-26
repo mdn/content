@@ -5,7 +5,7 @@ page-type: web-api-overview
 spec-urls: https://w3c.github.io/FileAPI/
 ---
 
-{{DefaultAPISidebar("File API")}}
+{{DefaultAPISidebar("File API")}}{{AvailableInWorkers}}
 
 ## Concepts and Usage
 
@@ -32,10 +32,10 @@ Sets of files made available in this way are represented as {{domxref("FileList"
 
 ### Extensions to other interfaces
 
-- {{domxref("URL.createObjectURL()")}}
+- {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}
   - : Creates a URL that can be used to fetch a {{domxref("File")}} or {{domxref("Blob")}} object.
-- {{domxref("URL.revokeObjectURL()")}}
-  - : Releases an existing object URL which was previously created by calling {{domxref("URL.createObjectURL()")}}.
+- {{domxref("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}}
+  - : Releases an existing object URL which was previously created by calling {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}.
 
 ## Examples
 
@@ -86,5 +86,5 @@ fileInput.addEventListener("change", async () => {
 ## See also
 
 - [`<input type="file">`](/en-US/docs/Web/HTML/Element/input/file): the file input element
-- [`text() method`](/en-US/docs/Web/API/Blob/text): .text()
+- {{domxref("Blob.text()")}}
 - The {{domxref("DataTransfer")}} interface

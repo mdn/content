@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.detectLanguage
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Detects the primary language of the content in a tab, using the [Compact Language Detector](https://github.com/CLD2Owners/cld2) (CLD).
 
@@ -79,7 +79,8 @@ browser.browserAction.onClicked.addListener(() => {
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-detectLanguage) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-detectLanguage) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

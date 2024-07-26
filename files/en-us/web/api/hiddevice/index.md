@@ -9,7 +9,7 @@ browser-compat: api.HIDDevice
 
 {{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
 
-The **`HIDDevice`** interface of the {{domxref('WebHID API')}} represents a HID Device. It provides properties for accessing information about the device, methods for opening and closing the connection, and the sending and receiving of reports.
+The **`HIDDevice`** interface of the [WebHID API](/en-US/docs/Web/API/WebHID_API) represents a HID Device. It provides properties for accessing information about the device, methods for opening and closing the connection, and the sending and receiving of reports.
 
 {{InheritanceDiagram}}
 
@@ -83,7 +83,7 @@ for (let i = 0; i < 10; i++) {
 }
 ```
 
-You can see more examples, and live demos in the article [Connecting to uncommon HID devices](https://web.dev/hid/).
+You can see more examples, and live demos in the article [Connecting to uncommon HID devices](https://developer.chrome.com/docs/capabilities/hid).
 
 ## Specifications
 

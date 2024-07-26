@@ -2,12 +2,10 @@
 title: ArrayBuffer.prototype.detached
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/detached
 page-type: javascript-instance-accessor-property
-status:
-  - experimental
 browser-compat: javascript.builtins.ArrayBuffer.detached
 ---
 
-{{JSRef}} {{SeeCompatTable}}
+{{JSRef}}
 
 The **`detached`** accessor property of {{jsxref("ArrayBuffer")}} instances returns a boolean indicating whether or not this buffer has been detached (transferred).
 
@@ -37,6 +35,7 @@ console.log(newBuffer.detached); // false
 
 ## See also
 
+- [Polyfill of `ArrayBuffer.prototype.detached` in `core-js`](https://github.com/zloirock/core-js#arraybufferprototypetransfer-and-friends)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("ArrayBuffer.prototype.transfer()")}}
 - {{jsxref("ArrayBuffer.prototype.transferToFixedLength()")}}

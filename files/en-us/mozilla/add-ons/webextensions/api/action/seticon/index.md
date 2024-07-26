@@ -5,11 +5,12 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.action.setIcon
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Sets the icon for the browser action.
 
-> **Note:** This API is available in Manifest V3 or higher.
+> [!NOTE]
+> This API is available in Manifest V3 or higher.
 
 You can specify a single icon as either the path to an image file or a {{WebExtAPIRef('action.ImageDataType')}} object.
 
@@ -156,7 +157,8 @@ browser.action.onClicked.addListener((tab) => {
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/action/#method-setIcon) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/action/#method-setIcon) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

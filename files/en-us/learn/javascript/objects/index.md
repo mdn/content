@@ -8,22 +8,14 @@ page-type: learn-module
 
 In JavaScript, most things are objects, from core JavaScript features like arrays to the browser {{Glossary("API", "APIs")}} built on top of JavaScript. You can even create your own objects to encapsulate related functions and variables into efficient packages and act as handy data containers. The object-based nature of JavaScript is important to understand if you want to go further with your knowledge of the language, therefore we've provided this module to help you. Here we teach object theory and syntax in detail, then look at how to create your own objects.
 
-> **Callout:**
->
-> #### Looking to become a front-end web developer?
->
-> We have put together a course that includes all the essential information you need to
-> work towards your goal.
->
-> [**Get started**](/en-US/docs/Learn/Front-end_web_developer)
-
 ## Prerequisites
 
 Before starting this module, you should have some familiarity with {{Glossary("HTML")}} and {{Glossary("CSS")}}. You are advised to work through the [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML) and [Introduction to CSS](/en-US/docs/Learn/CSS/First_steps) modules before starting on JavaScript.
 
 You should also have some familiarity with JavaScript basics before looking at JavaScript objects in detail. Before attempting this module, work through [JavaScript first steps](/en-US/docs/Learn/JavaScript/First_steps) and [JavaScript building blocks](/en-US/docs/Learn/JavaScript/Building_blocks).
 
-> **Note:** If you are working on a computer/tablet/other devices where you are not able to create your own files, you could try out (most of) the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).
+> [!NOTE]
+> If you are working on a computer/tablet/other devices where you are not able to create your own files, you could try out (most of) the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).
 
 ## Guides
 

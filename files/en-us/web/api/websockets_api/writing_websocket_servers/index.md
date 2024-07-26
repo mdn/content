@@ -4,9 +4,9 @@ slug: Web/API/WebSockets_API/Writing_WebSocket_servers
 page-type: guide
 ---
 
-{{APIRef("Websockets API")}}
+{{DefaultAPISidebar("WebSockets API")}}
 
-A WebSocket server is nothing more than an application listening on any port of a TCP server that follows a specific protocol. The task of creating a custom server tends to scare people; however, it can be straightforward to implement a simple WebSocket server on your platform of choice.
+A WebSocket server is nothing more than an application listening on any port of a TCP server that follows a specific protocol. Creating a custom server can seem overwhelming if you have never done it before. It can actually be quite straightforward to implement a basic WebSocket server on your platform of choice, though.
 
 A WebSocket server can be written in any server-side programming language that is capable of [Berkeley sockets](https://en.wikipedia.org/wiki/Berkeley_sockets), such as C(++), Python, {{Glossary("PHP")}}, or [server-side JavaScript](/en-US/docs/Learn/Server-side/Node_server_without_framework). This is not a tutorial in any specific language, but serves as a guide to facilitate writing your own server.
 
@@ -41,7 +41,7 @@ Sec-WebSocket-Version: 13
 
 The client can solicit extensions and/or subprotocols here; see [Miscellaneous](#miscellaneous) for details. Also, common headers like {{HTTPHeader("User-Agent")}}, {{HTTPHeader("Referer")}}, {{HTTPHeader("Cookie")}}, or authentication headers might be there as well. Do whatever you want with those; they don't directly pertain to the WebSocket. It's also safe to ignore them. In many common setups, a reverse proxy has already dealt with them.
 
-> **Note:** All **browsers** send an [`Origin` header](/en-US/docs/Web/HTTP/CORS#origin). You can use this header for security (checking for same origin, automatically allowing or denying, etc.) and send a [403 Forbidden](/en-US/docs/Web/HTTP/Status#403) if you don't like what you see. However, be warned that non-browser agents can send a faked `Origin`. Most applications reject requests without this header.
+> **Note:** All **browsers** send an [`Origin` header](/en-US/docs/Web/HTTP/CORS#origin). You can use this header for security (checking for same origin, automatically allowing or denying, etc.) and send a [403 Forbidden](/en-US/docs/Web/HTTP/Status/403) if you don't like what you see. This is effective against [Cross Site WebSocket Hijacking (CSWH)](https://cwe.mitre.org/data/definitions/1385.html). However, be warned that non-browser agents can send a faked `Origin`. Most applications reject requests without this header.
 
 If any header is not understood or has an incorrect value, the server should send a {{HTTPStatus("400")}} ("Bad Request") response and immediately close the socket. As usual, it may also give the reason why the handshake failed in the HTTP response body, but the message may never be displayed (browsers do not display it). If the server doesn't understand that version of WebSockets, it should send a {{HTTPHeader("Sec-WebSocket-Version")}} header back that contains the version(s) it does understand. In the example above, it indicates version 13 of the WebSocket protocol.
 
@@ -104,6 +104,18 @@ Frame format:
      |                     Payload Data continued ...                |
      +---------------------------------------------------------------+
 ```
+
+This means that a frame contains the following bytes:
+
+- First byte:
+  - bit 0: FIN
+  - bit 1: RSV1
+  - bit 2: RSV2
+  - bit 3: RSV3
+  - bits 4-7 OPCODE
+- Bytes 2-10: payload length (see [Decoding Payload Length](#decoding_payload_length))
+- If masking is used, the next 4 bytes contain the masking key (see [Reading and unmasking the data](#reading_and_unmasking_the_data))
+- All subsequent bytes are payload
 
 The MASK bit tells whether the message is encoded. Messages from the client must be masked, so your server must expect this to be 1. (In fact, [section 5.1 of the spec](https://datatracker.ietf.org/doc/html/rfc6455#section-5.1) says that your server must disconnect from a client if that client sends an unmasked message.) When sending a frame back to the client, do not mask it and do not set the mask bit. We'll explain masking later. _Note: You must mask messages even when using a secure socket._ RSV1-3 can be ignored, they are for extensions.
 
@@ -168,7 +180,7 @@ To close a connection either the client or server can send a control frame with 
 
 > **Note:** WebSocket codes, extensions, subprotocols, etc. are registered at the [IANA WebSocket Protocol Registry](https://www.iana.org/assignments/websocket/websocket.xml).
 
-WebSocket extensions and subprotocols are negotiated via headers during [the handshake](#handshake). Sometimes extensions and subprotocols are very similar, but there is a clear distinction. Extensions control the WebSocket _frame_ and _modify_ the payload, while subprotocols structure the WebSocket _payload_ and _never modify_ anything. Extensions are optional and generalized (like compression); subprotocols are mandatory and localized (like ones for chat and for MMORPG games).
+WebSocket extensions and subprotocols are negotiated via headers during [the handshake](#the_websocket_handshake). Sometimes extensions and subprotocols are very similar, but there is a clear distinction. Extensions control the WebSocket _frame_ and _modify_ the payload, while subprotocols structure the WebSocket _payload_ and _never modify_ anything. Extensions are optional and generalized (like compression); subprotocols are mandatory and localized (like ones for chat and for MMORPG games).
 
 ### Extensions
 

@@ -13,7 +13,8 @@ The `ScriptProcessorNode` interface allows the generation, processing, or analyz
 
 {{InheritanceDiagram}}
 
-> **Note:** This feature was replaced by [AudioWorklets](/en-US/docs/Web/API/AudioWorklet) and the {{domxref("AudioWorkletNode")}} interface.
+> [!NOTE]
+> This feature was replaced by [AudioWorklets](/en-US/docs/Web/API/AudioWorklet) and the {{domxref("AudioWorkletNode")}} interface.
 
 The `ScriptProcessorNode` interface is an {{domxref("AudioNode")}} audio-processing module that is linked to two buffers, one containing the input audio data, one containing the processed output audio data. An event, implementing the {{domxref("AudioProcessingEvent")}} interface, is sent to the object each time the input buffer contains new data, and the event handler terminates when it has filled the output buffer with data.
 

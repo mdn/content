@@ -63,7 +63,7 @@ children
 ```
 
 The `HTMLMediaElement.textTracks` returns a
-`textTracksList` thru which we can iterate. Here we print all the properties
+`textTracksList` through which we can iterate. Here we print all the properties
 of each English track to the console.
 
 ```js

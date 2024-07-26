@@ -9,11 +9,10 @@ browser-compat: html.elements.acronym
 
 {{HTMLSidebar}}{{deprecated_header}}
 
-## Summary
-
 The **`<acronym>`** [HTML](/en-US/docs/Web/HTML) element allows authors to clearly indicate a sequence of characters that compose an acronym or abbreviation for a word.
 
-> **Warning:** Don't use this element. Use the {{HTMLElement("abbr")}} element instead.
+> [!WARNING]
+> Don't use this element. Use the {{HTMLElement("abbr")}} element instead.
 
 ## Attributes
 

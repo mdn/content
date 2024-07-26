@@ -12,7 +12,8 @@ Firefox also supports additional features not in the OpenSearch standard, such a
 
 OpenSearch description files can be advertised as described in [Autodiscovery of search plugins](#autodiscovery_of_search_plugins).
 
-> **Warning:** OpenSearch plugins can't be uploaded anymore on [addons.mozilla.org](https://addons.mozilla.org) (AMO). Search engine feature must use WebExtension API with [chrome settings](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides) in `manifest.json` file.
+> [!WARNING]
+> OpenSearch plugins can't be uploaded anymore on [addons.mozilla.org](https://addons.mozilla.org) (AMO). Search engine feature must use WebExtension API with [chrome settings](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides) in `manifest.json` file.
 
 ## OpenSearch description file
 
@@ -51,7 +52,8 @@ The XML file that describes a search engine follows the basic template below. Se
 
     Firefox caches the icon as a [base64](https://en.wikipedia.org/wiki/Base64) `data:` URL (search plug-ins are stored in the [profile](https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data)'s `searchplugins/` folder). `http:` and `https:` URLs are converted to `data:` URLs when this is done.
 
-    > **Note:** For icons loaded remotely (that is, from `https://` URLs as opposed to `data:` URLs), Firefox will reject icons larger than **10 kilobytes**.
+    > [!NOTE]
+    > For icons loaded remotely (that is, from `https://` URLs as opposed to `data:` URLs), Firefox will reject icons larger than **10 kilobytes**.
 
     ![Search suggestions from Google displayed in Firefox's search box](searchsuggestionsample.png)
 
@@ -68,12 +70,6 @@ The XML file that describes a search engine follows the basic template below. Se
     For these URL types, you can use `{searchTerms}` to substitute the search terms entered by the user in the search bar or location bar. Other supported dynamic search parameters are described in [OpenSearch 1.1 parameters](https://github.com/dewitt/opensearch/blob/master/opensearch-1-1-draft-6.md#opensearch-11-parameters).
 
     For search suggestions, the `application/x-suggestions+json` URL template is used to fetch a suggestion list in [JSON](/en-US/docs/Glossary/JSON) format.
-
-- moz:SearchForm
-
-  - : The URL for the site's search initiation page for the plugin. This lets Firefox users visit the website, and search from the site directly.
-
-    > **Note:** Since this element is Firefox-specific, and not part of the OpenSearch specification, we use the `moz:` XML namespace prefix in the example above to ensure that other user agents that don't support this element can safely ignore it.
 
 ## Autodiscovery of search plugins
 
@@ -114,7 +110,8 @@ If your site offers multiple search plugins, you can support autodiscovery for t
 
 This way, your site can offer plugins to search by author, or by title.
 
-> **Note:** In Firefox, an icon change in the search box indicates there's a provided search plugin. (See image, the green plus sign.) Thus if a search box is not shown in the user's UI, they will receive _no_ indication. _In general, behavior varies among browsers_.
+> [!NOTE]
+> In Firefox, an icon change in the search box indicates there's a provided search plugin. (See image, the green plus sign.) Thus if a search box is not shown in the user's UI, they will receive _no_ indication. _In general, behavior varies among browsers_.
 
 ## Supporting automatic updates for OpenSearch plugins
 
@@ -128,7 +125,8 @@ For example:
      template="https://example.com/mysearchdescription.xml" />
 ```
 
-> **Note:** At this time, [addons.mozilla.org](https://addons.mozilla.org) (AMO) doesn't support automatic updating of OpenSearch plugins. If you want to put your search plugin on AMO, remove the auto-updating feature before submitting it.
+> [!NOTE]
+> At this time, [addons.mozilla.org](https://addons.mozilla.org) (AMO) doesn't support automatic updating of OpenSearch plugins. If you want to put your search plugin on AMO, remove the auto-updating feature before submitting it.
 
 ## Troubleshooting Tips
 
@@ -138,7 +136,7 @@ If there is a mistake in your Search Plugin XML, you could run into errors when 
 - Be sure that your Search Plugin XML is well formed. You can check by loading the file directly into Firefox. Ampersands (&) in the `template` URL must be escaped as `&amp;`, and tags must be closed with a trailing slash or matching end tag.
 - The `xmlns` attribute is important — without it you could get the error message "Firefox could not download the search plugin".
 - You **must** include a `text/html` URL — search plugins including only Atom or [RSS](/en-US/docs/Glossary/RSS) URL types (which is valid, but Firefox doesn't support) will also generate the "could not download the search plugin" error.
-- Remotely fetched favicons must not be larger than 10KB (see [Webkit bug 361923](https://bugzil.la/361923)).
+- Remotely fetched favicons must not be larger than 10KB (see [Firefox bug 361923](https://bugzil.la/361923)).
 
 In addition, the search plugin service provides a logging mechanism that may be useful to plugin developers. Use `about:config` to set the pref '`browser.search.log`' to `true`. Then, logging information will appear in Firefox's [Browser Console](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html)(Tools ➤ Browser Tools ➤ Browser Console) when search plugins are added.
 

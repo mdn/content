@@ -5,7 +5,7 @@ page-type: javascript-language-feature
 browser-compat: javascript.regular_expressions.backreference
 ---
 
-{{JsSidebar}}
+{{jsSidebar}}
 
 A **backreference** refers to the submatch of a previous [capturing group](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group) and matches the same text as that group. For [named capturing groups](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group), you may prefer to use the [named backreference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_backreference) syntax.
 
@@ -34,7 +34,7 @@ In [case-insensitive](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp
 
 The backreference must refer to an existent capturing group. If the number it specifies is greater than the total number of capturing groups, a syntax error is thrown.
 
-```js
+```js-nolint example-bad
 /(a)\2/u; // SyntaxError: Invalid regular expression: Invalid escape
 ```
 
@@ -92,8 +92,8 @@ findDuplicates("Hello hellos"); // undefined
 
 ## See also
 
-- [Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)
-- [Regular expressions reference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
+- [Groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences) guide
+- [Regular expressions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
 - [Capturing group: `(...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group)
 - [Named capturing group: `(?<name>...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group)
 - [Named backreference: `\k<name>`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_backreference)

@@ -19,7 +19,8 @@ Pointers events are usually sent first to the browser process, which then forwar
 
 The Ink API significantly reduces this latency by allowing browsers to bypass the JavaScript event loop entirely. Where possible, browsers will pass such rendering instructions directly to OS-level compositors. If the underlying operating system does not have a specialized OS-level compositor to use for this purpose, browsers will use their own optimized rendering code. This is not as powerful as a compositor, but it still confers some improvements.
 
-> **Note:** Compositors are part of the rendering machinery that draws the UI to the screen in a browser or operating system. See [Inside look at modern web browser (part 3)](https://developer.chrome.com/blog/inside-browser-part3/) for some interesting insights into how a compositor functions inside a web browser.
+> [!NOTE]
+> Compositors are part of the rendering machinery that draws the UI to the screen in a browser or operating system. See [Inside look at modern web browser (part 3)](https://developer.chrome.com/blog/inside-browser-part3/) for some interesting insights into how a compositor functions inside a web browser.
 
 The entry point is the {{domxref("Navigator.ink")}} property, which returns an {{domxref("Ink")}} object for the current document. The {{domxref("Ink.requestPresenter","Ink.requestPresenter()")}} method returns a {{jsxref("Promise")}} that fulfills with an {{domxref("InkPresenter")}} object instance. This instructs the OS-level compositor to render ink strokes between pointer event dispatches in the next available frame in each case.
 
@@ -59,7 +60,7 @@ The result is that a delegated ink trail is drawn ahead of the default browser r
 
 ```css
 div {
-  background-color: rgba(0, 255, 0, 1);
+  background-color: rgb(0 255 0 / 100%);
   position: fixed;
   top: 1rem;
   left: 1rem;
@@ -72,7 +73,7 @@ div {
 const ctx = canvas.getContext("2d");
 const presenter = navigator.ink.requestPresenter({ presentationArea: canvas });
 let move_cnt = 0;
-let style = { color: "rgba(0, 255, 0, 1)", diameter: 10 };
+let style = { color: "rgb(0 255 0 / 100%)", diameter: 10 };
 
 function getRandomInt(min, max) {
   min = Math.ceil(min);
@@ -89,11 +90,10 @@ canvas.addEventListener("pointermove", async (evt) => {
     const g = getRandomInt(0, 255);
     const b = getRandomInt(0, 255);
 
-    style = { color: `rgba(${r}, ${g}, ${b}, 1)`, diameter: 10 };
+    style = { color: `rgb(${r} ${g} ${b} / 100%)`, diameter: 10 };
     move_cnt = 0;
-    document.getElementById(
-      "div",
-    ).style.backgroundColor = `rgba(${r}, ${g}, ${b}, 0.6)`;
+    document.getElementById("div").style.backgroundColor =
+      `rgb(${r} ${g} ${b} / 60%)`;
   }
   move_cnt += 1;
   await presenter.updateInkTrailStartPoint(evt, style);

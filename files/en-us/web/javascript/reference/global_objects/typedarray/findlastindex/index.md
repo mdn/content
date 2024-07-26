@@ -33,8 +33,8 @@ findLastIndex(callbackFn, thisArg)
 
 ### Return value
 
-The index of the last (highest-index) element in the array that passes the test.
-Otherwise -1 if no matching element is found.
+The index of the last (highest-index) element in the typed array that passes the test.
+Otherwise `-1` if no matching element is found.
 
 ## Description
 
@@ -77,8 +77,8 @@ console.log(uint8.findLastIndex(isPrime));
 
 ## See also
 
-- [Polyfill of `TypedArray.prototype.findLastIndex` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
+- [Polyfill of `TypedArray.prototype.findLastIndex` in `core-js`](https://github.com/zloirock/core-js#array-find-from-last)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.find()")}}
 - {{jsxref("TypedArray.prototype.findIndex()")}}

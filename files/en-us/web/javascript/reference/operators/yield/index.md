@@ -27,7 +27,8 @@ yield expression
 
 Returns the optional value passed to the generator's `next()` method to resume its execution.
 
-> **Note:** This means `next()` is asymmetric: it always sends a value to the currently suspended `yield`, but returns the operand of the next `yield`. The argument passed to the first `next()` call cannot be retrieved because there's no currently suspended `yield`.
+> [!NOTE]
+> This means `next()` is asymmetric: it always sends a value to the currently suspended `yield`, but returns the operand of the next `yield`. The argument passed to the first `next()` call cannot be retrieved because there's no currently suspended `yield`.
 
 ## Description
 
@@ -104,7 +105,7 @@ console.log(generatorFunc.next(10).value); // 26
 
 ## See also
 
-- [The Iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
+- [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Statements/function*", "function*")}}
 - [`function*` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function*)
 - {{jsxref("Operators/yield*", "yield*")}}

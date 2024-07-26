@@ -3,13 +3,11 @@ title: "Highlight: size property"
 short-title: size
 slug: Web/API/Highlight/size
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.Highlight.size
 spec-urls: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-get-set.prototype.size
 ---
 
-{{APIRef("CSS Custom Highlight API")}}{{SeeCompatTable}}
+{{APIRef("CSS Custom Highlight API")}}
 
 The **`size`** property returns the number of {{domxref("Range")}} objects in a
 {{domxref("Highlight")}} object.

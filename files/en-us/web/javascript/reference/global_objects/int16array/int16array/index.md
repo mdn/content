@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Int16Array.Int16Array
 
 {{JSRef}}
 
-The **`Int16Array()`** constructor creates {{jsxref("Int16Array")}} objects. The contents are initialized to `0`.
+The **`Int16Array()`** constructor creates {{jsxref("Int16Array")}} objects. The contents are initialized to `0` unless initialization data is explicitly provided.
 
 ## Syntax
 
@@ -77,6 +77,7 @@ console.log(int16FromIterable);
 ## See also
 
 - [Polyfill of `Int16Array` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
+- {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

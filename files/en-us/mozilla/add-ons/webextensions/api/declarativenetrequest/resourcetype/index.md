@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.declarativeNetRequest.ResourceType
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The resource type of a request. Comparable to {{WebExtAPIRef('webRequest.ResourceType')}}.
 

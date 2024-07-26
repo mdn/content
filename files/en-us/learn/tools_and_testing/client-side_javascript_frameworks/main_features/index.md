@@ -35,11 +35,11 @@ DSLs can't be read by the browser directly; they must be transformed into JavaSc
 
 ### JSX
 
-[JSX](https://reactjs.org/docs/introducing-jsx.html), which stands for JavaScript and XML, is an extension of JavaScript that brings HTML-like syntax to a JavaScript environment. It was invented by the React team for use in React applications, but can be used to develop other applications — like Vue apps, for instance.
+[JSX](https://react.dev/learn/writing-markup-with-jsx), which stands for JavaScript and XML, is an extension of JavaScript that brings HTML-like syntax to a JavaScript environment. It was invented by the React team for use in React applications, but can be used to develop other applications — like Vue apps, for instance.
 
 The following shows a simple JSX example:
 
-```js
+```jsx
 const subject = "World";
 const header = (
   <header>
@@ -48,7 +48,7 @@ const header = (
 );
 ```
 
-This expression represents an HTML [`<header>`](/en-US/docs/Web/HTML/Element/header) element with an [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) element inside. The curly braces around `subject` on line 4 tell the application to read the value of the `subject` constant and insert it into our `<h1>`.
+This expression represents an HTML [`<header>`](/en-US/docs/Web/HTML/Element/header) element with an [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements) element inside. The curly braces around `{subject}` tell the application to read the value of the `subject` constant and insert it into our `<h1>`.
 
 When used with React, the JSX from the previous snippet would be compiled into this:
 
@@ -135,7 +135,7 @@ Properties, or **props**, are external data that a component needs in order to r
 
 A React representation of this `AuthorCredit` component might look something like this:
 
-```js
+```jsx
 function AuthorCredit(props) {
   return (
     <figure>
@@ -148,7 +148,7 @@ function AuthorCredit(props) {
 
 `{props.src}`, `{props.alt}`, and `{props.byline}` represent where our props will be inserted into the component. To render this component, we would write code like this in the place where we want it rendered (which will probably be inside another component):
 
-```js
+```jsx
 <AuthorCredit
   src="./assets/zelda.png"
   alt="Portrait of Zelda Schiff"
@@ -171,14 +171,14 @@ We talked about the concept of **state** in the previous chapter — a robust st
 
 As an example, consider a button that counts how many times it has been clicked. This component should be responsible for tracking its own _count_ state, and could be written like this:
 
-```js
+```jsx
 function CounterButton() {
   const [count] = useState(0);
   return <button>Clicked {count} times</button>;
 }
 ```
 
-[`useState()`](https://reactjs.org/docs/hooks-reference.html#usestate) is a **[React hook](https://reactjs.org/docs/hooks-intro.html)** which, given an initial data value, will keep track of that value as it is updated. The code will be initially rendered like so in the browser:
+[`useState()`](https://react.dev/reference/react/useState) is a **[React hook](https://react.dev/reference/react)** which, given an initial data value, will keep track of that value as it is updated. The code will be initially rendered like so in the browser:
 
 ```html
 <button>Clicked 0 times</button>
@@ -192,7 +192,7 @@ In order to be interactive, components need ways to respond to browser events, s
 
 In React, listening for the [`click`](/en-US/docs/Web/API/Element/click_event) event requires a special property, `onClick`. Let's update our `CounterButton` code from above to allow it to count clicks:
 
-```js
+```jsx
 function CounterButton() {
   const [count, setCount] = useState(0);
   return (
@@ -201,7 +201,7 @@ function CounterButton() {
 }
 ```
 
-In this version we are using additional `useState()` functionality to create a special `setCount()` function, which we can invoke to update the value of `count`. We call this function on line 4, and set `count` to whatever its current value is, plus one.
+In this version we are using additional `useState()` functionality to create a special `setCount()` function, which we can invoke to update the value of `count`. We call this function inside the `onClick` event handler to set `count` to whatever its current value is, plus one.
 
 ## Styling components
 
@@ -223,12 +223,10 @@ import AuthorCredit from "./components/AuthorCredit";
 
 Once that's done, `AuthorCredit` could be used inside the `Article` component like this:
 
-```js
-// …
-
-<AuthorCredit />
-
-// …
+```jsx
+<Article>
+  <AuthorCredit />
+</Article>
 ```
 
 ### Dependency injection
@@ -237,7 +235,7 @@ Real-world applications can often involve component structures with multiple lev
 
 Let's say that the magazine site we're building is structured like this:
 
-```js
+```jsx
 <App>
   <Home>
     <Article>
@@ -253,7 +251,7 @@ The problem of passing data through many layers of components is called prop dri
 
 To circumvent prop drilling, frameworks provide functionality known as dependency injection, which is a way to get certain data directly to the components that need it, without passing it through intervening levels. Each framework implements dependency injection under a different name, and in a different way, but the effect is ultimately the same.
 
-Angular calls this process [dependency injection](https://angular.io/guide/dependency-injection); Vue has [`provide()` and `inject()` component methods](https://v2.vuejs.org/v2/api/#provide-inject); React has a [Context API](https://reactjs.org/docs/context.html); Ember shares state through [services](https://guides.emberjs.com/release/services/).
+Angular calls this process [dependency injection](https://angular.io/guide/dependency-injection); Vue has [`provide()` and `inject()` component methods](https://v2.vuejs.org/v2/api/#provide-inject); React has a [Context API](https://react.dev/learn/passing-data-deeply-with-context); Ember shares state through [services](https://guides.emberjs.com/release/services/).
 
 ### Lifecycle
 
@@ -291,24 +289,22 @@ Each framework has extensive tools in its ecosystem, with capabilities for unit 
 
 Here's a quick test for our `CounterButton` written with the help of React Testing Library — it tests a number of things, such as the button's existence, and whether the button is displaying the correct text after being clicked 0, 1, and 2 times:
 
-```js
-import React from "react";
-import { render, fireEvent } from "@testing-library/react";
-import "@testing-library/jest-dom/extend-expect";
+```jsx
+import { fireEvent, render, screen } from "@testing-library/react";
 
 import CounterButton from "./CounterButton";
 
 it("Renders a semantic button with an initial state of 0", () => {
-  const { getByRole } = render(<CounterButton />);
-  const btn = getByRole("button");
+  render(<CounterButton />);
+  const btn = screen.getByRole("button");
 
   expect(btn).toBeInTheDocument();
   expect(btn).toHaveTextContent("Clicked 0 times");
 });
 
 it("Increments the count when clicked", () => {
-  const { getByRole } = render(<CounterButton />);
-  const btn = getByRole("button");
+  render(<CounterButton />);
+  const btn = screen.getByRole("button");
 
   fireEvent.click(btn);
   expect(btn).toHaveTextContent("Clicked 1 times");

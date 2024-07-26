@@ -17,13 +17,15 @@ For more examples and explanations, see the [JavaScript guide about functions](/
 
 Function values are typically instances of [`Function`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function). See {{jsxref("Function")}} for information on properties and methods of `Function` objects. Callable values cause [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) to return `"function"` instead of `"object"`.
 
-> **Note:** Not all callable values are `instanceof Function`. For example, the `Function.prototype` object is callable but not an instance of `Function`. You can also manually set the [prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) of your function so it no longer inherits from `Function.prototype`. However, such cases are extremely rare.
+> [!NOTE]
+> Not all callable values are `instanceof Function`. For example, the `Function.prototype` object is callable but not an instance of `Function`. You can also manually set the [prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) of your function so it no longer inherits from `Function.prototype`. However, such cases are extremely rare.
 
 ### Return value
 
 By default, if a function's execution doesn't end at a [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) statement, or if the `return` keyword doesn't have an expression after it, then the return value is {{jsxref("undefined")}}. The `return` statement allows you to return an arbitrary value from the function. One function call can only return one value, but you can simulate the effect of returning multiple values by returning an object or array and [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) the result.
 
-> **Note:** Constructors called with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) have a different set of logic to determine their return values.
+> [!NOTE]
+> Constructors called with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) have a different set of logic to determine their return values.
 
 ### Passing arguments
 
@@ -37,7 +39,7 @@ function formatNumber(num) {
 formatNumber(2);
 ```
 
-In this example, the `num` variable is called the function's _parameter_: it's declared in the bracket-enclosed list of the function's definition. The function expects the `num` parameter to be a number — although this is not enforceable in JavaScript without writing runtime validation code. In the `formatNumber(2)` call, the number `2` is the function's _argument_: it's the value that is actually passed to the function in the function call. The argument value can be accessed inside the function body through the corresponding parameter name or the [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object.
+In this example, the `num` variable is called the function's _parameter_: it's declared in the parenthesis-enclosed list of the function's definition. The function expects the `num` parameter to be a number — although this is not enforceable in JavaScript without writing runtime validation code. In the `formatNumber(2)` call, the number `2` is the function's _argument_: it's the value that is actually passed to the function in the function call. The argument value can be accessed inside the function body through the corresponding parameter name or the [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object.
 
 Arguments are always [_passed by value_](https://en.wikipedia.org/wiki/Evaluation_strategy#Call_by_reference) and never _passed by reference_. This means that if a function reassigns a parameter, the value won't change outside the function. More precisely, object arguments are [_passed by sharing_](https://en.wikipedia.org/wiki/Evaluation_strategy#Call_by_sharing), which means if the object's properties are mutated, the change will impact the outside of the function. For example:
 
@@ -200,7 +202,7 @@ doSomething(
 
 On the other hand, a function expression may also be turned into a function declaration. An [expression statement](/en-US/docs/Web/JavaScript/Reference/Statements/Expression_statement) cannot begin with the `function` or `async function` keywords, which is a common mistake when implementing [IIFEs](/en-US/docs/Glossary/IIFE) (Immediately Invoked Function Expressions).
 
-```js example-bad
+```js-nolint example-bad
 function () { // SyntaxError: Function statements require a function name
   console.log("FOO!");
 }();
@@ -247,7 +249,7 @@ function myFunc({ a, b }, c = 1, ...rest) {
 There are some consequences if one of the above non-simple parameter syntaxes is used:
 
 - You cannot apply `"use strict"` to the function body — this causes a [syntax error](/en-US/docs/Web/JavaScript/Reference/Errors/Strict_non_simple_params).
-- Even if the function is not in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), the [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object stops syncing with the named parameters, and [`arguments.callee`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee) throws an error when accessed.
+- Even if the function is not in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), certain strict mode function features apply, including that the [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object stops syncing with the named parameters, [`arguments.callee`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee) throws an error when accessed, and duplicate parameter names are not allowed.
 
 ### The arguments object
 
@@ -362,7 +364,7 @@ if (typeof window.noFunc === "function") {
 }
 ```
 
-Note that in the `if` test, a reference to `noFunc` is used — there are no brackets `()` after the function name so the actual function is not called.
+Note that in the `if` test, a reference to `noFunc` is used — there are no parentheses `()` after the function name so the actual function is not called.
 
 ## Specifications
 
@@ -374,7 +376,7 @@ Note that in the `if` test, a reference to `noFunc` is used — there are no bra
 
 ## See also
 
-- [Functions guide](/en-US/docs/Web/JavaScript/Guide/Functions)
+- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions) guide
 - [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
 - {{jsxref("Statements/function", "function")}}
 - [`function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function)

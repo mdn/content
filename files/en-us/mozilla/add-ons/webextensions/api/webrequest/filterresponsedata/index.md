@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.webRequest.filterResponseData
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Use this function to create a {{WebExtAPIRef("webRequest.StreamFilter")}} object for a request. The stream filter gives the web extension full control over the stream, with the ability to monitor and modify the response. It's the extension's responsibility to write and close or disconnect the stream, as the default behavior is to keep the request open without a response.
 
@@ -85,7 +85,8 @@ browser.webRequest.onBeforeRequest.addListener(
 
 {{WebExtExamples}}
 
-> **Note:** The example above only works for small requests that aren't chunked or streamed. More advanced examples are documented with {{WebExtAPIRef("webRequest.StreamFilter.ondata")}}.
+> [!NOTE]
+> The example above only works for small requests that aren't chunked or streamed. More advanced examples are documented with {{WebExtAPIRef("webRequest.StreamFilter.ondata")}}.
 
 ## Browser compatibility
 

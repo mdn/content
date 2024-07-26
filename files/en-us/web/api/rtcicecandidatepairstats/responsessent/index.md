@@ -3,7 +3,7 @@ title: "RTCIceCandidatePairStats: responsesSent property"
 short-title: responsesSent
 slug: Web/API/RTCIceCandidatePairStats/responsesSent
 page-type: web-api-instance-property
-browser-compat: api.RTCIceCandidatePairStats.responsesSent
+browser-compat: api.RTCStatsReport.type_candidate-pair.responsesSent
 ---
 
 {{APIRef("WebRTC")}}
@@ -18,7 +18,8 @@ connection described by this pair of candidates.
 An integer value indicating the number of times a response has been sent to a
 {{Glossary("STUN")}} connectivity check request.
 
-> **Note:** Since it isn't possible to tell the difference between
+> [!NOTE]
+> Since it isn't possible to tell the difference between
 > connectivity check requests and consent requests, this value includes both.
 
 ## Specifications

@@ -34,13 +34,14 @@ Once your image has been converted to progressive form, you can use it as usual.
 
 When using a progressive image, the data is stored in such a way that the browser is able to render a low-quality representation of the image as soon as possible, then update the image as it loads—or after it's finished loading—to present it in full quality.
 
-> **Note:** Progressive (or interlaced) images are inherently slightly larger than the non-progressive versions of the same images. Whether the interlacing will benefit your users is up to you to determine.
+> [!NOTE]
+> Progressive (or interlaced) images are inherently slightly larger than the non-progressive versions of the same images. Whether the interlacing will benefit your users is up to you to determine.
 
 ## Specifying multiple sources
 
 ## Checking compatibility in JavaScript
 
-{{domxref("HTMLMediaElement.canPlayType")}} and {{domxref("MediaSource.isTypeSupported")}}…
+{{domxref("HTMLMediaElement.canPlayType")}} and {{domxref("MediaSource.isTypeSupported_static", "MediaSource.isTypeSupported()")}}…
 
 ## Detecting playback errors
 

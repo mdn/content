@@ -31,7 +31,8 @@ The {{httpheader("Report-To")}} HTTP header is used to specify details about the
 
 The endpoints are arranged into groups; an endpoint group can work together to provide load balancing (each endpoint will receive a specified proportion of report traffic) and safeguarding against failure (fallback endpoints can be specified to use if the primary ones fail).
 
-> **Note:** There is no absolute guarantee of report delivery — a report could still fail to be collected if a serious error occurs.
+> [!NOTE]
+> There is no absolute guarantee of report delivery — a report could still fail to be collected if a serious error occurs.
 
 Reports sent to endpoints can be retrieved independently of the running of the websites they relate to, which is useful — a crash for example could bring down a website and stop anything running, but a report could still be obtained to give the developer some clues as to why it happened.
 
@@ -98,7 +99,8 @@ This causes a deprecation report to be generated; because of the event handler w
 
 ![image of a jolly bearded man with various stats displayed below it about a deprecated feature](reporting_api_example.png)
 
-> **Note:** If you look at the [complete source code](https://github.com/mdn/dom-examples/blob/main/reporting-api/deprecation_report.html), you'll notice that we actually call the deprecated `getUserMedia()` method twice. After the first time we call {{domxref("ReportingObserver.takeRecords()")}}, which returns the first generated report and empties the queue. Because of this, when the button is pressed only the second report is listed.
+> [!NOTE]
+> If you look at the [complete source code](https://github.com/mdn/dom-examples/blob/main/reporting-api/deprecation_report.html), you'll notice that we actually call the deprecated `getUserMedia()` method twice. After the first time we call {{domxref("ReportingObserver.takeRecords()")}}, which returns the first generated report and empties the queue. Because of this, when the button is pressed only the second report is listed.
 
 ## Specifications
 
@@ -111,7 +113,7 @@ Support is at an early stage right now. Firefox supports the JavaScript API and 
 - JavaScript API: `dom.reporting.enabled` (enabled in nightly only)
 - HTTP header: `dom.reporting.header.enabled`
 
-Chrome is also working on an implementation: [information about Chrome implementation](https://web.dev/reporting-api/).
+Chrome is also working on an implementation: [information about Chrome implementation](https://developer.chrome.com/docs/capabilities/web-apis/reporting-api).
 
 ## See also
 

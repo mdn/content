@@ -19,20 +19,30 @@ x **= y
 
 ## Description
 
-`x **= y` is equivalent to `x = x ** y`.
+`x **= y` is equivalent to `x = x ** y`, except that the expression `x` is only evaluated once.
 
 ## Examples
 
-### Using exponentiation assignment
+### Exponentiation assignment using numbers
 
 ```js
 let bar = 5;
-
 bar **= 2; // 25
-bar **= "foo"; // NaN
+```
 
+Other non-BigInt values are coerced to numbers:
+
+```js
+let baz = 5;
+baz **= "foo"; // NaN
+```
+
+### Exponentiation assignment using BigInts
+
+```js
 let foo = 3n;
 foo **= 2n; // 9n
+foo **= 1; // TypeError: Cannot mix BigInt and other types, use explicit conversions
 ```
 
 ## Specifications
@@ -46,4 +56,4 @@ foo **= 2n; // 9n
 ## See also
 
 - [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators)
-- [Exponentiation operator](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [Exponentiation (`**`)](/en-US/docs/Web/JavaScript/Reference/Operators/Exponentiation)

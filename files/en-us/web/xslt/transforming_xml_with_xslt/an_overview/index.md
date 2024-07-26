@@ -43,4 +43,4 @@ The eXtensible Stylesheet Language/Transform is a very powerful language, and a 
 - `<?xml-stylesheet type="text/xml" href="inventory.xsl"?>`
   - : This must be placed in the prolog section of the XML document.
 
-To learn more about XSLT and XPath, see the [For Further Reading](/en-US/Transforming_XML_with_XSLT/For_Further_Reading) section at the end of this article.
+To learn more about XSLT and XPath, see the [For Further Reading](/en-US/docs/Web/XSLT/Transforming_XML_with_XSLT/For_Further_Reading) section at the end of this article.

@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.FetchEvent.preloadResponse
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
 
 The **`preloadResponse`** read-only property of the {{domxref("FetchEvent")}} interface returns a {{jsxref("Promise")}} that resolves to the navigation preload {{domxref("Response")}} if [navigation preload](/en-US/docs/Web/API/NavigationPreloadManager) was triggered, or `undefined` otherwise.
 
@@ -62,6 +62,4 @@ addEventListener("fetch", (event) => {
 - [Speed up Service Worker with Navigation Preloads](https://developer.chrome.com/blog/navigation-preload/)
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise")}}
 - [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

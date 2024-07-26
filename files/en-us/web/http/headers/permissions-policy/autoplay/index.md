@@ -18,7 +18,8 @@ returned by {{domxref("HTMLMediaElement.play()")}} will reject with
 a {{domxref("DOMException")}}. The [`autoplay`](/en-US/docs/Web/HTML/Element/audio#autoplay) attribute on
 {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements will be ignored.
 
-> **Note:** For more details on autoplay and autoplay blocking, see the article [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide).
+> [!NOTE]
+> For more details on autoplay and autoplay blocking, see the article [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide).
 
 ## Syntax
 

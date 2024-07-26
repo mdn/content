@@ -5,6 +5,7 @@ page-type: web-api-overview
 status:
   - experimental
 browser-compat: api.Window.queryLocalFonts
+spec-urls: https://wicg.github.io/local-font-access/
 ---
 
 {{SeeCompatTable}}{{DefaultAPISidebar("Local Font Access API")}}
@@ -15,7 +16,7 @@ The **Local Font Access API** provides a mechanism to access the user's locally 
 
 [Web fonts](/en-US/docs/Learn/CSS/Styling_text/Web_fonts) were revolutionary in enabling typography on the web by allowing web designers to provide custom fonts to use on a web document. Specified via the {{cssxref("@font-face")}} at-rule, a web font can be loaded from a URL provided in the `url()` function.
 
-`@font-face` has several other useful features available. In particular, you can also specify the font's full or Postscript name inside the `local()` function to tell the browser to use a local copy if the user has the font installed on their computer. This is not without its problems — `local()` has become notorious as a [fingerprinting vector](https://developer.chrome.com/articles/local-fonts/#local-fonts-as-fingerprint-vector).
+`@font-face` has several other useful features available. In particular, you can also specify the font's full or Postscript name inside the `local()` function to tell the browser to use a local copy if the user has the font installed on their computer. This is not without its problems — `local()` has become notorious as a [fingerprinting vector](https://developer.chrome.com/docs/capabilities/web-apis/local-fonts#local_fonts_as_fingerprint_vector).
 
 In addition, high-end design tools have historically been difficult to deliver on the web, due to challenges in accurate font enumeration and accessing low-level font data (for example, to apply filters and transformations). Current apps often rely on workarounds such as asking users to upload their fonts to a server where they are processed to get raw byte data, or installing a separate local program to provide additional capabilities.
 
@@ -26,7 +27,7 @@ The {{domxref("Window.queryLocalFonts()")}} method provides access to an array o
 In terms of privacy and security:
 
 - The Local Font Access API is designed to only provide access to the data required to solve the above problems. There is also no requirement for browsers to provide the full list of available local fonts, nor to provide the data in the same order as it appears on disk.
-- When {{domxref("Window.queryLocalFonts()")}} is invoked, the user is asked for permission to access their local fonts. The status of this permission can be queried via the {{domxref("Permissions API")}} (the `local-fonts` permission).
+- When {{domxref("Window.queryLocalFonts()")}} is invoked, the user is asked for permission to access their local fonts. The status of this permission can be queried via the [Permissions API](/en-US/docs/Web/API/Permissions_API) (the `local-fonts` permission).
 - You can control access to this feature using a {{httpheader("Permissions-Policy/local-fonts", "local-fonts")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 
 ## Interfaces
@@ -119,6 +120,6 @@ async function computeOutlineFormat() {
 
 ## See also
 
-- [Use advanced typography with local fonts](https://developer.chrome.com/articles/local-fonts/)
+- [Use advanced typography with local fonts](https://developer.chrome.com/docs/capabilities/web-apis/local-fonts)
 - {{cssxref("@font-face")}}
 - The {{httpheader("Permissions-Policy/local-fonts", "local-fonts")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) directive

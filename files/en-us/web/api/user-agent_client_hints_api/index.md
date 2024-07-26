@@ -4,12 +4,16 @@ slug: Web/API/User-Agent_Client_Hints_API
 page-type: web-api-overview
 status:
   - experimental
-browser-compat: api.NavigatorUAData
+browser-compat:
+  - api.NavigatorUAData
+  - api.Navigator.userAgentData
+  - api.WorkerNavigator.userAgentData
+spec-urls: https://wicg.github.io/ua-client-hints/
 ---
 
 {{DefaultAPISidebar("User-Agent Client Hints API")}}{{SeeCompatTable}}
 
-The User-Agent Client Hints API extends [Client Hints](/en-US/docs/Web/HTTP/Client_hints) to provide a way of exposing browser and platform information via User-Agent response and request headers, and a JavaScript API.
+The **User-Agent Client Hints API** extends [Client Hints](/en-US/docs/Web/HTTP/Client_hints) to provide a way of exposing browser and platform information via User-Agent response and request headers, and a JavaScript API.
 
 ## Concepts and Usage
 
@@ -42,6 +46,13 @@ Potential use cases include:
 
 - {{domxref("NavigatorUAData")}}
   - : Provides properties and methods to access data about the user's browser and operating system.
+
+### Extensions to other interfaces
+
+- {{domxref("Navigator.userAgentData")}} {{ReadOnlyInline}}
+  - : Returns a {{domxref("NavigatorUAData")}} object, which gives access to information about the browser and operating system of the user.
+- {{domxref("WorkerNavigator.userAgentData")}} {{ReadOnlyInline}}
+  - : Returns a {{domxref("NavigatorUAData")}} object, which gives access to information about the browser and operating system of the user.
 
 ## Examples
 
@@ -81,5 +92,5 @@ navigator.userAgentData
 
 ## See also
 
-- [Improving user privacy and developer experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints/)
-- [Migrate to User-Agent Client Hints](https://web.dev/migrate-to-ua-ch/)
+- [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints)
+- [Migrate to User-Agent Client Hints](https://web.dev/articles/migrate-to-ua-ch)

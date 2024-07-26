@@ -38,7 +38,7 @@ getMetadata(successCallback, errorCallback)
 
 None ({{jsxref("undefined")}}).
 
-### Errors
+### Exceptions
 
 - `FileError.NOT_FOUND_ERR`
   - : The {{domxref("FileSystemEntry")}} refers to an item which doesn't exist.

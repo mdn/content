@@ -13,7 +13,7 @@ Now you've learned something about the theory of JavaScript and what you can do 
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, a basic understanding of HTML and CSS, an
+        A basic understanding of HTML and CSS, an
         understanding of what JavaScript is.
       </td>
     </tr>
@@ -30,7 +30,8 @@ Now you've learned something about the theory of JavaScript and what you can do 
 
 We want to set really clear expectations here: You won't be expected to learn JavaScript by the end of this article, or even understand all the code we are asking you to write. Instead, we want to give you an idea of how JavaScript's features work together, and what writing JavaScript feels like. In subsequent articles you'll revisit all the features shown here in a lot more detail, so don't worry if you don't understand it all immediately!
 
-> **Note:** Many of the code features you'll see in JavaScript are the same as in other programming languages — functions, loops, etc. The code syntax looks different, but the concepts are still largely the same.
+> [!NOTE]
+> Many of the code features you'll see in JavaScript are the same as in other programming languages — functions, loops, etc. The code syntax looks different, but the concepts are still largely the same.
 
 ## Thinking like a programmer
 
@@ -142,7 +143,8 @@ In our example:
 
 - Our final two variables store a guess count of 1 (used to keep track of how many guesses the player has had), and a reference to a reset button that doesn't exist yet (but will later).
 
-> **Note:** You'll learn a lot more about variables and constants later on in the course, starting with the [next article](/en-US/docs/Learn/JavaScript/First_steps/Variables).
+> [!NOTE]
+> You'll learn a lot more about variables and constants later on in the course, starting with the article [Storing the information you need — Variables](/en-US/docs/Learn/JavaScript/First_steps/Variables).
 
 ### Functions
 
@@ -166,7 +168,8 @@ checkGuess();
 
 After pressing <kbd>Return</kbd>/<kbd>Enter</kbd>, you should see an alert come up that says `I am a placeholder`; we have defined a function in our code that creates an alert whenever we call it.
 
-> **Note:** You'll learn a lot more about functions [later in the course](/en-US/docs/Learn/JavaScript/Building_blocks/Functions).
+> [!NOTE]
+> You'll learn a lot more about functions later on in the article [Functions — reusable blocks of code](/en-US/docs/Learn/JavaScript/Building_blocks/Functions).
 
 ### Operators
 
@@ -183,29 +186,18 @@ First let's look at arithmetic operators, for example:
 | `*`      | Multiplication | `3 * 7`   |
 | `/`      | Division       | `10 / 5`  |
 
-You can also use the `+` operator to join text strings together (in programming, this is called _concatenation_). Try entering the following lines, one at a time:
+There are also some shortcut operators available, called [compound assignment operators](/en-US/docs/Web/JavaScript/Reference/Operators#assignment_operators). For example, if you want to add a new number to an existing one and return the result, you could do this:
 
 ```js
-const name = "Bingo";
-name;
-const hello = " says hello!";
-hello;
-const greeting = name + hello;
-greeting;
-```
-
-There are also some shortcut operators available, called augmented [assignment operators](/en-US/docs/Web/JavaScript/Reference/Operators#assignment_operators). For example, if you want to add a new text string to an existing one and return the result, you could do this:
-
-```js
-let name1 = "Bingo";
-name1 += " says hello!";
+let number1 = 1;
+number1 += 2;
 ```
 
 This is equivalent to
 
 ```js
-let name2 = "Bingo";
-name2 = name2 + " says hello!";
+let number2 = 1;
+number2 = number2 + 2;
 ```
 
 When we are running true/false tests (for example inside conditionals — see [below](#conditionals)) we use [comparison operators](/en-US/docs/Web/JavaScript/Reference/Operators). For example:
@@ -266,6 +258,28 @@ When we are running true/false tests (for example inside conditionals — see [b
   </thead>
 </table>
 
+### Text strings
+
+Strings are used for representing text. We've already seen a string variable: in the following code, `"I am a placeholder"` is a string:
+
+```js
+function checkGuess() {
+  alert("I am a placeholder");
+}
+```
+
+You can declare strings using double quotes (`"`) or single quotes (`'`), but you must use the same form for the start and end of a single string declaration: you can't write `"I am a placeholder'`.
+
+You can also declare strings using backticks (`` ` ``). Strings declared like this are called _template literals_ and have some special properties. In particular, you can embed other variables or even expressions in them:
+
+```js
+const name = "Mahalia";
+
+const greeting = `Hello ${name}`;
+```
+
+This gives you a mechanism to join strings together.
+
 ### Conditionals
 
 Returning to our `checkGuess()` function, I think it's safe to say that we don't want it to just spit out a placeholder message. We want it to check whether a player's guess is correct or not, and respond appropriately.
@@ -276,9 +290,9 @@ At this point, replace your current `checkGuess()` function with this version in
 function checkGuess() {
   const userGuess = Number(guessField.value);
   if (guessCount === 1) {
-    guesses.textContent = "Previous guesses: ";
+    guesses.textContent = "Previous guesses:";
   }
-  guesses.textContent += `${userGuess} `;
+  guesses.textContent = `${guesses.textContent} ${userGuess}`;
 
   if (userGuess === randomNumber) {
     lastResult.textContent = "Congratulations! You got it right!";
@@ -316,14 +330,14 @@ This is a lot of code — phew! Let's go through each section and explain what i
 
   If it is, we make the guesses paragraph's text content equal to `Previous guesses:`. If not, we don't.
 
-- Line 6 appends the current `userGuess` value onto the end of the `guesses` paragraph, plus a blank space so there will be a space between each guess shown.
+- Next, we use a template literal to append the current `userGuess` value onto the end of the `guesses` paragraph, with a blank space in between.
 - The next block does a few checks:
 
   - The first `if (){ }` checks whether the user's guess is equal to the `randomNumber` set at the top of our JavaScript. If it is, the player has guessed correctly and the game is won, so we show the player a congratulations message with a nice green color, clear the contents of the Low/High guess information box, and run a function called `setGameOver()`, which we'll discuss later.
   - Now we've chained another test onto the end of the last one using an `else if (){ }` structure. This one checks whether this turn is the user's last turn. If it is, the program does the same thing as in the previous block, except with a game over message instead of a congratulations message.
   - The final block chained onto the end of this code (the `else { }`) contains code that is only run if neither of the other two tests returns true (i.e. the player didn't guess right, but they have more guesses left). In this case we tell them they are wrong, then we perform another conditional test to check whether the guess was higher or lower than the answer, displaying a further message as appropriate to tell them higher or lower.
 
-- The last three lines in the function (lines 26–28 above) get us ready for the next guess to be submitted. We add 1 to the `guessCount` variable so the player uses up their turn (`++` is an incrementation operation — increment by 1), and empty the value out of the form text field and focus it again, ready for the next guess to be entered.
+- The last three lines in the function get us ready for the next guess to be submitted. We add 1 to the `guessCount` variable so the player uses up their turn (`++` is an incrementation operation — increment by 1), and empty the value out of the form text field and focus it again, ready for the next guess to be entered.
 
 ### Events
 
@@ -415,10 +429,10 @@ This is because of the loop. The line `const fruits = ['apples', 'bananas', 'che
 A `for...of` loop gives you a way to get each item in the array and run some JavaScript on it. The line `for (const fruit of fruits)` says:
 
 1. Get the first item in `fruits`.
-2. Set the `fruit` variable to that item, then run the code between the `{}` brackets.
+2. Set the `fruit` variable to that item, then run the code between the `{}` curly braces.
 3. Get the next item in `fruits`, and repeat 2, until you reach the end of `fruits`.
 
-In this case, the code inside the brackets is writing out `fruit` to the console.
+In this case, the code inside the curly braces is writing out `fruit` to the console.
 
 Now let's look at the loop in our number guessing game — the following can be found inside the `resetGame()` function:
 
@@ -476,7 +490,7 @@ Let's play with some browser objects a bit.
 
    The `value` property represents the current value entered into the text field. You'll see that by entering this command, we've changed the text in the text field!
 
-5. Now try typing `guesses` into the console and pressing return. The console shows you that the variable contains a {{htmlelement("p")}} element.
+5. Now try typing `guesses` into the console and pressing <kbd>Enter</kbd> (or <kbd>Return</kbd>, depending on your keyboard). The console shows you that the variable contains a {{htmlelement("p")}} element.
 6. Now try entering the following line:
 
    ```js

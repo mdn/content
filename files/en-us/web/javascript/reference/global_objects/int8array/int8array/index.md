@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Int8Array.Int8Array
 
 {{JSRef}}
 
-The **`Int8Array()`** constructor creates {{jsxref("Int8Array")}} objects. The contents are initialized to `0`.
+The **`Int8Array()`** constructor creates {{jsxref("Int8Array")}} objects. The contents are initialized to `0` unless initialization data is explicitly provided.
 
 ## Syntax
 
@@ -77,6 +77,7 @@ console.log(int8FromIterable);
 ## See also
 
 - [Polyfill of `Int8Array` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
+- {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

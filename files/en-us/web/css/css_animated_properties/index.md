@@ -41,7 +41,7 @@ Some properties have specific interpolation behavior not covered by these four t
 
 ## Animating custom properties
 
-For custom properties registered using the {{DOMXref("CSS/registerProperty", "registerProperty()")}} method, the animation type is by computed value, with the computed value type [determined](https://drafts.css-houdini.org/css-properties-values-api/#calculation-of-computed-values) by the property's syntax definition.
+For custom properties registered using the {{DOMXref("CSS/registerProperty_static", "registerProperty()")}} method, the animation type is by computed value, with the computed value type [determined](https://drafts.css-houdini.org/css-properties-values-api/#calculation-of-computed-values) by the property's syntax definition.
 
 For unregistered custom properties, the animation type is discrete.
 

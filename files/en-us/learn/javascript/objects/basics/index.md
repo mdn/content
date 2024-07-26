@@ -13,7 +13,7 @@ In this article, we'll look at fundamental JavaScript object syntax, and revisit
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, a basic understanding of HTML and CSS,
+        A basic understanding of HTML and CSS,
         familiarity with JavaScript basics (see
         <a href="/en-US/docs/Learn/JavaScript/First_steps">First steps</a> and
         <a href="/en-US/docs/Learn/JavaScript/Building_blocks">Building blocks</a>).
@@ -176,7 +176,7 @@ person.age;
 person.name.first;
 ```
 
-You can instead use brackets:
+You can instead use square brackets:
 
 ```js
 person["age"];
@@ -187,7 +187,7 @@ This looks very similar to how you access the items in an array, and it is basic
 It is no wonder that objects are sometimes called **associative arrays** — they map strings to values in the same way that arrays map numbers to values.
 
 Dot notation is generally preferred over bracket notation because it is more succinct and easier to read.
-However there are some cases where you have to use brackets.
+However there are some cases where you have to use square brackets.
 For example, if an object property name is held in a variable, then you can't use dot notation to access the value, but you can access the value using bracket notation.
 
 In the example below, the `logProperty()` function can use `person[propertyName]` to retrieve the value of the property named in `propertyName`.
@@ -280,9 +280,7 @@ introduceSelf() {
 }
 ```
 
-You are probably wondering what "this" is. The `this` keyword refers to the current object the code is being written inside — so in this case `this` is equivalent to `person`. So why not just write `person` instead?
-
-Well, when you only have to create a single object literal, it's not so useful. But if you create more than one, `this` enables you to use the same method definition for every object you create.
+You are probably wondering what "this" is. The `this` keyword typically refers to the current object the code is being executed in. In the context of an object method, `this` refers to the object that the method was called on.
 
 Let's illustrate what we mean with a simplified pair of person objects:
 
@@ -302,7 +300,9 @@ const person2 = {
 };
 ```
 
-In this case, `person1.introduceSelf()` outputs "Hi! I'm Chris."; `person2.introduceSelf()` on the other hand outputs "Hi! I'm Deepti.", even though the method's code is exactly the same in each case. This isn't hugely useful when you are writing out object literals by hand, but it will be essential when we start using **constructors** to create more than one object from a single object definition, and that's the subject of the next section.
+In this case, `person1.introduceSelf()` outputs "Hi! I'm Chris."; `person2.introduceSelf()` outputs "Hi! I'm Deepti." This happens because when the method is called, `this` refers to the object on which the method is called, which allows the same method definition to work for multiple objects.
+
+This isn't hugely useful when you are writing out object literals by hand, as using the object's name (`person1` and `person2`) leads to the exact same result, but it will be essential when we start using **constructors** to create more than one object from a single object definition, and that's the subject of the next section.
 
 ## Introducing constructors
 
@@ -334,12 +334,10 @@ Now we can create as many objects as we like, reusing the definition:
 
 ```js
 const salva = createPerson("Salva");
-salva.name;
 salva.introduceSelf();
 // "Hi! I'm Salva."
 
 const frankie = createPerson("Frankie");
-frankie.name;
 frankie.introduceSelf();
 // "Hi! I'm Frankie."
 ```
@@ -366,12 +364,10 @@ To call `Person()` as a constructor, we use `new`:
 
 ```js
 const salva = new Person("Salva");
-salva.name;
 salva.introduceSelf();
 // "Hi! I'm Salva."
 
 const frankie = new Person("Frankie");
-frankie.name;
 frankie.introduceSelf();
 // "Hi! I'm Frankie."
 ```

@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Generator
 
 {{JSRef}}
 
-The **`Generator`** object is returned by a {{JSxRef("Statements/function*", "generator function", "", 1)}} and it conforms to both the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) and the [iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol).
+The **`Generator`** object is returned by a {{jsxref("Statements/function*", "generator function", "", 1)}} and it conforms to both the [iterable protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) and the [iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol).
 
 `Generator` is a subclass of the hidden {{jsxref("Iterator")}} class.
 
@@ -15,7 +15,7 @@ The **`Generator`** object is returned by a {{JSxRef("Statements/function*", "ge
 
 ## Constructor
 
-The `Generator` constructor is not available globally. Instances of `Generator` must be returned from [generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*):
+There's no JavaScript entity that corresponds to the `Generator` constructor. Instances of `Generator` must be returned from [generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*):
 
 ```js
 function* generator() {
@@ -31,7 +31,7 @@ console.log(gen.next().value); // 2
 console.log(gen.next().value); // 3
 ```
 
-In fact, there's no JavaScript entity that corresponds to the `Generator` constructor. There's only a hidden object which is the prototype object shared by all objects created by generator functions. This object is often stylized as `Generator.prototype` to make it look like a class, but it should be more appropriately called [`GeneratorFunction.prototype.prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction), because `GeneratorFunction` is an actual JavaScript entity.
+There's only a hidden object which is the prototype object shared by all objects created by generator functions. This object is often stylized as `Generator.prototype` to make it look like a class, but it should be more appropriately called {{jsxref("GeneratorFunction.prototype.prototype")}}, because `GeneratorFunction` is an actual JavaScript entity. To understand the prototype chain of `Generator` instances, see {{jsxref("GeneratorFunction.prototype.prototype")}}.
 
 ## Instance properties
 
@@ -43,15 +43,15 @@ These properties are defined on `Generator.prototype` and shared by all `Generat
 
     > **Note:** `Generator` objects do not store a reference to the generator function that created them.
 
-- `Generator.prototype[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Generator"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+- `Generator.prototype[Symbol.toStringTag]`
+  - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Generator"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 
 _Also inherits instance methods from its parent {{jsxref("Iterator")}}_.
 
 - {{jsxref("Generator.prototype.next()")}}
-  - : Returns a value yielded by the {{JSxRef("Operators/yield", "yield")}} expression.
+  - : Returns a value yielded by the {{jsxref("Operators/yield", "yield")}} expression.
 - {{jsxref("Generator.prototype.return()")}}
   - : Acts as if a `return` statement is inserted in the generator's body at the current suspended position, which finishes the generator and allows the generator to perform any cleanup tasks when combined with a [`try...finally`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#the_finally_block) block.
 - {{jsxref("Generator.prototype.throw()")}}
@@ -90,7 +90,7 @@ console.log(generator.next().value); // 2
 
 ## See also
 
-- {{JSxRef("Statements/function*", "function*")}}
+- {{jsxref("Statements/function*", "function*")}}
 - [`function*` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function*)
-- {{JSxRef("GeneratorFunction")}}
-- [The Iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
+- {{jsxref("GeneratorFunction")}}
+- [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)

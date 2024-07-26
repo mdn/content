@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.webNavigation.onBeforeNavigate
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when the browser is about to start a navigation event.
 
@@ -51,8 +51,8 @@ Events have three functions:
   - : `integer`. The ID of the tab in which the navigation is about to occur.
 - `url`
   - : `string`. The URL to which the given frame will navigate.
-- `processId`
-  - : `integer`. The ID of the process in which this tab is being rendered (This property is **not supported on Firefox**, and it is **deprecated on Chrome**).
+- `processId` {{optional_inline}} {{deprecated_inline}}
+  - : `integer`. This value is not set in modern browsers. When it was set, it represented the ID of the process running the renderer for this tab.
 - `frameId`
   - : `integer`. Frame in which the navigation is about to occur. `0` indicates that navigation happens in the tab's top-level browsing context, not in a nested {{HTMLElement("iframe")}}. A positive value indicates that navigation happens in a nested iframe. Frame IDs are unique for a given tab and process.
 - `parentFrameId`
@@ -82,7 +82,8 @@ browser.webNavigation.onBeforeNavigate.addListener(logOnBefore, filter);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/webNavigation/#event-onBeforeNavigate) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/webNavigation/#event-onBeforeNavigate) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

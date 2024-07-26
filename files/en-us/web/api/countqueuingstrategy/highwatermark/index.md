@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.CountQueuingStrategy.highWaterMark
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The read-only **`CountQueuingStrategy.highWaterMark`** property returns the total number of chunks that can be contained in the internal queue before backpressure is applied.
 

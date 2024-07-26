@@ -2,12 +2,10 @@
 title: ":past"
 slug: Web/CSS/:past
 page-type: css-pseudo-class
-status:
-  - experimental
 browser-compat: css.selectors.past
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`:past`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) selector is a time-dimensional pseudo-class that will match for any element which appears entirely before an element that matches {{cssxref(":current")}}. For example in a video with captions which are being displayed by [WebVTT](/en-US/docs/Web/API/WebVTT_API).
 

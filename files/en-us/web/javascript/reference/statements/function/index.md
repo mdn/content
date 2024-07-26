@@ -1,5 +1,5 @@
 ---
-title: function declaration
+title: function
 slug: Web/JavaScript/Reference/Statements/function
 page-type: javascript-statement
 browser-compat: javascript.statements.function
@@ -7,11 +7,11 @@ browser-compat: javascript.statements.function
 
 {{jsSidebar("Statements")}}
 
-The **`function`** declaration creates a {{glossary("binding")}} of a new function to a given name.
+The **`function`** declaration creates a {{Glossary("binding")}} of a new function to a given name.
 
 You can also define functions using the [`function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function).
 
-{{EmbedInteractiveExample("pages/js/statement-function.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/statement-function.html", "shorter")}}
 
 ## Syntax
 
@@ -32,8 +32,7 @@ function name(param0, param1, /* …, */ paramN) {
 - `name`
   - : The function name.
 - `param` {{optional_inline}}
-  - : The name of an argument to be passed to the function. Maximum number of arguments
-    varies in different engines.
+  - : The name of a formal parameter for the function. Maximum number of arguments varies in different engines. For the parameters' syntax, see the [Functions reference](/en-US/docs/Web/JavaScript/Guide/Functions#function_parameters).
 - `statements` {{optional_inline}}
   - : The statements which comprise the body of the function.
 
@@ -51,7 +50,8 @@ A `function` declaration creates a {{jsxref("Function")}} object. Each time when
 
 ### Block-level function declaration
 
-> **Warning:** In [non-strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), function declarations inside blocks behave strangely. Only declare functions in blocks if you are in strict mode.
+> [!WARNING]
+> In [non-strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), function declarations inside blocks behave strangely. Only declare functions in blocks if you are in strict mode.
 
 Functions can be conditionally declared — that is, a function statement can be nested within an [`if`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) statement. However, in non-strict mode, the results are inconsistent across implementations.
 
@@ -149,7 +149,7 @@ Whether `function` declarations can be redeclared in the same scope depends on w
 
 At the top level of a script, `function` declarations behave like `var` and can be redeclared by another `function` or `var` but not by {{jsxref("Statements/let", "let")}}, {{jsxref("Statements/const", "const")}}, or {{jsxref("Statements/class", "class")}}.
 
-```js
+```js-nolint example-bad
 function a(b) {}
 function a(b, c) {}
 console.log(a.length); // 2
@@ -177,13 +177,13 @@ foo(2); // Logs "function"
 
 At the top level of a module or a block in strict mode, `function` declarations behave like `let` and cannot be redeclared by any other declaration.
 
-```js
+```js-nolint example-bad
 // Assuming current source is a module
 function foo() {}
 function foo() {} // SyntaxError: Identifier 'foo' has already been declared
 ```
 
-```js
+```js-nolint example-bad
 "use strict";
 {
   function foo() {}
@@ -193,7 +193,7 @@ function foo() {} // SyntaxError: Identifier 'foo' has already been declared
 
 A `function` declaration within a `catch` block cannot have the same name as the `catch`-bound identifier, even in non-strict mode.
 
-```js
+```js-nolint example-bad
 try {
 } catch (e) {
   function e() {} // SyntaxError: Identifier 'e' has already been declared
@@ -222,8 +222,8 @@ function calcSales(unitsA, unitsB, unitsC) {
 
 ## See also
 
-- [Functions guide](/en-US/docs/Web/JavaScript/Guide/Functions)
-- [Functions reference](/en-US/docs/Web/JavaScript/Reference/Functions)
+- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions) guide
+- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
 - {{jsxref("Function")}}
 - [`function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function)
 - {{jsxref("Statements/function*", "function*")}}

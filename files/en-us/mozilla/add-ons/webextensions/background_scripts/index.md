@@ -13,6 +13,15 @@ Background scripts or a page are:
 - Persistent – loaded when the extension starts and unloaded when the extension is disabled or uninstalled.
 - Non-persistent (which are also known as event pages) – loaded only when needed to respond to an event and unloaded when they become idle. However, a background page does not unload until all visible views and message ports are closed. Opening a view does not cause the background page to load but does prevent it from closing.
 
+> [!NOTE]
+> In Firefox, if the extension process crashes:
+>
+> - persistent background scripts running at the time of the crash are reloaded automatically.
+> - non-persistent background scripts (also known as "Event Pages") running at the time of the crash are not reloaded. However, they are restarted automatically when Firefox calls one of their WebExtensions API events listeners.
+> - extension pages loaded in tabs at the time of the crash are not automatically restored. A warning message in each tab informs the user the page has crashed and enables the user to close or restore the tab.
+>   ![Browser window displaying the user message indicating that a page has crashed with the options to close or restart the tab](your-tab-crashed-screenshot.png)
+>   You can test this condition by opening a new tab and navigating to `about:crashextensions`, which silently triggers a crash of the extension process.
+
 In Manifest V2, background scripts or a page can be persistent or non-persistent. Non-persistent background scripts are recommended as they reduce the resource cost of your extension. In Manifest V3, only non-persistent background scripts or a page are supported.
 
 If you have persistent background scripts or a page in Manifest V2 and want to prepare your extension for migration to Manifest V3, [Convert to non-persistent](#convert_to_non-persistent) provides advice on transitioning the scripts or page to the non-persistent model.
@@ -23,7 +32,8 @@ If you have persistent background scripts or a page in Manifest V2 and want to p
 
 Background scripts run in the context of a special page called a background page. This gives them a [`window`](/en-US/docs/Web/API/Window) global, along with all the standard DOM APIs provided by that object.
 
-> **Warning:** In Firefox, background pages do not support the use of [`alert()`](/en-US/docs/Web/API/Window/alert), [`confirm()`](/en-US/docs/Web/API/Window/confirm), or [`prompt()`](/en-US/docs/Web/API/Window/prompt).
+> [!WARNING]
+> In Firefox, background pages do not support the use of [`alert()`](/en-US/docs/Web/API/Window/alert), [`confirm()`](/en-US/docs/Web/API/Window/confirm), or [`prompt()`](/en-US/docs/Web/API/Window/prompt).
 
 ### WebExtension APIs
 
@@ -88,7 +98,9 @@ You cannot specify background scripts and a background page.
 
 ### Initialize the extension
 
-Listen to {{WebExtAPIRef("runtime.onInstalled")}} to initialize an extension on installation. Use this event to set a state or for one-time initialization. For extensions with event pages, this is where stateful APIs, such as a context menu created using {{WebExtAPIRef("menus.create")}}, should be used.
+Listen to {{WebExtAPIRef("runtime.onInstalled")}} to initialize an extension on installation. Use this event to set a state or for one-time initialization.
+
+For extensions with event pages, this is where stateful APIs, such as a context menu created using {{WebExtAPIRef("menus.create")}}, should be used. This is because stateful APIs don't need to be run each time the event page reloads; they only need to run when the extension is installed.
 
 ```js
 browser.runtime.onInstalled.addListener(() => {
@@ -123,7 +135,7 @@ browser.bookmarks.onCreated.addListener(() => {
 
 Do not register listeners asynchronously, as they will not be properly triggered. So, rather than:
 
-```js
+```js example-bad
 window.onload = () => {
   // WARNING! This event is not persisted, and will not restart the event page.
   browser.bookmarks.onCreated.addListener(() => {
@@ -166,8 +178,10 @@ browser.webNavigation.onCompleted.addListener(
 
 ### React to listeners
 
-Listeners exist to trigger functionality once an event has fired. To react to an event, structure the desired reaction inside of the listener event.
+Listeners exist to trigger functionality once an event has fired. To react to an event, structure the desired reaction inside the listener event.
+
 When responding to events in the context of a specific tab or frame, use the `tabId` and `frameId` from the event details instead of relying on the "current tab". Specifying the target ensures your extension does not invoke an extension API on the wrong target when the "current tab" changes while waking the event page.
+
 For example, {{WebExtAPIRef("runtime.onMessage")}} can respond to {{WebExtAPIRef("runtime.sendMessage")}} calls as follows:
 
 ```js
@@ -205,7 +219,7 @@ Data should be persisted periodically to not lose important information if an ex
 browser.storage.local.set({ variable: variableInformation });
 ```
 
-Message ports cannot prevent an event page from shutting down. If an extension uses message passing, the ports are closed when the event page idles. Listening to the {{WebExtAPIRef("runtime.Port")}} `onDisconnect` lets you discover when open ports are closing, however the listener will be under the same time constraints as {{WebExtAPIRef("runtime.onSuspend")}}.
+Message ports cannot prevent an event page from shutting down. If an extension uses message passing, the ports are closed when the event page idles. Listening to the {{WebExtAPIRef("runtime.Port")}} `onDisconnect` lets you discover when open ports are closing, however the listener is under the same time constraints as {{WebExtAPIRef("runtime.onSuspend")}}.
 
 ```js
 browser.runtime.onConnect.addListener((port) => {
@@ -264,7 +278,7 @@ browser.runtime.onStartup.addListener(() => {
 
 Scripts now open and close as needed. So, do not rely on global variables.
 
-```js bad-example
+```js example-bad
 var count = 101;
 browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message === "count") {
@@ -332,7 +346,8 @@ The method returns `null` when:
 - extension pages are isolated, such as extension pages in Private Browsing mode or container tabs.
 - the background page is not running. This is uncommon with persistent background pages but very likely when using an Event Page, as an Event Page can be suspended.
 
-> **Note:** The recommended way to invoke functionality in the background script is to communicate with it through {{WebExtAPIRef("runtime.sendMessage","runtime.sendMessage()")}} or {{WebExtAPIRef("runtime.connect","runtime.connect()")}}.
+> [!NOTE]
+> The recommended way to invoke functionality in the background script is to communicate with it through {{WebExtAPIRef("runtime.sendMessage","runtime.sendMessage()")}} or {{WebExtAPIRef("runtime.connect","runtime.connect()")}}.
 > The `getBackgroundPage()` methods discussed in this section cannot be used in a cross-browser extension, because Manifest Version 3 extensions in Chrome cannot use background or event pages.
 
 If your extension requires a reference to the `window` of the background page, use {{WebExtAPIRef("runtime.getBackgroundPage")}} to ensure the event page is running.

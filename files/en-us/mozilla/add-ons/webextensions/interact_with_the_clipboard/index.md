@@ -11,7 +11,8 @@ browser-compat:
 
 Working with the clipboard in extensions is transitioning from the Web API {{domxref("Document.execCommand()","document.execCommand")}} method (which is deprecated) to the {{domxref("Clipboard", "navigator.clipboard")}} method.
 
-> **Note:** The {{domxref("Clipboard", "navigator.clipboard")}} API is a recent addition to the specification and may not be fully implemented in all browsers. This article describes some limitations, but be sure to review the compatibility tables for each method before using them to ensure that the API supports your needs.
+> [!NOTE]
+> The {{domxref("Clipboard", "navigator.clipboard")}} API is a recent addition to the specification and may not be fully implemented in all browsers. This article describes some limitations, but be sure to review the compatibility tables for each method before using them to ensure that the API supports your needs.
 
 The difference between the two APIs is that {{domxref("Document.execCommand()","document.execCommand")}} this is analogous to the keyboard copy, cut, and paste actions – exchanging data between a webpage and clipboard – whereas {{domxref("Clipboard", "navigator.clipboard")}} writes and reads arbitrary data to and from the clipboard.
 
@@ -43,7 +44,8 @@ navigator.permissions.query({ name: "clipboard-write" }).then((result) => {
 });
 ```
 
-> **Note:** The `clipboard-write` permission name is not supported in Firefox, only Chromium browsers.
+> [!NOTE]
+> The `clipboard-write` permission name is not supported in Firefox, only Chromium browsers.
 
 This function takes a string and writes it to the clipboard:
 

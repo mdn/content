@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.PushMessageData
 ---
 
-{{APIRef("Push API")}}
+{{APIRef("Push API")}}{{SecureContext_Header}}{{AvailableInWorkers("service")}}
 
 The **`PushMessageData`** interface of the [Push API](/en-US/docs/Web/API/Push_API) provides methods which let you retrieve the push data sent by a server in various formats.
 
@@ -23,6 +23,8 @@ None.
   - : Extracts the data as an {{jsxref("ArrayBuffer")}} object.
 - {{domxref("PushMessageData.blob()")}}
   - : Extracts the data as a {{domxref("Blob")}} object.
+- {{domxref("PushMessageData.bytes()")}}
+  - : Extracts the data as a {{jsxref("Uint8Array")}} object.
 - {{domxref("PushMessageData.json()")}}
   - : Extracts the data as a [JSON](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) object.
 - {{domxref("PushMessageData.text()")}}

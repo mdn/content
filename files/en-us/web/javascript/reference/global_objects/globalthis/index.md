@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.globalThis
 
 The **`globalThis`** global property contains the [global `this`](/en-US/docs/Web/JavaScript/Reference/Operators/this#global_context) value, which is usually akin to the [global object](/en-US/docs/Glossary/Global_object).
 
-{{EmbedInteractiveExample("pages/js/globalprops-globalthis.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/globalprops-globalthis.html", "shorter")}}
 
 ## Value
 
@@ -17,7 +17,8 @@ The global `this` object.
 
 {{js_property_attributes(1, 0, 1)}}
 
-> **Note:** The `globalThis` property is configurable and writable so that code authors can hide it when executing untrusted code and prevent exposing the global object.
+> [!NOTE]
+> The `globalThis` property is configurable and writable so that code authors can hide it when executing untrusted code and prevent exposing the global object.
 
 ## Description
 

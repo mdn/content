@@ -4,11 +4,12 @@ slug: Web/Accessibility/Understanding_WCAG/Operable
 page-type: guide
 ---
 
-{{QuicklinksWithSubPages("Web/Accessibility/Understanding_WCAG")}}
+{{AccessibilitySidebar}}
 
 This article provides practical advice on how to write your web content so that it conforms to the success criteria outlined in the **Operable** principle of the Web Content Accessibility Guidelines (WCAG) 2.0 and 2.1. Operable states that user interface components and navigation must be operable.
 
-> **Note:** To read the W3C definitions for Operable and its guidelines and success criteria, see [Principle 2: Operable — User interface components and navigation must be operable.](https://www.w3.org/TR/WCAG21/#operable)
+> [!NOTE]
+> To read the W3C definitions for Operable and its guidelines and success criteria, see [Principle 2: Operable — User interface components and navigation must be operable.](https://www.w3.org/TR/WCAG21/#operable)
 
 ## Guideline 2.1 — Keyboard Accessible: Make all functionality available from a keyboard
 
@@ -106,7 +107,8 @@ This guideline covers the necessity of making core website functionality availab
   </tbody>
 </table>
 
-> **Note:** Also see the WCAG description for [Guideline 2.1 Keyboard Accessible: Make all functionality available from a keyboard](https://www.w3.org/TR/WCAG21/#keyboard-accessible).
+> [!NOTE]
+> Also see the WCAG description for [Guideline 2.1 Keyboard Accessible: Make all functionality available from a keyboard](https://www.w3.org/TR/WCAG21/#keyboard-accessible).
 
 ## Guideline 2.2 — Enough Time: Provide users enough time to read and use content
 
@@ -208,7 +210,8 @@ This guideline covers situations in which functionality may have a time limit. F
   </tbody>
 </table>
 
-> **Note:** Also see the WCAG description for [Guideline 2.2 Enough Time: Provide users enough time to read and use content](https://www.w3.org/TR/WCAG21/#enough-time).
+> [!NOTE]
+> Also see the WCAG description for [Guideline 2.2 Enough Time: Provide users enough time to read and use content](https://www.w3.org/TR/WCAG21/#enough-time).
 
 ## Guideline 2.3 — Seizures and Physical Reactions: Do not design content in a way that is known to cause seizures or physical reactions
 
@@ -241,7 +244,8 @@ This refers to content that, if not changed, could cause seizures in users with 
   </tbody>
 </table>
 
-> **Note:** Also see the WCAG description for [Guideline 2.3 Seizures and Physical Reactions: Do not design content in a way that is known to cause seizures or physical reactions.](https://www.w3.org/TR/WCAG21/#seizures-and-physical-reactions)
+> [!NOTE]
+> Also see the WCAG description for [Guideline 2.3 Seizures and Physical Reactions: Do not design content in a way that is known to cause seizures or physical reactions.](https://www.w3.org/TR/WCAG21/#seizures-and-physical-reactions)
 
 ## Guideline 2.4 — Navigable: Provide ways to help users navigate, find content, and determine where they are
 
@@ -348,7 +352,7 @@ The conformance criteria under this guideline relate to ways in which users can 
         Most of these mechanisms can be created using simple HTML features, for
         example see
         <a
-          href="/en-US/docs/Learn/Forms/Basic_native_form_controls#search_field"
+          href="/en-US/docs/Learn/Forms/HTML5_input_types#search_field"
           >Search field</a
         >,
         <a
@@ -382,7 +386,7 @@ The conformance criteria under this guideline relate to ways in which users can 
             >The basics of headings and paragraphs</a
           >,
           <a
-            href="/en-US/docs/Learn/Forms/How_to_structure_a_web_form#the_%3clabel%3e_element"
+            href="/en-US/docs/Learn/Forms/How_to_structure_a_web_form#the_label_element"
             >The &#x3C;label> element</a
           >.
         </p>
@@ -500,7 +504,8 @@ The conformance criteria under this guideline relate to ways in which users can 
   </tbody>
 </table>
 
-> **Note:** Also see the WCAG description for [Guideline 2.4 Navigable: Provide ways to help users navigate, find content, and determine where they are.](https://www.w3.org/TR/WCAG21/#navigable)
+> [!NOTE]
+> Also see the WCAG description for [Guideline 2.4 Navigable: Provide ways to help users navigate, find content, and determine where they are.](https://www.w3.org/TR/WCAG21/#navigable)
 
 ## Guideline 2.5 Input Modalities: Make it easier for users to operate functionality through various inputs beyond keyboard
 
@@ -561,7 +566,8 @@ The conformance criteria under this guideline ensures that users are able to int
  </tbody>
 </table>
 
-> **Note:** Also see the WCAG description for [Guideline 2.5: Input Modalities: Make it easier for users to operate functionality through various inputs beyond keyboard.](https://www.w3.org/TR/WCAG21/#input-modalities)
+> [!NOTE]
+> Also see the WCAG description for [Guideline 2.5: Input Modalities: Make it easier for users to operate functionality through various inputs beyond keyboard.](https://www.w3.org/TR/WCAG21/#input-modalities)
 
 ## See also
 

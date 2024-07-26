@@ -22,7 +22,8 @@ If the element is hidden (for example, by setting `style.display` on the
 element or one of its ancestors to `"none"`), then `0` is
 returned.
 
-> **Note:** This property will round the value to an integer. If you need a fractional value, use
+> [!NOTE]
+> This property will round the value to an integer. If you need a fractional value, use
 > {{ domxref("element.getBoundingClientRect()") }}.
 
 ## Value
@@ -43,12 +44,6 @@ scrollable container.
 ## Specifications
 
 {{Specifications}}
-
-### Notes
-
-`offsetHeight` is a property of the DHTML object model which was first
-introduced by MSIE. It is sometimes referred to as an element's physical/graphical
-dimensions, or an element's border-box height.
 
 ## Browser compatibility
 

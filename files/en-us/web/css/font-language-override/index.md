@@ -7,7 +7,7 @@ browser-compat: css.properties.font-language-override
 
 {{CSSRef}}
 
-The **`font-language-override`** CSS property controls the use of language-specific glyphs in a typeface.
+The **`font-language-override`** [CSS](/en-US/docs/Web/CSS) property controls the use of language-specific glyphs in a typeface.
 
 By default, HTML's `lang` attribute tells browsers to display glyphs designed specifically for that language. For example, a lot of fonts have a special character for the digraph `fi` that merge the dot on the "i" with the "f." However, if the language is set to Turkish the typeface will likely know not to use the merged glyph; Turkish has two versions of the "i," one with a dot (`i`) and one without (`ı`), and using the ligature would incorrectly transform a dotted "i" into a dotless "i."
 

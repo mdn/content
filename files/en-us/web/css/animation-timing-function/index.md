@@ -73,11 +73,11 @@ animation-timing-function: unset;
   - : Displays an animation iteration along _n_ stops along the transition, displaying each stop for equal lengths of time. For example, if _n_ is 5, there are 5 steps. Whether the animation holds temporarily at 0%, 20%, 40%, 60% and 80%, on the 20%, 40%, 60%, 80% and 100%, or makes 5 stops between the 0% and 100% along the animation, or makes 5 stops including the 0% and 100% marks (on the 0%, 25%, 50%, 75%, and 100%) depends on which of the following jump terms is used:
 
     - `jump-start`
-      - : Denotes a left-continuous function, so that the first jump happens when the animation begins;
+      - : Denotes a left-continuous function, so that the first jump happens when the animation begins.
     - `jump-end`
-      - : Denotes a right-continuous function, so that the last jump happens when the animation ends;
+      - : Denotes a right-continuous function, so that the last jump happens when the animation ends. This is the default.
     - `jump-none`
-      - : There is no jump on either end. Instead, holding at both the 0% mark and the 100% mark, each for 1/n of the duration.
+      - : There is no jump on either end, effectively removing a step during the interpolation iteration. Instead, it holds at both the 0% mark and the 100% mark, each for 1/n of the duration.
     - `jump-both`
       - : Includes pauses at both the 0% and 100% marks, effectively adding a step during the animation iteration.
     - `start`

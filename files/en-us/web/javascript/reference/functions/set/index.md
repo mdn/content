@@ -34,10 +34,19 @@ There are some additional syntax restrictions:
 
 ## Description
 
-In JavaScript, a setter can be used to execute a function whenever a specified property
-is attempted to be changed. Setters are most often used in conjunction with getters to
-create a type of pseudo-property. It is not possible to simultaneously have a setter on
-a property that holds an actual value.
+In JavaScript, a setter can be used to execute a function whenever an attempt is made to change a property's value. Setters are most often used in conjunction with getters.
+
+An object property is either a data property or an accessor property, but it cannot simultaneously be both. Read {{jsxref("Object.defineProperty()")}} for more information. The setter syntax allows you to specify the setter function in an object initializer.
+
+```js
+const obj = {
+  set prop() {
+    // setter, the code executed when setting obj.prop
+  },
+}
+```
+
+Properties defined using this syntax are own properties of the created object, and they are configurable and enumerable.
 
 ## Examples
 
@@ -89,7 +98,7 @@ console.log(instance.msg); // "hello cake"
 
 Setter properties are defined on the `prototype` property of the class and are thus shared by all instances of the class. Unlike setter properties in object literals, setter properties in classes are not enumerable.
 
-Static setters and private setters use similar syntaxes, which are described in the [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static) and [private class features](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields) pages.
+Static setters and private setters use similar syntaxes, which are described in the [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static) and [private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) pages.
 
 ### Removing a setter with the `delete` operator
 
@@ -150,7 +159,7 @@ console.log(obj.baz); // "baz"
 
 ## See also
 
-- [Working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_objects)
+- [Working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_objects) guide
 - [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
 - [`get`](/en-US/docs/Web/JavaScript/Reference/Functions/get)
 - {{jsxref("Object.defineProperty()")}}
@@ -158,3 +167,4 @@ console.log(obj.baz); // "baz"
 - {{jsxref("Statements/class", "class")}}
 - [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors)
 - [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](https://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) by Jeff Walden (2010)
+- [More SpiderMonkey changes: ancient, esoteric, very rarely used syntax for creating getters and setters is being removed](https://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/) by Jeff Walden (2010)

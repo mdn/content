@@ -2,7 +2,11 @@
 title: Touch events
 slug: Web/API/Touch_events
 page-type: web-api-overview
-browser-compat: api.Touch
+browser-compat:
+  - api.Touch
+  - api.TouchEvent
+  - api.TouchList
+spec-urls: https://w3c.github.io/touch-events/
 ---
 
 {{DefaultAPISidebar("Touch Events")}}

@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 
 {{LearnSidebar}}{{NextMenu("Learn/HTML/Multimedia_and_embedding/Video_and_audio_content", "Learn/HTML/Multimedia_and_embedding")}}
 
-In the beginning, the Web was just text, and it was really quite boring. Fortunately, it wasn't too long before the ability to embed images (and other more interesting types of content) inside web pages was added. There are other types of multimedia to consider, but it is logical to start with the humble {{htmlelement("img")}} element, used to embed a simple image in a webpage. In this article we'll look at how to use it in depth, including the basics, annotating it with captions using {{htmlelement("figure")}}, and detailing how it relates to {{glossary("CSS")}} background images.
+In the beginning, the Web was just text, and it was really quite boring. Fortunately, it wasn't too long before the ability to embed images (and other more interesting types of content) inside web pages was added. It is logical to start with the humble {{htmlelement("img")}} element, used to embed a simple image in a webpage, but there are other types of multimedia to consider. In this article we'll look at how to use it in depth, including the basics, annotating it with captions using {{htmlelement("figure")}}, and detailing how it relates to {{glossary("CSS")}} background images, and we'll introduce other graphics available to the web platform.
 
 <table>
 <caption>Multimedia and Embedding Images</caption>
@@ -14,10 +14,9 @@ In the beginning, the Web was just text, and it was really quite boring. Fortuna
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy,
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >basic software installed</a
+          >Basic software installed</a
         >, basic knowledge of
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
@@ -44,7 +43,8 @@ In order to put a simple image on a web page, we use the {{htmlelement("img")}} 
 
 The [`alt` attribute is described below](#alternative_text).
 
-> **Note:** You should read [A quick primer on URLs and paths](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#a_quick_primer_on_urls_and_paths) to refresh your memory on relative and absolute URLs before continuing.
+> [!NOTE]
+> You should read [A quick primer on URLs and paths](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#a_quick_primer_on_urls_and_paths) to refresh your memory on relative and absolute URLs before continuing.
 
 So for example, if your image is called `dinosaur.jpg`, and it sits in the same directory as your HTML page, you could embed the image like so:
 
@@ -60,7 +60,8 @@ If the image was in an `images` subdirectory, which was inside the same director
 
 And so on.
 
-> **Note:** Search engines also read image filenames and count them towards SEO. Therefore, you should give your image a descriptive filename; `dinosaur.jpg` is better than `img835.png`.
+> [!NOTE]
+> Search engines also read image filenames and count them towards SEO. Therefore, you should give your image a descriptive filename; `dinosaur.jpg` is better than `img835.png`.
 
 You could also embed the image using its absolute URL, for example:
 
@@ -78,9 +79,11 @@ The previous code snippet, either with the absolute or the relative URL, will gi
 
 ![A basic image of a dinosaur, embedded in a browser, with "Images in HTML" written above it](basic-image.png)
 
-> **Note:** Elements like {{htmlelement("img")}} and {{htmlelement("video")}} are sometimes referred to as **replaced elements**. This is because the element's content and size are defined by an external resource (like an image or video file), not by the contents of the element itself. You can read more about them at [Replaced elements](/en-US/docs/Web/CSS/Replaced_element).
+> [!NOTE]
+> Elements like {{htmlelement("img")}} and {{htmlelement("video")}} are sometimes referred to as **replaced elements**. This is because the element's content and size are defined by an external resource (like an image or video file), not by the contents of the element itself. You can read more about them at [Replaced elements](/en-US/docs/Web/CSS/Replaced_element).
 
-> **Note:** You can find the finished example from this section [running on GitHub](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html) (see the [source code](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/images-in-html/index.html) too.)
+> [!NOTE]
+> You can find the finished example from this section [running on GitHub](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html) (see the [source code](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/images-in-html/index.html) too.)
 
 ### Alternative text
 
@@ -114,7 +117,8 @@ What exactly should you write inside your `alt` attribute? It depends on _why_ t
 
 Essentially, the key is to deliver a usable experience, even when the images can't be seen. This ensures all users are not missing any of the content. Try turning off images in your browser and see how things look. You'll soon realize how helpful alt text is if the image cannot be seen.
 
-> **Note:** For more information, see our guide to [Text Alternatives](/en-US/docs/Learn/Accessibility/HTML#text_alternatives).
+> [!NOTE]
+> For more information, see our guide to [Text Alternatives](/en-US/docs/Learn/Accessibility/HTML#text_alternatives).
 
 ### Width and height
 
@@ -173,9 +177,10 @@ This means that when the image has been downloaded, the browser doesn't have to 
 
 For an excellent article on the history of this feature, see [Setting height and width on images is important again](https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/).
 
-> **Note:** Although, as we have said, it is good practice to specify the _actual_ size of your images using HTML attributes, you should not use them to _resize_ images.
+> [!NOTE]
+> Although, as we have said, it is good practice to specify the _actual_ size of your images using HTML attributes, you should not use them to _resize_ images.
 >
-> If you set the image size too big, you'll end up with images that look grainy, fuzzy, or too small, and wasting bandwidth downloading an image that is not fitting the user's needs. The image may also end up looking distorted, if you don't maintain the correct [aspect ratio](https://en.wikipedia.org/wiki/Aspect_ratio_%28image%29). You should use an image editor to put your image at the correct size before putting it on your webpage.
+> If you set the image size too big, you'll end up with images that look grainy, fuzzy, or too small, and wasting bandwidth downloading an image that is not fitting the user's needs. The image may also end up looking distorted, if you don't maintain the correct {{glossary("aspect ratio")}}. You should use an image editor to put your image at the correct size before putting it on your webpage.
 >
 > If you do need to alter an image's size, you should use [CSS](/en-US/docs/Learn/CSS) instead.
 
@@ -195,7 +200,7 @@ As [with links](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#
 
 This gives us a tooltip on mouse hover, just like link titles:
 
-![The dinosaur image, with a tooltip title on top of it that reads A T-Rex on display at the Manchester University Museum ](image-with-title.png)
+![The dinosaur image, with a tooltip title on top of it that reads A T-Rex on display at the Manchester University Museum](image-with-title.png)
 
 However, this is not recommended — `title` has a number of accessibility problems, mainly based around the fact that screen reader support is very unpredictable and most browsers won't show it unless you are hovering with a mouse (so e.g. no access to keyboard users). If you are interested in more information about this, read [The Trials and Tribulations of the Title Attribute](https://www.24a11y.com/2017/the-trials-and-tribulations-of-the-title-attribute/) by Scott O'Hara.
 
@@ -303,12 +308,12 @@ window.addEventListener("load", updateCode);
 // make it write a tab at the caret position instead
 
 textarea.onkeydown = (e) => {
-  if (e.keyCode === 9) {
+  if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
   }
 
-  if (e.keyCode === 27) {
+  if (e.code === "Escape") {
     textarea.blur();
   }
 };
@@ -361,7 +366,7 @@ Creators of original work such as songs, books, or software often release their 
 
 - Obtain explicit, written permission from the copyright holder.
 - Pay a license fee to use them. This can be a one-time fee for unlimited use ("royalty-free"), or it might be "rights-managed", in which case you might have to pay specific fees per use by time slot, geographic region, industry or media type, etc.
-- Limit your uses to those that would be considered [fair use](https://fairuse.stanford.edu/overview/fair-use/what-is-fair-use/) or [fair dealing](https://www.bl.uk/business-and-ip-centre/articles/fair-dealing-copyright-explained) in your jurisdiction.
+- Limit your uses to those that would be considered [fair use](https://fairuse.stanford.edu/overview/fair-use/what-is-fair-use/) or [fair dealing](https://copyrightservice.co.uk/copyright/p27_work_of_others) in your jurisdiction.
 
 Authors are not required to include a copyright notice or license terms with their work. Copyright exists automatically in an original work of authorship once it is created in a tangible medium. So if you find an image online and there are no copyright notices or license terms, the safest course is to assume it is protected by copyright with all rights reserved.
 
@@ -380,7 +385,8 @@ For example, you might have to:
 
 You should consult the applicable license for the specific terms you will need to follow.
 
-> **Note:** You may come across the term "copyleft" in the context of permissive licenses. Copyleft licenses (such as the [GNU General Public License (GPL)](https://www.gnu.org/licenses/gpl-3.0.en.html) or "Share Alike" Creative Commons licenses) stipulate that derivative works need to be released under the same license as the original.
+> [!NOTE]
+> You may come across the term "copyleft" in the context of permissive licenses. Copyleft licenses (such as the [GNU General Public License (GPL)](https://www.gnu.org/licenses/gpl-3.0.en.html) or "Share Alike" Creative Commons licenses) stipulate that derivative works need to be released under the same license as the original.
 
 Copyleft licenses are prominent in the software world. The basic idea is that a new project built with the code of a copyleft-licensed project (this is known as a "fork" of the original software) will also need to be licensed under the same copyleft license. This ensures that the source code of the new project will also be made available for others to study and modify. Note that, in general, licenses that were drafted for software, such as the GPL, are not considered to be good licenses for non-software works as they were not drafted with non-software works in mind.
 
@@ -444,7 +450,8 @@ A better solution, is to use the HTML {{htmlelement("figure")}} and {{htmlelemen
 
 The {{htmlelement("figcaption")}} element tells browsers, and assistive technology that the caption describes the other content of the {{htmlelement("figure")}} element.
 
-> **Note:** From an accessibility viewpoint, captions and [`alt`](/en-US/docs/Web/HTML/Element/img#alt) text have distinct roles. Captions benefit even people who can see the image, whereas [`alt`](/en-US/docs/Web/HTML/Element/img#alt) text provides the same functionality as an absent image. Therefore, captions and `alt` text shouldn't just say the same thing, because they both appear when the image is gone. Try turning images off in your browser and see how it looks.
+> [!NOTE]
+> From an accessibility viewpoint, captions and [`alt`](/en-US/docs/Web/HTML/Element/img#alt) text have distinct roles. Captions benefit even people who can see the image, whereas [`alt`](/en-US/docs/Web/HTML/Element/img#alt) text provides the same functionality as an absent image. Therefore, captions and `alt` text shouldn't just say the same thing, because they both appear when the image is gone. Try turning images off in your browser and see how it looks.
 
 A figure doesn't have to be an image. It is an independent unit of content that:
 
@@ -548,12 +555,12 @@ window.addEventListener("load", updateCode);
 // make it write a tab at the caret position instead
 
 textarea.onkeydown = (e) => {
-  if (e.keyCode === 9) {
+  if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
   }
 
-  if (e.keyCode === 27) {
+  if (e.code === "Escape") {
     textarea.blur();
   }
 };
@@ -606,7 +613,23 @@ The resulting embedded image is arguably easier to position and control than HTM
 
 Summing up: if an image has meaning, in terms of your content, you should use an HTML image. If an image is purely decoration, you should use CSS background images.
 
-> **Note:** You'll learn a lot more about [CSS background images](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) in our [CSS](/en-US/docs/Learn/CSS) topic.
+> [!NOTE]
+> You'll learn a lot more about [CSS background images](/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) in our [CSS](/en-US/docs/Learn/CSS) topic.
+
+## Other graphics on the web
+
+We've seen that static images can be displayed using the {{HTMLElement("img")}} element, or by setting the background of HTML elements using the {{cssxref("background-image")}} property. You can also construct graphics on-the-fly, or manipulate images after the fact. The browser offers ways of creating 2D and 3D graphics with code, as well as including video from uploaded files or live streamed from a user's camera. Here are links to articles that provide insight into these more advanced graphics topics:
+
+- [Canvas](/en-US/docs/Web/API/Canvas_API)
+  - : The {{HTMLElement("canvas")}} element provides APIs to draw 2D graphics using JavaScript.
+- [SVG](/en-US/docs/Web/SVG)
+  - : Scalable Vector Graphics (SVG) let you use lines, curves, and other geometric shapes to render 2D graphics. With vectors, you can create images that scale cleanly to any size.
+- [WebGL](/en-US/docs/Web/API/WebGL_API)
+  - : The WebGL API guide will get you started with WebGL, the 3D graphics API for the Web that lets you use standard OpenGL ES in web content.
+- [Using HTML audio and video](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+  - : Just like `<img>`, you can use HTML to embed {{htmlelement("video")}} and {{htmlelement("audio")}} into a web page and control its playback.
+- [WebRTC](/en-US/docs/Web/API/WebRTC_API)
+  - : The RTC in WebRTC stands for Real-Time Communications, a technology that enables audio/video streaming and data sharing between browser clients (peers).
 
 ## Test your skills!
 

@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.types.BrowserSetting
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 A `BrowserSetting` is an object representing a browser setting.
 
@@ -33,7 +33,8 @@ Note that while this object is based on the [ChromeSetting](https://developer.ch
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.types`](https://developer.chrome.com/docs/extensions/reference/types/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.types`](https://developer.chrome.com/docs/extensions/reference/types/) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

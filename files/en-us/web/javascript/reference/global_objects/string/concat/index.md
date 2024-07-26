@@ -15,6 +15,7 @@ the string arguments to this string and returns a new string.
 ## Syntax
 
 ```js-nolint
+concat()
 concat(str1)
 concat(str1, str2)
 concat(str1, str2, /* …, */ strN)
@@ -22,7 +23,7 @@ concat(str1, str2, /* …, */ strN)
 
 ### Parameters
 
-- `strN`
+- `str1`, …, `strN`
   - : One or more strings to concatenate to `str`.
 
 ### Return value
@@ -31,9 +32,7 @@ A new string containing the combined text of the strings provided.
 
 ## Description
 
-The `concat()` function concatenates the string arguments to the calling
-string and returns a new string. Changes to the original string or the returned string
-don't affect the other.
+The `concat()` function concatenates the string arguments to the calling string and returns a new string.
 
 If the arguments are not of the type string, they are converted to string values before
 concatenating.
@@ -72,4 +71,4 @@ const greetList = ["Hello", " ", "Venkat", "!"];
 ## See also
 
 - {{jsxref("Array.prototype.concat()")}}
-- [Addition operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
+- [Addition (`+`)](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)

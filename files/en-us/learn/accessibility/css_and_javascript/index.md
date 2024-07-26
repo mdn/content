@@ -13,7 +13,7 @@ CSS and JavaScript, when used properly, also have the potential to allow for acc
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, a basic understanding of HTML, CSS, and
+        A basic understanding of HTML, CSS, and
         JavaScript, and understanding of
         <a href="/en-US/docs/Learn/Accessibility/What_is_accessibility"
           >what accessibility is</a
@@ -194,13 +194,14 @@ When choosing a color scheme for your website, make sure that the text (foregrou
 
 There is an easy way to check whether your contrast is large enough to not cause problems. There are a number of contrast checking tools online that you can enter your foreground and background colors into, to check them. For example WebAIM's [Color Contrast Checker](https://webaim.org/resources/contrastchecker/) is simple to use, and provides an explanation of what you need to conform to the WCAG criteria around color contrast.
 
-> **Note:** A high contrast ratio will also allow anyone using a smartphone or tablet with a glossy screen to better read pages when in a bright environment, such as sunlight.
+> [!NOTE]
+> A high contrast ratio will also allow anyone using a smartphone or tablet with a glossy screen to better read pages when in a bright environment, such as sunlight.
 
 Another tip is to not rely on color alone for signposts/information, as this will be no good for those who can't see the color. Instead of marking required form fields in red, for example, mark them with an asterisk and in red.
 
 ### Hiding things
 
-There are many instances where a visual design will require that not all content is shown at once. For example, in our [Tabbed info box example](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) (see [source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box.html)) we have three panels of information, but we are [positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning) them on top of one another and providing tabs that can be clicked to show each one (it is also keyboard accessible — you can alternatively use Tab and Enter/Return to select them).
+There are many instances where a visual design will require that not all content is shown at once. For example, in our [Tabbed info box example](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/tabbed-info-box.html) (see [source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/tabbed-info-box.html)) we have three panels of information, but we are [positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning) them on top of one another and providing tabs that can be clicked to show each one (it is also keyboard accessible — you can alternatively use Tab and Enter/Return to select them).
 
 ![Three tab interface with Tab 1 selected and only its contents are displayed. The contents of other tabs are hidden. If a tab is selected, then it's text-color changes from black to white and the background-color changes from orange-red to saddle brown.](tabbed-info-box.png)
 
@@ -253,7 +254,8 @@ As an example, we've written a quick and dirty client-side form validation examp
 
 This kind of form validation is unobtrusive — you can still use the form absolutely fine without the JavaScript being available, and any sensible form implementation will have server-side validation active as well, because it is too easy for malicious users to bypass client-side validation (for example, by turning JavaScript off in the browser). The client-side validation is still really useful for reporting errors — users can know about mistakes they make instantly, rather than having to wait for a round trip to the server and a page reload. This is a definite usability advantage.
 
-> **Note:** Server-side validation has not been implemented in this simple demo.
+> [!NOTE]
+> Server-side validation has not been implemented in this simple demo.
 
 We've made this form validation pretty accessible too. We've used {{htmlelement("label")}} elements to make sure the form labels are unambiguously linked to their inputs, so screen readers can read them out alongside:
 
@@ -268,7 +270,7 @@ We only do the validation when the form is submitted — this is so that we don'
 form.onsubmit = validate;
 
 function validate(e) {
-  errorList.innerHTML = "";
+  errorList.textContent = "";
   for (let i = 0; i < formItems.length; i++) {
     const testItem = formItems[i];
     if (testItem.input.value === "") {
@@ -277,17 +279,18 @@ function validate(e) {
     }
   }
 
-  if (errorList.innerHTML !== "") {
+  if (errorList.hasChildNodes()) {
     e.preventDefault();
   }
 }
 ```
 
-> **Note:** In this example, we are hiding and showing the error message box using absolute positioning rather than another method such as visibility or display, because it doesn't interfere with the screen reader being able to read content from it.
+> [!NOTE]
+> In this example, we are hiding and showing the error message box using absolute positioning rather than another method such as visibility or display, because it doesn't interfere with the screen reader being able to read content from it.
 
 Real form validation would be much more complex than this — you'd want to check that the entered name actually looks like a name, the entered age is actually a number and is realistic (e.g. nonnegative and less than 4 digits). Here we've just implemented a simple check that a value has been filled in to each input field (`if (testItem.input.value === '')`).
 
-When the validation has been performed, if the tests pass then the form is submitted. If there are errors (`if (errorList.innerHTML !== '')`) then we stop the form submitting (using [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault)), and display any error messages that have been created (see below). This mechanism means that the errors will only be shown if there are errors, which is better for usability.
+When the validation has been performed, if the tests pass then the form is submitted. If there are errors (`if (errorList.hasChildNodes())`) then we stop the form submitting (using [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault)), and display any error messages that have been created (see below). This mechanism means that the errors will only be shown if there are errors, which is better for usability.
 
 For each input that doesn't have a value filled in when the form is submitted, we create a list item with a link and insert it in the `errorList`.
 
@@ -318,9 +321,11 @@ As a final note, we have used some WAI-ARIA attributes in our demo to help solve
 
 We will explain these attributes in our next article, which covers [WAI-ARIA](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics) in much more detail.
 
-> **Note:** Some of you will probably be thinking about the fact that HTML forms have built-in validation mechanisms like the `required`, `min`/`minlength`, and `max`/`maxlength` attributes (see the {{htmlelement("input")}} element reference for more information). We didn't end up using these in the demo because cross-browser support for them is patchy (for example IE10 and above only).
+> [!NOTE]
+> Some of you will probably be thinking about the fact that HTML forms have built-in validation mechanisms like the `required`, `min`/`minlength`, and `max`/`maxlength` attributes (see the {{htmlelement("input")}} element reference for more information). We didn't end up using these in the demo because cross-browser support for them is patchy (for example IE10 and above only).
 
-> **Note:** WebAIM's [Usable and Accessible Form Validation and Error Recovery](https://webaim.org/techniques/formvalidation/) provides some further useful information about accessible form validation.
+> [!NOTE]
+> WebAIM's [Usable and Accessible Form Validation and Error Recovery](https://webaim.org/techniques/formvalidation/) provides some further useful information about accessible form validation.
 
 ### Other JavaScript accessibility concerns
 

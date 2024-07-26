@@ -61,16 +61,15 @@ block content
 
   div(style='margin-left:20px;margin-top:20px')
 
-    h4 Books
-
-    dl
-      each book in author_books
-        dt
-          a(href=book.url) #{book.title}
-        dd #{book.summary}
-
-      else
-        p This author has no books.
+    h2(style='font-size: 1.5rem;') Books
+    if author_books.length
+      dl
+        each book in author_books
+          dt
+            a(href=book.url) #{book.title}
+          dd #{book.summary}
+    else
+      p This author has no books.
 ```
 
 Everything in this template has been demonstrated in previous sections.
@@ -81,7 +80,8 @@ Run the application and open your browser to `http://localhost:3000/`. Select th
 
 ![Author Detail Page - Express Local Library site](locallibary_express_author_detail.png)
 
-> **Note:** The appearance of the author _lifespan_ dates is ugly! We'll address that in the final challenge in this article.
+> [!NOTE]
+> The appearance of the author _lifespan_ dates is ugly! We'll address that in the final challenge in this article.
 
 ## Next steps
 

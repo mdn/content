@@ -2,10 +2,10 @@
 title: "ARIA: presentation role"
 slug: Web/Accessibility/ARIA/Roles/presentation_role
 page-type: aria-role
-spec-urls:
-  - https://w3c.github.io/aria/#presentation
-  - https://w3c.github.io/aria-practices/#presentation_role
+spec-urls: https://w3c.github.io/aria/#presentation
 ---
+
+{{AccessibilitySidebar}}
 
 The `presentation` role and its synonym `none` remove an element's implicit ARIA semantics from being exposed to the accessibility tree.
 
@@ -39,7 +39,8 @@ Because the `presentation` role was applied to the {{HTMLElement('ul')}} element
 
 The {{HTMLElement('a')}} is a special case. Its role would have been exposed even if it had the `presentation` or `none` role directly applied to it. Browsers ignore `role="presentation"` and `role="none"`on focusable elements, including link and inputs, or anything with a [tabindex](/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute set. Browsers also ignore the inclusion of the role if any of the element contains any global ARIA states and properties, such as [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby).
 
-> **Note:** The element with `role="presentation"` is not part of the accessibility tree and should not have an accessible name. Do **not** use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label).
+> [!NOTE]
+> The element with `role="presentation"` is not part of the accessibility tree and should not have an accessible name. Do **not** use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label).
 
 ### Associated WAI-ARIA roles, states, and properties
 
@@ -55,14 +56,6 @@ None. If a global ARIA state and property is set, `presentation` or `none` will 
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden) versus [`role="presentation/none"`](https://www.scottohara.me/blog/2018/05/05/hidden-vs-none.html) - by Scott O'Hara
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
-
-</section>

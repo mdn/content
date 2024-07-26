@@ -42,9 +42,9 @@ An array of report formats. Each entry contains the following:
       - : Usage switch
     - `0x06`
       - : Usage modified
-    - `0x07 to 0x7F`
+    - `0x07` to `0x7F`
       - : Reserved for future use
-    - `0x80 to 0xFF`
+    - `0x80` to `0xFF`
       - : Vendor-defined
 
     More information on these types can be found in the [Device Class Definition](https://www.usb.org/document-library/device-class-definition-hid-111) document.
@@ -60,7 +60,7 @@ An array of report formats. Each entry contains the following:
 
 ## Examples
 
-The following example demonstrates how to access the various elements once the `collections` property has been returned. You can see more examples, and live demos in the article [Connecting to uncommon HID devices](https://web.dev/hid/).
+The following example demonstrates how to access the various elements once the `collections` property has been returned. You can see more examples, and live demos in the article [Connecting to uncommon HID devices](https://developer.chrome.com/docs/capabilities/hid).
 
 ```js
 for (const collection of device.collections) {

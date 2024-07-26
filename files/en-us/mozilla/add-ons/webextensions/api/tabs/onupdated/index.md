@@ -71,7 +71,8 @@ Events have three functions:
         - "title"
         - "url"
 
-        > **Note:** The "url" value has been supported since Firefox 88. In Firefox 87 and earlier, "url" changes can be observed by filtering by "status".
+        > [!NOTE]
+        > The "url" value has been supported since Firefox 88. In Firefox 87 and earlier, "url" changes can be observed by filtering by "status".
 
     - `tabId`
       - : `Integer`. Fires this event only for the tab identified by this ID.
@@ -137,11 +138,11 @@ browser.tabs.onUpdated.addListener(handleUpdated);
 
 ### Filtering examples
 
-Log changes only to tabs whose `url` property is [matched](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) by `https://developer.mozilla.org/*` or `https://twitter.com/mozdevnet`:
+Log changes only to tabs whose `url` property is [matched](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) by `https://developer.mozilla.org/*` or `https://mozilla.social/@mdn`:
 
 ```js
 const pattern1 = "https://developer.mozilla.org/*";
-const pattern2 = "https://twitter.com/mozdevnet";
+const pattern2 = "https://mozilla.social/@mdn";
 
 const filter = {
   urls: [pattern1, pattern2],
@@ -172,11 +173,11 @@ function handleUpdated(tabId, changeInfo, tabInfo) {
 browser.tabs.onUpdated.addListener(handleUpdated, filter);
 ```
 
-Combine both the previous filters, log only when the `pinned` property of tabs changes for tabs whose `url` property is [matched](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) by `https://developer.mozilla.org/*` or `https://twitter.com/mozdevnet`:
+Combine both the previous filters, log only when the `pinned` property of tabs changes for tabs whose `url` property is [matched](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) by `https://developer.mozilla.org/*` or `https://mozilla.social/@mdn`:
 
 ```js
 const pattern1 = "https://developer.mozilla.org/*";
-const pattern2 = "https://twitter.com/mozdevnet";
+const pattern2 = "https://mozilla.social/@mdn";
 
 const filter = {
   urls: [pattern1, pattern2],
@@ -192,11 +193,11 @@ function handleUpdated(tabId, changeInfo, tabInfo) {
 browser.tabs.onUpdated.addListener(handleUpdated, filter);
 ```
 
-Log changes only when the `pinned` property of tabs changes for tabs whose `url` property is [matched](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) by `https://developer.mozilla.org/*` or `https://twitter.com/mozdevnet` where the tab was part of the current browser window when the update event fired:
+Log changes only when the `pinned` property of tabs changes for tabs whose `url` property is [matched](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) by `https://developer.mozilla.org/*` or `https://mozilla.social/@mdn` where the tab was part of the current browser window when the update event fired:
 
 ```js
 const pattern1 = "https://developer.mozilla.org/*";
-const pattern2 = "https://twitter.com/mozdevnet";
+const pattern2 = "https://mozilla.social/@mdn";
 
 const filter = {
   urls: [pattern1, pattern2],
@@ -219,7 +220,8 @@ browser.tabs.onUpdated.addListener(handleUpdated, filter);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#event-onUpdated) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#event-onUpdated) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

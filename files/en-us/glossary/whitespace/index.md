@@ -12,7 +12,7 @@ Whitespace characters and their usage vary among languages.
 
 ## In HTML
 
-The [Infra Living Standard](https://infra.spec.whatwg.org/#ascii-whitespace) defines five characters as "ASCII whitespace": U+0009 TAB, U+000A LF, U+000C FF, U+000D CR, and U+0020 SPACE.
+The [Infra Living Standard](https://infra.spec.whatwg.org/#ascii-whitespace) defines five characters as "{{Glossary("ASCII")}} whitespace": U+0009 TAB, U+000A LF, U+000C FF, U+000D CR, and U+0020 SPACE.
 
 ## In JavaScript
 
@@ -28,6 +28,5 @@ The [ECMAScript Language Specification](https://tc39.es/ecma262/multipage/ecmasc
   - [ASCII whitespace spec](https://infra.spec.whatwg.org/#ascii-whitespace)
   - [ECMAScript Language Specification](https://tc39.es/ecma262/multipage/ecmascript-language-lexical-grammar.html#sec-white-space)
 
-- [Glossary](/en-US/docs/Glossary)
-
-  1. {{Glossary("Character")}}
+- Related glossary terms:
+  - {{Glossary("Character")}}

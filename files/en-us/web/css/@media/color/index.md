@@ -64,6 +64,5 @@ p {
 
 ## See also
 
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color)
 - The CSS {{cssxref("color")}} property
 - The CSS {{cssxref("&lt;color&gt;")}} data unit

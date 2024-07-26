@@ -7,31 +7,23 @@ browser-compat: css.properties.font-size-adjust
 
 {{CSSRef}}
 
-The **`font-size-adjust`** [CSS](/en-US/docs/Web/CSS) property sets the size of lower-case letters relative to the current font size (which defines the size of upper-case letters).
+The **`font-size-adjust`** [CSS](/en-US/docs/Web/CSS) property provides a way to modify the size of lowercase letters relative to the size of uppercase letters, which defines the overall {{cssxref("font-size")}}. This property is useful for situations where font fallback can occur.
 
-The property is useful since the legibility of fonts, especially at small sizes, is determined more by the size of lowercase letters than by the size of capital letters. Legibility can become an issue when the first-choice {{ Cssxref("font-family") }} is unavailable and its replacement has a significantly different aspect ratio (the ratio of the size of lowercase letters to the size of the font).
-
-To use this property in a way that is compatible with browsers that do not support `font-size-adjust`, it is specified as a number that the {{ Cssxref("font-size") }} property is multiplied by. This means the value specified for the property should generally be the aspect ratio of the first choice font. For example, consider this style sheet:
-
-```css
-font-size: 14px;
-font-size-adjust: 0.5;
-```
-
-It is really specifying that the lowercase letters of the font should be `7px` high (0.5 × 14px). This will still produce reasonable results in browsers that do not support `font-size-adjust`, where a `14px` font will be used.
+Legibility can become an issue when the first-choice {{ Cssxref("font-family") }} is unavailable and its replacement fallback font has a significantly different aspect value (height of lowercase letters divided by font size). Legibility of fonts, especially at small font sizes, is determined more by the size of lowercase letters than by the size of uppercase letters. The `font-size-adjust` property is useful for adjusting the font size of fallback fonts to keep the aspect value across fonts consistent, ensuring that the text appears similar regardless of the font used.
 
 ## Syntax
 
 ```css
-/* Use the specified font size */
+/* Keyword */
 font-size-adjust: none;
 
-/* Use a font size that makes lowercase
-   letters half the specified font size */
+/* One value: <number> or from-font */
 font-size-adjust: 0.5;
+font-size-adjust: from-font;
 
-/* Two values - added in the Level 5 spec */
+/* Two values */
 font-size-adjust: ex-height 0.5;
+font-size-adjust: ch-width from-font;
 
 /* Global values */
 font-size-adjust: inherit;
@@ -43,30 +35,53 @@ font-size-adjust: unset;
 
 ### Values
 
-- `none`
-  - : Choose the size of the font based only on the {{ Cssxref("font-size") }} property.
-- ex-height | cap-height | ch-width | ic-width | ic-height
+The `font-size-adjust` property takes as its value the keyword `none`, one (`<number>` or `from-font`), or two (`<font-metric>` and either `<number>` or `from-font`) values.
 
-  - : Specifies the font metric to normalize on. Defaults to `ex-height`. One of:
+- `none`
+  - : No adjustment is applied to the `font-size` value for the fallback font.
+- `<font-metric>` {{optional_inline}}
+
+  - : Specifies the first-choice font metric to use for adjusting the font size of the fallback font. This parameter accepts one of the keywords listed below. It is an optional parameter, and `ex-height` is used if no `<font-metric>` is specified.
 
     - `ex-height`
-      - : Normalize the aspect value of the fonts, using the x-height divided by the font size.
+      - : Uses the ratio of x-height (height of lowercase "x" in a font) to font size (aspect value) to adjust the fallback font size. This keyword value is used to normalize lowercase letters across fonts.
     - `cap-height`
-      - : Normalize the cap-height of the fonts, using the cap-height by the font size.
+      - : Uses the ratio of cap-height (height of uppercase letters) to font size to adjust fallback font size. This keyword value is used to normalize uppercase letters across fonts.
     - `ch-width`
-      - : Normalize the horizontal narrow pitch of the fonts, using the advance width of "0" (ZERO, U+0030) divided by the font size.
+      - : Uses the ratio of the advance width (horizontal space taken up by a character in a font) of the character "0" (ZERO, U+0030) to font size. This keyword value is used to normalize horizontal narrow pitch of fonts.
     - `ic-width`
-      - : Normalize the horizontal wide pitch of the font, using the advance width of "水" (CJK water ideograph, U+6C34) divided by the font size.
+      - : Uses the ratio of the advance width of the character "水" (CJK water ideograph, U+6C34) to font size. This keyword value is used to normalize horizontal wide pitch of fonts, particularly those that include CJK (Chinese, Japanese, Korean) characters.
     - `ic-height`
-      - : Normalize the vertical wide pitch of the font, using the advance height of "水" (CJK water ideograph, U+6C34) divided by the font size.
+      - : Uses the ratio of the advance height (vertical space taken up by a character in a font) of the character "水" (CJK water ideograph, U+6C34) to font size. This keyword value is used to normalize vertical wide pitch of fonts, particularly those that include CJK characters.
 
 - {{cssxref("&lt;number&gt;")}}
 
-  - : Choose the size of the font so that its lowercase letters (as determined by the x-height of the font) are the specified number times the {{ Cssxref("font-size") }}.
+  - : Adjusts the font size used depending on the specified `<font-metric>`. When no `<font-metric>` is specified (in which case the default value `ex-height` is used), the `<number>` value adjusts the font size of the fallback font so that its x-height is the specified multiple of the font size. This value should generally match the aspect value (ratio of x-height to font size) of the first-choice font. This means that the first-choice font, when available, will display consistently across browsers, regardless of their support for `font-size-adjust`.
 
-    The number specified should generally be the aspect ratio (ratio of x-height to font size) of the first choice {{ Cssxref("font-family") }}. This means that the first-choice font, when available, will appear the same size in browsers, whether or not they support `font-size-adjust`.
+    When a `<font-metric>` value is specified, the `<number>` value adjusts the font size as per the chosen `<font-metric>` to maintain a consistent appearance for the specified font metric across different fonts.
 
-    `0` yields text of zero height (hidden text).
+    The `<number>` value accepts any number from `0` to infinity. `0` yields text of zero height (that is, the text is hidden). Negative values are invalid.
+
+- `from-font`
+  - : Uses the `<number>` value for the specified `<font-metric>` from the first available font.
+
+## Description
+
+To ensure compatibility with browsers that don't support `font-size-adjust`, this property is specified as a numeric multiplier of the {{cssxref("font-size")}} property. This number should generally match the aspect value of the first-choice font.
+
+> **Note:** If the specified `<font-metric>` has been overridden in [`@font-face`](/en-US/docs/Web/CSS/@font-face), e.g., by using the [`size-adjust`](/en-US/docs/Web/CSS/@font-face/size-adjust) descriptor, then the overridden metric will be used in the `font-size-adjust` calculation. This means that when `font-size-adjust` and `size-adjust` are applied together, `size-adjust` does not have any effect.
+
+The adjusted font size is calculated using the formula `u  =  ( m / m′ ) s`, where:
+
+- `m` is the ratio of the specified `<font-metric>` to the first-choice font size.
+
+- `m′` is the ratio of the corresponding `<font-metric>` to the fallback font size.
+
+- `s` is the value of the `font-size` property.
+
+- `u` is the new, adjusted font size for the fallback font.
+
+Consider this example to see how the adjusted font size is calculated. A first-choice font has a `font-size` of `12px` (`s`), and the ratio of `cap-height` to font size is `0.20` (`m`). The `cap-height` to font size ratio in the fallback font is `0.15` (`m′`). The `font-size-adjust` value has been specified as `cap-height 0.20`. If the primary font is unavailable, the adjusted font size of the fallback font will be calculated to be `16px` (`(0.20 / 0.15) * 12`). This will ensure that the `cap-height` of the fallback font is similar to that of the first-choice font when displayed.
 
 ## Formal definition
 
@@ -78,47 +93,127 @@ font-size-adjust: unset;
 
 ## Examples
 
-### Adjusting lower-case letter sizes
+### Normalizing font size by lowercase and uppercase letters
 
-#### HTML
+This example demonstrates how the `font-size-adjust` property can be used to retain the same aspect value across fonts. The Verdana font has a relatively high aspect value of `0.545`, which means that the lowercase letters are relatively tall compared to uppercase letters. This makes the text in small font sizes appear legible. However, the Times font has a lower aspect value of `0.447`, so the text is less legible at small sizes. If Verdana is the first-choice font and Times is the fallback font, specifying the `font-size-adjust` property can help to retain the same aspect value in Times. So if the font falls back to Times, the text will maintain a similar level of legibility as it would have with Verdana.
+
+Similarly, the cap-height to font size ratio in Verdana is `0.73` and that in Times is `0.66`. When `font-size-adjust` property is applied to Times to adjust its uppercase letters to match the ratio in Verdana, the Times font displays in adjusted font size ((0.73 / 0.66) \* 14) `15.48px`.
 
 ```html
-<p class="times">
-  This text uses the Times font (10px), which is hard to read in small sizes.
-</p>
 <p class="verdana">
-  This text uses the Verdana font (10px), which has relatively large lowercase
-  letters.
+  A: This text uses the Verdana font (14px), which has relatively large
+  lowercase letters.
 </p>
-<p class="adjtimes">
-  This is the 10px Times, but now adjusted to the same aspect ratio as the
-  Verdana.
+<p class="times">
+  B: This text uses the Times font (14px), which is hard to read in small sizes.
+</p>
+<p class="times adjtimesexheight">
+  C: This text in 14px Times font is adjusted to the same aspect value as the
+  Verdana font, so lowercase letters are normalized across the two fonts.
+</p>
+<p class="times adjtimescapheight">
+  D: This text in 14px Times font is adjusted to the same cap-height to font
+  size ratio as the Verdana font, so uppercase letters are normalized across the
+  two fonts.
 </p>
 ```
-
-#### CSS
 
 ```css
 .times {
   font-family: Times, serif;
-  font-size: 10px;
+  font-size: 14px;
 }
 
 .verdana {
   font-family: Verdana, sans-serif;
-  font-size: 10px;
+  font-size: 14px;
 }
 
-.adjtimes {
-  font-family: Times, serif;
-  font-size-adjust: ex-height 0.58;
-  font-size: 10px;
+.adjtimesexheight {
+  font-size-adjust: 0.545;
+}
+
+.adjtimescapheight {
+  font-size-adjust: cap-height 0.73;
 }
 ```
 
-#### Results
+{{ EmbedLiveSample('Normalizing font size by lowercase and uppercase letters', 500, 200) }}
 
-{{ EmbedLiveSample('Adjusting_lower-case_letter_sizes', 500, 200) }}
+Without `font-size-adjust` in `B`, the switch from Verdana font to Times font could result in a noticeable decrease in legibility due to its lower aspect value.
+In `C`, notice that only one value is specified for the `font-size-adjust` property, so the default `<font-metric>` value `ex-height` is used. `D` shows how the font would look compared to `A` if its uppercase letter height is adjusted.
+
+### Determining the aspect value of a font
+
+For a given font, the same content in two side-by-side [`<span>`](/en-US/docs/Web/HTML/Element/span) elements can be used to determine the font's aspect value. If the same font size is used for content in both spans, the spans will match when the `font-size-adjust` value in one span is accurate for the given font.
+
+In the example below, there are three pairs of side-by-side `<span>` elements, each containing the letter "b". The goal is to adjust the `font-size-adjust` property for the right `<span>` in each pair until the borders around the two letters align. The resulting `font-size-adjust` value can be considered the aspect value for the font.
+
+Starting at `0.6` in the first pair and adjusting to `0.5` in the second, we continue adjusting the `font-size-adjust` property value until the borders around the "b" letters align perfectly in the third pair. In this example, the aspect value is determined to be `0.482`.
+
+```html
+<div>
+  <p><span>b</span><span class="adjust1">b</span></p>
+  0.6
+</div>
+
+<div>
+  <p><span>b</span><span class="adjust2">b</span></p>
+  0.5
+</div>
+
+<div>
+  <p><span>b</span><span class="adjust3">b</span></p>
+  0.482
+</div>
+```
+
+```css hidden
+body {
+  display: flex;
+}
+
+div {
+  text-align: center;
+}
+
+p {
+  margin: 0 30px 10px 30px;
+}
+```
+
+```css
+body {
+  display: flex;
+}
+
+div {
+  text-align: center;
+}
+
+p {
+  font-family: Futura;
+  font-size: 50px;
+}
+
+span {
+  border: solid 1px red;
+}
+
+.adjust1 {
+  font-size-adjust: 0.6;
+}
+
+.adjust2 {
+  font-size-adjust: 0.5;
+}
+
+.adjust3 {
+  font-size-adjust: 0.482;
+}
+```
+
+{{ EmbedLiveSample('Determining the aspect value of a font', 500, 120) }}
 
 ## Specifications
 
@@ -132,5 +227,5 @@ font-size-adjust: unset;
 
 - {{cssxref("font-size")}}
 - {{cssxref("font-weight")}}
-- [Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)
-- {{cssxref("@font-face/size-adjust", "size-adjust")}} descriptor
+- {{cssxref("@font-face/size-adjust", "size-adjust")}} `@font-face` descriptor
+- [Learn: Fundamental text and font styling](/en-US/docs/Learn/CSS/Styling_text/Fundamentals)

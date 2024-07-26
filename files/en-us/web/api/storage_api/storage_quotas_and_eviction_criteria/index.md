@@ -51,7 +51,7 @@ In Firefox, when a site chooses to use persistent storage, the user is notified 
 
 Safari and most Chromium-based browsers, such as Chrome or Edge, automatically approve or deny the request based on the user's history of interaction with the site and do not show any prompts to the user.
 
-Note that [research from the Chrome team](https://web.dev/persistent-storage/) shows that data is very rarely deleted by the browser. If a user visits a website regularly, there is very little chance that its stored data, even in best-effort mode, will get evicted by the browser.
+Note that [research from the Chrome team](https://web.dev/articles/persistent-storage) shows that data is very rarely deleted by the browser. If a user visits a website regularly, there is very little chance that its stored data, even in best-effort mode, will get evicted by the browser.
 
 ### Private browsing
 
@@ -107,7 +107,13 @@ Like with Firefox, because this quota is calculated based on the hard drive tota
 
 #### Safari
 
-In Safari, an origin is given an initial 1 GiB quota. Once the origin reaches this limit, Safari asks the user for permission to let the origin store more data. This happens whether the origin stores data in best-effort mode or persistent mode.
+Starting with macOS 14 and iOS 17, Safari allots up to around 20% of the total disk space for each origin. If the user has saved it as a web app on the Home Screen or the Dock, this limit is increased to up to 60% of the disk size. For privacy reasons, {{Glossary("Same-origin policy", "cross-origin")}} frames have a separate quota, amounting to roughly 1/10 of their parents.
+
+For instance, a macOS device with a 1 TiB drive will limit each origin to around 200 GiB. If the user stores a web app on its Dock, that will be alloted a greater limit of around 600 GiB.
+
+Like other browsers, the exact limits enforced by the quota may vary as to avoid fingerprinting. Additionally, Safari also enforces an overall quota that stored data across all origins cannot grow beyond: 80% of disk size for each browser and web app, and 15% of disk size for each non-browser app that displays web content. More info on Safari's storage policies can be found on the [Webkit blog](https://www.webkit.org/blog/14403/updates-to-storage-policy/).
+
+In earlier versions of Safari, an origin is given an initial 1 GiB quota. Once the origin reaches this limit, Safari asks the user for permission to let the origin store more data. This happens whether the origin stores data in best-effort mode or persistent mode.
 
 ## How to check the available space?
 
@@ -159,6 +165,6 @@ Only deleting some of the origin's data could cause inconsistency problems.
 
 ## See also
 
-- [Storage for the web on web.dev](https://web.dev/storage-for-the-web/)
-- [Persistent storage on web.dev](https://web.dev/persistent-storage/)
+- [Storage for the web on web.dev](https://web.dev/articles/storage-for-the-web)
+- [Persistent storage on web.dev](https://web.dev/articles/persistent-storage)
 - [Chrome Web Storage and Quota Concepts](https://docs.google.com/document/d/19QemRTdIxYaJ4gkHYf2WWBNPbpuZQDNMpUVf8dQxj4U/edit)

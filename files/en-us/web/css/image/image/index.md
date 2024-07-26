@@ -58,7 +58,7 @@ Omitting image sources while including a color is valid and creates a color swat
 
 The size of the color swatch can be set with the {{CSSxRef("background-size")}} property. This is different from the `background-color`, which sets a color to cover the entire element. Both `image(color)` and `background-color` placements are impacted by the {{CSSxRef("background-clip")}} and {{CSSxRef("background-origin")}} properties.
 
-## Accessibility concerns
+## Accessibility
 
 Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.
 
@@ -116,7 +116,7 @@ When the user hovers over the box, the cursor will change to display the 16x16 p
 
 ```css
 .quarterlogo {
-  background-image: image(rgba(0, 0, 0, 0.25)), url("firefox.png");
+  background-image: image(rgb(0 0 0 / 25%)), url("firefox.png");
   background-size: 25%;
   background-repeat: no-repeat;
 }
@@ -146,7 +146,6 @@ The above will put a semi-transparent black mask over the Firefox logo backgroun
 - {{CSSxRef("element", "element()")}}
 - {{CSSxRef("url", "url()")}}
 - {{CSSxRef("clip-path")}}
-- {{CSSxRef("-moz-image-rect")}}
 - {{CSSxRef("&lt;gradient&gt;")}}
 - {{CSSxRef("image/image-set", "image-set()")}}
 - {{CSSxRef("cross-fade", "cross-fade()")}}

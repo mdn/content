@@ -60,11 +60,11 @@ input {
 }
 
 input:in-range {
-  background-color: rgba(0, 255, 0, 0.25);
+  background-color: rgb(0 255 0 / 25%);
 }
 
 input:out-of-range {
-  background-color: rgba(255, 0, 0, 0.25);
+  background-color: rgb(255 0 0 / 25%);
   border: 2px solid red;
 }
 

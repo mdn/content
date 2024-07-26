@@ -32,7 +32,7 @@ The process for identifying the containing block depends entirely on the value o
 1. If the `position` property is **`static`**, **`relative`**, or **`sticky`**, the containing block is formed by the edge of the _content box_ of the nearest ancestor element that is either **a block container** (such as an inline-block, block, or list-item element) or **establishes a formatting context** (such as a table container, flex container, grid container, or the block container itself).
 2. If the `position` property is **`absolute`**, the containing block is formed by the edge of the _padding box_ of the nearest ancestor element that has a `position` value other than `static` (`fixed`, `absolute`, `relative`, or `sticky`).
 3. If the `position` property is **`fixed`**, the containing block is established by the {{glossary("viewport")}} (in the case of continuous media) or the page area (in the case of paged media).
-4. If the `position` property is **`absolute`** or **`fixed`**, the containing block may also be formed by the edge of the _padding box_ of the nearest ancestor element that has the following:
+4. If the `position` property is **`absolute`** or **`fixed`**, the containing block may also be formed by the edge of the _padding box_ of the nearest ancestor element that has any of the following:
 
    1. A {{cssxref("transform")}} or {{cssxref("perspective")}} value other than `none`
    2. A {{cssxref("will-change")}} value of `transform` or `perspective`
@@ -250,22 +250,19 @@ p {
 
 ## See also
 
-- The {{cssxref("all")}} property resets all CSS declarations to a given known state
-- CSS key concepts:
-  - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
-  - [At-rules](/en-US/docs/Web/CSS/At-rule)
-  - [Comments](/en-US/docs/Web/CSS/Comments)
-  - [Specificity](/en-US/docs/Web/CSS/Specificity)
-  - [Inheritance](/en-US/docs/Web/CSS/Inheritance)
-  - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
-  - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
-  - [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-  - Values
-    - [Initial values](/en-US/docs/Web/CSS/initial_value)
-    - [Computed values](/en-US/docs/Web/CSS/computed_value)
-    - [Used values](/en-US/docs/Web/CSS/used_value)
-    - [Actual values](/en-US/docs/Web/CSS/actual_value)
-  - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
-  - [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
-  - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
+- {{cssxref("all")}} property
+- {{cssxref("contain")}} property
+- {{cssxref("aspect-ratio")}} property
+- {{cssxref("box-sizing")}} property
+- {{cssxref("min-content")}} and {{cssxref("max-content")}} size values
+- [Building block: sizing items in CSS](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+- [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module
+- [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
+- [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
+- [Block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context)
+- [Stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)
+- [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+- [Initial](/en-US/docs/Web/CSS/initial_value), [computed](/en-US/docs/Web/CSS/computed_value), [used](/en-US/docs/Web/CSS/used_value), and [actual](/en-US/docs/Web/CSS/actual_value) values
+- [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
+- {{glossary("Intrinsic size")}}

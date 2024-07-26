@@ -8,7 +8,7 @@ status:
 browser-compat: api.PasswordCredential.iconURL
 ---
 
-{{SeeCompatTable}}{{APIRef("Credential Management API")}}
+{{SeeCompatTable}}{{APIRef("Credential Management API")}}{{SecureContext_Header}}
 
 The **`iconURL`** read-only property
 of the {{domxref("PasswordCredential")}} interface returns a string

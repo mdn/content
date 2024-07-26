@@ -30,6 +30,11 @@ None.
 A {{jsxref('Promise')}} that resolves with an instance of
 {{domxref('KeyboardLayoutMap')}}.
 
+### Exceptions
+
+- `SecurityError` {{domxref("DOMException")}}
+  - : Thrown if the call is blocked by a [permission policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+
 ## Examples
 
 The following example demonstrates how to get the location- or layout-specific string
@@ -50,3 +55,7 @@ keyboard.getLayoutMap().then((keyboardLayoutMap) => {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{jsxref("Intl")}}

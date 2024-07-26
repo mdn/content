@@ -41,7 +41,7 @@ You can check whether an `ArrayBuffer` is detached by its {{jsxref("ArrayBuffer/
 
 ## Static properties
 
-- {{jsxref("ArrayBuffer/@@species", "ArrayBuffer[@@species]")}}
+- [`ArrayBuffer[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/Symbol.species)
   - : The constructor function that is used to create derived objects.
 
 ## Static methods
@@ -57,14 +57,14 @@ These properties are defined on `ArrayBuffer.prototype` and shared by all `Array
   - : The size, in bytes, of the `ArrayBuffer`. This is established when the array is constructed and can only be changed using the {{jsxref("ArrayBuffer.prototype.resize()")}} method if the `ArrayBuffer` is resizable.
 - {{jsxref("Object/constructor", "ArrayBuffer.prototype.constructor")}}
   - : The constructor function that created the instance object. For `ArrayBuffer` instances, the initial value is the {{jsxref("ArrayBuffer/ArrayBuffer", "ArrayBuffer")}} constructor.
-- {{jsxref("ArrayBuffer.prototype.detached")}} {{Experimental_Inline}}
+- {{jsxref("ArrayBuffer.prototype.detached")}}
   - : Read-only. Returns `true` if the `ArrayBuffer` has been detached (transferred), or `false` if not.
 - {{jsxref("ArrayBuffer.prototype.maxByteLength")}}
   - : The read-only maximum length, in bytes, that the `ArrayBuffer` can be resized to. This is established when the array is constructed and cannot be changed.
 - {{jsxref("ArrayBuffer.prototype.resizable")}}
   - : Read-only. Returns `true` if the `ArrayBuffer` can be resized, or `false` if not.
-- `ArrayBuffer.prototype[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"ArrayBuffer"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+- `ArrayBuffer.prototype[Symbol.toStringTag]`
+  - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"ArrayBuffer"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 
@@ -72,9 +72,9 @@ These properties are defined on `ArrayBuffer.prototype` and shared by all `Array
   - : Resizes the `ArrayBuffer` to the specified size, in bytes.
 - {{jsxref("ArrayBuffer.prototype.slice()")}}
   - : Returns a new `ArrayBuffer` whose contents are a copy of this `ArrayBuffer`'s bytes from `begin` (inclusive) up to `end` (exclusive). If either `begin` or `end` is negative, it refers to an index from the end of the array, as opposed to from the beginning.
-- {{jsxref("ArrayBuffer.prototype.transfer()")}} {{Experimental_Inline}}
+- {{jsxref("ArrayBuffer.prototype.transfer()")}}
   - : Creates a new `ArrayBuffer` with the same byte content as this buffer, then detaches this buffer.
-- {{jsxref("ArrayBuffer.prototype.transferToFixedLength()")}} {{Experimental_Inline}}
+- {{jsxref("ArrayBuffer.prototype.transferToFixedLength()")}}
   - : Creates a new non-resizable `ArrayBuffer` with the same byte content as this buffer, then detaches this buffer.
 
 ## Examples
@@ -99,6 +99,6 @@ const view = new Int32Array(buffer);
 ## See also
 
 - [Polyfill of `ArrayBuffer` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("SharedArrayBuffer")}}
 - [RangeError: invalid array length](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_array_length)

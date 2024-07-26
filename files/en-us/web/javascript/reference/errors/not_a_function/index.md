@@ -126,7 +126,7 @@ const myNewDog = new Dog();
 myNewDog.name("Cassidy"); //Dog { age: 11, color: 'black', dogName: 'Cassidy' }
 ```
 
-### Using brackets for multiplication
+### Using parenthese for multiplication
 
 In math, you can write 2 × (3 + 5) as 2\*(3 + 5) or just 2(3 + 5).
 

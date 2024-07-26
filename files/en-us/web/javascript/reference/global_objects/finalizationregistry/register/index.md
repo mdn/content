@@ -27,12 +27,12 @@ register(target, heldValue, unregisterToken)
 
 ### Return value
 
-`undefined`.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if one of the following is true:
+  - : Thrown in one of the following cases:
     - `target` is not an object or a [non-registered symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry) (object as opposed to primitives; functions are objects as well)
     - `target` is the same as `heldvalue` (`target === heldValue`)
     - `unregisterToken` is not an object or a [non-registered symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry)

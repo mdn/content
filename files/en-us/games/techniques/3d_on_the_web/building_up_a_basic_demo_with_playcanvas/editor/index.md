@@ -56,7 +56,8 @@ Click on your new material in the assets tab and its entity inspector will appea
 
 To change its color we'll use the _Diffuse_ option in the entity inspector. Click _Diffuse_, then select the colored box next to the Color label — it will open a {{glossary("color wheel")}}. From here you can click your desired color or enter it in the bottom text field as a hex value. We've chosen a blue color with a hex value of `0095DD` — enter this code in the text field and press return for it to be accepted.
 
-> **Note:** Yes, you read that right — you need to enter the hex value without the hash/pound symbol.
+> [!NOTE]
+> Yes, you read that right — you need to enter the hex value without the hash/pound symbol.
 
 ![PlayCanvas Editor - Diffuse color](playcanvas-editor-diffusecolor.png)
 
@@ -82,7 +83,9 @@ To make way for more shapes, move the box to the left to make some room for the 
 
 Adding other shapes involves a very similar process to adding the box. Click on the Root folder in the hierarchy panel (to make sure that the new shape appears in the root, and not as a child of the Box) then Click on the big _Add Entity_ (plus) button and select cylinder from the dropdown list — it will add a new cylinder shape to the scene.
 
-![PlayCanvas Editor - Cylinder](playcanvas-editor-cylinder.png)Now follow the same steps as we did before when coloring the cube:
+![PlayCanvas Editor - Cylinder](playcanvas-editor-cylinder.png)
+
+Now follow the same steps as we did before when coloring the cube:
 
 - Create a new material using the _Add Asset_ (plus) button.
 - Make sure the New Material in the Assets panel is selected, to bring up the entity inspector.

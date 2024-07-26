@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CustomElementRegistry.upgrade
 ---
 
-{{APIRef("CustomElementRegistry")}}
+{{APIRef("Web Components")}}
 
 The **`upgrade()`** method of the
 {{domxref("CustomElementRegistry")}} interface upgrades all shadow-containing custom

@@ -29,7 +29,7 @@ observe(target, options)
 - `options`
 
   - : An object providing options that describe which DOM mutations should be reported to `mutationObserver`'s `callback`.
-    At a minimum, one of `childList`, `attributes`, and/or `characterData` must be `true` when you call {{domxref("MutationObserver.observe", "observe()")}}.
+    At a minimum, one of `childList`, `attributes`, and/or `characterData` must be `true` when you call `observe()`.
     Otherwise, a `TypeError` exception will be thrown.
 
     Options are as follows:
@@ -106,18 +106,17 @@ In this example, we demonstrate how to call the method **`observe()`** on an ins
 and an `options` object.
 
 ```js
-// identify an element to observe
-const elementToObserve = document.querySelector("#targetElementId");
-
 // create a new instance of `MutationObserver` named `observer`,
 // passing it a callback function
 const observer = new MutationObserver(() => {
   console.log("callback that runs when observer is triggered");
 });
 
-// call `observe()` on that MutationObserver instance,
-// passing it the element to observe, and the options object
-observer.observe(elementToObserve, { subtree: true, childList: true });
+// call `observe()`, passing it the element to observe, and the options object
+observer.observe(document.querySelector("#element-to-observe"), {
+  subtree: true,
+  childList: true,
+});
 ```
 
 ### Using `attributeFilter`

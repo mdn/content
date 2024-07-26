@@ -34,7 +34,7 @@ forEach(callbackFn, thisArg)
 
 ### Return value
 
-{{jsxref("undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ## Description
 
@@ -51,8 +51,7 @@ it is executed for values which are present but have the value `undefined`.
 
 There are no keys in `Set` objects, however, so the first two arguments are
 both **values** contained in the {{jsxref("Set")}}. This is to make it
-consistent with other `forEach()` methods for {{jsxref("Map/foreach",
-  "Map")}} and {{jsxref("Array/forEach","Array")}}.
+consistent with other `forEach()` methods for {{jsxref("Map/foreach", "Map")}} and {{jsxref("Array/forEach", "Array")}}.
 
 If a `thisArg` parameter is provided to `forEach()`,
 it will be passed to `callback` when invoked, for use as its

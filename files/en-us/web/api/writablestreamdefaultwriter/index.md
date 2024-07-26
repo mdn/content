@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.WritableStreamDefaultWriter
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`WritableStreamDefaultWriter`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) is the object returned by {{domxref("WritableStream.getWriter()")}} and once created locks the writer to the `WritableStream` ensuring that no other streams can write to the underlying sink.
 
@@ -36,7 +36,7 @@ The **`WritableStreamDefaultWriter`** interface of the [Streams API](/en-US/docs
 
 ## Examples
 
-The following example shows the creation of a `WritableStream` with a custom sink and an API-supplied queuing strategy. It then calls a function called `sendMessage()`, passing the newly created stream and a string. Inside this function it calls the stream's `getWriter()` method, which returns an instance of {{domxref("WritableStreamDefaultWriter")}}. A `forEach()` call is used to write each chunk of the string to the stream. Finally, `write()` and `close()` return promises that are processed to deal with success or failure of chunks and streams.
+The following example shows the creation of a `WritableStream` with a custom sink and an API-supplied queuing strategy. It then calls a function called `sendMessage()`, passing the newly created stream and a string. Inside this function it calls the stream's `getWriter()` method, which returns an instance of `WritableStreamDefaultWriter`. A `forEach()` call is used to write each chunk of the string to the stream. Finally, `write()` and `close()` return promises that are processed to deal with success or failure of chunks and streams.
 
 ```js
 const list = document.querySelector("ul");

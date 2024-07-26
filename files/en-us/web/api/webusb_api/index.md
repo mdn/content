@@ -31,6 +31,8 @@ When connecting a new WebUSB-compatible device, the browser displays a notificat
   - : Provides access to metadata about a paired USB device and methods for controlling it.
 - {{domxref("USBInTransferResult")}}
   - : Represents the result from requesting a transfer of data from the USB device to the USB host.
+- {{domxref("USBOutTransferResult")}}
+  - : Represents the result from requesting a transfer of data from the USB host to the USB device.
 - {{domxref("USBIsochronousInTransferPacket")}}
   - : Represents the status of an individual packet from a request to transfer data from the USB device to the USB host over an isochronous endpoint.
 - {{domxref("USBIsochronousInTransferResult")}}
@@ -85,4 +87,4 @@ navigator.usb.getDevices().then((devices) => {
 
 ## See also
 
-- [Access USB Devices on the Web](https://web.dev/usb/)
+- [Access USB Devices on the Web](https://developer.chrome.com/docs/capabilities/usb)

@@ -4,7 +4,7 @@ slug: Web/API/Device_orientation_events/Orientation_and_motion_data_explained
 page-type: guide
 ---
 
-{{DefaultAPISidebar("Device Orientation Events")}}
+{{DefaultAPISidebar("Device Orientation Events")}}{{securecontext_header}}
 
 When using orientation and motion events, it's important to understand what the values you're given by the browser mean. This article provides details about the coordinate systems at play and how you use them.
 
@@ -30,7 +30,8 @@ The device coordinate frame is the coordination frame fixed on the center of the
 - The **y** axis is in the plane of the screen and is positive toward the top and negative toward the bottom.
 - The **z** axis is perpendicular to the screen or keyboard, and is positive extending outward from the screen.
 
-> **Note:** On a phone or tablet, the orientation of the device is always considered in relation to the standard orientation of the screen; this is the "portrait" orientation on most devices. On a laptop computer, the orientation is considered in relation to the keyboard. If you want to detect changes in device orientation in order to compensate, you can use the `orientationchange` event.
+> [!NOTE]
+> On a phone or tablet, the orientation of the device is always considered in relation to the standard orientation of the screen; this is the "portrait" orientation on most devices. On a laptop computer, the orientation is considered in relation to the keyboard. If you want to detect changes in device orientation in order to compensate, you can use the [`change`](/en-US/docs/Web/API/ScreenOrientation/change_event) event.
 
 ## About rotation
 
@@ -40,9 +41,9 @@ Rotation is described about any given axis in terms of the number of degrees of 
 
 Rotation around the z axis — that is, twisting the device — causes the **alpha** rotation angle to change:
 
-![Positive beta pitches the device outward from the screen.](alpha.png)
+![Positive alpha rotates the device counter-clockwise.](alpha.png)
 
-The alpha angle is 0° when top of the device is pointed directly toward the Earth's north pole, and increases as the device is rotated toward the left.
+The alpha angle is 0° when top of the device is pointed directly toward the Earth's north pole, and increases as the device is rotated counterclockwise. As such, 90° corresponds with pointing west, 180° with south, and 270° with east.
 
 ### Beta
 
@@ -56,6 +57,6 @@ The beta angle is 0° when the device's top and bottom are the same distance fro
 
 Rotation around the y axis — that is, tilting the device toward the left or right — causes the **gamma** rotation angle to change:
 
-![Positive beta pitches the device forward toward the top.](gamma.png)
+![Positive gamma tilts the devices toward the right.](gamma.png)
 
 The gamma angle is 0° when the device's left and right sides are the same distance from the surface of the Earth, and increases toward 90° as the device is tipped toward the right, and toward -90° as the device is tipped toward the left.

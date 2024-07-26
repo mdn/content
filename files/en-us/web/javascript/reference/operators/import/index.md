@@ -26,16 +26,20 @@ The `import()` call is a syntax that closely resembles a function call, but `imp
 
 ### Return value
 
-Returns a promise which fulfills to a [module namespace object](#module_namespace_object): an object containing all exports from `moduleName`.
+Returns a promise which:
 
-The evaluation of `import()` never synchronously throws an error. `moduleName` is [coerced to a string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion), and if coercion throws, the promise is rejected with the thrown error.
+- If the referenced module is loaded and evaluated successfully, fulfills to a [module namespace object](#module_namespace_object): an object containing all exports from `moduleName`.
+- If the [coercion to string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion) of `moduleName` throws, rejects with the thrown error.
+- If `moduleName` refers to a module that doesn't exist, rejects with an implementation-defined error (Node uses a generic `Error`, while all browsers use `TypeError`).
+- If evaluation of the referenced module throws, rejects with the thrown error.
+
+> **Note:** `import()` never synchronously throws an error.
 
 ## Description
 
 The import declaration syntax (`import something from "somewhere"`) is static and will always result in the imported module being evaluated at load time. Dynamic imports allow one to circumvent the syntactic rigidity of import declarations and load a module conditionally or on demand. The following are some reasons why you might need to use dynamic import:
 
-- When importing statically significantly slows the loading of your code and there is a low likelihood that you will need the code you are importing, or you will not need it until a later time.
-- When importing statically significantly increases your program's memory usage and there is a low likelihood that you will need the code you are importing.
+- When importing statically significantly slows the loading of your code or increases your program's memory usage, and there is a low likelihood that you will need the code you are importing, or you will not need it until a later time.
 - When the module you are importing does not exist at load time.
 - When the import specifier string needs to be constructed dynamically. (Static import only supports static specifiers.)
 - When the module being imported has side effects, and you do not want those side effects unless some condition is true. (It is recommended not to have any side effects in a module, but you sometimes cannot control this in your module dependencies.)
@@ -52,7 +56,7 @@ For example, `import()` can be used in the main thread, a shared worker, or a de
 
 A _module namespace object_ is an object that describes all exports from a module. It is a static object that is created when the module is evaluated. There are two ways to access the module namespace object of a module: through a [namespace import](/en-US/docs/Web/JavaScript/Reference/Statements/import#namespace_import) (`import * as name from moduleName`), or through the fulfillment value of a dynamic import.
 
-The module namespace object is a [sealed](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isSealed) object with [`null` prototype](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects). This means all string keys of the object correspond to the exports of the module and there are never extra keys. All keys are [enumerable](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) in lexicographic order (i.e. the default behavior of [`Array.prototype.sort()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#description)), with the default export available as a key called `default`. In addition, the module namespace object has a [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property with the value `"Module"`, used in {{jsxref("Object.prototype.toString()")}}.
+The module namespace object is a [sealed](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isSealed) object with [`null` prototype](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects). This means all string keys of the object correspond to the exports of the module and there are never extra keys. All keys are [enumerable](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) in lexicographic order (i.e. the default behavior of [`Array.prototype.sort()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#description)), with the default export available as a key called `default`. In addition, the module namespace object has a [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property with the value `"Module"`, used in {{jsxref("Object.prototype.toString()")}}.
 
 The string properties are non-configurable and writable when you use {{jsxref("Object.getOwnPropertyDescriptors()")}} to get their descriptors. However, they are effectively read-only, because you cannot re-assign a property to a new value. This behavior mirrors the fact that static imports create "[live bindings](/en-US/docs/Web/JavaScript/Reference/Statements/import#imported_values_can_only_be_modified_by_the_exporter)" — the values can be re-assigned by the module exporting them, but not by the module importing them. The writability of the properties reflects the possibility of the values changing, because non-configurable and non-writable properties must be constant. For example, you can re-assign the exported value of a variable, and the new value can be observed in the module namespace object.
 
@@ -66,7 +70,7 @@ import("/my-module.js").then((mod2) => {
 });
 ```
 
-Except in one curious case: because a promise never fulfills to a [thenable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables), if the `my-module.js` module exports a function called `then()`, that function will automatically get called when the dynamic import's promise is fulfilled, as part of the [promise resolution](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise#resolver_function) process.
+Except in one curious case: because a promise never fulfills to a [thenable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables), if the `my-module.js` module exports a function called `then()`, that function will automatically get called when the dynamic import's promise is fulfilled, as part of the [promise resolution](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise#the_resolve_function) process.
 
 ```js
 // my-module.js
@@ -86,7 +90,8 @@ import("/my-module.js").then((mod2) => {
 });
 ```
 
-> **Warning:** Do not export a function called `then()` from a module. This will cause the module to behave differently when imported dynamically than when imported statically.
+> [!WARNING]
+> Do not export a function called `then()` from a module. This will cause the module to behave differently when imported dynamically than when imported statically.
 
 ## Examples
 
@@ -107,7 +112,7 @@ imports) only.
 
 ### Importing defaults
 
-You need to destructure and rename the "default" key from the returned object.
+If you are destructuring the imported module namespace object, then you must rename the `default` key because `default` is a reserved word.
 
 ```js
 (async () => {
@@ -164,8 +169,8 @@ Here, we load 10 modules, `/modules/module-0.js`, `/modules/module-1.js`, etc., 
 
 ```js
 Promise.all(
-  Array.from({ length: 10 }).map((_, index) =>
-    import(`/modules/module-${index}.js`),
+  Array.from({ length: 10 }).map(
+    (_, index) => import(`/modules/module-${index}.js`),
   ),
 ).then((modules) => modules.forEach((module) => module.load()));
 ```
@@ -180,4 +185,4 @@ Promise.all(
 
 ## See also
 
-- [`import` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/import)
+- [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import)

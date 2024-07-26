@@ -26,7 +26,8 @@ The array is necessary to support elements that have multiple fragments, which o
     with a horizontal {{cssxref("writing-mode")}}, this is the horizontal dimension, or
     width; if the writing-mode is vertical, this is the vertical dimension, or height.
 
-> **Note:** For more explanation of writing modes and block and inline
+> [!NOTE]
+> For more explanation of writing modes and block and inline
 > dimensions, read [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions).
 
 ## Examples
@@ -41,20 +42,31 @@ size.
 
 ```js
 const resizeObserver = new ResizeObserver((entries) => {
-  const calcBorderRadius = (size1, size2) =>
-    `${Math.min(100, size1 / 10 + size2 / 10)}px`;
-
-  for (const entry of entries) {
-    if (entry.borderBoxSize?.length > 0) {
-      entry.target.style.borderRadius = calcBorderRadius(
-        entry.borderBoxSize[0].inlineSize,
-        entry.borderBoxSize[0].blockSize,
-      );
+  for (let entry of entries) {
+    if (entry.contentBoxSize) {
+      // The standard makes contentBoxSize an array...
+      if (entry.contentBoxSize[0]) {
+        entry.target.style.borderRadius =
+          Math.min(
+            100,
+            entry.contentBoxSize[0].inlineSize / 10 +
+              entry.contentBoxSize[0].blockSize / 10,
+          ) + "px";
+      } else {
+        // ...but old versions of Firefox treat it as a single item
+        entry.target.style.borderRadius =
+          Math.min(
+            100,
+            entry.contentBoxSize.inlineSize / 10 +
+              entry.contentBoxSize.blockSize / 10,
+          ) + "px";
+      }
     } else {
-      entry.target.style.borderRadius = calcBorderRadius(
-        entry.contentRect.width,
-        entry.contentRect.height,
-      );
+      entry.target.style.borderRadius =
+        Math.min(
+          100,
+          entry.contentRect.width / 10 + entry.contentRect.height / 10,
+        ) + "px";
     }
   }
 });

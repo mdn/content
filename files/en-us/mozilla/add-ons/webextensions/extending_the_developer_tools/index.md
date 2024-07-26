@@ -80,7 +80,8 @@ This is somewhat like using {{WebExtAPIRef("tabs.executeScript()")}} to inject a
 
 - unlike content scripts, scripts loaded using `devtools.inspectedWindow.eval()` **do not** get [a "clean view of the DOM"](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#dom_access): that is, they can see changes to the page made by page scripts.
 
-> **Note:** A clean view of the DOM is a security feature, intended to help prevent hostile pages from tricking extensions by redefining the behavior of native DOM functions. This means you need to be very careful using eval(), and should use a normal content script if you can.
+> [!NOTE]
+> A clean view of the DOM is a security feature, intended to help prevent hostile pages from tricking extensions by redefining the behavior of native DOM functions. This means you need to be very careful using eval(), and should use a normal content script if you can.
 
 Scripts loaded using `devtools.inspectedWindow.eval()` also don't see any JavaScript variables defined by content scripts.
 

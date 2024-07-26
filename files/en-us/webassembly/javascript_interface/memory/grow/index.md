@@ -1,7 +1,8 @@
 ---
 title: WebAssembly.Memory.prototype.grow()
 slug: WebAssembly/JavaScript_interface/Memory/grow
-browser-compat: javascript.builtins.WebAssembly.Memory.grow
+page-type: webassembly-instance-method
+browser-compat: webassembly.api.Memory.grow
 ---
 
 {{WebAssemblySidebar}}
@@ -11,12 +12,12 @@ The **`grow()`** prototype method of the [`WebAssembly.Memory`](/en-US/docs/WebA
 ## Syntax
 
 ```js-nolint
-grow(pageIncrease)
+grow(delta)
 ```
 
 ### Parameters
 
-- `pageIncrease`
+- `delta`
   - : The number of WebAssembly pages you want to grow the memory by (each one is 64KiB in size).
 
 ### Return value
@@ -25,7 +26,7 @@ The previous size of the memory, in units of WebAssembly pages.
 
 ### Exceptions
 
-- {{jsxref("RangeError")}}: If the current size added with `pageIncrease` exceeds the Memory instance's maximum size capacity.
+- {{jsxref("RangeError")}}: If the current size added with `delta` exceeds the Memory instance's maximum size capacity.
 
 ## Examples
 

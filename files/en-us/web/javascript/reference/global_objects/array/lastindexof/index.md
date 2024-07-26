@@ -26,13 +26,13 @@ lastIndexOf(searchElement, fromIndex)
   - : Element to locate in the array.
 - `fromIndex` {{optional_inline}}
   - : Zero-based index at which to start searching backwards, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion).
-    - Negative index counts back from the end of the array — if `fromIndex < 0`, `fromIndex + array.length` is used.
+    - Negative index counts back from the end of the array — if `-array.length <= fromIndex < 0`, `fromIndex + array.length` is used.
     - If `fromIndex < -array.length`, the array is not searched and `-1` is returned. You can think of it conceptually as starting at a nonexistent position before the beginning of the array and going backwards from there. There are no array elements on the way, so `searchElement` is never found.
     - If `fromIndex >= array.length` or `fromIndex` is omitted, `array.length - 1` is used, causing the entire array to be searched. You can think of it conceptually as starting at a nonexistent position beyond the end of the array and going backwards from there. It eventually reaches the real end position of the array, at which point it starts searching backwards through the actual array elements.
 
 ### Return value
 
-The last index of the element in the array; `-1` if not found.
+The last index of `searchElement` in the array; `-1` if not found.
 
 ## Description
 
@@ -68,7 +68,7 @@ array.lastIndexOf(NaN); // -1
 ### Finding all the occurrences of an element
 
 The following example uses `lastIndexOf` to find all the indices of an
-element in a given array, using {{jsxref("Array.prototype.push", "push")}} to add them
+element in a given array, using {{jsxref("Array/push", "push()")}} to add them
 to another array as they are found.
 
 ```js
@@ -88,7 +88,7 @@ console.log(indices);
 Note that we have to handle the case `idx === 0` separately here because the
 element will always be found regardless of the `fromIndex` parameter if it is
 the first element of the array. This is different from the
-{{jsxref("Array.prototype.indexOf", "indexOf")}} method.
+{{jsxref("Array/indexOf", "indexOf()")}} method.
 
 ### Using lastIndexOf() on sparse arrays
 
@@ -127,7 +127,7 @@ console.log(Array.prototype.lastIndexOf.call(arrayLike, 5));
 ## See also
 
 - [Polyfill of `Array.prototype.lastIndexOf` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.findIndex()")}}
 - {{jsxref("Array.prototype.findLastIndex()")}}

@@ -28,7 +28,7 @@ isPrototypeOf(object)
 
 A boolean indicating whether the calling object (`this`) lies in the prototype chain of `object`. Directly returns `false` when `object` is not an object (i.e. a primitive).
 
-### Errors thrown
+### Exceptions
 
 - {{jsxref("TypeError")}}
   - : Thrown if `this` is `null` or `undefined` (because it can't be [converted to an object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#object_coercion)).
@@ -76,7 +76,7 @@ if (Foo.prototype.isPrototypeOf(baz)) {
 }
 ```
 
-However, `Foo.prototype` existing in `baz`'s prototype chain doesn't imply `baz` was created using `Foo` as its constructor. For example, `baz` could be directly assigned with `Foo.prototype` as its prototype. In this case, if your code reads [private fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields) of `Foo` from `baz`, it would still fail:
+However, `Foo.prototype` existing in `baz`'s prototype chain doesn't imply `baz` was created using `Foo` as its constructor. For example, `baz` could be directly assigned with `Foo.prototype` as its prototype. In this case, if your code reads [private fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) of `Foo` from `baz`, it would still fail:
 
 ```js
 class Foo {

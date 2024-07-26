@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.PushSubscription.endpoint
 ---
 
-{{APIRef("Push API")}}
+{{APIRef("Push API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`endpoint`** read-only property of the
 {{domxref("PushSubscription")}} interface returns a string containing

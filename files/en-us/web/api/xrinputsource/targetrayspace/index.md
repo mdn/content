@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.XRInputSource.targetRaySpace
 ---
 
-{{APIRef("WebXR Device API")}}
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
 
 The read-only {{domxref("XRInputSource")}} property
 **`targetRaySpace`** returns an {{domxref("XRSpace")}}
@@ -18,8 +18,7 @@ the input source's {{domxref("XRInputSource.targetRayMode", "targetRayMode")}}, 
 used both to fully interpret the device as an input source.
 
 To obtain an `XRSpace` representing the input controller's position and
-orientation in virtual space, use the {{domxref("XRInputSource.gripSpace",
-  "gripSpace")}} property.
+orientation in virtual space, use the {{domxref("XRInputSource.gripSpace", "gripSpace")}} property.
 
 ## Value
 
@@ -33,9 +32,8 @@ direction in which the target ray is pointing.
 
 ## Usage notes
 
-All input sources—regardless of their {{domxref("XRInputSource.targetRayMode",
-  "targetRayMode")}}—have a valid `targetRaySpace`. The exact meaning of this
-space varies, however, depending on the mode:
+All input sources—regardless of their {{domxref("XRInputSource.targetRayMode", "targetRayMode")}}—have a valid `targetRaySpace`.
+The exact meaning of this space varies, however, depending on the mode:
 
 - Every gaze input (`targetRayMode` value of `gaze`), shares the
   same {{domxref("XRSpace")}} object as their target ray space, since the gaze input
@@ -48,13 +46,13 @@ space varies, however, depending on the mode:
   orientation of the input device.
 
 To determine the position and orientation of the target ray while rendering a frame,
-pass it into the {{domxref("XRFrame")}} method {{domxref("XRFrame.getPose",
-  "getPose()")}} method, then use the returned {{domxref("XRPose")}} object's
+pass it into the {{domxref("XRFrame")}} method {{domxref("XRFrame.getPose", "getPose()")}} method,
+then use the returned {{domxref("XRPose")}} object's
 {{domxref("XRPose.transform", "transform")}} to gather the spatial information you need.
 
 ## Examples
 
-This fragment of code shows part of a function to be called once every frame. It looks for inputs which have a non-`null` {{domxref("XRInputSource.targetRaySpace", "targetRaySpace")}}. Inputs which have a value for this property represent inputs that project a target ray outward from the user.
+This fragment of code shows part of a function to be called once every frame. It looks for inputs which have a non-`null` `targetRaySpace`. Inputs which have a value for this property represent inputs that project a target ray outward from the user.
 
 For each such input, this example looks for inputs whose {{domxref("XRInputSource.targetRayMode", "targetRayMode")}} is `tracked-pointer`, indicating that the input is in fact intended to represent a targeting device rather than a gazing device, screen tap, or mouse click. For tracked pointers, a function `myRenderTargetRayAsBeam()` is called to render a beam from the input controller's virtual position outward in the direction it's pointing.
 
@@ -88,4 +86,4 @@ function updateInputSources(session, frame, refSpace) {
 
 - [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)
 - [Inputs and input sources](/en-US/docs/Web/API/WebXR_Device_API/Inputs)
-- [Using gamepads in WebXR applications](/en-US/docs/Web/WebXR%20Device%20API/Gamepads)
+- [Using gamepads in WebXR applications](/en-US/docs/Web/API/WebXR_Device_API/Gamepads)

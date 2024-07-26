@@ -7,7 +7,7 @@ browser-compat: api.MediaSession
 
 {{APIRef("Media Session API")}}
 
-The **`MediaSession`** interface of the [Media Session API](/en-US/docs/Web/API/Media_Session_API) allows a web page to provide custom behaviors for standard media playback interactions, and to report metadata that can be sent by the user agent to the device or operating system for presentation in standardized user interface elements.
+The **`MediaSession`** interface of the {{domxref("Media Session API", "", "", "nocode")}} allows a web page to provide custom behaviors for standard media playback interactions, and to report metadata that can be sent by the user agent to the device or operating system for presentation in standardized user interface elements.
 
 For example, a smartphone might have a standard panel in its lock screen that provides controls for media playback and information display. A browser on the device can use `MediaSession` to make browser playback controllable from that standard/global user interface.
 
@@ -22,6 +22,10 @@ For example, a smartphone might have a standard panel in its lock screen that pr
 
 - {{domxref("MediaSession.setActionHandler", "setActionHandler()")}}
   - : Sets an action handler for a media session action, such as play or pause.
+- {{domxref("MediaSession.setCameraActive", "setCameraActive()")}} {{Experimental_Inline}}
+  - : Indicates to the user agent whether the user's camera is considered to be active.
+- {{domxref("MediaSession.setMicrophoneActive", "setMicrophoneActive()")}} {{Experimental_Inline}}
+  - : Indicates to the user agent whether the user's microphone is considered to be currently muted.
 - {{domxref("MediaSession.setPositionState", "setPositionState()")}}
   - : Sets the current playback position and speed of the media currently being presented.
 

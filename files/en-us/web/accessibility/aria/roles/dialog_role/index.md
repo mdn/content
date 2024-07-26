@@ -4,8 +4,10 @@ slug: Web/Accessibility/ARIA/Roles/dialog_role
 page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#dialog
-  - https://w3c.github.io/aria-practices/#dialog_modal
+  - https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/examples/dialog/
 ---
+
+{{AccessibilitySidebar}}
 
 The `dialog` role is used to mark up an HTML based application dialog or window that separates content or UI from the rest of the web application or page. Dialogs are generally placed on top of the rest of the page content using an overlay. Dialogs can be either non-modal (it's still possible to interact with content outside of the dialog) or modal (only the content in the dialog can be interacted with).
 
@@ -52,7 +54,8 @@ If a dialog already has a visible title bar, the text inside that bar can be use
 </div>
 ```
 
-> **Note:** Keep in mind that a dialog's title and description text do not have to be focusable in order to be perceived by screen readers operating in a non-virtual mode. The combination of the ARIA dialog role and labeling techniques should make the screen reader announce the dialog's information when focus is moved into it.
+> [!NOTE]
+> Keep in mind that a dialog's title and description text do not have to be focusable in order to be perceived by screen readers operating in a non-virtual mode. The combination of the ARIA dialog role and labeling techniques should make the screen reader announce the dialog's information when focus is moved into it.
 
 ### Required JavaScript features
 
@@ -82,7 +85,8 @@ When the `dialog` role is used, the user agent should do the following:
 
 When the dialog is correctly labeled and focus is moved to an element (often an interactive element, such as a button) inside the dialog, screen readers should announce the dialog's accessible role, name and optionally description, along with announcing the focused element.
 
-> **Note:** Opinions may differ on how assistive technology should handle this technique, and the order of announcements may differ depending on the assistive technology used. The information provided above is one of those opinions and may change as the specification is defined.
+> [!NOTE]
+> Opinions may differ on how assistive technology should handle this technique, and the order of announcements may differ depending on the assistive technology used. The information provided above is one of those opinions and may change as the specification is defined.
 
 ## Examples
 
@@ -109,7 +113,7 @@ When the dialog is correctly labeled and focus is moved to an element (often an 
       <textarea id="interests"></textarea>
     </p>
     <p>
-      <input type="checkbox" id="autoLogin" />
+      <input type="checkbox" id="autoLogin" name="autoLogin" />
       <label for="autoLogin">Auto-login?</label>
     </p>
     <p>
@@ -125,7 +129,8 @@ When the dialog is correctly labeled and focus is moved to an element (often an 
 
 ### Notes
 
-> **Note:** While it is possible to prevent keyboard users from moving focus to elements outside of the dialog, screen reader users may still be able to navigate to that content using their screen reader's virtual cursor.
+> [!NOTE]
+> While it is possible to prevent keyboard users from moving focus to elements outside of the dialog, screen reader users may still be able to navigate to that content using their screen reader's virtual cursor.
 > It is important for developers to ensure that content outside of the modal dialog is inaccessible to all users while the modal dialog is active.
 
 ## Specifications
@@ -138,11 +143,3 @@ Coming soon
 
 - [ARIA: alertdialog role](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role)
 - {{HTMLElement('dialog', 'The HTML <code>&lt;dialog&gt;</code> element')}}
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
-
-</section>

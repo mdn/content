@@ -12,7 +12,7 @@ The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
 loaded using script interfaces. The APIs that are restricted are:
 
 - {{HTMLElement("a")}} [`ping`](/en-US/docs/Web/HTML/Element/a#ping),
-- {{domxref("fetch()")}},
+- {{domxref("Window/fetch", "fetch()")}},
 - {{domxref("XMLHttpRequest")}},
 - {{domxref("WebSocket")}},
 - {{domxref("EventSource")}}, and
@@ -71,6 +71,8 @@ The following connections are blocked and won't load:
 ```html
 <a ping="https://not-example.com">
   <script>
+    const response = fetch("https://not-example.com/");
+
     const xhr = new XMLHttpRequest();
     xhr.open("GET", "https://not-example.com/");
     xhr.send();
@@ -94,17 +96,11 @@ The following connections are blocked and won't load:
 
 {{Compat}}
 
-### Compatibility notes
-
-- Prior to Firefox 23, `xhr-src` was used in place of the
-  `connect-src` directive and only restricted the use of
-  {{domxref("XMLHttpRequest")}}.
-
 ## See also
 
 - {{HTTPHeader("Content-Security-Policy")}}
 - {{HTMLElement("a")}} [`ping`](/en-US/docs/Web/HTML/Element/a#ping)
-- {{domxref("fetch()")}}
+- {{domxref("Window/fetch", "fetch()")}}
 - {{domxref("XMLHttpRequest")}}
 - {{domxref("WebSocket")}}
 - {{domxref("EventSource")}}

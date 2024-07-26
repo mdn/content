@@ -8,7 +8,7 @@ status:
 browser-compat: api.FileSystemHandle.queryPermission
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("File System API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 The **`queryPermission()`** method of the
 {{domxref("FileSystemHandle")}} interface queries the current permission state of the
@@ -17,24 +17,25 @@ current handle.
 ## Syntax
 
 ```js-nolint
-queryPermission(fileSystemHandlePermissionDescriptor)
+queryPermission(descriptor)
 ```
 
 ### Parameters
 
-- FileSystemHandlePermissionDescriptor {{optional_inline}}
+- `descriptor` {{optional_inline}}
 
   - : An object which specifies the permission mode to query for. Options are as follows:
 
-    - `'mode'`: Can be either `'read'` or
-      `'readwrite'`.
+    - `'mode'` {{optional_inline}}
+
+      - : Can be either `'read'` or `'readwrite'`.
 
 ### Return value
 
 {{domxref('PermissionStatus.state')}} which is one of `'granted'`,
 `'denied'` or `'prompt'`.
 
-If this returns "prompt" the website will have to call requestPermission() before any
+If this returns "prompt" the website will have to call `requestPermission()` before any
 operations on the handle can be done. If this returns "denied" any operations will
 reject. Usually handles returned by the local file system handle factories will
 initially return "granted" for their read permission state. However, other than through
@@ -88,4 +89,4 @@ async function verifyPermission(fileHandle, withWrite) {
 ## See also
 
 - [File System API](/en-US/docs/Web/API/File_System_API)
-- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)
+- [The File System Access API: simplifying access to local files](https://developer.chrome.com/docs/capabilities/web-apis/file-system-access)

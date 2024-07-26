@@ -19,7 +19,8 @@ A conditional `get()` call does not show the browser UI and remains pending unti
 
 The prevent silent access flag (see {{domxref("CredentialsContainer.preventSilentAccess()")}}) is treated as being `true` regardless of its actual value: the conditional behavior always involves user mediation of some sort if applicable credentials are discovered.
 
-> **Note:** If no credentials are discovered, the non-modal dialog will not be visible, and the user agent can prompt the user to take action in a way that depends on the type of credential (for example, to insert a device containing credentials).
+> [!NOTE]
+> If no credentials are discovered, the non-modal dialog will not be visible, and the user agent can prompt the user to take action in a way that depends on the type of credential (for example, to insert a device containing credentials).
 
 ## Syntax
 
@@ -69,7 +70,8 @@ if (
 }
 ```
 
-> **Note:** See [Sign in with a passkey through form autofill](https://web.dev/passkey-form-autofill/) for more information about using conditional mediation.
+> [!NOTE]
+> See [Sign in with a passkey through form autofill](https://web.dev/articles/passkey-form-autofill) for more information about using conditional mediation.
 
 ## Specifications
 

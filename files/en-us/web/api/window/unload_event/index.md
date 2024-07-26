@@ -3,10 +3,12 @@ title: "Window: unload event"
 short-title: unload
 slug: Web/API/Window/unload_event
 page-type: web-api-event
+status:
+  - deprecated
 browser-compat: api.Window.unload_event
 ---
 
-{{APIRef}}
+{{APIRef}}{{deprecated_header}}
 
 > **Warning:** Developers should avoid using this event. See "Usage notes" below.
 
@@ -57,7 +59,7 @@ Especially on mobile, the `unload` event is not reliably fired. For example, the
 2. The user then switches to a different app.
 3. Later, the user closes the browser from the app manager.
 
-Also, the `unload` event is not compatible with the [back/forward cache](https://web.dev/bfcache/) (bfcache), because many pages using this event assume that the page will not continue to exist after the event is fired. To combat this, some browsers (such as Firefox) will not place pages in the bfcache if they have unload listeners, and this is bad for performance. Others, such as Chrome, will not fire the `unload` when a user navigates away.
+Also, the `unload` event is not compatible with the [back/forward cache](https://web.dev/articles/bfcache) (bfcache), because many pages using this event assume that the page will not continue to exist after the event is fired. To combat this, some browsers (such as Firefox) will not place pages in the bfcache if they have unload listeners, and this is bad for performance. Others, such as Chrome, will not fire the `unload` when a user navigates away.
 
 The best event to use to signal the end of a user's session is the [`visibilitychange`](/en-US/docs/Web/API/Document/visibilitychange_event) event. In browsers that don't support `visibilitychange` the next-best alternative is the [`pagehide`](/en-US/docs/Web/API/Window/pagehide_event) event, which is also not fired reliably, but which is bfcache-compatible.
 
@@ -132,4 +134,4 @@ When the parent frame is unloaded, events will be fired in the order described b
 - [Page Lifecycle API](https://developer.chrome.com/blog/page-lifecycle-api/#developer-recommendations-for-each-state) gives best-practices guidance on handling
   page lifecycle behavior in your web applications.
 - [PageLifecycle.js](https://github.com/GoogleChromeLabs/page-lifecycle): a JavaScript library that deals with cross-browser inconsistencies in page lifecycle behavior.
-- [Back/forward cache](https://web.dev/bfcache/) explains what the back/forward cache is, and its implications for various page lifecycle events.
+- [Back/forward cache](https://web.dev/articles/bfcache) explains what the back/forward cache is, and its implications for various page lifecycle events.

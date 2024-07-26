@@ -27,15 +27,6 @@ The **`SVGFilterElement`** interface provides access to the properties of {{SVGE
   - : An {{domxref("SVGAnimatedLength")}} that corresponds to the {{SVGAttr("width")}} attribute of the given {{SVGElement("filter")}} element.
 - {{domxref("SVGFilterElement.height")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} that corresponds to the {{SVGAttr("height")}} attribute of the given {{SVGElement("filter")}} element.
-- {{domxref("SVGFilterElement.filterResX")}} {{ReadOnlyInline}} {{deprecated_inline}}
-  - : An {{domxref("SVGAnimatedInteger")}} that contains the X component of the {{SVGAttr("filterRes")}} attribute of the given {{SVGElement("filter")}} element.
-- {{domxref("SVGFilterElement.filterResY")}} {{ReadOnlyInline}} {{deprecated_inline}}
-  - : An {{domxref("SVGAnimatedInteger")}} that contains the Y component of the {{SVGAttr("filterRes")}} attribute of the given {{SVGElement("filter")}} element.
-
-## Instance methods
-
-- {{domxref("SVGFilterElement.setFilterRes()")}} {{deprecated_inline}}
-  - : Sets the values of the {{SVGAttr("filterRes")}} attribute.
 
 ## Specifications
 

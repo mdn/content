@@ -12,7 +12,8 @@ This article describes how to create, move, delete, or edit a page. In all these
 
 All pages on MDN Web Docs are authored in Markdown format. The content is written in a file named `index.md`, which is stored in its own unique directory. The directory name represents the name of the page. For example, if `align-content` is a new CSS property for which you want to create a new reference page, you'd create a folder in `en-us/web/css` named `align-content` and create a file called `index.md` inside it.
 
-> **Note:** The name of the directory differs slightly from the slug of the page. Most notably, the slug follows sentence casing.
+> [!NOTE]
+> The name of the directory differs slightly from the slug of the page. Most notably, the slug follows sentence casing.
 
 There are a lot of different [page types](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types) with certain structures and supporting page templates for them, which you can copy to get you started.
 
@@ -83,14 +84,21 @@ For example, let's say you want to move the entire
    yarn content move Learn/Accessibility Learn/A11y
    ```
 
-3. Add and commit all of the deleted, created, and modified files as well as push your branch to your fork.
+3. Once files are moved we need to update references to those files in the other content files as well. Use following command to update all the references automatically in one go:
 
    ```bash
-   git commit -a
+   node scripts/update-moved-file-links.js
+   ```
+
+4. Add and commit all the deleted, created, and modified files as well as push your branch to your fork.
+
+   ```bash
+   git add .
+   git commit -m "Move Learn/Accessibility to Learn/A11y"
    git push -u origin my-move
    ```
 
-4. Create your pull request.
+5. Create your pull request.
 
 > **Note:** `yarn content move` automatically adds the necessary redirect information to the `_redirects.txt` file so that the old location will redirect to the new one. Don't edit the `_redirects.txt` file manually! Mistakes can easily creep in if you do. If you need to add a redirect without moving a file, talk to the MDN Web Docs team on the [MDN Web Docs chat rooms](/en-US/docs/MDN/Community/Communication_channels#chat_rooms) about it.
 
@@ -105,7 +113,8 @@ details for you:
 yarn content delete <document-slug> [locale]
 ```
 
-> **Note:** You need to use the `yarn content delete` command to delete pages from MDN Web Docs. Don't just delete their directories from the repo. The `yarn content delete` command also handles other necessary changes such as updating the `_wikihistory.json` file.
+> [!NOTE]
+> You need to use the `yarn content delete` command to delete pages from MDN Web Docs. Don't just delete their directories from the repo. The `yarn content delete` command also handles other necessary changes such as updating the `_wikihistory.json` file.
 
 You just have to specify the slug of the existing document that you'd like
 to delete (e.g., `Learn/Accessibility`), optionally followed by the locale
@@ -142,7 +151,7 @@ entire `/en-US/Learn/Accessibility` tree, you'd perform the following steps:
    yarn content add-redirect /en-US/path/of/deleted/page /en-US/path/of/target/page
    ```
 
-4. Add and commit all of the deleted files as well as push your branch to your fork.
+4. Add and commit all the deleted files as well as push your branch to your fork.
 
    ```bash
    git commit -a
@@ -151,7 +160,8 @@ entire `/en-US/Learn/Accessibility` tree, you'd perform the following steps:
 
 5. Create your pull request.
 
-> **Note:** If the slug of the page you wish to delete contains special characters, include it in quotes, like so:
+> [!NOTE]
+> If the slug of the page you wish to delete contains special characters, include it in quotes, like so:
 >
 > ```bash
 > yarn content delete "Mozilla/Add-ons/WebExtensions/Debugging_(before_Firefox_50)"

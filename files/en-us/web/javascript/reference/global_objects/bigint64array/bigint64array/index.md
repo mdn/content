@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.BigInt64Array.BigInt64Array
 
 {{JSRef}}
 
-The **`BigInt64Array()`** constructor creates {{jsxref("BigInt64Array")}} objects. The contents are initialized to `0n`.
+The **`BigInt64Array()`** constructor creates {{jsxref("BigInt64Array")}} objects. The contents are initialized to `0n` unless initialization data is explicitly provided.
 
 ## Syntax
 
@@ -76,6 +76,7 @@ console.log(bigint64FromIterable);
 
 ## See also
 
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
-- {{jsxref("BigUint64Array")}}
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
+- {{jsxref("TypedArray")}}
+- {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

@@ -9,8 +9,8 @@ browser-compat: api.Document.scroll_event
 {{APIRef}}
 
 The **`scroll`** event fires when the document view has been scrolled.
-To detect when scrolling has completed, see the {{domxref("Document/scrollend_event", "Document: scrollend event")}}.
-For element scrolling, see {{domxref("Element/scroll_event", "Element: scroll event")}}.
+To detect when scrolling has completed, see the {{domxref("Document/scrollend_event", "scrollend")}} event of `Document`.
+For element scrolling, see {{domxref("Element/scroll_event", "scroll")}} event of `Element`.
 
 ## Syntax
 

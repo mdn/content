@@ -2,7 +2,7 @@
 title: 302 Found
 slug: Web/HTTP/Status/302
 page-type: http-status-code
-browser-compat: http.status.302
+spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.302
 ---
 
 {{HTTPSidebar}}
@@ -17,8 +17,8 @@ Even if the specification requires the method (and the body) not to be altered w
 redirection is performed, not all user-agents conform here - you can still find this
 type of bugged software out there. It is therefore recommended to set the
 `302` code only as a response for {{HTTPMethod("GET")}} or
-{{HTTPMethod("HEAD")}} methods and to use {{HTTPStatus("307", "307 Temporary
-  Redirect")}} instead, as the method change is explicitly prohibited in that case.
+{{HTTPMethod("HEAD")}} methods and to use {{HTTPStatus("307", "307 Temporary Redirect")}}
+instead, as the method change is explicitly prohibited in that case.
 
 In the cases where you want the method used to be changed to {{HTTPMethod("GET")}}, use
 {{HTTPStatus("303", "303 See Other")}} instead. This is useful when you want to give a
@@ -34,10 +34,6 @@ confirmation message such as: 'you successfully uploaded XYZ'.
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

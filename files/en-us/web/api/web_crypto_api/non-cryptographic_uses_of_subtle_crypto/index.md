@@ -76,7 +76,7 @@ async function fileHash(file) {
   const uint8ViewOfHash = new Uint8Array(hashAsArrayBuffer);
   // We then convert it to a regular array so we can convert each item
   // to hexadecimal strings, where characters of 0-9 or a-f represent
-  // a number between 0 and 16, containing 4 bits of information,
+  // a number between 0 and 15, containing 4 bits of information,
   // so 2 of them is 8 bits (1 byte).
   const hashAsString = Array.from(uint8ViewOfHash)
     .map((b) => b.toString(16).padStart(2, "0"))
@@ -89,9 +89,9 @@ async function hashTheseFiles(e) {
   // iterate over each file in file select input
   for (const file of this.files) {
     // calculate its hash and list it in the output element.
-    outHTML += `${file.name}    ${await fileHash(file)}`;
+    outHTML += `${file.name}    ${await fileHash(file)}\n`;
   }
-  output.innerHTML = outHTML;
+  output.innerText = outHTML;
 }
 ```
 
@@ -192,9 +192,9 @@ function hashToString(arrayBuffer) {
 async function hashTheseFiles(e) {
   let outHTML = "";
   for (const file of this.files) {
-    outHTML += `${file.name}    ${await fileHash(file)}`;
+    outHTML += `${file.name}    ${await fileHash(file)}\n`;
   }
-  output.innerHTML = outHTML;
+  output.innerText = outHTML;
 }
 ```
 

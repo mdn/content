@@ -67,5 +67,5 @@ Sec-Fetch-User: ?1
   - {{HTTPHeader("Sec-Fetch-Mode")}}
   - {{HTTPHeader("Sec-Fetch-Site")}}
 
-- [Protect your resources from web attacks with Fetch Metadata](https://web.dev/fetch-metadata/) (web.dev)
+- [Protect your resources from web attacks with Fetch Metadata](https://web.dev/articles/fetch-metadata) (web.dev)
 - [Fetch Metadata Request Headers playground](https://secmetadata.appspot.com/) (secmetadata.appspot.com)

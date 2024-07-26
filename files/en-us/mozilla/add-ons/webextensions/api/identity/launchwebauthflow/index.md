@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.identity.launchWebAuthFlow
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Performs the first part of an [OAuth2](https://oauth.net/2/) flow, including user authentication and client authorization.
 
@@ -98,4 +98,5 @@ function getAccessToken() {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`identity`](https://developer.chrome.com/docs/extensions/reference/identity/) API.
+> [!NOTE]
+> This API is based on Chromium's [`identity`](https://developer.chrome.com/docs/extensions/reference/identity/) API.

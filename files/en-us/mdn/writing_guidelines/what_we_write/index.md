@@ -38,9 +38,9 @@ For suggesting larger projects that involve new sections of content, please refe
 
 In general, if it's an open web technology, we document it on MDN Web Docs. This includes any feature that can be used by web developers to create websites and applications, now and in the near future.
 
-If a feature is implemented by multiple browsers and either accepted as standard or is progressing towards standardization, then yes, we definitely document it here. If a feature is still very experimental and not implemented in multiple browsers and/or liable to change, then it is still suitable for inclusion, but may not be seen as a priority for the writing team to work on.
+If a feature is implemented by multiple browsers and either accepted as standard or is progressing towards standardization, then yes, we definitely document it here. If a feature is still very experimental and not implemented in multiple browsers and/or liable to change, then it is still suitable for inclusion but may not be seen as a priority for the writing team to work on.
 
-In other words, web technologies to be documented on MDN Web Docs should fulfil the following criteria:
+In other words, web technologies to be documented on MDN Web Docs should fulfil all of the following criteria:
 
 - Be on a standards track.
 - Be specified in a specification published by a reliable standards body.
@@ -57,7 +57,8 @@ Our primary focus is to write about the following front-end web technologies:
 
 We also document some broader topics, such as [SVG](/en-US/docs/Web/SVG), [XML](/en-US/docs/Web/XML), [WebAssembly](/en-US/docs/WebAssembly), and [Accessibility](/en-US/docs/Learn/Accessibility). In addition, we provide extensive [learning guides](/en-US/docs/Learn) for these technologies and also a [glossary](/en-US/docs/Glossary).
 
-> **Note:** Backend technologies usually have their own documentation elsewhere that MDN Web Docs does not attempt to supersede, although we [do have some exceptions](/en-US/docs/Learn/Server-side).
+> [!NOTE]
+> Backend technologies usually have their own documentation elsewhere that MDN Web Docs does not attempt to supersede, although we [do have some exceptions](/en-US/docs/Learn/Server-side).
 
 All content on MDN Web Docs must be relevant to the technology section in which it appears. Contributors are expected to follow these [MDN writing guidelines](/en-US/docs/MDN/Writing_guidelines) for writing style, code samples, and other topics.
 
@@ -72,14 +73,14 @@ In general, our definition of the earliest we'll consider documenting a new tech
 
 We consider documenting a new technology if it is:
 
-- Specified in a specification document published under a reliable standards organization (such as W3C, WHATWG, Khronos, IETF, etc.) and has reached a reasonable level of stability (e.g., a W3C working draft or candidate recommendation or when the specification is looking fairly stable judging by the flow of issues filed against it).
+- Specified in a specification document published under a reliable standards organization (such as W3C, WHATWG, Khronos, IETF, etc.) and has reached a reasonable level of stability (e.g., a W3C working draft or candidate recommendation or when the specification is looking fairly stable judging by the flow of issues filed against it), and
 - Implemented consistently in at least one browser, with other browser developers showing signs of interest (such as an active ticket or an "intent to implement" process is in effect).
 
 We do not document a new technology if:
 
-- It doesn't have a specification or the specification is a rough note that looks liable to change.
-- One or zero browsers have currently implemented it and non-supporting browsers are not showing signs of interest in implementing it. You can gauge this by asking engineers who work on those browsers and by looking at browser bug trackers and mailing lists, etc.
-- Isn't a web-exposed technology and/or is completely proprietary.
+- It doesn't have a specification or the specification is a rough note that looks liable to change,
+- One or zero browsers have currently implemented it and non-supporting browsers are not showing signs of interest in implementing it. You can gauge this by asking engineers who work on those browsers and by looking at browser bug trackers and mailing lists, etc.,
+- Isn't a web-exposed technology and/or is completely proprietary, or
 - It's already showing signs of being deprecated or superseded by a similar feature.
 
 ## Topics that don't belong on MDN Web Docs

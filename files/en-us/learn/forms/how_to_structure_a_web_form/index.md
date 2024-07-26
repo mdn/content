@@ -13,7 +13,7 @@ With the basics out of the way, we'll now look in more detail at the elements us
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, and a basic <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">understanding of HTML</a>.
+        A basic <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">understanding of HTML</a>.
       </td>
     </tr>
     <tr>
@@ -33,7 +33,8 @@ The {{HTMLElement("form")}} element formally defines a form and attributes that 
 
 We already met this in the previous article.
 
-> **Warning:** It's strictly forbidden to nest a form inside another form. Nesting can cause forms to behave unpredictably, so it is a bad idea.
+> [!WARNING]
+> It's strictly forbidden to nest a form inside another form. Nesting can cause forms to behave unpredictably, so it is a bad idea.
 
 It's always possible to use a form control outside of a {{HTMLElement("form")}} element. If you do so, by default that control has nothing to do with any form unless you associate it with a form using its [`form`](/en-US/docs/Web/HTML/Element/input#form) attribute. This was introduced to let you explicitly bind a control with a form even if it is not nested inside it.
 
@@ -67,7 +68,8 @@ Here is a little example:
 </form>
 ```
 
-> **Note:** You can find this example in [fieldset-legend.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/fieldset-legend.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/html-form-structure/fieldset-legend.html)).
+> [!NOTE]
+> You can find this example in [fieldset-legend.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/fieldset-legend.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/html-form-structure/fieldset-legend.html)).
 
 When reading the above form, a screen reader will speak "Fruit juice size small" for the first widget, "Fruit juice size medium" for the second, and "Fruit juice size large" for the third.
 
@@ -116,7 +118,8 @@ For example, clicking on the "I like cherry" label text in the example below wil
 </form>
 ```
 
-> **Note:** You can find this example in [checkbox-label.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/checkbox-label.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/html-form-structure/checkbox-label.html)).
+> [!NOTE]
+> You can find this example in [checkbox-label.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/checkbox-label.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/html-form-structure/checkbox-label.html)).
 
 ### Multiple labels
 
@@ -160,9 +163,11 @@ The above variants increase in effectiveness as you go through them:
 - In the second example, things are a bit clearer — the label read out along with the input is "name star name edit text required", and the labels are still read out separately. Things are still a bit confusing, but it's a bit better this time because the `<input>` has a label associated with it.
 - The third example is best — the actual label is read out all together, and the label read out with the input is "name required edit text".
 
-> **Note:** You might get slightly different results, depending on your screen reader. This was tested in VoiceOver (and NVDA behaves similarly). We'd love to hear about your experiences too.
+> [!NOTE]
+> You might get slightly different results, depending on your screen reader. This was tested in VoiceOver (and NVDA behaves similarly). We'd love to hear about your experiences too.
 
-> **Note:** You can find this example on GitHub as [required-labels.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/required-labels.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/html-form-structure/required-labels.html)). Don't test the example with 2 or 3 of the versions uncommented — screen readers will definitely get confused if you have multiple labels AND multiple inputs with the same ID!
+> [!NOTE]
+> You can find this example on GitHub as [required-labels.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/required-labels.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/html-form-structure/required-labels.html)). Don't test the example with 2 or 3 of the versions uncommented — screen readers will definitely get confused if you have multiple labels AND multiple inputs with the same ID!
 
 ## Common HTML structures used with forms
 
@@ -178,22 +183,15 @@ Above all, it is up to you to find a comfortable coding style that results in ac
 
 Let's put these ideas into practice and build a slightly more involved form — a payment form. This form will contain a number of control types that you may not yet understand. Don't worry about this for now; you'll find out how they work in the next article ([Basic native form controls](/en-US/docs/Learn/Forms/Basic_native_form_controls)). For now, read the descriptions carefully as you follow the below instructions, and start to form an appreciation of which wrapper elements we are using to structure the form, and why.
 
-1. To start with, make a local copy of our [blank template file](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html) and the [CSS for our payment form](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/payment-form.css) in a new directory on your computer.
-2. Apply the CSS to the HTML by adding the following line inside the HTML {{htmlelement("head")}}:
+1. To start with, make a local copy of our [blank template file](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html) in a new directory on your computer.
 
-   ```html
-   <link href="payment-form.css" rel="stylesheet" />
-   ```
-
-3. Next, create your form by adding a {{htmlelement("form")}} element:
+2. Next, create your form by adding a {{htmlelement("form")}} element:
 
    ```html-nolint
    <form>
-   ...
-   </form>
    ```
 
-4. Inside the `<form>` element, add a heading and paragraph to inform users how required fields are marked:
+3. Inside the `<form>` element, add a heading and paragraph to inform users how required fields are marked:
 
    ```html-nolint
    <h1>Payment form</h1>
@@ -203,7 +201,7 @@ Let's put these ideas into practice and build a slightly more involved form — 
    </p>
    ```
 
-5. Next, we'll add a larger section of code into the form, below our previous entry. Here you'll see that we are wrapping the contact information fields inside a distinct {{htmlelement("section")}} element. Moreover, we have a set of three radio buttons, each of which we are putting inside its own list ({{htmlelement("li")}}) element. We also have two standard text {{htmlelement("input")}}s and their associated {{htmlelement("label")}} elements, each contained inside a {{htmlelement("p")}}, and a password input for entering a password. Add this code to your form:
+4. Next, we'll add a larger section of code into the form, below our previous entry. Here you'll see that we are wrapping the contact information fields inside a distinct {{htmlelement("section")}} element. Moreover, we have a set of three radio buttons, each of which we are putting inside its own list ({{htmlelement("li")}}) element. We also have two standard text {{htmlelement("input")}}s and their associated {{htmlelement("label")}} elements, each contained inside a {{htmlelement("p")}}, and a password input for entering a password. Add this code to your form:
 
    ```html
    <section>
@@ -213,20 +211,20 @@ Let's put these ideas into practice and build a slightly more involved form — 
        <ul>
          <li>
            <label for="title_1">
-             <input type="radio" id="title_1" name="title" value="K" />
-             King
+             <input type="radio" id="title_1" name="title" value="A" />
+             Ace
            </label>
          </li>
          <li>
            <label for="title_2">
-             <input type="radio" id="title_2" name="title" value="Q" />
-             Queen
+             <input type="radio" id="title_2" name="title" value="K" />
+             King
            </label>
          </li>
          <li>
            <label for="title_3">
-             <input type="radio" id="title_3" name="title" value="J" />
-             Joker
+             <input type="radio" id="title_3" name="title" value="Q" />
+             Queen
            </label>
          </li>
        </ul>
@@ -255,7 +253,7 @@ Let's put these ideas into practice and build a slightly more involved form — 
    </section>
    ```
 
-6. The second `<section>` of our form is the payment information.
+5. The second `<section>` of our form is the payment information.
    We have three distinct controls along with their labels, each contained inside a `<p>`.
    The first is a drop-down menu ({{htmlelement("select")}}) for selecting credit card type.
    The second is an `<input>` element of type `tel`, for entering a credit card number; while we could have used the `number` type, we don't want the number's spinner UI.
@@ -292,14 +290,15 @@ Let's put these ideas into practice and build a slightly more involved form — 
        <input
          type="text"
          id="expiration"
-         required="true"
+         name="expiration"
+         required
          placeholder="MM/YY"
          pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$" />
      </p>
    </section>
    ```
 
-7. The last section we'll add is a lot simpler, containing only a {{htmlelement("button")}} of type `submit`, for submitting the form data. Add this to the bottom of your form now:
+6. The last section we'll add is a lot simpler, containing only a {{htmlelement("button")}} of type `submit`, for submitting the form data. Add this to the bottom of your form now:
 
    ```html
    <section>
@@ -309,15 +308,94 @@ Let's put these ideas into practice and build a slightly more involved form — 
    </section>
    ```
 
-8. Finally, complete your form by adding the outer {{htmlelement("form")}} closing tag:
+7. Finally, complete your form by adding the outer {{htmlelement("form")}} closing tag:
 
    ```html
    </form>
    ```
 
-You can see the finished form in action below (also find it on GitHub — see our payment-form.html [source](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/payment-form.html) and [running live](https://mdn.github.io/learning-area/html/forms/html-form-structure/payment-form.html)):
+   ```css hidden
+   h1 {
+     margin-top: 0;
+   }
 
-{{EmbedLiveSample("A_payment_form","100%",620)}}
+   ul {
+     margin: 0;
+     padding: 0;
+     list-style: none;
+   }
+
+   form {
+     margin: 0 auto;
+     width: 400px;
+     padding: 1em;
+     border: 1px solid #ccc;
+     border-radius: 1em;
+   }
+
+   div + div {
+     margin-top: 1em;
+   }
+
+   label span {
+     display: inline-block;
+     text-align: right;
+   }
+
+   input,
+   textarea {
+     font: 1em sans-serif;
+     width: 250px;
+     box-sizing: border-box;
+     border: 1px solid #999;
+   }
+
+   input[type="checkbox"],
+   input[type="radio"] {
+     width: auto;
+     border: none;
+   }
+
+   input:focus,
+   textarea:focus {
+     border-color: #000;
+   }
+
+   textarea {
+     vertical-align: top;
+     height: 5em;
+     resize: vertical;
+   }
+
+   fieldset {
+     width: 250px;
+     box-sizing: border-box;
+     border: 1px solid #999;
+   }
+
+   button {
+     margin: 20px 0 0 0;
+   }
+
+   label {
+     position: relative;
+     display: inline-block;
+   }
+
+   p label {
+     width: 100%;
+   }
+
+   label em {
+     position: absolute;
+     right: 5px;
+     top: 20px;
+   }
+   ```
+
+We applied some extra CSS to the finished form below. If you'd like to make changes to the appearance of your form, you can copy styles from [the example](/en-US/docs/Learn/Forms/How_to_structure_a_web_form/Example) or visit [Styling web forms](/en-US/docs/Learn/Forms/Styling_web_forms).
+
+{{EmbedLiveSample("active_learning_building_a_form_structure","100%",620)}}
 
 ## Test your skills!
 

@@ -21,6 +21,13 @@ This pseudo-class is useful for highlighting field errors for the user.
 }
 ```
 
+## Accessibility
+
+The color red is commonly used to indicate invalid input. People who have certain types of color blindness will be unable to determine the input's state unless it is accompanied by an additional indicator that does not rely on color to convey meaning. Typically, descriptive text and/or an icon are used.
+
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Understanding Success Criterion 1.4.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html)
+
 ## Examples
 
 ### Coloring elements to show validation
@@ -87,7 +94,7 @@ input:required:invalid {
 
 ### Showing sections in stages
 
-In this example we use `:invalid` along with `~`, the [general sibling combinator](/en-US/docs/Web/CSS/General_sibling_combinator), to make a form appear in stages, so the form initially shows the first item to complete, and when the user completes each item the form displays the next one. When the whole form is complete the user can submit it.
+In this example we use `:invalid` along with `~`, the [subsequent-sibling combinator](/en-US/docs/Web/CSS/Subsequent-sibling_combinator), to make a form appear in stages, so the form initially shows the first item to complete, and when the user completes each item the form displays the next one. When the whole form is complete the user can submit it.
 
 #### HTML
 
@@ -146,13 +153,6 @@ button {
 #### Result
 
 {{EmbedLiveSample('Showing sections in stages', 600, 300)}}
-
-## Accessibility concerns
-
-The color red is commonly used to indicate invalid input. People who have certain types of color blindness will be unable to determine the input's state unless it is accompanied by an additional indicator that does not rely on color to convey meaning. Typically, descriptive text and/or an icon are used.
-
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [Understanding Success Criterion 1.4.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html)
 
 ## Notes
 

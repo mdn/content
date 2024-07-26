@@ -15,16 +15,6 @@ The **`<font-face-src>`** [SVG](/en-US/docs/Web/SVG) element corresponds to the 
 
 {{svginfo}}
 
-## Attributes
-
-### Global attributes
-
-- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-
-### Specific attributes
-
-None.
-
 ## DOM Interface
 
 This element implements the {{domxref("SVGFontFaceSrcElement")}} interface.

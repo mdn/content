@@ -27,25 +27,37 @@ open(url, target, windowFeatures)
 
 - `target` {{optional_inline}}
 
-  - : A string, without whitespace, specifying the [name](/en-US/docs/Web/API/Window/name) of the browsing context the resource is being loaded into. If the name doesn't identify an existing context, a new context is created and given the specified name. The special [`target` keywords](/en-US/docs/Web/HTML/Element/a#target), `_self`, `_blank`, `_parent`, and `_top`, can also be used.
+  - : A string, without whitespace, specifying the [name](/en-US/docs/Web/API/Window/name) of the browsing context the resource is being loaded into. If the name doesn't identify an existing context, a new context is created and given the specified name. The special [`target` keywords](/en-US/docs/Web/HTML/Element/a#target), `_self`, `_blank` (default), `_parent`, `_top`, and `_unfencedTop` can also be used. `_unfencedTop` is only relevant to [fenced frames](/en-US/docs/Web/API/Fenced_frame_API).
 
     This name can be used as the `target` attribute of [`<a>`](/en-US/docs/Web/HTML/Element/a#target) or [`<form>`](/en-US/docs/Web/HTML/Element/form#target) elements.
 
 - `windowFeatures` {{optional_inline}}
 
-  - : A string containing a comma-separated list of window features in the form `name=value` — or for boolean features, just `name`. These features include options such as the window's default size and position, whether or not to open a minimal popup window, and so forth. The following options are supported:
+  - : A string containing a comma-separated list of window features in the form `name=value`. Boolean values can be set to true using one of: `name`, `name=yes`, `name=true`, or `name=n` where `n` is any non-zero integer. These features include options such as the window's default size and position, whether or not to open a minimal popup window, and so forth. The following options are supported:
+
+    - `attributionsrc` {{experimental_inline}}
+
+      - : Indicates that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header along with the `open()` call. This call must be made with [transient activation](/en-US/docs/Glossary/Transient_activation) (i.e. inside a user interaction event handle such as `click`), within five seconds of user interaction. On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} header in the response to complete registration of an attribution source.
+
+        In addition, the browser is also triggered to store the associated source data (as provided in the {{httpheader("Attribution-Reporting-Register-Source")}} response header) when the `open()` method completes.
+
+        See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
+
+        > **Note:** `open()` calls cannot be used to register an attribution trigger.
 
     - `popup`
 
-      - : If this feature is enabled, it requests that a minimal popup window be used. The UI features included in the popup window will be automatically decided by the browser, generally including an address bar only.
+      - : By default, `window.open` opens the page in a new tab. If `popup` is set to true, it requests that a minimal popup window be used. The UI features included in the popup window will be automatically decided by the browser, generally including an address bar only. If `popup` is present and set to false, a new tab is still opened.
 
-        If `popup` is not enabled, and there are no window features declared, the new browsing context will be a tab.
+        There are a few legacy features, which used to control UI features of the opened window. In modern browsers, they only have the effect of requesting a popup. If `popup` is unspecified, and `windowFeatures` contains any features (including unrecognized ones) other than `noopener`, `noreferrer`, or `attributionsrc`, the window is also opened as a popup if any of the following conditions apply:
 
-        > **Note:** Specifying any features in the `windowFeatures` parameter, other than `noopener` or `noreferrer`, also has the effect of requesting a popup.
+        - `location` and `toolbar` are both false or absent
+        - `menubar` is false or absent
+        - `resizable` is false
+        - `scrollbars` is false or absent
+        - `status` is false or absent
 
-        To enable the feature, specify `popup` either with no value at all, or else set it to `yes`, `1`, or `true`.
-
-        Example: `popup=yes`, `popup=1`, `popup=true`, and `popup` all have identical results.
+        Otherwise the window is opened as a tab.
 
     - `width` or `innerWidth`
 
@@ -72,17 +84,27 @@ open(url, target, windowFeatures)
     - `noreferrer`
       - : If this feature is set, the browser will omit the [`Referer`](/en-US/docs/Web/HTTP/Headers/Referer) header, as well as set `noopener` to true. See [`rel="noreferrer"`](/en-US/docs/Web/HTML/Attributes/rel/noreferrer) for more information.
 
+    A [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) value is treated the same as the empty string (`""`).
+
 > **Note:** Requested position (`top`, `left`), and requested dimension (`width`, `height`) values in `windowFeatures` **will be corrected** if any of such requested value does not allow the entire browser popup to be rendered within the work area for applications of the user's operating system. In other words, no part of the new popup can be initially positioned offscreen.
 
 ### Return value
 
-A [`WindowProxy`](/en-US/docs/Glossary/WindowProxy) object. The returned reference can be used to access properties and methods of the new window as long as it complies with [the same-origin policy](/en-US/docs/Web/Security/Same-origin_policy) security requirements.
+If the browser successfully opens the new browsing context, a [`WindowProxy`](/en-US/docs/Glossary/WindowProxy) object is returned. The returned reference can be used to access properties and methods of the new context as long as it complies with [the same-origin policy](/en-US/docs/Web/Security/Same-origin_policy) security requirements.
+
+`null` is returned if the browser fails to open the new browsing context, for example because it was blocked by a browser popup blocker.
 
 ## Description
 
 The [`Window`](/en-US/docs/Web/API/Window) interface's `open()` method takes a URL as a parameter, and loads the resource it identifies into a new or existing tab or window. The `target` parameter determines which window or tab to load the resource into, and the `windowFeatures` parameter can be used to control to open a new popup with minimal UI features and control its size and position.
 
-Note that remote URLs won't load immediately. When `window.open()` returns, the window always contains `about:blank`. The actual fetching of the URL is deferred and starts after the current script block finishes executing. The window creation and the loading of the referenced resource are done asynchronously.
+Remote URLs won't load immediately. When `window.open()` returns, the window always contains `about:blank`. The actual fetching of the URL is deferred and starts after the current script block finishes executing. The window creation and the loading of the referenced resource are done asynchronously.
+
+Modern browsers have strict popup blocker policies. Popup windows must be opened in direct response to user input, and a separate user gesture event is required for each `Window.open()` call. This prevents sites from spamming users with lots of windows. However, this poses an issue for multi-window applications. To work around this limitation, you can design your applications to:
+
+- Open no more than one new window at once.
+- Reuse existing windows to display different pages.
+- Advise users on how to update their browser settings to allow multiple windows.
 
 ## Examples
 
@@ -95,8 +117,6 @@ window.open("https://www.mozilla.org/", "mozillaTab");
 ### Opening a popup
 
 Alternatively, the following example demonstrates how to open a popup, using the `popup` feature.
-
-> **Warning:** Modern browsers have built-in popup blockers, limiting the opening of such popups to being in direct response to user input. Popups opened outside the context of a click may cause a notification to appear, giving the option to enable or discard them.
 
 ```js
 window.open("https://www.mozilla.org/", "mozillaWindow", "popup");
@@ -248,7 +268,7 @@ console.log(sameOriginContext.origin);
 
 For more information, refer to the [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy) article.
 
-## Accessibility
+## Accessibility concerns
 
 ### Avoid resorting to window.open()
 

@@ -44,7 +44,7 @@ Firefox 5, based on Gecko 5.0, was released on June 21, 2011. This article provi
 - The {{ domxref("selection") }} object's [`modify()`](/en-US/docs/Web/API/Selection/modify) method has been changed so that the "word" selection granularity no longer includes trailing spaces; this makes it more consistent across platforms and matches the behavior of WebKit's implementation.
 - The {{ domxref("setTimeout()") }} method now clamps to send no more than one timeout per second in inactive tabs. In addition, it now clamps nested timeouts to the smallest value allowed by the HTML5 specification: 4 ms (instead of the 10 ms it used to clamp to).
 - Similarly, the {{ domxref("setInterval()") }} method now clamps to no more than one interval per second in inactive tabs.
-- [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) now [supports the `loadend` event](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#detecting_any_load_end_condition) for progress listeners. This is sent after any transfer is finished (that is, after the `abort`, `error`, or `load` event). You can use this to handle any tasks that need to be performed regardless of success or failure of a transfer.
+- [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) now [supports the `loadend` event](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#detecting_any_load_end_condition) for progress listeners. This is sent after any transfer is finished (that is, after the `abort`, `error`, or `load` event). You can use this to handle any tasks that need to be performed regardless of success or failure of a transfer.
 - The {{ domxref("Blob") }} and, by extension, the {{ domxref("File") }} objects' `slice()` method has been removed and replaced with a new, proposed syntax that makes it more consistent with [`Array.slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) and [`String.slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice) methods in JavaScript. This method is named `mozSlice()` for now.
 - The value of {{ domxref("window.navigator.language") }} is now determined by looking at the value of the `Accept-Language` [HTTP header](/en-US/docs/Web/HTTP/Headers).
 - The {{ domxref("Element.prefix") }} property is now read only, as required by the DOM specification.
@@ -81,7 +81,8 @@ Firefox 5, based on Gecko 5.0, was released on June 21, 2011. This article provi
 
 For a guide to updating your add-on for Firefox 5, please see [Updating add-ons for Firefox 5](/en-US/docs/Mozilla/Firefox/Updating_add-ons_for_Firefox_5).
 
-> **Note:** Firefox 5 requires that binary components be recompiled, as do all major releases of Firefox. See [Binary Interfaces](/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces) for details.
+> [!NOTE]
+> Firefox 5 requires that binary components be recompiled, as do all major releases of Firefox. See [Binary Interfaces](/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces) for details.
 
 ### Changes to JavaScript code modules
 
@@ -129,4 +130,4 @@ The following interfaces were implementation details that are no longer needed:
 
 ## See also
 
-{{Firefox_for_developers('4')}}
+{{Firefox_for_developers}}

@@ -15,21 +15,21 @@ The **`Function()`** constructor creates {{jsxref("Function")}} objects. Calling
 
 ```js-nolint
 new Function(functionBody)
-new Function(arg0, functionBody)
-new Function(arg0, arg1, functionBody)
-new Function(arg0, arg1, /* …, */ argN, functionBody)
+new Function(arg1, functionBody)
+new Function(arg1, arg2, functionBody)
+new Function(arg1, arg2, /* …, */ argN, functionBody)
 
 Function(functionBody)
-Function(arg0, functionBody)
-Function(arg0, arg1, functionBody)
-Function(arg0, arg1, /* …, */ argN, functionBody)
+Function(arg1, functionBody)
+Function(arg1, arg2, functionBody)
+Function(arg1, arg2, /* …, */ argN, functionBody)
 ```
 
 > **Note:** `Function()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `Function` instance.
 
 ### Parameters
 
-- `argN` {{optional_inline}}
+- `arg1`, …, `argN` {{optional_inline}}
 
   - : Names to be used by the function as formal argument names. Each must be a string that corresponds to a valid JavaScript parameter (any of plain [identifier](/en-US/docs/Glossary/Identifier), [rest parameter](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), or [destructured](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) parameter, optionally with a [default](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters)), or a list of such strings separated with commas.
 
@@ -140,6 +140,6 @@ sayHello("world");
 
 ## See also
 
-- [`function` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function)
+- [`function`](/en-US/docs/Web/JavaScript/Reference/Statements/function)
 - [`function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function)
 - {{jsxref("Functions", "Functions", "", 1)}}

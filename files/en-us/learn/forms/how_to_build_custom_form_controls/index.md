@@ -1,6 +1,7 @@
 ---
 title: How to build custom form controls
 slug: Learn/Forms/How_to_build_custom_form_controls
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}
@@ -9,7 +10,8 @@ There are some cases where the available native HTML form controls may seem like
 
 In this article, we will discuss how to build a custom control. To that end, we will work with an example: rebuilding the {{HTMLElement("select")}} element. We will also discuss how, when, and whether building your own control makes sense, and what to consider when building a control is a requirement.
 
-> **Note:** We'll focus on building the control, not on how to make the code generic and reusable; that would involve some non-trivial JavaScript code and DOM manipulation in an unknown context, and that is out of the scope of this article.
+> [!NOTE]
+> We'll focus on building the control, not on how to make the code generic and reusable; that would involve some non-trivial JavaScript code and DOM manipulation in an unknown context, and that is out of the scope of this article.
 
 ## Design, structure, and semantics
 
@@ -77,7 +79,8 @@ It is best not to invent new user interactions. For any interaction you do add, 
 - [UXDesign.com](https://uxdesign.com/)
 - [The UX Design section of SmashingMagazine](https://www.smashingmagazine.com/)
 
-> **Note:** Also, in most systems there is a way to open the {{HTMLElement("select")}} element with the keyboard to look at all the available choices (this is the same as clicking the {{HTMLElement("select")}} element with a mouse). This is achieved with <kbd>Alt</kbd> + <kbd>Down</kbd> on Windows. We didn't implement this in our example, but it would be easy to do so, as the mechanism has already been implemented for the `click` event.
+> [!NOTE]
+> Also, in most systems there is a way to open the {{HTMLElement("select")}} element with the keyboard to look at all the available choices (this is the same as clicking the {{HTMLElement("select")}} element with a mouse). This is achieved with <kbd>Alt</kbd> + <kbd>Down</kbd> on Windows. We didn't implement this in our example, but it would be easy to do so, as the mechanism has already been implemented for the `click` event.
 
 ## Defining the HTML structure and (some) semantics
 
@@ -134,7 +137,7 @@ We need an extra class `active` to define the look and feel of our control when 
 ```css
 .select.active,
 .select:focus {
-  outline: none;
+  outline-color: transparent;
 
   /* This box-shadow property is not exactly required, however it's imperative to ensure
      active state is visible, especially to keyboard users, that we use it as a default value. */
@@ -167,7 +170,8 @@ We need an extra class to handle when the list of options is hidden. This is nec
 }
 ```
 
-> **Note:** We could also have used `transform: scale(1, 0)` to give the option list no height and full width.
+> [!NOTE]
+> We could also have used `transform: scale(1, 0)` to give the option list no height and full width.
 
 ### Beautification
 
@@ -188,7 +192,7 @@ So now that we have the basic functionality in place, the fun can start. The fol
 
   border: 0.2em solid #000;
   border-radius: 0.4em;
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45);
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%);
 
   /* The first declaration is for browsers that do not support linear gradients. */
   background: #f0f0f0;
@@ -261,7 +265,7 @@ Next, let's style the list of options:
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.2em 0.4em rgb(0 0 0 / 40%);
   background: #f0f0f0;
 }
 ```
@@ -305,7 +309,7 @@ So here's the result with our three states ([check out the source code here](/en
 .select.active,
 .select:focus {
   box-shadow: 0 0 3px 1px #227755;
-  outline: none;
+  outline-color: transparent;
 }
 
 .select .optList {
@@ -331,7 +335,7 @@ So here's the result with our three states ([check out the source code here](/en
   border: 0.2em solid #000; /* 2px */
   border-radius: 0.4em; /* 4px */
 
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
 
   background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
@@ -381,7 +385,7 @@ So here's the result with our three states ([check out the source code here](/en
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.2em 0.4em rgb(0 0 0 / 40%);
 
   box-sizing: border-box;
 
@@ -427,7 +431,7 @@ So here's the result with our three states ([check out the source code here](/en
 .select.active,
 .select:focus {
   box-shadow: 0 0 3px 1px #227755;
-  outline: none;
+  outline-color: transparent;
 }
 
 .select .optList {
@@ -453,7 +457,7 @@ So here's the result with our three states ([check out the source code here](/en
   border: 0.2em solid #000; /* 2px */
   border-radius: 0.4em; /* 4px */
 
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
 
   background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
@@ -503,7 +507,7 @@ So here's the result with our three states ([check out the source code here](/en
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.2em 0.4em rgb(0 0 0 / 40%);
 
   box-sizing: border-box;
 
@@ -549,7 +553,7 @@ So here's the result with our three states ([check out the source code here](/en
 .select.active,
 .select:focus {
   box-shadow: 0 0 3px 1px #227755;
-  outline: none;
+  outline-color: transparent;
 }
 
 .select .optList {
@@ -575,7 +579,7 @@ So here's the result with our three states ([check out the source code here](/en
   border: 0.2em solid #000; /* 2px */
   border-radius: 0.4em; /* 4px */
 
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
 
   background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
@@ -625,7 +629,7 @@ So here's the result with our three states ([check out the source code here](/en
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.2em 0.4em rgb(0 0 0 / 40%);
 
   box-sizing: border-box;
 
@@ -651,7 +655,8 @@ So here's the result with our three states ([check out the source code here](/en
 
 Now that our design and structure are ready, we can write the JavaScript code to make the control actually work.
 
-> **Warning:** The following is educational code, not production code, and should not be used as-is. It is neither future-proof nor will work on legacy browsers. It also has redundant parts that should be optimized in production code.
+> [!WARNING]
+> The following is educational code, not production code, and should not be used as-is. It is neither future-proof nor will work on legacy browsers. It also has redundant parts that should be optimized in production code.
 
 ### Why isn't it working?
 
@@ -808,7 +813,7 @@ Check out the [full source code](/en-US/docs/Learn/Forms/How_to_build_custom_for
 .select.active,
 .select:focus {
   box-shadow: 0 0 3px 1px #227755;
-  outline: none;
+  outline-color: transparent;
 }
 
 .select .optList {
@@ -834,7 +839,7 @@ Check out the [full source code](/en-US/docs/Learn/Forms/How_to_build_custom_for
   border: 0.2em solid #000; /* 2px */
   border-radius: 0.4em; /* 4px */
 
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
 
   background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
@@ -884,7 +889,7 @@ Check out the [full source code](/en-US/docs/Learn/Forms/How_to_build_custom_for
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.2em 0.4em rgb(0 0 0 / 40%);
 
   box-sizing: border-box;
 
@@ -915,7 +920,8 @@ window.addEventListener("load", () => {
 
 {{EmbedLiveSample("With_JS",120,130)}}
 
-> **Note:** If you really want to make your code generic and reusable, instead of doing a class switch it's far better to just add the widget class to hide the {{HTMLElement("select")}} elements, and to dynamically add the DOM tree representing the custom control after every {{HTMLElement("select")}} element in the page.
+> [!NOTE]
+> If you really want to make your code generic and reusable, instead of doing a class switch it's far better to just add the widget class to hide the {{HTMLElement("select")}} elements, and to dynamically add the DOM tree representing the custom control after every {{HTMLElement("select")}} element in the page.
 
 ### Making the job easier
 
@@ -1105,7 +1111,7 @@ Check out the [full source code](/en-US/docs/Learn/Forms/How_to_build_custom_for
 .select.active,
 .select:focus {
   box-shadow: 0 0 3px 1px #227755;
-  outline: none;
+  outline-color: transparent;
 }
 
 .select .optList {
@@ -1131,7 +1137,7 @@ Check out the [full source code](/en-US/docs/Learn/Forms/How_to_build_custom_for
   border: 0.2em solid #000; /* 2px */
   border-radius: 0.4em; /* 4px */
 
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
 
   background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
@@ -1181,7 +1187,7 @@ Check out the [full source code](/en-US/docs/Learn/Forms/How_to_build_custom_for
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.2em 0.4em rgb(0 0 0 / 40%);
 
   box-sizing: border-box;
 
@@ -1308,7 +1314,7 @@ function updateValue(select, index) {
   nativeWidget.selectedIndex = index;
 
   // We update the value placeholder accordingly
-  value.innerHTML = optionList[index].innerHTML;
+  value.textContent = optionList[index].textContent;
 
   // And we highlight the corresponding option of our custom control
   highlightOption(select, optionList[index]);
@@ -1365,11 +1371,20 @@ window.addEventListener("load", () => {
       // When the user hits the down arrow, we jump to the next option
       if (event.key === "ArrowDown" && index < optionList.length - 1) {
         index++;
+        // Prevent the default action of the ArrowDown key press.
+        // Without this, the page would scroll down when the ArrowDown key is pressed.
+        event.preventDefault();
       }
 
       // When the user hits the up arrow, we jump to the previous option
       if (event.key === "ArrowUp" && index > 0) {
         index--;
+        // Prevent the default action of the ArrowUp key press.
+        event.preventDefault();
+      }
+      if (event.key === "Enter" || event.key === " ") {
+        // If Enter or Space is pressed, toggle the option list
+        toggleOptList(select);
       }
 
       updateValue(select, index);
@@ -1426,7 +1441,7 @@ Check out the [source code here](/en-US/docs/Learn/Forms/How_to_build_custom_for
 .select.active,
 .select:focus {
   box-shadow: 0 0 3px 1px #227755;
-  outline: none;
+  outline-color: transparent;
 }
 
 .select .optList {
@@ -1452,7 +1467,7 @@ Check out the [source code here](/en-US/docs/Learn/Forms/How_to_build_custom_for
   border: 0.2em solid #000; /* 2px */
   border-radius: 0.4em; /* 4px */
 
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
 
   background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
@@ -1502,7 +1517,7 @@ Check out the [source code here](/en-US/docs/Learn/Forms/How_to_build_custom_for
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.2em 0.4em rgb(0 0 0 / 40%);
 
   box-sizing: border-box;
 
@@ -1561,7 +1576,7 @@ function updateValue(select, index) {
   const optionList = select.querySelectorAll(".option");
 
   nativeWidget.selectedIndex = index;
-  value.innerHTML = optionList[index].innerHTML;
+  value.textContent = optionList[index].textContent;
   highlightOption(select, optionList[index]);
 }
 
@@ -1675,7 +1690,8 @@ To support the [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role
 </div>
 ```
 
-> **Note:** Including both the `role` attribute and a `class` attribute is not necessary. Instead of using `.option` use the `[role="option"]` [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) in your CSS.
+> [!NOTE]
+> Including both the `role` attribute and a `class` attribute is not necessary. Instead of using `.option` use the `[role="option"]` [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) in your CSS.
 
 ### The `aria-selected` attribute
 
@@ -1698,7 +1714,7 @@ function updateValue(select, index) {
   optionList[index].setAttribute("aria-selected", "true");
 
   nativeWidget.selectedIndex = index;
-  value.innerHTML = optionList[index].innerHTML;
+  value.textContent = optionList[index].textContent;
   highlightOption(select, optionList[index]);
 }
 ```
@@ -1751,7 +1767,7 @@ Check out the [full source code here](/en-US/docs/Learn/Forms/How_to_build_custo
 .select.active,
 .select:focus {
   box-shadow: 0 0 3px 1px #227755;
-  outline: none;
+  outline-color: transparent;
 }
 
 .select .optList {
@@ -1777,7 +1793,7 @@ Check out the [full source code here](/en-US/docs/Learn/Forms/How_to_build_custo
   border: 0.2em solid #000; /* 2px */
   border-radius: 0.4em; /* 4px */
 
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
 
   background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
@@ -1827,7 +1843,7 @@ Check out the [full source code here](/en-US/docs/Learn/Forms/How_to_build_custo
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.2em 0.4em rgb(0 0 0 / 40%);
 
   box-sizing: border-box;
 
@@ -1892,7 +1908,7 @@ function updateValue(select, index) {
   optionList[index].setAttribute("aria-selected", "true");
 
   nativeWidget.selectedIndex = index;
-  value.innerHTML = optionList[index].innerHTML;
+  value.textContent = optionList[index].textContent;
   highlightOption(select, optionList[index]);
 }
 
@@ -2035,13 +2051,13 @@ We'll do a little styling of the radio button list (not the legend/fieldset) to 
 }
 .styledSelect:not(:focus-within) input:not(:checked) + label {
   height: 0;
-  outline: none;
+  outline-color: transparent;
   overflow: hidden;
 }
 .styledSelect:not(:focus-within) input:checked + label {
   border: 0.2em solid #000;
   border-radius: 0.4em;
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45);
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%);
 }
 .styledSelect:not(:focus-within) input:checked + label::after {
   content: "▼";
@@ -2054,7 +2070,7 @@ We'll do a little styling of the radio button list (not the legend/fieldset) to 
 .styledSelect:focus-within {
   border: 0.2em solid #000;
   border-radius: 0.4em;
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45);
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%);
 }
 .styledSelect:focus-within input:checked + label {
   background-color: #333;

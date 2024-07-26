@@ -10,7 +10,7 @@ browser-compat: api.Element.hasPointerCapture
 
 The **`hasPointerCapture()`** method of the
 {{domxref("Element")}} interface checks whether the element on which it is invoked has
-pointer capture for the pointer identified by the given pointer ID.
+[pointer capture](/en-US/docs/Web/API/Pointer_events#pointer_capture) for the pointer identified by the given pointer ID.
 
 ## Syntax
 
@@ -26,8 +26,7 @@ hasPointerCapture(pointerId)
 
 ### Return value
 
-A boolean value — `true` if the element does have pointer
-capture, `false` if it doesn't.
+A boolean value — `true` if the element does have pointer capture for the pointer identified by the given pointer ID, `false` if it doesn't.
 
 ## Examples
 
@@ -73,4 +72,4 @@ capture, `false` if it doesn't.
 
 - {{ domxref("Element.setPointerCapture()")}}
 - {{ domxref("Element.releasePointerCapture()")}}
-- {{ domxref("Pointer_events","Pointer Events") }}
+- {{ domxref("Pointer_events","Pointer Events", "", 1) }}

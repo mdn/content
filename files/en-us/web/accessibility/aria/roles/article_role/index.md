@@ -4,8 +4,10 @@ slug: Web/Accessibility/ARIA/Roles/article_role
 page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#article
-  - https://w3c.github.io/aria-practices/#feed
+  - https://www.w3.org/WAI/ARIA/apg/patterns/feed/examples/feed/
 ---
+
+{{AccessibilitySidebar}}
 
 The `article` role indicates a section of a page that could easily stand on its own on a page, in a document, or on a website. It is usually set on related content items such as comments, forum posts, newspaper articles or other items grouped together on one page.
 
@@ -21,7 +23,8 @@ The `article` role indicates a section of a page that could easily stand on its 
 
 This example shows two articles side by side on one page that could be structured similarly and are related.
 
-> **Note:** Instead of a `<div>` with an `article` role, use the {{HTMLElement('article')}} element. **Always use native element if available**
+> [!NOTE]
+> Instead of a `<div>` with an `article` role, use the {{HTMLElement('article')}} element. **Always use native element if available**
 
 Don't use `role="article"`. Instead use the `<article>` element.
 
@@ -71,7 +74,7 @@ This role does not support any specific keyboard interaction.
 
 ## Examples
 
-- The [restaurant recommendations feed display](https://www.w3.org/WAI/ARIA/apg/patterns/feed/examples/feed-display.html) along with its separate [documentation](https://www.w3.org/TR/wai-aria-practices-1.1/examples/feed/feed.html) from the WAI-ARIA 1.1 authoring practices feed design pattern
+- The [restaurant recommendations feed display](https://www.w3.org/WAI/ARIA/apg/patterns/feed/examples/feed-display.html) along with its separate [documentation](https://www.w3.org/WAI/ARIA/apg/patterns/feed/examples/feed/) from the WAI-ARIA 1.1 authoring practices feed design pattern
 
 ## Specifications
 
@@ -87,11 +90,3 @@ This role corresponds to the {{HTMLElement('article')}} element in HTML, and tha
 - [`section` role](/en-US/docs/Web/Accessibility/ARIA/Roles/section_role)
 - The {{HTMLElement('article')}} element
 - {{Glossary("RSS")}} glossary definition
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
-
-</section>

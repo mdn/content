@@ -48,7 +48,7 @@ ETag: "<etag_value>"
     means weak etags prevent caching when [byte range requests](/en-US/docs/Web/HTTP/Headers/Accept-Ranges) are used,
     but strong etags mean range requests can still be cached.
 - "\<etag_value>"
-  - : Entity tag that uniquely represents the requested resource. It is a string of ASCII
+  - : Entity tag that uniquely represents the requested resource. It is a string of {{Glossary("ASCII")}}
     characters placed between double quotes, like `"675af34563dc-tr34"`. The
     method by which `ETag` values are generated is not specified. Typically, the ETag value
     is a hash of the content, a hash of the last modification timestamp, or just a revision number.
@@ -82,7 +82,7 @@ If-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 ```
 
 If the hashes don't match, it means that the document has been edited in-between and a
-{{HTTPStatus("412")}} `Precondition Failed` error is thrown.
+{{HTTPStatus("412", "412 Precondition Failed")}} error is thrown.
 
 ### Caching of unchanged resources
 
@@ -115,5 +115,5 @@ which tells the client that the cached version of the response is still good to 
 - {{HTTPHeader("If-Match")}}
 - {{HTTPHeader("If-None-Match")}}
 - {{HTTPStatus("304", "304 Not Modified")}}
-- {{HTTPStatus("412", "Precondition Failed")}}
+- {{HTTPStatus("412", "412 Precondition Failed")}}
 - [W3C Note: Editing the Web – Detecting the Lost Update Problem Using Unreserved Checkout](https://www.w3.org/1999/04/Editing/)

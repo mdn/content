@@ -11,7 +11,7 @@ The **`every()`** method of {{jsxref("Array")}} instances tests whether
 all elements in the array pass the test implemented by the provided function. It
 returns a Boolean value.
 
-{{EmbedInteractiveExample("pages/js/array-every.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/array-every.html", "shorter")}}
 
 ## Syntax
 
@@ -35,23 +35,15 @@ every(callbackFn, thisArg)
 
 ### Return value
 
-`true` if `callbackFn` returns a {{Glossary("truthy")}} value for every array element. Otherwise, `false`.
+`true` unless `callbackFn` returns a {{Glossary("falsy")}} value for an array element, in which case `false` is immediately returned.
 
 ## Description
 
-The `every()` method is an [iterative method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods). It calls a provided `callbackFn` function once for each element in an array, until the `callbackFn` returns a [falsy](/en-US/docs/Glossary/Falsy) value. If such an element is found, `every()` immediately returns `false` and stops iterating through the array. Otherwise, if `callbackFn` returns a [truthy](/en-US/docs/Glossary/Truthy) value for all elements, `every()` returns `true`.
+The `every()` method is an [iterative method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods). It calls a provided `callbackFn` function once for each element in an array, until the `callbackFn` returns a [falsy](/en-US/docs/Glossary/Falsy) value. If such an element is found, `every()` immediately returns `false` and stops iterating through the array. Otherwise, if `callbackFn` returns a [truthy](/en-US/docs/Glossary/Truthy) value for all elements, `every()` returns `true`. Read the [iterative methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterative_methods) section for more information about how these methods work in general.
 
 `every` acts like the "for all" quantifier in mathematics. In particular, for an empty array, it returns `true`. (It is [vacuously true](https://en.wikipedia.org/wiki/Vacuous_truth) that all elements of the [empty set](https://en.wikipedia.org/wiki/Empty_set#Properties) satisfy any given condition.)
 
 `callbackFn` is invoked only for array indexes which have assigned values. It is not invoked for empty slots in [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays).
-
-`every()` does not mutate the array on which it is called, but the function provided as `callbackFn` can. Note, however, that the length of the array is saved _before_ the first invocation of `callbackFn`. Therefore:
-
-- `callbackFn` will not visit any elements added beyond the array's initial length when the call to `every()` began.
-- Changes to already-visited indexes do not cause `callbackFn` to be invoked on them again.
-- If an existing, yet-unvisited element of the array is changed by `callbackFn`, its value passed to the `callbackFn` will be the value at the time that element gets visited. [Deleted](/en-US/docs/Web/JavaScript/Reference/Operators/delete) elements are not visited.
-
-> **Warning:** Concurrent modifications of the kind described above frequently lead to hard-to-understand code and are generally to be avoided (except in special cases).
 
 The `every()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). It only expects the `this` value to have a `length` property and integer-keyed properties.
 
@@ -59,7 +51,7 @@ The `every()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Ob
 
 ### Testing size of all array elements
 
-The following example tests whether all elements in the array are bigger than 9.
+The following example tests whether all elements in the array are 10 or bigger.
 
 ```js
 function isBigEnough(element, index, array) {
@@ -81,6 +73,23 @@ console.log(isSubset([1, 2, 3, 4, 5, 6, 7], [5, 7, 6])); // true
 console.log(isSubset([1, 2, 3, 4, 5, 6, 7], [5, 8, 7])); // false
 ```
 
+### Using the third argument of callbackFn
+
+The `array` argument is useful if you want to access another element in the array. The following example first uses `filter()` to extract the positive values and then uses `every()` to check whether the array is strictly increasing.
+
+```js
+const numbers = [-2, 4, -8, 16, -32];
+const isIncreasing = numbers
+  .filter((num) => num > 0)
+  .every((num, idx, arr) => {
+    // Without the arr argument, there's no way to easily access the
+    // intermediate array without saving it to a variable.
+    if (idx === 0) return true;
+    return num > arr[idx - 1];
+  });
+console.log(isIncreasing); // true
+```
+
 ### Using every() on sparse arrays
 
 `every()` will not run its predicate on empty slots.
@@ -88,62 +97,6 @@ console.log(isSubset([1, 2, 3, 4, 5, 6, 7], [5, 8, 7])); // false
 ```js
 console.log([1, , 3].every((x) => x !== undefined)); // true
 console.log([2, , 2].every((x) => x === 2)); // true
-```
-
-### Affecting Initial Array (modifying, appending, and deleting)
-
-The following examples tests the behavior of the `every` method when the
-array is modified.
-
-```js
-// ---------------
-// Modifying items
-// ---------------
-let arr = [1, 2, 3, 4];
-arr.every((elem, index, arr) => {
-  arr[index + 1]--;
-  console.log(`[${arr}][${index}] -> ${elem}`);
-  return elem < 2;
-});
-
-// Loop runs for 3 iterations, but would
-// have run 2 iterations without any modification
-//
-// 1st iteration: [1,1,3,4][0] -> 1
-// 2nd iteration: [1,1,2,4][1] -> 1
-// 3rd iteration: [1,1,2,3][2] -> 2
-
-// ---------------
-// Appending items
-// ---------------
-arr = [1, 2, 3];
-arr.every((elem, index, arr) => {
-  arr.push("new");
-  console.log(`[${arr}][${index}] -> ${elem}`);
-  return elem < 4;
-});
-
-// Loop runs for 3 iterations, even after appending new items
-//
-// 1st iteration: [1, 2, 3, new][0] -> 1
-// 2nd iteration: [1, 2, 3, new, new][1] -> 2
-// 3rd iteration: [1, 2, 3, new, new, new][2] -> 3
-
-// ---------------
-// Deleting items
-// ---------------
-arr = [1, 2, 3, 4];
-arr.every((elem, index, arr) => {
-  arr.pop();
-  console.log(`[${arr}][${index}] -> ${elem}`);
-  return elem < 4;
-});
-
-// Loop runs for 2 iterations only, as the remaining
-// items are `pop()`ed off
-//
-// 1st iteration: [1,2,3][0] -> 1
-// 2nd iteration: [1,2][1] -> 2
 ```
 
 ### Calling every() on non-array objects
@@ -174,7 +127,7 @@ console.log(
 ## See also
 
 - [Polyfill of `Array.prototype.every` in `core-js`](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.forEach()")}}
 - {{jsxref("Array.prototype.some()")}}

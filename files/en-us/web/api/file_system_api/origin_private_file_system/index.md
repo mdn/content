@@ -2,12 +2,11 @@
 title: Origin private file system
 slug: Web/API/File_System_API/Origin_private_file_system
 page-type: guide
-browser-compat: api.StorageManager.getDirectory
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("File System API")}}
+{{securecontext_header}}{{DefaultAPISidebar("File System API")}}{{AvailableInWorkers}}
 
-The origin private file system (OPFS) is a storage endpoint provided as part of the [File System API](/en-US/docs/Web/API/File_System_API), which is private to the origin of the page and not visible to the user like the regular file system. It provides access to a special kind of file that is highly optimized for performance and offers in-place write access to its content.
+The **origin private file system** (OPFS) is a storage endpoint provided as part of the [File System API](/en-US/docs/Web/API/File_System_API), which is private to the origin of the page and not visible to the user like the regular file system. It provides access to a special kind of file that is highly optimized for performance and offers in-place write access to its content.
 
 ## Working with files using the File System Access API
 
@@ -41,23 +40,30 @@ To access the OPFS in the first place, you call the {{domxref("StorageManager.ge
 
 When accessing the OPFS from the main thread, you will use asynchronous, {{jsxref("Promise")}}-based APIs. You can access file ({{domxref("FileSystemFileHandle")}}) and directory ({{domxref("FileSystemDirectoryHandle")}}) handles by calling {{domxref("FileSystemDirectoryHandle.getFileHandle()")}} and {{domxref("FileSystemDirectoryHandle.getDirectoryHandle()")}} respectively on the {{domxref("FileSystemDirectoryHandle")}} object representing the OPFS root (and child directories, as they are created).
 
-> **Note:** Passing `{ create: true }` into the above methods causes the file or folder to be created if it doesn't exist.
+> [!NOTE]
+> Passing `{ create: true }` into the above methods causes the file or folder to be created if it doesn't exist.
 
 ```js
 // Create a hierarchy of files and folders
-const fileHandle = await opfsRoot
-    .getFileHandle('my first file', {create: true});
-const directoryHandle = await opfsRoot
-    .getDirectoryHandle('my first folder', {create: true});
-const nestedFileHandle = await directoryHandle
-    .getFileHandle('my first nested file', {create: true});
-const nestedDirectoryHandle = await directoryHandle
-    .getDirectoryHandle('my first nested folder', {create: true});
+const fileHandle = await opfsRoot.getFileHandle("my first file", {
+  create: true,
+});
+const directoryHandle = await opfsRoot.getDirectoryHandle("my first folder", {
+  create: true,
+});
+const nestedFileHandle = await directoryHandle.getFileHandle(
+  "my first nested file",
+  { create: true },
+);
+const nestedDirectoryHandle = await directoryHandle.getDirectoryHandle(
+  "my first nested folder",
+  { create: true },
+);
 
 // Access existing files and folders via their names
-const existingFileHandle = await opfsRoot.getFileHandle('my first file');
-const existingDirectoryHandle = await opfsRoot
-    .getDirectoryHandle('my first folder);
+const existingFileHandle = await opfsRoot.getFileHandle("my first file");
+const existingDirectoryHandle =
+  await opfsRoot.getDirectoryHandle("my first folder");
 ```
 
 ### Reading a file
@@ -95,7 +101,7 @@ await (await navigator.storage.getDirectory()).remove({ recursive: true });
 
 ### Listing the contents of a folder
 
-{{domxref("FileSystemDirectoryHandle")}} is an [asynchronous iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols). As such, you can iterate over it with a [`for await…of`](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of) loop and standard methods such as [`entries()`](/en-US/docs/Web/API/FileSystemDirectoryHandle/entries), [`values()`](/en-US/docs/Web/API/FileSystemDirectoryHandle/entries), and [`keys()`](/en-US/docs/Web/API/FileSystemDirectoryHandle/entries).
+{{domxref("FileSystemDirectoryHandle")}} is an [asynchronous iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols). As such, you can iterate over it with a [`for await...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of) loop and standard methods such as [`entries()`](/en-US/docs/Web/API/FileSystemDirectoryHandle/entries), [`values()`](/en-US/docs/Web/API/FileSystemDirectoryHandle/entries), and [`keys()`](/en-US/docs/Web/API/FileSystemDirectoryHandle/entries).
 
 For example:
 
@@ -116,7 +122,8 @@ Web Workers don't block the main thread, which means you can use the synchronous
 
 You can synchronously access a file by calling {{domxref("FileSystemFileHandle.createSyncAccessHandle()")}} on a regular {{domxref("FileSystemFileHandle")}}:
 
-> **Note:** Despite having "Sync" in its name, the `createSyncAccessHandle()` method itself is asynchronous.
+> [!NOTE]
+> Despite having "Sync" in its name, the `createSyncAccessHandle()` method itself is asynchronous.
 
 ```js
 const opfsRoot = await navigator.storage.getDirectory();
@@ -185,10 +192,6 @@ console.log(textDecoder.decode(dataView));
 accessHandle.truncate(4);
 ```
 
-## Browser compatibility
-
-{{Compat}}
-
 ## See also
 
-- [The origin private file system](https://web.dev/origin-private-file-system/) on web.dev
+- [The origin private file system](https://web.dev/articles/origin-private-file-system) on web.dev

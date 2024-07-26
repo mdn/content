@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/css-cascade/
 
 {{CSSRef}}
 
-The **cascade** is an algorithm that defines how user agents combine property values originating from different sources. The cascade defines the origin and layer that takes precedence when declarations in more than one [origin](#origin_types) or [cascade layer](/en-US/docs/Web/CSS/@layer) set a value for a property on an element.
+The **cascade** is an algorithm that defines how user agents combine property values originating from different sources. The cascade defines the origin and layer that takes precedence when declarations in more than one [origin](#origin_types), [cascade layer](/en-US/docs/Web/CSS/@layer), or {{CSSxRef("@scope")}} block set a value for a property on an element.
 
 The cascade lies at the core of CSS, as emphasized by the name: _**Cascading**_ Style Sheets. When a [selector](/en-US/docs/Web/CSS/CSS_selectors) matches an element, the property value from the origin with the highest precedence gets applied, even if the selector from a lower precedence origin or layer has greater [specificity](/en-US/docs/Web/CSS/Specificity).
 
@@ -17,11 +17,11 @@ This article explains what the cascade is and the order in which {{Glossary("CSS
 
 The CSS cascade algorithm's job is to select CSS declarations in order to determine the correct values for CSS properties. CSS declarations come from different origin types: **[User-agent stylesheets](#user-agent_stylesheets)**, **[Author stylesheets](#author_stylesheets)**, and **[User stylesheets](#user_stylesheets)**.
 
-Though style sheets come from these different origins and can be within different [layers](/en-US/docs/Web/CSS/@layer) in each of these origins, they overlap in scope; to make this work, the cascade algorithm defines how they interact. Before addressing the interactions, let's define some terms:
+Though style sheets come from these different origins and can be within different [layers](/en-US/docs/Web/CSS/@layer) in each of these origins, they overlap in terms of their default scope; to make this work, the cascade algorithm defines how they interact. Before addressing the interactions, we'll define some key terms in the next few sections.
 
 ### User-agent stylesheets
 
-User-agent, or browsers, have basic style sheets that give default styles to any document. These style sheets are named **user-agent stylesheets**. Most browsers use actual stylesheets for this purpose, while others simulate them in code. The end result is the same.
+User-agents, or browsers, have basic style sheets that give default styles to any document. These style sheets are named **user-agent stylesheets**. Most browsers use actual stylesheets for this purpose, while others simulate them in code. The end result is the same.
 
 Some browsers let users modify the user-agent stylesheet, but this is rare and not something that can be controlled.
 
@@ -62,8 +62,9 @@ The cascading algorithm determines how to find the value to apply for each prope
    | 7                   | user-agent (browser)     | `!important` |
    | 8                   | CSS transitions          |              |
 
-3. **Specificity:** In case of equality with an origin, the [specificity](/en-US/docs/Web/CSS/Specificity) of a rule is considered to choose one value or another. The specificity of the selectors are compared, and the declaration with the highest specificity wins.
-4. **Order of appearance**: In the origin with precedence, if there are competing values for a property that are in style block matching selectors of equal specificity, the last declaration in the style order is applied.
+3. **Specificity**: In case of equality with an origin, the [specificity](/en-US/docs/Web/CSS/Specificity) of a rule is considered to choose one value or another. The specificity of the selectors are compared, and the declaration with the highest specificity wins.
+4. **Scoping proximity**: When two selectors in the origin layer with precedence have the same specificity, the property value within scoped rules with the smallest number of hops up the DOM hierarchy to the scope root wins. See [How `@scope` conflicts are resolved](/en-US/docs/Web/CSS/@scope#how_scope_conflicts_are_resolved) for more details and an example.
+5. **Order of appearance**: In the origin with precedence, if there are competing values for a property that are in style block matching selectors of equal specificity and scoping proximity, the last declaration in the style order is applied.
 
 The cascade is in ascending order, meaning animations have precedence of normal values, whether those are declared in user, author, or user-agent styles, important values take precedence over animations, and transitions have precedence over important values.
 
@@ -73,7 +74,7 @@ The cascade is in ascending order, meaning animations have precedence of normal 
 >
 > Property values being set in a {{cssxref('transition')}} take precedence over all other values set, even those marked with `!important`.
 
-The cascade algorithm is applied _before_ the specificity algorithm, meaning if `:root p { color: red;}` is declared in the user stylesheet (line 2) and a less specific `p {color: blue;}` is in the author stylesheet (line 3), the paragraphs will be blue.
+The cascade algorithm is applied _before_ the specificity algorithm, meaning if `:root p { color: red;}` is declared in the user stylesheet (row 2) and a less specific `p {color: blue;}` is in the author stylesheet (row 3), the paragraphs will be blue.
 
 ## Basic example
 
@@ -138,12 +139,13 @@ li {
 
 In this case, declarations inside `li` and `.specific` rules should apply.
 
-Once again, there are four steps in the cascade algorithm, in order:
+Once again, there are five steps in the cascade algorithm, in order:
 
 1. Relevance
 2. Origin and importance
 3. Specificity
-4. Order of appearance
+4. Scoping proximity
+5. Order of appearance
 
 The `1px` is for print media. Due to lack of _relevance_ based on its media type, it is removed from consideration.
 
@@ -177,7 +179,7 @@ li {
 
 The last one, the `5px` is part of a cascade layer. Normal declarations in layers have lower precedence than normal styles not in a layer within the same origin type. This is also removed by step 2 of the algorithm, _origin and importance_.
 
-This leaves the `0` and the `3px`, which both have the same selector, hence the same _specificity_.
+This leaves the `0` and the `3px`, which both have the same selector, hence the same _specificity_. Neither of them are inside a `@scope` block, so scoping proximity does not come into play in this example either.
 
 We then look at _order of appearance_. The second one, the last of the two unlayered author styles, wins.
 
@@ -281,7 +283,7 @@ p {
 
 Now the paragraph will be blue. The `!important` in the earliest declared layer takes precedence of subsequent layers and unlayered important declarations. If the inline style contained !important, such as `<p style="color: black !important">`, again the paragraph would be black. Inline importance does take precedence over all other author declared `!important` declarations, no matter the specificity.
 
-> **Note:** `!important` reverses the precedence of cascade layers. For this reason, rather than using `!important` to override external styles, import frameworks, third party styles, widget stylesheets, etc., into layers, demoting their precedence. `!important` should only be used sparingly, if ever, to guard required styles against later overrides, in the first declared layer.
+> **Note:** The `!important` flag reverses the precedence of cascade layers. For this reason, try not to use `!important` to override external styles. Instead, use {{cssxref("@import")}} together with the `layer` keyword or `layer()` function to import external style sheets (from frameworks, widget stylesheets, libraries, etc.) into layers. Importing stylesheets into a layer as the first declaration in your CSS demotes their precedence, and author-defined layers, defined later in your CSS, will have higher precedence. The `!important` flag should only be used sparingly, if ever, to guard required styles against later overrides, in the first declared layer.
 
 Styles that are transitioning take precedence over all important styles, no matter who or how they are declared.
 
@@ -321,7 +323,11 @@ Now that we have a better understanding of origin type and cascade layer precede
 
 ## Which CSS entities participate in the cascade
 
-Only CSS property/value pair declarations participate in the cascade. This means that [at-rules](/en-US/docs/Web/CSS/At-rule) containing entities other than declarations, such as a {{ cssxref("@font-face")}} rule containing _descriptors_, don't participate in the cascade.
+Only CSS property/value pair declarations participate in the cascade. CSS at-rule descriptors don't participate in the cascade and HTML presentational attributes are not part of the cascade.
+
+### At-rules
+
+CSS [at-rules](/en-US/docs/Web/CSS/At-rule) containing entities other than declarations, such as a {{ cssxref("@font-face")}} rule containing _descriptors_, don't participate in the cascade.
 
 For the most part, the properties and descriptors defined in at-rules don't participate in the cascade. Only at-rules as a whole participate in the cascade. For example, within a `@font-face` rule, font names are identified by [`font-family`](/en-US/docs/Web/CSS/@font-face/font-family) descriptors. If several `@font-face` rules with the same descriptor are defined, only the most appropriate `@font-face`, as a whole, is considered. If more than one are identically appropriate, the entire `@font-face` declarations are compared using steps 1, 2, and 4 of the algorithm (there is no specificity when it comes to at-rules).
 
@@ -332,6 +338,14 @@ Declarations in {{cssxref("@keyframes")}} don't participate in the cascade. As w
 When it comes to {{cssxref("@import")}}, the `@import` doesn't participate itself in the cascade, but all of the imported styles do participate. If the `@import` defines a [named or anonymous layer](/en-US/docs/Web/CSS/@layer), the contents of the imported stylesheet are placed into the specified layer. All other CSS imported with `@import` is treated as the last declared layer. This was discussed above.
 
 Finally, {{cssxref("@charset")}} obeys specific algorithms and isn't affected by the cascade algorithm.
+
+### Presentational attributes
+
+Presentational attributes are attributes in the source document that can affect styling. For example, when included, the deprecated `align` attribute sets the alignment on several HTML elements and the `fill` attribute defines the color used to paint SVG shapes and text and defines the final state for SVG animations. While they are author styles, presentational attributes do not participate in the cascade.
+
+If the HTML presentation attribute is supported by the user agent, valid presentational attributes included in HTML and SVG, such as the [`align`](/en-US/docs/Web/HTML/Element/img#align) or [`fill`](/en-US/docs/Web/SVG/Attribute/fill) attributes, are translated to the corresponding CSS rules (all SVG presentation attributes are supported as CSS properties) and inserted in the author stylesheet prior to any other styles with a specificity equal to `0`.
+
+Presentational attributes cannot be declared `!important`.
 
 ## CSS animations and the cascade
 
@@ -390,22 +404,11 @@ After your content has finished altering styles, it may find itself in a situati
 
 ## See also
 
-- [A very simple introduction to the CSS cascade](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-- CSS key concepts:
-  - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
-  - [At-rules](/en-US/docs/Web/CSS/At-rule)
-  - [Comments](/en-US/docs/Web/CSS/Comments)
-  - [Specificity](/en-US/docs/Web/CSS/Specificity)
-  - [Inheritance](/en-US/docs/Web/CSS/Inheritance)
-  - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
-  - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
-  - [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-  - Values
-    - [Initial values](/en-US/docs/Web/CSS/initial_value)
-    - [Computed values](/en-US/docs/Web/CSS/computed_value)
-    - [Used values](/en-US/docs/Web/CSS/used_value)
-    - [Actual values](/en-US/docs/Web/CSS/actual_value)
-  - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
-  - [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
-  - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
+- [Building blocks: the CSS cascade](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+- [Building blocks: cascade layers](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers)
+- [CSS cascade and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module
+- [CSS syntax](/en-US/docs/Web/CSS/Syntax)
+- [Specificity](/en-US/docs/Web/CSS/Specificity)
+- [Inheritance](/en-US/docs/Web/CSS/Inheritance)
+- [At-rules](/en-US/docs/Web/CSS/At-rule)
+- [Initial](/en-US/docs/Web/CSS/initial_value), [computed](/en-US/docs/Web/CSS/computed_value), [used](/en-US/docs/Web/CSS/used_value), and [actual](/en-US/docs/Web/CSS/actual_value) values

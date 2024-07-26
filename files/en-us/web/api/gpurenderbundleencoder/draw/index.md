@@ -8,12 +8,13 @@ status:
 browser-compat: api.GPURenderBundleEncoder.draw
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`draw()`** method of the
 {{domxref("GPURenderBundleEncoder")}} interface draws primitives based on the vertex buffers provided by {{domxref("GPURenderBundleEncoder.setVertexBuffer", "setVertexBuffer()")}}.
 
-> **Note:** This method is functionally identical to its equivalent on {{domxref("GPURenderPassEncoder")}} — {{domxref("GPURenderPassEncoder.draw", "draw()")}}.
+> [!NOTE]
+> This method is functionally identical to its equivalent on {{domxref("GPURenderPassEncoder")}} — {{domxref("GPURenderPassEncoder.draw", "draw()")}}.
 
 ## Syntax
 
@@ -42,9 +43,7 @@ None ({{jsxref("Undefined")}}).
 ## Examples
 
 ```js
-function recordRenderPass(
-  passEncoder: GPURenderBundleEncoder | GPURenderPassEncoder // TypeScript
-) {
+function recordRenderPass(passEncoder) {
   if (settings.dynamicOffsets) {
     passEncoder.setPipeline(dynamicPipeline);
   } else {

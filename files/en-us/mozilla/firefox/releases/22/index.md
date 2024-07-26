@@ -32,7 +32,7 @@ page-type: firefox-release-notes
 - `Node.setUserData` and `Node.getUserData` has been removed for web content and are deprecated for chrome content ([Firefox bug 842372](https://bugzil.la/842372)).
 - The {{domxref("Element.attributes")}} property has been moved there from {{domxref("Node")}} as required by the spec ([Firefox bug 844134](https://bugzil.la/844134)).
 - The Mac OS X backend for **Ambient Light Events** has been implemented.
-- Elements in the HTML namespace with local names `<bgsound>`, {{HTMLElement("multicol")}}, and {{HTMLElement("image")}} no longer implement the {{domxref("HTMLSpanElement")}} interface. `<bgsound>` implements {{domxref("HTMLUnknownElement")}} and {{HTMLElement("image")}} implements {{domxref("HTMLElement")}}.
+- Elements in the HTML namespace with local names `<bgsound>`, `<multicol>`, and `<image>` no longer implement the {{domxref("HTMLSpanElement")}} interface. `<bgsound>` implements {{domxref("HTMLUnknownElement")}} and `<image>` implements {{domxref("HTMLElement")}}.
 - The {{ domxref("NodeIterator.detach") }} method has been changed to do nothing ([Firefox bug 823549](https://bugzil.la/823549)).
 - The {{domxref("BlobEvent")}} interface has been implemented ([Firefox bug 834165](https://bugzil.la/834165)).
 - The properties `HTMLMediaElement.crossorigin` and `HTMLInputElement.inputmode` has been removed to match the spec in {{domxref("HTMLMediaElement.crossOrigin")}} and `HTMLInputElement.inputMode`, respectively ([Firefox bug 847370](https://bugzil.la/847370) and [Firefox bug 850346](https://bugzil.la/850346)).
@@ -47,7 +47,7 @@ page-type: firefox-release-notes
 
 - Support for [CSS Flexbox layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) has been enabled by default ([Firefox bug 841876](https://bugzil.la/841876)).
 - Following a spec change, the initial value for {{cssxref("min-width")}} and {{cssxref("min-height")}} has been changed back to `0`, even on flex items ([Firefox bug 848539](https://bugzil.la/848539)).
-- Support for CSS Conditionals ({{cssxref("@supports")}} and {{domxref("CSS.supports_static")}}) has been enabled by default ([Firefox bug 855455](https://bugzil.la/855455)).
+- Support for CSS Conditionals ({{cssxref("@supports")}} and {{domxref("CSS.supports_static", "CSS.supports()")}}) has been enabled by default ([Firefox bug 855455](https://bugzil.la/855455)).
 - Support for {{cssxref("background-clip")}} and {{cssxref("background-origin")}} properties in the {{cssxref("background")}} shorthand has been implemented ([Firefox bug 570896](https://bugzil.la/570896)).
 
 ## Changes for add-on and Mozilla developers
@@ -71,4 +71,4 @@ page-type: firefox-release-notes
 
 ### Versions
 
-{{Firefox_for_developers('21')}}
+{{Firefox_for_developers}}

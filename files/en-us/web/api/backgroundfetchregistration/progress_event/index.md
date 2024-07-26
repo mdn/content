@@ -8,7 +8,7 @@ status:
 browser-compat: api.BackgroundFetchRegistration.progress_event
 ---
 
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
+{{APIRef("Background Fetch API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 The **`progress`** event of the {{domxref("BackgroundFetchRegistration")}} interface thrown when the associated background fetch progresses.
 

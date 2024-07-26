@@ -4,9 +4,12 @@ slug: Web/Accessibility/ARIA/Roles/comment_role
 page-type: aria-role
 ---
 
-The `comment` [landmark role](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles) semantically denotes a comment/reaction to some content on the page, or to a previous comment.
+{{AccessibilitySidebar}}
 
-> **Note:** The comment role is proposed in WAI-ARIA 1.3 ([Most recent ARIA draft](https://w3c.github.io/aria/)), which is still being drafted.
+The `comment` role semantically denotes a comment/reaction to some content on the page, or to a previous comment.
+
+> [!NOTE]
+> The comment role is proposed in WAI-ARIA 1.3 ([Most recent ARIA draft](https://w3c.github.io/aria/)), which is still being drafted.
 
 ## Examples
 
@@ -59,7 +62,7 @@ Since `aria-details` can now accept multiple IDs, we can associate multiple comm
 
 ### Nested comments
 
-Nested comments are also possible with ARIA annotations — nest the comments inside one another, like so:
+It's possible to nest comments inside one another, like so:
 
 ```html
 <div role="comment" id="thread-1" data-author="chris">
@@ -79,20 +82,10 @@ Nested comments are also possible with ARIA annotations — nest the comments in
 
 ## Accessibility concerns
 
-[Landmark roles](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#landmark_roles) are intended to be used sparingly, to identify larger overall sections of the document. Using too many landmark roles can create "noise" in screen readers, making it difficult to understand the overall layout of the page.
+None
 
 ## Specifications
 
 Will be part of WAI-ARIA 1.3, which is still being drafted.
 
 ## See also
-
-- [ARIA annotations](/en-US/docs/Web/Accessibility/ARIA/Annotations)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
-
-</section>

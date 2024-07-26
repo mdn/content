@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.FetchEvent.clientId
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
 
 The **`clientId`** read-only property of the
 {{domxref("FetchEvent")}} interface returns the id of the {{domxref("Client")}} that the
@@ -39,6 +39,4 @@ self.addEventListener("fetch", (event) => {
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise")}}
 - [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

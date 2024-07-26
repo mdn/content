@@ -23,7 +23,7 @@ Note that the CSS 2.1 specification describes documents as being in a horizontal
 
 ## Elements participating in a block formatting context
 
-Block elements in a horizontal writing mode such as English, layout vertically, one below the other.
+Block elements in a horizontal writing mode such as English, lay out vertically, one below the other.
 
 ![Inline direction is horizontal. Block direction is vertical.](mdn-horizontal.png)
 
@@ -67,7 +67,7 @@ In the following example, we have three inline boxes created by a paragraph with
 
 {{EmbedGHLiveSample("css-examples/flow/block-inline/inline.html", '100%', 500)}}
 
-The boxes around the words before the `<strong>` element and after the `<strong>` element are referred to as anonymous boxes, boxes introduced to ensure that everything is wrapped in a box, but ones that we cannot target directly.
+The boxes around the words before the `<strong>` element and after the `</strong>` element are referred to as anonymous boxes, boxes introduced to ensure that everything is wrapped in a box, but ones that we cannot target directly.
 
 The line box size in the block direction (so the height when working in English) is defined by the tallest box inside it. In the next example, the `<strong>` element is 300%; since that content spans two lines, it now defines the height of the line boxes of those two lines.
 
@@ -87,7 +87,7 @@ The flex items however are participating in a flex formatting context, because t
 
 Therefore you can think of every box in CSS working in this way. The box itself has an outer display type, so it knows how to behave alongside other boxes. It then has an inner display type which changes the way its children behave. Those children then have an outer and inner display type too. The flex items in the previous example become flex level boxes, so their outer display type is dictated by way of them being part of the flex formatting context. They have an inner display type of _flow_ however, meaning that their children participate in normal flow. Items nested inside our flex item lay themselves out as block and inline elements unless something changes their display type.
 
-This concept of the outer and inner display type is important as this tells us that a container using a layout method such as Flexbox (`display: flex`) and Grid Layout (`display: grid`) is still participating in block and inline layout, due to the outer display type of those methods being `block`.
+This concept of the outer and inner display type is important as this tells us that a container using a layout method such as flexbox (`display: flex`) and grid layout (`display: grid`) is still participating in block and inline layout, due to the outer display type of those methods being `block`.
 
 ### Changing the Formatting Context an element participates in
 

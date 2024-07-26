@@ -10,7 +10,7 @@ Certain HTML elements use date and/or time values. The formats of the strings th
 
 Elements that use such formats include certain forms of the {{HTMLElement("input")}} element that let the user choose or specify a date, time, or both, as well as the {{HTMLElement("ins")}} and {{HTMLElement("del")}} elements, whose [`datetime`](/en-US/docs/Web/HTML/Element/ins#datetime) attribute specifies the date or date and time at which the insertion or deletion of content occurred.
 
-For `<input>`, the values of [`type`](/en-US/docs/Web/HTML/Element/input#type) that return a [`value`](/en-US/docs/Web/HTML/Global_attributes#value) which contains a string representing a date and/or time are:
+For `<input>`, the [`type`](/en-US/docs/Web/HTML/Element/input#type) values of inputs whose [`value`](/en-US/docs/Web/HTML/Element/input#value) contains a string representing a date and/or time are:
 
 - [`date`](/en-US/docs/Web/HTML/Element/input/date)
 - [`datetime-local`](/en-US/docs/Web/HTML/Element/input/datetime-local)
@@ -37,7 +37,7 @@ Before getting into the intricacies of how date and time strings are written and
       <td><code>2005-06-07</code></td>
       <td>June 7, 2005</td>
       <td>
-        <a href="/en-US/docs/Web/HTML/Date_and_time_formats#date_strings"
+        <a href="#date_strings"
           >[details]</a
         >
       </td>
@@ -46,7 +46,7 @@ Before getting into the intricacies of how date and time strings are written and
       <td><code>08:45</code></td>
       <td>8:45 AM</td>
       <td>
-        <a href="/en-US/docs/Web/HTML/Date_and_time_formats#time_strings"
+        <a href="#time_strings"
           >[details]</a
         >
       </td>
@@ -55,7 +55,7 @@ Before getting into the intricacies of how date and time strings are written and
       <td><code>08:45:25</code></td>
       <td>8:45 AM and 25 seconds</td>
       <td>
-        <a href="/en-US/docs/Web/HTML/Date_and_time_formats#time_strings"
+        <a href="#time_strings"
           >[details]</a
         >
       </td>
@@ -65,7 +65,7 @@ Before getting into the intricacies of how date and time strings are written and
       <td>3:40 AM on August 4, 33</td>
       <td>
         <a
-          href="/en-US/docs/Web/HTML/Date_and_time_formats#local_date_and_time_strings"
+          href="#local_date_and_time_strings"
           >[details]</a
         >
       </td>
@@ -75,7 +75,7 @@ Before getting into the intricacies of how date and time strings are written and
       <td>30 seconds after 2:00 PM on April 1, 1977</td>
       <td>
         <a
-          href="/en-US/docs/Web/HTML/Date_and_time_formats#local_date_and_time_strings"
+          href="#local_date_and_time_strings"
           >[details]</a
         >
       </td>
@@ -85,7 +85,7 @@ Before getting into the intricacies of how date and time strings are written and
       <td>Midnight UTC on January 1, 1901</td>
       <td>
         <a
-          href="/en-US/docs/Web/HTML/Date_and_time_formats#global_date_and_time_strings"
+          href="#global_date_and_time_strings"
           >[details]</a
         >
       </td>
@@ -97,7 +97,7 @@ Before getting into the intricacies of how date and time strings are written and
       </td>
       <td>
         <a
-          href="/en-US/docs/Web/HTML/Date_and_time_formats#global_date_and_time_strings"
+          href="#global_date_and_time_strings"
           >[details]</a
         >
       </td>
@@ -111,7 +111,7 @@ Before looking at the various formats of date and time related strings used by H
 
 ### Character set
 
-Dates and times in HTML are always strings which use the [ASCII](https://en.wikipedia.org/wiki/ASCII) character set.
+Dates and times in HTML are always strings which use the {{Glossary("ASCII")}} character set.
 
 ### Year numbers
 

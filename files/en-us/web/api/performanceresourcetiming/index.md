@@ -22,6 +22,7 @@ The properties of this interface allow you to calculate certain resource timing 
 - Measuring TCP handshake time (`connectEnd` - `connectStart`)
 - Measuring DNS lookup time (`domainLookupEnd` - `domainLookupStart`)
 - Measuring redirection time (`redirectEnd` - `redirectStart`)
+- Measuring interim request time (`firstInterimResponseStart` - `requestStart`)
 - Measuring request time (`responseStart` - `requestStart`)
 - Measuring TLS negotiation time (`requestStart` - `secureConnectionStart`)
 - Measuring time to fetch (without redirects) (`responseEnd` - `fetchStart`)
@@ -50,7 +51,7 @@ This interface extends the following {{domxref("PerformanceEntry")}} properties 
 
 The interface supports the following timestamp properties which you can see in the diagram and are listed in the order in which they are recorded for the fetching of a resource. An alphabetical listing is shown in the navigation, at left.
 
-![Timestamp diagram listing timestamps in the order in which they are recorded for the fetching of a resource](timestamp-diagram.svg)
+![Timestamp diagram listing timestamps in the order in which they are recorded for the fetching of a resource](https://mdn.github.io/shared-assets/images/diagrams/api/performance/timestamp-diagram.svg)
 
 - {{domxref('PerformanceResourceTiming.redirectStart')}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} that represents the start time of the fetch which initiates the redirect.
@@ -72,6 +73,8 @@ The interface supports the following timestamp properties which you can see in t
   - : A {{domxref("DOMHighResTimeStamp")}} immediately after the browser finishes establishing the connection to the server to retrieve the resource.
 - {{domxref('PerformanceResourceTiming.requestStart')}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} immediately before the browser starts requesting the resource from the server.
+- {{domxref('PerformanceResourceTiming.firstInterimResponseStart')}} {{experimental_inline}} {{ReadOnlyInline}}
+  - : A {{domxref("DOMHighResTimeStamp")}} that represents the interim response time (for example, 100 Continue or 103 Early Hints).
 - {{domxref('PerformanceResourceTiming.responseStart')}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} immediately after the browser receives the first byte of the response from the server.
 - {{domxref('PerformanceResourceTiming.responseEnd')}} {{ReadOnlyInline}}
@@ -91,12 +94,14 @@ Additionally, this interface exposes the following properties containing more in
   - : A string representing the network protocol used to fetch the resource, as identified by the [ALPN Protocol ID (RFC7301)](https://datatracker.ietf.org/doc/html/rfc7301).
 - {{domxref('PerformanceResourceTiming.renderBlockingStatus')}} {{ReadOnlyInline}}
   - : A string representing the render-blocking status. Either "`blocking`" or "`non-blocking`".
-- {{domxref('PerformanceResourceTiming.responseStatus')}} {{experimental_inline}} {{ReadOnlyInline}}
+- {{domxref('PerformanceResourceTiming.responseStatus')}} {{ReadOnlyInline}}
   - : A number representing the HTTP response status code returned when fetching the resource.
 - {{domxref('PerformanceResourceTiming.transferSize')}} {{ReadOnlyInline}}
   - : A number representing the size (in octets) of the fetched resource. The size includes the response header fields plus the response payload body.
 - {{domxref('PerformanceResourceTiming.serverTiming')}} {{ReadOnlyInline}}
   - : An array of {{domxref("PerformanceServerTiming")}} entries containing server timing metrics.
+- {{domxref("PerformanceResourceTiming.deliveryType")}} {{experimental_inline}} {{ReadOnlyInline}}
+  - : Indicates how the resource was delivered — for example from the cache or from a navigational prefetch.
 
 ## Instance methods
 

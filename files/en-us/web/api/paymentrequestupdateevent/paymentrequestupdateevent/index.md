@@ -26,7 +26,7 @@ None.
 
 ### Return value
 
-A new `PaymentRequestUpdateEvent`
+A new `PaymentRequestUpdateEvent`.
 
 ## Specifications
 

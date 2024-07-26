@@ -56,7 +56,8 @@ This is a common pattern for data-driven sites such as Amazon, YouTube, eBay, an
 - Page updates are a lot quicker and you don't have to wait for the page to refresh, meaning that the site feels faster and more responsive.
 - Less data is downloaded on each update, meaning less wasted bandwidth. This may not be such a big issue on a desktop on a broadband connection, but it's a major issue on mobile devices and in countries that don't have ubiquitous fast internet service.
 
-> **Note:** In the early days, this general technique was known as [Asynchronous](/en-US/docs/Glossary/Asynchronous) JavaScript and XML ([Ajax](/en-US/docs/Glossary/AJAX)), because it tended to request XML data. This is normally not the case these days (you'd be more likely to request JSON), but the result is still the same, and the term "Ajax" is still often used to describe the technique.
+> [!NOTE]
+> In the early days, this general technique was known as [Asynchronous](/en-US/docs/Glossary/Asynchronous) JavaScript and XML ([Ajax](/en-US/docs/Glossary/AJAX)), because it tended to request XML data. This is normally not the case these days (you'd be more likely to request JSON), but the result is still the same, and the term "Ajax" is still often used to describe the technique.
 
 To speed things up even further, some sites also store assets and data on the user's computer when they are first requested, meaning that on subsequent visits they use the local versions instead of downloading fresh copies every time the page is first loaded. The content is only reloaded from the server when it has been updated.
 
@@ -132,7 +133,7 @@ fetch(url)
 
 There's quite a lot to unpack in here.
 
-First, the entry point to the Fetch API is a global function called {{domxref("fetch", "fetch()")}}, that takes the URL as a parameter (it takes another optional parameter for custom settings, but we're not using that here).
+First, the entry point to the Fetch API is a global function called {{domxref("Window/fetch", "fetch()")}}, that takes the URL as a parameter (it takes another optional parameter for custom settings, but we're not using that here).
 
 Next, `fetch()` is an asynchronous API which returns a {{jsxref("Promise")}}. If you don't know what that is, read the module on [asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous), and in particular the article on [promises](/en-US/docs/Learn/JavaScript/Asynchronous/Promises), then come back here. You'll find that article also talks about the `fetch()` API!
 
@@ -190,7 +191,7 @@ Inside this function we:
 
 Next we pass a function into the `then()` method of that returned promise. This function will be passed an object containing the response data as JSON, which we pass into the `initialize()` function. This function which starts the process of displaying all the products in the user interface.
 
-To handle errors, we chain a `.catch()` block onto the end of the chain. This runs if the promise fails for some reason. Inside it, we include a function that is passed as a parameter, an `err` object. This `err` object can be used to report the nature of the error that has occurred, in this case we do it with a simple `console.log()`.
+To handle errors, we chain a `.catch()` block onto the end of the chain. This runs if the promise fails for some reason. Inside it, we include a function that is passed as a parameter, an `err` object. This `err` object can be used to report the nature of the error that has occurred, in this case we do it with a simple `console.error()`.
 
 However, a complete website would handle this error more gracefully by displaying a message on the user's screen and perhaps offering options to remedy the situation, but we don't need anything more than a simple `console.error()`.
 
@@ -260,7 +261,6 @@ This article shows how to start working with Fetch to fetch data from the server
 
 There are however a lot of different subjects discussed in this article, which has only really scratched the surface. For a lot more detail on these subjects, try the following articles:
 
-- [Ajax](/en-US/docs/Web/Guide/AJAX)
 - [Using Fetch](/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 - [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [Working with JSON data](/en-US/docs/Learn/JavaScript/Objects/JSON)

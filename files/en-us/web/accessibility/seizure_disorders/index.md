@@ -4,9 +4,7 @@ slug: Web/Accessibility/Seizure_disorders
 page-type: guide
 ---
 
-<section id="Quick_links">
-  {{ListSubpagesForSidebar("Web/Accessibility", 1)}}
-</section>
+{{AccessibilitySidebar}}
 
 This article introduces concepts behind making web content accessible for those with vestibular disorders, and how to measure and prevent content leading to seizures and/or other physical reactions.
 
@@ -209,7 +207,7 @@ With animated GIFs, ensure animation is inactive until the user chooses to activ
 **Resources for detecting and controlling animated GIFs include:**
 
 - [RunKit Animated GIF Detector](https://npm.runkit.com/animated-gif-detector)
-- [rubentd.com/gifplayer/](https://rubentd.com/gifplayer/), a jQuery plugin that will help you play and stop animated gifs on your website
+- [github.com/rubentd/gifplayer](https://github.com/rubentd/gifplayer), a jQuery plugin that will help you play and stop animated gifs on your website
 
 ### Videos
 
@@ -223,7 +221,7 @@ div {
 }
 ```
 
-[`CSS Transitions`](https://www.w3.org/TR/css-transitions-1/) can be used to set the duration to zero for the initial stage of animation.
+[CSS transitions](/en-US/docs/Web/CSS/CSS_transitions) can be used to set the duration to zero for the initial stage of animation.
 
 ```css
 div {
@@ -304,7 +302,7 @@ The methods for sniffing them out is not a casual exercise. You may be intereste
 - **JPG (Raster)**
 - **MNG (Raster)**: Multiple-image Network Graphics is a graphics file format for animated images. Also considered by some to be a video format.
 - **PNG, APNG (Raster)**: Portable Network Graphics and Animated Portable Network Graphics may both be animated.
-- **SVGs (Vector)**: The MDN document, ["SVG: Scalable Vector Graphics"](/en-US/docs/Web/SVG), notes that _"SVG is a text-based open Web standard. It is explicitly designed to work with other web standards such as [CSS](/en-US/docs/Web/CSS), [DOM](/en-US/docs/Web/API/Document_Object_Model), and [SMIL](/en-US/docs/Web/SVG/SVG_animation_with_SMIL)."_ SVGs can be used as an image like in this example: `<img src="example.svg" alt="This is an image using a svg as a source">`. This means that SVG appearance and animation can be controlled through CSS keyframes and animations. For interaction with JavaScript, see the MDN documents on [SVG Interfaces](/en-US/docs/Web/API/Document_Object_Model#svg_interfaces) and [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Applying_SVG_effects_to_HTML_content).
+- **SVGs (Vector)**: The MDN document, ["SVG: Scalable Vector Graphics"](/en-US/docs/Web/SVG), notes that _"SVG is a text-based open Web standard. It is explicitly designed to work with other web standards such as [CSS](/en-US/docs/Web/CSS), [DOM](/en-US/docs/Web/API/Document_Object_Model), and [SMIL](/en-US/docs/Web/SVG/SVG_animation_with_SMIL)."_ SVGs can be used as an image like in this example: `<img src="example.svg" alt="This is an image using a svg as a source">`. This means that SVG appearance and animation can be controlled through CSS keyframes and animations. For interaction with JavaScript, see the MDN documents on [SVG Interfaces](/en-US/docs/Web/API/Document_Object_Model#svg_dom) and [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Applying_SVG_effects_to_HTML_content).
 - **Voxel (Raster)**: Three-dimensional [voxel](https://en.wikipedia.org/wiki/Voxel) raster graphics are employed in video games, as well as in medical imaging.
 
 #### Text can also be animated
@@ -368,9 +366,9 @@ The contrast ratio is defined in [WCAG 2.1](https://www.w3.org/TR/WCAG21/) as fo
 
 It's best if you can adjust the contrast before it is uploaded or published to the web. For videos and animated GIFS, the Adobe Suite of products is a phenomenal resource for traditional images. Also for images, an online tool available is pinetools.com's [Brightness and contrast online](https://pinetools.com/brightness-contrast-image). If you intend to make animated gifs, for example, start with one that has a lower contrast ratio.
 
-JavaScript is also an option for reducing contrast dynamically. Here's a code example from the section titled, ["Example: Setting the background color of a paragraph"](/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces#setting_background_of_a_paragraph) from the MDN document, [Traversing an HTML table with JavaScript and DOM Interfaces](/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces). Notice that the color in the example is described in the **RGB** color space.
+JavaScript is also an option for reducing contrast dynamically. Here's a code example from the section titled, ["Example: Setting the background color of a paragraph"](/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces#setting_the_background_color_of_a_paragraph) from the MDN document, [Traversing an HTML table with JavaScript and DOM Interfaces](/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces). Notice that the color in the example is described in the **RGB** color space.
 
-**HTML Content [(link to source page)](/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces#html_content_2)**
+**HTML Content [(link to source page)](/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces#html_2)**
 
 ```html
 <body>
@@ -383,7 +381,7 @@ JavaScript is also an option for reducing contrast dynamically. Here's a code ex
 </body>
 ```
 
-**JavaScript Content [(link to source page)](/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces#javascript_content_2)**
+**JavaScript Content [(link to source page)](/en-US/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces#javascript_2)**
 
 ```js
 function set_background() {
@@ -396,7 +394,7 @@ function set_background() {
 
   // get the second item of the list of p elements
   myP = myBodyElements[1];
-  myP.style.background = "rgb(255,0,0)";
+  myP.style.background = "rgb(255 0 0)";
 }
 ```
 
@@ -529,10 +527,6 @@ From W3.org's page on [Media Queries 4](https://www.w3.org/TR/mediaqueries-4/):
 The `update` media feature is used to query the ability of the output device to modify the appearance of content once it has been rendered. It has the values of "none", "slow", and "fast".
 
 ## Developmental & Experimental Features
-
-### MDN Navigator.doNotTrack
-
-[From the documentation](/en-US/docs/Web/API/Navigator/doNotTrack): _"Returns the user's do-not-track setting. This is "1" if the user has requested not to be tracked by websites, content, or advertising"_.
 
 ### Media Queries Level 5
 

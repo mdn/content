@@ -17,6 +17,7 @@ The **`min-inline-size`** [CSS](/en-US/docs/Web/CSS) property defines the horizo
 /* <length> values */
 min-inline-size: 100px;
 min-inline-size: 5em;
+min-inline-size: anchor-size(width);
 
 /* <percentage> values */
 min-inline-size: 10%;
@@ -24,6 +25,7 @@ min-inline-size: 10%;
 /* Keyword values */
 min-inline-size: max-content;
 min-inline-size: min-content;
+min-inline-size: fit-content;
 min-inline-size: fit-content(20em);
 
 /* Global values */

@@ -3,16 +3,21 @@ title: "FileReader: readAsBinaryString() method"
 short-title: readAsBinaryString()
 slug: Web/API/FileReader/readAsBinaryString
 page-type: web-api-instance-method
+status:
+  - deprecated
 browser-compat: api.FileReader.readAsBinaryString
 ---
 
-{{APIRef("File API")}}
+{{APIRef("File API")}}{{AvailableInWorkers}}{{Deprecated_Header}}
 
-The `readAsBinaryString` method is used to start reading the contents of the
+> [!NOTE]
+> This method is deprecated in favor of {{DOMxRef("FileReader.readAsArrayBuffer","readAsArrayBuffer()")}}.
+
+The **`readAsBinaryString()`** method of the {{domxref("FileReader")}} interface is used to start reading the contents of the
 specified {{domxref("Blob")}} or {{domxref("File")}}. When the read operation is
-finished, the {{domxref("FileReader.readyState","readyState")}} becomes
-`DONE`, and the {{domxref("FileReader.loadend_event")}} is triggered. At that time, the
-{{domxref("FileReader.result","result")}} attribute contains the raw binary data from
+finished, the {{domxref("FileReader.readyState","readyState")}} property becomes
+`DONE`, and the {{domxref("FileReader/loadend_event", "loadend")}} event is triggered. At that time, the
+{{domxref("FileReader.result","result")}} property contains the raw binary data from
 the file.
 
 Note that this method was once removed from the File API specification, but

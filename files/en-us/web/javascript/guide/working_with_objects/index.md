@@ -266,8 +266,8 @@ myCar.nonexistentProperty; // undefined
 There are three native ways to list/traverse object properties:
 
 - [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops. This method traverses all of the enumerable string properties of an object as well as its prototype chain.
-- {{jsxref("Object.keys", "Object.keys(myObj)")}}. This method returns an array with only the enumerable own string property names ("keys") in the object `myObj`, but not those in the prototype chain.
-- {{jsxref("Object.getOwnPropertyNames", "Object.getOwnPropertyNames(myObj)")}}. This method returns an array containing all the own string property names in the object `myObj`, regardless of if they are enumerable or not.
+- {{jsxref("Object.keys()")}}. This method returns an array with only the enumerable own string property names ("keys") in the object `myObj`, but not those in the prototype chain.
+- {{jsxref("Object.getOwnPropertyNames()")}}. This method returns an array containing all the own string property names in the object `myObj`, regardless of if they are enumerable or not.
 
 You can use the bracket notation with [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) to iterate over all the enumerable properties of an object. To illustrate how this works, the following function displays the properties of the object when you pass the object and the object's name as arguments to the function:
 
@@ -512,7 +512,7 @@ For more information about comparison operators, see [equality operators](/en-US
 
 ## See also
 
-- To dive deeper, read about [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
-- To learn about classes (an alternative way to create objects), read the [JavaScript classes](/en-US/docs/Web/JavaScript/Reference/Classes) reference.
+- [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
 
 {{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Using_classes")}}

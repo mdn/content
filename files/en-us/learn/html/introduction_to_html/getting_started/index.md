@@ -13,22 +13,13 @@ In this article, we cover the absolute basics of HTML. To get you started, this 
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy,
-        <a
-          href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >basic software installed</a
-        >, and basic knowledge of
-        <a
-          href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
-          >working with files</a
-        >.
+        <a href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software">Basic software installed</a>, and basic knowledge of <a href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files">working with files</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To gain basic familiarity with HTML, and practice writing a few HTML
-        elements.
+        To gain basic familiarity with HTML, and practice writing a few HTML elements.
       </td>
     </tr>
   </tbody>
@@ -48,7 +39,8 @@ If we wanted the text to stand by itself, we could specify that it is a paragrap
 <p>My cat is very grumpy</p>
 ```
 
-> **Note:** Tags in HTML are not case-sensitive. This means they can be written in uppercase or lowercase. For example, a {{htmlelement("title")}} tag could be written as `<title>`, `<TITLE>`, `<Title>`, `<TiTlE>`, etc., and it will work. However, it is best practice to write all tags in lowercase for consistency and readability.
+> [!NOTE]
+> Tags in HTML are not case-sensitive. This means they can be written in uppercase or lowercase. For example, a {{htmlelement("title")}} tag could be written as `<title>`, `<TITLE>`, `<Title>`, `<TiTlE>`, etc., and it will work. However, it is best practice to write all tags in lowercase for consistency and readability.
 
 ## Anatomy of an HTML element
 
@@ -151,12 +143,12 @@ window.addEventListener("load", updateCode);
 // stop tab key tabbing out of textarea and
 // make it write a tab at the caret position instead
 textarea.onkeydown = (e) => {
-  if (e.keyCode === 9) {
+  if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
   }
 
-  if (e.keyCode === 27) {
+  if (e.code === "Escape") {
     textarea.blur();
   }
 };
@@ -227,7 +219,8 @@ This would output the following:
 
 {{ EmbedLiveSample('Void_elements', 700, 300, "", "") }}
 
-> **Note:** In HTML, there is no requirement to add a `/` at the end of a void element's tag, for example: `<img src="images/cat.jpg" alt="cat" />`. However, it is also a valid syntax, and you may do this when you want your HTML to be valid XML.
+> [!NOTE]
+> In HTML, there is no requirement to add a `/` at the end of a void element's tag, for example: `<img src="images/cat.jpg" alt="cat" />`. However, it is also a valid syntax, and you may do this when you want your HTML to be valid XML.
 
 ## Attributes
 
@@ -245,22 +238,25 @@ An attribute should have:
 
 ### Active learning: Adding attributes to an element
 
-Another example of an element is {{htmlelement("a")}}. This stands for _anchor_. An anchor can make the text it encloses into a hyperlink. Anchors can take a number of attributes, but several are as follows:
+The `<img>` element can take a number of attributes, including:
 
-- `href`
-  - : This attribute's value specifies the web address for the link. For example: `href="https://www.mozilla.org/"`.
-- `title`
-  - : The `title` attribute specifies extra information about the link, such as a description of the page that is being linked to. For example, `title="The Mozilla homepage"`. This appears as a tooltip when a cursor hovers over the element.
-- `target`
-  - : The `target` attribute specifies the browsing context used to display the link. For example, `target="_blank"` will display the link in a new tab. If you want to display the linked content in the current tab, just omit this attribute.
+- `src`
+  - : The `src` attribute is a **required** attribute that specifies the location of the image. For example: `src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png"`.
+- `alt`
+  - : The `alt` attribute specifies a text description of the image. For example: `alt="The Firefox icon"`.
+- `width`
+  - : The `width` attribute specifies the width of the image with the unit being pixels. For example: `width="300"`.
+- `height`
+  - : The `height` attribute specifies the height of the image with the unit being pixels. For example: `height="300"`.
 
-Edit the line below in the _Input_ area to turn it into a link to your favorite website.
+Edit the line below in the _Input_ area to turn it into an image.
 
-1. Add the `<a>` element.
-2. Add the `href` attribute and the `title` attribute.
-3. Specify the `target` attribute to open the link in the new tab.
+1. Find your favorite image online, right click it, and press _Copy Image Link/Address_.
+2. Back in the area below, add the `src` attribute and fill it with the link from step 1.
+3. Set the `alt` attribute.
+4. Add the `width` and `height` attributes.
 
-You will be able to see your changes live in the _Output_ area. You should see a link—that when hovered over—displays the value of the `title` attribute and, when clicked, opens a new tab and navigates to the web address in the `href` attribute. Remember that you need to include a space between the element name and between each attribute.
+You will be able to see your changes live in the _Output_ area.
 
 If you make a mistake, you can always reset it using the _Reset_ button. If you get really stuck, press the _Show solution_ button to see the answer.
 
@@ -275,7 +271,7 @@ If you make a mistake, you can always reset it using the _Reset_ button. If you 
 </p>
 
 <textarea id="code" class="input" style="min-height: 100px;width: 95%">
-  &lt;p&gt;A link to my favorite website.&lt;/p&gt;
+&lt;img alt="I should be an image" &gt;
 </textarea>
 
 <div class="playable-buttons">
@@ -319,7 +315,7 @@ function updateCode() {
 }
 
 const htmlSolution =
-  '<p>A link to my <a href="https://www.mozilla.org/" title="The Mozilla homepage" target="_blank">favorite website</a>.</p>';
+  '<img src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png" alt="Firefox icon" width="100" height="100" />';
 let solutionEntry = htmlSolution;
 
 reset.addEventListener("click", () => {
@@ -348,12 +344,12 @@ window.addEventListener("load", updateCode);
 // make it write a tab at the caret position instead
 
 textarea.onkeydown = (e) => {
-  if (e.keyCode === 9) {
+  if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
   }
 
-  if (e.keyCode === 27) {
+  if (e.code === "Escape") {
     textarea.blur();
   }
 };
@@ -416,13 +412,13 @@ For reference, the example above also includes a non-disabled form input element
 
 ### Omitting quotes around attribute values
 
-If you look at code for a lot of other sites, you might come across a number of strange markup styles, including attribute values without quotes. This is permitted in certain circumstances, but it can also break your markup in other circumstances. For example, if we revisit our link example from earlier, we could write a basic version with _only_ the `href` attribute, like this:
+If you look at code for a lot of other sites, you might come across a number of strange markup styles, including attribute values without quotes. This is permitted in certain circumstances, but it can also break your markup in other circumstances. The element in the code snippet below, `<a>`, is called an anchor. Anchors enclose text and turn them into links. The `href` attribute specifies the web address the link points to. You can write this basic version below with _only_ the `href` attribute, like this:
 
 ```html
 <a href=https://www.mozilla.org/>favorite website</a>
 ```
 
-However, as soon as we add the `title` attribute in this way, there are problems:
+Anchors can also have a `title` attribute, a description of the linked page. However, as soon as we add the `title` in the same fashion as the `href` attribute there are problems:
 
 ```html-nolint example-bad
 <a href=https://www.mozilla.org/ title=The Mozilla homepage>favorite website</a>
@@ -458,7 +454,8 @@ However, if you use one type of quote, you can include the other type of quote _
 </a>
 ```
 
-To use quote marks inside other quote marks of the same type (single quote or double quote), use [HTML entities](#entity_references_including_special_characters_in_html). For example, this will break:
+To use quote marks inside other quote marks of the same type (single quote or double quote), use {{glossary("character reference", "character references")}}.
+For example, this will break:
 
 ```html-nolint example-bad
 <a href="https://www.example.com" title="An "interesting" reference">A link to my example.</a>
@@ -512,11 +509,14 @@ If you want to experiment with writing some HTML on your local computer, you can
 3. Paste the code into the new text file.
 4. Save the file as `index.html`.
 
-> **Note:** You can also find this basic HTML template on the [MDN Learning Area GitHub repo](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html).
+> [!NOTE]
+> You can also find this basic HTML template on the [MDN Learning Area GitHub repo](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html).
 
 You can now open this file in a web browser to see what the rendered code looks like. Edit the code and refresh the browser to see what the result is. Initially, the page looks like this:
 
-![A simple HTML page that says This is my page](template-screenshot.png)In this exercise, you can edit the code locally on your computer, as described previously, or you can edit it in the sample window below (the editable sample window represents just the contents of the {{htmlelement("body")}} element, in this case). Sharpen your skills by implementing the following tasks:
+![A simple HTML page that says This is my page](template-screenshot.png)
+
+In this exercise, you can edit the code locally on your computer, as described previously, or you can edit it in the sample window below (the editable sample window represents just the contents of the {{htmlelement("body")}} element, in this case). Sharpen your skills by implementing the following tasks:
 
 - Just below the opening tag of the {{htmlelement("body")}} element, add a main title for the document. This should be wrapped inside an `<h1>` opening tag and `</h1>` closing tag.
 - Edit the paragraph content to include text about a topic that you find interesting.
@@ -618,12 +618,12 @@ window.addEventListener("load", updateCode);
 // make it write a tab at the caret position instead
 
 textarea.onkeydown = (e) => {
-  if (e.keyCode === 9) {
+  if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
   }
 
-  if (e.keyCode === 27) {
+  if (e.code === "Escape") {
     textarea.blur();
   }
 };
@@ -681,7 +681,8 @@ Let's have a look at how the browser renders the two paragraphs above with and w
 
 {{ EmbedLiveSample('Whitespace_in_HTML', 700, 100) }}
 
-> **Note:** Accessing the [innerHTML](/en-US/docs/Web/API/Element/innerHTML) of elements from JavaScript will keep all the whitespace intact.
+> [!NOTE]
+> Accessing the [innerHTML](/en-US/docs/Web/API/Element/innerHTML) of elements from JavaScript will keep all the whitespace intact.
 > This may return unexpected results if the whitespace is trimmed by the browser.
 
 ```js
@@ -696,11 +697,11 @@ console.log(whitespace);
 //        silly."
 ```
 
-## Entity references: Including special characters in HTML
+## Character references: including special characters in HTML
 
 In HTML, the characters `<`, `>`,`"`,`'`, and `&` are special characters. They are parts of the HTML syntax itself. So how do you include one of these special characters in your text? For example, if you want to use an ampersand or less-than sign, and not have it interpreted as code.
 
-You do this with character references. These are special codes that represent characters, to be used in these exact circumstances. Each character reference starts with an ampersand (&), and ends with a semicolon (;).
+You do this with {{glossary("character reference", "character references")}}. These are special codes that represent characters, to be used in these exact circumstances. Each character reference starts with an ampersand (&), and ends with a semicolon (;).
 
 | Literal character | Character reference equivalent |
 | ----------------- | ------------------------------ |
@@ -710,7 +711,7 @@ You do this with character references. These are special codes that represent ch
 | '                 | `&apos;`                       |
 | &                 | `&amp;`                        |
 
-The character reference equivalent could be easily remembered because the text it uses can be seen as less than for '\&lt;', quotation for ' \&quot; ' and similarly for others. To find more about entity references, see [List of XML and HTML character entity references](https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references) (Wikipedia).
+The character reference equivalent could be easily remembered because the text it uses can be seen as less than for `&lt;`, quotation for `&quot;` and similarly for others. To find more about entity references, see [List of XML and HTML character entity references](https://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references) (Wikipedia).
 
 In the example below, there are two paragraphs:
 
@@ -724,7 +725,8 @@ In the live output below, you can see that the first paragraph has gone wrong. T
 
 {{ EmbedLiveSample('Entity_references_Including_special_characters_in_HTML', 700, 200, "", "") }}
 
-> **Note:** You don't need to use entity references for any other symbols, as modern browsers will handle the actual symbols just fine as long as your HTML's [character encoding is set to UTF-8](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#specifying_your_documents_character_encoding).
+> [!NOTE]
+> You don't need to use entity references for any other symbols, as modern browsers will handle the actual symbols just fine as long as your HTML's [character encoding is set to UTF-8](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#specifying_your_documents_character_encoding).
 
 ## HTML comments
 

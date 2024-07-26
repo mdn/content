@@ -207,7 +207,7 @@ Here are some popular editors:
           >Online Manual</a
         >
       </td>
-      <td><a href="https://community.komodoide.com/packages/addons/">Yes</a></td>
+      <td><a href="https://docs.activestate.com/komodo/12/manual/extensions.html">Yes</a></td>
     </tr>
     <tr>
       <td>

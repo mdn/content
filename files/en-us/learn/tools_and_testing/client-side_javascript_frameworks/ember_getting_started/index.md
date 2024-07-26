@@ -227,7 +227,8 @@ If everything is working correctly, you should see a page like this:
 
 ![The default start page when you create a new Ember app, with a cartoon mascot, saying congratulations](ember-start-page.png)
 
-> **Note:** on Windows systems without [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/windows/wsl/install), you will experience slower build-times overall compared to macOS, Linux, and Windows _with_ WSL.
+> [!NOTE]
+> on Windows systems without [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/windows/wsl/install), you will experience slower build-times overall compared to macOS, Linux, and Windows _with_ WSL.
 
 ## Summary
 

@@ -43,8 +43,7 @@ Even though the `||` operator can be used with operands that are not Boolean
 values, it can still be considered a boolean operator since its return value can always
 be converted to a [boolean primitive](/en-US/docs/Web/JavaScript/Data_structures#boolean_type).
 To explicitly convert its return value (or any expression in general) to the
-corresponding boolean value, use a double {{JSxRef("Operators/Logical_NOT", "NOT
-operator", "", 1)}} or the {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}}
+corresponding boolean value, use a double {{jsxref("Operators/Logical_NOT", "NOT operator", "", 1)}} or the {{jsxref("Boolean/Boolean", "Boolean()")}}
 constructor.
 
 ### Short-circuit evaluation
@@ -106,7 +105,8 @@ false || ""; // f || f returns ""
 false || varObject; // f || object returns varObject
 ```
 
-> **Note:** If you use this operator to provide a default value to some
+> [!NOTE]
+> If you use this operator to provide a default value to some
 > variable, be aware that any _falsy_ value will not be used. If you only need to
 > filter out [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or {{jsxref("undefined")}}, consider using
 > [the nullish coalescing operator](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing).
@@ -168,7 +168,7 @@ is always equal to:
 
 ## See also
 
-- [The nullish coalescing operator (`??`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
+- [Nullish coalescing operator (`??`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 - {{jsxref("Boolean")}}
 - {{Glossary("Truthy")}}
 - {{Glossary("Falsy")}}

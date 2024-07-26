@@ -8,7 +8,7 @@ browser-compat: api.History.state
 
 {{APIRef("History API")}}
 
-The **`History.state`** property
+The **`state`** read-only property of the {{DOMxRef("History")}} interface
 returns a value representing the state at the top of the history stack. This is
 a way to look at the state without having to wait for a {{domxref("Window/popstate_event", "popstate")}} event.
 

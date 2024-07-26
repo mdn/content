@@ -9,9 +9,11 @@ browser-compat: http.headers.Keep-Alive
 
 The **`Keep-Alive`** general header allows the sender to hint about how the connection may be used to set a timeout and a maximum amount of requests.
 
-> **Note:** Set the {{HTTPHeader("Connection")}} header to "keep-alive" for this header to have any effect.
+> [!NOTE]
+> Set the {{HTTPHeader("Connection")}} header to "keep-alive" for this header to have any effect.
 
-> **Warning:** Connection-specific header fields such as
+> [!WARNING]
+> Connection-specific header fields such as
 > {{HTTPHeader("Connection")}} and {{HTTPHeader("Keep-Alive")}} are prohibited
 > in [HTTP/2](https://httpwg.org/specs/rfc9113.html#ConnectionSpecific) and
 > [HTTP/3](https://httpwg.org/specs/rfc9114.html#header-formatting). Chrome and
@@ -78,4 +80,3 @@ Server: Apache
 
 - {{HTTPHeader("Connection")}}
 - [Connection management in HTTP/1.x](/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x)
-- [Keep-Alive Header](https://datatracker.ietf.org/doc/html/draft-thomson-hybi-http-timeout-03#section-2) IETF Internet Draft

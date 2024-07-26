@@ -33,7 +33,7 @@ filter(callbackFn, thisArg)
 
 ### Return value
 
-A new typed array with the elements that pass the test. If no elements pass the test, an empty array will be returned.
+A copy of the given typed array containing just the elements that pass the test. If no elements pass the test, an empty typed array is returned.
 
 ## Description
 
@@ -64,7 +64,7 @@ new Uint8Array([12, 5, 8, 130, 44]).filter(isBigEnough);
 ## See also
 
 - [Polyfill of `TypedArray.prototype.filter` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.forEach()")}}
 - {{jsxref("TypedArray.prototype.every()")}}

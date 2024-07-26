@@ -558,7 +558,7 @@ CubeDemo.prototype.computeSimpleProjectionMatrix = function (scaleFactor) {
 };
 ```
 
-Although the result is identical, the important step here is in the vertex shader. Rather than modifying the vertex directly, it gets multiplied by an additional **[projection matrix](#projection_matrix)**, which (as the name suggests) projects 3D points onto a 2D drawing surface:
+Although the result is identical, the important step here is in the vertex shader. Rather than modifying the vertex directly, it gets multiplied by an additional **[projection matrix](#the_model_view_and_projection_matrices)**, which (as the name suggests) projects 3D points onto a 2D drawing surface:
 
 ```glsl
 // Make sure to read the transformations in reverse order

@@ -8,7 +8,7 @@ page-type: learn-module-chapter
 
 Measuring performance provides an important metric to help you assess the success of your app, site, or web service.
 
-For example, you can use performance metrics to determine how your app performs in comparison to a competitor, or you can compare your app's performance across releases. The metrics you choose to measure should be relevant to your users, site, and business goals. They should be collected, measured consistently, and analyzed in a format that can be consumed and understood by non-technical stakeholders.
+For example, you can use performance metrics to determine how your app performs compared to a competitor or compare your app's performance across releases. Your metrics should be relevant to your users, site, and business goals. They should be collected, measured consistently, and analyzed in a format that non-technical stakeholders can consume and understand.
 
 This article introduces tools you can use to access web performance metrics, which can be used to measure and optimize your site's performance.
 
@@ -17,10 +17,9 @@ This article introduces tools you can use to access web performance metrics, whi
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy,
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >basic software installed</a
+          >Basic software installed</a
         >, and basic knowledge of
         <a href="/en-US/docs/Learn/Getting_started_with_the_web"
           >client-side web technologies</a
@@ -49,7 +48,7 @@ There are several different tools available to help you measure and improve perf
 
 ## General performance reporting tools
 
-Tools like [PageSpeed Insights](https://pagespeed.web.dev/) can provide quick performance measurements. You can enter a URL and get a performance report in seconds. The report contains scores to indicate how your website is performing, both for mobile and desktop. This is a good start for getting an idea about what you are already doing well and what could be improved.
+Tools like [PageSpeed Insights](https://pagespeed.web.dev/) can provide quick performance measurements. You can enter a URL and get a performance report in seconds. The report contains scores indicating how your website performs for mobile and desktop. This is a good start for understanding what you are doing well and what could be improved.
 
 At the time of writing, MDN's performance report summary looks similar to the following:
 
@@ -57,9 +56,9 @@ At the time of writing, MDN's performance report summary looks similar to the fo
 
 A performance report contains information about things like how long a user has to wait before _anything_ is displayed on the page, how many bytes need to be downloaded to display a page, and much more. It also lets you know if the measured values are considered good or bad.
 
-[webpagetest.org](https://webpagetest.org) is another example of a tool that automatically tests your site and returns useful metrics.
+[webpagetest.org](https://webpagetest.org) is another example of a tool that automatically tests your site and returns valuable metrics.
 
-Try running your favorite website through these tools and see what the scores are.
+You can try running your favorite website through these tools and see the scores.
 
 ## Network monitor tools
 
@@ -71,7 +70,7 @@ You should also check out [Chrome's Network Monitor documentation](https://devel
 
 ## Performance monitor tools
 
-You can also use browser performance tools such as the [Firefox Performance Monitor](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html) to measure the performance of a web app or site's user interface as you perform different actions. This indicates the features that might be slowing down your web app or site.
+You can also use browser performance tools such as the [Firefox Performance Monitor](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html) to measure the performance of a web app or site's user interface as you perform different actions. This indicates the features that might slow down your web app or site.
 
 ![Developer tools performance panel showing the waterfall of recording #1.](perf-monitor.png)
 
@@ -79,22 +78,22 @@ See also [Chrome's Performance tool documentation](https://developer.chrome.com/
 
 ## Performance APIs
 
-When writing code for the Web, there are a large number of [Web APIs](/en-US/docs/Web/API) available that allow you to create your own performance-measuring tools.
+When writing code for the Web, many [Web APIs](/en-US/docs/Web/API) are available to create your own performance-measuring tools.
 
-You can use the [Navigation Timing API](/en-US/docs/Web/API/Performance_API/Navigation_timing) to measure client-side web performance; including the amount of time needed to unload the previous page, how long domain lookups take, the total time spent executing the window's load handler, and more. You can use the API for metrics related to all the navigation events displayed in the diagram below.
+You can use the [Navigation Timing API](/en-US/docs/Web/API/Performance_API/Navigation_timing) to measure client-side web performance, including the amount of time needed to unload the previous page, how long domain lookups take, the total time spent executing the window's load handler, and more. You can use the API for metrics related to all the navigation events in the diagram below.
 
 ![The various handlers that the navigation timing API can handle including Navigation timing API metrics Prompt for unload redirect unload App cache DNS TCP Request Response Processing onLoad navigationStart redirectStart redirectEnd fetchStart domainLookupEnd domainLookupStart connectStart (secureConnectionStart) connectEnd requestStart responseStart responseEnd unloadStart unloadEnd domLoading domInteractive domContentLoaded domComplete loadEventStart loadEventEnd](navigationtimingapi.jpg)
 
-The [Performance API](/en-US/docs/Web/API/Performance_API), which provides access to performance-related information for the current page, includes the [Performance Timeline API](/en-US/docs/Web/API/Performance_Timeline), the [Navigation Timing API](/en-US/docs/Web/API/Performance_API/Navigation_timing), the [User Timing API](/en-US/docs/Web/API/Performance_API/User_timing), and the [Resource Timing API](/en-US/docs/Web/API/Performance_API/Resource_timing). These interfaces allow the accurate measurement of the time it takes for JavaScript tasks to complete.
+The [Performance API](/en-US/docs/Web/API/Performance_API), which provides access to performance-related information for the current page, includes several APIs including the [Navigation Timing API](/en-US/docs/Web/API/Performance_API/Navigation_timing), the [User Timing API](/en-US/docs/Web/API/Performance_API/User_timing), and the [Resource Timing API](/en-US/docs/Web/API/Performance_API/Resource_timing). These interfaces allow the accurate measurement of the time it takes for JavaScript tasks to complete.
 
 The [PerformanceEntry](/en-US/docs/Web/API/PerformanceEntry) object is part of the _performance timeline_. A _performance entry_ can be directly created by making a performance _{{domxref("PerformanceMark","mark")}}_ or _{{domxref("PerformanceMeasure","measure")}}_ (for example by calling the {{domxref("Performance.mark","mark()")}} method) at an explicit point in an application. Performance entries are also created in indirect ways, such as loading a resource like an image.
 
 The [PerformanceObserver API](/en-US/docs/Web/API/PerformanceObserver) can be used to observe performance measurement events and to notify you of new [performance entries](/en-US/docs/Web/API/PerformanceEntry) as they are recorded in the browser's performance timeline.
 
-While this article does not dive into using these APIs, it is useful to know they exist. You can also refer to the [Navigation and timings](/en-US/docs/Web/Performance/Navigation_and_resource_timings) article for further examples of using performance Web APIs.
+While this article does not dive into using these APIs, it is helpful to know they exist. Refer to the [Navigation and timings](/en-US/docs/Web/Performance/Navigation_and_resource_timings) article for further examples of using performance Web APIs.
 
 ## Conclusion
 
-This article provided a brief overview of web performance tools that can help you measure performance on a web app or site. Next up, you'll look at perceived performance and some techniques to make unavoidable performance hits appear less severe to the user, or disguise them completely.
+This article briefly overviews some tools that can help you measure performance on a web app or site. In the following article, we'll see how you can optimize images on your site to improve its performance.
 
 {{PreviousMenuNext("Learn/Performance/Perceived_performance", "Learn/Performance/Multimedia", "Learn/Performance")}}

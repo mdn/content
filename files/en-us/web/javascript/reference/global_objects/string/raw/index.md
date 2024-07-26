@@ -14,7 +14,10 @@ The **`String.raw()`** static method is a tag function of [template literals](/e
 ## Syntax
 
 ```js-nolint
-String.raw(strings, ...substitutions)
+String.raw(strings)
+String.raw(strings, sub1)
+String.raw(strings, sub1, sub2)
+String.raw(strings, sub1, sub2, /* …, */ subN)
 
 String.raw`templateString`
 ```
@@ -23,7 +26,7 @@ String.raw`templateString`
 
 - `strings`
   - : Well-formed template literal array object, like `{ raw: ['foo', 'bar', 'baz'] }`. Should be an object with a `raw` property whose value is an array-like object of strings.
-- `...substitutions`
+- `sub1`, …, `subN`
   - : Contains substitution values.
 - `templateString`
   - : A [template literal](/en-US/docs/Web/JavaScript/Reference/Template_literals), optionally with substitutions (`${...}`).
@@ -43,7 +46,8 @@ In most cases, `String.raw()` is used with template literals. The first syntax m
 
 `String.raw()` is the only built-in template literal tag. It has close semantics to an untagged literal since it concatenates all arguments and returns a string. You can even re-implement it with normal JavaScript code.
 
-> **Warning:** You should not use `String.raw` directly as an "identity" tag. See [Building an identity tag](#building_an_identity_tag) for how to implement this.
+> [!WARNING]
+> You should not use `String.raw` directly as an "identity" tag. See [Building an identity tag](#building_an_identity_tag) for how to implement this.
 
 If `String.raw()` is called with an object whose `raw` property doesn't have a `length` property or a non-positive `length`, it returns an empty string `""`. If `substitutions.length < strings.raw.length - 1` (i.e. there are not enough substitutions to fill the placeholders — which can't happen in a well-formed tagged template literal), the rest of the placeholders are filled with empty strings.
 
@@ -71,6 +75,37 @@ String.raw`Hi\n${name}!`;
 
 String.raw`Hi \${name}!`;
 // 'Hi \\${name}!', the dollar sign is escaped; there's no interpolation.
+```
+
+### Using String.raw with RegExp
+
+Combining a `String.raw` template literal with the {{jsxref("RegExp/RegExp", "RegExp()")}} constructor allows you to
+create regular expressions with dynamic parts (which is not possible with regex literals) without double-escaping (`\\`) regular expression escape sequences (which is not possible with normal string literals). This is also valuable in strings that contain a lot of slashes, such as file paths or URLs.
+
+```js
+// A String.raw template allows a fairly readable regular expression matching a URL:
+const reRawTemplate = new RegExp(
+  String.raw`https://developer\.mozilla\.org/en-US/docs/Web/JavaScript/Reference/`,
+);
+
+// The same thing with a regexp literal looks like this, with \/ for
+// each forward slash:
+const reRegexpLiteral =
+  /https:\/\/developer\.mozilla\.org\/en-US\/docs\/Web\/JavaScript\/Reference\//;
+
+// And the same thing written with the RegExp constructor and a
+// traditional string literal, with \\. for each period:
+const reStringLiteral = new RegExp(
+  "https://developer\\.mozilla\\.org/en-US/docs/Web/JavaScript/Reference/",
+);
+
+// String.raw also allows dynamic parts to be included
+function makeURLRegExp(path) {
+  return new RegExp(String.raw`https://developer\.mozilla\.org/${path}`);
+}
+
+const reDynamic = makeURLRegExp("en-US/docs/Web/JavaScript/Reference/");
+const reWildcard = makeURLRegExp(".*");
 ```
 
 ### Building an identity tag

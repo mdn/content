@@ -95,6 +95,8 @@ As a game developer, whether you're an individual or a large game studio, you wa
 
 For the tech folks, let's dig into the APIs the Web brings to the table that cater to game developers. Here's a thorough list to give you a taste of what the Web can do for you:
 
+- [Fetch API](/en-US/docs/Web/API/Fetch_API)
+  - : Send and receive any kind of data you want from a Web server like downloading new game levels and artwork to transmitting non-real-time game status information back and forth.
 - [Full Screen API](/en-US/docs/Web/API/Fullscreen_API)
   - : This simple API lets your game take over the entire screen, thereby immersing the player in action.
 - [Gamepad API](/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API)
@@ -123,5 +125,3 @@ For the tech folks, let's dig into the APIs the Web brings to the table that cat
   - : The WebSocket API lets you connect your app or site to a server to transmit data back and forth in real-time. Perfect for multiplayer gaming action, chat services, and so forth.
 - [Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
   - : Workers give you the ability to spawn background threads running their own JavaScript code, to take advantage of modern, multicore processors.
-- [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) and [File API](/en-US/docs/Web/API/File_and_Directory_Entries_API)
-  - : The combination of XMLHttpRequest and the File API lets you send and receive any kind of data you want (don't let the "XML" throw you!) from a Web server. This is a great way to do anything from downloading new game levels and artwork to transmitting non-real-time game status information back and forth.

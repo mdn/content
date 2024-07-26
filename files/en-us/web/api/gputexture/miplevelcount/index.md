@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUTexture.mipLevelCount
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`mipLevelCount`** read-only property of the
 {{domxref("GPUTexture")}} interface represents the number of mip levels of the `GPUTexture`.

@@ -5,9 +5,12 @@ page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#structure
 ---
 
+{{AccessibilitySidebar}}
+
 The `structure` role is for document structural elements.
 
-> **Note:** The `structure` role is an [abstract role](/en-US/docs/Web/Accessibility/ARIA/Roles#6._abstract_roles). It is included here for completeness of documentation. It should not be used by web authors.
+> [!NOTE]
+> The `structure` role is an [abstract role](/en-US/docs/Web/Accessibility/ARIA/Roles#6._abstract_roles). It is included here for completeness of documentation. It should not be used by web authors.
 
 ## Description
 
@@ -25,7 +28,7 @@ Do not use `role="structure"`. Do use HTML and subclass structure roles.
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [ARIA: `roletype` role](/en-US/docs/Web/Accessibility/ARIA/Roles/roletype_role)
 - [ARIA: `generic` role](/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role)
@@ -36,16 +39,7 @@ Do not use `role="structure"`. Do use HTML and subclass structure roles.
 
 <!-- these shouldn't be used so we shouldn't link to them
 - [ARIA: `application` role](/en-US/docs/Web/Accessibility/ARIA/Roles/application_role)
-- [ARIA: `document` role](/en-US/docs/Web/Accessibility/ARIA/
-"Roles/document_role)
+- [ARIA: `document` role](/en-US/docs/Web/Accessibility/ARIA/Roles/document_role)
 - [ARIA: `rowgroup` role](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role)
 - [ARIA: `separator` role](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role)
 -->
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
-
-</section>

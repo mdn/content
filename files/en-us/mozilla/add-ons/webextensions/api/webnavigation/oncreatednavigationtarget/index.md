@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.webNavigation.onCreatedNavigationTarget
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when a new window, or a new tab in an existing window, is created to host the target of a navigation. For example, this event is sent when:
 
@@ -56,8 +56,8 @@ Events have three functions:
 
 - `sourceFrameId`
   - : `integer`. ID of the frame from which the navigation is initiated. `0` indicates that the frame is the tab's top-level browsing context, not a nested {{HTMLElement("iframe")}}. A positive value indicates that navigation is initiated from a nested iframe. Frame IDs are unique for a given tab and process.
-- `sourceProcessId`
-  - : `integer`. The ID of the process from which the navigation is initiated.
+- `processId` {{optional_inline}} {{deprecated_inline}}
+  - : `integer`. This value is not set in modern browsers. When it was set, it represented the ID of the process the navigation originated from.
 - `sourceTabId`
   - : `integer`. The ID of the tab from which the navigation is initiated. For example, if the user opens a link in a new tab, this will be the ID of the tab containing the link.
 - `tabId`
@@ -96,7 +96,8 @@ browser.webNavigation.onCreatedNavigationTarget.addListener(
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/webNavigation/#event-onBeforeNavigate) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/webNavigation/#event-onBeforeNavigate) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -9,28 +9,30 @@ browser-compat: html.elements.pre
 
 The **`<pre>`** [HTML](/en-US/docs/Web/HTML) element represents preformatted text which is to be presented exactly as written in the HTML file. The text is typically rendered using a non-proportional, or [monospaced](https://en.wikipedia.org/wiki/Monospaced_font), font. Whitespace inside this element is displayed as written.
 
+By default, `<pre>` is a [block-level](/en-US/docs/Glossary/Block-level_content) element, i.e. its default {{cssxref("display")}} value is `block`.
+
 {{EmbedInteractiveExample("pages/tabbed/pre.html", "tabbed-standard")}}
 
-If you have to display reserved characters such as `<`, `>`, `&`, and `"` within the `<pre>` tag, the characters must be escaped using their respective [HTML entity](/en-US/docs/Glossary/Entity).
+If you have to display reserved characters such as `<`, `>`, `&`, and `"` within the `<pre>` tag, the characters must be escaped using their respective {{glossary("character reference", "character references")}}.
+
+`<pre>` elements commonly contain {{HTMLElement("code")}}, {{HTMLElement("samp")}}, and {{HTMLElement("kbd")}} elements, to represent computer code, computer output, and user input, respectively.
 
 ## Attributes
 
 This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- `cols` {{non-standard_inline}} {{deprecated_inline}}
-  - : Contains the _preferred_ count of characters that a line should have. It was a non-standard synonym of [`width`](#width). To achieve such an effect, use CSS {{Cssxref("width")}} instead.
 - `width` {{deprecated_inline}} {{Non-standard_Inline}}
   - : Contains the _preferred_ count of characters that a line should have. Though technically still implemented, this attribute has no visual effect; to achieve such an effect, use CSS {{Cssxref("width")}} instead.
 - `wrap` {{non-standard_inline}} {{Deprecated_Inline}}
   - : Is a _hint_ indicating how the overflow must happen. In modern browser this hint is ignored and no visual effect results in its present; to achieve such an effect, use CSS {{Cssxref("white-space")}} instead.
 
-## Accessibility concerns
+## Accessibility
 
 It is important to provide an alternate description for any images or diagrams created using preformatted text. The alternate description should clearly and concisely describe the image or diagram's content.
 
 People experiencing low vision conditions and browsing with the aid of assistive technology such as a screen reader may not understand what the preformatted text characters are representing when they are read out in sequence.
 
-A combination of the {{HTMLElement("figure")}} and {{HTMLElement("figcaption")}} elements, supplemented by the [ARIA](/en-US/docs/Web/Accessibility/ARIA) `role` and [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attributes on the `pre` element allow the preformatted ASCII art to be announced as an image with alternative text, and the `figcaption` serving as the image's caption.
+A combination of the {{HTMLElement("figure")}} and {{HTMLElement("figcaption")}} elements, supplemented by the [ARIA](/en-US/docs/Web/Accessibility/ARIA) `role` and [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attributes on the `pre` element allow the preformatted {{Glossary("ASCII")}} art to be announced as an image with alternative text, and the `figcaption` serving as the image's caption.
 
 ### Example
 
@@ -64,11 +66,11 @@ A combination of the {{HTMLElement("figure")}} and {{HTMLElement("figcaption")}}
 
 ```html
 <p>Using CSS to change the font color is easy.</p>
-<pre>
+<pre><code>
 body {
   color: red;
 }
-</pre>
+</code></pre>
 ```
 
 #### Result
@@ -80,12 +82,12 @@ body {
 #### HTML
 
 ```html
-<pre>
+<pre><code>
 let i = 5;
 
 if (i &lt; 10 &amp;&amp; i &gt; 0)
   return &quot;Single Digit Number&quot;
-</pre>
+</code></pre>
 ```
 
 #### Result
@@ -118,7 +120,7 @@ if (i &lt; 10 &amp;&amp; i &gt; 0)
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
@@ -132,8 +134,10 @@ if (i &lt; 10 &amp;&amp; i &gt; 0)
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role"
+            >generic</a
+          ></code
         >
       </td>
     </tr>
@@ -159,5 +163,5 @@ if (i &lt; 10 &amp;&amp; i &gt; 0)
 ## See also
 
 - CSS: {{Cssxref('white-space')}}, {{Cssxref('word-break')}}
-- [HTML Entity](/en-US/docs/Glossary/Entity)
-- Related element: {{HTMLElement("code")}}
+- {{glossary("Character reference")}}
+- Related element: {{HTMLElement("code")}}, {{HTMLElement("samp")}}, {{HTMLElement("kbd")}}

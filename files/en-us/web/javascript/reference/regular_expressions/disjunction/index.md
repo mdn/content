@@ -5,7 +5,7 @@ page-type: javascript-language-feature
 browser-compat: javascript.regular_expressions.disjunction
 ---
 
-{{JsSidebar}}
+{{jsSidebar}}
 
 A **disjunction** specifies multiple alternatives. Any alternative matching the input causes the entire disjunction to be matched.
 
@@ -72,7 +72,7 @@ isImage("image.pdf"); // false
 
 ## See also
 
-- [Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
-- [Regular expressions reference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
+- [Character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes) guide
+- [Regular expressions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
 - [Quantifier: `*`, `+`, `?`, `{n}`, `{n,}`, `{n,m}`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier)
 - [Character class: `[...]`, `[^...]`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)

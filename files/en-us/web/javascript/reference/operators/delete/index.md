@@ -1,5 +1,5 @@
 ---
-title: delete operator
+title: delete
 slug: Web/JavaScript/Reference/Operators/delete
 page-type: javascript-operator
 browser-compat: javascript.operators.delete
@@ -18,7 +18,8 @@ delete object.property
 delete object[property]
 ```
 
-> **Note:** The syntax allows a wider range of expressions following the `delete` operator, but only the above forms lead to meaningful behaviors.
+> [!NOTE]
+> The syntax allows a wider range of expressions following the `delete` operator, but only the above forms lead to meaningful behaviors.
 
 ### Parameters
 
@@ -42,12 +43,12 @@ delete object[property]
 
 The `delete` operator has the same [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence) as other unary operators like [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof). Therefore, it accepts any expression formed by higher-precedence operators. However, the following forms lead to early syntax errors in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode):
 
-```js example-bad
+```js-nolint example-bad
 delete identifier;
 delete object.#privateProperty;
 ```
 
-Because [classes](/en-US/docs/Web/JavaScript/Reference/Classes) are automatically in strict mode, and [private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields) can only be legally referenced in class bodies, this means private properties can never be deleted. While `delete identifier` [may work](#deleting_global_properties) if `identifier` refers to a configurable property of the global object, you should avoid this form and prefix it with [`globalThis`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis) instead.
+Because [classes](/en-US/docs/Web/JavaScript/Reference/Classes) are automatically in strict mode, and [private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) can only be legally referenced in class bodies, this means private properties can never be deleted. While `delete identifier` [may work](#deleting_global_properties) if `identifier` refers to a configurable property of the global object, you should avoid this form and prefix it with [`globalThis`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis) instead.
 
 While other expressions are accepted, they don't lead to meaningful behaviors:
 
@@ -65,13 +66,14 @@ It is important to consider the following scenarios:
 - Non-configurable properties cannot be removed. This includes properties of built-in objects like {{jsxref("Math")}}, {{jsxref("Array")}}, {{jsxref("Object")}} and properties that are created as non-configurable with methods like {{jsxref("Object.defineProperty()")}}.
 - Deleting variables, including function parameters, never works. `delete variable` will throw a {{jsxref("SyntaxError")}} in strict mode, and will have no effect in non-strict mode.
   - Any variable declared with {{jsxref("Statements/var", "var")}} cannot be deleted from the global scope or from a function's scope, because while they may be attached to the [global object](/en-US/docs/Glossary/Global_object), they are not configurable.
-  - Any variable declared with {{jsxref("Statements/let","let")}} or {{jsxref("Statements/const","const")}} cannot be deleted from the scope within which they were defined, because they are not attached to an object.
+  - Any variable declared with {{jsxref("Statements/let", "let")}} or {{jsxref("Statements/const", "const")}} cannot be deleted from the scope within which they were defined, because they are not attached to an object.
 
 ## Examples
 
 ### Using delete
 
-> **Note:** The following example uses non-strict-mode only features, like implicitly creating global variables and deleting identifiers, which are forbidden in strict mode.
+> [!NOTE]
+> The following example uses non-strict-mode only features, like implicitly creating global variables and deleting identifiers, which are forbidden in strict mode.
 
 ```js
 // Creates the property empCount on the global scope.
@@ -184,7 +186,7 @@ Object.defineProperty(Employee, "name", { configurable: false });
 console.log(delete Employee.name); // returns false
 ```
 
-{{jsxref("Statements/var","var")}} creates non-configurable properties that cannot be deleted with the `delete` operator:
+{{jsxref("Statements/var", "var")}} creates non-configurable properties that cannot be deleted with the `delete` operator:
 
 ```js
 // Since "nameOther" is added using with the

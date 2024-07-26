@@ -13,7 +13,7 @@ The previous article showed you what the communication between web clients and s
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy. Basic understanding of how server-side code
+        Basic understanding of how server-side code
         handles and responds to HTTP requests (see <a
           href="/en-US/docs/Learn/Server-side/First_steps/Client-Server_overview"
           >Client-Server overview</a
@@ -144,7 +144,8 @@ Web frameworks often provide a mechanism to make it easy to generate other forma
 
 For example, the Django template system allows you to specify variables using a "double-handlebars" syntax (e.g. `\{{ variable_name }}`), which will be replaced by values passed in from the view function when a page is rendered. The template system also provides support for expressions (with syntax: `{% expression %}`), which allow templates to perform simple operations like iterating list values passed into the template.
 
-> **Note:** Many other templating systems use a similar syntax, e.g.: Jinja2 (Python), handlebars (JavaScript), moustache (JavaScript), etc.
+> [!NOTE]
+> Many other templating systems use a similar syntax, e.g.: Jinja2 (Python), handlebars (JavaScript), moustache (JavaScript), etc.
 
 The code snippet below shows how this works. Continuing the "youngest team" example from the previous section, the HTML template is passed a list variable called `youngest_teams` by the view. Inside the HTML skeleton we have an expression that first checks if the `youngest_teams` variable exists, and then iterates it in a `for` loop. On each iteration the template displays the team's `team_name` value in a list item.
 
@@ -190,7 +191,8 @@ There are many other possible factors, including licensing, whether or not the f
 
 If you're an absolute beginner at programming then you'll probably choose your framework based on "ease of learning". In addition to "ease of use" of the language itself, high quality documentation/tutorials and an active community helping new users are your most valuable resources. We've chosen [Django](https://www.djangoproject.com/) (Python) and [Express](https://expressjs.com/) (Node/JavaScript) to write our examples later on in the course, mainly because they are easy to learn and have good support.
 
-> **Note:** Let's go to the main websites for [Django](https://www.djangoproject.com/) (Python) and [Express](https://expressjs.com/) (Node/JavaScript) and check out their documentation and community.
+> [!NOTE]
+> Let's go to the main websites for [Django](https://www.djangoproject.com/) (Python) and [Express](https://expressjs.com/) (Node/JavaScript) and check out their documentation and community.
 >
 > 1. Navigate to the main sites (linked above)
 >
@@ -210,7 +212,8 @@ Let's now move on, and discuss a few specific server-side web frameworks.
 
 The server-side frameworks below represent _a few_ of the most popular available at the time of writing. All of them have everything you need to be productive — they are open source, are under active development, have enthusiastic communities creating documentation and helping users on discussion boards, and are used in large numbers of high-profile websites. There are many other great server-side frameworks that you can discover using a basic internet search.
 
-> **Note:** Descriptions come (partially) from the framework websites!
+> [!NOTE]
+> Descriptions come (partially) from the framework websites!
 
 ### Django (Python)
 

@@ -12,8 +12,8 @@ The **`next()`** method of {{jsxref("AsyncGenerator")}} instances returns the ne
 ## Syntax
 
 ```js-nolint
-asyncGeneratorObject.next()
-asyncGeneratorObject.next(value)
+next()
+next(value)
 ```
 
 ### Parameters
@@ -64,7 +64,8 @@ asyncGen.next().then((res) => console.log(res)); // { value: undefined, done: tr
 
 In this example, `next` is called with a value.
 
-> **Note:** The first call does not log anything, because the generator was not yielding anything initially.
+> [!NOTE]
+> The first call does not log anything, because the generator was not yielding anything initially.
 
 ```js
 // An async task. Pretend it's doing something more useful
@@ -105,4 +106,4 @@ main();
 ## See also
 
 - {{jsxref("Statements/async_function*", "async function*")}}
-- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)
+- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators) guide

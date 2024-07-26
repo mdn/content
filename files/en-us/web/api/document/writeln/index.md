@@ -1,5 +1,5 @@
 ---
-title: "document: writeln() method"
+title: "Document: writeln() method"
 short-title: writeln()
 slug: Web/API/Document/writeln
 page-type: web-api-instance-method
@@ -8,7 +8,8 @@ browser-compat: api.Document.writeln
 
 {{ ApiRef("DOM") }}
 
-> **Warning:** Use of the `document.writeln()` method is strongly discouraged.
+> [!WARNING]
+> Use of the `document.writeln()` method is strongly discouraged.
 >
 > As [the HTML spec itself warns](<https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#document.write()>):
 >

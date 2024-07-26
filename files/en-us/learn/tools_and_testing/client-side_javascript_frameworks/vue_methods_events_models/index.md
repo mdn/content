@@ -85,7 +85,7 @@ We now have an app that displays a list of to-do items. However, we can't update
 
    ```js
    components: {
-     ToDoItem, ToDoForm;
+     ToDoItem, ToDoForm,
    }
    ```
 
@@ -147,7 +147,7 @@ To make a method available to the `ToDoForm` component, we need to add it to the
    - `.stop`: Stops the event from propagating. Equivalent to [`Event.stopPropagation()`](/en-US/docs/Web/API/Event/stopPropagation) in regular JavaScript events.
    - `.prevent`: Prevents the event's default behavior. Equivalent to [`Event.preventDefault()`](/en-US/docs/Web/API/Event/preventDefault).
    - `.self`: Triggers the handler only if the event was dispatched from this exact element.
-   - `{.key}`: Triggers the event handler only via the specified key. [MDN has a list of valid key values](/en-US/docs/Web/API/UI_Events/Keyboard_event_key_values); multi-word keys just need to be converted to kebab case (e.g. `page-down`).
+   - `{.key}`: Triggers the event handler only via the specified key. [MDN has a list of valid key values](/en-US/docs/Web/API/UI_Events/Keyboard_event_key_values); multi-word keys just need to be converted to {{Glossary("kebab_case", "kebab-case")}} (e.g. `page-down`).
    - `.native`: Listens for a native event on the root (outer-most wrapping) element on your component.
    - `.once`: Listens for the event until it's been triggered once, and then no more.
    - `.left`: Only triggers the handler via the left mouse button event.
@@ -161,7 +161,7 @@ To make a method available to the `ToDoForm` component, we need to add it to the
    <form @submit.prevent="onSubmit">…</form>
    ```
 
-If you try submitting the form now, you'll notice that the page doesn't reload. If you open the console, you can see the results of the [`console.log()`](/en-US/docs/Web/API/console/log) we added inside our `onSubmit()` method.
+If you try submitting the form now, you'll notice that the page doesn't reload. If you open the console, you can see the results of the [`console.log()`](/en-US/docs/Web/API/console/log_static) we added inside our `onSubmit()` method.
 
 ## Binding data to inputs with v-model
 
@@ -201,7 +201,8 @@ The first thing we need is a `data` property in our form to track the value of t
      v-model="label" />
    ```
 
-   > **Note:** You can also sync data with `<input>` values through a combination of events and `v-bind` attributes. In fact, this is what `v-model` does behind the scenes. However, the exact event and attribute combination varies depending on input types and will take more code than just using the `v-model` shortcut.
+   > [!NOTE]
+   > You can also sync data with `<input>` values through a combination of events and `v-bind` attributes. In fact, this is what `v-model` does behind the scenes. However, the exact event and attribute combination varies depending on input types and will take more code than just using the `v-model` shortcut.
 
 3. Let's test out our use of `v-model` by logging the value of the data submitted in our `onSubmit()` method. In components, data attributes are accessed using the `this` keyword. So we access our `label` field using `this.label`.
 
@@ -225,7 +226,7 @@ The first thing we need is a `data` property in our form to track the value of t
 
 In a similar fashion to event modifiers, we can also add modifiers to change the behavior of `v-model`. In our case, there are two worth considering. The first, `.trim`, will remove whitespace from before or after the input. We can add the modifier to our `v-model` statement like so: `v-model.trim="label"`.
 
-The second modifier we should consider is called `.lazy`. This modifier changes when `v-model` syncs the value for text inputs. As mentioned earlier, `v-model` syncing works by updating the variable using events. For text inputs, this sync happens using the [`input` event](/en-US/docs/Web/API/HTMLElement/input_event). Often, this means that Vue is syncing the data after every keystroke. The `.lazy` modifier causes `v-model` to use the [`change` event](/en-US/docs/Web/API/HTMLElement/change_event) instead. This means that Vue will only sync data when the input loses focus or the form is submitted. For our purposes, this is much more reasonable since we only need the final data.
+The second modifier we should consider is called `.lazy`. This modifier changes when `v-model` syncs the value for text inputs. As mentioned earlier, `v-model` syncing works by updating the variable using events. For text inputs, this sync happens using the [`input` event](/en-US/docs/Web/API/Element/input_event). Often, this means that Vue is syncing the data after every keystroke. The `.lazy` modifier causes `v-model` to use the [`change` event](/en-US/docs/Web/API/HTMLElement/change_event) instead. This means that Vue will only sync data when the input loses focus or the form is submitted. For our purposes, this is much more reasonable since we only need the final data.
 
 To use both the `.lazy` modifier and the `.trim` modifier together, we can chain them, e.g. `v-model.lazy.trim="label"`.
 
@@ -255,14 +256,18 @@ In the `onSubmit` event handler of our `ToDoForm`, let's add a `todo-added` even
      data() {
        return {
          ToDoItems: [
-           { id: uniqueId("todo-"), label: "Learn Vue", done: false },
+           { id: "todo-" + nanoid(), label: "Learn Vue", done: false },
            {
-             id: uniqueId("todo-"),
+             id: "todo-" + nanoid(),
              label: "Create a Vue project with the CLI",
              done: true,
            },
-           { id: uniqueId("todo-"), label: "Have fun", done: true },
-           { id: uniqueId("todo-"), label: "Create a to-do list", done: false },
+           { id: "todo-" + nanoid(), label: "Have fun", done: true },
+           {
+             id: "todo-" + nanoid(),
+             label: "Create a to-do list",
+             done: false,
+           },
          ],
        };
      },
@@ -314,7 +319,7 @@ Now that we have the data from `ToDoForm` available in `App.vue`, we need to add
 
    ```js
    addToDo(toDoLabel) {
-     this.ToDoItems.push({id:uniqueId('todo-'), label: toDoLabel, done: false});
+     this.ToDoItems.push({id: "todo-" + nanoid(), label: toDoLabel, done: false});
    }
    ```
 

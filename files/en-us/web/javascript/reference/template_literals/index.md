@@ -5,7 +5,7 @@ page-type: javascript-language-feature
 browser-compat: javascript.grammar.template_literals
 ---
 
-{{JsSidebar("More")}}
+{{jsSidebar("More")}}
 
 **Template literals** are literals delimited with backtick (`` ` ``) characters, allowing for [multi-line strings](#multi-line_strings), [string interpolation](#string_interpolation) with embedded expressions, and special constructs called [tagged templates](#tagged_templates).
 
@@ -112,8 +112,8 @@ let classes = "header";
 classes += isLargeScreen()
   ? ""
   : item.isCollapsed
-  ? " icon-expander"
-  : " icon-collapser";
+    ? " icon-expander"
+    : " icon-collapser";
 ```
 
 With a template literal but without nesting, you could do this:
@@ -151,7 +151,7 @@ function myTag(strings, personExp, ageExp) {
   const str1 = strings[1]; // " is a "
   const str2 = strings[2]; // "."
 
-  const ageStr = ageExp > 99 ? "centenarian" : "youngster";
+  const ageStr = ageExp < 100 ? "youngster" : "centenarian";
 
   // We can even return a string built using a template literal
   return `${str0}${personExp}${str1}${ageStr}${str2}`;
@@ -187,14 +187,14 @@ console.log(`Hello``World`); // TypeError: "Hello" is not a function
 
 The only exception is optional chaining, which will throw a syntax error.
 
-```js example-bad
+```js-nolint example-bad
 console.log?.`Hello`; // SyntaxError: Invalid tagged template on optional chain
 console?.log`Hello`; // SyntaxError: Invalid tagged template on optional chain
 ```
 
 Note that these two expressions are still parsable. This means they would not be subject to [automatic semicolon insertion](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion), which will only insert semicolons to fix code that's otherwise unparsable.
 
-```js example-bad
+```js-nolint example-bad
 // Still a syntax error
 const a = console?.log
 `Hello`
@@ -318,29 +318,33 @@ In normal template literals, [the escape sequences in string literals](/en-US/do
 
 However, this is problematic for tagged templates, which, in addition to the "cooked" literal, also have access to the raw literals (escape sequences are preserved as-is).
 
-Tagged templates should allow the embedding of languages (for example [DSLs](https://en.wikipedia.org/wiki/Domain-specific_language), or [LaTeX](https://en.wikipedia.org/wiki/LaTeX)), where other escapes sequences are common. Therefore, the syntax restriction of well-formed escape sequences is removed from tagged templates.
+Tagged templates enable the embedding of arbitrary string content, where escape sequences may follow a different syntax. Consider for a simple example where we embed [LaTeX](https://en.wikipedia.org/wiki/LaTeX) source text in JavaScript via `String.raw`. We want to still be able to use LaTeX macros that start with `u` or `x` without following JavaScript syntax restrictions. Therefore, the syntax restriction of well-formed escape sequences is removed from tagged templates. The example below uses [MathJax](https://www.mathjax.org/) to render LaTeX in one element:
 
 ```js
-latex`\unicode`;
+const node = document.getElementById("formula");
+MathJax.typesetClear([node]);
 // Throws in older ECMAScript versions (ES2016 and earlier)
 // SyntaxError: malformed Unicode character escape sequence
+node.textContent = String.raw`$\underline{u}$`;
+MathJax.typesetPromise([node]);
 ```
 
 However, illegal escape sequences must still be represented in the "cooked" representation. They will show up as {{jsxref("undefined")}} element in the "cooked" array:
 
 ```js
-function latex(str) {
-  return { cooked: str[0], raw: str.raw[0] };
+function log(str) {
+  console.log("Cooked:", str[0]);
+  console.log("Raw:", str.raw[0]);
 }
 
-latex`\unicode`;
-
-// { cooked: undefined, raw: "\\unicode" }
+log`\unicode`;
+// Cooked: undefined
+// Raw: \unicode
 ```
 
 Note that the escape-sequence restriction is only dropped from _tagged_ templates, but not from _untagged_ template literals:
 
-```js example-bad
+```js-nolint example-bad
 const bad = `bad escape sequence: \unicode`;
 ```
 
@@ -354,7 +358,7 @@ const bad = `bad escape sequence: \unicode`;
 
 ## See also
 
-- [Text formatting](/en-US/docs/Web/JavaScript/Guide/Text_formatting)
+- [Text formatting](/en-US/docs/Web/JavaScript/Guide/Text_formatting) guide
 - {{jsxref("String")}}
 - {{jsxref("String.raw()")}}
 - [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)

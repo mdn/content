@@ -8,7 +8,7 @@ status:
 browser-compat: api.XRFrame.createAnchor
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`createAnchor()`** method of the {{domxref("XRFrame")}} interface creates a free-floating {{domxref("XRAnchor")}} which will be fixed relative to the real world.
 

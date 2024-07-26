@@ -19,6 +19,8 @@ If the writing mode is vertically oriented, the value of `inline-size` relates t
 /* <length> values */
 inline-size: 300px;
 inline-size: 25em;
+inline-size: anchor-size(width);
+inline-size: anchor-size(--myAnchor inline);
 
 /* <percentage> values */
 inline-size: 75%;
@@ -26,6 +28,7 @@ inline-size: 75%;
 /* Keyword values */
 inline-size: max-content;
 inline-size: min-content;
+inline-size: fit-content;
 inline-size: fit-content(20em);
 inline-size: auto;
 

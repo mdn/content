@@ -13,7 +13,7 @@ In the [previous article](/en-US/docs/Learn/Forms/Basic_native_form_controls) we
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, and a basic
+        A basic
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
           >understanding of HTML</a
         >.
@@ -29,7 +29,8 @@ In the [previous article](/en-US/docs/Learn/Forms/Basic_native_form_controls) we
   </tbody>
 </table>
 
-> **Note:** Most of the features discussed in this article have wide support across browsers. We'll note any exceptions. If you want more detail on browser support, you should consult our [HTML forms element reference](/en-US/docs/Web/HTML/Element#forms), and in particular our extensive [\<input> types](/en-US/docs/Web/HTML/Element/input) reference.
+> [!NOTE]
+> Most of the features discussed in this article have wide support across browsers. We'll note any exceptions. If you want more detail on browser support, you should consult our [HTML forms element reference](/en-US/docs/Web/HTML/Element#forms), and in particular our extensive [\<input> types](/en-US/docs/Web/HTML/Element/input) reference.
 
 Because HTML form control appearance may be quite different from a designer's specifications, web developers sometimes build their own custom form controls. We cover this in an advanced tutorial: [How to build custom form widgets](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls).
 
@@ -55,7 +56,8 @@ On some devices — notably, touch devices with dynamic keyboards like smartphon
 
 ![Firefox for Android email keyboard, with the at sign displayed by default.](fx-android-email-type-keyboard.jpg)
 
-> **Note:** You can find examples of the basic text input types at [basic input examples](https://mdn.github.io/learning-area/html/forms/basic-input-examples/) (see the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/basic-input-examples/index.html) also).
+> [!NOTE]
+> You can find examples of the basic text input types at [basic input examples](https://mdn.github.io/learning-area/html/forms/basic-input-examples/) (see the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/basic-input-examples/index.html) also).
 
 This is another good reason for using these newer input types, improving the user experience for users of these devices.
 
@@ -67,7 +69,8 @@ But it _should not be considered_ an exhaustive security measure! Your apps shou
 
 Note that `a@b` is a valid email address according to the default provided constraints. This is because the `email` input type allows intranet email addresses by default. To implement different validation behavior, you can use the [`pattern`](/en-US/docs/Web/HTML/Attributes/pattern) attribute, and you can also customize the error messages; we'll talk about how to use these features in the [Client-side form validation](/en-US/docs/Learn/Forms/Form_validation) article later on.
 
-> **Note:** If the data entered is not an email address, the {{cssxref(':invalid')}} pseudo-class will match, and the {{domxref('validityState.typeMismatch')}} property will return `true`.
+> [!NOTE]
+> If the data entered is not an email address, the {{cssxref(':invalid')}} pseudo-class will match, and the {{domxref('validityState.typeMismatch')}} property will return `true`.
 
 ## Search field
 
@@ -117,7 +120,8 @@ See below for an example (taken on Firefox for Android):
 
 ![Firefox for Android email keyboard, with ampersand displayed by default.](fx-android-url-type-keyboard.jpg)
 
-> **Note:** Just because the URL is well-formed doesn't necessarily mean that it refers to a location that actually exists!
+> [!NOTE]
+> Just because the URL is well-formed doesn't necessarily mean that it refers to a location that actually exists!
 
 ## Numeric field
 
@@ -191,7 +195,8 @@ price.addEventListener("input", () => {
 
 Here we store references to the `range` input and the `output` in two variables. Then we immediately set the `output`'s [`textContent`](/en-US/docs/Web/API/Node/textContent) to the current `value` of the input. Finally, an event listener is set to ensure that whenever the range slider is moved, the `output`'s `textContent` is updated to the new value.
 
-> **Note:** There is a nice tutorial covering this subject on CSS Tricks: [The Output Element](https://css-tricks.com/the-output-element/).
+> [!NOTE]
+> There is a nice tutorial covering this subject on CSS Tricks: [The Output Element](https://css-tricks.com/the-output-element/).
 
 ## Date and time pickers
 

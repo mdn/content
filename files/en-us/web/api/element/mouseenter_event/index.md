@@ -10,6 +10,8 @@ browser-compat: api.Element.mouseenter_event
 
 The **`mouseenter`** event is fired at an {{domxref("Element")}} when a pointing device (usually a mouse) is initially moved so that its hotspot is within the element at which the event was fired.
 
+Note that "moving into an event" refers to the element's position in the DOM tree, not to its visual position. For example, if a child element is positioned so it is placed outside its parent, then moving into the child element will trigger `mouseenter` on the parent element, even though the pointer is still outside the bounds of the parent element.
+
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
@@ -22,7 +24,7 @@ onmouseenter = (event) => {};
 
 ## Event type
 
-A {{domxref("MouseEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("MouseEvent")}}. Inherits from {{domxref("UIEvent")}} and {{domxref("Event")}}.
 
 {{InheritanceDiagram("MouseEvent")}}
 
@@ -37,9 +39,9 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 - {{domxref("MouseEvent.buttons")}} {{ReadOnlyInline}}
   - : The buttons being pressed (if any) when the mouse event was fired.
 - {{domxref("MouseEvent.clientX")}} {{ReadOnlyInline}}
-  - : The X coordinate of the mouse pointer in local (DOM content) coordinates.
+  - : The X coordinate of the mouse pointer in [viewport coordinates](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems#viewport).
 - {{domxref("MouseEvent.clientY")}} {{ReadOnlyInline}}
-  - : The Y coordinate of the mouse pointer in local (DOM content) coordinates.
+  - : The Y coordinate of the mouse pointer in [viewport coordinates](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems#viewport).
 - {{domxref("MouseEvent.ctrlKey")}} {{ReadOnlyInline}}
   - : Returns `true` if the <kbd>control</kbd> key was down when the mouse event was fired.
 - {{domxref("MouseEvent.layerX")}} {{Non-standard_inline}} {{ReadOnlyInline}}
@@ -63,9 +65,9 @@ _This interface also inherits properties of its parents, {{domxref("UIEvent")}} 
 - {{domxref("MouseEvent.relatedTarget")}} {{ReadOnlyInline}}
   - : The secondary target for the event, if there is one.
 - {{domxref("MouseEvent.screenX")}} {{ReadOnlyInline}}
-  - : The X coordinate of the mouse pointer in global (screen) coordinates.
+  - : The X coordinate of the mouse pointer in [screen coordinates](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems#screen).
 - {{domxref("MouseEvent.screenY")}} {{ReadOnlyInline}}
-  - : The Y coordinate of the mouse pointer in global (screen) coordinates.
+  - : The Y coordinate of the mouse pointer in [screen coordinates](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems#screen).
 - {{domxref("MouseEvent.shiftKey")}} {{ReadOnlyInline}}
   - : Returns `true` if the <kbd>shift</kbd> key was down when the mouse event was fired.
 - {{domxref("MouseEvent.mozInputSource")}} {{non-standard_inline()}} {{ReadOnlyInline}}
@@ -92,7 +94,7 @@ One `mouseenter` event is sent to each element of the hierarchy when entering th
 ![Mouseover behavior diagram](mouseover.png)
 A single `mouseover` event is sent to the deepest element of the DOM tree, then it bubbles up the hierarchy until it is canceled by a handler or reaches the root.
 
-With deep hierarchies, the number of `mouseover` events sent can be quite huge and cause significant performance problems. In such cases, it is better to listen for `mouseenter` events.
+With deep hierarchies, the number of `mouseenter` events sent can be quite huge and cause significant performance problems. In such cases, it is better to listen for `mouseover` events.
 
 Combined with the corresponding `mouseleave` (which is fired at the element when the mouse exits its content area), the `mouseenter` event acts in a very similar way to the CSS {{cssxref(':hover')}} pseudo-class.
 
@@ -183,6 +185,5 @@ function addListItem(text) {
 - {{domxref("Element/dblclick_event", "dblclick")}}
 - {{domxref("Element/mouseover_event", "mouseover")}}
 - {{domxref("Element/mouseout_event", "mouseout")}}
-- {{domxref("Element/mouseenter_event", "mouseenter")}}
 - {{domxref("Element/mouseleave_event", "mouseleave")}}
 - {{domxref("Element/contextmenu_event", "contextmenu")}}

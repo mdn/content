@@ -48,19 +48,21 @@ where `<policy-directive>` consists of:
   - : Defines the valid sources for [web workers](/en-US/docs/Web/API/Web_Workers_API) and nested browsing contexts loaded using elements such as
     {{HTMLElement("frame")}} and {{HTMLElement("iframe")}}.
 
-    > **Warning:** Instead of **`child-src`**,
+    > [!WARNING]
+    > Instead of **`child-src`**,
     > if you want to regulate nested browsing contexts and workers,
     > you should use the {{CSP("frame-src")}} and {{CSP("worker-src")}} directives, respectively.
 
 - {{CSP("connect-src")}}
   - : Restricts the URLs which can be loaded using script interfaces.
 - {{CSP("default-src")}}
-  - : Serves as a fallback for the other {{Glossary("Fetch directive", "fetch
-    directives")}}.
+  - : Serves as a fallback for the other {{Glossary("Fetch directive", "fetch directives")}}.
+- {{CSP("fenced-frame-src")}} {{experimental_inline}}
+  - : Specifies valid sources for nested browsing contexts loaded into {{HTMLElement("fencedframe")}} elements.
 - {{CSP("font-src")}}
   - : Specifies valid sources for fonts loaded using {{cssxref("@font-face")}}.
 - {{CSP("frame-src")}}
-  - : Specifies valid sources for nested browsing contexts loading using elements such as
+  - : Specifies valid sources for nested browsing contexts loaded into elements such as
     {{HTMLElement("frame")}} and {{HTMLElement("iframe")}}.
 - {{CSP("img-src")}}
   - : Specifies valid sources of images and favicons.
@@ -73,7 +75,8 @@ where `<policy-directive>` consists of:
 
   - : Specifies valid sources for the {{HTMLElement("object")}} and {{HTMLElement("embed")}} elements.
 
-    > **Note:** Elements controlled by `object-src` are perhaps
+    > [!NOTE]
+    > Elements controlled by `object-src` are perhaps
     > coincidentally considered legacy HTML elements and are not receiving new standardized
     > features (such as the security attributes `sandbox` or `allow`
     > for `<iframe>`). Therefore it is **recommended** to
@@ -122,10 +125,6 @@ for example.
 - {{CSP("frame-ancestors")}}
   - : Specifies valid parents that may embed a page using {{HTMLElement("frame")}},
     {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, or {{HTMLElement("embed")}}.
-- {{CSP("navigate-to")}} {{experimental_inline}}
-  - : Restricts the URLs to which a document can initiate navigation by any means,
-    including {{HTMLElement("form")}} (if {{CSP("form-action")}} is not specified),
-    {{HTMLElement("a")}}, {{DOMxRef("window.location")}}, {{DOMxRef("window.open")}}, etc.
 
 ### Reporting directives
 
@@ -138,7 +137,8 @@ Reporting directives control the reporting process of CSP violations. See also t
     These violation reports consist of {{Glossary("JSON")}} documents sent via an HTTP
     `POST` request to the specified URI.
 
-    > **Warning:** Though the {{CSP("report-to")}} directive is intended
+    > [!WARNING]
+    > Though the {{CSP("report-to")}} directive is intended
     > to replace the deprecated **`report-uri`** directive,
     > {{CSP("report-to")}} is not supported in most browsers yet.
     > So for compatibility with current browsers
@@ -173,12 +173,6 @@ Reporting directives control the reporting process of CSP violations. See also t
 
 - {{CSP("block-all-mixed-content")}} {{deprecated_inline}}
   - : Prevents loading any assets using HTTP when the page is loaded using HTTPS.
-- {{CSP("plugin-types")}} {{deprecated_inline}} {{Non-standard_Inline}}
-  - : Restricts the set of plugins that can be embedded into a document by limiting the
-    types of resources which can be loaded.
-- {{CSP("referrer")}} {{deprecated_inline}} {{non-standard_inline}}
-  - : Used to specify information in the [Referer](/en-US/docs/Web/HTTP/Headers/Referer) (sic) header for links away
-    from a page. Use the {{HTTPHeader("Referrer-Policy")}} header instead.
 
 ## Values
 
@@ -195,17 +189,20 @@ For detailed reference see [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Cont
   - : The trust granted to a script in the page due to an accompanying nonce or hash is extended to the scripts it loads.
 - `'report-sample'`
   - : Require a sample of the violating code to be included in the violation report.
+- `'inline-speculation-rules'`
+  - : Allows the inclusion of [speculation rules](/en-US/docs/Web/API/Speculation_Rules_API) in scripts (see also [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Element/script/type/speculationrules)).
 
 ### Unsafe keyword values
 
 - `'unsafe-inline'`
   - : Allow use of inline resources.
 - `'unsafe-eval'`
-  - : Allow use of dynamic code evaluation such as {{jsxref("Global_Objects/eval", "eval")}}, {{domxref("Window.setImmediate", "setImmediate")}} {{non-standard_inline}}, and `window.execScript` {{non-standard_inline}}.
+  - : Allow use of dynamic code evaluation such as {{jsxref("Global_Objects/eval", "eval")}}, {{domxref("setTimeout()")}}, and `window.execScript` {{non-standard_inline}}.
 - `'unsafe-hashes'`
   - : Allows enabling specific inline event handlers.
-- `'unsafe-allow-redirects'` {{experimental_inline}}
-  - : TBD
+- `'wasm-unsafe-eval'`
+  - : Allows the loading and execution of WebAssembly modules without the need to also allow unsafe JavaScript execution via `'unsafe-eval'`.
+    The single quotes are required.
 
 ### Hosts values
 
@@ -262,7 +259,7 @@ Content-Security-Policy: connect-src http://example.com/;
 ## Examples
 
 Example: Disable unsafe inline/eval, only allow loading of resources (images, fonts,
-scripts, etc.) over https:
+scripts, etc.) over http:
 
 ### Using the HTTP header
 
@@ -290,7 +287,7 @@ would have occurred:
 Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violation-report-endpoint/
 ```
 
-See [Mozilla Web Security Guidelines](https://infosec.mozilla.org/guidelines/web_security#Examples_5) for more examples.
+See [Content Security Policy (CSP) implementation](/en-US/docs/Web/Security/Practical_implementation_guides/CSP) for more examples.
 
 ## Specifications
 

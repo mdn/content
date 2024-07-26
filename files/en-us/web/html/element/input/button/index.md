@@ -11,13 +11,14 @@ browser-compat: html.elements.input.type_button
 
 {{EmbedInteractiveExample("pages/tabbed/input-button.html", "tabbed-shorter")}}
 
-> **Note:** While `<input>` elements of type `button` are still perfectly valid HTML, the newer {{HTMLElement("button")}} element is now the favored way to create buttons. Given that a {{HTMLElement("button")}}'s label text is inserted between the opening and closing tags, you can include HTML in the label, even images.
+> [!NOTE]
+> While `<input>` elements of type `button` are still perfectly valid HTML, the newer {{HTMLElement("button")}} element is now the favored way to create buttons. Given that a {{HTMLElement("button")}}'s label text is inserted between the opening and closing tags, you can include HTML in the label, even images.
 
 ## Value
 
 ### Button with a value
 
-An `<input type="button">` elements' [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute contains a string that is used as the button's label.
+An `<input type="button">` elements' [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute contains a string that is used as the button's label. The `value` provides the {{glossary("accessible description")}} for the button.
 
 ```html
 <input type="button" value="Click Me" />
@@ -103,7 +104,8 @@ function updateButton() {
 
 {{EmbedLiveSample("Adding_keyboard_shortcuts_to_buttons", 650, 100)}}
 
-> **Note:** The problem with the above example of course is that the user will not know what the access key is! In a real site, you'd have to provide this information in a way that doesn't interfere with the site design (for example by providing an easily accessible link that points to information on what the site accesskeys are).
+> [!NOTE]
+> The problem with the above example of course is that the user will not know what the access key is! In a real site, you'd have to provide this information in a way that doesn't interfere with the site design (for example by providing an easily accessible link that points to information on what the site accesskeys are).
 
 ### Disabling and enabling a button
 
@@ -169,7 +171,8 @@ function disableButton() {
 
 {{EmbedLiveSample("Inheriting_the_disabled_state", 650, 100)}}
 
-> **Note:** Firefox will, unlike other browsers, by default, [persist the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Use the [`autocomplete`](/en-US/docs/Web/HTML/Element/button#autocomplete) attribute to control this feature.
+> [!NOTE]
+> Unlike other browsers, Firefox persists the `disabled` state of an `<input>` element even after the page is reloaded. As a workaround, set the `<input>` element's [`autocomplete`](/en-US/docs/Web/HTML/Element/input#autocomplete) attribute to `off`. (See [Firefox bug 654072](https://bugzil.la/654072) for more details.)
 
 ## Validation
 
@@ -233,7 +236,7 @@ const width = (canvas.width = window.innerWidth);
 const height = (canvas.height = window.innerHeight - 85);
 const ctx = canvas.getContext("2d");
 
-ctx.fillStyle = "rgb(0,0,0)";
+ctx.fillStyle = "rgb(0 0 0)";
 ctx.fillRect(0, 0, width, height);
 
 const colorPicker = document.querySelector('input[type="color"]');
@@ -272,7 +275,7 @@ canvas.onmouseup = () => {
 };
 
 clearBtn.onclick = () => {
-  ctx.fillStyle = "rgb(0,0,0)";
+  ctx.fillStyle = "rgb(0 0 0)";
   ctx.fillRect(0, 0, width, height);
 };
 

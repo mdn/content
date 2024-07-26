@@ -6,7 +6,7 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-In {{Glossary("JavaScript")}}, a **truthy** value is a value that is considered `true` when encountered in a {{Glossary("Boolean")}} context. All values are truthy unless they are defined as {{Glossary("Falsy", "falsy")}}. That is, all values are _truthy_ except `false`, `0`, `-0`, `0n`, `""`, `null`, `undefined`, and `NaN`.
+In {{Glossary("JavaScript")}}, a **truthy** value is a value that is considered `true` when encountered in a {{Glossary("Boolean")}} context. All values are truthy unless they are defined as {{Glossary("Falsy", "falsy")}}. That is, all values are _truthy_ except `false`, `0`, `-0`, `0n`, `""`, `null`, `undefined`, `NaN`, and {{domxref("document.all")}}.
 
 {{Glossary("JavaScript")}} uses {{Glossary("Type_Coercion", "type coercion")}} in Boolean contexts.
 
@@ -42,7 +42,8 @@ true && "dog"
 
 ## See also
 
-- {{Glossary("Falsy")}}
-- {{Glossary("Type_Coercion", "Type coercion")}}
-- {{Glossary("Boolean")}}
+- Related glossary terms:
+  - {{Glossary("Falsy")}}
+  - {{Glossary("Type_Coercion", "Type coercion")}}
+  - {{Glossary("Boolean")}}
 - [Boolean coercion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean#boolean_coercion)

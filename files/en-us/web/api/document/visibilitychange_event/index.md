@@ -38,14 +38,19 @@ The transition to `hidden` is also a good point at which pages can stop making U
 
 ### Pausing music on transitioning to hidden
 
-This example begins playing a music track when the document becomes visible, and pauses the music when the document is no longer visible.
+This example pauses playing audio when the page is hidden and resumes playing when the page becomes visible again.
+For a full example, see the [Page Visibility API: Pausing audio on page hide](/en-US/docs/Web/API/Page_Visibility_API#pausing_audio_on_page_hide) documentation.
 
 ```js
 document.addEventListener("visibilitychange", () => {
-  if (document.visibilityState === "visible") {
-    backgroundMusic.play();
+  if (document.hidden) {
+    playingOnHide = !audio.paused;
+    audio.pause();
   } else {
-    backgroundMusic.pause();
+    // Resume playing if audio was "playing on hide"
+    if (playingOnHide) {
+      audio.play();
+    }
   }
 });
 ```
@@ -75,5 +80,6 @@ document.onvisibilitychange = () => {
 
 - [Page Visibility API](/en-US/docs/Web/API/Page_Visibility_API)
 - {{domxref("Document.visibilityState")}}
+- {{domxref("Document.hidden")}}
 - [Don't lose user and app state, use Page Visibility](https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/) explains in detail why you should use `visibilitychange`, not `beforeunload`/`unload`.
 - [Page Lifecycle API](https://developer.chrome.com/blog/page-lifecycle-api/) gives best-practices guidance on handling page lifecycle behavior in your web applications.

@@ -17,8 +17,10 @@ Before you can define scroll snapping, you need to enable scrolling on a scroll 
 You can then define scroll snapping on the scroll container by using the following two key properties:
 
 - {{cssxref("scroll-snap-type")}}: Using this property, you can define whether or not the scrollable viewport can be snapped to, whether snapping is required or optional, and the axis on which the snapping should occur.
-- {{cssxref("scroll-snap-align")}}: This property is set on every child of the scroll container and you can use it to define each child's snap position or lack thereof. (Using the {{cssxref("scroll-snap-stop")}} property, you can ensure that a child is snapped to during scrolling and not passed over. You can also set several {{cssxref("scroll-margin")}} properties on child elements that are snapped to during scrolling to create an outset from the defined box.)
-  Optional {{cssxref("scroll-padding")}} properties can be set on the scroll container to create a snapping offset.
+- {{cssxref("scroll-snap-align")}}: This property is set on every child of the scroll container and you can use it to define each child's snap position or lack thereof.
+- {{cssxref("scroll-snap-stop")}}: This property ensures that a child is snapped to during scrolling and not passed over.
+- {{cssxref("scroll-margin")}}: This property can be set on child elements that are snapped to during scrolling to create an outset from the defined box.
+- {{cssxref("scroll-padding")}}: This property can be set on the scroll container to create a snapping offset.
 
 The example below demonstrates scroll snapping along the vertical axis, which is defined by `scroll-snap-type`. Additionally, `scroll-snap-align` applies on all the children of the `<section>` element, dictating the point where the scrolling of each child should stop.
 
@@ -79,7 +81,7 @@ With this property definition, you can ensure that users see each section of the
 ## See also
 
 - [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap) module
-- [Well-controlled scrolling with CSS scroll snap](https://web.dev/css-scroll-snap/) on web.dev (2021)
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap) on web.dev (2021)
 - [Practical CSS scroll snapping](https://css-tricks.com/practical-css-scroll-snapping/) on CSS-Tricks (2020)
 - [CSS scroll snap](https://12daysofweb.dev/2022/css-scroll-snap/) on 12 Days of Web (2019)
 - [Scroll snap examples](https://codepen.io/collection/KpqBGW) on Codepen

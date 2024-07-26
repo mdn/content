@@ -5,7 +5,7 @@ page-type: javascript-language-feature
 browser-compat: javascript.regular_expressions.lookahead_assertion
 ---
 
-{{JsSidebar}}
+{{jsSidebar}}
 
 A **lookahead assertion** "looks ahead": it attempts to match the subsequent input with the given pattern, but it does not consume any of the input — if the match is successful, the current position in the input stays the same.
 
@@ -39,11 +39,11 @@ Unlike other regular expression operators, there's no backtracking into a lookah
 The matching of the pattern above happens as follows:
 
 1. The lookahead `(a+)` succeeds before the first `"a"` in `"baabac"`, and `"aa"` is captured because the quantifier is greedy.
-2. `a*b` matches the `"b"` in `"baabac"`.
+2. `a*b` matches the `"aab"` in `"baabac"` because lookaheads don't consume their matched strings.
 3. `\1` does not match the following string, because that requires 2 `"a"`s, but only 1 is available. So the matcher backtracks, but it doesn't go into the lookahead, so the capturing group cannot be reduced to 1 `"a"`, and the entire match fails at this point.
-4. `exec()` re-attempts matching at the next position — before the second `"a"`. This time, the lookahead matches `"a"`, and `a*b` matches `"b"`. The backreference `\1` matches the captured `"a"`, and the match succeeds.
+4. `exec()` re-attempts matching at the next position — before the second `"a"`. This time, the lookahead matches `"a"`, and `a*b` matches `"ab"`. The backreference `\1` matches the captured `"a"`, and the match succeeds.
 
-If the regex is able to backtrack into the lookahead and revise the choice made in there, then the match would succeed at step 3 by `(a+)` matching the first `"a"` (instead of the first two `"a"`s) and `a*b` matching `"ab"`, without even re-attempting the next input position.
+If the regex is able to backtrack into the lookahead and revise the choice made in there, then the match would succeed at step 3 by `(a+)` matching the first `"a"` (instead of the first two `"a"`s) and `a*b` matching `"aab"`, without even re-attempting the next input position.
 
 Negative lookaheads can contain capturing groups as well, but backreferences only make sense within the `pattern`, because if matching continues, `pattern` would necessarily be unmatched (otherwise the assertion fails). This means outside of the `pattern`, backreferences to those capturing groups in negative lookaheads always succeed. For example:
 
@@ -125,8 +125,8 @@ If you are doing intersection and subtraction with finitely many characters, you
 
 ## See also
 
-- [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
-- [Regular expressions reference](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
+- [Assertions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions) guide
+- [Regular expressions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions)
 - [Input boundary assertion: `^`, `$`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Input_boundary_assertion)
 - [Word boundary assertion: `\b`, `\B`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Word_boundary_assertion)
 - [Lookbehind assertion: `(?<=...)`, `(?<!...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookbehind_assertion)

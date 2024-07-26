@@ -6,7 +6,7 @@ page-type: web-api-static-property
 browser-compat: api.PushManager.supportedContentEncodings_static
 ---
 
-{{APIRef("Push API")}}
+{{APIRef("Push API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`supportedContentEncodings`** read-only static property of the
 {{domxref("PushManager")}} interface returns an array of supported content codings that

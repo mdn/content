@@ -15,6 +15,10 @@ The **`toString()`** method of {{jsxref("Error")}} instances returns a string re
 toString()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A string representing the specified {{jsxref("Error")}} object.
@@ -83,4 +87,4 @@ console.log(e5.toString()); // "hello"
 
 ## See also
 
-- [A polyfill of `Error.prototype.toString`](https://github.com/zloirock/core-js#ecmascript-error) with many bug fixes is available in [`core-js`](https://github.com/zloirock/core-js)
+- [Polyfill of `Error.prototype.toString` with many bug fixes in `core-js`](https://github.com/zloirock/core-js#ecmascript-error)

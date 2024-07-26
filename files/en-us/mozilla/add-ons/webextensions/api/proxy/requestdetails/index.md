@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.proxy.RequestDetails
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Contains information about a web request. An instance of this object is passed into the {{WebExtAPIRef("proxy.onRequest")}} listener.
 
@@ -14,7 +14,7 @@ Contains information about a web request. An instance of this object is passed i
 Values of this type are objects. They contain the following properties:
 
 - `cookieStoreId`
-  - : `string`. The cookie store ID of the current context.
+  - : `string`. The cookie store ID of the current context. See [Work with contextual identities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) for more information.
 - `documentUrl`
   - : `string`. URL of the page into which the requested resource will be loaded.
 - `frameId`

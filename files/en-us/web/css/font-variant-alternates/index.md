@@ -7,7 +7,7 @@ browser-compat: css.properties.font-variant-alternates
 
 {{CSSRef}}
 
-The **`font-variant-alternates`** CSS property controls the usage of alternate glyphs. These alternate glyphs may be referenced by alternative names defined in {{cssxref("@font-feature-values")}}.
+The **`font-variant-alternates`** [CSS](/en-US/docs/Web/CSS) property controls the usage of alternate glyphs. These alternate glyphs may be referenced by alternative names defined in {{cssxref("@font-feature-values")}}.
 
 The {{cssxref("@font-feature-values")}} at-rule can be used to associate, for a given font face, a human-readable name with a numeric index that controls a particular OpenType font feature. For features that select alternative glyphs (`stylistic`, `styleset`, `character-variant`, `swash`, `ornament` or `annotation`), the `font-variant-alternates` property can then reference the human-readable name in order to apply the associated feature.
 

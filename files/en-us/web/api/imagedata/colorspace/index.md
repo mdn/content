@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.ImageData.colorSpace
 ---
 
-{{APIRef("Canvas API")}}
+{{APIRef("Canvas API")}}{{AvailableInWorkers}}
 
 The read-only **`ImageData.colorSpace`** property is a string indicating the color space of the image data.
 
@@ -49,7 +49,7 @@ console.log(srgbImageData.colorSpace); // "srgb"
 ## See also
 
 - [`CanvasRenderingContext2D.createImageData()`](/en-US/docs/Web/API/CanvasRenderingContext2D/createImageData)
-- [`CanvasRenderingContext2D.getImageData()`](/en-US/docs/Web/API/CanvasRenderingContext2D/createImageData)
+- [`CanvasRenderingContext2D.getImageData()`](/en-US/docs/Web/API/CanvasRenderingContext2D/getImageData)
 - [`colorSpace` setting in `canvas.getContext()`](/en-US/docs/Web/API/HTMLCanvasElement/getContext#colorspace)
 - Setting WebGL color spaces:
   - [`WebGLRenderingContext.drawingBufferColorSpace`](/en-US/docs/Web/API/WebGLRenderingContext/drawingBufferColorSpace)

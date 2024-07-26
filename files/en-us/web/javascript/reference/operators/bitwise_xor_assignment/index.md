@@ -19,7 +19,7 @@ x ^= y
 
 ## Description
 
-`x ^= y` is equivalent to `x = x ^ y`.
+`x ^= y` is equivalent to `x = x ^ y`, except that the expression `x` is only evaluated once.
 
 ## Examples
 
@@ -52,4 +52,4 @@ console.log(c); // 6n
 ## See also
 
 - [Assignment operators in the JS guide](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators)
-- [Bitwise XOR operator](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR)
+- [Bitwise XOR (`^`)](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_XOR)

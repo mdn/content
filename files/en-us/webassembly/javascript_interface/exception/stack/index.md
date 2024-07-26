@@ -1,9 +1,10 @@
 ---
 title: WebAssembly.Exception.prototype.stack
 slug: WebAssembly/JavaScript_interface/Exception/stack
+page-type: webassembly-instance-property
 status:
   - non-standard
-browser-compat: javascript.builtins.WebAssembly.Exception.stack
+browser-compat: webassembly.api.Exception.stack
 ---
 
 {{WebAssemblySidebar}} {{non-standard_header}}
@@ -15,7 +16,8 @@ Exceptions from WebAssembly code do not include a stack trace by default.
 If WebAssembly code needs to provide a stack trace, it must call a JavaScript function to create the exception, passing `options.traceStack=true` parameter in the [constructor](/en-US/docs/WebAssembly/JavaScript_interface/Exception/Exception).
 The virtual machine can then attach a stack trace to the exception object returned by the constructor.
 
-> **Note:** Stack traces are not normally sent from WebAssembly code to improve performance.
+> [!NOTE]
+> Stack traces are not normally sent from WebAssembly code to improve performance.
 > The ability to add stack traces to these exceptions is provided for developer tooling, and is not generally recommended for broader use.
 
 ## Value

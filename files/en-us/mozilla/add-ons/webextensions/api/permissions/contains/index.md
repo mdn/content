@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.permissions.contains
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Check whether the extension has the permissions listed in the given {{WebExtAPIRef("permissions.Permissions")}} object.
 
@@ -74,4 +74,5 @@ console.log(testResult4); // false: "https://example.org/", `origins` doesn't ma
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.permissions`](https://developer.chrome.com/docs/extensions/reference/permissions/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.permissions`](https://developer.chrome.com/docs/extensions/reference/permissions/) API.

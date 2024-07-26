@@ -6,9 +6,9 @@ page-type: web-api-instance-property
 browser-compat: api.AbortSignal.aborted
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
-The **`aborted`** read-only property returns a value that indicates whether the DOM requests the signal is communicating with are aborted (`true`) or not (`false`).
+The **`aborted`** read-only property returns a value that indicates whether the asynchronous operations the signal is communicating with are aborted (`true`) or not (`false`).
 
 ## Value
 

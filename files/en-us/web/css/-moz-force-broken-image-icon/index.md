@@ -27,7 +27,9 @@ The **`-moz-force-broken-image-icon`** extended CSS property can be used to forc
 
 ## Formal syntax
 
-{{csssyntax}}
+```plain
+-moz-force-broken-image-icon = {{cssxref("&lt;integer&gt;")}}
+```
 
 ## Examples
 
@@ -68,4 +70,4 @@ Not part of any standard.
 
 ## See also
 
-- [Webkit bug 58646](https://bugzil.la/58646)
+- [Firefox bug 58646](https://bugzil.la/58646)

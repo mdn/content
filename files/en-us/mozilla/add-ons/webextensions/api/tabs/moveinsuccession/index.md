@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.moveInSuccession
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Modifies the succession relationship for a group of tabs.
 

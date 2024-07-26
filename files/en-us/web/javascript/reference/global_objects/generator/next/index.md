@@ -15,12 +15,13 @@ generator.
 ## Syntax
 
 ```js-nolint
-generatorObject.next(value)
+next()
+next(value)
 ```
 
 ### Parameters
 
-- `value`
+- `value` {{optional_inline}}
 
   - : The value to send to the generator.
 
@@ -85,7 +86,8 @@ page.next(); // { value: undefined, done: true }
 
 In this example, `next` is called with a value.
 
-> **Note:** The first call does not log anything, because the generator was not yielding anything initially.
+> [!NOTE]
+> The first call does not log anything, because the generator was not yielding anything initially.
 
 ```js
 function* gen() {
@@ -113,4 +115,4 @@ g.next(2); // Returns { value: undefined, done: false }
 ## See also
 
 - {{jsxref("Statements/function*", "function*")}}
-- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators)
+- [Iterators and generators](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators) guide

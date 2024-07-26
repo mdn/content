@@ -19,7 +19,7 @@ A non-negative integer.
 
 ## Description
 
-This property is set only if the regular expression instance used the `g` flag to indicate a global search, or the `y` flag to indicate a sticky search. The following rules apply when {{jsxref("RegExp.prototype.exec()", "exec()")}} is called on a given input:
+This property is set only if the regular expression instance used the `g` flag to indicate a global search, or the `y` flag to indicate a sticky search. The following rules apply when {{jsxref("RegExp/exec", "exec()")}} is called on a given input:
 
 - If `lastIndex` is greater than the length of the input, `exec()` will not find a match, and `lastIndex` will be set to 0.
 - If `lastIndex` is equal to or less than the length of the input, `exec()` will attempt to match the input starting from `lastIndex`.
@@ -108,7 +108,8 @@ console.log(
 
 Try deleting the `mdLinkPattern.lastIndex += resolvedLink.length - originalLink.length` line and running the second example. You will find that the second link is not replaced correctly, because the `lastIndex` is already past the link's index after the string is shortened.
 
-> **Warning:** This example is for demonstration only. To deal with Markdown, you should probably use a parsing library instead of regex.
+> [!WARNING]
+> This example is for demonstration only. To deal with Markdown, you should probably use a parsing library instead of regex.
 
 ### Optimizing searching
 
@@ -183,11 +184,11 @@ console.log(matchFoo("foo baz", 0)[0]); // "foo"
 
 ## See also
 
-- {{JSxRef("RegExp.prototype.dotAll")}}
-- {{JSxRef("RegExp.prototype.global")}}
-- {{JSxRef("RegExp.prototype.hasIndices")}}
-- {{JSxRef("RegExp.prototype.ignoreCase")}}
-- {{JSxRef("RegExp.prototype.multiline")}}
-- {{JSxRef("RegExp.prototype.source")}}
-- {{JSxRef("RegExp.prototype.sticky")}}
-- {{JSxRef("RegExp.prototype.unicode")}}
+- {{jsxref("RegExp.prototype.dotAll")}}
+- {{jsxref("RegExp.prototype.global")}}
+- {{jsxref("RegExp.prototype.hasIndices")}}
+- {{jsxref("RegExp.prototype.ignoreCase")}}
+- {{jsxref("RegExp.prototype.multiline")}}
+- {{jsxref("RegExp.prototype.source")}}
+- {{jsxref("RegExp.prototype.sticky")}}
+- {{jsxref("RegExp.prototype.unicode")}}

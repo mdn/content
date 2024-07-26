@@ -10,8 +10,6 @@ browser-compat: api.HTMLMediaElement.canPlayType
 
 The {{domxref("HTMLMediaElement")}} method **`canPlayType()`** reports how likely it is that the current browser will be able to play media of a given MIME type.
 
-> **Note:** This feature is not available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
-
 ## Syntax
 
 ```js-nolint

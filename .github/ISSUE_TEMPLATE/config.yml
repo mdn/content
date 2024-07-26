@@ -1,5 +1,8 @@
 blank_issues_enabled: true
 contact_links:
+  - name: Baseline issue
+    url: https://github.com/web-platform-dx/web-features
+    about: Baseline issues should be reported in the repository hosting Baseline data.
   - name: Content or feature request
     url: https://github.com/mdn/mdn/issues/new/choose
     about: Propose new content for MDN Web Docs or submit a feature request using this link.

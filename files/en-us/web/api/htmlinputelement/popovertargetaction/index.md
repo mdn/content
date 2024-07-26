@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.HTMLInputElement.popoverTargetAction
 ---
 
-{{ APIRef("DOM") }}
+{{APIRef("Popover API")}}
 
 The **`popoverTargetAction`** property of the {{domxref("HTMLInputElement")}} interface gets and sets the action to be performed (`"hide"`, `"show"`, or `"toggle"`) on a popover element being controlled by an {{htmlelement("input")}} element of `type="button"`.
 
@@ -70,7 +70,8 @@ if (supportsPopover()) {
 }
 ```
 
-> **Note:** A popover element is hidden by default, but if the API is not supported your element will display "as usual".
+> [!NOTE]
+> A popover element is hidden by default, but if the API is not supported your element will display "as usual".
 
 You can try out the example below.
 Show and hide the popover by toggling the button.
@@ -134,4 +135,5 @@ The popover can be displayed by selecting the "Show popover" button, and dismiss
 
 ## See also
 
+- [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) HTML global attribute
 - [Popover API](/en-US/docs/Web/API/Popover_API)

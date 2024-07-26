@@ -94,9 +94,9 @@ This page is based largely on [https://www.squarefree.com/burningedg...eases/](h
 
   - : Loading of XUL overlays after the document has been displayed is now supported. See `nsIDOMXULDocument`. [Firefox bug 282103](https://bugzil.la/282103)
 
-- E4X
+- ECMAScript for XML (E4X)
 
-  - : The Mozilla JavaScript engine now supports ECMAScript for XML (E4X), a draft ECMA standard that adds native XML datatypes to the language and provides operators for common XML operations. See [the ECMA specification](https://www.ecma-international.org/publications/standards/Ecma-357.htm). [Firefox bug 246441](https://bugzil.la/246441)
+  - : The Mozilla JavaScript engine now supports ECMAScript for XML (E4X), a draft ECMA standard that adds native XML datatypes to the language and provides operators for common XML operations. See [the ECMA specification](https://ecma-international.org/publications-and-standards/standards/ecma-357/). [Firefox bug 246441](https://bugzil.la/246441)
 
 - Translucent Windows (Windows/Linux)
 
@@ -121,7 +121,7 @@ This page is based largely on [https://www.squarefree.com/burningedg...eases/](h
 
 - New Preferences bindings
 
-  - : These [new bindings](http://forums.mozillazine.org/viewtopic.php?t=263028) make it easier to create preferences windows for extensions. The new preferences windows support instant-apply behavior, which is enabled by default on Mac and Linux.
+  - : These [new bindings](https://forums.mozillazine.org/viewtopic.php?t=263028) make it easier to create preferences windows for extensions. The new preferences windows support instant-apply behavior, which is enabled by default on Mac and Linux.
 
 - API for implementing new command-line switches
 

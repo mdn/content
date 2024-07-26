@@ -1,6 +1,7 @@
 ---
 title: Local
 slug: WebAssembly/Reference/Variables/Local
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

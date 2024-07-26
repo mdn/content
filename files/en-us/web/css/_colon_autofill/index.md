@@ -14,7 +14,7 @@ The **`:autofill`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) match
 > **Note:** The user agent style sheets of many browsers use `!important` in their `:-webkit-autofill` style declarations, making them non-overridable by webpages without resorting to JavaScript hacks. For example Chrome has the following in its internal stylesheet:
 >
 > ```css
-> background-color: rgb(232, 240, 254) !important;
+> background-color: rgb(232 240 254) !important;
 > background-image: none !important;
 > color: -internal-light-dark(black, white) !important;
 > ```
@@ -31,19 +31,16 @@ The **`:autofill`** CSS [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) match
 
 ## Examples
 
-The following example demonstrates the use of the `:autofill` pseudo-class to change the border of a text field that has been autocompleted by the browser. For the best browser compatibility use both `:-webkit-autofill` and `:autofill`.
+The following example demonstrates the use of the `:autofill` pseudo-class to change the border of a text field that has been autocompleted by the browser.
+To ensure we don't create an [invalid selector list](/en-US/docs/Web/CSS/Selector_list#invalid_selector_list), both `:-webkit-autofill` and `:autofill` are matched using a forgiving selector list with {{cssxref(":is()")}}.
 
 ```css
 input {
-  border: 3px solid grey;
   border-radius: 3px;
 }
 
-input:-webkit-autofill {
-  border: 3px solid blue;
-}
-input:autofill {
-  border: 3px solid blue;
+input:is(:-webkit-autofill, :autofill) {
+  border: 3px dotted orange;
 }
 ```
 

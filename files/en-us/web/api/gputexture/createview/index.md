@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUTexture.createView
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`createView()`** method of the
 {{domxref("GPUTexture")}} interface creates a {{domxref("GPUTextureView")}} representing a specific view of the `GPUTexture`.
@@ -101,7 +101,7 @@ The following criteria must be met when calling **`createView()`**, otherwise a 
 - `mipLevelCount` is greater than 0.
 - `mipLevelCount` + `baseMipLevel` is less than or equal to {{domxref("GPUTexture.mipLevelCount")}}.
 - `arrayLayerCount` is greater than 0.
-- `arrayLayerCount` + `baseArrayLayer` is less than or equal to {{domxref("GPUTexture.depthOrArrayLayers")}}.
+- `arrayLayerCount` + `baseArrayLayer` is less than or equal to {{domxref("GPUTexture.depthOrArrayLayers")}} if {{domxref("GPUTexture.dimension")}} is `"2d"`, or less than or equal to 1 if {{domxref("GPUTexture.dimension")}} is `"1d"` or `"3d"`.
 - If `sampleCount` is greater than 1, `dimension` is `"2d"`.
 - If `dimension` is:
   - `"1d"`

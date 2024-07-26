@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.webNavigation.getAllFrames
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Given a tab ID, retrieves information about all the frames it contains.
 
@@ -34,8 +34,8 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 - `errorOccurred`
   - : `boolean`. True if the last navigation in this frame was interrupted by an error, i.e. the {{WebExtAPIRef("webNavigation.onErrorOccurred", "onErrorOccurred")}} event fired.
-- `processId`
-  - : `integer`. The ID of the process running the renderer for this tab.
+- `processId` {{optional_inline}} {{deprecated_inline}}
+  - : `integer`. This value is not set in modern browsers. When it was set, it represented the ID of the process running the renderer for this tab.
 - `frameId`
   - : `integer`. The ID of the frame. If this is the main frame, then `frameId` is zero.
 - `parentFrameId`
@@ -84,7 +84,8 @@ browser.browserAction.onClicked.addListener(() => {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/webNavigation/#method-getAllFrames) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/webNavigation/#method-getAllFrames) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

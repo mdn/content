@@ -20,7 +20,8 @@ Prettier formats all the code and keeps the style consistent. Nevertheless, ther
 
 ## Complete HTML document
 
-> **Note:** The guidelines in this section apply only when you need to show a complete HTML document. A snippet is usually enough to demonstrate a feature. When using the [EmbedLiveSample macro](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples#traditional_live_samples), just include the HTML snippet; it will automatically be inserted into a full HTML document when displayed.
+> [!NOTE]
+> The guidelines in this section apply only when you need to show a complete HTML document. A snippet is usually enough to demonstrate a feature. When using the [EmbedLiveSample macro](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples#traditional_live_samples), just include the HTML snippet; it will automatically be inserted into a full HTML document when displayed.
 
 ### Doctype
 
@@ -104,7 +105,7 @@ Use lowercase for all element names and attribute names/values because it looks 
 
 ## Class and ID names
 
-Use semantic class/ID names, and separate multiple words with hyphens. Don't use camelCase. For example:
+Use semantic class/ID names, and separate multiple words with hyphens ({{Glossary("kebab_case", "kebab case")}}). Don't use {{Glossary("camel_case", "camel case")}}. For example:
 
 ```html example-good
 <p class="editorial-summary">Blah blah blah</p>
@@ -114,9 +115,9 @@ Use semantic class/ID names, and separate multiple words with hyphens. Don't use
 <p class="bigRedBox">Blah blah blah</p>
 ```
 
-## Entity references
+## Character references
 
-Don't use entity references unnecessarily — use the literal character wherever possible (you'll still need to escape characters like angle brackets and quote marks).
+Don't use {{glossary("character reference", "character references")}} unnecessarily — use the literal character wherever possible (you'll still need to escape characters like angle brackets and quote marks).
 
 As an example, you could just write:
 

@@ -4,7 +4,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/get
 page-type: webextension-api-function
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The `BrowserSetting.get()` method gets the current value of the browser setting, and an enumeration indicating how the setting's value is currently controlled.
 
@@ -73,8 +73,7 @@ getting.then((got) => {
 
 {{WebExtExamples}}
 
-> **Note:**
->
+> [!NOTE]
 > This API is based on Chromium's [`chrome.types`](https://developer.chrome.com/docs/extensions/reference/types/) API.
 
 <!--

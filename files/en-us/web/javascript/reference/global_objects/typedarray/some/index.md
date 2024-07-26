@@ -33,7 +33,7 @@ some(callbackFn, thisArg)
 
 ### Return value
 
-`true` if the callback function returns a {{Glossary("truthy")}} value for at least one element in the typed array. Otherwise, `false`.
+`false` unless `callbackFn` returns a {{Glossary("truthy")}} value for a typed array element, in which case `true` is immediately returned.
 
 ## Description
 
@@ -64,7 +64,7 @@ new Uint8Array([12, 5, 8, 1, 4]).some(isBiggerThan10); // true
 ## See also
 
 - [Polyfill of `TypedArray.prototype.some` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.every()")}}
 - {{jsxref("TypedArray.prototype.forEach()")}}

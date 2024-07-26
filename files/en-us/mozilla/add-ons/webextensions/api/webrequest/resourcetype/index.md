@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.webRequest.ResourceType
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 This type is a string, which represents the context in which a resource was fetched in a web request.
 
@@ -70,7 +70,8 @@ Values of this type are strings. Possible values are:
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/webRequest/#type-ResourceType) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/webRequest/#type-ResourceType) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

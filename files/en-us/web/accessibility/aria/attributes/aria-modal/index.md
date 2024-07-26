@@ -5,13 +5,16 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-modal
 ---
 
+{{AccessibilitySidebar}}
+
 The `aria-modal` attribute indicates whether an element is modal when displayed.
 
 ## Description
 
 A section of content is "modal" means navigation is limited to the area itself and the background (the ancestors and siblings of the modal) is hidden. Setting `aria-modal="true"` on [`dialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role) and [`alertdialog` role](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role) containers indicates the presence of a "modal" element to users of assistive technology, but does not actually make the element modal. The features that make the element actually modal must be implemented by the developer.
 
-> **Note:** ARIA only modifies the accessibility tree, modifying how assistive technology presents the content to your users. ARIA doesn't change anything about an element's function or behavior. To create a modal effect you must use JavaScript to manage behavior, focus, and ARIA states.
+> [!NOTE]
+> ARIA only modifies the accessibility tree, modifying how assistive technology presents the content to your users. ARIA doesn't change anything about an element's function or behavior. To create a modal effect you must use JavaScript to manage behavior, focus, and ARIA states.
 
 Relevant only on `dialog` and `alertdialog` containers, setting `aria-modal="true"` tells assistive technologies to let the user know the ability to interact with, or access other content on the page requires the modal dialog to be closed or otherwise lose focus.
 
@@ -56,7 +59,7 @@ If a dialog is not modal — there is no inert background and focus isn't confin
 
 This partial example includes an `alertdialog` nested in a full-screen, non-scrollable backdrop.
 
-The [`role="alertdialog"`](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role) identifies the element that serves as the alert dialog container. The [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) provides the alert dialog an accessible name by referring to the element that provides the alert dialog title. The [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) attribute gives the alert dialog an accessible description by referring to the alert dialog content that describes the primary message or purpose of the alert dialog.
+The [`role="alertdialog"`](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role) identifies the element that serves as the alert dialog container. The [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) provides the alert dialog an accessible name by referring to the element that provides the alert dialog title. The [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) attribute gives the alert dialog an {{glossary("accessible description")}} by referring to the alert dialog content that describes the primary message or purpose of the alert dialog.
 
 The `aria-modal="true"` informs the assistive technology user that the content underneath the dialog is not interactive so long as the element with a declaration of `role="alertdialog"` has focus.
 
@@ -69,7 +72,7 @@ The `aria-modal` attribute exposes the existence of the modal to assistive techn
 - `true`
   - : Element is modal.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaModal")}}
   - : The [`ariaModal`](/en-US/docs/Web/API/Element/ariaModal) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-modal` attribute.
@@ -91,15 +94,10 @@ Inherits into roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - HTML {{HTMLElement("dialog")}} element
 - [`alertdialog` role](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role)
 - [`dialog` role](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role)
 - HTML [`inert` global attribute](/en-US/docs/Web/HTML/Global_attributes/inert)
 - HTMLElement API [`inert`](/en-US/docs/Web/API/HTMLElement/inert) property
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

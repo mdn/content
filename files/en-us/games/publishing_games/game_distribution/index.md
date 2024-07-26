@@ -66,11 +66,12 @@ You can also upload and publish your game directly to different types of stores,
 
 Let's see what the available options are regarding the marketplaces/stores available for different platforms and operating systems.
 
-> **Note:** These are the most popular distribution platforms, but this is not to say these are the only options. Instead of trying to add your game to the thousands of others in the iOS store say, you can also try to find a niche and promote directly to the audience who would be interested in your games. Your creativity is critical here.
+> [!NOTE]
+> These are the most popular distribution platforms, but this is not to say these are the only options. Instead of trying to add your game to the thousands of others in the iOS store say, you can also try to find a niche and promote directly to the audience who would be interested in your games. Your creativity is critical here.
 
 ### Web stores
 
-The best platforms for HTML games are the Web-based stores. It's easy to [prepare a game for them](https://code.tutsplus.com/tutorials/preparing-for-firefox-os--mobile-18515) as such an action involves little to no modification of the game itself — usually adding a manifest file containing necessary information in a zipped package containing all the resources is enough.
+The best platforms for HTML games are Web-based stores. You can prepare games for web stores by adding a manifest file and other data, such as resources, in a zipped package. Not many modifications of the game itself are required.
 
 - [The Chrome Web Store](https://chrome.google.com/webstore/) is also an attractive option — again, having a manifest file ready, zipping your game and filling in the online submission form is about all that's required.
 

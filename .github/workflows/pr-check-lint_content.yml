@@ -12,34 +12,17 @@ on:
 permissions:
   pull-requests: write
 
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
 jobs:
   lint-and-review-docs:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout BASE
-        uses: actions/checkout@v3
-
-      - name: Checkout HEAD
-        uses: actions/checkout@v3
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
-          path: pr_head
-
-      - name: Get changed content from HEAD
-        run: |
-          git config --global user.email "108879845+mdn-bot@users.noreply.github.com"
-          git config --global user.name "mdn-bot"
-
-          rm -r files *.md
-          mv pr_head/files pr_head/*.md .
-          rm -r pr_head
-
-          # To avoid contents of PR getting into the diff that we are going to generate
-          # after running the linters, here we make a dummy commit.
-          # Note, this commit is not getting pushed.
-          git add .
-          git commit -m "Code from PR head"
+        uses: actions/checkout@v4
 
       - name: Get changed files
         env:
@@ -55,19 +38,45 @@ jobs:
           DIFF_DOCUMENTS=$(echo "${DIFF_DOCUMENTS}" | egrep -i "^files/.*\.md$" | xargs)
           echo "DIFF_DOCUMENTS=${DIFF_DOCUMENTS}" >> $GITHUB_ENV
 
+      - name: Checkout HEAD
+        if: ${{ env.DIFF_DOCUMENTS }}
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          path: pr_head
+
+      - name: Get changed content from HEAD
+        if: ${{ env.DIFF_DOCUMENTS }}
+        run: |
+          git config --global user.email "108879845+mdn-bot@users.noreply.github.com"
+          git config --global user.name "mdn-bot"
+
+          rm -r files *.md
+          mv pr_head/files pr_head/*.md .
+          rm -r pr_head
+
+          # To avoid contents of PR getting into the diff that we are going to generate
+          # after running the linters, here we make a dummy commit.
+          # Note, this commit is not getting pushed.
+          git add .
+          git commit -m "Code from PR head"
+
       - name: Setup Node.js environment
-        uses: actions/setup-node@v3
+        if: ${{ env.DIFF_DOCUMENTS }}
+        uses: actions/setup-node@v4
         with:
           node-version-file: ".nvmrc"
           cache: yarn
 
       - name: Install all yarn packages
+        if: ${{ env.DIFF_DOCUMENTS }}
         run: yarn --frozen-lockfile
         env:
           # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Lint and format markdown files
+        if: ${{ env.DIFF_DOCUMENTS }}
         run: |
           # Generate random delimiter
           # https://docs.github.com/en/actions/using-workflows/workflow-commands-for-github-actions#multiline-strings
@@ -121,6 +130,7 @@ jobs:
             -name="mdn-linter" \
             -f=diff \
             -f.diff.strip=1 \
+            -filter-mode=diff_context \
             -reporter=github-pr-review < "${TMPFILE}"
 
       - name: Add reviews for markdownlint errors

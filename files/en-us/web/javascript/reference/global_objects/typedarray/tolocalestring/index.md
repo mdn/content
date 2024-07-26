@@ -62,7 +62,7 @@ uint.toLocaleString("ja-JP", { style: "currency", currency: "JPY" });
 
 ## See also
 
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.toString()")}}
 - {{jsxref("Array.prototype.toLocaleString()")}}

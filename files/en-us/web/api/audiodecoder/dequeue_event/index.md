@@ -8,11 +8,11 @@ status:
 browser-compat: api.AudioDecoder.dequeue_event
 ---
 
-{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}{{SeeCompatTable}}
 
 The **`dequeue`** event of the {{domxref("AudioDecoder")}} interface fires to signal a decrease in {{domxref("AudioDecoder.decodeQueueSize")}}.
 
-This eliminates the need for developers to use a {{domxref("setTimeout", "setTimeout()")}} poll to determine when the queue has decreased, and more work should be queued up.
+This eliminates the need for developers to use a {{domxref("setTimeout()")}} poll to determine when the queue has decreased, and more work should be queued up.
 
 ## Syntax
 

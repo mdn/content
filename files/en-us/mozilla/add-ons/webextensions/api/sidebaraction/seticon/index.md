@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.sidebarAction.setIcon
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Sets the icon for the sidebar.
 
@@ -129,4 +129,5 @@ browser.browserAction.onClicked.addListener(toggle);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Opera's [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/) API.
+> [!NOTE]
+> This API is based on Opera's [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/) API.

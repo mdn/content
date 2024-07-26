@@ -20,11 +20,7 @@ Our boombox looks like this:
 
 Note the retro cassette deck with a play button, and vol and pan sliders to allow you to alter the volume and stereo panning. We could make this a lot more complex, but this is ideal for simple learning at this stage.
 
-[Check out the final demo here on Codepen](https://codepen.io/Rumyra/pen/qyMzqN/), or see the [source code on GitHub](https://github.com/mdn/webaudio-examples/tree/master/audio-basics).
-
-## Browser support
-
-Modern browsers have good support for most features of the Web Audio API. There are a lot of features of the API, so for more exact information, you'll have to check the browser compatibility tables at the bottom of each reference page.
+[Check out the final demo here on Codepen](https://codepen.io/Rumyra/pen/qyMzqN/), or see the [source code on GitHub](https://github.com/mdn/webaudio-examples/tree/main/audio-basics).
 
 ## Audio graphs
 
@@ -39,9 +35,6 @@ Several audio sources with different channel layouts are supported, even within 
 To be able to do anything with the Web Audio API, we need to create an instance of the audio context. This then gives us access to all the features and functionality of the API.
 
 ```js
-// for legacy browsers
-const AudioContext = window.AudioContext || window.webkitAudioContext;
-
 const audioContext = new AudioContext();
 ```
 
@@ -251,7 +244,7 @@ The [Voice-change-O-matic](https://github.com/mdn/webaudio-examples/tree/main/vo
 
 ![A UI with a sound wave being shown, and options for choosing voice effects and visualizations.](voice-change-o-matic.png)
 
-Another application developed specifically to demonstrate the Web Audio API is the [Violent Theremin](https://mdn.github.io/webaudio-examples/violent-theremin/), a simple web application that allows you to change pitch and volume by moving your mouse pointer. It also provides a psychedelic lightshow ([see Violent Theremin source code](https://github.com/mdn/webaudio-examples/tree/master/violent-theremin)).
+Another application developed specifically to demonstrate the Web Audio API is the [Violent Theremin](https://mdn.github.io/webaudio-examples/violent-theremin/), a simple web application that allows you to change pitch and volume by moving your mouse pointer. It also provides a psychedelic lightshow ([see Violent Theremin source code](https://github.com/mdn/webaudio-examples/tree/main/violent-theremin)).
 
 ![A page full of rainbow colors, with two buttons labeled Clear screen and mute.](violent-theremin.png)
 

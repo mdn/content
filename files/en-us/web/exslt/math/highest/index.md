@@ -21,7 +21,7 @@ math:highest(nodeSet)
 - `nodeSet`
   - : The node-set whose highest value is to be returned.
 
-### Returns
+### Return value
 
 A result tree fragment consisting of copies of the nodes returned by [`math:max()`](/en-US/docs/Web/EXSLT/math/max).
 

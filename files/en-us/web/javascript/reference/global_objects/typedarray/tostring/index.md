@@ -9,13 +9,17 @@ browser-compat: javascript.builtins.TypedArray.toString
 
 The **`toString()`** method of {{jsxref("TypedArray")}} instances returns a string representing the specified typed array and its elements. This method has the same algorithm as {{jsxref("Array.prototype.toString()")}}.
 
-{{EmbedInteractiveExample("pages/js/typedarray-tostring.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/typedarray-tostring.html", "shorter")}}
 
 ## Syntax
 
 ```js-nolint
 toString()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -47,7 +51,7 @@ console.log(`${uint8}`); // 1,2,3
 
 ## See also
 
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
 - {{jsxref("TypedArray")}}
 - {{jsxref("TypedArray.prototype.join()")}}
 - {{jsxref("TypedArray.prototype.toLocaleString()")}}

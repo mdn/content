@@ -39,21 +39,22 @@ extends layout
 block content
   h1= title
 
-  ul
-    each author in author_list
-      li
-        a(href=author.url) #{author.name}
-        |  (#{author.date_of_birth} - #{author.date_of_death})
-
-    else
-      li There are no authors.
+  if author_list.length
+    ul
+      each author in author_list
+        li
+          a(href=author.url) #{author.name}
+          |  (#{author.date_of_birth} - #{author.date_of_death})
+  else
+    p There are no authors.
 ```
 
 Run the application and open your browser to `http://localhost:3000/`. Then select the _All authors_ link. If everything is set up correctly, the page should look something like the following screenshot.
 
 ![Author List Page - Express Local Library site](locallibary_express_author_list.png)
 
-> **Note:** The appearance of the author _lifespan_ dates is ugly! You can improve this using the [same approach](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment) as we used for the `BookInstance` list (adding the virtual property for the lifespan to the `Author` model).
+> [!NOTE]
+> The appearance of the author _lifespan_ dates is ugly! You can improve this using the [same approach](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment) as we used for the `BookInstance` list (adding the virtual property for the lifespan to the `Author` model).
 >
 > However, as the author may not be dead or may have missing birth/death data, in this case we need to ignore missing dates or references to nonexistent properties. One way to deal with this is to return either a formatted date, or a blank string, depending on whether the property is defined. For example:
 >

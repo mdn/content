@@ -51,7 +51,8 @@ function setCustomFOV(up, right, down, left) {
 }
 ```
 
-> **Note:** When testing, setting a weird/tiny field of view can really mess up your view. It is a good idea to grab the current field of view first (using {{domxref("VREyeParameters.fieldOfView")}}) before making any drastic changes, so you can reset it afterwards if needed.
+> [!NOTE]
+> When testing, setting a weird/tiny field of view can really mess up your view. It is a good idea to grab the current field of view first (using {{domxref("VREyeParameters.fieldOfView")}}) before making any drastic changes, so you can reset it afterwards if needed.
 
 ## Browser compatibility
 
@@ -59,5 +60,4 @@ function setCustomFOV(up, right, down, left) {
 
 ## See also
 
-- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API).
-- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.
+- [WebVR API](/en-US/docs/Web/API/WebVR_API)

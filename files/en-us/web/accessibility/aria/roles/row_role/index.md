@@ -4,8 +4,10 @@ slug: Web/Accessibility/ARIA/Roles/row_role
 page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#row
-  - https://w3c.github.io/aria-practices/#row
+  - https://www.w3.org/WAI/ARIA/apg/patterns/table/examples/table/
 ---
+
+{{AccessibilitySidebar}}
 
 An element with `role="row"` is a row of cells within a tabular structure. A row contains one or more cells, grid cells or column headers, and possibly a row header, within a [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role) or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role), and optionally within a [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Roles/rowgroup_role).
 
@@ -46,7 +48,8 @@ If the row is within a treegrid, rows can include the [`aria-expanded`](/en-US/d
 
 To create an interactive widget that has a tabular structure, use the grid pattern instead. If the interaction provides for the selection state of individual cells, if left to right and top to bottom navigation is provided, or if the user interface allows the rearranging of cell order or otherwise changing individual cell order such as through drag and drop, use [grid](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role) or [treegrid](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role) instead.
 
-> **Note:** Using the native HTML table element ({{HTMLElement('table')}}) along with the table row element ({{HTMLElement('tr')}}) whenever possible is strongly encouraged.
+> [!NOTE]
+> Using the native HTML table element ({{HTMLElement('table')}}) along with the table row element ({{HTMLElement('tr')}}) whenever possible is strongly encouraged.
 
 ### Associated WAI-ARIA roles, states, and properties
 
@@ -116,7 +119,8 @@ None
 
 None. For sortable columns, see the [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role) aria role.
 
-> **Note:** The first rule of ARIA use is you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and **adding** an ARIA role, state or property to make it accessible, then do so. Employ the HTML {{HTMLElement('table')}} element instead of the ARIA role of table whenever possible.
+> [!NOTE]
+> The first rule of ARIA use is you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and **adding** an ARIA role, state or property to make it accessible, then do so. Employ the HTML {{HTMLElement('table')}} element instead of the ARIA role of table whenever possible.
 
 ## Examples
 
@@ -198,7 +202,7 @@ Only use {{HTMLElement('table')}}, {{HTMLElement('tbody')}}, {{HTMLElement('thea
 </table>
 ```
 
-Above is the semantic way of writing a table. The ARIA roles are only necessary if the native semantics of the table, and therefore the table rows, are obliterated, such as via setting the [display property to flex or grid](/en-US/docs/Web/CSS/display#accessibility_concerns).
+Above is the semantic way of writing a table. The ARIA roles are only necessary if the native semantics of the table, and therefore the table rows, are obliterated, such as via setting the [display property to flex or grid](/en-US/docs/Web/CSS/display#accessibility).
 
 ### Added benefits
 
@@ -220,11 +224,3 @@ none
 - [The `gridcell` role](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role)
 - [The `columnheader` role](/en-US/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
 - [The `rowheader` role](/en-US/docs/Web/Accessibility/ARIA/Roles/rowheader_role)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
-
-</section>

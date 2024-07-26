@@ -13,8 +13,7 @@ The protocol is relatively straightforward. Primary complications include suppor
 ## See also
 
 - [SMTP](https://en.wikipedia.org/wiki/SMTP) (Wikipedia)
-- [Glossary](/en-US/docs/Glossary)
-
+- Related glossary terms:
   - {{glossary("NNTP")}}
   - {{glossary("POP")}}
   - {{glossary("protocol")}}

@@ -69,7 +69,7 @@ Sometimes it's useful to be able to style a host from inside the shadow tree con
   - {{DOMxRef("HTMLTemplateElement")}} interface
   - {{DOMxRef("ShadowRoot")}} interface
 
-> **Note:** Despite the name, the {{CSSXref(":scope")}} pseudo-class, which represents elements that are a reference point (or scope) for selectors to match against, is defined in the [CSS pseudo-classes](/en-US/docs/Web/CSS/CSS_pseudo-classes) module. It is otherwise unrelated to the CSS scoping module, which is focused on scoping as it pertains to the Shadow DOM scoping mechanism.
+> **Note:** Despite the name, the {{CSSXref(":scope")}} pseudo-class, which represents elements that are a reference point (or scope) for selectors to match against, is defined in the [Selectors](/en-US/docs/Web/CSS/CSS_selectors) module. It is otherwise unrelated to the CSS scoping module, which is focused on scoping as it pertains to the Shadow DOM scoping mechanism.
 
 ## Specifications
 
@@ -82,4 +82,4 @@ Sometimes it's useful to be able to style a host from inside the shadow tree con
 - [CSS namespaces](/en-US/docs/Web/CSS/CSS_namespaces) module
 - [CSS shadow-parts](/en-US/docs/Web/CSS/CSS_shadow_parts) module
 - [Template, slot, and shadow](https://web.dev/learn/html/template/) on web.dev (2023)
-- [Custom element best practices](https://web.dev/custom-elements-best-practices/) on web.dev (2019)
+- [Custom element best practices](https://web.dev/articles/custom-elements-best-practices) on web.dev (2019)

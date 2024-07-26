@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.omnibox.onInputEntered
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when the user has selected one of the suggestions your extension has added to the address bar's drop-down list.
 
@@ -125,4 +125,5 @@ browser.omnibox.onInputEntered.addListener((url, disposition) => {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.omnibox`](https://developer.chrome.com/docs/extensions/reference/omnibox/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.omnibox`](https://developer.chrome.com/docs/extensions/reference/omnibox/) API.

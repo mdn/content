@@ -4,11 +4,11 @@ short-title: sanitize()
 slug: Web/API/Sanitizer/sanitize
 page-type: web-api-instance-method
 status:
-  - experimental
+  - deprecated
 browser-compat: api.Sanitizer.sanitize
 ---
 
-{{APIRef("HTML Sanitizer API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("HTML Sanitizer API")}}{{SecureContext_Header}}{{deprecated_header}}
 
 The **`sanitize()`** method of the {{domxref("Sanitizer")}} interface is used to sanitize a tree of DOM nodes, removing any unwanted elements or attributes.
 
@@ -18,7 +18,8 @@ For example when sanitizing a `Document` instance in a frame.
 The default `Sanitizer()` configuration strips out XSS-relevant input by default, including {{HTMLElement("script")}} tags, custom elements, and comments.
 The sanitizer configuration may be customized using {{domxref("Sanitizer.Sanitizer","Sanitizer()")}} constructor options.
 
-> **Note:** To sanitize strings, instead use {{domxref("Element.setHTML()")}} or {{domxref("Sanitizer.sanitizeFor()")}}.
+> [!NOTE]
+> To sanitize strings, instead use {{domxref("Element.setHTML()")}}.
 > See {{domxref('HTML Sanitizer API')}} for more information.
 
 ## Syntax

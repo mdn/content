@@ -34,7 +34,8 @@ Install the _Latin Modern Math_ font as follows:
 2. Extract the ZIP archive, move inside the `latinmodern-math-1959` directory and then inside the `otf` directory. You will find a `latinmodern-math` font file.
 3. Double-click the `latinmodern-math` font file click the **Install font** button from the window that opens.
 
-> **Note:** If you are using macOS Ventura (version 13) or higher, then _STIX Two Math_ is already pre-installed and you can skip the steps below.
+> [!NOTE]
+> If you are using macOS Ventura (version 13) or higher, then _STIX Two Math_ is already pre-installed and you can skip the steps below.
 
 Install the _STIX Two Math_ font as follows:
 
@@ -42,7 +43,8 @@ Install the _STIX Two Math_ font as follows:
 2. Open the `static_otf.zip` ZIP archive, and then move inside the `static_otf` directory. Among the files there, you will find a `STIXTwoMath-Regular.otf` file.
 3. Open the `STIXTwoMath-Regular.otf` file and click the **Install Font** button from the window that opens. If desired, you may also do the same for the other font files in the directory.
 
-> **Note:** A deprecated version of _STIX_ is preinstalled starting with OS X Lion (version 10.7). Although some browsers are able to make use of it, it is strongly recommended to follow the instructions above for optimal math rendering.
+> [!NOTE]
+> A deprecated version of _STIX_ is preinstalled starting with OS X Lion (version 10.7). Although some browsers are able to make use of it, it is strongly recommended to follow the instructions above for optimal math rendering.
 
 ### Linux
 
@@ -112,7 +114,8 @@ If no packages are available on your Linux distributions, or if you just want to
 
 You must use the [MathML-fonts add-on](https://addons.mozilla.org/firefox/addon/mathml-fonts/).
 
-> **Note:** Noto Sans Math provides good Unicode coverage for math symbols and [Google plans to add support for math layout features](https://github.com/notofonts/math/issues/14#issuecomment-1161414446).
+> [!NOTE]
+> Noto Sans Math provides good Unicode coverage for math symbols and [Google plans to add support for math layout features](https://github.com/notofonts/math/issues/14#issuecomment-1161414446).
 
 ### Other systems
 
