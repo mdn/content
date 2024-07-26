@@ -99,7 +99,8 @@ This is quite straightforward. We declare variables and grab references to all t
 
 When the user clicks the "Connect" button, the `connectPeers()` method is called. We're going to break this up and look at it a bit at a time, for clarity.
 
-> **Note:** Even though both ends of our connection will be on the same page, we're going to refer to the one that starts the connection as the "local" one, and to the other as the "remote" end.
+> [!NOTE]
+> Even though both ends of our connection will be on the same page, we're going to refer to the one that starts the connection as the "local" one, and to the other as the "remote" end.
 
 #### Set up the local peer
 
@@ -128,7 +129,8 @@ The remote end is set up similarly, except that we don't need to explicitly crea
 
 The next step is to set up each connection with ICE candidate listeners; these will be called when there's a new ICE candidate to tell the other side about.
 
-> **Note:** In a real-world scenario in which the two peers aren't running in the same context, the process is a bit more involved; each side provides, one at a time, a suggested way to connect (for example, UDP, UDP with a relay, TCP, etc.) by calling {{domxref("RTCPeerConnection.addIceCandidate()")}}, and they go back and forth until agreement is reached. But here, we just accept the first offer on each side, since there's no actual networking involved.
+> [!NOTE]
+> In a real-world scenario in which the two peers aren't running in the same context, the process is a bit more involved; each side provides, one at a time, a suggested way to connect (for example, UDP, UDP with a relay, TCP, etc.) by calling {{domxref("RTCPeerConnection.addIceCandidate()")}}, and they go back and forth until agreement is reached. But here, we just accept the first offer on each side, since there's no actual networking involved.
 
 ```js
 localConnection.onicecandidate = (e) =>
@@ -171,7 +173,8 @@ Let's go through this line by line and decipher what it means.
 6. Finally, the local connection's remote description is set to refer to the remote peer by calling localConnection's {{domxref("RTCPeerConnection.setRemoteDescription()")}}.
 7. The `catch()` calls a routine that handles any errors that occur.
 
-> **Note:** Once again, this process is not a real-world implementation; in normal usage, there's two chunks of code running on two machines, interacting and negotiating the connection. A side channel, commonly called a "signalling server," is usually used to exchange the description (which is in **application/sdp** form) between the two peers.
+> [!NOTE]
+> Once again, this process is not a real-world implementation; in normal usage, there's two chunks of code running on two machines, interacting and negotiating the connection. A side channel, commonly called a "signalling server," is usually used to exchange the description (which is in **application/sdp** form) between the two peers.
 
 #### Handling successful peer connection
 

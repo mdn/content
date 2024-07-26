@@ -6,7 +6,8 @@ page-type: guide
 
 {{APIRef("WebVR API")}}{{deprecated_header}}
 
-> **Note:** WebVR API is replaced by [WebXR API](/en-US/docs/Web/API/WebXR_Device_API). WebVR was never ratified as a standard, was implemented and enabled by default in very few browsers and supported a small number of devices.
+> [!NOTE]
+> WebVR API is replaced by [WebXR API](/en-US/docs/Web/API/WebXR_Device_API). WebVR was never ratified as a standard, was implemented and enabled by default in very few browsers and supported a small number of devices.
 
 The WebVR API is a fantastic addition to the web developer's toolkit, allowing WebGL scenes to be presented in virtual reality displays such as the Oculus Rift and HTC Vive. But how do you get started with developing VR apps for the Web? This article will guide you through the basics.
 
@@ -32,9 +33,11 @@ To illustrate how the WebVR API works, we'll study our raw-webgl-example, which 
 
 ![A gray rotating 3D cube](capture1.png)
 
-> **Note:** You can find the [source code of our demo](https://github.com/mdn/webvr-tests/tree/main/webvr/raw-webgl-example) on GitHub, and [view it live](https://mdn.github.io/webvr-tests/webvr/raw-webgl-example/) also.
+> [!NOTE]
+> You can find the [source code of our demo](https://github.com/mdn/webvr-tests/tree/main/webvr/raw-webgl-example) on GitHub, and [view it live](https://mdn.github.io/webvr-tests/webvr/raw-webgl-example/) also.
 
-> **Note:** If WebVR isn't working in your browser, you might need to make sure it is running through your graphics card. For example for NVIDIA cards, if you've got the NVIDIA control panel set up successfully, there will be a context menu option available — right click on Firefox, then choose _Run with graphics processor > High-performance NVIDIA processor_.
+> [!NOTE]
+> If WebVR isn't working in your browser, you might need to make sure it is running through your graphics card. For example for NVIDIA cards, if you've got the NVIDIA control panel set up successfully, there will be a context menu option available — right click on Firefox, then choose _Run with graphics processor > High-performance NVIDIA processor_.
 
 Our demo features the holy grail of WebGL demos — a rotating 3D cube. We've implemented this using raw [WebGL API](/en-US/docs/Web/API/WebGL_API) code. We won't be teaching any basic JavaScript or WebGL, just the WebVR parts.
 
@@ -45,7 +48,8 @@ Our demo also features:
 
 When you look through the source code of [our demo's main JavaScript file](https://github.com/mdn/webvr-tests/blob/main/webvr/raw-webgl-example/webgl-demo.js), you can easily find the WebVR-specific parts by searching for the string "WebVR" in preceding comments.
 
-> **Note:** To find out more about basic JavaScript and WebGL, consult our [JavaScript learning material](/en-US/docs/Learn/JavaScript), and our [WebGL Tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
+> [!NOTE]
+> To find out more about basic JavaScript and WebGL, consult our [JavaScript learning material](/en-US/docs/Learn/JavaScript), and our [WebGL Tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 
 ## How does it work?
 
@@ -151,7 +155,8 @@ Inside the promise `then()` block, we check whether the array length is more tha
         console.log('Display found');
 ```
 
-> **Note:** It is unlikely that you'll have multiple VR displays connected to your computer, and this is just a simple demo, so this will do for now.
+> [!NOTE]
+> It is unlikely that you'll have multiple VR displays connected to your computer, and this is just a simple demo, so this will do for now.
 
 ### Starting and stopping the VR presentation
 
