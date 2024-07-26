@@ -74,88 +74,112 @@ fill: unset;
 
 ## Examples
 
-### Defining the fill rules for SVG elements
+### Defining fill values for SVG elements
 
 This example demonstrates how a `fill` is declared, the effect of the property, and how the CSS `fill` property takes precedence over the `fill` attribute.
 
 #### HTML
 
-We define an SVG with two complex shapes defined using the SVG {{SVGElement('polygon')}} and {{SVGElement('path')}} elements. The polygon has the SVG `fill` attribute set to `evenodd` and the star shaped path is set to `nonzero`, which is the default. To make the lines visible, we set the outline to `red` using the SVG {{SVGAttr("stroke")}} attribute, but could have used the {{CSSXRef("stroke")}} property.
-
-```html hidden
-`
-<p>Original SVG</p>
-```
+We have an SVG with two complex shapes defined using the SVG {{SVGElement('polygon')}} and {{SVGElement('path')}} elements. Both have the `fill` attribute set to the default `black`. We add `grey` stroke using the SVG {{SVGAttr("stroke")}} attribute, but could have used the {{CSSXRef("stroke")}} property.
 
 ```html
 <svg viewBox="0 0 220 120" xmlns="http://www.w3.org/2000/svg">
-  <polygon
-    points="180,10 150,100 220,40 140,40 210,100"
-    stroke="red"
-    fill="evenodd" />
   <path
     d="M 10,5 l 90,0 -80,80 0,-60 80,80 -90,0 z"
-    stroke="red"
-    fill="nonzero" />
+    stroke="grey"
+    fill="black" />
+  <polygon
+    points="180,10 150,100 220,40 140,40 210,100"
+    stroke="grey"
+    fill="black" />
 </svg>
 ```
-
-```html hidden
-<p><code>fill: nonzero;</code></p>
-<svg viewBox="0 0 220 120" xmlns="http://www.w3.org/2000/svg">
-  <polygon
-    points="180,10 150,100 220,40 140,40 210,100"
-    stroke="red"
-    fill="evenodd" />
-  <path
-    d="M 10,5 l 90,0 -80,80 0,-60 80,80 -90,0 z"
-    stroke="red"
-    fill="nonzero" />
-</svg>
-<p><code>fill: evenodd;</code></p>
-<svg viewBox="0 0 220 120" xmlns="http://www.w3.org/2000/svg">
-  <polygon
-    points="180,10 150,100 220,40 140,40 210,100"
-    stroke="red"
-    fill="evenodd" />
-  <path
-    d="M 10,5 l 90,0 -80,80 0,-60 80,80 -90,0 z"
-    stroke="red"
-    fill="nonzero" />
-</svg>
-```
-
-The above SVG is repeated three times which isn't shown for the sake of brevity.
 
 #### CSS
 
-The shapes nested in the first SVG have no CSS applied. We set the shapes in the second SVG to use `nonzero`, setting all three shapes in the second SVG to use the `nonzero` value. The third SVG has all its nested shapes set to `evenodd`.
+We set `fill` values on the the shapes in the SVG.
 
 ```css hidden
 svg {
   border: 1px solid;
-  height: calc(33vh - 2.5em);
+  height: calc(100vh - 20px);
   margin-bottom: 10px;
-}
-p {
-  margin: 0;
 }
 ```
 
 ```css
-svg:nth-of-type(2) > * {
-  fill: nonzero;
+path {
+  fill: red;
 }
-svg:nth-of-type(3) > * {
-  fill: evenodd;
+polygon {
+  fill: hsl(0deg 100% 50% / 60%);
 }
 ```
 
 #### Results
 
-{{EmbedLiveSample("Defining the fill rules for SVG elements", "300", "540")}}
+{{EmbedLiveSample("Defining fill values for SVG elements", "300", "170")}}
 
-With the `nonzero` value for `fill`, the "inside" of the shape is the entire shape. The `evenodd` value defines some space as empty. The first image renders the `fill` included as an attribute. Declaring the `fill` in the CSS overrides the attribute values in the second and third images.
+The CSS `fill` property value overrides the SVG `fill` attribute value, with both shapes being red; the polygon's red being translucent.
+
+### Using fill keyword values
+
+This example demonstrates how the keyword values for `fill`
+
+#### HTML
+
+```html
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 90">
+  <path d="M 10 44.64 L 30 10 L 70 10 L 90 44.64 L 70 79.28 L 30 79.28 Z" />
+  <path d="M 100 44.64 L 80 10 L 120 10 L 140 44.64 L 120 79.28 L 80 79.28 Z" />
+  <path
+    d="M 150 44.64 L 130 10 L 170 10 L 190 44.64 L 170 79.28 L 130 79.28 Z" />
+  <marker
+    id="circle"
+    markerWidth="12"
+    markerHeight="12"
+    refX="6"
+    refY="6"
+    markerUnits="userSpaceOnUse">
+    <circle cx="6" cy="6" r="3" stroke-width="2" />
+  </marker>
+</svg>
+```
+
+```css hidden
+svg {
+  border: 1px solid;
+  height: calc(100vh - 20px);
+  margin-bottom: 10px;
+}
+```
+
+```css
+path {
+  stroke-width: 2px;
+  marker: url(#circle);
+}
+path:nth-ot-type(1) {
+  stroke: red;
+  fill: orange;
+}
+path:nth-ot-type(2) {
+  stroke: green;
+  fill: lightgreen;
+}
+path:nth-ot-type(3) {
+  stroke: blue;
+  fill: lightblue;
+}
+circle {
+  stroke: context-stroke;
+  fill: context-fill;
+}
+```
+
+#### Results
+
+{{EmbedLiveSample("Using fill keyword values", "300", "170")}}
 
 ## Specifications
 
