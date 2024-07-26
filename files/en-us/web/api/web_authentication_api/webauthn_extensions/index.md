@@ -284,7 +284,8 @@ extensions: {
 }
 ```
 
-> **Note:** For a write authentication operation to be successful, `publicKey.allowCredentials` must contain only a single element representing the credential you want the blob stored alongside.
+> [!NOTE]
+> For a write authentication operation to be successful, `publicKey.allowCredentials` must contain only a single element representing the credential you want the blob stored alongside.
 
 #### Output
 
@@ -304,7 +305,8 @@ largeBlob: {
 }
 ```
 
-> **Note:** if unsuccessful, the `largeBlob` object will be returned, but `blob` will not be present.
+> [!NOTE]
+> if unsuccessful, the `largeBlob` object will be returned, but `blob` will not be present.
 
 A `get()` write call indicates whether the write operation was successful with a `written` boolean value in the extension output. A `true` value means it was written successfully to the associated authenticator, and `false` means it was unsuccessful.
 
