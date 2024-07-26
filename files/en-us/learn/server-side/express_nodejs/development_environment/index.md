@@ -157,7 +157,8 @@ As a slightly more exciting test let's create a very basic "pure node" server th
 
    The code imports the "http" module and uses it to create a server (`createServer()`) that listens for HTTP requests on port 3000. The script then prints a message to the console about what browser URL you can use to test the server. The `createServer()` function takes as an argument a callback function that will be invoked when an HTTP request is received — this returns a response with an HTTP status code of 200 ("OK") and the plain text "Hello World".
 
-   > **Note:** Don't worry if you don't understand exactly what this code is doing yet! We'll explain our code in greater detail once we start using Express!
+   > [!NOTE]
+   > Don't worry if you don't understand exactly what this code is doing yet! We'll explain our code in greater detail once we start using Express!
 
 2. Start the server by navigating into the same directory as your `hellonode.js` file in your command prompt, and calling `node` along with the script name, like so:
 
@@ -265,7 +266,8 @@ The following steps show how you can use npm to download a package, save it into
    This imports the "express" module using `require()` and uses it to create a server (`app`) that listens for HTTP requests on port 3000 and prints a message to the console explaining what browser URL you can use to test the server.
    The `app.get()` function only responds to HTTP `GET` requests with the specified URL path ('/'), in this case by calling a function to send our _Hello World!_ message.
 
-   > **Note:** The backticks in the `` `Example app listening on port ${port}!` `` let us interpolate the value of `$port` into the string.
+   > [!NOTE]
+   > The backticks in the `` `Example app listening on port ${port}!` `` let us interpolate the value of `$port` into the string.
 
 5. You can start the server by calling node with the script in your command prompt:
 

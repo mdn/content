@@ -99,7 +99,8 @@ Now we have three tasks ahead of us:
    git commit -m 'committing initial code'
    ```
 
-   > **Note:** Although you're free to write whatever you wish in the commit message, there's some useful tips around the web on good commit messages. Keep them short, concise, and descriptive, so they clearly describe what the change does.
+   > [!NOTE]
+   > Although you're free to write whatever you wish in the commit message, there's some useful tips around the web on good commit messages. Keep them short, concise, and descriptive, so they clearly describe what the change does.
 
 3. Finally, the code needs to be pushed to your GitHub-hosted repository. Let's do that now.
 
@@ -193,7 +194,8 @@ Let's get started.
    }
    ```
 
-   > **Note:** Here's the good part of using Vite alongside Vitest: if you use other testing frameworks, you need to add another configuration that describes how the test files need to be transformed, but Vitest will automatically use the Vite configuration.
+   > [!NOTE]
+   > Here's the good part of using Vite alongside Vitest: if you use other testing frameworks, you need to add another configuration that describes how the test files need to be transformed, but Vitest will automatically use the Vite configuration.
 
 3. Now of course we need to add the test to our codebase. Normally, if you are testing the functionality of a file, say `App.jsx`, you would add a file called `App.test.jsx` next to it. In this case, we are just testing the data, so let's create another directory to hold our tests. You can open the example repository you downloaded in the previous chapter, and copy the `tests` folder over.
 
