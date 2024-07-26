@@ -52,7 +52,8 @@ The XML file that describes a search engine follows the basic template below. Se
 
     Firefox caches the icon as a [base64](https://en.wikipedia.org/wiki/Base64) `data:` URL (search plug-ins are stored in the [profile](https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data)'s `searchplugins/` folder). `http:` and `https:` URLs are converted to `data:` URLs when this is done.
 
-    > **Note:** For icons loaded remotely (that is, from `https://` URLs as opposed to `data:` URLs), Firefox will reject icons larger than **10 kilobytes**.
+    > [!NOTE]
+    > For icons loaded remotely (that is, from `https://` URLs as opposed to `data:` URLs), Firefox will reject icons larger than **10 kilobytes**.
 
     ![Search suggestions from Google displayed in Firefox's search box](searchsuggestionsample.png)
 
