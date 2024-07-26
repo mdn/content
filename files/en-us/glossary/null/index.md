@@ -28,6 +28,5 @@ This is considered [a bug](/en-US/docs/Web/JavaScript/Reference/Operators/typeof
   - {{Glossary("number")}}
   - {{Glossary("bigint")}}
   - {{Glossary("boolean")}}
-  - {{Glossary("null")}}
   - {{Glossary("undefined")}}
   - {{Glossary("symbol")}}

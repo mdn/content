@@ -64,7 +64,7 @@ color: unset;
 
 The `color` property is specified as a single {{cssxref("&lt;color&gt;")}} value.
 
-Note that the value must be a uniform {{cssxref("color")}}. It can't be a {{cssxref("&lt;gradient&gt;")}}, which is actually a type of {{cssxref("&lt;image&gt;")}}.
+Note that the value must be a uniform color. It can't be a {{cssxref("&lt;gradient&gt;")}}, which is actually a type of {{cssxref("&lt;image&gt;")}}.
 
 ### Values
 

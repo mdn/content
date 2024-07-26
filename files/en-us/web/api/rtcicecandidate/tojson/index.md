@@ -47,7 +47,7 @@ A JSON object with the following properties, which have been set to the correspo
     Additional information can be found in {{domxref("RTCIceCandidate.usernameFragment")}}.
 
 > [!NOTE]
-> The returned JSON object has the same form/properties as the `candidateInfo` object that can optionally be passed to the {{domxref("RTCIceCandidate.RTCIceCandidate()","RTCIceCandidate() constructor")}} to configure the candidate.
+> The returned JSON object has the same form/properties as the `candidateInfo` object that can optionally be passed to the {{domxref("RTCIceCandidate.RTCIceCandidate()","RTCIceCandidate()")}} constructor to configure the candidate.
 
 ## Examples
 
