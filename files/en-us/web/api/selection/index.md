@@ -108,7 +108,8 @@ The behavior is as follows:
 2. A Selection API method is called, causing a new selection to be made with the selection range inside the editing host.
 3. Focus then moves to the editing host.
 
-> **Note:** The Selection API methods may only move focus to an editing host, not to other focusable elements (e.g., {{HTMLElement("a")}}).
+> [!NOTE]
+> The Selection API methods may only move focus to an editing host, not to other focusable elements (e.g., {{HTMLElement("a")}}).
 
 The above behavior applies to selections made using the following methods:
 
@@ -144,7 +145,8 @@ Other key terms used in this section.
 
   - : The _focus_ of a selection is the end point of the selection. When making a selection with a mouse, the focus is where in the document the mouse button is released. As the user changes the selection using the mouse or the keyboard, the focus is the end of the selection that moves.
 
-    > **Note:** This is not the same as the focused _element_ of the document, as returned by {{DOMxRef("document.activeElement")}}.
+    > [!NOTE]
+    > This is not the same as the focused _element_ of the document, as returned by {{DOMxRef("document.activeElement")}}.
 
 - `range`
 
