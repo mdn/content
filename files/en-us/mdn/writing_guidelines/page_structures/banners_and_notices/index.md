@@ -64,7 +64,7 @@ It is important to clarify the current standardization status of such features t
 
 - Adding this banner to the landing page for that feature (not for every subpage for the feature):
 
-  ```plain
+  ```md
   > [!WARNING]
   > This feature is currently opposed by <number> browser vendor(s). See the [Standards positions](#standards_positions) section below for details of opposition.
   ```

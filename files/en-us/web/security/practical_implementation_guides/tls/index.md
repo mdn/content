@@ -75,7 +75,7 @@ To fix the "different hosts" problem:
 
 Redirect all incoming HTTP requests to the same site and URI on HTTPS, using NGINX:
 
-```plain
+```nginx
 server {
   listen 80;
 
@@ -85,7 +85,7 @@ server {
 
 Redirect `site.example.org` from HTTP to HTTPS, using Apache:
 
-```plain
+```apacheconf
 <VirtualHost *:80>
   ServerName site.example.org
   Redirect permanent / https://site.example.org/
