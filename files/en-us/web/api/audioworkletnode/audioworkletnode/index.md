@@ -34,7 +34,8 @@ new AudioWorkletNode(context, name, options)
 
     <!-- The specification refers to this object as: AudioWorkletNodeOptions -->
 
-    > **Note:** The result of [the structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)
+    > [!NOTE]
+    > The result of [the structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)
     > applied to the object is also internally passed into the associated {{domxref("AudioWorkletProcessor.AudioWorkletProcessor", "AudioWorkletProcessor()")}} constructor
     > — this allows custom initialization of an underlying user-defined {{domxref("AudioWorkletProcessor")}}.
 
