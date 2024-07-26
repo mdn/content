@@ -19,10 +19,12 @@ refresh rate. The most common refresh rate is 60hz,
 background tabs or hidden {{ HTMLElement("iframe") }}s, in order to improve
 performance and battery life.
 
-> **Note:** Your callback function must call `requestAnimationFrame()` again if
+> [!NOTE]
+> Your callback function must call `requestAnimationFrame()` again if
 > you want to animate another frame. `requestAnimationFrame()` is one-shot.
 
-> **Warning:** Be sure always to use the first argument (or some other method for
+> [!WARNING]
+> Be sure always to use the first argument (or some other method for
 > getting the current time) to calculate how much the animation will progress in
 > a frame — **otherwise, the animation will run faster on high refresh-rate screens**.
 > For ways to do that, see the examples below.
