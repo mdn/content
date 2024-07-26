@@ -13,14 +13,64 @@ A `Headers` object has an associated header list, which is initially empty and c
 
 For security reasons, some headers can only be controlled by the user agent. These headers include the {{Glossary("Forbidden_header_name", "forbidden header names")}} and {{Glossary("Forbidden_response_header_name", "forbidden response header names")}}.
 
-A Headers object also has an associated guard, which takes a value of `immutable`, `request`, `request-no-cors`, `response`, or `none`. This affects whether the {{domxref("Headers.set","set()")}}, {{domxref("Headers.delete","delete()")}}, and {{domxref("Headers.append","append()")}} methods will mutate the header. For more information see {{Glossary("Guard")}}.
-
 You can retrieve a `Headers` object via the {{domxref("Request.headers")}} and {{domxref("Response.headers")}} properties, and create a new `Headers` object using the {{domxref("Headers.Headers", "Headers()")}} constructor.
 
 An object implementing `Headers` can directly be used in a {{jsxref("Statements/for...of", "for...of")}} structure, instead of {{domxref('Headers.entries()', 'entries()')}}: `for (const p of myHeaders)` is equivalent to `for (const p of myHeaders.entries())`.
 
 > [!NOTE]
 > you can find out more about the available headers by reading our [HTTP headers](/en-US/docs/Web/HTTP/Headers) reference.
+
+## Description
+
+### Headers guards
+
+A Headers object has an associated _guard_, which takes a value of `immutable`, `request`, `request-no-cors`, `response`, or `none`. This affects whether the {{domxref("Headers.set","set()")}}, {{domxref("Headers.delete","delete()")}}, and {{domxref("Headers.append","append()")}} methods will mutate the header.
+
+When a new {{domxref("Headers")}} object is created using the {{domxref("Headers.Headers","Headers()")}} {{glossary("constructor")}}, its guard is set to `none` (the default). When a {{domxref("Request")}} or {{domxref("Response")}} object is created, it has an associated {{domxref("Headers")}} object whose guard is set as summarized below:
+
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="row">new object's type</th>
+      <th scope="col">creating constructor</th>
+      <th scope="col">
+        guard setting of associated {{domxref("Headers")}} object
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="2">{{domxref("Request")}}</td>
+      <td>{{domxref("Request.Request","Request()")}}</td>
+      <td><code>request</code></td>
+    </tr>
+    <tr>
+      <td>
+        {{domxref("Request.Request","Request()")}} with
+        {{domxref("Request.mode","mode")}} of <code>no-cors</code>
+      </td>
+      <td><code>request-no-cors</code></td>
+    </tr>
+    <tr>
+      <td rowspan="2">{{domxref("Response")}}</td>
+      <td>{{domxref("Response.Response","Response()")}}</td>
+      <td><code>response</code></td>
+    </tr>
+    <tr>
+      <td>
+        {{domxref("Response.error_static", "Response.error()")}} or
+        {{domxref("Response.redirect_static", "Response.redirect()")}} methods
+      </td>
+      <td><code>immutable</code></td>
+    </tr>
+  </tbody>
+</table>
+
+A header's guard affects the {{domxref("Headers.set","set()")}}, {{domxref("Headers.delete","delete()")}}, and {{domxref("Headers.append","append()")}} methods which change the header's contents. A {{jsxref("TypeError")}} is thrown if you try to modify a {{domxref("Headers")}} object whose guard is `immutable`. However, the operation will work if:
+
+- Guard is `request` and the header _name_ isn't a {{Glossary("forbidden header name")}} .
+- Guard is `request-no-cors` and the header _name_/_value_ is a {{Glossary("CORS-safelisted request header", "simple header")}} .
+- Guard is `response` and the header _name_ isn't a {{Glossary("forbidden response header name")}} .
 
 ## Constructor
 
@@ -54,7 +104,7 @@ An object implementing `Headers` can directly be used in a {{jsxref("Statements/
 > To be clear, the difference between {{domxref("Headers.set()")}} and {{domxref("Headers.append()")}} is that if the specified header does already exist and does accept multiple values, {{domxref("Headers.set()")}} will overwrite the existing value with the new one, whereas {{domxref("Headers.append()")}} will append the new value onto the end of the set of values. See their dedicated pages for example code.
 
 > [!NOTE]
-> All of the Headers methods will throw a {{jsxref("TypeError")}} if you try to pass in a reference to a name that isn't a [valid HTTP Header name](https://fetch.spec.whatwg.org/#concept-header-name). The mutation operations will throw a `TypeError` if the header has an immutable {{Glossary("Guard")}}. In any other failure case they fail silently.
+> All of the Headers methods will throw a {{jsxref("TypeError")}} if you try to pass in a reference to a name that isn't a [valid HTTP Header name](https://fetch.spec.whatwg.org/#concept-header-name). The mutation operations will throw a `TypeError` if the header has an immutable [guard](#headers_guards). In any other failure case they fail silently.
 
 > [!NOTE]
 > When Header values are iterated over, they are automatically sorted in lexicographical order, and values from duplicate header names are combined.
