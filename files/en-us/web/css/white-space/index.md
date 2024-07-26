@@ -233,7 +233,7 @@ select.addEventListener("change", (e) => {
 
 ### Multiple lines in SVG text element
 
-The {{CSSXRef("white-space")}} CSS property can be used to create multiple lines in a {{SVGElement("text")}} element, which does not wrap by default.
+The `white-space` CSS property can be used to create multiple lines in a {{SVGElement("text")}} element, which does not wrap by default.
 
 > [!NOTE]
 > At time of writing this feature has [limited support](#browser_compatibility).
