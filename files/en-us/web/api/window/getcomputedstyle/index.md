@@ -149,11 +149,11 @@ Java.
 - CSS property values may be accessed using the
   {{DOMxRef("CSSStyleDeclaration.getPropertyValue", "getPropertyValue(propName)")}} method or by indexing directly into the object
   using array or [dot notation](/en-US/docs/Learn/JavaScript/Objects/Basics#dot_notation) such as `obj['z-index']` or `obj.zIndex`.
-- The values returned by `getComputedStyle` are {{CSSxRef("resolved_value", "resolved values", "", 1)}}.
+- The values returned by `getComputedStyle` are [resolved values](/en-US/docs/Web/CSS/resolved_value).
   These are usually the same as CSS 2.1's
-  {{CSSxRef("computed_value","computed values", "", 1)}}, but for some older properties
+  [computed values](/en-US/docs/Web/CSS/computed_value), but for some older properties
   like `width`, `height`, or `padding`, they are
-  instead the same as {{CSSxRef("used_value","used values", "", 1)}}. Originally, CSS
+  instead the same as [used values](/en-US/docs/Web/CSS/used_value). Originally, CSS
   2.0 defined the _computed values_ as the "ready to be used" final values of
   properties after cascading and inheritance, but CSS 2.1 redefined them as pre-layout,
   and _used values_ as post-layout. For CSS 2.0 properties,
@@ -186,4 +186,4 @@ Java.
 
 - {{DOMxRef("window.getDefaultComputedStyle()")}}
 - {{DOMxRef("CSSStyleDeclaration.getPropertyValue", "getPropertyValue()")}}
-- {{CSSxRef("resolved_value", "Resolved Value")}}
+- [Resolved value](/en-US/docs/Web/CSS/resolved_value)
