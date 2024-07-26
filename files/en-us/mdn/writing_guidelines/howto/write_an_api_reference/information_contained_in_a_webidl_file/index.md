@@ -173,7 +173,7 @@ Here, it is defined that when the global scope is of type `DedicatedWorkerGlobal
 ### Preferences
 
 > [!NOTE]
-> this information is specific to Gecko and should only be used in the Browser compatibility section.
+> This information is specific to Gecko and should only be used in the Browser compatibility section.
 
 In Gecko, the availability of a partial interface, including its constructor, properties and methods may be controlled by a preference (usually called a "pref"). This is marked in the WebIDL too.
 
@@ -189,7 +189,7 @@ interface SpeechSynthesis {
 Here `media.webspeech.synth.enabled` controls the `SpeechSynthesis` interface and its properties (the full listing has more than 3.)
 
 > [!NOTE]
-> the default value of the preference is not available directly in the WebIDL (it can be different from one product using Gecko to another.)
+> The default value of the preference is not available directly in the WebIDL (it can be different from one product using Gecko to another.)
 
 ### Available only in system code
 
@@ -404,7 +404,7 @@ For the documentation, the sub-page must contain a sentence indicating if it is 
 ### Preferences
 
 > [!NOTE]
-> this information is specific to Gecko and should only be used in the Browser compatibility section.
+> This information is specific to Gecko and should only be used in the Browser compatibility section.
 
 In Gecko, the availability of some methods may be controlled by a preference. This is marked in the WebIDL too.
 
@@ -444,7 +444,7 @@ serializer; // Standard version
 The `toJSON()` method is listed just like any other method of the interface and has its own sub-page (E.g. {{domxref("Performance.toJSON()")}})
 
 > [!NOTE]
-> the WebIDL specification uses `serializer` instead of `jsonifier`. This is not used in Gecko — only the non-standard likely early proposal `jsonifier` is found in mozilla-central.
+> The WebIDL specification uses `serializer` instead of `jsonifier`. This is not used in Gecko — only the non-standard likely early proposal `jsonifier` is found in mozilla-central.
 
 ### Iterator-like methods
 

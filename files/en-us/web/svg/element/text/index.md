@@ -12,7 +12,7 @@ The SVG **`<text>`** element draws a graphics element consisting of text. It's p
 If text is included in SVG not inside of a `<text>` element, it is not rendered. This is different than being hidden by default, as setting the {{SVGAttr('display')}} property won't show the text.
 
 > [!NOTE]
-> the `<text>` element does not wrap by default, to make this happen it needs to be styled with the {{CSSXRef("white-space")}} CSS property.
+> The `<text>` element does not wrap by default, to make this happen it needs to be styled with the {{CSSXRef("white-space")}} CSS property.
 
 ## Example
 

@@ -11,7 +11,7 @@ browser-compat: api.Worker.Worker
 The **`Worker()`** constructor creates a {{domxref("Worker")}} object that executes the script at the specified URL. This script must obey the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy).
 
 > [!NOTE]
-> that there is a disagreement among browser manufacturers about whether a data URL is of the same origin or not. Though Firefox 10 and later accept data URLs, that's not the case in all other browsers.
+> There is a disagreement among browser manufacturers about whether a data URL is of the same origin or not. Though Firefox 10 and later accept data URLs, that's not the case in all other browsers.
 
 ## Syntax
 

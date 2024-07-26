@@ -30,7 +30,7 @@ distortion.connect(audioCtx.destination);
 ```
 
 > [!NOTE]
-> you don't need to connect the analyser's output to another node for it to work, as long as the input is connected to the source, either directly or via another node.
+> You don't need to connect the analyser's output to another node for it to work, as long as the input is connected to the source, either directly or via another node.
 
 The analyser node will then capture audio data using a Fast Fourier Transform (fft) in a certain frequency domain, depending on what you specify as the {{ domxref("AnalyserNode.fftSize") }} property value (if no value is specified, the default is 2048.)
 

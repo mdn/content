@@ -139,7 +139,7 @@ This allows access to various alternate forms of glyphs within a font. The examp
 {{EmbedGHLiveSample("css-examples/font-features/font-variant-east-asian.html", '100%', 750)}}
 
 > [!NOTE]
-> these glyphs were copied out of a font sample and are not intended as prose.
+> These glyphs were copied out of a font sample and are not intended as prose.
 
 ### Font variant shorthand
 

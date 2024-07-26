@@ -118,7 +118,7 @@ From the assistive technology user's perspective, the heading does not exist sin
       - : The radio is not checked.
 
 > [!NOTE]
-> use the [`tabindex` attribute](/en-US/docs/Web/HTML/Global_attributes/tabindex) if the `role="radio"` is used on an element that does not natively accept keyboard focus. E.g., a `<div>` or `<span>`.
+> Use the [`tabindex` attribute](/en-US/docs/Web/HTML/Global_attributes/tabindex) if the `role="radio"` is used on an element that does not natively accept keyboard focus. E.g., a `<div>` or `<span>`.
 
 ## Keyboard interactions
 

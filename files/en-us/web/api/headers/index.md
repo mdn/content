@@ -20,7 +20,7 @@ You can retrieve a `Headers` object via the {{domxref("Request.headers")}} and {
 An object implementing `Headers` can directly be used in a {{jsxref("Statements/for...of", "for...of")}} structure, instead of {{domxref('Headers.entries()', 'entries()')}}: `for (const p of myHeaders)` is equivalent to `for (const p of myHeaders.entries())`.
 
 > [!NOTE]
-> you can find out more about the available headers by reading our [HTTP headers](/en-US/docs/Web/HTTP/Headers) reference.
+> You can find out more about the available headers by reading our [HTTP headers](/en-US/docs/Web/HTTP/Headers) reference.
 
 ## Constructor
 

@@ -15,7 +15,7 @@ By default, when people use the tab key to browse a webpage, only interactive el
 The order in which elements gain focus when using a keyboard, is the source order by default. In exceptional circumstances, authors may want to redefine the order. To do this, authors can set `tabindex` to any positive number.
 
 > [!WARNING]
-> avoid using positive values for `tabindex`. Elements with a positive `tabindex` are put before the default interactive elements on the page, which means page authors will have to set (and maintain) `tabindex` values for all focusable elements on the page whenever they use one or more positive values for `tabindex`.
+> Avoid using positive values for `tabindex`. Elements with a positive `tabindex` are put before the default interactive elements on the page, which means page authors will have to set (and maintain) `tabindex` values for all focusable elements on the page whenever they use one or more positive values for `tabindex`.
 
 The following table describes `tabindex` behavior in modern browsers:
 
