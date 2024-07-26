@@ -55,7 +55,8 @@ An entry in `GroupData.json` has the following structure:
 
 - `"Name_of_the_API"`
   - : This key is both an ID used by sidebar macros like `\{{APIRef("Name_of_the_API")}}` and the name displayed in the sidebar itself. Choose it wisely.
-    > **Warning:** If you want to change the name displayed in the sidebar, you must edit all the pages displaying it.
+    > [!WARNING]
+    > If you want to change the name displayed in the sidebar, you must edit all the pages displaying it.
 - `"overview"`
   - : This is a list containing one page: the overview page, used as the link for the `"Name_of_the_API"` text. The value is the _title of the page_, and the page must be in the `web/api/` directory.
 - `"guides"`
@@ -64,13 +65,16 @@ An entry in `GroupData.json` has the following structure:
   - : This lists the interfaces that are part of the API.
 - `"methods"`
   - : This lists the methods that are part of the API.
-    > **Note:** The methods of the interfaces listed in `"interfaces"` **must** not be listed there. They are automatically added to the sidebar if the `page-type` key for that page is `web-api-static-method` or `web-api-instance-method`.
+    > [!NOTE]
+    > The methods of the interfaces listed in `"interfaces"` **must** not be listed there. They are automatically added to the sidebar if the `page-type` key for that page is `web-api-static-method` or `web-api-instance-method`.
 - `"properties"`
   - : This lists the properties on other interfaces that are part of the API, like `navigator.xr` (a property that the WebXR API adds to the `navigator` object)
-    > **Note:** The properties of the interfaces listed in `"interfaces"` **must** not be listed there. They are automatically added to the sidebar if the `page-type` key for that page is `web-api-static-property` or `web-api-instance-property`.
+    > [!NOTE]
+    > The properties of the interfaces listed in `"interfaces"` **must** not be listed there. They are automatically added to the sidebar if the `page-type` key for that page is `web-api-static-property` or `web-api-instance-property`.
 - `"events"`
   - : This lists events of other interfaces that are part of the API. The values are the _title of the pages_ (that must reside under `Web/Events`)
-    > **Note:** The events targeting the interfaces listed in `"interfaces"` **must** not be listed there. They are automatically added to the sidebar if the `page-type` key for that page is `web-api-event`.
+    > [!NOTE]
+    > The events targeting the interfaces listed in `"interfaces"` **must** not be listed there. They are automatically added to the sidebar if the `page-type` key for that page is `web-api-event`.
 
 There are two other keys, `"dictionaries"` and `"callbacks"`, operating on the same principle. As we no longer document these entities in their own pages, their use is deprecated, and no new entry should be added to them (and we remove them little by little).
 
