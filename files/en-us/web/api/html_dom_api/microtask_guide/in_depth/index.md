@@ -16,7 +16,8 @@ Starting with the addition of timeouts and intervals as part of the Web API ({{d
 
 ## JavaScript execution contexts
 
-> **Note:** The details here are generally not important to most JavaScript programmers. This information is provided as a basis for why microtasks are useful and how they function; if you don't care, you can skip this and come back later if you find that you need to.
+> [!NOTE]
+> The details here are generally not important to most JavaScript programmers. This information is provided as a basis for why microtasks are useful and how they function; if you don't care, you can skip this and come back later if you find that you need to.
 
 When a fragment of JavaScript code runs, it runs inside an **execution context**. There are three types of code that create a new execution context:
 

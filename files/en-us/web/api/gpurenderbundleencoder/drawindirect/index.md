@@ -13,7 +13,8 @@ browser-compat: api.GPURenderBundleEncoder.drawIndirect
 The **`drawIndirect()`** method of the
 {{domxref("GPURenderBundleEncoder")}} interface draws primitives using parameters read from a {{domxref("GPUBuffer")}}.
 
-> **Note:** This method is functionally identical to its equivalent on {{domxref("GPURenderPassEncoder")}} — {{domxref("GPURenderPassEncoder.drawIndirect", "drawIndirect()")}}.
+> [!NOTE]
+> This method is functionally identical to its equivalent on {{domxref("GPURenderPassEncoder")}} — {{domxref("GPURenderPassEncoder.drawIndirect", "drawIndirect()")}}.
 
 ## Syntax
 
