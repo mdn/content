@@ -29,4 +29,3 @@ To use this API you need the `"clipboardWrite"` extension [permission](/en-US/do
 {{Compat}}
 
 > [!NOTE]
-> This API is based on Chromium's [`chrome.clipboard`](https://developer.chrome.com/docs/extensions/reference/clipboard/) API.
