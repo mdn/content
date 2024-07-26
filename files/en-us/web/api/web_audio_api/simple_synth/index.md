@@ -395,7 +395,8 @@ The result is an array, `noteFreq`, with an object for each octave. Each octave 
 
 With this table in place, we can find out the frequency for a given note in a particular octave quite easily. If we want the frequency for the note G# in octave 1, we use `noteFreq[1]["G#"]` and get the value 51.9 as a result.
 
-> **Note:** The values in the example table above have been rounded to two decimal places.
+> [!NOTE]
+> The values in the example table above have been rounded to two decimal places.
 
 ```js hidden
 if (!Object.entries) {
