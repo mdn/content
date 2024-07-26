@@ -11663,9 +11663,6 @@
 /en-US/docs/Web/CSS/linear-gradient()	/en-US/docs/Web/CSS/gradient/linear-gradient
 /en-US/docs/Web/CSS/margin-new	/en-US/docs/Web/CSS/margin
 /en-US/docs/Web/CSS/margin_collapsing	/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing
-/en-US/docs/Web/CSS/marker-end	/en-US/docs/Web/SVG/Attribute/marker-end
-/en-US/docs/Web/CSS/marker-mid	/en-US/docs/Web/SVG/Attribute/marker-mid
-/en-US/docs/Web/CSS/marker-start	/en-US/docs/Web/SVG/Attribute/marker-start
 /en-US/docs/Web/CSS/max()	/en-US/docs/Web/CSS/max
 /en-US/docs/Web/CSS/media	/en-US/docs/Web/CSS/@media
 /en-US/docs/Web/CSS/media/Bitmap	/en-US/docs/Web/CSS/@media
