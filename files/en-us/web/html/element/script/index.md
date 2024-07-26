@@ -19,7 +19,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     For [module scripts](/en-US/docs/Web/JavaScript/Guide/Modules), if the `async` attribute is present then the scripts and all their dependencies will be fetched in parallel to parsing and evaluated as soon as they are available.
 
-    > **Warning:** This attribute must not be used if the `src` attribute is absent (i.e. for inline scripts) for classic scripts, in this case it would have no effect.
+    > [!WARNING]
+    > This attribute must not be used if the `src` attribute is absent (i.e. for inline scripts) for classic scripts, in this case it would have no effect.
 
     This attribute allows the elimination of **parser-blocking JavaScript** where the browser would have to load and evaluate scripts before continuing to parse. `defer` has a similar effect in this case.
 
@@ -33,7 +34,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : Specifies that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header along with the script resource request. On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} or {{httpheader("Attribution-Reporting-Register-Trigger")}} header in the response, to register a JavaScript-based [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#javascript-based_event_sources) or [attribution trigger](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_triggers#javascript-based_attribution_triggers), respectively. Which response header should be sent back depends on the value of the `Attribution-Reporting-Eligible` header that triggered the registration.
 
-    > **Note:** Alternatively, JavaScript-based attribution sources or triggers can be registered by sending a {{domxref("Window/fetch", "fetch()")}} request containing the `attributionReporting` option (either set directly on the `fetch()` call or on a {{domxref("Request")}} object passed into the `fetch()` call), or by sending an {{domxref("XMLHttpRequest")}} with {{domxref("XMLHttpRequest.setAttributionReporting", "setAttributionReporting()")}} invoked on the request object.
+    > [!NOTE]
+    > Alternatively, JavaScript-based attribution sources or triggers can be registered by sending a {{domxref("Window/fetch", "fetch()")}} request containing the `attributionReporting` option (either set directly on the `fetch()` call or on a {{domxref("Request")}} object passed into the `fetch()` call), or by sending an {{domxref("XMLHttpRequest")}} with {{domxref("XMLHttpRequest.setAttributionReporting", "setAttributionReporting()")}} invoked on the request object.
 
     There are two versions of this attribute that you can set:
 
@@ -48,7 +50,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
       This is useful in cases where the requested resource is not on a server you control, or you just want to handle registering the attribution source on a different server. In this case, you can specify one or more URLs as the value of `attributionsrc`. When the resource request occurs the {{httpheader("Attribution-Reporting-Eligible")}} header will be sent to the URL(s) specified in `attributionSrc` in addition to the resource origin. These URLs can then respond with a {{httpheader("Attribution-Reporting-Register-Source")}} or {{httpheader("Attribution-Reporting-Register-Trigger")}} header as appropriate to complete registration.
 
-      > **Note:** Specifying multiple URLs means that multiple attribution sources can be registered on the same feature. You might for example have different campaigns that you are trying to measure the success of, which involve generating different reports on different data.
+      > [!NOTE]
+      > Specifying multiple URLs means that multiple attribution sources can be registered on the same feature. You might for example have different campaigns that you are trying to measure the success of, which involve generating different reports on different data.
 
     See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
 
@@ -65,7 +68,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     Scripts with the `defer` attribute will prevent the `DOMContentLoaded` event from firing until the script has loaded and finished evaluating.
 
-    > **Warning:** This attribute must not be used if the `src` attribute is absent (i.e. for inline scripts), in this case it would have no effect.
+    > [!WARNING]
+    > This attribute must not be used if the `src` attribute is absent (i.e. for inline scripts), in this case it would have no effect.
     >
     > The `defer` attribute has no effect on [module scripts](/en-US/docs/Web/JavaScript/Guide/Modules) — they defer by default.
 
@@ -105,7 +109,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `strict-origin-when-cross-origin` (default): Send a full URL when performing a same-origin request, only send the origin when the protocol security level stays the same (HTTPS→HTTPS), and send no header to a less secure destination (HTTPS→HTTP).
     - `unsafe-url`: The referrer will include the origin _and_ the path (but not the [fragment](/en-US/docs/Web/API/HTMLAnchorElement/hash), [password](/en-US/docs/Web/API/HTMLAnchorElement/password), or [username](/en-US/docs/Web/API/HTMLAnchorElement/username)). **This value is unsafe**, because it leaks origins and paths from TLS-protected resources to insecure origins.
 
-    > **Note:** An empty string value (`""`) is both the default value, and a fallback value if `referrerpolicy` is not supported. If `referrerpolicy` is not explicitly specified on the `<script>` element, it will adopt a higher-level referrer policy, i.e. one set on the whole document or domain. If a higher-level policy is not available, the empty string is treated as being equivalent to `strict-origin-when-cross-origin`.
+    > [!NOTE]
+    > An empty string value (`""`) is both the default value, and a fallback value if `referrerpolicy` is not supported. If `referrerpolicy` is not explicitly specified on the `<script>` element, it will adopt a higher-level referrer policy, i.e. one set on the whole document or domain. If a higher-level policy is not available, the empty string is treated as being equivalent to `strict-origin-when-cross-origin`.
 
 - `src`
   - : This attribute specifies the URI of an external script; this can be used as an alternative to embedding a script directly within a document.

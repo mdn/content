@@ -35,7 +35,8 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
       This is useful in cases where the requested resource is not on a server you control, or you just want to handle registering the attribution source on a different server. In this case, you can specify one or more URLs as the value of `attributionsrc`. When the resource request occurs, the {{httpheader("Attribution-Reporting-Eligible")}} header will be sent to the URL(s) specified in `attributionsrc` in addition to the resource origin. These URLs can then respond with the {{httpheader("Attribution-Reporting-Register-Source")}} to complete registration.
 
-      > **Note:** Specifying multiple URLs means that multiple attribution sources can be registered on the same feature. You might for example have different campaigns that you are trying to measure the success of, which involve generating different reports on different data.
+      > [!NOTE]
+      > Specifying multiple URLs means that multiple attribution sources can be registered on the same feature. You might for example have different campaigns that you are trying to measure the success of, which involve generating different reports on different data.
 
     `<a>` elements cannot be used as attribution triggers, only sources.
 
@@ -51,7 +52,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
     - `filename`: defining a value suggests it as the filename. `/` and `\` characters are converted to underscores (`_`). Filesystems may forbid other characters in filenames, so browsers will adjust the suggested name if necessary.
 
-    > **Note:**
+    > [!NOTE]
     >
     > - `download` only works for [same-origin URLs](/en-US/docs/Web/Security/Same-origin_policy), or the `blob:` and `data:` schemes.
     > - How browsers treat downloads varies by browser, user settings, and other factors. The user may be prompted before a download starts, or the file may be saved automatically, or it may open automatically, either in an external application or in the browser itself.
@@ -101,7 +102,8 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     - `_top`: The topmost browsing context. To be specific, this means the "highest" context that's an ancestor of the current one. If no ancestors, behaves as `_self`.
     - `_unfencedTop`: Allows embedded [fenced frames](/en-US/docs/Web/API/Fenced_frame_API) to navigate the top-level frame (i.e. traversing beyond the root of the fenced frame, unlike other reserved destinations). Note that the navigation will still succeed if this is used outside of a fenced frame context, but it will not act like a reserved keyword.
 
-    > **Note:** Setting `target="_blank"` on `<a>` elements implicitly provides the same `rel` behavior as setting [`rel="noopener"`](/en-US/docs/Web/HTML/Attributes/rel/noopener) which does not set `window.opener`.
+    > [!NOTE]
+    > Setting `target="_blank"` on `<a>` elements implicitly provides the same `rel` behavior as setting [`rel="noopener"`](/en-US/docs/Web/HTML/Attributes/rel/noopener) which does not set `window.opener`.
 
 - `type`
   - : Hints at the linked URL's format with a {{Glossary("MIME type")}}. No built-in functionality.
@@ -112,7 +114,8 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
   - : Hinted at the {{Glossary("character encoding")}} of the linked URL.
 
-    > **Note:** This attribute is deprecated and **should not be used by authors**. Use the HTTP {{HTTPHeader("Content-Type")}} header on the linked URL.
+    > [!NOTE]
+    > This attribute is deprecated and **should not be used by authors**. Use the HTTP {{HTTPHeader("Content-Type")}} header on the linked URL.
 
 - `coords` {{Deprecated_Inline}}
   - : Used with [the `shape` attribute](#shape). A comma-separated list of coordinates.
@@ -120,7 +123,8 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
   - : Was required to define a possible target location in a page. In HTML 4.01, `id` and `name` could both be used on `<a>`, as long as they had identical values.
 
-    > **Note:** Use the global attribute [`id`](/en-US/docs/Web/HTML/Global_attributes#id) instead.
+    > [!NOTE]
+    > Use the global attribute [`id`](/en-US/docs/Web/HTML/Global_attributes#id) instead.
 
 - `rev` {{Deprecated_Inline}}
   - : Specified a reverse link; the opposite of [the `rel` attribute](#rel). Deprecated for being very confusing.
@@ -128,7 +132,8 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
   - : The shape of the hyperlink's region in an image map.
 
-    > **Note:** Use the {{HTMLElement("area")}} element for image maps instead.
+    > [!NOTE]
+    > Use the {{HTMLElement("area")}} element for image maps instead.
 
 ## Accessibility
 
