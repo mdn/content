@@ -43,7 +43,8 @@ let radiansToDegrees = (rad) => rad / RADIANS_PER_DEGREE;
 
 #### Times and durations
 
-> **Note:** For security reasons, `DOMHighResTimeStamp` usually introduces a
+> [!NOTE]
+> For security reasons, `DOMHighResTimeStamp` usually introduces a
 > small amount of imprecision to the clock in order to prevent it from being used in [fingerprinting](/en-US/docs/Glossary/Fingerprinting) and timing-based
 > attacks.
 
@@ -69,7 +70,8 @@ In augmented reality (AR), this is because of the need to insert virtual objects
 
 Thus it's all about creating a sense of space. From the perspective of an XR developer, designing the stage is the part that matters most to your users. Like an architect or a set designer, you have the power to create moods and experiences through a physical environment. How you structure that space will both depend on and influence how users can interact and explore it.
 
-> **Note:** A space will typically have foreground, mid-distance, and background elements. The right balance can create a unique presence and guide your user. The foreground includes objects and interfaces that you can interact with directly. The mid-distance includes objects you can interact with to some extent, or can approach in order to examine and engage with more closely. The background, on the other hand, is usually largely or entirely non-interactive, at least until and unless the user is able to approach it, bringing it into the mid-distance or foreground range.
+> [!NOTE]
+> A space will typically have foreground, mid-distance, and background elements. The right balance can create a unique presence and guide your user. The foreground includes objects and interfaces that you can interact with directly. The mid-distance includes objects you can interact with to some extent, or can approach in order to examine and engage with more closely. The background, on the other hand, is usually largely or entirely non-interactive, at least until and unless the user is able to approach it, bringing it into the mid-distance or foreground range.
 
 In WebXR, the fundamental concept of a **space**—as in, a coordinate space in which a scene takes place—is represented by an instance of {{domxref("XRSpace")}}. The space is used to make determinations about the relative positions and motion of objects and other entities (such as light sources and cameras) within the user's environment.
 
@@ -170,7 +172,8 @@ The compatibility issues that arise may be as fundamental as being unable to sup
 
 XR sessions are created using the {{domxref("XRSystem.requestSession", "navigator.xr.requestSession()")}} method. One of its optional parameters is an object which you can use to specify required and/or optional features that the session must (or should ideally) support. Currently, the only supported options are strings identifying the standard reference spaces. Using these, you can ensure before your code even runs that you have access to a WebXR session that can support the reference space type you require or prefer.
 
-> **Note:** At this time, the reference space to use or to prefer is the only option available when creating an {{domxref("XRSession")}}. In the future, it's likely that more options will become available.
+> [!NOTE]
+> At this time, the reference space to use or to prefer is the only option available when creating an {{domxref("XRSession")}}. In the future, it's likely that more options will become available.
 
 ## Positioning and orienting objects
 

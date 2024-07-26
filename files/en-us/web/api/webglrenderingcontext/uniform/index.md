@@ -15,7 +15,8 @@ when the program object is linked successfully. They retain the values assigned 
 by a call to this method until the next successful link operation occurs on the program
 object, when they are once again initialized to 0.
 
-> **Note:** Many of the functions described here have expanded WebGL 2 interfaces, which can be
+> [!NOTE]
+> Many of the functions described here have expanded WebGL 2 interfaces, which can be
 > found under
 > [`WebGL2RenderingContext.uniform[1234][uif][v]()`](/en-US/docs/Web/API/WebGL2RenderingContext/uniform).
 
