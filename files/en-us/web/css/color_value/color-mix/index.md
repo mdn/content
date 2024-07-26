@@ -30,7 +30,7 @@ color-mix(in --swop5c, red, blue)
 
 Functional notation: `color-mix(<color-interpolation-method>, <color>[<percentage>], <color>[<percentage>])`
 
-- `<color-interpolation-method>`
+- {{CSSXref("&lt;color-interpolation-method&gt;")}}
 
   - : Specifies what interpolation method should be used to mix the colors. It consists of the `in` keyword followed by a {{glossary("color space")}} name. The following three types are available:
 
