@@ -85,7 +85,8 @@ Setting the font size in pixel values (`px`) is a good choice when you need pixe
 
 Font sizing settings can also be used in combination. For example, if a parent element is set to `16px` and its child element is set to `larger`, the child element displays larger than the parent element on the page.
 
-> **Note:** Defining font sizes in `px` is _[not accessible](https://en.wikipedia.org/wiki/Web_accessibility)_, because the user cannot change the font size in some browsers. For example, users with limited vision may wish to set the font size much larger than the size chosen by a web designer. Avoid using them for font sizes if you wish to create an inclusive design.
+> [!NOTE]
+> Defining font sizes in `px` is _[not accessible](https://en.wikipedia.org/wiki/Web_accessibility)_, because the user cannot change the font size in some browsers. For example, users with limited vision may wish to set the font size much larger than the size chosen by a web designer. Avoid using them for font sizes if you wish to create an inclusive design.
 
 ### Ems
 
