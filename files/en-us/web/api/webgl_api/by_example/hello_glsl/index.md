@@ -8,7 +8,8 @@ page-type: guide
 
 This WebGL example demonstrates a very basic GLSL shader program that draws a solid color square.
 
-> **Note:** This example will most likely work in all modern desktop browsers. But it may not work in some mobile or older browsers. If the canvas remains blank, you can check the output of the next example, which draws exactly the same thing. But remember to read through the explanations and code on this page, before moving on to the next.
+> [!NOTE]
+> This example will most likely work in all modern desktop browsers. But it may not work in some mobile or older browsers. If the canvas remains blank, you can check the output of the next example, which draws exactly the same thing. But remember to read through the explanations and code on this page, before moving on to the next.
 
 ## Hello World program in GLSL
 

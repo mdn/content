@@ -45,7 +45,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 - `browsingtopics` {{Experimental_Inline}} {{non-standard_inline}}
 
-  - : A boolean attribute that, if present, specifies that the selected topics for the current user should be sent with the request for the {{htmlelement("iframe")}}'s source. See [Using the Topics API](/en-US/docs/Web/API/Topics_API/Using) for more details.
+  - : A boolean attribute that, if present, specifies that the selected topics for the current user should be sent with the request for the `<iframe>`'s source. See [Using the Topics API](/en-US/docs/Web/API/Topics_API/Using) for more details.
 
 - `credentialless` {{Experimental_Inline}}
 

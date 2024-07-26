@@ -48,7 +48,8 @@ The `beforeunload` event suffers from some problems:
   2. The user then switches to a different app.
   3. Later, the user closes the browser from the app manager.
 
-  > **Note:** It is recommended to use the {{domxref("Document.visibilitychange_event", "visibilitychange")}} event as a more reliable signal for automatic app state saving that gets around problems like the above. See [Don't lose user and app state, use Page Visibility](https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/) for more details.
+  > [!NOTE]
+  > It is recommended to use the {{domxref("Document.visibilitychange_event", "visibilitychange")}} event as a more reliable signal for automatic app state saving that gets around problems like the above. See [Don't lose user and app state, use Page Visibility](https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/) for more details.
 
 - In Firefox, `beforeunload` is not compatible with the [back/forward cache](https://web.dev/articles/bfcache) (bfcache): that is, Firefox will not place pages in the bfcache if they have `beforeunload` listeners, and this is bad for performance.
 

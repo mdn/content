@@ -105,7 +105,8 @@ The preferred position of emphasis marks depends on the language. In Japanese fo
   </tbody>
 </table>
 
-> **Note:** The `text-emphasis-position` cannot be set, and therefore are not reset either, using the {{cssxref("text-emphasis")}} shorthand property.
+> [!NOTE]
+> The `text-emphasis-position` cannot be set, and therefore are not reset either, using the {{cssxref("text-emphasis")}} shorthand property.
 
 ## Formal definition
 

@@ -86,7 +86,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
 - {{domxref("Window.name")}}
   - : Gets/sets the name of the window.
 - {{domxref("Window.navigation")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns the current `window`'s associated {{domxref("Navigation")}} object. The entry point for the {{domxref("Navigation API")}}.
+  - : Returns the current `window`'s associated {{domxref("Navigation")}} object. The entry point for the [Navigation API](/en-US/docs/Web/API/Navigation_API).
 - {{domxref("Window.navigator")}} {{ReadOnlyInline}}
   - : Returns a reference to the navigator object.
 - {{domxref("Window.opener")}}

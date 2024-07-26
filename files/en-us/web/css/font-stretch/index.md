@@ -214,7 +214,8 @@ td {
 
 {{Specifications}}
 
-> **Note:** The `font-stretch` property was initially defined in CSS 2, but dropped in CSS 2.1 due to the lack of browser implementation. It was brought back in CSS 3.
+> [!NOTE]
+> The `font-stretch` property was initially defined in CSS 2, but dropped in CSS 2.1 due to the lack of browser implementation. It was brought back in CSS 3.
 
 ## Browser compatibility
 

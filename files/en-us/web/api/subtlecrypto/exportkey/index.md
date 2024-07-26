@@ -64,7 +64,8 @@ The promise is rejected when one of the following exceptions is encountered:
 
 ## Examples
 
-> **Note:** You can [try the working examples](https://mdn.github.io/dom-examples/web-crypto/export-key/index.html) out on GitHub.
+> [!NOTE]
+> You can [try the working examples](https://mdn.github.io/dom-examples/web-crypto/export-key/index.html) out on GitHub.
 
 ### Raw export
 

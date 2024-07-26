@@ -13,7 +13,8 @@ browser-compat: api.Window.vrdisplaydeactivate_event
 
 The **`vrdisplaydeactivate`** event of the [WebVR API](/en-US/docs/Web/API/WebVR_API) is fired when a VR display can no longer be presented to, for example if an HMD has gone into standby or sleep mode due to a period of inactivity.
 
-> **Note:** This event was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
+> [!NOTE]
+> This event was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
 This event is not cancelable and does not bubble.
 

@@ -26,7 +26,8 @@ To see the code for this animation, [view the source on GitHub](https://github.c
 - {{cssxref("content")}}
 - {{cssxref("quotes")}}
 
-> **Note:** The CSS generated content module introduces four at-risk properties that have not been implemented: `string-set`, `bookmark-label`, `bookmark-level`, and `bookmark-state`.
+> [!NOTE]
+> The CSS generated content module introduces four at-risk properties that have not been implemented: `string-set`, `bookmark-label`, `bookmark-level`, and `bookmark-state`.
 
 ### Functions
 
