@@ -128,6 +128,8 @@ This example demonstrates how the keyword values for `fill`
 
 #### HTML
 
+We include three {{SVGElement("path")}} elements, then add a {{SVGElement("marker")}} element that adds a {{SVGElement("circle")}} at every path point. We set the circle marker to be black with a grey fill with the SVG {{SVGAttr("stroke")}} and {{SVGAttr("fill")}} attributes.
+
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 90">
   <path d="M 10 44.64 L 30 10 L 70 10 L 90 44.64 L 70 79.28 L 30 79.28 Z" />
@@ -141,10 +143,14 @@ This example demonstrates how the keyword values for `fill`
     refX="6"
     refY="6"
     markerUnits="userSpaceOnUse">
-    <circle cx="6" cy="6" r="3" stroke-width="2" />
+    <circle cx="6" cy="6" r="3" stroke-width="2" stroke="black" fill="grey" />
   </marker>
 </svg>
 ```
+
+#### CSS
+
+We set different `stroke` and `fill` colors on each path. The first path, the one with a red border, has its `fill` set to `none`. We set the circle markers to have a fill that is the same color as the stroke of the element they're marking with the `context-stroke` value.
 
 ```css hidden
 svg {
@@ -159,27 +165,78 @@ path {
   stroke-width: 2px;
   marker: url(#circle);
 }
-path:nth-ot-type(1) {
+path:nth-of-type(1) {
   stroke: red;
-  fill: orange;
+  fill: none;
 }
-path:nth-ot-type(2) {
+path:nth-of-type(2) {
   stroke: green;
   fill: lightgreen;
 }
-path:nth-ot-type(3) {
+path:nth-of-type(3) {
   stroke: blue;
   fill: lightblue;
 }
 circle {
   stroke: context-stroke;
-  fill: context-fill;
+  fill: context-stroke;
 }
 ```
 
 #### Results
 
 {{EmbedLiveSample("Using fill keyword values", "300", "170")}}
+
+Note how the first path has a transparent background because the `fill` is `none`, overriding the default `fill` of `black`. The circles are filled with the color of the stroke. If you change the value to `context-fill`, the circles would be transparent, `lightgreen` and `lightblue` instead of `red`, `green`, and `blue`.
+
+### Fills and fallbacks
+
+This example demonstrates how to include a `url()` value with a fallback as a`fill` value.
+
+#### HTML
+
+We have an SVG with two SVG {{SVGElement("polygon")}} stars and a{{SVGElement("linearGradient")}} that goes from green to gold to red.
+
+```html
+<svg viewBox="0 0 220 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="myGradient">
+      <stop offset="5%" stop-color="green" />
+      <stop offset="50%" stop-color="gold" />
+      <stop offset="95%" stop-color="red" />
+    </linearGradient>
+  </defs>
+  <polygon points="80,10 50,100 120,40 40,40 110,100" />
+  <polygon points="180,10 150,100 220,40 140,40 210,100" />
+</svg>
+```
+
+#### CSS
+
+We set `fill` values on the polygons in the SVG, providing a `url()` value and a fallback.
+
+```css hidden
+svg {
+  border: 1px solid;
+  height: calc(100vh - 20px);
+  margin-bottom: 10px;
+}
+```
+
+```css
+polygon:first-of-type {
+  fill: url("#myGradient") magenta;
+}
+polygon:last-of-type {
+  fill: url("#MISSINGIMAGE") magenta;
+}
+```
+
+#### Results
+
+{{EmbedLiveSample("Fills and fallbacks", "300", "170")}}
+
+The first star has a gradient as a background. The second star uses the fallback value, as the element referenced in the `url()` doees not exist.
 
 ## Specifications
 
