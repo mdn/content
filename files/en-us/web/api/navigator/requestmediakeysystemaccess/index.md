@@ -34,7 +34,8 @@ requestMediaKeySystemAccess(keySystem, supportedConfigurations)
 
     Each object may have the following properties:
 
-    > **Note:** Either `videoCapabilities` or `audioCapabilities` may be empty, but not both!
+    > [!NOTE]
+    > Either `videoCapabilities` or `audioCapabilities` may be empty, but not both!
 
     - `label` {{optional_inline}}
       - : An optional label for the configuration, which defaults to `""`.
