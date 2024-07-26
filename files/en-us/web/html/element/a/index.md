@@ -54,8 +54,6 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
     > [!NOTE]
     >
-    > >
-    >
     > - `download` only works for [same-origin URLs](/en-US/docs/Web/Security/Same-origin_policy), or the `blob:` and `data:` schemes.
     > - How browsers treat downloads varies by browser, user settings, and other factors. The user may be prompted before a download starts, or the file may be saved automatically, or it may open automatically, either in an external application or in the browser itself.
     > - If the `Content-Disposition` header has different information from the `download` attribute, resulting behavior may differ:
