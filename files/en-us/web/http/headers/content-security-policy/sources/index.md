@@ -43,7 +43,8 @@ Relevant directives include the {{Glossary("fetch directive", "fetch directives"
     - `blob:` Allows [`blob:` URIs](/en-US/docs/Web/API/Blob) to be used as a content source.
     - `filesystem:` Allows [`filesystem:` URIs](/en-US/docs/Web/API/FileSystem) to be used as a content source.
 
-    > **Note:** if a scheme source is missing, the document origin's scheme is used.
+    > [!NOTE]
+    > if a scheme source is missing, the document origin's scheme is used.
     > Secure upgrades are allowed, so if the document is loaded using `https:`, then `example.com` will match `https://example.com` but not `http://example.com`.
     > For more information, see [CSP Level 3](https://www.w3.org/TR/CSP3/#match-url-to-source-list).
 
@@ -74,7 +75,8 @@ Relevant directives include the {{Glossary("fetch directive", "fetch directives"
     See [unsafe inline script](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_inline_script) for an example.
     Specifying nonce makes a modern browser ignore `'unsafe-inline'` which could still be set for older browsers without nonce support.
 
-    > **Note:** The CSP `nonce` source can only be applied to _nonceable_ elements (e.g., as the {{HTMLElement("img")}} element has no `nonce` attribute, there is no way to associate it with this CSP source).
+    > [!NOTE]
+    > The CSP `nonce` source can only be applied to _nonceable_ elements (e.g., as the {{HTMLElement("img")}} element has no `nonce` attribute, there is no way to associate it with this CSP source).
 
 - `'<hash-algorithm>-<base64-value>'`
   - : A sha256, sha384 or sha512 hash of scripts or styles.
