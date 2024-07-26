@@ -199,7 +199,8 @@ A JSON Web Key looks something like this (this is an EC private key):
 
 ## Examples
 
-> **Note:** You can [try the working examples](https://mdn.github.io/dom-examples/web-crypto/import-key/index.html) on GitHub.
+> [!NOTE]
+> You can [try the working examples](https://mdn.github.io/dom-examples/web-crypto/import-key/index.html) on GitHub.
 
 ### Raw import
 

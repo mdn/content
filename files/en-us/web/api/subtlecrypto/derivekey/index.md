@@ -122,7 +122,8 @@ PBKDF2 is specified in [RFC 2898](https://datatracker.ietf.org/doc/html/rfc2898)
 
 ## Examples
 
-> **Note:** You can [try the working examples](https://mdn.github.io/dom-examples/web-crypto/derive-key/index.html) on GitHub.
+> [!NOTE]
+> You can [try the working examples](https://mdn.github.io/dom-examples/web-crypto/derive-key/index.html) on GitHub.
 
 ### ECDH
 
