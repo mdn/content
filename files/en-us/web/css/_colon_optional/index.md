@@ -13,7 +13,8 @@ The **`:optional`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CS
 
 This pseudo-class is useful for styling fields that are not required to submit a form.
 
-> **Note:** The {{cssxref(":required")}} pseudo-class selects _required_ form fields.
+> [!NOTE]
+> The {{cssxref(":required")}} pseudo-class selects _required_ form fields.
 
 ## Syntax
 

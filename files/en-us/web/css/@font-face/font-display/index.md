@@ -33,7 +33,8 @@ font-display: optional;
 - `optional`
   - : Gives the font face an extremely small block period and no swap period.
 
-> **Note:** In Firefox, the preferences `gfx.downloadable_fonts.fallback_delay`
+> [!NOTE]
+> In Firefox, the preferences `gfx.downloadable_fonts.fallback_delay`
 > and `gfx.downloadable_fonts.fallback_delay_short` provide the duration
 > of the "short" and "extremely small" periods, respectively.
 
