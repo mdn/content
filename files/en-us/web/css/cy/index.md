@@ -135,5 +135,5 @@ In this case, the y-axis coordinates of the center of the circle and ellipse are
 - {{cssxref("stroke")}}
 - {{cssxref("paint-order")}}
 - {{cssxref("border-radius")}} shorthand property
-- {{cssxref("radial-gradient")}}
+- {{cssxref("gradient/radial-gradient", "radial-gradient")}}
 - {{cssxref("basic-shape")}} data type
