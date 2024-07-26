@@ -314,7 +314,8 @@ Now on to the next major task for this article — let's add some functionality 
    $: console.log("newTodoName: ", newTodoName);
    ```
 
-   > **Note:** As you may have noticed, reactive statements aren't limited to variable declarations. You can put _any_ JavaScript statement after the `$:` sign.
+   > [!NOTE]
+   > As you may have noticed, reactive statements aren't limited to variable declarations. You can put _any_ JavaScript statement after the `$:` sign.
 
 4. Now try going back to `localhost:5042`, pressing <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd> to open your browser console and typing something into the input field. You should see your entries logged. At this point, you can delete the reactive `console.log()` if you wish.
 5. Next up we'll create a function to add the new to-do — `addTodo()` — which will push a new `todo` object onto the `todos` array. Add this to the bottom of your `<script>` block inside `src/components/Todos.svelte`:
@@ -326,7 +327,8 @@ Now on to the next major task for this article — let's add some functionality 
    }
    ```
 
-   > **Note:** For the moment we are just assigning the same `id` to every to-do, but don't worry, we will fix that soon.
+   > [!NOTE]
+   > For the moment we are just assigning the same `id` to every to-do, but don't worry, we will fix that soon.
 
 6. Now we want to update our HTML so that we call `addTodo()` whenever the form is submitted. Update the NewTodo form's opening tag like so:
 
@@ -368,7 +370,8 @@ If you try to add new to-dos in your app now, you'll be able to add a new to-do 
    }
    ```
 
-   > **Note:** As you can see, reactive statements are not limited to one-liners. The following would work too, but it is a little less readable: `$: newTodoId = totalTodos ? Math.max(...todos.map((t) => t.id)) + 1 : 1`
+   > [!NOTE]
+   > As you can see, reactive statements are not limited to one-liners. The following would work too, but it is a little less readable: `$: newTodoId = totalTodos ? Math.max(...todos.map((t) => t.id)) + 1 : 1`
 
 2. How does Svelte achieve this? The compiler parses the whole reactive statement, and detects that it depends on the `totalTodos` variable and the `todos` array. So whenever either of them is modified, this code is re-evaluated, updating `newTodoId` accordingly.
 
@@ -427,7 +430,8 @@ Finally for this article, let's implement the ability to filter our to-dos by st
 
    We will show the current filter by applying the `btn__primary` class to the active filter button. To conditionally apply style classes to an element we use the `class:name={value}` directive. If the value expression evaluates to truthy, the class name will be applied. You can add many of these directives, with different conditions, to the same element. So when we issue `class:btn__primary={filter === 'all'}`, Svelte will apply the `btn__primary` class if filter equals all.
 
-   > **Note:** Svelte provides a shortcut which allows us to shorten `<div class:active={active}>` to `<div class:active>` when the class matches the variable name.
+   > [!NOTE]
+   > Svelte provides a shortcut which allows us to shorten `<div class:active={active}>` to `<div class:active>` when the class matches the variable name.
 
    Something similar happens with `aria-pressed={filter === 'all'}`: when the JavaScript expression passed between curly braces evaluates to a truthy value, the `aria-pressed` attribute will be added to the button.
 

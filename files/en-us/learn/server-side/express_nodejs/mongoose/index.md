@@ -607,11 +607,13 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
 
    - Enter a username and password. Remember to copy and store the credentials safely as we will need them later on. Click the **Create User** button.
 
-     > **Note:** Avoid using special characters in your MongoDB user password as mongoose may not parse the connection string properly.
+     > [!NOTE]
+     > Avoid using special characters in your MongoDB user password as mongoose may not parse the connection string properly.
 
    - Enter `0.0.0.0/0` in the IP Address field. This tells MongoDB that we want to allow access from anywhere. Click the **Add Entry** button.
 
-     > **Note:** It is a best practice to limit the IP addresses that can connect to your database and other resources. Here we allow a connection from anywhere because we don't know where the request will come from after deployment.
+     > [!NOTE]
+     > It is a best practice to limit the IP addresses that can connect to your database and other resources. Here we allow a connection from anywhere because we don't know where the request will come from after deployment.
 
    - Click the **Finish and Close** button.
 
@@ -843,7 +845,8 @@ In order to test the models (and to create some example books and other items th
 
 1. Download (or otherwise create) the file [populatedb.js](https://raw.githubusercontent.com/mdn/express-locallibrary-tutorial/main/populatedb.js) inside your _express-locallibrary-tutorial_ directory (in the same level as `package.json`).
 
-   > **Note:** The code in `populatedb.js` may be useful in learning JavaScript, but understanding it is not necessary for this tutorial.
+   > [!NOTE]
+   > The code in `populatedb.js` may be useful in learning JavaScript, but understanding it is not necessary for this tutorial.
 
 2. Run the script using node in your command prompt, passing in the URL of your _MongoDB_ database (the same one you replaced the _insert_your_database_url_here_ placeholder with, inside `app.js` earlier):
 
@@ -851,12 +854,14 @@ In order to test the models (and to create some example books and other items th
    node populatedb <your MongoDB url>
    ```
 
-   > **Note:** On Windows you need to wrap the database URL inside double (").
+   > [!NOTE]
+   > On Windows you need to wrap the database URL inside double (").
    > On other operating systems you may need single (') quotation marks.
 
 3. The script should run through to completion, displaying items as it creates them in the terminal.
 
-> **Note:** Go to your database on MongoDB Atlas (in the _Collections_ tab).
+> [!NOTE]
+> Go to your database on MongoDB Atlas (in the _Collections_ tab).
 > You should now be able to drill down into individual collections of Books, Authors, Genres and BookInstances, and check out individual documents.
 
 ## Summary

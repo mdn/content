@@ -64,7 +64,7 @@ filepicker.addEventListener("change", (event) => {
 ### Dynamically created files
 
 If a File is created dynamically, the last modified time can be supplied in the
-{{domxref("File.File()", "new File()")}} constructor function. If it is missing,
+{{domxref("File.File()", "File()")}} constructor function. If it is missing,
 `lastModified` inherits the current time from {{jsxref("Date.now()")}} at the
 moment the `File` object gets created.
 

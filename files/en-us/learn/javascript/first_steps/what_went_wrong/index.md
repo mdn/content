@@ -65,7 +65,8 @@ Earlier on in the course we got you to type some simple JavaScript commands into
 
 3. If we look at line 86 in our code editor, we'll find this line:
 
-   > **Warning:** Error message may not be on line 86.
+   > [!WARNING]
+   > Error message may not be on line 86.
    >
    > If you are using any code editor with an extension that launches a live server on your local machine, this will cause extra code to be injected. Because of this, the developer tools will list the error as occurring on a line that is not 86.
 
@@ -97,7 +98,8 @@ Earlier on in the course we got you to type some simple JavaScript commands into
 
    It's the same error, but different browsers describe it in a different way.
 
-   > **Note:** This error didn't come up as soon as the page was loaded because this error occurred inside a function (inside the `checkGuess() { }` block). As you'll learn in more detail in our later [functions article](/en-US/docs/Learn/JavaScript/Building_blocks/Functions), code inside functions runs in a separate scope than code outside functions. In this case, the code was not run and the error was not thrown until the `checkGuess()` function was run by line 86.
+   > [!NOTE]
+   > This error didn't come up as soon as the page was loaded because this error occurred inside a function (inside the `checkGuess() { }` block). As you'll learn in more detail in our later [functions article](/en-US/docs/Learn/JavaScript/Building_blocks/Functions), code inside functions runs in a separate scope than code outside functions. In this case, the code was not run and the error was not thrown until the `checkGuess()` function was run by line 86.
 
 4. The line number given in the error is 80. Have a look at line 80, and you'll see the following code:
 
