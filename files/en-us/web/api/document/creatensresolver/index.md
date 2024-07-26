@@ -3,10 +3,12 @@ title: "Document: createNSResolver() method"
 short-title: createNSResolver()
 slug: Web/API/Document/createNSResolver
 page-type: web-api-instance-method
+status:
+  - deprecated
 browser-compat: api.Document.createNSResolver
 ---
 
-{{ ApiRef("DOM") }}
+{{ ApiRef("DOM") }}{{deprecated_header}}
 
 The **`createNSResolver()`** method of the {{domxref("Document")}} interface used to create a custom `XPathNSResolver` object. It now returns the input as-is and is only kept for compatibility reasons.
 

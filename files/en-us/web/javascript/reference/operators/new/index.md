@@ -24,7 +24,7 @@ new constructor(arg1, arg2, /* …, */ argN)
 ### Parameters
 
 - `constructor`
-  - : A class or function that specifies the type of the object instance.
+  - : A class or function that specifies the type of the object instance. The expression can be anything with sufficient [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table), including an identifier, a [property access](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors), or another `new` expression, but [optional chaining](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) is not allowed.
 - `arg1`, `arg2`, …, `argN`
   - : A list of values that the `constructor` will be called with. `new Foo` is equivalent to `new Foo()`, i.e. if no argument list is specified, `Foo` is called without arguments.
 
@@ -60,7 +60,8 @@ Creating an object with a user-defined constructor function requires two steps:
    const myFoo = new Foo("Bar 1", 2021);
    ```
 
-> **Note:** An object can have a property that is itself another object. See the examples below.
+> [!NOTE]
+> An object can have a property that is itself another object. See the examples below.
 
 You can always add a property to a previously defined object instance. For example, the statement `car1.color = "black"` adds a property `color` to `car1`, and assigns it a value of `"black"`.
 
@@ -85,7 +86,8 @@ console.log(car1.color); // 'black'
 console.log(car2.color); // 'original color'
 ```
 
-> **Note:** While the constructor function can be invoked like any regular function (i.e. without the `new` operator),
+> [!NOTE]
+> While the constructor function can be invoked like any regular function (i.e. without the `new` operator),
 > in this case a new object is not created and the value of `this` is also different.
 
 A function can know whether it is invoked with `new` by checking [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target). `new.target` is only `undefined` when the function is invoked without `new`. For example, you can have a function that behaves differently when it's called versus when it's constructed:

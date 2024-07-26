@@ -50,7 +50,8 @@ There are many libraries and frameworks in existence, which are not web standard
 
 The MDN Web Docs team concentrates on documenting the open web platform. If you want a technology in this area to be considered for documentation on MDN Web Docs, you'll need to have a community assembled that is willing to write the documentation and maintain it after completion. Our team is happy to provide guidance in such cases, including edits and feedback, but we don't have the resource for more than that.
 
-> **Note:** MDN Web Docs work is carried out on GitHub and 'in the open'. Your team should be versed in git & GitHub and be comfortable with working in open source.
+> [!NOTE]
+> MDN Web Docs work is carried out on GitHub and 'in the open'. Your team should be versed in git & GitHub and be comfortable with working in open source.
 
 ## Process for selecting the new technology
 
@@ -78,7 +79,8 @@ Technologies will be considered for inclusion on MDN Web Docs on a case-by-case 
 
 You don't need to provide us with hundreds of pages of detail at this stage (in fact, we'd prefer it if you didn't). A couple of paragraphs on each of the above points is more than adequate.
 
-> **Note:** MDN Web Docs is primarily an English site (en-US). The primary language for your project should be in US English.
+> [!NOTE]
+> MDN Web Docs is primarily an English site (en-US). The primary language for your project should be in US English.
 
 ### Awaiting a response
 

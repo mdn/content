@@ -36,7 +36,7 @@ Web browsers follow a strict security model that enforces strong security for co
 
 In general, documents from one origin cannot make requests to other origins. This makes sense because you don't want sites to be able to interfere with one another and access unauthorized data.
 
-However, you might want to relax this restriction in some circumstances; for example, if you have multiple websites that interact with each other, you may allow them to request resources from one another using [`fetch()`](/en-US/docs/Web/API/fetch). This can be permitted using [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS), an HTTP-header-based mechanism that allows a server to indicate any origins (domain, scheme, or port) other than its own from which a browser should permit loading resources.
+However, you might want to relax this restriction in some circumstances; for example, if you have multiple websites that interact with each other, you may allow them to request resources from one another using [`fetch()`](/en-US/docs/Web/API/Window/fetch). This can be permitted using [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS), an HTTP-header-based mechanism that allows a server to indicate any origins (domain, scheme, or port) other than its own from which a browser should permit loading resources.
 
 ### HTTP model for communication
 
@@ -110,7 +110,8 @@ As a general rule, you shouldn't [include sensitive data in URL query strings](h
 
 Use `POST` requests rather than `GET` requests to avoid these issues. Our article [Referer header policy: Privacy and security concerns](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns) describes in more detail the privacy and security risks associated with the `Referer` header, and offers advice on mitigating those risks.
 
-> **Note:** Steering away from transmitting sensitive data in URLs via `GET` requests can also help protect against {{glossary("CSRF", "cross-site request forgery")}} and [replay attacks](https://en.wikipedia.org/wiki/Replay_attack).
+> [!NOTE]
+> Steering away from transmitting sensitive data in URLs via `GET` requests can also help protect against {{glossary("CSRF", "cross-site request forgery")}} and [replay attacks](https://en.wikipedia.org/wiki/Replay_attack).
 
 ### Enforce usage policies
 
@@ -120,7 +121,8 @@ CSP allows you to add a layer of security by, for example, allowing images or sc
 
 Permissions policy works in a similar way, except that it is more concerned with allowing or blocking access to specific "powerful features" ([as mentioned earlier](#secure_contexts_and_feature_permissions)).
 
-> **Note:** Such policies are very useful to help keep sites secure, especially when you are using a lot of third-party code on your site. However, keep in mind that if you block usage of a feature that a third-party script relies on to work, you may end up breaking your site's functionality.
+> [!NOTE]
+> Such policies are very useful to help keep sites secure, especially when you are using a lot of third-party code on your site. However, keep in mind that if you block usage of a feature that a third-party script relies on to work, you may end up breaking your site's functionality.
 
 ### Maintain data integrity
 

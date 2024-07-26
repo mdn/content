@@ -29,7 +29,7 @@ A `GPUPipelineLayout` object instance is created using the {{domxref("GPUDevice.
 The following snippet:
 
 - Creates a {{domxref("GPUBindGroupLayout")}} that describes a binding with a buffer, a texture, and a sampler.
-- Creates a {{domxref("GPUPipelineLayout")}} based on the {{domxref("GPUBindGroupLayout")}}.
+- Creates a `GPUPipelineLayout` based on the {{domxref("GPUBindGroupLayout")}}.
 
 ```js
 // ...

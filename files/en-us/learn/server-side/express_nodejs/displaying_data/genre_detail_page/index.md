@@ -50,7 +50,8 @@ We `await` on the returned promise, and once it settles we check the results.
 If the genre does not exist in the database (i.e. it may have been deleted) then `findById()` will return successfully with no results.
 In this case we want to display a "not found" page, so we create an `Error` object and pass it to the `next` middleware function in the chain.
 
-> **Note:** Errors passed to the `next` middleware function propagate through to our error handling code (this was set up when we [generated the app skeleton](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website#app.js) - for more information see [Handling Errors](/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction#handling_errors)).
+> [!NOTE]
+> Errors passed to the `next` middleware function propagate through to our error handling code (this was set up when we [generated the app skeleton](/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website#app.js) - for more information see [Handling Errors](/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction#handling_errors)).
 
 If the `genre` is found, then we call `render()` to display the view.
 The view template is **genre_detail** (.pug).
@@ -88,7 +89,8 @@ Run the application and open your browser to `http://localhost:3000/`. Select th
 
 ![Genre Detail Page - Express Local Library site](locallibary_express_genre_detail.png)
 
-> **Note:** You might get an error similar to the one below if `req.params.id` (or any other ID) cannot be cast to a [`mongoose.Types.ObjectId()`](https://mongoosejs.com/docs/api/mongoose.html#Mongoose.prototype.Types).
+> [!NOTE]
+> You might get an error similar to the one below if `req.params.id` (or any other ID) cannot be cast to a [`mongoose.Types.ObjectId()`](https://mongoosejs.com/docs/api/mongoose.html#Mongoose.prototype.Types).
 >
 > ```bash
 > Cast to ObjectId failed for value " 59347139895ea23f9430ecbb" at path "_id" for model "Genre"

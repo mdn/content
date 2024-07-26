@@ -7,15 +7,15 @@ browser-compat: javascript.builtins.Symbol.matchAll
 
 {{JSRef}}
 
-The **`Symbol.matchAll`** static data property represents the [well-known symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#well-known_symbols) `@@matchAll`. The {{jsxref("String.prototype.matchAll()")}} method looks up this symbol on its first argument for the method that returns an iterator, that yields matches of the current object against a string.
+The **`Symbol.matchAll`** static data property represents the [well-known symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#well-known_symbols) `Symbol.matchAll`. The {{jsxref("String.prototype.matchAll()")}} method looks up this symbol on its first argument for the method that returns an iterator, that yields matches of the current object against a string.
 
-For more information, see [`RegExp.prototype[@@matchAll]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll) and {{jsxref("String.prototype.matchAll()")}}.
+For more information, see [`RegExp.prototype[Symbol.matchAll]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll) and {{jsxref("String.prototype.matchAll()")}}.
 
 {{EmbedInteractiveExample("pages/js/symbol-matchall.html")}}
 
 ## Value
 
-The well-known symbol `@@matchAll`.
+The well-known symbol `Symbol.matchAll`.
 
 {{js_property_attributes(0, 0, 0)}}
 
@@ -52,4 +52,4 @@ console.log(Array.from(str.matchAll(numbers)));
 - {{jsxref("Symbol.search")}}
 - {{jsxref("Symbol.split")}}
 - {{jsxref("String.prototype.matchAll()")}}
-- [`RegExp.prototype[@@matchAll]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll)
+- [`RegExp.prototype[Symbol.matchAll]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll)

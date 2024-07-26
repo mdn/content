@@ -255,7 +255,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - a white-space separated list of sizes, each in the format `<width in pixels>x<height in pixels>` or `<width in pixels>X<height in pixels>`. Each of these sizes must be contained in the resource.
 
     > **Note:** Most icon formats are only able to store one single icon; therefore, most of the time, the [`sizes`](#sizes) attribute contains only one entry.
-    > MS's ICO format does, as well as Apple's ICNS. ICO is more ubiquitous, so you should use this format if cross-browser support is a concern (especially for old IE versions).
+    > Microsoft's ICO format and Apple's ICNS format can store multiple icon sizes in a single file. ICO has better browser support, so you should use this format if cross-browser support is a concern.
 
 - `title`
   - : The `title` attribute has special semantics on the `<link>` element.
@@ -268,12 +268,6 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ### Non-standard attributes
 
-- `methods` {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : The value of this attribute provides information about the functions that might be performed on an object.
-    The values generally are given by the HTTP protocol when it is used, but it might (for similar reasons as for the **title** attribute) be useful to include advisory information in advance in the link.
-    For example, the browser might choose a different rendering of a link as a function of the methods specified;
-    something that is searchable might get a different icon, or an outside link might render with an indication of leaving the current site.
-    This attribute is not well understood nor supported, even by the defining browser, Internet Explorer 4.
 - `target` {{Deprecated_Inline}}
   - : Defines the frame or window name that has the defined linking relationship or that will show the rendering of any linked resource.
 
@@ -387,7 +381,8 @@ You can determine when a style sheet has been loaded by watching for a `load` ev
 </script>
 ```
 
-> **Note:** The `load` event fires once the stylesheet and all of its imported content has been loaded and parsed, and immediately before the styles start being applied to the content.
+> [!NOTE]
+> The `load` event fires once the stylesheet and all of its imported content has been loaded and parsed, and immediately before the styles start being applied to the content.
 
 ### Preload examples
 

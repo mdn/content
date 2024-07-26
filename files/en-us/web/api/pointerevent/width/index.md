@@ -24,7 +24,7 @@ The width of the event's contact area (in CSS pixels).
 ## Examples
 
 This example illustrates using the {{domxref("PointerEvent")}} interface's
-{{domxref("PointerEvent.width","width")}} and
+`width` and
 {{domxref("PointerEvent.height","height")}} properties to calculate the contact area.
 
 ```js

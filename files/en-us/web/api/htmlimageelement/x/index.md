@@ -44,7 +44,7 @@ left edge of the content area.
 ## Example
 
 The example below demonstrates the use of the `HTMLImageElement` properties
-{{domxref("HTMLImageElement.x", "x")}} and {{domxref("HTMLImageElement.y", "y")}}.
+`x` and {{domxref("HTMLImageElement.y", "y")}}.
 
 ### HTML
 
@@ -78,15 +78,15 @@ The JavaScript code that fetches the image from the table and looks up its
 `x` and `y` values is below.
 
 ```js
-let logBox = document.querySelector("pre");
-let tbl = document.getElementById("userinfo");
+const logBox = document.querySelector("pre");
+const tbl = document.getElementById("userinfo");
 
-let log = (msg) => {
-  logBox.innerHTML += `${msg}<br>`;
+const log = (msg) => {
+  logBox.innerText += `${msg}\n`;
 };
 
-let cell = tbl.rows[1].cells[2];
-let image = cell.querySelector("img");
+const cell = tbl.rows[1].cells[2];
+const image = cell.querySelector("img");
 
 log(`Image's global X: ${image.x}`);
 log(`Image's global Y: ${image.y}`);

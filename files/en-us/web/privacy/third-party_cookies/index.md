@@ -15,7 +15,8 @@ A [cookie](/en-US/docs/Web/HTTP/Cookies) is associated with a particular domain 
 - If the cookie domain and scheme match the current page the user is looking at (the URL shown in the browser's address bar), the cookie is considered to be from the same site as the page, and is referred to as a _first-party cookie_.
 - If the domain and scheme are different, the cookie is not considered to be from the same site, and is referred to as a _third-party cookie_.
 
-> **Note:** Third-party cookies are sometimes referred to as _cross-site cookies_. This is arguably a more accurate name, as _third-party cookies_ imply ownership by a third-party company or organization. However, the behavior and potential issues are the same whether or not you own all the involved sites. For example, a site might access resources such as images from a different domain that they own.
+> [!NOTE]
+> Third-party cookies are sometimes referred to as _cross-site cookies_. This is arguably a more accurate name, as _third-party cookies_ imply ownership by a third-party company or organization. However, the behavior and potential issues are the same whether or not you own all the involved sites. For example, a site might access resources such as images from a different domain that they own.
 
 A first-party cookie may be set when a user first visits a page, follows an internal link to another page on the same site, or requests a resource residing on the same site (for example, an embedded image, web font, or JavaScript file).
 
@@ -56,7 +57,8 @@ Individually, such cases are bad enough, but it gets worse. Third-party servers 
 
 In such cases, third-party cookies are referred to as _tracking cookies_.
 
-> **Note:** User information gained through illegitimate means is also often sold to other third parties, multiplying the problem further.
+> [!NOTE]
+> User information gained through illegitimate means is also often sold to other third parties, multiplying the problem further.
 
 Legislation such as the [General Data Privacy Regulation](https://en.wikipedia.org/wiki/General_Data_Protection_Regulation) (GDPR) in the European Union and the [California Consumer Privacy Act](https://www.oag.ca.gov/privacy/ccpa) (CCPA) have helped by making it a legal requirement for companies to be transparent about the cookies they set and the information they collect. Examples include asking customers to opt into such data collection, allowing them to see what data a company holds on them, and delete the data if they wish. However, it is still not always clear to customers how their data is used.
 
@@ -72,7 +74,8 @@ Browser vendors know that users don't like the behavior described above, and as 
 
 It is possible to allow usage of third-party cookies on a case-by-case basis in Firefox via browser settings. In Safari however, control is more limited — you can turn off cross-site tracking prevention, but allowing access to third-party cookies per frame can only be done at the code level, via the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API).
 
-> **Note:** Third-party cookies (or just tracking cookies) may also be blocked by browser extensions.
+> [!NOTE]
+> Third-party cookies (or just tracking cookies) may also be blocked by browser extensions.
 
 Cookie blocking can cause some third-party components (such as social media widgets) not to function as intended. As browsers impose further restrictions on third-party cookies, developers should start to look at ways to reduce their reliance on them: see [Replacing third-party cookies](#replacing_third-party_cookies).
 
@@ -90,7 +93,8 @@ Set-Cookie: widget_session=7yjgj57e4n3d; SameSite=None; Secure; HttpOnly
 
 Note that if `SameSite=None` is set then the `Secure` attribute must also be set — `SameSite=None` requires a _secure context_. In the above example we have also set the `HttpOnly` attribute, to disable JavaScript access to the cookie (e.g. via {{domxref("Document.cookie")}}). Cookies that persist sensitive information should always have the `HttpOnly` attribute set — it would be really insecure to make them available to JavaScript. This precaution helps mitigate cross-site scripting ([XSS](/en-US/docs/Web/Security/Types_of_attacks#cross-site_scripting_xss)) attacks.
 
-> **Note:** Cookies that are used for sensitive information should also have a short [lifetime](/en-US/docs/Web/HTTP/Cookies#removal_defining_the_lifetime_of_a_cookie).
+> [!NOTE]
+> Cookies that are used for sensitive information should also have a short [lifetime](/en-US/docs/Web/HTTP/Cookies#removal_defining_the_lifetime_of_a_cookie).
 
 ### Transitioning from third-party cookies
 

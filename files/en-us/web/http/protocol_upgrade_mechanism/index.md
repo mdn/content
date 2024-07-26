@@ -45,7 +45,8 @@ webSocket = new WebSocket("ws://destination.server.ext", "optionalProtocol");
 
 The {{domxref("WebSocket.WebSocket", "WebSocket()")}} constructor does all the work of creating an initial HTTP/1.1 connection then handling the handshaking and upgrade process for you.
 
-> **Note:** You can also use the `"wss://"` URL scheme to open a secure WebSocket connection.
+> [!NOTE]
+> You can also use the `"wss://"` URL scheme to open a secure WebSocket connection.
 
 If you need to create a WebSocket connection from scratch, you'll have to handle the handshaking process yourself. After creating the initial HTTP/1.1 session, you need to request the upgrade by adding to a standard request the {{HTTPHeader("Upgrade")}} and {{HTTPHeader("Connection")}} headers, as follows:
 
@@ -79,7 +80,7 @@ Sec-WebSocket-Extensions: superspeed, colormode; depth=16
 
 Provides information to the server which is needed in order to confirm that the client is entitled to request an upgrade to WebSocket. This header can be used when insecure (HTTP) clients wish to upgrade, in order to offer some degree of protection against abuse. The value of the key is computed using an algorithm defined in the WebSocket specification, so this _does not provide security_. Instead, it helps to prevent non-WebSocket clients from inadvertently, or through misuse, requesting a WebSocket connection. In essence, then, this key confirms that "Yes, I really mean to open a WebSocket connection."
 
-This header is automatically added by clients that choose to use it; it cannot be added using the {{domxref("fetch()")}} or {{domxref("XMLHttpRequest.setRequestHeader()")}} methods.
+This header is automatically added by clients that choose to use it; it cannot be added using the {{domxref("Window/fetch", "fetch()")}} or {{domxref("XMLHttpRequest.setRequestHeader()")}} methods.
 
 ```http
 Sec-WebSocket-Key: key

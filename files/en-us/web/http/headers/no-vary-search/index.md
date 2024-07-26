@@ -86,7 +86,8 @@ If your application behaves like the second example described above, you could c
 No-Vary-Search: params=("id")
 ```
 
-> **Note:** If a parameter is excluded from the cache key using `params`, if it is included in the URL it will be ignored for the purposes of cache matching, regardless of where it appears in the parameter list.
+> [!NOTE]
+> If a parameter is excluded from the cache key using `params`, if it is included in the URL it will be ignored for the purposes of cache matching, regardless of where it appears in the parameter list.
 
 ### Allowing responses from URLs with multiple different params to match the same cache entry
 

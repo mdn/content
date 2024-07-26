@@ -25,6 +25,8 @@ Setting the value of `outerHTML` replaces the element and all of its
 descendants with a new DOM tree constructed by parsing the specified
 `htmlString`.
 
+When set to the `null` value, that `null` value is converted to the empty string (`""`), so `elt.outerHTML = null` is equivalent to `elt.outerHTML = ""`.
+
 ### Exceptions
 
 - `SyntaxError` {{domxref("DOMException")}}

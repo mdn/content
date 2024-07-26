@@ -11,7 +11,8 @@ The **`<embed>`** [HTML](/en-US/docs/Web/HTML) element embeds external content a
 
 {{EmbedInteractiveExample("pages/tabbed/embed.html", "tabbed-standard")}}
 
-> **Note:** This topic documents only the element that is defined as part of the [HTML Living Standard](https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-embed-element). It does not address earlier, non-standardized implementation of the element.
+> [!NOTE]
+> This topic documents only the element that is defined as part of the [HTML Living Standard](https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-embed-element). It does not address earlier, non-standardized implementation of the element.
 
 Keep in mind that most modern browsers have deprecated and removed support for browser plug-ins, so relying upon `<embed>` is generally not wise if you want your site to be operable on the average user's browser.
 
@@ -30,7 +31,10 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
 ## Usage notes
 
-You can use the {{cssxref("object-position")}} property to adjust the positioning of the embedded object within the element's frame, and the {{cssxref("object-fit")}} property to control how the object's size is adjusted to fit within the frame.
+You can use the {{cssxref("object-position")}} property to adjust the positioning of the embedded object within the element's frame.
+
+> [!NOTE]
+> The {{cssxref("object-fit")}} property has no effect on `<embed>` elements.
 
 ## Accessibility
 

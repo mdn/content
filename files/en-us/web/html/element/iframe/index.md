@@ -13,7 +13,8 @@ The **`<iframe>`** [HTML](/en-US/docs/Web/HTML) element represents a nested {{Gl
 
 Each embedded browsing context has its own [document](/en-US/docs/Web/API/Document) and allows URL navigations. The navigations of each embedded browsing context are linearized into the [session history](/en-US/docs/Web/API/History) of the _topmost_ browsing context. The browsing context that embeds the others is called the _parent browsing context_. The _topmost_ browsing context — the one with no parent — is usually the browser window, represented by the {{domxref("Window")}} object.
 
-> **Warning:** Because each browsing context is a complete document environment, every `<iframe>` in a page requires increased memory and other computing resources. While theoretically you can use as many `<iframe>`s as you like, check for performance problems.
+> [!WARNING]
+> Because each browsing context is a complete document environment, every `<iframe>` in a page requires increased memory and other computing resources. While theoretically you can use as many `<iframe>`s as you like, check for performance problems.
 
 ## Attributes
 
@@ -98,7 +99,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `allow-downloads`
       - : Allows downloading files through an {{HTMLElement("a")}} or {{HTMLElement("area")}} element with the [download](/en-US/docs/Web/HTML/Element/a#download) attribute, as well as through the navigation that leads to a download of a file. This works regardless of whether the user clicked on the link, or JS code initiated it without user interaction.
     - `allow-forms`
-      - : Allows the page to submit forms. If this keyword is not used, form will be displayed as normal, but submitting it will not trigger input validation, sending data to a web server or closing a dialog.
+      - : Allows the page to submit forms. If this keyword is not used, a form will be displayed as normal, but submitting it will not trigger input validation, send data to a web server, or close a dialog.
     - `allow-modals`
       - : Allows the page to open modal windows by {{domxref("Window.alert()")}}, {{domxref("Window.confirm()")}}, {{domxref("Window.print()")}} and {{domxref("Window.prompt()")}}, while opening a {{HTMLElement("dialog")}} is allowed regardless of this keyword. It also allows the page to receive {{domxref("BeforeUnloadEvent")}} event.
     - `allow-orientation-lock`
@@ -183,7 +184,10 @@ Script access to a frame's content is subject to the [same-origin policy](/en-US
 
 ## Positioning and scaling
 
-As a [replaced element](/en-US/docs/Web/CSS/Replaced_element), the position, alignment, and scaling of the embedded document within the `<iframe>` element's box, can be adjusted with the {{cssxref("object-position")}} and {{cssxref("object-fit")}} properties.
+Being a [replaced element](/en-US/docs/Web/CSS/Replaced_element), the `<iframe>` allows the position of the embedded document within its box to be adjusted using the {{cssxref("object-position")}} property.
+
+> [!NOTE]
+> The {{cssxref("object-fit")}} property has no effect on `<iframe>` elements.
 
 ## `error` and `load` event behavior
 
@@ -287,7 +291,7 @@ Here's how to write escape sequences when using `srcdoc`:
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>None, both the starting and ending tag are mandatory.</td>
+      <td>None, both the starting and ending tags are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>

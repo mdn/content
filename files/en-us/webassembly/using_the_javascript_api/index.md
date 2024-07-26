@@ -8,13 +8,15 @@ page-type: guide
 
 If you have already [compiled a module from another language using tools like Emscripten](/en-US/docs/WebAssembly/C_to_Wasm), or [loaded and run the code yourself](/en-US/docs/WebAssembly/Loading_and_running), the next step is to learn more about using the other features of the WebAssembly JavaScript API. This article teaches you what you'll need to know.
 
-> **Note:** If you are unfamiliar with the basic concepts mentioned in this article and need more explanation, read [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts) first, then come back.
+> [!NOTE]
+> If you are unfamiliar with the basic concepts mentioned in this article and need more explanation, read [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts) first, then come back.
 
 ## Some simple examples
 
 Let's run through some examples that explain how to use the WebAssembly JavaScript API, and how to use it to load a Wasm module in a web page.
 
-> **Note:** You can find the sample code in our [webassembly-examples](https://github.com/mdn/webassembly-examples) GitHub repo.
+> [!NOTE]
+> You can find the sample code in our [webassembly-examples](https://github.com/mdn/webassembly-examples) GitHub repo.
 
 ### Preparing the example
 
@@ -54,7 +56,8 @@ WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
 
 The net result of this is that we call our exported WebAssembly function `exported_func`, which in turn calls our imported JavaScript function `imported_func`, which logs the value provided inside the WebAssembly instance (42) to the console. If you save your example code now and load it a browser that supports WebAssembly, you'll see this in action!
 
-> **Note:** This is a convoluted, long-winded example that achieves very little, but it does serve to illustrate what is possible — using WebAssembly code alongside JavaScript in your web applications. As we've said elsewhere, WebAssembly doesn't aim to replace JavaScript; the two instead can work together, drawing on each other's strengths.
+> [!NOTE]
+> This is a convoluted, long-winded example that achieves very little, but it does serve to illustrate what is possible — using WebAssembly code alongside JavaScript in your web applications. As we've said elsewhere, WebAssembly doesn't aim to replace JavaScript; the two instead can work together, drawing on each other's strengths.
 
 ### Loading our Wasm module without streaming
 
@@ -165,7 +168,8 @@ Memory imports work just like function imports, only Memory objects are passed a
 - They allow JavaScript to fetch and create the initial contents of memory before or concurrently with module compilation.
 - They allow a single Memory object to be imported by multiple module instances, which is a critical building block for implementing dynamic linking in WebAssembly.
 
-> **Note:** You can find our complete demo at [memory.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/memory.html) ([see it live also](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)) .
+> [!NOTE]
+> You can find our complete demo at [memory.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/memory.html) ([see it live also](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)) .
 
 ## Tables
 
@@ -185,7 +189,8 @@ Let's look at a simple table example — a WebAssembly module that creates and e
 
 1. Make a local copy of `table.wasm` in a new directory.
 
-   > **Note:** You can see the module's text representation at [table.wat](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/table.wat).
+   > [!NOTE]
+   > You can see the module's text representation at [table.wat](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/table.wat).
 
 2. Create a new copy of our [HTML template](https://github.com/mdn/webassembly-examples/blob/main/template/template.html) in the same directory and call it `table.html`.
 3. As before, fetch, compile, and instantiate your Wasm module — add the following into a {{htmlelement("script")}} element at the bottom of your HTML body:
@@ -206,7 +211,8 @@ Let's look at a simple table example — a WebAssembly module that creates and e
 
 This code accesses each function reference stored in the table in turn, and instantiates them to print the values they hold to the console — note how each function reference is retrieved with a [`Table.prototype.get()`](/en-US/docs/WebAssembly/JavaScript_interface/Table/get) call, then we add an extra set of parentheses on the end to actually invoke the function.
 
-> **Note:** You can find our complete demo at [table.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/table.html) ([see it live also](https://mdn.github.io/webassembly-examples/js-api-examples/table.html)).
+> [!NOTE]
+> You can find our complete demo at [table.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/table.html) ([see it live also](https://mdn.github.io/webassembly-examples/js-api-examples/table.html)).
 
 ## Globals
 
@@ -237,9 +243,9 @@ const output = document.getElementById("output");
 function assertEq(msg, got, expected) {
   const result =
     got === expected
-      ? `SUCCESS! Got: ${got}<br>`
-      : `FAIL!<br>Got: ${got}<br>Expected: ${expected}<br>`;
-  output.innerHTML += `Testing ${msg}: ${result}`;
+      ? `SUCCESS! Got: ${got}\n`
+      : `FAIL!\nGot: ${got}\nExpected: ${expected}\n`;
+  output.innerText += `Testing ${msg}: ${result}`;
 }
 
 assertEq("WebAssembly.Global exists", typeof WebAssembly.Global, "function");
@@ -265,7 +271,8 @@ WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
 );
 ```
 
-> **Note:** You can see the example [running live on GitHub](https://mdn.github.io/webassembly-examples/js-api-examples/global.html); see also the [source code](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/global.html).
+> [!NOTE]
+> You can see the example [running live on GitHub](https://mdn.github.io/webassembly-examples/js-api-examples/global.html); see also the [source code](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/global.html).
 
 ## Multiplicity
 

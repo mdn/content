@@ -29,7 +29,7 @@ The image file formats that are most commonly used on the web are listed below.
       </th>
       <th scope="row">Animated Portable Network Graphics</th>
       <td><code>image/apng</code></td>
-      <td><code>.apng</code></td>
+      <td><code>.apng</code>, <code>.png</code></td>
       <td>
         Good choice for lossless animation sequences (GIF is less performant).
         AVIF and WebP have better performance but less broad browser support.<br />
@@ -119,7 +119,8 @@ The image file formats that are most commonly used on the web are listed below.
   </tbody>
 </table>
 
-> **Note:** The older formats like PNG, JPEG, GIF have poor performance compared to newer formats like WebP and AVIF, but enjoy broader "historical" browser support. The newer image formats are seeing increasing popularity as browsers without support become increasingly irrelevant (i.e. have virtually zero market share).
+> [!NOTE]
+> The older formats like PNG, JPEG, GIF have poor performance compared to newer formats like WebP and AVIF, but enjoy broader "historical" browser support. The newer image formats are seeing increasing popularity as browsers without support become increasingly irrelevant (i.e. have virtually zero market share).
 
 The following list includes image formats that appear on the web, but which should be avoided for web content (generally this is because either they do not have wide browser support, or because there are better alternatives).
 
@@ -158,9 +159,11 @@ The following list includes image formats that appear on the web, but which shou
   </tbody>
 </table>
 
-> **Note:** The abbreviation for each image format links to a longer description of the format, its capabilities, and detailed browser compatibility information (including which versions introduced support and specific special features that may have been introduced later).
+> [!NOTE]
+> The abbreviation for each image format links to a longer description of the format, its capabilities, and detailed browser compatibility information (including which versions introduced support and specific special features that may have been introduced later).
 
-> **Note:** Safari 11.1 added the ability to use a video format, as an animated gif replacement.
+> [!NOTE]
+> Safari 11.1 added the ability to use a video format, as an animated gif replacement.
 > No other browser supports this.
 > See the [Chromium bug](https://crbug.com/791658), and [Firefox bug](https://bugzil.la/895131) for more information.
 
@@ -189,7 +192,7 @@ They're also commonly used for the animated portions of web browsers' user inter
     </tr>
     <tr>
       <th scope="row">File extension(s)</th>
-      <td><code>.apng</code></td>
+      <td><code>.apng</code>, <code>.png</code></td>
     </tr>
     <tr>
       <th scope="row">Specification</th>
@@ -279,7 +282,8 @@ They're also commonly used for the animated portions of web browsers' user inter
 
 AV1 Image File Format (AVIF) is a powerful, open source, royalty-free file format that encodes _AV1 bitstreams in the High Efficiency Image File Format (HEIF) container._
 
-> **Note:** AVIF has potential to become the "next big thing" for sharing images in web content.
+> [!NOTE]
+> AVIF has potential to become the "next big thing" for sharing images in web content.
 > It offers state-of-the-art features and performance, without the encumbrance of complicated licensing and patent royalties that have hampered comparable alternatives.
 
 AV1 is a coding format that was originally designed for video transmission over the Internet.
@@ -379,7 +383,8 @@ As support is not yet comprehensive (and has little historical depth) you should
 
 The **BMP** (**Bitmap image**) file type is most prevalent on Windows computers, and is generally used only for special cases in web apps and content.
 
-> **Warning:** You should typically avoid using BMP files for website content.
+> [!WARNING]
+> You should typically avoid using BMP files for website content.
 > The most common form of BMP file represents the data as an uncompressed raster image, resulting in large file sizes compared to png or jpg image types.
 > More efficient BMP formats exist but are not widely used, and rarely supported in web browsers.
 
@@ -603,7 +608,8 @@ Following the directory comes the data for the icons.
 Each icon's data can be either a [BMP](#bmp_bitmap_file) image without the file header, or a complete [PNG](#png_portable_network_graphics) image (including the file header).
 If you use ICO files, you should use the BMP format, as support for PNG inside ICO files wasn't added until Windows Vista and may not be well supported.
 
-> **Warning:** ICO files _should not_ be used in web content.
+> [!WARNING]
+> ICO files _should not_ be used in web content.
 > Additionally, their use for favicons has subsided in favor of using a PNG file and the {{HTMLElement("link")}} element, as described in [Providing icons for different usage contexts](/en-US/docs/Web/HTML/Element/link#providing_icons_for_different_usage_contexts).
 
 <table class="standard-table">
@@ -931,7 +937,7 @@ PNG is widely supported, with all major browsers offering full support for its f
     <tr>
       <th scope="row">Licensing</th>
       <td>
-        ©2003 <a href="https://www.w3.org/">W3C</a> (<a href="http://www.lcs.mit.edu/">MIT</a>, <a href="http://www.ercim.org/">ERCIM</a>,
+        ©2003 <a href="https://www.w3.org/">W3C</a> (<a href="https://www.csail.mit.edu/">MIT</a>, <a href="https://www.ercim.eu/">ERCIM</a>,
         <a href="https://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C
         <a href="https://www.w3.org/policies/#disclaimers">liability</a>,
         <a href="https://www.w3.org/policies/#trademarks">trademark</a>, <a href="https://www.w3.org/copyright/document-license/">document use</a>
@@ -1008,9 +1014,9 @@ It's not generally useful for strictly bitmap or photographic images, although i
       <th scope="row">Licensing</th>
       <td>
         ©2018 <a href="https://www.w3.org/">W3C</a> (<a
-          href="http://www.lcs.mit.edu/"
+          href="https://www.csail.mit.edu/"
           >MIT</a
-        >, <a href="http://www.ercim.org/">ERCIM</a>,
+        >, <a href="https://www.ercim.eu/">ERCIM</a>,
         <a href="https://www.keio.ac.jp/">Keio</a>,
         <a href="https://ev.buaa.edu.cn/">Beihang</a>), All Rights Reserved. W3C
         <a href="https://www.w3.org/policies/#disclaimers">liability</a>,
@@ -1225,7 +1231,8 @@ Provide a fallback in either [JPEG](#jpeg_joint_photographic_experts_group_image
   </tbody>
 </table>
 
-> **Note:** On Safari for macOS, WebP support depends on both Safari and macOS versions. You need Safari 14 or later as well as macOS Big Sur (11) or a more recent version.
+> [!NOTE]
+> On Safari for macOS, WebP support depends on both Safari and macOS versions. You need Safari 14 or later as well as macOS Big Sur (11) or a more recent version.
 
 ### XBM (X Window System Bitmap file)
 

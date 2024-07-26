@@ -26,8 +26,7 @@ Primitives have no methods but still behave as if they do. When properties are a
 
 - [JavaScript data types](/en-US/docs/Web/JavaScript/Data_structures)
 - [Primitive data type](https://en.wikipedia.org/wiki/Primitive_data_type) (Wikipedia)
-- [Glossary](/en-US/docs/Glossary)
-
+- Related glossary terms:
   - {{Glossary("JavaScript")}}
   - {{Glossary("string")}}
   - {{Glossary("number")}}

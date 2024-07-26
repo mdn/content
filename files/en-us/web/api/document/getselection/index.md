@@ -22,7 +22,7 @@ None.
 
 ### Return value
 
-A {{DOMxRef("Selection")}} object, or `null` if the document has no [browsing context](/en-US/docs/Glossary/Browsing_context) (for example, it is the document of an {{htmlelemnt("iframe")}} that is not attached to a document).
+A {{DOMxRef("Selection")}} object, or `null` if the document has no [browsing context](/en-US/docs/Glossary/Browsing_context) (for example, it is the document of an {{htmlelement("iframe")}} that is not attached to a document).
 
 ## Examples
 

@@ -37,7 +37,7 @@ _Also inherits methods from its parent interface, {{domxref("BaseAudioContext")}
 - {{domxref("OfflineAudioContext.resume()")}}
   - : Resumes the progression of time in an audio context that has previously been suspended.
 
-> **Note:** The `resume()` method is still available — it is now defined on the {{domxref("BaseAudioContext")}} interface (see {{domxref("AudioContext.resume")}}) and thus can be accessed by both the {{domxref("AudioContext")}} and {{domxref("OfflineAudioContext")}} interfaces.
+> **Note:** The `resume()` method is still available — it is now defined on the {{domxref("BaseAudioContext")}} interface (see {{domxref("AudioContext.resume")}}) and thus can be accessed by both the {{domxref("AudioContext")}} and `OfflineAudioContext` interfaces.
 
 ## Events
 
@@ -50,7 +50,7 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 
 ### Playing audio with an offline audio context
 
-In this example, we declare both an {{domxref("AudioContext")}} and an `OfflineAudioContext` object. We use the `AudioContext` to load an audio track {{domxref("fetch()")}}, then the `OfflineAudioContext` to render the audio into an {{domxref("AudioBufferSourceNode")}} and play the track through. After the offline audio graph is set up, we render it to an {{domxref("AudioBuffer")}} using `OfflineAudioContext.startRendering()`.
+In this example, we declare both an {{domxref("AudioContext")}} and an `OfflineAudioContext` object. We use the `AudioContext` to load an audio track {{domxref("Window/fetch", "fetch()")}}, then the `OfflineAudioContext` to render the audio into an {{domxref("AudioBufferSourceNode")}} and play the track through. After the offline audio graph is set up, we render it to an {{domxref("AudioBuffer")}} using `OfflineAudioContext.startRendering()`.
 
 When the `startRendering()` promise resolves, rendering has completed and the output `AudioBuffer` is returned out of the promise.
 

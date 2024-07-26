@@ -42,7 +42,7 @@ The Topics API has no distinct interfaces of its own.
 
 - {{domxref("Document.browsingTopics()")}}
   - : Returns a promise that fulfills with an array of objects representing the top topics for the user, one from each of the last three epochs. By default, the method also causes the browser to record the current page visit as observed by the caller, so the page's hostname can later be used in topics calculation.
-- {{domxref("fetch()")}} / {{domxref("Request.Request", "Request()")}}, the `browsingTopics` option
+- {{domxref("Window/fetch", "fetch()")}} / {{domxref("Request.Request", "Request()")}}, the `browsingTopics` option
   - : A boolean specifying that the selected topics for the current user should be sent in a {{httpheader("Sec-Browsing-Topics")}} header with the associated request.
 - {{domxref("HTMLIFrameElement.browsingTopics")}}
   - : A boolean property specifying that the selected topics for the current user should be sent with the request for the associated {{htmlelement("iframe")}}'s source. This reflects the `browsingtopics` content attribute value.

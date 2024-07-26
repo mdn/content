@@ -601,7 +601,7 @@ In addition to specifying the start and end lines by number, you can specify a s
 
 {{ EmbedLiveSample('Using_the_span_keyword', '300', '330') }}
 
-You can also use the `span` keyword in the value of `grid-row-start`/`grid-row-end` and `grid-column-start/grid-column-end`. The following two examples will create the same grid area. In the first we set the start row line, then the end line we explain that we want to span 3 lines. The area will start at line 1 and span 3 lines to line 4.
+You can also use the `span` keyword in the value of `grid-row-start`/`grid-row-end` and `grid-column-start/grid-column-end`. The following two examples will create the same grid area. In the first we set the start row line, then the end line we specify that we want the area to cover 3 tracks. The area will start at line 1 and end 3 lines from line 1; that is, the area will end at line 4.
 
 ```css
 .box1 {

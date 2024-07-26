@@ -37,7 +37,7 @@ A new [iterator helper](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iter
 
 ## Description
 
-`flatMap` accepts two kinds of return values from `callbackFn`: an iterator or iterable. They are handled in the same way as {{jsxref("Iterator.from()")}}: if the return value is iterable, the `@@iterator` method is called and the return value is used; otherwise, the return value is treated as an iterator and its `next()` method is called.
+`flatMap` accepts two kinds of return values from `callbackFn`: an iterator or iterable. They are handled in the same way as {{jsxref("Iterator.from()")}}: if the return value is iterable, the `[Symbol.iterator]()` method is called and the return value is used; otherwise, the return value is treated as an iterator and its `next()` method is called.
 
 ```js
 [1, 2, 3]
@@ -65,14 +65,14 @@ A new [iterator helper](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iter
         return {
           ...it,
           [Symbol.iterator]() {
-            console.log("@@iterator called");
+            console.log("Symbol.iterator called");
             return it;
           },
         };
     }
   })
   .toArray();
-// Logs "@@iterator called"
+// Logs "Symbol.iterator called"
 // Returns [1, 2, 3]
 ```
 

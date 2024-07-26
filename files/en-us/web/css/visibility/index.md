@@ -45,7 +45,7 @@ The `visibility` property is specified as one of the keyword values listed below
     - Collapsed flex items and ruby annotations are hidden, and the space they would have occupied is removed.
     - For other elements, `collapse` is treated the same as `hidden`.
 
-## Accessibility concerns
+## Accessibility
 
 Using a `visibility` value of `hidden` on an element will remove it from the [accessibility tree](/en-US/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis). This will cause the element and all its descendant elements to no longer be announced by screen reading technology.
 

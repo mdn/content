@@ -297,7 +297,9 @@ Spacing may be created using CSS properties like {{CSSxRef("margin")}}.
 ```html
 <a href="//example.com">Scheme-relative URL</a>
 <a href="/en-US/docs/Web/HTML">Origin-relative URL</a>
+<a href="p">Directory-relative URL</a>
 <a href="./p">Directory-relative URL</a>
+<a href="../p">Parent-directory-relative URL</a>
 ```
 
 ```css hidden
@@ -325,7 +327,8 @@ a {
 
 {{EmbedLiveSample('Linking to an element on the same page')}}
 
-> **Note:** You can use `href="#top"` or the empty fragment (`href="#"`) to link to the top of the current page, [as defined in the HTML specification](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier).
+> [!NOTE]
+> You can use `href="#top"` or the empty fragment (`href="#"`) to link to the top of the current page, [as defined in the HTML specification](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier).
 
 ### Linking to an email address
 

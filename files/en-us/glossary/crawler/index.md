@@ -10,5 +10,6 @@ A **web crawler** is a program, often called a bot or robot, which systematicall
 
 ## See also
 
-- {{Glossary("Search engine")}}
+- Related glossary terms:
+  - {{Glossary("Search engine")}}
 - [Web crawler](https://en.wikipedia.org/wiki/Web_crawler) on Wikipedia

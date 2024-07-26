@@ -7,7 +7,7 @@ browser-compat: css.types.image.gradient.repeating-conic-gradient
 
 {{CSSRef}}
 
-The **`repeating-conic-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) creates an image consisting of a repeating gradient (rather than a {{cssxref("gradient/conic-gradient","single gradient")}}) with color transitions rotated around a center point (rather than {{cssxref("gradient/repeating-radial-gradient","radiating from the center")}}).
+The **`repeating-conic-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) creates an image consisting of a repeating gradient (rather than a [single gradient](/en-US/docs/Web/CSS/gradient/conic-gradient)) with color transitions rotated around a center point (rather than [radiating from the center](/en-US/docs/Web/CSS/gradient/repeating-radial-gradient)).
 
 {{EmbedInteractiveExample("pages/css/function-repeating-conic-gradient.html")}}
 
@@ -101,7 +101,7 @@ While you can mix and match different angle units, don't. It makes CSS hard to r
 
 {{csssyntax}}
 
-## Accessibility concerns
+## Accessibility
 
 Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users. While it is possible to create pie charts, checkerboards, and other effects with conic gradients, CSS images provide no native way to assign alternative text, and therefore the image represented by the conic gradient will not be accessible to screen reader users. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.
 

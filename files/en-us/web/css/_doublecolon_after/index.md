@@ -26,6 +26,10 @@ If the [`content`](/en-US/docs/Web/CSS/content) property is not specified, has a
 
 > **Note:** CSS introduced the `::after` notation (with two colons) to distinguish [pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) from [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements). For backward compatibility, browsers also accept `:after`, introduced earlier.
 
+## Accessibility
+
+Using an `::after` pseudo-element to add content is discouraged, as it is not reliably accessible to screen readers.
+
 ## Examples
 
 ### Simple usage
@@ -138,10 +142,6 @@ span[data-descr]:focus::after {
 #### Result
 
 {{EmbedLiveSample('Tooltips', 450, 120)}}
-
-## Accessibility concerns
-
-Using an `::after` pseudo-element to add content is discouraged, as it is not reliably accessible to screen readers.
 
 ## Specifications
 

@@ -17,7 +17,8 @@ JavaScript should be used to display the `<dialog>` element. Use the {{domxref("
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-> **Warning:** The `tabindex` attribute must not be used on the `<dialog>` element. See [usage notes](#usage_notes).
+> [!WARNING]
+> The `tabindex` attribute must not be used on the `<dialog>` element. See [usage notes](#usage_notes).
 
 - `open`
 
@@ -64,7 +65,8 @@ This example demonstrates the create a non-modal dialog by using only HTML. Beca
 
 {{EmbedLiveSample("HTML-only_dialog", "100%", 200)}}
 
-> **Note:** Reload the page to reset the output.
+> [!NOTE]
+> Reload the page to reset the output.
 
 This dialog is initially open because of the presence of the `open` attribute. Dialogs that are displayed using the `open` attribute are non-modal. After clicking "OK", the dialog gets dismissed, leaving the Result frame empty. When the dialog is dismissed, there is no method provided to reopen it. For this reason, the preferred method to display non-modal dialogs is by using the {{domxref("HTMLDialogElement.show()")}} method. It is possible to toggle the display of the dialog by adding or removing the boolean `open` attribute, but it is not the recommended practice.
 
@@ -278,7 +280,8 @@ So for example:
 - When animating `display` from `none` to `block` (or another visible `display` value), the value will flip to `block` at `0%` of the animation duration so it is visible throughout.
 - When animating `display` from `block` (or another visible `display` value) to `none`, the value will flip to `none` at `100%` of the animation duration so it is visible throughout.
 
-> **Note:** When animating using [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions), [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/transition-behavior) needs to be set to enable the above behavior. This behavior is available by default when animating with [CSS animations](/en-US/docs/Web/CSS/CSS_animations); an equivalent step is not required.
+> [!NOTE]
+> When animating using [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions), [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/transition-behavior) needs to be set to enable the above behavior. This behavior is available by default when animating with [CSS animations](/en-US/docs/Web/CSS/CSS_animations); an equivalent step is not required.
 
 #### Transitioning dialog elements
 
@@ -393,7 +396,8 @@ The code renders as follows:
 
 {{ EmbedLiveSample("Transitioning dialog elements", "100%", "200") }}
 
-> **Note:** Because `<dialog>`s change from `display: none` to `display: block` each time they are shown, the `<dialog>` transitions from its `@starting-style` styles to its `dialog[open]` styles every time the entry transition occurs. When the `<dialog>` closes, it transitions from its `dialog[open]` state to the default `dialog` state.
+> [!NOTE]
+> Because `<dialog>`s change from `display: none` to `display: block` each time they are shown, the `<dialog>` transitions from its `@starting-style` styles to its `dialog[open]` styles every time the entry transition occurs. When the `<dialog>` closes, it transitions from its `dialog[open]` state to the default `dialog` state.
 >
 > It is possible for the style transition on entry and exit to be different in such cases. See our [Demonstration of when starting styles are used](/en-US/docs/Web/CSS/@starting-style#demonstration_of_when_starting_styles_are_used) example for a proof of this.
 

@@ -16,7 +16,8 @@ Before starting this module, you should have:
 2. A basic work environment set up, as detailed in [Installing basic software](/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software), and an understanding of how to create and manage files, as detailed in [Dealing with files](/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files).
 3. Basic familiarity with HTML, as described in [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML).
 
-> **Note:** If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you could try out the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).
+> [!NOTE]
+> If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you could try out the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).
 
 ## Guides
 

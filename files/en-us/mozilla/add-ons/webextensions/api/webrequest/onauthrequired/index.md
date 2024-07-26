@@ -31,8 +31,10 @@ The listener can respond in one of four ways:
 
   - : The extension might need to fetch credentials asynchronously. For example, the extension might need to fetch credentials from storage or ask the user. In this case, the listener can supply credentials asynchronously as follows:
 
-    - in addListener, pass `"blocking"` in the `extraInfoSpec` parameter
-    - in the listener, return a `Promise` that resolves with an object containing an `authCredentials` property, set to the credentials to supply
+    - in addListener, pass `"asyncBlocking"` in Chrome and Firefox or `"blocking"` in Firefox in the `extraInfoSpec` parameter
+    - If `"blocking"` is provided, the extension can return a `webRequest.BlockingResponse` object or a Promise that resolves to a `webRequest.BlockingResponse` object
+    - If `"asyncBlocking"` is provided, the event listener function receives a `asyncCallback` function as its second parameter. `asyncCallback`can be called asynchronously and takes a`webRequest.BlockingResponse` object as its only parameter
+
       > **Note:** Chrome does not support a Promise as a return value ([Chromium issue 1510405](https://crbug.com/1510405)). For alternatives, see [the return value of the `listener`](#listener).
 
 See [Examples](#examples).
@@ -82,23 +84,28 @@ Events have three functions:
 
     - `details`
       - : `object`. Details about the request. See the [details](#details_2) section for more information.
+    - `asyncCallback` {{optional_inline}}
 
-    Returns: {{WebExtAPIRef('webRequest.BlockingResponse')}} or a {{jsxref("Promise")}}.
+      - : A function to call, at most once, to asynchronously modify the request object.
+        This parameter is only present if the event listener is registered with `"asyncBlocking"` in the `extraInfoSpec` array. `asyncCallback` is undefined if `extraInfoSpec` is not provided or contains `"blocking"`.
 
-    - To handle the request synchronously, include `"blocking"` in the `extraInfoSpec` parameter and return a `BlockingResponse` object with its `cancel` or `authCredentials` properties set.
-      This behavior is the same for Firefox and Chrome. However, synchronous handling is only appropriate for the simplest of extensions.
-    - To handle the request asynchronously:
-      - in Firefox, the `extraInfoSpec` array must include `"blocking"`, and the event handler function can return a Promise that resolves to a `BlockingResponse` object, with its `cancel` or `authCredentials` properties set. This is basically the same as handling the event synchronously.
-      - in Chrome, the `extraInfoSpec` array must include `"asyncBlocking"` (without `"blocking"`). The event handler function is passed a function as a second parameter (called `asyncCallback`) that should be invoked with the `BlockingResponse` result, with its `cancel` or `authCredentials` properties set.
+    Returns: {{WebExtAPIRef('webRequest.BlockingResponse')}} or a {{jsxref("Promise")}} depending on the settings in `extraInfoSpec`.
 
 - `filter`
-  - : {{WebExtAPIRef('webRequest.RequestFilter')}}. A filter that restricts the events that are sent to this listener.
+  - : {{WebExtAPIRef('webRequest.RequestFilter')}}. A filter that restricts the events sent to this listener.
 - `extraInfoSpec` {{optional_inline}}
 
-  - : `array` of `string`. Extra options for the event. You can pass any of the following values:
+  - : `array` of `string`. Extra options for the event. You can pass any of these values:
 
-    - `"blocking"`: make the request block so you can cancel the request or supply authentication credentials. To handle the request asynchronously in Chrome, use `"asyncBlocking"` instead.
-    - `"responseHeaders"`: include `responseHeaders` in the `details` object passed to the listener
+    - `"blocking"`: make the request block so you can cancel the request or supply authentication credentials. Return a `BlockingResponse` object with its `cancel` or `authCredentials` properties set.
+
+      - In Chrome, the event listener must respond synchronously.
+      - In Firefox, the event listener can respond synchronously or return a promise that resolves to a `BlockingResponse` object to respond asynchronously.
+
+    - `"asyncBlocking"`: handle the request asynchronously. The return value of the event listener is ignored. To resolve the event, pass the `asyncCallback` parameter a `BlockingResponse` object.
+
+      - Supported from Chrome 120 and Firefox 128.
+      - Not supported in Safari.
 
 ## Additional objects
 

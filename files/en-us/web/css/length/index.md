@@ -294,7 +294,9 @@ inputElem.addEventListener("change", () => {
   const result = document.createElement("div");
   result.className = "result";
   result.style.width = inputElem.value;
-  result.innerHTML = `<code>width: ${inputElem.value}</code>`;
+  const code = document.createElement("code");
+  code.textContent = `width: ${inputElem.value}`;
+  result.appendChild(code);
   resultsDiv.appendChild(result);
 
   inputElem.value = "";

@@ -22,7 +22,7 @@ None.
 
 ### Return value
 
-A {{domxref("Selection")}} object, or `null` if the associated document has no [browsing context](/en-US/docs/Glossary/Browsing_context) (for example, the window is an {{htmlelemnt("iframe")}} that is not attached to a document).
+A {{domxref("Selection")}} object, or `null` if the associated document has no [browsing context](/en-US/docs/Glossary/Browsing_context) (for example, the window is an {{htmlelement("iframe")}} that is not attached to a document).
 
 When called on an {{htmlelement("iframe")}} that is not displayed (e.g., where `display: none` is set) Firefox returns `null`, whereas other browsers returns a {{domxref("Selection")}} object with {{domxref("Selection.type")}} set to `None`.
 

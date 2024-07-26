@@ -23,7 +23,7 @@ Media queries are case-insensitive.
 
 - [Media types](/en-US/docs/Web/CSS/@media#media_types) define the broad category of device for which the media query applies: `all`, `print`, `screen`.
 
-  The type is optional (assumed to be `all`) except when using the `not` or `only` logical operators.
+  The type is optional (assumed to be `all`) except when using the `only` logical operator.
 
 - [Media features](/en-US/docs/Web/CSS/@media#media_features) describe a specific characteristic of the {{glossary("user agent")}}, output device, or environment:
 
@@ -180,7 +180,7 @@ The `and` operator can also combine multiple media features into a single media 
 The `only` operator prevents older browsers from applying the styles.
 
 > **Note:** In most cases, the `all` media type is used by default when no other type is specified.
-> However, if you use the `not` or `only` operators, you must explicitly specify a media type.
+> However, if you use the `only` operator, you must explicitly specify a media type. You can see `only screen` or `only print` as a whole.
 
 ### Combining multiple types or features
 
@@ -205,7 +205,7 @@ To limit the styles to devices with a screen, you can chain the media features t
 
 You can use a comma-separated list of media queries to apply styles when the user's device matches any one of various media types, features, or states.
 
-The following rule contains two media queries. The block's styles will apply if either the user's device has a height of 680px or more _or_ is if the browser viewport is in portrait mode (the viewport height is greater than the viewport width):
+The following rule contains two media queries. The block's styles will apply if either the user's device has a height of 680px or more _or_ if the browser viewport is in portrait mode (the viewport height is greater than the viewport width):
 
 ```css
 @media (min-height: 680px), screen and (orientation: portrait) {

@@ -13,7 +13,6 @@ For example, given the expression `"foo" + 1`, the {{glossary("Number")}} `1` is
 ## See also
 
 - [Type conversion](https://en.wikipedia.org/wiki/Type_conversion) (Wikipedia)
-- [Glossary](/en-US/docs/Glossary)
-
+- Related glossary terms:
   - {{Glossary("Type")}}
   - {{Glossary("Type coercion")}}

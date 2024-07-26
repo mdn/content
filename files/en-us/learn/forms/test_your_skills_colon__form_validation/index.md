@@ -8,7 +8,8 @@ page-type: learn-module-assessment
 
 The aim of this skill test is to assess whether you've understood our [Client-side form validation](/en-US/docs/Learn/Forms/Form_validation) article.
 
-> **Note:** You can try solutions in the interactive editors on this page or in an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+> [!NOTE]
+> You can try solutions in the interactive editors on this page or in an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
 >
 > If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
@@ -22,7 +23,7 @@ In this task, we are providing you with a simple support query form, and we want
 
 Try submitting your form — it should refuse to submit until the above constraints are followed, and give suitable error messages. To help, you might want to consider adding some simple CSS to show when a form field is valid or invalid.
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/form-validation/form-validation1-download.html) to work in your own editor or in an online editor.
 
@@ -34,11 +35,12 @@ Now we want you to take the same form you saw in the previous task (use your pre
 2. All of the email addresses for our users consist of one or more letters (lower or upper case) or numbers, followed by "@bigcorp.eu".
 3. Remove the length validation from the phone number field if it is present, and set it so that it accepts 10 digits — either 10 digits in a row, or a pattern of three digits, three digits, then four digits, separated by either spaces, dashes, or dots.
 
-> **Note:** Regular expressions are really challenging if you are new to them, but don't despair — have a go and see where you get to; there is no shame in asking for some help. You can find everything you need to answer these questions at our [regular expression reference](/en-US/docs/Web/JavaScript/Guide/Regular_expressions), and by searching on [Stack Overflow](https://stackoverflow.com/).
+> [!NOTE]
+> Regular expressions are really challenging if you are new to them, but don't despair — have a go and see where you get to; there is no shame in asking for some help. You can find everything you need to answer these questions at our [regular expression reference](/en-US/docs/Web/JavaScript/Guide/Regular_expressions), and by searching on [Stack Overflow](https://stackoverflow.com/).
 
 Again, to help you might want to consider adding some simple CSS to show when a form field is valid or invalid.
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/form-validation/form-validation2-download.html) to work in your own editor or in an online editor.
 
@@ -49,6 +51,6 @@ In our final task for this set, we are providing you with a similar example to w
 1. Make the input mandatory to fill in, and give it a minimum length of 10 characters.
 2. Add an event listener that checks whether the inputted value is an email address, and whether it is long enough. If it doesn't look like an email address or is too short, provide the user with appropriate custom error messages.
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/html/forms/tasks/form-validation/form-validation3-download.html) to work in your own editor or in an online editor.

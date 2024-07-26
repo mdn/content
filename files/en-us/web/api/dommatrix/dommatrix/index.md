@@ -33,7 +33,7 @@ new DOMMatrix(init)
 ## Examples
 
 This example creates a DOMMatrix to use as an argument for calling
-{{domxref("Point.matrixTransform()")}}.
+{{domxref("DOMPointReadOnly.matrixTransform()")}}.
 
 ```js
 const point = new DOMPoint(5, 4);

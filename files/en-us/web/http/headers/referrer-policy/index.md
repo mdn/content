@@ -35,7 +35,8 @@ Referrer-Policy: strict-origin-when-cross-origin
 Referrer-Policy: unsafe-url
 ```
 
-> **Note:** The original header name {{HTTPHeader("Referer")}} is a misspelling of the word "referrer". The `Referrer-Policy` header does not share this misspelling.
+> [!NOTE]
+> The original header name {{HTTPHeader("Referer")}} is a misspelling of the word "referrer". The `Referrer-Policy` header does not share this misspelling.
 
 ## Directives
 
@@ -84,7 +85,8 @@ Alternatively, you can set a `noreferrer` [link relation](/en-US/docs/Web/HTML/A
 <a href="http://example.com" rel="noreferrer">…</a>
 ```
 
-> **Warning:** As seen above, the `noreferrer` link relation is written without a dash. When you specify the referrer policy for the entire document with a {{HTMLElement("meta")}} element, it should be written _with_ a dash: `<meta name="referrer" content="no-referrer">`.
+> [!WARNING]
+> As seen above, the `noreferrer` link relation is written without a dash. When you specify the referrer policy for the entire document with a {{HTMLElement("meta")}} element, it should be written _with_ a dash: `<meta name="referrer" content="no-referrer">`.
 
 ## Integration with CSS
 
@@ -162,7 +164,8 @@ Referrer-Policy: no-referrer, strict-origin-when-cross-origin
 
 In the above scenario, `no-referrer` is used only if the browser does not support the `strict-origin-when-cross-origin` policy.
 
-> **Note:** Specifying multiple values is only supported in the `Referrer-Policy` HTTP header, and not in the `referrerpolicy` attribute.
+> [!NOTE]
+> Specifying multiple values is only supported in the `Referrer-Policy` HTTP header, and not in the `referrerpolicy` attribute.
 
 ## Browser-specific preferences/settings
 
@@ -188,6 +191,5 @@ All of these settings take the same set of values: `0 = no-referrer`, `1 = same-
 - [Web security > Referer header: privacy and security concerns](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns)
 - [HTTP referer on Wikipedia](https://en.wikipedia.org/wiki/HTTP_referer)
 - When using [Fetch](/en-US/docs/Web/API/Fetch_API): {{domxref("Request.referrerPolicy")}}
-- The obsolete {{HTTPHeader("Content-Security-Policy")}}'s {{HTTPHeader("Content-Security-Policy/referrer", "referrer")}} {{deprecated_inline}} directive.
 - [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)
 - [Tighter Control Over Your Referrers – Mozilla Security Blog](https://blog.mozilla.org/security/2015/01/21/meta-referrer/)

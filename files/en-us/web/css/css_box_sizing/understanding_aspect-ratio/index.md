@@ -341,7 +341,7 @@ blockquote {
 
 {{EmbedLiveSample("words", "100", "400")}}
 
-Each box has one dimension defined: the {{cssxref("inline-size")}}, which is the width in horizontal languages, is set to {{cssxref("max-content")}}, which sets the size to be as wide as it needs to be to fit the content without wrapping. The second dimension, in this case, the {{cssxref("block-size")}} or {{cssxref("height")}}, is set to be the same length as the first dimension. This is accomplished with the {{cssxref("aspect-ratio")}} property. We defined the desired width-to-height ratio of the element's box to be `1`, which is the same as `1 / 1`, a square. This sets the the block direction to match the width of the element, without using the {{cssxref("height")}} or {{cssxref("block-size")}} properties.
+Each box has one dimension defined: the {{cssxref("inline-size")}}, which is the width in horizontal languages, is set to {{cssxref("max-content")}}, which sets the size to be as wide as it needs to be to fit the content without wrapping. The second dimension, in this case, the {{cssxref("block-size")}} or {{cssxref("height")}}, is set to be the same length as the first dimension. This is accomplished with the {{cssxref("aspect-ratio")}} property. We defined the desired width-to-height ratio of the element's box to be `1`, which is the same as `1 / 1`, a square. This sets the block direction to match the width of the element, without using the {{cssxref("height")}} or {{cssxref("block-size")}} properties.
 
 In these examples, a size was explicitly set on the element itself. When working with non-replaced elements, aspect ratio comes into play when no size dimension is explicitly set.
 
@@ -487,7 +487,7 @@ iframe.tiktok {
 
 ### Making grid cells square
 
-A grid of square cells can be created by defining fixed {{cssxref("grid-template-columns", "column track sizes")}}, ensuring each row matches the size of the column track. However, when creating responsive grids using `auto-fill` to fit as many column tracks as possible within the container, the width of each item becomes uncertain. This makes it challenging to determine the appropriate height for creating square items.
+A grid of square cells can be created by defining fixed [column track sizes](/en-US/docs/Web/CSS/grid-template-columns), ensuring each row matches the size of the column track. However, when creating responsive grids using `auto-fill` to fit as many column tracks as possible within the container, the width of each item becomes uncertain. This makes it challenging to determine the appropriate height for creating square items.
 
 By setting an aspect ratio on the items, we can ensure when the grid items are laid out, each grid item will be as tall as it is wide, creating square grid items regardless of the container's dimensions.
 

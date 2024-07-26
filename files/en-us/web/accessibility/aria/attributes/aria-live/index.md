@@ -55,7 +55,8 @@ In this time-limit scenario, to be accessible, you need to also [provide a way f
 
 A live region includes the element and all its descendants. When not set on updating content, `aria-live`'s value comes from the nearest ancestor with a valid `aria-live` attribute value set. When set to `off`, or when the attribute is omitted altogether on the updated element and all the ancestor nodes in the DOM tree, the user is not informed. Users will still be able to hear the updates if they navigate to the live region, however.
 
-> **Warning:** Because an interruption may disorient users or cause them to not complete their current task, don't use the `assertive` value unless the interruption is imperative.
+> [!WARNING]
+> Because an interruption may disorient users or cause them to not complete their current task, don't use the `assertive` value unless the interruption is imperative.
 
 ## Values
 
@@ -70,7 +71,7 @@ A live region includes the element and all its descendants. When not set on upda
 
 - {{domxref("Element.ariaLive")}}
   - : The [`ariaLive`](/en-US/docs/Web/API/Element/ariaLive) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-live` attribute.
-- {{domxref("ElementInternals.aria-live")}}
+- {{domxref("ElementInternals.ariaLive")}}
   - : The [`ariaLive`](/en-US/docs/Web/API/ElementInternals/ariaLive) property, part of the {{domxref("ElementInternals")}} interface, reflects the value of the `aria-live` attribute.
 
 ## Associated roles

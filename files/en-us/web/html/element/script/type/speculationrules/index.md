@@ -13,7 +13,8 @@ The **`speculationrules`** value of the [`type`](/en-US/docs/Web/HTML/Element/sc
 
 Speculation rules take the form of a JSON structure that determine what resources should be prefetched or prerendered by the browser. This is part of the {{domxref("Speculation Rules API", "", "", "nocode")}}.
 
-> **Note:** Speculation rules can be defined inside external text files referenced by the {{httpheader("Speculation-Rules")}} HTTP header, using the same [JSON representation provided below](#speculation_rules_json_representation). Specifying an HTTP header is useful in cases where developers are not able to directly modify the document itself.
+> [!NOTE]
+> Speculation rules can be defined inside external text files referenced by the {{httpheader("Speculation-Rules")}} HTTP header, using the same [JSON representation provided below](#speculation_rules_json_representation). Specifying an HTTP header is useful in cases where developers are not able to directly modify the document itself.
 
 ## Syntax
 
@@ -23,7 +24,8 @@ Speculation rules take the form of a JSON structure that determine what resource
 </script>
 ```
 
-> **Note:** The `src`, `async`, `nomodule`, `defer`, `crossorigin`, `integrity`, and `referrerpolicy` attributes must not be specified.
+> [!NOTE]
+> The `src`, `async`, `nomodule`, `defer`, `crossorigin`, `integrity`, and `referrerpolicy` attributes must not be specified.
 
 ### Exceptions
 
@@ -70,7 +72,8 @@ The JSON structure contains one or more fields at the top level, each one repres
 - `"prerender"` {{optional_inline}} {{experimental_inline}}
   - : Rules for potential future navigations that should have their associated documents fully downloaded, rendered, and loaded into an invisible tab. This includes loading all subresources, running all JavaScript, and even loading subresources and performing data fetches started by JavaScript. When those documents are navigated to, navigations will be instant, leading to major performance improvements.
 
-> **Note:** Consult the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API) main page for full details on how to use prefetch and prerender effectively.
+> [!NOTE]
+> Consult the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API) main page for full details on how to use prefetch and prerender effectively.
 
 Each action field contains an array, which in turn contains one or more objects. Each object contains a single rule defining a set of URLs and related parameters.
 
@@ -165,7 +168,8 @@ Each object can contain the following properties:
         - A future Safari implementation may possibly use something along the lines of [iCloud Private Relay](https://support.apple.com/en-us/102602).
         - A future Firefox implementation might use something based on the [Mozilla VPN](https://www.mozilla.org/en-US/products/vpn/) product.
 
-> **Note:** As speculation rules use a `<script>` element, they need to be explicitly allowed in the [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) [`script-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src) directive if the site includes it. This is done by adding the `"inline-speculation-rules"` value along with a hash- or nonce-source.
+> [!NOTE]
+> As speculation rules use a `<script>` element, they need to be explicitly allowed in the [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) [`script-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src) directive if the site includes it. This is done by adding the `"inline-speculation-rules"` value along with a hash- or nonce-source.
 
 ## Examples
 
@@ -193,7 +197,8 @@ The basic examples shown in the description section included separate speculatio
 </script>
 ```
 
-> **Note:** This code snippet provides a list (`"urls"`) rule and a document (`"where"`) rule example.
+> [!NOTE]
+> This code snippet provides a list (`"urls"`) rule and a document (`"where"`) rule example.
 
 ### Multiple rule sets
 
@@ -346,7 +351,8 @@ In the following complete speculation rule example, all same-origin pages are ma
 </script>
 ```
 
-> **Note:** The `where` pattern above does not include cross-site links, which are supported for prefetching (provided the user has no cookies set for the destination site, to protect against tracking) but not for prerendering.
+> [!NOTE]
+> The `where` pattern above does not include cross-site links, which are supported for prefetching (provided the user has no cookies set for the destination site, to protect against tracking) but not for prerendering.
 
 ### `"relative_to"` example
 
@@ -414,7 +420,7 @@ How does this affect speculation rules? Consider the following code:
 
 What would happen in this case when the user starts a navigation to `/users?id=345` when the headers for the prefetch of `/users` have not been received yet? At this point, the browser doesn't know what the `No-Vary-Search` value will be, if anything. If there was no `No-Vary-Search` value set, and the application behavior was more like Option 1 above, the prefetch would be wasted and the browser would need to go and fetch the separate `/users?id=345` page from scratch.
 
-To solve this, we can provide a hint as to what the page author expects the `No-Vary-Search` value to be. A speculation rule can have an `"expects_no_vary_search"` field, which contains a string representation of the the expected header value:
+To solve this, we can provide a hint as to what the page author expects the `No-Vary-Search` value to be. A speculation rule can have an `"expects_no_vary_search"` field, which contains a string representation of the expected header value:
 
 ```html
 <script type="speculationrules">
@@ -480,7 +486,8 @@ Here we are hinting that:
 - All same-site links contained in the document should be conservatively prerendered (i.e. when the user starts to activate them).
 - Any product links (in this case, those with a `class` of `.product-link`) in the document should be eagerly prerendered (i.e. if the user makes any kind of move towards navigating to them).
 
-> **Note:** The effects of eagerness settings are less useful for list rules. By default, list rule URLs are prefetched/prerendered immediately as soon as the rules are parsed, which is what you'd expect — they are intended for explicit listing of high-priority URLs that you want to make available as soon as possible. For this reason, `eager` has the same effect as `immediate` in current implementations. Lower eagerness settings are for prefetching/prerendering when links are interacted with, and for these you are more likely to use document rules to find them on the page.
+> [!NOTE]
+> The effects of eagerness settings are less useful for list rules. By default, list rule URLs are prefetched/prerendered immediately as soon as the rules are parsed, which is what you'd expect — they are intended for explicit listing of high-priority URLs that you want to make available as soon as possible. For this reason, `eager` has the same effect as `immediate` in current implementations. Lower eagerness settings are for prefetching/prerendering when links are interacted with, and for these you are more likely to use document rules to find them on the page.
 
 ## Specifications
 

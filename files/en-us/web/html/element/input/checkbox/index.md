@@ -37,7 +37,8 @@ In this example, we've got a name of `subscribe`, and a value of `newsletter`. W
 
 If the `value` attribute was omitted, the default value for the checkbox is `on`, so the submitted data in that case would be `subscribe=on`.
 
-> **Note:** If a checkbox is unchecked when its form is submitted, neither the name nor the value is submitted to the server. There is no HTML-only method of representing a checkbox's unchecked state (e.g. `value=unchecked`). If you wanted to submit a default value for the checkbox when it is unchecked, you could include JavaScript to create a {{HTMLElement("input/hidden", '&lt;input type="hidden"&gt;')}} within the form with a value indicating an unchecked state.
+> [!NOTE]
+> If a checkbox is unchecked when its form is submitted, neither the name nor the value is submitted to the server. There is no HTML-only method of representing a checkbox's unchecked state (e.g. `value=unchecked`). If you wanted to submit a default value for the checkbox when it is unchecked, you could include JavaScript to create a {{HTMLElement("input/hidden", '&lt;input type="hidden"&gt;')}} within the form with a value indicating an unchecked state.
 
 ## Additional attributes
 
@@ -117,7 +118,8 @@ inputInstance.indeterminate = true;
 
 When `indeterminate` is `true`, the checkbox has a horizontal line in the box (it looks somewhat like a hyphen or minus sign) instead of a check/tick in most browsers.
 
-> **Note:** This is purely a visual change. It has no impact on whether the checkbox's `value` is used in a form submission. That is decided by the `checked` state, regardless of the `indeterminate` state.
+> [!NOTE]
+> This is purely a visual change. It has no impact on whether the checkbox's `value` is used in a form submission. That is decided by the `checked` state, regardless of the `indeterminate` state.
 
 There are not many use cases for this property. The most common is when a checkbox is available that "owns" a number of sub-options (which are also checkboxes). If all of the sub-options are checked, the owning checkbox is also checked, and if they're all unchecked, the owning checkbox is unchecked. If any one or more of the sub-options have a different state than the others, the owning checkbox is in the indeterminate state.
 
@@ -290,7 +292,7 @@ otherCheckbox.addEventListener("change", () => {
     </tr>
     <tr>
       <td><strong>Supported common attributes</strong></td>
-      <td><code>checked</code></td>
+      <td><code><a href="#checked">checked</a></code></td>
     </tr>
     <tr>
       <td><strong>IDL attributes</strong></td>

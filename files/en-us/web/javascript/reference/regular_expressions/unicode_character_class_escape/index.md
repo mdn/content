@@ -44,7 +44,8 @@ To compose multiple properties, use the [character set intersection](/en-US/docs
 
 In `v` mode, `\p` may match a sequence of code points, defined in Unicode as "properties of strings". This is most useful for emojis, which are often composed of multiple code points. However, `\P` can only complement character properties.
 
-> **Note:** There are plans to port the properties of strings feature to `u` mode as well.
+> [!NOTE]
+> There are plans to port the properties of strings feature to `u` mode as well.
 
 ## Examples
 

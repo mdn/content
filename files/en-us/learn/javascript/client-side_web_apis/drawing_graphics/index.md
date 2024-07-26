@@ -73,7 +73,8 @@ You should put some fallback content inside the `<canvas>` tags. This should des
 
 The fallback should provide useful alternative content to the canvas content. For example, if you are rendering a constantly updating graph of stock prices, the fallback content could be a static image of the latest stock graph, with `alt` text saying what the prices are in text or a list of links to individual stock pages.
 
-> **Note:** Canvas content is not accessible to screen readers. Include descriptive text as the value of the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute directly on the canvas element itself or include fallback content placed within the opening and closing `<canvas>` tags. Canvas content is not part of the DOM, but nested fallback content is.
+> [!NOTE]
+> Canvas content is not accessible to screen readers. Include descriptive text as the value of the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute directly on the canvas element itself or include fallback content placed within the opening and closing `<canvas>` tags. Canvas content is not part of the DOM, but nested fallback content is.
 
 ### Creating and sizing our canvas
 
@@ -105,7 +106,8 @@ Let's start by creating our own canvas that we draw future experiments on to.
 
    You'll also see that we are chaining assignments together with multiple equals signs — this is allowed in JavaScript, and it is a good technique if you want to make multiple variables all equal to the same value. We wanted to make the canvas width and height easily accessible in the width/height variables, as they are useful values to have available for later (for example, if you want to draw something exactly halfway across the width of the canvas).
 
-> **Note:** You should generally set the size of the image using HTML attributes or DOM properties, as explained above. You could use CSS, but the trouble then is that the sizing is done after the canvas has rendered, and just like any other image (the rendered canvas is just an image), the image could become pixelated/distorted.
+> [!NOTE]
+> You should generally set the size of the image using HTML attributes or DOM properties, as explained above. You could use CSS, but the trouble then is that the sizing is done after the canvas has rendered, and just like any other image (the rendered canvas is just an image), the image could become pixelated/distorted.
 
 ### Getting the canvas context and final setup
 
@@ -117,7 +119,8 @@ In this case we want a 2d canvas, so add the following JavaScript line below the
 const ctx = canvas.getContext("2d");
 ```
 
-> **Note:** other context values you could choose include `webgl` for WebGL, `webgl2` for WebGL 2, etc., but we won't need those in this article.
+> [!NOTE]
+> other context values you could choose include `webgl` for WebGL, `webgl2` for WebGL 2, etc., but we won't need those in this article.
 
 So that's it — our canvas is now primed and ready for drawing on! The `ctx` variable now contains a {{domxref("CanvasRenderingContext2D")}} object, and all drawing operations on the canvas will involve manipulating this object.
 
@@ -193,7 +196,8 @@ Now you should see that your white outline has become much thicker! That's it fo
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/2_canvas_rectangles/index.html", '100%', 250)}}
 
-> **Note:** The finished code is available on GitHub as [2_canvas_rectangles](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/2_canvas_rectangles).
+> [!NOTE]
+> The finished code is available on GitHub as [2_canvas_rectangles](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/2_canvas_rectangles).
 
 ### Drawing paths
 
@@ -303,9 +307,11 @@ That's it for now; your final example should look like this:
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/3_canvas_paths/index.html", '100%', 200)}}
 
-> **Note:** The finished code is available on GitHub as [3_canvas_paths](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/3_canvas_paths).
+> [!NOTE]
+> The finished code is available on GitHub as [3_canvas_paths](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/3_canvas_paths).
 
-> **Note:** To find out more about advanced path drawing features such as Bézier curves, check out our [Drawing shapes with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) tutorial.
+> [!NOTE]
+> To find out more about advanced path drawing features such as Bézier curves, check out our [Drawing shapes with canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes) tutorial.
 
 ### Text
 
@@ -341,7 +347,8 @@ Here we draw two lines of text, one outline and the other stroke. The final exam
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/4_canvas_text/index.html", '100%', 180)}}
 
-> **Note:** The finished code is available on GitHub as [4_canvas_text](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/4_canvas_text).
+> [!NOTE]
+> The finished code is available on GitHub as [4_canvas_text](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/4_canvas_text).
 
 Have a play and see what you can come up with! You can find more information on the options available for canvas text at [Drawing text](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
 
@@ -392,7 +399,8 @@ The final example should look like so:
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/5_canvas_images/index.html", '100%', 260)}}
 
-> **Note:** The finished code is available on GitHub as [5_canvas_images](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/5_canvas_images).
+> [!NOTE]
+> The finished code is available on GitHub as [5_canvas_images](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/5_canvas_images).
 
 ## Loops and animations
 
@@ -470,7 +478,8 @@ At this point, we'd like to encourage you to play with the example and make it y
 - Play with the `length` and `moveOffset` values.
 - Introduce some random numbers using that `rand()` function we included above but didn't use.
 
-> **Note:** The finished code is available on GitHub as [6_canvas_for_loop](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/loops_animation/6_canvas_for_loop).
+> [!NOTE]
+> The finished code is available on GitHub as [6_canvas_for_loop](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/loops_animation/6_canvas_for_loop).
 
 ### Animations
 
@@ -478,7 +487,8 @@ The loop example we built above was fun, but really you need a constant loop tha
 
 There are a few JavaScript functions that will allow you to run functions repeatedly, several times a second, the best one for our purposes here being {{domxref("window.requestAnimationFrame()")}}. It takes one parameter — the name of the function you want to run for each frame. The next time the browser is ready to update the screen, your function will get called. If that function draws the new update to your animation, then calls `requestAnimationFrame()` again just before the end of the function, the animation loop will continue to run. The loop ends when you stop calling `requestAnimationFrame()` or if you call {{domxref("window.cancelAnimationFrame()")}} after calling `requestAnimationFrame()` but before the frame is called.
 
-> **Note:** It's good practice to call `cancelAnimationFrame()` from your main code when you're done using the animation, to ensure that no updates are still waiting to be run.
+> [!NOTE]
+> It's good practice to call `cancelAnimationFrame()` from your main code when you're done using the animation, to ensure that no updates are still waiting to be run.
 
 The browser works out complex details such as making the animation run at a consistent speed, and not wasting resources animating things that can't be seen.
 
@@ -515,7 +525,8 @@ In general, the process of doing a canvas animation involves the following steps
 4. Restore the settings you saved in step 2, using {{domxref("CanvasRenderingContext2D.restore", "restore()")}}
 5. Call `requestAnimationFrame()` to schedule drawing of the next frame of the animation.
 
-> **Note:** We won't cover `save()` and `restore()` here, but they are explained nicely in our [Transformations](/en-US/docs/Web/API/Canvas_API/Tutorial/Transformations) tutorial (and the ones that follow it).
+> [!NOTE]
+> We won't cover `save()` and `restore()` here, but they are explained nicely in our [Transformations](/en-US/docs/Web/API/Canvas_API/Tutorial/Transformations) tutorial (and the ones that follow it).
 
 ### A simple character animation
 
@@ -626,7 +637,8 @@ That's it! The final example should look like so:
 
 {{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation/index.html", '100%', 260)}}
 
-> **Note:** The finished code is available on GitHub as [7_canvas_walking_animation](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation).
+> [!NOTE]
+> The finished code is available on GitHub as [7_canvas_walking_animation](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation).
 
 ### A simple drawing application
 
@@ -809,7 +821,8 @@ Let's have another quick look at what the finished product should look like:
 
 You can [find the finished code on GitHub](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/threejs-cube).
 
-> **Note:** In our GitHub repo you can also find another interesting 3D cube example — [Three.js Video Cube](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/threejs-video-cube) ([see it live also](https://mdn.github.io/learning-area/javascript/apis/drawing-graphics/threejs-video-cube/)). This uses {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} to take a video stream from a computer web cam and project it onto the side of the cube as a texture!
+> [!NOTE]
+> In our GitHub repo you can also find another interesting 3D cube example — [Three.js Video Cube](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/threejs-video-cube) ([see it live also](https://mdn.github.io/learning-area/javascript/apis/drawing-graphics/threejs-video-cube/)). This uses {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} to take a video stream from a computer web cam and project it onto the side of the cube as a texture!
 
 ## Summary
 

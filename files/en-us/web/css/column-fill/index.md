@@ -17,7 +17,6 @@ The **`column-fill`** [CSS](/en-US/docs/Web/CSS) property controls how an elemen
 /* Keyword values */
 column-fill: auto;
 column-fill: balance;
-column-fill: balance-all;
 
 /* Global values */
 column-fill: inherit;
@@ -35,8 +34,6 @@ The `column-fill` property is specified as one of the keyword values listed belo
   - : Columns are filled sequentially. Content takes up only the room it needs, possibly resulting in some columns remaining empty.
 - `balance`
   - : Content is equally divided between columns. In fragmented contexts, such as [paged media](/en-US/docs/Web/CSS/CSS_paged_media), only the last fragment is balanced. Therefore in paged media, only the last page would be balanced.
-- `balance-all`
-  - : Content is equally divided between columns. In fragmented contexts, such as [paged media](/en-US/docs/Web/CSS/CSS_paged_media), all fragments are balanced.
 
 ## Formal definition
 

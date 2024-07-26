@@ -14,8 +14,8 @@ Edge is included with Windows 10 and Windows 11, and is also available for macOS
 
 - [Official website](https://www.microsoft.com/edge)
 - [Microsoft Edge](https://en.wikipedia.org/wiki/Microsoft_Edge) on Wikipedia
-- [MDN Web Docs Glossary](/en-US/docs/Glossary)
-- Glossary
+- Related glossary terms:
+- Related glossary terms:
   - {{Glossary("Browser")}}
   - {{Glossary("Engine/Rendering", "Rendering engine")}}
   - {{Glossary("Microsoft Internet Explorer", "Internet Explorer")}}

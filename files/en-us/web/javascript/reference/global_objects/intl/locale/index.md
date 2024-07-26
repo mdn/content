@@ -62,8 +62,8 @@ These properties are defined on `Intl.Locale.prototype` and shared by all `Intl.
   - : Returns the region of the world (usually a country) associated with the locale.
 - {{jsxref("Intl/Locale/script", "Intl.Locale.prototype.script")}}
   - : Returns the script used for writing the particular language used in the locale.
-- `Intl.Locale.prototype[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Intl.Locale"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+- `Intl.Locale.prototype[Symbol.toStringTag]`
+  - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Intl.Locale"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 

@@ -236,7 +236,7 @@ The generic logical spanning keywords — when combined with a logical row or co
 
   - : Span the center tile and the inline-end tile of the specified block row.
 
-For example, `block-end span-inline-start` selects the center tile of the end block row and spans across the tiles in that row that are in the inline center and start columns. With `writing-mode: horizontal-tb` set, this would span the bottom-center and bottom-left grid tiles, whereas with `writing-mode: vertical-rl` set it would span the right-center and top-right grid tiles.
+For example, `block-end span-inline-start` selects the center tile of the end block row and spans across the tiles in that row that are in the inline center and start columns. With `writing-mode: horizontal-tb` set, this would span the bottom-center and bottom-left grid tiles, whereas with `writing-mode: vertical-rl` set it would span the left-center and top-left grid tiles.
 
 > **Note:** The specification defines `self` equivalents of these keywords, for example — `span-self-block-start`, `span-self-block-end`, `span-self-inline-start`, and `span-self-inline-end`. However, these are not currently supported in any browser.
 
@@ -376,10 +376,9 @@ For detailed information on anchor features and usage, see the [CSS anchor posit
 ## See also
 
 - {{cssxref("inset-area")}}
-- [`inset-area()`](/en-US/docs/Web/CSS/inset-area_function) function
 - {{cssxref("anchor-name")}}
 - {{cssxref("position-anchor")}}
 - [`anchor()`](/en-US/docs/Web/CSS/anchor) function
 - [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide
-- [Handling overflow: try options and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide
+- [Handling overflow: try fallbacks and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide
 - [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module

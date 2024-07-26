@@ -6,15 +6,13 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 128 that affect developers. Firefox 128 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [July 9, 2024](https://whattrainisitnow.com/release/?version=128).
+This article provides information about the changes in Firefox 128 that affect developers. Firefox 128 was released on [July 9, 2024](https://whattrainisitnow.com/release/?version=128).
 
 ## Changes for web developers
 
-### Developer Tools
-
 ### HTML
 
-#### Removals
+- The [`target`](/en-US/docs/Web/HTML/Element/base#target) attribute of the `<base>` element now disallows ASCII newlines, tabs, or the `<` character, changing the value to `_blank` if any are present. This prevents dangling markup injection attacks that use an unclosed `target` attribute ([Firefox bug 1835157](https://bugzil.la/1835157)).
 
 ### CSS
 
@@ -37,22 +35,10 @@ This article provides information about the changes in Firefox 128 that affect d
     The maximum allowed size of the buffer is specified using the `options.maxByteLength` parameter to the [`ArrayBuffer()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer#maxbytelength).
     The {{jsxref("ArrayBuffer.prototype.resizable")}} and {{jsxref("ArrayBuffer.prototype.maxByteLength")}} properties indicate whether the buffer can be resized, and its maximum allowed size, respectively.
 
-#### Removals
-
-### SVG
-
-#### Removals
-
 ### HTTP
 
 - The HTTP [`Accept`](/en-US/docs/Web/HTTP/Headers/Accept) header in [default requests and image requests](/en-US/docs/Web/HTTP/Content_negotiation/List_of_default_Accept_values) now includes the `image/svg+xml` MIME type ([Firefox bug 1711622](https://bugzil.la/1711622)).
 - The {{rfc("9218", "Extensible Prioritization Scheme for HTTP")}} is now supported, including the HTTP [`Priority`](/en-US/docs/Web/HTTP/Headers/Priority) request and response header, which allows clients to hint at the expected relative priority for resources sent over a connection, and the HTTP/2 and HTTP/3 `PRIORITY_UPDATE` frames that allow the priority to be subsequently changed after the header has been sent ([Firefox bug 1865040](https://bugzil.la/1865040)).
-
-#### Removals
-
-### Security
-
-#### Removals
 
 ### APIs
 
@@ -64,18 +50,14 @@ This article provides information about the changes in Firefox 128 that affect d
   This provides an application with a simple mechanism to know in advance whether playback at the optimal resolution will be allowed, without having to create a media key session or fetch a real license. ([Firefox bug 1878714](https://bugzil.la/1878714)).
 - {{domxref('RTCRtpTransceiver.setCodecPreferences()')}} is now supported for setting the codecs that a WebRTC local peer is able to use for decoding received data, in its preferred codec order. Web applications can use this to cause the remote peer to choose a preferred codec, and to disable the negotiation of specific codecs — including those used for retransmission, redundancy, and forward error correction. ([Firefox bug 1396922](https://bugzil.la/1396922)).
 - Serialization of [declarative shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM#declaratively_with_html), including the methods {{domxref('ShadowRoot.getHTML()')}} and {{domxref('Element.getHTML()')}}, and associated properties {{domxref('ShadowRoot.serializable')}} and {{domxref('HTMLTemplateElement.shadowRootSerializable')}}.
-
-#### DOM
+- The [`CSSPropertyRule`](/en-US/docs/Web/API/CSSPropertyRule) interface is now supported by default and represents a CSS [`@property`](/en-US/docs/Web/CSS/@property) at-rule. The interface allows you to get the values, including [`name`](/en-US/docs/Web/API/CSSPropertyRule/name), [`syntax`](/en-US/docs/Web/API/CSSPropertyRule/syntax), [`inherits`](/en-US/docs/Web/API/CSSPropertyRule/inherits), and [`initialValue`](/en-US/docs/Web/API/CSSPropertyRule/initialvalue), of CSS custom properties defined using the `@property` at-rule ([Firefox bug 1864818](https://bugzil.la/1864818)).
+- The [`registerProperty()`](/en-US/docs/Web/API/CSS/registerProperty_static) method is now supported by default. It allows you to define [CSS custom properties](/en-US/docs/Web/CSS/--*) via JavaScript, which is similar to using the `@property` at-rule in CSS ([Firefox bug 1864818](https://bugzil.la/1864818)).
 
 #### Media, WebRTC, and Web Audio
 
 #### Removals
 
 - The non-standard {{domxref('HTMLMediaElement.seekToNextFrame()')}} method has been removed, and is now not supported by any browser. ([Firefox bug 1336404](https://bugzil.la/1336404)).
-
-### WebAssembly
-
-#### Removals
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -100,17 +82,19 @@ This article provides information about the changes in Firefox 128 that affect d
 
 ## Changes for add-on developers
 
-- Adds the ability to enable and disable rules in static declarative net request rulesets with {{WebExtAPIRef("declarativeNetRequest.updateStaticRules")}} and list disabled rules for a static ruleset with {{WebExtAPIRef("declarativeNetRequest.getDisabledRuleIds")}} ([Firefox bug 1810762](https://bugzil.la/1810762))
-- A static declarative net request rule, one defined through the [`declarative_net_request` manifest key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request), is now loaded when it contains unrecognized properties but is otherwise valid ([Firefox bug 1886608](https://bugzil.la/1886608).
+- Adds the ability to enable and disable rules in static declarative net request rulesets with {{WebExtAPIRef("declarativeNetRequest.updateStaticRules")}} and list disabled rules for a static ruleset with {{WebExtAPIRef("declarativeNetRequest.getDisabledRuleIds")}} ([Firefox bug 1810762](https://bugzil.la/1810762)).
+- A static declarative net request rule, one defined through the [`declarative_net_request` manifest key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request), is now loaded when it contains unrecognized properties but is otherwise valid ([Firefox bug 1886608](https://bugzil.la/1886608)).
+- Introduces {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_DYNAMIC_RULES","MAX_NUMBER_OF_DYNAMIC_RULES")}} and {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_SESSION_RULES","MAX_NUMBER_OF_SESSION_RULES")}} to {{WebExtAPIRef("declarativeNetRequest")}}. These properties represent the maximum number of dynamic and session-scoped rules an extension can add. They replace {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES","MAX_NUMBER_OF_DYNAMIC_AND_SESSION_RULES")}}, which is now deprecated ([Firefox bug 1894128](https://bugzil.la/1894128)).
 - The default value of {{WebExtAPIRef("proxy.settings")}} property `proxyDNS` is now `false` when using SOCKS4 and `true` when using SOCKS5. Previously, it defaulted to `false` for SOCKS4 and SOCKS5 ([Firefox bug 1741375](https://bugzil.la/1741375)).
+- Support is now provided for {{WebExtAPIRef("webRequest.onAuthRequired")}} to handle authentication requests asynchronously by specifying `"asyncBlocking"` in the `addListener` parameter `extraInfoSpec` ([Firefox bug 1889897](https://bugzil.la/1889897)).
+- The [optional_host_permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_host_permissions) manifest key has been added. This key enables runtime requests for access (access granted by the user after an extension has been installed) for the APIs in the extension that read or modify host data ([Firefox bug 1766026](https://bugzil.la/1766026)).
 - The non-standard Web API events `overflow` and `underflow` have been deprecated. Use of these events should be removed from extension documents before the release of Firefox 131 ([Firefox bug 1898445](https://bugzil.la/1898445)).
 - Support is now provided for scripts to run in the web page execution environment. This is provided through support for `MAIN` in {{WebExtAPIRef("scripting.executionWorld","ExecutionWorld")}} for the {{WebExtAPIRef("scripting")}} API, the addition of `world` to the {{WebExtAPIRef("contentScripts.register()")}} API, and support for `world` in the [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) manifest key ([Firefox bug 1736575](https://bugzil.la/1736575)).
 - The {{WebExtAPIRef("scripting")}} API can now inject scripts and CSS into sandboxed pages with `about:blank`, `about:srcdoc`, and `data:` URLs. This was implemented for {{WebExtAPIRef("scripting.executeScript")}}, {{WebExtAPIRef("scripting.insertCSS")}}, and {{WebExtAPIRef("scripting.removeCSS")}} in [Firefox bug 1475831](https://bugzil.la/1475831) and {{WebExtAPIRef("scripting.registerContentScripts")}} and {{WebExtAPIRef("scripting.updateContentScripts")}} in [Firefox bug 1853411](https://bugzil.la/1853411) through the introduction of `matchOriginAsFallback` to {{WebExtAPIRef("scripting.RegisteredContentScript")}}.
+- Content scripts now run on [sandboxed](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/sandbox) `http`, `https`, and `file:` URLs ([Firefox bug 1411641](https://bugzil.la/1411641)).
 - The [manifest key `content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) now supports `match_origin_as_fallback` and {{WebExtAPIRef("contentScripts.register")}} `matchOriginAsFallback`, enabling scripts to be injected into `about:`, `data:`, and `blob:` pages when the document origin is opaque due to the use of CSP or iframe sandbox ([Firefox bug 1475831](https://bugzil.la/1475831) and [Firefox bug 1896669](https://bugzil.la/1896669)). In addition, scripts registered with the `content_scripts` manifest key can now only run in `blob:` pages when `match_origin_as_fallback` is `true` ([Firefox bug 1897113](https://bugzil.la/1897113)).
-
-### Removals
-
-### Other
+- Support added for the {{WebExtAPIRef("declarativeNetRequest.RuleCondition")}} property `domainType` ([Firefox bug 1797408](https://bugzil.la/1797408)).
+- Extensions containing an unrecognized property in [manifest key `browser_specific_settings.gecko`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) now load with a warning. Previously, these extensions errored on installation. This ensures that if a new `browser_specific_settings.gecko` property is added, extensions using that new property will load in versions of Firefox back to this release ([Firefox bug 1757293](https://bugzil.la/1757293)).
 
 ## Experimental web features
 
@@ -119,6 +103,14 @@ These features are newly shipped in Firefox 128 but are disabled by default. To 
 - **`image/jxl` MIME type in Accept header for default and image requests:** `image.jxl.enabled`.
 
   The HTTP [`Accept`](/en-US/docs/Web/HTTP/Headers/Accept) header in [default requests and image requests](/en-US/docs/Web/HTTP/Content_negotiation/List_of_default_Accept_values) can be configured to indicate support for the `image/jxl` MIME type. ([Firefox bug 1711622](https://bugzil.la/1711622)).
+
+- **Cookies Having Independent Partitioned State (CHIPS):** `network.cookie.CHIPS.enabled`.
+
+  [CHIPS](/en-US/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies), or "partitioned cookies", allow developers to opt a cookie into partitioned storage using the [`partitioned`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#partitioned) directive of the `Set-Cookie` HTTP header. When set, cookies have separate storage for each top-level site, and can only be read within the same top-level site they were set on and its subdomains. This blocks cross-site tracking, while still enabling legitimate uses of third-party cookies such as persisting state of embedded maps or chat widgets across different subdomains of a site. ([Firefox bug 1898253](https://bugzil.la/1898253)).
+
+- **Privacy Preserving Attribution API (PPA):** `dom.origin-trials.private-attribution.state`.
+
+  [PPA API](https://support.mozilla.org/kb/privacy-preserving-attribution) provides an alternative to user tracking for ad attribution using the new `navigator.privateAttribution` object with `saveImpression()` and `measureConversion()` methods. Read more about PPA [in the explainer](https://github.com/mozilla/explainers/tree/main/ppa-experiment). This experiment can be enabled for websites via [origin trial](https://wiki.mozilla.org/Origin_Trials) or in the browser by setting the preference to `1`. ([Firefox bug 1900929](https://bugzil.la/1900929)).
 
 ## Older versions
 

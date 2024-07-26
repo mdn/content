@@ -26,7 +26,7 @@ Response.redirect(url, status)
 - `url`
   - : The URL that the new response is to originate from.
 - `status` {{optional_inline}}
-  - : An optional number indicating the status code for the response: one of {{HTTPStatus("301", "301")}}, {{HTTPStatus("302", "302")}}, {{HTTPStatus("303", "303")}}, {{HTTPStatus("307", "307")}}, or {{HTTPStatus("308", "308")}}. If omitted, {{HTTPStatus("302", "302 (Found)")}} is used by default.
+  - : An optional number indicating the status code for the response: one of {{HTTPStatus("301", "301")}}, {{HTTPStatus("302", "302")}}, {{HTTPStatus("303", "303")}}, {{HTTPStatus("307", "307")}}, or {{HTTPStatus("308", "308")}}. If omitted, {{HTTPStatus("302", "302 Found")}} is used by default.
 
 ### Return value
 

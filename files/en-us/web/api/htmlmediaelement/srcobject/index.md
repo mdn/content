@@ -113,7 +113,7 @@ mediaSource.addEventListener("sourceopen", () => {
 });
 ```
 
-Over in the main thread, we receive the handle via a {{domxref("Worker.message_event", "message")}} event handler, attach it to a {{htmlelement("video")}} via its {{domxref("HTMLMediaElement.srcObject")}} property, and {{domxref("HTMLMediaElement.play()", "play")}} the video:
+Over in the main thread, we receive the handle via a {{domxref("Worker.message_event", "message")}} event handler, attach it to a {{htmlelement("video")}} via its `HTMLMediaElement.srcObject` property, and {{domxref("HTMLMediaElement.play()", "play")}} the video:
 
 ```js
 worker.addEventListener("message", (msg) => {

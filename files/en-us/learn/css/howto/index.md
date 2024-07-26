@@ -54,4 +54,5 @@ This page rounds up questions and answers, and other material on the MDN site th
 - [Using CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
 - [Using CSS generated content](/en-US/docs/Learn/CSS/Howto/Generated_content)
 
-> **Note:** We have a cookbook dedicated to [CSS Layout solutions](/en-US/docs/Web/CSS/Layout_cookbook), with fully working examples and explanations of common layout tasks. Also check out [Practical Positioning Examples](/en-US/docs/Learn/CSS/CSS_layout/Practical_positioning_examples), which shows how you can use positioning to create a tabbed info box, and a sliding hidden panel.
+> [!NOTE]
+> We have a cookbook dedicated to [CSS Layout solutions](/en-US/docs/Web/CSS/Layout_cookbook), with fully working examples and explanations of common layout tasks. Also check out [Practical Positioning Examples](/en-US/docs/Learn/CSS/CSS_layout/Practical_positioning_examples), which shows how you can use positioning to create a tabbed info box, and a sliding hidden panel.
