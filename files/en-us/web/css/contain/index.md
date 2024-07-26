@@ -23,7 +23,7 @@ Using the `contain` property is useful on pages with groups of elements that are
 >
 > 1. A new [containing block](/en-US/docs/Web/CSS/Containing_block) (for the descendants whose {{cssxref("position")}} property is `absolute` or `fixed`).
 > 2. A new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context).
-> 3. A new [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context).
+> 3. A new [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context).
 
 ## Syntax
 
@@ -278,6 +278,6 @@ Because of containment, the first closing quote ignores the inner span and uses 
 ## See also
 
 - [CSS containment](/en-US/docs/Web/CSS/CSS_containment)
-- [CSS container queries](/en-US/docs/Web/CSS/CSS_container_queries)
+- [CSS container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries)
 - CSS {{cssxref("content-visibility")}} property
 - CSS {{cssxref("position")}} property

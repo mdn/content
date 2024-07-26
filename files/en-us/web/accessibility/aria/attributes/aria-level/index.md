@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-level
 ---
 
+{{AccessibilitySidebar}}
+
 The `aria-level` attribute defines the hierarchical level of an element within a structure.
 
 ## Description
@@ -38,7 +40,7 @@ If a complete set of available nodes is not present in the DOM due to dynamic lo
 - `<integer>`
   - : An integer greater than or equal to 1
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaLevel")}}
   - : The [`ariaLevel`](/en-US/docs/Web/API/Element/ariaLevel) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-level` attribute.
@@ -58,11 +60,6 @@ Used in roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`<h1>` through `<h6>`: The HTML Section Heading elements](/en-US/docs/Web/HTML/Element/Heading_Elements) ({{htmlelement("Heading_Elements", "h1")}}, {{htmlelement("Heading_Elements", "h2")}}, {{htmlelement("Heading_Elements", "h3")}}, {{htmlelement("Heading_Elements", "h4")}}, {{htmlelement("Heading_Elements", "h5")}}, and {{htmlelement("Heading_Elements", "h6")}})
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

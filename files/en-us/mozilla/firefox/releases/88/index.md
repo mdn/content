@@ -8,7 +8,8 @@ page-type: firefox-release-notes
 
 This article provides information about the changes in Firefox 88 that will affect developers. Firefox 88 was released on April 19, 2021.
 
-> **Note:** See also [Never too late for Firefox 88](https://hacks.mozilla.org/2021/04/never-too-late-for-firefox-88/) on Mozilla Hacks.
+> [!NOTE]
+> See also [Never too late for Firefox 88](https://hacks.mozilla.org/2021/04/never-too-late-for-firefox-88/) on Mozilla Hacks.
 
 ## Changes for web developers
 
@@ -32,7 +33,7 @@ _No changes._
 #### Removals
 
 - The {{cssxref(":-moz-submit-invalid")}} pseudo-class has been hidden behind a preference, thereby removing it from web content ([Firefox bug 1694129](https://bugzil.la/1694129)).
-- Default styling for the non-standard `:-moz-ui-invalid` and {{cssxref(":-moz-ui-valid")}} has been removed ([Firefox bug 1693969](https://bugzil.la/1693969)).
+- Default styling for the non-standard `:-moz-ui-invalid` and `:-moz-ui-valid` has been removed ([Firefox bug 1693969](https://bugzil.la/1693969)).
 
 ### JavaScript
 
@@ -65,4 +66,4 @@ _No changes._
 
 ## Older versions
 
-{{Firefox_for_developers(87)}}
+{{Firefox_for_developers}}

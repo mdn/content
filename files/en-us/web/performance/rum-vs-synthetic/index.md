@@ -26,7 +26,7 @@ Unlike Synthetic monitoring, RUM captures the performance of actual users regard
 
 By leveraging RUM, a business can better understand its users and identify the areas on its site that require the most attention. Moreover, RUM can help to understand the geographic or channel distribution trends of your users. Knowing your user trends helps you better define your business plan and, from a monitoring perspective, allows you to identify key areas to target for optimization and performance improvements.
 
-## RUM v Synthetic
+## RUM vs Synthetic
 
 Synthetic is well suited for catching regressions during development life cycles, especially with {{glossary('network throttling')}}. It is fairly easy, inexpensive, and great for spot-checking performance during development as an effective way to measure the effect of code changes, but it doesn't reflect what real users are experiencing and provides only a narrow view of performance.
 

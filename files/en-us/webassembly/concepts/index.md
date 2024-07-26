@@ -25,7 +25,8 @@ WebAssembly is being created as an open standard inside the [W3C WebAssembly Com
 - Keep secure — WebAssembly is specified to be run in a safe, sandboxed execution environment. Like other web code, it will enforce the browser's same-origin and permissions policies.
 - Don't break the web — WebAssembly is designed so that it plays nicely with other web technologies and maintains backwards compatibility.
 
-> **Note:** WebAssembly will also have uses outside web and JavaScript environments (see [Non-web embeddings](https://webassembly.org/docs/non-web/)).
+> [!NOTE]
+> WebAssembly will also have uses outside web and JavaScript environments (see [Non-web embeddings](https://webassembly.org/docs/non-web/)).
 
 ## How does WebAssembly fit into the web platform?
 
@@ -79,7 +80,6 @@ Let's talk about these options:
 
 Two of the many options for creating Wasm code are an online Wasm assembler or [Emscripten](https://emscripten.org/). There are a number of online Wasm assembler choices, such as:
 
-- [WasmFiddle](https://wasdk.github.io/WasmFiddle/)
 - [WasmFiddle++](https://anonyco.github.io/WasmFiddlePlusPlus/)
 - [WasmExplorer](https://mbebenita.github.io/WasmExplorer/)
 
@@ -95,7 +95,8 @@ In a nutshell, the process works as follows:
 2. Emscripten transforms the compiled result of clang+LLVM into a Wasm binary.
 3. By itself, WebAssembly cannot currently directly access the DOM; it can only call JavaScript, passing in integer and floating point primitive data types. Thus, to access any Web API, WebAssembly needs to call out to JavaScript, which then makes the Web API call. Emscripten therefore creates the HTML and JavaScript glue code needed to achieve this.
 
-> **Note:** There are future plans to [allow WebAssembly to call Web APIs directly](https://github.com/WebAssembly/gc/blob/master/README.md).
+> [!NOTE]
+> There are future plans to [allow WebAssembly to call Web APIs directly](https://github.com/WebAssembly/gc/blob/master/README.md).
 
 The JavaScript glue code is not as simple as you might imagine. For a start, Emscripten implements popular C/C++ libraries like [SDL](https://en.wikipedia.org/wiki/Simple_DirectMedia_Layer), [OpenGL](https://en.wikipedia.org/wiki/OpenGL), [OpenAL](https://en.wikipedia.org/wiki/OpenAL), and parts of [POSIX](https://en.wikipedia.org/wiki/POSIX). These libraries are implemented in terms of Web APIs and thus each one requires some JavaScript glue code to connect WebAssembly to the underlying Web API.
 

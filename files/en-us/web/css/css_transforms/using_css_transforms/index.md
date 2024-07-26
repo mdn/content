@@ -10,7 +10,7 @@ By modifying the coordinate space, **CSS transforms** change the shape and posit
 
 CSS transforms are implemented using a set of CSS properties that let you apply affine linear transformations to HTML elements. These transformations include rotation, skewing, scaling, and translation both in the plane and in the 3D space.
 
-> **Warning:** Only transformable elements can be `transform`ed; that is, all elements whose layout is governed by the CSS [box model](/en-US/docs/Web/CSS/CSS_box_model) except for: [non-replaced inline boxes](/en-US/docs/Web/CSS/Visual_formatting_model#inline-level_elements_and_inline_boxes), [table-column boxes](/en-US/docs/Web/HTML/Element/col), and [table-column-group boxes](/en-US/docs/Web/HTML/Element/colgroup).
+> **Warning:** Only transformable elements can be `transform`ed; that is, all elements whose layout is governed by the CSS [box model](/en-US/docs/Web/CSS/CSS_box_model) except for: [non-replaced inline boxes](/en-US/docs/Web/CSS/Visual_formatting_model#inline-level_and_block-level_boxes), [table-column boxes](/en-US/docs/Web/HTML/Element/col), and [table-column-group boxes](/en-US/docs/Web/HTML/Element/colgroup).
 
 ## CSS transforms properties
 
@@ -191,33 +191,33 @@ The CSS establishes classes that can be used to set the perspective to different
 
 /* Define each face based on direction */
 .front {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgb(0 0 0 / 30%);
   transform: translateZ(50px);
 }
 
 .back {
-  background: rgba(0, 255, 0, 1);
+  background: rgb(0 255 0 / 100%);
   color: black;
   transform: rotateY(180deg) translateZ(50px);
 }
 
 .right {
-  background: rgba(196, 0, 0, 0.7);
+  background: rgb(196 0 0 / 70%);
   transform: rotateY(90deg) translateZ(50px);
 }
 
 .left {
-  background: rgba(0, 0, 196, 0.7);
+  background: rgb(0 0 196 / 70%);
   transform: rotateY(-90deg) translateZ(50px);
 }
 
 .top {
-  background: rgba(196, 196, 0, 0.7);
+  background: rgb(196 196 0 / 70%);
   transform: rotateX(90deg) translateZ(50px);
 }
 
 .bottom {
-  background: rgba(196, 0, 196, 0.7);
+  background: rgb(196 0 196 / 70%);
   transform: rotateX(-90deg) translateZ(50px);
 }
 
@@ -488,28 +488,28 @@ This example shows cubes with popular `perspective-origin` values.
 
 /* Define each face based on direction */
 .front {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgb(0 0 0 / 30%);
   transform: translateZ(50px);
 }
 .back {
-  background: rgba(0, 255, 0, 1);
+  background: rgb(0 255 0 / 100%);
   color: black;
   transform: rotateY(180deg) translateZ(50px);
 }
 .right {
-  background: rgba(196, 0, 0, 0.7);
+  background: rgb(196 0 0 / 70%);
   transform: rotateY(90deg) translateZ(50px);
 }
 .left {
-  background: rgba(0, 0, 196, 0.7);
+  background: rgb(0 0 196 / 70%);
   transform: rotateY(-90deg) translateZ(50px);
 }
 .top {
-  background: rgba(196, 196, 0, 0.7);
+  background: rgb(196 196 0 / 70%);
   transform: rotateX(90deg) translateZ(50px);
 }
 .bottom {
-  background: rgba(196, 0, 196, 0.7);
+  background: rgb(196 0 196 / 70%);
   transform: rotateX(-90deg) translateZ(50px);
 }
 

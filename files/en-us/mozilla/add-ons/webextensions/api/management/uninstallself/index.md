@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.management.uninstallSelf
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Uninstalls the calling add-on.
 
@@ -75,8 +75,7 @@ uninstalling.then(null, onCanceled);
 
 {{WebExtExamples}}
 
-> **Note:**
->
+> [!NOTE]
 > This API is based on Chromium's [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/management/#method-uninstallSelf) API. This documentation is derived from [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) in the Chromium code.
 
 <!--

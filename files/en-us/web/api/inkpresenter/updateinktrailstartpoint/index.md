@@ -47,7 +47,7 @@ requestPresenter(event, style)
 
 In this example, we draw a trail onto a 2D canvas. Near the start of the code, we call {{domxref("Ink.requestPresenter()")}}, passing it the canvas as the presentation area for it to take care of and storing the promise it returns in the `presenter` variable.
 
-Later on, in the `pointermove` event listener, the new position of the trailhead is drawn onto the canvas each time the event fires. In addition, the {{domxref("InkPresenter")}} object returned when the `presenter` promise fulfills has its {{domxref("InkPresenter.updateInkTrailStartPoint", "updateInkTrailStartPoint()")}} method invoked; this is passed:
+Later on, in the `pointermove` event listener, the new position of the trailhead is drawn onto the canvas each time the event fires. In addition, the {{domxref("InkPresenter")}} object returned when the `presenter` promise fulfills has its `updateInkTrailStartPoint()` method invoked; this is passed:
 
 - The last trusted pointer event representing the rendering point for the current frame.
 - A `style` object containing color and diameter settings.
@@ -65,7 +65,7 @@ The result is that a delegated ink trail is drawn ahead of the default browser r
 
 ```css
 div {
-  background-color: rgba(0, 255, 0, 1);
+  background-color: rgb(0 255 0 / 100%);
   position: fixed;
   top: 1rem;
   left: 1rem;
@@ -78,7 +78,7 @@ div {
 const ctx = canvas.getContext("2d");
 const presenter = navigator.ink.requestPresenter({ presentationArea: canvas });
 let move_cnt = 0;
-let style = { color: "rgba(0, 255, 0, 1)", diameter: 10 };
+let style = { color: "rgb(0 255 0 / 100%)", diameter: 10 };
 
 function getRandomInt(min, max) {
   min = Math.ceil(min);
@@ -95,10 +95,10 @@ canvas.addEventListener("pointermove", async (evt) => {
     const g = getRandomInt(0, 255);
     const b = getRandomInt(0, 255);
 
-    style = { color: `rgba(${r}, ${g}, ${b}, 1)`, diameter: 10 };
+    style = { color: `rgb(${r} ${g} ${b} / 100%)`, diameter: 10 };
     move_cnt = 0;
     document.getElementById("div").style.backgroundColor =
-      `rgba(${r}, ${g}, ${b}, 0.6)`;
+      `rgb(${r} ${g} ${b} / 60%)`;
   }
   move_cnt += 1;
   await presenter.updateInkTrailStartPoint(evt, style);

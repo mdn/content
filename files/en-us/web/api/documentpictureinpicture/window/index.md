@@ -8,7 +8,7 @@ status:
 browser-compat: api.DocumentPictureInPicture.window
 ---
 
-{{APIRef("Document Picture-in-Picture API")}}{{SeeCompatTable}}
+{{APIRef("Document Picture-in-Picture API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`window`** read-only property of the
 {{domxref("DocumentPictureInPicture")}} interface returns a {{domxref("Window")}} instance representing the browsing context inside the Picture-in-Picture window.

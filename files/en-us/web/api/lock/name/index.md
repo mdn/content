@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Lock.name
 ---
 
-{{APIRef("Web Locks API")}}{{securecontext_header}}
+{{APIRef("Web Locks API")}}{{securecontext_header}} {{AvailableInWorkers}}
 
 The **`name`** read-only property of
 the {{domxref("Lock")}} interface returns the _name_ passed to
@@ -17,8 +17,6 @@ by the developer to represent an abstract resource for which use is being coordi
 across multiple tabs, workers, or other code within the origin. For example, if only one
 tab of a web application should be synchronizing network resources with an offline
 database, it could use a lock name such as `"net_db_sync"`.
-
-{{AvailableInWorkers}}
 
 ## Value
 

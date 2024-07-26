@@ -11,7 +11,8 @@ MIME types are defined and standardized in IETF's {{RFC(6838)}}.
 
 The [Internet Assigned Numbers Authority (IANA)](https://www.iana.org/) is responsible for all official MIME types, and you can find the most up-to-date and complete list at their [Media Types](https://www.iana.org/assignments/media-types/media-types.xhtml) page.
 
-> **Warning:** Browsers use the MIME type, _not the file extension_, to determine how to process a URL,
+> [!WARNING]
+> Browsers use the MIME type, _not the file extension_, to determine how to process a URL,
 > so it's important that web servers send the correct MIME type in the response's {{HTTPHeader("Content-Type")}} header.
 > If this is not correctly configured, browsers are likely to misinterpret the contents of files, sites will not work correctly, and downloaded files may be mishandled.
 
@@ -139,7 +140,8 @@ If so, they won't be recognized as CSS by most browsers and will be ignored.
 
 All HTML content should be served with this type. Alternative MIME types for XHTML (like `application/xhtml+xml`) are mostly useless nowadays.
 
-> **Note:** Use `application/xml` or `application/xhtml+xml` if you want XML's strict parsing rules, [`<![CDATA[…]]>`](/en-US/docs/Web/API/CDATASection) sections, or elements that aren't from HTML/SVG/MathML namespaces.
+> [!NOTE]
+> Use `application/xml` or `application/xhtml+xml` if you want XML's strict parsing rules, [`<![CDATA[…]]>`](/en-US/docs/Web/API/CDATASection) sections, or elements that aren't from HTML/SVG/MathML namespaces.
 
 ### text/javascript
 
@@ -171,7 +173,8 @@ out what to do with content that doesn't have a valid one) also allows JavaScrip
 - `text/x-ecmascript` {{Non-standard_Inline}}
 - `text/x-javascript` {{Non-standard_Inline}}
 
-> **Note:** Even though any given {{Glossary("user agent")}} may support any or all of these, you should only use `text/javascript`.
+> [!NOTE]
+> Even though any given {{Glossary("user agent")}} may support any or all of these, you should only use `text/javascript`.
 > It's the only MIME type guaranteed to work now and into the future.
 
 ### Image types
@@ -310,8 +313,10 @@ Content-Range: bytes 300-400/1270
 
 ## Importance of setting the correct MIME type
 
+Some server configurations may use the associated MIME type to perform optimizations, such as file concatenation, compression, or caching. See [h5bp/server-configs-apache](https://github.com/h5bp/server-configs-apache/blob/main/h5bp/web_performance/compression.conf) for an example of an Apache configuration that compresses files of certain MIME types.
+
 Most web servers send unrecognized resources as the `application/octet-stream` MIME type.
-For security reasons, most browsers do not allow setting a custom default action for such resources, forcing the user to save it to disk to use it.
+For security reasons, most browsers do not allow setting a custom default action (like "Open in Word") for such resources, forcing the user to save it to disk to use it.
 
 Some common incorrect server configurations:
 
@@ -322,7 +327,6 @@ Some common incorrect server configurations:
   Only resources with the correct MIME Type will be played in {{HTMLElement("video")}} or {{HTMLElement("audio")}} elements.
   Be sure to specify the correct [media type for audio and video](/en-US/docs/Web/Media/Formats).
 - Proprietary file types.
-  Avoid using `application/octet-stream` as most browsers do not allow defining a default behavior (like "Open in Word") for this generic MIME type.
   A specific type like `application/vnd.mspowerpoint` lets users open such files automatically in the presentation software of their choice.
 
 ## MIME sniffing

@@ -13,7 +13,7 @@ In previous articles we looked at all the essential JavaScript object theory and
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, a basic understanding of HTML and CSS,
+        A basic understanding of HTML and CSS,
         familiarity with JavaScript basics (see
         <a href="/en-US/docs/Learn/JavaScript/First_steps">First steps</a> and
         <a href="/en-US/docs/Learn/JavaScript/Building_blocks"
@@ -40,7 +40,7 @@ In this article we will write a classic "bouncing balls" demo, to show you how u
 
 ![Screenshot of a webpage titled "Bouncing balls". 23 balls of various pastel colors and sizes are visible across a black screen with long trails behind them indicating motion.](bouncing-balls.png)
 
-This example will make use of the [Canvas API](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics) for drawing the balls to the screen, and the [`requestAnimationFrame`](/en-US/docs/Web/API/window/requestAnimationFrame) API for animating the whole display — you don't need to have any previous knowledge of these APIs, and we hope that by the time you've finished this article you'll be interested in exploring them more. Along the way, we'll make use of some nifty objects, and show you a couple of nice techniques like bouncing balls off walls, and checking whether they have hit each other (otherwise known as _collision detection_).
+This example will make use of the [Canvas API](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics) for drawing the balls to the screen, and the [`requestAnimationFrame`](/en-US/docs/Web/API/Window/requestAnimationFrame) API for animating the whole display — you don't need to have any previous knowledge of these APIs, and we hope that by the time you've finished this article you'll be interested in exploring them more. Along the way, we'll make use of some nifty objects, and show you a couple of nice techniques like bouncing balls off walls, and checking whether they have hit each other (otherwise known as _collision detection_).
 
 ## Getting started
 
@@ -74,7 +74,7 @@ function random(min, max) {
 }
 
 function randomRGB() {
-  return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
+  return `rgb(${random(0, 255)} ${random(0, 255)} ${random(0, 255)})`;
 }
 ```
 
@@ -300,7 +300,8 @@ function loop() {
 
 Save and refresh the demo again, and you'll see your balls change color when they collide!
 
-> **Note:** If you have trouble getting this example to work, try comparing your JavaScript code against our [finished version](https://github.com/mdn/learning-area/blob/main/javascript/oojs/bouncing-balls/main-finished.js) (also see it [running live](https://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html)).
+> [!NOTE]
+> If you have trouble getting this example to work, try comparing your JavaScript code against our [finished version](https://github.com/mdn/learning-area/blob/main/javascript/oojs/bouncing-balls/main-finished.js) (also see it [running live](https://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html)).
 
 ## Summary
 
@@ -311,7 +312,7 @@ That's it for object articles — all that remains now is for you to test your s
 ## See also
 
 - [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial) — a beginner's guide to using 2D canvas.
-- [requestAnimationFrame()](/en-US/docs/Web/API/window/requestAnimationFrame)
+- [requestAnimationFrame()](/en-US/docs/Web/API/Window/requestAnimationFrame)
 - [2D collision detection](/en-US/docs/Games/Techniques/2D_collision_detection)
 - [3D collision detection](/en-US/docs/Games/Techniques/3D_collision_detection)
 - [2D breakout game using pure JavaScript](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) — a great beginner's tutorial showing how to build a 2D game.

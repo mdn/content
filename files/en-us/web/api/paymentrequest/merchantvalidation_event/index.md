@@ -41,7 +41,7 @@ A {{domxref("MerchantValidationEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## Examples
 
-In this example, an event handler is established for the `merchantvalidation` event. It uses the {{domxref("fetch()")}} to send a request to its own server with an argument of the payment method's validation URL, obtained from the event's {{domxref("MerchantValidationEvent.validationURL", "validationURL")}} property. The merchant server should access the validation URL in accordance with the payment method documentation. Typically, a client should not access the validation URL.
+In this example, an event handler is established for the `merchantvalidation` event. It uses the {{domxref("Window/fetch", "fetch()")}} to send a request to its own server with an argument of the payment method's validation URL, obtained from the event's {{domxref("MerchantValidationEvent.validationURL", "validationURL")}} property. The merchant server should access the validation URL in accordance with the payment method documentation. Typically, a client should not access the validation URL.
 
 ```js
 request.addEventListener("merchantvalidation", (event) => {
@@ -87,8 +87,6 @@ For more information, see [Merchant validation](/en-US/docs/Web/API/Payment_Requ
 - [Using the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
 - `onmerchantvalidation` event handler property
 - [Merchant validation](/en-US/docs/Web/API/Payment_Request_API/Concepts#merchant_validation)
-- {{domxref("PaymentRequest")}}
-- {{domxref("PaymentRequest.payerdetailchange_event", "payerdetailchange")}} event
 - {{domxref("PaymentRequest.paymentmethodchange_event", "paymentmethodchange")}} event
 - {{domxref("PaymentRequest.shippingaddresschange_event", "shippingaddresschange")}} event
 - {{domxref("PaymentRequest.shippingoptionchange_event", "shippingoptionchange")}} event

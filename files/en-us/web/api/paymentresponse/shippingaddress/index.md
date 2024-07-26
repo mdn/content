@@ -24,7 +24,7 @@ address provided by the user.
 
 Generally, the user agent will fill the `shippingAddress` property for you.
 You can trigger this by
-setting `PaymentOptions.requestShipping` to `true` when calling
+setting `options.requestShipping` to `true` when calling
 the {{domxref('PaymentRequest.paymentRequest','PaymentRequest')}} constructor.
 
 In the example below, the cost of shipping varies by geography. When the

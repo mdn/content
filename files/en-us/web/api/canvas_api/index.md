@@ -52,7 +52,8 @@ ctx.fillRect(10, 10, 150, 100);
 - {{domxref("Path2D")}} {{experimental_inline}}
 - {{domxref("ImageBitmapRenderingContext")}} {{experimental_inline}}
 
-> **Note:** The interfaces related to the `WebGLRenderingContext` are referenced under [WebGL](/en-US/docs/Web/API/WebGL_API).
+> [!NOTE]
+> The interfaces related to the `WebGLRenderingContext` are referenced under [WebGL](/en-US/docs/Web/API/WebGL_API).
 
 > **Note:** {{domxref("OffscreenCanvas")}} is also available in web workers.
 
@@ -87,7 +88,8 @@ The Canvas API is extremely powerful, but not always simple to use. The librarie
 - The [ZIM](https://zimjs.com) framework provides conveniences, components, and controls for coding creativity on the canvas — includes accessibility and hundreds of colorful tutorials.
 - [Sprig](https://github.com/hackclub/sprig) is a beginner-friendly, open-source, tile-based game development library that uses Canvas.
 
-> **Note:** See the [WebGL API](/en-US/docs/Web/API/WebGL_API) for 2D and 3D libraries that use WebGL.
+> [!NOTE]
+> See the [WebGL API](/en-US/docs/Web/API/WebGL_API) for 2D and 3D libraries that use WebGL.
 
 ## Specifications
 

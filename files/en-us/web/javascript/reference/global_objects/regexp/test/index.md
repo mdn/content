@@ -83,7 +83,8 @@ Further calls to `test(str)` will resume searching
 `lastIndex` property will continue to increase each time `test()`
 returns `true`.
 
-> **Note:** As long as `test()` returns `true`,
+> [!NOTE]
+> As long as `test()` returns `true`,
 > `lastIndex` will _not_ reset—even when testing a different string!
 
 When `test()` returns `false`, the calling regex's

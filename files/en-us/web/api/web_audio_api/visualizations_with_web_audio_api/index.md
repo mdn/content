@@ -46,7 +46,7 @@ const bufferLength = analyser.frequencyBinCount;
 const dataArray = new Uint8Array(bufferLength);
 ```
 
-To actually retrieve the data and copy it into our array, we then call the data collection method we want, with the array passed as it's argument. For example:
+To actually retrieve the data and copy it into our array, we then call the data collection method we want, with the array passed as its argument. For example:
 
 ```js
 analyser.getByteTimeDomainData(dataArray);
@@ -93,7 +93,7 @@ analyser.getByteTimeDomainData(dataArray);
 Next, fill the canvas with a solid color to start
 
 ```js
-canvasCtx.fillStyle = "rgb(200, 200, 200)";
+canvasCtx.fillStyle = "rgb(200 200 200)";
 canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 ```
 
@@ -101,7 +101,7 @@ Set a line width and stroke color for the wave we will draw, then begin drawing 
 
 ```js
 canvasCtx.lineWidth = 2;
-canvasCtx.strokeStyle = "rgb(0, 0, 0)";
+canvasCtx.strokeStyle = "rgb(0 0 0)";
 canvasCtx.beginPath();
 ```
 
@@ -169,7 +169,7 @@ function draw() {
 
   analyser.getByteFrequencyData(dataArray);
 
-  canvasCtx.fillStyle = "rgb(0, 0, 0)";
+  canvasCtx.fillStyle = "rgb(0 0 0)";
   canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
 ```
 
@@ -191,7 +191,7 @@ The one value that needs explaining is the vertical offset position we are drawi
 for (let i = 0; i < bufferLength; i++) {
   barHeight = dataArray[i] / 2;
 
-  canvasCtx.fillStyle = `rgb(${barHeight + 100}, 50, 50)`;
+  canvasCtx.fillStyle = `rgb(${barHeight + 100} 50 50)`;
   canvasCtx.fillRect(x, HEIGHT - barHeight / 2, barWidth, barHeight);
 
   x += barWidth + 1;

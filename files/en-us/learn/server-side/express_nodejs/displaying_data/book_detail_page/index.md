@@ -34,7 +34,8 @@ exports.book_detail = asyncHandler(async (req, res, next) => {
 });
 ```
 
-> **Note:** We don't need to require any additional modules in this step, as we already imported the dependencies when we implemented the home page controller.
+> [!NOTE]
+> We don't need to require any additional modules in this step, as we already imported the dependencies when we implemented the home page controller.
 
 The approach is exactly the same as described for the [Genre detail page](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page).
 The route controller function uses `Promise.all()` to query the specified `Book` and its associated copies (`BookInstance`) in parallel.
@@ -63,7 +64,7 @@ block content
         |,&nbsp;
 
   div(style='margin-left:20px;margin-top:20px')
-    h4 Copies
+    h2(style='font-size: 1.5rem;') Copies
 
     each val in book_instances
       hr
@@ -85,7 +86,8 @@ block content
 
 Almost everything in this template has been demonstrated in previous sections.
 
-> **Note:** The list of genres associated with the book is implemented in the template as below. This adds a comma and a non breaking space after every genre associated with the book except for the last one.
+> [!NOTE]
+> The list of genres associated with the book is implemented in the template as below. This adds a comma and a non breaking space after every genre associated with the book except for the last one.
 >
 > ```pug
 >   p #[strong Genre: ]

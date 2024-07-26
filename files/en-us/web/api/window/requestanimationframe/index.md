@@ -1,7 +1,7 @@
 ---
 title: "Window: requestAnimationFrame() method"
 short-title: requestAnimationFrame()
-slug: Web/API/window/requestAnimationFrame
+slug: Web/API/Window/requestAnimationFrame
 page-type: web-api-instance-method
 browser-compat: api.Window.requestAnimationFrame
 ---
@@ -40,7 +40,7 @@ requestAnimationFrame(callback)
     repaint. This callback function is passed a single argument: a
     {{domxref("DOMHighResTimeStamp")}} indicating the end time of the previous frame's
     rendering (based on the number of milliseconds since
-    [time origin](/en-US/docs/Web/API/DOMHighResTimeStamp#the_time_origin)).
+    [time origin](/en-US/docs/Web/API/Performance/timeOrigin)).
   - The timestamp is a decimal number, in milliseconds, but with a minimal
     precision of 1 millisecond. For `Window` objects (not `Workers`), it is equal to
     {{domxref("AnimationTimeline/currentTime", "document.timeline.currentTime")}}. This timestamp is shared
@@ -173,6 +173,5 @@ function animate() {
 
 - {{domxref("Window.cancelAnimationFrame()")}}
 - {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()")}}
-- [requestAnimationFrame for smart animating](https://www.paulirish.com/2011/requestanimationframe-for-smart-animating/) - Blog post
 - [Animating with JavaScript: from setInterval to requestAnimationFrame](https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/) - Blog post
 - [TestUFO: Test your web browser for requestAnimationFrame() Timing Deviations](https://www.testufo.com/#test=animation-time-graph)

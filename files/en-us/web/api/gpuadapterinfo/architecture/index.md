@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUAdapterInfo.architecture
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`architecture`** read-only property of the
 {{domxref("GPUAdapterInfo")}} interface returns the name of the family or class of GPUs the adapter belongs to, or an empty string if it is not available.

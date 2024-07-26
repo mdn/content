@@ -133,4 +133,4 @@ page-type: firefox-release-notes
 
 ## Older versions
 
-{{Firefox_for_developers(47)}}
+{{Firefox_for_developers}}

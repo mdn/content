@@ -47,3 +47,4 @@ document.addEventListener("visibilitychange", () => {
 ## See also
 
 - {{domxref("Document.hidden")}}
+- [Page Visibility API](/en-US/docs/Web/API/Page_Visibility_API)

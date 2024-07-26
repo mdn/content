@@ -4,11 +4,12 @@ slug: Web/Accessibility/Understanding_WCAG/Perceivable
 page-type: guide
 ---
 
-{{QuicklinksWithSubPages("Web/Accessibility/Understanding_WCAG")}}
+{{AccessibilitySidebar}}
 
 This article provides practical advice on how to write your web content so that it conforms to the success criteria outlined in the **Perceivable** principle of the Web Content Accessibility Guidelines (WCAG) 2.0 and 2.1. Perceivable states that users must be able to perceive it in some way, using one or more of their senses.
 
-> **Note:** To read the W3C definitions for Perceivable and its guidelines and success criteria, see [Principle 1: Perceivable - Information and user interface components must be presentable to users in ways they can perceive.](https://www.w3.org/TR/WCAG21/#perceivable)
+> [!NOTE]
+> To read the W3C definitions for Perceivable and its guidelines and success criteria, see [Principle 1: Perceivable - Information and user interface components must be presentable to users in ways they can perceive.](https://www.w3.org/TR/WCAG21/#perceivable)
 
 ## Guideline 1.1 — Providing text alternatives for non-text content
 
@@ -39,19 +40,16 @@ The key here is that text can be converted to other forms that people with disab
       <td>
         Complex images or charts should have an accessible alternative provided,
         either on the same page or via a link. Use a regular link instead of
-        a `longdesc` attribute.
+        a <code>longdesc</code> attribute.
       </td>
       <td>
         <p>
           A text description may work, or an accessible data table (see
           <a href="/en-US/docs/Learn/HTML/Tables/Advanced"
             >HTML table advanced features and accessibility</a
-          >). See
-          <a
-            href="/en-US/docs/Learn/Accessibility/HTML#other_text_alternative_mechanisms"
-            >Other text alternative mechanisms</a
-          >
-          for the argument against `longdesc`.
+          >). See W3C's
+          <a href="https://www.w3.org/TR/html-longdesc/">Image Description Extension (longdesc)</a>
+          for the argument against <code>longdesc</code>.
         </p>
       </td>
     </tr>
@@ -71,10 +69,6 @@ The key here is that text can be converted to other forms that people with disab
           >,
           <a href="/en-US/docs/Learn/Accessibility/Multimedia#video_text_tracks"
             >Video text tracks</a
-          >, and
-          <a
-            href="/en-US/docs/Learn/Accessibility/Multimedia#other_multimedia_content"
-            >Other multimedia content</a
           >
           for other alternatives.
         </p>
@@ -122,7 +116,8 @@ The key here is that text can be converted to other forms that people with disab
   </tbody>
 </table>
 
-> **Note:** Also see the [WCAG description for Guideline 1.1: Text alternatives](https://www.w3.org/TR/WCAG21/#text-alternatives).
+> [!NOTE]
+> Also see the [WCAG description for Guideline 1.1: Text alternatives](https://www.w3.org/TR/WCAG21/#text-alternatives).
 
 ## Guideline 1.2 — Providing text alternatives for time-based media
 
@@ -145,7 +140,7 @@ Time-based media refers to multimedia with a duration, such as audio and video. 
     <tr>
        <td>1.2.2 Provide captions for web-based video (A)</td>
        <td>You should provide captions for video presented on the web (e.g., HTML video). This is for the benefit of people who can't hear the audio part of the video.</td>
-       <td>See <a href="/en-US/docs/Learn/Accessibility/Multimedia#video_text_tracks">Video text tracks</a> for HTML video captions, and <a href="/en-US/docs/Learn/Accessibility/Multimedia#other_multimedia_content">Other multimedia content</a> for other technologies. See also <a href="https://support.google.com/youtube/answer/2734796?hl=en">Add your own subtitles &amp; closed captions</a> (YouTube).</td>
+       <td>See <a href="/en-US/docs/Learn/Accessibility/Multimedia#video_text_tracks">Video text tracks</a> for HTML video captions. See also <a href="https://support.google.com/youtube/answer/2734796?hl=en">Add your own subtitles &amp; closed captions</a> (YouTube).</td>
     </tr>
     <tr>
        <td>1.2.3 Provide text transcript or audio description for web-based video (A)</td>
@@ -185,7 +180,8 @@ Time-based media refers to multimedia with a duration, such as audio and video. 
  </tbody>
 </table>
 
-> **Note:** Also see the [WCAG description for Guideline 1.2: Time-based Media: Provide alternatives for time-based media](https://www.w3.org/TR/WCAG21/#time-based-media).
+> [!NOTE]
+> Also see the [WCAG description for Guideline 1.2: Time-based Media: Provide alternatives for time-based media](https://www.w3.org/TR/WCAG21/#time-based-media).
 
 ## Guideline 1.3 — Create content that can be presented in different ways
 
@@ -370,7 +366,8 @@ This guideline refers to the ability of content to be consumed by users in multi
   </tbody>
 </table>
 
-> **Note:** Also see the WCAG description for [Guideline 1.3: Adaptable: Create content that can be presented in different ways without losing information or structure.](https://www.w3.org/TR/WCAG21/#adaptable)
+> [!NOTE]
+> Also see the WCAG description for [Guideline 1.3: Adaptable: Create content that can be presented in different ways without losing information or structure.](https://www.w3.org/TR/WCAG21/#adaptable)
 
 ## Guideline 1.4: Make it easier for users to see and hear content including separating foreground from background
 
@@ -652,7 +649,8 @@ This guideline relates to making sure core content is easy to discern from backg
   </thead>
 </table>
 
-> **Note:** Also see the WCAG description for [Guideline 1.4: Distinguishable: Make it easier for users to see and hear content including separating foreground from background.](https://www.w3.org/TR/WCAG21/#distinguishable)
+> [!NOTE]
+> Also see the WCAG description for [Guideline 1.4: Distinguishable: Make it easier for users to see and hear content including separating foreground from background.](https://www.w3.org/TR/WCAG21/#distinguishable)
 
 ## See also
 

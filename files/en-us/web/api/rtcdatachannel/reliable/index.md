@@ -15,7 +15,8 @@ The read-only `RTCDataChannel` property
 **`reliable`** indicates whether or not the data channel is
 reliable.
 
-> **Warning:** This property is obsolete. Use {{domxref("RTCDataChannel.ordered")}} instead in any
+> [!WARNING]
+> This property is obsolete. Use {{domxref("RTCDataChannel.ordered")}} instead in any
 > new code, and update existing code as soon as possible.
 
 ## Value

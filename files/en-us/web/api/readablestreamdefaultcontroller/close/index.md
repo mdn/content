@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.ReadableStreamDefaultController.close
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`close()`** method of the
 {{domxref("ReadableStreamDefaultController")}} interface closes the associated stream.
@@ -45,7 +45,7 @@ random string of text every second and enqueues it into the stream. A
 {{domxref("ReadableStream.cancel()")}} is called for any reason.
 
 When a button is pressed, the generation is stopped, the stream is closed using
-{{domxref("ReadableStreamDefaultController.close()")}}, and another function is run,
+`ReadableStreamDefaultController.close()`, and another function is run,
 which reads the data back out of the stream.
 
 ```js

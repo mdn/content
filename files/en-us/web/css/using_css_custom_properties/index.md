@@ -203,7 +203,7 @@ This leads to the same result as the previous example, yet allows for one canoni
 
 ## Inheritance of custom properties
 
-A custom property defined using two dashes `--` instead of `@property` always inherit the value of its parent.
+A custom property defined using two dashes `--` instead of `@property` always inherits the value of its parent.
 This is demonstrated in the following example:
 
 ```html live-sample___dash-custom-property-inheritance
@@ -279,9 +279,9 @@ The property is only set for the matching selector and its descendants.
 
 ### Using `@property` to control inheritance
 
-The `@property` at-rule lets you explicity state whether the property inherits or not.
+The `@property` at-rule lets you explicitly state whether the property inherits or not.
 The following example creates a custom property using the `@property` at-rule.
-Inheritance is disabled, there's a [`<color>`](/en-US/docs/Web/CSS/color_value) data type defined, and an intital value of `cornflowerblue`.
+Inheritance is disabled, there's a [`<color>`](/en-US/docs/Web/CSS/color_value) data type defined, and an initial value of `cornflowerblue`.
 
 The parent element sets `--box-color` to a value of `green` and uses `--box-color` as a value for its background color.
 The child element also uses `background-color: var(--box-color)`, and we would expect it to have the color `green` if inheritance was enabled (or if it was defined using the double dash syntax).
@@ -370,7 +370,7 @@ You should be aware of the performance impact of this method, however, as it tak
 ### Fallbacks using the `@property` initial value
 
 Aside from using `var()`, the `initial-value` defined in the `@property` at-rule can be used as a fallback mechanism.
-In fact, we've already seen this in the [`@property` inheritance](#using-property-to-control-inheritance) section.
+In fact, we've already seen this in the [`@property` inheritance](#using_property_to_control_inheritance) section.
 
 The following example sets an initial value of `--box-color` to `cornflowerblue` using the `@property` at-rule.
 In the ruleset following the at-rule, we want to set `--box-color` to `aquamarine`, but there's a typo in the value name.

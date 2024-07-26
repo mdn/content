@@ -13,10 +13,7 @@ The **`<dd>`** [HTML](/en-US/docs/Web/HTML) element provides the description, de
 
 ## Attributes
 
-This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-- `nowrap` {{Non-standard_inline}} {{Deprecated_Inline}}
-  - : If the value of this attribute is set to `yes`, the definition text will not wrap. The default value is `no`.
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
 ## Examples
 

@@ -7,7 +7,7 @@ browser-compat: css.properties.border-left-color
 
 {{CSSRef}}
 
-The **`border-left-color`** CSS property sets the color of an element's left [border](/en-US/docs/Web/CSS/border). It can also be set with the shorthand CSS properties {{cssxref("border-color")}} or {{cssxref("border-left")}}.
+The **`border-left-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of an element's left [border](/en-US/docs/Web/CSS/border). It can also be set with the shorthand CSS properties {{cssxref("border-color")}} or {{cssxref("border-left")}}.
 
 {{EmbedInteractiveExample("pages/css/border-left-color.html")}}
 
@@ -18,7 +18,7 @@ The **`border-left-color`** CSS property sets the color of an element's left [bo
 border-left-color: red;
 border-left-color: #ffbb00;
 border-left-color: rgb(255 0 0);
-border-left-color: hsl(100deg 50% 25% / 0.75);
+border-left-color: hsl(100deg 50% 25% / 75%);
 border-left-color: currentcolor;
 border-left-color: transparent;
 

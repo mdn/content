@@ -4,12 +4,11 @@ slug: Web/Security/IFrame_credentialless
 page-type: guide
 status:
   - experimental
-  - non-standard
 browser-compat: html.elements.iframe.credentialless
 spec-urls: https://wicg.github.io/anonymous-iframe/
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}{{SeeCompatTable}}{{Non-standard_header}}
+{{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}{{SeeCompatTable}}
 
 **IFrame credentialless** provides a mechanism for developers to load third-party resources in {{htmlelement("iframe")}}s using a new, ephemeral context. It doesn't have access to its regular origin's network, cookies, and storage data. It uses a new context local to the top-level document lifetime. In return, the {{httpheader("Cross-Origin-Embedder-Policy")}} (COEP) embedding rules can be lifted, so documents with COEP set can embed third-party documents that do not.
 
@@ -51,7 +50,8 @@ iframeElem.src =
   "https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)";
 ```
 
-> **Note:** The {{domxref("window.credentialless")}} property can be queried by a document embedded in an `<iframe>` to test whether it is being run in a credentialless context. A value of `true` means the embedding `<iframe>` is credentialless.
+> [!NOTE]
+> The {{domxref("window.credentialless")}} property can be queried by a document embedded in an `<iframe>` to test whether it is being run in a credentialless context. A value of `true` means the embedding `<iframe>` is credentialless.
 
 This results in the documents inside the credentialless `<iframe>` being loaded using new, ephemeral contexts — those contexts don't have access to the data associated with their origins; for example [cookies](/en-US/docs/Web/HTTP/Cookies) and [localStorage](/en-US/docs/Web/API/Window/localStorage). The credentialless storage is partitioned out separately with storage keys modified by a nonce ("number used once") value, set once per top-level document. So a cookie set in one credentialless `<iframe>` will be accessible only from other same-origin credentialless `<iframe>`s embedded below the same top-level document.
 

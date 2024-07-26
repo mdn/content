@@ -17,7 +17,7 @@ This table shows possible keywords and their meaning:
 | `use-credentials` | Client CORS requests for this element will have the credentials flag set to 'include'.                            |
 | `""`              | Setting the attribute name to an empty value, like `crossorigin` or `crossorigin=""`, is the same as `anonymous`. |
 
-It follows the same processing rules as the HTML attribute [`crossorigin`](/en-US/docs/Web/HTML/Global_attributes#crossorigin).
+It follows the same processing rules as the HTML attribute [`crossorigin`](/en-US/docs/Web/HTML/Attributes/crossorigin).
 
 ## Example
 

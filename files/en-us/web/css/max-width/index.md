@@ -18,6 +18,8 @@ The **`max-width`** [CSS](/en-US/docs/Web/CSS) property sets the maximum width o
 ```css
 /* <length> value */
 max-width: 3.5em;
+max-width: anchor-size(--myAnchor inline, 245px);
+max-width: calc(anchor-size(width) + 4em);
 
 /* <percentage> value */
 max-width: 75%;
@@ -51,10 +53,10 @@ max-width: unset;
   - : The intrinsic minimum `max-width`.
 - `fit-content`
   - : Use the available space, but not more than [max-content](/en-US/docs/Web/CSS/max-content), i.e `min(max-content, max(min-content, stretch))`.
-- `fit-content({{cssxref("&lt;length-percentage&gt;")}})` {{Experimental_Inline}}
+- `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
   - : Uses the `fit-content` formula with the available space replaced by the specified argument, i.e. `min(max-content, max(min-content, argument))`.
 
-## Accessibility concerns
+## Accessibility
 
 Ensure that elements set with a `max-width` are not truncated and/or do not obscure other content when the page is zoomed to increase text size.
 

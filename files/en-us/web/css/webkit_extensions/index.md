@@ -46,7 +46,6 @@ User agents based on WebKit or Blink, such as Safari and Chrome, support several
 
 - {{CSSxRef("-webkit-margin-after")}}
 - {{CSSxRef("-webkit-margin-before")}}
-- {{CSSxRef("-webkit-mask-attachment")}}
 - {{CSSxRef("-webkit-mask-box-image-outset")}}
 - {{CSSxRef("-webkit-mask-box-image-repeat")}}
 - {{CSSxRef("-webkit-mask-box-image-slice")}}
@@ -157,6 +156,8 @@ For each of them, use the standard equivalent provided.
   - : Use the [CSS multicolumn layout](/en-US/docs/Web/CSS/CSS_multicol_layout) with the standard {{cssxref("break-before")}} property instead.
 - `-webkit-column-break-inside`
   - : Use the [CSS multicolumn layout](/en-US/docs/Web/CSS/CSS_multicol_layout) with the standard {{cssxref("break-inside")}} property instead.
+- `-webkit-font-feature-settings`
+  - : Use the [`font-feature-settings`](/en-US/docs/Web/CSS/font-feature-settings) property instead.
 - `-webkit-hyphenate-character`
   - : Use the standard {{cssxref("hyphenate-character")}} property instead.
 - `-webkit-initial-letter`
@@ -164,12 +165,10 @@ For each of them, use the standard equivalent provided.
 
 ### J-Z
 
-- `webkit-margin-end`
+- `-webkit-margin-end`
   - : Use the standard {{CSSxRef("margin-block-end")}} property instead.
 - `-webkit-margin-start`
-
   - : Use the standard {{CSSxRef("margin-block-start")}} property instead.
-
 - `-webkit-padding-after`
   - : Use the standard {{CSSxRef("padding-block-end")}} property instead.
 - `-webkit-padding-before`
@@ -204,27 +203,11 @@ For web-compatibility reasons, Blink, WebKit, and Gecko browsers treat all pseud
 - {{CSSxRef("::file-selector-button","::-webkit-file-upload-button")}}\*
 - {{CSSxRef("::-webkit-inner-spin-button", "::-webkit-inner-spin-button")}}
 - {{CSSxRef("::placeholder", "::-webkit-input-placeholder")}}
-- {{CSSxRef("::-webkit-media-controls", "::-webkit-media-controls")}}
-- {{CSSxRef("::-webkit-media-controls-current-time-display", "::-webkit-media-controls-current-time-display")}}
-- {{CSSxRef("::-webkit-media-controls-enclosure", "::-webkit-media-controls-enclosure")}}
-- {{CSSxRef("::-webkit-media-controls-fullscreen-button", "::-webkit-media-controls-fullscreen-button")}}
-- {{CSSxRef("::-webkit-media-controls-mute-button", "::-webkit-media-controls-mute-button")}}
-- {{CSSxRef("::-webkit-media-controls-overlay-enclosure", "::-webkit-media-controls-overlay-enclosure")}}
-- {{CSSxRef("::-webkit-media-controls-panel", "::-webkit-media-controls-panel")}}
-- {{CSSxRef("::-webkit-media-controls-play-button", "::-webkit-media-controls-play-button")}}
-- {{CSSxRef("::-webkit-media-controls-timeline", "::-webkit-media-controls-timeline")}}
-- {{CSSxRef("::-webkit-media-controls-time-remaining-display", "::-webkit-media-controls-time-remaining-display")}}
-- {{CSSxRef("::-webkit-media-controls-toggle-closed-captions-button", "::-webkit-media-controls-toggle-closed-captions-button")}}
-- {{CSSxRef("::-webkit-media-controls-volume-control-container", "::-webkit-media-controls-volume-control-container")}}
-- {{CSSxRef("::-webkit-media-controls-volume-control-hover-background", "::-webkit-media-controls-volume-control-hover-background")}}
-- {{CSSxRef("::-webkit-media-controls-volume-slider", "::-webkit-media-controls-volume-slider")}}
 - {{CSSxRef("::-webkit-meter-bar", "::-webkit-meter-bar")}}
 - {{CSSxRef("::-webkit-meter-even-less-good-value", "::-webkit-meter-even-less-good-value")}}
 - {{CSSxRef("::-webkit-meter-inner-element", "::-webkit-meter-inner-element")}}
 - {{CSSxRef("::-webkit-meter-optimum-value", "::-webkit-meter-optimum-value")}}
 - {{CSSxRef("::-webkit-meter-suboptimum-value", "::-webkit-meter-suboptimum-value")}}
-- {{CSSxRef("-webkit-media-text-track-container", "-webkit-media-text-track-container")}}
-- {{CSSxRef("::-webkit-outer-spin-button", "::-webkit-outer-spin-button")}}
 - {{CSSxRef("::-webkit-progress-bar", "::-webkit-progress-bar")}}
 - {{CSSxRef("::-webkit-progress-inner-element", "::-webkit-progress-inner-element")}}
 - {{CSSxRef("::-webkit-progress-value", "::-webkit-progress-value")}}

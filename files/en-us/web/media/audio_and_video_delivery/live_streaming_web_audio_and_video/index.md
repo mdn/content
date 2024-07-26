@@ -44,7 +44,8 @@ Real Time Messaging Protocol (RTMP) is a proprietary protocol developed by Macro
 
 ### RTSP
 
-> **Note:** Real Time Streaming Protocol (RTSP) controls media sessions between endpoints and is often used together with Real-time Transport Protocol (RTP) and with Real-time Control Protocol (RTCP) for media stream delivery. Using RTP with RTCP allows for adaptive streaming. This is not yet supported natively in most browsers.
+> [!NOTE]
+> Real Time Streaming Protocol (RTSP) controls media sessions between endpoints and is often used together with Real-time Transport Protocol (RTP) and with Real-time Control Protocol (RTCP) for media stream delivery. Using RTP with RTCP allows for adaptive streaming. This is not yet supported natively in most browsers.
 >
 > Some vendors implement propriety transport protocols, such as RealNetworks and their Real Data Transport (RDT).
 
@@ -52,7 +53,8 @@ Real Time Messaging Protocol (RTMP) is a proprietary protocol developed by Macro
 
 RTSP 2.0 is currently in development and is not backward compatible with RTSP 1.0.
 
-> **Warning:** Although the {{ htmlelement("audio") }} and {{ htmlelement("video") }} tags are protocol agnostic, no browser currently supports anything other than HTTP without requiring plugins, although this looks set to change. Protocols other than HTTP may also be subject to blocking from firewalls or proxy servers.
+> [!WARNING]
+> Although the {{ htmlelement("audio") }} and {{ htmlelement("video") }} tags are protocol agnostic, no browser currently supports anything other than HTTP without requiring plugins, although this looks set to change. Protocols other than HTTP may also be subject to blocking from firewalls or proxy servers.
 
 ## Using streaming protocols
 
@@ -72,19 +74,22 @@ For example:
 
 For example, [you could implement MPEG-DASH using JavaScript while offloading the decoding to MSE](https://web.archive.org/web/20170504035455/https://msopentech.com/blog/2014/01/03/streaming_video_player/).
 
-> **Note:** Time Shifting is the process of consuming a live stream sometime after it happened.
+> [!NOTE]
+> Time Shifting is the process of consuming a live stream sometime after it happened.
 
 ## Video Streaming File Formats
 
 A couple of HTTP-based livestreaming video formats are beginning to see support across browsers.
 
-> **Note:** You can find a guide to encoding HLS and MPEG-DASH for use on the web at [Setting up adaptive streaming media sources](/en-US/docs/Web/Media/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources).
+> [!NOTE]
+> You can find a guide to encoding HLS and MPEG-DASH for use on the web at [Setting up adaptive streaming media sources](/en-US/docs/Web/Media/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources).
 
 ### MPEG-DASH
 
 DASH stands for Dynamic Adaptive Streaming over HTTP. It is supported via Media Source Extensions which are used by JavaScript libraries such as [DASH.js](https://github.com/Dash-Industry-Forum/dash.js/). This approach allows us to download chunks of the video stream using XHR and "append" the chunks to the stream that's played by the {{ htmlelement("video") }} element. So for example, if we detect that the network is slow, we can start requesting lower quality (smaller) chunks for the next segment. This technology also allows an advertising segment to be appended/inserted into the stream.
 
-> **Note:** You can also [use WebM with the MPEG DASH adaptive streaming system](http://wiki.webmproject.org/adaptive-streaming/webm-dash-specification).
+> [!NOTE]
+> You can also [use WebM with the MPEG DASH adaptive streaming system](https://wiki.webmproject.org/adaptive-streaming/webm-dash-specification).
 
 ### HLS
 
@@ -94,28 +99,9 @@ HLS can also be decoded using JavaScript, which means we can support the latest 
 
 At the start of the streaming session, an [extended M3U (m3u8) playlist](https://en.wikipedia.org/wiki/M3U8#Extended_M3U_directives) is downloaded. This contains the metadata for the various sub-streams that are provided.
 
-### Streaming File Format Support
-
-| Browser               | DASH  | HLS   | Opus (Audio) |
-| --------------------- | ----- | ----- | ------------ |
-| Firefox 32            | ✓ [1] | ✓ [2] | ✓ 14+        |
-| Safari 6+             |       | ✓     |              |
-| Chrome 24+            | ✓ [1] | ✓     |              |
-| Opera 20+             | ✓ [1] |       |              |
-| Internet Explorer 10+ | ✓ 11  | ✓ [2] |              |
-| Firefox Mobile        | ✓     | ✓     | ✓            |
-| Safari iOS6+          |       | ✓     |              |
-| Chrome Mobile         | ✓     | ✓ [2] |              |
-| Opera Mobile          | ✓ [1] | ✓     |              |
-| Android               | ✓     |       |              |
-
-\[1] Via JavaScript and MSE
-
-\[2] Via JavaScript and a CORS Proxy
-
 ## Audio Streaming File Formats
 
-There are also some audio formats beginning to see support across browsers.
+There are also several audio formats:
 
 ### Opus
 
@@ -153,7 +139,8 @@ For RTMP transfer you can use the [Nginx RTMP Module](https://github.com/arut/ng
 
 The [Icecast](https://www.icecast.org/) server is an open source technology for streaming media. Maintained by the [Xiph.org Foundation](https://www.xiph.org/), it streams Ogg Vorbis/Theora as well as MP3 and AAC format via the SHOUTcast protocol.
 
-> **Note:** SHOUTcast and Icecast are among the most established and popular technologies, but there are many [more streaming media systems available](https://en.wikipedia.org/wiki/List_of_streaming_media_systems#Servers).
+> [!NOTE]
+> SHOUTcast and Icecast are among the most established and popular technologies, but there are many [more streaming media systems available](https://en.wikipedia.org/wiki/List_of_streaming_media_systems#Servers).
 
 ### Streaming Services
 

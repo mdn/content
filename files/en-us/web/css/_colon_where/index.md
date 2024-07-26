@@ -9,9 +9,19 @@ browser-compat: css.selectors.where
 
 The **`:where()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) function takes a selector list as its argument, and selects any element that can be selected by one of the selectors in that list.
 
+The difference between `:where()` and {{CSSxRef(":is", ":is()")}} is that `:where()` always has 0 [specificity](/en-US/docs/Web/CSS/Specificity), whereas `:is()` takes on the specificity of the most specific selector in its arguments.
+
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-where.html", "tabbed-shorter")}}
 
-The difference between `:where()` and {{CSSxRef(":is", ":is()")}} is that `:where()` always has 0 [specificity](/en-US/docs/Web/CSS/Specificity), whereas `:is()` takes on the specificity of the most specific selector in its arguments.
+## Syntax
+
+The `:where()` pseudo-class requires a [selector list](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#selector_list), a comma-separated list of one or more selectors, as its argument. The list must not contain a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements), but any other simple, compound, and complex selectors are allowed.
+
+```css-nolint
+:where(<complex-selector-list>) {
+  /* ... */
+}
+```
 
 ### Forgiving Selector Parsing
 
@@ -128,14 +138,6 @@ However, selectors inside `:where()` have specificity 0, so the orange footer li
 > **Note:** You can also find this example on GitHub; see [is-where](https://mdn.github.io/css-examples/is-where/).
 
 {{EmbedLiveSample('Examples', '100%', 600)}}
-
-## Syntax
-
-```css-nolint
-:where(<complex-selector-list>) {
-  /* ... */
-}
-```
 
 ## Specifications
 

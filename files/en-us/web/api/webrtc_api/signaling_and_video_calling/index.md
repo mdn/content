@@ -8,7 +8,7 @@ page-type: guide
 
 [WebRTC](/en-US/docs/Web/API/WebRTC_API) allows real-time, peer-to-peer, media exchange between two devices. A connection is established through a discovery and negotiation process called **signaling**. This tutorial will guide you through building a two-way video-call.
 
-[WebRTC](/en-US/docs/Web/API/WebRTC_API) is a fully peer-to-peer technology for the real-time exchange of audio, video, and data, with one central caveat. A form of discovery and media format negotiation must take place, [as discussed elsewhere](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#establishing_a_connection), in order for two devices on different networks to locate one another. This process is called **signaling** and involves both devices connecting to a third, mutually agreed-upon server. Through this third server, the two devices can locate one another, and exchange negotiation messages.
+[WebRTC](/en-US/docs/Web/API/WebRTC_API) is a fully peer-to-peer technology for the real-time exchange of audio, video, and data, with one central caveat. A form of discovery and media format negotiation must take place, [as discussed elsewhere](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#establishing_the_connection), in order for two devices on different networks to locate one another. This process is called **signaling** and involves both devices connecting to a third, mutually agreed-upon server. Through this third server, the two devices can locate one another, and exchange negotiation messages.
 
 In this article, we will further enhance the [WebSocket chat](https://webrtc-from-chat.glitch.me/) first created as part of our WebSocket documentation (this article link is forthcoming; it isn't actually online yet) to support opening a two-way video call between users. You can [try out this example on Glitch](https://webrtc-from-chat.glitch.me/), and you can [remix the example](https://glitch.com/edit/#!/remix/webrtc-from-chat) to experiment with it as well. You can also [look at the full project](https://github.com/mdn/samples-server/tree/master/s/webrtc-from-chat) on GitHub.
 
@@ -18,7 +18,7 @@ In this article, we will further enhance the [WebSocket chat](https://webrtc-fro
 
 Establishing a WebRTC connection between two devices requires the use of a **signaling server** to resolve how to connect them over the internet. A signaling server's job is to serve as an intermediary to let two peers find and establish a connection while minimizing exposure of potentially private information as much as possible. How do we create this server and how does the signaling process actually work?
 
-First we need the signaling server itself. WebRTC doesn't specify a transport mechanism for the signaling information. You can use anything you like, from [WebSocket](/en-US/docs/Web/API/WebSockets_API) to {{domxref("fetch()")}} to carrier pigeons to exchange the signaling information between the two peers.
+First we need the signaling server itself. WebRTC doesn't specify a transport mechanism for the signaling information. You can use anything you like, from [WebSocket](/en-US/docs/Web/API/WebSockets_API) to {{domxref("Window/fetch", "fetch()")}} to carrier pigeons to exchange the signaling information between the two peers.
 
 It's important to note that the server doesn't need to understand or interpret the signaling data content. Although it's {{Glossary("SDP")}}, even this doesn't matter so much: the content of the message going through the signaling server is, in effect, a black box. What does matter is when the {{Glossary("ICE")}} subsystem instructs you to send signaling data to the other peer, you do so, and the other peer knows how to receive this information and deliver it to its own ICE subsystem. All you have to do is channel the information back and forth. The contents don't matter at all to the signaling server.
 
@@ -116,8 +116,6 @@ All your signaling server now needs to do is send the messages it's asked to. Yo
 
 The signaling process involves this exchange of messages between two peers using an intermediary, the signaling server. The exact process will vary, of course, but in general there are a few key points at which signaling messages get handled:
 
-The signaling process involves this exchange of messages among a number of points:
-
 - Each user's client running within a web browser
 - Each user's web browser
 - The signaling server
@@ -125,7 +123,7 @@ The signaling process involves this exchange of messages among a number of point
 
 Imagine that Naomi and Priya are engaged in a discussion using the chat software, and Naomi decides to open a video call between the two. Here's the expected sequence of events:
 
-[![Diagram of the signaling process](webrtc_-_signaling_diagram.svg)](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling/webrtc_-_signaling_diagram.svg)
+![Diagram of the signaling process](webrtc_-_signaling_diagram.svg)
 
 We'll see this detailed more over the course of this article.
 
@@ -133,7 +131,7 @@ We'll see this detailed more over the course of this article.
 
 When each peer's ICE layer begins to send candidates, it enters into an exchange among the various points in the chain that looks like this:
 
-[![Diagram of ICE candidate exchange process](webrtc_-_ice_candidate_exchange.svg)](webrtc_-_ice_candidate_exchange.svg)
+![Diagram of ICE candidate exchange process](webrtc_-_ice_candidate_exchange.svg)
 
 Each side sends candidates to the other as it receives them from their local ICE layer; there is no taking turns or batching of candidates. As soon as the two peers agree upon one candidate that they can both use to exchange the media, media begins to flow. Each peer continues to send candidates until it runs out of options, even after the media has already begun to flow. This is done in hopes of identifying even better options than the one initially selected.
 
@@ -352,7 +350,7 @@ The first three of these event handlers are required; you have to handle them to
 - {{domxref("RTCPeerConnection.icegatheringstatechange_event", "onicegatheringstatechange")}}
   - : The ICE layer sends you the {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}} event, when the ICE agent's process of collecting candidates shifts, from one state to another (such as starting to gather candidates or completing negotiation). See [ICE gathering state](#ice_gathering_state) below.
 - {{domxref("RTCPeerConnection.signalingstatechange_event", "onsignalingstatechange")}}
-  - : The WebRTC infrastructure sends you the {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}} message when the state of the signaling process changes (or if the connection to the signaling server changes). See [Signaling state](#signaling_state) to see our code.
+  - : The WebRTC infrastructure sends you the {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}} message when the state of the signaling process changes (or if the connection to the signaling server changes). See [Signaling state](#ice_signaling_state) to see our code.
 
 #### Starting negotiation
 
@@ -543,7 +541,7 @@ function handleRemoveTrackEvent(event) {
 }
 ```
 
-This code fetches the incoming video {{domxref("MediaStream")}} from the `"received_video"` {{HTMLElement("video")}} element's [`srcObject`](/en-US/docs/Web/HTML/Element/video#srcobject) attribute, then calls the stream's {{domxref("MediaStream.getTracks", "getTracks()")}} method to get an array of the stream's tracks.
+This code fetches the incoming video {{domxref("MediaStream")}} from the `"received_video"` {{HTMLElement("video")}} element's [`srcObject`](/en-US/docs/Web/API/HTMLMediaElement/srcObject) property, then calls the stream's {{domxref("MediaStream.getTracks", "getTracks()")}} method to get an array of the stream's tracks.
 
 If the array's length is zero, meaning there are no tracks left in the stream, we end the call by calling `closeVideoCall()`. This cleanly restores our app to a state in which it's ready to start or receive another call. See [Ending the call](#ending_the_call) to learn how `closeVideoCall()` works.
 
@@ -602,7 +600,7 @@ function closeVideoCall() {
   remoteVideo.removeAttribute("src");
   remoteVideo.removeAttribute("srcObject");
   localVideo.removeAttribute("src");
-  remoteVideo.removeAttribute("srcObject");
+  localVideo.removeAttribute("srcObject");
 
   document.getElementById("hangup-button").disabled = true;
   targetUsername = null;
@@ -616,7 +614,7 @@ After pulling references to the two {{HTMLElement("video")}} elements, we check 
 3. Close the {{domxref("RTCPeerConnection")}} by calling {{domxref("RTCPeerConnection.close", "myPeerConnection.close()")}}.
 4. Set `myPeerConnection` to `null`, ensuring our code learns there's no ongoing call; this is useful when the user clicks a name in the user list.
 
-Then for both the incoming and outgoing {{HTMLElement("video")}} elements, we remove their [`src`](/en-US/docs/Web/HTML/Element/video#src) and [`srcObject`](/en-US/docs/Web/HTML/Element/video#srcobject) attributes using their {{domxref("Element.removeAttribute", "removeAttribute()")}} methods. This completes the disassociation of the streams from the video elements.
+Then for both the incoming and outgoing {{HTMLElement("video")}} elements, we remove their [`src`](/en-US/docs/Web/API/HTMLMediaElement/src) and [`srcObject`](/en-US/docs/Web/API/HTMLMediaElement/srcObject) properties using their {{domxref("Element.removeAttribute", "removeAttribute()")}} methods. This completes the disassociation of the streams from the video elements.
 
 Finally, we set the {{domxref("HTMLButtonElement.disabled", "disabled")}} property to `true` on the "Hang Up" button, making it unclickable while there is no call underway; then we set `targetUsername` to `null` since we're no longer talking to anyone. This allows the user to call another user, or to receive an incoming call.
 

@@ -17,7 +17,8 @@ Be aware that the shadow's rendered opacity will be affected by the opacity of t
 of the {{domxref("CanvasRenderingContext2D.strokeStyle", "strokeStyle")}} color when
 stroking.
 
-> **Note:** Shadows are only drawn if the `shadowColor`
+> [!NOTE]
+> Shadows are only drawn if the `shadowColor`
 > property is set to a non-transparent value. One of the
 > {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}},
 > {{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}}, or
@@ -89,18 +90,18 @@ const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 
 // Shadow
-ctx.shadowColor = "rgba(255, 0, 0, .8)";
+ctx.shadowColor = "rgb(255 0 0 / 80%)";
 ctx.shadowBlur = 8;
 ctx.shadowOffsetX = 30;
 ctx.shadowOffsetY = 20;
 
 // Filled rectangle
-ctx.fillStyle = "rgba(0, 255, 0, .2)";
+ctx.fillStyle = "rgb(0 255 0 / 20%)";
 ctx.fillRect(10, 10, 150, 100);
 
 // Stroked rectangle
 ctx.lineWidth = 10;
-ctx.strokeStyle = "rgba(0, 0, 255, .6)";
+ctx.strokeStyle = "rgb(0 0 255 / 60%)";
 ctx.strokeRect(10, 10, 150, 100);
 ```
 

@@ -17,7 +17,7 @@ As the example above shows, the `<fieldset>` element provides a grouping for a p
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- `disabled`
+- [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled)
   - : If this Boolean attribute is set, all form controls that are descendants of the `<fieldset>`, are disabled, meaning they are not editable and won't be submitted along with the {{htmlelement("form")}}. They won't receive any browsing events, like mouse clicks or focus-related events. By default browsers display such controls grayed out. Note that form elements inside the {{HTMLElement("legend")}} element won't be disabled.
 - `form`
   - : This attribute takes the value of the [`id`](/en-US/docs/Web/HTML/Global_attributes#id) attribute of a {{HTMLElement("form")}} element you want the `<fieldset>` to be part of, even if it is not inside the form. Please note that usage of this is confusing — if you want the {{HTMLElement("input")}} elements inside the `<fieldset>` to be associated with the form, you need to use the `form` attribute directly on those elements. You can check which elements are associated with a form via JavaScript, using {{domxref("HTMLFormElement.elements")}}.
@@ -25,13 +25,14 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : The name associated with the group.
 
-    > **Note:** The caption for the fieldset is given by the first {{HTMLElement("legend")}} element nested inside it.
+    > [!NOTE]
+    > The caption for the fieldset is given by the first {{HTMLElement("legend")}} element nested inside it.
 
 ## Styling with CSS
 
 There are several special styling considerations for `<fieldset>`.
 
-Its {{cssxref("display")}} value is `block` by default, and it establishes a [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context). If the `<fieldset>` is styled with an inline-level `display` value, it will behave as `inline-block`, otherwise it will behave as `block`. By default there is a `2px` `groove` border surrounding the contents, and a small amount of default padding. The element has {{cssxref("min-inline-size", "min-inline-size: min-content")}} by default.
+Its {{cssxref("display")}} value is `block` by default, and it establishes a [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context). If the `<fieldset>` is styled with an inline-level `display` value, it will behave as `inline-block`, otherwise it will behave as `block`. By default there is a `2px` `groove` border surrounding the contents, and a small amount of default padding. The element has {{cssxref("min-inline-size", "min-inline-size: min-content")}} by default.
 
 If a {{htmlelement("legend")}} is present, it is placed over the `block-start` border. The `<legend>` shrink-wraps, and also establishes a formatting context. The `display` value is blockified. (For example, `display: inline` behaves as `block`.)
 
@@ -119,7 +120,7 @@ This example shows a disabled `<fieldset>` with two controls inside it. Note how
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>

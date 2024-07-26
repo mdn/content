@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUCommandEncoder.pushDebugGroup
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`pushDebugGroup()`** method of the
 {{domxref("GPUCommandEncoder")}} interface begins a debug group, which is marked with a specified label, and will contain all subsequent encoded commands up until a {{domxref("GPUCommandEncoder.popDebugGroup", "popDebugGroup()")}} method is invoked.

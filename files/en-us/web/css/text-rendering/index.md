@@ -7,7 +7,7 @@ browser-compat: css.properties.text-rendering
 
 {{CSSRef}}
 
-The **`text-rendering`** CSS property provides information to the rendering engine about what to optimize for when rendering text.
+The **`text-rendering`** [CSS](/en-US/docs/Web/CSS) property provides information to the rendering engine about what to optimize for when rendering text.
 
 The browser makes trade-offs among speed, legibility, and geometric precision.
 
@@ -34,13 +34,13 @@ text-rendering: unset;
 
 ### Values
 
-- `auto` {{Non-standard_Inline}}
+- `auto`
   - : The browser makes educated guesses about when to optimize for speed, legibility, and geometric precision while drawing text. For differences in how this value is interpreted by the browser, see the compatibility table.
 - `optimizeSpeed`
   - : The browser emphasizes rendering speed over legibility and geometric precision when drawing text. It disables kerning and ligatures.
 - `optimizeLegibility`
   - : The browser emphasizes legibility over rendering speed and geometric precision. This enables kerning and optional ligatures.
-- `geometricPrecision` {{Non-standard_Inline}}
+- `geometricPrecision`
 
   - : The browser emphasizes geometric precision over rendering speed and legibility. Certain aspects of fonts — such as kerning — don't scale linearly. So this value can make text using those fonts look good.
 

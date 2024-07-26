@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.WebSocket.open_event
 ---
 
-{{APIRef}}
+{{APIRef("WebSockets API")}}
 
 The `open` event is fired when a connection with a `WebSocket` is opened.
 

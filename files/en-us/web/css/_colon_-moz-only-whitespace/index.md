@@ -57,5 +57,5 @@ Briefly defined as `:blank` in [Selectors Level 4](https://drafts.csswg.org/sele
 
 ## See also
 
-- {{CSSxRef(":blank")}} {{Experimental_Inline}}
+- {{CSSxRef(":blank")}}
 - {{CSSxRef(":empty")}}

@@ -3,17 +3,25 @@ title: <ratio>
 slug: Web/CSS/ratio
 page-type: css-type
 browser-compat: css.types.ratio
+spec-urls: https://drafts.csswg.org/css-values-4/#ratio-value
 ---
 
 {{CSSRef}}
 
-The **`<ratio>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types), used for describing [aspect ratios](/en-US/docs/Web/CSS/@media/aspect-ratio) in [media queries](/en-US/docs/Web/CSS/CSS_media_queries), denotes the proportion between two unitless values.
+The **`<ratio>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) describes the proportional relationship between a width and height. It is used as a value for the `aspect-ratio` media feature in {{cssxref("@media")}} media queries, the `aspect-ratio` size feature in {{cssxref("@container")}} container queries, and as a value for the CSS {{cssxref("aspect-ratio")}} property.
 
 ## Syntax
 
-In Media Queries Level 3, the `<ratio>` data type consisted of a strictly positive {{cssxref("&lt;integer&gt;")}} followed by a forward slash ('/', Unicode `U+002F SOLIDUS`) and a second strictly positive {{cssxref("&lt;integer&gt;")}}. Spaces before and after the slash are optional. The first number represents the width, while the second represents the height.
+The `<ratio>` data type is a {{cssxref("&lt;number&gt;")}} followed by a forward slash ('/', Unicode `U+002F SOLIDUS`) and a second {{cssxref("&lt;number&gt;")}}. Both numbers must be positive. Spaces before and after the slash are optional. The first number represents the width, while the second represents the height. In addition a single {{cssxref("&lt;number&gt;")}} as a value is allowable.
 
-In Media Queries Level 4, the `<ratio>` date type is updated to consist of a strictly positive {{cssxref("&lt;number&gt;")}} followed by a forward slash ('/', Unicode `U+002F SOLIDUS`) and a second strictly positive {{cssxref("&lt;number&gt;")}}. In addition a single {{cssxref("&lt;number&gt;")}} as a value is allowable.
+### Common aspect ratios
+
+| Ratio                 |                                                                              | Usage                                           |
+| --------------------- | ---------------------------------------------------------------------------- | ----------------------------------------------- |
+| `4/3` or `1.33333`    | ![A rectangle that is three units tall and four units wide](ratio4_3.png)    | Traditional TV format in the twentieth century. |
+| `16/9` or `1.7777778` | ![A rectangle that is nine units tall and sixteen units wide](ratio16_9.png) | Modern "widescreen" TV format.                  |
+| `185/100` or `1.85`   | ![A rectangle that is 1 unit tall and 1.85 units wide](ratio1_1.85.png)      | The most common movie format since the 1960s.   |
+| `239/100` or `2.39`   | ![A rectangle that is 1 unit tall and 2.39 units wide](ratio1_2.39.png)      | "Widescreen," anamorphic movie format.          |
 
 ## Formal syntax
 
@@ -29,14 +37,28 @@ In Media Queries Level 4, the `<ratio>` date type is updated to consist of a str
 }
 ```
 
-### Common aspect ratios
+### Use in a @container size query
 
-|                                                                              | Ratio               | Usage                                           |
-| ---------------------------------------------------------------------------- | ------------------- | ----------------------------------------------- |
-| ![A rectangle that is three units tall and four units wide](ratio4_3.png)    | `4/3`               | Traditional TV format in the twentieth century. |
-| ![A rectangle that is nine units tall and sixteen units wide](ratio16_9.png) | `16/9`              | Modern "widescreen" TV format.                  |
-| ![A rectangle that is 1 unit tall and 1.85 units wide](ratio1_1.85.png)      | `185/100` = `91/50` | The most common movie format since the 1960s.   |
-| ![A rectangle that is 1 unit tall and 2.39 units wide](ratio1_2.39.png)      | `239/100`           | "Widescreen," anamorphic movie format.          |
+```css
+@container (aspect-ratio > 1) and (width < 20em) {
+  /* … */
+}
+```
+
+### Use as a CSS property value
+
+```css
+.square {
+  aspect-ratio: 1 / 1;
+}
+.circle {
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+.portrait {
+  aspect-ratio: 5 / 7;
+}
+```
 
 ## Specifications
 
@@ -48,4 +70,11 @@ In Media Queries Level 4, the `<ratio>` date type is updated to consist of a str
 
 ## See also
 
-- [`aspect-ratio`](/en-US/docs/Web/CSS/@media/aspect-ratio) media feature
+- [`aspect-ratio`](/en-US/docs/Web/CSS/@media/aspect-ratio) media descriptor
+- [Understanding aspect ratios](/en-US/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
+- [CSS container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries) guide
+- [Using container size and style queries](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries) guide
+- [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) module
+- [CSS containment](/en-US/docs/Web/CSS/CSS_containment) module
+- [CSS box sizing](/en-US/docs/Web/CSS/CSS_box_sizing) module
+- [CSS values and units](/en-US/docs/Web/CSS/CSS_Values_and_Units) module

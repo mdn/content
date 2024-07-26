@@ -27,10 +27,10 @@ _Inherits properties from its parent, {{domxref("Node")}}._
 _Inherits methods from its parent, {{domxref("Node")}}._
 
 - {{domxref("DocumentType.after()")}}
-  - : Inserts a set of {{domxref("Node")}} or string objects in the children list of the
+  - : Inserts a set of {{domxref("Node")}} objects or strings in the children list of the
     object's parent, just after this node.
 - {{domxref("DocumentType.before()")}}
-  - : Inserts a set of {{domxref("Node")}} or string objects in the children list of the
+  - : Inserts a set of {{domxref("Node")}} objects or strings in the children list of the
     object's parent, just before this node.
 - {{domxref("DocumentType.remove()")}}
   - : Removes this object from its parent children list.

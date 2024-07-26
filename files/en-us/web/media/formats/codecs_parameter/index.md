@@ -17,7 +17,7 @@ This guide briefly examines the syntax of the media type `codecs` parameter and 
 The MIME type for a container format is expressed by stating the type of media (`audio`, `video`, etc.), then a slash character (`/`), then the format used to contain the media:
 
 - `audio/mpeg`
-  - : An audio file using the [MPEG](/en-US/docs/Web/Media/Formats/Containers#mpeg) file type, such as an MP3.
+  - : An audio file using the [MPEG](/en-US/docs/Web/Media/Formats/Containers#mpegmpeg-2) file type, such as an MP3.
 - `video/ogg`
   - : A video file using the [Ogg](/en-US/docs/Web/Media/Formats/Containers#ogg) file type.
 - `video/mp4`
@@ -36,11 +36,12 @@ You can add the `codecs` parameter to the media type. To do so, append a semicol
 - `video/webm; codecs="vp8, vorbis"`
   - : A [WebM](/en-US/docs/Web/Media/Formats/Containers#webm) file containing [VP8](/en-US/docs/Web/Media/Formats/Video_codecs#vp8) video and/or [Vorbis](/en-US/docs/Web/Media/Formats/Audio_codecs#vorbis) audio.
 - `video/mp4; codecs="avc1.4d002a"`
-  - : An [MPEG-4](/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4) file containing [AVC](</en-US/docs/Web/Media/Formats/Video_codecs#avc_(h.264)>) (H.264) video, Main Profile, Level 4.2.
+  - : An [MPEG-4](/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4) file containing [AVC](/en-US/docs/Web/Media/Formats/Video_codecs#avc_h.264) (H.264) video, Main Profile, Level 4.2.
 
 As is the case with any MIME type parameter, `codecs` must be changed to `codecs*` (note the asterisk character, `*`) if any of the properties of the codec use special characters which must be percent-encoded per {{RFC(2231, "MIME Parameter Value and Encoded Word Extensions", 4)}}. You can use the JavaScript {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} function to encode the parameter list; similarly, you can use {{jsxref("Global_Objects/decodeURI", "decodeURI()")}} to decode a previously encoded parameter list.
 
-> **Note:** When the `codecs` parameter is used, the specified list of codecs must include every codec used for the contents of the file. The list may also contain codecs not present in the file.
+> [!NOTE]
+> When the `codecs` parameter is used, the specified list of codecs must include every codec used for the contents of the file. The list may also contain codecs not present in the file.
 
 ## Codec options by container
 
@@ -63,7 +64,8 @@ The syntax of the `codecs` parameter for AV1 is defined the [AV1 Codec ISO Media
 av01.P.LLT.DD[.M.CCC.cp.tc.mc.F]
 ```
 
-> **Note:** Chromium-based browsers will accept any subset of the optional parameters (rather than all or none, as required by the specification).
+> [!NOTE]
+> Chromium-based browsers will accept any subset of the optional parameters (rather than all or none, as required by the specification).
 
 This codec parameter string's components are described in more detail in the table below. Each component is a fixed number of characters long; if the value is less than that length, it must be padded with leading zeros.
 
@@ -239,361 +241,11 @@ All fields from `M` (monochrome flag) onward are optional; you may stop includin
 - `av01.0.15M.10`
   - : AV1 Main Profile, level 5.3, Main tier, 10 bits per color component. The remaining properties are taken from the defaults: 4:2:0 chroma subsampling, BT.709 color primaries, transfer characteristics, and matrix coefficients. Studio swing representation.
 
-### ISO Base Media File Format: MP4, QuickTime, and 3GP
-
-All media types based upon the [ISO Base Media File Format](https://en.wikipedia.org/wiki/ISO_Base_Media_File_Format) (ISO BMFF) share the same syntax for the `codecs` parameter. These media types include [MPEG-4](/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4) (and, in fact, the [QuickTime](/en-US/docs/Web/Media/Formats/Containers#quicktime) file format upon which MPEG-4 is based) as well as [3GP](/en-US/docs/Web/Media/Formats/Containers#3gp). Both video and audio tracks can be described using the `codecs` parameter with the following MIME types:
-
-| MIME type         | Description                                                                                                        |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------ |
-| `audio/3gpp`      | 3GP audio ({{RFC(3839, "MIME Type Registrations for 3rd generation Partnership Project (3GP) Multimedia files")}}) |
-| `video/3gpp`      | 3GP video ({{RFC(3839, "MIME Type Registrations for 3rd generation Partnership Project (3GP) Multimedia files")}}) |
-| `audio/3gp2`      | 3GP2 audio ({{RFC(4393, "MIME Type Registrations for 3GPP2 Multimedia files")}})                                   |
-| `video/3gp2`      | 3GP2 video ({{RFC(4393, "MIME Type Registrations for 3GPP2 Multimedia files")}})                                   |
-| `audio/mp4`       | MP4 audio ({{RFC(4337, "MIME Type Registration for MPEG-4")}})                                                     |
-| `video/mp4`       | MP4 video ({{RFC(4337, "MIME Type Registration for MPEG-4")}})                                                     |
-| `application/mp4` | Non-audiovisual media encapsulated in MPEG-4                                                                       |
-
-Each codec described by the `codecs` parameter can be specified either as the container's name (`3gp`, `mp4`, `quicktime`, etc.) or as the container name plus additional parameters to specify the codec and its configuration. Each entry in the codec list may contain some number of components, separated by periods (`.`).
-
-The syntax for the value of `codecs` varies by codec; however, it always starts with the codec's four-character identifier, a period separator (`.`), followed by the Object Type Indication (OTI) value for the specific data format. For most codecs, the OTI is a two-digit hexadecimal number; however, it's six hexadecimal digits for [AVC (H.264)](</en-US/docs/Web/Media/Formats/Video_codecs#avc_(h.264)>).
-
-Thus, the syntaxes for each of the supported codecs look like this:
-
-- `cccc[.pp]*` (Generic ISO BMFF)
-  - : Where `cccc` is the four-character ID for the codec and `pp` is where zero or more two-character encoded property values go.
-- `mp4a.oo[.A]` (MPEG-4 audio)
-  - : Where `oo` is the Object Type Indication value describing the contents of the media more precisely and `A` is the one-digit _audio_ OTI. The possible values for the OTI can be found on the MP4 Registration Authority website's [Object Types page](https://mp4ra.org/#/object_types). For example, Opus audio in an MP4 file is `mp4a.ad`. For further details, see [MPEG-4 audio](#mpeg-4_audio).
-- `mp4v.oo[.V]` (MPEG-4 video)
-  - : Here, `oo` is again the OTI describing the contents more precisely, while `V` is the one-digit _video_ OTI.
-- `avc1[.PPCCLL]` (AVC video)
-
-  - : `PPCCLL` are six hexadecimal digits specifying the profile number (`PP`), constraint set flags (`CC`), and level (`LL`). See [AVC profiles](#avc_profiles) for the possible values of `PP`.
-
-    The constraint set flags byte is comprised of one-bit Boolean flags, with the most significant bit being referred to as flag 0 (or `constraint_set0_flag`, in some resources), and each successive bit being numbered one higher. Currently, only flags 0 through 2 are used; the other five bits _must_ be zero. The meanings of the flags vary depending on the profile being used.
-
-    The level is a fixed-point number, so a value of `14` (decimal 20) means level 2.0 while a value of `3D` (decimal 61) means level 6.1. Generally speaking, the higher the level number, the more bandwidth the stream will use and the higher the maximum video dimensions are supported.
-
-#### AVC profiles
-
-The following are the AVC profiles and their profile numbers for use in the `codecs` parameter, as well as the value to specify for the constraints component, `CC`.
-
-| Profile                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Number (Hex) | Constraints byte |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------ | ---------------- |
-| **Constrained Baseline Profile (CBP)** CBP is primarily a solution for scenarios in which resources are constrained, or resource use needs to be controlled to minimize the odds of the media performing poorly.                                                                                                                                                                                                                                                                                                                                       | `42`         | `40`             |
-| **Baseline Profile (BP)** Similar to CBP but with more data loss protections and recovery capabilities. This is not as widely used as it was before CBP was introduced. All CBP streams are considered to also be BP streams.                                                                                                                                                                                                                                                                                                                          | `42`         | `00`             |
-| **Extended Profile (XP)** Designed for streaming video over the network, with high compression capability and further improvements to data robustness and stream switching.                                                                                                                                                                                                                                                                                                                                                                            | `58`         | `00`             |
-| **Main Profile (MP)** The profile used for standard-definition digital television being broadcast in MPEG-4 format. _Not_ used for high-definition television broadcasts. This profile's importance has faded since the introduction of the High Profile—which was added for HDTV use—in 2004.                                                                                                                                                                                                                                                         | `4D`         | `00`             |
-| **High Profile (HiP)** Currently, HiP is the primary profile used for broadcast and disc-based HD video; it's used both for HD TV broadcasts and for Blu-Ray video.                                                                                                                                                                                                                                                                                                                                                                                    | `64`         | `00`             |
-| **Progressive High Profile (PHiP)** Essentially High Profile without support for field coding.                                                                                                                                                                                                                                                                                                                                                                                                                                                         | `64`         | `08`             |
-| **Constrained High Profile** PHiP, but without support for bi-predictive slices ("B-slices").                                                                                                                                                                                                                                                                                                                                                                                                                                                          | `64`         | `0C`             |
-| **High 10 Profile (Hi10P)** High Profile, but with support for up to 10 bits per color component.                                                                                                                                                                                                                                                                                                                                                                                                                                                      | `6E`         | `00`             |
-| **High 4:2:2 Profile (Hi422P)** Expands upon Hi10P by adding support for 4:2:2 chroma subsampling along with up to10 bits per color component.                                                                                                                                                                                                                                                                                                                                                                                                         | `7A`         | `00`             |
-| **High 4:4:4 Predictive Profile (Hi444PP)** In addition to the capabilities included in Hi422P, Hi444PP adds support for 4:4:4 chroma subsampling (in which no color information is discarded). Also includes support for up to 14 bits per color sample and efficient lossless region coding. The option to encode each frame as three separate color planes (that is, each color's data is stored as if it were a single monochrome frame).                                                                                                          | `F4`         | `00`             |
-| **High 10 Intra Profile** High 10 constrained to all-intra-frame use. Primarily used for professional apps.                                                                                                                                                                                                                                                                                                                                                                                                                                            | `6E`         | `10`             |
-| **High 4:2:2 Intra Profile** The Hi422 Profile with all-intra-frame use.                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | `7A`         | `10`             |
-| **High 4:4:4 Intra Profile** The High 4:4:4 Profile constrained to use only intra frames.                                                                                                                                                                                                                                                                                                                                                                                                                                                              | `F4`         | `10`             |
-| **CAVLC 4:4:4 Intra Profile** The High 4:4:4 Profile constrained to all-intra use, and to using only CAVLC entropy coding.                                                                                                                                                                                                                                                                                                                                                                                                                             | `44`         | `00`             |
-| **Scalable Baseline Profile** Intended for use with video conferencing as well as surveillance and mobile uses, the [SVC](https://en.wikipedia.org/wiki/SVC) Baseline Profile is based on AVC's Constrained Baseline profile. The base layer within the stream is provided at a high quality level, with some number of secondary substreams that offer alternative forms of the same video for use in various constrained environments. These may include any combination of reduced resolution, reduced frame rate, or increased compression levels. | `53`         | `00`             |
-| **Scalable Constrained Baseline Profile** Primarily used for real-time communication applications. Not yet supported by WebRTC, but an extension to the WebRTC API [to allow SVC](https://github.com/w3c/webrtc-svc) is in development.                                                                                                                                                                                                                                                                                                                | `53`         | `04`             |
-| **Scalable High Profile** Meant mostly for use in broadcast and streaming applications. The base (or highest quality) layer must conform to the AVC High Profile.                                                                                                                                                                                                                                                                                                                                                                                      | `56`         | `00`             |
-| **Scalable Constrained High Profile** A subset of the Scalable High Profile designed mainly for real-time communication.                                                                                                                                                                                                                                                                                                                                                                                                                               | `56`         | `04`             |
-| **Scalable High Intra Profile** Primarily useful only for production applications, this profile supports only all-intra usage.                                                                                                                                                                                                                                                                                                                                                                                                                         | `56`         | `20`             |
-| **Stereo High Profile** The Stereo High Profile provides stereoscopic video using two renderings of the scene (left eye and right eye). Otherwise, provides the same features as the High profile.                                                                                                                                                                                                                                                                                                                                                     | `80`         | `00`             |
-| **Multiview High Profile** Supports two or more views using both temporal and MVC inter-view prediction. _Does not support_ field pictures or macroblock-adaptive frame-field coding.                                                                                                                                                                                                                                                                                                                                                                  | `76`         | `00`             |
-| **Multiview Depth High Profile** Based on the High Profile, to which the main substream must adhere. The remaining substreams must match the Stereo High Profile.                                                                                                                                                                                                                                                                                                                                                                                      | `8A`         | `00`             |
-
-#### MPEG-4 audio
-
-When the value of an entry in the `codecs` list begins with `mp4a`, the syntax of the value should be:
-
-```plain
-mp4a.oo[.A]
-```
-
-Here, `oo` is the two-digit hexadecimal Object Type Indication which specifies the codec class being used for the media. The OTIs are assigned by the [MP4 Registration Authority](https://mp4ra.org/), which maintains a [list of the possible OTI values](https://mp4ra.org/#/object_types). A special value is `40`; this indicates that the media is MPEG-4 audio (ISO/IEC 14496 Part 3). In order to be more specific still, a third component—the Audio Object Type—is added for OTI `40` to narrow the type down to a specific subtype of MPEG-4.
-
-The Audio Object Type is specified as a one or two digit _decimal_ value (unlike most other values in the `codecs` parameter, which use hexadecimal). For example, MPEG-4's AAC-LC has an audio object type number of `2`, so the full `codecs` value representing AAC-LC is `mp4a.40.2`.
-
-Thus, ER AAC LC, whose Audio Object Type is 17, can be represented using the full `codecs` value `mp4a.40.17`. Single digit values can be given either as one digit (which is the best choice, since it will be the most broadly compatible) or with a leading zero padding it to two digits, such as `mp4a.40.02`.
-
-> **Note:** The specification originally mandated that the Audio Object Type number in the third component be only one decimal digit. However, amendments to the specification over time extended the range of these values well beyond one decimal digit, so now the third parameter may be either one or two digits. Padding values below 10 with a leading `0` is optional. Older implementations of MPEG-4 codecs may not support two-digit values, however, so using a single digit when possible will maximize compatibility.
-
-The Audio Object Types are defined in ISO/IEC 14496-3 subpart 1, section 1.5.1. The table below provides a basic list of the Audio Object Types and in the case of the more common object types provides a list of the profiles supporting it, but you should refer to the specification for details if you need to know more about the inner workings of any given MPEG-4 audio type.
-
-<table class="standard-table">
-  <caption>
-    MPEG-4 audio object types
-  </caption>
-  <thead>
-    <tr>
-      <th scope="col">ID</th>
-      <th scope="col">Audio Object Type</th>
-      <th scope="col">Profile support</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>0</code></td>
-      <td>NULL</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>1</code></td>
-      <td>AAC Main</td>
-      <td>Main</td>
-    </tr>
-    <tr>
-      <td><code>2</code></td>
-      <td>AAC LC (Low Complexity)</td>
-      <td>Main, Scalable, HQ, LD v2, AAC, HE-AAC, HE-AAC v2</td>
-    </tr>
-    <tr>
-      <td><code>3</code></td>
-      <td>AAC SSR (Scalable Sampling Rate)</td>
-      <td>Main</td>
-    </tr>
-    <tr>
-      <td><code>4</code></td>
-      <td>AAC LTP (Long Term Prediction)</td>
-      <td>Main, Scalable, HQ</td>
-    </tr>
-    <tr>
-      <td><code>5</code></td>
-      <td>SBR (Spectral Band Replication)</td>
-      <td>HE-AAC, HE-AAC v2</td>
-    </tr>
-    <tr>
-      <td><code>6</code></td>
-      <td>AAC Scalable</td>
-      <td>Main, Scalable, HQ</td>
-    </tr>
-    <tr>
-      <td><code>7</code></td>
-      <td>TwinVQ (Coding for ultra-low bit rates)</td>
-      <td>Main, Scalable</td>
-    </tr>
-    <tr>
-      <td><code>8</code></td>
-      <td>CELP (Code-Excited Linear Prediction)</td>
-      <td>Main, Scalable, Speech, HQ, LD</td>
-    </tr>
-    <tr>
-      <td><code>9</code></td>
-      <td>HVXC (Harmonic Vector Excitation Coding)</td>
-      <td>Main, Scalable, Speech, LD</td>
-    </tr>
-    <tr>
-      <td><code>10</code> – <code>11</code></td>
-      <td><em>Reserved</em></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>12</code></td>
-      <td>TTSI (Text to Speech Interface)</td>
-      <td>Main, Scalable, Speech, Synthetic, LD</td>
-    </tr>
-    <tr>
-      <td><code>13</code></td>
-      <td>Main Synthetic</td>
-      <td>Main, Synthetic</td>
-    </tr>
-    <tr>
-      <td><code>14</code></td>
-      <td>Wavetable Synthesis</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>15</code></td>
-      <td>General MIDI</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>16</code></td>
-      <td>Algorithmic Synthesis and Audio Effects</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>17</code></td>
-      <td>ER AAC LC (Error Resilient AAC Low-Complexity)</td>
-      <td>HQ, Mobile Internetworking</td>
-    </tr>
-    <tr>
-      <td><code>18</code></td>
-      <td><em>Reserved</em></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>19</code></td>
-      <td>ER AAC LTP (Error Resilient AAC Long Term Prediction)</td>
-      <td>HQ</td>
-    </tr>
-    <tr>
-      <td><code>20</code></td>
-      <td>ER AAC Scalable (Error Resilient AAC Scalable)</td>
-      <td>Mobile Internetworking</td>
-    </tr>
-    <tr>
-      <td><code>21</code></td>
-      <td>ER TwinVQ (Error Resilient TwinVQ)</td>
-      <td>Mobile Internetworking</td>
-    </tr>
-    <tr>
-      <td><code>22</code></td>
-      <td>ER BSAC (Error Resilient Bit-Sliced Arithmetic Coding)</td>
-      <td>Mobile Internetworking</td>
-    </tr>
-    <tr>
-      <td><code>23</code></td>
-      <td>
-        ER AAC LD (Error Resilient AAC Low-Delay; used for two-way
-        communication)
-      </td>
-      <td>LD, Mobile Internetworking</td>
-    </tr>
-    <tr>
-      <td><code>24</code></td>
-      <td>ER CELP (Error Resilient Code-Excited Linear Prediction)</td>
-      <td>HQ, LD</td>
-    </tr>
-    <tr>
-      <td><code>25</code></td>
-      <td>ER HVXC (Error Resilient Harmonic Vector Excitation Coding)</td>
-      <td>LD</td>
-    </tr>
-    <tr>
-      <td><code>26</code></td>
-      <td>ER HILN (Error Resilient Harmonic and Individual Line plus Noise)</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>27</code></td>
-      <td>ER Parametric (Error Resilient Parametric)</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>28</code></td>
-      <td>SSC (Sinusoidal Coding)</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>29</code></td>
-      <td>PS (Parametric Stereo)</td>
-      <td>HE-AAC v2</td>
-    </tr>
-    <tr>
-      <td><code>30</code></td>
-      <td>MPEG Surround</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>31</code></td>
-      <td><em>Escape</em></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>32</code></td>
-      <td>MPEG-1 Layer-1</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>33</code></td>
-      <td>MPEG-1 Layer-2 (MP2)</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>34</code></td>
-      <td>MPEG-1 Layer-3 (MP3)</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>35</code></td>
-      <td>DST (Direct Stream Transfer)</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>36</code></td>
-      <td>ALS (Audio Lossless)</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>37</code></td>
-      <td>SLS (Scalable Lossless)</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>38</code></td>
-      <td>SLS Non-core (Scalable Lossless Non-core)</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>39</code></td>
-      <td>ER AAC ELD (Error Resilient AAC Enhanced Low Delay)</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>40</code></td>
-      <td>SMR Simple (Symbolic Music Representation Simple)</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>41</code></td>
-      <td>SMR Main (Symbolic Music Representation Main)</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>42</code></td>
-      <td><em>Reserved</em></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>43</code></td>
-      <td>
-        <p>SAOC (Spatial Audio Object Coding)</p>
-        <p>
-          Defined in
-          <a href="https://www.iso.org/standard/54838.html"
-            >ISO/IEC 14496-3:2009/Amd.2:2010(E)</a
-          >.
-        </p>
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>44</code></td>
-      <td>
-        <p>LD MPEG Surround (Low Delay MPEG Surround)</p>
-        <p>
-          Defined in <a href="https://www.iso.org/standard/54838.html">ISO/IEC 14496-3:2009/Amd.2:2010(E)</a>.
-        </p>
-      </td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><code>45</code> and up</td>
-      <td><em>Reserved</em></td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
-
-### WebM
-
-The basic form for a WebM `codecs` parameter is to list one or more of the four WebM codecs by name, separated by commas. The table below shows some examples:
-
-| MIME type                        | Description                                               |
-| -------------------------------- | --------------------------------------------------------- |
-| `video/webm;codecs="vp8"`        | A WebM video with VP8 video in it; no audio is specified. |
-| `video/webm;codecs="vp9"`        | A WebM video with VP9 video in it.                        |
-| `audio/webm;codecs="vorbis"`     | Vorbis audio in a WebM container.                         |
-| `audio/webm;codecs="opus"`       | Opus audio in a WebM container.                           |
-| `video/webm;codecs="vp8,vorbis"` | A WebM container with VP8 video and Vorbis audio.         |
-| `video/webm;codecs="vp9,opus"`   | A WebM container with VP9 video and Opus audio.           |
-
-The strings `vp8.0` and `vp9.0` also work, but are not recommended.
+### VP9
 
 #### ISO Base Media File Format syntax
 
-As part of a move toward a standardized and powerful format for the `codecs` parameter, WebM is moving toward describing _video_ content using a syntax based on that defined by the [ISO Base Media File Format](#iso-bmff). This syntax is defined in [VP Codec ISO Media File Format Binding](https://www.webmproject.org/vp9/mp4/), in the section [Codecs Parameter String](https://www.webmproject.org/vp9/mp4/#codecs-parameter-string). The audio codec continues to be indicated as either `vorbis` or `opus`.
+The syntax of the `codecs` parameter for VP9 is defined in the [VP Codec ISO Media File Format Binding](https://www.webmproject.org/vp9/mp4/) specification, in the [Codecs Parameter String](https://www.webmproject.org/vp9/mp4/#codecs-parameter-string) section.
 
 In this format, the `codecs` parameter's value begins with a four-character code identifying the codec being used in the container, which is then followed by a series of period (`.`) separated two-digit values.
 
@@ -905,12 +557,363 @@ The first four components are required; everything from `CC` (chroma subsampling
   </tbody>
 </table>
 
-#### WebM media type examples
+#### Examples
 
-- `video/webm;codecs="vp08.00.41.08,vorbis"`
-  - : VP8 video, profile 0 level 4.1, using 8-bit YUV with 4:2:0 chroma subsampling, using BT.709 color primaries, transfer function, and matrix coefficients, with the luminance and chroma values encoded within the legal ("studio") range. The audio is in Vorbis format.
 - `video/webm;codecs="vp09.02.10.10.01.09.16.09.01,opus"`
   - : VP9 video, profile 2 level 1.0, with 10-bit YUV content using 4:2:0 chroma subsampling, BT.2020 primaries, ST 2084 EOTF (HDR SMPTE), BT.2020 non-constant luminance color matrix, and full-range chroma and luma encoding. The audio is in Opus format.
+
+### ISO Base Media File Format: MP4, QuickTime, and 3GP
+
+All media types based upon the [ISO Base Media File Format](https://en.wikipedia.org/wiki/ISO_Base_Media_File_Format) (ISO BMFF) share the same syntax for the `codecs` parameter. These media types include [MPEG-4](/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4) (and, in fact, the [QuickTime](/en-US/docs/Web/Media/Formats/Containers#quicktime) file format upon which MPEG-4 is based) as well as [3GP](/en-US/docs/Web/Media/Formats/Containers#3gp). Both video and audio tracks can be described using the `codecs` parameter with the following MIME types:
+
+| MIME type         | Description                                                                                                        |
+| ----------------- | ------------------------------------------------------------------------------------------------------------------ |
+| `audio/3gpp`      | 3GP audio ({{RFC(3839, "MIME Type Registrations for 3rd generation Partnership Project (3GP) Multimedia files")}}) |
+| `video/3gpp`      | 3GP video ({{RFC(3839, "MIME Type Registrations for 3rd generation Partnership Project (3GP) Multimedia files")}}) |
+| `audio/3gp2`      | 3GP2 audio ({{RFC(4393, "MIME Type Registrations for 3GPP2 Multimedia files")}})                                   |
+| `video/3gp2`      | 3GP2 video ({{RFC(4393, "MIME Type Registrations for 3GPP2 Multimedia files")}})                                   |
+| `audio/mp4`       | MP4 audio ({{RFC(4337, "MIME Type Registration for MPEG-4")}})                                                     |
+| `video/mp4`       | MP4 video ({{RFC(4337, "MIME Type Registration for MPEG-4")}})                                                     |
+| `application/mp4` | Non-audiovisual media encapsulated in MPEG-4                                                                       |
+
+Each codec described by the `codecs` parameter can be specified either as the container's name (`3gp`, `mp4`, `quicktime`, etc.) or as the container name plus additional parameters to specify the codec and its configuration. Each entry in the codec list may contain some number of components, separated by periods (`.`).
+
+The syntax for the value of `codecs` varies by codec; however, it always starts with the codec's four-character identifier, a period separator (`.`), followed by the Object Type Indication (OTI) value for the specific data format. For most codecs, the OTI is a two-digit hexadecimal number; however, it's six hexadecimal digits for [AVC (H.264)](/en-US/docs/Web/Media/Formats/Video_codecs#avc_h.264).
+
+Thus, the syntaxes for each of the supported codecs look like this:
+
+- `cccc[.pp]*` (Generic ISO BMFF)
+  - : Where `cccc` is the four-character ID for the codec and `pp` is where zero or more two-character encoded property values go.
+- `mp4a.oo[.A]` (MPEG-4 audio)
+  - : Where `oo` is the Object Type Indication value describing the contents of the media more precisely and `A` is the one-digit _audio_ OTI. The possible values for the OTI can be found on the MP4 Registration Authority website's [Object Types page](https://mp4ra.org/#/object_types). For example, Opus audio in an MP4 file is `mp4a.ad`. For further details, see [MPEG-4 audio](#mpeg-4_audio).
+- `mp4v.oo[.V]` (MPEG-4 video)
+  - : Here, `oo` is again the OTI describing the contents more precisely, while `V` is the one-digit _video_ OTI.
+- `avc1[.PPCCLL]` (AVC video)
+
+  - : `PPCCLL` are six hexadecimal digits specifying the profile number (`PP`), constraint set flags (`CC`), and level (`LL`). See [AVC profiles](#avc_profiles) for the possible values of `PP`.
+
+    The constraint set flags byte is comprised of one-bit Boolean flags, with the most significant bit being referred to as flag 0 (or `constraint_set0_flag`, in some resources), and each successive bit being numbered one higher. Currently, only flags 0 through 2 are used; the other five bits _must_ be zero. The meanings of the flags vary depending on the profile being used.
+
+    The level is a fixed-point number, so a value of `14` (decimal 20) means level 2.0 while a value of `3D` (decimal 61) means level 6.1. Generally speaking, the higher the level number, the more bandwidth the stream will use and the higher the maximum video dimensions are supported.
+
+#### AVC profiles
+
+The following are the AVC profiles and their profile numbers for use in the `codecs` parameter, as well as the value to specify for the constraints component, `CC`.
+
+| Profile                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Number (Hex) | Constraints byte |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------ | ---------------- |
+| **Constrained Baseline Profile (CBP)** CBP is primarily a solution for scenarios in which resources are constrained, or resource use needs to be controlled to minimize the odds of the media performing poorly.                                                                                                                                                                                                                                                                                                                                       | `42`         | `40`             |
+| **Baseline Profile (BP)** Similar to CBP but with more data loss protections and recovery capabilities. This is not as widely used as it was before CBP was introduced. All CBP streams are considered to also be BP streams.                                                                                                                                                                                                                                                                                                                          | `42`         | `00`             |
+| **Extended Profile (XP)** Designed for streaming video over the network, with high compression capability and further improvements to data robustness and stream switching.                                                                                                                                                                                                                                                                                                                                                                            | `58`         | `00`             |
+| **Main Profile (MP)** The profile used for standard-definition digital television being broadcast in MPEG-4 format. _Not_ used for high-definition television broadcasts. This profile's importance has faded since the introduction of the High Profile—which was added for HDTV use—in 2004.                                                                                                                                                                                                                                                         | `4D`         | `00`             |
+| **High Profile (HiP)** Currently, HiP is the primary profile used for broadcast and disc-based HD video; it's used both for HD TV broadcasts and for Blu-Ray video.                                                                                                                                                                                                                                                                                                                                                                                    | `64`         | `00`             |
+| **Progressive High Profile (PHiP)** Essentially High Profile without support for field coding.                                                                                                                                                                                                                                                                                                                                                                                                                                                         | `64`         | `08`             |
+| **Constrained High Profile** PHiP, but without support for bi-predictive slices ("B-slices").                                                                                                                                                                                                                                                                                                                                                                                                                                                          | `64`         | `0C`             |
+| **High 10 Profile (Hi10P)** High Profile, but with support for up to 10 bits per color component.                                                                                                                                                                                                                                                                                                                                                                                                                                                      | `6E`         | `00`             |
+| **High 4:2:2 Profile (Hi422P)** Expands upon Hi10P by adding support for 4:2:2 chroma subsampling along with up to10 bits per color component.                                                                                                                                                                                                                                                                                                                                                                                                         | `7A`         | `00`             |
+| **High 4:4:4 Predictive Profile (Hi444PP)** In addition to the capabilities included in Hi422P, Hi444PP adds support for 4:4:4 chroma subsampling (in which no color information is discarded). Also includes support for up to 14 bits per color sample and efficient lossless region coding. The option to encode each frame as three separate color planes (that is, each color's data is stored as if it were a single monochrome frame).                                                                                                          | `F4`         | `00`             |
+| **High 10 Intra Profile** High 10 constrained to all-intra-frame use. Primarily used for professional apps.                                                                                                                                                                                                                                                                                                                                                                                                                                            | `6E`         | `10`             |
+| **High 4:2:2 Intra Profile** The Hi422 Profile with all-intra-frame use.                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | `7A`         | `10`             |
+| **High 4:4:4 Intra Profile** The High 4:4:4 Profile constrained to use only intra frames.                                                                                                                                                                                                                                                                                                                                                                                                                                                              | `F4`         | `10`             |
+| **CAVLC 4:4:4 Intra Profile** The High 4:4:4 Profile constrained to all-intra use, and to using only CAVLC entropy coding.                                                                                                                                                                                                                                                                                                                                                                                                                             | `44`         | `00`             |
+| **Scalable Baseline Profile** Intended for use with video conferencing as well as surveillance and mobile uses, the [SVC](https://en.wikipedia.org/wiki/SVC) Baseline Profile is based on AVC's Constrained Baseline profile. The base layer within the stream is provided at a high quality level, with some number of secondary substreams that offer alternative forms of the same video for use in various constrained environments. These may include any combination of reduced resolution, reduced frame rate, or increased compression levels. | `53`         | `00`             |
+| **Scalable Constrained Baseline Profile** Primarily used for real-time communication applications. Not yet supported by WebRTC, but an extension to the WebRTC API [to allow SVC](https://github.com/w3c/webrtc-svc) is in development.                                                                                                                                                                                                                                                                                                                | `53`         | `04`             |
+| **Scalable High Profile** Meant mostly for use in broadcast and streaming applications. The base (or highest quality) layer must conform to the AVC High Profile.                                                                                                                                                                                                                                                                                                                                                                                      | `56`         | `00`             |
+| **Scalable Constrained High Profile** A subset of the Scalable High Profile designed mainly for real-time communication.                                                                                                                                                                                                                                                                                                                                                                                                                               | `56`         | `04`             |
+| **Scalable High Intra Profile** Primarily useful only for production applications, this profile supports only all-intra usage.                                                                                                                                                                                                                                                                                                                                                                                                                         | `56`         | `20`             |
+| **Stereo High Profile** The Stereo High Profile provides stereoscopic video using two renderings of the scene (left eye and right eye). Otherwise, provides the same features as the High profile.                                                                                                                                                                                                                                                                                                                                                     | `80`         | `00`             |
+| **Multiview High Profile** Supports two or more views using both temporal and MVC inter-view prediction. _Does not support_ field pictures or macroblock-adaptive frame-field coding.                                                                                                                                                                                                                                                                                                                                                                  | `76`         | `00`             |
+| **Multiview Depth High Profile** Based on the High Profile, to which the main substream must adhere. The remaining substreams must match the Stereo High Profile.                                                                                                                                                                                                                                                                                                                                                                                      | `8A`         | `00`             |
+
+#### MPEG-4 audio
+
+When the value of an entry in the `codecs` list begins with `mp4a`, the syntax of the value should be:
+
+```plain
+mp4a.oo[.A]
+```
+
+Here, `oo` is the two-digit hexadecimal Object Type Indication which specifies the codec class being used for the media. The OTIs are assigned by the [MP4 Registration Authority](https://mp4ra.org/), which maintains a [list of the possible OTI values](https://mp4ra.org/#/object_types). A special value is `40`; this indicates that the media is MPEG-4 audio (ISO/IEC 14496 Part 3). In order to be more specific still, a third component—the Audio Object Type—is added for OTI `40` to narrow the type down to a specific subtype of MPEG-4.
+
+The Audio Object Type is specified as a one or two digit _decimal_ value (unlike most other values in the `codecs` parameter, which use hexadecimal). For example, MPEG-4's AAC-LC has an audio object type number of `2`, so the full `codecs` value representing AAC-LC is `mp4a.40.2`.
+
+Thus, ER AAC LC, whose Audio Object Type is 17, can be represented using the full `codecs` value `mp4a.40.17`. Single digit values can be given either as one digit (which is the best choice, since it will be the most broadly compatible) or with a leading zero padding it to two digits, such as `mp4a.40.02`.
+
+> [!NOTE]
+> The specification originally mandated that the Audio Object Type number in the third component be only one decimal digit. However, amendments to the specification over time extended the range of these values well beyond one decimal digit, so now the third parameter may be either one or two digits. Padding values below 10 with a leading `0` is optional. Older implementations of MPEG-4 codecs may not support two-digit values, however, so using a single digit when possible will maximize compatibility.
+
+The Audio Object Types are defined in ISO/IEC 14496-3 subpart 1, section 1.5.1. The table below provides a basic list of the Audio Object Types and in the case of the more common object types provides a list of the profiles supporting it, but you should refer to the specification for details if you need to know more about the inner workings of any given MPEG-4 audio type.
+
+<table class="standard-table">
+  <caption>
+    MPEG-4 audio object types
+  </caption>
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Audio Object Type</th>
+      <th scope="col">Profile support</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>0</code></td>
+      <td>NULL</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>1</code></td>
+      <td>AAC Main</td>
+      <td>Main</td>
+    </tr>
+    <tr>
+      <td><code>2</code></td>
+      <td>AAC LC (Low Complexity)</td>
+      <td>Main, Scalable, HQ, LD v2, AAC, HE-AAC, HE-AAC v2</td>
+    </tr>
+    <tr>
+      <td><code>3</code></td>
+      <td>AAC SSR (Scalable Sampling Rate)</td>
+      <td>Main</td>
+    </tr>
+    <tr>
+      <td><code>4</code></td>
+      <td>AAC LTP (Long Term Prediction)</td>
+      <td>Main, Scalable, HQ</td>
+    </tr>
+    <tr>
+      <td><code>5</code></td>
+      <td>SBR (Spectral Band Replication)</td>
+      <td>HE-AAC, HE-AAC v2</td>
+    </tr>
+    <tr>
+      <td><code>6</code></td>
+      <td>AAC Scalable</td>
+      <td>Main, Scalable, HQ</td>
+    </tr>
+    <tr>
+      <td><code>7</code></td>
+      <td>TwinVQ (Coding for ultra-low bit rates)</td>
+      <td>Main, Scalable</td>
+    </tr>
+    <tr>
+      <td><code>8</code></td>
+      <td>CELP (Code-Excited Linear Prediction)</td>
+      <td>Main, Scalable, Speech, HQ, LD</td>
+    </tr>
+    <tr>
+      <td><code>9</code></td>
+      <td>HVXC (Harmonic Vector Excitation Coding)</td>
+      <td>Main, Scalable, Speech, LD</td>
+    </tr>
+    <tr>
+      <td><code>10</code> – <code>11</code></td>
+      <td><em>Reserved</em></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>12</code></td>
+      <td>TTSI (Text to Speech Interface)</td>
+      <td>Main, Scalable, Speech, Synthetic, LD</td>
+    </tr>
+    <tr>
+      <td><code>13</code></td>
+      <td>Main Synthetic</td>
+      <td>Main, Synthetic</td>
+    </tr>
+    <tr>
+      <td><code>14</code></td>
+      <td>Wavetable Synthesis</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>15</code></td>
+      <td>General MIDI</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>16</code></td>
+      <td>Algorithmic Synthesis and Audio Effects</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>17</code></td>
+      <td>ER AAC LC (Error Resilient AAC Low-Complexity)</td>
+      <td>HQ, Mobile Internetworking</td>
+    </tr>
+    <tr>
+      <td><code>18</code></td>
+      <td><em>Reserved</em></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>19</code></td>
+      <td>ER AAC LTP (Error Resilient AAC Long Term Prediction)</td>
+      <td>HQ</td>
+    </tr>
+    <tr>
+      <td><code>20</code></td>
+      <td>ER AAC Scalable (Error Resilient AAC Scalable)</td>
+      <td>Mobile Internetworking</td>
+    </tr>
+    <tr>
+      <td><code>21</code></td>
+      <td>ER TwinVQ (Error Resilient TwinVQ)</td>
+      <td>Mobile Internetworking</td>
+    </tr>
+    <tr>
+      <td><code>22</code></td>
+      <td>ER BSAC (Error Resilient Bit-Sliced Arithmetic Coding)</td>
+      <td>Mobile Internetworking</td>
+    </tr>
+    <tr>
+      <td><code>23</code></td>
+      <td>
+        ER AAC LD (Error Resilient AAC Low-Delay; used for two-way
+        communication)
+      </td>
+      <td>LD, Mobile Internetworking</td>
+    </tr>
+    <tr>
+      <td><code>24</code></td>
+      <td>ER CELP (Error Resilient Code-Excited Linear Prediction)</td>
+      <td>HQ, LD</td>
+    </tr>
+    <tr>
+      <td><code>25</code></td>
+      <td>ER HVXC (Error Resilient Harmonic Vector Excitation Coding)</td>
+      <td>LD</td>
+    </tr>
+    <tr>
+      <td><code>26</code></td>
+      <td>ER HILN (Error Resilient Harmonic and Individual Line plus Noise)</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>27</code></td>
+      <td>ER Parametric (Error Resilient Parametric)</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>28</code></td>
+      <td>SSC (Sinusoidal Coding)</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>29</code></td>
+      <td>PS (Parametric Stereo)</td>
+      <td>HE-AAC v2</td>
+    </tr>
+    <tr>
+      <td><code>30</code></td>
+      <td>MPEG Surround</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>31</code></td>
+      <td><em>Escape</em></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>32</code></td>
+      <td>MPEG-1 Layer-1</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>33</code></td>
+      <td>MPEG-1 Layer-2 (MP2)</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>34</code></td>
+      <td>MPEG-1 Layer-3 (MP3)</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>35</code></td>
+      <td>DST (Direct Stream Transfer)</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>36</code></td>
+      <td>ALS (Audio Lossless)</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>37</code></td>
+      <td>SLS (Scalable Lossless)</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>38</code></td>
+      <td>SLS Non-core (Scalable Lossless Non-core)</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>39</code></td>
+      <td>ER AAC ELD (Error Resilient AAC Enhanced Low Delay)</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>40</code></td>
+      <td>SMR Simple (Symbolic Music Representation Simple)</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>41</code></td>
+      <td>SMR Main (Symbolic Music Representation Main)</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>42</code></td>
+      <td><em>Reserved</em></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>43</code></td>
+      <td>
+        <p>SAOC (Spatial Audio Object Coding)</p>
+        <p>
+          Defined in
+          <a href="https://www.iso.org/standard/54838.html"
+            >ISO/IEC 14496-3:2009/Amd.2:2010(E)</a
+          >.
+        </p>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>44</code></td>
+      <td>
+        <p>LD MPEG Surround (Low Delay MPEG Surround)</p>
+        <p>
+          Defined in <a href="https://www.iso.org/standard/54838.html">ISO/IEC 14496-3:2009/Amd.2:2010(E)</a>.
+        </p>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>45</code> and up</td>
+      <td><em>Reserved</em></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+
+### WebM
+
+The basic form for a WebM `codecs` parameter is to list one or more of the four WebM codecs by name, separated by commas. The table below shows some examples:
+
+| MIME type                        | Description                                               |
+| -------------------------------- | --------------------------------------------------------- |
+| `video/webm;codecs="vp8"`        | A WebM video with VP8 video in it; no audio is specified. |
+| `video/webm;codecs="vp9"`        | A WebM video with VP9 video in it.                        |
+| `audio/webm;codecs="vorbis"`     | Vorbis audio in a WebM container.                         |
+| `audio/webm;codecs="opus"`       | Opus audio in a WebM container.                           |
+| `video/webm;codecs="vp8,vorbis"` | A WebM container with VP8 video and Vorbis audio.         |
+| `video/webm;codecs="vp9,opus"`   | A WebM container with VP9 video and Opus audio.           |
+
+The strings `vp8.0` and `vp9.0` also work, but are not recommended.
 
 ## Using the codecs parameter
 

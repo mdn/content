@@ -8,7 +8,7 @@ status:
 browser-compat: api.XRView.projectionMatrix
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The {{domxref("XRView")}} interface's read-only
 **`projectionMatrix`** property specifies the projection matrix

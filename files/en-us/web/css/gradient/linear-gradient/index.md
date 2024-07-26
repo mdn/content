@@ -62,7 +62,7 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%)
 - `<linear-color-stop>`
   - : A color-stop's {{CSSxRef("&lt;color&gt;")}} value, followed by one or two optional stop positions, (each being either a {{CSSxRef("&lt;percentage&gt;")}} or a {{CSSxRef("&lt;length&gt;")}} along the gradient's axis).
 - `<color-hint>`
-  - : An interpolation hint defining how the gradient progresses between adjacent color stops. The length defines at which point between two color stops the gradient color should reach the midpoint of the color transition. If omitted, the midpoint of the color transition is the midpoint between two color stops.
+  - : An {{glossary("interpolation")}} hint defining how the gradient progresses between adjacent color stops. The length defines at which point between two color stops the gradient color should reach the midpoint of the color transition. If omitted, the midpoint of the color transition is the midpoint between two color stops.
 
 > **Note:** Rendering of [color stops in CSS gradients](#composition_of_a_linear_gradient) follows the same rules as color stops in [SVG gradients](/en-US/docs/Web/SVG/Tutorial/Gradients).
 
@@ -250,9 +250,4 @@ Please see [using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradie
 - [`<hue-interpolation-method>`](/en-US/docs/Web/CSS/hue-interpolation-method)
 - [`<color-interpolation-method>`](/en-US/docs/Web/CSS/color-interpolation-method)
 - {{CSSxRef("&lt;image&gt;")}}
-- {{cssxref("element", "element()")}}
-- {{cssxref("image/image","image()")}}
-- {{cssxref("image/image-set","image-set()")}}
-- {{cssxref("cross-fade", "cross-fade()")}}
 - [CSS images module](/en-US/docs/Web/CSS/CSS_images)
-- [New functions, gradients, and hues in CSS colors (Level 4)](/en-US/blog/css-color-module-level-4/) on MDN blog (2023)

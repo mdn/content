@@ -27,8 +27,8 @@ These properties are defined on `Intl.DurationFormat.prototype` and shared by al
 
 - {{jsxref("Object/constructor", "Intl.DurationFormat.prototype.constructor")}}
   - : The constructor function that created the instance object. For `Intl.DurationFormat` instances, the initial value is the {{jsxref("Intl/DurationFormat/DurationFormat", "Intl.DurationFormat")}} constructor.
-- `Intl.DurationFormat.prototype[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Intl.DurationFormat"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+- `Intl.DurationFormat.prototype[Symbol.toStringTag]`
+  - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Intl.DurationFormat"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 
@@ -60,7 +60,7 @@ new Intl.DurationFormat("fr-FR", { style: "long" }).format(duration);
 new Intl.DurationFormat("en", { style: "short" }).format(duration);
 // "1 hr, 46 min and 40 sec"
 
-// With style set to "short" and locale "pt"
+// With style set to "narrow" and locale "pt"
 new Intl.DurationFormat("pt", { style: "narrow" }).format(duration);
 // "1h 46min 40s"
 ```

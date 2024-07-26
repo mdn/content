@@ -13,14 +13,14 @@ The `OVR_multiview2` extension is part of the [WebGL API](/en-US/docs/Web/API/We
 For more information, see also:
 
 - [Multiview on WebXR](https://blog.mozvr.com/multiview-on-webxr/)
-- [three.js multiview demo](https://threejs.org/examples/webgl_multiple_views.html)
 - [Multiview in babylon.js](https://doc.babylonjs.com/divingDeeper/cameras/multiViewsPart1)
 - [Optimizing Virtual Reality: Understanding Multiview](https://community.arm.com/arm-community-blogs/b/graphics-gaming-and-vr-blog/posts/optimizing-virtual-reality-understanding-multiview)
 - [Multiview WebGL Rendering for Oculus Browser 6.0+](https://developer.oculus.com/documentation/oculus-browser/latest/concepts/browser-multiview/)
 
 WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 
-> **Note:** Support depends on the system's graphics driver (Windows+ANGLE and Android are supported; Windows+GL, Mac, Linux are not supported).
+> [!NOTE]
+> Support depends on the system's graphics driver (Windows+ANGLE and Android are supported; Windows+GL, Mac, Linux are not supported).
 >
 > This extension is only available to {{domxref("WebGL2RenderingContext", "WebGL 2", "", 1)}} contexts as it needs GLSL 3.00 and texture arrays.
 >
@@ -112,4 +112,3 @@ Also, see this [three.js](https://threejs.org/examples/?q=mult#webgl_multiple_vi
 - {{domxref("WebGLRenderingContext.getExtension()")}}
 - {{domxref("WebGLRenderingContext.getParameter()")}}
 - [WebXR](/en-US/docs/Web/API/WebXR_Device_API)
-- [three.js multiview demo](https://threejs.org/examples/webgl_multiple_views.html)

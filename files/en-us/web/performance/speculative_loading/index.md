@@ -20,7 +20,8 @@ There are several mechanisms for speculative loading:
 - **Prerendering** goes a step further, and actually renders the content ready to be shown when required. Depending on how this is done, this can result in an instant navigation from old page to new page.
 - **Preconnecting** involves speeding up future loads from a given origin by preemptively performing part or all of the connection handshake (i.e. DNS + TCP + TLS).
 
-> **Note:** The above descriptions are high-level and general. Exactly what browsers will do to achieve prefetching and prerendering depends on the features used. More exact feature descriptions are provided in the [Speculative loading features](#speculative_loading_features) section below.
+> [!NOTE]
+> The above descriptions are high-level and general. Exactly what browsers will do to achieve prefetching and prerendering depends on the features used. More exact feature descriptions are provided in the [Speculative loading features](#speculative_loading_features) section below.
 
 ## How is speculative loading achieved?
 
@@ -64,7 +65,8 @@ For example:
 <link rel="dns-prefetch" href="https://example.com" />
 ```
 
-> **Note:** See [Using dns-prefetch](/en-US/docs/Web/Performance/dns-prefetch) for more details.
+> [!NOTE]
+> See [Using dns-prefetch](/en-US/docs/Web/Performance/dns-prefetch) for more details.
 
 ### `<link rel="preload">`
 
@@ -136,16 +138,18 @@ Many browsers now implement some form of [cache partitioning](https://developer.
 
 Would not be accessible from `https://aggregator.example/`.
 
-> **Note:** `<link rel="prefetch">` is functionally equivalent to a {{domxref("fetch()")}} call with a `priority: "low"` option set on it, except that the former will generally have an even lower priority, and it will have a [`Sec-Purpose: prefetch`](/en-US/docs/Web/HTTP/Headers/Sec-Purpose) header set on the request.
+> **Note:** `<link rel="prefetch">` is functionally equivalent to a {{domxref("Window/fetch", "fetch()")}} call with a `priority: "low"` option set on it, except that the former will generally have an even lower priority, and it will have a [`Sec-Purpose: prefetch`](/en-US/docs/Web/HTTP/Headers/Sec-Purpose) header set on the request.
 
-> **Note:** The fetch request for a `prefetch` operation results in an HTTP Request that includes the HTTP header [`Sec-Purpose: prefetch`](/en-US/docs/Web/HTTP/Headers/Sec-Purpose). A server might use this header to change the cache timeouts for the resources, or perform other special handling.
+> [!NOTE]
+> The fetch request for a `prefetch` operation results in an HTTP Request that includes the HTTP header [`Sec-Purpose: prefetch`](/en-US/docs/Web/HTTP/Headers/Sec-Purpose). A server might use this header to change the cache timeouts for the resources, or perform other special handling.
 > The request will also include the {{HTTPHeader("Sec-Fetch-Dest")}} header with the value set to `empty`.
 > The {{HTTPHeader("Accept")}} header in the request will match the value used for normal navigation requests. This allows the browser to find the matching cached resources following navigation.
 > If a response is returned, it gets cached with the request in the HTTP cache.
 
 ### `<link rel="prerender">` {{deprecated_inline}}{{non-standard_inline}}
 
-> **Note:** This technology was only ever available in Chrome, and is now deprecated. You should use the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API) instead, which supercedes this.
+> [!NOTE]
+> This technology was only ever available in Chrome, and is now deprecated. You should use the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API) instead, which supercedes this.
 
 [`<link rel="prerender">`](/en-US/docs/Web/HTML/Attributes/rel/prerender) provides a hint to browsers that the user might need the target resource for the next navigation, and therefore the browser can likely improve performance by prerendering the resource. `prerender` is used for future navigations, same-site only, and as such makes sense for multi-page applications (MPAs), not single-page applications (SPAs).
 
@@ -159,7 +163,7 @@ It will fetch the referenced document, then fetch any linked resources that are 
 
 ### Speculation Rules API
 
-[`<script type="speculationrules">`](/en-US/docs/Web/HTML/Element/script/type/speculationrules) is used to provide a set of rules that determine what future documents should be prefetched or prerendered by the browser. This is part of the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API).
+The [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API) is used to specify a set of rules that determine what future documents should be prefetched or prerendered by the browser. These rules are provided as JSON structures inside inline [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Element/script/type/speculationrules) elements and external text files referenced by the {{httpheader("Speculation-Rules")}} response header.
 
 ## When should you use each feature?
 

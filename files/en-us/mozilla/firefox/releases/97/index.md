@@ -37,7 +37,7 @@ No notable changes
 ### SVG
 
 - The SVG {{SVGAttr('d')}} attribute, used to define a path to be drawn, can now be used as a property in CSS.
-  It accepts the values [path()](/en-US/docs/Web/CSS/path) or `none`. (See [Firefox bug 1744599](https://bugzil.la/1744599) for details.)
+  It accepts the values [path()](/en-US/docs/Web/CSS/basic-shape/path) or `none`. (See [Firefox bug 1744599](https://bugzil.la/1744599) for details.)
 
 #### Removals
 
@@ -47,7 +47,7 @@ No notable changes
 
 ### APIs
 
-- `AnimationFrameProvider` is now available in a [`DedicatedWorkerGlobalScope`](/en-US/docs/Web/API/DedicatedWorkerGlobalScope). This means the [`requestAnimationFrame`](/en-US/docs/Web/API/window/requestAnimationFrame) and [`cancelAnimationFrame`](/en-US/docs/Web/API/Window/cancelAnimationFrame) methods can be used within a dedicated worker.
+- `AnimationFrameProvider` is now available in a [`DedicatedWorkerGlobalScope`](/en-US/docs/Web/API/DedicatedWorkerGlobalScope). This means the [`requestAnimationFrame`](/en-US/docs/Web/API/Window/requestAnimationFrame) and [`cancelAnimationFrame`](/en-US/docs/Web/API/Window/cancelAnimationFrame) methods can be used within a dedicated worker.
   (See [Firefox bug 1388931](https://bugzil.la/1388931) for more details.)
 
 #### DOM
@@ -71,4 +71,4 @@ No notable changes
 
 ## Older versions
 
-{{Firefox_for_developers(96)}}
+{{Firefox_for_developers}}

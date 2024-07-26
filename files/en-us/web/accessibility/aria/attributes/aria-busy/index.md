@@ -7,6 +7,8 @@ spec-urls:
   - https://www.w3.org/TR/wai-aria-1.2/#aria-busy
 ---
 
+{{AccessibilitySidebar}}
+
 Used in [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions), the global `aria-busy` state indicates an element is being modified and that assistive technologies may want to wait until the changes are complete before informing the user about the update.
 
 When multiple parts of a live region need to be loaded before changes are announced to the user, set `aria-busy="true"` until loading is complete. Then set to `aria-busy="false"`. This prevents assistive technologies from announcing changes before updates are done.
@@ -38,7 +40,7 @@ If changes to a rendered widget would create a state where the widget is missing
 - true
   - : The element is being updated.
 
-## API
+## Associated interfaces
 
 - {{domxref("Element.ariaBusy")}}
   - : The [`ariaBusy`](/en-US/docs/Web/API/Element/ariaBusy) property, part of each element's interface, reflects the value of the `aria-busy` attribute, which indicates whether an element is being modified.
@@ -67,17 +69,9 @@ Used in **ALL** roles
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [ARIA live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
 - [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live)
 - [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-relevant)
 - [`aria-atomic`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-atomic)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA states and properties**](/en-US/docs/Web/Accessibility/ARIA/Attributes)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
-
-</section>

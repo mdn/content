@@ -8,7 +8,8 @@ page-type: learn-module-assessment
 
 The aim of this skill test is to assess whether you understand how to [style HTML tables in CSS](/en-US/docs/Learn/CSS/Building_blocks/Styling_tables).
 
-> **Note:** You can try solutions in the interactive editors on this page or in an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+> [!NOTE]
+> You can try solutions in the interactive editors on this page or in an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
 >
 > If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
@@ -21,7 +22,10 @@ Our finished table will look like the image below. There are a number of ways th
 - Add padding of `0.3em` to the table headings and data and align them at the top of their cells.
 - Align headings and data for columns containing numbers right.
 - Align headings and data for columns containing text left.
-- Add a 1px top and bottom solid border with the hex color `#999`, plus a 1px solid border of the same color above the footer.
+- Align the heading of the table footer right.
+- Align the data of the table footer left.
+- Add a 1px top and bottom solid border with the hex color `#999` to the table.
+- Add a 1px top solid border with the hex color `#999` to the footer.
 - Remove the default spacing between the table elements borders to get the expected result.
 - Stripe every odd row of the main table with the hex color `#eee`.
 
@@ -35,6 +39,6 @@ Additional question:
 
 - What can you do to make the table layout behave a bit more predictably? Think of how table columns are sized by default and how we can change this behavior to size the columns according to the width of their headings.
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/tables/table-download.html) to work in your own editor or in an online editor.

@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.clipboard.setImageData
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Copies an image to the clipboard. The image is re-encoded before it is written to the clipboard. If the image is invalid, the clipboard is not modified.
 
@@ -67,4 +67,5 @@ fetch(browser.runtime.getURL("image.png"))
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.clipboard`](https://developer.chrome.com/docs/extensions/reference/clipboard/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.clipboard`](https://developer.chrome.com/docs/extensions/reference/clipboard/) API.

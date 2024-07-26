@@ -3,12 +3,10 @@ title: "CustomStateSet: clear() method"
 short-title: clear()
 slug: Web/API/CustomStateSet/clear
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.CustomStateSet.clear
 ---
 
-{{APIRef("Web Components")}}{{SeeCompatTable}}
+{{APIRef("Web Components")}}
 
 The **`clear()`** method of the {{domxref("CustomStateSet")}} interface removes all elements from the `CustomStateSet` object.
 

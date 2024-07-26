@@ -12,7 +12,7 @@ The **`storage`** event of the {{domxref("Window")}} interface fires when a stor
 
 This event is not cancelable and does not bubble.
 
-> **Note:** This won't work on the same page that is making the changes — it is really a way for other pages on the domain using the storage to sync any changes that are made. Pages on other domains can't access the same storage objects.
+> **Note:** This won't work on the same {{Glossary("browsing context")}} that is making the changes — it is really a way for other browsing contexts on the domain using the storage to sync any changes that are made. Browsing contexts on other domains can't access the same storage objects.
 
 ## Syntax
 

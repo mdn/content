@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.search.get
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Gets an array of all installed search engines.
 

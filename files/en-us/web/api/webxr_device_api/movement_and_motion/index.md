@@ -15,7 +15,7 @@ The core of this example—the spinning, textured, lighted cube—is taken from 
 
 While reading this article and the accompanying source code, it's helpful to keep in mind that the display for a 3D headset is a single screen, divided in half. The left half of the screen is seen only by the left eye, while the right half is only seen by the right eye. Rendering the scene for immersive presentation requires multiple renders of the scene—once from the perspective of each eye.
 
-When rendering the left eye, the {{domxref("XRWebGLLayer")}} has its {{domxref("XRWebGLLayer.viewport", "viewport")}} configured to restrict drawing to the left half of the drawing surface. Contrarily, when rendering the right eye, the viewport is set to restrict drawing to the right half of the surface.
+When rendering the left eye, the {{domxref("XRWebGLLayer")}} has its [viewport](/en-US/docs/Web/API/XRWebGLLayer/getViewport) configured to restrict drawing to the left half of the drawing surface. Contrarily, when rendering the right eye, the viewport is set to restrict drawing to the right half of the surface.
 
 This example demonstrates this by showing the canvas on the screen, even when presenting a scene as an immersive display using an XR device.
 
@@ -677,8 +677,7 @@ function displayMatrix(mat, rowLength, target) {
 
   if (mat && rowLength && rowLength <= mat.length) {
     let numRows = mat.length / rowLength;
-    outHTML =
-      "<math xmlns='http://www.w3.org/1998/Math/MathML' display='block'>\n<mrow>\n<mo>[</mo>\n<mtable>\n";
+    outHTML = "<math display='block'>\n<mrow>\n<mo>[</mo>\n<mtable>\n";
 
     for (let y = 0; y < numRows; y++) {
       outHTML += "<mtr>\n";

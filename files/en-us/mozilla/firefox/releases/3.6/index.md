@@ -203,4 +203,4 @@ The following assorted changes have been made:
 
 ## See also
 
-{{Firefox_for_developers('3.5')}}
+{{Firefox_for_developers}}

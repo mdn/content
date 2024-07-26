@@ -30,7 +30,7 @@ if ("launchQueue" in window) {
       const track = params.get("track");
       if (track) {
         audio.src = track;
-        title.textContent = new URL(track).pathname.substr(1);
+        title.textContent = new URL(track).pathname.substring(1);
         audio.play();
       }
     }
@@ -50,5 +50,5 @@ if ("launchQueue" in window) {
 
 - {{domxref("Launch Handler API", "Launch Handler API", "", "nocode")}}
 - [Launch Handler API: Control how your app is launched](https://developer.chrome.com/docs/web-platform/launch-handler/)
-- {{domxref("Window.launchQueue")}}
+- `Window.launchQueue`
 - [Musicr 2.0](https://launch-handler.glitch.me/) demo app

@@ -103,7 +103,7 @@ html {
 /* Transition for the popover's backdrop */
 
 [popover]::backdrop {
-  background-color: rgb(0 0 0 / 0);
+  background-color: rgb(0 0 0 / 0%);
   transition:
     display 0.7s allow-discrete,
     overlay 0.7s allow-discrete,
@@ -113,7 +113,7 @@ html {
 }
 
 [popover]:popover-open::backdrop {
-  background-color: rgb(0 0 0 / 0.25);
+  background-color: rgb(0 0 0 / 25%);
 }
 
 /* Nesting selectors (&) cannot represent pseudo-elements, so this 
@@ -121,7 +121,7 @@ html {
 
 @starting-style {
   [popover]:popover-open::backdrop {
-    background-color: rgb(0 0 0 / 0);
+    background-color: rgb(0 0 0 / 0%);
   }
 }
 ```

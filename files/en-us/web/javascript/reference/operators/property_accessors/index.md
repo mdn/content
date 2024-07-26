@@ -16,6 +16,7 @@ browser-compat: javascript.operators.property_accessors
 ```js-nolint
 object.propertyName
 object[expression]
+object.#privateProperty
 ```
 
 ## Description
@@ -66,6 +67,8 @@ If you use a method for a numeric literal, and the numeric literal has no expone
 77.0.toExponential();
 // because 77. === 77.0, no ambiguity
 ```
+
+In addition, [private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) can only be accessed using dot notation within the class that defines them.
 
 ### Bracket notation
 

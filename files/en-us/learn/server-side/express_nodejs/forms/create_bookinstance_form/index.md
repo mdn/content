@@ -145,7 +145,8 @@ block content
         li!= error.msg
 ```
 
-> **Note:** The above template hard-codes the _Status_ values (Maintenance, Available, etc.) and does not "remember" the user's entered values.
+> [!NOTE]
+> The above template hard-codes the _Status_ values (Maintenance, Available, etc.) and does not "remember" the user's entered values.
 > Should you so wish, consider reimplementing the list, passing in option data from the controller and setting the selected value when the form is re-displayed.
 
 The view structure and behavior is almost the same as for the **book_form.pug** template, so we won't go over it in detail.
@@ -163,7 +164,7 @@ The `due_back_yyyy_mm_dd()` method is added to the `BookInstance` model in the n
 Open the file where you defined the `BookInstanceSchema` model (**models/bookinstance.js**).
 Add the `due_back_yyyy_mm_dd()` virtual function shown below (after the `due_back_formatted()` virtual function):
 
-```pug
+```js
 BookInstanceSchema.virtual("due_back_yyyy_mm_dd").get(function () {
   return DateTime.fromJSDate(this.due_back).toISODate(); // format 'YYYY-MM-DD'
 });

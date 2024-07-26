@@ -13,7 +13,7 @@ page-type: learn-module-chapter
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, HTML basics (study
+        HTML basics (study
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
           >Introduction to HTML</a
         >), CSS basics (study
@@ -297,7 +297,8 @@ Gives you this output:
 
 {{ EmbedLiveSample('reversed', '100%', 150) }}
 
-> **Note:** If there are more list items in a reversed list than the value of the `start` attribute, the count will continue to zero and then into negative values.
+> [!NOTE]
+> If there are more list items in a reversed list than the value of the `start` attribute, the count will continue to zero and then into negative values.
 
 ### value
 
@@ -318,7 +319,8 @@ Gives you this output:
 
 {{ EmbedLiveSample('value', '100%', 150) }}
 
-> **Note:** Even if you are using a non-number {{cssxref("list-style-type")}}, you still need to use the equivalent numerical values in the `value` attribute.
+> [!NOTE]
+> Even if you are using a non-number {{cssxref("list-style-type")}}, you still need to use the equivalent numerical values in the `value` attribute.
 
 ## Active learning: Styling a nested list
 

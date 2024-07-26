@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPURenderPassEncoder.setBindGroup
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`setBindGroup()`** method of the
 {{domxref("GPURenderPassEncoder")}} interface sets the {{domxref("GPUBindGroup")}} to use for subsequent render commands, for a given index.
@@ -80,7 +80,8 @@ device.queue.submit([commandEncoder.finish()]);
 // ...
 ```
 
-> **Note:** Study the other [WebGPU Samples](https://webgpu.github.io/webgpu-samples) for more examples of `setBindGroup()` usage.
+> [!NOTE]
+> Study the other [WebGPU Samples](https://webgpu.github.io/webgpu-samples) for more examples of `setBindGroup()` usage.
 
 ## Specifications
 

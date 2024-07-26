@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.notifications.onShown
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired immediately after a notification has been shown.
 
@@ -58,4 +58,5 @@ browser.notifications.onShown.addListener(logShown);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/notifications/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/notifications/) API.

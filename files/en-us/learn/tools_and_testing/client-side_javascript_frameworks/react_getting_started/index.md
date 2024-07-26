@@ -81,7 +81,8 @@ const header = (
 );
 ```
 
-> **Note:** The parentheses in the previous snippet aren't unique to JSX, and don't have any effect on your application. They're a signal to you (and your computer) that the multiple lines of code inside are part of the same expression. You could just as well write the header expression like this:
+> [!NOTE]
+> The parentheses in the previous snippet aren't unique to JSX, and don't have any effect on your application. They're a signal to you (and your computer) that the multiple lines of code inside are part of the same expression. You could just as well write the header expression like this:
 >
 > ```jsx-nolint
 > const header = <header>
@@ -129,7 +130,7 @@ You may use the Yarn package manager as an alternative to npm but we'll assume y
 
 If you're using Windows, you will need to install some software to give you parity with Unix/macOS terminal in order to use the terminal commands mentioned in this tutorial. **Gitbash** (which comes as part of the [git for Windows toolset](https://gitforwindows.org/)) or **[Windows Subsystem for Linux](https://docs.microsoft.com/windows/wsl/about)** (**WSL**) are both suitable. See [Command line crash course](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line) for more information on these, and on terminal commands in general.
 
-Also bear in mind that React and ReactDOM produce apps that only work on a fairly modern set of browsers — IE9+ by way of some polyfills. It is recommended that you use a modern browser like Firefox, Microsoft Edge, Safari, or Chrome when working through these tutorials.
+Also bear in mind that React and ReactDOM produce apps that only work on a fairly modern set of browsers like Firefox, Microsoft Edge, Safari, or Chrome when working through these tutorials.
 
 See the following for more information:
 
@@ -147,7 +148,8 @@ npm create vite@latest moz-todo-react -- --template react
 
 This creates a `moz-todo-react` directory using Vite's `react` template.
 
-> **Note:** The `--` is necessary to pass arguments to npm commands such as `create`, and the `--template react` argument tells Vite to use its React template.
+> [!NOTE]
+> The `--` is necessary to pass arguments to npm commands such as `create`, and the `--template react` argument tells Vite to use its React template.
 
 Your terminal will have printed some messages if this command was successful. You should see text prompting you to `cd` to your new directory, install the app's dependencies, and run the app locally. Let's start with two of those commands. Run the following in your terminal:
 
@@ -209,7 +211,8 @@ Before we move on, you might want to change your `package.json` file a little bi
 
 With this in place, your app will open in your browser at `http://localhost:3000` every time you run `npm run dev`.
 
-> **Note:** You _don't_ need the extra `--` here because we're passing arguments directly to `vite`, rather than to a pre-defined npm script.
+> [!NOTE]
+> You _don't_ need the extra `--` here because we're passing arguments directly to `vite`, rather than to a pre-defined npm script.
 
 ## Exploring our first React component — `<App />`
 
@@ -462,7 +465,8 @@ function App(props) {
 
 Save your file and check your browser. You'll see a blank background with no content. This is because we're trying to read a `subject` variable that's no longer defined. Fix this by commenting out the `<h1>Hello {subject}!</h1>` line.
 
-> **Note:** If your code editor understands how to parse JSX (most modern editors do!), you can use its built-in commenting shortcut — `Ctrl + /` (on Windows) or `Cmd + /` (on macOS) — to create comments more quickly.
+> [!NOTE]
+> If your code editor understands how to parse JSX (most modern editors do!), you can use its built-in commenting shortcut — `Ctrl + /` (on Windows) or `Cmd + /` (on macOS) — to create comments more quickly.
 
 Save the file with that line commented out. This time, you should see your
 "Click me!" button rendered by itself. If you open your browser's developer console, you'll see a message that looks like this:

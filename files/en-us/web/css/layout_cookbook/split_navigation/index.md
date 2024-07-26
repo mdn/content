@@ -2,7 +2,6 @@
 title: Split navigation
 slug: Web/CSS/Layout_cookbook/Split_Navigation
 page-type: guide
-browser-compat: css.properties.flex
 ---
 
 {{CSSRef}}
@@ -19,7 +18,7 @@ A common navigation pattern is to have one element pushed away from the others. 
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/split-navigation.html", '100%', 520)}}
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/split-navigation--download.html)
 

@@ -9,7 +9,7 @@ browser-compat: css.selectors.-webkit-meter-bar
 
 {{CSSRef}}{{Non-standard_header}}
 
-The **`::-webkit-meter-bar`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Glossary/Pseudo-element) is a [WebKit extension](/en-US/docs/Web/CSS/WebKit_Extensions) that represents the meter bar in a {{HTMLElement("meter")}} element. It is used for selecting and applying styles to the container meter gauge.
+The **`::-webkit-meter-bar`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Glossary/Pseudo-element) is a [WebKit extension](/en-US/docs/Web/CSS/WebKit_Extensions) that represents the background of a {{HTMLElement("meter")}} element. It is used for selecting and applying styles to the container of a meter gauge.
 
 ## Syntax
 
@@ -30,16 +30,22 @@ Not part of any standard.
 ```html
 Normal: <meter min="0" max="10" value="6">Score 6/10</meter>
 <br />
-Styled: <meter id="styled" min="0" max="10" value="6">Score 6/10</meter>
+Styled: &nbsp;&nbsp;<meter id="styled" min="0" max="10" value="6">
+  Score 6/10
+</meter>
 ```
 
 ### CSS
 
-```css
-body {
-  font-family: monospace;
+```css hidden
+meter {
+  height: 30px;
+  width: 200px;
+  vertical-align: -0.8rem;
 }
+```
 
+```css
 .safari meter {
   /* Reset the default appearance for Safari only */
   /* .safari class is added via JavaScript */
@@ -47,9 +53,9 @@ body {
 }
 
 #styled::-webkit-meter-bar {
-  background: #eee;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2) inset;
-  border-radius: 3px;
+  background: lime;
+  box-shadow: 0 10px 20px grey inset;
+  border-radius: 10px;
 }
 ```
 

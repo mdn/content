@@ -6,9 +6,9 @@ page-type: web-api-event
 browser-compat: api.MediaDevices.devicechange_event
 ---
 
-{{APIRef}}
+{{APIRef("Media Capture and Streams")}}{{SecureContext_Header}}
 
-A `devicechange` event is sent to a {{domxref("MediaDevices")}} instance whenever a media device such as a camera, microphone, or speaker is connected to or removed from the system.
+The **`devicechange`** event is sent to a {{domxref("MediaDevices")}} instance whenever a media device such as a camera, microphone, or speaker is connected to or removed from the system.
 
 This event is not cancelable and does not bubble.
 
@@ -109,7 +109,7 @@ const logElement = document.querySelector("output");
 const startButton = document.querySelector("#startButton");
 
 function log(msg) {
-  logElement.innerHTML += `${msg}<br>`;
+  logElement.innerText += `${msg}\n`;
 }
 
 startButton.addEventListener(
@@ -159,8 +159,8 @@ displayed lists of audio and video devices using that information.
 ```js
 function updateDeviceList() {
   navigator.mediaDevices.enumerateDevices().then((devices) => {
-    audioList.innerHTML = "";
-    videoList.innerHTML = "";
+    audioList.textContent = "";
+    videoList.textContent = "";
 
     devices.forEach((device) => {
       const elem = document.createElement("li");

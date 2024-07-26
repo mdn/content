@@ -8,11 +8,12 @@ status:
 browser-compat: api.Navigator.getInstalledRelatedApps
 ---
 
-{{ ApiRef() }}{{SeeCompatTable}}
+{{APIRef}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`getInstalledRelatedApps()`** method returns a promise that resolves with an array of objects representing any related platform-specific apps or [Progressive Web Apps](/en-US/docs/Web/Progressive_web_apps) that the user has installed. This could be used for content personalization such as removing "install our app" banners from the web app if the platform-specific app and/or PWA is already installed.
 
-> **Note:** This method must be invoked in a top-level [secure context](/en-US/docs/Web/Security/Secure_Contexts), that is, not embedded in an {{htmlelement("iframe")}}.
+> [!NOTE]
+> This method must be invoked in a top-level [secure context](/en-US/docs/Web/Security/Secure_Contexts), that is, not embedded in an {{htmlelement("iframe")}}.
 
 ## Description
 
@@ -33,7 +34,8 @@ Defining the relationship is done in a different way depending on the type of ap
 
 See [Is your app installed? getInstalledRelatedApps() will tell you!](https://web.dev/articles/get-installed-related-apps) for more details on how to handle each one of these cases.
 
-> **Note:** Most supporting browsers provide their own install UI when an installable PWA is detected, which won't appear if it is already installed — see [Making PWAs installable > Installation from the web](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#installation_from_the_web). This can be suppressed using the {{domxref("Window.beforeinstallprompt_event", "beforeinstallprompt")}} event, which could also be combined with `getInstalledRelatedApps()` to suppress it based on a platform-specific app being available. See [Trigger installation from your PWA](/en-US/docs/Web/Progressive_web_apps/How_to/Trigger_install_prompt#responding_to_platform-specific_apps_being_installed) for further useful information.
+> [!NOTE]
+> Most supporting browsers provide their own install UI when an installable PWA is detected, which won't appear if it is already installed — see [Making PWAs installable > Installation from the web](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#installation_from_the_web). This can be suppressed using the {{domxref("Window.beforeinstallprompt_event", "beforeinstallprompt")}} event, which could also be combined with `getInstalledRelatedApps()` to suppress it based on a platform-specific app being available. See [Trigger installation from your PWA](/en-US/docs/Web/Progressive_web_apps/How_to/Trigger_install_prompt#responding_to_platform-specific_apps_being_installed) for further useful information.
 
 ## Syntax
 
@@ -84,13 +86,14 @@ console.table(relatedApps);
 const psApp = relatedApps.find((app) => app.id === "com.example.myapp");
 
 if (psApp && doesVersionSendPushMessages(psApp.version)) {
-  // There’s an installed platform-specific app that handles sending push messages
+  // There's an installed platform-specific app that handles sending push messages
   // No need to handle this via the web app
   return;
 }
 ```
 
-> **Note:** In this example, `doesVersionSendPushMessages()` is a theoretical developer-defined function; it is not provided by the browser.
+> [!NOTE]
+> In this example, `doesVersionSendPushMessages()` is a theoretical developer-defined function; it is not provided by the browser.
 
 ## Specifications
 

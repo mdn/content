@@ -234,7 +234,7 @@ function runComposite() {
     ctx.globalCompositeOperation = pop;
     ctx.drawImage(canvas2, 0, 0, width / 2, height / 2);
     ctx.globalCompositeOperation = "source-over";
-    ctx.fillStyle = "rgba(0,0,0,0.8)";
+    ctx.fillStyle = "rgb(0 0 0 / 80%)";
     ctx.fillRect(0, height / 2 - 20, width / 2, 20);
     ctx.fillStyle = "#FFF";
     ctx.font = "14px arial";
@@ -245,7 +245,7 @@ function runComposite() {
     ctx.clearRect(0, 0, width, height);
     ctx.save();
     ctx.drawImage(canvas1, 0, 0, width / 2, height / 2);
-    ctx.fillStyle = "rgba(0,0,0,0.8)";
+    ctx.fillStyle = "rgb(0 0 0 / 80%)";
     ctx.fillRect(0, height / 2 - 20, width / 2, 20);
     ctx.fillStyle = "#FFF";
     ctx.font = "14px arial";
@@ -256,7 +256,7 @@ function runComposite() {
     ctx.clearRect(0, 0, width, height);
     ctx.save();
     ctx.drawImage(canvas2, 0, 0, width / 2, height / 2);
-    ctx.fillStyle = "rgba(0,0,0,0.8)";
+    ctx.fillStyle = "rgb(0 0 0 / 80%)";
     ctx.fillRect(0, height / 2 - 20, width / 2, 20);
     ctx.fillStyle = "#FFF";
     ctx.font = "14px arial";
@@ -282,15 +282,15 @@ const lightMix = () => {
   ctx.save();
   ctx.globalCompositeOperation = "lighter";
   ctx.beginPath();
-  ctx.fillStyle = "rgba(255,0,0,1)";
+  ctx.fillStyle = "rgb(255 0 0 / 100%)";
   ctx.arc(100, 200, 100, Math.PI * 2, 0, false);
   ctx.fill();
   ctx.beginPath();
-  ctx.fillStyle = "rgba(0,0,255,1)";
+  ctx.fillStyle = "rgb(0 0 255 / 100%)";
   ctx.arc(220, 200, 100, Math.PI * 2, 0, false);
   ctx.fill();
   ctx.beginPath();
-  ctx.fillStyle = "rgba(0,255,0,1)";
+  ctx.fillStyle = "rgb(0 255 0 / 100%)";
   ctx.arc(160, 100, 100, Math.PI * 2, 0, false);
   ctx.fill();
   ctx.restore();
@@ -318,9 +318,9 @@ const colorSphere = (element) => {
       otop + halfWidth,
     );
     const color = Color.HSV_RGB({ H: (n + 300) % 360, S: 100, V: 100 });
-    gradient.addColorStop(0, "rgba(0,0,0,0)");
-    gradient.addColorStop(0.7, `rgba(${color.R}, ${color.G}, ${color.B}, 1)`);
-    gradient.addColorStop(1, "rgba(255,255,255,1)");
+    gradient.addColorStop(0, "rgb(0 0 0 / 0%)");
+    gradient.addColorStop(0.7, `rgb(${color.R} ${color.G} ${color.B} / 100%)`);
+    gradient.addColorStop(1, "rgb(255 255 255 / 100%)");
     ctx.beginPath();
     ctx.moveTo(oleft + halfWidth, otop);
     ctx.lineTo(oleft + halfWidth, otop + halfWidth);

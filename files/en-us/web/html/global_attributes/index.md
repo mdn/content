@@ -21,6 +21,8 @@ In addition to the basic HTML global attributes, the following global attributes
 
 - [`accesskey`](/en-US/docs/Web/HTML/Global_attributes/accesskey)
   - : Provides a hint for generating a keyboard shortcut for the current element. This attribute consists of a space-separated list of characters. The browser should use the first one that exists on the computer keyboard layout.
+- [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) {{non-standard_inline}}
+  - : Associates a positioned element with an anchor element. The attribute's value is the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) value of the element you want to anchor the positioned element to. The element can then be positioned [using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using).
 - [`autocapitalize`](/en-US/docs/Web/HTML/Global_attributes/autocapitalize)
   - : Controls whether inputted text is automatically capitalized and, if so, in what manner.
 - [`autofocus`](/en-US/docs/Web/HTML/Global_attributes/autofocus)
@@ -33,9 +35,8 @@ In addition to the basic HTML global attributes, the following global attributes
 
     - `true` or the _empty string_, which indicates that the element must be editable;
     - `false`, which indicates that the element must not be editable.
+    - `plaintext-only`, which indicates the element's raw text is editable, but rich text formatting is disabled.
 
-- [`contextmenu`](/en-US/docs/Web/HTML/Global_attributes/contextmenu) {{deprecated_inline}}
-  - : The [**`id`**](#id) of a {{HTMLElement("menu")}} to use as the contextual menu for this element.
 - [`data-*`](/en-US/docs/Web/HTML/Global_attributes/data-*)
   - : Forms a class of attributes, called custom data attributes, that allow proprietary information to be exchanged between the [HTML](/en-US/docs/Web/HTML) and its {{glossary("DOM")}} representation that may be used by scripts. All such custom data are available via the {{DOMxRef("HTMLElement")}} interface of the element the attribute is set on. The {{DOMxRef("HTMLElement.dataset")}} property gives access to them.
 - [`dir`](/en-US/docs/Web/HTML/Global_attributes/dir)
@@ -68,7 +69,8 @@ In addition to the basic HTML global attributes, the following global attributes
 - [`is`](/en-US/docs/Web/HTML/Global_attributes/is)
   - : Allows you to specify that a standard HTML element should behave like a registered custom built-in element (see [Using custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements) for more details).
 
-> **Note:** The `item*` attributes are part of the [WHATWG HTML Microdata feature](https://html.spec.whatwg.org/multipage/microdata.html#microdata).
+> [!NOTE]
+> The `item*` attributes are part of the [WHATWG HTML Microdata feature](https://html.spec.whatwg.org/multipage/microdata.html#microdata).
 
 - [`itemid`](/en-US/docs/Web/HTML/Global_attributes/itemid)
   - : The unique, global identifier of an item.
@@ -120,7 +122,7 @@ In addition to the basic HTML global attributes, the following global attributes
 
 - [`virtualkeyboardpolicy`](/en-US/docs/Web/HTML/Global_attributes/virtualkeyboardpolicy) {{Experimental_Inline}}
 
-  - : An [enumerated](/en-US/docs/Glossary/Enumerated) attribute used to control the on-screen virtual keyboard behavior on devices such as tablets, mobile phones, or other devices where a hardware keyboard may not be available for elements that also uses the [`contenteditable`](#contenteditable) attribute.
+  - : An [enumerated](/en-US/docs/Glossary/Enumerated) attribute used to control the on-screen virtual keyboard behavior on devices such as tablets, mobile phones, or other devices where a hardware keyboard may not be available for elements that its content is editable (for example, it is an {{htmlelement("input")}} or {{htmlelement("textarea")}} element, or an element with the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute set).
 
     - `auto` or an _empty string_, which automatically shows the virtual keyboard when the element is focused or tapped.
     - `manual`, which decouples focus and tap on the element from the virtual keyboard's state.

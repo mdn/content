@@ -27,7 +27,8 @@ reading the remote resource at https://some-url-here. (Reason:
 additional information here).
 ```
 
-> **Note:** For security reasons, specifics about what went wrong with a CORS request _are not available to JavaScript code_. All the code knows is that an error occurred. The only way to determine what specifically went wrong is to look at the browser's console for details.
+> [!NOTE]
+> For security reasons, specifics about what went wrong with a CORS request _are not available to JavaScript code_. All the code knows is that an error occurred. The only way to determine what specifically went wrong is to look at the browser's console for details.
 
 ## CORS error messages
 
@@ -56,4 +57,3 @@ Firefox's console displays messages in its console when requests fail due to COR
 - [Server-side CORS settings](/en-US/docs/Web/HTTP/CORS)
 - [CORS enabled image](/en-US/docs/Web/HTML/CORS_enabled_image)
 - [CORS settings attributes](/en-US/docs/Web/HTML/Attributes/crossorigin)
-- <https://www.test-cors.org> – page to test CORS requests

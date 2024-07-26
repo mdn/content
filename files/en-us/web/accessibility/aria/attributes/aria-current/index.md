@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-current
 ---
 
+{{AccessibilitySidebar}}
+
 A non-null `aria-current` state on an element indicates that this element represents the current item within a container or set of related elements.
 
 ## Description
@@ -19,7 +21,8 @@ The `aria-current` attribute accepts a limited list of [values](#values) includi
 
 When something is selected rather than current, such as a [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) in a [`tablist`](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role), use [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) to indicate the currently-displayed tabpanel.
 
-> **Note:** Don't use `aria-current` as a substitute for [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) in [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role), [`option`](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role), [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role) or [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role).
+> [!NOTE]
+> Don't use `aria-current` as a substitute for [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) in [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role), [`option`](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role), [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role) or [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role).
 
 ## Example
 
@@ -66,7 +69,7 @@ If the element representing the current page in the breadcrumb was not a link, t
 - `false` (default)
   - : Does not represent the current item within a set.
 
-## ARIAMixin API
+## Associated interfaces
 
 - {{domxref("Element.ariaCurrent")}}
   - : The [`ariaCurrent`](/en-US/docs/Web/API/Element/ariaCurrent) property, part of the {{domxref("Element")}} interface, reflects the value of the `aria-current` attribute.
@@ -75,21 +78,14 @@ If the element representing the current page in the breadcrumb was not a link, t
 
 ## Associated roles
 
-Usable in all roles; except in for elements with the role of [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role), [`option`](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role), [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role) and [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) where [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) should be used
+Usable in all roles; except for elements with the role of [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role), [`option`](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role), [`row`](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role) and [`tab`](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role) where [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) should be used
 
 ## Specifications
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected)
 - {{cssxref(':local-link')}}
 - [Breadcrumb navigation with `aria-current`](/en-US/docs/Web/CSS/Layout_cookbook/Breadcrumb_Navigation)
-
-<section id="Quick_links">
-
-<ol><li><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">ARIA States &amp; Properties</a>
-  {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}</li></ol>
-
-</section>

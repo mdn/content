@@ -2,14 +2,27 @@
 title: Sensor APIs
 slug: Web/API/Sensor_APIs
 page-type: web-api-overview
-browser-compat: api.Sensor
+browser-compat:
+  - api.Sensor
+  - api.Accelerometer
+  - api.OrientationSensor
+  - api.Gyroscope
+  - api.Magnetometer
+  - api.AmbientLightSensor
+spec-urls:
+  - https://w3c.github.io/sensors/
+  - https://w3c.github.io/accelerometer/
+  - https://w3c.github.io/orientation-sensor/
+  - https://w3c.github.io/ambient-light/
+  - https://w3c.github.io/gyroscope/
+  - https://w3c.github.io/magnetometer/
 ---
 
-{{DefaultAPISidebar("Sensor API")}}
+{{securecontext_header}}{{DefaultAPISidebar("Sensor API")}}
 
 The **Sensor APIs** are a set of interfaces built to a common design that expose device sensors in a consistent way to the web platform.
 
-## Sensor APIs concepts and usage
+## Concepts and usage
 
 Although the Generic Sensor API specification defines a {{domxref('Sensor')}} interface, as a web developer you will never use it. Instead you'll use one of its subclasses to retrieve specific kinds of sensor data. For example, the {{domxref('Accelerometer')}} interface returns the acceleration of the device along all three axes at the time it is read.
 
@@ -138,27 +151,27 @@ magSensor.start();
 
 ## Interfaces
 
-- {{domxref('AbsoluteOrientationSensor')}} {{securecontext_inline}}
+- {{domxref('AbsoluteOrientationSensor')}}
   - : Describes the device's physical orientation in relation to the Earth's reference coordinate system.
-- {{domxref('Accelerometer')}} {{securecontext_inline}}
+- {{domxref('Accelerometer')}}
   - : Provides the acceleration applied to the device along all three axes.
-- {{domxref('AmbientLightSensor')}} {{securecontext_inline}}
+- {{domxref('AmbientLightSensor')}}
   - : Returns the current light level or illuminance of the ambient light around the hosting device.
-- {{domxref('GravitySensor')}} {{securecontext_inline}}
+- {{domxref('GravitySensor')}}
   - : Provides the gravity applied to the device along all three axes.
-- {{domxref('Gyroscope')}} {{securecontext_inline}}
+- {{domxref('Gyroscope')}}
   - : Provides the angular velocity of the device along all three axes.
-- {{domxref('LinearAccelerationSensor')}} {{securecontext_inline}}
+- {{domxref('LinearAccelerationSensor')}}
   - : Provides the acceleration applied to the device along all three axes, but without the contribution of gravity.
-- {{domxref('Magnetometer')}} {{securecontext_inline}}
+- {{domxref('Magnetometer')}}
   - : Provides information about the magnetic field as detected by the device's primary magnetometer sensor.
-- {{domxref('OrientationSensor')}} {{securecontext_inline}}
+- {{domxref('OrientationSensor')}}
   - : The base class for the {{domxref('AbsoluteOrientationSensor')}}. This interface cannot be used directly, instead it provides properties and methods accessed by interfaces that inherit from it.
-- {{domxref('RelativeOrientationSensor')}} {{securecontext_inline}}
+- {{domxref('RelativeOrientationSensor')}}
   - : Describes the device's physical orientation without regard to the Earth's reference coordinate system.
-- {{domxref('Sensor')}} {{securecontext_inline}}
+- {{domxref('Sensor')}}
   - : The base class for all the other sensor interfaces. This interface cannot be used directly. Instead, it provides properties, event handlers, and methods accessed by interfaces that inherit from it.
-- {{domxref('SensorErrorEvent')}} {{securecontext_inline}}
+- {{domxref('SensorErrorEvent')}}
   - : Provides information about errors thrown by a {{domxref('Sensor')}} or related interface.
 
 ## Specifications

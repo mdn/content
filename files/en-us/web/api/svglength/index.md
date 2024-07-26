@@ -276,7 +276,7 @@ value: 26.66666603088379, valueInSpecifiedUnits 8: 0.277777761220932, valueAsStr
             a {{ domxref("DOMException") }} with code
             <code>SYNTAX_ERR</code> is raised if the assigned string cannot be
             parsed as a valid
-            <a href="/en-US/docs/Web/SVG/Content_type#Length">&#x3C;length></a>.
+            <a href="/en-US/docs/Web/SVG/Content_type#length">&#x3C;length></a>.
           </li>
           <li>
             a {{ domxref("DOMException") }} with code

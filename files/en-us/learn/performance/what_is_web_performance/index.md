@@ -13,10 +13,9 @@ Web performance is all about making websites fast, including making slow process
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy,
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >basic software installed</a
+          >Basic software installed</a
         >, and basic knowledge of
         <a href="/en-US/docs/Learn/Getting_started_with_the_web"
           >client-side web technologies</a
@@ -46,7 +45,8 @@ Web performance is the objective measurement and perceived user experience of a 
 
 To summarize, many features impact performance including latency, application size, the number of DOM nodes, the number of resource requests made, JavaScript performance, CPU load, and more. It is important to minimize the loading and response times, and add additional features to conceal latency by making the experience as available and interactive as possible, as soon as possible, while asynchronously loading in the longer tail parts of the experience.
 
-> **Note:** Web performance includes both objective measurements like time to load, frames per second, and [time to interactive](/en-US/docs/Glossary/Time_to_interactive), and subjective experiences of how long it felt like it took the content to load.
+> [!NOTE]
+> Web performance includes both objective measurements like time to load, frames per second, and [time to interactive](/en-US/docs/Glossary/Time_to_interactive), and subjective experiences of how long it felt like it took the content to load.
 
 ## How content is rendered
 

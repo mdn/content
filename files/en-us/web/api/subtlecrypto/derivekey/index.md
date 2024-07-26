@@ -56,14 +56,14 @@ deriveKey(algorithm, baseKey, derivedKeyAlgorithm, extractable, keyUsages)
   - : An {{jsxref("Array")}} indicating what can be
     done with the derived key. Note that the key usages must be allowed by the algorithm
     set in `derivedKeyAlgorithm`. Possible values of the array are:
-    - `encrypt`: The key may be used to {{domxref("SubtleCrypto.encrypt()", "encrypt")}} messages.
-    - `decrypt`: The key may be used to {{domxref("SubtleCrypto.decrypt()", "decrypt")}} messages.
-    - `sign`: The key may be used to {{domxref("SubtleCrypto.sign()", "sign")}} messages.
-    - `verify`: The key may be used to {{domxref("SubtleCrypto.verify()", "verify")}} signatures.
-    - `deriveKey`: The key may be used in {{domxref("SubtleCrypto.deriveKey()", "deriving a new key")}}.
-    - `deriveBits`: The key may be used in {{domxref("SubtleCrypto.deriveBits()", "deriving bits")}}.
-    - `wrapKey`: The key may be used to {{domxref("SubtleCrypto.wrapKey()", "wrap a key")}}.
-    - `unwrapKey`: The key may be used to {{domxref("SubtleCrypto.unwrapKey()", "unwrap a key")}}.
+    - `encrypt`: The key may be used to {{domxref("SubtleCrypto.encrypt()", "encrypt", "", "nocode")}} messages.
+    - `decrypt`: The key may be used to {{domxref("SubtleCrypto.decrypt()", "decrypt", "", "nocode")}} messages.
+    - `sign`: The key may be used to {{domxref("SubtleCrypto.sign()", "sign", "", "nocode")}} messages.
+    - `verify`: The key may be used to {{domxref("SubtleCrypto.verify()", "verify", "", "nocode")}} signatures.
+    - `deriveKey`: The key may be used in deriving a new key.
+    - `deriveBits`: The key may be used in {{domxref("SubtleCrypto.deriveBits()", "deriving bits", "", "nocode")}}.
+    - `wrapKey`: The key may be used to {{domxref("SubtleCrypto.wrapKey()", "wrap a key", "", "nocode")}}.
+    - `unwrapKey`: The key may be used to {{domxref("SubtleCrypto.unwrapKey()", "unwrap a key", "", "nocode")}}.
 
 ### Return value
 
@@ -256,7 +256,7 @@ function getKey(keyMaterial, salt) {
     {
       name: "HKDF",
       salt: salt,
-      info: new Uint8Array("Encryption example"),
+      info: new TextEncoder().encode("Encryption example"),
       hash: "SHA-256",
     },
     keyMaterial,

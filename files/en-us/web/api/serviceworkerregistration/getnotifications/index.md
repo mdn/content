@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.ServiceWorkerRegistration.getNotifications
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Web Notifications")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The **`getNotifications()`** method of
 the {{domxref("ServiceWorkerRegistration")}} interface returns a list of the
@@ -30,7 +30,7 @@ getNotifications(options)
   - : An object containing options to filter the notifications returned. The available
     options are:
 
-    - `tag`
+    - `tag` {{optional_inline}}
       - : A string representing a notification tag. If
         specified, only notifications that have this tag will be returned.
 

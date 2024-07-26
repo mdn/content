@@ -6,9 +6,11 @@ page-type: guide
 
 {{AddonSidebar}}
 
-> **Note:** The techniques described in this section are only available in Firefox, and only from Firefox 49 onwards.
+> [!NOTE]
+> The techniques described in this section are only available in Firefox, and only from Firefox 49 onwards.
 
-> **Warning:** As an extension developer you should consider that scripts running in arbitrary web pages are hostile code whose aim is to steal the user's personal information, damage their computer, or attack them in some other way.
+> [!WARNING]
+> As an extension developer you should consider that scripts running in arbitrary web pages are hostile code whose aim is to steal the user's personal information, damage their computer, or attack them in some other way.
 >
 > The isolation between content scripts and scripts loaded by web pages is intended to make it more difficult for hostile web pages to do this.
 >

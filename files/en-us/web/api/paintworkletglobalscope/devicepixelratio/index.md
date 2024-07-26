@@ -10,7 +10,7 @@ browser-compat: api.PaintWorkletGlobalScope.devicePixelRatio
 
 {{APIRef("CSS Painting API")}}{{SeeCompatTable}}
 
-The read-only **`devicePixelRatio`** read-only property of the {{domxref("PaintWorkletGlobalScope")}} interface returns the current device's ratio of physical pixels to logical pixels.
+The **`devicePixelRatio`** read-only property of the {{domxref("PaintWorkletGlobalScope")}} interface returns the current device's ratio of physical pixels to logical pixels.
 
 ## Value
 
@@ -29,5 +29,5 @@ A double-precision integer.
 - [CSS.paintWorklet](/en-US/docs/Web/API/CSS/paintWorklet_static)
 - [Worklet](/en-US/docs/Web/API/Worklet)
 - [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API)
-- [Houdini APIs](/en-US/docs/Web/Guide/Houdini)
+- [Houdini APIs](/en-US/docs/Web/API/Houdini_APIs)
 - [window.devicePixelRatio](/en-US/docs/Web/API/Window/devicePixelRatio)

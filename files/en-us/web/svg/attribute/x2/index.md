@@ -11,32 +11,11 @@ spec-urls:
 
 The **`x2`** attribute is used to specify the second x-coordinate for drawing an SVG element that requires more than one coordinate. Elements that only need one coordinate use the {{SVGAttr("x")}} attribute instead.
 
-You can use this attribute with the following SVG elements:
+## Elements
 
-- {{ SVGElement("line") }}
-- {{ SVGElement("linearGradient") }}
+You can use this attribute with the SVG elements described in the sections below.
 
-## Example
-
-```css hidden
-html,
-body,
-svg {
-  height: 100%;
-}
-```
-
-```html
-<svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
-  <line x1="5" x2="1" y1="1" y2="9" stroke="red" />
-  <line x1="5" x2="5" y1="1" y2="9" stroke="green" />
-  <line x1="5" x2="9" y1="1" y2="9" stroke="blue" />
-</svg>
-```
-
-{{EmbedLiveSample("Example", '100%', 200)}}
-
-## line
+### `<line>`
 
 For {{SVGElement('line')}}, `x2` defines the x coordinate of the ending point of the line.
 
@@ -93,7 +72,7 @@ svg {
 
 {{EmbedLiveSample('line', '100%', 200)}}
 
-## linearGradient
+### `<linearGradient>`
 
 For {{SVGElement('linearGradient')}}, `x2` defines the x coordinate of the ending point of the _gradient vector_ used to map the gradient stop values. The exact behavior of this attribute is influenced by the {{SVGAttr('gradientUnits')}} attributes
 
@@ -167,6 +146,26 @@ svg {
 ```
 
 {{EmbedLiveSample('linearGradient', '100%', 200)}}
+
+## Examples
+
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
+```html
+<svg viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
+  <line x1="2" x2="2" y1="5" y2="20" stroke="red" />
+  <line x1="2" x2="12" y1="5" y2="20" stroke="green" />
+  <line x1="2" x2="22" y1="5" y2="20" stroke="blue" />
+</svg>
+```
+
+{{EmbedLiveSample("Examples", '100%', 200)}}
 
 ## Specifications
 

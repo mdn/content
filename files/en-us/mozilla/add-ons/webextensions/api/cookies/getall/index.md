@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.cookies.getAll
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The **`getAll()`** method of the {{WebExtAPIRef("cookies")}} API retrieves all cookies from a single cookie store that match the given information.
 
@@ -87,7 +87,8 @@ browser.cookies
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/cookies/#method-getAll) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/cookies/#method-getAll) API. This documentation is derived from [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

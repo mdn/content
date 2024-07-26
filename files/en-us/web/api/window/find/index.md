@@ -31,10 +31,12 @@ find(aString, aCaseSensitive, aBackwards, aWrapAround, aWholeWord, aSearchInFram
   - : A boolean value. If `true`, specifies a backward search.
 - `aWrapAround`
   - : A boolean value. If `true`, specifies a wrap around search.
-- `aWholeWord` {{Unimplemented_Inline}}
-  - : A boolean value. If `true`, specifies a whole word search. This is not implemented; see [Firefox bug 481513](https://bugzil.la/481513).
+- `aWholeWord`
+  - : A boolean value. If `true`, specifies a whole word search.
 - `aSearchInFrames`
   - : A boolean value. If `true`, specifies a search in frames.
+- `aShowDialog`
+  - : A boolean value. If `true`, a search dialog is shown.
 
 ### Return value
 

@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.theme.onUpdated
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fires when a theme supplied as a browser extension is applied or removed. Specifically:
 

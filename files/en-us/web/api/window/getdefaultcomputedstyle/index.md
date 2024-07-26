@@ -1,7 +1,7 @@
 ---
 title: "Window: getDefaultComputedStyle() method"
 short-title: getDefaultComputedStyle()
-slug: Web/API/window/getDefaultComputedStyle
+slug: Web/API/Window/getDefaultComputedStyle
 page-type: web-api-instance-method
 status:
   - non-standard
@@ -63,7 +63,7 @@ const style = window.getDefaultComputedStyle(elem1);
 <script>
   const elem = document.getElementById("elem-container");
   const theCSSprop = window.getDefaultComputedStyle(elem).position;
-  document.getElementById("output").innerHTML = theCSSprop; // Will output "static"
+  document.getElementById("output").textContent = theCSSprop; // Will output "static"
 </script>
 ```
 

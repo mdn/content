@@ -8,7 +8,8 @@ page-type: firefox-release-notes
 
 This article provides information about the changes in Firefox 90 that will affect developers. Firefox 90 was released on July 13th, 2021.
 
-> **Note:** See also [Getting lively with Firefox 90](https://hacks.mozilla.org/2021/07/getting-lively-with-firefox-90/) on Mozilla Hacks.
+> [!NOTE]
+> See also [Getting lively with Firefox 90](https://hacks.mozilla.org/2021/07/getting-lively-with-firefox-90/) on Mozilla Hacks.
 
 ## Changes for web developers
 
@@ -74,4 +75,4 @@ This article provides information about the changes in Firefox 90 that will affe
 
 ## Older versions
 
-{{Firefox_for_developers(89)}}
+{{Firefox_for_developers}}

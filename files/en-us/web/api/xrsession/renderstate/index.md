@@ -8,7 +8,7 @@ status:
 browser-compat: api.XRSession.renderState
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The
 _read-only_ **`renderState`** property of an

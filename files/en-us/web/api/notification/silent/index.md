@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Notification.silent
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{SecureContext_Header}}
+{{APIRef("Web Notifications")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The **`silent`** read-only property of the
 {{domxref("Notification")}} interface specifies whether the notification should be
@@ -33,7 +33,7 @@ const options = {
 
 const n = new Notification("New review activity", options);
 
-console.log(n.silent); // "true"
+console.log(n.silent); // true
 ```
 
 ## Specifications

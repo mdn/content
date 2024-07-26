@@ -48,7 +48,8 @@ Attributes that set a value always have:
 2. The attribute name followed by an equal sign.
 3. The attribute value wrapped by opening and closing quotation marks.
 
-> **Note:** Simple attribute values that don't contain {{Glossary("ASCII")}} whitespace (or any of the characters `"` `'` `` ` `` `=` `<` `>`) can remain unquoted, but it is recommended that you quote all attribute values, as it makes the code more consistent and understandable.
+> [!NOTE]
+> Simple attribute values that don't contain {{Glossary("ASCII")}} whitespace (or any of the characters `"` `'` `` ` `` `=` `<` `>`) can remain unquoted, but it is recommended that you quote all attribute values, as it makes the code more consistent and understandable.
 
 ### Nesting elements
 
@@ -125,7 +126,8 @@ The keywords for alt text are "descriptive text". The alt text you write should 
 
 Try coming up with some better alt text for your image now.
 
-> **Note:** Find out more about accessibility in our [accessibility learning module](/en-US/docs/Learn/Accessibility).
+> [!NOTE]
+> Find out more about accessibility in our [accessibility learning module](/en-US/docs/Learn/Accessibility).
 
 ## Marking up text
 
@@ -143,11 +145,13 @@ Heading elements allow you to specify that certain parts of your content are hea
 <h4>My sub-subheading</h4>
 ```
 
-> **Note:** Anything in HTML between `<!--` and `-->` is an **HTML comment**. The browser ignores comments as it renders the code. In other words, they are not visible on the page - just in the code. HTML comments are a way for you to write helpful notes about your code or logic.
+> [!NOTE]
+> Anything in HTML between `<!--` and `-->` is an **HTML comment**. The browser ignores comments as it renders the code. In other words, they are not visible on the page - just in the code. HTML comments are a way for you to write helpful notes about your code or logic.
 
 Now try adding a suitable title to your HTML page just above your {{htmlelement("img")}} element.
 
-> **Note:** You'll see that your heading level 1 has an implicit style. Don't use heading elements to make text bigger or bold, because they are used for [accessibility](/en-US/docs/Learn/Accessibility/HTML#text_content) and [other reasons such as SEO](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#why_do_we_need_structure). Try to create a meaningful sequence of headings on your pages, without skipping levels.
+> [!NOTE]
+> You'll see that your heading level 1 has an implicit style. Don't use heading elements to make text bigger or bold, because they are used for [accessibility](/en-US/docs/Learn/Accessibility/HTML#text_content) and [other reasons such as SEO](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#why_do_we_need_structure). Try to create a meaningful sequence of headings on your pages, without skipping levels.
 
 ### Paragraphs
 
@@ -210,7 +214,7 @@ Links are very important — they are what makes the web a web! To add a link, w
    <a href="">Mozilla Manifesto</a>
    ```
 
-4. Fill in the value of this attribute with the web address that you want the link to:
+4. Fill in the value of this attribute with the web address that you want the link to point to:
 
    ```html
    <a href="https://www.mozilla.org/en-US/about/manifesto/">

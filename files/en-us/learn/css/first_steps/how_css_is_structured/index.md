@@ -13,18 +13,9 @@ Now that you are beginning to understand the purpose and use of CSS, let's exami
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy,
-        <a
-          href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >basic software installed</a
-        >, basic knowledge of
-        <a
-          href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
-          >working with files</a
-        > and HTML basics (study
-        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
-          >Introduction to HTML</a
-        >).
+        <a href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software">Basic software installed</a>, basic knowledge of
+        <a href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files">working with files</a> and HTML basics (study
+        <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>).
       </td>
     </tr>
     <tr>
@@ -203,7 +194,8 @@ h1, h2, .intro
 
 Try creating some CSS rules that use the selectors above. Add HTML to be styled by the selectors. If any of the syntax above is not familiar, try searching MDN.
 
-> **Note:** You will learn more about selectors in the next module: [CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors).
+> [!NOTE]
+> You will learn more about selectors in the next module: [CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors).
 
 ### Specificity
 
@@ -268,17 +260,19 @@ Setting CSS properties to specific values is the primary way of defining layout 
 
 CSS properties and values are case-insensitive. The property and value in a property-value pair are separated by a colon (`:`).
 
-**Look up different values of properties listed below. Write CSS rules that apply styling to different HTML elements:**
+Look up different values of properties listed below. Write CSS rules that apply styling to different HTML elements:
 
-- **{{cssxref("font-size")}}**
-- **{{cssxref("width")}}**
-- **{{cssxref("background-color")}}**
-- **{{cssxref("color")}}**
-- **{{cssxref("border")}}**
+- {{cssxref("font-size")}}
+- {{cssxref("width")}}
+- {{cssxref("background-color")}}
+- {{cssxref("color")}}
+- {{cssxref("border")}}
 
-> **Warning:** If a property is unknown, or if a value is not valid for a given property, the declaration is processed as _invalid_. It is completely ignored by the browser's CSS engine.
+> [!WARNING]
+> If a property is unknown, or if a value is not valid for a given property, the declaration is processed as _invalid_. It is completely ignored by the browser's CSS engine.
 
-> **Warning:** In CSS (and other web standards), it has been agreed that US spelling is the standard where there is language variation or uncertainty. For example, `colour` should be spelled `color`, as `colour` will not work.
+> [!WARNING]
+> In CSS (and other web standards), it has been agreed that US spelling is the standard where there is language variation or uncertainty. For example, `colour` should be spelled `color`, as `colour` will not work.
 
 ### Functions
 
@@ -333,11 +327,11 @@ The output from the above code looks like this:
 
 {{EmbedLiveSample('Transform_functions', '100%', 200)}}
 
-**Look up different values of properties listed below. Write CSS rules that apply styling to different HTML elements:**
+Look up different values of properties listed below. Write CSS rules that apply styling to different HTML elements:
 
-- **{{cssxref("transform")}}**
-- **{{cssxref("background-image")}}, in particular gradient values**
-- **{{cssxref("color")}}, in particular rgb and hsl values**
+- {{cssxref("transform")}}
+- {{cssxref("background-image")}}, in particular gradient values
+- {{cssxref("color")}}, in particular rgb and hsl values
 
 ## @rules
 
@@ -365,11 +359,11 @@ body {
 
 You will encounter other @rules throughout these tutorials.
 
-**See if you can add a media query that changes styles based on the viewport width. Change the width of your browser window to see the result.**
+See if you can add a media query that changes styles based on the viewport width. Change the width of your browser window to see the result.
 
 ## Shorthands
 
-Some properties like {{cssxref("font")}}, {{cssxref("background")}}, {{cssxref("padding")}}, {{cssxref("border")}}, and {{cssxref("margin")}} are called **shorthand properties.** This is because shorthand properties set several values in a single line.
+Some properties like {{cssxref("font")}}, {{cssxref("background")}}, {{cssxref("padding")}}, {{cssxref("border")}}, and {{cssxref("margin")}} are called **shorthand properties**. This is because shorthand properties set several values in a single line.
 
 For example, this one line of code:
 
@@ -408,9 +402,10 @@ background-attachment: fixed;
 
 Later in the course, you will encounter many other examples of shorthand properties. MDN's [CSS reference](/en-US/docs/Web/CSS/Reference) is a good resource for more information about any shorthand property.
 
-**Try using the declarations (above) in your own CSS exercise to become more familiar with how it works. You can also experiment with different values.**
+Try using the declarations (above) in your own CSS exercise to become more familiar with how it works. You can also experiment with different values.
 
-> **Warning:** One less obvious aspect of using CSS shorthand is how omitted values reset. A value not specified in CSS shorthand reverts to its initial value. This means an omission in CSS shorthand can **override previously set values**.
+> [!WARNING]
+> One less obvious aspect of using CSS shorthand is how omitted values reset. A value not specified in CSS shorthand reverts to its initial value. This means an omission in CSS shorthand can **override previously set values**.
 
 ## Comments
 
@@ -420,7 +415,7 @@ CSS comments begin with `/*` and end with `*/`. In the example below, comments m
 
 ```css
 /* Handle basic element styling */
-/* -------------------------------------------------------------------------------------------- */
+/* ---------------------------- */
 body {
   font:
     1em/150% Helvetica,
@@ -472,7 +467,7 @@ p {
 }
 ```
 
-**Add comments to your CSS.**
+Try adding comments in your CSS.
 
 ## White space
 
@@ -532,7 +527,8 @@ div p + p {padding-top: 0;}
 
 For your own projects, you will format your code according to personal preference. For team projects, you may find that a team or project has its own style guide.
 
-> **Warning:** Though white space separates values in CSS declarations, **property names never have white space**.
+> [!WARNING]
+> Though white space separates values in CSS declarations, **property names never have white space**.
 
 For example, these declarations are valid CSS:
 
@@ -552,7 +548,7 @@ Do you see the spacing errors? First, `0auto` is not recognized as a valid value
 
 You should always make sure to separate distinct values from one another by at least one space. Keep property names and property values together as single unbroken strings.
 
-**To find out how spacing can break CSS, try playing with spacing inside your test CSS.**
+To find out how spacing can break CSS, try playing with spacing inside your test CSS.
 
 ## Summary
 

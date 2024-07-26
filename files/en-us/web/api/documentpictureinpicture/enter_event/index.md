@@ -8,7 +8,7 @@ status:
 browser-compat: api.DocumentPictureInPicture.enter_event
 ---
 
-{{APIRef("Document Picture-in-Picture API")}}{{SeeCompatTable}}
+{{APIRef("Document Picture-in-Picture API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`enter`** event of the {{domxref("DocumentPictureInPicture")}} interface is fired when the Picture-in-Picture window is successfully opened.
 

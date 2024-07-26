@@ -17,7 +17,7 @@ The **`WorkletSharedStorage`** interface of the {{domxref("Shared Storage API", 
 
 ## Instance properties
 
-- {{domxref("WorkletSharedStorage.context", "context")}} {{Experimental_Inline}}
+- {{domxref("WorkletSharedStorage.context", "context")}} {{Experimental_Inline}} {{non-standard_inline}}
   - : Contains contextual data passed into the shared storage worklet from the associated browsing context via the {{domxref("FencedFrameConfig.setSharedStorageContext()")}} method.
 
 ## Instance methods
@@ -37,7 +37,7 @@ _`WorkletSharedStorage` inherits properties from its parent interface, {{domxref
   - : Returns a new async iterator for the key-value pairs of a `WorkletSharedStorage` object instance's enumerable properties.
 - {{domxref("WorkletSharedStorage.keys", "keys()")}} {{Experimental_Inline}}
   - : Returns a new async iterator containing the keys for each item in a `WorkletSharedStorage` object instance.
-- `WorkletSharedStorage[@@asyncIterator]()` {{Experimental_Inline}}
+- `WorkletSharedStorage[Symbol.asyncIterator]()` {{Experimental_Inline}}
   - : Returns the {{domxref("WorkletSharedStorage.entries", "entries()")}} function by default.
 
 ## Examples

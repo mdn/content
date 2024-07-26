@@ -32,4 +32,4 @@ _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}
 
 ## See also
 
-- The HTML element implementing this interface: {{ HTMLElement("Heading_Elements", "h1")}}, {{ HTMLElement("Heading_Elements", "h2")}}, {{ HTMLElement("Heading_Elements", "h3")}}, {{ HTMLElement("Heading_Elements", "h4")}}, {{ HTMLElement("Heading_Elements", "h5")}}, and {{ HTMLElement("Heading_Elements", "h6")}}.
+- The {{HTMLElement("Heading_Elements", "HTML heading elements")}}, `<h1>` to `<h6>`, which correspond to this interface.

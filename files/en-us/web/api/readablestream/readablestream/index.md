@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.ReadableStream.ReadableStream
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`ReadableStream()`** constructor creates and returns a readable stream object from the given handlers.
 
@@ -83,7 +83,8 @@ new ReadableStream(underlyingSource, queuingStrategy)
       - : A method containing a parameter `chunk` — this indicates the size to
         use for each chunk, in bytes.
 
-    > **Note:** You could define your own custom
+    > [!NOTE]
+    > You could define your own custom
     > `queuingStrategy`, or use an instance of
     > {{domxref("ByteLengthQueuingStrategy")}} or {{domxref("CountQueuingStrategy")}}
     > for this object value. If no `queuingStrategy` is supplied, the default

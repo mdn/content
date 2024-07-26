@@ -18,8 +18,7 @@ range. A {{jsxref("Promise")}} is returned, which is fulfilled when the buffers
 in the specified time range have been removed.
 
 This method can only be called when {{domxref("SourceBuffer.updating", "updating")}} is
-`false`. If that's not the case, call {{domxref("SourceBuffer.abort",
-  "abort()")}} instead.
+`false`. If that's not the case, call {{domxref("SourceBuffer.abort", "abort()")}} instead.
 
 ## Syntax
 

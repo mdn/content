@@ -105,6 +105,8 @@ div {
 
 ## Result
 
+Test the effect on each input using a virtual keyboard or voice entry (keyboard entry will not work).
+
 {{ EmbedLiveSample("Examples", "100%", "500") }}
 
 ## Specifications

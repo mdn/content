@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUTexture.width
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`width`** read-only property of the
 {{domxref("GPUTexture")}} interface represents the width of the `GPUTexture`.

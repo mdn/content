@@ -10,7 +10,8 @@ browser-compat: webassembly.api.compile_static
 The **`WebAssembly.compile()`** static method compiles WebAssembly binary code into a [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) object.
 This function is useful if it is necessary to compile a module before it can be instantiated (otherwise, the [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiate_static) function should be used).
 
-> **Note:** Webpages that have strict [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) might block WebAssembly from compiling and executing modules.
+> [!NOTE]
+> Webpages that have strict [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) might block WebAssembly from compiling and executing modules.
 > For more information on allowing WebAssembly compilation and execution, see the [script-src CSP](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src).
 
 ## Syntax
@@ -53,7 +54,8 @@ fetch("simple.wasm")
   .then((mod) => worker.postMessage(mod));
 ```
 
-> **Note:** You'll probably want to use
+> [!NOTE]
+> You'll probably want to use
 > [`WebAssembly.compileStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/compileStreaming_static) in most cases, as it is more efficient
 > than `compile()`.
 

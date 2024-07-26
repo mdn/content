@@ -9,7 +9,7 @@ browser-compat: css.properties.direction
 
 > **Warning:** Where possible, authors are encouraged to avoid using the `direction` CSS property and use the HTML [`dir`](/en-US/docs/Web/HTML/Global_attributes#dir) global attribute instead.
 
-The **`direction`** CSS property sets the direction of text, table columns, and horizontal overflow. Use `rtl` for languages written from right to left (like Hebrew or Arabic), and `ltr` for those written from left to right (like English and most other languages).
+The **`direction`** [CSS](/en-US/docs/Web/CSS) property sets the direction of text, table columns, and horizontal overflow. Use `rtl` for languages written from right to left (like Hebrew or Arabic), and `ltr` for those written from left to right (like English and most other languages).
 
 {{EmbedInteractiveExample("pages/css/direction.html")}}
 
@@ -93,3 +93,4 @@ blockquote {
 - {{Cssxref("unicode-bidi")}}
 - {{Cssxref("writing-mode")}}
 - The HTML [`dir`](/en-US/docs/Web/HTML/Global_attributes#dir) global attribute
+- [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls)

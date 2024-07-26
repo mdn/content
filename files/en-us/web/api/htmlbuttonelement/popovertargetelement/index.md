@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.HTMLButtonElement.popoverTargetElement
 ---
 
-{{ APIRef("DOM") }}
+{{APIRef("Popover API")}}
 
 The **`popoverTargetElement`** property of the {{domxref("HTMLButtonElement")}} interface gets and sets the popover element to control via a button.
 
@@ -64,7 +64,8 @@ if (supportsPopover()) {
 }
 ```
 
-> **Note:** A popover element is hidden by default, but if the API is not supported your element will display "as usual".
+> [!NOTE]
+> A popover element is hidden by default, but if the API is not supported your element will display "as usual".
 
 You can try out the example below.
 Show and hide the popover by toggling the button.

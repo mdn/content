@@ -125,7 +125,7 @@ Below, you'll find an assortment of guides to help you learn WebGL concepts and 
 ### Examples
 
 - [A basic 2D WebGL animation example](/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example)
-  - : This example demonstrates the simple animation of a one-color shape. Topics examined are adapting to aspect ratio differences, a function to build shader programs from sets of multiple shaders, and the basics of drawing in WebGL.
+  - : This example demonstrates the simple animation of a one-color shape. Topics examined are adapting to {{glossary("aspect ratio")}} differences, a function to build shader programs from sets of multiple shaders, and the basics of drawing in WebGL.
 - [WebGL by example](/en-US/docs/Web/API/WebGL_API/By_example)
   - : A series of live samples with short explanations that showcase WebGL concepts and capabilities. The examples are sorted according to topic and level of difficulty, covering the WebGL rendering context, shader programming, textures, geometry, user interaction, and more.
 
@@ -141,7 +141,6 @@ Below, you'll find an assortment of guides to help you learn WebGL concepts and 
 - [Khronos WebGL site](https://www.khronos.org/webgl/) The main website for WebGL at the Khronos Group.
 - [WebGL Fundamentals](https://web.dev/articles/webgl-fundamentals) A basic tutorial with fundamentals of WebGL.
 - [Raw WebGL: An introduction to WebGL](https://www.youtube.com/embed/H4c8t6myAWU/?feature=player_detailpage) A talk by Nick Desaulniers that introduces the basics of WebGL.
-- [WebGL playground](http://webglplayground.net) An online tool for creating and sharing WebGL projects. Good for quick prototyping and experimenting.
 - [WebGL Academy](http://www.webglacademy.com) An HTML/JavaScript editor with tutorials to learn basics of webgl programming.
 - [WebGL Stats](https://webglreport.com/) A site with statistics about WebGL capabilities in browsers on different platforms.
 

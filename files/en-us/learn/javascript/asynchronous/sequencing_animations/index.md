@@ -13,7 +13,7 @@ In this assessment you'll update a page to play a series of animations in a sequ
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, a reasonable understanding of JavaScript
+        A reasonable understanding of JavaScript
         fundamentals, how to use promise-based APIs.
       </td>
     </tr>
@@ -41,7 +41,8 @@ If you open "index.html" in a browser you'll see three images arranged diagonall
 
 The images are taken from our guide to [Using the Web Animations API](/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API).
 
-> **Note:** If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+> [!NOTE]
+> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## Project brief
 

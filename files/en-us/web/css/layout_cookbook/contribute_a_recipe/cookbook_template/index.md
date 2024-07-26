@@ -37,10 +37,6 @@ _If there are useful alternative methods for building the recipe, or fallback re
 
 _Include this is there are any specific things to watch out for in regard to accessibility. If not relevant for your pattern this can be omitted._
 
-## Browser compatibility
-
-_List the key properties you used in the `browser-compat` frontmatter metadata key. Then use the `\{{Compat}}` macro in this section to automatically generate a compatibility table for the listed properties._
-
 ## See also
 
 - _Links of link of related properties: {{Cssxref("example-property")}}_

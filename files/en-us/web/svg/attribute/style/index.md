@@ -2,7 +2,7 @@
 title: style
 slug: Web/SVG/Attribute/style
 page-type: svg-attribute
-browser-compat: svg.attributes.style.style
+browser-compat: svg.global_attributes.style
 ---
 
 {{SVGRef}}

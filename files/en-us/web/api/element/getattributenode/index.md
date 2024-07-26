@@ -8,7 +8,10 @@ browser-compat: api.Element.getAttributeNode
 
 {{ APIRef("DOM") }}
 
-Returns the specified attribute of the specified element, as an `Attr` node.
+Returns the specified attribute of the specified element, as an {{domxref("Attr")}} node.
+
+This method is useful if you need the attribute's [instance properties](/en-US/docs/Web/API/Attr#instance_properties).
+If you only need the attribute's value, you can use the {{domxref("Element.getAttribute()", "getAttribute()")}} method instead.
 
 ## Syntax
 
@@ -39,10 +42,6 @@ When called on an HTML element in a DOM flagged as an HTML document, `getAttribu
 
 The `Attr` node inherits from `Node`, but is not considered a part of the document tree. Common `Node` attributes like [parentNode](/en-US/docs/Web/API/Node/parentNode), [previousSibling](/en-US/docs/Web/API/Node/previousSibling), and [nextSibling](/en-US/docs/Web/API/Node/nextSibling) are `null` for an `Attr` node. You can, however, get the element to which the attribute belongs with the `ownerElement` property.
 
-[getAttribute](/en-US/docs/Web/API/Element/getAttribute) is usually used instead of `getAttributeNode` to get the value of an element's attribute.
-
-{{ DOMAttributeMethods() }}
-
 ## Specifications
 
 {{Specifications}}
@@ -50,3 +49,9 @@ The `Attr` node inherits from `Node`, but is not considered a part of the docume
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("Document.createAttribute()")}}
+- {{domxref("Element.setAttributeNode()")}}
+- {{domxref("Element.removeAttributeNode()")}}

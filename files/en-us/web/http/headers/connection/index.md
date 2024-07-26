@@ -12,7 +12,8 @@ network connection stays open after the current transaction finishes. If the val
 is `keep-alive`, the connection is persistent and not closed, allowing for
 subsequent requests to the same server to be done.
 
-> **Warning:** Connection-specific header fields such as
+> [!WARNING]
+> Connection-specific header fields such as
 > {{HTTPHeader("Connection")}} and {{HTTPHeader("Keep-Alive")}} are prohibited
 > in [HTTP/2](https://httpwg.org/specs/rfc9113.html#ConnectionSpecific) and
 > [HTTP/3](https://httpwg.org/specs/rfc9114.html#header-formatting). Chrome and
@@ -25,6 +26,8 @@ All [hop-by-hop headers](/en-US/docs/Web/HTTP/Compression#hop-by-hop_compression
 {{HTTPHeader("Proxy-Authorization")}} and {{HTTPHeader("Proxy-Authenticate")}}) - must be listed in the `Connection`
 header, so that the first proxy knows it has to consume them and not forward them
 further.
+
+The default value of `Connection` changed between HTTP/1.0 and HTTP/1.1. Therefore, to ensure backwards compatibility, browsers often send `Connection: keep-alive` explicitly despite that being the default in HTTP/1.1.
 
 <table class="properties">
   <tbody>

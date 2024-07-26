@@ -15,7 +15,8 @@ The **`length`** read-only property of the
 in the list. The range of valid values of the indices is `0` to
 `length-1` inclusive.
 
-> **Note:** This property was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
+> [!NOTE]
+> This property was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
 > not implement it.
 >
 > To achieve your purpose, you can use:

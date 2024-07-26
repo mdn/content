@@ -21,7 +21,7 @@ available input types, see the [Attributes section of the Input Events Level 2 s
 
 ## Examples
 
-This example logs the `inputType` for [input events](/en-US/docs/Web/API/HTMLElement/input_event) on an editable
+This example logs the `inputType` for [input events](/en-US/docs/Web/API/Element/input_event) on an editable
 {{htmlElement("div")}}.
 
 ### HTML
@@ -63,7 +63,8 @@ Try editing the text inside the `<div>` and see what happens.
 
 {{EmbedLiveSample("Examples", '100%', 500)}}
 
-> **Note:** See also [Masayuki Nakano's InputEvent test suite](https://d-toybox.com/studio/lib/input_event_viewer.html) for a more detailed example.
+> [!NOTE]
+> See also [Masayuki Nakano's InputEvent test suite](https://d-toybox.com/studio/lib/input_event_viewer.html) for a more detailed example.
 
 ## Specifications
 

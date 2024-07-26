@@ -37,4 +37,4 @@ Returns `true` if the value of the element has no validity problems; otherwise r
 
 ## See also
 
-- [Form validation](/en-US/docs/Web/HTML/Constraint_validation)
+- [Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)

@@ -13,10 +13,9 @@ The final selectors we will look at are called combinators, because they combine
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy,
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >basic software installed</a
+          >Basic software installed</a
         >, basic knowledge of
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
@@ -58,7 +57,7 @@ The **child combinator** (`>`) is placed between two CSS selectors. It matches o
 article > p
 ```
 
-In this next example, we have an unordered list, nested inside of which is an ordered list. The child combinator selects only those `<li>` elements which are direct children of a `<ul>`, and styles them with a top border.
+In this next example, we have an ordered list ({{htmlelement("ol")}}) nested inside an unordered list ({{htmlelement("ul")}}). The child combinator selects only those `<li>` elements which are direct children of a `<ul>`, and styles them with a top border.
 
 If you remove the `>` that designates this as a child combinator, you end up with a descendant selector and all `<li>` elements will get a red border.
 
@@ -124,7 +123,8 @@ p img {
 
 {{EmbedGHLiveSample("css-examples/learn/selectors/nesting.html", '100%', 800)}}
 
-> **Note:** In the example above, the `&` nesting selector is not required, but adding it helps to explicitly show that CSS nesting is being used.
+> [!NOTE]
+> In the example above, the `&` nesting selector is not required, but adding it helps to explicitly show that CSS nesting is being used.
 
 ## Using combinators
 

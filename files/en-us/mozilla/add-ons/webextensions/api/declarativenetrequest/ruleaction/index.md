@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.declarativeNetRequest.RuleAction
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Details of the action to take if a rule is matched, as the `action` property of a {{WebExtAPIRef("declarativeNetRequest.Rule")}}.
 

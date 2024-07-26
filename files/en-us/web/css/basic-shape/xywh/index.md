@@ -2,12 +2,10 @@
 title: xywh()
 slug: Web/CSS/basic-shape/xywh
 page-type: css-function
-status:
-  - experimental
 browser-compat: css.types.basic-shape.xywh
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`xywh()`** [CSS](/en-US/docs/Web/CSS) function creates a rectangle using the specified distances from the left (`x`) and top (`y`) edges of the containing block and the specified width (`w`) and height (`h`) of the rectangle. It is a basic shape function of the {{cssxref("&lt;basic-shape&gt;")}} [data type](/en-US/docs/Web/CSS/CSS_Types). You can use the `xywh()` function in CSS properties such as {{cssxref("offset-path")}} to create the rectangular path along which an element moves and in {{cssxref("clip-path")}} to define the shape of the clipping region.
 
@@ -98,8 +96,8 @@ In the example below, the {{cssxref("offset-path")}} property uses the `xywh()` 
 
 ## See also
 
-- [`inset()`](/en-US/docs/Web/CSS/basic-shape#inset) function
-- [`rect()`](/en-US/docs/Web/CSS/basic-shape#rect) function
+- {{cssxref("basic-shape/inset","inset()")}} function
+- {{cssxref("basic-shape/rect","rect()")}} function
 - {{cssxref("clip-path")}} property
 - {{cssxref("offset-path")}} property
 - {{cssxref("&lt;basic-shape&gt;")}} data type

@@ -8,7 +8,8 @@ page-type: learn-module-chapter
 
 Let's say that we've been tasked with creating a proof-of-concept in React â€“ an app that allows users to add, edit, and delete tasks they want to work on, and also mark tasks as complete without deleting them. This article will walk you through the basic structure and styling of such an application, ready for individual component definition and interactivity, which we'll add later.
 
-> **Note:** If you need to check your code against our version, you can find a finished version of the sample React app code in our [todo-react repository](https://github.com/mdn/todo-react). For a running live version, see <https://mdn.github.io/todo-react/>.
+> [!NOTE]
+> If you need to check your code against our version, you can find a finished version of the sample React app code in our [todo-react repository](https://github.com/mdn/todo-react). For a running live version, see <https://mdn.github.io/todo-react/>.
 
 <table>
   <tbody>
@@ -62,13 +63,13 @@ cd src
 # Delete the App.css file and the React logo provided by Vite
 rm App.css assets/react.svg
 # Empty the contents of App.jsx and index.css
-# Note the colon at the beginning of this command!
-: >! {App.jsx,index.css}
+echo -n > App.jsx && echo -n > index.css
 # Move back up to the root of the project
 cd ..
 ```
 
-> **Note:** If you stopped your server to do the terminal tasks mentioned above, you'll have to start it again using `npm run dev`.
+> [!NOTE]
+> If you stopped your server to do the terminal tasks mentioned above, you'll have to start it again using `npm run dev`.
 
 ## Project starter code
 
@@ -247,9 +248,10 @@ The `defaultChecked` attribute in the previous section is a boolean attribute â€
 
 Because JSX is JavaScript, there's a gotcha to be aware of with boolean attributes: writing `defaultChecked="false"` will set a _string_ value of `"false"` rather than a _boolean_ value. Non-empty strings are [truthy](/en-US/docs/Glossary/Truthy), so React will consider `defaultChecked` to be `true` and check the checkbox by default. This is not what we want, so we should avoid it.
 
-If you'd like, you can practice writing boolean attributes with another attribute you may have seen before, [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hidden), which prevents elements from being rendered on the page. Try adding `hidden` to the `<h1>` element in `App.jsx` to see what happens, then try explicitly setting its value to `{false}`. Note, again, that writing `hidden="false"` results in a truthy value so the `<h1>` _will not_ hide. Don't forget to remove this code when you're done.
+If you'd like, you can practice writing boolean attributes with another attribute you may have seen before, [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hidden), which prevents elements from being rendered on the page. Try adding `hidden` to the `<h1>` element in `App.jsx` to see what happens, then try explicitly setting its value to `{false}`. Note, again, that writing `hidden="false"` results in a truthy value so the `<h1>` _will_ hide. Don't forget to remove this code when you're done.
 
-> **Note:** The `aria-pressed` attribute used in our earlier code snippet has a value of `"true"` because `aria-pressed` is not a true boolean attribute in the way `checked` is.
+> [!NOTE]
+> The `aria-pressed` attribute used in our earlier code snippet has a value of `"true"` because `aria-pressed` is not a true boolean attribute in the way `checked` is.
 
 ### Implementing our styles
 

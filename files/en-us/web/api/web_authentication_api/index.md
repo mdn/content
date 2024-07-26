@@ -121,9 +121,12 @@ The availability of WebAuthn can be controlled using a [Permissions Policy](/en-
 - {{httpheader("Permissions-Policy/publickey-credentials-create", "publickey-credentials-create")}}: Controls the availability of {{domxref("CredentialsContainer.create", "navigator.credentials.create()")}} with the `publicKey` option.
 - {{httpheader("Permissions-Policy/publickey-credentials-get", "publickey-credentials-get")}}: Controls the availability of {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} with the `publicKey` option.
 
-Both directives have a default allowlist value of `"self"`, meaning that by default these methods can be used in top-level document contexts. In addition, `get()` can be used in nested browsing contexts loaded from the same origin as the top-most document; `create()` on the other hand cannot be used in {{htmlelement("iframe")}}s.
+Both directives have a default allowlist value of `"self"`, meaning that by default these methods can be used in top-level document contexts.
+In addition, `get()` can be used in nested browsing contexts loaded from the same origin as the top-most document.
+`get()` and `create()` can be used in nested browsing contexts loaded from the different origins to the top-most document (i.e. in cross-origin `<iframes>`), if allowed by the [`publickey-credentials-get`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/publickey-credentials-get) and [`publickey-credentials-create`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/publickey-credentials-create) `Permission-Policy` directives, respectively.
+For cross-origin `create()` calls, where the permission was granted by [`allow=` on an iframe](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#iframes), the frame must also have {{glossary("Transient activation")}}.
 
-> **Note:** Where a policy forbids use of these methods, the {{jsxref("Promise", "promises")}} returned by them will reject with a `SecurityError` {{domxref("DOMException")}}.
+> **Note:** Where a policy forbids use of these methods, the {{jsxref("Promise", "promises", "", 1)}} returned by them will reject with a `NotAllowedError` {{domxref("DOMException")}}.
 
 ### Basic access control
 
@@ -134,28 +137,44 @@ Permissions-Policy: publickey-credentials-get=("https://subdomain.example.com")
 Permissions-Policy: publickey-credentials-create=("https://subdomain.example.com")
 ```
 
-### Allowing embedded `get()` calls in an `<iframe>`
+### Allowing embedded `create` and `get()` calls in an `<iframe>`
 
-If you wish to authenticate with `get()` in an `<iframe>`, there are a couple of steps to follow:
+If you wish to authenticate with `get()` or `create()` in an `<iframe>`, there are a couple of steps to follow:
 
 1. The site embedding the relying party site must provide permission via an `allow` attribute:
 
-   ```html
-   <iframe
-     src="https://auth.provider.com"
-     allow="publickey-credentials-get *" />
-   ```
+   - If using `get()`:
+
+     ```html
+     <iframe
+       src="https://auth.provider.com"
+       allow="publickey-credentials-get *">
+     </iframe>
+     ```
+
+   - If using `create()`:
+
+     ```html
+     <iframe
+       src="https://auth.provider.com"
+       allow="publickey-credentials-create 'self' https://a.auth.provider.com https://b.auth.provider.com">
+     </iframe>
+     ```
+
+     The `<iframe>` must also have {{glossary("Transient activation")}} if `create()` is called cross-origin.
 
 2. The relying party site must provide permission for the above access via a `Permissions-Policy` header:
 
    ```http
    Permissions-Policy: publickey-credentials-get=*
+   Permissions-Policy: publickey-credentials-create=*
    ```
 
    Or to allow only a specific URL to embed the relying party site in an `<iframe>`:
 
    ```http
    Permissions-Policy: publickey-credentials-get=("https://subdomain.example.com")
+   Permissions-Policy: publickey-credentials-create=("https://*.auth.provider.com")
    ```
 
 ## Interfaces
@@ -213,9 +232,9 @@ const createCredentialDefaultArgs = {
     timeout: 60000,
     challenge: new Uint8Array([
       // must be a cryptographically random number sent from a server
-      0x8c, 0x0a, 0x26, 0xff, 0x22, 0x91, 0xc1, 0xe9, 0xb9, 0x4e, 0x2e, 0x17, 0x1a,
-      0x98, 0x6a, 0x73, 0x71, 0x9d, 0x43, 0x48, 0xd5, 0xa7, 0x6a, 0x15, 0x7e, 0x38,
-      0x94, 0x52, 0x77, 0x97, 0x0f, 0xef,
+      0x8c, 0x0a, 0x26, 0xff, 0x22, 0x91, 0xc1, 0xe9, 0xb9, 0x4e, 0x2e, 0x17,
+      0x1a, 0x98, 0x6a, 0x73, 0x71, 0x9d, 0x43, 0x48, 0xd5, 0xa7, 0x6a, 0x15,
+      0x7e, 0x38, 0x94, 0x52, 0x77, 0x97, 0x0f, 0xef,
     ]).buffer,
   },
 };
@@ -227,9 +246,9 @@ const getCredentialDefaultArgs = {
     // allowCredentials: [newCredential] // see below
     challenge: new Uint8Array([
       // must be a cryptographically random number sent from a server
-      0x79, 0x50, 0x68, 0x71, 0xda, 0xee, 0xee, 0xb9, 0x94, 0xc3, 0xc2, 0x15, 0x67,
-      0x65, 0x26, 0x22, 0xe3, 0xf3, 0xab, 0x3b, 0x78, 0x2e, 0xd5, 0x6f, 0x81, 0x26,
-      0xe2, 0xa6, 0x01, 0x7d, 0x74, 0x50,
+      0x79, 0x50, 0x68, 0x71, 0xda, 0xee, 0xee, 0xb9, 0x94, 0xc3, 0xc2, 0x15,
+      0x67, 0x65, 0x26, 0x22, 0xe3, 0xf3, 0xab, 0x3b, 0x78, 0x2e, 0xd5, 0x6f,
+      0x81, 0x26, 0xe2, 0xa6, 0x01, 0x7d, 0x74, 0x50,
     ]).buffer,
   },
 };

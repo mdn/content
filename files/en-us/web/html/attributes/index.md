@@ -1,5 +1,6 @@
 ---
 title: HTML attribute reference
+short-title: Attributes
 slug: Web/HTML/Attributes
 page-type: landing-page
 ---
@@ -85,6 +86,15 @@ Elements in HTML have **attributes**; these are additional values that configure
         {{ HTMLElement("img") }}, {{ HTMLElement("input") }}
       </td>
       <td>Alternative text in case an image can't be displayed.</td>
+    </tr>
+    <tr>
+      <td>
+        <code><a href="/en-US/docs/Web/HTML/Element/link#as">as</a></code>
+      </td>
+      <td>
+        {{ HTMLElement("link") }}
+      </td>
+      <td>Specifies the type of content being loaded by the link.</td>
     </tr>
     <tr>
       <td>
@@ -181,16 +191,6 @@ Elements in HTML have **attributes**; these are additional values that configure
           </p>
         </div>
       </td>
-    </tr>
-    <tr>
-      <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/buffered">buffered</a></code>
-      </td>
-      <td>
-        {{ HTMLElement("audio") }},
-        {{ HTMLElement("video") }}
-      </td>
-      <td>Contains the time range of already buffered media.</td>
     </tr>
     <tr>
       <td>
@@ -294,18 +294,6 @@ Elements in HTML have **attributes**; these are additional values that configure
         <a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a>
       </td>
       <td>Indicates whether the element's content is editable.</td>
-    </tr>
-    <tr>
-      <td>
-        <code><a href="/en-US/docs/Web/HTML/Global_attributes/contextmenu">contextmenu</a></code> {{non-standard_inline}} {{deprecated_inline}}
-      </td>
-      <td>
-        <a href="/en-US/docs/Web/HTML/Global_attributes">Global attribute</a>
-      </td>
-      <td>
-        Defines the ID of a {{ HTMLElement("menu") }} element which will
-        serve as the element's context menu.
-      </td>
     </tr>
     <tr>
       <td>
@@ -816,23 +804,6 @@ Elements in HTML have **attributes**; these are additional values that configure
       </td>
       <td>{{ HTMLElement("meter") }}</td>
       <td>Indicates the upper bound of the lower range.</td>
-    </tr>
-    <tr>
-      <td>
-        <code><a href="/en-US/docs/Web/HTML/Element/html#manifest">manifest</a></code>
-        {{deprecated_inline}}
-      </td>
-      <td>{{ HTMLElement("html") }}</td>
-      <td>
-        Specifies the URL of the document's cache manifest.
-        <div class="note">
-          <p>
-            <strong>Note:</strong> This attribute is obsolete, use
-            <a href="/en-US/docs/Web/Manifest"><code>&#x3C;link rel="manifest"></code></a>
-            instead.
-          </p>
-        </div>
-      </td>
     </tr>
     <tr>
       <td>
@@ -1442,7 +1413,8 @@ To be clear, the values "`true`" and "`false`" are not allowed on boolean attrib
 
 ## Event handler attributes
 
-> **Warning:** The use of event handler content attributes is discouraged. The mix of HTML and JavaScript often produces unmaintainable code, and the execution of event handler attributes may also be blocked by content security policies.
+> [!WARNING]
+> The use of event handler content attributes is discouraged. The mix of HTML and JavaScript often produces unmaintainable code, and the execution of event handler attributes may also be blocked by content security policies.
 
 In addition to the attributes listed in the table above, global [event handlers](/en-US/docs/Web/Events/Event_handlers#using_onevent_properties) — such as [`onclick`](/en-US/docs/Web/API/Element/click_event) — can also be specified as [content attributes](#content_versus_idl_attributes) on all elements.
 

@@ -78,16 +78,16 @@ mix-blend-mode: unset;
             <svg class="item" viewBox="0 0 150 150">
               <defs>
                 <linearGradient id="red">
-                  <stop offset="0" stop-color="hsl(0,100%,50%)" />
-                  <stop offset="100%" stop-color="hsl(0,0%,100%)" />
+                  <stop offset="0" stop-color="hsl(0 100% 50%)" />
+                  <stop offset="100%" stop-color="hsl(0 0% 100%)" />
                 </linearGradient>
                 <linearGradient id="green">
-                  <stop offset="0" stop-color="hsl(120,100%,50%)" />
-                  <stop offset="100%" stop-color="hsl(120,0%,100%)" />
+                  <stop offset="0" stop-color="hsl(120 100% 50%)" />
+                  <stop offset="100%" stop-color="hsl(120 0% 100%)" />
                 </linearGradient>
                 <linearGradient id="blue">
-                  <stop offset="0" stop-color="hsl(240,100%,50%)" />
-                  <stop offset="100%" stop-color="hsl(240,0%,100%)" />
+                  <stop offset="0" stop-color="hsl(240 100% 50%)" />
+                  <stop offset="100%" stop-color="hsl(240 0% 100%)" />
                 </linearGradient>
               </defs>
               <ellipse class="item R" cx="75" cy="75" rx="25" ry="70"></ellipse>

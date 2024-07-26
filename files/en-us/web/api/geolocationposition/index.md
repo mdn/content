@@ -16,11 +16,14 @@ _The `GeolocationPosition` interface doesn't inherit any properties._
 - {{domxref("GeolocationPosition.coords")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("GeolocationCoordinates")}} object defining the current location.
 - {{domxref("GeolocationPosition.timestamp")}} {{ReadOnlyInline}}
-  - : Returns a timestamp, given as [Unix time](/en-US/docs/Glossary/Unix_time) in milliseconds, representing the time at which the location was retrieved.
+  - : Returns a timestamp, given as {{Glossary("Unix time")}} in milliseconds, representing the time at which the location was retrieved.
 
 ## Instance methods
 
-_The `GeolocationPosition` interface neither implements, nor inherits any methods._
+_The `GeolocationPosition` interface doesn't inherit any methods._
+
+- {{domxref("GeolocationPosition.toJSON()")}}
+  - : Returns a JSON representation of the `GeolocationPosition` object and enables serialization with {{jsxref("JSON.stringify()")}}.
 
 ## Specifications
 

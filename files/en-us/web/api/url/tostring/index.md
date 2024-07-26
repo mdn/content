@@ -6,13 +6,11 @@ page-type: web-api-instance-method
 browser-compat: api.URL.toString
 ---
 
-{{ApiRef("URL API")}}
+{{ApiRef("URL API")}} {{AvailableInWorkers}}
 
 The **`toString()`** method of the {{domxref("URL")}} interface returns a
 string containing the whole URL. It is effectively a read-only version
 of {{domxref("URL.href")}}.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

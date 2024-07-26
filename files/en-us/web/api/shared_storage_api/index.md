@@ -21,13 +21,14 @@ The Shared Storage API provides a flexible solution for such use cases. It aims 
 
 Like other storage APIs, you can write to shared storage at any time. However, you can only read shared storage data from inside a {{domxref("SharedStorageWorklet", "worklet", "", "nocode")}}. Worklets provide a secure environment inside which you can process shared storage data and return useful results, but you can't directly share the data with the associated browsing context.
 
-To extract useful results from a shared storage worklet, you need to use an **output gate**. These gates serve specific purposes such as selecting a URL from a provided list to display to the user based on shared storage data. Results meant for the user are shown securely inside a [fenced frame](/en-US/docs/Web/API/Fenced_Frame_API) where they can't be accessed from the embedding page.
+To extract useful results from a shared storage worklet, you need to use an **output gate**. These gates serve specific purposes such as selecting a URL from a provided list to display to the user based on shared storage data. Results meant for the user are shown securely inside a [fenced frame](/en-US/docs/Web/API/Fenced_frame_API) where they can't be accessed from the embedding page.
 
 ## Output gates
 
 The currently available output gates for the Shared Storage API are discussed in the sections below. In each section, we list typical use cases for each gate and provide links to guides with more information and code examples.
 
-> **Note:** More output gates will likely be added in the future to support additional use cases.
+> [!NOTE]
+> More output gates will likely be added in the future to support additional use cases.
 
 ### URL Selection
 
@@ -49,7 +50,7 @@ The [Private Aggregation API](https://developer.chrome.com/docs/privacy-sandbox/
 
 ## Understanding how shared storage works
 
-There are two parts to using the Shared Storage API — writing data to storage and reading/processing it. To give you an idea of how these parts are handled, we'll walk you through the basic [A/B testing](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/ab-testing/) example from developer.chrome.com. In this example, a user is assigned to an experiment group, and the group details are stored in shared storage. Other sites are able to use this data when choosing a URL to display in a [fenced frame](/en-US/docs/Web/API/Fenced_Frame_API).
+There are two parts to using the Shared Storage API — writing data to storage and reading/processing it. To give you an idea of how these parts are handled, we'll walk you through the basic [A/B testing](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/ab-testing/) example from developer.chrome.com. In this example, a user is assigned to an experiment group, and the group details are stored in shared storage. Other sites are able to use this data when choosing a URL to display in a [fenced frame](/en-US/docs/Web/API/Fenced_frame_API).
 
 ### Writing to shared storage
 
@@ -58,7 +59,7 @@ Writing data to shared storage is simple — you use methods defined on the {{do
 This functionality is available in two different contexts:
 
 - In the main browsing context, where your site or app runs, on {{domxref("WindowSharedStorage")}}. This is available via `window.sharedStorage`.
-- In the context of your shared storage worklet, on {{domxref("WorkletSharedStorage")}}. This is is available via `this.sharedStorage`.
+- In the context of your shared storage worklet, on {{domxref("WorkletSharedStorage")}}. This is available via `this.sharedStorage`.
 
 In our A/B testing example, we define a function in our app context that generates a random number — 0 or 1 — to represent an experiment group. We then run the {{domxref("SharedStorage.set", "window.sharedStorage.set()")}} function to assign the user to a group and save the result in shared storage:
 
@@ -76,7 +77,8 @@ async function injectContent() {
 }
 ```
 
-> **Note:** The `ignoreIfPresent: true` option causes the `set()` function to abort if the shared storage already contains a data item with the specified key.
+> [!NOTE]
+> The `ignoreIfPresent: true` option causes the `set()` function to abort if the shared storage already contains a data item with the specified key.
 
 ### Reading and processing data from shared storage
 
@@ -99,7 +101,8 @@ The URL Selection operation is a JavaScript class that must follow the rules bel
 - The actual functionality must be contained in an asynchronous `run()` method, which takes an array of objects containing URLs as its first parameter and a data object as its second parameter (when called, the data argument is optional).
 - The `run()` method must return a number, which will equate to the number of the URL chosen.
 
-> **Note:** Each output gate has a corresponding interface that defines the required structure of its class and `run()` method. For URL Selection, see {{domxref("SharedStorageSelectURLOperation")}}.
+> [!NOTE]
+> Each output gate has a corresponding interface that defines the required structure of its class and `run()` method. For URL Selection, see {{domxref("SharedStorageSelectURLOperation")}}.
 
 Once the operation is defined, it needs to be registered using {{domxref("SharedStorageWorkletGlobalScope.register()")}}.
 
@@ -120,7 +123,8 @@ register("ab-testing", SelectURLOperation);
 
 Notice how the value set in our main app context is retrieved using {{domxref("WorkletSharedStorage.get()")}}. To reiterate, to preserve privacy and mitigate data leakage, you can read values from shared storage only within a worklet.
 
-> **Note:** It is possible to define and register multiple operations in the same shared storage worklet module script with different names; see {{domxref("SharedStorageOperation")}} for an example.
+> [!NOTE]
+> It is possible to define and register multiple operations in the same shared storage worklet module script with different names; see {{domxref("SharedStorageOperation")}} for an example.
 
 #### Add the module to the shared storage worklet
 

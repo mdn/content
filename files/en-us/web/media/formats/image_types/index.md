@@ -29,11 +29,11 @@ The image file formats that are most commonly used on the web are listed below.
       </th>
       <th scope="row">Animated Portable Network Graphics</th>
       <td><code>image/apng</code></td>
-      <td><code>.apng</code></td>
+      <td><code>.apng</code>, <code>.png</code></td>
       <td>
         Good choice for lossless animation sequences (GIF is less performant).
         AVIF and WebP have better performance but less broad browser support.<br />
-        <strong>Supported</strong>: Chrome, Edge, Firefox, Opera, Safari.
+        <strong>Support:</strong> Chrome, Edge, Firefox, Opera, Safari.
       </td>
     </tr>
     <tr>
@@ -47,7 +47,7 @@ The image file formats that are most commonly used on the web are listed below.
           It offers much better compression than PNG or JPEG with support for higher color depths, animated frames, transparency, etc.
           Note that when using AVIF, you should include fallbacks to formats with better browser support (i.e. using the
           <code><a href="/en-US/docs/Web/HTML/Element/picture">&#x3C;picture></a></code> element).<br />
-          <strong>Supported:</strong> Chrome, Edge, Firefox (still images only: animated images not implemented), Opera, Safari.
+          <strong>Support:</strong> Chrome, Edge, Firefox (still images only: animated images not implemented), Opera, Safari.
         </p>
       </td>
     </tr>
@@ -59,7 +59,7 @@ The image file formats that are most commonly used on the web are listed below.
       <td>
         Good choice for simple images and animations. Prefer PNG for
         lossless <em>and</em> indexed still images, and consider WebP, AVIF or APNG for animation sequences.<br />
-        <strong>Supported:</strong> Chrome, Edge, Firefox, IE, Opera, Safari.
+        <strong>Support:</strong> Chrome, Edge, Firefox, IE, Opera, Safari.
       </td>
     </tr>
     <tr>
@@ -90,7 +90,7 @@ The image file formats that are most commonly used on the web are listed below.
         <p>
           PNG is preferred over JPEG for more precise reproduction of source
           images, or when transparency is needed. WebP/AVIF provide even better compression and reproduction, but browser support is more limited.<br />
-          <strong >Support:</strong> Chrome, Edge, Firefox, IE, Opera, Safari.
+          <strong>Support:</strong> Chrome, Edge, Firefox, IE, Opera, Safari.
         </p>
       </td>
     </tr>
@@ -119,7 +119,8 @@ The image file formats that are most commonly used on the web are listed below.
   </tbody>
 </table>
 
-> **Note:** The older formats like PNG, JPEG, GIF have poor performance compared to newer formats like WebP and AVIF, but enjoy broader "historical" browser support. The newer image formats are seeing increasing popularity as browsers without support become increasingly irrelevant (i.e. have virtually zero market share).
+> [!NOTE]
+> The older formats like PNG, JPEG, GIF have poor performance compared to newer formats like WebP and AVIF, but enjoy broader "historical" browser support. The newer image formats are seeing increasing popularity as browsers without support become increasingly irrelevant (i.e. have virtually zero market share).
 
 The following list includes image formats that appear on the web, but which should be avoided for web content (generally this is because either they do not have wide browser support, or because there are better alternatives).
 
@@ -158,9 +159,11 @@ The following list includes image formats that appear on the web, but which shou
   </tbody>
 </table>
 
-> **Note:** The abbreviation for each image format links to a longer description of the format, its capabilities, and detailed browser compatibility information (including which versions introduced support and specific special features that may have been introduced later).
+> [!NOTE]
+> The abbreviation for each image format links to a longer description of the format, its capabilities, and detailed browser compatibility information (including which versions introduced support and specific special features that may have been introduced later).
 
-> **Note:** Safari 11.1 added the ability to use a video format, as an animated gif replacement.
+> [!NOTE]
+> Safari 11.1 added the ability to use a video format, as an animated gif replacement.
 > No other browser supports this.
 > See the [Chromium bug](https://crbug.com/791658), and [Firefox bug](https://bugzil.la/895131) for more information.
 
@@ -189,7 +192,7 @@ They're also commonly used for the animated portions of web browsers' user inter
     </tr>
     <tr>
       <th scope="row">File extension(s)</th>
-      <td><code>.apng</code></td>
+      <td><code>.apng</code>, <code>.png</code></td>
     </tr>
     <tr>
       <th scope="row">Specification</th>
@@ -279,7 +282,8 @@ They're also commonly used for the animated portions of web browsers' user inter
 
 AV1 Image File Format (AVIF) is a powerful, open source, royalty-free file format that encodes _AV1 bitstreams in the High Efficiency Image File Format (HEIF) container._
 
-> **Note:** AVIF has potential to become the "next big thing" for sharing images in web content.
+> [!NOTE]
+> AVIF has potential to become the "next big thing" for sharing images in web content.
 > It offers state-of-the-art features and performance, without the encumbrance of complicated licensing and patent royalties that have hampered comparable alternatives.
 
 AV1 is a coding format that was originally designed for video transmission over the Internet.
@@ -334,10 +338,6 @@ As support is not yet comprehensive (and has little historical depth) you should
             can be used to adjust the compliance strictness with the specification.
             Animated images are not supported.
           </li>
-          <li>
-            Firefox 77 to 92 require the preference
-            <code>image.avif.enable</code> set <code>true</code>. Earlier versions provide only basic support.
-          </li>
         </ul>
       </td>
     </tr>
@@ -383,7 +383,8 @@ As support is not yet comprehensive (and has little historical depth) you should
 
 The **BMP** (**Bitmap image**) file type is most prevalent on Windows computers, and is generally used only for special cases in web apps and content.
 
-> **Warning:** You should typically avoid using BMP files for website content.
+> [!WARNING]
+> You should typically avoid using BMP files for website content.
 > The most common form of BMP file represents the data as an uncompressed raster image, resulting in large file sizes compared to png or jpg image types.
 > More efficient BMP formats exist but are not widely used, and rarely supported in web browsers.
 
@@ -415,7 +416,7 @@ Theoretically, several compression algorithms are supported, and the image data 
     <tr>
       <th scope="row">Browser compatibility</th>
       <td>
-        All versions of Chrome, Edge, Firefox, Internet Explorer, Opera, and Safari
+        All versions of Chrome, Edge, Firefox, Opera, and Safari
       </td>
     </tr>
     <tr>
@@ -533,7 +534,7 @@ Typically, modern content should use [PNG](#png_portable_network_graphics) for l
     <tr>
       <th scope="row">Browser compatibility</th>
       <td>
-        All versions of Chrome, Edge, Firefox, Internet Explorer, Opera, and Safari
+        All versions of Chrome, Edge, Firefox, Opera, and Safari
       </td>
     </tr>
     <tr>
@@ -607,7 +608,8 @@ Following the directory comes the data for the icons.
 Each icon's data can be either a [BMP](#bmp_bitmap_file) image without the file header, or a complete [PNG](#png_portable_network_graphics) image (including the file header).
 If you use ICO files, you should use the BMP format, as support for PNG inside ICO files wasn't added until Windows Vista and may not be well supported.
 
-> **Warning:** ICO files _should not_ be used in web content.
+> [!WARNING]
+> ICO files _should not_ be used in web content.
 > Additionally, their use for favicons has subsided in favor of using a PNG file and the {{HTMLElement("link")}} element, as described in [Providing icons for different usage contexts](/en-US/docs/Web/HTML/Element/link#providing_icons_for_different_usage_contexts).
 
 <table class="standard-table">
@@ -630,7 +632,7 @@ If you use ICO files, you should use the BMP format, as support for PNG inside I
     <tr>
       <th scope="row">Browser compatibility</th>
       <td>
-        All versions of Chrome, Edge, Firefox, Internet Explorer, Opera, and Safari
+        All versions of Chrome, Edge, Firefox, Opera, and Safari
       </td>
     </tr>
     <tr>
@@ -780,7 +782,7 @@ The JFIF (**J**PEG **F**ile **I**nterchange **F**ormat) specification describes 
     <tr>
       <th scope="row">Browser compatibility</th>
       <td>
-        All versions of Chrome, Edge, Firefox, Internet Explorer, Opera, and Safari
+        All versions of Chrome, Edge, Firefox, Opera, and Safari
       </td>
     </tr>
     <tr>
@@ -848,8 +850,6 @@ The JFIF (**J**PEG **F**ile **I**nterchange **F**ormat) specification describes 
 The {{Glossary("PNG")}} (pronounced "**ping**") image format uses lossless compression, while supporting higher color depths than [GIF](#gif_graphics_interchange_format) and being more efficient, as well as featuring full alpha transparency support.
 
 PNG is widely supported, with all major browsers offering full support for its features.
-Internet Explorer, which introduced PNG support in versions 4–5, did not fully support it until IE 9, and had many infamous bugs for many of the intervening years, including in the once-omnipresent Internet Explorer 6.
-This slowed PNG adoption, but it is now commonly used, especially when precise reproduction of the source image is needed.
 
 <table class="standard-table">
   <tbody>
@@ -868,66 +868,7 @@ This slowed PNG adoption, but it is now commonly used, especially when precise r
     <tr>
       <th scope="row">Browser compatibility</th>
       <td>
-        <table class="standard-table">
-          <thead>
-            <tr>
-              <th scope="row">Feature</th>
-              <th scope="col">Chrome</th>
-              <th scope="col">Edge</th>
-              <th scope="col">Firefox</th>
-              <th scope="col">Internet Explorer</th>
-              <th scope="col">Opera</th>
-              <th scope="col">Safari</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Basic support</th>
-              <td>1</td>
-              <td>12</td>
-              <td>1</td>
-              <td>5</td>
-              <td>3.5.1 (Presto)<br />15 (Blink)</td>
-              <td>1</td>
-            </tr>
-            <tr>
-              <th scope="row">Alpha channel</th>
-              <td>1</td>
-              <td>12</td>
-              <td>1</td>
-              <td>5</td>
-              <td>6 (Presto)<br />All (Blink)</td>
-              <td>1</td>
-            </tr>
-            <tr>
-              <th scope="row">Gamma correction</th>
-              <td>no</td>
-              <td>yes</td>
-              <td>1</td>
-              <td>8</td>
-              <td>1</td>
-              <td>broken</td>
-            </tr>
-            <tr>
-              <th scope="row">Color correction</th>
-              <td>no</td>
-              <td>yes</td>
-              <td>3</td>
-              <td>9</td>
-              <td>no</td>
-              <td>no</td>
-            </tr>
-            <tr>
-              <th scope="row">Interlacing</th>
-              <td>no</td>
-              <td>?</td>
-              <td>1</td>
-              <td>broken</td>
-              <td>3.5.1</td>
-              <td>no</td>
-            </tr>
-          </tbody>
-        </table>
+        All versions of Chrome, Edge, Firefox, Opera, and Safari
       </td>
     </tr>
     <tr>
@@ -996,7 +937,7 @@ This slowed PNG adoption, but it is now commonly used, especially when precise r
     <tr>
       <th scope="row">Licensing</th>
       <td>
-        ©2003 <a href="https://www.w3.org/">W3C</a> (<a href="http://www.lcs.mit.edu/">MIT</a>, <a href="http://www.ercim.org/">ERCIM</a>,
+        ©2003 <a href="https://www.w3.org/">W3C</a> (<a href="https://www.csail.mit.edu/">MIT</a>, <a href="https://www.ercim.eu/">ERCIM</a>,
         <a href="https://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C
         <a href="https://www.w3.org/policies/#disclaimers">liability</a>,
         <a href="https://www.w3.org/policies/#trademarks">trademark</a>, <a href="https://www.w3.org/copyright/document-license/">document use</a>
@@ -1047,41 +988,7 @@ It's not generally useful for strictly bitmap or photographic images, although i
     <tr>
       <th scope="row">Browser compatibility</th>
       <td>
-        <table class="standard-table">
-          <thead>
-            <tr>
-              <th scope="row">Feature</th>
-              <th scope="col">Chrome</th>
-              <th scope="col">Edge</th>
-              <th scope="col">Firefox</th>
-              <th scope="col">Internet Explorer</th>
-              <th scope="col">Opera</th>
-              <th scope="col">Safari</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">SVG support</th>
-              <td>4</td>
-              <td>12</td>
-              <td>3</td>
-              <td>9</td>
-              <td>10 (Presto)<br />15 (Blink)</td>
-              <td>3.2</td>
-            </tr>
-            <tr>
-              <th scope="row">
-                SVG as image ({{HTMLElement("img")}}, etc.)
-              </th>
-              <td>28</td>
-              <td>12</td>
-              <td>4</td>
-              <td>9</td>
-              <td>10 (Presto)<br />15 (Blink)</td>
-              <td>9</td>
-            </tr>
-          </tbody>
-        </table>
+        All versions of Chrome, Edge, Firefox, Opera, and Safari
       </td>
     </tr>
     <tr>
@@ -1107,9 +1014,9 @@ It's not generally useful for strictly bitmap or photographic images, although i
       <th scope="row">Licensing</th>
       <td>
         ©2018 <a href="https://www.w3.org/">W3C</a> (<a
-          href="http://www.lcs.mit.edu/"
+          href="https://www.csail.mit.edu/"
           >MIT</a
-        >, <a href="http://www.ercim.org/">ERCIM</a>,
+        >, <a href="https://www.ercim.eu/">ERCIM</a>,
         <a href="https://www.keio.ac.jp/">Keio</a>,
         <a href="https://ev.buaa.edu.cn/">Beihang</a>), All Rights Reserved. W3C
         <a href="https://www.w3.org/policies/#disclaimers">liability</a>,
@@ -1298,47 +1205,8 @@ Provide a fallback in either [JPEG](#jpeg_joint_photographic_experts_group_image
     <tr>
       <th scope="row">Browser compatibility</th>
       <td>
-        <table class="standard-table">
-          <tbody>
-            <tr>
-              <th scope="row">Feature</th>
-              <th scope="col">Chrome</th>
-              <th scope="col">Edge</th>
-              <th scope="col">Firefox</th>
-              <th scope="col">Internet Explorer</th>
-              <th scope="col">Opera</th>
-              <th scope="col">Safari</th>
-            </tr>
-            <tr>
-              <th scope="row">Lossy WebP support</th>
-              <td>17</td>
-              <td>18</td>
-              <td>65</td>
-              <td>no</td>
-              <td>11.10 (Presto)<br />15 (Blink)</td>
-              <td>14</td>
-            </tr>
-            <tr>
-              <th scope="row">Lossless WebP</th>
-              <td>23<br />25 on Android</td>
-              <td>18</td>
-              <td>65</td>
-              <td>no</td>
-              <td>12.10 (Presto)<br />15 (Blink)</td>
-              <td>14</td>
-            </tr>
-            <tr>
-              <th scope="row">Animation</th>
-              <td>32</td>
-              <td>18</td>
-              <td>65</td>
-              <td>no</td>
-              <td>19 (Blink)</td>
-              <td>14</td>
-            </tr>
-          </tbody>
-        </table>
-        <p>WebP can also be used for <em>exporting</em> images from a Canvas from Firefox 96 and Chrome 50 (see <a href="/en-US/docs/Web/API/HTMLCanvasElement/toBlob#browser_compatibility"><code>HTMLCanvasElement.toBlob()</code></a> for more detailed support version information).</p>
+        All versions of Chrome, Edge, Firefox, Opera, and Safari
+        <p>WebP can also be used for <em>exporting</em> images from a Canvas. See <a href="/en-US/docs/Web/API/HTMLCanvasElement/toBlob#browser_compatibility"><code>HTMLCanvasElement.toBlob()</code></a> for more detailed support version information.</p>
       </td>
     </tr>
     <tr>
@@ -1363,7 +1231,8 @@ Provide a fallback in either [JPEG](#jpeg_joint_photographic_experts_group_image
   </tbody>
 </table>
 
-> **Note:** On Safari for macOS, WebP support depends on both Safari and macOS versions. You need Safari 14 or later as well as macOS Big Sur (11) or a more recent version.
+> [!NOTE]
+> On Safari for macOS, WebP support depends on both Safari and macOS versions. You need Safari 14 or later as well as macOS Big Sur (11) or a more recent version.
 
 ### XBM (X Window System Bitmap file)
 

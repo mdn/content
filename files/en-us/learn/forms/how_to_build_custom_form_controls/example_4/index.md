@@ -201,7 +201,7 @@ function updateValue(select, index) {
   const optionList = select.querySelectorAll(".option");
 
   nativeWidget.selectedIndex = index;
-  value.innerHTML = optionList[index].innerHTML;
+  value.textContent = optionList[index].textContent;
   highlightOption(select, optionList[index]);
 }
 
@@ -274,9 +274,15 @@ window.addEventListener("load", () => {
       }
       if (event.key === "ArrowDown" && index < optionList.length - 1) {
         index++;
+        event.preventDefault();
       }
       if (event.key === "ArrowUp" && index > 0) {
         index--;
+        event.preventDefault();
+      }
+
+      if (event.key === "Enter" || event.key === " ") {
+        toggleOptList(select);
       }
 
       updateValue(select, index);

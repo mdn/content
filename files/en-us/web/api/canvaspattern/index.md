@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.CanvasPattern
 ---
 
-{{APIRef("Canvas API")}}
+{{APIRef("Canvas API")}}{{AvailableInWorkers}}
 
 The **`CanvasPattern`** interface represents an [opaque object](https://en.wikipedia.org/wiki/Opaque_data_type) describing a pattern, based on an image, a canvas, or a video, created by the {{domxref("CanvasRenderingContext2D.createPattern()")}} method.
 

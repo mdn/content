@@ -11,7 +11,8 @@ The **`<title>`** element provides an accessible, short-text description of any 
 
 Text in a `<title>` element is not rendered as part of the graphic, but browsers usually display it as a tooltip. If an element can be described by visible text, it is recommended to reference that text with an [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) attribute rather than using the `<title>` element.
 
-> **Note:** For backward compatibility with SVG 1.1, `<title>` elements should be the first child element of their parent.
+> [!NOTE]
+> For backward compatibility with SVG 1.1, `<title>` elements should be the first child element of their parent.
 
 ## Example
 
@@ -41,16 +42,7 @@ svg {
 
 This element only includes global attributes
 
-### Global attributes
-
-- [Core Attributes](/en-US/docs/Web/SVG/Attribute/Core)
-  - : Most notably: {{SVGAttr('id')}}
-- [Styling Attributes](/en-US/docs/Web/SVG/Attribute/Styling)
-  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- Event Attributes
-  - : [Global event attributes](/en-US/docs/Web/SVG/Attribute/Events#global_event_attributes), [Document element event attributes](/en-US/docs/Web/SVG/Attribute/Events#document_element_event_attributes)
-
-## Usage notes
+## Usage context
 
 {{svginfo}}
 

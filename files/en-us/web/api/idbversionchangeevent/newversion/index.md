@@ -6,13 +6,11 @@ page-type: web-api-instance-property
 browser-compat: api.IDBVersionChangeEvent.newVersion
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`newVersion`** read-only property of the
 {{domxref("IDBVersionChangeEvent")}} interface returns the new version number of the
 database.
-
-{{AvailableInWorkers}}
 
 ## Value
 
@@ -32,11 +30,13 @@ const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
 // these two event handlers act on the database being opened
 DBOpenRequest.onerror = (event) => {
-  note.innerHTML += "<li>Error loading database.</li>";
+  note.appendChild(document.createElement("li")).textContent =
+    "Error loading database.";
 };
 
 DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += "<li>Database initialized.</li>";
+  note.appendChild(document.createElement("li")).textContent =
+    "Database initialized.";
 
   // store the result of opening the database in the db variable.
   // This is used a lot later on, for opening transactions and suchlike.

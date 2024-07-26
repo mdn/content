@@ -3,18 +3,17 @@ title: "CookieChangeEvent: CookieChangeEvent() constructor"
 short-title: CookieChangeEvent()
 slug: Web/API/CookieChangeEvent/CookieChangeEvent
 page-type: web-api-constructor
-status:
-  - experimental
 browser-compat: api.CookieChangeEvent.CookieChangeEvent
 ---
 
-{{securecontext_header}}{{APIRef("Cookie Store API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Cookie Store API")}}
 
 The **`CookieChangeEvent()`** constructor creates a new {{domxref("CookieChangeEvent")}} object
 which is the event type of the {{domxref("CookieStore/change_event", "change")}} event fired at a {{domxref("CookieStore")}} when any cookie changes occur.
 This constructor is called by the browser when a change event occurs.
 
-> **Note:** This event constructor is generally not needed for production websites. It's primary use is for tests that require an instance of this event.
+> [!NOTE]
+> This event constructor is generally not needed for production websites. It's primary use is for tests that require an instance of this event.
 
 ## Syntax
 

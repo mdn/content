@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.ServiceWorkerGlobalScope.sync_event
 ---
 
-{{DefaultAPISidebar("Background Sync")}}
+{{APIRef("Background Sync")}}{{SecureContext_Header}}{{AvailableInWorkers("service")}}
 
 The **`sync`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired when the page (or worker) that registered the event with the {{domxref('SyncManager')}} is running and as soon as network connectivity is available.
 
@@ -24,13 +24,13 @@ onsync = (event) => {};
 
 ## Event type
 
-A {{domxref("SyncEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("SyncEvent")}}. Inherits from {{domxref("ExtendableEvent")}} and {{domxref("Event")}}.
 
 {{InheritanceDiagram("SyncEvent")}}
 
 ## Event properties
 
-_Inherits properties from its ancestor, {{domxref("Event")}}_.
+_Inherits properties from its ancestor, {{domxref("ExtendableEvent")}} and {{domxref("Event")}}_.
 
 - {{domxref("SyncEvent.tag")}} {{ReadOnlyInline}}
   - : Returns the developer-defined identifier for this `SyncEvent`.

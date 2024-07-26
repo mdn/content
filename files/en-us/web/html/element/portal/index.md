@@ -22,6 +22,16 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 - `src`
   - : The URL of the page to embed.
 
+## Accessibility
+
+The preview displayed by a `<portal>` is not interactive, therefore does not receive input events or focus. Therefore the embedded contents of the portal are not exposed as elements in the {{Glossary("accessibility tree")}}. The portal can be navigated to and activated like a button, the default behavior when clicking on the portal is to activate it.
+
+Portals are given a default label which is the title of the embedded page. If no title is present the visible text in the preview is concatenated to create a label. The [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute can be used to override this.
+
+Portals used for prerendering only should be hidden with the hidden HTML attribute or the CSS {{cssxref("display")}} property with a value of `none`.
+
+When using animations during portal activation the {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} [media feature](/en-US/docs/Web/CSS/@media#media_features) should be respected.
+
 ## Examples
 
 ### Basic example
@@ -31,16 +41,6 @@ The following example will embed the contents of `https://example.com` as a prev
 ```html
 <portal id="exampleportal" src="https://example.com/"></portal>
 ```
-
-## Accessibility concerns
-
-The preview displayed by a `<portal>` is not interactive, therefore does not receive input events or focus. Therefore the embedded contents of the portal are not exposed as elements in the {{Glossary("accessibility tree")}}. The portal can be navigated to and activated like a button, the default behavior when clicking on the portal is to activate it.
-
-Portals are given a default label which is the title of the embedded page. If no title is present the visible text in the preview is concatenated to create a label. The [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute can be used to override this.
-
-Portals used for prerendering only should be hidden with the hidden HTML attribute or the CSS {{cssxref("display")}} property with a value of `none`.
-
-When using animations during portal activation the {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} [media feature](/en-US/docs/Web/CSS/@media#media_features) should be respected.
 
 ## Technical summary
 

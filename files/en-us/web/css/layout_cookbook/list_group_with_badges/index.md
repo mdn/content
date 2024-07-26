@@ -2,7 +2,6 @@
 title: List group with badges
 slug: Web/CSS/Layout_cookbook/List_group_with_badges
 page-type: guide
-browser-compat: css.properties.flex
 ---
 
 {{CSSRef}}
@@ -19,7 +18,7 @@ The list items should be displayed with the badges. The badge should be aligned 
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/list-group-badges.html", '100%', 720)}}
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/list-group-badges--download.html)
 
@@ -33,6 +32,6 @@ To align the content horizontally, I use the {{cssxref("align-items")}} property
 
 ## See also
 
-- [Box alignment in Flexbox](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
+- [Box alignment in flexbox](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
 - [Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
 - [CSS flexible box layout](/en-US/docs/Web/CSS/CSS_flexible_box_layout) module

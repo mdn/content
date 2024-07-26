@@ -92,7 +92,8 @@ Our whole app is now just 21 KB — 8.3 KB when gzipped. There are no additional
 
 By default, when you create a new app with `npx degit sveltejs/template my-svelte-project`, Svelte will use [rollup](https://rollupjs.org/) as the module bundler.
 
-> **Note:** There is also an official template for using [webpack](https://webpack.js.org/) and also many [community-maintained plugins](https://github.com/sveltejs/integrations#bundler-plugins) for other bundlers.
+> [!NOTE]
+> There is also an official template for using [webpack](https://webpack.js.org/) and also many [community-maintained plugins](https://github.com/sveltejs/integrations#bundler-plugins) for other bundlers.
 
 In the file `package.json` you can see that the `build` and `dev` scripts are just calling rollup:
 
@@ -158,7 +159,8 @@ There are [many plugins for rollup](https://github.com/rollup/awesome) that allo
 
 From the point of view of a web server, a Svelte application is nothing more than a bunch of HTML, CSS, and JavaScript files. All you need is a web server capable of serving static files, which means you have plenty of options to choose from. Let's look at a couple of examples.
 
-> **Note:** the following section could be applied to any client-side static website requiring a build step, not just Svelte apps.
+> [!NOTE]
+> the following section could be applied to any client-side static website requiring a build step, not just Svelte apps.
 
 ### Deploying with Vercel
 
@@ -198,7 +200,8 @@ To deploy our app, follow these steps.
 
 You can also [import a Svelte git project](https://vercel.com/import/svelte) into Vercel from [GitHub](https://github.com/), [GitLab](https://about.gitlab.com/), or [BitBucket](https://bitbucket.org/product).
 
-> **Note:** you can globally install Vercel with `npm i -g vercel` so you don't have to use `npx` to run it.
+> [!NOTE]
+> you can globally install Vercel with `npm i -g vercel` so you don't have to use `npx` to run it.
 
 ### Automatic deployment to GitLab pages
 
@@ -224,7 +227,8 @@ To demonstrate this, we will deploy our todos app to [GitLab Pages](https://abou
    git push -u origin main
    ```
 
-   > **Note:** You could use [the `git` protocol](https://git-scm.com/book/en/v2/Git-on-the-Server-The-Protocols#_the_git_protocol) instead of `https`, which is faster and saves you from typing your username and password every time you access your origin repo. To use it you'll have to [create an SSH key pair](https://docs.gitlab.com/ee/user/ssh.html#generate-an-ssh-key-pair). Your origin URL will be like this: `git@gitlab.com:[your-user]/mdn-svelte-todo.git`.
+   > [!NOTE]
+   > You could use [the `git` protocol](https://git-scm.com/book/en/v2/Git-on-the-Server-The-Protocols#_the_git_protocol) instead of `https`, which is faster and saves you from typing your username and password every time you access your origin repo. To use it you'll have to [create an SSH key pair](https://docs.gitlab.com/ee/user/ssh.html#generate-an-ssh-key-pair). Your origin URL will be like this: `git@gitlab.com:[your-user]/mdn-svelte-todo.git`.
 
 With these instructions we initialize a local git repository, then set our remote origin (where we will push our code to) as our repo on GitLab. Next we commit all the files to the local git repo, and then push those to the remote origin on GitLab.
 
@@ -311,7 +315,7 @@ There are other projects related to Svelte that are worth checking out:
 - Even though Svelte is a relatively young project there are lots of tutorials and [courses](https://www.udemy.com/topic/svelte-framework/?sort=popularity) available on the web, so it's difficult to make a recommendation.
 - Nevertheless, [Svelte.js — The Complete Guide](https://www.udemy.com/course/sveltejs-the-complete-guide/) by [Academind](https://academind.com/) is a very popular option with great ratings.
 - [The Svelte Handbook](https://www.freecodecamp.org/news/the-svelte-handbook/), by [Flavio Copes](https://flaviocopes.com/), is also a useful reference for learning the main Svelte concepts.
-- If you prefer to read books, there's [Svelte and Sapper in Action](https://www.manning.com/books/svelte-and-sapper-in-action) by [Mark Volkman](https://twitter.com/mark_volkmann), expected to be published in September 2020, but which you can already [preview online](https://livebook.manning.com/book/svelte-and-sapper-in-action/welcome/v-5/) for free.
+- If you prefer to read books, there's [Svelte and Sapper in Action](https://www.manning.com/books/svelte-and-sapper-in-action) by [Mark Volkman](https://twitter.com/mark_volkmann), published in October 2020, that [you can preview online](https://livebook.manning.com/book/svelte-and-sapper-in-action/welcome) for free.
 - If you want dive deeper and understand the inner working of Svelte's compiler you should check [Tan Li Hau](https://twitter.com/lihautan)'s _Compile Svelte in your head_ blog posts. Here's [Part 1](https://lihautan.com/compile-svelte-in-your-head-part-1/), [Part 2](https://lihautan.com/compile-svelte-in-your-head-part-2/), and [Part 3](https://lihautan.com/compile-svelte-in-your-head-part-3/).
 
 ### Interacting with the community

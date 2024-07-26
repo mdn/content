@@ -7,7 +7,7 @@ status:
 browser-compat: api.Serial
 ---
 
-{{DefaultAPISidebar("Web Serial API")}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{DefaultAPISidebar("Web Serial API")}}{{SecureContext_Header}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **Web Serial API** provides a way for websites to read from and write to serial devices. These devices may be connected via a serial port, or be USB or Bluetooth devices that emulate a serial port.
 
@@ -27,9 +27,9 @@ Examples of serial devices include 3D printers, and microcontrollers such as the
 ## Extensions to other interfaces
 
 - {{domxref("Navigator.serial")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns a {{domxref("Serial")}} object, which represents the entry point into the {{domxref("Web Serial API")}} to enable the control of serial ports.
+  - : Returns a {{domxref("Serial")}} object, which represents the entry point into the Web Serial API to enable the control of serial ports.
 - {{domxref("WorkerNavigator.serial")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns a {{domxref("Serial")}} object, which represents the entry point into the {{domxref("Web Serial API")}} to enable the control of serial ports.
+  - : Returns a {{domxref("Serial")}} object, which represents the entry point into the Web Serial API to enable the control of serial ports.
 
 ## Examples
 

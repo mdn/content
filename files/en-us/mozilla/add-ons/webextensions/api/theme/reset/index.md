@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.theme.reset
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Resets any theme applied using the {{WebExtAPIRef("theme.update()")}} method.
 

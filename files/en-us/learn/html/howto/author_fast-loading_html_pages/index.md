@@ -111,7 +111,7 @@ use non-nested tables or divs as in
 </table>
 ```
 
-See also: [CSS Flexible Box Layout](https://www.w3.org/TR/css-flexbox-1/) and [CSS Grid Layout](https://www.w3.org/TR/css-grid-1/) specifications.
+See also: [CSS flexible box layout](https://www.w3.org/TR/css-flexbox-1/) and [CSS grid layout](https://www.w3.org/TR/css-grid-1/) specifications.
 
 ### Minify and compress SVG assets
 
@@ -189,6 +189,6 @@ Note: Even though these attributes do help a lot the first time a page is loaded
 
 ## See also
 
-- Book: ["Speed Up Your Site" by Andy King](http://www.websiteoptimization.com/)
+- Book: ["Speed Up Your Site" by Andy King](https://www.websiteoptimization.com/)
 - The excellent and very complete [Best Practices for Speeding Up Your Website](https://developer.yahoo.com/performance/rules.html) (Yahoo!)
 - Tools for analyzing and optimizing performance: [Google PageSpeed Tools](https://developers.google.com/speed)

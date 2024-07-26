@@ -45,8 +45,9 @@ The returned `intervalID` is a numeric, non-zero value which identifies the time
 It may be helpful to be aware that `setInterval()` and {{domxref("setTimeout()")}} share the same pool of IDs, and that `clearInterval()` and {{domxref("clearTimeout", "clearTimeout()")}} can technically be used interchangeably.
 For clarity, however, you should try to always match them to avoid confusion when maintaining your code.
 
-> **Note:** The `delay` argument is converted to a signed 32-bit integer.
-> This effectively limits `delay` to 2147483647 ms, since it's specified as a signed integer in the IDL.
+> [!NOTE]
+> The `delay` argument is converted to a signed 32-bit integer.
+> This effectively limits `delay` to 2147483647 ms, roughly 24.8 days, since it's specified as a signed integer in the IDL.
 
 ## Examples
 

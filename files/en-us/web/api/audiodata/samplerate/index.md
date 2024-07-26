@@ -8,7 +8,7 @@ status:
 browser-compat: api.AudioData.sampleRate
 ---
 
-{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
+{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}{{SeeCompatTable}}
 
 The **`sampleRate`** read-only property of the {{domxref("AudioData")}} interface returns the sample rate in Hz.
 

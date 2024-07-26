@@ -8,6 +8,7 @@ browser-compat: api.GeolocationCoordinates
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 The **`GeolocationCoordinates`** interface represents the position and altitude of the device on Earth, as well as the accuracy with which these properties are calculated.
+The geographic position information is provided in terms of World Geodetic System coordinates (WGS84).
 
 ## Instance properties
 
@@ -24,13 +25,16 @@ _The `GeolocationCoordinates` interface doesn't inherit any properties._
 - {{domxref("GeolocationCoordinates.altitudeAccuracy")}} {{ReadOnlyInline}}
   - : Returns a `double` representing the accuracy of the `altitude` expressed in meters. This value can be `null` if the implementation cannot provide the data.
 - {{domxref("GeolocationCoordinates.heading")}} {{ReadOnlyInline}}
-  - : Returns a `double` representing the direction towards which the device is facing. This value, specified in degrees, indicates how far off from heading true north the device is. `0` degrees represents true north, and the direction is determined clockwise (which means that east is `90` degrees and west is `270` degrees). If `speed` is `0`, `heading` is [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN). If the device is unable to provide `heading` information, this value is `null`.
+  - : Returns a `double` representing the direction towards which the device is facing. This value, specified in degrees, indicates how far off from heading true north the device is. `0` degrees represents true north, and the direction is determined clockwise (which means that east is `90` degrees and west is `270` degrees). If `speed` is `0`, `heading` is {{jsxref("NaN")}}. If the device is unable to provide `heading` information, this value is `null`.
 - {{domxref("GeolocationCoordinates.speed")}} {{ReadOnlyInline}}
   - : Returns a `double` representing the velocity of the device in meters per second. This value can be `null`.
 
 ## Instance methods
 
-_The `GeolocationCoordinates` interface neither implements, nor inherits any method._
+_The `GeolocationCoordinates` interface doesn't inherit any methods._
+
+- {{domxref("GeolocationCoordinates.toJSON()")}}
+  - : Returns a JSON representation of the `GeolocationCoordinates` object and enables serialization with {{jsxref("JSON.stringify()")}}.
 
 ## Specifications
 

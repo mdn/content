@@ -2,7 +2,7 @@
 title: stroke-width
 slug: Web/SVG/Attribute/stroke-width
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.stroke-width
+browser-compat: svg.global_attributes.stroke-width
 ---
 
 {{SVGRef}}
@@ -78,7 +78,8 @@ svg {
   </tbody>
 </table>
 
-> **Note:** A percentage value is always computed as a percentage of the normalized {{SVGAttr('viewBox')}} diagonal length.
+> [!NOTE]
+> A percentage value is always computed as a percentage of the normalized {{SVGAttr('viewBox')}} diagonal length.
 
 ## Specifications
 
