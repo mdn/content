@@ -21,7 +21,7 @@ The **`align`** property of the {{domxref("HTMLTableColElement")}} interface is 
 The possible values are:
 
 - `left`
-  - : Align the text to the left. Use `text-align: left` applied directly to the {{td}} or {{th}} instead.
+  - : Align the text to the left. Use `text-align: left` applied directly to the {{HTMLElement("td")}} or {{HTMLElement("th")}} instead.
 - `right`
   - : Align the text to the right. Use `text-align: right` applied directly to the `<td>` or `<th>` instead.
 - `center`

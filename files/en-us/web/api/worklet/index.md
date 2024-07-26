@@ -7,7 +7,7 @@ browser-compat: api.Worklet
 
 {{APIRef("Worklets")}}{{SecureContext_Header}}
 
-The **`Worklet`** interface is a lightweight version of {{domxref("Worker", "Web Workers")}} and gives developers access to low-level parts of the rendering pipeline.
+The **`Worklet`** interface is a lightweight version of [Web Workers](/en-US/docs/Web/API/Web_Workers_API) and gives developers access to low-level parts of the rendering pipeline.
 
 With Worklets, you can run JavaScript and [WebAssembly](/en-US/docs/WebAssembly) code to do graphics rendering or audio processing where high performance is required.
 
