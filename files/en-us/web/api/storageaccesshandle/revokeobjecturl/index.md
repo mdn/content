@@ -8,7 +8,8 @@ browser-compat: api.StorageAccessHandle.revokeObjectURL
 
 {{APIRef("Storage Access API")}}
 
-> **Note:** See {{domxref("URL.revokeObjectURL_static", "revokeObjectURL()")}} to understand usage.
+> [!NOTE]
+> See {{domxref("URL.revokeObjectURL_static", "revokeObjectURL()")}} to understand usage.
 
 ## Syntax
 
@@ -46,7 +47,8 @@ document.requestStorageAccess({ revokeObjectURL: true }).then(
 );
 ```
 
-> **Note:** See [Using the Storage Access API](/en-US/docs/Web/API/Storage_Access_API/Using) for a more complete example.
+> [!NOTE]
+> See [Using the Storage Access API](/en-US/docs/Web/API/Storage_Access_API/Using) for a more complete example.
 
 ## Specifications
 

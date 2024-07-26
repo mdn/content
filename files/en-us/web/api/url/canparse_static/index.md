@@ -30,7 +30,8 @@ URL.canParse(url, base)
   - : A string representing the base URL to use in cases where `url` is a relative URL.
     If not specified, it defaults to `undefined`.
 
-> **Note:** The `url` and `base` arguments will each be stringified from whatever value you pass, just like with other Web APIs that accept a string.
+> [!NOTE]
+> The `url` and `base` arguments will each be stringified from whatever value you pass, just like with other Web APIs that accept a string.
 > In particular, you can use an existing {{domxref("URL")}} object for either argument, and it will be stringified to the object's {{domxref("URL.href", "href")}} property.
 
 ### Return value
