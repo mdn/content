@@ -62,7 +62,8 @@ Content-Security-Policy: frame-ancestors <space separated list of sources>;
     - `mail.example.com:443`: Matches all attempts to access port 443 on mail.example.com.
     - `https://store.example.com`: Matches all attempts to access store.example.com using `https:`.
 
-    > **Warning:** If no URL scheme is specified for a `host-source` and the iframe is loaded from an `https` URL, the URL for the page loading the iframe must also be `https`, per the [Does URL match expression in origin with redirect count?](https://w3c.github.io/webappsec-csp/#match-url-to-source-expression) section of the CSP spec.
+    > [!WARNING]
+    > If no URL scheme is specified for a `host-source` and the iframe is loaded from an `https` URL, the URL for the page loading the iframe must also be `https`, per the [Does URL match expression in origin with redirect count?](https://w3c.github.io/webappsec-csp/#match-url-to-source-expression) section of the CSP spec.
 
 - \<scheme-source>
 
