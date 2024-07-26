@@ -10,7 +10,8 @@ browser-compat: api.DataTransferItem.webkitGetAsEntry
 
 If the item described by the {{domxref("DataTransferItem")}} is a file, `webkitGetAsEntry()` returns a {{domxref("FileSystemFileEntry")}} or {{domxref("FileSystemDirectoryEntry")}} representing it. If the item isn't a file, `null` is returned.
 
-> **Note:** This function is implemented as `webkitGetAsEntry()` in non-WebKit browsers including Firefox at this time; it may be renamed to
+> [!NOTE]
+> This function is implemented as `webkitGetAsEntry()` in non-WebKit browsers including Firefox at this time; it may be renamed to
 > `getAsEntry()` in the future, so you should code defensively, looking for both.
 
 ## Syntax
@@ -90,7 +91,8 @@ body {
 First, let's look at the recursive `scanFiles()` function.
 This function takes as input a {{domxref("FileSystemEntry")}} representing an entry in the file system to be scanned and processed (the `item` parameter), and an element into which to insert the list of contents (the `container` parameter).
 
-> **Note:** To read all files in a directory, `readEntries` needs to be called repeatedly until it returns an empty array.
+> [!NOTE]
+> To read all files in a directory, `readEntries` needs to be called repeatedly until it returns an empty array.
 > In Chromium-based browsers, the following example will only return a max of 100 entries.
 
 ```js

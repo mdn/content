@@ -13,7 +13,8 @@ MIME type that the document is being rendered as. This may come from HTTP header
 other sources of MIME information, and might be affected by automatic type conversions
 performed by either the browser or extensions.
 
-> **Note:** This property is unaffected by {{HTMLElement("meta")}}
+> [!NOTE]
+> This property is unaffected by {{HTMLElement("meta")}}
 > elements.
 
 ## Value
