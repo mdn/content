@@ -13,7 +13,8 @@ browser-compat: api.VRDisplay.submitFrame
 
 The **`submitFrame()`** method of the {{domxref("VRDisplay")}} interface captures the current state of the {{domxref("VRLayerInit")}} currently being presented and displays it on the `VRDisplay`.
 
-> **Note:** This method was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
+> [!NOTE]
+> This method was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
 The frame should subsequently be rendered using the {{domxref("VRPose")}} and matrices provided by the last call to {{domxref("VRDisplay.getFrameData()", "getFrameData()")}}.
 
@@ -105,7 +106,8 @@ function drawVRScene() {
 }
 ```
 
-> **Note:** You can see this complete code at [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/main/webvr/raw-webgl-example/webgl-demo.js).
+> [!NOTE]
+> You can see this complete code at [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/main/webvr/raw-webgl-example/webgl-demo.js).
 
 ## Specifications
 

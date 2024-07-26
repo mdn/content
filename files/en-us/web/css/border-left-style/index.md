@@ -11,7 +11,8 @@ The **`border-left-style`** [CSS](/en-US/docs/Web/CSS) property sets the line st
 
 {{EmbedInteractiveExample("pages/css/border-left-style.html")}}
 
-> **Note:** The specification doesn't define how borders of different styles connect in the corners.
+> [!NOTE]
+> The specification doesn't define how borders of different styles connect in the corners.
 
 ## Syntax
 

@@ -16,7 +16,8 @@ The non-standard {{domxref("Window")}} method
 method which lets a website or app gain access to a sandboxed file system for its own
 use. The returned {{domxref("FileSystem")}} is then available for use with the other [file system APIs](/en-US/docs/Web/API/File_and_Directory_Entries_API).
 
-> **Note:** This method is prefixed with `webkit` in all browsers that implement it.
+> [!NOTE]
+> This method is prefixed with `webkit` in all browsers that implement it.
 
 ## Syntax
 

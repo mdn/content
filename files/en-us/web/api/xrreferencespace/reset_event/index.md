@@ -51,7 +51,8 @@ There are a number of reasons why a reset might occur. Most common among them ar
 - The user is in an `unbounded` reference space and has moved far enough from the starting position (the reference space's origin) that floating-point or other forms of error or drift are problematic. The coordinate system is thus reset with its new origin at or near the user's current position.
 - The WebXR infrastructure or hardware drivers detected that the device had temporarily lost tracking, causing the hardware and software to be out of sync on position and orientation.
 
-> **Note:** A `reset` event will _not_ occur if the reference space is able to regain tracking of its previous origin, since that means the origin has not been forced to be relocated. This event is only fired when the origin has to be relocated to recover from the tracking loss.
+> [!NOTE]
+> A `reset` event will _not_ occur if the reference space is able to regain tracking of its previous origin, since that means the origin has not been forced to be relocated. This event is only fired when the origin has to be relocated to recover from the tracking loss.
 
 ### Manual resets
 

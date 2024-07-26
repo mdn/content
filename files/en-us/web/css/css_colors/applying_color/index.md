@@ -9,7 +9,8 @@ page-type: guide
 
 With [CSS](/en-US/docs/Web/CSS), there are lots of ways to add color to your [HTML](/en-US/docs/Web/HTML) [elements](/en-US/docs/Web/HTML/Element) to create the look you want. This guide is a primer introducing how CSS can be used to apply colors to HTML elements. This guide includes [lists of the CSS properties that set color in their values](#properties_that_can_have_color) and how to use colors both [in stylesheets](#specifying_colors_as_values_in_stylesheets) and [in other ways](#other_ways_to_use_color).
 
-> **Note:** It is important to [use colors wisely](/en-US/docs/Web/CSS/CSS_colors/Using_color_wisely). Always select appropriate colors, ensuring the contrast between text and the background is sufficient to ensure legibility, and always keep the needs of people with differing visual capabilities in mind.
+> [!NOTE]
+> It is important to [use colors wisely](/en-US/docs/Web/CSS/CSS_colors/Using_color_wisely). Always select appropriate colors, ensuring the contrast between text and the background is sufficient to ensure legibility, and always keep the needs of people with differing visual capabilities in mind.
 
 To learn more about CSS colors as a data type, see the [CSS `<color>` data type](/en-US/docs/Web/CSS/color_value) reference and the [CSS color values guide](/en-US/docs/Web/CSS/CSS_colors/Color_values).
 
@@ -175,7 +176,8 @@ The `.boxLeft` class, used to style the box on the left, sets up the color of th
 }
 ```
 
-> **Note:** We included the `text-decoration-*` styles separately because Safari doesn't support {{cssxref("text-decoration")}} as a shorthand property.
+> [!NOTE]
+> We included the `text-decoration-*` styles separately because Safari doesn't support {{cssxref("text-decoration")}} as a shorthand property.
 
 Finally, the `.boxRight` class sets several styles on the box that's drawn to the right. Then the following colors are established (using five different ways of declaring [color values](/en-US/docs/Web/CSS/CSS_colors/Color_values)):
 
@@ -198,7 +200,8 @@ CSS isn't the only web technology that supports color. Other examples include:
 - [WebGL](/en-US/docs/Web/API/WebGL_API)
   - : The Web Graphics Library is an OpenGL ES-based API for drawing high-performance 2D and 3D graphics on the Web. See our [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial) to find out more. Also see [WebGPU](/en-US/docs/Web/API/WebGPU_API), a successor to WebGL for modern GPUs.
 
-> **Note:** A few now obsolete HTML attributes accepted colors as values, such as `bgcolor` and `vlink`. These attributes only accepted {{cssxref("named-color")}} and three- or six-digit {{cssxref("hex-color")}} values.
+> [!NOTE]
+> A few now obsolete HTML attributes accepted colors as values, such as `bgcolor` and `vlink`. These attributes only accepted {{cssxref("named-color")}} and three- or six-digit {{cssxref("hex-color")}} values.
 
 ## See also
 

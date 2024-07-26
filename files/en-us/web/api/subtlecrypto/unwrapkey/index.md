@@ -67,13 +67,13 @@ unwrapKey(format, wrappedKey, unwrappingKey, unwrapAlgo, unwrappedKeyAlgo, extra
     using [`SubtleCrypto.exportKey()`](/en-US/docs/Web/API/SubtleCrypto/exportKey) or [`SubtleCrypto.wrapKey()`](/en-US/docs/Web/API/SubtleCrypto/wrapKey).
 - `keyUsages`
   - : An [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) indicating what can be done with the key. Possible values of the array are:
-    - `encrypt`: The key may be used to [`encrypt`](/en-US/docs/Web/API/SubtleCrypto/encrypt) messages.
-    - `decrypt`: The key may be used to [`decrypt`](/en-US/docs/Web/API/SubtleCrypto/decrypt) messages.
-    - `sign`: The key may be used to [`sign`](/en-US/docs/Web/API/SubtleCrypto/sign) messages.
-    - `verify`: The key may be used to [`verify`](/en-US/docs/Web/API/SubtleCrypto/verify) signatures.
-    - `deriveKey`: The key may be used in [`deriving a new key`](/en-US/docs/Web/API/SubtleCrypto/deriveKey).
-    - `deriveBits`: The key may be used in [`deriving bits`](/en-US/docs/Web/API/SubtleCrypto/deriveBits).
-    - `wrapKey`: The key may be used to [`wrap a key`](/en-US/docs/Web/API/SubtleCrypto/wrapKey).
+    - `encrypt`: The key may be used to [encrypt](/en-US/docs/Web/API/SubtleCrypto/encrypt) messages.
+    - `decrypt`: The key may be used to [decrypt](/en-US/docs/Web/API/SubtleCrypto/decrypt) messages.
+    - `sign`: The key may be used to [sign](/en-US/docs/Web/API/SubtleCrypto/sign) messages.
+    - `verify`: The key may be used to [verify](/en-US/docs/Web/API/SubtleCrypto/verify) signatures.
+    - `deriveKey`: The key may be used in [deriving a new key](/en-US/docs/Web/API/SubtleCrypto/deriveKey).
+    - `deriveBits`: The key may be used in [deriving bits](/en-US/docs/Web/API/SubtleCrypto/deriveBits).
+    - `wrapKey`: The key may be used to [wrap a key](/en-US/docs/Web/API/SubtleCrypto/wrapKey).
     - `unwrapKey`: The key may be used to unwrap a key.
 
 ### Return value
@@ -99,7 +99,8 @@ The `unwrapKey()` method supports the same algorithms as the [`wrapKey()`](/en-U
 
 ## Examples
 
-> **Note:** You can [try the working examples](https://mdn.github.io/dom-examples/web-crypto/unwrap-key/index.html) on GitHub.
+> [!NOTE]
+> You can [try the working examples](https://mdn.github.io/dom-examples/web-crypto/unwrap-key/index.html) on GitHub.
 
 ### Unwrapping a "raw" key
 

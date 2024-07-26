@@ -51,7 +51,7 @@ Origin: <scheme>://<hostname>:<port>
 The `Origin` header is similar to the {{HTTPHeader("Referer")}} header, but does not disclose the path, and may be `null`.
 It is used to provide the "security context" for the origin request, except in cases where the origin information would be sensitive or unnecessary.
 
-Broadly speaking, user agents add the {{httpheader("Origin")}} request header to:
+Broadly speaking, user agents add the `Origin` request header to:
 
 - {{Glossary("CORS", "cross origin")}} requests.
 - [same-origin](/en-US/docs/Web/Security/Same-origin_policy) requests except for {{HTTPMethod("GET")}} or {{HTTPMethod("HEAD")}} requests (i.e. they are added to same-origin {{HTTPMethod("POST")}}, {{HTTPMethod("OPTIONS")}}, {{HTTPMethod("PUT")}}, {{HTTPMethod("PATCH")}}, and {{HTTPMethod("DELETE")}} requests).

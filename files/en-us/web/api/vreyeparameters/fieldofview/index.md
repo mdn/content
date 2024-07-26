@@ -13,7 +13,8 @@ browser-compat: api.VREyeParameters.fieldOfView
 
 The **`fieldOfView`** read-only property of the {{domxref("VREyeParameters")}} interface returns a {{domxref("VRFieldOfView")}} object describing the current field of view for the eye, which can vary as the user adjusts their interpupillary distance (IPD).
 
-> **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
+> [!NOTE]
+> This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
 ## Value
 

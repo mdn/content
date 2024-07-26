@@ -65,7 +65,8 @@ font-size: unset;
 - {{cssxref("&lt;percentage&gt;")}}
 
   - : A positive {{cssxref("&lt;percentage&gt;")}} value, relative to the parent element's font size.
-    > **Note:** To maximize accessibility, it is generally best to use values that are relative to the user's default font size.
+    > [!NOTE]
+    > To maximize accessibility, it is generally best to use values that are relative to the user's default font size.
 
 - `math`
   - : [Scaling rules](https://w3c.github.io/mathml-core/#the-math-script-level-property) are applied when determining the computed value of the `font-size` property for math elements relative to the `font-size` of the containing parent.
