@@ -9,18 +9,16 @@ browser-compat: api.Headers
 
 The **`Headers`** interface of the [Fetch API](/en-US/docs/Web/API/Fetch_API) allows you to perform various actions on [HTTP request and response headers](/en-US/docs/Web/HTTP/Headers). These actions include retrieving, setting, adding to, and removing headers from the list of the request's headers.
 
-A `Headers` object has an associated header list, which is initially empty and consists of zero or more name and value pairs. You can add to this using methods like {{domxref("Headers.append","append()")}} (see [Examples](#examples).) In all methods of this interface, header names are matched by case-insensitive byte sequence.
-
-For security reasons, some headers can only be controlled by the user agent. These headers include the {{Glossary("Forbidden_header_name", "forbidden header names")}} and {{Glossary("Forbidden_response_header_name", "forbidden response header names")}}.
-
 You can retrieve a `Headers` object via the {{domxref("Request.headers")}} and {{domxref("Response.headers")}} properties, and create a new `Headers` object using the {{domxref("Headers.Headers", "Headers()")}} constructor.
-
-An object implementing `Headers` can directly be used in a {{jsxref("Statements/for...of", "for...of")}} structure, instead of {{domxref('Headers.entries()', 'entries()')}}: `for (const p of myHeaders)` is equivalent to `for (const p of myHeaders.entries())`.
 
 > [!NOTE]
 > you can find out more about the available headers by reading our [HTTP headers](/en-US/docs/Web/HTTP/Headers) reference.
 
 ## Description
+
+A `Headers` object has an associated header list, which is initially empty and consists of zero or more name and value pairs. You can add to this using methods like {{domxref("Headers.append","append()")}} (see [Examples](#examples).) In all methods of this interface, header names are matched by case-insensitive byte sequence.
+
+An object implementing `Headers` can directly be used in a {{jsxref("Statements/for...of", "for...of")}} structure, instead of {{domxref('Headers.entries()', 'entries()')}}: `for (const p of myHeaders)` is equivalent to `for (const p of myHeaders.entries())`.
 
 ### Modification restrictions
 
