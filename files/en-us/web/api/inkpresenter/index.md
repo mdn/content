@@ -79,7 +79,8 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 ```
 
-> **Note:** See this example running live — [Delegated ink trail](https://mabian-ms.github.io/delegated-ink-trail.html).
+> [!NOTE]
+> See this example running live — [Delegated ink trail](https://mabian-ms.github.io/delegated-ink-trail.html).
 
 ## Specifications
 

@@ -10,7 +10,8 @@ browser-compat: api.HTMLMediaElement.loadeddata_event
 
 The **`loadeddata`** event is fired when the frame at the current playback position of the media has finished loading; often the first frame.
 
-> **Note:** This event will not fire in mobile/tablet devices if data-saver is on in browser settings.
+> [!NOTE]
+> This event will not fire in mobile/tablet devices if data-saver is on in browser settings.
 
 ## Syntax
 
