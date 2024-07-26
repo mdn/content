@@ -26,7 +26,7 @@ browser.runtime.getURL(
 
 ### Return value
 
-`string`. The fully-qualified URL to the resource.
+`string`. The fully-qualified URL to the resource. For example, `moz-extension://e15cdd35-f9b7-4786-a39d-7d801bd2709e/help/open-in-container.html`.
 
 ## Browser compatibility
 

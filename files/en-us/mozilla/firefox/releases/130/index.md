@@ -58,6 +58,8 @@ This article provides information about the changes in Firefox 130 that affect d
 
 ## Changes for add-on developers
 
+- {{WebExtAPIRef("runtime.getURL")}} (and the deprecated {{WebExtAPIRef("extension.getURL")}}) have been updated to include the prefix `moz-extension:` on the return URL (in line with the behavior of Chrome). In addition, {{WebExtAPIRef("runtime.getURL")}} no longer strips `/.`, `./`, and `../.` strings from the input URL ([Firefox bug 1795082](https://bugzil.la/1795082)).
+
 ### Removals
 
 ### Other
