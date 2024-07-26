@@ -155,7 +155,8 @@ The following checklist is good to keep in mind while writing and reviewing cont
   - **Add examples**: There should be examples covering all parameters or at least the parameters (or properties, or attributes) that users from the beginner-through-intermediate range are likely to use, as well as any advanced ones that require extra explanation. Each example should be preceded with an overview of what the example will do, what additional knowledge might be needed to understand it, and so forth. After the example (or interspersed among pieces of the example) should be text explaining how the code works. Don't skimp on the details or the handling of errors in examples. Keep in mind that users _will_ copy and paste your example to use in their own projects, and your code _will_ wind up used on production sites! See our [code example guidelines](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide) for more useful information.
   - **Explain use cases**: If there are particularly common use cases for the feature being described, talk about them! Instead of assuming that a user will figure out that the method being documented can be used to solve a common development problem, actually add a section about that use case with an example and text explaining how the example works.
   - **Add image information**: Include proper [`alt`](/en-US/docs/Web/HTML/Element/img#alt) text on all images and diagrams. This text, as well as captions on tables and other figures, counts because spiders can't crawl images, and so `alt` text tells search engine crawlers what content the embedded media contains.
-    > **Note:** It is not recommended to include too many keywords or keywords not related to the feature in an attempt to manipulate search engine rankings; this type of behavior is easy to spot and tends to be penalized.
+    > [!NOTE]
+    > It is not recommended to include too many keywords or keywords not related to the feature in an attempt to manipulate search engine rankings; this type of behavior is easy to spot and tends to be penalized.
     > Likewise, **do not** add repetitive, unhelpful material or blobs of keywords within the actual page, in an attempt to improve the page's size and search ranking. This does more harm than good, both to content readability and to our search results.
 
 - **Focus on topic content**: It is far better to write content around the topic of the page than a specific keyword. It is highly likely that there will be many keywords you could include for a given topic; in fact, many SEOs compile a list of 5-100 different keywords (varying between short, medium, and long-tail keywords) to include within their article, depending on the length. Doing so will diversify your wording, leading to less repetition.
@@ -217,7 +218,8 @@ An abbreviation is a shortened version of a longer word, while an acronym is a n
   | N.B.   | _nota bene_      | note well               |
   | P.S.   | _post scriptum_  | postscript              |
 
-  > **Note:** Always consider whether it's truly beneficial to use a Latin abbreviation. Some of these are used so rarely that many readers will either confuse or fail to understand their meanings.
+  > [!NOTE]
+  > Always consider whether it's truly beneficial to use a Latin abbreviation. Some of these are used so rarely that many readers will either confuse or fail to understand their meanings.
   >
   > Also, be sure that _you_ use them correctly if you choose to do so. For example, be careful not to confuse "e.g." with "i.e.", which is a common error.
 
@@ -481,7 +483,8 @@ In general, if you're considering adding an external link, you need to ensure th
 
 - **Links that are self-promotional or spam**: While a personal blog post, conference talk, or GitHub repository has value, linking to your own resources can create the appearance of a conflict of interest. Think twice before linking to resources that you have a business or personal connection with.
 
-  > **Note:** If you have a business or personal relationship with the target of a link, you must disclose that relationship in your pull request. Failure to do so may imperil your continued participation with MDN Web Docs.
+  > [!NOTE]
+  > If you have a business or personal relationship with the target of a link, you must disclose that relationship in your pull request. Failure to do so may imperil your continued participation with MDN Web Docs.
 
   Sometimes such links are relevant and appropriate. For example, if you're the editor of a specification and you're contributing to documentation related to that specification, then linking to that specification is expected and acceptable. But you must disclose the relationship between you and the link.
 

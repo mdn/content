@@ -100,7 +100,8 @@ These are the general steps for working on an issue:
 
 1. **Find an issue:** If you're looking to contribute, search for issues with [`good first issue`, `help wanted`](#set_other_labels) or [`p3`](#set_a_priority_label) label. Most repositories have issues with these labels. You are welcome to browse and pick an issue that is suitable for your skill set. Another useful place to look for issues to work on is the [MDN Contributors Task Board](https://github.com/orgs/mdn/projects/25). This project view lists open issues from multiple repositories. You can filter the list based on the topics (`Labels` column) you're interested in. See the description of some of the [labels](#set_other_labels) that get applied during the issue triage process.
 
-   > **Note:** An issue with the `needs triage` label indicates that the MDN Web Docs core team has not reviewed the issue yet, and you shouldn't begin work on it.
+   > [!NOTE]
+   > An issue with the `needs triage` label indicates that the MDN Web Docs core team has not reviewed the issue yet, and you shouldn't begin work on it.
 
 2. **Assign the issue to yourself:** After finding an issue you'd like to work on, make sure that the issue is not assigned to anybody else. Add a comment saying you would like to work on the issue, and if you are able to, [assign the issue to yourself](https://docs.github.com/en/issues/tracking-your-work-with-issues/assigning-issues-and-pull-requests-to-other-github-users#assigning-an-individual-issue-or-pull-request).
 
@@ -224,4 +225,5 @@ Next, set the following labels as appropriate:
 - `document not written`: Set this label if the issue involves a necessary document that has not been written yet, usually because a link points to it.
 - `needs content update`: Set this label if the issue fix in another repository will need an equivalent fix in the `mdn/content` repository.
 
-  > **Note:** After the triage process is complete, remove the `needs triage` label.
+  > [!NOTE]
+  > After the triage process is complete, remove the `needs triage` label.
