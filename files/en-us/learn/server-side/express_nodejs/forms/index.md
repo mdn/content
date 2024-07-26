@@ -122,7 +122,7 @@ There are many functions available, allowing you to check and sanitize data from
 
 The functions are defined as below:
 
-- [`body([fields, message])`](https://express-validator.github.io/docs/api/check#body): Specifies a set of fields in the request body (a `POST` parameter) to validate and/or sanitize along with an optional error message that can be displayed if it fails the tests. The validation and sanitize criteria are daisy-chained to the `body()` method.
+- [`body(fields, message)`](https://express-validator.github.io/docs/api/check#body): Specifies a set of fields in the request body (a `POST` parameter) to validate and/or sanitize along with an optional error message that can be displayed if it fails the tests. The validation and sanitize criteria are daisy-chained to the `body()` method.
 
   For example, the line below first defines that we're checking the "name" field and that a validation error will set an error message "Empty name". We then call the sanitization method `trim()` to remove whitespace from the start and end of the string, and then `isLength()` to check the resulting string isn't empty. Finally, we call `escape()` to remove HTML characters from the variable that might be used in JavaScript cross-site scripting attacks.
 

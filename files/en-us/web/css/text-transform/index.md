@@ -22,7 +22,8 @@ The `text-transform` property takes into account language-specific case mapping 
 
 The language is defined by the [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) HTML attribute or the [`xml:lang`](/en-US/docs/Web/SVG/Attribute/xml:lang) XML attribute.
 
-> **Note:** Support for language-specific cases varies between browsers, so check the [browser compatibility table](#browser_compatibility).
+> [!NOTE]
+> Support for language-specific cases varies between browsers, so check the [browser compatibility table](#browser_compatibility).
 
 ## Syntax
 
@@ -47,9 +48,11 @@ text-transform: unset;
 
   - : Is a keyword that converts the first _letter_ of each word to uppercase. Other characters remain unchanged (they retain their original case as written in the element's text). A letter is defined as a character that is part of Unicode's Letter or Number general categories; thus, any punctuation marks or symbols at the beginning of a word are ignored.
 
-    > **Note:** Authors should not expect `capitalize` to follow language-specific title casing conventions (such as skipping articles in English).
+    > [!NOTE]
+    > Authors should not expect `capitalize` to follow language-specific title casing conventions (such as skipping articles in English).
 
-    > **Note:** The `capitalize` keyword was under-specified in CSS 1 and CSS 2.1. This resulted in differences between browsers in the way the first letter was calculated (Firefox considered `-` and `_` as letters, but other browsers did not. Both Webkit and Gecko incorrectly considered letter-based symbols like `ⓐ` to be real letters.) By precisely defining the correct behavior, CSS Text Level 3 cleans this mess up. The `capitalize` line in the browser compatibility table contains the version the different engines started to support this now precisely-defined behavior.
+    > [!NOTE]
+    > The `capitalize` keyword was under-specified in CSS 1 and CSS 2.1. This resulted in differences between browsers in the way the first letter was calculated (Firefox considered `-` and `_` as letters, but other browsers did not. Both Webkit and Gecko incorrectly considered letter-based symbols like `ⓐ` to be real letters.) By precisely defining the correct behavior, CSS Text Level 3 cleans this mess up. The `capitalize` line in the browser compatibility table contains the version the different engines started to support this now precisely-defined behavior.
 
 - `uppercase`
   - : Is a keyword that converts all characters to uppercase.

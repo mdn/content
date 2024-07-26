@@ -72,7 +72,7 @@ transition-timing-function: unset;
       - : Equal to `cubic-bezier(0.42, 0, 0.58, 1.0)`, starts transitioning slowly, speeds up, and then slows down again.
     - `cubic-bezier(p1, p2, p3, p4)`
       - : An author-defined cubic-Bezier curve, where the p1 and p3 values must be in the range of 0 to 1.
-    - `steps( n, <jumpterm>)`
+    - `steps(n, <jumpterm>)`
 
       - : Displays the transition along _n stops along the transition, displaying each stop for_ equal lengths of time. For example, if _n_ is 5, there are 5 steps. Whether the transition holds temporarily at 0%, 20%, 40%, 60% and 80%, on the 20%, 40%, 60%, 80% and 100%, or makes 5 stops between the 0% and 100% along the transition, or makes 5 stops including the 0% and 100% marks (on the 0%, 25%, 50%, 75%, and 100%) depends on which of the following jump terms is used:
 

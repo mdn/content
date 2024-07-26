@@ -17,7 +17,8 @@ with the same name, then their values are returned as a single concatenated stri
 where each value is separated from the previous one by a pair of comma and space. The
 `getResponseHeader()` method returns the value as a UTF byte sequence.
 
-> **Note:** The search for the header name is case-insensitive.
+> [!NOTE]
+> The search for the header name is case-insensitive.
 
 If you need to get the raw string of all of the headers, use the
 {{DOMxRef("XMLHttpRequest.getAllResponseHeaders", "getAllResponseHeaders()")}} method,

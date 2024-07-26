@@ -61,7 +61,8 @@ const MOUSE_SPEED = 0.003;
 - `MOVE_DISTANCE`
   - : The distance to move in response to any of the keys used to move the viewer through the scene.
 
-> **Note:** This example always displays what it renders on the screen, even if using `immersive-vr` mode. This lets you compare any differences in rendering between the two modes, and lets you see output from immersive mode even if you don't have a headset.
+> [!NOTE]
+> This example always displays what it renders on the screen, even if using `immersive-vr` mode. This lets you compare any differences in rendering between the two modes, and lets you see output from immersive mode even if you don't have a headset.
 
 ## Setup and utility functions
 
@@ -479,7 +480,8 @@ The time elapsed since the last frame was rendered (in seconds) is computed by s
 
 The `drawFrame()` function ends by iterating over every view found in the {{domxref("XRViewerPose")}}, setting up the viewport for the view, and calling `renderScene()` to render the frame. By setting the viewport for each view, we handle the typical scenario in which the views for each eye are each rendered onto half of the WebGL frame. The XR hardware then handles ensuring that each eye only sees the portion of that image that is intended for that eye.
 
-> **Note:** In this example, we're visually presenting the frame both on the XR device _and_ on the screen. To ensure that the on-screen canvas is the right size to allow us to do this, we set its width to be equal to the individual {{domxref("XRView")}} width multiplied by the number of views; the canvas height is always the same as the viewport's height. The two lines of code that adjust the canvas size are not needed in regular WebXR rendering loops.
+> [!NOTE]
+> In this example, we're visually presenting the frame both on the XR device _and_ on the screen. To ensure that the on-screen canvas is the right size to allow us to do this, we set its width to be equal to the individual {{domxref("XRView")}} width multiplied by the number of views; the canvas height is always the same as the viewport's height. The two lines of code that adjust the canvas size are not needed in regular WebXR rendering loops.
 
 ### Applying the user inputs
 

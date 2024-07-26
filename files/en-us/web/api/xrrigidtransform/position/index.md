@@ -18,7 +18,8 @@ transform.
 A read-only {{domxref("DOMPointReadOnly")}} indicating the 3D position component of the
 transform matrix. The units are meters.
 
-> **Note:** The `w` component of the point is always 1.0.
+> [!NOTE]
+> The `w` component of the point is always 1.0.
 
 ## Examples
 
