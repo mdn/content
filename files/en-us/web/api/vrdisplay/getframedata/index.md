@@ -13,7 +13,8 @@ browser-compat: api.VRDisplay.getFrameData
 
 The **`getFrameData()`** method of the {{domxref("VRDisplay")}} interface accepts a {{domxref("VRFrameData")}} object and populates it with the information required to render the current frame.
 
-> **Note:** This method was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
+> [!NOTE]
+> This method was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
 This includes the {{domxref("VRPose")}} and view and projection matrices for the current frame.
 
@@ -107,7 +108,8 @@ function drawVRScene() {
 }
 ```
 
-> **Note:** You can see this complete code at [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/main/webvr/raw-webgl-example/webgl-demo.js).
+> [!NOTE]
+> You can see this complete code at [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/main/webvr/raw-webgl-example/webgl-demo.js).
 
 ## Specifications
 
