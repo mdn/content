@@ -59,7 +59,8 @@ frame.config = frameConfig;
 
 Either way, the browser stores a URL containing the target location of the content to embed — mapped to the opaque URN, or the `FencedFrameConfig`'s internal `url` property. The URL value cannot be read by JavaScript running in the embedding context.
 
-> **Note:** Support is provided for opaque URNs in `<iframe>`s to ease migration of existing implementations over to [privacy sandbox](https://developer.chrome.com/docs/privacy-sandbox/) APIs. This support is intended to be temporary and will be removed in the future as adoption grows.
+> [!NOTE]
+> Support is provided for opaque URNs in `<iframe>`s to ease migration of existing implementations over to [privacy sandbox](https://developer.chrome.com/docs/privacy-sandbox/) APIs. This support is intended to be temporary and will be removed in the future as adoption grows.
 
 > **Note:** `FencedFrameConfig` has a {{domxref("FencedFrameConfig.setSharedStorageContext", "setSharedStorageContext()")}} method that is used to pass in data from the embedding document to the `<fencedframe>`'s shared storage. It could for example be accessed in a {{domxref("Worklet")}} via the `<fencedframe>` and used to generate a report. See the [Shared Storage API](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/) for more details.
 
@@ -123,7 +124,8 @@ Other effects of fenced frames on HTTP headers are as follows:
 
 Certain API features that create {{domxref("FencedFrameConfig")}}s such as {{domxref("Navigator.runAdAuction()")}} ([Protected Audience API](https://developer.chrome.com/docs/privacy-sandbox/fledge/)) and {{domxref("WindowSharedStorage.selectURL()")}} ([Shared Storage API](/en-US/docs/Web/API/Shared_Storage_API)), as well as other features such as {{domxref("Fence.reportEvent()")}}, require you to enroll your site in a [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment). If you don't do this, the API calls will fail with a console warning.
 
-> **Note:** In Chrome, you can still test your fenced frame code locally without enrollment. To allow local testing, enable the following Chrome developer flag:
+> [!NOTE]
+> In Chrome, you can still test your fenced frame code locally without enrollment. To allow local testing, enable the following Chrome developer flag:
 >
 > `chrome://flags/#privacy-sandbox-enrollment-overrides`
 

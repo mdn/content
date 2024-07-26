@@ -97,7 +97,8 @@ The commands encoded by the `GPUCommandEncoder` are recoded into a {{domxref("GP
 device.queue.submit([commandEncoder.finish()]);
 ```
 
-> **Note:** Study the [WebGPU samples](https://webgpu.github.io/webgpu-samples/) to find more command encoding examples.
+> [!NOTE]
+> Study the [WebGPU samples](https://webgpu.github.io/webgpu-samples/) to find more command encoding examples.
 
 ## Specifications
 
