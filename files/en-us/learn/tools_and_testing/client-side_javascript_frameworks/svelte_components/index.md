@@ -496,7 +496,8 @@ We also use `todo.id` to create unique ids for the new input controls and labels
    </div>
    ```
 
-   > **Note:** We could further split this into two different components, one for editing the to-do and the other for displaying it. In the end, it boils down to how comfortable you feel dealing with this level of complexity in a single component. You should also consider whether splitting it further would enable reusing this component in a different context.
+   > [!NOTE]
+   > We could further split this into two different components, one for editing the to-do and the other for displaying it. In the end, it boils down to how comfortable you feel dealing with this level of complexity in a single component. You should also consider whether splitting it further would enable reusing this component in a different context.
 
 2. To get the update functionality working, we have to handle the `update` event from the `Todos` component. In its `<script>` section, add this handler:
 

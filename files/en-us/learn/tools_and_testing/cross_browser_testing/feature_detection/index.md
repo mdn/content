@@ -158,7 +158,8 @@ Common patterns for detectable features include:
     }
     ```
 
-    > **Note:** The double `NOT` in the above example (`!!`) is a way to force a return value to become a "proper" boolean value, rather than a {{glossary("Truthy")}}/{{glossary("Falsy")}} value that may skew the results.
+    > [!NOTE]
+    > The double `NOT` in the above example (`!!`) is a way to force a return value to become a "proper" boolean value, rather than a {{glossary("Truthy")}}/{{glossary("Falsy")}} value that may skew the results.
 
 - Specific return values of a method on an element
 

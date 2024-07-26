@@ -364,7 +364,8 @@ The steps are:
    - Choose your preferred license in the _Add license_ selection list.
    - Check **Initialize this repository with a README**.
 
-   > **Warning:** The default "Public" access will make _all_ source code — including your database username and password — visible to anyone on the internet! Make sure the source code reads credentials _only_ from environment variables and does not have any credentials hard-coded.
+   > [!WARNING]
+   > The default "Public" access will make _all_ source code — including your database username and password — visible to anyone on the internet! Make sure the source code reads credentials _only_ from environment variables and does not have any credentials hard-coded.
    >
    > Otherwise, select the "Private" option to allow only selected people to see the source code.
 

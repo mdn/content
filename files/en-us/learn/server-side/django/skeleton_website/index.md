@@ -35,7 +35,8 @@ To get started:
 1. Use the `django-admin` tool to generate a project folder, the basic file templates, and **manage.py**, which serves as your project management script.
 2. Use **manage.py** to create one or more _applications_.
 
-   > **Note:** A website may consist of one or more sections. For example, main site, blog, wiki, downloads area, etc. Django encourages you to develop these components as separate _applications_, which could then be re-used in different projects if desired.
+   > [!NOTE]
+   > A website may consist of one or more sections. For example, main site, blog, wiki, downloads area, etc. Django encourages you to develop these components as separate _applications_, which could then be re-used in different projects if desired.
 
 3. Register the new applications to include them in the project.
 4. Hook up the **url/path** mapper for each application.
