@@ -61,6 +61,8 @@ This article provides information about the changes in Firefox 129 that affect d
 
 #### Removals
 
+- The {{domxref('Navigator.vibrate()')}} method has been removed ([Firefox bug 1653318](https://bugzil.la/1653318), [Firefox bug 1900037](https://bugzil.la/1900037)).
+
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
 #### General
