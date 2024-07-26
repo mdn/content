@@ -21,7 +21,7 @@ In this article, we will take a simple HTML document and apply CSS to it, learni
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To understand the basics of linking a CSS document to an HTML file, and
+        To understand the basics of linking a CSS document to a HTML file, and
         be able to do simple text formatting with CSS.
       </td>
     </tr>
@@ -30,7 +30,7 @@ In this article, we will take a simple HTML document and apply CSS to it, learni
 
 ## Starting with some HTML
 
-Our starting point is an HTML document. You can copy the code from below if you want to work on your own computer. Save the code below as `index.html` in a folder on your machine.
+Our starting point is a HTML document. You can copy the code from below if you want to work on your own computer. Save the code below as `index.html` in a folder on your machine.
 
 ```html
 <!doctype html>
@@ -67,7 +67,7 @@ Our starting point is an HTML document. You can copy the code from below if you 
 
 ## Adding CSS to our document
 
-The very first thing we need to do is to tell the HTML document that we have some CSS rules we want it to use. There are three different ways to apply CSS to an HTML document that you'll commonly come across, however, for now, we will look at the most usual and useful way of doing so — linking CSS from the head of your document.
+The very first thing we need to do is to tell the HTML document that we have some CSS rules we want it to use. There are three different ways to apply CSS to a HTML document that you'll commonly come across, however, for now, we will look at the most usual and useful way of doing so — linking CSS from the head of your document.
 
 Create a file in the same folder as your HTML document and save it as `styles.css`. The `.css` extension shows that this is a CSS file.
 
@@ -85,13 +85,13 @@ h1 {
 }
 ```
 
-Save your HTML and CSS files and reload the page in a web browser. The level one heading at the top of the document should now be red. If that happens, congratulations — you have successfully applied some CSS to an HTML document. If that doesn't happen, carefully check that you've typed everything correctly.
+Save your HTML and CSS files and reload the page in a web browser. The level one heading at the top of the document should now be red. If that happens, congratulations — you have successfully applied some CSS to a HTML document. If that doesn't happen, carefully check that you've typed everything correctly.
 
 You can continue to work in `styles.css` locally, or you can use our interactive editor below to continue with this tutorial. The interactive editor acts as if the CSS in the first panel is linked to the HTML document, just as we have with our document above.
 
 ## Styling HTML elements
 
-By making our heading red, we have already demonstrated that we can target and style an HTML element. We do this by targeting an _element selector_ — this is a selector that directly matches an HTML element name. To target all paragraphs in the document, you would use the selector `p`. To turn all paragraphs green, you would use:
+By making our heading red, we have already demonstrated that we can target and style a HTML element. We do this by targeting an _element selector_ — this is a selector that directly matches a HTML element name. To target all paragraphs in the document, you would use the selector `p`. To turn all paragraphs green, you would use:
 
 ```css
 p {
@@ -180,7 +180,7 @@ As you can imagine, some classes might be applied to many elements and you don't
 
 ## Styling things based on their location in a document
 
-There are times when you will want something to look different based on where it is in the document. There are a number of selectors that can help you here, but for now we will look at just a couple. In our document, there are two `<em>` elements — one inside a paragraph and the other inside a list item. To select only an `<em>` that is nested inside an `<li>` element, you can use a selector called the **descendant combinator**, which takes the form of a space between two other selectors.
+There are times when you will want something to look different based on where it is in the document. There are a number of selectors that can help you here, but for now we will look at just a couple. In our document, there are two `<em>` elements — one inside a paragraph and the other inside a list item. To select only an `<em>` that is nested inside a `<li>` element, you can use a selector called the **descendant combinator**, which takes the form of a space between two other selectors.
 
 Add the following rule to your stylesheet:
 
@@ -190,7 +190,7 @@ li em {
 }
 ```
 
-This selector will select any `<em>` element that is inside (a descendant of) an `<li>`. So in your example document, you should find that the `<em>` in the third list item is now purple, but the one inside the paragraph is unchanged.
+This selector will select any `<em>` element that is inside (a descendant of) a `<li>`. So in your example document, you should find that the `<em>` in the third list item is now purple, but the one inside the paragraph is unchanged.
 
 Something else you might like to try is styling a paragraph when it comes directly after a heading at the same hierarchy level in the HTML. To do so, place a `+` (an **next-sibling combinator**) between the selectors.
 
@@ -253,7 +253,7 @@ It is worth noting that you can combine multiple selectors and combinators toget
 article p span {
 }
 
-/* selects any <p> that comes directly after a <ul>, which comes directly after an <h1>  */
+/* selects any <p> that comes directly after a <ul>, which comes directly after a <h1>  */
 h1 + ul + p {
 }
 ```
@@ -268,7 +268,7 @@ body h1 + p .special {
 }
 ```
 
-This will style any element with a class of `special`, which is inside a `<p>`, which comes just after an `<h1>`, which is inside a `<body>`. Phew!
+This will style any element with a class of `special`, which is inside a `<p>`, which comes just after a `<h1>`, which is inside a `<body>`. Phew!
 
 In the original HTML we provided, the only element styled is `<span class="special">`.
 
