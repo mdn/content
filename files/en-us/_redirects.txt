@@ -11715,7 +11715,6 @@
 /en-US/docs/Web/CSS/single-transition-timing-function	/en-US/docs/Web/CSS/easing-function
 /en-US/docs/Web/CSS/speak-as	/en-US/docs/Web/CSS/@counter-style/speak-as
 /en-US/docs/Web/CSS/static	/en-US/docs/Web/CSS/position
-/en-US/docs/Web/CSS/stop-color	/en-US/docs/Web/SVG/Attribute/stop-color
 /en-US/docs/Web/CSS/stroke	/en-US/docs/Web/SVG/Attribute/stroke
 /en-US/docs/Web/CSS/stroke-dasharray	/en-US/docs/Web/SVG/Attribute/stroke-dasharray
 /en-US/docs/Web/CSS/stroke-dashoffset	/en-US/docs/Web/SVG/Attribute/stroke-dashoffset
