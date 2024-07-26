@@ -56,7 +56,8 @@ createDataChannel(label, options)
         permitted values are 0 to 65534.
         If you don't include this option, the user agent will select an ID for you.
 
-> **Note:** These options represent the script-settable subset of the properties on the {{domxref("RTCDataChannel")}} interface.
+> [!NOTE]
+> These options represent the script-settable subset of the properties on the {{domxref("RTCDataChannel")}} interface.
 
 ### Return value
 
