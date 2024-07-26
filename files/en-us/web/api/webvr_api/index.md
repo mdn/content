@@ -23,7 +23,7 @@ Any VR devices attached to your computer will be returned by the {{DOMxRef("Navi
 {{DOMxRef("VRDisplay")}} is the central interface in the WebVR API — via its properties and methods you can access functionality to:
 
 - Retrieve useful information to allow us to identify the display, what capabilities it has, controllers associated with it, and more.
-- Retrieve {{DOMxRef("VRFrameData", "frame data")}} for each frame of content you want to present in a display, and submit those frames for display at a consistent rate.
+- Retrieve [frame data](/en-US/docs/Web/API/VRFrameData) for each frame of content you want to present in a display, and submit those frames for display at a consistent rate.
 - Start and stop presenting to the display.
 
 A typical (simple) WebVR app would work like so:

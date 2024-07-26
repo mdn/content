@@ -92,7 +92,7 @@ The values of `writing-mode` affect the mapping of `max-block-size` to `max-widt
 
 In this example, the same text (the opening sentences from [Herman Melville's](https://en.wikipedia.org/wiki/Herman_Melville) novel _[Moby-Dick](https://en.wikipedia.org/wiki/Moby-Dick)_) is presented in both the `horizontal-tb` and `vertical-rl` writing modes.
 
-Everything else about the two boxes is identical, including the values used for {{cssxref("max-block-size")}}.
+Everything else about the two boxes is identical, including the values used for `max-block-size`.
 
 #### HTML
 

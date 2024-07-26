@@ -7,7 +7,7 @@ browser-compat: api.ResizeObserverSize
 
 {{DefaultAPISidebar("Resize Observer API")}}
 
-The **`ResizeObserverSize`** interface of the {{domxref('Resize Observer API')}} is used by the {{domxref("ResizeObserverEntry")}} interface to access the box sizing properties of the element being observed.
+The **`ResizeObserverSize`** interface of the [Resize Observer API](/en-US/docs/Web/API/Resize_Observer_API) is used by the {{domxref("ResizeObserverEntry")}} interface to access the box sizing properties of the element being observed.
 
 > [!NOTE]
 > In [multi-column layout](/en-US/docs/Web/CSS/CSS_multicol_layout), which is a fragmented context, the sizing returned by `ResizeObserverSize` will be the size of the first column.

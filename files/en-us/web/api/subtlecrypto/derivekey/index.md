@@ -56,14 +56,14 @@ deriveKey(algorithm, baseKey, derivedKeyAlgorithm, extractable, keyUsages)
   - : An {{jsxref("Array")}} indicating what can be
     done with the derived key. Note that the key usages must be allowed by the algorithm
     set in `derivedKeyAlgorithm`. Possible values of the array are:
-    - `encrypt`: The key may be used to {{domxref("SubtleCrypto.encrypt()", "encrypt", "", "nocode")}} messages.
-    - `decrypt`: The key may be used to {{domxref("SubtleCrypto.decrypt()", "decrypt", "", "nocode")}} messages.
-    - `sign`: The key may be used to {{domxref("SubtleCrypto.sign()", "sign", "", "nocode")}} messages.
-    - `verify`: The key may be used to {{domxref("SubtleCrypto.verify()", "verify", "", "nocode")}} signatures.
+    - `encrypt`: The key may be used to [encrypt](/en-US/docs/Web/API/SubtleCrypto/encrypt) messages.
+    - `decrypt`: The key may be used to [decrypt](/en-US/docs/Web/API/SubtleCrypto/decrypt) messages.
+    - `sign`: The key may be used to [sign](/en-US/docs/Web/API/SubtleCrypto/sign) messages.
+    - `verify`: The key may be used to [verify](/en-US/docs/Web/API/SubtleCrypto/verify) signatures.
     - `deriveKey`: The key may be used in deriving a new key.
-    - `deriveBits`: The key may be used in {{domxref("SubtleCrypto.deriveBits()", "deriving bits", "", "nocode")}}.
-    - `wrapKey`: The key may be used to {{domxref("SubtleCrypto.wrapKey()", "wrap a key", "", "nocode")}}.
-    - `unwrapKey`: The key may be used to {{domxref("SubtleCrypto.unwrapKey()", "unwrap a key", "", "nocode")}}.
+    - `deriveBits`: The key may be used in [deriving bits](/en-US/docs/Web/API/SubtleCrypto/deriveBits).
+    - `wrapKey`: The key may be used to [wrap a key](/en-US/docs/Web/API/SubtleCrypto/wrapKey).
+    - `unwrapKey`: The key may be used to [unwrap a key](/en-US/docs/Web/API/SubtleCrypto/unwrapKey).
 
 ### Return value
 

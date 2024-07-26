@@ -13,7 +13,7 @@ The **WebUSB API** provides a way to expose non-standard Universal Serial Bus (U
 
 ## Concepts and Usage
 
-USB is the de-facto standard for wired peripherals. The USB devices that you connect to your computer are typically grouped into a number of device classes—such as keyboards, mice, video devices, and so on. These are supported using the operating system's class driver. Many of these are also web accessible via the {{domxref("WebHID API")}}.
+USB is the de-facto standard for wired peripherals. The USB devices that you connect to your computer are typically grouped into a number of device classes—such as keyboards, mice, video devices, and so on. These are supported using the operating system's class driver. Many of these are also web accessible via the [WebHID API](/en-US/docs/Web/API/WebHID_API).
 
 In addition to these standardized devices, there are a large number of devices that don't fit into any class. These need custom drivers, and are inaccessible from the web due to the native code required to take advantage of them. Installing one of these devices often involves searching on a manufacturer's website for drivers and, should you wish to use the device on another computer, repeating the process again.
 
