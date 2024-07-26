@@ -12,46 +12,44 @@ The **`color-mix()`** functional notation takes two {{cssxref("&lt;color&gt;")}}
 ## Syntax
 
 ```css
-/* color-mix(in <color-interpolation-method>, <color>, <color>) */
+/* color-mix(in <polar-color-space>, <color>, <color> <percentage>) */
+color-mix(in hsl, hsl(200 50 80), coral 80%)
 /* color-mix(in <polar-color-space> <hue-interpolation-method>, <color>, <color>) */
-color-mix(in hsl longer hue, hsl(357deg 70% 41%), coral)
+color-mix(in lch longer hue, hsl(200deg 50% 80%), coral)
 
-/* color-mix(in <color-space>, <color> <percentage, <color> <percentage> */
-color-mix(in lch, plum 20%, pink 60%)
+/* color-mix(in <rectangular-color-space>, <color>, <color>) */
+color-mix(in srgb, plum, #f00)
+/* color-mix(in <rectangular-color-space>, <color> <percentage>, <color> <percentage> */
+color-mix(in lab, plum 60%, #f00 50%)
 
 /* color-mix(in <custom-color-space>, <color>, <color>) */
 color-mix(in --swop5c, red, blue)
-
-color-mix(in srgb, #34c9eb 20%, white)
-color-mix(in oklab, teal, peru 40%)
 ```
 
 ### Values
 
-Functional notation: `color-mix(color-interpolation-method, color1[ p1], color2[ p2])`
+Functional notation: `color-mix(<color-interpolation-method>, <color>[<percentage>], <color>[<percentage>])`
 
-- `color-interpolation-method`
+- `<color-interpolation-method>`
 
-  - : The {{CSSXref("&lt;color-interpolation-method&gt;")}}, consists of `in` word followed by {{glossary("color space")}} name, and optionally followed by a {{CSSXref("&lt;hue-interpolation-method&gt;")}}.
+  - : Specifies what interpolation method should be used to mix the colors. It consists of the `in` keyword followed by a {{glossary("color space")}} name. The following three types are available:
 
-    - `color-space`
-
-      - : Color space name. Three types of colorspaces could be used:
-
-        - rectangular-color-space: [`srgb`](/en-US/docs/Glossary/Color_space#srgb), [`srgb-linear`](/en-US/docs/Glossary/Color_space#srgb-linear), [`display-p3`](/en-US/docs/Glossary/Color_space#display-p3), [`a98-rgb`](/en-US/docs/Glossary/Color_space#a98-rgb), [`prophoto-rgb`](/en-US/docs/Glossary/Color_space#prophoto-rgb), [`rec2020`](/en-US/docs/Glossary/Color_space#rec2020), [`lab`](/en-US/docs/Glossary/Color_space#cielab_color_spaces), [`oklab`](/en-US/docs/Glossary/Color_space#oklab), [`xyz`](/en-US/docs/Glossary/Color_space#xyz_color_spaces), [`xyz-d50`](/en-US/docs/Glossary/Color_space#xyz), and [`xyz-d65`](/en-US/docs/Glossary/Color_space#xyz-d50).
-        - polar-color-space: [`hsl`](/en-US/docs/Web/CSS/color_value/hsl), [`hwb`](/en-US/docs/Web/CSS/color_value/hwb), [`lch`](/en-US/docs/Web/CSS/color_value/lch), and [`oklch`](/en-US/docs/Web/CSS/color_value/oklch).
-        - custom-color-space: [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident#using_with_color-profile) referring to a custom [@color profile](/en-US/docs/Web/CSS/@color-profile)
+    - `<rectangular-color-space>`: [`srgb`](/en-US/docs/Glossary/Color_space#srgb), [`srgb-linear`](/en-US/docs/Glossary/Color_space#srgb-linear), [`display-p3`](/en-US/docs/Glossary/Color_space#display-p3), [`a98-rgb`](/en-US/docs/Glossary/Color_space#a98-rgb), [`prophoto-rgb`](/en-US/docs/Glossary/Color_space#prophoto-rgb), [`rec2020`](/en-US/docs/Glossary/Color_space#rec2020), [`lab`](/en-US/docs/Glossary/Color_space#cielab_color_spaces), [`oklab`](/en-US/docs/Glossary/Color_space#oklab), [`xyz`](/en-US/docs/Glossary/Color_space#xyz_color_spaces), [`xyz-d50`](/en-US/docs/Glossary/Color_space#xyz), and [`xyz-d65`](/en-US/docs/Glossary/Color_space#xyz-d50).
+    - `<polar-color-space>`: [`hsl`](/en-US/docs/Web/CSS/color_value/hsl), [`hwb`](/en-US/docs/Web/CSS/color_value/hwb), [`lch`](/en-US/docs/Web/CSS/color_value/lch), and [`oklch`](/en-US/docs/Web/CSS/color_value/oklch).
+    - custom-color-space: [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident#using_with_color-profile) referring to a custom [@color profile](/en-US/docs/Web/CSS/@color-profile)
 
     > [!NOTE]
     > When browsers support {{cssxref("@color-profile")}}, custom color spaces may be supported. Currently, the color space must be one of the available color spaces listed in the [formal_syntax](#formal_syntax).
 
-- `color1`, `color2`
+- `<color>`
 
-  - : {{CSSXref("&lt;color&gt;")}} values to mix.
+  - : A {{CSSXref("&lt;color&gt;")}} value to mix.
 
-- `p1`, `p2` {{optional_inline}}
+- `<percentage>` {{optional_inline}}
 
-  - : {{CSSXref("&lt;percentage&gt;")}} values between `0%` and `100%`, specifying the amount of each color to mix. They are normalized as follows:
+  - : A {{CSSXref("&lt;percentage&gt;")}} value between `0%` and `100%`, specifying the amount of the corresponding color to mix.
+
+    The two percentages (p1 and p2) of the colors are normalized as follows:
 
     - If both `p1` and `p2` are omitted, then `p1 = p2 = 50%`.
     - If `p1` is omitted, then `p1 = 100% - p2`.
@@ -67,13 +65,13 @@ Functional notation: `color-mix(color-interpolation-method, color1[ p1], color2[
 
 ### Color mixer
 
-The following live demo of the `color-mix()` function mixes two colors, `color-one` and `color-two`. You can change colors by clicking on them. You can also change the percentage and color space.
+The following live demo mixes two colors, `color-one` and `color-two`, using the `color-mix()` function. The source colors are shown on the outside, and the mixed color is shown in the middle. You can change colors by clicking on them and choosing a new color using the resulting color picker. You can also change the percentage of each color included in the mix using the sliders, and the color space using the drop-down menu.
 
 {{EmbedGHLiveSample("css-examples/tools/color-mixer/", '100%', 400)}}
 
 ### Mixing two colors
 
-This example demonstrates mixing two colors, blue `#34c9eb` at different percentages and white with no percentage given. The higher the percentage of `#34c9eb` is mixed, the more blue and less white the output color is.
+This example demonstrates mixing two colors, blue `#a71e14` at different percentages and white with no percentage given. The higher the percentage of `#a71e14` is mixed, the more blue and less white the output color is.
 
 #### HTML
 
@@ -107,34 +105,34 @@ li {
   flex: 1;
   box-sizing: border-box;
   font-family: monospace;
-  outline: 1px solid #34c9eb;
+  outline: 3px solid #a71e14;
   text-align: center;
 }
 ```
 
 ```css
 li:nth-child(1) {
-  background-color: color-mix(in oklab, #34c9eb 0%, white);
+  background-color: color-mix(in oklab, #a71e14 0%, white);
 }
 
 li:nth-child(2) {
-  background-color: color-mix(in oklab, #34c9eb 25%, white);
+  background-color: color-mix(in oklab, #a71e14 25%, white);
 }
 
 li:nth-child(3) {
-  background-color: color-mix(in oklab, #34c9eb 50%, white);
+  background-color: color-mix(in oklab, #a71e14 50%, white);
 }
 
 li:nth-child(4) {
-  background-color: color-mix(in oklab, #34c9eb 75%, white);
+  background-color: color-mix(in oklab, #a71e14 75%, white);
 }
 
 li:nth-child(5) {
-  background-color: color-mix(in oklab, #34c9eb 100%, white);
+  background-color: color-mix(in oklab, #a71e14 100%, white);
 }
 
 li:nth-child(6) {
-  background-color: color-mix(in oklab, #34c9eb, white);
+  background-color: color-mix(in oklab, #a71e14, white);
 }
 ```
 
