@@ -23,7 +23,8 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 
   - : A Boolean attribute; if specified, the video automatically begins to play back as soon as it can without stopping to finish loading the data.
 
-    > **Note:** Modern browsers block audio (or videos with an unmuted audio track) from autoplaying, as sites that automatically play audio can be an unpleasant experience for users. See our [autoplay guide](/en-US/docs/Web/Media/Autoplay_guide) for additional information about how to properly use autoplay.
+    > [!NOTE]
+    > Modern browsers block audio (or videos with an unmuted audio track) from autoplaying, as sites that automatically play audio can be an unpleasant experience for users. See our [autoplay guide](/en-US/docs/Web/Media/Autoplay_guide) for additional information about how to properly use autoplay.
 
     To disable video autoplay, `autoplay="false"` will not work; the video will autoplay if the attribute is there in the `<video>` tag at all. To remove autoplay, the attribute needs to be removed altogether.
 
@@ -77,7 +78,9 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 
     The default value is different for each browser. The spec advises it to be set to `metadata`.
 
-    > **Note:**
+    > [!NOTE]
+    >
+    > >
     >
     > - The `autoplay` attribute has precedence over `preload`. If `autoplay` is specified, the browser would obviously need to start downloading the video for playback.
     > - The specification does not force the browser to follow the value of this attribute; it is a mere hint.
