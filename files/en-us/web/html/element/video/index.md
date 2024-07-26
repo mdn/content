@@ -80,8 +80,6 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 
     > [!NOTE]
     >
-    > >
-    >
     > - The `autoplay` attribute has precedence over `preload`. If `autoplay` is specified, the browser would obviously need to start downloading the video for playback.
     > - The specification does not force the browser to follow the value of this attribute; it is a mere hint.
 
