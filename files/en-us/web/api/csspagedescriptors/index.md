@@ -10,7 +10,7 @@ browser-compat: api.CSSPageDescriptors
 The **`CSSPageDescriptors`** interface represents a CSS declaration block for an {{cssxref("@page")}} [at-rule](/en-US/docs/Web/CSS/At-rule).
 
 The interface exposes style information and various style-related methods and properties for the page.
-Each multi-word property has versions in camel- and snake-case, following both CSS and Web API naming conventions.
+Each multi-word property has versions in camel- and snake-case.
 This means, for example, that you can access the `margin-top` CSS property using the syntax `style["margin-top"]` or `style.marginTop` (where `style` is a `CSSPageDescriptor`).
 
 A `CSSPageDescriptors` object is accessed through the {{DOMxRef("CSSPageRule.style", "style")}} property of the `CSSPageRule` interface, which can in turn be found using the {{DOMxRef("CSSStyleSheet")}} API.
@@ -23,25 +23,25 @@ _This interface also inherits properties of its parent, {{domxref("CSSStyleDecla
 
 - `margin`
   - : A string representing the `margin` property of the corresponding `@page` at-rule.
-- `marginTop`
-  - : A string representing the `margin-top` property of the corresponding `@page` at-rule.
-- `marginRight`
-  - : A string representing the `margin-right` property of the corresponding `@page` at-rule.
-- `marginBottom`
-  - : A string representing the `margin-bottom` property of the corresponding `@page` at-rule.
-- `marginLeft`
-  - : A string representing the `margin-left` property of the corresponding `@page` at-rule.
 - `margin-top`
+  - : A string representing the `margin-top` property of the corresponding `@page` at-rule.
+- `marginTop`
   - : A string representing the `margin-top` property of the corresponding `@page` at-rule.
 - `margin-right`
   - : A string representing the `margin-right` property of the corresponding `@page` at-rule.
+- `marginRight`
+  - : A string representing the `margin-right` property of the corresponding `@page` at-rule.
 - `margin-bottom`
+  - : A string representing the `margin-bottom` property of the corresponding `@page` at-rule.
+- `marginBottom`
   - : A string representing the `margin-bottom` property of the corresponding `@page` at-rule.
 - `margin-left`
   - : A string representing the `margin-left` property of the corresponding `@page` at-rule.
-- `pageOrientation`
-  - : A string representing the `page-orientation` property of the corresponding `@page` at-rule.
+- `marginLeft`
+  - : A string representing the `margin-left` property of the corresponding `@page` at-rule.
 - `page-orientation`
+  - : A string representing the `page-orientation` property of the corresponding `@page` at-rule.
+- `pageOrientation`
   - : A string representing the `page-orientation` property of the corresponding `@page` at-rule.
 - `size`
   - : A string representing the `size` property of the corresponding `@page` at-rule.
