@@ -63,7 +63,7 @@ Below we define styles for the page using a {{cssxref("@page")}} rule.
 
 #### JavaScript
 
-The code iterates through all the sheets in the document, and through all the `cssRules` in each sheet, logging the sheet number, the number of rules, and the type of each rule object.
+The code iterates through all the sheets in the document, and through all the `cssRules` in each sheet, logging the sheet index, the number of rules, and the type of each rule object.
 We then detect `CSSPageRule` objects using their type (doing nothing with the information).
 
 ```js
