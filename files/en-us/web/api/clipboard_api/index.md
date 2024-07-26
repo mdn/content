@@ -12,9 +12,11 @@ browser-compat:
 
 The **Clipboard API** provides the ability to respond to clipboard commands (cut, copy, and paste), as well as to asynchronously read from and write to the system clipboard.
 
-> **Note:** Use this API in preference to the deprecated {{domxref("document.execCommand()")}} method for accessing the clipboard.
+> [!NOTE]
+> Use this API in preference to the deprecated {{domxref("document.execCommand()")}} method for accessing the clipboard.
 
-> **Note:** This API is _not available_ in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) (not exposed via {{domxref("WorkerNavigator")}}).
+> [!NOTE]
+> This API is _not available_ in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) (not exposed via {{domxref("WorkerNavigator")}}).
 
 ## Concepts and usage
 
