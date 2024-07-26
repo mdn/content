@@ -40,7 +40,7 @@ Below are descriptions of the allowed values for both absolute and [relative col
 
 #### Absolute value syntax
 
-```text
+```plain
 oklab(L a b[ / A])
 ```
 
@@ -59,7 +59,7 @@ The parameters are as follows:
 
 #### Relative value syntax
 
-```text
+```plain
 oklab(from <color> L a b[ / A])
 ```
 

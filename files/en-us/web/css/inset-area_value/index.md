@@ -13,7 +13,7 @@ The `<inset-area>` keyword values can be set as the value of the {{cssxref("inse
 
 ## Syntax
 
-```text
+```plain
 <inset-area> = [
   [ left | center | right | span-left | span-right | x-start | x-end | span-x-start | span-x-end | x-self-start | x-self-end | span-x-self-start | span-x-self-end | span-all ]
 ||

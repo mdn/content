@@ -32,7 +32,7 @@ block-size: anchor-size(--myAnchor block, 200px);
 
 The `anchor-size()` function's syntax is as follows:
 
-```text
+```plain
 anchor-size(<anchor-element> <anchor-size>, <length-percentage>)
 ```
 

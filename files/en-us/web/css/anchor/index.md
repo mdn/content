@@ -32,7 +32,7 @@ left: calc(anchor(--myAnchor right, 0%) + 10px);
 
 The `anchor()` function's syntax is as follows:
 
-```text
+```plain
 anchor(<anchor-element> <anchor-side>, <length-percentage>)
 ```
 
