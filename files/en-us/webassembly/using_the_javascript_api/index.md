@@ -138,7 +138,8 @@ Let's make the above assertions clearer by looking at a more involved memory exa
 
 1. make a local copy of `memory.wasm` in the same directory as before.
 
-   > **Note:** You can see the module's text representation at [memory.wat](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/memory.wat).
+   > [!NOTE]
+   > You can see the module's text representation at [memory.wat](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/memory.wat).
 
 2. Go back to your `memory.html` sample file, and fetch, compile, and instantiate your Wasm module as before — add the following to the bottom of your script:
 
