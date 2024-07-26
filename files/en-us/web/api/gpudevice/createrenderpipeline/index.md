@@ -88,7 +88,8 @@ The `depthStencil` object can contain the following properties:
 
         If omitted, `depthFailOp` defaults to `"keep"`.
 
-        > **Note:**: The render state stencil value is initialized to 0 at the start of a render pass.
+        > [!NOTE]
+        > The render state stencil value is initialized to 0 at the start of a render pass.
 
     - `failOp` {{optional_inline}}
       - : An enumerated value specifying the stencil operation performed if the fragment stencil comparison test described by `compare` fails. Possible and default values are the same as for `depthFailOp`.
