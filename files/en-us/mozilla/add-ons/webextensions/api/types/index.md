@@ -17,7 +17,7 @@ Defines the `BrowserSetting` type, which is used to represent a browser setting.
 
 {{WebExtExamples("h2")}}
 
-> **Note:**
+> [!NOTE]
 >
 > This API is based on Chromium's [`chrome.types`](https://developer.chrome.com/docs/extensions/reference/types/) API.
 
