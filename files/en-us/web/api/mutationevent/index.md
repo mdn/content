@@ -11,7 +11,8 @@ browser-compat: api.MutationEvent
 
 The **`MutationEvent`** interface provides event properties that are specific to modifications to the Document Object Model (DOM) hierarchy and nodes.
 
-> **Note:** Using _mutation events_ is problematic:
+> [!NOTE]
+> Using _mutation events_ is problematic:
 >
 > - Their design is [flawed](https://lists.w3.org/Archives/Public/public-webapps/2011JulSep/0779.html).
 > - Adding DOM mutation listeners to a document [profoundly degrades the performance](https://groups.google.com/d/topic/mozilla.dev.platform/L0Lx11u5Bvs?pli=1) of further DOM modifications to that document (making them 1.5 - 7 times slower!). Moreover, removing the listeners does not reverse the damage.

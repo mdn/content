@@ -18,7 +18,8 @@ Recent versions of the specification hard-code the returned set of MIME types.
 If PDF files can be displayed inline then `application/pdf` and `text/pdf` are listed.
 Otherwise an empty list is returned.
 
-> **Note:** Use {{domxref("Navigator.pdfViewerEnabled")}} to determine if inline viewing of PDF files is supported. Do not infer it from this property.
+> [!NOTE]
+> Use {{domxref("Navigator.pdfViewerEnabled")}} to determine if inline viewing of PDF files is supported. Do not infer it from this property.
 
 Legacy browser versions do not hard-code the list returned by the property, and might return other MIME types.
 
