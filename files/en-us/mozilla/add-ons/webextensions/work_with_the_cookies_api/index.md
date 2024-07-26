@@ -90,7 +90,6 @@ Firefox provides three types of cookie store:
 - Private browsing mode stores, which stores cookies created during a private browsing session. These stores and any cookies they contain are removed when the related private browsing window closes.
 
   > [!NOTE]
-  >
   > Only visible if {{WebExtAPIRef("extension.isAllowedIncognitoAccess()")}} returns true. Safari doesn't support access to private cookies.
 
 - Container tabs stores, which stores cookies for each contextual identity in Firefox. Contextual identities enable a user to maintain multiple identities within one browser window. This is useful if, for example, you've a company and personal email account on Gmail. With contextual identities, you can open one tab against a personal identity and a second tab against a business identity. Each tab can then sign into Google mail with a different username, and the two accounts can be used side-by-side. For more information, see [Security/Contextual Identity Project/Containers](https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers) in the Mozilla wiki.

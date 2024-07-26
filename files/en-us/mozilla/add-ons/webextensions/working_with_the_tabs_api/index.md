@@ -79,8 +79,6 @@ To see how {{WebExtAPIRef("tabs.query()")}} and {{WebExtAPIRef("tabs.Tab")}} are
 
     > [!NOTE]
     >
-    > >
-    >
     > - **`tabs.html` is defined as the `default_popup` in `browser_action`.** It is displayed whenever the user clicks the extension's toolbar icon.
     > - **Permissions includes tabs.** This is needed to support the tab list feature, as the extension reads the title of the tabs for display in the popup.
 
