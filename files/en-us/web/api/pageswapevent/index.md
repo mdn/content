@@ -77,7 +77,8 @@ window.addEventListener("pageswap", async (e) => {
 });
 ```
 
-> **Note:** See [List of Chrome DevRel team members](https://view-transitions.netlify.app/profiles/mpa/) for the live demo this code is taken from.
+> [!NOTE]
+> See [List of Chrome DevRel team members](https://view-transitions.netlify.app/profiles/mpa/) for the live demo this code is taken from.
 
 ## Specifications
 

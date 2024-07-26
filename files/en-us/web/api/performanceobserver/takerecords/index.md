@@ -8,7 +8,7 @@ browser-compat: api.PerformanceObserver.takeRecords
 
 {{APIRef("Performance API")}}
 
-The **`takeRecords()`** method of the {{domxref('PerformanceObserver')}} interface returns the current list of {{domxref("PerformanceEntry","performance entries")}} stored in the performance observer, emptying it out.
+The **`takeRecords()`** method of the {{domxref('PerformanceObserver')}} interface returns the current list of {{domxref("PerformanceEntry")}} objects stored in the performance observer, emptying it out.
 
 ## Syntax
 

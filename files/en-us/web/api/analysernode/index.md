@@ -75,7 +75,8 @@ _Inherits methods from its parent, {{domxref("AudioNode")}}_.
 
 ## Examples
 
-> **Note:** See the guide [Visualizations with Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API) for more information on creating audio visualizations.
+> [!NOTE]
+> See the guide [Visualizations with Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API) for more information on creating audio visualizations.
 
 ### Basic usage
 

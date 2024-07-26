@@ -27,7 +27,8 @@ Web applications set a Cross-Origin Resource Policy via the {{HTTPHeader("Cross-
 
   - : Only requests from the same _{{Glossary("Site")}}_ can read the resource.
 
-    > **Warning:** This is less secure than an {{Glossary("origin")}}. The [algorithm for checking if two origins are same site](https://html.spec.whatwg.org/multipage/origin.html#same-site) is defined in the HTML standard and involves checking the _registrable domain_.
+    > [!WARNING]
+    > This is less secure than an {{Glossary("origin")}}. The [algorithm for checking if two origins are same site](https://html.spec.whatwg.org/multipage/origin.html#same-site) is defined in the HTML standard and involves checking the _registrable domain_.
 
 - `same-origin`
   - : Only requests from the same _{{Glossary("origin")}}_ (i.e. scheme + host + port) can read the resource.

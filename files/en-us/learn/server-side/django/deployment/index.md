@@ -398,7 +398,8 @@ We are choosing to use PythonAnywhere for several reasons:
 - PythonAnywhere has a [free beginner plan](https://www.pythonanywhere.com/pricing/) that is _really_ free, albeit with some limitations.
   The fact that it is affordable for all developers is really important to MDN!
 
-  > **Note:** This tutorial has been hosted on Heroku, Railway, and now PythonAnywhere, migrating when the previously free plans were discontinued.
+  > [!NOTE]
+  > This tutorial has been hosted on Heroku, Railway, and now PythonAnywhere, migrating when the previously free plans were discontinued.
   > We've chosen PythonAnywhere because we think this plan is likely to remain free.
   > We've kept the Railway example too, which is not free, for comparison, and because it allows us to more easily demonstrate features such as integration with a Postgres databases running on a different service.
 
@@ -471,7 +472,8 @@ We'll also configure the default database and collect static files so that they 
 4. Next get the library sources from GitHub.
    PythonAnywhere expects you to install applications in a folder named after your site URL.
 
-   > **Note:** Because we're using the free account you can only name your account `<your_pythonaware_username>.pythonanywhere.com` (for example, if your username is "Odtsetseg" you will have to put the local library source into a folder named `odtsetseg.pythonanywhere.com`).
+   > [!NOTE]
+   > Because we're using the free account you can only name your account `<your_pythonaware_username>.pythonanywhere.com` (for example, if your username is "Odtsetseg" you will have to put the local library source into a folder named `odtsetseg.pythonanywhere.com`).
 
    Enter the following command to clone your library sources into an appropriately named folder (you will need to replace the username values with your own name):
 
@@ -494,7 +496,8 @@ We'll also configure the default database and collect static files so that they 
    python manage.py migrate
    ```
 
-   > **Note:** For the Railway example we will [Configure a Postgres database](#provision_and_connect_a_postgres_sql_database), and connect to it by setting the `DATABASE_URL` environment variable.
+   > [!NOTE]
+   > For the Railway example we will [Configure a Postgres database](#provision_and_connect_a_postgres_sql_database), and connect to it by setting the `DATABASE_URL` environment variable.
    > It is important that `migrate` is called _after_ configuring what database to use database.
 
 7. Collect all the static files into a location where they can be [served in production](#serving_static_files_in_production):

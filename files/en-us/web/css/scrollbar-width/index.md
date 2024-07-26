@@ -51,7 +51,8 @@ scrollbar-width: unset;
       </tbody>
     </table>
 
-> **Note:** User Agents must apply any `scrollbar-width` value set on the root element to the viewport.
+> [!NOTE]
+> User Agents must apply any `scrollbar-width` value set on the root element to the viewport.
 
 ## Accessibility
 

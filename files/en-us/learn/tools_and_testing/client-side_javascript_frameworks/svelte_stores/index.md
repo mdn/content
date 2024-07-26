@@ -618,7 +618,8 @@ Moreover, because web storage only supports saving string values, we will have t
    <Todos bind:todos={$todos} />
    ```
 
-   > **Note:** This is the only change we have to make in order to use our custom store. `App.svelte` is completely transparent in terms of what kind of store we are using.
+   > [!NOTE]
+   > This is the only change we have to make in order to use our custom store. `App.svelte` is completely transparent in terms of what kind of store we are using.
 
 5. Go ahead and try your app again. Create a few to-dos and then close the browser. You may even stop the Svelte server and restart it. Upon revisiting the URL, your to-dos will still be there.
 6. You can also inspect it in the DevTools console. In the web console, enter the command `localStorage.getItem('mdn-svelte-todo')`. Make some changes to your app, like pressing the _Uncheck All_ button, and check the web storage content once more. You will get something like this:
@@ -657,7 +658,8 @@ Let's give our `Alert` component a fly `transition`. We'll open the `Alert.svelt
    >
    ```
 
-   > **Note:** The double curly braces are not special Svelte syntax. It's just a literal JavaScript object being passed as a parameter to the fly transition.
+   > [!NOTE]
+   > The double curly braces are not special Svelte syntax. It's just a literal JavaScript object being passed as a parameter to the fly transition.
 
 3. Try your app out again, and you'll see that the notifications now look a bit more appealing.
 

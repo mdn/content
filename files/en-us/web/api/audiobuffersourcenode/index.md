@@ -71,7 +71,8 @@ _Inherits methods from its parent, {{domxref("AudioScheduledSourceNode")}}, and 
 
 In this example, we create a two-second buffer, fill it with white noise, and then play it using an `AudioBufferSourceNode`. The comments should clearly explain what is going on.
 
-> **Note:** You can also [run the code live](https://mdn.github.io/webaudio-examples/audio-buffer/), or [view the source](https://github.com/mdn/webaudio-examples/blob/main/audio-buffer/index.html).
+> [!NOTE]
+> You can also [run the code live](https://mdn.github.io/webaudio-examples/audio-buffer/), or [view the source](https://github.com/mdn/webaudio-examples/blob/main/audio-buffer/index.html).
 
 ```js
 const audioCtx = new AudioContext();
@@ -107,7 +108,8 @@ source.connect(audioCtx.destination);
 source.start();
 ```
 
-> **Note:** For a `decodeAudioData()` example, see the {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} page.
+> [!NOTE]
+> For a `decodeAudioData()` example, see the {{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} page.
 
 ## Specifications
 

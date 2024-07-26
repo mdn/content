@@ -29,7 +29,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     This type overrides the one used by its parent {{HTMLElement("ol")}} element, if any.
 
-    > **Note:** This attribute has been deprecated; use the CSS {{cssxref("list-style-type")}} property instead.
+    > [!NOTE]
+    > This attribute has been deprecated; use the CSS {{cssxref("list-style-type")}} property instead.
 
 ## Examples
 

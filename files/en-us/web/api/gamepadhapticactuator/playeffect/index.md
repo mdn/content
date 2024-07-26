@@ -47,7 +47,8 @@ playEffect(type, params)
       - : The rumble intensity of the bottom-right front trigger, normalized to the range between `0.0` and `1.0`.
         Defaults to `0.0`.
 
-> **Note:** A new call to `playEffect()` overrides a previous ongoing call.
+> [!NOTE]
+> A new call to `playEffect()` overrides a previous ongoing call.
 
 ### Return value
 

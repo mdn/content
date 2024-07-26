@@ -68,7 +68,8 @@ Below is a list of the supported calendar era types.
   - : Civil (algorithmic) Arabic calendar
 - `islamicc`
   - : Civil (algorithmic) Arabic calendar
-    > **Warning:** The `islamicc` calendar key has been deprecated. Please use `islamic-civil`.
+    > [!WARNING]
+    > The `islamicc` calendar key has been deprecated. Please use `islamic-civil`.
 
 ## Examples
 

@@ -129,7 +129,8 @@ The following common arguments can be used when declaring many/most of the diffe
   If no field is specified as the primary key, Django will automatically add a field for this purpose.
   The type of auto-created primary key fields can be specified for each app in [`AppConfig.default_auto_field`](https://docs.djangoproject.com/en/5.0/ref/applications/#django.apps.AppConfig.default_auto_field) or globally in the [`DEFAULT_AUTO_FIELD`](https://docs.djangoproject.com/en/5.0/ref/settings/#std:setting-DEFAULT_AUTO_FIELD) setting.
 
-  > **Note:** Apps created using **manage.py** set the type of the primary key to a [BigAutoField](https://docs.djangoproject.com/en/5.0/ref/models/fields/#bigautofield).
+  > [!NOTE]
+  > Apps created using **manage.py** set the type of the primary key to a [BigAutoField](https://docs.djangoproject.com/en/5.0/ref/models/fields/#bigautofield).
   > You can see this in the local library **catalog/apps.py** file:
   >
   > ```py

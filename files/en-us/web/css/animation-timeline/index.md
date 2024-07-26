@@ -79,9 +79,11 @@ animation-timeline: unset;
 
   - : A {{cssxref('dashed-ident')}} identifying a named timeline previously declared with the {{cssxref('scroll-timeline-name')}} or {{cssxref('view-timeline-name')}} property (or the {{cssxref('scroll-timeline')}} or {{cssxref('view-timeline')}} shorthand property).
 
-    > **Note:** If two or more timelines share the same name, the last declared within the cascade will be used. Also, if no timeline is found that matches the given name, the animation is not associated with a timeline.
+    > [!NOTE]
+    > If two or more timelines share the same name, the last declared within the cascade will be used. Also, if no timeline is found that matches the given name, the animation is not associated with a timeline.
 
-    > **Note:** The [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident) values must start with `--`. This helps avoid name clashes with standard CSS keywords.
+    > [!NOTE]
+    > The [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident) values must start with `--`. This helps avoid name clashes with standard CSS keywords.
 
 ## Formal definition
 

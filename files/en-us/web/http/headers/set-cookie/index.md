@@ -67,7 +67,8 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     However, this is not required by the RFC specification.
     The percent-encoding does help to satisfy the requirements of the characters allowed for `<cookie-value>`.
 
-    > **Note:** Some `<cookie-name>` have a specific semantic:
+    > [!NOTE]
+    > Some `<cookie-name>` have a specific semantic:
     >
     > **`__Secure-` prefix**: Cookies with names starting with `__Secure-` (dash is part of the prefix) must be set with the `secure` flag from a secure page (HTTPS).
     >
@@ -95,7 +96,8 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     A session finishes when the client shuts down, after which
     the session cookie is removed.
 
-    > **Warning:** Many web browsers have a _session restore_ feature that will save all tabs and restore them the next time the browser is used. Session cookies will also be restored, as if the browser was never closed.
+    > [!WARNING]
+    > Many web browsers have a _session restore_ feature that will save all tabs and restore them the next time the browser is used. Session cookies will also be restored, as if the browser was never closed.
 
     When an `Expires` date is set, the deadline is relative to the _client_ the cookie is being set on, not the server.
 
@@ -150,15 +152,18 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
         This Set-Cookie was blocked because it had the "SameSite=None" attribute but did not have the "Secure" attribute, which is required in order to use "SameSite=None".
         ```
 
-        > **Note:** A [`Secure`](#secure) cookie is only sent to the server with an encrypted request over the HTTPS protocol. Note that insecure sites (`http:`) can't set cookies with the `Secure` directive, and therefore can't use `SameSite=None`.
+        > [!NOTE]
+        > A [`Secure`](#secure) cookie is only sent to the server with an encrypted request over the HTTPS protocol. Note that insecure sites (`http:`) can't set cookies with the `Secure` directive, and therefore can't use `SameSite=None`.
 
-        > **Warning:** Cookies with the `SameSite=None; Secure` that do not also have the [`Partitioned`](#partitioned) attribute may be blocked in cross-site contexts on future browser versions. This behavior protects user data from cross-site tracking. See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies) and [Third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies).
+        > [!WARNING]
+        > Cookies with the `SameSite=None; Secure` that do not also have the [`Partitioned`](#partitioned) attribute may be blocked in cross-site contexts on future browser versions. This behavior protects user data from cross-site tracking. See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies) and [Third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies).
 
 - `Secure` {{optional_inline}}
 
   - : Indicates that the cookie is sent to the server only when a request is made with the `https:` scheme (except on localhost), and therefore, is more resistant to [man-in-the-middle](/en-US/docs/Glossary/MitM) attacks.
 
-    > **Note:** Do not assume that `Secure` prevents all access to sensitive information in cookies (session keys, login details, etc.). Cookies with this attribute can still be read/modified either with access to the client's hard disk or from JavaScript if the `HttpOnly` cookie attribute is not set.
+    > [!NOTE]
+    > Do not assume that `Secure` prevents all access to sensitive information in cookies (session keys, login details, etc.). Cookies with this attribute can still be read/modified either with access to the client's hard disk or from JavaScript if the `HttpOnly` cookie attribute is not set.
     >
     > Insecure sites (`http:`) cannot set cookies with the `Secure` attribute (since Chrome 52 and Firefox 52). The `https:` requirements are ignored when the `Secure` attribute is set by localhost (since Chrome 89 and Firefox 75).
 

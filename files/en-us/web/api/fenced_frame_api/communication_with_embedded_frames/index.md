@@ -20,7 +20,8 @@ From the `<iframe>`, you can listen to a [`message`](/en-US/docs/Web/API/Window/
 
 Fenced frames are intended to be used for cases such as displaying targeted ads selected via the [Protected Audience API](https://developer.chrome.com/en/docs/privacy-sandbox/fledge/) and {{domxref("WindowSharedStorage.selectURL()")}}. Communicating between `<fencedframe>`s and other pages outside the `<fencedframe>` on the page is intentionally limited, but one method of communication between the embedder and shared storage worklets does exist — {{domxref("FencedFrameConfig.setSharedStorageContext()")}}.
 
-> **Note:** Within the same `<fencedframe>` tree, communication between frames is allowed. For example, a root `<fencedframe>` can send a message to a child `<iframe>` in its own tree, and a child `<iframe>` can send a message to the parent `<fencedframe>`.
+> [!NOTE]
+> Within the same `<fencedframe>` tree, communication between frames is allowed. For example, a root `<fencedframe>` can send a message to a child `<iframe>` in its own tree, and a child `<iframe>` can send a message to the parent `<fencedframe>`.
 
 Let's look at a more complex example that uses a Select URL output gate operation to render an ad in a `<fencedframe>`.
 

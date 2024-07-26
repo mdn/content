@@ -14,7 +14,8 @@ This event occurs based upon {{domxref("HTMLMediaElement")}} ({{HTMLElement("aud
 
 This event is not cancelable and does not bubble.
 
-> **Note:** The `ended` event doesn't fire if the [`loop`](/en-US/docs/Web/API/HTMLMediaElement/loop) property is `true` and [`playbackRate`](/en-US/docs/Web/API/HTMLMediaElement/playbackRate) is non-negative.
+> [!NOTE]
+> The `ended` event doesn't fire if the [`loop`](/en-US/docs/Web/API/HTMLMediaElement/loop) property is `true` and [`playbackRate`](/en-US/docs/Web/API/HTMLMediaElement/playbackRate) is non-negative.
 
 ## Syntax
 

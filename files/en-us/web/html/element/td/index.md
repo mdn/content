@@ -73,7 +73,8 @@ The following attributes are deprecated and should not be used. They are documen
 
   ![Illustration demonstrating column and row spanning of table cells: cells 1, 3, and 4 spanning two rows; cell 2 spanning two columns; cells 5 and 6 fitting into the available cells that are the second and third columns in the second row](column-row-span.png)
 
-  > **Note:** These attributes must not be used to overlap cells.
+  > [!NOTE]
+  > These attributes must not be used to overlap cells.
 
 ## Examples
 

@@ -55,7 +55,8 @@ The following attributes are deprecated and should not be used. They are documen
 
   - : Specifies the width of the table. Use the {{cssxref("width")}} CSS property instead, as this attribute is deprecated.
 
-    > **Note:** While no HTML specification includes `height` as a `<table>` attribute, some browsers support a non-standard interpretation of `height`. The unitless value sets a minimum absolute height in pixels. If set as a percent value, the minimum table height will be relative to the parent container's height. Use the {{cssxref("min-height")}} CSS property instead, as this attribute is deprecated.
+    > [!NOTE]
+    > While no HTML specification includes `height` as a `<table>` attribute, some browsers support a non-standard interpretation of `height`. The unitless value sets a minimum absolute height in pixels. If set as a percent value, the minimum table height will be relative to the parent container's height. Use the {{cssxref("min-height")}} CSS property instead, as this attribute is deprecated.
 
 ## Visual layout of table contents
 

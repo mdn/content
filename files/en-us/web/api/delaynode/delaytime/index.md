@@ -12,7 +12,8 @@ The `delayTime` property of the {{ domxref("DelayNode") }} interface is an [a-ra
 
 `delayTime` is expressed in seconds, its minimal value is `0`, and its maximum value is defined by the `maxDelayTime` argument of the {{domxref("BaseAudioContext.createDelay")}} method that created it.
 
-> **Note:** Though the {{domxref("AudioParam")}} returned is read-only, the value it represents is not.
+> [!NOTE]
+> Though the {{domxref("AudioParam")}} returned is read-only, the value it represents is not.
 
 ## Value
 

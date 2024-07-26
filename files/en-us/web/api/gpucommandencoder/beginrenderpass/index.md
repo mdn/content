@@ -45,7 +45,8 @@ beginRenderPass(descriptor)
         - `queryIndex`: A number specifying the index position in the `querySet` that the timestamp will be written to.
         - `querySet`: The {{domxref("GPUQuerySet")}} that the timestamp will be written to.
 
-        > **Note:** To use timestamp queries, the `timestamp-query` {{domxref("GPUSupportedFeatures", "feature", "", "nocode")}} must be enabled in the {{domxref("GPUDevice")}}.
+        > [!NOTE]
+        > To use timestamp queries, the `timestamp-query` {{domxref("GPUSupportedFeatures", "feature", "", "nocode")}} must be enabled in the {{domxref("GPUDevice")}}.
 
 ### Color attachment object structure
 
@@ -81,7 +82,8 @@ Color attachment objects can have the following properties:
     - `"clear"`: Loads the `clearValue` for this attachment into the render pass.
     - `"load"`: Loads the existing value for this attachment into the render pass.
 
-    > **Note:** It is recommended to always use `"clear"` in cases where the initial value doesn't matter, as it will give better performance on some devices such as mobiles.
+    > [!NOTE]
+    > It is recommended to always use `"clear"` in cases where the initial value doesn't matter, as it will give better performance on some devices such as mobiles.
 
 - `storeOp`
   - : An enumerated value indicating the store operation to perform on `view` after executing the render pass. Possible values are:
@@ -93,7 +95,8 @@ Color attachment objects can have the following properties:
 
   - : A {{domxref("GPUTextureView")}} object representing the texture subresource that will be output to for this color attachment.
 
-    > **Note:** Each color or depth/stencil attachment must be a unique texture subresource, and texture subresources used as attachments cannot be used inside the render pass.
+    > [!NOTE]
+    > Each color or depth/stencil attachment must be a unique texture subresource, and texture subresources used as attachments cannot be used inside the render pass.
 
 ### Depth/stencil attachment object structure
 
@@ -112,7 +115,8 @@ The `depthStencilAttachment` object can have the following properties:
     - `"clear"`: Loads the `clearValue` for this attachment into the render pass.
     - `"load"`: Loads the existing value for this attachment into the render pass.
 
-    > **Note:** It is recommended to always use `"clear"` in cases where the initial value doesn't matter, as it will give better performance on some devices such as mobiles.
+    > [!NOTE]
+    > It is recommended to always use `"clear"` in cases where the initial value doesn't matter, as it will give better performance on some devices such as mobiles.
 
 - `depthReadOnly` {{optional_inline}}
   - : A boolean. Setting the value to `true` causes the depth component of `view` to be read-only. If `depthReadOnly` is omitted, it defaults to `false`.
@@ -133,7 +137,8 @@ The `depthStencilAttachment` object can have the following properties:
     - `"clear"`: Loads the `clearValue` for this attachment into the render pass.
     - `"load"`: Loads the existing value for this attachment into the render pass.
 
-    > **Note:** It is recommended to always use `"clear"` in cases where the initial value doesn't matter, as it will give better performance on some devices such as mobiles.
+    > [!NOTE]
+    > It is recommended to always use `"clear"` in cases where the initial value doesn't matter, as it will give better performance on some devices such as mobiles.
 
 - `stencilReadOnly` {{optional_inline}}
   - : A boolean. Setting the value to `true` causes the stencil component of `view` to be read-only. If `stencilReadOnly` is omitted, it defaults to `false`.
