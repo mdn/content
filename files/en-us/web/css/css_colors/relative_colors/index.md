@@ -14,11 +14,11 @@ This article explains relative color syntax, shows what the different options ar
 
 A relative CSS color value has the following general syntax structure:
 
-```text
+```css
 color-function(from origin-color channel1 channel2 channel3)
 color-function(from origin-color channel1 channel2 channel3 / alpha)
 
-// color space included in the case of color() functions
+/* color space included in the case of color() functions */
 color(from origin-color colorspace channel1 channel2 channel3)
 color(from origin-color colorspace channel1 channel2 channel3 / alpha)
 ```
@@ -81,7 +81,7 @@ This results in an output of `rgb(200 0 0)` — a slightly darker red. If we had
 
 These five lines all produce an equivalent output color:
 
-```text
+```css
 red
 rgb(255 0 0)
 rgb(from red r g b)

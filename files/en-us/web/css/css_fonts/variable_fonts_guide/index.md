@@ -111,19 +111,97 @@ The following live example's CSS can be edited to allow you to play with font it
 
 ### Slant
 
-Slant (represented by the `slnt` tag), or as it's often referred to, 'oblique' — is different from true italics in that it changes the angle of the letterforms but doesn't perform any kind of character substitution. It is also variable, in that it is expressed as a numeric range. This allows the font to be varied anywhere along that axis. The allowed range is generally 0 (upright) to 20 degrees — any number value along that range can be supplied, so the font can be slanted just a tiny bit. However, any value from -90 to 90 degrees is valid.
+Slant (represented by the `slnt` tag), or as it's often referred to, 'oblique' — is different from true italics in that it changes the angle of the letterforms but doesn't perform any kind of character substitution. It is also variable, in that it is expressed as a numeric range. This allows the font to be varied anywhere along the slant axis. The allowed range is from -90 to 90 degrees.
 
-> **Note:** The `deg` keyword is not used when utilizing `font-variation-settings`.
+The two properties that can control the slant are [`font-style`](/en-US/docs/Web/CSS/font-style) and [`font-variation-settings`](/en-US/docs/Web/CSS/font-variation-settings). The following two property declarations are the same:
 
-```css
+```plain
 font-style: oblique 14deg;
 
-font-variation-settings: "slnt" 14;
+font-variation-settings: "slnt" -14;
 ```
 
-The following live example's CSS can be edited to allow you to play with font slant/oblique values.
+Prefer the `font-style` property over the `font-variation-settings` property. The `deg` keyword is not used when using the `font-variation-settings` property. Also, in the case of the `font-variation-settings` property, a positive angle means a counter-clockwise slant.
 
-{{EmbedGHLiveSample("css-examples/variable-fonts/slant.html", '100%', 520)}}
+In the following live example, you can adjust the slant.
+
+```html hidden
+<div>
+  <p class="font-style">Slant</p>
+  <span>(font-style: oblique 5deg)</span>
+</div>
+<div>
+  <p class="font-variation">Slant</p>
+  <span>(font-variation-settings: 'slnt' -5)</span>
+</div>
+<div class="adjustable-box">
+  <p class="adjustable">Slant</p>
+  (font-variation-settings: 'slnt' <span id="angle-text">-5</span>)<br />
+
+  <label for="slant-angle">Adjust Slant: </label>
+  <input
+    type="range"
+    name="range-slider"
+    value="5"
+    id="slant-angle"
+    min="-15"
+    max="15" />
+</div>
+```
+
+```css hidden
+:root {
+  --text-axis: -5;
+}
+
+p {
+  display: inline-block;
+  font-size: 2rem;
+}
+
+.adjustable-box {
+  border: 1px dashed;
+}
+```
+
+```css
+@font-face {
+  font-family: "SlantFont";
+  font-style: oblique -15 15;
+  src: url("https://mdn.github.io/shared-assets/fonts/font_with_slant_axis.woff2")
+    format("woff2");
+}
+
+p {
+  font-family: "SlantFont";
+}
+
+.font-style {
+  font-style: oblique 5deg;
+}
+
+.font-variation {
+  font-variation-settings: "slnt" -5;
+}
+
+.adjustable {
+  font-variation-settings: "slnt" var(--slant-angle);
+}
+```
+
+```js hidden
+const angle = document.querySelector("#slant-angle");
+const text = document.querySelector("#angle-text");
+const adjustable = document.querySelector(".adjustable");
+
+angle.addEventListener("input", (e) => {
+  const angle = -1 * e.target.value;
+  text.innerText = angle;
+  adjustable.style.setProperty("--slant-angle", angle);
+});
+```
+
+{{EmbedLiveSample("slant", "100%", "350")}}
 
 ### Optical size
 
@@ -179,19 +257,7 @@ The basic syntax is the same, but the font technology can be specified, and allo
 }
 ```
 
-#### Example for a font that includes both upright and italics
-
-```css
-@font-face {
-  font-family: "MyVariableFontName";
-  src: url("path/to/font/file/myvariablefont.woff2") format("woff2-variations");
-  font-weight: 125 950;
-  font-stretch: 75% 125%;
-  font-style: oblique 0deg 20deg;
-}
-```
-
-> **Note:** there is no set specific value for the upper-end degree measurement in this case; they indicate that there is an axis so the browser can know to render upright or italic (remember that italics are only on or off)
+In this case, the `normal` value indicates that this font file should be used when in a style rule the `font-family` property is `MyVariableFontName` and the [font-style](/en-US/docs/Web/CSS/font-style) property is `normal`. The `oblique 0deg` and `oblique 0deg 20deg` values, because of the `0deg`, also indicate the font has normal upright glyphs.
 
 #### Example for a font that contains only italics and no upright characters
 
@@ -205,6 +271,8 @@ The basic syntax is the same, but the font technology can be specified, and allo
 }
 ```
 
+In this case, the `italic` value indicates that this font file should be used when in a style rule the `font-family` property is `MyVariableFontName` and the [font-style](/en-US/docs/Web/CSS/font-style) property is `italic`. The `oblique 14deg` value also indicates the font has italic glyphs.
+
 #### Example for a font that contains an oblique (slant) axis
 
 ```css
@@ -216,6 +284,8 @@ The basic syntax is the same, but the font technology can be specified, and allo
   font-style: oblique 0deg 12deg;
 }
 ```
+
+In this case, the `oblique 0deg 12deg` value indicates that this font file should be used when in a style rule the `font-family` property is `MyVariableFontName` and the [font-style](/en-US/docs/Web/CSS/font-style) property is oblique with an angle between zero and 12 degrees inclusive.
 
 > **Note:** Not all browsers have implemented the full syntax for font format, so test carefully. All browsers that support variable fonts will still render them if you set the format to just the file format, rather than format-variations (i.e. `woff2` instead of `woff2-variations`), but it's best to use the proper syntax if possible.
 

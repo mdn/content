@@ -67,7 +67,8 @@ Modern browsers take steps to help prevent fingerprinting-based attacks by eithe
 
 For example, if a website queries a user's browser for the elapsed time, a comparison of that time to the time reported by the server might be useful as a factor in fingerprinting. Because of this, browsers typically introduce a small amount of variability to timers to make them less useful for identifying the user's system.
 
-> **Note:** See [Fingerprinting](https://web.dev/learn/privacy/fingerprinting/) on web.dev for additional useful information.
+> [!NOTE]
+> See [Fingerprinting](https://web.dev/learn/privacy/fingerprinting/) on web.dev for additional useful information.
 
 ## Privacy features provided by browsers
 
@@ -124,7 +125,8 @@ The ethics of data collection can be broken down into three simple principles:
 - Communicate clearly how you are going to use the data you collect
 - Delete the data once you have finished with it
 
-> **Note:** The tips provided below make for a better, more privacy-aware user experience, but many of them are required by law to comply with regulations, for example the [GDPR](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679&from=EN) in the EU. You should make sure to find out what regulations apply to you in your locale, and what you need to do to comply with them.
+> [!NOTE]
+> The tips provided below make for a better, more privacy-aware user experience, but many of them are required by law to comply with regulations, for example the [GDPR](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32016R0679&from=EN) in the EU. You should make sure to find out what regulations apply to you in your locale, and what you need to do to comply with them.
 
 ### Don't collect more data than you need
 
@@ -154,7 +156,8 @@ Earlier on, we mentioned giving users a way to see what data of theirs you have 
 
 Allowing the user to choose when significant portions of data get deleted is very empowering, and builds trust, but there may be some bits of data that you will want to handle deletion of yourself. For example, some data might only be used for a few hours or minutes and then deleted, like data that is used during the administration of a user's session while they are logged in.
 
-> **Note:** The {{httpheader("Clear-Site-Data")}} HTTP response header is very useful for clearing short-lived user data — it instructs the browser to clear out its cache and/or cookies and/or storage (e.g. [Web Storage](/en-US/docs/Web/API/Web_Storage_API) or [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) data). For example, you might get your server to send it along with a "logged out confirmation" page so that once the user is logged out, their data is safely removed.
+> [!NOTE]
+> The {{httpheader("Clear-Site-Data")}} HTTP response header is very useful for clearing short-lived user data — it instructs the browser to clear out its cache and/or cookies and/or storage (e.g. [Web Storage](/en-US/docs/Web/API/Web_Storage_API) or [IndexedDB](/en-US/docs/Web/API/IndexedDB_API) data). For example, you might get your server to send it along with a "logged out confirmation" page so that once the user is logged out, their data is safely removed.
 
 ## Cut down on tracking
 
@@ -173,7 +176,8 @@ Third-party resources are an essential part of modern web development, they prov
 
 It is important to audit all of the third-party resources you use on your site. Make sure you know what data they collect, what requests they make and to whom, and what their privacy policies are. Your carefully designed privacy policy is useless if you use a third-party script that violates it.
 
-> **Note:** There are various tools out there that can help you build up a picture of what requests a site is making, for example the [Request Map Generator](https://requestmap.webperf.tools/).
+> [!NOTE]
+> There are various tools out there that can help you build up a picture of what requests a site is making, for example the [Request Map Generator](https://requestmap.webperf.tools/).
 
 Once you have audited your third-party resources and understand what they are doing, you should then consider their negatives as a trade-off for the value they bring. If a third-party script is free and really useful but collects quite a lot of user data, you could:
 
@@ -194,7 +198,8 @@ The following list provides some tips on how to mitigate privacy risks inherent 
 
 - Use the {{htmlelement("iframe")}} `sandbox` attribute to allow or disallow usage of certain features inside the content embedded in the `<iframe>` — this includes things like downloads, form submissions, modals, and scripting.
 
-> **Note:** See [Third parties](https://web.dev/learn/privacy/third-parties/) over on web.dev for additional useful information on auditing and more.
+> [!NOTE]
+> See [Third parties](https://web.dev/learn/privacy/third-parties/) over on web.dev for additional useful information on auditing and more.
 
 ## Protect user data
 

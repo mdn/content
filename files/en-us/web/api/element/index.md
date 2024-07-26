@@ -244,7 +244,7 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
 - {{DOMxRef("Element.querySelectorAll()")}}
   - : Returns a {{DOMxRef("NodeList")}} of nodes which match the specified selector string relative to the element.
 - {{DOMxRef("Element.releasePointerCapture()")}}
-  - : Releases (stops) pointer capture that was previously set for a specific {{DOMxRef("PointerEvent","pointer event")}}.
+  - : Releases (stops) pointer capture that was previously set for a specific {{DOMxRef("PointerEvent")}}.
 - {{DOMxRef("Element.remove()")}}
   - : Removes the element from the children list of its parent.
 - {{DOMxRef("Element.removeAttribute()")}}

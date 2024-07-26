@@ -151,7 +151,7 @@ JavaScript-based attribution triggers are more versatile than HTML-based attribu
 
 To register a script-based attribution trigger, you can either:
 
-- Send a {{domxref("fetch()")}} request containing the `attributionReporting` option:
+- Send a {{domxref("Window/fetch", "fetch()")}} request containing the `attributionReporting` option:
 
   ```js
   const attributionReporting = {

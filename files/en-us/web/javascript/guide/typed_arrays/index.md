@@ -270,7 +270,8 @@ const amountDueView = new Float32Array(buffer, 20, 1);
 
 Then you can access, for example, the amount due with `amountDueView[0]`.
 
-> **Note:** The [data structure alignment](https://en.wikipedia.org/wiki/Data_structure_alignment) in a C structure is platform-dependent. Take precautions and considerations for these padding differences.
+> [!NOTE]
+> The [data structure alignment](https://en.wikipedia.org/wiki/Data_structure_alignment) in a C structure is platform-dependent. Take precautions and considerations for these padding differences.
 
 ### Conversion to normal arrays
 

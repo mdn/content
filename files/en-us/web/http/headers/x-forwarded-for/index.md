@@ -10,7 +10,8 @@ status:
 
 The **`X-Forwarded-For`** (XFF) request header is a de-facto standard header for identifying the originating IP address of a client connecting to a web server through a proxy server.
 
-> **Warning:** Improper use of this header can be a security risk. For details, see the [Security and privacy concerns](#security_and_privacy_concerns) section.
+> [!WARNING]
+> Improper use of this header can be a security risk. For details, see the [Security and privacy concerns](#security_and_privacy_concerns) section.
 
 When a client connects directly to a server, the
 client's IP address is sent to the server (and is often written to server

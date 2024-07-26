@@ -32,7 +32,8 @@ Media, namely images and video, account for over 70% of the bytes downloaded for
   </tbody>
 </table>
 
-> **Note:** This is a high-level introduction to optimizing multimedia delivery on the web, covering general principles and techniques. For a more in-depth guide, see <https://web.dev/learn/images>.
+> [!NOTE]
+> This is a high-level introduction to optimizing multimedia delivery on the web, covering general principles and techniques. For a more in-depth guide, see <https://web.dev/learn/images>.
 
 ## Why optimize your multimedia?
 
@@ -60,7 +61,8 @@ Beyond loading a subset of images, you should look into the format of the images
 
 The optimal file format typically depends on the character of the image.
 
-> **Note:** For general information on image types see the [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types)
+> [!NOTE]
+> For general information on image types see the [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types)
 
 The [SVG](/en-US/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics) format is more appropriate for images that have few colors and that are not photo-realistic. This requires the source to be available as in a vector graphic format. Should such an image only exist as a bitmap, then [PNG](/en-US/docs/Web/Media/Formats/Image_types#png_portable_network_graphics) would be the fallback format to choose. Examples of these types of motifs are logos, illustrations, charts, or icons (note: SVGs are far better than icon fonts!). Both formats support transparency.
 

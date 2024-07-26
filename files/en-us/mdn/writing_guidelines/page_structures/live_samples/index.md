@@ -219,7 +219,8 @@ The first step is to either add code snippets or ensure that existing ones are r
 
 Each piece of code must be in a code block, with a separate block for each language, properly marked as to which language it is. Most of the time, this has already been done, but it's always worth double-checking to be sure each piece of code is configured with the correct syntax. This is done with a language identifier on the code block of `language-type`, where _language-type_ is the type of language the block contains, e.g. `html`, `css`, or `js`.
 
-> **Note:** You may have more than one block for each language; they are all concatenated together. This lets you have a chunk of code, followed by an explanation of how it works, then another chunk, and so forth. This makes it even easier to produce tutorials and the like that utilize live samples interspersed with explanatory text.
+> [!NOTE]
+> You may have more than one block for each language; they are all concatenated together. This lets you have a chunk of code, followed by an explanation of how it works, then another chunk, and so forth. This makes it even easier to produce tutorials and the like that utilize live samples interspersed with explanatory text.
 
 So make sure the code blocks for your HTML, CSS, and/or JavaScript code are each configured correctly for that language's syntax highlighting, and you're good to go.
 
@@ -387,7 +388,8 @@ This example shows how to implement a simple single-entry log in your live sampl
 For clarity this example separates the logging code and the code that uses it, and displays the logging code first.
 Generally when implementing your own samples you should place logging elements below other UI elements.
 
-> **Note:** Displaying log output as part of the sample provides a much better user experience than using `console.log()`.
+> [!NOTE]
+> Displaying log output as part of the sample provides a much better user experience than using `console.log()`.
 
 #### HTML
 
@@ -453,9 +455,11 @@ The console appends a new line to the end of the output each time a log is added
 For clarity this example separates the logging code and the code that uses it, and displays the logging code first.
 Generally when implementing your own samples you should place logging elements below other UI elements.
 
-> **Note:** Displaying log output as part of the sample is a much better user experience than using `console.log()`.
+> [!NOTE]
+> Displaying log output as part of the sample is a much better user experience than using `console.log()`.
 
-> **Note:** See [`DataTransfer.effectAllowed`](/en-US/docs/Web/API/DataTransfer/effectAllowed#setting_effectallowed) for a more complete example.
+> [!NOTE]
+> See [`DataTransfer.effectAllowed`](/en-US/docs/Web/API/DataTransfer/effectAllowed#setting_effectallowed) for a more complete example.
 
 #### HTML
 

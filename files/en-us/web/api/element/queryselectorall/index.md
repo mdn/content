@@ -51,27 +51,22 @@ each descendant node that matches at least one of the specified selectors.
 
 ## Examples
 
-### dataset selector & attribute selectors
+### Getting all elements with a custom data value
+
+This example uses the [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors) to select multiple elements with a `data-name` data attribute that contains "funnel-chart-percent".
 
 ```html
 <section class="box" id="sect1">
-  <div class="funnel-chart-percent1">10.900%</div>
-  <div class="funnel-chart-percent2">3700.00%</div>
-  <div class="funnel-chart-percent3">0.00%</div>
+  <div data-name="funnel-chart-percent1">10.900%</div>
+  <div data-name="funnel-chart-percent2">3700.00%</div>
+  <div data-name="funnel-chart-percent3">0.00%</div>
 </section>
 ```
 
 ```js
-// dataset selectors
 const refs = [
   ...document.querySelectorAll(`[data-name*="funnel-chart-percent"]`),
 ];
-
-// attribute selectors
-// const refs = [...document.querySelectorAll(`[class*="funnel-chart-percent"]`)];
-// const refs = [...document.querySelectorAll(`[class^="funnel-chart-percent"]`)];
-// const refs = [...document.querySelectorAll(`[class$="funnel-chart-percent"]`)];
-// const refs = [...document.querySelectorAll(`[class~="funnel-chart-percent"]`)];
 ```
 
 ### Obtaining a list of matches

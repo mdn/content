@@ -9,7 +9,8 @@ status:
 
 {{HTTPSidebar}}{{Deprecated_header}}{{non-standard_header}}
 
-> **Note:** The DNT (Do Not Track) specification has been discontinued. See {{domxref("Navigator.doNotTrack")}} for more information.
+> [!NOTE]
+> The DNT (Do Not Track) specification has been discontinued. See {{domxref("Navigator.doNotTrack")}} for more information.
 
 The **`Tk`** response header indicates the tracking status that
 applied to the corresponding request.

@@ -71,7 +71,7 @@ The relative color syntax defines a number of color-channel keywords, each of wh
 
 {{csssyntax}}
 
-## Accessibility concerns
+## Accessibility
 
 When `calc()` is used for controlling text size, be sure that one of the values includes a [relative length unit](/en-US/docs/Web/CSS/length#relative_length_units), for example:
 

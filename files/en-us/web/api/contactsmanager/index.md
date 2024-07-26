@@ -9,7 +9,7 @@ browser-compat: api.ContactsManager
 
 {{securecontext_header}}{{APIRef("Contact Picker API")}}{{SeeCompatTable}}
 
-The **`ContactsManager`** interface of the {{domxref('Contact Picker API')}} allows users to select entries from their contact list and share limited details of the selected entries with a website or application.
+The **`ContactsManager`** interface of the [Contact Picker API](/en-US/docs/Web/API/Contact_Picker_API) allows users to select entries from their contact list and share limited details of the selected entries with a website or application.
 
 The `ContactsManager` is available through the global {{domxref('navigator.contacts')}} property.
 

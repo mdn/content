@@ -15,7 +15,8 @@ The terms **non-proportional**, **monotype**, and **monospace** are used interch
 
 This element is obsolete, however. You should use the more semantically helpful {{HTMLElement("code")}}, {{HTMLElement("kbd")}}, {{HTMLElement("samp")}}, or {{HTMLElement("var")}} elements for inline text that needs to be presented in monospace type, or the {{HTMLElement("pre")}} tag for content that should be presented as a separate block.
 
-> **Note:** If none of the semantic elements are appropriate for your use case (for example, if you need to show some content in a non-proportional font), you should consider using the {{ HTMLElement("span") }} element, styling it as desired using CSS. The {{cssxref("font-family")}} property is a good place to start.
+> [!NOTE]
+> If none of the semantic elements are appropriate for your use case (for example, if you need to show some content in a non-proportional font), you should consider using the {{ HTMLElement("span") }} element, styling it as desired using CSS. The {{cssxref("font-family")}} property is a good place to start.
 
 ## Attributes
 
@@ -71,7 +72,8 @@ tt {
 
 The `<tt>` element is, by default, rendered using the browser's default non-proportional font. You can override this using CSS by creating a rule using the `tt` selector, as seen in the example [Overriding the default font](#overriding_the_default_font) above.
 
-> **Note:** User-configured changes to the default monospace font setting may take precedence over your CSS.
+> [!NOTE]
+> User-configured changes to the default monospace font setting may take precedence over your CSS.
 
 Although this element wasn't officially deprecated in HTML 4.01, its use was discouraged in favor of the semantic elements and/or CSS. The `<tt>` element is obsolete in HTML 5.
 

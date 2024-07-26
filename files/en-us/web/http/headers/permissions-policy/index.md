@@ -80,10 +80,6 @@ You can specify
 
   - : Controls whether the current document is allowed to autoplay media requested through the {{domxref("HTMLMediaElement")}} interface. When this policy is disabled and there were no user gestures, the {{jsxref("Promise")}} returned by {{domxref("HTMLMediaElement.play()")}} will reject with a `NotAllowedError` {{domxref("DOMException")}}. The autoplay attribute on {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements will be ignored.
 
-- {{httpheader('Permissions-Policy/battery','battery')}} {{Experimental_Inline}}
-
-  - : Controls whether the use of the [Battery Status API](/en-US/docs/Web/API/Battery_Status_API) is allowed. When this policy is disabled, the {{JSxRef("Promise")}} returned by {{DOMxRef("Navigator.getBattery","Navigator.getBattery()")}} will reject with a `NotAllowedError` {{DOMxRef("DOMException")}}.
-
 - {{httpheader('Permissions-Policy/bluetooth','bluetooth')}} {{Experimental_Inline}}
 
   - : Controls whether the use of the [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API) is allowed. When this policy is disabled, the methods of the {{DOMxRef("Bluetooth")}} object returned by {{DOMxRef("Navigator.bluetooth")}} will either return `false` or reject the returned {{JSxRef("Promise")}} with a `SecurityError` {{DOMxRef("DOMException")}}.

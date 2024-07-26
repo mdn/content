@@ -45,7 +45,7 @@ Possible values are:
     - [`<area ping>`](/en-US/docs/Web/HTML/Element/area#ping)
     - {{domxref("Cache")}}
     - {{domxref("EventSource")}}
-    - {{domxref("fetch()")}}
+    - {{domxref("Window/fetch", "fetch()")}}
     - {{domxref("navigator.sendBeacon()")}}
     - {{domxref("WebSocket")}}
     - {{domxref("XMLHttpRequest")}}

@@ -105,8 +105,8 @@ That's it! If DASH is supported by the browser, your video will now stream adapt
 
 ## Links
 
-[WebM DASH Specification at The WebM Project](http://wiki.webmproject.org/adaptive-streaming/webm-dash-specification)
+[WebM DASH Specification at The WebM Project](https://wiki.webmproject.org/adaptive-streaming/webm-dash-specification)
 
 [DASH Industry Forum](https://dashif.org/)
 
-[WebM project description of how to create DASH files with FFMPEG](http://wiki.webmproject.org/adaptive-streaming/instructions-to-playback-adaptive-webm-using-dash)
+[WebM project description of how to create DASH files with FFMPEG](https://wiki.webmproject.org/adaptive-streaming/instructions-to-playback-adaptive-webm-using-dash)

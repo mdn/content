@@ -46,11 +46,14 @@ start(timeslice)
 ### Parameters
 
 - `timeslice` {{optional_inline}}
+
   - : The number of milliseconds to record into each {{domxref("Blob")}}. If this
     parameter isn't included, the entire media duration is recorded into a single
     `Blob` unless the {{domxref("MediaRecorder.requestData", "requestData()")}}
     method is called to obtain the `Blob` and trigger the creation of a new
     `Blob` into which the media continues to be recorded.
+
+    > **Note:** Like other time values in web APIs, `timeslice` is not exact and the real intervals may be slightly longer due to other pending tasks before the creation of the next blob.
 
 ### Return value
 

@@ -12,7 +12,8 @@ network connection stays open after the current transaction finishes. If the val
 is `keep-alive`, the connection is persistent and not closed, allowing for
 subsequent requests to the same server to be done.
 
-> **Warning:** Connection-specific header fields such as
+> [!WARNING]
+> Connection-specific header fields such as
 > {{HTTPHeader("Connection")}} and {{HTTPHeader("Keep-Alive")}} are prohibited
 > in [HTTP/2](https://httpwg.org/specs/rfc9113.html#ConnectionSpecific) and
 > [HTTP/3](https://httpwg.org/specs/rfc9114.html#header-formatting). Chrome and

@@ -127,7 +127,7 @@ Values that are not recognized as hashes by the browser are ignored, so the foll
 
 ### Unsafe inline script
 
-> **Note:**
+> [!NOTE]
 > Disallowing inline styles and inline scripts is one of the biggest security wins CSP provides.
 > If you absolutely have to use them, there are a few mechanisms that will allow them.
 > Hashes apply to inline scripts and styles, but not event handlers.

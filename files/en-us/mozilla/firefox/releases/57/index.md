@@ -12,7 +12,8 @@ This article provides information about the changes in Firefox 57 (a.k.a. Firefo
 
 Firefox 57 has been given the release name **Quantum**, after the [Firefox Quantum](https://wiki.mozilla.org/Quantum) engineering project that has aimed to rebuild Firefox from the ground up, bringing with it major performance, stability, and visual improvements. This is the first version of Firefox to ship some of these improvements, so we wanted to mark the occasion.
 
-> **Note:** To read more about the Quantum features in this release, see [Firefox Quantum Developer Edition: the fastest Firefox ever with Photon UI and better tooling](https://hacks.mozilla.org/2017/09/firefox-quantum-developer-edition-fastest-firefox-ever/) by Dan Callahan.
+> [!NOTE]
+> To read more about the Quantum features in this release, see [Firefox Quantum Developer Edition: the fastest Firefox ever with Photon UI and better tooling](https://hacks.mozilla.org/2017/09/firefox-quantum-developer-edition-fastest-firefox-ever/) by Dan Callahan.
 
 [Firefox's new parallel CSS engine](https://hacks.mozilla.org/2017/08/inside-a-super-fast-css-engine-quantum-css-aka-stylo/) — also known as **Quantum CSS** or **Stylo** — is enabled by default in Firefox 57 for desktop, with Mobile versions of Firefox to follow later on. Developers shouldn't notice anything significantly different, aside from a whole host of performance improvements. There are however a number of minor functional differences in Stylo, implemented to fix non-standard Gecko behavior that should be eliminated. We will report on such differences on reference pages and in the release notes as appropriate (see [Quantum CSS notes](#quantum_css_notes)).
 
@@ -125,7 +126,8 @@ _No changes._
 
 ## Changes for add-on and Mozilla developers
 
-> **Note:** Starting in Firefox 57, all support for XPCOM-based add-ons has been removed. All extensions must be converted into the new [browser extensions](/en-US/docs/Mozilla/Add-ons/WebExtensions) (also known as WebExtensions) or they will not work.
+> [!NOTE]
+> Starting in Firefox 57, all support for XPCOM-based add-ons has been removed. All extensions must be converted into the new [browser extensions](/en-US/docs/Mozilla/Add-ons/WebExtensions) (also known as WebExtensions) or they will not work.
 
 ### WebExtensions
 

@@ -19,19 +19,19 @@ You are also responsible for periodically purging cache entries. Each browser ha
 
 ## Instance methods
 
-- {{domxref("Cache.match", "Cache.match(request, options)")}}
+- {{domxref("Cache.match()")}}
   - : Returns a {{jsxref("Promise")}} that resolves to the response associated with the first matching request in the `Cache` object.
-- {{domxref("Cache.matchAll", "Cache.matchAll(request, options)")}}
+- {{domxref("Cache.matchAll()")}}
   - : Returns a {{jsxref("Promise")}} that resolves to an array of all matching responses in the `Cache` object.
-- {{domxref("Cache.add", "Cache.add(request)")}}
+- {{domxref("Cache.add()")}}
   - : Takes a URL, retrieves it and adds the resulting response object to the given cache. This is functionally equivalent to calling `fetch()`, then using `put()` to add the results to the cache.
-- {{domxref("Cache.addAll", "Cache.addAll(requests)")}}
+- {{domxref("Cache.addAll()")}}
   - : Takes an array of URLs, retrieves them, and adds the resulting response objects to the given cache.
-- {{domxref("Cache.put", "Cache.put(request, response)")}}
+- {{domxref("Cache.put()")}}
   - : Takes both a request and its response and adds it to the given cache.
-- {{domxref("Cache.delete", "Cache.delete(request, options)")}}
+- {{domxref("Cache.delete()")}}
   - : Finds the `Cache` entry whose key is the request, returning a {{jsxref("Promise")}} that resolves to `true` if a matching `Cache` entry is found and deleted. If no `Cache` entry is found, the promise resolves to `false`.
-- {{domxref("Cache.keys", "Cache.keys(request, options)")}}
+- {{domxref("Cache.keys()")}}
   - : Returns a {{jsxref("Promise")}} that resolves to an array of `Cache` keys.
 
 ## Examples
@@ -40,7 +40,7 @@ This code snippet is from the [service worker selective caching sample](https://
 
 The code then uses {{domxref("Cache.match()")}} to see if there's already a matching font in the cache, and if so, returns it. If there isn't a matching font, the code fetches the font from the network and uses {{domxref("Cache.put()")}} to cache the fetched resource.
 
-The code handles exceptions thrown from the {{domxref("fetch()")}} operation. Note that an HTTP error response (e.g., 404) will not trigger an exception. It will return a normal response object that has the appropriate error code.
+The code handles exceptions thrown from the {{domxref("Window/fetch", "fetch()")}} operation. Note that an HTTP error response (e.g., 404) will not trigger an exception. It will return a normal response object that has the appropriate error code.
 
 The code snippet also shows a best practice for versioning caches used by the service worker. Though there's only one cache in this example, the same approach can be used for multiple caches. It maps a shorthand identifier for a cache to a specific, versioned cache name. The code also deletes all caches that aren't named in `CURRENT_CACHES`.
 
@@ -165,7 +165,7 @@ self.addEventListener("fetch", (event) => {
 
 ### Cookies and Cache objects
 
-The [Fetch API](/en-US/docs/Web/API/Fetch_API) requires {{httpheader("Set-Cookie")}} headers to be stripped before returning a {{domxref("Response")}} object from {{domxref("fetch()")}}. So a `Response` stored in a `Cache` won't contain `Set-Cookie` headers, and therefore won't cause any cookies to be stored.
+The [Fetch API](/en-US/docs/Web/API/Fetch_API) requires {{httpheader("Set-Cookie")}} headers to be stripped before returning a {{domxref("Response")}} object from {{domxref("Window/fetch", "fetch()")}}. So a `Response` stored in a `Cache` won't contain `Set-Cookie` headers, and therefore won't cause any cookies to be stored.
 
 ## Specifications
 

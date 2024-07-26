@@ -373,7 +373,8 @@ Beneath our previous addition, add the following — here we are using the [`Obj
 const FILTER_NAMES = Object.keys(FILTER_MAP);
 ```
 
-> **Note:** We are defining these constants outside our `App()` function because if they were defined inside it, they would be recalculated every time the `<App />` component re-renders, and we don't want that. This information will never change no matter what our application does.
+> [!NOTE]
+> We are defining these constants outside our `App()` function because if they were defined inside it, they would be recalculated every time the `<App />` component re-renders, and we don't want that. This information will never change no matter what our application does.
 
 ### Rendering the filters
 
