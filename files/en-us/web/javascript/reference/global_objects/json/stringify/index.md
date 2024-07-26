@@ -270,8 +270,8 @@ Using a tab character mimics standard pretty-print appearance:
 console.log(JSON.stringify({ uno: 1, dos: 2 }, null, "\t"));
 /*
 {
-	"uno": 1,
-	"dos": 2
+  "uno": 1,
+  "dos": 2
 }
 */
 ```
