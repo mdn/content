@@ -82,7 +82,7 @@ We have an SVG with three {{SVGElement("rect")}} squares and three almost identi
 
 #### CSS
 
-We include a {{cssxref("stroke")}} and {{cssxref("stroke-width")}} outlining the rectangle. We define the colors of the stops of the first and last stops in each gradient using the `stop-color` property using different CSS {{cssxref("color_value", "&lt;color>")}} syntaxes.
+We include a {{cssxref("stroke")}} and {{cssxref("stroke-width")}} outlining the rectangle. We define the colors of the first and last stops in each gradient, overriding their `stop-color` attribute values, using the `stop-color` property using various CSS {{cssxref("color_value", "&lt;color>")}} syntaxes.
 
 ```css hidden
 svg {
