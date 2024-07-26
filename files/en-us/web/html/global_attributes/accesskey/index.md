@@ -11,7 +11,8 @@ The **`accesskey`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) p
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-accesskey.html","tabbed-shorter")}}
 
-> **Note:** In the WHATWG spec, it says you can specify multiple space-separated characters, and the browser will use the first one it supports. However, this does not work in most browsers. IE/Edge uses the first one it supports without problems, provided there are no conflicts with other commands.
+> [!NOTE]
+> In the WHATWG spec, it says you can specify multiple space-separated characters, and the browser will use the first one it supports. However, this does not work in most browsers. IE/Edge uses the first one it supports without problems, provided there are no conflicts with other commands.
 
 The way to activate the accesskey depends on the browser and its platform:
 

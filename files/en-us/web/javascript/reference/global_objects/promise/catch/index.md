@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Promise.catch
 
 {{JSRef}}
 
-The **`catch()`** method of {{jsxref("Promise")}} instances schedules a function to be called when the promise is rejected. It immediately returns another {{jsxref("Promise")}} object, allowing you to [chain](/en-US/docs/Web/JavaScript/Guide/Using_promises#chaining) calls to other promise methods. It is a shortcut for {{jsxref("Promise/then", "Promise.prototype.then(undefined, onRejected)")}}.
+The **`catch()`** method of {{jsxref("Promise")}} instances schedules a function to be called when the promise is rejected. It immediately returns another {{jsxref("Promise")}} object, allowing you to [chain](/en-US/docs/Web/JavaScript/Guide/Using_promises#chaining) calls to other promise methods. It is a shortcut for {{jsxref("Promise/then", "then(undefined, onRejected)")}}.
 
 {{EmbedInteractiveExample("pages/js/promise-catch.html")}}
 
@@ -64,7 +64,8 @@ This means that passing `undefined` still causes the returned promise to be reje
 
 Because `catch()` just calls `then()`, it supports subclassing.
 
-> **Note:** The examples below are throwing instances of [`Error`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error). As with synchronous [`throw`](/en-US/docs/Web/JavaScript/Reference/Statements/throw) statements, this is considered a good practice; otherwise, the part doing the catching would have to perform checks to see if the argument was a string or an error, and you might lose valuable information such as stack traces.
+> [!NOTE]
+> The examples below are throwing instances of [`Error`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error). As with synchronous [`throw`](/en-US/docs/Web/JavaScript/Reference/Statements/throw) statements, this is considered a good practice; otherwise, the part doing the catching would have to perform checks to see if the argument was a string or an error, and you might lose valuable information such as stack traces.
 
 ## Examples
 

@@ -92,7 +92,8 @@ export default function () { /* … */ }
 export default class { /* … */ }
 ```
 
-> **Note:** Names for export declarations must be distinct from each other. Having exports with duplicate names or using more than one `default` export will result in a {{jsxref("SyntaxError")}} and prevent the module from being evaluated.
+> [!NOTE]
+> Names for export declarations must be distinct from each other. Having exports with duplicate names or using more than one `default` export will result in a {{jsxref("SyntaxError")}} and prevent the module from being evaluated.
 
 The `export default` syntax allows any expression.
 

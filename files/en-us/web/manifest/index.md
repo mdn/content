@@ -21,7 +21,8 @@ All members are optional in the specification, but some applications require som
 
 {{ListSubpages("/en-US/docs/Web/Manifest")}}
 
-> **Note:** The `dir`, `lang`, `iarc_rating_id`, and `note_taking` members are not implemented.
+> [!NOTE]
+> The `dir`, `lang`, `iarc_rating_id`, and `note_taking` members are not implemented.
 
 ## Example manifest
 

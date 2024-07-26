@@ -21,7 +21,8 @@ We'll discuss each of these features in this guide. First, though, we'll discuss
 
 For a web app to be promoted for installation by a supporting browser, it needs to meet some technical requirements. We can consider these the minimum requirements for a web app to be a PWA.
 
-> **Note:** While not a requirement for a PWA to be installable, many PWAs use [service workers](/en-US/docs/Web/API/Service_Worker_API) to provide an offline experience.
+> [!NOTE]
+> While not a requirement for a PWA to be installable, many PWAs use [service workers](/en-US/docs/Web/API/Service_Worker_API) to provide an offline experience.
 > See the [CycleTracker: Service workers](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers) tutorial for more information.
 
 ### The web app manifest

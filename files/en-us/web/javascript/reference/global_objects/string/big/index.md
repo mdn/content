@@ -11,7 +11,8 @@ browser-compat: javascript.builtins.String.big
 
 The **`big()`** method of {{jsxref("String")}} values creates a string that embeds this string in a {{HTMLElement("big")}} element (`<big>str</big>`), which causes this string to be displayed in a big font.
 
-> **Note:** All [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods) are deprecated and only standardized for compatibility purposes. For the case of `big()`, the `<big>` element itself has been removed from the HTML specification and shouldn't be used anymore. Web developers should use [CSS](/en-US/docs/Web/CSS) properties instead.
+> [!NOTE]
+> All [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods) are deprecated and only standardized for compatibility purposes. For the case of `big()`, the `<big>` element itself has been removed from the HTML specification and shouldn't be used anymore. Web developers should use [CSS](/en-US/docs/Web/CSS) properties instead.
 
 ## Syntax
 
@@ -45,7 +46,8 @@ This will create the following HTML:
 <big>Hello, world</big>
 ```
 
-> **Warning:** This markup is invalid, because `big` is no longer a valid element.
+> [!WARNING]
+> This markup is invalid, because `big` is no longer a valid element.
 
 Instead of using `big()` and creating HTML text directly, you should use CSS to manipulate fonts. For example, you can manipulate {{cssxref("font-size")}} through the {{domxref("HTMLElement/style", "element.style")}} attribute:
 

@@ -15,7 +15,8 @@ When the inline-progression-direction is vertical and the `glyph-orientation-ver
 
 This attribute is applied only to text written in a vertical {{SVGAttr("writing-mode")}}.
 
-> **Note:** As a presentation attribute, `glyph-orientation-vertical` can be used as a CSS property.
+> [!NOTE]
+> As a presentation attribute, `glyph-orientation-vertical` can be used as a CSS property.
 
 You can use this attribute with the following SVG elements:
 

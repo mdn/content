@@ -66,7 +66,8 @@ All static properties of the `Symbol` constructor are Symbols themselves, whose 
 
 Prior to well-known Symbols, JavaScript used normal properties to implement certain built-in operations. For example, the [`JSON.stringify`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) function will attempt to call each object's `toJSON()` method, and the [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/String) function will call the object's `toString()` and `valueOf()` methods. However, as more operations are added to the language, designating each operation a "magic property" can break backward compatibility and make the language's behavior harder to reason with. Well-known Symbols allow the customizations to be "invisible" from normal code, which typically only read string properties.
 
-> **Note:** The spec used to use the notation `@@<symbol-name>` to denote well-known symbols. For example, {{jsxref("Symbol.hasInstance")}} was written as `@@hasInstance`, and the `Array.prototype[Symbol.iterator]()` method would be called `Array.prototype[@@iterator]()`. This notation is no longer used in the spec, but you may still see it in older documentation or discussions.
+> [!NOTE]
+> The spec used to use the notation `@@<symbol-name>` to denote well-known symbols. For example, {{jsxref("Symbol.hasInstance")}} was written as `@@hasInstance`, and the `Array.prototype[Symbol.iterator]()` method would be called `Array.prototype[@@iterator]()`. This notation is no longer used in the spec, but you may still see it in older documentation or discussions.
 
 Well-known symbols do not have the concept of garbage collectability, because they come in a fixed set and are unique throughout the lifetime of the program, similar to intrinsic objects such as `Array.prototype`, so they are also allowed in {{jsxref("WeakMap")}}, {{jsxref("WeakSet")}}, {{jsxref("WeakRef")}}, and {{jsxref("FinalizationRegistry")}} objects.
 

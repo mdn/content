@@ -27,7 +27,8 @@ However, it's important to note that if a non-secure context causes a new window
 
 Locally-delivered resources such as those with `http://127.0.0.1` URLs, `http://localhost` and `http://*.localhost` URLs (e.g. `http://dev.whatever.localhost/`), and `file://` URLs are also considered to have been delivered securely.
 
-> **Note:** Firefox 84 and later support `http://localhost` and `http://*.localhost` URLs as trustworthy origins (earlier versions did not, because `localhost` was not guaranteed to map to a local/loopback address).
+> [!NOTE]
+> Firefox 84 and later support `http://localhost` and `http://*.localhost` URLs as trustworthy origins (earlier versions did not, because `localhost` was not guaranteed to map to a local/loopback address).
 
 Resources that are not local, to be considered secure, must meet the following criteria:
 

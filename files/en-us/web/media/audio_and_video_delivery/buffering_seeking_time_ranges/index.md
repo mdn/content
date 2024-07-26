@@ -102,7 +102,8 @@ This works better with longer pieces of audio or video, but press play and click
 
 ![A simple audio player with play button, seek bar and volume control, with a series of red rectangles beneath it representing time ranges.](bufferedtimeranges.png)
 
-> **Note:** You can see the [timerange code running live on JS Bin](https://jsbin.com/memazaro/1/edit).
+> [!NOTE]
+> You can see the [timerange code running live on JS Bin](https://jsbin.com/memazaro/1/edit).
 
 ## Seekable
 
@@ -213,7 +214,8 @@ This should give you results similar to the following, where the light grey bar 
 
 ![A simple audio player with play button, seek bar, and volume control, and a progress bar below the controls. The progress bar has a green portion to show played video and a light grey portion to show how much has been buffered.](bufferedprogress.png)
 
-> **Note:** You can see the [buffering code running live on JS Bin](https://jsbin.com/badimipi/1/edit).
+> [!NOTE]
+> You can see the [buffering code running live on JS Bin](https://jsbin.com/badimipi/1/edit).
 
 ## A quick word about Played
 

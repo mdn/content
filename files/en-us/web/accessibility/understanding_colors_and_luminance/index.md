@@ -125,7 +125,8 @@ As noted earlier, the [CSS color module](/en-US/docs/Web/CSS/CSS_colors) include
 
 Where accessibility is concerned, however, standards and guidelines are currently written predominantly using the sRGB color space, especially as it applies to color contrast ratios.
 
-> **Note:** Almost all systems used today to view Web content assume sRGB encoding. Unless it is known that another color space will be used to process and display the content, authors should evaluate using sRGB colorspace. If using other color spaces, apply the principles of [minimum contrast ratios](https://webaim.org/articles/contrast/#sc143).
+> [!NOTE]
+> Almost all systems used today to view Web content assume sRGB encoding. Unless it is known that another color space will be used to process and display the content, authors should evaluate using sRGB colorspace. If using other color spaces, apply the principles of [minimum contrast ratios](https://webaim.org/articles/contrast/#sc143).
 
 ### Querying color values
 

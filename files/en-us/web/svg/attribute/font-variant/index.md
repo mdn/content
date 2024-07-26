@@ -9,7 +9,8 @@ browser-compat: svg.global_attributes.font-variant
 
 The **`font-variant`** attribute indicates whether the text is to be rendered using variations of the font's {{Glossary("glyph", "glyphs")}}.
 
-> **Note:** As a presentation attribute, `font-variant` can be used as a CSS property. See the CSS {{cssxref("font-variant")}} property for more information.
+> [!NOTE]
+> As a presentation attribute, `font-variant` can be used as a CSS property. See the CSS {{cssxref("font-variant")}} property for more information.
 
 You can use this attribute with the following SVG elements:
 

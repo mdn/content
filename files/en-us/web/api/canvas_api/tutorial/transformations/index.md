@@ -248,17 +248,17 @@ Finally, the following transformation methods allow modifications directly to th
 
 The parameters of this function are:
 
-- `a (m11)`
+- `a` (`m11`)
   - : Horizontal scaling.
-- `b (m12)`
+- `b` (`m12`)
   - : Horizontal skewing.
-- `c (m21)`
+- `c` (`m21`)
   - : Vertical skewing.
-- `d (m22)`
+- `d` (`m22`)
   - : Vertical scaling.
-- `e (dx)`
+- `e` (`dx`)
   - : Horizontal moving.
-- `f (dy)`
+- `f` (`dy`)
   - : Vertical moving.
 - {{domxref("CanvasRenderingContext2D.setTransform", "setTransform(a, b, c, d, e, f)")}}
   - : Resets the current transform to the identity matrix, and then invokes the `transform()` method with the same arguments. This basically undoes the current transformation, then sets the specified transform, all in one step.

@@ -23,7 +23,7 @@ The Speculation Rules API provides an alternative to the widely-available [`<lin
 
 ## Concepts and usage
 
-Speculation rules can be specified inside inline [`<script type="speculationrules"> ... </script>`](/en-US/docs/Web/HTML/Element/script/type/speculationrules) elements and external text files referenced by the {{httpheader("Speculation-Rules")}} response header. The rules are specified as a JSON structure.
+Speculation rules can be specified inside inline [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Element/script/type/speculationrules) elements and external text files referenced by the {{httpheader("Speculation-Rules")}} response header. The rules are specified as a JSON structure.
 
 A script example:
 
@@ -418,7 +418,7 @@ The Speculation Rules API does not define any interfaces of its own.
 
 ## HTML features
 
-- [`<script type="speculationrules"> ... </script>`](/en-US/docs/Web/HTML/Element/script/type/speculationrules) {{experimental_inline}}
+- [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Element/script/type/speculationrules) {{experimental_inline}}
   - : Used to define a set of prefetch and/or prerender speculation rules inside the current document, which are added to the document's speculation rule set.
 
 ## Examples

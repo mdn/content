@@ -9,7 +9,8 @@ browser-compat: svg.global_attributes.alignment-baseline
 
 The **`alignment-baseline`** attribute specifies how an object is aligned with respect to its parent. This property specifies which baseline of this element is to be aligned with the corresponding baseline of the parent. For example, this allows alphabetic baselines in Roman text to stay aligned across font size changes. It defaults to the baseline with the same name as the computed value of the `alignment-baseline` property.
 
-> **Note:** As a presentation attribute `alignment-baseline` can be used as a CSS property.
+> [!NOTE]
+> As a presentation attribute `alignment-baseline` can be used as a CSS property.
 
 You can use this attribute with the following SVG elements:
 

@@ -17,7 +17,8 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("ellipse")}}
 - {{SVGElement("radialGradient")}}
 
-> **Note:** As a _geometry property_, {{cssxref("cy")}} can also be used as CSS property for `<circle>` and `<ellipse>`.
+> [!NOTE]
+> As a _geometry property_, {{cssxref("cy")}} can also be used as CSS property for `<circle>` and `<ellipse>`.
 
 ## Example
 

@@ -45,7 +45,8 @@ _Image source: [Overloaded plug socket](https://www.flickr.com/photos/easy-pics/
 
 In the same way, if you want to say, program some 3D graphics, it is a lot easier to do it using an API written in a higher-level language such as JavaScript or Python, rather than try to directly write low-level code (say C or C++) that directly controls the computer's GPU or other graphics functions.
 
-> **Note:** See also the [API glossary entry](/en-US/docs/Glossary/API) for further description.
+> [!NOTE]
+> See also the [API glossary entry](/en-US/docs/Glossary/API) for further description.
 
 ### APIs in client-side JavaScript
 
@@ -103,7 +104,8 @@ Different JavaScript APIs work in slightly different ways, but generally, they h
 
 Your code interacts with APIs using one or more [JavaScript objects](/en-US/docs/Learn/JavaScript/Objects), which serve as containers for the data the API uses (contained in object properties), and the functionality the API makes available (contained in object methods).
 
-> **Note:** If you are not already familiar with how objects work, you should go back and work through our [JavaScript objects](/en-US/docs/Learn/JavaScript/Objects) module before continuing.
+> [!NOTE]
+> If you are not already familiar with how objects work, you should go back and work through our [JavaScript objects](/en-US/docs/Learn/JavaScript/Objects) module before continuing.
 
 Let's return to the example of the Web Audio API — this is a fairly complex API, which consists of a number of objects. The most obvious ones are:
 
@@ -171,7 +173,8 @@ audioElement.addEventListener("ended", () => {
 });
 ```
 
-> **Note:** Some of you may notice that the `play()` and `pause()` methods being used to play and pause the track are not part of the Web Audio API; they are part of the {{domxref("HTMLMediaElement")}} API, which is different but closely-related.
+> [!NOTE]
+> Some of you may notice that the `play()` and `pause()` methods being used to play and pause the track are not part of the Web Audio API; they are part of the {{domxref("HTMLMediaElement")}} API, which is different but closely-related.
 
 Next, we create a {{domxref("GainNode")}} object using the {{domxref("BaseAudioContext/createGain", "AudioContext.createGain()")}} method, which can be used to adjust the volume of audio fed through it, and create another event handler that changes the value of the audio graph's gain (volume) whenever the slider value is changed:
 
@@ -223,7 +226,8 @@ Ball.prototype.draw = function () {
 };
 ```
 
-> **Note:** You can see this code in action in our [bouncing balls demo](https://github.com/mdn/learning-area/blob/main/javascript/apis/introduction/bouncing-balls.html) (see it [running live](https://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html) also).
+> [!NOTE]
+> You can see this code in action in our [bouncing balls demo](https://github.com/mdn/learning-area/blob/main/javascript/apis/introduction/bouncing-balls.html) (see it [running live](https://mdn.github.io/learning-area/javascript/apis/introduction/bouncing-balls.html) also).
 
 ### They often use events to handle changes in state
 
@@ -271,7 +275,8 @@ In addition, some WebAPIs request permission to be enabled from the user once ca
 
 The Web Audio and {{domxref("HTMLMediaElement")}} APIs are subject to a security mechanism called [autoplay policy](/en-US/docs/Web/API/Web_Audio_API/Best_practices#autoplay_policy) — this basically means that you can't automatically play audio when a page loads — you've got to allow your users to initiate audio play through a control like a button. This is done because autoplaying audio is usually really annoying and we really shouldn't be subjecting our users to it.
 
-> **Note:** Depending on how strict the browser is, such security mechanisms might even stop the example from working locally, i.e. if you load the local example file in your browser instead of running it from a web server. At the time of writing, our Web Audio API example wouldn't work locally on Google Chrome — we had to upload it to GitHub before it would work.
+> [!NOTE]
+> Depending on how strict the browser is, such security mechanisms might even stop the example from working locally, i.e. if you load the local example file in your browser instead of running it from a web server. At the time of writing, our Web Audio API example wouldn't work locally on Google Chrome — we had to upload it to GitHub before it would work.
 
 ## Summary
 

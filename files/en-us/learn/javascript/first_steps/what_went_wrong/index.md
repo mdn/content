@@ -43,7 +43,8 @@ To get started, let's return to our number guessing game — except this time we
 1. To get started, open the local copy inside your favorite text editor, and your browser.
 2. Try playing the game — you'll notice that when you press the "Submit guess" button, it doesn't work!
 
-> **Note:** You might well have your own version of the game example that doesn't work, which you might want to fix! We'd still like you to work through the article with our version, so that you can learn the techniques we are teaching here. Then you can go back and try to fix your example.
+> [!NOTE]
+> You might well have your own version of the game example that doesn't work, which you might want to fix! We'd still like you to work through the article with our version, so that you can learn the techniques we are teaching here. Then you can go back and try to fix your example.
 
 At this point, let's consult the developer console to see if it reports any syntax errors, then try to fix them. You'll learn how below.
 
@@ -75,7 +76,8 @@ Earlier on in the course we got you to type some simple JavaScript commands into
 4. The error message says "guessSubmit.addeventListener is not a function", which means that the function we're calling is not recognized by the JavaScript interpreter. Often, this error message actually means that we've spelled something wrong. If you are not sure of the correct spelling of a piece of syntax, it is often good to look up the feature on MDN. The best way to do this currently is to search for "mdn _name-of-feature_" with your favorite search engine. Here's a shortcut to save you some time in this instance: [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener).
 5. So, looking at this page, the error appears to be that we've spelled the function name wrong! Remember that JavaScript is case-sensitive, so any slight difference in spelling or casing will cause an error. Changing `addeventListener` to `addEventListener` should fix this. Do this now.
 
-> **Note:** See our [TypeError: "x" is not a function](/en-US/docs/Web/JavaScript/Reference/Errors/Not_a_function) reference page for more details about this error.
+> [!NOTE]
+> See our [TypeError: "x" is not a function](/en-US/docs/Web/JavaScript/Reference/Errors/Not_a_function) reference page for more details about this error.
 
 ### Syntax errors round two
 
@@ -128,7 +130,8 @@ Earlier on in the course we got you to type some simple JavaScript commands into
 9. So we need a class selector here, which begins with a dot (`.`), but the selector being passed into the `querySelector()` method in line 49 has no dot. This could be the problem! Try changing `lowOrHi` to `.lowOrHi` in line 49.
 10. Try saving and refreshing again, and your `console.log()` statement should return the `<p>` element we want. Phew! Another error fixed! You can delete your `console.log()` line now, or keep it to reference later on — your choice.
 
-> **Note:** See our [TypeError: "x" is (not) "y"](/en-US/docs/Web/JavaScript/Reference/Errors/Unexpected_type) reference page for more details about this error.
+> [!NOTE]
+> See our [TypeError: "x" is (not) "y"](/en-US/docs/Web/JavaScript/Reference/Errors/Unexpected_type) reference page for more details about this error.
 
 ### Syntax errors round three
 
@@ -214,7 +217,8 @@ the test would always return `true`, causing the program to report that the game
 
 This one is pretty simple — it generally means that you've missed the closing parenthesis at the end of a function/method call.
 
-> **Note:** See our [SyntaxError: missing ) after argument list](/en-US/docs/Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list) reference page for more details about this error.
+> [!NOTE]
+> See our [SyntaxError: missing ) after argument list](/en-US/docs/Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list) reference page for more details about this error.
 
 ### SyntaxError: missing : after property id
 
@@ -242,7 +246,8 @@ These errors generally mean that you've left off a string value's opening or clo
 
 For all of these errors, think about how we tackled the examples we looked at in the walkthrough. When an error arises, look at the line number you are given, go to that line and see if you can spot what's wrong. Bear in mind that the error is not necessarily going to be on that line, and also that the error might not be caused by the exact same problem we cited above!
 
-> **Note:** See our [SyntaxError: Unexpected token](/en-US/docs/Web/JavaScript/Reference/Errors/Unexpected_token) and [SyntaxError: string literal contains an unescaped line break](/en-US/docs/Web/JavaScript/Reference/Errors/String_literal_EOL) reference pages for more details about these errors.
+> [!NOTE]
+> See our [SyntaxError: Unexpected token](/en-US/docs/Web/JavaScript/Reference/Errors/Unexpected_token) and [SyntaxError: string literal contains an unescaped line break](/en-US/docs/Web/JavaScript/Reference/Errors/String_literal_EOL) reference pages for more details about these errors.
 
 ## Summary
 

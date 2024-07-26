@@ -286,9 +286,11 @@ Next, we center the image to make it look better. We could use the `margin: 0 au
 
 The {{htmlelement("body")}} is a **block** element, meaning it takes up space on the page. The margin applied to a block element will be respected by other elements on the page. In contrast, images are **inline** elements, for the auto margin trick to work on this image, we must give it block-level behavior using `display: block;`.
 
-> **Note:** The instructions above assume that you're using an image smaller than the width set on the body. (600 pixels) If your image is larger, it will overflow the body, spilling into the rest of the page. To fix this, you can either: 1) reduce the image width using a [graphics editor](https://en.wikipedia.org/wiki/Raster_graphics_editor), or 2) use CSS to size the image by setting the {{cssxref("width")}} property on the `<img>` element with a smaller value.
+> [!NOTE]
+> The instructions above assume that you're using an image smaller than the width set on the body. (600 pixels) If your image is larger, it will overflow the body, spilling into the rest of the page. To fix this, you can either: 1) reduce the image width using a [graphics editor](https://en.wikipedia.org/wiki/Raster_graphics_editor), or 2) use CSS to size the image by setting the {{cssxref("width")}} property on the `<img>` element with a smaller value.
 
-> **Note:** Don't be too concerned if you don't completely understand `display: block;` or the differences between a block element and an inline element. It will make more sense as you continue your study of CSS. You can find more information about different display values on MDN's [display reference page](/en-US/docs/Web/CSS/display).
+> [!NOTE]
+> Don't be too concerned if you don't completely understand `display: block;` or the differences between a block element and an inline element. It will make more sense as you continue your study of CSS. You can find more information about different display values on MDN's [display reference page](/en-US/docs/Web/CSS/display).
 
 ## Conclusion
 

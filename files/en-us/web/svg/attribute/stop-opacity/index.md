@@ -11,7 +11,8 @@ The **`stop-opacity`** attribute defines the opacity of a given color gradient s
 
 The opacity value used for the gradient calculation is the product of the value of `stop-opacity` and the opacity of the value of the {{SVGAttr("stop-color")}} attribute. For `stop-color` values that don't include explicit opacity information, the opacity is treated as `1`.
 
-> **Note:** As a presentation attribute, `stop-opacity` can be used as a CSS property.
+> [!NOTE]
+> As a presentation attribute, `stop-opacity` can be used as a CSS property.
 
 You can use this attribute with the following SVG elements:
 

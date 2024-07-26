@@ -39,7 +39,8 @@ window.addEventListener("keyup", handleKeyUp, true);
 
 `handleKeyDown` and `handleKeyUp` are functions defining the control logic to be executed when the `keydown` and `keyup` events are fired.
 
-> **Note:** Have a look at the [Events reference](/en-US/docs/Web/Events) and {{domxref("KeyboardEvent")}} guide to find out more about keyboard events.
+> [!NOTE]
+> Have a look at the [Events reference](/en-US/docs/Web/Events) and {{domxref("KeyboardEvent")}} guide to find out more about keyboard events.
 
 ### Mouse
 
@@ -62,7 +63,8 @@ element.addEventListener("touchmove", handleMove, false);
 
 where `element` is the DOM element you want to register the touch events on.
 
-> **Note:** For further information about what you can do with touch events, please read our [touch events guide](/en-US/docs/Web/API/Touch_events).
+> [!NOTE]
+> For further information about what you can do with touch events, please read our [touch events guide](/en-US/docs/Web/API/Touch_events).
 
 ### Pointer Events
 
@@ -83,7 +85,8 @@ When screen orientation matters for your form, you can read the screen orientati
 - Locking the screen orientation is made possible by invoking the {{domxref("ScreenOrientation.lock()")}} method.
 - The {{domxref("ScreenOrientation.unlock()")}} method removes all the previous screen locks that have been set.
 
-> **Note:** More information about the Screen Orientation API can be found in [Managing screen orientation](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation).
+> [!NOTE]
+> More information about the Screen Orientation API can be found in [Managing screen orientation](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation).
 
 ### Fullscreen
 
@@ -96,7 +99,8 @@ if (elem.requestFullscreen) {
 }
 ```
 
-> **Note:** To find out more about adding fullscreen functionality to your application, read our documentation about [using fullscreen mode](/en-US/docs/Web/API/Fullscreen_API).
+> [!NOTE]
+> To find out more about adding fullscreen functionality to your application, read our documentation about [using fullscreen mode](/en-US/docs/Web/API/Fullscreen_API).
 
 ### Drag & Drop
 
@@ -119,7 +123,8 @@ in which we:
 - Set the [`draggable`](/en-US/docs/Web/HTML/Global_attributes#draggable) attribute to `true` on the element that you wish to make draggable.
 - Add a listener for the [`dragstart`](/en-US/docs/Web/API/HTMLElement/dragstart_event) event and set the drag data within this listener.
 
-> **Note:** You can find more information in the [MDN Drag & Drop documentation](/en-US/docs/Web/API/HTML_Drag_and_Drop_API).
+> [!NOTE]
+> You can find more information in the [MDN Drag & Drop documentation](/en-US/docs/Web/API/HTML_Drag_and_Drop_API).
 
 ### contentEditable
 
@@ -149,7 +154,8 @@ To provide a good user experience, any custom form control you create must be ac
 
 {{EmbedLiveSample("contentEditable")}}
 
-> **Note:** Examples and other resources can be found in the [Content Editable guide](/en-US/docs/Web/HTML/Global_attributes/contenteditable).
+> [!NOTE]
+> Examples and other resources can be found in the [Content Editable guide](/en-US/docs/Web/HTML/Global_attributes/contenteditable).
 
 ## Tutorials
 

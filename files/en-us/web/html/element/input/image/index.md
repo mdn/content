@@ -25,7 +25,8 @@ The `alt` attribute provides an alternate string to use as the button's label if
 
 For example, if you have a graphical button that shows an image with an icon and/or image text "Login Now", you should also set the `alt` attribute to something like `Login Now`.
 
-> **Note:** While the `alt` attribute is technically optional, you should always include one to maximize the usability of your content.
+> [!NOTE]
+> While the `alt` attribute is technically optional, you should always include one to maximize the usability of your content.
 
 Functionally, the `alt` attribute of the `<input type="image">` element works just like the [`alt`](/en-US/docs/Web/HTML/Element/img#alt) attribute on {{HTMLElement("img")}} elements.
 

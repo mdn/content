@@ -155,4 +155,4 @@ The following find a local Open Sans font or import it, and allow using the font
 - {{cssxref("font-feature-settings", "font-feature-settings")}}
 - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
 - {{cssxref("@font-face/src", "src")}}
-- {{cssxref("@font-face/unicode-range", "unicode-range descriptor")}}
+- {{cssxref("@font-face/unicode-range", "unicode-range")}} descriptor

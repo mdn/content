@@ -10,7 +10,8 @@ This writing style guide describes how content should be written, organized, spe
 
 These guidelines are for ensuring language and style consistency across the website. That said, we are more interested in content rather than its formatting, so don't feel obligated to learn the entire writing style guide before contributing. Do not be upset or surprised, however, if another contributor later edits your work to conform to this guide. The reviewers might also point you to this style guide when you submit a content pull request.
 
-> **Note:** The language aspects of this guide apply primarily to English-language documentation. Other languages may have (and are welcome to create) their own style guides. These should be published as subpages of the respective localization team's page. However, this guide should still be consulted for formatting and organizing content.
+> [!NOTE]
+> The language aspects of this guide apply primarily to English-language documentation. Other languages may have (and are welcome to create) their own style guides. These should be published as subpages of the respective localization team's page. However, this guide should still be consulted for formatting and organizing content.
 
 After listing the general writing guidelines, this guide describes the recommended writing style for MDN Web Docs and then how to format different components on a page, such as lists and titles.
 
@@ -108,7 +109,8 @@ Both versions are gender-specific. To fix this, use gender-neutral pronouns like
 
 - **Correct**: "A confirmation dialog asks the user if they want to allow the web page to make use of their webcam."
 
-> **Note:** MDN Web Docs allows the use of third-person plural, commonly known as "[singular 'they'](https://en.wikipedia.org/wiki/Singular_they).". The gender-neutral pronouns include "they," "them", "their," and "theirs".
+> [!NOTE]
+> MDN Web Docs allows the use of third-person plural, commonly known as "[singular 'they'](https://en.wikipedia.org/wiki/Singular_they).". The gender-neutral pronouns include "they," "them", "their," and "theirs".
 
 Another option is to make the users plural, like so:
 
@@ -155,7 +157,8 @@ The following checklist is good to keep in mind while writing and reviewing cont
   - **Add image information**: Include proper [`alt`](/en-US/docs/Web/HTML/Element/img#alt) text on all images and diagrams. This text, as well as captions on tables and other figures, counts because spiders can't crawl images, and so `alt` text tells search engine crawlers what content the embedded media contains.
     > **Note:** It is not recommended to include too many keywords or keywords not related to the feature in an attempt to manipulate search engine rankings; this type of behavior is easy to spot and tends to be penalized.
     > Likewise, **do not** add repetitive, unhelpful material or blobs of keywords within the actual page, in an attempt to improve the page's size and search ranking. This does more harm than good, both to content readability and to our search results.
-  - **Focus on topic content**: It is far better to write content around the topic of the page than a specific keyword. It is highly likely that there will be many keywords you could include for a given topic; in fact, many SEOs compile a list of 5-100 different keywords (varying between short, medium, and long-tail keywords) to include within their article, depending on the length. Doing so will diversify your wording, leading to less repetition.
+
+- **Focus on topic content**: It is far better to write content around the topic of the page than a specific keyword. It is highly likely that there will be many keywords you could include for a given topic; in fact, many SEOs compile a list of 5-100 different keywords (varying between short, medium, and long-tail keywords) to include within their article, depending on the length. Doing so will diversify your wording, leading to less repetition.
 
 ## Writing style
 
@@ -233,7 +236,8 @@ An abbreviation is a shortened version of a longer word, while an acronym is a n
 
 Use standard English capitalization rules in body text, and capitalize "World Wide Web." It is acceptable to use lower case for "web" (used alone or as a modifier) and "internet".
 
-> **Note:** This guideline is a change from a previous version of this guide, so you may find many instances of "Web" and "Internet" on MDN.
+> [!NOTE]
+> This guideline is a change from a previous version of this guide, so you may find many instances of "Web" and "Internet" on MDN.
 > Feel free to change these as you are making other changes, but editing an article just to change capitalization is not necessary.
 
 Keyboard keys should use sentence-style capitalization, not all-caps capitalization.
@@ -457,7 +461,8 @@ In general, if you're considering adding an external link, you need to ensure th
 - Attempt to use MDN Web Docs to distribute spam
 - Shortlinks that obfuscate the link destination
 
-> **Note:** Before adding an external link, consider cross-referencing content within MDN Web Docs. Internal links are easier to maintain and make the entirety of MDN Web Docs more valuable to readers.
+> [!NOTE]
+> Before adding an external link, consider cross-referencing content within MDN Web Docs. Internal links are easier to maintain and make the entirety of MDN Web Docs more valuable to readers.
 
 - **Good external links**: Good external links take readers to resources that are relevant, durable, and widely trusted. You should prefer adding links to external content that is:
 

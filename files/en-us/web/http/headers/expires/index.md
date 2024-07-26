@@ -13,7 +13,8 @@ response is considered expired.
 Invalid expiration dates with value 0 represent a date in the past and mean that the
 resource is already expired.
 
-> **Note:** If there is a {{HTTPHeader("Cache-Control")}} header
+> [!NOTE]
+> If there is a {{HTTPHeader("Cache-Control")}} header
 > with the `max-age` or `s-maxage` directive in the response,
 > the `Expires` header is ignored.
 

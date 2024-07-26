@@ -28,7 +28,8 @@ All of these prototype objects inherit from `Iterator.prototype`, which provides
 
 ### Iterator helpers
 
-> **Note:** These methods are _iterator_ helpers, not _iterable_ helpers, because the only requirement for an object to be iterable is just the presence of a `[Symbol.iterator]()` method. There is no shared prototype to install these methods on.
+> [!NOTE]
+> These methods are _iterator_ helpers, not _iterable_ helpers, because the only requirement for an object to be iterable is just the presence of a `[Symbol.iterator]()` method. There is no shared prototype to install these methods on.
 
 The `Iterator` class itself provides some helper methods for working with iterators. For example, you may be tempted to do the following:
 
