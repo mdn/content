@@ -33,7 +33,7 @@ Below are descriptions of the allowed values for both absolute and [relative col
 
 #### Absolute value syntax
 
-```text
+```plain
 color(colorspace c1 c2 c3[ / A])
 ```
 
@@ -56,7 +56,7 @@ The parameters are as follows:
 
 #### Relative value syntax
 
-```text
+```plain
 color(from <color> colorspace c1 c2 c3[ / A])
 ```
 

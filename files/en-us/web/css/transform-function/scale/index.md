@@ -21,7 +21,8 @@ When a coordinate value is outside the \[-1, 1] range, the element grows along t
 shrinks. A negative value results in a [point reflection](https://en.wikipedia.org/wiki/Point_reflection)
 in that dimension. The value `1` has no effect.
 
-> **Note:** The `scale()` function only scales in 2D. To scale in 3D, use
+> [!NOTE]
+> The `scale()` function only scales in 2D. To scale in 3D, use
 > [`scale3d()`](/en-US/docs/Web/CSS/transform-function/scale3d) instead.
 
 ## Syntax

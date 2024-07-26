@@ -34,7 +34,7 @@ Below are descriptions of the allowed values for both absolute and [relative col
 
 #### Absolute value syntax
 
-```text
+```plain
 lab(L a b[ / A])
 ```
 
@@ -54,7 +54,7 @@ The parameters are as follows:
 
 #### Relative value syntax
 
-```text
+```plain
 lab(from <color> L a b[ / A])
 ```
 

@@ -43,7 +43,7 @@ Below are descriptions of the allowed values for both absolute and [relative col
 
 ### Absolute value syntax
 
-```text
+```plain
 hwb(H W B[ / A])
 ```
 
@@ -73,7 +73,7 @@ The parameters are as follows:
 
 ### Relative value syntax
 
-```text
+```plain
 hwb(from <color> H W B[ / A])
 ```
 

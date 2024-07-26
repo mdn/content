@@ -252,7 +252,7 @@ Scroll the page and check out the effect of these position-try fallback options 
 
 To use custom position fallback options that aren't available via the above mechanisms, you can create your own with the {{cssxref("@position-try")}} at-rule. The syntax is:
 
-```text
+```plain
 @position-try --try-fallback-name {
   descriptor-list
 }

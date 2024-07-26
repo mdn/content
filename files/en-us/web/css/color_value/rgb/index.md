@@ -37,7 +37,7 @@ Below are descriptions of the allowed values for both absolute and [relative col
 
 #### Absolute value syntax
 
-```text
+```plain
 rgb(R G B[ / A])
 ```
 
@@ -53,7 +53,7 @@ The parameters are as follows:
 
 #### Relative value syntax
 
-```text
+```plain
 rgb(from <color> R G B[ / A])
 ```
 

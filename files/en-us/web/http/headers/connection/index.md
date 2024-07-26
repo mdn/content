@@ -14,14 +14,14 @@ subsequent requests to the same server to be done.
 
 > [!WARNING]
 > Connection-specific header fields such as
-> {{HTTPHeader("Connection")}} and {{HTTPHeader("Keep-Alive")}} are prohibited
+> `Connection` and {{HTTPHeader("Keep-Alive")}} are prohibited
 > in [HTTP/2](https://httpwg.org/specs/rfc9113.html#ConnectionSpecific) and
 > [HTTP/3](https://httpwg.org/specs/rfc9114.html#header-formatting). Chrome and
 > Firefox ignore them in HTTP/2 responses, but Safari conforms to the HTTP/2
 > spec requirements and does not load any response that contains them.
 
 All [hop-by-hop headers](/en-US/docs/Web/HTTP/Compression#hop-by-hop_compression) used by the message - including standard hop-by-hop headers ({{HTTPHeader("Keep-Alive")}},
-{{HTTPHeader("Transfer-Encoding")}}, {{HTTPHeader("TE")}}, {{HTTPHeader("Connection")}},
+{{HTTPHeader("Transfer-Encoding")}}, {{HTTPHeader("TE")}}, `Connection`,
 {{HTTPHeader("Trailer")}}, {{HTTPHeader("Upgrade")}},
 {{HTTPHeader("Proxy-Authorization")}} and {{HTTPHeader("Proxy-Authenticate")}}) - must be listed in the `Connection`
 header, so that the first proxy knows it has to consume them and not forward them

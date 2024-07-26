@@ -24,7 +24,6 @@ In {{Glossary("symmetric-key cryptography")}}, the same key is used for both enc
   - {{Glossary("Cryptography")}}
   - {{Glossary("Decryption")}}
   - {{Glossary("Encryption")}}
-  - {{Glossary("Key")}}
   - {{Glossary("Plaintext")}}
   - {{Glossary("Public-key cryptography")}}
   - {{Glossary("Symmetric-key cryptography")}}
