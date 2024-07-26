@@ -13,7 +13,8 @@ The **`overlay`** [CSS](/en-US/docs/Web/CSS) property specifies whether an eleme
 
 It is important to note that `overlay` can _only_ be set by the browser — author styles cannot change the `overlay` value of any element. You can, however, add `overlay` to the [list of transition properties](/en-US/docs/Web/CSS/transition-property) set on an element. This causes its removal from the top layer to be deferred so it can be animated instead of disappearing immediately.
 
-> **Note:** When transitioning `overlay`, you need to set [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/transition-behavior) on the transition so that it will animate. `overlay` animations differ from normal [discrete animations](/en-US/docs/Web/CSS/CSS_animated_properties#discrete) in that the visible (i.e. `auto`) state will always be shown for the full duration of the transition, regardless of whether it is the start or end state.
+> [!NOTE]
+> When transitioning `overlay`, you need to set [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/transition-behavior) on the transition so that it will animate. `overlay` animations differ from normal [discrete animations](/en-US/docs/Web/CSS/CSS_animated_properties#discrete) in that the visible (i.e. `auto`) state will always be shown for the full duration of the transition, regardless of whether it is the start or end state.
 
 ## Syntax
 
@@ -143,7 +144,8 @@ The code renders as follows:
 
 {{ EmbedLiveSample("Transitioning a popover", "100%", "200") }}
 
-> **Note:** Because popovers change from `display: none` to `display: block` each time they are shown, the popover transitions from its `@starting-style` styles to its `[popover]:popover-open` styles every time the entry transition occurs. When the popover closes, it transitions from its `[popover]:popover-open` state to the default `[popover]` state.
+> [!NOTE]
+> Because popovers change from `display: none` to `display: block` each time they are shown, the popover transitions from its `@starting-style` styles to its `[popover]:popover-open` styles every time the entry transition occurs. When the popover closes, it transitions from its `[popover]:popover-open` state to the default `[popover]` state.
 >
 > It is possible for the style transition on entry and exit to be different in such cases. See our [Demonstration of when starting styles are used](/en-US/docs/Web/CSS/@starting-style#demonstration_of_when_starting_styles_are_used) example for a proof of this.
 

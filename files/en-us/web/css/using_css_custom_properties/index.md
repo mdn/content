@@ -13,7 +13,8 @@ Complex websites have very large amounts of CSS, and this often results in a lot
 Custom properties defined [using two dashes (`--`)](/en-US/docs/Web/CSS/--*) are subject to the [cascade](/en-US/docs/Web/CSS/Cascade) and inherit their value from their parent.
 The {{cssxref("@property")}} at-rule allows more control over the custom property and lets you specify whether it inherits its value from a parent, what the initial value is, and the type constraints that should apply.
 
-> **Note:** Variables do not work inside media queries and container queries.
+> [!NOTE]
+> Variables do not work inside media queries and container queries.
 > You can use the {{cssxref("var", "var()")}} function in any part of a value in any property on an element.
 > You cannot use {{cssxref("var", "var()")}} for property names, selectors, or anything aside from property values, which means you can't use it in a media query or container query.
 
@@ -45,7 +46,8 @@ For this reason, a common practice is to define custom properties on the {{cssxr
 
 This doesn't always have to be the case: you maybe have a good reason for limiting the scope of your custom properties.
 
-> **Note:** Custom property names are case sensitive — `--my-color` will be treated as a separate custom property to `--My-color`.
+> [!NOTE]
+> Custom property names are case sensitive — `--my-color` will be treated as a separate custom property to `--My-color`.
 
 ### Using the `@property` at-rule
 
@@ -335,7 +337,8 @@ Because `inherits: false;` is set in the at-rule, and a value for the `--box-col
 
 You can define fallback values for custom properties using the `var()` function, and the `initial-value` of the `@property` at-rule.
 
-> **Note:** Fallback values aren't used to fix compatibility issues for when CSS custom properties are not supported, as the fallback value won't help in this case.
+> [!NOTE]
+> Fallback values aren't used to fix compatibility issues for when CSS custom properties are not supported, as the fallback value won't help in this case.
 > Fallbacks cover the case where the browser supports CSS custom properties and is able to use a different value if the desired variable isn't defined yet or has an invalid value.
 
 ### Defining fallbacks in the `var()` function
@@ -365,7 +368,8 @@ The function accepts two parameters, assigning everything following the first co
 Including a custom property as a fallback, as seen in the second example above (`var(--my-var, var(--my-background, pink))`), is the correct way to provide more than one fallback with `var()`.
 You should be aware of the performance impact of this method, however, as it takes more time to parse through the nested variables.
 
-> **Note:** The syntax of the fallback, like that of [custom properties](https://www.w3.org/TR/css-variables/#custom-property), allows commas. For example, `var(--foo, red, blue)` defines a fallback of `red, blue` — anything between the first comma and the end of the function is considered a fallback value.
+> [!NOTE]
+> The syntax of the fallback, like that of [custom properties](https://www.w3.org/TR/css-variables/#custom-property), allows commas. For example, `var(--foo, red, blue)` defines a fallback of `red, blue` — anything between the first comma and the end of the function is considered a fallback value.
 
 ### Fallbacks using the `@property` initial value
 
