@@ -40,7 +40,6 @@ This article provides information about the changes in Firefox 129 that affect d
 
 ### APIs
 
-- The {{domxref('Navigator.vibrate()')}} method has not worked some years, and has been removed so that feature detection does not indicate that it is supported. ([Firefox bug 1653318](https://bugzil.la/1653318), [Firefox bug 1900037](https://bugzil.la/1900037)).
 - The deprecated {{domxref("TextEvent", "textInput")}} event is now supported, enabling web apps that use legacy libraries or frameworks that rely on these events.
   The [`beforeinput` event](/en-US/docs/Web/API/Element/beforeinput_event) supersedes `textInput`, and should always be used by new applications.
   ([Firefox bug 1901923](https://bugzil.la/1901923).)
@@ -55,6 +54,8 @@ This article provides information about the changes in Firefox 129 that affect d
 ### WebAssembly
 
 #### Removals
+
+- The {{domxref('Navigator.vibrate()')}} method has been removed ([Firefox bug 1653318](https://bugzil.la/1653318), [Firefox bug 1900037](https://bugzil.la/1900037)).
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
