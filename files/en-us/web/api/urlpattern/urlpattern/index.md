@@ -37,7 +37,8 @@ new URLPattern(input, baseURL, options)
     - `search`
     - `hash`
     - `baseURL`
-      > **Note:** Omitted parts of the object will be treated as wildcards (`*`).
+      > [!NOTE]
+      > Omitted parts of the object will be treated as wildcards (`*`).
 - `baseURL` {{Optional_Inline}}
   - : A string representing the base URL to use in cases where
     `input` is a relative pattern. If not specified, it defaults to `undefined`.
