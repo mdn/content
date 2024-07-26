@@ -138,7 +138,8 @@ This gives us the same result that we achieved earlier with CSS. We associated a
 
 {{ EmbedLiveSample("HTML method", "100%", "120") }}
 
-> **Note:** The [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute currently has less support than the CSS equivalent. See the [`anchor` attribute compatibility table](/en-US/docs/Web/HTML/Global_attributes/anchor#browser_compatibility) for more information.
+> [!NOTE]
+> The [`anchor`](/en-US/docs/Web/HTML/Global_attributes/anchor) attribute currently has less support than the CSS equivalent. See the [`anchor` attribute compatibility table](/en-US/docs/Web/HTML/Global_attributes/anchor#browser_compatibility) for more information.
 
 We've associated the two elements, but they are not yet tethered. To tether them together, the positioned element needs to be positioned relative to its anchor, which is done with CSS.
 
@@ -146,7 +147,8 @@ We've associated the two elements, but they are not yet tethered. To tether them
 
 As we saw above, associating a positioned element with an anchor is not really much use on its own. Our goal is to place the positioned element relative to its associated anchor element. This is done either by setting a [CSS `anchor()` function](#using-inset-properties-with-anchor-function-values) value on an [inset property](/en-US/docs/Glossary/Inset_properties), [specifying an `inset-area`](#setting_an_inset-area), or centering the positioned element with the [`anchor-center` placement value](#centering_on_the_anchor_using_anchor-center).
 
-> **Note:** The anchor element must be a visible DOM node for the association and positioning to work. If it is hidden (for example via [`display: none`](/en-US/docs/Web/CSS/display#none)), the positioned element will be positioned relative to its nearest positioned ancestor. We discuss how to hide an anchor-positioned element when its anchor disappears in [Conditional hiding using `position-visibility`](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding#conditional_hiding_using_position-visibility).
+> [!NOTE]
+> The anchor element must be a visible DOM node for the association and positioning to work. If it is hidden (for example via [`display: none`](/en-US/docs/Web/CSS/display#none)), the positioned element will be positioned relative to its nearest positioned ancestor. We discuss how to hide an anchor-positioned element when its anchor disappears in [Conditional hiding using `position-visibility`](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding#conditional_hiding_using_position-visibility).
 
 ### Using inset properties with `anchor()` function values
 
@@ -326,7 +328,8 @@ If you only specify one value, the effect is different depending on which value 
 - A logical side value (`start` or `end`) acts as if the other value is set to the same value; for example `start` gives the same effect as `start start`.
 - A value of `center` acts as if both values are set to `center` (so, `center center`).
 
-> **Note:** See the [`<inset-area>`](/en-US/docs/Web/CSS/inset-area_value) value reference page for a detailed description of all the available values. Mixing a logical value with a physical value will invalidate the declaration.
+> [!NOTE]
+> See the [`<inset-area>`](/en-US/docs/Web/CSS/inset-area_value) value reference page for a detailed description of all the available values. Mixing a logical value with a physical value will invalidate the declaration.
 
 Let's demonstrate some of these values; this example uses the same HTML and base CSS styes as the previous example, except that we've included a {{htmlelement("select")}} element to enable changing the positioned element's `inset-area` value.
 

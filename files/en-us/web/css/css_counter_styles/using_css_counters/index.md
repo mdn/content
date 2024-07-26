@@ -125,7 +125,8 @@ You can of course specify any initial value that you like.
 
 The counter value is decreased by specifying a negative value for {{cssxref("counter-increment")}}.
 
-> **Note:** You can also use {{cssxref("counter-increment")}} to decrement a non-reversed counter.
+> [!NOTE]
+> You can also use {{cssxref("counter-increment")}} to decrement a non-reversed counter.
 > The main benefit of using a reversed counter is the default initial value, and that the `list-item` counter automatically decrements reversed counters.
 
 ### List item counters
