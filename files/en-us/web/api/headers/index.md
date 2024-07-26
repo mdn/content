@@ -31,8 +31,10 @@ Some `Headers` objects have restrictions on whether the {{domxref("Headers.set",
   - If the request's {{domxref("Request.mode","mode")}} is `no-cors`, you can modify any {{Glossary("CORS-safelisted request header")}} name/value.
   - Otherwise, you can modify any {{Glossary("forbidden header name", "non-forbidden header")}} name/value.
 - For headers of {{domxref("Response")}} objects:
-  - If the response is created using {{domxref("Response.Response","Response()")}}, you can modify any {{Glossary("forbidden response header name", "non-forbidden response header")}} name/value.
-  - If the response is created using {{domxref("Response.error_static", "Response.error()")}} or {{domxref("Response.redirect_static", "Response.redirect()")}}, the headers are immutable and cannot be modified.
+  - If the response is created using {{domxref("Response.error_static", "Response.error()")}} or {{domxref("Response.redirect_static", "Response.redirect()")}}, or received from a {{domxref("Window/fetch", "fetch()")}} call, the headers are immutable and cannot be modified.
+  - Otherwise, if the response is created using {{domxref("Response.Response","Response()")}} or {{domxref("Response.json_static","Response.json()")}}, you can modify any {{Glossary("forbidden response header name", "non-forbidden response header")}} name/value.
+
+All of the Headers methods will throw a {{jsxref("TypeError")}} if you try to pass in a reference to a name that isn't a [valid HTTP Header name](https://fetch.spec.whatwg.org/#concept-header-name). The mutation operations will throw a `TypeError` if the header is immutable. In any other failure case they fail silently.
 
 ## Constructor
 
@@ -64,9 +66,6 @@ Some `Headers` objects have restrictions on whether the {{domxref("Headers.set",
 
 > [!NOTE]
 > To be clear, the difference between {{domxref("Headers.set()")}} and {{domxref("Headers.append()")}} is that if the specified header does already exist and does accept multiple values, {{domxref("Headers.set()")}} will overwrite the existing value with the new one, whereas {{domxref("Headers.append()")}} will append the new value onto the end of the set of values. See their dedicated pages for example code.
-
-> [!NOTE]
-> All of the Headers methods will throw a {{jsxref("TypeError")}} if you try to pass in a reference to a name that isn't a [valid HTTP Header name](https://fetch.spec.whatwg.org/#concept-header-name). The mutation operations will throw a `TypeError` if the header is [immutable](#modification_restrictions). In any other failure case they fail silently.
 
 > [!NOTE]
 > When Header values are iterated over, they are automatically sorted in lexicographical order, and values from duplicate header names are combined.
