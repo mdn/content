@@ -177,11 +177,11 @@ tr > td:last-of-type {
       <th scope="row">Permitted parents</th>
       <td>
         A {{HTMLElement("table")}} element. The
-        {{HTMLElement("tfoot")}} must appear after any
+        <code>&lt;tfoot&gt;</code> must appear after any
         {{HTMLElement("caption")}},
         {{HTMLElement("colgroup")}}, {{HTMLElement("thead")}},
         {{HTMLElement("tbody")}}, and {{HTMLElement("tr")}}
-        elements. Note that this is the requirement in HTML.<br />Originally, in HTML4, the opposite was true: the {{HTMLElement("tfoot")}} element could not be placed after any
+        elements. Note that this is the requirement in HTML.<br />Originally, in HTML4, the opposite was true: the <code>&lt;tfoot&gt;</code> element could not be placed after any
         {{HTMLElement("tbody")}} and {{HTMLElement("tr")}}
         elements.
       </td>

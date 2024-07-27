@@ -15,7 +15,8 @@ In most cases you will also want to set {{cssxref("overflow")}} to `hidden`, oth
 
 When applied to anchor elements, the truncating can happen in the middle of the text, not necessarily at the end.
 
-> **Note:** This property was originally implemented in WebKit and has some issues, such as the dependency on two other legacy properties. It got standardized in [CSS Overflow Module Level 4](https://drafts.csswg.org/css-overflow-4/#propdef--webkit-line-clamp) for legacy support. CSS Overflow Module Level 4 also defines a {{cssxref("line-clamp")}} property, which is meant to replace this property and avoid its issues. However, all browsers that support `line-clamp` will also support `-webkit-line-clamp` for compatibility reasons.
+> [!NOTE]
+> This property was originally implemented in WebKit and has some issues, such as the dependency on two other legacy properties. It got standardized in [CSS Overflow Module Level 4](https://drafts.csswg.org/css-overflow-4/#propdef--webkit-line-clamp) for legacy support. CSS Overflow Module Level 4 also defines a {{cssxref("line-clamp")}} property, which is meant to replace this property and avoid its issues. However, all browsers that support `line-clamp` will also support `-webkit-line-clamp` for compatibility reasons.
 
 ## Syntax
 

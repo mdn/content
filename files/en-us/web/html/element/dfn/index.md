@@ -143,7 +143,7 @@ Note the `<abbr>` element nested inside the `<dfn>`. The former establishes that
       <th scope="row">Permitted content</th>
       <td>
         <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">Phrasing content</a>,
-        but no {{HTMLElement("dfn")}} element must be a descendant.
+        but no <code>&lt;dfn&gt;</code> element must be a descendant.
       </td>
     </tr>
     <tr>

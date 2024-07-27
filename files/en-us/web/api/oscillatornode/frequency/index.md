@@ -11,7 +11,7 @@ browser-compat: api.OscillatorNode.frequency
 The **`frequency`** property of the {{ domxref("OscillatorNode") }} interface is an [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} representing the frequency of oscillation in hertz.
 
 > [!NOTE]
-> though the `AudioParam` returned is read-only, the value it represents is not.
+> Though the `AudioParam` returned is read-only, the value it represents is not.
 
 ## Value
 

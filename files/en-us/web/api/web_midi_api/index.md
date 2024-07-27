@@ -31,9 +31,9 @@ Therefore, the API can be used for musical and non-musical uses, with any MIDI d
 - {{domxref("MIDIOutput")}}
   - : Queues messages to the linked MIDI port. Messages can be sent immediately or after a specified delay.
 - {{domxref("MIDIMessageEvent")}}
-  - : The event passed to {{domxref("MIDIInput.midimessage_event")}}.
+  - : The event passed to the `MIDIInput` {{domxref("MIDIInput.midimessage_event", "midimessage")}} event.
 - {{domxref("MIDIConnectionEvent")}}
-  - : The event passed to the {{domxref("MIDIAccess.statechange_event")}} and {{domxref("MIDIPort.statechange_event")}} events, when a port becomes available or unavailable.
+  - : The event passed to the `MIDIAccess` {{domxref("MIDIAccess.statechange_event", "statechange")}} and `MIDIPort` {{domxref("MIDIPort.statechange_event", "statechange")}} events, when a port becomes available or unavailable.
 
 ## Security requirements
 

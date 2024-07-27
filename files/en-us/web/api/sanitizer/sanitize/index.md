@@ -20,7 +20,7 @@ The sanitizer configuration may be customized using {{domxref("Sanitizer.Sanitiz
 
 > [!NOTE]
 > To sanitize strings, instead use {{domxref("Element.setHTML()")}}.
-> See {{domxref('HTML Sanitizer API')}} for more information.
+> See [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) for more information.
 
 ## Syntax
 
@@ -67,5 +67,5 @@ frame_element.replaceChildren(sanitized_frame_tree);
 
 ## See also
 
-- {{domxref('HTML Sanitizer API')}}
+- [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API)
 - {{domxref("Element.setHTML()")}}

@@ -20,7 +20,8 @@ There are two key visibility state change times that this API reports on:
 
 The performance timeline will always have a "`visibility-state`" entry with a `startTime` of `0` and a `name` representing the initial page visibility state.
 
-> **Note:** Like other Performance APIs, this API extends {{domxref("PerformanceEntry")}}.
+> [!NOTE]
+> Like other Performance APIs, this API extends {{domxref("PerformanceEntry")}}.
 
 {{InheritanceDiagram}}
 

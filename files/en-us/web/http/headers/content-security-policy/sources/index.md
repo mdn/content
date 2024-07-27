@@ -44,7 +44,7 @@ Relevant directives include the {{Glossary("fetch directive", "fetch directives"
     - `filesystem:` Allows [`filesystem:` URIs](/en-US/docs/Web/API/FileSystem) to be used as a content source.
 
     > [!NOTE]
-    > if a scheme source is missing, the document origin's scheme is used.
+    > If a scheme source is missing, the document origin's scheme is used.
     > Secure upgrades are allowed, so if the document is loaded using `https:`, then `example.com` will match `https://example.com` but not `http://example.com`.
     > For more information, see [CSP Level 3](https://www.w3.org/TR/CSP3/#match-url-to-source-list).
 
