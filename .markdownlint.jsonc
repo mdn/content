@@ -212,6 +212,13 @@
         "searchPattern": "/(\\[[^\\]]*?\\]\\(([^\\)\\n]|\\([^\\)\\n]\\)|\\s[\"'])+?)(\\n|\\s|[,:][\\s\\n])/gm",
         "searchScope": "text",
       },
+      {
+        "name": "text-code-fence",
+        "message": "Use 'plain' tag",
+        "searchPattern": "/(^ *`{3,})(text|none|unix)/gm",
+        "replace": "$1plain",
+        "searchScope": "text",
+      },
     ],
   },
 }
