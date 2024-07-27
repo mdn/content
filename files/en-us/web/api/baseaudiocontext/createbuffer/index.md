@@ -86,7 +86,7 @@ on an `AudioContext` running at 44100Hz, will be automatically \*resampled\* to
 44100Hz = 1 second.
 
 > [!NOTE]
-> audio resampling is very similar to image resizing: say you've
+> Audio resampling is very similar to image resizing: say you've
 > got a 16 x 16 image, but you want it to fill a 32x32 area: you resize (resample) it.
 > the result has less quality (it can be blurry or edgy, depending on the resizing
 > algorithm), but it works, and the resized image takes up less space. Resampled audio

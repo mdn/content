@@ -72,7 +72,8 @@ input:valid + span::before {
 
 We set the `<span>`s to `position: relative` so that we can position the generated content relative to them. We then absolutely position different generated content depending on whether the form's data is valid or invalid — a green check or a red cross, respectively. To add a bit of extra urgency to the invalid data, we've also given the inputs a thick red border when invalid.
 
-> **Note:** We've used `::before` to add these labels, as we were already using `::after` for the "required" labels.
+> [!NOTE]
+> We've used `::before` to add these labels, as we were already using `::after` for the "required" labels.
 
 You can try it below:
 

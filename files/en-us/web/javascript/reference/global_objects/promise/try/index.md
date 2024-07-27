@@ -2,10 +2,12 @@
 title: Promise.try()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/try
 page-type: javascript-static-method
+status:
+  - experimental
 browser-compat: javascript.builtins.Promise.try
 ---
 
-{{JSRef}}
+{{JSRef}}{{SeeCompatTable}}
 
 The **`Promise.try()`** static method takes a callback of any kind (returns or throws, synchronously or asynchronously) and wraps its result in a {{jsxref("Promise")}}.
 

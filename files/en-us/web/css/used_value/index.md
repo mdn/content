@@ -11,7 +11,8 @@ The **used value** of a [CSS](/en-US/docs/Web/CSS) property is its value after a
 
 After the {{glossary("user agent")}} has finished its calculations, every CSS property has a used value. The used values of dimensions (e.g., {{cssxref("width")}}, {{cssxref("line-height")}}) are in pixels. The used values of shorthand properties (e.g., {{cssxref("background")}}) are consistent with those of their component properties (e.g., {{cssxref("background-color")}} or {{cssxref("background-size")}}) and with {{cssxref("position")}} and {{cssxref("float")}}.
 
-> **Note:** The {{domxref("Window.getComputedStyle", "getComputedStyle()")}} DOM API returns the [resolved value](/en-US/docs/Web/CSS/resolved_value), which may either be the [computed value](/en-US/docs/Web/CSS/computed_value) or the used value, depending on the property.
+> [!NOTE]
+> The {{domxref("Window.getComputedStyle", "getComputedStyle()")}} DOM API returns the [resolved value](/en-US/docs/Web/CSS/resolved_value), which may either be the [computed value](/en-US/docs/Web/CSS/computed_value) or the used value, depending on the property.
 
 ## Example
 

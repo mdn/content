@@ -13,7 +13,8 @@ browser-compat: api.VRDisplayCapabilities.hasPosition
 
 The **`hasPosition`** read-only property of the {{domxref("VRDisplayCapabilities")}} interface returns `true` if the VR display can track and return position information.
 
-> **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
+> [!NOTE]
+> This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
 ## Value
 

@@ -32,7 +32,8 @@ Many of these tools can also apply filters to your palette so you can see what t
 
 When designing your palette, you'll probably also need to supplement it with some core neutral colors such as white (or nearly white), black (or nearly black), and one or more shades of gray.
 
-> **Note:** Usually, you are better off using the smallest number of colors possible. Using color to highlight important content rather than adding color to everything will have more impact and your content will be more readable.
+> [!NOTE]
+> Usually, you are better off using the smallest number of colors possible. Using color to highlight important content rather than adding color to everything will have more impact and your content will be more readable.
 
 ## Color theory resources
 
@@ -93,7 +94,8 @@ The default value of `print-color-adjust: economy`, indicates that the browser i
 You can set `print-color-adjust: exact` to tell the browser that the element or elements on which you use it have been designed specifically to best work with the colors and images left as they are.
 With this set, the browser won't tamper with the appearance of the element on which this value is applied, and will draw it as indicated by your CSS.
 
-> **Note:** There is no guarantee, though, that `print-color-adjust: exact` will result in your CSS being used exactly as given.
+> [!NOTE]
+> There is no guarantee, though, that `print-color-adjust: exact` will result in your CSS being used exactly as given.
 > If the browser provides user preferences to change the output (such as a "don't print backgrounds" checkbox in a print dialog box), that overrides the value of `print-color-adjust`.
 
 ## See also

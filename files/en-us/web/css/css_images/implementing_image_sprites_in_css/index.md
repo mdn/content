@@ -8,7 +8,8 @@ page-type: guide
 
 **Image sprites** are used in numerous web apps where multiple images are used. Rather than include each image as a separate image file, it is much more memory- and bandwidth-friendly to send them as a single image; using background position as a way to distinguish between individual images in the same image file, so the number of HTTP requests is reduced.
 
-> **Note:** When using HTTP/2, it may in fact be more bandwidth-friendly to use multiple small requests.
+> [!NOTE]
+> When using HTTP/2, it may in fact be more bandwidth-friendly to use multiple small requests.
 
 ## Implementation
 

@@ -113,7 +113,8 @@ that you pass into {{domxref("SubtleCrypto.importKey()", "importKey()")}}.
 
 ## Examples
 
-> **Note:** You can [try the working examples](https://mdn.github.io/dom-examples/web-crypto/sign-verify/index.html) out on GitHub.
+> [!NOTE]
+> You can [try the working examples](https://mdn.github.io/dom-examples/web-crypto/sign-verify/index.html) out on GitHub.
 
 ### RSASSA-PKCS1-v1_5
 

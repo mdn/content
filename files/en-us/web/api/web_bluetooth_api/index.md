@@ -11,7 +11,8 @@ browser-compat: api.Bluetooth
 
 The Web Bluetooth API provides the ability to connect and interact with Bluetooth Low Energy peripherals.
 
-> **Note:** This API is _not available_ in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) (not exposed via {{domxref("WorkerNavigator")}}).
+> [!NOTE]
+> This API is _not available_ in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) (not exposed via {{domxref("WorkerNavigator")}}).
 
 ## Interfaces
 

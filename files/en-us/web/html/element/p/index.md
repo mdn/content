@@ -150,7 +150,7 @@ document.querySelector("button").addEventListener("click", (event) => {
       <th scope="row">Tag omission</th>
       <td>
         The start tag is required. The end tag may be omitted if the
-        {{HTMLElement("p")}} element is immediately followed by an
+        <code>&lt;p&gt;</code> element is immediately followed by an
         {{HTMLElement("address")}},
         {{HTMLElement("article")}}, {{HTMLElement("aside")}},
         {{HTMLElement("blockquote")}}, {{HTMLElement("details")}}, {{HTMLElement("div")}},
@@ -164,7 +164,7 @@ document.querySelector("button").addEventListener("click", (event) => {
         {{HTMLElement("main")}}, {{HTMLElement("menu")}}, {{HTMLElement("nav")}},
         {{HTMLElement("ol")}}, {{HTMLElement("pre")}}, {{HTMLElement("search")}},
         {{HTMLElement("section")}}, {{HTMLElement("table")}},
-        {{HTMLElement("ul")}} or another {{HTMLElement("p")}}
+        {{HTMLElement("ul")}} or another <code>&lt;p&gt;</code>
         element, or if there is no more content in the parent element and the
         parent element is not an {{HTMLElement("a")}}, {{HTMLElement("audio")}},
         {{HTMLElement("del")}}, {{HTMLElement("ins")}}, {{HTMLElement("map")}},

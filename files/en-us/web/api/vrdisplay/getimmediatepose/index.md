@@ -13,7 +13,8 @@ browser-compat: api.VRDisplay.getImmediatePose
 
 The **`getImmediatePose()`** method of the {{domxref("VRDisplay")}} interface returns a {{domxref("VRPose")}} object defining the current pose of the `VRDisplay`, with no prediction applied.
 
-> **Note:** This method was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
+> [!NOTE]
+> This method was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
 ## Syntax
 

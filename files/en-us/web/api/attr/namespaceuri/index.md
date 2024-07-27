@@ -15,7 +15,7 @@ The namespace URI is set at the {{domxref("Attr")}} creation and cannot be chang
 An attribute with a namespace can be created using {{domxref("Element.setAttributeNS()")}}.
 
 > [!NOTE]
-> an attribute does not inherit its namespace from the element it is attached to.
+> An attribute does not inherit its namespace from the element it is attached to.
 > If an attribute is not explicitly given a namespace, it has no namespace.
 
 The browser does not handle or enforce namespace validation per se. It is up to the JavaScript

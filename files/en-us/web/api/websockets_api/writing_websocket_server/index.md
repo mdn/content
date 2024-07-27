@@ -14,7 +14,8 @@ This server conforms to [RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455
 
 WebSockets communicate over a [TCP (Transmission Control Protocol)](https://en.wikipedia.org/wiki/Transmission_Control_Protocol) connection. Luckily, C# has a [TcpListener](https://docs.microsoft.com/en-us/dotnet/api/system.net.sockets.tcplistener?view=net-6.0) class which does as the name suggests. It is in the `System.Net.Sockets` namespace.
 
-> **Note:** It is a good idea to include the namespace with the `using` keyword in order to write less. It allows usage of a namespace's classes without typing the full namespace every time.
+> [!NOTE]
+> It is a good idea to include the namespace with the `using` keyword in order to write less. It allows usage of a namespace's classes without typing the full namespace every time.
 
 ### TcpListener
 
@@ -26,7 +27,8 @@ TcpListener(System.Net.IPAddress localaddr, int port)
 
 `localaddr` specifies the IP of the listener, and `port` specifies the port.
 
-> **Note:** To create an `IPAddress` object from a `string`, use the `Parse` static method of `IPAddress`.
+> [!NOTE]
+> To create an `IPAddress` object from a `string`, use the `Parse` static method of `IPAddress`.
 
 Methods:
 
@@ -192,7 +194,8 @@ The second byte, which currently has a value of 131, is another bitfield that br
 - MASK bit: Defines whether the "Payload data" is masked. If set to 1, a masking key is present in Masking-Key, and this is used to unmask the "Payload data". All messages from the client to the server have this bit set.
 - Payload Length: If this value is between 0 and 125, then it is the length of message. If it is 126, the following 2 bytes (16-bit unsigned integer) are the length. If it is 127, the following 8 bytes (64-bit unsigned integer) are the length.
 
-> **Note:** Because the first bit is always 1 for client-to-server messages, you can subtract 128 from this byte to get rid of the MASK bit.
+> [!NOTE]
+> Because the first bit is always 1 for client-to-server messages, you can subtract 128 from this byte to get rid of the MASK bit.
 
 Note that the MASK bit is set in our message. This means that the next four bytes (61, 84, 35, and 6) are the mask bytes used to decode the message. These bytes change with every message.
 
