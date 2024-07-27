@@ -1,5 +1,5 @@
 ---
-title: Routers
+title: Router
 slug: Glossary/Router
 page-type: glossary-definition
 ---
