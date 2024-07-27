@@ -123,7 +123,7 @@ Here we have a wrapper {{HTMLElement("div")}} containing two child `<div>`s, eac
 
 Let's look at the CSS that creates the above result a piece at a time.
 
-**Note:** We are using multiple [different CSS color value types](/en-US/docs/Web/CSS/CSS_colors/Color_values) in this example to demonstrate their use. This is not recommended for production code. When writing CSS, use the most intuitive value type for you and your team.
+> **Note:** We are using multiple [different CSS color value types](/en-US/docs/Web/CSS/CSS_colors/Color_values) in this example to demonstrate their use. This is not recommended for production code. When writing CSS, use the most intuitive value type for you and your team.
 
 ```css
 .wrapper {
