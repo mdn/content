@@ -176,10 +176,12 @@ This issue was resolved in:
 
 ## Notes, warnings, and callouts
 
-Sometimes writers want to call special attention to a piece of content. To do this, they will use the [GFM noteblock syntax](https://github.com/orgs/community/discussions/16925), which is a GFM blockquote with a special first line. There are three types of these: notes, warnings, and callouts.
+Sometimes writers want to call special attention to a piece of content. To do this, they will use the [proposed GFM Alerts syntax](https://github.com/orgs/community/discussions/16925), which is a GFM blockquote with a special first line. There are three types of these: notes, warnings, and callouts.
 
 > [!NOTE]
-> MDN Web Docs supported noteblocks with its own syntax before GFM added the noteblock syntax. As such, MDN supports only two of the five noteblock types GFM supports, and it supports an additional type that GFM does not.
+> MDN Web Docs supported GFM Alerts with its own syntax before the GFM proposal was formed. As such, MDN supports only two of the five alert types GFM supports, and it supports an additional type that GFM does not.
+>
+> Before the syntax had an official name, MDN referred to GFM Alerts as "noteblocks".
 
 - To add a note, create a GFM blockquote whose first line is `[!NOTE]`.
 - To add a warning, create a GFM blockquote whose first line is `[!WARNING]`.
