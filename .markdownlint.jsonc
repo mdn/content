@@ -219,6 +219,12 @@
         "replace": "$1plain",
         "searchScope": "text",
       },
+      {
+        "name": "gfm-blockquote",
+        "message": "Use the GFM syntax: https://developer.mozilla.org/en-US/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#notes_warnings_and_callouts",
+        "searchPattern": "/^ *> \\*\\*(Note|Warning|Callout):\\*\\*(?! [[{`_*])/gm",
+        "searchScope": "text",
+      },
     ],
   },
 }
