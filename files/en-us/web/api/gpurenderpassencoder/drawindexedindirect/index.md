@@ -23,7 +23,7 @@ drawIndexedIndirect(indirectBuffer, indirectOffset)
 
 - `indirectBuffer`
 
-  - : A {{domxref("GPUBuffer")}} containing the `indexCount`, `instanceCount`, `firstIndex`, `baseVertex`, and `firstInstance` values needed to carry out the drawing operation. The buffer must contain a tightly packed block of five 32-bit unsigned integer values representing the values (20 bytes total), given in the same order as the arguments for {{domxref("GPURenderPassEncoder.drawIndexed()")}}. So for example:
+  - : A {{domxref("GPUBuffer")}} containing the `indexCount`, `instanceCount`, `firstIndex`, `baseVertex`, and `firstInstance` values needed to carry out the drawing operation. The buffer must contain a tightly packed block of five 32-bit unsigned integer values representing the values (20 bytes total), given in the same order as the arguments for {{domxref("GPURenderPassEncoder.drawIndexed()")}}. The value corresponding to firstInstance must be 0, unless the `indirect-first-instance` feature is enabled. If the `indirect-first-instance` feature is not enabled and firstInstance is not zero the drawIndexedIndirect() call will be treated as a no-op. So for example:
 
     ```js
     const uint32 = new Uint32Array(5);
