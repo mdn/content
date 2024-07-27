@@ -215,7 +215,7 @@
       {
         "name": "text-code-fence",
         "message": "Use 'plain' tag",
-        "searchPattern": "/(^ *```)(text|none|unix)/gm",
+        "searchPattern": "/(^ *`{3,})(text|none|unix)/gm",
         "replace": "$1plain",
         "searchScope": "text",
       },
