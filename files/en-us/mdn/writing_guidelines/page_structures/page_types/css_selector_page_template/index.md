@@ -88,7 +88,7 @@ The summary paragraph — start by naming the selector and saying what it does. 
 
 ## Syntax
 
-`\{CSSSyntax}}`
+`\{{CSSSyntax}}`
 
 _To use this macro, remove the backticks and backslash in the markdown file._
 
