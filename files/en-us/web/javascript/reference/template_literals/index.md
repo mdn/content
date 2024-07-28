@@ -74,6 +74,14 @@ string text line 2`);
 // string text line 2"
 ```
 
+The spread a single line across multiple lines (for readability during development), you can escape the newline by using a backslash (`\`) at the end of the line:
+
+```js
+console.log(`string text line 1 \
+string text line 2`);
+// "string text line 1 string text line 2"
+```
+
 ### String interpolation
 
 Without template literals, when you want to combine output from expressions with strings, you'd [concatenate them](/en-US/docs/Learn/JavaScript/First_steps/Strings#concatenation_using) using the [addition operator](/en-US/docs/Web/JavaScript/Reference/Operators/Addition) `+`:
