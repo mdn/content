@@ -294,7 +294,7 @@ Cache-Control: max-age=0
 
 `max-age=0` is a workaround for `no-cache`, because many old (HTTP/1.0) cache implementations don't support `no-cache`. Recently browsers are still using `max-age=0` in "reloading" — for backward compatibility — and alternatively using `no-cache` to cause a "force reloading".
 
-If the `max-age` value is negative (for example, `-1`) or isn't an integer (for example, `3599.99`), then the caching behavior is undefined. In other words, for any `max-age` value that isn't an integer or isn't non-negative, the caching behavior that's encouraged is to treat the value as if it were `0`.
+If the `max-age` value is negative (for example, `-1`) or isn't an integer (for example, `3599.99`), then the caching behavior is unspecified. Caches are encouraged is to treat the value as if it were `0`.
 
 #### `max-stale`
 
