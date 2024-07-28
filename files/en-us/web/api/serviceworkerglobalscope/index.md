@@ -54,9 +54,9 @@ Listen to this event using {{domxref("EventTarget/addEventListener()", "addEvent
 - {{domxref("ServiceWorkerGlobalScope/backgroundfetchsuccess_event", "backgroundfetchsuccess")}} {{Experimental_Inline}}
   - : Fired when all of the requests in a [background fetch](/en-US/docs/Web/API/Background_Fetch_API) operation have succeeded.
 - {{domxref("ServiceWorkerGlobalScope/canmakepayment_event", "canmakepayment")}} {{Experimental_Inline}}
-  - : Fired on a payment app's service worker to check whether it is ready to handle a payment. Specifically, it is fired when the merchant website calls {{domxref("PaymentRequest.PaymentRequest", "new PaymentRequest()")}}.
+  - : Fired on a payment app's service worker to check whether it is ready to handle a payment. Specifically, it is fired when the merchant website calls the {{domxref("PaymentRequest.PaymentRequest", "PaymentRequest()")}} constructor.
 - {{domxref("ServiceWorkerGlobalScope/contentdelete_event", "contentdelete")}} {{Experimental_Inline}}
-  - : Occurs when an item is removed from the {{domxref("ContentIndex", "Content Index")}}.
+  - : Occurs when an item is removed from the {{domxref("ContentIndex")}}.
 - {{domxref("ServiceWorkerGlobalScope/cookiechange_event", "cookiechange")}} {{Experimental_Inline}}
   - : Fired when a cookie change has occurred that matches the service worker's cookie change subscription list.
 - {{domxref("ServiceWorkerGlobalScope/fetch_event", "fetch")}}

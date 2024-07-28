@@ -36,7 +36,8 @@ They are designed with storage in mind, never send data to the server, and don't
 - Browsers are generally limited to a maximum number of cookies per domain (varies by browser, generally in the hundreds), and a maximum size per cookie (usually 4KB). Storage APIs can store larger amounts of data.
 - Cookies are sent with every request, so they can worsen performance (for example on slow mobile data connections), especially if you have a lot of cookies set.
 
-> **Note:** To see stored cookies (and other storage that a web page is using) you can use the [Storage Inspector](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html) in Firefox Developer Tools, or the [Application panel](https://developer.chrome.com/docs/devtools/progressive-web-apps) in Chrome Developer Tools.
+> [!NOTE]
+> To see stored cookies (and other storage that a web page is using) you can use the [Storage Inspector](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html) in Firefox Developer Tools, or the [Application panel](https://developer.chrome.com/docs/devtools/progressive-web-apps) in Chrome Developer Tools.
 
 ## Creating, removing, and updating cookies
 
@@ -57,7 +58,8 @@ Set-Cookie: tasty_cookie=strawberry
 [page content]
 ```
 
-> **Note:** Find out how to use the `Set-Cookie` header in various server-side languages/frameworks: [PHP](https://www.php.net/manual/en/function.setcookie.php), [Node.JS](https://nodejs.org/dist/latest-v14.x/docs/api/http.html#http_response_setheader_name_value), [Python](https://docs.python.org/3/library/http.cookies.html), [Ruby on Rails](https://api.rubyonrails.org/classes/ActionDispatch/Cookies.html).
+> [!NOTE]
+> Find out how to use the `Set-Cookie` header in various server-side languages/frameworks: [PHP](https://www.php.net/manual/en/function.setcookie.php), [Node.JS](https://nodejs.org/dist/latest-v14.x/docs/api/http.html#http_response_setheader_name_value), [Python](https://docs.python.org/3/library/http.cookies.html), [Ruby on Rails](https://api.rubyonrails.org/classes/ActionDispatch/Cookies.html).
 
 When a new request is made, the browser usually sends previously stored cookies for the current domain back to the server within a {{HTTPHeader("Cookie")}} HTTP header:
 
@@ -87,7 +89,8 @@ You can specify an expiration date or time period after which the cookie should 
 
 - _Session_ cookies — cookies without a `Max-Age` or `Expires` attribute – are deleted when the current session ends. The browser defines when the "current session" ends, and some browsers use _session restoring_ when restarting. This can cause session cookies to last indefinitely.
 
-  > **Note:** If your site authenticates users, it should regenerate and resend session cookies, even ones that already exist, whenever a user authenticates. This approach helps prevent [session fixation attacks](/en-US/docs/Web/Security/Types_of_attacks#session_fixation), where a third-party can reuse a user's session.
+  > [!NOTE]
+  > If your site authenticates users, it should regenerate and resend session cookies, even ones that already exist, whenever a user authenticates. This approach helps prevent [session fixation attacks](/en-US/docs/Web/Security/Types_of_attacks#session_fixation), where a third-party can reuse a user's session.
 
 There are some techniques designed to recreate cookies after they're deleted. These are known as "zombie" cookies. These techniques violate the principles of user [privacy](#privacy_and_tracking) and control, may violate [data privacy regulations](#cookie-related_regulations), and could expose a website using them to legal liability.
 
@@ -142,7 +145,8 @@ Set-Cookie: id=a3fWa; Expires=Thu, 21 Oct 2021 07:28:00 GMT; Secure; HttpOnly
 
 - A cookie with the `HttpOnly` attribute can't be modified by JavaScript, for example using {{domxref("Document.cookie")}}; it can only be modified when it reaches the server. Cookies that persist user sessions for example should have the `HttpOnly` attribute set — it would be really insecure to make them available to JavaScript. This precaution helps mitigate cross-site scripting ([XSS](/en-US/docs/Web/Security/Types_of_attacks#cross-site_scripting_xss)) attacks.
 
-> **Note:** Depending on the application, you may want to use an opaque identifier that the server looks up rather than storing sensitive information directly in cookies, or investigate alternative authentication/confidentiality mechanisms such as [JSON Web Tokens](https://jwt.io/).
+> [!NOTE]
+> Depending on the application, you may want to use an opaque identifier that the server looks up rather than storing sensitive information directly in cookies, or investigate alternative authentication/confidentiality mechanisms such as [JSON Web Tokens](https://jwt.io/).
 
 ### Define where cookies are sent
 
@@ -190,7 +194,8 @@ The [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value)
   Set-Cookie: cart=110045_77895_53420; SameSite=Strict
   ```
 
-  > **Note:** Cookies that are used for sensitive information should also have a short [lifetime](#removal_defining_the_lifetime_of_a_cookie).
+  > [!NOTE]
+  > Cookies that are used for sensitive information should also have a short [lifetime](#removal_defining_the_lifetime_of_a_cookie).
 
 - `Lax` is similar, except the browser also sends the cookie when the user _navigates_ to the cookie's origin site (even if the user is coming from a different site). This is useful for cookies affecting the display of a site — for example you might have partner product information along with an affiliate link on your website. When that link is followed to the partner website, they might want to set a cookie stating that the affiliate link was followed, which displays a reward banner and provides a discount if the product is purchased.
 
@@ -219,7 +224,8 @@ As a [defense-in-depth measure](<https://en.wikipedia.org/wiki/Defense_in_depth_
 
 The browser will reject cookies with these prefixes that don't comply with their restrictions. This ensures that subdomain-created cookies with prefixes are either confined to a subdomain or ignored completely. As the application server only checks for a specific cookie name when determining if the user is authenticated or a CSRF token is correct, this effectively acts as a defense measure against session fixation.
 
-> **Note:** On the server, the web application _must_ check for the full cookie name including the prefix. User agents _do not_ strip the prefix from the cookie before sending it in a request's {{HTTPHeader("Cookie")}} header.
+> [!NOTE]
+> On the server, the web application _must_ check for the full cookie name including the prefix. User agents _do not_ strip the prefix from the cookie before sending it in a request's {{HTTPHeader("Cookie")}} header.
 
 For more information about cookie prefixes and the current state of browser support, see the [Prefixes section of the Set-Cookie reference article](/en-US/docs/Web/HTTP/Headers/Set-Cookie#cookie_prefixes).
 
@@ -233,7 +239,8 @@ However, third-party cookies can also be used to create creepy, invasive user ex
 
 Browser vendors know that users don't like this behavior, and as a result have all started to block third-party cookies by default, or at least made plans to go in that direction. Third-party cookies (or just tracking cookies) may also be blocked by other browser settings or extensions.
 
-> **Note:** Cookie blocking can cause some third-party components (such as social media widgets) not to function as intended. As browsers impose further restrictions on third-party cookies, developers should start to look at ways to reduce their reliance on them.
+> [!NOTE]
+> Cookie blocking can cause some third-party components (such as social media widgets) not to function as intended. As browsers impose further restrictions on third-party cookies, developers should start to look at ways to reduce their reliance on them.
 
 See our [Third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies) article for detailed information on third-party cookies, the issues associated with them, and what alternatives are available. See our [Privacy](/en-US/docs/Web/Privacy) landing page for more information on privacy in general.
 
@@ -255,7 +262,8 @@ These regulations include requirements such as:
 
 There may be other regulations that govern the use of cookies in your locality. The burden is on you to know and comply with these regulations. There are companies that offer "cookie banner" code that helps you comply with these regulations.
 
-> **Note:** Companies should disclose the types of cookies they use on their sites for transparency purposes and to comply with regulations. For example, see [Google's notice on the types of cookies it uses](https://policies.google.com/technologies/types) and Mozilla's [Websites, Communications & Cookies Privacy Notice](https://www.mozilla.org/en-US/privacy/websites/#cookies).
+> [!NOTE]
+> Companies should disclose the types of cookies they use on their sites for transparency purposes and to comply with regulations. For example, see [Google's notice on the types of cookies it uses](https://policies.google.com/technologies/types) and Mozilla's [Websites, Communications & Cookies Privacy Notice](https://www.mozilla.org/en-US/privacy/websites/#cookies).
 
 ## See also
 

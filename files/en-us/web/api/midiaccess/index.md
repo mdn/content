@@ -22,7 +22,7 @@ The **`MIDIAccess`** interface of the [Web MIDI API](/en-US/docs/Web/API/Web_MID
 
 ### Events
 
-- {{domxref("MIDIAccess.statechange_event")}}
+- {{domxref("MIDIAccess.statechange_event", "statechange")}}
   - : Called whenever a new MIDI port is added or an existing port changes state.
 
 ## Examples

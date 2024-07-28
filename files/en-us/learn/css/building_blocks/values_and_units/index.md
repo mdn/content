@@ -10,7 +10,8 @@ CSS rules contain [declarations](/en-US/docs/Web/CSS/Syntax#css_declarations), w
 Each property used in CSS has a **value type** that describes what kind of values it is allowed to have.
 In this lesson, we will take a look at some of the most frequently used value types, what they are, and how they work.
 
-> **Note:** Each [CSS property page](/en-US/docs/Web/CSS/Reference#index) has a syntax section that lists the value types you can use with that property.
+> [!NOTE]
+> Each [CSS property page](/en-US/docs/Web/CSS/Reference#index) has a syntax section that lists the value types you can use with that property.
 
 <table>
   <tbody>
@@ -45,9 +46,11 @@ In this lesson, we will take a look at some of the most frequently used value ty
 
 In CSS specifications and on the property pages here on MDN you will be able to spot value types as they will be surrounded by angle brackets, such as [`<color>`](/en-US/docs/Web/CSS/color_value) or {{cssxref("length")}}. When you see the value type `<color>` as valid for a particular property, that means you can use any valid color as a value for that property, as listed on the [`<color>`](/en-US/docs/Web/CSS/color_value) reference page.
 
-> **Note:** You'll see CSS value types referred to as _data types_. The terms are basically interchangeable — when you see something in CSS referred to as a data type, it is really just a fancy way of saying value type. The term _value_ refers to any particular expression supported by a value type that you choose to use.
+> [!NOTE]
+> You'll see CSS value types referred to as _data types_. The terms are basically interchangeable — when you see something in CSS referred to as a data type, it is really just a fancy way of saying value type. The term _value_ refers to any particular expression supported by a value type that you choose to use.
 
-> **Note:** CSS value types tend to be enclosed in angle brackets (`<`, `>`) to differentiate them from CSS properties.
+> [!NOTE]
+> CSS value types tend to be enclosed in angle brackets (`<`, `>`) to differentiate them from CSS properties.
 > For example there is a {{cssxref("color")}} property and a [`<color>`](/en-US/docs/Web/CSS/color_value) data type.
 > This is not to be confused with HTML elements, as they also use angle brackets, but this is something to keep in mind that the context should make clear.
 
@@ -267,7 +270,8 @@ Some value types accept numbers, without any unit added to them. An example of a
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/opacity.html", '100%', 600)}}
 
-> **Note:** When you use a number in CSS as a value it should not be surrounded in quotes.
+> [!NOTE]
+> When you use a number in CSS as a value it should not be surrounded in quotes.
 
 ## Color
 
@@ -313,7 +317,8 @@ Let's rewrite our last example to use RGB colors:
 
 You can pass a fourth parameter to `rgb()`, which represents the alpha channel of the color, which controls opacity. If you set this value to `0` it will make the color fully transparent, whereas `1` will make it fully opaque. Values in between give you different levels of transparency.
 
-> **Note:** Setting an alpha channel on a color has one key difference to using the {{cssxref("opacity")}} property we looked at earlier. When you use opacity you make the element and everything inside it opaque, whereas using RGB with an alpha parameter colors only makes the color you are specifying opaque.
+> [!NOTE]
+> Setting an alpha channel on a color has one key difference to using the {{cssxref("opacity")}} property we looked at earlier. When you use opacity you make the element and everything inside it opaque, whereas using RGB with an alpha parameter colors only makes the color you are specifying opaque.
 
 In the example below, we have added a background image to the containing block of our colored boxes. We have then set the boxes to have different opacity values — notice how the background shows through more when the alpha channel value is smaller.
 
@@ -321,7 +326,8 @@ In the example below, we have added a background image to the containing block o
 
 **In this example, try changing the alpha channel values to see how it affects the color output.**
 
-> **Note:** In older versions of CSS, the `rgb()` syntax didn't support an alpha parameter - you needed to use a different function called `rgba()` for that. These days you can pass an alpha parameter to `rgb()`. The `rgba()` function is an alias for `rgb()`.
+> [!NOTE]
+> In older versions of CSS, the `rgb()` syntax didn't support an alpha parameter - you needed to use a different function called `rgba()` for that. These days you can pass an alpha parameter to `rgb()`. The `rgba()` function is an alias for `rgb()`.
 
 ### SRGB values
 
@@ -365,7 +371,8 @@ Just like with `rgb()` you can pass an alpha parameter to `hsl()` to specify opa
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/color-hsla.html", '100%', 900)}}
 
-> **Note:** In older versions of CSS, the `hsl()` syntax didn't support an alpha parameter - you needed to use a different function called `hsla()` for that. These days you can pass an alpha parameter to `hsl()`, but for backwards compatibility with old websites, the `hsla()` syntax is still supported, and has exactly the same behavior as `hsl()`.
+> [!NOTE]
+> In older versions of CSS, the `hsl()` syntax didn't support an alpha parameter - you needed to use a different function called `hsla()` for that. These days you can pass an alpha parameter to `hsl()`, but for backwards compatibility with old websites, the `hsla()` syntax is still supported, and has exactly the same behavior as `hsl()`.
 
 ## Images
 
@@ -375,7 +382,8 @@ In the example below, we have demonstrated an image and a gradient in use as a v
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/image.html", '100%', 900)}}
 
-> **Note:** There are some other possible values for `<image>`, however these are newer and currently have poor browser support. Check out the page on MDN for the [`<image>`](/en-US/docs/Web/CSS/image) data type if you want to read about them.
+> [!NOTE]
+> There are some other possible values for `<image>`, however these are newer and currently have poor browser support. Check out the page on MDN for the [`<image>`](/en-US/docs/Web/CSS/image) data type if you want to read about them.
 
 ## Position
 

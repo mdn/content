@@ -79,7 +79,8 @@ If the value exceeds the max value allowed, the {{domxref('validityState.rangeOv
   </tbody>
 </table>
 
-> **Note:** When the data entered by the user doesn't adhere to the maximum value set, the value is considered invalid in constraint validation and will match the {{cssxref(':invalid')}} and {{cssxref(':out-of-range')}} pseudo-classes.
+> [!NOTE]
+> When the data entered by the user doesn't adhere to the maximum value set, the value is considered invalid in constraint validation and will match the {{cssxref(':invalid')}} and {{cssxref(':out-of-range')}} pseudo-classes.
 
 See [Client-side validation](/en-US/docs/Web/HTML/Constraint_validation) and {{domxref("ValidityState.rangeOverflow", "rangeOverflow")}} for more information.
 

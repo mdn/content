@@ -93,13 +93,15 @@ Here are the functions used to perform these steps:
 
 The first step to create a path is to call the `beginPath()`. Internally, paths are stored as a list of sub-paths (lines, arcs, etc.) which together form a shape. Every time this method is called, the list is reset and we can start drawing new shapes.
 
-> **Note:** When the current path is empty, such as immediately after calling `beginPath()`, or on a newly created canvas, the first path construction command is always treated as a `moveTo()`, regardless of what it actually is. For that reason, you will almost always want to specifically set your starting position after resetting a path.
+> [!NOTE]
+> When the current path is empty, such as immediately after calling `beginPath()`, or on a newly created canvas, the first path construction command is always treated as a `moveTo()`, regardless of what it actually is. For that reason, you will almost always want to specifically set your starting position after resetting a path.
 
 The second step is calling the methods that actually specify the paths to be drawn. We'll see these shortly.
 
 The third, and an optional step, is to call `closePath()`. This method tries to close the shape by drawing a straight line from the current point to the start. If the shape has already been closed or there's only one point in the list, this function does nothing.
 
-> **Note:** When you call `fill()`, any open shapes are closed automatically, so you don't have to call `closePath()`. This is **not** the case when you call `stroke()`.
+> [!NOTE]
+> When you call `fill()`, any open shapes are closed automatically, so you don't have to call `closePath()`. This is **not** the case when you call `stroke()`.
 
 ### Drawing a triangle
 
@@ -184,7 +186,8 @@ The result looks like this:
 
 If you'd like to see the connecting lines, you can remove the lines that call `moveTo()`.
 
-> **Note:** To learn more about the `arc()` function, see the [Arcs](#arcs) section below.
+> [!NOTE]
+> To learn more about the `arc()` function, see the [Arcs](#arcs) section below.
 
 ### Lines
 
@@ -250,7 +253,8 @@ To draw arcs or circles, we use the `arc()` or `arcTo()` methods.
 
 Let's have a more detailed look at the `arc` method, which takes six parameters: `x` and `y` are the coordinates of the center of the circle on which the arc should be drawn. `radius` is self-explanatory. The `startAngle` and `endAngle` parameters define the start and end points of the arc in radians, along the curve of the circle. These are measured from the x axis. The `counterclockwise` parameter is a Boolean value which, when `true`, draws the arc counterclockwise; otherwise, the arc is drawn clockwise.
 
-> **Note:** Angles in the `arc` function are measured in radians, not degrees. To convert degrees to radians you can use the following JavaScript expression: `radians = (Math.PI/180)*degrees`.
+> [!NOTE]
+> Angles in the `arc` function are measured in radians, not degrees. To convert degrees to radians you can use the following JavaScript expression: `radians = (Math.PI/180)*degrees`.
 
 The following example is a little more complex than the ones we've seen above. It draws 12 different arcs all with different angles and fills.
 
@@ -260,7 +264,8 @@ The `x` and `y` coordinates should be clear enough. `radius` and `startAngle` ar
 
 The statement for the `clockwise` parameter results in the first and third row being drawn as clockwise arcs and the second and fourth row as counterclockwise arcs. Finally, the `if` statement makes the top half stroked arcs and the bottom half filled arcs.
 
-> **Note:** This example requires a slightly larger canvas than the others on this page: 150 x 200 pixels.
+> [!NOTE]
+> This example requires a slightly larger canvas than the others on this page: 150 x 200 pixels.
 
 ```html hidden
 <html lang="en">

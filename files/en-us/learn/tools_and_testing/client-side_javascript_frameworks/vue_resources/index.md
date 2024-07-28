@@ -64,7 +64,8 @@ The Vue CLI also provides us with tools for preparing our app for publishing to 
 
 This will create a new `dist` directory containing all of your production ready files. To publish your site to the web, copy the contents of this folder to your hosting environment.
 
-> **Note:** The Vue CLI docs also include a [specific guide on how to publish your app](https://cli.vuejs.org/guide/deployment.html#platform-guides) to many of the common hosting platforms.
+> [!NOTE]
+> The Vue CLI docs also include a [specific guide on how to publish your app](https://cli.vuejs.org/guide/deployment.html#platform-guides) to many of the common hosting platforms.
 
 ## Vue 2
 

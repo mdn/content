@@ -123,7 +123,8 @@ log(new URL("../../../../path", "https://test.example.org/api/v1/v2/").href);
 A relative reference prefixed with `/`, such as `/path`, is relative to the site root of the URL specified in the `base` argument.
 For example, given a base URL of `https://test.example.com/api/v1` the resolved URL for the root-relative URL `/some/path` is `https://test.example.com/some/path`.
 
-> **Note:** The path part of the `base` URL doesn't matter when resolving root-relative URLs.
+> [!NOTE]
+> The path part of the `base` URL doesn't matter when resolving root-relative URLs.
 
 ```html hidden
 <pre id="log"></pre>

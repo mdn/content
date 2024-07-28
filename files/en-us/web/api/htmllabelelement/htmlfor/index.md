@@ -18,7 +18,8 @@ script-accessible property is used to set and read the value of the content prop
 A string which contains the ID string of the element which is
 associated with the control.
 
-> **Note:** If this property has a value, the {{domxref("HTMLLabelElement.control")}} property
+> [!NOTE]
+> If this property has a value, the {{domxref("HTMLLabelElement.control")}} property
 > must refer to the same control.
 
 ## Specifications

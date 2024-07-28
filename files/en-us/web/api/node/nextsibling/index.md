@@ -13,7 +13,8 @@ returns the node immediately following the specified one in their
 parent's {{domxref("Node.childNodes","childNodes")}}, or returns `null`
 if the specified node is the last child in the parent element.
 
-> **Note:** Browsers insert {{domxref("Text")}} nodes into a document to represent whitespace in the source markup.
+> [!NOTE]
+> Browsers insert {{domxref("Text")}} nodes into a document to represent whitespace in the source markup.
 > Therefore a node obtained, for example, using [`Node.firstChild`](/en-US/docs/Web/API/Node/firstChild)
 > or [`Node.previousSibling`](/en-US/docs/Web/API/Node/previousSibling)
 > may refer to a whitespace text node rather than the actual element the author

@@ -13,7 +13,8 @@ The read-only **`port`** property of the
 {{domxref("MessagePort")}}. It can be used to communicate between the processor and the
 {{domxref("AudioWorkletNode")}} to which it belongs.
 
-> **Note:** The port at the other end of the channel is
+> [!NOTE]
+> The port at the other end of the channel is
 > available under the {{domxref("AudioWorkletNode.port", "port")}} property of the node.
 
 ## Value

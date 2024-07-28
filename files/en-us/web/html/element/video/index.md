@@ -23,7 +23,8 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 
   - : A Boolean attribute; if specified, the video automatically begins to play back as soon as it can without stopping to finish loading the data.
 
-    > **Note:** Modern browsers block audio (or videos with an unmuted audio track) from autoplaying, as sites that automatically play audio can be an unpleasant experience for users. See our [autoplay guide](/en-US/docs/Web/Media/Autoplay_guide) for additional information about how to properly use autoplay.
+    > [!NOTE]
+    > Modern browsers block audio (or videos with an unmuted audio track) from autoplaying, as sites that automatically play audio can be an unpleasant experience for users. See our [autoplay guide](/en-US/docs/Web/Media/Autoplay_guide) for additional information about how to properly use autoplay.
 
     To disable video autoplay, `autoplay="false"` will not work; the video will autoplay if the attribute is there in the `<video>` tag at all. To remove autoplay, the attribute needs to be removed altogether.
 
@@ -77,7 +78,7 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 
     The default value is different for each browser. The spec advises it to be set to `metadata`.
 
-    > **Note:**
+    > [!NOTE]
     >
     > - The `autoplay` attribute has precedence over `preload`. If `autoplay` is specified, the browser would obviously need to start downloading the video for playback.
     > - The specification does not force the browser to follow the value of this attribute; it is a mere hint.
@@ -368,7 +369,7 @@ Your web host may provide an easy interface to MIME type configuration changes f
 
 Videos should provide both captions and transcripts that accurately describe their content (see [Adding captions and subtitles to HTML video](/en-US/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video) for more information on how to implement these). Captions allow people who are experiencing hearing loss to understand a video's audio content as the video is being played, while transcripts allow people who need additional time to be able to review audio content at a pace and format that is comfortable for them.
 
-It's worth noting that while you can caption audio-only media, you can only do so when playing audio in a {{HTMLElement("video")}} element since the video region of the element is used to present the captions. This is one of the special scenarios in which it's useful to play audio in a video element.
+It's worth noting that while you can caption audio-only media, you can only do so when playing audio in a `<video>` element since the video region of the element is used to present the captions. This is one of the special scenarios in which it's useful to play audio in a video element.
 
 If automatic captioning services are used, it is important to review the generated content to ensure it accurately represents the source video.
 
@@ -485,10 +486,10 @@ Some media file types let you provide more specific information using the [`code
       <td>
         <p>
           If the element has a <a href="#src"><code>src</code></a>
-          attribute: zero or more {{HTMLElement("track")}} elements, followed by transparent content that contains no media elements–that is no {{HTMLElement("audio")}} or {{HTMLElement("video")}}.
+          attribute: zero or more {{HTMLElement("track")}} elements, followed by transparent content that contains no media elements–that is no {{HTMLElement("audio")}} or <code>&lt;video&gt;</code>.
         </p>
         <p>
-          Else: zero or more {{HTMLElement("source")}} elements, followed by zero or more {{HTMLElement("track")}} elements, followed by transparent content that contains no media elements–that is no {{HTMLElement("audio")}} or {{HTMLElement("video")}}.
+          Else: zero or more {{HTMLElement("source")}} elements, followed by zero or more {{HTMLElement("track")}} elements, followed by transparent content that contains no media elements–that is no {{HTMLElement("audio")}} or <code>&lt;video&gt;</code>.
         </p>
       </td>
     </tr>

@@ -32,7 +32,8 @@ The transformation matrix is described by:
 </math>
 <!-- prettier-ignore-end -->
 
-> **Note:** The returned object is not live, so updating it will not
+> [!NOTE]
+> The returned object is not live, so updating it will not
 > affect the current transformation matrix, and updating the current transformation
 > matrix will not affect an already returned `DOMMatrix`.
 

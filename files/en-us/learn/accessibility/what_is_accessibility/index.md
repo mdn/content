@@ -43,7 +43,8 @@ Building accessible sites benefits everyone:
 
 People with disabilities are just as diverse as people without disabilities, and so are their disabilities. The key lesson here is to think beyond your own computer and how you use the web, and start learning about how others use it — _you are not your users_. The main types of disability to consider are explained below, along with any special tools they use to access web content (known as **assistive technologies**, or **ATs**).
 
-> **Note:** The World Health Organization's [Disability and health](https://www.who.int/en/news-room/fact-sheets/detail/disability-and-health) fact sheet states that "Over a billion people, about 15% of the world's population, have some form of disability", and "Between 110 million and 190 million adults have significant difficulties in functioning."
+> [!NOTE]
+> The World Health Organization's [Disability and health](https://www.who.int/en/news-room/fact-sheets/detail/disability-and-health) fact sheet states that "Over a billion people, about 15% of the world's population, have some form of disability", and "Between 110 million and 190 million adults have significant difficulties in functioning."
 
 ### People with visual impairments
 
@@ -126,7 +127,8 @@ On the other hand, if you are working on a gallery website showing interesting 3
 
 To show that you care and have thought about accessibility, publish an accessibility statement on your site that details what your policy is toward accessibility, and what steps you have taken toward making the site accessible. If someone does notify you that your site has an accessibility problem, start a dialog with them, be empathetic, and take reasonable steps to try to fix the problem.
 
-> **Note:** Our [Handling common accessibility problems article](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility) covers accessibility specifics that should be tested in more detail.
+> [!NOTE]
+> Our [Handling common accessibility problems article](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility) covers accessibility specifics that should be tested in more detail.
 
 To summarize:
 

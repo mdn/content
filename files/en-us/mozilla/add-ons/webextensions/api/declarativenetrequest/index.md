@@ -32,7 +32,7 @@ The declarative rules are defined by four fields:
   - modify headers from a network request.
   - prevent another matching rule from being applied.
 
-> **Note:**
+> [!NOTE]
 > A redirect action does not redirect the request, and the request continues as usual when:
 >
 > - the action does not change the request.
@@ -93,7 +93,7 @@ Rules are organized into rulesets:
 - **dynamic ruleset**: rules added or removed using {{WebExtAPIRef("declarativeNetRequest.updateDynamicRules","updateDynamicRules")}}. These rules persist across sessions and extension updates.
 - **session ruleset**: rules added or removed using {{WebExtAPIRef("declarativeNetRequest.updateSessionRules","updateSessionRules")}}. These rules do not persist across browser sessions.
 
-> **Note:**
+> [!NOTE]
 > Errors and warnings about invalid static rules are only displayed during [testing](#testing). Invalid static rules in permanently installed extensions are ignored. Therefore, it's important to verify that your static rulesets are valid by testing.
 
 ## Limits
@@ -104,7 +104,8 @@ An extension can:
 
 - specify static rulesets in the [`"declarative_net_request"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request) manifest key up to the value of {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_STATIC_RULESETS","MAX_NUMBER_OF_STATIC_RULESETS")}}.
 - enable static rulesets (in the `"declarative_net_request"` manifest key or programmatically) so that the number of rules (enabled or disabled) they contain doesn't exceed the value of {{WebExtAPIRef("declarativeNetRequest.GUARANTEED_MINIMUM_STATIC_RULES","GUARANTEED_MINIMUM_STATIC_RULES")}} and the number of enable static rulesets doesn't exceed the value of {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_ENABLED_STATIC_RULESETS","MAX_NUMBER_OF_ENABLED_STATIC_RULESETS")}}.
-  > **Note:** The number of rules in enabled static rulesets for all extensions must not exceed the global limit. Extensions shouldn't depend on the global limit having a specific value; instead, they should use {{WebExtAPIRef("declarativeNetRequest.getAvailableStaticRuleCount","getAvailableStaticRuleCount")}} to find the number of additional rules they can enable.
+  > [!NOTE]
+  > The number of rules in enabled static rulesets for all extensions must not exceed the global limit. Extensions shouldn't depend on the global limit having a specific value; instead, they should use {{WebExtAPIRef("declarativeNetRequest.getAvailableStaticRuleCount","getAvailableStaticRuleCount")}} to find the number of additional rules they can enable.
 - disable rules in static rulesets up to the value of {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_DISABLED_STATIC_RULES","MAX_NUMBER_OF_DISABLED_STATIC_RULES")}}. However, these disabled rules count towards the {{WebExtAPIRef("declarativeNetRequest.GUARANTEED_MINIMUM_STATIC_RULES","GUARANTEED_MINIMUM_STATIC_RULES")}}.
 
 ### Dynamic and session-scoped rules
@@ -128,7 +129,8 @@ When the browser evaluates how to handle requests, it checks each extension's ru
    5. "redirect" redirects the request.
    6. "modifyHeaders" rewrites request or response headers or both.
 
-> **Note:** When multiple matching rules have the same rule priority and rule action type, the outcome can be ambiguous when the matched action support additional properties. These properties can result in outcomes that cannot be combined. For example:
+> [!NOTE]
+> When multiple matching rules have the same rule priority and rule action type, the outcome can be ambiguous when the matched action support additional properties. These properties can result in outcomes that cannot be combined. For example:
 >
 > - The "block" action does not support additional properties, and therefore there is no ambiguity: all matching "block" actions would result in the same outcome.
 > - The "redirect" action redirects a request to one destination. When multiple "redirect" actions match, all but one "redirect" action is ignored. It is still possible to redirect repeatedly when the redirected request matches another rule condition.
@@ -136,7 +138,8 @@ When the browser evaluates how to handle requests, it checks each extension's ru
 >
 > To control the order in which actions are applied, assign distinct `priority` values to rules whose order of precedence is important.
 
-> **Note:** After rule priority and rule action, Firefox considers the ruleset the rule belongs to, in this order of precedence: session > dynamic > session rulesets.
+> [!NOTE]
+> After rule priority and rule action, Firefox considers the ruleset the rule belongs to, in this order of precedence: session > dynamic > session rulesets.
 > This cannot be relied upon across browsers, see [WECG issue 280](https://github.com/w3c/webextensions/issues/280).
 
 If only one extension provides a rule for the request, that rule is applied. However, where more than one extension has a matching rule, the browser chooses the one to apply in this order of precedence:

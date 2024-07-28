@@ -96,7 +96,8 @@ Let's create a `Todos.svelte` component. This will contain our list of to-dos.
 
 1. Create a new folder — `src/components`.
 
-   > **Note:** You can put your components anywhere inside the `src` folder, but the `components` folder is a recognized convention to follow, allowing you to find your components easily.
+   > [!NOTE]
+   > You can put your components anywhere inside the `src` folder, but the `components` folder is a recognized convention to follow, allowing you to find your components easily.
 
 2. Create a file named `src/components/Todos.svelte` with the following content:
 
@@ -347,7 +348,8 @@ You can tell Svelte to ignore this warning for the next block of markup with a [
 <img height="32" width="88" src="https://www.w3.org/WAI/wcag2A" />
 ```
 
-> **Note:** With VSCode you can automatically add this ignore comment by clicking on the _Quick fix…_ link or pressing <kbd>Ctrl</kbd> + <kbd>.</kbd>.
+> [!NOTE]
+> With VSCode you can automatically add this ignore comment by clicking on the _Quick fix…_ link or pressing <kbd>Ctrl</kbd> + <kbd>.</kbd>.
 
 If you want to globally disable this warning, you can add this `onwarn` handler to your `rollup.config.js` file inside the configuration for the `Svelte` plugin, like this:
 
@@ -378,7 +380,8 @@ plugins: [
 
 By design, these warnings are implemented in the compiler itself, and not as a plug-in that you may choose to add to your project. The idea is to check for a11y issues in your markup by default and let you opt out of specific warnings.
 
-> **Note:** You should only disable these warnings if you have good reasons to do so, for example while building a quick prototype. It's important to be a good web citizen and make your pages accessible to the broadest possible userbase.
+> [!NOTE]
+> You should only disable these warnings if you have good reasons to do so, for example while building a quick prototype. It's important to be a good web citizen and make your pages accessible to the broadest possible userbase.
 
 The accessibility rules checked by Svelte are taken from [eslint-plugin-jsx-a11y](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y#supported-rules), a plugin for ESLint that provides static checks for many accessibility rules on JSX elements. Svelte aims to implement all of them in its compiler, and most of them have already been ported to Svelte. On GitHub you can see [which accessibility checks are still missing](https://github.com/sveltejs/svelte/issues/820). You can check the meaning of each rule by clicking on its link.
 

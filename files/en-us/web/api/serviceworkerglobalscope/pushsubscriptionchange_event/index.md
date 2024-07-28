@@ -34,7 +34,8 @@ Although examples demonstrating how to share subscription related information wi
 
 Consider using another method to synchronize subscription information between your service worker and the app server, or make sure your code using `fetch()` is robust enough to handle cases where attempts to exchange data fail.
 
-> **Note:** In earlier drafts of the specification, this event was defined to be sent when a {{domxref("PushSubscription")}} has expired.
+> [!NOTE]
+> In earlier drafts of the specification, this event was defined to be sent when a {{domxref("PushSubscription")}} has expired.
 
 ## Examples
 

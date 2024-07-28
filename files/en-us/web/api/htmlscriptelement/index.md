@@ -45,7 +45,8 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
   - : A string that joins and returns the contents of all {{domxref("Text")}} nodes inside the {{HTMLElement("script")}} element (ignoring other nodes like comments) in tree order. On setting, it acts the same way as the {{domxref("Node.textContent")}} property.
 
-    > **Note:** When inserted using the {{domxref("Document.write()")}} method, {{HTMLElement("script")}} elements execute (typically synchronously), but when inserted using {{domxref("Element.innerHTML")}} or {{domxref("Element.outerHTML")}}, they do not execute at all.
+    > [!NOTE]
+    > When inserted using the {{domxref("Document.write()")}} method, {{HTMLElement("script")}} elements execute (typically synchronously), but when inserted using {{domxref("Element.innerHTML")}} or {{domxref("Element.outerHTML")}}, they do not execute at all.
 
 - {{domxref("HTMLScriptElement.type")}}
   - : A string representing the type of the script. It reflects the `type` attribute of the {{HTMLElement("script")}} element.

@@ -14,7 +14,8 @@ This is the file format of the file that would result from writing all of the re
 Keep in mind that not all codecs are supported by a given container; if you write media using a codec that is not supported by a given media container, the resulting file may not work reliably if at all when you try to play it back.
 See our [media type and format guide](/en-US/docs/Web/Media/Formats) for information about container and codec support across browsers.
 
-> **Note:** The term "MIME type" is officially considered to be historical; these strings are now officially known as **media types**.
+> [!NOTE]
+> The term "MIME type" is officially considered to be historical; these strings are now officially known as **media types**.
 > MDN Web Docs content uses the terms interchangeably.
 
 ## Value

@@ -13,11 +13,13 @@ browser-compat: api.VRFrameData.leftViewMatrix
 
 The **`leftViewMatrix`** read-only property of the {{domxref("VRFrameData")}} interface returns a {{jsxref("Float32Array")}} representing a 4x4 matrix that describes the view transform to be used for the left eye's rendering.
 
-> **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
+> [!NOTE]
+> This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
 This value may be passed directly to WebGL's {{domxref("WebGLRenderingContext.uniformMatrix", "uniformMatrix4fv")}} function.
 
-> **Warning:** It is highly recommended that applications use this matrix when rendering.
+> [!WARNING]
+> It is highly recommended that applications use this matrix when rendering.
 
 ## Value
 

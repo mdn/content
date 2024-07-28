@@ -106,7 +106,8 @@ code {
 
 In addition to enabling the `light-dark()` function, the `color-scheme` property enables overriding a user's color scheme for document sections. Forcing a page section to only use a light or dark color scheme can be done by setting the `color-scheme` property to `light` or `dark`.
 
-> **Note:** Generally this should not be done, we are using it here for demonstration purposes. If the user has made a preference, you generally should not override their preferences.
+> [!NOTE]
+> Generally this should not be done, we are using it here for demonstration purposes. If the user has made a preference, you generally should not override their preferences.
 
 ```css
 .light {

@@ -22,7 +22,8 @@ lookupNamespaceURI(prefix)
 
 - `prefix`
   - : The prefix to look for.
-    > **Note:** This parameter is not optional, but can be set to `null`.
+    > [!NOTE]
+    > This parameter is not optional, but can be set to `null`.
 
 ### Return value
 

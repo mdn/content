@@ -53,7 +53,8 @@ The following properties are deprecated. This does not affect their use in [repl
 - [`rightContext`, `$'`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/rightContext)
   - : The substring following the most recent match.
 
-> **Warning:** Avoid using these static properties, as they can cause [issues when interacting with external code](https://github.com/tc39/proposal-regexp-legacy-features/blob/master/subclass-restriction-motivation.md#legacy-static-properties-regexp1-etc)!
+> [!WARNING]
+> Avoid using these static properties, as they can cause [issues when interacting with external code](https://github.com/tc39/proposal-regexp-legacy-features/blob/master/subclass-restriction-motivation.md#legacy-static-properties-regexp1-etc)!
 
 The {{jsxref("RegExp/compile", "compile()")}} method is deprecated. Construct a new `RegExp` instance instead.
 

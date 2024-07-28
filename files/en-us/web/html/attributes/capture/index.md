@@ -18,7 +18,8 @@ The `capture` attribute takes as its value a string that specifies which camera 
 | `user`        | The user-facing camera and/or microphone should be used.   |
 | `environment` | The outward-facing camera and/or microphone should be used |
 
-> **Note:** Capture was previously a Boolean attribute which, if present, requested that the device's media capture device(s) such as camera or microphone be used instead of requesting a file input.
+> [!NOTE]
+> Capture was previously a Boolean attribute which, if present, requested that the device's media capture device(s) such as camera or microphone be used instead of requesting a file input.
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-capture.html", "tabbed-standard")}}
 

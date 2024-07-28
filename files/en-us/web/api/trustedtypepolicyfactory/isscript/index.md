@@ -10,7 +10,8 @@ browser-compat: api.TrustedTypePolicyFactory.isScript
 
 The **`isScript()`** method of the {{domxref("TrustedTypePolicyFactory")}} interface returns true if it is passed a valid {{domxref("TrustedScript")}} object.
 
-> **Note:** The purpose of the functions `isScript()`, {{domxref("TrustedTypePolicyFactory.isHTML","isHTML()")}}, and {{domxref("TrustedTypePolicyFactory.isScriptURL","isScriptURL()")}} is to check if the object is a valid TrustedType object, created by a configured policy.
+> [!NOTE]
+> The purpose of the functions `isScript()`, {{domxref("TrustedTypePolicyFactory.isHTML","isHTML()")}}, and {{domxref("TrustedTypePolicyFactory.isScriptURL","isScriptURL()")}} is to check if the object is a valid TrustedType object, created by a configured policy.
 
 ## Syntax
 

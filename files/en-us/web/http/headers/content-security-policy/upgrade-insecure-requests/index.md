@@ -14,7 +14,8 @@ have been replaced with secure URLs (those served over HTTPS). This directive is
 intended for websites with large numbers of insecure legacy URLs that need to be
 rewritten.
 
-> **Note:** The `upgrade-insecure-requests` directive is evaluated before
+> [!NOTE]
+> The `upgrade-insecure-requests` directive is evaluated before
 > {{CSP("block-all-mixed-content")}} and if it is set, the latter is effectively a
 > no-op. It is recommended to set either directive, but not both, unless you want to
 > force HTTPS on older browsers that do not force it after a redirect to HTTP.

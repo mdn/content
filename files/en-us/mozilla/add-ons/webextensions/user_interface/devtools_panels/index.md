@@ -6,7 +6,8 @@ page-type: guide
 
 {{AddonSidebar}}
 
-> **Note:** This feature is available since Firefox 54.
+> [!NOTE]
+> This feature is available since Firefox 54.
 
 When an extension provides tools that are of use to developers, it's possible to add a UI for them to the browser's developer tools as a new panel.
 

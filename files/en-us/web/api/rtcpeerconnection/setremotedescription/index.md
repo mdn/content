@@ -60,7 +60,8 @@ Since it's unnecessary, the {{domxref("RTCSessionDescription.RTCSessionDescripti
 A {{jsxref("Promise")}} which is fulfilled once the value of the connection's {{domxref("RTCPeerConnection.remoteDescription", "remoteDescription")}} is successfully changed or rejected if the change cannot be applied (for example, if the specified description is incompatible with one or both of the peers on the connection).
 The promise fulfillment handler receives no input parameters.
 
-> **Note:** The process of changing descriptions actually involves intermediary steps handled by the WebRTC layer to ensure that an active connection can be changed without losing the connection if the change does not succeed.
+> [!NOTE]
+> The process of changing descriptions actually involves intermediary steps handled by the WebRTC layer to ensure that an active connection can be changed without losing the connection if the change does not succeed.
 > See [Pending and current descriptions](/en-US/docs/Web/API/WebRTC_API/Connectivity#pending_and_current_descriptions) in the WebRTC Connectivity page for more details on this process.
 
 ### Exceptions
@@ -93,7 +94,8 @@ This begins a new negotiation session, with the newly-established offer as the s
 Upon starting the new negotiation with the newly-established offer, the local peer is now the callee, even if it was previously the caller.
 This happens instead of throwing an exception, thereby reducing the number of potential errors which might occur, and simplifies the processing you need to do when you receive an offer, by eliminating the need to handle the offer/answer process differently depending on whether the local peer is the caller or callee.
 
-> **Note:** Earlier implementations of WebRTC would throw an exception if an offer was set outside a `stable` or `have-remote-offer` state.
+> [!NOTE]
+> Earlier implementations of WebRTC would throw an exception if an offer was set outside a `stable` or `have-remote-offer` state.
 
 ## Deprecated syntax
 
