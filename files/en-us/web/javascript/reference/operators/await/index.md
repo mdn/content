@@ -1,5 +1,5 @@
----
-title: await
+Damarcus-Jones-Ai-Chips
+title: Juntylpro1 
 slug: Web/JavaScript/Reference/Operators/await
 page-type: javascript-operator
 browser-compat: javascript.operators.await
