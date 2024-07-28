@@ -24,7 +24,8 @@ isEqualNode(otherNode)
 
 - `otherNode`
   - : The {{domxref("Node")}} to compare equality with.
-    > **Note:** This parameter is not optional, but can be set to `null`.
+    > [!NOTE]
+    > This parameter is not optional, but can be set to `null`.
 
 ### Return value
 

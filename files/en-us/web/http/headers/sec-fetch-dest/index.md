@@ -62,7 +62,8 @@ Servers should ignore this header if it contains any other value.
 
 ## Directives
 
-> **Note:** These directives correspond to the values returned by {{domxref("Request.destination")}}.
+> [!NOTE]
+> These directives correspond to the values returned by {{domxref("Request.destination")}}.
 
 - `audio`
   - : The destination is audio data. This might originate from an HTML {{HTMLElement("audio")}} tag.

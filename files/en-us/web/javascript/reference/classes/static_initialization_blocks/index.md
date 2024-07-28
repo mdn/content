@@ -67,7 +67,8 @@ The scope of the static block is nested _within_ the lexical scope of the class 
 
 [Static field](/en-US/docs/Web/JavaScript/Reference/Classes/static) initializers and static initialization blocks are evaluated one-by-one. The initialization block can refer to field values above it, but not below it. All static methods are added beforehand and can be accessed, although calling them may not behave as expected if they refer to fields below the current block.
 
-> **Note:** This is more important with [private static fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties), because accessing a non-initialized private field throws a {{jsxref("TypeError")}}, even if the private field is declared below. (If the private field is not declared, it would be an early {{jsxref("SyntaxError")}}.)
+> [!NOTE]
+> This is more important with [private static fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties), because accessing a non-initialized private field throws a {{jsxref("TypeError")}}, even if the private field is declared below. (If the private field is not declared, it would be an early {{jsxref("SyntaxError")}}.)
 
 A static initialization block may not have decorators (the class itself may).
 

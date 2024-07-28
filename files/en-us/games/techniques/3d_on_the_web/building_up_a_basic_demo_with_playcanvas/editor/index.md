@@ -4,6 +4,8 @@ slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas/ed
 page-type: guide
 ---
 
+{{GamesSidebar}}
+
 Instead of coding everything from scratch you can also use the online **PlayCanvas editor**. This can be a more pleasant working environment if you are not someone who likes to code.
 
 ## Creating an account

@@ -14,7 +14,8 @@ representing the keys of the {{domxref("Cache")}}.
 
 The requests are returned in the same order that they were inserted.
 
-> **Note:** Requests with duplicate URLs but different headers can be
+> [!NOTE]
+> Requests with duplicate URLs but different headers can be
 > returned if their responses have the `VARY` header set on them.
 
 ## Syntax

@@ -35,7 +35,8 @@ To get started:
 1. Use the `django-admin` tool to generate a project folder, the basic file templates, and **manage.py**, which serves as your project management script.
 2. Use **manage.py** to create one or more _applications_.
 
-   > **Note:** A website may consist of one or more sections. For example, main site, blog, wiki, downloads area, etc. Django encourages you to develop these components as separate _applications_, which could then be re-used in different projects if desired.
+   > [!NOTE]
+   > A website may consist of one or more sections. For example, main site, blog, wiki, downloads area, etc. Django encourages you to develop these components as separate _applications_, which could then be re-used in different projects if desired.
 
 3. Register the new applications to include them in the project.
 4. Hook up the **url/path** mapper for each application.
@@ -101,7 +102,8 @@ python3 manage.py startapp catalog
 py manage.py startapp catalog
 ```
 
-> **Note:** The rest of the tutorial uses the Linux/macOS syntax.
+> [!NOTE]
+> The rest of the tutorial uses the Linux/macOS syntax.
 > If you're working on Windows, wherever you see a command starting with `python3` you should instead use `py` (or `py -3`).
 
 The tool creates a new folder and populates it with files for the different parts of the application (shown in the following example).
@@ -128,7 +130,8 @@ In addition we now have:
 - A _migrations_ folder, used to store "migrations" — files that allow you to automatically update your database as you modify your models.
 - **\_\_init\_\_.py** — an empty file created here so that Django/Python will recognize the folder as a [Python Package](https://docs.python.org/3/tutorial/modules.html#packages) and allow you to use its objects within other parts of the project.
 
-> **Note:** Have you noticed what is missing from the files list above? While there is a place for your views and models, there is nowhere for you to put your URL mappings, templates, and static files. We'll show you how to create them further along (these aren't needed in every website but they are needed in this example).
+> [!NOTE]
+> Have you noticed what is missing from the files list above? While there is a place for your views and models, there is nowhere for you to put your URL mappings, templates, and static files. We'll show you how to create them further along (these aren't needed in every website but they are needed in this example).
 
 ## Registering the catalog application
 
@@ -151,7 +154,8 @@ INSTALLED_APPS = [
 
 The new line specifies the application configuration object (`CatalogConfig`) that was generated for you in **/django-locallibrary-tutorial/catalog/apps.py** when you created the application.
 
-> **Note:** You'll notice that there are already a lot of other `INSTALLED_APPS` (and `MIDDLEWARE`, further down in the settings file). These enable support for the [Django administration site](/en-US/docs/Learn/Server-side/Django/Admin_site) and the functionality it uses (including sessions, authentication, etc.).
+> [!NOTE]
+> You'll notice that there are already a lot of other `INSTALLED_APPS` (and `MIDDLEWARE`, further down in the settings file). These enable support for the [Django administration site](/en-US/docs/Learn/Server-side/Django/Admin_site) and the functionality it uses (including sessions, authentication, etc.).
 
 ## Specifying the database
 
@@ -216,7 +220,8 @@ urlpatterns = [
 
 The URL mappings are managed through the `urlpatterns` variable, which is a Python _list_ of `path()` functions. Each `path()` function either associates a URL pattern to a _specific view_, which will be displayed when the pattern is matched, or with another list of URL pattern testing code (in this second case, the pattern becomes the "base URL" for patterns defined in the target module). The `urlpatterns` list initially defines a single function that maps all URLs with the pattern _admin/_ to the module `admin.site.urls`, which contains the Administration application's own URL mapping definitions.
 
-> **Note:** The route in `path()` is a string defining a URL pattern to match. This string might include a named variable (in angle brackets), e.g. `'catalog/<id>/'`. This pattern will match a URL like **catalog/_any_chars_/** and pass _`any_chars`_ to the view as a string with the parameter name `id`. We discuss path methods and route patterns further in later topics.
+> [!NOTE]
+> The route in `path()` is a string defining a URL pattern to match. This string might include a named variable (in angle brackets), e.g. `'catalog/<id>/'`. This pattern will match a URL like **catalog/_any_chars_/** and pass _`any_chars`_ to the view as a string with the parameter name `id`. We discuss path methods and route patterns further in later topics.
 
 To add a new list item to the `urlpatterns` list, add the following lines to the bottom of the file. This new item includes a `path()` that forwards requests with the pattern `catalog/` to the module `catalog.urls` (the file with the relative URL **catalog/urls.py**).
 
@@ -229,7 +234,8 @@ urlpatterns += [
 ]
 ```
 
-> **Note:** Note that we included the import line (`from django.urls import include`) with the code that uses it (so it is easy to see what we've added), but it is common to include all your import lines at the top of a Python file.
+> [!NOTE]
+> Note that we included the import line (`from django.urls import include`) with the code that uses it (so it is easy to see what we've added), but it is common to include all your import lines at the top of a Python file.
 
 Now let's redirect the root URL of our site (i.e. `127.0.0.1:8000`) to the URL `127.0.0.1:8000/catalog/`. This is the only app we'll be using in this project. To do this, we'll use a special view function, `RedirectView`, which takes the new relative URL to redirect to (`/catalog/`) as its first argument when the URL pattern specified in the `path()` function is matched (the root URL, in this case).
 
@@ -266,7 +272,8 @@ from django.conf.urls.static import static
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 ```
 
-> **Note:** There are a number of ways to extend the `urlpatterns` list (previously, we just appended a new list item using the `+=` operator to clearly separate the old and new code). We could have instead just included this new pattern-map in the original list definition:
+> [!NOTE]
+> There are a number of ways to extend the `urlpatterns` list (previously, we just appended a new list item using the `+=` operator to clearly separate the old and new code). We could have instead just included this new pattern-map in the original list definition:
 >
 > ```python
 > urlpatterns = [
@@ -304,13 +311,15 @@ python3 manage.py makemigrations
 python3 manage.py migrate
 ```
 
-> **Warning:** You'll need to run these commands every time your models change in a way that will affect the structure of the data that needs to be stored (including both addition and removal of whole models and individual fields).
+> [!WARNING]
+> You'll need to run these commands every time your models change in a way that will affect the structure of the data that needs to be stored (including both addition and removal of whole models and individual fields).
 
 The `makemigrations` command _creates_ (but does not apply) the migrations for all applications installed in your project. You can specify the application name as well to just run a migration for a single app. This gives you a chance to check out the code for these migrations before they are applied. If you're a Django expert, you may choose to tweak them slightly!
 
 The `migrate` command is what applies the migrations to your database. Django tracks which ones have been added to the current database.
 
-> **Note:** You should re-run migrations and re-test the site whenever you make significant changes. It doesn't take very long!
+> [!NOTE]
+> You should re-run migrations and re-test the site whenever you make significant changes. It doesn't take very long!
 >
 > See [Migrations](https://docs.djangoproject.com/en/5.0/topics/migrations/) (Django docs) for additional information about the lesser-used migration commands.
 
@@ -318,7 +327,8 @@ The `migrate` command is what applies the migrations to your database. Django tr
 
 During development, you can serve the website first using the _development web server_, and then viewing it on your local web browser.
 
-> **Note:** The development web server is not robust or performant enough for production use, but it is a very easy way to get your Django website up and running during development to give it a convenient quick test. By default it will serve the site to your local computer (`http://127.0.0.1:8000/)`, but you can also specify other computers on your network to serve to. For more information see [django-admin and manage.py: runserver](https://docs.djangoproject.com/en/5.0/ref/django-admin/#runserver) (Django docs).
+> [!NOTE]
+> The development web server is not robust or performant enough for production use, but it is a very easy way to get your Django website up and running during development to give it a convenient quick test. By default it will serve the site to your local computer (`http://127.0.0.1:8000/)`, but you can also specify other computers on your network to serve to. For more information see [django-admin and manage.py: runserver](https://docs.djangoproject.com/en/5.0/ref/django-admin/#runserver) (Django docs).
 
 Run the _development web server_ by calling the `runserver` command (in the same directory as **manage.py**):
 
@@ -334,7 +344,8 @@ Don't worry! This error page is expected because we don't have any pages/urls de
 
 At this point, we know that Django is working!
 
-> **Note:** The example page demonstrates a great Django feature — automated debug logging. Whenever a page cannot be found, Django displays an error screen with useful information or any error raised by the code. In this case, we can see that the URL we've supplied doesn't match any of our URL patterns (as listed). Logging is turned off in production (which is when we put the site live on the Web), in which case a less informative but more user-friendly page will be served.
+> [!NOTE]
+> The example page demonstrates a great Django feature — automated debug logging. Whenever a page cannot be found, Django displays an error screen with useful information or any error raised by the code. In this case, we can see that the URL we've supplied doesn't match any of our URL patterns (as listed). Logging is turned off in production (which is when we put the site live on the Web), in which case a less informative but more user-friendly page will be served.
 
 ## Don't forget to backup to GitHub
 
@@ -368,7 +379,8 @@ git checkout main
 git pull origin main
 ```
 
-> **Note:** If you don't delete the `skeleton_website` branch you can always switch back to it at some later point.
+> [!NOTE]
+> If you don't delete the `skeleton_website` branch you can always switch back to it at some later point.
 
 We won't necessarily mention this again in future, but you may find it useful to update GitHub with your changes at the end of each section in this tutorial.
 

@@ -22,7 +22,8 @@ The Content Index API is an extension to [service workers](/en-US/docs/Web/API/S
 
 Indexed entries do not automatically expire. It's good practice to present an interface for clearing out entries, or periodically remove older entries.
 
-> **Note:** The API supports indexing URLs corresponding to HTML documents. A URL for a cached media file, for example, can't be indexed directly. Instead, you need to provide a URL for a page that displays media, and which works offline.
+> [!NOTE]
+> The API supports indexing URLs corresponding to HTML documents. A URL for a cached media file, for example, can't be indexed directly. Instead, you need to provide a URL for a page that displays media, and which works offline.
 
 ## Interfaces
 

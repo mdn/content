@@ -20,7 +20,8 @@ GroupData does exactly that: for each API, it lists the interfaces, properties, 
 
 ### Structure of GroupData
 
-> **Warning:** Non-existent pages listed in this file are ignored (in en-US).
+> [!WARNING]
+> Non-existent pages listed in this file are ignored (in en-US).
 
 An entry in `GroupData.json` has the following structure:
 
@@ -54,7 +55,8 @@ An entry in `GroupData.json` has the following structure:
 
 - `"Name_of_the_API"`
   - : This key is both an ID used by sidebar macros like `\{{APIRef("Name_of_the_API")}}` and the name displayed in the sidebar itself. Choose it wisely.
-    > **Warning:** If you want to change the name displayed in the sidebar, you must edit all the pages displaying it.
+    > [!WARNING]
+    > If you want to change the name displayed in the sidebar, you must edit all the pages displaying it.
 - `"overview"`
   - : This is a list containing one page: the overview page, used as the link for the `"Name_of_the_API"` text. The value is the _title of the page_, and the page must be in the `web/api/` directory.
 - `"guides"`
@@ -63,17 +65,21 @@ An entry in `GroupData.json` has the following structure:
   - : This lists the interfaces that are part of the API.
 - `"methods"`
   - : This lists the methods that are part of the API.
-    > **Note:** The methods of the interfaces listed in `"interfaces"` **must** not be listed there. They are automatically added to the sidebar if the `page-type` key for that page is `web-api-static-method` or `web-api-instance-method`.
+    > [!NOTE]
+    > The methods of the interfaces listed in `"interfaces"` **must** not be listed there. They are automatically added to the sidebar if the `page-type` key for that page is `web-api-static-method` or `web-api-instance-method`.
 - `"properties"`
   - : This lists the properties on other interfaces that are part of the API, like `navigator.xr` (a property that the WebXR API adds to the `navigator` object)
-    > **Note:** The properties of the interfaces listed in `"interfaces"` **must** not be listed there. They are automatically added to the sidebar if the `page-type` key for that page is `web-api-static-property` or `web-api-instance-property`.
+    > [!NOTE]
+    > The properties of the interfaces listed in `"interfaces"` **must** not be listed there. They are automatically added to the sidebar if the `page-type` key for that page is `web-api-static-property` or `web-api-instance-property`.
 - `"events"`
   - : This lists events of other interfaces that are part of the API. The values are the _title of the pages_ (that must reside under `Web/Events`)
-    > **Note:** The events targeting the interfaces listed in `"interfaces"` **must** not be listed there. They are automatically added to the sidebar if the `page-type` key for that page is `web-api-event`.
+    > [!NOTE]
+    > The events targeting the interfaces listed in `"interfaces"` **must** not be listed there. They are automatically added to the sidebar if the `page-type` key for that page is `web-api-event`.
 
 There are two other keys, `"dictionaries"` and `"callbacks"`, operating on the same principle. As we no longer document these entities in their own pages, their use is deprecated, and no new entry should be added to them (and we remove them little by little).
 
-> **Note:** Also, none of the keys are mandatory; it is good practice (and we'll enforce this) to add the non-deprecated ones with an empty list rather than omitting them. It shows that the absence of value is a conscious choice.
+> [!NOTE]
+> Also, none of the keys are mandatory; it is good practice (and we'll enforce this) to add the non-deprecated ones with an empty list rather than omitting them. It shows that the absence of value is a conscious choice.
 
 ### Update process for GroupData
 
@@ -85,7 +91,8 @@ The `GroupData.json` file is located [here](https://github.com/mdn/content/blob/
 
 ## InterfaceData: recording interface inheritance
 
-> **Note:** We hope to generate this file automatically from the data available via w3c/webref in the future.
+> [!NOTE]
+> We hope to generate this file automatically from the data available via w3c/webref in the future.
 
 `InterfaceData` describes the hierarchy of the interfaces. It lists inheritance. In the past, it also listed mixins implemented by each interface; but that usage is deprecated, and we remove mixins from this file at the same rate MDN is updated.
 
@@ -102,7 +109,8 @@ An entry in `InterfaceData.json` has the following structure:
 }
 ```
 
-> **Note:** As mixins are deprecated, `"impl"` must be an empty list for all new interfaces.
+> [!NOTE]
+> As mixins are deprecated, `"impl"` must be an empty list for all new interfaces.
 
 The value of `"Name_of_the_parent_interface"` is not a list but a single entry, mandatory; we must not list any interface that don't inherit from another one.
 
@@ -116,7 +124,8 @@ The `InterfaceData.json` file is located [here](https://github.com/mdn/content/b
 
 ## SpecData: Specification information
 
-> **Warning:** The `SpecData.json` file is no longer maintained. Canonical specification information is stored at w3c/browser-spec and in the `spec_url` key of features at mdn/browser-compat-data.
+> [!WARNING]
+> The `SpecData.json` file is no longer maintained. Canonical specification information is stored at w3c/browser-spec and in the `spec_url` key of features at mdn/browser-compat-data.
 
 The `\{{SpecName}}` and `\{{Spec2}}` macros that we are removing use the `SpecData.json` file. We do not accept any further contributions to the `SpecData.json` file; instead, either try to insert a specification table, using the `\{{Specifications}}` macro, or try to hardcode the (good) link to the specification. Note that most of the time, mentioning or linking to a specification outside the _Specifications_ section is a sign of something not appropriately documented on MDN.
 

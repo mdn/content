@@ -104,4 +104,4 @@ const audioCtx = new AudioContext({
 
 ## See also
 
-- {{domxref("OfflineAudioContext.OfflineAudioContext()", "new OfflineAudioContext()")}} constructor
+- {{domxref("OfflineAudioContext.OfflineAudioContext()", "OfflineAudioContext()")}} constructor

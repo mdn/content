@@ -16,9 +16,11 @@ This attribute has the same parameter values and meaning as the CSS {{cssxref("o
 - When `scroll` is specified on an {{SVGElement("svg")}} element, a scrollbar or panner is normally shown for the SVG viewport whether or not any of its content is clipped.
 - Within SVG content, the value `auto` implies that all rendered content for child elements must be visible, either through a scrolling mechanism, or by rendering with no clip.
 
-> **Note:** Although the initial value for overflow is `auto`, it is overwritten in the User Agent style sheet for the {{SVGElement("svg")}} element when it is not the root element of a stand-alone document, the {{SVGElement("pattern")}} element, and the {{SVGElement("marker")}} element to be hidden by default.
+> [!NOTE]
+> Although the initial value for overflow is `auto`, it is overwritten in the User Agent style sheet for the {{SVGElement("svg")}} element when it is not the root element of a stand-alone document, the {{SVGElement("pattern")}} element, and the {{SVGElement("marker")}} element to be hidden by default.
 
-> **Note:** As a presentation attribute, `overflow` can be used as a CSS property. See the CSS {{cssxref("overflow")}} property for more information.
+> [!NOTE]
+> As a presentation attribute, `overflow` can be used as a CSS property. See the CSS {{cssxref("overflow")}} property for more information.
 
 You can use this attribute with the following SVG elements:
 

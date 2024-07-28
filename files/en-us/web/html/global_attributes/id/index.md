@@ -11,7 +11,8 @@ The **`id`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) defines 
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-id.html","tabbed-shorter")}}
 
-> **Warning:** This attribute's value is an opaque string: this means that web authors should not rely on it to convey human-readable information (although having your IDs somewhat human-readable can be useful for code comprehension, e.g. consider `ticket-18659` versus `r45tgfe-freds&$@`).
+> [!WARNING]
+> This attribute's value is an opaque string: this means that web authors should not rely on it to convey human-readable information (although having your IDs somewhat human-readable can be useful for code comprehension, e.g. consider `ticket-18659` versus `r45tgfe-freds&$@`).
 
 An `id`'s value must not contain {{glossary("whitespace")}} (spaces, tabs, etc.). Browsers treat non-conforming IDs that contain whitespace as if the whitespace is part of the ID. In contrast to the [`class`](/en-US/docs/Web/HTML/Global_attributes#class) attribute, which allows space-separated values, elements can only have one single ID value.
 

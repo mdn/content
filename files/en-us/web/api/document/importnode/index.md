@@ -65,7 +65,8 @@ Before they can be inserted into the current document, nodes from external docum
 - cloned using `document.importNode()`; or
 - adopted using {{domXref("document.adoptNode()")}}.
 
-> **Note:** Although Firefox doesn't currently enforce this rule, we encourage you to follow this rule for improved future compatibility.
+> [!NOTE]
+> Although Firefox doesn't currently enforce this rule, we encourage you to follow this rule for improved future compatibility.
 
 For more on the {{domXref("Node.ownerDocument")}} issues, see the W3C DOM FAQ.
 

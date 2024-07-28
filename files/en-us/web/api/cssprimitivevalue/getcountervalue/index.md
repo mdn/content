@@ -16,7 +16,8 @@ value. If this CSS value doesn't contain a counter value, a {{domxref("DOMExcept
 is raised. Modification to the corresponding style property can be achieved using the
 {{domxref("Counter")}} interface.
 
-> **Note:** This method was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
+> [!NOTE]
+> This method was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
 > not implement it.
 >
 > To achieve your purpose, you can use:

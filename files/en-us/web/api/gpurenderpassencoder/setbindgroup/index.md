@@ -80,7 +80,8 @@ device.queue.submit([commandEncoder.finish()]);
 // ...
 ```
 
-> **Note:** Study the other [WebGPU Samples](https://webgpu.github.io/webgpu-samples) for more examples of `setBindGroup()` usage.
+> [!NOTE]
+> Study the other [WebGPU Samples](https://webgpu.github.io/webgpu-samples) for more examples of `setBindGroup()` usage.
 
 ## Specifications
 

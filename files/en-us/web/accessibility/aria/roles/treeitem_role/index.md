@@ -25,7 +25,8 @@ Each parent node contains or owns an element with role [`group`](/en-US/docs/Web
 
 Each parent node should include the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) attribute. It is set to `false` when closed `true` when open. End nodes should not have the `aria-expanded` attribute included as the presence of the attribute indicates to assistive technologies that the node is a parent.
 
-> **Note:** ARIA tree views use navigation more similar to native applications than to web applications and are navigated primarily with arrow keys on the keyboard instead of the <kbd>Tab</kbd>. This form of navigation is not common for most browser content, though normal and expected for native applications. For this reason, consider alternative options to address the functionality you need before creating a tree view.
+> [!NOTE]
+> ARIA tree views use navigation more similar to native applications than to web applications and are navigated primarily with arrow keys on the keyboard instead of the <kbd>Tab</kbd>. This form of navigation is not common for most browser content, though normal and expected for native applications. For this reason, consider alternative options to address the functionality you need before creating a tree view.
 
 Any element with a `treeitem` role must be nested in, or owned by, an element with role `tree`. Tree items can be a child of `tree`, `treeitem`, or an element with role `group` that is contained in, or owned by, an element with role `tree` or `treeitem`. If a `treeitem` is not nested within a `tree`, or nested in a `group` that is owned by a `tree`, include the [`id`](/en-US/docs/Web/HTML/Global_attributes#id) of the `treeitem` in the [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns) attribute value on the owning `tree`, `treeitem` or `group` element.
 

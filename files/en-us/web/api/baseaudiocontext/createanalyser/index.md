@@ -12,11 +12,13 @@ The `createAnalyser()` method of the
 {{domxref("BaseAudioContext")}} interface creates an {{domxref("AnalyserNode")}}, which
 can be used to expose audio time and frequency data and create data visualizations.
 
-> **Note:** The {{domxref("AnalyserNode.AnalyserNode", "AnalyserNode()")}} constructor is the
+> [!NOTE]
+> The {{domxref("AnalyserNode.AnalyserNode", "AnalyserNode()")}} constructor is the
 > recommended way to create an {{domxref("AnalyserNode")}}; see
 > [Creating an AudioNode](/en-US/docs/Web/API/AudioNode#creating_an_audionode).
 
-> **Note:** For more on using this node, see the
+> [!NOTE]
+> For more on using this node, see the
 > {{domxref("AnalyserNode")}} page.
 
 ## Syntax

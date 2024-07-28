@@ -221,7 +221,8 @@ Unlike base class constructors, derived constructors have no initial `this` bind
 this = new Base();
 ```
 
-> **Warning:** Referring to `this` before calling `super()` will throw an error.
+> [!WARNING]
+> Referring to `this` before calling `super()` will throw an error.
 
 Derived classes must not return before calling `super()`, unless the constructor returns an object (so the `this` value is overridden) or the class has no constructor at all.
 
@@ -503,7 +504,8 @@ bird.sayBye = car.sayBye;
 bird.sayBye(); // Bye from Ferrari
 ```
 
-> **Note:** Classes are always in strict mode. Calling methods with an undefined `this` will throw an error if the method tries to access properties on `this`.
+> [!NOTE]
+> Classes are always in strict mode. Calling methods with an undefined `this` will throw an error if the method tries to access properties on `this`.
 >
 > ```js example-bad
 > const carSayHi = car.sayHi;

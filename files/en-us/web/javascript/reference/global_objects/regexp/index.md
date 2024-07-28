@@ -52,7 +52,8 @@ const re = new RegExp("\\w+");
 
 ### Special handling for regexes
 
-> **Note:** Whether something is a "regex" can be [duck-typed](https://en.wikipedia.org/wiki/Duck_typing). It doesn't have to be a `RegExp`!
+> [!NOTE]
+> Whether something is a "regex" can be [duck-typed](https://en.wikipedia.org/wiki/Duck_typing). It doesn't have to be a `RegExp`!
 
 Some built-in methods would treat regexes specially. They decide whether `x` is a regex through [multiple steps](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-isregexp):
 
@@ -274,7 +275,8 @@ const url = "http://xxx.domain.com";
 console.log(/^https?:\/\/(.+?)\./.exec(url)[1]); // 'xxx'
 ```
 
-> **Note:** Instead of using regular expressions for parsing URLs, it is usually better to use the browsers built-in URL parser by using the [URL API](/en-US/docs/Web/API/URL_API).
+> [!NOTE]
+> Instead of using regular expressions for parsing URLs, it is usually better to use the browsers built-in URL parser by using the [URL API](/en-US/docs/Web/API/URL_API).
 
 ### Building a regular expression from dynamic inputs
 

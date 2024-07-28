@@ -54,7 +54,8 @@ To opt out a certain part of the document use `overflow-anchor: none` on its con
 }
 ```
 
-> **Note:** The specification details that once scroll anchoring has been opted out of, you cannot opt back into it from a child element. For example, if you opt out for the entire document, you will not be able to set `overflow-anchor: auto` elsewhere in the document to turn it back on for a subsection.
+> [!NOTE]
+> The specification details that once scroll anchoring has been opted out of, you cannot opt back into it from a child element. For example, if you opt out for the entire document, you will not be able to set `overflow-anchor: auto` elsewhere in the document to turn it back on for a subsection.
 
 ### Suppression triggers
 
@@ -69,7 +70,8 @@ These suppression triggers are changes to the computed value of any of the follo
 
 Additionally, {{cssxref("position")}} changes anywhere inside the scrolling box also disable scroll anchoring.
 
-> **Note:** In [Firefox bug 1584285](https://bugzil.la/1584285) the `layout.css.scroll-anchoring.suppressions.enabled` flag was added to Firefox Nightly in order to allow the disabling of these triggers.
+> [!NOTE]
+> In [Firefox bug 1584285](https://bugzil.la/1584285) the `layout.css.scroll-anchoring.suppressions.enabled` flag was added to Firefox Nightly in order to allow the disabling of these triggers.
 
 ## Further reading
 

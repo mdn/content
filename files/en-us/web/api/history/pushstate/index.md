@@ -30,7 +30,8 @@ pushState(state, unused, url)
 
     The `state` object can be anything that can be serialized.
 
-    > **Note:** Some browsers save `state` objects to the user's disk so they can be restored after the user restarts the browser, and impose a size limit on the serialized representation of a `state` object, and will throw an exception if you pass a `state` object whose serialized representation is larger than that size limit. So in cases where you want to ensure you have more space than what some browsers might impose, you're encouraged to use {{domxref("Window.sessionStorage", "sessionStorage")}} and/or {{domxref("Window.localStorage", "localStorage")}}.
+    > [!NOTE]
+    > Some browsers save `state` objects to the user's disk so they can be restored after the user restarts the browser, and impose a size limit on the serialized representation of a `state` object, and will throw an exception if you pass a `state` object whose serialized representation is larger than that size limit. So in cases where you want to ensure you have more space than what some browsers might impose, you're encouraged to use {{domxref("Window.sessionStorage", "sessionStorage")}} and/or {{domxref("Window.localStorage", "localStorage")}}.
 
 - `unused`
 

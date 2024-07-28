@@ -50,4 +50,5 @@ getting.then((got) => {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.privacy`](https://developer.chrome.com/docs/extensions/reference/privacy/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.privacy`](https://developer.chrome.com/docs/extensions/reference/privacy/) API.

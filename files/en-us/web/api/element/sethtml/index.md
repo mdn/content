@@ -59,7 +59,8 @@ document
 // Result (as a string): "abc  def"
 ```
 
-> **Note:** This example uses the default sanitizer.
+> [!NOTE]
+> This example uses the default sanitizer.
 > The {{domxref("Sanitizer/Sanitizer","Sanitizer")}} constructor is used to configure sanitizer options.
 
 ## Specifications

@@ -12,7 +12,8 @@ The `EXT_texture_compression_bptc` extension is part of the [WebGL API](/en-US/d
 
 WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 
-> **Note:** Support depends on the system's graphics driver. There is no support on Windows.
+> [!NOTE]
+> Support depends on the system's graphics driver. There is no support on Windows.
 >
 > This extension is available to both, {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} and {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}} contexts.
 

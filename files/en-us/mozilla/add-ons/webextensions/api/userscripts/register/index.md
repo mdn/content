@@ -59,7 +59,8 @@ Unlike content script options, the userScriptOptions object does not have a CSS 
 
 A {{JSxRef("Promise")}} that is fulfilled with a {{WebExtAPIRef("userScripts.RegisteredUserScript","RegisteredUserScript")}} object that is use to unregister the user scripts.
 
-> **Note:** User scripts are unregistered when the related extension page (from which the user scripts were registered) is unloaded, so you should register user scripts from an extension page that persists at least as long as you want the user scripts to stay registered.
+> [!NOTE]
+> User scripts are unregistered when the related extension page (from which the user scripts were registered) is unloaded, so you should register user scripts from an extension page that persists at least as long as you want the user scripts to stay registered.
 
 ## Browser compatibility
 

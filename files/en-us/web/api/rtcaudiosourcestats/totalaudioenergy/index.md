@@ -14,7 +14,8 @@ The **`totalAudioEnergy`** property of the {{domxref("RTCAudioSourceStats")}} di
 
 The total energy across a particular duration can be determined by subtracting the value of this property returned by two different `getStats()` calls.
 
-> **Note:** For audio energy of remotely sourced tracks, see {{domxref("RTCInboundRtpStreamStats.totalAudioEnergy")}}.
+> [!NOTE]
+> For audio energy of remotely sourced tracks, see {{domxref("RTCInboundRtpStreamStats.totalAudioEnergy")}}.
 
 ## Value
 

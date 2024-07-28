@@ -18,7 +18,8 @@ before appending it to the specified new parent.)
 
 This means that a node cannot be in two locations of the document simultaneously.
 
-> **Note:** The {{domxref("Node.cloneNode()")}} can be used to make a copy
+> [!NOTE]
+> The {{domxref("Node.cloneNode()")}} can be used to make a copy
 > of the node before appending it under the new parent. Note that the copies made with
 > `cloneNode()` will not be automatically kept in sync.
 
@@ -107,7 +108,8 @@ Pre-insert validity
 </script>
 ```
 
-> **Note:** There is no `insertAfter()` method.
+> [!NOTE]
+> There is no `insertAfter()` method.
 > It can be emulated by combining the `insertBefore` method
 > with {{domxref("Node.nextSibling")}}.
 >

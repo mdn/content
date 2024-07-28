@@ -38,7 +38,8 @@ First, each time a task exits, the event loop checks to see if the task is retur
 
 Second, if a microtask adds more microtasks to the queue by calling {{domxref("queueMicrotask()")}}, those newly-added microtasks _execute before the next task is run_. That's because the event loop will keep calling microtasks until there are none left in the queue, even if more keep getting added.
 
-> **Warning:** Since microtasks can themselves enqueue more microtasks, and the event loop continues processing microtasks until the queue is empty, there's a real risk of getting the event loop endlessly processing microtasks. Be cautious with how you go about recursively adding microtasks.
+> [!WARNING]
+> Since microtasks can themselves enqueue more microtasks, and the event loop continues processing microtasks until the queue is empty, there's a real risk of getting the event loop endlessly processing microtasks. Be cautious with how you go about recursively adding microtasks.
 
 ## Using microtasks
 

@@ -41,7 +41,8 @@ _This interface also inherits properties from {{domxref("EventTarget")}}._
 
 _This interface also inherits methods from {{domxref("EventTarget")}}._
 
-> **Note:** The {{domxref("TextTrackCue")}} interface is an abstract class used as the parent for other cue interfaces such as {{domxref("VTTCue")}}. Therefore, when adding or removing a cue you will be passing in one of the cue types that inherit from `TextTrackCue`.
+> [!NOTE]
+> The {{domxref("TextTrackCue")}} interface is an abstract class used as the parent for other cue interfaces such as {{domxref("VTTCue")}}. Therefore, when adding or removing a cue you will be passing in one of the cue types that inherit from `TextTrackCue`.
 
 - {{domxref("TextTrack.addCue()")}}
   - : Adds a cue (specified as a {{domxref("TextTrackCue")}} object) to the track's list of cues.

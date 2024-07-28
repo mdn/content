@@ -8,7 +8,8 @@ page-type: guide
 
 This article provides practical advice on how to write your web content so that it conforms to the success criteria outlined in the **Understandable** principle of the Web Content Accessibility Guidelines (WCAG) 2.0 and 2.1. Understandable states that information and the operation of user interface must be understandable.
 
-> **Note:** To read the W3C definitions for Understandable and its guidelines and success criteria, see [Principle 3: Understandable — Information and the operation of user interface must be understandable](https://www.w3.org/TR/WCAG21/#understandable).
+> [!NOTE]
+> To read the W3C definitions for Understandable and its guidelines and success criteria, see [Principle 3: Understandable — Information and the operation of user interface must be understandable](https://www.w3.org/TR/WCAG21/#understandable).
 
 ## Guideline 3.1 — Readable: Make text content readable and understandable
 
@@ -156,7 +157,8 @@ This guideline focuses on making text content as understandable as possible.
   </tbody>
 </table>
 
-> **Note:** Also see the WCAG description for [Guideline 3.1 Readable: Make text content readable and understandable](https://www.w3.org/TR/WCAG21/#readable).
+> [!NOTE]
+> Also see the WCAG description for [Guideline 3.1 Readable: Make text content readable and understandable](https://www.w3.org/TR/WCAG21/#readable).
 
 ## Guideline 3.2 — Predictable: Make Web pages appear and operate in predictable ways
 
@@ -296,7 +298,8 @@ This guideline focuses on making user interfaces intuitive and understandable.
   </tbody>
 </table>
 
-> **Note:** Also see the WCAG description for [Guideline 3.2 Predictable: Make Web pages appear and operate in predictable ways](https://www.w3.org/TR/WCAG21/#predictable).
+> [!NOTE]
+> Also see the WCAG description for [Guideline 3.2 Predictable: Make Web pages appear and operate in predictable ways](https://www.w3.org/TR/WCAG21/#predictable).
 
 ## Guideline 3.3 — Input Assistance: Help users avoid and correct mistakes
 
@@ -499,7 +502,8 @@ A cognitive function test, like remembering a password, must not be required for
   </tbody>
 </table>
 
-> **Note:** Also see the WCAG description for [Guideline 3.3 Input Assistance: Help users avoid and correct mistakes](https://www.w3.org/TR/WCAG21/#input-assistance).
+> [!NOTE]
+> Also see the WCAG description for [Guideline 3.3 Input Assistance: Help users avoid and correct mistakes](https://www.w3.org/TR/WCAG21/#input-assistance).
 
 ## See also
 

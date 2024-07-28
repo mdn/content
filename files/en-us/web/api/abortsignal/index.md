@@ -167,7 +167,8 @@ try {
 }
 ```
 
-> **Note:** Unlike when using {{domxref("AbortSignal/timeout_static", "AbortSignal.timeout()")}}, there is no way to tell whether the final abort was caused by a timeout.
+> [!NOTE]
+> Unlike when using {{domxref("AbortSignal/timeout_static", "AbortSignal.timeout()")}}, there is no way to tell whether the final abort was caused by a timeout.
 
 ### Implementing an abortable API
 

@@ -22,7 +22,8 @@ It can be one of the following:
 - `opaqueredirect`: The fetch request was made with `redirect: "manual"`.
   The Response's status is 0, headers are empty, body is null and trailer is empty.
 
-> **Note:** An "error" Response never really gets exposed to script: such a response to a {{domxref("Window/fetch", "fetch()")}} would reject the promise.
+> [!NOTE]
+> An "error" Response never really gets exposed to script: such a response to a {{domxref("Window/fetch", "fetch()")}} would reject the promise.
 
 ## Value
 

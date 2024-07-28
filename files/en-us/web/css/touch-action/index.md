@@ -13,7 +13,8 @@ By default, panning (scrolling) and pinching gestures are handled exclusively by
 
 When a gesture is started, the browser intersects the `touch-action` values of the touched element and its ancestors, up to the one that implements the gesture (in other words, the first containing scrolling element). This means that in practice, `touch-action` is typically applied only to top-level elements which have some custom behavior, without needing to specify `touch-action` explicitly on any of that element's descendants.
 
-> **Note:** After a gesture starts, changes to `touch-action` will not have any impact on the behavior of the current gesture.
+> [!NOTE]
+> After a gesture starts, changes to `touch-action` will not have any impact on the behavior of the current gesture.
 
 ## Syntax
 

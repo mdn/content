@@ -31,7 +31,8 @@ When the source stream ends, `state` is set to `inactive` and
 data gathering stops. A final {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} event is sent to the
 `MediaRecorder`, followed by a {{domxref("MediaRecorder/stop_event", "stop")}} event.
 
-> **Note:** If the browser is unable to start recording or continue
+> [!NOTE]
+> If the browser is unable to start recording or continue
 > recording, it will raise an {{domxref("MediaRecorder.error_event", "error")}} event, followed by a
 > {{domxref("MediaRecorder.dataavailable_event", "dataavailable")}} event containing the `Blob` it
 > has gathered, followed by the {{domxref("MediaRecorder/stop_event", "stop")}} event.
@@ -53,7 +54,8 @@ start(timeslice)
     method is called to obtain the `Blob` and trigger the creation of a new
     `Blob` into which the media continues to be recorded.
 
-    > **Note:** Like other time values in web APIs, `timeslice` is not exact and the real intervals may be slightly longer due to other pending tasks before the creation of the next blob.
+    > [!NOTE]
+    > Like other time values in web APIs, `timeslice` is not exact and the real intervals may be slightly longer due to other pending tasks before the creation of the next blob.
 
 ### Return value
 
