@@ -3603,6 +3603,7 @@
 /en-US/docs/Glossary/Rendering_engine	/en-US/docs/Glossary/Engine/Rendering
 /en-US/docs/Glossary/Responsive_design	/en-US/docs/Glossary/Responsive_web_design
 /en-US/docs/Glossary/Round_Trip_Time_(RTT)	/en-US/docs/Glossary/Round_Trip_Time
+/en-US/docs/Glossary/Routers	/en-US/docs/Glossary/Router
 /en-US/docs/Glossary/SRTP	/en-US/docs/Glossary/RTP
 /en-US/docs/Glossary/SSL_Glossary	/en-US/docs/Glossary/SSL
 /en-US/docs/Glossary/Scrollport	/en-US/docs/Glossary/Scroll_container
