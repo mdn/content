@@ -74,7 +74,7 @@ string text line 2`);
 // string text line 2"
 ```
 
-The spread a single line across multiple lines (for readability during development), you can escape the newline by using a backslash (`\`) at the end of the line:
+Like [normal string literals](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#escape_sequences), you can write a single-line string across multiple lines for source code readability, by escaping the newline with a backslash (`\`):
 
 ```js
 console.log(`string text line 1 \
