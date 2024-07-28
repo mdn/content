@@ -7,7 +7,7 @@ spec-urls: https://httpwg.org/specs/rfc9110.html#uri
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/URL")}}
 
-The target of an HTTP request is called a "resource", whose nature isn't defined further; it can be a document, a photo, or anything else. Each resource is identified by a Uniform Resource Identifier ({{Glossary("URI")}}) used throughout HTTP for identifying resources.
+**URLs** are used to identify "resources" on the web. URLs are commonly used as targets of [HTTP](/en-US/docs/Web/HTTP) requests, in which case the URL represents a location for a physical resource, such as a document, a photo, binary data, etc. URLs can also be used to trigger behaviors other than fetching a resource, including opening the email client, sending text messages, or executing JavaScript, when used in other places such as the [`href`](/en-US/docs/Web/HTML/Element/a#href) of an HTML `<a>` link.
 
 ## URLs and URNs
 

@@ -32,7 +32,7 @@ loaded the next one:
 resource://<File-loader> -> <File-loaded>
 ```
 
-Please refer to [Identifying resources on the web](/en-US/docs/Web/URL) for more general details.
+Please refer to [the URL reference](/en-US/docs/Web/URL) for more general details.
 
 In this article, we focus on resource URIs, which are used internally by Firefox to
 point to built-in resources.
@@ -94,6 +94,6 @@ resource: is Firefox only.
 
 ## See also
 
-- [Identifying resources on the Web](/en-US/docs/Web/URL)
+- [URLs](/en-US/docs/Web/URL)
 - [What is a URL?](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
 - [IANA list of URI schemes](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml) (`resource:` is [covered here](https://www.iana.org/assignments/uri-schemes/prov/resource))
