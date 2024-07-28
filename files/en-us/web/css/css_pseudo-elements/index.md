@@ -91,7 +91,7 @@ Pseudo-elements enable targeting entities not included in HTML and sections of c
   - {{cssxref("content")}} property
   - {{cssxref("quotes")}} property
 
-- [Text fragments](/en-US/docs/Web/Text_fragments)
+- [Text fragments](/en-US/docs/Web/URL/Text_fragments)
 
 - {{DOMXref("AnimationEvent.pseudoElement")}} property
 - {{DOMXref("KeyframeEffect.pseudoElement")}} property

@@ -1,11 +1,11 @@
 ---
-title: Identifying resources on the Web
-slug: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
+title: URLs
+slug: Web/URL
 page-type: guide
 spec-urls: https://httpwg.org/specs/rfc9110.html#uri
 ---
 
-{{HTTPSidebar}}
+{{QuickLinksWithSubpages("/en-US/docs/Web/URL")}}
 
 The target of an HTTP request is called a "resource", whose nature isn't defined further; it can be a document, a photo, or anything else. Each resource is identified by a Uniform Resource Identifier ({{Glossary("URI")}}) used throughout HTTP for identifying resources.
 
@@ -50,23 +50,28 @@ The two URNs correspond to
 - ![Protocol](mdn-url-protocol@x2.png)
   - : `http://` is the protocol. It indicates which protocol the browser must use. Usually it is the HTTP protocol or its secured version, HTTPS. The Web requires one of these two, but browsers also know how to handle other protocols such as `mailto:` (to open a mail client) or `ftp:` to handle a file transfer, so don't be surprised if you see such protocols. Common schemes are:
 
-| Scheme      | Description                                                          |
-| ----------- | -------------------------------------------------------------------- |
-| data        | [Data URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)           |
-| file        | Host-specific file names                                             |
-| ftp         | {{Glossary("FTP","File Transfer Protocol")}}                         |
-| http/https  | [Hyper text transfer protocol (Secure)](/en-US/docs/Glossary/HTTP)   |
-| javascript  | URL-embedded JavaScript code                                         |
-| mailto      | Electronic mail address                                              |
-| ssh         | Secure shell                                                         |
-| tel         | telephone                                                            |
-| urn         | Uniform Resource Names                                               |
-| view-source | Source code of the resource                                          |
-| ws/wss      | [WebSocket connections (Secure)](/en-US/docs/Web/API/WebSockets_API) |
+| Scheme                           | Description                                                          |
+| -------------------------------- | -------------------------------------------------------------------- |
+| data                             | [Data URLs](/en-US/docs/Web/URL/Data_URLs)                           |
+| file                             | Host-specific file names                                             |
+| ftp                              | {{Glossary("FTP","File Transfer Protocol")}}                         |
+| http/https                       | [Hyper text transfer protocol (Secure)](/en-US/docs/Glossary/HTTP)   |
+| javascript                       | URL-embedded JavaScript code                                         |
+| mailto                           | Electronic mail address                                              |
+| resource {{Non-standard_inline}} | Firefox and Firefox browser extensions to load resources internally  |
+| ssh                              | Secure shell                                                         |
+| tel                              | telephone                                                            |
+| urn                              | Uniform Resource Names                                               |
+| view-source                      | Source code of the resource                                          |
+| ws/wss                           | [WebSocket connections (Secure)](/en-US/docs/Web/API/WebSockets_API) |
+
+When using URLs in {{Glossary("HTML")}} content, you should generally only use a few of these URL schemes. When referring to subresources — that is, files that are being loaded as part of a larger document — you should only use the HTTP and HTTPS schemes. Increasingly, browsers are removing support for using FTP to load subresources, for security reasons.
+
+FTP is still acceptable at the top level (such as typed directly into the browser's URL bar, or the target of a link), although some browsers may delegate loading FTP content to another application.
 
 ### Authority
 
-- ![Domaine Name](mdn-url-domain@x2.png)
+- ![Domain Name](mdn-url-domain@x2.png)
   - : `www.example.com` is the domain name or authority that governs the namespace. It indicates which Web server is being requested. Alternatively, it is possible to directly use an {{Glossary("IP address")}}, but because it is less convenient, it is not often used on the Web.
 
 ### Port
@@ -89,11 +94,7 @@ The two URNs correspond to
 - ![Anchor](mdn-url-anchor@x2.png)
   - : `#SomewhereInTheDocument` is an anchor to another part of the resource itself. An anchor represents a sort of "bookmark" inside the resource, giving the browser the directions to show the content located at that "bookmarked" spot. On an HTML document, for example, the browser will scroll to the point where the anchor is defined; on a video or audio document, the browser will try to go to the time the anchor represents. It is worth noting that the part after the #, also known as the fragment identifier, is never sent to the server with the request.
 
-## Usage notes
-
-When using URLs in {{Glossary("HTML")}} content, you should generally only use a few of these URL schemes. When referring to subresources — that is, files that are being loaded as part of a larger document — you should only use the HTTP and HTTPS schemes. Increasingly, browsers are removing support for using FTP to load subresources, for security reasons.
-
-FTP is still acceptable at the top level (such as typed directly into the browser's URL bar, or the target of a link), although some browsers may delegate loading FTP content to another application.
+    There's a special [text fragment](/en-US/docs/Web/URL/Text_fragments) feature that allows you to link to a specific part of a web page identified by its text content.
 
 ## Examples
 

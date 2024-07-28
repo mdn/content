@@ -1,10 +1,10 @@
 ---
 title: Resource URLs
-slug: Web/HTTP/Basics_of_HTTP/Resource_URLs
+slug: Web/URL/Resource_URLs
 page-type: guide
 ---
 
-{{HTTPSidebar}}{{non-standard_header}}
+{{QuickLinksWithSubpages("/en-US/docs/Web/URL")}}{{non-standard_header}}
 
 Resource URLs, URLs prefixed with the `resource:` scheme, are used by
 Firefox and Firefox browser extensions to load resources internally, but some of the
@@ -32,7 +32,7 @@ loaded the next one:
 resource://<File-loader> -> <File-loaded>
 ```
 
-Please refer to [Identifying resources on the web](/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web) for more general details.
+Please refer to [Identifying resources on the web](/en-US/docs/Web/URL) for more general details.
 
 In this article, we focus on resource URIs, which are used internally by Firefox to
 point to built-in resources.
@@ -94,6 +94,6 @@ resource: is Firefox only.
 
 ## See also
 
-- [Identifying resources on the Web](/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)
+- [Identifying resources on the Web](/en-US/docs/Web/URL)
 - [What is a URL?](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
 - [IANA list of URI schemes](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml) (`resource:` is [covered here](https://www.iana.org/assignments/uri-schemes/prov/resource))
