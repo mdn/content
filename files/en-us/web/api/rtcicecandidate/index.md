@@ -19,7 +19,8 @@ For details on how the ICE process works, see [Lifetime of a WebRTC session](/en
 
   - : Creates an `RTCIceCandidate` object to represent a single ICE candidate, optionally configured based on a configuration object.
 
-    > **Note:** For backwards compatibility, the constructor also accepts as input a string containing the value of the {{domxref("RTCIceCandidate.candidate", "candidate")}} property instead of the configuration object.
+    > [!NOTE]
+    > For backwards compatibility, the constructor also accepts as input a string containing the value of the {{domxref("RTCIceCandidate.candidate", "candidate")}} property instead of the configuration object.
 
 ## Instance properties
 
@@ -56,7 +57,7 @@ For details on how the ICE process works, see [Lifetime of a WebRTC session](/en
 
 - {{domxref("RTCIceCandidate.toJSON", "toJSON()")}}
   - : Returns a {{Glossary("JSON")}} representation of the `RTCIceCandidate`'s current configuration.
-    The format of the representation is the same as the `candidateInfo` object that can optionally be passed to the {{domxref("RTCIceCandidate.RTCIceCandidate()","RTCIceCandidate() constructor")}} to configure a candidate.
+    The format of the representation is the same as the `candidateInfo` object that can optionally be passed to the {{domxref("RTCIceCandidate.RTCIceCandidate()","RTCIceCandidate()")}} constructor to configure a candidate.
 
 ## Examples
 

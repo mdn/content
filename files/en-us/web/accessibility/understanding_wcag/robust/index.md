@@ -8,7 +8,8 @@ page-type: guide
 
 This article provides practical advice on how to write your web content so that it conforms to the success criteria outlined in the **Robust** principle of the Web Content Accessibility Guidelines (WCAG) 2.0 and 2.1. Robust states that content must be robust enough that it can be interpreted reliably by a wide variety of user agents, including assistive technologies. This can generally be achieved by following web standards and [testing rigorously](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing).
 
-> **Note:** To read the W3C definitions for Robust and its guidelines and success criteria, see [Principle 4: Robust — Content must be robust enough that it can be interpreted reliably by a wide variety of user agents, including assistive technologies.](https://www.w3.org/TR/WCAG21/#robust)
+> [!NOTE]
+> To read the W3C definitions for Robust and its guidelines and success criteria, see [Principle 4: Robust — Content must be robust enough that it can be interpreted reliably by a wide variety of user agents, including assistive technologies.](https://www.w3.org/TR/WCAG21/#robust)
 
 ## Guideline 4.1 — Compatible: Maximize compatibility with current and future user agents, including assistive technologies
 
@@ -98,7 +99,8 @@ This guideline focuses on making content as compatible as possible, not only wit
   </tbody>
 </table>
 
-> **Note:** Also see the WCAG description for [Guideline 4.1: Compatible: Maximize compatibility with current and future user agents, including assistive technologies.](https://www.w3.org/TR/WCAG21/#compatible)
+> [!NOTE]
+> Also see the WCAG description for [Guideline 4.1: Compatible: Maximize compatibility with current and future user agents, including assistive technologies.](https://www.w3.org/TR/WCAG21/#compatible)
 
 ## See also
 

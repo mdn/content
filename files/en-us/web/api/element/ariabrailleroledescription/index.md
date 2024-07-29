@@ -11,7 +11,7 @@ browser-compat: api.Element.ariaBrailleRoleDescription
 The **`ariaBrailleRoleDescription`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-brailleroledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-brailleroledescription) attribute, which defines the ARIA braille role description of the element.
 
 This property may be used to provide an abbreviated version of the [`aria-roledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription) value.
-It should only be used if `aria-roledescription` is present and in the rare case where it is is too verbose for braille.
+It should only be used if `aria-roledescription` is present and in the rare case where it is too verbose for braille.
 The [`aria-brailleroledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-brailleroledescription) contains additional information about when the property should be set.
 
 ## Value

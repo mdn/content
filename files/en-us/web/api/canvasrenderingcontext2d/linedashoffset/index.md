@@ -12,7 +12,8 @@ The
 **`CanvasRenderingContext2D.lineDashOffset`**
 property of the Canvas 2D API sets the line dash offset, or "phase."
 
-> **Note:** Lines are drawn by calling the
+> [!NOTE]
+> Lines are drawn by calling the
 > {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}} method.
 
 ## Value

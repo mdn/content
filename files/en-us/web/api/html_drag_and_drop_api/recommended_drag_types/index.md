@@ -38,7 +38,8 @@ Note: the URL type is `uri-list` with an _I_, not an _L_.
 
 To drag multiple links, separate each link inside the `text/uri-list` data with a CRLF linebreak. Lines that begin with a number sign (`#`) are comments, and should not be considered URLs. You can use comments to indicate the purpose of a URL, the title associated with a URL, or other data.
 
-> **Warning:** The `text/plain` fallback for multiple links should include all URLs, but no comments.
+> [!WARNING]
+> The `text/plain` fallback for multiple links should include all URLs, but no comments.
 
 For example, this sample `text/uri-list` data contains two links and a comment:
 
@@ -50,7 +51,8 @@ http://www.example.com
 
 When retrieving a dropped link, ensure you handle when multiple links are dragged, including any comments. For convenience, the special type `URL` may be used to refer to the first valid link within data for the `text/uri-list` type.
 
-> **Warning:** Do not add data with the `URL` type — attempting to do so will set the value of the `text/uri-list` type instead.
+> [!WARNING]
+> Do not add data with the `URL` type — attempting to do so will set the value of the `text/uri-list` type instead.
 
 ```js
 const url = event.dataTransfer.getData("URL");

@@ -16,7 +16,8 @@ When called on
 the {{domxref("document")}} object, the complete document is searched, including the
 root node. You may also call {{domxref("Element.getElementsByClassName", "getElementsByClassName()")}} on any element; it will return only elements which are descendants of the specified root element with the given class name(s).
 
-> **Warning:** This is a live {{domxref("HTMLCollection")}}. Changes in the DOM will
+> [!WARNING]
+> This is a live {{domxref("HTMLCollection")}}. Changes in the DOM will
 > reflect in the array as the changes occur. If an element selected by this array no
 > longer qualifies for the selector, it will automatically be removed. Be aware of this
 > for iteration purposes.

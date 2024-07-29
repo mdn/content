@@ -86,7 +86,8 @@ You can also enable scrolling along the x-axis by using {{cssxref("overflow-x")}
 
 As with `scroll`, you get a scrollbar in the scrolling dimension whether or not there is enough content to cause a scrollbar.
 
-> **Note:** You can specify x- and y-axis scrolling using the `overflow` property, passing two values. If two keywords are specified, the first applies to `overflow-x` and the second applies to `overflow-y`. Otherwise, both `overflow-x` and `overflow-y` are set to the same value. For example, `overflow: scroll hidden` would set `overflow-x` to `scroll` and `overflow-y` to `hidden`.
+> [!NOTE]
+> You can specify x- and y-axis scrolling using the `overflow` property, passing two values. If two keywords are specified, the first applies to `overflow-x` and the second applies to `overflow-y`. Otherwise, both `overflow-x` and `overflow-y` are set to the same value. For example, `overflow: scroll hidden` would set `overflow-x` to `scroll` and `overflow-y` to `hidden`.
 
 If you only want scrollbars to appear when there is more content than can fit in the box, use `overflow: auto`. This allows the browser to determine if it should display scrollbars.
 

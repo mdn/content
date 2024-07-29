@@ -9,7 +9,8 @@ browser-compat: css.types.percentage
 
 The **`<percentage>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a percentage value. It is often used to define a size as relative to an element's parent object. Numerous properties can use percentages, such as {{CSSxRef("width")}}, {{CSSxRef("height")}}, {{CSSxRef("margin")}}, {{CSSxRef("padding")}}, and {{CSSxRef("font-size")}}.
 
-> **Note:** Only calculated values can be inherited. Thus, even if a percentage value is used on the parent property, a real value (such as a width in pixels for a {{CSSxRef("&lt;length&gt;")}} value) will be accessible on the inherited property, not the percentage value.
+> [!NOTE]
+> Only calculated values can be inherited. Thus, even if a percentage value is used on the parent property, a real value (such as a width in pixels for a {{CSSxRef("&lt;length&gt;")}} value) will be accessible on the inherited property, not the percentage value.
 
 ## Syntax
 

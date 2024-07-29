@@ -11,7 +11,8 @@ browser-compat: html.elements.plaintext
 
 The **`<plaintext>`** [HTML](/en-US/docs/Web/HTML) element renders everything following the start tag as raw text, ignoring any following HTML. There is no closing tag, since everything after it is considered raw text.
 
-> **Warning:** Do not use this element.
+> [!WARNING]
+> Do not use this element.
 >
 > - `<plaintext>` is deprecated since HTML 2, and not all browsers implemented it. Browsers that did implement it didn't do so consistently.
 > - `<plaintext>` is obsolete; browsers that accept it may instead treat it as a {{HTMLElement("pre")}} element that still interprets HTML within.
@@ -40,4 +41,4 @@ This element implements the {{domxref('HTMLElement')}} interface.
 ## See also
 
 - The {{HTMLElement("pre")}} and {{HTMLElement("code")}} elements, which should be used instead.
-- The {{HTMLElement("xmp")}} element, also obsolete, similar to {{HTMLElement("plaintext")}}.
+- The {{HTMLElement("xmp")}} element, also obsolete, similar to `<plaintext>`.

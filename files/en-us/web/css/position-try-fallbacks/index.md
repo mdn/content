@@ -11,9 +11,11 @@ browser-compat: css.properties.position-try-fallbacks
 
 The **`position-try-fallbacks`** [CSS](/en-US/docs/Web/CSS) property enables you to specify a list of one or more alternative **position try fallback options** for anchor-positioned elements to be placed relative to their associated anchor elements. When the element would otherwise overflow its inset-modified containing block, the browser will try placing the positioned element in these different fallback positions, in the order provided, until it finds a value that stops it from overflowing its container or the viewport.
 
-> **Note:** The {{cssxref("position-try")}} shorthand property can be used to specify {{cssxref("position-try-order")}} and `position-try-fallbacks` values in a single declaration.
+> [!NOTE]
+> The {{cssxref("position-try")}} shorthand property can be used to specify {{cssxref("position-try-order")}} and `position-try-fallbacks` values in a single declaration.
 
-> **Note:** This property was originally named and supported in Chromium browsers as `position-try-options`, with the same property values. Until `position-try-fallbacks` is supported, use the {{cssxref("position-try")}} shorthand instead.
+> [!NOTE]
+> This property was originally named and supported in Chromium browsers as `position-try-options`, with the same property values. Until `position-try-fallbacks` is supported, use the {{cssxref("position-try")}} shorthand instead.
 
 ## Syntax
 
@@ -70,7 +72,8 @@ The `position-try-fallbacks` property may be specified as either the keyword val
 - {{cssxref("dashed-ident")}}
   - : Adds a custom {{cssxref("@position-try")}} option to the fallback options list, the identifying name of which matches the specified `dashed-ident`. If no custom position option exists with that name, the option is ignored.
 
-> **Note:** Multiple options can be specified, separated by commas.
+> [!NOTE]
+> Multiple options can be specified, separated by commas.
 
 ## Description
 
@@ -80,7 +83,8 @@ This is achieved by providing one or more position-try fallback options in the `
 
 If no option can be found that will place the positioned element completely on-screen, the browser will revert to displaying the positioned element at its default position before any try fallback options were applied.
 
-> **Note:** In some situations you might want to just hide overflowing positioned elements, which can be achieved using the {{cssxref("position-visibility")}} property. In most cases however it is better to keep them on-screen and usable.
+> [!NOTE]
+> In some situations you might want to just hide overflowing positioned elements, which can be achieved using the {{cssxref("position-visibility")}} property. In most cases however it is better to keep them on-screen and usable.
 
 For detailed information on anchor features and position try fallback usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page and the [Handling overflow: try fallbacks and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide.
 

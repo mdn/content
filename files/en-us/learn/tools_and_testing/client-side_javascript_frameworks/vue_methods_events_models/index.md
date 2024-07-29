@@ -201,7 +201,8 @@ The first thing we need is a `data` property in our form to track the value of t
      v-model="label" />
    ```
 
-   > **Note:** You can also sync data with `<input>` values through a combination of events and `v-bind` attributes. In fact, this is what `v-model` does behind the scenes. However, the exact event and attribute combination varies depending on input types and will take more code than just using the `v-model` shortcut.
+   > [!NOTE]
+   > You can also sync data with `<input>` values through a combination of events and `v-bind` attributes. In fact, this is what `v-model` does behind the scenes. However, the exact event and attribute combination varies depending on input types and will take more code than just using the `v-model` shortcut.
 
 3. Let's test out our use of `v-model` by logging the value of the data submitted in our `onSubmit()` method. In components, data attributes are accessed using the `this` keyword. So we access our `label` field using `this.label`.
 

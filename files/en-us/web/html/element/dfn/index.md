@@ -33,7 +33,8 @@ The term being defined is identified following these rules:
 2. If the `<dfn>` contains a single child element and does not have any text content of its own, and the child element is an {{HTMLElement("abbr")}} element with a `title` attribute itself, then the exact value of the `<abbr>` element's `title` is the term being defined.
 3. Otherwise, the text content of the `<dfn>` element is the term being defined. This is shown [in the first example below](#basic_identification_of_a_term).
 
-> **Note:** If the `<dfn>` element has a `title` attribute, it _must_ contain the term being defined and no other text.
+> [!NOTE]
+> If the `<dfn>` element has a `title` attribute, it _must_ contain the term being defined and no other text.
 
 ### Links to `<dfn>` elements
 
@@ -142,7 +143,7 @@ Note the `<abbr>` element nested inside the `<dfn>`. The former establishes that
       <th scope="row">Permitted content</th>
       <td>
         <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">Phrasing content</a>,
-        but no {{HTMLElement("dfn")}} element must be a descendant.
+        but no <code>&lt;dfn&gt;</code> element must be a descendant.
       </td>
     </tr>
     <tr>

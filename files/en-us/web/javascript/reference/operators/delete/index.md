@@ -18,7 +18,8 @@ delete object.property
 delete object[property]
 ```
 
-> **Note:** The syntax allows a wider range of expressions following the `delete` operator, but only the above forms lead to meaningful behaviors.
+> [!NOTE]
+> The syntax allows a wider range of expressions following the `delete` operator, but only the above forms lead to meaningful behaviors.
 
 ### Parameters
 
@@ -71,7 +72,8 @@ It is important to consider the following scenarios:
 
 ### Using delete
 
-> **Note:** The following example uses non-strict-mode only features, like implicitly creating global variables and deleting identifiers, which are forbidden in strict mode.
+> [!NOTE]
+> The following example uses non-strict-mode only features, like implicitly creating global variables and deleting identifiers, which are forbidden in strict mode.
 
 ```js
 // Creates the property empCount on the global scope.

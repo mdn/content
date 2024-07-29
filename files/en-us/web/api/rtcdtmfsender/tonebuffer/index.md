@@ -45,7 +45,8 @@ are permitted by the DTMF standard.
   - : This character instructs the dialing process to pause for two seconds before sending
     the next character in the buffer.
 
-> **Note:** All other characters are unrecognized and will cause
+> [!NOTE]
+> All other characters are unrecognized and will cause
 > {{domxref("RTCDTMFSender.insertDTMF", "insertDTMF()")}} to throw an
 > `InvalidCharacterError` {{domxref("DOMException")}}.
 

@@ -20,7 +20,8 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 - `width`
   - : A {{cssxref("length-percentage")}} indicating the desired width of the space.
 
-> **Note:** For the `depth`, `height`, `width` attributes, some browsers may also accept [legacy MathML lengths](/en-US/docs/Web/MathML/Values#legacy_mathml_lengths).
+> [!NOTE]
+> For the `depth`, `height`, `width` attributes, some browsers may also accept [legacy MathML lengths](/en-US/docs/Web/MathML/Values#legacy_mathml_lengths).
 
 ## Examples
 

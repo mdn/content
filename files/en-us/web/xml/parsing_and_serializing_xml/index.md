@@ -60,7 +60,8 @@ This code fetches the resource as a text string, then uses {{domxref("DOMParser.
 
 If the document is {{Glossary("HTML")}}, the code shown above will return a {{domxref("Document")}}. If the document is XML, the resulting object is actually an `XMLDocument`. The two types are essentially the same; the difference is largely historical, although differentiating has some practical benefits as well.
 
-> **Note:** There is in fact an {{domxref("HTMLDocument")}} interface as well, but it is not necessarily an independent type. In some browsers it is, while in others it is an alias for the `Document` interface.
+> [!NOTE]
+> There is in fact an {{domxref("HTMLDocument")}} interface as well, but it is not necessarily an independent type. In some browsers it is, while in others it is an alias for the `Document` interface.
 
 ## Serializing an XML document
 

@@ -196,7 +196,8 @@ An element introducing a property can also introduce multiple properties at once
 </div>
 ```
 
-> **Note:** There is no relationship between the microdata and the content of the document where the microdata is marked up.
+> [!NOTE]
+> There is no relationship between the microdata and the content of the document where the microdata is marked up.
 
 ### Same structured data marked up in two different ways
 
@@ -284,7 +285,8 @@ A property is an unordered set of unique tokens that are case-sensitive and repr
 
    1. A string that contains no "`.`" (U+002E FULL STOP) characters and no "`:`" characters (U+003A COLON) and is used as a proprietary item property name (again, one not defined in a public specification).
 
-> **Note:** The rules above disallow ":" characters in non-URL values because otherwise they could not be distinguished from URLs. Values with "." characters are reserved for future extensions. Space characters are disallowed because otherwise the values would be parsed as multiple tokens.
+> [!NOTE]
+> The rules above disallow ":" characters in non-URL values because otherwise they could not be distinguished from URLs. Values with "." characters are reserved for future extensions. Space characters are disallowed because otherwise the values would be parsed as multiple tokens.
 
 ## Values
 

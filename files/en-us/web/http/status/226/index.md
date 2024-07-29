@@ -7,7 +7,8 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc3229.html#section-10.4.1
 
 {{HTTPSidebar}}
 
-> **Note:** Browsers don't support _delta encoding_ with HTTP. This status code is sent back by custom servers used by specific clients.
+> [!NOTE]
+> Browsers don't support _delta encoding_ with HTTP. This status code is sent back by custom servers used by specific clients.
 
 In the context of delta encodings, the HTTP **`226 IM Used`** status code is set by the server to indicate that it is returning a _delta_ to the {{HTTPMethod("GET")}} request that it received.
 

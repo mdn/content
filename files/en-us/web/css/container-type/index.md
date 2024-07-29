@@ -13,7 +13,8 @@ Size containment turns off the ability of an element to get size information fro
 
 The container size has to be set explicitly or by context — for example, block elements, flex containers, and grid containers stretching to the full width of their parent. If an explicit or contextual size is not available, elements with size containment will collapse.
 
-> **Note:** When using the `container-type` and {{cssxref("container-name")}} properties, the `style` and `layout` values of the {{cssxref("contain")}} property are automatically applied.
+> [!NOTE]
+> When using the `container-type` and {{cssxref("container-name")}} properties, the `style` and `layout` values of the {{cssxref("contain")}} property are automatically applied.
 
 ## Syntax
 

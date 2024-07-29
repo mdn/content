@@ -220,7 +220,7 @@ The available `credentialProtectionPolicy` values are as follows:
 - `"userVerificationRequired"`
   - : User verification is always required. The equivalent `credProtect` value sent to the authenticator for processing is `0x03`.
 
-> **Note:**
+> [!NOTE]
 > Chromium will default to `userVerificationOptionalWithCredentialIDList` or `userVerificationRequired`, depending on the type of request:
 >
 > - Chromium will request a protection level of `userVerificationOptionalWithCredentialIDList` when creating a credential if `residentKey` is set to `preferred` or `required`. (Setting `requireResidentKey` is treated the same as required.) This ensures that simple physical possession of a security key does not allow the presence of a discoverable credential for a given `rpId` to be queried.
@@ -284,7 +284,8 @@ extensions: {
 }
 ```
 
-> **Note:** For a write authentication operation to be successful, `publicKey.allowCredentials` must contain only a single element representing the credential you want the blob stored alongside.
+> [!NOTE]
+> For a write authentication operation to be successful, `publicKey.allowCredentials` must contain only a single element representing the credential you want the blob stored alongside.
 
 #### Output
 
@@ -304,7 +305,8 @@ largeBlob: {
 }
 ```
 
-> **Note:** if unsuccessful, the `largeBlob` object will be returned, but `blob` will not be present.
+> [!NOTE]
+> If unsuccessful, the `largeBlob` object will be returned, but `blob` will not be present.
 
 A `get()` write call indicates whether the write operation was successful with a `written` boolean value in the extension output. A `true` value means it was written successfully to the associated authenticator, and `false` means it was unsuccessful.
 

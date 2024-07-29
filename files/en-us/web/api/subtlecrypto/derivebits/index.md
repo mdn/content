@@ -81,7 +81,8 @@ See the [Supported algorithms section of the `deriveKey()` documentation](/en-US
 
 ## Examples
 
-> **Note:** You can [try the working examples](https://mdn.github.io/dom-examples/web-crypto/derive-bits/index.html) on GitHub.
+> [!NOTE]
+> You can [try the working examples](https://mdn.github.io/dom-examples/web-crypto/derive-bits/index.html) on GitHub.
 
 ### ECDH
 

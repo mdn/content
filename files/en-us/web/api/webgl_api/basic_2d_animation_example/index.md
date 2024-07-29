@@ -204,7 +204,8 @@ First, {{domxref("WebGLRenderingContext.createProgram", "gl.createProgram()")}} 
 
 Then, for each shader in the specified list of shaders, we call a `compileShader()` function to compile it, passing into it the ID and type of the shader function to build. Each of those objects includes, as mentioned before, the ID of the `<script>` element the shader code is found in and the type of shader it is. The compiled shader is attached to the shader program by passing it into {{domxref("WebGLRenderingContext.attachShader", "gl.attachShader()")}}.
 
-> **Note:** We could go a step farther here, actually, and look at the value of the `<script>` element's `type` attribute to determine the shader type.
+> [!NOTE]
+> We could go a step farther here, actually, and look at the value of the `<script>` element's `type` attribute to determine the shader type.
 
 Once all of the shaders are compiled, the program is linked using {{domxref("WebGLRenderingContext.linkProgram", "gl.linkProgram()")}}.
 

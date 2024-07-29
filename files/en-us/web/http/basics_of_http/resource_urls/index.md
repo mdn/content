@@ -79,7 +79,8 @@ been moved to a new location named `resource://content-accessible/`, which is
 isolated and only contains non-sensitive resources. In this way we can keep essential
 resources exposed and have most threats eliminated.
 
-> **Note:** It is recommended that web and extension developers don't try
+> [!NOTE]
+> It is recommended that web and extension developers don't try
 > to use resource URLs anymore. Their usage was hacky at best, and most usage won't work
 > any more.
 

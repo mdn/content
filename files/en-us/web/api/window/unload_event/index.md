@@ -10,7 +10,8 @@ browser-compat: api.Window.unload_event
 
 {{APIRef}}{{deprecated_header}}
 
-> **Warning:** Developers should avoid using this event. See "Usage notes" below.
+> [!WARNING]
+> Developers should avoid using this event. See "Usage notes" below.
 
 The **`unload`** event is fired when the document or a child resource is being unloaded.
 

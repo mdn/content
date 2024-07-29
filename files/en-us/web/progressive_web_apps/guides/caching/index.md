@@ -47,7 +47,8 @@ A PWA can cache resources at any time, but in practice there are a few times whe
 
 - **In the service worker's `install` event handler (precaching)**: When a service worker is installed, the browser fires an event called {{domxref("ServiceWorkerGlobalScope.install_event", "install")}} in the service worker's global scope. At this point the service worker can _precache_ resources, fetching them from the network and storing them in the cache.
 
-  > **Note:** Service worker install time is not the same as PWA install time. A service worker's `install` event fires as soon as the service worker has been downloaded and executes, which will typically happen as soon as the user visits your site.
+  > [!NOTE]
+  > Service worker install time is not the same as PWA install time. A service worker's `install` event fires as soon as the service worker has been downloaded and executes, which will typically happen as soon as the user visits your site.
   >
   > Even if the user never installs your site as a PWA, its service worker will be installed and activated.
 

@@ -9,7 +9,8 @@ browser-compat: api.WebSocket
 
 The **WebSocket API** is an advanced technology that makes it possible to open a two-way interactive communication session between the user's browser and a server. With this API, you can send messages to a server and receive event-driven responses without having to poll the server for a reply.
 
-> **Note:** While a WebSocket connection is functionally somewhat similar to standard Unix-style sockets, they are not related.
+> [!NOTE]
+> While a WebSocket connection is functionally somewhat similar to standard Unix-style sockets, they are not related.
 
 ## Interfaces
 

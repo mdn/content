@@ -25,7 +25,8 @@ The possible values are:
 
 ## Usage notes
 
-> **Note:** In Firefox, the `loading` attribute must be defined before the `src` attribute, otherwise it has no effect ([Firefox bug 1647077](https://bugzil.la/1647077)).
+> [!NOTE]
+> In Firefox, the `loading` attribute must be defined before the `src` attribute, otherwise it has no effect ([Firefox bug 1647077](https://bugzil.la/1647077)).
 
 ### JavaScript must be enabled
 

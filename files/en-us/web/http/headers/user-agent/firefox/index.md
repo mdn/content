@@ -23,7 +23,8 @@ The UA string of Firefox itself is broken down into four components:
 - `Firefox/firefoxversion` indicates the browser is Firefox, and provides the version (such as "`17.0`").
 - From Firefox 10 on mobile, `geckotrail` is the same as `firefoxversion`.
 
-> **Note:** The recommended way of sniffing for Gecko-based browsers (if you _have to_ sniff for the browser engine instead of using feature detection) is by the presence of the "`Gecko`" and "`rv:`" strings, since some other browsers include a "`like Gecko`" token.
+> [!NOTE]
+> The recommended way of sniffing for Gecko-based browsers (if you _have to_ sniff for the browser engine instead of using feature detection) is by the presence of the "`Gecko`" and "`rv:`" strings, since some other browsers include a "`like Gecko`" token.
 
 For other products based on Gecko, the string can take one of two forms, where the tokens have the same meaning except those noted below:
 
@@ -42,11 +43,13 @@ Mozilla/5.0 (Android 4.4; Mobile; rv:41.0) Gecko/41.0 Firefox/41.0
 Mozilla/5.0 (Android 4.4; Tablet; rv:41.0) Gecko/41.0 Firefox/41.0
 ```
 
-> **Note:** The version numbers are not relevant. Avoid inferring materials based on these.
+> [!NOTE]
+> The version numbers are not relevant. Avoid inferring materials based on these.
 
 The preferred way to target content to a device form factor is to use CSS Media Queries. However, if you use UA sniffing to target content to a device form factor, please look for **Mobi** (to include Opera Mobile, which uses "Mobi") for the phone form factor and do **not** assume any correlation between "Android" and the device form factor. This way, your code will work if/when Firefox ships on other phone/tablet operating systems or Android is used for laptops. Also, please use touch detection to find touch devices rather than looking for "Mobi" or "Tablet", since there may be touch devices which are not tablets.
 
-> **Note:** Firefox OS devices identify themselves without any operating system indication; for example: "Mozilla/5.0 (Mobile; rv:15.0) Gecko/15.0 Firefox/15.0". The web is the platform.
+> [!NOTE]
+> Firefox OS devices identify themselves without any operating system indication; for example: "Mozilla/5.0 (Mobile; rv:15.0) Gecko/15.0 Firefox/15.0". The web is the platform.
 
 ## Windows
 
@@ -187,7 +190,8 @@ While the version number for Firefox OS is not included in the UA string, it is 
 | 2.2                       | 37                   |
 | 2.5                       | 44                   |
 
-> **Note:** It's easy to find the correspondences by looking at the [Mercurial repository names](https://hg.mozilla.org/releases): repositories starting by `mozilla-b2g` are the release repositories for Firefox OS, and have both Firefox OS and Gecko versions in their names.
+> [!NOTE]
+> It's easy to find the correspondences by looking at the [Mercurial repository names](https://hg.mozilla.org/releases): repositories starting by `mozilla-b2g` are the release repositories for Firefox OS, and have both Firefox OS and Gecko versions in their names.
 
 Firefox OS has a four-digit version number: `X.X.X.Y`. The first two digits are owned by the Mozilla product team and denote versions with new features (eg: v1.1, 1.2, etc.). The third digit is incremented with regular version tags (about every 6 weeks) for security updates, and the fourth is owned by the OEM.
 

@@ -28,7 +28,8 @@ an exact match to the required sample size (if `exact` is specified or both
 `min` and `max` are provided and have the same value) or to a
 best-possible value.
 
-> **Note:** Since this property can only represent linear sample sizes, this constraint can only
+> [!NOTE]
+> Since this property can only represent linear sample sizes, this constraint can only
 > be met by devices that can produce audio with linear samples.
 
 ## Examples

@@ -105,7 +105,8 @@ The `\{{ListSubpagesForSidebar(<parameters>)}}` macro inserts the tree of subpag
 
 Once you have determined the links to include in your sidebar, submit a pull request to [Yari with your proposed sidebar macro](https://github.com/mdn/yari/blob/main/kumascript/macros/).
 
-> **Note:** This `<section>` must be appended to the end of the document, instead of between the frontmatter and the page content. Only one sidebar is created per page, so any macro listed after the frontmatter must be removed.
+> [!NOTE]
+> This `<section>` must be appended to the end of the document, instead of between the frontmatter and the page content. Only one sidebar is created per page, so any macro listed after the frontmatter must be removed.
 
 The [macro source code](https://github.com/mdn/yari/tree/main/kumascript/macros) is on GitHub. Each macro includes the documentation for itself, including parameters, if any.
 
