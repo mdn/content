@@ -92,11 +92,11 @@ svg {
 
 {{Specifications}}
 
-## See Also
-
-- SVG {{SVGElement("text")}} element
-- CSS {{cssxref('text-anchor')}} property
-
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- SVG {{SVGElement("text")}} element
+- CSS {{cssxref('text-anchor')}} property
