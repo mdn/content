@@ -93,4 +93,4 @@ navigator.requestMIDIAccess().then((access) => {
 ## See also
 
 - [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API)
-- [Introduction to Web MIDI](https://code.tutsplus.com/tutorials/introduction-to-web-midi--cms-25220)
+- [Introduction to Web MIDI](https://code.tutsplus.com/introduction-to-web-midi--cms-25220t)
