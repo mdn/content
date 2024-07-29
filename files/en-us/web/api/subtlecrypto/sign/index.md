@@ -52,23 +52,28 @@ The Web Crypto API provides the following algorithms that can be used for signin
 
 #### RSASSA-PKCS1-v1_5
 
-The RSASSA-PKCS1-v1_5 algorithm is specified in [RFC 3447](https://datatracker.ietf.org/doc/html/rfc3447).
-
-This algorithm is used in {{Glossary("public-key cryptography", "public-key cryptosystems")}} that use the private key for signing and the public key for verification.
+The SASSA-PKCS1-v1_5 algorithm is used in {{Glossary("public-key cryptography", "public-key cryptosystems")}} that use the private key for signing and the public key for verification.
 Systems that use this algorithm use a [digest algorithm](/en-US/docs/Web/API/SubtleCrypto/digest#supported_algorithms) to hash the message to a short fixed size before signing.
 The choice of digest algorithm is passed into the {{domxref("SubtleCrypto.generateKey()", "generateKey()")}} or {{domxref("SubtleCrypto.importKey()", "importKey()")}} functions.
+
+The RSASSA-PKCS1-v1_5 algorithm is specified in [RFC 3447](https://datatracker.ietf.org/doc/html/rfc3447).
 
 #### RSA-PSS
 
-The RSA-PSS algorithm is specified in [RFC 3447](https://datatracker.ietf.org/doc/html/rfc3447).
-
-It's different from RSASSA-PKCS1-v1_5 in that it incorporates a random salt in the signature operation, so the same message signed with the same key will not result in the same signature each time. An extra property, defining the salt length, is passed into the {{domxref("SubtleCrypto.sign()", "sign()")}} and {{domxref("SubtleCrypto.verify()", "verify()")}} functions when they are invoked.
-
-This algorithm is used in {{Glossary("public-key cryptography", "public-key cryptosystems")}} that use the private key for signing and the public key for verification.
+The RSA-PSS algorithm is used in {{Glossary("public-key cryptography", "public-key cryptosystems")}} that use the private key for signing and the public key for verification.
 Systems that use this algorithm use a [digest algorithm](/en-US/docs/Web/API/SubtleCrypto/digest#supported_algorithms) to hash the message to a short fixed size before signing.
 The choice of digest algorithm is passed into the {{domxref("SubtleCrypto.generateKey()", "generateKey()")}} or {{domxref("SubtleCrypto.importKey()", "importKey()")}} functions.
 
+The algorithm is specified in [RFC 3447](https://datatracker.ietf.org/doc/html/rfc3447).
+
+It's different from RSASSA-PKCS1-v1_5 in that it incorporates a random salt in the signature operation, so the same message signed with the same key will not result in the same signature each time. An extra property, defining the salt length, is passed into the {{domxref("SubtleCrypto.sign()", "sign()")}} and {{domxref("SubtleCrypto.verify()", "verify()")}} functions when they are invoked.
+
 #### ECDSA
+
+This algorithm is used in {{Glossary("public-key cryptography", "public-key cryptosystems")}} that use the private key for signing and the public key for verification.
+Systems that use this algorithm use a [digest algorithm](/en-US/docs/Web/API/SubtleCrypto/digest#supported_algorithms) to hash the message to a short fixed size before signing.
+This
+For ECDSA the choice of digest algorithm is passed as part of the `algorithm` object, a {{domxref("EcdsaParams")}}, when calling {{domxref("SubtleCrypto.sign()")}}.
 
 ECDSA (Elliptic Curve Digital Signature Algorithm) is a variant of the Digital Signature Algorithm, specified in [FIPS-186](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf), that uses Elliptic Curve Cryptography ([RFC 6090](https://datatracker.ietf.org/doc/html/rfc6090)).
 
@@ -76,11 +81,6 @@ Signatures are encoded as the `s1` and `s2` values specified in RFC 6090 (known 
 These values are concatenated together in this order.
 
 This encoding was also proposed by the [IEEE 1363-2000](https://standards.ieee.org/ieee/1363/2049/) standard, and is sometimes referred to as the IEEE P1363 format. It differs from the [X.509](https://www.itu.int/rec/T-REC-X.509) signature structure, which is the default format produced by some tools and libraries such as [OpenSSL](https://www.openssl.org).
-
-This algorithm is used in {{Glossary("public-key cryptography", "public-key cryptosystems")}} that use the private key for signing and the public key for verification.
-Systems that use this algorithm use a [digest algorithm](/en-US/docs/Web/API/SubtleCrypto/digest#supported_algorithms) to hash the message to a short fixed size before signing.
-This
-For ECDSA the choice of digest algorithm is passed as part of the `algorithm` object, a {{domxref("EcdsaParams")}}, when calling {{domxref("SubtleCrypto.sign()")}}.
 
 #### HMAC
 

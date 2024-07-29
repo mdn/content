@@ -34,7 +34,8 @@ generateKey(algorithm, extractable, keyUsages)
     - For [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr), [AES-CBC](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc),
       [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm), or [AES-KW](/en-US/docs/Web/API/SubtleCrypto/wrapKey#aes-kw) —
       pass an [`AesKeyGenParams`](/en-US/docs/Web/API/AesKeyGenParams) object.
-    - For the Ed25519 signature algorithm — pass an object of the form: `{ name: "Ed25519"}`.
+    - For the [ED25519](/en-US/docs/Web/API/SubtleCrypto/sign#ed25519) signature algorithm — pass an object of the form: `{ name: "Ed25519"}`.
+    - For the [X25519](/en-US/docs/Web/API/SubtleCrypto/sign#ed25519) ey agreement algorithm algorithm — pass an object of the form: `{name: 'X25519'}`.
 
 - `extractable`
   - : A boolean value indicating whether it will be possible to export the key using {{domxref("SubtleCrypto.exportKey()")}} or {{domxref("SubtleCrypto.wrapKey()")}}.
