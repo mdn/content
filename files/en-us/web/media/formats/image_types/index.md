@@ -47,7 +47,7 @@ The image file formats that are most commonly used on the web are listed below.
           It offers much better compression than PNG or JPEG with support for higher color depths, animated frames, transparency, etc.
           Note that when using AVIF, you should include fallbacks to formats with better browser support (i.e. using the
           <code><a href="/en-US/docs/Web/HTML/Element/picture">&#x3C;picture></a></code> element).<br />
-          <strong>Support:</strong> Chrome, Edge, Firefox (still images only: animated images not implemented), Opera, Safari.
+          <strong>Support:</strong> Chrome, Edge, Firefox, Opera, Safari.
         </p>
       </td>
     </tr>
@@ -304,7 +304,7 @@ AVIF does not support progressive rendering, so files must be fully downloaded b
 This often has little impact on real-world user experience because AVIF files are much smaller than the equivalent JPEG or PNG files, and hence can be downloaded and displayed much faster.
 For larger file size the impact can become significant, and you should consider using a format that supports progressive rendering.
 
-AVIF is supported in Chrome, Edge, Opera, Safari and Firefox (Firefox supports still images but not animations).
+AVIF is supported in Chrome, Edge, Opera, Safari and Firefox.
 As support is not yet comprehensive (and has little historical depth) you should provide a fallback in [WebP](#webp_image), [JPEG](#jpeg_joint_photographic_experts_group_image) or [PNG](#png_portable_network_graphics) format using [the `<picture>` element](/en-US/docs/Web/HTML/Element/picture) (or some other approach).
 
 <table class="standard-table">
@@ -336,7 +336,7 @@ As support is not yet comprehensive (and has little historical depth) you should
             Firefox 93 supports still images, with colorspace support for both full and limited range colors, image transforms for mirroring and rotation.
             The preference <a href="/en-US/docs/Mozilla/Firefox/Experimental_features#avif_compliance_strictness">image.avif.compliance_strictness</a>
             can be used to adjust the compliance strictness with the specification.
-            Animated images are not supported.
+            Firefox 113 supports animated images.
           </li>
         </ul>
       </td>
