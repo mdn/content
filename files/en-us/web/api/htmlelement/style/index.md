@@ -86,4 +86,4 @@ Note `font-weight` is not listed as a value for `elementStyle` as it is not defi
 - {{domxref("SVGElement.style")}}
 - {{domxref("MathMLElement.style")}}
 - {{domxref("HTMLElement.attributeStyleMap")}}
-- {{domxref("HTMLElement.style")}}
+- {{domxref("Global_attributes.style")}}
