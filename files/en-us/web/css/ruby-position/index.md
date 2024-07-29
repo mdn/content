@@ -18,6 +18,9 @@ The **`ruby-position`** [CSS](/en-US/docs/Web/CSS) property defines the position
 ruby-position: over;
 ruby-position: under;
 ruby-position: alternate;
+ruby-position: alternate over;
+ruby-position: alternate under;
+ruby-position: inter-character;
 
 /* Global values */
 ruby-position: inherit;
