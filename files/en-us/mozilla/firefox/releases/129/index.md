@@ -36,6 +36,8 @@ This article provides information about the changes in Firefox 129 that affect d
 
 ### HTTP
 
+- HTTPS DNS records can now be resolved using the operating system's DNS resolver on Windows 11, Linux, and Android 10+, instead of requiring [DNS over HTTPS](https://support.mozilla.org/en-US/kb/dns-over-https-doh-faqs) to be enabled. This capability allows the use of HTTP/3 without needing to use the {{httpheader("Alt-Svc")}} header, upgrades requests to HTTPS when the DNS record is present, and enables the use of the [Encrypted Client Hello (ECH)](https://support.mozilla.org/en-US/kb/faq-encrypted-client-hello) privacy feature in more circumstances. ([Firefox bug 1906239](https://bugzil.la/1906239).)
+
 #### Removals
 
 ### Security
