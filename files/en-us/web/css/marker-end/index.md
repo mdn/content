@@ -18,7 +18,7 @@ For many marker-supporting shapes, the first and last vertices are in the same p
 
 ```css
 marker-end: none;
-marker-end: url(…);
+marker-end: url(markers.svg#arrow);
 
 /* Global values */
 marker-end: inherit;
@@ -34,9 +34,9 @@ marker-end: unset;
 
   - : This means no marker will be drawn at the last vertex of the element's path.
 
-- `url(…)`
+- `<marker-ref>`
 
-  - : A reference to a marker defined by an SVG {{SVGElement('marker')}} element, to be drawn at the last vertex of the element's path. If the URL reference is invalid, no marker will be drawn at the path's last vertex.
+  - : A {{cssxref("url", "&lt;url&gt;")}} that refers to a marker defined by an SVG {{SVGElement('marker')}} element, to be drawn at the last vertex of the element's path. If the URL reference is invalid, no marker will be drawn at the path's last vertex.
 
 ## Formal definition
 
@@ -91,13 +91,13 @@ polyline#test {
 
 {{Specifications}}
 
+## Browser compatibility
+
+{{Compat}}
+
 ## See also
 
 - {{cssxref("marker-start")}}
 - {{cssxref("marker-mid")}}
 - {{cssxref("marker")}}
 - SVG {{SVGAttr("marker-end")}} attribute
-
-## Browser compatibility
-
-{{Compat}}

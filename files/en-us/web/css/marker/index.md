@@ -20,7 +20,7 @@ For the middle vertices, the direction each marker points is defined as the dire
 
 ```css
 marker: none;
-marker: url(…);
+marker: url(markers.svg#arrow);
 
 /* Global values */
 marker: inherit;
@@ -36,9 +36,9 @@ marker: unset;
 
   - : This means no marker will be drawn at each vertex of the element's path.
 
-- `url(…)`
+- `<marker-ref>`
 
-  - : A reference to a marker defined by an SVG {{SVGElement('marker')}} element, to be drawn at each vertex of the element's path. If the URL reference is invalid, no marker will be drawn at the path's vertices.
+  - : A {{cssxref("url", "&lt;url&gt;")}} that refers to a marker defined by an SVG {{SVGElement('marker')}} element, to be drawn at each vertex of the element's path. If the URL reference is invalid, no marker will be drawn at the path's vertices.
 
 ## Formal definition
 
@@ -93,12 +93,12 @@ polyline#test {
 
 {{Specifications}}
 
+## Browser compatibility
+
+{{Compat}}
+
 ## See also
 
 - {{cssxref("marker-start")}}
 - {{cssxref("marker-end")}}
 - SVG {{SVGAttr("marker")}} attribute
-
-## Browser compatibility
-
-{{Compat}}

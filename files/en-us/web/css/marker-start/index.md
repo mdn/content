@@ -18,7 +18,7 @@ For many marker-supporting shapes, the first and last vertices are in the same p
 
 ```css
 marker-start: none;
-marker-start: url(…);
+marker-start: url(markers.svg#arrow);
 
 /* Global values */
 marker-start: inherit;
@@ -34,9 +34,9 @@ marker-start: unset;
 
   - : This means no marker will be drawn at the first vertex of the element's path.
 
-- `url(…)`
+- `<marker-ref>`
 
-  - : A reference to a marker defined by an SVG {{SVGElement('marker')}} element, to be drawn at the first vertex of the element's path. If the URL reference is invalid, no marker will be drawn at the path's first vertex.
+  - : A {{cssxref("url", "&lt;url&gt;")}} that refers to a marker defined by an SVG {{SVGElement('marker')}} element, to be drawn at the first vertex of the element's path. If the URL reference is invalid, no marker will be drawn at the path's first vertex.
 
 ## Formal definition
 
@@ -91,13 +91,13 @@ polyline#test {
 
 {{Specifications}}
 
+## Browser compatibility
+
+{{Compat}}
+
 ## See also
 
 - {{cssxref("marker-mid")}}
 - {{cssxref("marker-end")}}
 - {{cssxref("marker")}}
 - SVG {{SVGAttr("marker-start")}} attribute
-
-## Browser compatibility
-
-{{Compat}}
