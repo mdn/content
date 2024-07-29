@@ -25,7 +25,6 @@ For most properties, the resolved value is the [computed value](/en-US/docs/Web/
   - [Initial values](/en-US/docs/Web/CSS/initial_value)
   - [Computed values](/en-US/docs/Web/CSS/computed_value)
   - [Used values](/en-US/docs/Web/CSS/used_value)
-  - **Resolved values**
   - [Actual values](/en-US/docs/Web/CSS/actual_value)
 - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
 - [At-rules](/en-US/docs/Web/CSS/At-rule)
