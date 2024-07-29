@@ -179,5 +179,5 @@ Related articles on MDN:
 
 External resources:
 
-- [Simple intersection tests for games](https://www.gamedeveloper.com/disciplines/simple-intersection-tests-for-games) on Game Developer
+- [Simple intersection tests for games](https://www.gamedeveloper.com/game-platforms/simple-intersection-tests-for-games) on Game Developer
 - [Bounding volume](https://en.wikipedia.org/wiki/Bounding_volume) on Wikipedia
