@@ -452,7 +452,7 @@ git checkout -b my_changes # Create a new branch
 
 > [!NOTE]
 > Git is incredibly powerful!
-> To learn more, see [Learning Git](https://docs.github.com/en/get-started/quickstart/git-and-github-learning-resources).
+> To learn more, see [Learning Git](https://docs.github.com/en/get-started/start-your-journey/git-and-github-learning-resources).
 
 ## Example: Hosting on Glitch
 
@@ -520,7 +520,7 @@ You will also need to retest:
   },
 ```
 
-Glitch [plans to update node and keep it better updated in future](https://blog.glitch.com/post/rebuilding-glitch) — and it may be that by the time you read this the version limit no longer exists.
+Glitch [plans to update node and keep it better updated in future](https://blog.glitch.com/post/rebuilding-glitch/) — and it may be that by the time you read this the version limit no longer exists.
 Instead of downgrading the `node` version, you could upload your project to see if it builds.
 If there are errors and your application doesn't load, you should try setting the `node` version to `>=v16` in your `package.json` in the Glitch editor.
 
@@ -616,7 +616,7 @@ Railway is an attractive hosting option for several reasons:
 
 - Railway takes care of most of the infrastructure so you don't have to.
   Not having to worry about servers, load balancers, reverse proxies, and so on, makes it much easier to get started.
-- Railway has a [focus on developer experience for development and deployment](https://docs.railway.app/reference/compare-to-heroku), which leads to a faster and softer learning curve than many other alternatives.
+- Railway has a [focus on developer experience for development and deployment](https://docs.railway.app/maturity/compare-to-heroku), which leads to a faster and softer learning curve than many other alternatives.
 - The skills and concepts you will learn when using Railway are transferrable.
   While Railway has some excellent new features, other popular hosting services use many of the same ideas and approaches.
 - [Railway documentation](https://docs.railway.app/) is clear and complete.
@@ -635,14 +635,14 @@ For example, if the application includes the file **package-lock.json** Railway 
 Having installed all the dependencies, Railway will look for scripts named "build" and "start" in the package file, and use these to build and run the code.
 
 > [!NOTE]
-> Railway uses [Nixpacks](https://nixpacks.com/docs/) to recognize various web application frameworks written in different programming languages.
-> You don't need to know anything else for this tutorial, but you can find out more about options for deploying node applications in [Nixpacks Node](https://nixpacks.com/docs/providers/node).
+> Railway uses [Nixpacks](https://nixpacks.com/docs) to recognize various web application frameworks written in different programming languages.
+> You don't need to know anything else for this tutorial, but you can find out more about options for deploying node applications in [Nixpacks Node](https://nixpacks.com/docsproviders/node).
 
-Once the application is running it can configure itself using information provided in [environment variables](https://docs.railway.app/develop/variables).
+Once the application is running it can configure itself using information provided in [environment variables](https://docs.railway.app/guides/variables).
 For example, an application that uses a database must get the address using a variable.
 The database service itself may be hosted by Railway or some other provider.
 
-Developers interact with Railway through the Railway site, and using a special [Command Line Interface (CLI)](https://docs.railway.app/develop/cli) tool.
+Developers interact with Railway through the Railway site, and using a special [Command Line Interface (CLI)](https://docs.railway.app/guides/cli) tool.
 The CLI allows you to associate a local GitHub repository with a railway project, upload the repository from the local branch to the live site, inspect the logs of the running process, set and get configuration variables and much more.
 One of the most useful features is that you can use the CLI to run your local project with the same environment variables as the live project.
 
@@ -759,7 +759,7 @@ You can add data through the website interface and it should work in the same wa
 
 ### Install the client
 
-Download and install the Railway client for your local operating system by following the [instructions here](https://docs.railway.app/develop/cli).
+Download and install the Railway client for your local operating system by following the [instructions here](https://docs.railway.app/guides/cli).
 
 After the client is installed you will be able run commands.
 Some of the more important operations include deploying the current directory of your computer to an associated Railway project (without having to upload to GitHub), and running your project locally using the same settings as you have on the production server.
@@ -788,7 +788,7 @@ That's the end of this tutorial on setting up Express apps in production, and al
 - [Production Best Practices: Security](https://expressjs.com/en/advanced/best-practice-security.html) (Express docs)
 - Railway Docs
 
-  - [CLI](https://docs.railway.app/develop/cli)
+  - [CLI](https://docs.railway.app/guides/cli)
 
 - Digital Ocean
 
