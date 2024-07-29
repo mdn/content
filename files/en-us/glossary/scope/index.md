@@ -18,6 +18,8 @@ In addition, variables declared with [`let`](/en-US/docs/Web/JavaScript/Referenc
 
 - Block scope: The scope created with a pair of curly braces (a [block](/en-US/docs/Web/JavaScript/Reference/Statements/block)).
 
+## Function scope
+
 A {{glossary("function")}} creates a scope, so that (for example) a variable defined exclusively within the function cannot be accessed from outside the function or within other functions. For instance, the following is invalid:
 
 ```js example-bad
@@ -46,12 +48,17 @@ console.log("Outside function");
 console.log(x);
 ```
 
+## Block scope
+
+### Variable declarations
+
 Blocks only scope `let` and `const` declarations, but not `var` declarations.
 
 ```js example-good
 {
   var x = 1;
 }
+
 console.log(x); // 1
 ```
 
@@ -59,7 +66,36 @@ console.log(x); // 1
 {
   const x = 1;
 }
+
 console.log(x); // ReferenceError: x is not defined
+```
+
+### Function declarations
+
+In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), function declarations are block-scoped.
+
+```js
+"use strict";
+
+{
+  function alarm() {
+    console.log("Beep-beep!");
+  }
+}
+
+alarm(); // ReferenceError: alarm is not defined
+```
+
+This behavior doesn't apply to "[sloppy mode](/en-US/docs/Glossary/Sloppy_mode)".
+
+```js
+{
+  function alarm() {
+    console.log("Beep-beep!");
+  }
+}
+
+alarm(); // "Beep-beep!"
 ```
 
 ## See also
