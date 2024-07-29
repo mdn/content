@@ -28,7 +28,7 @@ Google's **privacy sandbox** project is a series of proposals to satisfy cross-s
 
 ## See also
 
-- [The Privacy Sandbox](https://developer.chrome.com/en/docs/privacy-sandbox/) on developer.chrome.com
+- [The Privacy Sandbox](https://developers.google.com/privacy-sandbox) on developers.google.com
 
 <section id="Quick_links">
 {{ListSubpages("/en-US/docs/Web/Privacy", "2", "0", "0")}}

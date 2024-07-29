@@ -211,7 +211,7 @@ it might be wise to provide a fallback:
 
 ## HLS Encoding
 
-HTTP Live Streaming (HLS) is an HTTP-based media streaming protocol implemented by Apple. It's incorporated into iOS and OSX platforms and works well on [mobile and desktop Safari and most Android devices with some caveats](https://www.jwplayer.com/blog/hls-in-html5).
+HTTP Live Streaming (HLS) is an HTTP-based media streaming protocol implemented by Apple. It's incorporated into iOS and OSX platforms and works well on [mobile and desktop Safari and most Android devices with some caveats](https://jwplayer.com/blog/http-live-streaming/).
 
 Media is usually encoded as MPEG-4 (H.264 video and AAC audio) and packaged into an MPEG-2 Transport Stream, which is then broken into segments and saved as one or more `.ts` media files. Apple provides tools to convert media files to the appropriate format.
 
@@ -267,9 +267,9 @@ Further resources on adaptive streaming.
 ### MPEG-DASH overview and references
 
 - [Dynamic Adaptive Streaming over HTTP Dataset](https://www-itec.uni-klu.ac.at/bib/files/p89-lederer.pdf)
-- [MPEG-DASH and streaming reference and resources (MSDN)](<https://msdn.microsoft.com/library/dn551370(v=vs.85).aspx>)
+- [MPEG-DASH and streaming reference and resources (MSDN)](<https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/samples/dn551370(v=vs.85)?redirectedfrom=MSDN>)
 - [DASH Adaptive Streaming for HTML 5 Video](/en-US/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video)
-- [Dynamic Adaptive Streaming over HTTP: From Content Creation to Consumption](https://www.slideshare.net/christian.timmerer/dynamic-adaptive-streaming-over-http-from-content-creation-to-consumption)
+- [Dynamic Adaptive Streaming over HTTP: From Content Creation to Consumption](https://www.slideshare.net/slideshow/dynamic-adaptive-streaming-over-http-from-content-creation-to-consumption/14933566)
 
 ### MPEG-DASH tools
 

@@ -1047,7 +1047,7 @@ HEVC is a proprietary format and is covered by a number of patents. Licensing is
         </table>
         <p>Chrome support HEVC for devices with hardware support on Windows 8+, Linux and ChromeOS, for all devices on macOS Big Sur 11+ and Android 5.0+.</p>
         <p>Edge (Chromium) supports HEVC for devices with hardware support on Windows 10 1709+ when
-          <a href="https://apps.microsoft.com/store/detail/hevc-video-extension/9NMZLZ57R3T7">HEVC video extensions from the Microsoft Store</a>
+          <a href="https://apps.microsoft.com/detail/9nmzlz57r3t7?hl=en-us&gl=US">HEVC video extensions from the Microsoft Store</a>
           is installed, and has the same support status as Chrome on other platforms. Edge (Legacy) only supports HEVC for devices with a hardware decoder.
         </p>
         <p>Mozilla will not support HEVC while it is encumbered by patents.</p>
@@ -1592,7 +1592,7 @@ The [Theora Cookbook](https://en.flossmanuals.net/ogg-theora/_full/) offers addi
         <p>
           Edge supports Theora with the optional
           <a
-            href="https://www.microsoft.com/en-us/p/web-media-extensions/9n5tdp8vcmhs?activetab=pivot:overviewtab"
+            href="https://apps.microsoft.com/detail/9n5tdp8vcmhs?hl=en-us&gl=US"
             >Web Media Extensions</a
           >
           add-on.
@@ -1964,5 +1964,4 @@ The documentation for your codec choices will probably offer information you'll 
 - {{RFC(3839)}}: MIME Type Registrations for 3GPP Multimedia Files
 - {{RFC(4381)}}: MIME Type Registrations for 3GPP2 Multimedia Files
 - {{RFC(4337)}}: MIME Type Registrations for MPEG-4
-- [Video codecs in Opera](https://dev.opera.com/articles/introduction-html5-video/#codecs--the-fly-in-the-ointment)
 - [Video and audio codecs in Chrome](https://www.chromium.org/audio-video/)

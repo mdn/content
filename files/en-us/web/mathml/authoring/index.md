@@ -189,7 +189,7 @@ Instead of generating MathML expression at page load, you can instead rely on co
 </html>
 ```
 
-That page does contain any [`script`](/en-US/docs/Web/HTML/Element/script) tag. Instead, conversion is executed via the following command line using [Node.js](https://nodejs.org/) and [TeXZilla](https://github.com/fred-wang/TeXZilla/wiki/Using-TeXZilla#usage-from-the-command-line):
+That page does contain any [`script`](/en-US/docs/Web/HTML/Element/script) tag. Instead, conversion is executed via the following command line using [Node.js](https://nodejs.org/en) and [TeXZilla](https://github.com/fred-wang/TeXZilla/wiki/Using-TeXZilla#usage-from-the-command-line):
 
 ```bash
 cat input.html | node TeXZilla.js streamfilter > output.html
@@ -235,7 +235,7 @@ latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathjax.js/mpa
 ```
 
 > [!NOTE]
-> Command-line tools can be used server-side e.g. [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki) performs LaTeX-to-MathML conversion via [Mathoid](https://github.com/wikimedia/mathoid).
+> Command-line tools can be used server-side e.g. [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki) performs LaTeX-to-MathML conversion via [Mathoid](https://github.com/wikimedia/mediawiki-services-mathoid).
 
 ## Graphical interfaces
 

@@ -82,7 +82,7 @@ When officially publishing a PWA, you will likely want to invest in a [domain na
 
 ## GitHub Pages
 
-The current state of the CycleTracker application is viewable on GitHub, served securely at [https://mdn.github.io/pwa-examples/cycletracker/html_and_css](https://mdn.github.io/pwa-examples/cycletracker/html_and_css). We've posted the files to the MDN GitHub account. Similarly, if you have a [GitHub](https://github.com) account, you can post it to yours. Just note that while securely served over TLS, actions on GitHub are not necessarily private, and all GitHub pages are public. If you live in an area with a repressive government that tracks menstrual cycles, consider copying and pasting the code rather than forking it.
+The current state of the CycleTracker application is viewable on GitHub, served securely at [https://mdn.github.io/pwa-examples/cycletracker/html_and_css/](https://mdn.github.io/pwa-examples/cycletracker/html_and_css/). We've posted the files to the MDN GitHub account. Similarly, if you have a [GitHub](https://github.com) account, you can post it to yours. Just note that while securely served over TLS, actions on GitHub are not necessarily private, and all GitHub pages are public. If you live in an area with a repressive government that tracks menstrual cycles, consider copying and pasting the code rather than forking it.
 
 To create a publicly available secure site, create a [GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site). Create a repository named `<username>.github.io`, where `<username>` is your GitHub username. Create a `gh-pages` branch. This branch of your application will be available at `https://<username>.github.io`.
 
