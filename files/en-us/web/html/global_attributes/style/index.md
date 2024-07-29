@@ -24,6 +24,6 @@ The **`style`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) conta
 
 ## See also
 
-All [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+- All [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-[Style attribute](/en-US/docs/Web/HTML/Global_attributes/style).
+- {{domxref("HTMLElement.style")}}.
