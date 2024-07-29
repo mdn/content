@@ -590,7 +590,7 @@ After getting the local library sources and installing the dependencies in a vir
    This is the `STATIC_URL` in the [application settings](#settings.py_2), and reflects the location where files were copied when we ran `collectstatic` in the previous section.
 
 9. Near the top of the _Web_ tab select the **Reload** button to restart the site.
-   Then then select the site URL link to launch the live site:
+   Then select the site URL link to launch the live site:
 
 ![PythonAnywhere Web screen with the link to launch the site highlighted](python_anywhere_web_open_site.png)
 
