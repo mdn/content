@@ -178,7 +178,7 @@ The following criteria must be met when calling **`writeTexture()`**, otherwise 
 
 ## Examples
 
-In the WebGPU Samples [Textured Cube example](https://webgpu.github.io/webgpu-samples/samples/texturedCube), the following snippet is used to fetch an image and upload it into a {{domxref("GPUTexture")}}:
+In the WebGPU Samples [Textured Cube example](https://webgpu.github.io/webgpu-samples/samples/texturedCube/), the following snippet is used to fetch an image and upload it into a {{domxref("GPUTexture")}}:
 
 ```js
 let cubeTexture;
