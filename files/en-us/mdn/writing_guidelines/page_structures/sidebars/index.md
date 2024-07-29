@@ -51,11 +51,11 @@ Here are a few other sidebar macros, with what they do:
 
 - `\{{LearnSidebar}}`
 
-  - : Present on every page within the Learn section except for common questions and how-to pages (which use the `QuickLinksWithSubpages` macro), it generates a sidebar based on the [hard-coded links](https://github.com/mdn/yari/blob/main/kumascript/macros/LearnSidebar.ejs) present in the Yari macro file. This macro is not based on file structure.
+  - : Present on every page within the Learn section except for common questions and how-to pages (which use the `QuickLinksWithSubpages` macro), it generates a sidebar based on the [hard-coded links](https://github.com/mdn/yari/tree/main/kumascript/macros/LearnSidebar.ejs) present in the Yari macro file. This macro is not based on file structure.
 
 - `\{{HTMLSidebar}}`
 
-  - : Generates the sidebar for HTML documentation, including tutorials, references, and guides. The macro includes calls to the `\{{ ListSubpagesForSidebar}}` macro for the element and attribute reference sections, while the tutorial and guide [links are hard-coded](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLSidebar.ejs).
+  - : Generates the sidebar for HTML documentation, including tutorials, references, and guides. The macro includes calls to the `\{{ ListSubpagesForSidebar}}` macro for the element and attribute reference sections, while the tutorial and guide [links are hard-coded](https://github.com/mdn/yari/tree/main/kumascript/macros/HTMLSidebar.ejs).
 
 - `\{{HTTPSidebar}}`
 
@@ -69,7 +69,7 @@ The appropriate macro to use depends on the [page type](/en-US/docs/MDN/Writing_
 
 ### Creating new sidebars
 
-You should use existing sidebar macros, without adding any content to them. If you are creating a whole new section of content, create a [macro for your sidebar](https://github.com/mdn/yari/blob/main/kumascript/macros/) in Yari.
+You should use existing sidebar macros, without adding any content to them. If you are creating a whole new section of content, create a [macro for your sidebar](https://github.com/mdn/yari/tree/main/kumascript/macros) in Yari.
 
 In the unlikely event that you need to create a temporary sidebar, this section explains how that can be done. Do not submit your temporary sidebar for PR review as it will not be approved.
 
@@ -103,7 +103,7 @@ If listed as the last content in the page, Yari, the engine that renders MDN, re
 
 The `\{{ListSubpagesForSidebar(<parameters>)}}` macro inserts the tree of subpages for the page whose slug is specified as the first parameter. The above creates a sidebar containing a link to all the Accessibility documents, followed by the ARIA roles and attributes.
 
-Once you have determined the links to include in your sidebar, submit a pull request to [Yari with your proposed sidebar macro](https://github.com/mdn/yari/blob/main/kumascript/macros/).
+Once you have determined the links to include in your sidebar, submit a pull request to [Yari with your proposed sidebar macro](https://github.com/mdn/yari/tree/main/kumascript/macros).
 
 > [!NOTE]
 > This `<section>` must be appended to the end of the document, instead of between the frontmatter and the page content. Only one sidebar is created per page, so any macro listed after the frontmatter must be removed.

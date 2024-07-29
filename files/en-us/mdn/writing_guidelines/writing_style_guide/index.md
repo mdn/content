@@ -516,7 +516,7 @@ Keep the following dos and don'ts in mind while creating headings for subsection
 
 If you include images or other media on a page, follow these guidelines:
 
-- Make sure the media license allows you to use them. Try to use media that has a very permissive license such as [CC0](https://creativecommons.org/share-your-work/public-domain/cc0/) or at least one that is compatible with our general content license — [Creative Commons Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA).
+- Make sure the media license allows you to use them. Try to use media that has a very permissive license such as [CC0](https://creativecommons.org/public-domain/cc0/) or at least one that is compatible with our general content license — [Creative Commons Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA).
 - For images, run them through <https://tinypng.com> or <https://imageoptim.com> to reduce the page weight.
 - For `SVG`, run the code through [SVGOMG](https://jakearchibald.github.io/svgomg/), and ensure that the `SVG` file has an empty line at the end of the file.
 - Every image must [include descriptive `alt` text](/en-US/docs/MDN/Writing_guidelines/Howto/Images_media#adding_alternative_text_to_images).
@@ -664,7 +664,7 @@ Keep the following guidelines in mind when writing titles:
 
 ### Other style guides
 
-If you have questions about usage and style not covered here, we recommend referring to the [Microsoft Writing Style Guide](https://docs.microsoft.com/style-guide/welcome/) or the [Chicago Manual of Style](https://www.chicagomanualofstyle.org).
+If you have questions about usage and style not covered here, we recommend referring to the [Microsoft Writing Style Guide](https://learn.microsoft.com/en-us/style-guide/welcome/) or the [Chicago Manual of Style](https://www.chicagomanualofstyle.org).
 An [unofficial crib sheet for the Chicago Manual of Style](https://faculty.cascadia.edu/cma/HIST148/cmscrib.pdf) is available online.
 
 ### Language, grammar, and spelling
@@ -672,8 +672,8 @@ An [unofficial crib sheet for the Chicago Manual of Style](https://faculty.casca
 If you're interested in improving your writing and editing skills, you may find the following resources to be helpful.
 
 - [Common errors in English usage](https://brians.wsu.edu/common-errors-in-english-usage/) on brians.wsu.edu
-- [English grammar FAQ](https://www-personal.umich.edu/~jlawler/aue.html) on alt-usage-english.org
+- [English grammar FAQ](https://websites.umich.edu/~jlawler/aue.html) on alt-usage-english.org
 - [English language and usage](https://english.stackexchange.com/) on english.stackexchange.com: Question and answer site for English language usage
-- [Merriam-Webster's Concise Dictionary of English Usage](https://www.google.com/books/edition/Merriam_Webster_s_Dictionary_of_English/UDIjAQAAIAAJ) on google.com/books (published 2002): Scholarly but user-friendly, evidence-based advice; very good for non-native speakers, especially for preposition usage
+- [Merriam-Webster's Concise Dictionary of English Usage](https://books.google.com/books?id=UDIjAQAAIAAJ&newbks=0) on google.com/books (published 2002): Scholarly but user-friendly, evidence-based advice; very good for non-native speakers, especially for preposition usage
 - [On Writing Well](https://www.harpercollins.com/products/on-writing-well-william-zinsser) by William Zinsser on harpercollins.com (published 2016)
-- [Style: Lessons in Clarity and Grace](https://www.google.ca/books/edition/Style/QjskvgEACAAJ) by Joseph Williams and Gregory Colomb on google.com/books (published 2019)
+- [Style: Lessons in Clarity and Grace](https://books.google.com/books?id=QjskvgEACAAJ&newbks=0) by Joseph Williams and Gregory Colomb on google.com/books (published 2019)
