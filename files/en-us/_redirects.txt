@@ -11610,7 +11610,6 @@
 /en-US/docs/Web/CSS/display/two-value_syntax_of_display	/en-US/docs/Web/CSS/display/multi-keyword_syntax_of_display
 /en-US/docs/Web/CSS/document	/en-US/docs/Web/CSS/@document
 /en-US/docs/Web/CSS/document/@-moz-document	/en-US/docs/Web/CSS/@document
-/en-US/docs/Web/CSS/dominant-baseline	/en-US/docs/Web/SVG/Attribute/dominant-baseline
 /en-US/docs/Web/CSS/element()	/en-US/docs/Web/CSS/element
 /en-US/docs/Web/CSS/env()	/en-US/docs/Web/CSS/env
 /en-US/docs/Web/CSS/fallback	/en-US/docs/Web/CSS/@counter-style/fallback
