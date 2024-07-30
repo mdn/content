@@ -12,7 +12,7 @@ The **`contentType`** read-only property of the {{domxref("PerformanceResourceTi
 
 The content type is a minimized and "standardized" version of the MIME type that is extracted from the {{httpheader("Content-Type")}} HTTP header sent in the resource's fetch response.
 For JavaScript, JSON, SVG, and XML, the MIME type is replaced by a representative MIME type/subtype string.
-Other types supported by the browser are represented by the MIME type/subtype string in the header (other information in the headeris discarded).
+Other types supported by the browser are represented by the MIME type/subtype string in the header (other information in the header is discarded).
 
 ## Value
 
