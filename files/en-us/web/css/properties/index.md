@@ -283,7 +283,7 @@ page-type: guide
 - {{cssxref("pointer-events")}}
 - {{cssxref("position")}}
 - {{cssxref("position-anchor")}}
-- {{cssxref("position-try-options")}}
+- {{cssxref("position-try-fallbacks")}} (supported only in longhand until next chromium)
 - {{cssxref("position-try-order")}}
 - {{cssxref("position-visibility")}}
 - {{cssxref("print-color-adjust")}}
