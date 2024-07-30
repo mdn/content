@@ -312,7 +312,7 @@ const propPath = getPropPath(); // suppose it returns "a.b.c"
 const result = setDescendantProp(obj, propPath, 1); // obj.a.b.c is now 1
 ```
 
-However, beware that using bracket accessors with unconstrained input is not safe either — it may lead to [object injection attacks](https://github.com/nodesecurity/eslint-plugin-security/blob/main/docs/the-dangers-of-square-bracket-notation.md).
+However, beware that using bracket accessors with unconstrained input is not safe either — it may lead to [object injection attacks](https://github.com/eslint-community/eslint-plugin-security/blob/main/docs/the-dangers-of-square-bracket-notation.md).
 
 #### Using callbacks
 
