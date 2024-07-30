@@ -10,9 +10,10 @@ browser-compat: api.RTCStatsReport.type_remote-inbound-rtp.fractionLost
 
 The **`fractionLost`** property of the {{domxref("RTCRemoteInboundRtpStreamStats")}} dictionary provides a value that can be used to determine the fraction of packets lost for this [synchronization source (SSRC)](/en-US/docs/Web/API/RTCRemoteInboundRtpStreamStats/ssrc) in the last reporting interval.
 
-The value provides a quick and convenient measure of the link quality.
 To convert the value to a percentage, divide it by 256 and multiply by 100.
 For example, a value of 20 indicates a 7.8% packet loss.
+
+Note that the value may not be precisely accurate due to the way that it is calculated, but it does provides a quick and convenient measure of the link quality.
 
 ## Value
 
