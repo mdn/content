@@ -18,10 +18,10 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 
 <!-- RTCRemoteInboundRtpStreamStats -->
 
-- {{domxref("RTCRemoteInboundRtpStreamStats.localId", "localId")}} {{optional_inline}}
-  - : A string that is used to find the local {{domxref("RTCOutboundRtpStreamStats")}} object that shares the same [synchronization source (SSRC)](/en-US/docs/Web/API/RTCRemoteInboundRtpStreamStats/ssrc).
 - {{domxref("RTCRemoteInboundRtpStreamStats.fractionLost", "fractionLost")}} {{optional_inline}}
   - : A number indicating the fraction of packets lost for this SSRC since the last sender or receiver report.
+- {{domxref("RTCRemoteInboundRtpStreamStats.localId", "localId")}} {{optional_inline}}
+  - : A string that is used to find the local {{domxref("RTCOutboundRtpStreamStats")}} object that shares the same [synchronization source (SSRC)](/en-US/docs/Web/API/RTCRemoteInboundRtpStreamStats/ssrc).
 - {{domxref("RTCRemoteInboundRtpStreamStats.roundTripTime", "roundTripTime")}} {{optional_inline}}
   - : A number that indicates the estimated round trip time (RTT) for this SSRC, in seconds.
     This property will not exist until valid RTT data has been received.
@@ -35,13 +35,13 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 
 <!-- RTCReceivedRtpStreamStats -->
 
-- {{domxref("RTCRemoteInboundRtpStreamStats.packetsReceived", "packetsReceived")}} {{optional_inline}}
-  - : A positive integer indicating the total number of RTP packets received for this SSRC, including retransmissions.
+- {{domxref("RTCRemoteInboundRtpStreamStats.jitter", "jitter")}} {{optional_inline}}
+  - : A number indicating the {{glossary("jitter", "packet jitter")}} for this synchronization source, measured in seconds.
 - {{domxref("RTCRemoteInboundRtpStreamStats.packetsLost", "packetsLost")}} {{optional_inline}}
   - : An integer indicating the total number of RTP packets lost for this SSRC, as measured at the remote endpoint.
     This value can be negative if duplicate packets were received.
-- {{domxref("RTCRemoteInboundRtpStreamStats.jitter", "jitter")}} {{optional_inline}}
-  - : A number indicating the {{glossary("jitter", "packet jitter")}} for this synchronization source, measured in seconds.
+- {{domxref("RTCRemoteInboundRtpStreamStats.packetsReceived", "packetsReceived")}} {{optional_inline}}
+  - : A positive integer indicating the total number of RTP packets received for this SSRC, including retransmissions.
 
 ### Common RTP stream statistics
 
@@ -71,7 +71,34 @@ The following properties are common to all WebRTC statistics objects.
 
 ## Examples
 
-<!-- TBD -->
+Given a variable `peerConnection` that is an instance of an {{domxref("RTCPeerConnection")}}, the code below uses `await` to wait for the statistics report, and then iterates it using `RTCStatsReport.forEach()`.
+It then filters the dictionaries for just those reports that have the type of `remote-inbound-rtp` and logs the result.
+
+```js
+const stats = await myPeerConnection.getStats();
+
+stats.forEach((report) => {
+  if (report.type === "remote-inbound-rtp") {
+    console.log("Remote Inbound RTP Stream Stats:");
+    console.log(`id: ${report.id}`);
+    console.log(`timestamp: ${report.timestamp}`);
+    console.log(`transportId: ${report.transportId}`);
+    console.log(`ssrc: ${report.ssrc}`);
+    console.log(`kind: ${report.kind}`);
+    console.log(`codecId: ${report.codecId}`);
+    console.log(`packetsReceived: ${report.packetsReceived}`);
+    console.log(`packetsLost: ${report.packetsLost}`);
+    console.log(`jitter: ${report.jitter}`);
+    console.log(`totalRoundTripTime: ${report.totalRoundTripTime}`);
+    console.log(
+      `roundTripTimeMeasurements: ${report.roundTripTimeMeasurements}`,
+    );
+    console.log(`roundTripTime: ${report.roundTripTime}`);
+    console.log(`localId: ${report.localId}`);
+    console.log(`fractionLost: ${report.fractionLost}`);
+  }
+});
+```
 
 ## Specifications
 
