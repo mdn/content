@@ -8,11 +8,11 @@ browser-compat: api.PerformanceResourceTiming.contentType
 
 {{APIRef("Performance API")}}
 
-The **`contentType`** read-only property of the {{domxref("PerformanceResourceTiming")}} interface is a string indicating the {{glossary("MIME type")}} "essence" of the fetched resource.
+The **`contentType`** read-only property of the {{domxref("PerformanceResourceTiming")}} interface is a string indicating the content type of the fetched resource, formatted as a {{glossary("MIME type")}} and subtype separated by a forward slash.
 
-The MIME type essence is a minimized and "standardized" version of the actual resource MIME type that is extracted from the {{httpheader("Content-Type")}} HTTP header sent in the fetch response.
+The content type is a minimized and "standardized" version of the MIME type that is extracted from the {{httpheader("Content-Type")}} HTTP header sent in the resource's fetch response.
 For JavaScript, JSON, SVG, and XML, the MIME type is replaced by a representative MIME type/subtype string.
-Other types supported by the browser are returned as the MIME type/subtype string: other information in the header is discarded.
+Other types supported by the browser are represented by the MIME type/subtype string in the header (other information in the headeris discarded).
 
 ## Value
 
