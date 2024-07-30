@@ -15,7 +15,8 @@ This represents a [CSS declaration block](/en-US/docs/Web/API/CSS_Object_Model/C
 
 A {{domxref("CSSPageDescriptors")}} object with properties that match the associated {{cssxref("@page")}} [at-rule](/en-US/docs/Web/CSS/At-rule).
 
-> **Note:** Earlier versions of the specification defined this property as a {{domxref("CSSStyleDeclaration")}}.
+> [!NOTE]
+> Earlier versions of the specification defined this property as a {{domxref("CSSStyleDeclaration")}}.
 > Check the compatibility data below for your browser.
 
 ## Examples
