@@ -238,7 +238,7 @@ The error response fields are as follows:
 This information can be used in a couple of different ways:
 
 - The browser can display a custom UI to the user informing them of what went wrong (see the [Chrome documentation](https://developers.google.com/privacy-sandbox/blog/fedcm-chrome-120-updates#error-api) for an example). Bear in mind that if the request failed because the IdP server is unavailable, it obviously can't return any information. In such cases, the browser will report this via a generic message.
-- The associated RP {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} call used to attempt sign-in will return the above information when the promise rejects, which can be used to handle the error. For example, an RP may wish to follow-up the browser's custom UI with some information to help the user succeed in a future sign-in attempt. The [`get()` Error API example](/en-US/docs/Web/API/CredentialsContainer/get#example_including_error_api_information) shows what this looks like in code.
+- The associated RP {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} call used to attempt sign-in will reject its promise with an `IdentityCredentialError`, which contains the error information. An RP can catch this error and then follow up the browser's custom UI with some information to help the user succeed in a future sign-in attempt.
 
 ## Update login status using the Login Status API
 
