@@ -62,7 +62,7 @@ get(options)
 
     - `federated` {{optional_inline}}
 
-      - : This option asks the browser to retrieve a [federated identity credential](/en-US/docs/Web/API/Credential_Management_API/Credential_types#federated_identity_credentials) as a {{domxref("FederatedCredential")}} object, using the now superseded {{domxref("FederatedCredential")}} interface. Developers should prefer to use the `identity` option, if it is available.
+      - : This option asks the browser to retrieve a [federated identity credential](/en-US/docs/Web/API/Credential_Management_API/Credential_types#federated_identity_credentials) as a {{domxref("FederatedCredential")}} object. This interface is now superseded, and developers should prefer to use the `identity` option, if it is available.
 
         This option's value is an object with the following properties:
 
