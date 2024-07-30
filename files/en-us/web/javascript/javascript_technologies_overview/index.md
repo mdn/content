@@ -129,7 +129,7 @@ A JavaScript shell allows you to quickly test snippets of JavaScript code withou
 
 The following JavaScript shells are stand-alone environments, like Perl or Python.
 
-- [Node.js](https://nodejs.org/en) - Node.js is a platform for easily building fast, scalable network applications.
+- [Node.js](https://nodejs.org/) - Node.js is a platform for easily building fast, scalable network applications.
 - [ShellJS](https://github.com/shelljs/shelljs) - Portable Unix shell commands for Node.js.
 
 ### Browser-based JavaScript shells
