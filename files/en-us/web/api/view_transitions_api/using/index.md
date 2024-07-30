@@ -51,7 +51,7 @@ To handle creating the outbound and inbound transition animations, the API const
 ```
 
 > [!NOTE]
-> a {{cssxref("::view-transition-group")}} subtree is created for every captured `view-transition-name`.
+> A {{cssxref("::view-transition-group")}} subtree is created for every captured `view-transition-name`.
 
 In the case of same-document transitions (SPAs), the pseudo-element tree is made available in the document. In the case of cross-document transitions (MPAs), the pseudo-element tree is made available in the destination document only.
 

@@ -21,7 +21,7 @@ Otherwise, it is a `section` in the accessibility tree, and usually contains the
 
 ### Historical Usage
 
-The `<header>` element originally existed at the very beginning of HTML for headings. It is seen in [the very first website](http://info.cern.ch/). At some point, headings became [`<h1>` through `<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements), allowing `<header>` to be free to fill a different role.
+The `<header>` element originally existed at the very beginning of HTML for headings. It is seen in [the very first website](https://info.cern.ch/). At some point, headings became [`<h1>` through `<h6>`](/en-US/docs/Web/HTML/Element/Heading_Elements), allowing `<header>` to be free to fill a different role.
 
 ## Attributes
 

@@ -9,7 +9,7 @@ page-type: guide
 The [CSS display module](/en-US/docs/Web/CSS/CSS_display) defines a multi-keyword syntax for the CSS [`display`](/en-US/docs/Web/CSS/display) property. This guide explains the multi-keyword syntax.
 
 > [!NOTE]
-> multi-keyword syntax is also referred to as "two-value syntax" or "multi-value syntax."
+> Multi-keyword syntax is also referred to as "two-value syntax" or "multi-value syntax."
 
 ## What happens when we change the value of the display property?
 

@@ -21,7 +21,7 @@ we create a new {{domxref("Request")}} object using the {{domxref("Request.Reque
 We then fetch this request using {{domxref("Window/fetch", "fetch()")}}, extract a blob from the response using {{domxref("Response.blob")}}, create an object URL out of it using {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}, and display this in an {{htmlelement("img")}}.
 
 > [!NOTE]
-> at the top of the `fetch()` block we log the response `ok` value to the console.
+> At the top of the `fetch()` block we log the response `ok` value to the console.
 
 ```js
 const myImage = document.querySelector("img");

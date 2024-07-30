@@ -154,7 +154,7 @@ play.addEventListener("click", async () => {
 });
 ```
 
-You can [run the full example live](https://mdn.github.io/webaudio-examples/decode-audio-data/promise/), or [view the source](https://github.com/mdn/webaudio-examples/blob/main/decode-audio-data/promise/).
+You can [run the full example live](https://mdn.github.io/webaudio-examples/decode-audio-data/promise/), or [view the source](https://github.com/mdn/webaudio-examples/tree/main/decode-audio-data/promise).
 
 Find more about Web Audio API basics in [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API).
 

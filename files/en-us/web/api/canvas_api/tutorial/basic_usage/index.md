@@ -82,7 +82,7 @@ if (canvas.getContext) {
 Here is a minimalistic template, which we'll be using as a starting point for later examples.
 
 > [!NOTE]
-> it is not good practice to embed a script inside HTML. We do it here to keep the example concise.
+> It is not good practice to embed a script inside HTML. We do it here to keep the example concise.
 
 ```html
 <!doctype html>
