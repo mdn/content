@@ -28,15 +28,14 @@ Some values of `dominant-baseline` re-determine all three values. Others only re
 /* Initial value */
 dominant-baseline: auto;
 
-/* Length and percentage values */
-dominant-baseline: auto;
-dominant-baseline: text-bottom;
+/* Keyword values */
 dominant-baseline: alphabetic;
-dominant-baseline: ideographic;
-dominant-baseline: middle;
 dominant-baseline: central;
-dominant-baseline: mathematical;
 dominant-baseline: hanging;
+dominant-baseline: ideographic;
+dominant-baseline: mathematical;
+dominant-baseline: middle;
+dominant-baseline: text-bottom;
 dominant-baseline: text-top;
 
 /* Global values */
