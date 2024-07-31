@@ -142,7 +142,8 @@ When you restructure websites, URLs change. Even if you update your site's links
 
 You don't want to break these links, as they bring valuable users and help your SEO, so you set up redirects from the old URLs to the new ones.
 
-> **Note:** This technique does work for internal links, but try to avoid having internal redirects. A redirect has a significant performance cost (as an extra HTTP request occurs). If you can avoid it by correcting internal links, you should fix those links instead.
+> [!NOTE]
+> This technique does work for internal links, but try to avoid having internal redirects. A redirect has a significant performance cost (as an extra HTTP request occurs). If you can avoid it by correcting internal links, you should fix those links instead.
 
 ### Temporary responses to unsafe requests
 

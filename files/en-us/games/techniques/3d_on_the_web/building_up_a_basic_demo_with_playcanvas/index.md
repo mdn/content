@@ -20,7 +20,8 @@ PlayCanvas has a few well-known demos published that showcase its possibilities.
 
 ![A list of PlayCanvas demos: Tanx, Swooop, Star Lord, BMW i8.](playcanvas-demos.png)
 
-> **Note:** Check out the list of [featured demos](https://playcanvas.com/explore) to find more examples.
+> [!NOTE]
+> Check out the list of [featured demos](https://playcanvas.com/explore) to find more examples.
 
 ## Engine vs. editor
 

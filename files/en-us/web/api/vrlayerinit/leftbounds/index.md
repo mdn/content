@@ -11,7 +11,8 @@ status:
 
 The **`leftBounds`** property of the {{domxref("VRLayerInit")}} interface (dictionary) defines the left texture bounds of the canvas whose contents will be presented by the {{domxref("VRDisplay")}}.
 
-> **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
+> [!NOTE]
+> This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
 ## Value
 

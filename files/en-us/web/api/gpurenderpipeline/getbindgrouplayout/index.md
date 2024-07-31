@@ -39,7 +39,8 @@ The following criteria must be met when calling **`getBindGroupLayout()`**, othe
 
 ## Examples
 
-> **Note:** You can see complete working examples with `getBindGroupLayout()` in action in the [WebGPU samples](https://webgpu.github.io/webgpu-samples/).
+> [!NOTE]
+> You can see complete working examples with `getBindGroupLayout()` in action in the [WebGPU samples](https://webgpu.github.io/webgpu-samples/).
 
 ```js
 // ...

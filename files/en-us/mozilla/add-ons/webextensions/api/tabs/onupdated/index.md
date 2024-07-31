@@ -71,7 +71,8 @@ Events have three functions:
         - "title"
         - "url"
 
-        > **Note:** The "url" value has been supported since Firefox 88. In Firefox 87 and earlier, "url" changes can be observed by filtering by "status".
+        > [!NOTE]
+        > The "url" value has been supported since Firefox 88. In Firefox 87 and earlier, "url" changes can be observed by filtering by "status".
 
     - `tabId`
       - : `Integer`. Fires this event only for the tab identified by this ID.
@@ -219,7 +220,8 @@ browser.tabs.onUpdated.addListener(handleUpdated, filter);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#event-onUpdated) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#event-onUpdated) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

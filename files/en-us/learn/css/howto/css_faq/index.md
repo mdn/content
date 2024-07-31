@@ -63,7 +63,8 @@ It is generally recommended to use classes as much as possible, and to use ids o
 - Classes allow you to style multiple elements, therefore they can lead to shorter stylesheets, rather than having to write out the same styling information in multiple rules that use id selectors. Shorter stylesheets are more performant.
 - Class selectors have lower [specificity](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#specificity) than id selectors, so are easier to override if needed.
 
-> **Note:** See [Selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors) for more information.
+> [!NOTE]
+> See [Selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors) for more information.
 
 ## How do I restore the default value of a property?
 
@@ -264,9 +265,11 @@ If you are required to use prefixes in your work, write the prefixed versions fi
 text-stroke: 4px navy;
 ```
 
-> **Note:** For more information on dealing with prefixed properties, see [Handling common HTML and CSS problems — Handling CSS prefixes](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#handling_css_prefixes) from our [Cross-browser testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing) module.
+> [!NOTE]
+> For more information on dealing with prefixed properties, see [Handling common HTML and CSS problems — Handling CSS prefixes](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#handling_css_prefixes) from our [Cross-browser testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing) module.
 
-> **Note:** See the [Mozilla CSS Extensions](/en-US/docs/Web/CSS/Mozilla_Extensions) and [WebKit CSS Extensions](/en-US/docs/Web/CSS/WebKit_Extensions) for lists of browser-prefixed CSS properties.
+> [!NOTE]
+> See the [Mozilla CSS Extensions](/en-US/docs/Web/CSS/Mozilla_Extensions) and [WebKit CSS Extensions](/en-US/docs/Web/CSS/WebKit_Extensions) for lists of browser-prefixed CSS properties.
 
 ## How does z-index relate to positioning?
 
@@ -274,4 +277,5 @@ The z-index property specifies the stack order of elements.
 
 An element with a higher z-index/stack order is always rendered in front of an element with a lower z-index/stack order on the screen. Z-index will only work on elements that have a specified position (`position:absolute`, `position:relative`, or `position:fixed`).
 
-> **Note:** For more information, see our [Positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning) learning article, and in particular the [Introducing z-index](/en-US/docs/Learn/CSS/CSS_layout/Positioning#introducing_z-index) section.
+> [!NOTE]
+> For more information, see our [Positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning) learning article, and in particular the [Introducing z-index](/en-US/docs/Learn/CSS/CSS_layout/Positioning#introducing_z-index) section.

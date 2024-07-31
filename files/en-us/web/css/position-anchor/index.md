@@ -40,7 +40,7 @@ position-anchor: unset;
 
 This property is only relevant to "positioned" elements — elements and pseudo elements that have a {{cssxref("position")}} of `absolute` or `fixed` set.
 
-To position an element relative to an anchor element, the positioned element requires three features: an association, a position, and a location. The `position-anchor` and {{htmlelement("anchor-name")}} properties provide the association.
+To position an element relative to an anchor element, the positioned element requires three features: an association, a position, and a location. The `position-anchor` and {{cssxref("anchor-name")}} properties provide the association.
 
 The anchor element accepts one or more `<dashed-ident>` anchor names set on it via the `anchor-name` property. When one of those names is then set as the value of the positioned element's `position-anchor` property, the two elements are associated.
 
@@ -215,7 +215,7 @@ body {
 }
 ```
 
-Each of the positioned elements is given a {{cssxref("position-anchor")}} property with a value matching one of the two anchor names. The positioned elements are then given anchor-relative positioning information using a combination of inset, alignment, and margin properties.
+Each of the positioned elements is given a `position-anchor` property with a value matching one of the two anchor names. The positioned elements are then given anchor-relative positioning information using a combination of inset, alignment, and margin properties.
 
 ```css hidden
 .infobox {

@@ -16,7 +16,8 @@ Two newer models were created in HTTP/1.1. The persistent-connection model keeps
 
 ![Compares the performance of the three HTTP/1.x connection models: short-lived connections, persistent connections, and HTTP pipelining.](http1_x_connections.png)
 
-> **Note:** HTTP/2 adds additional models for connection management.
+> [!NOTE]
+> HTTP/2 adds additional models for connection management.
 
 It's important to note that connection management in HTTP applies to the connection between two consecutive nodes, which is [hop-by-hop](/en-US/docs/Web/HTTP/Headers#hop-by-hop_headers) and not [end-to-end](/en-US/docs/Web/HTTP/Headers#end-to-end_headers). The model used in connections between a client and its first proxy may differ from the model between a proxy and the destination server (or any intermediate proxies). The HTTP headers involved in defining the connection model, like {{HTTPHeader("Connection")}} and {{HTTPHeader("Keep-Alive")}}, are [hop-by-hop](/en-US/docs/Web/HTTP/Headers#hop-by-hop_headers) headers with their values able to be changed by intermediary nodes.
 
@@ -30,7 +31,8 @@ The TCP handshake itself is time-consuming, but a TCP connection adapts to its l
 
 This model is the default model used in HTTP/1.0 (if there is no {{HTTPHeader("Connection")}} header, or if its value is set to `close`). In HTTP/1.1, this model is only used when the {{HTTPHeader("Connection")}} header is sent with a value of `close`.
 
-> **Note:** Unless dealing with a very old system, which doesn't support a persistent connection, there is no compelling reason to use this model.
+> [!NOTE]
+> Unless dealing with a very old system, which doesn't support a persistent connection, there is no compelling reason to use this model.
 
 ## Persistent connections
 
@@ -46,7 +48,8 @@ In HTTP/1.1, persistence is the default, and the header is no longer needed (but
 
 ## HTTP pipelining
 
-> **Note:** HTTP pipelining is not activated by default in modern browsers:
+> [!NOTE]
+> HTTP pipelining is not activated by default in modern browsers:
 >
 > - Buggy [proxies](https://en.wikipedia.org/wiki/Proxy_server) are still common and these lead to strange and erratic behaviors that Web developers cannot foresee and diagnose easily.
 > - Pipelining is complex to implement correctly: the size of the resource being transferred, the effective [RTT](https://en.wikipedia.org/wiki/Round-trip_delay_time) that will be used, as well as the effective bandwidth, have a direct incidence on the improvement provided by the pipeline. Without knowing these, important messages may be delayed behind unimportant ones. The notion of important even evolves during page layout! HTTP pipelining therefore brings a marginal improvement in most cases only.
@@ -64,7 +67,8 @@ Today, every HTTP/1.1-compliant proxy and server should support pipelining, thou
 
 ## Domain sharding
 
-> **Note:** Unless you have a very specific immediate need, don't use this deprecated technique; switch to HTTP/2 instead. In HTTP/2, domain sharding is no longer useful: the HTTP/2 connection is able to handle parallel unprioritized requests very well. Domain sharding is even detrimental to performance. Most HTTP/2 implementations use a technique called [connection coalescing](https://daniel.haxx.se/blog/2016/08/18/http2-connection-coalescing/) to revert eventual domain sharding.
+> [!NOTE]
+> Unless you have a very specific immediate need, don't use this deprecated technique; switch to HTTP/2 instead. In HTTP/2, domain sharding is no longer useful: the HTTP/2 connection is able to handle parallel unprioritized requests very well. Domain sharding is even detrimental to performance. Most HTTP/2 implementations use a technique called [connection coalescing](https://daniel.haxx.se/blog/2016/08/18/http2-connection-coalescing/) to revert eventual domain sharding.
 
 As an HTTP/1.x connection is serializing requests, even without any ordering, it can't be optimal without large enough available bandwidth. As a solution, browsers open several connections to each domain, sending parallel requests. Default was once 2 to 3 connections, but this has now increased to a more common use of 6 parallel connections. There is a risk of triggering [DoS](/en-US/docs/Glossary/DOS_attack) protection on the server side if attempting more than this number.
 

@@ -29,7 +29,8 @@ WebIDL is defined in [its specification](https://webidl.spec.whatwg.org/). But i
 - For Chromium, Google also created a [document](https://www.chromium.org/blink/webidl/) to describe its extensions.
 - For WebCore, Apple also made available a [page](https://trac.webkit.org/wiki/WebKitIDL) for its dialect.
 
-> **Note:** We describe here only the subset of WebIDL which is most useful when writing documentation. There are many more annotations useful for implementers; refer to the four documents linked above to have a complete overview.
+> [!NOTE]
+> We describe here only the subset of WebIDL which is most useful when writing documentation. There are many more annotations useful for implementers; refer to the four documents linked above to have a complete overview.
 
 ## Interfaces
 
@@ -171,7 +172,8 @@ Here, it is defined that when the global scope is of type `DedicatedWorkerGlobal
 
 ### Preferences
 
-> **Note:** this information is specific to Gecko and should only be used in the Browser compatibility section.
+> [!NOTE]
+> This information is specific to Gecko and should only be used in the Browser compatibility section.
 
 In Gecko, the availability of a partial interface, including its constructor, properties and methods may be controlled by a preference (usually called a "pref"). This is marked in the WebIDL too.
 
@@ -186,7 +188,8 @@ interface SpeechSynthesis {
 
 Here `media.webspeech.synth.enabled` controls the `SpeechSynthesis` interface and its properties (the full listing has more than 3.)
 
-> **Note:** the default value of the preference is not available directly in the WebIDL (it can be different from one product using Gecko to another.)
+> [!NOTE]
+> The default value of the preference is not available directly in the WebIDL (it can be different from one product using Gecko to another.)
 
 ### Available only in system code
 
@@ -243,7 +246,8 @@ If the keyword `readonly` is present, the property can't be modified. It must be
 - In the first sentence of its own page, by starting the description with: _The read-only **`HTMLMediaElement.error`** property…_
 - By starting its description in the interface page with _Returns…_
 
-> **Note:** Only read-only properties can be described as 'returning' a value. Non read-only properties can also be used to set a value.
+> [!NOTE]
+> Only read-only properties can be described as 'returning' a value. Non read-only properties can also be used to set a value.
 
 ### Throwing exceptions
 
@@ -292,7 +296,8 @@ Basic objects with types like {{jsxref("String")}} (being an IDL `DOMString`, or
 
 For interface objects, the default is to return a _reference_ to the internal object. This has to be mentioned both in the short description in the interface page, and in the description in the specific sub-pages.
 
-> **Note:** The keyword `readonly` used with a property returning an object applies to the reference (the internal object cannot be changed.) The properties of the returned object can be changed, even if they are marked as read-only in the relevant interface.
+> [!NOTE]
+> The keyword `readonly` used with a property returning an object applies to the reference (the internal object cannot be changed.) The properties of the returned object can be changed, even if they are marked as read-only in the relevant interface.
 
 Sometimes an API must return a _new_ object, or a _copy_ of an internal one. This case is indicated in the WebIDL using the `[NewObject]` annotation.
 
@@ -325,7 +330,8 @@ For documentation, the subpage must contain a sentence indicating if it is avail
 
 ### Preferences
 
-> **Note:** This information is specific to Gecko and should only be used in the Browser compatibility section.
+> [!NOTE]
+> This information is specific to Gecko and should only be used in the Browser compatibility section.
 
 In Gecko, the availability of some properties may be controlled by a preference. This is marked in the WebIDL too.
 
@@ -336,7 +342,8 @@ In Gecko, the availability of some properties may be controlled by a preference.
 
 Here `media.webvtt.enabled` controls the `textTracks` property.
 
-> **Note:** The default value of the preference is not available directly in the WebIDL (it can be different from one product using Gecko to another).
+> [!NOTE]
+> The default value of the preference is not available directly in the WebIDL (it can be different from one product using Gecko to another).
 
 ## Methods
 
@@ -396,7 +403,8 @@ For the documentation, the sub-page must contain a sentence indicating if it is 
 
 ### Preferences
 
-> **Note:** this information is specific to Gecko and should only be used in the Browser compatibility section.
+> [!NOTE]
+> This information is specific to Gecko and should only be used in the Browser compatibility section.
 
 In Gecko, the availability of some methods may be controlled by a preference. This is marked in the WebIDL too.
 
@@ -409,7 +417,8 @@ In Gecko, the availability of some methods may be controlled by a preference. Th
 
 Here `media.webvtt.enabled` controls the `addTextTrack()` method.
 
-> **Note:** The default value of the preference is not available directly in the WebIDL (it can be different from one product using Gecko to another.)
+> [!NOTE]
+> The default value of the preference is not available directly in the WebIDL (it can be different from one product using Gecko to another.)
 
 ## Special methods
 
@@ -434,7 +443,8 @@ serializer; // Standard version
 
 The `toJSON()` method is listed just like any other method of the interface and has its own sub-page (E.g. {{domxref("Performance.toJSON()")}})
 
-> **Note:** the WebIDL specification uses `serializer` instead of `jsonifier`. This is not used in Gecko — only the non-standard likely early proposal `jsonifier` is found in mozilla-central.
+> [!NOTE]
+> The WebIDL specification uses `serializer` instead of `jsonifier`. This is not used in Gecko — only the non-standard likely early proposal `jsonifier` is found in mozilla-central.
 
 ### Iterator-like methods
 

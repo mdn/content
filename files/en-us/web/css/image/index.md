@@ -49,9 +49,10 @@ The concrete object size is calculated using the following algorithm:
 - If the specified size defines _only the width or only the height_, the missing value is determined using the intrinsic ratio, if there is any, the intrinsic dimensions if the specified value matches, or the default object size for that missing value.
 - If the specified size defines _neither the width nor the height_, the concrete object size is calculated so that it matches the intrinsic aspect ratio of the image but without exceeding the default object size in any dimension. If the image has no intrinsic aspect ratio, the intrinsic aspect ratio of the object it applies to is used; if this object has none, the missing width or height are taken from the default object size.
 
-> **Note:** Not all browsers support every type of image on every property. See the [browser compatibility section](#browser_compatibility) for details.
+> [!NOTE]
+> Not all browsers support every type of image on every property. See the [browser compatibility section](#browser_compatibility) for details.
 
-## Accessibility concerns
+## Accessibility
 
 Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.
 

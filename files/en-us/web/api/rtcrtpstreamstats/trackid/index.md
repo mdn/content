@@ -20,7 +20,8 @@ A string which uniquely identifies the
 {{domxref("RTCMediaStreamTrackStats")}} object that provides statistics for the track
 for which statistics are being collected by this {{domxref("RTCStatsReport")}}.
 
-> **Note:** This value is _not_ the same as the value of
+> [!NOTE]
+> This value is _not_ the same as the value of
 > {{domxref("MediaStreamTrack.id")}}.
 
 ## Specifications

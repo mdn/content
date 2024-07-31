@@ -18,16 +18,16 @@ The code below shows how the methods are used with the same `url` and `base` URL
 const url = "articles";
 const base = "https://developer.mozilla.org/some/path";
 const constructorResult = new URL(url, base);
-// => https://developer.mozilla.org/url/some/articles
+// => https://developer.mozilla.org/some/articles
 const parseResult = URL.parse(url, base);
-// => https://developer.mozilla.org/url/some/articles
+// => https://developer.mozilla.org/some/articles
 ```
 
-You can see from the example that resolving the `URL` from a supplied base URL and relative reference is not simply a concantenation of the supplied parameters.
+You can see from the example that resolving the `URL` from a supplied base URL and relative reference is not simply a concatenation of the supplied parameters.
 
 In this case a path relative to the current directory is passed (`articles`).
 The current directory of the `base` URL is the URL string up to the last forward slash.
-Here `https://developer.mozilla.org/some/path` has no trailing forward slash, so the current directory is `https://developer.mozilla.org/some/`, and hence resolves to a final URL of `https://developer.mozilla.org/url/some/articles`.
+Here `https://developer.mozilla.org/some/path` has no trailing forward slash, so the current directory is `https://developer.mozilla.org/some/`, and hence resolves to a final URL of `https://developer.mozilla.org/some/articles`.
 
 Relative references are resolved against the base URL using a path reference that is relative to: the current directory (`./`), the parent directory of the current directory (`../`), or the site root (`/`).
 The following sections show how resolution works for each type of relative path.
@@ -123,7 +123,8 @@ log(new URL("../../../../path", "https://test.example.org/api/v1/v2/").href);
 A relative reference prefixed with `/`, such as `/path`, is relative to the site root of the URL specified in the `base` argument.
 For example, given a base URL of `https://test.example.com/api/v1` the resolved URL for the root-relative URL `/some/path` is `https://test.example.com/some/path`.
 
-> **Note:** The path part of the `base` URL doesn't matter when resolving root-relative URLs.
+> [!NOTE]
+> The path part of the `base` URL doesn't matter when resolving root-relative URLs.
 
 ```html hidden
 <pre id="log"></pre>

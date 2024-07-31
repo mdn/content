@@ -24,7 +24,7 @@ None.
 
 Returns a sequence of objects with the following format:
 
-- `property value pairs`
+- property value pairs
   - : As many property value pairs as are contained in each keyframe of the animation.
 - `offset`
   - : The offset of the keyframe specified as a number between `0.0` and `1.0` inclusive or `null`. This is equivalent to specifying start and end states in percentages in CSS stylesheets using `@keyframes`. This will be `null` if the keyframe is automatically spaced.

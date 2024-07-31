@@ -11,7 +11,8 @@ The **`Server`** header describes the
 software used by the origin server that handled the request — that is, the server that
 generated the response.
 
-> **Warning:** Avoid overly-detailed `Server` values, as they can reveal information that
+> [!WARNING]
+> Avoid overly-detailed `Server` values, as they can reveal information that
 > may make it (slightly) easier for attackers to exploit known security holes.
 
 <table class="properties">

@@ -13,7 +13,8 @@ A **`FinalizationRegistry`** object lets you request a callback when a value is 
 
 `FinalizationRegistry` provides a way to request that a _cleanup callback_ get called at some point when a value registered with the registry has been _reclaimed_ (garbage-collected). (Cleanup callbacks are sometimes called _finalizers_.)
 
-> **Note:** Cleanup callbacks should not be used for essential program logic. See [Notes on cleanup callbacks](#notes_on_cleanup_callbacks) for details.
+> [!NOTE]
+> Cleanup callbacks should not be used for essential program logic. See [Notes on cleanup callbacks](#notes_on_cleanup_callbacks) for details.
 
 You create the registry passing in the callback:
 

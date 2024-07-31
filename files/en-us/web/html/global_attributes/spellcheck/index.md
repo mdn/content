@@ -9,7 +9,8 @@ browser-compat: html.global_attributes.spellcheck
 
 The **`spellcheck`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is an [enumerated](/en-US/docs/Glossary/Enumerated) attribute that defines whether the element may be checked for spelling errors.
 
-> **Note:** This attribute is merely a hint for the browser: browsers are not required to check for spelling errors. Typically non-editable elements are not checked for spelling errors, even if the `spellcheck` attribute is set to `true` and the browser supports spellchecking.
+> [!NOTE]
+> This attribute is merely a hint for the browser: browsers are not required to check for spelling errors. Typically non-editable elements are not checked for spelling errors, even if the `spellcheck` attribute is set to `true` and the browser supports spellchecking.
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-spellcheck.html","tabbed-shorter")}}
 

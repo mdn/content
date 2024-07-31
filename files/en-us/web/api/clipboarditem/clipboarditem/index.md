@@ -10,7 +10,8 @@ browser-compat: api.ClipboardItem.ClipboardItem
 
 The **`ClipboardItem()`** constructor creates a new {{domxref("ClipboardItem")}} object, which represents data to be stored or retrieved via the [Clipboard API](/en-US/docs/Web/API/Clipboard_API) {{domxref("clipboard.write()")}} and {{domxref("clipboard.read()")}} methods, respectively.
 
-> **Note:** Image format support varies by browser. See the browser compatibility table for the {{domxref("Clipboard")}} interface.
+> [!NOTE]
+> Image format support varies by browser. See the browser compatibility table for the {{domxref("Clipboard")}} interface.
 
 ## Syntax
 
@@ -30,14 +31,16 @@ new ClipboardItem(data, options)
       - : One of the three strings: `unspecified`, `inline` or `attachment`.
         The default is `unspecified`.
 
-> **Note:** You can also work with text via the {{domxref("Clipboard.readText()")}} and {{domxref("Clipboard.writeText()")}} methods of the {{domxref("Clipboard")}} interface.
+> [!NOTE]
+> You can also work with text via the {{domxref("Clipboard.readText()")}} and {{domxref("Clipboard.writeText()")}} methods of the {{domxref("Clipboard")}} interface.
 
 ## Examples
 
-The below example requests a PNG image using the {{domxref("Fetch API")}}, and in turn, the {{domxref("Response.blob()", "responses' blob()")}} method, to create a new {{domxref("ClipboardItem")}}.
+The below example requests a PNG image using {{domxref("Window/fetch", "fetch()")}}, and in turn, the {{domxref("Response.blob()")}} method, to create a new {{domxref("ClipboardItem")}}.
 This item is then written to the clipboard, using the {{domxref("Clipboard.write()")}} method.
 
-> **Note:** You can only pass in one clipboard item at a time.
+> [!NOTE]
+> You can only pass in one clipboard item at a time.
 
 ```js
 async function writeClipImg() {

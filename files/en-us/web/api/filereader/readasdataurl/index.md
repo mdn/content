@@ -15,7 +15,8 @@ The **`readAsDataURL()`** method of the {{domxref("FileReader")}} interface is u
 {{domxref("FileReader.result","result")}} attribute contains the data as a [data: URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) representing the
 file's data as a base64 encoded string.
 
-> **Note:** The blob's {{domxref("FileReader.result","result")}} cannot be
+> [!NOTE]
+> The blob's {{domxref("FileReader.result","result")}} cannot be
 > directly decoded as Base64 without first removing the Data-URL declaration preceding
 > the Base64-encoded data. To retrieve only the Base64 encoded string, first
 > remove `data:*/*;base64,` from the result.

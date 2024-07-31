@@ -49,7 +49,6 @@ See {{domxref("WebGLShader")}} for usage and examples.
 - {{domxref("WebGLRenderingContext.bindAttribLocation()")}}
 - {{domxref("WebGLRenderingContext.compileShader()")}}
 - {{domxref("WebGLRenderingContext.createProgram()")}}
-- {{domxref("WebGLRenderingContext.createShader()")}}
 - {{domxref("WebGLRenderingContext.deleteProgram()")}}
 - {{domxref("WebGLRenderingContext.deleteShader()")}}
 - {{domxref("WebGLRenderingContext.detachShader()")}}

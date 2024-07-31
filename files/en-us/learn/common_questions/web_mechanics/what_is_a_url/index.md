@@ -55,9 +55,11 @@ A URL is composed of different parts, some mandatory and others optional. The mo
 
 ![full URL](mdn-url-all.png)
 
-> **Note:** You might think of a URL like a regular postal mail address: the _scheme_ represents the postal service you want to use, the _domain name_ is the city or town, and the _port_ is like the zip code; the _path_ represents the building where your mail should be delivered; the _parameters_ represent extra information such as the number of the apartment in the building; and, finally, the _anchor_ represents the actual person to whom you've addressed your mail.
+> [!NOTE]
+> You might think of a URL like a regular postal mail address: the _scheme_ represents the postal service you want to use, the _domain name_ is the city or town, and the _port_ is like the zip code; the _path_ represents the building where your mail should be delivered; the _parameters_ represent extra information such as the number of the apartment in the building; and, finally, the _anchor_ represents the actual person to whom you've addressed your mail.
 
-> **Note:** There are [some extra parts and some extra rules](https://en.wikipedia.org/wiki/Uniform_Resource_Locator) regarding URLs, but they are not relevant for regular users or Web developers. Don't worry about this, you don't need to know them to build and use fully functional URLs.
+> [!NOTE]
+> There are [some extra parts and some extra rules](https://en.wikipedia.org/wiki/Uniform_Resource_Locator) regarding URLs, but they are not relevant for regular users or Web developers. Don't worry about this, you don't need to know them to build and use fully functional URLs.
 
 ## Scheme
 
@@ -74,7 +76,8 @@ Next follows the _authority_, which is separated from the scheme by the characte
 - The domain indicates which Web server is being requested. Usually this is a [domain name](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name), but an {{Glossary("IP address")}} may also be used (but this is rare as it is much less convenient).
 - The port indicates the technical "gate" used to access the resources on the web server. It is usually omitted if the web server uses the standard ports of the HTTP protocol (80 for HTTP and 443 for HTTPS) to grant access to its resources. Otherwise it is mandatory.
 
-> **Note:** The separator between the scheme and authority is `://`. The colon separates the scheme from the next part of the URL, while `//` indicates that the next part of the URL is the authority.
+> [!NOTE]
+> The separator between the scheme and authority is `://`. The colon separates the scheme from the next part of the URL, while `//` indicates that the next part of the URL is the authority.
 >
 > One example of a URL that doesn't use an authority is the mail client (`mailto:foobar`). It contains a scheme but doesn't use an authority component. Therefore, the colon is not followed by two slashes and only acts as a delimiter between the scheme and mail address.
 
@@ -107,7 +110,8 @@ The {{Glossary("HTML")}} language — [which will be discussed later on](/en-US/
 - to display media such as images (with the {{HTMLElement("img")}} element), videos (with the {{HTMLElement("video")}} element), sounds and music (with the {{HTMLElement("audio")}} element), etc.;
 - to display other HTML documents with the {{HTMLElement("iframe")}} element.
 
-> **Note:** When specifying URLs to load resources as part of a page (such as when using the `<script>`, `<audio>`, `<img>`, `<video>`, and the like), you should generally only use HTTP and HTTPS URLs, with few exceptions (one notable one being `data:`; see [Data URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)). Using FTP, for example, is not secure and is no longer supported by modern browsers.
+> [!NOTE]
+> When specifying URLs to load resources as part of a page (such as when using the `<script>`, `<audio>`, `<img>`, `<video>`, and the like), you should generally only use HTTP and HTTPS URLs, with few exceptions (one notable one being `data:`; see [Data URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)). Using FTP, for example, is not secure and is no longer supported by modern browsers.
 
 Other technologies, such as {{Glossary("CSS")}} or {{Glossary("JavaScript")}}, use URLs extensively, and these are really the heart of the Web.
 

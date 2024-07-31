@@ -63,7 +63,8 @@ For example, if your project relied on Webpack with a certain configuration, you
 
 To see local dependencies really shine, all you need to do is try to download and run an existing project — if it works and all the dependencies work right out of the box, then you have local dependencies to thank for the fact that the code is portable.
 
-> **Note:** npm is not the only package manager available. A successful and popular alternative package manager is [Yarn](https://yarnpkg.com/). Yarn resolves the dependencies using a different algorithm that can mean a faster user experience. There are also a number of other emerging clients, such as [pnpm](https://pnpm.js.org/).
+> [!NOTE]
+> npm is not the only package manager available. A successful and popular alternative package manager is [Yarn](https://yarnpkg.com/). Yarn resolves the dependencies using a different algorithm that can mean a faster user experience. There are also a number of other emerging clients, such as [pnpm](https://pnpm.js.org/).
 
 ## Package registries
 
@@ -193,7 +194,8 @@ In Vite, the `index.html` file is front and central. It defines the starting poi
 
 Note that the `<script>` elements creates a dependency on a file called `src/main.jsx`, which declares the entry point of the JavaScript logic for the app. Create the `src` folder and create `main.jsx` in this folder, but leave it blank for now.
 
-> **Note:** The [`type="module"`](/en-US/docs/Web/HTML/Element/script/type) attribute is important. It tells the browser to treat the script as an ES module, which allows us to use `import` and `export` syntax in our JavaScript code. The file extension is `.jsx`, because in the next article, we will add React JSX syntax to it. Browsers don't understand JSX, but Vite will transform it to regular JavaScript for us, as if browsers do!
+> [!NOTE]
+> The [`type="module"`](/en-US/docs/Web/HTML/Element/script/type) attribute is important. It tells the browser to treat the script as an ES module, which allows us to use `import` and `export` syntax in our JavaScript code. The file extension is `.jsx`, because in the next article, we will add React JSX syntax to it. Browsers don't understand JSX, but Vite will transform it to regular JavaScript for us, as if browsers do!
 
 ### Having fun with Vite
 
@@ -225,7 +227,8 @@ npm install plotly.js-dist-min
 
 Note how we are installing without the `--save-dev` flag. As previously mentioned, this is because we will actually use this package in our source code, not just as a command line tool. This command will add a new `"dependencies"` object to your `package.json` file, with `plotly.js-dist-min` in it.
 
-> **Note:** Here, we chose the package for you to complete our task. When you are writing your own code, think about the following questions when finding and installing a dependency:
+> [!NOTE]
+> Here, we chose the package for you to complete our task. When you are writing your own code, think about the following questions when finding and installing a dependency:
 >
 > - Do I need a dependency at all? Is it possible to do it with built-in features, or is it simple enough to write myself?
 > - What exactly do I need to do? The more detailed you are, the more likely you are going to find a package that does exactly what you need. You can search for keywords on npm or Google. Also prefer small packages to big ones, as the latter may lead to performance issues when installing, running, etc.
@@ -284,7 +287,8 @@ dist/assets/index-BlYAJQFz.js  3,723.18 kB │ gzip: 1,167.74 kB
 
 Vite will create a directory called `dist`. If you look into it, it contains an `index.html`, which looks very similar to the root one, except that the `script`'s source is now replaced with a path to the `assets` folder. The `assets` folder containing transformed JavaScript output, which is now minified and optimized for production.
 
-> **Note:** You may be worried about the warning that there's a chunk that's too large. This is expected because we are loading a library that does a lot of things behind the scenes (imagine writing all the code yourself to draw the same graph). For now, we don't need to worry about it.
+> [!NOTE]
+> You may be worried about the warning that there's a chunk that's too large. This is expected because we are loading a library that does a lot of things behind the scenes (imagine writing all the code yourself to draw the same graph). For now, we don't need to worry about it.
 
 ## A rough guide to package manager clients
 
@@ -306,7 +310,8 @@ However, worth noting that the npm package manager is **not** required to instal
 
 Let's review the common actions you'll want to perform with package managers.
 
-> **Note:** We will demonstrate both npm and Yarn commands. They are not meant to be run in the same project. You should set up your project with either npm or Yarn and use commands from that package manager consistently.
+> [!NOTE]
+> We will demonstrate both npm and Yarn commands. They are not meant to be run in the same project. You should set up your project with either npm or Yarn and use commands from that package manager consistently.
 
 ### Initialize a new project
 

@@ -21,7 +21,8 @@ as {{cssxref("::before")}} or {{cssxref("::after")}}. If the element's content c
 without a need for horizontal scrollbar, its `scrollWidth` is equal to
 {{domxref("Element.clientWidth", "clientWidth")}}
 
-> **Note:** This property will round the value to an integer. If you need a fractional value,
+> [!NOTE]
+> This property will round the value to an integer. If you need a fractional value,
 > use {{ domxref("element.getBoundingClientRect()") }}.
 
 ## Value

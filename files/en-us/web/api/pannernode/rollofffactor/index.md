@@ -28,7 +28,7 @@ A number whose range depends on the {{ domxref("PannerNode.distanceModel", "dist
 
 ## Examples
 
-This example demonstrates how different {{ domxref("PannerNode.rolloffFactor", "rolloffFactor") }} values affect how the volume of the test tone decreases with increasing distance from the listener:
+This example demonstrates how different `rolloffFactor` values affect how the volume of the test tone decreases with increasing distance from the listener:
 
 ```js
 const context = new AudioContext();

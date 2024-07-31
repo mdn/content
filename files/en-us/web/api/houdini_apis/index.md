@@ -39,7 +39,8 @@ CSS.paintWorklet.addModule("csscomponent.js");
 This added module contains {{domxref("PaintWorkletGlobalScope.registerPaint")}} functions,
 which register completely configurable worklets.
 
-> **Note:** You can write your own worklets, or install components created by other people.
+> [!NOTE]
+> You can write your own worklets, or install components created by other people.
 > The [Houdini.how](https://houdini.how/) website is a collection of worklets,
 > with [instructions on how to use them](https://houdini.how/usage/).
 
@@ -59,7 +60,8 @@ li {
 }
 ```
 
-> **Note:** With great power comes great responsibility!
+> [!NOTE]
+> With great power comes great responsibility!
 > With Houdini you _could_ invent your own masonry, grid, or regions implementation,
 > but doing so is not necessarily the best idea.
 > The CSS Working group does a lot of work to ensure every feature is performant,

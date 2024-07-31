@@ -11,8 +11,6 @@ The **`URL`** interface is used to parse, construct, normalize, and encode {{glo
 
 You normally create a new `URL` object by specifying the URL as a string when calling its constructor, or by providing a relative URL and a base URL. You can then easily read the parsed components of the URL or make changes to the URL.
 
-If a browser doesn't yet support the {{domxref("URL.URL", "URL()")}} constructor, you can access a URL object using the {{domxref("Window")}} interface's {{domxref("URL")}} property. Be sure to check to see if any of your target browsers require this to be prefixed.
-
 ## Constructor
 
 - {{domxref("URL.URL", "URL()")}}
@@ -132,5 +130,4 @@ const response = await fetch(
 - [Polyfill of `URL` in `core-js`](https://github.com/zloirock/core-js#url-and-urlsearchparams)
 - [URL API](/en-US/docs/Web/API/URL_API)
 - [What is a URL?](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
-- Property to obtain a `URL` object: {{domxref("URL")}}.
 - {{domxref("URLSearchParams")}}.

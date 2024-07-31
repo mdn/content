@@ -2,10 +2,12 @@
 title: "Modifier: (?ims-ims:...)"
 slug: Web/JavaScript/Reference/Regular_expressions/Modifier
 page-type: javascript-language-feature
+status:
+  - experimental
 browser-compat: javascript.regular_expressions.modifier
 ---
 
-{{jsSidebar}}
+{{jsSidebar}}{{SeeCompatTable}}
 
 A **modifier** overrides [flag](/en-US/docs/Web/JavaScript/Reference/Regular_expressions#regex_flags) settings in a specific part of a regular expression. It can be used to enable or disable flags that change the meanings of certain regex syntax elements. These flags are [`i`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase), [`m`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/multiline), and [`s`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/dotAll).
 
@@ -16,7 +18,8 @@ A **modifier** overrides [flag](/en-US/docs/Web/JavaScript/Reference/Regular_exp
 (?flags1-flags2:pattern)
 ```
 
-> **Note:** JavaScript only has the "bounded" modifier form, where the pattern is placed inside the modifier group. Most other languages that support modifiers have an "unbounded" form, where the modifier is applied until the end of the closest containing group.
+> [!NOTE]
+> JavaScript only has the "bounded" modifier form, where the pattern is placed inside the modifier group. Most other languages that support modifiers have an "unbounded" form, where the modifier is applied until the end of the closest containing group.
 
 ### Parameters
 

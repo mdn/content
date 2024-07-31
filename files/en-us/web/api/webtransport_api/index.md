@@ -98,7 +98,7 @@ When using reliable transmission via streams you can also set the relative prior
 
 ### Unidirectional transmission
 
-To open a unidirectional stream from a user agent, you use the {{domxref("WebTransport.createUnidirectionalStream()")}} method to get a reference to a {{domxref("WritableStream")}}. From this you can {{domxref("WritableStream.getWriter", "get a writer")}} to allow data to be written to the stream and sent to the server.
+To open a unidirectional stream from a user agent, you use the {{domxref("WebTransport.createUnidirectionalStream()")}} method to get a reference to a {{domxref("WritableStream")}}. From this you can [get a writer](/en-US/docs/Web/API/WritableStream/getWriter) to allow data to be written to the stream and sent to the server.
 
 ```js
 async function writeData() {

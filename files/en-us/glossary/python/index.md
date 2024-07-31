@@ -23,5 +23,4 @@ Python is developed under an OSI-approved open source license, making it freely 
   - {{Glossary("Java")}}
   - {{Glossary("JavaScript")}}
   - {{Glossary("PHP")}}
-  - {{Glossary("Python")}}
   - {{Glossary("Ruby")}}

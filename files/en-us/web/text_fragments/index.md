@@ -70,7 +70,8 @@ Supporting browsers will scroll to and highlight the first text fragment in the 
   Document-Policy: force-load-at-top
   ```
 
-> **Note:** If the provided text fragment does not match any text in the linked document, or if the browser does not support text fragments, the whole text fragment is ignored and the top of the document is linked.
+> [!NOTE]
+> If the provided text fragment does not match any text in the linked document, or if the browser does not support text fragments, the whole text fragment is ignored and the top of the document is linked.
 
 ## Examples
 

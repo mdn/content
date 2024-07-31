@@ -25,7 +25,8 @@ The `backface-visibility` checkbox determines whether the cube's back faces are 
 
 The cube in the above example is comprised of six `<div>` elements, all of which are styled with CSS to create the cube's faces. The cube is not drawn using a 2D or 3D canvas context, so **you can inspect the faces of the cube with your browser's developer tools as you would inspect any other DOM element**. Try using your browser's developer tools element picker to inspect different faces of the cube as you transform its position and rotation.
 
-> **Note:** The order in which transformations, including 3D rotations, are applied affects the resultant transformation. In the above example, transforms are translated, scaled, rotated, then skewed. The rotations are applied in the order X → Y → Z.
+> [!NOTE]
+> The order in which transformations, including 3D rotations, are applied affects the resultant transformation. In the above example, transforms are translated, scaled, rotated, then skewed. The rotations are applied in the order X → Y → Z.
 
 You can [view this example's source on GitHub](https://github.com/mdn/css-examples/blob/main/modules/transforms.html).
 

@@ -110,8 +110,6 @@ SVG makes use of a number of data types. This article lists these types along wi
 
     where `color-keyword` matches (case insensitively) one of the color keywords listed in [CSS Color Module Level 3](https://www.w3.org/TR/css-color-3/), or one of the system color keywords listed in [User preferences for colors](https://www.w3.org/TR/2008/REC-CSS2-20080411/ui.html#system-colors) (CSS2, section 18.2).
 
-    The corresponding SVG DOM interface definitions for \<color> are defined the one defined by CSS. SVG's extension to color, including the ability to specify ICC-based colors, are represented using DOM interface {{domxref("SVGColor")}}.
-
 ## Coordinate
 
 - \<coordinate>
@@ -134,7 +132,7 @@ SVG makes use of a number of data types. This article lists these types along wi
 ## FuncIRI
 
 - \<FuncIRI>
-  - : Functional notation for a reference. The syntax for this reference is the same as the {{cssxref("url", "CSS URI")}}.
+  - : Functional notation for a reference. The syntax for this reference is the same as the [CSS URI](/en-US/docs/Web/CSS/url).
 
 ## Integer
 

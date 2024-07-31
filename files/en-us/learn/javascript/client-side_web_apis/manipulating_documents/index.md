@@ -72,7 +72,8 @@ The DOM on the other hand looks like this:
 
 ![Tree structure representation of Document Object Model: The top node is the doctype and HTML element. Child nodes of the HTML include head and body. Each child element is a branch. All text, even white space, is shown as well.](dom-screenshot.png)
 
-> **Note:** This DOM tree diagram was created using Ian Hickson's [Live DOM viewer](https://software.hixie.ch/utilities/js/live-dom-viewer/).
+> [!NOTE]
+> This DOM tree diagram was created using Ian Hickson's [Live DOM viewer](https://software.hixie.ch/utilities/js/live-dom-viewer/).
 
 Each entry in the tree is called a **node**. You can see in the diagram above that some nodes represent elements (identified as `HTML`, `HEAD`, `META` and so on) and others represent text (identified as `#text`). There are [other types of nodes as well](/en-US/docs/Web/API/Node/nodeType), but these are the main ones you'll encounter.
 
@@ -218,7 +219,8 @@ The first way is to add inline styles directly onto elements you want to dynamic
    </p>
    ```
 
-> **Note:** Notice how the JavaScript property versions of the CSS styles are written in {{Glossary("camel_case", "lower camel case")}} whereas the CSS versions are hyphenated ({{Glossary("kebab_case", "kebab-case")}}) (e.g. `backgroundColor` versus `background-color`). Make sure you don't get these mixed up, otherwise it won't work.
+> [!NOTE]
+> Notice how the JavaScript property versions of the CSS styles are written in {{Glossary("camel_case", "lower camel case")}} whereas the CSS versions are hyphenated ({{Glossary("kebab_case", "kebab-case")}}) (e.g. `backgroundColor` versus `background-color`). Make sure you don't get these mixed up, otherwise it won't work.
 
 There is another common way to dynamically manipulate styles on your document, which we'll look at now.
 
@@ -251,7 +253,8 @@ At this point, we haven't really done anything useful! There is no point using J
 
 In the next section we will look at a more practical use of DOM APIs.
 
-> **Note:** You can find our [finished version of the dom-example.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/dom-example-manipulated.html) demo on GitHub ([see it live also](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/dom-example-manipulated.html)).
+> [!NOTE]
+> You can find our [finished version of the dom-example.html](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/dom-example-manipulated.html) demo on GitHub ([see it live also](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/dom-example-manipulated.html)).
 
 ## Active learning: A dynamic shopping list
 
@@ -279,7 +282,8 @@ To complete the exercise, follow the steps below, and make sure that the list be
 10. Attach an event handler to the delete button so that, when clicked, it will delete the entire list item (`<li>...</li>`).
 11. Finally, use the [`focus()`](/en-US/docs/Web/API/HTMLElement/focus) method to focus the input element ready for entering the next shopping list item.
 
-> **Note:** If you get really stuck, have a look at our [finished shopping list](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/shopping-list-finished.html) ([see it running live also](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/shopping-list-finished.html)).
+> [!NOTE]
+> If you get really stuck, have a look at our [finished shopping list](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/shopping-list-finished.html) ([see it running live also](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/shopping-list-finished.html)).
 
 ## Summary
 

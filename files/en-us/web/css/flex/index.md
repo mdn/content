@@ -240,7 +240,7 @@ flexAuto.addEventListener("click", () => {
 
 The flex container contains two flex items:
 
-- `flex: auto` has a `flex` value of [`auto`](auto)
+- `flex: auto` has a `flex` value of [`auto`](#auto)
 - `flex: initial` has a `flex` value of [`initial`](#initial)
 
 The `flex: initial` item takes up as much space as its width requires, but does not expand to take up any more space. All the remaining space is taken up by `flex: auto`.
