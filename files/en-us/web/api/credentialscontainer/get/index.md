@@ -29,7 +29,7 @@ get(options)
 
 - `options` {{optional_inline}}
 
-  - : An object that contains options for the request. The options include criteria that the credentials are required or allowed to have, and options for interacting with the user. It can contain the following properties:
+  - : An object that contains options for the request. It can contain the following properties:
 
     - `mediation` {{optional_inline}}
 
