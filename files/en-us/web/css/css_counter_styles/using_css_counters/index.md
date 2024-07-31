@@ -8,15 +8,21 @@ spec-urls: https://drafts.csswg.org/css-lists/#auto-numbering
 {{CSSRef}}
 
 **CSS counters** let you adjust the appearance of content based on its location in a document.
-For example, you can use counters to automatically number the headings in a webpage, or to change the numbering on ordered lists.
+For example, you can use counters to automatically number the headings on a webpage or to change the numbering on ordered lists.
 
-Counters are, in essence, variables maintained by CSS whose values may be incremented or decremented by CSS rules that track how many times they're used.
+Counters are, in essence, variables maintained by CSS whose values may be incremented or decremented by CSS rules that track how many times they're used. The following things affect the counter values on an element:
+
+1. Counters are inherited from the parent element or received from a previous sibling.
+2. New counters are instantiated using {{cssxref("counter-reset")}} property.
+3. Counters are incremented using {{cssxref("counter-increment")}} property.
+4. Counter values are changed using {{cssxref("counter-set")}} property.
+
 You can define your own named counters, and you can also manipulate the `list-item` counter that is created by default for all ordered lists.
 
 ## Using counters
 
 To use a counter it must first be initialized to a value with the {{cssxref("counter-reset")}} property.
-The counter's value can then be increased or decreased using {{cssxref("counter-increment")}} property.
+The counter's value can then be increased or decreased using the {{cssxref("counter-increment")}} property. And the counter value can also be changed using the {{cssxref("counter-set")}} property.
 The current value of a counter is displayed using the {{cssxref("counter", "counter()")}} or {{cssxref("counters", "counters()")}} function, typically within a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) {{CSSxRef("content")}} property.
 
 Counters can only be set, reset, or incremented in elements that generate boxes.
@@ -51,7 +57,15 @@ h3::before {
 }
 ```
 
-You can specify the value to increment or decrement the counter after the counter name, using a positive or negative number.
+You can specify the increment or decrement amount after the counter name. It can be a positive or negative number.
+
+Apart from increment or decrement, counters can also be explicitly set to a value using {{cssxref("counter-increment")}} property.
+
+```css
+.done::before {
+  counter-set: section;
+}
+```
 
 The counter's name must not be `none`, `inherit`, or `initial`; otherwise the declaration is ignored.
 
@@ -128,6 +142,68 @@ The counter value is decreased by specifying a negative value for {{cssxref("cou
 > [!NOTE]
 > You can also use {{cssxref("counter-increment")}} to decrement a non-reversed counter.
 > The main benefit of using a reversed counter is the default initial value, and that the `list-item` counter automatically decrements reversed counters.
+
+### Difference between counter-set and counter-reset
+
+The {{cssxref("counter-set")}} property updates an existing counter and if no counter with the name exists then a new counter is instantiated. The {{cssxref("counter-increment")}} property _always_ creates a new counter.
+
+In the following example, we have two sub-lists inside a parent list. Each list item has been numbered using a counter named 'item'. The first sub-list uses {{cssxref("counter-set")}} property and the second sub-list uses {{cssxref("counter-reset")}} property to change the 'item' counter.
+
+```html
+<ul class="parent">
+  <li>one</li>
+  <li>two</li>
+  <li>
+    three (the counter updated using `counter-set`)
+    <ul class="sub-list-one">
+      <li>sub-one</li>
+      <li>sub-two</li>
+    </ul>
+  </li>
+  <li>four</li>
+  <li>
+    five (a new counter created using `counter-reset`)
+    <ul class="sub-list-two">
+      <li>sub-one</li>
+      <li>sub-two</li>
+      <li>sub-three</li>
+    </ul>
+  </li>
+  <li>six</li>
+  <li>seven</li>
+</ul>
+```
+
+```css
+/* show numbers on list items */
+li::before {
+  content: counter(item) " ";
+}
+
+/* increment the counter on each list item */
+li {
+  counter-increment: item;
+}
+
+/* create a new counter for the first time */
+.parent {
+  counter-reset: item 0;
+}
+
+/* change the existing counter value */
+.sub-list-one {
+  counter-set: item 10;
+}
+
+/* change the counter value */
+.sub-list-two {
+  counter-reset: item 0;
+}
+```
+
+{{EmbedLiveSample("Difference between counter-set and counter-reset", "100%", 300)}}
+
+Notice how the first sub-list items start receiving numbers starting from `11`, and the numbering is continued in the parent list. This is because the `counter-set` property updates the same 'item' counter. Then notice how the second sub-list items receive new numbering starting from '1' and the parent list items after it don't carry forward the numbering. This is because the `counter-reset` property created a new counter with the same name so the parent list items kept using the old counter.
 
 ### List item counters
 
