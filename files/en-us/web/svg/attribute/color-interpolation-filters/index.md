@@ -64,7 +64,7 @@ You can use this attribute with the following SVG elements:
 - `sRGB`
   - : Indicates that color interpolation should occur in the sRGB color space.
 - `linearRGB`
-  - : Indicates that color interpolation should occur in the linearized RGB color space as described in [the sRGB specification](https://webstore.iec.ch/publication/6169).
+  - : Indicates that color interpolation should occur in the linearized RGB color space as described in [the sRGB specification](https://webstore.iec.ch/en/publication/6169).
 
 ## Specifications
 
@@ -76,5 +76,5 @@ You can use this attribute with the following SVG elements:
 
 ## See also
 
-- [sRGB specification](https://webstore.iec.ch/publication/6169)
+- [sRGB specification](https://webstore.iec.ch/en/publication/6169)
 - {{SVGAttr("color-interpolation")}}

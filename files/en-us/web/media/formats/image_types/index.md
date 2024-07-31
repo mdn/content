@@ -407,7 +407,7 @@ Theoretically, several compression algorithms are supported, and the image data 
       <th scope="row">Specification</th>
       <td>
         No specification; however, Microsoft provides general documentation of the format at
-        <a href="https://docs.microsoft.com/windows/desktop/gdi/bitmap-storage">docs.microsoft.com/en-us/windows/desktop/gdi/bitmap-storage</a>
+        <a href="https://learn.microsoft.com/en-us/windows/win32/gdi/bitmap-storage">docs.microsoft.com/en-us/windows/desktop/gdi/bitmap-storage</a>
       </td>
     </tr>
     <tr>
@@ -480,7 +480,7 @@ Theoretically, several compression algorithms are supported, and the image data 
     <tr>
       <th scope="row">Licensing</th>
       <td>
-        Covered by the <a href="https://docs.microsoft.com/openspecs/dev_center/ms-devcentlp/1c24c7c8-28b0-4ce1-a47d-95fe1ff504bc">Microsoft Open Specification Promise</a>;
+        Covered by the <a href="https://learn.microsoft.com/en-us/openspecs/dev_center/ms-devcentlp/1c24c7c8-28b0-4ce1-a47d-95fe1ff504bc">Microsoft Open Specification Promise</a>;
         while Microsoft holds patents against BMP, they have published a promise not to assert its patent rights as long as specific conditions are met.
         This is not the same as a license, however. BMP is included under the Windows Metafile Format (<code>.wmf</code>).
       </td>
