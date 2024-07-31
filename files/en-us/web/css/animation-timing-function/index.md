@@ -77,9 +77,9 @@ animation-timing-function: unset;
 
       - : An author defined cubic-bezier curve, where the first and third values must be in the range of 0 to 1.
 
-    - `linear(<number> <percentage>{1,2}, <number> <percentage>{1,2}, …)`
+    - `linear(<number> <percentage>{1,2}, …)`
 
-      - : The function interpolates linearly between the provided easing stop points. A stop point is a pair of an output progress and an input percentage. The input percentage is optional, and if the input percentage not provided it is inferred. At least two stop points are required for the value to be valid.
+      - : The function interpolates linearly between the provided easing stop points. A stop point is a pair of an output progress and an input percentage. The input percentage is optional, and if the input percentage not provided it is inferred.
 
     - `steps(<integer>, <step-position>)`
 
