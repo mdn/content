@@ -12,4 +12,4 @@ page-type: glossary-definition
 
 - Metrics which replaced First CPU Idle:
   - {{Glossary("Time to interactive")}}
-  - [Total blocking time](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time/)
+- [Total blocking time](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time/)

@@ -31,5 +31,5 @@ In the above example, the average round trip time is shown on the final line as 
 ## See also
 
 - Related glossary terms:
-  - {{Glossary("Time to First Byte (TTFB)")}}
+  - {{Glossary("Time to First Byte")}} (TTFB)
   - {{Glossary("Latency")}}

@@ -44,7 +44,7 @@ p {
 ## See also
 
 - Related glossary terms:
-- {{glossary("Inline-level content")}}
+  - {{glossary("Inline-level content")}}
 - [Block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context)
 - {{cssxref("display")}}
 - [`writing-mode`](/en-US/docs/Web/CSS/writing-mode)
