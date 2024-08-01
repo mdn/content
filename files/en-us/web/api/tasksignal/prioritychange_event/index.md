@@ -78,7 +78,8 @@ if ("scheduler" in this) {
 }
 ```
 
-> **Note:** The code above uses a custom logging function `mylog()` to log to the text area below.
+> [!NOTE]
+> The code above uses a custom logging function `mylog()` to log to the text area below.
 > This is hidden as it isn't relevant to the example.
 
 The output below demonstrates shows that the [task's priority](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#task_priorities) changed from `user-blocking` to `background`.

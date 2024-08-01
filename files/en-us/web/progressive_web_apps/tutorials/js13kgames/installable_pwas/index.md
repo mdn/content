@@ -34,7 +34,8 @@ The `js13kpwa.webmanifest` file of the [js13kPWA](https://mdn.github.io/pwa-exam
 <link rel="manifest" href="js13kpwa.webmanifest" />
 ```
 
-> **Note:** many use `manifest.json` for web app manifests as the contents are organized in a JSON structure. However, the `.webmanifest` file format is explicitly mentioned in the [W3C manifest specification](https://w3c.github.io/manifest/), so that's what we'll use here.
+> [!NOTE]
+> Many use `manifest.json` for web app manifests as the contents are organized in a JSON structure. However, the `.webmanifest` file format is explicitly mentioned in the [W3C manifest specification](https://w3c.github.io/manifest/), so that's what we'll use here.
 
 The content of the file looks like this:
 

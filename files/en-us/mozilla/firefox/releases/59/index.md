@@ -66,7 +66,8 @@ _No changes._
 
 - The {{domxref("MediaStreamTrack")}} property {{domxref("MediaStreamTrack.muted")}}, along with the events {{domxref("MediaStreamTrack.mute_event", "mute")}} and {{domxref("MediaStreamTrack.unmute_event", "unmute")}} and the corresponding event handlers, {{domxref("MediaStreamTrack.mute_event", "onmute")}} and {{domxref("MediaStreamTrack.unmute_event", "onunmute")}}, have been implemented. A track's `muted` state indicates that the track is not currently able to provide media data.
 
-  > **Note:** The `muted` state of a track isn't useful for what's typically thought of as muting and unmuting a track. Instead, use the {{domxref("MediaStreamTrack.enabled", "enabled")}} property; setting `enabled` to `false` causes the track to output only empty frames.
+  > [!NOTE]
+  > The `muted` state of a track isn't useful for what's typically thought of as muting and unmuting a track. Instead, use the {{domxref("MediaStreamTrack.enabled", "enabled")}} property; setting `enabled` to `false` causes the track to output only empty frames.
 
 - Firefox 59 on Android now supports Apple's HTTPS Live Streaming (HLS) protocol for both audio and video. This non-standard protocol is being supported on mobile to improve compatibility with sites that require it for mobile streaming. There is not currently any plan to implement it on Firefox Desktop.
 - The {{domxref("RTCRtpReceiver")}} methods {{domxref("RTCRtpReceiver.getContributingSources", "getContributingSources()")}} and {{domxref("RTCRtpReceiver.getSynchronizationSources", "getSynchronizationSources()")}} have been implemented to provide information about the sources of each RTP stream. However, a specification change occurred before release and we have disabled these by default behind the preference `media.peerconnection.rtpsourcesapi.enable` ([Firefox bug 1363667](https://bugzil.la/1363667), [Firefox bug 1430213](https://bugzil.la/1430213), and [Firefox bug 1433236](https://bugzil.la/1433236).

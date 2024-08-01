@@ -2235,7 +2235,7 @@
 /en-US/docs/DOM/window.setInterval	/en-US/docs/Web/API/setInterval
 /en-US/docs/DOM/window.setTimeout	/en-US/docs/Web/API/setTimeout
 /en-US/docs/DOM/window.showModalDialog	/en-US/docs/Web/API/Window/showModalDialog
-/en-US/docs/DOM/window.sidebar	/en-US/docs/Web/API/Window/sidebar
+/en-US/docs/DOM/window.sidebar	/en-US/docs/Web/API/Window/external
 /en-US/docs/DOM/window.sizeToContent	/en-US/docs/Web/API/Window/sizeToContent
 /en-US/docs/DOM/window.status	/en-US/docs/Web/API/Window/status
 /en-US/docs/DOM/window.statusbar	/en-US/docs/Web/API/Window/statusbar
@@ -2657,7 +2657,7 @@
 /en-US/docs/DOM:window.setInterval	/en-US/docs/Web/API/setInterval
 /en-US/docs/DOM:window.setTimeout	/en-US/docs/Web/API/setTimeout
 /en-US/docs/DOM:window.showModalDialog	/en-US/docs/Web/API/Window/showModalDialog
-/en-US/docs/DOM:window.sidebar	/en-US/docs/Web/API/Window/sidebar
+/en-US/docs/DOM:window.sidebar	/en-US/docs/Web/API/Window/external
 /en-US/docs/DOM:window.sizeToContent	/en-US/docs/Web/API/Window/sizeToContent
 /en-US/docs/DOM:window.status	/en-US/docs/Web/API/Window/status
 /en-US/docs/DOM:window.statusbar	/en-US/docs/Web/API/Window/statusbar
@@ -3376,7 +3376,7 @@
 /en-US/docs/Document_Object_Model_(DOM)/window.setInterval	/en-US/docs/Web/API/setInterval
 /en-US/docs/Document_Object_Model_(DOM)/window.setTimeout	/en-US/docs/Web/API/setTimeout
 /en-US/docs/Document_Object_Model_(DOM)/window.showModalDialog	/en-US/docs/Web/API/Window/showModalDialog
-/en-US/docs/Document_Object_Model_(DOM)/window.sidebar	/en-US/docs/Web/API/Window/sidebar
+/en-US/docs/Document_Object_Model_(DOM)/window.sidebar	/en-US/docs/Web/API/Window/external
 /en-US/docs/Document_Object_Model_(DOM)/window.sizeToContent	/en-US/docs/Web/API/Window/sizeToContent
 /en-US/docs/Document_Object_Model_(DOM)/window.status	/en-US/docs/Web/API/Window/status
 /en-US/docs/Document_Object_Model_(DOM)/window.statusbar	/en-US/docs/Web/API/Window/statusbar
@@ -3512,6 +3512,7 @@
 /en-US/docs/Games/Techniques/Publishing_games/Game_promotion	/en-US/docs/Games/Publishing_games/Game_promotion
 /en-US/docs/Games/Techniques/Tilemaps/SquareTiles	/en-US/docs/Games/Techniques/Tilemaps
 /en-US/docs/Games/Techniques/Tilemaps/SquareTiles/Square_tilemaps_implementation:_Static_maps	/en-US/docs/Games/Techniques/Tilemaps/Square_tilemaps_implementation:_Static_maps
+/en-US/docs/Games/Tutorials/Touch_Event_Horizon	/en-US/docs/Games/Tutorials
 /en-US/docs/Games/WebRTC_data_channels	/en-US/docs/Games/Techniques/WebRTC_data_channels
 /en-US/docs/Games/Workflows	/en-US/docs/Games/Tutorials
 /en-US/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript	/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript
@@ -3554,7 +3555,7 @@
 /en-US/docs/Games/Workflows/Breakout_game_from_scratch/Paddle_and_keyboard_controls	/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
 /en-US/docs/Games/Workflows/Breakout_game_from_scratch/Track_the_score_and_win	/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win
 /en-US/docs/Games/Workflows/HTML5_Gamedev_Phaser_Device_Orientation	/en-US/docs/Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation
-/en-US/docs/Games/Workflows/Touch_Event_Horizon	/en-US/docs/Games/Tutorials/Touch_Event_Horizon
+/en-US/docs/Games/Workflows/Touch_Event_Horizon	/en-US/docs/Games/Tutorials
 /en-US/docs/Games/visual_typescript_game_engine	/en-US/docs/Games
 /en-US/docs/Getting_Started_With_NSS	https://firefox-source-docs.mozilla.org/security/nss/index.html
 /en-US/docs/Getting_started_on_MDN	/en-US/docs/MDN/Community/Contributing/Getting_started
@@ -3602,6 +3603,7 @@
 /en-US/docs/Glossary/Rendering_engine	/en-US/docs/Glossary/Engine/Rendering
 /en-US/docs/Glossary/Responsive_design	/en-US/docs/Glossary/Responsive_web_design
 /en-US/docs/Glossary/Round_Trip_Time_(RTT)	/en-US/docs/Glossary/Round_Trip_Time
+/en-US/docs/Glossary/Routers	/en-US/docs/Glossary/Router
 /en-US/docs/Glossary/SRTP	/en-US/docs/Glossary/RTP
 /en-US/docs/Glossary/SSL_Glossary	/en-US/docs/Glossary/SSL
 /en-US/docs/Glossary/Scrollport	/en-US/docs/Glossary/Scroll_container
@@ -3972,7 +3974,6 @@
 /en-US/docs/HTMLSpanElement	/en-US/docs/Web/API/HTMLSpanElement
 /en-US/docs/HTMLSpanElement_interface	/en-US/docs/Web/API/HTMLSpanElement
 /en-US/docs/HTML_Intro2	/en-US/docs/Learn/HTML/Introduction_to_HTML
-/en-US/docs/HTML_Santizer_API	/en-US/docs/Web/API/HTML_Sanitizer_API
 /en-US/docs/HTML_in_XMLHttpRequest	/en-US/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest
 /en-US/docs/HTML_intro	/en-US/docs/Learn/HTML/Introduction_to_HTML
 /en-US/docs/HTTP	/en-US/docs/Web/HTTP
@@ -8627,7 +8628,6 @@
 /en-US/docs/Web/API/HTMLVideoElement/onleavepictureinpicture	/en-US/docs/Web/API/HTMLVideoElement/leavepictureinpicture_event
 /en-US/docs/Web/API/HTMLVideoElement/requestPictureInPicture()	/en-US/docs/Web/API/HTMLVideoElement/requestPictureInPicture
 /en-US/docs/Web/API/HTML_DOM	/en-US/docs/Web/API/HTML_DOM_API
-/en-US/docs/Web/API/HTML_Santizer_API	/en-US/docs/Web/API/HTML_Sanitizer_API
 /en-US/docs/Web/API/HashChangeEvent/HashChangeEvent.oldURL	/en-US/docs/Web/API/HashChangeEvent/oldURL
 /en-US/docs/Web/API/Headers/getAll	/en-US/docs/Web/API/Headers/get
 /en-US/docs/Web/API/History.length	/en-US/docs/Web/API/History/length
@@ -9649,7 +9649,6 @@
 /en-US/docs/Web/API/SVGPathElement/pathLength	/en-US/docs/Web/API/SVGGeometryElement/pathLength
 /en-US/docs/Web/API/SVGStylable	/en-US/docs/Web/API/SVGElement
 /en-US/docs/Web/API/SVGURIReference	/en-US/docs/Web/SVG/Attribute/href
-/en-US/docs/Web/API/Sanitizer/sanitizeFor	/en-US/docs/Web/API/Sanitizer
 /en-US/docs/Web/API/Screen.availHeight	/en-US/docs/Web/API/Screen/availHeight
 /en-US/docs/Web/API/Screen.availLeft	/en-US/docs/Web/API/ScreenDetailed/availLeft
 /en-US/docs/Web/API/Screen.availTop	/en-US/docs/Web/API/ScreenDetailed/availTop
@@ -10217,6 +10216,7 @@
 /en-US/docs/Web/API/Window/restore	/en-US/docs/Web/API/Window/moveTo
 /en-US/docs/Web/API/Window/setInterval	/en-US/docs/Web/API/setInterval
 /en-US/docs/Web/API/Window/setTimeout	/en-US/docs/Web/API/setTimeout
+/en-US/docs/Web/API/Window/sidebar	/en-US/docs/Web/API/Window/external
 /en-US/docs/Web/API/Window/sidebar/Adding_search_engines_from_Web_pages	/en-US/docs/Web/OpenSearch
 /en-US/docs/Web/API/Window/transitioncancel_event	/en-US/docs/Web/API/Element/transitioncancel_event
 /en-US/docs/Web/API/Window/transitionend_event	/en-US/docs/Web/API/Element/transitionend_event
@@ -10938,7 +10938,7 @@
 /en-US/docs/Web/API/window.setInterval	/en-US/docs/Web/API/setInterval
 /en-US/docs/Web/API/window.setTimeout	/en-US/docs/Web/API/setTimeout
 /en-US/docs/Web/API/window.showModalDialog	/en-US/docs/Web/API/Window/showModalDialog
-/en-US/docs/Web/API/window.sidebar	/en-US/docs/Web/API/Window/sidebar
+/en-US/docs/Web/API/window.sidebar	/en-US/docs/Web/API/Window/external
 /en-US/docs/Web/API/window.sizeToContent	/en-US/docs/Web/API/Window/sizeToContent
 /en-US/docs/Web/API/window.status	/en-US/docs/Web/API/Window/status
 /en-US/docs/Web/API/window.statusbar	/en-US/docs/Web/API/Window/statusbar
@@ -10951,7 +10951,7 @@
 /en-US/docs/Web/API/window/onscroll	/en-US/docs/Web/API/Element/scroll_event
 /en-US/docs/Web/API/window/onscroll-temp	/en-US/docs/Web/API/Element/scroll_event
 /en-US/docs/Web/API/x-ms-aria-flowfrom	/en-US/docs/Web/Accessibility/ARIA
-/en-US/docs/Web/APIWwindow.sidebar	/en-US/docs/Web/API/Window/sidebar
+/en-US/docs/Web/APIWwindow.sidebar	/en-US/docs/Web/API/Window/external
 /en-US/docs/Web/APIr	/en-US/docs/Web/API/Document/dir
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Examples	/en-US/docs/Web/Accessibility/ARIA
 /en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Complementary_role	/en-US/docs/Web/Accessibility/ARIA/Roles/Complementary_role
@@ -12316,7 +12316,6 @@
 /en-US/docs/Web/HTTP/Headers/Feature-Policy/accelerometer	/en-US/docs/Web/HTTP/Headers/Permissions-Policy/accelerometer
 /en-US/docs/Web/HTTP/Headers/Feature-Policy/ambient-light-sensor	/en-US/docs/Web/HTTP/Headers/Permissions-Policy/ambient-light-sensor
 /en-US/docs/Web/HTTP/Headers/Feature-Policy/autoplay	/en-US/docs/Web/HTTP/Headers/Permissions-Policy/autoplay
-/en-US/docs/Web/HTTP/Headers/Feature-Policy/battery	/en-US/docs/Web/HTTP/Headers/Permissions-Policy/battery
 /en-US/docs/Web/HTTP/Headers/Feature-Policy/camera	/en-US/docs/Web/HTTP/Headers/Permissions-Policy/camera
 /en-US/docs/Web/HTTP/Headers/Feature-Policy/display-capture	/en-US/docs/Web/HTTP/Headers/Permissions-Policy/display-capture
 /en-US/docs/Web/HTTP/Headers/Feature-Policy/document-domain	/en-US/docs/Web/HTTP/Headers/Permissions-Policy/document-domain
@@ -13803,7 +13802,7 @@
 /en-US/docs/window.scrollbars	/en-US/docs/Web/API/Window/scrollbars
 /en-US/docs/window.setInterval	/en-US/docs/Web/API/setInterval
 /en-US/docs/window.setTimeout	/en-US/docs/Web/API/setTimeout
-/en-US/docs/window.sidebar	/en-US/docs/Web/API/Window/sidebar
+/en-US/docs/window.sidebar	/en-US/docs/Web/API/Window/external
 /en-US/docs/window.sizeToContent	/en-US/docs/Web/API/Window/sizeToContent
 /en-US/docs/window.status	/en-US/docs/Web/API/Window/status
 /en-US/docs/window.statusbar	/en-US/docs/Web/API/Window/statusbar

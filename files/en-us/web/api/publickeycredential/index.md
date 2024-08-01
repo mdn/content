@@ -11,7 +11,8 @@ The **`PublicKeyCredential`** interface provides information about a public key 
 
 {{InheritanceDiagram}}
 
-> **Note:** This API is restricted to top-level contexts. Use from within an {{HTMLElement("iframe")}} element will not have any effect.
+> [!NOTE]
+> This API is restricted to top-level contexts. Use from within an {{HTMLElement("iframe")}} element will not have any effect.
 
 ## Instance properties
 

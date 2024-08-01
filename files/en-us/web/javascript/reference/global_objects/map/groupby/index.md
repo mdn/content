@@ -7,7 +7,8 @@ browser-compat: javascript.builtins.Map.groupBy
 
 {{JSRef}}
 
-> **Note:** In some versions of some browsers, this method was implemented as the method `Array.prototype.groupToMap()`. Due to web compatibility issues, it is now implemented as a static method. Check the [browser compatibility table](#browser_compatibility) for details.
+> [!NOTE]
+> In some versions of some browsers, this method was implemented as the method `Array.prototype.groupToMap()`. Due to web compatibility issues, it is now implemented as a static method. Check the [browser compatibility table](#browser_compatibility) for details.
 
 The **`Map.groupBy()`** static method groups the elements of a given iterable using the values returned by a provided callback function. The final returned {{jsxref("Map")}} uses the unique values from the test function as keys, which can be used to get the array of elements in each group.
 
@@ -44,7 +45,8 @@ The elements in the returned {{jsxref("Map")}} and the original iterable are the
 
 This method is useful when you need to group information that is related to a particular object that might potentially change over time. This is because even if the object is modified, it will continue to work as a key to the returned `Map`. If you instead create a string representation for the object and use that as a grouping key in {{jsxref("Object.groupBy()")}}, you must maintain the mapping between the original object and its representation as the object changes.
 
-> **Note:** To access the groups in the returned `Map`, you must use the same object that was originally used as a key in the `Map` (although you may modify its properties). You can't use another object that just happens to have the same name and properties.
+> [!NOTE]
+> To access the groups in the returned `Map`, you must use the same object that was originally used as a key in the `Map` (although you may modify its properties). You can't use another object that just happens to have the same name and properties.
 
 `Map.groupBy` does not read the value of `this`. It can be called on any object and a new {{jsxref("Map")}} instance will be returned.
 

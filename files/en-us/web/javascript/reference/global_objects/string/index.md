@@ -134,7 +134,8 @@ console.log(typeof strPrim3); // "string"
 console.log(typeof strObj); // "object"
 ```
 
-> **Warning:** You should rarely find yourself using `String` as a constructor.
+> [!WARNING]
+> You should rarely find yourself using `String` as a constructor.
 
 String primitives and `String` objects also give different results when
 using {{jsxref("Global_Objects/eval", "eval()")}}. Primitives passed to
@@ -354,7 +355,8 @@ These properties are own properties of each `String` instance.
 
 ### HTML wrapper methods
 
-> **Warning:** Deprecated. Avoid these methods.
+> [!WARNING]
+> Deprecated. Avoid these methods.
 >
 > They are of limited use, as they are based on a very old HTML standard and provide only a subset of the currently available HTML tags and attributes. Many of them create deprecated or non-standard markup today. In addition, they do simple string concatenation without any validation or sanitation, which makes them a potential security threat when directly inserted using [`innerHTML`](/en-US/docs/Web/API/Element/innerHTML). Use [DOM APIs](/en-US/docs/Web/API/Document_Object_Model) such as [`document.createElement()`](/en-US/docs/Web/API/Document/createElement) instead.
 

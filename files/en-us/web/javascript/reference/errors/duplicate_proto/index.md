@@ -41,7 +41,7 @@ const obj = { __proto__: {}, __proto__: { a: 1 } };
 const obj = { __proto__: { a: 1 } };
 
 // These syntaxes all create a property called "__proto__" and can coexist
-// They would overwrite each other and the the last one is actually used
+// They would overwrite each other and the last one is actually used
 const __proto__ = null;
 const obj2 = {
   ["__proto__"]: {},

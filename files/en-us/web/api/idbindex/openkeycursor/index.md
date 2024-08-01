@@ -18,7 +18,8 @@ specified direction.
 
 If the key range is not specified or is null, then the range includes all the keys.
 
-> **Note:** Cursors returned by `openKeyCursor()` do not
+> [!NOTE]
+> Cursors returned by `openKeyCursor()` do not
 > make the referenced value available as [`IDBIndex.openCursor`](/en-US/docs/Web/API/IDBIndex/openCursor) does.
 > This makes obtaining a list of keys much more efficient.
 

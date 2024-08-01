@@ -70,7 +70,8 @@ console.log(iterator.next().value); // undefined
 
 ### Reusing the iterable
 
-> **Warning:** The array iterator object should be a one-time use object. Do not reuse it.
+> [!WARNING]
+> The array iterator object should be a one-time use object. Do not reuse it.
 
 The iterable returned from `values()` is not reusable. When `next().done = true` or `currentIndex > length`, [the `for...of` loop ends](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#interactions_between_the_language_and_iteration_protocols), and further iterating it has no effect.
 

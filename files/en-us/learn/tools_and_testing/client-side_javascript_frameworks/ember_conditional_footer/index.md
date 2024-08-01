@@ -239,7 +239,8 @@ Finally, we will edit the `todo.hbs` template such that the checkbox's value is 
    >
    ```
 
-   > **Note:** The above snippet uses a new Ember-specific keyword — `fn`. `fn` allows for [partial application](https://en.wikipedia.org/wiki/Partial_application), which is similar to [`bind`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind), but it never changes the invocation context; this is equivalent to using `bind` with a `null` first argument.
+   > [!NOTE]
+   > The above snippet uses a new Ember-specific keyword — `fn`. `fn` allows for [partial application](https://en.wikipedia.org/wiki/Partial_application), which is similar to [`bind`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind), but it never changes the invocation context; this is equivalent to using `bind` with a `null` first argument.
 
 Try restarting the dev server and going to `localhost:4200` again, and you'll now see that we have a fully-operational "todos left" counter and Clear button:
 

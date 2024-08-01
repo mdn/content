@@ -64,11 +64,13 @@ new MediaRecorder(stream, options)
     - `videoKeyFrameIntervalCount` {{optional_inline}}
       - : The interval in number of frames between key frames in the encoded video stream. The {{glossary("user agent")}} controls key-frame generation considering this option as well as `videoKeyFrameIntervalDuration` option.
 
-    > **Note:** If bits per second values are not specified for video and/or audio, the default
+    > [!NOTE]
+    > If bits per second values are not specified for video and/or audio, the default
     > adopted for video is 2.5Mbps, while the audio default is adaptive, depending upon
     > the sample rate and the number of channels.
 
-    > **Note:** Video resolution, frame rate and similar settings are specified as constraints
+    > [!NOTE]
+    > Video resolution, frame rate and similar settings are specified as constraints
     > when calling {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}},
     > not here in the MediaStream Recording API.
 

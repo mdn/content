@@ -43,7 +43,7 @@ Returns a {{jsxref("Promise")}} that resolves with an {{jsxref('Array')}} of
         Used in user-visible lists of content.
     - `url`
       - : A {{jsxref('String')}} containing the URL of the corresponding HTML document.
-        Needs to be under the scope of the current {{domxref('ServiceWorker','service worker')}}.
+        Needs to be under the scope of the current [service worker](/en-US/docs/Web/API/ServiceWorker).
     - `category` {{Optional_Inline}}
 
       - : A {{jsxref('String')}} defining the category of content.

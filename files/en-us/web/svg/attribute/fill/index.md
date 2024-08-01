@@ -116,7 +116,8 @@ The output is as follows:
 
 {{EmbedLiveSample("`context-stroke` example", '100%', 220)}}
 
-> **Note:** Elements can also use `context-stroke` and `context-fill` to inherit `stroke` and `fill` values when they are referenced by {{SVGElement('use')}} elements.
+> [!NOTE]
+> Elements can also use `context-stroke` and `context-fill` to inherit `stroke` and `fill` values when they are referenced by {{SVGElement('use')}} elements.
 
 ## animate
 
@@ -221,7 +222,8 @@ For {{SVGElement('circle')}}, `fill` is a presentation attribute that defines th
   </tbody>
 </table>
 
-> **Note:** As a presentation attribute `fill` can be used as a CSS property.
+> [!NOTE]
+> As a presentation attribute `fill` can be used as a CSS property.
 
 ## ellipse
 
@@ -248,7 +250,8 @@ For {{SVGElement('ellipse')}}, `fill` is a presentation attribute that defines t
   </tbody>
 </table>
 
-> **Note:** As a presentation attribute `fill` can be used as a CSS property.
+> [!NOTE]
+> As a presentation attribute `fill` can be used as a CSS property.
 
 ## path
 
@@ -275,7 +278,8 @@ For {{SVGElement('path')}}, `fill` is a presentation attribute that defines the 
   </tbody>
 </table>
 
-> **Note:** As a presentation attribute `fill` can be used as a CSS property.
+> [!NOTE]
+> As a presentation attribute `fill` can be used as a CSS property.
 
 ## polygon
 
@@ -302,7 +306,8 @@ For {{SVGElement('polygon')}}, `fill` is a presentation attribute that defines t
   </tbody>
 </table>
 
-> **Note:** As a presentation attribute `fill` can be used as a CSS property.
+> [!NOTE]
+> As a presentation attribute `fill` can be used as a CSS property.
 
 ## polyline
 
@@ -329,7 +334,8 @@ For {{SVGElement('polyline')}}, `fill` is a presentation attribute that defines 
   </tbody>
 </table>
 
-> **Note:** As a presentation attribute `fill` can be used as a CSS property.
+> [!NOTE]
+> As a presentation attribute `fill` can be used as a CSS property.
 
 ## rect
 
@@ -356,7 +362,8 @@ For {{SVGElement('rect')}}, `fill` is a presentation attribute that defines the 
   </tbody>
 </table>
 
-> **Note:** As a presentation attribute `fill` can be used as a CSS property.
+> [!NOTE]
+> As a presentation attribute `fill` can be used as a CSS property.
 
 ## set
 
@@ -409,7 +416,8 @@ For {{SVGElement('text')}}, `fill` is a presentation attribute that defines the 
   </tbody>
 </table>
 
-> **Note:** As a presentation attribute `fill` can be used as a CSS property.
+> [!NOTE]
+> As a presentation attribute `fill` can be used as a CSS property.
 
 ## textPath
 
@@ -436,11 +444,13 @@ For {{SVGElement('textPath')}}, `fill` is a presentation attribute that defines 
   </tbody>
 </table>
 
-> **Note:** As a presentation attribute `fill` can be used as a CSS property.
+> [!NOTE]
+> As a presentation attribute `fill` can be used as a CSS property.
 
 ## tref
 
-> **Warning:** As of SVG2 {{SVGElement('tref')}} is deprecated and shouldn't be used.
+> [!WARNING]
+> As of SVG2 {{SVGElement('tref')}} is deprecated and shouldn't be used.
 
 For {{SVGElement('tref')}}, `fill` is a presentation attribute that defines the color of the text.
 
@@ -465,7 +475,8 @@ For {{SVGElement('tref')}}, `fill` is a presentation attribute that defines the 
   </tbody>
 </table>
 
-> **Note:** As a presentation attribute `fill` can be used as a CSS property.
+> [!NOTE]
+> As a presentation attribute `fill` can be used as a CSS property.
 
 ## tspan
 
@@ -492,7 +503,8 @@ For {{SVGElement('tspan')}}, `fill` is a presentation attribute that defines the
   </tbody>
 </table>
 
-> **Note:** As a presentation attribute `fill` can be used as a CSS property.
+> [!NOTE]
+> As a presentation attribute `fill` can be used as a CSS property.
 
 ## Specifications
 

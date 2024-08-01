@@ -11,7 +11,8 @@ browser-compat: css.selectors.-moz-last-node
 
 The **`:-moz-last-node`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that represents any element that is the last child node of some other element. It differs from {{cssxref(":last-child")}} because it does not match a last-child element with (non-whitespace) text after it.
 
-> **Note:** Any whitespace at the end of an element is ignored for the determination of `:-moz-last-node`.
+> [!NOTE]
+> Any whitespace at the end of an element is ignored for the determination of `:-moz-last-node`.
 
 ## Syntax
 

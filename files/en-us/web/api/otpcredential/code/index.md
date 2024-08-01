@@ -35,7 +35,8 @@ navigator.credentials
   });
 ```
 
-> **Note:** For a full explanation of the code, see the {{domxref('WebOTP API','','',' ')}} landing page. You can also [see this code as part of a full working demo](https://web-otp.glitch.me/).
+> [!NOTE]
+> For a full explanation of the code, see the {{domxref('WebOTP API','','',' ')}} landing page. You can also [see this code as part of a full working demo](https://web-otp.glitch.me/).
 
 ## Specifications
 

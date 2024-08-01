@@ -13,7 +13,8 @@ browser-compat: api.VRDisplayEvent.reason
 
 The **`reason`** read-only property of the {{domxref("VRDisplayEvent")}} interface returns a human-readable reason why the event was fired.
 
-> **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
+> [!NOTE]
+> This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
 ## Value
 

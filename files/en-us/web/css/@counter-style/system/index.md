@@ -74,7 +74,8 @@ The values include:
 
     It must not contain a `symbols` or `additive-symbols` descriptor, otherwise the counter style rule will be invalid. If one or more counter styles definitions form a cycle with their `extends` values, the browser will treat all the participating counter styles as extending from the `decimal` style.
 
-> **Note:** The [`symbols`](/en-US/docs/Web/CSS/@counter-style/symbols) descriptor is required when the value is `cyclic`, `numeric`, `alphabetic`, `symbolic`, or `fixed`. The [`additive-symbols`](/en-US/docs/Web/CSS/@counter-style/additive-symbols) descriptor is required if the `additive` value is set.
+> [!NOTE]
+> The [`symbols`](/en-US/docs/Web/CSS/@counter-style/symbols) descriptor is required when the value is `cyclic`, `numeric`, `alphabetic`, `symbolic`, or `fixed`. The [`additive-symbols`](/en-US/docs/Web/CSS/@counter-style/additive-symbols) descriptor is required if the `additive` value is set.
 
 ## Formal definition
 

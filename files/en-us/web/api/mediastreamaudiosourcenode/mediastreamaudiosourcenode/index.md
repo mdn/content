@@ -12,7 +12,8 @@ The [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)'s **`MediaStreamAudioSour
 creates and returns a new {{domxref("MediaStreamAudioSourceNode")}} object which uses
 the first audio track of a given {{domxref("MediaStream")}} as its source.
 
-> **Note:** Another way to create a
+> [!NOTE]
+> Another way to create a
 > `MediaStreamAudioSourceNode` is to call
 > the {{domxref("AudioContext.createMediaStreamSource()")}} method, specifying the stream
 > from which you want to obtain audio.

@@ -31,7 +31,8 @@ _In addition to the properties defined by the parent interface, {{domxref("DOMEx
 - {{domxref("RTCError.sentAlert", "sentAlert")}} {{ReadOnlyInline}}
   - : If `errorDetail` is `dtls-failure`, this property is an unsigned long integer indicating the fatal DTLS error that was sent out by this device. If `null`, no DTLS error was transmitted.
 
-> **Note:** All `RTCError` objects have their {{domxref("DOMException.name", "name")}} set to `OperationError`.
+> [!NOTE]
+> All `RTCError` objects have their {{domxref("DOMException.name", "name")}} set to `OperationError`.
 
 ## Examples
 

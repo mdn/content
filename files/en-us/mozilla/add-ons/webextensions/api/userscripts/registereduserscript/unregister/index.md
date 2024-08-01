@@ -9,7 +9,8 @@ browser-compat: webextensions.api.userScripts.RegisteredUserScript.unregister
 
 The `unregister()` method of the {{WebExtAPIRef("userScripts.RegisteredUserScript","RegisteredUserScript")}} object unregisters the user scripts represented by the object, user scripts that were registered using {{WebExtAPIRef("userScripts.register","userScripts.register()")}}.
 
-> **Note:** User Scripts are automatically unregistered when the related extension page (from which the user scripts were registered) is unloaded, so you should register a user script from an extension page that persists at least as long as you want the user scripts to stay registered.
+> [!NOTE]
+> User Scripts are automatically unregistered when the related extension page (from which the user scripts were registered) is unloaded, so you should register a user script from an extension page that persists at least as long as you want the user scripts to stay registered.
 
 ## Syntax
 

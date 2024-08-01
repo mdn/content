@@ -23,9 +23,9 @@ blitFramebuffer(srcX0, srcY0, srcX1, srcY1,
 
 ### Parameters
 
-- `srcX0, srcY0, srcX1, srcY1`
+- `srcX0`, `srcY0`, `srcX1`, `srcY1`
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the bounds of the source rectangle.
-- `dstX0, dstY0, dstX1, dstY1`
+- `dstX0`, `dstY0`, `dstX1`, `dstY1`
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the bounds of the destination rectangle.
 - `mask`
 

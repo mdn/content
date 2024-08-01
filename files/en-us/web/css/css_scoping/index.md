@@ -69,7 +69,8 @@ Sometimes it's useful to be able to style a host from inside the shadow tree con
   - {{DOMxRef("HTMLTemplateElement")}} interface
   - {{DOMxRef("ShadowRoot")}} interface
 
-> **Note:** Despite the name, the {{CSSXref(":scope")}} pseudo-class, which represents elements that are a reference point (or scope) for selectors to match against, is defined in the [Selectors](/en-US/docs/Web/CSS/CSS_selectors) module. It is otherwise unrelated to the CSS scoping module, which is focused on scoping as it pertains to the Shadow DOM scoping mechanism.
+> [!NOTE]
+> Despite the name, the {{CSSXref(":scope")}} pseudo-class, which represents elements that are a reference point (or scope) for selectors to match against, is defined in the [Selectors](/en-US/docs/Web/CSS/CSS_selectors) module. It is otherwise unrelated to the CSS scoping module, which is focused on scoping as it pertains to the Shadow DOM scoping mechanism.
 
 ## Specifications
 

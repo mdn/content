@@ -72,7 +72,8 @@ addIceCandidate(candidate, successCallback, failureCallback) // deprecated
 
         Additional information can be found in {{domxref("RTCIceCandidate.candidate")}}.
 
-        > **Note:** For backward compatibility with older versions of the WebRTC specification, the constructor also accepts this string directly as an argument.
+        > [!NOTE]
+        > For backward compatibility with older versions of the WebRTC specification, the constructor also accepts this string directly as an argument.
 
     - `sdpMid` {{optional_inline}}
 

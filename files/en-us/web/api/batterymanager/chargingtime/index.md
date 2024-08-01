@@ -12,7 +12,8 @@ The **`chargingTime`** read-only property of the {{domxref("BatteryManager")}} i
 If the battery is currently discharging, its value is {{jsxref("Infinity")}}.
 When its value changes, the {{domxref("BatteryManager/chargingtimechange_event", "chargingtimechange")}} event is fired.
 
-> **Note:** Even if the time returned is precise to the second,
+> [!NOTE]
+> Even if the time returned is precise to the second,
 > browsers round them to a higher interval
 > (typically to the closest 15 minutes) for privacy reasons.
 

@@ -10,7 +10,8 @@ The creation of web forms has always been a complex task. While marking up the f
 
 For a basic introduction to these concepts, with examples, see the [Form validation tutorial](/en-US/docs/Learn/Forms/Form_validation).
 
-> **Note:** HTML Constraint validation doesn't remove the need for validation on the _server side_. Even though far fewer invalid form requests are to be expected, invalid ones can still be sent in many ways:
+> [!NOTE]
+> HTML Constraint validation doesn't remove the need for validation on the _server side_. Even though far fewer invalid form requests are to be expected, invalid ones can still be sent in many ways:
 >
 > - By modifying HTML via the browser's developer tools.
 > - By hand-crafting an HTTP request without using the form.
@@ -278,7 +279,7 @@ Constraint validation is done through the Constraint Validation API either on a 
 
 Calling `checkValidity()` is called _statically_ validating the constraints, while calling `reportValidity()` or submitting the form is called _interactively_ validating the constraints.
 
-> **Note:**
+> [!NOTE]
 >
 > - If the [`novalidate`](/en-US/docs/Web/HTML/Element/form#novalidate) attribute is set on the {{ HTMLElement("form") }} element, interactive validation of the constraints doesn't happen.
 > - Calling the `submit()` method on the [`HTMLFormElement`](/en-US/docs/Web/API/HTMLFormElement) interface doesn't trigger a constraint validation. In other words, this method sends the form data to the server even if it doesn't satisfy the constraints. Call the `click()` method on a submit button instead.
@@ -294,7 +295,8 @@ Basically, the idea is to trigger JavaScript on some form field event (like **on
 
 The postal code format varies from one country to another. Not only do most countries allow an optional prefix with the country code (like `D-` in Germany, `F-` in France or Switzerland), but some countries have postal codes with only a fixed number of digits; others, like the UK, have more complex structures, allowing letters at some specific positions.
 
-> **Note:** This is not a comprehensive postal code validation library, but rather a demonstration of the key concepts.
+> [!NOTE]
+> This is not a comprehensive postal code validation library, but rather a demonstration of the key concepts.
 
 As an example, we will add a script checking the constraint validation for this simple form:
 

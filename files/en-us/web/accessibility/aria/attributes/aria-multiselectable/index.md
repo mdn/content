@@ -13,7 +13,8 @@ The `aria-multiselectable` attribute indicates that the user may select more tha
 
 The default behavior of selection lists, such as {{HTMLElement('select')}}, is to be able to choose only one item or option. By default or by convention, when a user is presented with list from which they must select an item, they assume they can only select a single item unless otherwise notified. The `aria-multiselectable` attribute is the way to inform assistive technology users that they may select more than one item from the current selectable items if they so choose. Lists and trees are examples of roles that might allow users to select more than one item at a time.
 
-> **Note:** When allowing for multiple selections, inform the user that multiple values are allowed and provide directions on how to provide multiple values, such as "to select more than one value, keep the control key pressed during selection."
+> [!NOTE]
+> When allowing for multiple selections, inform the user that multiple values are allowed and provide directions on how to provide multiple values, such as "to select more than one value, keep the control key pressed during selection."
 
 ### Used with `aria-selected`
 

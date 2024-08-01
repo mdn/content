@@ -8,7 +8,8 @@ browser-compat: api.Document.write
 
 {{ApiRef("DOM")}}
 
-> **Warning:** Use of the `document.write()` method is strongly discouraged.
+> [!WARNING]
+> Use of the `document.write()` method is strongly discouraged.
 >
 > As [the HTML spec itself warns](<https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#document.write()>):
 >
@@ -17,7 +18,8 @@ browser-compat: api.Document.write
 
 The **`document.write()`** method writes a string of text to a document stream opened by {{domxref("document.open()")}}.
 
-> **Note:** Because `document.write()` writes to the document **stream**, calling `document.write()` on a closed (loaded) document automatically calls `document.open()`, [which will clear the document](/en-US/docs/Web/API/Document/open#notes).
+> [!NOTE]
+> Because `document.write()` writes to the document **stream**, calling `document.write()` on a closed (loaded) document automatically calls `document.open()`, [which will clear the document](/en-US/docs/Web/API/Document/open#notes).
 
 ## Syntax
 

@@ -17,7 +17,8 @@ The global `this` object.
 
 {{js_property_attributes(1, 0, 1)}}
 
-> **Note:** The `globalThis` property is configurable and writable so that code authors can hide it when executing untrusted code and prevent exposing the global object.
+> [!NOTE]
+> The `globalThis` property is configurable and writable so that code authors can hide it when executing untrusted code and prevent exposing the global object.
 
 ## Description
 

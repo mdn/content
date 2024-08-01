@@ -102,7 +102,8 @@ log(`CSSContainerRule.containerQuery: "${containerRule.containerQuery}"`);
 log(`CSSContainerRule.conditionText: "${containerRule.conditionText}"`);
 ```
 
-> **Note:** The styles for this example are defined in an inline HTML `style` element with an id in order to make it easy for the code to find the correct sheet.
+> [!NOTE]
+> The styles for this example are defined in an inline HTML `style` element with an id in order to make it easy for the code to find the correct sheet.
 > You might also locate the correct sheets for each example from the document by indexing against the length (e.g. `document.styleSheets[document.styleSheets.length-1]` but that makes working out correct sheet for each example more complicated).
 
 The example output is shown below.

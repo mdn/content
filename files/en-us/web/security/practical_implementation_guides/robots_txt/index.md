@@ -24,14 +24,14 @@ Also be aware that some robots, such as malware robots and email address harvest
 
 Stop all search engines from crawling a site:
 
-```text
+```http
 User-agent: *
 Disallow: /
 ```
 
 Hide certain directories (this is not recommended):
 
-```text example-bad
+```http example-bad
 User-agent: *
 Disallow: /secret/admin-interface
 ```

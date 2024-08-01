@@ -19,7 +19,8 @@ The **`unicodeSets`** accessor property of {{jsxref("RegExp")}} instances return
 
 Some valid `u`-mode regexes become invalid in `v`-mode. Specifically, the character class syntax is different and some characters can no longer appear literally. For more information, see [`v`-mode character class](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#v-mode_character_class).
 
-> **Note:** The `v` mode does not interpret grapheme clusters as single characters; they are still multiple code points. For example, `/[🇺🇳]/v` is still able to match `"🇺"`.
+> [!NOTE]
+> The `v` mode does not interpret grapheme clusters as single characters; they are still multiple code points. For example, `/[🇺🇳]/v` is still able to match `"🇺"`.
 
 The set accessor of `unicodeSets` is `undefined`. You cannot change this property directly.
 
