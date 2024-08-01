@@ -25,8 +25,8 @@ font-size: xx-large; /* 2.0 */
 font-size: xxx-large; /* 3.0 */
 
 /* <relative-size> values */
-font-size: smaller;  /* 0.8 times the parent element's font size */
-font-size: larger;   /* 1.2 times the parent element's font size */
+font-size: smaller; /* 0.8 times the parent element's font size */
+font-size: larger; /* 1.2 times the parent element's font size */
 
 /* <length> values */
 font-size: 12px;
