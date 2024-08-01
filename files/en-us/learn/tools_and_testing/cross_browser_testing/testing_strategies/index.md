@@ -100,7 +100,7 @@ By default, you should see the reporting tab, like so:
 ![How google analytics collects data in its main reporting dashboard](analytics-reporting.png)
 
 There is a huge amount of data you could look at using Google Analytics — customized reports in different categories, etc. — and we haven't got time to discuss it all.
-[Getting started with Analytics](https://support.google.com/analytics/answer/9304153?visit_id=637855964517698041-2103767437&rd=2) provides some useful guidance on reporting (and more) for beginners.
+[Getting started with Analytics](https://support.google.com/analytics/answer/9304153) provides some useful guidance on reporting (and more) for beginners.
 
 You can see what browsers and operating systems your users are using by selecting _Audience > Technology > Browser & OS_ from the left-hand menu.
 

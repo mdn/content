@@ -39,7 +39,7 @@ Media, namely images and video, account for over 70% of the bytes downloaded for
 
 For the average website, [51% of its bandwidth comes from imagery, followed by video at 25%](https://discuss.httparchive.org/t/state-of-the-web-top-image-optimization-strategies/1367), so it's safe to say it's important to address and optimize your multimedia content.
 
-You need to be considerate of data usage. Many people are on capped data plans or even pay-as-you-go where they are literally paying by the megabyte. This isn't an emerging market problem either. As of 2018, [24% of the United Kingdom still use pay-as-you-go](https://www.ofcom.org.uk/siteassets/resources/documents/research-and-data/technology-research/technology-tracker/technology-tracker-h1-2018-data-tables?v=323142).
+You need to be considerate of data usage. Many people are on capped data plans or even pay-as-you-go where they are literally paying by the megabyte. This isn't an emerging market problem either. As of 2018, 24% of the United Kingdom still use pay-as-you-go according to [OFCOM Nations & regions technology tracker - H1 2018 (PDF)](https://www.ofcom.org.uk/siteassets/resources/documents/research-and-data/technology-research/technology-tracker/technology-tracker-h1-2018-data-tables?v=323142).
 
 You also need to be considerate of memory as many mobile devices have limited RAM. It's important to remember that when images are downloaded, they need to be stored in memory.
 
