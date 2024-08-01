@@ -216,6 +216,7 @@ td {
 
 > [!NOTE]
 > The `font-stretch` property was initially defined in CSS 2, but dropped in CSS 2.1 due to the lack of browser implementation. It was brought back in CSS 3.
+> The property [has now been renamed to `font-width`](https://drafts.csswg.org/css-fonts/#font-stretch-desc) in the specifications.
 
 ## Browser compatibility
 
