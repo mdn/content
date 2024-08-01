@@ -102,14 +102,14 @@ const camera = new BABYLON.FreeCamera(
 );
 ```
 
-There are many [cameras](https://doc.babylonjs.com/divingDeeper/cameras) available in Babylon.js; `FreeCamera` is the most basic and universal one. To initialize it you need to pass it three parameters: any name you want to use for it, the coordinates where you want it to be positioned in the 3D space, and the scene you want to add it to.
+There are many [cameras](https://doc.babylonjs.com/features/featuresDeepDive/cameras) available in Babylon.js; `FreeCamera` is the most basic and universal one. To initialize it you need to pass it three parameters: any name you want to use for it, the coordinates where you want it to be positioned in the 3D space, and the scene you want to add it to.
 
 > [!NOTE]
 > You probably noticed the `BABYLON.Vector3()` method in use here — this defines a 3D position on the scene. Babylon.js is bundled with a complete math library for handling vectors, colors, matrices etc.
 
 ## Let there be light
 
-There are various [light sources](https://doc.babylonjs.com/divingDeeper/lights/lights_introduction#types-of-lights) available in Babylon.js. The most basic one is the `PointLight`, which works like a flashlight — shining a spotlight in a given direction. Add the following line below your camera definition:
+There are various [light sources](https://doc.babylonjs.com/features/featuresDeepDive/lights/lights_introduction#types-of-lights) available in Babylon.js. The most basic one is the `PointLight`, which works like a flashlight — shining a spotlight in a given direction. Add the following line below your camera definition:
 
 ```js
 const light = new BABYLON.PointLight(
@@ -123,7 +123,7 @@ The parameters are very similar to the previously defined camera: the name of th
 
 ## Geometry
 
-Now the scene is properly rendering we can start adding 3D shapes to it. To speed up development Babylon.js provides a bunch of [predefined primitives](https://doc.babylonjs.com/divingDeeper/mesh/creation/set) that you can use to create shapes instantly in a single line of code. There are cubes, spheres, cylinders and more complicated shapes available. Let's start by defining the geometry for a box shape — add the following new code below your previous additions:
+Now the scene is properly rendering we can start adding 3D shapes to it. To speed up development Babylon.js provides a bunch of [predefined primitives](https://doc.babylonjs.com/features/featuresDeepDive/mesh/creation/set) that you can use to create shapes instantly in a single line of code. There are cubes, spheres, cylinders and more complicated shapes available. Let's start by defining the geometry for a box shape — add the following new code below your previous additions:
 
 ```js
 const box = BABYLON.Mesh.CreateBox("box", 2, scene);
