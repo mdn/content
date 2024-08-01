@@ -1,10 +1,10 @@
 ---
 title: Choosing between www and non-www URLs
-slug: Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
+slug: Web/URL/Choosing_between_www_and_non-www_URLs
 page-type: guide
 ---
 
-{{HTTPSidebar}}
+{{QuickLinksWithSubpages("/en-US/docs/Web/URL")}}
 
 A recurring question among website owners is whether to choose 'www' (`www.example.com`) or 'non-www' (`example.com`) URLs. This page provides some advice on what's best.
 
