@@ -14,11 +14,9 @@ JavaScript has the following kinds of scopes:
 - Module scope: The scope for code running in module mode.
 - Function scope: The scope created with a {{glossary("function")}}.
 
-In addition, variables declared with [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) or [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) can belong to an additional scope:
+In addition, identifiers declared with [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const), [`class`](/en-US/docs/Web/JavaScript/Reference/Statements/class), or (in strict mode) [`function`](/en-US/docs/Web/JavaScript/Reference/Statements/function) can belong to an additional scope:
 
 - Block scope: The scope created with a pair of curly braces (a [block](/en-US/docs/Web/JavaScript/Reference/Statements/block)).
-
-## Function scope
 
 A {{glossary("function")}} creates a scope, so that (for example) a variable defined exclusively within the function cannot be accessed from outside the function or within other functions. For instance, the following is invalid:
 
@@ -48,10 +46,6 @@ console.log("Outside function");
 console.log(x);
 ```
 
-## Block scope
-
-### Variable declarations
-
 Blocks only scope `let` and `const` declarations, but not `var` declarations.
 
 ```js example-good
@@ -70,34 +64,7 @@ console.log(x); // 1
 console.log(x); // ReferenceError: x is not defined
 ```
 
-### Function declarations
-
-In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), function declarations are block-scoped.
-
-```js
-"use strict";
-
-{
-  function alarm() {
-    console.log("Beep-beep!");
-  }
-}
-
-alarm(); // ReferenceError: alarm is not defined
-```
-
-This behavior doesn't apply to "[sloppy mode](/en-US/docs/Glossary/Sloppy_mode)".
-
-```js
-{
-  function alarm() {
-    console.log("Beep-beep!");
-  }
-}
-
-alarm(); // "Beep-beep!"
-```
-
 ## See also
 
 - [Scope (computer science)](<https://en.wikipedia.org/wiki/Scope_(computer_science)>) on Wikipedia
+- [Block scoping rules](/en-US/docs/Web/JavaScript/Reference/Statements/block#block_scoping_rules_with_let_const_class_or_function_declaration_in_strict_mode)
