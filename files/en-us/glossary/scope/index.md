@@ -14,7 +14,7 @@ JavaScript has the following kinds of scopes:
 - Module scope: The scope for code running in module mode.
 - Function scope: The scope created with a {{glossary("function")}}.
 
-In addition, identifiers declared with [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const), [`class`](/en-US/docs/Web/JavaScript/Reference/Statements/class), or (in strict mode) [`function`](/en-US/docs/Web/JavaScript/Reference/Statements/function) can belong to an additional scope:
+In addition, identifiers declared with certain syntaxes, including [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const), [`class`](/en-US/docs/Web/JavaScript/Reference/Statements/class), or (in strict mode) [`function`](/en-US/docs/Web/JavaScript/Reference/Statements/function), can belong to an additional scope:
 
 - Block scope: The scope created with a pair of curly braces (a [block](/en-US/docs/Web/JavaScript/Reference/Statements/block)).
 
