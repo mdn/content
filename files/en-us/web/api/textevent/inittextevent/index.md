@@ -14,7 +14,8 @@ The **`initTextEventEvent()`** method of the {{domxref("TextEvent")}} interface 
 
 This method must be called to set the event before it is dispatched, using {{ domxref("EventTarget.dispatchEvent()") }}.
 
-> **Note:** In general, you won't create these events yourself; they are created by the browser.
+> [!NOTE]
+> In general, you won't create these events yourself; they are created by the browser.
 
 ## Syntax
 

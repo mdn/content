@@ -149,7 +149,8 @@ This includes the following information:
 - `login_hints` {{optional_inline}}
   - : An array of strings representing the account. These strings are used to filter the list of account options that the browser offers for the user to sign-in. This occurs when the `loginHint` property is provided within [`identity.providers`](/en-US/docs/Web/API/CredentialsContainer/get#providers_2) in a related `get()` call. Any account with a string in its `login_hints` array that matches the provided `loginHint` is included.
 
-> **Note:**: If the user is not signed in to any IdP accounts, the endpoint should respond with [HTTP 401 (Unauthorized)](/en-US/docs/Web/HTTP/Status/401).
+> [!NOTE]
+> If the user is not signed in to any IdP accounts, the endpoint should respond with [HTTP 401 (Unauthorized)](/en-US/docs/Web/HTTP/Status/401).
 
 ### The client metadata endpoint
 
@@ -294,4 +295,4 @@ Once the user is signed in to the IdP, the IdP should:
 
 ## See also
 
-- [Federated Credential Management API](https://developer.chrome.com/docs/privacy-sandbox/fedcm/) on developer.chrome.com (2023)
+- [Federated Credential Management API](https://developers.google.com/privacy-sandbox/3pcd/fedcm) on developers.google.com (2023)

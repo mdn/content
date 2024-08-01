@@ -6,7 +6,7 @@ page-type: webdriver-error
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Errors")}}
 
-The **script timeout** error is a [WebDriver error](/en-US/docs/Web/WebDriver/Errors) that occurs when a script the user has provided did not complete before the session's [script timeout](/en-US/docs/Web/WebDriver/Errors/ScriptTimeout) duration expired.
+The **script timeout** error is a [WebDriver error](/en-US/docs/Web/WebDriver/Errors) that occurs when a script the user has provided did not complete before the session's script timeout duration expired.
 
 The script timeout duration is a configurable capability, which means you can change how long it will take before the driver interrupts an injected script. The driver will by default wait 30 seconds before interrupting the script and returning with a script timeout error, but this can be both extended, limited, and be set to indefinite.
 

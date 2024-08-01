@@ -105,6 +105,6 @@ Examples of each property, event type, and global event handler are included in 
 
 ## See also
 
-- {{domxref("Touch_events","Touch Events")}}
+- [Touch events](/en-US/docs/Web/API/Touch_events)
 - {{domxref("GestureEvent")}}
 - {{cssxref("touch-action")}}

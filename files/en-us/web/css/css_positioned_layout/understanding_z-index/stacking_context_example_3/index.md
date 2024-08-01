@@ -42,7 +42,8 @@ To better understand the situation, here is the stacking context hierarchy (the 
 
 This problem can be avoided by removing overlapping between different level menus, or by using individual (and different) z-index values assigned through the id selector instead of class selector, or by flattening the HTML hierarchy.
 
-> **Note:** In the source code you will see that second-level and third level menus are made of several `div` elements contained in an absolutely positioned container. This is useful to group and position all of them at once.
+> [!NOTE]
+> In the source code you will see that second-level and third level menus are made of several `div` elements contained in an absolutely positioned container. This is useful to group and position all of them at once.
 
 ## Example
 
@@ -163,5 +164,6 @@ div.lev3 {
 - [Stacking context example 1](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1): 2-level HTML hierarchy, `z-index` on the last level
 - [Stacking context example 2](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_2): 2-level HTML hierarchy, `z-index` on all levels
 
-> **Note:** The sample image looks wrong - with the second level 2 overlapping the level 3 menus - because level 2 has opacity, which creates a new stacking context.
+> [!NOTE]
+> The sample image looks wrong - with the second level 2 overlapping the level 3 menus - because level 2 has opacity, which creates a new stacking context.
 > Basically, this whole sample page is incorrect and misleading.

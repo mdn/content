@@ -53,7 +53,8 @@ A color in hexadecimal string notation always begins with the character `"#"`. A
 
 As shown above, the red, green, and blue color components can each be represented as a double-digit hex value representing a number between 0 (`00`) and 255 (`FF`) or a single-digit hex value (a number between 0 (`0`) and 15 (`F`).
 
-> **Note:** The leading `0x` in the values above indicates a hexadecimal integer literal. Hexadecimal integers can include digits (`0` - `9`) and the letters `a` – `f` and `A` – `F`. The case of a character does not change its value. Therefore: `0xa` = `0xA` = `10` and `0xf` = `0xF` = `15`.
+> [!NOTE]
+> The leading `0x` in the values above indicates a hexadecimal integer literal. Hexadecimal integers can include digits (`0` - `9`) and the letters `a` – `f` and `A` – `F`. The case of a character does not change its value. Therefore: `0xa` = `0xA` = `10` and `0xf` = `0xF` = `15`.
 
 These two hex colors are equivalent color values; they're both red:
 
@@ -239,7 +240,8 @@ th {
 
 The last value is semi-opaque; it includes the optional alpha value, preceded by a forward slash.
 
-> **Note:** When you omit the hue's unit, it's assumed to be in degrees (`deg`).
+> [!NOTE]
+> When you omit the hue's unit, it's assumed to be in degrees (`deg`).
 
 ### HWB functional notation
 

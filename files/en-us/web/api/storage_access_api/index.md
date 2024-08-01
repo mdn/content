@@ -62,7 +62,8 @@ Embedded content that has a legitimate need for third party cookie or unpartitio
 5. Once access is granted, a permission key is stored in the browser with the structure `<top-level site, embedded site>`. For example, if the embedding site is `embedder.com`, and the embed is `locator.example.com`, the key would be `<embedder.com, example.com>`. Same-site embeds (`docs.example.com`, `profile.example.com`, etc.) would then be able to call `requestStorageAccess()` and the promise would fulfill automatically, as mentioned earlier.
    - Older spec versions used the more specific permission key structure `<top-level site, embedded origin>`, which meant that same-site, cross-origin embeds didn't match the permission key and had to go through the whole process separately.
 
-> **Note:** In cases where a top-level site has its cookies [partitioned](#unpartitioned_versus_partitioned_cookies), the Storage Access API isn't required, as sharing the cookies by default has no privacy risk.
+> [!NOTE]
+> In cases where a top-level site has its cookies [partitioned](#unpartitioned_versus_partitioned_cookies), the Storage Access API isn't required, as sharing the cookies by default has no privacy risk.
 
 ## Security measures
 
@@ -87,7 +88,8 @@ Several different security measures could cause a {{domxref("Document.requestSto
 
 6. Usage of this feature may be blocked by a {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server.
 
-> **Note:** The document may also be required to pass additional browser-specific checks. Examples: allowlists, blocklists, on-device classification, user settings, anti-[clickjacking](/en-US/docs/Glossary/Clickjacking) heuristics, or prompting the user for explicit permission.
+> [!NOTE]
+> The document may also be required to pass additional browser-specific checks. Examples: allowlists, blocklists, on-device classification, user settings, anti-[clickjacking](/en-US/docs/Glossary/Clickjacking) heuristics, or prompting the user for explicit permission.
 
 ## Browser-specific variations
 
@@ -126,7 +128,8 @@ Documentation for Firefox's new storage access policy for blocking tracking cook
 - {{domxref("Document.requestStorageAccessFor()")}} {{experimental_inline}}
   - : A proposed extension to the Storage Access API that allows top-level sites to request third-party cookie access on behalf of embedded content originating from another site in the same [related website set](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets). Returns a {{jsxref("Promise")}} that resolves if the access was granted, and rejects if access was denied.
 
-> **Note:** User interaction propagates to the promise returned by these methods, allowing the callers to take actions requiring user interaction without requiring a second click. For example, a caller could open a pop-up window from the resolved promise without triggering Firefox's pop-up blocker.
+> [!NOTE]
+> User interaction propagates to the promise returned by these methods, allowing the callers to take actions requiring user interaction without requiring a second click. For example, a caller could open a pop-up window from the resolved promise without triggering Firefox's pop-up blocker.
 
 ### Additions to other APIs
 

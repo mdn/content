@@ -24,7 +24,8 @@ This example is for a hypothetical USB device with a multi-colored LED. It shows
 test that a device is open before calling {{domxref("USBDevice.controlTransferOut")}} to
 set a specified LED color.
 
-> **Note:** What data can be passed to a USB device and how it is passed is particular and unique
+> [!NOTE]
+> What data can be passed to a USB device and how it is passed is particular and unique
 > to each device.
 
 ```js

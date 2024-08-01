@@ -23,7 +23,8 @@ To better understand the situation, this is the stacking context hierarchy:
 
     - DIV #4 (`z-index`: 10)
 
-> **Note:** It is worth remembering that the HTML hierarchy is different from the stacking context hierarchy. In the stacking context hierarchy, elements that do not create a stacking context are collapsed on their parent.
+> [!NOTE]
+> It is worth remembering that the HTML hierarchy is different from the stacking context hierarchy. In the stacking context hierarchy, elements that do not create a stacking context are collapsed on their parent.
 
 ## Example
 

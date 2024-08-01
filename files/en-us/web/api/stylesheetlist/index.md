@@ -11,7 +11,8 @@ The `StyleSheetList` interface represents a list of {{domxref("CSSStyleSheet")}}
 
 It is an array-like object but can't be iterated over using {{jsxref("Array")}} methods. However it can be iterated over in a standard {{jsxref("Statements/for", "for")}} loop over its indices, or converted to an {{jsxref("Array")}}.
 
-> **Note:** Typically list interfaces like `StyleSheetList` wrap around {{jsxref("Array")}} types, so you can use `Array` methods on them.
+> [!NOTE]
+> Typically list interfaces like `StyleSheetList` wrap around {{jsxref("Array")}} types, so you can use `Array` methods on them.
 > This is not the case here for [historical reasons](https://stackoverflow.com/questions/74630989/why-use-domstringlist-rather-than-an-array/74641156#74641156).
 > However, you can convert `StyleSheetList` to an `Array` in order to use those methods (see the example below).
 

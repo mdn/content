@@ -46,7 +46,8 @@ _This interface doesn't inherit any property._
 
 _This interface doesn't inherit any method._
 
-> **Note:** in the context of a `TreeWalker`, a node is _visible_ if it exists in the logical view determined by the `whatToShow` and `filter` parameter arguments. (Whether or not the node is visible on the screen is irrelevant.)
+> [!NOTE]
+> In the context of a `TreeWalker`, a node is _visible_ if it exists in the logical view determined by the `whatToShow` and `filter` parameter arguments. (Whether or not the node is visible on the screen is irrelevant.)
 
 - {{domxref("TreeWalker.parentNode()")}}
   - : Moves the current {{domxref("Node")}} to the first _visible_ ancestor node in the document order, and returns the found node. It also moves the current node to this one. If no such node exists, or if it is before that the _root node_ defined at the object construction, returns `null` and the current node is not changed.

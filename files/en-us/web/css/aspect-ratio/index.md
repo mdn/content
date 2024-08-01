@@ -31,7 +31,7 @@ aspect-ratio: revert-layer;
 aspect-ratio: unset;
 ```
 
-This property is specified as one or both of the keyword auto or a `<ratio>`. If both are given, then If the element is a [replaced element](/en-US/docs/Web/CSS/Replaced_element), such as [`<img>`](/en-US/docs/Web/HTML/Element/img), then the given ratio is used until the content is loaded. After the content is loaded, the `auto` value is applied, so the intrinsic aspect ratio of the loaded content is used.
+This property is specified as one or both of the keyword auto or a `<ratio>`. If both are given, and the element is a [replaced element](/en-US/docs/Web/CSS/Replaced_element), such as [`<img>`](/en-US/docs/Web/HTML/Element/img), then the given ratio is used until the content is loaded. After the content is loaded, the `auto` value is applied, so the intrinsic aspect ratio of the loaded content is used.
 
 If the element is not a replaced element, then the given `ratio` is used.
 
@@ -105,7 +105,7 @@ div:nth-child(5) {
 
 ### Fallback to natural aspect ratio
 
-In this example we are using two`<img>` elements. The first element does not have its `src` attribute set to an image file.
+In this example we are using two `<img>` elements. The first element does not have its `src` attribute set to an image file.
 
 ```html
 <img src="" /> <img src="plumeria.jpg" />

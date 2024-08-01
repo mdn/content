@@ -4,6 +4,8 @@ slug: Learn/Server-side/Express_Nodejs/forms/Create_genre_form
 page-type: learn-module-chapter
 ---
 
+{{LearnSidebar}}
+
 This sub article shows how we define our page to create `Genre` objects (this is a good place to start because the `Genre` has only one field, its `name`, and no dependencies). Like any other pages, we need to set up routes, controllers, and views.
 
 ## Import validation and sanitization methods

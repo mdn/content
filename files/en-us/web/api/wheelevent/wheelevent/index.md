@@ -10,7 +10,8 @@ browser-compat: api.WheelEvent.WheelEvent
 
 The **`WheelEvent()`** constructor returns a new {{domxref("WheelEvent")}} object.
 
-> **Note:** If you construct a synthetic event using this constructor, that event will not be _trusted_, for security reasons.
+> [!NOTE]
+> If you construct a synthetic event using this constructor, that event will not be _trusted_, for security reasons.
 > Only browser-generated `WheelEvent` objects are trusted and only trusted events trigger default actions.
 
 ## Syntax

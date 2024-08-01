@@ -189,7 +189,7 @@ table {
       <td>
         The start tag may be omitted, if it has a {{HTMLElement("col")}}
         element as its first child and if it is not preceded by a
-        {{HTMLElement("colgroup")}} whose end tag has been omitted.<br />The
+        <code>&lt;colgroup&gt;</code> whose end tag has been omitted.<br />The
         end tag may be omitted, if it is not followed by a space or a comment.
       </td>
     </tr>
@@ -197,7 +197,7 @@ table {
       <th scope="row">Permitted parents</th>
       <td>
         A {{HTMLElement("table")}} element. The
-        {{HTMLElement("colgroup")}} must appear after any
+        <code>&lt;colgroup&gt;</code> must appear after any
         {{HTMLElement("caption")}} element, but before any
         {{HTMLElement("thead")}}, {{HTMLElement("tbody")}},
         {{HTMLElement("tfoot")}}, and

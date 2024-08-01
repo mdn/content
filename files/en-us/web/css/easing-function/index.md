@@ -113,7 +113,8 @@ By default, the stops are equidistant. So if there are 5 stops, they will be at 
 
 Consider an animation with a duration time of 100 seconds and a change of 100 pixels. Let's look at an example where the easing of the animation is specified: `linear(0, 0.25 75%, 1)`. In this case, the animation progresses to 25 pixels (25% of its total change) in the first 75 seconds (75% of the duration). The last 75 pixels are applied in the remaining 25 seconds of the animation. For the same animation, suppose the easing function is given instead as `linear(0, 0.5 25% 75%, 1)`. Here, the animation reaches 50 pixels (50% of its total change) in 25 seconds (25% of the duration) and remains there for 50 seconds (75% - 25% of the duration). Then the last 50 pixels are applied in the remaining 25 seconds of the duration. Note that `linear(0, 0.5 25% 75%, 1)` is equivalent to `linear(0, 0.5 25%, 0.5 75%, 1)`.
 
-> **Note:** The [`linear`](#linear) keyword is equivalent to the easing function `linear(0, 1)`. While the `linear` keyword is always interpreted as-is, the function `linear(0, 1)` gets interpreted as `linear(0 0%, 1 100%)`.
+> [!NOTE]
+> The [`linear`](#linear) keyword is equivalent to the easing function `linear(0, 1)`. While the `linear` keyword is always interpreted as-is, the function `linear(0, 1)` gets interpreted as `linear(0 0%, 1 100%)`.
 
 ### Cubic Bézier easing function
 
@@ -313,7 +314,8 @@ steps(2, start)
 steps(2)
 ```
 
-> **Note:** If the animation contains multiple stops, then the steps specified in the `steps()` function will apply to each section. Therefore, an animation with three segments and `steps(2)` will contain 6 steps in total, 2 per segment.
+> [!NOTE]
+> If the animation contains multiple stops, then the steps specified in the `steps()` function will apply to each section. Therefore, an animation with three segments and `steps(2)` will contain 6 steps in total, 2 per segment.
 
 These easing functions are invalid:
 

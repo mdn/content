@@ -58,7 +58,7 @@ The HTML for the example is shown below.
   </p>
 
   <p>
-    Dolor sed viverra ipsum nunc aliquet. Sed sed risus pretium quam vulputate
+    Dolor sed viverra ipsum nunc aliquet. Sed risus pretium quam vulputate
     dignissim. Tortor aliquam nulla facilisi cras. A erat nam at lectus urna
     duis convallis convallis. Nibh ipsum consequat nisl vel pretium lectus.
     Sagittis aliquam malesuada bibendum arcu vitae elementum. Malesuada bibendum
