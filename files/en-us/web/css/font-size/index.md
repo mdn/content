@@ -15,13 +15,13 @@ The **`font-size`** [CSS](/en-US/docs/Web/CSS) property sets the size of the fon
 
 ```css
 /* <absolute-size> values */
-font-size: xx-small;  /* 0.60 */
-font-size: x-small;   /* 0.75 */
-font-size: small;     /* 0.889 */
-font-size: medium;    /* 1.0 (browser default, usually 16px) */
-font-size: large;     /* 1.2 */
-font-size: x-large;   /* 1.5 */
-font-size: xx-large;  /* 2.0 */
+font-size: xx-small; /* 0.60 */
+font-size: x-small; /* 0.75 */
+font-size: small; /* 0.889 */
+font-size: medium; /* 1.0 (browser default, usually 16px) */
+font-size: large; /* 1.2 */
+font-size: x-large; /* 1.5 */
+font-size: xx-large; /* 2.0 */
 font-size: xxx-large; /* 3.0 */
 
 /* <relative-size> values */
