@@ -49,7 +49,8 @@ getContext(contextType, contextAttributes)
       {{domxref("ImageBitmapRenderingContext")}} which only provides functionality to
       replace the content of the canvas with a given {{domxref("ImageBitmap")}}.
 
-    > **Note:** The identifier `"experimental-webgl"` is used
+    > [!NOTE]
+    > The identifier `"experimental-webgl"` is used
     > in new implementations of WebGL. These implementations have either not reached
     > test suite conformance, or the graphics drivers on the platform are not yet
     > stable. The [Khronos Group](https://www.khronos.org/) certifies WebGL
@@ -143,7 +144,8 @@ getContext(contextType, contextAttributes)
         {{domxref("WebGLRenderingContext.makeXRCompatible()")}} method the moment you
         intend to start an XR session.
 
-    > **Note:** The WebGPU specification does not define any specific context attributes for `getContext()`. Instead, it provides configuration options via the {{domxref("GPUCanvasContext.configure()")}} method.
+    > [!NOTE]
+    > The WebGPU specification does not define any specific context attributes for `getContext()`. Instead, it provides configuration options via the {{domxref("GPUCanvasContext.configure()")}} method.
 
 ### Return value
 

@@ -20,7 +20,8 @@ called, any other call to `show()` will by rejected with an
 fulfilled with a {{domxref("PaymentResponse")}} indicating the results of the payment
 request, or by being rejected with an error.
 
-> **Note:** In reality, despite the fact that the specification says this
+> [!NOTE]
+> In reality, despite the fact that the specification says this
 > can't be done, some browsers, including Firefox, support multiple active payment
 > requests at a time.
 

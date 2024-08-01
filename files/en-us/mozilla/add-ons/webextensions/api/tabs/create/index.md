@@ -45,7 +45,8 @@ let creating = browser.tabs.create(
 
       - : `boolean`. Whether the tab should become the selected tab in the window. Defaults to `true`.
 
-        > **Warning:** This property is deprecated, and is not supported in Firefox. Use `active` instead.
+        > [!WARNING]
+        > This property is deprecated, and is not supported in Firefox. Use `active` instead.
 
     - `title` {{optional_inline}}
       - : `string`. The title of the tab. Allowed only if the tab is created with `discarded` set to `true`.
@@ -102,7 +103,8 @@ browser.browserAction.onClicked.addListener(() => {
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-create) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-create) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

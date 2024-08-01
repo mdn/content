@@ -40,10 +40,10 @@ The following example shows the use of the `height` and `width` properties along
             arrImages[i].style.height +
             ", style.width=" +
             arrImages[i].style.width +
-            "<\/li>";
+            "</li>";
         }
 
-        strHtml += "<\/ul>";
+        strHtml += "</ul>";
 
         objOutput.innerHTML = strHtml;
       }
@@ -346,7 +346,7 @@ Put the following code into a blank text file and load it into a variety of brow
         }
 
         const event = e || window.event;
-        document.getElementById("eventType").innerHTML = event.type;
+        document.getElementById("eventType").textContent = event.type;
 
         const table = document.createElement("table");
         const thead = table.createTHead();

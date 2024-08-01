@@ -25,7 +25,8 @@ The `alt` attribute provides an alternate string to use as the button's label if
 
 For example, if you have a graphical button that shows an image with an icon and/or image text "Login Now", you should also set the `alt` attribute to something like `Login Now`.
 
-> **Note:** While the `alt` attribute is technically optional, you should always include one to maximize the usability of your content.
+> [!NOTE]
+> While the `alt` attribute is technically optional, you should always include one to maximize the usability of your content.
 
 Functionally, the `alt` attribute of the `<input type="image">` element works just like the [`alt`](/en-US/docs/Web/HTML/Element/img#alt) attribute on {{HTMLElement("img")}} elements.
 
@@ -40,7 +41,7 @@ This attribute is also available on [`<input type="submit">`](/en-US/docs/Web/HT
 A string that identifies the encoding method to use when submitting the form data to the server. There are three permitted values:
 
 - `application/x-www-form-urlencoded`
-  - : This, the default value, sends the form data as a string after [percent-encoding](https://en.wikipedia.org/wiki/Percent-encoding) the text using an algorithm such as {{jsxref("encodeURI", "encodeURI()")}}.
+  - : This, the default value, sends the form data as a string after {{Glossary("Percent-encoding", "percent-encoding")}} the text using an algorithm such as {{jsxref("encodeURI", "encodeURI()")}}.
 - `multipart/form-data`
   - : Uses the {{domxref("FormData")}} API to manage the data, allowing for files to be submitted to the server. You _must_ use this encoding type if your form includes any {{HTMLElement("input")}} elements of [`type`](/en-US/docs/Web/HTML/Element/input#type) `file` ([`<input type="file">`](/en-US/docs/Web/HTML/Element/input/file)).
 - `text/plain`

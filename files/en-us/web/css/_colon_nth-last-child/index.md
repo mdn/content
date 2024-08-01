@@ -49,7 +49,8 @@ By passing a selector argument, we can select the **nth-last** element that matc
 }
 ```
 
-> **Note:** This is different from moving the selector outside of the function, like:
+> [!NOTE]
+> This is different from moving the selector outside of the function, like:
 
 ```css
 li.important: nth-last-child(-n + 3);

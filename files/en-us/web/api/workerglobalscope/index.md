@@ -17,7 +17,7 @@ This interface is usually specialized by each worker type: {{domxref("DedicatedW
 
 _This interface inherits properties from the {{domxref("EventTarget")}} interface._
 
-- {{domxref("WorkerGlobalScope.caches")}} {{ReadOnlyInline}}
+- {{domxref("WorkerGlobalScope.caches")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns the {{domxref("CacheStorage")}} object associated with the current context. This object enables functionality such as storing assets for offline use, and generating custom responses to requests.
 - {{domxref("console")}} {{ReadOnlyInline}} {{Non-standard_inline}}
   - : Returns the {{domxref("console")}} associated with the worker.
@@ -103,7 +103,8 @@ importScripts("foo.js");
 console.log(navigator);
 ```
 
-> **Note:** Since the global scope of the worker script is effectively the global scope of the worker you are running ({{domxref("DedicatedWorkerGlobalScope")}} or whatever) and all worker global scopes inherit methods, properties, etc. from `WorkerGlobalScope`, you can run lines such as those above without specifying a parent object.
+> [!NOTE]
+> Since the global scope of the worker script is effectively the global scope of the worker you are running ({{domxref("DedicatedWorkerGlobalScope")}} or whatever) and all worker global scopes inherit methods, properties, etc. from `WorkerGlobalScope`, you can run lines such as those above without specifying a parent object.
 
 ## Specifications
 

@@ -314,7 +314,8 @@ function Form(props) {
 export default Form;
 ```
 
-> **Note:** You'll notice that you are able to submit empty tasks by just pressing the `Add` button without entering a task name. Can you think of a way to prevent this? As a hint, you probably need to add some kind of check into the `handleSubmit()` function.
+> [!NOTE]
+> You'll notice that you are able to submit empty tasks by just pressing the `Add` button without entering a task name. Can you think of a way to prevent this? As a hint, you probably need to add some kind of check into the `handleSubmit()` function.
 
 ## Putting it all together: Adding a task
 
@@ -376,7 +377,8 @@ Make sure you're in the root directory of your application and run the following
 npm install nanoid
 ```
 
-> **Note:** If you're using yarn, you'll need the following instead: `yarn add nanoid`.
+> [!NOTE]
+> If you're using yarn, you'll need the following instead: `yarn add nanoid`.
 
 Now we can use `nanoid` to create unique IDs for our new tasks. First of all, import it by including the following line at the top of `App.jsx`:
 

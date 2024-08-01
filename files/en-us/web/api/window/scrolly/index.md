@@ -14,7 +14,8 @@ The read-only **`scrollY`** property of the {{domxref("Window")}} interface retu
 
 A double-precision floating-point value indicating the number of pixels by which the document is currently scrolled vertically from the origin, where a positive value means the content is scrolled down (to reveal more content to the bottom). In more technical terms, `scrollY` returns the Y coordinate of the top edge of the current {{Glossary("viewport")}}. If the document isn't scrolled at all top or down, then `scrollY` is 0. If there is no viewport, the returned value is 0. If the document is rendered on a subpixel-precise device, then the returned value is also subpixel-precise and may contain a decimal component.
 
-> **Note:** If you need an integer value, you can use {{jsxref("Math.round()")}} to round it off.
+> [!NOTE]
+> If you need an integer value, you can use {{jsxref("Math.round()")}} to round it off.
 
 Safari responds to overscrolling by updating `scrollY` beyond the maximum scroll position (unless the default "bounce" effect is disabled, such as by setting {{cssxref("overscroll-behavior")}} to `none`), while Chrome and Firefox do not. For example, `scrollY` may be negative on Safari just by continuing to scroll up when the document is already at the top.
 

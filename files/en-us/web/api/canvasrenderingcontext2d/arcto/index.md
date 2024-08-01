@@ -13,7 +13,8 @@ The arc is automatically connected to the path's latest point with a straight li
 
 This method is commonly used for making rounded corners.
 
-> **Note:** You may get unexpected results when using a
+> [!NOTE]
+> You may get unexpected results when using a
 > relatively large radius: the arc's connecting line will go in whatever direction it
 > must to meet the specified radius.
 

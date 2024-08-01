@@ -59,7 +59,8 @@ Notification.requestPermission((result) => {
 
 The callback version optionally accepts a callback function that is called once the user has responded to the request to display permissions.
 
-> **Note:** There's no way to reliably feature-test whether `Notification.requestPermission` supports the promise-based version. If you need to support older browsers, just use the callback-based version—although this is deprecated, it still works in new browsers. Check the [browser compatibility table](/en-US/docs/Web/API/Notification/requestPermission_static#browser_compatibility) for more information.
+> [!NOTE]
+> There's no way to reliably feature-test whether `Notification.requestPermission` supports the promise-based version. If you need to support older browsers, just use the callback-based version—although this is deprecated, it still works in new browsers. Check the [browser compatibility table](/en-US/docs/Web/API/Notification/requestPermission_static#browser_compatibility) for more information.
 
 ### Example
 
@@ -115,9 +116,11 @@ document.addEventListener("visibilitychange", () => {
 });
 ```
 
-> **Note:** This API shouldn't be used just to have the notification removed from the screen after a fixed delay (on modern browsers) since this method will also remove the notification from any notification tray, preventing users from interacting with it after it was initially shown.
+> [!NOTE]
+> This API shouldn't be used just to have the notification removed from the screen after a fixed delay (on modern browsers) since this method will also remove the notification from any notification tray, preventing users from interacting with it after it was initially shown.
 
-> **Note:** When you receive a "close" event, there is no guarantee that it's the user who closed the notification. This is in line with the specification, which states: "When a notification is closed, either by the underlying notifications platform or by the user, the close steps for it must be run."
+> [!NOTE]
+> When you receive a "close" event, there is no guarantee that it's the user who closed the notification. This is in line with the specification, which states: "When a notification is closed, either by the underlying notifications platform or by the user, the close steps for it must be run."
 
 ## Notification events
 

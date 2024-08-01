@@ -13,7 +13,8 @@ The **`Speculation-Rules`** response header provides one or more URLs pointing t
 
 The resource file containing the speculation rules JSON can have any valid name and extension, but it must be served with an `application/speculationrules+json` MIME type.
 
-> **Note:** This mechanism provides an alternative to specifying the JSON definition inside an inline [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Element/script/type/speculationrules) element. Specifying an HTTP header is useful in cases where developers are not able to directly modify the document itself.
+> [!NOTE]
+> This mechanism provides an alternative to specifying the JSON definition inside an inline [`<script type="speculationrules">`](/en-US/docs/Web/HTML/Element/script/type/speculationrules) element. Specifying an HTTP header is useful in cases where developers are not able to directly modify the document itself.
 
 <table class="properties">
   <tbody>
@@ -53,7 +54,8 @@ Multiple speculation rules file references:
 Speculation-Rules: "/rules/prefetch.json","/rules/prerender.json"
 ```
 
-> **Note:** The URL values must be contained in quotes.
+> [!NOTE]
+> The URL values must be contained in quotes.
 
 ## Specifications
 

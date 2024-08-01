@@ -39,6 +39,8 @@ body.appendChild(iframe); // Fetch the image using the complete URL as the refer
 
 ## See also
 
-- {{DOMxRef("HTMLAnchorElement.src")}}
-- {{DOMxRef("HTMLAreaElement.src")}}
-- {{DOMxRef("HTMLAreaElement.src")}}.
+- {{DOMxRef("HTMLEmbedElement.src")}}
+- {{DOMxRef("HTMLImageElement.src")}}
+- {{DOMxRef("HTMLMediaElement.src")}}
+- {{DOMxRef("HTMLScriptElement.src")}}
+- {{DOMxRef("HTMLTrackElement.src")}}

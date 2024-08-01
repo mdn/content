@@ -36,7 +36,8 @@ setLocalDescription(sessionDescription, successCallback, errorCallback) // depre
 A {{jsxref("Promise")}} which is fulfilled once the value of {{domxref("RTCPeerConnection.localDescription")}} is successfully changed or rejected if the change cannot be applied (for example, if the specified description is incompatible with one or both of the peers on the connection).
 The promise's fulfillment handler receives no input parameters.
 
-> **Note:** The process of changing descriptions actually involves intermediary steps handled by the WebRTC layer to ensure that an active connection can be changed without losing the connection if the change does not succeed.
+> [!NOTE]
+> The process of changing descriptions actually involves intermediary steps handled by the WebRTC layer to ensure that an active connection can be changed without losing the connection if the change does not succeed.
 > See [Pending and current descriptions](/en-US/docs/Web/API/WebRTC_API/Connectivity#pending_and_current_descriptions) in the WebRTC Connectivity page for more details on this process.
 
 #### Implicit description

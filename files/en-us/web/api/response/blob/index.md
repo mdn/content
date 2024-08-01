@@ -22,7 +22,8 @@ blob()
 
 None.
 
-> **Note:** If the {{domxref("Response")}} has a
+> [!NOTE]
+> If the {{domxref("Response")}} has a
 > {{domxref("Response.type")}} of `"opaque"`, the resulting {{domxref("Blob")}}
 > will have a {{domxref("Blob.size")}} of `0` and a {{domxref("Blob.type")}} of
 > empty string `""`, which renders it _useless_ for methods like

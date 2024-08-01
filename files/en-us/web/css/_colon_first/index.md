@@ -17,7 +17,8 @@ The **`:first`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/P
 }
 ```
 
-> **Note:** You can't change all CSS properties with this pseudo-class. You can only change the margins, {{cssxref("orphans")}}, {{cssxref("widows")}}, and page breaks of the document. Furthermore, you may only use [absolute-length](/en-US/docs/Web/CSS/length#absolute_length_units) units when defining the margins. All other properties will be ignored.
+> [!NOTE]
+> You can't change all CSS properties with this pseudo-class. You can only change the margins, {{cssxref("orphans")}}, {{cssxref("widows")}}, and page breaks of the document. Furthermore, you may only use [absolute-length](/en-US/docs/Web/CSS/length#absolute_length_units) units when defining the margins. All other properties will be ignored.
 
 ## Syntax
 

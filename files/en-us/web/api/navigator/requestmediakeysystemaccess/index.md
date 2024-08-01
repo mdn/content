@@ -34,7 +34,8 @@ requestMediaKeySystemAccess(keySystem, supportedConfigurations)
 
     Each object may have the following properties:
 
-    > **Note:** Either `videoCapabilities` or `audioCapabilities` may be empty, but not both!
+    > [!NOTE]
+    > Either `videoCapabilities` or `audioCapabilities` may be empty, but not both!
 
     - `label` {{optional_inline}}
       - : An optional label for the configuration, which defaults to `""`.
@@ -108,7 +109,7 @@ In case of an error, the returned {{jsxref('Promise')}} is rejected with a {{dom
   - : Either the specified `keySystem` isn't supported by the platform or the browser, or none of the configurations specified by `supportedConfigurations` can be satisfied (if, for example, none of the `codecs` specified in `contentType` are available).
 - `SecurityError` {{domxref("DOMException")}}
   - : Use of this feature was blocked by [`Permissions-Policy: encrypted-media`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/encrypted-media).
-- {{jsxref("TypeError")}}`
+- {{jsxref("TypeError")}}
   - : Either `keySystem` is an empty string or the `supportedConfigurations` array is empty.
 
 ## Examples
@@ -150,3 +151,4 @@ navigator
 - [Encrypted Media Extensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API)
 - [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- {{domxref("MediaCapabilities.decodingInfo()")}}

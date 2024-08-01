@@ -467,9 +467,9 @@ In addition to displaying documents, using the correct writing mode for the lang
     <p>
       Nori grape silver beet broccoli kombu beet greens fava bean potato
       quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil
-      turnip greens parsnip. Sea lettuce lettuce water chestnut eggplant winter
-      purslane fennel azuki bean earthnut pea sierra leone bologi leek soko
-      chicory celtuce parsley jícama salsify.
+      turnip greens parsnip. Sea lettuce water chestnut eggplant winter purslane
+      fennel azuki bean earthnut pea sierra leone bologi leek soko chicory
+      celtuce parsley jícama salsify.
     </p>
   </div>
   <nav>

@@ -27,7 +27,8 @@ The start-line and HTTP headers of the HTTP message are collectively known as th
 
 ### Request line
 
-> **Note:** The start-line is called the "request-line" in requests.
+> [!NOTE]
+> The start-line is called the "request-line" in requests.
 
 HTTP requests are messages sent by the client to initiate an action on the server. Their _request-line_ contain three elements:
 
@@ -73,7 +74,8 @@ Bodies can be broadly divided into two categories:
 
 ### Status line
 
-> **Note:** The start-line is called the "status line" in responses.
+> [!NOTE]
+> The start-line is called the "status line" in responses.
 
 The start line of an HTTP response, called the _status line_, contains the following information:
 

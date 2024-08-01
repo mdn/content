@@ -52,9 +52,11 @@ As the structure of at-rules varies widely, please see [At-rule](/en-US/docs/Web
 
 ## Index
 
-> **Note:** This index does not include SVG-exclusive presentation attributes, which can be used as CSS properties on [SVG](/en-US/docs/Web/SVG) elements.
+> [!NOTE]
+> This index does not include SVG-exclusive presentation attributes, which can be used as CSS properties on [SVG](/en-US/docs/Web/SVG) elements.
 
-> **Note:** The property names in this index do **not** include the JavaScript names which do differ from the CSS standard names.
+> [!NOTE]
+> The property names in this index do **not** include the JavaScript names which do differ from the CSS standard names.
 
 {{CSS_Ref}}
 
@@ -99,7 +101,7 @@ Combinators are selectors that establish a relationship between two or more simp
 - [Pseudo elements](/en-US/docs/Web/CSS/Pseudo-elements) `::`
   - : Represents entities that are not included in HTML.
 
-> **Callout:**
+> [!CALLOUT]
 >
 > See also [selectors in the Selectors specification](https://drafts.csswg.org/selectors/) and the [pseudo-element specification](https://drafts.csswg.org/css-pseudo/).
 

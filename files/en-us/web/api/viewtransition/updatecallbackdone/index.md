@@ -13,7 +13,8 @@ The **`updateCallbackDone`** read-only property of the
 
 `updateCallbackDone` is useful when you don't care about the success/failure of a same-document (SPA) view transition animation, and just want to know if and when the DOM is updated.
 
-> **Note:** In the case of a cross-document (MPA) view transition, the `updateCallbackDone` promise of the associated `ViewTransition` is automatically fulfilled.
+> [!NOTE]
+> In the case of a cross-document (MPA) view transition, the `updateCallbackDone` promise of the associated `ViewTransition` is automatically fulfilled.
 
 ## Value
 

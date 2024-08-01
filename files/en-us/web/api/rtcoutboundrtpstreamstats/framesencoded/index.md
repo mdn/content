@@ -18,7 +18,8 @@ source.
 An integer value indicating the total number of video frames that this sender has
 encoded so far for this stream.
 
-> **Note:** This property is only valid for video streams.
+> [!NOTE]
+> This property is only valid for video streams.
 
 ## Specifications
 
