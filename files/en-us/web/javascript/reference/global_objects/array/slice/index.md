@@ -105,7 +105,7 @@ console.log(sliceExample); // ['Banana', 'Orange', 'Mango']
 
 In this example, `slice(1, -1)` starts extracting from index `1` and goes up to, but does not include, the element at index `-1` (which is the last element). This results in a new array with `['Banana', 'Orange', 'Mango']`.
 
-When using slice with a **positive index and a negative index**, the extraction starts at the positive index and continues up to, but does not include, the negative index. The negative index is not included because the slice method always excludes the element at the final index specified, regardless of whether it is positive or negative.
+When using `slice` with a positive index and a negative index, the extraction starts at the position of the positive index and continues up to, but does not include, the position of the negative index. The `slice` method always excludes the element at the final index specified, regardless of whether it is positive or negative.
 
 ```plain
 read from start --->
