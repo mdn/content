@@ -40,7 +40,7 @@ For an in-depth guide to the XMLHttpRequest API, see [Using XMLHttpRequest](/en-
 
 ### Fetching JSON data from the server
 
-In this example we fetch a JSON file from https://raw.githubusercontent.com/, adding event listeners to show the progress of the event.
+In this example we fetch a JSON file from `https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json`, adding event listeners to show the progress of the event.
 
 #### HTML
 
