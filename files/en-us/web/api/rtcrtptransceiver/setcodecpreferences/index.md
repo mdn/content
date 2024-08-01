@@ -40,7 +40,8 @@ setCodecPreferences(codecs)
   - : An array of objects, each providing the parameters for one of the transceiver's supported [media codecs](/en-US/docs/Web/Media/Formats/WebRTC_codecs), ordered by preference.
     If `codecs` is empty, the codec configurations are all returned to the user agent's defaults.
 
-    > **Note:** Any codecs not included in `codecs` will not be considered during the process of negotiating a connection.
+    > [!NOTE]
+    > Any codecs not included in `codecs` will not be considered during the process of negotiating a connection.
     > This lets you prevent the use of codecs you don't wish to use.
 
     Each codec object in the array has the following properties:

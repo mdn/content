@@ -70,9 +70,11 @@ The keyword values can be grouped into six value categories.
     - `inline`
       - : The element generates one or more inline boxes that do not generate line breaks before or after themselves. In normal flow, the next element will be on the same line if there is space.
 
-> **Note:** When browsers that support multi-keyword syntax encounter a display property that only has an **outer** value (e.g., `display: block` or `display: inline`), the inner value is set to `flow` (e.g., `display: block flow` and `display: inline flow`).
+> [!NOTE]
+> When browsers that support multi-keyword syntax encounter a display property that only has an **outer** value (e.g., `display: block` or `display: inline`), the inner value is set to `flow` (e.g., `display: block flow` and `display: inline flow`).
 
-> **Note:** To be sure layouts work on older browsers, you may use single-value syntax, for example `display: inline flex` could have the following fallback
+> [!NOTE]
+> To be sure layouts work on older browsers, you may use single-value syntax, for example `display: inline flex` could have the following fallback
 >
 > ```css
 > .container {
@@ -108,7 +110,8 @@ The keyword values can be grouped into six value categories.
     - `ruby`
       - : The element behaves like an inline-level element and lays out its content according to the ruby formatting model. It behaves like the corresponding HTML {{HTMLElement("ruby")}} elements.
 
-> **Note:** When browsers that support multi-keyword syntax encounter a display property that only has an **inner** value (e.g., `display: flex` or `display: grid`), the outer value is set to `block` (e.g., `display: block flex` and `display: block grid`).
+> [!NOTE]
+> When browsers that support multi-keyword syntax encounter a display property that only has an **inner** value (e.g., `display: flex` or `display: grid`), the outer value is set to `block` (e.g., `display: block flex` and `display: block grid`).
 
 ### List Item
 
@@ -120,7 +123,8 @@ This can be used together with {{CSSxRef("list-style-type")}} and {{CSSxRef("lis
 
 `list-item` can also be combined with any {{CSSxRef("&lt;display-outside&gt;")}} keyword and the `flow` or `flow-root` {{CSSxRef("&lt;display-inside&gt;")}} keywords.
 
-> **Note:** In browsers that support the multi-keyword syntax, if no inner value is specified, it will default to `flow`.
+> [!NOTE]
+> In browsers that support the multi-keyword syntax, if no inner value is specified, it will default to `flow`.
 > If no outer value is specified, the principal box will have an outer display type of `block`.
 
 ### Internal
@@ -291,7 +295,7 @@ When animating `display` with [CSS transitions](/en-US/docs/Web/CSS/CSS_transiti
 
 For examples of transitioning the `display` property, see the [`@starting-style`](/en-US/docs/Web/CSS/@starting-style#examples) and [`transition-behavior`](/en-US/docs/Web/CSS/transition-behavior#examples) pages.
 
-## Accessibility concerns
+## Accessibility
 
 ### display: none
 

@@ -36,7 +36,8 @@ CSP can also be used to provide granular control over:
 
 ### Steps for implementing CSP
 
-> **Note:** Before implementing any actual CSP with the `Content-Security-Policy` header, you are advised to first test it out using the [`Content-Security-Policy-Report-Only`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy-Report-Only) HTTP header. This allows you to see if any violations would have occurred with that policy. This test requires the use of `report-to`/`report-uri`, as explained below.
+> [!NOTE]
+> Before implementing any actual CSP with the `Content-Security-Policy` header, you are advised to first test it out using the [`Content-Security-Policy-Report-Only`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy-Report-Only) HTTP header. This allows you to see if any violations would have occurred with that policy. This test requires the use of `report-to`/`report-uri`, as explained below.
 
 1. Begin by trying out a policy of `default-src https:`. This is a great first goal because it disables inline code and requires browsers to use HTTPS when loading resources. It will also allow you to start to pinpoint the resources that are failing to load as a result of the policy. [`default-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/default-src) serves as a fallback for the other CSP fetch directives.
 2. Next, start to make the policy more specific, to allow the items you need, while blocking any unwanted items. You could first widen the policy remit with a reasonably locked-down policy such as `default-src 'none'; form-action 'self'; img-src 'self'; object-src 'none'; script-src 'self'; style-src 'self';`.

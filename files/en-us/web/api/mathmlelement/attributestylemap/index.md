@@ -26,7 +26,7 @@ The following code snippet shows the relationship between the `style` attribute 
 
 ```html
 <div style="white-space: pre-line;">
-  <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <math>
     <mrow>
       <mi>f</mi>
       <mo stretchy="false">(</mo>

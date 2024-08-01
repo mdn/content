@@ -98,11 +98,11 @@ Leap.loop({
     horizontalDegree = Math.round(hand.roll() * toDegrees);
     verticalDegree = Math.round(hand.pitch() * toDegrees);
     grabStrength = hand.grabStrength;
-    output.innerHTML =
-      `Leap Motion: <br />` +
-      ` roll: ${horizontalDegree}° <br />` +
-      ` pitch: ${verticalDegree}° <br />` +
-      ` strength: ${grabStrength}`;
+    output.innerText = `Leap Motion:
+  roll: ${horizontalDegree}°
+  pitch: ${verticalDegree}°
+  strength: ${grabStrength}
+`;
   },
 });
 ```

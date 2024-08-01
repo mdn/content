@@ -45,7 +45,8 @@ grid-row-end: unset;
 
   - : If there is a named line with the name '\<custom-ident>-end', it contributes the first such line to the grid item's placement.
 
-    > **Note:** Named grid areas automatically generate implicit named lines of this form, so specifying `grid-row-end: foo;` will choose the end edge of that named grid area (unless another line named `foo-end` was explicitly specified before it).
+    > [!NOTE]
+    > Named grid areas automatically generate implicit named lines of this form, so specifying `grid-row-end: foo;` will choose the end edge of that named grid area (unless another line named `foo-end` was explicitly specified before it).
 
     Otherwise, this is treated as if the integer `1` had been specified along with the `<custom-ident>`.
 

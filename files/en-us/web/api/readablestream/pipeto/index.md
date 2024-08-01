@@ -71,7 +71,7 @@ The same example, but using {{jsxref("Operators/await", "await")}}:
   // Fetch the original image
   const response = await fetch("png-logo.png");
   // Retrieve its body as ReadableStream
-  response.body
+  await response.body
     .pipeThrough(new PNGTransformStream())
     .pipeTo(new FinalDestinationStream());
 })();

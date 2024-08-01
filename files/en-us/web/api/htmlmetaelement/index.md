@@ -45,7 +45,7 @@ The following example creates a new `<meta>` element with a `name` attribute set
 The `content` attribute sets a description of the document and is appended to the document `<head>`:
 
 ```js
-let meta = document.createElement("meta");
+const meta = document.createElement("meta");
 meta.name = "description";
 meta.content =
   "The <meta> element can be used to provide document metadata in terms of name-value pairs, with the name attribute giving the metadata name, and the content attribute giving the value.";
@@ -58,7 +58,7 @@ The following example shows how to create a new `<meta>` element with a `name` a
 The `content` attribute sets the viewport size and is appended to the document `<head>`:
 
 ```js
-var meta = document.createElement("meta");
+const meta = document.createElement("meta");
 meta.name = "viewport";
 meta.content = "width=device-width, initial-scale=1";
 document.head.appendChild(meta);

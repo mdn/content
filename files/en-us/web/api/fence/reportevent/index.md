@@ -36,7 +36,7 @@ reportEvent(event)
           - `"seller"`: The top-level seller running the ad auction.
           - `"component-seller"`: The seller for a component auction in a multi-level auction.
           - `"direct-seller"`: The seller that directly ran the auction the buyer bid in. If the ad was a single-level auction, the value used will be `"seller"`. If the ad was a multi-level auction, the value used will be `"component-seller"`.
-          - `"shared-storage-select-url"`: A [Shared Storage API](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/) storage location, as defined in a {{domxref("WindowSharedStorage.selectURL", "Window.sharedStorage.selectURL()")}} method call.
+          - `"shared-storage-select-url"`: A [Shared Storage API](https://developers.google.com/privacy-sandbox/relevance/shared-storage) storage location, as defined in a {{domxref("WindowSharedStorage.selectURL", "Window.sharedStorage.selectURL()")}} method call.
     - A string value represents an `eventType`, for example `"click"` (see the earlier definition of `eventType`). When an `eventType` string is passed as the value of `reportEvent()`, it triggers all Private Aggregation contributions that were made conditional on that event type (for example via {{domxref("PrivateAggregation.contributeToHistogramOnEvent()")}}) to be sent.
 
 ### Return value
@@ -63,5 +63,5 @@ window.fence.reportEvent({
 
 ## See also
 
-- [Fenced frames](https://developer.chrome.com/docs/privacy-sandbox/fenced-frame/) on developer.chrome.com
-- [The Privacy Sandbox](https://developer.chrome.com/docs/privacy-sandbox/) on developer.chrome.com
+- [Fenced frames](https://developers.google.com/privacy-sandbox/relevance/fenced-frame) on developers.google.com
+- [The Privacy Sandbox](https://developers.google.com/privacy-sandbox) on developers.google.com

@@ -12,7 +12,8 @@ browser-compat: api.WebKitPoint
 
 **`Point`** is an interface which represents a point in 2-dimensional space. It is non-standard, not broadly compatible, and should not be used.
 
-> **Note:** Although it is not directly related to this defunct interface, you are probably looking for {{domxref("DOMPoint")}}.
+> [!NOTE]
+> Although it is not directly related to this defunct interface, you are probably looking for {{domxref("DOMPoint")}}.
 
 ## Instance properties
 

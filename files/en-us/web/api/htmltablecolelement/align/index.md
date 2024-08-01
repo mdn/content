@@ -12,7 +12,8 @@ browser-compat: api.HTMLTableColElement.align
 
 The **`align`** property of the {{domxref("HTMLTableColElement")}} interface is a string indicating how to horizontally align text in a table {{htmlelement("col")}} column element.
 
-> **Note:** This property is deprecated, and CSS should be used to align text horizontally in a column. Use the CSS {{cssxref("text-align")}} property, which takes precedence, to horizontally align text in a column instead.
+> [!NOTE]
+> This property is deprecated, and CSS should be used to align text horizontally in a column. Use the CSS {{cssxref("text-align")}} property, which takes precedence, to horizontally align text in a column instead.
 >
 > As {{htmlelement("td")}} are not children of {{htmlelement("col")}}, you can't set it directly on a {{HTMLElement("col")}} element, you need to select the cells of the column using a `td:nth-last-child(n)` or similar (`n` is the column number, counting from the end).
 
@@ -21,7 +22,7 @@ The **`align`** property of the {{domxref("HTMLTableColElement")}} interface is 
 The possible values are:
 
 - `left`
-  - : Align the text to the left. Use `text-align: left` applied directly to the {{td}} or {{th}} instead.
+  - : Align the text to the left. Use `text-align: left` applied directly to the {{HTMLElement("td")}} or {{HTMLElement("th")}} instead.
 - `right`
   - : Align the text to the right. Use `text-align: right` applied directly to the `<td>` or `<th>` instead.
 - `center`

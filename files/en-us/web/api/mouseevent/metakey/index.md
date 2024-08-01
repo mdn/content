@@ -13,7 +13,8 @@ The **`MouseEvent.metaKey`** read-only property is a boolean value that indicate
 Be aware that many operating systems bind special functionality to the <kbd>meta</kbd> key, so this property may be `false` even when the key is actually pressed.
 On Windows, for example, this key may open the Start menu.
 
-> **Note:** On Macintosh keyboards, this key is the <kbd>command</kbd> key (<kbd>⌘</kbd>).
+> [!NOTE]
+> On Macintosh keyboards, this key is the <kbd>command</kbd> key (<kbd>⌘</kbd>).
 > On Windows keyboards, this key is the Windows key (<kbd>⊞</kbd>).
 
 ## Value

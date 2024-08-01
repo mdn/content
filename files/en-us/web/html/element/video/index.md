@@ -23,7 +23,8 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 
   - : A Boolean attribute; if specified, the video automatically begins to play back as soon as it can without stopping to finish loading the data.
 
-    > **Note:** Modern browsers block audio (or videos with an unmuted audio track) from autoplaying, as sites that automatically play audio can be an unpleasant experience for users. See our [autoplay guide](/en-US/docs/Web/Media/Autoplay_guide) for additional information about how to properly use autoplay.
+    > [!NOTE]
+    > Modern browsers block audio (or videos with an unmuted audio track) from autoplaying, as sites that automatically play audio can be an unpleasant experience for users. See our [autoplay guide](/en-US/docs/Web/Media/Autoplay_guide) for additional information about how to properly use autoplay.
 
     To disable video autoplay, `autoplay="false"` will not work; the video will autoplay if the attribute is there in the `<video>` tag at all. To remove autoplay, the attribute needs to be removed altogether.
 
@@ -77,7 +78,7 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 
     The default value is different for each browser. The spec advises it to be set to `metadata`.
 
-    > **Note:**
+    > [!NOTE]
     >
     > - The `autoplay` attribute has precedence over `preload`. If `autoplay` is specified, the browser would obviously need to start downloading the video for playback.
     > - The specification does not force the browser to follow the value of this attribute; it is a mere hint.
@@ -200,7 +201,7 @@ Like all other HTML elements, this element supports the [global attributes](/en-
     </tr>
     <tr>
       <td>
-        {{domxref("HTMLMediaElement.playing_event", 'playing ')}}
+        {{domxref("HTMLMediaElement.playing_event", 'playing')}}
       </td>
       <td>
         Playback is ready to start after having been paused or delayed due to
@@ -304,16 +305,35 @@ The `<video>` element is a replaced element — its {{cssxref("display")}} value
 
 There are no special considerations for styling `<video>`; a common strategy is to give it a `display` value of `block` to make it easier to position, size, etc., and then provide styling and layout information as required. [Video player styling basics](/en-US/docs/Web/Media/Audio_and_video_delivery/Video_player_styling_basics) provides some useful styling techniques.
 
+### Adding subtitles and other timed text tracks
+
+Timed text tracks for subtitles, closed captions, chapter headings, and so on, can be added declaratively by nesting the {{HTMLElement("track")}} element.
+The tracks are specified in [Web Video Text Tracks File Format (WebVTT)](/en-US/docs/Web/API/WebVTT_API/Web_Video_Text_Tracks_Format) (`.vtt` files).
+
+For example, the HTML below includes the file "captions.vtt", which will be used to overlay closed captions on the video if captions are enabled by the user.
+
+```html
+<video controls src="video.webm">
+  <track default kind="captions" src="captions.vtt" />
+</video>
+```
+
+Timed text tracks can also be added programmatically using the [WebVTT API](/en-US/docs/Web/API/WebVTT_API).
+
 ### Detecting track addition and removal
 
-You can detect when tracks are added to and removed from a `<video>` element using the {{domxref("VideoTrackList/addtrack_event", "addtrack")}} and {{domxref("VideoTrackList/removetrack_event", "removetrack")}} events. However, these events aren't sent directly to the `<video>` element itself. Instead, they're sent to the track list object within the `<video>` element's {{domxref("HTMLMediaElement")}} that corresponds to the type of track that was added to the element:
+You can detect when tracks are added to and removed from a `<video>` element using the {{domxref("VideoTrackList/addtrack_event", "addtrack")}} and {{domxref("VideoTrackList/removetrack_event", "removetrack")}} events. However, these events aren't sent directly to the `<video>` element itself.
+Instead, they're sent to the track list object within the `<video>` element's {{domxref("HTMLMediaElement")}} that corresponds to the type of track that was added to the element:
 
 - {{domxref("HTMLMediaElement.audioTracks")}}
-  - : An {{domxref("AudioTrackList")}} containing all of the media element's audio tracks. You can add a listener for `addtrack` to this object to be alerted when new audio tracks are added to the element.
+  - : An {{domxref("AudioTrackList")}} containing all of the media element's audio tracks.
+    Add a listener for `addtrack` to this object to be notified when new audio tracks are added to the element.
 - {{domxref("HTMLMediaElement.videoTracks")}}
-  - : Add an `addtrack` listener to this {{domxref("VideoTrackList")}} object to be informed when video tracks are added to the element.
+  - : A {{domxref("VideoTrackList")}} containing all of the media element's video tracks.
+    Add an `addtrack` listener to this object to be notified when video tracks are added to the element.
 - {{domxref("HTMLMediaElement.textTracks")}}
-  - : Add an `addtrack` event listener to this {{domxref("TextTrackList")}} to be notified when new text tracks are added to the element.
+  - : A {{domxref("TextTrackList")}} containing all of the media element's text tracks (which are used for subtitles, closed captions, and so on).
+    Add an `addtrack` listener to this object to be notified when text tracks are added to the element.
 
 For example, to detect when audio tracks are added to or removed from a `<video>` element, you can use code like this:
 
@@ -349,7 +369,7 @@ Your web host may provide an easy interface to MIME type configuration changes f
 
 Videos should provide both captions and transcripts that accurately describe their content (see [Adding captions and subtitles to HTML video](/en-US/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video) for more information on how to implement these). Captions allow people who are experiencing hearing loss to understand a video's audio content as the video is being played, while transcripts allow people who need additional time to be able to review audio content at a pace and format that is comfortable for them.
 
-It's worth noting that while you can caption audio-only media, you can only do so when playing audio in a {{HTMLElement("video")}} element since the video region of the element is used to present the captions. This is one of the special scenarios in which it's useful to play audio in a video element.
+It's worth noting that while you can caption audio-only media, you can only do so when playing audio in a `<video>` element since the video region of the element is used to present the captions. This is one of the special scenarios in which it's useful to play audio in a video element.
 
 If automatic captioning services are used, it is important to review the generated content to ensure it accurately represents the source video.
 
@@ -373,7 +393,7 @@ It's… it's a…
 [Dishes clattering]
 ```
 
-Captions should not obstruct the main subject of the video. They can be positioned using [the `align` VTT cue setting](/en-US/docs/Web/API/WebVTT_API#cue_settings).
+Captions should not obstruct the main subject of the video. They can be positioned using [the `align` VTT cue setting](/en-US/docs/Web/API/WebVTT_API/Web_Video_Text_Tracks_Format#cue_settings).
 
 - [Web Video Text Tracks Format (WebVTT)](/en-US/docs/Web/API/WebVTT_API)
 - [WebAIM: Captions, Transcripts, and Audio Descriptions](https://webaim.org/techniques/captions/)
@@ -455,16 +475,10 @@ Some media file types let you provide more specific information using the [`code
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
-          >Content categories</a
-        >
+        <a href="/en-US/docs/Web/HTML/Content_categories">Content categories</a>
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
-          >Flow content</a
-        >, phrasing content, embedded content. If it has a
-        <a href="#controls"><code>controls</code></a> attribute: interactive
-        content and palpable content.
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">Flow content</a>, phrasing content, embedded content. If it has a <a href="#controls"><code>controls</code></a> attribute: interactive content and palpable content.
       </td>
     </tr>
     <tr>
@@ -472,16 +486,10 @@ Some media file types let you provide more specific information using the [`code
       <td>
         <p>
           If the element has a <a href="#src"><code>src</code></a>
-          attribute: zero or more {{HTMLElement("track")}} elements,
-          followed by transparent content that contains no media elements–that
-          is no {{HTMLElement("audio")}} or
-          {{HTMLElement("video")}}.
+          attribute: zero or more {{HTMLElement("track")}} elements, followed by transparent content that contains no media elements–that is no {{HTMLElement("audio")}} or <code>&lt;video&gt;</code>.
         </p>
         <p>
-          Else: zero or more {{HTMLElement("source")}} elements, followed
-          by zero or more {{HTMLElement("track")}} elements, followed by
-          transparent content that contains no media elements–that is no
-          {{HTMLElement("audio")}} or {{HTMLElement("video")}}.
+          Else: zero or more {{HTMLElement("source")}} elements, followed by zero or more {{HTMLElement("track")}} elements, followed by transparent content that contains no media elements–that is no {{HTMLElement("audio")}} or <code>&lt;video&gt;</code>.
         </p>
       </td>
     </tr>

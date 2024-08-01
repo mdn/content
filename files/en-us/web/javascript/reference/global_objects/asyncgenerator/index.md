@@ -43,8 +43,8 @@ These properties are defined on `AsyncGenerator.prototype` and shared by all `As
 
     > **Note:** `AsyncGenerator` objects do not store a reference to the async generator function that created them.
 
-- `AsyncGenerator.prototype[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"AsyncGenerator"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+- `AsyncGenerator.prototype[Symbol.toStringTag]`
+  - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"AsyncGenerator"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 

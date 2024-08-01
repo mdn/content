@@ -17,7 +17,8 @@ have been sent in an equivalent {{HTTPStatus("200")}} `OK` response:
 {{HTTPHeader("Date")}}, {{HTTPHeader("ETag")}}, {{HTTPHeader("Expires")}}, and
 {{HTTPHeader("Vary")}}.
 
-> **Note:** Many [developer tools' network panels](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)
+> [!NOTE]
+> Many [developer tools' network panels](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)
 > of browsers create extraneous requests leading to `304` responses, so that
 > access to the local cache is visible to developers.
 

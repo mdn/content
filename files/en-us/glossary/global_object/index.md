@@ -10,7 +10,7 @@ The **global object** in JavaScript is an {{glossary("object")}} which represent
 
 > **Note:** _Globally available objects_, which are objects in the {{glossary("global scope")}}, are sometimes also referred to as global objects, but strictly speaking, there is only one global object per environment.
 
-In each JavaScript environment, there's always a global object defined. The global object's {{Glossary("interface")}} depends on the execution context in which the script is running. For example:
+In each JavaScript environment, there's always a global object defined. The global object's interface depends on the execution context in which the script is running. For example:
 
 - In a web browser, any code which the script doesn't specifically start up as a background task has a {{domxref("Window")}} as its global object. This is the vast majority of JavaScript code on the Web.
 - Code running in a {{domxref("Worker")}} has a {{domxref("WorkerGlobalScope")}} object as its global object.
@@ -34,11 +34,9 @@ console.log(global === global.global); // true (in Node.js)
 
 ## See also
 
-- [MDN Web Docs Glossary](/en-US/docs/Glossary)
-
+- Related glossary terms:
   - {{glossary("global scope")}}
   - {{glossary("object")}}
-
 - {{jsxref("globalThis")}}
 - {{domxref("Window")}}
 - {{domxref("WorkerGlobalScope")}}

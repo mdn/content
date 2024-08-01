@@ -84,7 +84,8 @@ Items in an array are numbered, starting from zero. This number is called the it
    // shopping will now return [ "tahini", "milk", "cheese", "hummus", "noodles" ]
    ```
 
-   > **Note:** We've said it before, but just as a reminder — Javascript starts indexing arrays at zero!
+   > [!NOTE]
+   > We've said it before, but just as a reminder — JavaScript starts indexing arrays at zero!
 
 3. Note that an array inside an array is called a multidimensional array. You can access an item inside an array that is itself inside another array by chaining two sets of square brackets together. For example, to access one of the items inside the array that is the third item inside the `random` array (see previous section), we could do something like this:
 
@@ -225,7 +226,8 @@ Like `map()`, we give a function to the `filter()` method, and `filter()` calls 
 
 Often you'll be presented with some raw data contained in a big long string, and you might want to separate the useful items out into a more useful form and then do things to them, like display them in a data table. To do this, we can use the {{jsxref("String.prototype.split()","split()")}} method. In its simplest form, this takes a single parameter, the character you want to separate the string at, and returns the substrings between the separator as items in an array.
 
-> **Note:** Okay, this is technically a string method, not an array method, but we've put it in with arrays as it goes well here.
+> [!NOTE]
+> Okay, this is technically a string method, not an array method, but we've put it in with arrays as it goes well here.
 
 1. Let's play with this, to see how it works. First, create a string in your console:
 
@@ -294,8 +296,8 @@ Let's return to the example we described earlier — printing out product names 
 const list = document.querySelector('.output ul');
 const totalBox = document.querySelector('.output p');
 let total = 0;
-list.innerHTML = '';
-totalBox.textContent = '';
+list.textContent = "";
+totalBox.textContent = "";
 // number 1
                 'Underpants:6.99'
                 'Socks:5.99'
@@ -360,8 +362,8 @@ solution.addEventListener("click", () => {
 const jsSolution = `const list = document.querySelector('.output ul');
 const totalBox = document.querySelector('.output p');
 let total = 0;
-list.innerHTML = '';
-totalBox.textContent = '';
+list.textContent = "";
+totalBox.textContent = "";
 
 const products = [
   'Underpants:6.99',
@@ -463,7 +465,8 @@ A good use for array methods like {{jsxref("Array.prototype.push()","push()")}} 
 
 In this example we're going to show a much simpler use — here we're giving you a fake search site, with a search box. The idea is that when terms are entered in the search box, the top 5 previous search terms are displayed in the list. When the number of terms goes over 5, the last term starts being deleted each time a new term is added to the top, so the 5 previous terms are always displayed.
 
-> **Note:** In a real search app, you'd probably be able to click the previous search terms to return to previous searches, and it would display actual search results! We are just keeping it simple for now.
+> [!NOTE]
+> In a real search app, you'd probably be able to click the previous search terms to return to previous searches, and it would display actual search results! We are just keeping it simple for now.
 
 To complete the app, we need you to:
 
@@ -489,7 +492,7 @@ const list = document.querySelector('.output ul');
 const searchInput = document.querySelector('.output input');
 const searchBtn = document.querySelector('.output button');
 
-list.innerHTML = '';
+list.textContent = "";
 
 const myHistory = [];
 const MAX_HISTORY = 5;
@@ -501,7 +504,7 @@ searchBtn.onclick = () => {
 
     // empty the list so that we don't display duplicate entries
     // the display is regenerated every time a search term is entered.
-    list.innerHTML = '';
+    list.textContent = "";
 
     // loop through the array, and display all the search terms in the list
     for (const itemText of myHistory) {
@@ -584,7 +587,7 @@ const jsSolution = `const list = document.querySelector('.output ul');
 const searchInput = document.querySelector('.output input');
 const searchBtn = document.querySelector('.output button');
 
-list.innerHTML = '';
+list.textContent = "";
 
 const myHistory = [];
 const MAX_HISTORY = 5;
@@ -596,7 +599,7 @@ searchBtn.onclick = () => {
 
     // empty the list so that we don't display duplicate entries
     // the display is regenerated every time a search term is entered.
-    list.innerHTML = '';
+    list.textContent = "";
 
     // loop through the array, and display all the search terms in the list
     for (const itemText of myHistory) {

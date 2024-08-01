@@ -82,7 +82,8 @@ Only a small subset of CSS properties can be used with the `::first-line` pseudo
 
 In this example, we style the first line of an SVG {{SVGElement("text")}} element using the `::first-line` pseudo-element.
 
-> **Note:** At time of writing this feature has [limited support](#browser_compatibility).
+> [!NOTE]
+> At time of writing this feature has [limited support](#browser_compatibility).
 
 #### HTML
 

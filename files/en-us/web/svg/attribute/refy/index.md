@@ -62,7 +62,8 @@ For {{SVGElement("symbol")}}, `refY` defines the y coordinate of the symbol, whi
 
 Unlike other positioning attributes, `refY` is interpreted as being in the coordinate system of the symbol contents, after application of the {{SVGAttr("viewBox")}} and {{SVGAttr("preserveAspectRatio")}} attributes. If the attribute is not specified, no vertical adjustment is made, and the top side of the symbol's rectangular viewport region (regardless of the `viewBox` coordinate) is positioned at the y coordinate.
 
-> **Note:** For backwards compatibility, the behavior when `refY` is not specified on a `<symbol>` element is different from when it is specified with a value of `0`, and therefore different from the behavior when an equivalent attribute is not specified on a {{SVGElement("marker")}} element.
+> [!NOTE]
+> For backwards compatibility, the behavior when `refY` is not specified on a `<symbol>` element is different from when it is specified with a value of `0`, and therefore different from the behavior when an equivalent attribute is not specified on a {{SVGElement("marker")}} element.
 
 <table class="properties">
   <tbody>

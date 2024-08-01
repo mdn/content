@@ -13,7 +13,8 @@ The
 property of the Canvas 2D API specifies the amount of blur applied to shadows. The
 default is `0` (no blur).
 
-> **Note:** Shadows are only drawn if the
+> [!NOTE]
+> Shadows are only drawn if the
 > {{domxref("CanvasRenderingContext2D.shadowColor", "shadowColor")}} property is set to
 > a non-transparent value. One of the `shadowBlur`,
 > {{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}}, or

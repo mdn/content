@@ -2,7 +2,7 @@
 title: TRACE
 slug: Web/HTTP/Methods/TRACE
 page-type: http-method
-browser-compat: http.methods.TRACE
+spec-urls: https://www.rfc-editor.org/rfc/rfc9110#TRACE
 ---
 
 {{HTTPSidebar}}
@@ -51,10 +51,6 @@ TRACE /index.html
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

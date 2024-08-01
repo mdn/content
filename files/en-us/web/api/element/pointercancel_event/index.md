@@ -18,7 +18,8 @@ Some examples of situations that will trigger a `pointercancel` event:
 - The {{cssxref("touch-action")}} CSS property prevents the input from continuing.
 - When the user interacts with too many simultaneous pointers, the browser can fire this event for all existing pointers (even if the user is still touching the screen).
 
-> **Note:** After the `pointercancel` event is fired, the browser will also send {{domxref("Element/pointerout_event", "pointerout")}} followed by {{domxref("Element/pointerleave_event", "pointerleave")}}.
+> [!NOTE]
+> After the `pointercancel` event is fired, the browser will also send {{domxref("Element/pointerout_event", "pointerout")}} followed by {{domxref("Element/pointerleave_event", "pointerleave")}}.
 
 ## Syntax
 
@@ -106,7 +107,6 @@ para.onpointercancel = (event) => {
   - {{domxref('Element/pointerdown_event', 'pointerdown')}}
   - {{domxref('Element/pointermove_event', 'pointermove')}}
   - {{domxref('Element/pointerup_event', 'pointerup')}}
-  - {{domxref('Element/pointercancel_event', 'pointercancel')}}
   - {{domxref('Element/pointerout_event', 'pointerout')}}
   - {{domxref('Element/pointerleave_event', 'pointerleave')}}
   - {{domxref('Element/pointerrawupdate_event', 'pointerrawupdate')}}

@@ -36,7 +36,7 @@ and so forth.
 ## Examples
 
 In this example, metadata is submitted to the `mediaSession` object. Note
-that the code begins by ensuring that the {{domxref("navigator.mediaSession")}} property
+that the code begins by ensuring that the `navigator.mediaSession` property
 is available before attempting to use it.
 
 ```js

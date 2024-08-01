@@ -66,11 +66,14 @@ The following media query will only set the body to 12pt if the page is printed.
 }
 ```
 
-> **Note:** The media type here is different from the so-called {{glossary("MIME type")}}.
+> [!NOTE]
+> The media type here is different from the so-called {{glossary("MIME type")}}.
 
-> **Note:** There were a number of other media types defined in the Level 3 Media Queries specification; these have been deprecated and should be avoided.
+> [!NOTE]
+> There were a number of other media types defined in the Level 3 Media Queries specification; these have been deprecated and should be avoided.
 
-> **Note:** Media types are optional; if you do not indicate a media type in your media query, then the media query will default to being for all media types.
+> [!NOTE]
+> Media types are optional; if you do not indicate a media type in your media query, then the media query will default to being for all media types.
 
 ### Media feature rules
 
@@ -201,7 +204,7 @@ If you have a set of queries, any of which could match, then you can comma separ
 You can negate an entire media query by using the `not` operator. This reverses the meaning of the entire media query. Therefore in this next example the text will only be blue if the orientation is portrait.
 
 ```css
-@media not all and (orientation: landscape) {
+@media not (orientation: landscape) {
   body {
     color: blue;
   }
@@ -209,6 +212,18 @@ You can negate an entire media query by using the `not` operator. This reverses 
 ```
 
 [Open this example](https://mdn.github.io/css-examples/learn/media-queries/not.html) in the browser, or [view the source](https://github.com/mdn/css-examples/blob/main/learn/media-queries/not.html).
+
+You can also use `not` to negate specific expressions.
+
+```css
+@media (not (width < 600px)) and (not (width > 1000px)) {
+  body {
+    color: blue;
+  }
+}
+```
+
+This will apply the styles if the viewport width is between 600 and 1000 pixels. This is equivalent to `(600px <= width <= 1000px)`.
 
 ## How to choose breakpoints
 

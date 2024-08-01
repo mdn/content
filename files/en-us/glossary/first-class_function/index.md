@@ -22,7 +22,8 @@ foo(); // Invoke it using the variable
 
 We assigned an _Anonymous Function_ in a {{glossary("Variable")}}, then we used that variable to invoke the function by adding parentheses `()` at the end.
 
-> **Note:** Even if your function was named, you can use the variable name to invoke it. Naming it will be helpful when debugging your code. _But it won't affect the way we invoke it._
+> [!NOTE]
+> Even if your function was named, you can use the variable name to invoke it. Naming it will be helpful when debugging your code. _But it won't affect the way we invoke it._
 
 ### Passing a function as an argument
 
@@ -40,7 +41,8 @@ greeting(sayHello, "JavaScript!");
 
 We are passing our `sayHello()` function as an argument to the `greeting()` function, this explains how we are treating the function as a value.
 
-> **Note:** The function that we pass as an argument to another function is called a _{{glossary("callback function")}}_. _`sayHello()` is a callback function._
+> [!NOTE]
+> The function that we pass as an argument to another function is called a _{{glossary("callback function")}}_. _`sayHello()` is a callback function._
 
 ### Returning a function
 
@@ -54,13 +56,13 @@ function sayHello() {
 
 In this example, we are returning a function from another function - _We can return a function because functions in JavaScript are treated as values._
 
-> **Note:** A function that returns a function or takes other functions as arguments is called a _higher-order function_.
+> [!NOTE]
+> A function that returns a function or takes other functions as arguments is called a _higher-order function_.
 
 ## See also
 
 - [First-class functions](https://en.wikipedia.org/wiki/First-class_function) on Wikipedia
-- [MDN Web Docs Glossary](/en-US/docs/Glossary)
-
+- Related glossary terms:
   - {{glossary("Callback function")}}
   - {{glossary("Function")}}
   - {{glossary("Variable")}}

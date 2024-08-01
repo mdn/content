@@ -22,7 +22,8 @@ If the element is hidden (for example, by setting `style.display` on the
 element or one of its ancestors to `"none"`), then `0` is
 returned.
 
-> **Note:** This property will round the value to an integer. If you need a fractional value, use
+> [!NOTE]
+> This property will round the value to an integer. If you need a fractional value, use
 > {{ domxref("element.getBoundingClientRect()") }}.
 
 ## Value

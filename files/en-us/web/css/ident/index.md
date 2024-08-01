@@ -18,7 +18,7 @@ A CSS identifier consists of one or more characters, which can be any of the fol
 - a hyphen (`-`)
 - an underscore (`_`)
 - any other {{glossary("Unicode")}} character `U+00A0` and higher (that is, any other non-ASCII Unicode character)
-- an [escaped character](escaping_characters)
+- an [escaped character](#escaping_characters)
 
 Additionally, an identifier must not start with an unescaped digit, and must not start with an unescaped hyphen followed by an unescaped digit.
 

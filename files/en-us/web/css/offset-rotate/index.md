@@ -11,7 +11,8 @@ The **`offset-rotate`** [CSS](/en-US/docs/Web/CSS) property defines the orientat
 
 {{EmbedInteractiveExample("pages/css/offset-rotate.html")}}
 
-> **Note:** Early versions of the spec called this property `motion-rotation`.
+> [!NOTE]
+> Early versions of the spec called this property `motion-rotation`.
 
 ## Syntax
 

@@ -552,6 +552,10 @@
       "inh": "CSSRule",
       "impl": []
     },
+    "CSSFunctionRule": {
+      "inh": "CSSGroupingRule",
+      "impl": []
+    },
     "CSSGroupingRule": {
       "inh": "CSSRule",
       "impl": []
@@ -2229,10 +2233,6 @@
       "impl": []
     },
     "ML": {
-      "inh": "",
-      "impl": []
-    },
-    "MLActivation": {
       "inh": "",
       "impl": []
     },
