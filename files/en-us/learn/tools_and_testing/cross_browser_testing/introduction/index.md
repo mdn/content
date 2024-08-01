@@ -83,7 +83,8 @@ For example, if the e-commerce site owner wants a WebGL-powered 3D tour of each 
 
 You should compile a list of the potential problem areas.
 
-> **Note:** You can find browser support information for technologies by looking up the different features on MDN — the site you're on! You should also consult [caniuse.com](https://caniuse.com/), for some further useful details.
+> [!NOTE]
+> You can find browser support information for technologies by looking up the different features on MDN — the site you're on! You should also consult [caniuse.com](https://caniuse.com/), for some further useful details.
 
 Once you've agreed on these details, you can go ahead and start developing the site.
 

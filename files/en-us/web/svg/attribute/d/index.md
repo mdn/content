@@ -66,7 +66,8 @@ For {{SVGElement('path')}}, `d` is a string containing a series of path commands
 
 ## glyph
 
-> **Warning:** As of SVG2 {{SVGElement('glyph')}} is deprecated and shouldn't be used.
+> [!WARNING]
+> As of SVG2 {{SVGElement('glyph')}} is deprecated and shouldn't be used.
 
 For {{SVGElement('glyph')}}, `d` is a string containing a series of path commands that define the outline shape of the glyph.
 
@@ -89,11 +90,13 @@ For {{SVGElement('glyph')}}, `d` is a string containing a series of path command
   </tbody>
 </table>
 
-> **Note:** The point of origin (the coordinate `0`, `0`) is usually the _upper left corner_ of the context. However the {{SVGElement("glyph")}} element has its origin in the _bottom left corner_ of its letterbox.
+> [!NOTE]
+> The point of origin (the coordinate `0`, `0`) is usually the _upper left corner_ of the context. However the {{SVGElement("glyph")}} element has its origin in the _bottom left corner_ of its letterbox.
 
 ## missing-glyph
 
-> **Warning:** As of SVG2 {{SVGElement('missing-glyph')}} is deprecated and shouldn't be used.
+> [!WARNING]
+> As of SVG2 {{SVGElement('missing-glyph')}} is deprecated and shouldn't be used.
 
 For {{SVGElement('missing-glyph')}}, `d` is a string containing a series of path commands that define the outline shape of the glyph.
 
@@ -168,7 +171,8 @@ SVG defines 6 types of path commands, for a total of 20 commands:
 - [Elliptical arc curve](#elliptical_arc_curve): `A`, `a`
 - [ClosePath](#closepath): `Z`, `z`
 
-> **Note:** Commands are _case-sensitive_. An upper-case command specifies absolute coordinates, while a lower-case command specifies coordinates relative to the current position.
+> [!NOTE]
+> Commands are _case-sensitive_. An upper-case command specifies absolute coordinates, while a lower-case command specifies coordinates relative to the current position.
 
 It is always possible to specify a negative value as an argument to a command:
 
@@ -1086,7 +1090,8 @@ _ClosePath_ instructions draw a straight line from the _current position_ to the
   </tbody>
 </table>
 
-> **Note:** The appearance of a shape closed with _ClosePath_ may be different to that of one closed by drawing a line to the origin, using one of the other commands, because the line ends are joined together (according to the {{SVGAttr('stroke-linejoin')}} setting), rather than just being placed at the same coordinates.
+> [!NOTE]
+> The appearance of a shape closed with _ClosePath_ may be different to that of one closed by drawing a line to the origin, using one of the other commands, because the line ends are joined together (according to the {{SVGAttr('stroke-linejoin')}} setting), rather than just being placed at the same coordinates.
 
 #### Examples
 

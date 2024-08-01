@@ -54,7 +54,8 @@ framebuffer:
   alpha, regardless of whether or not the WebGL context's [`premultipliedAlpha`](/en-US/docs/Web/API/HTMLCanvasElement/getContext#premultipliedalpha) context
   attribute is set.
 
-> **Note:** The `depth` and `stencil` properties are
+> [!NOTE]
+> The `depth` and `stencil` properties are
 > not required to be supported in order for a browser to be construed as having full
 > WebGL support.
 

@@ -31,7 +31,8 @@ A `<hex-color>` value can be used everywhere where a [`<color>`](/en-US/docs/Web
 - `A` or `AA` {{optional_inline}}
   - : The _alpha_ component of the color, indicating its transparency, as a case-insensitive hexadecimal number between `0` and `ff` (255). If there is only one number, it is duplicated: `e` means `ee`. `0`, or `00`, represents a fully transparent color, and `f`, or `ff`, a fully opaque one.
 
-> **Note:** The syntax is case-insensitive: `#00ff00` is the same as `#00FF00`.
+> [!NOTE]
+> The syntax is case-insensitive: `#00ff00` is the same as `#00FF00`.
 
 ## Examples
 

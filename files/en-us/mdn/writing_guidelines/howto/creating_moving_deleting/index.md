@@ -12,7 +12,8 @@ This article describes how to create, move, delete, or edit a page. In all these
 
 All pages on MDN Web Docs are authored in Markdown format. The content is written in a file named `index.md`, which is stored in its own unique directory. The directory name represents the name of the page. For example, if `align-content` is a new CSS property for which you want to create a new reference page, you'd create a folder in `en-us/web/css` named `align-content` and create a file called `index.md` inside it.
 
-> **Note:** The name of the directory differs slightly from the slug of the page. Most notably, the slug follows sentence casing.
+> [!NOTE]
+> The name of the directory differs slightly from the slug of the page. Most notably, the slug follows sentence casing.
 
 There are a lot of different [page types](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types) with certain structures and supporting page templates for them, which you can copy to get you started.
 
@@ -112,7 +113,8 @@ details for you:
 yarn content delete <document-slug> [locale]
 ```
 
-> **Note:** You need to use the `yarn content delete` command to delete pages from MDN Web Docs. Don't just delete their directories from the repo. The `yarn content delete` command also handles other necessary changes such as updating the `_wikihistory.json` file.
+> [!NOTE]
+> You need to use the `yarn content delete` command to delete pages from MDN Web Docs. Don't just delete their directories from the repo. The `yarn content delete` command also handles other necessary changes such as updating the `_wikihistory.json` file.
 
 You just have to specify the slug of the existing document that you'd like
 to delete (e.g., `Learn/Accessibility`), optionally followed by the locale
@@ -158,7 +160,8 @@ entire `/en-US/Learn/Accessibility` tree, you'd perform the following steps:
 
 5. Create your pull request.
 
-> **Note:** If the slug of the page you wish to delete contains special characters, include it in quotes, like so:
+> [!NOTE]
+> If the slug of the page you wish to delete contains special characters, include it in quotes, like so:
 >
 > ```bash
 > yarn content delete "Mozilla/Add-ons/WebExtensions/Debugging_(before_Firefox_50)"

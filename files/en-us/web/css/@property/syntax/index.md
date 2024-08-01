@@ -66,7 +66,7 @@ A string with a supported syntax as defined by the specification. Supported synt
 
 ## Examples
 
-Add type checking to `--my-color` {{cssxref('--*', 'custom property')}}, using the `<color>` syntax:
+Add type checking to `--my-color` [custom property](/en-US/docs/Web/CSS/--*), using the `<color>` syntax:
 
 Using [CSS](/en-US/docs/Web/CSS) {{cssxref('@property')}} [at-rule](/en-US/docs/Web/CSS/At-rule):
 

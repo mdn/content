@@ -26,3 +26,4 @@ WebDAV allows clients to
   - {{rfc(2518)}}
   - {{rfc(3253)}}
   - {{rfc(3744)}}
+  - {{rfc(4918)}} (obsoletes RFC 2518)

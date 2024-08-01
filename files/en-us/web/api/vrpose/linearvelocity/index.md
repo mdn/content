@@ -13,7 +13,8 @@ browser-compat: api.VRPose.linearVelocity
 
 The **`linearVelocity`** read-only property of the {{domxref("VRPose")}} interface returns an array representing the linear velocity vector of the {{domxref("VRDisplay")}} at the current timestamp, in meters per second.
 
-> **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
+> [!NOTE]
+> This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
 In other words, the current velocity at which the sensor is moving along the `x`, `y`, and `z` axes.
 

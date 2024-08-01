@@ -25,7 +25,8 @@ None.
 
 The `this` value, converted to an object.
 
-> **Note:** In order for `valueOf` to be useful during type conversion, it must return a primitive. Because all primitive types have their own `valueOf()` methods, calling `aPrimitiveValue.valueOf()` generally does not invoke `Object.prototype.valueOf()`.
+> [!NOTE]
+> In order for `valueOf` to be useful during type conversion, it must return a primitive. Because all primitive types have their own `valueOf()` methods, calling `aPrimitiveValue.valueOf()` generally does not invoke `Object.prototype.valueOf()`.
 
 ## Description
 

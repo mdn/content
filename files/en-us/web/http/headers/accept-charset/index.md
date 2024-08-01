@@ -6,7 +6,8 @@ page-type: http-header
 
 {{HTTPSidebar}}
 
-> **Warning:** Do not use this header. Browsers omit this header and servers should ignore it.
+> [!WARNING]
+> Do not use this header. Browsers omit this header and servers should ignore it.
 
 The **`Accept-Charset`** request HTTP header was a header that advertised a client's supported {{glossary("character encoding", "character encodings")}}. It is no longer widely used.
 

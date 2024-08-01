@@ -104,7 +104,8 @@ If the mismatch in the number of animations and animation property values is inv
 
 ## Examples
 
-> **Note:** Some older browsers (pre-2017) may need prefixes; the live examples you can click to see in your browser include the `-webkit` prefixed syntax.
+> [!NOTE]
+> Some older browsers (pre-2017) may need prefixes; the live examples you can click to see in your browser include the `-webkit` prefixed syntax.
 
 ### Making text slide across the browser window
 
@@ -143,7 +144,8 @@ The second keyframe occurs at `100%` (using the alias `to`). The {{cssxref("tran
 </p>
 ```
 
-> **Note:** Reload page to see the animation.
+> [!NOTE]
+> Reload page to see the animation.
 
 {{EmbedLiveSample("Making_text_slide_across_the_browser_window","100%","250")}}
 
@@ -215,7 +217,8 @@ We've added a {{htmlelement("span")}} around "Alice":
 
 This tells the browser the name should be normal for the first and last 25% of the animation, but turn pink while being scaled up and back again in the middle. We set the spans's {{cssxref("display")}} property to `inline-block` as the `transform` properties do not affect non-replaced {{glossary("inline-level content")}}.
 
-> **Note:** Reload page to see the animation.
+> [!NOTE]
+> Reload page to see the animation.
 
 {{EmbedLiveSample("Adding_another_keyframe","100%","250")}}
 
@@ -390,7 +393,8 @@ Just for the sake of completeness, here's the HTML that displays the page conten
 
 And here's the live output.
 
-> **Note:** Reload page to see the animation.
+> [!NOTE]
+> Reload page to see the animation.
 
 {{EmbedLiveSample('Using_animation_events', '600', '300')}}
 

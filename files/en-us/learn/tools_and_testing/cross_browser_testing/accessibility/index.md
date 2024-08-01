@@ -52,13 +52,15 @@ In a way, this whole module is about accessibility — cross browser testing mak
 
 That said, this article will cover cross browser and testing issues surrounding people with disabilities, and how they use the Web. We've already talked about other spheres such as [responsive design](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#responsive_design_problems) and [performance](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript#performance_issues) in other places in the module.
 
-> **Note:** Like many things in web development, accessibility isn't about 100% success or not; 100% accessibility is pretty much impossible to achieve for all content, especially as sites get more complex. Instead, it is more about making a reasonable effort to make as much of your content accessible to as many people as possible via defensive coding and sticking to best practices.
+> [!NOTE]
+> Like many things in web development, accessibility isn't about 100% success or not; 100% accessibility is pretty much impossible to achieve for all content, especially as sites get more complex. Instead, it is more about making a reasonable effort to make as much of your content accessible to as many people as possible via defensive coding and sticking to best practices.
 
 ## Common accessibility issues
 
 In this section we'll detail some of the main issues that arise around web accessibility, connected with specific technologies, along with best practices to follow, and some quick tests you can do to see if your sites are going in the right direction.
 
-> **Note:** Accessibility is morally the right thing to do, and good for business (numbers of disabled users, users on mobile devices, etc. present significant market segments), but it is also a legal requirement in many parts of the world to make web content accessible to people with disabilities. Read [Accessibility guidelines and the law](/en-US/docs/Learn/Accessibility/What_is_accessibility#accessibility_guidelines_and_the_law) for more information.
+> [!NOTE]
+> Accessibility is morally the right thing to do, and good for business (numbers of disabled users, users on mobile devices, etc. present significant market segments), but it is also a legal requirement in many parts of the world to make web content accessible to people with disabilities. Read [Accessibility guidelines and the law](/en-US/docs/Learn/Accessibility/What_is_accessibility#accessibility_guidelines_and_the_law) for more information.
 
 ### HTML
 
@@ -125,7 +127,8 @@ You can try this out using our [native-keyboard-accessibility.html](https://mdn.
 
 ![A screenshot of three buttons demonstrating sample of the default behavior of interactive native elements. The third button is highlighted by a blue border to indicate its focus state.](button-focused-unfocused.png)
 
-> **Note:** In Firefox, you can also enable an overlay that shows the page tabbing order. For more information see: [Accessibility Inspector > Show web page tabbing order](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#show-web-page-tabbing-order).
+> [!NOTE]
+> In Firefox, you can also enable an overlay that shows the page tabbing order. For more information see: [Accessibility Inspector > Show web page tabbing order](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#show-web-page-tabbing-order).
 
 You can then press Enter/Return to follow a focused link or press a button (we've included some JavaScript to make the buttons alert a message), or start typing to enter text in a text input (other form elements have different controls, for example the {{htmlelement("select")}} element can have its options displayed and cycled between using the up and down arrow keys).
 
@@ -133,7 +136,8 @@ Note that different browsers may have different keyboard control options availab
 
 - Safari on Mac doesn't allow you to tab through links by default; to enable this, open _System Settings_, scroll down to _Keyboard_, and enable _Keyboard navigation_. If you're using an older version of macOS, see [Use your keyboard like a mouse with Mac](https://support.apple.com/en-is/guide/mac-help/mchlp1399/mac) on Apple's macOS User Guide.
 
-> **Warning:** You should perform this kind of test/review on any new page you write — make sure that functionality can be accessed by the keyboard, and that the tab order provides a sensible navigation path through the document.
+> [!WARNING]
+> You should perform this kind of test/review on any new page you write — make sure that functionality can be accessed by the keyboard, and that the tab order provides a sensible navigation path through the document.
 
 This example highlights the importance of using the correct semantic element for the correct job. It is possible to style _any_ element to look like a link or button with CSS, and to behave like a link or button with JavaScript, but they won't actually be links or buttons, and you'll lose a lot of the accessibility these elements give you for free. So don't do it if you can avoid it.
 
@@ -152,7 +156,8 @@ select:focus {
 }
 ```
 
-> **Note:** If you do decide to remove the default focus styling using CSS, make sure you replace it with something else that fits in with your design better — it is a very valuable accessibility tool, and should not be removed.
+> [!NOTE]
+> If you do decide to remove the default focus styling using CSS, make sure you replace it with something else that fits in with your design better — it is a very valuable accessibility tool, and should not be removed.
 
 #### Building in keyboard accessibility
 
@@ -173,13 +178,15 @@ Sometimes it is not possible to avoid losing keyboard accessibility. You might h
 
    Here we add a listener to the `document` object to detect when a button has been pressed on the keyboard. We check what button was pressed via the event object's [`code`](/en-US/docs/Web/API/KeyboardEvent/code) property; if it is the code that matches Return/Enter, we run the function stored in the button's `onclick` handler using `document.activeElement.onclick()`. [`activeElement`](/en-US/docs/Web/API/Document/activeElement) gives us the element that is currently focused on the page.
 
-> **Note:** This technique will only work if you set your original event handlers via event handler properties (e.g. `onclick`). `addEventListener` won't work. This is a lot of extra hassle to build the functionality back in. And there's bound to be other problems with it. Better to just use the right element for the right job in the first place.
+> [!NOTE]
+> This technique will only work if you set your original event handlers via event handler properties (e.g. `onclick`). `addEventListener` won't work. This is a lot of extra hassle to build the functionality back in. And there's bound to be other problems with it. Better to just use the right element for the right job in the first place.
 
 #### Text alternatives
 
 Text alternatives are very important for accessibility — if a person has a visual or hearing impairment that stops them being able to see or hear some content, then this is a problem. The simplest text alternative available is the humble `alt` attribute, which we should include on all images that contain relevant content. This should contain a description of the image that successfully conveys its meaning and content on the page, to be picked up by a screen reader and read out to the user.
 
-> **Note:** For more information, read [Text alternatives](/en-US/docs/Learn/Accessibility/HTML#text_alternatives).
+> [!NOTE]
+> For more information, read [Text alternatives](/en-US/docs/Learn/Accessibility/HTML#text_alternatives).
 
 Missing alt text can be tested for in a number of ways, for example using accessibility [Auditing tools](#auditing_tools).
 
@@ -193,13 +200,15 @@ The key to accessible link text is that people using screen readers will often u
 
 Next on our list, the form {{htmlelement("label")}} element is one of the central features that allows us to make forms accessible. The trouble with forms is that you need labels to say what data should be entered into each form input. Each label needs to be included inside a {{htmlelement("label")}} to link it unambiguously to its partner form input (the `for` attribute value of each `<label>` needs to match the form element `id` value), and it will make sense even if the source order is not completely logical (which to be fair it should be).
 
-> **Note:** For more information about link text and form labels, read [Meaningful text labels](/en-US/docs/Learn/Accessibility/HTML#meaningful_text_labels).
+> [!NOTE]
+> For more information about link text and form labels, read [Meaningful text labels](/en-US/docs/Learn/Accessibility/HTML#meaningful_text_labels).
 
 Finally, a quick word about data tables. A basic data table can be written with very simple markup (see `bad-table.html` [live](https://mdn.github.io/learning-area/accessibility/html/bad-table.html), and [source](https://github.com/mdn/learning-area/blob/main/accessibility/html/bad-table.html)), but this has problems — there is no way for a screen reader user to associate rows or columns together as groupings of data — to do this you need to know what the header rows are, and if they are heading up rows, columns, etc. This can only be done visually for such a table.
 
 If you instead look at our `punk-bands-complete.html` example ([live](https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-complete.html), [source](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/styling-tables/punk-bands-complete.html)), you can see a few accessibility aids at work here, such as table headers ({{htmlelement("th")}} and `scope` attributes), {{htmlelement("caption")}} element, etc.
 
-> **Note:** For more information about accessible tables, read [Accessible data tables](/en-US/docs/Learn/Accessibility/HTML#accessible_data_tables).
+> [!NOTE]
+> For more information about accessible tables, read [Accessible data tables](/en-US/docs/Learn/Accessibility/HTML#accessible_data_tables).
 
 ### CSS
 
@@ -217,7 +226,8 @@ When choosing a color scheme for your website, you should make sure that the tex
 
 Another tip is to not rely on color alone for signposts/information, as this will be no good for those who can't see the color. Instead of marking required form fields in red, for example, mark them with an asterisk and in red.
 
-> **Note:** A high contrast ratio will also allow anyone using a smartphone or tablet with a glossy screen to better read pages when in a bright environment, such as sunlight.
+> [!NOTE]
+> A high contrast ratio will also allow anyone using a smartphone or tablet with a glossy screen to better read pages when in a bright environment, such as sunlight.
 
 #### Hiding content
 
@@ -242,7 +252,8 @@ Generally simple functionality should work with just the HTML in place — JavaS
 - Providing client-side form validation, which alerts users to problems with their form entries quickly, without having to wait for the server to check the data. If it isn't available, the form will still work, but validation might be slower.
 - Providing custom controls for HTML `<video>`s that are accessible to keyboard-only users (as we said earlier, the default browser controls aren't keyboard-accessible in most browsers).
 
-> **Note:** WebAIM's [Accessible JavaScript](https://webaim.org/techniques/javascript/) provides some useful further details about considerations for accessible JavaScript.
+> [!NOTE]
+> WebAIM's [Accessible JavaScript](https://webaim.org/techniques/javascript/) provides some useful further details about considerations for accessible JavaScript.
 
 More complex JavaScript implementations can create issues with accessibility — you need to do what you can. For example, it would be unreasonable to expect you to make a complex 3D game written using [WebGL](/en-US/docs/Glossary/WebGL) 100% accessible to a blind person, but you could implement [keyboard controls](/en-US/docs/Games/Techniques/Control_mechanisms/Desktop_with_mouse_and_keyboard) so it is usable by non-mouse users, and make the color scheme contrasting enough to be usable by those with color deficiencies.
 
@@ -293,7 +304,8 @@ Let's look at an example, using Wave.
 2. Enter the URL of our [bad-semantics.html](https://mdn.github.io/learning-area/accessibility/html/bad-semantics.html) example into the text input box near the top of the page. Then press enter or click/tap the arrow at the far right edge of the input box.
 3. The site should respond with a description of the accessibility problems. Click the icons displayed to see more information about each of the issues identified by Wave's evaluation.
 
-> **Note:** Such tools aren't good enough to solve all your accessibility problems on their own. You'll need a combination of these, knowledge and experience, user testing, etc. to get a full picture.
+> [!NOTE]
+> Such tools aren't good enough to solve all your accessibility problems on their own. You'll need a combination of these, knowledge and experience, user testing, etc. to get a full picture.
 
 ### Automation tools
 
@@ -312,7 +324,7 @@ aXe is also installable using `npm`, and can be integrated with task runners lik
 
 It is definitely worth testing with a screen reader to get used to how severely visually impaired people use the Web. There are a number of screen readers available:
 
-- Some are paid-for commercial products, like [JAWS](https://www.freedomscientific.com/Products/software/JAWS/) (Windows) and [Window Eyes](http://www.gwmicro.com/) (Windows).
+- Some are paid-for commercial products, like [JAWS](https://www.freedomscientific.com/Products/software/JAWS/) (Windows).
 - Some are free products, like [NVDA](https://www.nvaccess.org/) (Windows), [ChromeVox](https://support.google.com/chromebook/answer/7031755) (Chrome, Windows, and macOS), and [Orca](https://wiki.gnome.org/Projects/Orca) (Linux).
 - Some are built into the operating system, like [VoiceOver](https://www.apple.com/accessibility/vision/) (macOS and iOS), [ChromeVox](https://support.google.com/chromebook/answer/7031755) (on Chromebooks), and [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android).
 
@@ -320,7 +332,8 @@ Generally, screen readers are separate apps that run on the host operating syste
 
 Let's go through some tests with a couple of different screen readers to give you a general idea of how they work and how to test with them.
 
-> **Note:** WebAIM's [Designing for Screen Reader Compatibility](https://webaim.org/techniques/screenreader/) provides some useful information about screen reader usage and what works best for screen readers. Also see [Screen Reader User Survey #9 Results](https://webaim.org/projects/screenreadersurvey9/#used) for some interesting screen reader usage statistics.
+> [!NOTE]
+> WebAIM's [Designing for Screen Reader Compatibility](https://webaim.org/techniques/screenreader/) provides some useful information about screen reader usage and what works best for screen readers. Also see [Screen Reader User Survey #9 Results](https://webaim.org/projects/screenreadersurvey9/#used) for some interesting screen reader usage statistics.
 
 #### VoiceOver
 
@@ -328,7 +341,8 @@ VoiceOver (VO) comes free with your Mac/iPhone/iPad, so it's useful for testing 
 
 To turn it on, press Cmd + F5. If you've not used VO before, you will be given a welcome screen where you can choose to start VO or not, and run through a rather useful tutorial to learn how to use it. To turn it off again, press Cmd + F5 again.
 
-> **Note:** You should go through the tutorial at least once — it is a really useful way to learn VO.
+> [!NOTE]
+> You should go through the tutorial at least once — it is a really useful way to learn VO.
 
 When VO is on, the display will look mostly the same, but you'll see a black box at the bottom left of the screen that contains information on what VO currently has selected. The current selection will also be highlighted, with a black border — this highlight is known as the **VO cursor**.
 
@@ -460,7 +474,8 @@ NVDA will now be active on your computer.
 
 To use NVDA, you will make a lot of use of the "NVDA modifier" — this is a key that you need to press in addition to the actual NVDA keyboard shortcuts to get them to work. Using a modifier like this is common with screen readers, to enable them to keep their commands from clashing with other commands. In the case of NVDA, the modifier can either be Insert (the default), or CapsLock (can be chosen by checking the first checkbox in the NVDA welcome dialog before pressing _OK_).
 
-> **Note:** NVDA is more subtle than VoiceOver in terms of how it highlights where it is and what it is doing. When you are scrolling through headings, lists, etc., items you are selected on will generally be highlighted with a subtle outline, but this is not always the case for all things. If you get completely lost, you can press Ctrl + F5 to refresh the current page and begin from the top again.
+> [!NOTE]
+> NVDA is more subtle than VoiceOver in terms of how it highlights where it is and what it is doing. When you are scrolling through headings, lists, etc., items you are selected on will generally be highlighted with a subtle outline, but this is not always the case for all things. If you get completely lost, you can press Ctrl + F5 to refresh the current page and begin from the top again.
 
 NVDA has many keyboard commands, and we won't list them all here. The basic ones you'll need for web page testing are in the following table. In the keyboard shortcuts, "NVDA" means "the NVDA modifier".
 

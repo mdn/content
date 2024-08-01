@@ -32,15 +32,17 @@ If `{` appears in a context that accepts a [quantitier](/en-US/docs/Web/JavaScri
 ### Invalid cases
 
 ```js example-bad
-/{{MDN_Macro}}/u;
+/\{{MDN_Macro}}/u;
 /\[sic]/u;
 ```
 
 ### Valid cases
 
+<!-- Note: the {} need to be double-escaped, once for Yari -->
+
 ```js example-good
 // All { and } need to be escaped
-/\{\{MDN_Macro\}\}/u;
+/\\{\\{MDN_Macro\\}\\}/u;
 // The ] needs to be escaped
 /\[sic\]/u;
 ```

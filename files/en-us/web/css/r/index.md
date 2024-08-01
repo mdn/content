@@ -159,6 +159,6 @@ While the `r` is the same, the center points differ because the second SVG is sc
 - {{cssxref("stroke")}}
 - {{cssxref("paint-order")}}
 - {{cssxref("border-radius")}} shorthand property
-- {{cssxref("radial-gradient")}}
+- {{cssxref("gradient/radial-gradient", "radial-gradient")}}
 - {{cssxref("basic-shape")}} data type
 - SVG {{SVGAttr("r")}} attribute

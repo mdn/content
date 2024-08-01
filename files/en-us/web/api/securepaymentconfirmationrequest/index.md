@@ -29,7 +29,8 @@ An instance of this dictionary must be passed into the {{domxref("PaymentRequest
       - : A boolean value indicating whether the icon must be successfully fetched and shown for the request to succeed. Defaults to `true`.
 - `locale` {{optional_inline}}
   - : An optional list of well-formed {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}} language tags, in descending order of priority, that identify the local preferences of the website. That is, this represents a language priority list {{RFC(4647, "Matching of Language Tags")}}, which the user agent can use to perform [language negotiation](/en-US/docs/Web/HTTP/Content_negotiation) and locale-affected formatting with the caller.
-    > **Note:** The locale is distinct from language or direction metadata associated with specific input members, in that it represents the caller's requested localized experience rather than assertion about a specific string value. See [SPC internationalization Considerations](https://w3c.github.io/secure-payment-confirmation/#sctn-i18n-considerations) for more discussion.
+    > [!NOTE]
+    > The locale is distinct from language or direction metadata associated with specific input members, in that it represents the caller's requested localized experience rather than assertion about a specific string value. See [SPC internationalization Considerations](https://w3c.github.io/secure-payment-confirmation/#sctn-i18n-considerations) for more discussion.
 - `payeeName` {{optional_inline}}
   - : A string that serves as the display name of the payee that this SPC call is for (e.g., the merchant). Optional, may be provided alongside or instead of `payeeOrigin`.
 - `payeeOrigin` {{optional_inline}}

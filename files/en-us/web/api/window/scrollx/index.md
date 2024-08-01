@@ -14,7 +14,8 @@ The read-only **`scrollX`** property of the {{domxref("Window")}} interface retu
 
 A double-precision floating-point value indicating the number of pixels by which the document is currently scrolled horizontally from the origin, where a positive value means the content is scrolled to the right (to reveal more content to the right). In more technical terms, `scrollX` returns the X coordinate of the left edge of the current {{Glossary("viewport")}}. If the document isn't scrolled at all left or right, then `scrollX` is 0. If there is no viewport, the returned value is 0. If the document is rendered on a subpixel-precise device, then the returned value is also subpixel-precise and may contain a decimal component.
 
-> **Note:** If you need an integer value, you can use {{jsxref("Math.round()")}} to round it off.
+> [!NOTE]
+> If you need an integer value, you can use {{jsxref("Math.round()")}} to round it off.
 
 It's possible for `scrollX` to be negative if the document can be scrolled to the left from the initial containing block. For example, if the document is right-to-left and content grows to the left.
 

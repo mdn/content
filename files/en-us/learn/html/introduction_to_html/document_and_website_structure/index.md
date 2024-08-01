@@ -56,7 +56,8 @@ A "typical website" could be structured something like this:
 
 ![a simple website structure example featuring a main heading, navigation menu, main content, side bar, and footer.](sample-website.png)
 
-> **Note:** The image above illustrates the main sections of a document, which you can define with HTML. However, the _appearance_ of the page shown here - including the layout, colors, and fonts - is achieved by applying [CSS](/en-US/docs/Learn/CSS) to the HTML.
+> [!NOTE]
+> The image above illustrates the main sections of a document, which you can define with HTML. However, the _appearance_ of the page shown here - including the layout, colors, and fonts - is achieved by applying [CSS](/en-US/docs/Learn/CSS) to the HTML.
 >
 > In this module we're not teaching CSS, but once you have an understanding of the basics of HTML, try diving into our [CSS first steps](/en-US/docs/Learn/CSS/First_steps) module to start learning how to style your site.
 
@@ -241,7 +242,8 @@ In this case, the editor's note is supposed to merely provide extra direction fo
 
 This isn't really an `<aside>`, as it doesn't necessarily relate to the main content of the page (you want it viewable from anywhere). It doesn't even particularly warrant using a `<section>`, as it isn't part of the main content of the page. So a `<div>` is fine in this case. We've included a heading as a signpost to aid screen reader users in finding it.
 
-> **Warning:** Divs are so convenient to use that it's easy to use them too much. As they carry no semantic value, they just clutter your HTML code. Take care to use them only when there is no better semantic solution and try to reduce their usage to the minimum otherwise you'll have a hard time updating and maintaining your documents.
+> [!WARNING]
+> Divs are so convenient to use that it's easy to use them too much. As they carry no semantic value, they just clutter your HTML code. Take care to use them only when there is no better semantic solution and try to reduce their usage to the minimum otherwise you'll have a hard time updating and maintaining your documents.
 
 ### Line breaks and horizontal rules
 
@@ -301,7 +303,8 @@ Once you've planned out the structure of a simple webpage, the next logical step
 
 Try carrying out the above exercise for a website of your own creation. What would you like to make a site about?
 
-> **Note:** Save your work somewhere; you might need it later on.
+> [!NOTE]
+> Save your work somewhere; you might need it later on.
 
 ## Summary
 

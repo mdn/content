@@ -11,7 +11,8 @@ The **`SubtleCrypto`** interface of the [Web Crypto API](/en-US/docs/Web/API/Web
 
 An instance of `SubtleCrypto` is available as the {{domxref("Crypto.subtle", "subtle")}} property of the {{domxref("Crypto")}} interface, which in turn is available in windows through the {{domxref("Window.crypto")}} property and in workers through the {{domxref("WorkerGlobalScope.crypto")}} property.
 
-> **Warning:** This API provides a number of low-level cryptographic primitives. It's very easy to misuse them, and the pitfalls involved can be very subtle.
+> [!WARNING]
+> This API provides a number of low-level cryptographic primitives. It's very easy to misuse them, and the pitfalls involved can be very subtle.
 >
 > Even assuming you use the basic cryptographic functions correctly, secure key management and overall security system design are extremely hard to get right, and are generally the domain of specialist security experts.
 >

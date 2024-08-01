@@ -22,7 +22,7 @@ _Inherits methods from its ancestors {{domxref("CSSConditionRule")}}, {{domxref(
 ## Examples
 
 The CSS includes a CSS feature query using the {{cssxref("@supports")}} [at-rule](/en-US/docs/Web/CSS/At-rule), containing one style rule. This will be the first CSSRule returned by `document.styleSheets[0].cssRules`.
-`myRules[0]` therefore returns a {{domxref("CSSSupportsRule")}} object.
+`myRules[0]` therefore returns a `CSSSupportsRule` object.
 
 ```css
 @supports (display: grid) {

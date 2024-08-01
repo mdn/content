@@ -17,7 +17,8 @@ in the window on which it was created. The new object URL represents the specifi
 
 To release an object URL, call {{domxref("URL.revokeObjectURL_static", "revokeObjectURL()")}}.
 
-> **Note:** This feature is _not_ available in [Service Workers](/en-US/docs/Web/API/Service_Worker_API) due to its
+> [!NOTE]
+> This feature is _not_ available in [Service Workers](/en-US/docs/Web/API/Service_Worker_API) due to its
 > potential to create memory leaks.
 
 ## Syntax
@@ -60,8 +61,9 @@ In older versions of the Media Source specification, attaching a stream to a
 {{domxref("MediaStream")}}. This is no longer necessary, and browsers are removing
 support for doing this.
 
-> **Warning:** If you still have code that relies on
-> {{domxref("URL.createObjectURL_static", "createObjectURL()")}} to attach streams to media
+> [!WARNING]
+> If you still have code that relies on
+> `createObjectURL()` to attach streams to media
 > elements, you need to update your code to set {{domxref("HTMLMediaElement.srcObject", "srcObject")}} to the `MediaStream` directly.
 
 ## Specifications

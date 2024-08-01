@@ -72,4 +72,4 @@ There is no browser implementing this feature.
 ## See also
 
 - {{cssxref("@font-face/font-display", "font-display")}} descriptor for {{cssxref("@font-face")}} at-rule
-- {{cssxref("css_fonts", "CSS fonts")}} module
+- [CSS fonts](/en-US/docs/Web/CSS/CSS_fonts) module

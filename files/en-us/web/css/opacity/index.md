@@ -41,7 +41,7 @@ opacity: unset;
 
 `opacity` applies to the element as a whole, including its contents, even though the value is not inherited by child elements. Thus, the element and its children all have the same opacity relative to the element's background, even if they have different opacities relative to one another.
 
-To change the opacity of a background only, use the {{cssxref("background")}} property with a {{cssxref("color_value", "color value")}} that allows for an alpha channel. For example:
+To change the opacity of a background only, use the {{cssxref("background")}} property with a [color value](/en-US/docs/Web/CSS/color_value) that allows for an alpha channel. For example:
 
 ```css
 background: rgb(0 0 0 / 40%);
@@ -80,7 +80,7 @@ To enable first-style transitions, `@starting-style` rules are needed. In the ab
 
 Setting `transition-behavior: allow-discrete` is required to transition to `display: none`. See the [`transition-behavior`](/en-US/docs/Web/CSS/transition-behavior) property for more details.
 
-## Accessibility concerns
+## Accessibility
 
 If text opacity is adjusted, it is important to ensure that the contrast ratio between the color of the text and the background the text is placed over is high enough that people experiencing low vision conditions will be able to read the content of the page.
 

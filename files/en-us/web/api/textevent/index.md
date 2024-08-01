@@ -2,10 +2,12 @@
 title: TextEvent
 slug: Web/API/TextEvent
 page-type: web-api-interface
+status:
+  - deprecated
 browser-compat: api.TextEvent
 ---
 
-{{APIRef("UI Events")}}
+{{APIRef("UI Events")}}{{deprecated_header}}
 
 The **`TextEvent`** interface is a legacy UI event interface for reporting changes to text UI elements.
 
@@ -17,12 +19,12 @@ The **`TextEvent`** interface is a legacy UI event interface for reporting chang
 
 _This interface also inherits properties from its parent {{domxref("UIEvent")}}, and indirectly from {{domxref("Event")}}._
 
-- {{domxref("TextEvent.data")}} {{ReadOnlyInline}}
+- {{domxref("TextEvent.data")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : Indicates the data associated with the event.
 
 ## Instance methods
 
-- {{domxref("TextEvent.initTextEvent()")}}
+- {{domxref("TextEvent.initTextEvent()")}} {{deprecated_inline}}
   - : Populates the values of this (new) `TextEvent` with the given parameters.
 
 ## Events list

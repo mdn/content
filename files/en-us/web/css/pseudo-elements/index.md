@@ -37,7 +37,8 @@ You can use only one pseudo-element in a selector. The pseudo-element must appea
 
 While it is not possible to select an element based on its _state_ by using pseudo-elements, a pseudo-element can be used to select and style a part of an element that already has a state applied to it. For example, `p:hover::first-line` selects the first line (pseudo-element) of a paragraph when the paragraph itself is being hovered (pseudo-class).
 
-> **Note:** When a [selector list](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#selector_list) contains an invalid selector, the entire style block is ignored.
+> [!NOTE]
+> When a [selector list](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#selector_list) contains an invalid selector, the entire style block is ignored.
 
 ## List of pseudo-elements
 
@@ -97,7 +98,8 @@ V
 - {{cssxref("::view-transition-new()")}} {{Experimental_Inline}}
 - {{cssxref("::view-transition-old()")}} {{Experimental_Inline}}
 
-> **Note:** Browsers support the single colon syntax only for the original four pseudo-elements: `::before`, `::after`, `::first-line`, and `::first-letter`.
+> [!NOTE]
+> Browsers support the single colon syntax only for the original four pseudo-elements: `::before`, `::after`, `::first-line`, and `::first-letter`.
 
 ## Specifications
 

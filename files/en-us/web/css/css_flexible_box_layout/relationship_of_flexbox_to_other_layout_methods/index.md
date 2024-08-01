@@ -90,4 +90,5 @@ As the box is removed, you cannot then use it to — for example — add a backg
 
 {{EmbedGHLiveSample("css-examples/flexbox/relationship/display-contents.html", '100%', 650)}}
 
-> **Warning:** Some browsers incorrectly remove some elements with `display: contents` from the accessibility tree (but descendants will remain), removing those elements' semantics while maintaining their child content. This means the element itself may not be announced by screen readers. See [`display: contents`](/en-US/docs/Web/CSS/display#display_contents) and [`display: contents` considered harmful`](https://ericwbailey.design/published/display-contents-considered-harmful/).
+> [!WARNING]
+> Some browsers incorrectly remove some elements with `display: contents` from the accessibility tree (but descendants will remain), removing those elements' semantics while maintaining their child content. This means the element itself may not be announced by screen readers. See [`display: contents`](/en-US/docs/Web/CSS/display#display_contents) and [`display: contents` considered harmful`](https://ericwbailey.design/published/display-contents-considered-harmful/).

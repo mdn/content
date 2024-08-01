@@ -25,7 +25,7 @@ After getting familiar with the basics of JavaScript, you should be in a positio
 
 ## Modules
 
-> **Callout:**
+> [!CALLOUT]
 >
 > **Our policy on modern JavaScript**
 >
