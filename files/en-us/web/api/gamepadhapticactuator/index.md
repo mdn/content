@@ -15,7 +15,7 @@ This interface is accessible through the {{domxref("Gamepad.hapticActuators")}} 
 
 - {{domxref("GamepadHapticActuator.effects")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : Returns an array of enumerated values representing the different haptic effects that the actuator supports.
-- {{domxref("GamepadHapticActuator.type")}} {{deprecated_inline}} {{ReadOnlyInline}}
+- {{domxref("GamepadHapticActuator.type")}} {{deprecated_inline}} {{ReadOnlyInline}} {{non-standard_inline}}
   - : Returns an enumerated value representing the type of the haptic hardware. This property is deprecated: use `GamepadHapticActuator.effects` to detect effect support.
 
 ## Instance methods

@@ -4,11 +4,12 @@ short-title: requestAdapterInfo()
 slug: Web/API/GPUAdapter/requestAdapterInfo
 page-type: web-api-instance-method
 status:
-  - experimental
+  - deprecated
+  - non-standard
 browser-compat: api.GPUAdapter.requestAdapterInfo
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{deprecated_header}}{{non-standard_header}}
 
 The **`requestAdapterInfo()`** method of the
 {{domxref("GPUAdapter")}} interface returns a {{jsxref("Promise")}} that fulfills with a {{domxref("GPUAdapterInfo")}} object containing identifying information about an adapter.

@@ -39,7 +39,7 @@ While this is great for many sites, it can have some disadvantages:
 For these reasons, a popular pattern for web apps is the {{Glossary("SPA", "single-page application")}} (SPA), in which the site consists of a single page, and when the user clicks links, the page:
 
 1. Prevents the default behavior of loading a new page
-2. {{domxref("Window/fetch", "fetch()", "Fetches", "", "nocode")}} new content to display
+2. {{domxref("Window/fetch", "Fetches", "", "nocode")}} new content to display
 3. Updates the page with the new content
 
 For example:
