@@ -33,7 +33,7 @@ An ID attribute's value must not contain [ACSII whitespace](/en-US/docs/Glossary
 
 Technically, the value for an ID attribute may contain any other Unicode character. However, when used in CSS selectors, either from JavaScript using APIs like {{domxref("Document.querySelector()")}} or in CSS stylesheets, ID attribute values must be valid [CSS identifiers](/en-US/docs/Web/CSS/ident). This means that if an ID attribute value is not a valid CSS identifier (for example, `my?id` or `1234`) then it must be escaped before being used in a selector, either using the {{domxref("CSS.escape_static", "CSS.escape()")}} method or [manually](/en-US/docs/Web/CSS/ident#escaping_characters).
 
-For this reason, it's recommended that developers choose values for ID attributes that are valid CSS identifiers.
+For this reason, it's recommended that developers choose values for ID attributes that are valid CSS identifiers that don't require escaping.
 
 Also, not all valid ID attribute values are valid JavaScript identifiers. For example, `1234` is a valid attribute value but not a valid JavaScript identifier. This means that the value is not a valid variable name, so you can't access the element using code like `window.1234`. However, you can access it using `window["1234"]`.
 
