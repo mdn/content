@@ -9,7 +9,8 @@ browser-compat: javascript.builtins.Symbol.species
 
 The **`Symbol.species`** static data property represents the [well-known symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#well-known_symbols) `Symbol.species`. Methods that create copies of an object may look up this symbol on the object for the constructor function to use when creating the copy.
 
-> **Warning:** The existence of `[Symbol.species]` allows execution of arbitrary code and may create security vulnerabilities. It also makes certain optimizations much harder. Engine implementers are [investigating whether to remove this feature](https://github.com/tc39/proposal-rm-builtin-subclassing). Avoid relying on it if possible.
+> [!WARNING]
+> The existence of `[Symbol.species]` allows execution of arbitrary code and may create security vulnerabilities. It also makes certain optimizations much harder. Engine implementers are [investigating whether to remove this feature](https://github.com/tc39/proposal-rm-builtin-subclassing). Avoid relying on it if possible.
 
 {{EmbedInteractiveExample("pages/js/symbol-species.html")}}
 
@@ -55,10 +56,10 @@ console.log(mapped instanceof Array); // true
 
 ## See also
 
-- {{jsxref("Array/@@species", "Array[Symbol.species]")}}
-- {{jsxref("ArrayBuffer/@@species", "ArrayBuffer[Symbol.species]")}}
-- {{jsxref("Map/@@species", "Map[Symbol.species]")}}
-- {{jsxref("Promise/@@species", "Promise[Symbol.species]")}}
-- {{jsxref("RegExp/@@species", "RegExp[Symbol.species]")}}
-- {{jsxref("Set/@@species", "Set[Symbol.species]")}}
-- {{jsxref("TypedArray/@@species", "TypedArray[Symbol.species]")}}
+- [`Array[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.species)
+- [`ArrayBuffer[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/Symbol.species)
+- [`Map[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.species)
+- [`Promise[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Symbol.species)
+- [`RegExp[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.species)
+- [`Set[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.species)
+- [`TypedArray[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.species)

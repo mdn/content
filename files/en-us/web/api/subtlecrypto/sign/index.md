@@ -82,7 +82,7 @@ The RSA-PSS algorithm is specified in [RFC 3447](https://datatracker.ietf.org/do
 It's different from RSASSA-PKCS1-v1_5 in that it incorporates a random salt in the
 signature operation, so the same message signed with the same key will not result in the
 same signature each time. An extra property, defining the salt length, is passed into
-the {{domxref("SubtleCrypto.sign()", "sign()")}} and {{domxref("SubtleCrypto.verify()", "verify()")}} functions when they are invoked.
+the `sign()` and {{domxref("SubtleCrypto.verify()", "verify()")}} functions when they are invoked.
 
 ### ECDSA
 
@@ -113,7 +113,8 @@ that you pass into {{domxref("SubtleCrypto.importKey()", "importKey()")}}.
 
 ## Examples
 
-> **Note:** You can [try the working examples](https://mdn.github.io/dom-examples/web-crypto/sign-verify/index.html) out on GitHub.
+> [!NOTE]
+> You can [try the working examples](https://mdn.github.io/dom-examples/web-crypto/sign-verify/index.html) out on GitHub.
 
 ### RSASSA-PKCS1-v1_5
 

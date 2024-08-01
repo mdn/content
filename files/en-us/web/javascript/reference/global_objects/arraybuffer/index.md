@@ -41,7 +41,7 @@ You can check whether an `ArrayBuffer` is detached by its {{jsxref("ArrayBuffer/
 
 ## Static properties
 
-- {{jsxref("ArrayBuffer/@@species", "ArrayBuffer[Symbol.species]")}}
+- [`ArrayBuffer[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/Symbol.species)
   - : The constructor function that is used to create derived objects.
 
 ## Static methods

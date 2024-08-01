@@ -333,15 +333,15 @@ tbody > tr > td:last-of-type {
     <tr>
       <th scope="row">Tag omission</th>
       <td>
-        A {{HTMLElement("tbody")}} element's start tag can be omitted if the first thing inside the {{HTMLElement("tbody")}} element is a {{HTMLElement("tr")}} element, and if the element is not immediately preceded by a {{HTMLElement("tbody")}}, {{HTMLElement("thead")}}, or {{HTMLElement("tfoot")}} element whose end tag has been omitted. (It can't be omitted if the element is empty.)
-        A {{HTMLElement("tbody")}} element's end tag can be omitted if the {{HTMLElement("tbody")}} element is immediately followed by a {{HTMLElement("tbody")}} or {{HTMLElement("tfoot")}} element, or if there is no more content in the parent element.
+        A <code>&lt;tbody&gt;</code> element's start tag can be omitted if the first thing inside the <code>&lt;tbody&gt;</code> element is a {{HTMLElement("tr")}} element, and if the element is not immediately preceded by a <code>&lt;tbody&gt;</code>, {{HTMLElement("thead")}}, or {{HTMLElement("tfoot")}} element whose end tag has been omitted. (It can't be omitted if the element is empty.)
+        A <code>&lt;tbody&gt;</code> element's end tag can be omitted if the <code>&lt;tbody&gt;</code> element is immediately followed by a <code>&lt;tbody&gt;</code> or {{HTMLElement("tfoot")}} element, or if there is no more content in the parent element.
       </td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
       <td>
         Within the required parent {{ HTMLElement("table") }} element,
-        the {{HTMLElement("tbody")}} element can be added after any
+        the <code>&lt;tbody&gt;</code> element can be added after any
         {{ HTMLElement("caption") }}, {{HTMLElement("colgroup") }},
         and {{ HTMLElement("thead") }} elements.
       </td>

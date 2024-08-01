@@ -56,7 +56,8 @@ To try out the example:
 2. [Start a local server](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server#running_a_simple_local_http_server) in the directory containing the files.
    This allows you to browse the files in the directory as though they were hosted on the internet.
 
-   > **Warning:** Opening the XML file directly from the file system will not work, because loading the stylesheet from the file system is a [cross-origin request](/en-US/docs/Web/HTTP/CORS), and will be disallowed by default.
+   > [!WARNING]
+   > Opening the XML file directly from the file system will not work, because loading the stylesheet from the file system is a [cross-origin request](/en-US/docs/Web/HTTP/CORS), and will be disallowed by default.
    > Hosting the XML and stylesheet on the same local server ensures that they have the same origin.
 
 3. Open **example.xml** from the browser.

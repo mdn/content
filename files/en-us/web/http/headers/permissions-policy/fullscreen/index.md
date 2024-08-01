@@ -13,7 +13,8 @@ By default, top-level documents and their same-origin child frames can request a
 
 Specifically, where a defined policy blocks use of this feature, {{domxref('Element.requestFullscreen', "requestFullscreen()")}} calls will return a {{jsxref('Promise')}} that rejects with a {{jsxref('TypeError')}}.
 
-> **Note:** If both this directive (i.e. via the `allow` attribute) and the `allowfullscreen` attribute are present on an `<iframe>` element, this directive takes precedence.
+> [!NOTE]
+> If both this directive (i.e. via the `allow` attribute) and the `allowfullscreen` attribute are present on an `<iframe>` element, this directive takes precedence.
 
 ## Syntax
 

@@ -49,7 +49,7 @@ The following values are accepted:
 - `column-reverse`
   - : Behaves the same as `column` but the **main-start** and **main-end** are opposite to the content direction.
 
-## Accessibility concerns
+## Accessibility
 
 Using the `flex-direction` property with values of `row-reverse` or `column-reverse` will create a disconnect between the visual presentation of content and DOM order. This will adversely affect users experiencing low vision navigating with the aid of assistive technology such as a screen reader. If the visual (CSS) order is important, then screen reader users will not have access to the correct reading order.
 

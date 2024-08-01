@@ -59,7 +59,8 @@ Optionally, the iterator can also implement the **`return(value)`** and **`throw
 - `throw(exception)` {{optional_inline}}
   - : A function that accepts zero or one argument and returns an object conforming to the `IteratorResult` interface, typically with `done` equal to `true`. Calling this method tells the iterator that the caller detects an error condition, and `exception` is typically an {{jsxref("Error")}} instance. No built-in language feature calls `throw()` for cleanup purposes — it's a special feature of generators for the symmetry of `return`/`throw`.
 
-> **Note:** It is not possible to know reflectively (i.e. without actually calling `next()` and validating the returned result) whether a particular object implements the iterator protocol.
+> [!NOTE]
+> It is not possible to know reflectively (i.e. without actually calling `next()` and validating the returned result) whether a particular object implements the iterator protocol.
 
 It is very easy to make an iterator also iterable: just implement an `[Symbol.iterator]()` method that returns `this`.
 
@@ -96,7 +97,7 @@ console.log(aGeneratorObject[Symbol.iterator]() === aGeneratorObject);
 
 All built-in iterators inherit from {{jsxref("Iterator", "Iterator.prototype")}}, which implements the `[Symbol.iterator]()` method as returning `this`, so that built-in iterators are also iterable.
 
-However, when possible, it's better for `iterable[Symbol.iterator]()` to return different iterators that always start from the beginning, like [`Set.prototype[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/@@iterator) does.
+However, when possible, it's better for `iterable[Symbol.iterator]()` to return different iterators that always start from the beginning, like [`Set.prototype[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator) does.
 
 ## The async iterator and async iterable protocols
 
@@ -302,11 +303,11 @@ The lack of `catch` here causes errors thrown by `doSomething()` or `doSomething
 
 ### Forwarding errors
 
-Some built-in syntaxes wrap an iterator into another iterator. They include the iterator produced by {{jsxref("Iterator.from()")}}, [iterator helpers](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helpers) (`map()`, `filter()`, `take()`, `drop()`, and `flatMap()`), [`yield *`](/en-US/docs/Web/JavaScript/Reference/Operators/yield*), and a hidden wrapper when you use async iteration (`for await...of`, `Array.fromAsync`) on sync iterators. The wrapped iterator is then responsible for forwarding errors between the inner iterator and the caller.
+Some built-in syntaxes wrap an iterator into another iterator. They include the iterator produced by {{jsxref("Iterator.from()")}}, [iterator helpers](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helpers) (`map()`, `filter()`, `take()`, `drop()`, and `flatMap()`), [`yield*`](/en-US/docs/Web/JavaScript/Reference/Operators/yield*), and a hidden wrapper when you use async iteration (`for await...of`, `Array.fromAsync`) on sync iterators. The wrapped iterator is then responsible for forwarding errors between the inner iterator and the caller.
 
 - All wrapper iterators directly forward the `next()` method of the inner iterator, including its return value and thrown errors.
-- Wrapper iterators generally directly forward the `return()` method of the inner iterator. If the `return()` method doesn't exist on the inner iterator, it returns `{ done: true, value: undefined }` instead. In the case of iterator helpers: if the iterator helper's `next()` method has not been called, after trying to call `return()` on the inner iterator, the current iterator always returns `{ done: true, value: undefined }`. This is consistent with generator functions where execution hasn't entered the `yield *` expression yet.
-- `yield *` is the only built-in syntax that forwards the `throw()` method of the inner iterator. For information on how [`yield *`](/en-US/docs/Web/JavaScript/Reference/Operators/yield*) forwards the `return()` and `throw()` methods, see its own reference.
+- Wrapper iterators generally directly forward the `return()` method of the inner iterator. If the `return()` method doesn't exist on the inner iterator, it returns `{ done: true, value: undefined }` instead. In the case of iterator helpers: if the iterator helper's `next()` method has not been called, after trying to call `return()` on the inner iterator, the current iterator always returns `{ done: true, value: undefined }`. This is consistent with generator functions where execution hasn't entered the `yield*` expression yet.
+- `yield*` is the only built-in syntax that forwards the `throw()` method of the inner iterator. For information on how [`yield*`](/en-US/docs/Web/JavaScript/Reference/Operators/yield*) forwards the `return()` and `throw()` methods, see its own reference.
 
 ## Examples
 
@@ -456,7 +457,7 @@ const someString = "hi";
 console.log(typeof someString[Symbol.iterator]); // "function"
 ```
 
-`String`'s [default iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator) returns the string's code points one by one:
+`String`'s [default iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator) returns the string's code points one by one:
 
 ```js
 const iterator = someString[Symbol.iterator]();

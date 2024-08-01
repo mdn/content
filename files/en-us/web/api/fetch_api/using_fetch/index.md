@@ -10,7 +10,7 @@ The [Fetch API](/en-US/docs/Web/API/Fetch_API) provides a JavaScript interface f
 
 Fetch is the modern replacement for {{domxref("XMLHttpRequest")}}: unlike `XMLHttpRequest`, which uses callbacks, Fetch is promise-based and is integrated with features of the modern web such as [service workers](/en-US/docs/Web/API/Service_Worker_API) and [Cross-Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS).
 
-With the Fetch API, you make a request by calling {{domxref("fetch()")}}, which is available as a global function in both {{domxref("Window", "window", "", "", "nocode")}} and {{domxref("WorkerGlobalScope", "worker", "", "", "nocode")}} contexts. You pass it a {{domxref("Request")}} object or a string containing the URL to fetch, along with an optional argument to configure the request.
+With the Fetch API, you make a request by calling {{domxref("Window/fetch", "fetch()")}}, which is available as a global function in both {{domxref("Window", "window", "", "", "nocode")}} and {{domxref("WorkerGlobalScope", "worker", "", "", "nocode")}} contexts. You pass it a {{domxref("Request")}} object or a string containing the URL to fetch, along with an optional argument to configure the request.
 
 The `fetch()` function returns a {{jsxref("Promise")}} which is fulfilled with a {{domxref("Response")}} object representing the server's response. You can then check the request status and extract the body of the response in various formats, including text and JSON, by calling the appropriate method on the response.
 
@@ -51,7 +51,7 @@ To make a request, call `fetch()`, passing in:
    - a {{domxref("Request")}} instance
 2. optionally, an object containing options to configure the request.
 
-In this section we'll look at some of the most commonly-used options. To read about all the options that can be given, see the [`fetch()`](/en-US/docs/Web/API/fetch) reference page.
+In this section we'll look at some of the most commonly-used options. To read about all the options that can be given, see the [`fetch()`](/en-US/docs/Web/API/Window/fetch) reference page.
 
 ### Setting the method
 

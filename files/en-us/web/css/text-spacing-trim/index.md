@@ -58,14 +58,15 @@ Many CJK punctuation characters include glyph-internal spacing. For example, the
 - If a full-width punctuation character is set to be full-width, it has internal spacing set on both sides and is the full width of an ideograph.
 - If a full-width punctuation character is set to be half-width, it has internal spacing set on one side only, and its other side is flush to the start (in the case of opening punctuation characters) or end (in the case of closing punctuation characters). Half-width characters are typically half the width of an ideograph.
 
-> **Note:** To avoid the risk of excessive kerning, fonts must have the OpenType Alternate Half Widths (`halt`) feature, the Contextual Half-width Spacing (`chws`) feature, or both. If the font doesn't have either feature, `text-spacing-trim` is disabled.
+> [!NOTE]
+> To avoid the risk of excessive kerning, fonts must have the OpenType Alternate Half Widths (`halt`) feature, the Contextual Half-width Spacing (`chws`) feature, or both. If the font doesn't have either feature, `text-spacing-trim` is disabled.
 
 ### Full-width punctuation collapsing
 
 When pairs of punctuation characters are adjacent to one another, the space between them is collapsed according to the following rules:
 
 - Set a full-width opening punctuation character to half-width if the previous character is a fullwidth opening punctuation character, a fullwidth middle dot, an ideographic space (U+3000), a fullwidth closing punctuation character of an equivalent or larger font size, or a character belonging to [Unicode general category "Open punctuation" Ps](https://www.compart.com/en/unicode/category/Ps). Otherwise, set it to full-width.
-- Set a full-width closing punctuation character to half-width if the next character is a fullwidth closing punctuation character, a fullwidth middle dot, an ideographic space (U+3000), a fullwidth opening punctuation character with a larger font size, or a character belonging to [Unicode general category "Close punctuation" (Pe)](https://www.compart.com/en/unicode/category/Pe). Otherwise, set it to full-width.
+- Set a full-width closing punctuation character to half-width if the next character is a fullwidth closing punctuation character, a fullwidth middle dot, an ideographic space (U+3000), a fullwidth opening punctuation character with larger font size, or a character belonging to [Unicode general category "Close punctuation" (Pe)](https://www.compart.com/en/unicode/category/Pe). Otherwise, set it to full-width.
 
 ## Formal definition
 
@@ -79,7 +80,7 @@ When pairs of punctuation characters are adjacent to one another, the space betw
 
 ### `text-spacing-trim` value comparison
 
-This example compares the effect of four different `text-spacing-trim` properties, applying them to four identical paragraphs so you can see the visual differences betwene each one.
+This example compares the effect of four different `text-spacing-trim` properties, applying them to four identical paragraphs so you can see the visual differences between each one.
 
 #### HTML
 

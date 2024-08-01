@@ -11,7 +11,8 @@ browser-compat: api.Window.showModalDialog
 
 {{APIRef}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-> **Warning:** This feature has been removed. Please fix your websites and applications.
+> [!WARNING]
+> This feature has been removed. Please fix your websites and applications.
 >
 > This method was removed in Chrome 43 and Firefox 56.
 
@@ -93,7 +94,8 @@ showModalDialog(uri, arguments, options)
   </tbody>
 </table>
 
-> **Note:** Firefox does not implement the `dialogHide`, `edge`, `status`, or `unadorned` arguments.
+> [!NOTE]
+> Firefox does not implement the `dialogHide`, `edge`, `status`, or `unadorned` arguments.
 
 ### Return value
 

@@ -11,7 +11,8 @@ The **`History`** interface of the {{domxref("History API", "", "", "nocode")}} 
 
 There is only one instance of `history` (It is a _singleton_.) accessible via the global object {{domxref("Window.history", "history")}}.
 
-> **Note:** This interface is only available on the main thread ({{domxref("Window")}}). It cannot be accessed in {{domxref("Worker")}} or {{domxref("Worklet")}} contexts.
+> [!NOTE]
+> This interface is only available on the main thread ({{domxref("Window")}}). It cannot be accessed in {{domxref("Worker")}} or {{domxref("Worklet")}} contexts.
 
 ## Instance properties
 

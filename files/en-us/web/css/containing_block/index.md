@@ -41,9 +41,11 @@ The process for identifying the containing block depends entirely on the value o
    5. A {{cssxref("container-type")}} value other than `normal`
    6. A {{cssxref("backdrop-filter")}} other than `none` (e.g. `backdrop-filter: blur(10px);`)
 
-> **Note:** The containing block in which the root element ({{HTMLElement("html")}}) resides is a rectangle called the **initial containing block**. It has the dimensions of the viewport (for continuous media) or the page area (for paged media).
+> [!NOTE]
+> The containing block in which the root element ({{HTMLElement("html")}}) resides is a rectangle called the **initial containing block**. It has the dimensions of the viewport (for continuous media) or the page area (for paged media).
 
-> **Note:** There are browser inconsistencies with `perspective` and `filter` contributing to containing block formation.
+> [!NOTE]
+> There are browser inconsistencies with `perspective` and `filter` contributing to containing block formation.
 
 ## Calculating percentage values from the containing block
 
@@ -52,7 +54,8 @@ As noted above, when certain properties are given a percentage value, the comput
 1. The {{cssxref("height")}}, {{cssxref("top")}}, and {{cssxref("bottom")}} properties compute percentage values from the `height` of the containing block.
 2. The {{cssxref("width")}}, {{cssxref("left")}}, {{cssxref("right")}}, {{cssxref("padding")}}, and {{cssxref("margin")}} properties compute percentage values from the `width` of the containing block.
 
-> **Note:** A **block container** (such as an inline-block, block, or list-item element) either contains only inline-level boxes participating in an inline formatting context, or only block-level boxes participating in a block formatting context. An element is a block container only if it contains block-level or inline-level boxes.
+> [!NOTE]
+> A **block container** (such as an inline-block, block, or list-item element) either contains only inline-level boxes participating in an inline formatting context, or only block-level boxes participating in a block formatting context. An element is a block container only if it contains block-level or inline-level boxes.
 
 ## Some examples
 
@@ -250,22 +253,19 @@ p {
 
 ## See also
 
-- The {{cssxref("all")}} property resets all CSS declarations to a given known state
-- CSS key concepts:
-  - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
-  - [At-rules](/en-US/docs/Web/CSS/At-rule)
-  - [Comments](/en-US/docs/Web/CSS/Comments)
-  - [Specificity](/en-US/docs/Web/CSS/Specificity)
-  - [Inheritance](/en-US/docs/Web/CSS/Inheritance)
-  - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
-  - [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
-  - [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-  - Values
-    - [Initial values](/en-US/docs/Web/CSS/initial_value)
-    - [Computed values](/en-US/docs/Web/CSS/computed_value)
-    - [Used values](/en-US/docs/Web/CSS/used_value)
-    - [Actual values](/en-US/docs/Web/CSS/actual_value)
-  - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
-  - [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)
-  - [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
+- {{cssxref("all")}} property
+- {{cssxref("contain")}} property
+- {{cssxref("aspect-ratio")}} property
+- {{cssxref("box-sizing")}} property
+- {{cssxref("min-content")}} and {{cssxref("max-content")}} size values
+- [Building block: sizing items in CSS](/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+- [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [CSS box model](/en-US/docs/Web/CSS/CSS_box_model) module
+- [Layout modes](/en-US/docs/Web/CSS/Layout_mode)
+- [Visual formatting models](/en-US/docs/Web/CSS/Visual_formatting_model)
+- [Block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context)
+- [Stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)
+- [Margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+- [Initial](/en-US/docs/Web/CSS/initial_value), [computed](/en-US/docs/Web/CSS/computed_value), [used](/en-US/docs/Web/CSS/used_value), and [actual](/en-US/docs/Web/CSS/actual_value) values
+- [Replaced elements](/en-US/docs/Web/CSS/Replaced_element)
+- {{glossary("Intrinsic size")}}

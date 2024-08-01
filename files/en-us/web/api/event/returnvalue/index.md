@@ -18,7 +18,8 @@ It is set to `true` by
 default, allowing the default action to occur. Setting this property to
 `false` prevents the default action.
 
-> **Note:** While `returnValue` has been adopted into the DOM
+> [!NOTE]
+> While `returnValue` has been adopted into the DOM
 > standard, it is present primarily to support existing code. Use
 > {{DOMxRef("Event.preventDefault", "preventDefault()")}}, and
 > {{domxref("Event.defaultPrevented", "defaultPrevented")}} instead of this historical

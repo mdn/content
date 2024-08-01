@@ -40,9 +40,9 @@ Service workers can currently only be registered in the Window scope in some or 
 - {{domxref("ServiceWorkerContainer/error_event", "error")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Fired whenever an error occurs in the associated service workers.
 - {{domxref("ServiceWorkerContainer/message_event", "message")}}
-  - : Occurs when incoming messages are received by the {{domxref("ServiceWorkerContainer")}} object (e.g. via a {{domxref("MessagePort.postMessage()")}} call).
+  - : Occurs when incoming messages are received by the `ServiceWorkerContainer` object (e.g. via a {{domxref("MessagePort.postMessage()")}} call).
 - {{domxref("ServiceWorkerContainer/messageerror_event", "messageerror")}}
-  - : Occurs when incoming messages can not deserialized by the {{domxref("ServiceWorkerContainer")}} object (e.g. via a {{domxref("MessagePort.postMessage()")}} call).
+  - : Occurs when incoming messages can not deserialized by the `ServiceWorkerContainer` object (e.g. via a {{domxref("MessagePort.postMessage()")}} call).
 
 ## Examples
 

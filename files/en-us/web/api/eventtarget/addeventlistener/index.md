@@ -14,7 +14,8 @@ sets up a function that will be called whenever the specified event is delivered
 Common targets are {{domxref("Element")}}, or its children, {{domxref("Document")}}, and {{domxref("Window")}},
 but the target may be any object that supports events (such as {{domxref("IDBRequest")}}).
 
-> **Note:** The `addEventListener()` method is the _recommended_ way to register an event listener. The benefits are as follows:
+> [!NOTE]
+> The `addEventListener()` method is the _recommended_ way to register an event listener. The benefits are as follows:
 >
 > - It allows adding more than one handler for an event. This is particularly
 >   useful for libraries, JavaScript modules, or any other kind of
@@ -25,7 +26,8 @@ but the target may be any object that supports events (such as {{domxref("IDBReq
 The method `addEventListener()` works by adding a function, or an object that implements a `handleEvent()` function, to the list of event listeners for the specified event type
 on the {{domxref("EventTarget")}} on which it's called. If the function or object is already in the list of event listeners for this target, the function or object is not added a second time.
 
-> **Note:** If a particular anonymous function is in the list of event listeners registered for a certain target, and then later in the code, an identical anonymous function is given in an `addEventListener` call, the second function will _also_ be added to the list of event listeners for that target.
+> [!NOTE]
+> If a particular anonymous function is in the list of event listeners registered for a certain target, and then later in the code, an identical anonymous function is given in an `addEventListener` call, the second function will _also_ be added to the list of event listeners for that target.
 >
 > Indeed, anonymous functions are not identical even if defined using
 > the _same_ unchanging source-code called repeatedly, **even if in a loop**.
@@ -91,7 +93,8 @@ addEventListener(type, listener, useCapture)
     the event. See [DOM Level 3 Events](https://www.w3.org/TR/DOM-Level-3-Events/#event-flow) and [JavaScript Event order](https://www.quirksmode.org/js/events_order.html#link4) for a detailed explanation.
     If not specified, `useCapture` defaults to `false`.
 
-    > **Note:** For event listeners attached to the event target, the event is in the target phase, rather than the capturing and bubbling phases.
+    > [!NOTE]
+    > For event listeners attached to the event target, the event is in the target phase, rather than the capturing and bubbling phases.
     > Event listeners in the _capturing_ phase are called before event listeners in any non-capturing phases.
 
 - `wantsUntrusted` {{optional_inline}} {{non-standard_inline}}

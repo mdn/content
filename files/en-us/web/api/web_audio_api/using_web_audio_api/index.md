@@ -35,15 +35,13 @@ Several audio sources with different channel layouts are supported, even within 
 To be able to do anything with the Web Audio API, we need to create an instance of the audio context. This then gives us access to all the features and functionality of the API.
 
 ```js
-// for legacy browsers
-const AudioContext = window.AudioContext || window.webkitAudioContext;
-
 const audioContext = new AudioContext();
 ```
 
 So what's going on when we do this? A {{domxref("BaseAudioContext")}} is created for us automatically and extended to an online audio context. We'll want this because we're looking to play live sound.
 
-> **Note:** If you just want to process audio data, for instance, buffer and stream it but not play it, you might want to look into creating an {{domxref("OfflineAudioContext")}}.
+> [!NOTE]
+> If you just want to process audio data, for instance, buffer and stream it but not play it, you might want to look into creating an {{domxref("OfflineAudioContext")}}.
 
 ## Loading sound
 
@@ -53,7 +51,8 @@ Now, the audio context we've created needs some sound to play through it. There 
 <audio src="myCoolTrack.mp3"></audio>
 ```
 
-> **Note:** If the sound file you're loading is held on a different domain you will need to use the `crossorigin` attribute; see [Cross Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS) for more information.
+> [!NOTE]
+> If the sound file you're loading is held on a different domain you will need to use the `crossorigin` attribute; see [Cross Origin Resource Sharing (CORS)](/en-US/docs/Web/HTTP/CORS) for more information.
 
 To use all the nice things we get with the Web Audio API, we need to grab the source from this element and _pipe_ it into the context we have created. Lucky for us there's a method that allows us to do just that — {{domxref("AudioContext.createMediaElementSource")}}:
 
@@ -65,7 +64,8 @@ const audioElement = document.querySelector("audio");
 const track = audioContext.createMediaElementSource(audioElement);
 ```
 
-> **Note:** The `<audio>` element above is represented in the DOM by an object of type {{domxref("HTMLMediaElement")}}, which comes with its own set of functionality. All of this has stayed intact; we are merely allowing the sound to be available to the Web Audio API.
+> [!NOTE]
+> The `<audio>` element above is represented in the DOM by an object of type {{domxref("HTMLMediaElement")}}, which comes with its own set of functionality. All of this has stayed intact; we are merely allowing the sound to be available to the Web Audio API.
 
 ## Controlling sound
 
@@ -162,7 +162,8 @@ Let's give the user control to do this — we'll use a [range input](/en-US/docs
 <input type="range" id="volume" min="0" max="2" value="1" step="0.01" />
 ```
 
-> **Note:** Range inputs are a really handy input type for updating values on audio nodes. You can specify a range's values and use them directly with the audio node's parameters.
+> [!NOTE]
+> Range inputs are a really handy input type for updating values on audio nodes. You can specify a range's values and use them directly with the audio node's parameters.
 
 So let's grab this input's value and update the gain value when the input node has its value changed by the user:
 
@@ -178,7 +179,8 @@ volumeControl.addEventListener(
 );
 ```
 
-> **Note:** The values of node objects (e.g. `GainNode.gain`) are not simple values; they are actually objects of type {{domxref("AudioParam")}} — these called parameters. This is why we have to set `GainNode.gain`'s `value` property, rather than just setting the value on `gain` directly. This enables them to be much more flexible, allowing for passing the parameter a specific set of values to change between over a set period of time, for example.
+> [!NOTE]
+> The values of node objects (e.g. `GainNode.gain`) are not simple values; they are actually objects of type {{domxref("AudioParam")}} — these called parameters. This is why we have to set `GainNode.gain`'s `value` property, rather than just setting the value on `gain` directly. This enables them to be much more flexible, allowing for passing the parameter a specific set of values to change between over a set period of time, for example.
 
 Great, now the user can update the track's volume! The gain node is the perfect node to use if you want to add mute functionality.
 
@@ -188,7 +190,8 @@ Let's add another modification node to practice what we've just learnt.
 
 There's a {{domxref("StereoPannerNode")}} node, which changes the balance of the sound between the left and right speakers, if the user has stereo capabilities.
 
-> **Note:** The `StereoPannerNode` is for simple cases in which you just want stereo panning from left to right.
+> [!NOTE]
+> The `StereoPannerNode` is for simple cases in which you just want stereo panning from left to right.
 > There is also a {{domxref("PannerNode")}}, which allows for a great deal of control over 3D space, or sound _spatialization_, for creating more complex effects.
 > This is used in games and 3D apps to create birds flying overhead, or sound coming from behind the user for instance.
 
@@ -203,7 +206,8 @@ const pannerOptions = { pan: 0 };
 const panner = new StereoPannerNode(audioContext, pannerOptions);
 ```
 
-> **Note:** The constructor method of creating nodes is not supported by all browsers at this time. The older factory methods are supported more widely.
+> [!NOTE]
+> The constructor method of creating nodes is not supported by all browsers at this time. The older factory methods are supported more widely.
 
 Here our values range from -1 (far left) and 1 (far right). Again let's use a range type input to vary this parameter:
 

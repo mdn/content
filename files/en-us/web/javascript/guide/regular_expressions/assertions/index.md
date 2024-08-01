@@ -114,7 +114,8 @@ Assertions include boundaries, which indicate the beginnings and endings of line
 
 ### Other assertions
 
-> **Note:** The `?` character may also be used as a quantifier.
+> [!NOTE]
+> The `?` character may also be used as a quantifier.
 
 <table class="standard-table">
   <thead>

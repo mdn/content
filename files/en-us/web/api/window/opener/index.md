@@ -41,7 +41,7 @@ To be exact, for cross-origin opener objects, the following properties are avail
 - {{domxref("Window.frames", "frames")}}
 - {{domxref("Window.length", "length")}}
 - {{domxref("Window.top", "top")}}
-- {{domxref("Window.opener", "opener")}}
+- `opener`
 - {{domxref("Window.parent", "parent")}}
 - {{domxref("Window.postMessage", "postMessage")}}
 - `window[0]`, `window[1]`, etc.

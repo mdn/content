@@ -552,6 +552,10 @@
       "inh": "CSSRule",
       "impl": []
     },
+    "CSSFunctionRule": {
+      "inh": "CSSGroupingRule",
+      "impl": []
+    },
     "CSSGroupingRule": {
       "inh": "CSSRule",
       "impl": []
@@ -2232,10 +2236,6 @@
       "inh": "",
       "impl": []
     },
-    "MLActivation": {
-      "inh": "",
-      "impl": []
-    },
     "MLContext": {
       "inh": "",
       "impl": []
@@ -3841,10 +3841,6 @@
       "impl": []
     },
     "VideoTrackList": {
-      "inh": "EventTarget",
-      "impl": []
-    },
-    "Viewport": {
       "inh": "EventTarget",
       "impl": []
     },

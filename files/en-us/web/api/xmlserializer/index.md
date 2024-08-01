@@ -37,7 +37,8 @@ This involves creating a new `XMLSerializer` object, then passing the {{domxref(
 
 This example uses the {{domxref("Element.insertAdjacentHTML()")}} method to insert a new DOM {{domxref("Node")}} into the body of the {{domxref("Document")}}, based on XML created by serializing an {{domxref("Element")}} object.
 
-> **Note:** In the real world, you should usually instead call {{domxref("Document.importNode", "importNode()")}} method to import the new node into the DOM, then call one of the following methods to add the node to the DOM tree:
+> [!NOTE]
+> In the real world, you should usually instead call {{domxref("Document.importNode", "importNode()")}} method to import the new node into the DOM, then call one of the following methods to add the node to the DOM tree:
 >
 > - The {{domxref("Element.append()")}}/{{domxref("Element.prepend()")}} and {{domxref("Document.append()")}}/{{domxref("Document.prepend()")}} methods.
 > - The {{domxref("Element.replaceWith")}} method (to replace an existing node with the new one)

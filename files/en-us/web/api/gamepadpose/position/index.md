@@ -24,7 +24,8 @@ Positions are measured in meters from an origin point — this point is the posi
 
 A {{jsxref("Float32Array")}}, or `null` if the gamepad is not able to provide position data.
 
-> **Note:** User agents may provide emulated position values through certain techniques; when doing so they should still report {{domxref("GamepadPose.hasPosition")}} as false.
+> [!NOTE]
+> User agents may provide emulated position values through certain techniques; when doing so they should still report {{domxref("GamepadPose.hasPosition")}} as false.
 
 ## Examples
 

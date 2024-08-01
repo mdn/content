@@ -8,7 +8,7 @@ browser-compat: api.WEBGL_multi_draw.multiDrawElementsInstancedWEBGL
 
 {{APIRef("WebGL")}}
 
-The **`WEBGL_multi_draw.multiDrawElementsWEBGL()`** method of
+The **`WEBGL_multi_draw.multiDrawElementsInstancedWEBGL()`** method of
 the
 [WebGL API](/en-US/docs/Web/API/WebGL_API) renders multiple primitives from
 array data. It is

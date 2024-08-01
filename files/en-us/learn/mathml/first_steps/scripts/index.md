@@ -82,7 +82,8 @@ You should notice that:
 - The second and third children of the `<msubsup>` element are respectively attached as a subscript and superscript of its first child.
 - The text inside scripts is scaled down.
 
-> **Note:** The MathML elements `<msub>` and `<msup>` are different from the HTML elements [`<sub>`](/en-US/docs/Web/HTML/Element/sub) and [`<sup>`](/en-US/docs/Web/HTML/Element/sup). They allow authors to provide arbitrary MathML subtrees as scripts, not just text.
+> [!NOTE]
+> The MathML elements `<msub>` and `<msup>` are different from the HTML elements [`<sub>`](/en-US/docs/Web/HTML/Element/sub) and [`<sup>`](/en-US/docs/Web/HTML/Element/sup). They allow authors to provide arbitrary MathML subtrees as scripts, not just text.
 
 ## Underscripts and overscripts
 
@@ -249,7 +250,7 @@ scriptedElements.forEach((scripted) => {
 });
 document.getElementById("clearOutput").addEventListener("click", () => {
   clearHighlight();
-  outputDiv.innerHTML = "";
+  outputDiv.textContent = "";
 });
 ```
 
@@ -363,7 +364,8 @@ math {
 
 We now realize that the bottom bracket "⎵" and the rightward arrow "→" stretch horizontally to cover the width of the substituted values. Recall that [some vertical operators can stretch](/en-US/docs/Learn/MathML/First_steps/Text_containers#active_learning_stretchy_operators) to cover the height of non-stretchy siblings inside an `<mrow>`. Similarly some horizontal operators can stretch to cover the width of non-stretchy siblings in an `<munder>`, `<mover>` or `<munderover>` element.
 
-> **Note:** Stretching can happen for any child of the `<munder>`, `<mover>` or `<munderover>` element, not just the underscript or overscript.
+> [!NOTE]
+> Stretching can happen for any child of the `<munder>`, `<mover>` or `<munderover>` element, not just the underscript or overscript.
 
 ### Large operator and limits
 
@@ -472,7 +474,8 @@ As expected, the formula is no longer centered and the rendering is modified to 
 - _largeop_: The operator is drawn with a bigger glyph if the `<math>` tag has a `display="block"` attribute.
 - _movablelimits_: The underscripts and overscripts attached to the operator are respectively rendered as subscripts and superscripts if the `<math>` tag does not have the `display="block"` attribute.
 
-> **Note:** The _largeop_ property is actually unrelated to scripts, even though operators having this property are typically scripted. The _movablelimits_ property is taken into account for `<munder>` and `<mover>` elements too.
+> [!NOTE]
+> The _largeop_ property is actually unrelated to scripts, even though operators having this property are typically scripted. The _movablelimits_ property is taken into account for `<munder>` and `<mover>` elements too.
 
 ## Summary
 

@@ -11,7 +11,7 @@ browser-compat: svg.elements.font-face.stemv
 
 The **`stemv`** attribute indicates the vertical stem width of the font.
 
-The vertical stem width is the width of vertical (or near-vertical) stems of {{Glossary("glyphs")}}. This information is often tied to hinting, and may not be directly accessible in some font formats. The measurement is meant for the dominant vertical stem in the font because there might be different groupings of vertical stems (e.g., one main one, and one lighter weight one as for an uppercase "M" or "N").
+The vertical stem width is the width of vertical (or near-vertical) stems of {{Glossary("glyph", "glyphs")}}. This information is often tied to hinting, and may not be directly accessible in some font formats. The measurement is meant for the dominant vertical stem in the font because there might be different groupings of vertical stems (e.g., one main one, and one lighter weight one as for an uppercase "M" or "N").
 
 If this attribute is used, the {{SVGAttr("units-per-em")}} must also be used.
 

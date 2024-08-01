@@ -26,7 +26,8 @@ multi-column scenarios. Each object in the array contains two properties:
     with a horizontal {{cssxref("writing-mode")}}, this is the horizontal dimension, or
     width; if the writing-mode is vertical, this is the vertical dimension, or height.
 
-> **Note:** For more information about writing modes and block and inline
+> [!NOTE]
+> For more information about writing modes and block and inline
 > dimensions, read [Handling different text directions](/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions).
 
 ## Examples

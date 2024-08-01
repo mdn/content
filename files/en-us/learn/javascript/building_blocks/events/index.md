@@ -57,7 +57,8 @@ When such a block of code is defined to run in response to an event, we say we a
 Note: Event handlers are sometimes called **event listeners** — they are pretty much interchangeable for our purposes, although strictly speaking, they work together.
 The listener listens out for the event happening, and the handler is the code that is run in response to it happening.
 
-> **Note:** Web events are not part of the core JavaScript language — they are defined as part of the APIs built into the browser.
+> [!NOTE]
+> Web events are not part of the core JavaScript language — they are defined as part of the APIs built into the browser.
 
 ### An example: handling a click event
 
@@ -318,13 +319,15 @@ function bgChange(e) {
 btn.addEventListener("click", bgChange);
 ```
 
-> **Note:** You can find the [full source code](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/random-color-eventobject.html) for this example on GitHub (also [see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventobject.html)).
+> [!NOTE]
+> You can find the [full source code](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/random-color-eventobject.html) for this example on GitHub (also [see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventobject.html)).
 
 Here you can see we are including an event object, **e**, in the function, and in the function setting a background color style on `e.target` — which is the button itself.
 The `target` property of the event object is always a reference to the element the event occurred upon.
 So, in this example, we are setting a random background color on the button, not the page.
 
-> **Note:** You can use any name you like for the event object — you just need to choose a name that you can then use to reference it inside the event handler function.
+> [!NOTE]
+> You can use any name you like for the event object — you just need to choose a name that you can then use to reference it inside the event handler function.
 > `e`/`evt`/`event` is most commonly used by developers because they are short and easy to remember.
 > It's always good to be consistent — with yourself, and with others if possible.
 
@@ -414,7 +417,8 @@ The output is as follows:
 
 {{ EmbedLiveSample('Preventing_default_behavior', '100%', 180, "", "") }}
 
-> **Note:** For the full source code, see [preventdefault-validation.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/preventdefault-validation.html) (also see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html) here).
+> [!NOTE]
+> For the full source code, see [preventdefault-validation.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/preventdefault-validation.html) (also see it [running live](https://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html) here).
 
 ## It's not just web pages
 

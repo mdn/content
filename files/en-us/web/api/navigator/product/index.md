@@ -14,7 +14,8 @@ The value of the **`Navigator.product`** property is always
 "`Gecko`", in any browser. This property is kept only for compatibility
 purposes.
 
-> **Note:** Do not rely on this property to return a real product name. All browsers return "`Gecko`" as the value of this property.
+> [!NOTE]
+> Do not rely on this property to return a real product name. All browsers return "`Gecko`" as the value of this property.
 
 ## Value
 

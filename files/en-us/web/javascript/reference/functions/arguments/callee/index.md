@@ -9,7 +9,8 @@ browser-compat: javascript.functions.arguments.callee
 
 {{jsSidebar("Functions")}}{{Deprecated_Header}}
 
-> **Note:** Accessing `arguments.callee` in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) will throw a {{jsxref("TypeError")}}. If a function must reference itself, either give the [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function) a name or use a [function declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function).
+> [!NOTE]
+> Accessing `arguments.callee` in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) will throw a {{jsxref("TypeError")}}. If a function must reference itself, either give the [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function) a name or use a [function declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function).
 
 The **`arguments.callee`** data property contains the currently executing function that the arguments belong to.
 
@@ -142,7 +143,8 @@ console.log(
 // [ 1, 2, 6, 24, 120 ]
 ```
 
-> **Note:** This method allocates a new closure for every iteration, which may significantly increase memory usage. It's only here to demonstrate the possibility, but should be avoided in production. Use a temporary variable or a named function expression instead.
+> [!NOTE]
+> This method allocates a new closure for every iteration, which may significantly increase memory usage. It's only here to demonstrate the possibility, but should be avoided in production. Use a temporary variable or a named function expression instead.
 
 ## Specifications
 

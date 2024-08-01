@@ -79,7 +79,7 @@ console.log(str.charAt(0)); // "\ud842", which is not a valid Unicode character
 console.log(str.charAt(1)); // "\udfb7", which is not a valid Unicode character
 ```
 
-To get the full Unicode code point at the given index, use an indexing method that splits by Unicode code points, such as {{jsxref("String.prototype.codePointAt()")}} and [spreading strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator) into an array of Unicode code points.
+To get the full Unicode code point at the given index, use an indexing method that splits by Unicode code points, such as {{jsxref("String.prototype.codePointAt()")}} and [spreading strings](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator) into an array of Unicode code points.
 
 ```js
 const str = "𠮷𠮾";
@@ -87,7 +87,8 @@ console.log(String.fromCodePoint(str.codePointAt(0))); // "𠮷"
 console.log([...str][0]); // "𠮷"
 ```
 
-> **Note:** Avoid re-implementing the solutions above using `charAt()`. The detection of lone surrogates and their pairing is complex, and built-in APIs may be more performant as they directly use the internal representation of the string. Install a polyfill for the APIs mentioned above if necessary.
+> [!NOTE]
+> Avoid re-implementing the solutions above using `charAt()`. The detection of lone surrogates and their pairing is complex, and built-in APIs may be more performant as they directly use the internal representation of the string. Install a polyfill for the APIs mentioned above if necessary.
 
 ## Specifications
 

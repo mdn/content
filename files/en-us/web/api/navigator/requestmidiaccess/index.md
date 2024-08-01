@@ -71,7 +71,7 @@ navigator.permissions.query({ name: "midi", sysex: true }).then((result) => {
 
 ### Request MIDI access
 
-In the following example, the {{domxref("Navigator.requestMIDIAccess()")}} method returns the {{domxref("MIDIAccess")}} object, which gives access to information about the input and output MIDI ports.
+In the following example, the `Navigator.requestMIDIAccess()` method returns the {{domxref("MIDIAccess")}} object, which gives access to information about the input and output MIDI ports.
 
 ```js
 navigator.requestMIDIAccess().then((access) => {

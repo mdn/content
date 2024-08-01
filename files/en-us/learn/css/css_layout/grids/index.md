@@ -161,7 +161,8 @@ body {
 
 {{ EmbedLiveSample('Flexible_grids_with_the_fr_unit', '100%', 200) }}
 
-> **Note:** The `fr` unit distributes _available_ space, not _all_ space. Therefore, if one of your tracks has something large inside it, there will be less free space to share.
+> [!NOTE]
+> The `fr` unit distributes _available_ space, not _all_ space. Therefore, if one of your tracks has something large inside it, there will be less free space to share.
 
 ### Gaps between tracks
 
@@ -214,7 +215,8 @@ body {
 
 {{ EmbedLiveSample('Gaps_between_tracks', '100%', 250) }}
 
-> **Note:** The `gap` properties (`column-gap`, `row-gap` and `gap`) used to be prefixed by `grid-`. The spec has changed but the prefixed versions will be maintained as an alias. To be on the safe side and make your code more bulletproof, you can add both properties:
+> [!NOTE]
+> The `gap` properties (`column-gap`, `row-gap` and `gap`) used to be prefixed by `grid-`. The spec has changed but the prefixed versions will be maintained as an alias. To be on the safe side and make your code more bulletproof, you can add both properties:
 >
 > ```css
 > .container {
@@ -472,7 +474,8 @@ aside {
 
 {{ EmbedLiveSample('Line-based_placement', '100%', 550) }}
 
-> **Note:** You can also use the value `-1` to target the end column or row line, then count inwards from the end using negative values. Note also that lines count always from the edges of the explicit grid, not the [implicit grid](/en-US/docs/Glossary/Grid).
+> [!NOTE]
+> You can also use the value `-1` to target the end column or row line, then count inwards from the end using negative values. Note also that lines count always from the edges of the explicit grid, not the [implicit grid](/en-US/docs/Glossary/Grid).
 
 ## Positioning with grid-template-areas
 

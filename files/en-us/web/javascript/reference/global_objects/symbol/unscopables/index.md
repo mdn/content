@@ -23,7 +23,7 @@ The `[Symbol.unscopables]` symbol (accessed via `Symbol.unscopables`) can be def
 
 Setting a property of the `[Symbol.unscopables]` object to `true` (or any [truthy](/en-US/docs/Glossary/Truthy) value) will make the corresponding property of the `with` scope object _unscopable_ and therefore won't be introduced to the `with` body scope. Setting a property to `false` (or any [falsy](/en-US/docs/Glossary/Falsy) value) will make it _scopable_ and thus appear as lexical scope variables.
 
-When deciding whether `x` is unscopable, the entire prototype chain of the `[Symbol.unscopables]` property is looked up for a property called `x`. This means if you declared `[Symbol.unscopables]` as a plain object, `Object.prototype` properties like [`toString`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) would become unscopable as well, which may cause backward incompatibility for legacy code assuming those properties are normally scoped (see [an example below](#avoid_using_a_non-null-prototype_object_as_symbol.unscopables)). You are advised to make your custom `[Symbol.unscopables]` property have `null` as its prototype, like [`Array.prototype[Symbol.unscopables]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@unscopables) does.
+When deciding whether `x` is unscopable, the entire prototype chain of the `[Symbol.unscopables]` property is looked up for a property called `x`. This means if you declared `[Symbol.unscopables]` as a plain object, `Object.prototype` properties like [`toString`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) would become unscopable as well, which may cause backward incompatibility for legacy code assuming those properties are normally scoped (see [an example below](#avoid_using_a_non-null-prototype_object_as_symbol.unscopables)). You are advised to make your custom `[Symbol.unscopables]` property have `null` as its prototype, like [`Array.prototype[Symbol.unscopables]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables) does.
 
 This protocol is also utilized by DOM APIs, such as [`Element.prototype.append()`](/en-US/docs/Web/API/Element/append).
 
@@ -44,7 +44,7 @@ with (values) {
 }
 ```
 
-The code containing `with (values)` caused some websites to malfunction in Firefox when `Array.prototype.values()` was added ([Firefox Bug 883914](https://bugzil.la/883914)). Furthermore, this implies that any future array method addition may be breaking if it implicitly changes the `with` scope. Therefore, the `[Symbol.unscopables]` symbol was introduced and implemented on `Array` as {{jsxref("Array/@@unscopables", "Array.prototype[Symbol.unscopables]")}} to prevent some of the Array methods being scoped into the `with` statement.
+The code containing `with (values)` caused some websites to malfunction in Firefox when `Array.prototype.values()` was added ([Firefox Bug 883914](https://bugzil.la/883914)). Furthermore, this implies that any future array method addition may be breaking if it implicitly changes the `with` scope. Therefore, the `[Symbol.unscopables]` symbol was introduced and implemented on `Array` as [`Array.prototype[Symbol.unscopables]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables) to prevent some of the Array methods being scoped into the `with` statement.
 
 ### Unscopables in objects
 
@@ -165,6 +165,6 @@ const character = {
 
 ## See also
 
-- {{jsxref("Array/@@unscopables", "Array.prototype[Symbol.unscopables]")}}
+- [`Array.prototype[Symbol.unscopables]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables)
 - [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with)
 - [`Element.prototype.append()`](/en-US/docs/Web/API/Element/append)

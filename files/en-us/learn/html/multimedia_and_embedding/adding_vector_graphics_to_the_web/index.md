@@ -28,7 +28,8 @@ Vector graphics are very useful in many circumstances — they have small file s
   </tbody>
 </table>
 
-> **Note:** This article doesn't intend to teach you SVG; just what it is, and how to add it to web pages.
+> [!NOTE]
+> This article doesn't intend to teach you SVG; just what it is, and how to add it to web pages.
 
 ## What are vector graphics?
 
@@ -45,7 +46,8 @@ The difference becomes apparent when you zoom in the page — the PNG image beco
 
 ![Two star images zoomed in, one crisp and the other blurry](raster-vector-zoomed.png)
 
-> **Note:** The images above are actually all PNGs — with the left-hand star in each case representing a raster image, and the right-hand star representing a vector image. Again, go to the [vector-versus-raster.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html) demo for a real example!
+> [!NOTE]
+> The images above are actually all PNGs — with the left-hand star in each case representing a raster image, and the right-hand star representing a vector image. Again, go to the [vector-versus-raster.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html) demo for a real example!
 
 Moreover, vector image files are much lighter than their raster equivalents, because they only need to hold a handful of algorithms, rather than information on every pixel in the image individually.
 
@@ -85,7 +87,8 @@ So why would anyone want to use raster graphics over SVG? Well, SVG does have so
 
 Raster graphics are arguably better for complex precision images such as photos, for the reasons described above.
 
-> **Note:** In Inkscape, save your files as Plain SVG to save space. Also, please refer to this [article describing how to prepare SVGs for the Web](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Web-Inkscape.html).
+> [!NOTE]
+> In Inkscape, save your files as Plain SVG to save space. Also, please refer to this [article describing how to prepare SVGs for the Web](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Web-Inkscape.html).
 
 ## Adding SVG to your pages
 

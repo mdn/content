@@ -15,7 +15,8 @@ value of a mutation event once it's been created (normally using the {{domxref("
 
 This method must be called to set the event before it is dispatched, using {{ domxref("EventTarget.dispatchEvent()") }}.
 
-> **Note:** In general, you won't create these events yourself; they are created by the browser.
+> [!NOTE]
+> In general, you won't create these events yourself; they are created by the browser.
 
 ## Syntax
 
