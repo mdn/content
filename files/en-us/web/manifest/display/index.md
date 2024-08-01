@@ -23,7 +23,8 @@ The value of the `display` member is a string. The possible values include `full
 
   - : Opens the app with browser UI elements hidden and uses the entirety of the available display area. Use this value for apps where fullscreen engagement is crucial and desired. For example, use it for a game app that can take up the entire screen without any browser controls visible, providing a fully immersive gaming experience.
 
-    **Note:** The `fullscreen` value of the manifest's `display` member works separately from the [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API). The `fullscreen` display mode changes the state of the entire browser window to full screen, while the Fullscreen API only makes a specific element within the window go full screen. Therefore, a web app can be in `fullscreen` display mode while {{DOMxRef("Document.fullscreenElement")}} is `null` and {{DOMxRef("Document.fullscreenEnabled")}} is `false`.
+    > [!NOTE]
+    > The `fullscreen` value of the manifest's `display` member works separately from the [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API). The `fullscreen` display mode changes the state of the entire browser window to full screen, while the Fullscreen API only makes a specific element within the window go full screen. Therefore, a web app can be in `fullscreen` display mode while {{DOMxRef("Document.fullscreenElement")}} is `null` and {{DOMxRef("Document.fullscreenEnabled")}} is `false`.
 
 - `standalone`
 
@@ -42,7 +43,8 @@ After a browser applies a `display` mode to an {{Glossary("application context")
 
 Use the {{cssxref("@media/display-mode", "display-mode")}} media feature to determine the current `display` mode applied by the browser, which is useful for ensuring your app behaves as expected in different display contexts. Additionally, the `display-mode` media feature allows you to adjust your app's styles based on the `display` mode currently being used. This can help provide a consistent user experience regardless of whether the website is launched from a URL or from a desktop icon.
 
-**Note:** The value of the `display-mode` media feature reflects the actual `display` mode being used, which might differ from the one requested in the manifest's `display`, because the browser might not support the requested mode.
+> [!NOTE]
+> The value of the `display-mode` media feature reflects the actual `display` mode being used, which might differ from the one requested in the manifest's `display`, because the browser might not support the requested mode.
 
 As shown in the code below, you can adjust an app's style depending on the `display-mode` used.
 

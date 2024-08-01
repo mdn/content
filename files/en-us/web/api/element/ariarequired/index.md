@@ -10,7 +10,8 @@ browser-compat: api.Element.ariaRequired
 
 The **`ariaRequired`** property of the {{domxref("Element")}} interface reflects the value of the `aria-required` attribute, which indicates that user input is required on the element before a form may be submitted.
 
-> **Note:** Where possible use an HTML {{htmlelement("input")}} element with `type="text"` or a {{htmlelement("textarea")}} as these have built in semantics and do not require ARIA attributes.
+> [!NOTE]
+> Where possible use an HTML {{htmlelement("input")}} element with `type="text"` or a {{htmlelement("textarea")}} as these have built in semantics and do not require ARIA attributes.
 
 ## Value
 

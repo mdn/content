@@ -9,7 +9,8 @@ browser-compat: webextensions.api.action.openPopup
 
 Open the browser action's popup.
 
-> **Note:** This API is available in Manifest V3 or higher.
+> [!NOTE]
+> This API is available in Manifest V3 or higher.
 
 In stable versions of Firefox, you can only call this function from inside the handler for a [user action](/en-US/docs/Mozilla/Add-ons/WebExtensions/User_actions). See [Browser compatibility](#browser_compatibility) for details.
 

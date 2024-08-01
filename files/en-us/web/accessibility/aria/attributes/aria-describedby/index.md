@@ -23,7 +23,8 @@ The elements linked via `aria-describedby` don't need to be visible. It is possi
 
 The `aria-describedby` property is appropriate when the associated content contains descriptions experienced as plain text. If the content contains a large amount of content, useful semantics, or has a complex structure requiring user navigation, use [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details). `aria-details` allows assistive technology users to visit the associated structured content and provides additional navigation commands, making it easier to understand the structure, or to experience the information in smaller pieces.
 
-> **Note:** The `aria-describedby` content should only be a text string. If there are important underlying semantics in the content, consider using [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details).
+> [!NOTE]
+> The `aria-describedby` content should only be a text string. If there are important underlying semantics in the content, consider using [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details).
 
 ## Example
 
@@ -35,7 +36,8 @@ The `aria-describedby` property is appropriate when the associated content conta
 </p>
 ```
 
-> **Note:** The `aria-describedby` attribute is not designed to reference descriptions from external resources. As its value is one or more `id`s (space-separated if multiple), it must reference elements in the same DOM document.
+> [!NOTE]
+> The `aria-describedby` attribute is not designed to reference descriptions from external resources. As its value is one or more `id`s (space-separated if multiple), it must reference elements in the same DOM document.
 
 ## Values
 

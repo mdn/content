@@ -16,7 +16,8 @@ A double, representing the minimum [decibel](https://en.wikipedia.org/wiki/Decib
 
 When getting data from `getByteFrequencyData()`, any frequencies with an amplitude of `minDecibels` or lower will be returned as `0`.
 
-> **Note:** If a value greater than `AnalyserNode.maxDecibels` is set, an `INDEX_SIZE_ERR` exception is thrown.
+> [!NOTE]
+> If a value greater than `AnalyserNode.maxDecibels` is set, an `INDEX_SIZE_ERR` exception is thrown.
 
 ## Examples
 

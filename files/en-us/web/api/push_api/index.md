@@ -13,7 +13,8 @@ The **Push API** gives web applications the ability to receive messages pushed t
 
 ## Push concepts and usage
 
-> **Warning:** When implementing PushManager subscriptions, it is vitally important that you protect against CSRF/XSRF issues in your app. See the following articles for more information:
+> [!WARNING]
+> When implementing PushManager subscriptions, it is vitally important that you protect against CSRF/XSRF issues in your app. See the following articles for more information:
 >
 > - [Cross-Site Request Forgery (CSRF) Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)
 > - [Preventing CSRF and XSRF Attacks](https://blog.codinghorror.com/preventing-csrf-and-xsrf-attacks/)

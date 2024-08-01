@@ -47,7 +47,8 @@ The `pattern` attribute, when specified, is a regular expression that the input'
 
 If the specified pattern is not specified or is invalid, no regular expression is applied and this attribute is ignored completely.
 
-> **Note:** Use the [`title`](/en-US/docs/Web/HTML/Element/input#title) attribute to specify text that most browsers will display as a tooltip to explain what the requirements are to match the pattern. You should also include other explanatory text nearby.
+> [!NOTE]
+> Use the [`title`](/en-US/docs/Web/HTML/Element/input#title) attribute to specify text that most browsers will display as a tooltip to explain what the requirements are to match the pattern. You should also include other explanatory text nearby.
 
 See the section [Specifying a pattern](#specifying_a_pattern) for details and an example.
 
@@ -57,13 +58,15 @@ The `placeholder` attribute is a string that provides a brief hint to the user a
 
 If the control's content has one directionality ({{Glossary("LTR")}} or {{Glossary("RTL")}}) but needs to present the placeholder in the opposite directionality, you can use Unicode bidirectional algorithm formatting characters to override directionality within the placeholder; see [How to use Unicode controls for bidi text](https://www.w3.org/International/questions/qa-bidi-unicode-controls) for more information.
 
-> **Note:** Avoid using the `placeholder` attribute if you can. It is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. See [`<input>` labels](/en-US/docs/Web/HTML/Element/input#labels) for more information.
+> [!NOTE]
+> Avoid using the `placeholder` attribute if you can. It is not as semantically useful as other ways to explain your form, and can cause unexpected technical issues with your content. See [`<input>` labels](/en-US/docs/Web/HTML/Element/input#labels) for more information.
 
 ### readonly
 
 A Boolean attribute which, if present, means this field cannot be edited by the user. Its `value` can, however, still be changed by JavaScript code directly setting the {{domxref("HTMLInputElement")}} `value` property.
 
-> **Note:** Because a read-only field cannot have a value, `required` does not have any effect on inputs with the `readonly` attribute also specified.
+> [!NOTE]
+> Because a read-only field cannot have a value, `required` does not have any effect on inputs with the `readonly` attribute also specified.
 
 ### size
 
@@ -140,7 +143,8 @@ This renders like so:
 
 `q` is the most common `name` given to search inputs, although it's not mandatory. When submitted, the data name/value pair sent to the server will be `q=searchterm`.
 
-> **Note:** You must remember to set a [`name`](/en-US/docs/Web/HTML/Element/input#name) for your input, otherwise nothing will be submitted.
+> [!NOTE]
+> You must remember to set a [`name`](/en-US/docs/Web/HTML/Element/input#name) for your input, otherwise nothing will be submitted.
 
 ### Differences between search and text types
 
@@ -206,7 +210,8 @@ You can see how this is rendered below:
 
 There is no visual difference from the previous example, but screen reader users have way more information available to them.
 
-> **Note:** See [Signposts/Landmarks](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics#signpostslandmarks) for more information about such accessibility features.
+> [!NOTE]
+> See [Signposts/Landmarks](/en-US/docs/Learn/Accessibility/WAI-ARIA_basics#signpostslandmarks) for more information about such accessibility features.
 
 ### Physical input element size
 
@@ -234,7 +239,8 @@ The result is this wider input box:
 
 `<input>` elements of type `search` have the same validation features available to them as regular `text` inputs. It is less likely that you'd want to use validation features in general for search boxes. In many cases, users should just be allowed to search for anything, but there are a few cases to consider, such as searches against data of a known format.
 
-> **Note:** HTML form validation is _not_ a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data (or data which is too large, is of the wrong type, and so forth) is entered into your database.
+> [!NOTE]
+> HTML form validation is _not_ a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data (or data which is too large, is of the wrong type, and so forth) is entered into your database.
 
 ### A note on styling
 

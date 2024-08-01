@@ -11,7 +11,8 @@ browser-compat: api.Navigator.userAgent
 The **`Navigator.userAgent`** read-only property returns the
 user agent string for the current browser.
 
-> **Note:** The specification asks browsers to provide as little information via this field as
+> [!NOTE]
+> The specification asks browsers to provide as little information via this field as
 > possible. Never assume that the value of this property will stay the same in future
 > versions of the same browser. Try not to use it at all, or only for current and past
 > versions of a browser. New browsers may start using the same UA, or part of it, as an

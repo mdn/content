@@ -116,9 +116,11 @@ With this notation, it is possible to describe, and therefore compose, most comm
 
 However, one major transformation is not linear, and therefore must be special-cased when using this notation: translation. The translation vector `(tx, ty)` must be expressed separately, as two additional parameters.
 
-> **Note:** Though trickier than Cartesian coordinates, [homogeneous coordinates](https://en.wikipedia.org/wiki/Homogeneous_coordinates) in [projective geometry](https://en.wikipedia.org/wiki/Projective_geometry) lead to 3×3 transformation matrices, and can express translations as linear functions.
+> [!NOTE]
+> Though trickier than Cartesian coordinates, [homogeneous coordinates](https://en.wikipedia.org/wiki/Homogeneous_coordinates) in [projective geometry](https://en.wikipedia.org/wiki/Projective_geometry) lead to 3×3 transformation matrices, and can express translations as linear functions.
 
-> **Note:** Transform functions are used with the `transform` property but not with individual transform properties-{{cssxref("translate")}}, {{cssxref("scale")}}, and {{cssxref("rotate")}}.
+> [!NOTE]
+> Transform functions are used with the `transform` property but not with individual transform properties-{{cssxref("translate")}}, {{cssxref("scale")}}, and {{cssxref("rotate")}}.
 
 ## Examples
 

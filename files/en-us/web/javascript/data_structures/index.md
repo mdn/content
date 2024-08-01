@@ -99,7 +99,8 @@ console.log(42 / -0); // -Infinity
 
 Although a number is conceptually a "mathematical value" and is always implicitly floating-point-encoded, JavaScript provides [bitwise operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#bitwise_operators). When applying bitwise operators, the number is first converted to a 32-bit integer.
 
-> **Note:** Although bitwise operators _can_ be used to represent several Boolean values within a single number using [bit masking](https://en.wikipedia.org/wiki/Mask_%28computing%29), this is usually considered a bad practice. JavaScript offers other means to represent a set of Booleans (like an array of Booleans, or an object with Boolean values assigned to named properties). Bit masking also tends to make the code more difficult to read, understand, and maintain.
+> [!NOTE]
+> Although bitwise operators _can_ be used to represent several Boolean values within a single number using [bit masking](https://en.wikipedia.org/wiki/Mask_%28computing%29), this is usually considered a bad practice. JavaScript offers other means to represent a set of Booleans (like an array of Booleans, or an object with Boolean values assigned to named properties). Bit masking also tends to make the code more difficult to read, understand, and maintain.
 
 It may be necessary to use such techniques in very constrained environments, like when trying to cope with the limitations of local storage, or in extreme cases (such as when each bit over the network counts). This technique should only be considered when it is the last measure that can be taken to optimize size.
 
@@ -176,7 +177,8 @@ Data properties associate a key with a value. It can be described by the followi
 
 Associates a key with one of two accessor functions (`get` and `set`) to retrieve or store a value.
 
-> **Note:** It's important to recognize it's accessor _property_ — not accessor _method_. We can give a JavaScript object class-like accessors by using a function as a value — but that doesn't make the object a class.
+> [!NOTE]
+> It's important to recognize it's accessor _property_ — not accessor _method_. We can give a JavaScript object class-like accessors by using a function as a value — but that doesn't make the object a class.
 
 An accessor property has the following attributes:
 

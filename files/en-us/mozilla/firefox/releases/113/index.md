@@ -72,6 +72,12 @@ No notable changes.
 - Support is now provided for the {{WebExtAPIRef("declarativeNetRequest")}} API ([Firefox bug 1782685](https://bugzil.la/1782685)).
 - The `gecko_android` subkey has been added to the [`browser_specific_settings`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key. This subkey enables an extension to specify the range of Firefox for Android versions it is compatible with ([Firefox bug 1824237](https://bugzil.la/1824237)).
 
+## Other
+
+- Support for animated [AVIF](/en-US/docs/Web/Media/Formats/Image_types#avif_image) (AV1 Image Format files) images.
+  Previously, they would display as still images with no way for web pages to detect this and fall back to another format.
+  ([Firefox bug 1825580](https://bugzil.la/1825580)).
+
 ## Older versions
 
 {{Firefox_for_developers}}

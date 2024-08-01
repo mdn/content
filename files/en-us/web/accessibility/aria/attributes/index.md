@@ -10,7 +10,8 @@ This page lists reference pages covering all the <abbr>WAI-ARIA</abbr> attribute
 
 <abbr>ARIA</abbr> attributes enable modifying an element's states and properties as defined in the accessibility tree.
 
-> **Note:** ARIA only modifies the accessibility tree, modifying how assistive technology presents the content to your users. ARIA doesn't change anything about an element's function or behavior. When not using semantic HTML elements for their intended purpose and default functionality, you must use JavaScript to manage behavior, focus, and ARIA states.
+> [!NOTE]
+> ARIA only modifies the accessibility tree, modifying how assistive technology presents the content to your users. ARIA doesn't change anything about an element's function or behavior. When not using semantic HTML elements for their intended purpose and default functionality, you must use JavaScript to manage behavior, focus, and ARIA states.
 
 ## ARIA attribute types
 

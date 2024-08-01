@@ -7,7 +7,8 @@ browser-compat: webextensions.manifest
 
 {{AddonSidebar}}
 
-> **Note:** This article describes manifest.json for web extensions. If you are looking for information about the manifest.json in PWAs, check out the [Web App Manifest](/en-US/docs/Web/Manifest) article.
+> [!NOTE]
+> This article describes manifest.json for web extensions. If you are looking for information about the manifest.json in PWAs, check out the [Web App Manifest](/en-US/docs/Web/Manifest) article.
 
 The `manifest.json` file is the only file that every extension using WebExtension APIs must contain.
 
@@ -79,7 +80,8 @@ browser.runtime.getManifest().version;
 
 The block below shows the basic syntax for some common manifest keys.
 
-> **Note:** This is not intended to be used as a copy-paste-ready example. Selecting the keys you'll need depends on the extension you are developing.
+> [!NOTE]
+> This is not intended to be used as a copy-paste-ready example. Selecting the keys you'll need depends on the extension you are developing.
 
 For complete example extensions, see [Example extensions](/en-US/docs/Mozilla/Add-ons/WebExtensions/Examples).
 

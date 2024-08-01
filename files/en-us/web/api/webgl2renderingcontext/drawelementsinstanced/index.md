@@ -13,7 +13,8 @@ of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) renders primitives from
 array data like the {{domxref("WebGLRenderingContext.drawElements()", "gl.drawElements()")}} method. In addition, it can execute multiple instances of a set
 of elements.
 
-> **Note:** When using {{domxref("WebGLRenderingContext", "WebGL 1", "", 1)}}, the {{domxref("ANGLE_instanced_arrays")}} extension can provide this method,
+> [!NOTE]
+> When using {{domxref("WebGLRenderingContext", "WebGL 1", "", 1)}}, the {{domxref("ANGLE_instanced_arrays")}} extension can provide this method,
 > too.
 
 ## Syntax

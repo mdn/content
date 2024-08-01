@@ -108,7 +108,8 @@ For {{SVGElement('feOffset')}}, `dy` defines the y offset of the filter input gr
 
 ## glyphRef
 
-> **Warning:** As of SVG2 {{SVGElement('glyphRef')}} is deprecated and shouldn't be used.
+> [!WARNING]
+> As of SVG2 {{SVGElement('glyphRef')}} is deprecated and shouldn't be used.
 
 For {{SVGElement('glyphRef')}}, `dy` defines the y offset of the glyph, in the font metric system.
 
@@ -210,7 +211,8 @@ line {
 
 ## tref
 
-> **Warning:** As of SVG2 {{SVGElement('tref')}} is deprecated and shouldn't be used.
+> [!WARNING]
+> As of SVG2 {{SVGElement('tref')}} is deprecated and shouldn't be used.
 
 For {{SVGElement('tref')}}, if it contains a single value, `dy` defines a shift along the y-axis for all glyphs.
 

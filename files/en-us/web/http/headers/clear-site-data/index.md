@@ -39,7 +39,8 @@ Clear-Site-Data: "*"
 
 ## Directives
 
-> **Note:** All directives must comply with the [quoted-string grammar](https://datatracker.ietf.org/doc/html/rfc7230#section-3.2.6). A directive that does not include the double quotes is invalid.
+> [!NOTE]
+> All directives must comply with the [quoted-string grammar](https://datatracker.ietf.org/doc/html/rfc7230#section-3.2.6). A directive that does not include the double quotes is invalid.
 
 - `"cache"` {{Experimental_Inline}}
 
@@ -49,7 +50,8 @@ Clear-Site-Data: "*"
 
   - : Indicates that the server wishes to remove all [client hints](/en-US/docs/Web/HTTP/Client_hints) (requested via {{httpheader("Accept-CH")}}) stored for the origin of the response URL.
 
-    > **Note:** In browsers that support the `"clientHints"` data type, client hints are also cleared when the `"cache"`, `"cookies"`, or `"*"` types are specified. `"clientHints"` is therefore only needed when none of those other types are specified.
+    > [!NOTE]
+    > In browsers that support the `"clientHints"` data type, client hints are also cleared when the `"cache"`, `"cookies"`, or `"*"` types are specified. `"clientHints"` is therefore only needed when none of those other types are specified.
 
 - `"cookies"`
   - : Indicates that the server wishes to remove all cookies for the origin of the response URL. HTTP authentication credentials are also cleared out. This affects the entire registered domain, including subdomains. So `https://example.com` as well as `https://stage.example.com`, will have cookies cleared.

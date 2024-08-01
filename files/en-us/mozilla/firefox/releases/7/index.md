@@ -88,7 +88,8 @@ Firefox 7 shipped on September 27, 2011. This article provides information about
 
 These changes affect add-on developers as well as developers working on or with Mozilla code itself. Add-on developers should see [Updating extensions for Firefox 7](/en-US/docs/Mozilla/Firefox/Releases/7/Updating_extensions) for additional information.
 
-> **Note:** Firefox 7 requires that binary components be recompiled, as do all major releases of Firefox.
+> [!NOTE]
+> Firefox 7 requires that binary components be recompiled, as do all major releases of Firefox.
 
 ### JavaScript code modules
 

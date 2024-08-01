@@ -13,7 +13,8 @@ browser-compat: api.VRPose.orientation
 
 The **`orientation`** read-only property of the {{domxref("VRPose")}} interface returns the orientation of the sensor at the current timestamp, as a quarternion value.
 
-> **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
+> [!NOTE]
+> This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
 The value is a {{jsxref("Float32Array")}}, made up of the following values:
 
@@ -32,7 +33,8 @@ A {{jsxref("Float32Array")}}, or `null` if the VR sensor is not able to provide 
 
 See [`VRDisplay.getFrameData()`](/en-US/docs/Web/API/VRDisplay/getFrameData#examples) for example code.
 
-> **Note:** An orientation of `{ x: 0, y: 0, z: 0, w: 1 }` is considered to be "forward".
+> [!NOTE]
+> An orientation of `{ x: 0, y: 0, z: 0, w: 1 }` is considered to be "forward".
 
 ## Specifications
 

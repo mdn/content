@@ -10,7 +10,8 @@ Serving different Web pages or services to different browsers is usually a bad i
 
 But browsers and standards are not perfect, and there are still some edge cases where detecting the browser is needed. Using the user agent to detect the browser looks simple, but doing it well is, in fact, a very hard problem. This document will guide you in doing this as correctly as possible.
 
-> **Note:** It's worth re-iterating: it's very rarely a good idea to use user agent sniffing. You can almost always find a better, more broadly compatible way to solve your problem!
+> [!NOTE]
+> It's worth re-iterating: it's very rarely a good idea to use user agent sniffing. You can almost always find a better, more broadly compatible way to solve your problem!
 
 ## Considerations before using browser detection
 
@@ -271,4 +272,5 @@ The following table summarizes the way common browser vendors indicate that thei
 
 In summary, we recommend looking for the string `Mobi` anywhere in the User Agent to detect a mobile device.
 
-> **Note:** If the device is large enough that it's not marked with `Mobi`, you should serve your desktop site (which, as a best practice, should support touch input anyway, as more desktop machines are appearing with touchscreens).
+> [!NOTE]
+> If the device is large enough that it's not marked with `Mobi`, you should serve your desktop site (which, as a best practice, should support touch input anyway, as more desktop machines are appearing with touchscreens).

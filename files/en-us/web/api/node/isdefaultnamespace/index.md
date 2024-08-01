@@ -11,7 +11,8 @@ browser-compat: api.Node.isDefaultNamespace
 The **`isDefaultNamespace()`** method of the {{domxref("Node")}} interface accepts a namespace URI as an argument.
 It returns a boolean value that is `true` if the namespace is the default namespace on the given node and `false` if not.
 
-> **Note:** The default namespace of an HTML element is always `""`. For a SVG element, it is set by the `xmlns` attribute.
+> [!NOTE]
+> The default namespace of an HTML element is always `""`. For a SVG element, it is set by the `xmlns` attribute.
 
 ## Syntax
 

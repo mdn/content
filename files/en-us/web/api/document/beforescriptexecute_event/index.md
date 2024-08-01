@@ -50,5 +50,5 @@ Not part of any specification.
 
 ## See also
 
-- {{domxref("Document.afterscriptexecute_event")}}
+- {{domxref("Document.afterscriptexecute_event", "afterscriptexecute")}} event of `Document`
 - {{domxref("Document.currentScript")}}

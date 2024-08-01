@@ -17,7 +17,8 @@ be allowed to proceed for a given element.
 The `nonce` attribute is useful to allowlist specific elements, such as a particular inline script or style elements.
 It can help you to avoid using the [CSP](/en-US/docs/Web/HTTP/CSP) `unsafe-inline` directive, which would allowlist _all_ inline scripts or styles.
 
-> **Note:** Only use `nonce` for cases where you have no way around using unsafe inline script
+> [!NOTE]
+> Only use `nonce` for cases where you have no way around using unsafe inline script
 > or style contents. If you don't need `nonce`, don't use it. If your script is static, you could also use a CSP hash instead.
 > (See usage notes on [unsafe inline script](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_inline_script).)
 > Always try to take full advantage of [CSP](/en-US/docs/Web/HTTP/CSP) protections and avoid nonces or unsafe inline scripts whenever possible.

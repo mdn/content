@@ -12,7 +12,8 @@ browser-compat: api.VRDisplayCapabilities
 
 The **`VRDisplayCapabilities`** interface of the [WebVR API](/en-US/docs/Web/API/WebVR_API) describes the capabilities of a {{domxref("VRDisplay")}} — its features can be used to perform VR device capability tests, for example can it return position information.
 
-> **Note:** This interface was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
+> [!NOTE]
+> This interface was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
 This interface is accessible through the {{domxref("VRDisplay.capabilities")}} property.
 

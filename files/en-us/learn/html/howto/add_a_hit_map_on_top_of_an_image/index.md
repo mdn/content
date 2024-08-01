@@ -26,7 +26,8 @@ Here we go over how to set up an image map, and some downsides to consider first
   </tbody>
 </table>
 
-> **Warning:** This article discusses client-side image maps only. Do not use server-side image maps, which require the user to have a mouse.
+> [!WARNING]
+> This article discusses client-side image maps only. Do not use server-side image maps, which require the user to have a mouse.
 
 ## Image maps, and their drawbacks
 

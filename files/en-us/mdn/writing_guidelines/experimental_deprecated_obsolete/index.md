@@ -20,7 +20,8 @@ For a technology marked **experimental**, one or more of the following condition
 - It is only supported through configuration changes such as preferences or flags, regardless of the number of supported rendering engines.
 - Its defining specification is likely to change significantly in backwards-incompatible ways (i.e., it may break existing code that relies on the feature).
 
-> **Note:** A feature released only on one rendering engine is still considered experimental even if it is available on preview builds of other rendering engines (or by setting a preference or flag).
+> [!NOTE]
+> A feature released only on one rendering engine is still considered experimental even if it is available on preview builds of other rendering engines (or by setting a preference or flag).
 
 The **experimental** status of a technology may expire if one or more of the following conditions is met:
 
@@ -46,7 +47,8 @@ For more information on the definition of **deprecated**, see the [deprecated fl
 On MDN Web Docs, the term **obsolete** was historically used to indicate an API or technology that is not only no longer recommended but is also no longer implemented in browsers.
 Because the distinction between **obsolete** and **deprecated** is not very helpful, we do not use the term **obsolete** on MDN Web Docs anymore.
 
-> **Note:** If you come across any instance of **obsolete**, it should be removed or replaced with the term **deprecated**.
+> [!NOTE]
+> If you come across any instance of **obsolete**, it should be removed or replaced with the term **deprecated**.
 
 ## Guidelines for removing content
 
@@ -54,7 +56,8 @@ Sometimes during the development of a new specification or over the course of th
 
 Here are some guidelines to help you decide what to do when something is removed from the specification.
 
-> **Note:** For the purposes of this discussion, the word "item" is used to mean anything that can be part of a specification: an element or an attribute of an element, an interface or any individual method, a property, or other member of an interface, and so forth.
+> [!NOTE]
+> For the purposes of this discussion, the word "item" is used to mean anything that can be part of a specification: an element or an attribute of an element, an interface or any individual method, a property, or other member of an interface, and so forth.
 
 ### If the item was never implemented
 
@@ -100,7 +103,8 @@ Sometimes, but rarely, there might be a conflict between different specification
 In such cases, consider what the reality is, that is, consider what browsers are actually doing, and write an "important" note to summarize that latest status.
 For example, as of Jan 2019, the [`inputmode`](/en-US/docs/Web/HTML/Global_attributes/inputmode) global attribute has a conflict, which was summarized like so: <!--this warning example for spec conflict does not exist anymore on that page. couldn't find any other examples as well -->
 
-> **Warning:** Specification conflict: The WHATWG specification lists [`inputmode`](https://html.spec.whatwg.org/multipage/interaction.html#attr-inputmode) and modern browsers are working towards supporting it.
+> [!WARNING]
+> Specification conflict: The WHATWG specification lists [`inputmode`](https://html.spec.whatwg.org/multipage/interaction.html#attr-inputmode) and modern browsers are working towards supporting it.
 > The [W3C HTML 5.2 spec](https://html.spec.whatwg.org/multipage/index.html#contents), however, no longer lists it (i.e. marks it as obsolete).
 > You should consider the WHATWG definition as correct, until a consensus is reached.
 

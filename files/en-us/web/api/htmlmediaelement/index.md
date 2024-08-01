@@ -23,7 +23,8 @@ _This interface also inherits properties from its ancestors {{domxref("HTMLEleme
 
   - : A boolean value that reflects the [`autoplay`](/en-US/docs/Web/HTML/Element/video#autoplay) HTML attribute, indicating whether playback should automatically begin as soon as enough media is available to do so without interruption.
 
-    > **Note:** Automatically playing audio when the user doesn't expect or desire it is a poor user experience and should be avoided in most cases, though there are exceptions. See the [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide) for more information. Keep in mind that browsers may ignore autoplay requests, so you should ensure that your code isn't dependent on autoplay working.
+    > [!NOTE]
+    > Automatically playing audio when the user doesn't expect or desire it is a poor user experience and should be avoided in most cases, though there are exceptions. See the [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide) for more information. Keep in mind that browsers may ignore autoplay requests, so you should ensure that your code isn't dependent on autoplay working.
 
 - {{domxref("HTMLMediaElement.buffered")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("TimeRanges")}} object that indicates the ranges of the media source that the browser has buffered (if any) at the moment the `buffered` property is accessed.
@@ -173,8 +174,6 @@ Listen to these events using {{domxref("EventTarget.addEventListener", "addEvent
   - : Fired periodically as the browser loads a resource.
 - {{domxref("HTMLMediaElement.ratechange_event", 'ratechange')}}
   - : Fired when the playback rate has changed.
-- {{domxref("HTMLMediaElement.resize_event", 'resize ')}}
-  - : Fired when one or both of the `videoWidth` and `videoHeight` properties have just been updated.
 - {{domxref("HTMLMediaElement.seeked_event", 'seeked')}}
   - : Fired when a seek operation completes.
 - {{domxref("HTMLMediaElement.seeking_event", 'seeking')}}
