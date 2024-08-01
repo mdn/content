@@ -44,7 +44,8 @@ Permissions-Policy: <directive>=<allowlist>
 
     The values `*` and `()` may only be used on their own, while `self` and `src` may be used in combination with one or more origins.
 
-    > **Note:** Directives have a default allowlist, which is always one of `*`, `self`, or `none` for the `Permissions-Policy` HTTP header, and governs the default behavior if they are not explicitly listed in a policy. These are specified on the individual [directive reference pages](#directives). For `<iframe>` `allow` attributes , the default behavior is always `src`.
+    > [!NOTE]
+    > Directives have a default allowlist, which is always one of `*`, `self`, or `none` for the `Permissions-Policy` HTTP header, and governs the default behavior if they are not explicitly listed in a policy. These are specified on the individual [directive reference pages](#directives). For `<iframe>` `allow` attributes , the default behavior is always `src`.
 
 Where supported, you can include wildcards in Permissions Policy origins. This means that instead of having to explicitly specify several different subdomains in an allowlist, you can specify them all in a single origin with a wildcard.
 
@@ -79,10 +80,6 @@ You can specify
 - {{httpheader('Permissions-Policy/autoplay','autoplay')}} {{Experimental_Inline}}
 
   - : Controls whether the current document is allowed to autoplay media requested through the {{domxref("HTMLMediaElement")}} interface. When this policy is disabled and there were no user gestures, the {{jsxref("Promise")}} returned by {{domxref("HTMLMediaElement.play()")}} will reject with a `NotAllowedError` {{domxref("DOMException")}}. The autoplay attribute on {{HTMLElement("audio")}} and {{HTMLElement("video")}} elements will be ignored.
-
-- {{httpheader('Permissions-Policy/battery','battery')}} {{Experimental_Inline}}
-
-  - : Controls whether the use of the [Battery Status API](/en-US/docs/Web/API/Battery_Status_API) is allowed. When this policy is disabled, the {{JSxRef("Promise")}} returned by {{DOMxRef("Navigator.getBattery","Navigator.getBattery()")}} will reject with a `NotAllowedError` {{DOMxRef("DOMException")}}.
 
 - {{httpheader('Permissions-Policy/bluetooth','bluetooth')}} {{Experimental_Inline}}
 

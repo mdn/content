@@ -26,6 +26,11 @@ requestAnimationFrame(() => reveal());
 window.onpagehide = () => requestAnimationFrame(() => reveal());
 ```
 
+## Constructor
+
+- {{domxref("PageRevealEvent.PageRevealEvent", "PageRevealEvent()")}} {{experimental_inline}}
+  - : Creates a new `PageRevealEvent` object instance.
+
 ## Instance properties
 
 - {{domxref("PageRevealEvent.viewTransition", "viewTransition")}} {{ReadOnlyInline}} {{Experimental_Inline}}
@@ -84,7 +89,8 @@ window.addEventListener("pagereveal", async (e) => {
 });
 ```
 
-> **Note:** See [List of Chrome DevRel team members](https://view-transitions.netlify.app/profiles/mpa/) for the live demo this code is taken from.
+> [!NOTE]
+> See [List of Chrome DevRel team members](https://view-transitions.netlify.app/profiles/mpa/) for the live demo this code is taken from.
 
 ## Specifications
 

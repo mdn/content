@@ -11,7 +11,8 @@ The **`border-bottom-style`** [CSS](/en-US/docs/Web/CSS) property sets the line 
 
 {{EmbedInteractiveExample("pages/css/border-bottom-style.html")}}
 
-> **Note:** The specification doesn't define how borders of different styles connect in the corners.
+> [!NOTE]
+> The specification doesn't define how borders of different styles connect in the corners.
 
 ## Syntax
 

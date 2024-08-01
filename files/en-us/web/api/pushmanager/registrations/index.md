@@ -14,7 +14,8 @@ browser-compat: api.PushManager.registrations
 The **`registrations`** method is used to ask the system about
 existing push endpoint registrations.
 
-> **Note:** This method has been superseded by the {{domxref("PushManager.getSubscription()")}} method.
+> [!NOTE]
+> This method has been superseded by the {{domxref("PushManager.getSubscription()")}} method.
 
 ## Syntax
 

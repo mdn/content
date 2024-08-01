@@ -9,7 +9,8 @@ browser-compat: webextensions.api.proxy.settings
 
 A {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} object used to change the browser's proxy settings.
 
-> **Note:** Changing proxy settings requires private browsing window access because proxy settings affect private and non-private windows. Whether an extension can access private browsing windows is under user control. See [Extensions in Private Browsing](https://support.mozilla.org/en-US/kb/extensions-private-browsing) for details. Your extension can check whether it has access to private browsing windows using {{WebExtAPIRef("extension.isAllowedIncognitoAccess")}}. If your extension doesn't have private window permission, calls to `proxy.settings.set()` throw an exception.
+> [!NOTE]
+> Changing proxy settings requires private browsing window access because proxy settings affect private and non-private windows. Whether an extension can access private browsing windows is under user control. See [Extensions in Private Browsing](https://support.mozilla.org/en-US/kb/extensions-private-browsing) for details. Your extension can check whether it has access to private browsing windows using {{WebExtAPIRef("extension.isAllowedIncognitoAccess")}}. If your extension doesn't have private window permission, calls to `proxy.settings.set()` throw an exception.
 
 The underlying value is an object. When setting this object, all properties are optional. Any omitted properties are reset to their default value.
 

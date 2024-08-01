@@ -47,7 +47,8 @@ MDN Web Docs is very good for both types — the area you are currently in is gr
 
 There are also several other great resources on the web, some of which we'll mention below.
 
-> **Note:** The above text should have given you an important fact — you aren't expected to remember everything! Professional web developers use tools like MDN Web Docs to look up things they have forgotten all the time. As you'll discover, learning web development is more about problem-solving and learning patterns than it is about learning lots of syntaxes.
+> [!NOTE]
+> The above text should have given you an important fact — you aren't expected to remember everything! Professional web developers use tools like MDN Web Docs to look up things they have forgotten all the time. As you'll discover, learning web development is more about problem-solving and learning patterns than it is about learning lots of syntaxes.
 
 #### Videos
 
@@ -59,7 +60,8 @@ You might be the kind of person that prefers minimal instructions and would pref
 
 Many MDN Web docs reference pages provide interactive examples too, where you can alter the code, see how the live result changes, and explore the example in the [MDN Playground](/en-US/play). And there is also nothing wrong with creating your own code examples on your computer, or in an online code editor like [JSFiddle](https://jsfiddle.net/), [Codepen](https://codepen.io/), or [Glitch](https://glitch.com/). In fact, you'll be called to do so as part of this course when you are learning!
 
-> **Note:** Online code editors are also really useful for sharing code you've written, for example, if you are collaborating on learning with someone else who isn't in the same location, or are sending it to someone to ask for help with it. You can share the web address of the example with them so they can see it.
+> [!NOTE]
+> Online code editors are also really useful for sharing code you've written, for example, if you are collaborating on learning with someone else who isn't in the same location, or are sending it to someone to ask for help with it. You can share the web address of the example with them so they can see it.
 >
 > You might favor one learning method over the others, but realistically a hybrid approach is probably what you will end up with. And you'll probably come up with other methods than the three we covered above.
 
@@ -201,7 +203,7 @@ When you find solutions to such problems, it is worth writing down notes on what
 
 In addition, the web has [developer tools](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) that allow you to look at the code used to build any site on the web. If you don't have a solution to hand, one good research method is to find websites with similar features in the wild, and find out how they did it.
 
-> **Note:**
+> [!NOTE]
 > See how we talked about the problem we are trying to solve first, and the technology used to solve it second. This is pretty much always the best way to do it — don't start with a cool new technology that you want to use, and try to shoehorn it into the use case.
 > The simplest solution is often the best.
 

@@ -28,12 +28,12 @@ A {{Glossary("user agent")}} calculates the intrinsic width and height of the el
 
 If the element is currently displaying the poster frame rather than rendered video, the poster frame's intrinsic size is considered to be the size of the `<video>` element.
 
-If at any time the intrinsic size of the media changes and the element's {{domxref("HTMLMediaElement.readyState", "readyState")}} isn't `HAVE_NOTHING`, a {{domxref("HTMLMediaElement.resize", "resize")}} event will be sent to the `<video>` element.
+If at any time the intrinsic size of the media changes and the element's {{domxref("HTMLMediaElement.readyState", "readyState")}} isn't `HAVE_NOTHING`, a {{domxref("HTMLVideoElement.resize_event", "resize")}} event will be sent to the `<video>` element.
 This can happen when the element switches from displaying the poster frame to displaying video content, or when the displayed video track changes.
 
 ## Examples
 
-This example creates a handler for the {{domxref("HTMLVideoElement.resize", "resize")}} event that resizes the {{HTMLElement("video")}} element to match the intrinsic size of its contents.
+This example creates a handler for the {{domxref("HTMLVideoElement.resize_event", "resize")}} event that resizes the {{HTMLElement("video")}} element to match the intrinsic size of its contents.
 
 ```js
 let v = document.getElementById("myVideo");

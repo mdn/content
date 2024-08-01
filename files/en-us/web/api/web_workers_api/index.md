@@ -19,7 +19,7 @@ Data is sent between workers and the main thread via a system of messages — bo
 
 Workers may in turn spawn new workers, as long as those workers are hosted within the same {{glossary("origin")}} as the parent page.
 
-In addition, workers can make network requests using the {{domxref("fetch()")}} or {{domxref("XMLHttpRequest")}} APIs (although note that the {{domxref("XMLHttpRequest.responseXML", "responseXML")}} attribute of `XMLHttpRequest` will always be `null`).
+In addition, workers can make network requests using the {{domxref("WorkerGlobalScope/fetch", "fetch()")}} or {{domxref("XMLHttpRequest")}} APIs (although note that the {{domxref("XMLHttpRequest.responseXML", "responseXML")}} attribute of `XMLHttpRequest` will always be `null`).
 
 ### Worker types
 
@@ -29,7 +29,8 @@ There are a number of different types of workers:
 - {{domxref("SharedWorker", "Shared workers", "", "nocode")}} are workers that can be utilized by multiple scripts running in different windows, IFrames, etc., as long as they are in the same domain as the worker. They are a little more complex than dedicated workers — scripts must communicate via an active port.
 - {{domxref("Service Worker API", "Service Workers", "", "nocode")}} essentially act as proxy servers that sit between web applications, the browser, and the network (when available). They are intended, among other things, to enable the creation of effective offline experiences, intercept network requests and take appropriate action based on whether the network is available, and update assets residing on the server. They will also allow access to push notifications and background sync APIs.
 
-> **Note:** As per the [Web workers Spec](https://html.spec.whatwg.org/multipage/workers.html#runtime-script-errors-2), worker error events should not bubble (see [Firefox bug 1188141](https://bugzil.la/1188141)). This has been implemented in Firefox 42.
+> [!NOTE]
+> As per the [Web workers Spec](https://html.spec.whatwg.org/multipage/workers.html#runtime-script-errors-2), worker error events should not bubble (see [Firefox bug 1188141](https://bugzil.la/1188141)). This has been implemented in Firefox 42.
 
 ### Worker global contexts and functions
 
@@ -47,7 +48,7 @@ Some of the functions (a subset) that are common to all workers and to the main 
 - {{domxref("clearTimeout()")}}
 - {{domxref("createImageBitmap()")}}
 - {{domxref("WorkerGlobalScope.dump()", "dump()")}} {{non-standard_inline}}
-- {{domxref("fetch()")}}
+- {{domxref("WorkerGlobalScope/fetch", "fetch()")}}
 - {{domxref("queueMicrotask()")}}
 - {{domxref("reportError()")}}
 - {{domxref("setInterval()")}}
@@ -63,7 +64,8 @@ The following functions are **only** available to workers:
 
 ### Supported Web APIs
 
-> **Note:** If a listed API is supported by a platform in a particular version, then it can generally be assumed to be available in web workers. You can also test support for a particular object/function using the site: <https://worker-playground.glitch.me/>
+> [!NOTE]
+> If a listed API is supported by a platform in a particular version, then it can generally be assumed to be available in web workers. You can also test support for a particular object/function using the site: <https://worker-playground.glitch.me/>
 
 The following Web APIs are available to workers:
 

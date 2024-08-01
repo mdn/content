@@ -18,7 +18,8 @@ redirections needed to fetch the resource.
 
 This property is not available in workers.
 
-> **Warning:** This property is deprecated in the [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete). Please use the
+> [!WARNING]
+> This property is deprecated in the [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete). Please use the
 > {{domxref("PerformanceNavigationTiming")}} interface instead.
 
 ## Value

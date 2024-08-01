@@ -41,7 +41,8 @@ instead of `""` if the `element` has an empty [`class` attribute](/en-US/docs/We
 elm.setAttribute("class", elm.getAttribute("class"));
 ```
 
-> **Note:** The `class` is an **HTML Attribute**, while the
+> [!NOTE]
+> The `class` is an **HTML Attribute**, while the
 > `className` is a **DOM Property**.
 
 ## Specifications

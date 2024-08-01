@@ -52,7 +52,8 @@ There are two types of audio channel. Standard audio channels are used to presen
 
 Monophonic audio has one channel, stereo sound has two channels, 5.1 surround sound has 6 channels (five standard and one LFE), and so forth. Each audio frame is a data record that contains the samples for all of the channels available in an audio signal. The size of an audio frame is calculated by multiplying the sample size in bytes by the number of channels, so a single frame of stereo 16-bit audio is 4 bytes long and a single frame of 5.1 floating-point audio is 24 (4 bytes per sample multiplied by 6 channels).
 
-> **Note:** Some codecs will actually separate the left and right channels, storing them in separate blocks within their data structure. However, an audio frame is always comprised of all of the data for all available channels.
+> [!NOTE]
+> Some codecs will actually separate the left and right channels, storing them in separate blocks within their data structure. However, an audio frame is always comprised of all of the data for all available channels.
 
 The number of frames that comprise a single second of audio varies depending on the sample rate used when recording the sound. Since the sample rate corresponds to the number of "slices" a sound wave is divided into for each second of time, it's sometimes thought of as a frequency (in the sense that it's a description of something that repeats periodically, not in terms of actual audio frequency), and the samples per second measurement therefore uses the [Hertz](https://en.wikipedia.org/wiki/Hertz) as its unit.
 
@@ -91,7 +92,8 @@ At 192 kBps, lower-end networks are already going to be strained just by a singl
 
 To solve this problem, the audio must be made smaller using compression.
 
-> **Note:** Network bandwidth is obviously not the same thing as audio bandwidth, which is discussed in [Sampling audio](#sampling_audio), above.
+> [!NOTE]
+> Network bandwidth is obviously not the same thing as audio bandwidth, which is discussed in [Sampling audio](#sampling_audio), above.
 
 ## Audio compression basics
 
@@ -117,7 +119,8 @@ All of this means there is a fundamental question that has to be asked and answe
 
 If loss of detail and potentially fidelity is unacceptable or undesirable, a **lossless** codec is preferred. On the other hand, if some degree of reduction of audio fidelity is okay, a **lossy** codec can be used. Generally, lossy compression results in significantly smaller output than lossless compression methods; also, many lossy codecs are excellent, with the loss in quality and detail being difficult or even impossible for the average listener to discern.
 
-> **Note:** While a high-quality lossy compression algorithm's effect on sound quality may be difficult for the average person to detect, certain people have exceptionally good hearing, or are particularly adept at noticing the kinds of changes introduced to music by lossy compression techniques.
+> [!NOTE]
+> While a high-quality lossy compression algorithm's effect on sound quality may be difficult for the average person to detect, certain people have exceptionally good hearing, or are particularly adept at noticing the kinds of changes introduced to music by lossy compression techniques.
 
 The majority of audio codecs use some form of lossy compression, because of the better compression ratio those algorithms offer. Whereas lossless compression algorithms usually manage no better than a 40-50% of the size of the original, uncompressed sound data, modern lossy compression algorithms can reduce the size of the audio to between 5-20% of the original size, depending on the complexity of the audio. The vastly superior compression ratios possible with lossy compression usually make it a compelling choice, and adequate or excellent audio quality is possible with well-chosen codec configurations.
 
@@ -143,7 +146,8 @@ Lossy compression algorithms generally use psychoacoustics to determine which co
 
 The type of content being encoded can affect the choice of codec. In particular, the waveform for music is almost always more complex than that of an audio sample that contains only human voices. In addition, the human voice uses a small portion of the range of audio frequencies the human ear can detect.
 
-> **Note:** Telephone networks, which were originally designed specifically to transmit human voices, can only carry audio (or any other kind of signal) in the frequency band from 300 Hz to 3,000 Hz. This doesn't quite cover the entire range of human speech at the low end, but enough of the waveform is available that the human ear and brain compensate easily. This also means that humans are generally acclimated to hearing speech constrained to so narrow an audio bandwidth.
+> [!NOTE]
+> Telephone networks, which were originally designed specifically to transmit human voices, can only carry audio (or any other kind of signal) in the frequency band from 300 Hz to 3,000 Hz. This doesn't quite cover the entire range of human speech at the low end, but enough of the waveform is available that the human ear and brain compensate easily. This also means that humans are generally acclimated to hearing speech constrained to so narrow an audio bandwidth.
 
 Human speech uses a relatively narrow frequency band (around 300 Hz to 18,000 Hz, though the exact range varies from person to person due to factors including gender). In addition, the vast majority of human speech sounds tend to lie between 500 Hz and 3,000 Hz or so, making it possible to drop substantial portions of the overall waveform without compromising the listener's ability to understand the words being said. You can even adjust the audio bandwidth to factor in the pitch of the individual speaker's voice.
 
@@ -163,7 +167,8 @@ On top of simplifying the sound through psychoacoustic analysis, codecs use othe
 
 Importantly, codecs do all the hard work for you. It's why so much engineering and scientific study goes into the creation of new algorithms and codecs. All you need to do is consider the options and your use case, then choose the appropriate codec for your needs.
 
-> **Note:** For a more detailed guide to choosing audio codecs, see [Choosing an audio codec](/en-US/docs/Web/Media/Formats/Audio_codecs#choosing_an_audio_codec).
+> [!NOTE]
+> For a more detailed guide to choosing audio codecs, see [Choosing an audio codec](/en-US/docs/Web/Media/Formats/Audio_codecs#choosing_an_audio_codec).
 
 ## Lossless encoder parameters
 

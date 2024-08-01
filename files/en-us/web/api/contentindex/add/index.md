@@ -36,7 +36,7 @@ add(contentDescription)
     - `url`
       - : A {{jsxref('String')}} containing the URL of the corresponding
         HTML document. Needs to be under the scope of the current
-        {{domxref('ServiceWorker','service worker')}}.
+        [service worker](/en-US/docs/Web/API/ServiceWorker).
     - `category` {{Optional_Inline}}
 
       - : A {{jsxref('String')}} defining the

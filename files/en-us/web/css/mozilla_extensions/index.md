@@ -10,7 +10,8 @@ status:
 
 Firefox supports a number of _Mozilla extensions to [CSS](/en-US/docs/Web/CSS)_, including properties, values, pseudo-elements and pseudo-classes, at-rules, and media queries. These extensions are prefixed with `-moz-`.
 
-> **Note:** These extensions are mostly experimental or deprecated but kept for backward compatibility. Avoid using them on production websites.
+> [!NOTE]
+> These extensions are mostly experimental or deprecated but kept for backward compatibility. Avoid using them on production websites.
 
 ## Mozilla-only properties
 
@@ -31,7 +32,8 @@ Firefox supports a number of _Mozilla extensions to [CSS](/en-US/docs/Web/CSS)_,
 
 ## Formerly proprietary properties that are now standard
 
-> **Note:** To maximize the compatibility of your CSS, you should use the unprefixed standard properties instead of the prefixed ones listed below. Once a given property is standardized and implemented without the prefix, the prefixed version is typically dropped after a while.
+> [!NOTE]
+> To maximize the compatibility of your CSS, you should use the unprefixed standard properties instead of the prefixed ones listed below. Once a given property is standardized and implemented without the prefix, the prefixed version is typically dropped after a while.
 
 ### A
 
@@ -441,8 +443,8 @@ Properties: {{CSSxRef("width")}}, {{CSSxRef("min-width")}}, and {{CSSxRef("max-w
 - {{CSSxRef("::-moz-list-bullet")}}
 - {{CSSxRef("::-moz-list-number")}}
 - {{CSSxRef(":-moz-loading")}}
-- {{CSSxRef(":dir_ltr", ":-moz-locale-dir(ltr)")}}
-- {{CSSxRef(":dir_rtl", ":-moz-locale-dir(rtl)")}}
+- {{CSSxRef(":-moz-locale-dir_ltr", ":-moz-locale-dir(ltr)")}}
+- {{CSSxRef(":-moz-locale-dir_rtl", ":-moz-locale-dir(rtl)")}}
 - {{CSSxRef(":-moz-lwtheme")}}
 - {{CSSxRef(":-moz-lwtheme-brighttext")}}
 - {{CSSxRef(":-moz-lwtheme-darktext")}}

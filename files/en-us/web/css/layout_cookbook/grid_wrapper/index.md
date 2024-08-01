@@ -16,7 +16,7 @@ Items placed on the grid should be able to align to a horizontally-centered max-
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/grid-wrapper.html", '100%', 1100)}}
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/grid-wrapper--download.html)
 

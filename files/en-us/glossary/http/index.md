@@ -10,7 +10,7 @@ The HyperText Transfer Protocol (**HTTP**) is the underlying network {{glossary(
 
 As part of a {{glossary("URI")}}, the "http" within "http\://example.com/" is called a "scheme". Resources using the "http" schema are typically transported over unencrypted connections using the HTTP protocol. The "https" scheme (as in "https\://developer.mozilla.org") indicates that a resource is transported using the HTTP protocol, but over a secure {{glossary("TLS")}} channel.
 
-HTTP is textual (all communication is done in plain text) and stateless (no communication is aware of previous communications). This property makes it ideal for humans to read documents (websites) on the world wide web. However, HTTP can also be used as a basis for {{glossary("REST")}} web services from server to server or {{domxref("fetch()")}} requests within websites to make them more dynamic.
+HTTP is textual (all communication is done in plain text) and stateless (no communication is aware of previous communications). This property makes it ideal for humans to read documents (websites) on the world wide web. However, HTTP can also be used as a basis for {{glossary("REST")}} web services from server to server or {{domxref("Window/fetch", "fetch()")}} requests within websites to make them more dynamic.
 
 ## See also
 

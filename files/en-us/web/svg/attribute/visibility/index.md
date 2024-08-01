@@ -9,11 +9,13 @@ browser-compat: svg.global_attributes.visibility
 
 The **`visibility`** attribute lets you control the visibility of graphical elements. With a value of `hidden` or `collapse` the current graphics element is invisible.
 
-> **Note:** If the `visibility` attribute is set to `hidden` on a text element, then the text is invisible but still takes up space in text layout calculations.
+> [!NOTE]
+> If the `visibility` attribute is set to `hidden` on a text element, then the text is invisible but still takes up space in text layout calculations.
 
 Depending on the value of attribute {{SVGAttr("pointer-events")}}, graphics elements which have their `visibility` attribute set to `hidden` still might receive events.
 
-> **Note:** As a presentation attribute, `visibility` can be used as a CSS property. See the {{cssxref("visibility", "CSS visibility")}} property for more information.
+> [!NOTE]
+> As a presentation attribute, `visibility` can be used as a CSS property. See the CSS {{cssxref("visibility")}} property for more information.
 
 ## Elements
 
@@ -167,4 +169,4 @@ button.addEventListener("click", (evt) => {
 ## See also
 
 - {{SVGAttr("display")}} attribute
-- {{cssxref("visibility", "CSS visibility")}}
+- {{cssxref("visibility")}}

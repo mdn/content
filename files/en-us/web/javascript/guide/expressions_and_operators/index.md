@@ -712,7 +712,7 @@ The logical operators are described in the following table.
       </td>
       <td><code>!expr</code></td>
       <td>
-        Returns <code>false</code> if its single operand that can be converted
+        Returns <code>false</code> if its single operand can be converted
         to <code>true</code>; otherwise, returns <code>true</code>.
       </td>
     </tr>
@@ -1035,10 +1035,10 @@ The [`instanceof` operator](/en-US/docs/Web/JavaScript/Reference/Operators/insta
 if the specified object is of the specified object type. The syntax is:
 
 ```js-nolint
-objectName instanceof objectType
+object instanceof objectType
 ```
 
-where `objectName` is the name of the object to compare to `objectType`, and `objectType` is an object type, such as {{jsxref("Date")}} or {{jsxref("Array")}}.
+where `object` is the object to test against `objectType`, and `objectType` is a constructor representing a type, such as {{jsxref("Date")}} or {{jsxref("Array")}}.
 
 Use `instanceof` when you need to confirm the type of an object at runtime.
 For example, when catching exceptions, you can branch to different exception-handling code depending on the type of exception thrown.

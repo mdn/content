@@ -37,7 +37,8 @@ new WebAssembly.Memory(memoryDescriptor)
       - : A boolean value that defines whether the memory is a shared memory or not. If
         set to `true`, it is a shared memory. The default is `false`.
 
-> **Note:** A WebAssembly page has a constant size of 65,536 bytes, i.e., 64KiB.
+> [!NOTE]
+> A WebAssembly page has a constant size of 65,536 bytes, i.e., 64KiB.
 
 ### Exceptions
 

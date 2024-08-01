@@ -39,7 +39,8 @@ properties the website or app most recently set using
 in the returned object are listed in the same order as when they were set, and only
 properties specifically set by the site or app are included.
 
-> **Note:** The returned set of constraints doesn't necessarily describe
+> [!NOTE]
+> The returned set of constraints doesn't necessarily describe
 > the actual state of the media. Even if any of the constraints couldn't be met, they
 > are still included in the returned object as originally set by the site's code. To get
 > the currently active settings for all constrainable properties, you should instead

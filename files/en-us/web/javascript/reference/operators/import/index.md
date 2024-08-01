@@ -90,7 +90,8 @@ import("/my-module.js").then((mod2) => {
 });
 ```
 
-> **Warning:** Do not export a function called `then()` from a module. This will cause the module to behave differently when imported dynamically than when imported statically.
+> [!WARNING]
+> Do not export a function called `then()` from a module. This will cause the module to behave differently when imported dynamically than when imported statically.
 
 ## Examples
 
@@ -111,7 +112,7 @@ imports) only.
 
 ### Importing defaults
 
-You need to destructure and rename the "default" key from the returned object.
+If you are destructuring the imported module namespace object, then you must rename the `default` key because `default` is a reserved word.
 
 ```js
 (async () => {

@@ -16,7 +16,8 @@ These can be used, for example, to add closed captions and subtitle text overlay
 The WebVTT files associated with a media element are added using the {{HTMLElement("track")}} element — see [Displaying VTT content defined in a file](/en-US/docs/Web/API/WebVTT_API#displaying_vtt_content_defined_in_a_file).
 A media element can be associated with a number of files, each representing different kinds of timed data, such as closed captions, subtitles, or chapter headings, translated into different locales.
 
-> **Note:** WebVTT content can also be created and managed programmatically using the [WebVTT API](/en-US/docs/Web/API/WebVTT_API).
+> [!NOTE]
+> WebVTT content can also be created and managed programmatically using the [WebVTT API](/en-US/docs/Web/API/WebVTT_API).
 
 ## Overview
 
@@ -423,7 +424,8 @@ NOTE TODO I might add a line to indicate work that still has to be done.
 `STYLE` blocks are optional sections that can be used to embed CSS styling of cues within a WebVTT file.
 Note that these are used to style the appearance and size of the cues, but not their position and layout, which are controlled by the [Cue settings](#cue_settings).
 
-> **Note:** WebVTT cues can also be matched by CSS styles loaded by the associated [document embedding the video/audio element](/en-US/docs/Web/API/WebVTT_API#styling_webvtt_in_html_or_a_stylesheet).
+> [!NOTE]
+> WebVTT cues can also be matched by CSS styles loaded by the associated [document embedding the video/audio element](/en-US/docs/Web/API/WebVTT_API#styling_webvtt_in_html_or_a_stylesheet).
 
 `STYLE` blocks must appear before any cue blocks in the file.
 
@@ -461,7 +463,8 @@ STYLE
 NOTE style blocks cannot appear after the first cue.
 ```
 
-> **Note:** There are live examples demonstrating many of the following cases in [More cue styling examples](/en-US/docs/Web/API/WebVTT_API#more_cue_styling_examples) in _WebVTT API_.
+> [!NOTE]
+> There are live examples demonstrating many of the following cases in [More cue styling examples](/en-US/docs/Web/API/WebVTT_API#more_cue_styling_examples) in _WebVTT API_.
 
 ### Match all cue payload text
 
@@ -593,7 +596,8 @@ Other pseudo-classes such as `link`, `nth-last-child`, and `nth-child` should wo
 
 Match against a particular cue `id` by specifying the `id` inside {{cssxref("::cue()")}}.
 
-> **Note:** At time of writing this does not appear to be supported in any of the main browsers.
+> [!NOTE]
+> At time of writing this does not appear to be supported in any of the main browsers.
 
 For example, the following WebVTT file should style the cue with identifier `cue1` in green.
 

@@ -48,7 +48,8 @@ where `<policy-directive>` consists of:
   - : Defines the valid sources for [web workers](/en-US/docs/Web/API/Web_Workers_API) and nested browsing contexts loaded using elements such as
     {{HTMLElement("frame")}} and {{HTMLElement("iframe")}}.
 
-    > **Warning:** Instead of **`child-src`**,
+    > [!WARNING]
+    > Instead of **`child-src`**,
     > if you want to regulate nested browsing contexts and workers,
     > you should use the {{CSP("frame-src")}} and {{CSP("worker-src")}} directives, respectively.
 
@@ -74,7 +75,8 @@ where `<policy-directive>` consists of:
 
   - : Specifies valid sources for the {{HTMLElement("object")}} and {{HTMLElement("embed")}} elements.
 
-    > **Note:** Elements controlled by `object-src` are perhaps
+    > [!NOTE]
+    > Elements controlled by `object-src` are perhaps
     > coincidentally considered legacy HTML elements and are not receiving new standardized
     > features (such as the security attributes `sandbox` or `allow`
     > for `<iframe>`). Therefore it is **recommended** to
@@ -135,7 +137,8 @@ Reporting directives control the reporting process of CSP violations. See also t
     These violation reports consist of {{Glossary("JSON")}} documents sent via an HTTP
     `POST` request to the specified URI.
 
-    > **Warning:** Though the {{CSP("report-to")}} directive is intended
+    > [!WARNING]
+    > Though the {{CSP("report-to")}} directive is intended
     > to replace the deprecated **`report-uri`** directive,
     > {{CSP("report-to")}} is not supported in most browsers yet.
     > So for compatibility with current browsers

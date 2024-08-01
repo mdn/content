@@ -13,7 +13,8 @@ browser-compat: api.CSSValue.cssText
 The **`cssText`** property of the {{domxref("CSSValue")}}
 interface represents the current computed CSS property value.
 
-> **Note:** This property was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
+> [!NOTE]
+> This property was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
 > not implement it.
 >
 > To achieve your purpose, you can use:

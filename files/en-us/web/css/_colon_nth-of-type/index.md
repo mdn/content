@@ -69,7 +69,8 @@ p.fancy:nth-of-type(2n + 1) {
 
 {{EmbedLiveSample('Basic_example', 250, 250)}}
 
-> **Note:** There is no way to select the nth-of-class using this selector. The selector looks at the type only when creating the list of matches. You can however apply CSS to an element based on `:nth-of-type` location **and** a class, as shown in the example above.
+> [!NOTE]
+> There is no way to select the nth-of-class using this selector. The selector looks at the type only when creating the list of matches. You can however apply CSS to an element based on `:nth-of-type` location **and** a class, as shown in the example above.
 
 ## Specifications
 

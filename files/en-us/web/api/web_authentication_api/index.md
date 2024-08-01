@@ -28,7 +28,8 @@ Many websites already have pages that allow users to register new accounts or si
 
 In their most basic forms, both `create()` and `get()` receive a very large random number called the "challenge" from the server and return the challenge signed by the private key back to the server. This proves to the server that a user has the private key required for authentication without revealing any secrets over the network.
 
-> **Note:** The "challenge" must be a buffer of random information at least 16 bytes in size.
+> [!NOTE]
+> The "challenge" must be a buffer of random information at least 16 bytes in size.
 
 ### Creating a key pair and registering a user
 
@@ -36,7 +37,8 @@ To illustrate how the credential creation process works, let's describe the typi
 
 1. The relying party server sends user and relying party information to the web app handling the registration process, along with the "challenge", using an appropriate secure mechanism (for example [Fetch](/en-US/docs/Web/API/Fetch_API) or [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest)).
 
-   > **Note:** The format for sharing information between the relying party server and the web app is up to the application.
+   > [!NOTE]
+   > The format for sharing information between the relying party server and the web app is up to the application.
    > A recommended approach is to exchange {{glossary("JSON type representation")}} objects for credentials and credential options.
    > Convenience methods have been created in `PublicKeyCredential` for converting from the JSON representations to the form required by the authentication APIs: {{domxref("PublicKeyCredential.parseCreationOptionsFromJSON_static", "parseCreationOptionsFromJSON()")}}, {{domxref("PublicKeyCredential.parseRequestOptionsFromJSON_static", "parseRequestOptionsFromJSON()")}} and {{domxref("PublicKeyCredential.toJSON()")}}.
 
@@ -71,7 +73,8 @@ To illustrate how the credential creation process works, let's describe the typi
    2. Ensuring that the origin was the origin expected.
    3. Validating that the signature and attestation are using the correct certificate chain for the specific model of the authenticator used to generated the key par in the first place.
 
-> **Warning:** Attestation provides a way for a relying party to determine the provenance of an authenticator. Relying parties should not attempt to maintain allowlists of authenticators.
+> [!WARNING]
+> Attestation provides a way for a relying party to determine the provenance of an authenticator. Relying parties should not attempt to maintain allowlists of authenticators.
 
 ### Authenticating a user
 
@@ -126,7 +129,8 @@ In addition, `get()` can be used in nested browsing contexts loaded from the sam
 `get()` and `create()` can be used in nested browsing contexts loaded from the different origins to the top-most document (i.e. in cross-origin `<iframes>`), if allowed by the [`publickey-credentials-get`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/publickey-credentials-get) and [`publickey-credentials-create`](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/publickey-credentials-create) `Permission-Policy` directives, respectively.
 For cross-origin `create()` calls, where the permission was granted by [`allow=` on an iframe](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#iframes), the frame must also have {{glossary("Transient activation")}}.
 
-> **Note:** Where a policy forbids use of these methods, the {{jsxref("Promise", "promises", "", 1)}} returned by them will reject with a `NotAllowedError` {{domxref("DOMException")}}.
+> [!NOTE]
+> Where a policy forbids use of these methods, the {{jsxref("Promise", "promises", "", 1)}} returned by them will reject with a `NotAllowedError` {{domxref("DOMException")}}.
 
 ### Basic access control
 
@@ -206,7 +210,8 @@ If you wish to authenticate with `get()` or `create()` in an `<iframe>`, there a
 
 ### Usage example
 
-> **Note:** For security reasons, the Web Authentication API calls ({{domxref("CredentialsContainer.create", "create()")}} and {{domxref("CredentialsContainer.get","get()")}}) are canceled if the browser window loses focus while the call is pending.
+> [!NOTE]
+> For security reasons, the Web Authentication API calls ({{domxref("CredentialsContainer.create", "create()")}} and {{domxref("CredentialsContainer.get","get()")}}) are canceled if the browser window loses focus while the call is pending.
 
 ```js
 // sample arguments for registration

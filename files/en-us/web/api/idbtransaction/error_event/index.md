@@ -10,7 +10,8 @@ browser-compat: api.IDBTransaction.error_event
 
 The `error` event is fired on `IDBTransaction` when a request returns an error and the event bubbles up to the transaction object.
 
-> **Note:** To handle all the ways a transaction can fail, consider listening for the {{domxref("IDBTransaction.abort_event", "abort")}} event instead.
+> [!NOTE]
+> To handle all the ways a transaction can fail, consider listening for the {{domxref("IDBTransaction.abort_event", "abort")}} event instead.
 
 ## Syntax
 

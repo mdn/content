@@ -291,7 +291,8 @@ As previously seen, the overbar of the `<msqrt>` and `<mroot>` elements stretche
 
 {{ EmbedLiveSample('Stretchy_radical_symbols', 700, 200, "", "") }}
 
-> **Warning:** Special [math fonts](/en-US/docs/Web/MathML/Fonts) are generally required to make that stretching possible, the previous example relies on [web fonts](/en-US/docs/Learn/CSS/Styling_text/Web_fonts).
+> [!WARNING]
+> Special [math fonts](/en-US/docs/Web/MathML/Fonts) are generally required to make that stretching possible, the previous example relies on [web fonts](/en-US/docs/Learn/CSS/Styling_text/Web_fonts).
 
 ## Fractions without bar
 
@@ -325,7 +326,8 @@ Some mathematical concepts are sometimes written using fraction-like notations s
 
 {{ EmbedLiveSample('Fraction_without_bar', 700, 200, "", "") }}
 
-> **Note:** Although the `linethickness` attribute can be used to specify an arbitrary thickness, it is better to keep the default value, which is calculated from parameters specified in the math font.
+> [!NOTE]
+> Although the `linethickness` attribute can be used to specify an arbitrary thickness, it is better to keep the default value, which is calculated from parameters specified in the math font.
 
 ## Summary
 

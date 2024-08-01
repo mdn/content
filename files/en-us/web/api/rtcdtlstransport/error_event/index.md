@@ -56,7 +56,8 @@ transport.onerror = (ev) => {
 };
 ```
 
-> **Note:** Since `RTCError` is not one of the legacy errors, the value of {{domxref("DOMException.code", "code")}} is always 0.
+> [!NOTE]
+> Since `RTCError` is not one of the legacy errors, the value of {{domxref("DOMException.code", "code")}} is always 0.
 
 ## Specifications
 

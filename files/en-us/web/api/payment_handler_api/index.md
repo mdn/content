@@ -128,7 +128,8 @@ When the {{domxref("PaymentRequest.show()")}} method is invoked by the merchant 
 - If there are multiple payment app options, a list of options is presented to the user for them to choose from. Selecting a payment app will start the payment flow, which causes the browser to Just-In-Time (JIT) install the web app if necessary, registering the service worker specified in the [`serviceworker`](/en-US/docs/Web/Manifest/serviceworker) member so it can handle the payment.
 - If there is only one payment app option, the {{domxref("PaymentRequest.show()")}} method will start the payment flow with this payment app, JIT-installing it if necessary, as described above. This is an optimization to avoid presenting the user with a list that contains only one payment app choice.
 
-> **Note:** If [`prefer_related_applications`](/en-US/docs/Web/Manifest/prefer_related_applications) is set to `true` in the payment app manifest, the browser will launch the platform-specific payment app specified in [`related_applications`](/en-US/docs/Web/Manifest/related_applications) to handle the payment (if it is available) instead of the web payment app.
+> [!NOTE]
+> If [`prefer_related_applications`](/en-US/docs/Web/Manifest/prefer_related_applications) is set to `true` in the payment app manifest, the browser will launch the platform-specific payment app specified in [`related_applications`](/en-US/docs/Web/Manifest/related_applications) to handle the payment (if it is available) instead of the web payment app.
 
 See [Serve a web app manifest](https://web.dev/articles/setting-up-a-payment-method#step_3_serve_a_web_app_manifest) for more details.
 
@@ -147,7 +148,7 @@ async function checkCanMakePayment() {
 }
 ```
 
-The Payment Handler API adds an additional mechanism to prepare for handling a payment. The {{domxref("ServiceWorkerGlobalScope.canmakepayment_event", "canmakepayment")}} event is fired on a payment app's service worker to check whether it is ready to handle a payment. Specifically, it is fired when the merchant website calls {{domxref("PaymentRequest.PaymentRequest", "new PaymentRequest()")}}. The service worker can then use the {{domxref("CanMakePaymentEvent.respondWith()")}} method to respond appropriately:
+The Payment Handler API adds an additional mechanism to prepare for handling a payment. The {{domxref("ServiceWorkerGlobalScope.canmakepayment_event", "canmakepayment")}} event is fired on a payment app's service worker to check whether it is ready to handle a payment. Specifically, it is fired when the merchant website calls the {{domxref("PaymentRequest.PaymentRequest", "PaymentRequest()")}} constructor. The service worker can then use the {{domxref("CanMakePaymentEvent.respondWith()")}} method to respond appropriately:
 
 ```js
 self.addEventListener("canmakepayment", (e) => {

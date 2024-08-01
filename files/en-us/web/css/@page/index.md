@@ -133,7 +133,8 @@ The specification mentions following CSS properties to be applicable to page box
 
 The @page rule defines properties of the page box. The `@page` at-rule can be accessed via the CSS object model interface {{domxref("CSSPageRule")}}.
 
-> **Note:** The W3C is discussing how to handle viewport-related {{cssxref("&lt;length&gt;")}} units, `vh`, `vw`, `vmin`, and `vmax`. Meanwhile do not use them within a `@page` at-rule.
+> [!NOTE]
+> The W3C is discussing how to handle viewport-related {{cssxref("&lt;length&gt;")}} units, `vh`, `vw`, `vmin`, and `vmax`. Meanwhile do not use them within a `@page` at-rule.
 
 ### Related properties
 
@@ -160,7 +161,8 @@ and `<pseudo-page>` represents these pseudo-classes:
 
 ## Margin at-rules
 
-> **Warning:** The margin at-rules have not been implemented by any user agent (updated: August 2023).
+> [!WARNING]
+> The margin at-rules have not been implemented by any user agent (updated: August 2023).
 
 The margin at-rules are used inside of the `@page` at-rule. They each target a different section of the document printed page, styling the area of the printed page based on the property values set in the style block:
 

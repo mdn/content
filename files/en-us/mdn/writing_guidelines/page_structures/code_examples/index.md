@@ -8,7 +8,8 @@ page-type: mdn-writing-guide
 
 On MDN, you'll see numerous code examples inserted throughout the pages to demonstrate usage of web platform features. This article discusses the different mechanisms available for adding code examples to pages, along with which ones you should use and when.
 
-> **Note:** If you want advice on the styling and linting of code as it appears on an MDN article, rather than the different ways of including code, see our [Code style guide](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide).
+> [!NOTE]
+> If you want advice on the styling and linting of code as it appears on an MDN article, rather than the different ways of including code, see our [Code style guide](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide).
 
 ## What types of code example are available?
 

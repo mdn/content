@@ -117,7 +117,8 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 
 For an overview of the changes you may need to make in order to make your add-on compatible with Firefox 6, see [Updating add-ons for Firefox 6](/en-US/docs/Mozilla/Firefox/Updating_add-ons_for_Firefox_6).
 
-> **Note:** Firefox 6 requires that binary components be recompiled, as do all major releases of Firefox. See [Binary Interfaces](/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces) for details.
+> [!NOTE]
+> Firefox 6 requires that binary components be recompiled, as do all major releases of Firefox. See [Binary Interfaces](/en-US/docs/Mozilla/Developer_guide/Interface_Compatibility#binary_interfaces) for details.
 
 ### JavaScript code modules
 

@@ -18,7 +18,8 @@ drawn with nothing constraining its height; if you don't specify a height for th
 or place the image inside a container that either limits or expressly specifies the
 image height, it will be rendered this tall.
 
-> **Note:** Most of the time the natural height is the actual height of the image sent by the server.
+> [!NOTE]
+> Most of the time the natural height is the actual height of the image sent by the server.
 > Nevertheless, browsers can modify an image before pushing it to the renderer. For example, Chrome
 > [degrades the resolution of images on low-end devices](https://crbug.com/1187043#c7). In such cases, `naturalHeight` will consider the height of the image modified
 > by such browser interventions as the natural height, and returns this value.

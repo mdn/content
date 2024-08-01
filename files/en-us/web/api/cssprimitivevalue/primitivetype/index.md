@@ -13,7 +13,8 @@ browser-compat: api.CSSPrimitiveValue.primitiveType
 The **`primitiveType`** read-only property of the
 {{domxref("CSSPrimitiveValue")}} interface represents the type of a CSS value.
 
-> **Note:** This property was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
+> [!NOTE]
+> This property was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
 > not implement it.
 >
 > To achieve your purpose, you can use:

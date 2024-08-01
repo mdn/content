@@ -91,7 +91,6 @@ para.onpointerover = (event) => {
 
   - {{domxref('Element/gotpointercapture_event', 'gotpointercapture')}}
   - {{domxref('Element/lostpointercapture_event', 'lostpointercapture')}}
-  - {{domxref('Element/pointerover_event', 'pointerover')}}
   - {{domxref('Element/pointerenter_event', 'pointerenter')}}
   - {{domxref('Element/pointerdown_event', 'pointerdown')}}
   - {{domxref('Element/pointermove_event', 'pointermove')}}

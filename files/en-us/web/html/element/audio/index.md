@@ -23,7 +23,8 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
   - : A Boolean attribute: if specified, the audio will automatically begin playback as soon as it can do so, without waiting for the entire audio file to finish downloading.
 
-    > **Note:** Sites that automatically play audio (or videos with an audio track) can be an unpleasant experience for users, so should be avoided when possible. If you must offer autoplay functionality, you should make it opt-in (requiring a user to specifically enable it). However, this can be useful when creating media elements whose source will be set at a later time, under user control. See our [autoplay guide](/en-US/docs/Web/Media/Autoplay_guide) for additional information about how to properly use autoplay.
+    > [!NOTE]
+    > Sites that automatically play audio (or videos with an audio track) can be an unpleasant experience for users, so should be avoided when possible. If you must offer autoplay functionality, you should make it opt-in (requiring a user to specifically enable it). However, this can be useful when creating media elements whose source will be set at a later time, under user control. See our [autoplay guide](/en-US/docs/Web/Media/Autoplay_guide) for additional information about how to properly use autoplay.
 
 - `controls`
 
@@ -67,7 +68,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
     The default value is different for each browser. The spec advises it to be set to `metadata`.
 
-    > **Note:**
+    > [!NOTE]
     >
     > - The `autoplay` attribute has precedence over `preload`. If `autoplay` is specified, the browser would obviously need to start downloading the audio for playback.
     > - The browser is not forced by the specification to follow the value of this attribute; it is a mere hint.
@@ -287,7 +288,8 @@ You can detect when tracks are added to and removed from an `<audio>` element us
 - {{domxref("HTMLMediaElement.textTracks")}}
   - : Add an `addtrack` event listener to this {{domxref("TextTrackList")}} to be notified when new text tracks are added to the element.
 
-> **Note:** Even though it's an `<audio>` element, it still has video and text track lists, and can in fact be used to present video, although the user interface implications can be odd.
+> [!NOTE]
+> Even though it's an `<audio>` element, it still has video and text track lists, and can in fact be used to present video, although the user interface implications can be odd.
 
 For example, to detect when audio tracks are added to or removed from an `<audio>` element, you can use code like this:
 
@@ -412,11 +414,11 @@ This example includes multiple `<source>` elements. The browser tries to load th
         If the element has a <a href="#src"><code>src</code></a>
         attribute: zero or more {{HTMLElement("track")}} elements
         followed by transparent content that contains no
-        {{HTMLElement("audio")}} or {{HTMLElement("video")}}
+        <code>&lt;audio&gt;</code> or {{HTMLElement("video")}}
         media elements.<br />Else: zero or more {{HTMLElement("source")}}
         elements followed by zero or more {{HTMLElement("track")}}
         elements followed by transparent content that contains no
-        {{HTMLElement("audio")}} or {{HTMLElement("video")}}
+        <code>&lt;audio&gt;</code> or {{HTMLElement("video")}}
         media elements.
       </td>
     </tr>

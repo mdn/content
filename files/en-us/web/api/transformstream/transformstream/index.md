@@ -58,7 +58,8 @@ new TransformStream(transformer, writableStrategy, readableStrategy)
       - : A method containing a parameter `chunk`. This indicates the size to
         use for each chunk, in bytes.
 
-> **Note:** You could define your own custom
+> [!NOTE]
+> You could define your own custom
 > `readableStrategy` or `writableStrategy`, or use an instance of
 > {{domxref("ByteLengthQueuingStrategy")}} or {{domxref("CountQueuingStrategy")}}
 > for the object values.

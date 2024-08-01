@@ -17,10 +17,12 @@ When you make resource requests to another domain, the **`Referer`** contains th
 The `Referer` header can contain an _origin_, _path_, and _querystring_, and may not contain URL fragments (i.e. `#section`) or `username:password` information.
 The request's _referrer policy_ defines the data that can be included. See {{HTTPHeader("Referrer-Policy")}} for more [information](/en-US/docs/Web/HTTP/Headers/Referrer-Policy#directives) and [examples](/en-US/docs/Web/HTTP/Headers/Referrer-Policy#examples).
 
-> **Note:** The header name "referer" is actually a misspelling of the word "referrer".
+> [!NOTE]
+> The header name "referer" is actually a misspelling of the word "referrer".
 > See [HTTP referer on Wikipedia](https://en.wikipedia.org/wiki/HTTP_referer) for more details.
 
-> **Warning:** This header may have undesirable consequences for user security and privacy.
+> [!WARNING]
+> This header may have undesirable consequences for user security and privacy.
 > See [Referer header: privacy and security concerns](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns) for more information and mitigation hints.
 
 <table class="properties">

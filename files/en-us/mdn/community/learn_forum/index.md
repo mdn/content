@@ -34,4 +34,5 @@ If the post you are replying to is a general ask for help, reply to them, and gi
 
 If you need assistance with anything, ask for help in one of our [Communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
-> **Note:** Important: Above all, be patient, be friendly, be kind. Remember — most of these folks are beginners.
+> [!NOTE]
+> Important: Above all, be patient, be friendly, be kind. Remember — most of these folks are beginners.

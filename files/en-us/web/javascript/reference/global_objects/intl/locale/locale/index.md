@@ -49,7 +49,7 @@ new Intl.Locale(tag, options)
 
 ### Basic usage
 
-At its very simplest, the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor takes
+At its very simplest, the `Intl.Locale()` constructor takes
 a locale identifier string as its argument:
 
 ```js

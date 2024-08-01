@@ -38,9 +38,7 @@ If the {{HTTPHeader("DPR")}} client hint is used to select an image the server m
 
 If the `Content-DPR` header appears more than once in a message the last occurrence is used.
 
-> **Note:**
->
-> - `Content-DPR` was removed from the client hints specification in [draft-ietf-httpbis-client-hints-07](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-client-hints-07). The [Responsive Image Client Hints](https://wicg.github.io/responsive-image-client-hints/) spec proposes to replace this header by specifying intrinsic resolution/dimensions in EXIF metadata.
+> **Note:** `Content-DPR` was removed from the client hints specification in [draft-ietf-httpbis-client-hints-07](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-client-hints-07). The [Responsive Image Client Hints](https://wicg.github.io/responsive-image-client-hints/) spec proposes to replace this header by specifying intrinsic resolution/dimensions in EXIF metadata.
 
 ## Syntax
 

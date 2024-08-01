@@ -124,10 +124,12 @@ In Manifest V3, the `content_security_policy` key is an object that may have any
 
 ### Valid examples
 
-> **Note:** Valid examples demonstrate the correct use of keys in CSP.
+> [!NOTE]
+> Valid examples demonstrate the correct use of keys in CSP.
 > However, extensions with 'unsafe-eval', remote script, blob, or remote sources in their CSP are not allowed for Firefox extensions per the [add-on policies](https://extensionworkshop.com/documentation/publish/add-on-policies/) and due to significant security issues.
 
-> **Note:** Some examples include the `{{CSP("object-src")}}` directive, which provides backward compatibility for older browser versions. See [object-src directive](#object-src_directive) for more details.
+> [!NOTE]
+> Some examples include the `{{CSP("object-src")}}` directive, which provides backward compatibility for older browser versions. See [object-src directive](#object-src_directive) for more details.
 
 Require that all types of content should be packaged with the extension:
 
