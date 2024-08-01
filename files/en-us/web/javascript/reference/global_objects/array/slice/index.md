@@ -62,7 +62,7 @@ const citrus = fruits.slice(1, 3);
 
 In this example, `slice(1, 3)` extracts elements from index `1` up to, but not including, index `3`, resulting in a new array `['Orange', 'Lemon']`.
 
-### Example omitting the `end` parameter
+### Omitting the end parameter
 
 ```js
 const fruits = ["Apple", "Banana", "Orange", "Mango", "Pineapple"];
@@ -73,7 +73,7 @@ console.log(tropical); // ['Orange', 'Mango', 'Pineapple']
 
 In this example, `slice(2)` extracts elements from index `2` to the end of the array.
 
-### Example with negative indices
+### Using negative indices
 
 ```js
 const fruits = ["Apple", "Banana", "Orange", "Mango", "Pineapple"];
@@ -82,11 +82,7 @@ const lastTwo = fruits.slice(-2);
 console.log(lastTwo); // ['Mango', 'Pineapple']
 ```
 
-In this example, if negative indices are used, slice counts from the end of the array. In this case, `slice(-2)` extracts the last two elements of the array.
-
-When using a negative index with the slice method, negative indices are counted from the end of the array, starting at `-1` for the last element, `-2` for the second-to-last element, and so on.
-
-When using slice with a **single negative index**, the negative index is included because it is the starting point of the extraction.
+In this example, `slice(-2)` extracts the last two elements of the array. When using a negative index with the `slice` method, negative indices are counted from the end of the array, starting at `-1` for the last element, `-2` for the second-to-last element, and so on. The negative index `-2` itself is included because it is the starting point of the extraction.
 
 ```plain
 |     |     |     |     |     |
@@ -97,7 +93,7 @@ When using slice with a **single negative index**, the negative index is include
 <--- read from reverse
 ```
 
-### Example using slice with a positive start index and a negative end index
+### Using a positive start index and a negative end index
 
 ```js
 const fruits = ["Apple", "Banana", "Orange", "Mango", "Pineapple"];
