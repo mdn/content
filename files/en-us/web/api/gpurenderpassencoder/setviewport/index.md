@@ -66,7 +66,7 @@ passEncoder.setViewport(0, 0, canvas.width / 2, canvas.height / 2, 0, 1);
 
 ### In context
 
-In the WebGPU Samples [reversedZ example](https://webgpu.github.io/webgpu-samples/samples/reversedZ), `setViewport` is used several times to set the viewport for the different render passes. Study the example code listing for the full context.
+In the WebGPU Samples [reversedZ example](https://webgpu.github.io/webgpu-samples/samples/reversedZ/), `setViewport` is used several times to set the viewport for the different render passes. Study the example code listing for the full context.
 
 For example:
 
