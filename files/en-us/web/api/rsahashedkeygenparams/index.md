@@ -21,7 +21,8 @@ The **`RsaHashedKeyGenParams`** dictionary of the [Web Crypto API](/en-US/docs/W
 
   - : A string representing the name of the [digest function](/en-US/docs/Web/API/SubtleCrypto/digest) to use. You can pass any of `SHA-256`, `SHA-384`, or `SHA-512` here.
 
-    > **Warning:** Although you can technically pass `SHA-1` as a value here, this is strongly discouraged as SHA-1 is considered vulnerable.
+    > [!WARNING]
+    > Although you can technically pass `SHA-1` as a value here, this is strongly discouraged as SHA-1 is considered vulnerable.
 
 ## Examples
 

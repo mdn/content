@@ -65,7 +65,8 @@ Later on, a set of commands is encoded into a {{domxref("GPUCommandBuffer")}} us
 device.queue.submit([commandEncoder.finish()]);
 ```
 
-> **Note:** Study the [WebGPU samples](https://webgpu.github.io/webgpu-samples/) to find more queue examples.
+> [!NOTE]
+> Study the [WebGPU samples](https://webgpu.github.io/webgpu-samples/) to find more queue examples.
 
 ## Specifications
 

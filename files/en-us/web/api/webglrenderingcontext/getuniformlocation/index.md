@@ -79,7 +79,8 @@ The `WebGLUniformLocation` is an opaque value used to uniquely identify the
 location in the GPU's memory at which the uniform variable is located. With this value
 in hand, you can call other WebGL methods to access the value of the uniform variable.
 
-> **Note:** The `WebGLUniformLocation` type is compatible with the
+> [!NOTE]
+> The `WebGLUniformLocation` type is compatible with the
 > `GLint` type when specifying the index or location of a uniform
 > attribute.
 
@@ -112,7 +113,8 @@ gl.uniform2fv(uRotationVector, currentRotation);
 gl.uniform4fv(uGlobalColor, [0.1, 0.7, 0.2, 1.0]);
 ```
 
-> **Note:** This code snippet is taken from [the function `animateScene()`](/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example#drawing_and_animating_the_scene) in "A basic 2D WebGL animation example."
+> [!NOTE]
+> This code snippet is taken from [the function `animateScene()`](/en-US/docs/Web/API/WebGL_API/Basic_2D_animation_example#drawing_and_animating_the_scene) in "A basic 2D WebGL animation example."
 > See that article for the full sample and to see the resulting animation in action.
 
 After setting the current shading program to `shaderProgram`, this code

@@ -69,7 +69,7 @@ For example, the date picker calendar, and the button on \<select> that displays
 The articles [Advanced form styling](/en-US/docs/Learn/Forms/Advanced_form_styling) and [How to build custom form controls](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls) describe how to style these.
 
 > [!NOTE]
-> some proprietary CSS pseudo-elements, such as {{cssxref('::-moz-range-track')}}, are capable of styling such internal components, but these aren't consistent across browsers, so aren't very reliable. We will mention these later.
+> Some proprietary CSS pseudo-elements, such as {{cssxref('::-moz-range-track')}}, are capable of styling such internal components, but these aren't consistent across browsers, so aren't very reliable. We will mention these later.
 
 ## Styling simple form widgets
 

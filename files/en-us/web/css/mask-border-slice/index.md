@@ -91,9 +91,11 @@ Chromium-based browsers support an outdated version of this property — `mask-b
 -webkit-mask-box-image-slice: 30 fill;
 ```
 
-> **Note:** The [`mask-border`](/en-US/docs/Web/CSS/mask-border) page features a working example (using the out-of-date prefixed border mask properties supported in Chromium), so you can get an idea of the effect.
+> [!NOTE]
+> The [`mask-border`](/en-US/docs/Web/CSS/mask-border) page features a working example (using the out-of-date prefixed border mask properties supported in Chromium), so you can get an idea of the effect.
 
-> **Note:** The fill keyword needs to be included if you want the element's content to be visible.
+> [!NOTE]
+> The fill keyword needs to be included if you want the element's content to be visible.
 
 ## Specifications
 

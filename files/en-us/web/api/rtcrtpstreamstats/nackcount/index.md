@@ -21,7 +21,8 @@ or more of the {{Glossary("RTP")}} packets it sent were lost in transport.
 An integer value indicating how many times the receiver sent a NACK packet to the
 sender after detecting that one or more packets were lost during transport.
 
-> **Note:** This value is only available on the receiver.
+> [!NOTE]
+> This value is only available on the receiver.
 
 ## Specifications
 

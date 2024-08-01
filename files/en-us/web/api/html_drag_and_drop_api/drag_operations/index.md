@@ -40,7 +40,8 @@ The [`draggable`](/en-US/docs/Web/HTML/Global_attributes#draggable) attribute is
 
 The [`draggable`](/en-US/docs/Web/HTML/Global_attributes#draggable) attribute may be used on any element, including images and links. However, for these last two, the default value is `true`, so you would only use the [`draggable`](/en-US/docs/Web/HTML/Global_attributes#draggable) attribute with a value of `false` to disable dragging of these elements.
 
-> **Note:** When an element is made draggable, text or other elements within it can no longer be selected in the normal way by clicking and dragging with the mouse. Instead, the user must hold down the <kbd>Alt</kbd> key to select text with the mouse, or use the keyboard.
+> [!NOTE]
+> When an element is made draggable, text or other elements within it can no longer be selected in the normal way by clicking and dragging with the mouse. Instead, the user must hold down the <kbd>Alt</kbd> key to select text with the mouse, or use the keyboard.
 
 ## Starting a drag operation
 

@@ -35,7 +35,8 @@ Each [drag event type](/en-US/docs/Web/API/DragEvent#event_types) has an associa
 | {{domxref('HTMLElement/dragstart_event', 'dragstart')}} | ...the user starts dragging an item. (See [Starting a Drag Operation](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#starting_a_drag_operation).)                            |
 | {{domxref('HTMLElement/drop_event', 'drop')}}           | ...an item is dropped on a valid drop target. (See [Performing a Drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#performing_a_drop).)                                   |
 
-> **Note:** Neither `dragstart` nor `dragend` events are fired when dragging a file into the browser from the OS.
+> [!NOTE]
+> Neither `dragstart` nor `dragend` events are fired when dragging a file into the browser from the OS.
 
 ### The basics
 

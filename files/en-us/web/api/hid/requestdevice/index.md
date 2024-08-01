@@ -39,7 +39,8 @@ requestDevice(options)
     - `usage` {{optional_inline}}
       - : An integer representing the usage ID component of the HID usage of the requested device.
 
-> **Note:** The device filters are used to narrow the list of devices presented to the user. If no filters are present, all connected devices are shown. When one or more filters are included, a device is included if any filter matches. To match a filter, all of the rules included in that filter must match.
+> [!NOTE]
+> The device filters are used to narrow the list of devices presented to the user. If no filters are present, all connected devices are shown. When one or more filters are included, a device is included if any filter matches. To match a filter, all of the rules included in that filter must match.
 
 ### Return value
 

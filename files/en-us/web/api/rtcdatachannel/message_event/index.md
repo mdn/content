@@ -10,7 +10,8 @@ browser-compat: api.RTCDataChannel.message_event
 
 The WebRTC **`message`** event is sent to the `onmessage` event handler on an {{domxref("RTCDataChannel")}} object when a message has been received from the remote peer.
 
-> **Note:** The `message` event uses as its event object type the {{domxref("MessageEvent")}} interface defined by the HTML specification.
+> [!NOTE]
+> The `message` event uses as its event object type the {{domxref("MessageEvent")}} interface defined by the HTML specification.
 
 This event is not cancelable and does not bubble.
 

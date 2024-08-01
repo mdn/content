@@ -12,7 +12,8 @@ The **`Window.frameElement`** property
 returns the element (such as {{HTMLElement("iframe")}} or {{HTMLElement("object")}})
 in which the window is embedded.
 
-> **Note:** Despite this property's name, it works for documents embedded
+> [!NOTE]
+> Despite this property's name, it works for documents embedded
 > within any embedding point, including {{HTMLElement("object")}},
 > {{HTMLElement("iframe")}}, or {{HTMLElement("embed")}}.
 

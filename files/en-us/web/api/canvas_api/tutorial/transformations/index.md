@@ -141,7 +141,8 @@ The rotation center point is always the canvas origin. To change the center poin
 
 In this example, we'll use the `rotate()` method to first rotate a rectangle from the canvas origin and then from the center of the rectangle itself with the help of `translate()`.
 
-> **Note:** Angles are in radians, not degrees. To convert, we are using: `radians = (Math.PI/180)*degrees`.
+> [!NOTE]
+> Angles are in radians, not degrees. To convert, we are using: `radians = (Math.PI/180)*degrees`.
 
 ```js
 function draw() {

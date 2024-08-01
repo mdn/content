@@ -275,7 +275,7 @@ svg {
 ### miter-clip
 
 > [!NOTE]
-> the `miter-clip` value as been introduced in SVG2 and it isn't widely supported yet, see [Browser compatibility](#browser_compatibility) below for details.
+> The `miter-clip` value as been introduced in SVG2 and it isn't widely supported yet, see [Browser compatibility](#browser_compatibility) below for details.
 
 The `miter-clip` value indicates that a sharp corner is to be used to join path segments. The corner is formed by extending the outer edges of the stroke at the tangents of the path segments until they intersect.
 

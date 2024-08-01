@@ -16,7 +16,8 @@ A user-verifying platform authenticator is a kind of multi-factor authenticator 
 - Windows Hello (Windows)
 - Device unlock (fingerprint, face, PIN, etc.) on Android
 
-> **Note:** This method may only be used in top-level contexts and will not be available in an {{HTMLElement("iframe")}} for example.
+> [!NOTE]
+> This method may only be used in top-level contexts and will not be available in an {{HTMLElement("iframe")}} for example.
 
 ## Syntax
 
@@ -33,7 +34,8 @@ None.
 A {{jsxref("Promise")}} which resolves to a boolean value indicating whether or
 a not a user-verifying platform authenticator is available.
 
-> **Note:** In earlier versions of the specification, the boolean also
+> [!NOTE]
+> In earlier versions of the specification, the boolean also
 > conveyed the consent of the user to disclose such an authenticator existed.
 
 ## Examples

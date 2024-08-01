@@ -151,7 +151,9 @@ _Escape sequences_ in regexes refer to any kind of syntax formed by `\` followed
 
 In addition, `\` can be followed by some non-letter-or-digit characters, in which case the escape sequence is always a [character escape](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape) representing the escaped character itself:
 
-- `\$`, `\(`, `\)`, `\*`, `\+`, `\.`, `\/`, `\?`, `\[`, `\\`, `\]`, `\^`, `\{`, `\|`, `\}`: valid everywhere
+<!-- Note: the {} need to be double-escaped, once for Yari -->
+
+- `\$`, `\(`, `\)`, `\*`, `\+`, `\.`, `\/`, `\?`, `\[`, `\\`, `\]`, `\^`, `\\{`, `\|`, `\\}`: valid everywhere
 - `\-`: only valid inside [character classes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class)
 - `\!`, `\#`, `\%`, `\&`, `\,`, `\:`, `\;`, `\<`, `\=`, `\>`, `\@`, `` \` ``, `\~`: only valid inside [`v`-mode character classes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#v-mode_character_class)
 

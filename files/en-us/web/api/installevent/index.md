@@ -35,7 +35,8 @@ This code snippet is from the [service worker prefetch sample](https://github.co
 
 The code snippet also shows a best practice for versioning caches used by the service worker. Although this example has only one cache, you can use this approach for multiple caches. The code maps a shorthand identifier for a cache to a specific, versioned cache name.
 
-> **Note:** Logging statements are visible in Google Chrome via the "Inspect" interface for the relevant service worker accessed via chrome://serviceworker-internals.
+> [!NOTE]
+> Logging statements are visible in Google Chrome via the "Inspect" interface for the relevant service worker accessed via chrome://serviceworker-internals.
 
 ```js
 const CACHE_VERSION = 1;

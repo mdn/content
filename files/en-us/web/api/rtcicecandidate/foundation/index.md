@@ -20,7 +20,8 @@ multiple {{domxref("RTCIceTransport")}} objects
 A string which uniquely identifies the candidate across all
 `RTCIceTransport`s on which it is available.
 
-> **Note:** If `port` is `null` — and
+> [!NOTE]
+> If `port` is `null` — and
 > `port` is supported by the {{Glossary("user agent")}} — passing the
 > candidate to {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}
 > will fail, throwing an `OperationError` exception.

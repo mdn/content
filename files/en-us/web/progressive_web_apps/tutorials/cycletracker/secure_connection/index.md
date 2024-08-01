@@ -47,7 +47,7 @@ There are several {{glossary("IDE")}} extensions and programming-language specif
 You can run a local HTTP server using a [VSCode plugin](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server#using_an_extension_in_your_code_editor), which enables running a local server on a single or different port. The [Preview on Web Server extension](https://marketplace.visualstudio.com/items?itemName=yuichinukiyama.vscode-preview-server) for the [VSCode](https://code.visualstudio.com/download) IDE creates a server at the root of the directory currently opened by the editor, with a default port of `8080`. VS Code extensions are configurable. The `previewServer.port` setting is the port number of the web server. The extensions default setting of `8080` can be edited and changed. By default, entering `localhost:8080` in the browser URL bar will load the page.
 
 > [!NOTE]
-> that the Preview on Web Server extension uses Browsersync. When your development environment is started by this extension, `localhost:3001` provides a user interface for Browsersync, providing an overview of the current server environment.
+> The Preview on Web Server extension uses Browsersync. When your development environment is started by this extension, `localhost:3001` provides a user interface for Browsersync, providing an overview of the current server environment.
 
 Learn how to [set up a local testing server](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server) using [Python](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server#using_python) or [local server side language](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server#running_server-side_languages_locally) like PHP.
 
@@ -82,7 +82,7 @@ When officially publishing a PWA, you will likely want to invest in a [domain na
 
 ## GitHub Pages
 
-The current state of the CycleTracker application is viewable on GitHub, served securely at [https://mdn.github.io/pwa-examples/cycletracker/html_and_css](https://mdn.github.io/pwa-examples/cycletracker/html_and_css). We've posted the files to the MDN GitHub account. Similarly, if you have a [GitHub](https://github.com) account, you can post it to yours. Just note that while securely served over TLS, actions on GitHub are not necessarily private, and all GitHub pages are public. If you live in an area with a repressive government that tracks menstrual cycles, consider copying and pasting the code rather than forking it.
+The current state of the CycleTracker application is viewable on GitHub, served securely at [https://mdn.github.io/pwa-examples/cycletracker/html_and_css/](https://mdn.github.io/pwa-examples/cycletracker/html_and_css/). We've posted the files to the MDN GitHub account. Similarly, if you have a [GitHub](https://github.com) account, you can post it to yours. Just note that while securely served over TLS, actions on GitHub are not necessarily private, and all GitHub pages are public. If you live in an area with a repressive government that tracks menstrual cycles, consider copying and pasting the code rather than forking it.
 
 To create a publicly available secure site, create a [GitHub Pages site](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site). Create a repository named `<username>.github.io`, where `<username>` is your GitHub username. Create a `gh-pages` branch. This branch of your application will be available at `https://<username>.github.io`.
 

@@ -9,7 +9,8 @@ browser-compat: css.properties.font-palette
 
 The **`font-palette`** [CSS](/en-US/docs/Web/CSS) property allows specifying one of the many palettes contained in a [color font](https://www.colorfonts.wtf/) that a user agent may use for the font. Users can also override the values in a palette or create a new palette by using the [`@font-palette-values`](/en-US/docs/Web/CSS/@font-palette-values) at-rule.
 
-> **Note:** A `font-palette` palette takes precedence when coloring a font. The {{cssxref("color")}} property will not override a font palette, even if specified with {{cssxref("important", "!important")}}.
+> [!NOTE]
+> A `font-palette` palette takes precedence when coloring a font. The {{cssxref("color")}} property will not override a font palette, even if specified with {{cssxref("important", "!important")}}.
 
 ## Syntax
 
@@ -113,7 +114,8 @@ The output looks like this:
 
 {{EmbedLiveSample("Animating between two palettes", "100%", 300)}}
 
-> **Note:** Browsers that still implement `discrete` `font-palette` animation will flip between the two palettes rather than smoothly animating.
+> [!NOTE]
+> Browsers that still implement `discrete` `font-palette` animation will flip between the two palettes rather than smoothly animating.
 
 ## Specifications
 

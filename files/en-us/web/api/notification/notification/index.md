@@ -11,7 +11,8 @@ browser-compat: api.Notification.Notification
 The **`Notification()`** constructor creates a new
 {{domxref("Notification")}} object instance, which represents a user notification.
 
-> **Note:** Trying to create a notification inside the {{domxref("ServiceWorkerGlobalScope")}} using the `Notification()` constructor will throw a `TypeError`. Use {{domxref("ServiceWorkerRegistration.showNotification()")}} instead.
+> [!NOTE]
+> Trying to create a notification inside the {{domxref("ServiceWorkerGlobalScope")}} using the `Notification()` constructor will throw a `TypeError`. Use {{domxref("ServiceWorkerRegistration.showNotification()")}} instead.
 
 ## Syntax
 

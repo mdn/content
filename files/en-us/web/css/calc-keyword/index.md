@@ -49,7 +49,8 @@ Serializing the arguments inside [`calc()`](/en-US/docs/Web/CSS/calc) follows th
 
 Examples of how these rules apply are shown in the [Infinity, NaN, and division by zero](#infinity_nan_and_division_by_zero) section.
 
-> **Note:** It's rare to need to use `infinity` as an argument in `calc()`, but it can be used to avoid hardcoded "magic numbers" or making sure a certain value is always larger than another value.
+> [!NOTE]
+> It's rare to need to use `infinity` as an argument in `calc()`, but it can be used to avoid hardcoded "magic numbers" or making sure a certain value is always larger than another value.
 > It may be useful if you need to make it obvious that a property has "the largest possible value" for that data type.
 
 ### Formal syntax

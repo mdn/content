@@ -477,7 +477,8 @@ The second item starts on grid column line 1, and spans one track. This is the d
 
 {{ EmbedLiveSample('Positioning_items_against_lines', '230', '450') }}
 
-> **Note:** Don't forget that you can use the [Grid Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) in Firefox Developer Tools to see how the items are positioned against the lines of the grid.
+> [!NOTE]
+> Don't forget that you can use the [Grid Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) in Firefox Developer Tools to see how the items are positioned against the lines of the grid.
 
 ### Line-positioning shorthands
 
@@ -528,7 +529,8 @@ _Gutters_ or _alleys_ between grid cells can be created using the {{cssxref("col
 }
 ```
 
-> **Note:** When grid first shipped in browsers the {{cssxref("column-gap")}}, {{cssxref("row-gap")}} and {{cssxref("gap")}} were prefixed with the `grid-` prefix as `grid-column-gap`, `grid-row-gap` and `grid-gap` respectively.
+> [!NOTE]
+> When grid first shipped in browsers the {{cssxref("column-gap")}}, {{cssxref("row-gap")}} and {{cssxref("gap")}} were prefixed with the `grid-` prefix as `grid-column-gap`, `grid-row-gap` and `grid-gap` respectively.
 >
 > Browsers all now support unprefixed values, however the prefixed versions will be maintained as aliases making them safe to use.
 

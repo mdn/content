@@ -22,7 +22,8 @@ A live version of this application is available on [GitHub](https://mdn.github.i
 
 ## Example
 
-> **Note:** The text below uses the term "finger" when describing the contact with the surface, but it could, of course, also be a stylus, mouse, or other method of pointing at a location.
+> [!NOTE]
+> The text below uses the term "finger" when describing the contact with the surface, but it could, of course, also be a stylus, mouse, or other method of pointing at a location.
 
 ### Create a canvas
 

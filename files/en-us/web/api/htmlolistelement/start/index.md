@@ -12,7 +12,8 @@ The **`start`** property of the {{domxref("HTMLOListElement")}} interface indica
 
 It reflects the [`start`](/en-US/docs/Web/HTML/Element/ol#start) attribute of the {{HTMLElement("ol")}} element.
 
-> **Note:** The `start` property value is independent of the {{domxref("HTMLOListElement.type")}} property; it is always numeric, even when type is letters or Roman numerals.
+> [!NOTE]
+> The `start` property value is independent of the {{domxref("HTMLOListElement.type")}} property; it is always numeric, even when type is letters or Roman numerals.
 
 ## Value
 

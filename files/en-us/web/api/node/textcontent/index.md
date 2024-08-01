@@ -21,7 +21,8 @@ A string, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null). Its 
 - If the node is a {{domxref("document")}} or a {{glossary("doctype")}},
   `textContent` returns [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
 
-  > **Note:** To get _all_ of the text and [CDATA data](/en-US/docs/Web/API/CDATASection) for the whole
+  > [!NOTE]
+  > To get _all_ of the text and [CDATA data](/en-US/docs/Web/API/CDATASection) for the whole
   > document, use `document.documentElement.textContent`.
 
 - If the node is a [CDATA section](/en-US/docs/Web/API/CDATASection),
@@ -33,7 +34,8 @@ A string, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null). Its 
   `textContent` of every child node, excluding comments and processing
   instructions. (This is an empty string if the node has no children.)
 
-> **Warning:** Setting `textContent` on a node removes _all_ of the node's children
+> [!WARNING]
+> Setting `textContent` on a node removes _all_ of the node's children
 > and replaces them with a single text node with the given string value.
 
 ### Differences from innerText
