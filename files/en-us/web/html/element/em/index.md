@@ -31,7 +31,7 @@ This means the right one to use depends on the situation. Neither is for purely 
 
 Examples for `<em>` could be:
 
-```html html live-sample___em-example
+```html live-sample___em-example
 <p>Just <em>do</em> it already!</p>
 <p>We <em>had</em> to do something about it</p>
 ```
