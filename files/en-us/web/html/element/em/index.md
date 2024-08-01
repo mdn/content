@@ -33,18 +33,18 @@ Examples for `<em>` could be:
 
 ```html live-sample___em-example
 <p>Just <em>do</em> it already!</p>
-<p>We <em>had</em> to do something about it</p>
+<p>We <em>had</em> to do something about it.</p>
 ```
 
 {{EmbedLiveSample('em-example', "", 85)}}
 
 A person or software reading the text would pronounce the words in italics with an emphasis, using verbal stress.
 
-Example for `<i>` could be:
+Examples for `<i>` could be:
 
 ```html live-sample___i-example
-<p>The word <i>the</i> is an article</p>
-<p>The <i>Queen Mary</i> sailed last night</p>
+<p>The word <i>the</i> is an article.</p>
+<p>The <i>Queen Mary</i> sailed last night.</p>
 ```
 
 {{EmbedLiveSample('i-example', "", 85)}}
