@@ -91,8 +91,8 @@ When using slice with a **single negative index**, the negative index is include
 ```plain
 |     |     |     |     |     |
 |  S  |  L  |  I  |  C  |  E  |
-|     |     |     |     |     | 
-  -5    -4    -3    -2    -1   
+|     |     |     |     |     |
+  -5    -4    -3    -2    -1
 
 <--- read from reverse
 ```
