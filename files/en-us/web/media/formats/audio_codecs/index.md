@@ -415,7 +415,7 @@ As a patent-encumbered format, AAC support is somewhat less predictable. For exa
       <td>
         For streaming or distributing AAC-encoded content: no license required;
         developers of codecs are required to obtain a patent license through
-        <a href="https://www.via-corp.com/licensing/aac/">VIA Licensing</a>
+        <a href="https://www.via-la.com/licensing-2/aac/">VIA Licensing</a>
       </td>
     </tr>
   </tbody>

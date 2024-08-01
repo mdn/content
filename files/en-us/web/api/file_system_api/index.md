@@ -28,7 +28,7 @@ The handles represent a file or directory on the user's system. You can first ga
 You can also gain access to file handles via:
 
 - The {{domxref('DataTransferItem.getAsFileSystemHandle()')}} method of the {{domxref('HTML Drag and Drop API', '', '', 'nocode')}}.
-- The [File Handling API](https://developer.chrome.com/en/articles/file-handling/).
+- The [File Handling API](https://developer.chrome.com/docs/capabilities/web-apis/file-handling).
 
 Each handle provides its own functionality and there are a few differences depending on which one you are using (see the [interfaces](#interfaces) section for specific details). You then can access file data, or information (including children) of the directory selected. This API opens up potential functionality the web has been lacking. Still, security has been of utmost concern when designing the API, and access to file/directory data is disallowed unless the user specifically permits it (note that this is not the case with the [Origin private file system](#origin_private_file_system), because it is not visible to the user).
 

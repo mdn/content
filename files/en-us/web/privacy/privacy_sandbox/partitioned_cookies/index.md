@@ -64,7 +64,7 @@ CHIPS still allows third-party content embedded across different subdomains of a
 
 ## See also
 
-- [Cookies Having Independent Partitioned State (CHIPS) on developer.chrome.com](https://developer.chrome.com/docs/privacy-sandbox/chips/)
+- [Cookies Having Independent Partitioned State (CHIPS)](https://developers.google.com/privacy-sandbox/3pcd/chips) on developers.google.com
 - [CHIPS Explainer](https://github.com/privacycg/CHIPS)
 
 <section id="Quick_links">
