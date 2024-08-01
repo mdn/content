@@ -36,7 +36,8 @@ querySelectorAll(selectors)
 A non-live {{domxref("NodeList")}} containing one {{domxref("Element")}} object for
 each descendant node that matches at least one of the specified selectors.
 
-> **Note:** If the specified `selectors` include a [CSS pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements), the returned list
+> [!NOTE]
+> If the specified `selectors` include a [CSS pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements), the returned list
 > is always empty.
 
 ### Exceptions

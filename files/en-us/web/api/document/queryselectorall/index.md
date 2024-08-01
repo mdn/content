@@ -34,7 +34,8 @@ A non-live {{domxref("NodeList")}} containing one {{domxref("Element")}} object 
 each element that matches at least one of the specified selectors or an empty
 {{domxref("NodeList")}} in case of no matches.
 
-> **Note:** If the specified `selectors` include a [CSS pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements), the returned list
+> [!NOTE]
+> If the specified `selectors` include a [CSS pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements), the returned list
 > is always empty.
 
 ### Exceptions

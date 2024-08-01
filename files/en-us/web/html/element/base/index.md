@@ -86,7 +86,7 @@ This is to prevent dangling markup injection attacks, a script-less attack in wh
     <tr>
       <th scope="row">Permitted parents</th>
       <td>
-        A {{HTMLElement("head")}} that doesn't contain another {{HTMLElement("base")}} element.
+        A {{HTMLElement("head")}} that doesn't contain another <code>&lt;base&gt;</code> element.
       </td>
     </tr>
     <tr>

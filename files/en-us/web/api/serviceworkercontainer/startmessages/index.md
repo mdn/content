@@ -25,7 +25,8 @@ example if you've invoked a message handler using
 {{domxref("EventTarget.addEventListener()")}} before the page has finished loading, but
 want to start processing the messages right away.
 
-> **Note:** The messages start being sent automatically when setting the
+> [!NOTE]
+> The messages start being sent automatically when setting the
 > handler directly using {{domxref("ServiceWorkerContainer.message_event", "onmessage")}}. In this you
 > don't need `startMessages()`.
 

@@ -102,7 +102,7 @@ For more detailed examples, see the {{htmlelement("ol")}} and {{htmlelement("ul"
       <th scope="row">Tag omission</th>
       <td>
         The end tag can be omitted if the list item is immediately followed by
-        another {{HTMLElement("li")}} element, or if there is no more
+        another <code>&lt;li&gt;</code> element, or if there is no more
         content in its parent element.
       </td>
     </tr>

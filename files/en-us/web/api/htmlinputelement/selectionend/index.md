@@ -10,7 +10,8 @@ browser-compat: api.HTMLInputElement.selectionEnd
 
 The **`selectionEnd`** property of the {{domxref("HTMLInputElement")}} interface is a number that represents the end index of the selected text. When there is no selection, this returns the offset of the character immediately following the current text input cursor position.
 
-> **Note:** According to the [WHATWG forms spec](https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply) `selectionEnd` property applies only to inputs of types text, search, URL, tel, and password. In modern browsers, throws an exception while setting `selectionEnd` property on the rest of input types. Additionally, this property returns `null` while accessing `selectionEnd` property on non-text input elements.
+> [!NOTE]
+> According to the [WHATWG forms spec](https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply) `selectionEnd` property applies only to inputs of types text, search, URL, tel, and password. In modern browsers, throws an exception while setting `selectionEnd` property on the rest of input types. Additionally, this property returns `null` while accessing `selectionEnd` property on non-text input elements.
 
 If `selectionEnd` is less than `selectionStart`, then both are
 treated as the value of `selectionEnd`.

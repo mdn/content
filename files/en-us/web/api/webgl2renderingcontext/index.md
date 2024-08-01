@@ -16,7 +16,8 @@ const canvas = document.getElementById("myCanvas");
 const gl = canvas.getContext("webgl2");
 ```
 
-> **Note:** WebGL 2 is an extension to WebGL 1. The `WebGL2RenderingContext` interface implements all members of the {{domxref("WebGLRenderingContext")}} interface. Some methods of the WebGL 1 context can accept additional values when used in a WebGL 2 context. You will find this info noted on the WebGL 1 reference pages.
+> [!NOTE]
+> WebGL 2 is an extension to WebGL 1. The `WebGL2RenderingContext` interface implements all members of the {{domxref("WebGLRenderingContext")}} interface. Some methods of the WebGL 1 context can accept additional values when used in a WebGL 2 context. You will find this info noted on the WebGL 1 reference pages.
 
 The [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial) has more information, examples, and resources on how to get started with WebGL.
 

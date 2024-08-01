@@ -12,7 +12,8 @@ The **`unmute`** event is sent to a {{domxref("MediaStreamTrack")}} when the tra
 
 This ends the {{domxref("MediaStreamTrack.muted", "muted")}} state that began with the {{domxref("MediaStreamTrack/mute_event", "mute")}} event.
 
-> **Note:** The condition that most people think of as "muted" (that is, a user-controllable way to silence a track) is actually managed using the {{domxref("MediaStreamTrack.enabled")}} property, for which there are no events.
+> [!NOTE]
+> The condition that most people think of as "muted" (that is, a user-controllable way to silence a track) is actually managed using the {{domxref("MediaStreamTrack.enabled")}} property, for which there are no events.
 
 This event is not cancelable and does not bubble.
 

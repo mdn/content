@@ -85,7 +85,8 @@ browser.webRequest.onBeforeRequest.addListener(
 
 {{WebExtExamples}}
 
-> **Note:** The example above only works for small requests that aren't chunked or streamed. More advanced examples are documented with {{WebExtAPIRef("webRequest.StreamFilter.ondata")}}.
+> [!NOTE]
+> The example above only works for small requests that aren't chunked or streamed. More advanced examples are documented with {{WebExtAPIRef("webRequest.StreamFilter.ondata")}}.
 
 ## Browser compatibility
 

@@ -97,7 +97,8 @@ addEventListener("fetch", (event) => {
 The browser sends the HTTP header {{HTTPHeader("Service-Worker-Navigation-Preload")}} with preload requests, with a default directive value of `true`.
 This allows servers to differentiate between normal and preload fetch requests, and to send different responses in each case if required.
 
-> **Note:** If the response from preload and normal fetch operations can be different, then the server must set `Vary: Service-Worker-Navigation-Preload` to ensure that the different responses are cached.
+> [!NOTE]
+> If the response from preload and normal fetch operations can be different, then the server must set `Vary: Service-Worker-Navigation-Preload` to ensure that the different responses are cached.
 
 The header value can be changed to any other string value using {{domxref("NavigationPreloadManager.setHeaderValue()")}} in order to provide additional context for the prefetch operation.
 For example, you might set the value to the ID of your most recently cached resource, so that the server won't return any resources unless they are actually needed.

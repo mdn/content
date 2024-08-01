@@ -13,7 +13,8 @@ browser-compat: api.VRDisplay.getEyeParameters
 
 The **`getEyeParameters()`** method of the {{domxref("VRDisplay")}} interface returns the {{domxref("VREyeParameters")}} object containing the eye parameters for the specified eye.
 
-> **Note:** This method was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
+> [!NOTE]
+> This method was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
 ## Syntax
 

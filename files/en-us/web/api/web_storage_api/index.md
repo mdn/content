@@ -29,7 +29,8 @@ Developers should be cautious when performing operations on `sessionStorage` or 
 
 Asynchronous alternatives, such as [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), may be more suitable for scenarios where performance is a concern or when dealing with larger datasets. These alternatives allow for non-blocking operations, enabling smoother user experiences and better performance in web applications.
 
-> **Note:** Access to Web Storage from third-party IFrames is denied if the user has [disabled third-party cookies](https://support.mozilla.org/en-US/kb/third-party-cookies-firefox-tracking-protection).
+> [!NOTE]
+> Access to Web Storage from third-party IFrames is denied if the user has [disabled third-party cookies](https://support.mozilla.org/en-US/kb/third-party-cookies-firefox-tracking-protection).
 
 ## Determining storage access by a third party
 

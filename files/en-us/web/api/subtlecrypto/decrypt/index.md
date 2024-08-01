@@ -54,7 +54,8 @@ The `decrypt()` method supports the same algorithms as the [`encrypt()`](/en-US/
 
 ## Examples
 
-> **Note:** You can [try the working examples](https://mdn.github.io/dom-examples/web-crypto/encrypt-decrypt/index.html) on GitHub.
+> [!NOTE]
+> You can [try the working examples](https://mdn.github.io/dom-examples/web-crypto/encrypt-decrypt/index.html) on GitHub.
 
 ### RSA-OAEP
 

@@ -64,7 +64,8 @@ You can create a new `Request` object using the {{domxref("Request.Request","Req
 - {{domxref("Request.text()")}}
   - : Returns a promise that resolves with a text representation of the request body.
 
-> **Note:** The request body functions can be run only once; subsequent calls will reject with TypeError showing that the body stream has already used.
+> [!NOTE]
+> The request body functions can be run only once; subsequent calls will reject with TypeError showing that the body stream has already used.
 
 ## Examples
 
@@ -102,7 +103,8 @@ const credentials = request.credentials;
 const bodyUsed = request.bodyUsed;
 ```
 
-> **Note:** The body can only be a {{domxref("Blob")}}, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}}, a {{domxref("FormData")}}, a {{domxref("URLSearchParams")}}, a {{domxref("ReadableStream")}}, or a {{jsxref("String")}} object, as well as a string literal, so for adding a JSON object to the payload you need to stringify that object.
+> [!NOTE]
+> The body can only be a {{domxref("Blob")}}, an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, a {{jsxref("DataView")}}, a {{domxref("FormData")}}, a {{domxref("URLSearchParams")}}, a {{domxref("ReadableStream")}}, or a {{jsxref("String")}} object, as well as a string literal, so for adding a JSON object to the payload you need to stringify that object.
 
 You could then fetch this API request by passing the `Request` object in as a parameter to a {{domxref("Window/fetch", "fetch()")}} call, for example and get the response:
 

@@ -414,11 +414,11 @@ This example includes multiple `<source>` elements. The browser tries to load th
         If the element has a <a href="#src"><code>src</code></a>
         attribute: zero or more {{HTMLElement("track")}} elements
         followed by transparent content that contains no
-        {{HTMLElement("audio")}} or {{HTMLElement("video")}}
+        <code>&lt;audio&gt;</code> or {{HTMLElement("video")}}
         media elements.<br />Else: zero or more {{HTMLElement("source")}}
         elements followed by zero or more {{HTMLElement("track")}}
         elements followed by transparent content that contains no
-        {{HTMLElement("audio")}} or {{HTMLElement("video")}}
+        <code>&lt;audio&gt;</code> or {{HTMLElement("video")}}
         media elements.
       </td>
     </tr>

@@ -322,13 +322,13 @@ Multiple conditions can be combined inside `"and"` or `"or"` conditions — thes
 
 It is useful to think of the `"where"` object as being equivalent to an `if` statement. So
 
-```text
+```plain
 { and: [A, B, { or: [C, { not: D }] }] }
 ```
 
 is equivalent to
 
-```text
+```plain
 if (A && B && (C || !D)) {
   apply speculation rule
 }

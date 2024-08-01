@@ -4,6 +4,8 @@ slug: Learn/Forms/User_input_methods
 page-type: guide
 ---
 
+{{LearnSidebar}}
+
 Web forms require user input. When designing web forms, or really any web content, it's important to consider how users interact with their devices and browsers. Web user input goes beyond simple mouse and keyboard: think of touchscreens for example.
 
 In this article, we take a look at the different ways users interact with forms and other web content and provide recommendations for managing user input, real-world examples, and links to further information.

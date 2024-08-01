@@ -77,7 +77,8 @@ CSS can also be used to match a custom state [within a custom element's shadow D
 
 Additionally, the `:state()` pseudo-class can be used after the [`::part()`](/en-US/docs/Web/CSS/::part) pseudo-element to match the [shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts) of a custom element that are in a particular state.
 
-> **Warning:** Browsers that do not yet support [`:state()`](/en-US/docs/Web/CSS/:state) will use a CSS `<dashed-ident>` for selecting custom states, which is now deprecated.
+> [!WARNING]
+> Browsers that do not yet support [`:state()`](/en-US/docs/Web/CSS/:state) will use a CSS `<dashed-ident>` for selecting custom states, which is now deprecated.
 > For information about how to support both approaches see the [Compatibility with `<dashed-ident>` syntax](#compability_with_dashed-ident_syntax) section below.
 
 ## Examples
