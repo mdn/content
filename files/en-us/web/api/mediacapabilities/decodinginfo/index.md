@@ -106,7 +106,7 @@ decodingInfo(configuration)
 
         - `persistentState` {{optional_inline}}
 
-          - : A string indicating whether whether the returned object must be able to persist session data or any other type of state.
+          - : A string indicating whether the returned object must be able to persist session data or any other type of state.
             The allowed values are:
 
             - `required`

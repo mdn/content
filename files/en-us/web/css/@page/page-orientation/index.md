@@ -83,7 +83,7 @@ This example shows how the contents of a print document can be rotated to suit t
       feugiat diam, ut feugiat urna suscipit et. Nulla lacinia metus a nisi
       volutpat interdum. Lorem ipsum dolor sit amet, consectetur adipiscing
       elit. Vestibulum vitae elit vel orci malesuada bibendum ut vitae enim. Ut
-      ultrices elit nec vestibulum blandit. In in eleifend dui. Nam nec aliquet
+      ultrices elit nec vestibulum blandit. In eleifend dui. Nam nec aliquet
       nunc. Praesent convallis ipsum sed fermentum scelerisque.
     </p>
     <p>

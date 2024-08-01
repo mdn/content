@@ -37,7 +37,7 @@ None ({{jsxref("undefined")}}).
 In the following simple example, a custom `ReadableStream` is created using a constructor (see our [Simple random stream example](https://mdn.github.io/dom-examples/streams/simple-random-stream/) for the full code). The `start()` function generates a random string of text every second and enqueues it into the stream.
 A `cancel()` function is also provided to stop the generation if {{domxref("ReadableStream.cancel()")}} is called for any reason.
 
-When a button is pressed, the generation is stopped, the stream is closed using {{domxref("ReadableStreamDefaultController.close()")}}, and another function is run, which reads the data back out of the stream.
+When a button is pressed, the generation is stopped, the stream is closed using `close()`, and another function is run, which reads the data back out of the stream.
 
 ```js
 let interval;

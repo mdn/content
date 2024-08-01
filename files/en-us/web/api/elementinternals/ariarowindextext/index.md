@@ -2,12 +2,10 @@
 title: ElementInternals.ariaRowIndexText
 slug: Web/API/ElementInternals/ariaRowIndexText
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.ElementInternals.ariaRowIndexText
 ---
 
-{{APIRef("Web Components")}}{{SeeCompatTable}}
+{{APIRef("Web Components")}}
 
 The **`ariaRowIndexText`** property of the {{domxref("ElementInternals")}} interface reflects the value of the [`aria-rowindextext`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-rowindextext) attribute, which defines a human readable text alternative of aria-rowindex.
 

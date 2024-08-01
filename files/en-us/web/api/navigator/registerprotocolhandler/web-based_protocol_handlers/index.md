@@ -4,6 +4,8 @@ slug: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
 page-type: guide
 ---
 
+{{APIRef("HTML DOM")}}
+
 ## Background
 
 It's fairly common to find web pages link to resources using non-`http` protocols. An example is the `mailto:` protocol:
