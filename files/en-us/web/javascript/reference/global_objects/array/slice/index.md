@@ -119,7 +119,7 @@ read from start --->
 <--- read from reverse
 ```
 
-### Using slice
+### Using slice with arrays of objects
 
 In the following example, `slice` creates a new array, `newCar`,
 from `myCar`. Both include a reference to the object `myHonda`.
