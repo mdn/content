@@ -74,7 +74,7 @@ You can use this attribute with the following SVG elements:
 - `sRGB`
   - : Indicates that color interpolation should occur in the sRGB color space.
 - `linearRGB`
-  - : Indicates that color interpolation should occur in the linearized RGB color space as described in [the sRGB specification](https://webstore.iec.ch/publication/6169).
+  - : Indicates that color interpolation should occur in the linearized RGB color space as described in [the sRGB specification](https://webstore.iec.ch/en/publication/6169).
 
 ## Example
 
@@ -205,6 +205,6 @@ In this fourth SVG, the `color-interpolation` attribute is included on the `<rad
 - {{SVGElement("linearGradient")}}
 - {{SVGElement("radialGradient")}}
 - {{CSSXref("color-interpolation")}}
-- [sRGB specification](https://webstore.iec.ch/publication/6169)
+- [sRGB specification](https://webstore.iec.ch/en/publication/6169)
 - {{SVGAttr("color-interpolation-filters")}}
 - [Computer color is broken](https://www.youtube.com/watch?v=LKnqECcg6Gw) - popular demonstration of linearRGB

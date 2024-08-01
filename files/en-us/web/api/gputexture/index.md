@@ -45,7 +45,7 @@ A `GPUTexture` object instance is created using the {{domxref("GPUDevice.createT
 
 ## Examples
 
-In the WebGPU samples [Textured Cube sample](https://webgpu.github.io/webgpu-samples/samples/texturedCube), a texture to use on the faces of a cube is created by:
+In the WebGPU samples [Textured Cube sample](https://webgpu.github.io/webgpu-samples/samples/texturedCube/), a texture to use on the faces of a cube is created by:
 
 - Loading the image into an {{domxref("HTMLImageElement")}} and creating an image bitmap using {{domxref("createImageBitmap()")}}.
 - Creating a new `GPUTexture` using `createTexture()`.

@@ -712,7 +712,7 @@ The logical operators are described in the following table.
       </td>
       <td><code>!expr</code></td>
       <td>
-        Returns <code>false</code> if its single operand that can be converted
+        Returns <code>false</code> if its single operand can be converted
         to <code>true</code>; otherwise, returns <code>true</code>.
       </td>
     </tr>
