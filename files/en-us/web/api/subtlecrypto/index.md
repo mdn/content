@@ -88,7 +88,7 @@ The inverse of `wrapKey()` is {{DOMxRef("SubtleCrypto.unwrapKey","unwrapKey()")}
 #### Storing keys
 
 `CryptoKey` is a {{glossary("serializable object")}}, which allows keys to be stored and retrieved using standard web storage APIs.
-The specification expects that most developers will use the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API), sotring `CryptoKey` objects against some key string identifier that is meaningful to the application, along with any other metadata it finds useful.
+The specification expects that most developers will use the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API), storing `CryptoKey` objects against some key string identifier that is meaningful to the application, along with any other metadata it finds useful.
 
 ### Supported algorithms
 
