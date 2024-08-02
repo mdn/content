@@ -9,7 +9,7 @@ browser-compat: css.types.basic-shape.path
 
 The **`path()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) accepts an [SVG path](/en-US/docs/Web/SVG/Element/path) string, and is used in the [CSS shapes](/en-US/docs/Web/CSS/CSS_shapes) and [CSS motion path](/en-US/docs/Web/CSS/CSS_motion_path) modules to enable a shape to be drawn. The `path()` function is a {{cssxref("&lt;basic-shape&gt;")}} data type value. It can be used in the CSS [`offset-path`](/en-US/docs/Web/CSS/offset-path) and [`clip-path`](/en-US/docs/Web/CSS/clip-path) properties and in the SVG [`d`](/en-US/docs/Web/SVG/Attribute/d) attribute.
 
-There are some limitations to using the `path()` function. The path is required to be defined as a single string, so a custom path can't be defined using variables([`var()`](/en-US/docs/Web/CSS/var) function). Also, all the lengths in the path are implicitly defined in [pixel(`px`)](/en-US/docs/Web/CSS/CSS_Values_and_Units#absolute_length_units) unit, and other units can't be used. The [`shape()`](/en-US/docs/Web/CSS/basic-shape/shape) function offers more flexibility than the `path()` function.
+There are some limitations to using the `path()` function. The path has to be defined as a single string, so a custom path can't be created using variables ([`var()`](/en-US/docs/Web/CSS/var) functions). Also, all the lengths in the path are implicitly defined in [pixel](/en-US/docs/Web/CSS/CSS_Values_and_Units#absolute_length_units) (`px`) units; other units can't be used. The [`shape()`](/en-US/docs/Web/CSS/basic-shape/shape) function offers more flexibility than the `path()` function.
 
 {{EmbedInteractiveExample("pages/css/function-path.html")}}
 
@@ -31,7 +31,7 @@ path( [<fill-rule>,]? <string> )
 
 - [`<fill-rule>`](/en-US/docs/Web/SVG/Attribute/fill-rule) {{optional_inline}}
 
-  - : Defines what parts of the shape to be considered inside the shape. The possible values include:
+  - : Defines what parts of the path are inside the shape. The possible values include:
 
     - `nonzero`: A point is considered inside the shape if a ray drawn from the point crosses more left-to-right than right-to-left path segments, resulting in a non-zero count. This is the default value when `<fill-rule>` is omitted.
 
@@ -40,7 +40,7 @@ path( [<fill-rule>,]? <string> )
     > **Warning:** `<fill-rule>` is not supported in {{cssxref("offset-path")}} and using it invalidates the property.
 
 - {{cssxref("string")}}
-  - : A [data string](/en-US/docs/Web/SVG/Attribute/d), encompassed in quotes, for defining an [SVG path](/en-US/docs/Web/SVG/Element/path). The SVG path data string contains [path commands](/en-US/docs/Web/SVG/Attribute/d#path_commands) that implicitly use pixel unit. An empty path is considered invalid.
+  - : A [data string](/en-US/docs/Web/SVG/Attribute/d), contained in quotes, which defines an [SVG path](/en-US/docs/Web/SVG/Element/path). The SVG path data string contains [path commands](/en-US/docs/Web/SVG/Attribute/d#path_commands) that implicitly use pixel units. An empty path is considered invalid.
 
 ### Return value
 
@@ -59,9 +59,9 @@ path("M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80");
 path(evenodd,"M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80");
 ```
 
-### Use as an offset-path value
+### Using a `path()` function as an `offset-path` value
 
-The `path()` function has been used in the following example to create an elliptical path for the ball to move on.
+A `path()` function has been provided as an {{cssxref("offset-path")}} value in the following example to create an elliptical path for a ball to move along.
 
 ```html
 <div id="path">
