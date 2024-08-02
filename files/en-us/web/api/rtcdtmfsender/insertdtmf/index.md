@@ -50,8 +50,12 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-The example first checks if the {{domxref("RTCDTMFSender.canInsertDTMF()")}} property is defined, and if so uses it to check if inserting DTMF tones is supported.
-If the feature is supported then `insertDTMF()` is called to insert a tone.
+### Using insertDTMF to send DTMF tones
+
+This example shows how to use the `insertDTMF()` method to send tones over a WebRTC connection.
+
+The code first checks if the `canInsertDTMF` property is defined, and if so, uses it to check whether inserting DTMF tones is supported.
+If the feature is supported, `insertDTMF()` is called to insert a tone.
 
 ```js
 if (sender.dtmf.canInsertDTMF) {
