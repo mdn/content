@@ -103,22 +103,25 @@ The table below summarizes which algorithms are suitable for which cryptographic
     <tr>
       <th scope="row"></th>
       <th scope="col">
-        <a href="/en-US/docs/Web/API/SubtleCrypto/sign">sign()</a><br /><a href="/en-US/docs/Web/API/SubtleCrypto/verify">verify()</a>
+        <a href="/en-US/docs/Web/API/SubtleCrypto/sign">sign</a><br /><a href="/en-US/docs/Web/API/SubtleCrypto/verify">verify</a>
       </th>
       <th scope="col">
-        <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt">encrypt()</a><br /><a href="/en-US/docs/Web/API/SubtleCrypto/decrypt">decrypt()</a>
+        <a href="/en-US/docs/Web/API/SubtleCrypto/encrypt">encrypt</a><br /><a href="/en-US/docs/Web/API/SubtleCrypto/decrypt">decrypt</a>
       </th>
       <th scope="col">
-        <a href="/en-US/docs/Web/API/SubtleCrypto/digest">digest()</a>
+        <a href="/en-US/docs/Web/API/SubtleCrypto/digest">digest</a>
       </th>
       <th scope="col">
-        <a href="/en-US/docs/Web/API/SubtleCrypto/deriveBits">deriveBits()</a><br /><a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey">deriveKey()</a>
+        <a href="/en-US/docs/Web/API/SubtleCrypto/deriveBits">deriveBits</a><br /><a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey">deriveKey</a>
       </th>
       <th scope="col">
-        <a href="/en-US/docs/Web/API/SubtleCrypto/wrapKey">wrapKey()</a><br /><a href="/en-US/docs/Web/API/SubtleCrypto/unwrapKey">unwrapKey()</a>
+        <a href="/en-US/docs/Web/API/SubtleCrypto/wrapKey">wrapKey</a><br /><a href="/en-US/docs/Web/API/SubtleCrypto/unwrapKey">unwrapKey</a>
       </th>
       <th scope="col">
-        <a href="/en-US/docs/Web/API/SubtleCrypto/generateKey">generateKey()</a><br /><a href="/en-US/docs/Web/API/SubtleCrypto/importKey">importKey()</a><br /><a href="/en-US/docs/Web/API/SubtleCrypto/exportKey">exportKey()</a>
+        <a href="/en-US/docs/Web/API/SubtleCrypto/generateKey">generateKey</a><br /><a href="/en-US/docs/Web/API/SubtleCrypto/exportKey">exportKey</a>
+      </th>
+      <th scope="col">
+        <a href="/en-US/docs/Web/API/SubtleCrypto/importKey">importKey</a>
       </th>
     </tr>
   </thead>
@@ -131,6 +134,7 @@ The table below summarizes which algorithms are suitable for which cryptographic
       <td></td>
       <td></td>
       <td>✓</td>
+      <td>✓</td>
     </tr>
     <tr>
       <th scope="row"><a href="/en-US/docs/Web/API/SubtleCrypto/sign#rsa-pss">RSA-PSS</a></th>
@@ -139,6 +143,7 @@ The table below summarizes which algorithms are suitable for which cryptographic
       <td></td>
       <td></td>
       <td></td>
+      <td>✓</td>
       <td>✓</td>
     </tr>
     <tr>
@@ -149,10 +154,12 @@ The table below summarizes which algorithms are suitable for which cryptographic
       <td></td>
       <td></td>
       <td>✓</td>
+      <td>✓</td>
     </tr>
     <tr>
       <th scope="row"><a href="/en-US/docs/Web/API/SubtleCrypto/sign#ed25519">Ed25519</a></th>
       <td>✓</td>
+      <td></td>
       <td></td>
       <td></td>
       <td></td>
@@ -167,6 +174,7 @@ The table below summarizes which algorithms are suitable for which cryptographic
       <td></td>
       <td></td>
       <td>✓</td>
+      <td>✓</td>
     </tr>
     <tr>
       <th scope="row"><a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep">RSA-OAEP</a></th>
@@ -174,6 +182,7 @@ The table below summarizes which algorithms are suitable for which cryptographic
       <td>✓</td>
       <td></td>
       <td></td>
+      <td>✓</td>
       <td>✓</td>
       <td>✓</td>
     </tr>
@@ -185,6 +194,7 @@ The table below summarizes which algorithms are suitable for which cryptographic
       <td></td>
       <td>✓</td>
       <td>✓</td>
+      <td>✓</td>
     </tr>
     <tr>
       <th scope="row"><a href="/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc">AES-CBC</a></th>
@@ -192,6 +202,7 @@ The table below summarizes which algorithms are suitable for which cryptographic
       <td>✓</td>
       <td></td>
       <td></td>
+      <td>✓</td>
       <td>✓</td>
       <td>✓</td>
     </tr>
@@ -203,6 +214,7 @@ The table below summarizes which algorithms are suitable for which cryptographic
       <td></td>
       <td>✓</td>
       <td>✓</td>
+      <td>✓</td>
     </tr>
     <tr>
       <th scope="row"><a href="/en-US/docs/Web/API/SubtleCrypto/wrapKey#aes-kw">AES-KW</a></th>
@@ -212,12 +224,14 @@ The table below summarizes which algorithms are suitable for which cryptographic
       <td></td>
       <td>✓</td>
       <td>✓</td>
+      <td>✓</td>
     </tr>
     <tr>
       <th scope="row"><a href="/en-US/docs/Web/API/SubtleCrypto/digest#supported_algorithms">SHA-1</a></th>
       <td></td>
       <td></td>
       <td>✓</td>
+      <td></td>
       <td></td>
       <td></td>
       <td></td>
@@ -230,12 +244,14 @@ The table below summarizes which algorithms are suitable for which cryptographic
       <td></td>
       <td></td>
       <td></td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row"><a href="/en-US/docs/Web/API/SubtleCrypto/digest#supported_algorithms">SHA-384</a></th>
       <td></td>
       <td></td>
       <td>✓</td>
+      <td></td>
       <td></td>
       <td></td>
       <td></td>
@@ -248,6 +264,7 @@ The table below summarizes which algorithms are suitable for which cryptographic
       <td></td>
       <td></td>
       <td></td>
+      <td></td>
     </tr>
     <tr>
       <th scope="row"><a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#ecdh">ECDH</a></th>
@@ -256,7 +273,18 @@ The table below summarizes which algorithms are suitable for which cryptographic
       <td></td>
       <td>✓</td>
       <td></td>
+      <td>✓</td>
+      <td>✓</td>
+    </tr>
+    <tr>
+      <th scope="row"><a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#x25519">X25519</a></th>
       <td></td>
+      <td></td>
+      <td></td>
+      <td>✓</td>
+      <td></td>
+      <td>✓</td>
+      <td>✓</td>
     </tr>
     <tr>
       <th scope="row"><a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#hkdf">HKDF</a></th>
@@ -265,6 +293,7 @@ The table below summarizes which algorithms are suitable for which cryptographic
       <td></td>
       <td>✓</td>
       <td></td>
+      <td>✓</td>
       <td></td>
     </tr>
     <tr>
@@ -274,16 +303,8 @@ The table below summarizes which algorithms are suitable for which cryptographic
       <td></td>
       <td>✓</td>
       <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <th scope="row"><a href="/en-US/docs/Web/API/SubtleCrypto/deriveKey#x25519">X25519</a></th>
-      <td></td>
-      <td></td>
-      <td></td>
       <td>✓</td>
-      <td>✓</td>
-      <td>✓</td>
+      <td></td>
     </tr>
   </tbody>
 </table>
