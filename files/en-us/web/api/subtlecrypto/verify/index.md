@@ -225,7 +225,7 @@ async function verifyMessage(key) {
 
 The [Ed25519 live example](/en-US/docs/Web/API/SubtleCrypto/sign#ed25519_key_generation_signing_and_verification) in `SubtleCrypto.sign()` shows how to generate public and private keys, use the private key to sign some data, and then use the public key to verify the signature.
 
-The code below shows the part that is relevant to verifying the signature using the public key and encoded data:
+The excerpt below shows the part that is relevant for verifying the signature using the public key and encoded data:
 
 ```js
 // Verify the signature using the public key

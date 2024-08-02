@@ -208,12 +208,12 @@ let signature = await window.crypto.subtle.sign("HMAC", key, encoded);
 
 ### Ed25519 (key generation, signing, and verification)
 
-This code generates an Ed25519 signing key pair, uses the private key to sign the (encoded) contents of a text `<input>`, and then verifies the signature using the public key.
+This code generates an Ed25519 signing key pair, uses the private key to sign the (encoded) contents of a text [`<input>`](/en-US/docs/Web/HTML/Element/input/text), and then verifies the signature using the public key.
 It is derived from [this source code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/sign-verify/ed25519.js), which you can [run live here](https://mdn.github.io/dom-examples/web-crypto/sign-verify/).
 
 #### HTML
 
-The HTML defines an `<input>`, containing the text to be signed, and a button that starts the operation to create keys, sign the text and then verify the signature.
+The HTML defines an `<input>` element containing the text to be signed, and a button that starts the operation to create keys, sign the text and then verify the signature.
 
 ```html
 <label for="message">Enter a message to sign:</label>
@@ -250,8 +250,8 @@ function log(text) {
 
 #### JavaScript
 
-The JavaScript first gets the `button` and message `input` elements, and then adds a listener for the `click` event on the button.
-The event handler that clears the log and runs the other operations passing the content of the `input` element.
+The JavaScript first gets the `#sign-button` and `#message` {{HTMLElement("input")}} elements, then adds a listener for the `click` event on the button.
+The event handler clears the log and runs the other operations passing the content of the `<input>` element.
 
 ```js
 const button = document.querySelector("#sign-button");
@@ -266,9 +266,8 @@ button.addEventListener("click", () => {
 });
 ```
 
-The code below has several parts.
 First it generates keys using the Ed25519 algorithm, then it encodes text and signs that text using the private key.
-Then if calls {{domxref("SubtleCrypto.verify()")}} with the public key to verify the signature.
+Finally it calls {{domxref("SubtleCrypto.verify()")}} with the public key to verify the signature.
 
 ```js
 async function test(data) {
@@ -326,7 +325,6 @@ async function test(data) {
 
 #### Result
 
-The information about the created keys is logged below (or an error string if the browser does not allow the key to be created).
 
 {{EmbedLiveSample("Ed25519 (key generation, signing, and verification)", "100%", "170px")}}
 
