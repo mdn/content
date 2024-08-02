@@ -74,14 +74,14 @@ This article provides information about the changes in Firefox 129 that affect d
 
 #### WebDriver BiDi
 
+- By default CDP (Chrome DevTools Protocol) is now disabled. It can be re-enabled via the `remote.active-protocols` preference. You can learn more about this on the following [blog post](https://fxdx.dev/deprecating-cdp-support-in-firefox-embracing-the-future-with-webdriver-bidi/). ([Firefox bug 1882089](https://bugzil.la/1882089))
 - Added support for the `network.setCacheBehavior` command, which allows to configure the browser to bypass the network cache either globally or for a set of top level browsing contexts. ([Firefox bug 1901032](https://bugzil.la/1901032) and [Firefox bug 1906100](https://bugzil.la/1906100))
 - Added support for prompts of type `beforeUnload` which can now be handled in the same way as other user prompts. ([Firefox bug 1824220](https://bugzil.la/1824220))
 - We now support all arguments for the `network.provideResponse` command when used in the `beforeRequestSent` phase, such as the `body` parameter which allows to return mock responses. ([Firefox bug 1853882](https://bugzil.la/1853882))
 - The `browsingContext.userPromptOpened` now includes the `handler` field which contains the user prompt handler configured for the prompt which triggered the event. ([Firefox bug 1904822](https://bugzil.la/1904822))
-- By default CDP (Chrome DevTools Protocol) is now disabled. It can be re-enabled via the `remote.active-protocols` preference. ([Firefox bug 1882089](https://bugzil.la/1882089))
 - The `BrowsingContextInfo` type will now provide an `originalOpener` field which is the context id of the "opener" browsing context. This will be set for instance if the new context was created by using a link (even with `rel=noopener`), `window.open` etc. If the new browsing context has no relevant opener, the field will be set to null. ([Firefox bug 1898004](https://bugzil.la/1898004))
 - Network events (`beforeRequestSent`, `responseStarted` and `responseCompleted`) are now created for requests to data URLs. In Firefox 129, only navigation requests will be listed. ([Firefox bug 1805176](https://bugzil.la/1805176))
-- We added support for the `promptUnload` argument for `browsingContext.close`, which allows to bypass before unload prompts when closing a context via this command. ([Firefox bug 1862380](https://bugzil.la/1862380))
+- We added support for the `promptUnload` argument for `browsingContext.close`, which allows to bypass "beforeunload" prompts when closing a context via this command. ([Firefox bug 1862380](https://bugzil.la/1862380))
 - Fixed a bug in `network.continueRequest` where you could not set multiple values for the same header. ([Firefox bug 1904379](https://bugzil.la/1904379))
 - Fixed a bug for the `unhandledPromptBehavior` capability, which could not be used with BiDi only sessions. ([Firefox bug 1907935](https://bugzil.la/1907935))
 - Fixed a bug with `session.end` and `browser.close` which would unexpectedly fail when no Marionette client was connected. ([Firefox bug 1890091](https://bugzil.la/1890091))
