@@ -141,11 +141,11 @@ In the following example, we've declared a reversed counter named 'priority'. Th
 
 ```html
 <ul class="stack">
-  <li>Task one</li>
-  <li>Task two</li>
-  <li>Task three</li>
-  <li>Task four</li>
-  <li>Task five</li>
+  <li>Task A</li>
+  <li>Task B</li>
+  <li>Task C</li>
+  <li>Task D</li>
+  <li>Task E</li>
 </ul>
 ```
 
