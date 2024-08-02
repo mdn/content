@@ -176,7 +176,7 @@ This issue was resolved in:
 
 ## Notes, warnings, and callouts
 
-Sometimes writers want to call special attention to a piece of content. To do this, they can use the [GFM Alerts syntax](https://github.blog/changelog/2023-12-14-new-markdown-extension-alerts-provide-distinctive-styling-for-significant-content/), which is a blockquote with a special first line. There are three types of these: notes, warnings, and callouts.
+Writers can use the [GFM Alerts syntax](https://github.blog/changelog/2023-12-14-new-markdown-extension-alerts-provide-distinctive-styling-for-significant-content/) to call special attention to content. There are three types of alerts: notes, warnings, and callouts.
 
 > [!NOTE]
 > MDN Web Docs supported Alerts with its own syntax before the GFM proposal was formed. As such, MDN supports only two of the five alert types GFM supports, and it supports an additional type that GFM does not.
