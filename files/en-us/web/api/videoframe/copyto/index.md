@@ -66,8 +66,8 @@ const videoRect = {
 const options = {
   rect: videoRect,
   format: "RGBX",
-  colorSpace: "display-p3"
-}
+  colorSpace: "display-p3",
+};
 const size = videoFrame.allocationSize(options);
 const buffer = new ArrayBuffer(size);
 const layout = await videoFrame.copyTo(buffer, options);
