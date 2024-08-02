@@ -233,8 +233,8 @@ The HTML defines an `<input>` element containing the text to be signed, and a bu
 
 ```css hidden
 #log {
-  height: 110px;
-  overflow: scroll;
+  height: 120px;
+  overflow: scroll-behavior: auto;
   padding: 0.5rem;
   border: 1px solid black;
 }
@@ -326,7 +326,7 @@ async function test(data) {
 #### Result
 
 
-{{EmbedLiveSample("Ed25519 (key generation, signing, and verification)", "100%", "170px")}}
+{{EmbedLiveSample("Ed25519 (key generation, signing, and verification)", "100", "200px")}}
 
 ## Specifications
 
