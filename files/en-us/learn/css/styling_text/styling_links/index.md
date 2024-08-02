@@ -68,7 +68,7 @@ The example below illustrates what a link will look and behave like by default; 
 
   <kbd>tab</kbd>
 
-  , or enable the [Full Keyboard Access: All controls](https://support.apple.com/en-us/guide/mac-help/mchlp1399/mac) option by pressing
+  , or enable the [Full Keyboard Access: All controls](https://support.apple.com/guide/mac-help/use-your-keyboard-like-a-mouse-mchlp1399/mac) option by pressing
 
   <kbd>Ctrl</kbd>
 

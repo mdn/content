@@ -11707,7 +11707,6 @@
 /en-US/docs/Web/CSS/scroll	/en-US/docs/Web/CSS/overflow
 /en-US/docs/Web/CSS/scrollbar-track-color	/en-US/docs/Web/CSS/scrollbar-color
 /en-US/docs/Web/CSS/shape-box	/en-US/docs/Web/CSS/shape-outside
-/en-US/docs/Web/CSS/shape-rendering	/en-US/docs/Web/SVG/Attribute/shape-rendering
 /en-US/docs/Web/CSS/sign()	/en-US/docs/Web/CSS/sign
 /en-US/docs/Web/CSS/sign_function	/en-US/docs/Web/CSS/sign
 /en-US/docs/Web/CSS/single-transition-timing-function	/en-US/docs/Web/CSS/easing-function
@@ -11727,7 +11726,6 @@
 /en-US/docs/Web/CSS/symbols()	/en-US/docs/Web/CSS/symbols
 /en-US/docs/Web/CSS/symbols-descriptor	/en-US/docs/Web/CSS/@counter-style/symbols
 /en-US/docs/Web/CSS/system	/en-US/docs/Web/CSS/@counter-style/system
-/en-US/docs/Web/CSS/text-anchor	/en-US/docs/Web/SVG/Attribute/text-anchor
 /en-US/docs/Web/CSS/text-combine-horizontal	/en-US/docs/Web/CSS/text-combine-upright
 /en-US/docs/Web/CSS/time-function	/en-US/docs/Web/CSS/easing-function
 /en-US/docs/Web/CSS/timing-function	/en-US/docs/Web/CSS/easing-function

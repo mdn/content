@@ -208,7 +208,7 @@ if (wasNotEditingBefore && isEditingNow) {
 }
 ```
 
-The React team has discussed [ways to get a component's previous state](https://reactjs.org/docs/hooks-faq.html#how-to-get-the-previous-props-or-state), and provided an example hook we can use for the job.
+The React team has discussed [ways to get a component's previous state](https://legacy.reactjs.org/docs/hooks-faq.html#how-to-get-the-previous-props-or-state), and provided an example hook we can use for the job.
 
 ### Enter `usePrevious()`
 
@@ -353,7 +353,7 @@ Most of the time, you can be an effective contributor to a React project even if
 `useRef()` and `useEffect()` are somewhat advanced features, and you should be proud of yourself for using them! Look out for opportunities to practice them more, because doing so will allow you to create inclusive experiences for users. Remember: our app would have been inaccessible to keyboard users without them!
 
 > [!NOTE]
-> If you need to check your code against our version, you can find a finished version of the sample React app code in our [todo-react repository](https://github.com/mdn/todo-react). For a running live version, see <https://mdn.github.io/todo-react>.
+> If you need to check your code against our version, you can find a finished version of the sample React app code in our [todo-react repository](https://github.com/mdn/todo-react). For a running live version, see <https://mdn.github.io/todo-react/>.
 
 In the very last article we'll present you with a list of React resources that you can use to go further in your learning.
 
