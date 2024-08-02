@@ -47,7 +47,7 @@ importKey(format, keyData, algorithm, extractable, keyUsages)
     - For [PBKDF2](/en-US/docs/Web/API/SubtleCrypto/deriveKey#pbkdf2): Pass the string `PBKDF2`.
     - For [HKDF](/en-US/docs/Web/API/SubtleCrypto/deriveKey#hkdf): Pass the string `HKDF`.
     - For [Ed25519](#ed25519): Pass an object of the form `{ "name": "Ed25519" }`.
-    - For [X25519](/en-US/docs/Web/API/SubtleCrypto/sign#ed25519): Pass an object of the form: `{name: 'X25519'}`.
+    - For [X25519](/en-US/docs/Web/API/SubtleCrypto/sign#ed25519): Pass an object of the form: `{name: "X25519"}`.
 - `extractable`
   - : A boolean value indicating whether it will be possible to export the key using {{domxref("SubtleCrypto.exportKey()")}} or {{domxref("SubtleCrypto.wrapKey()")}}.
 - `keyUsages`
