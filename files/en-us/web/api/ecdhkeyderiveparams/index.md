@@ -17,7 +17,7 @@ The parameters for ECDH `deriveKey()` therefore include the other entity's publi
 
 - `name`
   - : A string.
-    This should be set to `ECDH` or `X25519`, depending on the algorithm used
+    This should be set to `ECDH` or `X25519`, depending on the algorithm used.
 - `public`
   - : A {{domxref("CryptoKey")}} object representing the public key of the other entity.
 
