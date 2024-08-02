@@ -7,7 +7,7 @@ browser-compat: css.properties.clip-rule
 
 {{CSSRef}}
 
-The **`clip-rule`** [CSS](/en-US/docs/Web/CSS) property defines how to determine which pixels in a mask's box are inside the clipping shape defined by a clip path, and which are outside, when parts of the path overlap other parts. Specifically, it chooses between the "non-zero" and "even-odd" methods of determining inclusion. `clip-rule` can be applied to all SVG elements, but only has an effect on those which are part of a clipping path. CSS values of the `clip-rule` property can override SVG values of the `clip-rule` attribute.
+The **`clip-rule`** [CSS](/en-US/docs/Web/CSS) property defines how to determine which pixels in a mask's box are inside the clipping shape defined by a clip path, and which are outside, when parts of the path overlap other parts. Specifically, it chooses between the "non-zero" and "even-odd" methods of determining inclusion. `clip-rule` can be applied to all SVG elements, but only has an effect on those which are part of a clipping path. CSS values of the `clip-rule` property can override SVG values of the {{SVGAttr("clip-rule")}} attribute.
 
 ## Syntax
 
