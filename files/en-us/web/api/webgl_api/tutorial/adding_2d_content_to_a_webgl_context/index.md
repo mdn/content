@@ -44,7 +44,7 @@ The most important thing to understand before we get started is that even though
 
 ### The shaders
 
-A **shader** is a program, written using the [OpenGL ES Shading Language](https://www.khronos.org/registry/OpenGL/specs/es/3.2/GLSL_ES_Specification_3.20.pdf) (**GLSL**), that takes information about the vertices that make up a shape and generates the data needed to render the pixels onto the screen: namely, the positions of the pixels and their colors.
+A **shader** is a program, written using the [OpenGL ES Shading Language](https://registry.khronos.org/OpenGL/specs/es/3.2/GLSL_ES_Specification_3.20.pdf) (**GLSL**), that takes information about the vertices that make up a shape and generates the data needed to render the pixels onto the screen: namely, the positions of the pixels and their colors.
 
 There are two shader functions run when drawing WebGL content: the **vertex shader** and the **fragment shader**. You write these in GLSL and pass the text of the code into WebGL to be compiled for execution on the GPU. Together, a set of vertex and fragment shaders is called a **shader program**.
 
