@@ -31,9 +31,6 @@ generateKey(algorithm, extractable, keyUsages)
     - For [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr), [AES-CBC](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc),
       [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm), or [AES-KW](/en-US/docs/Web/API/SubtleCrypto/wrapKey#aes-kw):
       pass an [`AesKeyGenParams`](/en-US/docs/Web/API/AesKeyGenParams) object.
-    - For [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr), [AES-CBC](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc),
-      [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm), or [AES-KW](/en-US/docs/Web/API/SubtleCrypto/wrapKey#aes-kw):
-      pass an [`AesKeyGenParams`](/en-US/docs/Web/API/AesKeyGenParams) object.
     - For [Ed25519](/en-US/docs/Web/API/SubtleCrypto/sign#ed25519): pass the string `Ed25519` or an object of the form `{ name: "Ed25519" }`.
     - For [X25519](/en-US/docs/Web/API/SubtleCrypto/deriveKey#x25519): pass the string `X25519` or an object of the form `{ name: "X25519" }`.
 
