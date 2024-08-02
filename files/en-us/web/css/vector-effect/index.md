@@ -7,7 +7,7 @@ browser-compat: css.properties.vector-effect
 
 {{CSSRef}}
 
-The **`vector-effect`** [CSS](/en-US/docs/Web/CSS) property suppresses specific transformation effects in SVG. It can only be used with SVG elements that accept the {{SVGAttr("vector-effect")}} attribute. When used, the CSS value overrides any values of the element's `vector-effect` attribute.
+The **`vector-effect`** [CSS](/en-US/docs/Web/CSS) property suppresses specific [transformation effects](/en-US/docs/Web/SVG/Attribute/transform) in SVG. It can only be used with SVG elements that accept the {{SVGAttr("vector-effect")}} attribute. When used, the CSS value overrides any values of the element's `vector-effect` attribute.
 
 ## Syntax
 
