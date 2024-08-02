@@ -220,7 +220,7 @@ td {
 
 ```css
 @font-face {
-  src: url("fonts/LeagueMonoVariable.ttf");
+  src: url("https://mdn.github.io/shared-assets/fonts/LeagueMono-VF.ttf");
   font-family: "LeagueMonoVariable";
   font-style: normal;
   font-stretch: 1% 500%; /* Required by Chrome */
