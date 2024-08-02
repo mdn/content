@@ -90,7 +90,7 @@ The result is that the first of the two rectangles has an apparent (visual) stro
 
 ### Overriding SVG stroke scaling values with CSS
 
-In this case, we start with a similar SVG image to the one used in the previous example. Here, the `<g>` element is rotated as before, but no scaling is done on it. The `<rect>` elements are given a common origin for their transforms, and also have their `vector-effect` SVG attributes set to a value of `none`.
+In this case, we start with a similar SVG image to the one used in the previous example. Here, the {{SVGElement("g")}} element is rotated as before, but no scaling is applied to it. The `<rect>` elements are given a common origin for their transforms, and have their `vector-effect` SVG attributes set to a value of `none`.
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 100">
