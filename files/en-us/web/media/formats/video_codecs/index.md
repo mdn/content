@@ -88,7 +88,7 @@ The following video codecs are those which are most commonly used on the web. Fo
       </td>
     </tr>
     <tr>
-      <th scope="row"><a href="#theora">Theora</a></th>
+      <th scope="row"><a href="#theora">Theora</a> {{deprecated_inline}}</th>
       <td>Theora</td>
       <td><a href="/en-US/docs/Web/Media/Formats/Containers#ogg">Ogg</a></td>
     </tr>
@@ -1505,6 +1505,10 @@ However, few web browsers support MPEG-2 without the support of a plugin, and wi
 
 ### Theora
 
+> [!WARNING]
+> This code is no longer longer recommended.
+> It has extremely small usage, and support is being removed from browsers.
+
 **[Theora](https://en.wikipedia.org/wiki/Theora)**, developed by [Xiph.org](https://xiph.org/), is an open and free video codec which may be used without royalties or licensing. Theora is comparable in quality and compression rates to MPEG-4 Part 2 Visual and AVC, making it a very good if not top-of-the-line choice for video encoding. But its status as being free from any licensing concerns and its relatively low CPU resource requirements make it a popular choice for many software and web projects. The low CPU impact is particularly useful since there are no hardware decoders available for Theora.
 
 Theora was originally based upon the VC3 codec by On2 Technologies. The codec and its specification were released under the LGPL license and entrusted to Xiph.org, which then developed it into the Theora standard.
@@ -1581,10 +1585,10 @@ The [Theora Cookbook](https://en.flossmanuals.net/ogg-theora/_full/) offers addi
             </tr>
             <tr>
               <th scope="row">Theora support</th>
-              <td>3</td>
-              <td>Yes</td>
-              <td>3.5</td>
-              <td>10.5</td>
+              <td>3 to 121</td>
+              <td>12 to 121</td>
+              <td>3.5 to 126</td>
+              <td>10.5 to 107</td>
               <td>No</td>
             </tr>
           </tbody>
