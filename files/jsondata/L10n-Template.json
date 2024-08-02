@@ -279,5 +279,91 @@
     "ru": " Обзор: ",
     "zh-CN": " 概述：",
     "zh-TW": " 概述："
+  },
+
+  "for_developers": {
+    "en-US": " for developers",
+    "fr": " pour les développeurs",
+    "ko": "릴리즈노트",
+    "ru": " для разработчиков",
+    "zh-CN": " 的开发者说明"
+  },
+
+  "js_property_attributes_header_prefix": {
+    "en-US": "Property attributes of ",
+    "es": "Atributos de la propiedad ",
+    "fr": "Attributs de ",
+    "ja": "",
+    "ko": "Property attributes of ",
+    "pt-BR": "Property attributes of ",
+    "ru": "Атрибуты свойства ",
+    "zh-CN": "",
+    "zh-TW": ""
+  },
+  "js_property_attributes_header_suffix": {
+    "en-US": "",
+    "es": "",
+    "fr": "",
+    "ja": " のプロパティ属性",
+    "ko": "",
+    "pt-BR": "",
+    "ru": "",
+    "zh-CN": " 的属性特性",
+    "zh-TW": " 的屬性特性"
+  },
+  "writable": {
+    "en-US": "Writable",
+    "es": "Sobrescribir",
+    "fr": "Écrivable",
+    "ja": "書込可能",
+    "ko": "쓰기 가능",
+    "pt-BR": "Writable",
+    "ru": "Записываемое",
+    "zh-CN": "可写",
+    "zh-TW": "可寫"
+  },
+  "enumerable": {
+    "en-US": "Enumerable",
+    "es": "Numerable",
+    "fr": "Énumérable",
+    "ja": "列挙可能",
+    "ko": "열거 가능",
+    "pt-BR": "Enumerable",
+    "ru": "Перечисляемое",
+    "zh-CN": "可枚举",
+    "zh-TW": "可列舉"
+  },
+  "configurable": {
+    "en-US": "Configurable",
+    "es": "Configurable",
+    "fr": "Configurable",
+    "ja": "設定可能",
+    "ko": "설정 가능",
+    "pt-BR": "Configurable",
+    "ru": "Настраиваемое",
+    "zh-CN": "可配置",
+    "zh-TW": "可配置"
+  },
+  "yes": {
+    "en-US": "yes",
+    "es": "Sí",
+    "fr": "Oui",
+    "ja": "可",
+    "ko": "가능",
+    "pt-BR": "yes",
+    "ru": "да",
+    "zh-CN": "是",
+    "zh-TW": "是"
+  },
+  "no": {
+    "en-US": "no",
+    "es": "No",
+    "fr": "Non",
+    "ja": "不可",
+    "ko": "불가능",
+    "pt-BR": "no",
+    "ru": "нет",
+    "zh-CN": "否",
+    "zh-TW": "否"
   }
 }

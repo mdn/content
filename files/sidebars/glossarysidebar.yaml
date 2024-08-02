@@ -1,0 +1,6 @@
+sidebar:
+  - type: section
+    link: /Glossary
+    title: Glossary
+  - type: listSubPages
+    path: /en-US/docs/Glossary
