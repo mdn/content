@@ -94,7 +94,7 @@ It can be a good choice however when the signer and verifier are the same entity
 
 ### Ed25519
 
-Ed25519 is a high-performance digital signature algorithm built on the [Curve25519](https://en.wikipedia.org/wiki/Curve25519) elliptic curve, which is part of the Edwards-Curve Digital Signature Algorithm (EdDSA) family of algorithms defined in {{rfc("8032")}}.
+Ed25519 is a digital signature algorithm built on the [Curve25519](https://en.wikipedia.org/wiki/Curve25519) elliptic curve, which is part of the Edwards-Curve Digital Signature Algorithm (EdDSA) family of algorithms defined in {{rfc("8032")}}.
 
 This algorithm is used in {{Glossary("public-key cryptography", "public-key cryptosystems")}} that use the private key for signing and the public key for verification.
 Unlike some other such systems (RSASSA-PKCS1-v1_5, RSA-PSS, and ECDSA), it does not pass in a [digest](/en-US/docs/Web/API/SubtleCrypto/digest#supported_algorithms) of the message for signing.
