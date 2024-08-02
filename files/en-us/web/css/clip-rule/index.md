@@ -42,7 +42,7 @@ clip-rule: unset;
 
 ### Choosing between rules for a path with all clockwise paths
 
-In this SVG iamge, we have two simple rectangles that are clipped, once with each clipping rule. There are two `<clipPath>` elements given, in order that one can be set to use a non-zero clipping rule and the other to use the even-odd rule. Both paths are drawn in a clockwise direction for both its inner and outer parts.
+In this SVG image, we have two rectangles that are clipped, once with each clipping rule. There are two {{SVGElement("clipPath")}} elements, so that one can be set to use the non-zero clipping rule and the other uses the even-odd rule. Both paths are drawn in a clockwise direction for both its inner and outer parts.
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50">
