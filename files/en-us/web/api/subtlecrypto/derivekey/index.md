@@ -28,8 +28,9 @@ deriveKey(algorithm, baseKey, derivedKeyAlgorithm, extractable, keyUsages)
 
 - `algorithm`
   - : An object defining the [derivation algorithm](#supported_algorithms) to use.
-    - To use [ECDH](#ecdh), pass an [`EcdhKeyDeriveParams`](/en-US/docs/Web/API/EcdhKeyDeriveParams) object.
+    - To use [ECDH](#ecdh), pass an [`EcdhKeyDeriveParams`](/en-US/docs/Web/API/EcdhKeyDeriveParams) object, specifying the string `ECDH` as the `name` property.
     - To use [HKDF](#hkdf), pass an [`HkdfParams`](/en-US/docs/Web/API/HkdfParams) object.
+    - To use [X25519](#x25519), pass an [`EcdhKeyDeriveParams`](/en-US/docs/Web/API/EcdhKeyDeriveParams) object, specifying the string `X25519` as the `name` property.
 - `baseKey`
   - : A {{domxref("CryptoKey")}} representing the input to the derivation algorithm.
     If `algorithm` is ECDH, then this will be the ECDH private key.

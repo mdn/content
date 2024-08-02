@@ -26,9 +26,8 @@ except that `deriveKey()` returns a
 `deriveBits()` followed by
 [`importKey()`](/en-US/docs/Web/API/SubtleCrypto/importKey).
 
-This function supports the same derivation algorithms as `deriveKey()`:
-ECDH, HKDF, and PBKDF2. See [Supported algorithms](/en-US/docs/Web/API/SubtleCrypto/deriveKey#supported_algorithms)
-for some more detail on these algorithms.
+This function supports the same derivation algorithms as `deriveKey()`: ECDH, HKDF, PBKDF2, and X25519.
+See [Supported algorithms](/en-US/docs/Web/API/SubtleCrypto/deriveKey#supported_algorithms) for some more detail on these algorithms.
 
 ## Syntax
 
@@ -40,10 +39,10 @@ deriveBits(algorithm, baseKey, length)
 
 - `algorithm`
   - : An object defining the [derivation algorithm](/en-US/docs/Web/API/SubtleCrypto/deriveKey#supported_algorithms) to use.
-    - To use [ECDH](/en-US/docs/Web/API/SubtleCrypto/deriveKey#ecdh), pass an [`EcdhKeyDeriveParams`](/en-US/docs/Web/API/EcdhKeyDeriveParams) object.
+    - To use [ECDH](/en-US/docs/Web/API/SubtleCrypto/deriveKey#ecdh), pass an [`EcdhKeyDeriveParams`](/en-US/docs/Web/API/EcdhKeyDeriveParams) object, specifying the string `ECDH` as the `name` property.
     - To use [HKDF](/en-US/docs/Web/API/SubtleCrypto/deriveKey#hkdf), pass an [`HkdfParams`](/en-US/docs/Web/API/HkdfParams) object.
     - To use [PBKDF2](/en-US/docs/Web/API/SubtleCrypto/deriveKey#pbkdf2), pass a [`Pbkdf2Params`](/en-US/docs/Web/API/Pbkdf2Params) object.
-    - To use [X25519](/en-US/docs/Web/API/SubtleCrypto/deriveKey#x25519), pass the string `X25519` or an object of the form `{ name: "X25519" }`.
+    - To use [X25519](/en-US/docs/Web/API/SubtleCrypto/deriveKey#x25519), pass an [`EcdhKeyDeriveParams`](/en-US/docs/Web/API/EcdhKeyDeriveParams) object, specifying the string `X25519` as the `name` property.
 - `baseKey`
   - : A {{domxref("CryptoKey")}} representing the input
     to the derivation algorithm. If `algorithm` is ECDH, this will be the ECDH
