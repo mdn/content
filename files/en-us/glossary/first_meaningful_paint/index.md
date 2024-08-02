@@ -15,5 +15,6 @@ FMP is very sensitive to small differences in the page load. This can lead to in
 
 ## See also
 
-- [First contentful paint](/en-US/docs/Glossary/First_contentful_paint)
-- [Largest Contentful Paint](https://wicg.github.io/largest-contentful-paint/)
+- Related glossary terms:
+  - {{Glossary("First contentful paint")}}
+  - {{Glossary("Largest contentful paint")}}
