@@ -74,7 +74,7 @@ sequenceDiagram
 
 As compression brings significant performance improvements, it is recommended to activate it for all files except already compressed ones like images, audio files and videos.
 
-Apache supports compression and uses [mod_deflate](https://httpd.apache.org/docs/current/mod/mod_deflate.html); for Nginx there is [ngx_http_gzip_module](https://nginx.org/en/docs/http/ngx_http_gzip_module.html); for IIS, the [`<httpCompression>`](https://docs.microsoft.com/iis/configuration/system.webServer/httpCompression/) element.
+Apache supports compression and uses [mod_deflate](https://httpd.apache.org/docs/current/mod/mod_deflate.html); for Nginx there is [ngx_http_gzip_module](https://nginx.org/en/docs/http/ngx_http_gzip_module.html); for IIS, the [`<httpCompression>`](https://learn.microsoft.com/en-us/iis/configuration/system.webServer/httpCompression/) element.
 
 ## Hop-by-hop compression
 

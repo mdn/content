@@ -35,7 +35,7 @@ The metadata elements are:
 - {{HTMLElement("style")}}
 - {{HTMLElement("title")}}
 
-Some of these elements belong to more than one content category. For example, `<script>` is a member of the metadata, flow, and phrasing content categories, and is a script-supporting element; `<script>` can be used where metadata contet, phrasing content, or script-supporting elements are expected.
+Some of these elements belong to more than one content category. For example, `<script>` is a member of the metadata, flow, and phrasing content categories, and is a script-supporting element; `<script>` can be used where metadata content, phrasing content, or script-supporting elements are expected.
 
 ### Flow content
 
