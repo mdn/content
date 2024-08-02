@@ -8,8 +8,8 @@ browser-compat: css.properties.font-stretch
 {{CSSRef}}
 
 > [!NOTE]
-> The `font-stretch` property [has now been renamed to `font-width`](https://drafts.csswg.org/css-fonts/#font-stretch-desc) in the specifications. And the `font-stretch` name remains as an alias for the `font-width` property.
-> The new name `font-width` has not been supported by any browser yet.
+> The `font-stretch` property [has now been renamed to `font-width`](https://drafts.csswg.org/css-fonts/#font-stretch-desc) in the specifications. The name `font-stretch` has been kept as an alias for the `font-width` property.
+> The new name `font-width` is not yet supported by any browsers.
 
 The **`font-stretch`** [CSS](/en-US/docs/Web/CSS) property selects a normal, condensed, or expanded face from a font.
 
