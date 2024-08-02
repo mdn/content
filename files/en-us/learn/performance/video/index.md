@@ -49,7 +49,7 @@ The sections below describe the following optimization techniques:
 
 ### Compress all videos
 
-Most video compression work compares adjacent frames within a video, with the intent of removing detail that is identical in both frames. Compress the video and export to multiple video formats, including WebM, MPEG-4/H.264, and Ogg/Theora.
+Most video compression work compares adjacent frames within a video, with the intent of removing detail that is identical in both frames. Compress the video and export to multiple video formats, including WebM, and MPEG-4/H.264.
 
 Your video editing software probably has a feature to reduce file size. If not, there are online tools, such as [FFmpeg](https://www.ffmpeg.org/) (discussed in section below), that encode, decode, convert, and perform other optimization functions.
 
@@ -63,8 +63,6 @@ Order video source from smallest to largest. For example, given video compressio
   <source src="video.webm" type="video/webm" />
   <!-- MPEG-4/H.264: 12 MB -->
   <source src="video.mp4" type="video/mp4" />
-  <!-- Ogg/Theora: 13 MB -->
-  <source src="video.ogv" type="video/ogv" />
 </video>
 ```
 
