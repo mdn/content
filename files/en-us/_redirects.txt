@@ -11707,7 +11707,6 @@
 /en-US/docs/Web/CSS/scroll	/en-US/docs/Web/CSS/overflow
 /en-US/docs/Web/CSS/scrollbar-track-color	/en-US/docs/Web/CSS/scrollbar-color
 /en-US/docs/Web/CSS/shape-box	/en-US/docs/Web/CSS/shape-outside
-/en-US/docs/Web/CSS/shape-rendering	/en-US/docs/Web/SVG/Attribute/shape-rendering
 /en-US/docs/Web/CSS/sign()	/en-US/docs/Web/CSS/sign
 /en-US/docs/Web/CSS/sign_function	/en-US/docs/Web/CSS/sign
 /en-US/docs/Web/CSS/single-transition-timing-function	/en-US/docs/Web/CSS/easing-function
