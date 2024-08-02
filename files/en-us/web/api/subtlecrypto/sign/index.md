@@ -50,7 +50,7 @@ The promise is rejected when the following exception is encountered:
 
 The Web Crypto API provides the following algorithms that can be used for signing (and signature verification):
 
-#### RSASSA-PKCS1-v1_5
+### RSASSA-PKCS1-v1_5
 
 The SASSA-PKCS1-v1_5 algorithm is used in {{Glossary("public-key cryptography", "public-key cryptosystems")}} that use the private key for signing and the public key for verification.
 Systems that use this algorithm use a [digest algorithm](/en-US/docs/Web/API/SubtleCrypto/digest#supported_algorithms) to hash the message to a short fixed size before signing.
@@ -58,7 +58,7 @@ The choice of digest algorithm is passed into the {{domxref("SubtleCrypto.genera
 
 The RSASSA-PKCS1-v1_5 algorithm is specified in [RFC 3447](https://datatracker.ietf.org/doc/html/rfc3447).
 
-#### RSA-PSS
+### RSA-PSS
 
 The RSA-PSS algorithm is used in {{Glossary("public-key cryptography", "public-key cryptosystems")}} that use the private key for signing and the public key for verification.
 Systems that use this algorithm use a [digest algorithm](/en-US/docs/Web/API/SubtleCrypto/digest#supported_algorithms) to hash the message to a short fixed size before signing.
@@ -68,7 +68,7 @@ The algorithm is specified in [RFC 3447](https://datatracker.ietf.org/doc/html/r
 
 It's different from RSASSA-PKCS1-v1_5 in that it incorporates a random salt in the signature operation, so the same message signed with the same key will not result in the same signature each time. An extra property, defining the salt length, is passed into the {{domxref("SubtleCrypto.sign()", "sign()")}} and {{domxref("SubtleCrypto.verify()", "verify()")}} functions when they are invoked.
 
-#### ECDSA
+### ECDSA
 
 This algorithm is used in {{Glossary("public-key cryptography", "public-key cryptosystems")}} that use the private key for signing and the public key for verification.
 Systems that use this algorithm use a [digest algorithm](/en-US/docs/Web/API/SubtleCrypto/digest#supported_algorithms) to hash the message to a short fixed size before signing.
@@ -82,7 +82,7 @@ These values are concatenated together in this order.
 
 This encoding was also proposed by the [IEEE 1363-2000](https://standards.ieee.org/ieee/1363/2049/) standard, and is sometimes referred to as the IEEE P1363 format. It differs from the [X.509](https://www.itu.int/rec/T-REC-X.509) signature structure, which is the default format produced by some tools and libraries such as [OpenSSL](https://www.openssl.org).
 
-#### HMAC
+### HMAC
 
 The HMAC algorithm calculates and verifies hash-based message authentication codes according to the [FIPS 198-1 standard](https://csrc.nist.gov/csrc/media/publications/fips/198/1/final/documents/fips-198-1_final.pdf).
 
@@ -92,7 +92,7 @@ The digest algorithm to use is specified in the [`HmacKeyGenParams`](/en-US/docs
 The HMAC algorithm uses the same algorithm and key for signing and for verification: this means that the verification key must be kept secret, which in turn means that this algorithm is not suitable for many signature use cases.
 It can be a good choice however when the signer and verifier are the same entity.
 
-#### Ed25519
+### Ed25519
 
 Ed25519 is a high-performance digital signature algorithm built on the [Curve25519](https://en.wikipedia.org/wiki/Curve25519) elliptic curve, which is part of the Edwards-Curve Digital Signature Algorithm (EdDSA) family of algorithms defined in {{rfc("8032")}}.
 
