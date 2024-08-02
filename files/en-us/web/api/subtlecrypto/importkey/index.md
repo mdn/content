@@ -36,18 +36,18 @@ importKey(format, keyData, algorithm, extractable, keyUsages)
   - : An object defining the type of key to import and providing extra algorithm-specific parameters.
     - For [RSASSA-PKCS1-v1_5](/en-US/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5), [RSA-PSS](/en-US/docs/Web/API/SubtleCrypto/sign#rsa-pss),
       or [RSA-OAEP](/en-US/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep):
-      Pass an [`RsaHashedImportParams`](/en-US/docs/Web/API/RsaHashedImportParams) object.
+      pass an [`RsaHashedImportParams`](/en-US/docs/Web/API/RsaHashedImportParams) object.
     - For [ECDSA](/en-US/docs/Web/API/SubtleCrypto/sign#ecdsa) or [ECDH](/en-US/docs/Web/API/SubtleCrypto/deriveKey#ecdh):
-      Pass an [`EcKeyImportParams`](/en-US/docs/Web/API/EcKeyImportParams) object.
+      pass an [`EcKeyImportParams`](/en-US/docs/Web/API/EcKeyImportParams) object.
     - For [HMAC](/en-US/docs/Web/API/SubtleCrypto/sign#hmac):
-      Pass an [`HmacImportParams`](/en-US/docs/Web/API/HmacImportParams) object.
+      pass an [`HmacImportParams`](/en-US/docs/Web/API/HmacImportParams) object.
     - For [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr), [AES-CBC](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc),
-      [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm), or [AES-KW](/en-US/docs/Web/API/SubtleCrypto/wrapKey#aes-kw):
-      Pass the string identifying the algorithm or an object of the form `{ "name": ALGORITHM }`, where `ALGORITHM` is the name of the algorithm.
-    - For [PBKDF2](/en-US/docs/Web/API/SubtleCrypto/deriveKey#pbkdf2): Pass the string `PBKDF2`.
-    - For [HKDF](/en-US/docs/Web/API/SubtleCrypto/deriveKey#hkdf): Pass the string `HKDF`.
-    - For [Ed25519](#ed25519): Pass an object of the form `{ "name": "Ed25519" }`.
-    - For [X25519](/en-US/docs/Web/API/SubtleCrypto/sign#ed25519): Pass an object of the form: `{name: "X25519"}`.
+      [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm), and [AES-KW](/en-US/docs/Web/API/SubtleCrypto/wrapKey#aes-kw):
+      pass the string identifying the algorithm or an object of the form `{ name: ALGORITHM }`, where `ALGORITHM` is the name of the algorithm.
+    - For [PBKDF2](/en-US/docs/Web/API/SubtleCrypto/deriveKey#pbkdf2): pass the string `PBKDF2`.
+    - For [HKDF](/en-US/docs/Web/API/SubtleCrypto/deriveKey#hkdf): pass the string `HKDF`.
+    - For [Ed25519](/en-US/docs/Web/API/SubtleCrypto/sign#ed25519): pass the string `Ed25519` or an object of the form `{ name: "Ed25519" }`.
+    - For [X25519](/en-US/docs/Web/API/SubtleCrypto/deriveKey#x25519): pass the string `X25519` or an object of the form `{ name: "X25519" }`.
 - `extractable`
   - : A boolean value indicating whether it will be possible to export the key using {{domxref("SubtleCrypto.exportKey()")}} or {{domxref("SubtleCrypto.wrapKey()")}}.
 - `keyUsages`

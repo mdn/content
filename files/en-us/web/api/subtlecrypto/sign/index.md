@@ -24,11 +24,11 @@ sign(algorithm, key, data)
 
 - `algorithm`
   - : A string or object that specifies the signature algorithm to use and its parameters:
-    - To use [RSASSA-PKCS1-v1_5](#rsassa-pkcs1-v1_5), pass the string `"RSASSA-PKCS1-v1_5"` or an object of the form `{ "name": "RSASSA-PKCS1-v1_5" }`.
+    - To use [RSASSA-PKCS1-v1_5](#rsassa-pkcs1-v1_5), pass the string `RSASSA-PKCS1-v1_5` or an object of the form `{ name: "RSASSA-PKCS1-v1_5" }`.
     - To use [RSA-PSS](#rsa-pss), pass an {{domxref("RsaPssParams")}} object.
     - To use [ECDSA](#ecdsa), pass an {{domxref("EcdsaParams")}} object.
-    - To use [HMAC](#hmac), pass the string `"HMAC"` or an object of the form `{ "name": "HMAC" }`.
-    - To use [Ed25519](#ed25519), pass an object of the form `{ "name": "Ed25519" }`.
+    - To use [HMAC](#hmac), pass the string `HMAC` or an object of the form `{ name: "HMAC" }`.
+    - To use [Ed25519](#ed25519), pass the string `Ed25519` or an object of the form `{ name: "Ed25519" }`.
 - `key`
   - : A {{domxref("CryptoKey")}} object containing the key to be used for signing.
     If `algorithm` identifies a public-key cryptosystem, this is the private key.
