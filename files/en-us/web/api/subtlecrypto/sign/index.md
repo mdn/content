@@ -325,7 +325,6 @@ async function test(data) {
 
 #### Result
 
-
 {{EmbedLiveSample("Ed25519 (key generation, signing, and verification)", "100", "200px")}}
 
 ## Specifications
