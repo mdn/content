@@ -183,7 +183,7 @@ Sometimes writers want to call special attention to a piece of content. To do th
 >
 > Before the syntax had an official name, MDN referred to Alerts as "noteblocks".
 
-- To add a note, create a GFM blockquote whose first line is `[!NOTE]`.
+- To add a note, create a blockquote whose first line is `[!NOTE]`.
 - To add a warning, create a GFM blockquote whose first line is `[!WARNING]`.
 - To add a callout, create a GFM blockquote whose first line is `[!CALLOUT]`.
 
