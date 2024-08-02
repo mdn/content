@@ -184,8 +184,8 @@ Writers can use the [GFM Alerts syntax](https://github.blog/changelog/2023-12-14
 > Before the syntax had an official name, MDN referred to Alerts as "noteblocks".
 
 - To add a note, create a blockquote whose first line is `[!NOTE]`.
-- To add a warning, create a GFM blockquote whose first line is `[!WARNING]`.
-- To add a callout, create a GFM blockquote whose first line is `[!CALLOUT]`.
+- To add a warning, create a blockquote whose first line is `[!WARNING]`.
+- To add a callout, create a blockquote whose first line is `[!CALLOUT]`.
 
 Notes and warnings will add a localized **Note:** or **Warning:** to the beginning of the output, while callouts will not. This makes callouts a good choice when an author wants to provide a custom title.
 
