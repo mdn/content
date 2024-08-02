@@ -49,7 +49,7 @@ Functional notation: `color-mix(<color-interpolation-method>, <color>[<percentag
 
   - : A {{CSSXref("&lt;percentage&gt;")}} value between `0%` and `100%`, specifying the amount of the corresponding color to mix.
 
-    The two percentages (p1 and p2) of the colors are normalized as follows:
+    The two color percentages (we'll refer to them as `p1` and `p2`) are normalized as follows:
 
     - If both `p1` and `p2` are omitted, then `p1 = p2 = 50%`.
     - If `p1` is omitted, then `p1 = 100% - p2`.
