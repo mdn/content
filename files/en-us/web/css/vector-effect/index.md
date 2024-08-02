@@ -73,7 +73,7 @@ Here, we start with a 200x100 SVG image that contains two rectangles inside a gr
 </svg>
 ```
 
-To this SVG image, we apply `width: 500px` to make it larger than its intrinsic size, and set the classed `<rect>` to have non-scaled strokes.
+To this SVG image, we apply `width: 500px` to make it larger than its intrinsic size, and set the classed {{SVGElement("rect")}} to have non-scaled strokes.
 
 ```css
 svg {
