@@ -28,34 +28,23 @@ deriveKey(algorithm, baseKey, derivedKeyAlgorithm, extractable, keyUsages)
 
 - `algorithm`
   - : An object defining the [derivation algorithm](#supported_algorithms) to use.
-    - To use [ECDH](#ecdh), pass an
-      [`EcdhKeyDeriveParams`](/en-US/docs/Web/API/EcdhKeyDeriveParams) object.
+    - To use [ECDH](#ecdh), pass an [`EcdhKeyDeriveParams`](/en-US/docs/Web/API/EcdhKeyDeriveParams) object.
     - To use [HKDF](#hkdf), pass an [`HkdfParams`](/en-US/docs/Web/API/HkdfParams) object.
-    - To use [PBKDF2](#pbkdf2), pass
-      a [`Pbkdf2Params`](/en-US/docs/Web/API/Pbkdf2Params) object.
 - `baseKey`
-  - : A {{domxref("CryptoKey")}} representing the input
-    to the derivation algorithm. If `algorithm` is ECDH, then this will be the
-    ECDH private key. Otherwise it will be the initial key material for the derivation
-    function: for example, for PBKDF2 it might be a password, imported as a
-    `CryptoKey` using
-    [`SubtleCrypto.importKey()`](/en-US/docs/Web/API/SubtleCrypto/importKey).
+  - : A {{domxref("CryptoKey")}} representing the input to the derivation algorithm.
+    If `algorithm` is ECDH, then this will be the ECDH private key.
+    Otherwise it will be the initial key material for the derivation function: for example, for PBKDF2 it might be a password, imported as a `CryptoKey` using [`SubtleCrypto.importKey()`](/en-US/docs/Web/API/SubtleCrypto/importKey).
 - `derivedKeyAlgorithm`
   - : An object defining the algorithm the derived key will be used for:
     - For [HMAC](/en-US/docs/Web/API/SubtleCrypto/sign#hmac) pass an [`HmacKeyGenParams`](/en-US/docs/Web/API/HmacKeyGenParams) object.
-    - For [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr), [AES-CBC](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc),
-      [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm), or [AES-KW](/en-US/docs/Web/API/SubtleCrypto/wrapKey#aes-kw), pass an
-      [`AesKeyGenParams`](/en-US/docs/Web/API/AesKeyGenParams) object.
+    - For [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr), [AES-CBC](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc), [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm), or [AES-KW](/en-US/docs/Web/API/SubtleCrypto/wrapKey#aes-kw), pass an [`AesKeyGenParams`](/en-US/docs/Web/API/AesKeyGenParams) object.
     - For [HKDF](#hkdf), pass an [`HkdfParams`](/en-US/docs/Web/API/HkdfParams) object.
     - For [PBKDF2](#pbkdf2), pass a [`Pbkdf2Params`](/en-US/docs/Web/API/Pbkdf2Params) object.
 - `extractable`
-  - : A boolean value indicating whether it
-    will be possible to export the key using {{domxref("SubtleCrypto.exportKey()")}} or
-    {{domxref("SubtleCrypto.wrapKey()")}}.
+  - : A boolean value indicating whether it will be possible to export the key using {{domxref("SubtleCrypto.exportKey()")}} or {{domxref("SubtleCrypto.wrapKey()")}}.
 - `keyUsages`
-  - : An {{jsxref("Array")}} indicating what can be
-    done with the derived key. Note that the key usages must be allowed by the algorithm
-    set in `derivedKeyAlgorithm`. Possible values of the array are:
+  - : An {{jsxref("Array")}} indicating what can be done with the derived key. Note that the key usages must be allowed by the algorithm set in `derivedKeyAlgorithm`.
+    Possible values of the array are:
     - `encrypt`: The key may be used to [encrypt](/en-US/docs/Web/API/SubtleCrypto/encrypt) messages.
     - `decrypt`: The key may be used to [decrypt](/en-US/docs/Web/API/SubtleCrypto/decrypt) messages.
     - `sign`: The key may be used to [sign](/en-US/docs/Web/API/SubtleCrypto/sign) messages.
@@ -74,19 +63,15 @@ A {{jsxref("Promise")}} that fulfills with a {{domxref("CryptoKey")}}.
 The promise is rejected when one of the following exceptions are encountered:
 
 - `InvalidAccessError` {{domxref("DOMException")}}
-  - : Raised when the master key is not a key for the requested derivation algorithm
-    or if the `keyUsages` value of that key doesn't contain `deriveKey`.
+  - : Raised when the master key is not a key for the requested derivation algorithm or if the `keyUsages` value of that key doesn't contain `deriveKey`.
 - `NotSupported` {{domxref("DOMException")}}
-  - : Raised when trying to use an algorithm that is either unknown or isn't suitable for
-    derivation, or if the algorithm requested for the derived key doesn't define a key
-    length.
+  - : Raised when trying to use an algorithm that is either unknown or isn't suitable for derivation, or if the algorithm requested for the derived key doesn't define a key length.
 - `SyntaxError` {{domxref("DOMException")}}
-  - : Raised when `keyUsages` is empty but the unwrapped key is of
-    type `secret` or `private`.
+  - : Raised when `keyUsages` is empty but the unwrapped key is of type `secret` or `private`.
 
 ## Supported algorithms
 
-The three algorithms supported by `deriveKey()` have quite different characteristics and are appropriate in different situations.
+The algorithms supported by `deriveKey()` have quite different characteristics and are appropriate in different situations.
 
 ### ECDH
 
@@ -115,7 +100,7 @@ PBKDF2 is specified in [RFC 2898](https://datatracker.ietf.org/doc/html/rfc2898)
 
 ### X25519
 
-X25519 is a high-performance key agreement algorithm built on the [Curve25519](https://en.wikipedia.org/wiki/Curve25519) elliptic curve, which is part of the Edwards-Curve Digital Signature Algorithm (EdDSA) family of algorithms defined in {{rfc("8032")}}.
+X25519 is a key agreement algorithm built on the [Curve25519](https://en.wikipedia.org/wiki/Curve25519) elliptic curve, which is part of the Edwards-Curve Digital Signature Algorithm (EdDSA) family of algorithms defined in {{rfc("8032")}}.
 The algorithm is specified in {{rfc("7748")}}.
 
 ## Examples
@@ -125,9 +110,9 @@ The algorithm is specified in {{rfc("7748")}}.
 
 ### ECDH
 
-In this example Alice and Bob each generate an ECDH key pair, then exchange public
-keys. They then use `deriveKey()` to derive a shared AES key, that they could
-use to encrypt messages. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/derive-key/ecdh.js)
+In this example Alice and Bob each generate an ECDH key pair, then exchange public keys.
+They then use `deriveKey()` to derive a shared AES key, that they could use to encrypt messages.
+[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/derive-key/ecdh.js)
 
 ```js
 /*
