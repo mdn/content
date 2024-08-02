@@ -100,4 +100,4 @@ By the time `main.js` has been parsed and its dependencies are known, they have 
 ## See also
 
 - [Speculative loading](/en-US/docs/Web/Performance/Speculative_loading) for a comparison of `<link rel="modulepreload">` and other similar performance improvement features.
-- [Preloading modules](https://developer.chrome.com/blog/modulepreload) (developer.chrome.com)
+- [Preloading modules](https://web.dev/articles/modulepreload) on web.dev
