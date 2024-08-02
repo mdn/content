@@ -15,14 +15,14 @@ Counters are, in essence, variables maintained by CSS whose values may be increm
 1. Counters are inherited from the parent element or received from a previous sibling.
 2. New counters are instantiated using {{cssxref("counter-reset")}} property.
 3. Counters are incremented using {{cssxref("counter-increment")}} property.
-4. Counter values are changed using {{cssxref("counter-set")}} property.
+4. Counters are directly set to a value using the {{cssxref("counter-set")}} property.
 
 You can define your own named counters, and you can also manipulate the `list-item` counter that is created by default for all ordered lists.
 
 ## Using counters
 
 To use a counter it must first be initialized to a value with the {{cssxref("counter-reset")}} property.
-The counter's value can then be increased or decreased using the {{cssxref("counter-increment")}} property. And the counter value can also be changed using the {{cssxref("counter-set")}} property.
+The counter's value can be increased or decreased using the {{cssxref("counter-increment")}} property and can be directly set to a specific value using the {{cssxref("counter-set")}} property.
 The current value of a counter is displayed using the {{cssxref("counter", "counter()")}} or {{cssxref("counters", "counters()")}} function, typically within a [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) {{CSSxRef("content")}} property.
 
 Counters can only be set, reset, or incremented in elements that generate boxes.
@@ -57,13 +57,13 @@ h3::before {
 }
 ```
 
-You can specify the increment or decrement amount after the counter name. It can be a positive or negative number.
+You can specify the increment or decrement amount after the counter name. It can be a positive or negative number, but defaults to `1` if no integer is provided.
 
 Apart from increment or decrement, counters can also be explicitly set to a value using {{cssxref("counter-increment")}} property.
 
 ```css
 .done::before {
-  counter-set: section;
+  counter-set: section 20;
 }
 ```
 
@@ -145,7 +145,7 @@ The counter value is decreased by specifying a negative value for {{cssxref("cou
 
 ### Difference between counter-set and counter-reset
 
-The {{cssxref("counter-set")}} property updates an existing counter and if no counter with the name exists then a new counter is instantiated. The {{cssxref("counter-increment")}} property _always_ creates a new counter.
+The {{cssxref("counter-set")}} property updates an existing counter and if no counter with the name exists then a new counter is instantiated. The {{cssxref("counter-reset")}} property _always_ creates a new counter.
 
 In the following example, we have two sub-lists inside a parent list. Each list item has been numbered using a counter named 'item'. The first sub-list uses {{cssxref("counter-set")}} property and the second sub-list uses {{cssxref("counter-reset")}} property to change the 'item' counter.
 
