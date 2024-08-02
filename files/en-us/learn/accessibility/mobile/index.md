@@ -180,7 +180,7 @@ Let's have a go at web browsing with VoiceOver:
 7. Select _Headings_. Now you'll be able to swipe up and down to move between headings on the page.
 
 > [!NOTE]
-> For a more complete reference covering the VoiceOver gestures available and other hints on accessibility testing on iOS, see [Test Accessibility on Your Device with VoiceOver](https://developer.apple.com/library/archive/technotes/TestingAccessibilityOfiOSApps/TestAccessibilityonYourDevicewithVoiceOver/TestAccessibilityonYourDevicewithVoiceOver.html).
+> For a more complete reference covering the VoiceOver gestures available and other hints on accessibility testing on iOS, see [Apple's VoiceOver documentation](https://developer.apple.com/documentation/accessibility/voiceover/).
 
 ## Control mechanisms
 

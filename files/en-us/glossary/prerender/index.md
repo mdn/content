@@ -32,5 +32,5 @@ Prerendering results in faster display time than prefetching and hence a better 
 - [Speculative loading](/en-US/docs/Web/Performance/Speculative_loading)
 - Related glossary terms:
   - {{Glossary("Prefetch")}}
-- [Prerender pages in Chrome for instant page navigations](https://developer.chrome.com/blog/prerender-pages/#prerendering-from-the-address-bar) on developer.chrome.com (2023)
+- [Prerender pages in Chrome for instant page navigations](https://developer.chrome.com/docs/web-platform/prerender-pages#prerendering-from-the-address-bar) on developer.chrome.com
 - [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API)
