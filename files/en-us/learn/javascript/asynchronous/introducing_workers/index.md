@@ -92,7 +92,7 @@ In this program, after we call `generatePrimes()`, the program becomes totally u
 
 ### Prime generation with a worker
 
-For this example, start by making a local copy of the files at <https://github.com/mdn/learning-area/blob/main/javascript/asynchronous/workers/start>. There are four files in this directory:
+For this example, start by making a local copy of the files at <https://github.com/mdn/learning-area/tree/main/javascript/asynchronous/workers/start>. There are four files in this directory:
 
 - index.html
 - style.css
@@ -229,7 +229,7 @@ The `generatePrimes()` function is just like the synchronous version, except ins
 > [!NOTE]
 > To run this site, you'll have to run a local web server, because file:// URLs are not allowed to load workers. See our guide to [setting up a local testing server](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server). With that done, you should be able to click "Generate primes" and have your main page stay responsive.
 >
-> If you have any problems creating or running the example, you can review the [finished version](https://github.com/mdn/learning-area/blob/main/javascript/asynchronous/workers/finished) and try it [live](https://mdn.github.io/learning-area/javascript/asynchronous/workers/finished).
+> If you have any problems creating or running the example, you can review the [finished version](https://github.com/mdn/learning-area/tree/main/javascript/asynchronous/workers/finished) and try it [live](https://mdn.github.io/learning-area/javascript/asynchronous/workers/finished/).
 
 ## Other types of workers
 

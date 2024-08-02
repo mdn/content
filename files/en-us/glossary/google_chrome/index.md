@@ -17,7 +17,7 @@ Google Chrome is a free Web {{glossary("browser")}} developed by Google. It's ba
 Use one of these links if you're an everyday user.
 
 - [Android](https://play.google.com/store/apps/details?id=com.android.chrome)
-- [iOS](https://apps.apple.com/us/app/chrome-web-browser-by-google/id535886823)
+- [iOS](https://apps.apple.com/us/app/google-chrome/id535886823)
 - [Desktop](https://www.google.com/chrome/)
 
 ### For Web Developers
