@@ -181,7 +181,7 @@ Sometimes writers want to call special attention to a piece of content. To do th
 > [!NOTE]
 > MDN Web Docs supported Alerts with its own syntax before the GFM proposal was formed. As such, MDN supports only two of the five alert types GFM supports, and it supports an additional type that GFM does not.
 >
-> Before the syntax had an official name, MDN referred to GFM Alerts as "noteblocks".
+> Before the syntax had an official name, MDN referred to Alerts as "noteblocks".
 
 - To add a note, create a GFM blockquote whose first line is `[!NOTE]`.
 - To add a warning, create a GFM blockquote whose first line is `[!WARNING]`.
