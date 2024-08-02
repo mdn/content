@@ -36,7 +36,7 @@ The process for identifying the containing block depends entirely on the value o
 
    1. A {{cssxref("filter")}}, {{cssxref("backdrop-filter")}}, {{cssxref("transform")}}, or {{cssxref("perspective")}}, value other than `none`
    2. A {{cssxref("contain")}} value of `layout`, `paint`, `strict` or `content` (e.g. `contain: paint;`)
-   3. A {{cssxref("container-type")}} value other than `normal`
+   3. A {{cssxref("container-type")}} value other than `normal`.
    4. A {{cssxref("will-change")}} value containing a property for which a non-initial value would form a containing block (e.g. `filter` or `transform`).
 
 > [!NOTE]
