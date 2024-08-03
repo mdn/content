@@ -27,6 +27,10 @@ shape-outside: ellipse();
 shape-outside: inset(10px 10px 10px 10px);
 shape-outside: polygon(10px 10px, 20px 20px, 30px 30px);
 
+/* Shape box with basic shape */
+shape-outside: circle() border-box;
+shape-outside: margin-box ellipse();
+
 /* <url> value */
 shape-outside: url(image.png);
 
