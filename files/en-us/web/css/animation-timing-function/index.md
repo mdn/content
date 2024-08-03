@@ -25,16 +25,16 @@ animation-timing-function: linear;
 animation-timing-function: step-start;
 animation-timing-function: step-end;
 
-/* Cubic-bezier value */
+/* cubic-bezier() function values */
 animation-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
 
-/* Linear function values */
+/* linear() function values */
 animation-timing-function: linear(0, 0.25, 1);
 animation-timing-function: linear(0 0%, 0.25 50%, 1 100%);
 animation-timing-function: linear(0, 0.25 50% 75%, 1);
 animation-timing-function: linear(0, 0.25 50%, 0.25 75%, 1);
 
-/* Steps Function keywords */
+/* steps() function values */
 animation-timing-function: steps(4, jump-start);
 animation-timing-function: steps(10, jump-end);
 animation-timing-function: steps(20, jump-none);
@@ -59,7 +59,7 @@ animation-timing-function: unset;
 
   - : The easing function that corresponds to a given animation, as determined by {{cssxref("animation-name")}}.
 
-    The non-step keyword values (ease, linear, ease-in-out, etc.) each represent cubic Bézier curve with fixed four point values, with the cubic-bezier() function value allowing for a non-predefined value. The step easing functions divides the input time into a specified number of intervals that are equal in length. It is defined by a number of steps and a step position.
+    The non-step keyword values (`ease`, `linear`, `ease-in-out`, etc.) each represent cubic Bézier curves with fixed four-point values, while the `cubic-bezier()` function value allows non-predefined values to be specified. The `steps()` easing function divides the input time into a specified number of equal-length intervals. Its parameters include a number of steps and a step position.
 
     - `linear`
       - : Equal to `cubic-bezier(0.0, 0.0, 1.0, 1.0)`, animates at an even speed.
@@ -79,7 +79,7 @@ animation-timing-function: unset;
 
     - `linear(<number> <percentage>{1,2}, …)`
 
-      - : The function interpolates linearly between the provided easing stop points. A stop point is a pair of an output progress and an input percentage. The input percentage is optional, and if the input percentage not provided it is inferred.
+      - : The function interpolates linearly between the provided easing stop points. A stop point is a pair of an output progress and an input percentage. The input percentage is optional and is inferred if not specified.
 
     - `steps(<integer>, <step-position>)`
 
