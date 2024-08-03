@@ -26,7 +26,9 @@ animation-timing-function: step-start;
 animation-timing-function: step-end;
 
 /* cubic-bezier() function values */
-animation-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
+animation-timing-function: cubic-bezier(0.42, 0, 1, 1); /* ease-in */
+animation-timing-function: cubic-bezier(0, 0, 0.58, 1); /* ease-out */
+animation-timing-function: cubic-bezier(0.42, 0, 0.58, 1); /* ease-in-out */
 
 /* linear() function values */
 animation-timing-function: linear(0, 0.25, 1);
@@ -79,7 +81,7 @@ animation-timing-function: unset;
 
     - `linear(<number> <percentage>{1,2}, …)`
 
-      - : The function interpolates linearly between the provided easing stop points. A stop point is a pair of an output progress and an input percentage. The input percentage is optional and is inferred if not specified.
+      - : The function interpolates linearly between the provided easing stop points. A stop point is a pair of an output progress and an input percentage. The input percentage is optional and is inferred if not specified. If an input percentage is not provided then the first and last stop points are set to `0%` and `100%` respectively, and the stop points in the middle receive percentage values derived by linearly interpolating between the closest previous and next points that have a percentage value.
 
     - `steps(<integer>, <step-position>)`
 
@@ -124,7 +126,11 @@ Within a keyframe, `animation-timing-function` is an at-rule-specific descriptor
 
 ## Examples
 
+All the examples in this section animate `width` and `background-color` properties of `<div>` elements. The width is being animated from `0` to `100%`, and the background color is being animated from lime to magenta.
+
 ### Linear function examples
+
+The example demonstrates `linear()` easing.
 
 ```html hidden
 <div class="parent">
@@ -137,9 +143,35 @@ Within a keyframe, `animation-timing-function` is an at-rule-specific descriptor
   <div class="linear-fn6">linear(0, 1.2 50%, 0.75 80%, 1)</div>
   <div class="linear-fn7">linear(0, 0.5 75%, 1 120%)</div>
 </div>
+<div class="x-axis"><span>25%</span><span>50%</span><span>75%</span></div>
+<button>Play animation</button>
+```
+
+```js hidden
+const btn = document.querySelector("button");
+const divs = document.querySelectorAll(".parent > div[class]");
+
+btn.addEventListener("click", () => {
+  btn.setAttribute("disabled", "true");
+  for (const div of divs) {
+    div.classList.remove("animate");
+    void div.offsetWidth;
+    div.classList.add("animate");
+  }
+  setTimeout(() => {
+    btn.removeAttribute("disabled");
+  }, 11000);
+});
 ```
 
 ```css hidden
+.x-axis {
+  display: flex;
+  justify-content: space-evenly;
+  width: 80vw;
+  margin-left: 4px;
+}
+
 .parent {
   background: linear-gradient(
     to right,
@@ -157,15 +189,23 @@ Within a keyframe, `animation-timing-function` is an at-rule-specific descriptor
     white 75.2%
   );
   width: 80vw;
+  font-family: monospace;
+  font-weight: bold;
   border: 2px solid grey;
 }
 
-.parent > div[class] {
+.animate {
   animation-name: changeme;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
+}
 
+.parent > div[class] {
+  animation-fill-mode: forwards;
+  animation-duration: 10s;
+
+  width: 0;
   margin-bottom: 4px;
+  padding: 5px 0;
+  box-sizing: border-box;
   text-wrap: nowrap;
   background-color: lime;
 }
@@ -176,7 +216,7 @@ Within a keyframe, `animation-timing-function` is an at-rule-specific descriptor
   }
   100% {
     width: 100%;
-    background-color: magenta;
+    background-color: orange;
   }
 }
 
@@ -206,9 +246,11 @@ Within a keyframe, `animation-timing-function` is an at-rule-specific descriptor
 }
 ```
 
-{{EmbedLiveSample("Linear function examples", 600, 240)}}
+{{EmbedLiveSample("Linear function examples", 600, 280)}}
 
 ### Cubic-Bezier examples
+
+The example demonstrates bezier curve easing.
 
 ```html hidden
 <div class="parent">
@@ -217,22 +259,63 @@ Within a keyframe, `animation-timing-function` is an at-rule-specific descriptor
   <div class="easein">ease-in</div>
   <div class="easeout">ease-out</div>
   <div class="easeinout">ease-in-out</div>
-  <div class="linear">linear</div>
   <div class="cb">cubic-bezier(0.2,-2,0.8,2)</div>
 </div>
+<div class="x-axis"><span>50%</span></div>
+<button>Play animation</button>
+```
+
+```js hidden
+const btn = document.querySelector("button");
+const divs = document.querySelectorAll(".parent > div[class]");
+
+btn.addEventListener("click", () => {
+  btn.setAttribute("disabled", "true");
+  for (const div of divs) {
+    div.classList.remove("animate");
+    void div.offsetWidth;
+    div.classList.add("animate");
+  }
+  setTimeout(() => {
+    btn.removeAttribute("disabled");
+  }, 11000);
+});
 ```
 
 ```css hidden
+.x-axis {
+  display: flex;
+  justify-content: space-evenly;
+  width: 80vw;
+  margin-left: 4px;
+}
+
 .parent {
-  width: 90vw;
+  background: linear-gradient(
+    to right,
+    white 49.8%,
+    grey 49.8%,
+    grey 50.2%,
+    white 50.2%
+  );
+  width: 80vw;
+  font-family: monospace;
+  font-weight: bold;
+  border: 2px solid grey;
+}
+
+.animate {
+  animation-name: changeme;
 }
 
 .parent > div[class] {
-  animation-name: changeme;
+  animation-fill-mode: forwards;
   animation-duration: 10s;
-  animation-iteration-count: infinite;
 
+  width: 0;
   margin-bottom: 4px;
+  padding: 5px 0;
+  box-sizing: border-box;
   text-wrap: nowrap;
   background-color: lime;
 }
@@ -243,7 +326,7 @@ Within a keyframe, `animation-timing-function` is an at-rule-specific descriptor
   }
   100% {
     width: 100%;
-    background-color: magenta;
+    background-color: orange;
   }
 }
 
@@ -267,35 +350,87 @@ Within a keyframe, `animation-timing-function` is an at-rule-specific descriptor
 }
 ```
 
-{{EmbedLiveSample("Cubic-Bezier_examples", 600, 180)}}
+{{EmbedLiveSample("Cubic-Bezier_examples", 600, 230)}}
 
 ### Step examples
+
+The example demonstrates step easing.
 
 ```html hidden
 <div class="parent">
   <div class="linear">linear</div>
-  <div class="jump-start">jump-start</div>
-  <div class="jump-end">jump-end</div>
-  <div class="jump-both">jump-both</div>
-  <div class="jump-none">jump-none</div>
-  <div class="start">start</div>
-  <div class="end">end</div>
+  <div class="start">steps(4, start)</div>
+  <div class="jump-start">steps(4, jump-start)</div>
+  <div class="end">steps(4, end)</div>
+  <div class="jump-end">steps(4, jump-end)</div>
+  <div class="jump-both">steps(4, jump-both)</div>
+  <div class="jump-none">steps(4, jump-none)</div>
   <div class="step-start">step-start</div>
   <div class="step-end">step-end</div>
 </div>
+<div class="x-axis"><span>25%</span><span>50%</span><span>75%</span></div>
+<button>Play animation</button>
+```
+
+```js hidden
+const btn = document.querySelector("button");
+const divs = document.querySelectorAll(".parent > div[class]");
+
+btn.addEventListener("click", () => {
+  btn.setAttribute("disabled", "true");
+  for (const div of divs) {
+    div.classList.remove("animate");
+    void div.offsetWidth;
+    div.classList.add("animate");
+  }
+  setTimeout(() => {
+    btn.removeAttribute("disabled");
+  }, 11000);
+});
 ```
 
 ```css hidden
+.x-axis {
+  display: flex;
+  justify-content: space-evenly;
+  width: 80vw;
+  margin-left: 4px;
+}
+
 .parent {
-  width: 90vw;
+  background: linear-gradient(
+    to right,
+    white 24.8%,
+    grey 24.8%,
+    grey 25.2%,
+    white 25.2%,
+    white 49.8%,
+    grey 49.8%,
+    grey 50.2%,
+    white 50.2%,
+    white 74.8%,
+    grey 74.8%,
+    grey 75.2%,
+    white 75.2%
+  );
+  width: 80vw;
+  font-family: monospace;
+  font-weight: bold;
+  border: 2px solid grey;
+}
+
+.animate {
+  animation-name: changeme;
 }
 
 .parent > div[class] {
-  animation-name: changeme;
+  animation-fill-mode: forwards;
   animation-duration: 10s;
-  animation-iteration-count: infinite;
 
+  width: 0;
   margin-bottom: 4px;
+  padding: 5px 0;
+  box-sizing: border-box;
   text-wrap: nowrap;
   background-color: lime;
 }
@@ -306,32 +441,32 @@ Within a keyframe, `animation-timing-function` is an at-rule-specific descriptor
   }
   100% {
     width: 100%;
-    background-color: magenta;
+    background-color: orange;
   }
 }
 ```
 
-```css
-.jump-start {
+```css hidden
+.linear {
   animation-timing-function: linear;
 }
 .jump-start {
-  animation-timing-function: steps(5, jump-start);
+  animation-timing-function: steps(4, jump-start);
 }
 .jump-end {
-  animation-timing-function: steps(5, jump-end);
+  animation-timing-function: steps(4, jump-end);
 }
 .jump-none {
-  animation-timing-function: steps(5, jump-none);
+  animation-timing-function: steps(4, jump-none);
 }
 .jump-both {
-  animation-timing-function: steps(5, jump-both);
+  animation-timing-function: steps(4, jump-both);
 }
 .start {
-  animation-timing-function: steps(5, start);
+  animation-timing-function: steps(4, start);
 }
 .end {
-  animation-timing-function: steps(5, end);
+  animation-timing-function: steps(4, end);
 }
 .step-start {
   animation-timing-function: step-start;
@@ -341,7 +476,7 @@ Within a keyframe, `animation-timing-function` is an at-rule-specific descriptor
 }
 ```
 
-{{EmbedLiveSample("Step_examples", 600, 230)}}
+{{EmbedLiveSample("Step_examples", 600, 330)}}
 
 ## Specifications
 
