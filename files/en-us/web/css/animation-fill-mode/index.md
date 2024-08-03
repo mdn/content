@@ -51,7 +51,7 @@ animation-fill-mode: unset;
     | `alternate-reverse`   | even                        | `100%` or `to`            |
     | `alternate-reverse`   | odd                         | `0%` or `from`            |
 
-    The properties that had been animated keep on having [`will-change`](/en-US/docs/Web/CSS/will-change) status. If new stacking context was created during the animation, then the target element keeps on having the staking context after the animation.
+    Animated properties behave as if included in a set [`will-change`](/en-US/docs/Web/CSS/will-change) property value. If a new stacking context was created during the animation, the target element retains the stacking context after the animation has finished.
 
 - `backwards`
 

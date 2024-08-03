@@ -38,7 +38,7 @@ A stacking context is formed, anywhere in the document, by any element in the fo
 - Element with a {{cssxref("will-change")}} value specifying any property that would create a stacking context on non-initial value (see [this post](https://dev.opera.com/articles/css-will-change-property/)).
 - Element with a {{cssxref("contain")}} value of `layout`, or `paint`, or a composite value that includes either of them (i.e. `contain: strict`, `contain: content`).
 - Element placed into the [top layer](/en-US/docs/Glossary/Top_layer) and its corresponding {{cssxref("::backdrop")}}. Examples include [fullscreen](/en-US/docs/Web/API/Fullscreen_API) and [popover](/en-US/docs/Web/API/Popover_API) elements.
-- Element that got animated, with [`animation-fill-mode`](/en-US/docs/Web/CSS/animation-fill-mode) set to [`forwards`](/en-US/docs/Web/CSS/animation-fill-mode#forwards), where staking context creating properties were animated.
+- Element that has had stacking context-creating properties (such as `opacity`) animated using {{cssxref("@keyframes")}}, with [`animation-fill-mode`](/en-US/docs/Web/CSS/animation-fill-mode) set to [`forwards`](/en-US/docs/Web/CSS/animation-fill-mode#forwards).
 
 Within a stacking context, child elements are stacked according to the same rules explained just above. Importantly, the `z-index` values of its child stacking contexts only have meaning in this parent. Stacking contexts are treated atomically as a single unit in the parent stacking context.
 
