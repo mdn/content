@@ -354,13 +354,13 @@ As with HTML and CSS, it is possible to write comments into your JavaScript code
 Comments are very useful, and you should use them often, particularly for larger applications.
 There are two types:
 
-- A single line comment is written after a double forward slash (//), e.g.
+- A single line comment is written after a double forward slash (`//`), e.g.
 
   ```js
   // I am a comment
   ```
 
-- A multi-line comment is written between the strings /\* and \*/, e.g.
+- A multi-line comment is written between the strings `/*` and `*/`, e.g.
 
   ```js
   /*
