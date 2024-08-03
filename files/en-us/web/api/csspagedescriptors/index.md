@@ -41,10 +41,6 @@ _This interface also inherits properties of its parent, {{domxref("CSSStyleDecla
   - : A string representing the `margin-left` property of the corresponding `@page` at-rule.
 - `marginLeft` {{experimental_inline}}
   - : A string representing the `margin-left` property of the corresponding `@page` at-rule.
-- `page-orientation`
-  - : A string representing the `page-orientation` property of the corresponding `@page` at-rule.
-- `pageOrientation`
-  - : A string representing the `page-orientation` property of the corresponding `@page` at-rule.
 - `size` {{experimental_inline}}
   - : A string representing the `size` property of the corresponding `@page` at-rule.
 
