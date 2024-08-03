@@ -82,7 +82,7 @@ While an animation name must be set for an animation to be applied, all values o
 
 When the `animation-duration` value is omitted from the `animation` shorthand property, the value for this property defaults to `0s`. In this case, the animation will still occur (the [`animationStart`](/en-US/docs/Web/API/Element/animationstart_event) and [`animationEnd`](/en-US/docs/Web/API/Element/animationend_event) events will be fired) but no animation will be visible.
 
-In the case of animation [forwards](/en-US/docs/Web/CSS/animation-fill-mode#forwards) fill mode, animated properties behave as if included in a set [`will-change`](/en-US/docs/Web/CSS/will-change) property value. If a new stacking context was created during the animation, the target element retains the stacking context after the animation has finished.
+In the case of the `animation-fill-mode` [forwards](/en-US/docs/Web/CSS/animation-fill-mode#forwards) value, animated properties behave as if included in a set [`will-change`](/en-US/docs/Web/CSS/will-change) property value. If a new stacking context is created during the animation, the target element retains the stacking context after the animation has finished.
 
 ## Accessibility
 
