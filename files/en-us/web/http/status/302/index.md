@@ -14,7 +14,7 @@ but search engines don't update their links to the resource (in 'SEO-speak', it 
 that the 'link-juice' is not sent to the new URL).
 
 The Fetch Standard requires user agents to change the method to GET (if it was originally POST), 
-the HTTP specification permits them to do so. It is therefore recommended to set the
+the HTTP specification permits them to do so. It is recommended to set the
 `302` code only as a response for {{HTTPMethod("GET")}} or
 {{HTTPMethod("HEAD")}} methods and to use {{HTTPStatus("307", "307 Temporary Redirect")}}
 instead, as the method change is explicitly prohibited in that case.
