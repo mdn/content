@@ -34,15 +34,38 @@ The first two events allow you to position elements relative to the visual viewp
 
 ## Examples
 
-Our [Visual viewport events](https://visual-viewport-events.glitch.me/) example provides a basic demonstration of how the different visual viewport features work, including the three event types. Load the page in a supporting mobile browser and try pinch-zooming and panning around the boxes. On `resize` and `scroll`, the "Total" box is repositioned to keep the same position relative to the visual viewport. On `scrollend`, it updates to show which boxes are in view, and the sum of their numbers. A more complex application could use these techniques to scroll around map tiles and display relevant information for each one shown on the screen.
+Our [Visual viewport events](https://visual-viewport-events.glitch.me/) example provides a basic demonstration of how the different visual viewport features work, including the three event types. Load the page in a supporting mobile browser and try pinch-zooming and panning around the displayed grid of boxes. On `resize` and `scroll`, the "Total" box is repositioned to keep the same position relative to the visual viewport. On `scrollend`, it updates to show which boxes are in view, and the sum of their numbers. A more complex application could use these techniques to scroll around map tiles and display relevant information for each one shown on the screen.
 
-The HTML and CSS for this example is fairly basic, and we won't explain it here for brevity. You can check it out at the example link above.
+The example HTML can be seen below. The "Total" box is represented by the {{htmlelement("div")}} with the `id` of `total`. The grid container is represented by the `grid` `<div>`, and each individual box is represented by a `gridbox` `<div>`.
+
+```html
+<p>
+  On a mobile device, try pinch-zooming and pan around the boxes. On scrollend,
+  the "Total" box will update to show which boxes are in view, and the sum of
+  their numbers.
+</p>
+<div id="total" class="note"></div>
+<div id="grid" class="grid">
+  <div id="box1" class="gridbox">1</div>
+  <div id="box10" class="gridbox">10</div>
+  <div id="box3" class="gridbox">3</div>
+  <div id="box8" class="gridbox">8</div>
+  <div id="box5" class="gridbox">5</div>
+  <div id="box6" class="gridbox">6</div>
+  <div id="box7" class="gridbox">7</div>
+  <div id="box4" class="gridbox">4</div>
+  <div id="box9" class="gridbox">9</div>
+  <div id="box2" class="gridbox">2</div>
+</div>
+```
+
+We won't explain the example's CSS for the sake of brevity — it is not important for understanding the demo. You can check it out at the example link above.
 
 In the JavaScript, we start by getting a reference to the `total` box we'll be updating as the page is zoomed and scrolled, and we also define an empty array called `visibleBoxes` that we'll use to store references to which boxes can be seen in the visual viewport when a scroll action finishes.
 
 ```js
 const total = document.getElementById("total");
-let visibleBoxes = [];
+const visibleBoxes = [];
 ```
 
 Next, we define the two key functions we'll run when the events fire. `scrollUpdater()` will fire on `resize` and `scroll`: this function updates the position of the `total` box relative to the visual viewport by querying the {{domxref("VisualViewport.offsetTop")}} and {{domxref("VisualViewport.offsetLeft")}} properties and using their values to update the values of the relevant {{glossary("inset properties")}}. We also change the `total` box's background color to indicate that something is happening.
@@ -69,35 +92,35 @@ The next two functions are:
 - `updateVisibleBoxes()`: This gets a reference to all the grid boxes, and for each one, runs `isVisible()` to check whether the box is visible. It pushes the visible boxes to the `visibleBoxes` array after emptying it.
 
 ```js
-function IsVisible(box) {
-  const x = box.offsetLeft,
-    y = box.offsetTop;
-  const right = x + box.offsetWidth,
-    bottom = y + box.offsetHeight;
+function isVisible(box) {
+  const x = box.offsetLeft;
+  const y = box.offsetTop;
+  const right = x + box.offsetWidth;
+  const bottom = y + box.offsetHeight;
 
   const horLowerBound = window.scrollX + visualViewport.offsetLeft;
   const horUpperBound =
     window.scrollX + visualViewport.offsetLeft + visualViewport.width;
-  let hor =
+  const horizontal =
     (x > horLowerBound && x < horUpperBound) ||
     (right > horLowerBound && right < horUpperBound);
 
   const verLowerBound = window.scrollY + visualViewport.offsetTop;
   const verUpperBound =
     window.scrollY + visualViewport.offsetTop + visualViewport.height;
-  let ver =
+  const vertical =
     (y > verLowerBound && y < verUpperBound) ||
     (bottom > verLowerBound && bottom < verUpperBound);
 
-  return hor && ver;
+  return horizontal && vertical;
 }
 
 function updateVisibleBoxes() {
   const boxes = document.querySelectorAll(".gridbox");
-  visibleBoxes = [];
+  visibleBoxes.length = 0;
 
   for (const box of boxes) {
-    if (IsVisible(box)) {
+    if (isVisible(box)) {
       visibleBoxes.push(box);
     }
   }
@@ -109,7 +132,7 @@ Next, the `updateSum()` function calculates the total of the visible box's numbe
 ```js
 function updateSum() {
   let sumTotal = 0;
-  let summands = [];
+  const summands = [];
 
   for (const box of visibleBoxes) {
     console.log(`${box.id} is visible`);
@@ -124,7 +147,10 @@ function updateSum() {
 }
 ```
 
-Now we set event handler properties of both the visual viewport and the {{domxref("Window")}} object to run the key functions at the appropriate times on both mobile and desktop: `scrollUpdater()` will fire on `resize` and `scroll`, while `scrollEndUpdater()` will fire on `scrollend`.
+Now we set event handler properties on both the visual viewport and the {{domxref("Window")}} object to run the key functions at the appropriate times on both mobile and desktop:
+
+- We set the handlers on `window` so that the `total` box position and contents will update on conventional window scrolling operations, for example when you scroll the page on a desktop browser.
+- We set the handlers on `visualViewport` so that the `total` box position and contents will update on visual viewport scrolling/zooming operations, for example when you pinch-zoom and then scroll the page on a mobile browser.
 
 ```js
 visualViewport.onresize = scrollUpdater;
@@ -134,6 +160,8 @@ window.onresize = scrollUpdater;
 window.onscroll = scrollUpdater;
 window.onscrollend = scrollendUpdater;
 ```
+
+`scrollUpdater()` will fire on `resize` and `scroll`, while `scrollEndUpdater()` will fire on `scrollend`.
 
 Finally, we run the `scrollUpdater()` and `scrollEndUpdater()` functions so that the `total` box will show the results of the initial page state when it first loads.
 
