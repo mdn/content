@@ -2,10 +2,12 @@
 title: CSSPageDescriptors
 slug: Web/API/CSSPageDescriptors
 page-type: web-api-interface
+status:
+  - experimental
 browser-compat: api.CSSPageDescriptors
 ---
 
-{{APIRef("CSSOM")}}
+{{APIRef("CSSOM")}}{{SeeCompatTable}}
 
 The **`CSSPageDescriptors`** interface represents a CSS declaration block for an {{cssxref("@page")}} [at-rule](/en-US/docs/Web/CSS/At-rule).
 
@@ -21,29 +23,29 @@ A `CSSPageDescriptors` object is accessed through the {{DOMxRef("CSSPageRule.sty
 
 _This interface also inherits properties of its parent, {{domxref("CSSStyleDeclaration")}}._
 
-- `margin`
+- `margin` {{experimental_inline}}
   - : A string representing the `margin` property of the corresponding `@page` at-rule.
-- `margin-top`
+- `margin-top` {{experimental_inline}}
   - : A string representing the `margin-top` property of the corresponding `@page` at-rule.
-- `marginTop`
+- `marginTop` {{experimental_inline}}
   - : A string representing the `margin-top` property of the corresponding `@page` at-rule.
-- `margin-right`
+- `margin-right` {{experimental_inline}}
   - : A string representing the `margin-right` property of the corresponding `@page` at-rule.
-- `marginRight`
+- `marginRight` {{experimental_inline}}
   - : A string representing the `margin-right` property of the corresponding `@page` at-rule.
-- `margin-bottom`
+- `margin-bottom` {{experimental_inline}}
   - : A string representing the `margin-bottom` property of the corresponding `@page` at-rule.
-- `marginBottom`
+- `marginBottom` {{experimental_inline}}
   - : A string representing the `margin-bottom` property of the corresponding `@page` at-rule.
-- `margin-left`
+- `margin-left` {{experimental_inline}}
   - : A string representing the `margin-left` property of the corresponding `@page` at-rule.
-- `marginLeft`
+- `marginLeft` {{experimental_inline}}
   - : A string representing the `margin-left` property of the corresponding `@page` at-rule.
 - `page-orientation`
   - : A string representing the `page-orientation` property of the corresponding `@page` at-rule.
 - `pageOrientation`
   - : A string representing the `page-orientation` property of the corresponding `@page` at-rule.
-- `size`
+- `size` {{experimental_inline}}
   - : A string representing the `size` property of the corresponding `@page` at-rule.
 
 ## Instance methods
