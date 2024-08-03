@@ -244,7 +244,7 @@ In the rest of this guide we'll look at a few example custom elements. You can f
 
 First, we'll look at an autonomous custom element. The `<popup-info>` custom element takes an image icon and a text string as attributes, and embeds the icon into the page. When the icon is focused, it displays the text in a pop up information box to provide further in-context information.
 
-- [See the example running live](https://mdn.github.io/web-components-examples/popup-info-box-web-component)
+- [See the example running live](https://mdn.github.io/web-components-examples/popup-info-box-web-component/)
 - [See the source code](https://github.com/mdn/web-components-examples/tree/main/popup-info-box-web-component)
 
 To begin with, the JavaScript file defines a class called `PopupInfo`, which extends the {{domxref("HTMLElement")}} class.
@@ -357,7 +357,7 @@ It is now available to use on our page. Over in our HTML, we use it like so:
 In the above example we apply styles to the shadow DOM using a {{htmlelement("style")}} element, but you can reference an external stylesheet from a {{htmlelement("link")}} element instead. In this example we'll modify the `<popup-info>` custom element to use an external stylesheet.
 
 - [See the example running live](https://mdn.github.io/web-components-examples/popup-info-box-external-stylesheet/)
-- [See the source code](https://github.com/mdn/web-components-examples/blob/main/popup-info-box-external-stylesheet/)
+- [See the source code](https://github.com/mdn/web-components-examples/tree/main/popup-info-box-external-stylesheet)
 
 Here's the class definition:
 

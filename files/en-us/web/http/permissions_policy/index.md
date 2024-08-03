@@ -235,6 +235,6 @@ If a different origin ended up getting loaded into `<iframe>`, it would not have
 
 - {{HTTPHeader("Permissions-Policy")}} HTTP header
 - {{HTMLElement("iframe", "allow", "#Attributes")}} attribute on iframes
-- [Controlling browser features with Permissions Policy](https://developer.chrome.com/en/docs/privacy-sandbox/permissions-policy/): use guide that also contains several demo links.
+- [Controlling browser features with Permissions Policy](https://developer.chrome.com/docs/privacy-security/permissions-policy): use guide that also contains several demo links.
 - [Permissions/Feature policies on chromestatus.com](https://chromestatus.com/features#component%3A%20Blink%3EFeaturePolicy)
 - [Privacy, permissions, and information security](/en-US/docs/Web/Privacy)
