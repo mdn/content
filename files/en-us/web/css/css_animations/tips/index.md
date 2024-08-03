@@ -154,7 +154,11 @@ watchme.addEventListener("click", () =>
 );
 ```
 
-Demo <https://jsfiddle.net/morenoh149/5ty5a4oy/>
+Demo <https://jsfiddle.net/morenoh149/5ty5a4oy/>Animations and stacking context
+
+## Stacking context in animations
+
+In the case of animation [forwards](/en-US/docs/Web/CSS/animation-fill-mode#forwards) fill mode, animated properties behave as if included in a set [`will-change`](/en-US/docs/Web/CSS/will-change) property value. If a new stacking context was created during the animation, the target element retains the stacking context after the animation has finished.
 
 ## See also
 
