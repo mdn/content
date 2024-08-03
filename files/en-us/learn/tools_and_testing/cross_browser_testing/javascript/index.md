@@ -89,7 +89,7 @@ It is not very convenient to have to copy and paste your code over to a web page
 
 #### Other uses
 
-There are other ways to use such linters; you can read about them on the [JSHint](https://jshint.com/install/) and [ESLint](https://eslint.org/docs/user-guide/getting-started) install pages.
+There are other ways to use such linters; you can read about them on the [JSHint](https://jshint.com/install/) and [ESLint](https://eslint.org/docs/latest/use/getting-started) install pages.
 
 It is worth mentioning command line uses — you can install these tools as command line utilities (available via the CLI — command line interface) using npm (Node Package Manager — you'll have to install [NodeJS](https://nodejs.org/en/) first). For example, the following command installs JSHint:
 
@@ -101,7 +101,7 @@ You can then point these tools at JavaScript files you want to lint, for example
 
 ![jshint filename.js was entered at the command line. The response is a list of line numbers and a description of the error found.](js-hint-commandline.png)
 
-You can also use these tools with a task runner/build tool such as [Gulp](https://gulpjs.com/) or [Webpack](https://webpack.github.io/) to automatically lint your JavaScript during development. (see [Using a task runner to automate testing tools](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing#using_a_task_runner_to_automate_testing_tools) in a later article.) See [ESLint integrations](https://eslint.org/docs/user-guide/integrations) for ESLint options; JSHint is supported out of the box by Grunt, and also has other integrations available, e.g. [JSHint loader for Webpack](https://github.com/webpack-contrib/jshint-loader).
+You can also use these tools with a task runner/build tool such as [Gulp](https://gulpjs.com/) or [Webpack](https://webpack.github.io/) to automatically lint your JavaScript during development. (see [Using a task runner to automate testing tools](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing#using_a_task_runner_to_automate_testing_tools) in a later article.) See [ESLint integrations](https://eslint.org/docs/latest/use/integrations) for ESLint options; JSHint is supported out of the box by Grunt, and also has other integrations available, e.g. [JSHint loader for Webpack](https://github.com/webpack-contrib/jshint-loader).
 
 > [!NOTE]
 > ESLint takes a bit more setup and configuration than JSHint, but it is more powerful too.
@@ -110,7 +110,7 @@ You can also use these tools with a task runner/build tool such as [Gulp](https:
 
 Browser developer tools have many useful features for helping to debug JavaScript. For a start, the JavaScript console will report errors in your code.
 
-Make a local copy of our [fetch-broken](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-broken) example (see the [source code](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-broken) also).
+Make a local copy of our [fetch-broken](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-broken/) example (see the [source code](https://github.com/mdn/learning-area/tree/main/tools-testing/cross-browser-testing/javascript/fetch-broken) also).
 
 If you look at the console, you'll see an error message. The exact wording is browser-dependent, but it will be something like: "Uncaught TypeError: heroes is not iterable", and the referenced line number is 25. If we look at the source code, the relevant code section is this:
 
@@ -206,7 +206,7 @@ We can find out some very useful information in here.
 
 The argument to `showHeroes()` is the value the `fetch()` promise was fulfilled with. So this promise is not in the JSON format: it is a `Response` object. There's an extra step needed to retrieve the content of the response as a JSON object.
 
-We'd like you to try fixing this problem yourself. To get you started, see the documentation for the {{domxref("Response")}} object. If you get stuck, you can find the fixed source code at <https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-fixed>.
+We'd like you to try fixing this problem yourself. To get you started, see the documentation for the {{domxref("Response")}} object. If you get stuck, you can find the fixed source code at <https://github.com/mdn/learning-area/tree/main/tools-testing/cross-browser-testing/javascript/fetch-fixed>.
 
 > [!NOTE]
 > The debugger tab has many other useful features that we've not discussed here, for example conditional breakpoints and watch expressions. For a lot more information, see the [Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) page.

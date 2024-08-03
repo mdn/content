@@ -75,7 +75,7 @@ See the [WHATWG Standard](https://html.spec.whatwg.org/multipage/forms.html#auto
 
 The `<token-list>` options include, in order:
 
-1. [Group naming token](#name_groups)
+1. [Group naming token](#named_groups)
 2. [Grouping identifier](#grouping_identifier)
 3. [Detail tokens](#detail_tokens)
 4. [Web authorization](#web_authorization_token)

@@ -100,7 +100,7 @@ People with normal vision have three kinds of cone cells that sense light, havin
 
 - {{cssxref("@media/color-gamut", "color-gamut")}} `@media` feature
 - [CSS data type: `<color>`](/en-US/docs/Web/CSS/color_value)
-- [sRGB color space](https://webstore.iec.ch/publication/6168)
+- [sRGB color space](https://webstore.iec.ch/en/publication/6168)
 - [CIELAB color space](https://en.wikipedia.org/wiki/CIELAB_color_space) on Wikipedia
 - [CIE 1931 color space](https://en.wikipedia.org/wiki/CIE_1931_color_space) on Wikipedia
 - [Oklab color space](https://bottosson.github.io/posts/oklab/)
