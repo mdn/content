@@ -29,7 +29,7 @@ observe(target, options)
 - `options`
 
   - : An object providing options that describe which DOM mutations should be reported to `mutationObserver`'s `callback`.
-    At a minimum, one of `childList`, `attributes`, and/or `characterData` must be `true` when you call {{domxref("MutationObserver.observe", "observe()")}}.
+    At a minimum, one of `childList`, `attributes`, and/or `characterData` must be `true` when you call `observe()`.
     Otherwise, a `TypeError` exception will be thrown.
 
     Options are as follows:

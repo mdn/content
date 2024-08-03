@@ -35,7 +35,8 @@ Browsers natively provide two JavaScript functions for decoding and encoding Bas
 - {{domxref("Window.btoa()")}} (also {{domxref("WorkerGlobalScope.btoa()", "available in workers", "", "nocode")}}): creates a Base64-encoded ASCII string from a string of binary data ("btoa" should be read as "binary to ASCII").
 - {{domxref("Window.atob()")}} (also {{domxref("WorkerGlobalScope.atob()", "available in workers", "", "nocode")}}): decodes a Base64-encoded string ("atob" should be read as "ASCII to binary").
 
-> **Note:** Base64 is a binary encoding rather than a text encoding, but `btoa` and `atob` were added to the web platform before it supported binary data types. As a result, the two functions use strings to represent binary data, with the {{glossary("code point")}} of each character representing the value of each byte. This has led to a common misconception that `btoa` can be used to encode arbitrary text data — for example, creating a Base64 `data:` URL of a text or HTML document.
+> [!NOTE]
+> Base64 is a binary encoding rather than a text encoding, but `btoa` and `atob` were added to the web platform before it supported binary data types. As a result, the two functions use strings to represent binary data, with the {{glossary("code point")}} of each character representing the value of each byte. This has led to a common misconception that `btoa` can be used to encode arbitrary text data — for example, creating a Base64 `data:` URL of a text or HTML document.
 >
 > However, the byte-to-code-point correspondence only reliably holds true for code points up to `0x7f`. Furthermore, code points over `0xff` will cause `btoa` to throw an error due to exceeding the maximum value for 1 byte. The next section details how to work around this limitation when encoding arbitrary Unicode text.
 

@@ -182,7 +182,7 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
             <img src="no-drop.gif" alt="pointer icon and a not allowed icon" />
           </td>
           <td>
-            An item may not be dropped at the current location.<br />[Firefox bug 275173](https://bugzil.la/275173):
+            An item may not be dropped at the current location.<br /><a href="https://bugzil.la/275173">Firefox bug 275173</a>:
             On Windows and macOS, <code>no-drop</code> is the same as <code>not-allowed</code>.
           </td>
         </tr>
@@ -208,7 +208,7 @@ Each `<url>` may be optionally followed by a pair of space-separated numbers, wh
           <td><code>all-scroll</code></td>
           <td><img alt="icon of a medium size dot with four triangles around it." src="all-scroll.gif" /></td>
           <td>
-            Something can be scrolled in any direction (panned).<br />[Firefox bug 275174](https://bugzil.la/275174):
+            Something can be scrolled in any direction (panned).<br /><a href="https://bugzil.la/275174">Firefox bug 275174</a>:
             On Windows, <code>all-scroll</code> is the same as <code>move</code>.
           </td>
         </tr>

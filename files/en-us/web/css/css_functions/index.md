@@ -20,7 +20,8 @@ The value syntax starts with the **name of the function**, followed by a left pa
 
 Functions can take multiple arguments, which are formatted similarly to CSS property values. Whitespace is allowed, but they are optional inside the parentheses. In some functional notations multiple arguments are separated by commas, while others use spaces.
 
-> **Note:** The CSS value functions are used as property values and should not be confused with pseudo-classes. The [functional pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#functional_pseudo-classes), [linguistic pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#linguistic_pseudo-classes), and several [tree-structural pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#tree-structural_pseudo-classes) require parameter values, but they're not value functions. The [conditional at-rules](/en-US/docs/Web/CSS/At-rule#conditional_group_rules) are also not value functions; the parentheses are used for groupings.
+> [!NOTE]
+> The CSS value functions are used as property values and should not be confused with pseudo-classes. The [functional pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#functional_pseudo-classes), [linguistic pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#linguistic_pseudo-classes), and several [tree-structural pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#tree-structural_pseudo-classes) require parameter values, but they're not value functions. The conditional at-rules are also not value functions; the parentheses are used for groupings.
 
 ## Transform functions
 
@@ -202,7 +203,7 @@ The {{CSSxRef("color_value","&lt;color&gt;")}} CSS [data type](/en-US/docs/Web/C
 - {{CSSxRef("color_value/color-contrast", "color-contrast()")}} {{Experimental_Inline}}
   - : Selects the highest color contrast from a list of colors, compare to a base color value.
 - {{CSSxRef("color_value/device-cmyk", "device-cmyk()")}} {{Experimental_Inline}}
-  - : Defines CMYK colors in a device-independent way.
+  - : Defines CMYK colors in a device-dependent way.
 - {{CSSXref("color_value/light-dark", "light-dark()")}} {{Experimental_Inline}}
   - : Returns one of two provided colors based on the current color scheme.
 
@@ -330,6 +331,15 @@ The following functions are used as a value of different `animation-timeline` pr
   - : Sets the {{cssxref("animation-timeline")}} of an element to an _anonymous scroll progress timeline_.
 - {{cssxref("animation-timeline/view", "view()")}}
   - : Sets the {{cssxref("animation-timeline")}} of an element to an _anonymous view progress timeline_.
+
+## Anchor positioning functions
+
+The anchor positioning functions are used when positioning and sizing anchor-positioned elements relative to the location and size of their associated anchor elements.
+
+- {{cssxref("anchor", "anchor()")}}
+  - : Returns a length relative to the position of the edges of an anchor-positioned element's associated anchor element.
+- {{cssxref("anchor-size", "anchor-size()")}}
+  - : Returns a length relative to the size of the associated anchor element.
 
 ## See also
 

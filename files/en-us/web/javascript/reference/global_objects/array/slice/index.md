@@ -28,13 +28,13 @@ slice(start, end)
   - : Zero-based index at which to start extraction, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion).
     - Negative index counts back from the end of the array — if `-array.length <= start < 0`, `start + array.length` is used.
     - If `start < -array.length` or `start` is omitted, `0` is used.
-    - If `start >= array.length`, nothing is extracted.
+    - If `start >= array.length`, an empty array is returned.
 - `end` {{optional_inline}}
   - : Zero-based index at which to end extraction, [converted to an integer](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#integer_conversion). `slice()` extracts up to but not including `end`.
     - Negative index counts back from the end of the array — if `-array.length <= end < 0`, `end + array.length` is used.
     - If `end < -array.length`, `0` is used.
     - If `end >= array.length` or `end` is omitted, `array.length` is used, causing all elements until the end to be extracted.
-    - If `end` implies a position before or at the position that `start` implies, nothing is extracted.
+    - If `end` implies a position before or at the position that `start` implies, an empty array is returned.
 
 ### Return value
 
@@ -60,7 +60,64 @@ const citrus = fruits.slice(1, 3);
 // citrus contains ['Orange','Lemon']
 ```
 
-### Using slice
+In this example, `slice(1, 3)` extracts elements from index `1` up to, but not including, index `3`, resulting in a new array `['Orange', 'Lemon']`.
+
+### Omitting the end parameter
+
+```js
+const fruits = ["Apple", "Banana", "Orange", "Mango", "Pineapple"];
+
+const tropical = fruits.slice(2);
+console.log(tropical); // ['Orange', 'Mango', 'Pineapple']
+```
+
+In this example, `slice(2)` extracts elements from index `2` to the end of the array.
+
+### Using negative indices
+
+```js
+const fruits = ["Apple", "Banana", "Orange", "Mango", "Pineapple"];
+
+const lastTwo = fruits.slice(-2);
+console.log(lastTwo); // ['Mango', 'Pineapple']
+```
+
+In this example, `slice(-2)` extracts the last two elements of the array. When using a negative index with the `slice` method, negative indices are counted from the end of the array, starting at `-1` for the last element, `-2` for the second-to-last element, and so on. The negative index `-2` itself is included because it is the starting point of the extraction.
+
+```plain
+|     |     |     |     |     |
+|  S  |  L  |  I  |  C  |  E  |
+|     |     |     |     |     |
+  -5    -4    -3    -2    -1
+
+<--- read from reverse
+```
+
+### Using a positive start index and a negative end index
+
+```js
+const fruits = ["Apple", "Banana", "Orange", "Mango", "Pineapple"];
+
+// Using positive start index and negative end index
+const sliceExample = fruits.slice(1, -1);
+console.log(sliceExample); // ['Banana', 'Orange', 'Mango']
+```
+
+In this example, `slice(1, -1)` starts extracting from index `1` and goes up to, but does not include, the element at index `-1` (which is the last element). This results in a new array with `['Banana', 'Orange', 'Mango']`. The `slice` method always excludes the element at the final index specified, regardless of whether it is positive or negative.
+
+```plain
+read from start --->
+
+   0     1     2     3     4
+|     |     |     |     |     |
+|  S  |  L  |  I  |  C  |  E  |
+|     |     |     |     |     |
+  -5    -4    -3    -2    -1
+
+<--- read from reverse
+```
+
+### Using slice with arrays of objects
 
 In the following example, `slice` creates a new array, `newCar`,
 from `myCar`. Both include a reference to the object `myHonda`.

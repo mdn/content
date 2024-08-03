@@ -42,7 +42,7 @@ Now let's introduce Vue, the third of our frameworks. In this article we'll look
   </tbody>
 </table>
 
-> **Note:**
+> [!NOTE]
 > This tutorial targets [Vue version 3.4.21](https://github.com/vuejs/core/blob/main/CHANGELOG.md#3421-2024-02-28) using [`create-vue` 3.10.2](https://github.com/vuejs/create-vue/releases/tag/v3.10.3) (with Node.js version `v20.11.0`) and was last revised in May 2024.
 
 ## A clearer Vue
@@ -74,9 +74,10 @@ To use Vue in an existing site, you can drop one of the following [`<script>`](/
 However, this approach has some limitations. To build more complex apps, you'll want to use the [Vue npm package](https://www.npmjs.com/package/vue). This will let you use advanced features of Vue and use tools like Vite or WebPack. To make building apps with Vue easier, there is a CLI scaffolding tool [create-vue](https://github.com/vuejs/create-vue) to streamline the development process. To use `create-vue` you will need:
 
 1. Node.js 20 installed.
-2. [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) or [yarn](https://yarnpkg.com/).
+2. [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/) or [yarn](https://yarnpkg.com/).
 
-> **Note:** If you don't have the above installed, find out [more about installing npm and Node.js](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#adding_powerups) here.
+> [!NOTE]
+> If you don't have the above installed, find out [more about installing npm and Node.js](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#adding_powerups) here.
 
 To install Vue and initialize a new project, run the following command in your terminal:
 
@@ -146,7 +147,8 @@ If everything went successfully, the CLI should have created a series of files a
   - `components`: this directory is where you keep your components. Currently, it just has one example component.
   - `assets`: this directory is for storing static assets like CSS and images. Because these files are in the source directory, they can be processed by Webpack. This means you can use pre-processors like [Sass/SCSS](https://sass-lang.com/) or [Stylus](https://stylus-lang.com/).
 
-> **Note:** Depending on the options you select when creating a new project, there might be other directories present (for example, if you choose a router, you will also have a `views` directory).
+> [!NOTE]
+> Depending on the options you select when creating a new project, there might be other directories present (for example, if you choose a router, you will also have a `views` directory).
 
 ## .vue files (single file components)
 
@@ -162,7 +164,8 @@ Open your `App.vue` file — you'll see that it has three parts: `<template>`, `
 
 `<template>` contains all the markup structure and display logic of your component. Your template can contain any valid HTML, as well as some Vue-specific syntax that we'll cover later.
 
-> **Note:** By setting the `lang` attribute on the `<template>` tag, you can use Pug template syntax instead of standard HTML — `<template lang="pug">`. We'll stick to standard HTML through this tutorial, but it is worth knowing that this is possible.
+> [!NOTE]
+> By setting the `lang` attribute on the `<template>` tag, you can use Pug template syntax instead of standard HTML — `<template lang="pug">`. We'll stick to standard HTML through this tutorial, but it is worth knowing that this is possible.
 
 `<script>` contains all of the non-display logic of your component. Most importantly, your `<script>` tag is where you locally register components, define component inputs (props), handle local state, define methods, and more. Your build step will process this object and transform it (with your template) into a Vue component with a `render()` function.
 
@@ -175,11 +178,13 @@ import TheWelcome from "./components/TheWelcome.vue";
 </script>
 ```
 
-> **Note:** If you want to use [TypeScript](https://www.typescriptlang.org/) syntax, you need to set the `lang` attribute on the `<script>` tag to signify to the compiler that you're using TypeScript — `<script lang="ts">`.
+> [!NOTE]
+> If you want to use [TypeScript](https://www.typescriptlang.org/) syntax, you need to set the `lang` attribute on the `<script>` tag to signify to the compiler that you're using TypeScript — `<script lang="ts">`.
 
 `<style>` is where you write your CSS for the component. If you add a `scoped` attribute — `<style scoped>` — Vue will scope the styles to the contents of your SFC. This works similar to CSS-in-JS solutions, but allows you to just write plain CSS.
 
-> **Note:** If you select a CSS pre-processor when creating the project via the CLI, you can add a `lang` attribute to the `<style>` tag so that the contents can be processed at build time. For example, `<style lang="scss">` will allow you to use SCSS syntax in your styling information.
+> [!NOTE]
+> If you select a CSS pre-processor when creating the project via the CLI, you can add a `lang` attribute to the `<style>` tag so that the contents can be processed at build time. For example, `<style lang="scss">` will allow you to use SCSS syntax in your styling information.
 
 ## Running the app locally
 

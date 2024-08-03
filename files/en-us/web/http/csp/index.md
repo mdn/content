@@ -26,7 +26,8 @@ Alternatively, the {{HTMLElement("meta")}} element can be used to configure a po
   content="default-src 'self'; img-src https://*; child-src 'none';" />
 ```
 
-> **Note:** Some features, such as sending CSP violation reports, are only available when using the HTTP headers.
+> [!NOTE]
+> Some features, such as sending CSP violation reports, are only available when using the HTTP headers.
 
 ## Threats
 
@@ -173,7 +174,7 @@ Reporting-Endpoints: csp-endpoint="https://example.com/csp-reports",
                      hpkp-endpoint="https://example.com/hpkp-reports"
 ```
 
-> **Warning:**
+> [!WARNING]
 > The `report-uri` directive is deprecated and it's recommended to send CSP reports using {{CSP("report-to")}} instead.
 > See the {{CSP("report-uri")}} documentation for details on how to specify both directives for backwards compatibility.
 

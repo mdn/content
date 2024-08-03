@@ -109,7 +109,7 @@ Only the `<p>` element with `class="fancy"` will get styled `red`:
 \{{EmbedLiveSample("paragraph-styling")}}
 ````
 
-The macro uses a special URL to fetch the output for a given group of code blocks, for example `https://yari-demos.prod.mdn.mozit.cloud/en-US/docs/Web/CSS/animation/_sample_.Cylon_Eye.html`. The general structure followed is `https://url-of-page/_sample_.group-id.html`, where `group-id` is the ID of the heading or block where the code blocks are located.
+The macro uses a special URL that includes the ID to fetch the output for a given group of code blocks. You should never hardcode this URL in content — if you need to link to the example, use the [`LiveSampleLink`](#livesamplelink_macro) macro.
 
 The resulting frame (or page) is sandboxed, secure, and technically may do anything that works on the web. Of course, as a practical matter, the code should be relevant to the page's content; any unrelated material is subject to removal by MDN's editor community.
 
@@ -219,7 +219,8 @@ The first step is to either add code snippets or ensure that existing ones are r
 
 Each piece of code must be in a code block, with a separate block for each language, properly marked as to which language it is. Most of the time, this has already been done, but it's always worth double-checking to be sure each piece of code is configured with the correct syntax. This is done with a language identifier on the code block of `language-type`, where _language-type_ is the type of language the block contains, e.g. `html`, `css`, or `js`.
 
-> **Note:** You may have more than one block for each language; they are all concatenated together. This lets you have a chunk of code, followed by an explanation of how it works, then another chunk, and so forth. This makes it even easier to produce tutorials and the like that utilize live samples interspersed with explanatory text.
+> [!NOTE]
+> You may have more than one block for each language; they are all concatenated together. This lets you have a chunk of code, followed by an explanation of how it works, then another chunk, and so forth. This makes it even easier to produce tutorials and the like that utilize live samples interspersed with explanatory text.
 
 So make sure the code blocks for your HTML, CSS, and/or JavaScript code are each configured correctly for that language's syntax highlighting, and you're good to go.
 
@@ -264,12 +265,16 @@ The CSS code styles the box as well as the text inside it.
 
 #### JavaScript
 
-This code is very simple. All it does is attach an event handler to the "Hello world!" text that makes an alert appear when it is clicked.
+In the JavaScript example, we attach an event handler to the "Hello world!" text that toggles it when it is clicked.
 
 ```js
 const el = document.getElementById("item");
+let toggleClick = false;
 el.onclick = function () {
-  alert("Owww, stop poking me!");
+  this.textContent = toggleClick
+    ? "Hello world! Welcome to MDN"
+    : "Owww, stop poking me!";
+  toggleClick = !toggleClick;
 };
 ```
 
@@ -312,12 +317,16 @@ The CSS code styles the box as well as the text inside it. The `live-sample___he
 }
 ```
 
-This JavaScript code attaches an event handler to the "Hello world!" text that makes an alert appear when it is clicked. The `live-sample___hello-world` string has been added to the `js` language identifier for this code block as well.
+This JavaScript code attaches an event handler to the "Hello world!" text that toggles it when it is clicked. The `live-sample___hello-world` string has been added to the `js` language identifier for this code block as well.
 
 ```js live-sample___hello-world
 const el = document.getElementById("item");
+let toggleClick = false;
 el.onclick = function () {
-  alert("Owww, stop poking me!");
+  this.textContent = toggleClick
+    ? "Hello world! Welcome to MDN"
+    : "Owww, stop poking me!";
+  toggleClick = !toggleClick;
 };
 ```
 
@@ -379,7 +388,8 @@ This example shows how to implement a simple single-entry log in your live sampl
 For clarity this example separates the logging code and the code that uses it, and displays the logging code first.
 Generally when implementing your own samples you should place logging elements below other UI elements.
 
-> **Note:** Displaying log output as part of the sample provides a much better user experience than using `console.log()`.
+> [!NOTE]
+> Displaying log output as part of the sample provides a much better user experience than using `console.log()`.
 
 #### HTML
 
@@ -445,9 +455,11 @@ The console appends a new line to the end of the output each time a log is added
 For clarity this example separates the logging code and the code that uses it, and displays the logging code first.
 Generally when implementing your own samples you should place logging elements below other UI elements.
 
-> **Note:** Displaying log output as part of the sample is a much better user experience than using `console.log()`.
+> [!NOTE]
+> Displaying log output as part of the sample is a much better user experience than using `console.log()`.
 
-> **Note:** See [`DataTransfer.effectAllowed`](/en-US/docs/Web/API/DataTransfer/effectAllowed#setting_effectallowed) for a more complete example.
+> [!NOTE]
+> See [`DataTransfer.effectAllowed`](/en-US/docs/Web/API/DataTransfer/effectAllowed#setting_effectallowed) for a more complete example.
 
 #### HTML
 

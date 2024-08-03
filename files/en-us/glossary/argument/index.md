@@ -38,7 +38,8 @@ function example(parameter) {
 ## See also
 
 - [Difference between parameter and argument](/en-US/docs/Glossary/Parameter#parameters_versus_arguments)
-- The {{jsxref("Functions/arguments", "arguments")}} object in {{glossary("JavaScript")}}
-- Glossary
+- {{jsxref("Functions/arguments", "arguments")}} JavaScript object
+- Related glossary terms:
   - {{Glossary("Function")}}
   - {{Glossary("Parameter")}}
+  - {{glossary("JavaScript")}}

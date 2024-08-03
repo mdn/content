@@ -15,7 +15,7 @@ Generated content can be used for content replacement, in which case the content
 
 {{EmbedGHLiveSample("css-examples/modules/generated_content.html", '100%',420)}}
 
-The HTML for this sample is a single, empty {{HTMLElement("div")}} inside an otherwise empty {{HTMLElement("body")}}. The snowman was created with [CSS images](/en-US/docs/Web/CSS/CSS_images) and [CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders). The carrot nose was added using generated content: an empty box with a wide orange {{cssxref("border-left", "left border")}} added to the {{cssxref("::before")}} pseudo-element. The text is also generated content: "only one &lt;div>" was generated with the {{cssxref("content")}} property applied to the {{cssxref("::after")}} pseudo-element.
+The HTML for this sample is a single, empty {{HTMLElement("div")}} inside an otherwise empty {{HTMLElement("body")}}. The snowman was created with [CSS images](/en-US/docs/Web/CSS/CSS_images) and [CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders). The carrot nose was added using generated content: an empty box with a wide orange [left border](/en-US/docs/Web/CSS/border-left) added to the {{cssxref("::before")}} pseudo-element. The text is also generated content: "only one &lt;div>" was generated with the {{cssxref("content")}} property applied to the {{cssxref("::after")}} pseudo-element.
 
 To see the code for this animation, [view the source on GitHub](https://github.com/mdn/css-examples/blob/main/modules/generated_content.html).
 
@@ -26,7 +26,8 @@ To see the code for this animation, [view the source on GitHub](https://github.c
 - {{cssxref("content")}}
 - {{cssxref("quotes")}}
 
-> **Note:** The CSS generated content module introduces four at-risk properties that have not been implemented: `string-set`, `bookmark-label`, `bookmark-level`, and `bookmark-state`.
+> [!NOTE]
+> The CSS generated content module introduces four at-risk properties that have not been implemented: `string-set`, `bookmark-label`, `bookmark-level`, and `bookmark-state`.
 
 ### Functions
 
@@ -34,7 +35,7 @@ The CSS generated content module introduces six yet-to-be implemented CSS functi
 
 ### Data types
 
-- [`<content-list>`](/en-US/docs/Web/CSS/content#content-list)
+- [`<content-list>`](/en-US/docs/Web/CSS/content)
 - `<content-replacement>` (see {{cssxref("image")}})
 - {{cssxref("image")}}
 - [`<counter>`](/en-US/docs/Web/CSS/content#counter)

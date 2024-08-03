@@ -11,7 +11,8 @@ The **`style`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) conta
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-style.html","tabbed-shorter")}}
 
-> **Note:** This attribute must not be used to convey semantic information. Even if all styling is removed, a page should remain semantically correct. Typically it shouldn't be used to hide irrelevant information; this should be done using the [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hidden) attribute.
+> [!NOTE]
+> This attribute must not be used to convey semantic information. Even if all styling is removed, a page should remain semantically correct. Typically it shouldn't be used to hide irrelevant information; this should be done using the [`hidden`](/en-US/docs/Web/HTML/Global_attributes/hidden) attribute.
 
 ## Specifications
 
@@ -23,4 +24,5 @@ The **`style`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) conta
 
 ## See also
 
-All [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+- [Global attributes](/en-US/docs/Web/HTML/Global_attributes)
+- {{domxref("HTMLElement.style")}}

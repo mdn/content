@@ -20,7 +20,7 @@ A {{ domxref("TouchList") }} whose {{ domxref("Touch") }} objects include all th
 
 ## Examples
 
-This example illustrates the {{domxref("TouchEvent")}} object's {{domxref("TouchEvent.changedTouches")}} property. The {{domxref("TouchEvent.changedTouches")}} property is a {{domxref("TouchList")}} object that contains one {{domxref("Touch")}} object for each touch point which contributed to the event.
+This example illustrates the {{domxref("TouchEvent")}} object's `TouchEvent.changedTouches` property. The `TouchEvent.changedTouches` property is a {{domxref("TouchList")}} object that contains one {{domxref("Touch")}} object for each touch point which contributed to the event.
 
 In following code snippet, the {{domxref("Element/touchmove_event", "touchmove")}} event handler iterates through the `changedTouches` list and prints the identifier of each touch point that changed since the last event.
 

@@ -14,7 +14,8 @@ The **initial value** of a [CSS](/en-US/docs/Web/CSS) property is its default va
 
 You can explicitly specify the initial value by using the {{cssxref("initial")}} keyword.
 
-> **Note:** The initial value should not be confused with the value specified by the browser's style sheet.
+> [!NOTE]
+> The initial value should not be confused with the value specified by the browser's style sheet.
 
 ## Specifications
 
@@ -36,6 +37,7 @@ You can explicitly specify the initial value by using the {{cssxref("initial")}}
   - Values
     - [Computed values](/en-US/docs/Web/CSS/computed_value)
     - [Used values](/en-US/docs/Web/CSS/used_value)
+    - [Resolved values](/en-US/docs/Web/CSS/resolved_value)
     - [Actual values](/en-US/docs/Web/CSS/actual_value)
   - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
   - [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)

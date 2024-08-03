@@ -10,7 +10,7 @@ browser-compat:
 
 {{HTMLSidebar}}
 
-The **`max`** attribute defines the maximum value that is acceptable and valid for the input containing the attribute. If the [`value`](/en-US/docs/Web/HTML/Element/input#value) of the element is greater than this, the element fails [validation](/en-US/docs/Learn/Forms/Form_validation). This value must be greater than or equal to the value of the [`min`](min) attribute. If the `max` attribute is present but is not specified or is invalid, no `max` value is applied. If the `max` attribute is valid and a non-empty value is greater than the maximum allowed by the `max` attribute, constraint validation will prevent form submission.
+The **`max`** attribute defines the maximum value that is acceptable and valid for the input containing the attribute. If the [`value`](/en-US/docs/Web/HTML/Element/input#value) of the element is greater than this, the element fails [validation](/en-US/docs/Learn/Forms/Form_validation). This value must be greater than or equal to the value of the [`min`](/en-US/docs/Web/HTML/Attributes/min) attribute. If the `max` attribute is present but is not specified or is invalid, no `max` value is applied. If the `max` attribute is valid and a non-empty value is greater than the maximum allowed by the `max` attribute, constraint validation will prevent form submission.
 
 Valid for the numeric input types, including the {{HTMLElement("input/date", "date")}}, {{HTMLElement("input/month", "month")}}, {{HTMLElement("input/week", "week")}}, {{HTMLElement("input/time", "time")}}, {{HTMLElement("input/datetime-local", "datetime-local")}}, {{HTMLElement("input/number", "number")}} and {{HTMLElement("input/range", "range")}} types, and both the {{htmlelement('progress')}} and {{htmlelement('meter')}} elements, the `max` attribute is a number that specifies the most positive value a form control to be considered valid.
 
@@ -79,7 +79,8 @@ If the value exceeds the max value allowed, the {{domxref('validityState.rangeOv
   </tbody>
 </table>
 
-> **Note:** When the data entered by the user doesn't adhere to the maximum value set, the value is considered invalid in constraint validation and will match the {{cssxref(':invalid')}} and {{cssxref(':out-of-range')}} pseudo-classes.
+> [!NOTE]
+> When the data entered by the user doesn't adhere to the maximum value set, the value is considered invalid in constraint validation and will match the {{cssxref(':invalid')}} and {{cssxref(':out-of-range')}} pseudo-classes.
 
 See [Client-side validation](/en-US/docs/Web/HTML/Constraint_validation) and {{domxref("ValidityState.rangeOverflow", "rangeOverflow")}} for more information.
 

@@ -2,7 +2,9 @@
 title: "HTML attribute: multiple"
 slug: Web/HTML/Attributes/multiple
 page-type: html-attribute
-spec-urls: https://html.spec.whatwg.org/multipage/input.html#attr-input-multiple
+browser-compat:
+  - html.elements.input.multiple
+  - html.elements.select.multiple
 ---
 
 {{HTMLSidebar}}
@@ -182,6 +184,10 @@ There are a few ways to select multiple options in a `<select>` element with a `
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

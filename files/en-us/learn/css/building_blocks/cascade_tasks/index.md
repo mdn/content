@@ -8,7 +8,8 @@ page-type: learn-module-assessment
 
 The aim of this skill test is to assess whether you understand universal property values for [controlling inheritance in CSS](/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance).
 
-> **Note:** You can try solutions in the interactive editors on this page or in an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+> [!NOTE]
+> You can try solutions in the interactive editors on this page or in an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
 >
 > If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
@@ -24,7 +25,7 @@ Try updating the live code below to recreate the finished example:
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/cascade/cascade.html", '100%', 700)}}
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/cascade/cascade-download.html) to work in your own editor or in an online editor.
 
@@ -40,6 +41,6 @@ Try updating the live code below to recreate the finished example:
 
 {{EmbedGHLiveSample("css-examples/learn/tasks/cascade/cascadelayer.html", '100%', 700)}}
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download the starting point for this task](https://github.com/mdn/css-examples/blob/main/learn/tasks/cascade/cascadelayer-download.html) to work in your own editor or in an online editor.

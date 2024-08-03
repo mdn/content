@@ -61,7 +61,7 @@ let mql = window.matchMedia("(max-width: 600px)");
 document.querySelector(".mq-value").innerText = mql.matches;
 ```
 
-The JavaScript code passes the media query to match into {{domxref("Window.matchMedia", "matchMedia()")}} to compile it, then sets the `<span>`'s {{domxref("HTMLElement.innerText", "innerText")}} to the value of the results' {{domxref("MediaQueryList.matches", "matches")}} property, so that it indicates whether or not the document matches the media query at the moment the page was loaded.
+The JavaScript code passes the media query to match into `matchMedia()` to compile it, then sets the `<span>`'s {{domxref("HTMLElement.innerText", "innerText")}} to the value of the results' {{domxref("MediaQueryList.matches", "matches")}} property, so that it indicates whether or not the document matches the media query at the moment the page was loaded.
 
 ### HTML
 

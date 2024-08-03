@@ -85,7 +85,8 @@ svg {
 - `indefinite`
   - : This value specifies the simple duration as indefinite.
 
-> **Note:** the {{Glossary("interpolation")}} will not work if the simple duration is indefinite (although this may still be useful for {{SVGElement("set")}} elements).
+> [!NOTE]
+> The {{Glossary("interpolation")}} will not work if the simple duration is indefinite (although this may still be useful for {{SVGElement("set")}} elements).
 
 ## Specifications
 

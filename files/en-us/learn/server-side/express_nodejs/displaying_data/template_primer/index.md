@@ -4,6 +4,8 @@ slug: Learn/Server-side/Express_Nodejs/Displaying_data/Template_primer
 page-type: learn-module-chapter
 ---
 
+{{LearnSidebar}}
+
 A template is a text file defining the _structure_ or layout of an output file, with placeholders used to represent where data will be inserted when the template is rendered (in _Express_, templates are referred to as _views_).
 
 ## Express template choices
@@ -12,7 +14,8 @@ Express can be used with many different [template rendering engines](https://exp
 
 Different template languages use different approaches for defining layout and marking placeholders for data—some use HTML to define the layout while others use different markup formats that can be transpiled to HTML. Pug is of the second type; it uses a _representation_ of HTML where the first word in any line usually represents an HTML element, and indentation on subsequent lines is used to represent nesting. The result is a page definition that translates directly to HTML, but is more concise and arguably easier to read.
 
-> **Note:** The downside of using _Pug_ is that it is sensitive to indentation and whitespace (if you add an extra space in the wrong place you may get an unhelpful error code). Once you have your templates in place, however, they are very easy to read and maintain.
+> [!NOTE]
+> A downside of using _Pug_ is that it is sensitive to indentation and whitespace (if you add an extra space in the wrong place you may get an unhelpful error code). Once you have your templates in place, however, they are very easy to read and maintain.
 
 ## Template configuration
 
@@ -93,6 +96,12 @@ h1= title
 p= 'Evaluated and <em>escaped expression</em>:' + title
 ```
 
+> [!NOTE]
+> In Pug templates, a variable that is used but not passed in from your Express code (or defined locally) is "undefined".
+> If you used this template without passing in a `title` variable the tags would be created but would contain an empty string.
+> If you use undefined variables in conditional statements then they evaluate to `false`.
+> Other template languages may require that variables used in the template must be defined.
+
 If there is no equals symbol after the tag then the content is treated as plain text. Within the plain text you can insert escaped and unescaped data using the `#{}` and `!{}` syntax respectively, as shown below. You can also add raw HTML within the plain text.
 
 ```pug
@@ -100,7 +109,8 @@ p This is a line with #[em some emphasis] and #[strong strong text] markup.
 p This line has an un-escaped string: !{'<em> is emphasized</em>'}, an escaped string: #{'<em> is not emphasized</em>'}, and escaped variables: #{title}.
 ```
 
-> **Note:** You will almost always want to escape data from users (via the **`#{}`** syntax). Data that can be trusted (e.g. generated counts of records, etc.) may be displayed without escaping the values.
+> [!NOTE]
+> You will almost always want to escape data from users (via the **`#{}`** syntax). Data that can be trusted (e.g. generated counts of records, etc.) may be displayed without escaping the values.
 
 You can use the pipe ('**|**') character at the beginning of a line to indicate "[plain text](https://pugjs.org/language/plain-text.html)". For example, the additional text shown below will be displayed on the same line as the preceding anchor, but will not be linked.
 

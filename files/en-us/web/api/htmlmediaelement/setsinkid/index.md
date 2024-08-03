@@ -8,7 +8,7 @@ browser-compat: api.HTMLMediaElement.setSinkId
 
 {{APIRef("Audio Output Devices API")}}{{securecontext_header}}
 
-The **`HTMLMediaElement.setSinkId()`** method of the [Audio Output Devices API](/en-US/docs/Web/API/Audio_Output_Devices_API) sets the ID of the audio device to use for output and returns a {{jsxref("Promise")}}.
+The **`setSinkId()`** method of the {{domxref("HTMLMediaElement")}} interface sets the ID of the audio device to use for output and returns a {{jsxref("Promise")}}.
 
 This only works when the application is permitted to use the specified device.
 For more information see the [security requirements](#security_requirements) below.
@@ -69,5 +69,6 @@ console.log(`Audio is being output on ${audio.sinkId}`);
 
 ## See also
 
+- [Audio Output Devices API](/en-US/docs/Web/API/Audio_Output_Devices_API)
 - {{domxref("MediaDevices.selectAudioOutput()")}}
 - {{domxref("HTMLMediaElement.sinkId")}}

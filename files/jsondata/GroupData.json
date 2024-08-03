@@ -8,7 +8,7 @@
         "/docs/Web/API/Attribution_Reporting_API/Generating_reports"
       ],
       "methods": [
-        "fetch()",
+        "Window.fetch()",
         "XMLHttpRequest.setAttributionReporting()",
         "Window.open()"
       ],
@@ -325,6 +325,7 @@
         "CSSMediaRule",
         "CSSNamespaceRule",
         "CSSPageRule",
+        "CSSPageDescriptors",
         "CSSFontFeatureValuesRule",
         "CSSFontPaletteValuesRule",
         "CSSPropertyRule",
@@ -516,13 +517,9 @@
     },
     "Fetch API": {
       "overview": ["Fetch API"],
-      "guides": [
-        "/docs/Web/API/Fetch_API/Using_Fetch",
-        "/docs/Web/API/Fetch_API/Basic_concepts",
-        "/docs/Web/API/Fetch_API/Cross-global_fetch_usage"
-      ],
-      "interfaces": ["Headers", "Request", "Response"],
-      "methods": ["fetch()"],
+      "guides": ["/docs/Web/API/Fetch_API/Using_Fetch"],
+      "interfaces": ["Headers", "Request", "RequestInit", "Response"],
+      "methods": ["Window.fetch()", "WorkerGlobalScope.fetch()"],
       "properties": [],
       "events": []
     },
@@ -623,7 +620,12 @@
         "/docs/Web/API/Gamepad_API/Using_the_Gamepad_API",
         "/docs/Games/Techniques/Controls_Gamepad_API"
       ],
-      "interfaces": ["Gamepad", "GamepadButton", "GamepadEvent"],
+      "interfaces": [
+        "Gamepad",
+        "GamepadButton",
+        "GamepadEvent",
+        "GamepadHapticActuator"
+      ],
       "methods": ["Navigator.getGamepads()"],
       "properties": [],
       "events": ["Window: gamepadconnected", "Window: gamepaddisconnected"]
@@ -866,13 +868,6 @@
         "HTMLElement: drop"
       ]
     },
-    "HTML Sanitizer API": {
-      "overview": ["HTML Sanitizer API"],
-      "interfaces": ["Sanitizer"],
-      "methods": [],
-      "properties": [],
-      "events": []
-    },
     "Idle Detection API": {
       "overview": ["Idle Detection API"],
       "interfaces": ["IdleDetector"],
@@ -969,12 +964,12 @@
       "guides": [
         "/docs/Web/API/Media_Capabilities_API/Using_the_Media_Capabilities_API"
       ],
-      "interfaces": ["MediaCapabilities", "Screen"],
-      "methods": [
-        "MediaCapabilities.decodingInfo()",
-        "MediaCapabilities.encodingInfo()"
+      "interfaces": ["MediaCapabilities"],
+      "methods": [],
+      "properties": [
+        "Navigator.mediaCapabilities",
+        "WorkerNavigator.mediaCapabilities"
       ],
-      "properties": ["Navigator.mediaCapabilities"],
       "events": []
     },
     "Media Capture and Streams": {
@@ -1488,7 +1483,7 @@
         "WritableStreamDefaultController",
         "WritableStreamDefaultWriter"
       ],
-      "methods": ["fetch()"],
+      "methods": ["Window.fetch()"],
       "properties": ["Response.body"],
       "events": []
     },
@@ -1624,7 +1619,7 @@
       "overview": ["Topics API"],
       "guides": ["/docs/Web/API/Topics_API/Using"],
       "interfaces": [],
-      "methods": ["Document.browsingTopics()", "fetch()"],
+      "methods": ["Document.browsingTopics()", "Window.fetch()"],
       "properties": ["HTMLIFrameElement.browsingTopics"],
       "events": []
     },
@@ -1671,6 +1666,7 @@
         "MouseEvent",
         "MouseScrollEvent",
         "MutationEvent",
+        "TextEvent",
         "UIEvent",
         "WheelEvent"
       ],
@@ -2168,7 +2164,6 @@
         "RTCEncodedVideoFrame",
         "RTCEncodedAudioFrame",
         "RTCTransformEvent",
-        "RTCRtpCodecParameters",
         "RTCIceParameters",
         "RTCIceCandidatePair",
         "RTCIceCandidatePairStats",
@@ -2180,6 +2175,7 @@
         "RTCDataChannelStats",
         "RTCOutboundRtpStreamStats",
         "RTCPeerConnectionStats",
+        "RTCRemoteInboundRtpStreamStats",
         "RTCRemoteOutboundRtpStreamStats"
       ],
       "methods": ["MediaDevices.getUserMedia()"],
@@ -2371,7 +2367,7 @@
     },
     "WebVTT": {
       "overview": ["WebVTT API"],
-      "guides": ["/docs/Web/API/Web_Video_Text_Tracks_Format"],
+      "guides": ["/docs/Web/API/WebVTT_API/Web_Video_Text_Tracks_Format"],
       "interfaces": [
         "VTTCue",
         "VTTRegion",

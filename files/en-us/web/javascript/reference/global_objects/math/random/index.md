@@ -61,7 +61,8 @@ function getRandomInt(min, max) {
 }
 ```
 
-> **Note:** It might be tempting to use [`Math.round()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round) to accomplish that, but doing so would cause your random numbers to follow a non-uniform distribution, which may not be acceptable for your needs.
+> [!NOTE]
+> It might be tempting to use [`Math.round()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round) to accomplish that, but doing so would cause your random numbers to follow a non-uniform distribution, which may not be acceptable for your needs.
 
 ### Getting a random integer between two values, inclusive
 

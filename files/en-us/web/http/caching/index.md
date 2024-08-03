@@ -264,7 +264,8 @@ The server will return `304 Not Modified` if the value of the `ETag` header it d
 
 But if the server determines the requested resource should now have a different `ETag` value, the server will instead respond with a `200 OK` and the latest version of the resource.
 
-> **Note:** RFC9110 prefers that servers send both `ETag` and `Last-Modified` for a `200` response if possible.
+> [!NOTE]
+> RFC9110 prefers that servers send both `ETag` and `Last-Modified` for a `200` response if possible.
 > During cache revalidation, if both `If-Modified-Since` and `If-None-Match` are present, then `If-None-Match` takes precedence for the validator.
 > If you are only considering caching, you may think that `Last-Modified` is unnecessary.
 > However, `Last-Modified` is not just useful for caching; it is a standard HTTP header that is also used by content-management (CMS) systems to display the last-modified time, by crawlers to adjust crawl frequency, and for other various purposes.
@@ -355,7 +356,7 @@ As a workaround for outdated implementations that ignore `no-store`, you may see
 Cache-Control: no-store, no-cache, max-age=0, must-revalidate, proxy-revalidate
 ```
 
-It is [recommended](https://docs.microsoft.com/troubleshoot/developer/browsers/connectivity-navigation/how-to-prevent-caching) to use `no-cache` as an alternative for dealing with such outdated implementations, and it is not a problem if `no-cache` is given from the beginning, since the server will always receive the request.
+It is [recommended](https://learn.microsoft.com/en-us/previous-versions/troubleshoot/browsers/connectivity-navigation/how-to-prevent-caching) to use `no-cache` as an alternative for dealing with such outdated implementations, and it is not a problem if `no-cache` is given from the beginning, since the server will always receive the request.
 
 If it is the shared cache that you are concerned about, you can make sure to prevent unintended caching by also adding `private`:
 
@@ -575,7 +576,8 @@ Note that number `41` has the longest `max-age` (1 year), but with `public`.
 
 The `public` value has the effect of making the response storable even if the `Authorization` header is present.
 
-> **Note:** The `public` directive should only be used if there is a need to store the response when the `Authorization` header is set.
+> [!NOTE]
+> The `public` directive should only be used if there is a need to store the response when the `Authorization` header is set.
 > It is not required otherwise, because a response will be stored in the shared cache as long as `max-age` is given.
 
 So if the response is personalized with basic authentication, the presence of `public` may cause problems. If you are concerned about that, you can choose the second-longest value, `38` (1 month).
@@ -618,7 +620,8 @@ ETag: YsAIAAAA-QG4G6kCMAMBAAAAAAAoK
 
 **Cache busting** is a technique to make a response cacheable over a long period by changing the URL when the content changes. The technique can be applied to all subresources, such as images.
 
-> **Note:** When evaluating the use of `immutable` and QPACK:
+> [!NOTE]
+> When evaluating the use of `immutable` and QPACK:
 > If you're concerned that `immutable` changes the predefined value provided by QPACK, consider that
 > in this case, the `immutable` part can be encoded separately by splitting the `Cache-Control` value into two lines — though this is dependent on the encoding algorithm a particular QPACK implementation uses.
 

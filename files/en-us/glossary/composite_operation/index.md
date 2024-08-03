@@ -14,7 +14,8 @@ In CSS, the value of a property in a CSS rule is the _underlying value_ of that 
 - **add**: The effect value is added to the underlying value.
 - **accumulate**: The effect value is combined with the underlying value.
 
-> **Note:** Composite operation in CSS only applies to animations.
+> [!NOTE]
+> Composite operation in CSS only applies to animations.
 
 ## See also
 

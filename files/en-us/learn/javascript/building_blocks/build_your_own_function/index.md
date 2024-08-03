@@ -43,13 +43,15 @@ The `alert` function takes a single argument — the string that is displayed in
 
 The `alert` function is limited: you can alter the message, but you can't easily vary anything else, such as the color, icon, or anything else. We'll build one that will prove to be more fun.
 
-> **Note:** This example should work in all modern browsers fine, but the styling might look a bit funny in slightly older browsers. We'd recommend you do this exercise in a modern browser like Firefox, Opera, or Chrome.
+> [!NOTE]
+> This example should work in all modern browsers fine, but the styling might look a bit funny in slightly older browsers. We'd recommend you do this exercise in a modern browser like Firefox, Opera, or Chrome.
 
 ## The basic function
 
 To begin with, let's put together a basic function.
 
-> **Note:** For function naming conventions, you should follow the same rules as [variable naming conventions](/en-US/docs/Learn/JavaScript/First_steps/Variables#an_aside_on_variable_naming_rules). This is fine, as you can tell them apart — function names appear with parentheses after them, and variables don't.
+> [!NOTE]
+> For function naming conventions, you should follow the same rules as [variable naming conventions](/en-US/docs/Learn/JavaScript/First_steps/Variables#an_aside_on_variable_naming_rules). This is fine, as you can tell them apart — function names appear with parentheses after them, and variables don't.
 
 1. Start by accessing the [function-start.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-start.html) file and making a local copy. You'll see that the HTML is simple — the body contains just a single button. We've also provided some basic CSS to style the custom message box, and an empty {{htmlelement("script")}} element to put our JavaScript in.
 2. Next, add the following inside the `<script>` element:
@@ -234,7 +236,8 @@ On to the next parameter. This one is going to involve slightly more work — we
 
 1. First of all, download the icons needed for this exercise ([warning](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/icons/warning.png) and [chat](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/icons/chat.png)) from GitHub. Save them in a new folder called `icons` in the same location as your HTML file.
 
-   > **Note:** The warning and chat icons were originally found on [iconfinder.com](https://www.iconfinder.com/), and designed by [Nazarrudin Ansyari](https://www.iconfinder.com/nazarr) — Thanks! (The actual icon pages were since moved or removed.)
+   > [!NOTE]
+   > The warning and chat icons were originally found on [iconfinder.com](https://www.iconfinder.com/), and designed by [Nazarrudin Ansyari](https://www.iconfinder.com/nazarr) — Thanks! (The actual icon pages were since moved or removed.)
 
 2. Next, find the CSS inside your HTML file. We'll make a few changes to make way for the icons. First, update the `.msgBox` width from:
 
@@ -287,7 +290,8 @@ On to the next parameter. This one is going to involve slightly more work — we
 
    You can see how useful our (now not so) little function is becoming.
 
-> **Note:** If you have trouble getting the example to work, feel free to check your code against the [finished version on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-stage-4.html) ([see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-stage-4.html) also), or ask us for help.
+> [!NOTE]
+> If you have trouble getting the example to work, feel free to check your code against the [finished version on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-stage-4.html) ([see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-stage-4.html) also), or ask us for help.
 
 ## Test your skills!
 

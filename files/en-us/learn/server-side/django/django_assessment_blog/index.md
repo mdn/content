@@ -192,7 +192,8 @@ In addition you should write some basic tests to verify:
 - The BlogListView (all-blog page) uses the expected template (e.g. the default)
 - The BlogListView paginates records by 5 (at least on the first page)
 
-> **Note:** There are of course many other tests you can run. Use your discretion, but we'll expect you to do at least the tests above.
+> [!NOTE]
+> There are of course many other tests you can run. Use your discretion, but we'll expect you to do at least the tests above.
 
 The following section shows [screenshots](#screenshots) of a site that implements the requirements above.
 

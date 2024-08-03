@@ -48,7 +48,8 @@ Note that just calling `history.pushState()` or `history.replaceState()` won't t
 
 Browsers tend to handle the `popstate` event differently on page load. Chrome (prior to v34) and Safari always emit a `popstate` event on page load, but Firefox doesn't.
 
-> **Note:** When writing functions that process `popstate` event it is important to take into account that properties like `window.location` will already reflect the state change (if it affected the current URL), but `document` might still not. If the goal is to catch the moment when the new document state is already fully in place, a zero-delay {{domxref("setTimeout()")}} method call should be used to effectively put its inner _callback_ function that does the processing at the end of the browser event loop: `window.onpopstate = () => setTimeout(doSomeThing, 0);`
+> [!NOTE]
+> When writing functions that process `popstate` event it is important to take into account that properties like `window.location` will already reflect the state change (if it affected the current URL), but `document` might still not. If the goal is to catch the moment when the new document state is already fully in place, a zero-delay {{domxref("setTimeout()")}} method call should be used to effectively put its inner _callback_ function that does the processing at the end of the browser event loop: `window.onpopstate = () => setTimeout(doSomeThing, 0);`
 
 ## When popstate is sent
 

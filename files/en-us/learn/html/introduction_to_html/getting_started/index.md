@@ -13,21 +13,13 @@ In this article, we cover the absolute basics of HTML. To get you started, this 
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        <a
-          href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >Basic software installed</a
-        >, and basic knowledge of
-        <a
-          href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
-          >working with files</a
-        >.
+        <a href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software">Basic software installed</a>, and basic knowledge of <a href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files">working with files</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To gain basic familiarity with HTML, and practice writing a few HTML
-        elements.
+        To gain basic familiarity with HTML, and practice writing a few HTML elements.
       </td>
     </tr>
   </tbody>
@@ -47,7 +39,8 @@ If we wanted the text to stand by itself, we could specify that it is a paragrap
 <p>My cat is very grumpy</p>
 ```
 
-> **Note:** Tags in HTML are not case-sensitive. This means they can be written in uppercase or lowercase. For example, a {{htmlelement("title")}} tag could be written as `<title>`, `<TITLE>`, `<Title>`, `<TiTlE>`, etc., and it will work. However, it is best practice to write all tags in lowercase for consistency and readability.
+> [!NOTE]
+> Tags in HTML are not case-sensitive. This means they can be written in uppercase or lowercase. For example, a {{htmlelement("title")}} tag could be written as `<title>`, `<TITLE>`, `<Title>`, `<TiTlE>`, etc., and it will work. However, it is best practice to write all tags in lowercase for consistency and readability.
 
 ## Anatomy of an HTML element
 
@@ -226,7 +219,8 @@ This would output the following:
 
 {{ EmbedLiveSample('Void_elements', 700, 300, "", "") }}
 
-> **Note:** In HTML, there is no requirement to add a `/` at the end of a void element's tag, for example: `<img src="images/cat.jpg" alt="cat" />`. However, it is also a valid syntax, and you may do this when you want your HTML to be valid XML.
+> [!NOTE]
+> In HTML, there is no requirement to add a `/` at the end of a void element's tag, for example: `<img src="images/cat.jpg" alt="cat" />`. However, it is also a valid syntax, and you may do this when you want your HTML to be valid XML.
 
 ## Attributes
 
@@ -460,7 +454,8 @@ However, if you use one type of quote, you can include the other type of quote _
 </a>
 ```
 
-To use quote marks inside other quote marks of the same type (single quote or double quote), use [HTML entities](#entity_references_including_special_characters_in_html). For example, this will break:
+To use quote marks inside other quote marks of the same type (single quote or double quote), use {{glossary("character reference", "character references")}}.
+For example, this will break:
 
 ```html-nolint example-bad
 <a href="https://www.example.com" title="An "interesting" reference">A link to my example.</a>
@@ -514,7 +509,8 @@ If you want to experiment with writing some HTML on your local computer, you can
 3. Paste the code into the new text file.
 4. Save the file as `index.html`.
 
-> **Note:** You can also find this basic HTML template on the [MDN Learning Area GitHub repo](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html).
+> [!NOTE]
+> You can also find this basic HTML template on the [MDN Learning Area GitHub repo](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html).
 
 You can now open this file in a web browser to see what the rendered code looks like. Edit the code and refresh the browser to see what the result is. Initially, the page looks like this:
 
@@ -685,7 +681,8 @@ Let's have a look at how the browser renders the two paragraphs above with and w
 
 {{ EmbedLiveSample('Whitespace_in_HTML', 700, 100) }}
 
-> **Note:** Accessing the [innerHTML](/en-US/docs/Web/API/Element/innerHTML) of elements from JavaScript will keep all the whitespace intact.
+> [!NOTE]
+> Accessing the [innerHTML](/en-US/docs/Web/API/Element/innerHTML) of elements from JavaScript will keep all the whitespace intact.
 > This may return unexpected results if the whitespace is trimmed by the browser.
 
 ```js
@@ -700,11 +697,11 @@ console.log(whitespace);
 //        silly."
 ```
 
-## Entity references: Including special characters in HTML
+## Character references: including special characters in HTML
 
 In HTML, the characters `<`, `>`,`"`,`'`, and `&` are special characters. They are parts of the HTML syntax itself. So how do you include one of these special characters in your text? For example, if you want to use an ampersand or less-than sign, and not have it interpreted as code.
 
-You do this with character references. These are special codes that represent characters, to be used in these exact circumstances. Each character reference starts with an ampersand (&), and ends with a semicolon (;).
+You do this with {{glossary("character reference", "character references")}}. These are special codes that represent characters, to be used in these exact circumstances. Each character reference starts with an ampersand (&), and ends with a semicolon (;).
 
 | Literal character | Character reference equivalent |
 | ----------------- | ------------------------------ |
@@ -728,7 +725,8 @@ In the live output below, you can see that the first paragraph has gone wrong. T
 
 {{ EmbedLiveSample('Entity_references_Including_special_characters_in_HTML', 700, 200, "", "") }}
 
-> **Note:** You don't need to use entity references for any other symbols, as modern browsers will handle the actual symbols just fine as long as your HTML's [character encoding is set to UTF-8](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#specifying_your_documents_character_encoding).
+> [!NOTE]
+> You don't need to use entity references for any other symbols, as modern browsers will handle the actual symbols just fine as long as your HTML's [character encoding is set to UTF-8](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#specifying_your_documents_character_encoding).
 
 ## HTML comments
 

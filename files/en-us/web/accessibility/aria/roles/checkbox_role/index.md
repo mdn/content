@@ -17,7 +17,8 @@ The `checkbox` role is for checkable interactive controls. Elements containing `
 <label id="chk1-label">Remember my preferences</label>
 ```
 
-> **Note:** The first rule of ARIA is if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding ARIA. Instead use the native [HTML checkbox of `<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox) (with an associated {{HTMLElement('label')}}), which natively provides all the functionality required:
+> [!NOTE]
+> The first rule of ARIA is if a native HTML element or attribute has the semantics and behavior you require, use it instead of re-purposing an element and adding ARIA. Instead use the native [HTML checkbox of `<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox) (with an associated {{HTMLElement('label')}}), which natively provides all the functionality required:
 
 ```html
 <input type="checkbox" id="chk1-label" name="RememberPreferences" />
@@ -165,7 +166,8 @@ People implementing checkboxes should do the following:
 - Keep the `aria-checked` attribute up to date following user interactions
 - Provide styles that indicate when the checkbox has focus
 
-> **Note:** Opinions may differ on how assistive technology should handle this technique. The information provided above is one of those opinions and may change.
+> [!NOTE]
+> Opinions may differ on how assistive technology should handle this technique. The information provided above is one of those opinions and may change.
 
 ## Best practices
 

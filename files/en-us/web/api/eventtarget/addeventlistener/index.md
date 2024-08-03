@@ -14,7 +14,8 @@ sets up a function that will be called whenever the specified event is delivered
 Common targets are {{domxref("Element")}}, or its children, {{domxref("Document")}}, and {{domxref("Window")}},
 but the target may be any object that supports events (such as {{domxref("IDBRequest")}}).
 
-> **Note:** The `addEventListener()` method is the _recommended_ way to register an event listener. The benefits are as follows:
+> [!NOTE]
+> The `addEventListener()` method is the _recommended_ way to register an event listener. The benefits are as follows:
 >
 > - It allows adding more than one handler for an event. This is particularly
 >   useful for libraries, JavaScript modules, or any other kind of
@@ -25,7 +26,8 @@ but the target may be any object that supports events (such as {{domxref("IDBReq
 The method `addEventListener()` works by adding a function, or an object that implements a `handleEvent()` function, to the list of event listeners for the specified event type
 on the {{domxref("EventTarget")}} on which it's called. If the function or object is already in the list of event listeners for this target, the function or object is not added a second time.
 
-> **Note:** If a particular anonymous function is in the list of event listeners registered for a certain target, and then later in the code, an identical anonymous function is given in an `addEventListener` call, the second function will _also_ be added to the list of event listeners for that target.
+> [!NOTE]
+> If a particular anonymous function is in the list of event listeners registered for a certain target, and then later in the code, an identical anonymous function is given in an `addEventListener` call, the second function will _also_ be added to the list of event listeners for that target.
 >
 > Indeed, anonymous functions are not identical even if defined using
 > the _same_ unchanging source-code called repeatedly, **even if in a loop**.
@@ -91,7 +93,8 @@ addEventListener(type, listener, useCapture)
     the event. See [DOM Level 3 Events](https://www.w3.org/TR/DOM-Level-3-Events/#event-flow) and [JavaScript Event order](https://www.quirksmode.org/js/events_order.html#link4) for a detailed explanation.
     If not specified, `useCapture` defaults to `false`.
 
-    > **Note:** For event listeners attached to the event target, the event is in the target phase, rather than the capturing and bubbling phases.
+    > [!NOTE]
+    > For event listeners attached to the event target, the event is in the target phase, rather than the capturing and bubbling phases.
     > Event listeners in the _capturing_ phase are called before event listeners in any non-capturing phases.
 
 - `wantsUntrusted` {{optional_inline}} {{non-standard_inline}}
@@ -628,6 +631,9 @@ also available to the event handler when using an arrow function.
     </a>
   </div>
 </div>
+<hr />
+<button class="clear-button">Clear logs</button>
+<section class="demo-logs"></section>
 ```
 
 #### CSS
@@ -660,7 +666,30 @@ also available to the event handler when using an arrow function.
 }
 ```
 
+```css hidden
+.demo-logs {
+  width: 530px;
+  height: 16rem;
+  background-color: #ddd;
+  overflow-x: auto;
+  padding: 1rem;
+}
+```
+
 #### JavaScript
+
+```js hidden
+const clearBtn = document.querySelector(".clear-button");
+const demoLogs = document.querySelector(".demo-logs");
+
+function log(msg) {
+  demoLogs.innerText += `${msg}\n`;
+}
+
+clearBtn.addEventListener("click", () => {
+  demoLogs.innerText = "";
+});
+```
 
 ```js
 const outer = document.querySelector(".outer");
@@ -695,27 +724,27 @@ inner1.addEventListener("click", passiveHandler, passive);
 inner2.addEventListener("click", nonePassiveHandler, nonePassive);
 
 function onceHandler(event) {
-  alert("outer, once");
+  log("outer, once");
 }
 function noneOnceHandler(event) {
-  alert("outer, none-once, default");
+  log("outer, none-once, default\n");
 }
 function captureHandler(event) {
   //event.stopImmediatePropagation();
-  alert("middle, capture");
+  log("middle, capture");
 }
 function noneCaptureHandler(event) {
-  alert("middle, none-capture, default");
+  log("middle, none-capture, default");
 }
 function passiveHandler(event) {
   // Unable to preventDefault inside passive event listener invocation.
   event.preventDefault();
-  alert("inner1, passive, open new page");
+  log("inner1, passive, open new page");
 }
 function nonePassiveHandler(event) {
   event.preventDefault();
   //event.stopPropagation();
-  alert("inner2, none-passive, default, not open new page");
+  log("inner2, none-passive, default, not open new page");
 }
 ```
 
@@ -723,7 +752,7 @@ function nonePassiveHandler(event) {
 
 Click the outer, middle, inner containers respectively to see how the options work.
 
-{{ EmbedLiveSample('Example_of_options_usage', 600, 310, '') }}
+{{ EmbedLiveSample('Example_of_options_usage', 600, 630) }}
 
 Before using a particular value in the `options` object, it's a
 good idea to ensure that the user's browser supports it, since these are an addition

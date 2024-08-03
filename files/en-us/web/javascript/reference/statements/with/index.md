@@ -9,7 +9,8 @@ browser-compat: javascript.statements.with
 
 {{jsSidebar("Statements")}}{{Deprecated_Header}}
 
-> **Note:** Use of the `with` statement is not recommended, as it may be the source of confusing bugs and compatibility issues, makes optimization impossible, and is forbidden in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode). The recommended alternative is to assign the object whose properties you want to access to a temporary variable.
+> [!NOTE]
+> Use of the `with` statement is not recommended, as it may be the source of confusing bugs and compatibility issues, makes optimization impossible, and is forbidden in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode). The recommended alternative is to assign the object whose properties you want to access to a temporary variable.
 
 The **`with`** statement extends the scope chain for a statement.
 
@@ -59,7 +60,7 @@ with ([1, 2, 3]) {
 }
 ```
 
-The object may have an [`@@unscopables`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/unscopables) property, which defines a list of properties that should not be added to the scope chain (for backward compatibility). See the [`Symbol.unscopables`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/unscopables) documentation for more information.
+The object may have an [`[Symbol.unscopables]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/unscopables) property, which defines a list of properties that should not be added to the scope chain (for backward compatibility). See the [`Symbol.unscopables`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/unscopables) documentation for more information.
 
 The reasons to use a `with` statement include saving one temporary variable and reducing file size by avoiding repeating a lengthy object reference. However, there are far more reasons why `with` statements are not desirable:
 
@@ -88,7 +89,7 @@ The reasons to use a `with` statement include saving one temporary variable and 
 
   If you call `f([1, 2, 3], obj)` in an ECMAScript 5 environment, the `values` reference inside the `with` statement will resolve to `obj`. However, ECMAScript 2015 introduces a [`values`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/values) property on `Array.prototype` (so it will be available on every array). So, after upgrading the environment, the `values` reference inside the `with` statement resolves to `[1, 2, 3].values` instead, and is likely to cause bugs.
 
-  In this particular example, `values` is defined as unscopable through [`Array.prototype[@@unscopables]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@unscopables), so it still correctly resolves to the `values` parameter. If it were not defined as unscopable, one can see how this would be a difficult issue to debug.
+  In this particular example, `values` is defined as unscopable through [`Array.prototype[Symbol.unscopables]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables), so it still correctly resolves to the `values` parameter. If it were not defined as unscopable, one can see how this would be a difficult issue to debug.
 
 ## Examples
 
@@ -175,4 +176,4 @@ with (namespace) {
 - {{jsxref("Statements/block", "block", "", 1)}}
 - [Strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)
 - {{jsxref("Symbol.unscopables")}}
-- {{jsxref("Array/@@unscopables", "Array.prototype[@@unscopables]")}}
+- [`Array.prototype[Symbol.unscopables]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables)

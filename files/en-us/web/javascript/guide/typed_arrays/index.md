@@ -131,8 +131,8 @@ These are some examples of APIs that make use of typed arrays; there are others,
 
 - [`FileReader.prototype.readAsArrayBuffer()`](/en-US/docs/Web/API/FileReader/readAsArrayBuffer)
   - : The `FileReader.prototype.readAsArrayBuffer()` method starts reading the contents of the specified [`Blob`](/en-US/docs/Web/API/Blob) or [`File`](/en-US/docs/Web/API/File).
-- [`fetch()`](/en-US/docs/Web/API/fetch)
-  - : The [`body`](/en-US/docs/Web/API/fetch#body) option to `fetch()` can be a typed array or {{jsxref("ArrayBuffer")}}, enabling you to send these objects as the payload of a {{HTTPMethod("POST")}} request.
+- [`fetch()`](/en-US/docs/Web/API/Window/fetch)
+  - : The [`body`](/en-US/docs/Web/API/RequestInit#body) option to `fetch()` can be a typed array or {{jsxref("ArrayBuffer")}}, enabling you to send these objects as the payload of a {{HTTPMethod("POST")}} request.
 - [`ImageData.data`](/en-US/docs/Web/API/ImageData)
   - : Is a {{jsxref("Uint8ClampedArray")}} representing a one-dimensional array containing the data in the RGBA order, with integer values between `0` and `255` inclusive.
 
@@ -270,7 +270,8 @@ const amountDueView = new Float32Array(buffer, 20, 1);
 
 Then you can access, for example, the amount due with `amountDueView[0]`.
 
-> **Note:** The [data structure alignment](https://en.wikipedia.org/wiki/Data_structure_alignment) in a C structure is platform-dependent. Take precautions and considerations for these padding differences.
+> [!NOTE]
+> The [data structure alignment](https://en.wikipedia.org/wiki/Data_structure_alignment) in a C structure is platform-dependent. Take precautions and considerations for these padding differences.
 
 ### Conversion to normal arrays
 

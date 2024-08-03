@@ -21,7 +21,8 @@ An "owning element" is any DOM ancestor of an element. If an element visually, f
 
 Referencing the ID of one or more elements allows any element to "own" any other element with an `aria-owns` declaration. The value of the `aria-owns` attribute is a space-separated ID reference list that references the IDs of one or more elements in the document.
 
-> **Note:** An "owned" element is any DOM descendant of the element, any element specified as a child via `aria-owns`, or any DOM descendant of the owned child. The `aria-owns`-owned element should be an element that belongs to a separate parent tree in the DOM but should be treated as a child of the current element.
+> [!NOTE]
+> An "owned" element is any DOM descendant of the element, any element specified as a child via `aria-owns`, or any DOM descendant of the owned child. The `aria-owns`-owned element should be an element that belongs to a separate parent tree in the DOM but should be treated as a child of the current element.
 
 Do not use `aria-owns` as a replacement for the DOM hierarchy. If the relationship is represented in the DOM, do not use `aria-owns`.
 
@@ -31,7 +32,8 @@ When using `aria-owns`, make sure you [manage focus order](https://css-tricks.co
 
 An example of when to use `aria-owns` includes pop-up sub-menus that visually appear positioned near a parent menu, but cannot be nested in the DOM within the parent menu because it would affect the visual presentation. In this case, use `aria-owns` to present the sub-menu as a child of the parent menu to a screen reader.
 
-> **Note:** The `aria-owns` attribute should only be used when the parent/child relationship cannot be determined from the DOM.
+> [!NOTE]
+> The `aria-owns` attribute should only be used when the parent/child relationship cannot be determined from the DOM.
 
 If an element has both `aria-owns` and DOM children, the order of the child elements:
 
@@ -44,7 +46,8 @@ The {{CSSXRef('order')}} property, part of flex or grid layouts, can be used to 
 
 Make sure your owned elements have only one owner. Do not specify the `id` of an element in more than one other element's `aria-owns` attribute. An element can have only one owner.
 
-> **Warning:** At the time of this writing, [`aria-owns` is not supported](https://a11ysupport.io/tech/aria/aria-owns_attribute) on MacOS and iOS with VoiceOver.
+> [!WARNING]
+> While [`aria-owns` is now supported](https://a11ysupport.io/tech/aria/aria-owns_attribute) in all modern browsers, `aria-owns` may not be exposed to users of MacOS and iOS using VoiceOver prior to iOS 17.3 and macOS 14.3.
 
 ## Values
 

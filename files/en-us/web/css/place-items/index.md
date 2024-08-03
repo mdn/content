@@ -21,11 +21,9 @@ This property is a shorthand for the following CSS properties:
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Positional alignment */
 place-items: center;
 place-items: normal start;
-
-/* Positional alignment */
 place-items: center normal;
 place-items: start legacy;
 place-items: end normal;
@@ -33,6 +31,7 @@ place-items: self-start legacy;
 place-items: self-end normal;
 place-items: flex-start legacy;
 place-items: flex-end normal;
+place-items: anchor-center;
 
 /* Baseline alignment */
 place-items: baseline normal;

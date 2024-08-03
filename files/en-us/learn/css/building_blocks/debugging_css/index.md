@@ -4,7 +4,7 @@ slug: Learn/CSS/Building_blocks/Debugging_CSS
 page-type: learn-module-chapter
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Advanced_styling_effects", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}
 
 Sometimes when writing CSS you will encounter an issue where your CSS doesn't seem to be doing what you expect. Perhaps you believe that a certain selector should match an element, but nothing happens, or a box is a different size than you expected. This article will give you guidance on how to go about debugging a CSS problem, and show you how the DevTools included in all modern browsers can help you to find out what is going on.
 
@@ -89,7 +89,8 @@ You can add properties using the DevTools. Perhaps you have realized that you do
 
 ![The DevTools Panel, adding a new property to the rules, with the autocomplete for font- open](inspecting3-font-size.png)
 
-> **Note:** There are other useful features in the Rules view too, for example declarations with invalid values are crossed out. You can find out more at [Examine and edit CSS](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html).
+> [!NOTE]
+> There are other useful features in the Rules view too, for example declarations with invalid values are crossed out. You can find out more at [Examine and edit CSS](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html).
 
 ## Understanding the box model
 
@@ -105,7 +106,8 @@ The element with a class of `box2` is using `border-box`, so here the padding an
 
 ![The Layout section of the DevTools](inspecting4-box-model.png)
 
-> **Note:** Find out more in [Examining and Inspecting the Box Model](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_the_box_model/index.html).
+> [!NOTE]
+> Find out more in [Examining and Inspecting the Box Model](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_the_box_model/index.html).
 
 ## Solving specificity issues
 
@@ -192,4 +194,4 @@ So there we have it: an introduction to debugging CSS, which should give you som
 
 In the last article of this module, we'll take a look at how to [organize your CSS](/en-US/docs/Learn/CSS/Building_blocks/Organizing).
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}
+{{PreviousMenuNext("Learn/CSS/Building_blocks/Advanced_styling_effects", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}

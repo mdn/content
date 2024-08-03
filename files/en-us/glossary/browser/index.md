@@ -6,7 +6,7 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-A **Web browser** or **browser** is a program that retrieves and displays pages from the {{Glossary("World Wide Web", "Web")}}, and lets users access further pages through {{Glossary("hyperlink", "hyperlinks")}}. A browser is the most familiar type of {{Glossary("user agent")}}. It uses a {{Glossary("rendering engine")}} to display web pages.
+A **Web browser** or **browser** is a program that retrieves and displays pages from the {{Glossary("World Wide Web", "Web")}}, and lets users access further pages through {{Glossary("hyperlink", "hyperlinks")}}. A browser is the most familiar type of {{Glossary("user agent")}}. It uses a {{Glossary("Engine/Rendering", "rendering engine")}} to display web pages.
 
 Common browsers include:
 
@@ -25,6 +25,6 @@ Common browsers include:
   - [Google Chrome](https://www.google.com/chrome/)
   - [Microsoft Edge](https://www.microsoft.com/en-us/edge)
   - [Opera Browser](https://www.opera.com/)
-- Glossary
-  - {{Glossary("Rendering engine")}}
+- Related glossary terms:
+  - {{Glossary("Engine/Rendering", "Rendering engine")}}
   - {{Glossary("User agent")}}

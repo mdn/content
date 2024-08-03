@@ -83,7 +83,8 @@ For example, if the e-commerce site owner wants a WebGL-powered 3D tour of each 
 
 You should compile a list of the potential problem areas.
 
-> **Note:** You can find browser support information for technologies by looking up the different features on MDN — the site you're on! You should also consult [caniuse.com](https://caniuse.com/), for some further useful details.
+> [!NOTE]
+> You can find browser support information for technologies by looking up the different features on MDN — the site you're on! You should also consult [caniuse.com](https://caniuse.com/), for some further useful details.
 
 Once you've agreed on these details, you can go ahead and start developing the site.
 
@@ -109,7 +110,7 @@ After each implementation phase, you will need to test the new functionality. To
 
 At this point, fix any problems you find with your new code.
 
-Next, you should try expanding your list of test browsers to a full list of target audience browsers and start concentrating on weeding out cross-browser issues (see the next article for more information on [determining your target browsers](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#gotta_test_em_all)). For example:
+Next, you should try expanding your list of test browsers to a full list of target audience browsers and start concentrating on weeding out cross-browser issues (see the next article for more information on [determining your target browsers](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies)). For example:
 
 - Try to test the latest change on all the modern desktop browsers you can — including Firefox, Chrome, Opera, Edge, and Safari on desktop (Mac, Windows, and Linux, ideally).
 - Test it in common phone and tablet browsers (e.g. iOS Safari on iPhone/iPad, Chrome and Firefox on iPhone/iPad/Android),
@@ -133,10 +134,10 @@ If you wish to invest money in testing, there are also commercial tools that can
 It is often a good idea to test on prerelease versions of browsers; see the following links:
 
 - [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)
-- [Microsoft Edge Insider](https://www.microsoftedgeinsider.com/)
+- [Microsoft Edge Insider](https://www.microsoft.com/en-us/edge/download/insider)
 - [Safari Technology Preview](https://developer.apple.com/safari/technology-preview/)
 - [Chrome Canary](https://www.google.com/chrome/canary/)
-- [Opera Developer](https://www.opera.com/computer/beta)
+- [Opera Developer](https://www.opera.com/browsers/opera/developer)
 
 This is especially prevalent if you are using very new technologies in your site, and you want to test against the latest implementations, or if you are coming across a bug in the latest release version of a browser, and you want to see if the browser's developers have fixed the bug in a newer version.
 
@@ -158,7 +159,7 @@ Just to reiterate on what was said above, if you discover bugs in browsers, you 
 
 - [Firefox Bugzilla](https://bugzilla.mozilla.org/)
 - [Safari](https://bugs.webkit.org/)
-- [Chrome](https://bugs.chromium.org/p/chromium/issues/list)
+- [Chrome](https://issues.chromium.org/issues)
 - [Opera](https://opera.atlassian.net/servicedesk/customer/portal/9)
 
 ## Summary

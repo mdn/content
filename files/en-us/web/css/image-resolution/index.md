@@ -38,7 +38,8 @@ image-resolution: unset;
 - `snap`
   - : If the `snap` keyword is provided, the computed resolution is the specified resolution rounded to the nearest value that would map one image pixel to an integer number of device pixels. If the resolution is taken from the image, then the used intrinsic resolution is the image's native resolution similarly adjusted.
 
-> **Note:** As vector formats such as SVG do not have an intrinsic resolution, this property has no effect on vector images.
+> [!NOTE]
+> As vector formats such as SVG do not have an intrinsic resolution, this property has no effect on vector images.
 
 ## Formal definition
 

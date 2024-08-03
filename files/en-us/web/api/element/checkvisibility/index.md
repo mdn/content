@@ -42,7 +42,8 @@ checkVisibility(options)
       - : `true` to check if the element is invisible due to the value of its {{cssxref("visibility")}} property.
         `false` by default.
 
-        > **Note:** Invisible elements include those that have [`visibility: hidden`](/en-US/docs/Web/CSS/visibility#hidden), and some element types that have [`visibility: collapse`](/en-US/docs/Web/CSS/visibility#collapse).
+        > [!NOTE]
+        > Invisible elements include those that have [`visibility: hidden`](/en-US/docs/Web/CSS/visibility#hidden), and some element types that have [`visibility: collapse`](/en-US/docs/Web/CSS/visibility#collapse).
 
     - `checkOpacity`
       - : A historic alias for [`opacityProperty`](#opacityproperty).

@@ -18,7 +18,8 @@ Responses are grouped in five classes:
 
 The status codes listed below are defined by [RFC 9110](https://httpwg.org/specs/rfc9110.html#overview.of.status.codes).
 
-> **Note:** If you receive a response that is not in [this list](#information_responses), it is a non-standard response, possibly custom to the server's software.
+> [!NOTE]
+> If you receive a response that is not in [this list](#information_responses), it is a non-standard response, possibly custom to the server's software.
 
 ## Information responses
 
@@ -115,7 +116,7 @@ The status codes listed below are defined by [RFC 9110](https://httpwg.org/specs
   - : The request method is known by the server but is not supported by the target resource.
     For example, an API may not allow calling `DELETE` to remove a resource.
 - {{HTTPStatus(406, "406 Not Acceptable")}}
-  - : This response is sent when the web server, after performing [server-driven content negotiation](/en-US/docs/Web/HTTP/Content_negotiation#server-driven_negotiation), doesn't find any content that conforms to the criteria given by the user agent.
+  - : This response is sent when the web server, after performing [server-driven content negotiation](/en-US/docs/Web/HTTP/Content_negotiation#server-driven_content_negotiation), doesn't find any content that conforms to the criteria given by the user agent.
 - {{HTTPStatus(407, "407 Proxy Authentication Required")}}
   - : This is similar to `401 Unauthorized` but authentication is needed to be done by a proxy.
 - {{HTTPStatus(408, "408 Request Timeout")}}

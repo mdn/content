@@ -41,7 +41,8 @@ _Example 2: How the tabs widget might be styled visually. Users might recognize 
 
 **ARIA** enables developers to describe their widgets in more detail by adding special attributes to the markup. Designed to fill the gap between standard HTML tags and the desktop-style controls found in dynamic web applications, ARIA provides roles and states that describe the behavior of most familiar UI widgets.
 
-> **Warning:** Many of these were later added when browsers didn't fully support modern HTML features. **Developers should always prefer using the correct semantic HTML element over using ARIA**.
+> [!WARNING]
+> Many of these were later added when browsers didn't fully support modern HTML features. **Developers should always prefer using the correct semantic HTML element over using ARIA**.
 
 The ARIA specification is split up into three different types of attributes: roles, states, and properties. Roles describe widgets that aren't otherwise available in HTML 4, such as sliders, menu bars, tabs, and dialogs. Properties describe characteristics of these widgets, such as if they are draggable, have a required element, or have a popup associated with them. States describe the current interaction state of an element, informing the assistive technology if it is busy, disabled, selected, or hidden.
 
@@ -107,8 +108,6 @@ When content visibility is changed (i.e., an element is hidden or shown), develo
 
 Here is an example of a tooltip that uses **`aria-hidden`** to control the visibility of the tooltip. The example shows a simple web form with tooltips containing instructions associated with the entry fields.
 
-In this example, the HTML for the tooltip has the form shown. Line 9 sets the **`aria-hidden`** state to `true`.
-
 ```html
 <div class="text">
   <label id="tp1-label" for="first">First Name:</label>
@@ -126,7 +125,7 @@ In this example, the HTML for the tooltip has the form shown. Line 9 sets the **
 </div>
 ```
 
-The CSS for this markup is shown in the following code. Note that there is no custom classname used, only the status of the **`aria-hidden`** attribute on line 1.
+The CSS for this markup is shown in the following code. Note that there is no custom classname used, only the status of the **`aria-hidden`** attribute.
 
 ```css
 div.tooltip[aria-hidden="true"] {
@@ -134,7 +133,7 @@ div.tooltip[aria-hidden="true"] {
 }
 ```
 
-The JavaScript to update the **`aria-hidden`** property has the form shown in the following code. Note that the script only updates the **`aria-hidden`** attribute (line 2); it does not need to also add or remove a custom classname.
+The JavaScript to update the **`aria-hidden`** property has the form shown in the following code. Note that the script only updates the **`aria-hidden`** attribute; it does not need to also add or remove a custom classname.
 
 ```js
 function showTip(el) {
@@ -152,7 +151,8 @@ Do not do this. Instead, implement the "view" mode using a different element alt
 
 ### Asynchronous content changes
 
-> **Note:** Under construction. See also [Live Regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
+> [!NOTE]
+> Under construction. See also [Live Regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
 
 ## Keyboard navigation
 

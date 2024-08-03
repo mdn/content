@@ -28,7 +28,8 @@ write(buffer, options)
     - `at`
       - : A number representing the offset in bytes from the start of the file that the buffer should be written at.
 
-> **Note:** You cannot directly manipulate the contents of an `ArrayBuffer`. Instead, you create a typed array object like an {{jsxref("Int8Array")}} or a {{jsxref("DataView")}} object, which represents the buffer in a specific format, and use that to read and write the contents of the buffer.
+> [!NOTE]
+> You cannot directly manipulate the contents of an `ArrayBuffer`. Instead, you create a typed array object like an {{jsxref("Int8Array")}} or a {{jsxref("DataView")}} object, which represents the buffer in a specific format, and use that to read and write the contents of the buffer.
 
 ### Return value
 
@@ -83,7 +84,8 @@ onmessage = async (e) => {
 };
 ```
 
-> **Note:** In earlier versions of the spec, {{domxref("FileSystemSyncAccessHandle.close()", "close()")}}, {{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}, {{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}, and {{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} were wrongly specified as asynchronous methods, and older versions of some browsers implement them in this way. However, all current browsers that support these methods implement them as synchronous methods.
+> [!NOTE]
+> In earlier versions of the spec, {{domxref("FileSystemSyncAccessHandle.close()", "close()")}}, {{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}, {{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}, and {{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} were wrongly specified as asynchronous methods, and older versions of some browsers implement them in this way. However, all current browsers that support these methods implement them as synchronous methods.
 
 ## Specifications
 

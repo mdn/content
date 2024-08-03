@@ -29,13 +29,13 @@ Now that we've looked at the very basics of strings, let's move up a gear and st
 
 ## Strings as objects
 
-Most things are objects in JavaScript. When you create a string, for example by using
+Most values can be used as if they are objects in JavaScript. When you create a string, for example by using
 
 ```js
 const string = "This is my string";
 ```
 
-your variable becomes a string object instance, and as a result has a large number of properties and methods available to it. You can see this if you go to the {{jsxref("String")}} object page and look down the list on the side of the page!
+although the variable itself isn't an object, it still has a large number of properties and methods available to it, by virtue of being usable as an object when accessing properties. You can see this if you go to the {{jsxref("String")}} object page and look down the list on the side of the page!
 
 **Now, before your brain starts melting, don't worry!** You really don't need to know about most of these early on in your learning journey. But there are a few that you'll potentially use quite often that we'll look at here.
 
@@ -237,7 +237,7 @@ Think about how you could test whether the message in each case is a Christmas m
 
 <textarea id="code" class="playable-code" style="height: 290px; width: 95%">
 const list = document.querySelector('.output ul');
-list.innerHTML = '';
+list.textContent = "";
 const greetings = ['Happy Birthday!',
                  'Merry Christmas my love',
                  'A happy Christmas to all the family',
@@ -314,7 +314,7 @@ solution.addEventListener("click", () => {
 });
 
 const jsSolution = `const list = document.querySelector('.output ul');
-list.innerHTML = '';
+list.textContent = "";
 const greetings = [
   'Happy Birthday!',
   'Merry Christmas my love',
@@ -395,7 +395,8 @@ In this exercise, we have the names of cities in the United Kingdom, but the cap
 3. Using this latest variable as a substring, replace the first letter of the lowercase string with the first letter of the lowercase string changed to upper case. Store the result of this replacement procedure in another new variable.
 4. Change the value of the `result` variable to equal to the final result, not the `city`.
 
-> **Note:** A hint — the parameters of the string methods don't have to be string literals; they can also be variables, or even variables with a method being invoked on them.
+> [!NOTE]
+> A hint — the parameters of the string methods don't have to be string literals; they can also be variables, or even variables with a method being invoked on them.
 
 ```html hidden
 <h2>Live output</h2>
@@ -411,7 +412,7 @@ In this exercise, we have the names of cities in the United Kingdom, but the cap
 
 <textarea id="code" class="playable-code" style="height: 250px; width: 95%">
 const list = document.querySelector('.output ul');
-list.innerHTML = '';
+list.textContent = "";
 const cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
 
 for (const city of cities) {
@@ -483,7 +484,7 @@ solution.addEventListener("click", function () {
 });
 
 const jsSolution = `const list = document.querySelector('.output ul');
-list.innerHTML = '';
+list.textContent = "";
 const cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
 
 for (const city of cities) {
@@ -586,7 +587,7 @@ We'd recommend doing it like this:
 
 <textarea id="code" class="playable-code" style="height: 285px; width: 95%">
 const list = document.querySelector('.output ul');
-list.innerHTML = '';
+list.textContent = "";
 const stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
                   'GNF576746573fhdg4737dh4;Greenfield',
                   'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street',
@@ -662,7 +663,7 @@ solution.addEventListener("click", function () {
 });
 
 const jsSolution = `const list = document.querySelector('.output ul');
-list.innerHTML = '';
+list.textContent = '';
 const stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
                   'GNF576746573fhdg4737dh4;Greenfield',
                   'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street',

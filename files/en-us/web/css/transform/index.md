@@ -15,7 +15,8 @@ It modifies the coordinate space of the CSS [visual formatting model](/en-US/doc
 If the property has a value different from `none`, a [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) will be created.
 In that case, the element will act as a [containing block](/en-US/docs/Web/CSS/Containing_block) for any `position: fixed;` or `position: absolute;` elements that it contains.
 
-> **Warning:** Only transformable elements can be `transform`ed.
+> [!WARNING]
+> Only transformable elements can be `transform`ed.
 > That is, all elements whose layout is governed by the CSS box model except for: [non-replaced inline boxes](/en-US/docs/Glossary/Inline-level_content), [table-column boxes](/en-US/docs/Web/HTML/Element/col), and [table-column-group boxes](/en-US/docs/Web/HTML/Element/colgroup).
 
 ## Syntax
@@ -69,7 +70,7 @@ The `transform` property may be specified as either the keyword value `none` or 
 - `none`
   - : Specifies that no transform should be applied.
 
-## Accessibility concerns
+## Accessibility
 
 Scaling/zooming animations are problematic for accessibility, as they are a common trigger for certain types of migraine.
 If you need to include such animations on your website, you should provide a control to allow users to turn off animations, preferably site-wide.
