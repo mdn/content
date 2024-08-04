@@ -19,7 +19,8 @@ The {{domxref("MediaMetadata")}} interface lets a website provide rich metadata 
 
 ![Media Session data for the Sintel trailer title and artwork presented on a desktop browser, mobile phone, and smartwatch](media-session-ui.jpg)
 
-> **Note:** Original image source: [Customize media notifications and playback controls with the Media Session API](https://web.dev/articles/media-session) on web.dev (2024)
+> [!CALLOUT]
+> Original image source: [Customize media notifications and playback controls with the Media Session API](https://web.dev/articles/media-session) on web.dev (2024)
 
 The {{domxref("MediaSession")}} interface lets users control the playback of media through user-agent-defined interface elements. Interaction with these elements triggers action handlers on the web page playing the media. Since multiple pages may be simultaneously using this API, the user agent is responsible for calling the correct page's action handlers. The user agent provides default behaviors when no page-defined behavior is available.
 
