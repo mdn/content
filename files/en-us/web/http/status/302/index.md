@@ -13,7 +13,7 @@ the URL given by the {{HTTPHeader("Location")}} header. A browser redirects to t
 but search engines don't update their links to the resource (in 'SEO-speak', it is said
 that the 'link-juice' is not sent to the new URL).
 
-The Fetch Standard requires user agents to change the method to GET (if it was originally POST), 
+The Fetch Standard requires user agents to change the method to GET (if it was originally POST),
 the HTTP specification permits them to do so. It is recommended to set the
 `302` code only as a response for {{HTTPMethod("GET")}} or
 {{HTTPMethod("HEAD")}} methods and to use {{HTTPStatus("307", "307 Temporary Redirect")}}
