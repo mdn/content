@@ -80,14 +80,14 @@ p.fancy:nth-of-type(2n + 1) {
 
 ```html
 <body>
-<div class="father">
-  <div class="aaa">1</div>
-  <div class="children">2</div>
-  <div class="children">3</div>
-  <div class="children">4</div>
-  <div class="children">5</div>
-</div>
-<p class="children">6</p>
+  <div class="father">
+    <div class="aaa">1</div>
+    <div class="children">2</div>
+    <div class="children">3</div>
+    <div class="children">4</div>
+    <div class="children">5</div>
+  </div>
+  <p class="children">6</p>
 </body>
 ```
 
