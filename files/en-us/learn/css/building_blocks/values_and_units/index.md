@@ -153,7 +153,7 @@ Most of these units are more useful when used for print, rather than screen outp
 
 Relative length units are relative to something else. For example:
 
-- `em` and `rem` are relative to the font size of the parent element and the own element, respectively.
+- `em` and `rem` are relative to the font size of the parent element and its own element, respectively.
 - `vh` and `vw` are relative to the viewport's height and width, respectively.
 
 The benefit of using relative units is that with some careful planning you can make it so the size of text or other elements scales relative to everything else on the page. For a complete list of the relative units available, see the reference page for the {{cssxref("length")}} type.
