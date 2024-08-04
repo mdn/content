@@ -9,7 +9,7 @@ browser-compat: api.ChapterInformation
 
 The **`ChapterInformation`** interface of the {{domxref("Media Session API", "", "", "nocode")}} represents the metadata for an individual chapter of a media resource (i.e. a video or audio file).
 
-The chapter information for a given media resource is set when it is first created, via the `chapterInfo` property of the {{domxref("MediaMetadata.MediaMetadata", "MediaMetadata()")}} constructor's initialization object. This takes an array of `ChapterInformation` objects as a value.
+The chapter information for a given media resource is set when it is first created, via the `chapterInfo` property of the {{domxref("MediaMetadata.MediaMetadata", "MediaMetadata()")}} constructor's initialization object. The property takes an array of `ChapterInformation` objects as its value.
 
 You can access the chapter information for an existing {{domxref("MediaMetadata")}} object via its {{domxref("MediaMetadata.chapterInfo", "chapterInfo")}} property. This returns an array of `ChapterInformation` objects.
 
