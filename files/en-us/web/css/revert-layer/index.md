@@ -2,8 +2,6 @@
 title: revert-layer
 slug: Web/CSS/revert-layer
 page-type: css-keyword
-status:
-  - experimental
 browser-compat: css.types.global_keywords.revert-layer
 ---
 
