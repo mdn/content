@@ -24,7 +24,7 @@ You can access the chapter information for an existing {{domxref("MediaMetadata"
 
 ## Examples
 
-The [Video / Media Session Sample](https://googlechrome.github.io/samples/media-session/video.html) shows a typical sample structure for the `ChapterInformation` object:
+The sample code below from [Video / Media Session Sample](https://googlechrome.github.io/samples/media-session/video.html) shows a typical structure for the `ChapterInformation` object:
 
 ```js
 const BASE_URL = "https://storage.googleapis.com/media-session/";
