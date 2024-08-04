@@ -3,11 +3,14 @@ title: ":nth-of-type()"
 slug: Web/CSS/:nth-of-type
 page-type: css-pseudo-class
 browser-compat: css.selectors.nth-of-type
+
 ---
 
 {{CSSRef}}
 
 The **`:nth-of-type()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements based on their position among siblings of the same type (tag name).
+
+Tips:When you use non-tag selectors like div, p, etc., the browser first matches the selected elements, then parses the elements' tags, and finally matches them based on the position of the tags within the parent elements.
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-nth-of-type.html", "tabbed-shorter")}}
 
@@ -71,6 +74,37 @@ p.fancy:nth-of-type(2n + 1) {
 
 > [!NOTE]
 > There is no way to select the nth-of-class using this selector. The selector looks at the type only when creating the list of matches. You can however apply CSS to an element based on `:nth-of-type` location **and** a class, as shown in the example above.
+
+### Selector Execution Process
+
+#### HTML
+
+```html
+<body>
+<div class="father">
+  <div class="aaa">1</div>
+  <div class="children">2</div>
+  <div class="children">3</div>
+  <div class="children">4</div>
+  <div class="children">5</div>
+</div>
+<p class="children">6</p>
+</body>
+```
+
+#### CSS
+
+```css
+<style>
+.children:nth-of-type(2) {
+  background: blue;
+}
+</style>
+```
+
+1. Use `.children` to find elements with content `2, 3, 4, 5, 6`.
+2. Get all sibling elements with the same tag (i.e., all `div` under father and `p` under body).
+3. Select and apply CSS styles based on `(2)`
 
 ## Specifications
 
