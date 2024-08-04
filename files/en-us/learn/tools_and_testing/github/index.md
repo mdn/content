@@ -28,7 +28,7 @@ To use Git and GitHub, you need:
 
 - A desktop computer with Git installed on it (see the [Git downloads page](https://git-scm.com/downloads)).
 - A tool to use Git. Depending on how you like to work, you could use a [Git GUI client](https://git-scm.com/downloads/guis/) (we'd recommend GitHub Desktop, SourceTree or Git Kraken) or just stick to using a terminal window. In fact, it is probably useful for you to get to know at least the basics of git terminal commands, even if you intend to use a GUI.
-- A [GitHub account](https://github.com/join). If you haven't already got one, sign up now using the provided link.
+- A [GitHub account](https://github.com/signup). If you haven't already got one, sign up now using the provided link.
 
 In terms of prerequisite knowledge, you don't need to know anything about web development, Git/GitHub, or VCSes to start this module. However, it is recommended that you know some coding so that you have reasonable computer literacy, and some code to store in your repositories!
 
@@ -41,11 +41,11 @@ It is also preferable that you have some basic terminal knowledge, so for exampl
 
 Note that the links below take you to resources on external sites. Eventually, we are aiming to have our own dedicated Git/GitHub course, but for now, these will help you get to grips with the subject at hand.
 
-- [Hello, World (from GitHub)](https://docs.github.com/en/get-started/quickstart/hello-world)
+- [Hello, World (from GitHub)](https://docs.github.com/en/get-started/start-your-journey/hello-world)
   - : This is a good place to start — this practical guide gets you to jump right into using GitHub, learning the basics of Git such as creating repositories and branches, making commits, and opening and merging pull requests.
 - [Git Handbook (from GitHub)](https://docs.github.com/en/get-started/using-git/about-git)
   - : This Git Handbook goes into a little more depth, explaining what a VCS is, what a repository is, how the basic GitHub model works, Git commands and examples, and more.
-- [Forking Projects (from GitHub)](https://docs.github.com/en/get-started/quickstart/contributing-to-projects)
+- [Forking Projects (from GitHub)](https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project)
   - : Forking projects is essential when you want to contribute to someone else's code. This guide explains how.
 - [About Pull Requests (from GitHub)](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
   - : A useful guide to managing pull requests, the way that your suggested code changes are delivered to people's repositories for consideration.
@@ -57,7 +57,7 @@ Note that the links below take you to resources on external sites. Eventually, w
 
 ## See also
 
-- [Understanding the GitHub flow](https://docs.github.com/en/get-started/quickstart/github-flow)
+- [Understanding the GitHub flow](https://docs.github.com/en/get-started/using-github/github-flow)
 - [Git command list](https://git-scm.com/docs)
 - [Mastering markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) (the text format you write in on PR, issue comments, and `.md` files).
 - [Getting Started with GitHub Pages](https://docs.github.com/en/pages/quickstart) (how to publish demos and websites on GitHub).

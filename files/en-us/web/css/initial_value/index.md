@@ -37,6 +37,7 @@ You can explicitly specify the initial value by using the {{cssxref("initial")}}
   - Values
     - [Computed values](/en-US/docs/Web/CSS/computed_value)
     - [Used values](/en-US/docs/Web/CSS/used_value)
+    - [Resolved values](/en-US/docs/Web/CSS/resolved_value)
     - [Actual values](/en-US/docs/Web/CSS/actual_value)
   - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
   - [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)

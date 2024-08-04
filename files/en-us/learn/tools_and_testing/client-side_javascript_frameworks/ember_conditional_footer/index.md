@@ -246,7 +246,7 @@ Try restarting the dev server and going to `localhost:4200` again, and you'll no
 
 ![todos being marked as complete, and cleared](todos-being-marked-completed-and-cleared.gif)
 
-If you're asking yourself why we're not just doing the toggle on the component, since the function is entirely self-contained and not at all needing anything from the service, then you are 100% right to ask that question! However, because \*eventually\*, we'll want to persist or sync all changes to the todos list to [local storage](/en-US/docs/Web/API/Window/localStorage) (see the [final version of the app](https://nullvoxpopuli.github.io/ember-todomvc-tutorial/)), it makes sense to have all persistent-state-changing operations be in the same place.
+If you're asking yourself why we're not just doing the toggle on the component, since the function is entirely self-contained and not at all needing anything from the service, then you are 100% right to ask that question! However, because _eventually_, we'll want to persist or sync all changes to the todos list to [local storage](/en-US/docs/Web/API/Window/localStorage) (see the [final version of the app](https://nullvoxpopuli.github.io/ember-todomvc-tutorial/)), it makes sense to have all persistent-state-changing operations be in the same place.
 
 ## Summary
 

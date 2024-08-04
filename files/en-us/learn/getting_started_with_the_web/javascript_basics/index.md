@@ -467,7 +467,7 @@ If you have followed all the instructions in this article, you should end up wit
 
 ![Final look of HTML page after creating elements: a header, large centered logo, content, and a button](website-screen-scripted.png)
 
-If you get stuck, you can compare your work with our [finished example code on GitHub](https://github.com/mdn/beginner-html-site-scripted/blob/gh-pages/scripts/main.js).
+If you get stuck, you can compare your work with our [finished example code on GitHub](https://github.com/mdn/beginner-html-site-scripted/blob/main/scripts/main.js).
 
 We have just scratched the surface of JavaScript. If you enjoyed playing, and wish to go further, take advantage of the resources listed below.
 
