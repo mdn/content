@@ -5,7 +5,7 @@ page-type: css-keyword
 browser-compat: css.types.global_keywords.revert-layer
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`revert-layer`** [CSS-wide keyword](/en-US/docs/Web/CSS/CSS_Types#css-wide_keywords) rolls back the value of a property in a [cascade layer](/en-US/docs/Web/CSS/@layer) to the value of the property in a CSS rule matching the element in a previous cascade layer. The value of a property with this keyword is recalculated as if no rules were specified on the target element in the current cascade layer.
 
