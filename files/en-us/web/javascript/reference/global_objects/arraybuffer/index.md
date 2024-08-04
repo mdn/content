@@ -41,7 +41,7 @@ You can check whether an `ArrayBuffer` is detached by its {{jsxref("ArrayBuffer/
 
 ## Static properties
 
-- {{jsxref("ArrayBuffer/@@species", "ArrayBuffer[@@species]")}}
+- [`ArrayBuffer[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/Symbol.species)
   - : The constructor function that is used to create derived objects.
 
 ## Static methods
@@ -63,8 +63,8 @@ These properties are defined on `ArrayBuffer.prototype` and shared by all `Array
   - : The read-only maximum length, in bytes, that the `ArrayBuffer` can be resized to. This is established when the array is constructed and cannot be changed.
 - {{jsxref("ArrayBuffer.prototype.resizable")}}
   - : Read-only. Returns `true` if the `ArrayBuffer` can be resized, or `false` if not.
-- `ArrayBuffer.prototype[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"ArrayBuffer"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+- `ArrayBuffer.prototype[Symbol.toStringTag]`
+  - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"ArrayBuffer"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 

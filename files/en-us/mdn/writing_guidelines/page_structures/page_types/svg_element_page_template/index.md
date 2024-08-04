@@ -92,9 +92,8 @@ _To use this macro, remove the backticks and backslash in the markdown file._
 
 ### Global attributes
 
-- [Conditional processing attributes](/en-US/docs/Web/SVG/Attribute#conditional_processing_attributes)
-- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-- [Graphical event attributes](/en-US/docs/Web/SVG/Attribute#graphical_event_attributes)
+- [Generic attributes](/en-US/docs/Web/SVG/Attribute#generic_attributes)
+- [Event attributes](/en-US/docs/Web/SVG/Attribute#event_attributes)
 - [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
@@ -120,7 +119,8 @@ Each example must have an H3 heading (`###`) naming the example. The heading sho
 
 See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples) for more information.
 
-> **Note:** Sometimes you will want to link to examples given on another page.
+> [!NOTE]
+> Sometimes you will want to link to examples given on another page.
 >
 > **Scenario 1:** If you have some examples on this page and some more examples on another page:
 >

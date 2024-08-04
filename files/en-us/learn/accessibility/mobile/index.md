@@ -70,7 +70,8 @@ If you want to turn TalkBack off:
 1. Navigate back to the TalkBack menu screen (using the different gestures that are currently enabled.)
 2. Navigate to the slider switch and activate it to turn it off.
 
-> **Note:** You can get to your home screen at any time by swiping up and left in a smooth motion. If you have more than one home screen, you can move between them by swiping two fingers left and right.
+> [!NOTE]
+> You can get to your home screen at any time by swiping up and left in a smooth motion. If you have more than one home screen, you can move between them by swiping two fingers left and right.
 
 For a more complete list of TalkBack gestures, see [Use TalkBack gestures](https://support.google.com/accessibility/android/answer/6151827).
 
@@ -115,7 +116,8 @@ For example, with TalkBack turned on:
 7. Double-tap to select it. Now you'll be able to swipe left and right to move between headings and ARIA landmarks.
 8. To go back to the default mode, enter the local context menu again by swiping up and right, select "Default", and then double-tap to activate.
 
-> **Note:** See [Get started on Android with TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en&ref_topic=3529932) for more complete documentation.
+> [!NOTE]
+> See [Get started on Android with TalkBack](https://support.google.com/accessibility/android/answer/6283677?hl=en&ref_topic=3529932) for more complete documentation.
 
 ### iOS VoiceOver
 
@@ -123,7 +125,8 @@ A mobile version of VoiceOver is built into the iOS operating system.
 
 To turn it on, go to Your _Settings_ app and select _Accessibility > VoiceOver_. Press the _VoiceOver_ slider to enable it (you'll also see several other options related to VoiceOver on this page).
 
-> **Note:** Some older iOS devices have the VoiceOver menu at _Settings app_ > _General_ > _Accessibility_ > _VoiceOver_.
+> [!NOTE]
+> Some older iOS devices have the VoiceOver menu at _Settings app_ > _General_ > _Accessibility_ > _VoiceOver_.
 
 Once VoiceOver is enabled, iOS's basic control gestures will be a bit different:
 
@@ -176,7 +179,8 @@ Let's have a go at web browsing with VoiceOver:
 
 7. Select _Headings_. Now you'll be able to swipe up and down to move between headings on the page.
 
-> **Note:** For a more complete reference covering the VoiceOver gestures available and other hints on accessibility testing on iOS, see [Test Accessibility on Your Device with VoiceOver](https://developer.apple.com/library/archive/technotes/TestingAccessibilityOfiOSApps/TestAccessibilityonYourDevicewithVoiceOver/TestAccessibilityonYourDevicewithVoiceOver.html).
+> [!NOTE]
+> For a more complete reference covering the VoiceOver gestures available and other hints on accessibility testing on iOS, see [Apple's VoiceOver documentation](https://developer.apple.com/documentation/accessibility/voiceover/).
 
 ## Control mechanisms
 
@@ -213,7 +217,8 @@ panel.ontouchend = stopMove;
 
 We've provided a simple example that shows how to use the mouse and touch events together — see [multi-control-box-drag.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/multi-control-box-drag.html) ([see the example live](https://mdn.github.io/learning-area/accessibility/mobile/multi-control-box-drag.html) also).
 
-> **Note:** You can also see fully functional examples showing how to implement different control mechanisms at [Implementing game control mechanisms](/en-US/docs/Games/Techniques/Control_mechanisms).
+> [!NOTE]
+> You can also see fully functional examples showing how to implement different control mechanisms at [Implementing game control mechanisms](/en-US/docs/Games/Techniques/Control_mechanisms).
 
 ## Responsive design
 
@@ -225,7 +230,8 @@ In particular, the most common problems that need to be addressed for mobile are
 - Conserving image sizes downloaded. In general, small-screen devices won't need images that are as large as their desktop counterparts, and they are more likely to be on slow network connections. Therefore, it is wise to serve smaller images to narrow screen devices as appropriate. You can handle this using [responsive image techniques](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images).
 - Thinking about high resolutions. Many mobile devices have high-resolution screens, and therefore need higher-resolution images so that the display can continue to look crisp and sharp. Again, you can serve images as appropriate using responsive image techniques. In addition, many image requirements can be fulfilled using the SVG vector images format, which is well-supported across browsers today. SVG has a small file size and will stay sharp regardless of whatever size is being displayed (see [Adding vector graphics to the web](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web) for more details).
 
-> **Note:** We won't provide a full discussion of responsive design techniques here, as they are covered in other places around MDN (see the above links).
+> [!NOTE]
+> We won't provide a full discussion of responsive design techniques here, as they are covered in other places around MDN (see the above links).
 
 ### Specific mobile considerations
 

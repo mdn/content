@@ -27,7 +27,7 @@ new MediaMetadata(metadata)
     - `album` {{optional_inline}}
       - : The name of the album, or collection, containing the media to be played. It defaults to the empty string (`""`).
     - `artist` {{optional_inline}}
-      - : The name of the artist, group, creator, etc. of the media to be played. It defaults to the empty string (`""`).
+      - : The name of the artist, group, or creator, of the media to be played. It defaults to the empty string (`""`).
     - `artwork` {{optional_inline}}
       - : An {{jsxref("Array")}} of objects that represent images associated with the playing media that defaults to be an empty array. The object structure is:
         - `src`
@@ -41,7 +41,7 @@ new MediaMetadata(metadata)
         - `artwork` {{optional_inline}}
           - : An {{jsxref("Array")}} of `artwork` objects (see above) representing images associated with the chapter. If omitted, `artwork` defaults to an empty array.
         - `startTime` {{optional_inline}}
-          - : A number representing the start time of the chapter in seconds. If omitted, `startTime` defaults to `0`.
+          - : A number representing the chapter's start time in seconds. If omitted, `startTime` defaults to `0`.
         - `title` {{optional_inline}}
           - : A string representing the title of the chapter. If omitted, `title` defaults to the empty string (`""`).
     - `title` {{optional_inline}}

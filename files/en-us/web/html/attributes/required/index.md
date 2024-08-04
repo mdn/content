@@ -18,11 +18,12 @@ In the case of a same named group of {{HTMLElement("input/radio","radio")}} butt
 
 In the case of a same named group of {{HTMLElement("input/checkbox","checkbox")}} input types, only the checkboxes with the `required` attribute are required.
 
-> **Note:** Setting [`aria-required="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-required) tells a screen reader that an element (any element) is required, but has no bearing on the optionality of the element.
+> [!NOTE]
+> Setting [`aria-required="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-required) tells a screen reader that an element (any element) is required, but has no bearing on the optionality of the element.
 
 ### Attribute interactions
 
-Because a read-only field cannot have a value, `required` does not have any effect on inputs with the [`readonly`](/en-US/docs/Web/HTML/Attributes/readonly) attribute also specified.
+Because a read-only field cannot be changed, `required` does not have any effect on inputs with the [`readonly`](/en-US/docs/Web/HTML/Attributes/readonly) attribute also specified.
 
 ### Usability
 

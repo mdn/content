@@ -77,7 +77,8 @@ Your rejection handler should examine the received exception to determine which 
 
 Here we see a handler for the {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event which creates the offer and sends it to the remote system over a signaling channel.
 
-> **Note:** Keep in mind that this is part of the signaling process, the transport layer for which is an implementation detail that's entirely up to you.
+> [!NOTE]
+> Keep in mind that this is part of the signaling process, the transport layer for which is an implementation detail that's entirely up to you.
 > In this case, a [WebSocket](/en-US/docs/Web/API/WebSockets_API) connection is used to send a {{Glossary("JSON")}} message with a `type` field with the value "video-offer" to the other peer.
 > The contents of the object being passed to the `sendToServer()` function, along with everything else in the promise fulfillment handler, depend entirely on your design.
 
@@ -98,7 +99,7 @@ myPeerConnection
   });
 ```
 
-In this code, the offer is created, and once successful, the local end of the {{domxref("RTCPeerConnection")}} is configured to match by passing the offer (which is represented using an object conforming to [RTCSessionDescriptionInit](/en-US/docs/Web/API/RTCSessionDescription/RTCSessionDescription#rtcsessiondescriptioninit)) into {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}}.
+In this code, the offer is created, and once successful, the local end of the {{domxref("RTCPeerConnection")}} is configured to match by passing the offer (which is represented using an object conforming to [RTCSessionDescriptionInit](/en-US/docs/Web/API/RTCSessionDescription/RTCSessionDescription#options)) into {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}}.
 Once that's done, the offer is sent to the remote system over the signaling channel; in this case, by using a custom function called `sendToServer()`.
 The implementation of the signaling server is independent from the WebRTC specification, so it doesn't matter how the offer is sent as long as both the caller and potential receiver are using the same one.
 

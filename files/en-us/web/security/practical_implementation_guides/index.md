@@ -12,7 +12,7 @@ This page lists guides that detail the best practices for implementing security 
 
 ## Content security fundamentals
 
-Most of these guides are directly related to the [HTTP Observatory](/en-US/observatory/) tool. Observatory performs security audits on a website and provides a grade and score along with recommendations for fixing the security issues it finds. These guides explain how to resolve issues surfaced by the HTTP Observatory tests: the tool links to the relevant guide for each issue, helping guide you towards an effective resolution. Interestingly, Mozilla's internal developer teams use this guidance when implementing websites to ensure that security best practices are applied.
+Most of these guides are directly related to the [HTTP Observatory](/en-US/observatory) tool. Observatory performs security audits on a website and provides a grade and score along with recommendations for fixing the security issues it finds. These guides explain how to resolve issues surfaced by the HTTP Observatory tests: the tool links to the relevant guide for each issue, helping guide you towards an effective resolution. Interestingly, Mozilla's internal developer teams use this guidance when implementing websites to ensure that security best practices are applied.
 
 The guides in the table below are listed in the order that we recommend implementing the security features they describe. This order is based on a combination of each feature's security impact and the ease of its implementation from both operational and developmental perspectives. The table provides information about each feature's impact, difficulty of implementation, whether or not it is required, and a brief description.
 

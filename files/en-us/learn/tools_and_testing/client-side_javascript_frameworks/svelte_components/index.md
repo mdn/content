@@ -100,7 +100,8 @@ In this article we will concentrate on creating the `FilterButton` and `Todo` co
 
 Let's get started.
 
-> **Note:** In the process of creating our first couple of components, we will also learn different techniques to communicate between components, and the pros and cons of each.
+> [!NOTE]
+> In the process of creating our first couple of components, we will also learn different techniques to communicate between components, and the pros and cons of each.
 
 ## Extracting our filter component
 
@@ -145,7 +146,8 @@ We'll begin by creating our `FilterButton.svelte`.
    <FilterButton {filter} />
    ```
 
-> **Note:** Remember that when the HTML attribute name and variable match, they can be replaced with `{variable}`. That's why we could replace `<FilterButton filter={filter} />` with `<FilterButton {filter} />`.
+> [!NOTE]
+> Remember that when the HTML attribute name and variable match, they can be replaced with `{variable}`. That's why we could replace `<FilterButton filter={filter} />` with `<FilterButton {filter} />`.
 
 So far so good! Let's try out the app now. You'll notice that when you click on the filter buttons, they are selected and the style updates appropriately. But we have a problem: the to-dos aren't filtered. That's because the `filter` variable flows down from the `Todos` component to the `FilterButton` component through the prop, but changes occurring in the `FilterButton` component don't flow back up to its parent — the data binding is one-way by default. Let's look at a way to solve this.
 
@@ -272,7 +274,8 @@ Let's look at how to emit our own events to re-implement the missing _Delete_ bu
 
 To create custom events, we'll use the `createEventDispatcher` utility. This will return a `dispatch()` function that will allow us to emit custom events. When you dispatch an event, you have to pass the name of the event and, optionally, an object with additional information that you want to pass to every listener. This additional data will be available on the `detail` property of the event object.
 
-> **Note:** Custom events in Svelte share the same API as regular DOM events. Moreover, you can bubble up an event to your parent component by specifying `on:event` without any handler.
+> [!NOTE]
+> Custom events in Svelte share the same API as regular DOM events. Moreover, you can bubble up an event to your parent component by specifying `on:event` without any handler.
 
 We'll edit our `Todo` component to emit a `remove` event, passing the to-do being removed as additional information.
 
@@ -493,7 +496,8 @@ We also use `todo.id` to create unique ids for the new input controls and labels
    </div>
    ```
 
-   > **Note:** We could further split this into two different components, one for editing the to-do and the other for displaying it. In the end, it boils down to how comfortable you feel dealing with this level of complexity in a single component. You should also consider whether splitting it further would enable reusing this component in a different context.
+   > [!NOTE]
+   > We could further split this into two different components, one for editing the to-do and the other for displaying it. In the end, it boils down to how comfortable you feel dealing with this level of complexity in a single component. You should also consider whether splitting it further would enable reusing this component in a different context.
 
 2. To get the update functionality working, we have to handle the `update` event from the `Todos` component. In its `<script>` section, add this handler:
 
@@ -520,7 +524,8 @@ We also use `todo.id` to create unique ids for the new input controls and labels
 
 As you can see, it's easy to implement the "props-down, events-up" pattern in Svelte. Nevertheless, for simple components `bind` can be a good choice; Svelte will let you choose.
 
-> **Note:** Svelte provides more advanced mechanisms to share information among components: the [Context API](https://svelte.dev/docs/svelte#setcontext) and [Stores](https://svelte.dev/docs/svelte-store). The Context API provides a mechanism for components and their descendants to "talk" to each other without passing around data and functions as props, or dispatching lots of events. Stores allows you to share reactive data among components that are not hierarchically related. We will look at Stores later on in the series.
+> [!NOTE]
+> Svelte provides more advanced mechanisms to share information among components: the [Context API](https://svelte.dev/docs/svelte#setcontext) and [Stores](https://svelte.dev/docs/svelte-store). The Context API provides a mechanism for components and their descendants to "talk" to each other without passing around data and functions as props, or dispatching lots of events. Stores allows you to share reactive data among components that are not hierarchically related. We will look at Stores later on in the series.
 
 ## The code so far
 

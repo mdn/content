@@ -28,7 +28,7 @@ You should provide alternate content inside the `<canvas>` block. That content w
 
 ### Closing `</canvas>` tag
 
-Unlike the {{HTMLElement("img")}} element, the {{HTMLElement("canvas")}} element **requires** the closing tag (`</canvas>`).
+Unlike the {{HTMLElement("img")}} element, the `<canvas>` element **requires** the closing tag (`</canvas>`).
 
 ### Sizing the canvas using CSS versus HTML
 
@@ -40,7 +40,8 @@ It is better to specify your canvas dimensions by setting the `width` and `heigh
 
 The exact maximum size of a `<canvas>` element depends on the browser and environment. While in most cases the maximum dimensions exceed 10,000 x 10,000 pixels, notably iOS devices limit the canvas size to only 4,096 x 4,096 pixels. See [canvas size limits in different browsers and devices](https://jhildenbiddle.github.io/canvas-size/#/?id=test-results).
 
-> **Note:** Exceeding the maximum dimensions or area renders the canvas unusable — drawing commands will not work.
+> [!NOTE]
+> Exceeding the maximum dimensions or area renders the canvas unusable — drawing commands will not work.
 
 ### Using an offscreen canvas
 

@@ -13,7 +13,8 @@ The **`WebAssembly.Instance()`** constructor creates a new
 
 ## Syntax
 
-> **Warning:** Since instantiation for large modules can be expensive,
+> [!WARNING]
+> Since instantiation for large modules can be expensive,
 > developers should only use the `Instance()` constructor when synchronous
 > instantiation is absolutely required; the asynchronous
 > [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) method should be used at all other
@@ -51,7 +52,7 @@ synchronously instantiate a given [`WebAssembly.Module`](/en-US/docs/WebAssembly
 
 ```js
 const importObject = {
-  imports: {
+  my_namespace: {
     imported_func(arg) {
       console.log(arg);
     },
@@ -72,7 +73,7 @@ However, the preferred way to get an `Instance` is through the asynchronous
 
 ```js
 const importObject = {
-  imports: {
+  my_namespace: {
     imported_func(arg) {
       console.log(arg);
     },

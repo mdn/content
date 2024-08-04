@@ -37,9 +37,10 @@ send.addEventListener("click", async () => {
 });
 ```
 
-> **Note:** The fields `"avatar"` and `"webmasterfile"` both contain a file. The number assigned to the field `"accountnum"` is immediately converted into a string by the [`FormData.append()`](/en-US/docs/Web/API/FormData/append) method (the field's value can be a {{ domxref("Blob") }}, {{ domxref("File") }}, or a string. If the value is neither a `Blob` nor a `File`, the value is converted to a string).
+> [!NOTE]
+> The fields `"avatar"` and `"webmasterfile"` both contain a file. The number assigned to the field `"accountnum"` is immediately converted into a string by the [`FormData.append()`](/en-US/docs/Web/API/FormData/append) method (the field's value can be a {{ domxref("Blob") }}, {{ domxref("File") }}, or a string. If the value is neither a `Blob` nor a `File`, the value is converted to a string).
 
-This example builds a `FormData` instance containing values for fields named `"username"`, `"accountnum"`, `"avatar"` and `"webmasterfile"`, then uses {{domxref("fetch()")}} to send the form's data. The field `"webmasterfile"` is a {{domxref("Blob")}}. A `Blob` object represents a file-like object of immutable, raw data. Blobs represent data that isn't necessarily in a JavaScript-native format. The {{ domxref("File") }} interface is based on `Blob`, inheriting blob functionality and expanding it to support files on the user's system. In order to build a `Blob` you can invoke [the `Blob()` constructor](/en-US/docs/Web/API/Blob/Blob).
+This example builds a `FormData` instance containing values for fields named `"username"`, `"accountnum"`, `"avatar"` and `"webmasterfile"`, then uses {{domxref("Window/fetch", "fetch()")}} to send the form's data. The field `"webmasterfile"` is a {{domxref("Blob")}}. A `Blob` object represents a file-like object of immutable, raw data. Blobs represent data that isn't necessarily in a JavaScript-native format. The {{ domxref("File") }} interface is based on `Blob`, inheriting blob functionality and expanding it to support files on the user's system. In order to build a `Blob` you can invoke [the `Blob()` constructor](/en-US/docs/Web/API/Blob/Blob).
 
 ## Retrieving a `FormData` object from an HTML form
 
@@ -144,9 +145,11 @@ form.addEventListener("submit", async (event) => {
 });
 ```
 
-> **Note:** If you pass in a reference to the form, the [request HTTP method](/en-US/docs/Web/HTTP/Methods) specified in the form will be used over the method specified in the `open()` call.
+> [!NOTE]
+> If you pass in a reference to the form, the [request HTTP method](/en-US/docs/Web/HTTP/Methods) specified in the form will be used over the method specified in the `open()` call.
 
-> **Warning:** When using `FormData` to submit POST requests using {{ domxref("XMLHttpRequest") }} or the [Fetch API](/en-US/docs/Web/API/Fetch_API) with the `multipart/form-data` content type (e.g. when uploading files and blobs to the server), _do not_ explicitly set the [`Content-Type`](/en-US/docs/Web/HTTP/Headers/Content-Type) header on the request. Doing so will prevent the browser from being able to set the `Content-Type` header with the boundary expression it will use to delimit form fields in the request body.
+> [!WARNING]
+> When using `FormData` to submit POST requests using {{ domxref("XMLHttpRequest") }} or the [Fetch API](/en-US/docs/Web/API/Fetch_API) with the `multipart/form-data` content type (e.g. when uploading files and blobs to the server), _do not_ explicitly set the [`Content-Type`](/en-US/docs/Web/HTTP/Headers/Content-Type) header on the request. Doing so will prevent the browser from being able to set the `Content-Type` header with the boundary expression it will use to delimit form fields in the request body.
 
 You can also append a {{ domxref("File") }} or {{ domxref("Blob") }} directly to the {{ domxref("FormData") }} object, like this:
 

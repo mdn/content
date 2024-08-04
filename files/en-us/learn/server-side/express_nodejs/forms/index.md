@@ -33,7 +33,8 @@ Working with forms can be complicated! Developers need to write HTML for the for
 
 In this tutorial, we're going to show you how the above operations may be performed in _Express_. Along the way, we'll extend the _LocalLibrary_ website to allow users to create, edit and delete items from the library.
 
-> **Note:** We haven't looked at how to restrict particular routes to authenticated or authorized users, so at this point, any user will be able to make changes to the database.
+> [!NOTE]
+> We haven't looked at how to restrict particular routes to authenticated or authorized users, so at this point, any user will be able to make changes to the database.
 
 ### HTML Forms
 
@@ -108,7 +109,8 @@ npm install express-validator
 
 #### Using express-validator
 
-> **Note:** The [express-validator](https://express-validator.github.io/docs/#basic-guide) guide on GitHub provides a good overview of the API. We recommend you read that to get an idea of all its capabilities (including using [schema validation](https://express-validator.github.io/docs/guides/schema-validation) and [creating custom validators](https://express-validator.github.io/docs/guides/customizing#custom-validators-and-sanitizers)). Below we cover just a subset that is useful for the _LocalLibrary_.
+> [!NOTE]
+> The [express-validator](https://express-validator.github.io/docs/#basic-guide) guide on GitHub provides a good overview of the API. We recommend you read that to get an idea of all its capabilities (including using [schema validation](https://express-validator.github.io/docs/guides/schema-validation/) and [creating custom validators](https://express-validator.github.io/docs/guides/customizing/#custom-validators-and-sanitizers)). Below we cover just a subset that is useful for the _LocalLibrary_.
 
 To use the validator in our controllers, we specify the particular functions we want to import from the [express-validator](https://www.npmjs.com/package/express-validator) module, as shown below:
 
@@ -120,7 +122,7 @@ There are many functions available, allowing you to check and sanitize data from
 
 The functions are defined as below:
 
-- [`body([fields, message])`](https://express-validator.github.io/docs/api/check#body): Specifies a set of fields in the request body (a `POST` parameter) to validate and/or sanitize along with an optional error message that can be displayed if it fails the tests. The validation and sanitize criteria are daisy-chained to the `body()` method.
+- [`body(fields, message)`](https://express-validator.github.io/docs/api/check/#body): Specifies a set of fields in the request body (a `POST` parameter) to validate and/or sanitize along with an optional error message that can be displayed if it fails the tests. The validation and sanitize criteria are daisy-chained to the `body()` method.
 
   For example, the line below first defines that we're checking the "name" field and that a validation error will set an error message "Empty name". We then call the sanitization method `trim()` to remove whitespace from the start and end of the string, and then `isLength()` to check the resulting string isn't empty. Finally, we call `escape()` to remove HTML characters from the variable that might be used in JavaScript cross-site scripting attacks.
 
@@ -176,7 +178,7 @@ The functions are defined as below:
   });
   ```
 
-  We use the validation result's `isEmpty()` method to check if there were errors, and its `array()` method to get the set of error messages. See the [Handling validation section](https://express-validator.github.io/docs/guides/getting-started#handling-validation-errors) for more information.
+  We use the validation result's `isEmpty()` method to check if there were errors, and its `array()` method to get the set of error messages. See the [Handling validation section](https://express-validator.github.io/docs/guides/getting-started/#handling-validation-errors) for more information.
 
 The validation and sanitization chains are middleware that should be passed to the Express route handler (we do this indirectly, via the controller). When the middleware runs, each validator/sanitizer is run in the order specified.
 
@@ -194,7 +196,8 @@ For this project we will simplify the implementation by stating that a form can 
 - Create an object using objects that already exist (so users will have to create any required `Author` and `Genre` instances before attempting to create any `Book` objects).
 - Delete an object if it is not referenced by other objects (so for example, you won't be able to delete a `Book` until all associated `BookInstance` objects have been deleted).
 
-> **Note:** A more flexible implementation might allow you to create the dependent objects when creating a new object, and delete any object at any time (for example, by deleting dependent objects, or by removing references to the deleted object from the database).
+> [!NOTE]
+> A more flexible implementation might allow you to create the dependent objects when creating a new object, and delete any object at any time (for example, by deleting dependent objects, or by removing references to the deleted object from the database).
 
 ### Routes
 

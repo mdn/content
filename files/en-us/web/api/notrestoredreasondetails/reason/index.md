@@ -22,7 +22,7 @@ There are many different reasons why blocking could occur, and browsers can choo
 The initial values listed in the specification are:
 
 - `"fetch"`
-  - : While unloading, a fetch initiated by the current document (e.g. via {{domxref("fetch()")}}) was canceled while ongoing. As a result, the page was not in a stable state that could be stored in the bfcache.
+  - : While unloading, a fetch initiated by the current document (e.g. via {{domxref("Window/fetch", "fetch()")}}) was canceled while ongoing. As a result, the page was not in a stable state that could be stored in the bfcache.
 - `"lock"`
   - : While unloading, held locks and lock requests were terminated, so the page was not in a stable state that could be stored in the bfcache.
 - `"masked"`

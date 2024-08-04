@@ -27,7 +27,7 @@ You can access `CacheStorage` through the {{domxref("Window.caches")}} property 
 ## Instance methods
 
 - {{domxref("CacheStorage.match()")}}
-  - : Checks if a given {{domxref("Request")}} is a key in any of the {{domxref("Cache")}} objects that the {{domxref("CacheStorage")}} object tracks, and returns a {{jsxref("Promise")}} that resolves to that match.
+  - : Checks if a given {{domxref("Request")}} is a key in any of the {{domxref("Cache")}} objects that the `CacheStorage` object tracks, and returns a {{jsxref("Promise")}} that resolves to that match.
 - {{domxref("CacheStorage.has()")}}
   - : Returns a {{jsxref("Promise")}} that resolves to `true` if a {{domxref("Cache")}} object matching the `cacheName` exists.
 - {{domxref("CacheStorage.open()")}}
@@ -35,7 +35,7 @@ You can access `CacheStorage` through the {{domxref("Window.caches")}} property 
 - {{domxref("CacheStorage.delete()")}}
   - : Finds the {{domxref("Cache")}} object matching the `cacheName`, and if found, deletes the {{domxref("Cache")}} object and returns a {{jsxref("Promise")}} that resolves to `true`. If no {{domxref("Cache")}} object is found, it resolves to `false`.
 - {{domxref("CacheStorage.keys()")}}
-  - : Returns a {{jsxref("Promise")}} that will resolve with an array containing strings corresponding to all of the named {{domxref("Cache")}} objects tracked by the {{domxref("CacheStorage")}}. Use this method to iterate over a list of all the {{domxref("Cache")}} objects.
+  - : Returns a {{jsxref("Promise")}} that will resolve with an array containing strings corresponding to all of the named {{domxref("Cache")}} objects tracked by the `CacheStorage`. Use this method to iterate over a list of all the {{domxref("Cache")}} objects.
 
 ## Examples
 

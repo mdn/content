@@ -75,7 +75,7 @@ efforts as the Work Item is standardized.
 ### Status of partitioning in Firefox
 
 - [**Network Partitioning**](#network_partitioning): Enabled by default for all users since Firefox 85.
-- [**Dynamic State Partitioning**](#dynamic_state_partitioning):
+- [**Dynamic Partitioning**](#dynamic_partitioning):
   - Since Firefox 86: Enabled for users that have
     ["Strict" privacy protections](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop#w_strict-enhanced-tracking-protection) enabled.
   - Since Firefox 90: Enabled in private browsing.
@@ -107,7 +107,8 @@ data, but they can be
 for cross-site tracking. As such, the following network APIs and caches are
 **permanently** partitioned by the top-level site.
 
-> **Note:** Network Partitioning is permanent. Websites can't
+> [!NOTE]
+> Network Partitioning is permanent. Websites can't
 > control or relax these restrictions.
 
 ### Network APIs
@@ -154,7 +155,8 @@ grant unpartitioned access to cookies automatically to third parties that
 receive user interaction. These heuristics are intended to allow some
 third-party integrations that are common on the web to continue to function.
 
-> **Warning:** Storage access heuristics are a transitional
+> [!WARNING]
+> Storage access heuristics are a transitional
 > feature meant to prevent website breakage. They should not be relied upon
 > for current and future web development.
 
@@ -168,7 +170,8 @@ third-party integrations that are common on the web to continue to function.
   `b.example`, `b.example` is granted
   third-party storage access to `a.example` for 30 days.
 
-> **Note:** For third-parties which abuse these heuristic for
+> [!NOTE]
+> For third-parties which abuse these heuristic for
 > tracking purposes, we may require user interaction with the popup before
 > storage access is granted.
 
@@ -193,7 +196,8 @@ Third-party frames may use
 [Storage Access API](/en-US/docs/Web/API/Storage_Access_API). Once
 granted, the requesting party will gain access to its entire first-party cookies (i.e., the cookies it would have access to if visited as a first-party).
 
-> **Warning:** When storage access is granted there may still
+> [!WARNING]
+> When storage access is granted there may still
 > be references to the partitioned storage. However, sites shouldn't rely on
 > being able to use partitioned and unpartitioned cookies at the same
 > time.
@@ -225,7 +229,8 @@ the [Site Information Panel](https://support.mozilla.org/en-US/kb/site-informati
 
 ### Test Preferences
 
-> **Warning:** Make sure to set these preferences in a separate
+> [!WARNING]
+> Make sure to set these preferences in a separate
 > Firefox profile or reset them after testing.
 
 #### Disable Web Compatibility Features
@@ -254,10 +259,10 @@ The following preferences can be used to disable individual storage access
 heuristics via the
 [config editor](https://support.mozilla.org/en-US/kb/about-config-editor-firefox):
 
-- Enable / disable the [redirect heuristics](#storage_access_redirect_heuristics):
+- Enable / disable the [redirect heuristics](#redirect_heuristics):
   `privacy.restrict3rdpartystorage.heuristic.recently_visited`,
   `privacy.restrict3rdpartystorage.heuristic.redirect`
-- Enable / disable the [window open heuristics](#storage_access_window_open_heuristics):
+- Enable / disable the [window open heuristics](#opener_heuristics):
   `privacy.restrict3rdpartystorage.heuristic.window_open`,
   `privacy.restrict3rdpartystorage.heuristic.opened_window_after_interaction`
 

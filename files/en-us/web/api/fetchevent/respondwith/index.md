@@ -30,7 +30,7 @@ image data. For security reasons, there are a few global rules:
 ### Specifying the final URL of a resource
 
 From Firefox 59 onwards, when a service worker provides a {{domxref("Response")}} to
-{{domxref("FetchEvent.respondWith()")}}, the {{domxref("Response.url")}} value will be
+`FetchEvent.respondWith()`, the {{domxref("Response.url")}} value will be
 propagated to the intercepted network request as the final resolved URL. If the
 {{domxref("Response.url")}} value is the empty string, then the
 {{domxref("Request.url","FetchEvent.request.url")}} is used as the final URL.
@@ -48,7 +48,7 @@ then the provided {{domxref("Response.url")}} will be used to resolve any relati
 For most types of network request this change has no impact because you can't observe
 the final URL. There are a few, though, where it does matter:
 
-- If a {{domxref("fetch()")}} is intercepted,
+- If a {{domxref("Window/fetch", "fetch()")}} is intercepted,
   then you can observe the final URL on the result's {{domxref("Response.url")}}.
 - If a [worker](/en-US/docs/Web/API/Web_Workers_API) script is
   intercepted, then the final URL is used to set

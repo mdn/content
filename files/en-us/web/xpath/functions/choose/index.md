@@ -8,7 +8,8 @@ page-type: xpath-function
 
 The `choose` function returns one of the specified objects based on a boolean parameter.
 
-> **Note:** This method should be used instead of `if ()`, which has been deprecated.
+> [!NOTE]
+> This method should be used instead of `if ()`, which has been deprecated.
 
 ## Syntax
 
@@ -29,7 +30,8 @@ choose( boolean, object1, object2 )
 
 If the boolean parameter is true, the first object is returned; otherwise, the second object is returned.
 
-> **Note:** All parameters are evaluated, even the one that's not returned.
+> [!NOTE]
+> All parameters are evaluated, even the one that's not returned.
 
 ## Specifications
 

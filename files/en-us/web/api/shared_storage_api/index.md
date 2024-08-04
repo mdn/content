@@ -27,7 +27,8 @@ To extract useful results from a shared storage worklet, you need to use an **ou
 
 The currently available output gates for the Shared Storage API are discussed in the sections below. In each section, we list typical use cases for each gate and provide links to guides with more information and code examples.
 
-> **Note:** More output gates will likely be added in the future to support additional use cases.
+> [!NOTE]
+> More output gates will likely be added in the future to support additional use cases.
 
 ### URL Selection
 
@@ -76,7 +77,8 @@ async function injectContent() {
 }
 ```
 
-> **Note:** The `ignoreIfPresent: true` option causes the `set()` function to abort if the shared storage already contains a data item with the specified key.
+> [!NOTE]
+> The `ignoreIfPresent: true` option causes the `set()` function to abort if the shared storage already contains a data item with the specified key.
 
 ### Reading and processing data from shared storage
 
@@ -99,7 +101,8 @@ The URL Selection operation is a JavaScript class that must follow the rules bel
 - The actual functionality must be contained in an asynchronous `run()` method, which takes an array of objects containing URLs as its first parameter and a data object as its second parameter (when called, the data argument is optional).
 - The `run()` method must return a number, which will equate to the number of the URL chosen.
 
-> **Note:** Each output gate has a corresponding interface that defines the required structure of its class and `run()` method. For URL Selection, see {{domxref("SharedStorageSelectURLOperation")}}.
+> [!NOTE]
+> Each output gate has a corresponding interface that defines the required structure of its class and `run()` method. For URL Selection, see {{domxref("SharedStorageSelectURLOperation")}}.
 
 Once the operation is defined, it needs to be registered using {{domxref("SharedStorageWorkletGlobalScope.register()")}}.
 
@@ -120,7 +123,8 @@ register("ab-testing", SelectURLOperation);
 
 Notice how the value set in our main app context is retrieved using {{domxref("WorkletSharedStorage.get()")}}. To reiterate, to preserve privacy and mitigate data leakage, you can read values from shared storage only within a worklet.
 
-> **Note:** It is possible to define and register multiple operations in the same shared storage worklet module script with different names; see {{domxref("SharedStorageOperation")}} for an example.
+> [!NOTE]
+> It is possible to define and register multiple operations in the same shared storage worklet module script with different names; see {{domxref("SharedStorageOperation")}} for an example.
 
 #### Add the module to the shared storage worklet
 

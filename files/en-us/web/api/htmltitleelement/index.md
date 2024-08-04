@@ -26,7 +26,7 @@ _No specific method; inherits methods from its parent, {{domxref("HTMLElement")}
 
 Do not confuse: `document.title` with `document.querySelector('title')`
 
-The former is just a setter/getter method to set or get the inner text value of the document title, while the latter is the {{domxref("HTMLTitleElement")}} object. So you cannot write: `document.title.text = "Hello world!";`
+The former is just a setter/getter method to set or get the inner text value of the document title, while the latter is the `HTMLTitleElement` object. So you cannot write: `document.title.text = "Hello world!";`
 
 Instead, you can simply write: `document.title = "Hello world!";` which is an equivalent to `document.querySelector('title').text = "Hello world!";`
 

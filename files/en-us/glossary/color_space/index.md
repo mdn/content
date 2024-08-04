@@ -54,7 +54,8 @@ The `rgb()` color function is not the only color function that can represent the
 
   - : `rec2020` is a broadcast industry standard for ultra-high definition 4k and 8k televisions. The ultra-wide gamut space is capable of representing almost all visible real-world colors, beyond the capabilities of most current displays. Coverage is expected to increase over time as displays improve. In-gamut `r`, `g`, and `b` values range from `0` to `1`. The whitepoint is D65.
 
-> **Note:** Additional cylindrical RGB spaces that are not in the CSS specification include: `HSI` (hue, saturation, and intensity), `Okhsv`, `Okhsl`, `HSLuv`, `HPLuv`, and `Cubehelix`.
+> [!NOTE]
+> Additional cylindrical RGB spaces that are not in the CSS specification include: `HSI` (hue, saturation, and intensity), `Okhsv`, `Okhsl`, `HSLuv`, `HPLuv`, and `Cubehelix`.
 
 ### CIELAB color spaces
 
@@ -64,7 +65,8 @@ Lab is a rectangular coordinate system, with a central lightness `L` axis. Posit
 
 CIELab color functions include {{CSSXref("color_value/lab", "lab()")}} (lightness, a-axis, b-axis) and {{CSSXref("color_value/lch", "lch()")}} (lightness, chroma, hue) as well as {{CSSXref("color_value/oklab", "oklab()")}} and {{CSSXref("color_value/oklch", "oklch()")}}. The lightness values are the same, but `lch()` and `oklch` are polar, cylindrical coordinate systems, that use polar coordinates `C` (chroma) and `H` (hue) rather than axes.
 
-> **Note:** The hue and lightness in `lch()` and `oklch` are different from the same-named values in {{cssxref("color_value/hsl", "hsl()")}} or other sRGB color spaces.
+> [!NOTE]
+> The hue and lightness in `lch()` and `oklch` are different from the same-named values in {{cssxref("color_value/hsl", "hsl()")}} or other sRGB color spaces.
 
 CIELab color spaces, including Lab, Lch, Oklab, and Oklch, are device-independent color spaces.
 
@@ -84,7 +86,7 @@ CIELab color spaces, including Lab, Lch, Oklab, and Oklch, are device-independen
 
 While combinations of red, green, and blue work well for representing colors on screen, sRGB doesn't directly correspond to how humans perceive color. Created by the International Commission on Illumination (CIE) in 1931, the CIE 1931 XYZ (or XYZ for short) color spaces are the first defined quantitative links between distributions of wavelengths in the electromagnetic visible spectrum and perceived colors in human vision.
 
-People with normal vision have three kinds of cone cells that sense light, having peaks of spectral sensitivity in differing wavelengths. The CIE X, Y, and Z parameters correspond to levels of stimuli of the three kinds of cone cells which, in principle, describe every color. The CIE 1931 XYZ color space, with its tri-stimulus values, encompasses all visible colors.
+People with normal vision have three kinds of cone cells that sense light, having peaks of spectral sensitivity in differing wavelengths. The CIE X, Y, and Z parameters correspond to levels of stimuli of the three kinds of cone cells which, in principle, describe every visible color. The `Y` channel represents the luminance of a color. The `Z` channel reflects the amount of blue in the color but is not the same as the `B` in RGB. The `X` axis is orthogonal to the Y- and Z- axis of the XYZ color 3D coordinate system.
 
 - `xyz` and `xyz-d65` color space
 
@@ -98,7 +100,7 @@ People with normal vision have three kinds of cone cells that sense light, havin
 
 - {{cssxref("@media/color-gamut", "color-gamut")}} `@media` feature
 - [CSS data type: `<color>`](/en-US/docs/Web/CSS/color_value)
-- [sRGB color space](https://webstore.iec.ch/publication/6168)
+- [sRGB color space](https://webstore.iec.ch/en/publication/6168)
 - [CIELAB color space](https://en.wikipedia.org/wiki/CIELAB_color_space) on Wikipedia
 - [CIE 1931 color space](https://en.wikipedia.org/wiki/CIE_1931_color_space) on Wikipedia
 - [Oklab color space](https://bottosson.github.io/posts/oklab/)

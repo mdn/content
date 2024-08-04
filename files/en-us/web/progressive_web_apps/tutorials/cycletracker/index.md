@@ -62,7 +62,7 @@ The steps include:
 
 - [Local development environment or secure connection](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection)
 
-  - : While all websites should be served over HTTPS, with PWAs, HTTPS is a requirement. PWAs are restricted to secure contexts including TLS contexts served with the `https://` protocol, and locally-delivered resources such as `127.0.0.1` and `localhost` URLs served with the `http://` protocol. We will look at the page in the current state with the `file://` protocol, then cover options for creating a secure localhost connection to test your code as we progress through the tutorial steps. We also look at serving your PWA with GitHub pages.
+  - : In order to be installable, PWAs must be served with the `https://` protocol, or as locally-delivered resources using `127.0.0.1` or `localhost` URLs served with the `http://` protocol. We will look at the page with the `file://` protocol, and also cover options for creating a secure localhost connection to test your installation code as we progress through the tutorial steps. We also look at serving your PWA with GitHub pages.
 
 - [JavaScript and LocalStorage](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality)
 

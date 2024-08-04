@@ -9,7 +9,8 @@ browser-compat: javascript.builtins.Error.stack
 
 {{JSRef}} {{Non-standard_Header}}
 
-> **Note:** The `stack` property is de facto implemented by all major JavaScript engines, and [the JavaScript standards committee is looking to standardize it](https://github.com/tc39/proposal-error-stacks). You cannot rely on the precise content of the stack string due to implementation inconsistencies, but you can generally assume it exists and use it for debugging purposes.
+> [!NOTE]
+> The `stack` property is de facto implemented by all major JavaScript engines, and [the JavaScript standards committee is looking to standardize it](https://github.com/tc39/proposal-error-stacks). You cannot rely on the precise content of the stack string due to implementation inconsistencies, but you can generally assume it exists and use it for debugging purposes.
 
 The non-standard **`stack`** property of an {{jsxref("Error")}} instance offers a trace of which functions were called, in what order, from which line and file, and with what arguments. The stack string proceeds from the most recent calls to earlier ones, leading back to the original global scope call.
 

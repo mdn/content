@@ -39,7 +39,7 @@ Permissions delegated from the top-level context to a fenced frame for allowing 
 
 The only features that can be enabled by a policy inside fenced frames are the specific features designed to be used inside fenced frames:
 
-- [Protected Audience API](https://developer.chrome.com/docs/privacy-sandbox/fledge/)
+- [Protected Audience API](https://developers.google.com/privacy-sandbox/relevance/protected-audience)
   - `attribution-reporting`
   - `private-aggregation`
   - `shared-storage`
@@ -60,7 +60,10 @@ However, trying to traverse the boundary via an API call such as {{domxref("HTML
 
 ## Positioning and scaling
 
-As a [replaced element](/en-US/docs/Web/CSS/Replaced_element), the position, alignment, and scaling of the embedded document within the `<iframe>` element's box, can be adjusted with the {{cssxref("object-position")}} and {{cssxref("object-fit")}} properties.
+Being a [replaced element](/en-US/docs/Web/CSS/Replaced_element), the `<fencedframe>` allows the position of the embedded document within its box to be adjusted using the {{cssxref("object-position")}} property.
+
+> [!NOTE]
+> The {{cssxref("object-fit")}} property has no effect on `<fencedframe>` elements.
 
 The size of the embedded content may be set by internal `contentWidth` and `contentHeight` properties of the `<fencedframe>`'s {{domxref("HTMLFencedFrameElement.config", "config")}} object. In such cases, changing the `width` or `height` of the `<fencedframe>` will change the size of the embedded container on the page, but the document inside the container will be visually scaled to fit. The reported width and height of the embedded document (i.e. {{domxref("Window.innerWidth")}} and {{domxref("Window.innerHeight")}}) will be unchanged.
 
@@ -79,7 +82,7 @@ Without this title, they have to navigate into the `<iframe>` to determine what 
 
 ## Examples
 
-To set what content will be shown in a `<fencedframe>`, a utilizing API (such as [Protected Audience](https://developer.chrome.com/docs/privacy-sandbox/fledge/) or [Shared Storage](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/)) generates a {{domxref("FencedFrameConfig")}} object, which is then set as the value of the `<fencedframe>`'s `config` property.
+To set what content will be shown in a `<fencedframe>`, a utilizing API (such as [Protected Audience](https://developers.google.com/privacy-sandbox/relevance/protected-audience) or [Shared Storage](https://developers.google.com/privacy-sandbox/relevance/shared-storage)) generates a {{domxref("FencedFrameConfig")}} object, which is then set as the value of the `<fencedframe>`'s `config` property.
 
 The following example gets a `FencedFrameConfig` from a Protected Audience API's ad auction, which is then used to display the winning ad in a `<fencedframe>`:
 
@@ -164,5 +167,5 @@ frame.config = frameConfig;
 ## See also
 
 - [Fenced Frame API](/en-US/docs/Web/API/Fenced_frame_API)
-- [Fenced frames](https://developer.chrome.com/docs/privacy-sandbox/fenced-frame/) on developer.chrome.com
-- [The Privacy Sandbox](https://developer.chrome.com/docs/privacy-sandbox/) on developer.chrome.com
+- [Fenced frames](https://developers.google.com/privacy-sandbox/relevance/fenced-frame) on developers.google.com
+- [The Privacy Sandbox](https://developers.google.com/privacy-sandbox) on developers.google.com

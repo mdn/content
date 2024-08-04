@@ -58,7 +58,8 @@ A `MediaTrackCapabilities` object which specifies the value or range of values w
 - `resizeMode`
   - : A [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindomstring) object containing the mode or an array of modes the UA can use to derive the resolution of the video track.
 
-> **Note:** If the user has not granted permission to access the input device an empty object will be returned.
+> [!NOTE]
+> If the user has not granted permission to access the input device an empty object will be returned.
 
 ## Examples
 

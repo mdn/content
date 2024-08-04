@@ -120,7 +120,8 @@ self.addEventListener("fetch", (event) => {
 
 This means that in many situations, the web app will function well even if network connectivity is intermittent. From the point of view of the main app code, it is completely transparent: the app just makes network requests and gets responses. Also, because the service worker is in a separate thread, the main app code can stay responsive to user input while resources are fetched and cached.
 
-> **Note:** The strategy described here is just one way a service worker could implement caching. Specifically, in a cache first strategy, we check the cache first before the network, meaning that we are more likely to return a quick response without incurring a network cost, but are more likely to return a stale response.
+> [!NOTE]
+> The strategy described here is just one way a service worker could implement caching. Specifically, in a cache first strategy, we check the cache first before the network, meaning that we are more likely to return a quick response without incurring a network cost, but are more likely to return a stale response.
 >
 > An alternative would be a _network first_ strategy, in which we try to fetch the resource from the server first, and fall back to the cache if the device is offline.
 >
@@ -398,7 +399,7 @@ The pattern for subscribing to push messages looks like this:
      - The [endpoint](/en-US/docs/Web/API/PushSubscription/endpoint) for the push service: this is how the app server knows where to send push messages.
      - The [public encryption key](/en-US/docs/Web/API/PushSubscription/getKey) that your server will use to encrypt messages to the push service.
 
-3. The app sends the endpoint and public encryption key to your server (for example, using {{domxref("fetch()")}}).
+3. The app sends the endpoint and public encryption key to your server (for example, using {{domxref("WorkerGlobalScope/fetch", "fetch()")}}).
 
 After this, the app server is able to start sending push messages.
 

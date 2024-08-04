@@ -41,17 +41,19 @@ Elements that can be associated with a `<label>` element include {{HTMLElement('
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- `for`
+- [`for`](/en-US/docs/Web/HTML/Attributes/for)
 
   - : The value of the `for` attribute must be a single [`id`](/en-US/docs/Web/HTML/Global_attributes#id) for a [labelable](/en-US/docs/Web/HTML/Content_categories#labelable) form-related element in the same document as the `<label>` element. So, any given `label` element can be associated with only one form control.
 
-    > **Note:** To programmatically set the `for` attribute, use [`htmlFor`](/en-US/docs/Web/API/HTMLLabelElement/htmlFor).
+    > [!NOTE]
+    > To programmatically set the `for` attribute, use [`htmlFor`](/en-US/docs/Web/API/HTMLLabelElement/htmlFor).
 
     The first element in the document with an `id` attribute matching the value of the `for` attribute is the _labeled control_ for this `label` element — if the element with that `id` is actually a [labelable element](https://html.spec.whatwg.org/multipage/forms.html#category-label). If it is _not_ a labelable element, then the `for` attribute has no effect. If there are other elements that also match the `id` value, later in the document, they are not considered.
 
     Multiple `label` elements can be given the same value for their `for` attribute; doing so causes the associated form control (the form control that `for` value references) to have multiple labels.
 
-    > **Note:** A `<label>` element can have both a `for` attribute and a contained control element, as long as the `for` attribute points to the contained control element.
+    > [!NOTE]
+    > A `<label>` element can have both a `for` attribute and a contained control element, as long as the `for` attribute points to the contained control element.
 
 ## Styling with CSS
 

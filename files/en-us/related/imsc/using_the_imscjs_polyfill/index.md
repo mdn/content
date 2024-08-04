@@ -86,7 +86,7 @@ const ttmlUrl = myVideo.getElementsByTagName("track")[0].src;
 
 ## Retrieving the IMSC file
 
-The browser will not retrieve the document automatically for us. In most browsers only [WebVTT](/en-US/docs/Web/API/WebVTT_API) is implemented at the moment. Therefore, these browsers expect that the value of the `src` attribute points to a WebVTT file. If it doesn't, they don't use it, and we also have no direct access to the file the `src` attribute is pointing to. We use the `src` attribute therefore just to store the URL of the IMSC file. We need to do the work to retrieve the file and read it into a JavaScript string. In the example we use the {{domxref("fetch()")}} API for this task:
+The browser will not retrieve the document automatically for us. In most browsers only [WebVTT](/en-US/docs/Web/API/WebVTT_API) is implemented at the moment. Therefore, these browsers expect that the value of the `src` attribute points to a WebVTT file. If it doesn't, they don't use it, and we also have no direct access to the file the `src` attribute is pointing to. We use the `src` attribute therefore just to store the URL of the IMSC file. We need to do the work to retrieve the file and read it into a JavaScript string. In the example we use the {{domxref("Window/fetch", "fetch()")}} API for this task:
 
 ```js
 const response = await fetch(ttmlUrl);
@@ -202,7 +202,8 @@ While we loop through the `timeEvents` we can take the value of the time event a
 myCue = new Cue(timeEvents[i], timeEvents[i + 1], "");
 ```
 
-> **Note:** In most browsers text track cues are currently only implemented for the WebVTT format. So usually you create a cue with all WebVTT properties including the WebVTT text property. We never use these properties but it is important to remember that they are still there. In the constructor we also have to add the VTTCue text as a third parameter.
+> [!NOTE]
+> In most browsers text track cues are currently only implemented for the WebVTT format. So usually you create a cue with all WebVTT properties including the WebVTT text property. We never use these properties but it is important to remember that they are still there. In the constructor we also have to add the VTTCue text as a third parameter.
 
 But how should we calculate the end time of the last time event? It does not have a "next" time event we can take the end time from.
 

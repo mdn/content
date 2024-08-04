@@ -9,7 +9,7 @@ browser-compat: api.ChapterInformation
 
 The **`ChapterInformation`** interface of the {{domxref("Media Session API", "", "", "nocode")}} represents the metadata for an individual chapter of a media resource (i.e. a video or audio file).
 
-The chapter information for a given media resource is set when it is first created, via the `chapterInfo` property of the {{domxref("MediaMetadata.MediaMetadata", "MediaMetadata()")}} constructor's initialization object. This takes an array of `ChapterInformation` objects as a value.
+The chapter information for a given media resource is set when it is first created, via the `chapterInfo` property of the {{domxref("MediaMetadata.MediaMetadata", "MediaMetadata()")}} constructor's initialization object. The property takes an array of `ChapterInformation` objects as its value.
 
 You can access the chapter information for an existing {{domxref("MediaMetadata")}} object via its {{domxref("MediaMetadata.chapterInfo", "chapterInfo")}} property. This returns an array of `ChapterInformation` objects.
 
@@ -18,13 +18,13 @@ You can access the chapter information for an existing {{domxref("MediaMetadata"
 - {{domxref("ChapterInformation.artwork")}} {{ReadOnlyInline}}
   - : Returns an {{jsxref("Array")}} of objects representing images associated with the chapter.
 - {{domxref("ChapterInformation.startTime")}} {{ReadOnlyInline}}
-  - : Returns a number representing the start time of the chapter in seconds.
+  - : Returns a number, in seconds, representing the start time of the chapter.
 - {{domxref("ChapterInformation.title")}} {{ReadOnlyInline}}
   - : Returns a string representing the title of the chapter.
 
 ## Examples
 
-The [Video / Media Session Sample](https://googlechrome.github.io/samples/media-session/video.html) shows a typical sample structure for the `ChapterInformation` object:
+The sample code below from [Video / Media Session Sample](https://googlechrome.github.io/samples/media-session/video.html) shows a typical structure for the `ChapterInformation` object:
 
 ```js
 const BASE_URL = "https://storage.googleapis.com/media-session/";

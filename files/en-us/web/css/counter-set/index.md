@@ -13,7 +13,8 @@ The `counter-set` property will create a new counter for each named counter in t
 
 {{EmbedInteractiveExample("pages/css/counter-set.html")}}
 
-> **Note:** The counter's value can be incremented or decremented using the {{cssxref("counter-increment")}} CSS property.
+> [!NOTE]
+> The counter's value can be incremented or decremented using the {{cssxref("counter-increment")}} CSS property.
 
 ## Syntax
 

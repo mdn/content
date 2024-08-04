@@ -357,6 +357,8 @@ and get the same result.
 The `m` flag is used to specify that a multiline input string should be treated as multiple lines.
 If the `m` flag is used, `^` and `$` match at the start or end of any line within the input string instead of the start or end of the entire string.
 
+The `i`, `m`, and `s` flags can be enabled or disabled for specific parts of a regex using the [modifier](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Modifier) syntax.
+
 #### Using the global search flag with exec()
 
 {{jsxref("RegExp.prototype.exec()")}} method with the `g` flag returns each match and its position iteratively.
@@ -389,7 +391,8 @@ Unicode regular expressions have different execution behavior as well. [`RegExp.
 
 ## Examples
 
-> **Note:** Several examples are also available in:
+> [!NOTE]
+> Several examples are also available in:
 >
 > - The reference pages for {{jsxref("RegExp/exec", "exec()")}}, {{jsxref("RegExp/test", "test()")}}, {{jsxref("String/match", "match()")}}, {{jsxref("String/matchAll", "matchAll()")}}, {{jsxref("String/search", "search()")}}, {{jsxref("String/replace", "replace()")}}, {{jsxref("String/split", "split()")}}
 > - The guide articles: [character classes](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes), [assertions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Assertions), [groups and backreferences](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences), [quantifiers](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)

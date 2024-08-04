@@ -109,7 +109,7 @@ const logElement = document.querySelector("output");
 const startButton = document.querySelector("#startButton");
 
 function log(msg) {
-  logElement.innerHTML += `${msg}<br>`;
+  logElement.innerText += `${msg}\n`;
 }
 
 startButton.addEventListener(
@@ -159,8 +159,8 @@ displayed lists of audio and video devices using that information.
 ```js
 function updateDeviceList() {
   navigator.mediaDevices.enumerateDevices().then((devices) => {
-    audioList.innerHTML = "";
-    videoList.innerHTML = "";
+    audioList.textContent = "";
+    videoList.textContent = "";
 
     devices.forEach((device) => {
       const elem = document.createElement("li");

@@ -18,6 +18,8 @@ The element's height is set to the value of `min-height` whenever `min-height` i
 ```css
 /* <length> value */
 min-height: 3.5em;
+min-height: anchor-size(height);
+min-height: anchor-size(--myAnchor block, 200px);
 
 /* <percentage> value */
 min-height: 10%;
@@ -49,7 +51,7 @@ min-height: unset;
 - `min-content`
   - : The intrinsic minimum `min-height`.
 - `fit-content`
-  - : Use the available space, but not more than [max-content](/en-US/docs/Web/CSS/max-content), i.e `min(max-content, max(min-content, stretch))`.
+  - : Use the available space, but not more than [max-content](/en-US/docs/Web/CSS/max-content), i.e. `min(max-content, max(min-content, stretch))`.
 - `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
   - : Uses the `fit-content` formula with the available space replaced by the specified argument, i.e. `min(max-content, max(min-content, argument))`.
 

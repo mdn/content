@@ -8,15 +8,16 @@ page-type: guide
 
 WebAssembly has an S-expression-based textual representation, an intermediate form designed to be exposed in text editors, browser developer tools, etc. This article explains a little bit about how it works, and how to use available tools to convert text format files to the Wasm format.
 
-> **Note:** Text format files are usually saved with a `.wat` extension. Historically, a `.wast` extension was also used, however that's now used for the scripting language used by the WebAssembly test suite.
+> [!NOTE]
+> Text format files are usually saved with a `.wat` extension. Historically, a `.wast` extension was also used, however that's now used for the scripting language used by the WebAssembly test suite.
 
 ## A first look at the text format
 
-Let's look at a simple example of this — the following program imports a function called `imported_func` from a module called `imports`, and exports a function called `exported_func`:
+Let's look at a simple example of this — the following program imports a function called `imported_func` from a module called `my_namespace`, and exports a function called `exported_func`:
 
 ```wasm
 (module
-  (func $i (import "imports" "imported_func") (param i32))
+  (func $i (import "my_namespace" "imported_func") (param i32))
   (func (export "exported_func")
     i32.const 42
     call $i
@@ -41,7 +42,8 @@ Let's have a go at converting the above `.wat` text representation example into 
 
 This will convert the Wasm into a file called `simple.wasm`, which contains the `.wasm` assembly code.
 
-> **Note:** You can also convert the assembly back into the text representation using the wasm2wat tool; for example `wasm2wat simple.wasm -o text.wat`.
+> [!NOTE]
+> You can also convert the assembly back into the text representation using the wasm2wat tool; for example `wasm2wat simple.wasm -o text.wat`.
 
 ## Viewing the assembly output
 

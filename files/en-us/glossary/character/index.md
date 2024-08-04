@@ -12,6 +12,7 @@ A **character** is either a symbol (letter, number, punctuation) or a non-printi
 
 - [Character (computing)](<https://en.wikipedia.org/wiki/Character_(computing)>) on Wikipedia
 - [Character encoding](https://en.wikipedia.org/wiki/Character_encoding) on Wikipedia
-- {{glossary("ASCII")}}
+- Related glossary terms:
+  - {{glossary("ASCII")}}
 - [UTF-8](https://en.wikipedia.org/wiki/UTF-8) on Wikipedia
 - [Unicode](https://en.wikipedia.org/wiki/Unicode) on Wikipedia

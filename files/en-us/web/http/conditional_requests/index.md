@@ -119,7 +119,7 @@ Conditional requests allow implementing the _optimistic locking algorithm_ (used
 
 ![Conditional requests allow to implement optimistic locking: now the quickest wins, and the others get an error.](https://mdn.github.io/shared-assets/images/diagrams/http/conditional-requests/optimistic-locking-3.svg)
 
-This is implemented using the {{HTTPHeader("If-Match")}} or {{HTTPHeader("If-Unmodified-Since")}} headers. If the etag doesn't match the original file, or if the file has been modified since it has been obtained, the change is rejected with a {{HTTPStatus("412")}} `Precondition Failed` error. It is then up to the client to deal with the error: either by notifying the user to start again (this time on the newest version), or by showing the user a _diff_ of both versions, helping them decide which changes they wish to keep.
+This is implemented using the {{HTTPHeader("If-Match")}} or {{HTTPHeader("If-Unmodified-Since")}} headers. If the etag doesn't match the original file, or if the file has been modified since it has been obtained, the change is rejected with a {{HTTPStatus("412", "412 Precondition Failed")}} error. It is then up to the client to deal with the error: either by notifying the user to start again (this time on the newest version), or by showing the user a _diff_ of both versions, helping them decide which changes they wish to keep.
 
 ### Dealing with the first upload of a resource
 

@@ -13,7 +13,8 @@ The **`:link`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Ps
 
 Styles defined by the `:link` and [`:visited`](/en-US/docs/Web/CSS/:visited) pseudo-classes can be overridden by any subsequent user-action pseudo-classes ({{cssxref(":hover")}} or {{cssxref(":active")}}) that have at least equal specificity. To style links appropriately, put the `:link` rule before all other link-related rules, as defined by the _LVHA-order_: `:link` — `:visited` — `:hover` — `:active`. The `:visited` pseudo-class and `:link` pseudo-class are mutually exclusive.
 
-> **Note:** Use {{cssxref(":any-link")}} to select an element independent of whether it has been visited or not.
+> [!NOTE]
+> Use {{cssxref(":any-link")}} to select an element independent of whether it has been visited or not.
 
 ## Syntax
 

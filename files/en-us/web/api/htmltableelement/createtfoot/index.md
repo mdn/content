@@ -13,7 +13,8 @@ The **`createTFoot()`** method of
 associated with a given {{HtmlElement("table")}}. If no footer exists in the table, this
 method creates it, and then returns it.
 
-> **Note:** If no footer exists, `createTFoot()` inserts a new
+> [!NOTE]
+> If no footer exists, `createTFoot()` inserts a new
 > footer directly into the table. The footer does not need to be added separately as
 > would be the case if {{domxref("Document.createElement()")}} had been used to create
 > the new `<tfoot>` element.

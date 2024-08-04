@@ -26,7 +26,8 @@ Here we go over how to set up an image map, and some downsides to consider first
   </tbody>
 </table>
 
-> **Warning:** This article discusses client-side image maps only. Do not use server-side image maps, which require the user to have a mouse.
+> [!WARNING]
+> This article discusses client-side image maps only. Do not use server-side image maps, which require the user to have a mouse.
 
 ## Image maps, and their drawbacks
 
@@ -86,7 +87,7 @@ Inside the `<map>` element, we need {{htmlelement('area')}} elements. An `<area>
 
 - [`alt`](/en-US/docs/Web/HTML/Element/area#alt)
 
-  - : A mandatory attribute, telling people where the link goes or what it does. `alt` text only displays when the image is unavailable. Please refer to our [guidelines for writing accessible link text.](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#writing_accessible_link_text)
+  - : A mandatory attribute, telling people where the link goes or what it does. `alt` text only displays when the image is unavailable. Please refer to our [guidelines for writing accessible link text.](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#use_clear_link_wording)
 
     You may write `alt=""` if the `href` attribute is blank _and_ the entire image already has an `alt` attribute.
 
@@ -117,4 +118,4 @@ If your image map is wider than about 240px, you'll need to make further adjustm
 - {{htmlelement("img")}}
 - {{htmlelement("map")}}
 - {{htmlelement("area")}}
-- [Online image map editor](https://maschek.hu/imagemap/imgmap/)
+- [Online image map editor](https://www.maschek.hu/imagemap/)

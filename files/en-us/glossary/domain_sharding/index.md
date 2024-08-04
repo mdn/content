@@ -16,6 +16,7 @@ HTTP2 supports unlimited concurrent requests making domain sharding an obsolete 
 
 ## See also
 
-- {{Glossary("TLS")}}
-- [DNS](/en-US/docs/Glossary/DNS)
-- [HTTP/2](/en-US/docs/Glossary/HTTP_2)
+- Related glossary terms:
+  - {{Glossary("TLS")}}
+  - {{Glossary("DNS")}}
+  - {{Glossary("HTTP 2", "HTTP/2")}}

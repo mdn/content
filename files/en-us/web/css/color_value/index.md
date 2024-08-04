@@ -10,7 +10,8 @@ browser-compat: css.types.color
 The **`<color>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a color.
 A `<color>` may also include an [alpha-channel](https://en.wikipedia.org/wiki/Alpha_compositing) _transparency value_, indicating how the color should [composite](https://www.w3.org/TR/compositing-1/#simplealphacompositing) with its background.
 
-> **Note:** Although `<color>` values are precisely defined, their actual appearance may vary (sometimes significantly) from device to device. This is because most devices are not calibrated, and some browsers do not support output devices' [color profiles](https://en.wikipedia.org/wiki/ICC_profile).
+> [!NOTE]
+> Although `<color>` values are precisely defined, their actual appearance may vary (sometimes significantly) from device to device. This is because most devices are not calibrated, and some browsers do not support output devices' [color profiles](https://en.wikipedia.org/wiki/ICC_profile).
 
 ## Syntax
 
@@ -127,7 +128,8 @@ color-mix(in oklch, oklch(none 0.2 10), oklch(60% none 30))
 color-mix(in oklch, oklch(60% 0.2 10), oklch(60% 0.2 30))
 ```
 
-> **Note:** If a component is missing from both colors, this component will be missing after the interpolation.
+> [!NOTE]
+> If a component is missing from both colors, this component will be missing after the interpolation.
 
 #### Interpolating colors from different spaces: analogous components
 
@@ -186,7 +188,7 @@ The preprocessing procedure is:
    oklch(63.612% 0.1522 78.748)
    ```
 
-## Accessibility concerns
+## Accessibility
 
 Some people have difficulty distinguishing colors. The [WCAG 2.2](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Use_of_color) recommendation strongly advises against using color as the only means of conveying a specific message, action, or result. See [color and color contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast) for more information.
 

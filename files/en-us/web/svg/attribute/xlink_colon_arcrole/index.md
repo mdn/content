@@ -59,7 +59,7 @@ You can use this attribute with the following SVG elements:
 </table>
 
 - `<iri>`
-  - : This value specifies an {{Glossary("IRI")}} reference that identifies some resource that describes the intended property.
+  - : This value specifies an [IRI](/en-US/docs/Web/SVG/Content_type#iri) reference that identifies some resource that describes the intended property.
 
 ## Specifications
 

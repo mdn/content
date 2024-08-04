@@ -16,10 +16,13 @@ Brotli is compatible with most modern browsers, but you may want to consider a f
 
 ## See also
 
-- {{glossary("Lossless compression")}}
-- {{glossary("Lossy compression")}}
+- Related glossary terms:
+  - {{glossary("Lossless compression")}}
+  - {{glossary("Lossy compression")}}
+  - {{Glossary("Gzip compression")}}
+  - {{Glossary("Zstandard compression")}}
 - [brotli.org](https://brotli.org/)
 - [Brotli GitHub repository](https://github.com/google/brotli)
-- [RFC 7932: Brotli Compressed Data Format](https://tools.ietf.org/html/rfc7932)
+- [RFC 7932: Brotli Compressed Data Format](https://datatracker.ietf.org/doc/html/rfc7932)
 - [Brotli](https://en.wikipedia.org/wiki/Brotli) on Wikipedia
 - [Brotli on Caniuse](https://caniuse.com/#feat=brotli)

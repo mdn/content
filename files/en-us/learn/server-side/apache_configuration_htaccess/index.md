@@ -494,7 +494,7 @@ To prevent referrer leakage entirely, specify the `no-referrer` value instead. N
 
 Use services like the ones below to check your `Referrer-Policy`:
 
-- [HTTP Observatory](/en-US/observatory/)
+- [HTTP Observatory](/en-US/observatory)
 - [securityheaders.com](https://securityheaders.com/)
 
 ```apacheconf

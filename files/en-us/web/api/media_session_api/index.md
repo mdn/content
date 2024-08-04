@@ -17,7 +17,7 @@ The aim is to allow users to know what's playing and to control it, without need
 
 The {{domxref("MediaMetadata")}} interface lets a website provide rich metadata to the platform UI for media that is playing. This metadata includes the title, artist (creator) name, album (collection), artwork, and chapter information. The platform can show this metadata in media centers, notifications, device lock screens, and so on. For example, different devices might present the Media Session API data like so:
 
-![Media Session data for the Sintel trailer title and artwork presented on a desktop browser UI, mobile phone OS, and smartwatch lock screen](media-session-ui.jpg)
+![Media Session data for the Sintel trailer title and artwork presented on a desktop browser, mobile phone, and smartwatch](media-session-ui.jpg)
 
 > **Note:** Original image source: [Customize media notifications and playback controls with the Media Session API](https://web.dev/articles/media-session) on web.dev (2024)
 
@@ -34,7 +34,7 @@ navigator.mediaSession.playbackState = "playing";
 ## Interfaces
 
 - {{domxref("ChapterInformation")}}
-  - : Represents the metadata for an individual chapter of a media resource (i.e. a video or audio file).
+  - : Represents the metadata for an individual chapter of a media resource (i.e., a video or audio file).
 - {{domxref("MediaMetadata")}}
   - : Allows a web page to provide rich media metadata for display in a platform UI.
 - {{domxref("MediaSession")}}

@@ -11,7 +11,8 @@ The **`inherit`** CSS keyword causes the element to take the [computed value](/e
 
 For [inherited properties](/en-US/docs/Web/CSS/Inheritance#inherited_properties), this reinforces the default behavior, and is only needed to override another rule.
 
-> **Note:** Inheritance is always from the parent element in the document tree, even when the parent element is not the containing block.
+> [!NOTE]
+> Inheritance is always from the parent element in the document tree, even when the parent element is not the containing block.
 
 ## Examples
 

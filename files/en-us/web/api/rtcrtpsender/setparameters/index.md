@@ -58,7 +58,7 @@ setParameters(parameters)
         - `rid`
 
           - : A string which, if set, specifies an _RTP stream ID_ (_RID_) to be sent using the RID header extension.
-            This parameter cannot be modified using {{domxref("RTCRtpSender.setParameters", "setParameters()")}}.
+            This parameter cannot be modified using `setParameters()`.
             Its value can only be set when the transceiver is first created.
 
         - `scaleResolutionDownBy`
@@ -135,7 +135,7 @@ If an error occurs, the returned promise is rejected with the appropriate except
 - `OperationError` {{domxref("DOMException")}}
   - : Returned if an error occurs that does not match the ones specified here.
 - {{jsxref("RangeError")}}
-  - : Returned if the value specified for `scaleResolutionDownBy` option is less than 1.0 — which would result in scaling up rather than down, which is not allowed; or if one or more of the specified `encodings` {{domxref("#maxframerate", "maxFramerate")}} values is less than 0.0.
+  - : Returned if the value specified for `scaleResolutionDownBy` option is less than 1.0 — which would result in scaling up rather than down, which is not allowed; or if one or more of the specified `encodings` [`maxFramerate`](#maxframerate) values is less than 0.0.
 
 In addition, if a WebRTC error occurs while configuring or accessing the media, an {{domxref("RTCError")}} is thrown with its {{domxref("RTCError.errorDetail", "errorDetail")}} set to `hardware-encoder-error`.
 
@@ -151,7 +151,7 @@ One use case for `setParameters()` is to try to reduce network bandwidth used in
 
 Currently, some browsers have limitations on their implementations that may cause issues.
 For that reason, two examples are given here.
-The first shows how to use `setParameters()` when all browsers fully support the parameters being used, while the second example demonstrates workarounds to help solve limitations in browsers with incomplete support for the {{domxref("#maxBitrate","maxBitrate")}} and {{domxref("#scaleResolutionDownBy", "scaleResolutionDownBy")}} parameters.
+The first shows how to use `setParameters()` when all browsers fully support the parameters being used, while the second example demonstrates workarounds to help solve limitations in browsers with incomplete support for the [`maxBitrate`](#maxbitrate) and [`scaleResolutionDownBy`](#scaleresolutiondownby) parameters.
 
 ### By the specification
 
@@ -174,7 +174,7 @@ In calling this function, you specify a sender, as well as the height you wish t
 A scaling factor for the size of the video, `scaleRatio`, is computed.
 Then the sender's current parameters are fetched using {{domxref("RTCRtpSender.getParameters", "getParameters()")}}.
 
-The parameters are then altered by changing the first `encodings` object's {{domxref("#scaleResolutionDownBy", "scaleResolutionDownBy")}} and {{domxref("#maxBitrate", "maxBitrate")}} to the calculated scaling factor and the specified maximum `bitrate`.
+The parameters are then altered by changing the first `encodings` object's [`scaleResolutionDownBy`](#scaleresolutiondownby) and [`maxBitrate`](#maxbitrate) to the calculated scaling factor and the specified maximum `bitrate`.
 
 The changed parameters are then saved by calling the sender's `setParameters()` method.
 

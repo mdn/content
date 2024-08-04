@@ -17,7 +17,8 @@ The order in this collection represents the order of the values in the CSS style
 property. If the index is greater than or equal to the number of values in the list,
 this method returns `null`.
 
-> **Note:** This method was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
+> [!NOTE]
+> This method was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
 > not implement it.
 >
 > To achieve your purpose, you can use:

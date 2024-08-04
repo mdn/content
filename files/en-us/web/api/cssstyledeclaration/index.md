@@ -28,7 +28,7 @@ A `CSSStyleDeclaration` object can be exposed using three different APIs:
 
 - {{DOMxRef("CSSStyleDeclaration.cssFloat", "CSSStyleDeclaration.cssFloat")}}
   - : Special alias for the {{CSSxRef("float")}} CSS property.
-- {{DOMxRef("CSSStyleDeclaration.named_properties", '<code>CSSStyleDeclaration</code> named properties', "", 1)}}
+- `CSSStyleDeclaration` named properties
   - : Dashed and camel-cased attributes for all supported CSS properties.
 
 ## Instance methods

@@ -64,7 +64,7 @@ color: unset;
 
 The `color` property is specified as a single {{cssxref("&lt;color&gt;")}} value.
 
-Note that the value must be a uniform {{cssxref("color")}}. It can't be a {{cssxref("&lt;gradient&gt;")}}, which is actually a type of {{cssxref("&lt;image&gt;")}}.
+Note that the value must be a uniform color. It can't be a {{cssxref("&lt;gradient&gt;")}}, which is actually a type of {{cssxref("&lt;image&gt;")}}.
 
 ### Values
 
@@ -73,7 +73,7 @@ Note that the value must be a uniform {{cssxref("color")}}. It can't be a {{cssx
 - [`currentcolor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword)
   - : Sets the color to the element's `color` property value. However, if set as the value of `color`, `currentcolor` is treated as `inherit`.
 
-## Accessibility concerns
+## Accessibility
 
 It is important to ensure that the contrast ratio between the color of the text and the background the text is placed over is high enough that people experiencing low vision conditions will be able to read the content of the page.
 

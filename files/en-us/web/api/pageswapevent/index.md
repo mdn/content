@@ -15,8 +15,8 @@ The `pageswap` event is fired when you navigate across documents, when the previ
 
 ## Constructor
 
-- {{domxref("PageSwapEvent.PageSwapEvent", "PageSwapEvent()")}}
-  - : Creates a new {{domxref("PageSwapEvent")}} object instance.
+- {{domxref("PageSwapEvent.PageSwapEvent", "PageSwapEvent()")}} {{experimental_inline}}
+  - : Creates a new `PageSwapEvent` object instance.
 
 ## Instance properties
 
@@ -77,7 +77,8 @@ window.addEventListener("pageswap", async (e) => {
 });
 ```
 
-> **Note:** See [List of Chrome DevRel team members](https://view-transitions.netlify.app/profiles/mpa/) for the live demo this code is taken from.
+> [!NOTE]
+> See [List of Chrome DevRel team members](https://view-transitions.netlify.app/profiles/mpa/) for the live demo this code is taken from.
 
 ## Specifications
 

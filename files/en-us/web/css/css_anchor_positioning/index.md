@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/css-anchor-position-1/
 
 {{CSSRef}}
 
-The **CSS anchor positioning** module defines features that allow you to tether elements together. Certain elements are defined as **anchor elements**; **anchor-positioned** elements can then have their size and position set based on the size and location of the anchor elements to which they are bound.
+The **CSS anchor positioning** module defines features that allow you to tether elements together. Certain elements are defined as **anchor elements**; **anchor-positioned elements** can then have their size and position set based on the size and location of the anchor elements to which they are bound.
 
 In addition, the specification provides CSS-only mechanisms to:
 
@@ -19,13 +19,15 @@ In addition, the specification provides CSS-only mechanisms to:
 ### Properties
 
 - {{cssxref("anchor-name")}}
-- {{cssxref("anchor-scope")}}
 - {{cssxref("inset-area")}}
 - {{cssxref("position-anchor")}}
-- {{cssxref("position-try")}}
-- {{cssxref("position-try-options")}}
+- {{cssxref("position-try-fallbacks")}}
 - {{cssxref("position-try-order")}}
+- {{cssxref("position-try")}} shorthand
 - {{cssxref("position-visibility")}}
+
+> [!NOTE]
+> The CSS anchor positioning module introduces the `anchor-scope` property that has not yet been implemented.
 
 ### At-rules and descriptors
 
@@ -35,7 +37,6 @@ In addition, the specification provides CSS-only mechanisms to:
 
 - [`anchor()`](/en-US/docs/Web/CSS/anchor)
 - [`anchor-size()`](/en-US/docs/Web/CSS/anchor-size)
-- [`inset-area()`](/en-US/docs/Web/CSS/inset-area_function)
 
 ### Data types and values
 
@@ -44,7 +45,7 @@ In addition, the specification provides CSS-only mechanisms to:
 - [`<anchor-size>`](/en-US/docs/Web/CSS/anchor-size#anchor-size)
 - [`<inset-area>`](/en-US/docs/Web/CSS/inset-area_value)
 - [`<try-side>`](/en-US/docs/Web/CSS/position-try-order#try-side)
-- [`<try-tactic>`](/en-US/docs/Web/CSS/position-try-options#try-tactic)
+- [`<try-tactic>`](/en-US/docs/Web/CSS/position-try-fallbacks#try-tactic)
 
 ### HTML attributes
 
@@ -54,7 +55,7 @@ In addition, the specification provides CSS-only mechanisms to:
 
 - {{domxref("CSSPositionTryDescriptors")}}
 - {{domxref("CSSPositionTryRule")}}
-- {{domxref("Element.anchorElement")}} {{non-standard_inline}}
+- {{domxref("HTMLElement.anchorElement")}} {{non-standard_inline}}
 
 ## Guides
 
@@ -62,9 +63,9 @@ In addition, the specification provides CSS-only mechanisms to:
 
   - : An introductory guide to fundamental anchor positioning concepts, including associating, positioning, and sizing elements relative to their anchor.
 
-- [Handling overflow: try options and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding)
+- [Handling overflow: try fallbacks and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding)
 
-  - : A guide to the mechanisms CSS anchor positioning provides to prevent anchor-positioned elements from overflowing their containing elements or the viewport, including position try options and conditionally hiding elements.
+  - : A guide to the mechanisms CSS anchor positioning provides to prevent anchor-positioned elements from overflowing their containing elements or the viewport, including position try fallback options and conditionally hiding elements.
 
 ## Related concepts
 
