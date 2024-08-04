@@ -166,7 +166,7 @@ In the example below, you can see how some relative and absolute length units be
 
 The second box has a width set in `vw` (viewport width) units. This value is relative to the viewport width, and so 10vw is 10 percent of the width of the viewport. If you change the width of your browser window, the size of the box should change. However this example is embedded into the page using an [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe), so this won't work. To see this in action you'll have to [try the example after opening it in its own browser tab](https://mdn.github.io/css-examples/learn/values-units/length.html).
 
-The third box uses `em` units. These are relative to the font size. I've set a font size of `1em` on the containing {{htmlelement("div")}}, which has a class of `.wrapper`. Change this value to `1.5em` and you will see that the font size of all the elements increases, but only the last item will get wider, as its width is relative to that font size.
+The third box uses `em` units. These are relative to its own element font size. I've set a font size of `1em` on the containing {{htmlelement("div")}}, which has a class of `.wrapper`. Change this value to `1.5em` and you will see that the font size of all the elements increases, but only the last item will get wider, as its width is relative to that font size.
 
 After following the instructions above, try playing with the values in other ways, to see what you get.
 
