@@ -103,7 +103,7 @@ produced by some tools and libraries such as [OpenSSL](https://www.openssl.org).
 ### HMAC
 
 The HMAC algorithm calculates and verifies hash-based message authentication codes according to the
-[FIPS 198-1 standard](https://csrc.nist.gov/csrc/media/publications/fips/198/1/final/documents/fips-198-1_final.pdf).
+[FIPS 198-1 standard](https://csrc.nist.gov/files/pubs/fips/198-1/final/docs/fips-198-1_final.pdf).
 
 The digest algorithm to use is specified in the
 [`HmacKeyGenParams`](/en-US/docs/Web/API/HmacKeyGenParams) object
@@ -236,4 +236,4 @@ let signature = await window.crypto.subtle.sign("HMAC", key, encoded);
 - [RFC 3447](https://datatracker.ietf.org/doc/html/rfc3447) specifies RSASSA-PKCS1-v1_5.
 - [RFC 3447](https://datatracker.ietf.org/doc/html/rfc3447) specifies RSA-PSS.
 - [FIPS-186](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf) specifies ECDSA.
-- [FIPS 198-1](https://csrc.nist.gov/csrc/media/publications/fips/198/1/final/documents/fips-198-1_final.pdf) specifies HMAC.
+- [FIPS 198-1](https://csrc.nist.gov/files/pubs/fips/198-1/final/docs/fips-198-1_final.pdf) specifies HMAC.
