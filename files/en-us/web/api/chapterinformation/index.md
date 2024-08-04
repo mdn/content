@@ -18,7 +18,7 @@ You can access the chapter information for an existing {{domxref("MediaMetadata"
 - {{domxref("ChapterInformation.artwork")}} {{ReadOnlyInline}}
   - : Returns an {{jsxref("Array")}} of objects representing images associated with the chapter.
 - {{domxref("ChapterInformation.startTime")}} {{ReadOnlyInline}}
-  - : Returns a number representing the start time of the chapter in seconds.
+  - : Returns a number, in seconds, representing the start time of the chapter.
 - {{domxref("ChapterInformation.title")}} {{ReadOnlyInline}}
   - : Returns a string representing the title of the chapter.
 
