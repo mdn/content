@@ -258,7 +258,7 @@ You should seriously consider the support matrix and DSLs of a framework when ma
 
 | Framework | Browser support                     | Preferred DSL | Supported DSLs         | Citation                                                                        |
 | --------- | ----------------------------------- | ------------- | ---------------------- | ------------------------------------------------------------------------------- |
-| Angular   | Modern                              | TypeScript    | HTML-based; TypeScript | [official docs](https://angular.io/guide/browser-support)                       |
+| Angular   | Modern                              | TypeScript    | HTML-based; TypeScript | [official docs](https://angular.dev/guide/browser-support)                      |
 | React     | Modern                              | JSX           | JSX; TypeScript        | [official docs](https://react.dev/reference/react-dom/client#browser-support)   |
 | Vue       | Modern (IE9+ in Vue 2)              | HTML-based    | HTML-based, JSX, Pug   | [official docs](https://cli.vuejs.org/guide/browser-compatibility.html)         |
 | Ember     | Modern (IE9+ in Ember version 2.18) | Handlebars    | Handlebars, TypeScript | [official docs](https://guides.emberjs.com/v3.3.0/templates/handlebars-basics/) |
@@ -296,7 +296,7 @@ A few popular CMS systems include [Wordpress](https://wordpress.com/), [Joomla](
 
 **Server-side rendering** (**SSR**) is an application architecture in which it is the _server_'s job to render a single-page application. This is the opposite of _client-side rendering_, which is the most common and most straightforward way to build a JavaScript application. Server-side rendering is easier on the client's device because you're only sending a rendered HTML file to them, but it can be difficult to set up compared to a client-side-rendered application.
 
-All of the frameworks covered in this module support server-side rendering as well as client-side rendering. Check out [Next.js](https://nextjs.org/) for React, [Nuxt](https://nuxt.com/) for Vue (yes, it is confusing, and no, these projects are not related!), [FastBoot](https://github.com/ember-fastboot/ember-cli-fastboot) for Ember, and [Angular Universal](https://angular.io/guide/universal) for Angular.
+All of the frameworks covered in this module support server-side rendering as well as client-side rendering. Check out [Next.js](https://nextjs.org/) for React, [Nuxt](https://nuxt.com/) for Vue (yes, it is confusing, and no, these projects are not related!), [FastBoot](https://github.com/ember-fastboot/ember-cli-fastboot) for Ember, and [Angular Universal](https://angular.dev/guide/universal) for Angular.
 
 > [!NOTE]
 > Some SSR solutions are written and maintained by the community, whereas some are "official" solutions provided by the framework's maintainer.

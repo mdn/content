@@ -19,9 +19,13 @@ For most properties, the resolved value is the [computed value](/en-US/docs/Web/
 
 ## See also
 
-- [Initial](/en-US/docs/Web/CSS/initial_value), [computed](/en-US/docs/Web/CSS/computed_value), [used](/en-US/docs/Web/CSS/used_value), and [actual](/en-US/docs/Web/CSS/actual_value) values
 - {{domxref("window.getComputedStyle")}}
 - {{domxref("CSSStyleDeclaration.getPropertyValue")}}
+- Values
+  - [Initial values](/en-US/docs/Web/CSS/initial_value)
+  - [Computed values](/en-US/docs/Web/CSS/computed_value)
+  - [Used values](/en-US/docs/Web/CSS/used_value)
+  - [Actual values](/en-US/docs/Web/CSS/actual_value)
 - [CSS syntax](/en-US/docs/Web/CSS/Syntax)
 - [At-rules](/en-US/docs/Web/CSS/At-rule)
 - [Specificity](/en-US/docs/Web/CSS/Specificity)

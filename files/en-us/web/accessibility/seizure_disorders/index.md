@@ -105,7 +105,7 @@ How the color relates to its background—usually framed in terms of contrast—
 
 It has been demonstrated that [some colors are more likely to cause epileptic fits than others](https://www.sciencedaily.com/releases/2009/09/090925092858.htm). Human physiology and psychology are affected by the color red in general. Its power to influence behavior has even been noted in animals.
 
-- **Red Desaturation tests:** The human eye is so sensitively tuned to red that ophthalmologists set up a test using it. The Red desaturation test assesses the integrity of the optic nerve. For more information as to how an ophthalmologist uses this test, see [Red Desaturation](https://www.smart-optometry.com/red-desaturation/).
+- **Red Desaturation tests:** The human eye is so sensitively tuned to red that ophthalmologists set up a test using it. The Red desaturation test assesses the integrity of the optic nerve. For more information as to how an ophthalmologist uses this test, see [Red Desaturation](https://www.smartoptometry.app/red-desaturation/).
 - **Red Environment:** Studies have shown that for those who suffer Traumatic Brain Injury, [cognitive function is reduced in a red environment](https://pubmed.ncbi.nlm.nih.gov/20649469/).
 
 [Saturated Red](/en-US/docs/Web/Accessibility/Understanding_Colors_and_Luminance) is a special, dangerous case, and there are special tests for it. In addition to a red environment affecting the cognitive function of those with Traumatic Brain Injury, color in the red spectrum wavelength seems to require special concern and special tests. Dr. Gregg Vanderheiden, when testing the Photosensitive Epilepsy Analysis Tool, noted that the seizure rates were much higher than expected. They found that we are much more sensitive to saturated red flashing. (See the video, [The Photosensitive Epilepsy Analysis Tool](https://www.pbs.org/video/university-place-the-photosensitive-epilepsy-analysis-tool-ep-429/).)
@@ -152,7 +152,7 @@ To get a free copy of the University of Maryland's Photosensitive Epilepsy Analy
 
 ### The Harding Test
 
-As use of the PEAT tool is prohibited for commercial use, television programmers can use the Harding Test at [HardingTest.com](https://www.hardingtest.com/). The Harding Test is another gold standard. Television programmers in various countries must pass this test before being able to broadcast, so the group at [HardingTest.com](https://www.hardingtest.com/) provides both analysis and certification of video content.
+As use of the PEAT tool is prohibited for commercial use, television programmers can use the Harding Test at [HardingTest.com](https://hardingtest.com/). The Harding Test is another gold standard. Television programmers in various countries must pass this test before being able to broadcast, so the group at [HardingTest.com](https://hardingtest.com/) provides both analysis and certification of video content.
 
 ![Harding Flash and Pattern Analyzer.](screen_shot_2019-06-20_at_11.16.17_am.png)
 
@@ -543,12 +543,12 @@ EnvironmentMQ (Planned in Media Queries Level 5)
 
 - `inverted-colors`
   - : According to the section, [User Preference Media Features](https://drafts.csswg.org/mediaqueries-5/#mf-user-preferences), "The [`inverted-colors`](https://drafts.csswg.org/mediaqueries-5/#descdef-media-inverted-colors) media feature indicates whether the content is displayed normally, or whether colors have been inverted."
-- [`forced-colors`](https://drafts4.csswg.org/mediaqueries-5/#forced-colors)
+- [`forced-colors`](/en-US/docs/Web/CSS/@media/forced-colors)
   - : In [`forced-colors-mode`](https://drafts.csswg.org/css-color-adjust-1/#forced-colors-mode), the user agent enforces the user's preferred color palette on the page, overriding the author's chosen colors. From W3C's Draft document, Media Queries Level 5 section on forced-colors: _"The forced-colors media feature is used to detect if the user agent has enabled a [forced colors mode](https://drafts.csswg.org/css-color-adjust-1/#forced-colors-mode) where it enforces a user-chosen limited color palette on the page"._ The user will need to be made aware of this ability, and it will need to play nice with the appropriate value for the prefers-color-scheme media query.
 - `light-level`
   - : From W3C's Draft document, Media Queries Level 5 section on light-level: _"The [`light-level`](https://drafts.csswg.org/mediaqueries-5/#descdef-media-light-level) media feature is used to query about the ambient light-level in which the device is used, to allow the author to adjust style of the document in response."_ This will be a godsend to those who have motor-skills problems, or for some with cognitive difficulties, who cannot find the right "button" to change their screen settings.
 - prefers-contrast
-  - : From W3C's Draft document, Media Queries Level 5 section on [`prefers-contrast`](https://drafts4.csswg.org/mediaqueries-5/#prefers-contrast): _"The `prefers-contrast` media feature is used to detect if the user has requested the system increase or decrease the amount of contrast between adjacent colors. For example, many users have difficulty reading text that has a small difference in contrast to the text background and would prefer a larger contrast."_ Sometimes there can be such a thing as too much contrast; a halo effect around text can occur in such situations and actually reduce legibility. Putting the amount of contrast in the user's control is a definite gift for accessibility.
+  - : From W3C's Draft document, Media Queries Level 5 section on [`prefers-contrast`](/en-US/docs/Web/CSS/@media/prefers-contrast): _"The `prefers-contrast` media feature is used to detect if the user has requested the system increase or decrease the amount of contrast between adjacent colors. For example, many users have difficulty reading text that has a small difference in contrast to the text background and would prefer a larger contrast."_ Sometimes there can be such a thing as too much contrast; a halo effect around text can occur in such situations and actually reduce legibility. Putting the amount of contrast in the user's control is a definite gift for accessibility.
 
 #### `MediaQueryList` Interface
 

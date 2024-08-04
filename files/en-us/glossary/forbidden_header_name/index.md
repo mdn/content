@@ -44,4 +44,4 @@ Forbidden header names start with `Proxy-` or `Sec-`, or are one of the followin
 ## See also
 
 - Related glossary terms:
-- {{Glossary("Forbidden response header name")}}
+  - {{Glossary("Forbidden response header name")}}

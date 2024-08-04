@@ -6,7 +6,7 @@ page-type: guide
 
 {{DefaultAPISidebar("WebGL")}}
 
-WebGL, like its sister APIs (OpenGL and OpenGL ES), supports extensions. A complete list of extensions is available in the [khronos webgl extension registry](https://www.khronos.org/registry/webgl/extensions/).
+WebGL, like its sister APIs (OpenGL and OpenGL ES), supports extensions. A complete list of extensions is available in the [khronos webgl extension registry](https://registry.khronos.org/webgl/extensions/).
 
 > [!NOTE]
 > In WebGL, unlike in other GL APIs, extensions are only available if explicitly requested.

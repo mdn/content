@@ -22,7 +22,8 @@ One of the following value types can be used:
 - a named color, like `red` or `blue`
 - a hex code, like `#0000dd` or `#00d`
 
-** Note: ** The values accepted here are a limited subset of the CSS color values. Only {{cssxref("named-color")}} and 3- or 6-digit {{cssxref("hex-color")}} (with no alpha-channel). While all HTML color values are valid in CSS, this is not true in the other direction.
+> [!NOTE]
+> The values accepted here are a limited subset of the CSS color values. Only {{cssxref("named-color")}} and 3- or 6-digit {{cssxref("hex-color")}} (with no alpha-channel). While all HTML color values are valid in CSS, this is not true in the other direction.
 
 ## Examples
 

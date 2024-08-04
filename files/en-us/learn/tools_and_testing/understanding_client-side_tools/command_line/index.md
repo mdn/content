@@ -86,7 +86,7 @@ Better programs exist for providing a terminal experience on Windows, such as Po
 
 However, the best option for Windows in the modern day is the Windows Subsystem for Linux (WSL) — a compatibility layer for running Linux operating systems directly from inside Windows 10, allowing you to run a "true terminal" directly on Windows, without needing a virtual machine.
 
-This can be installed directly from the Windows store for free. You can find all the documentation you need in the [Windows Subsystem for Linux Documentation](https://docs.microsoft.com/windows/wsl/).
+This can be installed directly from the Windows store for free. You can find all the documentation you need in the [Windows Subsystem for Linux Documentation](https://learn.microsoft.com/en-us/windows/wsl/).
 
 ![a screenshot of the Windows subsystem for Linux documentation](wsl.png)
 
@@ -374,7 +374,7 @@ Once you've installed node, open up the terminal and run the following command t
 npm install --save-dev prettier
 ```
 
-You can now run the file locally using the [npx](https://docs.npmjs.com/cli/commands/npx) tool.
+You can now run the file locally using the [npx](https://docs.npmjs.com/cli/commands/npx/) tool.
 Running the command without any arguments, as with many other commands, will offer up usage and help information.
 Try this now:
 
