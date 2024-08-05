@@ -48,7 +48,16 @@ The promise is rejected when the following exception is encountered:
 
 ## Supported algorithms
 
-The Web Crypto API provides the following algorithms that can be used for signing (and signature verification):
+The Web Crypto API provides the following algorithms that can be used for signing and signature verification.
+
+RSASSA-PKCS1-v1_5, RSA-PSS, and ECDSA, are {{Glossary("public-key cryptography", "public-key cryptosystems")}} that use the private key for signing and the public key for verification.
+These systems all use a [digest algorithm](/en-US/docs/Web/API/SubtleCrypto/digest#supported_algorithms) to hash the message to a short fixed size before signing.
+Except for ECDSA (for which it is passed in the `algorithm` object), the choice of digest algorithm is passed into the {{domxref("SubtleCrypto.generateKey()", "generateKey()")}} or {{domxref("SubtleCrypto.importKey()", "importKey()")}} functions.
+Ed25519 is also a public-key cryptosystem, but does not use a digest algorithm.
+
+The HMAC algorithm differs from the others in that it is not a public-key cryptosystem: it uses the same algorithm and key for signing and for verification.
+This means that the verification key must be kept secret, which in turn means that this algorithm is not suitable for many signature use cases.
+It can be a good choice however when the signer and verifier are the same entity.
 
 ### RSASSA-PKCS1-v1_5
 
@@ -82,6 +91,13 @@ These values are concatenated together in this order.
 
 This encoding was also proposed by the [IEEE 1363-2000](https://standards.ieee.org/ieee/1363/2049/) standard, and is sometimes referred to as the IEEE P1363 format. It differs from the [X.509](https://www.itu.int/rec/T-REC-X.509) signature structure, which is the default format produced by some tools and libraries such as [OpenSSL](https://www.openssl.org).
 
+### Ed25519
+
+Ed25519 is a digital signature algorithm built on the [Curve25519](https://en.wikipedia.org/wiki/Curve25519) elliptic curve, which is part of the Edwards-Curve Digital Signature Algorithm (EdDSA) family of algorithms defined in {{rfc("8032")}}.
+
+This algorithm is used in {{Glossary("public-key cryptography", "public-key cryptosystems")}} that use the private key for signing and the public key for verification.
+Unlike some other such systems (RSASSA-PKCS1-v1_5, RSA-PSS, and ECDSA), it does not pass in a [digest](/en-US/docs/Web/API/SubtleCrypto/digest#supported_algorithms) of the message for signing.
+
 ### HMAC
 
 The HMAC algorithm calculates and verifies hash-based message authentication codes according to the [FIPS 198-1 standard](https://csrc.nist.gov/csrc/media/publications/fips/198/1/final/documents/fips-198-1_final.pdf).
@@ -91,13 +107,6 @@ The digest algorithm to use is specified in the [`HmacKeyGenParams`](/en-US/docs
 
 The HMAC algorithm uses the same algorithm and key for signing and for verification: this means that the verification key must be kept secret, which in turn means that this algorithm is not suitable for many signature use cases.
 It can be a good choice however when the signer and verifier are the same entity.
-
-### Ed25519
-
-Ed25519 is a digital signature algorithm built on the [Curve25519](https://en.wikipedia.org/wiki/Curve25519) elliptic curve, which is part of the Edwards-Curve Digital Signature Algorithm (EdDSA) family of algorithms defined in {{rfc("8032")}}.
-
-This algorithm is used in {{Glossary("public-key cryptography", "public-key cryptosystems")}} that use the private key for signing and the public key for verification.
-Unlike some other such systems (RSASSA-PKCS1-v1_5, RSA-PSS, and ECDSA), it does not pass in a [digest](/en-US/docs/Web/API/SubtleCrypto/digest#supported_algorithms) of the message for signing.
 
 ## Examples
 
