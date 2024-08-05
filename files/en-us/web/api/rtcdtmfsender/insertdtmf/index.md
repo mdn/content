@@ -10,7 +10,7 @@ browser-compat: api.RTCDTMFSender.insertDTMF
 
 The **`insertDTMF()`** method of the {{domxref("RTCDTMFSender")}} interface sends {{Glossary("DTMF")}} tones to the remote peer over the {{domxref("RTCPeerConnection")}}.
 
-Tones are sent asynchronously. Every time a tone starts or ends, a [`tonechange`](/en-US/docs/Web/API/RTCDTMFSender/tonechange_event) event is sent to the `RTCDTMFSender` .
+Tones are sent asynchronously. Every time a tone starts or ends, a [`tonechange`](/en-US/docs/Web/API/RTCDTMFSender/tonechange_event) event is sent to the `RTCDTMFSender`.
 
 You can call `insertDTMF()` at any time while the connection is active. Each call to `insertDTMF()` replaces any pending tones in the `toneBuffer`.
 You can abort sending queued tones by specifying an empty string (`""`) as the set of tones to play.
@@ -29,7 +29,7 @@ insertDTMF(tones, duration, interToneGap)
 - `tones`
   - : A string containing the DTMF codes to be transmitted to the recipient.
     Specifying an empty string as the `tones` parameter clears the tone buffer, aborting any currently queued tones.
-    A "," character inserts a two-second delay.
+    A comma character `,` in the string inserts a two-second delay. For example `"12,34"` will send tones for `1` and `2`, pause for two seconds, and then send `3` and `4`. Multiple commas add a longer delay, so `,,` will add four seconds.
 - `duration` {{optional_inline}}
   - : The amount of time, in milliseconds, that each DTMF tone should last.
     This value must be between 40 ms and 6000 ms (6 seconds), inclusive. The default is 100 ms.
