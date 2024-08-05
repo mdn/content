@@ -2,8 +2,6 @@
 title: IdentityCredentialRequestOptions
 slug: Web/API/IdentityCredentialRequestOptions
 page-type: web-api-interface
-status:
-  - experimental
 spec-urls: https://fedidcg.github.io/FedCM/#dictdef-identitycredentialrequestoptions
 ---
 
