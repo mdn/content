@@ -300,7 +300,12 @@ async function test(data) {
     const encoder = new TextEncoder();
     encodedData = encoder.encode(data);
 
-    log(`encodedData: ${encodedData}`);
+    // Log the first part of the encoded data
+    const shorterEncodedBuffer = new Uint8Array(encodedData.buffer, 0, 14);
+    log(
+      `encodedData: ${shorterEncodedBuffer}...[${encodedData.byteLength} bytes total]`,
+    );
+    //log(`encodedData: ${encodedData}`);
 
     // Sign the data using the private key.
     const signature = await crypto.subtle.sign(
@@ -312,7 +317,7 @@ async function test(data) {
     );
 
     // Log the first part of the signature data
-    const signatureBuffer = new Uint8Array(signature, 0, 8);
+    const signatureBuffer = new Uint8Array(signature, 0, 14);
     log(
       `signature: ${signatureBuffer}...[${signature.byteLength} bytes total]`,
     );
