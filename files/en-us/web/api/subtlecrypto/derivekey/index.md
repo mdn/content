@@ -8,15 +8,13 @@ browser-compat: api.SubtleCrypto.deriveKey
 
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}
 
-The **`deriveKey()`** method of the {{domxref("SubtleCrypto")}}
-interface can be used to derive a secret key from a master key.
+The **`deriveKey()`** method of the {{domxref("SubtleCrypto")}} interface can be used to derive a secret key from a master key.
 
-It takes as arguments some initial key material, the derivation algorithm to use, and
-the desired properties for the key to derive. It returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-which will be fulfilled with a {{domxref("CryptoKey")}} object representing the new key.
+It takes as arguments some initial key material, the derivation algorithm to use, and the desired properties for the key to derive.
+It returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) which will be fulfilled with a {{domxref("CryptoKey")}} object representing the new key.
 
-It's worth noting that the three key derivation algorithms you can use have quite
-different characteristics and are appropriate in quite different situations. See [Supported algorithms](#supported_algorithms) for some more detail on this.
+It's worth noting that the supported key derivation algorithms have quite different characteristics and are appropriate in quite different situations.
+See [Supported algorithms](#supported_algorithms) for some more detail on this.
 
 ## Syntax
 
