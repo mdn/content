@@ -129,7 +129,7 @@ The table below summarizes which algorithms are suitable for which cryptographic
   </thead>
   <tbody>
     <tr>
-      <th scope="row"><a href="/en-US/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5">RSASSA-PKCS1-v1_5></a></th>
+      <th scope="row"><a href="/en-US/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5">RSASSA-PKCS1-v1_5</a></th>
       <td>✓</td>
       <td></td>
       <td></td>

@@ -31,7 +31,7 @@ deriveKey(algorithm, baseKey, derivedKeyAlgorithm, extractable, keyUsages)
     - To use [X25519](#x25519), pass an [`EcdhKeyDeriveParams`](/en-US/docs/Web/API/EcdhKeyDeriveParams) object, specifying the string `X25519` as the `name` property.
 - `baseKey`
   - : A {{domxref("CryptoKey")}} representing the input to the derivation algorithm.
-    If `algorithm` is ECDH, then this will be the ECDH private key.
+    If `algorithm` is ECDH or X25519, then this will be the ECDH or X25519 private key.
     Otherwise it will be the initial key material for the derivation function: for example, for PBKDF2 it might be a password, imported as a `CryptoKey` using [`SubtleCrypto.importKey()`](/en-US/docs/Web/API/SubtleCrypto/importKey).
 - `derivedKeyAlgorithm`
   - : An object defining the algorithm the derived key will be used for:

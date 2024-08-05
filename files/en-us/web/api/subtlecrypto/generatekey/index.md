@@ -42,21 +42,21 @@ generateKey(algorithm, extractable, keyUsages)
     Possible values for array elements are:
 
     - `encrypt`
-      - : The key may be used to {{domxref("SubtleCrypto.encrypt()", "encrypt")}} messages.
+      - : The key may be used to {{domxref("SubtleCrypto.encrypt()", "encrypt", "", "nocode")}} messages.
     - `decrypt`
-      - : The key may be used to {{domxref("SubtleCrypto.decrypt()", "decrypt")}} messages.
+      - : The key may be used to {{domxref("SubtleCrypto.decrypt()", "decrypt", "", "nocode")}} messages.
     - `sign`
-      - : The key may be used to {{domxref("SubtleCrypto.sign()", "sign")}} messages.
+      - : The key may be used to {{domxref("SubtleCrypto.sign()", "sign", "", "nocode")}} messages.
     - `verify`
-      - : The key may be used to {{domxref("SubtleCrypto.verify()", "verify")}} signatures.
+      - : The key may be used to {{domxref("SubtleCrypto.verify()", "verify", "", "nocode")}} signatures.
     - `deriveKey`
-      - : The key may be used in {{domxref("SubtleCrypto.deriveKey()", "deriving a new key")}}.
+      - : The key may be used in {{domxref("SubtleCrypto.deriveKey()", "deriving a new key", "", "nocode")}}.
     - `deriveBits`
-      - : The key may be used in {{domxref("SubtleCrypto.deriveBits()", "deriving bits")}}.
+      - : The key may be used in {{domxref("SubtleCrypto.deriveBits()", "deriving bits", "", "nocode")}}.
     - `wrapKey`
-      - : The key may be used to {{domxref("SubtleCrypto.wrapKey()", "wrap a key")}}.
+      - : The key may be used to {{domxref("SubtleCrypto.wrapKey()", "wrap a key", "", "nocode")}}.
     - `unwrapKey`
-      - : The key may be used to {{domxref("SubtleCrypto.unwrapKey()", "unwrap a key")}}.
+      - : The key may be used to {{domxref("SubtleCrypto.unwrapKey()", "unwrap a key", "", "nocode")}}.
 
 ### Return value
 
@@ -145,7 +145,7 @@ let key = await window.crypto.subtle.generateKey(
 ### Ed25519 key generation
 
 This code generates an Ed25519 signing key pair.
-It is derived from [this source code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/sign-verify/ed25519.js), which you can [run live here](https://mdn.github.io/dom-examples/web-crypto/sign-verify/).
+It is derived from [this source code on GitHub](https://github.com/mdn/dom-examples/blob/main/web-crypto/sign-verify/ed25519.js), which you can [run live here](https://mdn.github.io/dom-examples/web-crypto/sign-verify/).
 
 ```html hidden
 <pre id="log"></pre>

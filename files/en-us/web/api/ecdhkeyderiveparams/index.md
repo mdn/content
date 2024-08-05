@@ -31,7 +31,7 @@ See the examples for {{domxref("SubtleCrypto.deriveKey()")}} and {{domxref("Subt
 
 ## Browser compatibility
 
-Browsers that support the "ECDH" and "X25519" algorithm for the {{domxref("SubtleCrypto.deriveKey()")}} method will support this type.
+Browsers that support the "ECDH" or "X25519" algorithm for the {{domxref("SubtleCrypto.deriveKey()")}} method will support this type.
 
 ## See also
 

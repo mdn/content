@@ -44,8 +44,8 @@ importKey(format, keyData, algorithm, extractable, keyUsages)
     - For [AES-CTR](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-ctr), [AES-CBC](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-cbc),
       [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm), and [AES-KW](/en-US/docs/Web/API/SubtleCrypto/wrapKey#aes-kw):
       pass the string identifying the algorithm or an object of the form `{ name: ALGORITHM }`, where `ALGORITHM` is the name of the algorithm.
-    - For [PBKDF2](/en-US/docs/Web/API/SubtleCrypto/deriveKey#pbkdf2): pass the string `PBKDF2`.
-    - For [HKDF](/en-US/docs/Web/API/SubtleCrypto/deriveKey#hkdf): pass the string `HKDF`.
+    - For [PBKDF2](/en-US/docs/Web/API/SubtleCrypto/deriveKey#pbkdf2): pass the string `PBKDF2` or an object of the form `{ name: "PBKDF2" }`.
+    - For [HKDF](/en-US/docs/Web/API/SubtleCrypto/deriveKey#hkdf): pass the string `HKDF` or an object of the form `{ name: "HKDF" }`.
     - For [Ed25519](/en-US/docs/Web/API/SubtleCrypto/sign#ed25519): pass the string `Ed25519` or an object of the form `{ name: "Ed25519" }`.
     - For [X25519](/en-US/docs/Web/API/SubtleCrypto/deriveKey#x25519): pass the string `X25519` or an object of the form `{ name: "X25519" }`.
 - `extractable`
