@@ -56,7 +56,7 @@ The best event to use to signal the end of a user's session is the [`visibilityc
 
 If you're specifically trying to detect page unload events, the `pagehide` event is the best option.
 
-See the [Page Lifecycle API](https://developer.chrome.com/blog/page-lifecycle-api/) guide for more information about how this event relates to other events in the page lifecycle.
+See the [Page Lifecycle API](https://developer.chrome.com/docs/web-platform/page-lifecycle-api) guide for more information about how this event relates to other events in the page lifecycle.
 
 ## Examples
 
@@ -95,6 +95,6 @@ window.onpagehide = (event) => {
 ## See also
 
 - The {{domxref("Window.pageshow_event", "pageshow")}} event.
-- [Page Lifecycle API](https://developer.chrome.com/blog/page-lifecycle-api/#developer-recommendations-for-each-state) gives best-practices guidance on handling page lifecycle behavior in your web applications.
+- [Page Lifecycle API](https://developer.chrome.com/docs/web-platform/page-lifecycle-api#developer-recommendations-for-each-state) gives best-practices guidance on handling page lifecycle behavior in your web applications.
 - [PageLifecycle.js](https://github.com/GoogleChromeLabs/page-lifecycle): a JavaScript library that deals with cross-browser inconsistencies in page lifecycle behavior.
 - [Back/forward cache](https://web.dev/articles/bfcache) explains what the back/forward cache is, and its implications for various page lifecycle events.
