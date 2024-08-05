@@ -69,7 +69,3 @@ log.textContent += `The 2nd '@font-feature-values' family: "${fontTwo.fontFamily
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
--

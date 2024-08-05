@@ -53,7 +53,7 @@ are permitted by the DTMF standard.
 #### Using tone buffer strings
 
 For example, if you're writing code to control a voicemail system by sending DTMF
-codes, you might use a string such as "\*,1,5555". In this example, we would send "\*" to
+codes, you might use a string such as `"*,1,5555"`. In this example, we would send `"*"` to
 request access to the VM system, then, after a pause, send a "1" to start playback of
 voicemail messages, then after a pause, dial "5555" as a PIN number to open the
 messages.

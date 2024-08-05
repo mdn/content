@@ -2278,7 +2278,7 @@ Gecko defines a lot of `keyCode` values in `KeyboardEvent` for making the mappin
       <td>0x0E (14)</td>
       <td>
         Reserved, but not used. {{deprecated_inline}} (Dropped, see
-        [Firefox bug 969247](https://bugzil.la/969247).)
+        <a href="https://bugzil.la/969247">Firefox bug 969247</a>.)
       </td>
     </tr>
     <tr>
@@ -3308,4 +3308,4 @@ On Windows, some values of virtual keycode are defined (reserved) for OEM specif
 
 Starting Gecko 21 (and older than 15), OEM specific key values are available on the keyCode attribute only on Windows. So they are not useful for usual web applications. They are useful only for intranet applications or in similar situations.
 
-See "[Manufacturer-specific Virtual-Key Codes (Windows CE 5.0)](<https://docs.microsoft.com/previous-versions/windows/embedded/aa452679(v=msdn.10)>)" in MSDN for the detail.
+See "[Manufacturer-specific Virtual-Key Codes (Windows CE 5.0)](<https://learn.microsoft.com/en-us/previous-versions/windows/embedded/aa452679(v=msdn.10)>)" in MSDN for the detail.

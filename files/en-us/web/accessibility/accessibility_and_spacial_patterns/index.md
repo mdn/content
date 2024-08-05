@@ -72,7 +72,7 @@ The nature of space can change depending upon what MIME type is being used, and 
 
 ### Math
 
-- [Spatial Reasoning: Why Math Talk is About More Than Numbers](https://dreme.stanford.edu/news/spatial-reasoning-why-math-talk-about-more-numbers)
+- [Spatial Reasoning: Why Math Talk is About More Than Numbers](https://dreme.stanford.edu/news/spatial-reasoning-why-math-talk-is-about-more-than-numbers/)
 
 ### Scientific Literature
 

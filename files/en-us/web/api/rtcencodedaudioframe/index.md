@@ -17,7 +17,7 @@ The `data` property gives access to the encoded frame data as a buffer, which mi
 
 ## Instance properties
 
-- {{domxref("RTCEncodedAudioFrame.timestamp")}} {{ReadOnlyInline}}
+- {{domxref("RTCEncodedAudioFrame.timestamp")}} {{ReadOnlyInline}} {{deprecated_inline}} {{non-standard_inline}}
   - : Returns the timestamp at which sampling of the frame started.
 - {{domxref("RTCEncodedAudioFrame.data")}}
   - : Return a buffer containing the encoded frame data.
