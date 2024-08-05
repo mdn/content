@@ -69,7 +69,7 @@ So above, we talked about what client-side JavaScript APIs are, and how they rel
 
 ## What can APIs do?
 
-There are a huge number of APIs available in modern browsers that allow you to do a wide variety of things in your code. You can see this by taking a look at the [MDN APIs index page](/en-US/docs/Web/API).
+There is a huge number of APIs available in modern browsers that allow you to do a wide variety of things in your code. You can see this by taking a look at the [MDN APIs index page](/en-US/docs/Web/API).
 
 ### Common browser APIs
 
