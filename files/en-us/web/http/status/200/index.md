@@ -32,7 +32,7 @@ It is more common to see {{HTTPStatus("201")}} `Created` if the resource is uplo
 ### Receiving a `200 OK` for a `GET` request
 
 In this example, a successful `GET` request to `https://example.com` returns a `200 OK` response.
-The response includes representation headers and a message body with the HTML resource:
+The response includes representation headers and a message body with the HTML content:
 
 ```http
 HTTP/1.1 200 OK
