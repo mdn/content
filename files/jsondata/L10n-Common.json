@@ -218,6 +218,9 @@
     "zh-CN": "教程",
     "zh-TW": "教學"
   },
+  "Types": {
+    "en-US": "Types"
+  },
   "listSeparator": {
     "en-US": ", ",
     "es": ", ",
