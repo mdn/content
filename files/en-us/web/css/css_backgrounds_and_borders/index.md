@@ -116,7 +116,7 @@ To see the code for this sample, [view the source on GitHub](https://github.com/
 - {{cssxref("border-start-start-radius")}} property
 - {{cssxref("border-start-end-radius")}} property
 - {{cssxref("border-end-start-radius")}} property
-- {{cssxref("border-end-end-radius ")}} property
+- {{cssxref("border-end-end-radius")}} property
 
 - {{cssxref("box-sizing")}} property
 - {{cssxref("box-decoration-break")}} property

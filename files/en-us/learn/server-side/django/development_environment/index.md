@@ -48,7 +48,8 @@ Django is extremely flexible in terms of how and where it can be installed and c
 
 Each of these options requires a slightly different configuration and setup. The following subsections explain some of your choices. For the rest of the article, we'll show you how to set up Django on a small number of operating systems, and that setup will be assumed throughout the rest of this module.
 
-> **Note:** Other possible installation options are covered in the official Django documentation. We link to the [appropriate documents below](#see_also).
+> [!NOTE]
+> Other possible installation options are covered in the official Django documentation. We link to the [appropriate documents below](#see_also).
 
 #### What operating systems are supported?
 
@@ -80,13 +81,15 @@ Django officially supports the PostgreSQL, MariaDB, MySQL, Oracle, and SQLite da
 
 For this article (and most of this module) we will be using the _SQLite_ database, which stores its data in a file. SQLite is intended for use as a lightweight database and can't support a high level of concurrency. It is, however, an excellent choice for applications that are primarily read-only.
 
-> **Note:** Django is configured to use SQLite by default when you start your website project using the standard tools (_django-admin_). It's a great choice when you're getting started because it requires no additional configuration or setup.
+> [!NOTE]
+> Django is configured to use SQLite by default when you start your website project using the standard tools (_django-admin_). It's a great choice when you're getting started because it requires no additional configuration or setup.
 
 #### Installing system-wide or in a Python virtual environment?
 
 When you install Python3 you get a single global environment that is shared by all Python3 code. While you can install whatever Python packages you like in the environment, you can only install one particular version of each package at a time.
 
-> **Note:** Python applications installed into the global environment can potentially conflict with each other (i.e. if they depend on different versions of the same package).
+> [!NOTE]
+> Python applications installed into the global environment can potentially conflict with each other (i.e. if they depend on different versions of the same package).
 
 If you install Django into the default/global environment then you will only be able to target one version of Django on the computer. This can be a problem if you want to create new websites (using the latest version of Django) while still maintaining websites that rely on older versions.
 
@@ -101,7 +104,8 @@ You will also need the [Python Package Index](https://pypi.org/) tool — _pip3_
 
 This section briefly explains how you can check what versions of Python are present, and install new versions as needed, for Ubuntu Linux 20.04, macOS, and Windows 10.
 
-> **Note:** Depending on your platform, you may also be able to install Python/pip from the operating system's own package manager or via other mechanisms. For most platforms, you can download the required installation files from <https://www.python.org/downloads/> and install them using the appropriate platform-specific method.
+> [!NOTE]
+> Depending on your platform, you may also be able to install Python/pip from the operating system's own package manager or via other mechanisms. For most platforms, you can download the required installation files from <https://www.python.org/downloads/> and install them using the appropriate platform-specific method.
 
 ### Ubuntu 22.04
 
@@ -120,7 +124,8 @@ You can install _pip3_ in the bash terminal using:
 sudo apt install python3-pip
 ```
 
-> **Note:** Python 3.10 is the oldest version [supported by Django 5.0](https://docs.djangoproject.com/en/5.0/faq/install/#what-python-version-can-i-use-with-django).
+> [!NOTE]
+> Python 3.10 is the oldest version [supported by Django 5.0](https://docs.djangoproject.com/en/5.0/faq/install/#what-python-version-can-i-use-with-django).
 > You don't _need_ to use the latest version of Python for this tutorial, but if you want to there are instructions on the internet.
 
 ### macOS
@@ -178,7 +183,8 @@ You can list installed packages as shown:
 py -3 -m pip list
 ```
 
-> **Note:** The installer should set up everything you need for the above command to work.
+> [!NOTE]
+> The installer should set up everything you need for the above command to work.
 > If however you get a message that Python cannot be found, you may have forgotten to add it to your system path.
 > You can do this by running the installer again, selecting "Modify", and checking the box labeled "Add Python to environment variables" on the second page.
 
@@ -234,7 +240,8 @@ export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
 ```
 
-> **Note:** The `VIRTUALENVWRAPPER_PYTHON` and `VIRTUALENVWRAPPER_VIRTUALENV_ARGS` variables point to the normal installation location for Python 3, and `source /usr/local/bin/virtualenvwrapper.sh` points to the normal location of the `virtualenvwrapper.sh` script. If the _virtualenv_ doesn't work when you test it, one thing to check is that Python and the script are in the expected location (and then change the startup file appropriately).
+> [!NOTE]
+> The `VIRTUALENVWRAPPER_PYTHON` and `VIRTUALENVWRAPPER_VIRTUALENV_ARGS` variables point to the normal installation location for Python 3, and `source /usr/local/bin/virtualenvwrapper.sh` points to the normal location of the `virtualenvwrapper.sh` script. If the _virtualenv_ doesn't work when you test it, one thing to check is that Python and the script are in the expected location (and then change the startup file appropriately).
 >
 > You can find the correct locations for your system using the commands `which virtualenvwrapper.sh` and `which python3`.
 
@@ -277,7 +284,8 @@ export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
 ```
 
-> **Note:** The `VIRTUALENVWRAPPER_PYTHON` variable points to the normal installation location for Python 3, and `source /usr/local/bin/virtualenvwrapper.sh` points to the normal location of the `virtualenvwrapper.sh` script. If the _virtualenv_ doesn't work when you test it, one thing to check is that Python and the script are in the expected location (and then change the startup file appropriately).
+> [!NOTE]
+> The `VIRTUALENVWRAPPER_PYTHON` variable points to the normal installation location for Python 3, and `source /usr/local/bin/virtualenvwrapper.sh` points to the normal location of the `virtualenvwrapper.sh` script. If the _virtualenv_ doesn't work when you test it, one thing to check is that Python and the script are in the expected location (and then change the startup file appropriately).
 >
 > For example, one installation test on macOS ended up with the following lines being necessary in the startup file:
 >
@@ -298,7 +306,8 @@ source ~/.bash_profile
 
 At this point, you may see a bunch of scripts being run (the same scripts as for the Ubuntu installation). You should now be able to create a new virtual environment with the `mkvirtualenv` command.
 
-> **Note:** If you can't find the startup file to edit in the finder, you can also open this in the terminal using nano.
+> [!NOTE]
+> If you can't find the startup file to edit in the finder, you can also open this in the terminal using nano.
 >
 > Assuming you're using bash, the commands look something like this:
 >
@@ -341,7 +350,8 @@ virtualenvwrapper.user_scripts creating /home/ubuntu/.virtualenvs/t_env7/bin/get
 
 Now you're inside the virtual environment you can install Django and start developing.
 
-> **Note:** From now on in this article (and indeed the module) please assume that any commands are run within a Python virtual environment like the one we set up above.
+> [!NOTE]
+> From now on in this article (and indeed the module) please assume that any commands are run within a Python virtual environment like the one we set up above.
 
 ### Using a virtual environment
 
@@ -374,7 +384,8 @@ python3 -m django --version
 py -3 -m django --version
 ```
 
-> **Note:** If the above Windows command does not show a django module present, try:
+> [!NOTE]
+> If the above Windows command does not show a django module present, try:
 >
 > ```bash
 > py -m django --version
@@ -384,7 +395,8 @@ py -3 -m django --version
 > Try omitting the `-3` modifier if you encounter any problems with commands.
 > In Linux/macOS, the command is `python3.`
 
-> **Warning:** The rest of this **module** uses the _Linux_ command for invoking Python 3 (`python3`). If you're working on _Windows_ replace this prefix with: `py -3`
+> [!WARNING]
+> The rest of this **module** uses the _Linux_ command for invoking Python 3 (`python3`). If you're working on _Windows_ replace this prefix with: `py -3`
 
 ## Source code management with Git and GitHub
 
@@ -393,9 +405,10 @@ Source Code Management (SCM) and versioning tools allow you to reliably store an
 There are many different SCM tools, including git, Mercurial, Perforce, SVN (Subversion), CVS (Concurrent Versions System), etc., and cloud SCM hosting sources such as Bitbucket, GitHub, and GitLab.
 For this tutorial we'll hosting our code on [GitHub](https://github.com/), one of the most popular cloud based source code hosting services, and using the **git** tool to manage our source code locally and send it to GitHub when needed.
 
-> **Note:** Using SCM tools is good software development practice!
+> [!NOTE]
+> Using SCM tools is good software development practice!
 > Ths instructions provide a basic introduction to git and GitHub.
-> To learn more, see [Learning Git](https://docs.github.com/en/get-started/quickstart/git-and-github-learning-resources).
+> To learn more, see [Learning Git](https://docs.github.com/en/get-started/start-your-journey/git-and-github-learning-resources).
 
 ### Key concepts
 
@@ -428,7 +441,8 @@ The steps are:
    - Enter a new repository description: "Local Library website written in Django".
    - Select "Public" for the repository (the default).
 
-     > **Warning:** This will make _all_ source code visible.
+     > [!WARNING]
+     > This will make _all_ source code visible.
      > Remember not to store credentials or other sensitive material in your repo unless it is private.
 
    - Choose **Python** in the _Add .gitignore_ selection list.
@@ -470,7 +484,8 @@ This is a useful change to make, but mostly we're doing it to show you how to pu
 
 1. In the command prompt/terminal we first "fetch" (get) and then pull (get and merge into the current branch) the latest version of the source from GitHub:
 
-   > **Note:** This step isn't strictly necessary as we have just cloned the source and know it is up to date.
+   > [!NOTE]
+   > This step isn't strictly necessary as we have just cloned the source and know it is up to date.
    > However in general you should update your sources from GitHub before making changes.
 
    ```bash
@@ -580,7 +595,8 @@ python3 manage.py runserver
 py -3 manage.py runserver
 ```
 
-> **Note:** You can ignore the warnings about "unapplied migration(s)" at this point!
+> [!NOTE]
+> You can ignore the warnings about "unapplied migration(s)" at this point!
 
 Once the server is running you can view the site by navigating to the following URL on your local web browser: `http://127.0.0.1:8000/`. You should see a site that looks like this:
 

@@ -60,7 +60,7 @@ In this example pressing the button runs some code. First, it changes the text o
 
 ### Without a variable
 
-To understand why this is so useful, let's think about how we'd write this example without using a variable. It would end up looking something like this:
+To understand why this is so useful, let's think about how we'd write this example without using a variable to store the count. It would end up looking something like this:
 
 ```html example-bad
 <button id="button_B">Press me</button>
@@ -85,7 +85,8 @@ Variables just make sense, and as you learn more about JavaScript they will star
 
 One special thing about variables is that they can contain just about anything — not just strings and numbers. Variables can also contain complex data and even entire functions to do amazing things. You'll learn more about this as you go along.
 
-> **Note:** We say variables contain values. This is an important distinction to make. Variables aren't the values themselves; they are containers for values. You can think of them being like little cardboard boxes that you can store things in.
+> [!NOTE]
+> We say variables contain values. This is an important distinction to make. Variables aren't the values themselves; they are containers for values. You can think of them being like little cardboard boxes that you can store things in.
 
 ![A screenshot of three 3-dimensional cardboard boxes demonstrating examples of JavaScript variables. Each box contains hypothetical values that represent various JavaScript data types. The sample values are "Bob", true and 35 respectively.](boxes.png)
 
@@ -100,7 +101,8 @@ let myAge;
 
 Here we're creating two variables called `myName` and `myAge`. Try typing these lines into your web browser's console. After that, try creating a variable (or two) with your own name choices.
 
-> **Note:** In JavaScript, all code instructions should end with a semicolon (`;`) — your code may work correctly for single lines, but probably won't when you are writing multiple lines of code together. Try to get into the habit of including it.
+> [!NOTE]
+> In JavaScript, all code instructions should end with a semicolon (`;`) — your code may work correctly for single lines, but probably won't when you are writing multiple lines of code together. Try to get into the habit of including it.
 
 You can test whether these values now exist in the execution environment by typing just the variable's name, e.g.
 
@@ -115,7 +117,8 @@ They currently have no value; they are empty containers. When you enter the vari
 scoobyDoo;
 ```
 
-> **Note:** Don't confuse a variable that exists but has no defined value with a variable that doesn't exist at all — they are very different things. In the box analogy you saw above, not existing would mean there's no box (variable) for a value to go in. No value defined would mean that there is a box, but it has no value inside it.
+> [!NOTE]
+> Don't confuse a variable that exists but has no defined value with a variable that doesn't exist at all — they are very different things. In the box analogy you saw above, not existing would mean there's no box (variable) for a value to go in. No value defined would mean that there is a box, but it has no value inside it.
 
 ## Initializing a variable
 
@@ -168,7 +171,8 @@ logName();
 var myName;
 ```
 
-> **Note:** This won't work when typing individual lines into a JavaScript console, just when running multiple lines of JavaScript in a web document.
+> [!NOTE]
+> This won't work when typing individual lines into a JavaScript console, just when running multiple lines of JavaScript in a web document.
 
 This works because of **hoisting** — read [var hoisting](/en-US/docs/Web/JavaScript/Reference/Statements/var#hoisting) for more detail on the subject.
 
@@ -199,7 +203,8 @@ Again, this is a sensible language decision. There is no reason to redeclare var
 
 For these reasons and more, we recommend that you use `let` in your code, rather than `var`. Unless you are explicitly writing support for ancient browsers, there is no longer any reason to use `var` as all modern browsers have supported `let` since 2015.
 
-> **Note:** If you are trying this code in your browser's console, prefer to copy & paste each of the code blocks here as a whole. There's a [feature in Chrome's console](https://goo.gle/devtools-const-repl) where variable re-declarations with `let` and `const` are allowed:
+> [!NOTE]
+> If you are trying this code in your browser's console, prefer to copy & paste each of the code blocks here as a whole. There's a [feature in Chrome's console](https://docs.google.com/document/d/1NP_FnHr4WCZRp7exgUklvNiXrH3nujcfwvp2pzMQ8-0/edit#heading=h.7y5hynxk52e9) where variable re-declarations with `let` and `const` are allowed:
 >
 > ```plain
 > > let myName = "Chris";
@@ -232,7 +237,8 @@ You can call a variable pretty much anything you like, but there are limitations
 - Variables are case sensitive — so `myage` is a different variable from `myAge`.
 - One last point: you also need to avoid using JavaScript reserved words as your variable names — by this, we mean the words that make up the actual syntax of JavaScript! So, you can't use words like `var`, `function`, `let`, and `for` as variable names. Browsers recognize them as different code items, and so you'll get errors.
 
-> **Note:** You can find a fairly complete list of reserved keywords to avoid at [Lexical grammar — keywords](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords).
+> [!NOTE]
+> You can find a fairly complete list of reserved keywords to avoid at [Lexical grammar — keywords](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#keywords).
 
 Good name examples:
 

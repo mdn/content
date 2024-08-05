@@ -14,7 +14,8 @@ The **`delete()`** method of the
 {{domxref("ContentIndex")}} interface unregisters an item from the currently indexed
 content.
 
-> **Note:** Calling `delete()` only affects the index. It does not delete anything
+> [!NOTE]
+> Calling `delete()` only affects the index. It does not delete anything
 > from the {{domxref('Cache')}}.
 
 ## Syntax

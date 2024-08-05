@@ -6,7 +6,7 @@ page-type: guide
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
 
-Cross-Origin Resource Sharing (CORS) is handled using [`Access-Control-Allow-Origin`](/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin) and related headers. `Access-Control-Allow-Origin` defines the non-same origins that are allowed to make requests to pages on your domain (i.e., via [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) or [`fetch()`](/en-US/docs/Web/API/fetch)).
+Cross-Origin Resource Sharing (CORS) is handled using [`Access-Control-Allow-Origin`](/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin) and related headers. `Access-Control-Allow-Origin` defines the non-same origins that are allowed to make requests to pages on your domain (i.e., via [`XMLHttpRequest`](/en-US/docs/Web/API/XMLHttpRequest) or [`fetch()`](/en-US/docs/Web/API/Window/fetch)).
 
 ## Problem
 
@@ -30,7 +30,8 @@ Allow any site to read the contents of a JavaScript library:
 Access-Control-Allow-Origin: *
 ```
 
-> **Note:** This setting is required for [Subresource integrity](/en-US/docs/Web/Security/Practical_implementation_guides/SRI) to work.
+> [!NOTE]
+> This setting is required for [Subresource integrity](/en-US/docs/Web/Security/Practical_implementation_guides/SRI) to work.
 
 Allow `https://random-dashboard.example.org` to read the returned results of an API:
 

@@ -21,9 +21,10 @@ If you are not sure about committing to learning web development in-depth and wa
 - Frameworks and tooling
   - : After mastering the essentials of vanilla HTML, CSS, and JavaScript, you should learn about [client-side web development tools](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools), and then consider digging into [client-side JavaScript frameworks](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks). You should also consider learning the basic concepts of [server-side website programming](/en-US/docs/Learn/Server-side).
 
-> **Note:** Our [glossary](/en-US/docs/Glossary) provides terminology definitions. Besides, if you have a specific question about web development, our [Common questions](/en-US/docs/Learn/Common_questions) section may have something to help you.
+> [!NOTE]
+> Our [glossary](/en-US/docs/Glossary) provides terminology definitions. Besides, if you have a specific question about web development, our [Common questions](/en-US/docs/Learn/Common_questions) section may have something to help you.
 
-> **Callout:**
+> [!CALLOUT]
 >
 > #### Looking to become a front-end web developer?
 >
@@ -69,7 +70,8 @@ There are patterns that make it easier to find these resources, for example:
 - The **test your skills** task linked above has a marking guide and resources available at <https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/tasks/conditionals>.
 - The **assessment** linked above has a marking guide and resources available at <https://github.com/mdn/learning-area/tree/main/javascript/building-blocks/gallery>.
 
-> **Note:** Most of the marking guides and other resources for the tasks and assessments are available in [`mdn/learning-area`](https://github.com/mdn/learning-area/), although some are in [`mdn/css-examples`](https://github.com/mdn/css-examples/tree/main/learn).
+> [!NOTE]
+> Most of the marking guides and other resources for the tasks and assessments are available in [`mdn/learning-area`](https://github.com/mdn/learning-area/), although some are in [`mdn/css-examples`](https://github.com/mdn/css-examples/tree/main/learn).
 
 ## Getting our code examples
 

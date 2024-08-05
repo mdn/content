@@ -54,7 +54,8 @@ Our `feedback` values cannot start with zero, otherwise on the first pass nothin
 const feedBackward = [1.0126964558, -1.9991880801, 0.9873035442];
 ```
 
-> **Note:** These values are calculated based on the lowpass filter specified in the [filter characteristics of the Web Audio API specification](https://webaudio.github.io/web-audio-api/#filters-characteristics). As this filter node gains more popularity we should be able to collate more coefficient values.
+> [!NOTE]
+> These values are calculated based on the lowpass filter specified in the [filter characteristics of the Web Audio API specification](https://webaudio.github.io/web-audio-api/#filters-characteristics). As this filter node gains more popularity we should be able to collate more coefficient values.
 
 ## Using an IIRFilter in an audio graph
 

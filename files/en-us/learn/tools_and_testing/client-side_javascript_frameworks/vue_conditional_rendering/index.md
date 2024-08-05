@@ -123,7 +123,8 @@ We can start by creating a separate component to handle the editing functionalit
 </style>
 ```
 
-> **Note:** Walk through the above code then read the below description to make sure you understand everything the component is doing before moving on. This is a useful way to help reinforce everything you've learned so far.
+> [!NOTE]
+> Walk through the above code then read the below description to make sure you understand everything the component is doing before moving on. This is a useful way to help reinforce everything you've learned so far.
 
 This code sets up the core of the edit functionality. We create a form with an `<input>` field for editing the name of our to-do.
 

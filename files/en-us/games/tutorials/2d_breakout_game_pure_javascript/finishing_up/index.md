@@ -291,7 +291,8 @@ document.getElementById("runButton").addEventListener("click", function () {
 
 {{embedlivesample("compare_your_code", 600, 360)}}
 
-> **Note:**: Try changing the number of lives and the angle the ball bounces off the paddle.
+> [!NOTE]
+> Try changing the number of lives and the angle the ball bounces off the paddle.
 
 ## Game over - for now!
 

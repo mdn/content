@@ -12,7 +12,8 @@ browser-compat: api.NavigatorUAData.getHighEntropyValues
 
 The **`getHighEntropyValues()`** method of the {{domxref("NavigatorUAData")}} interface is a {{jsxref("Promise")}} that resolves with a dictionary object containing the _high entropy_ values the user-agent returns.
 
-> **Note:** The terms _high entropy_ and _low entropy_ refer to the amount of information these values reveal about the browser.
+> [!NOTE]
+> The terms _high entropy_ and _low entropy_ refer to the amount of information these values reveal about the browser.
 > The values returned as properties are deemed low entropy, and unlikely to identify a user.
 > The values returned by `getHighEntropyValues()` could potentially reveal more information.
 > These values are therefore retrieved via a {{jsxref("Promise")}}, allowing time for the browser to request user permission, or make other checks.

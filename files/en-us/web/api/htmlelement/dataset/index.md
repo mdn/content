@@ -13,7 +13,8 @@ of the {{DOMxRef("HTMLElement")}} interface provides read/write access to [custo
 (`data-*`) on elements. It exposes a map of strings
 ({{domxref("DOMStringMap")}}) with an entry for each `data-*` attribute.
 
-> **Note:** The `dataset` property itself can be read, but not directly written.
+> [!NOTE]
+> The `dataset` property itself can be read, but not directly written.
 > Instead, all writes must be to the individual properties within the
 > `dataset`, which in turn represent the data attributes.
 

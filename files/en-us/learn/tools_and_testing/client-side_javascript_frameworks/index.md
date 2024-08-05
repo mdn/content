@@ -36,7 +36,8 @@ Your code will be richer and more professional as a result, and you'll be able t
 
 ## React tutorials
 
-> **Note:** React tutorials last tested in January 2023, with React/ReactDOM 18.2.0 and create-react-app 5.0.1.
+> [!NOTE]
+> React tutorials last tested in January 2023, with React/ReactDOM 18.2.0 and create-react-app 5.0.1.
 >
 > If you need to check your code against our version, you can find a finished version of the sample React app code in our [todo-react repository](https://github.com/mdn/todo-react). For a running live version, see <https://mdn.github.io/todo-react/>.
 
@@ -57,7 +58,8 @@ Your code will be richer and more professional as a result, and you'll be able t
 
 ## Ember tutorials
 
-> **Note:** Ember tutorials last tested in May 2020, with Ember/Ember CLI version 3.18.0.
+> [!NOTE]
+> Ember tutorials last tested in May 2020, with Ember/Ember CLI version 3.18.0.
 >
 > If you need to check your code against our version, you can find a finished version of the sample Ember app code in the [ember-todomvc-tutorial repository](https://github.com/NullVoxPopuli/ember-todomvc-tutorial/tree/master/steps/00-finished-todomvc/todomvc). For a running live version, see <https://nullvoxpopuli.github.io/ember-todomvc-tutorial/> (this also includes a few additional features not covered in the tutorial).
 
@@ -76,7 +78,8 @@ Your code will be richer and more professional as a result, and you'll be able t
 
 ## Vue tutorials
 
-> **Note:** Vue tutorial last tested in January 2023, with Vue 3.2.45.
+> [!NOTE]
+> Vue tutorial last tested in January 2023, with Vue 3.2.45.
 >
 > If you need to check your code against our version, you can find a finished version of the sample Vue app code in our [todo-vue repository](https://github.com/mdn/todo-vue). For a running live version, see <https://mdn.github.io/todo-vue/>.
 
@@ -101,7 +104,8 @@ Your code will be richer and more professional as a result, and you'll be able t
 
 ## Svelte tutorials
 
-> **Note:** Svelte tutorials last tested in August 2020, with Svelte 3.24.1.
+> [!NOTE]
+> Svelte tutorials last tested in August 2020, with Svelte 3.24.1.
 >
 > If you need to check your code against our version, you can find a finished version of the sample Svelte app code as it should be after each article, in our [mdn-svelte-tutorial](https://github.com/opensas/mdn-svelte-tutorial) repo. For a running live version, see our Svelte REPL at <https://svelte.dev/repl/378dd79e0dfe4486a8f10823f3813190?version=3.23.2>.
 
@@ -124,7 +128,8 @@ Your code will be richer and more professional as a result, and you'll be able t
 
 ## Angular tutorials
 
-> **Note:** Angular tutorials last tested in April 2021, with Angular CLI (NG) 11.2.5.
+> [!NOTE]
+> Angular tutorials last tested in April 2021, with Angular CLI (NG) 11.2.5.
 
 - [1. Getting started with Angular](/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
   - : In this article we look at what Angular has to offer, install the prerequisites and set up a sample app, and look at Angular's basic architecture.

@@ -34,7 +34,7 @@ If the desired resource width is not known at the time of the request or the res
 
 If the `Width` header appears more than once in a message the last occurrence is used.
 
-> **Note:**
+> [!NOTE]
 >
 > - Client Hints are accessible only on secure origins (via TLS).
 > - A server has to opt in to receive the `Width` header from the client, by sending the {{HTTPHeader("Accept-CH")}} response header.

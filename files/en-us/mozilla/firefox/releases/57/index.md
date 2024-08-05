@@ -12,7 +12,8 @@ This article provides information about the changes in Firefox 57 (a.k.a. Firefo
 
 Firefox 57 has been given the release name **Quantum**, after the [Firefox Quantum](https://wiki.mozilla.org/Quantum) engineering project that has aimed to rebuild Firefox from the ground up, bringing with it major performance, stability, and visual improvements. This is the first version of Firefox to ship some of these improvements, so we wanted to mark the occasion.
 
-> **Note:** To read more about the Quantum features in this release, see [Firefox Quantum Developer Edition: the fastest Firefox ever with Photon UI and better tooling](https://hacks.mozilla.org/2017/09/firefox-quantum-developer-edition-fastest-firefox-ever/) by Dan Callahan.
+> [!NOTE]
+> To read more about the Quantum features in this release, see [Firefox Quantum Developer Edition: the fastest Firefox ever with Photon UI and better tooling](https://hacks.mozilla.org/2017/09/firefox-quantum-developer-edition-fastest-firefox-ever/) by Dan Callahan.
 
 [Firefox's new parallel CSS engine](https://hacks.mozilla.org/2017/08/inside-a-super-fast-css-engine-quantum-css-aka-stylo/) — also known as **Quantum CSS** or **Stylo** — is enabled by default in Firefox 57 for desktop, with Mobile versions of Firefox to follow later on. Developers shouldn't notice anything significantly different, aside from a whole host of performance improvements. There are however a number of minor functional differences in Stylo, implemented to fix non-standard Gecko behavior that should be eliminated. We will report on such differences on reference pages and in the release notes as appropriate (see [Quantum CSS notes](#quantum_css_notes)).
 
@@ -69,7 +70,7 @@ _No changes._
 #### New APIs
 
 - The {{DOMxRef("PerformanceObserver")}} API is now enabled by default ([Firefox bug 1386021](https://bugzil.la/1386021)).
-- The {{DOMxRef("AbortController")}} and {{DOMxRef("AbortSignal")}} interfaces (known as the Abort API) have been added, allowing DOM requests (such as [fetch requests](/en-US/docs/Web/API/fetch)) to be aborted if desired ([Firefox bug 1378342](https://bugzil.la/1378342)).
+- The {{DOMxRef("AbortController")}} and {{DOMxRef("AbortSignal")}} interfaces (known as the Abort API) have been added, allowing DOM requests (such as [fetch requests](/en-US/docs/Web/API/Window/fetch)) to be aborted if desired ([Firefox bug 1378342](https://bugzil.la/1378342)).
 - \[2] The [Storage API](/en-US/docs/Web/API/Storage_API) is implemented and enabled by default ([Firefox bug 1399038](https://bugzil.la/1399038)).
 
 #### DOM
@@ -89,7 +90,8 @@ _No changes._
 
 - Support for messages of arbitrary size (up to 1GiB, although 256kiB is more interoperable) is now supported on {{DOMxRef("RTCDataChannel")}} through use of the end-of-record (EOR) flag on SCTP messages. See [Understanding message size limits](/en-US/docs/Web/API/WebRTC_API/Using_data_channels#understanding_message_size_limits) for more information ([Firefox bug 979417](https://bugzil.la/979417)).
 
-  > **Note:** Because Firefox doesn't yet support the SCTP ndata protocol that provides the ability to interleave SCTP messages from multiple sources, sending large data objects can cause significant delays on all other SCTP traffic. See [Firefox bug 1381145](https://bugzil.la/1381145) to track progress on implementing and deploying ndata support in Firefox.
+  > [!NOTE]
+  > Because Firefox doesn't yet support the SCTP ndata protocol that provides the ability to interleave SCTP messages from multiple sources, sending large data objects can cause significant delays on all other SCTP traffic. See [Firefox bug 1381145](https://bugzil.la/1381145) to track progress on implementing and deploying ndata support in Firefox.
 
 - The {{DOMxRef("RTCDataChannel.send()")}} method can now throw a `TypeError` exception if the size of the message you're trying to send is not compatible with the receiving {{Glossary("user agent")}} (this is implemented as part of [Firefox bug 979417](https://bugzil.la/979417)).
 - The [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API) has been updated so that {{domxref("MediaRecorder/error_event", "error")}} events sent to report problems that occur while recording are now of type {{DOMxRef("MediaRecorderErrorEvent")}} rather than being generic events.
@@ -125,7 +127,8 @@ _No changes._
 
 ## Changes for add-on and Mozilla developers
 
-> **Note:** Starting in Firefox 57, all support for XPCOM-based add-ons has been removed. All extensions must be converted into the new [browser extensions](/en-US/docs/Mozilla/Add-ons/WebExtensions) (also known as WebExtensions) or they will not work.
+> [!NOTE]
+> Starting in Firefox 57, all support for XPCOM-based add-ons has been removed. All extensions must be converted into the new [browser extensions](/en-US/docs/Mozilla/Add-ons/WebExtensions) (also known as WebExtensions) or they will not work.
 
 ### WebExtensions
 

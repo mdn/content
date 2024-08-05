@@ -13,7 +13,8 @@ is a legacy alias the [for the `===` strict equality operator](/en-US/docs/Web/J
 That is, it tests whether two nodes are the same
 (in other words, whether they reference the same object).
 
-> **Note:** There is no need to use `isSameNode()`; instead use the `===` strict equality operator.
+> [!NOTE]
+> There is no need to use `isSameNode()`; instead use the `===` strict equality operator.
 
 ## Syntax
 
@@ -25,7 +26,8 @@ isSameNode(otherNode)
 
 - `otherNode`
   - : The {{domxref("Node")}} to test against.
-    > **Note:** This parameter is not optional, but can be set to `null`.
+    > [!NOTE]
+    > This parameter is not optional, but can be set to `null`.
 
 ### Return value
 
@@ -61,18 +63,18 @@ JavaScript to compare the nodes using `isSameNode()` and output the results.
 ### JavaScript
 
 ```js
-let output = document.getElementById("output");
-let divList = document.getElementsByTagName("div");
+const output = document.getElementById("output");
+const divList = document.getElementsByTagName("div");
 
-output.innerHTML += `div 0 same as div 0: ${divList[0].isSameNode(
+output.innerText += `div 0 same as div 0: ${divList[0].isSameNode(
   divList[0],
-)}<br/>`;
-output.innerHTML += `div 0 same as div 1: ${divList[0].isSameNode(
+)}\n`;
+output.innerText += `div 0 same as div 1: ${divList[0].isSameNode(
   divList[1],
-)}<br/>`;
-output.innerHTML += `div 0 same as div 2: ${divList[0].isSameNode(
+)}\n`;
+output.innerText += `div 0 same as div 2: ${divList[0].isSameNode(
   divList[2],
-)}<br/>`;
+)}\n`;
 ```
 
 ### Results

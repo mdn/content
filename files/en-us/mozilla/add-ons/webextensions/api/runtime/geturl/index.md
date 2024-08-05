@@ -26,7 +26,7 @@ browser.runtime.getURL(
 
 ### Return value
 
-`string`. The fully-qualified URL to the resource.
+`string`. The fully-qualified URL to the resource. For example, `moz-extension://e15cdd35-f9b7-4786-a39d-7d801bd2709e/help/open-in-container.html`.
 
 ## Browser compatibility
 
@@ -45,7 +45,8 @@ console.log(fullURL);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#method-getURL) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#method-getURL) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -9,7 +9,8 @@ browser-compat: css.at-rules.media.-webkit-transform-3d
 
 The **`-webkit-transform-3d`** Boolean [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) is a [WebKit extension](/en-US/docs/Web/CSS/WebKit_Extensions) whose value is `true` if vendor-prefixed CSS 3D {{cssxref("transform")}}s are supported.
 
-> **Note:** While this media feature is currently [supported by most browsers](#browser_compatibility). If possible, use an {{cssxref("@supports")}} feature query instead.
+> [!NOTE]
+> While this media feature is currently [supported by most browsers](#browser_compatibility). If possible, use an {{cssxref("@supports")}} feature query instead.
 
 ## Syntax
 

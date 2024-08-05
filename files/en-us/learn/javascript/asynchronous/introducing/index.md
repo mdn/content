@@ -30,7 +30,7 @@ Asynchronous programming is a technique that enables your program to start a pot
 
 Many functions provided by browsers, especially the most interesting ones, can potentially take a long time, and therefore, are asynchronous. For example:
 
-- Making HTTP requests using {{domxref("fetch", "fetch()")}}
+- Making HTTP requests using {{domxref("Window/fetch", "fetch()")}}
 - Accessing a user's camera or microphone using {{domxref("MediaDevices/getUserMedia", "getUserMedia()")}}
 - Asking a user to select files using {{domxref("window/showOpenFilePicker", "showOpenFilePicker()")}}
 

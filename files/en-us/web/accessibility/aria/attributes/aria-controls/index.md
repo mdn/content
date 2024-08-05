@@ -75,7 +75,8 @@ In this tabs example, each tab controls one tabpanel:
 </div>
 ```
 
-> **Note:** ARIA only modifies the accessibility tree for an element, identifying how assistive technology can present the content to users. ARIA doesn't change any implicit functionality or styling.
+> [!NOTE]
+> ARIA only modifies the accessibility tree for an element, identifying how assistive technology can present the content to users. ARIA doesn't change any implicit functionality or styling.
 
 ## Values
 

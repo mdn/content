@@ -107,7 +107,7 @@ text {
 
 ## Feature strings
 
-The following are the feature strings for the `requiredFeatures` attribute. These same feature strings apply to the [hasFeature](/en-US/docs/DOM/DOMImplementation.hasFeature) method call that is part of the SVG DOM's support for the {{domxref("DOMImplementation")}} interface. In some cases the feature strings map directly to a set of attributes, properties or elements, in others they represent some functionality of the browser. Note that the format and naming for feature strings changed from SVG 1.0 to SVG 1.1. The SVG 1.0 feature strings are not listed here but can be found in the [SVG Specification](https://www.w3.org/TR/SVG/feature.html). Some browser support SVG 1.0 Feature strings for compatibility reasons. However, the SVG 1.0 feature strings are considered deprecated.
+The following are the feature strings for the `requiredFeatures` attribute. These same feature strings apply to the [`hasFeature`](/en-US/docs/Web/API/DOMImplementation/hasFeature) method call that is part of the SVG DOM's support for the {{domxref("DOMImplementation")}} interface. In some cases the feature strings map directly to a set of attributes, properties or elements, in others they represent some functionality of the browser. Note that the format and naming for feature strings changed from SVG 1.0 to SVG 1.1. The SVG 1.0 feature strings are not listed here but can be found in the [SVG Specification](https://www.w3.org/TR/SVG/feature.html). Some browser support SVG 1.0 Feature strings for compatibility reasons. However, the SVG 1.0 feature strings are considered deprecated.
 
 - `http://www.w3.org/TR/SVG11/feature#SVG`
 
@@ -182,7 +182,7 @@ The following are the feature strings for the `requiredFeatures` attribute. Thes
 - `http://www.w3.org/TR/SVG11/feature#ContainerAttribute`
   - : The browser supports the {{SVGAttr("enable-background")}} attribute
 - `http://www.w3.org/TR/SVG11/feature#ConditionalProcessing`
-  - : The browser supports the {{SVGElement("switch")}} element, and the {{SVGAttr("requiredFeatures")}}, {{SVGAttr("requiredExtensions")}}, {{SVGAttr("systemLanguage")}} attributes
+  - : The browser supports the {{SVGElement("switch")}} element, and the `requiredFeatures`, {{SVGAttr("requiredExtensions")}}, {{SVGAttr("systemLanguage")}} attributes
 - `http://www.w3.org/TR/SVG11/feature#Image`
   - : The browser supports the {{SVGElement("image")}} element.
 - `http://www.w3.org/TR/SVG11/feature#Style`

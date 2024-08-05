@@ -12,7 +12,8 @@ It can be used for many simple image manipulations, such as tinting an image wit
 
 ## Syntax
 
-> **Warning:** The specification and current implementations have different syntaxes.
+> [!WARNING]
+> The specification and current implementations have different syntaxes.
 > The specification syntax is explained first.
 
 ### Specification syntax
@@ -89,7 +90,7 @@ The percent is the opacity of the first declared image. The included percentage 
 
 The green/red example (with the percentages totaling 150%) and the yellow/red/blue example (with three images) from the specification syntax section, are not possible in this implementation.
 
-## Accessibility concerns
+## Accessibility
 
 Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users.
 If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.

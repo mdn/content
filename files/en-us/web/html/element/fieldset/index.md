@@ -25,7 +25,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : The name associated with the group.
 
-    > **Note:** The caption for the fieldset is given by the first {{HTMLElement("legend")}} element nested inside it.
+    > [!NOTE]
+    > The caption for the fieldset is given by the first {{HTMLElement("legend")}} element nested inside it.
 
 ## Styling with CSS
 

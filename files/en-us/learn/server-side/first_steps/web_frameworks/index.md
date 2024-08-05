@@ -144,7 +144,8 @@ Web frameworks often provide a mechanism to make it easy to generate other forma
 
 For example, the Django template system allows you to specify variables using a "double-handlebars" syntax (e.g. `\{{ variable_name }}`), which will be replaced by values passed in from the view function when a page is rendered. The template system also provides support for expressions (with syntax: `{% expression %}`), which allow templates to perform simple operations like iterating list values passed into the template.
 
-> **Note:** Many other templating systems use a similar syntax, e.g.: Jinja2 (Python), handlebars (JavaScript), moustache (JavaScript), etc.
+> [!NOTE]
+> Many other templating systems use a similar syntax, e.g.: Jinja2 (Python), handlebars (JavaScript), moustache (JavaScript), etc.
 
 The code snippet below shows how this works. Continuing the "youngest team" example from the previous section, the HTML template is passed a list variable called `youngest_teams` by the view. Inside the HTML skeleton we have an expression that first checks if the `youngest_teams` variable exists, and then iterates it in a `for` loop. On each iteration the template displays the team's `team_name` value in a list item.
 
@@ -190,7 +191,8 @@ There are many other possible factors, including licensing, whether or not the f
 
 If you're an absolute beginner at programming then you'll probably choose your framework based on "ease of learning". In addition to "ease of use" of the language itself, high quality documentation/tutorials and an active community helping new users are your most valuable resources. We've chosen [Django](https://www.djangoproject.com/) (Python) and [Express](https://expressjs.com/) (Node/JavaScript) to write our examples later on in the course, mainly because they are easy to learn and have good support.
 
-> **Note:** Let's go to the main websites for [Django](https://www.djangoproject.com/) (Python) and [Express](https://expressjs.com/) (Node/JavaScript) and check out their documentation and community.
+> [!NOTE]
+> Let's go to the main websites for [Django](https://www.djangoproject.com/) (Python) and [Express](https://expressjs.com/) (Node/JavaScript) and check out their documentation and community.
 >
 > 1. Navigate to the main sites (linked above)
 >
@@ -210,7 +212,8 @@ Let's now move on, and discuss a few specific server-side web frameworks.
 
 The server-side frameworks below represent _a few_ of the most popular available at the time of writing. All of them have everything you need to be productive — they are open source, are under active development, have enthusiastic communities creating documentation and helping users on discussion boards, and are used in large numbers of high-profile websites. There are many other great server-side frameworks that you can discover using a basic internet search.
 
-> **Note:** Descriptions come (partially) from the framework websites!
+> [!NOTE]
+> Descriptions come (partially) from the framework websites!
 
 ### Django (Python)
 
@@ -242,7 +245,7 @@ A lot of high profile companies use Express, including: Uber, Accenture, IBM, et
 
 ### Deno (JavaScript)
 
-[Deno](https://deno.land/) is a simple, modern, and secure [JavaScript](/en-US/docs/Web/JavaScript)/TypeScript runtime and framework built on top of Chrome V8 and [Rust](https://www.rust-lang.org/).
+[Deno](https://deno.com/) is a simple, modern, and secure [JavaScript](/en-US/docs/Web/JavaScript)/TypeScript runtime and framework built on top of Chrome V8 and [Rust](https://www.rust-lang.org/).
 
 Deno is powered by [Tokio](https://tokio.rs/) — a Rust-based asynchronous runtime which lets it serve web pages faster. It also has internal support for [WebAssembly](/en-US/docs/WebAssembly), which enables the compilation of binary code for use on the client-side. Deno aims to fill in some of the loop-holes in [Node.js](/en-US/docs/Learn/Server-side/Node_server_without_framework) by providing a mechanism that naturally maintains better security.
 
@@ -265,7 +268,7 @@ Rails follows a very similar design philosophy to Django. Like Django it provide
 
 There are of course many differences due to specific design decisions and the nature of the languages.
 
-Rails has been used for high profile sites, including: [Basecamp](https://basecamp.com/), [GitHub](https://github.com/), [Shopify](https://www.shopify.com/), [Airbnb](https://www.airbnb.com/), [Twitch](https://www.twitch.tv/), [SoundCloud](https://soundcloud.com/), [Hulu](https://www.hulu.com/welcome), [Zendesk](https://www.zendesk.com/), [Square](https://square.com/), [Highrise](https://highrisehq.com/).
+Rails has been used for high profile sites, including: [Basecamp](https://basecamp.com/), [GitHub](https://github.com/), [Shopify](https://www.shopify.com/), [Airbnb](https://www.airbnb.com/), [Twitch](https://www.twitch.tv/), [SoundCloud](https://soundcloud.com/), [Hulu](https://www.hulu.com/welcome), [Zendesk](https://www.zendesk.com/), [Square](https://squareup.com/us/en), [Highrise](https://highrisehq.com/).
 
 ### Laravel (PHP)
 
@@ -306,7 +309,7 @@ Some of the features provided by Mojolicious are:
 
 ### Spring Boot (Java)
 
-[Spring Boot](https://spring.io/projects/spring-boot) is one of a number of projects provided by [Spring](https://spring.io/). It is a good starting point for doing server-side web development using [Java](https://www.java.com).
+[Spring Boot](https://spring.io/projects/spring-boot/) is one of a number of projects provided by [Spring](https://spring.io/). It is a good starting point for doing server-side web development using [Java](https://www.java.com).
 
 Although definitely not the only framework based on [Java](https://www.java.com) it is easy to use to create stand-alone, production-grade Spring-based Applications that you can "just run". It is an opinionated view of the Spring platform and third-party libraries but allows to start with minimum fuss and configuration.
 
