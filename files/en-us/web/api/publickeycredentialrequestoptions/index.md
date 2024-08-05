@@ -15,7 +15,9 @@ It is used to request a {{domxref("PublicKeyCredential")}} provided by an {{glos
 
 - `allowCredentials` {{optional_inline}}
 
-  - : An array of objects defining a restricted list of the acceptable credentials for retrieval. Each object will contain the following properties:
+  - : An array of objects used to restrict the list of acceptable credentials. An empty array indicates that any credential is acceptable.
+
+    Each object in the array will contain the following properties:
 
     - `id`
 
@@ -33,7 +35,7 @@ It is used to request a {{domxref("PublicKeyCredential")}} provided by an {{glos
 
       - : A string defining the type of the public key credential to retrieve. This can currently take a single value, `"public-key"`, but more values may be added in the future. This value is mirrored by the {{domxref("Credential.type", "type")}} property of the {{domxref("PublicKeyCredential")}} object returned by a successful `get()` call.
 
-    This value defaults to an empty array, meaning that any credential is potentially acceptable for retrieval without the relying party first providing an ID.
+    This value defaults to an empty array.
 
 - `challenge`
 
