@@ -37,7 +37,9 @@ comment=Hello!
 
 After successfully processing the form submission, the server responds with the following `205` response, indicating that the client should reset the form.
 
-> **Note:** It's assumed that the client supports resetting the content after a `205` response. This is typically done via JavaScript, as resetting content after a `205` is not handled natively by browsers.
+> [!NOTE]
+> It's assumed that the client supports resetting the content after a `205` response.
+> This is typically done via JavaScript, as resetting content after a `205` is not handled natively by browsers.
 
 ```http
 HTTP/1.1 205 Reset Content
@@ -53,7 +55,7 @@ Date: Wed, 26 Jun 2024 12:00:00 GMT
 ## Compatibility notes
 
 Browser behaviors differ if this response erroneously includes a body on persistent connections.
-See [`204 No Content`](/en-US/docs/Web/HTTP/Status/204#compatibility_notes) for more details.
+See [`204 No Content` compatibility notes](/en-US/docs/Web/HTTP/Status/204#compatibility_notes) for more details.
 
 ## See also
 
