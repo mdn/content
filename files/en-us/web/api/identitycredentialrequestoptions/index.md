@@ -41,7 +41,7 @@ It is used to request an {{domxref("IdentityCredential")}} provided by a {{gloss
 
         > _Use \<page-origin\> with \<IdP\>_
 
-The default value is `"signin"`.
+  The default value is `"signin"`.
 
 - `providers`
 
