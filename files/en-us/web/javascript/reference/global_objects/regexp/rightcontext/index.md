@@ -9,7 +9,8 @@ browser-compat: javascript.builtins.RegExp.rightContext
 
 {{JSRef}} {{Deprecated_Header}}
 
-> **Note:** All `RegExp` static properties that expose the last match state globally are deprecated. See [deprecated RegExp features](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp) for more information.
+> [!NOTE]
+> All `RegExp` static properties that expose the last match state globally are deprecated. See [deprecated RegExp features](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp) for more information.
 
 The **`RegExp.rightContext`** static accessor property returns the substring following the most recent match. `RegExp["$'"]` is an alias for this property.
 
@@ -44,8 +45,8 @@ RegExp["$'"]; // " world!"
 
 ## See also
 
-- {{jsxref("RegExp/input", "RegExp.input ($_)")}}
-- {{jsxref("RegExp/lastMatch", "RegExp.lastMatch ($&amp;)")}}
-- {{jsxref("RegExp/lastParen", "RegExp.lastParen ($+)")}}
-- {{jsxref("RegExp/leftContext", "RegExp.leftContext ($`)")}}
-- {{jsxref("RegExp/n", "RegExp.$1, …, RegExp.$9")}}
+- [`RegExp.input` (`$_`)](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/input)
+- [`RegExp.lastMatch` (`$&`)](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastMatch)
+- [`RegExp.lastParen` (`$+`)](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastParen)
+- [`RegExp.leftContext` (`` $` ``)](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/leftContext)
+- [`RegExp.$1`, …, `RegExp.$9`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/n)

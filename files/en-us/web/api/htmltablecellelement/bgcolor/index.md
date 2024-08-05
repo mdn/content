@@ -12,7 +12,8 @@ browser-compat: api.HTMLTableCellElement.bgColor
 
 The **`HTMLTableCellElement.bgColor`** property is used to set the background color of a cell or get the value of the obsolete [`bgColor`](/en-US/docs/Web/HTML/Element/td#bgcolor) attribute, if present.
 
-**Note:** This property is deprecated and CSS should be used to set the background color. Use the {{cssxref("background-color")}} property instead.
+> [!NOTE]
+> This property is deprecated and CSS should be used to set the background color. Use the {{cssxref("background-color")}} property instead.
 
 ## Value
 
@@ -21,7 +22,8 @@ One of the following value types can be used:
 - a named color, like `red` or `blue`
 - a hex code, like `#0000dd` or `#00d`
 
-** Note: ** The values accepted here are a limited subset of the CSS color values. Only {{cssxref("named-color")}} and 3- or 6-digit {{cssxref("hex-color")}} (with no alpha-channel). While all HTML color values are valid in CSS, this is not true in the other direction.
+> [!NOTE]
+> The values accepted here are a limited subset of the CSS color values. Only {{cssxref("named-color")}} and 3- or 6-digit {{cssxref("hex-color")}} (with no alpha-channel). While all HTML color values are valid in CSS, this is not true in the other direction.
 
 ## Examples
 

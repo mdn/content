@@ -35,7 +35,8 @@ Next, a new notification is created using the {{domxref("Notification.Notificati
 
 In addition, the Notifications API spec specifies a number of additions to the [ServiceWorker API](/en-US/docs/Web/API/Service_Worker_API), to allow service workers to fire notifications.
 
-> **Note:** To find out more about using notifications in your own app, read [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API).
+> [!NOTE]
+> To find out more about using notifications in your own app, read [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API).
 
 ## Interfaces
 

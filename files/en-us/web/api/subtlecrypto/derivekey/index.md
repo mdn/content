@@ -56,14 +56,14 @@ deriveKey(algorithm, baseKey, derivedKeyAlgorithm, extractable, keyUsages)
   - : An {{jsxref("Array")}} indicating what can be
     done with the derived key. Note that the key usages must be allowed by the algorithm
     set in `derivedKeyAlgorithm`. Possible values of the array are:
-    - `encrypt`: The key may be used to {{domxref("SubtleCrypto.encrypt()", "encrypt")}} messages.
-    - `decrypt`: The key may be used to {{domxref("SubtleCrypto.decrypt()", "decrypt")}} messages.
-    - `sign`: The key may be used to {{domxref("SubtleCrypto.sign()", "sign")}} messages.
-    - `verify`: The key may be used to {{domxref("SubtleCrypto.verify()", "verify")}} signatures.
-    - `deriveKey`: The key may be used in {{domxref("SubtleCrypto.deriveKey()", "deriving a new key")}}.
-    - `deriveBits`: The key may be used in {{domxref("SubtleCrypto.deriveBits()", "deriving bits")}}.
-    - `wrapKey`: The key may be used to {{domxref("SubtleCrypto.wrapKey()", "wrap a key")}}.
-    - `unwrapKey`: The key may be used to {{domxref("SubtleCrypto.unwrapKey()", "unwrap a key")}}.
+    - `encrypt`: The key may be used to [encrypt](/en-US/docs/Web/API/SubtleCrypto/encrypt) messages.
+    - `decrypt`: The key may be used to [decrypt](/en-US/docs/Web/API/SubtleCrypto/decrypt) messages.
+    - `sign`: The key may be used to [sign](/en-US/docs/Web/API/SubtleCrypto/sign) messages.
+    - `verify`: The key may be used to [verify](/en-US/docs/Web/API/SubtleCrypto/verify) signatures.
+    - `deriveKey`: The key may be used in deriving a new key.
+    - `deriveBits`: The key may be used in [deriving bits](/en-US/docs/Web/API/SubtleCrypto/deriveBits).
+    - `wrapKey`: The key may be used to [wrap a key](/en-US/docs/Web/API/SubtleCrypto/wrapKey).
+    - `unwrapKey`: The key may be used to [unwrap a key](/en-US/docs/Web/API/SubtleCrypto/unwrapKey).
 
 ### Return value
 
@@ -122,7 +122,8 @@ PBKDF2 is specified in [RFC 2898](https://datatracker.ietf.org/doc/html/rfc2898)
 
 ## Examples
 
-> **Note:** You can [try the working examples](https://mdn.github.io/dom-examples/web-crypto/derive-key/index.html) on GitHub.
+> [!NOTE]
+> You can [try the working examples](https://mdn.github.io/dom-examples/web-crypto/derive-key/index.html) on GitHub.
 
 ### ECDH
 
@@ -298,6 +299,6 @@ async function encrypt(secret, plainText) {
 ## See also
 
 - [HKDF specification](https://datatracker.ietf.org/doc/html/rfc5869).
-- [NIST guidelines for password-based key derivation](https://csrc.nist.gov/publications/detail/sp/800-132/final).
+- [NIST guidelines for password-based key derivation](https://csrc.nist.gov/pubs/sp/800/132/final).
 - [Password storage cheat sheet](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html).
 - [Advice on choosing an iteration count for PBKDF2](https://security.stackexchange.com/questions/3959/recommended-of-iterations-when-using-pbkdf2-sha256/3993#3993).

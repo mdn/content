@@ -8,7 +8,8 @@ page-type: guide
 
 This article provides practical advice on how to write your web content so that it conforms to the success criteria outlined in the **Perceivable** principle of the Web Content Accessibility Guidelines (WCAG) 2.0 and 2.1. Perceivable states that users must be able to perceive it in some way, using one or more of their senses.
 
-> **Note:** To read the W3C definitions for Perceivable and its guidelines and success criteria, see [Principle 1: Perceivable - Information and user interface components must be presentable to users in ways they can perceive.](https://www.w3.org/TR/WCAG21/#perceivable)
+> [!NOTE]
+> To read the W3C definitions for Perceivable and its guidelines and success criteria, see [Principle 1: Perceivable - Information and user interface components must be presentable to users in ways they can perceive.](https://www.w3.org/TR/WCAG21/#perceivable)
 
 ## Guideline 1.1 — Providing text alternatives for non-text content
 
@@ -115,7 +116,8 @@ The key here is that text can be converted to other forms that people with disab
   </tbody>
 </table>
 
-> **Note:** Also see the [WCAG description for Guideline 1.1: Text alternatives](https://www.w3.org/TR/WCAG21/#text-alternatives).
+> [!NOTE]
+> Also see the [WCAG description for Guideline 1.1: Text alternatives](https://www.w3.org/TR/WCAG21/#text-alternatives).
 
 ## Guideline 1.2 — Providing text alternatives for time-based media
 
@@ -178,7 +180,8 @@ Time-based media refers to multimedia with a duration, such as audio and video. 
  </tbody>
 </table>
 
-> **Note:** Also see the [WCAG description for Guideline 1.2: Time-based Media: Provide alternatives for time-based media](https://www.w3.org/TR/WCAG21/#time-based-media).
+> [!NOTE]
+> Also see the [WCAG description for Guideline 1.2: Time-based Media: Provide alternatives for time-based media](https://www.w3.org/TR/WCAG21/#time-based-media).
 
 ## Guideline 1.3 — Create content that can be presented in different ways
 
@@ -208,7 +211,7 @@ This guideline refers to the ability of content to be consumed by users in multi
           <li>
             Image alt text. Content images should have text available that
             clearly describes the image's contents, which can be
-            programmatically associated with it (e.g., `alt` text),
+            programmatically associated with it (e.g., alt text),
             or otherwise is easy to associate (e.g., describes it and is sat
             right next to it). This should mean that the full meaning can still
             be inferred even if you can't see the image.
@@ -363,7 +366,8 @@ This guideline refers to the ability of content to be consumed by users in multi
   </tbody>
 </table>
 
-> **Note:** Also see the WCAG description for [Guideline 1.3: Adaptable: Create content that can be presented in different ways without losing information or structure.](https://www.w3.org/TR/WCAG21/#adaptable)
+> [!NOTE]
+> Also see the WCAG description for [Guideline 1.3: Adaptable: Create content that can be presented in different ways without losing information or structure.](https://www.w3.org/TR/WCAG21/#adaptable)
 
 ## Guideline 1.4: Make it easier for users to see and hear content including separating foreground from background
 
@@ -407,7 +411,7 @@ This guideline relates to making sure core content is easy to discern from backg
         volume.
       </td>
       <td>
-        Use native `&#x3C;button>`s to provide accessible keyboard
+        Use native <code>&lt;button&gt;</code>s to provide accessible keyboard
         controls, as shown in
         <a
           href="/en-US/docs/Web/Media/Audio_and_video_delivery/Video_player_styling_basics"
@@ -507,7 +511,7 @@ This guideline relates to making sure core content is easy to discern from backg
           </li>
           <li>
             Line height should be at least 1.5 times the text size within
-            paragraphs (e.g., `line-height: 1.5;`), and at least 2.25
+            paragraphs (e.g., <code>line-height: 1.5;</code>), and at least 2.25
             times the text size between paragraphs (e.g., <code
               >padding: 2.25rem;</code
             >).
@@ -645,7 +649,8 @@ This guideline relates to making sure core content is easy to discern from backg
   </thead>
 </table>
 
-> **Note:** Also see the WCAG description for [Guideline 1.4: Distinguishable: Make it easier for users to see and hear content including separating foreground from background.](https://www.w3.org/TR/WCAG21/#distinguishable)
+> [!NOTE]
+> Also see the WCAG description for [Guideline 1.4: Distinguishable: Make it easier for users to see and hear content including separating foreground from background.](https://www.w3.org/TR/WCAG21/#distinguishable)
 
 ## See also
 

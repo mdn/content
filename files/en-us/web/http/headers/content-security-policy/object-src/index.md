@@ -11,7 +11,8 @@ The HTTP {{HTTPHeader("Content-Security-Policy")}}
 **`object-src`** directive specifies valid sources for the
 {{HTMLElement("object")}} and {{HTMLElement("embed")}} elements.
 
-> **Note:** Elements controlled by `object-src` are perhaps coincidentally
+> [!NOTE]
+> Elements controlled by `object-src` are perhaps coincidentally
 > considered legacy HTML elements and aren't receiving new standardized features (such as
 > the security attributes `sandbox` or `allow` for
 > `<iframe>`). Therefore it is [recommended](https://csp.withgoogle.com/docs/strict-csp.html) to restrict

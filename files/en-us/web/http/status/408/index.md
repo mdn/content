@@ -14,7 +14,8 @@ A server should send the {{HTTPHeader("Connection", "Connection: close")}} heade
 
 This response is used much more since some browsers, like Chrome and Firefox, use HTTP pre-connection mechanisms to speed up surfing.
 
-> **Note:** Some servers will shut down a connection without sending this message.
+> [!NOTE]
+> Some servers will shut down a connection without sending this message.
 
 ## Status
 

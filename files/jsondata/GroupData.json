@@ -325,6 +325,7 @@
         "CSSMediaRule",
         "CSSNamespaceRule",
         "CSSPageRule",
+        "CSSPageDescriptors",
         "CSSFontFeatureValuesRule",
         "CSSFontPaletteValuesRule",
         "CSSPropertyRule",
@@ -619,7 +620,12 @@
         "/docs/Web/API/Gamepad_API/Using_the_Gamepad_API",
         "/docs/Games/Techniques/Controls_Gamepad_API"
       ],
-      "interfaces": ["Gamepad", "GamepadButton", "GamepadEvent"],
+      "interfaces": [
+        "Gamepad",
+        "GamepadButton",
+        "GamepadEvent",
+        "GamepadHapticActuator"
+      ],
       "methods": ["Navigator.getGamepads()"],
       "properties": [],
       "events": ["Window: gamepadconnected", "Window: gamepaddisconnected"]
@@ -861,13 +867,6 @@
         "HTMLElement: dragstart",
         "HTMLElement: drop"
       ]
-    },
-    "HTML Sanitizer API": {
-      "overview": ["HTML Sanitizer API"],
-      "interfaces": ["Sanitizer"],
-      "methods": [],
-      "properties": [],
-      "events": []
     },
     "Idle Detection API": {
       "overview": ["Idle Detection API"],
@@ -2176,6 +2175,7 @@
         "RTCDataChannelStats",
         "RTCOutboundRtpStreamStats",
         "RTCPeerConnectionStats",
+        "RTCRemoteInboundRtpStreamStats",
         "RTCRemoteOutboundRtpStreamStats"
       ],
       "methods": ["MediaDevices.getUserMedia()"],

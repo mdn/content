@@ -81,7 +81,8 @@ See the [Supported algorithms section of the `deriveKey()` documentation](/en-US
 
 ## Examples
 
-> **Note:** You can [try the working examples](https://mdn.github.io/dom-examples/web-crypto/derive-bits/index.html) on GitHub.
+> [!NOTE]
+> You can [try the working examples](https://mdn.github.io/dom-examples/web-crypto/derive-bits/index.html) on GitHub.
 
 ### ECDH
 
@@ -213,6 +214,6 @@ deriveBitsButton.addEventListener("click", () => {
 ## See also
 
 - [HKDF specification](https://datatracker.ietf.org/doc/html/rfc5869).
-- [NIST guidelines for password-based key derivation](https://csrc.nist.gov/publications/detail/sp/800-132/final).
+- [NIST guidelines for password-based key derivation](https://csrc.nist.gov/pubs/sp/800/132/final).
 - [Password storage cheat sheet](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html).
 - [Advice on choosing an iteration count for PBKDF2](https://security.stackexchange.com/questions/3959/recommended-of-iterations-when-using-pbkdf2-sha256/3993#3993).

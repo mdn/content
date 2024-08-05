@@ -90,7 +90,8 @@ In such a case, it would make more sense in terms of repetition and findability 
 
 ### API reference page
 
-> **Note:** Also known as an _Interface landing page_.
+> [!NOTE]
+> Also known as an _Interface landing page_.
 
 An **API reference page** lists all the methods, properties, events, and so forth that are members of a particular interface or class.
 It provides an overview of what the class or interface does or is used for, and gives links to the documentation for each of these members.

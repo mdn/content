@@ -110,7 +110,8 @@ To be eligible to be a maintainer, you must meet one or more of the following re
 - Consented to commit spending at least 16 hours per month working on the project.
 - Attended the community meeting that takes place once every two months.
 
-> **Note:** If there is someone you think is eligible for this role, you may [nominate a maintainer](#nominating_a_maintainer).
+> [!NOTE]
+> If there is someone you think is eligible for this role, you may [nominate a maintainer](#nominating_a_maintainer).
 
 **Privileges:**
 
@@ -121,7 +122,8 @@ Maintainers have the permissions to approve and merge pull requests.
 Owners have wide permissions to manage users and [GitHub teams](https://github.com/orgs/mdn/teams), maintain access across repositories in the [MDN organization](https://github.com/mdn), maintain repository settings, and deploy to production.
 Owners are bound by all the requirements of other contributor roles.
 
-> **Note:** The role of an owner is currently limited to Mozilla staff.
+> [!NOTE]
+> The role of an owner is currently limited to Mozilla staff.
 
 **Requirements:**
 

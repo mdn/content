@@ -51,7 +51,8 @@ None ({{jsxref("undefined")}}).
 <!-- afterend -->
 ```
 
-> **Note:** The `beforebegin` and
+> [!NOTE]
+> The `beforebegin` and
 > `afterend` positions work only if the node is in a tree and has an element
 > parent.
 

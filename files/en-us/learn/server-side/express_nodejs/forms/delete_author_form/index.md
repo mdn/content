@@ -4,6 +4,8 @@ slug: Learn/Server-side/Express_Nodejs/forms/Delete_author_form
 page-type: learn-module-chapter
 ---
 
+{{LearnSidebar}}
+
 This subarticle shows how to define a page to delete `Author` objects.
 
 As discussed in the [form design](/en-US/docs/Learn/Server-side/Express_Nodejs/forms#form_design) section, our strategy will be to only allow deletion of objects that are not referenced by other objects (in this case that means we won't allow an `Author` to be deleted if it is referenced by a `Book`).
@@ -40,7 +42,8 @@ The controller gets the id of the `Author` instance to be deleted from the URL p
 It uses `await` on the promise returned by `Promise.all()` to asynchronously wait on the specified author record and all associated books (in parallel).
 When both operations have completed it renders the **author_delete.pug** view, passing variables for the `title`, `author`, and `author_books`.
 
-> **Note:** If `findById()` returns no results the author is not in the database.
+> [!NOTE]
+> If `findById()` returns no results the author is not in the database.
 > In this case there is nothing to delete, so we immediately redirect to the list of all authors.
 >
 > ```js
@@ -84,7 +87,8 @@ Then we get the author and their associated books in the same way as for the `GE
 If there are no books then we delete the author object and redirect to the list of all authors.
 If there are still books then we just re-render the form, passing in the author and list of books to be deleted.
 
-> **Note:** We could check if the call to `findById()` returns any result, and if not, immediately render the list of all authors.
+> [!NOTE]
+> We could check if the call to `findById()` returns any result, and if not, immediately render the list of all authors.
 > We've left the code as it is above for brevity (it will still return the list of authors if the id is not found, but this will happen after `findByIdAndDelete()`).
 
 ## View
@@ -131,7 +135,8 @@ It then includes a conditional statement based on the number of **`author_books`
 
 Next we will add a **Delete** control to the _Author detail_ view (the detail page is a good place from which to delete a record).
 
-> **Note:** In a full implementation the control would be made visible only to authorized users.
+> [!NOTE]
+> In a full implementation the control would be made visible only to authorized users.
 > However at this point we haven't got an authorization system in place!
 
 Open the **author_detail.pug** view and add the following lines at the bottom.
@@ -161,7 +166,8 @@ You can then delete the books from their detail pages (once that code is impleme
 
 ![The Delete Author section of the Local library application of an author who does have books under his name. The section contains the author's name and life dates of the author. There is a statement that reads "Delete the following books before attempting to delete this author" followed by the author's books. The list includes the titles of each book, as links, followed by a brief description in plain text.](locallibary_express_author_delete_withbooks.png)
 
-> **Note:** The other pages for deleting objects can be implemented in much the same way.
+> [!NOTE]
+> The other pages for deleting objects can be implemented in much the same way.
 > We've left that as a challenge.
 
 ## Next steps

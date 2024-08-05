@@ -20,7 +20,8 @@ In this case we need to use the {{cssxref("::first-line")}} pseudo-element. It s
 
 {{EmbedGHLiveSample("css-examples/howto/highlight_first_line.html", '100%', 750)}}
 
-> **Note:** All pseudo-elements act in this way. They behave as if you had inserted an element into the document, but they do so dynamically based on the content as it displays at runtime.
+> [!NOTE]
+> All pseudo-elements act in this way. They behave as if you had inserted an element into the document, but they do so dynamically based on the content as it displays at runtime.
 
 ## Combining pseudo-elements with other selectors
 
@@ -28,7 +29,8 @@ In the example above, the pseudo-element selects the first line of every paragra
 
 {{EmbedGHLiveSample("css-examples/howto/highlight_first_line2.html", '100%', 700)}}
 
-> **Note:** When combining pseudo-elements with other selectors in a [complex](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#complex_selector) or [compound](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector) selector, the pseudo-elements must appear after all the other components in the selector in which they appear.
+> [!NOTE]
+> When combining pseudo-elements with other selectors in a [complex](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#complex_selector) or [compound](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector) selector, the pseudo-elements must appear after all the other components in the selector in which they appear.
 
 ## See also
 

@@ -15,7 +15,8 @@ operation is finished, the {{domxref("FileReader.readyState","readyState")}} pro
 triggered. At that time, the {{domxref("FileReader.result","result")}} property
 contains an {{jsxref("ArrayBuffer")}} representing the file's data.
 
-> **Note:** The {{domxref("Blob.arrayBuffer()")}} method is a newer promise-based API to read a
+> [!NOTE]
+> The {{domxref("Blob.arrayBuffer()")}} method is a newer promise-based API to read a
 > file as an array buffer.
 
 ## Syntax

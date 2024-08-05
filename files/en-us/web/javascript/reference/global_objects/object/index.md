@@ -311,7 +311,8 @@ Object.prototype.valueOf = function (...args) {
 };
 ```
 
-> **Warning:** Modifying the `prototype` property of any built-in constructor is considered a bad practice and risks forward compatibility.
+> [!WARNING]
+> Modifying the `prototype` property of any built-in constructor is considered a bad practice and risks forward compatibility.
 
 You can read more about prototypes in [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 

@@ -42,11 +42,14 @@ browser-compat: webextensions.manifest.theme
 
 Use the theme key to define a static theme to apply to Firefox.
 
-> **Note:** If you want to include a theme with an extension, please see the {{WebExtAPIRef("theme")}} API.
+> [!NOTE]
+> If you want to include a theme with an extension, please see the {{WebExtAPIRef("theme")}} API.
 
-> **Note:** Since May 2019, themes need to be signed to be installed ([Firefox bug 1545109](https://bugzil.la/1545109)). See [Signing and distributing your add-on](https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/#distributing-your-addon) for more details.
+> [!NOTE]
+> Since May 2019, themes need to be signed to be installed ([Firefox bug 1545109](https://bugzil.la/1545109)). See [Signing and distributing your add-on](https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/#distributing-your-addon) for more details.
 
-> **Note:** A new version of Firefox for Android, based on GeckoView, is under development. A [pre-release version](https://play.google.com/store/apps/details?id=org.mozilla.fenix) is available. The pre-release version does not support themes.
+> [!NOTE]
+> A new version of Firefox for Android, based on GeckoView, is under development. A [pre-release version](https://play.google.com/store/apps/details?id=org.mozilla.fenix) is available. The pre-release version does not support themes.
 
 ## Image formats
 
@@ -194,7 +197,8 @@ These properties define the colors used for different parts of the browser. They
   </tbody>
 </table>
 
-> **Note:** Where a component is affected by multiple color properties, the properties are listed in order of precedence.
+> [!NOTE]
+> Where a component is affected by multiple color properties, the properties are listed in order of precedence.
 
 All these properties can be specified as either a string containing any valid [CSS color string](/en-US/docs/Web/CSS/color_value) (including hexadecimal), or an RGB array, such as `"tab_background_text": [ 107 , 99 , 23 ]`.
 

@@ -37,7 +37,8 @@ _Also inherits methods from its parent interface, {{domxref("BaseAudioContext")}
 - {{domxref("OfflineAudioContext.resume()")}}
   - : Resumes the progression of time in an audio context that has previously been suspended.
 
-> **Note:** The `resume()` method is still available — it is now defined on the {{domxref("BaseAudioContext")}} interface (see {{domxref("AudioContext.resume")}}) and thus can be accessed by both the {{domxref("AudioContext")}} and {{domxref("OfflineAudioContext")}} interfaces.
+> [!NOTE]
+> The `resume()` method is still available — it is now defined on the {{domxref("BaseAudioContext")}} interface (see {{domxref("AudioContext.resume")}}) and thus can be accessed by both the {{domxref("AudioContext")}} and `OfflineAudioContext` interfaces.
 
 ## Events
 
@@ -56,7 +57,8 @@ When the `startRendering()` promise resolves, rendering has completed and the ou
 
 At this point we create another audio context, create an {{domxref("AudioBufferSourceNode")}} inside it, and set its buffer to be equal to the promise `AudioBuffer`. This is then played as part of a simple standard audio graph.
 
-> **Note:** You can [run the full example live](https://mdn.github.io/webaudio-examples/offline-audio-context-promise/), or [view the source](https://github.com/mdn/webaudio-examples/blob/main/offline-audio-context-promise/).
+> [!NOTE]
+> You can [run the full example live](https://mdn.github.io/webaudio-examples/offline-audio-context-promise/), or [view the source](https://github.com/mdn/webaudio-examples/tree/main/offline-audio-context-promise).
 
 ```js
 // Define both online and offline audio contexts

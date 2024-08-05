@@ -15,7 +15,7 @@ In delta encoding, a client sends a {{HTTPMethod("GET")}} request with two heade
 The server responds with deltas relative to a given base document, rather than the document in full.
 This response uses the `226` status code, an `IM:` header that describes the differencing algorithm used, and may include a `Delta-Base:` header with the {{HTTPHeader("ETag")}} matching the base document associated to the delta.
 
-> **Warning:**
+> [!WARNING]
 > Poor support for HTTP delta encodings means there are few implementations.
 > Instead, most systems rely solely on [compression methods](/en-US/docs/Web/HTTP/Compression) to reduce bandwidth, although a combination of compression and delta encodings is possible.
 >

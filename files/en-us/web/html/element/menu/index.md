@@ -19,7 +19,8 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 The `<menu>` and {{HTMLElement("ul")}} elements both represent an unordered list of items. The key difference is that {{HTMLElement("ul")}} primarily contains items for display, while `<menu>` was intended for interactive items.
 
-> **Note:** In early versions of the HTML specification, the `<menu>` element had an additional use case as a context menu. This functionality is considered obsolete and is not in the specification.
+> [!NOTE]
+> In early versions of the HTML specification, the `<menu>` element had an additional use case as a context menu. This functionality is considered obsolete and is not in the specification.
 
 ## Examples
 

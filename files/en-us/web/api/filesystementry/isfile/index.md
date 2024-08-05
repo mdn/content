@@ -16,7 +16,8 @@ represents a file (meaning it's a {{domxref("FileSystemFileEntry")}}) and
 You can also use {{domxref("FileSystemEntry.isDirectory", "isDirectory")}} to determine
 if the entry is a directory.
 
-> **Warning:** You should not assume that any entry which isn't a file is a directory or vice versa.
+> [!WARNING]
+> You should not assume that any entry which isn't a file is a directory or vice versa.
 > There are other types of file descriptors on many operating systems. Be sure to use
 > both `isDirectory` and `isFile` as needed to ensure that the
 > entry is something you know how to work with.

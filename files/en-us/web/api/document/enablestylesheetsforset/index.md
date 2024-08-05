@@ -65,4 +65,3 @@ Not part of any specification.
 - {{domxref("document.lastStyleSheetSet")}}
 - {{domxref("document.preferredStyleSheetSet")}}
 - {{domxref("document.selectedStyleSheetSet")}}
-- {{domxref("document.enableStyleSheetsForSet()")}}

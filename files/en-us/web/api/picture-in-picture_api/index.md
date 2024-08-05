@@ -9,7 +9,8 @@ browser-compat: api.PictureInPictureWindow
 
 The **Picture-in-Picture API** allow websites to create a floating, always-on-top video window. This allows users to continue consuming media while they interact with other sites or applications on their device.
 
-> **Note:** The [Document Picture-in-Picture API](/en-US/docs/Web/API/Document_Picture-in-Picture_API) extends the Picture-in-Picture API to allow the always-on-top window to be populated with _any_ arbitrary HTML content, not just a video.
+> [!NOTE]
+> The [Document Picture-in-Picture API](/en-US/docs/Web/API/Document_Picture-in-Picture_API) extends the Picture-in-Picture API to allow the always-on-top window to be populated with _any_ arbitrary HTML content, not just a video.
 
 ## Interfaces
 

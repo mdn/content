@@ -40,7 +40,8 @@ You can add the `codecs` parameter to the media type. To do so, append a semicol
 
 As is the case with any MIME type parameter, `codecs` must be changed to `codecs*` (note the asterisk character, `*`) if any of the properties of the codec use special characters which must be percent-encoded per {{RFC(2231, "MIME Parameter Value and Encoded Word Extensions", 4)}}. You can use the JavaScript {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} function to encode the parameter list; similarly, you can use {{jsxref("Global_Objects/decodeURI", "decodeURI()")}} to decode a previously encoded parameter list.
 
-> **Note:** When the `codecs` parameter is used, the specified list of codecs must include every codec used for the contents of the file. The list may also contain codecs not present in the file.
+> [!NOTE]
+> When the `codecs` parameter is used, the specified list of codecs must include every codec used for the contents of the file. The list may also contain codecs not present in the file.
 
 ## Codec options by container
 
@@ -63,7 +64,8 @@ The syntax of the `codecs` parameter for AV1 is defined the [AV1 Codec ISO Media
 av01.P.LLT.DD[.M.CCC.cp.tc.mc.F]
 ```
 
-> **Note:** Chromium-based browsers will accept any subset of the optional parameters (rather than all or none, as required by the specification).
+> [!NOTE]
+> Chromium-based browsers will accept any subset of the optional parameters (rather than all or none, as required by the specification).
 
 This codec parameter string's components are described in more detail in the table below. Each component is a fixed number of characters long; if the value is less than that length, it must be padded with leading zeros.
 
@@ -139,7 +141,7 @@ This codec parameter string's components are described in more detail in the tab
       <td>
         The one-digit monochrome flag; if this is 0, the video includes the U and V planes in addition to the Y plane.
         Otherwise, the video data is entirely in the Y plane and is therefore monochromatic.
-        See [YUV](/en-US/docs/Web/Media/Formats/Video_concepts#yuv) for details on how the YUV color system works.
+        See <a href="/en-US/docs/Web/Media/Formats/Video_concepts#yuv">YUV</a> for details on how the YUV color system works.
         The default value is 0 (not monochrome).
       </td>
     </tr>
@@ -368,7 +370,7 @@ The first four components are required; everything from `CC` (chroma subsampling
       <td>
         <p>
           A two-digit value indicating which chroma subsampling format to use.
-          The following table lists permitted values; see [Chroma subsampling](/en-US/docs/Web/Media/Formats/Video_concepts#chroma_subsampling) in our "Digital video concepts" guide for additional information about this topic and others.
+          The following table lists permitted values; see <a href="/en-US/docs/Web/Media/Formats/Video_concepts#chroma_subsampling">Chroma subsampling</a> in our "Digital video concepts" guide for additional information about this topic and others.
         </p>
         <table class="standard-table">
           <caption>
@@ -637,7 +639,8 @@ The Audio Object Type is specified as a one or two digit _decimal_ value (unlike
 
 Thus, ER AAC LC, whose Audio Object Type is 17, can be represented using the full `codecs` value `mp4a.40.17`. Single digit values can be given either as one digit (which is the best choice, since it will be the most broadly compatible) or with a leading zero padding it to two digits, such as `mp4a.40.02`.
 
-> **Note:** The specification originally mandated that the Audio Object Type number in the third component be only one decimal digit. However, amendments to the specification over time extended the range of these values well beyond one decimal digit, so now the third parameter may be either one or two digits. Padding values below 10 with a leading `0` is optional. Older implementations of MPEG-4 codecs may not support two-digit values, however, so using a single digit when possible will maximize compatibility.
+> [!NOTE]
+> The specification originally mandated that the Audio Object Type number in the third component be only one decimal digit. However, amendments to the specification over time extended the range of these values well beyond one decimal digit, so now the third parameter may be either one or two digits. Padding values below 10 with a leading `0` is optional. Older implementations of MPEG-4 codecs may not support two-digit values, however, so using a single digit when possible will maximize compatibility.
 
 The Audio Object Types are defined in ISO/IEC 14496-3 subpart 1, section 1.5.1. The table below provides a basic list of the Audio Object Types and in the case of the more common object types provides a list of the profiles supporting it, but you should refer to the specification for details if you need to know more about the inner workings of any given MPEG-4 audio type.
 

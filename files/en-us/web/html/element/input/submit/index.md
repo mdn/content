@@ -158,7 +158,8 @@ To disable a submit button, specify the [`disabled`](/en-US/docs/Web/HTML/Attrib
 
 You can enable and disable buttons at run time by setting `disabled` to `true` or `false`; in JavaScript this looks like `btn.disabled = true` or `btn.disabled = false`.
 
-> **Note:** See the [`<input type="button">`](/en-US/docs/Web/HTML/Element/input/button#disabling_and_enabling_a_button) page for more ideas about enabling and disabling buttons.
+> [!NOTE]
+> See the [`<input type="button">`](/en-US/docs/Web/HTML/Element/input/button#disabling_and_enabling_a_button) page for more ideas about enabling and disabling buttons.
 
 ## Validation
 

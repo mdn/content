@@ -184,5 +184,4 @@ function addListItem(text) {
 - {{domxref("Element/mouseover_event", "mouseover")}}
 - {{domxref("Element/mouseout_event", "mouseout")}}
 - {{domxref("Element/mouseenter_event", "mouseenter")}}
-- {{domxref("Element/mouseleave_event", "mouseleave")}}
 - {{domxref("Element/contextmenu_event", "contextmenu")}}

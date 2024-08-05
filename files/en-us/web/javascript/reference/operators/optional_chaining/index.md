@@ -86,7 +86,8 @@ const result = someInterface.customMethod?.();
 
 However, if there is a property with such a name which is not a function, using `?.` will still raise a {{jsxref("TypeError")}} exception "someInterface.customMethod is not a function".
 
-> **Note:** If `someInterface` itself is `null` or
+> [!NOTE]
+> If `someInterface` itself is `null` or
 > `undefined`, a {{jsxref("TypeError")}} exception will still be
 > raised ("someInterface is null"). If you expect that
 > `someInterface` itself may be `null` or `undefined`,

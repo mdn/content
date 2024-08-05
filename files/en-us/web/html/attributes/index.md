@@ -458,7 +458,7 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
-        <code><a href="/en-US/docs/Web/HTML/Attributes/enterkeyhint">enterkeyhint</a></code>
+        <code><a href="/en-US/docs/Web/HTML/Global_attributes/enterkeyhint">enterkeyhint</a></code>
         {{experimental_inline}}
       </td>
       <td>
@@ -1413,7 +1413,8 @@ To be clear, the values "`true`" and "`false`" are not allowed on boolean attrib
 
 ## Event handler attributes
 
-> **Warning:** The use of event handler content attributes is discouraged. The mix of HTML and JavaScript often produces unmaintainable code, and the execution of event handler attributes may also be blocked by content security policies.
+> [!WARNING]
+> The use of event handler content attributes is discouraged. The mix of HTML and JavaScript often produces unmaintainable code, and the execution of event handler attributes may also be blocked by content security policies.
 
 In addition to the attributes listed in the table above, global [event handlers](/en-US/docs/Web/Events/Event_handlers#using_onevent_properties) — such as [`onclick`](/en-US/docs/Web/API/Element/click_event) — can also be specified as [content attributes](#content_versus_idl_attributes) on all elements.
 

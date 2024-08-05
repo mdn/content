@@ -71,7 +71,7 @@ navigator.permissions.query({ name: "midi", sysex: true }).then((result) => {
 
 ### Request MIDI access
 
-In the following example, the {{domxref("Navigator.requestMIDIAccess()")}} method returns the {{domxref("MIDIAccess")}} object, which gives access to information about the input and output MIDI ports.
+In the following example, the `Navigator.requestMIDIAccess()` method returns the {{domxref("MIDIAccess")}} object, which gives access to information about the input and output MIDI ports.
 
 ```js
 navigator.requestMIDIAccess().then((access) => {
@@ -93,4 +93,4 @@ navigator.requestMIDIAccess().then((access) => {
 ## See also
 
 - [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API)
-- [Introduction to Web MIDI](https://code.tutsplus.com/tutorials/introduction-to-web-midi--cms-25220)
+- [Introduction to Web MIDI](https://code.tutsplus.com/introduction-to-web-midi--cms-25220t)

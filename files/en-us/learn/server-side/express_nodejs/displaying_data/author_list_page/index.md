@@ -4,6 +4,8 @@ slug: Learn/Server-side/Express_Nodejs/Displaying_data/Author_list_page
 page-type: learn-module-chapter
 ---
 
+{{LearnSidebar}}
+
 The author list page needs to display a list of all authors in the database, with each author name linked to its associated author detail page. The date of birth and date of death should be listed after the name on the same line.
 
 ## Controller
@@ -53,7 +55,8 @@ Run the application and open your browser to `http://localhost:3000/`. Then sele
 
 ![Author List Page - Express Local Library site](locallibary_express_author_list.png)
 
-> **Note:** The appearance of the author _lifespan_ dates is ugly! You can improve this using the [same approach](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment) as we used for the `BookInstance` list (adding the virtual property for the lifespan to the `Author` model).
+> [!NOTE]
+> The appearance of the author _lifespan_ dates is ugly! You can improve this using the [same approach](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment) as we used for the `BookInstance` list (adding the virtual property for the lifespan to the `Author` model).
 >
 > However, as the author may not be dead or may have missing birth/death data, in this case we need to ignore missing dates or references to nonexistent properties. One way to deal with this is to return either a formatted date, or a blank string, depending on whether the property is defined. For example:
 >

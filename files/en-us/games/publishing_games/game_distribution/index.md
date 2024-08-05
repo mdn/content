@@ -73,7 +73,7 @@ Let's see what the available options are regarding the marketplaces/stores avail
 
 The best platforms for HTML games are Web-based stores. You can prepare games for web stores by adding a manifest file and other data, such as resources, in a zipped package. Not many modifications of the game itself are required.
 
-- [The Chrome Web Store](https://chrome.google.com/webstore/) is also an attractive option — again, having a manifest file ready, zipping your game and filling in the online submission form is about all that's required.
+- [The Chrome Web Store](https://chromewebstore.google.com/) is also an attractive option — again, having a manifest file ready, zipping your game and filling in the online submission form is about all that's required.
 
 ### Native mobile stores
 
@@ -93,7 +93,7 @@ After you've covered Steam, there's plenty of buzz around initiatives like [Humb
 
 ## Packaging games
 
-The web is the first and the best choice for HTML games, but if you want to reach a broader audience and distribute your game in a closed ecosystem, you still can do that by packaging it. The good thing is that you don't need a few separate teams working on the same game for different platforms — you can build it once and use tools like [Phonegap](https://phonegap.com/) or [CocoonIO](http://cocoon.io/) to package the game for native stores. The resulting packages are usually pretty reliable, but you should still test them and be on the lookout for small issues or bugs to fix.
+The web is the first and the best choice for HTML games, but if you want to reach a broader audience and distribute your game in a closed ecosystem, you still can do that by packaging it. The good thing is that you don't need a few separate teams working on the same game for different platforms — you can build it once and use tools like [Phonegap](https://phonegap.com/) to package the game for native stores. The resulting packages are usually pretty reliable, but you should still test them and be on the lookout for small issues or bugs to fix.
 
 ### Available tools
 

@@ -15,7 +15,8 @@ An element's padding area is the space between its content and its border.
 
 ![The effect of the CSS padding-bottom property on the element box](padding-bottom.svg)
 
-> **Note:** The {{cssxref("padding")}} property can be used to set paddings on all four sides of an element with a single declaration.
+> [!NOTE]
+> The {{cssxref("padding")}} property can be used to set paddings on all four sides of an element with a single declaration.
 
 ## Syntax
 

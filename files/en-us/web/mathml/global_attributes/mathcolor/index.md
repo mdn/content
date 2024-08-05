@@ -11,7 +11,8 @@ browser-compat: mathml.global_attributes.mathcolor
 
 The **`mathcolor`** [global attribute](/en-US/docs/Web/MathML/Global_attributes) sets the [color](/en-US/docs/Web/CSS/color) of a MathML element.
 
-> **Note:** Use CSS for styling MathML whenever possible. The `mathcolor` attribute should only be included for applications that are not CSS-aware and will be overridden by the CSS `color` property, if set.
+> [!NOTE]
+> Use CSS for styling MathML whenever possible. The `mathcolor` attribute should only be included for applications that are not CSS-aware and will be overridden by the CSS `color` property, if set.
 
 ## Syntax
 

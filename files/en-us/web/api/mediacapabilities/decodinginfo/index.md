@@ -15,7 +15,8 @@ The resolved object contains three boolean properties `supported`, `smooth`, and
 The method can also be used to test the user agent capabilities for decoding media encoded with a key system, but only when called in the main thread and in a secure context.
 If the configuration passed in the `configuration.keySystemConfiguration` property is supported for decoding the data, the resolved promise also includes a {{domxref("MediaKeySystemAccess")}} object that can be used to create a {{domxref("MediaKeys")}} object to setup encrypted playback.
 
-> **Note:** Calling `decodingInfo()` with this property may result in user-visible effects, such as asking for permission to access one or more system resources.
+> [!NOTE]
+> Calling `decodingInfo()` with this property may result in user-visible effects, such as asking for permission to access one or more system resources.
 > As such, this function should only be called when the application is ready to create and use a `MediaKeys` object with the provided configuration.
 
 ## Syntax
@@ -105,7 +106,7 @@ decodingInfo(configuration)
 
         - `persistentState` {{optional_inline}}
 
-          - : A string indicating whether whether the returned object must be able to persist session data or any other type of state.
+          - : A string indicating whether the returned object must be able to persist session data or any other type of state.
             The allowed values are:
 
             - `required`

@@ -13,7 +13,7 @@ This response is used exclusively in the context of Web Distributed Authoring an
 If the same resource is requested several times (for example, as part of a collection) with different paths, only the first one is reported with {{HTTPStatus("200")}}.
 Responses for all other bindings will report with this `208` status code, so no conflicts are created and the response stays shorter.
 
-> **Note:**
+> [!NOTE]
 > The ability to _bind_ a resource to several paths is an extension to the {{Glossary("WebDAV")}} protocol (it may be received by web applications accessing a WebDAV server).
 > Browsers accessing web pages will never encounter this status code.
 

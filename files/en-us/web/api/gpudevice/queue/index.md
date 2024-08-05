@@ -45,7 +45,8 @@ async function init() {
 }
 ```
 
-> **Note:** For more queue examples, see the {{domxref("GPUQueue")}} reference pages.
+> [!NOTE]
+> For more queue examples, see the {{domxref("GPUQueue")}} reference pages.
 
 ## Specifications
 
