@@ -74,14 +74,9 @@ The promise is rejected when one of the following exceptions are encountered:
 
 The algorithms supported by `deriveKey()` have quite different characteristics and are appropriate in different situations.
 
-### ECDH
+### Key derivation algorithms
 
-ECDH (Elliptic Curve Diffie-Hellman) is a _key-agreement algorithm_. It enables two people who each have an ECDH public/private key pair to generate a shared secret: that is, a secret that they — and no one else — share.
-They can then use this shared secret as a symmetric key to secure their communication, or can use the secret as an input to derive such a key (for example, using the HKDF algorithm).
-
-ECDH is specified in [RFC 6090](https://datatracker.ietf.org/doc/html/rfc6090).
-
-### HKDF
+#### HKDF
 
 HKDF is a _key derivation function_.
 It's designed to derive key material from some high-entropy input, such as the output of an ECDH key agreement operation.
@@ -91,7 +86,7 @@ For that, use PBKDF2.
 
 HKDF is specified in [RFC 5869](https://datatracker.ietf.org/doc/html/rfc5869).
 
-### PBKDF2
+#### PBKDF2
 
 PBKDF2 is also a _key derivation function_. It's designed to derive key material from some relatively low-entropy input, such as a password.
 It derives key material by applying a function such as HMAC to the input password along with some salt, and repeating this process many times.
@@ -99,7 +94,16 @@ The more times the process is repeated, the more computationally expensive key d
 
 PBKDF2 is specified in [RFC 2898](https://datatracker.ietf.org/doc/html/rfc2898).
 
-### X25519
+### Key agreement algorithms
+
+#### ECDH
+
+ECDH (Elliptic Curve Diffie-Hellman) is a _key-agreement algorithm_. It enables two people who each have an ECDH public/private key pair to generate a shared secret: that is, a secret that they — and no one else — share.
+They can then use this shared secret as a symmetric key to secure their communication, or can use the secret as an input to derive such a key (for example, using the HKDF algorithm).
+
+ECDH is specified in [RFC 6090](https://datatracker.ietf.org/doc/html/rfc6090).
+
+#### X25519
 
 X25519 is a key agreement algorithm like ECDH, but built on the [Curve25519](https://en.wikipedia.org/wiki/Curve25519) elliptic curve, which is part of the Edwards-Curve Digital Signature Algorithm (EdDSA) family of algorithms defined in {{rfc("8032")}}.
 The algorithm is specified in {{rfc("7748")}}.
