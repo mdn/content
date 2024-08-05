@@ -148,13 +148,16 @@ This code generates an Ed25519 signing key pair.
 It is derived from [this source code on GitHub](https://github.com/mdn/dom-examples/blob/main/web-crypto/sign-verify/ed25519.js), which you can [run live here](https://mdn.github.io/dom-examples/web-crypto/sign-verify/).
 
 ```html hidden
-<pre id="log"></pre>
+<input id="run-button" type="button" value="Run" />
+<pre id="log">Click "Run" button</pre>
 ```
 
 ```css hidden
 #log {
   height: 170px;
-  overflow: scroll;
+  white-space: pre-wrap; /* wrap pre blocks */
+  overflow-wrap: break-word; /* break on words */
+  overflow-y: auto;
   padding: 0.5rem;
   border: 1px solid black;
 }
@@ -173,7 +176,21 @@ function log(text) {
 Code for generating a key pair using the `Ed25519` algorithm and logging the information in each key is shown below.
 Note that the code is run in a `try..catch` block because not all browsers support this algorithm.
 
+The JavaScript first gets the `#sign-button` and `#message` {{HTMLElement("input")}} elements, then adds a listener for the `click` event on the button.
+The event handler clears the log and runs the other operations passing the content of the `<input>` element.
+
 ```js
+const button = document.querySelector("#run-button");
+const input = document.querySelector("#log");
+
+button.addEventListener("click", () => {
+  // Clear log
+  logElement.innerText = "";
+  logElement.scrollTop = logElement.scrollHeight;
+  // Run test
+  test();
+});
+
 async function test() {
   try {
     // Create a key pair and use destructuring assignment to assign to variables
@@ -200,15 +217,13 @@ async function test() {
     log(error);
   }
 }
-
-test();
 ```
 
 #### Result
 
 The information about the created keys is logged below (or an error string if the browser does not allow the key to be created).
 
-{{EmbedLiveSample("Ed25519", "100%", "230px")}}
+{{EmbedLiveSample("Ed25519", "100%", "240px")}}
 
 ## Specifications
 

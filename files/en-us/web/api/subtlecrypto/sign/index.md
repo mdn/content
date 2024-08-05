@@ -243,7 +243,9 @@ The HTML defines an `<input>` element containing the text to be signed, and a bu
 ```css hidden
 #log {
   height: 120px;
-  overflow: scroll-behavior: auto;
+  white-space: pre-wrap; /* wrap pre blocks */
+  overflow-wrap: break-word; /* break on words */
+  overflow-y: auto;
   padding: 0.5rem;
   border: 1px solid black;
 }
@@ -297,6 +299,7 @@ async function test(data) {
     // Encode data prior to signing
     const encoder = new TextEncoder();
     encodedData = encoder.encode(data);
+
     log(`encodedData: ${encodedData}`);
 
     // Sign the data using the private key.
