@@ -41,7 +41,7 @@ The Web Authentication process for [authenticating a (registered) user](/en-US/d
 The web app passes this information to an authenticator to find the credential, by calling [`navigator.credentials.get()`](/en-US/docs/Web/API/CredentialsContainer/get) with an argument that contains the server-supplied data as a {{domxref("PublicKeyCredentialRequestOptions")}} instance
 
 The specification does not define how the information needed for requesting a credential is sent.
-A convenient approach is for the server to encapsulate the information in a {{glossary("JSON type representation")}} of the a {{domxref("PublicKeyCredentialRequestOptions")}} instance, that mirrors its structure but encodes buffer properties such as the `challenge` as [base64url](/en-US/docs/Glossary/Base64) strings.
+A convenient approach is for the server to encapsulate the information in a {{glossary("JSON type representation")}} of a {{domxref("PublicKeyCredentialRequestOptions")}} instance, that mirrors its structure but encodes buffer properties such as the `challenge` as [base64url](/en-US/docs/Glossary/Base64) strings.
 This object can be serialized to a [JSON](/en-US/docs/Glossary/JSON) string, sent to the web app and deserialized, and then converted to a {{domxref("PublicKeyCredentialRequestOptions")}} instance using **`parseRequestOptionsFromJSON()`**.
 
 ## Examples
