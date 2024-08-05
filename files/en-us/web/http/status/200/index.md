@@ -52,7 +52,7 @@ Content-Length: 1256
 <!-- HTML content follows here -->
 ```
 
-### Receiving a `200 OK` for `POST` request in form submission
+### Receiving a `200 OK` for a `POST` request in form submission
 
 Assuming a form exists to send data to an endpoint for managing subscriptions at `http://example.com/subscribe`.
 A `POST` request to subscribe a user may look like the following:

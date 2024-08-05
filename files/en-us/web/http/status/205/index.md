@@ -53,7 +53,7 @@ Date: Wed, 26 Jun 2024 12:00:00 GMT
 ## Compatibility notes
 
 Browser behaviors differ if this response erroneously includes a body on persistent connections.
-See [204 No Content](/en-US/docs/Web/HTTP/Status/204#compatibility_notes) for more details.
+See [`204 No Content`](/en-US/docs/Web/HTTP/Status/204#compatibility_notes) for more details.
 
 ## See also
 
