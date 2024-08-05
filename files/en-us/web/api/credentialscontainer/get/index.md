@@ -12,7 +12,8 @@ The **`get()`** method of the {{domxref("CredentialsContainer")}} interface retu
 
 The method accepts a single optional `options` argument, which may include:
 
-- A `mediation` property indicating how and whether the user should be asked to participate in the operation, controlling, for example, whether the site can silently sign a user in using a stored credential.
+- A `mediation` property indicating how and whether the user should be asked to participate in the operation.
+  This controls, for example, whether the site can silently sign a user in using a stored credential.
 - A `signal` property enabling the operation to be cancelled using an {{domxref("AbortController")}}.
 - One or more properties — `password`, `federated`, `identity`, `otp`, `publicKey` — which indicate the [types of credential](/en-US/docs/Web/API/Credential_Management_API/Credential_types) being requested. If set, the values of these properties include any parameters that the browser needs in order to find an appropriate credential of the requested type.
 
