@@ -20,7 +20,7 @@ This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 
 ## Instance properties
 
-_Inherits properties from its ancestor, {{domxref("Event")}}_.
+_Inherits properties from its parent, {{domxref("ExtendableEvent")}}_.
 
 ## Instance methods
 
@@ -76,6 +76,10 @@ self.addEventListener("install", (event) => {
   );
 });
 ```
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 
