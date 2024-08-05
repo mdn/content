@@ -37,6 +37,8 @@ This article provides information about the changes in Firefox 129 that affect d
 
 ### HTTP
 
+- HTTPS DNS records can now be resolved using the operating system's DNS resolver on Windows 11, Linux, and Android 10+. This ensures that [DNS over HTTPS (DoH)](https://support.mozilla.org/en-US/kb/dns-over-https-doh-faqs) will be used if a user has enabled it on the device, even if it is not enabled in the browser. This feature allows the use of HTTP/3 without needing to use the {{httpheader("Alt-Svc")}} header and enables automatic upgrade of HTTP requests to HTTPS when the HTTPS DNS record is present. Most importantly, it now allows the use of [Encrypted Client Hello (ECH)](https://support.mozilla.org/en-US/kb/faq-encrypted-client-hello) privacy feature even when DoH is only enabled on the device, not in the browser. ([Firefox bug 1906239](https://bugzil.la/1906239)).
+
 #### Removals
 
 ### Security
