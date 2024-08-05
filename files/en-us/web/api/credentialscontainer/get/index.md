@@ -8,7 +8,7 @@ browser-compat: api.CredentialsContainer.get
 
 {{APIRef("Credential Management API")}}{{SecureContext_Header}}
 
-The **`get()`** method of the {{domxref("CredentialsContainer")}} interface returns a {{jsxref("Promise")}} that fulfills with a single {{glossary("credential")}}, which can then be used to authenticate a user: for example, when signing them into a website.
+The **`get()`** method of the {{domxref("CredentialsContainer")}} interface returns a {{jsxref("Promise")}} that fulfills with a single {{glossary("credential")}}, which can then be used to authenticate a user with a website.
 
 The method accepts a single optional `options` argument, which may include:
 
