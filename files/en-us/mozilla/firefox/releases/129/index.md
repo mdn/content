@@ -37,6 +37,8 @@ This article provides information about the changes in Firefox 129 that affect d
 
 ### HTTP
 
+- HTTPS DNS records can now be resolved using the operating system's DNS resolver on Windows 11, Linux, and Android 10+. This ensures that [DNS over HTTPS (DoH)](https://support.mozilla.org/en-US/kb/dns-over-https-doh-faqs) will be used if a user has enabled it on the device, even if it is not enabled in the browser. This feature allows the use of HTTP/3 without needing to use the {{httpheader("Alt-Svc")}} header and enables automatic upgrade of HTTP requests to HTTPS when the HTTPS DNS record is present. Most importantly, it now allows the use of [Encrypted Client Hello (ECH)](https://support.mozilla.org/en-US/kb/faq-encrypted-client-hello) privacy feature even when DoH is only enabled on the device, not in the browser. ([Firefox bug 1906239](https://bugzil.la/1906239)).
+
 #### Removals
 
 ### Security
@@ -56,6 +58,8 @@ This article provides information about the changes in Firefox 129 that affect d
 - Firefox now fires events for a synchronous {{domxref("XMLHttpRequest")}} before firing the events for any ongoing asynchronous `XMLHttpRequest`. This fixes a long-standing behavioral difference with other browsers. Note that while this should fix some sites, it may also cause degraded performance on sites that expect the old "non-blocking" behaviour for a synchronous `XMLHttpRequest`. Please [file a bug](https://bugzil.la/) if your website should have been fixed by this change but still appears to have related issues. ([Firefox bug 697151](https://bugzil.la/697151).)
 - The Ed25519 digital signature algorithm is supported by the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API), and can be used in the {{domxref("SubtleCrypto")}} methods: {{domxref("SubtleCrypto.sign()", "sign()")}}, {{domxref("SubtleCrypto.verify()", "verify()")}}, {{domxref("SubtleCrypto.wrapKey()", "wrapKey()")}}, {{domxref("SubtleCrypto.unwrapKey()", "unwrapKey()")}}, {{domxref("SubtleCrypto.generateKey()", "generateKey()")}}, and {{domxref("SubtleCrypto.importKey()", "importKey()")}}.
   The {{domxref("SubtleCrypto.exportKey()", "exportKey()")}} and {{domxref("SubtleCrypto.wrapKey()", "wrapKey()")}} methods are used export/wrap keys and can be used with keys that are created with this algorithm ([Firefox bug 1804788](https://bugzil.la/1804788)).
+- The {{domxref("PerformanceResourceTiming.contentType","contentType")}} and {{domxref("PerformanceResourceTiming.responseStatus","responseStatus")}} properties of the {{domxref("PerformanceResourceTiming")}} interface are now supported, indicating the content type of the fetched resource and the HTTP response status code returned when fetching the resource, respectively. ([Firefox bug 1800443](https://bugzil.la/1800443), [Firefox bug 1796785](https://bugzil.la/1796785).)
+- The {{domxref("RTCDTMFSender.canInsertDTMF")}} property is now supported. It enables you to check whether a WebRTC sender can insert DTMF tones into the outgoing connection. If supported, you can insert DTMF tones by using {{domxref("RTCDTMFSender.insertDTMF()")}}. ([Firefox bug 1623193](https://bugzil.la/1623193)).
 
 #### DOM
 

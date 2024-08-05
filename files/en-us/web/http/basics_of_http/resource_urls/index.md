@@ -44,8 +44,8 @@ websites, a web page could run internal scripts and inspect internal resources o
 Firefox, including the default preferences, which could be a serious security and
 privacy issue.
 
-For example, [a script on Browserleaks](https://browserleaks.com/firefox) highlights what Firefox reveals when queried by a simple script
-running on the site (you can find the code in <https://browserleaks.com/firefox#more>).
+For example, [a script on Browserleaks](https://browserleaks.com/resource-urls) highlights what Firefox reveals when queried by a simple script
+running on the site (you can find the code in <https://browserleaks.com/resource-urls#more>).
 
 The file firefox.js passes preference names and values to the pref() function. For
 example:

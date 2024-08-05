@@ -171,4 +171,4 @@ You can also test your Topics API code locally without [enrollment](/en-US/docs/
 
 ## See also
 
-- [Topics API](https://developer.chrome.com/docs/privacy-sandbox/topics/overview/) on developer.chrome.com (2023)
+- [Topics API](https://developers.google.com/privacy-sandbox/relevance/topics) on developers.google.com (2023)

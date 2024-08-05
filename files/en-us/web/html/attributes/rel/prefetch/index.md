@@ -40,7 +40,7 @@ Prefetching can be used to fetch both HTML and sub-resources for a possible next
 
 ### The effects of cache partitioning
 
-Many browsers now implement some form of [cache partitioning](https://developer.chrome.com/en/blog/http-cache-partitioning/), which makes `<link rel="prefetch">` useless for resources intended for use by different top-level sites. This includes the main document when navigating cross-site. So, for example, the following prefetch:
+Many browsers now implement some form of [cache partitioning](https://developer.chrome.com/blog/http-cache-partitioning), which makes `<link rel="prefetch">` useless for resources intended for use by different top-level sites. This includes the main document when navigating cross-site. So, for example, the following prefetch:
 
 ```html
 <link rel="prefetch" href="https://news.example/article" />

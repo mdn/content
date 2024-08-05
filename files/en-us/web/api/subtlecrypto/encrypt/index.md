@@ -74,7 +74,7 @@ The RSA-OAEP public-key encryption system is specified in [RFC 3447](https://dat
 
 ### AES-CTR
 
-This represents AES in Counter Mode, as specified in [NIST SP800-38A](https://csrc.nist.gov/publications/detail/sp/800-38a/final).
+This represents AES in Counter Mode, as specified in [NIST SP800-38A](https://csrc.nist.gov/pubs/sp/800/38/a/final).
 
 AES is a block cipher, meaning that it splits the message into blocks and encrypts it a block at a time.
 In CTR mode, every time a block of the message is encrypted, an extra block of data is mixed in. This extra block is called the "counter block".
@@ -96,11 +96,11 @@ Essentially: the nonce should ensure that counter blocks are not reused from one
 
 ### AES-CBC
 
-This represents AES in Cipher Block Chaining Mode, as specified in [NIST SP800-38A](https://csrc.nist.gov/publications/detail/sp/800-38a/final).
+This represents AES in Cipher Block Chaining Mode, as specified in [NIST SP800-38A](https://csrc.nist.gov/pubs/sp/800/38/a/final).
 
 ### AES-GCM
 
-This represents AES in Galois/Counter Mode, as specified in [NIST SP800-38D](https://csrc.nist.gov/publications/detail/sp/800-38d/final).
+This represents AES in Galois/Counter Mode, as specified in [NIST SP800-38D](https://csrc.nist.gov/pubs/sp/800/38/d/final).
 
 One major difference between this mode and the others is that GCM is an "authenticated" mode, which means that it includes checks that the ciphertext has not been modified by an attacker.
 
@@ -256,6 +256,6 @@ function encryptMessage(key) {
 
 - {{domxref("SubtleCrypto.decrypt()")}}.
 - [RFC 3447](https://datatracker.ietf.org/doc/html/rfc3447) specifies RSAOAEP.
-- [NIST SP800-38A](https://csrc.nist.gov/publications/detail/sp/800-38a/final) specifies CTR mode.
-- [NIST SP800-38A](https://csrc.nist.gov/publications/detail/sp/800-38a/final) specifies CBC mode.
-- [NIST SP800-38D](https://csrc.nist.gov/publications/detail/sp/800-38d/final) specifies GCM mode.
+- [NIST SP800-38A](https://csrc.nist.gov/pubs/sp/800/38/a/final) specifies CTR mode.
+- [NIST SP800-38A](https://csrc.nist.gov/pubs/sp/800/38/a/final) specifies CBC mode.
+- [NIST SP800-38D](https://csrc.nist.gov/pubs/sp/800/38/d/final) specifies GCM mode.

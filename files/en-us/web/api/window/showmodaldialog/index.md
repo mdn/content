@@ -103,7 +103,7 @@ Holds the `returnValue` property as set by the document specified by `uri`.
 
 ## Specifications
 
-- [MSDN page for `showModalDialog`](<https://msdn.microsoft.com/library/ms536759(VS.85).aspx>)
+- [MSDN page for `showModalDialog`](<https://learn.microsoft.com/en-us/previous-versions/ms536759(v=vs.85)>)
 
 ## Browser compatibility
 
