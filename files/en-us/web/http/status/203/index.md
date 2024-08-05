@@ -7,7 +7,7 @@ spec-urls: https://httpwg.org/specs/rfc9110.html#status.203
 
 {{HTTPSidebar}}
 
-The HTTP **`203 Non-Authoritative Information`** [successful response](/en-US/docs/Web/HTTP/Status#successful_responses) status code indicates that the request was successful, but a _transforming {{Glossary("Proxy server", "proxy")}}_ has modified the headers or enclosed payload from the origin server's {{HTTPStatus("200")}} (`OK`) response.
+The HTTP **`203 Non-Authoritative Information`** [successful response](/en-US/docs/Web/HTTP/Status#successful_responses) status code indicates that the request was successful, but a _transforming {{Glossary("Proxy server", "proxy")}}_ has modified the headers or enclosed content from the origin server's {{HTTPStatus("200")}} (`OK`) response.
 
 The purpose of this status code is to allow transforming proxies to notify clients when changes have been applied to successful responses, since this may impact decisions regarding the content later.
 Transformations to messages can mean modifications of headers to indicate that a resource is from a mirror or a backup, but may also mean modifying content in a way that are presumed to be desirable to the client.
@@ -33,7 +33,7 @@ Host: example.com
 ```
 
 A proxy has altered the message based on malware filtering rules for known unsafe attachments.
-The response payload has been modified, replacing the `attachment_url` value to a link with information about the filtering in place:
+The response content has been modified, replacing the `attachment_url` value to a link with information about the filtering in place:
 
 ```http
 HTTP/1.1 203 Non-Authoritative Information

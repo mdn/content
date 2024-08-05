@@ -12,7 +12,11 @@ The HTTP **`205 Reset Content`** [successful response](/en-US/docs/Web/HTTP/Stat
 This response is intended to support use cases where the user receives content that supports data entry, submits user-edited data in a request, and the content needs to be reset for the next entry.
 The instruction to "reset content" can mean clearing the contents of a form, resetting a canvas state, or refreshing a UI; the implementation depends on the client.
 
-There must be no payload in the response body, and this can be indicated using `Content-Length: 0` response header or `Transfer-Encoding: chunked` response header with an empty chunk.
+> [!NOTE]
+> In web applications that use the `205` status, it's assumed that the client handles resetting content after a `205` response.
+> This is typically done via JavaScript, as resetting content such as forms after a `205` response is not handled natively by browsers.
+
+There must be no content in the response body, and this can be indicated using `Content-Length: 0` response header or `Transfer-Encoding: chunked` response header with an empty chunk.
 
 ## Status
 
@@ -36,10 +40,6 @@ comment=Hello!
 ```
 
 After successfully processing the form submission, the server responds with the following `205` response, indicating that the client should reset the form.
-
-> [!NOTE]
-> It's assumed that the client supports resetting the content after a `205` response.
-> This is typically done via JavaScript, as resetting content after a `205` is not handled natively by browsers.
 
 ```http
 HTTP/1.1 205 Reset Content
