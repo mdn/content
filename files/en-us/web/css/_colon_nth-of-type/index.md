@@ -105,6 +105,7 @@ p.fancy:nth-of-type(2n + 1) {
 1. Use `.children` to find elements with content `2, 3, 4, 6, 7`.
 2. Get all sibling elements with the same tag (here, all `div`s under `father`, `span`s under `father`, and `p`s under `body`)
 3. Select and apply CSS styles based on `(2)` (The following is a simple comparison for easier understanding)
+
    ```json
    // Please note that this is not a standard JSON format!
    // All elements are HTML objects, and for ease of understanding, text is directly used here.
