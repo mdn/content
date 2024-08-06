@@ -111,7 +111,7 @@ p.fancy:nth-of-type(2n + 1) {
    {
      "father": {
        "span": [
-           "<span class='children'>5</span>"  // class includes 'children' but index: 1 not selected.
+         "<span class='children'>5</span>" // class includes 'children' but index: 1 not selected.
        ],
        "div": [
          "<div class='aaa'>1</div>", // index: 1 and class does not include 'children'. not selected.
