@@ -114,11 +114,11 @@ p.fancy:nth-of-type(2n + 1) {
            "<span class='children'>5</span>"  // class includes 'children' but index: 1 not selected.
        ],
        "div": [
-           "<div class='aaa'>1</div>",    // index: 1 and class does not include 'children'. not selected.
-           "<div class='children'>2</div>",   // index: 2 and class includes 'children'. Selected and rendered.
-           "<div class='children'>3</div>",   // class includes 'children' but index: 3 not selected.
-           "<div class='children'>4</div>",   // class includes 'children' but index: 4 not selected.
-           "<div class='children'>6</div>"    // class includes 'children' but index: 5 not selected.
+         "<div class='aaa'>1</div>", // index: 1 and class does not include 'children'. not selected.
+         "<div class='children'>2</div>", // index: 2 and class includes 'children'. Selected and rendered.
+         "<div class='children'>3</div>", // class includes 'children' but index: 3 not selected.
+         "<div class='children'>4</div>", // class includes 'children' but index: 4 not selected.
+         "<div class='children'>6</div>" // class includes 'children' but index: 5 not selected.
        ]
      },
      "body": [
