@@ -3,10 +3,12 @@ title: "RTCRemoteInboundRtpStreamStats: packetsReceived property"
 short-title: packetsReceived
 slug: Web/API/RTCRemoteInboundRtpStreamStats/packetsReceived
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.RTCStatsReport.type_remote-inbound-rtp.packetsReceived
 ---
 
-{{APIRef("WebRTC")}}
+{{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 The **`packetsReceived`** property of the {{domxref("RTCRemoteInboundRtpStreamStats")}} dictionary returns the total number of {{Glossary("RTP")}} packets received from the [synchronization source (SSRC)](/en-US/docs/Web/API/RTCRemoteInboundRtpStreamStats/ssrc) of this stream by the remote endpoint, including retransmissions.
 
