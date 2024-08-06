@@ -128,33 +128,28 @@ for example.
 
 ### Reporting directives
 
-Reporting directives control the reporting process of CSP violations. See also the
-{{HTTPHeader("Content-Security-Policy-Report-Only")}} header.
+Reporting directives control the destination URL for CSP violation reports.
+These violation reports consist of {{Glossary("JSON")}} documents sent via an HTTP `POST` request to the specified URI.
+
+> [!WARNING]
+> The {{CSP("report-to")}} directive is intended to replace `report-uri`, and in browsers that support `report-to`, the `report-uri` directive is ignored.
+>
+> However until `report-to` is broadly supported you should specify both headers as shown:
+>
+> ```http
+> Content-Security-Policy: …; report-uri https://endpoint.example.com; report-to groupname
+> ```
+
+- {{CSP("report-to")}}
+
+  - : Provides the browser with a token identifying the reporting endpoint or group of endpoints for sending CSP violation information.
+    The endpoints that the token represents may be provided through other HTTP headers, such as {{HTTPHeader("Reporting-Endpoints")}}.
 
 - {{CSP("report-uri")}} {{deprecated_inline}}
 
-  - : Instructs the user agent to report attempts to violate the Content Security Policy.
-    These violation reports consist of {{Glossary("JSON")}} documents sent via an HTTP
-    `POST` request to the specified URI.
+  - : Provides the browser with a the URL where CSP violation reports should be sent.
 
-    > [!WARNING]
-    > Though the {{CSP("report-to")}} directive is intended
-    > to replace the deprecated **`report-uri`** directive,
-    > {{CSP("report-to")}} is not supported in most browsers yet.
-    > So for compatibility with current browsers
-    > while also adding forward compatibility when browsers get {{CSP("report-to")}} support,
-    > you can specify both **`report-uri`** and {{CSP("report-to")}}:
-    >
-    > ```http
-    > Content-Security-Policy: …; report-uri https://endpoint.example.com; report-to groupname
-    > ```
-    >
-    > In browsers that support {{CSP("report-to")}},
-    > the **`report-uri`** directive will be ignored.
-
-- {{CSP("report-to")}}
-  - : Provides the browser with a token identifying the reporting endpoint or group of endpoints for sending CSP violation information.
-    The endpoints that the token represents may be provided through other HTTP headers, such as {{HTTPHeader("Reporting-Endpoints")}}.
+See also the {{HTTPHeader("Content-Security-Policy-Report-Only")}} header.
 
 ### Other directives
 
@@ -274,18 +269,16 @@ Content-Security-Policy: default-src https:
 <meta http-equiv="Content-Security-Policy" content="default-src https:" />
 ```
 
-Example: Pre-existing site that uses too much inline code to fix but wants to ensure
-resources are loaded only over HTTPS and to disable plugins:
+Example: Pre-existing site that uses too much inline code to fix but wants to ensure resources are loaded only over HTTPS and to disable plugins:
 
 ```http
 Content-Security-Policy: default-src https: 'unsafe-eval' 'unsafe-inline'; object-src 'none'
 ```
 
-Example: Do not implement the above policy yet; instead just report violations that
-would have occurred:
+Example: Do not implement the above policy yet; instead just report violations that would have occurred:
 
 ```http
-Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violation-report-endpoint/
+Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violation-report-endpoint/; report-to groupname
 ```
 
 See [Content Security Policy (CSP) implementation](/en-US/docs/Web/Security/Practical_implementation_guides/CSP) for more examples.

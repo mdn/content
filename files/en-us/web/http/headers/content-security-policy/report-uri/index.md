@@ -9,23 +9,19 @@ browser-compat: http.headers.Content-Security-Policy.report-uri
 
 {{HTTPSidebar}}{{deprecated_header}}
 
-The deprecated HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP)
-**`report-uri`** directive instructs the user agent to report
-attempts to violate the Content Security Policy. These violation reports consist of JSON
-documents sent via an HTTP POST request to the specified URI.
-
 > [!WARNING]
-> Though the {{CSP("report-to")}} directive is intended to replace the deprecated **`report-uri`** directive, {{CSP("report-to")}} is not yet supported in all browsers.
-> For compatibility, you can specify both **`report-uri`** and {{CSP("report-to")}}:
+> The {{CSP("report-to")}} directive is intended to replace `report-uri`, and in browser that support `report-to`, the `report-uri` directive is ignored.
+>
+> However until `report-to` is broadly supported you should specify both headers as shown:
 >
 > ```http
-> Content-Security-Policy: …; report-uri https://example.com/endpoint; report-to csp-endpoint
+> Content-Security-Policy: …; report-uri https://endpoint.example.com; report-to groupname
 > ```
->
-> In browsers that support {{CSP("report-to")}}, the **`report-uri`** directive is ignored.
 
-The directive has no effect in and of itself, but only gains meaning in combination
-with other directives.
+The deprecated HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`report-uri`** directive instructs the user agent to report attempts to violate the Content Security Policy.
+These violation reports consist of JSON documents sent via an HTTP POST request to the specified URI.
+
+The directive has no effect in and of itself, but only gains meaning in combination with other directives.
 
 <table class="properties">
   <tbody>
@@ -39,8 +35,7 @@ with other directives.
     </tr>
     <tr>
       <th colspan="2" scope="row">
-        This directive is not supported in the {{HTMLElement("meta")}}
-        element.
+        This directive is not supported in the {{HTMLElement("meta")}} element.
       </th>
     </tr>
   </tbody>
@@ -58,16 +53,13 @@ Content-Security-Policy: report-uri <uri> <uri>;
 
 ## Examples
 
-See {{HTTPHeader("Content-Security-Policy-Report-Only")}} for more information and
-examples.
+See {{HTTPHeader("Content-Security-Policy-Report-Only")}} for more information and examples.
 
 ```http
 Content-Security-Policy: default-src https:; report-uri /csp-violation-report-endpoint/
 ```
 
-`/csp-violation-report-endpoint/` could for example run a PHP something like
-the following that logs the JSON detailing the violation and, if the violation is the
-first one added to the log file, sends an email to an administrator:
+`/csp-violation-report-endpoint/` could for example run a PHP something like the following that logs the JSON detailing the violation and, if the violation is the first one added to the log file, sends an email to an administrator:
 
 ```php
     <?php
