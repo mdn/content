@@ -100,7 +100,7 @@ Many different headers can appear in responses. These can be divided into severa
 
 ### Body
 
-The last part of a response is the body. Not all responses have one: responses with a status code that sufficiently answers the request without the need for corresponding payload (like {{HTTPStatus("201")}} **`Created`** or {{HTTPStatus("204")}} **`No Content`**) usually don't.
+The last part of a response is the body. Not all responses have one: responses with a status code that sufficiently answers the request without the need to include content (like {{HTTPStatus("201", "201 Created")}} or {{HTTPStatus("204", "204 No Content")}}) usually don't.
 
 Bodies can be broadly divided into three categories:
 

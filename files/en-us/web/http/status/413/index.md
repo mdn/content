@@ -10,8 +10,8 @@ spec-urls: https://httpwg.org/specs/rfc9110.html#status.413
 The HTTP **`413 Content Too Large`** [client error response](/en-US/docs/Web/HTTP/Status#client_error_responses) status code indicates that the request entity was larger than limits defined by server.
 The server might close the connection or return a {{HTTPHeader("Retry-After")}} header field.
 
-Prior to {{rfc("9110")}} the response phrase for the status was **`Payload Too Large`**.
-This message is still widely used.
+The response phrase used to be **`Payload Too Large`** and this message is still widely used.
+The usage of "payload" is replaced with "content" to avoid confusion with frame payloads in HTTP/2 and HTTP/3.
 
 ## Status
 
@@ -62,3 +62,4 @@ Content-Length: 97
 - {{HTTPHeader("Connection")}}
 - {{HTTPHeader("Retry-After")}}
 - {{Glossary("HTTP Content")}}
+- [RFC 9110, section 6.4.1: Content semantics](https://httpwg.org/specs/rfc9110.html#rfc.section.6.4.1)

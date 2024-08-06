@@ -135,7 +135,7 @@ The status codes listed below are defined by [RFC 9110](https://httpwg.org/specs
   - : Server rejected the request because the `Content-Length` header field is not defined and the server requires it.
 - {{HTTPStatus(412, "412 Precondition Failed")}}
   - : The client has indicated preconditions in its headers which the server does not meet.
-- {{HTTPStatus(413, "413 Payload Too Large")}}
+- {{HTTPStatus(413, "413 Content Too Large")}}
   - : Request entity is larger than limits defined by server.
     The server might close the connection or return an `Retry-After` header field.
 - {{HTTPStatus(414, "414 URI Too Long")}}
