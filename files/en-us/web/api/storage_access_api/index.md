@@ -41,7 +41,7 @@ The Storage Access API is intended to solve this problem; embedded cross-site co
 
 It is important to note that the Storage Access API is only needed to provide access to _unpartitioned_ third-party cookies. This means cookies stored in the traditional way since the early web — all cookies set on the same site are stored in the same cookie jar. This is in contrast to _partitioned_ cookies, where embedded resources under each top-level site are given a unique cookie storage space, thereby making tracking users across sites via these cookies impossible.
 
-Browsers have various mechanisms to partition third-party cookie access, for example [Firefox Total Cookie Protection](https://blog.mozilla.org/products/firefox/firefox-rolls-out-total-cookie-protection-by-default-to-all-users-worldwide/) and [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies).
+Browsers have various mechanisms to partition third-party cookie access, for example [Firefox Total Cookie Protection](https://blog.mozilla.org/en/products/firefox/firefox-rolls-out-total-cookie-protection-by-default-to-all-users-worldwide/) and [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies).
 
 When we talk about third-party cookies in the context of the Storage Access API, we implicitly mean _unpartitioned_ third-party cookies.
 
@@ -62,7 +62,8 @@ Embedded content that has a legitimate need for third party cookie or unpartitio
 5. Once access is granted, a permission key is stored in the browser with the structure `<top-level site, embedded site>`. For example, if the embedding site is `embedder.com`, and the embed is `locator.example.com`, the key would be `<embedder.com, example.com>`. Same-site embeds (`docs.example.com`, `profile.example.com`, etc.) would then be able to call `requestStorageAccess()` and the promise would fulfill automatically, as mentioned earlier.
    - Older spec versions used the more specific permission key structure `<top-level site, embedded origin>`, which meant that same-site, cross-origin embeds didn't match the permission key and had to go through the whole process separately.
 
-> **Note:** In cases where a top-level site has its cookies [partitioned](#unpartitioned_versus_partitioned_cookies), the Storage Access API isn't required, as sharing the cookies by default has no privacy risk.
+> [!NOTE]
+> In cases where a top-level site has its cookies [partitioned](#unpartitioned_versus_partitioned_cookies), the Storage Access API isn't required, as sharing the cookies by default has no privacy risk.
 
 ## Security measures
 
@@ -87,7 +88,8 @@ Several different security measures could cause a {{domxref("Document.requestSto
 
 6. Usage of this feature may be blocked by a {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) set on your server.
 
-> **Note:** The document may also be required to pass additional browser-specific checks. Examples: allowlists, blocklists, on-device classification, user settings, anti-[clickjacking](/en-US/docs/Glossary/Clickjacking) heuristics, or prompting the user for explicit permission.
+> [!NOTE]
+> The document may also be required to pass additional browser-specific checks. Examples: allowlists, blocklists, on-device classification, user settings, anti-[clickjacking](/en-US/docs/Glossary/Clickjacking) heuristics, or prompting the user for explicit permission.
 
 ## Browser-specific variations
 
@@ -126,7 +128,8 @@ Documentation for Firefox's new storage access policy for blocking tracking cook
 - {{domxref("Document.requestStorageAccessFor()")}} {{experimental_inline}}
   - : A proposed extension to the Storage Access API that allows top-level sites to request third-party cookie access on behalf of embedded content originating from another site in the same [related website set](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets). Returns a {{jsxref("Promise")}} that resolves if the access was granted, and rejects if access was denied.
 
-> **Note:** User interaction propagates to the promise returned by these methods, allowing the callers to take actions requiring user interaction without requiring a second click. For example, a caller could open a pop-up window from the resolved promise without triggering Firefox's pop-up blocker.
+> [!NOTE]
+> User interaction propagates to the promise returned by these methods, allowing the callers to take actions requiring user interaction without requiring a second click. For example, a caller could open a pop-up window from the resolved promise without triggering Firefox's pop-up blocker.
 
 ### Additions to other APIs
 

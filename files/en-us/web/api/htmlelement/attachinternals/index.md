@@ -36,7 +36,7 @@ An {{domxref("ElementInternals")}} object.
 
 ## Examples
 
-The following example demonstrates how to create a custom form-associated element with {{domxref("HTMLElement.attachInternals")}}. The {{domxref("ElementInternals.form")}} property is then printed to the console to demonstrate that we have an {{domxref("ElementInternals")}} object.
+The following example demonstrates how to create a custom form-associated element with `HTMLElement.attachInternals`. The {{domxref("ElementInternals.form")}} property is then printed to the console to demonstrate that we have an {{domxref("ElementInternals")}} object.
 
 ```js
 class CustomCheckbox extends HTMLElement {

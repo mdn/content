@@ -23,7 +23,8 @@ For detailed information on anchor features and position try fallback usage, see
 }
 ```
 
-> **Note:** The `--try-option-name` is a {{cssxref("dashed-ident")}} specifying an identifying name for the custom position option, which can then be used to add that fallback option to the {{cssxref("position-try-fallbacks")}} list.
+> [!NOTE]
+> The `--try-option-name` is a {{cssxref("dashed-ident")}} specifying an identifying name for the custom position option, which can then be used to add that fallback option to the {{cssxref("position-try-fallbacks")}} list.
 
 ### Descriptors
 
@@ -76,7 +77,8 @@ The descriptors specify property values that define the behavior of the custom p
 - Self-alignment property descriptors
   - : Specify the [`anchor-center`](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#centering_on_the_anchor_using_anchor-center) value to align the anchor-positioned element relative to the anchor element's center, in the block or inline direction. {{cssxref("align-self")}} and {{cssxref("justify-self")}} property descriptors can take the `anchor-center` value.
 
-> **Note:** When a custom position option is applied to an element, the property values defined in the `@position-try` at-rule descriptor takes precedence over the values set on the element via standard CSS properties.
+> [!NOTE]
+> When a custom position option is applied to an element, the property values defined in the `@position-try` at-rule descriptor takes precedence over the values set on the element via standard CSS properties.
 
 ## Formal syntax
 

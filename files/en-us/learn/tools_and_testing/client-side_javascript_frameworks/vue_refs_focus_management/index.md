@@ -160,7 +160,8 @@ Vue lets you run methods at various stages of this lifecycle using **lifecycle m
 9. `activated()` — Only used in components wrapped in a special `keep-alive` tag. Runs after the component is activated.
 10. `deactivated()` — Only used in components wrapped in a special `keep-alive` tag. Runs after the component is deactivated.
 
-> **Note:** The Vue Docs provide a [nice diagram for visualizing when these hooks happen](https://vuejs.org/guide/essentials/lifecycle.html#lifecycle-diagram). This article from the [Digital Ocean Community Blog dives into the lifecycle methods more deeply](https://www.digitalocean.com/community/tutorials/vuejs-component-lifecycle).
+> [!NOTE]
+> The Vue Docs provide a [nice diagram for visualizing when these hooks happen](https://vuejs.org/guide/essentials/lifecycle.html#lifecycle-diagram). This article from the [Digital Ocean Community Blog dives into the lifecycle methods more deeply](https://www.digitalocean.com/community/tutorials/vuejs-component-lifecycle).
 
 Now that we've gone over the lifecycle methods, let's use one to trigger focus when our `ToDoItemEditForm` component is mounted.
 
@@ -228,6 +229,7 @@ Now, when you delete an item from your list, focus should be moved up to the lis
 
 So that's it for focus management, and for our app! Congratulations for working your way through all our Vue tutorials. In the next article we'll round things off with some further resources to take your Vue learning further.
 
-> **Note:** If you need to check your code against our version, you can find a finished version of the sample Vue app code in our todo-vue repository. For a running live version, see <https://mdn.github.io/todo-vue/>.
+> [!NOTE]
+> If you need to check your code against our version, you can find a finished version of the sample Vue app code in our todo-vue repository. For a running live version, see <https://mdn.github.io/todo-vue/>.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}

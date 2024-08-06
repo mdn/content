@@ -43,7 +43,8 @@ absolute units (such as `px` or `cm`), or the `vw`
 unit, which lets you specify the width as a percentage of the viewport width
 (`1vw` being 1% of the viewport width).
 
-> **Note:** The source size value must _not_ be specified as a
+> [!NOTE]
+> The source size value must _not_ be specified as a
 > percentage of the container size; that is, lengths such as `50%` or
 > `100%` are not allowed, as there would be uncertainty as to what the
 > specified value is a percentage of.

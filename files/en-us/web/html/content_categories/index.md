@@ -14,9 +14,10 @@ There are three types of content categories:
 - Form-related content categories, which describe rules common to form-related elements.
 - Specific content categories, which describe rare categories shared only by a few elements, sometimes only in a specific context.
 
-> **Note:** A more detailed discussion of these content categories and their comparative functionalities is beyond the scope of this article; for that, you may wish to read the [relevant portions of the HTML specification](https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content).
+> [!NOTE]
+> A more detailed discussion of these content categories and their comparative functionalities is beyond the scope of this article; for that, you may wish to read the [relevant portions of the HTML specification](https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content).
 
-[![A Venn diagram showing how the various content categories interrelate. The following sections explain these relationships in text.](content_categories_venn.png)](/en-US/docs/Web/HTML/Content_categories/content_categories_venn.png)
+![A Venn diagram showing how the various content categories interrelate. The following sections explain these relationships in text.](content_categories_venn.png)
 
 ## Main content categories
 
@@ -34,7 +35,7 @@ The metadata elements are:
 - {{HTMLElement("style")}}
 - {{HTMLElement("title")}}
 
-Some of these elements belong to more than one content category. For example, `<script>` is a member of the metadata, flow, and phrasing content categories, and is a script-supporting element; `<script>` can be used where metadata contet, phrasing content, or script-supporting elements are expected.
+Some of these elements belong to more than one content category. For example, `<script>` is a member of the metadata, flow, and phrasing content categories, and is a script-supporting element; `<script>` can be used where metadata content, phrasing content, or script-supporting elements are expected.
 
 ### Flow content
 
@@ -149,7 +150,8 @@ The heading elements are:
 - {{HTMLElement("Heading_Elements", "<code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code>")}}
 - {{HTMLElement("hgroup")}}
 
-> **Note:** Though likely to contain heading content, the {{HTMLElement("header")}} is not heading content itself.
+> [!NOTE]
+> Though likely to contain heading content, the {{HTMLElement("header")}} is not heading content itself.
 
 ### Phrasing content
 
@@ -296,7 +298,7 @@ The palpable elements are:
 - {{HtmlElement("main")}}
 - {{HtmlElement("map")}}
 - {{HtmlElement("mark")}}
-- {{MathMLElement("math")}} from [MathML](/en-us/doc/Web/MathML)
+- {{MathMLElement("math")}} from [MathML](/en-US/docs/Web/MathML)
 - {{HtmlElement("meter")}}
 - {{HtmlElement("nav")}}
 - {{HtmlElement("object")}}

@@ -8,7 +8,8 @@ page-type: learn-module-assessment
 
 The aim of this skill test is to assess whether you've understood our [Introduction to events](/en-US/docs/Learn/JavaScript/Building_blocks/Events) article.
 
-> **Note:** You can try solutions by downloading the code and putting it in an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+> [!NOTE]
+> You can try solutions by downloading the code and putting it in an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
 > If there is an error, it will be logged in the results panel on the page or into the browser's JavaScript console to help you.
 >
 > If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
@@ -29,7 +30,7 @@ Try updating the live code below to recreate the finished example:
 
 {{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/events/events1.html", '100%', 400)}}
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/events/events1-download.html) to work in your own editor or in an online editor.
 
@@ -45,7 +46,7 @@ Try updating the live code below to recreate the finished example:
 
 {{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/events/events2.html", '100%', 650)}}
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/events/events2-download.html) to work in your own editor or in an online editor.
 
@@ -59,6 +60,6 @@ Try updating the live code below to recreate the finished example:
 
 {{EmbedGHLiveSample("learning-area/javascript/building-blocks/tasks/events/events3.html", '100%', 600)}}
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download the starting point for this task](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/tasks/events/events3-download.html) to work in your own editor or in an online editor.

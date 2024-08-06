@@ -34,7 +34,8 @@ If the box needs to be a fixed size, or you are keen to ensure that long words c
 
 {{EmbedGHLiveSample("css-examples/css-text/overflow-wrap.html", '100%', 660)}}
 
-> **Note:** The `overflow-wrap` property acts in the same way as the non-standard property `word-wrap`. The `word-wrap` property is now treated by browsers as an alias of the standard property.
+> [!NOTE]
+> The `overflow-wrap` property acts in the same way as the non-standard property `word-wrap`. The `word-wrap` property is now treated by browsers as an alias of the standard property.
 
 An alternative property to try is {{cssxref("word-break")}}. This property will break the word at the point it overflows. It will cause a break-even if placing the word onto a new line would allow it to display without breaking.
 

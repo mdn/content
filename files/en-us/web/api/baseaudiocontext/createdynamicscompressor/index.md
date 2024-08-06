@@ -16,7 +16,8 @@ especially important in games and musical applications where large numbers of in
 sounds are played simultaneously, where you want to control the overall signal level and
 help avoid clipping (distorting) of the audio output.
 
-> **Note:** The {{domxref("DynamicsCompressorNode.DynamicsCompressorNode", "DynamicsCompressorNode()")}}
+> [!NOTE]
+> The {{domxref("DynamicsCompressorNode.DynamicsCompressorNode", "DynamicsCompressorNode()")}}
 > constructor is the recommended way to create a {{domxref("DynamicsCompressorNode")}}; see
 > [Creating an AudioNode](/en-US/docs/Web/API/AudioNode#creating_an_audionode).
 

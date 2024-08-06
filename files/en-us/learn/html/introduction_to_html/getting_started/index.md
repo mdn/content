@@ -39,7 +39,8 @@ If we wanted the text to stand by itself, we could specify that it is a paragrap
 <p>My cat is very grumpy</p>
 ```
 
-> **Note:** Tags in HTML are not case-sensitive. This means they can be written in uppercase or lowercase. For example, a {{htmlelement("title")}} tag could be written as `<title>`, `<TITLE>`, `<Title>`, `<TiTlE>`, etc., and it will work. However, it is best practice to write all tags in lowercase for consistency and readability.
+> [!NOTE]
+> Tags in HTML are not case-sensitive. This means they can be written in uppercase or lowercase. For example, a {{htmlelement("title")}} tag could be written as `<title>`, `<TITLE>`, `<Title>`, `<TiTlE>`, etc., and it will work. However, it is best practice to write all tags in lowercase for consistency and readability.
 
 ## Anatomy of an HTML element
 
@@ -218,7 +219,8 @@ This would output the following:
 
 {{ EmbedLiveSample('Void_elements', 700, 300, "", "") }}
 
-> **Note:** In HTML, there is no requirement to add a `/` at the end of a void element's tag, for example: `<img src="images/cat.jpg" alt="cat" />`. However, it is also a valid syntax, and you may do this when you want your HTML to be valid XML.
+> [!NOTE]
+> In HTML, there is no requirement to add a `/` at the end of a void element's tag, for example: `<img src="images/cat.jpg" alt="cat" />`. However, it is also a valid syntax, and you may do this when you want your HTML to be valid XML.
 
 ## Attributes
 
@@ -507,7 +509,8 @@ If you want to experiment with writing some HTML on your local computer, you can
 3. Paste the code into the new text file.
 4. Save the file as `index.html`.
 
-> **Note:** You can also find this basic HTML template on the [MDN Learning Area GitHub repo](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html).
+> [!NOTE]
+> You can also find this basic HTML template on the [MDN Learning Area GitHub repo](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html).
 
 You can now open this file in a web browser to see what the rendered code looks like. Edit the code and refresh the browser to see what the result is. Initially, the page looks like this:
 
@@ -678,7 +681,8 @@ Let's have a look at how the browser renders the two paragraphs above with and w
 
 {{ EmbedLiveSample('Whitespace_in_HTML', 700, 100) }}
 
-> **Note:** Accessing the [innerHTML](/en-US/docs/Web/API/Element/innerHTML) of elements from JavaScript will keep all the whitespace intact.
+> [!NOTE]
+> Accessing the [innerHTML](/en-US/docs/Web/API/Element/innerHTML) of elements from JavaScript will keep all the whitespace intact.
 > This may return unexpected results if the whitespace is trimmed by the browser.
 
 ```js
@@ -721,7 +725,8 @@ In the live output below, you can see that the first paragraph has gone wrong. T
 
 {{ EmbedLiveSample('Entity_references_Including_special_characters_in_HTML', 700, 200, "", "") }}
 
-> **Note:** You don't need to use entity references for any other symbols, as modern browsers will handle the actual symbols just fine as long as your HTML's [character encoding is set to UTF-8](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#specifying_your_documents_character_encoding).
+> [!NOTE]
+> You don't need to use entity references for any other symbols, as modern browsers will handle the actual symbols just fine as long as your HTML's [character encoding is set to UTF-8](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#specifying_your_documents_character_encoding).
 
 ## HTML comments
 

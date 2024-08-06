@@ -1,5 +1,6 @@
 ---
 title: "HTML attribute: step"
+short-title: step
 slug: Web/HTML/Attributes/step
 page-type: html-attribute
 browser-compat: html.elements.input.step
@@ -109,7 +110,8 @@ Valid values include 1.2, 3.2, 5.2, 7.2, 9.2, 11.2, and so on. Only floats with 
 
 {{EmbedLiveSample("min_impact_on_step","100%",55)}}
 
-> **Note:** When the data entered by the user doesn't adhere to the stepping configuration, the value is considered invalid in constraint validation and will match the {{cssxref(":invalid")}} and {{cssxref(":out-of-range")}} pseudoclasses.
+> [!NOTE]
+> When the data entered by the user doesn't adhere to the stepping configuration, the value is considered invalid in constraint validation and will match the {{cssxref(":invalid")}} and {{cssxref(":out-of-range")}} pseudoclasses.
 
 See [Client-side validation](/en-US/docs/Web/HTML/Constraint_validation) and {{domxref("ValidityState.stepMismatch", "stepMismatch")}} for more information.
 

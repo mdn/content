@@ -18,7 +18,8 @@ This request may be cached, and the server is expected to control the cacheabili
 The server may also include this header in responses in order to indicate it has an interest in changing the prioritization.
 This information can then be used as an input to the prioritization process for caching servers and other servers that are forwarding the response.
 
-> **Note:** This header is one part of the "Extensible Prioritization Scheme for HTTP" defined in {{rfc("9218")}}.
+> [!NOTE]
+> This header is one part of the "Extensible Prioritization Scheme for HTTP" defined in {{rfc("9218")}}.
 > There are also HTTP/2 and HTTP/3 `PRIORITY_UPDATE` frames that can be used to re-prioritize a resource request after it has been sent.
 > The request can be sent in any HTTP version.
 
@@ -75,7 +76,8 @@ Priority: u=<priority>, i
     If the browser does not set this directive then it is indicating that it will not process the resource incrementally.
     Servers should in this case send responses with the same urgency one by one, in the order in which their associated requests were generated.
 
-> **Note:** Servers are expected to ignore directives on this header that they do not understand.
+> [!NOTE]
+> Servers are expected to ignore directives on this header that they do not understand.
 > New directives that are added in future are expected to be compatible with these existing directives so that they can be safely ignored.
 
 ## Examples
@@ -104,7 +106,8 @@ The urgency is set to 2, indicating that the browser considers it to be quite hi
 priority = u=2
 ```
 
-> **Note:** The requests above use the human-readable format from the HTTP/2 or HTTP/3 specifications.
+> [!NOTE]
+> The requests above use the human-readable format from the HTTP/2 or HTTP/3 specifications.
 > The HTTP/1.1 format used in most of this documentation would be something like:
 >
 > ```http

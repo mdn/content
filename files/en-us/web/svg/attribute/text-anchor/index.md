@@ -13,7 +13,8 @@ This attribute is not applicable to other types of auto-wrapped text. For those 
 
 The `text-anchor` attribute is applied to each individual text chunk within a given {{SVGElement("text")}} element. Each text chunk has an initial current text position, which represents the point in the user coordinate system resulting from (depending on context) application of the {{SVGAttr("x")}} and {{SVGAttr("y")}} attributes on the `<text>` element, any `x` or `y` attribute values on a {{SVGElement("tspan")}} or {{SVGElement("tref")}} element assigned explicitly to the first rendered character in a text chunk, or determination of the initial current text position for a {{SVGElement("textPath")}} element.
 
-> **Note:** As a presentation attribute, `text-anchor` can be used as a CSS property.
+> [!NOTE]
+> As a presentation attribute, `text-anchor` can be used as a CSS property. See {{cssxref('text-anchor')}} for more.
 
 You can use this attribute with the following SVG elements:
 
@@ -94,3 +95,8 @@ svg {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- SVG {{SVGElement("text")}} element
+- CSS {{cssxref('text-anchor')}} property

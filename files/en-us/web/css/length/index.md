@@ -9,19 +9,22 @@ browser-compat: css.types.length
 
 The **`<length>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a distance value. Lengths can be used in numerous CSS properties, such as {{Cssxref("width")}}, {{Cssxref("height")}}, {{Cssxref("margin")}}, {{Cssxref("padding")}}, {{Cssxref("border-width")}}, {{Cssxref("font-size")}}, and {{Cssxref("text-shadow")}}.
 
-> **Note:** Although {{cssxref("&lt;percentage&gt;")}} values are usable in some of the same properties that accept `<length>` values, they are not themselves `<length>` values. See {{cssxref("&lt;length-percentage&gt;")}}.
+> [!NOTE]
+> Although {{cssxref("&lt;percentage&gt;")}} values are usable in some of the same properties that accept `<length>` values, they are not themselves `<length>` values. See {{cssxref("&lt;length-percentage&gt;")}}.
 
 ## Syntax
 
 The `<length>` data type consists of a {{cssxref("&lt;number&gt;")}} followed by one of the units listed below. As with all CSS dimensions, there is no space between the number and the unit literal. Specifying the length unit is optional if the number is `0`.
 
-> **Note:** Some properties allow negative `<length>` values, while others do not.
+> [!NOTE]
+> Some properties allow negative `<length>` values, while others do not.
 
 The [specified value](/en-US/docs/Web/CSS/specified_value) of a length (_specified length_) is represented by its quantity and unit. The [computed value](/en-US/docs/Web/CSS/computed_value) of a length (_computed length_) is the specified length resolved to an absolute length, and its unit is not distinguished.
 
 The `<length>` units can be relative or absolute. Relative lengths represent a measurement in terms of some other distance. Depending on the unit, this distance can be the size of a specific character, the [line height](/en-US/docs/Web/CSS/line-height), or the size of the {{Glossary("viewport")}}. Style sheets that use relative length units can more easily scale from one output environment to another.
 
-> **Note:** Child elements do not inherit the relative values as specified for their parent; they inherit the computed values.
+> [!NOTE]
+> Child elements do not inherit the relative values as specified for their parent; they inherit the computed values.
 
 ## Relative length units
 
@@ -31,7 +34,8 @@ CSS relative length units are based on font, container, or viewport sizes.
 
 Font lengths define the `<length>` value in terms of the size of a particular character or font attribute in the font currently in effect in an element or its parent.
 
-> **Note:** These units, especially `em` and the root relative `rem`, are often used to create scalable layouts, which maintain the vertical rhythm of the page even when the user changes the font size.
+> [!NOTE]
+> These units, especially `em` and the root relative `rem`, are often used to create scalable layouts, which maintain the vertical rhythm of the page even when the user changes the font size.
 
 - `cap`
   - : Represents the "cap height" (nominal height of capital letters) of the element's {{Cssxref("font")}}.
@@ -90,17 +94,20 @@ The viewport-percentage length units are based on four different viewport sizes:
 
     The dynamic viewport unit is represented by the `dv` prefix and results in the `dv*` viewport-percentage units. The sizes of the dynamic viewport-percentage units are not stable, even when the viewport itself is unchanged.
 
-    > **Note:** While the dynamic viewport size can give you more control and flexibility, using viewport-percentage units based on the dynamic viewport size can cause the content to resize while a user is scrolling a page. This can lead to degradation of the user interface and cause a performance hit.
+    > [!NOTE]
+    > While the dynamic viewport size can give you more control and flexibility, using viewport-percentage units based on the dynamic viewport size can cause the content to resize while a user is scrolling a page. This can lead to degradation of the user interface and cause a performance hit.
 
 - **Default**
 
   - : The default viewport size is defined by the browser. The behavior of the resulting viewport-percentage unit could be equivalent to the viewport-percentage unit based on the small viewport size, the large viewport size, an intermediate size between the two, or the dynamic viewport size.
 
-    > **Note:** For example, a browser might implement the default viewport-percentage unit for height (`vh`) that is equivalent to the large viewport-percentage height unit (`lvh`). If so, this could obscure content on a full-page display while the browser interface is expanded.
+    > [!NOTE]
+    > For example, a browser might implement the default viewport-percentage unit for height (`vh`) that is equivalent to the large viewport-percentage height unit (`lvh`). If so, this could obscure content on a full-page display while the browser interface is expanded.
 
 Viewport-percentage lengths define `<length>` values in percentage relative to the size of the initial [containing block](/en-US/docs/Web/CSS/Containing_block), which in turn is based on either the size of the {{Glossary("viewport")}} or the page area, i.e., the visible portion of the document. When the height or width of the initial containing block is changed, the elements that are sized based on them are scaled accordingly. There is a viewport-percentage length unit variant corresponding to each of the viewport sizes, as described below.
 
-> **Note:** Viewport lengths are invalid in {{cssxref("@page")}} declaration blocks.
+> [!NOTE]
+> Viewport lengths are invalid in {{cssxref("@page")}} declaration blocks.
 
 - `vh`
 
@@ -182,7 +189,8 @@ For low-dpi devices, the unit `px` represents the physical _reference pixel_; ot
 
 For high-dpi devices, inches (`in`), centimeters (`cm`), and millimeters (`mm`) are the same as their physical counterparts. Therefore, the `px` unit is defined relative to them (1/96 of `1in`).
 
-> **Note:** Many users increase their {{Glossary("user agent")}}'s default font size to make text more legible. Absolute lengths can cause accessibility problems because they are fixed and do not scale according to user settings. For this reason, prefer relative lengths (such as `em` or `rem`) when setting `font-size`.
+> [!NOTE]
+> Many users increase their {{Glossary("user agent")}}'s default font size to make text more legible. Absolute lengths can cause accessibility problems because they are fixed and do not scale according to user settings. For this reason, prefer relative lengths (such as `em` or `rem`) when setting `font-size`.
 
 - `px`
   - : One pixel. For screen displays, it traditionally represents one device pixel (dot). However, for _printers_ and _high-resolution screens_, one CSS pixel implies multiple device pixels. `1px` = `1in / 96`.
@@ -294,7 +302,9 @@ inputElem.addEventListener("change", () => {
   const result = document.createElement("div");
   result.className = "result";
   result.style.width = inputElem.value;
-  result.innerHTML = `<code>width: ${inputElem.value}</code>`;
+  const code = document.createElement("code");
+  code.textContent = `width: ${inputElem.value}`;
+  result.appendChild(code);
   resultsDiv.appendChild(result);
 
   inputElem.value = "";

@@ -19,7 +19,8 @@ If the background page is an event page, the system will ensure it is loaded bef
 
 This is an asynchronous function that returns a {{JSxRef("Promise")}}.
 
-> **Note:** In Firefox, this method cannot be used in Private Browsing mode — it always returns `null`. For more info see [Firefox bug 1329304](https://bugzil.la/1329304).
+> [!NOTE]
+> In Firefox, this method cannot be used in Private Browsing mode — it always returns `null`. For more info see [Firefox bug 1329304](https://bugzil.la/1329304).
 >
 > In Chrome, this method is available only with persistent background pages, which are not available in Manifest V3, so consider using Manifest V2. See the [this](https://developer.chrome.com/docs/extensions/mv3/migrating_to_service_workers/) for details.
 >
@@ -74,7 +75,8 @@ getting.then(onGot, onError);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#method-getBackgroundPage) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#method-getBackgroundPage) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

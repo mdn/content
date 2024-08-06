@@ -15,7 +15,8 @@ There are many types of events, some of which use other interfaces based on the 
 
 Many DOM elements can be set up to accept (or "listen" for) these events, and execute code in response to process (or "handle") them. Event-handlers are usually connected (or "attached") to various [HTML elements](/en-US/docs/Web/HTML/Element) (such as `<button>`, `<div>`, `<span>`, etc.) using [`EventTarget.addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener), and this generally replaces using the old HTML [event handler attributes](/en-US/docs/Web/HTML/Global_attributes). Further, when properly added, such handlers can also be disconnected if needed using [`removeEventListener()`](/en-US/docs/Web/API/EventTarget/removeEventListener).
 
-> **Note:** One element can have several such handlers, even for the exact same event—particularly if separate, independent code modules attach them, each for its own independent purposes. (For example, a webpage with an advertising-module and statistics-module both monitoring video-watching.)
+> [!NOTE]
+> One element can have several such handlers, even for the exact same event—particularly if separate, independent code modules attach them, each for its own independent purposes. (For example, a webpage with an advertising-module and statistics-module both monitoring video-watching.)
 
 When there are many nested elements, each with its own handler(s), event processing can become very complicated—especially where a parent element receives the very same event as its child elements because "spatially" they overlap so the event technically occurs in both, and the processing order of such events depends on the [Event bubbling](/en-US/docs/Learn/JavaScript/Building_blocks/Event_bubbling) settings of each handler triggered.
 

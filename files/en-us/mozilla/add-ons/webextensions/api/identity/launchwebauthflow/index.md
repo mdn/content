@@ -98,4 +98,5 @@ function getAccessToken() {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`identity`](https://developer.chrome.com/docs/extensions/reference/identity/) API.
+> [!NOTE]
+> This API is based on Chromium's [`identity`](https://developer.chrome.com/docs/extensions/reference/identity/) API.

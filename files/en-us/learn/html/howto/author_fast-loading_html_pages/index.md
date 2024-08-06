@@ -189,6 +189,6 @@ Note: Even though these attributes do help a lot the first time a page is loaded
 
 ## See also
 
-- Book: ["Speed Up Your Site" by Andy King](http://www.websiteoptimization.com/)
+- Book: ["Speed Up Your Site" by Andy King](https://www.websiteoptimization.com/)
 - The excellent and very complete [Best Practices for Speeding Up Your Website](https://developer.yahoo.com/performance/rules.html) (Yahoo!)
 - Tools for analyzing and optimizing performance: [Google PageSpeed Tools](https://developers.google.com/speed)

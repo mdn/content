@@ -67,7 +67,6 @@ video.onloadedmetadata = (event) => {
 - The HTMLMediaElement {{domxref("HTMLMediaElement.seeking_event", 'seeking')}} event
 - The HTMLMediaElement {{domxref("HTMLMediaElement.seeked_event", 'seeked')}} event
 - The HTMLMediaElement {{domxref("HTMLMediaElement.ended_event", 'ended')}} event
-- The HTMLMediaElement {{domxref("HTMLMediaElement.loadedmetadata_event", 'loadedmetadata')}} event
 - The HTMLMediaElement {{domxref("HTMLMediaElement.loadeddata_event", 'loadeddata')}} event
 - The HTMLMediaElement {{domxref("HTMLMediaElement.canplay_event", 'canplay')}} event
 - The HTMLMediaElement {{domxref("HTMLMediaElement.canplaythrough_event", 'canplaythrough')}} event

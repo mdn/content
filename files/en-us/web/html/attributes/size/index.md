@@ -1,5 +1,6 @@
 ---
 title: "HTML attribute: size"
+short-title: size
 slug: Web/HTML/Attributes/size
 page-type: html-attribute
 browser-compat:

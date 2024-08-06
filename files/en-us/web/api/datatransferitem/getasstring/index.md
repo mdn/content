@@ -21,7 +21,7 @@ getAsString(callbackFn)
 - `callbackFn`
   - : A callback function that receives following arguments:
     - `data`
-      - : The {{domxref("DataTransferItem", "data transfer item's")}} string data.
+      - : The {{domxref("DataTransferItem")}}'s string data.
 
 ### Return value
 

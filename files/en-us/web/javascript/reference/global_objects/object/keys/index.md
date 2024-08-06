@@ -78,7 +78,8 @@ console.log(Object.keys("foo")); // ['0', '1', '2']
 console.log(Object.keys(100)); // []
 ```
 
-> **Note:** In ES5, passing a non-object to `Object.keys()` threw a {{jsxref("TypeError")}}.
+> [!NOTE]
+> In ES5, passing a non-object to `Object.keys()` threw a {{jsxref("TypeError")}}.
 
 ## Specifications
 

@@ -141,7 +141,7 @@ modern isolation features:
 Finally, setting `document.domain` does not change the origin used for
 origin-checks by some Web APIs, preventing sub-domain access via this mechanism.
 Affected APIs include (but are not limited to):
-{{domxref("Window.localStorage")}}, {{domxref("IndexedDB_API")}}, {{domxref("BroadcastChannel")}}, {{domxref("SharedWorker")}} .
+{{domxref("Window.localStorage")}}, [IndexDB API](/en-US/docs/Web/API/IndexedDB_API), {{domxref("BroadcastChannel")}}, {{domxref("SharedWorker")}} .
 
 ## Specifications
 

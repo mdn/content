@@ -50,7 +50,7 @@ worker.addEventListener("message", (msg) => {
 });
 ```
 
-> **Note:** {{domxref("MediaSourceHandle")}}s cannot be successfully transferred into or via a shared worker or service worker.
+> **Note:** `MediaSourceHandle`s cannot be successfully transferred into or via a shared worker or service worker.
 
 ## Specifications
 

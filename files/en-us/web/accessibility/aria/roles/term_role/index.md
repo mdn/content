@@ -17,7 +17,8 @@ The `term` role is used to explicitly identify a word or phrase for which a defi
 
 Don't use the `role="term"` on interactive elements like links because it can interfere with assistive technology users ability to interact with the element. Also, the term itself is the accessible name, so do not use [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby).
 
-> **Warning:** The accessible name should be the term itself, so DO NOT use `aria-label` or `aria-labelledby`.
+> [!WARNING]
+> The accessible name should be the term itself, so DO NOT use `aria-label` or `aria-labelledby`.
 
 ### Associated WAI-ARIA roles, states, and properties
 

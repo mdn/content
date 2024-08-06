@@ -177,7 +177,8 @@ bckg 2
 [Task priorities](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#task_priorities) can also take their initial value from a {{domxref("TaskSignal")}} passed to `postTask()` in the optional second argument.
 If set in this way, the priority of the task [can then be changed]/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#mutable_and_immutable_task_priority) using the controller associated with the signal.
 
-> **Note:** Setting and changing task priorities using a signal only works when the `options.priority` argument to `postTask()` is not set, and when the `options.signal` is a {{domxref("TaskSignal")}} (and not an {{domxref("AbortSignal")}}).
+> [!NOTE]
+> Setting and changing task priorities using a signal only works when the `options.priority` argument to `postTask()` is not set, and when the `options.signal` is a {{domxref("TaskSignal")}} (and not an {{domxref("AbortSignal")}}).
 
 The code below first shows how to create a {{domxref("TaskController")}}, setting the initial priority of its signal to `user-blocking` in the [`TaskController()` constructor](/en-US/docs/Web/API/TaskController/TaskController).
 

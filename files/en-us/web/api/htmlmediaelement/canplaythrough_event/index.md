@@ -72,7 +72,6 @@ video.oncanplaythrough = (event) => {
 - The HTMLMediaElement {{domxref("HTMLMediaElement.loadedmetadata_event", 'loadedmetadata')}} event
 - The HTMLMediaElement {{domxref("HTMLMediaElement.loadeddata_event", 'loadeddata')}} event
 - The HTMLMediaElement {{domxref("HTMLMediaElement.canplay_event", 'canplay')}} event
-- The HTMLMediaElement {{domxref("HTMLMediaElement.canplaythrough_event", 'canplaythrough')}} event
 - The HTMLMediaElement {{domxref("HTMLMediaElement.durationchange_event", 'durationchange')}} event
 - The HTMLMediaElement {{domxref("HTMLMediaElement.timeupdate_event", 'timeupdate')}} event
 - The HTMLMediaElement {{domxref("HTMLMediaElement.play_event", 'play')}} event

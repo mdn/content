@@ -13,7 +13,8 @@ The **`Navigator.geolocation`** read-only property returns a
 device. This allows a website or app to offer customized results based on the user's
 location.
 
-> **Note:** For security reasons, when a web page tries to access location
+> [!NOTE]
+> For security reasons, when a web page tries to access location
 > information, the user is notified and asked to grant permission. Be aware that each
 > browser has its own policies and methods for requesting this permission.
 

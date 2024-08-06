@@ -17,7 +17,8 @@ The [borders](/en-US/docs/Web/CSS/border) of the element are then drawn on top o
 
 If a specified image cannot be drawn (for example, when the file denoted by the specified URI cannot be loaded), browsers handle it as they would a `none` value.
 
-> **Note:** Even if the images are opaque and the color won't be displayed in normal circumstances, web developers should always specify a {{cssxref("background-color")}}. If the images cannot be loaded—for instance, when the network is down—the background color will be used as a fallback.
+> [!NOTE]
+> Even if the images are opaque and the color won't be displayed in normal circumstances, web developers should always specify a {{cssxref("background-color")}}. If the images cannot be loaded—for instance, when the network is down—the background color will be used as a fallback.
 
 ## Syntax
 
@@ -49,7 +50,7 @@ To specify multiple background images, supply multiple values, separated by a co
 - `<image>`
   - : Is an {{cssxref("&lt;image&gt;")}} denoting the image to display. There can be several of them, separated by commas, as [multiple backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds) are supported.
 
-## Accessibility concerns
+## Accessibility
 
 Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.
 

@@ -10,7 +10,7 @@ We will now prove the [Pythagorean theorem](https://en.wikipedia.org/wiki/Pythag
 
 **Statement**: In a right triangle, the square of the hypotenuse is equal to the sum of the squares of the other two sides. Specifically, if <math><mi>a</mi></math> and <math><mi>b</mi></math> are the legs and <math><mi>c</mi></math> is the hypotenuse, then <math><semantics><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup><mo>=</mo><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="TeX">a^2 + b^2 = c^2</annotation></semantics></math>.
 
-**Proof:** We can prove the theorem algebraically by showing that on [this figure](http://www.cut-the-knot.org/pythagoras/proof31.gif) the area of the big square equals the area of the inner square (hypotenuse squared) plus the area of the four triangles:
+**Proof:** We can prove the theorem algebraically by showing that on [this figure](https://www.cut-the-knot.org/pythagoras/proof31.gif) the area of the big square equals the area of the inner square (hypotenuse squared) plus the area of the four triangles:
 
 <!-- prettier-ignore-start -->
 <math display="block">

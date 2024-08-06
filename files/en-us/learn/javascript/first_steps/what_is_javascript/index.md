@@ -102,23 +102,25 @@ They generally fall into two categories.
 
 **Browser APIs** are built into your web browser, and are able to expose data from the surrounding computer environment, or do useful complex things. For example:
 
-- The {{domxref("Document_Object_Model","DOM (Document Object Model) API")}} allows you to manipulate HTML and CSS, creating, removing and changing HTML, dynamically applying new styles to your page, etc.
+- The [DOM (Document Object Model) API](/en-US/docs/Web/API/Document_Object_Model) allows you to manipulate HTML and CSS, creating, removing and changing HTML, dynamically applying new styles to your page, etc.
   Every time you see a popup window appear on a page, or some new content displayed (as we saw above in our simple demo) for example, that's the DOM in action.
-- The {{domxref("Geolocation","Geolocation API")}} retrieves geographical information.
+- The [Geolocation API](/en-US/docs/Web/API/Geolocation_API) retrieves geographical information.
   This is how [Google Maps](https://www.google.com/maps) is able to find your location and plot it on a map.
-- The {{domxref("Canvas_API","Canvas")}} and {{domxref("WebGL_API","WebGL")}} APIs allow you to create animated 2D and 3D graphics.
+- The [Canvas](/en-US/docs/Web/API/Canvas_API) and [WebGL](/en-US/docs/Web/API/WebGL_API) APIs allow you to create animated 2D and 3D graphics.
   People are doing some amazing things using these web technologies — see [Chrome Experiments](https://experiments.withgoogle.com/collection/chrome) and [webglsamples](https://webglsamples.org/).
-- [Audio and Video APIs](/en-US/docs/Web/Media/Audio_and_video_delivery) like {{domxref("HTMLMediaElement")}} and {{domxref("WebRTC API", "WebRTC")}} allow you to do really interesting things with multimedia, such as play audio and video right in a web page, or grab video from your web camera and display it on someone else's computer (try our simple [Snapshot demo](https://chrisdavidmills.github.io/snapshot/) to get the idea).
+- [Audio and Video APIs](/en-US/docs/Web/Media/Audio_and_video_delivery) like {{domxref("HTMLMediaElement")}} and [WebRTC](/en-US/docs/Web/API/WebRTC_API) allow you to do really interesting things with multimedia, such as play audio and video right in a web page, or grab video from your web camera and display it on someone else's computer (try our simple [Snapshot demo](https://chrisdavidmills.github.io/snapshot/) to get the idea).
 
-> **Note:** Many of the above demos won't work in an older browser — when experimenting, it's a good idea to use a modern browser like Firefox, Chrome, Edge or Opera to run your code in.
+> [!NOTE]
+> Many of the above demos won't work in an older browser — when experimenting, it's a good idea to use a modern browser like Firefox, Chrome, Edge or Opera to run your code in.
 > You will need to consider [cross browser testing](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing) in more detail when you get closer to delivering production code (i.e. real code that real customers will use).
 
 **Third party APIs** are not built into the browser by default, and you generally have to grab their code and information from somewhere on the Web. For example:
 
-- The [Twitter API](https://developer.twitter.com/en/docs) allows you to do things like displaying your latest tweets on your website.
+- The [Twitter API](https://developer.x.com/en/docs) allows you to do things like displaying your latest tweets on your website.
 - The [Google Maps API](https://developers.google.com/maps/) and [OpenStreetMap API](https://wiki.openstreetmap.org/wiki/API) allows you to embed custom maps into your website, and other such functionality.
 
-> **Note:** These APIs are advanced, and we'll not be covering any of these in this module. You can find out much more about these in our [Client-side web APIs module](/en-US/docs/Learn/JavaScript/Client-side_web_APIs).
+> [!NOTE]
+> These APIs are advanced, and we'll not be covering any of these in this module. You can find out much more about these in our [Client-side web APIs module](/en-US/docs/Learn/JavaScript/Client-side_web_APIs).
 
 There's a lot more available, too! However, don't get over excited just yet. You won't be able to build the next Facebook, Google Maps, or Instagram after studying JavaScript for 24 hours — there are a lot of basics to cover first. And that's why you're here — let's move on!
 
@@ -131,16 +133,14 @@ Let's briefly recap the story of what happens when you load a web page in a brow
 ![HTML, CSS and JavaScript code come together to create the content in the browser tab when the page is loaded](execution.png)
 
 A very common use of JavaScript is to dynamically modify HTML and CSS to update a user interface, via the Document Object Model API (as mentioned above).
-Note that the code in your web documents is generally loaded and executed in the order it appears on the page.
-Errors may occur if JavaScript is loaded and run before the HTML and CSS that it is intended to modify.
-You will learn ways around this later in the article, in the [Script loading strategies](#script_loading_strategies) section.
 
 ### Browser security
 
 Each browser tab has its own separate bucket for running code in (these buckets are called "execution environments" in technical terms) — this means that in most cases the code in each tab is run completely separately, and the code in one tab cannot directly affect the code in another tab — or on another website.
 This is a good security measure — if this were not the case, then pirates could start writing code to steal information from other websites, and other such bad things.
 
-> **Note:** There are ways to send code and data between different websites/tabs in a safe manner, but these are advanced techniques that we won't cover in this course.
+> [!NOTE]
+> There are ways to send code and data between different websites/tabs in a safe manner, but these are advanced techniques that we won't cover in this course.
 
 ### JavaScript running order
 
@@ -164,7 +164,8 @@ Here we first select a button using `document.querySelector`, then attaching an 
 If you swapped the order of the first two lines of code, it would no longer work — instead, you'd get an error returned in the [browser developer console](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) — `Uncaught ReferenceError: Cannot access 'button' before initialization`.
 This means that the `button` object has not been initialized yet, so we can't add an event listener to it.
 
-> **Note:** This is a very common error — you need to be careful that the objects referenced in your code exist before you try to do stuff to them.
+> [!NOTE]
+> This is a very common error — you need to be careful that the objects referenced in your code exist before you try to do stuff to them.
 
 ### Interpreted versus compiled code
 
@@ -211,7 +212,7 @@ Whereas CSS uses {{htmlelement("link")}} elements to apply external stylesheets 
 
 1. First of all, make a local copy of our example file [apply-javascript.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript.html). Save it in a directory somewhere sensible.
 2. Open the file in your web browser and in your text editor. You'll see that the HTML creates a simple web page containing a clickable button.
-3. Next, go to your text editor and add the following in your head — just before your closing `</head>` tag:
+3. Next, go to your text editor and add the following at the bottom of your body — just before your closing `</body>` tag:
 
    ```html
    <script>
@@ -219,42 +220,44 @@ Whereas CSS uses {{htmlelement("link")}} elements to apply external stylesheets 
    </script>
    ```
 
+   Note that the code in your web documents is generally loaded and executed in the order it appears on the page. By placing the JavaScript at the bottom, we ensure that all HTML elements are loaded. (See also [Script loading strategies](#script_loading_strategies) below.)
+
 4. Now we'll add some JavaScript inside our {{htmlelement("script")}} element to make the page do something more interesting — add the following code just below the "// JavaScript goes here" line:
 
    ```js
-   document.addEventListener("DOMContentLoaded", () => {
-     function createParagraph() {
-       const para = document.createElement("p");
-       para.textContent = "You clicked the button!";
-       document.body.appendChild(para);
-     }
+   function createParagraph() {
+     const para = document.createElement("p");
+     para.textContent = "You clicked the button!";
+     document.body.appendChild(para);
+   }
 
-     const buttons = document.querySelectorAll("button");
+   const buttons = document.querySelectorAll("button");
 
-     for (const button of buttons) {
-       button.addEventListener("click", createParagraph);
-     }
-   });
+   for (const button of buttons) {
+     button.addEventListener("click", createParagraph);
+   }
    ```
 
 5. Save your file and refresh the browser — now you should see that when you click the button, a new paragraph is generated and placed below.
 
-> **Note:** If your example doesn't seem to work, go through the steps again and check that you did everything right.
+> [!NOTE]
+> If your example doesn't seem to work, go through the steps again and check that you did everything right.
 > Did you save your local copy of the starting code as a `.html` file?
-> Did you add your {{htmlelement("script")}} element just before the `</head>` tag?
+> Did you add your {{htmlelement("script")}} element just before the `</body>` tag?
 > Did you enter the JavaScript exactly as shown? **JavaScript is case sensitive, and very fussy, so you need to enter the syntax exactly as shown, otherwise it may not work.**
 
-> **Note:** You can see this version on GitHub as [apply-javascript-internal.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html) ([see it live too](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html)).
+> [!NOTE]
+> You can see this version on GitHub as [apply-javascript-internal.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html) ([see it live too](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html)).
 
 ### External JavaScript
 
 This works great, but what if we wanted to put our JavaScript in an external file? Let's explore this now.
 
 1. First, create a new file in the same directory as your sample HTML file. Call it `script.js` — make sure it has that .js filename extension, as that's how it is recognized as JavaScript.
-2. Replace your current {{htmlelement("script")}} element with the following:
+2. Remove your current {{htmlelement("script")}} element at the bottom of the `</body>` and add the following just before the closing `</head>` tag (that way the browser can start loading the file sooner than when it's at the bottom):
 
    ```html
-   <script src="script.js" defer></script>
+   <script type="module" src="script.js"></script>
    ```
 
 3. Inside `script.js`, add the following script:
@@ -273,12 +276,15 @@ This works great, but what if we wanted to put our JavaScript in an external fil
    }
    ```
 
-4. Save and refresh your browser, and you should see the same thing!
-   It works just the same, but now we've got our JavaScript in an external file.
+4. Save and refresh your browser. You'll discover that clicking the button has no effect, and if you check your browser's console, you'll see an error along the lines of `Cross-origin request blocked`. That's because like many external resources, JavaScript modules need to be loaded from the [same origin](/en-US/docs/Web/Security/Same-origin_policy) as the HTML, and `file://` URLs don't qualify. There are two solutions to fix this problem:
+   - Our recommended solution is to follow the [guide to set up a local testing server](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server). With the server program running and serving the `apply-javascript-external.html` and `script.js` files on port `8000`, open your browser and go to `http://localhost:8000`.
+   - If you cannot run a local server, you can also use `<script defer src="script.js"></script>` instead of `<script type="module" src="script.js"></script>`. See [Script loading strategies](#script_loading_strategies) below for more information. But note that features we use in other parts of the tutorial may require a local HTTP server anyway.
+5. Now the website works just the same as before, but now we've got our JavaScript in an external file.
    This is generally a good thing in terms of organizing your code and making it reusable across multiple HTML files.
    Plus, the HTML is easier to read without huge chunks of script dumped in it.
 
-> **Note:** You can see this version on GitHub as [apply-javascript-external.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html) and [script.js](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/script.js) ([see it live too](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html)).
+> [!NOTE]
+> You can see this version on GitHub as [apply-javascript-external.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html) and [script.js](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/script.js) ([see it live too](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html)).
 
 ### Inline JavaScript handlers
 
@@ -323,101 +329,26 @@ for (const button of buttons) {
 This might be a bit longer than the `onclick` attribute, but it will work for all buttons — no matter how many are on the page, nor how many are added or removed.
 The JavaScript does not need to be changed.
 
-> **Note:** Try editing your version of `apply-javascript.html` and add a few more buttons into the file.
+> [!NOTE]
+> Try editing your version of `apply-javascript.html` and add a few more buttons into the file.
 > When you reload, you should find that all of the buttons when clicked will create a paragraph.
 > Neat, huh?
 
 ### Script loading strategies
 
-There are a number of issues involved with getting scripts to load at the right time. Nothing is as simple as it seems!
-A common problem is that all the HTML on a page is loaded in the order in which it appears.
+All the HTML on a page is loaded in the order in which it appears.
 If you are using JavaScript to manipulate elements on the page (or more accurately, the [Document Object Model](/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#the_document_object_model)), your code won't work if the JavaScript is loaded and parsed before the HTML you are trying to do something to.
 
-In the above code examples, in the internal and external examples the JavaScript is loaded and run in the head of the document, before the HTML body is parsed.
-This could cause an error, so we've used some constructs to get around it.
+There are a few different strategies to make sure your JavaScript only runs after the HTML is parsed:
 
-In the internal example, you can see this structure around the code:
+- In the internal JavaScript example above, the script element is placed at the bottom of the body of the document, and therefore only run after the rest of the HTML body is parsed.
+- In the external JavaScript example above, the script element is placed in the head of the document, before the HTML body is parsed. But because we're using `<script type="module">`, the code is treated as a [module](/en-US/docs/Web/JavaScript/Guide/Modules) and the browser waits for all HTML to be processed before executing JavaScript modules. (You could also place external scripts at the bottom of the body. But if there is a lot of HTML and the network is slow, it may take a lot of time before the browser can even start fetching and loading the script, so placing external scripts in the head is usually better.)
+- If you still want to use non-module scripts in the document head, which could block the whole page from displaying, and could cause errors because it executes before the HTML is parsed:
 
-```js
-document.addEventListener("DOMContentLoaded", () => {
-  // …
-});
-```
+  - For external scripts, you should add the `defer` (or if you don't need the HTML to be ready, the `async`) attribute on the {{htmlelement("script")}} element.
+  - For internal scripts, you should wrap the code in a [`DOMContentLoaded` event listener](/en-US/docs/Web/API/Document/DOMContentLoaded_event).
 
-This is an event listener, which listens for the browser's `DOMContentLoaded` event, which signifies that the HTML body is completely loaded and parsed.
-The JavaScript inside this block will not run until after that event is fired, therefore the error is avoided (you'll [learn about events](/en-US/docs/Learn/JavaScript/Building_blocks/Events) later in the course).
-
-In the external example, we use a more modern JavaScript feature to solve the problem, the `defer` attribute, which tells the browser to continue downloading the HTML content once the `<script>` tag element has been reached.
-
-```html
-<script src="script.js" defer></script>
-```
-
-In this case both the script and the HTML will load simultaneously and the code will work.
-
-> **Note:** In the external case, we did not need to use the `DOMContentLoaded` event because the `defer` attribute solved the problem for us.
-> We didn't use the `defer` solution for the internal JavaScript example because `defer` only works for external scripts.
-
-An old-fashioned solution to this problem used to be to put your script element right at the bottom of the body (e.g. just before the `</body>` tag), so that it would load after all the HTML has been parsed.
-The problem with this solution is that loading/parsing of the script is completely blocked until the HTML DOM has been loaded.
-On larger sites with lots of JavaScript, this can cause a major performance issue, slowing down your site.
-
-#### async and defer
-
-There are actually two modern features we can use to bypass the problem of the blocking script — `async` and `defer` (which we saw above).
-Let's look at the difference between these two.
-
-Scripts loaded using the `async` attribute will download the script without blocking the page while the script is being fetched.
-However, once the download is complete, the script will execute, which blocks the page from rendering. This means that the rest of the content on the web page is prevented from being processed and displayed to the user until the script finishes executing.
-You get no guarantee that scripts will run in any specific order.
-It is best to use `async` when the scripts in the page run independently from each other and depend on no other script on the page.
-
-Scripts loaded with the `defer` attribute will load in the order they appear on the page.
-They won't run until the page content has all loaded, which is useful if your scripts depend on the DOM being in place (e.g. they modify one or more elements on the page).
-
-Here is a visual representation of the different script loading methods and what that means for your page:
-
-![How the three script loading method work: default has parsing blocked while JavaScript is fetched and executed. With async, the parsing pauses for execution only. With defer, parsing isn't paused, but execution on happens after everything is else is parsed.](async-defer.jpg)
-
-_This image is from the [HTML spec](https://html.spec.whatwg.org/images/asyncdefer.svg), copied and cropped to a reduced version, under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) license terms._
-
-For example, if you have the following script elements:
-
-```html
-<script async src="js/vendor/jquery.js"></script>
-
-<script async src="js/script2.js"></script>
-
-<script async src="js/script3.js"></script>
-```
-
-You can't rely on the order the scripts will load in.
-`jquery.js` may load before or after `script2.js` and `script3.js` and if this is the case, any functions in those scripts depending on `jquery` will produce an error because `jquery` will not be defined at the time the script runs.
-
-`async` should be used when you have a bunch of background scripts to load in, and you just want to get them in place as soon as possible.
-For example, maybe you have some game data files to load, which will be needed when the game actually begins, but for now you just want to get on with showing the game intro, titles, and lobby, without them being blocked by script loading.
-
-Scripts loaded using the `defer` attribute (see below) will run in the order they appear in the page and execute them as soon as the script and content are downloaded:
-
-```html
-<script defer src="js/vendor/jquery.js"></script>
-
-<script defer src="js/script2.js"></script>
-
-<script defer src="js/script3.js"></script>
-```
-
-In the second example, we can be sure that `jquery.js` will load before `script2.js` and `script3.js` and that `script2.js` will load before `script3.js`.
-They won't run until the page content has all loaded, which is useful if your scripts depend on the DOM being in place (e.g. they modify one or more elements on the page).
-
-To summarize:
-
-- `async` and `defer` both instruct the browser to download the script(s) in a separate thread, while the rest of the page (the DOM, etc.) is downloading, so the page loading is not blocked during the fetch process.
-- scripts with an `async` attribute will execute as soon as the download is complete.
-  This blocks the page and does not guarantee any specific execution order.
-- scripts with a `defer` attribute will load in the order they are in and will only execute once everything has finished loading.
-- If your scripts should be run immediately and they don't have any dependencies, then use `async`.
-- If your scripts need to wait for parsing and depend on other scripts and/or the DOM being in place, load them using `defer` and put their corresponding `<script>` elements in the order you want the browser to execute them.
+  This is beyond the scope of the tutorial at this point, but unless you need to support very old browsers, you don't have to do this and can just use `<script type="module">` instead.
 
 ## Comments
 
@@ -425,13 +356,13 @@ As with HTML and CSS, it is possible to write comments into your JavaScript code
 Comments are very useful, and you should use them often, particularly for larger applications.
 There are two types:
 
-- A single line comment is written after a double forward slash (//), e.g.
+- A single line comment is written after a double forward slash (`//`), e.g.
 
   ```js
   // I am a comment
   ```
 
-- A multi-line comment is written between the strings /\* and \*/, e.g.
+- A multi-line comment is written between the strings `/*` and `*/`, e.g.
 
   ```js
   /*
@@ -465,7 +396,8 @@ for (const button of buttons) {
 }
 ```
 
-> **Note:** In general more comments are usually better than less, but you should be careful if you find yourself adding lots of comments to explain what variables are (your variable names perhaps should be more intuitive), or to explain very simple operations (maybe your code is overcomplicated).
+> [!NOTE]
+> In general more comments are usually better than less, but you should be careful if you find yourself adding lots of comments to explain what variables are (your variable names perhaps should be more intuitive), or to explain very simple operations (maybe your code is overcomplicated).
 
 ## Summary
 

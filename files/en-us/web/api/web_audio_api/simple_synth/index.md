@@ -197,7 +197,7 @@ const oscList = [];
 let mainGainNode = null;
 ```
 
-1. `audioContext` is set to reference the global {{domxref("AudioContext")}} object (or `webkitAudioContext` if necessary).
+1. `audioContext` is created as an instance of {{domxref("AudioContext")}}.
 2. `oscList` is set up to be ready to contain a list of all currently-playing oscillators. It starts off empty, since there are none playing yet.
 3. `mainGainNode` is set to null; during the setup process, it will be configured to contain a {{domxref("GainNode")}} which all playing oscillators will connect to and play through to allow the overall volume to be controlled using a single slider control.
 
@@ -395,7 +395,8 @@ The result is an array, `noteFreq`, with an object for each octave. Each octave 
 
 With this table in place, we can find out the frequency for a given note in a particular octave quite easily. If we want the frequency for the note G# in octave 1, we use `noteFreq[1]["G#"]` and get the value 51.9 as a result.
 
-> **Note:** The values in the example table above have been rounded to two decimal places.
+> [!NOTE]
+> The values in the example table above have been rounded to two decimal places.
 
 ```js hidden
 if (!Object.entries) {
@@ -484,8 +485,8 @@ function createKey(note, octave, freq) {
   keyElement.dataset["octave"] = octave;
   keyElement.dataset["note"] = note;
   keyElement.dataset["frequency"] = freq;
-
-  labelElement.innerHTML = `${note}<sub>${octave}</sub>`;
+  labelElement.appendChild(document.createTextNode(note));
+  labelElement.appendChild(document.createElement("sub")).textContent = octave;
   keyElement.appendChild(labelElement);
 
   keyElement.addEventListener("mousedown", notePressed, false);

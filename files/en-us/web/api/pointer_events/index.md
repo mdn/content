@@ -267,7 +267,8 @@ The following table provides the values of `button` and `buttons` for the variou
 | X2 (forward) Mouse                                                                   | `4`    | `16`    |
 | Pen eraser button                                                                    | `5`    | `32`    |
 
-> **Note:** The `button` property indicates a change in the state of the button. However, as in the case of touch, when multiple events occur with one event, all of them have the same value.
+> [!NOTE]
+> The `button` property indicates a change in the state of the button. However, as in the case of touch, when multiple events occur with one event, all of them have the same value.
 
 ## Capturing the pointer
 
@@ -276,7 +277,8 @@ Pointer capture allows events for a particular {{domxref("PointerEvent","pointer
 Pointer capture will cause the target to capture all subsequent pointer events as if they were occurring over the capturing target. Accordingly, `pointerover`, `pointerenter`, `pointerleave`, and `pointerout` **will not fire** as long as this capture is set.
 For touchscreen browsers that allow [direct manipulation](https://w3c.github.io/pointerevents/#dfn-direct-manipulation), an [implicit pointer capture](https://w3c.github.io/pointerevents/#dfn-implicit-pointer-capture) will be called on the element when a `pointerdown` event triggers. The capture can be released manually by calling {{domxref('element.releasePointerCapture')}} on the target element, or it will be implicitly released after a `pointerup` or `pointercancel` event.
 
-> **Note:** If you need to move an element in the DOM, then make sure to call `setPointerCapture()` **after DOM movements** so that `setPointerCapture()` will not lose track of it. E.g., if you need to use `Element.append()` to move an element somewhere else, then make sure to call `setPointerCapture()` on it only after the call to `Element.append()`.
+> [!NOTE]
+> If you need to move an element in the DOM, then make sure to call `setPointerCapture()` **after DOM movements** so that `setPointerCapture()` will not lose track of it. E.g., if you need to use `Element.append()` to move an element somewhere else, then make sure to call `setPointerCapture()` on it only after the call to `Element.append()`.
 
 The following example shows pointer capture being set on an element.
 
@@ -388,7 +390,7 @@ Here are some _best practices_ to consider when using pointer events:
 
 {{Compat}}
 
-Some additional values have been defined for the {{cssxref("touch-action", "CSS touch-action")}} property as part of the [Pointer Events](https://w3c.github.io/pointerevents/) specification, but currently those values have limited implementation support.
+Some additional values have been defined for the CSS {{cssxref("touch-action")}} property as part of the [Pointer Events](https://w3c.github.io/pointerevents/) specification, but currently those values have limited implementation support.
 
 ## See also
 

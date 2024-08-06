@@ -51,7 +51,7 @@ true + 1; // 2
 false + false; // 0
 ```
 
-### Addion using BigInts
+### Addition using BigInts
 
 ```js
 1n + 2n; // 3n

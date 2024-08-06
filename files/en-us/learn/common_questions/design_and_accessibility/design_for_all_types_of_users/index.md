@@ -48,7 +48,8 @@ The {{Glossary("W3C")}} defines a good color mix with an algorithm that calculat
 
 Let's download and install the Paciello Group's [Color Contrast Analyser](https://www.tpgi.com/color-contrast-checker/).
 
-> **Note:** Alternatively you can find a number of contrast checkers online, such as WebAIM's [Color Contrast Checker](https://webaim.org/resources/contrastchecker/). We suggest a local checker because it comes packaged with an on-screen color picker to find out a color value.
+> [!NOTE]
+> Alternatively you can find a number of contrast checkers online, such as WebAIM's [Color Contrast Checker](https://webaim.org/resources/contrastchecker/). We suggest a local checker because it comes packaged with an on-screen color picker to find out a color value.
 
 For instance, let's test the colors on this page and see how we fare in the color Contrast Analyser:
 
@@ -160,7 +161,8 @@ span.subheading {
 
 Easier, isn't it? This works as of [every current browser](https://caniuse.com/#search=rem), so please feel free to use this unit.
 
-> **Note:** You may notice Opera Mini does not support font sizing in rem. It will end up setting its own font size, so don't bother feeding it font units.
+> [!NOTE]
+> You may notice Opera Mini does not support font sizing in rem. It will end up setting its own font size, so don't bother feeding it font units.
 
 #### Why would I want to use proportional units?
 
@@ -171,7 +173,8 @@ We would advise the following:
 - Describe fonts in `rem` units, most browsers will be very happy with them;
 - Let older browsers display fonts with their own internal engine. Browser's engines will ignore any property or value in the CSS if they can't cope with them, so that your website is still usable if not true to your designer's vision. Older browsers are on the way out anyway.
 
-> **Note:** Your mileage may vary. If you have to cater to older browsers, you'll have to use `em`s and do a bit more math.
+> [!NOTE]
+> Your mileage may vary. If you have to cater to older browsers, you'll have to use `em`s and do a bit more math.
 
 ### Line width
 
@@ -230,7 +233,8 @@ Images can be either decorative or informative, but there's no guarantee that yo
 
 If the image can be described succinctly, you can provide an `alt` attribute and nothing more. If the image cannot be described succinctly, you will have to either provide the same content in another form in the same page (e.g., complement a pie chart with a table providing the same data), or resort to a `longdesc` attribute. This attribute's value is a URL pointing towards a resource explicitly describing in detail the image's content.
 
-> **Note:** The use and even the existence of `longdesc` has been debated for quite some time. Please refer to the W3C's [Image Description Extension (longdesc)](https://www.w3.org/TR/html-longdesc/) for the full explanation and thorough examples.
+> [!NOTE]
+> The use and even the existence of `longdesc` has been debated for quite some time. Please refer to the W3C's [Image Description Extension (longdesc)](https://www.w3.org/TR/html-longdesc/) for the full explanation and thorough examples.
 
 #### Audio/video
 

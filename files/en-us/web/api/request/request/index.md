@@ -77,7 +77,7 @@ new Request(input, options)
 
 In our [Fetch Request example](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-request) (see [Fetch Request live](https://mdn.github.io/dom-examples/fetch/fetch-request/)) we
 create a new `Request` object using the constructor, then fetch it using a
-{{domxref("fetch()")}} call. Since we are fetching an image, we run
+{{domxref("Window/fetch", "fetch()")}} call. Since we are fetching an image, we run
 {{domxref("Response.blob")}} on the response to give it the proper MIME type so it will be
 handled properly, then create an Object URL of it and display it in an
 {{htmlelement("img")}} element.
@@ -94,7 +94,7 @@ fetch(myRequest)
   });
 ```
 
-In our [Fetch Request with init example](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-request-with-init) (see [Fetch Request init live](https://mdn.github.io/dom-examples/fetch/fetch-request-with-init)) we do the same thing except that we pass in an _options_ object when we invoke `fetch()`.
+In our [Fetch Request with init example](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-request-with-init) (see [Fetch Request init live](https://mdn.github.io/dom-examples/fetch/fetch-request-with-init/)) we do the same thing except that we pass in an _options_ object when we invoke `fetch()`.
 In this case, we can set a {{httpheader("Cache-Control")}} value to indicate what kind of cached responses we're okay with:
 
 ```js
@@ -144,7 +144,8 @@ constructor to create a copy of the Request (This is similar to calling the
 const copy = new Request(req);
 ```
 
-> **Note:** This last usage is probably only useful in [ServiceWorkers](/en-US/docs/Web/API/Service_Worker_API).
+> [!NOTE]
+> This last usage is probably only useful in [ServiceWorkers](/en-US/docs/Web/API/Service_Worker_API).
 
 ## Specifications
 
