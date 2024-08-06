@@ -19,7 +19,7 @@ HTTP requests, and responses, share similar structure and are composed of:
 3. A blank line indicating all meta-information for the request has been sent.
 4. An optional _body_ containing data associated with the request (like content of an HTML form), or the document associated with a response. The presence of the body and its size is specified by the start-line and HTTP headers.
 
-The start-line and HTTP headers of the HTTP message are collectively known as the _head_ of the requests, whereas its payload is known as the _body_.
+The start-line and HTTP headers of the HTTP message are collectively known as the _head_ of the requests, and the part afterwards that contains its content is known as the _body_.
 
 ![Requests and responses share a common structure in HTTP](httpmsgstructure2.png)
 
@@ -63,7 +63,8 @@ Many different headers can appear in requests. They can be divided in several gr
 
 ### Body
 
-The final part of the request is its body. Not all requests have one: requests fetching resources like `GET` or `HEAD` usually don't need a body. Requests that send data to the server to create a resource, such as `PUT` or `POST` requests, typically require a body with the data used to fulfill the request (for instance, HTML form data).
+The last part of a response is the body.
+Not all responses have one: responses with a status code that sufficiently answers the request without the need to include message {{Glossary("HTTP Content", "content")}} (like {{HTTPStatus("201", "201 Created")}} or {{HTTPStatus("204", "204 No Content")}}) usually don't.
 
 Bodies can be broadly divided into two categories:
 
@@ -99,7 +100,7 @@ Many different headers can appear in responses. These can be divided into severa
 
 ### Body
 
-The last part of a response is the body. Not all responses have one: responses with a status code that sufficiently answers the request without the need for corresponding payload (like {{HTTPStatus("201")}} **`Created`** or {{HTTPStatus("204")}} **`No Content`**) usually don't.
+The last part of a response is the body. Not all responses have one: responses with a status code that sufficiently answers the request without the need to include content (like {{HTTPStatus("201", "201 Created")}} or {{HTTPStatus("204", "204 No Content")}}) usually don't.
 
 Bodies can be broadly divided into three categories:
 

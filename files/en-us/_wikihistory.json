@@ -2694,6 +2694,10 @@
     "modified": "2020-09-14T07:48:57.436Z",
     "contributors": ["darby", "roshan0708", "iigmir"]
   },
+  "Glossary/HTTP_Content": {
+    "modified": "2020-12-04T06:44:11.807Z",
+    "contributors": ["chrisdavidmills", "hamishwillee"]
+  },
   "Glossary/HTTP_header": {
     "modified": "2020-11-30T03:35:20.276Z",
     "contributors": [
@@ -3854,10 +3858,6 @@
       "kscarfone",
       "panaggio"
     ]
-  },
-  "Glossary/Payload_body": {
-    "modified": "2020-12-04T06:44:11.807Z",
-    "contributors": ["chrisdavidmills", "hamishwillee"]
   },
   "Glossary/Perceived_performance": {
     "modified": "2019-05-20T13:01:45.834Z",
