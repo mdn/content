@@ -50,10 +50,12 @@ The promise is rejected when the following exception is encountered:
 
 The Web Crypto API provides the following algorithms that can be used for signing and signature verification.
 
-RSASSA-PKCS1-v1_5, RSA-PSS, and ECDSA, are {{Glossary("public-key cryptography", "public-key cryptosystems")}} that use the private key for signing and the public key for verification.
+RSASSA-PKCS1-v1_5, RSA-PSS, ECDSA, and Ed25519 are {{Glossary("public-key cryptography", "public-key cryptosystems")}} that use the private key for signing and the public key for verification.
 These systems all use a [digest algorithm](/en-US/docs/Web/API/SubtleCrypto/digest#supported_algorithms) to hash the message to a short fixed size before signing.
-Except for ECDSA (for which it is passed in the `algorithm` object), the choice of digest algorithm is passed into the {{domxref("SubtleCrypto.generateKey()", "generateKey()")}} or {{domxref("SubtleCrypto.importKey()", "importKey()")}} functions.
-Ed25519 is also a public-key cryptosystem, but does not use a digest algorithm.
+
+- For RSASSA-PKCS1-v1_5 and RSA-PSS, the choice of digest algorithm is passed into the {{domxref("SubtleCrypto.generateKey()", "generateKey()")}} or {{domxref("SubtleCrypto.importKey()", "importKey()")}} functions.
+- For ECDSA the choice of digest algorithm is included in the `algorithm` parameter passed into the `sign()` function.
+- For Ed25519 the digest algorithm is always SHA-512.
 
 The HMAC algorithm differs from the others in that it is not a public-key cryptosystem: it uses the same algorithm and key for signing and for verification.
 This means that the verification key must be kept secret, which in turn means that this algorithm is not suitable for many signature use cases.
