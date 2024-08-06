@@ -36,7 +36,8 @@ Content-Type: application/json
 }
 ```
 
-The response indicates that the request to start a task was accepted for processing:
+The response indicates that the request to start a task was accepted for processing.
+A URL is sent in the response body so the client can track changes to the status of the task:
 
 ```http
 HTTP/1.1 202 Accepted
@@ -46,7 +47,8 @@ Content-Type: application/json
 
 {
   "message": "Request accepted. Starting to process task.",
-  "taskId": "123"
+  "taskId": "123",
+  "monitorUrl": "http://example.com/tasks/123/status"
 }
 ```
 

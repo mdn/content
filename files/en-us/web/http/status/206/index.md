@@ -24,13 +24,13 @@ If several ranges are requested, the {{HTTPHeader("Content-Type")}} is set to `m
 
 ### Receiving a `206` response for a single requested range
 
-The following is a sample `206` response when a single range of `21010-*` (bytes 21010 to the end of file) of an image file is requested.
+The following is a sample `206` response when a single range of `21010-` (bytes 21010 to the end of file) of an image file is requested.
 The response contains {{HTTPHeader("Content-Type")}} of `image/gif` and the {{HTTPHeader("Content-Range")}} is provided:
 
 ```http
 GET /z4d4kWk.gif HTTP/1.1
 Host: images.example.com
-Range: bytes=21010-*
+Range: bytes=21010-
 ```
 
 ```http
@@ -40,6 +40,8 @@ Last-Modified: Wed, 15 Nov 2015 04:58:08 GMT
 Content-Range: bytes 21010-47021/47022
 Content-Length: 26012
 Content-Type: image/gif
+ETag: "abc123"
+Accept-Ranges: bytes
 
 # 26012 bytes of partial image data…
 ```
@@ -61,6 +63,8 @@ Date: Wed, 15 Nov 2015 06:25:24 GMT
 Last-Modified: Wed, 15 Nov 2015 04:58:08 GMT
 Content-Length: 1741
 Content-Type: multipart/byteranges; boundary=String_separator
+ETag: "abc123"
+Accept-Ranges: bytes
 
 --String_separator
 Content-Type: application/pdf

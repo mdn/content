@@ -37,12 +37,13 @@ Host: example.com
 Authorization: Bearer 1234abcd
 ```
 
-After successfully deleting the image, the server responds with a `204` response with no body in the message, indicating no further information needs to be sent to the client.
+After successfully deleting the image, the server responds with a `204` response with no body (and an explicit {{HTTPHeader("Content-Length", "Content-Length: 0")}} header), indicating no further information needs to be sent to the client.
 
 ```http
 HTTP/1.1 204 No Content
 Date: Wed, 26 Jun 2024 12:00:00 GMT
 Server: Apache/2.4.1 (Unix)
+Content-Length: 0
 ```
 
 ## Specifications

@@ -42,6 +42,7 @@ After successful user creation, the `201 Created` response will look like this:
 ```http
 HTTP/1.1 201 Created
 Content-Type: application/json
+Location: http://example.com/users/123
 
 {
   "message": "New user created",
