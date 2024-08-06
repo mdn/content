@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.IDBVersionChangeEvent.IDBVersionChangeEvent
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("IndexedDB")}}
+{{securecontext_header}}{{APIRef("IndexedDB")}}
 
 The **`IDBVersionChangeEvent()`** constructor
 creates a new {{domxref("IDBVersionChangeEvent")}} object, which is used to represent

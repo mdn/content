@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Navigator.requestMIDIAccess
 ---
 
-{{DefaultAPISidebar("Web MIDI API")}}{{SecureContext_Header}}
+{{APIRef("Web MIDI API")}}{{SecureContext_Header}}
 
 The **`requestMIDIAccess()`** method of the {{domxref('Navigator')}} interface returns a {{jsxref('Promise')}} representing a request for access to MIDI devices on a user's system.
 This method is part of the [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API), which provides a means for accessing, enumerating, and manipulating MIDI devices.
