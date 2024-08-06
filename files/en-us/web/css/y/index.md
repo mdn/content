@@ -7,10 +7,10 @@ browser-compat: css.properties.y
 
 {{CSSRef}}
 
-The **`y`** [CSS](/en-US/docs/Web/CSS) property defines the y-axis coordinate of the top left corner of the SVG {{SVGElement("rect")}} shape, {{SVGElement("image")}} image, {{SVGElement("'foreignObject'")}} viewport or {{SVGElement("svg")}} viewport. If present, it overrides the element's {{SVGAttr("y")}} attribute.
+The **`y`** [CSS](/en-US/docs/Web/CSS) property defines the y-axis coordinate of the top left corner of the SVG {{SVGElement("rect")}} shape, {{SVGElement("image")}} image, {{SVGElement("foreignObject")}} viewport and nested {{SVGElement("svg")}} viewport relative to the nearest `<svg>` ancestor's user [coordinate system](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems). If present, it overrides the element's {{SVGAttr("y")}} attribute.
 
 > [!NOTE]
-> The `y` property only applies to {{SVGElement("rect")}}, {{SVGElement("image")}} and {{SVGElement("'foreignObject'")}} elements nested in an {{SVGElement("svg")}}, and the `<svg>` elements itself. It does not apply to other SVG elements nor to HTML elements or pseudo-elements.
+> The `y` property only applies to {{SVGElement("rect")}}, {{SVGElement("image")}}, {{SVGElement("foreignObject")}}, and {{SVGElement("svg")}} elements nested in an `<svg>`. It has no effect on outermost `<svg>` elements and does not apply to other SVG elements nor to HTML elements or pseudo-elements.
 
 ## Syntax
 
@@ -55,10 +55,10 @@ This example demonstrates the basic use case of `y`, and how the CSS `y` propert
 
 #### HTML
 
-We include four identical SVG `<rect>` elements; their {{SVGAttr("x")}} and `y` attributes values are all `10`, meaning the four rectangles are all in the same location, `10px` from the top and left corner of the SVG viewport, but default.
+We include four identical SVG `<rect>` elements; their {{SVGAttr("x")}} and `y` attributes values are all `10`, meaning the four rectangles are all in the same location, `10px` from the top and left corner of the SVG viewport.
 
 ```html
-<svg ymlns="http://www.w3.org/2000/svg">
+<svg>
   <rect width="40" height="40" x="10" y="10" />
   <rect width="40" height="40" x="10" y="10" />
   <rect width="40" height="40" x="10" y="10" />
@@ -101,7 +101,7 @@ rect:nth-of-type(4) {
 
 {{EmbedLiveSample("Defining the y-axis coordinate of SVG shapes", "300", "180")}}
 
-The top edges of the rectangles are at `10` (from the attribute), `-20px`, `4em`, and `60%`, respectively. The rectangle is 40px tall, so the `-20px` places half the red rectangle outside the viewport. The SVG is `150px` tall, so the orange rectangle's top side is `90px` from the top of the SVG viewport.
+The top edges of the rectangles are at `10` (from the attribute), `-20px`, `4em`, and `60%`, respectively. The rectangle is `40px` tall, so the `-20px` places half the red rectangle outside the viewport. The SVG is `150px` tall, so the orange rectangle's top side is `90px` from the top of the SVG viewport.
 
 ## Specifications
 

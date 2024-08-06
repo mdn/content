@@ -7,10 +7,10 @@ browser-compat: css.properties.x
 
 {{CSSRef}}
 
-The **`x`** [CSS](/en-US/docs/Web/CSS) property defines the x-axis coordinate of the top left corner of the SVG {{SVGElement("rect")}} shape, {{SVGElement("image")}} image, {{SVGElement("foreignObject")}} viewport or {{SVGElement("svg")}} viewport. If present, it overrides the element's {{SVGAttr("x")}} attribute.
+The **`x`** [CSS](/en-US/docs/Web/CSS) property defines the x-axis coordinate of the top left corner of the SVG {{SVGElement("rect")}} shape, {{SVGElement("image")}} image, {{SVGElement("foreignObject")}} viewport or nested {{SVGElement("svg")}} viewport relative to the nearest `<svg>` ancestor's user [coordinate system](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems). If present, it overrides the element's {{SVGAttr("x")}} attribute.
 
 > [!NOTE]
-> The `x` property only applies to {{SVGElement("rect")}}, {{SVGElement("image")}} and {{SVGElement("foreignObject")}} elements nested in an {{SVGElement("svg")}}, and the `<svg>` elements itself. It does not apply to other SVG elements nor to HTML elements or pseudo-elements.
+> The `x` property only applies to {{SVGElement("rect")}}, {{SVGElement("image")}}, {{SVGElement("foreignObject")}}, and {{SVGElement("svg")}} elements nested in an {{SVGElement("svg")}}. It has no effect on the outermost `<svg>` elements itself, and does not apply to other SVG elements nor to HTML elements or pseudo-elements.
 
 ## Syntax
 
@@ -29,7 +29,7 @@ x: unset;
 
 ### Values
 
-The {{cssxref("length")}} and {{cssxref("percentage")}} values denote the x-axis coordinate position of the top left corner of the SVG element.
+The {{cssxref("length")}} and {{cssxref("percentage")}} values denote the x-axis coordinate position of the top left corner of the SVG element container.
 
 - {{cssxref("length")}}
 
@@ -55,7 +55,7 @@ This example demonstrates the basic use case of `x`, and how the CSS `x` propert
 
 #### HTML
 
-We include four identical SVG `<rect>` elements; their `x` and {{SVGAttr("y")}} attributes values are all `10`, meaning the four rectangles are all in the same location, `10px` from the top and left corner of the SVG viewport, but default.
+We include four identical SVG `<rect>` elements; their `x` and {{SVGAttr("y")}} attributes values are all `10`, meaning the four rectangles are all in the same location, `10px` from the top and left corner of the SVG viewport.
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg">
@@ -68,7 +68,7 @@ We include four identical SVG `<rect>` elements; their `x` and {{SVGAttr("y")}} 
 
 #### CSS
 
-We style all the rectangles to have a black border and be slightly transparent, so overlapping rectangles are visible. We provide the rectangle different fill and `x` values.
+We style all the rectangles to have a black border and be slightly transparent, so overlapping rectangles are visible. We provide each rectangle with different fill and `x` values.
 
 ```css
 svg {
