@@ -122,7 +122,7 @@ p.fancy:nth-of-type(2n + 1) {
        ]
      },
      "body": [
-       "<p class='children'>6</p>"   // class includes 'children' but index: 1 not selected.
+       "<p class='children'>6</p>" // class includes 'children' but index: 1 not selected.
      ]
    }
    ```
