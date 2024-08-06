@@ -26,23 +26,26 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     See [iframes](/en-US/docs/Web/HTTP/Headers/Permissions-Policy#iframes) in the `Permissions-Policy` topic for examples.
 
-    > **Note:** A Permissions Policy specified by the `allow` attribute implements a further restriction on top of the policy specified in the {{httpheader("Permissions-Policy")}} header. It doesn't replace it.
+    > [!NOTE]
+    > A Permissions Policy specified by the `allow` attribute implements a further restriction on top of the policy specified in the {{httpheader("Permissions-Policy")}} header. It doesn't replace it.
 
 - `allowfullscreen`
 
   - : Set to `true` if the `<iframe>` can activate fullscreen mode by calling the {{domxref("Element.requestFullscreen", "requestFullscreen()")}} method.
 
-    > **Note:** This attribute is considered a legacy attribute and redefined as `allow="fullscreen"`.
+    > [!NOTE]
+    > This attribute is considered a legacy attribute and redefined as `allow="fullscreen"`.
 
 - `allowpaymentrequest` {{deprecated_inline}} {{non-standard_inline}}
 
   - : Set to `true` if a cross-origin `<iframe>` should be allowed to invoke the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API).
 
-    > **Note:** This attribute is considered a legacy attribute and redefined as `allow="payment"`.
+    > [!NOTE]
+    > This attribute is considered a legacy attribute and redefined as `allow="payment"`.
 
 - `browsingtopics` {{Experimental_Inline}} {{non-standard_inline}}
 
-  - : A boolean attribute that, if present, specifies that the selected topics for the current user should be sent with the request for the {{htmlelement("iframe")}}'s source. See [Using the Topics API](/en-US/docs/Web/API/Topics_API/Using) for more details.
+  - : A boolean attribute that, if present, specifies that the selected topics for the current user should be sent with the request for the `<iframe>`'s source. See [Using the Topics API](/en-US/docs/Web/API/Topics_API/Using) for more details.
 
 - `credentialless` {{Experimental_Inline}}
 
@@ -66,7 +69,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
         The intent is to avoid using the network and storage bandwidth required to fetch the frame until the browser is reasonably certain that it will be needed.
         This improves the performance and cost in most typical use cases, in particular by reducing initial page load times.
 
-        > **Note:** Loading is only deferred when JavaScript is enabled.
+        > [!NOTE]
+        > Loading is only deferred when JavaScript is enabled.
         > This is an anti-tracking measure.
 
 - `name`
@@ -125,24 +129,27 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `allow-top-navigation-to-custom-protocols`
       - : Allows navigations to non-`http` protocols built into browser or [registered by a website](/en-US/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers). This feature is also activated by `allow-popups` or `allow-top-navigation` keyword.
 
-    > **Note:**
+    > [!NOTE]
     >
     > - When the embedded document has the same origin as the embedding page, it is **strongly discouraged** to use both `allow-scripts` and `allow-same-origin`, as that lets the embedded document remove the `sandbox` attribute — making it no more secure than not using the `sandbox` attribute at all.
     > - Sandboxing is useless if the attacker can display content outside a sandboxed `iframe` — such as if the viewer opens the frame in a new tab. Such content should be also served from a _separate origin_ to limit potential damage.
 
-    > **Note:** When redirecting the user, opening a popup window, or opening a new tab from an embedded page within an `<iframe>` with the `sandbox` attribute, the new browsing context is subject to the same `sandbox` restrictions. This can create issues — for example, if a page embedded within an `<iframe>` without a `sandbox="allow-forms"` or `sandbox="allow-popups-to-escape-sandbox"` attribute set on it opens a new site in a separate tab, form submission in that new browsing context will silently fail.
+    > [!NOTE]
+    > When redirecting the user, opening a popup window, or opening a new tab from an embedded page within an `<iframe>` with the `sandbox` attribute, the new browsing context is subject to the same `sandbox` restrictions. This can create issues — for example, if a page embedded within an `<iframe>` without a `sandbox="allow-forms"` or `sandbox="allow-popups-to-escape-sandbox"` attribute set on it opens a new site in a separate tab, form submission in that new browsing context will silently fail.
 
 - `src`
 
   - : The URL of the page to embed. Use a value of `about:blank` to embed an empty page that conforms to the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy#inherited_origins). Also note that programmatically removing an `<iframe>`'s src attribute (e.g. via {{domxref("Element.removeAttribute()")}}) causes `about:blank` to be loaded in the frame in Firefox (from version 65), Chromium-based browsers, and Safari/iOS.
 
-    > **Note:** The `about:blank` page uses the embedding document's URL as its base URL when resolving any relative URLs, such as anchor links.
+    > [!NOTE]
+    > The `about:blank` page uses the embedding document's URL as its base URL when resolving any relative URLs, such as anchor links.
 
 - `srcdoc`
 
   - : Inline HTML to embed, overriding the `src` attribute. Its content should follow the syntax of a full HTML document, which includes the doctype directive, `<html>`, `<body>` tags, etc., although most of them can be omitted, leaving only the body content. This doc will have `about:srcdoc` as its location. If a browser does not support the `srcdoc` attribute, it will fall back to the URL in the `src` attribute.
 
-    > **Note:** The `about:srcdoc` page uses the embedding document's URL as its base URL when resolving any relative URLs, such as anchor links.
+    > [!NOTE]
+    > The `about:srcdoc` page uses the embedding document's URL as its base URL when resolving any relative URLs, such as anchor links.
 
 - `width`
   - : The width of the frame in CSS pixels. Default is `300`.

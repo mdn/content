@@ -26,7 +26,8 @@ consider the muting state for a track, whereas the {{domxref("MediaStreamTrack.m
 property indicates a state in which the track is temporarily unable to output
 data, such as a scenario in which frames have been lost in transit.
 
-> **Note:** If the track has been disconnected, the value of this property
+> [!NOTE]
+> If the track has been disconnected, the value of this property
 > can be changed, but has no effect.
 
 ## Value
@@ -38,7 +39,8 @@ render its actual media to the output. When `enabled` is set to
 Empty audio frames have every sample's value set to 0. Empty video frames have every
 pixel set to black.
 
-> **Note:** When implementing a mute/unmute feature, you should use the
+> [!NOTE]
+> When implementing a mute/unmute feature, you should use the
 > `enabled` property.
 
 ## Usage notes

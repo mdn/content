@@ -57,7 +57,7 @@ We will cover writing and running Selenium tests using Node.js, as it is quick a
 
 Next, you need to download the relevant drivers to allow WebDriver to control the browsers you want to test. You can find details of where to get them from on the [selenium-webdriver](https://www.npmjs.com/package/selenium-webdriver) page (see the table in the first section.) Obviously, some of the browsers are OS-specific, but we're going to stick with Firefox and Chrome, as they are available across all the main OSes.
 
-1. Download the latest [GeckoDriver](https://github.com/mozilla/geckodriver/releases/) (for Firefox) and [ChromeDriver](https://chromedriver.chromium.org/downloads) drivers.
+1. Download the latest [GeckoDriver](https://github.com/mozilla/geckodriver/releases/) (for Firefox) and [ChromeDriver](https://developer.chrome.com/docs/chromedriver/downloads) drivers.
 2. Unpack them into somewhere fairly easy to navigate to, like the root of your home user directory.
 3. Add the `chromedriver` and `geckodriver` driver's location to your system `PATH` variable. This should be an absolute path from the root of your hard disk, to the directory containing the drivers. For example, if we were using a macOS machine, our user name was bob, and we put our drivers in the root of our home folder, the path would be `/Users/bob`.
 
@@ -113,7 +113,8 @@ OK, let's try a quick test to make sure everything is working.
    })();
    ```
 
-   > **Note:** This function is an {{glossary("IIFE")}} (Immediately Invoked Function Expression).
+   > [!NOTE]
+   > This function is an {{glossary("IIFE")}} (Immediately Invoked Function Expression).
 
 3. In terminal, make sure you are inside your project folder, then enter the following command:
 
@@ -804,10 +805,10 @@ Let's write an example:
    ![Sauce Labs automated test](sauce_labs_automated_test.png)
 
 > [!NOTE]
-> Sauce Labs' [Platform Configurator](https://saucelabs.com/platform/platform-configurator#/) is a useful tool for generating capability objects to feed to your driver instances, based on what browser/OS you want to test on.
+> Sauce Labs' [Platform Configurator](https://saucelabs.com/products/platform-configurator#/) is a useful tool for generating capability objects to feed to your driver instances, based on what browser/OS you want to test on.
 
 > [!NOTE]
-> for more useful details on testing with Sauce Labs and Selenium, check out [Getting Started with Selenium for Automated Website Testing](https://docs.saucelabs.com/web-apps/automated-testing/selenium/), and [Instant Selenium Node.js Tests](https://docs.saucelabs.com/web-apps/automated-testing/selenium/sample-scripts/#nodejs).
+> For more useful details on testing with Sauce Labs and Selenium, check out [Getting Started with Selenium for Automated Website Testing](https://docs.saucelabs.com/web-apps/automated-testing/selenium/), and [Instant Selenium Node.js Tests](https://docs.saucelabs.com/web-apps/automated-testing/selenium/sample-scripts/#nodejs).
 
 #### Filling in Sauce Labs test details programmatically
 

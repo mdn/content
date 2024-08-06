@@ -52,7 +52,8 @@ Django's template system protects you against the majority of XSS attacks by [es
    `<script>alert('Test alert');</script>`.
    ![Author Form XSS test](author_create_form_alert_xss.png)
 
-   > **Note:** This is a harmless script that, if executed, will display an alert box in your browser. If the alert is displayed when you submit the record then the site is vulnerable to XSS threats.
+   > [!NOTE]
+   > This is a harmless script that, if executed, will display an alert box in your browser. If the alert is displayed when you submit the record then the site is vulnerable to XSS threats.
 
 5. Press **Submit** to save the record.
 6. When you save the author it will be displayed as shown below. Because of the XSS protections the `alert()` should not be run. Instead the script is displayed as plain text.

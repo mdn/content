@@ -11,7 +11,8 @@ status:
 
 The **`source`** property of the {{domxref("VRLayerInit")}} interface (dictionary) defines the canvas whose contents will be presented by the {{domxref("VRDisplay")}}.
 
-> **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
+> [!NOTE]
+> This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
 ## Value
 

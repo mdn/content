@@ -128,7 +128,8 @@ dc.onerror = (ev) => {
 };
 ```
 
-> **Note:** Since `RTCError` is not one of the legacy errors, the value of {{domxref("DOMException.code", "RTCError.code")}} is always 0.
+> [!NOTE]
+> Since `RTCError` is not one of the legacy errors, the value of {{domxref("DOMException.code", "RTCError.code")}} is always 0.
 
 ## Specifications
 

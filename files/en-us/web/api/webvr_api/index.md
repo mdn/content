@@ -10,7 +10,8 @@ browser-compat: api.Navigator.getVRDisplays
 
 {{DefaultAPISidebar("WebVR API")}}{{Deprecated_Header}}{{Non-standard_header}}
 
-> **Note:** WebVR API is replaced by [WebXR API](/en-US/docs/Web/API/WebXR_Device_API). WebVR was never ratified as a standard, was implemented and enabled by default in very few browsers and supported a small number of devices.
+> [!NOTE]
+> WebVR API is replaced by [WebXR API](/en-US/docs/Web/API/WebXR_Device_API). WebVR was never ratified as a standard, was implemented and enabled by default in very few browsers and supported a small number of devices.
 
 WebVR provides support for exposing virtual reality devices — for example, head-mounted displays like the Oculus Rift or HTC Vive — to web apps, enabling developers to translate position and movement information from the display into movement around a 3D scene. This has numerous, interesting applications, from virtual product tours and interactive training apps to immersive first-person games.
 
@@ -23,7 +24,7 @@ Any VR devices attached to your computer will be returned by the {{DOMxRef("Navi
 {{DOMxRef("VRDisplay")}} is the central interface in the WebVR API — via its properties and methods you can access functionality to:
 
 - Retrieve useful information to allow us to identify the display, what capabilities it has, controllers associated with it, and more.
-- Retrieve {{DOMxRef("VRFrameData", "frame data")}} for each frame of content you want to present in a display, and submit those frames for display at a consistent rate.
+- Retrieve [frame data](/en-US/docs/Web/API/VRFrameData) for each frame of content you want to present in a display, and submit those frames for display at a consistent rate.
 - Start and stop presenting to the display.
 
 A typical (simple) WebVR app would work like so:
@@ -35,7 +36,8 @@ A typical (simple) WebVR app would work like so:
 
 In addition, WebVR 1.1 adds a number of events on the {{DOMxRef("Window")}} object to allow JavaScript to respond to changes to the status of the display.
 
-> **Note:** You can find a lot more out about how the API works in our [Using the WebVR API](/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API) and [WebVR Concepts](/en-US/docs/Web/API/WebVR_API/Concepts) articles.
+> [!NOTE]
+> You can find a lot more out about how the API works in our [Using the WebVR API](/en-US/docs/Web/API/WebVR_API/Using_the_WebVR_API) and [WebVR Concepts](/en-US/docs/Web/API/WebVR_API/Concepts) articles.
 
 ### API availability
 
@@ -55,7 +57,8 @@ if (!navigator.getVRDisplays) {
 
 Many WebVR hardware setups feature controllers that go along with the headset. These can be used in WebVR apps via the [Gamepad API](/en-US/docs/Web/API/Gamepad_API), and specifically the [Gamepad Extensions API](/en-US/docs/Web/API/Gamepad_API#experimental_gamepad_extensions) that adds API features for accessing [controller pose](/en-US/docs/Web/API/GamepadPose), [haptic actuators](/en-US/docs/Web/API/GamepadHapticActuator), and more.
 
-> **Note:** Our [Using VR controllers with WebVR](/en-US/docs/Web/API/WebVR_API/Using_VR_controllers_with_WebVR) article explains the basics of how to use VR controllers with WebVR apps.
+> [!NOTE]
+> Our [Using VR controllers with WebVR](/en-US/docs/Web/API/WebVR_API/Using_VR_controllers_with_WebVR) article explains the basics of how to use VR controllers with WebVR apps.
 
 ## WebVR interfaces
 

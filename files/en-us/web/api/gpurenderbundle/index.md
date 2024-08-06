@@ -26,7 +26,7 @@ A good example is VR rendering. Recording the rendering as a render bundle and t
 
 ## Examples
 
-In the WebGPU Samples [Animometer example](https://webgpu.github.io/webgpu-samples/samples/animometer), a lot of like operations are done on many different objects simultaneously. A render bundle is encoded using the following function:
+In the WebGPU Samples [Animometer example](https://webgpu.github.io/webgpu-samples/samples/animometer/), a lot of like operations are done on many different objects simultaneously. A render bundle is encoded using the following function:
 
 ```js
 function recordRenderPass(

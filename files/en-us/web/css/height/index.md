@@ -13,6 +13,9 @@ The **`height`** [CSS](/en-US/docs/Web/CSS) property specifies the height of an 
 
 The {{cssxref("min-height")}} and {{cssxref("max-height")}} properties override `height`.
 
+> [!NOTE]
+> As a geometric property, `height` also applies to the {{SVGElement("svg")}}, {{SVGElement("rect")}}, {{SVGElement("image")}}, and {{SVGElement("foreignObject")}} SVG elements, with `auto` resolving to `0` and percent values being relative to the SVG viewport height for `<rect>`. The CSS `height` property value overrides any SVG {{SVGAttr("height")}} attribute value set on the SVG element.
+
 ## Syntax
 
 ```css
@@ -56,7 +59,7 @@ height: unset;
 - `min-content`
   - : The intrinsic minimum height.
 - `fit-content`
-  - : Use the available space, but not more than [max-content](/en-US/docs/Web/CSS/max-content), i.e `min(max-content, max(min-content, stretch))`.
+  - : Use the available space, but not more than [max-content](/en-US/docs/Web/CSS/max-content), i.e. `min(max-content, max(min-content, stretch))`.
 - `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
   - : Uses the fit-content formula with the available space replaced by the specified argument, i.e. `min(max-content, max(min-content, <length-percentage>))`.
 

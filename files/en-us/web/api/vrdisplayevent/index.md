@@ -12,7 +12,8 @@ browser-compat: api.VRDisplayEvent
 
 The **`VRDisplayEvent`** interface of the [WebVR API](/en-US/docs/Web/API/WebVR_API) represents the event object of WebVR-related events (see the [list of WebVR window extensions](/en-US/docs/Web/API/WebVR_API#window_events)).
 
-> **Note:** This interface was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
+> [!NOTE]
+> This interface was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
 ## Constructor
 

@@ -107,7 +107,8 @@ For compatibility reasons, the legacy {{cssxref("page-break-after")}} property s
 | `avoid`          | `avoid`     |
 | `always`         | `page`      |
 
-> **Note:** The `always` value of `page-break-*` was implemented by browsers as a page break, and not as a column break. Therefore the aliasing is to `page`, rather than the `always` value in the Level 4 spec.
+> [!NOTE]
+> The `always` value of `page-break-*` was implemented by browsers as a page break, and not as a column break. Therefore the aliasing is to `page`, rather than the `always` value in the Level 4 spec.
 
 ## Formal definition
 

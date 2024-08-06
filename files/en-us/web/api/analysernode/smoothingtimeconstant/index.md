@@ -18,7 +18,8 @@ If 0 is set, there is no averaging done, whereas a value of 1 means "overlap the
 
 In technical terms, we apply a [Blackman window](https://webaudio.github.io/web-audio-api/#blackman-window) and smooth the values over time. The default value is good enough for most cases.
 
-> **Note:** If a value outside the range 0–1 is set, an `INDEX_SIZE_ERR` exception is thrown.
+> [!NOTE]
+> If a value outside the range 0–1 is set, an `INDEX_SIZE_ERR` exception is thrown.
 
 ## Examples
 

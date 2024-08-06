@@ -95,7 +95,8 @@ elements from two different namespaces within a single document:
 </page>
 ```
 
-> **Note:** The example given above uses inline script which is not recommended in XHTML
+> [!NOTE]
+> The example given above uses inline script which is not recommended in XHTML
 > documents. This particular example is actually an XUL document with embedded XHTML,
 > however, the recommendation still applies.
 

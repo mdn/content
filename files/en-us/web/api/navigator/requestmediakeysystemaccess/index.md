@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Navigator.requestMediaKeySystemAccess
 ---
 
-{{DefaultAPISidebar("Encrypted Media Extensions")}}{{SecureContext_Header}}
+{{APIRef("Encrypted Media Extensions")}}{{SecureContext_Header}}
 
 The **`requestMediaKeySystemAccess()`** method of the {{domxref("Navigator")}} interface returns a {{jsxref('Promise')}} which delivers a {{domxref('MediaKeySystemAccess')}} object that can be used to access a particular media key system, which can in turn be used to create keys for decrypting a media stream.
 
@@ -34,7 +34,8 @@ requestMediaKeySystemAccess(keySystem, supportedConfigurations)
 
     Each object may have the following properties:
 
-    > **Note:** Either `videoCapabilities` or `audioCapabilities` may be empty, but not both!
+    > [!NOTE]
+    > Either `videoCapabilities` or `audioCapabilities` may be empty, but not both!
 
     - `label` {{optional_inline}}
       - : An optional label for the configuration, which defaults to `""`.

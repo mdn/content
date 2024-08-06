@@ -29,7 +29,8 @@ The example below shows an image that has been floated left, and the `shape-outs
 - {{cssxref("shape-margin")}}
 - {{cssxref("shape-outside")}}
 
-> **Note:** The CSS shapes module introduces the `shape-inside` and `shape-padding` properties that have not yet been implemented.
+> [!NOTE]
+> The CSS shapes module introduces the `shape-inside` and `shape-padding` properties that have not yet been implemented.
 
 ### Data types
 

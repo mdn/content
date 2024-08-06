@@ -40,7 +40,8 @@ To access the OPFS in the first place, you call the {{domxref("StorageManager.ge
 
 When accessing the OPFS from the main thread, you will use asynchronous, {{jsxref("Promise")}}-based APIs. You can access file ({{domxref("FileSystemFileHandle")}}) and directory ({{domxref("FileSystemDirectoryHandle")}}) handles by calling {{domxref("FileSystemDirectoryHandle.getFileHandle()")}} and {{domxref("FileSystemDirectoryHandle.getDirectoryHandle()")}} respectively on the {{domxref("FileSystemDirectoryHandle")}} object representing the OPFS root (and child directories, as they are created).
 
-> **Note:** Passing `{ create: true }` into the above methods causes the file or folder to be created if it doesn't exist.
+> [!NOTE]
+> Passing `{ create: true }` into the above methods causes the file or folder to be created if it doesn't exist.
 
 ```js
 // Create a hierarchy of files and folders
@@ -121,7 +122,8 @@ Web Workers don't block the main thread, which means you can use the synchronous
 
 You can synchronously access a file by calling {{domxref("FileSystemFileHandle.createSyncAccessHandle()")}} on a regular {{domxref("FileSystemFileHandle")}}:
 
-> **Note:** Despite having "Sync" in its name, the `createSyncAccessHandle()` method itself is asynchronous.
+> [!NOTE]
+> Despite having "Sync" in its name, the `createSyncAccessHandle()` method itself is asynchronous.
 
 ```js
 const opfsRoot = await navigator.storage.getDirectory();

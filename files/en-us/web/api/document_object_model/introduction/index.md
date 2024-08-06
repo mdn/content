@@ -108,7 +108,8 @@ and then adds it to the tree for the document:
 
 This page tries to describe the various objects and types in simple terms. But there are a number of different data types being passed around the API that you should be aware of.
 
-> **Note:** Because the vast majority of code that uses the DOM revolves around manipulating HTML documents, it's common to refer to the nodes in the DOM as **elements**, although strictly speaking not every node is an element.
+> [!NOTE]
+> Because the vast majority of code that uses the DOM revolves around manipulating HTML documents, it's common to refer to the nodes in the DOM as **elements**, although strictly speaking not every node is an element.
 
 The following table briefly describes these data types.
 

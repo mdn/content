@@ -42,7 +42,7 @@ There are other peripheral tools that are part of a typical development environm
 
 ### What operating systems are supported?
 
-_Node_ can be run on Windows, macOS, many flavors of Linux, Docker, etc. There is a full list on the Node.js [Downloads](https://nodejs.org/en/download/) page. Almost any personal computer should have the necessary performance to run Node during development. _Express_ is run in a _Node_ environment, and hence can run on any platform that runs _Node_.
+_Node_ can be run on Windows, macOS, many flavors of Linux, Docker, etc. There is a full list on the Node.js [Downloads](https://nodejs.org/en/download/package-manager) page. Almost any personal computer should have the necessary performance to run Node during development. _Express_ is run in a _Node_ environment, and hence can run on any platform that runs _Node_.
 
 In this article we provide setup instructions for Windows, macOS, and Ubuntu Linux.
 
@@ -64,7 +64,7 @@ In order to use _Express_ you will have to install _Nodejs_ and the [Node Packag
 To make this easier we'll first install a node version manager, and then we'll use it to install the latest Long Term Supported (LTS) versions of node and npm.
 
 > [!NOTE]
-> You can also install nodejs and npm with installers provide on <https://nodejs.org/en/> (select the button to download the LTS build that is "Recommended for most users"), or you can [install using the package manager for your OS](https://nodejs.org/en/download/package-manager/) (nodejs.org).
+> You can also install nodejs and npm with installers provide on <https://nodejs.org/en/> (select the button to download the LTS build that is "Recommended for most users"), or you can [install using the package manager for your OS](https://nodejs.org/en/download/package-manager) (nodejs.org).
 > We highly recommend using a node version manager as these make it easier to install, upgrade, and switch between any particular version of node and npm.
 
 ### Windows
@@ -157,7 +157,8 @@ As a slightly more exciting test let's create a very basic "pure node" server th
 
    The code imports the "http" module and uses it to create a server (`createServer()`) that listens for HTTP requests on port 3000. The script then prints a message to the console about what browser URL you can use to test the server. The `createServer()` function takes as an argument a callback function that will be invoked when an HTTP request is received — this returns a response with an HTTP status code of 200 ("OK") and the plain text "Hello World".
 
-   > **Note:** Don't worry if you don't understand exactly what this code is doing yet! We'll explain our code in greater detail once we start using Express!
+   > [!NOTE]
+   > Don't worry if you don't understand exactly what this code is doing yet! We'll explain our code in greater detail once we start using Express!
 
 2. Start the server by navigating into the same directory as your `hellonode.js` file in your command prompt, and calling `node` along with the script name, like so:
 
@@ -265,7 +266,8 @@ The following steps show how you can use npm to download a package, save it into
    This imports the "express" module using `require()` and uses it to create a server (`app`) that listens for HTTP requests on port 3000 and prints a message to the console explaining what browser URL you can use to test the server.
    The `app.get()` function only responds to HTTP `GET` requests with the specified URL path ('/'), in this case by calling a function to send our _Hello World!_ message.
 
-   > **Note:** The backticks in the `` `Example app listening on port ${port}!` `` let us interpolate the value of `$port` into the string.
+   > [!NOTE]
+   > The backticks in the `` `Example app listening on port ${port}!` `` let us interpolate the value of `$port` into the string.
 
 5. You can start the server by calling node with the script in your command prompt:
 
@@ -432,10 +434,9 @@ In the next article we start working through a tutorial to build a complete web 
 
 ## See also
 
-- [Downloads](https://nodejs.org/en/download/) page (nodejs.org)
-- [Installing Node.js via package manager](https://nodejs.org/en/download/package-manager/) (nodejs.org)
+- [Downloads](https://nodejs.org/en/download/package-manager) page (nodejs.org)
 - [Installing Express](https://expressjs.com/en/starter/installing.html) (expressjs.com)
 - [Express Application Generator](https://expressjs.com/en/starter/generator.html) (expressjs.com)
-- [Using Node.js with Windows subsystem for Linux](https://docs.microsoft.com/windows/dev-environment/javascript/) (docs.microsoft.com)
+- [Using Node.js with Windows subsystem for Linux](https://learn.microsoft.com/en-us/windows/dev-environment/javascript/) (docs.microsoft.com)
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}

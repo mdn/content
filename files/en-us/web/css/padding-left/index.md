@@ -13,7 +13,8 @@ The **`padding-left`** [CSS](/en-US/docs/Web/CSS) property sets the width of the
 
 An element's padding area is the space between its content and its border.
 
-> **Note:** The {{cssxref("padding")}} property can be used to set paddings on all four sides of an element with a single declaration.
+> [!NOTE]
+> The {{cssxref("padding")}} property can be used to set paddings on all four sides of an element with a single declaration.
 
 ## Syntax
 

@@ -10,7 +10,7 @@ Developing and publishing your game is not enough. You have to let the world kno
 
 ## Competitions
 
-Taking part in [competitions](https://www.bestsevenreviews.com/category/online-games/) will not only level up your gamedev skills and let you meet new devs to befriend and learn from — and it will also get you involved in the community. If you make a good game for a competition and win some prizes in the process your game will automatically be promoted by the organizers and other attendees. You'll be rich and famous, or so they say.
+Taking part in competitions will not only level up your gamedev skills and let you meet new devs to befriend and learn from — and it will also get you involved in the community. If you make a good game for a competition and win some prizes in the process your game will automatically be promoted by the organizers and other attendees. You'll be rich and famous, or so they say.
 
 Many great games get started as a quick, sloppy demo submitted to a competition. If both the idea and the execution are good enough, you will succeed. Plus competitions generally require games to follow a mandatory theme, so you can get creative around a theme if you are stuck for ideas.
 

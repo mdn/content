@@ -88,7 +88,7 @@ The following video codecs are those which are most commonly used on the web. Fo
       </td>
     </tr>
     <tr>
-      <th scope="row"><a href="#theora">Theora</a></th>
+      <th scope="row"><a href="#theora">Theora</a> {{deprecated_inline}}</th>
       <td>Theora</td>
       <td><a href="/en-US/docs/Web/Media/Formats/Containers#ogg">Ogg</a></td>
     </tr>
@@ -1047,7 +1047,7 @@ HEVC is a proprietary format and is covered by a number of patents. Licensing is
         </table>
         <p>Chrome support HEVC for devices with hardware support on Windows 8+, Linux and ChromeOS, for all devices on macOS Big Sur 11+ and Android 5.0+.</p>
         <p>Edge (Chromium) supports HEVC for devices with hardware support on Windows 10 1709+ when
-          <a href="https://apps.microsoft.com/store/detail/hevc-video-extension/9NMZLZ57R3T7">HEVC video extensions from the Microsoft Store</a>
+          <a href="https://apps.microsoft.com/detail/9nmzlz57r3t7">HEVC video extensions from the Microsoft Store</a>
           is installed, and has the same support status as Chrome on other platforms. Edge (Legacy) only supports HEVC for devices with a hardware decoder.
         </p>
         <p>Mozilla will not support HEVC while it is encumbered by patents.</p>
@@ -1505,6 +1505,10 @@ However, few web browsers support MPEG-2 without the support of a plugin, and wi
 
 ### Theora
 
+> [!WARNING]
+> This code is no longer longer recommended.
+> It has extremely small usage, and support is being removed from browsers.
+
 **[Theora](https://en.wikipedia.org/wiki/Theora)**, developed by [Xiph.org](https://xiph.org/), is an open and free video codec which may be used without royalties or licensing. Theora is comparable in quality and compression rates to MPEG-4 Part 2 Visual and AVC, making it a very good if not top-of-the-line choice for video encoding. But its status as being free from any licensing concerns and its relatively low CPU resource requirements make it a popular choice for many software and web projects. The low CPU impact is particularly useful since there are no hardware decoders available for Theora.
 
 Theora was originally based upon the VC3 codec by On2 Technologies. The codec and its specification were released under the LGPL license and entrusted to Xiph.org, which then developed it into the Theora standard.
@@ -1581,10 +1585,10 @@ The [Theora Cookbook](https://en.flossmanuals.net/ogg-theora/_full/) offers addi
             </tr>
             <tr>
               <th scope="row">Theora support</th>
-              <td>3</td>
-              <td>Yes</td>
-              <td>3.5</td>
-              <td>10.5</td>
+              <td>3 to 121</td>
+              <td>12 to 121</td>
+              <td>3.5 to 126</td>
+              <td>10.5 to 107</td>
               <td>No</td>
             </tr>
           </tbody>
@@ -1592,7 +1596,7 @@ The [Theora Cookbook](https://en.flossmanuals.net/ogg-theora/_full/) offers addi
         <p>
           Edge supports Theora with the optional
           <a
-            href="https://www.microsoft.com/en-us/p/web-media-extensions/9n5tdp8vcmhs?activetab=pivot:overviewtab"
+            href="https://apps.microsoft.com/detail/9n5tdp8vcmhs"
             >Web Media Extensions</a
           >
           add-on.
@@ -1964,5 +1968,4 @@ The documentation for your codec choices will probably offer information you'll 
 - {{RFC(3839)}}: MIME Type Registrations for 3GPP Multimedia Files
 - {{RFC(4381)}}: MIME Type Registrations for 3GPP2 Multimedia Files
 - {{RFC(4337)}}: MIME Type Registrations for MPEG-4
-- [Video codecs in Opera](https://dev.opera.com/articles/introduction-html5-video/#codecs--the-fly-in-the-ointment)
 - [Video and audio codecs in Chrome](https://www.chromium.org/audio-video/)

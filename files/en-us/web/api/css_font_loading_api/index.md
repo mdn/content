@@ -9,7 +9,8 @@ browser-compat: api.FontFace
 
 The CSS Font Loading API provides events and interfaces for dynamically loading font resources.
 
-> **Note:** This feature is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) (`self.fonts` provides access to {{domxref('FontFaceSet')}}).
+> [!NOTE]
+> This feature is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) (`self.fonts` provides access to {{domxref('FontFaceSet')}}).
 
 ## Concepts and usage
 
@@ -48,7 +49,8 @@ const font = new FontFace("myfont", "url(myfont.woff)", {
 });
 ```
 
-> **Note:** As with `@font-face`, some descriptors represent the expected data in the font data and are used for font matching, while others actually set/define properties of the generated font face.
+> [!NOTE]
+> As with `@font-face`, some descriptors represent the expected data in the font data and are used for font matching, while others actually set/define properties of the generated font face.
 > For example, setting the `style` to "italic" indicates that the file contains italic fonts; it is up to the author to specify a file for which this is true.
 
 Font faces with a _binary source_ are automatically loaded if the font definition is valid and the font data can be loaded — {{domxref('FontFace.status')}} is set to `loaded` on success and `failed` otherwise.

@@ -120,7 +120,7 @@ const ctx = canvas.getContext("2d");
 ```
 
 > [!NOTE]
-> other context values you could choose include `webgl` for WebGL, `webgl2` for WebGL 2, etc., but we won't need those in this article.
+> Other context values you could choose include `webgl` for WebGL, `webgl2` for WebGL 2, etc., but we won't need those in this article.
 
 So that's it — our canvas is now primed and ready for drawing on! The `ctx` variable now contains a {{domxref("CanvasRenderingContext2D")}} object, and all drawing operations on the canvas will involve manipulating this object.
 
@@ -286,7 +286,8 @@ Now let's look at how to draw a circle in canvas. This is accomplished using the
 
    `arc()` takes six parameters. The first two specify the position of the arc's center (X and Y, respectively). The third is the circle's radius, the fourth and fifth are the start and end angles at which to draw the circle (so specifying 0 and 360 degrees gives us a full circle), and the sixth parameter defines whether the circle should be drawn counterclockwise (anticlockwise) or clockwise (`false` is clockwise).
 
-   > **Note:** 0 degrees is horizontally to the right.
+   > [!NOTE]
+   > 0 degrees is horizontally to the right.
 
 2. Let's try adding another arc:
 

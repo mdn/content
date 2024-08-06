@@ -96,7 +96,8 @@ Let's create a `Todos.svelte` component. This will contain our list of to-dos.
 
 1. Create a new folder — `src/components`.
 
-   > **Note:** You can put your components anywhere inside the `src` folder, but the `components` folder is a recognized convention to follow, allowing you to find your components easily.
+   > [!NOTE]
+   > You can put your components anywhere inside the `src` folder, but the `components` folder is a recognized convention to follow, allowing you to find your components easily.
 
 2. Create a file named `src/components/Todos.svelte` with the following content:
 

@@ -59,7 +59,8 @@ scroll-snap-type: unset;
 - `proximity`
   - : The visual viewport of this scroll container may snap to a snap position if it isn't currently scrolled. The user agent decides if it snaps or not based on scroll parameters. This is the default snap strictness if any snap axis is specified.
 
-> **Note:** If the content in the snap port is changed (e.g. added, moved, deleted, or resized) or the value of any scroll snap-related property (e.g. `scroll-snap-type` or `scroll-margin`) is changed, the scroll container will be [resnapped](https://drafts.csswg.org/css-scroll-snap/#re-snap) according to the latest value of `scroll-snap-type`.
+> [!NOTE]
+> If the content in the snap port is changed (e.g. added, moved, deleted, or resized) or the value of any scroll snap-related property (e.g. `scroll-snap-type` or `scroll-margin`) is changed, the scroll container will be [resnapped](https://drafts.csswg.org/css-scroll-snap/#re-snap) according to the latest value of `scroll-snap-type`.
 
 ## Formal definition
 

@@ -408,7 +408,7 @@ For this tutorial we'll hosting our code on [GitHub](https://github.com/), one o
 > [!NOTE]
 > Using SCM tools is good software development practice!
 > Ths instructions provide a basic introduction to git and GitHub.
-> To learn more, see [Learning Git](https://docs.github.com/en/get-started/quickstart/git-and-github-learning-resources).
+> To learn more, see [Learning Git](https://docs.github.com/en/get-started/start-your-journey/git-and-github-learning-resources).
 
 ### Key concepts
 
@@ -441,7 +441,8 @@ The steps are:
    - Enter a new repository description: "Local Library website written in Django".
    - Select "Public" for the repository (the default).
 
-     > **Warning:** This will make _all_ source code visible.
+     > [!WARNING]
+     > This will make _all_ source code visible.
      > Remember not to store credentials or other sensitive material in your repo unless it is private.
 
    - Choose **Python** in the _Add .gitignore_ selection list.
@@ -483,7 +484,8 @@ This is a useful change to make, but mostly we're doing it to show you how to pu
 
 1. In the command prompt/terminal we first "fetch" (get) and then pull (get and merge into the current branch) the latest version of the source from GitHub:
 
-   > **Note:** This step isn't strictly necessary as we have just cloned the source and know it is up to date.
+   > [!NOTE]
+   > This step isn't strictly necessary as we have just cloned the source and know it is up to date.
    > However in general you should update your sources from GitHub before making changes.
 
    ```bash

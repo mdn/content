@@ -322,7 +322,7 @@ We then call that sender's {{domxref("RTCRtpSender.getParameters", "getParameter
 
 If no video track is found, we set `codecList` to `null`.
 
-On return, then, `codecList` is either `null` to indicate that no video tracks were found or it's an array of {{domxref("RTCRtpCodecParameters")}} objects, each describing one permitted codec configuration. Of special importance in these objects: the {{domxref("RTCRtpCodecParameters.payloadType", "payloadType")}} property, which is a one-byte value which uniquely identifies the described configuration.
+On return, then, `codecList` is either `null` to indicate that no video tracks were found or it's an array of {{domxref("RTCCodecStats")}} objects, each describing one permitted codec configuration. Of special importance in these objects: the {{domxref("RTCCodecStats.payloadType", "payloadType")}} property, which is a one-byte value which uniquely identifies the described configuration.
 
 > [!NOTE]
 > The two methods for obtaining lists of codecs shown here use different output types in their codec lists. Be aware of this when using the results.

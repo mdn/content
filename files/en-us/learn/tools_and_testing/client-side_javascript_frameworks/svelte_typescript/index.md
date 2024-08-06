@@ -160,7 +160,7 @@ npm run dev                                       # start the app in development
 These instructions apply to any Svelte project you'd like to convert to TypeScript. Just take into account that the Svelte community is constantly improving Svelte TypeScript support, so you should run `npm update` regularly to take advantage of the latest changes.
 
 > [!NOTE]
-> if you find any trouble working with TypeScript inside a Svelte application, have a look at this [troubleshooting/FAQ section about TypeScript support](https://github.com/sveltejs/language-tools/blob/master/docs/preprocessors/typescript.md#troubleshooting--faq).
+> If you find any trouble working with TypeScript inside a Svelte application, have a look at this [troubleshooting/FAQ section about TypeScript support](https://github.com/sveltejs/language-tools/blob/master/docs/preprocessors/typescript.md#troubleshooting--faq).
 
 As we said before, TypeScript is a superset of JavaScript, so your application will run without modifications. Currently you will be running a regular JavaScript application with TypeScript support enabled, without taking advantage of any of the features that TypeScript provides. You can now start adding types progressively.
 
@@ -239,7 +239,8 @@ We'll define a `TodoType` type to see how TypeScript enforces that anything pass
    };
    ```
 
-   > **Note:** The Svelte template uses [svelte-preprocess](https://github.com/sveltejs/svelte-preprocess) 4.0.0 to support TypeScript. From that version onward you have to use `export`/`import` type syntax to import types and interfaces. Check [this section of the troubleshooting guide](https://github.com/sveltejs/language-tools/blob/master/docs/preprocessors/typescript.md#how-do-i-import-interfaces-into-my-svelte-components-i-get-errors-after-transpilation) for more information.
+   > [!NOTE]
+   > The Svelte template uses [svelte-preprocess](https://github.com/sveltejs/svelte-preprocess) 4.0.0 to support TypeScript. From that version onward you have to use `export`/`import` type syntax to import types and interfaces. Check [this section of the troubleshooting guide](https://github.com/sveltejs/language-tools/blob/master/docs/preprocessors/typescript.md#how-do-i-import-interfaces-into-my-svelte-components-i-get-errors-after-transpilation) for more information.
 
 4. Now we'll use `TodoType` from our `Todo.svelte` component. First add the `lang="ts"` to our `<script>` tag.
 5. Let's `import` the type and use it to declare the `todo` property. Replace the `export let todo` line with the following:
@@ -350,7 +351,8 @@ Let's start with our `Alert.svelte` component.
        if (!message) {               // hide Alert if message is empty
    ```
 
-   > **Note:** There's no need to specify the `ms` type with `export let ms:number = 3000`, because TypeScript is already inferring it from its default value.
+   > [!NOTE]
+   > There's no need to specify the `ms` type with `export let ms:number = 3000`, because TypeScript is already inferring it from its default value.
 
 ### MoreActions.svelte
 

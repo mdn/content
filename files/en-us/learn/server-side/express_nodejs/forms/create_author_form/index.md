@@ -4,6 +4,8 @@ slug: Learn/Server-side/Express_Nodejs/forms/Create_author_form
 page-type: learn-module-chapter
 ---
 
+{{LearnSidebar}}
+
 This subarticle shows how to define a page for creating `Author` objects.
 
 ## Import validation and sanitization methods

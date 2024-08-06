@@ -353,7 +353,8 @@ Let's begin by extracting our new to-do form out to its own component. With what
 
    `addTodo()` now receives the name of the new to-do directly, so we no longer need the `newTodoName` variable to give it its value. Our `NewTodo` component takes care of that.
 
-   > **Note:** The `{ name }` syntax is just a shorthand for `{ name: name }`. This one comes from JavaScript itself and has nothing to do with Svelte, besides providing some inspiration for Svelte's own shorthands.
+   > [!NOTE]
+   > The `{ name }` syntax is just a shorthand for `{ name: name }`. This one comes from JavaScript itself and has nothing to do with Svelte, besides providing some inspiration for Svelte's own shorthands.
 
 5. Finally for this section, replace the NewTodo form markup with a call to `NewTodo` component, like so:
 

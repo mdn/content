@@ -161,7 +161,7 @@ function applyMouseMovement(refSpace) {
 
 This function creates an inverse orientation matrix—used to orient the viewer—from the
 current pitch and yaw values, then uses that matrix as the source of the orientation
-when calling {{domxref("XRRigidTransform.XRRigidTransform", "new XRRigidTransform()")}}.
+when calling {{domxref("XRRigidTransform.XRRigidTransform", "XRRigidTransform()")}}.
 The new {{domxref("XRRigidTransform")}}'s reference space is then fetched and returned
 to the caller.
 

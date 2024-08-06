@@ -12,7 +12,8 @@ The **`SharedWorker()`** constructor creates a
 {{domxref("SharedWorker")}} object that executes the script at the specified URL. This
 script must obey the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy).
 
-> **Note:** there is disagreement among browser manufacturers about
+> [!NOTE]
+> There is disagreement among browser manufacturers about
 > whether a data URL is of the same origin or not. Although Firefox 10.0
 > and later accept data URLs, that's not the case in all other
 > browsers.

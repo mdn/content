@@ -25,7 +25,8 @@ Common use cases for `<picture>`:
 - **Art direction.** Cropping or modifying images for different `media` conditions (for example, loading a simpler version of an image which has too many details, on smaller displays).
 - **Offering alternative image formats**, for cases where certain formats are not supported.
 
-  > **Note:** For example, newer formats like [AVIF](/en-US/docs/Web/Media/Formats/Image_types#avif_image) or [WEBP](/en-US/docs/Web/Media/Formats/Image_types#webp_image) have many advantages, but might not be supported by the browser. A list of supported image formats can be found in: [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types).
+  > [!NOTE]
+  > For example, newer formats like [AVIF](/en-US/docs/Web/Media/Formats/Image_types#avif_image) or [WEBP](/en-US/docs/Web/Media/Formats/Image_types#webp_image) have many advantages, but might not be supported by the browser. A list of supported image formats can be found in: [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types).
 
 - **Saving bandwidth and speeding page load times** by loading the most appropriate image for the viewer's display.
 

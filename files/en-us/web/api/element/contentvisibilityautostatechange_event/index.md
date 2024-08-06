@@ -24,7 +24,8 @@ addEventListener("contentvisibilityautostatechange", (event) => {});
 oncontentvisibilityautostatechange = (event) => {};
 ```
 
-> **Note:** The event object is of type {{domxref("ContentVisibilityAutoStateChangeEvent")}}.
+> [!NOTE]
+> The event object is of type {{domxref("ContentVisibilityAutoStateChangeEvent")}}.
 
 ## Examples
 

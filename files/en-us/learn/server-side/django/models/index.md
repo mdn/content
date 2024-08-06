@@ -129,7 +129,8 @@ The following common arguments can be used when declaring many/most of the diffe
   If no field is specified as the primary key, Django will automatically add a field for this purpose.
   The type of auto-created primary key fields can be specified for each app in [`AppConfig.default_auto_field`](https://docs.djangoproject.com/en/5.0/ref/applications/#django.apps.AppConfig.default_auto_field) or globally in the [`DEFAULT_AUTO_FIELD`](https://docs.djangoproject.com/en/5.0/ref/settings/#std:setting-DEFAULT_AUTO_FIELD) setting.
 
-  > **Note:** Apps created using **manage.py** set the type of the primary key to a [BigAutoField](https://docs.djangoproject.com/en/5.0/ref/models/fields/#bigautofield).
+  > [!NOTE]
+  > Apps created using **manage.py** set the type of the primary key to a [BigAutoField](https://docs.djangoproject.com/en/5.0/ref/models/fields/#bigautofield).
   > You can see this in the local library **catalog/apps.py** file:
   >
   > ```py
@@ -180,7 +181,7 @@ Another common attribute is `verbose_name`, a verbose name for the class in sing
 verbose_name = 'BetterName'
 ```
 
-Class metadata can be used to create and apply new "access permissions" for the model (default permissions are applied automatically), allow ordering based on another field, define [constraints](https://docs.djangoproject.com/en/5.0/ref/models/constraints) on possible values of data that can be stored, or to declare that the class is "abstract" (a base class that you cannot create records for, and will instead be derived from to create other models).
+Class metadata can be used to create and apply new "access permissions" for the model (default permissions are applied automatically), allow ordering based on another field, define [constraints](https://docs.djangoproject.com/en/5.0/ref/models/constraints/) on possible values of data that can be stored, or to declare that the class is "abstract" (a base class that you cannot create records for, and will instead be derived from to create other models).
 
 Many of the other metadata options control what database must be used for the model and how the data is stored (these are really only useful if you need to map a model to an existing database).
 
@@ -335,7 +336,7 @@ Then we declare the `get_absolute_url()` method, which returns a URL that can be
 Setting `unique=True` on the field above prevents genres being created with _exactly_ the same name, but not variations such as "fantasy", "Fantasy", or even "FaNtAsY".
 The last part of the model definition uses a [`constraints`](https://docs.djangoproject.com/en/5.0/ref/models/options/#constraints) option on the model's [metadata](#metadata) to specify that the lower case of the value in the `name` field must be unique in the database, and display the `violation_error_message` string if it isn't.
 Here we don't need to do anything else, but you can define multiple constraints against a field or fields.
-For more information see the [Constraints reference](https://docs.djangoproject.com/en/5.0/ref/models/constraints), including [`UniqueConstraint()`](https://docs.djangoproject.com/en/5.0/ref/models/constraints/#uniqueconstraint) (and [`Lower()`](https://docs.djangoproject.com/en/5.0/ref/models/database-functions/#lower)).
+For more information see the [Constraints reference](https://docs.djangoproject.com/en/5.0/ref/models/constraints/), including [`UniqueConstraint()`](https://docs.djangoproject.com/en/5.0/ref/models/constraints/#uniqueconstraint) (and [`Lower()`](https://docs.djangoproject.com/en/5.0/ref/models/database-functions/#lower)).
 
 ### Book model
 
