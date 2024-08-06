@@ -3597,6 +3597,8 @@
 /en-US/docs/Glossary/Node_DOM	/en-US/docs/Glossary/Node/DOM
 /en-US/docs/Glossary/Object_Oriented_Programming	/en-US/docs/Glossary/OOP
 /en-US/docs/Glossary/POP3	/en-US/docs/Glossary/POP
+/en-US/docs/Glossary/Payload_body	/en-US/docs/Glossary/HTTP_Content
+/en-US/docs/Glossary/Payload_header	/en-US/docs/Glossary/Content_header
 /en-US/docs/Glossary/Property_(CSS)	/en-US/docs/Glossary/property/CSS
 /en-US/docs/Glossary/Random_Number_Generator	/en-US/docs/Glossary/RNG
 /en-US/docs/Glossary/Reference	/en-US/docs/Glossary/Object_reference

@@ -61,3 +61,4 @@ Content-Length: 97
 - [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
 - {{HTTPHeader("Connection")}}
 - {{HTTPHeader("Retry-After")}}
+- {{Glossary("HTTP Content")}}
