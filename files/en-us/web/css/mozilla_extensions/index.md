@@ -437,7 +437,7 @@ Properties: {{CSSxRef("width")}}, {{CSSxRef("min-width")}}, and {{CSSxRef("max-w
 - {{CSSxRef(":-moz-handler-disabled")}}
 - {{CSSxRef("::-moz-inline-table")}}
 
-### L
+### L – M
 
 - {{CSSxRef(":-moz-last-node")}}
 - {{CSSxRef("::-moz-list-bullet")}}
@@ -448,6 +448,7 @@ Properties: {{CSSxRef("width")}}, {{CSSxRef("min-width")}}, and {{CSSxRef("max-w
 - {{CSSxRef(":-moz-lwtheme")}}
 - {{CSSxRef(":-moz-lwtheme-brighttext")}}
 - {{CSSxRef(":-moz-lwtheme-darktext")}}
+- {{CSSxRef("::-moz-meter-bar")}}
 
 ### N – R
 
