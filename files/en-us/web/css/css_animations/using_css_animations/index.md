@@ -30,6 +30,8 @@ The sub-properties of the {{cssxref("animation")}} property are:
   - : Specifies the length of time in which an animation completes one cycle.
 - {{cssxref("animation-fill-mode")}}
   - : Specifies how an animation applies styles to its target before and after it runs.
+    > [!NOTE]
+    > In the case of animation [forwards](/en-US/docs/Web/CSS/animation-fill-mode#forwards) fill mode, animated properties behave as if included in a set [`will-change`](/en-US/docs/Web/CSS/will-change) property value. If a new stacking context was created during the animation, the target element retains the stacking context after the animation has finished.
 - {{cssxref("animation-iteration-count")}}
   - : Specifies the number of times an animation should repeat.
 - {{cssxref("animation-name")}}

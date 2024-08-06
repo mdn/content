@@ -178,7 +178,7 @@ A color contrast ratio is meaningless without its luminance component, and once 
 
 Where human perception is concerned, a difference in luminance matters more than a color difference. This is important, as luminance contrast enables the development of content that even those with color blindness can see. With this understanding, luminance may be manipulated so that colors that are difficult to see because of their low luminance could be made more legible by placing these colors against another with contrasting luminance. An interesting study by NASA on the color blue, for example, noted that this color, which has low luminance, can be made legible if _care was taken to achieve adequate luminance contrast_ (From the article, [Designing with blue](https://colorusage.arc.nasa.gov/blue_2.php))
 
-Calculations for relative luminance are not casual ones. Luckily, there are [online luminance and contrast checkers](https://contrast-ratio.com/) available, and even instructions on how to [calculate relative luminance](https://www.w3.org/TR/WCAG21/#dfn-relative-luminance).
+Calculations for relative luminance are not casual ones. Luckily, there are [online luminance and contrast checkers](https://www.siegemedia.com/contrast-ratio) available, and even instructions on how to [calculate relative luminance](https://www.w3.org/TR/WCAG21/#dfn-relative-luminance).
 
 ## Perceiving color
 
@@ -310,7 +310,7 @@ Color as in hues and saturation can affect our mood, and enhance — or de-enhan
 - **Blue also has a significant effect on brightness and glare:** [Blue and glare & brightness](https://pubmed.ncbi.nlm.nih.gov/31288107/)
 - **Red tinted glasses can provide increased happiness or joy:** [Looking Through "Rose-Tinted" Glasses: The Influence of Tint on Visual Affective Processing](https://pubmed.ncbi.nlm.nih.gov/31244627/)
 - **Red is well known to have significant effects on our behavior:** [How the Color Red Influences Our Behavior](https://www.scientificamerican.com/article/how-the-color-red-influences-our-behavior/), Scientific American, S. Martinez-Conde, Stephen L. Macknik
-- **Red Environment:** Studies have shown that for those who suffer Traumatic Brain Injury, [cognitive function is reduced in a red environment](https://www.ncbi.nlm.nih.gov/pubmed/20649469).
+- **Red Environment:** Studies have shown that for those who suffer Traumatic Brain Injury, [cognitive function is reduced in a red environment](https://pubmed.ncbi.nlm.nih.gov/20649469/).
 
 ## See also
 
@@ -320,5 +320,5 @@ Color as in hues and saturation can affect our mood, and enhance — or de-enhan
 - [`<color>`](/en-US/docs/Web/CSS/color_value) data type
 - [Web accessibility for seizures and physical reactions](/en-US/docs/Web/Accessibility/Seizure_disorders)
 - [How the Color Red Influences Our Behavior](https://www.scientificamerican.com/article/how-the-color-red-influences-our-behavior/) Scientific American By Susana Martinez-Conde, Stephen L. Macknik on November 1, 2014
-- [Red Desaturation](https://www.smart-optometry.com/red-desaturation/) The human eye is so sensitively "tuned" to red, that ophthalmologists set up a test using it, assessing the integrity of the optic nerve.
+- [Red Desaturation](https://www.smartoptometry.app/red-desaturation/) The human eye is so sensitively "tuned" to red, that ophthalmologists set up a test using it, assessing the integrity of the optic nerve.
 - [Photic- and pattern-induced seizures: expert consensus of the Epilepsy Foundation of America Working Group](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.532.7063&rep=rep1&type=pdf)

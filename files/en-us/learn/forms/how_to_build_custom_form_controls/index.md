@@ -666,7 +666,7 @@ Before starting, it's important to remember **JavaScript in the browser is an un
 - The script did not load: This is one of the most common cases, especially in the mobile world where the network is not very reliable.
 - The script is buggy: You should always consider this possibility.
 - The script conflicts with a third-party script: This can happen with tracking scripts or any bookmarklets the user uses.
-- The script conflicts with, or is affected by, a browser extension (such as Firefox's [NoScript](https://addons.mozilla.org/fr/firefox/addon/noscript/) extension or Chrome's [ScriptBlock](https://chrome.google.com/webstore/detail/scriptblock/hcdjknjpbnhdoabbngpmfekaecnpajba) extension).
+- The script conflicts with, or is affected by, a browser extension (such as Firefox's [NoScript](https://addons.mozilla.org/fr/firefox/addon/noscript/) extension or Chrome's [ScriptBlock](https://chromewebstore.google.com/detail/scriptblock/hcdjknjpbnhdoabbngpmfekaecnpajba) extension).
 - The user is using a legacy browser, and one of the features you require is not supported: This will happen frequently when you make use of cutting-edge APIs.
 - The user is interacting with the content before the JavaScript has been fully downloaded, parsed, and executed.
 
