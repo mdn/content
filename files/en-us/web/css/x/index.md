@@ -7,7 +7,7 @@ browser-compat: css.properties.x
 
 {{CSSRef}}
 
-The **`x`** [CSS](/en-US/docs/Web/CSS) property defines the x-axis coordinate of the top left corner of the SVG {{SVGElement("rect")}} shape, {{SVGElement("image")}} image, {{SVGElement("'foreignObject'")}} viewport or {{SVGElement("svg")}} viewport. If present, it overrides the element's {{SVGAttr("x")}} attribute.
+The **`x`** [CSS](/en-US/docs/Web/CSS) property defines the x-axis coordinate of the top left corner of the SVG {{SVGElement("rect")}} shape, {{SVGElement("image")}} image, {{SVGElement("foreignObject")}} viewport or {{SVGElement("svg")}} viewport. If present, it overrides the element's {{SVGAttr("x")}} attribute.
 
 > [!NOTE]
 > The `x` property only applies to {{SVGElement("rect")}}, {{SVGElement("image")}} and {{SVGElement("'foreignObject'")}} elements nested in an {{SVGElement("svg")}}, and the `<svg>` elements itself. It does not apply to other SVG elements nor to HTML elements or pseudo-elements.
