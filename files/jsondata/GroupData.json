@@ -508,6 +508,7 @@
       ],
       "interfaces": [
         "IdentityCredential",
+        "IdentityCredentialRequestOptions",
         "IdentityProvider",
         "NavigatorLogin"
       ],
@@ -1853,6 +1854,7 @@
       "interfaces": [
         "PublicKeyCredential",
         "PublicKeyCredentialCreationOptions",
+        "PublicKeyCredentialRequestOptions",
         "AuthenticatorResponse",
         "AuthenticatorAttestationResponse",
         "AuthenticatorAssertionResponse"

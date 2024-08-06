@@ -3,12 +3,11 @@ title: <display-inside>
 slug: Web/CSS/display-inside
 page-type: css-type
 browser-compat:
-  - css.properties.display.multi-keyword_values
   - css.properties.display.flow-root
-  - css.properties.display.table_values
-  - css.properties.display.grid
+  - css.properties.display.table
   - css.properties.display.flex
-  - css.properties.display.ruby_values
+  - css.properties.display.grid
+  - css.properties.display.ruby
 spec-urls: https://drafts.csswg.org/css-display/#typedef-display-inside
 ---
 
