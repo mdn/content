@@ -55,7 +55,7 @@ Your video editing software probably has a feature to reduce file size. If not, 
 
 ### Optimize `<source>` order
 
-Order video source from smallest to largest. For example, given video compressions in three different formats at 10MB, 12MB, and 13MB, declare the smallest first and the largest last:
+Order video source from smallest to largest. For example, given video compressions in the formats at 10MB and 12MB, declare the 10MB resource first:
 
 ```html
 <video width="400" height="300" controls="controls">
