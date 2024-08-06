@@ -19,7 +19,7 @@ Here's how they vary for different methods:
 - {{HTTPMethod("TRACE")}}: The response has a message body containing the request as received by the server.
 
 Although possible, successful {{HTTPMethod("PUT")}} or {{HTTPMethod("DELETE")}} requests often do not result in a `200 OK` response.
-It is more common to see {{HTTPStatus("201")}} `Created` if the resource is uploaded or created for the first time, or {{HTTPStatus("204")}} `No Content` upon successful deletion of a resource.
+It is more common to see {{HTTPStatus("201", "201 Created")}} if the resource is uploaded or created for the first time, or {{HTTPStatus("204", "204 No Content")}} upon successful deletion of a resource.
 
 ## Status
 
