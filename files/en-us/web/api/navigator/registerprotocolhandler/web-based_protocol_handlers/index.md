@@ -4,7 +4,7 @@ slug: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
 page-type: guide
 ---
 
-{{APIRef("HTML DOM")}}
+{{DefaultAPISidebar("HTML DOM")}}
 
 ## Background
 
