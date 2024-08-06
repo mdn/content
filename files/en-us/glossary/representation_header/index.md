@@ -6,11 +6,10 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-A **representation header** is an {{glossary("HTTP_header", "HTTP header")}} that describes one particular _representation_ of a resource.
+A **representation header** (or 'representation metadata') is an {{glossary("HTTP_header", "HTTP header")}} that describes a particular _representation_ of a resource.
+When a message includes content, the representation header fields describe how to interpret the data.
 
-Representations are different forms of a particular resource.
-
-For example, the same data might be formatted as a particular media type such as XML, JSON, HTML or Markdown, or localized to a particular written language or geographical region.
+For example, data might be formatted as a particular media type such as XML, JSON, HTML or Markdown, or localized to a particular written language or geographical region.
 The underlying resource is semantically the same in each case, but its representation is different.
 
 While representations are different forms of resources, representations can themselves also be transmitted in various forms: an HTTP message frames (cf., e.g., HTTP/1.1's {{HTTPHeader("Transfer-Encoding")}}), a particular stream of octets (cf., e.g., {{HTTPHeader("Content-Range")}}) derived from the _selected representation_.
@@ -20,7 +19,20 @@ Clients specify the formats that they prefer to be sent during [Content Negotiat
 Representation headers may be present in both HTTP request and response messages with various methods.
 If sent as a response to a `HEAD` request, they describe the body content representation that _would_ be selected if the resource was requested with a `GET` request.
 
-Representation headers include: {{HTTPHeader("Content-Type")}}, {{HTTPHeader("Content-Encoding")}}, {{HTTPHeader("Content-Language")}}, {{HTTPHeader("Content-Range")}}, {{HTTPHeader("Repr-Digest")}}, and {{HTTPHeader("Digest")}} {{Deprecated_Inline}}.
+Representation headers include:
+
+- {{HTTPHeader("Content-Length")}}
+- {{HTTPHeader("Content-Range")}}
+- {{HTTPHeader("Content-Type")}}
+- {{HTTPHeader("Content-Encoding")}}
+- {{HTTPHeader("Content-Location")}}
+- {{HTTPHeader("Content-Language")}}
+
+- Validators used in [conditional requests](/en-US/docs/Web/HTTP/Conditional_requests), such as:
+  - {{HTTPHeader("Last-Modified")}}
+  - {{HTTPHeader("ETag")}}
+
+Representation headers are not mutually exclusive with {{Glossary("Content header", "content headers")}}.
 
 ## See also
 
@@ -28,7 +40,6 @@ Representation headers include: {{HTTPHeader("Content-Type")}}, {{HTTPHeader("Co
 - [List of all HTTP headers](/en-US/docs/Web/HTTP/Headers)
 - Related glossary terms:
   - {{Glossary("Content header")}}
-  - {{glossary("Entity header")}}
 - {{HTTPHeader("Repr-Digest")}}, {{HTTPHeader("Want-Repr-Digest")}}
 - {{HTTPHeader("Content-Digest")}}, {{HTTPHeader("Want-Content-Digest")}}
 - {{HTTPHeader("Digest")}} {{Deprecated_Inline}}, {{HTTPHeader("Want-Digest")}} {{Deprecated_Inline}}
