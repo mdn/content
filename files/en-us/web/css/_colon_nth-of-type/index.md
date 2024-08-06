@@ -108,7 +108,6 @@ p.fancy:nth-of-type(2n + 1) {
    ```
    // Please note that this is not a standard JSON format!
    // All elements are HTML objects, and for ease of understanding, text is directly used here.
-   
    {
        "father": {
            "span": [
