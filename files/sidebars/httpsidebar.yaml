@@ -44,6 +44,7 @@ sidebar:
       - /Web/HTTP/Headers/X-XSS-Protection
       - /Web/Security/Practical_implementation_guides
       - /en-US/observatory
+
   - link: /Web/HTTP/CORS
     title: CORS
   - link: /Web/HTTP/Authentication
@@ -68,30 +69,37 @@ sidebar:
     title: Permissions_Policy
   - type: section
     title: Reference
+
   - type: listSubPages
     details: true
     title: Headers
     path: /en-US/docs/Web/HTTP/Headers
+
   - type: listSubPages
     details: true
     title: Methods
     path: /en-US/docs/Web/HTTP/Methods
+
   - type: listSubPages
     details: true
     title: Status
     path: /en-US/docs/Web/HTTP/Status
+
   - type: listSubPages
     details: true
     title: CSPDirectives
     path: /en-US/docs/Web/HTTP/Headers/Content-Security-Policy
+
   - type: listSubPages
     details: true
     title: CORS_errors
     path: /en-US/docs/Web/HTTP/CORS/Errors
+
   - type: listSubPages
     details: true
     title: PermissionsPolicyDirectives
     path: /en-US/docs/Web/HTTP//Headers/Permissions-Policy
+
 l10n:
   en-US:
     HTTP: HTTP
