@@ -85,9 +85,10 @@ p.fancy:nth-of-type(2n + 1) {
     <div class="children">2</div>
     <div class="children">3</div>
     <div class="children">4</div>
-    <div class="children">5</div>
+    <span class="children">5</span>
+    <div class="children">6</div>
   </div>
-  <p class="children">6</p>
+  <p class="children">7</p>
 </body>
 ```
 
@@ -101,9 +102,31 @@ p.fancy:nth-of-type(2n + 1) {
 </style>
 ```
 
-1. Use `.children` to find elements with content `2, 3, 4, 5, 6`.
-2. Get all sibling elements with the same tag (i.e., all `div` under father and `p` under body).
-3. Select and apply CSS styles based on `(2)`
+1. Use `.children` to find elements with content `2, 3, 4, 6, 7`.
+2. Get all sibling elements with the same tag (here, all `div`s under `father`, `span`s under `father`, and `p`s under `body`)
+3. Select and apply CSS styles based on `(2)` (The following is a simple comparison for easier understanding)
+   ```
+   // Please note that this is not a standard JSON format!
+   // All elements are HTML objects, and for ease of understanding, text is directly used here.
+   
+   {
+       "father": {
+           "span": [
+               <span class="children">5</span>   // class includes 'children' but index: 1 not selected.
+           ],
+           "div": [
+               <div class="aaa">1</div>    // index: 1 and class does not include 'children'. not selected.
+               <div class="children">2</div>   // index: 2 and class includes 'children'. Selected and rendered.
+               <div class="children">3</div>   // class includes 'children' but index: 3 not selected.
+               <div class="children">4</div>   // class includes 'children' but index: 4 not selected.
+               <div class="children">6</div>   // class includes 'children' but index: 5 not selected.
+           ]
+       },
+       "body": [
+           <p class="children">7</p>   // class includes 'children' but index: 1 not selected.
+       ]
+   }
+   ```
 
 ## Specifications
 
