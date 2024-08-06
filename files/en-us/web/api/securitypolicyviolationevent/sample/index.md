@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.SecurityPolicyViolationEvent.sample
 ---
 
-{{HTTPSidebar}}
+{{APIRef("{{HTTPSidebar}}")}}{{ SeeCompatTable() }}
 
 The **`sample`** read-only property of the
 {{domxref("SecurityPolicyViolationEvent")}} interface is a string

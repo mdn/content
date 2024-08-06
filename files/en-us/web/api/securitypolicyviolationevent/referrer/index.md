@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.SecurityPolicyViolationEvent.referrer
 ---
 
-{{HTTPSidebar}}
+{{APIRef("{{HTTPSidebar}}")}}{{ SeeCompatTable() }}
 
 The **`referrer`** read-only property of the
 {{domxref("SecurityPolicyViolationEvent")}} interface is a string

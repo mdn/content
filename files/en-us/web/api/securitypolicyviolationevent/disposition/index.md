@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.SecurityPolicyViolationEvent.disposition
 ---
 
-{{HTTPSidebar}}
+{{APIRef("{{HTTPSidebar}}")}}{{ SeeCompatTable() }}
 
 The **`disposition`** read-only property of the
 {{domxref("SecurityPolicyViolationEvent")}} interface indicates how the violated policy

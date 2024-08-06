@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.SecurityPolicyViolationEvent.originalPolicy
 ---
 
-{{HTTPSidebar}}
+{{APIRef("{{HTTPSidebar}}")}}{{ SeeCompatTable() }}
 
 The **`originalPolicy`** read-only property of the
 {{domxref("SecurityPolicyViolationEvent")}} interface is a string

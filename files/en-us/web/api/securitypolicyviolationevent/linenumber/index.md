@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.SecurityPolicyViolationEvent.lineNumber
 ---
 
-{{HTTPSidebar}}
+{{APIRef("{{HTTPSidebar}}")}}{{ SeeCompatTable() }}
 
 The **`lineNumber`** read-only property of the
 {{domxref("SecurityPolicyViolationEvent")}} interface is the line number in the document

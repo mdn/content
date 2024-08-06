@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.SecurityPolicyViolationEvent
 ---
 
-{{HTTPSidebar}}
+{{APIRef("{{HTTPSidebar}}")}}{{ SeeCompatTable() }}
 
 The **`SecurityPolicyViolationEvent`** interface inherits from {{domxref("Event")}}, and represents the event object of an event sent on a document or worker when its content security policy is violated.
 

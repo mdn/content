@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.SecurityPolicyViolationEvent.statusCode
 ---
 
-{{HTTPSidebar}}
+{{APIRef("{{HTTPSidebar}}")}}{{ SeeCompatTable() }}
 
 The **`statusCode`** read-only property of the
 {{domxref("SecurityPolicyViolationEvent")}} interface is a number representing the HTTP

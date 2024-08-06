@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.SecurityPolicyViolationEvent.violatedDirective
 ---
 
-{{HTTPSidebar}}
+{{APIRef("{{HTTPSidebar}}")}}{{ SeeCompatTable() }}
 
 The **`violatedDirective`** read-only property of the
 {{domxref("SecurityPolicyViolationEvent")}} interface is a string

@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.SecurityPolicyViolationEvent.SecurityPolicyViolationEvent
 ---
 
-{{HTTPSidebar}}
+{{APIRef("{{HTTPSidebar}}")}}{{ SeeCompatTable() }}
 
 The **`SecurityPolicyViolationEvent()`** constructor creates a new {{domxref("SecurityPolicyViolationEvent")}} object.
 

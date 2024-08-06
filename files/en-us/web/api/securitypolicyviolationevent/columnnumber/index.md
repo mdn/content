@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.SecurityPolicyViolationEvent.columnNumber
 ---
 
-{{HTTPSidebar}}
+{{APIRef("{{HTTPSidebar}}")}}{{ SeeCompatTable() }}
 
 The **`columnNumber`** read-only property of the
 {{domxref("SecurityPolicyViolationEvent")}} interface is the column number in the
