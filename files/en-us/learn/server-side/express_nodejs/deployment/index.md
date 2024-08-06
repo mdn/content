@@ -501,7 +501,7 @@ Next, we will set up a Glitch account, upload the Library project from GitHub, a
 
 To start using Glitch you will first need to create an account:
 
-- Go to [glitch.com](https://glitch.com) and click the **Sign up** button in the top toolbar.
+- Go to [glitch.com](https://glitch.com/) and click the **Sign up** button in the top toolbar.
 - Select GitHub in the popup to sign up using your GitHub credentials.
 - You'll then be logged in to the Glitch dashboard: <https://glitch.com/dashboard>.
 

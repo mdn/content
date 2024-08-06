@@ -926,7 +926,7 @@ To get started, see for example:
 - [Using Sauce Labs with Travis CI](https://docs.travis-ci.com/user/sauce-connect/)
 
 > [!NOTE]
-> If you wish to perform continuous testing with **codeless automation** then you can use [Endtest](https://endtest.io) or [TestingBot](https://testingbot.com).
+> If you wish to perform continuous testing with **codeless automation** then you can use [Endtest](https://www.endtest.io/) or [TestingBot](https://testingbot.com/).
 
 ## Summary
 

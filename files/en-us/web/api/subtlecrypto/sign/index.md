@@ -78,7 +78,7 @@ ECDSA (Elliptic Curve Digital Signature Algorithm) is a variant of the Digital S
 Signatures are encoded as the `s1` and `s2` values specified in RFC 6090 (known respectively as `r` and `s` in [RFC 4754](https://datatracker.ietf.org/doc/html/rfc4754#section-3)), each in big-endian byte arrays, with their length the bit size of the curve rounded up to a whole number of bytes.
 These values are concatenated together in this order.
 
-This encoding was also proposed by the [IEEE 1363-2000](https://standards.ieee.org/ieee/1363/2049/) standard, and is sometimes referred to as the IEEE P1363 format. It differs from the [X.509](https://www.itu.int/rec/T-REC-X.509) signature structure, which is the default format produced by some tools and libraries such as [OpenSSL](https://www.openssl.org).
+This encoding was also proposed by the [IEEE 1363-2000](https://standards.ieee.org/ieee/1363/2049/) standard, and is sometimes referred to as the IEEE P1363 format. It differs from the [X.509](https://www.itu.int/rec/T-REC-X.509) signature structure, which is the default format produced by some tools and libraries such as [OpenSSL](https://www.openssl.org/).
 
 ### Ed25519
 
@@ -86,7 +86,7 @@ Ed25519 is a digital signature algorithm built on the [Curve25519](https://en.wi
 
 ### HMAC
 
-The HMAC algorithm calculates and verifies hash-based message authentication codes according to the [FIPS 198-1 standard](https://csrc.nist.gov/csrc/media/publications/fips/198/1/final/documents/fips-198-1_final.pdf).
+The HMAC algorithm calculates and verifies hash-based message authentication codes according to the [FIPS 198-1 standard](https://csrc.nist.gov/files/pubs/fips/198-1/final/docs/fips-198-1_final.pdf).
 
 The digest algorithm to use is specified in the [`HmacKeyGenParams`](/en-US/docs/Web/API/HmacKeyGenParams) object that you pass into {{domxref("SubtleCrypto.generateKey()", "generateKey()")}}, or the
 [`HmacImportParams`](/en-US/docs/Web/API/HmacImportParams) object that you pass into {{domxref("SubtleCrypto.importKey()", "importKey()")}}.

@@ -32,7 +32,7 @@ cleared when the _page session_ ends.
 
 Data stored in `sessionStorage` **is specific to the protocol of the
 page**. In particular, data stored by a script on a site accessed with HTTP
-(e.g., [http://example.com](https://example.com)) is
+(e.g., [http://example.com](https://example.com/)) is
 put in a different `sessionStorage` object from the same site accessed with
 HTTPS (e.g., <https://example.com>).
 

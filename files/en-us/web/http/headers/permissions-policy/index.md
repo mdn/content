@@ -228,10 +228,10 @@ Several features can be controlled at the same time by sending the header with a
 For example, the following are equivalent:
 
 ```http
-Permissions-Policy: picture-in-picture=(), geolocation=(self https://example.com), camera=*
+Permissions-Policy: picture-in-picture=(), geolocation=(self https://example.com/), camera=*
 
 Permissions-Policy: picture-in-picture=()
-Permissions-Policy: geolocation=(self https://example.com)
+Permissions-Policy: geolocation=(self https://example.com/)
 Permissions-Policy: camera=*
 ```
 
@@ -286,7 +286,7 @@ By specifying `()` for the origin list, the specified features will be disabled 
 For example, let's say that we wanted to enable geolocation usage on our own origin, and in embedded content coming from our trusted ad network. We could set up the page-wide Permissions Policy like this:
 
 ```http
-Permissions-Policy: geolocation=(self https://trusted-ad-network.com)
+Permissions-Policy: geolocation=(self https://trusted-ad-network.com/)
 ```
 
 Over in our ad `<iframe>`s, we could set access to the `https://trusted-ad-network.com` origin like this:
