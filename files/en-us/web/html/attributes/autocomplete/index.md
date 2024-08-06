@@ -30,7 +30,8 @@ The `autocomplete` attribute provides a hint to the user agent specifying how to
 
 If an {{HTMLElement("input")}}, {{HTMLElement("select")}} or {{HTMLElement("textarea")}} element has no `autocomplete` attribute, the browser will use the [`autocomplete` attribute of the element's **owning form**](/en-US/docs/Web/HTML/Element/form#autocomplete). The owning form is either the {{HTMLElement("form")}} matching the `id` specified by the [`form`](/en-US/docs/Web/HTML/Element/input#form) attribute of the element (if present) or, more commonly, the `<form>` the element is nested in.
 
-> **Note:** In order to provide autocompletion, user-agents might require `<input>`/`<select>`/`<textarea>` elements to:
+> [!NOTE]
+> In order to provide autocompletion, user-agents might require `<input>`/`<select>`/`<textarea>` elements to:
 >
 > 1. Have a `name` and/or `id` attribute
 > 2. Be descendants of a `<form>` element
@@ -57,7 +58,8 @@ The attribute value is either the keyword `off` or `on`, or a space-separated `<
 
   - : The browser is not permitted to automatically enter or select a value for this field. It is possible that the document or application provides its own autocomplete feature, or that security concerns require that the field's value not be automatically entered.
 
-    > **Note:** In most modern browsers, setting `autocomplete` to "`off`" will not prevent a password manager from asking the user if they would like to save username and password information, or from automatically filling in those values in a site's login form. See [Managing autofill for login fields](/en-US/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion#managing_autofill_for_login_fields).
+    > [!NOTE]
+    > In most modern browsers, setting `autocomplete` to "`off`" will not prevent a password manager from asking the user if they would like to save username and password information, or from automatically filling in those values in a site's login form. See [Managing autofill for login fields](/en-US/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion#managing_autofill_for_login_fields).
 
 - `on`
 
@@ -73,7 +75,7 @@ See the [WHATWG Standard](https://html.spec.whatwg.org/multipage/forms.html#auto
 
 The `<token-list>` options include, in order:
 
-1. [Group naming token](#name_groups)
+1. [Group naming token](#named_groups)
 2. [Grouping identifier](#grouping_identifier)
 3. [Detail tokens](#detail_tokens)
 4. [Web authorization](#web_authorization_token)

@@ -18,6 +18,6 @@ The specification, for example, allows you to add the attribute `role="alert"` t
 - [ARIA Authoring Practices Guide (APG)](https://www.w3.org/WAI/ARIA/apg/)
 - [Accessibility](/en-US/docs/Web/Accessibility)
 - [Learn accessibility](/en-US/docs/Learn/Accessibility)
-- [Glossary](/en-US/docs/Glossary)
+- Related glossary terms
   - {{Glossary("Accessibility")}}
   - {{Glossary("WAI")}}

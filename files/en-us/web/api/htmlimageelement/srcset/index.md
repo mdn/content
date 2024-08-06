@@ -23,7 +23,8 @@ property, are a crucial component in designing responsive websites, as they
 can be used together to make pages that use appropriate images for the rendering
 situation.
 
-> **Note:** If the [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) attribute uses width descriptors, the `sizes` attribute must also be present, or the `srcset` itself will be ignored.
+> [!NOTE]
+> If the [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) attribute uses width descriptors, the `sizes` attribute must also be present, or the `srcset` itself will be ignored.
 
 ## Value
 

@@ -70,7 +70,8 @@ These [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-ele
 - {{CSSxRef("::cue")}}
   - : Matches cues within a selected element in media with VTT tracks.
 
-> **Note:** The specification defines another pseudo-element, `::cue-region`, but this is not supported by any browsers.
+> [!NOTE]
+> The specification defines another pseudo-element, `::cue-region`, but this is not supported by any browsers.
 
 ## Examples
 
@@ -165,7 +166,8 @@ The `default` attribute may be added to just one `<track>`: this is the one that
 You can style WebVTT cues by matching elements using the {{cssxref("::cue")}} pseudo-element.
 This allows you to modify the appearance of all cue text, or just specific elements. In this example, we'll add some styling to the [first example above](#using_the_webvtt_api_to_add_captions).
 
-> **Note:** It is also possible to define styles in the [WebVTT File Format](/en-US/docs/Web/API/WebVTT_API/Web_Video_Text_Tracks_Format).
+> [!NOTE]
+> It is also possible to define styles in the [WebVTT File Format](/en-US/docs/Web/API/WebVTT_API/Web_Video_Text_Tracks_Format).
 
 #### HTML
 

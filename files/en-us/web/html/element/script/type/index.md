@@ -34,7 +34,8 @@ The value of this attribute indicates the type of data represented by the script
     Developers must use a valid MIME type that is not a JavaScript MIME type to denote data blocks.
     All of the other attributes will be ignored, including the `src` attribute.
 
-> **Note:** In earlier browsers, the type identified the scripting language of the embedded or imported (via the `src` attribute) code.
+> [!NOTE]
+> In earlier browsers, the type identified the scripting language of the embedded or imported (via the `src` attribute) code.
 
 ## Specifications
 

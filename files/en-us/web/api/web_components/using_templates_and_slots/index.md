@@ -114,9 +114,11 @@ or
 </my-paragraph>
 ```
 
-> **Note:** Nodes that can be inserted into slots are known as _Slottable_ nodes; when a node has been inserted in a slot, it is said to be _slotted_.
+> [!NOTE]
+> Nodes that can be inserted into slots are known as _Slottable_ nodes; when a node has been inserted in a slot, it is said to be _slotted_.
 
-> **Note:** An unnamed {{HTMLElement("slot")}} will be filled with all of the custom element's top-level child nodes that do not have the [`slot`](/en-US/docs/Web/HTML/Global_attributes#slot) attribute. This includes text nodes.
+> [!NOTE]
+> An unnamed {{HTMLElement("slot")}} will be filled with all of the custom element's top-level child nodes that do not have the [`slot`](/en-US/docs/Web/HTML/Global_attributes#slot) attribute. This includes text nodes.
 
 And that's it for our trivial example.
 If you want to play with it some more, you can [find it on GitHub](https://github.com/mdn/web-components-examples/tree/main/simple-template) (see it [running live](https://mdn.github.io/web-components-examples/simple-template/) also).
@@ -135,7 +137,8 @@ However, it is generally more practical to add slots within a {{HTMLElement("tem
 
 In addition, even if it is not already rendered, the purpose of the container as a template should be more semantically clear when using the {{HTMLElement("template")}}. In addition, {{HTMLElement("template")}} can have items directly added to it, like {{HTMLElement("td")}}, which would disappear when added to a {{HTMLElement("div")}}.
 
-> **Note:** You can find this complete example at [element-details](https://github.com/mdn/web-components-examples/tree/main/element-details) (see it [running live](https://mdn.github.io/web-components-examples/element-details/) also).
+> [!NOTE]
+> You can find this complete example at [element-details](https://github.com/mdn/web-components-examples/tree/main/element-details) (see it [running live](https://mdn.github.io/web-components-examples/element-details/) also).
 
 ### Creating a template with some slots
 

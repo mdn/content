@@ -28,7 +28,8 @@ The `inert` attribute can be added to sections of content that should not be int
 
 The `inert` attribute can also be added to elements that should be offscreen or hidden. An inert element, along with its descendants, gets removed from the tab order and accessibility tree.
 
-> **Note:** While `inert` is a global attribute and can be applied to any element, it is generally used for sections of content. To make individual controls "inert", consider using the [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled) attribute, along with CSS [`:disabled`](/en-US/docs/Web/CSS/:disabled) styles, instead.
+> [!NOTE]
+> While `inert` is a global attribute and can be applied to any element, it is generally used for sections of content. To make individual controls "inert", consider using the [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled) attribute, along with CSS [`:disabled`](/en-US/docs/Web/CSS/:disabled) styles, instead.
 
 ## Accessibility concerns
 
@@ -48,5 +49,5 @@ While providing visual and non-visual cues about content inertness, also remembe
 
 - HTML {{HTMLElement("dialog")}} element
 - {{domxref("HTMLElement.inert")}} HTML DOM property
-- [Introducing inert](https://developer.chrome.com/docs/css-ui/inert)
+- [Introducing inert](https://web.dev/articles/inert)
 - [The "inert" attribute is finally coming to the web](https://www.stefanjudis.com/blog/the-inert-attribute-is-finally-coming-to-the-web/)

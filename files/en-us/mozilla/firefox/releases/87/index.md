@@ -8,7 +8,8 @@ page-type: firefox-release-notes
 
 This article provides information about the changes in Firefox 87 that will affect developers. Firefox 87 was released on March 23, 2021.
 
-> **Note:** See also [In March, we see Firefox 87](https://hacks.mozilla.org/2021/03/in-march-we-see-firefox-87/) on Mozilla Hacks.
+> [!NOTE]
+> See also [In March, we see Firefox 87](https://hacks.mozilla.org/2021/03/in-march-we-see-firefox-87/) on Mozilla Hacks.
 
 ## Changes for web developers
 

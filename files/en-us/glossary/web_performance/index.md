@@ -13,4 +13,5 @@ Objectively, it is measurable time, in milliseconds, it takes for the web page o
 ## See also
 
 - [Learn about web performance](/en-US/docs/Learn/Performance)
-- [Perceived performance](/en-US/docs/Glossary/Perceived_performance)
+- Related glossary terms:
+  - {{Glossary("Perceived performance")}}

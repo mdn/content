@@ -108,7 +108,8 @@ console.log(
 
 Try deleting the `mdLinkPattern.lastIndex += resolvedLink.length - originalLink.length` line and running the second example. You will find that the second link is not replaced correctly, because the `lastIndex` is already past the link's index after the string is shortened.
 
-> **Warning:** This example is for demonstration only. To deal with Markdown, you should probably use a parsing library instead of regex.
+> [!WARNING]
+> This example is for demonstration only. To deal with Markdown, you should probably use a parsing library instead of regex.
 
 ### Optimizing searching
 

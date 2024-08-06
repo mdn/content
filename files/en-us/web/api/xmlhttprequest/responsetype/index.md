@@ -34,7 +34,8 @@ It can take the following values:
 - `"text"`
   - : The `response` is a text in a string.
 
-> **Note:** When setting `responseType` to a particular value, the author should make
+> [!NOTE]
+> When setting `responseType` to a particular value, the author should make
 > sure that the server is actually sending a response compatible with that format. If
 > the server returns data that is not compatible with the `responseType` that
 > was set, the value of {{domxref("XMLHttpRequest.response", "response")}} will be

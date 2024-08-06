@@ -9,7 +9,8 @@ browser-compat: svg.elements.style
 
 The SVG **`<style>`** element allows style sheets to be embedded directly within SVG content.
 
-> **Note:** SVG's `style` element has the same attributes as the corresponding element in HTML (see HTML's {{HTMLElement("style")}} element).
+> [!NOTE]
+> SVG's `style` element has the same attributes as the corresponding element in HTML (see HTML's {{HTMLElement("style")}} element).
 
 ## Example
 

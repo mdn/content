@@ -43,7 +43,7 @@ This might be used, for example, to reduce the data sent to just part of the ori
 
 ## Examples
 
-The examples here are from [Speed up Service Worker with Navigation Preloads](https://developer.chrome.com/blog/navigation-preload/) (developer.chrome.com).
+The examples here are from [Speed up Service Worker with Navigation Preloads](https://web.dev/blog/navigation-preload) (developer.chrome.com).
 
 ### Feature detection and enabling navigation preloading
 
@@ -97,7 +97,8 @@ addEventListener("fetch", (event) => {
 The browser sends the HTTP header {{HTTPHeader("Service-Worker-Navigation-Preload")}} with preload requests, with a default directive value of `true`.
 This allows servers to differentiate between normal and preload fetch requests, and to send different responses in each case if required.
 
-> **Note:** If the response from preload and normal fetch operations can be different, then the server must set `Vary: Service-Worker-Navigation-Preload` to ensure that the different responses are cached.
+> [!NOTE]
+> If the response from preload and normal fetch operations can be different, then the server must set `Vary: Service-Worker-Navigation-Preload` to ensure that the different responses are cached.
 
 The header value can be changed to any other string value using {{domxref("NavigationPreloadManager.setHeaderValue()")}} in order to provide additional context for the prefetch operation.
 For example, you might set the value to the ID of your most recently cached resource, so that the server won't return any resources unless they are actually needed.
@@ -115,7 +116,7 @@ navigator.serviceWorker.ready
   });
 ```
 
-[Speed up Service Worker with Navigation Preloads > Custom responses for preloads](https://developer.chrome.com/blog/navigation-preload/) provides a more complete example of a site where the response for an article web page is constructed from a cached header and footer, so that only the article content is returned for a prefetch.
+[Speed up Service Worker with Navigation Preloads > Custom responses for preloads](https://web.dev/blog/navigation-preload) provides a more complete example of a site where the response for an article web page is constructed from a cached header and footer, so that only the article content is returned for a prefetch.
 
 ### Getting the state
 
@@ -143,4 +144,4 @@ navigator.serviceWorker.ready
 
 ## See also
 
-- [Speed up Service Worker with Navigation Preloads](https://developer.chrome.com/blog/navigation-preload/) (developer.chrome.com)
+- [Speed up Service Worker with Navigation Preloads](https://web.dev/blog/navigation-preload) (developer.chrome.com)

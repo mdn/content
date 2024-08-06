@@ -8,7 +8,8 @@ page-type: firefox-release-notes
 
 This article provides information about the changes in Firefox 89 that will affect developers. Firefox 89 was released on June 1, 2021.
 
-> **Note:** See also [Looking fine with Firefox 89](https://hacks.mozilla.org/2021/06/looking-fine-with-firefox-89/) on Mozilla Hacks.
+> [!NOTE]
+> See also [Looking fine with Firefox 89](https://hacks.mozilla.org/2021/06/looking-fine-with-firefox-89/) on Mozilla Hacks.
 
 ## Changes for web developers
 

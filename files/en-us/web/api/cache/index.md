@@ -13,25 +13,27 @@ An origin can have multiple, named `Cache` objects. You are responsible for impl
 
 You are also responsible for periodically purging cache entries. Each browser has a hard limit on the amount of cache storage that a given origin can use. `Cache` quota usage estimates are available via the {{domxref("StorageManager.estimate()")}} method. The browser does its best to manage disk space, but it may delete the `Cache` storage for an origin. The browser will generally delete all of the data for an origin or none of the data for an origin. Make sure to version caches by name and use the caches only from the version of the script that they can safely operate on. See [Deleting old caches](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers#deleting_old_caches) for more information.
 
-> **Note:** The key matching algorithm depends on the [VARY header](https://www.fastly.com/blog/best-practices-using-vary-header) in the value. So matching a new key requires looking at both key and value for entries in the `Cache` object.
+> [!NOTE]
+> The key matching algorithm depends on the [VARY header](https://www.fastly.com/blog/best-practices-using-vary-header) in the value. So matching a new key requires looking at both key and value for entries in the `Cache` object.
 
-> **Note:** The caching API doesn't honor HTTP caching headers.
+> [!NOTE]
+> The caching API doesn't honor HTTP caching headers.
 
 ## Instance methods
 
-- {{domxref("Cache.match", "Cache.match(request, options)")}}
+- {{domxref("Cache.match()")}}
   - : Returns a {{jsxref("Promise")}} that resolves to the response associated with the first matching request in the `Cache` object.
-- {{domxref("Cache.matchAll", "Cache.matchAll(request, options)")}}
+- {{domxref("Cache.matchAll()")}}
   - : Returns a {{jsxref("Promise")}} that resolves to an array of all matching responses in the `Cache` object.
-- {{domxref("Cache.add", "Cache.add(request)")}}
+- {{domxref("Cache.add()")}}
   - : Takes a URL, retrieves it and adds the resulting response object to the given cache. This is functionally equivalent to calling `fetch()`, then using `put()` to add the results to the cache.
-- {{domxref("Cache.addAll", "Cache.addAll(requests)")}}
+- {{domxref("Cache.addAll()")}}
   - : Takes an array of URLs, retrieves them, and adds the resulting response objects to the given cache.
-- {{domxref("Cache.put", "Cache.put(request, response)")}}
+- {{domxref("Cache.put()")}}
   - : Takes both a request and its response and adds it to the given cache.
-- {{domxref("Cache.delete", "Cache.delete(request, options)")}}
+- {{domxref("Cache.delete()")}}
   - : Finds the `Cache` entry whose key is the request, returning a {{jsxref("Promise")}} that resolves to `true` if a matching `Cache` entry is found and deleted. If no `Cache` entry is found, the promise resolves to `false`.
-- {{domxref("Cache.keys", "Cache.keys(request, options)")}}
+- {{domxref("Cache.keys()")}}
   - : Returns a {{jsxref("Promise")}} that resolves to an array of `Cache` keys.
 
 ## Examples
@@ -46,7 +48,8 @@ The code snippet also shows a best practice for versioning caches used by the se
 
 In the code example, `caches` is a property of the {{domxref("ServiceWorkerGlobalScope")}}. It holds the `CacheStorage` object, by which it can access the {{domxref("CacheStorage")}} interface.
 
-> **Note:** In Chrome, visit `chrome://inspect/#service-workers` and click on the "inspect" link below the registered service worker to view logging statements for the various actions the [`service-worker.js`](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js) script is performing.
+> [!NOTE]
+> In Chrome, visit `chrome://inspect/#service-workers` and click on the "inspect" link below the registered service worker to view logging statements for the various actions the [`service-worker.js`](https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/selective-caching/service-worker.js) script is performing.
 
 ```js
 const CACHE_VERSION = 1;

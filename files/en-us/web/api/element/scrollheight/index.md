@@ -23,7 +23,8 @@ such as {{cssxref("::before")}} or {{cssxref("::after")}}. If the element's cont
 fit without a need for vertical scrollbar, its `scrollHeight` is equal to
 {{domxref("Element.clientHeight", "clientHeight")}}
 
-> **Note:** This property will round the value to an integer. If you need a fractional value, use
+> [!NOTE]
+> This property will round the value to an integer. If you need a fractional value, use
 > {{domxref("Element.getBoundingClientRect()")}}.
 
 ## Value

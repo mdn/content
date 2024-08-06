@@ -26,7 +26,8 @@ Here we go over how to set up an image map, and some downsides to consider first
   </tbody>
 </table>
 
-> **Warning:** This article discusses client-side image maps only. Do not use server-side image maps, which require the user to have a mouse.
+> [!WARNING]
+> This article discusses client-side image maps only. Do not use server-side image maps, which require the user to have a mouse.
 
 ## Image maps, and their drawbacks
 
@@ -117,4 +118,4 @@ If your image map is wider than about 240px, you'll need to make further adjustm
 - {{htmlelement("img")}}
 - {{htmlelement("map")}}
 - {{htmlelement("area")}}
-- [Online image map editor](https://maschek.hu/imagemap/imgmap/)
+- [Online image map editor](https://www.maschek.hu/imagemap/)

@@ -33,7 +33,8 @@ The first example we'll look at is a classic tabbed info box — a very common f
 
 ![Tab 1 is selected. 'Tab 2' and 'Tab 3' are the other two tabs. Only the contents of the selected tab are visible. When a tab is selected, its text-color changes from black to white and its background-color changes from orange-red to saddle-brown.](tabbed-info-box.png)
 
-> **Note:** You can see the finished example running live at [tabbed-info-box.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/tabbed-info-box.html) ([source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/tabbed-info-box.html)). Check it out to get an idea of what you will be building in this section of the article.
+> [!NOTE]
+> You can see the finished example running live at [tabbed-info-box.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/tabbed-info-box.html) ([source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/tabbed-info-box.html)). Check it out to get an idea of what you will be building in this section of the article.
 
 You might be thinking "Why not just create the separate tabs as separate webpages, and just have the tabs clicking through to the separate pages to create the effect?" This code would be simpler, yes, but then each separate "page" view would actually be a newly-loaded webpage, which would make it harder to save information across views, and integrate this feature into a larger UI design.
 
@@ -155,7 +156,8 @@ Now we want to style tabs to look like tabs — basically, these are a horizonta
 }
 ```
 
-> **Note:** We are using descendant selectors with `.info-box` at the start of the chain throughout this example — this is so that we can insert this feature into a page with other content already on it, without fear of interfering with the styles applied to other parts of the page.
+> [!NOTE]
+> We are using descendant selectors with `.info-box` at the start of the chain throughout this example — this is so that we can insert this feature into a page with other content already on it, without fear of interfering with the styles applied to other parts of the page.
 
 Next, we'll style the buttons to look like tabs. Add the following CSS:
 
@@ -253,7 +255,8 @@ In our second example, we will take our first example — our info-box — and a
 
 ![Info-box is a container with 3 tabs with the first tab selected and only the contents of the first tab are displayed. It is given a fixed position. The info-box is positioned at the top left corner of the window with a width of 452 pixels. A container of fake content occupies the rest right half of the window; the fake content container is taller than the window and is scrollable. When the page is scrolled, the right-hand side container moves while the info-box stays fixed in the same position on the screen. ](fixed-info-box.png)
 
-> **Note:** You can see the finished example running live at [fixed-info-box.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/fixed-info-box.html) ([source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/fixed-info-box.html)). Check it out to get an idea of what you will be building in this section of the article.
+> [!NOTE]
+> You can see the finished example running live at [fixed-info-box.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/fixed-info-box.html) ([source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/fixed-info-box.html)). Check it out to get an idea of what you will be building in this section of the article.
 
 As a starting point, you can use your completed example from the first section of the article, or make a local copy of [info-box.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box.html) from our GitHub repo.
 
@@ -291,7 +294,8 @@ First of all, we need some additional HTML to represent the webpage's main conte
 </section>
 ```
 
-> **Note:** You can feel free to change the fake content for some real content if you like.
+> [!NOTE]
+> You can feel free to change the fake content for some real content if you like.
 
 ### Changes to the existing CSS
 
@@ -339,7 +343,8 @@ Our finished example will look like this:
 
 ![A blank screen on the left 60% of the screen with a 40% width panel displaying information on the right. A 'question mark' icon is in the top-right corner. The panel slides on and off the screen at the press of this 'question mark' icon.](hidden-sliding-panel.png)
 
-> **Note:** You can see the finished example running live at [hidden-info-panel.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/hidden-info-panel.html) ([source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/hidden-info-panel.html)). Check it out to get an idea of what you will be building in this section of the article.
+> [!NOTE]
+> You can see the finished example running live at [hidden-info-panel.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/hidden-info-panel.html) ([source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/hidden-info-panel.html)). Check it out to get an idea of what you will be building in this section of the article.
 
 As a starting point, make a local copy of [hidden-info-panel-start.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/hidden-info-panel-start.html) from our GitHub repo. This doesn't follow on from the previous example, so a fresh start file is required. Let's have a look at the HTML in the file:
 
@@ -425,7 +430,7 @@ There is one final bit of CSS to add — put the following at the bottom of your
 }
 ```
 
-The rule states that when the info-panel has `.open` class set on it, set the {{cssxref("right")}} property of the `<aside>` to `0px`, which causes the panel to appear on the screen again (smoothly due to the transition). Removing the `.open`` class hides the panel again.
+The rule states that when the info-panel has `.open` class set on it, set the {{cssxref("right")}} property of the `<aside>` to `0px`, which causes the panel to appear on the screen again (smoothly due to the transition). Removing the `.open` class hides the panel again.
 
 To add/remove the `.open` class from the info-panel with a click of the button we need to use some JavaScript. Add the following code in between {{htmlelement("script")}} tags:
 

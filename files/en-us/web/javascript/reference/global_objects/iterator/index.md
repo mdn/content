@@ -28,7 +28,8 @@ All of these prototype objects inherit from `Iterator.prototype`, which provides
 
 ### Iterator helpers
 
-> **Note:** These methods are _iterator_ helpers, not _iterable_ helpers, because the only requirement for an object to be iterable is just the presence of a `[Symbol.iterator]()` method. There is no shared prototype to install these methods on.
+> [!NOTE]
+> These methods are _iterator_ helpers, not _iterable_ helpers, because the only requirement for an object to be iterable is just the presence of a `[Symbol.iterator]()` method. There is no shared prototype to install these methods on.
 
 The `Iterator` class itself provides some helper methods for working with iterators. For example, you may be tempted to do the following:
 
@@ -136,7 +137,8 @@ These properties are defined on `Iterator.prototype` and shared by all `Iterator
 
   - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Iterator"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
-    > **Note:** Unlike the `[Symbol.toStringTag]` on most built-in classes, `Iterator.prototype[Symbol.toStringTag]` is writable for web compatibility reasons.
+    > [!NOTE]
+    > Unlike the `[Symbol.toStringTag]` on most built-in classes, `Iterator.prototype[Symbol.toStringTag]` is writable for web compatibility reasons.
 
 ## Instance methods
 

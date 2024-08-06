@@ -58,7 +58,8 @@ Many CJK punctuation characters include glyph-internal spacing. For example, the
 - If a full-width punctuation character is set to be full-width, it has internal spacing set on both sides and is the full width of an ideograph.
 - If a full-width punctuation character is set to be half-width, it has internal spacing set on one side only, and its other side is flush to the start (in the case of opening punctuation characters) or end (in the case of closing punctuation characters). Half-width characters are typically half the width of an ideograph.
 
-> **Note:** To avoid the risk of excessive kerning, fonts must have the OpenType Alternate Half Widths (`halt`) feature, the Contextual Half-width Spacing (`chws`) feature, or both. If the font doesn't have either feature, `text-spacing-trim` is disabled.
+> [!NOTE]
+> To avoid the risk of excessive kerning, fonts must have the OpenType Alternate Half Widths (`halt`) feature, the Contextual Half-width Spacing (`chws`) feature, or both. If the font doesn't have either feature, `text-spacing-trim` is disabled.
 
 ### Full-width punctuation collapsing
 

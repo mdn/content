@@ -47,8 +47,9 @@ In practice, very few "XHTML" documents are served over the web with a `Content-
 
 ## See also
 
-- [HTML](/en-US/docs/Glossary/HTML)
-- [HTML5](/en-US/docs/Glossary/HTML5)
-- [SVG](/en-US/docs/Glossary/SVG)
-- [MathML](/en-US/docs/Glossary/MathML)
-- [XML](/en-US/docs/Glossary/XML)
+- Related glossary terms:
+  - {{Glossary("HTML")}}
+  - {{Glossary("HTML5")}}
+  - {{Glossary("SVG")}}
+  - {{Glossary("MathML")}}
+  - {{Glossary("XML")}}

@@ -11,7 +11,8 @@ The **`:focus`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/P
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-focus.html", "tabbed-shorter")}}
 
-> **Note:** This pseudo-class applies only to the focused element itself. Use {{CSSxRef(":focus-within")}} if you want to select an element that _contains_ a focused element.
+> [!NOTE]
+> This pseudo-class applies only to the focused element itself. Use {{CSSxRef(":focus-within")}} if you want to select an element that _contains_ a focused element.
 
 ## Syntax
 

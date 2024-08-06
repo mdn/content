@@ -40,7 +40,7 @@ The number of channels output by the node matches the number of tracks found in 
 
 ## Constructor
 
-- {{domxref("MediaStreamAudioSourceNode.MediaStreamAudioSourceNode", "new MediaStreamAudioSourceNode()")}}
+- {{domxref("MediaStreamAudioSourceNode.MediaStreamAudioSourceNode", "MediaStreamAudioSourceNode()")}}
   - : Creates a new `MediaStreamAudioSourceNode` object instance with the specified options.
 
 ## Instance properties

@@ -84,7 +84,7 @@ Quite straightforward. Just remember, many people will still browse your site fr
 
 ### Two-column layout
 
-**[Abduzeedo](https://abduzeedo.com/typography-mania-261)**, a simple blog layout. Blogs usually have two columns, a fat one for the main content and a thin one for stuff on the side (like widgets, secondary navigation levels, and ads).
+Blogs usually have two columns, a fat one for the main content and a thin one for stuff on the side (like widgets, secondary navigation levels, and ads).
 
 ![Example of a 2 column layout for a blog](screenshot-blog.jpg) ![A 2 column layout with the main content on the left column](screenshot-blog-overlay.jpg)
 

@@ -12,9 +12,10 @@ The **`toMatrix()`** method of the
 {{domxref("CSSTransformComponent")}} interface returns a {{domxref('DOMMatrix')}}
 object.
 
-All transform functions can be represented mathematically as a 4x4 transformation matrix. This is explained in detail in [Understanding the CSS Transforms matrix](https://dev.opera.com/articles/understanding-the-css-transforms-matrix/).
+All transform functions can be represented mathematically as a 4x4 transformation matrix.
 
-> **Note:** The `is2D` property affects what transform, and therefore type of matrix that will be returned. CSS 2D and 3D transforms are different for legacy reasons. A brief explanation of 2D vs. 3D transforms can be found in [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms).
+> [!NOTE]
+> The `is2D` property affects what transform, and therefore type of matrix that will be returned. CSS 2D and 3D transforms are different for legacy reasons. A brief explanation of 2D vs. 3D transforms can be found in [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms).
 
 ## Syntax
 

@@ -52,7 +52,8 @@ The `overflow` property is specified as one or two {{CSSXref("overflow_value", "
 - `auto`
   - : Overflow content is clipped at the element's padding box, and overflow content can be scrolled into view using scroll bars. Unlike `scroll`, user agents display scroll bars _only if_ the content is overflowing. If content fits inside the element's padding box, it looks the same as with `visible` but still establishes a new formatting context. The element box is a scroll container.
 
-> **Note:** The keyword value `overlay` is a legacy value alias for `auto`. With `overlay`, the scroll bars are drawn on top of the content instead of taking up space.
+> [!NOTE]
+> The keyword value `overlay` is a legacy value alias for `auto`. With `overlay`, the scroll bars are drawn on top of the content instead of taking up space.
 
 ## Description
 
@@ -61,7 +62,7 @@ Overflow options include hiding overflow content, enabling scroll bars to view o
 The following nuances should be kept in mind while using the various keywords for `overflow`:
 
 - Specifying a value other than `visible` (the default) or `clip` for `overflow` creates a new [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context). This is necessary for technical reasons; if a float intersects with a scrolling element, it would forcibly rewrap the content after each scroll step, leading to a slow scrolling experience.
-- For an `overflow` setting to create the desired effect, the block-level element must have either a set height ({{cssxref("height")}} or {{cssxref("max-height")}}) if the overflow is in the vertical direction, a set width ({{cssxref("width")}} or {{cssxref("max-width")}}) if the overflow is in the horizontal direction, a set block-size (({{cssxref("block-size")}} or {{cssxref("max-block-size")}}) if the overflow is in the block direction, or a a set inline-size (({{cssxref("inline-size")}} or {{cssxref("max-inline-size")}}) or {{cssxref("white-space")}} set to `nowrap` if the overflow is in the inline direction.
+- For an `overflow` setting to create the desired effect, the block-level element must have either a set height ({{cssxref("height")}} or {{cssxref("max-height")}}) if the overflow is in the vertical direction, a set width ({{cssxref("width")}} or {{cssxref("max-width")}}) if the overflow is in the horizontal direction, a set block-size (({{cssxref("block-size")}} or {{cssxref("max-block-size")}}) if the overflow is in the block direction, or a set inline-size (({{cssxref("inline-size")}} or {{cssxref("max-inline-size")}}) or {{cssxref("white-space")}} set to `nowrap` if the overflow is in the inline direction.
 - Setting overflow to `visible` in one direction (i.e. `overflow-x` or `overflow-y`) when it isn't set to `visible` or `clip` in the other direction results in the `visible` value behaving as `auto`.
 - Setting overflow to `clip` in one direction when it isn't set to `visible` or `clip` in the other direction results in the `clip` value behaving as `hidden`.
 - The JavaScript {{domxref("Element.scrollTop")}} property may be used to scroll through content in a scroll container, except when `overflow` is set to `clip`.

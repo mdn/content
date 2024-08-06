@@ -78,7 +78,8 @@ If the exact weight given is unavailable, then the following rule is used to det
 
 - If a weight greater than `500` is given, look for available weights greater than the target, in ascending order. If no match is found, look for available weights less than the target, in descending order.
 
-> **Note:** The fallback weight algorithm is only used for rendering. The computed value of the property is still the specified value.
+> [!NOTE]
+> The fallback weight algorithm is only used for rendering. The computed value of the property is still the specified value.
 
 ### Meaning of relative weights
 

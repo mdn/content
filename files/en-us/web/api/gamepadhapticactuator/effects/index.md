@@ -21,7 +21,8 @@ An array representing the supported haptic effects. Possible included values are
 - `"trigger-rumble"`
   - : Localized rumbling effects on the surface of a controller's trigger buttons created by vibrational motors located in each button. These buttons most commonly take the form of spring-loaded triggers.
 
-> **Note:** If an effect is not listed that is known to be supported by the hardware, it may be that the browser does not support playing effects of that type.
+> [!NOTE]
+> If an effect is not listed that is known to be supported by the hardware, it may be that the browser does not support playing effects of that type.
 
 ## Examples
 

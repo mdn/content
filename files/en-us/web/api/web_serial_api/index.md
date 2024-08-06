@@ -13,7 +13,7 @@ The **Web Serial API** provides a way for websites to read from and write to ser
 
 ## Concepts and Usage
 
-The Web Serial API is one of a set of APIs that allow websites to communicate with peripherals connected to a user's computer. It provides the ability to connect to devices that are required by the operating system to communicate via the serial API, rather than USB which can be accessed via the {{domxref("WebUSB API")}}, or input devices that can be accessed via {{domxref("WebHID API")}}.
+The Web Serial API is one of a set of APIs that allow websites to communicate with peripherals connected to a user's computer. It provides the ability to connect to devices that are required by the operating system to communicate via the serial API, rather than USB which can be accessed via the [WebUSB API](/en-US/docs/Web/API/WebUSB_API), or input devices that can be accessed via [WebHID API](/en-US/docs/Web/API/WebHID_API).
 
 Examples of serial devices include 3D printers, and microcontrollers such as the [BBC micro:bit board](https://microbit.org/).
 

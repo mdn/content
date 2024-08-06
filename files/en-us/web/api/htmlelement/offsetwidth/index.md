@@ -24,7 +24,8 @@ returned.
 
 An integer corresponding to the `offsetWidth` pixel value of the element. The `offsetWidth` property is a read-only.
 
-> **Note:** This property will round the value to an integer. If you need a fractional value, use
+> [!NOTE]
+> This property will round the value to an integer. If you need a fractional value, use
 > {{ domxref("element.getBoundingClientRect()") }}.
 
 ## Examples

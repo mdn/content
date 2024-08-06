@@ -14,7 +14,8 @@ The **`actions`** read-only property of the {{domxref("Notification")}} interfac
 
 The actions are set using the `actions` option of the second argument for the {{DOMxref("ServiceWorkerRegistration.showNotification", "showNotification()")}} method and {{DOMxref("Notification/Notification", "Notification()")}} constructor.
 
-> **Note:** Browsers typically limit the maximum number of actions they will display for a particular notification. Check the static {{DOMxref("Notification.maxActions_static", "Notification.maxActions")}} property to determine the limit.
+> [!NOTE]
+> Browsers typically limit the maximum number of actions they will display for a particular notification. Check the static {{DOMxref("Notification.maxActions_static", "Notification.maxActions")}} property to determine the limit.
 
 ## Value
 
