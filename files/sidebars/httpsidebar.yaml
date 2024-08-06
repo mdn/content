@@ -43,7 +43,8 @@ sidebar:
       - /Web/HTTP/Headers/X-Frame-Options
       - /Web/HTTP/Headers/X-XSS-Protection
       - /Web/Security/Practical_implementation_guides
-      - /en-US/observatory
+      - link: /en-US/observatory
+        title: HTTP Observatory
 
   - link: /Web/HTTP/CORS
     title: CORS
