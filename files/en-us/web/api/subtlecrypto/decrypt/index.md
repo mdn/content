@@ -122,7 +122,7 @@ function decryptMessage(key, ciphertext) {
 
 - {{domxref("SubtleCrypto.encrypt()")}}.
 - [RFC 3447](https://datatracker.ietf.org/doc/html/rfc3447) specifies RSAOAEP.
-- [NIST SP800-38A](https://csrc.nist.gov/publications/detail/sp/800-38a/final) specifies CTR mode.
-- [NIST SP800-38A](https://csrc.nist.gov/publications/detail/sp/800-38a/final) specifies CBC mode.
-- [NIST SP800-38D](https://csrc.nist.gov/publications/detail/sp/800-38d/final) specifies GCM mode.
-- [FIPS 198-1](https://csrc.nist.gov/csrc/media/publications/fips/198/1/final/documents/fips-198-1_final.pdf) specifies HMAC.
+- [NIST SP800-38A](https://csrc.nist.gov/pubs/sp/800/38/a/final) specifies CTR mode.
+- [NIST SP800-38A](https://csrc.nist.gov/pubs/sp/800/38/a/final) specifies CBC mode.
+- [NIST SP800-38D](https://csrc.nist.gov/pubs/sp/800/38/d/final) specifies GCM mode.
+- [FIPS 198-1](https://csrc.nist.gov/files/pubs/fips/198-1/final/docs/fips-198-1_final.pdf) specifies HMAC.

@@ -18,7 +18,7 @@ WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExt
 
 ## Examples
 
-See the [sample code](https://www.khronos.org/registry/webgl/extensions/OES_fbo_render_mipmap/) in the Khronos specification.
+See the [sample code](https://registry.khronos.org/webgl/extensions/OES_fbo_render_mipmap/) in the Khronos specification.
 
 ## Specifications
 

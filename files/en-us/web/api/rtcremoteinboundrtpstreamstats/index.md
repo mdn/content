@@ -40,7 +40,7 @@ The statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} re
 - {{domxref("RTCRemoteInboundRtpStreamStats.packetsLost", "packetsLost")}} {{optional_inline}}
   - : An integer indicating the total number of RTP packets lost for this SSRC, as measured at the remote endpoint.
     This value can be negative if duplicate packets were received.
-- {{domxref("RTCRemoteInboundRtpStreamStats.packetsReceived", "packetsReceived")}} {{optional_inline}}
+- {{domxref("RTCRemoteInboundRtpStreamStats.packetsReceived", "packetsReceived")}} {{optional_inline}} {{experimental_inline}}
   - : A positive integer indicating the total number of RTP packets received for this SSRC, including retransmissions.
 
 ### Common RTP stream statistics
