@@ -383,8 +383,6 @@ page-type: guide
 - {{cssxref("text-underline-position")}}
 - {{cssxref("text-wrap")}}
 - {{cssxref("text-wrap-mode")}}
-- {{cssxref("text-wrap-mode")}}
-- {{cssxref("text-wrap-style")}}
 - {{cssxref("text-wrap-style")}}
 - {{cssxref("timeline-scope")}}
 - {{cssxref("top")}}
@@ -393,7 +391,6 @@ page-type: guide
 - {{cssxref("transform-box")}}
 - {{cssxref("transform-origin")}}
 - {{cssxref("transform-style")}}
-- {{cssxref("transition-behavior")}}
 - {{cssxref("transition-behavior")}}
 - {{cssxref("transition-delay")}}
 - {{cssxref("transition-duration")}}
@@ -409,9 +406,7 @@ page-type: guide
 - {{cssxref("view-timeline-name")}}
 - {{cssxref("view-transition-class")}}
 - {{cssxref("view-transition-name")}}
-- {{cssxref("view-transition-name")}}
 - {{cssxref("visibility")}}
-- {{cssxref("white-space-collapse")}}
 - {{cssxref("white-space-collapse")}}
 - {{cssxref("widows")}}
 - {{cssxref("width")}}
@@ -480,7 +475,6 @@ page-type: guide
 - {{cssxref("-webkit-flex-wrap")}}
 - {{cssxref("-webkit-font-feature-settings")}}
 - {{cssxref("-webkit-font-smoothing")}}
-- {{cssxref("-webkit-font-smoothing")}}
 - {{cssxref("-webkit-hyphenate-limit-after")}}
 - {{cssxref("-webkit-hyphenate-limit-before")}}
 - {{cssxref("-webkit-hyphenate-limit-lines")}}
@@ -489,7 +483,6 @@ page-type: guide
 - {{cssxref("-webkit-line-align")}}
 - {{cssxref("-webkit-line-box-contain")}}
 - {{cssxref("-webkit-line-break")}}
-- {{cssxref("-webkit-line-clamp")}}
 - {{cssxref("-webkit-line-clamp")}}
 - {{cssxref("-webkit-line-grid")}}
 - {{cssxref("-webkit-line-snap")}}
