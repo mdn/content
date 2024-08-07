@@ -107,7 +107,7 @@ li {
 
 #### JavaScript
 
-In the JavaScript, we start by grabbing references to the select file button, the the write text button, and the text input field. We also declare a global variable `writableStream`, which will store a reference to the writeable stream for writing the text to the file, once created. We initially set it to `null`.
+We start by grabbing references to the select file button, the the write text button, and the text input field. We also declare a global variable `writableStream`, which will store a reference to the writeable stream for writing the text to the file, once created. We initially set it to `null`.
 
 ```js
 const selectBtn = document.querySelector(".select");
@@ -128,22 +128,26 @@ Last of all, we enable the input field and the write text button, as they are ne
 
 ```js
 async function selectFile() {
-  // create a new handle
+  // Create a new handle
   const handle = await window.showSaveFilePicker();
 
-  // create a FileSystemWritableFileStream to write to
+  // Create a FileSystemWritableFileStream to write to
   try {
     writableStream = await handle.createWritable({
       keepExistingData: true,
       mode: "exclusive",
     });
   } catch (e) {
-    console.log(
-      `You can't access that file right now; someone else is probably trying to modify it at the same time. Try again later. ${e}`,
-    );
+    if (e.name === "NoModificationAllowedError") {
+      console.log(
+        `You can't access that file right now; someone else is trying to modify it. Try again later.`,
+      );
+    } else {
+      console.log(e.message);
+    }
   }
 
-  // Enable text field and write buton, disable select button
+  // Enable text field and write button, disable select button
   fileText.disabled = false;
   writeBtn.disabled = false;
   selectBtn.disabled = true;
@@ -154,11 +158,11 @@ Our next function, `writeFile()`, writes the text entered into the input field t
 
 ```js
 async function writeFile() {
-  // write text to our file and empty out the text field
+  // Write text to our file and empty out the text field
   await writableStream.write(fileText.value);
   fileText.value = "";
 
-  // close the file and write the contents to disk.
+  // Close the file and write the contents to disk.
   await writableStream.close();
 
   // Disable text field and write button, enable select button
@@ -184,7 +188,7 @@ The demo is rendered as follows. Try selecting a text file on your file system (
 
 {{ EmbedLiveSample("Expanded usage with options", "100%", "200") }}
 
-Also try opening the page in two browser tabs simultaneously. Select a file to write to in the first tab, and then immediately try selecting the same file to write to in the second tab. You should get an error mesage because we set `mode: "exclusive"` in the `createWritable()` call.
+Also, try opening the page in two browser tabs simultaneously. Select a file to write to in the first tab, and then immediately try selecting the same file to write to in the second tab. You should get an error mesage because we set `mode: "exclusive"` in the `createWritable()` call.
 
 ## Specifications
 
