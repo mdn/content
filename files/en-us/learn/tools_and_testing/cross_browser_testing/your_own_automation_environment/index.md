@@ -129,7 +129,7 @@ We then wait four seconds, after which WebDriver will then close down the Firefo
 
 There is also nothing to stop you running the test on multiple browsers simultaneously. Let's try this!
 
-1. Create another new file inside your project directory called `google_test_multiple.js`. You can feel free to change the references to some of the other browsers we added, remove them, etc., depending on what browsers you have available to test on your operating system. You'll need to make sure you have the right browser drivers set up on your system. In terms of what string to use inside the `.forBrowser()` method for other browsers, see the [Browser enum](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/index_exports_Browser.html) reference page.
+1. Create another new file inside your project directory called `google_test_multiple.js`. You can feel free to change the references to some of the other browsers we added, remove them, etc., depending on what browsers you have available to test on your operating system. You'll need to make sure you have the right browser drivers set up on your system. In terms of what string to use inside the `.forBrowser()` method for other browsers, see the [Browser enum](https://www.selenium.dev/selenium/docs/api/javascript/global.html#Browser) reference page.
 2. Give it the following contents, then save it:
 
    ```js
@@ -175,7 +175,7 @@ Fun huh? Let's move on, look at the basics of WebDriver syntax, in a bit more de
 
 ## WebDriver syntax crash course
 
-Let's have a look at a few key features of the webdriver syntax. For more complete details, you should consult the [selenium-webdriver JavaScript API reference](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/) for a detailed reference and the Selenium main documentation's [Selenium WebDriver](https://www.selenium.dev/documentation/webdriver/), which contain multiple examples to learn from written in different languages.
+Let's have a look at a few key features of the webdriver syntax. For more complete details, you should consult the [selenium-webdriver JavaScript API reference](https://www.selenium.dev/selenium/docs/api/javascript/) for a detailed reference and the Selenium main documentation's [Selenium WebDriver](https://www.selenium.dev/documentation/webdriver/), which contain multiple examples to learn from written in different languages.
 
 ### Starting a new test
 
@@ -186,7 +186,7 @@ const { Builder, Browser } = require("selenium-webdriver");
 ```
 
 You use the `Builder()` constructor to create a new instance of a driver, chaining the `forBrowser()` method to specify what browser you want to test with this builder.
-The `build()` method is chained at the end to actually build the driver instance (see the [Builder class reference](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/index_exports_Builder.html) for detailed information on these features).
+The `build()` method is chained at the end to actually build the driver instance (see the [Builder class reference](https://www.selenium.dev/selenium/docs/api/javascript/Builder.html) for detailed information on these features).
 
 ```js
 let driver = new Builder().forBrowser(Browser.FIREFOX).build();
@@ -223,7 +223,7 @@ driver.get("http://www.google.com");
 ```
 
 > [!NOTE]
-> See the [WebDriver class reference](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebDriver.html) for details of the features in this section and the ones below it.
+> See the [WebDriver class reference](https://www.selenium.dev/selenium/docs/api/javascript/WebDriver.html) for details of the features in this section and the ones below it.
 
 You can use any URL to point to your resource, including a `file://` URL to test a local document:
 
@@ -469,7 +469,7 @@ const driver = new Builder().forBrowser("firefox").build();
 WebDriver will now wait for 2 seconds before filling in the form field. We then test whether its value got filled in (i.e. is not empty) by using `getAttribute()` to retrieve its `value` attribute value, and print a message to the console if it is not empty.
 
 > [!NOTE]
-> There is also a method called [`wait()`](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebDriver.html#wait), which repeatedly tests a condition for a certain length of time, and then carries on executing the code. This also makes use of the [util library](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/lib/until.html), which defines common conditions to use along with `wait()`.
+> There is also a method called [`wait()`](https://www.selenium.dev/selenium/docs/api/javascript/WebDriver.html#wait), which repeatedly tests a condition for a certain length of time, and then carries on executing the code. This also makes use of the [util library](https://www.selenium.dev/selenium/docs/api/javascript/lib_until.js.html), which defines common conditions to use along with `wait()`.
 
 ### Shutting down drivers after use
 

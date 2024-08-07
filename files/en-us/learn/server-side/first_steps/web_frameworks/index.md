@@ -227,7 +227,7 @@ Popular sites using Django (from Django home page) include: Disqus, Instagram, K
 
 [Flask](https://flask.palletsprojects.com/) is a microframework for Python.
 
-While minimalist, Flask can create serious websites out of the box. It contains a development server and debugger, and includes support for [Jinja2](https://github.com/pallets/jinja) templating, secure cookies, [unit testing](https://en.wikipedia.org/wiki/Unit_testing), and [RESTful](https://www.restapitutorial.com/lessons/restfulresourcenaming.html) request dispatching. It has good documentation and an active community.
+While minimalist, Flask can create serious websites out of the box. It contains a development server and debugger, and includes support for [Jinja2](https://github.com/pallets/jinja) templating, secure cookies, [unit testing](https://en.wikipedia.org/wiki/Unit_testing), and [RESTful](https://restapitutorial.com/) request dispatching. It has good documentation and an active community.
 
 Flask has become extremely popular, particularly for developers who need to provide web services on small, resource-constrained systems (e.g. running a web server on a [Raspberry Pi](https://www.raspberrypi.org/), [Drone controllers](https://www.techuseful.com/drone-definitions-learning-the-drone-lingo/), etc.)
 
@@ -241,7 +241,7 @@ Because Express is a minimalist web framework it does not incorporate every comp
 
 Many popular server-side and full stack frameworks (comprising both server and client-side frameworks) are based on Express, including [Feathers](https://feathersjs.com/), [ItemsAPI](https://itemsapi.com/), [KeystoneJS](https://keystonejs.com/), [Kraken](https://krakenjs.com/), [LoopBack](https://loopback.io/), [MEAN](https://github.com/linnovate/mean), and [Sails](https://sailsjs.com/).
 
-A lot of high profile companies use Express, including: Uber, Accenture, IBM, etc. (a list is provided [here](https://expressjs.com/en/resources/companies-using-express.html)).
+A lot of high profile companies use Express, including: Uber, Accenture, IBM, etc.
 
 ### Deno (JavaScript)
 
@@ -251,7 +251,7 @@ Deno is powered by [Tokio](https://tokio.rs/) — a Rust-based asynchronous runt
 
 Deno's features include:
 
-- Security by default. [Deno modules restrict permissions](https://lyty.dev/deno/deno-permission.html) to **file**, **network**, or **environment** access unless explicitly allowed.
+- Security by default. [Deno modules restrict permissions](https://docs.deno.com/runtime/manual/getting_started/first_steps/#runtime-security) to **file**, **network**, or **environment** access unless explicitly allowed.
 - TypeScript support **out-of-the-box**.
 - First-class await mechanism.
 - Built-in testing facility and code formatter (`deno fmt`)

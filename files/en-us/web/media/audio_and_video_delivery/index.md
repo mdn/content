@@ -429,7 +429,6 @@ Your files may have been encoded incorrectly — try encoding using one of the f
 - [Handbrake](https://handbrake.fr/) — Open Source Video Transcoder
 - [Firefogg](http://www.firefogg.org/) — Video and Audio encoding for Firefox
 - [FFmpeg2](https://www.ffmpeg.org/) — Comprehensive command line encoder
-- [Libav](https://libav.org/) — Comprehensive command line encoder
 - [Vid.ly](https://m.vid.ly/) — Video player, transcoding and delivery
 - [Internet Archive](https://archive.org/) — Free transcoding and storage
 
