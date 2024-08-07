@@ -2,7 +2,7 @@ sidebar:
   - type: section
     title: Accessibility
     link: Web/Accessibility
-  - type: details
+  - details: closed
     title: Guides
     children:
       - /Web/Accessibility/Information_for_Web_authors
@@ -15,7 +15,7 @@ sidebar:
       - /Web/Accessibility/Accessibility_and_Spacial_Patterns
       - /Web/Accessibility/Understanding_Colors_and_Luminance
       - /Web/Accessibility/Seizure_disorders
-  - type: details
+  - details: closed
     title: Learn
     children:
       - /Learn/Accessibility/
@@ -27,14 +27,14 @@ sidebar:
       - /Learn/Accessibility/Mobile
       - /Learn/Accessibility/Accessibility_troubleshooting
   - type: listSubPages
-    details: true
+    details: closed
     title: WCAG
     path: /en-US/docs/Web/Accessibility/Understanding_WCAG
 
   - type: section
     title: ARIA
     link: Web/Accessibility/ARIA
-  - type: details
+  - details: closed
     title: ARIA_guides
     children:
       - /Web/Accessibility/ARIA/ARIA_Guides
@@ -44,11 +44,11 @@ sidebar:
       - /Web/Accessibility/ARIA/Multipart_labels
       - /Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs
   - type: listSubPages
-    details: true
+    details: closed
     title: ARIA states and properties
     path: /en-US/docs/Web/Accessibility/ARIA/attributes
   - type: listSubPages
-    details: true
+    details: closed
     title: ARIA roles
     path: /en-US/docs/Web/Accessibility/ARIA/roles
 

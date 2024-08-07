@@ -5,7 +5,7 @@ sidebar:
   - type: section
     title: Tutorials
 
-  - type: details
+  - details: closed
     title: Complete_beginners
     children:
       - link: /Learn/Getting_started_with_the_web/JavaScript_basics
@@ -17,7 +17,7 @@ sidebar:
       - link: /Learn/JavaScript/Objects
         title: Introducing_objects
 
-  - type: details
+  - details: closed
     title: Guide
     children:
       - link: /Web/JavaScript/Guide/Introduction
@@ -57,7 +57,7 @@ sidebar:
       - link: /Web/JavaScript/Guide/Modules
         title: Guide_Modules
 
-  - type: details
+  - details: closed
     title: Intermediate
     children:
       - link: /Learn/Tools_and_testing/Client-side_JavaScript_frameworks
@@ -75,7 +75,7 @@ sidebar:
       - link: /Web/JavaScript/Closures
         title: Closures
 
-  - type: details
+  - details: closed
     title: Advanced
     children:
       - link: /Web/JavaScript/Inheritance_and_the_prototype_chain
@@ -90,41 +90,41 @@ sidebar:
     title: Reference
 
   - type: listSubPages
-    details: true
+    details: closed
     title: Global_Objects
     path: /en-US/docs/Web/JavaScript/Reference/Global_Objects
 
   - type: listSubPages
-    details: true
+    details: closed
     title: Operators
     path: /en-US/docs/Web/JavaScript/Reference/Operators
 
   - type: listSubPages
-    details: true
+    details: closed
     title: Statements
     path: /en-US/docs/Web/JavaScript/Reference/Statements
 
   - type: listSubPages
-    details: true
+    details: closed
     title: Functions
     path: /en-US/docs/Web/JavaScript/Reference/Functions
 
   - type: listSubPages
-    details: true
+    details: closed
     title: Classes
     path: /en-US/docs/Web/JavaScript/Reference/Classes
 
   - type: listSubPages
-    details: true
+    details: closed
     title: Guide_RegExp
     path: /en-US/docs/Web/JavaScript/Reference/Regular_expressions
 
   - type: listSubPages
-    details: true
+    details: closed
     title: Errors
     path: /en-US/docs/Web/JavaScript/Reference/Errors
 
-  - type: details
+  - details: closed
     title: More
     children:
       - link: /Web/JavaScript/JavaScript_technologies_overview

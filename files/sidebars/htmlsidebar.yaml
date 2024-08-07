@@ -7,7 +7,7 @@ sidebar:
   - link: /Learn/Getting_started_with_the_web/HTML_basics
     title: HTML_basics
 
-  - type: details
+  - details: closed
     title: Introduction_to_HTML
     children:
       - link: /Learn/HTML/Introduction_to_HTML
@@ -31,7 +31,7 @@ sidebar:
       - link: /Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content
         title: Assessment_Structuring_a_page_of_content
 
-  - type: details
+  - details: closed
     title: Multimedia_and_embedding
     children:
       - link: /Learn/HTML/Multimedia_and_embedding
@@ -49,7 +49,7 @@ sidebar:
       - link: /Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
         title: Assessment_Mozilla_splash_page
 
-  - type: details
+  - details: closed
     title: HTML_tables
     children:
       - link: /Learn/HTML/Tables
@@ -66,22 +66,22 @@ sidebar:
     title: Reference
 
   - type: listSubPages
-    details: true
+    details: closed
     title: HTML_Elements
     path: /en-US/docs/Web/HTML/Element
 
   - type: listSubPages
-    details: true
+    details: closed
     title: Global_attributes
     path: /en-US/docs/Web/HTML/Global_attributes
 
   - type: listSubPages
-    details: true
+    details: closed
     title: Attributes
     path: /en-US/docs/Web/HTML/Attributes
 
   - type: listSubPages
-    details: true
+    details: closed
     title: Input_types
     path: /en-US/docs/Web/HTML/Element/input
 

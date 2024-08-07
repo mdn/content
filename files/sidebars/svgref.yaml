@@ -3,7 +3,7 @@ sidebar:
     link: /Web/SVG
   - type: section
     title: Tutorials
-  - type: details
+  - details: closed
     title: Introducing SVG from scratch
     children:
       - /Web/SVG/Tutorial/Introduction
@@ -27,11 +27,11 @@ sidebar:
     title: Reference
   - type: listSubPages
     title: Elements
-    details: true
+    details: closed
     path: /en-US/docs/Web/SVG/Element
   - type: listSubPages
     title: Attributes
-    details: true
+    details: closed
     path: /en-US/docs/Web/SVG/Attribute
   - type: section
     title: Guides

@@ -3,7 +3,7 @@ sidebar:
     link: /Web/HTTP
   - type: section
     title: Guides
-  - type: details
+  - details: closed
     title: ResourcesURI
     children:
       - link: /Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
@@ -16,7 +16,7 @@ sidebar:
         title: ListMIMETypes
       - link: /Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs
         title: WWWorNotWWW
-  - type: details
+  - details: closed
     title: HTTPGuide
     children:
       - link: /Web/HTTP/Basics_of_HTTP
@@ -33,7 +33,7 @@ sidebar:
         title: Connection1x
       - link: /Web/HTTP/Protocol_upgrade_mechanism
         title: ProtocolUpgradeMech
-  - type: details
+  - details: closed
     title: Security
     children:
       - link: /Web/HTTP/CSP
@@ -72,32 +72,32 @@ sidebar:
     title: Reference
 
   - type: listSubPages
-    details: true
+    details: closed
     title: Headers
     path: /en-US/docs/Web/HTTP/Headers
 
   - type: listSubPages
-    details: true
+    details: closed
     title: Methods
     path: /en-US/docs/Web/HTTP/Methods
 
   - type: listSubPages
-    details: true
+    details: closed
     title: Status
     path: /en-US/docs/Web/HTTP/Status
 
   - type: listSubPages
-    details: true
+    details: closed
     title: CSPDirectives
     path: /en-US/docs/Web/HTTP/Headers/Content-Security-Policy
 
   - type: listSubPages
-    details: true
+    details: closed
     title: CORS_errors
     path: /en-US/docs/Web/HTTP/CORS/Errors
 
   - type: listSubPages
-    details: true
+    details: closed
     title: PermissionsPolicyDirectives
     path: /en-US/docs/Web/HTTP//Headers/Permissions-Policy
 
