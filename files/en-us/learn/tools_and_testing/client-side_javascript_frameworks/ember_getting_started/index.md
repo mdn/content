@@ -64,7 +64,7 @@ EmberJS has a plugin architecture, which means that add-ons can be installed and
 Examples include:
 
 - [PREmber](https://github.com/ef4/prember): Static website rendering for blogs or marketing content.
-- [FastBoot](https://ember-fastboot.com/): Server-side rendering, including improving search-engine optimization (SEO), or improving initial render performance of complex, highly interactive web pages.
+- [FastBoot](http://ember-fastboot.com/): Server-side rendering, including improving search-engine optimization (SEO), or improving initial render performance of complex, highly interactive web pages.
 - [empress-blog](https://empress-blog.netlify.app/welcome/): Authoring blog posts in markdown while optimizing for SEO with PREmber.
 - [ember-service-worker](https://ember-service-worker.com/): Configuring a PWA so that the app can be installed on mobile devices, just like apps from the device's respective app-store.
 

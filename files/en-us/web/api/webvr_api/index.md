@@ -117,7 +117,6 @@ You can find a number of examples at these locations:
 - [webvr-tests](https://github.com/mdn/webvr-tests) — very simple examples to accompany the MDN WebVR documentation.
 - [Carmel starter kit](https://github.com/facebookarchive/Carmel-Starter-Kit) — nice simple, well-commented examples that go along with Carmel, Facebook's WebVR browser.
 - [WebVR.info samples](https://webvr.info/samples/) — slightly more in-depth examples plus source code
-- [WebVR.rocks Firefox demos](https://webvr.rocks/firefox#demos) — showcase examples
 - [A-Frame homepage](https://aframe.io/) — examples showing A-Frame usage
 
 ## Specifications
@@ -136,5 +135,5 @@ Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/Web
 - [webvr.info](https://webvr.info) — Up-to-date information about WebVR, browser setup, and community.
 - [threejs-vr-boilerplate](https://github.com/MozillaReality/vr-web-examples/tree/master/threejs-vr-boilerplate) — A useful starter template for writing WebVR apps into.
 - [Web VR polyfill](https://github.com/immersive-web/webvr-polyfill) — JavaScript implementation of WebVR.
-- [Supermedium](https://www.supermedium.com) — A pure WebVR browser to easily access the best WebVR content.
+- [Supermedium](http://www.supermedium.com/) — A pure WebVR browser to easily access the best WebVR content.
 - [WebVR Directory](https://webvr.directory/) — List of quality WebVR sites.

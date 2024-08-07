@@ -136,5 +136,4 @@ Browsers handle SRI by doing the following:
 - [Content Security Policy](/en-US/docs/Web/HTTP/CSP)
 - The {{httpheader("Content-Security-Policy")}} HTTP header.
 - [A CDN that can not XSS you: Using Subresource Integrity](https://frederikbraun.de/using-subresource-integrity.html)
-- [Subresource Integrity test from W3C](https://w3c-test.org/subresource-integrity/subresource-integrity.html)
 - [SRI Hash Generator](https://www.srihash.org/)
