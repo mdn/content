@@ -1,5 +1,6 @@
 ---
 title: "HTML attribute: pattern"
+short-title: pattern
 slug: Web/HTML/Attributes/pattern
 page-type: html-attribute
 browser-compat: html.elements.input.pattern

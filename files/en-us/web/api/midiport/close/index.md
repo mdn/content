@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.MIDIPort.close
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}
+{{securecontext_header}}{{APIRef("Web MIDI API")}}
 
 The **`close()`** method of the {{domxref("MIDIPort")}} interface makes the access to the MIDI device connected to this `MIDIPort` unavailable.
 

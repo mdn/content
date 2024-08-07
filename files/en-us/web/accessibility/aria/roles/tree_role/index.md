@@ -93,7 +93,7 @@ For a vertically oriented `tree`, which is the default orientation:
 <ul>
 <li>When focus is on an open node, closes the node.
 <li>When focus is on a child node that is also either an end node or a closed node, moves focus to its parent node.
-<li>When focus is on a closed `tree`, does nothing.
+<li>When focus is on a closed tree, does nothing.
 </td>
 </tr>
 <tr>
