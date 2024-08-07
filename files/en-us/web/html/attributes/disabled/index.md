@@ -1,5 +1,6 @@
 ---
 title: "HTML attribute: disabled"
+short-title: disabled
 slug: Web/HTML/Attributes/disabled
 page-type: html-attribute
 browser-compat:

@@ -1,5 +1,6 @@
 ---
 title: "HTML: HyperText Markup Language"
+short-title: HTML
 slug: Web/HTML
 page-type: landing-page
 ---

@@ -1,5 +1,6 @@
 ---
 title: "HTML attribute: placeholder"
+short-title: placeholder
 slug: Web/HTML/Attributes/placeholder
 page-type: html-attribute
 browser-compat:

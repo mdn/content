@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Element.ariaLabel
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{APIRef("DOM")}}
 
 The **`ariaLabel`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) attribute, which defines a string value that labels the current element.
 
