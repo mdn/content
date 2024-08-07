@@ -308,6 +308,8 @@
     "CSSOM": {
       "overview": ["CSS Object Model"],
       "guides": [
+        "/docs/Web/API/CSS_Object_Model/CSS_Declaration",
+        "/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block",
         "/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements",
         "/docs/Web/API/CSS_Object_Model/Managing_screen_orientation",
         "/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information"
@@ -1707,7 +1709,7 @@
     },
     "URL API": {
       "overview": ["URL API"],
-      "guides": ["Web/API/URL_API/Resolving_relative_urls"],
+      "guides": ["/docs/Web/API/URL_API/Resolving_relative_references"],
       "interfaces": ["URL", "URLSearchParams"],
       "methods": [],
       "properties": [],
@@ -1750,7 +1752,7 @@
       "interfaces": ["VirtualKeyboard"],
       "methods": [],
       "properties": [
-        "HTMLElement.virtualkeyboardpolicy",
+        "HTMLElement.virtualKeyboardPolicy",
         "Navigator.virtualKeyboard"
       ],
       "events": []
@@ -2130,6 +2132,7 @@
       "overview": ["WebRTC API"],
       "guides": [
         "/docs/Web/API/WebRTC_API/Protocols",
+        "/docs/Web/API/WebRTC_API/Intro_to_RTP",
         "/docs/Web/API/WebRTC_API/Connectivity",
         "/docs/Web/API/WebRTC_API/Perfect_negotiation",
         "/docs/Web/API/WebRTC_API/Session_lifetime",
@@ -2137,7 +2140,6 @@
         "/docs/Web/API/WebRTC_API/Using_data_channels",
         "/docs/Web/API/WebRTC_API/Using_DTMF",
         "/docs/Web/API/WebRTC_API/Using_Encoded_Transforms",
-        "/docs/Web/API/WebRTC_API/adapter.js",
         "/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample",
         "/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs"
       ],
@@ -2324,7 +2326,7 @@
         "USBConfiguration",
         "USBConnectionEvent",
         "USBDevice",
-        "USBEndPoint",
+        "USBEndpoint",
         "USBInterface",
         "USBInTransferResult",
         "USBIsochronousInTransferPacket",
@@ -2389,9 +2391,18 @@
         "/docs/Web/API/WebXR_Device_API/Fundamentals",
         "/docs/Web/API/WebXR_Device_API/Lifecycle",
         "/docs/Web/API/WebXR_Device_API/Startup_and_shutdown",
-        "/docs/Web/API/WebXR_Device_API/Cameras",
         "/docs/Web/API/WebXR_Device_API/Geometry",
-        "/docs/Web/API/WebXR_Device_API/Spatial_tracking"
+        "/docs/Web/API/WebXR_Device_API/Spatial_tracking",
+        "/docs/Web/API/WebXR_Device_API/Rendering",
+        "/docs/Web/API/WebXR_Device_API/Cameras",
+        "/docs/Web/API/WebXR_Device_API/Perspective",
+        "/docs/Web/API/WebXR_Device_API/Lighting",
+        "/docs/Web/API/WebXR_Device_API/Bounded_reference_spaces",
+        "/docs/Web/API/WebXR_Device_API/Movement_and_motion",
+        "/docs/Web/API/WebXR_Device_API/Inputs",
+        "/docs/Web/API/WebXR_Device_API/Targeting",
+        "/docs/Web/API/WebXR_Device_API/Performance",
+        "/docs/Web/API/WebXR_Device_API/Permissions_and_security"
       ],
       "interfaces": [
         "XRAnchor",
