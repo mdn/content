@@ -55,4 +55,3 @@ scrollable container.
 - {{domxref("Element.scrollHeight")}}
 - {{domxref("HTMLElement.offsetWidth")}}
 - [Determining the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
-- [MSDN Measuring Element Dimension and Location](<https://docs.microsoft.com/previous-versions/hh781509(v=vs.85)>)

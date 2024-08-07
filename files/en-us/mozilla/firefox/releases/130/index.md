@@ -58,6 +58,8 @@ This article provides information about the changes in Firefox 130 that affect d
 
 ## Changes for add-on developers
 
+- {{WebExtAPIRef("runtime.getURL")}} (and the deprecated {{WebExtAPIRef("extension.getURL")}}) now always prepended the extension origin to the path, without further normalization. Previously, when an absolute URL was provided, instead of a relatively URL, the absolute URL was returned. ([Firefox bug 1795082](https://bugzil.la/1795082)).
+
 ### Removals
 
 ### Other
