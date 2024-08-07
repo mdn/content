@@ -2,10 +2,12 @@
 title: ChapterInformation
 slug: Web/API/ChapterInformation
 page-type: web-api-interface
+status:
+  - experimental
 browser-compat: api.ChapterInformation
 ---
 
-{{APIRef("Media Session API")}}
+{{APIRef("Media Session API")}}{{SeeCompatTable}}
 
 The **`ChapterInformation`** interface of the {{domxref("Media Session API", "", "", "nocode")}} represents the metadata for an individual chapter of a media resource (i.e. a video or audio file).
 
@@ -15,11 +17,11 @@ You can access the chapter information for an existing {{domxref("MediaMetadata"
 
 ## Instance properties
 
-- {{domxref("ChapterInformation.artwork")}} {{ReadOnlyInline}}
+- {{domxref("ChapterInformation.artwork")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : Returns an {{jsxref("Array")}} of objects representing images associated with the chapter.
-- {{domxref("ChapterInformation.startTime")}} {{ReadOnlyInline}}
+- {{domxref("ChapterInformation.startTime")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : Returns a number, in seconds, representing the start time of the chapter.
-- {{domxref("ChapterInformation.title")}} {{ReadOnlyInline}}
+- {{domxref("ChapterInformation.title")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : Returns a string representing the title of the chapter.
 
 ## Examples
