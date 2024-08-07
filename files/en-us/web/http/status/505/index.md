@@ -25,8 +25,8 @@ In some cases, this error can be the result of intermediaries such as load balan
 
 ### 505 response from service misconfiguration
 
-In the following example, a client requests `example.com/dog%20trainers`, but due to incorrect load balancer configuration, the percent encoding in the URL is not handled properly.
-In this case, the server sees `trainers` instead of the HTTP version, and a 505 response is returned instead.
+In the following example, a client requests `example.com/dog%20trainers`, but due to incorrect load balancer configuration, the {{Glossary("Percent-encoding", "percent encoding")}} in the URL is not handled properly.
+In this case, the server sees `trainers` instead of the HTTP version, and a `505` response is returned instead.
 An identifier is contained in the response body for illustration of a method that may help server administrators narrow down the root cause of the problem:
 
 ```http
@@ -55,4 +55,4 @@ Content-Length: 123
 ## See also
 
 - [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
-- {{HTTPHeader("Upgrade")}}
+- {{HTTPHeader("Upgrade")}} header

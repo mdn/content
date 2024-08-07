@@ -10,8 +10,8 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc2295#section-8.1
 The HTTP **`506 Variant Also Negotiates`** [server error response](/en-US/docs/Web/HTTP/Status#server_error_responses) status code may be given in the context of [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation).
 The pattern of content negotiation enables a client to retrieve the best variant of a given resource, where the server supports multiple variants.
 
-The **`Variant Also Negotiates`** status code indicates an internal server configuration error in which the chosen variant is itself configured to engage in content negotiation.
-To avoid this misconfiguration, final resources or files should be target entities and not participate in content negotiation to avoid recursive conflicts.
+A `506` status code indicates an internal server configuration error in which the chosen variant is itself configured to engage in content negotiation.
+To avoid this misconfiguration, final resources or files should be target resources and not participate in content negotiation to avoid recursive conflicts.
 
 ## Status
 

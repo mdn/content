@@ -7,10 +7,10 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.504
 
 {{HTTPSidebar}}
 
-The HTTP **`504 Gateway Timeout`** [server error response](/en-US/docs/Web/HTTP/Status#server_error_responses) status code indicates that the server, while acting as a gateway or proxy, did not get a response in time from the upstream server in order to complete the request.
-This is similar to a {{HTTPStatus(502)}}, except that in a 504 status, the proxy or gateway did not receive any HTTP response from the origin within a certain time.
+The HTTP **`504 Gateway Timeout`** [server error response](/en-US/docs/Web/HTTP/Status#server_error_responses) status code indicates that the server, while acting as a gateway or {{Glossary("Proxy_server", "proxy")}}, did not get a response in time from the upstream server in order to complete the request.
+This is similar to a {{HTTPStatus("502", "502 Bad Gateway")}}, except that in a `504` status, the proxy or gateway did not receive any HTTP response from the origin within a certain time.
 
-There are many causes of 504 errors, and fixing such problems likely requires investigation and debugging by server administrators, or the site may work again at a later time.
+There are many causes of `504` errors, and fixing such problems likely requires investigation and debugging by server administrators, or the site may work again at a later time.
 Exceptions are client networking errors, particularly if the service works for other visitors, and if clients use VPNs or other custom networking setups.
 In such cases, clients should check network settings, firewall setup, proxy settings, DNS configuration, etc.
 
@@ -24,7 +24,7 @@ In such cases, clients should check network settings, firewall setup, proxy sett
 
 ### 504 gateway timeout response
 
-The following request tries to fetch a webpage, but receives a 504 response in return.
+The following request tries to fetch a webpage, but receives a `504` response in return.
 The response body contains a page describing the server state with a link to a support page for visitors.
 
 ```http
@@ -59,4 +59,4 @@ Content-Length: 123
 ## See also
 
 - [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
-- {{HTTPStatus(502)}}
+- {{HTTPStatus("502", "502 Bad Gateway")}}

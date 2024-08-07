@@ -14,7 +14,7 @@ This response should be used for temporary conditions and the {{HTTPHeader("Retr
 A user-friendly page explaining the problem should be sent together with this response.
 
 > [!NOTE]
-> Caching-related headers sent with this response should have special attention; a 503 status is often temporary and responses shouldn't usually be cached as clients may receive errors after a fix has been deployed.
+> Caching-related headers sent with this response should have special attention; a 503 status is often temporary and responses shouldn't usually be cached as clients may receive outdated error pages after a fix has been deployed.
 
 ## Status
 
@@ -26,7 +26,7 @@ A user-friendly page explaining the problem should be sent together with this re
 
 ### 503 server error response
 
-The following request tries to fetch a webpage, but receives a 503 response.
+The following request tries to fetch a webpage, but receives a `503` response.
 The response body contains a page describing the server state with a link to a support page for visitors.
 An identifier is contained in the response body for illustration of a method that may help server administrators narrow down the root cause of the problem:
 

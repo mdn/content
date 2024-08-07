@@ -9,7 +9,7 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc5842#section-7.2
 
 The HTTP **`508 Loop Detected`** [server error response](/en-US/docs/Web/HTTP/Status#server_error_responses) status code may be given in the context of the Web Distributed Authoring and Versioning ({{Glossary("WebDAV")}}).
 It indicates that the entire operation failed because it encountered an infinite loop while processing a request with `Depth: infinity`.
-This status was introduced as a fallback for cases where WebDAV clients do not support {{HTTPStatus(208)}} responses (when requests do not explicitly include a `DAV` header).
+This status was introduced as a fallback for cases where WebDAV clients do not support {{HTTPStatus("208", "208 Already Reported")}} responses (when requests do not explicitly include a `DAV` header).
 
 ## Status
 
@@ -53,4 +53,4 @@ Content-Length: 72
 ## See also
 
 - [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
-- {{HTTPStatus(208)}}
+- {{HTTPStatus("208", "208 Already Reported")}}
