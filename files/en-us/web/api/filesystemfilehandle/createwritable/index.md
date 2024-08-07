@@ -75,7 +75,13 @@ async function writeFile(fileHandle, contents) {
 
 ### Expanded usage with options
 
-In this example, we provide a button to select a file to write to, a text input field into which you can enter some text to write to the file, and a second button to write the text to the file.
+Our [`createWritable()` mode test](https://createwritable-mode-test.glitch.me/) example provides a {{htmlelement("button")}} to select a file to write to, a text {{htmlelement("input")}} field into which you can enter some text to write to the file, and a second `<button>` to write the text to the file.
+
+In the demo above, try selecting a text file on your file system (or entering a new file name), entering some text into the input field, and writing the text to the file. Open the file on your file system to check whether the write was successful.
+
+Also, try opening the page in two browser tabs simultaneously. Select a file to write to in the first tab, and then immediately try selecting the same file to write to in the second tab. You should get an error message because we set `mode: "exclusive"` in the `createWritable()` call.
+
+Below we'll explore the code.
 
 #### HTML
 
@@ -107,7 +113,7 @@ li {
 
 #### JavaScript
 
-We start by grabbing references to the select file button, the the write text button, and the text input field. We also declare a global variable `writableStream`, which will store a reference to the writeable stream for writing the text to the file, once created. We initially set it to `null`.
+We start by grabbing references to the select file button, the write text button, and the text input field. We also declare a global variable `writableStream`, which will store a reference to the writeable stream for writing the text to the file, once created. We initially set it to `null`.
 
 ```js
 const selectBtn = document.querySelector(".select");
@@ -154,7 +160,7 @@ async function selectFile() {
 }
 ```
 
-Our next function, `writeFile()`, writes the text entered into the input field to the chosen file using {{domxref("FileSystemWritableFileStream.write()")}}, then empties out the input field. We then close the writable stream using {{domxref("WritableStream.close()")}}, and reset the demo so it can be run again — the `disabled` states of the controls are toggled back to their original states, and the `writableStream` variable is set back to `null`.
+Our next function, `writeFile()`, writes the text entered into the input field to the chosen file using {{domxref("FileSystemWritableFileStream.write()")}}, then empties the input field. We then close the writable stream using {{domxref("WritableStream.close()")}}, and reset the demo so it can be run again — the `disabled` states of the controls are toggled back to their original states, and the `writableStream` variable is set back to `null`.
 
 ```js
 async function writeFile() {
@@ -181,14 +187,6 @@ To get the demo running, we set event listeners on the buttons so that the relev
 selectBtn.addEventListener("click", selectFile);
 writeBtn.addEventListener("click", writeFile);
 ```
-
-#### Result
-
-The demo is rendered as follows. Try selecting a text file on your file system (or entering a new file name), entering some text into the input field, and writing the text to the file. Open the file on your file system to check whether the write was successful.
-
-{{ EmbedLiveSample("Expanded usage with options", "100%", "200") }}
-
-Also, try opening the page in two browser tabs simultaneously. Select a file to write to in the first tab, and then immediately try selecting the same file to write to in the second tab. You should get an error mesage because we set `mode: "exclusive"` in the `createWritable()` call.
 
 ## Specifications
 
