@@ -51,11 +51,11 @@ Here are a few other sidebar macros, with what they do:
 
 - `\{{LearnSidebar}}`
 
-  - : Present on every page within the Learn section except for common questions and how-to pages (which use the `QuickLinksWithSubpages` macro), it generates a sidebar based on the [hard-coded links](https://github.com/mdn/yari/tree/main/kumascript/macros/LearnSidebar.ejs) present in the Yari macro file. This macro is not based on file structure.
+  - : Present on every page within the Learn section except for common questions and how-to pages (which use the `QuickLinksWithSubpages` macro), it generates a sidebar based on the [hard-coded links](https://github.com/mdn/yari/blob/main/kumascript/macros/LearnSidebar.ejs) present in the Yari macro file. This macro is not based on file structure.
 
 - `\{{HTMLSidebar}}`
 
-  - : Generates the sidebar for HTML documentation, including tutorials, references, and guides. The macro includes calls to the `\{{ ListSubpagesForSidebar}}` macro for the element and attribute reference sections, while the tutorial and guide [links are hard-coded](https://github.com/mdn/yari/tree/main/kumascript/macros/HTMLSidebar.ejs).
+  - : Generates the sidebar for HTML documentation, including tutorials, references, and guides. The macro includes calls to the `\{{ ListSubpagesForSidebar}}` macro for the element and attribute reference sections, while the tutorial and guide [links are hard-coded](https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLSidebar.ejs).
 
 - `\{{HTTPSidebar}}`
 
