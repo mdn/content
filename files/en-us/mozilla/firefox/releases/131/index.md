@@ -1,12 +1,12 @@
 ---
-title: Firefox 130 for developers
-slug: Mozilla/Firefox/Releases/130
+title: Firefox 131 for developers
+slug: Mozilla/Firefox/Releases/131
 page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 130 that affect developers. Firefox 130 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [September 3, 2024](https://whattrainisitnow.com/release/?version=130).
+This article provides information about the changes in Firefox 131 that affect developers. Firefox 131 is the current [Nightly version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly) and ships on [October 1, 2024](https://whattrainisitnow.com/release/?version=131).
 
 ## Changes for web developers
 
@@ -66,7 +66,7 @@ This article provides information about the changes in Firefox 130 that affect d
 
 ## Experimental web features
 
-These features are newly shipped in Firefox 130 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+These features are newly shipped in Firefox 131 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
 
 ## Older versions
 
