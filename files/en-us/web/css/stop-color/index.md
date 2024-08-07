@@ -10,7 +10,7 @@ browser-compat: css.properties.stop-color
 The **`stop-color`** [CSS](/en-US/docs/Web/CSS) property defines the color to use for an SVG {{SVGElement("stop")}} element within a gradient. If present, it overrides the element's {{SVGAttr("stop-color")}} attribute.
 
 > [!NOTE]
-> The `stop-color` property only applies to {{SVGElement('stop')}} element nested in an {{SVGElement("svg")}}. It doesn't apply other SVG, HTML, or pseudo-elements.
+> The `stop-color` property only applies to {{SVGElement('stop')}} elements nested in an {{SVGElement("svg")}}. It doesn't apply to other SVG, HTML, or pseudo-elements.
 
 ## Syntax
 
@@ -50,7 +50,7 @@ This example demonstrates the basic use case of `stop-color`, and how the CSS `s
 
 #### HTML
 
-We have an SVG with three {{SVGElement("rect")}} squares and three almost identical {{SVGElement("linearGradient")}} elements. Each gradient has four {{SVGElement("stop")}} elements creating gradients that go from black to white and then white to grey; the only difference between them is the `id` value.
+We have an SVG with three {{SVGElement("rect")}} squares and three {{SVGElement("linearGradient")}} elements. Each gradient has four {{SVGElement("stop")}} elements creating gradients that go from black to white and then white to grey; the only difference between them is the `id` value.
 
 ```html
 <svg viewBox="0 0 264 100" xmlns="http://www.w3.org/2000/svg">
@@ -82,7 +82,7 @@ We have an SVG with three {{SVGElement("rect")}} squares and three almost identi
 
 #### CSS
 
-We include a {{cssxref("stroke")}} and {{cssxref("stroke-width")}} outlining the rectangle. We define the colors of the first and last stops in each gradient, overriding their `stop-color` attribute values, using the `stop-color` property using various CSS {{cssxref("color_value", "&lt;color>")}} syntaxes.
+We include a {{cssxref("stroke")}} and {{cssxref("stroke-width")}} outlining the rectangle. We define the colors of the first and last stops in each gradient, overriding their `stop-color` attribute values, using the `stop-color` property. Various CSS {{cssxref("color_value", "&lt;color>")}} syntaxes are shown.
 
 ```css hidden
 svg {
