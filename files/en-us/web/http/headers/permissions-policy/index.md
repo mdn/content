@@ -286,7 +286,7 @@ By specifying `()` for the origin list, the specified features will be disabled 
 For example, let's say that we wanted to enable geolocation usage on our own origin, and in embedded content coming from our trusted ad network. We could set up the page-wide Permissions Policy like this:
 
 ```http
-Permissions-Policy: geolocation=(self https://trusted-ad-network.com/)
+Permissions-Policy: geolocation=(self https://trusted-ad-network.com)
 ```
 
 Over in our ad `<iframe>`s, we could set access to the `https://trusted-ad-network.com` origin like this:
