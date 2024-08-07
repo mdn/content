@@ -7,16 +7,15 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.307
 
 {{HTTPSidebar}}
 
-The HTTP **`307 Temporary Redirect`** [redirection response](/en-US/docs/Web/HTTP/Status#redirection_messages) status code indicates that the resource requested has been temporarily moved to the URL given by the {{HTTPHeader("Location")}} headers.
+The HTTP **`307 Temporary Redirect`** [redirection response](/en-US/docs/Web/HTTP/Status#redirection_messages) status code indicates that the resource requested has been temporarily moved to the URL in the {{HTTPHeader("Location")}} header.
 A browser redirects automatically to the new page, but the ranking value in search engines (colloquially named "link juice" in {{Glossary("SEO")}} terms) is **not sent** to the new URL.
 
 The method and the body of the original request are reused to perform the redirected request.
 In the cases where you want the request method to be changed to {{HTTPMethod("GET")}}, use {{HTTPStatus("303", "303 See Other")}} instead.
-This is useful when you want to give an answer to a {{HTTPMethod("PUT")}} method that is not the uploaded resources, but show a confirmation message like "You have successfully uploaded XYZ".
+This is useful when you want to give an answer to a successful {{HTTPMethod("PUT")}} request that is not the uploaded resource, but a status monitor or confirmation message like "You have successfully uploaded XYZ".
 
-The difference between `307` and {{HTTPStatus("302")}} is that `307` guarantees that the method and the body **will not be changed** when the redirected request is made.
+The difference between `307` and {{HTTPStatus("302")}} is that `307` guarantees that the client **will not change** the request method and body when the redirected request is made.
 With `302`, older clients incorrectly changed the method to {{HTTPMethod("GET")}}.
-The behavior with non-`GET` methods and `302` is therefore unpredictable on the Web, whereas the behavior with `307` is predictable.
 `307` and `302` responses are identical when the request method is {{HTTPMethod("GET")}}.
 
 ## Status

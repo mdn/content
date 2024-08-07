@@ -11,8 +11,14 @@ The HTTP **`304 Not Modified`** [redirection response](/en-US/docs/Web/HTTP/Stat
 This response code is sent when the request is a [conditional](/en-US/docs/Web/HTTP/Conditional_requests) {{HTTPMethod("GET")}} or {{HTTPMethod("HEAD")}} request with an {{HTTPHeader("If-None-Match")}} or an {{HTTPHeader("If-Modified-Since")}} header and the condition evaluates to 'false'.
 It confirms that the resource cached by the client is still valid and that the server would have sent a {{HTTPStatus("200", "200 OK")}} response with the resource if the condition evaluated to 'true'.
 
-The response must not contain a body and must include the headers that would have been sent in an equivalent {{HTTPStatus("200")}} `OK` response:
-{{HTTPHeader("Cache-Control")}}, {{HTTPHeader("Content-Location")}}, {{HTTPHeader("Date")}}, {{HTTPHeader("ETag")}}, {{HTTPHeader("Expires")}}, and {{HTTPHeader("Vary")}}.
+The response must not contain a body and must include the headers that would have been sent in an equivalent {{HTTPStatus("200")}} response, such as:
+
+- {{HTTPHeader("Cache-Control")}}
+- {{HTTPHeader("Content-Location")}}
+- {{HTTPHeader("Date")}}
+- {{HTTPHeader("ETag")}}
+- {{HTTPHeader("Expires")}}
+- {{HTTPHeader("Vary")}}
 
 > [!NOTE]
 > Many [developer tools' network panels](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) of browsers create extraneous requests leading to `304` responses, so that access to the local cache is visible to developers.
@@ -32,7 +38,7 @@ The first example would return a {{HTTPStatus("200", "200 OK")}} if we know the 
 For illustration, the request uses a future date of 21st November 2050 to check whether if the resource has been updated since this date:
 
 ```bash
-curl -v --header 'If-Modified-Since: Tue, 21 Nov 2050 08:00:00 GMT' \
+curl -I --header 'If-Modified-Since: Tue, 21 Nov 2050 08:00:00 GMT' \
  https://developer.mozilla.org/en-US/
 ```
 
@@ -50,13 +56,14 @@ date: Tue, 21 Nov 2023 08:44:28 GMT
 expires: Tue, 21 Nov 2023 08:53:14 GMT
 age: 3194
 etag: "e27d81b845c3716cdb5d4220d78e2799"
+cache-control: public, max-age=3600
 ```
 
 A `304 Not Modified` response is also returned in response to a {{HTTPMethod("GET")}} request containing an {{HTTPHeader("If-None-Match")}} header with the {{HTTPHeader("ETag")}} from the response above.
 Because the `etag` value exists, a matching entity tag fails the condition, and a `304` response is returned:
 
 ```bash
-curl -v --header 'If-None-Match: "e27d81b845c3716cdb5d4220d78e2799"' \
+curl -I --header 'If-None-Match: "e27d81b845c3716cdb5d4220d78e2799"' \
  https://developer.mozilla.org/en-US/
 ```
 
@@ -74,6 +81,7 @@ date: Tue, 21 Nov 2023 08:47:37 GMT
 expires: Tue, 21 Nov 2023 09:38:23 GMT
 age: 2920
 etag: "e27d81b845c3716cdb5d4220d78e2799"
+cache-control: public, max-age=3600
 ```
 
 ## Specifications

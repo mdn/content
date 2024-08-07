@@ -38,6 +38,7 @@ Accept: application/json
 HTTP/1.1 300 Multiple Choices
 Content-Type: application/json
 Location: http://example.com/resource-html
+
 {
   "message": "Multiple choices available.",
   "choices": [
@@ -61,6 +62,6 @@ Location: http://example.com/resource-html
 
 - [Redirections in HTTP](/en-US/docs/Web/HTTP/Redirections)
 - [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
-- {{HTTPStatus("301")}} `Moved Permanently`
-- {{HTTPStatus("302")}} `Found` temporary redirect
-- {{HTTPStatus("308")}} `Permanent Redirect`
+- {{HTTPStatus("301", "301 Moved Permanently")}}
+- {{HTTPStatus("302", "302 Found")}} temporary redirect
+- {{HTTPStatus("308", "308 Permanent Redirect")}}

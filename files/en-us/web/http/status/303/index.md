@@ -8,10 +8,10 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.303
 {{HTTPSidebar}}
 
 The HTTP **`303 See Other`** [redirection response](/en-US/docs/Web/HTTP/Status#redirection_messages) status code indicates that redirects don't link to the requested resource, but to a URL in the {{HTTPHeader("Location")}} header that describes the resource.
-For example, the redirected page may be a confirmation page, an upload-progress page, or a representation of a real-world object (see [HTTP range-14](https://en.wikipedia.org/wiki/HTTPRange-14)).
+For example, the redirected page may be a confirmation page, an upload status page, or a representation of a real-world object (see [HTTP range-14](https://en.wikipedia.org/wiki/HTTPRange-14)).
 
-This response code is often sent back as a result of {{HTTPMethod("PUT")}} or {{HTTPMethod("POST")}} so the client may retrieve a confirmation of an action or cache the results.
-The method to retrieve the redirected page is always {{HTTPMethod("GET")}}.
+This response code is often sent back as a result of {{HTTPMethod("PUT")}} or {{HTTPMethod("POST")}} methods so the client may retrieve a confirmation or cache the results of an action.
+The method to retrieve the redirected resource is always {{HTTPMethod("GET")}}.
 
 ## Status
 
@@ -51,5 +51,4 @@ Content-Length: 0
 - [Redirections in HTTP](/en-US/docs/Web/HTTP/Redirections)
 - [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
 - {{HTTPStatus("302", "302 Found")}}, a temporary redirect
-- {{HTTPStatus("307", "307 Temporary Redirect")}}, a temporary redirect
-  where the method used never changes.
+- {{HTTPStatus("307", "307 Temporary Redirect")}}, a temporary redirect where the request method is not modified
