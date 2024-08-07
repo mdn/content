@@ -25,7 +25,6 @@ events.Event.addRules(rules, callback)
 
   - : `function`. Called when the rules are registered. The parameter of the callback function is an array of `events.Rule` objects that were successfully registered.
 
-
 ## Browser compatibility
 
 {{Compat}}

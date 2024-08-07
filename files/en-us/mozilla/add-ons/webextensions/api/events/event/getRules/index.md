@@ -25,7 +25,6 @@ events.Event.getRules(ruleIdentifiers, callback)
 
   - : `function`. The parameter of the callback function is an array of `events.Rule` objects that are currently registered.
 
-
 ## Browser compatibility
 
 {{Compat}}

@@ -25,7 +25,6 @@ events.Event.removeRules(ruleIdentifiers, callback)
 
   - : `function`. Called with no arguments when the rules are removed.
 
-
 ## Browser compatibility
 
 {{Compat}}
