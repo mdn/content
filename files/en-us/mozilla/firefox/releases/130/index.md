@@ -58,6 +58,8 @@ This article provides information about the changes in Firefox 130 that affect d
 
 ## Changes for add-on developers
 
+- The `options` parameter of {{WebExtAPIRef("webRequest.getSecurityInfo")}} is now optional ([Firefox bug 1909474](https://bugzil.la/1909474)).
+
 ### Removals
 
 ### Other
