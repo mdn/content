@@ -296,7 +296,7 @@ HTTP [Client hints](/en-US/docs/Web/HTTP/Client_hints) are a set of request head
 
 Servers proactively requests the client hint headers they are interested in from the client using {{HTTPHeader("Accept-CH")}}. The client may then choose to include the requested headers in subsequent requests.
 
-- {{HTTPHeader("Accept-CH")}} {{experimental_inline}}
+- {{HTTPHeader("Accept-CH")}}
   - : Servers can advertise support for Client Hints using the `Accept-CH` header field or an equivalent HTML `<meta>` element with [`http-equiv`](/en-US/docs/Web/HTML/Element/meta#http-equiv) attribute.
 - {{HTTPHeader("Critical-CH")}} {{experimental_inline}}
   - : Servers use `Critical-CH` along with {{HttpHeader("Accept-CH")}} to specify that accepted client hints are also [critical client hints](/en-US/docs/Web/HTTP/Client_hints#critical_client_hints).
@@ -339,7 +339,7 @@ The [UA client hints](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints)
 
 #### Device client hints
 
-- {{HTTPHeader("Device-Memory")}} {{experimental_inline}}
+- {{HTTPHeader("Device-Memory")}}
   - : Approximate amount of available client RAM memory. This is part of the [Device Memory API](/en-US/docs/Web/API/Device_Memory_API).
 
 #### Network client hints

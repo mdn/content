@@ -549,7 +549,7 @@ if (isset($_FILES['myFile'])) {
 
 Object URLs can be used for other things than just images! They can be used to display embedded PDF files or any other resources that can be displayed by the browser.
 
-In Firefox, to have the PDF appear embedded in the iframe (rather than proposed as a downloaded file), the preference `pdfjs.disabled` must be set to `false` {{non-standard_inline()}}.
+In Firefox, to have the PDF appear embedded in the iframe (rather than proposed as a downloaded file), the preference `pdfjs.disabled` must be set to `false`.
 
 ```html
 <iframe id="viewer"></iframe>
