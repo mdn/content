@@ -123,6 +123,45 @@ We include two {{cssxref("time")}} values. In the `transition` shorthand, the fi
 
 {{EmbedLiveSample('Basic_example', 600, 100)}}
 
+
+### Accordion example
+
+In this example, when the accordion is toggled open, there is a 0.5 second transition on `grid-template-rows`, smoothly expanding the content area to its full height.
+
+#### HTML
+
+```html
+<button onClick="document.getElementById('theWrapper').classList.toggle('is-open');">Toggle</button>
+<div class="wrapper" id="theWrapper" style="border: solid 1px blue;">
+  <div class="inner">
+    <p>Expandable content</p>
+    <div style="padding: 30px 10px; border: solid 2px red;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+</div>
+```
+
+#### CSS
+
+Simply transition `grid-template-rows` from 0fr to 1fr, allowing the grid item to smoothly expand to its natural height.
+
+```css
+.wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.5s ease-out;
+}
+
+.wrapper.is-open {
+  grid-template-rows: 1fr;
+}
+
+.inner {
+  overflow: hidden;
+}
+```
+
+{{EmbedLiveSample('Accordion_example', 600, 300)}}
+
 ## Specifications
 
 {{Specifications}}
