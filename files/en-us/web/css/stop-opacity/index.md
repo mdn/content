@@ -7,12 +7,12 @@ browser-compat: css.properties.stop-opacity
 
 {{CSSRef}}
 
-The **`stop-opacity`** [CSS](/en-US/docs/Web/CSS) property the opacity of a given color gradient stop in the SVG {{SVGElement("stop")}} element. If present, it overrides the element's {{SVGAttr("stop-opacity")}} attribute.
+The **`stop-opacity`** [CSS](/en-US/docs/Web/CSS) property defines the opacity of a given color gradient stop in the SVG {{SVGElement("stop")}} element within an SVG gradient. If present, it overrides the element's {{SVGAttr("stop-opacity")}} attribute.
 
-The property value impacts the `stop-color`'s alpha channel; it can increase the transparency of a `<stop>`'s color but can not make the color defined by the `color-stop` property more opaque.
+The property value impacts the {{cssxref("stop-color")}}'s alpha channel; it can increase the transparency of a `<stop>`'s color but can not make the color defined by the `stop-color` property more opaque.
 
 > [!NOTE]
-> The `stop-opacity` property only applies to {{SVGElement('stop')}} element nested in an {{SVGElement("svg")}}. It doesn't apply other SVG, HTML, or pseudo-elements.
+> The `stop-opacity` property only applies to {{SVGElement('stop')}} elements nested in an {{SVGElement("svg")}}. It doesn't apply other SVG, HTML, or pseudo-elements.
 
 ## Syntax
 
@@ -31,7 +31,7 @@ stop-opacity: unset;
 
 ### Values
 
-The `<opacity-value>` is a {{cssxref("number")}} and {{cssxref("percentage")}} denoting the opacity of the SVG gradient `<stop>` element.
+The `<opacity-value>` is a {{cssxref("number")}} or {{cssxref("percentage")}} denoting the opacity of the SVG gradient `<stop>` element.
 
 - {{cssxref("number")}}
 
@@ -41,7 +41,7 @@ The `<opacity-value>` is a {{cssxref("number")}} and {{cssxref("percentage")}} d
 
   - : A percentage value between `0%` and `100%`, inclusive.
 
-With `0` or `0%`, the stop is fully transparent (that is, invisible). With `1` or `100%`, the element is the full opacity of the `stop-color` value; which may or may not be partially opaque.
+With `0` or `0%` set, the stop is fully transparent. With `1` or `100%` set, the element is the full opacity of the `stop-color` value, which may or may not be partially opaque.
 
 ## Formal definition
 
@@ -59,7 +59,7 @@ This example demonstrates the basic use case of `stop-opacity`, and how the CSS 
 
 #### HTML
 
-We have an SVG with a few {{SVGElement("polygon")}} stars and three almost identical {{SVGElement("linearGradient")}} elements: each has three {{SVGElement("stop")}} elements defining three color-stops that create a gradient going from blue to white to pink; the only difference between them is the `id` value.
+We have an SVG with a few {{SVGElement("polygon")}} stars and three {{SVGElement("linearGradient")}} elements: each has three {{SVGElement("stop")}} elements defining three color-stops that create a gradient going from blue to white to pink; the only difference between them is the `id` value.
 
 ```html
 <svg viewBox="0 0 250 120" xmlns="http://www.w3.org/2000/svg">
@@ -90,11 +90,11 @@ We have an SVG with a few {{SVGElement("polygon")}} stars and three almost ident
 
 We include a {{cssxref("stroke")}} and {{cssxref("stroke-width")}} making the polygon path line visible.
 
-Each `polygon` has a gradient background set using the {{cssxref("fill")}} property; the gradient's`id` is the `url()` parameter. We set `magenta` as the fallback color.
+Each `polygon` has a gradient background set using the {{cssxref("fill")}} property; the gradient's `id` is the `url()` parameter. We set `magenta` as the fallback color.
 
 We define the opacity of the stops of each gradient using the `stop-opacity` property.
 
-The SVG has a striped background to make translucency more apparent.
+The SVG has a striped background to make the transparency settings more apparent.
 
 ```css hidden
 svg {
