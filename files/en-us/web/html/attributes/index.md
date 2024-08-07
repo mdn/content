@@ -459,7 +459,6 @@ Elements in HTML have **attributes**; these are additional values that configure
     <tr>
       <td>
         <code><a href="/en-US/docs/Web/HTML/Global_attributes/enterkeyhint">enterkeyhint</a></code>
-        {{experimental_inline}}
       </td>
       <td>
         {{ HTMLElement("textarea") }},
@@ -767,7 +766,7 @@ Elements in HTML have **attributes**; these are additional values that configure
       <td>Defines the script language used in the element.</td>
     </tr>
     <tr>
-      <td><code>loading</code> {{experimental_inline}}</td>
+      <td><code>loading</code></td>
       <td>
         {{ HTMLElement("img") }}, {{ HTMLElement("iframe") }}
       </td>
