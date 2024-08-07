@@ -1,5 +1,6 @@
 ---
 title: "HTML attribute: required"
+short-title: required
 slug: Web/HTML/Attributes/required
 page-type: html-attribute
 ---

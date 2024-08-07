@@ -254,5 +254,5 @@ Within a keyframe, `animation-timing-function` is an at-rule-specific descriptor
 - [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - {{cssxref('easing-function')}}
 - JavaScript {{domxref("AnimationEvent")}} API
-- [cubic-bezier.com](https://cubic-bezier.com)
+- [cubic-bezier.com](https://cubic-bezier.com/)
 - Other related animation properties: {{cssxref("animation")}}, {{cssxref("animation-composition")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timeline")}}

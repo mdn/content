@@ -1118,49 +1118,6 @@ The CSS [`calc()`](/en-US/docs/Web/CSS/calc) function can now parse color channe
 
 ## SVG
 
-### transition-behavior property
-
-The {{cssxref("transition-behavior")}} property is enabled by default in the Nightly release or by setting the `layout.css.transition-behavior.enabled` preference to `true`.
-Authors can use this property to control whether to apply CSS transitions to properties with a [discrete animation type](/en-US/docs/Web/CSS/CSS_animated_properties#discrete) ([Firefox bug 1882408](https://bugzil.la/1882408), [Firefox bug 1805727](https://bugzil.la/1805727)).
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>125</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>125</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>125</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>125</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2">
-      <code>layout.css.transition-behavior.enabled</code>
-    </td>
-    </tr>
-  </tbody>
-</table>
-
 ### SVGPathSeg APIs
 
 The SVGPathSeg APIs are being unshipped, and have been placed behind a preference.
@@ -1722,47 +1679,6 @@ Enabling this feature adds the {{domxref("HTMLMediaElement.audioTracks")}} and {
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>media.track.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
-#### HTML Sanitizer API
-
-The {{domxref('HTML Sanitizer API')}} allow developers to take untrusted strings of HTML and sanitize them for safe insertion into a document's DOM. Default elements within each configuration property (those to be sanitized) are still under consideration.
-Due to this the config parameter has not been implemented (see {{domxref('Sanitizer.sanitizer()', 'the constructor')}} for more information). See [Firefox bug 1673309](https://bugzil.la/1673309) for more details.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>84</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>84</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>84</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>84</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.security.sanitizer.enabled</code></td>
     </tr>
   </tbody>
 </table>

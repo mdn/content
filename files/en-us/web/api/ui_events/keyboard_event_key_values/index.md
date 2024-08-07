@@ -3729,7 +3729,7 @@ The values below are derived in part from a number of consumer electronics techn
     <tr>
       <td><code>"Teletext"</code></td>
       <td>
-        Toggles display of [teletext](https://en.wikipedia.org/wiki/Teletext),
+        Toggles display of <a href="https://en.wikipedia.org/wiki/Teletext">teletext</a>,
         if available.
       </td>
       <td><code>VK_TELETEXT</code></td>

@@ -58,7 +58,7 @@ The below code creates a policy with the name `"myEscapePolicy"` with a function
 
 ```js
 const escapeHTMLPolicy = trustedTypes.createPolicy("myEscapePolicy", {
-  createHTML: (string) => string.replace(/>/g, "<"),
+  createHTML: (string) => string.replace(/</g, "&lt;"),
 });
 ```
 

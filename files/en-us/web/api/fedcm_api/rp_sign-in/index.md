@@ -153,4 +153,4 @@ If auto-reauthentication fails, the behavior depends on the `mediation` value th
 
 ## See also
 
-- [Federated Credential Management API](https://developer.chrome.com/docs/privacy-sandbox/fedcm/) on developer.chrome.com (2023)
+- [Federated Credential Management API](https://developers.google.com/privacy-sandbox/3pcd/fedcm) on developers.google.com (2023)

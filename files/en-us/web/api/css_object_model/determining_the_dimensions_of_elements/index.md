@@ -10,7 +10,7 @@ There are several properties you can look at in order to determine the width and
 
 ## How much room does it use up?
 
-If you need to know the total amount of space an element occupies, including the width of the visible content, scrollbars (if any), padding, and border, you want to use the {{DOMxRef("HTMLElement.offsetWidth")}} and {{DOMxRef("HTMLElement.offsetHeight")}} properties. Most of the time these are the same as width and height of {{DOMxRef("Element.getBoundingClientRect()")}}, when there aren't any transforms applied to the element. In case of transforms, the `offsetWidth` and `offsetHeight` returns the element's layout width and height, while `getBoundingClientRect()` returns the rendering width and height. As an example, if the element has `width: 100px;` and `transform: scale(0.5);` the `getBoundingClientRect()` will return 50 as the width, while `offsetWidth` will return 100.
+If you need to know the total amount of space an element occupies, including the width of the visible content, scrollbars (if any), padding, and border, you want to use the {{DOMxRef("HTMLElement.offsetWidth")}} and {{DOMxRef("HTMLElement.offsetHeight")}} properties. Most of the time these are the same as width and height of {{DOMxRef("Element.getBoundingClientRect()")}}, when there aren't any transforms applied to the element. In case of transforms, the `offsetWidth` and `offsetHeight` returns the element's layout width and height, while `getBoundingClientRect()` returns the rendering width and height. As an example, if the element has `width: 100px;` and `transform: scale(0.5);` the `getBoundingClientRect()` will return 50 as the width, while `offsetWidth` will return 100. Another difference is that `offsetWidth` and `offsetHeight` round the values to integers, while `getBoundingClientRect()` provides more precise decimal point values.
 
 ![How the offsetWidth and offsetHeight properties are determined, considering padding, borders, and margin sizes](dimensions-offset.png)
 
@@ -29,4 +29,4 @@ For example, if a 600x400 pixel element is being displayed inside a 300x300 pixe
 ## See also
 
 - <https://www.w3.org/TR/cssom-view-1/>
-- [MSDN: Measuring Element Dimension and Location](<https://docs.microsoft.com/previous-versions/hh781509(v=vs.85)>)
+- [MSDN: Measuring Element Dimension and Location](<https://learn.microsoft.com/en-us/previous-versions/hh781509(v=vs.85)>)

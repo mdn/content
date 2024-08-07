@@ -61,7 +61,7 @@ On the left, we see all of the components that make up our application, includin
 
 React DevTools is available in several forms:
 
-- A [Chrome browser extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en).
+- A [Chrome browser extension](https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en).
 - A [Firefox browser extension](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/).
 - A [Microsoft Edge browser extension](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil).
 - A [stand-alone application you can install with npm or Yarn](https://www.npmjs.com/package/react-devtools).

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.MIDIPort.open
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}
+{{securecontext_header}}{{APIRef("Web MIDI API")}}
 
 The **`open()`** method of the {{domxref("MIDIPort")}} interface makes the MIDI device connected to this `MIDIPort` explicitly available.
 

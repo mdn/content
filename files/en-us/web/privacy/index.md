@@ -50,7 +50,7 @@ Following on from the above section, **personally identifiable information** (PI
 
 - Looking at multiple [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies) set across different sites where third-party content is embedded to find out various information points about the user.
 - Looking at the {{httpheader("Referer")}} header to see where a user has navigated from.
-- Including parameters on the URLs of inbound links (for example in embedded ads linking to product pages, or marketing emails) that can reveal to the linked site where the link originated from, what marketing campaign it is part of, the email address or other identifier of the user that clicked on it, etc. This process is referred to as **link decorating**, and results in link URLs that look like this: https://example.com/article/?id=62yhgt1a&campaign=902.
+- Including parameters on the URLs of inbound links (for example in embedded ads linking to product pages, or marketing emails) that can reveal to the linked site where the link originated from, what marketing campaign it is part of, the email address or other identifier of the user that clicked on it, etc. This process is referred to as **link decorating**, and results in link URLs that look like this: `https://example.com/article/?id=62yhgt1a&campaign=902`.
 - Redirect tracking, which involves trackers momentarily (and imperceptibly) redirecting a user to their website to use first-party storage to track that user across websites. This allows trackers to get around third-party cookies being blocked. For example, if you have read a product review and want to click through to buy it, you might unwittingly navigate to the redirect tracker first, _then_ to the retailer. This means the tracker is loaded as a first party, and can associate tracking data with the identifiers they have stored in their first-party cookies before forwarding you to the retailer.
 
 Tracking data can be used to build a profile of a user and their interests and preferences, which is usually bad and can be annoying to various degrees. For example:
@@ -219,7 +219,7 @@ The below tips offer some guidance on protecting your user's data:
 
 - [Web security](/en-US/docs/Web/Security)
 - [Learn Privacy](https://web.dev/learn/privacy/) on web.dev
-- [The Privacy Sandbox](https://developer.chrome.com/docs/privacy-sandbox/) on developer.chrome.com
+- [The Privacy Sandbox](https://developers.google.com/privacy-sandbox) on developers.google.com
 - [Lean Data Practices](https://www.mozilla.org/en-US/about/policy/lean-data/) on mozilla.org
 
 <section id="Quick_links">

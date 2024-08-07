@@ -101,3 +101,4 @@ The following elements can use the `clip-rule` attribute, but only if they are i
 ## See also
 
 - {{ SVGElement("clipPath") }}
+- CSS {{cssxref("clip-rule")}} property

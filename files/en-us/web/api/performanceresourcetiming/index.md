@@ -84,8 +84,12 @@ The interface supports the following timestamp properties which you can see in t
 
 Additionally, this interface exposes the following properties containing more information about a resource:
 
+- {{domxref("PerformanceResourceTiming.contentType")}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : A string representing a minimized and standardized version of the MIME-type of the fetched resource.
 - {{domxref('PerformanceResourceTiming.decodedBodySize')}} {{ReadOnlyInline}}
   - : A number that is the size (in octets) received from the fetch (HTTP or cache) of the message body, after removing any applied content encoding.
+- {{domxref("PerformanceResourceTiming.deliveryType")}} {{experimental_inline}} {{ReadOnlyInline}}
+  - : Indicates how the resource was delivered — for example from the cache or from a navigational prefetch.
 - {{domxref('PerformanceResourceTiming.encodedBodySize')}} {{ReadOnlyInline}}
   - : A number representing the size (in octets) received from the fetch (HTTP or cache), of the payload body, before removing any applied content encodings.
 - {{domxref('PerformanceResourceTiming.initiatorType')}} {{ReadOnlyInline}}
@@ -100,8 +104,6 @@ Additionally, this interface exposes the following properties containing more in
   - : A number representing the size (in octets) of the fetched resource. The size includes the response header fields plus the response payload body.
 - {{domxref('PerformanceResourceTiming.serverTiming')}} {{ReadOnlyInline}}
   - : An array of {{domxref("PerformanceServerTiming")}} entries containing server timing metrics.
-- {{domxref("PerformanceResourceTiming.deliveryType")}} {{experimental_inline}} {{ReadOnlyInline}}
-  - : Indicates how the resource was delivered — for example from the cache or from a navigational prefetch.
 
 ## Instance methods
 

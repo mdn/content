@@ -86,7 +86,7 @@ The list below denotes the codecs most commonly used on the web and which contai
       <td>
         <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg-4_mp4">MP4</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#adts">ADTS</a>,
-        <a href="/en-US/docs/Web/Media/Formats/Containers#mpeg">MPEG</a>,
+        <a href="/en-US/docs/Web/Media/Formats/Containers#mpegmpeg-2">MPEG</a>,
         <a href="/en-US/docs/Web/Media/Formats/Containers#3gp">3GP</a>
         <p>
           When MPEG-1 Audio Layer III codec data is stored in an MPEG file, and
@@ -415,7 +415,7 @@ As a patent-encumbered format, AAC support is somewhat less predictable. For exa
       <td>
         For streaming or distributing AAC-encoded content: no license required;
         developers of codecs are required to obtain a patent license through
-        <a href="https://www.via-corp.com/licensing/aac/">VIA Licensing</a>
+        <a href="https://www.via-la.com/licensing-2/aac/">VIA Licensing</a>
       </td>
     </tr>
   </tbody>
