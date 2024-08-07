@@ -132,7 +132,7 @@ Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/Web
 ## See also
 
 - [A-Frame](https://aframe.io/) — Open source web framework for building VR experiences.
-- [webvr.info](https://webvr.info) — Up-to-date information about WebVR, browser setup, and community.
+- [webvr.info](https://webvr.info/) — Up-to-date information about WebVR, browser setup, and community.
 - [threejs-vr-boilerplate](https://github.com/MozillaReality/vr-web-examples/tree/master/threejs-vr-boilerplate) — A useful starter template for writing WebVR apps into.
 - [Web VR polyfill](https://github.com/immersive-web/webvr-polyfill) — JavaScript implementation of WebVR.
 - [WebVR Directory](https://webvr.directory/) — List of quality WebVR sites.

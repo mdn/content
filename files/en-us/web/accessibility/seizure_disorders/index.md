@@ -609,7 +609,7 @@ The Web Animations model is intended to provide the features necessary for expre
 
 Along with the PEAT tool, is generally recognized to be one of the two "gold standards" for analyzing flashes.
 
-- [Harding Flash and Pattern Analyzer](https://www.hardingfpa.com)
+- [Harding Flash and Pattern Analyzer](https://www.hardingfpa.com/)
 
 ### ISO
 
