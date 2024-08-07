@@ -46,9 +46,12 @@ This article provides information about the changes in Firefox 129 that affect d
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
-#### WebDriver BiDi
+#### Removals
 
 - By default CDP (Chrome DevTools Protocol) is now disabled. It can be re-enabled via the `remote.active-protocols` preference. You can learn more about this on the following [blog post](https://fxdx.dev/deprecating-cdp-support-in-firefox-embracing-the-future-with-webdriver-bidi/). ([Firefox bug 1882089](https://bugzil.la/1882089))
+
+#### WebDriver BiDi
+
 - Added support for the `network.setCacheBehavior` command, which allows to configure the browser to bypass the network cache either globally or for a set of top level browsing contexts. ([Firefox bug 1901032](https://bugzil.la/1901032) and [Firefox bug 1906100](https://bugzil.la/1906100))
 - Added support for prompts of type `beforeUnload` which can now be handled in the same way as other user prompts. ([Firefox bug 1824220](https://bugzil.la/1824220))
 - We now support all arguments for the `network.provideResponse` command when used in the `beforeRequestSent` phase, such as the `body` parameter which allows to return mock responses. ([Firefox bug 1853882](https://bugzil.la/1853882))
