@@ -131,13 +131,21 @@ In this example, when the accordion is toggled open, there is a 0.5 second trans
 #### HTML
 
 ```html
-<button onClick="document.getElementById('theWrapper').classList.toggle('is-open');">Toggle</button>
-<div class="wrapper" id="theWrapper" style="border: solid 1px blue;">
+<button id="btn">Toggle</button>
+<div class="wrapper" id="wrapper">
   <div class="inner">
     <p>Expandable content</p>
-    <div style="padding: 30px 10px; border: solid 2px red;">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
   </div>
 </div>
+
+<script>
+  document
+    .getElementById("btn")
+    .addEventListener("click", () =>
+      document.getElementById("wrapper").classList.toggle("is-open"),
+    );
+</script>
 ```
 
 #### CSS
@@ -149,6 +157,7 @@ Simply transition `grid-template-rows` from 0fr to 1fr, allowing the grid item t
   display: grid;
   grid-template-rows: 0fr;
   transition: grid-template-rows 0.5s ease-out;
+  border: solid 1px red;
 }
 
 .wrapper.is-open {
@@ -158,9 +167,13 @@ Simply transition `grid-template-rows` from 0fr to 1fr, allowing the grid item t
 .inner {
   overflow: hidden;
 }
+
+.inner > div {
+  margin-bottom: 30px;
+}
 ```
 
-{{EmbedLiveSample('Accordion_example', 600, 300)}}
+{{EmbedLiveSample('Accordion_example', 600, 200)}}
 
 ## Specifications
 
