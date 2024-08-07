@@ -293,7 +293,7 @@ The [WhiteNoise](https://pypi.org/project/whitenoise/) project provides one of t
 
 Check out [WhiteNoise](https://pypi.org/project/whitenoise/) documentation for an explanation of how it works and why the implementation is a relatively efficient method for serving these files.
 
-The steps to set up _WhiteNoise_ to use with the project are [given here](https://whitenoise.evans.io/en/stable/django.html) (and reproduced below):
+The steps to set up _WhiteNoise_ to use with the project are [given here](https://whitenoise.readthedocs.io/en/stable/django.html) (and reproduced below):
 
 ##### Install whitenoise
 
@@ -692,7 +692,7 @@ Railway is an attractive hosting option for several reasons:
 
 - Railway takes care of most of the infrastructure so you don't have to.
   Not having to worry about servers, load balancers, reverse proxies, and so on, makes it much easier to get started.
-- Railway has a [focus on developer experience for development and deployment](https://docs.railway.app/reference/compare-to-heroku), which leads to a faster and softer learning curve than many other alternatives.
+- Railway has a [focus on developer experience for development and deployment](https://docs.railway.app/maturity/compare-to-heroku), which leads to a faster and softer learning curve than many other alternatives.
 - The skills and concepts you will learn when using Railway are transferrable.
   While Railway has some excellent new features, other popular hosting services use many of the same ideas and approaches.
 - [Railway documentation](https://docs.railway.app/) is clear and complete.
@@ -712,11 +712,11 @@ For Django apps we provide this information in a number of text files:
   For Django this will usually be the Gunicorn web application server (with a `.wsgi` script).
 - **wsgi.py**: [WSGI](https://wsgi.readthedocs.io/en/latest/what.html) configuration to call our Django application in the Railway environment.
 
-Once the application is running it can configure itself using information provided in [environment variables](https://docs.railway.app/develop/variables).
+Once the application is running it can configure itself using information provided in [environment variables](https://docs.railway.app/guides/variables).
 For example, an application that uses a database can get the address using the variable `DATABASE_URL`.
 The database service itself may be hosted by Railway or some other provider.
 
-Developers interact with Railway through the Railway site, and using a special [Command Line Interface (CLI)](https://docs.railway.app/develop/cli) tool.
+Developers interact with Railway through the Railway site, and using a special [Command Line Interface (CLI)](https://docs.railway.app/guides/cli) tool.
 The CLI allows you to associate a local GitHub repository with a railway project, upload the repository from the local branch to the live site, inspect the logs of the running process, set and get configuration variables and much more.
 One of the most useful features is that you can use the CLI to run your local project with the same environment variables as the live project.
 
@@ -899,11 +899,11 @@ Note that you could also have opened the Postgres database, then its variable ta
 
 If you open the project now it should display just as it did locally.
 Note however that there is no way to populate the library with data yet, because we have not yet created a superuser account.
-We'll do that using the [CLI](https://docs.railway.app/develop/cli) tool on our local computer.
+We'll do that using the [CLI](https://docs.railway.app/guides/cli) tool on our local computer.
 
 ### Install the client
 
-Download and install the Railway client for your local operating system by following the [instructions here](https://docs.railway.app/develop/cli).
+Download and install the Railway client for your local operating system by following the [instructions here](https://docs.railway.app/guides/cli).
 
 After the client is installed you will be able to run commands.
 Some of the more important operations include deploying the current directory of your computer to an associated Railway project (without having to upload to GitHub), and running your Django project locally using the same settings as you have on the production server.
@@ -1003,7 +1003,7 @@ The next step is to read our last few articles, and then complete the assessment
 
 - Railway Docs
 
-  - [CLI](https://docs.railway.app/develop/cli)
+  - [CLI](https://docs.railway.app/guides/cli)
 
 - Digital Ocean
 

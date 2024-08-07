@@ -234,7 +234,7 @@ If you have followed all the instructions in this article, you should end up wit
 
 ![A web page screenshot showing a Firefox logo, a heading saying Mozilla is cool, and two paragraphs of filler text](finished-test-page-small.png)
 
-If you get stuck, you can always compare your work with our [finished example code](https://github.com/mdn/beginner-html-site/blob/gh-pages/index.html) on GitHub.
+If you get stuck, you can always compare your work with our [finished example code](https://github.com/mdn/beginner-html-site/blob/main/index.html) on GitHub.
 
 Here, we have only really scratched the surface of HTML. To find out more, go to our [Learning HTML](/en-US/docs/Learn/HTML) topic.
 

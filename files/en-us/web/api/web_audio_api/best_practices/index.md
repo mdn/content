@@ -32,7 +32,7 @@ There is also the option of libraries, of which there are a few depending on you
 
 If you are looking for sound creation or a more instrument-based option, [tone.js](https://tonejs.github.io/) is a great library. It provides advanced scheduling capabilities, synths, and effects, and intuitive musical abstractions built on top of the Web Audio API.
 
-[R-audio](https://github.com/bbc/r-audio), from the [BBC's Research & Development department](https://medium.com/bbc-design-engineering/r-audio-declarative-reactive-and-flexible-web-audio-graphs-in-react-102c44a1c69c), is a library of React components aiming to provide a "more intuitive, declarative interface to Web Audio". If you're used to writing JSX it might be worth looking at.
+[R-audio](https://github.com/bbc/r-audio), from the [BBC's Research & Development department](https://medium.com/bbc-product-technology/r-audio-declarative-reactive-and-flexible-web-audio-graphs-in-react-102c44a1c69c), is a library of React components aiming to provide a "more intuitive, declarative interface to Web Audio". If you're used to writing JSX it might be worth looking at.
 
 ## Autoplay policy
 

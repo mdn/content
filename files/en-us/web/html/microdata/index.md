@@ -147,7 +147,7 @@ In some cases, search engines covering specific regions may provide locally-spec
 {{ EmbedLiveSample('HTML', '', '100') }}
 
 > [!NOTE]
-> A handy tool for extracting microdata structures from HTML is Google's [Structured Data Testing Tool](https://developers.google.com/search/docs/advanced/structured-data/intro-structured-data). Try it on the HTML shown above.
+> A handy tool for extracting microdata structures from HTML is Google's [Structured Data Testing Tool](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data). Try it on the HTML shown above.
 
 ## See also
 

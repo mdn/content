@@ -1,5 +1,6 @@
 ---
 title: "HTML attribute: crossorigin"
+short-title: crossorigin
 slug: Web/HTML/Attributes/crossorigin
 page-type: html-attribute
 browser-compat:

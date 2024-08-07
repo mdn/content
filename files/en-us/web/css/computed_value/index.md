@@ -39,6 +39,7 @@ However, for some properties (those where percentages are relative to something 
   - Values
     - [Initial values](/en-US/docs/Web/CSS/initial_value)
     - [Used values](/en-US/docs/Web/CSS/used_value)
+    - [Resolved values](/en-US/docs/Web/CSS/resolved_value)
     - [Actual values](/en-US/docs/Web/CSS/actual_value)
   - [Value definition syntax](/en-US/docs/Web/CSS/Value_definition_syntax)
   - [Shorthand properties](/en-US/docs/Web/CSS/Shorthand_properties)

@@ -9,7 +9,7 @@ page-type: learn-module-chapter
 It is now time to look at Google's Angular framework, another popular option that you'll come across often. In this article we look at what Angular has to offer, install the prerequisites and set up a sample app, and look at Angular's basic architecture.
 
 > [!NOTE]
-> This tutorial targets [Angular version 17](https://angular.io/guide/update-to-version-17) and was last revised in March 2024 (`Angular CLI: 17.3.0`).
+> This tutorial targets [Angular version 17](https://v17.angular.io/guide/update-to-version-17) and was last revised in March 2024 (`Angular CLI: 17.3.0`).
 
 <table>
   <tbody>
@@ -70,7 +70,7 @@ To install Angular on your local system, you need the following:
 
   Angular requires a [active LTS or maintenance LTS](https://nodejs.org/en/about/previous-releases) version of Node.js. For information about specific version requirements, see the [Version compatibility](https://angular.io/guide/versions) page.
 
-  For more information on installing Node.js, see [nodejs.org](https://nodejs.org/en/download).
+  For more information on installing Node.js, see [nodejs.org](https://nodejs.org/en/download/package-manager).
   If you are unsure what version of Node.js runs on your system, run `node -v` in a terminal window.
 
 - **npm package manager**
