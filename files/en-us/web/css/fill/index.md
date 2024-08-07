@@ -7,9 +7,11 @@ browser-compat: css.properties.fill
 
 {{CSSRef}}
 
-The **`fill`** [CSS](/en-US/docs/Web/CSS) property defines how SVG text content and SVG shape's interior canvas are filled or painted. If present, it overrides the element's {{SVGAttr("fill")}} attribute
+The **`fill`** [CSS](/en-US/docs/Web/CSS) property defines how SVG text content and the interior canvas of SVG shapes are filled or painted. If present, it overrides the element's {{SVGAttr("fill")}} attribute.
 
-The areas inside the outline of the SVG shape or text are painted. For complex shapes, the areas considered "inside" the shape to be painted are clarified by the {{cssxref("fill-rule")}} property or attribute. If subpaths are open, `fill` closes the path before painting, as if a "closepath" command were included connecting the last point of the subpath with the first point of the subpath. In other words, `fill` applies to open subpaths within `path` elements (i.e., subpaths without a closepath command) and `polyline` elements.
+The areas inside the outline of the SVG shape or text are painted. What is "inside" a shape may not always be clear. The paths defining a shape may overlap. The areas considered "inside" these complex shapes are clarified by the {{cssxref("fill-rule")}} property or attribute.
+
+If subpaths are open, `fill` closes the path before painting, as if a "closepath" command were included connecting the last point of the subpath with the first point of the subpath. In other words, `fill` applies to open subpaths within `path` elements (i.e., subpaths without a closepath command) and `polyline` elements.
 
 > [!NOTE]
 > The `fill` property only applies to {{SVGElement('circle')}}, {{SVGElement('ellipse')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, and {{SVGElement('tspan')}} elements nested in an {{SVGElement("svg")}}. It doesn't apply other SVG, HTML, or pseudo-elements.
@@ -62,7 +64,7 @@ fill: unset;
 
 - `<url>`
 
-  - : A URL reference to an SVG paint server element, such as {{SVGElement("linearGradient")}}, {{SVGElement("radialGradient")}}, or {{SVGElement("pattern")}} element. The resource reference can optionally be followed by a fall-back `<color>` or `none` which will be used as a fallback if the paint server referenced doesn't resolve.
+  - : A URL reference to an SVG paint server element, such as a {{SVGElement("linearGradient")}}, {{SVGElement("radialGradient")}}, or {{SVGElement("pattern")}}. The resource reference can optionally be followed by a `<color>` or `none`, which will be used as a fallback if the referenced paint server doesn't resolve.
 
 ## Formal definition
 
@@ -80,7 +82,7 @@ This example demonstrates how a `fill` is declared, the effect of the property, 
 
 #### HTML
 
-We have an SVG with two complex shapes defined using the SVG {{SVGElement('polygon')}} and {{SVGElement('path')}} elements. Both have the `fill` attribute set to a black (equal to the default). We add dark grey stroke of `#666` using the SVG {{SVGAttr("stroke")}} attribute but could have used the {{CSSXRef("stroke")}} property.
+We have an SVG with two complex shapes defined using the SVG {{SVGElement('polygon')}} and {{SVGElement('path')}} elements. Both have the `fill` attribute set to `#000` (equivalent to the default, `black`). We add a dark grey stroke of `#666` using the SVG {{SVGAttr("stroke")}} attribute but could have used the {{CSSXRef("stroke")}} property.
 
 ```html
 <svg viewBox="0 0 220 120" xmlns="http://www.w3.org/2000/svg">
@@ -97,7 +99,7 @@ We have an SVG with two complex shapes defined using the SVG {{SVGElement('polyg
 
 #### CSS
 
-We set `fill` values on the the shapes in the SVG.
+We set `fill` values on the shapes in the SVG.
 
 ```css hidden
 svg {
@@ -120,15 +122,15 @@ polygon {
 
 {{EmbedLiveSample("Defining fill values for SVG elements", "300", "170")}}
 
-The CSS `fill` property value overrides the SVG `fill` attribute value, with both shapes being red; the polygon's red being translucent.
+The CSS `fill` property value overrides the SVG `fill` attribute value, resulting in both shapes being filled with a red color; the polygon's red is translucent.
 
 ### Using fill keyword values
 
-This example demonstrates how the keyword values for `fill`
+This example demonstrates using keyword values for `fill`.
 
 #### HTML
 
-We include three {{SVGElement("path")}} elements, then add a {{SVGElement("marker")}} element that adds a {{SVGElement("circle")}} at every path point. We set the circle marker to be black with a grey fill with the SVG {{SVGAttr("stroke")}} and {{SVGAttr("fill")}} attributes.
+We include three {{SVGElement("path")}} elements and a {{SVGElement("marker")}} element that adds a {{SVGElement("circle")}} to every path point. We set the circle marker to be black with a grey fill with the SVG {{SVGAttr("stroke")}} and {{SVGAttr("fill")}} attributes.
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 90">
@@ -150,7 +152,7 @@ We include three {{SVGElement("path")}} elements, then add a {{SVGElement("marke
 
 #### CSS
 
-We set different `stroke` and `fill` colors on each path. The first path, the one with a red border, has its `fill` set to `none`. We set the circle markers to have a fill that is the same color as the stroke of the element they're marking with the `context-stroke` value.
+We set different `stroke` and `fill` colors on each path. The first path, the one with a red border, has its `fill` set to `none`. We set the circle marker's stroke and fill to the same color as the stroke of the element they're marking, using the `context-stroke` value.
 
 ```css hidden
 svg {
@@ -187,15 +189,15 @@ circle {
 
 {{EmbedLiveSample("Using fill keyword values", "300", "170")}}
 
-Note how the first path has a transparent background because the `fill` is `none`, overriding the default `fill` of `black`. The circles are filled with the color of the stroke. If you change the value to `context-fill`, the circles would be transparent, `lightgreen` and `lightblue` instead of `red`, `green`, and `blue`.
+Note how the first path has a transparent background because the `fill` is `none`, overriding the default `fill` of `black`. The circles are filled with the color of the stroke. If you change the value to `context-fill`, the circles will be transparent, `lightgreen` and `lightblue` instead of `red`, `green`, and `blue`.
 
 ### Fills and fallbacks
 
-This example demonstrates how to include a `url()` value with a fallback as a`fill` value.
+This example demonstrates how to include a `url()` value with a fallback as a `fill` value.
 
 #### HTML
 
-We have an SVG with two SVG {{SVGElement("polygon")}} stars and a{{SVGElement("linearGradient")}} that goes from green to gold to red.
+We have an SVG containing two {{SVGElement("polygon")}} stars and a {{SVGElement("linearGradient")}} that goes from green to gold to red.
 
 ```html
 <svg viewBox="0 0 220 120" xmlns="http://www.w3.org/2000/svg">
@@ -236,7 +238,7 @@ polygon:last-of-type {
 
 {{EmbedLiveSample("Fills and fallbacks", "300", "170")}}
 
-The first star has a gradient as a background. The second star uses the fallback value, as the element referenced in the `url()` doees not exist.
+The first star has a gradient as a background. The second star uses the fallback value, as the element referenced in the `url()` does not exist.
 
 ## Specifications
 
@@ -249,7 +251,7 @@ The first star has a gradient as a background. The second star uses the fallback
 ## See also
 
 - SVG {{SVGAttr("fill")}} attribute
-- Presentation properties: `fill`, {{cssxref("clip-rule")}}, , {{cssxref("color-interpolation-filters")}}, {{cssxref("fill-opacity")}}, {{cssxref("fill-rule")}}, {{cssxref("marker-end")}}, {{cssxref("marker-mid")}}, {{cssxref("marker-start")}}, {{cssxref("shape-rendering")}}, {{cssxref("stop-color")}}, {{cssxref("stop-opacity")}}, {{cssxref("stroke")}}, {{cssxref("stroke-dasharray")}}, {{cssxref("stroke-dashoffset")}}, {{cssxref("stroke-linecap")}}, {{cssxref("stroke-linejoin")}}, {{cssxref("stroke-miterlimit")}}, {{cssxref("stroke-opacity")}}, {{cssxref("stroke-width")}}, {{cssxref("text-anchor")}}, and {{cssxref("vector-effect")}}
+- Presentation properties: `fill`, {{cssxref("clip-rule")}}, {{cssxref("color-interpolation-filters")}}, {{cssxref("fill-opacity")}}, {{cssxref("fill-rule")}}, {{cssxref("marker-end")}}, {{cssxref("marker-mid")}}, {{cssxref("marker-start")}}, {{cssxref("shape-rendering")}}, {{cssxref("stop-color")}}, {{cssxref("stop-opacity")}}, {{cssxref("stroke")}}, {{cssxref("stroke-dasharray")}}, {{cssxref("stroke-dashoffset")}}, {{cssxref("stroke-linecap")}}, {{cssxref("stroke-linejoin")}}, {{cssxref("stroke-miterlimit")}}, {{cssxref("stroke-opacity")}}, {{cssxref("stroke-width")}}, {{cssxref("text-anchor")}}, and {{cssxref("vector-effect")}}
 - {{cssxref("opacity")}}
 - {{cssxref("background-color")}}
 - {{cssxref("color_value", "&lt;color>")}}
