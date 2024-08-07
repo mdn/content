@@ -11578,7 +11578,6 @@
 /en-US/docs/Web/CSS/calc-constant	/en-US/docs/Web/CSS/calc-keyword
 /en-US/docs/Web/CSS/clamp()	/en-US/docs/Web/CSS/clamp
 /en-US/docs/Web/CSS/color-adjust	/en-US/docs/Web/CSS/print-color-adjust
-/en-US/docs/Web/CSS/color-interpolation-filters	/en-US/docs/Web/SVG/Attribute/color-interpolation-filters
 /en-US/docs/Web/CSS/color_value/color()	/en-US/docs/Web/CSS/color_value/color
 /en-US/docs/Web/CSS/color_value/color-contrast()	/en-US/docs/Web/CSS/color_value/color-contrast
 /en-US/docs/Web/CSS/color_value/color-mix()	/en-US/docs/Web/CSS/color_value/color-mix

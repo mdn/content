@@ -6,7 +6,7 @@ page-type: web-api-static-method
 browser-compat: api.RTCRtpSender.getCapabilities_static
 ---
 
-{{DefaultAPISidebar("WebRTC")}}
+{{APIRef("WebRTC")}}
 
 The _static method_ **`RTCRtpSender.getCapabilities()`** returns an object describing the codec and header extension capabilities supported by the {{domxref("RTCRtpSender")}}.
 

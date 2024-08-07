@@ -1,5 +1,6 @@
 ---
 title: "HTML attribute: max"
+short-title: max
 slug: Web/HTML/Attributes/max
 page-type: html-attribute
 browser-compat:
