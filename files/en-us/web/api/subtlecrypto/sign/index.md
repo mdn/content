@@ -86,7 +86,7 @@ Ed25519 is a digital signature algorithm built on the [Curve25519](https://en.wi
 
 ### HMAC
 
-The HMAC algorithm calculates and verifies hash-based message authentication codes according to the [FIPS 198-1 standard](https://csrc.nist.gov/files/pubs/fips/198-1/final/docs/fips-198-1_final.pdf).
+The HMAC algorithm calculates and verifies hash-based message authentication codes according to the [FIPS 198-1 standard (PDF)](https://csrc.nist.gov/files/pubs/fips/198-1/final/docs/fips-198-1_final.pdf).
 
 The digest algorithm to use is specified in the [`HmacKeyGenParams`](/en-US/docs/Web/API/HmacKeyGenParams) object that you pass into {{domxref("SubtleCrypto.generateKey()", "generateKey()")}}, or the
 [`HmacImportParams`](/en-US/docs/Web/API/HmacImportParams) object that you pass into {{domxref("SubtleCrypto.importKey()", "importKey()")}}.
