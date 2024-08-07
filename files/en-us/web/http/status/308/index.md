@@ -36,6 +36,7 @@ Host: www.example.org
 ```http
 HTTP/1.1 308 Permanent Redirect
 Location: http://www.example.com/featured
+Content-Length: 0
 ```
 
 ## Specifications

@@ -53,5 +53,5 @@ Moved Permanently. Redirecting to /en-US/docs/Learn/JavaScript/Client-side_web_A
 
 - [Redirections in HTTP](/en-US/docs/Web/HTTP/Redirections)
 - [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
-- {{HTTPStatus("308", "308 Permanent Redirect")}} equivalent to `301` where the request method is not modified
+- {{HTTPStatus("308", "308 Permanent Redirect")}} equivalent to `301`, but the request method is not modified
 - {{HTTPStatus("302", "302 Found")}} temporary redirect
