@@ -156,7 +156,7 @@ The JavaScript console is an incredibly useful tool for debugging JavaScript tha
 
 If the developer tools are already open, click or press the Console tab.
 
-If not, Firefox allows you to open the console directly using <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd> or using the menu command: Menu ![Firefox menu](2014-01-10-13-08-08-f52b8c.png) _➤ Web Developer ➤ Web Console,_ or _Tools ➤_ _Web Developer ➤ Web Console._ On other browser, open the developer tools and then click the Console tab.
+If not, Firefox allows you to open the console directly using <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd> or using the menu command: Menu ![Firefox menu](2014-01-10-13-08-08-f52b8c.png) _➤ Web Developer ➤ Web Console,_ or _Tools ➤_ _Web Developer ➤ Web Console._ On other browsers, open the developer tools and then click the Console tab.
 
 This will give you a window like the following:
 

@@ -11,4 +11,4 @@ page-type: glossary-definition
 ## See also
 
 - [ECMAScript](https://en.wikipedia.org/wiki/ECMAScript) on Wikipedia
-- [ECMAScript](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/)
+- [ECMAScript](https://ecma-international.org/publications-and-standards/standards/ecma-262/)

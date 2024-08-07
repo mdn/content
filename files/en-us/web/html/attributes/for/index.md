@@ -1,5 +1,6 @@
 ---
 title: "HTML attribute: for"
+short-title: for
 slug: Web/HTML/Attributes/for
 page-type: html-attribute
 browser-compat:

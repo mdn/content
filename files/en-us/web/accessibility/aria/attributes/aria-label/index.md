@@ -11,7 +11,7 @@ The `aria-label` attribute defines a string value that labels an interactive ele
 
 ## Description
 
-Sometimes, the default {{Glossary("accessible_name", "accessible name")}} of an element is missing or the accessible name does not accurately describe the contents of the element and there is no content visible in the DOM that can be associated with the object to give it meaning. A common example of such an element is a button containing an SVG or an icon font without any text. (Check out this [video about you shouldn't use icon fonts](https://www.youtube.com/watch?v=9xXBYcWgCHA).)
+Sometimes, the default {{Glossary("accessible_name", "accessible name")}} of an element is missing or the accessible name does not accurately describe the contents of the element and there is no content visible in the DOM that can be associated with the object to give it meaning. A common example of such an element is a button containing an SVG icon without any text.
 
 In cases where an interactive element has no accessible name or an accessible name is not accurate and there is no content visible in the DOM that can be referenced via the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) attribute, the `aria-label` attribute can be used to define a string that labels the interactive element on which it is set. This provides the interactive element with its accessible name.
 
