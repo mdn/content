@@ -687,6 +687,7 @@
 /en-US/docs/CSS/dominant-baseline	/en-US/docs/Web/SVG/Attribute/dominant-baseline
 /en-US/docs/CSS/element	/en-US/docs/Web/CSS/element
 /en-US/docs/CSS/empty-cells	/en-US/docs/Web/CSS/empty-cells
+/en-US/docs/CSS/fill	/en-US/docs/Web/SVG/Attribute/fill
 /en-US/docs/CSS/fill-opacity	/en-US/docs/Web/SVG/Attribute/fill-opacity
 /en-US/docs/CSS/fill-rule	/en-US/docs/Web/SVG/Attribute/fill-rule
 /en-US/docs/CSS/filter	/en-US/docs/Web/CSS/filter
@@ -11610,8 +11611,6 @@
 /en-US/docs/Web/CSS/element()	/en-US/docs/Web/CSS/element
 /en-US/docs/Web/CSS/env()	/en-US/docs/Web/CSS/env
 /en-US/docs/Web/CSS/fallback	/en-US/docs/Web/CSS/@counter-style/fallback
-/en-US/docs/Web/CSS/fill-opacity	/en-US/docs/Web/SVG/Attribute/fill-opacity
-/en-US/docs/Web/CSS/fill-rule	/en-US/docs/Web/SVG/Attribute/fill-rule
 /en-US/docs/Web/CSS/filter-function/blur()	/en-US/docs/Web/CSS/filter-function/blur
 /en-US/docs/Web/CSS/filter-function/brightness()	/en-US/docs/Web/CSS/filter-function/brightness
 /en-US/docs/Web/CSS/filter-function/contrast()	/en-US/docs/Web/CSS/filter-function/contrast
