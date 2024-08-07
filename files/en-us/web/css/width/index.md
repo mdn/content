@@ -7,7 +7,7 @@ browser-compat: css.properties.width
 
 {{CSSRef}}
 
-The **`width`** CSS property sets an element's width. By default, it sets the width of the [content area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content_area), but if {{cssxref("box-sizing")}} is set to `border-box`, it sets the width of the [border area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#border_area).
+The **`width`** [CSS](/en-US/docs/Web/CSS) property sets an element's width. By default, it sets the width of the [content area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content_area), but if {{cssxref("box-sizing")}} is set to `border-box`, it sets the width of the [border area](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#border_area).
 
 {{EmbedInteractiveExample("pages/css/width.html")}}
 
@@ -16,12 +16,17 @@ The specified value of `width` applies to the content area so long as its value 
 - If the value for `width` is less than the value for `min-width`, then `min-width` overrides `width`.
 - If the value for `width` is greater than the value for `max-width`, then `max-width` overrides `width`.
 
+> [!NOTE]
+> As a geometric property, `width` also applies to the {{SVGElement("svg")}}, {{SVGElement("rect")}}, {{SVGElement("image")}}, and {{SVGElement("foreignObject")}} SVG elements, with `auto` resolving to `100%` for `<svg>` and `0` for other elements, and percent values being relative to the SVG viewport width for `<rect>`. The CSS `width` property value overrides any SVG {{SVGAttr("width")}} attribute value set on the SVG element.
+
 ## Syntax
 
 ```css
 /* <length> values */
 width: 300px;
 width: 25em;
+width: anchor-size(--myAnchor inline, 120%);
+width: minmax(100px, anchor-size(width));
 
 /* <percentage> value */
 width: 75%;
@@ -54,11 +59,11 @@ width: unset;
 - `min-content`
   - : The intrinsic minimum width.
 - `fit-content`
-  - : Use the available space, but not more than [max-content](/en-US/docs/Web/CSS/max-content), i.e `min(max-content, max(min-content, stretch))`.
-- `fit-content({{cssxref("&lt;length-percentage&gt;")}})` {{Experimental_Inline}}
+  - : Use the available space, but not more than [max-content](/en-US/docs/Web/CSS/max-content), i.e. `min(max-content, max(min-content, stretch))`.
+- `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
   - : Uses the fit-content formula with the available space replaced by the specified argument, i.e. `min(max-content, max(min-content, <length-percentage>))`.
 
-## Accessibility concerns
+## Accessibility
 
 Ensure that elements set with a `width` aren't truncated and/or don't obscure other content when the page is zoomed to increase text size.
 
@@ -84,7 +89,7 @@ p.goldie {
 ```
 
 ```html
-<p class="goldie">The Mozilla community produces a lot of great software.</p>
+<p class="goldie">The MDN community writes really great documentation.</p>
 ```
 
 {{EmbedLiveSample('Default_width', '500px', '64px')}}
@@ -135,15 +140,12 @@ p.goldie {
 ```css
 p.maxgreen {
   background: lightgreen;
-  width: intrinsic; /* Safari/WebKit uses a non-standard name */
-  width: -moz-max-content; /* Firefox/Gecko */
-  width: -webkit-max-content; /* Chrome */
   width: max-content;
 }
 ```
 
 ```html
-<p class="maxgreen">The Mozilla community produces a lot of great software.</p>
+<p class="maxgreen">The MDN community writes really great documentation.</p>
 ```
 
 {{EmbedLiveSample('Example using "max-content"', '500px', '64px')}}
@@ -153,14 +155,12 @@ p.maxgreen {
 ```css
 p.minblue {
   background: lightblue;
-  width: -moz-min-content; /* Firefox */
-  width: -webkit-min-content; /* Chrome */
   width: min-content;
 }
 ```
 
 ```html
-<p class="minblue">The Mozilla community produces a lot of great software.</p>
+<p class="minblue">The MDN community writes really great documentation.</p>
 ```
 
 {{EmbedLiveSample('Example using "min-content"', '500px', '155px')}}
@@ -180,3 +180,4 @@ p.minblue {
 - {{cssxref("box-sizing")}}
 - {{cssxref("min-width")}}, {{cssxref("max-width")}}
 - The mapped logical properties: {{cssxref("block-size")}}, {{cssxref("inline-size")}}
+- {{cssxref("anchor-size()")}}

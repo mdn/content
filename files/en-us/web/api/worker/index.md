@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.Worker
 ---
 
-{{APIRef("Web Workers API")}}
+{{APIRef("Web Workers API")}}{{AvailableInWorkers("window_and_worker_except_service")}}
 
 The **`Worker`** interface of the [Web Workers API](/en-US/docs/Web/API/Web_Workers_API) represents a background task that can be created via script, which can send messages back to its creator.
 
@@ -46,7 +46,7 @@ _Inherits methods from its parent, {{domxref("EventTarget")}}._
 
 ## Example
 
-The following code snippet creates a {{domxref("Worker")}} object using the {{domxref("Worker.Worker", "Worker()")}} constructor, then uses the worker object:
+The following code snippet creates a `Worker` object using the {{domxref("Worker.Worker", "Worker()")}} constructor, then uses the worker object:
 
 ```js
 const myWorker = new Worker("/worker.js");

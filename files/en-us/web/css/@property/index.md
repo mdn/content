@@ -7,7 +7,7 @@ browser-compat: css.at-rules.property
 
 {{CSSRef}}
 
-The **`@property`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) is part of the [CSS Houdini](/en-US/docs/Web/API/Houdini_APIs) umbrella of APIs. It allows developers to explicitly define their {{cssxref('--*', 'CSS custom properties')}}, allowing for property type checking and constraining, setting default values, and defining whether a custom property can inherit values or not.
+The **`@property`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) is part of the [CSS Houdini](/en-US/docs/Web/API/Houdini_APIs) umbrella of APIs. It allows developers to explicitly define their [CSS custom properties](/en-US/docs/Web/CSS/--*), allowing for property type checking and constraining, setting default values, and defining whether a custom property can inherit values or not.
 
 The `@property` rule represents a custom property registration directly in a stylesheet without having to run any JS. Valid `@property` rules result in a registered custom property, as if {{domxref('CSS.registerProperty_static', 'registerProperty()')}} had been called with equivalent parameters.
 
@@ -37,7 +37,7 @@ The `@property` rule represents a custom property registration directly in a sty
   - : Sets the initial value for the property.
 
 The `@property` rule must include both the {{cssxref("@property/syntax","syntax")}} and {{cssxref("@property/inherits","inherits")}} descriptors; if either are missing, the entire `@property` rule is invalid and ignored.
-The {{cssxref("@property/initial-value","initial-value")}} descriptor is also required, unless the syntax is the [`*` universal syntax definition](https://drafts.css-houdini.org/css-properties-values-api/#universal-syntax-definition) (e.g., `initial-value: *`).
+The {{cssxref("@property/initial-value","initial-value")}} descriptor is also required, unless the syntax is the [`*` universal syntax definition](https://drafts.css-houdini.org/css-properties-values-api/#universal-syntax-definition) (e.g., `syntax: "*"`).
 If the `initial-value` descriptor is required and omitted, the entire `@property` rule is invalid and ignored.
 
 Unknown descriptors are invalid and ignored, but do not invalidate the `@property` rule.

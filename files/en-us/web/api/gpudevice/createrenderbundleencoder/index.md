@@ -42,7 +42,7 @@ A {{domxref("GPURenderBundleEncoder")}} object instance.
 
 ## Examples
 
-In the WebGPU Samples [Animometer example](https://webgpu.github.io/webgpu-samples/samples/animometer), numerous similar operations are done on many different objects simultaneously. A bundle of commands is encoded using the following function:
+In the WebGPU Samples [Animometer example](https://webgpu.github.io/webgpu-samples/samples/animometer/), numerous similar operations are done on many different objects simultaneously. A bundle of commands is encoded using the following function:
 
 ```js
 function recordRenderPass(

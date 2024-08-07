@@ -17,7 +17,7 @@ See the {{domxref("IDBObjectStore.add")}} method for an _insert only_ method.
 
 Bear in mind that if you have a {{domxref("IDBCursor","IDBCursor")}} to the record you
 want to update, updating it with {{domxref("IDBCursor.update()")}} is preferable to
-using {{domxref("IDBObjectStore.put()")}}. Doing so makes it clear that an existing
+using `IDBObjectStore.put()`. Doing so makes it clear that an existing
 record will be updated, instead of a new record being inserted.
 
 ## Syntax
@@ -79,7 +79,7 @@ const objectStore = db
   .transaction(["toDoList"], "readwrite")
   .objectStore("toDoList");
 
-// Get the to-do list object that has this title as it's title
+// Get the to-do list object that has this title as its title
 const objectStoreTitleRequest = objectStore.get(title);
 
 objectStoreTitleRequest.onsuccess = () => {

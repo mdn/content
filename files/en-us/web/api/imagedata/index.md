@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.ImageData
 ---
 
-{{APIRef("Canvas API")}} {{AvailableInWorkers}}
+{{APIRef("Canvas API")}}{{AvailableInWorkers}}
 
 The **`ImageData`** interface represents the underlying pixel data of an area of a {{HTMLElement("canvas")}} element.
 

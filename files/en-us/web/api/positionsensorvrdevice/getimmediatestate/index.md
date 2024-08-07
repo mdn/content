@@ -31,7 +31,7 @@ A {{domxref("VRPose")}} object.
 
 ## Examples
 
-The following demo uses the WebVR API to update the view of a simple {{domxref("CanvasRenderingContext2D","2D canvas")}} scene on each frame of a {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} loop. The main function that updates the view data is as follows:
+The following demo uses the WebVR API to update the view of a simple {{domxref("CanvasRenderingContext2D")}} scene on each frame of a {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} loop. The main function that updates the view data is as follows:
 
 ```js
 function setView() {

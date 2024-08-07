@@ -78,7 +78,8 @@ const myImageData = ctx.getImageData(left, top, width, height);
 
 This method returns an `ImageData` object representing the pixel data for the area of the canvas whose corners are represented by the points (`left`, `top`), (`left+width`, `top`), (`left`, `top+height`), and (`left+width`, `top+height`). The coordinates are specified in canvas coordinate space units.
 
-> **Note:** Any pixels outside the canvas are returned as transparent black in the resulting `ImageData` object.
+> [!NOTE]
+> Any pixels outside the canvas are returned as transparent black in the resulting `ImageData` object.
 
 This method is also demonstrated in the article [Manipulating video using canvas](/en-US/docs/Web/API/Canvas_API/Manipulating_video_using_canvas).
 
@@ -283,7 +284,8 @@ Also see the source code — [HTML](https://github.com/mdn/dom-examples/blob/mai
 
 The {{domxref("HTMLCanvasElement")}} provides a `toDataURL()` method, which is useful when saving images. It returns a [data URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) containing a representation of the image in the format specified by the `type` parameter (defaults to [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics)). The returned image is in a resolution of 96 dpi.
 
-> **Note:** Be aware that if the canvas contains any pixels that were obtained from another {{Glossary("origin")}} without using CORS, the canvas is **tainted** and its contents can no longer be read and saved.
+> [!NOTE]
+> Be aware that if the canvas contains any pixels that were obtained from another {{Glossary("origin")}} without using CORS, the canvas is **tainted** and its contents can no longer be read and saved.
 > See [Security and tainted canvases](/en-US/docs/Web/HTML/CORS_enabled_image#security_and_tainted_canvases).
 
 - {{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/png')")}}
@@ -291,11 +293,11 @@ The {{domxref("HTMLCanvasElement")}} provides a `toDataURL()` method, which is u
 - {{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/jpeg', quality)")}}
   - : Creates a JPG image. Optionally, you can provide a quality in the range from 0 to 1, with one being the best quality and with 0 almost not recognizable but small in file size.
 
-Once you have generated a data URL from your canvas, you are able to use it as the source of any {{HTMLElement("image")}} or put it into a hyperlink with a [download attribute](/en-US/docs/Web/HTML/Element/a#download) to save it to disc, for example.
+Once you have generated a data URL from your canvas, you are able to use it as the source of any {{HTMLElement("img")}} or put it into a hyperlink with a [download attribute](/en-US/docs/Web/HTML/Element/a#download) to save it to disc, for example.
 
 You can also create a {{domxref("Blob")}} from the canvas.
 
-- {{domxref("HTMLCanvasElement.toBlob", "canvas.toBlob(_callback_, _type_, _encoderOptions_)")}}
+- {{domxref("HTMLCanvasElement.toBlob", "canvas.toBlob(callback, type, encoderOptions)")}}
   - : Creates a `Blob` object representing the image contained in the canvas.
 
 ## See also

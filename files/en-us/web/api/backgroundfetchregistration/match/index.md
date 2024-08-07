@@ -8,7 +8,7 @@ status:
 browser-compat: api.BackgroundFetchRegistration.match
 ---
 
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
+{{APIRef("Background Fetch API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 The **`match()`** method of the {{domxref("BackgroundFetchRegistration")}} interface returns the first matching {{domxref("BackgroundFetchRecord")}}.
 
@@ -29,19 +29,18 @@ match(request, options)
   - : An object that sets options for the `match` operation. The available
     options are:
 
-    - `ignoreSearch`
+    - `ignoreSearch` {{optional_inline}}
       - : A boolean value that specifies whether to
         ignore the query string in the URL. For example, if set to
         `true` the `?value=bar` part of
         `http://foo.com/?value=bar` would be ignored when performing a match.
         It defaults to `false`.
-    - `ignoreMethod`
+    - `ignoreMethod` {{optional_inline}}
       - : A boolean value. When `true`,
         prevents matching operations from validating the {{domxref("Request")}} `http` method.
         If `false` (the default) only `GET` and `HEAD` are allowed.
-    - `ignoreVary`
-      - : A boolean value. When `true` indicates that the [`VARY`](/en-US/docs/Web/HTTP/Headers/Vary)
-        header should be ignored.
+    - `ignoreVary` {{optional_inline}}
+      - : A boolean value. When `true` indicates that the {{HTTPHeader("Vary")}} header should be ignored.
         It defaults to `false`.
 
 ### Return value

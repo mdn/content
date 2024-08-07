@@ -69,10 +69,12 @@ The `clip-path` property is specified as one or a combination of the values list
       - : Defines an ellipse using two radii and a position.
     - {{cssxref("basic-shape/polygon","polygon()")}}
       - : Defines a polygon using an SVG filling rule and a set of vertices.
-    - {{cssxref("path","path()")}}
+    - {{cssxref("basic-shape/path","path()")}}
       - : Defines a shape using an optional SVG filling rule and an SVG path definition.
     - {{cssxref("basic-shape/rect","rect()")}}
       - : Defines a rectangle using the specified distances from the edges of the reference box.
+    - {{cssxref("basic-shape/shape","shape()")}} {{Experimental_Inline}}
+      - : Defines a shape using an optional SVG filling rule and shape commands for lines, curves, and arcs.
     - {{cssxref("basic-shape/xywh","xywh()")}}
       - : Defines a rectangle using the specified distances from the top and left edges of the reference box and the specified width and height of the rectangle.
 
@@ -98,7 +100,8 @@ The `clip-path` property is specified as one or a combination of the values list
 - `none`
   - : No clipping path is created.
 
-> **Note:** A computed value other than **`none`** results in the creation of a new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) the same way that CSS {{cssxref("opacity")}} does for values other than `1`.
+> [!NOTE]
+> A computed value other than **`none`** results in the creation of a new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) the same way that CSS {{cssxref("opacity")}} does for values other than `1`.
 
 ## Formal definition
 

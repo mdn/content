@@ -54,9 +54,11 @@ The [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/JavaScript_interface/i
 }
 ```
 
-> **Note:** Usually we only care about the instance, but it's useful to have the module in case we want to cache it, share it with another worker or window via [`postMessage()`](/en-US/docs/Web/API/MessagePort/postMessage), or create more instances.
+> [!NOTE]
+> Usually we only care about the instance, but it's useful to have the module in case we want to cache it, share it with another worker or window via [`postMessage()`](/en-US/docs/Web/API/MessagePort/postMessage), or create more instances.
 
-> **Note:** The second overload form takes a [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) object as an argument, and returns a promise directly containing the instance object as the result. See the [Second overload example](/en-US/docs/WebAssembly/JavaScript_interface/instantiate_static#second_overload_example).
+> [!NOTE]
+> The second overload form takes a [`WebAssembly.Module`](/en-US/docs/WebAssembly/JavaScript_interface/Module) object as an argument, and returns a promise directly containing the instance object as the result. See the [Second overload example](/en-US/docs/WebAssembly/JavaScript_interface/instantiate_static#second_overload_example).
 
 ### Running your WebAssembly code
 
@@ -69,7 +71,7 @@ WebAssembly.instantiateStreaming(fetch("myModule.wasm"), importObject).then(
     obj.instance.exports.exported_func();
 
     // or access the buffer contents of an exported memory:
-    const i32 = new Uint32Array(obj.instance.exports.memory.buffer);
+    const dv = new DataView(obj.instance.exports.memory.buffer);
 
     // or access the elements of an exported table:
     const table = obj.instance.exports.table;
@@ -78,7 +80,8 @@ WebAssembly.instantiateStreaming(fetch("myModule.wasm"), importObject).then(
 );
 ```
 
-> **Note:** For more information on how exporting from a WebAssembly module works, have a read of [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API), and [Understanding WebAssembly text format](/en-US/docs/WebAssembly/Understanding_the_text_format).
+> [!NOTE]
+> For more information on how exporting from a WebAssembly module works, have a read of [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Using_the_JavaScript_API), and [Understanding WebAssembly text format](/en-US/docs/WebAssembly/Understanding_the_text_format).
 
 ## Using XMLHttpRequest
 
@@ -105,4 +108,5 @@ request.onload = () => {
 };
 ```
 
-> **Note:** You can see an example of this in action in [xhr-wasm.html](https://mdn.github.io/webassembly-examples/js-api-examples/xhr-wasm.html).
+> [!NOTE]
+> You can see an example of this in action in [xhr-wasm.html](https://mdn.github.io/webassembly-examples/js-api-examples/xhr-wasm.html).

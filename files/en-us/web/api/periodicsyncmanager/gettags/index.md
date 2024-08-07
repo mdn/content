@@ -8,7 +8,7 @@ status:
 browser-compat: api.PeriodicSyncManager.getTags
 ---
 
-{{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}
+{{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 The **`getTags()`** method of the
 {{domxref("PeriodicSyncManager")}} interface returns a {{jsxref('Promise')}} that

@@ -31,6 +31,13 @@ environment.
 - {{DOMxRef("BluetoothDevice.forget()")}} {{Experimental_Inline}}
   - : Provides a way for the page to revoke access to a device the user has granted access to.
 
+## Events
+
+Listen to these events using {{domxref("EventTarget.addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface.
+
+- {{DOMxRef("BluetoothDevice/gattserverdisconnected_event", "gattserverdisconnected")}} {{experimental_inline}}
+  - : Fired on a device when an active GATT connection is lost.
+
 ## Specifications
 
 {{Specifications}}

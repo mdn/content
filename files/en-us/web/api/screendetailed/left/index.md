@@ -15,7 +15,8 @@ The **`left`** read-only property of the
 
 This is equal to the true left-hand edge, ignoring any OS UI element drawn at the left of the screen. Windows cannot be placed in those areas; to get the left-hand coordinate of the screen area that windows can be placed in, use {{domxref("ScreenDetailed.availLeft")}}.
 
-> **Note:** In Firefox, a non-standard implementation of the `left` property is available on the `Screen` interface. See the [Non-standard example](#non-standard_example) below for usage details, and see the [`Screen`](/en-US/docs/Web/API/Screen#browser_compatibility) reference page for browser support information relating to the non-standard implementation.
+> [!NOTE]
+> In Firefox, a non-standard implementation of the `left` property is available on the `Screen` interface. See the [Non-standard example](#non-standard_example) below for usage details, and see the [`Screen`](/en-US/docs/Web/API/Screen#browser_compatibility) reference page for browser support information relating to the non-standard implementation.
 
 ## Value
 

@@ -89,9 +89,9 @@ async function hashTheseFiles(e) {
   // iterate over each file in file select input
   for (const file of this.files) {
     // calculate its hash and list it in the output element.
-    outHTML += `${file.name}    ${await fileHash(file)}`;
+    outHTML += `${file.name}    ${await fileHash(file)}\n`;
   }
-  output.innerHTML = outHTML;
+  output.innerText = outHTML;
 }
 ```
 
@@ -115,7 +115,8 @@ One place it may be worthwhile, is if you want to test a file from a third party
 
 A phrase you may have heard before is _"Salting the hash"_. It's not immediately relevant to our topics at hand, but it is good to know about.
 
-> **Note:** this section is talking about password security and the hash functions provided by SubtleCrypto are not suitable for this use case. For these purposes you need expensive slow hash functions like `scrypt` and `bcrypt`. SHA is designed to be pretty fast and efficient, which makes it unsuitable for password hashing. This section is purely for your interest — do not use the Web Crypto API to hash passwords on the client.
+> [!NOTE]
+> This section is talking about password security and the hash functions provided by SubtleCrypto are not suitable for this use case. For these purposes you need expensive slow hash functions like `scrypt` and `bcrypt`. SHA is designed to be pretty fast and efficient, which makes it unsuitable for password hashing. This section is purely for your interest — do not use the Web Crypto API to hash passwords on the client.
 
 A popular use case for hashing is passwords, you never ever want to store a users password in plain text, its simply a terrible idea. Instead you store a hash of the users password, so the original password cannot be recovered should a hacker obtain your username and password database. The eagle eyed among may notice you can still work out the original passwords by comparing the hashes from lists of known passwords against the obtained password hash list. Concatenating a string to the passwords changes the hash so it no longer matches. This is known as **salting**. Another tricky problem is if you use the same salt for each password, then passwords with matching hashes will also be the same original password. Thus if you know one then you know all matching passwords.
 
@@ -192,9 +193,9 @@ function hashToString(arrayBuffer) {
 async function hashTheseFiles(e) {
   let outHTML = "";
   for (const file of this.files) {
-    outHTML += `${file.name}    ${await fileHash(file)}`;
+    outHTML += `${file.name}    ${await fileHash(file)}\n`;
   }
-  output.innerHTML = outHTML;
+  output.innerText = outHTML;
 }
 ```
 

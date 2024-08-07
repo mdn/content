@@ -40,11 +40,15 @@ document.onafterscriptexecute = finished;
 
 [View Live Example](https://mdn.dev/archives/media/samples/html/currentScript.html)
 
+## Specifications
+
+Not part of any specification.
+
 ## Browser compatibility
 
 {{Compat}}
 
 ## See also
 
-- {{domxref("Document.beforescriptexecute_event")}}
+- {{domxref("Document.beforescriptexecute_event", "beforescriptexecute")}} event of `Document`
 - {{domxref("Document.currentScript")}}

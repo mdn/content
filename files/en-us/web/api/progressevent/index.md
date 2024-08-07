@@ -21,11 +21,11 @@ The **`ProgressEvent`** interface represents events measuring progress of an und
 _Also inherits properties from its parent {{domxref("Event")}}_.
 
 - {{domxref("ProgressEvent.lengthComputable")}} {{ReadOnlyInline}}
-  - : A boolean flag indicating if the total work to be done, and the amount of work already done, by the underlying process is calculable. In other words, it tells if the progress is measurable or not.
+  - : A boolean flag indicating if the ratio between the size of the data already transmitted or processed (`loaded`), and the total size of the data (`total`), is calculable. In other words, it tells if the progress is measurable or not.
 - {{domxref("ProgressEvent.loaded")}} {{ReadOnlyInline}}
-  - : A 64-bit unsigned integer value indicating the amount of work already performed by the underlying process. The ratio of work done can be calculated by dividing `total` by the value of this property. When downloading a resource using HTTP, this only counts the body of the HTTP message, and doesn't include headers and other overhead.
+  - : A 64-bit unsigned integer indicating the size, in bytes, of the data already transmitted or processed. The ratio can be calculated by dividing `ProgressEvent.total` by the value of this property. When downloading a resource using HTTP, this only counts the body of the HTTP message, and doesn't include headers and other overhead. Note that for compressed requests of unknown total size, `loaded` might contain the size of the compressed, or decompressed, data, depending on the browser. As of 2024, it contains the size of the compressed data in Firefox, and the size of the uncompressed data in Chrome.
 - {{domxref("ProgressEvent.total")}} {{ReadOnlyInline}}
-  - : A 64-bit unsigned integer representing the total amount of work that the underlying process is in the progress of performing. When downloading a resource using HTTP, this is the `Content-Length` (the size of the body of the message), and doesn't include the headers and other overhead.
+  - : A 64-bit unsigned integer indicating the total size, in bytes, of the data being transmitted or processed. When downloading a resource using HTTP, this value is taken from the `Content-Length` response header. It only counts the body of the HTTP message, and doesn't include headers and other overhead.
 
 ## Instance methods
 

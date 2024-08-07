@@ -10,7 +10,8 @@ The [Window Management API](/en-US/docs/Web/API/Window_Management_API) introduce
 
 The primary screen can usually be specified by the user via OS settings, and generally contains OS UI features such as the taskbar/icon dock.
 
-> **Note:** Positive coordinate values are to the right and downwards on the screen arrangement, while negative ones are to the left and upwards.
+> [!NOTE]
+> Positive coordinate values are to the right and downwards on the screen arrangement, while negative ones are to the left and upwards.
 
 ## Effects on existing web platform features
 
@@ -20,7 +21,8 @@ The multi-screen origin is relevant to the following APIs:
 - The values of {{domxref("Window.screenLeft")}}, {{domxref("Window.screenTop")}}, {{domxref("Window.screenX")}}, {{domxref("Window.screenY")}} for each window are reported relative to the multi-screen origin.
 - When using {{domxref("Window.moveTo()")}} and {{domxref("Window.open()")}}, windows are positioned relative to the multi-screen origin.
 
-> **Note:** Not all browsers officially support multi-screen origin, but some have their own non-standard implementations. You are advised to check the browser compatibility information of the above features for the behavior in each browser.
+> [!NOTE]
+> Not all browsers officially support multi-screen origin, but some have their own non-standard implementations. You are advised to check the browser compatibility information of the above features for the behavior in each browser.
 
 ## Visual examples
 

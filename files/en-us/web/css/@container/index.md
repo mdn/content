@@ -9,7 +9,7 @@ browser-compat: css.at-rules.container
 
 The **`@container`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) is a conditional group rule that applies styles to a [containment context](/en-US/docs/Web/CSS/CSS_containment/Container_queries#naming_containment_contexts).
 Style declarations are filtered by a condition and applied to the container if the condition is true.
-The condition is evaluated when the container changes size.
+The condition is evaluated when the container size or [`<style-feature>`](#container_style_queries) value changes.
 
 The {{cssxref("container-name")}} property specifies a list of query container names. These names can be used by `@container` rules to filter which query containers are targeted. The optional, case-sensitive `<container-name>` filters the query containers that are targeted by the query.
 
@@ -154,11 +154,11 @@ You can then use the `@container` at-rule to apply styles to the element with th
 ```js hidden
 const post = document.querySelector(".post");
 const span = document.createElement("span");
-span.innerHTML = ".post width: " + post.clientWidth + "px";
+span.textContent = ".post width: " + post.clientWidth + "px";
 post.parentNode.insertBefore(span, post.nextSibling);
 // update on resize
 window.addEventListener("resize", () => {
-  span.innerHTML = ".post width: " + post.clientWidth + "px";
+  span.textContent = ".post width: " + post.clientWidth + "px";
 });
 ```
 
@@ -281,7 +281,8 @@ The following container query checks if the {{cssxref("computed_value")}} of the
 }
 ```
 
-> **Note:** If a custom property has a value of `blue`, the equivalent hexidecimal code `#0000ff` will not match unless the property has been defined as a color with {{cssxref("@property")}} so the browser can properly compare computed values.
+> [!NOTE]
+> If a custom property has a value of `blue`, the equivalent hexidecimal code `#0000ff` will not match unless the property has been defined as a color with {{cssxref("@property")}} so the browser can properly compare computed values.
 
 Style features that query a shorthand property are true if the computed values match for each of its longhand properties, and false otherwise. For example, `@container style(border: 2px solid red)` will resolve to true if all 12 longhand properties (`border-bottom-style`, etc.) that make up that shorthand are true.
 
@@ -297,9 +298,10 @@ The global `revert` and `revert-layer` are invalid as values in a `<style-featur
 
 ## See also
 
-- [Container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries)
+- [Using container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries)
 - [Using container size and style queries](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)
 - {{Cssxref("container-name")}}
 - {{Cssxref("container-type")}}
 - {{Cssxref("contain")}}
 - {{Cssxref("content-visibility")}}
+- [CSS containment module](/en-US/docs/Web/CSS/CSS_containment)

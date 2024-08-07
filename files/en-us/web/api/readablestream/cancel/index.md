@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.ReadableStream.cancel
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`cancel()`** method of the {{domxref("ReadableStream")}} interface returns a {{jsxref("Promise")}} that resolves when the stream is canceled.
 

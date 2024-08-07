@@ -25,7 +25,7 @@ _This interface inherits properties from the {{domxref("EventTarget")}} interfac
 
 Note that properties which are objects (e.g., for overriding the prototype of built-in elements) are listed in a separate section below.
 
-- {{domxref("caches", "Window.caches")}} {{ReadOnlyInline}}
+- {{domxref("Window.caches")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns the {{domxref("CacheStorage")}} object associated with the current context. This object enables functionality such as storing assets for offline use, and generating custom responses to requests.
 - {{domxref("Window.navigator", "Window.clientInformation")}} {{ReadOnlyInline}}
   - : An alias for {{domxref("Window.navigator")}}.
@@ -37,10 +37,10 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns a reference to the {{domxref("CookieStore")}} object for the current document context.
 - {{domxref("Window.credentialless")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a boolean that indicates whether the current document was loaded inside a credentialless {{htmlelement("iframe")}}. See [IFrame credentialless](/en-US/docs/Web/Security/IFrame_credentialless) for more details.
-- {{domxref("crossOriginIsolated", "Window.crossOriginIsolated")}} {{ReadOnlyInline}}
+- {{domxref("Window.crossOriginIsolated")}} {{ReadOnlyInline}}
   - : Returns a boolean value that indicates whether the website is in a cross-origin isolation state.
-- {{domxref("crypto_property", "Window.crypto")}} {{ReadOnlyInline}}
-  - : Returns the browser crypto object.
+- {{domxref("Window.crypto")}} {{ReadOnlyInline}}
+  - : Returns the {{domxref("Crypto")}} object associated to the global object.
 - {{domxref("Window.customElements")}} {{ReadOnlyInline}}
   - : Returns a reference to the {{domxref("CustomElementRegistry")}} object, which can be used to register new [custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements) and get information about previously registered custom elements.
 - {{domxref("Window.devicePixelRatio")}} {{ReadOnlyInline}}
@@ -49,7 +49,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns a reference to the document that the window contains.
 - {{domxref("Window.documentPictureInPicture")}} {{ReadOnlyInline}} {{experimental_inline}} {{SecureContext_Inline}}
   - : Returns a reference to the [document Picture-in-Picture](/en-US/docs/Web/API/Document_Picture-in-Picture_API) window for the current document context.
-- {{domxref("Window.fence")}} {{ReadOnlyInline}}
+- {{domxref("Window.fence")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : Returns a {{domxref("Fence")}} object instance for the current document context. Available only to documents embedded inside a {{htmlelement("fencedframe")}}.
 - {{domxref("Window.frameElement")}} {{ReadOnlyInline}}
   - : Returns the element in which the window is embedded, or null if the window is not embedded.
@@ -59,13 +59,13 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : This property indicates whether the window is displayed in full screen or not.
 - {{domxref("Window.history")}} {{ReadOnlyInline}}
   - : Returns a reference to the history object.
-- {{domxref("indexedDB", "Window.indexedDB")}} {{ReadOnlyInline}}
+- {{domxref("Window.indexedDB")}} {{ReadOnlyInline}}
   - : Provides a mechanism for applications to asynchronously access capabilities of indexed databases; returns an {{domxref("IDBFactory")}} object.
 - {{domxref("Window.innerHeight")}} {{ReadOnlyInline}}
   - : Gets the height of the content area of the browser window including, if rendered, the horizontal scrollbar.
 - {{domxref("Window.innerWidth")}} {{ReadOnlyInline}}
   - : Gets the width of the content area of the browser window including, if rendered, the vertical scrollbar.
-- {{domxref("isSecureContext", "Window.isSecureContext")}} {{ReadOnlyInline}}
+- {{domxref("Window.isSecureContext")}} {{ReadOnlyInline}}
   - : Returns a boolean indicating whether the current context is secure (`true`) or not (`false`).
 - {{domxref("Window.launchQueue")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : When a [progressive web app](/en-US/docs/Web/Progressive_web_apps) (PWA) is launched with a [`launch_handler`](/en-US/docs/Web/Manifest/launch_handler) `client_mode` value of `focus-existing`, `navigate-new`, or `navigate-existing`, the `launchQueue` provides access to the {{domxref("LaunchQueue")}} class, which allows custom launch navigation handling to be implemented for the PWA.
@@ -86,12 +86,12 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
 - {{domxref("Window.name")}}
   - : Gets/sets the name of the window.
 - {{domxref("Window.navigation")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns the current `window`'s associated {{domxref("Navigation")}} object. The entry point for the {{domxref("Navigation API")}}.
+  - : Returns the current `window`'s associated {{domxref("Navigation")}} object. The entry point for the [Navigation API](/en-US/docs/Web/API/Navigation_API).
 - {{domxref("Window.navigator")}} {{ReadOnlyInline}}
   - : Returns a reference to the navigator object.
 - {{domxref("Window.opener")}}
   - : Returns a reference to the window that opened this current window.
-- {{domxref("origin", "Window.origin")}} {{ReadOnlyInline}}
+- {{domxref("Window.origin")}} {{ReadOnlyInline}}
   - : Returns the global object's origin, serialized as a string.
 - {{domxref("Window.originAgentCluster")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns `true` if this window belongs to an origin-keyed agent cluster.
@@ -105,11 +105,11 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : An alias for {{domxref("window.scrollY")}}.
 - {{domxref("Window.parent")}} {{ReadOnlyInline}}
   - : Returns a reference to the parent of the current window or subframe.
-- {{domxref("performance_property", "Window.performance")}} {{ReadOnlyInline}}
+- {{domxref("Window.performance")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("Performance")}} object, which includes the {{domxref("Performance.timing", "timing")}} and {{domxref("Performance.navigation", "navigation")}} attributes, each of which is an object providing [performance-related](/en-US/docs/Web/API/Performance_API/Navigation_timing) data. See also [Using Navigation Timing](/en-US/docs/Web/API/Performance_API/Navigation_timing) for additional information and examples.
 - {{domxref("Window.personalbar")}} {{ReadOnlyInline}}
   - : Returns the personalbar object.
-- {{domxref("scheduler_property", "Window.scheduler")}} {{ReadOnlyInline}}
+- {{domxref("Window.scheduler")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("Scheduler")}} object associated with the current context. This is the entry point for using the [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API).
 - {{domxref("Window.screen")}} {{ReadOnlyInline}}
   - : Returns a reference to the screen object associated with the window.
@@ -141,6 +141,8 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns the toolbar object.
 - {{domxref("Window.top")}} {{ReadOnlyInline}}
   - : Returns a reference to the topmost window in the window hierarchy. This property is read only.
+- {{domxref("Window.trustedTypes")}} {{ReadOnlyInline}}
+  - : Returns the {{domxref("TrustedTypePolicyFactory")}} object associated with the global object, providing the entry point for using the {{domxref("Trusted Types API", "", "", "nocode")}}.
 - {{domxref("Window.visualViewport")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("VisualViewport")}} object which represents the visual viewport for a given window.
 - {{domxref("Window.window")}} {{ReadOnlyInline}}
@@ -156,8 +158,6 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns an object with functions for adding external search providers to the browser.
 - {{domxref("Window.orientation")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Returns the orientation in degrees (in 90 degree increments) of the viewport relative to the device's natural orientation.
-- {{domxref("Window.sidebar")}} {{Deprecated_Inline}} {{Non-standard_Inline}} {{ReadOnlyInline}}
-  - : Returns a reference to the window object of the sidebar
 - {{domxref("Window.status")}} {{Deprecated_Inline}}
   - : Gets/sets the text in the statusbar at the bottom of the browser.
 
@@ -165,13 +165,13 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
 
 _This interface inherits methods from the {{domxref("EventTarget")}} interface._
 
-- {{domxref("atob", "Window.atob()")}}
+- {{domxref("Window.atob()")}}
   - : Decodes a string of data which has been encoded using base-64 encoding.
 - {{domxref("Window.alert()")}}
   - : Displays an alert dialog.
-- {{domxref("Window.blur()")}}
+- {{domxref("Window.blur()")}} {{deprecated_inline}}
   - : Sets focus away from the window.
-- {{domxref("btoa", "Window.btoa()")}}
+- {{domxref("Window.btoa()")}}
   - : Creates a base-64 encoded ASCII string from a string of binary data.
 - {{domxref("Window.cancelAnimationFrame()")}}
   - : Enables you to cancel a callback previously scheduled with {{domxref("Window.requestAnimationFrame")}}.
@@ -189,7 +189,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Accepts a variety of different image sources, and returns a {{jsxref("Promise")}} which resolves to an {{domxref("ImageBitmap")}}. Optionally the source is cropped to the rectangle of pixels originating at _(sx, sy)_ with width sw, and height sh.
 - {{domxref("Window.dump()")}} {{Non-standard_Inline}}
   - : Writes a message to the console.
-- {{domxref("fetch", "Window.fetch()")}}
+- {{domxref("Window.fetch()")}}
   - : Starts the process of fetching a resource from the network.
 - {{domxref("Window.find()")}} {{Non-standard_Inline}}
   - : Searches for a given string in a window.
@@ -276,7 +276,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Lets a website or app gain access to a sandboxed file system for its own use.
 - {{domxref("Window.setImmediate()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Executes a function after the browser has finished other heavy tasks.
-- {{domxref("Window.setResizable()")}} {{Non-standard_Inline}}
+- {{domxref("Window.setResizable()")}} {{Non-standard_Inline}} {{deprecated_inline}}
   - : Does nothing (no-op). Kept for backward compatibility with Netscape 4.x.
 - {{domxref("Window.showModalDialog()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : Displays a modal dialog.
@@ -346,8 +346,12 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
   - : Fired when the fragment identifier of the URL has changed (the part of the URL beginning with and following the `#` symbol).
 - {{domxref("Window/pagehide_event", "pagehide")}}
   - : Sent when the browser hides the current document while in the process of switching to displaying in its place a different document from the session's history. This happens, for example, when the user clicks the Back button or when they click the Forward button to move ahead in session history.
+- {{domxref("Window.pagereveal_event", "pagereveal")}} {{experimental_inline}}
+  - : Fired when a document is first rendered, either when loading a fresh document from the network or activating a document (either from [back/forward cache](/en-US/docs/Glossary/bfcache) (bfcache) or [prerender](/en-US/docs/Glossary/Prerender)).
 - {{domxref("Window/pageshow_event", "pageshow")}}
   - : Sent when the browser makes the document visible due to navigation tasks, including not only when the page is first loaded, but also situations such as the user navigating back to the page after having navigated to another within the same tab.
+- {{domxref("Window.pageswap_event", "pageswap")}} {{experimental_inline}}
+  - : Fired when a document is about to be unloaded due to a navigation.
 - {{domxref("Window/popstate_event", "popstate")}}
   - : Fired when the active history entry changes.
 

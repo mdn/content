@@ -9,7 +9,8 @@ browser-compat: svg.global_attributes.font-size-adjust
 
 The `font-size-adjust` attribute allows authors to specify an aspect value for an element that will preserve the x-height of the first choice font in a substitute font.
 
-> **Note:** As a presentation attribute, `font-size-adjust` can be used as a CSS property. See the {{cssxref("font-size-adjust", "CSS font-size-adjust")}} property for more information.
+> [!NOTE]
+> As a presentation attribute, `font-size-adjust` can be used as a CSS property. See the CSS {{cssxref("font-size-adjust")}} property for more information.
 
 You can use this attribute with the following SVG elements:
 
@@ -79,7 +80,7 @@ svg {
 
   - : Choose the size of the font so that its lowercase letters (as determined by the x-height of the font) are the specified number times the {{ Cssxref("font-size") }}.
 
-    The number specified should generally be the aspect ratio (ratio of x-height to font size) of the first choice {{ Cssxref("font-family") }}. This means that the first-choice font, when available, will appear the same size in browsers, whether or not they support `font-size-adjust`.
+    The number specified should generally be the {{glossary("aspect ratio")}} (ratio of x-height to font size) of the first choice {{ Cssxref("font-family") }}. This means that the first-choice font, when available, will appear the same size in browsers, whether or not they support `font-size-adjust`.
 
     `0` yields text of zero height (hidden text).
 
@@ -93,4 +94,4 @@ svg {
 
 ## See also
 
-- {{cssxref("font-size-adjust","CSS font-size-adjust")}}
+- {{cssxref("font-size-adjust")}}

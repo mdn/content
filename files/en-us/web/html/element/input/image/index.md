@@ -25,7 +25,8 @@ The `alt` attribute provides an alternate string to use as the button's label if
 
 For example, if you have a graphical button that shows an image with an icon and/or image text "Login Now", you should also set the `alt` attribute to something like `Login Now`.
 
-> **Note:** While the `alt` attribute is technically optional, you should always include one to maximize the usability of your content.
+> [!NOTE]
+> While the `alt` attribute is technically optional, you should always include one to maximize the usability of your content.
 
 Functionally, the `alt` attribute of the `<input type="image">` element works just like the [`alt`](/en-US/docs/Web/HTML/Element/img#alt) attribute on {{HTMLElement("img")}} elements.
 
@@ -40,7 +41,7 @@ This attribute is also available on [`<input type="submit">`](/en-US/docs/Web/HT
 A string that identifies the encoding method to use when submitting the form data to the server. There are three permitted values:
 
 - `application/x-www-form-urlencoded`
-  - : This, the default value, sends the form data as a string after [URL encoding](https://en.wikipedia.org/wiki/URL_encoding) the text using an algorithm such as {{jsxref("encodeURI", "encodeURI()")}}.
+  - : This, the default value, sends the form data as a string after {{Glossary("Percent-encoding", "percent-encoding")}} the text using an algorithm such as {{jsxref("encodeURI", "encodeURI()")}}.
 - `multipart/form-data`
   - : Uses the {{domxref("FormData")}} API to manage the data, allowing for files to be submitted to the server. You _must_ use this encoding type if your form includes any {{HTMLElement("input")}} elements of [`type`](/en-US/docs/Web/HTML/Element/input#type) `file` ([`<input type="file">`](/en-US/docs/Web/HTML/Element/input/file)).
 - `text/plain`
@@ -128,7 +129,7 @@ Let's look at a basic example that includes all the essential features you'd nee
 
 - The [`src`](/en-US/docs/Web/HTML/Element/input#src) attribute is used to specify the path to the image you want to display in the button.
 - The [`alt`](/en-US/docs/Web/HTML/Element/input#alt) attribute provides alt text for the image, so screen reader users can get a better idea of what the button is used for. It will also display if the image can't be shown for any reason (for example if the path is misspelled). If possible, use text which matches the label you'd use if you were using a standard submit button.
-- The [`width`](/en-US/docs/Web/HTML/Element/input#width) and [`height`](/en-US/docs/Web/HTML/Element/input#height) attributes are used to specify the width and height the image should be shown at, in pixels. The button is the same size as the image; if you need the button's hit area to be bigger than the image, you will need to use CSS (e.g. {{cssxref("padding")}}). Also, if you specify only one dimension, the other is automatically adjusted so that the image maintains its original aspect ratio.
+- The [`width`](/en-US/docs/Web/HTML/Element/input#width) and [`height`](/en-US/docs/Web/HTML/Element/input#height) attributes are used to specify the width and height the image should be shown at, in pixels. The button is the same size as the image; if you need the button's hit area to be bigger than the image, you will need to use CSS (e.g. {{cssxref("padding")}}). Also, if you specify only one dimension, the other is automatically adjusted so that the image maintains its original {{glossary("aspect ratio")}}.
 
 ### Overriding default form behaviors
 

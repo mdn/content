@@ -64,7 +64,7 @@ Because `<gradient>`s belong to the `<image>` data type, they can only be used w
 
 ### Composition of a radial gradient
 
-![Graph explaining radial gradients: the virtual radiant ray is horizontal starting from the midpoint. The elliptical gradient, and therefore the ending shape, has the same aspect ratio as the box upon which it is declared.](radial_gradient.png)
+![Graph explaining radial gradients: the virtual radiant ray is horizontal starting from the midpoint. The elliptical gradient, and therefore the ending shape, has the same {{glossary("aspect ratio")}} as the box upon which it is declared.](radial_gradient.png)
 
 A radial gradient is defined by a _center point_, an _ending shape_, and two or more _color-stop points_.
 

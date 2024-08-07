@@ -9,7 +9,8 @@ browser-compat: svg.global_attributes.font-family
 
 The **`font-family`** attribute indicates which font family will be used to render the text, specified as a prioritized list of font family names and/or generic family names.
 
-> **Note:** As a presentation attribute, `font-family` can be used as a CSS property. See the {{cssxref("font-family", "CSS font-family")}} property for more information.
+> [!NOTE]
+> As a presentation attribute, `font-family` can be used as a CSS property. See the CSS {{cssxref("font-family")}} property for more information.
 
 You can use this attribute with the following SVG elements:
 
@@ -43,7 +44,7 @@ svg {
   <tbody>
     <tr>
       <th scope="row">Value</th>
-      <td>{{csssyntax("font-family")}}</td>
+      <td>See {{cssxref("font-family", "", "#formal_syntax")}}</td>
     </tr>
     <tr>
       <th scope="row">Default value</th>
@@ -68,4 +69,4 @@ For a description of the values, please refer to the [CSS `font-family`](/en-US/
 
 ## See also
 
-- {{cssxref("font-family", "CSS font-family")}}
+- {{cssxref("font-family")}}

@@ -33,7 +33,8 @@ A {{jsxref('Promise')}} that resolves to an object with the following properties
 - `usageDetails` {{Non-standard_Inline}}
   - : An object containing a breakdown of `usage` by storage system. All included properties will have a `usage` greater than 0 and any storage system with 0 `usage` will be excluded from the object.
 
-> **Note:** The returned values are not exact: between compression, deduplication, and obfuscation for security reasons, they will be imprecise.
+> [!NOTE]
+> The returned values are not exact: between compression, deduplication, and obfuscation for security reasons, they will be imprecise.
 
 You may find that the `quota` varies from origin to origin. This variance is based on factors such as:
 

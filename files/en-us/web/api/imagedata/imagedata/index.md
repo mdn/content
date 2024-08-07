@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.ImageData.ImageData
 ---
 
-{{APIRef("Canvas API")}}
+{{APIRef("Canvas API")}}{{AvailableInWorkers}}
 
 The **`ImageData()`** constructor returns a newly instantiated
 {{domxref('ImageData')}} object built from the typed array given and having the
@@ -43,7 +43,7 @@ new ImageData(dataArray, width, height, settings)
 
 A new {{domxref('ImageData')}} object.
 
-### Errors thrown
+### Exceptions
 
 - `IndexSizeError` {{domxref("DOMException")}}
   - : Thrown if `array` is specified, but its length is not a multiple of `(4 * width)` or `(4 * width * height)`.

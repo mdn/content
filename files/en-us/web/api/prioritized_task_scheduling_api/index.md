@@ -42,7 +42,7 @@ scheduler
   .catch((error) => console.error(`Error: ${error}`));
 ```
 
-The same task might be waited on using `await`/`async` as shown below (note, this is run in an [Immediately Invoked Function Expression (IIFE)](/en-US/docs/Glossary/IIFE)):
+The same task might be waited on using `await`/`async` as shown below (note, this is run in an {{Glossary("IIFE", "Immediately Invoked Function Expression (IIFE)")}}):
 
 ```js
 (async () => {
@@ -204,17 +204,17 @@ This allows you to avoid blocking the main thread when the user is actively inte
 - {{domxref("TaskPriorityChangeEvent")}}
   - : The interface for the {{domxref("TaskSignal/prioritychange_event","prioritychange")}} event, which is sent when the priority for a task is changed.
 
-> **Note:** If the [task priority](#task_priorities) never needs to be changed, you can use an {{domxref("AbortController")}} and its associated {{domxref("AbortSignal")}} instead of {{domxref("TaskController")}} and {{domxref("TaskSignal")}}.
+> [!NOTE]
+> If the [task priority](#task_priorities) never needs to be changed, you can use an {{domxref("AbortController")}} and its associated {{domxref("AbortSignal")}} instead of {{domxref("TaskController")}} and {{domxref("TaskSignal")}}.
 
 ### Extensions to other interfaces
 
-- [`Navigator.scheduling`](/en-US/docs/Web/API/Navigator/scheduling)
+- {{domxref("Navigator.scheduling")}}
   - : This property is the entry point for using the `Scheduling.isInputPending()` method.
-- [`scheduler`](/en-US/docs/Web/API/scheduler_property)
-  - : This property is the entry point for using the `Scheduler.postTask()` method.
-    It is implemented on [`Window`](/en-US/docs/Web/API/Window#scheduler) and [`WorkerGlobalScope`](/en-US/docs/Web/API/WorkerGlobalScope#scheduler), making an instance of {{domxref("Scheduler")}} available through `this` in most scopes.
+- {{domxref("Window.scheduler")}} and {{domxref("WorkerGlobalScope.scheduler")}}
+  - : These properties are the entry points for using the `Scheduler.postTask()` method in a window or a worker scope, respectively.
 
-## Task scheduling examples
+## Examples
 
 Note that the examples below use `mylog()` to write to a text area.
 The code for the log area and method is generally hidden to not distract from more relevant code.
@@ -233,7 +233,7 @@ function mylog(text) {
 
 ### Feature checking
 
-Check whether prioritized task scheduling is supported by testing for the [`scheduler`](/en-US/docs/Web/API/scheduler_property) property in the global "`this`" exposed to the current scope.
+Check whether prioritized task scheduling is supported by testing for the `scheduler` property in the global "`this`" exposed to the current scope.
 
 The code below prints "Feature: Supported" if the API is supported on this browser.
 
@@ -376,9 +376,10 @@ The output below shows that the tasks are executed in priority order, and then d
 [Task priorities](#task_priorities) can also take their initial value from a {{domxref("TaskSignal")}} passed to `postTask()` in the optional second argument.
 If set in this way, the priority of the task [can then be changed](#mutable_and_immutable_task_priority) using the controller associated with the signal.
 
-> **Note:** Setting and changing task priorities using a signal only works when the `options.priority` argument to `postTask()` is not set, and when the `options.signal` is a {{domxref("TaskSignal")}} (and not an {{domxref("AbortSignal")}}).
+> [!NOTE]
+> Setting and changing task priorities using a signal only works when the `options.priority` argument to `postTask()` is not set, and when the `options.signal` is a {{domxref("TaskSignal")}} (and not an {{domxref("AbortSignal")}}).
 
-The code below first shows how to create a {{domxref("TaskController")}}, setting the initial priority of its signal to `user-blocking` in the [`TaskController()` constructor](/en-US/docs/Web/API/TaskController/TaskController).
+The code below first shows how to create a {{domxref("TaskController")}}, setting the initial priority of its signal to `user-blocking` in the {{domxref("TaskController.TaskController", "TaskController()")}} constructor.
 
 The code then uses `addEventListener()` to add an event listener to the controller's signal (we could alternatively use the `TaskSignal.onprioritychange` property to add an event handler).
 The event handler uses {{domxref('TaskPriorityChangeEvent.previousPriority', 'previousPriority')}} on the event to get the original priority and {{domxref("TaskSignal.priority")}} on the event target to get the new/current priority.
@@ -441,7 +442,7 @@ function mylog(text) {
 The code below creates a controller and passes its signal to the task.
 The task is then immediately aborted.
 This causes the promise to be rejected with an `AbortError`, which is caught in the `catch` block and logged.
-Note that we could also have listened for the [`abort` event](/en-US/docs/Web/API/AbortSignal/abort_event) fired on the {{domxref("TaskSignal")}} or {{domxref("AbortSignal")}} and logged the abort there.
+Note that we could also have listened for the {{domxref("AbortSignal/abort_event", "abort")}} event fired on the {{domxref("TaskSignal")}} or {{domxref("AbortSignal")}} and logged the abort there.
 
 ```js
 if ("scheduler" in this) {
@@ -467,7 +468,7 @@ The log below shows the aborted task.
 ### Delaying tasks
 
 Tasks can be delayed by specifying an integer number of milliseconds in the `options.delay` parameter to `postTask()`.
-This effectively adds the task to the prioritized queue on a timeout, as might be created using [`setTimeout()`](/en-US/docs/Web/API/setTimeout).
+This effectively adds the task to the prioritized queue on a timeout, as might be created using {{domxref("setTimeout()")}}.
 The `delay` is the minimum amount of time before the task is added to the scheduler; it may be longer.
 
 ```html hidden

@@ -39,7 +39,7 @@ Firefox uses the built-in [Tracking Protection](https://support.mozilla.org/en-U
 
 ## What does the storage access policy block?
 
-The storage access policy blocks resources identified as trackers from accessing their cookies and other site storage when they are loaded in a third-party context. This prevents those resources from retrieving tracking identifiers stored in cookies or site storage and using them to identify users across visits to multiple first parties. Specifically, Firefox does this by imposing the following restrictions:
+The storage access policy blocks resources identified as trackers from accessing [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies) and other site storage loaded in a third-party context. This prevents those resources from retrieving tracking identifiers and using them to identify users across visits to multiple first parties. Specifically, Firefox does this by imposing the following restrictions:
 
 Cookies:
 
@@ -141,7 +141,8 @@ Curious how things will work if a third-party domain on your site were classifie
 4. If the preference does not exist, click "String" and then "+" to create a new preference.
 5. For the preference value enter comma separated origins that you'd like to have classified as trackers. E.g. "example.net,example.org".
 
-> **Warning:** Be sure to remove these entries after you have finished testing.
+> [!WARNING]
+> Be sure to remove these entries after you have finished testing.
 
 ## FAQ
 

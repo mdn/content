@@ -8,9 +8,10 @@ browser-compat: api.RTCPeerConnection.addTrack
 
 {{APIRef("WebRTC")}}
 
-The {{domxref("RTCPeerConnection")}} method **`addTrack()`** adds a new media track to the set of tracks which will be transmitted to the other peer.
+The **`addTrack()`** method of the {{domxref("RTCPeerConnection")}} interface adds a new media track to the set of tracks which will be transmitted to the other peer.
 
-> **Note:** Adding a track to a connection triggers renegotiation by firing a {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event.
+> [!NOTE]
+> Adding a track to a connection triggers renegotiation by firing a {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event.
 > See [Starting negotiation](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling#starting_negotiation) for details.
 
 ## Syntax
@@ -37,7 +38,8 @@ Any tracks that are added to the same stream on the local end of the connection 
 
 The {{domxref("RTCRtpSender")}} object which will be used to transmit the media data.
 
-> **Note:** Every `RTCRtpSender` is paired with an {{domxref("RTCRtpReceiver")}} to make up an {{domxref("RTCRtpTransceiver")}}.
+> [!NOTE]
+> Every `RTCRtpSender` is paired with an {{domxref("RTCRtpReceiver")}} to make up an {{domxref("RTCRtpTransceiver")}}.
 > The associated receiver is muted (indicating that it is not able to deliver packets) until and unless one or more streams are added to the receiver by the remote peer.
 
 ### Exceptions

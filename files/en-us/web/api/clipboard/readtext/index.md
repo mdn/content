@@ -10,7 +10,8 @@ browser-compat: api.Clipboard.readText
 
 The **`readText()`** method of the {{domxref("Clipboard")}} interface returns a {{jsxref("Promise")}} which fulfils with a copy of the textual contents of the system clipboard.
 
-> **Note:** To read non-text contents from the clipboard, use the {{domxref("Clipboard.read", "read()")}} method instead.
+> [!NOTE]
+> To read non-text contents from the clipboard, use the {{domxref("Clipboard.read", "read()")}} method instead.
 > You can write text to the clipboard using {{domxref("Clipboard.writeText", "writeText()")}}.
 
 ## Syntax

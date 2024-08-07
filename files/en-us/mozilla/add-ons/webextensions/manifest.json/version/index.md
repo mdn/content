@@ -63,7 +63,7 @@ If the manifest contains:
 
 You see this in the console log:
 
-```text
+```plain
 "0.1"
 ```
 

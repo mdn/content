@@ -3,7 +3,7 @@ title: "MediaTrackConstraints: latency property"
 short-title: latency
 slug: Web/API/MediaTrackConstraints/latency
 page-type: web-api-instance-property
-browser-compat: api.MediaTrackConstraints.latency
+browser-compat: api.MediaStreamTrack.applyConstraints.latency_constraint
 ---
 
 {{APIRef("Media Capture and Streams")}}
@@ -40,7 +40,8 @@ exact match to the required latency (if `exact` is specified or both
 `min` and `max` are provided and have the same value) or to a
 best-possible value.
 
-> **Note:** Latency is always prone to some variation due to hardware usage demands, network
+> [!NOTE]
+> Latency is always prone to some variation due to hardware usage demands, network
 > constraints, and so forth, so even in an "exact" match, some variation should be
 > expected.
 

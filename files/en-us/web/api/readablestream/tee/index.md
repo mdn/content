@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.ReadableStream.tee
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`tee()`** method of the
 {{domxref("ReadableStream")}} interface [tees](https://streams.spec.whatwg.org/#tee-a-readable-stream) the current readable stream, returning a
@@ -29,7 +29,7 @@ then the original `ReadableStream`'s controller's internal queue will start to f
 and once its {{domxref("ReadableStreamDefaultController.desiredSize", "desiredSize")}} ≤ 0
 or byte stream controller {{domxref("ReadableByteStreamController.desiredSize", "desiredSize")}} ≤ 0,
 then the controller will stop calling `pull(controller)` on the
-underlying source passed to {{domxref("ReadableStream.ReadableStream", "new ReadableStream()")}}.
+underlying source passed to {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}}.
 If only one branch is consumed, then the entire body will be enqueued in memory.
 Therefore, you should not use the built-in `tee()` to read very large streams
 in parallel at different speeds.

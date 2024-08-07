@@ -8,7 +8,7 @@ status:
 browser-compat: api.PaymentRequestEvent.total
 ---
 
-{{SeeCompatTable}}{{APIRef("Payment Handler API")}}
+{{SeeCompatTable}}{{APIRef("Payment Handler API")}}{{AvailableInWorkers("service")}}
 
 The **`total`** read-only property of the {{domxref("PaymentRequestEvent")}} interface returns a
 `PaymentCurrencyAmount` object containing the total amount being requested for payment.

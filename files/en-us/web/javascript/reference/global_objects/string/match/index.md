@@ -36,13 +36,13 @@ An {{jsxref("Array")}} whose contents depend on the presence or absence of the g
 
 ## Description
 
-The implementation of `String.prototype.match` itself is very simple — it simply calls the `Symbol.match` method of the argument with the string as the first parameter. The actual implementation comes from [`RegExp.prototype[@@match]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@match).
+The implementation of `String.prototype.match` itself is very simple — it simply calls the `Symbol.match` method of the argument with the string as the first parameter. The actual implementation comes from [`RegExp.prototype[Symbol.match]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match).
 
 - If you need to know if a string matches a regular expression {{jsxref("RegExp")}}, use {{jsxref("RegExp.prototype.test()")}}.
 - If you only want the first match found, you might want to use {{jsxref("RegExp.prototype.exec()")}} instead.
 - If you want to obtain capture groups and the global flag is set, you need to use {{jsxref("RegExp.prototype.exec()")}} or {{jsxref("String.prototype.matchAll()")}} instead.
 
-For more information about the semantics of `match()` when a regex is passed, see [`RegExp.prototype[@@match]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/@@match).
+For more information about the semantics of `match()` when a regex is passed, see [`RegExp.prototype[Symbol.match]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match).
 
 ## Examples
 
@@ -83,7 +83,8 @@ console.log(matches);
 // ['A', 'B', 'C', 'D', 'E', 'a', 'b', 'c', 'd', 'e']
 ```
 
-> **Note:** See also {{jsxref("String.prototype.matchAll()")}} and [Advanced searching with flags](/en-US/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags).
+> [!NOTE]
+> See also {{jsxref("String.prototype.matchAll()")}} and [Advanced searching with flags](/en-US/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags).
 
 ### Using named capturing groups
 
@@ -105,7 +106,7 @@ const str = "Nothing will come of nothing.";
 str.match(); // returns [""]
 ```
 
-### Using match() with a non-RegExp implementing @@match
+### Using match() with a non-RegExp implementing `[Symbol.match]()`
 
 If an object has a `Symbol.match` method, it can be used as a custom matcher. The return value of `Symbol.match` becomes the return value of `match()`.
 

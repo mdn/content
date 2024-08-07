@@ -38,10 +38,10 @@ To see the code for this sample, [view the source on GitHub](https://github.com/
 - {{cssxref("background-repeat")}}
 - {{cssxref("background-size")}}
 - {{cssxref("background")}} shorthand
-- {{cssxref("background-position-x")}} {{experimental_inline}}
-- {{cssxref("background-position-y")}} {{experimental_inline}}
-- {{cssxref("background-position-inline")}} {{experimental_inline}}
-- {{cssxref("background-position-block")}} {{experimental_inline}}
+- {{cssxref("background-position-x")}}
+- {{cssxref("background-position-y")}}
+- {{cssxref("background-position-inline")}}
+- {{cssxref("background-position-block")}}
 
 - {{cssxref("border-bottom-color")}}
 - {{cssxref("border-bottom-style")}}
@@ -116,7 +116,7 @@ To see the code for this sample, [view the source on GitHub](https://github.com/
 - {{cssxref("border-start-start-radius")}} property
 - {{cssxref("border-start-end-radius")}} property
 - {{cssxref("border-end-start-radius")}} property
-- {{cssxref("border-end-end-radius ")}} property
+- {{cssxref("border-end-end-radius")}} property
 
 - {{cssxref("box-sizing")}} property
 - {{cssxref("box-decoration-break")}} property

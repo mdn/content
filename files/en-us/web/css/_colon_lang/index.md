@@ -11,13 +11,14 @@ The **`:lang()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-function-lang.html", "tabbed-shorter")}}
 
-> **Note:** In HTML, the language is determined by a combination of the [`lang`](/en-US/docs/Web/HTML/Global_attributes#lang) attribute, the {{HTMLElement("meta")}} element, and possibly by information from the protocol (such as HTTP headers). For other document types there may be other document methods for determining the language.
+> [!NOTE]
+> In HTML, the language is determined by a combination of the [`lang`](/en-US/docs/Web/HTML/Global_attributes#lang) attribute, the {{HTMLElement("meta")}} element, and possibly by information from the protocol (such as HTTP headers). For other document types there may be other document methods for determining the language.
 
 ## Syntax
 
 ### Formal syntax
 
-```css-nolint
+```plain
 :lang(<language-code> [,<language-code> ]*)
   /* ... */
 }

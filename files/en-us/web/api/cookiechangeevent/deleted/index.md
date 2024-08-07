@@ -10,6 +10,8 @@ browser-compat: api.CookieChangeEvent.deleted
 
 The **`deleted`** read-only property of the {{domxref("CookieChangeEvent")}} interface returns an array of the cookies that have been deleted by the given `CookieChangeEvent` instance.
 
+Note that this will include cookies which were created with an expiry date in the past, as these cookies are immediately deleted.
+
 ## Value
 
 An array of objects containing the deleted cookie(s). Each object contains the following properties:
@@ -25,7 +27,7 @@ An array of objects containing the deleted cookie(s). Each object contains the f
 - `expires`
   - : A timestamp, given as {{glossary("Unix time")}} in milliseconds, containing the expiration date of the cookie.
 - `secure`
-  - : A {{jsxref("boolean")}} indicating whether the cookie is from a site with a secure context (HTTPS rather than HTTP).
+  - : A {{jsxref("boolean")}} indicating whether the cookie is used only in a secure context (HTTPS rather than HTTP).
 - `sameSite`
 
   - : One of the following [`SameSite`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) values:

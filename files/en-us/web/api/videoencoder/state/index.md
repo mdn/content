@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.VideoEncoder.state
 ---
 
-{{APIRef("WebCodecs API")}}{{SecureContext_Header}}
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`state`** read-only property of the {{domxref("VideoEncoder")}} interface returns the current state of the underlying codec.
 

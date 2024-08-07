@@ -7,11 +7,12 @@ browser-compat: css.properties.offset-rotate
 
 {{CSSRef}}
 
-The **`offset-rotate`** CSS property defines the orientation/direction of the element as it is positioned along the {{cssxref("offset-path")}}.
+The **`offset-rotate`** [CSS](/en-US/docs/Web/CSS) property defines the orientation/direction of the element as it is positioned along the {{cssxref("offset-path")}}.
 
 {{EmbedInteractiveExample("pages/css/offset-rotate.html")}}
 
-> **Note:** Early versions of the spec called this property `motion-rotation`.
+> [!NOTE]
+> Early versions of the spec called this property `motion-rotation`.
 
 ## Syntax
 

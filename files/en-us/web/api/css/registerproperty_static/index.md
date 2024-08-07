@@ -9,7 +9,7 @@ browser-compat: api.CSS.registerProperty_static
 {{APIRef("CSSOM")}}
 
 The **`CSS.registerProperty()`** static method registers
-{{cssxref('--*', 'custom properties')}}, allowing for property type checking, default
+[custom properties](/en-US/docs/Web/CSS/--*), allowing for property type checking, default
 values, and properties that do or do not inherit their value.
 
 Registering a custom property allows you to tell the browser how the custom property
@@ -57,7 +57,7 @@ members:
 
 ## Examples
 
-The following will register a {{cssxref('--*', 'custom property')}},
+The following will register a [custom property](/en-US/docs/Web/CSS/--*),
 `--my-color`, using `registerProperty()`, as a color, give it a
 default value, and have it not inherit its value:
 
@@ -125,5 +125,5 @@ We can add these styles to some buttons:
 - {{DOMxRef("CSS")}}
 - {{DOMxRef("CSS/supports_static", "CSS.supports()")}}
 - {{DOMxRef("CSS/escape_static", "CSS.escape()")}}
-- {{DOMxRef("CSS/factory_functions_static", 'CSS factory functions')}}
+- [CSS factory functions](/en-US/docs/Web/API/CSS/factory_functions_static)
 - CSS {{cssxref("@property")}}

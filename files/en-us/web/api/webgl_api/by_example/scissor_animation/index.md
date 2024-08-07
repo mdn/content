@@ -4,7 +4,7 @@ slug: Web/API/WebGL_API/By_example/Scissor_animation
 page-type: guide
 ---
 
-{{PreviousNext("Learn/WebGL/By_example/Boilerplate_1","Learn/WebGL/By_example/Raining_rectangles")}}
+{{DefaultAPISidebar("WebGL")}}{{PreviousNext("Learn/WebGL/By_example/Boilerplate_1","Learn/WebGL/By_example/Raining_rectangles")}}
 
 A simple WebGL example in which we have some animation fun using scissoring and clearing operations.
 

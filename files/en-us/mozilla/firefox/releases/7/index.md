@@ -88,7 +88,8 @@ Firefox 7 shipped on September 27, 2011. This article provides information about
 
 These changes affect add-on developers as well as developers working on or with Mozilla code itself. Add-on developers should see [Updating extensions for Firefox 7](/en-US/docs/Mozilla/Firefox/Releases/7/Updating_extensions) for additional information.
 
-> **Note:** Firefox 7 requires that binary components be recompiled, as do all major releases of Firefox.
+> [!NOTE]
+> Firefox 7 requires that binary components be recompiled, as do all major releases of Firefox.
 
 ### JavaScript code modules
 
@@ -186,7 +187,7 @@ The following interfaces were removed as part of the removal of the ActiveX embe
 ### Other Changes
 
 - The structure of the library window (`places.xul`) [has been cleaned up](https://bugzil.la/588027). This [may break extensions](https://bugzil.la/677417) and themes.
-- The look of the print preview window [has been modernized](https://bugzil.la/663028) and theme authors are encouraged to style it using the CSS pseudo-elements {{ cssxref("::-moz-page") }}, {{ cssxref("::-moz-page-sequence") }} and {{ cssxref("::-moz-scrolled-page-sequence") }}.
+- The look of the print preview window [has been modernized](https://bugzil.la/663028) and theme authors are encouraged to style it using the CSS pseudo-elements `::-moz-page`, `::-moz-page-sequence` and `::-moz-scrolled-page-sequence`.
 
 ## See also
 

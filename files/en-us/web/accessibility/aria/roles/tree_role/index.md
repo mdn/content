@@ -7,6 +7,8 @@ spec-urls:
   - https://www.w3.org/WAI/ARIA/apg/patterns/treeview/examples/treeview-navigation/
 ---
 
+{{AccessibilitySidebar}}
+
 A `tree` is a widget that allows the user to select one or more items from a hierarchically organized collection.
 
 ## Description
@@ -17,7 +19,8 @@ An example of a `tree` is a file system selection user interface: a tree view di
 
 ARIA tree views are navigated primarily with arrow keys on the keyboard instead of the <kbd>Tab</kbd>. This form of navigation is not common for most browser content, though normal and expected for native applications. For this reason, before creating a tree view, consider alternative options to address the functionality you need.
 
-> **Warning:** Tree views use navigation more similar to native applications than to web applications. For this reason, consider alternative options to address the functionality you need before creating a tree view.
+> [!WARNING]
+> Tree views use navigation more similar to native applications than to web applications. For this reason, consider alternative options to address the functionality you need before creating a tree view.
 
 ### Single and multiple select trees
 
@@ -37,7 +40,7 @@ In a tree view, the `tree` node is the root node; it can have child, grandchild,
 
 Each element serving as a tree node has role `treeitem`, except for the root tree node which has a role of `tree`. A `tree` does not have a parent `tree` node - it is the root node. If a node is both nested in a tree and has descendant tree items, then it has the role `treeitem` and the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) attribute; `aria-expanded="false"` is set when the node is in a closed state, `aria-expanded="true"` is set when the node is in an open state.
 
-`treeitem` nodes can be direct children of the `tree` root node, nested within a `treeitem` node, or, optionally nested in a [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) element, which, when nested in a `tree` is an expandable collections of treeitem elements.
+`treeitem` nodes can be direct children of the `tree` root node, nested within a `treeitem` node, or, optionally nested in a [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) element, which, when nested in a `tree` is an expandable collection of treeitem elements.
 
 Do not include `aria-expanded` on end nodes — those without tree item children — as that would incorrectly describe the node as a parent node to assistive technologies.
 
@@ -90,7 +93,7 @@ For a vertically oriented `tree`, which is the default orientation:
 <ul>
 <li>When focus is on an open node, closes the node.
 <li>When focus is on a child node that is also either an end node or a closed node, moves focus to its parent node.
-<li>When focus is on a closed `tree`, does nothing.
+<li>When focus is on a closed tree, does nothing.
 </td>
 </tr>
 <tr>
@@ -236,11 +239,3 @@ The alternative multi-selection model is a modifier key model in which moving fo
 {{Specifications}}
 
 ## See also
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

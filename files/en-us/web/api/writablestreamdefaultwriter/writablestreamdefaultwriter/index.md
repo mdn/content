@@ -6,12 +6,13 @@ page-type: web-api-constructor
 browser-compat: api.WritableStreamDefaultWriter.WritableStreamDefaultWriter
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`WritableStreamDefaultWriter()`**
 constructor creates a new {{domxref("WritableStreamDefaultWriter")}} object instance.
 
-> **Note:** You generally wouldn't use this constructor manually; instead,
+> [!NOTE]
+> You generally wouldn't use this constructor manually; instead,
 > you'd use the {{domxref("WritableStream.getWriter()")}} method.
 
 ## Syntax

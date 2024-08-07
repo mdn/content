@@ -7,7 +7,7 @@ browser-compat: css.properties.font-feature-settings
 
 {{CSSRef}}
 
-The **`font-feature-settings`** CSS property controls advanced typographic features in OpenType fonts.
+The **`font-feature-settings`** [CSS](/en-US/docs/Web/CSS) property controls advanced typographic features in OpenType fonts.
 
 {{EmbedInteractiveExample("pages/css/font-feature-settings.html")}}
 

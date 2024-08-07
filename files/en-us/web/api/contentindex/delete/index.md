@@ -8,19 +8,20 @@ status:
 browser-compat: api.ContentIndex.delete
 ---
 
-{{APIRef("Content Index API")}}{{SeeCompatTable}}
+{{APIRef("Content Index API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
 
 The **`delete()`** method of the
 {{domxref("ContentIndex")}} interface unregisters an item from the currently indexed
 content.
 
-> **Note:** Calling `delete()` only affects the index. It does not delete anything
+> [!NOTE]
+> Calling `delete()` only affects the index. It does not delete anything
 > from the {{domxref('Cache')}}.
 
 ## Syntax
 
 ```js-nolint
-ContentIndex.delete(id).then(/* … */)
+delete(id)
 ```
 
 ### Parameters
@@ -30,7 +31,7 @@ ContentIndex.delete(id).then(/* … */)
 
 ### Return value
 
-Returns a {{jsxref("Promise")}} that resolves with `undefined`
+Returns a {{jsxref("Promise")}} that resolves with `undefined`.
 
 ### Exceptions
 

@@ -6,14 +6,15 @@ page-type: web-api-instance-property
 browser-compat: api.XMLHttpRequest.responseXML
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
 The **`XMLHttpRequest.responseXML`** read-only property returns
 a {{domxref("Document")}} containing the HTML or XML retrieved by the request; or
 `null` if the request was unsuccessful, has not yet been sent, or if the data
 can't be parsed as XML or HTML.
 
-> **Note:** The name `responseXML` is an artifact of this
+> [!NOTE]
+> The name `responseXML` is an artifact of this
 > property's history; it works for both HTML and XML.
 
 Usually, the response is parsed as "`text/xml`". If the

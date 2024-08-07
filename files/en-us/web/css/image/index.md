@@ -25,7 +25,7 @@ The `<image>` data type can be represented with any of the following:
 CSS can handle the following kinds of images:
 
 - Images with _intrinsic dimensions_ (a natural size), like a JPEG, PNG, or other [raster format](https://en.wikipedia.org/wiki/Raster_graphics).
-- Images with _multiple intrinsic dimensions_, existing in multiple versions inside a single file, like some .ico formats. (In this case, the intrinsic dimensions will be those of the image largest in area and the aspect ratio most similar to the containing box.)
+- Images with _multiple intrinsic dimensions_, existing in multiple versions inside a single file, like some .ico formats. (In this case, the intrinsic dimensions will be those of the image largest in area and the {{glossary("aspect ratio")}} most similar to the containing box.)
 - Images with no intrinsic dimensions but with _an intrinsic aspect ratio_ between its width and height, like an SVG or other [vector format](https://en.wikipedia.org/wiki/Vector_graphics).
 - Images with _neither intrinsic dimensions, nor an intrinsic aspect ratio_, like a CSS gradient.
 
@@ -49,9 +49,10 @@ The concrete object size is calculated using the following algorithm:
 - If the specified size defines _only the width or only the height_, the missing value is determined using the intrinsic ratio, if there is any, the intrinsic dimensions if the specified value matches, or the default object size for that missing value.
 - If the specified size defines _neither the width nor the height_, the concrete object size is calculated so that it matches the intrinsic aspect ratio of the image but without exceeding the default object size in any dimension. If the image has no intrinsic aspect ratio, the intrinsic aspect ratio of the object it applies to is used; if this object has none, the missing width or height are taken from the default object size.
 
-> **Note:** Not all browsers support every type of image on every property. See the [browser compatibility section](#browser_compatibility) for details.
+> [!NOTE]
+> Not all browsers support every type of image on every property. See the [browser compatibility section](#browser_compatibility) for details.
 
-## Accessibility concerns
+## Accessibility
 
 Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.
 
@@ -103,7 +104,7 @@ image-set('cat.jpg' 1x, 'dog.jpg' 1x) /* every image in an image set must have a
 ## See also
 
 - {{CSSxRef("&lt;gradient&gt;")}}
-- {{CSSxRef("element","element()")}} {{Experimental_Inline}}
+- {{CSSxRef("element","element()")}}
 - {{CSSxRef("image/image", "image()")}}
 - {{CSSxRef("image/image-set","image-set()")}}
 - {{CSSxRef("cross-fade","cross-fade()")}}

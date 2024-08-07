@@ -9,7 +9,8 @@ browser-compat: svg.global_attributes.pointer-events
 
 The **`pointer-events`** attribute is a presentation attribute that allows defining whether or when an element may be the target of a mouse event.
 
-> **Note:** As a presentation attribute {{cssxref('pointer-events')}} can be used as a CSS property.
+> [!NOTE]
+> As a presentation attribute {{cssxref('pointer-events')}} can be used as a CSS property.
 
 You can use this attribute with the following SVG elements:
 

@@ -27,17 +27,19 @@ Boolean(value)
 
 ### Return value
 
-When `Boolean()` is called as a constructor (with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new)), it creates a {{jsxref("Boolean")}} object, which is **not** a primitive.
+When `Boolean()` is called as a function (without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new)), it returns `value` [coerced to a boolean primitive](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean#boolean_coercion).
 
-When `Boolean()` is called as a function (without `new`), it coerces the parameter to a boolean primitive.
+When `Boolean()` is called as a constructor (with `new`), it coerces `value` to a boolean primitive and returns a wrapping {{jsxref("Boolean")}} object, which is **not** a primitive.
 
-> **Warning:** You should rarely find yourself using `Boolean` as a constructor.
+> [!WARNING]
+> You should rarely find yourself using `Boolean` as a constructor.
 
 ## Description
 
 The value passed as the first parameter is [converted to a boolean value](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean#boolean_coercion). If the value is omitted or is `0`, `-0`, `0n`, [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), `false`, {{jsxref("NaN")}}, {{jsxref("undefined")}}, or the empty string (`""`), then the object has an initial value of `false`. All other values, including any object, an empty array (`[]`), or the string `"false"`, create an object with an initial value of `true`.
 
-> **Note:** When the non-standard property [`document.all`](/en-US/docs/Web/API/Document/all) is used as an argument for this constructor, the result is a `Boolean` object with the value `false`. This property is legacy and non-standard and should not be used.
+> [!NOTE]
+> When the non-standard property [`document.all`](/en-US/docs/Web/API/Document/all) is used as an argument for this constructor, the result is a `Boolean` object with the value `false`. This property is legacy and non-standard and should not be used.
 
 ## Examples
 

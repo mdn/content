@@ -32,7 +32,7 @@ The node for specified attribute.
 
 ## Notes
 
-`getAttributeNodeNS` is more specific than [getAttributeNode](getAttributeNode) in that it allows you to specify attributes that are part of a particular namespace. The corresponding setter method is [setAttributeNodeNS](/en-US/docs/Web/API/Element/setAttributeNodeNS).
+`getAttributeNodeNS` is more specific than [getAttributeNode](/en-US/docs/Web/API/Element/getAttributeNode) in that it allows you to specify attributes that are part of a particular namespace. The corresponding setter method is [setAttributeNodeNS](/en-US/docs/Web/API/Element/setAttributeNodeNS).
 
 ## Specifications
 

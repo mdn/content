@@ -4,11 +4,12 @@ slug: Web/Accessibility/Understanding_WCAG/Understandable
 page-type: guide
 ---
 
-{{QuicklinksWithSubPages("Web/Accessibility/Understanding_WCAG")}}
+{{AccessibilitySidebar}}
 
 This article provides practical advice on how to write your web content so that it conforms to the success criteria outlined in the **Understandable** principle of the Web Content Accessibility Guidelines (WCAG) 2.0 and 2.1. Understandable states that information and the operation of user interface must be understandable.
 
-> **Note:** To read the W3C definitions for Understandable and its guidelines and success criteria, see [Principle 3: Understandable — Information and the operation of user interface must be understandable](https://www.w3.org/TR/WCAG21/#understandable).
+> [!NOTE]
+> To read the W3C definitions for Understandable and its guidelines and success criteria, see [Principle 3: Understandable — Information and the operation of user interface must be understandable](https://www.w3.org/TR/WCAG21/#understandable).
 
 ## Guideline 3.1 — Readable: Make text content readable and understandable
 
@@ -148,7 +149,7 @@ This guideline focuses on making text content as understandable as possible.
           >Video and audio content</a
         >, and
         <a
-          href="http://www.oxfordlearnersdictionaries.com/us/about/pronunciation_english.html"
+          href="https://www.oxfordlearnersdictionaries.com/us/about/pronunciation_english.html"
           >Pronunciation Guide for English Dictionary</a
         >
       </td>
@@ -156,7 +157,8 @@ This guideline focuses on making text content as understandable as possible.
   </tbody>
 </table>
 
-> **Note:** Also see the WCAG description for [Guideline 3.1 Readable: Make text content readable and understandable](https://www.w3.org/TR/WCAG21/#readable).
+> [!NOTE]
+> Also see the WCAG description for [Guideline 3.1 Readable: Make text content readable and understandable](https://www.w3.org/TR/WCAG21/#readable).
 
 ## Guideline 3.2 — Predictable: Make Web pages appear and operate in predictable ways
 
@@ -187,7 +189,7 @@ This guideline focuses on making user interfaces intuitive and understandable.
         </p>
       </td>
       <td>
-        {{domxref("Element.focus_event")}} contains some
+        <code>Element</code>'s {{domxref("Element.focus_event", "focus")}} event contains some
         useful information. Also see
         <a
           href="/en-US/docs/Learn/Accessibility/HTML#building_keyboard_accessibility_back_in"
@@ -296,7 +298,8 @@ This guideline focuses on making user interfaces intuitive and understandable.
   </tbody>
 </table>
 
-> **Note:** Also see the WCAG description for [Guideline 3.2 Predictable: Make Web pages appear and operate in predictable ways](https://www.w3.org/TR/WCAG21/#predictable).
+> [!NOTE]
+> Also see the WCAG description for [Guideline 3.2 Predictable: Make Web pages appear and operate in predictable ways](https://www.w3.org/TR/WCAG21/#predictable).
 
 ## Guideline 3.3 — Input Assistance: Help users avoid and correct mistakes
 
@@ -329,7 +332,7 @@ This guideline centers around helping users enter correct information when requi
         </p>
         <div class="note">
           <p>
-            <strong>Note</strong>: Server-side validation should *always* be
+            <strong>Note:</strong> Server-side validation should <em>always</em> be
             used alongside client-side validation. Client-side validation is too
             easy to turn off or otherwise get around, so it can't be relied on
             alone.
@@ -499,7 +502,8 @@ A cognitive function test, like remembering a password, must not be required for
   </tbody>
 </table>
 
-> **Note:** Also see the WCAG description for [Guideline 3.3 Input Assistance: Help users avoid and correct mistakes](https://www.w3.org/TR/WCAG21/#input-assistance).
+> [!NOTE]
+> Also see the WCAG description for [Guideline 3.3 Input Assistance: Help users avoid and correct mistakes](https://www.w3.org/TR/WCAG21/#input-assistance).
 
 ## See also
 

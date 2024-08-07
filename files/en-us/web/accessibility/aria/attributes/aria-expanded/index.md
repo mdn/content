@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-expanded
 ---
 
+{{AccessibilitySidebar}}
+
 The `aria-expanded` attribute is set on an element to indicate if a control is expanded or collapsed, and whether or not the controlled elements are displayed or hidden.
 
 ## Description
@@ -54,7 +56,8 @@ By default, some roles are hidden or collapsed and other roles are open or expan
 </p>
 ```
 
-> **Note:** The presence of the `aria-expanded` attribute indicates control. Avoid including it on elements that do not control the expanded state of other elements.
+> [!NOTE]
+> The presence of the `aria-expanded` attribute indicates control. Avoid including it on elements that do not control the expanded state of other elements.
 
 ### Treeitems
 
@@ -119,8 +122,3 @@ Inherits into roles:
 - [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-owns)
 - [`aria-hidden`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
 - HTML [`hidden`](/en-US/docs/Web/HTML/Global_attributes#hidden) attribute
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

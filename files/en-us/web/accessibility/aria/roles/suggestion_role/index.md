@@ -4,6 +4,8 @@ slug: Web/Accessibility/ARIA/Roles/suggestion_role
 page-type: aria-role
 ---
 
+{{AccessibilitySidebar}}
+
 The `suggestion` role semantically denotes a single proposed change to an editable document. This should be used on an element that wraps an element with an `insertion` role, and one with a `deletion` role.
 
 ## Examples
@@ -50,13 +52,3 @@ Using the [`<ins>`](/en-US/docs/Web/HTML/Element/ins) and [`<del>`](/en-US/docs/
 Will be part of WAI-ARIA 1.3, which is still being drafted.
 
 ## See also
-
-- [ARIA annotations](/en-US/docs/Web/Accessibility/ARIA/Annotations)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

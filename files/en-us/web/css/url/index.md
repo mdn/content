@@ -9,7 +9,8 @@ browser-compat: css.types.url
 
 The **`url()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is used to include a file. The parameter is an absolute URL, a relative URL, a blob URL, or a data URL. The **`url()`** function can be passed as a parameter of another CSS functions, like the {{cssxref("attr")}} function. Depending on the property for which it is a value, the resource sought can be an image, font, or a stylesheet. The `url()` functional notation is the value for the `<url>` data type.
 
-> **Note:** There is a difference between a {{Glossary("URI")}} and a {{Glossary("URL")}}. A URI identifies a resource. A URL is a type of URI, and describes the _location_ of a resource. A URI can be either a URL or a name ({{Glossary("URN")}}) of a resource.
+> [!NOTE]
+> There is a difference between a {{Glossary("URI")}} and a {{Glossary("URL")}}. A URI identifies a resource. A URL is a type of URI, and describes the _location_ of a resource. A URI can be either a URL or a name ({{Glossary("URN")}}) of a resource.
 >
 > In CSS Level 1, the `url()` functional notation described only true URLs. In CSS Level 2, the definition of `url()` was extended to describe any URI, whether a URL or a URN. Confusingly, this meant that `url()` could be used to create a `<uri>` CSS data type. This change was not only awkward but, debatably, unnecessary, since URNs are almost never used in actual CSS. To alleviate the confusion, CSS Level 3 returned to the narrower, initial definition. Now, `url()` denotes only true `<url>`s.
 
@@ -45,7 +46,7 @@ mask-image: image(url(mask.png), skyblue, linear-gradient(rgb(0 0 0 / 100%), tra
 content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
 
 /* at-rules */
-@document url("https://www.example.com/") { /* … */ } {{Experimental_Inline}}
+@document url("https://www.example.com/") { /* … */ }
 @import url("https://www.example.com/style.css");
 @namespace url(http://www.w3.org/1999/xhtml);
 ```
@@ -79,12 +80,12 @@ The **`url()`** function can be included as a value for
     - path
       - : References the ID of an [SVG shape](/en-US/docs/Web/SVG/Tutorial/Basic_Shapes) — `circle`, `ellipse`, `line`, `path`, `polygon`, `polyline`, or `rect` — using the shape's geometry as the path.
 
-- `<url-modifier>` {{Experimental_Inline}}
+- `<url-modifier>`
   - : In the future, the `url()` function may support specifying a modifier, an identifier or a functional notation, which alters the meaning of the URL string. This is not supported and not fully defined in the specification.
 
 ### Formal syntax
 
-```css
+```plain
 url( <string> <url-modifier>* )
 ```
 

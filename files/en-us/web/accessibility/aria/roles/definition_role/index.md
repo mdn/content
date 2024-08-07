@@ -5,6 +5,8 @@ page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#definition
 ---
 
+{{AccessibilitySidebar}}
+
 The `definition` ARIA role indicates the element is a definition of a term or concept.
 
 ## Description
@@ -22,7 +24,8 @@ The `definition` ARIA role can be included on an element that is a definition of
 </p>
 ```
 
-> **Note:** Instead of a `<span>` with the [`term`](/en-US/docs/Web/Accessibility/ARIA/Roles/term_role) and `definition` roles, use the {{HTMLElement('dfn')}} element. **Always use native element if available.**
+> [!NOTE]
+> Instead of a `<span>` with the [`term`](/en-US/docs/Web/Accessibility/ARIA/Roles/term_role) and `definition` roles, use the {{HTMLElement('dfn')}} element. **Always use native element if available.**
 
 ```html
 <p>
@@ -43,11 +46,3 @@ The `definition` ARIA role can be included on an element that is a definition of
 - The {{HTMLElement('dd')}} element
 - The {{HTMLElement('dl')}} element
 - The {{HTMLElement('dt')}} element
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

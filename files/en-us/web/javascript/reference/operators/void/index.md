@@ -54,7 +54,7 @@ function () {
 }(); // SyntaxError: Function statements require a function name
 ```
 
-In order for the function to be parsed as an [expression](/en-US/docs/Web/JavaScript/Reference/Operators/function), the `function` keyword has to appear at a position that only accepts expressions, not statements. This can be achieved be prefixing the keyword with a [unary operator](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#unary_operators), which only accepts expressions as operands. Function invocation has higher [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence) than unary operators, so it will be executed first. Its return value (which is almost always `undefined`) will be passed to the unary operator and then immediately discarded.
+In order for the function to be parsed as an [expression](/en-US/docs/Web/JavaScript/Reference/Operators/function), the `function` keyword has to appear at a position that only accepts expressions, not statements. This can be achieved by prefixing the keyword with a [unary operator](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#unary_operators), which only accepts expressions as operands. Function invocation has higher [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence) than unary operators, so it will be executed first. Its return value (which is almost always `undefined`) will be passed to the unary operator and then immediately discarded.
 
 Of all the unary operators, `void` offers the best semantic, because it clearly signals that the return value of the function invocation should be discarded.
 

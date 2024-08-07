@@ -19,9 +19,11 @@ The `revert` keyword works exactly the same as [`unset`](/en-US/docs/Web/CSS/uns
 
 Revert will not affect rules applied to children of an element you reset (but will remove effects of a parent rule on a child). So if you have a `color: green` for all sections and `all: revert` on a specific section, the color of the section will be black. But if you have a rule to make all paragraphs red, then all paragraphs will still be red in all sections.
 
-> **Note:** Revert is just a value. It is still possible to override the `revert` value using [specificity](/en-US/docs/Web/CSS/Specificity).
+> [!NOTE]
+> Revert is just a value. It is still possible to override the `revert` value using [specificity](/en-US/docs/Web/CSS/Specificity).
 
-> **Note:** The `revert` keyword is different from and should not be confused with the {{cssxref("initial")}} keyword, which uses the [initial value](/en-US/docs/Web/CSS/initial_value) defined on a per-property basis by the CSS specifications. In contrast, user-agent stylesheets set default values on the basis of CSS selectors.
+> [!NOTE]
+> The `revert` keyword is different from and should not be confused with the {{cssxref("initial")}} keyword, which uses the [initial value](/en-US/docs/Web/CSS/initial_value) defined on a per-property basis by the CSS specifications. In contrast, user-agent stylesheets set default values on the basis of CSS selectors.
 >
 > For example, the [initial value](/en-US/docs/Web/CSS/initial_value) for the [`display`](/en-US/docs/Web/CSS/display#formal_definition) property is `inline`, whereas a normal user-agent stylesheet sets the default {{cssxref("display")}} value of {{HTMLElement("div")}}s to `block`, of {{HTMLElement("table")}}s to `table`, etc.
 

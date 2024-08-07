@@ -18,13 +18,13 @@ In addition to the standard [JavaScript](/en-US/docs/Web/JavaScript) set of func
 
 Some of the functions (a subset) that are common to all workers and to the main thread (from `WindowOrWorkerGlobalScope`) are:
 
-- {{domxref("atob", "atob()")}}
-- {{domxref("btoa", "btoa()")}}
+- {{domxref("WorkerGlobalScope.atob()", "atob()")}}
+- {{domxref("WorkerGlobalScope.btoa()", "btoa()")}}
 - {{domxref("clearInterval()")}}
 - {{domxref("clearTimeout()")}}
 - {{domxref("createImageBitmap()")}}
 - {{domxref("WorkerGlobalScope.dump()", "dump()")}} {{non-standard_inline}}
-- {{domxref("fetch()")}}
+- {{domxref("WorkerGlobalScope/fetch", "fetch()")}}
 - {{domxref("queueMicrotask()")}}
 - {{domxref("reportError()")}}
 - {{domxref("setInterval()")}}
@@ -40,7 +40,8 @@ The following functions are **only** available to workers:
 
 ## Web APIs available in workers
 
-> **Note:** If a listed API is supported by a platform in a particular version, then it can generally be assumed to be available in web workers. You can also test support for a particular object/function using the site: <https://worker-playground.glitch.me/>
+> [!NOTE]
+> If a listed API is supported by a platform in a particular version, then it can generally be assumed to be available in web workers. You can also test support for a particular object/function using the site: <https://worker-playground.glitch.me/>
 
 The following Web APIs are available to workers:
 

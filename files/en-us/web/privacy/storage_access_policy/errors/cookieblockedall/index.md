@@ -1,10 +1,10 @@
 ---
 title: "Blocked: All storage access requests"
-slug: Web/Privacy/Storage_access_policy/Errors/CookieBlockedAll
+slug: Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedAll
 page-type: guide
 ---
 
-{{QuicklinksWithSubPages("Web/Privacy/Storage_access_policy/Errors")}}
+{{QuicklinksWithSubPages("Web/Privacy/Storage_Access_Policy/Errors")}}
 
 ## Message
 

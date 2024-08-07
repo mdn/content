@@ -7,6 +7,8 @@ spec-urls:
   - https://www.w3.org/TR/wai-aria-1.2/#aria-describedby
 ---
 
+{{AccessibilitySidebar}}
+
 The global `aria-describedby` attribute identifies the element (or elements) that describes the element on which the attribute is set.
 
 ## Description
@@ -21,7 +23,8 @@ The elements linked via `aria-describedby` don't need to be visible. It is possi
 
 The `aria-describedby` property is appropriate when the associated content contains descriptions experienced as plain text. If the content contains a large amount of content, useful semantics, or has a complex structure requiring user navigation, use [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details). `aria-details` allows assistive technology users to visit the associated structured content and provides additional navigation commands, making it easier to understand the structure, or to experience the information in smaller pieces.
 
-> **Note:** The `aria-describedby` content should only be a text string. If there are important underlying semantics in the content, consider using [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details).
+> [!NOTE]
+> The `aria-describedby` content should only be a text string. If there are important underlying semantics in the content, consider using [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details).
 
 ## Example
 
@@ -33,7 +36,8 @@ The `aria-describedby` property is appropriate when the associated content conta
 </p>
 ```
 
-> **Note:** The `aria-describedby` attribute is not designed to reference descriptions from external resources. As its value is one or more `id`s (space-separated if multiple), it must reference elements in the same DOM document.
+> [!NOTE]
+> The `aria-describedby` attribute is not designed to reference descriptions from external resources. As its value is one or more `id`s (space-separated if multiple), it must reference elements in the same DOM document.
 
 ## Values
 
@@ -55,8 +59,3 @@ Used in **all** roles. Usable in all HTML elements as well.
 - [`aria-description`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-description)
 - [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details)
 - [Browser and AT support for `aria-describedby`](https://a11ysupport.io/tech/aria/aria-describedby_attribute)
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

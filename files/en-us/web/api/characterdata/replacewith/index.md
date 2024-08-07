@@ -25,7 +25,8 @@ replaceWith(...nodes)
 - `nodes` {{optional_inline}}
   - : A comma-separated list of {{domxref("Node")}} objects or strings that will replace the current node.
 
-> **Note:** If no arguments are passed in, this method removes the node from the DOM tree.
+> [!NOTE]
+> If no arguments are passed in, this method removes the node from the DOM tree.
 
 ### Return value
 

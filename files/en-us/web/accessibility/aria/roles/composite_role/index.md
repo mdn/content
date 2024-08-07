@@ -5,9 +5,12 @@ page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#composite
 ---
 
+{{AccessibilitySidebar}}
+
 The `composite` [abstract role](/en-US/docs/Web/Accessibility/ARIA/Roles#6._abstract_roles) indicates a widget that may contain navigable descendants or owned children.
 
-> **Note:** The `composite` role is an abstract role. It is included here for completeness of documentation. It should not be used by web authors.
+> [!NOTE]
+> The `composite` role is an abstract role. It is included here for completeness of documentation. It should not be used by web authors.
 
 ## Description
 
@@ -28,11 +31,3 @@ Do not use.
 - [ARIA: `select` role](/en-US/docs/Web/Accessibility/ARIA/Roles/select_role)
 - [ARIA: `spinbutton` role](/en-US/docs/Web/Accessibility/ARIA/Roles/spinbutton_role)
 - [ARIA: `tablist` role](/en-US/docs/Web/Accessibility/ARIA/Roles/tablist_role)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

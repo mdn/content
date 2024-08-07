@@ -8,13 +8,15 @@ status:
 browser-compat: api.Permissions.revoke
 ---
 
-{{APIRef("Permissions API")}}{{deprecated_header}}
+{{APIRef("Permissions API")}}{{AvailableInWorkers}}{{deprecated_header}}
 
-The **`Permissions.revoke()`** method of the
+The **`revoke()`** method of the
 {{domxref("Permissions")}} interface reverts a currently set permission back to its
 default state, which is usually `prompt`.
 This method is called on the global {{domxref("Permissions")}} object
 {{domxref("navigator.permissions")}}.
+
+This method is removed from the main permissions API specification because its use case is unclear. Permissions are managed by the browser and the current permission model does not involve the site developer being able to imperatively request or revoke permissions. Browsers have shipped this API behind preferences but it's unlikely to reach the standards track. For more context, see the [original discussion to remove `permissions.revoke()`](https://github.com/w3c/permissions/issues/46).
 
 ## Syntax
 
@@ -31,9 +33,7 @@ revoke(descriptor)
     The available options are:
 
     - `name`
-      - : The name of the API whose permissions you want to query.
-        Valid values are `'geolocation'`, `'midi'`,
-        `'notifications'`, and `'push'`.
+      - : The name of the API whose permissions you want to query. Each browser supports a different set of values. You can consult the [Firefox values](https://searchfox.org/mozilla-central/source/dom/webidl/Permissions.webidl#10), the [Chromium values](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/third_party/blink/renderer/modules/permissions/permission_descriptor.idl), and the [WebKit values](https://github.com/WebKit/WebKit/blob/main/Source/WebCore/Modules/permissions/PermissionName.idl).
     - `userVisibleOnly`
       - : (Push only, not supported in Firefox — see the
         [Browser compatibility](#browser_compatibility) section below) Indicates whether you want to
@@ -43,12 +43,14 @@ revoke(descriptor)
       - : Indicates whether you need and/or receive system
         exclusive messages. The default is `false`.
 
-> **Note:** As of Firefox 44, the permissions for [Notifications](/en-US/docs/Web/API/Notifications_API) and [Push](/en-US/docs/Web/API/Push_API) have been merged. If permission is
+> [!NOTE]
+> As of Firefox 44, the permissions for [Notifications](/en-US/docs/Web/API/Notifications_API) and [Push](/en-US/docs/Web/API/Push_API) have been merged. If permission is
 > granted (e.g. by the user, in the relevant permissions dialog),
 > `navigator.permissions.query()` will return `true` for both
 > `notifications` and `push`.
 
-> **Note:** The `persistent-storage` permission allows an
+> [!NOTE]
+> The `persistent-storage` permission allows an
 > origin to use a persistent box (i.e., [persistent storage](https://storage.spec.whatwg.org/#persistence)) for its
 > storage, as per the [Storage API](https://storage.spec.whatwg.org/).
 
@@ -76,6 +78,10 @@ function revokePermission() {
   });
 }
 ```
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

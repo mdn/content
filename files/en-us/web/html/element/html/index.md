@@ -7,14 +7,12 @@ browser-compat: html.elements.html
 
 {{HTMLSidebar}}
 
-The **`<html>`** [HTML](/en-US/docs/Web/HTML) element represents the root (top-level element) of an HTML document, so it is also referred to as the _root element_. All other elements must be descendants of this element.
+The **`<html>`** [HTML](/en-US/docs/Web/HTML) element represents the root (top-level element) of an HTML document, so it is also referred to as the _root element_. All other elements must be descendants of this element. There can be only one `<html>` element in a document.
 
 ## Attributes
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- `manifest` {{deprecated_inline}}
-  - : Specifies the {{glossary("URI")}} of a resource manifest indicating resources that should be cached locally.
 - `version` {{deprecated_inline}}
   - : Specifies the version of the HTML {{glossary("Doctype", "Document Type Definition")}} that governs the current document. This attribute is not needed, because it is redundant with the version information in the document type declaration.
 - `xmlns`
@@ -78,7 +76,7 @@ Including a valid `lang` declaration on the `<html>` element also ensures that i
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Document_role"
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/document_role"
           >document</a
         >
       </td>

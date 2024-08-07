@@ -18,7 +18,10 @@ The `WebGLRenderbuffer` object does not define any methods or properties of its 
 - {{domxref("WebGLRenderingContext.bindRenderbuffer()")}}
 - {{domxref("WebGLRenderingContext.createRenderbuffer()")}}
 - {{domxref("WebGLRenderingContext.deleteRenderbuffer()")}}
+- {{domxref("WebGLRenderingContext.framebufferRenderbuffer()")}}
+- {{domxref("WebGLRenderingContext.getRenderbufferParameter()")}}
 - {{domxref("WebGLRenderingContext.isRenderbuffer()")}}
+- {{domxref("WebGLRenderingContext.renderbufferStorage()")}}
 
 ## Examples
 
@@ -43,5 +46,8 @@ const buffer = gl.createRenderbuffer();
 - {{domxref("WebGLRenderingContext.bindRenderbuffer()")}}
 - {{domxref("WebGLRenderingContext.createRenderbuffer()")}}
 - {{domxref("WebGLRenderingContext.deleteRenderbuffer()")}}
+- {{domxref("WebGLRenderingContext.framebufferRenderbuffer()")}}
+- {{domxref("WebGLRenderingContext.getRenderbufferParameter()")}}
 - {{domxref("WebGLRenderingContext.isRenderbuffer()")}}
+- {{domxref("WebGLRenderingContext.renderbufferStorage()")}}
 - Other buffers: {{domxref("WebGLBuffer")}}, {{domxref("WebGLFramebuffer")}}

@@ -8,7 +8,8 @@ page-type: guide
 
 WebSocket client applications use the [WebSocket API](/en-US/docs/Web/API/WebSockets_API) to communicate with [WebSocket servers](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers) using the WebSocket protocol.
 
-> **Note:** The example snippets in this article are taken from our WebSocket chat client/server sample.
+> [!NOTE]
+> The example snippets in this article are taken from our WebSocket chat client/server sample.
 > [See the code](https://github.com/mdn/samples-server/tree/master/s/websocket-chat).
 
 ## Creating a WebSocket object
@@ -157,7 +158,7 @@ exampleSocket.onmessage = (event) => {
       text = `Your username has been set to <em>${msg.name}</em> because the name you chose is in use.<br>`;
       break;
     case "userlist":
-      document.getElementById("userlistbox").innerHTML = msg.users.join("<br>");
+      document.getElementById("userlistbox").innerText = msg.users.join("\n");
       break;
   }
 

@@ -10,7 +10,7 @@ The [WebXR](/en-US/docs/Games/Techniques/3D_on_the_web/WebXR) and [WebGL](/en-US
 
 ## High level overview
 
-The current version of A-Frame is 0.3.2, which means it's highly experimental, but it already works and you can test it right away in the browser. It runs on desktop, mobile (iOS and Android), and Oculus Rift, Gear VR and HTC Vive.
+A-Frame runs on most environments, such as desktop, mobile (iOS and Android), and devices such as Oculus Rift, Gear VR and HTC Vive.
 
 A-Frame is built on top of [WebGL](/en-US/docs/Web/API/WebGL_API), and provides pre-built components to use in applications — models, video players, skyboxes, geometries, controls, animations, cursors, etc. It is based on the [entity component system](https://en.wikipedia.org/wiki/Entity_component_system), which is known in the game development world, but it targets web developers with a familiar markup structure, manipulable with JavaScript. The end result is 3D web experiences, which are VR-enabled by default.
 
@@ -48,7 +48,8 @@ This contains some basic information like the document `charset` and {{htmleleme
 
 A scene is the place where everything happens. When creating new objects in the demo, we will be adding them all to the scene to make them visible on the screen. In A-Frame, the scene is represented by a [Scene entity](https://aframe.io/docs/core/scene.html).
 
-> **Note:** An Entity is any element — it can be an object like a box, cylinder or cone, but it can also be a camera, light or sound source.
+> [!NOTE]
+> An Entity is any element — it can be an object like a box, cylinder or cone, but it can also be a camera, light or sound source.
 
 Let's create the scene by adding an `<a-scene>` element inside the `<body>` element:
 
@@ -66,7 +67,8 @@ Adding the cube to the scene is done by adding a simple [`<a-box>`](https://afra
 
 It contains a few parameters already defined: `color`, `position` and `rotation` — these are fairly obvious, and define the base color of the cube, the position inside the 3D scene, and the rotation of the cube.
 
-> **Note:** The distance values (e.g. for the cube y position) are unitless, and can basically be anything you deem suitable for your scene — millimeters, meters, feet, or miles — it's up to you.
+> [!NOTE]
+> The distance values (e.g. for the cube y position) are unitless, and can basically be anything you deem suitable for your scene — millimeters, meters, feet, or miles — it's up to you.
 
 ### Adding a background: Sky box
 
@@ -184,31 +186,26 @@ It is impressive to be able to create such a scene with just a few lines of HTML
 
 ## Animation
 
-We've already used `rotation` and `position` to move the shapes on the scene, and we can also scale them. These attributes can be manipulated to create the illusion of [animation](https://aframe.io/docs/core/animation.html).
+We've already used `rotation` and `position` to move the shapes on the scene, and we can also scale them. These attributes can be manipulated to create the illusion of [animation](https://aframe.io/docs/1.6.0/components/animation.html).
 
 ### Rotation
 
-There's a special [`<a-animation>`](https://aframe.io/docs/core/animation.html) entity that can help us animate elements. Add the `<a-animation>` element seen below to the `<a-box>` element as a child, as shown:
+There's a special [`animation`](https://aframe.io/docs/1.6.0/components/animation.html) component that can help us animate elements. Add the `animation` component seen below to the `<a-box>` element as a property, as shown:
 
 ```html
-<a-box color="#0095DD" rotation="20 40 0" position="0 1 0">
-  <a-animation
-    attribute="rotation"
-    from="20 0 0"
-    to="20 360 0"
-    direction="alternate"
-    dur="4000"
-    repeat="indefinite"
-    easing="ease">
-  </a-animation>
+<a-box
+  color="#0095DD"
+  rotation="20 40 0"
+  position="0 1 0"
+  animation="property: rotation; from: 20 0 0; to: 20 360 0; dir: alternate; loop: true; dur: 4000; easing: easeInOutQuad;">
 </a-box>
 ```
 
-As with any other entities, you can define key properties for the animation. We'll be animating the `rotation` attribute from `20 0 0` to `20 360 0`, so it will do a full spin. The animation direction is set to alternate so the animation will be played forward, and then back. The duration is set to 4 seconds, and it will be repeated indefinitely. The animation uses `ease` for easing, with [tween.js](https://github.com/tweenjs/tween.js/) being implemented internally.
+As with any other entities, you can define key properties for the animation. We'll be animating the `rotation` attribute from `20 0 0` to `20 360 0`, so it will do a full spin. The animation direction is set to alternate so the animation will be played forward, and then back. The duration is set to 4 seconds, and it will be repeated indefinitely. The animation uses `easing` for easing, with [tween.js](https://github.com/tweenjs/tween.js/) being implemented internally.
 
 ### Scaling
 
-We can also add animation to entities with custom geometry like the torus, in much the same way. Add the following `<a-animation>` element to your torus:
+We can also add animation to entities with custom geometry like the torus, in much the same way. Add the following `animation` component to your torus:
 
 ```html
 <a-entity
@@ -222,15 +219,8 @@ We can also add animation to entities with custom geometry like the torus, in mu
     roughness: 0.1;
     metalness: 0.5;"
   rotation="10 0 0"
-  position="-3 1 0">
-  <a-animation
-    attribute="scale"
-    to="1 0.5 1"
-    direction="alternate"
-    dur="2000"
-    repeat="indefinite"
-    easing="linear">
-  </a-animation>
+  position="-3 1 0"
+  animation="property: scale; to: 1 0.5 1; dir: alternate; dur: 2000; loop: true; easing: linear;">
 </a-entity>
 ```
 
@@ -238,7 +228,7 @@ The attribute we want to animate for the torus is `scale`. The initial, default 
 
 ### Moving
 
-We could use the `<a-animation>` to change the position of the third shape, or we could use JavaScript instead. Add this code at the end of the `<script>` tag:
+We could use the `animation` to change the position of the third shape, or we could use JavaScript instead. Add this code at the end of the `<script>` tag:
 
 ```js
 let t = 0;
@@ -256,11 +246,12 @@ We're using the `render()` function to update the cylinder's position on every f
 
 Everything is rendered properly and animating — congratulations on building your first A-Frame scene! Here's how the final version looks and works:
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/sq94qd6e/","","350")}}
+{{JSFiddleEmbed("https://jsfiddle.net/lowperry/xmo62ku0/5/","","350")}}
 
 If you have a VR device available, now is a good time to try out your scene with it too.
 
-> **Note:** You can also [check it out on GitHub](https://github.com/end3r/MDN-Games-3D/blob/gh-pages/A-Frame/shapes.html).
+> [!NOTE]
+> You can also [check it out on GitHub](https://github.com/end3r/MDN-Games-3D/blob/gh-pages/A-Frame/shapes.html).
 
 That was easier than you thought, right? A-Frame targets web developers by offering easy to use web markup and all the advantages that brings, such as JavaScript manipulation. It is easy to start with, but also provides a powerful API for advanced concepts, as well as dealing with cross browser differences and suchlike. The community is growing, just like the number of supported VR devices — it's a great time to start experimenting with such frameworks.
 
@@ -268,6 +259,5 @@ That was easier than you thought, right? A-Frame targets web developers by offer
 
 - [A-Frame website](https://aframe.io/)
 - [Introducing A-Frame 0.1.0 article](https://aframe.io/blog/2015/12/16/introducing-aframe/)
-- [Made with A-Frame Tumblr](https://aframevr.tumblr.com/)
 - [A-Frame physics plugin](https://github.com/ngokevin/aframe-physics-components)
 - [A-Frame gamepad controls plugin](https://github.com/donmccurdy/aframe-gamepad-controls)

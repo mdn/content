@@ -40,10 +40,10 @@ The following example shows the use of the `height` and `width` properties along
             arrImages[i].style.height +
             ", style.width=" +
             arrImages[i].style.width +
-            "<\/li>";
+            "</li>";
         }
 
-        strHtml += "<\/ul>";
+        strHtml += "</ul>";
 
         objOutput.innerHTML = strHtml;
       }
@@ -52,14 +52,16 @@ The following example shows the use of the `height` and `width` properties along
   <body onload="init();">
     <p>
       Image 1: no height, width, or style
-      <img id="image1" src="http://www.mozilla.org/images/mozilla-banner.gif" />
+      <img
+        id="image1"
+        src="https://www.mozilla.org/images/mozilla-banner.gif" />
     </p>
 
     <p>
       Image 2: height="50", width="500", but no style
       <img
         id="image2"
-        src="http://www.mozilla.org/images/mozilla-banner.gif"
+        src="https://www.mozilla.org/images/mozilla-banner.gif"
         height="50"
         width="500" />
     </p>
@@ -68,7 +70,7 @@ The following example shows the use of the `height` and `width` properties along
       Image 3: no height, width, but style="height: 50px; width: 500px;"
       <img
         id="image3"
-        src="http://www.mozilla.org/images/mozilla-banner.gif"
+        src="https://www.mozilla.org/images/mozilla-banner.gif"
         style="height: 50px; width: 500px;" />
     </p>
 
@@ -157,7 +159,7 @@ const ss = document.styleSheets;
 
 for (let i = 0; i < ss.length; i++) {
   for (let j = 0; j < ss[i].cssRules.length; j++) {
-    dump(`${ss[i].cssRules[j].selectorText}\n`);
+    console.log(`${ss[i].cssRules[j].selectorText}\n`);
   }
 }
 ```
@@ -344,7 +346,7 @@ Put the following code into a blank text file and load it into a variety of brow
         }
 
         const event = e || window.event;
-        document.getElementById("eventType").innerHTML = event.type;
+        document.getElementById("eventType").textContent = event.type;
 
         const table = document.createElement("table");
         const thead = table.createTHead();
@@ -414,4 +416,4 @@ To add a row and some cells to an existing table:
 
 - A table's {{domxref("element.innerHTML","innerHTML")}} property should never be used to modify a table, although you can use it to write an entire table or the content of a cell.
 - If DOM Core methods {{domxref("document.createElement")}} and {{domxref("Node.appendChild")}} are used to create rows and cells, IE requires that they are appended to a {{HTMLElement("tbody")}} element, whereas other browsers will allow appending to a {{HTMLElement("table")}} element (the rows will be added to the last `<tbody>` element).
-- There are a number of other convenience methods belonging to the [`HTMLTableElement` interface](/en-US/docs/Web/API/HTMLTableElement#methods) that can be used for creating and modifying tables.
+- There are a number of other convenience methods belonging to the [`HTMLTableElement` interface](/en-US/docs/Web/API/HTMLTableElement#instance_methods) that can be used for creating and modifying tables.

@@ -3,12 +3,10 @@ title: "HTMLCanvasElement: contextrestored event"
 short-title: contextrestored
 slug: Web/API/HTMLCanvasElement/contextrestored_event
 page-type: web-api-event
-status:
-  - experimental
 browser-compat: api.HTMLCanvasElement.contextrestored_event
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef}}
 
 The **`contextrestored`** event of the [Canvas API](/en-US/docs/Web/API/Canvas_API) is fired if the user agent restores the backing storage for a [`CanvasRenderingContext2D`](/en-US/docs/Web/API/CanvasRenderingContext2D).
 
@@ -57,3 +55,4 @@ canvas.addEventListener(
 
 - [`HTMLCanvasElement: contextlost` event](/en-US/docs/Web/API/HTMLCanvasElement/contextlost_event)
 - [`CanvasRenderingContext2D.isContextLost()`](/en-US/docs/Web/API/CanvasRenderingContext2D/isContextLost)
+- [OffscreenCanvas: contextlost` event](/en-US/docs/Web/API/OffscreenCanvas/contextlost_event)
