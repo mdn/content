@@ -7,10 +7,12 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.301
 
 {{HTTPSidebar}}
 
-The HyperText Transfer Protocol (HTTP) **`301 Moved Permanently`** redirect status response code indicates that the requested resource has been definitively moved to the URL given by the {{HTTPHeader("Location")}} headers. A browser redirects to the new URL and search engines update their links to the resource.
+The HTTP **`301 Moved Permanently`** [redirection response](/en-US/docs/Web/HTTP/Status#redirection_messages) status code indicates that the requested resource has been definitively moved to the URL in the {{HTTPHeader("Location")}} header.
+A browser redirects automatically to the new page, and the ranking value in search engines (colloquially named "link juice" in {{Glossary("SEO")}} terms) is sent to the new URL.
 
 > [!NOTE]
-> Although the [specification](#specifications) requires the method and the body to remain unchanged when the redirection is performed, not all user-agents meet this requirement. Use the `301` code only as a response for {{HTTPMethod("GET")}} or {{HTTPMethod("HEAD")}} methods and use the {{HTTPStatus("308", "308 Permanent Redirect")}} for {{HTTPMethod("POST")}} methods instead, as the method change is explicitly prohibited with this status.
+> Although the [specification](#specifications) requires the request method and the body to remain unchanged when redirection is performed, not all user-agents meet this requirement.
+> Use the `301` code only as a response for {{HTTPMethod("GET")}} or {{HTTPMethod("HEAD")}} methods and use the {{HTTPStatus("308", "308 Permanent Redirect")}} for other methods (typically {{HTTPMethod("POST")}}), as altering the method when handling `308` responses is explicitly prohibited.
 
 ## Status
 
@@ -18,20 +20,26 @@ The HyperText Transfer Protocol (HTTP) **`301 Moved Permanently`** redirect stat
 301 Moved Permanently
 ```
 
-## Example
+## Examples
 
-### Client request
+### 301 response to a moved resource
+
+The following {{HTTPMethod("GET")}} request to is made to a resource with a `301` redirection in place.
+The {{HTTPHeader("Location")}} header shows the new URL in place for the resource:
 
 ```http
-GET /index.php HTTP/1.1
-Host: www.example.org
+GET /en-US/docs/AJAX HTTP/2
+Host: developer.mozilla.org
+User-Agent: curl/8.6.0
+Accept: */*
 ```
 
-### Server response
-
 ```http
-HTTP/1.1 301 Moved Permanently
-Location: http://www.example.org/index.asp
+HTTP/2 301
+cache-control: max-age=2592000,public
+location: /en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data
+content-type: text/plain; charset=utf-8
+date: Fri, 19 Jul 2024 12:57:17 GMT
 ```
 
 ## Specifications
@@ -40,6 +48,8 @@ Location: http://www.example.org/index.asp
 
 ## See also
 
+- [Redirections in HTTP](/en-US/docs/Web/HTTP/Redirections)
+- [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
 - {{HTTPStatus("308", "308 Permanent Redirect")}}, the equivalent of this status code
   where the method used never changes.
 - {{HTTPStatus("302", "302 Found")}}, a temporary redirect
