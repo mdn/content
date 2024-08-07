@@ -1,0 +1,61 @@
+sidebar:
+  - type: section
+    link: /Web/MathML
+
+  - type: section
+    title: Guides
+  - children:
+      - link: /Web/MathML/Authoring
+      - link: /Web/MathML/Fonts
+      - link: /Web/MathML/Values
+
+  - type: section
+    title: Reference
+  - type: listSubPages
+    title: Elements
+    details: closed
+    path: /en-US/docs/Web/MathML/Element
+  - type: listSubPages
+    title: Global attributes
+    details: closed
+    path: /en-US/docs/Web/MathML/Global_attributes
+  - /Web/MathML/Attribute
+
+  - type: section
+    title: Examples
+  - children:
+      - link: /Web/MathML/Examples/Deriving_the_Quadratic_Formula
+      - link: /Web/MathML/Examples/MathML_Pythagorean_Theorem
+
+l10n:
+  en-US:
+    Reference: Reference
+    Elements: Elements
+    Global attributes: Global attributes
+    Guides: Guides
+    Examples: Examples
+  fr:
+    Reference: Références
+    Elements: Éléments
+    Guides: Guides
+  ja:
+    Reference: リファレンス
+    Elements: 要素
+  ko:
+    Reference: "참고서:"
+    Elements: 요소
+    Guides: "안내서:"
+  pt-BR:
+    Reference: Referências
+    Elements: Elementos
+    Guides: Guides
+  ru:
+    Reference: Справочники
+    Elements: Элементы
+    Guides: Путеводитель
+  zh-CN:
+    Reference: 参考
+    Elements: 元素
+    Global attributes: 全局属性
+    Guides: 指南
+    Examples: 示例
