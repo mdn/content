@@ -117,10 +117,10 @@ Several features are available to developers who wish to stop using third-party 
 You can start to explore the different features available in Google's [Privacy Sandbox](/en-US/docs/Web/Privacy/Privacy_sandbox) project to see if they fit your use case (these are currently experimental, and Chromium-only):
 
 - [Federated Credential Management](/en-US/docs/Web/API/FedCM_API) (FedCM) API: Enables federated identity services allowing users to sign in to multiple sites and services.
-- [Private State Tokens](https://developer.chrome.com/docs/privacy-sandbox/private-state-tokens/): Enables anti-fraud and anti-spam by exchanging limited, non-identifying information across sites.
+- [Private State Tokens](https://developers.google.com/privacy-sandbox/protections/private-state-tokens): Enables anti-fraud and anti-spam by exchanging limited, non-identifying information across sites.
 - [Topics API](/en-US/docs/Web/API/Topics_API): Enables interest-based advertising and content personalization.
-- [Protected Audience API](https://developer.chrome.com/docs/privacy-sandbox/protected-audience/): Use data from one app or site to help select an ad when the user is visiting another app or site.
-- [Attribution Reporting API](https://developer.chrome.com/docs/privacy-sandbox/attribution-reporting/): Enables measurement of ad impressions and conversions.
+- [Protected Audience API](https://developers.google.com/privacy-sandbox/relevance/protected-audience): Use data from one app or site to help select an ad when the user is visiting another app or site.
+- [Attribution Reporting API](https://developers.google.com/privacy-sandbox/relevance/attribution-reporting): Enables measurement of ad impressions and conversions.
 
 ## See also
 

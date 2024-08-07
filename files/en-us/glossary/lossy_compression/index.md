@@ -17,4 +17,5 @@ Although there is no obvious difference in quality between the two images above,
 
 ## See also
 
-- [Lossless compression](/en-US/docs/Glossary/Lossless_compression)
+- Related glossary terms:
+  - {{Glossary("Lossless compression")}}

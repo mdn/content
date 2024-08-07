@@ -59,6 +59,7 @@ This article provides information about the changes in Firefox 130 that affect d
 ## Changes for add-on developers
 
 - The `options` parameter of {{WebExtAPIRef("webRequest.getSecurityInfo")}} is now optional ([Firefox bug 1909474](https://bugzil.la/1909474)).
+- {{WebExtAPIRef("runtime.getURL")}} (and the deprecated {{WebExtAPIRef("extension.getURL")}}) have been updated to prefix the supplied path string with the extension's `moz-extension:` origin (in line with the behavior of Chrome). In addition, {{WebExtAPIRef("runtime.getURL")}} no longer strips `/.`, `./`, and `../.` strings from the input URL ([Firefox bug 1795082](https://bugzil.la/1795082)).
 
 ### Removals
 

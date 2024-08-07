@@ -430,7 +430,7 @@ There is one final bit of CSS to add — put the following at the bottom of your
 }
 ```
 
-The rule states that when the info-panel has `.open` class set on it, set the {{cssxref("right")}} property of the `<aside>` to `0px`, which causes the panel to appear on the screen again (smoothly due to the transition). Removing the `.open`` class hides the panel again.
+The rule states that when the info-panel has `.open` class set on it, set the {{cssxref("right")}} property of the `<aside>` to `0px`, which causes the panel to appear on the screen again (smoothly due to the transition). Removing the `.open` class hides the panel again.
 
 To add/remove the `.open` class from the info-panel with a click of the button we need to use some JavaScript. Add the following code in between {{htmlelement("script")}} tags:
 

@@ -112,14 +112,14 @@ If no packages are available on your Linux distributions, or if you just want to
 
 ### Android
 
-You must use the [MathML-fonts add-on](https://addons.mozilla.org/firefox/addon/mathml-fonts/).
+You must use the [MathML-fonts add-on](https://addons.mozilla.org/en-US/firefox/addon/mathml-fonts/).
 
 > [!NOTE]
 > Noto Sans Math provides good Unicode coverage for math symbols and [Google plans to add support for math layout features](https://github.com/notofonts/math/issues/14#issuecomment-1161414446).
 
 ### Other systems
 
-On other systems, consider installing a [font with a MATH table](#fonts_with_a_math_table) using your package manager. Note that these fonts are generally delivered with TeX distributions such as [TeX Live](https://www.tug.org/texlive/), but you might need to follow specific instructions so that your system is aware of the fonts. As a last resort, install the [MathML fonts add-on](https://addons.mozilla.org/firefox/addon/mathml-fonts/).
+On other systems, consider installing a [font with a MATH table](#fonts_with_a_math_table) using your package manager. Note that these fonts are generally delivered with TeX distributions such as [TeX Live](https://www.tug.org/texlive/), but you might need to follow specific instructions so that your system is aware of the fonts. As a last resort, install the [MathML fonts add-on](https://addons.mozilla.org/en-US/firefox/addon/mathml-fonts/).
 
 ## Advanced setup
 
@@ -132,7 +132,7 @@ Currently, very few fonts have appropriate glyphs for the Arabic Mathematical Al
 
 ### Installation without administrator privilege
 
-If you need to install fonts on a system without administrator privilege, the easiest option is to use math font the [MathML-fonts add-on](https://addons.mozilla.org/firefox/addon/mathml-fonts/). Note that using the add-on is not optimal since it forces your Gecko browser to load a CSS stylesheet on each page you visit as well as Web math fonts on all pages with MathML content.
+If you need to install fonts on a system without administrator privilege, the easiest option is to use math font the [MathML-fonts add-on](https://addons.mozilla.org/en-US/firefox/addon/mathml-fonts/). Note that using the add-on is not optimal since it forces your Gecko browser to load a CSS stylesheet on each page you visit as well as Web math fonts on all pages with MathML content.
 
 A better alternative on UNIX systems is to install the OTF files for [Latin Modern Math](https://www.gust.org.pl/projects/e-foundry/lm-math/download/latinmodern-math-1959.zip) and [STIX](https://github.com/stipub/stixfonts) into some local font folder and (if necessary) to run `fc-cache` on it. On macOS and Linux, the standard paths are respectively `~/Library/Fonts/` and `~/.fonts`.
 
@@ -141,7 +141,7 @@ A better alternative on UNIX systems is to install the OTF files for [Latin Mode
 You can actually install any [mathematical OpenType font](https://fred-wang.github.io/MathFonts/) and use them for MathML rendering. Some browsers provide a way to configure the default font for MathML in their font preference menu. Alternatively, you can try the [MathML-fontsettings add-on](https://addons.mozilla.org/en-US/firefox/addon/mathml-font-settings/).
 
 - [Asana Math](https://www.ctan.org/tex-archive/fonts/Asana-Math/)
-- [Cambria Math](https://docs.microsoft.com/typography/font-list/?FID=360)
+- [Cambria Math](https://learn.microsoft.com/en-us/typography/font-list/?FID=360)
 - [DejaVu Math TeX Gyre](https://sourceforge.net/projects/dejavu/files/dejavu/)
 - [Garamond Math](https://github.com/YuanshengZhao/Garamond-Math)
 - [Latin Modern Math](https://www.gust.org.pl/projects/e-foundry/lm-math)
