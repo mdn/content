@@ -32,7 +32,7 @@ stop-color: unset;
 
 - {{cssxref("color_value", "&lt;color>")}}
 
-  - : The color of the fill as any valid CSS {{cssxref("color_value", "&lt;color>")}} value.
+  - : The color of the fill. This can be any valid CSS {{cssxref("color_value", "&lt;color>")}} value.
 
 ## Formal definition
 
