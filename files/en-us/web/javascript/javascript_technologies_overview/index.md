@@ -14,7 +14,7 @@ However, the umbrella term "JavaScript" as understood in a web browser context c
 
 The core language of JavaScript is standardized by the ECMA TC39 committee as a language named ECMAScript. "ECMAScript" is the term for the language standard, but "ECMAScript" and "JavaScript" can be used interchangeably.
 
-This core language is also used in non-browser environments, for example in [Node.js](https://nodejs.org).
+This core language is also used in non-browser environments, for example in [Node.js](https://nodejs.org/).
 
 ### What falls under the ECMAScript scope?
 
@@ -99,7 +99,7 @@ Non-browser environments (like Node.js) often do not have DOM APIs — because t
 There are three main JavaScript implementations used in browser environments and beyond:
 
 - Mozilla's [SpiderMonkey](https://spidermonkey.dev/), used in Firefox. This was the first _ever_ JavaScript engine, created by Brendan Eich at Netscape.
-- Google's [V8](https://v8.dev/), used in Google Chrome, Opera, Edge, [Node.js](https://nodejs.org), [Deno](https://deno.com/), [Electron](https://www.electronjs.org/), and more.
+- Google's [V8](https://v8.dev/), used in Google Chrome, Opera, Edge, [Node.js](https://nodejs.org/), [Deno](https://deno.com/), [Electron](https://www.electronjs.org/), and more.
 - Apple's [JavaScriptCore](https://trac.webkit.org/wiki/JavaScriptCore) (also known as SquirrelFish/Nitro), used in WebKit browsers such as Apple Safari, and [Bun](https://bun.sh/).
 
 Besides the above implementations, there are other popular JavaScript engines such as:
@@ -119,7 +119,7 @@ There are some engines specifically tailored for non-browser purposes:
 
 JavaScript engines expose a public API which application developers can use to integrate JavaScript into their software. By far, the most common host environment for JavaScript is web browsers. Web browsers typically use the public API to create **host objects** responsible for reflecting the [DOM](https://dom.spec.whatwg.org/) into JavaScript.
 
-Another common application for JavaScript is as a (Web) server-side scripting language. A JavaScript web server exposes host objects representing a HTTP request and response objects, which can then be manipulated by a JavaScript program to dynamically generate web pages. [Node.js](https://nodejs.org) is a popular example of this.
+Another common application for JavaScript is as a (Web) server-side scripting language. A JavaScript web server exposes host objects representing a HTTP request and response objects, which can then be manipulated by a JavaScript program to dynamically generate web pages. [Node.js](https://nodejs.org/) is a popular example of this.
 
 ## Shells
 

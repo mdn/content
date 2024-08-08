@@ -1004,7 +1004,7 @@
     "Media Session API": {
       "overview": ["Media Session API"],
       "guides": [],
-      "interfaces": ["MediaMetadata", "MediaSession"],
+      "interfaces": ["ChapterInformation", "MediaMetadata", "MediaSession"],
       "methods": [],
       "properties": ["Navigator.mediaSession"],
       "events": []
@@ -1237,10 +1237,12 @@
       "interfaces": [
         "Presentation",
         "PresentationAvailability",
-        "PresentationDeviceInfoManager",
-        "PresentationRequest",
-        "PresentationSession",
-        "PresentationSessionConnectEvent"
+        "PresentationConnection",
+        "PresentationConnectionAvailableEvent",
+        "PresentationConnectionCloseEvent",
+        "PresentationConnectionList",
+        "PresentationReceiver",
+        "PresentationRequest"
       ],
       "methods": [],
       "properties": ["Navigator.presentation"],

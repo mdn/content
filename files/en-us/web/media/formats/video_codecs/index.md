@@ -776,8 +776,8 @@ In HTML content for web browsers, AVC is broadly compatible and many platforms s
       <th scope="row">Specification</th>
       <td>
         <a
-          href="https://mpeg.chiariglione.org/standards/mpeg-4/advanced-video-coding"
-          >https://mpeg.chiariglione.org/standards/mpeg-4/advanced-video-coding</a
+          href="https://mpeg.chiariglione.org/standards/mpeg-4/advanced-video-coding.html"
+          >https://mpeg.chiariglione.org/standards/mpeg-4/advanced-video-coding.html</a
         ><br /><a href="https://www.itu.int/rec/T-REC-H.264"
           >https://www.itu.int/rec/T-REC-H.264</a
         >
@@ -1208,7 +1208,7 @@ You almost certainly don't want to use this format, since it isn't supported in 
           >obtain a license</a
         >
         through <a href="https://www.mpegla.com/">MPEG LA</a> and/or
-        <a href="https://about.att.com/innovation/ip/patents/mpeg-4"
+        <a href="https://about.att.com/innovation/ip/patents"
           >AT&#x26;T</a
         >
         as needed

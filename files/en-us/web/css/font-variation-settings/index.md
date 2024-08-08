@@ -125,6 +125,6 @@ You can edit the CSS in the example below to play with different font slant/obli
 
 - [Variable fonts guide](/en-US/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)
 - [OpenType font variations overview](https://learn.microsoft.com/en-us/typography/opentype/spec/otvaroverview) on microsoft.com
-- [OpenType design-variation axis tag registry](https://docs.microsoft.com/typography/opentype/spec/dvaraxisreg) on microsoft.com
+- [OpenType design-variation axis tag registry](https://learn.microsoft.com/en-us/typography/opentype/spec/dvaraxisreg) on microsoft.com
 - [OpenType variable fonts](https://www.axis-praxis.org/) on axis-praxis.org
 - [Variable fonts](https://v-fonts.com/) on v-fonts.com

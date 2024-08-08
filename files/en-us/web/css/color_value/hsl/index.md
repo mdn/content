@@ -375,4 +375,4 @@ div.legacyHSLA {
 - [sRGB color picker and conversion tool](/en-US/docs/Web/CSS/CSS_colors/Color_picker_tool)
 - [Using relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors)
 - [CSS colors](/en-US/docs/Web/CSS/CSS_colors) module
-- [Color picker tool](https://colorjs.io/apps/picker/) by Lea Verou
+- [Color picker tool](https://apps.colorjs.io/picker/) by Lea Verou
