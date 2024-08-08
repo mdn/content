@@ -23,9 +23,9 @@ The following methods are available to all read-only [`Map`-like objects](/en-US
 The following methods are available to all read-only [`Map`-like objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map#map-like_browser_apis) (the below links are to the {{jsxref("Map")}} global object reference page).
 
 - {{jsxref("Map/entries", "entries()")}}
-  - : Returns a new iterator object that yields entries in `[key, value]` pairs in the map in insertion order.
+  - : Returns a new [iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator) that yields entries in `[key, value]` pairs in the map in insertion order.
 - {{jsxref("Map/forEach", "forEach()")}}
-  - : Calls a provided callback function once for each value and key present in the map, in insertion order.
+  - : Calls a provided {{glossary("callback function")}} once for each value and key present in the map, in insertion order.
 - {{jsxref("Map/get", "get()")}}
   - : Returns the {{domxref("AudioParam")}} value associated with the string key, or `undefined` if there is none.
 - {{jsxref("Map/has", "has()")}}
