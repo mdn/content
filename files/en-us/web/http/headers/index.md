@@ -228,13 +228,13 @@ For more information, refer to the [CORS documentation](/en-US/docs/Web/HTTP/COR
   - : Prevents other domains from reading the response of the resources to which this header is applied. See also [CORP explainer article](/en-US/docs/Web/HTTP/Cross-Origin_Resource_Policy).
 - {{HTTPHeader("Content-Security-Policy")}} ({{Glossary("CSP")}})
   - : Controls resources the user agent is allowed to load for a given page.
-- {{HTTPHeader("Content-Security-Policy-Report-Only")}} ({{Glossary("CSP")}})
+- {{HTTPHeader("Content-Security-Policy-Report-Only")}}
   - : Allows web developers to experiment with policies by monitoring, but not enforcing, their effects. These violation reports consist of {{Glossary("JSON")}} documents sent via an HTTP `POST` request to the specified URI.
 - {{HTTPHeader("Expect-CT")}} {{deprecated_inline}}
   - : Lets sites opt in to reporting and enforcement of [Certificate Transparency](/en-US/docs/Web/Security/Certificate_Transparency) to detect use of misissued certificates for that site.
 - {{HTTPHeader("Permissions-Policy")}}
   - : Provides a mechanism to allow and deny the use of browser features in a website's own frame, and in {{htmlelement("iframe")}}s that it embeds.
-- {{HTTPHeader("Reporting-Endpoints")}} ({{Glossary("CSP")}})
+- {{HTTPHeader("Reporting-Endpoints")}}
   - : Response header that allows website owners to specify one or more endpoints used to receive errors such as CSP violation reports, {{HTTPHeader("Cross-Origin-Opener-Policy")}} reports, or other generic violations.
 - {{HTTPHeader("Strict-Transport-Security")}} ({{Glossary("HSTS")}})
   - : Force communication using HTTPS instead of HTTP.
@@ -285,7 +285,7 @@ The following request headers are not _strictly_ "fetch metadata request headers
 - {{HTTPHeader("Trailer")}}
   - : Allows the sender to include additional fields at the end of chunked message.
 
-## Websockets
+## WebSockets
 
 - {{HTTPHeader("Sec-WebSocket-Accept")}}
   - : Sent from server to client and indicates that the server is willing to initiate a WebSocket connection.
