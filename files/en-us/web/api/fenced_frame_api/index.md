@@ -26,6 +26,8 @@ Most modern browsers are working on mechanisms to partition storage so that cook
 - A `<fencedframe>` cannot be freely manipulated or have its data accessed via regular scripting (for example reading or setting the source URL). `<fencedframe>` content can only be embedded via [specific APIs](#use_cases).
 - A `<fencedframe>` cannot access the embedding context's DOM, nor can the embedding context access the `<fencedframe>`'s DOM.
 
+For more information about the communication model of fenced frames, read the [communication with embedded frames](/en-US/docs/Web/API/Fenced_frame_API/Communication_with_embedded_frames) guide.
+
 ### Use cases
 
 `<fencedframe>`s are used by other APIs to embed different types of cross-site content or collect data, fulfilling different use cases in a privacy-preserving manner. Most of these previously relied on third-party cookies or other mechanisms that were bad for privacy.
