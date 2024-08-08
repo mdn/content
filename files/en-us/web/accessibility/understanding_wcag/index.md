@@ -26,7 +26,6 @@ Each of the links below will take you to pages that further expand on these area
 
 We also included two additional WCAG resources focused on making sites [keyboard accessible](/en-US/docs/Web/Accessibility/Understanding_WCAG/Keyboard) and provided descriptive names or labels with [text labels and names](/en-US/docs/Web/Accessibility/Understanding_WCAG/Text_labels_and_names).
 
-
 ## Legal standing
 
 This introductory documentation is intended to provide practical information to help you build better, more accessible websites. However, we are not lawyers, and none of this constitutes legal advice. If you are worried about the legal implications of web accessibility, we recommend that you check the specific legislation governing accessibility for the web and public resources in your country or locale and seek the advice of a qualified lawyer.
@@ -35,7 +34,7 @@ This introductory documentation is intended to provide practical information to 
 
 ## See also
 
-- [WCAG: Perceivable](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable)
+- [WCAG: Perceivable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable)
 - [WCAG: Operable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable)
 - [WCAG: Understandable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable)
 - [WCAG: Robust](/en-US/docs/Web/Accessibility/Understanding_WCAG/Robust)
