@@ -22,7 +22,7 @@ The **`MediaMetadata`** interface of the {{domxref("Media Session API", "", "", 
   - : Returns or sets the name of the artist, group, creator, etc. of the media to be played.
 - {{domxref("MediaMetadata.artwork")}}
   - : Returns or sets an array of images associated with playing media.
-- {{domxref("MediaMetadata.chapterInfo")}} {{ReadOnlyInline}}
+- {{domxref("MediaMetadata.chapterInfo")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : Returns an array of chapter information metadata associated with playing media, represented by {{domxref("ChapterInformation")}} object instances.
 - {{domxref("MediaMetadata.title")}}
   - : Returns or sets the title of the media to be played.
