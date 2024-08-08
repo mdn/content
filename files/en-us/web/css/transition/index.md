@@ -98,7 +98,7 @@ See [how things are handled](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_trans
 
 ### Basic example
 
-In this example, when the user hovers over the element, there is a one-second delay before a four-second `background-color` transition occurs.
+In this example, when the user hovers over the element, there is a half-second (`500ms`) delay before a two-second `background-color` transition occurs.
 
 #### HTML
 
