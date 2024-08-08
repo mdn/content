@@ -78,4 +78,4 @@ You can use this attribute with the following SVG elements:
 
 - SVG {{SVGAttr("color-interpolation")}} attribute
 - CSS {{cssxref('color-interpolation-filters')}} property
-- [sRGB specification](https://webstore.iec.ch/publication/6169)
+- [sRGB specification](https://webstore.iec.ch/en/publication/6169)

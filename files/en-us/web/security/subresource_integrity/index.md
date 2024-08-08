@@ -74,7 +74,7 @@ To use that code:
 4. Press any key to dismiss the command box.
 
 > [!NOTE]
-> If OpenSSL is not installed on your system, visit the [OpenSSL project website](https://www.openssl.org) for information about downloading and installing it. The OpenSSL project does not itself host binary distributions of OpenSSL, but does maintain an informal list of third-party distributions: https://wiki.openssl.org/index.php/Binaries.
+> If OpenSSL is not installed on your system, visit the [OpenSSL project website](https://www.openssl.org/) for information about downloading and installing it. The OpenSSL project does not itself host binary distributions of OpenSSL, but does maintain an informal list of third-party distributions: https://wiki.openssl.org/index.php/Binaries.
 
 #### Using shasum
 
@@ -136,5 +136,4 @@ Browsers handle SRI by doing the following:
 - [Content Security Policy](/en-US/docs/Web/HTTP/CSP)
 - The {{httpheader("Content-Security-Policy")}} HTTP header.
 - [A CDN that can not XSS you: Using Subresource Integrity](https://frederikbraun.de/using-subresource-integrity.html)
-- [Subresource Integrity test from W3C](https://w3c-test.org/subresource-integrity/subresource-integrity.html)
 - [SRI Hash Generator](https://www.srihash.org/)

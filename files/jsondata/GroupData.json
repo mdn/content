@@ -1004,7 +1004,7 @@
     "Media Session API": {
       "overview": ["Media Session API"],
       "guides": [],
-      "interfaces": ["MediaMetadata", "MediaSession"],
+      "interfaces": ["ChapterInformation", "MediaMetadata", "MediaSession"],
       "methods": [],
       "properties": ["Navigator.mediaSession"],
       "events": []
@@ -1237,10 +1237,12 @@
       "interfaces": [
         "Presentation",
         "PresentationAvailability",
-        "PresentationDeviceInfoManager",
-        "PresentationRequest",
-        "PresentationSession",
-        "PresentationSessionConnectEvent"
+        "PresentationConnection",
+        "PresentationConnectionAvailableEvent",
+        "PresentationConnectionCloseEvent",
+        "PresentationConnectionList",
+        "PresentationReceiver",
+        "PresentationRequest"
       ],
       "methods": [],
       "properties": ["Navigator.presentation"],
@@ -1752,7 +1754,7 @@
       "interfaces": ["VirtualKeyboard"],
       "methods": [],
       "properties": [
-        "HTMLElement.virtualkeyboardpolicy",
+        "HTMLElement.virtualKeyboardPolicy",
         "Navigator.virtualKeyboard"
       ],
       "events": []
@@ -2140,7 +2142,6 @@
         "/docs/Web/API/WebRTC_API/Using_data_channels",
         "/docs/Web/API/WebRTC_API/Using_DTMF",
         "/docs/Web/API/WebRTC_API/Using_Encoded_Transforms",
-        "/docs/Web/API/WebRTC_API/adapter.js",
         "/docs/Web/API/WebRTC_API/Simple_RTCDataChannel_sample",
         "/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs"
       ],
@@ -2327,7 +2328,7 @@
         "USBConfiguration",
         "USBConnectionEvent",
         "USBDevice",
-        "USBEndPoint",
+        "USBEndpoint",
         "USBInterface",
         "USBInTransferResult",
         "USBIsochronousInTransferPacket",

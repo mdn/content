@@ -1,7 +1,7 @@
 ---
 title: "SVGRect: x property"
 short-title: x
-slug: Web/API/SVGRect/The__X__property
+slug: Web/API/SVGRect/x
 page-type: web-api-instance-property
 ---
 

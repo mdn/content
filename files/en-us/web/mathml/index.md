@@ -39,7 +39,7 @@ Below you will find links to documentation, examples, and tools to work with Mat
 
 ## Tools
 
-- [W3C Validator](https://validator.w3.org)
+- [W3C Validator](https://validator.w3.org/)
 - [W3C's wiki page](https://www.w3.org/wiki/Math_Tools)
 
 ## Related topics

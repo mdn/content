@@ -6,15 +6,9 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 129 that affect developers. Firefox 129 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [August 6, 2024](https://whattrainisitnow.com/release/?version=129).
+This article provides information about the changes in Firefox 129 that affect developers. Firefox 129 was released on [August 6, 2024](https://whattrainisitnow.com/release/?version=129).
 
 ## Changes for web developers
-
-### Developer Tools
-
-### HTML
-
-#### Removals
 
 ### CSS
 
@@ -22,28 +16,14 @@ This article provides information about the changes in Firefox 129 that affect d
 - The {{CSSXRef("transition-behavior")}} CSS property is supported. This lets you specify if descrete properties, such as {{CSSXRef("display")}} and {{CSSXRef("overlay")}}, can be transitioned by setting the value to [`allow-descrete`](/en-US/docs/Web/CSS/transition-behavior#allow-discrete). ([Firefox bug 1901645](https://bugzil.la/1901645)).
 - `-webkit-font-feature-settings` has been implemented as an alias of the standard {{cssxref("font-feature-settings")}} property ([Firefox bug 1595620](https://bugzil.la/1595620)).
 
-#### Removals
-
 ### JavaScript
 
 - {{jsxref("Float16Array")}} typed arrays are now supported, along with {{jsxref("DataView.prototype.getFloat16()")}} and {{jsxref("DataView.prototype.setFloat16()")}} for reading and setting `Float16Array` values from a {{jsxref("DataView")}}, and the {{jsxref("Math.f16round()")}} static method, which can be used to round numbers to 16 bits. The new type is useful for sharing data with a GPU, in particular for use cases where it makes sense to trade off precision for memory consumption. ([Firefox bug 1903329](https://bugzil.la/1903329).)
 - Regular expressions can now use the same name for [named capturing groups](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Named_capturing_group) in different [disjunction alternatives](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Disjunction). This is allowed because only one alternative in a disjunction will match, so a name declared in several alternatives can only reference one captured group. The names must still be unique within a particular alternative, and across the rest of the pattern. ([Firefox bug 1903288](https://bugzil.la/1903288).)
 
-#### Removals
-
-### SVG
-
-#### Removals
-
 ### HTTP
 
 - HTTPS DNS records can now be resolved using the operating system's DNS resolver on Windows 11, Linux, and Android 10+. This ensures that [DNS over HTTPS (DoH)](https://support.mozilla.org/en-US/kb/dns-over-https-doh-faqs) will be used if a user has enabled it on the device, even if it is not enabled in the browser. This feature allows the use of HTTP/3 without needing to use the {{httpheader("Alt-Svc")}} header and enables automatic upgrade of HTTP requests to HTTPS when the HTTPS DNS record is present. Most importantly, it now allows the use of [Encrypted Client Hello (ECH)](https://support.mozilla.org/en-US/kb/faq-encrypted-client-hello) privacy feature even when DoH is only enabled on the device, not in the browser. ([Firefox bug 1906239](https://bugzil.la/1906239)).
-
-#### Removals
-
-### Security
-
-#### Removals
 
 ### APIs
 
@@ -60,25 +40,18 @@ This article provides information about the changes in Firefox 129 that affect d
 - The {{domxref("PerformanceResourceTiming.contentType","contentType")}} and {{domxref("PerformanceResourceTiming.responseStatus","responseStatus")}} properties of the {{domxref("PerformanceResourceTiming")}} interface are now supported, indicating the content type of the fetched resource and the HTTP response status code returned when fetching the resource, respectively. ([Firefox bug 1800443](https://bugzil.la/1800443), [Firefox bug 1796785](https://bugzil.la/1796785).)
 - The {{domxref("RTCDTMFSender.canInsertDTMF")}} property is now supported. It enables you to check whether a WebRTC sender can insert DTMF tones into the outgoing connection. If supported, you can insert DTMF tones by using {{domxref("RTCDTMFSender.insertDTMF()")}}. ([Firefox bug 1623193](https://bugzil.la/1623193)).
 
-#### DOM
-
-#### Media, WebRTC, and Web Audio
-
-#### Removals
-
-### WebAssembly
-
 #### Removals
 
 - The {{domxref('Navigator.vibrate()')}} method has been removed ([Firefox bug 1653318](https://bugzil.la/1653318), [Firefox bug 1900037](https://bugzil.la/1900037)).
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
-#### General
+#### Removals
+
+- By default CDP (Chrome DevTools Protocol) is now disabled. It can be re-enabled via the `remote.active-protocols` preference. You can learn more about this on the following [blog post](https://fxdx.dev/deprecating-cdp-support-in-firefox-embracing-the-future-with-webdriver-bidi/). ([Firefox bug 1882089](https://bugzil.la/1882089))
 
 #### WebDriver BiDi
 
-- By default CDP (Chrome DevTools Protocol) is now disabled. It can be re-enabled via the `remote.active-protocols` preference. You can learn more about this on the following [blog post](https://fxdx.dev/deprecating-cdp-support-in-firefox-embracing-the-future-with-webdriver-bidi/). ([Firefox bug 1882089](https://bugzil.la/1882089))
 - Added support for the `network.setCacheBehavior` command, which allows to configure the browser to bypass the network cache either globally or for a set of top level browsing contexts. ([Firefox bug 1901032](https://bugzil.la/1901032) and [Firefox bug 1906100](https://bugzil.la/1906100))
 - Added support for prompts of type `beforeUnload` which can now be handled in the same way as other user prompts. ([Firefox bug 1824220](https://bugzil.la/1824220))
 - We now support all arguments for the `network.provideResponse` command when used in the `beforeRequestSent` phase, such as the `body` parameter which allows to return mock responses. ([Firefox bug 1853882](https://bugzil.la/1853882))
@@ -94,16 +67,6 @@ This article provides information about the changes in Firefox 129 that affect d
 - Fixed a bug in the `browsingContext.userPromptOpened` event, which would unexpectedly miss the `defaultValue` field ([Firefox bug 1859814](https://bugzil.la/1859814))
 - Fixed an issue with the `network.responseCompleted` event during authentication flows, which was emitted too many times compared to the specifications. Only one `responseCompleted` (or `fetchError`) event is expected for the whole HTTP authentication flow. ([Firefox bug 1906106](https://bugzil.la/1906106))
 - Improved the `browser.removeUserContext` command to skip all "beforeunload" prompts. ([Firefox bug 1876062](https://bugzil.la/1876062))
-
-## Changes for add-on developers
-
-### Removals
-
-### Other
-
-## Experimental web features
-
-These features are newly shipped in Firefox 129 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
 
 ## Older versions
 

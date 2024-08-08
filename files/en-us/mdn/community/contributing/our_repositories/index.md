@@ -78,4 +78,3 @@ Always remember, if you are updating the code on any given page, you'll need to 
 - [**houdini-examples**](https://github.com/mdn/houdini-examples)
 - [**headless-examples**](https://github.com/mdn/headless-examples)
 - [**perf-examples**](https://github.com/mdn/perf-examples)
-- [**devtools-examples**](https://github.com/mdn/devtools-examples)

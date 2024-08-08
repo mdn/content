@@ -6,7 +6,7 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-This article provides information about the changes in Firefox 130 that affect developers. Firefox 130 is the current [Nightly version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly) and ships on [September 3, 2024](https://whattrainisitnow.com/release/?version=130).
+This article provides information about the changes in Firefox 130 that affect developers. Firefox 130 is the current [Beta version of Firefox](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and ships on [September 3, 2024](https://whattrainisitnow.com/release/?version=130).
 
 ## Changes for web developers
 
@@ -58,7 +58,8 @@ This article provides information about the changes in Firefox 130 that affect d
 
 ## Changes for add-on developers
 
-- {{WebExtAPIRef("runtime.getURL")}} (and the deprecated {{WebExtAPIRef("extension.getURL")}}) have been updated to prefix the supplied path string with the extension's `moz-extension:` origin (in line with the behavior of Chrome). In addition, {{WebExtAPIRef("runtime.getURL")}} no longer strips `/.`, `./`, and `../.` strings from the input URL ([Firefox bug 1795082](https://bugzil.la/1795082)).
+- The `options` parameter of {{WebExtAPIRef("webRequest.getSecurityInfo")}} is now optional ([Firefox bug 1909474](https://bugzil.la/1909474)).
+- {{WebExtAPIRef("runtime.getURL")}} (and the deprecated {{WebExtAPIRef("extension.getURL")}}) now always prepended the extension origin to the path, without further normalization. Previously, when an absolute URL was provided, instead of a relatively URL, the absolute URL was returned. ([Firefox bug 1795082](https://bugzil.la/1795082)).
 
 ### Removals
 

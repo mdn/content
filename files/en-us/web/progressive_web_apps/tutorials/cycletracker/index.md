@@ -28,7 +28,7 @@ Using the languages of the web, we will create a fully functioning application t
 
 - Available anywhere and everywhere
 
-  - : Single-OS-only applications are distributed to users through downloads, often in proprietary app stores. They are available through a vendor like the Apple App Store, [Google Play](https://play.google.com/store/apps), [Microsoft Store](https://apps.microsoft.com/store/apps), or similar. PWAs don't have these requirements. If you want to distribute your CycleTracker app, you won't require an intermediary. A user can access your app by visiting its online version. But if you want, it is possible to distribute your PWA on the Play Store and App Store, undifferentiated from other iOS or Android apps.
+  - : Single-OS-only applications are distributed to users through downloads, often in proprietary app stores. They are available through a vendor like the Apple App Store, [Google Play](https://play.google.com/store/apps), [Microsoft Store](https://apps.microsoft.com/), or similar. PWAs don't have these requirements. If you want to distribute your CycleTracker app, you won't require an intermediary. A user can access your app by visiting its online version. But if you want, it is possible to distribute your PWA on the Play Store and App Store, undifferentiated from other iOS or Android apps.
 
 - Easy for the user to install
 
