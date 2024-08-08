@@ -293,8 +293,6 @@ SVG makes use of a number of data types. This article lists these types along wi
 
     The `context-fill` and `context-stroke` values allow for inheriting values in [marker](/en-US/docs/Web/SVG/Element/marker) and [use](/en-US/docs/Web/SVG/Element/use) elements.
 
-    Within the SVG DOM, \<paint> values are represented using {{domxref("SVGPaint")}} objects.
-
 ## Percentage
 
 - \<percentage>
