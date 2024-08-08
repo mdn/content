@@ -6,13 +6,13 @@ page-type: guide
 
 {{CSSRef}}
 
-CSS animations make it possible to do incredible things with the elements that make up your documents and apps. However, there are things you might want to do that aren't obvious, or clever ways to do things that you might not come up with right away. This article is a collection of tips and tricks we've found that may make your work easier, including how to run a stopped animation again.
+CSS animations make it possible to do incredible things with the elements that make up your documents and apps. There are things you might want to do that aren't obvious and many clever ways to do things that may not be immediately apparent. This article is a collection of tips and tricks we've found that will hopefully make your work easier, including how to re-run a completed animation.
 
 ## Run an animation again
 
-The [CSS Animations](/en-US/docs/Web/CSS/CSS_animations) specification doesn't offer a way to run an animation again. You can't just set the element's {{cssxref("animation-play-state")}} to `"running"` again. Instead, you have to use JavaScript to get a completed animation to replay.
+The [CSS Animations](/en-US/docs/Web/CSS/CSS_animations) specification doesn't offer a way to run an animation again. You can't just set the element's {{cssxref("animation-play-state")}} to `"running"` again once the animation ends. Instead, you have to use JavaScript to get a completed animation to replay.
 
-Here's one way to do it that we feel is stable and reliable enough to suggest to you.
+This is one way to do it that is a stable and reliable method.
 
 ### HTML
 
@@ -38,7 +38,7 @@ Let's style the box using CSS.
 
 ### JavaScript
 
-Next, we'll look at the JavaScript that does the work. The `playAnimation()` function is to be called when the user clicks on the run button. Instead of {{cssxref("@keyframes")}} at-rule we [define the keyframes in JavaScript](/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats).
+Next, we'll look at the JavaScript that does the work. The `playAnimation()` function is to be called when the user clicks on the run button. Instead of using the {{cssxref("@keyframes")}} at-rule, we [define the keyframes in JavaScript](/en-US/docs/Web/API/Web_Animations_API/Keyframe_Formats).
 
 ```js
 const box = document.querySelector(".box");
@@ -63,9 +63,9 @@ function playAnimation() {
 }
 ```
 
-The `playAnimation` method calls {{domxref("Element.animate()")}} method on the box to play the animation. The `animate` method takes the `colorChangeFrames` keyframe object and animation duration as arguments.
+The `playAnimation` method calls the {{domxref("Element.animate()")}} method on the box to play the animation. The `animate()` method takes a keyframe object or array of keyframe objects and animation and animation options as arguments. In this case, we pass the method the `colorChangeFrames` keyframe object and an animation duration.
 
-Of course, we also need to add an event handler to our run button so it'll actually do something:
+We also need to add an event handler to our run button so it will actually do something:
 
 ```js
 button.addEventListener("click", playAnimation);
@@ -79,7 +79,7 @@ button.addEventListener("click", playAnimation);
 
 In the previous example, if the run button is clicked before the animation is completed, the current animation will abruptly stop and the animation will restart from the `0%` or `from` starting keyframe. If you would like the current animation iteration to be complete before starting a new one, we can disable the `run` button while the animation is running, reenabling it based on the [`finish`](/en-US/docs/Web/API/Animation/finish) event. Alternatively, if we want to enable multiple iterations of the animation, we can check to see if an animation is running on the element and increment the `animation-iteration` count for each button click while the animation is running.
 
-The following demo shows how you'd achieve this. You'll have to do the following modification to the same code:
+In this example, we update our `playAnimation()` function to disable the button when clicked, and listen for the `finish` event to re-enable the button.
 
 ```html hidden
 <div class="box"></div>
@@ -114,7 +114,7 @@ button.addEventListener("click", playAnimation);
 
 {{ EmbedLiveSample("Waiting for an animation to complete before stopping", "100%", "160") }}
 
-The code disables the button and then starts the animation. The button remains disabled till the animation completes.
+The code disables the button and starts the animation. The button is re-enabled when the animation completes.
 
 ## Stacking context in animations
 
