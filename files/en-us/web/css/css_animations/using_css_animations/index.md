@@ -38,7 +38,7 @@ The sub-properties of the {{cssxref("animation")}} property are:
   - : Specifies the name of the {{cssxref("@keyframes")}} at-rule describing an animation's keyframes.
 - {{cssxref("animation-play-state")}}
   - : Specifies whether to pause or play an animation sequence.
-- {{cssxref("animation-timeline")}} {{experimental_inline}}
+- {{cssxref("animation-timeline")}}
   - : Specifies the timeline that is used to control the progress of a CSS animation.
 - {{cssxref("animation-timing-function")}}
   - : Specifies how an animation transitions through keyframes by establishing acceleration curves.

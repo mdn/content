@@ -2,6 +2,8 @@
 title: field-sizing
 slug: Web/CSS/field-sizing
 page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.field-sizing
 ---
 
