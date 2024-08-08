@@ -17,7 +17,7 @@ Newer versions of WCAG are not meant to supersede previous versions, but WAI rec
 
 WCAG is broadly broken down into four principles — major things that web content **must be** to be considered accessible (see [Understanding the Four Principles of Accessibility](https://www.w3.org/WAI/WCAG22/Understanding/intro#understanding-the-four-principles-of-accessibility) for the WCAG definitions).
 
-Each of the links below will take you to pages that further expand on these areas, giving you practical advice on how to write your web content so it conforms to the success criteria outlined in the WCAG 2.X four guiding principles.
+Each of the links below will take you to pages that further expand on these areas, giving you practical advice on how to write your web content so it conforms to the success criteria outlined in the WCAG 2 four guiding principles.
 
 - [Perceivable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable): Users must be able to perceive it in some way, using one or more of their senses.
 - [Operable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable): Users must be able to control UI elements (e.g. buttons must be clickable in some way — mouse, keyboard, voice command, etc.).
