@@ -71,7 +71,7 @@ _No change._
 
 - You can now send the contents of [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) (that is, the contents of an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) object) [using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#sending_typed_arrays_as_binary_data).
 - WebSocket connections now permit non-characters in otherwise valid UTF-8 data frames to be received, instead of failing.
-- The HTTP `Accept` header for XSLT requests has been changed to "\*/\*" for simplicity. Since fetching XSLT has always fallen back to "\*/\*" anyway, it made sense to simplify the initial request.
+- The HTTP `Accept` header for XSLT requests has been changed to `*/*` for simplicity. Since fetching XSLT has always fallen back to `*/*` anyway, it made sense to simplify the initial request.
 - Attempts by a server to use the `301 Moved Permanently` or `307 Temporary Redirect` response codes to redirect the user to a `javascript:` URI now [result in a "bad connection" error](/en-US/docs/Web/HTTP#more_on_redirection_responses) instead of actually redirecting. This prevents certain types of cross-site scripting attacks.
 - Content served with an empty {{ HTTPHeader("Content-Disposition") }} were previously treated as if the {{ HTTPHeader("Content-Disposition") }} were "attachment"; this didn't always work as expected. These are now handled as if the {{ HTTPHeader("Content-Disposition") }} were "inline".
 - The default maximum size of an item in the disk cache has been increased to 50 MB; previously, only items up to 5 MB were cached.
