@@ -15,7 +15,10 @@ This article introduces custom elements, and walks through some examples.
 There are two types of custom element:
 
 - **Customized built-in elements** inherit from standard HTML elements such as {{domxref("HTMLImageElement")}} or {{domxref("HTMLParagraphElement")}}. Their implementation extends the behavior of select instances of the standard element.
-  > **Note:** Please see [browser support](/en-US/docs/Web/HTML/Global_attributes/is#browser_compatibility) for the complementary `is` attribute when considering usage.
+
+  > [!NOTE]
+  > Please see the [`is`](/en-US/docs/Web/HTML/Global_attributes/is) attribute reference for caveats on implementation reality of custom built-in elements.
+
 - **Autonomous custom elements** inherit from the HTML element base class {{domxref("HTMLElement")}}. You have to implement their behavior from scratch.
 
 ## Implementing a custom element
@@ -241,7 +244,7 @@ In the rest of this guide we'll look at a few example custom elements. You can f
 
 First, we'll look at an autonomous custom element. The `<popup-info>` custom element takes an image icon and a text string as attributes, and embeds the icon into the page. When the icon is focused, it displays the text in a pop up information box to provide further in-context information.
 
-- [See the example running live](https://mdn.github.io/web-components-examples/popup-info-box-web-component)
+- [See the example running live](https://mdn.github.io/web-components-examples/popup-info-box-web-component/)
 - [See the source code](https://github.com/mdn/web-components-examples/tree/main/popup-info-box-web-component)
 
 To begin with, the JavaScript file defines a class called `PopupInfo`, which extends the {{domxref("HTMLElement")}} class.
@@ -354,7 +357,7 @@ It is now available to use on our page. Over in our HTML, we use it like so:
 In the above example we apply styles to the shadow DOM using a {{htmlelement("style")}} element, but you can reference an external stylesheet from a {{htmlelement("link")}} element instead. In this example we'll modify the `<popup-info>` custom element to use an external stylesheet.
 
 - [See the example running live](https://mdn.github.io/web-components-examples/popup-info-box-external-stylesheet/)
-- [See the source code](https://github.com/mdn/web-components-examples/blob/main/popup-info-box-external-stylesheet/)
+- [See the source code](https://github.com/mdn/web-components-examples/tree/main/popup-info-box-external-stylesheet)
 
 Here's the class definition:
 
@@ -423,6 +426,9 @@ Now let's have a look at a customized built in element example. This example ext
 
 - [See the example running live](https://mdn.github.io/web-components-examples/expanding-list-web-component/)
 - [See the source code](https://github.com/mdn/web-components-examples/tree/main/expanding-list-web-component)
+
+> [!NOTE]
+> Please see the [`is`](/en-US/docs/Web/HTML/Global_attributes/is) attribute reference for caveats on implementation reality of custom built-in elements.
 
 First of all, we define our element's class:
 

@@ -30,6 +30,8 @@ The sub-properties of the {{cssxref("animation")}} property are:
   - : Specifies the length of time in which an animation completes one cycle.
 - {{cssxref("animation-fill-mode")}}
   - : Specifies how an animation applies styles to its target before and after it runs.
+    > [!NOTE]
+    > In the case of animation [forwards](/en-US/docs/Web/CSS/animation-fill-mode#forwards) fill mode, animated properties behave as if included in a set [`will-change`](/en-US/docs/Web/CSS/will-change) property value. If a new stacking context was created during the animation, the target element retains the stacking context after the animation has finished.
 - {{cssxref("animation-iteration-count")}}
   - : Specifies the number of times an animation should repeat.
 - {{cssxref("animation-name")}}
@@ -104,7 +106,8 @@ If the mismatch in the number of animations and animation property values is inv
 
 ## Examples
 
-> **Note:** Some older browsers (pre-2017) may need prefixes; the live examples you can click to see in your browser include the `-webkit` prefixed syntax.
+> [!NOTE]
+> Some older browsers (pre-2017) may need prefixes; the live examples you can click to see in your browser include the `-webkit` prefixed syntax.
 
 ### Making text slide across the browser window
 
@@ -143,7 +146,8 @@ The second keyframe occurs at `100%` (using the alias `to`). The {{cssxref("tran
 </p>
 ```
 
-> **Note:** Reload page to see the animation.
+> [!NOTE]
+> Reload page to see the animation.
 
 {{EmbedLiveSample("Making_text_slide_across_the_browser_window","100%","250")}}
 
@@ -215,7 +219,8 @@ We've added a {{htmlelement("span")}} around "Alice":
 
 This tells the browser the name should be normal for the first and last 25% of the animation, but turn pink while being scaled up and back again in the middle. We set the spans's {{cssxref("display")}} property to `inline-block` as the `transform` properties do not affect non-replaced {{glossary("inline-level content")}}.
 
-> **Note:** Reload page to see the animation.
+> [!NOTE]
+> Reload page to see the animation.
 
 {{EmbedLiveSample("Adding_another_keyframe","100%","250")}}
 
@@ -390,7 +395,8 @@ Just for the sake of completeness, here's the HTML that displays the page conten
 
 And here's the live output.
 
-> **Note:** Reload page to see the animation.
+> [!NOTE]
+> Reload page to see the animation.
 
 {{EmbedLiveSample('Using_animation_events', '600', '300')}}
 

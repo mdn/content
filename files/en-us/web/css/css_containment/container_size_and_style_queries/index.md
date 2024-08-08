@@ -28,7 +28,7 @@ There are two types of container queries: _container size queries_ and _containe
 
 In this guide, we learn the basics of container queries by looking at:
 
-1. [container size queries](#container-size-queries),
+1. [container size queries](#container_size_queries_2),
 2. [naming containers](#naming_containers) to limit their scope, and
 3. using the `style()` functional notation within the {{cssxref("@container")}} at rule's `<container-condition>` to create [style queries with custom properties](#style_queries_for_custom_properties).
 
@@ -361,7 +361,8 @@ Because we set `syntax: "<color>";`, the CSS variable can only be assigned valid
 
 If you enter `unset` or `gibberish`, the JavaScript updates the `style` on the {{HTMLElement("body")}} to `--theme: unset` or `--theme: gibberish`. Neither of these are colors. Both are invalid and ignored. This means the initial value is inherited and unchanged, with `style(--theme)` returning false and `style(--theme: red)` returning true.
 
-> **Note:** When declaring custom properties, consider using `@property` with the {{cssxref("@property/syntax","syntax")}} descriptor so the browser can properly compare computed values.
+> [!NOTE]
+> When declaring custom properties, consider using `@property` with the {{cssxref("@property/syntax","syntax")}} descriptor so the browser can properly compare computed values.
 
 ### Nested queries
 

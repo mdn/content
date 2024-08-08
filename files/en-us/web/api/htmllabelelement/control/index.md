@@ -18,7 +18,8 @@ or `null` if the label isn't associated with a control.
 An {{domxref("HTMLElement")}} derived object representing the control with which the
 {{HTMLElement("label")}} is associated, or `null` if the label stands alone.
 
-> **Note:** If this property has a value and {{domxref("HTMLLabelElement.htmlFor")}} has a value,
+> [!NOTE]
+> If this property has a value and {{domxref("HTMLLabelElement.htmlFor")}} has a value,
 > the {{domxref("HTMLLabelElement.htmlFor")}} property must refer to the same control.
 
 ## Specifications

@@ -86,7 +86,7 @@ Better programs exist for providing a terminal experience on Windows, such as Po
 
 However, the best option for Windows in the modern day is the Windows Subsystem for Linux (WSL) — a compatibility layer for running Linux operating systems directly from inside Windows 10, allowing you to run a "true terminal" directly on Windows, without needing a virtual machine.
 
-This can be installed directly from the Windows store for free. You can find all the documentation you need in the [Windows Subsystem for Linux Documentation](https://docs.microsoft.com/windows/wsl/).
+This can be installed directly from the Windows store for free. You can find all the documentation you need in the [Windows Subsystem for Linux Documentation](https://learn.microsoft.com/en-us/windows/wsl/).
 
 ![a screenshot of the Windows subsystem for Linux documentation](wsl.png)
 
@@ -118,7 +118,8 @@ Enough talk — let's start looking at some terminal commands! Out of the box, h
 - View a file's contents page by page: `less`, `cat`
 - Manipulate and transform streams of text (for example changing all the instances of `<div>`s in an HTML file to `<article>`): `awk`, `tr`, `sed`
 
-> **Note:** There are a number of good tutorials on the web that go much deeper into the command line — this is only a brief introduction!
+> [!NOTE]
+> There are a number of good tutorials on the web that go much deeper into the command line — this is only a brief introduction!
 
 Let's move forward and look at using a few of these tools on the command line. Before you go any further, open your terminal program!
 
@@ -144,7 +145,8 @@ If you want to move back up to the previous directory, you can use two dots:
 cd ..
 ```
 
-> **Note:** A very useful terminal shortcut is using the <kbd>tab</kbd> key to autocomplete names that you know are present, rather than having to type out the whole thing. For example, after typing the above two commands, try typing `cd D` and pressing <kbd>tab</kbd> — it should autocomplete the directory name `Desktop` for you, provided it is present in the current directory. Bear this in mind as you move forward.
+> [!NOTE]
+> A very useful terminal shortcut is using the <kbd>tab</kbd> key to autocomplete names that you know are present, rather than having to type out the whole thing. For example, after typing the above two commands, try typing `cd D` and pressing <kbd>tab</kbd> — it should autocomplete the directory name `Desktop` for you, provided it is present in the current directory. Bear this in mind as you move forward.
 
 If the directory you want to go to is nested deep, you need to know the path to get to it. This usually becomes easier as you get more familiar with the structure of your file system, but if you are not sure of the path you can usually figure it out with a combination of the `ls` command (see below), and by clicking around in your Explorer/Finder window to see where a directory is, relative to where you currently are.
 
@@ -164,7 +166,8 @@ cd Desktop/project/src
 
 Note that including a leading slash on your path makes the path absolute, for example `/Users/your-user-name/Desktop`. Omitting the leading slash as we've done above makes the path relative to your present working directory. This is exactly the same as you would see with URLs in your web browser. A leading slash means "at the root of the website", whereas omitting the slash means "the URL is relative to my current page".
 
-> **Note:** On windows, you use backslashes instead of forward slashes, e.g. `cd Desktop\project\src` — this may seem really odd, but if you are interested in why, [watch this YouTube clip](https://www.youtube.com/watch?v=5T3IJfBfBmI) featuring an explanation by one of Microsoft's Principal engineers.
+> [!NOTE]
+> On windows, you use backslashes instead of forward slashes, e.g. `cd Desktop\project\src` — this may seem really odd, but if you are interested in why, [watch this YouTube clip](https://www.youtube.com/watch?v=5T3IJfBfBmI) featuring an explanation by one of Microsoft's Principal engineers.
 
 ### Listing directory contents
 
@@ -194,9 +197,11 @@ Below is a screenshot with a "vanilla" macOS terminal at the top, and a customiz
 
 ![A vanilla macOS terminal and a more colorful custom macOS terminal, showing a file listing - the result of running the ls -l command](mac-terminals-ls.png)
 
-> **Note:** To find out exactly what options each command has available, you can look at its [man page](https://en.wikipedia.org/wiki/Man_page). This is done by typing the `man` command, followed by the name of the command you want to look up, for example `man ls`. This will open up the man page in the terminal's default text file viewer (for example, [`less`](<https://en.wikipedia.org/wiki/Less_(Unix)>) in my terminal), and you should then be able to scroll through the page using the arrow keys, or some similar mechanism. The man page lists all the options in great detail, which may be a bit intimidating to begin with, but at least you know it's there if you need it. Once you are finished looking through the man page, you need to quit out of it using your text viewer's quit command ("q" in `less`; you may have to search on the web to find it if it isn't obvious).
+> [!NOTE]
+> To find out exactly what options each command has available, you can look at its [man page](https://en.wikipedia.org/wiki/Man_page). This is done by typing the `man` command, followed by the name of the command you want to look up, for example `man ls`. This will open up the man page in the terminal's default text file viewer (for example, [`less`](<https://en.wikipedia.org/wiki/Less_(Unix)>) in my terminal), and you should then be able to scroll through the page using the arrow keys, or some similar mechanism. The man page lists all the options in great detail, which may be a bit intimidating to begin with, but at least you know it's there if you need it. Once you are finished looking through the man page, you need to quit out of it using your text viewer's quit command ("q" in `less`; you may have to search on the web to find it if it isn't obvious).
 
-> **Note:** To run a command with multiple options at the same time, you can usually put them all in a single string after the dash character, for example `ls -lah`, or `ls -ltrh`. Try looking at the `ls` man page to work out what these extra options do!
+> [!NOTE]
+> To run a command with multiple options at the same time, you can usually put them all in a single string after the dash character, for example `ls -lah`, or `ls -ltrh`. Try looking at the `ls` man page to work out what these extra options do!
 
 Now that we've discussed two fundamental commands, have a little poke around your directory and see if you can navigate from one place to the next.
 
@@ -213,7 +218,8 @@ Have a play with them in a test directory you've created somewhere so that you d
 - `cp` — similar in usage to `mv`, `cp` creates a copy of the file in the first location specified, in the second location specified. For example, `cp mdn-example.txt mdn-example.txt.bak` creates a copy of `mdn-example.txt` called `mdn-example.txt.bak` (you can of course call it something else if you wish).
 - `rm` — removes the specified file. For example, `rm mdn-example.txt` deletes a single file called `mdn-example.txt`. Note that this delete is permanent and can't be undone via the recycle bin that you might have on your desktop user interface.
 
-> **Note:** Many terminal commands allow you to use asterisks as "wild card" characters, meaning "any sequence of characters". This allows you to run an operation against a potentially large number of files at once, all of which match the specified pattern. As an example, `rm mdn-*` would delete all files beginning with `mdn-`. `rm mdn-*.bak` would delete all files that start with `mdn-` and end with `.bak`.
+> [!NOTE]
+> Many terminal commands allow you to use asterisks as "wild card" characters, meaning "any sequence of characters". This allows you to run an operation against a potentially large number of files at once, all of which match the specified pattern. As an example, `rm mdn-*` would delete all files beginning with `mdn-`. `rm mdn-*.bak` would delete all files that start with `mdn-` and end with `.bak`.
 
 ## Terminal — considered harmful?
 
@@ -271,7 +277,7 @@ Try it now:
 curl https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch
 ```
 
-You won't get an output because the page has been redirected (to [/Web/API/fetch](/en-US/docs/Web/API/fetch)).
+You won't get an output because the page has been redirected (to [/Web/API/fetch](/en-US/docs/Web/API/Window/fetch)).
 We need to explicitly tell `curl` to follow redirects using the `-L` flag.
 
 Let's also look at the headers that `developer.mozilla.org` returns using `curl`'s `-I` flag, and print all the location redirects it sends to the terminal, by piping the output of `curl` into `grep` (we will ask `grep` to return all the lines that contain the word "location").
@@ -310,7 +316,7 @@ Getting to know your system will prove useful in years to come — learn how the
 
 Now we've had a look at some of the built-in commands your system comes equipped with, let's look at how we can install a third-party CLI tool and make use of it.
 
-The vast ecosystem of installable tools for front-end web development currently exists mostly inside [npm](https://www.npmjs.com), a privately owned, package hosting service that works closely together with Node.js.
+The vast ecosystem of installable tools for front-end web development currently exists mostly inside [npm](https://www.npmjs.com/), a privately owned, package hosting service that works closely together with Node.js.
 This is slowly expanding — you can expect to see more package providers as time goes on.
 
 [Installing Node.js](https://nodejs.org/en/) also installs the npm command line tool (and a supplementary npm-centric tool called npx), which offers a gateway to installing additional command line tools. Node.js and npm work the same across all systems: macOS, Windows, and Linux.
@@ -368,7 +374,7 @@ Once you've installed node, open up the terminal and run the following command t
 npm install --save-dev prettier
 ```
 
-You can now run the file locally using the [npx](https://docs.npmjs.com/cli/commands/npx) tool.
+You can now run the file locally using the [npx](https://docs.npmjs.com/cli/commands/npx/) tool.
 Running the command without any arguments, as with many other commands, will offer up usage and help information.
 Try this now:
 
@@ -390,7 +396,8 @@ Stdin is read if it is piped to Prettier and no files are given.
 It's always worth at the very least skimming over the usage information, even if it is long.
 It'll help you to understand better how the tool is intended to be used.
 
-> **Note:** If you have not first installed Prettier locally, then running `npx prettier` will download and run the latest version of Prettier all in one go _just for that command_.
+> [!NOTE]
+> If you have not first installed Prettier locally, then running `npx prettier` will download and run the latest version of Prettier all in one go _just for that command_.
 > While that might sound great, new versions of Prettier may slightly modify the output.
 > You want to install it locally so that you are fixing the version of Prettier that you are using for formatting until you are ready to change it.
 

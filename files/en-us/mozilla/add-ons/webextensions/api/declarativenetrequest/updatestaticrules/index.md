@@ -7,7 +7,7 @@ browser-compat: webextensions.api.declarativeNetRequest.updateStaticRules
 
 {{AddonSidebar}}
 
-Modifies the enabled state of rules in a static ruleset.
+Modifies the enabled state of rules in a static ruleset. The number of rules that can be disabled in a ruleset is limited to the value of {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_DISABLED_STATIC_RULES","MAX_NUMBER_OF_DISABLED_STATIC_RULES")}}.
 
 Rules can be enabled and disabled while the ruleset containing them is disabled. Any changes become effective when the ruleset is enabled.
 

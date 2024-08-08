@@ -2,7 +2,7 @@
 title: 304 Not Modified
 slug: Web/HTTP/Status/304
 page-type: http-status-code
-browser-compat: http.status.304
+spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.304
 ---
 
 {{HTTPSidebar}}
@@ -17,7 +17,8 @@ have been sent in an equivalent {{HTTPStatus("200")}} `OK` response:
 {{HTTPHeader("Date")}}, {{HTTPHeader("ETag")}}, {{HTTPHeader("Expires")}}, and
 {{HTTPHeader("Vary")}}.
 
-> **Note:** Many [developer tools' network panels](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)
+> [!NOTE]
+> Many [developer tools' network panels](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)
 > of browsers create extraneous requests leading to `304` responses, so that
 > access to the local cache is visible to developers.
 
@@ -82,15 +83,9 @@ etag: "e27d81b845c3716cdb5d4220d78e2799"
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibility notes
 
-{{Compat}}
-
-### Compatibility notes
-
-- Browser behavior differs if this response erroneously includes a body on persistent
-  connections. See [204 No Content](/en-US/docs/Web/HTTP/Status/204) for more
-  detail.
+Browser behavior differs if this response erroneously includes a body on persistent connections. See [204 No Content](/en-US/docs/Web/HTTP/Status/204) for more details.
 
 ## See also
 

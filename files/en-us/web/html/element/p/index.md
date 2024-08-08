@@ -17,7 +17,22 @@ Paragraphs are [block-level elements](/en-US/docs/Glossary/Block-level_content),
 
 This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-> **Note:** The `align` attribute on `<p>` tags is obsolete and shouldn't be used.
+> [!NOTE]
+> The `align` attribute on `<p>` tags is obsolete and shouldn't be used.
+
+## Accessibility
+
+Breaking up content into paragraphs helps make a page more accessible. Screen-readers and other assistive technology provide shortcuts to let their users skip to the next or previous paragraph, letting them skim content like how white space lets visual users skip around.
+
+Using empty `<p>` elements to add space between paragraphs is problematic for people who navigate with screen-reading technology. Screen readers may announce the paragraph's presence, but not any content contained within it — because there is none. This can confuse and frustrate the person using the screen reader.
+
+If extra space is desired, use {{glossary("CSS")}} properties like {{cssxref("margin")}} to create the effect:
+
+```css
+p {
+  margin-bottom: 2em; /* increase white space after a paragraph */
+}
+```
 
 ## Examples
 
@@ -107,20 +122,6 @@ document.querySelector("button").addEventListener("click", (event) => {
 
 {{EmbedLiveSample('Styling_paragraphs')}}
 
-## Accessibility concerns
-
-Breaking up content into paragraphs helps make a page more accessible. Screen-readers and other assistive technology provide shortcuts to let their users skip to the next or previous paragraph, letting them skim content like how white space lets visual users skip around.
-
-Using empty `<p>` elements to add space between paragraphs is problematic for people who navigate with screen-reading technology. Screen readers may announce the paragraph's presence, but not any content contained within it — because there is none. This can confuse and frustrate the person using the screen reader.
-
-If extra space is desired, use {{glossary("CSS")}} properties like {{cssxref("margin")}} to create the effect:
-
-```css
-p {
-  margin-bottom: 2em; /* increase white space after a paragraph */
-}
-```
-
 ## Technical summary
 
 <table class="properties">
@@ -149,7 +150,7 @@ p {
       <th scope="row">Tag omission</th>
       <td>
         The start tag is required. The end tag may be omitted if the
-        {{HTMLElement("p")}} element is immediately followed by an
+        <code>&lt;p&gt;</code> element is immediately followed by an
         {{HTMLElement("address")}},
         {{HTMLElement("article")}}, {{HTMLElement("aside")}},
         {{HTMLElement("blockquote")}}, {{HTMLElement("details")}}, {{HTMLElement("div")}},
@@ -163,7 +164,7 @@ p {
         {{HTMLElement("main")}}, {{HTMLElement("menu")}}, {{HTMLElement("nav")}},
         {{HTMLElement("ol")}}, {{HTMLElement("pre")}}, {{HTMLElement("search")}},
         {{HTMLElement("section")}}, {{HTMLElement("table")}},
-        {{HTMLElement("ul")}} or another {{HTMLElement("p")}}
+        {{HTMLElement("ul")}} or another <code>&lt;p&gt;</code>
         element, or if there is no more content in the parent element and the
         parent element is not an {{HTMLElement("a")}}, {{HTMLElement("audio")}},
         {{HTMLElement("del")}}, {{HTMLElement("ins")}}, {{HTMLElement("map")}},

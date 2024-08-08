@@ -11,7 +11,8 @@ MIME types are defined and standardized in IETF's {{RFC(6838)}}.
 
 The [Internet Assigned Numbers Authority (IANA)](https://www.iana.org/) is responsible for all official MIME types, and you can find the most up-to-date and complete list at their [Media Types](https://www.iana.org/assignments/media-types/media-types.xhtml) page.
 
-> **Warning:** Browsers use the MIME type, _not the file extension_, to determine how to process a URL,
+> [!WARNING]
+> Browsers use the MIME type, _not the file extension_, to determine how to process a URL,
 > so it's important that web servers send the correct MIME type in the response's {{HTTPHeader("Content-Type")}} header.
 > If this is not correctly configured, browsers are likely to misinterpret the contents of files, sites will not work correctly, and downloaded files may be mishandled.
 
@@ -139,7 +140,8 @@ If so, they won't be recognized as CSS by most browsers and will be ignored.
 
 All HTML content should be served with this type. Alternative MIME types for XHTML (like `application/xhtml+xml`) are mostly useless nowadays.
 
-> **Note:** Use `application/xml` or `application/xhtml+xml` if you want XML's strict parsing rules, [`<![CDATA[…]]>`](/en-US/docs/Web/API/CDATASection) sections, or elements that aren't from HTML/SVG/MathML namespaces.
+> [!NOTE]
+> Use `application/xml` or `application/xhtml+xml` if you want XML's strict parsing rules, [`<![CDATA[…]]>`](/en-US/docs/Web/API/CDATASection) sections, or elements that aren't from HTML/SVG/MathML namespaces.
 
 ### text/javascript
 
@@ -171,7 +173,8 @@ out what to do with content that doesn't have a valid one) also allows JavaScrip
 - `text/x-ecmascript` {{Non-standard_Inline}}
 - `text/x-javascript` {{Non-standard_Inline}}
 
-> **Note:** Even though any given {{Glossary("user agent")}} may support any or all of these, you should only use `text/javascript`.
+> [!NOTE]
+> Even though any given {{Glossary("user agent")}} may support any or all of these, you should only use `text/javascript`.
 > It's the only MIME type guaranteed to work now and into the future.
 
 ### Image types

@@ -129,7 +129,8 @@ The example will fetch the image data from the clipboard and display the image i
 
 {{EmbedLiveSample("Reading image data from clipboard", "100%", "200")}}
 
-> **Note:** If prompted, grant permission in order to paste the image.
+> [!NOTE]
+> If prompted, grant permission in order to paste the image.
 
 ### Reading data from the clipboard
 

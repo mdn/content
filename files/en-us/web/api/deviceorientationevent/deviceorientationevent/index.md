@@ -43,7 +43,7 @@ new DeviceOrientationEvent(type, options)
       - : A boolean value that indicates whether or not the device is providing orientation data absolutely.
         It defaults to `false`.
 
-## Return value
+### Return value
 
 A new {{domxref("DeviceOrientationEvent")}} object.
 

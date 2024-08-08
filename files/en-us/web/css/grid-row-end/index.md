@@ -45,7 +45,8 @@ grid-row-end: unset;
 
   - : If there is a named line with the name '\<custom-ident>-end', it contributes the first such line to the grid item's placement.
 
-    > **Note:** Named grid areas automatically generate implicit named lines of this form, so specifying `grid-row-end: foo;` will choose the end edge of that named grid area (unless another line named `foo-end` was explicitly specified before it).
+    > [!NOTE]
+    > Named grid areas automatically generate implicit named lines of this form, so specifying `grid-row-end: foo;` will choose the end edge of that named grid area (unless another line named `foo-end` was explicitly specified before it).
 
     Otherwise, this is treated as if the integer `1` had been specified along with the `<custom-ident>`.
 
@@ -155,6 +156,10 @@ grid-row-end: unset;
 
 ## See also
 
-- Related CSS properties: {{cssxref("grid-row-start")}}, {{cssxref("grid-row")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}, {{cssxref("grid-column")}}
-- Grid Layout Guide: _[Line-based placement with CSS Grid](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)_
-- Video tutorial: _[Line-based placement](https://gridbyexample.com/video/series-line-based-placement/)_
+- {{cssxref("grid-row-start")}}
+- {{cssxref("grid-row")}}
+- {{cssxref("grid-column-start")}}
+- {{cssxref("grid-column-end")}}
+- {{cssxref("grid-column")}}
+- [Line-based placement with CSS grid](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
+- Video: [Line-based placement](https://gridbyexample.com/video/series-line-based-placement/)

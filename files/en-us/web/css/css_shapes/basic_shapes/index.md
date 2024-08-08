@@ -110,7 +110,7 @@ The below example combines generated content with a `circle()` function that use
 
 ### The shape will be clipped by the margin box
 
-As noted in [reference boxes](#the-reference-box) above, the `margin-box` will clip the shape. You can see this by moving the center of our circle towards the content by setting the position to `60%`. The center of the circle will be nearer to the content and the circle will extend past the margin-box. This means that the extension becomes clipped and squared off.
+As noted in [reference boxes](#the_reference_box) above, the `margin-box` will clip the shape. You can see this by moving the center of our circle towards the content by setting the position to `60%`. The center of the circle will be nearer to the content and the circle will extend past the margin-box. This means that the extension becomes clipped and squared off.
 
 ```css
 img {

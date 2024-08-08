@@ -1,5 +1,6 @@
 ---
 title: "HTML attribute: readonly"
+short-title: readonly
 slug: Web/HTML/Attributes/readonly
 page-type: html-attribute
 browser-compat:
@@ -21,7 +22,8 @@ The `readonly` attribute is supported by `{{HTMLElement("input/text","text")}}`,
 
 The attribute is not supported or relevant to {{HTMLElement("select")}} or input types that are already not mutable, such as `{{HTMLElement("input/checkbox","checkbox")}}` and `{{HTMLElement("input/radio","radio")}}` or cannot, by definition, start with a value, such as the `{{HTMLElement("input/file","file")}}` input type. `{{HTMLElement("input/range","range")}}` and `{{HTMLElement("input/color","color")}}`, as both have default values. It is also not supported on `{{HTMLElement("input/hidden","hidden")}}` as it can not be expected that a user to fill out a form that is hidden. Nor is it supported on any of the button types, including `image`.
 
-> **Note:** Only text controls can be made read-only, since for other controls (such as checkboxes and buttons) there is no useful distinction between being read-only and being disabled, so the `readonly` attribute does not apply.
+> [!NOTE]
+> Only text controls can be made read-only, since for other controls (such as checkboxes and buttons) there is no useful distinction between being read-only and being disabled, so the `readonly` attribute does not apply.
 
 When an input has the `readonly` attribute, the {{cssxref(":read-only")}} pseudo-class also applies to it. Conversely, inputs that support the `readonly` attribute but don't have the attribute set match the {{cssxref(":read-write")}} pseudo-class.
 
@@ -33,7 +35,8 @@ Because a read-only field cannot have its value changed by a user interaction, [
 
 The only way to modify dynamically the value of the readonly attribute is through a script.
 
-> **Note:** The `required` attribute is not permitted on inputs with the `readonly` attribute specified.
+> [!NOTE]
+> The `required` attribute is not permitted on inputs with the `readonly` attribute specified.
 
 ### Usability
 

@@ -4,6 +4,8 @@ slug: Learn/Server-side/Express_Nodejs/forms/Create_genre_form
 page-type: learn-module-chapter
 ---
 
+{{LearnSidebar}}
+
 This sub article shows how we define our page to create `Genre` objects (this is a good place to start because the `Genre` has only one field, its `name`, and no dependencies). Like any other pages, we need to set up routes, controllers, and views.
 
 ## Import validation and sanitization methods
@@ -16,7 +18,8 @@ Open **/controllers/genreController.js**, and add the following line at the top 
 const { body, validationResult } = require("express-validator");
 ```
 
-> **Note:** This syntax allows us to use `body` and `validationResult` as the associated middleware functions, as you will see in the post route section below. It is equivalent to:
+> [!NOTE]
+> This syntax allows us to use `body` and `validationResult` as the associated middleware functions, as you will see in the post route section below. It is equivalent to:
 >
 > ```js
 > const validator = require("express-validator");
@@ -90,7 +93,8 @@ exports.genre_create_post = [
 The first thing to note is that instead of being a single middleware function (with arguments `(req, res, next)`) the controller specifies an _array_ of middleware functions.
 The array is passed to the router function and each method is called in order.
 
-> **Note:** This approach is needed, because the validators are middleware functions.
+> [!NOTE]
+> This approach is needed, because the validators are middleware functions.
 
 The first method in the array defines a body validator (`body()`) that validates and sanitizes the field. This uses `trim()` to remove any trailing/leading whitespace, checks that the _name_ field is not empty, and then uses `escape()` to remove any dangerous HTML characters).
 
@@ -201,7 +205,8 @@ The form defines a single required field of type "text" called "name". The defau
 
 The last part of the page is the error code. This prints a list of errors, if the error variable has been defined (in other words, this section will not appear when the template is rendered on the `GET` route).
 
-> **Note:** This is just one way to render the errors. You can also get the names of the affected fields from the error variable, and use these to control where the error messages are rendered, whether to apply custom CSS, etc.
+> [!NOTE]
+> This is just one way to render the errors. You can also get the names of the affected fields from the error variable, and use these to control where the error messages are rendered, whether to apply custom CSS, etc.
 
 ## What does it look like?
 
@@ -213,7 +218,8 @@ The only error we validate against server-side is that the genre field must have
 
 ![The Create Genre section of the Local library application. The left column has a vertical navigation bar. The right section is the create a new Genre from with a heading that reads 'Create Genre'. There is one input field labeled 'Genre'. There is a submit button at the bottom. There is an error message that reads 'Genre name required' directly below the Submit button. The error message was highlighted by the author of this article. There is no visual indication in the form that the genre is required nor that the error message only appears on error.](locallibary_express_genre_create_error.png)
 
-> **Note:** Our validation uses `trim()` to ensure that whitespace is not accepted as a genre name. We also validate that the field is not empty on the client side by adding the [boolean attribute](/en-US/docs/Glossary/Boolean/HTML) `required` to the field definition in the form:
+> [!NOTE]
+> Our validation uses `trim()` to ensure that whitespace is not accepted as a genre name. We also validate that the field is not empty on the client side by adding the [boolean attribute](/en-US/docs/Glossary/Boolean/HTML) `required` to the field definition in the form:
 >
 > ```pug
 > input#name.form-control(type='text', placeholder='Fantasy, Poetry etc.' name='name' required value=(undefined===genre ? '' : genre.name) )

@@ -19,6 +19,13 @@ function f(a, b, ...theArgs) {
 }
 ```
 
+There are some additional syntax restrictions:
+
+- A function definition can only have one rest parameter.
+- The rest parameter must be the last parameter in the function definition.
+- [Trailing commas](/en-US/docs/Web/JavaScript/Reference/Trailing_commas) are not allowed after the rest parameter.
+- The rest parameter cannot have a [default value](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters).
+
 ## Description
 
 A function definition's last parameter can be prefixed with `...` (three U+002E FULL STOP characters), which will cause all remaining (user supplied) parameters to be placed within an [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) object.
@@ -38,11 +45,21 @@ myFun("one", "two", "three", "four", "five", "six");
 // manyMoreArgs, ["three", "four", "five", "six"]
 ```
 
-A function definition can only have one rest parameter, and the rest parameter must be the last parameter in the function definition.
+The rest parameter may be [destructured](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment), which allows you to ignore certain parameter positions.
+
+```js
+function ignoreFirst(...[, b, c]) {
+  return b + c;
+}
+```
+
+However, the following are all syntax errors:
 
 ```js-nolint example-bad
 function wrong1(...one, ...wrong) {}
 function wrong2(...wrong, arg2, arg3) {}
+function wrong3(...wrong,) {}
+function wrong4(...wrong = []) {}
 ```
 
 The rest parameter is not counted towards the function's [`length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length) property.

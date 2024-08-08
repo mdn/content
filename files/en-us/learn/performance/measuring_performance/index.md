@@ -56,7 +56,7 @@ At the time of writing, MDN's performance report summary looks similar to the fo
 
 A performance report contains information about things like how long a user has to wait before _anything_ is displayed on the page, how many bytes need to be downloaded to display a page, and much more. It also lets you know if the measured values are considered good or bad.
 
-[webpagetest.org](https://webpagetest.org) is another example of a tool that automatically tests your site and returns valuable metrics.
+[webpagetest.org](https://www.webpagetest.org/) is another example of a tool that automatically tests your site and returns valuable metrics.
 
 You can try running your favorite website through these tools and see the scores.
 

@@ -16,7 +16,8 @@ A [CSS](/en-US/docs/Web/CSS) **layout mode**, sometimes called _layout_, is an a
 - [_Flexible box layout_](/en-US/docs/Web/CSS/CSS_flexible_box_layout), designed for laying out complex pages that can be resized smoothly.
 - [_Grid layout_](/en-US/docs/Web/CSS/CSS_grid_layout), designed for laying out elements relative to a fixed grid.
 
-> **Note:** Not all [CSS properties](/en-US/docs/Web/CSS/Reference) apply to all _layout modes_. Most of them apply to one or two of them and have no effect if they are set on an element participating in another layout mode.
+> [!NOTE]
+> Not all [CSS properties](/en-US/docs/Web/CSS/Reference) apply to all _layout modes_. Most of them apply to one or two of them and have no effect if they are set on an element participating in another layout mode.
 
 ## See also
 

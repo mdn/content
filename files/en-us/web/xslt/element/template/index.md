@@ -8,7 +8,7 @@ page-type: xslt-element
 
 The `<xsl:template>` element defines an output producing template. This element must have either the match attribute or the name attribute set.
 
-### Syntax
+## Syntax
 
 ```xml
 <xsl:template
@@ -40,10 +40,10 @@ None.
 
 Top-level, must be the child of `<xsl:stylesheet>` or `<xsl:transform>`.
 
-### Defined
+## Specifications
 
 XSLT, section 5.3.
 
-### Gecko support
+## Gecko support
 
 Supported.

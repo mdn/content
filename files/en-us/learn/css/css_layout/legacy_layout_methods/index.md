@@ -8,7 +8,7 @@ page-type: learn-module-chapter
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}
 
-Grid systems are a very common feature used in CSS layouts, and before CSS Grid Layout they tended to be implemented using floats or other layout features. You imagine your layout as a set number of columns (e.g. 4, 6, or 12), and then fit your content columns inside these imaginary columns. In this article we'll explore how these older methods work, in order that you understand how they were used if you work on an older project.
+Grid systems are a very common feature used in CSS layouts, and before CSS grid layout they tended to be implemented using floats or other layout features. You imagine your layout as a set number of columns (e.g. 4, 6, or 12), and then fit your content columns inside these imaginary columns. In this article we'll explore how these older methods work, in order that you understand how they were used if you work on an older project.
 
 <table>
   <tbody>
@@ -27,21 +27,21 @@ Grid systems are a very common feature used in CSS layouts, and before CSS Grid 
       <th scope="row">Objective:</th>
       <td>
         To understand the fundamental concepts behind the grid layout systems
-        used prior to CSS Grid Layout being available in browsers.
+        used prior to CSS grid layout being available in browsers.
       </td>
     </tr>
   </tbody>
 </table>
 
-## Layout and grid systems before CSS Grid Layout
+## Layout and grid systems before CSS grid layout
 
 It may seem surprising to anyone coming from a design background that CSS didn't have an inbuilt grid system until very recently, and instead we seemed to be using a variety of sub-optimal methods to create grid-like designs. We now refer to these as "legacy" methods.
 
-For new projects, in most cases CSS Grid Layout will be used in combination with one or more other modern layout methods to form the basis for any layout. You will however encounter "grid systems" using these legacy methods from time to time. It is worth understanding how they work, and why they are different to CSS Grid Layout.
+For new projects, in most cases CSS grid layout will be used in combination with one or more other modern layout methods to form the basis for any layout. You will however encounter "grid systems" using these legacy methods from time to time. It is worth understanding how they work, and why they are different to CSS grid layout.
 
-This lesson will explain how grid systems and grid frameworks based on floats and flexbox work. Having studied Grid Layout you will probably be surprised how complicated this all seems! This knowledge will be helpful to you if you need to create fallback code for browsers that do not support newer methods, in addition to allowing you to work on existing projects which use these types of systems.
+This lesson will explain how grid systems and grid frameworks based on floats and flexbox work. Having studied grid layout you will probably be surprised how complicated this all seems! This knowledge will be helpful to you if you need to create fallback code for browsers that do not support newer methods, in addition to allowing you to work on existing projects which use these types of systems.
 
-It is worth bearing in mind, as we explore these systems, that none of them actually create a grid in the way that CSS Grid Layout creates a grid. They work by giving items a size, and pushing them around to line them up in a way that _looks_ like a grid.
+It is worth bearing in mind, as we explore these systems, that none of them actually create a grid in the way that CSS grid layout creates a grid. They work by giving items a size, and pushing them around to line them up in a way that _looks_ like a grid.
 
 ## A two column layout
 
@@ -125,7 +125,8 @@ Putting this all together should give us a result like so:
 
 You'll notice here that we are using percentages for all the widths — this is quite a good strategy, as it creates a **liquid layout**, one that adjusts to different screen sizes and keeps the same proportions for the column widths at smaller screen sizes. Try adjusting the width of your browser window to see for yourself. This is a valuable tool for responsive web design.
 
-> **Note:** You can see this example running at [0_two-column-layout.html](https://mdn.github.io/learning-area/css/css-layout/floats/0_two-column-layout.html) (see also [the source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/floats/0_two-column-layout.html)).
+> [!NOTE]
+> You can see this example running at [0_two-column-layout.html](https://mdn.github.io/learning-area/css/css-layout/floats/0_two-column-layout.html) (see also [the source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/floats/0_two-column-layout.html)).
 
 ## Creating simple legacy grid frameworks
 
@@ -214,7 +215,8 @@ Our next step is to create a rule for the class `.col`, floating it left, giving
 
 The top row of single columns will now lay out neatly as a grid.
 
-> **Note:** We've also given each column a light red color so you can see exactly how much space each one takes up.
+> [!NOTE]
+> We've also given each column a light red color so you can see exactly how much space each one takes up.
 
 Layout containers that we want to span more than one column need to be given special classes to adjust their {{cssxref("width")}} values to the required number of columns (plus gutters in between). We need to create an additional class to allow containers to span 2 to 12 columns. Each width is the result of adding up the column width of that number of columns plus the gutter widths, which will always number one less than the number of columns.
 
@@ -261,7 +263,8 @@ Add the following at the bottom of your CSS:
 
 With these classes created we can now lay out different width columns on the grid. Try saving and loading the page in your browser to see the effects.
 
-> **Note:** If you are having trouble getting the above example to work, try comparing it against our [finished version](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/simple-grid-finished.html) on GitHub ([see it running live](https://mdn.github.io/learning-area/css/css-layout/grids/simple-grid-finished.html) also).
+> [!NOTE]
+> If you are having trouble getting the above example to work, try comparing it against our [finished version](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/simple-grid-finished.html) on GitHub ([see it running live](https://mdn.github.io/learning-area/css/css-layout/grids/simple-grid-finished.html) also).
 
 Try modifying the classes on your elements or even adding and removing some containers, to see how you can vary the layout. For example, you could make the second row look like this:
 
@@ -376,7 +379,8 @@ Update the bottom block of CSS rules with the following:
 
 Now save your code, load it in a browser, and try changing the viewport width — you should see the column widths adjust nicely to suit.
 
-> **Note:** If you are having trouble getting the above example to work, try comparing it against our [finished version on GitHub](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/fluid-grid.html) ([see it running live](https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid.html) also).
+> [!NOTE]
+> If you are having trouble getting the above example to work, try comparing it against our [finished version on GitHub](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/fluid-grid.html) ([see it running live](https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid.html) also).
 
 ### Easier calculations using the calc() function
 
@@ -428,7 +432,8 @@ Try replacing your bottom block of rules with the following, then reload it in t
 }
 ```
 
-> **Note:** You can see our finished version in [fluid-grid-calc.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/fluid-grid-calc.html) (also [see it live](https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-calc.html)).
+> [!NOTE]
+> You can see our finished version in [fluid-grid-calc.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/fluid-grid-calc.html) (also [see it live](https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-calc.html)).
 
 ### Semantic versus "unsemantic" grid systems
 
@@ -442,7 +447,8 @@ These are not the only approach. You could instead decide on your grid and then 
 }
 ```
 
-> **Note:** If you were to use a preprocessor such as [Sass](https://sass-lang.com/), you could create a simple mixin to insert that value for you.
+> [!NOTE]
+> If you were to use a preprocessor such as [Sass](https://sass-lang.com/), you could create a simple mixin to insert that value for you.
 
 ### Enabling offset containers in our grid
 
@@ -480,13 +486,15 @@ Try replacing it with
 <div class="col span5 offset-by-one">14</div>
 ```
 
-> **Note:** Notice that you need to reduce the number of columns spanned, to make room for the offset!
+> [!NOTE]
+> Notice that you need to reduce the number of columns spanned, to make room for the offset!
 
 Try loading and refreshing to see the difference, or check out our [fluid-grid-offset.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/fluid-grid-offset.html) example (see it [running live](https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-offset.html) also). The finished example should look like this:
 
 ![The grid has 2 rows. The first row has 12 equal-width grid items and the second row has 4 items of different widths. Item 13 spans 1 column, item 14 spans five columns, 15 spans three, and 16 spans two. Item 14 has the 'offset-by-one' class applied, which means it starts in the 3rd column, rather than the second, leaving a one-column wide empty space in the second-row second-column. ](offset-grid-finished.png)
 
-> **Note:** As an extra exercise, can you implement an `offset-by-two` class?
+> [!NOTE]
+> As an extra exercise, can you implement an `offset-by-two` class?
 
 ### Floated grid limitations
 
@@ -546,7 +554,7 @@ In your project you might still choose to use a flexbox 'grid' due to the additi
 
 ## Third party grid systems
 
-Now that we understand the math behind our grid calculations, we are in a good place to look at some of the third party grid systems in common use. If you search for "CSS Grid framework" on the Web, you will find a huge list of options to choose from. Popular frameworks such as [Bootstrap](https://getbootstrap.com/) and [Foundation](https://get.foundation/) include a grid system. There are also standalone grid systems, either developed using CSS or using preprocessors.
+Now that we understand the math behind our grid calculations, we are in a good place to look at some of the third party grid systems in common use. If you search for "CSS grid framework" on the Web, you will find a huge list of options to choose from. Popular frameworks such as [Bootstrap](https://getbootstrap.com/) and [Foundation](https://get.foundation/) include a grid system. There are also standalone grid systems, either developed using CSS or using preprocessors.
 
 Let's take a look at one of these standalone systems as it demonstrates common techniques for working with a grid framework. The grid we will be using is part of Skeleton, a simple CSS framework.
 
@@ -637,7 +645,8 @@ Next, give the containers on the second row classes explaining the number of col
 
 Try saving your HTML file and loading it in your browser to see the effect.
 
-> **Note:** If you are having trouble getting this example to work, try widening the window you're using to view it (the grid won't be displayed as described here if the window is too narrow). If that doesn't work, try comparing it to our [html-skeleton-finished.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/html-skeleton-finished.html) file (see it [running live](https://mdn.github.io/learning-area/css/css-layout/grids/html-skeleton-finished.html) also).
+> [!NOTE]
+> If you are having trouble getting this example to work, try widening the window you're using to view it (the grid won't be displayed as described here if the window is too narrow). If that doesn't work, try comparing it to our [html-skeleton-finished.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/html-skeleton-finished.html) file (see it [running live](https://mdn.github.io/learning-area/css/css-layout/grids/html-skeleton-finished.html) also).
 
 If you look in the skeleton.css file you can see how this works. For example, Skeleton has the following defined to style elements with "three columns" classes added to them.
 
@@ -649,10 +658,10 @@ If you look in the skeleton.css file you can see how this works. For example, Sk
 
 All Skeleton (or any other grid framework) is doing is setting up predefined classes that you can use by adding them to your markup. It's exactly the same as if you did the work of calculating these percentages yourself.
 
-As you can see, we need to write very little CSS when using Skeleton. It deals with all of the floating for us when we add classes to our markup. It is this ability to hand responsibility for layout over to something else that made using a framework for a grid system a compelling choice! However these days, with CSS Grid Layout, many developers are moving away from these frameworks to use the inbuilt native grid that CSS provides.
+As you can see, we need to write very little CSS when using Skeleton. It deals with all of the floating for us when we add classes to our markup. It is this ability to hand responsibility for layout over to something else that made using a framework for a grid system a compelling choice! However these days, with CSS grid layout, many developers are moving away from these frameworks to use the inbuilt native grid that CSS provides.
 
 ## Summary
 
-You now understand how various grid systems are created, which will be useful in working with older sites and in understanding the difference between the native grid of CSS Grid Layout and these older systems.
+You now understand how various grid systems are created, which will be useful in working with older sites and in understanding the difference between the native grid of CSS grid layout and these older systems.
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}

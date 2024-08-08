@@ -21,7 +21,7 @@ an {{domxref("HTMLVideoElement")}},
 an {{domxref("HTMLCanvasElement")}},
 an {{domxref("ImageBitmap")}},
 an {{domxref("OffscreenCanvas")}},
-or another {{domxref("VideoFrame")}}).
+or another `VideoFrame`).
 This means that a frame can be created from an image or video element.
 
 A second constructor enables the creation of a `VideoFrame` from its binary pixel representation in an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}}.

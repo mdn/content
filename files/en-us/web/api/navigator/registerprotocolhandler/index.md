@@ -30,7 +30,8 @@ registerProtocolHandler(scheme, url)
   - : A string containing the URL of the handler.
     **This URL must include `%s`**, as a placeholder that will be replaced with the [escaped](/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) URL to be handled.
 
-    > **Note:** The handler URL must use the `https` scheme. Older browsers also supported `http`.
+    > [!NOTE]
+    > The handler URL must use the `https` scheme. Older browsers also supported `http`.
 
 ### Return value
 

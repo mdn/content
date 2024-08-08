@@ -17,7 +17,8 @@ Vertical margins between two floated elements on the other hand will not collaps
 
 The floats that are relevant to be cleared are the earlier floats within the same [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context).
 
-> **Note:** If an element contains only floated elements, its height collapses to nothing. If you want it to always be able to resize, so that it contains floating elements inside it, set the value of the element's [`display`](/en-US/docs/Web/CSS/display) property to [`flow-root`](/en-US/docs/Web/CSS/display#flow-root).
+> [!NOTE]
+> If an element contains only floated elements, its height collapses to nothing. If you want it to always be able to resize, so that it contains floating elements inside it, set the value of the element's [`display`](/en-US/docs/Web/CSS/display) property to [`flow-root`](/en-US/docs/Web/CSS/display#flow-root).
 >
 > ```css
 > #container {

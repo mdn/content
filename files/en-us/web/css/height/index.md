@@ -13,6 +13,9 @@ The **`height`** [CSS](/en-US/docs/Web/CSS) property specifies the height of an 
 
 The {{cssxref("min-height")}} and {{cssxref("max-height")}} properties override `height`.
 
+> [!NOTE]
+> As a geometric property, `height` also applies to the {{SVGElement("svg")}}, {{SVGElement("rect")}}, {{SVGElement("image")}}, and {{SVGElement("foreignObject")}} SVG elements, with `auto` resolving to `0` and percent values being relative to the SVG viewport height for `<rect>`. The CSS `height` property value overrides any SVG {{SVGAttr("height")}} attribute value set on the SVG element.
+
 ## Syntax
 
 ```css
@@ -20,6 +23,9 @@ The {{cssxref("min-height")}} and {{cssxref("max-height")}} properties override 
 height: 120px;
 height: 10em;
 height: 100vh;
+height: anchor-size(height);
+height: anchor-size(--myAnchor self-block, 250px);
+height: clamp(200px, anchor-size(width));
 
 /* <percentage> value */
 height: 75%;
@@ -30,6 +36,7 @@ height: min-content;
 height: fit-content;
 height: fit-content(20em);
 height: auto;
+height: minmax(min-content, anchor-size(width));
 
 /* Global values */
 height: inherit;
@@ -52,13 +59,11 @@ height: unset;
 - `min-content`
   - : The intrinsic minimum height.
 - `fit-content`
-  - : Use the available space, but not more than [max-content](/en-US/docs/Web/CSS/max-content), i.e `min(max-content, max(min-content, stretch))`.
+  - : Use the available space, but not more than [max-content](/en-US/docs/Web/CSS/max-content), i.e. `min(max-content, max(min-content, stretch))`.
 - `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
   - : Uses the fit-content formula with the available space replaced by the specified argument, i.e. `min(max-content, max(min-content, <length-percentage>))`.
-- {{cssxref("clamp", "clamp()")}}
-  - : Enables selecting a middle value within a range of values between a defined minimum and maximum.
 
-## Accessibility concerns
+## Accessibility
 
 Ensure that elements set with a `height` aren't truncated and/or don't obscure other content when the page is zoomed to increase text size.
 
@@ -133,3 +138,6 @@ div {
 - {{cssxref("box-sizing")}}
 - {{cssxref("min-height")}}, {{cssxref("max-height")}}
 - The mapped logical properties: {{cssxref("block-size")}}, {{cssxref("inline-size")}}
+- {{cssxref("anchor-size()")}}
+- {{cssxref("clamp", "clamp()")}}
+- {{cssxref("clamp", "minmax()")}}

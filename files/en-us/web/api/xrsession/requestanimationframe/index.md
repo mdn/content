@@ -26,7 +26,8 @@ any animation updates needed.
 You can cancel a previously scheduled animation by calling
 {{DOMxRef("XRSession.cancelAnimationFrame", "cancelAnimationFrame()")}}.
 
-> **Note:** Despite the obvious similarities between these methods and the
+> [!NOTE]
+> Despite the obvious similarities between these methods and the
 > global {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} function
 > provided by the `Window` interface, you _must not_ treat these as
 > interchangeable. There is _no_ guarantee that the latter will work at all while
@@ -66,7 +67,8 @@ remove the pending animation frame request.
 The following example requests `XRSession` with "inline" mode so that it can
 be displayed in an HTML element (without the need for a separate AR or VR device).
 
-> **Note:** A real application should check that the device and the User
+> [!NOTE]
+> A real application should check that the device and the User
 > Agent support WebXR API at all and then that they both support the desired session
 > type via {{DOMxRef("XRSystem.isSessionSupported()")}}.
 

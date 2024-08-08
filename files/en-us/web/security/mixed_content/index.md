@@ -2,7 +2,7 @@
 title: Mixed content
 slug: Web/Security/Mixed_content
 page-type: guide
-browser-compat: http.mixed_content
+browser-compat: http.mixed-content
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Security")}}
@@ -29,7 +29,8 @@ Browsers should automatically upgrade requests for upgradable content from HTTP 
 
 This approach ensures that all content in a secure context is either loaded via a secure channel or blocked, which is safer for users than displaying a mix of secure and insecure content, and less disruptive than breaking web pages by blocking absolutely all insecure content.
 
-> **Note:** Earlier versions of the specification divided mixed content into "blockable" and "optionally blockable" categories:
+> [!NOTE]
+> Earlier versions of the specification divided mixed content into "blockable" and "optionally blockable" categories:
 >
 > - Blockable content types, also referred to as "active mixed content", were those that could modify other parts of the web page, such as scripts and stylesheets.
 >   The potential risk if these files are modified is very high, and browsers were required to block them.
@@ -64,7 +65,7 @@ This includes HTTP requests resulting from the following elements (this list is 
 - {{HTMLElement("script")}} where origin is set via `src` attribute
 - {{HTMLElement("link")}} where the origin is set in the `href` attribute, and includes stylesheets
 - {{HTMLElement("iframe")}} where origin is set via `src` attribute
-- {{domxref("fetch()")}} requests
+- {{domxref("Window/fetch", "fetch()")}} requests
 - {{domxref("XMLHttpRequest")}} requests
 - All cases in CSS where a {{cssxref("url", "url()")}} value is used ({{cssxref("@font-face")}}, {{cssxref("cursor")}}, {{cssxref("background-image")}}, and so forth).
 - {{HTMLElement("object")}} (`data` attribute)
@@ -99,7 +100,7 @@ This includes `file:` URLs, and content accessed from loopback addresses such as
 You can load these files from secure contexts, and you will still have a secure context.
 However if a local file loads insecure resource via `http:`, it would be a mixed content request.
 
-Support for loading local content can be checked in the [Browser compatibility](#browser-compatibility) section.
+Support for loading local content can be checked in the [Browser compatibility](#browser_compatibility) section.
 
 ## Mixed downloads
 
@@ -115,7 +116,8 @@ If this code is in a page that is served over HTTPS, saving the link results in 
 
 Browsers are expected to block mixed downloads, and secure sites should not include them.
 
-> **Note:** Browsers commonly block mixed downloads by default, but inform users of the risk and allow them to keep or discard the download.
+> [!NOTE]
+> Browsers commonly block mixed downloads by default, but inform users of the risk and allow them to keep or discard the download.
 
 ## Developer console
 
@@ -146,7 +148,7 @@ There are a number of ways to verify that your site is free of mixed content inc
 
 - Navigate your site, and check your browser's [developer console](#developer_console) for mixed content warnings.
 - Disable all mixed content on your browser and test that pages work as expected.
-  This is the default for Safari, but most browsers support some mechanism for blocking all mixed content (see [compatibility data](#browser-compatibility)).
+  This is the default for Safari, but most browsers support some mechanism for blocking all mixed content (see [compatibility data](#browser_compatibility)).
 - Use a desktop-based web crawler like [HTTPSChecker](https://httpschecker.net/how-it-works), or a CLI tool like [mcdetect](https://github.com/agis/mcdetect), to check your website recursively and find links to insecure content.
 - Use an online tool like [Mixed Content Checker](https://www.crawlcenter.com/mixed-content-checker) to check your site.
 

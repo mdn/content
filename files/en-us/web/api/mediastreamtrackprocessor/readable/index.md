@@ -3,12 +3,10 @@ title: "MediaStreamTrackProcessor: readable property"
 short-title: readable
 slug: Web/API/MediaStreamTrackProcessor/readable
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.MediaStreamTrackProcessor.readable
 ---
 
-{{APIRef("Insertable Streams for MediaStreamTrack API")}}{{SeeCompatTable}}
+{{APIRef("Insertable Streams for MediaStreamTrack API")}}
 
 The **`readable`** property of the {{domxref("MediaStreamTrackProcessor")}} interface returns a {{domxref("ReadableStream")}}.
 

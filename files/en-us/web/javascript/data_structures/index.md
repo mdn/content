@@ -77,9 +77,9 @@ Boolean values are usually used for conditional operations, including [ternary o
 
 ### Number type
 
-The {{jsxref("Number")}} type is a [double-precision 64-bit binary format IEEE 754 value](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_encoding). It is capable of storing positive floating-point numbers between 2<sup>-1074</sup> ({{jsxref("Number.MIN_VALUE")}}) and 2<sup>1024</sup> ({{jsxref("Number.MAX_VALUE")}}) as well as negative floating-point numbers between -2<sup>-1074</sup> and -2<sup>1024</sup>, but it can only safely store integers in the range -(2<sup>53</sup> − 1) ({{jsxref("Number.MIN_SAFE_INTEGER")}}) to 2<sup>53</sup> − 1 ({{jsxref("Number.MAX_SAFE_INTEGER")}}). Outside this range, JavaScript can no longer safely represent integers; they will instead be represented by a double-precision floating point approximation. You can check if a number is within the range of safe integers using {{jsxref("Number.isSafeInteger()")}}.
+The {{jsxref("Number")}} type is a [double-precision 64-bit binary format IEEE 754 value](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_encoding). It is capable of storing positive floating-point numbers between 2<sup>-1074</sup> ({{jsxref("Number.MIN_VALUE")}}) and 2<sup>1023</sup> × (2 - 2<sup>-52</sup>) ({{jsxref("Number.MAX_VALUE")}}) as well as negative floating-point numbers of the same magnitude, but it can only safely store integers in the range -(2<sup>53</sup> − 1) ({{jsxref("Number.MIN_SAFE_INTEGER")}}) to 2<sup>53</sup> − 1 ({{jsxref("Number.MAX_SAFE_INTEGER")}}). Outside this range, JavaScript can no longer safely represent integers; they will instead be represented by a double-precision floating point approximation. You can check if a number is within the range of safe integers using {{jsxref("Number.isSafeInteger()")}}.
 
-Values outside the range ±(2<sup>-1074</sup> to 2<sup>1024</sup>) are automatically converted:
+Values outside the representable range are automatically converted:
 
 - Positive values greater than {{jsxref("Number.MAX_VALUE")}} are converted to `+Infinity`.
 - Positive values smaller than {{jsxref("Number.MIN_VALUE")}} are converted to `+0`.
@@ -99,7 +99,8 @@ console.log(42 / -0); // -Infinity
 
 Although a number is conceptually a "mathematical value" and is always implicitly floating-point-encoded, JavaScript provides [bitwise operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#bitwise_operators). When applying bitwise operators, the number is first converted to a 32-bit integer.
 
-> **Note:** Although bitwise operators _can_ be used to represent several Boolean values within a single number using [bit masking](https://en.wikipedia.org/wiki/Mask_%28computing%29), this is usually considered a bad practice. JavaScript offers other means to represent a set of Booleans (like an array of Booleans, or an object with Boolean values assigned to named properties). Bit masking also tends to make the code more difficult to read, understand, and maintain.
+> [!NOTE]
+> Although bitwise operators _can_ be used to represent several Boolean values within a single number using [bit masking](https://en.wikipedia.org/wiki/Mask_%28computing%29), this is usually considered a bad practice. JavaScript offers other means to represent a set of Booleans (like an array of Booleans, or an object with Boolean values assigned to named properties). Bit masking also tends to make the code more difficult to read, understand, and maintain.
 
 It may be necessary to use such techniques in very constrained environments, like when trying to cope with the limitations of local storage, or in extreme cases (such as when each bit over the network counts). This technique should only be considered when it is the last measure that can be taken to optimize size.
 
@@ -139,7 +140,7 @@ It can be tempting to use strings to represent complex data. Doing this comes wi
 
 - It is easy to build complex strings with concatenation.
 - Strings are easy to debug (what you see printed is always what is in the string).
-- Strings are the common denominator of a lot of APIs ([input fields](/en-US/docs/Web/API/HTMLInputElement), [local storage](/en-US/docs/Web/API/Web_Storage_API) values, [`fetch()`](/en-US/docs/Web/API/fetch) responses when using {{domxref("Response.text()")}}, etc.) and it can be tempting to only work with strings.
+- Strings are the common denominator of a lot of APIs ([input fields](/en-US/docs/Web/API/HTMLInputElement), [local storage](/en-US/docs/Web/API/Web_Storage_API) values, [`fetch()`](/en-US/docs/Web/API/Window/fetch) responses when using {{domxref("Response.text()")}}, etc.) and it can be tempting to only work with strings.
 
 With conventions, it is possible to represent any data structure in a string. This does not make it a good idea. For instance, with a separator, one could emulate a list (while a JavaScript array would be more suitable). Unfortunately, when the separator is used in one of the "list" elements, then, the list is broken. An escape character can be chosen, etc. All of this requires conventions and creates an unnecessary maintenance burden.
 
@@ -176,7 +177,8 @@ Data properties associate a key with a value. It can be described by the followi
 
 Associates a key with one of two accessor functions (`get` and `set`) to retrieve or store a value.
 
-> **Note:** It's important to recognize it's accessor _property_ — not accessor _method_. We can give a JavaScript object class-like accessors by using a function as a value — but that doesn't make the object a class.
+> [!NOTE]
+> It's important to recognize it's accessor _property_ — not accessor _method_. We can give a JavaScript object class-like accessors by using a function as a value — but that doesn't make the object a class.
 
 An accessor property has the following attributes:
 
@@ -235,17 +237,17 @@ The [primitive coercion](https://tc39.es/ecma262/multipage/abstract-operations.h
 - The [`+`](/en-US/docs/Web/JavaScript/Reference/Operators/Addition) operator — if one operand is a string, string concatenation is performed; otherwise, numeric addition is performed.
 - The [`==`](/en-US/docs/Web/JavaScript/Reference/Operators/Equality) operator — if one operand is a primitive while the other is an object, the object is converted to a primitive value with no preferred type.
 
-This operation does not do any conversion if the value is already a primitive. Objects are converted to primitives by calling its [`[@@toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (with `"default"` as hint), `valueOf()`, and `toString()` methods, in that order. Note that primitive conversion calls `valueOf()` before `toString()`, which is similar to the behavior of [number coercion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion) but different from [string coercion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion).
+This operation does not do any conversion if the value is already a primitive. Objects are converted to primitives by calling its [`[Symbol.toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (with `"default"` as hint), `valueOf()`, and `toString()` methods, in that order. Note that primitive conversion calls `valueOf()` before `toString()`, which is similar to the behavior of [number coercion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion) but different from [string coercion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion).
 
-The `[@@toPrimitive]()` method, if present, must return a primitive — returning an object results in a {{jsxref("TypeError")}}. For `valueOf()` and `toString()`, if one returns an object, the return value is ignored and the other's return value is used instead; if neither is present, or neither returns a primitive, a {{jsxref("TypeError")}} is thrown. For example, in the following code:
+The `[Symbol.toPrimitive]()` method, if present, must return a primitive — returning an object results in a {{jsxref("TypeError")}}. For `valueOf()` and `toString()`, if one returns an object, the return value is ignored and the other's return value is used instead; if neither is present, or neither returns a primitive, a {{jsxref("TypeError")}} is thrown. For example, in the following code:
 
 ```js
 console.log({} + []); // "[object Object]"
 ```
 
-Neither `{}` nor `[]` have a `[@@toPrimitive]()` method. Both `{}` and `[]` inherit `valueOf()` from {{jsxref("Object.prototype.valueOf")}}, which returns the object itself. Since the return value is an object, it is ignored. Therefore, `toString()` is called instead. [`{}.toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) returns `"[object Object]"`, while [`[].toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toString) returns `""`, so the result is their concatenation: `"[object Object]"`.
+Neither `{}` nor `[]` have a `[Symbol.toPrimitive]()` method. Both `{}` and `[]` inherit `valueOf()` from {{jsxref("Object.prototype.valueOf")}}, which returns the object itself. Since the return value is an object, it is ignored. Therefore, `toString()` is called instead. [`{}.toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) returns `"[object Object]"`, while [`[].toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toString) returns `""`, so the result is their concatenation: `"[object Object]"`.
 
-The `[@@toPrimitive]()` method always takes precedence when doing conversion to any primitive type. Primitive conversion generally behaves like number conversion, because `valueOf()` is called in priority; however, objects with custom `[@@toPrimitive]()` methods can choose to return any primitive. {{jsxref("Date")}} and {{jsxref("Symbol")}} objects are the only built-in objects that override the `[@@toPrimitive]()` method. [`Date.prototype[@@toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive) treats the `"default"` hint as if it's `"string"`, while [`Symbol.prototype[@@toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive) ignores the hint and always returns a symbol.
+The `[Symbol.toPrimitive]()` method always takes precedence when doing conversion to any primitive type. Primitive conversion generally behaves like number conversion, because `valueOf()` is called in priority; however, objects with custom `[Symbol.toPrimitive]()` methods can choose to return any primitive. {{jsxref("Date")}} and {{jsxref("Symbol")}} objects are the only built-in objects that override the `[Symbol.toPrimitive]()` method. [`Date.prototype[Symbol.toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Symbol.toPrimitive) treats the `"default"` hint as if it's `"string"`, while [`Symbol.prototype[Symbol.toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/Symbol.toPrimitive) ignores the hint and always returns a symbol.
 
 ### Numeric coercion
 
@@ -259,11 +261,11 @@ All data types, except Null, Undefined, and Symbol, have their respective coerci
 
 As you may have noticed, there are three distinct paths through which objects may be converted to primitives:
 
-- [Primitive coercion](#primitive_coercion): `[@@toPrimitive]("default")` → `valueOf()` → `toString()`
-- [Numeric coercion](#numeric_coercion), [number coercion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), [BigInt coercion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt#bigint_coercion): `[@@toPrimitive]("number")` → `valueOf()` → `toString()`
-- [String coercion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion): `[@@toPrimitive]("string")` → `toString()` → `valueOf()`
+- [Primitive coercion](#primitive_coercion): `[Symbol.toPrimitive]("default")` → `valueOf()` → `toString()`
+- [Numeric coercion](#numeric_coercion), [number coercion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), [BigInt coercion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt#bigint_coercion): `[Symbol.toPrimitive]("number")` → `valueOf()` → `toString()`
+- [String coercion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion): `[Symbol.toPrimitive]("string")` → `toString()` → `valueOf()`
 
-In all cases, `[@@toPrimitive]()`, if present, must be callable and return a primitive, while `valueOf` or `toString` will be ignored if they are not callable or return an object. At the end of the process, if successful, the result is guaranteed to be a primitive. The resulting primitive is then subject to further coercions depending on the context.
+In all cases, `[Symbol.toPrimitive]()`, if present, must be callable and return a primitive, while `valueOf` or `toString` will be ignored if they are not callable or return an object. At the end of the process, if successful, the result is guaranteed to be a primitive. The resulting primitive is then subject to further coercions depending on the context.
 
 ## See also
 

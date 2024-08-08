@@ -237,7 +237,7 @@ The following request headers are not _strictly_ "fetch metadata request headers
 - {{HTTPHeader("Sec-Purpose")}}
   - : Indicates the purpose of the request, when the purpose is something other than immediate use by the user-agent. The header currently has one possible value, `prefetch`, which indicates that the resource is being fetched preemptively for a possible future navigation.
 - {{HTTPHeader("Service-Worker-Navigation-Preload")}}
-  - : A request header sent in preemptive request to {{domxref("fetch()")}} a resource during service worker boot. The value, which is set with {{domxref("NavigationPreloadManager.setHeaderValue()")}}, can be used to inform a server that a different resource should be returned than in a normal `fetch()` operation.
+  - : A request header sent in preemptive request to {{domxref("Window/fetch", "fetch()")}} a resource during service worker boot. The value, which is set with {{domxref("NavigationPreloadManager.setHeaderValue()")}}, can be used to inform a server that a different resource should be returned than in a normal `fetch()` operation.
 
 ## Server-sent events
 
@@ -273,6 +273,9 @@ The following request headers are not _strictly_ "fetch metadata request headers
   - : Links generated code to a [source map](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html).
 - {{HTTPHeader("Upgrade")}}
   - : This HTTP/1.1 (only) header can be used to upgrade an already established client/server connection to a different protocol (over the same transport protocol). For example, it can be used by a client to upgrade a connection from HTTP 1.1 to HTTP 2.0, or an HTTP or HTTPS connection into a WebSocket.
+- {{HTTPHeader("Priority")}}
+  - : Provides a hint from about the priority of a particular resource request on a particular connection.
+    The value can be sent in a request to indicate the client priority, or in a response if the server chooses to reprioritize the request.
 
 ## Experimental headers
 
@@ -293,7 +296,7 @@ HTTP [Client hints](/en-US/docs/Web/HTTP/Client_hints) are a set of request head
 
 Servers proactively requests the client hint headers they are interested in from the client using {{HTTPHeader("Accept-CH")}}. The client may then choose to include the requested headers in subsequent requests.
 
-- {{HTTPHeader("Accept-CH")}} {{experimental_inline}}
+- {{HTTPHeader("Accept-CH")}}
   - : Servers can advertise support for Client Hints using the `Accept-CH` header field or an equivalent HTML `<meta>` element with [`http-equiv`](/en-US/docs/Web/HTML/Element/meta#http-equiv) attribute.
 - {{HTTPHeader("Critical-CH")}} {{experimental_inline}}
   - : Servers use `Critical-CH` along with {{HttpHeader("Accept-CH")}} to specify that accepted client hints are also [critical client hints](/en-US/docs/Web/HTTP/Client_hints#critical_client_hints).
@@ -310,6 +313,10 @@ The [UA client hints](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints)
   - : User agent's underlying platform architecture.
 - {{HTTPHeader("Sec-CH-UA-Bitness")}} {{experimental_inline}}
   - : User agent's underlying CPU architecture bitness (for example "64" bit).
+- {{HTTPHeader("Sec-CH-UA-Form-Factor")}} {{experimental_inline}}
+  - : User agent's form-factors, describing how the user interacts with the user-agent.
+- {{HTTPHeader("Sec-CH-UA-Full-Version")}} {{deprecated_inline}}
+  - : User agent's full version string.
 - {{HTTPHeader("Sec-CH-UA-Full-Version-List")}} {{experimental_inline}}
   - : Full version for each brand in the user agent's brand list.
 - {{HTTPHeader("Sec-CH-UA-Mobile")}} {{experimental_inline}}
@@ -320,16 +327,19 @@ The [UA client hints](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints)
   - : User agent's underlying operation system/platform.
 - {{HTTPHeader("Sec-CH-UA-Platform-Version")}} {{experimental_inline}}
   - : User agent's underlying operation system version.
-- {{HTTPHeader("Sec-CH-UA-Prefers-Color-Scheme")}} {{experimental_inline}}
+- {{HTTPHeader("Sec-CH-UA-WoW64")}} {{experimental_inline}}
+  - : Whether or not the user agent binary is running in 32-bit mode on 64-bit Windows.
+- {{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}} {{experimental_inline}}
   - : User's preference of dark or light color scheme.
-- {{HTTPHeader("Sec-CH-UA-Prefers-Reduced-Motion")}} {{experimental_inline}}
+- {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}} {{experimental_inline}}
   - : User's preference to see fewer animations and content layout shifts.
 
-> **Note:** User-agent client hints are not available inside [fenced frames](/en-US/docs/Web/API/Fenced_frame_API) because they rely on [permissions policy](/en-US/docs/Web/HTTP/Permissions_Policy) delegation, which could be used to leak data.
+> [!NOTE]
+> User-agent client hints are not available inside [fenced frames](/en-US/docs/Web/API/Fenced_frame_API) because they rely on [permissions policy](/en-US/docs/Web/HTTP/Permissions_Policy) delegation, which could be used to leak data.
 
 #### Device client hints
 
-- {{HTTPHeader("Device-Memory")}} {{experimental_inline}}
+- {{HTTPHeader("Device-Memory")}}
   - : Approximate amount of available client RAM memory. This is part of the [Device Memory API](/en-US/docs/Web/API/Device_Memory_API).
 
 #### Network client hints
@@ -390,7 +400,7 @@ Network client hints allow a server to choose what information is sent based on 
 - {{HTTPHeader("X-DNS-Prefetch-Control")}} {{non-standard_inline}}
   - : Controls DNS prefetching, a feature by which browsers proactively perform domain name resolution on both links that the user may choose to follow as well as URLs for items referenced by the document, including images, CSS, JavaScript, and so forth.
 - {{HTTPHeader("X-Robots-Tag")}} {{non-standard_inline}}
-  - : The [`X-Robots-Tag`](https://developers.google.com/search/docs/advanced/robots/robots_meta_tag) HTTP header is used to indicate how a web page is to be indexed within public search engine results. The header is effectively equivalent to `<meta name="robots" content="…">`.
+  - : The [`X-Robots-Tag`](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag) HTTP header is used to indicate how a web page is to be indexed within public search engine results. The header is effectively equivalent to `<meta name="robots" content="…">`.
 
 ## Deprecated headers
 

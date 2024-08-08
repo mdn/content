@@ -98,7 +98,6 @@ para.onpointermove = (event) => {
   - {{domxref('Element/pointerover_event', 'pointerover')}}
   - {{domxref('Element/pointerenter_event', 'pointerenter')}}
   - {{domxref('Element/pointerdown_event', 'pointerdown')}}
-  - {{domxref('Element/pointermove_event', 'pointermove')}}
   - {{domxref('Element/pointerup_event', 'pointerup')}}
   - {{domxref('Element/pointercancel_event', 'pointercancel')}}
   - {{domxref('Element/pointerout_event', 'pointerout')}}

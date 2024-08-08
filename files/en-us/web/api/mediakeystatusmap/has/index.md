@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.MediaKeyStatusMap.has
 ---
 
-{{APIRef("EncryptedMediaExtensions API")}}{{SecureContext_Header}}
+{{APIRef("Encrypted Media Extensions")}}{{SecureContext_Header}}
 
 The **`has()`** method of the
 {{domxref("MediaKeyStatusMap")}} interface returns a {{jsxref('Boolean')}}, asserting

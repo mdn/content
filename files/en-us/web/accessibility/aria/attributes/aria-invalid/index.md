@@ -17,7 +17,8 @@ The `aria-invalid` attribute can be used with any typical HTML form element, and
 
 The attribute should be set with JavaScript as a result of a validation process. If a value is determined to be invalid or out-of-range, set `aria-invalid="true"` **and** tell the user there is an error. For better user experience, provide suggestions for how the error can be corrected. Do not set `aria-invalid="true"` on empty required elements until after the user attempts to submit the form. They may still be working on filling it out.
 
-> **Note:** When `aria-invalid` is used in conjunction with the `aria-required` attribute, `aria-invalid` should not be set to true before the form is submitted - only in response to validation.
+> [!NOTE]
+> When `aria-invalid` is used in conjunction with the `aria-required` attribute, `aria-invalid` should not be set to true before the form is submitted - only in response to validation.
 
 There are currently four values: in addition to `true` and `false` we have `grammar` which can be used when a grammatical error is detected and `spelling` for spelling errors. If the attribute is not present, or its value is false, or its value is an empty string, the default value of false applies. Any other value is treated as if `true` were set.
 
@@ -25,7 +26,7 @@ There are currently four values: in addition to `true` and `false` we have `gram
 
 HTML has native form validation. When a user submits a form with a control containing errors, the first form control with an invalid value displays an error message, natively.
 
-If there is a [`required`](/en-US/docs/Web/HTML/Global_attributes#required) attribute on a form control that isn't filled out, the form will not submit, and an error message appears reading "Please fill out this field" or something similar. The messaging for native validation varies depending on the browser, and cannot be styled.
+If there is a [`required`](/en-US/docs/Web/HTML/Attributes/required) attribute on a form control that isn't filled out, the form will not submit, and an error message appears reading "Please fill out this field" or something similar. The messaging for native validation varies depending on the browser, and cannot be styled.
 
 ```html
 <input type="number" step="2" min="0" max="100" required />

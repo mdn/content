@@ -6,7 +6,7 @@ page-type: guide
 
 {{CSSRef}}
 
-[CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) introduces a two-dimensional grid system to CSS. Grids can be used to lay out major page areas or small user interface elements. This article introduces the CSS Grid Layout and the new terminology that is part of the CSS Grid Layout Level 1 specification. The features shown in this overview will then be explained in greater detail in the rest of this guide.
+[CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) introduces a two-dimensional grid system to CSS. Grids can be used to lay out major page areas or small user interface elements. This article introduces the CSS grid layout and the new terminology that is part of the CSS grid layout Level 1 specification. The features shown in this overview will then be explained in greater detail in the rest of this guide.
 
 ## What is a grid?
 
@@ -22,7 +22,7 @@ You can place items into a precise location on the grid using line numbers, name
 
 ### Creation of additional tracks to hold content
 
-You can define an explicit grid with grid layout. The Grid Layout specification is flexible enough to add additional rows and columns when needed. Features such as adding "as many columns that will fit into a container" are included.
+You can define an explicit grid with grid layout. The grid layout specification is flexible enough to add additional rows and columns when needed. Features such as adding "as many columns that will fit into a container" are included.
 
 ### Alignment control
 
@@ -82,9 +82,9 @@ I make the `.wrapper` a grid container.
 
 All the direct children are now grid items. In a web browser, you won't see any difference to how these items are displayed before turning them into a grid, as grid has created a single column grid for the items. At this point, you may find it useful to work with the [Grid Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html), available as part of Firefox's Developer Tools. If you view this example in Firefox and inspect the grid, you will see a small icon next to the value `grid`. Click this and then the grid on this element will be overlaid in the browser window.
 
-![Using the Grid Highlighter in DevTools to view a grid](1-grid-inspector.png)
+![Using the grid highlighter in DevTools to view a grid](1-grid-inspector.png)
 
-As you learn and then work with the CSS Grid Layout, this tool will give you a better idea of what is happening with your grids visually.
+As you learn and then work with the CSS grid layout, this tool will give you a better idea of what is happening with your grids visually.
 
 If we want to start making this more grid-like we need to add column tracks.
 
@@ -477,7 +477,8 @@ The second item starts on grid column line 1, and spans one track. This is the d
 
 {{ EmbedLiveSample('Positioning_items_against_lines', '230', '450') }}
 
-> **Note:** Don't forget that you can use the [Grid Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) in Firefox Developer Tools to see how the items are positioned against the lines of the grid.
+> [!NOTE]
+> Don't forget that you can use the [Grid Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) in Firefox Developer Tools to see how the items are positioned against the lines of the grid.
 
 ### Line-positioning shorthands
 
@@ -528,7 +529,8 @@ _Gutters_ or _alleys_ between grid cells can be created using the {{cssxref("col
 }
 ```
 
-> **Note:** When grid first shipped in browsers the {{cssxref("column-gap")}}, {{cssxref("row-gap")}} and {{cssxref("gap")}} were prefixed with the `grid-` prefix as `grid-column-gap`, `grid-row-gap` and `grid-gap` respectively.
+> [!NOTE]
+> When grid first shipped in browsers the {{cssxref("column-gap")}}, {{cssxref("row-gap")}} and {{cssxref("gap")}} were prefixed with the `grid-` prefix as `grid-column-gap`, `grid-row-gap` and `grid-gap` respectively.
 >
 > Browsers all now support unprefixed values, however the prefixed versions will be maintained as aliases making them safe to use.
 
@@ -782,4 +784,4 @@ We can control the order in which items stack up by using the `z-index` property
 
 ## Next steps
 
-In this article, we took a very quick look at the possibilities of grid layouts. Explore and play with the code examples, and then move on to [the next part of this guide](/en-US/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods), where we will really start to dig into the details of CSS Grid Layout.
+In this article, we took a very quick look at the possibilities of grid layouts. Explore and play with the code examples, and then move on to [the next part of this guide](/en-US/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods), where we will really start to dig into the details of CSS grid layout.

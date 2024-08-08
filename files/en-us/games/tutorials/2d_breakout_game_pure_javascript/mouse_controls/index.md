@@ -72,6 +72,8 @@ let paddleX = (canvas.width - paddleWidth) / 2;
 let rightPressed = false;
 let leftPressed = false;
 
+let interval = 0;
+
 const brickRowCount = 5;
 const brickColumnCount = 3;
 const brickWidth = 75;
@@ -212,7 +214,7 @@ function draw() {
 }
 
 function startGame() {
-  const interval = setInterval(draw, 10);
+  interval = setInterval(draw, 10);
 }
 
 document.getElementById("runButton").addEventListener("click", function () {
@@ -222,7 +224,8 @@ document.getElementById("runButton").addEventListener("click", function () {
 
 {{embedlivesample("compare_your_code", 600, 360)}}
 
-> **Note:** Try adjusting the boundaries of the paddle movement, so the whole paddle will be visible on both edges of the Canvas instead of only half of it.
+> [!NOTE]
+> Try adjusting the boundaries of the paddle movement, so the whole paddle will be visible on both edges of the Canvas instead of only half of it.
 
 ## Next steps
 

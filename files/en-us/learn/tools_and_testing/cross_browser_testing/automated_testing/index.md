@@ -37,7 +37,8 @@ We agree — testing all the things we've looked at in previous articles manuall
 
 We will look at how to set up your own Selenium-based testing system in the next article. In this article, we'll look at how to set up a task runner, and use the basic functionality of commercial systems like the ones mentioned above.
 
-> **Note:** the above two categories are not mutually exclusive. It is possible to set up a task runner to access a service like Sauce Labs, or LambdaTest via an API, run cross browser tests, and return results. We will look at this below as well.
+> [!NOTE]
+> The above two categories are not mutually exclusive. It is possible to set up a task runner to access a service like Sauce Labs, or LambdaTest via an API, run cross browser tests, and return results. We will look at this below as well.
 
 ## Using a task runner to automate testing tools
 
@@ -62,7 +63,8 @@ Most tools these days are based on {{Glossary("Node.js")}}, so you'll need to in
    npm install npm@latest -g
    ```
 
-> **Note:** If the above command fails with permissions errors, [Fixing npm permissions](https://docs.npmjs.com/getting-started/fixing-npm-permissions/) should sort you out.
+> [!NOTE]
+> If the above command fails with permissions errors, [Fixing npm permissions](https://docs.npmjs.com/getting-started/fixing-npm-permissions/) should sort you out.
 
 To start using Node/npm-based packages on your projects, you need to set up your project directories as npm projects. This is easy to do.
 
@@ -321,7 +323,8 @@ export function watch() {
 
 Now try entering the `gulp watch` command into your terminal. Gulp will now watch your directory, and run the appropriate tasks whenever you save a change to an HTML, CSS, or JavaScript file.
 
-> **Note:** The `*` character is a wildcard character — here we're saying "run these tasks when any files of these types are saved. You could also use wildcards in your main tasks, for example `gulp.src('src/*.css')` would grab all your CSS files and then run piped tasks on them.
+> [!NOTE]
+> The `*` character is a wildcard character — here we're saying "run these tasks when any files of these types are saved. You could also use wildcards in your main tasks, for example `gulp.src('src/*.css')` would grab all your CSS files and then run piped tasks on them.
 
 There's a lot more you can do with Gulp. The [Gulp plugin directory](https://gulpjs.com/plugins/) has literally thousands of plugins to search through.
 
@@ -340,7 +343,8 @@ The basic premise with such applications is that the company that runs each one 
 
 You can then step up a gear, using an API to access functionality programmatically, which means that such apps can be combined with task runners, such as your own local Selenium environments and others, to create automated tests.
 
-> **Note:** There are other commercial browser testing systems available but in this article, we'll focus on LambdaTest, Sauce Labs, and BrowserStack. We're not saying that these are necessarily the best tools available, but they are good ones that are simple for beginners to get up and running with.
+> [!NOTE]
+> There are other commercial browser testing systems available but in this article, we'll focus on LambdaTest, Sauce Labs, and BrowserStack. We're not saying that these are necessarily the best tools available, but they are good ones that are simple for beginners to get up and running with.
 
 ### LambdaTest
 
@@ -349,7 +353,8 @@ You can then step up a gear, using an API to access functionality programmatical
 1. Let's get started by [signing up on LambdaTest](https://accounts.lambdatest.com/register) for free.
 2. Sign in. This should happen automatically after you verify your email address.
 
-> **Note:** Unlike other cloud-based cross browser testing service providers, LambdaTest offers a freemium account where you get lifetime access to their platform. The only difference between their premium and their freemium plan is on the amount of consumption. For automation testing through their Selenium Grid, LambdaTest offers 60 minutes per month of free testing.
+> [!NOTE]
+> Unlike other cloud-based cross browser testing service providers, LambdaTest offers a freemium account where you get lifetime access to their platform. The only difference between their premium and their freemium plan is on the amount of consumption. For automation testing through their Selenium Grid, LambdaTest offers 60 minutes per month of free testing.
 
 #### The basics: Manual tests
 
@@ -365,7 +370,8 @@ Once you sign in to LambdaTest, you will be routed to the LambdaTest Dashboard. 
 4. With the in-built image editor, highlight your screenshot before you push it to your colleagues.![Highlight a bug](mark-as-bug-3.png)
 5. Using the mark as bug button you can push bugs to numerous third-party tools such as Jira, Asana, Trello, and more. That way you can log a bug directly from your test session on LambdaTest to your project management instance. Check out all the [third-party LambdaTest integrations](https://www.lambdatest.com/integrations).
 
-> **Note:** All the videos and images captured inside a test session are captured inside the gallery, test logs, and issue tracker at LambdaTest.
+> [!NOTE]
+> All the videos and images captured inside a test session are captured inside the gallery, test logs, and issue tracker at LambdaTest.
 
 ### Sauce Labs
 
@@ -394,7 +400,8 @@ The [Sauce Labs dashboard](https://app.saucelabs.com/dashboard/manual) has a lot
 
 Once you stop the session, you'll return to the Manual Tests tab, where you'll see an entry for each of the previous manual sessions you started. Clicking on one of these entries shows more data for the session. In here you can download any screenshots you took, watch a video of the session, view data logs, and more.
 
-> **Note:** This is already very useful, and way more convenient than having to set up all these emulators and virtual machines by yourself.
+> [!NOTE]
+> This is already very useful, and way more convenient than having to set up all these emulators and virtual machines by yourself.
 
 #### Advanced: The Sauce Labs API
 
@@ -467,7 +474,8 @@ Clicking on one of those browser icons will load up your choice of platform/devi
 
 ![Test Devices](browserstack-test-device-sized.png)
 
-> **Note:** The blue device icon next to some of the mobile device choices signals that you will be testing on a real device; choices without that icon will be run on an emulator.
+> [!NOTE]
+> The blue device icon next to some of the mobile device choices signals that you will be testing on a real device; choices without that icon will be run on an emulator.
 
 You'll find that you can enter URLs into the address bar, and use the other controls like you'd expect on a real device. You can even do things like copy and paste from the device to your clipboard, scroll up and down by dragging with the mouse, or use appropriate gestures (e.g. pinch/zoom, two fingers to scroll) on the touchpads of supporting devices (e.g. MacBook). Note that not all features are available on all devices.
 
@@ -489,7 +497,8 @@ The features here are as follows:
 - _Features_ — Shows you what features the current configuration supports, e.g. copy to clipboard, gesture support, etc.
 - _Stop_ — Ends the session.
 
-> **Note:** This is already very useful, and way more convenient than having to set up all these emulators and virtual machines by yourself.
+> [!NOTE]
+> This is already very useful, and way more convenient than having to set up all these emulators and virtual machines by yourself.
 
 #### Other basic features
 

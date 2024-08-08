@@ -9,7 +9,8 @@ browser-compat: api.HTMLTemplateElement
 
 The **`HTMLTemplateElement`** interface enables access to the contents of an HTML {{HTMLElement("template")}} element.
 
-> **Note:** An HTML parser can create either an `HTMLTemplateElement` or a {{domxref("ShadowRoot")}} when it parses a {{HTMLElement("template")}} element, depending on the `<template>` attributes.
+> [!NOTE]
+> An HTML parser can create either an `HTMLTemplateElement` or a {{domxref("ShadowRoot")}} when it parses a {{HTMLElement("template")}} element, depending on the `<template>` attributes.
 > If an `HTMLTemplateElement` is created the "shadow" attributes are reflected from the template.
 > However these are not useful, because an `HTMLTemplateElement` is not a shadow root and cannot subsequently be changed to a shadow root.
 
@@ -27,7 +28,7 @@ _This interface inherits the properties of {{domxref("HTMLElement")}}._
   - : A boolean that reflects the value of the [`shadowrootdelegatesfocus`](/en-US/docs/Web/HTML/Element/template#shadowrootdelegatesfocus) attribute of the associated `<template>` element.
 - {{domxref("HTMLTemplateElement.shadowRootClonable", "shadowRootClonable")}}
   - : A boolean that reflects the value of the [`shadowrootclonable`](/en-US/docs/Web/HTML/Element/template#shadowrootclonable) attribute of the associated `<template>` element.
-- {{domxref("HTMLTemplateElement.shadowRootSerializable", "shadowRootSerializable")}} {{experimental_inline}}
+- {{domxref("HTMLTemplateElement.shadowRootSerializable", "shadowRootSerializable")}}
   - : A boolean that reflects the value of the [`shadowrootserializable`](/en-US/docs/Web/HTML/Element/template#shadowrootserializable) attribute of the associated `<template>` element.
 
 ## Instance methods

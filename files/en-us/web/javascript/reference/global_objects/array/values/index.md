@@ -27,7 +27,7 @@ A new [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Obj
 
 ## Description
 
-`Array.prototype.values()` is the default implementation of [`Array.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator).
+`Array.prototype.values()` is the default implementation of [`Array.prototype[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator).
 
 ```js
 Array.prototype.values === Array.prototype[Symbol.iterator]; // true
@@ -70,7 +70,8 @@ console.log(iterator.next().value); // undefined
 
 ### Reusing the iterable
 
-> **Warning:** The array iterator object should be a one-time use object. Do not reuse it.
+> [!WARNING]
+> The array iterator object should be a one-time use object. Do not reuse it.
 
 The iterable returned from `values()` is not reusable. When `next().done = true` or `currentIndex > length`, [the `for...of` loop ends](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#interactions_between_the_language_and_iteration_protocols), and further iterating it has no effect.
 
@@ -176,6 +177,6 @@ for (const entry of Array.prototype.values.call(arrayLike)) {
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.entries()")}}
 - {{jsxref("Array.prototype.keys()")}}
-- [`Array.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
+- [`Array.prototype[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)
 - {{jsxref("TypedArray.prototype.values()")}}
 - [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)

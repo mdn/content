@@ -8,7 +8,8 @@ page-type: aria-role
 
 The `comment` role semantically denotes a comment/reaction to some content on the page, or to a previous comment.
 
-> **Note:** The comment role is proposed in WAI-ARIA 1.3 ([Most recent ARIA draft](https://w3c.github.io/aria/)), which is still being drafted.
+> [!NOTE]
+> The comment role is proposed in WAI-ARIA 1.3 ([Most recent ARIA draft](https://w3c.github.io/aria/)), which is still being drafted.
 
 ## Examples
 

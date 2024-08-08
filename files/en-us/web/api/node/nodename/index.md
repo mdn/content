@@ -54,14 +54,14 @@ and the following script:
 
 ```js
 let node = document.querySelector("body").firstChild;
-let result = "Node names are:<br/>";
+let result = "Node names are:\n";
 while (node) {
-  result += `${node.nodeName}<br/>`;
+  result += `${node.nodeName}\n`;
   node = node.nextSibling;
 }
 
 const output = document.getElementById("result");
-output.innerHTML = result;
+output.innerText = result;
 ```
 
 {{ EmbedLiveSample("Example", "100%", "450")}}

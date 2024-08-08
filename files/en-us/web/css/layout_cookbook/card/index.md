@@ -22,13 +22,13 @@ The cards in the group should line up in two dimensions — both vertically and 
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/card.html", '100%', 1720)}}
 
-> **Callout:**
+> [!CALLOUT]
 >
 > [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/card--download.html)
 
 ## Choices made
 
-Each card is laid out using [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout) despite the layout being one-dimensional. This enables the use of content sizing for the grid tracks. To set up a single-column grid we can use the following:
+Each card is laid out using [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) despite the layout being one-dimensional. This enables the use of content sizing for the grid tracks. To set up a single-column grid we can use the following:
 
 ```css
 .card {
@@ -57,7 +57,8 @@ The following ruleset creates the grid of cards:
 
 The {{cssxref("grid-template-columns")}} property defines the widths of the grid columns. In this case, we set the grid to auto-fill, with repeated columns that are minimally `230px` but allowed to grow to fill the available space. The {{cssxref("gap")}} property sets a gap of `20px` between adjacent rows and adjacent columns.
 
-> **Note:** The various elements in separate cards do not align with each other, as each card is an independent grid. Lining up the components in each card with the same components in adjacent cards can be done with [subgrid](/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid).
+> [!NOTE]
+> The various elements in separate cards do not align with each other, as each card is an independent grid. Lining up the components in each card with the same components in adjacent cards can be done with [subgrid](/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid).
 
 ## Alternative methods
 
@@ -69,10 +70,12 @@ We chose grid for the cards as, generally, you want cards to be lined up both ve
 
 ## Accessibility concerns
 
-Depending on the content of your card, there may be things you could or should do to enhance accessibility. See [Inclusive Components: Card](https://inclusive-components.design/cards/) by Heydon Pickering, for a very detailed explanation of these issues.
+Depending on the content of your card, there may be things you could or should do to enhance accessibility. See [Inclusive components: Card](https://inclusive-components.design/cards/) by Heydon Pickering, for a very detailed explanation of these issues.
 
 ## See also
 
-- {{Cssxref("grid-template-columns")}}, {{Cssxref("grid-template-rows")}}, {{Cssxref("gap")}}
-- [Inclusive Components: Card](https://inclusive-components.design/cards/)
-- [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout) module
+- {{Cssxref("grid-template-columns")}}
+- {{Cssxref("grid-template-rows")}}
+- {{Cssxref("gap")}}
+- [Inclusive components: Card](https://inclusive-components.design/cards/)
+- [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) module

@@ -13,7 +13,7 @@ By default, `<pre>` is a [block-level](/en-US/docs/Glossary/Block-level_content)
 
 {{EmbedInteractiveExample("pages/tabbed/pre.html", "tabbed-standard")}}
 
-If you have to display reserved characters such as `<`, `>`, `&`, and `"` within the `<pre>` tag, the characters must be escaped using their respective [HTML entity](/en-US/docs/Glossary/Entity).
+If you have to display reserved characters such as `<`, `>`, `&`, and `"` within the `<pre>` tag, the characters must be escaped using their respective {{glossary("character reference", "character references")}}.
 
 `<pre>` elements commonly contain {{HTMLElement("code")}}, {{HTMLElement("samp")}}, and {{HTMLElement("kbd")}} elements, to represent computer code, computer output, and user input, respectively.
 
@@ -21,14 +21,12 @@ If you have to display reserved characters such as `<`, `>`, `&`, and `"` within
 
 This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-- `cols` {{non-standard_inline}} {{deprecated_inline}}
-  - : Contains the _preferred_ count of characters that a line should have. It was a non-standard synonym of [`width`](#width). To achieve such an effect, use CSS {{Cssxref("width")}} instead.
 - `width` {{deprecated_inline}} {{Non-standard_Inline}}
   - : Contains the _preferred_ count of characters that a line should have. Though technically still implemented, this attribute has no visual effect; to achieve such an effect, use CSS {{Cssxref("width")}} instead.
 - `wrap` {{non-standard_inline}} {{Deprecated_Inline}}
   - : Is a _hint_ indicating how the overflow must happen. In modern browser this hint is ignored and no visual effect results in its present; to achieve such an effect, use CSS {{Cssxref("white-space")}} instead.
 
-## Accessibility concerns
+## Accessibility
 
 It is important to provide an alternate description for any images or diagrams created using preformatted text. The alternate description should clearly and concisely describe the image or diagram's content.
 
@@ -165,5 +163,5 @@ if (i &lt; 10 &amp;&amp; i &gt; 0)
 ## See also
 
 - CSS: {{Cssxref('white-space')}}, {{Cssxref('word-break')}}
-- [HTML Entity](/en-US/docs/Glossary/Entity)
+- {{glossary("Character reference")}}
 - Related element: {{HTMLElement("code")}}, {{HTMLElement("samp")}}, {{HTMLElement("kbd")}}

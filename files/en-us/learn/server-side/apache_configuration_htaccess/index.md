@@ -387,7 +387,7 @@ Nonetheless, you should ensure that you send the `X-Frame-Options` header for al
 
 There is no policy that fits all websites, the example below is meant as guidelines for you to modify for your site.
 
-To make your CSP implementation easier, you can use an online [CSP header generator](https://report-uri.com/home/generate/). You should also use a [validator](https://csp-evaluator.withgoogle.com) to make sure your header does what you want it to do.
+To make your CSP implementation easier, you can use an online [CSP header generator](https://report-uri.com/home/generate/). You should also use a [validator](https://csp-evaluator.withgoogle.com/) to make sure your header does what you want it to do.
 
 ```apacheconf
 <IfModule mod_headers.c>
@@ -494,8 +494,8 @@ To prevent referrer leakage entirely, specify the `no-referrer` value instead. N
 
 Use services like the ones below to check your `Referrer-Policy`:
 
+- [HTTP Observatory](/en-US/observatory)
 - [securityheaders.com](https://securityheaders.com/)
-- [Mozilla Observatory](https://observatory.mozilla.org/)
 
 ```apacheconf
 <IfModule mod_headers.c>
