@@ -32,7 +32,7 @@ let settingIcon = browser.action.setIcon(
 
 - `details`
 
-  - : `object`. An object containing either `imageData` or `path` properties, and optionally `tabId` and/or `windowId` properties.
+  - : `object`. An object containing the `imageData` or `path` property and, optionally, either or both of the `tabId` and `windowId` properties.
 
     - `imageData` {{optional_inline}}
 
