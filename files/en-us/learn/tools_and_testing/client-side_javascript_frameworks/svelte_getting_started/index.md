@@ -67,9 +67,9 @@ Nevertheless, Svelte is particularly appropriate to tackle the following situati
 - Highly interactive pages or complex visualizations: If you are building data-visualizations that need to display a large number of DOM elements, the performance gains that come from a framework with no runtime overhead will ensure that user interactions are snappy and responsive.
 - Onboarding people with basic web development knowledge: Svelte has a shallow learning curve. Web developers with basic HTML, CSS, and JavaScript knowledge can easily grasp Svelte specifics in a short time and start building web applications.
 
-The Svelte team launched [SvelteKit](https://kit.svelte.dev), a framework for building web applications using Svelte. It contains features found in modern web frameworks, such as filesystem-based routing, server-side rendering (SSR), page-specific rendering modes, offline support, and more. For more information about SvelteKit, see the [official tutorial](https://learn.svelte.dev) and [documentation](https://kit.svelte.dev/docs/introduction).
+The Svelte team launched [SvelteKit](https://kit.svelte.dev/), a framework for building web applications using Svelte. It contains features found in modern web frameworks, such as filesystem-based routing, server-side rendering (SSR), page-specific rendering modes, offline support, and more. For more information about SvelteKit, see the [official tutorial](https://learn.svelte.dev/) and [documentation](https://kit.svelte.dev/docs/introduction).
 
-Svelte is also available for mobile development via [Svelte Native](https://svelte-native.technology).
+Svelte is also available for mobile development via [Svelte Native](https://svelte-native.technology/).
 
 ## How does Svelte work?
 
