@@ -20,7 +20,7 @@ You must also pass the "blocking" option to `webRequest.onHeadersReceived.addLis
 ```js-nolint
 let gettingInfo = browser.webRequest.getSecurityInfo(
   requestId,       // string
-  options          // object
+  options          // optional object
 )
 ```
 
