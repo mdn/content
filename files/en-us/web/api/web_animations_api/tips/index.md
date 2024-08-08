@@ -124,3 +124,4 @@ In the case of the `animation-fill-mode` [forwards](/en-US/docs/Web/CSS/animatio
 
 - [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
 - [Animation Interface](/en-US/docs/Web/API/Animation/Animation)
+- [CSS animations](/en-US/docs/Web/CSS/CSS_animations) module
