@@ -118,7 +118,7 @@ We include two {{cssxref("time")}} values. In the `transition` shorthand, the fi
 }
 
 .target:hover {
-  background-color: lime;
+  background-color: darkorange;
 }
 ```
 
