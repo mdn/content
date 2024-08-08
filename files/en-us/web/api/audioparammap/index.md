@@ -29,7 +29,7 @@ The following methods are available to all read-only [`Map`-like objects](/en-US
 - {{jsxref("Map/get", "get()")}}
   - : Returns the {{domxref("AudioParam")}} value associated with the string key, or `undefined` if there is none.
 - {{jsxref("Map/has", "has()")}}
-  - : Returns a boolean indicating whether a key is present in the map or not.
+  - : Returns a [boolean](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean) indicating whether a key is present in the map or not.
 - {{jsxref("Map/keys", "keys()")}}
   - : Returns a new iterator object that yields the string keys in the map in insertion order.
 - {{jsxref("Map/values", "values()")}}
