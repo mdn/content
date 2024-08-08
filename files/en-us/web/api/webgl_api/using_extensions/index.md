@@ -60,7 +60,7 @@ The current extensions are:
 - {{domxref("EXT_color_buffer_float")}}
 - {{domxref("EXT_color_buffer_half_float")}}
 - {{domxref("EXT_disjoint_timer_query")}}
-- {{domxref("EXT_float_blend")}} {{experimental_inline}}
+- {{domxref("EXT_float_blend")}}
 - {{domxref("EXT_frag_depth")}}
 - {{domxref("EXT_shader_texture_lod")}}
 - {{domxref("EXT_sRGB")}}

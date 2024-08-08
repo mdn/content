@@ -78,7 +78,7 @@ Some websites show which browsers are popular in a given region. For example, [S
 
 A much more accurate source of data, if you can get it, is an analytics app like [Google Analytics](https://marketingplatform.google.com/about/analytics/), which tells you exactly what browsers people are using to browse your site. Of course, this relies on you already having a site to use it on, so it isn't good for completely new sites.
 
-You may also consider using open-source and privacy-focused analytics platforms like [Open Web Analytics](https://www.openwebanalytics.com/) and [Matomo](https://matomo.org). They expect you to self-host the analytics platform.
+You may also consider using open-source and privacy-focused analytics platforms like [Open Web Analytics](https://www.openwebanalytics.com/) and [Matomo](https://matomo.org/). They expect you to self-host the analytics platform.
 
 #### Setting up Google analytics
 
@@ -247,7 +247,7 @@ As mentioned in the last chapter, you can take a lot of the pain out of browser 
 
 There are also commercial tools available such as [Sauce Labs](https://saucelabs.com/), [Browser Stack](https://www.browserstack.com/) and [LambdaTest](https://www.lambdatest.com/) that do this kind of thing for you, without you having to worry about the setup, if you wish to invest some money in your testing.
 
-Another alternative is to use no-code test automation tools such as [Endtest](https://endtest.io).
+Another alternative is to use no-code test automation tools such as [Endtest](https://www.endtest.io/).
 
 We will look at how to use such tools later on in the module.
 
