@@ -12,7 +12,7 @@ The **`stop-opacity`** [CSS](/en-US/docs/Web/CSS) property defines the opacity o
 The property value impacts the {{cssxref("stop-color")}}'s alpha channel; it can increase the transparency of a `<stop>`'s color but can not make the color defined by the `stop-color` property more opaque.
 
 > [!NOTE]
-> The `stop-opacity` property only applies to {{SVGElement('stop')}} elements nested in an {{SVGElement("svg")}}. It doesn't apply other SVG, HTML, or pseudo-elements.
+> The `stop-opacity` property only applies to {{SVGElement('stop')}} elements nested in an {{SVGElement("svg")}}. It doesn't apply to other SVG, HTML, or pseudo-elements.
 
 ## Syntax
 
