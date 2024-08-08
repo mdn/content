@@ -155,7 +155,7 @@ Ali Spivak manages content & community on the Mozilla Developer Network and spen
 
 ![Jean-Yves Perrier](teoli2003.png)
 
-Jean-Yves has been a Technical Writer on MDN since 2010 and joined Mozilla full-time at the end of 2011. He is passionate about the open Web, with 15 years of C++ experience. He is Swiss but lives in London, UK. His Erdös number is 5 and he is [@Teoli2003](https://x.com/Teoli2003) on Twitter.
+Jean-Yves has been a Technical Writer on MDN since 2010 and joined Mozilla full-time at the end of 2011. He is passionate about the open Web, with 15 years of C++ experience. He is Swiss but lives in London, UK. His Erdös number is 5 and he is [@teoli2003](https://github.com/teoli2003) on GitHub.
 
 ### Florian Scholz<br>Technical Writer, MDN
 
