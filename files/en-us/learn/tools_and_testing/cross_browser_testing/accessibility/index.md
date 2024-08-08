@@ -293,12 +293,7 @@ Now we've covered accessibility considerations for different web technologies, i
 
 ### Auditing tools
 
-There are a number of auditing tools available that you can feed your web pages into. They will look over them and return a list of accessibility issues present on the page. Examples include:
-
-- [Wave](https://wave.webaim.org/): A rather nice online accessibility testing tool that accepts a web address and returns a useful annotated view of that page with accessibility problems highlighted.
-- [Tenon](https://tenon.io/): Another nice online tool that goes through the code at a provided URL and returns results on accessibility errors including metrics, specific errors along with the WCAG criteria they affect, and suggested fixes. It requires a free trial signup to view the results.
-
-Let's look at an example, using Wave.
+There are a number of auditing tools available that you can feed your web pages into. They will look over them and return a list of accessibility issues present on the page. Let's look at an example, using [Wave](https://wave.webaim.org/), an online accessibility testing tool that accepts a web address and returns an annotated view of that page with accessibility problems highlighted.
 
 1. Go to the [Wave homepage](https://wave.webaim.org/).
 2. Enter the URL of our [bad-semantics.html](https://mdn.github.io/learning-area/accessibility/html/bad-semantics.html) example into the text input box near the top of the page. Then press enter or click/tap the arrow at the far right edge of the input box.
