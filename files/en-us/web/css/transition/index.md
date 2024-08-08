@@ -114,7 +114,7 @@ We include two {{cssxref("time")}} values. In the `transition` shorthand, the fi
 .target {
   font-size: 2rem;
   background-color: palegoldenrod;
-  transition: background-color 4s 1s;
+  transition: background-color 2s 500ms;
 }
 
 .target:hover {
