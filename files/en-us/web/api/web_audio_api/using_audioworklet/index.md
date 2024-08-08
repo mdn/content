@@ -284,7 +284,7 @@ Here, if `gain.length` indicates that there's only a single value in the `gain` 
 
 ### Accessing parameters from the main thread script
 
-Your main thread script can access the parameters just like it can any other node. To do so, first you need to get a reference to the parameter by calling the {{domxref("AudioWorkletNode")}}'s {{domxref("AudioWorkletNode.parameters", "parameters")}} property's {{domxref("AudioParamMap", "get()", "get")}} method:
+Your main thread script can access the parameters just like it can any other node. To do so, first you need to get a reference to the parameter by calling the {{domxref("AudioWorkletNode")}}'s {{domxref("AudioWorkletNode.parameters", "parameters")}} property's [`get()`](/en-US/docs/Web/API/AudioParamMap#get) method:
 
 ```js
 let gainParam = myAudioWorkletNode.parameters.get("gain");
