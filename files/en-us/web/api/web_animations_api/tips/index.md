@@ -100,6 +100,10 @@ const box = document.querySelector(".box");
 const button = document.querySelector(".runButton");
 const colorChangeFrames = { backgroundColor: ["grey", "lime"] };
 
+button.addEventListener("click", playAnimation);
+```
+
+```js
 function playAnimation() {
   button.setAttribute("disabled", true);
   const anim = box.animate(colorChangeFrames, 4000);
@@ -109,8 +113,6 @@ function playAnimation() {
   });
 }
 ```
-
-button.addEventListener("click", playAnimation);
 
 {{ EmbedLiveSample("Waiting for an animation to complete before stopping", "100%", "160") }}
 
