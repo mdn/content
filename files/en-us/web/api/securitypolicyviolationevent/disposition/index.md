@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.SecurityPolicyViolationEvent.disposition
 ---
 
-{{APIRef}}
+{{APIRef("Reporting API")}}
 
 The **`disposition`** read-only property of the {{domxref("SecurityPolicyViolationEvent")}} interface indicates how the violated [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) is configured to be treated by the user agent.
 
