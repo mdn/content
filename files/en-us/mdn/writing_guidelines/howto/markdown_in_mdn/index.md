@@ -176,7 +176,7 @@ This issue was resolved in:
 
 ## Notes, warnings, and callouts
 
-Writers can use the [GFM Alerts syntax](https://github.blog/changelog/2023-12-14-new-markdown-extension-alerts-provide-distinctive-styling-for-significant-content/) to call special attention to content. There are three types of alerts: notes, warnings, and callouts.
+Writers can use the [GFM alerts syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts) to call special attention to content. There are three types of alerts: notes, warnings, and callouts.
 
 > [!NOTE]
 > MDN Web Docs supported alerts with its own syntax prior to support for GFM alerts, and referred to them as "noteblocks".
@@ -195,7 +195,7 @@ Notes and warnings will add a localized **Note:** or **Warning:** to the beginni
 > The older syntax is still supported for migration purposes. Avoid using it in new documentation.
 
 > [!WARNING]
-> Currently, due to a [Prettier bug](https://github.com/prettier/prettier/issues/15479), GFM Alerts syntax cannot be used if the first character of a note or warning is a formatting symbol, such as a backquote, asterisk, square bracket or curly bracket. In this case, use the old syntax `> **Note:**` instead. Writers are not required to rephrase the content to work around the formatter.
+> Currently, due to a [Prettier bug](https://github.com/prettier/prettier/issues/15479), the GFM alert syntax cannot be used if the first character of a note or warning is a formatting symbol, such as a backquote, asterisk, square bracket or curly bracket. In this case, use the old syntax `> **Note:**` instead. Writers are not required to rephrase the content to work around the formatter.
 
 Multiple lines are produced by an empty block quote line in the same way as normal paragraphs. Further, multiple lines without a space are also treated like normal Markdown lines, and concatenated.
 
