@@ -53,8 +53,6 @@ The Reporting API spec also defines a Generate Test Report [WebDriver](/en-US/do
 
 ## Interfaces
 
-- {{domxref("CSPViolationReportBody")}}
-  - : Contains details of a [Content Security Policy](/en-US/docs/Web/HTTP/CSP) violation.
 - {{domxref("DeprecationReportBody")}}
   - : Contains details of deprecated web platform features that a website is using.
 - {{domxref("InterventionReportBody")}}
@@ -63,6 +61,15 @@ The Reporting API spec also defines a Generate Test Report [WebDriver](/en-US/do
   - : An object representing a single report.
 - {{domxref("ReportingObserver")}}
   - : An object that can be used to collect and access reports as they are generated.
+
+### Related interfaces
+
+These interfaces are defined as part of the HTTP [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) specifications:
+
+- {{domxref("CSPViolationReportBody")}}
+  - : Contains details of a CSP violation.
+- {{domxref("SecurityPolicyViolationEvent")}}
+  - : Represents the event object of a `securitypolicyviolation` event fired on an element, document, or worker when its CSP is violated.
 
 ## Examples
 

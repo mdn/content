@@ -1303,7 +1303,8 @@
         "Report",
         "ReportBody",
         "ReportError",
-        "ReportingObserver"
+        "ReportingObserver",
+        "SecurityPolicyViolationEvent"
       ],
       "methods": [],
       "properties": [],
