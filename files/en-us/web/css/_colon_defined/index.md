@@ -33,7 +33,7 @@ simple-custom:defined {
 
 ### Hiding elements until they are defined
 
-In this demo, we define a basic custom element named `<custom-element>` and we use `:not(:defined)` and `:defined` selectors to style the element before and after it is defined. This is useful if you have a complex custom element that takes a while to load into the page — you might want to hide instances of the element until the definition is complete so that you don't end up with flashes of ugly unstyled elements on the page.
+In this demo, we define a basic custom element named `<custom-element>` and use the `:not(:defined)` and `:defined` selectors to style the element before and after it is defined. This is useful if you have a complex custom element that takes a while to load into the page — you might want to hide instances of the element until the definition is complete so that you don't end up with flashes of ugly unstyled elements on the page.
 
 ```html
 <custom-element>
@@ -70,7 +70,7 @@ code {
 }
 ```
 
-In the following code, we use `custom-element:not(:defined)` selector to select the element while it is not defined and use `custom-element:defined` selector to select the element after is defined. In the following CSS, we switch from grey to black color after the custom element is defined.
+In the following CSS, we use the `custom-element:not(:defined)` selector to select the element and color it grey while it is not defined and the `custom-element:defined` selector to select the element and color it black after it is defined.
 
 ```css
 custom-element:not(:defined) {
@@ -102,9 +102,9 @@ custom-element:defined::before {
 }
 ```
 
-We have also used the [`::before`](/en-US/docs/Web/CSS/::before) pseudo-element to show the overlay loading message till the element is defined.
+We have also used the [`::before`](/en-US/docs/Web/CSS/::before) pseudo-element to show a "Loading..." overlay message until the element is defined. After definition, it is removed by setting the [`content`](/en-US/docs/Web/CSS/content) to an empty string.
 
-The following JavaScript has been used to define the custom element. In such a small demo the script executes instantly and it is not possible to see before definition styling. So instead of defining the custom element in a normal flow, we define the custom element with a click of the button.
+The following JavaScript has been used to define the custom element. As mentioned earlier, to allow you to see the state of the custom element before and after definition we run the {{domxref("CustomElementRegistry.define", "define()")}} method when the button is clicked.
 
 ```js
 const btn = document.querySelector("#btn");
