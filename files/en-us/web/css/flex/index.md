@@ -22,24 +22,24 @@ This property is a shorthand for the following CSS properties:
 ## Syntax
 
 ```css
-/* Keyword values */
-flex: auto; /* 1 1 auto */
+/* Keyword value */
 flex: none; /* 0 0 auto */
 
 /* One value, unitless number: flex-grow
 flex-basis is then equal to 0. */
-flex: 2;
+flex: 2; /* 2 1 0 */
 
 /* One value, width/height: flex-basis */
-flex: 10em;
+flex: auto; /* 1 1 auto */
+flex: 10em; /* 1 1 10em */
 flex: 30%;
 flex: min-content;
 
 /* Two values: flex-grow | flex-basis */
-flex: 1 30px;
+flex: 1 30px; /* 1 1 30px */
 
 /* Two values: flex-grow | flex-shrink */
-flex: 2 2;
+flex: 2 2; /* 2 2 0 */
 
 /* Three values: flex-grow | flex-shrink | flex-basis */
 flex: 2 2 10%;
@@ -86,12 +86,12 @@ The `flex` property may be specified using one, two, or three values.
 - `none`
   - : The item is sized according to its `width` and `height` properties. It is fully inflexible: it neither shrinks nor grows in relation to the flex container. This is equivalent to setting `flex: 0 0 auto`.
 
-Commonly desired flex effects can be achieved using the following flex values:
+Commonly desired flexbox effects can be achieved using the following `flex` values:
 
-- `initial`: Don't grow but shrink. It is the default value and expands to `flex: 0 1 auto`. The item is sized according to its `width` and `height` properties. It shrinks to its minimum size to fit the container but does not grow to absorb any extra free space in the flex container.
-- `auto`: Grow as well as shrink. Expands to `flex: 1 1 auto`. The item is sized according to its `width` and `height` properties but grows to absorb any extra free space in the flex container and shrinks to its minimum size to fit the container. The flex item becomes fully flexible.
-- `none`: Don't grow and don't shrink. Expands to `flex: 0 0 auto`. The item is sized according to its `width` and `height` properties but doesn't grow or shrink. The flex item becomes fully inflexible.
-- `flex: <number [1,∞]>`: Grow in equal proportion. Expands to `fles: <number [1,∞]> 1 0`. It makes the flex item flexible and sets `flex-basis` to zero. If all the flex items use this pattern, then all the items will be sized in proportion.
+- `initial`: Flex item doesn't grow but can shrink. This default value expands to `flex: 0 1 auto`. The item is sized according to its `width` or `height` properties, depending on the `flex-direction`. If there is negative available space, the item will shrink to its minimum size to fit within the container but will not grow to absorb any positive space available in the flex container.
+- `auto`: Flex item can grow and shrink. This value expands to `flex: 1 1 auto`. The item is sized according to its `width` or `height` properties, depending on the `flex-direction`, but grows to absorb available positive space in the flex container or shrink down to its minimum size to fit the container in the case of negative space. The flex item is fully flexible.
+- `none`: The flex item neither grows nor shrinks. This value expands to `flex: 0 0 auto`. The item is sized according to its `width` or `height` properties, depending on the direction of the flex container. The flex item is fully inflexible.
+- `flex: <number [1,∞]>`: The flex item's main size will be proportional to the number set. This value expands to `flex: <number> 1 0`. This sets the `flex-basis` to zero and makes the flex item flexible. The item will be at least as wide or tall as its minimum size, with the container's positive available space being proportionally distributed based on the growth factors of this item and its sibling flex items. If all the flex items use this pattern, all will be sized in proportion to their numeric values.
 
 ## Description
 
@@ -209,14 +209,16 @@ This example shows how a flex item with `flex: auto` grows to absorb any free sp
 
 #### CSS
 
-```css
+```css hidden
 body * {
   padding: 1rem;
   text-select: none;
   box-sizing: border-box;
   font-family: Consolas, Arial, sans-serif;
 }
+```
 
+```css
 #flex-container {
   border: 2px dashed gray;
   display: flex;
@@ -254,7 +256,7 @@ The flex container contains two flex items:
 
 The `#default` item takes up as much space as its width requires, but does not expand to take up any more space. All the remaining space is taken up by the `#flex-auto` item.
 
-When you click the `#flex-auto` item, we set the `#default` items' {{cssxref("display")}} property to `none`, removing it from the layout. The `#flex-auto` item then expands to occupy all the available space in the container. Clicking the `#flex-auto` item again adds the `#default` item back to the container.
+When you click the `#flex-auto` item, we set the `#default` item's {{cssxref("display")}} property to `none`, removing it from the layout. The `#flex-auto` item then expands to occupy all the available space in the container. Clicking the `#flex-auto` item again adds the `#default` item back to the container.
 
 {{EmbedLiveSample('Setting_flex_auto','100%','150')}}
 
