@@ -29,6 +29,7 @@ min-width: max-content;
 min-width: min-content;
 min-width: fit-content;
 min-width: fit-content(20em);
+min-width: stretch;
 
 /* Global values */
 min-width: inherit;
@@ -58,6 +59,8 @@ min-width: unset;
   - : Use the available space, but not more than [`max-content`](/en-US/docs/Web/CSS/max-content), i.e. `min(max-content, max(min-content, stretch))`.
 - `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
   - : Uses the `fit-content` formula with the available space replaced by the specified argument, i.e. `min(max-content, max(min-content, argument))`.
+- `stretch` {{Experimental_Inline}}
+  - : Limits minimum width of the [margin box](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#parts_of_a_box) to the size of the element's [containing block](/en-US/docs/Web/CSS/Containing_block#identifying_the_containing_block). The `stretch` behaves as `100%` but it applies the resulting size to its margin box instead of the box indicated by [box-sizing](/en-US/docs/Web/CSS/box-sizing).
 
 ## Formal definition
 

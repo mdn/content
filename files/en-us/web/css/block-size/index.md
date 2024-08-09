@@ -31,6 +31,7 @@ block-size: min-content;
 block-size: fit-content;
 block-size: fit-content(20em);
 block-size: auto;
+block-size: stretch;
 
 /* Global values */
 block-size: inherit;
