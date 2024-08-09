@@ -76,7 +76,7 @@ Content-Length: 100
 
 A successful response is indicated by any [2xx](https://httpwg.org/specs/rfc9110.html#status.2xx) status code.
 
-In the example below a {{HTTPStatus("204")}} response code is used, because the response does not carry a payload body. A {{HTTPStatus("200")}} response could have contained a payload body.
+In the example below a {{HTTPStatus("204")}} response code is used, because the response does not contain a body (alternatively, a {{HTTPStatus("200")}} response that contains a body with information about the action could be used instead).
 
 ```http
 HTTP/1.1 204 No Content

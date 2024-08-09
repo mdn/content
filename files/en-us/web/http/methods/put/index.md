@@ -7,7 +7,7 @@ browser-compat: http.methods.PUT
 
 {{HTTPSidebar}}
 
-The **HTTP `PUT` request method** creates a new resource or replaces a representation of the target resource with the request payload.
+The **HTTP `PUT` request method** creates a new resource or replaces a representation of the target resource with the request {{Glossary("HTTP Content", "content")}}.
 
 The difference between `PUT` and {{HTTPMethod("POST")}} is that `PUT` is idempotent: calling it once or several times successively has the same effect (that is no _side_ effect), whereas successive identical {{HTTPMethod("POST")}} requests may have additional effects, akin to placing an order several times.
 

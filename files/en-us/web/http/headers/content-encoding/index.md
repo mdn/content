@@ -7,13 +7,16 @@ browser-compat: http.headers.Content-Encoding
 
 {{HTTPSidebar}}
 
-The **`Content-Encoding`** {{Glossary("representation header")}} lists any encodings that have been applied to the representation (message payload), and in what order.
-This lets the recipient know how to decode the representation in order to obtain the original payload format.
-Content encoding is mainly used to compress the message data without losing information about the origin media type.
+The **`Content-Encoding`** {{Glossary("representation header")}} lists any encodings that have been applied to a resource, and in what order.
+This lets the recipient know how to decode the data in order to obtain the original content format described in the {{HTTPHeader("Content-Type")}} header.
+Content encoding is mainly used to compress content without losing information about the original media type.
 
-Note that the original media/content type is specified in the {{HTTPHeader("Content-Type")}} header, and that the `Content-Encoding` applies to the representation, or "coded form", of the data. If the original media is encoded in some way (e.g. a zip file) then this information would not be included in the `Content-Encoding` header.
+Servers are encouraged to compress data as much as possible, and should use content encoding where appropriate.
+Compressing a compressed media type such as a .zip or .jpeg may not be appropriate, as this can make the content larger.
+If the original media is already encoded in some way (e.g., a .zip file) then this information would not be included in the `Content-Encoding` header.
 
-Servers are encouraged to compress data as much as possible, and should use content encoding where appropriate. Compressing a compressed media type such as a zip or jpeg may not be appropriate, as this can make the payload larger.
+When there's a `Content-Encoding` header, other metadata (e.g., {{HTTPHeader("Content-Length")}}) refer to the encoded form of the data, and not the original resource unless explicitly stated.
+Content encoding differs to {{HTTPHeader("Transfer-Encoding")}} in that `Transfer-Encoding` handles how HTTP messages themselves are delivered across the network on a [hop-by-hop basis](/en-US/docs/Web/HTTP/Headers#hop-by-hop_headers).
 
 <table class="properties">
   <tbody>

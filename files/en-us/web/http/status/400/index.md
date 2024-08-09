@@ -37,7 +37,7 @@ Content-Length: 38
 }
 ```
 
-If the payload is sent in a valid format, we would expect a {{HTTPStatus("201")}} Created response or another success message, but instead the server responds with a `400` and the response body includes a `message` field with some context so the client can retry the action with a properly-formed request:
+If the {{Glossary("HTTP Content", "content")}} is in a valid format, we would expect a {{HTTPStatus("201", "201 Created")}} response or another success message, but instead the server responds with a `400` and the response body includes a `message` field with some context so the client can retry the action with a properly-formed request:
 
 ```http
 HTTP/1.1 400 Bad Request
