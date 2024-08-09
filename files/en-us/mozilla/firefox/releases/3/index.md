@@ -16,7 +16,7 @@ If you're a developer trying to get a handle on all the new features in Firefox 
   - : Provides information about changes you may need to make to your website or web application to take advantage of new features in Firefox 3.
 - [Online and offline events](/en-US/docs/Web/API/Navigator/onLine)
   - : Firefox 3 supports WHATWG online and offline events, which let applications and extensions detect whether or not there's an active Internet connection, as well as to detect when the connection goes up and down.
-- [Web-based protocol handlers](/en-US/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers)
+- [Web-based protocol handlers](/en-US/docs/Web/API/Navigator/registerProtocolHandler)
   - : You can now register web applications as protocol handlers using the `navigator.registerProtocolHandler()` method.
 - [Drawing text using a canvas](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text)
   - : You can now draw text in a canvas using a non-standardized API supported by Firefox 3.

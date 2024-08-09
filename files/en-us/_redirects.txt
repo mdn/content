@@ -7369,7 +7369,7 @@
 /en-US/docs/Vuletube-vue-typescript-threejs-nui-voice-opencvjs	/en-US/docs/Games/
 /en-US/docs/WOFF	/en-US/docs/Web/CSS/CSS_fonts/WOFF
 /en-US/docs/We/API/RotationRate	/en-US/docs/Web/API/DeviceMotionEvent/rotationRate
-/en-US/docs/Web-based_protocol_handlers	/en-US/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
+/en-US/docs/Web-based_protocol_handlers	/en-US/docs/Web/API/Navigator/registerProtocolHandler
 /en-US/docs/Web-related_technologies	/en-US/docs/Related
 /en-US/docs/Web/API/AbortController/FetchController	/en-US/docs/Web/API/AbortController/AbortController
 /en-US/docs/Web/API/AbortSignal/abort	/en-US/docs/Web/API/AbortSignal/abort_static
@@ -9100,6 +9100,7 @@
 /en-US/docs/Web/API/Navigator/mediaDevices/enumerateDevices	/en-US/docs/Web/API/MediaDevices/enumerateDevices
 /en-US/docs/Web/API/Navigator/mediaDevices/getUserMedia	/en-US/docs/Web/API/MediaDevices/getUserMedia
 /en-US/docs/Web/API/Navigator/mozIsLocallyAvailable	/en-US/docs/Web/API/Navigator
+/en-US/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers	/en-US/docs/Web/API/Navigator/registerProtocolHandler
 /en-US/docs/Web/API/NavigatorConcurrentHardware	/en-US/docs/Web/API/Navigator
 /en-US/docs/Web/API/NavigatorConcurrentHardware/hardwareConcurrency	/en-US/docs/Web/API/Navigator/hardwareConcurrency
 /en-US/docs/Web/API/NavigatorGeolocation	/en-US/docs/Web/API/Geolocation
