@@ -250,13 +250,6 @@
       "properties": ["Navigator.credentials"],
       "events": []
     },
-    "Content Security Policy": {
-      "overview": [],
-      "interfaces": ["SecurityPolicyViolationEvent"],
-      "methods": [],
-      "properties": [],
-      "events": []
-    },
     "CSS Counter Styles": {
       "overview": ["CSS Counter Styles"],
       "interfaces": ["CSSCounterStyleRule"],
