@@ -235,21 +235,21 @@ body {
 
 We set some distinct property values on the positioned elements:
 
-- The positioned elements are tethered to the anchor with different {{cssxref("inset-area")}} values that position the elements in different places around the anchor element.
+- The positioned elements are tethered to the anchor with different {{cssxref("position-area")}} values that position the elements in different places around the anchor element.
 - The {{cssxref("height")}} of the first infobox is set to the same height as the anchor element: `anchor-size(height)` returns the anchor element's height. The element's {{cssxref("width")}} is set to double the anchor element's width using the `anchor-size()` function within a {{cssxref("calc()")}} function: `anchor-size(width)` retrieves the anchor element's width, which is then multiplied by two.
 - The {{cssxref("height")}} of the second infobox is set to two-thirds of the anchor element's height, using a similar technique.
 - Margin values are included to provide some separation from the anchor element.
 
 ```css
 #infobox1 {
-  inset-area: right;
+  position-area: right;
   height: anchor-size(height);
   width: calc(anchor-size(width) * 2);
   margin-left: 5px;
 }
 
 #infobox2 {
-  inset-area: top span-right;
+  position-area: top span-right;
   height: calc(anchor-size(height) / 1.5);
   margin-bottom: 5px;
 }
