@@ -30,6 +30,6 @@ document.addEventListener("securitypolicyviolation", (e) => {
 
 {{Compat}}
 
-## See Also
+## See also
 
 - [`CSPViolationReportBody.blockedURL`](/en-US/docs/Web/API/CSPViolationReportBody#cspviolationreportbody.blockedurl)
