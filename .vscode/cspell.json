@@ -40,7 +40,7 @@
     "\\]\\(\\S*\\)",
     "\\*\\*\\w\\*\\*\\w*",
     "\\*\\w\\*\\w*",
-    "#[\\w-]*",
+    "#[À-ž\\w-]*",
     "aria-activedescendant=\"(?:[^\\\"]+|\\.)*\"",
     "aria-controls=\"(?:[^\\\"]+|\\.)*\"",
     "aria-describedby=\"(?:[^\\\"]+|\\.)*\"",
@@ -55,11 +55,13 @@
     "for=\"(?:[^\\\"]+|\\.)*\"",
     "HexValues",
     "href=\"(?:[^\\\"]+|\\.)*\"",
-    "id=\"(?:[^\\\"]+|\\.)*\"",
+    "(?<=id)=\"(?:[^\\\"]+|\\.)*\"",
     "lang=\".*\">.*</",
     "src=\"(?:[^\\\"]+|\\.)*\"",
     "url\\(\"data\\:image/svg\\+xml.*\"\\)[,;]",
-    "Urls"
+    "Urls",
+    "favourite-colour",
+    "ucaf:.*\""
   ],
   "allowCompoundWords": true,
   "dictionaryDefinitions": [
