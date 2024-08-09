@@ -51,7 +51,7 @@ let updating = browser.tabs.update(
     - `muted` {{optional_inline}}
       - : `boolean`. Whether the tab should be muted.
     - `openerTabId` {{optional_inline}}
-      - : `integer`. The ID of the tab that opened this tab. If specified, the opener tab must be in the same window as this tab.
+      - : `integer`. The ID of the tab that opened this tab. If specified, the opener tab must be in the same window as this tab. Set to `-1` to clear the set `openerTabId`.
     - `pinned` {{optional_inline}}
       - : `boolean`. Whether the tab should be pinned.
     - `selected` {{deprecated_inline}} {{optional_inline}}
