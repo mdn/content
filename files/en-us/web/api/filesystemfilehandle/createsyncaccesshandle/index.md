@@ -196,10 +196,10 @@ onmessage = function (e) {
     const dataView = new DataView(new ArrayBuffer(size));
 
     // Read the entire file into the data view
-    accessHandle.read(dataView);
+    accessHandle.read(dataView, { at: 0 });
 
     // Log the current file contents to the console
-    console.log("File contents:" + textDecoder.decode(dataView));
+    console.log("File contents: " + textDecoder.decode(dataView));
 
     // Flush the changes
     accessHandle.flush();
