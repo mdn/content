@@ -179,9 +179,9 @@ This issue was resolved in:
 Writers can use the [GFM Alerts syntax](https://github.blog/changelog/2023-12-14-new-markdown-extension-alerts-provide-distinctive-styling-for-significant-content/) to call special attention to content. There are three types of alerts: notes, warnings, and callouts.
 
 > [!NOTE]
-> MDN Web Docs supported Alerts with its own syntax before the GFM proposal was formed. As such, MDN supports only two of the five alert types GFM supports, and it supports an additional type that GFM does not.
->
-> Before the syntax had an official name, MDN referred to Alerts as "noteblocks".
+> MDN Web Docs supported alerts with its own syntax prior to support for GFM alerts, and referred to them as "noteblocks".
+> MDN does not support the following GFM alerts: `[!TIP]`, `[!CAUTION]`, `[!IMPORTANT]`.
+> GFM does not support `[!CALLOUT]`.
 
 - To add a note, create a blockquote whose first line is `[!NOTE]`.
 - To add a warning, create a blockquote whose first line is `[!WARNING]`.
