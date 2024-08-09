@@ -72,7 +72,7 @@ For {{SVGElement('ellipse')}}, `rx` defines the x-radius of the shape. With a va
   </tbody>
 </table>
 
-> [!Note]
+> [!NOTE]
 > The x-radius of the `<ellipse>` can also be defined with the {{cssxref("rx")}} _geometry property_. If set in CSS, the `rx` property value overrides the `rx` attribute value.
 
 ## rect
@@ -115,7 +115,7 @@ The way the value of the `rx` attribute is interpreted depend on both the {{SVGA
   </tbody>
 </table>
 
-> [!Note]
+> [!NOTE]
 > The horizontal curve of the corners of the `<rect>` can also be defined with the {{cssxref("rx")}} _geometry property_. If set in CSS, the `rx` property value overrides the `rx` attribute value.
 
 ## Specifications

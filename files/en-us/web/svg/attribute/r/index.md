@@ -88,7 +88,7 @@ For {{SVGElement('circle')}}, `r` defines the radius of the circle and therefor 
   </tbody>
 </table>
 
-> [!Note]
+> [!NOTE]
 > The radius size of a `<circle>` can also be defined with the {{cssxref("r")}} _geometry property_.
 
 ## radialGradient
