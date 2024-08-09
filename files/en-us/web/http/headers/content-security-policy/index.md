@@ -153,7 +153,7 @@ Reporting directives control the reporting process of CSP violations. See also t
     > the **`report-uri`** directive will be ignored.
 
 - {{CSP("report-to")}}
-  - : Fires a `SecurityPolicyViolationEvent`.
+  - : Fires a {{domxref("SecurityPolicyViolationEvent")}}.
 
 ### Other directives
 
