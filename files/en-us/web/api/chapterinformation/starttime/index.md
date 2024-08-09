@@ -3,10 +3,12 @@ title: "ChapterInformation: startTime property"
 short-title: startTime
 slug: Web/API/ChapterInformation/startTime
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.ChapterInformation.startTime
 ---
 
-{{APIRef("Media Session API")}}
+{{APIRef("Media Session API")}}{{SeeCompatTable}}
 
 The **`startTime`** read-only property of the
 {{domxref("ChapterInformation")}} interface returns a number representing the start time of the chapter in seconds.

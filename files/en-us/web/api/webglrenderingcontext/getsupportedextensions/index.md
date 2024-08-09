@@ -54,4 +54,4 @@ Extensions for the WebGL API are registered in the [WebGL Extension Registry](ht
 ## See also
 
 - {{domxref("WebGLRenderingContext.getExtension()")}}
-- [webglreport.com](https://webglreport.com)
+- [webglreport.com](https://webglreport.com/)

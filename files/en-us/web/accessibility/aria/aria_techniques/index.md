@@ -163,4 +163,4 @@ The techniques below describe each composite role as well as their required and 
 
 ### MicrosoftEdge-specific properties
 
-- [`x-ms-aria-flowfrom`](/en-US/docs/Web/Accessibility/ARIA) {{Non-standard_Inline}}
+- `x-ms-aria-flowfrom` {{Non-standard_Inline}}

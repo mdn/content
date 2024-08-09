@@ -285,7 +285,7 @@ And that's it for this tutorial! Your app should now have fully working links in
 
 Congratulations! You've finished this tutorial!
 
-There is a lot more to be implemented before what we've covered here has parity with the original [TodoMVC app](https://todomvc.com), such as editing, deleting, and persisting todos across page reloads.
+There is a lot more to be implemented before what we've covered here has parity with the original [TodoMVC app](https://todomvc.com/), such as editing, deleting, and persisting todos across page reloads.
 
 To see our finished Ember implementation, checkout the finished app folder in the repository for [the code of this tutorial](https://github.com/NullVoxPopuli/ember-todomvc-tutorial/tree/master/steps/00-finished-todomvc/todomvc) or see the [live deployed version](https://nullvoxpopuli.github.io/ember-todomvc-tutorial/) here. Study the code to learn more about Ember, and also check out the next article, which provides links to more resources and some troubleshooting advice.
 

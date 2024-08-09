@@ -2,10 +2,12 @@
 title: <inset-area>
 slug: Web/CSS/inset-area_value
 page-type: css-type
+status:
+  - experimental
 browser-compat: css.properties.inset-area
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`<inset-area>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) defines the cell or spanned cells of an **inset-area grid**, an 3x3 grid whose center cell is an anchor element.
 
