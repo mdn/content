@@ -2,6 +2,8 @@
 title: inset-area
 slug: Web/CSS/inset-area
 page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.inset-area
 ---
 

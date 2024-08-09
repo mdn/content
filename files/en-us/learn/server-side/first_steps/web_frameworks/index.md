@@ -225,9 +225,9 @@ Popular sites using Django (from Django home page) include: Disqus, Instagram, K
 
 ### Flask (Python)
 
-[Flask](https://flask.palletsprojects.com) is a microframework for Python.
+[Flask](https://flask.palletsprojects.com/) is a microframework for Python.
 
-While minimalist, Flask can create serious websites out of the box. It contains a development server and debugger, and includes support for [Jinja2](https://github.com/pallets/jinja) templating, secure cookies, [unit testing](https://en.wikipedia.org/wiki/Unit_testing), and [RESTful](https://www.restapitutorial.com/lessons/restfulresourcenaming.html) request dispatching. It has good documentation and an active community.
+While minimalist, Flask can create serious websites out of the box. It contains a development server and debugger, and includes support for [Jinja2](https://github.com/pallets/jinja) templating, secure cookies, [unit testing](https://en.wikipedia.org/wiki/Unit_testing), and [RESTful](https://restapitutorial.com/) request dispatching. It has good documentation and an active community.
 
 Flask has become extremely popular, particularly for developers who need to provide web services on small, resource-constrained systems (e.g. running a web server on a [Raspberry Pi](https://www.raspberrypi.org/), [Drone controllers](https://www.techuseful.com/drone-definitions-learning-the-drone-lingo/), etc.)
 
@@ -241,7 +241,7 @@ Because Express is a minimalist web framework it does not incorporate every comp
 
 Many popular server-side and full stack frameworks (comprising both server and client-side frameworks) are based on Express, including [Feathers](https://feathersjs.com/), [ItemsAPI](https://itemsapi.com/), [KeystoneJS](https://keystonejs.com/), [Kraken](https://krakenjs.com/), [LoopBack](https://loopback.io/), [MEAN](https://github.com/linnovate/mean), and [Sails](https://sailsjs.com/).
 
-A lot of high profile companies use Express, including: Uber, Accenture, IBM, etc. (a list is provided [here](https://expressjs.com/en/resources/companies-using-express.html)).
+A lot of high profile companies use Express, including: Uber, Accenture, IBM, etc.
 
 ### Deno (JavaScript)
 
@@ -251,7 +251,7 @@ Deno is powered by [Tokio](https://tokio.rs/) — a Rust-based asynchronous runt
 
 Deno's features include:
 
-- Security by default. [Deno modules restrict permissions](https://lyty.dev/deno/deno-permission.html) to **file**, **network**, or **environment** access unless explicitly allowed.
+- Security by default. [Deno modules restrict permissions](https://docs.deno.com/runtime/manual/getting_started/first_steps/#runtime-security) to **file**, **network**, or **environment** access unless explicitly allowed.
 - TypeScript support **out-of-the-box**.
 - First-class await mechanism.
 - Built-in testing facility and code formatter (`deno fmt`)
@@ -301,7 +301,7 @@ Back in the early days of the web, many people learned Perl because of a wonderf
 Some of the features provided by Mojolicious are:
 
 - A real-time web framework, to easily grow single-file prototypes into well-structured MVC web applications.
-- RESTful routes, plugins, commands, Perl-ish templates, content negotiation, session management, form validation, testing framework, static file server, CGI/[PSGI](https://plackperl.org) detection, and first-class Unicode support.
+- RESTful routes, plugins, commands, Perl-ish templates, content negotiation, session management, form validation, testing framework, static file server, CGI/[PSGI](https://plackperl.org/) detection, and first-class Unicode support.
 - A full-stack HTTP and WebSocket client/server implementation with IPv6, TLS, SNI, IDNA, HTTP/SOCKS5 proxy, UNIX domain socket, Comet (long polling), keep-alive, connection pooling, timeout, cookie, multipart, and gzip compression support.
 - JSON and HTML/XML parsers and generators with CSS selector support.
 - Very clean, portable and object-oriented pure-Perl API with no hidden magic.
@@ -309,9 +309,9 @@ Some of the features provided by Mojolicious are:
 
 ### Spring Boot (Java)
 
-[Spring Boot](https://spring.io/projects/spring-boot/) is one of a number of projects provided by [Spring](https://spring.io/). It is a good starting point for doing server-side web development using [Java](https://www.java.com).
+[Spring Boot](https://spring.io/projects/spring-boot/) is one of a number of projects provided by [Spring](https://spring.io/). It is a good starting point for doing server-side web development using [Java](https://www.java.com/).
 
-Although definitely not the only framework based on [Java](https://www.java.com) it is easy to use to create stand-alone, production-grade Spring-based Applications that you can "just run". It is an opinionated view of the Spring platform and third-party libraries but allows to start with minimum fuss and configuration.
+Although definitely not the only framework based on [Java](https://www.java.com/) it is easy to use to create stand-alone, production-grade Spring-based Applications that you can "just run". It is an opinionated view of the Spring platform and third-party libraries but allows to start with minimum fuss and configuration.
 
 It can be used for small problems but its strength is building larger scale applications that use a cloud approach. Usually multiple applications run in parallel talking to each other, with some providing user interaction and others doing back end work (e.g. accessing databases or other services). Load balancers help to ensure redundancy and reliability or allow geolocated handling of user requests to ensure responsiveness.
 

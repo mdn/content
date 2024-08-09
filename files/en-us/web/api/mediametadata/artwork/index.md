@@ -9,7 +9,7 @@ browser-compat: api.MediaMetadata.artwork
 {{APIRef("Media Session API")}}
 
 The **`artwork`** property of the
-{{domxref("MediaMetaData")}} interface returns or sets an array of
+{{domxref("MediaMetadata")}} interface returns or sets an array of
 objects representing images associated with playing
 media.
 

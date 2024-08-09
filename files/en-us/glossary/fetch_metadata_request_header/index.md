@@ -22,7 +22,7 @@ The fetch metadata request headers are:
 The following request headers are not _strictly_ "fetch metadata request headers", as they are not in the same specification, but similarly provide information about the context of how a resource will be used.
 A server might use them to modify its caching behavior, or the information that is returned:
 
-- {{HTTPHeader("Sec-Purpose")}} {{Experimental_Inline}}
+- {{HTTPHeader("Sec-Purpose")}}
 - {{HTTPHeader("Service-Worker-Navigation-Preload")}}
 
 ## See also

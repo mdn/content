@@ -92,11 +92,11 @@ T
 
 V
 
-- {{cssxref("::view-transition")}} {{Experimental_Inline}}
-- {{cssxref("::view-transition-image-pair()")}} {{Experimental_Inline}}
-- {{cssxref("::view-transition-group()")}} {{Experimental_Inline}}
-- {{cssxref("::view-transition-new()")}} {{Experimental_Inline}}
-- {{cssxref("::view-transition-old()")}} {{Experimental_Inline}}
+- {{cssxref("::view-transition")}}
+- {{cssxref("::view-transition-image-pair()")}}
+- {{cssxref("::view-transition-group()")}}
+- {{cssxref("::view-transition-new()")}}
+- {{cssxref("::view-transition-old()")}}
 
 > [!NOTE]
 > Browsers support the single colon syntax only for the original four pseudo-elements: `::before`, `::after`, `::first-line`, and `::first-letter`.
