@@ -14,6 +14,11 @@ The `devtools.inspectedWindow` API lets a devtools extension interact with the w
 
 Like all the `devtools` APIs, this API is only available to code running in the document defined in the [devtools_page](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page) manifest.json key, or in other devtools documents created by the extension (such as the document hosted by a panel the extension created). See [Extending the developer tools](/en-US/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools) for more.
 
+## Types
+
+- [`devtools.inspectedWindow.Resource`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/Resource)
+  - : A resource within an inspected page, such as a document, script, or image.
+
 ## Properties
 
 - [`devtools.inspectedWindow.tabId`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/tabId)
@@ -23,8 +28,17 @@ Like all the `devtools` APIs, this API is only available to code running in the 
 
 - [`devtools.inspectedWindow.eval()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval)
   - : Evaluate some JavaScript in the target window.
+- [`devtools.inspectedWindow.getResources()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/getResources)
+  - : Retrieves the list of resources from the inspected page.
 - [`devtools.inspectedWindow.reload()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/reload)
   - : Reload the target window's document.
+
+## Events
+
+- [`devtools.onResourceAdded`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/onResourceAdded)
+  - : Fired when a resource is added to the inspected page.
+- [`devtools.onResourceContentCommitted`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/onResourceContentCommitted)
+  - : Fired when a revision of the resource is committed (e.g. the user saves an edited version of the resource in the Developer Tools).
 
 {{WebExtExamples("h2")}}
 
