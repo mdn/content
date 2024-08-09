@@ -35,6 +35,10 @@ simple-custom:defined {
 
 In this demo, we define a basic custom element named `<custom-element>` and use the `:not(:defined)` and `:defined` selectors to style the element before and after it is defined. This is useful if you have a complex custom element that takes a while to load into the page — you might want to hide instances of the element until the definition is complete so that you don't end up with flashes of ugly unstyled elements on the page.
 
+#### HTML
+
+The following HTML code uses the custom element but the element hasn't been defined yet. We also include a {{htmlelement("button")}} that will define the custom element when clicked, allowing you to see its state before and after definition.
+
 ```html
 <custom-element>
   <p>
@@ -46,7 +50,7 @@ In this demo, we define a basic custom element named `<custom-element>` and use 
 <button id="btn">define the <code>&lt;custom-element&gt;</code></button>
 ```
 
-The above HTML code uses the custom element but the element hasn't been defined yet.
+#### CSS
 
 ```css hidden
 custom-element {
@@ -114,6 +118,8 @@ btn.addEventListener("click", () => {
   btn.remove();
 });
 ```
+
+#### Result
 
 {{EmbedLiveSample("Hiding elements until they are defined", "100%", "230")}}
 
