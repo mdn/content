@@ -55,7 +55,7 @@ _No changes._
 
 - The {{JSxRef("Symbol.prototype.description")}} property has been implemented ([Firefox bug 1472170](https://bugzil.la/1472170)).
 - The {{JSxRef("Object.fromEntries()")}} method has been added ([Firefox bug 1469019](https://bugzil.la/1469019)).
-- When you try to access a property of an undefined object, the error message is now much improved. Considering the case where `x` is undefined and you try to access `x.y`, instead of `TypeError: x is undefined` the console now returns the more descriptive [`x is undefined; can't access its "y" property`](/en-US/docs/Web/JavaScript/Reference/Errors/Unexpected_type) ([Firefox bug 1259822](https://bugzil.la/1259822)).
+- When you try to access a property of an undefined object, the error message is now much improved. Considering the case where `x` is undefined and you try to access `x.y`, instead of "TypeError: x is undefined" the console now returns the more descriptive [x is undefined; can't access its "y" property](/en-US/docs/Web/JavaScript/Reference/Errors/Unexpected_type) ([Firefox bug 1259822](https://bugzil.la/1259822)).
 
 #### Removals
 

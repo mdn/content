@@ -7,7 +7,7 @@ browser-compat: webextensions.api.bookmarks
 
 {{AddonSidebar}}
 
-The [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions) {{WebExtAPIRef("bookmarks")}} API lets an extension interact with and manipulate the browser's bookmarking system. You can use it to bookmark pages, retrieve existing bookmarks, and edit, remove, and organize bookmarks.
+The [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions) `bookmarks` API lets an extension interact with and manipulate the browser's bookmarking system. You can use it to bookmark pages, retrieve existing bookmarks, and edit, remove, and organize bookmarks.
 
 To use this API, an extension must request the "bookmarks" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) in its [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file.
 

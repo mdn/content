@@ -43,7 +43,7 @@ Events have three functions:
 
 ## Examples
 
-Add a listener to the {{WebExtAPIRef("notifications.onShown")}} event and log its details:
+Add a listener to the `notifications.onShown` event and log its details:
 
 ```js
 function logShown(itemId) {

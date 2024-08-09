@@ -73,7 +73,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 
 #### New features
 
-- Support for the async functions has been added. This adds {{jsxref("Statements/async_function", "async function")}}, {{jsxref("Operators/async_function", "async function expression")}}, and the {{jsxref("Operators/await", "await")}} keyword ([Firefox bug 1185106](https://bugzil.la/1185106)).
+- Support for the async functions has been added. This adds {{jsxref("Statements/async_function", "async function")}} declaration, {{jsxref("Operators/async_function", "async function")}} expression, and the {{jsxref("Operators/await", "await")}} keyword ([Firefox bug 1185106](https://bugzil.la/1185106)).
 - Implemented ES2017 [trailing commas](/en-US/docs/Web/JavaScript/Reference/Trailing_commas) in functions ([Firefox bug 1303788](https://bugzil.la/1303788)).
 - Implemented {{jsxref("Functions/rest_parameters", "rest parameter destructuring", "#Destructuring_rest_parameters", 1)}} ([Firefox bug 1243717](https://bugzil.la/1243717)).
 - The {{jsxref("Operators", "exponentiation operator (**)", "#Exponentiation_(**)", 1)}} is now enabled by default ([Firefox bug 1291212](https://bugzil.la/1291212)).
@@ -132,7 +132,7 @@ Firefox 52 was released on March 7, 2017. This article lists key changes that ar
 ### WebRTC
 
 - When an ICE connection is temporarily disrupted, the {{domxref("RTCPeerConnection.iceConnectionState")}} property now gets set to `"disconnected"`; this indicates a transitory failure that may resolve itself shortly, with the connection returning to the `"connected"` state afterward ([Firefox bug 852665](https://bugzil.la/852665)).
-- The {{domxref("MediaDevices.devicechange_event")}} event and its corresponding handler, which were implemented but disabled by default on Mac only in Firefox 51, have been implemented on Windows and Linux and are now enabled by default on all platforms.
+- The `MediaDevices` {{domxref("MediaDevices.devicechange_event", "devicechange")}} event and its corresponding handler, which were implemented but disabled by default on Mac only in Firefox 51, have been implemented on Windows and Linux and are now enabled by default on all platforms.
 - The {{domxref("MediaStream.active")}} property is now supported. This read-only Boolean property indicates whether or not at least one track on the stream is currently playing.
 - Prior to Firefox 52, the {{domxref("MediaStreamTrack.stop()")}} method could only stop local tracks (that is, tracks obtained through {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}). Now a variety of tracks can be stopped, including those on a {{domxref("MediaStream")}} associated with a [WebRTC](/en-US/docs/Glossary/WebRTC) connection, [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) stream, or {{domxref("CanvasCaptureMediaStreamTrack", "CanvasCaptureMediaStream")}}.
 - Previously, changing a {{domxref("TextTrack")}}'s {{domxref("TextTrack.mode", "mode")}} repeatedly during a single pass through the Firefox event loop would result in multiple {{domxref("HTMLElement/change_event", "change")}} events being delivered to the {{domxref("TextTrackList")}} specified by the parent media element's {{domxref("HTMLMediaElement.textTracks", "textTracks")}} property. Now these changes are consolidated into one event ([Firefox bug 882674](https://bugzil.la/882674)).

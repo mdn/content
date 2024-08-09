@@ -28,7 +28,7 @@ Change it to indicate compatibility with Firefox 3:
 
 Then reinstall your extension.
 
-Note that Firefox 3 does away with the extra ".0" in the version number, so instead of using "3.0.0.\*, you only need to use "3.0.\*".
+Note that Firefox 3 does away with the extra ".0" in the version number, so instead of using `3.0.0.*`, you only need to use `3.0.*`.
 
 There have been (and will continue to be) a number of API changes that will likely break some extensions. We're still working on compiling a complete list of these changes.
 
