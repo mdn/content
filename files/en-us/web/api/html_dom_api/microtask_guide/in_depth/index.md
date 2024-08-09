@@ -4,7 +4,7 @@ slug: Web/API/HTML_DOM_API/Microtask_guide/In_depth
 page-type: guide
 ---
 
-{{APIRef("HTML DOM")}}
+{{DefaultAPISidebar("HTML DOM")}}
 
 When debugging or, possibly, when trying to decide upon the best approach to solving a problem around timing and scheduling of tasks and microtasks, there are things about how the JavaScript runtime operates under the hood that may be useful to understand.
 
