@@ -1,13 +1,13 @@
 ---
-title: URLs
-slug: Web/URL
+title: URIs
+slug: Web/URI
 page-type: guide
 spec-urls: https://httpwg.org/specs/rfc9110.html#uri
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/URL")}}
+{{QuickLinksWithSubpages("/en-US/docs/Web/URI")}}
 
-**URLs** are used to identify "resources" on the web. URLs are commonly used as targets of [HTTP](/en-US/docs/Web/HTTP) requests, in which case the URL represents a location for a physical resource, such as a document, a photo, binary data, etc. URLs can also be used to trigger behaviors other than fetching a resource, including opening the email client, sending text messages, or executing JavaScript, when used in other places such as the [`href`](/en-US/docs/Web/HTML/Element/a#href) of an HTML `<a>` link.
+**URIs** are used to identify "resources" on the web. URIs are commonly used as targets of [HTTP](/en-US/docs/Web/HTTP) requests, in which case the URI represents a location for a physical resource, such as a document, a photo, binary data, etc. URLs can also be used to trigger behaviors other than fetching a resource, including opening the email client, sending text messages, or executing JavaScript, when used in other places such as the [`href`](/en-US/docs/Web/HTML/Element/a#href) of an HTML `<a>` link.
 
 ## URLs and URNs
 
@@ -52,7 +52,7 @@ The two URNs correspond to
 
 | Scheme                           | Description                                                          |
 | -------------------------------- | -------------------------------------------------------------------- |
-| data                             | [Data URLs](/en-US/docs/Web/URL/Data_URLs)                           |
+| data                             | [Data URLs](/en-US/docs/Web/URI/Schemes/data)                        |
 | file                             | Host-specific file names                                             |
 | ftp                              | {{Glossary("FTP","File Transfer Protocol")}}                         |
 | http/https                       | [Hyper text transfer protocol (Secure)](/en-US/docs/Glossary/HTTP)   |
@@ -95,7 +95,7 @@ FTP is still acceptable at the top level (such as typed directly into the browse
 
   - : `#SomewhereInTheDocument` is an anchor to another part of the resource itself. An anchor represents a sort of "bookmark" inside the resource, giving the browser the directions to show the content located at that "bookmarked" spot. On an HTML document, for example, the browser will scroll to the point where the anchor is defined; on a video or audio document, the browser will try to go to the time the anchor represents. It is worth noting that the part after the #, also known as the fragment identifier, is never sent to the server with the request.
 
-    There's a special [text fragment](/en-US/docs/Web/URL/Text_fragments) feature that allows you to link to a specific part of a web page identified by its text content.
+    There's a special [text fragment](/en-US/docs/Web/URI/Fragment/Text_fragments) feature that allows you to link to a specific part of a web page identified by its text content.
 
 ## Examples
 

@@ -126823,7 +126823,7 @@
       "alispivak"
     ]
   },
-  "Web/URL": {
+  "Web/URI": {
     "modified": "2020-11-16T01:23:20.622Z",
     "contributors": [
       "prajaraksh",
@@ -126836,7 +126836,7 @@
       "fscholz"
     ]
   },
-  "Web/URL/Choosing_between_www_and_non-www_URLs": {
+  "Web/URI/Authority/Choosing_between_www_and_non-www_URLs": {
     "modified": "2020-02-15T14:08:06.893Z",
     "contributors": [
       "francoraphael",
@@ -126853,7 +126853,7 @@
       "dbruant"
     ]
   },
-  "Web/URL/Data_URLs": {
+  "Web/URI/Schemes/data": {
     "modified": "2020-11-21T14:56:28.316Z",
     "contributors": [
       "simon04",
@@ -126900,7 +126900,7 @@
       "Waldo"
     ]
   },
-  "Web/URL/Resource_URLs": {
+  "Web/URI/Schemes/resource": {
     "modified": "2019-03-23T22:04:02.489Z",
     "contributors": ["ExE-Boss", "gmierz", "David_B", "chrisdavidmills"]
   },

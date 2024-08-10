@@ -14,7 +14,7 @@ HTTP is an extensible protocol that relies on concepts like resources and Unifor
   - : Describes what HTTP is and its role in web architecture, including its position in the protocol stack.
 - [Evolution of HTTP](/en-US/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP)
   - : HTTP was created in the early 1990s and has been extended several times. This article goes through its history and describes HTTP/0.9, HTTP/1.0, HTTP/1.1, and the modern HTTP/2, as well as novelties introduced over the years.
-- [Data URLs](/en-US/docs/Web/URL/Data_URLs)
+- [Data URLs](/en-US/docs/Web/URI/Schemes/data)
   - : A specific kind of URI that directly embeds the resource it represents. Data URLs are very convenient, but have some caveats.
 - [MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)
   - : Since HTTP/1.0, different types of content can be transmitted. This article explains how this is accomplished using the {{HTTPHeader("Content-Type")}} header and the MIME standard.

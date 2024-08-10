@@ -43,5 +43,5 @@ This functionality is mainly intended for feature detection at present. In the f
 
 ## See also
 
-- [Text fragments](/en-US/docs/Web/URL/Text_fragments)
+- [Text fragments](/en-US/docs/Web/URI/Fragment/Text_fragments)
 - {{cssxref("::target-text")}}
