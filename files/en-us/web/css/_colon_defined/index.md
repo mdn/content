@@ -7,7 +7,7 @@ browser-compat: css.selectors.defined
 
 {{CSSRef}}
 
-The **`:defined`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any element that has been defined. This includes any standard element built in to the browser, and custom elements that have been successfully defined (i.e. with the {{domxref("CustomElementRegistry.define()")}} method).
+The **`:defined`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any element that has been defined. This includes any standard element built into the browser, and custom elements that have been successfully defined (i.e. with the {{domxref("CustomElementRegistry.define()")}} method).
 
 ```css
 /* Selects any defined element */
@@ -38,18 +38,12 @@ The following snippets are taken from our [defined-pseudo-class](https://github.
 In this demo we define a very simple trivial custom element:
 
 ```js
-customElements.define(
-  "simple-custom",
+customElements.define("simple-custom",
   class extends HTMLElement {
     constructor() {
       super();
-
-      let divElem = document.createElement("div");
-      divElem.textContent = this.getAttribute("text");
-
-      let shadowRoot = this.attachShadow({ mode: "open" }).appendChild(divElem);
     }
-  },
+  }
 );
 ```
 
@@ -70,6 +64,7 @@ p {
 }
 
 simple-custom {
+  text-transform: uppercase;
   background: cyan;
 }
 
@@ -86,9 +81,6 @@ simple-custom:not(:defined) {
   display: none;
 }
 
-simple-custom:defined {
-  display: block;
-}
 ```
 
 This is useful if you have a complex custom element that takes a while to load into the page — you might want to hide instances of the element until definition is complete, so that you don't end up with flashes of ugly unstyled elements on the page
