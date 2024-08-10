@@ -64,14 +64,14 @@ p {
   background: yellow;
 }
 
-simple-custom {
-  text-transform: uppercase;
-  background: cyan;
-}
-
 /* Both the custom and the built-in element are given italic text */
 :defined {
   font-style: italic;
+}
+
+simple-custom {
+  text-transform: uppercase;
+  background: cyan;
 }
 ```
 
