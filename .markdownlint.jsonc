@@ -4,8 +4,7 @@
 
 {
   "default": true,
-  // Disabled, as some callouts include headings.
-  "heading-increment": false,
+  "heading-increment": true,
   "ul-style": {
     "style": "dash",
   },
