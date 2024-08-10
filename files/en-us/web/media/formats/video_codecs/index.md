@@ -88,7 +88,7 @@ The following video codecs are those which are most commonly used on the web. Fo
       </td>
     </tr>
     <tr>
-      <th scope="row"><a href="#theora">Theora</a></th>
+      <th scope="row"><a href="#theora">Theora</a> {{deprecated_inline}}</th>
       <td>Theora</td>
       <td><a href="/en-US/docs/Web/Media/Formats/Containers#ogg">Ogg</a></td>
     </tr>
@@ -640,11 +640,11 @@ AVC is highly flexible, with a number of profiles with varying capabilities; for
 
 AVC also has special features such as support for multiple views of the same scene (Multiview Video Coding), which allows, among other things, the production of stereoscopic video.
 
-AVC is a proprietary format, however, and numerous patents are owned by multiple parties regarding its technologies. Commercial use of AVC media requires a license, though the MPEG LA patent pool does not require license fees for streaming internet video in AVC format as long as the video is free for end users.
+AVC is a proprietary format, however, and numerous patents are owned by multiple parties regarding its technologies. Commercial use of AVC media requires a license, though the Via LA patent pool does not require license fees for streaming internet video in AVC format as long as the video is free for end users.
 
 Non-web browser implementations of WebRTC (any implementation which doesn't include the JavaScript APIs) are _required_ to support AVC as a codec in WebRTC calls. While web browsers are not required to do so, some do.
 
-In HTML content for web browsers, AVC is broadly compatible and many platforms support hardware encoding and decoding of AVC media. However, be aware of its [licensing requirements](https://www.mpegla.com/programs/avc-h-264/) before choosing to use AVC in your project!
+In HTML content for web browsers, AVC is broadly compatible and many platforms support hardware encoding and decoding of AVC media. However, be aware of its [licensing requirements](https://www.via-la.com/licensing-2/avc-h-264/) before choosing to use AVC in your project!
 
 <table class="standard-table">
   <tbody>
@@ -776,8 +776,8 @@ In HTML content for web browsers, AVC is broadly compatible and many platforms s
       <th scope="row">Specification</th>
       <td>
         <a
-          href="https://mpeg.chiariglione.org/standards/mpeg-4/advanced-video-coding"
-          >https://mpeg.chiariglione.org/standards/mpeg-4/advanced-video-coding</a
+          href="https://mpeg.chiariglione.org/standards/mpeg-4/advanced-video-coding.html"
+          >https://mpeg.chiariglione.org/standards/mpeg-4/advanced-video-coding.html</a
         ><br /><a href="https://www.itu.int/rec/T-REC-H.264"
           >https://www.itu.int/rec/T-REC-H.264</a
         >
@@ -787,7 +787,7 @@ In HTML content for web browsers, AVC is broadly compatible and many platforms s
       <th scope="row">Licensing</th>
       <td>
         Proprietary with numerous patents. Commercial use
-        <a href="https://www.mpegla.com/programs/avc-h-264/"
+        <a href="https://www.via-la.com/licensing-2/avc-h-264/"
           >requires a license</a
         >. Note that multiple patent pools may apply.
       </td>
@@ -924,7 +924,7 @@ For example, each coding tree unit (CTU)—similar to the macroblock used in pre
 
 An interesting feature of HEVC is that the main profile supports only 8-bit per component color with 4:2:0 chroma subsampling. Also interesting is that 4:4:4 video is handled specially. Instead of having the luma samples (representing the image's pixels in grayscale) and the Cb and Cr samples (indicating how to alter the grays to create color pixels), the three channels are instead treated as three monochrome images, one for each color, which are then combined during rendering to produce a full-color image.
 
-HEVC is a proprietary format and is covered by a number of patents. Licensing is [managed by MPEG LA](https://www.mpegla.com/programs/hevc/); fees are charged to developers rather than to content producers and distributors. Be sure to review the latest license terms and requirements before making a decision on whether or not to use HEVC in your app or website!
+HEVC is a proprietary format and is covered by a number of patents. Licensing is [managed by Via LA](https://www.via-la.com/licensing-2/hevc-vvc/); fees are charged to developers rather than to content producers and distributors. Be sure to review the latest license terms and requirements before making a decision on whether or not to use HEVC in your app or website!
 
 <table class="standard-table">
   <tbody>
@@ -1047,7 +1047,7 @@ HEVC is a proprietary format and is covered by a number of patents. Licensing is
         </table>
         <p>Chrome support HEVC for devices with hardware support on Windows 8+, Linux and ChromeOS, for all devices on macOS Big Sur 11+ and Android 5.0+.</p>
         <p>Edge (Chromium) supports HEVC for devices with hardware support on Windows 10 1709+ when
-          <a href="https://apps.microsoft.com/store/detail/hevc-video-extension/9NMZLZ57R3T7">HEVC video extensions from the Microsoft Store</a>
+          <a href="https://apps.microsoft.com/detail/9nmzlz57r3t7">HEVC video extensions from the Microsoft Store</a>
           is installed, and has the same support status as Chrome on other platforms. Edge (Legacy) only supports HEVC for devices with a hardware decoder.
         </p>
         <p>Mozilla will not support HEVC while it is encumbered by patents.</p>
@@ -1093,7 +1093,7 @@ HEVC is a proprietary format and is covered by a number of patents. Licensing is
       <th scope="row">Licensing</th>
       <td>
         Proprietary; confirm your compliance with the
-        <a href="https://www.mpegla.com/programs/hevc/"
+        <a href="https://www.via-la.com/licensing-2/hevc-vvc/"
           >licensing requirements</a
         >. Note that multiple patent pools may apply.
       </td>
@@ -1204,11 +1204,11 @@ You almost certainly don't want to use this format, since it isn't supported in 
       <th scope="row">Licensing</th>
       <td>
         Proprietary;
-        <a href="https://www.mpegla.com/programs/mpeg-4-visual/"
+        <a href="https://www.via-la.com/licensing-2/mpeg-4-visual/"
           >obtain a license</a
         >
-        through <a href="https://www.mpegla.com/">MPEG LA</a> and/or
-        <a href="https://about.att.com/innovation/ip/patents/mpeg-4"
+        through <a href="https://www.via-la.com/">Via LA</a> and/or
+        <a href="https://about.att.com/innovation/ip/patents"
           >AT&#x26;T</a
         >
         as needed
@@ -1497,13 +1497,17 @@ However, few web browsers support MPEG-2 without the support of a plugin, and wi
         Proprietary; all patents have expired worldwide with the exception of in
         Malaysia and the Philippines as of April 1, 2019, so MPEG-2 can be used
         freely outside those two countries. Patents are licensed by
-        <a href="https://www.mpegla.com/programs/mpeg-2/">MPEG LA</a>.
+        <a href="https://www.via-la.com/licensing-2/mpeg-2/">Via LA</a>.
       </td>
     </tr>
   </tbody>
 </table>
 
 ### Theora
+
+> [!WARNING]
+> This code is no longer longer recommended.
+> It has extremely small usage, and support is being removed from browsers.
 
 **[Theora](https://en.wikipedia.org/wiki/Theora)**, developed by [Xiph.org](https://xiph.org/), is an open and free video codec which may be used without royalties or licensing. Theora is comparable in quality and compression rates to MPEG-4 Part 2 Visual and AVC, making it a very good if not top-of-the-line choice for video encoding. But its status as being free from any licensing concerns and its relatively low CPU resource requirements make it a popular choice for many software and web projects. The low CPU impact is particularly useful since there are no hardware decoders available for Theora.
 
@@ -1581,10 +1585,10 @@ The [Theora Cookbook](https://en.flossmanuals.net/ogg-theora/_full/) offers addi
             </tr>
             <tr>
               <th scope="row">Theora support</th>
-              <td>3</td>
-              <td>Yes</td>
-              <td>3.5</td>
-              <td>10.5</td>
+              <td>3 to 121</td>
+              <td>12 to 121</td>
+              <td>3.5 to 126</td>
+              <td>10.5 to 107</td>
               <td>No</td>
             </tr>
           </tbody>
@@ -1592,7 +1596,7 @@ The [Theora Cookbook](https://en.flossmanuals.net/ogg-theora/_full/) offers addi
         <p>
           Edge supports Theora with the optional
           <a
-            href="https://www.microsoft.com/en-us/p/web-media-extensions/9n5tdp8vcmhs?activetab=pivot:overviewtab"
+            href="https://apps.microsoft.com/detail/9n5tdp8vcmhs"
             >Web Media Extensions</a
           >
           add-on.
@@ -1964,5 +1968,4 @@ The documentation for your codec choices will probably offer information you'll 
 - {{RFC(3839)}}: MIME Type Registrations for 3GPP Multimedia Files
 - {{RFC(4381)}}: MIME Type Registrations for 3GPP2 Multimedia Files
 - {{RFC(4337)}}: MIME Type Registrations for MPEG-4
-- [Video codecs in Opera](https://dev.opera.com/articles/introduction-html5-video/#codecs--the-fly-in-the-ointment)
 - [Video and audio codecs in Chrome](https://www.chromium.org/audio-video/)

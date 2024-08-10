@@ -30,13 +30,15 @@ The sub-properties of the {{cssxref("animation")}} property are:
   - : Specifies the length of time in which an animation completes one cycle.
 - {{cssxref("animation-fill-mode")}}
   - : Specifies how an animation applies styles to its target before and after it runs.
+    > [!NOTE]
+    > In the case of animation [forwards](/en-US/docs/Web/CSS/animation-fill-mode#forwards) fill mode, animated properties behave as if included in a set [`will-change`](/en-US/docs/Web/CSS/will-change) property value. If a new stacking context was created during the animation, the target element retains the stacking context after the animation has finished.
 - {{cssxref("animation-iteration-count")}}
   - : Specifies the number of times an animation should repeat.
 - {{cssxref("animation-name")}}
   - : Specifies the name of the {{cssxref("@keyframes")}} at-rule describing an animation's keyframes.
 - {{cssxref("animation-play-state")}}
   - : Specifies whether to pause or play an animation sequence.
-- {{cssxref("animation-timeline")}} {{experimental_inline}}
+- {{cssxref("animation-timeline")}}
   - : Specifies the timeline that is used to control the progress of a CSS animation.
 - {{cssxref("animation-timing-function")}}
   - : Specifies how an animation transitions through keyframes by establishing acceleration curves.
@@ -523,5 +525,5 @@ The code renders as follows:
 ## See also
 
 - {{domxref("AnimationEvent", "AnimationEvent")}}
-- [CSS animation tips and tricks](/en-US/docs/Web/CSS/CSS_animations/Tips)
 - [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [Using the Web Animations API](/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API)

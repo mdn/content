@@ -33,7 +33,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  -: Thrown when calling this method on an automatically assigned slot.
+  - : Thrown when calling this method on an automatically assigned slot.
 
 ## Examples
 

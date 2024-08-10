@@ -71,7 +71,7 @@ A `GPURenderBundleEncoder` object instance is created via the {{domxref("GPUDevi
 
 ## Examples
 
-In the WebGPU Samples [Animometer example](https://webgpu.github.io/webgpu-samples/samples/animometer), a lot of like operations are done on many different objects simultaneously. A bundle of commands is encoded using the following function:
+In the WebGPU Samples [Animometer example](https://webgpu.github.io/webgpu-samples/samples/animometer/), a lot of like operations are done on many different objects simultaneously. A bundle of commands is encoded using the following function:
 
 ```js
 function recordRenderPass(

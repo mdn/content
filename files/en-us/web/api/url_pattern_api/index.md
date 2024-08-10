@@ -44,7 +44,7 @@ The URL Pattern API only has a single related interface:
 The syntax for patterns is based on the
 [path-to-regexp](https://github.com/pillarjs/path-to-regexp) JavaScript library.
 This syntax is similar to the one used in
-[Ruby on Rails](https://rubyonrails.org), or JavaScript frameworks like
+[Ruby on Rails](https://rubyonrails.org/), or JavaScript frameworks like
 [Express](https://expressjs.com/) or [Next.js](https://nextjs.org/).
 
 ### Fixed text and capture groups

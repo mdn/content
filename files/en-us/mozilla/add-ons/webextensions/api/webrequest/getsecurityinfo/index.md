@@ -20,7 +20,7 @@ You must also pass the "blocking" option to `webRequest.onHeadersReceived.addLis
 ```js-nolint
 let gettingInfo = browser.webRequest.getSecurityInfo(
   requestId,       // string
-  options          // object
+  options          // optional object
 )
 ```
 
@@ -28,9 +28,9 @@ let gettingInfo = browser.webRequest.getSecurityInfo(
 
 - `requestId`
   - : `string`. ID of the request for which you want security info. You can get this from the `details` object that is passed into any `webRequest` event listeners.
-- `options`
+- `options` {{optional_inline}}
 
-  - : `object`. An object which may contain any of the following properties, all optional:
+  - : `object`. An object that can contain any of these properties:
 
     - `certificateChain` {{optional_inline}}
       - : `boolean`. If `true`, the {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}} object returned will include the entire certificate chain up to and including the trust root. If `false`, it will include only the server certificate. Defaults to `false`.

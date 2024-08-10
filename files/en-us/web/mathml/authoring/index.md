@@ -67,7 +67,7 @@ It is recommended to provide a fallback mechanism for browsers without MathML su
 <script src="https://fred-wang.github.io/mathml.css/mspace.js"></script>
 ```
 
-If you need more complex constructions, you might instead consider using the heavier [MathJax](https://www.mathjax.org) library as a MathML polyfill:
+If you need more complex constructions, you might instead consider using the heavier [MathJax](https://www.mathjax.org/) library as a MathML polyfill:
 
 ```html
 <script src="https://fred-wang.github.io/mathjax.js/mpadded-min.js"></script>
@@ -235,7 +235,7 @@ latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathjax.js/mpa
 ```
 
 > [!NOTE]
-> Command-line tools can be used server-side e.g. [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki) performs LaTeX-to-MathML conversion via [Mathoid](https://github.com/wikimedia/mathoid).
+> Command-line tools can be used server-side e.g. [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki) performs LaTeX-to-MathML conversion via [Mathoid](https://github.com/wikimedia/mediawiki-services-mathoid).
 
 ## Graphical interfaces
 

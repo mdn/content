@@ -13,7 +13,7 @@ Firefox also supports additional features not in the OpenSearch standard, such a
 OpenSearch description files can be advertised as described in [Autodiscovery of search plugins](#autodiscovery_of_search_plugins).
 
 > [!WARNING]
-> OpenSearch plugins can't be uploaded anymore on [addons.mozilla.org](https://addons.mozilla.org) (AMO). Search engine feature must use WebExtension API with [chrome settings](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides) in `manifest.json` file.
+> OpenSearch plugins can't be uploaded anymore on [addons.mozilla.org](https://addons.mozilla.org/) (AMO). Search engine feature must use WebExtension API with [chrome settings](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides) in `manifest.json` file.
 
 ## OpenSearch description file
 
@@ -126,7 +126,7 @@ For example:
 ```
 
 > [!NOTE]
-> At this time, [addons.mozilla.org](https://addons.mozilla.org) (AMO) doesn't support automatic updating of OpenSearch plugins. If you want to put your search plugin on AMO, remove the auto-updating feature before submitting it.
+> At this time, [addons.mozilla.org](https://addons.mozilla.org/) (AMO) doesn't support automatic updating of OpenSearch plugins. If you want to put your search plugin on AMO, remove the auto-updating feature before submitting it.
 
 ## Troubleshooting Tips
 
@@ -144,7 +144,7 @@ In addition, the search plugin service provides a logging mechanism that may be 
 
 - [OpenSearch Documentation](https://github.com/dewitt/opensearch)
 - [Safari 8.0 Release Notes: Quick Website Search](https://developer.apple.com/library/archive/releasenotes/General/WhatsNewInSafari/Articles/Safari_8_0.html)
-- [Microsoft Edge Dev Guide: Search provider discovery](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/)
+- [Microsoft Edge Dev Guide: Search provider discovery](https://learn.microsoft.com/en-us/archive/microsoft-edge/legacy/developer/)
 - [The Chromium Projects: Tab to Search](https://www.chromium.org/tab-to-search/)
 - imdb.com has a [working `osd.xml`](https://m.media-amazon.com/images/G/01/imdb/images/imdbsearch-3349468880._CB470047351_.xml)
 - [Ready2Search](https://ready.to/search/en/) - create OpenSearch plugins. [Customized Search through Ready2Search](https://ready.to/search/make/en_make_plugin.htm)

@@ -154,7 +154,7 @@ play.addEventListener("click", async () => {
 });
 ```
 
-You can [run the full example live](https://mdn.github.io/webaudio-examples/decode-audio-data/promise/), or [view the source](https://github.com/mdn/webaudio-examples/blob/main/decode-audio-data/promise/).
+You can [run the full example live](https://mdn.github.io/webaudio-examples/decode-audio-data/promise/), or [view the source](https://github.com/mdn/webaudio-examples/tree/main/decode-audio-data/promise).
 
 Find more about Web Audio API basics in [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API).
 
@@ -429,7 +429,6 @@ Your files may have been encoded incorrectly — try encoding using one of the f
 - [Handbrake](https://handbrake.fr/) — Open Source Video Transcoder
 - [Firefogg](http://www.firefogg.org/) — Video and Audio encoding for Firefox
 - [FFmpeg2](https://www.ffmpeg.org/) — Comprehensive command line encoder
-- [Libav](https://libav.org/) — Comprehensive command line encoder
 - [Vid.ly](https://m.vid.ly/) — Video player, transcoding and delivery
 - [Internet Archive](https://archive.org/) — Free transcoding and storage
 
@@ -481,13 +480,13 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 ### Video only
 
 - [flowplayer](https://flowplayer.com/): Gratis with a flowplayer logo watermark. Open source (GPL licensed.)
-- [JWPlayer](https://www.jwplayer.com): Requires registration to download. Open Source Edition (Creative Commons License.)
+- [JWPlayer](https://jwplayer.com/): Requires registration to download. Open Source Edition (Creative Commons License.)
 - [SublimeVideo](https://www.sublimevideo.net/): Requires registration. Form based set up with domain specific link to CDN hosted library.
 - [Video.js](https://videojs.com/): Gratis and Open Source (Apache 2 Licensed.)
 
 ### Audio and Video
 
-- [jPlayer](https://jPlayer.org): Gratis and Open Source (MIT Licensed.)
+- [jPlayer](https://jPlayer.org/): Gratis and Open Source (MIT Licensed.)
 - [mediaelement.js](https://www.mediaelementjs.com/): Gratis and Open Source (MIT Licensed.)
 
 ### Web Audio API
