@@ -210,13 +210,13 @@ B
 C
 
 - {{CSSxRef(":checked")}}
-- {{CSSxRef(":current")}} {{Experimental_Inline}}
+- {{CSSxRef(":current")}}
 
 D
 
 - {{CSSxRef(":default")}}
 - {{CSSxRef(":defined")}}
-- {{CSSxRef(":dir", ":dir()")}} {{Experimental_Inline}}
+- {{CSSxRef(":dir", ":dir()")}}
 - {{CSSxRef(":disabled")}}
 
 E
@@ -257,7 +257,7 @@ L
 - {{CSSxRef(":last-of-type")}}
 - {{CSSxRef(":left")}}
 - {{CSSxRef(":link")}}
-- {{CSSxRef(":local-link")}} {{Experimental_Inline}}
+- {{CSSxRef(":local-link")}}
 
 M
 
@@ -280,7 +280,7 @@ O
 
 P
 
-- {{CSSxRef(":past")}} {{Experimental_Inline}}
+- {{CSSxRef(":past")}}
 - {{CSSxRef(":paused")}}
 - {{CSSxRef(":picture-in-picture")}}
 - {{CSSxRef(":placeholder-shown")}}
@@ -297,7 +297,7 @@ R
 S
 
 - {{CSSxRef(":scope")}}
-- {{CSSxRef(":state", ":state()")}} {{Experimental_Inline}}
+- {{CSSxRef(":state", ":state()")}}
 
 T
 
@@ -306,7 +306,7 @@ T
 
 U
 
-- {{CSSxRef(":user-invalid")}} {{Experimental_Inline}}
+- {{CSSxRef(":user-invalid")}}
 
 V
 

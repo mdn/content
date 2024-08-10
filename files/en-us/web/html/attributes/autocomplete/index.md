@@ -1,5 +1,6 @@
 ---
 title: "HTML attribute: autocomplete"
+short-title: autocomplete
 slug: Web/HTML/Attributes/autocomplete
 page-type: html-attribute
 browser-compat:

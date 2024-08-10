@@ -57152,7 +57152,7 @@
       "Jeremie"
     ]
   },
-  "Web/API/SVGRect/The__X__property": {
+  "Web/API/SVGRect/x": {
     "modified": "2019-03-23T22:36:30.180Z",
     "contributors": ["rolfedh", "essymo"]
   },
@@ -65323,6 +65323,17 @@
       "delete12345",
       "PushpitaPikuDey",
       "rachelnabors"
+    ]
+  },
+  "Web/API/Web_Animations_API/Tips": {
+    "modified": "2020-06-24T00:29:43.861Z",
+    "contributors": [
+      "emilhem",
+      "chrisdavidmills",
+      "morenoh149",
+      "tzthet",
+      "mfluehr",
+      "Sheppy"
     ]
   },
   "Web/API/Web_Animations_API/Using_the_Web_Animations_API": {
@@ -76477,17 +76488,6 @@
       "teoli"
     ]
   },
-  "Web/CSS/CSS_animations/Tips": {
-    "modified": "2020-06-24T00:29:43.861Z",
-    "contributors": [
-      "emilhem",
-      "chrisdavidmills",
-      "morenoh149",
-      "tzthet",
-      "mfluehr",
-      "Sheppy"
-    ]
-  },
   "Web/CSS/CSS_animations/Using_CSS_animations": {
     "modified": "2020-12-11T07:06:02.745Z",
     "contributors": [
@@ -77654,10 +77654,6 @@
   "Web/CSS/CSS_media_queries/Using_media_queries_for_accessibility": {
     "modified": "2020-07-07T17:49:27.435Z",
     "contributors": ["wbamberg", "evaferreira"]
-  },
-  "Web/CSS/CSS_miscellaneous": {
-    "modified": "2020-07-07T12:23:17.703Z",
-    "contributors": ["wbamberg", "mfluehr", "Tigt", "teoli"]
   },
   "Web/CSS/CSS_motion_path": {
     "modified": "2020-10-15T21:38:36.015Z",

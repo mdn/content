@@ -69,7 +69,7 @@ As a general rule, you should consider both the features provided and the "commu
 
 ### Using Mongoose and MongoDB for the LocalLibrary
 
-For the _Local Library_ example (and the rest of this topic) we're going to use the [Mongoose ODM](https://www.npmjs.com/package/mongoose) to access our library data. Mongoose acts as a front end to [MongoDB](https://www.mongodb.com/what-is-mongodb), an open source [NoSQL](https://en.wikipedia.org/wiki/NoSQL) database that uses a document-oriented data model. A "collection" of "documents" in a MongoDB database [is analogous to](https://www.mongodb.com/docs/manual/core/databases-and-collections/) a "table" of "rows" in a relational database.
+For the _Local Library_ example (and the rest of this topic) we're going to use the [Mongoose ODM](https://www.npmjs.com/package/mongoose) to access our library data. Mongoose acts as a front end to [MongoDB](https://www.mongodb.com/company/what-is-mongodb), an open source [NoSQL](https://en.wikipedia.org/wiki/NoSQL) database that uses a document-oriented data model. A "collection" of "documents" in a MongoDB database [is analogous to](https://www.mongodb.com/docs/manual/core/databases-and-collections/) a "table" of "rows" in a relational database.
 
 This ODM and database combination is extremely popular in the Node community, partially because the document storage and query system looks very much like JSON, and is hence familiar to JavaScript developers.
 
@@ -578,39 +578,48 @@ const modelInstances = await SomeModel.find().exec();
 
 Now that we understand something of what Mongoose can do and how we want to design our models, it's time to start work on the _LocalLibrary_ website. The very first thing we want to do is set up a MongoDB database that we can use to store our library data.
 
-For this tutorial, we're going to use the [MongoDB Atlas](https://www.mongodb.com/atlas/database) cloud-hosted sandbox database. This database tier is not considered suitable for production websites because it has no redundancy, but it is great for development and prototyping. We're using it here because it is free and easy to set up, and because MongoDB Atlas is a popular _database as a service_ vendor that you might reasonably choose for your production database (other popular choices at the time of writing include [Compose](https://www.compose.com/), [ScaleGrid](https://scalegrid.io/) and [ObjectRocket](https://www.objectrocket.com/)).
+For this tutorial, we're going to use the [MongoDB Atlas](https://www.mongodb.com/products/platform/atlas-database) cloud-hosted sandbox database. This database tier is not considered suitable for production websites because it has no redundancy, but it is great for development and prototyping. We're using it here because it is free and easy to set up, and because MongoDB Atlas is a popular _database as a service_ vendor that you might reasonably choose for your production database (other popular choices at the time of writing include [ScaleGrid](https://scalegrid.io/) and [ObjectRocket](https://www.objectrocket.com/)).
 
 > [!NOTE]
-> If you prefer, you can set up a MongoDB database locally by downloading and installing the [appropriate binaries for your system](https://www.mongodb.com/download-center/community/releases). The rest of the instructions in this article would be similar, except for the database URL you would specify when connecting.
-> In the [Express Tutorial Part 7: Deploying to Production](/en-US/docs/Learn/Server-side/Express_Nodejs/deployment) tutorial we host both the application and database on [Railway](https://railway.app/), but we could equally well have used a database on [MongoDB Atlas](https://www.mongodb.com/atlas/database).
+> If you prefer, you can set up a MongoDB database locally by downloading and installing the [appropriate binaries for your system](https://www.mongodb.com/try/download/community-edition/releases). The rest of the instructions in this article would be similar, except for the database URL you would specify when connecting.
+> In the [Express Tutorial Part 7: Deploying to Production](/en-US/docs/Learn/Server-side/Express_Nodejs/deployment) tutorial we host both the application and database on [Railway](https://railway.app/), but we could equally well have used a database on [MongoDB Atlas](https://www.mongodb.com/products/platform/atlas-database).
 
 You will first need to [create an account](https://www.mongodb.com/cloud/atlas/register) with MongoDB Atlas (this is free, and just requires that you enter basic contact details and acknowledge their terms of service).
 
 After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) screen:
 
 1. Click the **+ Create** button in the _Overview_ section.
+
    ![Create a database on MongoDB Atlas.](mongodb_atlas_-_createdatabase.jpg)
 
-2. This will open the _Deploy your database_ screen. Click on the **M0 FREE** option template.
+2. This will open the _Deploy your cluster_ screen.
+   Click on the **M0 FREE** option template.
+
    ![Choose a deployment option when using MongoDB Atlas.](mongodb_atlas_-_deploy.jpg)
 
 3. Scroll down the page to see the different options you can choose.
    ![Choose a cloud provider when using MongoDB Atlas.](mongodb_atlas_-_createsharedcluster.jpg)
 
+   - You can change the name of your Cluster under _Cluster Name_.
+     We are keeping it as `Cluster0` for this tutorial.
+   - Deselect the _Preload sample dataset_ checkbox, as we'll import our own sample data later on
    - Select any provider and region from the _Provider_ and _Region_ sections. Different regions offer different providers.
-   - You can change the name of your Cluster under _Cluster Name_. We are naming it `Cluster0` for this tutorial.
    - Tags are optional. We will not use them here.
-   - Click the **Create** button (creation of the cluster will take some minutes).
+   - Click the **Create deployment** button (creation of the cluster will take some minutes).
 
 4. This will open the _Security Quickstart_ section.
    ![Set up the Access Rules on the Security Quickstart screen on MongoDB Atlas.](mongodb_atlas_-_securityquickstart.jpg)
 
-   - Enter a username and password. Remember to copy and store the credentials safely as we will need them later on. Click the **Create User** button.
+   - Enter a username and password for your application to use to access the database (above we have created a new login "cooluser").
+     Remember to copy and store the credentials safely as we will need them later on.
+     Click the **Create User** button.
 
      > [!NOTE]
      > Avoid using special characters in your MongoDB user password as mongoose may not parse the connection string properly.
 
-   - Enter `0.0.0.0/0` in the IP Address field. This tells MongoDB that we want to allow access from anywhere. Click the **Add Entry** button.
+   - Select **Add by current IP address** to allow access from your current computer
+   - Enter `0.0.0.0/0` in the IP Address field and then click the **Add Entry** button.
+     This tells MongoDB that we want to allow access from anywhere.
 
      > [!NOTE]
      > It is a best practice to limit the IP addresses that can connect to your database and other resources. Here we allow a connection from anywhere because we don't know where the request will come from after deployment.
@@ -640,25 +649,24 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
    - Click the _Overview_ tab to return to the cluster overview.
 
 10. From the Cluster0 _Overview_ screen click the **Connect** button.
+
     ![Configure connection after setting up a cluster in MongoDB Atlas.](mongodb_atlas_-_connectbutton.jpg)
 
-11. This will open the _Connect to Cluster_ screen.
-    Click the **Drivers** option under the _Connect to your application_ section.
-    ![Choose a connection type when connecting with MongoDB Atlas.](mongodb_atlas_-_chooseaconnectionmethod.jpg)
+11. This will open the _Connect to Cluster0_ screen.
 
-12. You will now be shown the _Connect_ screen.
     ![Choose the Short SRV connection when setting up a connection on MongoDB Atlas.](mongodb_atlas_-_connectforshortsrv.jpg)
 
-    - Select the Node driver and version as shown.
-    - **DO NOT** follow the step 2.
+    - Select your database user.
+    - Select the _Drivers_ category, then the _Driver_ **Node.js** and _Version_ as shown.
+    - **DO NOT** install the driver as suggested.
     - Click the **Copy** icon to copy the connection string.
     - Paste this in your local text editor.
-    - Update the username and password with your user's password.
+    - Replace `<password>` placeholder in the connection string with your user's password.
     - Insert the database name "local_library" in the path before the options (`...mongodb.net/local_library?retryWrites...`)
     - Save the file containing this string somewhere safe.
 
 You have now created the database, and have a URL (with username and password) that can be used to access it.
-This will look something like: `mongodb+srv://your_user_name:your_password@cluster0.lz91hw2.mongodb.net/local_library?retryWrites=true&w=majority`
+This will look something like: `mongodb+srv://your_user_name:your_password@cluster0.cojoign.mongodb.net/local_library?retryWrites=true&w=majority&appName=Cluster0`
 
 ## Install Mongoose
 
@@ -826,7 +834,7 @@ The new things we show here are the field options:
 
 Everything else should be familiar from our previous schema.
 
-### Genre model - challenge!
+### Genre model - challenge
 
 Open your **./models/genre.js** file and create a schema for storing genres (the category of book, e.g. whether it is fiction or non-fiction, romance or military history, etc.).
 

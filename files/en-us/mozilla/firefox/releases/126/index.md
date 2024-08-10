@@ -59,9 +59,10 @@ No notable changes.
 
 #### Media, WebRTC, and Web Audio
 
-#### Removals
+##### Removals
 
 - The marquee events [`bounce`](/en-US/docs/Web/API/HTMLMarqueeElement#bounce), [`finish`](/en-US/docs/Web/API/HTMLMarqueeElement#finish), and [`start`](/en-US/docs/Web/API/HTMLMarqueeElement#start) have been removed from [`HTMLMarqueeElement`](/en-US/docs/Web/API/HTMLMarqueeElement), along with the corresponding [event handler attributes](/en-US/docs/Web/HTML/Element/marquee#event_handlers) defined on the [`<marquee>` HTML element](/en-US/docs/Web/HTML/Element/marquee) ([Firefox bug 1689705](https://bugzil.la/1689705)).
+- The [Theora](/en-US/docs/Web/Media/Formats/Video_codecs#theora) codec was disabled by default, and will be removed in a future release ([Firefox bug 1860492](https://bugzil.la/1860492)).
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -80,8 +81,6 @@ No notable changes.
 - The `"webRequestAuthProvider"` permission is now supported. This provides compatibility with Chrome for requesting permission for {{WebExtAPIRef("webRequest.onAuthRequired")}} in Manifest V3 ([Firefox bug 1820569](https://bugzil.la/1820569)).
 - The [`options_page` manifest key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_page) is provided as an alias of the [`options_ui`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) key. This has been provided to offer extensions better compatibility with Chrome ([Firefox bug 1816960](https://bugzil.la/1816960)).
 - The {{WebExtAPIRef("tabs.captureVisibleTab")}} method is now also enabled by the `activeTab` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions), providing compatibility with Chrome and Safari ([Firefox bug 1784920](https://bugzil.la/1784920)).
-
-### Other
 
 ## Experimental web features
 

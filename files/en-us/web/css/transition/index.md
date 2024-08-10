@@ -98,7 +98,7 @@ See [how things are handled](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_trans
 
 ### Basic example
 
-In this example, when the user hovers over the element, there is a one-second delay before the four-second `font-size` transition occurs.
+In this example, when the user hovers over the element, there is a half-second (`500ms`) delay before a two-second `background-color` transition occurs.
 
 #### HTML
 
@@ -112,12 +112,13 @@ We include two {{cssxref("time")}} values. In the `transition` shorthand, the fi
 
 ```css
 .target {
-  font-size: 14px;
-  transition: font-size 4s 1s;
+  font-size: 2rem;
+  background-color: palegoldenrod;
+  transition: background-color 2s 500ms;
 }
 
 .target:hover {
-  font-size: 36px;
+  background-color: darkorange;
 }
 ```
 

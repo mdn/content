@@ -20,7 +20,7 @@ In the below example a policy called `myEscapePolicy` is created using {{domxref
 
 ```js
 const escapeHTMLPolicy = trustedTypes.createPolicy("myEscapePolicy", {
-  createHTML: (string) => string.replace(/>/g, "<"),
+  createHTML: (string) => string.replace(/</g, "&lt;"),
 });
 
 console.log(escapeHTMLPolicy.name); /* "myEscapePolicy" */

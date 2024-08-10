@@ -1,5 +1,6 @@
 ---
 title: "HTML attribute: rel"
+short-title: rel
 slug: Web/HTML/Attributes/rel
 page-type: html-attribute
 browser-compat:

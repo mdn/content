@@ -161,5 +161,5 @@ Two browser vendors [oppose](/en-US/docs/Glossary/Web_standards#opposing_standar
 ## See also
 
 - [Storage Access API](/en-US/docs/Web/API/Storage_Access_API)
-- [Related Website Sets](https://developer.chrome.com/docs/privacy-sandbox/related-website-sets/) on developer.chrome.com (2023)
-- [Related Website Sets: developer guide](https://developer.chrome.com/docs/privacy-sandbox/related-website-sets-integration/) on developer.chrome.com (2023)
+- [Related Website Sets](https://developers.google.com/privacy-sandbox/3pcd/related-website-sets) on developers.google.com (2023)
+- [Related Website Sets: developer guide](https://developers.google.com/privacy-sandbox/3pcd/related-website-sets-integration) on developers.google.com (2023)

@@ -119,4 +119,4 @@ When the `<input>` value is non-empty, if you try to close, navigate, or reload 
   - {{domxref("Document/readystatechange_event", "readystatechange")}}
   - {{domxref("Window/load_event", "load")}}
   - {{domxref("Window/unload_event", "unload")}}
-- [Page Lifecycle API](https://developer.chrome.com/blog/page-lifecycle-api/#developer-recommendations-for-each-state) provides more useful guidance on handling page lifecycle behavior in your web apps.
+- [Page Lifecycle API](https://developer.chrome.com/docs/web-platform/page-lifecycle-api#developer-recommendations-for-each-state) provides more useful guidance on handling page lifecycle behavior in your web apps.

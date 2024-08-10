@@ -17,7 +17,7 @@ For example:
 
 Common algorithms are Pathfinding algorithms such as the optimization [Traveling Salesman Problem](https://optimization.cbe.cornell.edu/index.php?title=Traveling_salesman_problem), [Tree Traversal algorithms](https://brilliant.org/wiki/traversals/), and so on.
 
-There are also [Machine Learning algorithms](https://www.coursera.org/articles/machine-learning-algorithms) such as [Linear Regression](https://people.cs.pitt.edu/~milos/courses/cs2750-Spring03/lectures/class6.pdf), Logistic Regression, Decision Tree, Random Forest, Support Vector Machine, Recurrent Neural Network (RNN), Long Short Term Memory (LSTM) Neural Network, Convolutional Neural Network (CNN), Deep Convolutional Neural Network, and so on.
+There are also [Machine Learning algorithms](https://www.coursera.org/articles/machine-learning-algorithms) such as [Linear Regression](https://en.wikipedia.org/wiki/Linear_regression), Logistic Regression, Decision Tree, Random Forest, Support Vector Machine, Recurrent Neural Network (RNN), Long Short Term Memory (LSTM) Neural Network, Convolutional Neural Network (CNN), Deep Convolutional Neural Network, and so on.
 
 ## See also
 

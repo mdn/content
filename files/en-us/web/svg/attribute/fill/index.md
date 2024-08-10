@@ -2,14 +2,24 @@
 title: fill
 slug: Web/SVG/Attribute/fill
 page-type: svg-attribute
-browser-compat: svg.global_attributes.fill
+browser-compat:
+  - svg.elements.circle.fill
+  - svg.elements.ellipse.fill
+  - svg.elements.path.fill
+  - svg.elements.polygon.fill
+  - svg.elements.polyline.fill
+  - svg.elements.rect.fill
+  - svg.elements.text.fill
+  - svg.elements.textPath.fill
+  - svg.elements.tref.fill
+  - svg.elements.tspan.fill
 ---
 
 {{SVGRef}}
 
 The **`fill`** attribute has two different meanings. For shapes and text it's a presentation attribute that defines the color (_or any SVG paint servers like gradients or patterns_) used to paint the element; for animation it defines the final state of the animation.
 
-You can use this attribute with the following SVG elements:
+The SVG presentational `fill` attribute and the CSS {{cssxref("fill")}} property can be used with the following SVG elements:
 
 - {{SVGElement('circle')}}
 - {{SVGElement('ellipse')}}
@@ -22,7 +32,12 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement('tref')}}
 - {{SVGElement('tspan')}}
 
-For animation, these elements are using this attribute: {{SVGElement('animate')}}, {{SVGElement('animateMotion')}}, {{SVGElement('animateTransform')}}, and {{SVGElement('set')}}.
+The SVG `fill` attribute can be used to define the final animation state with the following SVG elements:
+
+- {{SVGElement('animate')}}
+- {{SVGElement('animateMotion')}}
+- {{SVGElement('animateTransform')}}
+- {{SVGElement('set')}}.
 
 ## Examples
 
@@ -240,7 +255,7 @@ For {{SVGElement('ellipse')}}, `fill` is a presentation attribute that defines t
 
 ## path
 
-For {{SVGElement('path')}}, `fill` is a presentation attribute that defines the color of the interior of the shape. (_Interior is define by the {{SVGAttr('fill-rule')}} attribute_)
+For {{SVGElement('path')}}, `fill` is a presentation attribute that defines the color of the interior of the shape. (_The interior is defined by the {{SVGAttr('fill-rule')}} attribute or {{cssxref("fill-rule")}} property._)
 
 <table class="properties">
   <tbody>
@@ -268,7 +283,7 @@ For {{SVGElement('path')}}, `fill` is a presentation attribute that defines the 
 
 ## polygon
 
-For {{SVGElement('polygon')}}, `fill` is a presentation attribute that defines the color of the interior of the shape. (_Interior is define by the {{SVGAttr('fill-rule')}} attribute_)
+For {{SVGElement('polygon')}}, `fill` is a presentation attribute that defines the color of the interior of the shape. (_The interior is defined by the {{SVGAttr('fill-rule')}} attribute or {{cssxref("fill-rule")}} property._)
 
 <table class="properties">
   <tbody>
@@ -296,7 +311,7 @@ For {{SVGElement('polygon')}}, `fill` is a presentation attribute that defines t
 
 ## polyline
 
-For {{SVGElement('polyline')}}, `fill` is a presentation attribute that defines the color of the interior of the shape. (_Interior is define by the {{SVGAttr('fill-rule')}} attribute_)
+For {{SVGElement('polyline')}}, `fill` is a presentation attribute that defines the color of the interior of the shape. (_The interior is defined by the {{SVGAttr('fill-rule')}} attribute or {{cssxref("fill-rule")}} property._)
 
 <table class="properties">
   <tbody>

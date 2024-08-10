@@ -118,4 +118,4 @@ If your image map is wider than about 240px, you'll need to make further adjustm
 - {{htmlelement("img")}}
 - {{htmlelement("map")}}
 - {{htmlelement("area")}}
-- [Online image map editor](https://maschek.hu/imagemap/imgmap/)
+- [Online image map editor](https://www.maschek.hu/imagemap/)

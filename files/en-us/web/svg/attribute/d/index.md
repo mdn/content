@@ -12,7 +12,7 @@ The **`d`** attribute defines a path to be drawn.
 A path definition is a list of [path commands](#path_commands) where each command is composed of a command letter and numbers that represent the command parameters.
 The commands are [detailed below](#path_commands).
 
-You can use this attribute with the following SVG elements: [`<path>`](#path), [`<glyph>`](#glyph), [`<missing-glyph>`](#missing-glyph).
+This attribute is used with the SVG [`<path>`](#path) element.
 
 `d` is a presentation attribute, and hence can also be [used as a CSS property](#using_d_as_a_css_property).
 
@@ -44,61 +44,6 @@ svg {
 ## path
 
 For {{SVGElement('path')}}, `d` is a string containing a series of path commands that define the path to be drawn.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td>
-        <strong><a href="/en-US/docs/Web/CSS/string">&#x3C;string></a></strong>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td><em>none</em></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>Yes</td>
-    </tr>
-  </tbody>
-</table>
-
-## glyph
-
-> [!WARNING]
-> As of SVG2 {{SVGElement('glyph')}} is deprecated and shouldn't be used.
-
-For {{SVGElement('glyph')}}, `d` is a string containing a series of path commands that define the outline shape of the glyph.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td>
-        <strong><a href="/en-US/docs/Web/CSS/string">&#x3C;string></a></strong>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td><em>none</em></td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>Yes</td>
-    </tr>
-  </tbody>
-</table>
-
-> [!NOTE]
-> The point of origin (the coordinate `0`, `0`) is usually the _upper left corner_ of the context. However the {{SVGElement("glyph")}} element has its origin in the _bottom left corner_ of its letterbox.
-
-## missing-glyph
-
-> [!WARNING]
-> As of SVG2 {{SVGElement('missing-glyph')}} is deprecated and shouldn't be used.
-
-For {{SVGElement('missing-glyph')}}, `d` is a string containing a series of path commands that define the outline shape of the glyph.
 
 <table class="properties">
   <tbody>
