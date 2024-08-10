@@ -150,7 +150,7 @@ canvas.addEventListener("pointercancel", handleCancel, false);
 canvas.addEventListener("pointermove", handleMove, false);
 ```
 
-{{EmbedLiveSample("Examples", "", "700")}}
+{{EmbedLiveSample("drawing_application", "", "700")}}
 
 ## Specifications
 
