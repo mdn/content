@@ -15,7 +15,8 @@ The **`label`** read-only property of the
 
 This can be set by providing a `label` property in the descriptor object passed into the originating {{domxref("GPUDevice.createRenderBundleEncoder()")}} call, or you can get and set it directly on the `GPURenderBundleEncoder` object.
 
-> **Note:** This property is functionally identical to its equivalent on {{domxref("GPURenderPassEncoder")}} — {{domxref("GPURenderPassEncoder.label", "label")}}.
+> [!NOTE]
+> This property is functionally identical to its equivalent on {{domxref("GPURenderPassEncoder")}} — {{domxref("GPURenderPassEncoder.label", "label")}}.
 
 ## Value
 

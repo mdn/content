@@ -11,7 +11,8 @@ The **`Touch`** interface represents a single contact point on a touch-sensitive
 
 The {{ domxref("Touch.radiusX") }}, {{ domxref("Touch.radiusY") }}, and {{ domxref("Touch.rotationAngle") }} describe the area of contact between the user and the screen, the _touch area_. This can be helpful when dealing with imprecise pointing devices such as fingers. These values are set to describe an ellipse that as closely as possible matches the entire area of contact (such as the user's fingertip).
 
-> **Note:** Many of the properties' values are hardware-dependent; for example, if the device doesn't have a way to detect the amount of pressure placed on the surface, the `force` value will always be 0. This may also be the case for `radiusX` and `radiusY`; if the hardware reports only a single point, these values will be 1.
+> [!NOTE]
+> Many of the properties' values are hardware-dependent; for example, if the device doesn't have a way to detect the amount of pressure placed on the surface, the `force` value will always be 0. This may also be the case for `radiusX` and `radiusY`; if the hardware reports only a single point, these values will be 1.
 
 ## Constructor
 

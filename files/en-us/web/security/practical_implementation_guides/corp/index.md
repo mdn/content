@@ -48,7 +48,7 @@ This also permits such resources to be embedded.
 
 ## See also
 
-- [Consider deploying Cross-Origin Resource Policy](resourcepolicy.fyi)
+- [Consider deploying Cross-Origin Resource Policy](https://resourcepolicy.fyi/)
 - [XS-Leaks Wiki](https://xsleaks.dev/)
 - [`Access-Control-Allow-Origin`](/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)
 - [`Cross-Origin-Embedder-Policy`](/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy)

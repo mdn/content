@@ -1,5 +1,6 @@
 ---
 title: "HTML attribute: min"
+short-title: min
 slug: Web/HTML/Attributes/min
 page-type: html-attribute
 browser-compat:
@@ -78,7 +79,8 @@ It is valid for the input types including: {{HTMLElement("input/date", "date")}}
   </tbody>
 </table>
 
-> **Note:** When the data entered by the user doesn't adhere to the min value set, the value is considered invalid in constraint validation and will match the {{cssxref(':invalid')}} and {{cssxref(':out-of-range')}} pseudo-classes.
+> [!NOTE]
+> When the data entered by the user doesn't adhere to the min value set, the value is considered invalid in constraint validation and will match the {{cssxref(':invalid')}} and {{cssxref(':out-of-range')}} pseudo-classes.
 
 See [Client-side validation](/en-US/docs/Web/HTML/Constraint_validation) and {{domxref("ValidityState.rangeUnderflow", "rangeUnderflow")}} for more information.
 

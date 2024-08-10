@@ -68,7 +68,7 @@ The example below illustrates what a link will look and behave like by default; 
 
   <kbd>tab</kbd>
 
-  , or enable the [Full Keyboard Access: All controls](https://support.apple.com/en-us/guide/mac-help/mchlp1399/mac) option by pressing
+  , or enable the [Full Keyboard Access: All controls](https://support.apple.com/guide/mac-help/use-your-keyboard-like-a-mouse-mchlp1399/mac) option by pressing
 
   <kbd>Ctrl</kbd>
 
@@ -93,7 +93,8 @@ p {
 
 {{ EmbedLiveSample('Default_styles', '100%', 130) }}
 
-> **Note:** All the link examples on this page link to the top of their window. The empty fragment (`href="#"`) is used to create simple examples and ensure the live examples, which are each contained in an {{HTMLElement("iframe")}}, don't break.
+> [!NOTE]
+> All the link examples on this page link to the top of their window. The empty fragment (`href="#"`) is used to create simple examples and ensure the live examples, which are each contained in an {{HTMLElement("iframe")}}, don't break.
 
 Interestingly enough, these default styles are nearly the same as they were back in the early days of browsers in the mid-1990s. This is because users know and have come to expect this behavior — if links were styled differently, it would confuse a lot of people. This doesn't mean that you shouldn't style links at all. It just means that you shouldn't stray too far from the expected behavior. You should at least:
 
@@ -106,7 +107,8 @@ The default styles can be turned off/changed using the following CSS properties:
 - {{cssxref("cursor")}} for the mouse pointer style — you shouldn't turn this off unless you've got a very good reason.
 - {{cssxref("outline")}} for the text outline. An outline is similar to a border. The only difference is that a border takes up space in the box and an outline doesn't; it just sits over the top of the background. The outline is a useful accessibility aid, so should not be removed without adding another method of indicating the focused link.
 
-> **Note:** You are not just limited to the above properties to style your links — you are free to use any properties you like.
+> [!NOTE]
+> You are not just limited to the above properties to style your links — you are free to use any properties you like.
 
 ### Styling some links
 
@@ -385,7 +387,8 @@ A final word: how did we select just external links? Well, if you are writing yo
 
 So that's it. Try revisiting the active learning section above and trying this new technique out!
 
-> **Note:** Don't worry if you are not familiar with [backgrounds](/en-US/docs/Learn/CSS/Building_blocks) and [responsive web design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design) yet; these are explained in other places.
+> [!NOTE]
+> Don't worry if you are not familiar with [backgrounds](/en-US/docs/Learn/CSS/Building_blocks) and [responsive web design](/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design) yet; these are explained in other places.
 
 ## Styling links as buttons
 

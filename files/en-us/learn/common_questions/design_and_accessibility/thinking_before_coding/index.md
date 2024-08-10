@@ -45,7 +45,8 @@ Technique is obviously critical. Musicians must master their instrument. But goo
 
 An hour's discussion with friends is a good start, but inadequate. You must sit down and structure your ideas to get a clear view of what path you must take to make your ideas a reality. To do this, you need only pen and paper and some time to answer at least the following questions.
 
-> **Note:** There are countless ways to carry out project ideation. We cannot lay them all out here (a whole book wouldn't be enough). What we will present here is a simple method to handle what professionals call [Project Ideation](<https://en.wikipedia.org/wiki/Ideation_(idea_generation)>), [Project Planning](https://en.wikipedia.org/wiki/Project_planning), and [Project Management](https://en.wikipedia.org/wiki/Project_management).
+> [!NOTE]
+> There are countless ways to carry out project ideation. We cannot lay them all out here (a whole book wouldn't be enough). What we will present here is a simple method to handle what professionals call [Project Ideation](<https://en.wikipedia.org/wiki/Ideation_(idea_generation)>), [Project Planning](https://en.wikipedia.org/wiki/Project_planning), and [Project Management](https://en.wikipedia.org/wiki/Project_management).
 
 ### What exactly do I want to accomplish?
 

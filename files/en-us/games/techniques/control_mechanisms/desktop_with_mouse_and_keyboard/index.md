@@ -12,7 +12,8 @@ Now, when we have our mobile controls in place and the game is playable on touch
 
 It's also easier to test control-independent features like gameplay on desktop if you develop it there, so you don't have to push the files to a mobile device every time you make a change in the source code.
 
-> **Note:** the [Captain Rogers: Battle at Andromeda](https://rogers2.enclavegames.com/demo/) is built with Phaser and managing the controls is Phaser-based, but it could also be done in pure JavaScript. The good thing about using Phaser is that it offers helper variables and functions for easier and faster development, but it's totally up to you which approach you chose.
+> [!NOTE]
+> The [Captain Rogers: Battle at Andromeda](https://rogers2.enclavegames.com/demo/) is built with Phaser and managing the controls is Phaser-based, but it could also be done in pure JavaScript. The good thing about using Phaser is that it offers helper variables and functions for easier and faster development, but it's totally up to you which approach you chose.
 
 ## Pure JavaScript approach
 

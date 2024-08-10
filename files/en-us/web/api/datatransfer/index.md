@@ -31,6 +31,8 @@ The **`DataTransfer`** object is used to hold any data transferred between conte
 
 ## Instance methods
 
+- {{domxref("DataTransfer.addElement()")}} {{experimental_inline}} {{non-standard_inline}}
+  - : Sets the drag source for the given element. This will be the element on which {{domxref("HTMLElement/drag_event", "drag")}} and {{domxref("HTMLElement/dragend_event", "dragend")}} events are fired, and not the default target (the node that was dragged). Firefox-specific.
 - {{domxref("DataTransfer.clearData()")}}
   - : Remove the data associated with a given type. The type argument is optional. If the type is empty or not specified, the data associated with all types is removed. If data for the specified type does not exist, or the data transfer contains no data, this method will have no effect.
 - {{domxref("DataTransfer.getData()")}}

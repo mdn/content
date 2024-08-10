@@ -2,10 +2,12 @@
 title: anchor-size()
 slug: Web/CSS/anchor-size
 page-type: css-function
+status:
+  - experimental
 browser-compat: css.types.anchor-size
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`anchor-size()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) enables [sizing anchor-positioned elements](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#sizing_elements_based_on_anchor_size) relative to the dimensions of anchor elements. It returns the `<length>` of a specified side of the target anchor element. `anchor()` is only valid when used within the value of anchor-positioned elements' [sizing properties](#properties_that_accept_anchor-size_function_values).
 
@@ -32,7 +34,7 @@ block-size: anchor-size(--myAnchor block, 200px);
 
 The `anchor-size()` function's syntax is as follows:
 
-```text
+```plain
 anchor-size(<anchor-element> <anchor-size>, <length-percentage>)
 ```
 
@@ -42,7 +44,8 @@ The parameters are:
 
   - : The [`anchor-name`](/en-US/docs/Web/CSS/anchor-name) property value of an anchor element you want to size the element relative to. This is a `<dashed-ident>` value. If omitted, the element's default anchor is used.
 
-    > **Note:** Specifying an `<anchor-element>` inside an `anchor-size()` function neither associates nor tethers an element to an anchor; it only sizes the element relative to that anchor.
+    > [!NOTE]
+    > Specifying an `<anchor-element>` inside an `anchor-size()` function neither associates nor tethers an element to an anchor; it only sizes the element relative to that anchor.
 
 - `<anchor-size>`
 
@@ -71,13 +74,15 @@ The parameters are:
     - `self-inline`
       - : The length of the anchor element in the inline direction.
 
-    > **Note:** If this parameter is omitted, the dimension defaults to the `<anchor-size>` keyterm that matches the axis of the property in which the function is included. For example, `width: anchor-size();` is equivalent to `width: anchor-size(width);`.
+    > [!NOTE]
+    > If this parameter is omitted, the dimension defaults to the `<anchor-size>` keyterm that matches the axis of the property in which the function is included. For example, `width: anchor-size();` is equivalent to `width: anchor-size(width);`.
 
 - {{cssxref("length-percentage")}} {{optional_inline}}
 
   - : Specifies the size to use as a fallback value if the element is not absolutely or fixed positioned, or the anchor element doesn't exist. If this parameter is omitted in a case when the fallback would otherwise be used, the declaration is invalid.
 
-> **Note:** The anchor dimension you size the positioned element relative to does not have to be along the same axis as the sizing value being set. For example, `width: anchor-size(height)` is valid.
+> [!NOTE]
+> The anchor dimension you size the positioned element relative to does not have to be along the same axis as the sizing value being set. For example, `width: anchor-size(height)` is valid.
 
 ### Return value
 

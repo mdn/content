@@ -9,13 +9,15 @@ browser-compat: svg.global_attributes.color-interpolation-filters
 
 The **`color-interpolation-filters`** attribute specifies the color space for imaging operations performed via filter effects.
 
-> **Note:** This property just has an affect on filter operations. Therefore, it has no effect on filter primitives like {{SVGElement("feOffset")}}, {{SVGElement("feImage")}}, {{SVGElement("feTile")}} or {{SVGElement("feFlood")}}.
+> [!NOTE]
+> This property just has an affect on filter operations. Therefore, it has no effect on filter primitives like {{SVGElement("feOffset")}}, {{SVGElement("feImage")}}, {{SVGElement("feTile")}} or {{SVGElement("feFlood")}}.
 >
 > `color-interpolation-filters` has a different initial value than {{SVGAttr("color-interpolation")}}. `color-interpolation-filters` has an initial value of `linearRGB`, whereas `color-interpolation` has an initial value of `sRGB`. Thus, in the default case, filter effects operations occur in the linearRGB color space, whereas all other color interpolations occur by default in the sRGB color space.
 >
-> It has no affect on filter functions, which operate in the {{Glossary("sRGB")}} color space.
+> It has no affect on filter functions, which operate in the {{Glossary("RGB", "sRGB")}} color space.
 
-> **Note:** As a presentation attribute, `color-interpolation-filters` can be used as a CSS property.
+> [!NOTE]
+> As a presentation attribute, `color-interpolation-filters` can be used as a CSS property. See {{cssxref('color-interpolation-filters')}} for more.
 
 You can use this attribute with the following SVG elements:
 
@@ -62,7 +64,7 @@ You can use this attribute with the following SVG elements:
 - `sRGB`
   - : Indicates that color interpolation should occur in the sRGB color space.
 - `linearRGB`
-  - : Indicates that color interpolation should occur in the linearized RGB color space as described in [the sRGB specification](https://webstore.iec.ch/publication/6169).
+  - : Indicates that color interpolation should occur in the linearized RGB color space as described in [the sRGB specification](https://webstore.iec.ch/en/publication/6169).
 
 ## Specifications
 
@@ -74,5 +76,6 @@ You can use this attribute with the following SVG elements:
 
 ## See also
 
-- [sRGB specification](https://webstore.iec.ch/publication/6169)
-- {{SVGAttr("color-interpolation")}}
+- SVG {{SVGAttr("color-interpolation")}} attribute
+- CSS {{cssxref('color-interpolation-filters')}} property
+- [sRGB specification](https://webstore.iec.ch/en/publication/6169)

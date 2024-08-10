@@ -9,7 +9,7 @@ browser-compat: api.History.length
 {{APIRef("History API")}}
 
 The **`length`** read-only property of the {{DOMxRef("History")}} interface
-returns an integer representing the number of elements in the session
+returns an integer representing the number of entries in the session
 history, including the currently loaded page.
 
 For example, for a page loaded in a new tab this property returns `1`.

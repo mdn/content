@@ -74,13 +74,14 @@ passEncoder.end();
 // ...
 ```
 
-The commands encoded by the {{domxref("GPUCommandEncoder")}} are recoded into a {{domxref("GPUCommandBuffer")}} using the {{domxref("GPUCommandEncoder.finish()")}} method. The command buffer is then passed into the queue via a {{domxref("GPUQueue.submit", "submit()")}} call, ready to be processed by the GPU.
+The commands encoded by the {{domxref("GPUCommandEncoder")}} are recoded into a {{domxref("GPUCommandBuffer")}} using the {{domxref("GPUCommandEncoder.finish()")}} method. The command buffer is then passed into the queue via a `submit()` call, ready to be processed by the GPU.
 
 ```js
 device.queue.submit([commandEncoder.finish()]);
 ```
 
-> **Note:** Study the [WebGPU samples](https://webgpu.github.io/webgpu-samples/) to find more queue examples.
+> [!NOTE]
+> Study the [WebGPU samples](https://webgpu.github.io/webgpu-samples/) to find more queue examples.
 
 ## Specifications
 

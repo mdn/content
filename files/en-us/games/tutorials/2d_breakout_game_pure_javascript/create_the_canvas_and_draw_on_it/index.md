@@ -139,7 +139,8 @@ ctx.closePath();
 
 {{embedlivesample("compare_your_code", 600, 340)}}
 
-> **Note:** Try changing the size and color of the given shapes.
+> [!NOTE]
+> Try changing the size and color of the given shapes.
 
 ## Next steps
 

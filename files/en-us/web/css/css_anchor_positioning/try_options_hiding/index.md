@@ -12,7 +12,8 @@ Alternatively, in some situations it may be preferable to just hide overflowing 
 
 This guide explains how to use CSS anchor positioning mechanisms to manage these issues — **position-try fallback options** and **conditional hiding**. Position-try fallback options provide alternative positions for the browser to try placing positioned elements in as they start to overflow, to keep them on-screen. Conditional hiding allows conditions to be specified under which the anchor or a positioned element will be hidden.
 
-> **Note:** For information on the basic fundamentals of CSS anchor positioning, see [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using).
+> [!NOTE]
+> For information on the basic fundamentals of CSS anchor positioning, see [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using).
 
 ## Feature summary
 
@@ -99,7 +100,7 @@ The anchor-positioned element is given fixed positioning and tethered to the anc
 }
 ```
 
-> ![NOTE]
+> [!NOTE]
 > When multiple position try fallback options are specified, they are separated by commas, and tried in the order they are specified.
 
 Try scrolling the demo so that the anchor starts to get near the edges:
@@ -251,7 +252,7 @@ Scroll the page and check out the effect of these position-try fallback options 
 
 To use custom position fallback options that aren't available via the above mechanisms, you can create your own with the {{cssxref("@position-try")}} at-rule. The syntax is:
 
-```text
+```plain
 @position-try --try-fallback-name {
   descriptor-list
 }
@@ -366,7 +367,8 @@ If the infobox starts to overflow, the browser tries the position options listed
 
 If none of the fallbacks succeed in stopping the positioned element from overflowing, the position will revert to the initial `inset-area: top;` value.
 
-> **Note:** When a position try fallback option is applied, its values will override the default values set on the positioned element. For example, the default `width` set on the positioned element is `200px`, but when the `--custom-right` position try fallback option is applied, its width is set to `100px`.
+> [!NOTE]
+> When a position try fallback option is applied, its values will override the default values set on the positioned element. For example, the default `width` set on the positioned element is `200px`, but when the `--custom-right` position try fallback option is applied, its width is set to `100px`.
 
 Scroll the page and check out the effect of these position-try fallback options as the anchor nears the edge of the viewport:
 

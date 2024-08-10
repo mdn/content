@@ -2,10 +2,12 @@
 title: <inset-area>
 slug: Web/CSS/inset-area_value
 page-type: css-type
+status:
+  - experimental
 browser-compat: css.properties.inset-area
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`<inset-area>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) defines the cell or spanned cells of an **inset-area grid**, an 3x3 grid whose center cell is an anchor element.
 
@@ -13,7 +15,7 @@ The `<inset-area>` keyword values can be set as the value of the {{cssxref("inse
 
 ## Syntax
 
-```text
+```plain
 <inset-area> = [
   [ left | center | right | span-left | span-right | x-start | x-end | span-x-start | span-x-end | x-self-start | x-self-end | span-x-self-start | span-x-self-end | span-all ]
 ||
@@ -87,7 +89,8 @@ The different types of keywords that can be used include:
 - [Explicit inline and block logical keywords](#explicit_inline_and_block_logical_keywords)
 - [Coordinate grid keywords](#coordinate_grid_keywords)
 
-> **Note:** Generally, you can't mix different types in one value, e.g. physical and logical. To do so results in invalid values. For example, `inset-area: bottom inline-end` is not a valid value because it mixes physical and logical keywords.
+> [!NOTE]
+> Generally, you can't mix different types in one value, e.g. physical and logical. To do so results in invalid values. For example, `inset-area: bottom inline-end` is not a valid value because it mixes physical and logical keywords.
 
 ## Physical grid keywords
 
@@ -126,7 +129,8 @@ The physical spanning keywords — when combined with a physical row or column k
 
 For example, `top span-left` spans the top-center and top-left grid cells.
 
-> **Note:** Trying to pair a row or column keyword with an inappropriate spanning keyword will result in an invalid value. For example, `right span-right` is invalid — you can't select the center-right grid tile and then try to span further to the right.
+> [!NOTE]
+> Trying to pair a row or column keyword with an inappropriate spanning keyword will result in an invalid value. For example, `right span-right` is invalid — you can't select the center-right grid tile and then try to span further to the right.
 
 ### Physical grid keyword defaults
 
@@ -214,7 +218,8 @@ The explicit inline and block logical row and column keywords refer explicitly t
 
 For example, `block-start inline-end` specifies the tile at the start of the block direction and the end of the inline direction. With `writing-mode: horizontal-tb` set, this would be the tile at the top-right of the anchor, whereas with `writing-mode: vertical-rl` set this would be the tile at the bottom-right.
 
-> **Note:** The specification defines `self` equivalents of these keywords — `block-self-start`, `block-self-end`, `inline-self-start`, and `inline-self-end`. However, these are not currently supported in any browser.
+> [!NOTE]
+> The specification defines `self` equivalents of these keywords — `block-self-start`, `block-self-end`, `inline-self-start`, and `inline-self-end`. However, these are not currently supported in any browser.
 
 #### Spanning explicit inline and block logical keywords
 
@@ -238,9 +243,11 @@ The generic logical spanning keywords — when combined with a logical row or co
 
 For example, `block-end span-inline-start` selects the center tile of the end block row and spans across the tiles in that row that are in the inline center and start columns. With `writing-mode: horizontal-tb` set, this would span the bottom-center and bottom-left grid tiles, whereas with `writing-mode: vertical-rl` set it would span the left-center and top-left grid tiles.
 
-> **Note:** The specification defines `self` equivalents of these keywords, for example — `span-self-block-start`, `span-self-block-end`, `span-self-inline-start`, and `span-self-inline-end`. However, these are not currently supported in any browser.
+> [!NOTE]
+> The specification defines `self` equivalents of these keywords, for example — `span-self-block-start`, `span-self-block-end`, `span-self-inline-start`, and `span-self-inline-end`. However, these are not currently supported in any browser.
 
-> **Note:** Trying to pair a row or column keyword with an inappropriate spanning keyword will result in an invalid property value. For example, `block-end span-block-end` is invalid — you can't select the center block-end row and then try to span one tile further past the block end direction.
+> [!NOTE]
+> Trying to pair a row or column keyword with an inappropriate spanning keyword will result in an invalid property value. For example, `block-end span-block-end` is invalid — you can't select the center block-end row and then try to span one tile further past the block end direction.
 
 ### Logical grid keyword defaults
 
@@ -341,7 +348,8 @@ When combined with a coordinate row or column keyword, the coordinate-spanning k
 
 For example, `y-end span-x-end` selects the tile at the center of the end y-row, and spans across the tiles in that row that are also in the x-center and x-end columns. With `writing-mode: horizontal-tb` set, the inset grid area would span the grid tiles at the bottom-center and bottom-right, whereas with `writing-mode: vertical-rl` set it would span the bottom-center and bottom-left tiles.
 
-> **Note:** The specification doesn't define separate coordinate `self` spanning keywords, but these are not needed — the spanning keywords can be used with both coordinate row and column keywords.
+> [!NOTE]
+> The specification doesn't define separate coordinate `self` spanning keywords, but these are not needed — the spanning keywords can be used with both coordinate row and column keywords.
 
 ### Coordinate grid keyword defaults
 

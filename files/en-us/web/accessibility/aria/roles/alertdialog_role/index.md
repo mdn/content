@@ -17,7 +17,8 @@ The `alertdialog` role is used to notify users of urgent information that demand
 
 As the name implies, `alertdialog` is a mashup of the [`dialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role) and [`alert`](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role) roles. `alertdialog` is a type of `dialog` with similar use cases as `alert`, but for when a user response is required.
 
-> **Note:** The `alertdialog` role should only be used for alert messages that have associated interactive controls. If an alert dialog only contains static content and has no interactive controls at all, use [`alert`](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role) instead.
+> [!NOTE]
+> The `alertdialog` role should only be used for alert messages that have associated interactive controls. If an alert dialog only contains static content and has no interactive controls at all, use [`alert`](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role) instead.
 
 Being a type of dialog, the [`dialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/dialog_role) role's states, properties, and keyboard focus requirements are applicable to the `alertdialog` role as well.
 

@@ -26,7 +26,8 @@ The process of recording a stream is simple:
 6. Recording stops automatically when the source media stops playing.
 7. You can stop recording at any time by calling {{domxref("MediaRecorder.stop()")}}.
 
-> **Note:** Individual {{domxref("Blob")}}s containing slices of the recorded media will not necessarily be individually playable. The media needs to be reassembled before playback.
+> [!NOTE]
+> Individual {{domxref("Blob")}}s containing slices of the recorded media will not necessarily be individually playable. The media needs to be reassembled before playback.
 
 If anything goes wrong during recording, an {{domxref("MediaRecorder/error_event", "error")}} event is sent to the `MediaRecorder`. You can listen for `error` events by setting up a {{domxref("MediaRecorder.error_event", "onerror")}} event handler.
 

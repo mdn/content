@@ -9,7 +9,8 @@ browser-compat: mathml.elements.mstyle
 
 The **`<mstyle>`** [MathML](/en-US/docs/Web/MathML) element is used to change the style of its children.
 
-> **Note:** Historically, this element accepted almost all the MathML attributes and it was used to override the default attribute values of its descendants. It was later restricted to only a few relevant styling attributes that were used in existing web pages. Nowadays, these styling attributes are [common to all MathML elements](/en-US/docs/Web/MathML/Global_attributes) and so `<mstyle>` is really just equivalent to an [`<mrow>`](/en-US/docs/Web/MathML/Element/mrow) element. However, `<mstyle>` may still be relevant for compatibility with MathML implementations outside browsers.
+> [!NOTE]
+> Historically, this element accepted almost all the MathML attributes and it was used to override the default attribute values of its descendants. It was later restricted to only a few relevant styling attributes that were used in existing web pages. Nowadays, these styling attributes are [common to all MathML elements](/en-US/docs/Web/MathML/Global_attributes) and so `<mstyle>` is really just equivalent to an [`<mrow>`](/en-US/docs/Web/MathML/Element/mrow) element. However, `<mstyle>` may still be relevant for compatibility with MathML implementations outside browsers.
 
 ## Attributes
 
@@ -25,10 +26,6 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
   - : Use {{cssxref("font-style")}} instead.
 - `fontweight` {{deprecated_inline}} {{Non-standard_Inline}}
   - : Use {{cssxref("font-weight")}} instead.
-- `scriptminsize` {{deprecated_inline}} {{Non-standard_Inline}}
-  - : Specifies a minimum font size allowed due to changes in `scriptlevel`. The default value is `8pt`.
-- `scriptsizemultiplier` {{deprecated_inline}} {{Non-standard_Inline}}
-  - : Specifies the multiplier to be used to adjust font size due to changes in `scriptlevel`. The default value is `0.71`.
 
 ## Examples
 

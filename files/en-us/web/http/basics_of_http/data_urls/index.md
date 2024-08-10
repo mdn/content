@@ -9,7 +9,8 @@ browser-compat: http.data-url
 
 **Data URLs**, URLs prefixed with the `data:` scheme, allow content creators to embed small files inline in documents. They were formerly known as "data URIs" until that name was retired by the WHATWG.
 
-> **Note:** Data URLs are treated as unique opaque origins by modern browsers, rather than inheriting the origin of the settings object responsible for the navigation.
+> [!NOTE]
+> Data URLs are treated as unique opaque origins by modern browsers, rather than inheriting the origin of the settings object responsible for the navigation.
 
 ## Syntax
 
@@ -21,14 +22,14 @@ data:[<mediatype>][;base64],<data>
 
 The `mediatype` is a [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) string, such as `'image/jpeg'` for a JPEG image file. If omitted, defaults to `text/plain;charset=US-ASCII`
 
-If the data contains [characters defined in RFC 3986 as reserved characters](https://datatracker.ietf.org/doc/html/rfc3986#section-2.2), or contains space characters, newline characters, or other non-printing characters, those characters must be [percent-encoded](https://en.wikipedia.org/wiki/Percent-encoding).
+If the data contains [characters defined in RFC 3986 as reserved characters](https://datatracker.ietf.org/doc/html/rfc3986#section-2.2), or contains space characters, newline characters, or other non-printing characters, those characters must be {{Glossary("Percent-encoding", "percent-encoded")}}.
 
 If the data is textual, you can embed the text (using the appropriate entities or escapes based on the enclosing document's type). Otherwise, you can specify `base64` to embed base64-encoded binary data. You can find more info on MIME types [here](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) and [here](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types).
 
 A few examples:
 
 - `data:,Hello%2C%20World%21`
-  - : The text/plain data `Hello, World!`. Note how the comma is [percent-encoded](https://en.wikipedia.org/wiki/Percent-encoding) as `%2C`, and the space character as `%20`.
+  - : The text/plain data `Hello, World!`. Note how the comma is {{Glossary("Percent-encoding", "percent-encoded")}} as `%2C`, and the space character as `%20`.
 - `data:text/plain;base64,SGVsbG8sIFdvcmxkIQ==`
   - : base64-encoded version of the above
 - `data:text/html,%3Ch1%3EHello%2C%20World%21%3C%2Fh1%3E`
@@ -62,7 +63,7 @@ base64 a.txt>b.txt
 
 ### Encoding on Microsoft Windows
 
-On Windows, [Convert.ToBase64String](https://docs.microsoft.com/dotnet/api/system.convert.tobase64string?view=net-5.0) from PowerShell can be used to perform the Base64 encoding:
+On Windows, [Convert.ToBase64String](https://learn.microsoft.com/en-us/dotnet/api/system.convert.tobase64string?view=net-5.0) from PowerShell can be used to perform the Base64 encoding:
 
 ```plain
 [convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes("hello"))
@@ -114,9 +115,9 @@ lots of text…
 
 ## See also
 
-- [Base64](/en-US/docs/Glossary/Base64)
-- [Percent-encoding](https://en.wikipedia.org/wiki/Percent-encoding)
+- {{Glossary("Base64")}}
+- {{Glossary("Percent-encoding")}}
 - {{domxref("WorkerGlobalScope.atob()", "atob()")}}
 - {{domxref("WorkerGlobalScope.btoa()", "btoa()")}}
-- [CSS `url()`](/en-US/docs/Web/CSS/url)
-- [URI](/en-US/docs/Glossary/URI)
+- CSS {{CSSXref("url", "url()")}}
+- {{Glossary("URI")}}

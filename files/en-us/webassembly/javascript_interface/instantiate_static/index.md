@@ -19,7 +19,8 @@ compile and instantiate WebAssembly code. This function has two overloads:
   `Module`. This overload is useful if the `Module` has already
   been compiled.
 
-> **Warning:** This method is not the most efficient way of fetching and
+> [!WARNING]
+> This method is not the most efficient way of fetching and
 > instantiating Wasm modules. If at all possible, you should use the newer
 > [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) method instead, which fetches,
 > compiles, and instantiates a module all in one step, directly from the raw bytecode,
@@ -91,7 +92,8 @@ A `Promise` that resolves to an [`WebAssembly.Instance`](/en-US/docs/WebAssembly
 
 ## Examples
 
-> **Note:** You'll probably want to use [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) in most cases, as it is more efficient than `instantiate()`.
+> [!NOTE]
+> You'll probably want to use [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) in most cases, as it is more efficient than `instantiate()`.
 
 ### First overload example
 
@@ -115,7 +117,8 @@ fetch("simple.wasm")
   .then((result) => result.instance.exports.exported_func());
 ```
 
-> **Note:** You can also find this example at [index.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/index.html)
+> [!NOTE]
+> You can also find this example at [index.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/index.html)
 > on GitHub ([view it live also](https://mdn.github.io/webassembly-examples/js-api-examples/)).
 
 ### Second overload example

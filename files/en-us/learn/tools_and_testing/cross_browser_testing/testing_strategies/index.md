@@ -45,7 +45,8 @@ You can classify browsers and devices by the amount of support you intend to giv
 
 In the following sections, we'll build up a support chart in this format.
 
-> **Note:** Yahoo first made this approach popular, with their [Graded browser Support](https://github.com/yui/yui3/wiki/Graded-Browser-Support) approach.
+> [!NOTE]
+> Yahoo first made this approach popular, with their [Graded browser Support](https://github.com/yui/yui3/wiki/Graded-Browser-Support) approach.
 
 ### Predict your audience's most commonly used browsers
 
@@ -55,7 +56,7 @@ A quick online search tells you that most people in North America and Western Eu
 
 Most people in this demographic also use either iOS or Android phones, so you'd probably want to test the latest versions of iOS Safari, the last couple of versions of the old Android stock browser, and Chrome and Firefox for iOS and Android. You should ideally test these on both a phone and a tablet, to ensure responsive designs work.
 
-Opera Mini [isn't very capable of running complex JavaScript](https://dev.opera.com/articles/opera-mini-and-javascript/), so we should put this into grade B as well.
+Opera Mini isn't very capable of running complex JavaScript, so we should put this into grade B as well.
 
 Thus, we've based our choice of which browsers to test on the browsers that we expect our users to use.
 This gives us the following support chart so far:
@@ -66,7 +67,8 @@ This gives us the following support chart so far:
 
 If your target audience is mostly located somewhere else, then the most common browsers and OSs may differ from the above.
 
-> **Note:** "The CEO of my company uses a Blackberry, so we'd better make sure it looks good on that" can also be something to consider.
+> [!NOTE]
+> "The CEO of my company uses a Blackberry, so we'd better make sure it looks good on that" can also be something to consider.
 
 ### Browser statistics
 
@@ -76,7 +78,7 @@ Some websites show which browsers are popular in a given region. For example, [S
 
 A much more accurate source of data, if you can get it, is an analytics app like [Google Analytics](https://marketingplatform.google.com/about/analytics/), which tells you exactly what browsers people are using to browse your site. Of course, this relies on you already having a site to use it on, so it isn't good for completely new sites.
 
-You may also consider using open-source and privacy-focused analytics platforms like [Open Web Analytics](https://www.openwebanalytics.com/) and [Matomo](https://matomo.org). They expect you to self-host the analytics platform.
+You may also consider using open-source and privacy-focused analytics platforms like [Open Web Analytics](https://www.openwebanalytics.com/) and [Matomo](https://matomo.org/). They expect you to self-host the analytics platform.
 
 #### Setting up Google analytics
 
@@ -91,18 +93,19 @@ That's it! Your site should now be ready to start reporting analytics data.
 
 #### Studying analytics data
 
-Now you should be able to go back to the [Analytics Web](https://analytics.google.com/analytics/web) homepage, and start looking at the data you've collected about your site (you need to leave a little bit of time for some data to actually be collected, of course.)
+Now you should be able to go back to the [Analytics Web](https://analytics.google.com/analytics/web/) homepage, and start looking at the data you've collected about your site (you need to leave a little bit of time for some data to actually be collected, of course.)
 
 By default, you should see the reporting tab, like so:
 
 ![How google analytics collects data in its main reporting dashboard](analytics-reporting.png)
 
 There is a huge amount of data you could look at using Google Analytics — customized reports in different categories, etc. — and we haven't got time to discuss it all.
-[Getting started with Analytics](https://support.google.com/analytics/answer/9306384?visit_id=637855964517698041-2103767437&rd=1) provides some useful guidance on reporting (and more) for beginners.
+[Getting started with Analytics](https://support.google.com/analytics/answer/9304153) provides some useful guidance on reporting (and more) for beginners.
 
 You can see what browsers and operating systems your users are using by selecting _Audience > Technology > Browser & OS_ from the left-hand menu.
 
-> **Note:** When using Google analytics, you need to beware of misleading bias, e.g. "We have no Firefox Mobile users" might lead you to not bother supporting Firefox mobile. But you are not going to have any Firefox Mobile users if the site was broken on Firefox mobile in the first place.
+> [!NOTE]
+> When using Google analytics, you need to beware of misleading bias, e.g. "We have no Firefox Mobile users" might lead you to not bother supporting Firefox mobile. But you are not going to have any Firefox Mobile users if the site was broken on Firefox mobile in the first place.
 
 ### Other considerations
 
@@ -172,9 +175,11 @@ Some larger companies have device labs that stock a very large selection of diff
 
 We will cover each of the other options below.
 
-> **Note:** Some efforts have been made to create publicly accessible device labs — see [Open Device Labs](https://www.smashingmagazine.com/2016/11/worlds-best-open-device-labs/).
+> [!NOTE]
+> Some efforts have been made to create publicly accessible device labs — see [Open Device Labs](https://www.smashingmagazine.com/2016/11/worlds-best-open-device-labs/).
 
-> **Note:** We also need to consider accessibility — there are a number of useful tools you can install on your machine to facilitate accessibility testing, but we'll cover those in the Handling common accessibility problems article, later in the course.
+> [!NOTE]
+> We also need to consider accessibility — there are a number of useful tools you can install on your machine to facilitate accessibility testing, but we'll cover those in the Handling common accessibility problems article, later in the course.
 
 ### Emulators
 
@@ -189,15 +194,17 @@ More often than not though, you'll have to install some kind of emulator. The mo
 
 You can often find simulators for other mobile device environments too, for example:
 
-- You can emulate [Opera Mini](https://dev.opera.com/articles/installing-opera-mini-on-your-computer/) on its own if you want to test it.
+- You can emulate Opera Mini on its own if you want to test it.
 
-> **Note:** Many emulators actually require the use of a virtual machine (see below); when this is the case, instructions are often provided, and/or use of the virtual machine is incorporated into the installer of the emulator.
+> [!NOTE]
+> Many emulators actually require the use of a virtual machine (see below); when this is the case, instructions are often provided, and/or use of the virtual machine is incorporated into the installer of the emulator.
 
 ### Virtual machines
 
 Virtual machines are applications that run on your desktop computer and allow you to run emulations of entire operating systems, each compartmentalized in its own virtual hard drive (often represented by a single large file existing on the host machine's hard drive). There are a number of popular virtual machine apps available, such as [Parallels](https://www.parallels.com/), [VMWare](https://www.vmware.com/), and [Virtual Box](https://www.virtualbox.org/wiki/Downloads); we personally like the latter, because it is free.
 
-> **Note:** You need a lot of hard disk space available to run virtual machine emulations; each operating system you emulate can take up a lot of memory. You tend to choose the hard drive space you want for each install; you could get away with probably 10GB, but some sources recommend up to 50GB or more, so the operating system will run reliably. A good option provided by most virtual machine apps is to create a **dynamically allocated** hard drive that grows and shrinks as the need arises.
+> [!NOTE]
+> You need a lot of hard disk space available to run virtual machine emulations; each operating system you emulate can take up a lot of memory. You tend to choose the hard drive space you want for each install; you could get away with probably 10GB, but some sources recommend up to 50GB or more, so the operating system will run reliably. A good option provided by most virtual machine apps is to create a **dynamically allocated** hard drive that grows and shrinks as the need arises.
 
 To use a Virtual Box, you need to:
 
@@ -217,7 +224,8 @@ Now the new virtual box should appear in the left-hand menu of the main Virtual 
 
 ![How to install the virtual Box for a specific operating system](virtualbox-installer.png)
 
-> **Warning:** You need to make sure you have the operating system image you want to install on the virtual machine available at this point, and install it right away. If you cancel the process at this point, it can render the virtual machine unusable, and make it so you need to delete it and create it again. This is not fatal, but it is annoying.
+> [!WARNING]
+> You need to make sure you have the operating system image you want to install on the virtual machine available at this point, and install it right away. If you cancel the process at this point, it can render the virtual machine unusable, and make it so you need to delete it and create it again. This is not fatal, but it is annoying.
 
 After the process has completed, you should have a virtual machine running an operating system inside a window on your host computer.
 
@@ -230,7 +238,8 @@ Having multiple virtual machines is very useful, particularly for Windows IE/Edg
 - Windows 10 with Edge 14
 - Windows 10 with Edge 13
 
-> **Note:** Another good thing about virtual machines is that the virtual disk images are fairly self-contained. If you are working on a team, you can create one virtual disk image, then copy it and pass it around. Just make sure you have the required licenses to run all those copies of Windows or whatever else you are running if it is a licensed product.
+> [!NOTE]
+> Another good thing about virtual machines is that the virtual disk images are fairly self-contained. If you are working on a team, you can create one virtual disk image, then copy it and pass it around. Just make sure you have the required licenses to run all those copies of Windows or whatever else you are running if it is a licensed product.
 
 ### Automation and commercial apps
 
@@ -238,7 +247,7 @@ As mentioned in the last chapter, you can take a lot of the pain out of browser 
 
 There are also commercial tools available such as [Sauce Labs](https://saucelabs.com/), [Browser Stack](https://www.browserstack.com/) and [LambdaTest](https://www.lambdatest.com/) that do this kind of thing for you, without you having to worry about the setup, if you wish to invest some money in your testing.
 
-Another alternative is to use no-code test automation tools such as [Endtest](https://endtest.io).
+Another alternative is to use no-code test automation tools such as [Endtest](https://www.endtest.io/).
 
 We will look at how to use such tools later on in the module.
 
@@ -262,9 +271,11 @@ When running tests, it can also be a good idea to:
 
 These steps are designed to make sure that the browser you are testing in is as "pure" as possible, i.e. there is nothing installed that could affect the results of the tests.
 
-> **Note:** Another useful lo-fi option, if you have the hardware available, is to test your sites on low-end phones/other devices — as sites get larger and feature more effects, there is a higher chance of the site slowing down, so you need to start giving performance more consideration. Trying to get your functionality working on a low end device will make it more likely that the experience will be good on higher-end devices.
+> [!NOTE]
+> Another useful lo-fi option, if you have the hardware available, is to test your sites on low-end phones/other devices — as sites get larger and feature more effects, there is a higher chance of the site slowing down, so you need to start giving performance more consideration. Trying to get your functionality working on a low end device will make it more likely that the experience will be good on higher-end devices.
 
-> **Note:** Some server-side development environments provide useful mechanisms for rolling out site changes to only a subset of users, providing a useful mechanism for getting a feature tested by a subset of users without the need for a separate development server. An example is [Django Waffle Flags](https://github.com/django-waffle/django-waffle).
+> [!NOTE]
+> Some server-side development environments provide useful mechanisms for rolling out site changes to only a subset of users, providing a useful mechanism for getting a feature tested by a subset of users without the need for a separate development server. An example is [Django Waffle Flags](https://github.com/jazzband/django-waffle).
 
 ## Summary
 

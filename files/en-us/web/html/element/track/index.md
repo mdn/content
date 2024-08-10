@@ -67,7 +67,7 @@ A media element cannot have more than one `track` with the same `kind`, `srclang
 
 The underlying {{domxref("TextTrack")}}, indicated by the {{domxref("HTMLTrackElement.track", "track")}} property, receives a `cuechange` event every time the currently-presented cue is changed. This happens even if the track isn't associated with a media element.
 
-If the track _is_ associated with a media element, using the {{HTMLElement("track")}} element as a child of the {{HTMLElement("audio")}} or {{HTMLElement("video")}} element, the `cuechange` event is also sent to the {{domxref("HTMLTrackElement")}}.
+If the track _is_ associated with a media element, using the `<track>` element as a child of the {{HTMLElement("audio")}} or {{HTMLElement("video")}} element, the `cuechange` event is also sent to the {{domxref("HTMLTrackElement")}}.
 
 ```js
 let textTrackElem = document.getElementById("texttrack");
@@ -82,7 +82,7 @@ textTrackElem.addEventListener("cuechange", (event) => {
 The JavaScript interface that represents the `<track>` element is {{domxref("HTMLTrackElement")}}.
 The text track associated with an element can be obtained from the {{domxref("HTMLTrackElement.track")}} property, and is of type {{domxref("TextTrack")}}.
 
-`TextTrack` objects also can be added to a {{domxref("HTMLVideoElement")}} or {{domxref("HTMLAudioElement")}} elements using the {{domxref("HTMLMediaElement.addTrack()")}} method.
+`TextTrack` objects also can be added to a {{domxref("HTMLVideoElement")}} or {{domxref("HTMLAudioElement")}} elements using the {{domxref("HTMLMediaElement.addTextTrack()")}} method.
 The `TextTrack` objects associated with a media element stored in a {{domxref("TextTrackList")}}, which can be retrieved using the {{domxref("HTMLMediaElement.textTracks")}} property.
 
 ## Examples

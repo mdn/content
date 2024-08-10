@@ -23,7 +23,7 @@ One of:
 
 ## Examples
 
-In the following example the value of {{domxref("RemotePlayback.state")}} is printed to the console when the user agent successfully connects.
+In the following example the value of `RemotePlayback.state` is printed to the console when the user agent successfully connects.
 
 ```js
 RemotePlayback.onconnect = () => {

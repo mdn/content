@@ -2,6 +2,8 @@
 title: field-sizing
 slug: Web/CSS/field-sizing
 page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.field-sizing
 ---
 
@@ -183,7 +185,8 @@ The HTML contains two sets of `<select>` elements: one with `field-sizing: conte
 </div>
 ```
 
-> **Note:** Best practice is to include a {{htmlelement("label")}} element for each form control, to associate a meaningful text description with each field for accessibility purposes (see [Meaningful text labels](/en-US/docs/Learn/Accessibility/HTML#meaningful_text_labels) for more information). We haven't done so in this example, as it focuses purely on aspects of the form controls' visual rendering, but you should make sure you include form labels in production code.
+> [!NOTE]
+> Best practice is to include a {{htmlelement("label")}} element for each form control, to associate a meaningful text description with each field for accessibility purposes (see [Meaningful text labels](/en-US/docs/Learn/Accessibility/HTML#meaningful_text_labels) for more information). We haven't done so in this example, as it focuses purely on aspects of the form controls' visual rendering, but you should make sure you include form labels in production code.
 
 #### CSS
 

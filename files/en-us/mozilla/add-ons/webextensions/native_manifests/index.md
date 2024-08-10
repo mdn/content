@@ -257,7 +257,7 @@ The PKCS #11 manifest is a file with a name that matches the name of the PKCS #1
       <td>String</td>
       <td>
         <p>Name of the PKCS #11 module.</p>
-        <p>This must match the name used in the <code>pkcs11</code> API.</p>
+        <p>This must match the name used in the {{WebExtAPIRef("pkcs11")}} API.</p>
         <p>
           On Windows, use this as the name of the registry key you create,
           which contains the location of the manifest.
@@ -274,7 +274,7 @@ The PKCS #11 manifest is a file with a name that matches the name of the PKCS #1
       <td><code>description</code></td>
       <td>String</td>
       <td>
-        <p>Description of the module.</p>
+        <p>Description of the PKCS #11 module.</p>
         <p>
           This sets the friendly name for the module in the browser's
           UI (for example, the "Security Devices" dialog in Firefox).
@@ -285,10 +285,9 @@ The PKCS #11 manifest is a file with a name that matches the name of the PKCS #1
       <td><code>path</code></td>
       <td>String</td>
       <td>
-        <p>Path to the module.</p>
+        <p>Path to the PKCS #11 module.</p>
         <p>
-          On Windows, this may be relative to the manifest itself. On MacOS and
-          Linux, it must be absolute.
+          The path to the PKCS #11 module may be absolute or relative to the manifest itself.
         </p>
       </td>
     </tr>
@@ -371,7 +370,8 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\PKCS11Modules\<name>
 
 The key should have a single default value, which is the path to the manifest.
 
-> **Warning:** As of Firefox 64, the 32-bit registry view [Wow6432Node](https://en.wikipedia.org/wiki/WoW64#Registry_and_file_system) will be checked first for these keys, followed by the "native" registry view. Use whichever is appropriate for your application.
+> [!WARNING]
+> As of Firefox 64, the 32-bit registry view [Wow6432Node](https://en.wikipedia.org/wiki/WoW64#Registry_and_file_system) will be checked first for these keys, followed by the "native" registry view. Use whichever is appropriate for your application.
 >
 > **For Firefox 63 and older:** This key should _not_ be created under [Wow6432Node](https://en.wikipedia.org/wiki/WoW64#Registry_and_file_system), even if the app is 32-bit. Previous versions of the browser will always look for the key under the "native" view of the registry, not the 32-bit emulation. To ensure that the key is created in the "native" view, you can pass the `KEY_WOW64_64KEY` or `KEY_WOW64_32KEY` flags into `RegCreateKeyEx`. See [Accessing an Alternate Registry View](https://docs.microsoft.com/windows/win32/winprog64/accessing-an-alternate-registry-view).
 

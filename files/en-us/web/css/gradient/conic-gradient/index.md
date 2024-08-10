@@ -52,7 +52,8 @@ conic-gradient(
 - `<color-hint>`
   - : An {{Glossary("interpolation")}} hint defining how the gradient progresses between adjacent color stops. The length defines at which point between two color stops the gradient color should reach the midpoint of the color transition. If omitted, the midpoint of the color transition is the midpoint between two color stops.
 
-> **Note:** Rendering of [color stops in CSS gradients](#gradient_with_multiple_color_stops) follows the same rules as color stops in [SVG gradients](/en-US/docs/Web/SVG/Tutorial/Gradients).
+> [!NOTE]
+> Rendering of [color stops in CSS gradients](#gradient_with_multiple_color_stops) follows the same rules as color stops in [SVG gradients](/en-US/docs/Web/SVG/Tutorial/Gradients).
 
 ## Description
 
@@ -62,7 +63,8 @@ To create a conic gradient that repeats so as to fill a 360 degree rotation, use
 
 Because `<gradient>`s belong to the `<image>` data type, they can only be used where `<image>`s can be used. For this reason, `conic-gradient()` won't work on {{CSSxRef("background-color")}} and other properties that use the {{CSSxRef("&lt;color&gt;")}} data type.
 
-> **Note:** Why is it called a "conic" gradient? If the color stops are much lighter on one side than the other, it can look like a cone from above.
+> [!NOTE]
+> Why is it called a "conic" gradient? If the color stops are much lighter on one side than the other, it can look like a cone from above.
 
 ### Composition of a conic gradient
 
@@ -117,7 +119,7 @@ And, yes, you can mix and match different angle units, but don't. The above is h
 
 {{csssyntax}}
 
-## Accessibility concerns
+## Accessibility
 
 Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users. While it is possible to create pie charts, checkerboards, and other effects with conic gradients, CSS images provide no native way to assign alternative text, and therefore the image represented by the conic gradient will not be accessible to screen reader users. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.
 

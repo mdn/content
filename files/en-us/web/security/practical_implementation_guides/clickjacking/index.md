@@ -31,9 +31,11 @@ The equivalent options for each setting are as follows:
 | `frame-ancestors 'self'`              | `SAMEORIGIN`                    | Allow only same-origin embedding attempts.          |
 | `frame-ancestors https://example.org` | `ALLOWFROM https://example.org` | Allow embedding attempts from the specified domain. |
 
-> **Note:** The `X-Frame-Options: ALLOWFROM https://example.org` syntax is deprecated, and most browsers ignore it. You are recommend to set `DENY` in such cases instead, and/or rely on the CSP equivalent.
+> [!NOTE]
+> The `X-Frame-Options: ALLOWFROM https://example.org` syntax is deprecated, and most browsers ignore it. You are recommend to set `DENY` in such cases instead, and/or rely on the CSP equivalent.
 
-> **Note:** Setting cookies with the [`SameSite`](/en-US/docs/Web/Security/Practical_implementation_guides/Cookies#samesite) directive is also useful in clickjacking cases that rely on the user being authenticated.
+> [!NOTE]
+> Setting cookies with the [`SameSite`](/en-US/docs/Web/Security/Practical_implementation_guides/Cookies#samesite) directive is also useful in clickjacking cases that rely on the user being authenticated.
 
 ## Examples
 

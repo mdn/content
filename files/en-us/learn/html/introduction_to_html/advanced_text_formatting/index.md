@@ -496,7 +496,8 @@ These will come out looking something like this:
 
 {{EmbedLiveSample('Abbreviation_example', '100%', '150')}}
 
-> **Note:** Earlier versions of html also included support for the {{htmlelement("acronym")}} element, but it was removed from the HTML spec in favor of using `<abbr>` to represent both abbreviations and acronyms. `<acronym>` should not be used.
+> [!NOTE]
+> Earlier versions of html also included support for the {{htmlelement("acronym")}} element, but it was removed from the HTML spec in favor of using `<abbr>` to represent both abbreviations and acronyms. `<acronym>` should not be used.
 
 ### Active learning: marking up an abbreviation
 
@@ -663,7 +664,8 @@ Note that something like this would also be OK, if the linked page contained the
 </address>
 ```
 
-> **Note:** The {{htmlelement("address")}} element should only be used to provide contact information for the document contained with the nearest {{htmlelement("article")}} or {{htmlelement("body")}} element. It would be correct to use it in the footer of a site to include the contact information of the entire site, or inside an article for the contact details of the author, but not to mark up a list of addresses unrelated to the content of that page.
+> [!NOTE]
+> The {{htmlelement("address")}} element should only be used to provide contact information for the document contained with the nearest {{htmlelement("article")}} or {{htmlelement("body")}} element. It would be correct to use it in the footer of a site to include the contact information of the entire site, or inside an article for the contact details of the author, but not to mark up a list of addresses unrelated to the content of that page.
 
 ## Superscript and subscript
 

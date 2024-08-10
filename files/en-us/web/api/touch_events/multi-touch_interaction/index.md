@@ -6,7 +6,7 @@ page-type: guide
 
 {{DefaultAPISidebar("Touch Events")}}
 
-The touch event interfaces support application-specific single and multi-touch interactions. However, the interfaces can be a bit tricky for programmers to use because touch events are very different from other DOM input events, such as {{domxref("MouseEvent","mouse events")}}. The application described in this guide shows how to use touch events for simple single and multi-touch interactions, the basics needed to build application-specific gestures.
+The touch event interfaces support application-specific single and multi-touch interactions. However, the interfaces can be a bit tricky for programmers to use because touch events are very different from other DOM input events, such as [mouse events](/en-US/docs/Web/API/MouseEvent). The application described in this guide shows how to use touch events for simple single and multi-touch interactions, the basics needed to build application-specific gestures.
 
 A _live_ version of this application is available on [GitHub](https://mdn.github.io/dom-examples/touchevents/Multi-touch_interaction.html). The [source code is available on GitHub](https://github.com/mdn/dom-examples/tree/main/touchevents) and pull requests and [bug reports](https://github.com/mdn/dom-examples/issues) are welcome.
 
@@ -248,23 +248,23 @@ function log(name, ev, printTargetIds) {
     `${name}: touches = ${ev.touches.length} ; ` +
     `targetTouches = ${ev.targetTouches.length} ; ` +
     `changedTouches = ${ev.changedTouches.length}`;
-  o.innerHTML += `${s}<br>`;
+  o.innerText += `${s}\n`;
 
   if (printTargetIds) {
     s = "";
     for (let i = 0; i < ev.targetTouches.length; i++) {
-      s += `... id = ${ev.targetTouches[i].identifier}<br>`;
+      s += `... id = ${ev.targetTouches[i].identifier}\n`;
     }
-    o.innerHTML += s;
+    o.innerText += s;
   }
 }
 
 function clearLog(event) {
   const o = document.getElementsByTagName("output")[0];
-  o.innerHTML = "";
+  o.textContent = "";
 }
 ```
 
-## Related topics and resources
+## See also
 
-- {{domxref("Pointer_events","Pointer Events")}}
+- [Pointer events](/en-US/docs/Web/API/Pointer_events)

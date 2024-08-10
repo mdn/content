@@ -86,7 +86,8 @@ The `replacer` function is called for the initial object being stringified as we
 - If you return a {{jsxref("Function")}}, {{jsxref("Symbol")}}, or {{jsxref("undefined")}}, the property is not included in the output.
 - If you return any other object, the object is recursively stringified, calling the `replacer` function on each property.
 
-> **Note:** When parsing JSON generated with `replacer` functions, you would likely want to use the [`reviver`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#using_the_reviver_parameter) parameter to perform the reverse operation.
+> [!NOTE]
+> When parsing JSON generated with `replacer` functions, you would likely want to use the [`reviver`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#using_the_reviver_parameter) parameter to perform the reverse operation.
 
 Typically, array elements' index would never shift (even when the element is an invalid value like a function, it will become `null` instead of omitted). Using the `replacer` function allows you to control the order of the array elements by returning a different array.
 

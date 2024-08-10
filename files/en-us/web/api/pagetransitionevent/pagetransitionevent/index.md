@@ -10,7 +10,8 @@ browser-compat: api.PageTransitionEvent.PageTransitionEvent
 
 The **`PageTransitionEvent()`** constructor creates a new {{domxref("PageTransitionEvent")}} object, that is used by the {{domxref("Window/pageshow_event", "pageshow")}} or {{domxref("Window/pagehide_event", "pagehide")}} events, fired at the {{domxref("window")}} object when a page is loaded or unloaded.
 
-> **Note:** A web developer doesn't typically need to call this constructor, as the browser creates these objects itself when firing {{domxref("Window/pageshow_event", "pageshow")}} or {{domxref("Window/pagehide_event", "pagehide")}} events.
+> [!NOTE]
+> A web developer doesn't typically need to call this constructor, as the browser creates these objects itself when firing {{domxref("Window/pageshow_event", "pageshow")}} or {{domxref("Window/pagehide_event", "pagehide")}} events.
 
 ## Syntax
 

@@ -832,21 +832,6 @@
       "roryokane"
     ]
   },
-  "Games/Tutorials/Touch_Event_Horizon": {
-    "modified": "2020-10-27T19:53:30.191Z",
-    "contributors": [
-      "escattone",
-      "wbamberg",
-      "chrisdavidmills",
-      "rolfedh",
-      "dkocho4",
-      "nithinsudarsan",
-      "fscholz",
-      "Werebgle",
-      "aamiryan23",
-      "franciov"
-    ]
-  },
   "Glossary": {
     "modified": "2020-12-14T11:30:09.332Z",
     "contributors": [
@@ -40223,10 +40208,6 @@
     "modified": "2020-10-15T22:17:50.694Z",
     "contributors": ["neoncitylights", "sideshowbarker", "ExE-Boss"]
   },
-  "Web/API/HTMLMenuItemElement": {
-    "modified": "2020-10-15T22:17:51.039Z",
-    "contributors": ["neoncitylights", "ExE-Boss"]
-  },
   "Web/API/HTMLMetaElement": {
     "modified": "2020-10-15T21:14:34.115Z",
     "contributors": [
@@ -41796,10 +41777,6 @@
       "Piro",
       "Enn"
     ]
-  },
-  "Web/API/HTML_Sanitizer_API": {
-    "modified": "2020-12-13T12:18:13.088Z",
-    "contributors": ["Rumyra"]
   },
   "Web/API/HashChangeEvent": {
     "modified": "2020-10-15T21:29:11.207Z",
@@ -57175,7 +57152,7 @@
       "Jeremie"
     ]
   },
-  "Web/API/SVGRect/The__X__property": {
+  "Web/API/SVGRect/x": {
     "modified": "2019-03-23T22:36:30.180Z",
     "contributors": ["rolfedh", "essymo"]
   },
@@ -57404,18 +57381,6 @@
       "Sheppy",
       "Jeremie"
     ]
-  },
-  "Web/API/Sanitizer": {
-    "modified": "2020-12-13T12:17:05.573Z",
-    "contributors": ["Rumyra"]
-  },
-  "Web/API/Sanitizer/Sanitizer": {
-    "modified": "2020-12-13T12:21:15.482Z",
-    "contributors": ["Rumyra"]
-  },
-  "Web/API/Sanitizer/sanitize": {
-    "modified": "2020-12-13T12:25:31.511Z",
-    "contributors": ["Rumyra"]
   },
   "Web/API/Screen": {
     "modified": "2020-10-15T21:29:41.001Z",
@@ -65360,6 +65325,17 @@
       "rachelnabors"
     ]
   },
+  "Web/API/Web_Animations_API/Tips": {
+    "modified": "2020-06-24T00:29:43.861Z",
+    "contributors": [
+      "emilhem",
+      "chrisdavidmills",
+      "morenoh149",
+      "tzthet",
+      "mfluehr",
+      "Sheppy"
+    ]
+  },
   "Web/API/Web_Animations_API/Using_the_Web_Animations_API": {
     "modified": "2020-11-11T08:34:26.031Z",
     "contributors": [
@@ -68913,29 +68889,6 @@
   "Web/API/Window/showSaveFilePicker": {
     "modified": "2020-12-12T15:24:20.525Z",
     "contributors": ["Rumyra"]
-  },
-  "Web/API/Window/sidebar": {
-    "modified": "2020-10-15T21:13:22.168Z",
-    "contributors": [
-      "wbamberg",
-      "mfuji09",
-      "chrisdavidmills",
-      "connorshea",
-      "IsaacSchemm",
-      "teoli",
-      "fscholz",
-      "iamanupmenon",
-      "kohei.yoshino",
-      "Sheppy",
-      "ethertank",
-      "Mnyromyr",
-      "Deltab",
-      "Mgjbot",
-      "Jabez",
-      "Nickolay",
-      "Dria",
-      "JesseW"
-    ]
   },
   "Web/API/Window/sizeToContent": {
     "modified": "2020-12-03T06:15:03.807Z",
@@ -76535,17 +76488,6 @@
       "teoli"
     ]
   },
-  "Web/CSS/CSS_animations/Tips": {
-    "modified": "2020-06-24T00:29:43.861Z",
-    "contributors": [
-      "emilhem",
-      "chrisdavidmills",
-      "morenoh149",
-      "tzthet",
-      "mfluehr",
-      "Sheppy"
-    ]
-  },
   "Web/CSS/CSS_animations/Using_CSS_animations": {
     "modified": "2020-12-11T07:06:02.745Z",
     "contributors": [
@@ -77712,10 +77654,6 @@
   "Web/CSS/CSS_media_queries/Using_media_queries_for_accessibility": {
     "modified": "2020-07-07T17:49:27.435Z",
     "contributors": ["wbamberg", "evaferreira"]
-  },
-  "Web/CSS/CSS_miscellaneous": {
-    "modified": "2020-07-07T12:23:17.703Z",
-    "contributors": ["wbamberg", "mfluehr", "Tigt", "teoli"]
   },
   "Web/CSS/CSS_motion_path": {
     "modified": "2020-10-15T21:38:36.015Z",
@@ -95764,28 +95702,6 @@
       "Yann Dìnendal"
     ]
   },
-  "Web/HTML/Element/menuitem": {
-    "modified": "2020-11-28T12:02:05.463Z",
-    "contributors": [
-      "mfuji09",
-      "alattalatta",
-      "sideshowbarker",
-      "ExE-Boss",
-      "Rococolate",
-      "Sheppy",
-      "jakubfiala",
-      "teoli",
-      "whirr.click",
-      "rudiedirkx",
-      "Sebastianz",
-      "slimsag",
-      "Sheepy",
-      "dhodder",
-      "Alhadis",
-      "kscarfone",
-      "kohei.yoshino"
-    ]
-  },
   "Web/HTML/Element/meta": {
     "modified": "2020-10-15T21:07:10.507Z",
     "contributors": [
@@ -100126,10 +100042,6 @@
   "Web/HTTP/Headers/Permissions-Policy/autoplay": {
     "modified": "2020-10-15T22:10:28.577Z",
     "contributors": ["bershanskiy", "Sheppy", "fscholz"]
-  },
-  "Web/HTTP/Headers/Permissions-Policy/battery": {
-    "modified": "2020-10-15T22:24:54.886Z",
-    "contributors": ["mfuji09", "Malvoz", "bershanskiy"]
   },
   "Web/HTTP/Headers/Permissions-Policy/camera": {
     "modified": "2020-10-15T22:10:24.420Z",

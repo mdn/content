@@ -88,9 +88,13 @@ The summary paragraph — start by naming the selector and saying what it does. 
 
 ## Syntax
 
-`\{CSSSyntax}}`
+`\{{CSSSyntax}}`
 
 _To use this macro, remove the backticks and backslash in the markdown file._
+
+## Accessibility
+
+This is an optional section. Include accessibility guidelines, best practices, and potential concerns that developers should be aware of while using this property. You can also include workarounds or solutions where applicable.
 
 ## Examples
 
@@ -102,7 +106,8 @@ Each example must have an H3 heading (`###`) naming the example. The heading sho
 
 See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples) for more information.
 
-> **Note:** Sometimes, you will want to link to examples given on another page.
+> [!NOTE]
+> Sometimes, you will want to link to examples given on another page.
 >
 > **Scenario 1:** If you have some examples on this page and some more examples on another page:
 >
@@ -127,13 +132,8 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 > ```md
 > ## Examples
 >
-> For examples of this API, see [the page on fetch()](https://example.org).
+> For examples of this API, see [the page on fetch()](https://example.org/).
 > ```
-
-## Accessibility concerns
-
-Optionally, warn of any potential accessibility concerns with using this selector and how to work around them.
-Remove this section if there is no list.
 
 ## Specifications
 

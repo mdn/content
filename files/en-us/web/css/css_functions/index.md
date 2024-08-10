@@ -20,7 +20,8 @@ The value syntax starts with the **name of the function**, followed by a left pa
 
 Functions can take multiple arguments, which are formatted similarly to CSS property values. Whitespace is allowed, but they are optional inside the parentheses. In some functional notations multiple arguments are separated by commas, while others use spaces.
 
-> **Note:** The CSS value functions are used as property values and should not be confused with pseudo-classes. The [functional pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#functional_pseudo-classes), [linguistic pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#linguistic_pseudo-classes), and several [tree-structural pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#tree-structural_pseudo-classes) require parameter values, but they're not value functions. The conditional at-rules are also not value functions; the parentheses are used for groupings.
+> [!NOTE]
+> The CSS value functions are used as property values and should not be confused with pseudo-classes. The [functional pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#functional_pseudo-classes), [linguistic pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#linguistic_pseudo-classes), and several [tree-structural pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#tree-structural_pseudo-classes) require parameter values, but they're not value functions. The conditional at-rules are also not value functions; the parentheses are used for groupings.
 
 ## Transform functions
 
@@ -199,11 +200,11 @@ The {{CSSxRef("color_value","&lt;color&gt;")}} CSS [data type](/en-US/docs/Web/C
   - : Specifies a particular, specified colorspace rather than the implicit sRGB colorspace.
 - {{CSSxRef("color_value/color-mix", "color-mix()")}}
   - : Mixes two color values in a given colorspace by a given amount.
-- {{CSSxRef("color_value/color-contrast", "color-contrast()")}} {{Experimental_Inline}}
+- {{CSSxRef("color_value/color-contrast", "color-contrast()")}}
   - : Selects the highest color contrast from a list of colors, compare to a base color value.
-- {{CSSxRef("color_value/device-cmyk", "device-cmyk()")}} {{Experimental_Inline}}
+- {{CSSxRef("color_value/device-cmyk", "device-cmyk()")}}
   - : Defines CMYK colors in a device-dependent way.
-- {{CSSXref("color_value/light-dark", "light-dark()")}} {{Experimental_Inline}}
+- {{CSSXref("color_value/light-dark", "light-dark()")}}
   - : Returns one of two provided colors based on the current color scheme.
 
 ## Image functions
@@ -227,13 +228,13 @@ The {{CSSxRef("&lt;image&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_Types) 
 
 ### Image functions
 
-- {{CSSxRef("image/image","image()")}} {{Experimental_Inline}}
+- {{CSSxRef("image/image","image()")}}
   - : Defines an {{CSSxRef("&lt;image&gt;")}} in a similar fashion to the {{CSSxRef("url", "url()")}} function, but with added functionality including specifying the image's directionality and fallback images for when the preferred image is not supported.
 - {{CSSxRef("image/image-set","image-set()")}}
   - : Picks the most appropriate CSS image from a given set, primarily for high pixel density screens.
 - {{CSSxRef("cross-fade", "cross-fade()")}}
   - : Blends two or more images at a defined transparency.
-- {{CSSxRef("element", "element()")}} {{Experimental_Inline}}
+- {{CSSxRef("element", "element()")}}
   - : Defines an {{CSSxRef("&lt;image&gt;")}} value generated from an arbitrary HTML element.
 - {{CSSxRef("image/paint", "paint()")}}
   - : Defines an {{CSSxRef("&lt;image&gt;")}} value generated with a PaintWorklet.
@@ -259,9 +260,9 @@ The {{CSSxRef("&lt;basic-shape&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_T
   - : Defines an ellipse shape.
 - {{CSSxRef("basic-shape/inset","inset()")}}
   - : Defines an inset rectangle shape.
-- {{CSSxRef("basic-shape/rect","rect()")}} {{Experimental_Inline}}
+- {{CSSxRef("basic-shape/rect","rect()")}}
   - : Defines a rectangle shape using the distances from the top and left edges of the reference box.
-- {{CSSxRef("basic-shape/xywh","xywh()")}} {{Experimental_Inline}}
+- {{CSSxRef("basic-shape/xywh","xywh()")}}
   - : Defines a rectangle shape using the specified distances from the top and left edges of the reference box and the rectangle width and height.
 - {{CSSxRef("basic-shape/polygon","polygon()")}}
   - : Defines a polygon shape.

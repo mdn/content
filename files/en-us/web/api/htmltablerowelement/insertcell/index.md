@@ -45,7 +45,7 @@ cell.
 
 ## Examples
 
-This example uses {{domxref("HTMLTableRowElement.insertCell()")}} to append a new cell to a
+This example uses `HTMLTableRowElement.insertCell()` to append a new cell to a
 row.
 
 ### HTML

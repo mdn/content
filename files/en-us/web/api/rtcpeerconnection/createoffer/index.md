@@ -77,7 +77,8 @@ Your rejection handler should examine the received exception to determine which 
 
 Here we see a handler for the {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event which creates the offer and sends it to the remote system over a signaling channel.
 
-> **Note:** Keep in mind that this is part of the signaling process, the transport layer for which is an implementation detail that's entirely up to you.
+> [!NOTE]
+> Keep in mind that this is part of the signaling process, the transport layer for which is an implementation detail that's entirely up to you.
 > In this case, a [WebSocket](/en-US/docs/Web/API/WebSockets_API) connection is used to send a {{Glossary("JSON")}} message with a `type` field with the value "video-offer" to the other peer.
 > The contents of the object being passed to the `sendToServer()` function, along with everything else in the promise fulfillment handler, depend entirely on your design.
 

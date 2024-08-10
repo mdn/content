@@ -30,7 +30,8 @@ Now you've learned something about the theory of JavaScript and what you can do 
 
 We want to set really clear expectations here: You won't be expected to learn JavaScript by the end of this article, or even understand all the code we are asking you to write. Instead, we want to give you an idea of how JavaScript's features work together, and what writing JavaScript feels like. In subsequent articles you'll revisit all the features shown here in a lot more detail, so don't worry if you don't understand it all immediately!
 
-> **Note:** Many of the code features you'll see in JavaScript are the same as in other programming languages — functions, loops, etc. The code syntax looks different, but the concepts are still largely the same.
+> [!NOTE]
+> Many of the code features you'll see in JavaScript are the same as in other programming languages — functions, loops, etc. The code syntax looks different, but the concepts are still largely the same.
 
 ## Thinking like a programmer
 
@@ -142,7 +143,8 @@ In our example:
 
 - Our final two variables store a guess count of 1 (used to keep track of how many guesses the player has had), and a reference to a reset button that doesn't exist yet (but will later).
 
-> **Note:** You'll learn a lot more about variables and constants later on in the course, starting with the article [Storing the information you need — Variables](/en-US/docs/Learn/JavaScript/First_steps/Variables).
+> [!NOTE]
+> You'll learn a lot more about variables and constants later on in the course, starting with the article [Storing the information you need — Variables](/en-US/docs/Learn/JavaScript/First_steps/Variables).
 
 ### Functions
 
@@ -166,7 +168,8 @@ checkGuess();
 
 After pressing <kbd>Return</kbd>/<kbd>Enter</kbd>, you should see an alert come up that says `I am a placeholder`; we have defined a function in our code that creates an alert whenever we call it.
 
-> **Note:** You'll learn a lot more about functions later on in the article [Functions — reusable blocks of code](/en-US/docs/Learn/JavaScript/Building_blocks/Functions).
+> [!NOTE]
+> You'll learn a lot more about functions later on in the article [Functions — reusable blocks of code](/en-US/docs/Learn/JavaScript/Building_blocks/Functions).
 
 ### Operators
 

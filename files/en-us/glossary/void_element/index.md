@@ -39,11 +39,12 @@ If a trailing `/` (slash) character is present in the start tag of an HTML eleme
 
 However, some code formatters add the trailing slash character to the start tags of void elements to make them XHTML-compatible and more readable. For example, some code formatters will convert `<input type="text">` to `<input type="text" />`.
 
-Self-closing tags are required in void elements in [XML](/en-US/docs/Glossary/XML), [XHTML](/en-US/docs/Glossary/XHTML), and [SVG](/en-US/docs/Glossary/SVG) (e.g., `<circle cx="50" cy="50" r="50" />`).
+Self-closing tags are required in void elements in {{Glossary("XML")}}, {{Glossary("XHTML")}}, and {{Glossary("SVG")}} (e.g., `<circle cx="50" cy="50" r="50" />`).
 
 In SVG and MathML, elements that cannot have any child nodes are allowed to be marked as self-closing. In such cases, if an element's start tag is marked as self-closing, the element must not have an end tag.
 
-> **Note:** If a trailing `/` (slash) character in a start tag is directly preceded by an unquoted attribute value — with no space between — the slash becomes a part of the attribute value rather than being discarded by the parser. For example, the markup `<img src=http://www.example.com/logo.svg/>` results in the `src` attribute having the value `http://www.example.com/logo.svg/` — which makes the URL wrong.
+> [!NOTE]
+> If a trailing `/` (slash) character in a start tag is directly preceded by an unquoted attribute value — with no space between — the slash becomes a part of the attribute value rather than being discarded by the parser. For example, the markup `<img src=http://www.example.com/logo.svg/>` results in the `src` attribute having the value `http://www.example.com/logo.svg/` — which makes the URL wrong.
 
 ## See also
 

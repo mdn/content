@@ -9,7 +9,8 @@ spec-urls: https://html.spec.whatwg.org/multipage/server-sent-events.html#server
 
 Traditionally, a web page has to send a request to the server to receive new data; that is, the page requests data from the server. With server-sent events, it's possible for a server to send new data to a web page at any time, by pushing messages to the web page. These incoming messages can be treated as _[Events](/en-US/docs/Web/API/Event) + data_ inside the web page.
 
-> **Note:** Firefox does not currently support the use of server-sent events in service workers (it does support them in dedicated and shared workers). See [Firefox bug 1681218](https://bugzil.la/1681218).
+> [!NOTE]
+> Firefox does not currently support the use of server-sent events in service workers (it does support them in dedicated and shared workers). See [Firefox bug 1681218](https://bugzil.la/1681218).
 
 ## Concepts and usage
 
@@ -32,7 +33,7 @@ To learn how to use server-sent events, see our article [Using server-sent event
 
 ### Tools
 
-- [Mercure: a real-time communication protocol (publish-subscribe) built on top of SSE](https://mercure.rocks)
+- [Mercure: a real-time communication protocol (publish-subscribe) built on top of SSE](https://mercure.rocks/)
 - [EventSource polyfill for Node.js](https://github.com/EventSource/eventsource)
 - Remy Sharp's [EventSource polyfill](https://github.com/remy/polyfills/blob/master/EventSource.js)
 - Yaffle's [EventSource polyfill](https://github.com/Yaffle/EventSource)

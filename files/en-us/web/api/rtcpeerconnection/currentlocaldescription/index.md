@@ -14,7 +14,8 @@ Also included is a list of any ICE candidates that may already have been generat
 To change the `currentLocalDescription`, call {{domxref("RTCPeerConnection.setLocalDescription()")}}, which triggers a series of events which leads to this value being set.
 For details on what exactly happens and why the change isn't necessarily instantaneous, see [Pending and current descriptions](/en-US/docs/Web/API/WebRTC_API/Connectivity#pending_and_current_descriptions) in the WebRTC Connectivity page.
 
-> **Note:** Unlike {{domxref("RTCPeerConnection.localDescription")}}, this value represents the actual current state of the local end of the connection;
+> [!NOTE]
+> Unlike {{domxref("RTCPeerConnection.localDescription")}}, this value represents the actual current state of the local end of the connection;
 > `localDescription` may specify a description which the connection is currently in the process of switching over to.
 
 ## Value
@@ -46,7 +47,8 @@ if (sd) {
 
 {{Compat}}
 
-> **Note:** The addition of `currentLocalDescription` and {{domxref("RTCPeerConnection.pendingLocalDescription", "pendingLocalDescription")}} to the WebRTC spec is relatively recent.
+> [!NOTE]
+> The addition of `currentLocalDescription` and {{domxref("RTCPeerConnection.pendingLocalDescription", "pendingLocalDescription")}} to the WebRTC spec is relatively recent.
 > In browsers which don't support them, just use {{domxref("RTCPeerConnection.localDescription", "localDescription")}}.
 
 ## See also

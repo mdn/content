@@ -8,7 +8,8 @@ page-type: guide
 
 In [HTTP](/en-US/docs/Glossary/HTTP), **_content negotiation_** is the mechanism that is used for serving different {{Glossary("Representation header","representations")}} of a resource to the same URI to help the user agent specify which representation is best suited for the user (for example, which document language, which image format, or which content encoding).
 
-> **Note:** You'll find some disadvantages of HTTP content negotiation in [a wiki page from WHATWG](https://wiki.whatwg.org/wiki/Why_not_conneg). HTML provides alternatives to content negotiation via, for example, the [`<source>` element](/en-US/docs/Web/HTML/Element/source).
+> [!NOTE]
+> You'll find some disadvantages of HTTP content negotiation in [a wiki page from WHATWG](https://wiki.whatwg.org/wiki/Why_not_conneg). HTML provides alternatives to content negotiation via, for example, the [`<source>` element](/en-US/docs/Web/HTML/Element/source).
 
 ## Principles of content negotiation
 
@@ -45,9 +46,10 @@ The {{HTTPHeader("Accept")}} header lists the MIME types of media resources that
 
 The `Accept` header is defined by the browser, or any other user agent, and can vary according to the context. For example, fetching an HTML page or an image, a video, or a script. It's different when fetching a document entered in the address bar or an element linked via an {{ HTMLElement("img") }}, {{ HTMLElement("video") }}, or {{ HTMLElement("audio") }} element. Browsers are free to use the value of the header that they think is the most adequate; an exhaustive list of [default values for common browsers](/en-US/docs/Web/HTTP/Content_negotiation/List_of_default_Accept_values) is available.
 
-### The `Accept-CH` header {{experimental_inline}}
+### The `Accept-CH` header
 
-> **Note:** This is part of an **experimental** technology called _Client Hints_. Initial support comes in Chrome 46 or later. The Device-Memory value is in Chrome 61 or later.
+> [!NOTE]
+> This is part of an **experimental** technology called _Client Hints_. Initial support comes in Chrome 46 or later. The Device-Memory value is in Chrome 61 or later.
 
 The experimental {{HTTPHeader("Accept-CH")}} lists configuration data that the server can use to select an appropriate response. Valid values are:
 
@@ -74,7 +76,8 @@ Due to the [configuration-based entropy](https://www.eff.org/deeplinks/2010/01/p
 
 ### The `User-Agent` header
 
-> **Note:** Though there are legitimate uses of this header for selecting content, [it's considered bad practice](/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent) to rely on it to define what features are supported by the user agent.
+> [!NOTE]
+> Though there are legitimate uses of this header for selecting content, [it's considered bad practice](/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent) to rely on it to define what features are supported by the user agent.
 
 The {{HTTPHeader("User-Agent")}} header identifies the browser sending the request. This string may contain a space-separated list of _product tokens_ and _comments_.
 

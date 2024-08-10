@@ -3,10 +3,13 @@ title: "RTCEncodedAudioFrame: timestamp property"
 short-title: timestamp
 slug: Web/API/RTCEncodedAudioFrame/timestamp
 page-type: web-api-instance-property
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.RTCEncodedAudioFrame.timestamp
 ---
 
-{{APIRef("WebRTC")}}{{AvailableInWorkers("window_and_dedicated")}}
+{{APIRef("WebRTC")}}{{AvailableInWorkers("window_and_dedicated")}}{{deprecated_header}}{{non-standard_header}}
 
 The readonly **`timestamp`** property of the {{domxref("RTCEncodedAudioFrame")}} interface indicates the time at which frame sampling started.
 

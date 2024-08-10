@@ -43,7 +43,8 @@ Set-Login: status
     - `"logged-in"`: The IdP has at least one user account signed in.
     - `"logged-out"`: All IdP user accounts are currently signed out.
 
-    > **Note:** Browsers should ignore this header if it contains any other value.
+    > [!NOTE]
+    > Browsers should ignore this header if it contains any other value.
 
 ## Examples
 
