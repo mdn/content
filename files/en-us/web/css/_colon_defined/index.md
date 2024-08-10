@@ -81,7 +81,6 @@ Then provide the following two rules to hide any instances of our custom element
 simple-custom:not(:defined) {
   display: none;
 }
-
 ```
 
 This is useful if you have a complex custom element that takes a while to load into the page — you might want to hide instances of the element until definition is complete, so that you don't end up with flashes of ugly unstyled elements on the page
