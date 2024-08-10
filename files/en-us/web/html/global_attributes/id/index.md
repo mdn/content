@@ -13,7 +13,7 @@ The **`id`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) defines 
 
 ## Description
 
-The purpose of the ID attribute is to identify a single element when linking (using a [fragment identifier](/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web#fragment)), scripting, or styling (with {{glossary("CSS")}}).
+The purpose of the ID attribute is to identify a single element when linking (using a [fragment identifier](/en-US/docs/Web/URI#fragment)), scripting, or styling (with {{glossary("CSS")}}).
 
 Elements with ID attributes are available as global properties. The property name is the ID attribute, and the property value is the element. For example, given markup like:
 
