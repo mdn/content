@@ -27,12 +27,13 @@ This application will only work on a browser that supports pointer events.
 
 #### HTML
 
-The HTML consists of a single {{HTMLElement("canvas")}} element. Curves will be drawn in response to the user's touch gestures.
+The HTML consists of a single {{HTMLElement("canvas")}} element. Curves will be drawn in response to the user's touch gestures. A button is also included to clear the canvas.
 
 ```html
 <canvas id="canvas" width="600" height="600">
-  Your browser does not support canvas element.
+  Your browser does not support the canvas element.
 </canvas>
+<button id="clear">Clear canvas</button>
 ```
 
 #### CSS
@@ -43,6 +44,7 @@ The {{cssxref("touch-action")}} property is set to `none` to prevent the browser
 #canvas {
   border: solid black 1px;
   touch-action: none;
+  display: block;
 }
 ```
 
@@ -75,6 +77,8 @@ function handleStart(event) {
   ctx.fillStyle = touch.color;
   ctx.fill();
 }
+
+canvas.addEventListener("pointerdown", handleStart, false);
 ```
 
 The `handleEnd` function listens to the {{domxref("Element/pointerup_event", "pointerup")}} event and draws a square at the end of the touch.
@@ -96,6 +100,8 @@ function handleEnd(event) {
   ctx.fillRect(event.pageX - 4, event.pageY - 4, 8, 8);
   ongoingTouches.delete(event.pointerId);
 }
+
+canvas.addEventListener("pointerup", handleEnd, false);
 ```
 
 The `handleCancel` function listens to the {{domxref("Element/pointercancel_event", "pointercancel")}} event and stops tracking the touch.
@@ -111,6 +117,8 @@ function handleCancel(event) {
 
   ongoingTouches.delete(event.pointerId);
 }
+
+canvas.addEventListener("pointercancel", handleCancel, false);
 ```
 
 The `handleMove` function listens to the {{domxref("Element/pointermove_event", "pointermove")}} event and draws a line between the start and end of the touch.
@@ -139,15 +147,16 @@ function handleMove(event) {
 
   ongoingTouches.set(event.pointerId, newTouch);
 }
+
+canvas.addEventListener("pointermove", handleMove, false);
 ```
 
-Finally, add these event listeners to the canvas element.
+Finally, add clearing functionality.
 
 ```js
-canvas.addEventListener("pointerdown", handleStart, false);
-canvas.addEventListener("pointerup", handleEnd, false);
-canvas.addEventListener("pointercancel", handleCancel, false);
-canvas.addEventListener("pointermove", handleMove, false);
+document.getElementById("clear").addEventListener("click", () => {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+});
 ```
 
 {{EmbedLiveSample("drawing_application", "", "700")}}
