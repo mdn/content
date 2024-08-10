@@ -44,7 +44,7 @@ customElements.define(
     constructor() {
       super();
     }
-  }
+  },
 );
 ```
 
