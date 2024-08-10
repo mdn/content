@@ -38,7 +38,8 @@ The following snippets are taken from our [defined-pseudo-class](https://github.
 In this demo we define a very simple trivial custom element:
 
 ```js
-customElements.define("simple-custom",
+customElements.define(
+  "simple-custom",
   class extends HTMLElement {
     constructor() {
       super();
