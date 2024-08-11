@@ -242,7 +242,8 @@ body {
 }
 ```
 
-> [!NOTE] `position-area` try fallback options can't be added into a space-separated combined position option within a position-try fallback list.
+> [!NOTE]
+> You can't add `position-area` try fallback options into a space-separated combined position option within a position-try fallback list.
 
 Scroll the page and check out the effect of these position-try fallback options as the anchor nears the edge of the viewport:
 
