@@ -180,7 +180,7 @@ This means that the browser will first try `flip-block` and then try `flip-inlin
 
 {{ EmbedLiveSample("Combining multiple values into one option", "100%", "250") }}
 
-## Using `position-area` try options
+## Using `position-area` try fallback options
 
 The predefined `<try-tactic>` try fallback options are useful but limited, as they only allow positioned element placement to be flipped across axes. What if you had an anchor-positioned element positioned to the top left of its anchor, and wanted to change its position to directly below the anchor if it started to overflow?
 
