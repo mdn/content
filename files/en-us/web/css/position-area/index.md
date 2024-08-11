@@ -365,7 +365,7 @@ form {
 const anchorContainer = document.querySelector("body");
 const infobox = document.querySelector(".infobox");
 
-const insetAreaForm = document.querySelector("#position-area-form");
+const positionAreaForm = document.querySelector("#position-area-form");
 const selectElem = document.querySelector("select");
 const inputElemContainer = document.querySelector(
   "#position-area-custom-container",
@@ -374,7 +374,7 @@ const inputElem = document.querySelector("#position-area-custom");
 const checkboxElem = document.querySelector("#writing-mode-checkbox");
 
 // Stop form from submitting when enter is pressed on it
-insetAreaForm.addEventListener("submit", (e) => {
+positionAreaForm.addEventListener("submit", (e) => {
   e.preventDefault();
 });
 
