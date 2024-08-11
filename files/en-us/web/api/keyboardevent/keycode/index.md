@@ -944,8 +944,8 @@ Gecko sets `keyCode` values of punctuation keys as far as possible (when points 
       <td rowspan="2"><code>0x00 (0)</code>⚠️</td>
       <td rowspan="2"><code>0xDC (220)</code>⚠️</td>
       <td rowspan="2"><code>0x00 (0)</code>⚠️</td>
-      <td rowspan="2"><code>0xDC </code>(220)</td>
-      <td rowspan="2"><code>0xDC </code>(220)</td>
+      <td rowspan="2"><code>0xDC (220)</code></td>
+      <td rowspan="2"><code>0xDC (220)</code></td>
       <td rowspan="2"><code>0x00 (0)</code>⚠️</td>
       <td rowspan="2"><code>0x00 (0)</code>⚠️</td>
       <td rowspan="2"><code>0xDC (220)</code>⚠️</td>

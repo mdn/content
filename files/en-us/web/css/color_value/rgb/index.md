@@ -128,7 +128,7 @@ rgb(from hsl(0 100% 50% / 0.8) r g b / 0.5)
 /* Computed output color: color(srgb 1 0 0 / 0.5) */
 ```
 
-In the following example, the `hsl()` origin color is again converted into an `rgb()` representation — `rgb(255 0 0)`. {{cssxref("calc")}} calculations are applied to the `R`, `G`, `B`, and `A` values. After calculating, the R, G, B and A values are `127.5`, `25`, `175`, and`0.9` respectively. The final output color is the equivalent of `rgb(127.5 25 175 / 0.9)` in the sRGB color space: `color(srgb 0.5 0.0980392 0.686275 / 0.9)`.
+In the following example, the `hsl()` origin color is again converted into an `rgb()` representation — `rgb(255 0 0)`. {{cssxref("calc")}} calculations are applied to the `R`, `G`, `B`, and `A` values. After calculating, the R, G, B and A values are `127.5`, `25`, `175`, and `0.9` respectively. The final output color is the equivalent of `rgb(127.5 25 175 / 0.9)` in the sRGB color space: `color(srgb 0.5 0.0980392 0.686275 / 0.9)`.
 
 ```css
 rgb(from hsl(0 100% 50%) calc(r/2) calc(g + 25) calc(b + 175) / calc(alpha - 0.1))

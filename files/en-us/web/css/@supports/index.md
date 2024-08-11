@@ -87,7 +87,7 @@ The table below describes the font technologies (`<font-tech>`), including color
 | **`<font-features-tech>`**     |                                                                                               |
 | `features-opentype`            | OpenType `GSUB` and `GPOS` tables                                                             |
 | `features-aat`                 | TrueType `morx` and `kerx` tables                                                             |
-| `features-graphite`            | Graphite features, namely `Silf`, `Glat` , `Gloc` , `Feat`, and `Sill` tables                 |
+| `features-graphite`            | Graphite features, namely `Silf`, `Glat`, `Gloc`, `Feat`, and `Sill` tables                   |
 | **Other `<font-tech>` values** |                                                                                               |
 | `incremental-patch`            | Incremental font loading using the patch subset method                                        |
 | `incremental-range`            | Incremental font loading using the range request method                                       |

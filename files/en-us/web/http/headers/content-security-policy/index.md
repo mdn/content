@@ -69,7 +69,7 @@ where `<policy-directive>` consists of:
 - {{CSP("manifest-src")}}
   - : Specifies valid sources of application manifest files.
 - {{CSP("media-src")}}
-  - : Specifies valid sources for loading media using the {{HTMLElement("audio")}} ,
+  - : Specifies valid sources for loading media using the {{HTMLElement("audio")}},
     {{HTMLElement("video")}} and {{HTMLElement("track")}} elements.
 - {{CSP("object-src")}}
 

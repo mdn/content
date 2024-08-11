@@ -220,7 +220,7 @@ The HTML contains two {{htmlelement("p")}} elements with a {{htmlelement("div")}
 </div>
 
 <p>
-  This is another paragraph to show that <code>display: none; </code> is being
+  This is another paragraph to show that <code>display: none;</code> is being
   applied and removed on the above <code>&lt;div&gt; </code>. If only its
   <code>opacity</code> was being changed, it would always take up the space in
   the DOM.
