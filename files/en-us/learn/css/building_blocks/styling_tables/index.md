@@ -293,8 +293,8 @@ There is nothing remarkable here, except for the {{cssxref("caption-side")}} pro
 Before moving on, we thought we'd provide you with a quick list of the most useful points illustrated above:
 
 - Make your table markup as simple as possible, and keep things flexible, e.g. by using percentages, so the design is more responsive.
-- Use {{cssxref("table-layout")}}`: fixed` to create a more predictable table layout that allows you to easily set column widths by setting {{cssxref("width")}} on their headings ({{htmlelement("th")}}).
-- Use {{cssxref("border-collapse")}}`: collapse` to make table elements borders collapse into each other, producing a neater and easier to control look.
+- Use {{cssxref("table-layout", "table-layout: fixed")}} to create a more predictable table layout that allows you to easily set column widths by setting {{cssxref("width")}} on their headings ({{htmlelement("th")}}).
+- Use {{cssxref("border-collapse", "border-collapse: collapse")}} to make table elements borders collapse into each other, producing a neater and easier to control look.
 - Use {{htmlelement("thead")}}, {{htmlelement("tbody")}}, and {{htmlelement("tfoot")}} to break up your table into logical chunks and provide extra places to apply CSS to, so it is easier to layer styles on top of one another if required.
 - Use zebra striping to make alternative rows easier to read.
 - Use {{cssxref("text-align")}} to line up your {{htmlelement("th")}} and {{htmlelement("td")}} text, to make things neater and easier to follow.
