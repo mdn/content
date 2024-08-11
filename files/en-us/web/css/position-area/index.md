@@ -389,7 +389,7 @@ selectElem.addEventListener("change", () => {
     // Hide the custom value input field
     inputElemContainer.style.display = "none";
     // Set the position-area to the value chosen in the select box
-    infobox.style.insetArea = area;
+    infobox.style.positionArea = area;
   }
 });
 
