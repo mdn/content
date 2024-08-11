@@ -53,7 +53,7 @@ position-try-fallbacks: revert-layer;
 position-try-fallbacks: unset;
 ```
 
-The `position-try-fallbacks` property may be specified as either the keyword value `none` or as a comma-separated list of one or more space-separated custom position option names or `<try-tactic>`s or an `position-area` value.
+The `position-try-fallbacks` property may be specified as either the keyword value `none` or as a comma-separated list of one or more space-separated custom position option names or `<try-tactic>`s or a `position-area` value.
 
 ### Values
 
