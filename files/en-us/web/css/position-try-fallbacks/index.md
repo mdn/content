@@ -277,7 +277,7 @@ body {
 
 The third position-try fallback option means that the browser will try `flip-block` then `flip-inline` to avoid overflow, and if those fallbacks fail, it will combine the two, flipping the element's position in the block and inline directions at the same time. Now when you scroll the anchor towards the top _and_ left edges of the viewport, the positioned element will flip over to the bottom-right.
 
-### `position-area` try options
+### `position-area` try fallback options
 
 This example shows some `position-area` position-try fallback options in action.
 
