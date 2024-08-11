@@ -457,7 +457,7 @@ selectElem.addEventListener("change", () => {
   const area = selectElem.value;
 
   // Set the position-area to the value chosen in the select box
-  infobox.style.insetArea = area;
+  infobox.style.positionArea = area;
 });
 ```
 
