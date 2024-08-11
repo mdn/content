@@ -347,7 +347,7 @@ body {
 
 #### Result
 
-{{ EmbedLiveSample("`position-area` try options", "100%", "250") }}
+{{ EmbedLiveSample("`position-area` try fallback options", "100%", "250") }}
 
 Scroll the page and check out the effect of these position-try fallback options as the anchor nears the edge of the viewport.
 
