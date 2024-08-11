@@ -37,7 +37,7 @@ The `<position-area>` keyword values can be set as the value of the {{cssxref("p
 
 ## Description
 
-Position areas work on the concept of an **position-area grid**, a 3x3 grid of tiles composed of four grid lines, two on each axis, with an anchor element being the center tile:
+Position areas work on the concept of a **position-area grid**, a 3x3 grid of tiles composed of four grid lines, two on each axis, with an anchor element being the center tile:
 
 ![The position-area grid, as described below](position-area.png)
 
