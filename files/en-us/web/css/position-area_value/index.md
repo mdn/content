@@ -223,7 +223,7 @@ For example, `block-start inline-end` specifies the tile at the start of the blo
 
 #### Explicit inline and block logical spanning keywords
 
-The explicit logical spanning keywords — when combined with a logical row or column keyword — specify a second grid tile for the position area to expand into. When such a combination is set as an `position-area` property value, a selected element is initially placed in the center of the specified row or column, based on the containing block's writing mode, and it then spans in the direction specified in the spanning keyword, spanning two grid tiles:
+The explicit logical spanning keywords — when combined with a logical row or column keyword — specify a second grid tile for the position area to expand into. When such a combination is set as a `position-area` property value, a selected element is initially placed in the center of the specified row or column, based on the containing block's writing mode, and it then spans in the direction specified in the spanning keyword, spanning two grid tiles:
 
 - `span-block-start`
 
