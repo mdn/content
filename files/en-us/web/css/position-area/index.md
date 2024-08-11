@@ -398,7 +398,7 @@ inputElem.addEventListener("change", () => {
   const customArea = inputElem.value;
 
   // Set the position-area to the value in the input box
-  infobox.style.insetArea = customArea;
+  infobox.style.positionArea = customArea;
 });
 
 // Change writing-mode to match checkbox setting
