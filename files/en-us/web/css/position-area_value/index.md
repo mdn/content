@@ -176,7 +176,7 @@ For example, `start end` and `self-start self-end` both describe the position at
 
 #### Generic logical spanning row and column keywords
 
-The generic logical spanning keywords — when combined with a logical row or column keyword — specify a second grid tile for the position area to expand into. When such a combination is set as an `position-area` property value, a selected element is initially placed in the center of the specified row or column, and it then spans in the direction specified in the spanning keyword, spanning two grid tiles:
+The generic logical spanning keywords — when combined with a logical row or column keyword — specify a second grid tile for the position area to expand into. When such a combination is set as a `position-area` property value, a selected element is initially placed in the center of the specified row or column, and it then spans in the direction specified in the spanning keyword, spanning two grid tiles:
 
 - `span-start`
 
