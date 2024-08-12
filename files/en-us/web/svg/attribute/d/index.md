@@ -103,7 +103,7 @@ svg {
 
 {{EmbedLiveSample('Using d as a CSS Property', '100%', 200)}}
 
-For an =`<path>` animation example, see the CSS {{cssxref("d")}} property reference page example.
+For a `<path>` animation example, see the CSS {{cssxref("d")}} property reference page example.
 
 ## Path commands
 

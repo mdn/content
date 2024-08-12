@@ -23,7 +23,6 @@ d: path("m 5,5 h 35 L 20,30 z")
 d: path("M 0,25 l 50,150 l 200,50 z")
 d: path("M 10,5 l 90,0 -80,80 0,-60 80,80 -90,0 z")
 
-/* with
 
 /* Global values */
 d: inherit;
