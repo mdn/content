@@ -125994,10 +125994,6 @@
       "NickolayBot"
     ]
   },
-  "Web/SVG/Server-configuration": {
-    "modified": "2019-01-16T14:51:10.788Z",
-    "contributors": ["velvel53", "Jeremie", "Jonathan_Watt"]
-  },
   "Web/SVG/Specification_Deviations": {
     "modified": "2019-01-16T15:58:58.296Z",
     "contributors": ["Jeremie", "Jonathan_Watt", "Nickolay"]

@@ -38,7 +38,7 @@ In languages with [grammatical number](https://en.wikipedia.org/wiki/Grammatical
 
 ## Default styling
 
-The purpose of this element is purely for the convenience of the author and all browsers display it inline ({{cssxref('display')}}`: inline`) by default, though its default styling varies from one browser to another:
+The purpose of this element is purely for the convenience of the author and all browsers display it inline ({{cssxref("display", "display: inline")}}) by default, though its default styling varies from one browser to another:
 
 Some browsers add a dotted underline to the content of the element. Others add a dotted underline while converting the contents to small caps. Others may not style it differently than a {{HTMLElement("span")}} element. To control this styling, use {{cssxref('text-decoration')}} and {{cssxref('font-variant')}}.
 

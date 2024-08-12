@@ -100,7 +100,7 @@ The anchor-positioned element is given fixed positioning and tethered to the anc
 }
 ```
 
-> ![NOTE]
+> [!NOTE]
 > When multiple position try fallback options are specified, they are separated by commas, and tried in the order they are specified.
 
 Try scrolling the demo so that the anchor starts to get near the edges:
