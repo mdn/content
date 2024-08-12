@@ -46,7 +46,7 @@ The **WebSocket API** is an advanced technology that makes it possible to open a
 - [cowboy](https://github.com/ninenines/cowboy): Cowboy is a small, fast and modern HTTP server for Erlang/OTP with WebSocket support.
 - [ZeroMQ](https://zeromq.org/): ZeroMQ is embeddable networking library that carries messages across in-process, IPC, TCP, UDP, TIPC, multicast and WebSocket.
 - [WebSocket King](https://websocketking.com/): A client tool to help develop, test and work with WebSocket servers.
-- [PHP WebSocket Server](https://github.com/napengam/phpWebSocketServer): Server written in PHP to handle connections via websockets wss\:// or ws\://and normal sockets over ssl:// ,tcp\://
+- [PHP WebSocket Server](https://github.com/napengam/phpWebSocketServer): Server written in PHP to handle connections via websockets `wss://` or `ws://` and normal sockets over `ssl://`, `tcp://`
 - [Channels](https://channels.readthedocs.io/en/stable/index.html): Django library that adds support for WebSockets (and other protocols that require long running asynchronous connections).
 - [Channels](https://hexdocs.pm/phoenix/channels.html): Scalable real-time communication using WebSocket in Elixir Phoenix framework.
 - [LiveView](https://github.com/phoenixframework/phoenix_live_view): Real-time interactive web experiences through WebSocket in Elixir Phoenix framework.

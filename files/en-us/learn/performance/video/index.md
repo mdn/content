@@ -89,7 +89,7 @@ ffmpeg -i original.mp4 -an -c:v copy audioFreeVersion.mp4
 
 ### Video preload
 
-The preload attribute has three available options: `auto`|`metadata`|`none`. The default setting is `metadata`. These settings control how much of a video file downloads with page load. You can save data by deferring download for less popular videos.
+The preload attribute has three available options: `auto`, `metadata`, and `none`. The default setting is `metadata`. These settings control how much of a video file downloads with page load. You can save data by deferring download for less popular videos.
 
 Setting `preload="none"` results in none of the video being downloaded until playback. It delays startup, but offers significant data savings for videos with a low probability of playback.
 
