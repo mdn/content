@@ -248,6 +248,12 @@ btn.addEventListener("click", () => {
 
 {{EmbedLiveSample("Linear function examples", 600, 280)}}
 
+The following image shows graphs of all the `linear()` function values used in this example. Time(input) is plotted on the x-axis and the output is on the y-axis. As per the syntax, the input(time) ranges from 0 to 100% and the output ranges from -∞ to ∞.
+
+![An image showing 'linear' function graphs](linear-function-graphs.png)
+
+Note that the output can go in the backward direction.
+
 ### Cubic-Bezier examples
 
 The example demonstrates bezier curve easing.
@@ -259,7 +265,7 @@ The example demonstrates bezier curve easing.
   <div class="easein">ease-in</div>
   <div class="easeout">ease-out</div>
   <div class="easeinout">ease-in-out</div>
-  <div class="cb">cubic-bezier(0.2,-2,0.8,2)</div>
+  <div class="cb">cubic-bezier(.5, -0.5, 1, 1.5)</div>
 </div>
 <div class="x-axis"><span>50%</span></div>
 <button>Play animation</button>
@@ -346,11 +352,15 @@ btn.addEventListener("click", () => {
   animation-timing-function: ease-in-out;
 }
 .cb {
-  animation-timing-function: cubic-bezier(0.2, -2, 0.8, 2);
+  animation-timing-function: cubic-bezier(0.5, -0.5, 1, 1.5);
 }
 ```
 
 {{EmbedLiveSample("Cubic-Bezier_examples", 600, 230)}}
+
+The following image shows graphs of all the cubic bezier function values used in this example. The input(time) ranges from 0 to 1 and the output ranges from -∞ to ∞.
+
+![An image showing 'cubic-bezier' function graphs](cubic-bezier-function-graphs.png)
 
 ### Step examples
 
@@ -450,23 +460,24 @@ btn.addEventListener("click", () => {
 .linear {
   animation-timing-function: linear;
 }
+
+.start {
+  animation-timing-function: steps(4, start);
+}
 .jump-start {
   animation-timing-function: steps(4, jump-start);
+}
+.end {
+  animation-timing-function: steps(4, end);
 }
 .jump-end {
   animation-timing-function: steps(4, jump-end);
 }
-.jump-none {
-  animation-timing-function: steps(4, jump-none);
-}
 .jump-both {
   animation-timing-function: steps(4, jump-both);
 }
-.start {
-  animation-timing-function: steps(4, start);
-}
-.end {
-  animation-timing-function: steps(4, end);
+.jump-none {
+  animation-timing-function: steps(4, jump-none);
 }
 .step-start {
   animation-timing-function: step-start;
@@ -477,6 +488,10 @@ btn.addEventListener("click", () => {
 ```
 
 {{EmbedLiveSample("Step_examples", 600, 330)}}
+
+The following image shows graphs of all the `step()` function values used in this example. The input(time) and output ranges from 0 to 1.
+
+![image showing 'steps' function graphs](step-function-graphs.png)
 
 ## Specifications
 
