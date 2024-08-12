@@ -1302,7 +1302,7 @@
         "InterventionReportBody",
         "Report",
         "ReportBody",
-        "ReportingObserver"
+        "ReportingObserver",
         "SecurityPolicyViolationEvent"
       ],
       "methods": [],
