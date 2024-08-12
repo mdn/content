@@ -7,11 +7,11 @@ browser-compat: css.properties.dominant-baseline
 
 {{CSSRef}}
 
-The **`dominant-baseline`** [CSS](/en-US/docs/Web/CSS) property specifies the specific baseline used to align the box's text and inline-level contents. It also indicates the default alignment baseline of any boxes participating in baseline alignment in the box's alignment context. If present, it overrides the shape's {{SVGAttr("dominant-baseline")}} attribute.
+The **`dominant-baseline`** [CSS](/en-US/docs/Web/CSS) property specifies the specific [baseline](/en-US/docs/Glossary/Baseline/Typography) used to align the box's text and inline-level contents. It also indicates the default alignment baseline of any boxes participating in baseline alignment in the box's alignment context. If present, it overrides the shape's {{SVGAttr("dominant-baseline")}} attribute.
 
 Baselines are selected from the font baseline table. If there is no baseline table in the nominal font, or if the baseline table lacks an entry for the desired baseline, then the browser may use heuristics to determine the position of the desired baseline.
 
-`dominant-baseline` is used to determine or re-determine a scaled-baseline-table. A scaled-baseline-table is a compound value with three components:
+The `dominant-baseline` property is used to determine or re-determine a _scaled-baseline-table_. A scaled-baseline-table is a compound value with three components:
 
 1. a baseline-identifier for the dominant-baseline,
 2. a baseline-table, and
@@ -61,9 +61,9 @@ dominant-baseline: unset;
     If there is no parent text content element, the scaled-baseline-table value is constructed as for {{SVGElement("text")}} elements.
 
 - `alphabetic`
-  - : The baseline-identifier for the dominant-baseline is set to be `alphabetic`, the derived baseline-table is constructed using the `alphabetic` baseline-table in the font, and the baseline-table font-size is changed to the value of the {{SVGAttr('font-size')}} SVG attribute of {{cssxref('font-size')}} CSS property on this element.
+  - : The baseline-identifier for the dominant-baseline is set to be `alphabetic`, the derived baseline-table is constructed using the `alphabetic` baseline-table in the font, and the baseline-table font-size is changed to the value of the element's {{SVGAttr('font-size')}} SVG attribute or the CSS {{cssxref('font-size')}}, if set.
 - `central`
-  - : The baseline-identifier for the dominant-baseline is set to be `central`. The derived baseline-table is constructed from the defined baselines in a baseline-table in the font. That font baseline-table is chosen using the following priority order of baseline-table names: `ideographic`, `alphabetic`, `hanging`, `mathematical`. The baseline-table font-size is changed to the value of the {{SVGAttr('font-size')}} SVG attribute of {{cssxref('font-size')}} CSS property on this element.
+  - : The baseline-identifier for the dominant-baseline is set to be `central`. The derived baseline-table is constructed from the defined baselines in the font's baseline-table. That font baseline-table is chosen using the following priority order of baseline-table names: `ideographic`, `alphabetic`, `hanging`, `mathematical`. The baseline-table font-size is changed to the value of the element's {{SVGAttr('font-size')}} SVG attribute or the CSS {{cssxref('font-size')}} property value, if set.
 - `hanging`
   - : The baseline-identifier for the dominant-baseline is set to be `hanging`, the derived baseline-table is constructed using the `hanging` baseline-table in the font, and the baseline-table font-size is changed to the value of the {{SVGAttr('font-size')}} SVG attribute of {{cssxref('font-size')}} CSS property on this element.
 - `ideographic`
@@ -73,9 +73,9 @@ dominant-baseline: unset;
 - `middle`
   - : The baseline-identifier for the dominant-baseline is set to be `middle`. The derived baseline-table is constructed from the defined baselines in a baseline-table in the font. That font baseline-table is chosen using the following priority order of baseline-table names: `ideographic`, `alphabetic`, `hanging`, `mathematical`. The baseline-table font-size is changed to the value of the {{SVGAttr('font-size')}} SVG attribute of {{cssxref('font-size')}} CSS property on this element.
 - `text-bottom`
-  - : The line-under edge is used as the baseline, which is usually the bottom edge of the font's em box.
+  - : The _line-under_ edge is used as the baseline, which is usually the bottom edge of the font's em box.
 - `text-top`
-  - : The line-over edge is used as the baseline, which is usually the top edge of the font's em box.
+  - : The _line-over_ edge is used as the baseline, which is usually the top edge of the font's em box.
 
 ## Formal definition
 
@@ -103,6 +103,11 @@ dominant-baseline: unset;
        m -400,40 l 400,0
        m -400,40 l 400,0"
     stroke="grey" />
+    
+  <text x="0" y="20" fill="red">auto</text>
+  <text x="0" y="60" fill="red">auto</text>
+  <text x="0" y="100" fill="red">auto</text>
+  <text x="0" y="140" fill="red">auto</text>
 </svg>
 ```
 
@@ -148,5 +153,7 @@ text:nth-of-type(8) {
 
 ## See also
 
+- {{cssxref('alignment-baseline')}}
+- {{cssxref('text-anchor')}} 
+- {{cssxref('vertical-align')}}
 - {{SVGAttr('dominant-baseline')}} SVG attribute
-- {{cssxref('text-anchor')}} CSS property
