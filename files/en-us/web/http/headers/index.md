@@ -276,8 +276,10 @@ The following request headers are not _strictly_ "fetch metadata request headers
 
 ## Server-sent events
 
-- {{HTTPHeader("Report-To")}}
-  - : Used to specify a server endpoint for the browser to send warning and error reports to.
+- {{HTTPHeader("Reporting-Endpoints")}}
+  - : Response header used to specify server endpoints where the browser should send warning and error reports when using the [Reporting API)](/en-US/docs/Web/API/Reporting_API).
+- {{HTTPHeader("Report-To")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : Response header used to specify server endpoints where the browser should send warning and error reports when using the [Reporting API)](/en-US/docs/Web/API/Reporting_API).
 
 ## Transfer coding
 
