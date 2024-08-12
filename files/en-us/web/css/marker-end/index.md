@@ -9,7 +9,7 @@ browser-compat: css.properties.marker-end
 
 The **`marker-end`** [CSS](/en-US/docs/Web/CSS) property points to a marker that will be drawn on the last vertex of the element's path; that is, at its ending vertex. The marker must have been defined using an SVG {{SVGElement('marker')}} element, and can only be referenced with a {{cssxref('url()')}} value. The value of the CSS property overrides any values of the `marker-end` attribute in the SVG.
 
-For many marker-supporting shapes, the first and last vertices are in the same place: for example, the top left corner of a {{SVGElement('rect')}}. In such shapes, if both the first and last markers are defined, two markers will be drawn at that point, though they may not point in the same direction.
+For many marker-supporting shapes, the first and last vertices are the same point: for example, the top left corner of a {{SVGElement('rect')}}. In such shapes, if both the first and last markers are defined, two markers will be drawn at that point, though they may not face the same direction.
 
 > [!NOTE]
 > The `marker-end` property will only have an effect for elements that can use SVG markers. See {{SVGAttr("marker-end")}} for a list.
