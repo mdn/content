@@ -359,7 +359,7 @@ el.addEventListener("transitionstart", signalStart, true);
 ```
 
 > [!NOTE]
-> The `transitionend` event doesn't fire if the transition is aborted before the transition is completed because either the element is made {{cssxref("display")}}`: none` or the animating property's value is changed.
+> The `transitionend` event doesn't fire if the transition is aborted before the transition is completed because either the element is made {{cssxref("display", "display: none")}} or the animating property's value is changed.
 
 ## Specifications
 

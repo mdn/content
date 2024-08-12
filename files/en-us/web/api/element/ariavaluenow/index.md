@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Element.ariaValueNow
 ---
 
-{{DefaultAPISidebar("DOM")}}
+{{APIRef("DOM")}}
 
 The **`ariaValueNow`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) attribute, which defines the current value for a range widget.
 

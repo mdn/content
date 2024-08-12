@@ -91,7 +91,7 @@ Examples of inappropriate topics for MDN Web Docs include:
 
 - Technology that is not exposed to the web and is specific to a browser.
 - Technology that is not related to the web.
-- Documentation for end-users. For Mozilla products, for example, such documentation belongs on the [Mozilla support site](https://support.mozilla.org).
+- Documentation for end-users. For Mozilla products, for example, such documentation belongs on the [Mozilla support site](https://support.mozilla.org/).
 - Self-linking or self-promoting external links. Check out these guidelines in our [writing style guide](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#external_links) before adding an external link.
 
 ### When we remove documentation

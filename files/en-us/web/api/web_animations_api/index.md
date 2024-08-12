@@ -42,7 +42,7 @@ The Web Animations API adds features to {{domxref("document")}} and {{domxref("e
 - {{domxref("Element.animate()")}}
   - : A shortcut method for creating and playing an animation on an element. It returns the created {{domxref("Animation")}} object instance.
 - {{domxref("Element.getAnimations()")}}
-  - : Returns an Array of {{domxref("Animation")}} objects currently affecting an element or which are scheduled to do so in future.
+  - : Returns an Array of {{domxref("Animation")}} objects currently affecting an element or which are scheduled to do so in the future.
 
 ## Specifications
 

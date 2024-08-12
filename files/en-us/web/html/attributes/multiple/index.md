@@ -1,5 +1,6 @@
 ---
 title: "HTML attribute: multiple"
+short-title: multiple
 slug: Web/HTML/Attributes/multiple
 page-type: html-attribute
 browser-compat:

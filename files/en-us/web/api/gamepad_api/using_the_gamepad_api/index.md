@@ -135,7 +135,7 @@ let a = 0;
 let b = 0;
 ```
 
-Next we use the {{domxref("Window/gamepadconnected_event", "gamepadconnected")}} event to check for a gamepad being connected. When one is connected, we grab the gamepad using {{ domxref("Navigator.getGamepads()") }}`[0]`, print information about the gamepad into our gamepad info `div`, and fire the `gameLoop()` function that starts the whole ball movement process up.
+Next we use the {{domxref("Window/gamepadconnected_event", "gamepadconnected")}} event to check for a gamepad being connected. When one is connected, we grab the gamepad using {{ domxref("Navigator.getGamepads()", "navigator.getGamepads()[0]") }}, print information about the gamepad into our gamepad info `div`, and fire the `gameLoop()` function that starts the whole ball movement process up.
 
 ```js
 window.addEventListener("gamepadconnected", (e) => {
