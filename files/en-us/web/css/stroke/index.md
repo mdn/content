@@ -57,7 +57,7 @@ stroke: unset;
 
 ### Basic color stroking
 
-In this example, we create two different shapes, a circle and a rectangle, which are part of a group that has a gray stroke color as a default for the two shapes.
+In this example, we create two different shapes, a circle and a rectangle, which are part of a {{SVGElement("g")}} (group) that has a gray stroke color as a default for the two shapes.
 
 ```html
 <svg>
@@ -142,7 +142,7 @@ circle {
 }
 ```
 
-Only the rectangle recieves a gradient stroke, whereas the circle falls back to the gray stroke set by the group element. This happens because CSS gradients are not valid values for the `stroke` property, whereas URL references to SVG gradients are permitted.
+Only the rectangle receives a gradient stroke, whereas the circle falls back to the gray stroke set by the group element. This happens because CSS gradients are not valid values for the `stroke` property, whereas URL references to SVG gradients are permitted.
 
 {{EmbedLiveSample("SVG versus CSS gradients", "300", "180")}}
 
