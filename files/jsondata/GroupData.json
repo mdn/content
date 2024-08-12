@@ -787,7 +787,7 @@
         "Window",
         "WorkletGlobalScope"
       ],
-      "methods": [],
+      "methods": ["reportError"],
       "properties": [],
       "events": [
         "Document: DOMContentLoaded",
@@ -1302,7 +1302,6 @@
         "InterventionReportBody",
         "Report",
         "ReportBody",
-        "ReportError",
         "ReportingObserver",
         "SecurityPolicyViolationEvent"
       ],
