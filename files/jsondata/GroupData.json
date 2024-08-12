@@ -787,7 +787,7 @@
         "Window",
         "WorkletGlobalScope"
       ],
-      "methods": ["ReportError"],
+      "methods": ["reportError"],
       "properties": [],
       "events": [
         "Document: DOMContentLoaded",
