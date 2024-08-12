@@ -19,10 +19,9 @@ The **`d`** [CSS](/en-US/docs/Web/CSS) property defines a path to be drawn by th
 d: none;
 
 /* Basic usage */
-d: path("m 5,5 h 35 L 20,30 z")
-d: path("M 0,25 l 50,150 l 200,50 z")
-d: path("M 10,5 l 90,0 -80,80 0,-60 80,80 -90,0 z")
-
+d: path("m 5,5 h 35 L 20,30 z");
+d: path("M 0,25 l 50,150 l 200,50 z");
+d: path("M 10,5 l 90,0 -80,80 0,-60 80,80 -90,0 z");
 
 /* Global values */
 d: inherit;
@@ -34,12 +33,10 @@ d: unset;
 
 ### Values
 
-The value is either a {{cssxref("path")}} function with a single {{cssxref("string")}} parameter or the keyword {{cssxref("none")}}.
+The value is either a {{cssxref("path")}} function with a single {{cssxref("&lt;string&gt;")}} parameter or the keyword `none`.
 
 - `none`
-
   - : No path is drawn.
-
 - `path(<string>)`
   - : A `path()` function with a quoted [data string](/en-US/docs/Web/SVG/Attribute/d) parameter. The data string defines an [SVG path](/en-US/docs/Web/SVG/Element/path). The SVG path data string contains [path commands](/en-US/docs/Web/SVG/Attribute/d#path_commands) that implicitly use pixel units. An empty path is considered invalid.
 
