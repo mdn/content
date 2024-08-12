@@ -33,7 +33,7 @@ d: unset;
 
 ### Values
 
-The value is either a {{cssxref("path")}} function with a single {{cssxref("&lt;string&gt;")}} parameter or the keyword `none`.
+The value is either a {{cssxref("basic-shape/path", "path()")}} function with a single {{cssxref("&lt;string&gt;")}} parameter or the keyword `none`.
 
 - `none`
   - : No path is drawn.
@@ -108,7 +108,7 @@ We create a `<svg>` containing a single `<path>` element.
 
 #### CSS
 
-We use the `d` attribute to define a heart with a line through it. We use CSS to define the {{cssxref("fill")}}, {{cssxref("stroke")}}, and {{cssxref("stroke-width")}} of that path, and add a two-second {{cssxref("transition")}}. We add a {{cssxref(":hover")}} style that contains a slightly different {{cssxref("path()")}} function; the path has the same number of data points as the default state, making the path animatable.
+We use the `d` attribute to define a heart with a line through it. We use CSS to define the {{cssxref("fill")}}, {{cssxref("stroke")}}, and {{cssxref("stroke-width")}} of that path, and add a two-second {{cssxref("transition")}}. We add a {{cssxref(":hover")}} style that contains a slightly different {{cssxref("basic-shape/path", "path()")}} function; the path has the same number of data points as the default state, making the path animatable.
 
 ```css
 svg {
@@ -152,7 +152,7 @@ To view the animation, hover over the SVG.
 - SVG {{SVGAttr("d")}} attribute
 - {{cssxref("fill")}}
 - {{cssxref("stroke")}}
-- {{cssxref("path()")}} function
+- {{cssxref("basic-shape/path", "path()")}} function
 - {{cssxref("basic-shape")}} data type
 - [Overview of CSS shapes](/en-US/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
 - [CSS shapes](/en-US/docs/Web/CSS/CSS_shapes) module
