@@ -153,7 +153,8 @@ Reporting directives control the reporting process of CSP violations. See also t
     > the **`report-uri`** directive will be ignored.
 
 - {{CSP("report-to")}}
-  - : Fires a `SecurityPolicyViolationEvent`.
+  - : Provides the browser with a token identifying the reporting endpoint or group of endpoints for sending CSP violation information.
+    The endpoints that the token represents may be provided through other HTTP headers, such as {{HTTPHeader("Reporting-Endpoints")}}.
 
 ### Other directives
 
