@@ -103,7 +103,6 @@ dominant-baseline: unset;
        m -400,40 l 400,0
        m -400,40 l 400,0"
     stroke="grey" />
-    
   <text x="0" y="20" fill="red">auto</text>
   <text x="0" y="60" fill="red">auto</text>
   <text x="0" y="100" fill="red">auto</text>
@@ -154,6 +153,6 @@ text:nth-of-type(8) {
 ## See also
 
 - {{cssxref('alignment-baseline')}}
-- {{cssxref('text-anchor')}} 
+- {{cssxref('text-anchor')}}
 - {{cssxref('vertical-align')}}
 - {{SVGAttr('dominant-baseline')}} SVG attribute
