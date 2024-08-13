@@ -26,6 +26,63 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
+This example shows how `clearParameters()` can be used to reset all parameters back to their default values as specified in the XSLT stylesheet.
+
+```HTML
+<div id="result"></div>
+```
+
+```js
+// Simple XML data
+const xmlString = `
+<items>
+    <item>Item 1</item>
+    <item>Item 2</item>
+    <item>Item 3</item>
+</items>
+`;
+
+// Simple XSLT stylesheet
+const xsltString = `
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <xsl:param name="showItems" select="'yes'"/>
+  <xsl:template match="/">
+    <ul>
+      <xsl:if test="$showItems = 'yes'">
+        <xsl:for-each select="items/item">
+          <li><xsl:value-of select="."/></li>
+        </xsl:for-each>
+      </xsl:if>
+    </ul>
+  </xsl:template>
+</xsl:stylesheet>
+`;
+
+// Parse XML and XSLT
+const parser = new DOMParser();
+const xmlDoc = parser.parseFromString(xmlString, "application/xml");
+const xsltDoc = parser.parseFromString(xsltString, "application/xml");
+
+// Create XSLTProcessor and import the stylesheet
+const xsltProcessor = new XSLTProcessor();
+xsltProcessor.importStylesheet(xsltDoc);
+
+// Set parameters to control the display
+xsltProcessor.setParameter(null, "showItems", "yes");
+
+// Perform transformation and display result
+let resultFragment = xsltProcessor.transformToFragment(xmlDoc, document);
+document.getElementById("result").appendChild(resultFragment);
+
+// Clear all parameters
+xsltProcessor.clearParameters();
+
+// Perform transformation again (this will use the default value for 'showItems')
+resultFragment = xsltProcessor.transformToFragment(xmlDoc, document);
+document.getElementById("result").appendChild(document.createElement("hr"));
+document.getElementById("result").appendChild(resultFragment);
+```
+
 ## Specifications
 
 {{Specifications}}
