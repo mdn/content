@@ -12,7 +12,10 @@ An element receives a **`click`** event when any of the following occurs:
 
 - a pointing-device button (such as a mouse's primary button) is both pressed and released while the pointer is located inside the element.
 - a touch gesture is performed on the element
-- the <kbd>Space</kbd> key or <kbd>Enter</kbd> key is pressed while the element is focused
+- Any user interaction that is equivalent to a click, such as pressing the <kbd>Space</kbd> key or <kbd>Enter</kbd> key is pressed while the element is focused.
+
+> [!NOTE]
+> In practice, browsers don't fire this event for non-native control elements (such as a `<div>` with `tabIndex="0"`). See <a href="https://issues.chromium.org/issues/40776466">Chromium issue</a> for the reason.
 
 If the button is pressed on one element and the pointer is moved outside the element before the button is released, the event is fired on the most specific ancestor element that contained both elements.
 
