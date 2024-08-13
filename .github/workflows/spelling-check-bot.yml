@@ -1,0 +1,51 @@
+name: Create an issue to report typos
+
+on:
+  schedule:
+    - cron: "0 0 * * mon"
+  workflow_dispatch:
+
+jobs:
+  sync:
+    if: github.repository == 'mdn/content'
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: ".nvmrc"
+          cache: yarn
+
+      - uses: actions/checkout@v4
+        with:
+          repository: mdn/content
+          ref: main
+          path: content
+
+      - name: Run scripts
+        run: |
+          npm install
+          echo Running spelling check...
+          output=$(npx cspell --no-progress --config .vscode/cspell.json "content/**/*.md" || exit 0)
+          echo "$output"
+          echo "OUTPUT<<EOF" >> $GITHUB_ENV
+          echo "$output" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+
+      - name: Create an issue
+        if: env.OUTPUT != ''
+        uses: dacbd/create-issue-action@main
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          title: Weekly spelling check
+          body: |
+            ## Found typos and unknown words:
+            ${{ env.OUTPUT }}
+
+            > [!TIP]
+            > Add valid words to the [ignored-words.txt](https://github.com/mdn/content/blob/main/.vscode/ignored-words.txt) or [project-words.txt](https://github.com/mdn/content/blob/main/.vscode/project-words.txt) file, and fix the typos.
+        env:
+          OUTPUT: ${{ env.OUTPUT }}

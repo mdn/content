@@ -4,6 +4,8 @@
   "language": "en-US",
   "languageId": "*",
   "dictionaries": [
+    "project-words",
+    "ignored-words",
     "bash",
     "css",
     "cpp",
@@ -17,7 +19,6 @@
     "markdown",
     "node",
     "npm",
-    "project-words",
     "python",
     "softwareTerms",
     "svelte",
@@ -40,7 +41,7 @@
     "\\]\\(\\S*\\)",
     "\\*\\*\\w\\*\\*\\w*",
     "\\*\\w\\*\\w*",
-    "#[\\w-]*",
+    "#[À-ž\\w-]*",
     "aria-activedescendant=\"(?:[^\\\"]+|\\.)*\"",
     "aria-controls=\"(?:[^\\\"]+|\\.)*\"",
     "aria-describedby=\"(?:[^\\\"]+|\\.)*\"",
@@ -55,11 +56,13 @@
     "for=\"(?:[^\\\"]+|\\.)*\"",
     "HexValues",
     "href=\"(?:[^\\\"]+|\\.)*\"",
-    "id=\"(?:[^\\\"]+|\\.)*\"",
+    "(?<=id)=\"(?:[^\\\"]+|\\.)*\"",
     "lang=\".*\">.*</",
     "src=\"(?:[^\\\"]+|\\.)*\"",
     "url\\(\"data\\:image/svg\\+xml.*\"\\)[,;]",
-    "Urls"
+    "Urls",
+    "favourite-colour",
+    "ucaf:.*\""
   ],
   "allowCompoundWords": true,
   "dictionaryDefinitions": [
@@ -67,6 +70,12 @@
       "name": "project-words",
       "path": "./project-words.txt",
       "addWords": true
+    },
+    {
+      "name": "ignored-words",
+      "path": "./ignored-words.txt",
+      "addWords": false,
+      "noSuggest": true
     }
   ],
   "enableFiletypes": ["xml"]
