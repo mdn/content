@@ -26,7 +26,6 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-
 This example demonstrates how the `reset()` method allows the same `XSLTProcessor` instance to be reused for multiple transformations with different stylesheets.
 
 ```html
