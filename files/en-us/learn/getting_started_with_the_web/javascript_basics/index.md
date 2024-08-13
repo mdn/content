@@ -44,7 +44,7 @@ However, getting comfortable with JavaScript is more challenging than getting co
    ```
 
 3. This is doing the same job as the {{htmlelement("link")}} element for CSS. It applies the JavaScript to the page, so it can have an effect on the HTML (along with the CSS, and anything else on the page).
-4. Add this code to the `main.js` file:
+4. Add this code to the `scripts/main.js` file:
 
    ```js
    const myHeading = document.querySelector("h1");
