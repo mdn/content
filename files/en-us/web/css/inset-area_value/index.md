@@ -41,7 +41,7 @@ Inset areas work on the concept of an **inset-area grid**, a 3x3 grid of tiles c
 
 ![The inset-area grid, as described below](inset-area.png)
 
-When used as the value of a positioned element`s inset-area` property, the dimensions of the center tile are defined by the [containing block](/en-US/docs/Web/CSS/Containing_block) of the element's default anchor element. The dimensions of the grid's outer edge are defined by the positioned element's containing block. Logical keyterms are generally based on the writing mode and direction of the containing block, except for the `self-*` keyterms, which are calculated from the writing mode of the anchor-positioned element.
+When used as the value of a positioned element's `inset-area` property, the dimensions of the center tile are defined by the [containing block](/en-US/docs/Web/CSS/Containing_block) of the element's default anchor element. The dimensions of the grid's outer edge are defined by the positioned element's containing block. Logical keyterms are generally based on the writing mode and direction of the containing block, except for the `self-*` keyterms, which are calculated from the writing mode of the anchor-positioned element.
 
 The grid tiles are broken up into rows and columns:
 

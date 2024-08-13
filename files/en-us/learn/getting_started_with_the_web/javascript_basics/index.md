@@ -260,7 +260,7 @@ An `{{Glossary("operator")}}` is a mathematical symbol that produces a result ba
         <p>
           "Does-not-equal" gives basically the same result with different
           syntax. Here we are testing "is <code>myVariable</code> NOT equal to
-          3". This returns<code> false</code> because <code>myVariable</code> IS
+          3". This returns <code>false</code> because <code>myVariable</code> IS
           equal to 3:
         </p>
         <p>

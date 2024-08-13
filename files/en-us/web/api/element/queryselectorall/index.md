@@ -136,7 +136,7 @@ The `querySelectorAll()` method applies its selectors to the whole document: the
 In this example the HTML contains:
 
 - two buttons: `#select` and `#select-scope`
-- three nested `<div>` elements:`#outer`, `#subject`, and `#inner`
+- three nested `<div>` elements: `#outer`, `#subject`, and `#inner`
 - a `<pre>` element which the example uses for output.
 
 ```html

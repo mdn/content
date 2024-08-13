@@ -203,7 +203,7 @@ When the numbers of channels of the input and the output don't match, up-mixing,
       <td><code>4</code> <em>(Quad)</em></td>
       <td>
         <em>Up-mix from stereo to quad.</em><br />The <code>L</code> and
-        <code>R </code>input channels are used for their non-surround respective
+        <code>R</code> input channels are used for their non-surround respective
         output channels (<code>L</code> and <code>R</code>). Surround output
         channels (<code>SL</code> and <code>SR</code>) are silent.<br /><code
           >output.L = input.L<br />output.R = input.R<br />output.SL = 0<br />output.SR
@@ -216,7 +216,7 @@ When the numbers of channels of the input and the output don't match, up-mixing,
       <td><code>6</code> <em>(5.1)</em></td>
       <td>
         <em>Up-mix from stereo to 5.1.</em><br />The <code>L</code> and
-        <code>R </code>input channels are used for their non-surround respective
+        <code>R</code> input channels are used for their non-surround respective
         output channels (<code>L</code> and <code>R</code>). Surround output
         channels (<code>SL</code> and <code>SR</code>), as well as the center
         (<code>C</code>) and subwoofer (<code>LFE</code>) channels, are left
