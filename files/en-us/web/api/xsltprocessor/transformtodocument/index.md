@@ -33,6 +33,8 @@ A {{domxref("Document")}}. The actual interface depends on the [output method](h
 
 ## Examples
 
+This example demonstrates how to use `transformToDocument()` to transform an XML document using XSLT, resulting in a new XML document structure.
+
 ```html
 <div id="result"></div>
 ```
