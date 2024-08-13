@@ -512,7 +512,7 @@ The WebGL 2.0 `texImage*` API lets you define each mip level independently and a
 
 Further, some drivers might unconditionally allocate the whole mip-chain (+30% memory!) even if you only want a single level.
 
-So, prefer `texStorage`+`texSubImage` for textures in WebGL 2
+So, prefer `texStorage` + `texSubImage` for textures in WebGL 2.
 
 ## Use invalidateFramebuffer
 

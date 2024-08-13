@@ -6715,8 +6715,8 @@
 /en-US/docs/SVG/SVG_animation_with_SMIL	/en-US/docs/Web/SVG/SVG_animation_with_SMIL
 /en-US/docs/SVG/SVG_as_an_Image	/en-US/docs/Web/SVG/SVG_as_an_Image
 /en-US/docs/SVG/Scripting	/en-US/docs/Web/SVG/Scripting
-/en-US/docs/SVG/Server-configuration	/en-US/docs/Web/SVG/Server-configuration
-/en-US/docs/SVG/Specification_Deviations	/en-US/docs/Web/SVG/Specification_Deviations
+/en-US/docs/SVG/Server-configuration	https://www.w3.org/services/svg-server/
+/en-US/docs/SVG/Specification_Deviations	/en-US/docs/Web/SVG
 /en-US/docs/SVG/Tutorial	/en-US/docs/Web/SVG/Tutorial
 /en-US/docs/SVG/Tutorial/Basic_Shapes	/en-US/docs/Web/SVG/Tutorial/Basic_Shapes
 /en-US/docs/SVG/Tutorial/Basic_Transformations	/en-US/docs/Web/SVG/Tutorial/Basic_Transformations
@@ -6748,7 +6748,7 @@
 /en-US/docs/SVG:Namespaces_Crash_Course	/en-US/docs/Web/SVG/Namespaces_Crash_Course
 /en-US/docs/SVG:Namespaces_Crash_Course:Example	/en-US/docs/Web/SVG/Namespaces_Crash_Course/Example
 /en-US/docs/SVG:Scripting	/en-US/docs/Web/SVG/Scripting
-/en-US/docs/SVG:Specification_Deviations	/en-US/docs/Web/SVG/Specification_Deviations
+/en-US/docs/SVG:Specification_Deviations	/en-US/docs/Web/SVG
 /en-US/docs/SVG:Tutorial	/en-US/docs/Web/SVG/Tutorial
 /en-US/docs/SVG:Tutorial:Basic_Shapes	/en-US/docs/Web/SVG/Tutorial/Basic_Shapes
 /en-US/docs/SVG:Tutorial:Fill_Stroke_and_Gradients	/en-US/docs/Web/SVG/Tutorial/Fills_and_Strokes
@@ -11659,9 +11659,6 @@
 /en-US/docs/Web/CSS/linear-gradient()	/en-US/docs/Web/CSS/gradient/linear-gradient
 /en-US/docs/Web/CSS/margin-new	/en-US/docs/Web/CSS/margin
 /en-US/docs/Web/CSS/margin_collapsing	/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing
-/en-US/docs/Web/CSS/marker-end	/en-US/docs/Web/SVG/Attribute/marker-end
-/en-US/docs/Web/CSS/marker-mid	/en-US/docs/Web/SVG/Attribute/marker-mid
-/en-US/docs/Web/CSS/marker-start	/en-US/docs/Web/SVG/Attribute/marker-start
 /en-US/docs/Web/CSS/max()	/en-US/docs/Web/CSS/max
 /en-US/docs/Web/CSS/media	/en-US/docs/Web/CSS/@media
 /en-US/docs/Web/CSS/media/Bitmap	/en-US/docs/Web/CSS/@media
@@ -11710,7 +11707,6 @@
 /en-US/docs/Web/CSS/single-transition-timing-function	/en-US/docs/Web/CSS/easing-function
 /en-US/docs/Web/CSS/speak-as	/en-US/docs/Web/CSS/@counter-style/speak-as
 /en-US/docs/Web/CSS/static	/en-US/docs/Web/CSS/position
-/en-US/docs/Web/CSS/stroke	/en-US/docs/Web/SVG/Attribute/stroke
 /en-US/docs/Web/CSS/stroke-dasharray	/en-US/docs/Web/SVG/Attribute/stroke-dasharray
 /en-US/docs/Web/CSS/stroke-dashoffset	/en-US/docs/Web/SVG/Attribute/stroke-dashoffset
 /en-US/docs/Web/CSS/stroke-linecap	/en-US/docs/Web/SVG/Attribute/stroke-linecap
@@ -13015,6 +13011,8 @@
 /en-US/docs/Web/SVG/Compatibility_sources	/en-US/docs/Web/SVG
 /en-US/docs/Web/SVG/Element/animateColor	/en-US/docs/Web/SVG/Element/animate
 /en-US/docs/Web/SVG/Index	/en-US/docs/Web/SVG
+/en-US/docs/Web/SVG/Server-configuration	https://www.w3.org/services/svg-server/
+/en-US/docs/Web/SVG/Specification_Deviations	/en-US/docs/Web/SVG
 /en-US/docs/Web/SVG/Tutorial/Fill_Stroke_and_Gradients	/en-US/docs/Web/SVG/Tutorial/Fills_and_Strokes
 /en-US/docs/Web/SVG/circle	/en-US/docs/Web/SVG/Element/circle
 /en-US/docs/Web/SVG/ellipse	/en-US/docs/Web/SVG/Element/ellipse

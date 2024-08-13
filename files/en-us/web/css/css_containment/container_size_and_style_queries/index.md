@@ -324,7 +324,7 @@ output {
 }
 ```
 
-The first style feature query is a custom property with no value. This query type returns true when the computed value for the custom property value is different from the `initial-value` for that property. In this case, it will be true when the value of `--theme` is any value other than any syntax equivalent value of`#f00` ( such as `red`). When true, the {{htmlelement("output")}} will have a 5px dotted outline. The outline color is the current value of `--theme`. The default text {{cssxref("color")}} is grey.
+The first style feature query is a custom property with no value. This query type returns true when the computed value for the custom property value is different from the `initial-value` for that property. In this case, it will be true when the value of `--theme` is any value other than any syntax equivalent value of `#f00` ( such as `red`). When true, the {{htmlelement("output")}} will have a 5px dotted outline. The outline color is the current value of `--theme`. The default text {{cssxref("color")}} is grey.
 
 ```css
 @container style(--theme) {

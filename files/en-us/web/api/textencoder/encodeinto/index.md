@@ -39,7 +39,7 @@ An object, which contains two members:
 
 ## Encode into a specific position
 
-_encoder_`.encodeInto()` always puts its output at the start of the array.
+`encodeInto()` always puts its output at the start of the array.
 However, it is sometimes useful to make the output start at a particular index.
 The solution is [`TypedArray.prototype.subarray()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/subarray):
 

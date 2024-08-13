@@ -37,7 +37,7 @@ browser.action.setBadgeTextColor(
     - `tabId` {{optional_inline}}
       - : `integer`. Sets the badge text color only for the given tab. The color is reset when the user navigates this tab to a new page.
     - `windowId` {{optional_inline}}
-      - : `integer`. Sets the badge text color only for the given tab.
+      - : `integer`. Sets the badge text color only for the given window.
 
 <!---->
 

@@ -31,7 +31,7 @@ offset-distance: revert-layer;
 offset-distance: unset;
 ```
 
-- `{{cssxref('&lt;length-percentage&gt;')}}`
+- {{cssxref('&lt;length-percentage&gt;')}}
 
   - : A length that specifies how far the element is along the path (defined with {{cssxref('offset-path')}}).
 

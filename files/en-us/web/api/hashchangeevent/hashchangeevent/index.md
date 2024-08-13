@@ -28,7 +28,7 @@ new HashChangeEvent(type, options)
   - : An object that, _in addition to the properties defined in {{domxref("Event/Event", "Event()")}}_, has the following properties:
     - `oldURL` {{optional_inline}}
       - : A string containing the old URL. Its default value is the empty string (`""`).
-    - `newURL`{{optional_inline}}
+    - `newURL` {{optional_inline}}
       - : A string containing the new URL. Its default value is the empty string (`""`).
 
 ### Return value

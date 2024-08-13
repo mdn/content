@@ -710,7 +710,7 @@ Create the template file `django-locallibrary-tutorial/catalog/templates/catalog
 
 This is similar to our previous forms and renders the fields using a table. Note also how again we declare the `{% csrf_token %}` to ensure that our forms are resistant to CSRF attacks.
 
-The "delete" view expects to find a template named with the format \_`model_name_confirm_delete.html` (again, you can change the suffix using `template_name_suffix` in your view).
+The "delete" view expects to find a template named with the format `[model_name]_confirm_delete.html` (again, you can change the suffix using `template_name_suffix` in your view).
 Create the template file `django-locallibrary-tutorial/catalog/templates/catalog/author_confirm_delete.html` and copy the text below.
 
 ```django
