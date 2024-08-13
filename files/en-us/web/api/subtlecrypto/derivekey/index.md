@@ -332,63 +332,68 @@ async function decryptMessage(key, initializationVector, ciphertext) {
 
 The `agreeSharedSecretKey()` function below is called on loading to generate pairs and shared keys for Alice and Bob.
 It also adds a click handler for the "Encrypt" button that will trigger encryption and then decryption of the text defined in the first `<input>`.
+Note that here we call the `generateKey()` functions in a `try...catch` handler, to ensure that we can log the case where key generation fails because the X25519 algorithm is not supported.
 
 ```js
 async function agreeSharedSecretKey() {
-  // Generate 2 X25519 key pairs: one for Alice and one for Bob
-  // In more normal usage, they would generate their key pairs
-  // separately and exchange public keys securely
-  const alicesKeyPair = await window.crypto.subtle.generateKey(
-    {
-      name: "X25519",
-    },
-    false,
-    ["deriveKey"],
-  );
+  try {
+    // Generate 2 X25519 key pairs: one for Alice and one for Bob
+    // In more normal usage, they would generate their key pairs
+    // separately and exchange public keys securely
+    const alicesKeyPair = await window.crypto.subtle.generateKey(
+      {
+        name: "X25519",
+      },
+      false,
+      ["deriveKey"],
+    );
 
-  log(
-    `Created Alices's key pair: (algorithm: ${JSON.stringify(
-      alicesKeyPair.privateKey.algorithm,
-    )}, usages: ${alicesKeyPair.privateKey.usages})`,
-  );
+    log(
+      `Created Alices's key pair: (algorithm: ${JSON.stringify(
+        alicesKeyPair.privateKey.algorithm,
+      )}, usages: ${alicesKeyPair.privateKey.usages})`,
+    );
 
-  const bobsKeyPair = await window.crypto.subtle.generateKey(
-    {
-      name: "X25519",
-    },
-    false,
-    ["deriveKey"],
-  );
+    const bobsKeyPair = await window.crypto.subtle.generateKey(
+      {
+        name: "X25519",
+      },
+      false,
+      ["deriveKey"],
+    );
 
-  log(
-    `Created Bob's key pair: (algorithm: ${JSON.stringify(
-      bobsKeyPair.privateKey.algorithm,
-    )}, usages: ${bobsKeyPair.privateKey.usages})`,
-  );
+    log(
+      `Created Bob's key pair: (algorithm: ${JSON.stringify(
+        bobsKeyPair.privateKey.algorithm,
+      )}, usages: ${bobsKeyPair.privateKey.usages})`,
+    );
 
-  // Alice then generates a secret key using her private key and Bob's public key.
-  const alicesSecretKey = await deriveSecretKey(
-    alicesKeyPair.privateKey,
-    bobsKeyPair.publicKey,
-  );
+    // Alice then generates a secret key using her private key and Bob's public key.
+    const alicesSecretKey = await deriveSecretKey(
+      alicesKeyPair.privateKey,
+      bobsKeyPair.publicKey,
+    );
 
-  log(
-    `alicesSecretKey: ${alicesSecretKey.type} (algorithm: ${JSON.stringify(
-      alicesSecretKey.algorithm,
-    )}, usages: ${alicesSecretKey.usages}), `,
-  );
+    log(
+      `alicesSecretKey: ${alicesSecretKey.type} (algorithm: ${JSON.stringify(
+        alicesSecretKey.algorithm,
+      )}, usages: ${alicesSecretKey.usages}), `,
+    );
 
-  // Bob generates the same secret key using his private key and Alice's public key.
-  const bobsSecretKey = await deriveSecretKey(
-    bobsKeyPair.privateKey,
-    alicesKeyPair.publicKey,
-  );
+    // Bob generates the same secret key using his private key and Alice's public key.
+    const bobsSecretKey = await deriveSecretKey(
+      bobsKeyPair.privateKey,
+      alicesKeyPair.publicKey,
+    );
 
-  log(
-    `bobsSecretKey: ${bobsSecretKey.type} (algorithm: ${JSON.stringify(
-      bobsSecretKey.algorithm,
-    )}, usages: ${bobsSecretKey.usages}), `,
-  );
+    log(
+      `bobsSecretKey: ${bobsSecretKey.type} (algorithm: ${JSON.stringify(
+        bobsSecretKey.algorithm,
+      )}, usages: ${bobsSecretKey.usages}), `,
+    );
+  } catch (e) {
+    log(e);
+  }
 
   // Get access for the encrypt button and the three inputs
   const encryptButton = document.querySelector("#encrypt-button");
@@ -406,7 +411,7 @@ async function agreeSharedSecretKey() {
     const encryptedMessage = await encryptMessage(
       alicesSecretKey,
       initializationVector,
-      message,
+      messageInput.value,
     );
 
     // We then display part of the encrypted buffer and log the encrypted message
