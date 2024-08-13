@@ -221,7 +221,7 @@ For example, in the [favourite-colour example](https://github.com/mdn/webextensi
 
 ```json
 {
-  "name": "favourite-color-examples@mozilla.org",
+  "name": "favourite-colour-examples@mozilla.org",
   "description": "ignored",
   "type": "storage",
   "data": {
@@ -230,7 +230,7 @@ For example, in the [favourite-colour example](https://github.com/mdn/webextensi
 }
 ```
 
-The `favourite-color-examples@mozilla.org` extension then accesses the data using code like this:
+The `favourite-colour-examples@mozilla.org` extension then accesses the data using code like this:
 
 ```js
 let storageItem = browser.storage.managed.get("color");
