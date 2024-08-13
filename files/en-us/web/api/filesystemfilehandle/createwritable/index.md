@@ -128,7 +128,7 @@ Next, we create an async function called `selectFile()`, which we'll invoke when
 We pass `createWritable()` an options object containing the following options:
 
 - `keepExistingData: true`: If the selected file already exists, and data contained within it is copied to the temporary file before writing commences.
-- `mode: "exclusive"`: States that only one writer can be open on the file handle simultneously. If a second user loads the example and tries to select a file, they will get an error.
+- `mode: "exclusive"`: States that only one writer can be open on the file handle simultaneously. If a second user loads the example and tries to select a file, they will get an error.
 
 Last of all, we enable the input field and the write text button, as they are needed for the next step, and disable the select file button (this is not currently needed).
 

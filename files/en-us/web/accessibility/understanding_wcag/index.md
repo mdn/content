@@ -39,6 +39,6 @@ This introductory documentation is intended to provide practical information to 
 - [WCAG: Understandable](/en-US/docs/Web/Accessibility/Understanding_WCAG/Understandable)
 - [WCAG: Robust](/en-US/docs/Web/Accessibility/Understanding_WCAG/Robust)
 - [WCAG text labels and names](/en-US/docs/Web/Accessibility/Understanding_WCAG/Text_labels_and_names)
-- [WCAG keyboard accessiblity](/en-US/docs/Web/Accessibility/Understanding_WCAG/Keyboard)
+- [WCAG keyboard accessibility](/en-US/docs/Web/Accessibility/Understanding_WCAG/Keyboard)
 - [WCAG Overview](https://www.w3.org/WAI/standards-guidelines/wcag/)
 - [WCAG 2.2](https://www.w3.org/TR/WCAG22/)
