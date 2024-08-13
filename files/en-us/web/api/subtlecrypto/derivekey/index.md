@@ -332,7 +332,7 @@ async function decryptMessage(key, initializationVector, ciphertext) {
 
 The `agreeSharedSecretKey()` function below is called on loading to generate pairs and shared keys for Alice and Bob.
 It also adds a click handler for the "Encrypt" button that will trigger encryption and then decryption of the text defined in the first `<input>`.
-Note that here we call the `generateKey()` functions in a `try...catch` handler, to ensure that we can log the case where key generation fails because the X25519 algorithm is not supported.
+Note that alll the code is inside a `try...catch` handler, to ensure that we can log the case where key generation fails because the X25519 algorithm is not supported.
 
 ```js
 async function agreeSharedSecretKey() {
@@ -391,47 +391,49 @@ async function agreeSharedSecretKey() {
         bobsSecretKey.algorithm,
       )}, usages: ${bobsSecretKey.usages}), `,
     );
+
+    // Get access for the encrypt button and the three inputs
+    const encryptButton = document.querySelector("#encrypt-button");
+    const messageInput = document.querySelector("#message");
+    const encryptedInput = document.querySelector("#encrypted");
+    const decryptedInput = document.querySelector("#decrypted");
+
+    // Define the initialization vector that will be used for encrypting and decrypting the message.
+    const initializationVector = window.crypto.getRandomValues(
+      new Uint8Array(8),
+    );
+
+    encryptButton.addEventListener("click", async () => {
+      log(`Plaintext: ${messageInput.value}`);
+
+      // Alice can use her copy of the shared key to encrypt the message.
+      const encryptedMessage = await encryptMessage(
+        alicesSecretKey,
+        initializationVector,
+        messageInput.value,
+      );
+
+      // We then display part of the encrypted buffer and log the encrypted message
+      let buffer = new Uint8Array(encryptedMessage, 0, 5);
+      encryptedInput.value = `${buffer}...[${encryptedMessage.byteLength} bytes total]`;
+
+      log(
+        `encryptedMessage: ${buffer}...[${encryptedMessage.byteLength} bytes total]`,
+      );
+
+      // Bob uses his shared secret key to decrypt the message.
+      const decryptedCypertext = await decryptMessage(
+        bobsSecretKey,
+        initializationVector,
+        encryptedMessage,
+      );
+
+      decryptedInput.value = decryptedCypertext;
+      log(`decryptedCypertext: ${decryptedCypertext}`);
+    });
   } catch (e) {
     log(e);
   }
-
-  // Get access for the encrypt button and the three inputs
-  const encryptButton = document.querySelector("#encrypt-button");
-  const messageInput = document.querySelector("#message");
-  const encryptedInput = document.querySelector("#encrypted");
-  const decryptedInput = document.querySelector("#decrypted");
-
-  // Define the initialization vector that will be used for encrypting and decrypting the message.
-  const initializationVector = window.crypto.getRandomValues(new Uint8Array(8));
-
-  encryptButton.addEventListener("click", async () => {
-    log(`Plaintext: ${messageInput.value}`);
-
-    // Alice can use her copy of the shared key to encrypt the message.
-    const encryptedMessage = await encryptMessage(
-      alicesSecretKey,
-      initializationVector,
-      messageInput.value,
-    );
-
-    // We then display part of the encrypted buffer and log the encrypted message
-    let buffer = new Uint8Array(encryptedMessage, 0, 5);
-    encryptedInput.value = `${buffer}...[${encryptedMessage.byteLength} bytes total]`;
-
-    log(
-      `encryptedMessage: ${buffer}...[${encryptedMessage.byteLength} bytes total]`,
-    );
-
-    // Bob uses his shared secret key to decrypt the message.
-    const decryptedCypertext = await decryptMessage(
-      bobsSecretKey,
-      initializationVector,
-      encryptedMessage,
-    );
-
-    decryptedInput.value = decryptedCypertext;
-    log(`decryptedCypertext: ${decryptedCypertext}`);
-  });
 }
 
 // Finally we call the method to set the example running.
