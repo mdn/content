@@ -187,6 +187,259 @@ async function agreeSharedSecretKey() {
 }
 ```
 
+### X25519 derived shared key
+
+This example is much the same as the example above, except that it uses keys generated using the X25519 algorithm rather than ECDH, and it is a live example.
+
+In this example Alice and Bob each generate an X25519 key pair, then exchange public keys.
+They then each use `deriveKey()` to derive a shared AES key from their own private key and each other's public key.
+Their respective AES keys can encrypt and decrypt messages send between them.
+
+#### HTML
+
+First we define an HTML {{HTMLElement("input")}} for user to enter the plaintext message that Alice will send.
+This is followed by another two elements for displaying the cyphertext after Alice has encypted the plain text with her derived private key, and for displaying the text after Bob has decrypted it with his derived private key.
+
+At the end is a button that the user can click to start the encryption process.
+
+```html
+<label for="message">Plaintext message from Alice (Enter):</label>
+<input
+  type="text"
+  id="message"
+  name="message"
+  size="50"
+  value="The lion roars near dawn" />
+
+<label for="encrypted">Encrypted (Alice)</label>
+<input
+  type="text"
+  id="encrypted"
+  name="encrypted"
+  size="25"
+  value=""
+  readonly />
+
+<label for="decrypted">Decrypted (Bob)</label>
+<input
+  type="text"
+  id="decrypted"
+  name="decrypted"
+  size="50"
+  value=""
+  readonly />
+
+<input id="encrypt-button" type="button" value="Encrypt" />
+```
+
+```html hidden
+<pre id="log"></pre>
+```
+
+```css hidden
+input {
+  display: block;
+}
+#log {
+  height: 150px;
+  width: 90%;
+  white-space: pre-wrap; /* wrap pre blocks */
+  overflow-wrap: break-word; /* break on words */
+  overflow-y: auto;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
+#### JavaScript
+
+```js hidden
+const logElement = document.querySelector("#log");
+function log(text) {
+  logElement.innerText = `${logElement.innerText}${text}\n`;
+  logElement.scrollTop = logElement.scrollHeight;
+}
+```
+
+The code below shows how we use `deriveKey()`.
+This takes the algorithm and public key of the remote party, the private key of the local party, they algorithm of the derived key, and the "usages" for the new key, and creates a derived key.
+We use this further down in the code to create shared keys for Bob and Alice.
+
+```js
+/*
+Derive an AES key, given:
+- our X25519 private key
+- their X25519 public key
+*/
+function deriveSecretKey(privateKey, publicKey) {
+  return window.crypto.subtle.deriveKey(
+    {
+      name: "X25519",
+      public: publicKey,
+    },
+    privateKey,
+    {
+      name: "AES-GCM",
+      length: 256,
+    },
+    false,
+    ["encrypt", "decrypt"],
+  );
+}
+```
+
+Next we define the functions that Alice will use to UTF-8 encode and then encrypt her plaintext message, and that Bob will use to decrypt and then decode the message.
+The both take the shared key of the caller, an "initialization vector", and the text to be encrypted or decrypted.
+
+The [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm) algorithm requires that the initialization vector passed to the `encrypt()` and `decrypt()` methods is the same.
+Note however that while it has to be unique, it does not have to be secret, and can be shared with the remote party along with the public keys (in this case we'll just make it directly available).
+For more information see {{domxref("AesGcmParams")}}, which describes the object passed to the methods.
+
+```js
+async function encryptMessage(key, initializationVector, message) {
+  try {
+    const encoder = new TextEncoder();
+    encodedMessage = encoder.encode(message);
+    // iv will be needed for decryption
+    return await window.crypto.subtle.encrypt(
+      { name: "AES-GCM", iv: initializationVector },
+      key,
+      encodedMessage,
+    );
+  } catch (e) {
+    console.log(e);
+    return `Encoding error`;
+  }
+}
+
+async function decryptMessage(key, initializationVector, ciphertext) {
+  try {
+    const decryptedText = await window.crypto.subtle.decrypt(
+      // The iv value must be the same as that used for encryption
+      { name: "AES-GCM", iv: initializationVector },
+      key,
+      ciphertext,
+    );
+
+    const utf8Decoder = new TextDecoder();
+    return utf8Decoder.decode(decryptedText);
+  } catch (e) {
+    console.log(e);
+    return "Decryption error";
+  }
+}
+```
+
+The `agreeSharedSecretKey()` function below is called on loading to generate pairs and shared keys for Alice and Bob.
+It also adds a click handler for the "Encrypt" button that will trigger encryption and then decryption of the text defined in the first `<input>`.
+
+```js
+async function agreeSharedSecretKey() {
+  // Generate 2 X25519 key pairs: one for Alice and one for Bob
+  // In more normal usage, they would generate their key pairs
+  // separately and exchange public keys securely
+  const alicesKeyPair = await window.crypto.subtle.generateKey(
+    {
+      name: "X25519",
+    },
+    false,
+    ["deriveKey"],
+  );
+
+  log(
+    `Created Alices's key pair: (algorithm: ${JSON.stringify(
+      alicesKeyPair.privateKey.algorithm,
+    )}, usages: ${alicesKeyPair.privateKey.usages})`,
+  );
+
+  const bobsKeyPair = await window.crypto.subtle.generateKey(
+    {
+      name: "X25519",
+    },
+    false,
+    ["deriveKey"],
+  );
+
+  log(
+    `Created Bob's key pair: (algorithm: ${JSON.stringify(
+      bobsKeyPair.privateKey.algorithm,
+    )}, usages: ${bobsKeyPair.privateKey.usages})`,
+  );
+
+  // Alice then generates a secret key using her private key and Bob's public key.
+  const alicesSecretKey = await deriveSecretKey(
+    alicesKeyPair.privateKey,
+    bobsKeyPair.publicKey,
+  );
+
+  log(
+    `alicesSecretKey: ${alicesSecretKey.type} (algorithm: ${JSON.stringify(
+      alicesSecretKey.algorithm,
+    )}, usages: ${alicesSecretKey.usages}), `,
+  );
+
+  // Bob generates the same secret key using his private key and Alice's public key.
+  const bobsSecretKey = await deriveSecretKey(
+    bobsKeyPair.privateKey,
+    alicesKeyPair.publicKey,
+  );
+
+  log(
+    `bobsSecretKey: ${bobsSecretKey.type} (algorithm: ${JSON.stringify(
+      bobsSecretKey.algorithm,
+    )}, usages: ${bobsSecretKey.usages}), `,
+  );
+
+  // Get access for the encrypt button and the three inputs
+  const encryptButton = document.querySelector("#encrypt-button");
+  const messageInput = document.querySelector("#message");
+  const encryptedInput = document.querySelector("#encrypted");
+  const decryptedInput = document.querySelector("#decrypted");
+
+  // Define the initialization vector that will be used for encrypting and decrypting the message.
+  const initializationVector = window.crypto.getRandomValues(new Uint8Array(8));
+
+  encryptButton.addEventListener("click", async () => {
+    log(`Plaintext: ${messageInput.value}`);
+
+    // Alice can use her copy of the shared key to encrypt the message.
+    const encryptedMessage = await encryptMessage(
+      alicesSecretKey,
+      initializationVector,
+      message,
+    );
+
+    // We then display part of the encrypted buffer and log the encrypted message
+    let buffer = new Uint8Array(encryptedMessage, 0, 5);
+    encryptedInput.value = `${buffer}...[${encryptedMessage.byteLength} bytes total]`;
+
+    log(
+      `encryptedMessage: ${buffer}...[${encryptedMessage.byteLength} bytes total]`,
+    );
+
+    // Bob uses his shared secret key to decrypt the message.
+    const decryptedCypertext = await decryptMessage(
+      bobsSecretKey,
+      initializationVector,
+      encryptedMessage,
+    );
+
+    decryptedInput.value = decryptedCypertext;
+    log(`decryptedCypertext: ${decryptedCypertext}`);
+  });
+}
+
+// Finally we call the method to set the example running.
+agreeSharedSecretKey();
+```
+
+#### Result
+
+Press the Encrypt button to encrypt the text in the top `<input>` element, displaying the encrypted cypertext and decrypted cyphertext in the following two elements.
+The log area at the bottom provide information about the keys that are generated by the code.
+
+{{EmbedLiveSample("X25519 derived shared key", "100%", "340px")}}
+
 ### PBKDF2
 
 In this example we ask the user for a password, then use it to derive an AES key using
