@@ -1164,17 +1164,12 @@ You almost certainly don't want to use this format, since it isn't supported in 
               <th scope="row">MP4V-ES support</th>
               <td>No</td>
               <td>No</td>
-              <td>Yes</td>
+              <td>No</td>
               <td>No</td>
               <td>No</td>
             </tr>
           </tbody>
         </table>
-        <p>
-          Firefox supports MP4V-ES in
-          <a href="/en-US/docs/Web/Media/Formats/Containers#3gp">3GP</a>
-          containers only.
-        </p>
         <p>Chrome does not support MP4V-ES; however, ChromeOS does.</p>
       </td>
     </tr>
@@ -1587,7 +1582,7 @@ The [Theora Cookbook](https://en.flossmanuals.net/ogg-theora/_full/) offers addi
               <th scope="row">Theora support</th>
               <td>3 to 121</td>
               <td>12 to 121</td>
-              <td>3.5 to 126</td>
+              <td>3.5 to 130</td>
               <td>10.5 to 107</td>
               <td>No</td>
             </tr>
