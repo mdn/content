@@ -34,7 +34,7 @@ A {{domxref("Document")}}. The actual interface depends on the [output method](h
 ## Examples
 
 ```html
-<pre id="result"></pre>
+<div id="result"></div>
 ```
 
 ```js
