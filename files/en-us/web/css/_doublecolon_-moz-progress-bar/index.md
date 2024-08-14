@@ -3,11 +3,12 @@ title: "::-moz-progress-bar"
 slug: Web/CSS/::-moz-progress-bar
 page-type: css-pseudo-element
 status:
+  - experimental
   - non-standard
 browser-compat: css.selectors.-moz-progress-bar
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{CSSRef}}{{Non-standard_header}}{{SeeCompatTable}}
 
 The **`::-moz-progress-bar`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that represents the progress bar inside a {{HTMLElement("progress")}} element. (The bar represents the amount of progress that has been made.)
 

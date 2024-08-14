@@ -142,7 +142,6 @@ li {
         <option>video/webm; codecs=vp9</option>
         <option>video/mp4; codecs=avc1</option>
         <option>video/mp4; codecs=avc1.420034</option>
-        <option>video/ogg; codecs=theora</option>
         <option>invalid</option>
       </select>
     </li>

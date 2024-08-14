@@ -74,7 +74,7 @@ To use Vue in an existing site, you can drop one of the following [`<script>`](/
 However, this approach has some limitations. To build more complex apps, you'll want to use the [Vue npm package](https://www.npmjs.com/package/vue). This will let you use advanced features of Vue and use tools like Vite or WebPack. To make building apps with Vue easier, there is a CLI scaffolding tool [create-vue](https://github.com/vuejs/create-vue) to streamline the development process. To use `create-vue` you will need:
 
 1. Node.js 20 installed.
-2. [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) or [yarn](https://yarnpkg.com/).
+2. [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/) or [yarn](https://yarnpkg.com/).
 
 > [!NOTE]
 > If you don't have the above installed, find out [more about installing npm and Node.js](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#adding_powerups) here.

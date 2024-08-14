@@ -140,7 +140,7 @@ function dragWithCustomImage(event) {
 }
 ```
 
-In this example, we make one canvas the drag image. As the canvas is `50`×`50` pixels, we use offsets of half of this (`25`) so that the image appears centered on the mouse pointer.
+In this example, we make one canvas the drag image. As the canvas is 50×50 pixels, we use offsets of half of this (`25`) so that the image appears centered on the mouse pointer.
 
 ## Drag effects
 

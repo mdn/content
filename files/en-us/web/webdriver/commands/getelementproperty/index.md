@@ -7,7 +7,7 @@ browser-compat: webdriver.commands.GetElementProperty
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/WebDriver/Commands")}}
 
-The _Get Element Property_ [command](/en-US/docs/Web/WebDriver/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API returns the property of the referenced [web element](/en-US/docs/Web/WebDriver/WebElement). Given `<input value=foo>` where the user changes the value to `bar`, the returned property is `bar` rather than the initial value `foo`. This is equivalent to calling {{domxref("Element.getProperty")}} on the element.
+The _Get Element Property_ [command](/en-US/docs/Web/WebDriver/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API returns the property of the referenced [web element](/en-US/docs/Web/WebDriver/WebElement). Given `<input value=foo>` where the user changes the value to `bar`, the returned property is `bar` rather than the initial value `foo`. This is equivalent to accessing the property on the element.
 
 ## Syntax
 

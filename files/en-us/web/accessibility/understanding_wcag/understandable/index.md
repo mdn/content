@@ -332,7 +332,7 @@ This guideline centers around helping users enter correct information when requi
         </p>
         <div class="note">
           <p>
-            <strong>Note</strong>: Server-side validation should *always* be
+            <strong>Note:</strong> Server-side validation should <em>always</em> be
             used alongside client-side validation. Client-side validation is too
             easy to turn off or otherwise get around, so it can't be relied on
             alone.

@@ -6,7 +6,7 @@ page-type: guide
 
 {{DefaultAPISidebar("WebGL")}}
 
-WebGL, like its sister APIs (OpenGL and OpenGL ES), supports extensions. A complete list of extensions is available in the [khronos webgl extension registry](https://www.khronos.org/registry/webgl/extensions/).
+WebGL, like its sister APIs (OpenGL and OpenGL ES), supports extensions. A complete list of extensions is available in the [khronos webgl extension registry](https://registry.khronos.org/webgl/extensions/).
 
 > [!NOTE]
 > In WebGL, unlike in other GL APIs, extensions are only available if explicitly requested.
@@ -60,7 +60,7 @@ The current extensions are:
 - {{domxref("EXT_color_buffer_float")}}
 - {{domxref("EXT_color_buffer_half_float")}}
 - {{domxref("EXT_disjoint_timer_query")}}
-- {{domxref("EXT_float_blend")}} {{experimental_inline}}
+- {{domxref("EXT_float_blend")}}
 - {{domxref("EXT_frag_depth")}}
 - {{domxref("EXT_shader_texture_lod")}}
 - {{domxref("EXT_sRGB")}}

@@ -1,5 +1,6 @@
 ---
 title: "HTML attribute: minlength"
+short-title: minlength
 slug: Web/HTML/Attributes/minlength
 page-type: html-attribute
 browser-compat:

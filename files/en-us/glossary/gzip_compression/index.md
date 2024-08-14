@@ -13,5 +13,7 @@ page-type: glossary-definition
 - Related glossary terms:
   - {{glossary("Lossless compression")}}
   - {{glossary("Lossy compression")}}
+  - {{Glossary("Brotli compression")}}
+  - {{Glossary("Zstandard compression")}}
 - [The gzip home page](https://www.gzip.org/)
 - [gzip on Wikipedia](https://en.wikipedia.org/wiki/Gzip)

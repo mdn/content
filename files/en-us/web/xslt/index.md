@@ -21,7 +21,7 @@ XSLT is most often used to convert data between different XML schemas or to conv
 - [Specifying parameters using processing instructions](/en-US/docs/Web/XSLT/PI_Parameters)
   - : Firefox allows stylesheet parameters to be specified when using the `<?xml-stylesheet?>` processing instruction. This is done using the `<?xslt-param?>` PI described in this document.
 - [XSLT Tutorial](https://www.w3schools.com/xml/xsl_intro.asp)
-  - : This [W3Schools](https://www.w3schools.com) tutorial teaches the reader how to use XSLT to transform XML documents into other formats, like XHTML.
+  - : This [W3Schools](https://www.w3schools.com/) tutorial teaches the reader how to use XSLT to transform XML documents into other formats, like XHTML.
 - [What is XSLT?](https://www.xml.com/pub/a/2000/08/holman/)
   - : This extensive introduction to XSLT and XPath assumes no prior knowledge of the technologies and guides the reader through background, context, structure, concepts and introductory terminology.
 - [Common XSLT Errors](/en-US/docs/Web/XSLT/Common_errors)

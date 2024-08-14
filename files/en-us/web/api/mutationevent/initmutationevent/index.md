@@ -29,7 +29,7 @@ initMutationEvent(type, canBubble, cancelable, relatedNode,
 
 - `type`
   - : A string to set the event's {{domxref("Event.type", "type")}} to. Browsers set the following values for {{domxref("MutationEvent")}}:
-    `DOMAttrModified`, `DOMAttributeNameChanged`, `DOMCharacterDataModified`, `DOMElementNameChanged`, `DOMNodeInserted`, `DOMNodeInsertedIntoDocument`, `DOMNodeRemoved`, `DOMNodeRemovedFromDocument`,`DOMSubtreeModified`.
+    `DOMAttrModified`, `DOMAttributeNameChanged`, `DOMCharacterDataModified`, `DOMElementNameChanged`, `DOMNodeInserted`, `DOMNodeInsertedIntoDocument`, `DOMNodeRemoved`, `DOMNodeRemovedFromDocument`, `DOMSubtreeModified`.
 - `canBubble`
   - : A boolean indicating whether or not the event can bubble. Sets the value of {{domxref("Event.bubbles")}}.
 - `cancelable`

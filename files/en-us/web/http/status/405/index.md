@@ -49,4 +49,4 @@ Allow: GET, POST, HEAD
 - {{HTTPStatus("501", "501 Not Implemented")}}, {{HTTPStatus("510", "510 Not Extended")}}
 - [HTTP Status Code Definitions](https://httpwg.org/specs/rfc9110.html#status.405)
 - [How to Fix 405 Method Not Allowed](https://kinsta.com/blog/405-method-not-allowed-error/)
-- [Troubleshooting HTTP 405](https://docs.microsoft.com/aspnet/web-api/overview/testing-and-debugging/troubleshooting-http-405-errors-after-publishing-web-api-applications)
+- [Troubleshooting HTTP 405](https://learn.microsoft.com/en-us/aspnet/web-api/overview/testing-and-debugging/troubleshooting-http-405-errors-after-publishing-web-api-applications)

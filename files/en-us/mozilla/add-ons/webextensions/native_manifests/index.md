@@ -221,7 +221,7 @@ For example, in the [favourite-colour example](https://github.com/mdn/webextensi
 
 ```json
 {
-  "name": "favourite-color-examples@mozilla.org",
+  "name": "favourite-colour-examples@mozilla.org",
   "description": "ignored",
   "type": "storage",
   "data": {
@@ -230,7 +230,7 @@ For example, in the [favourite-colour example](https://github.com/mdn/webextensi
 }
 ```
 
-The `favourite-color-examples@mozilla.org` extension then accesses the data using code like this:
+The `favourite-colour-examples@mozilla.org` extension then accesses the data using code like this:
 
 ```js
 let storageItem = browser.storage.managed.get("color");
@@ -257,7 +257,7 @@ The PKCS #11 manifest is a file with a name that matches the name of the PKCS #1
       <td>String</td>
       <td>
         <p>Name of the PKCS #11 module.</p>
-        <p>This must match the name used in the <code>pkcs11</code> API.</p>
+        <p>This must match the name used in the {{WebExtAPIRef("pkcs11")}} API.</p>
         <p>
           On Windows, use this as the name of the registry key you create,
           which contains the location of the manifest.
@@ -274,7 +274,7 @@ The PKCS #11 manifest is a file with a name that matches the name of the PKCS #1
       <td><code>description</code></td>
       <td>String</td>
       <td>
-        <p>Description of the module.</p>
+        <p>Description of the PKCS #11 module.</p>
         <p>
           This sets the friendly name for the module in the browser's
           UI (for example, the "Security Devices" dialog in Firefox).
@@ -285,10 +285,9 @@ The PKCS #11 manifest is a file with a name that matches the name of the PKCS #1
       <td><code>path</code></td>
       <td>String</td>
       <td>
-        <p>Path to the module.</p>
+        <p>Path to the PKCS #11 module.</p>
         <p>
-          On Windows, this may be relative to the manifest itself. On MacOS and
-          Linux, it must be absolute.
+          The path to the PKCS #11 module may be absolute or relative to the manifest itself.
         </p>
       </td>
     </tr>

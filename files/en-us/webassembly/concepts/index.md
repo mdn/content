@@ -104,7 +104,7 @@ So part of the glue code is implementing the functionality of each respective li
 
 The generated HTML document loads the JavaScript glue file and writes stdout to a {{htmlelement("textarea")}}. If the application uses OpenGL, the HTML also contains a {{htmlelement("canvas")}} element that is used as the rendering target. It's very easy to modify the Emscripten output and turn it into whatever web app you require.
 
-You can find full documentation on Emscripten at [emscripten.org](https://emscripten.org), and a guide to implementing the toolchain and compiling your own C/C++ app across to Wasm at [Compiling from C/C++ to WebAssembly](/en-US/docs/WebAssembly/C_to_Wasm).
+You can find full documentation on Emscripten at [emscripten.org](https://emscripten.org/), and a guide to implementing the toolchain and compiling your own C/C++ app across to Wasm at [Compiling from C/C++ to WebAssembly](/en-US/docs/WebAssembly/C_to_Wasm).
 
 ### Writing WebAssembly directly
 

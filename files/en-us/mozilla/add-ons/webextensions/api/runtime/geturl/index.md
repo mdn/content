@@ -26,7 +26,7 @@ browser.runtime.getURL(
 
 ### Return value
 
-`string`. The fully-qualified URL to the resource.
+`string`. The fully-qualified URL to the resource within the extension.
 
 ## Browser compatibility
 

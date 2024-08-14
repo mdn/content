@@ -16,8 +16,7 @@ An instance of this object can be retrieved using the {{domxref('HTMLMediaElemen
 For a given {{domxref('HTMLMediaElement')}} object _media_, the individual tracks can be accessed using:
 
 - `media.TextTracks[n]`, to get the n-th text track from the object's list of text tracks
-
-- the `media.textTracks`.[`getTrackById()`](/en-US/docs/Web/API/TextTrackList/getTrackById) method
+- the [`media.textTracks.getTrackById()`](/en-US/docs/Web/API/TextTrackList/getTrackById) method
 
 {{InheritanceDiagram}}
 

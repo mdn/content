@@ -34,9 +34,6 @@ This extension extends {{domxref("WebGLRenderingContext.framebufferTexture2D()")
 
 - The `attachment` parameter now accepts `gl.DEPTH_STENCIL_ATTACHMENT`.
 
-> [!NOTE]
-> Incorrectly stated as the `target` parameter in the specification, see <https://www.khronos.org/bugzilla/show_bug.cgi?id=674>.
-
 ## Examples
 
 ```js
