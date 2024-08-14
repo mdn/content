@@ -127,4 +127,3 @@ selectElem.addEventListener("change", changeMasonryFlow);
 #### Result
 
 {{EmbedLiveSample("Using_the_next_keyword", "200px", "230px")}}
-
