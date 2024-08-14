@@ -7,7 +7,7 @@ spec-urls: https://w3c.github.io/aria/#aria-label
 
 {{AccessibilitySidebar}}
 
-The `aria-label` attribute defines a string value that labels an interactive element.
+The `aria-label` attribute defines a string value that names an element.
 
 ## Description
 
