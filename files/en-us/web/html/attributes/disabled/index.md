@@ -49,7 +49,7 @@ Because a disabled field cannot have its value changed, [`required`](/en-US/docs
 
 Browsers display disabled form controls greyed as disabled form controls are immutable, won't receive focus or any browsing events, like mouse clicks or focus-related ones, and aren't submitted with the form.
 
-If present on a supporting elements, the `{{cssxref(':disabled')}}` pseudo class will match. If the attribute is not included, the `{{cssxref(':enabled')}}` pseudo class will match. If the element doesn't support the disabled attribute, the attribute will have no effect, including not leading to being matched by the `:disabled` and `:enabled` pseudo classes.
+If present on a supporting elements, the {{cssxref(':disabled')}} pseudo class will match. If the attribute is not included, the {{cssxref(':enabled')}} pseudo class will match. If the element doesn't support the disabled attribute, the attribute will have no effect, including not leading to being matched by the `:disabled` and `:enabled` pseudo classes.
 
 ### Constraint validation
 

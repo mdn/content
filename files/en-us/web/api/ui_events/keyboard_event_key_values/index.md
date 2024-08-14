@@ -444,7 +444,7 @@ _Modifiers_ are special keys which are used to generate special characters or ca
     <tr>
       <td><code>"ArrowUp"</code> [1]</td>
       <td>The up arrow key.</td>
-      <td><code>VK_UP</code><code> (0x26)</code></td>
+      <td><code>VK_UP</code> (0x26)</td>
       <td><code>kVK_UpArrow</code> (0x7E)</td>
       <td>
         <code>GDK_KEY_Up</code> (0xFF52)<br /><code>GDK_KEY_KP_Up</code>
@@ -481,7 +481,7 @@ _Modifiers_ are special keys which are used to generate special characters or ca
         displays the next page of content.
       </td>
       <td><code>VK_NEXT</code> (0x22)</td>
-      <td><code>kVK_PageDown</code><code> (0x79)</code></td>
+      <td><code>kVK_PageDown</code> (0x79)</td>
       <td>
         <code>GDK_KEY_Page_Down</code> (0xFF56)<br /><code
           >GDK_KEY_KP_Page_Down</code
@@ -2451,7 +2451,7 @@ The multimedia keys are extra buttons or keys for controlling media devices, fou
       <td><code>APPCOMMAND_MEDIA_PLAY</code></td>
       <td></td>
       <td><code>GDK_KEY_AudioPlay</code> (0x1008FF14)</td>
-      <td><code>KEYCODE_MEDIA_PLAY</code><code> (126)</code></td>
+      <td><code>KEYCODE_MEDIA_PLAY</code> (126)</td>
     </tr>
     <tr>
       <td><code>"MediaPlayPause"</code></td>
@@ -2476,7 +2476,7 @@ The multimedia keys are extra buttons or keys for controlling media devices, fou
         >
         (0x01000084)
       </td>
-      <td><code>KEYCODE_MEDIA_RECORD</code><code> (130)</code></td>
+      <td><code>KEYCODE_MEDIA_RECORD</code> (130)</td>
     </tr>
     <tr>
       <td><code>"MediaRewind"</code></td>
@@ -2489,7 +2489,7 @@ The multimedia keys are extra buttons or keys for controlling media devices, fou
         >
         (0x010000C5)
       </td>
-      <td><code>KEYCODE_MEDIA_REWIND</code><code> (89)</code></td>
+      <td><code>KEYCODE_MEDIA_REWIND</code> (89)</td>
     </tr>
     <tr>
       <td><code>"MediaStop"</code></td>
@@ -3695,7 +3695,7 @@ The values below are derived in part from a number of consumer electronics techn
       <td><code>VK_SPLIT_SCREEN_TOGGLE</code></td>
       <td></td>
       <td>
-        <code>GDK_KEY_SplitScreen (</code>0x1008FF7D)<br /><code
+        <code>GDK_KEY_SplitScreen</code> (0x1008FF7D)<br /><code
           >Qt::Key_SplitScreen</code
         >
         (0x010000ED)

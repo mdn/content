@@ -39,7 +39,7 @@ animation-duration: unset;
 
   - : For time-based animations, `auto` is equivalent to a value of `0s` (see below). For [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations), `auto` fills the entire timeline with the animation.
 
-- `{{cssxref("&lt;time&gt;")}}`
+- {{cssxref("&lt;time&gt;")}}
 
   - : The time that an animation takes to complete one cycle. This may be specified in either seconds (`s`) or milliseconds (`ms`). The value must be positive or zero and the unit is required.
 
