@@ -11650,6 +11650,8 @@
 /en-US/docs/Web/CSS/image/paint()	/en-US/docs/Web/CSS/image/paint
 /en-US/docs/Web/CSS/imagefunction	/en-US/docs/Web/CSS/image/image
 /en-US/docs/Web/CSS/inherited_and_non-inherited_properties	/en-US/docs/Web/CSS/Inheritance
+/en-US/docs/Web/CSS/inset-area	/en-US/docs/Web/CSS/position-area
+/en-US/docs/Web/CSS/inset-area_value	/en-US/docs/Web/CSS/position-area_value
 /en-US/docs/Web/CSS/justify-tracks	/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout
 /en-US/docs/Web/CSS/kerning	/en-US/docs/Web/CSS/font-kerning
 /en-US/docs/Web/CSS/lighting-color	/en-US/docs/Web/SVG/Attribute/lighting-color

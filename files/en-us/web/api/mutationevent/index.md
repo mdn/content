@@ -33,7 +33,7 @@ _This interface also inherits properties from its parent {{domxref("UIEvent")}},
 - {{domxref("MutationEvent.newValue")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : In `DOMAttrModified` events, contains the new value of the modified {{domxref("Attr")}} node. In `DOMCharacterDataModified` events, contains the new value of the modified {{domxref("CharacterData")}} node. In all other cases, returns the empty string (`""`).
 - {{domxref("MutationEvent.prevValue")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
-  - : In `DOMAttrModified` events, contains the previous value of the modified {{domxref("Attr")}} node. In `DOMCharacterDataModified` events, contains previous new value of the modified{{domxref("CharacterData")}} node. In all other cases, returns the empty string (`""`).
+  - : In `DOMAttrModified` events, contains the previous value of the modified {{domxref("Attr")}} node. In `DOMCharacterDataModified` events, contains previous new value of the modified {{domxref("CharacterData")}} node. In all other cases, returns the empty string (`""`).
 - {{domxref("MutationEvent.relatedNode")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : Indicates the node related to the event, like the changed node inside the subtree for `DOMSubtreeModified`.
 
