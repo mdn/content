@@ -39,8 +39,7 @@ list into the `<span>`'s {{domxref("Node.textContent")}}.
 First, the HTML:
 
 ```html
-<span id="ab" class="a b c"></span>
-<span id="a" class="a b c"></span>
+<span id="ab" class="a b c"></span> <span id="a" class="a b c"></span>
 ```
 
 Now the JavaScript:
