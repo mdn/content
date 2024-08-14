@@ -18,6 +18,8 @@ This article provides information about the changes in Firefox 130 that affect d
 
 ### CSS
 
+- The [`hyphens`](/en-US/docs/Web/CSS/hyphens) property now has hyphenation patterns for Czech & Slovak, this means that hyphens are language specific for Czech & Slovak languages and will not split syllables ([Firefox bug 1908931](https://bugzil.la/1908931)).
+
 #### Removals
 
 ### JavaScript
