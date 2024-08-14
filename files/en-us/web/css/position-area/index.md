@@ -16,7 +16,7 @@ The **`position-area`** [CSS](/en-US/docs/Web/CSS) property enables an anchor-po
 If an element does not have a default anchor element, or is not an absolutely-positioned element, this property has no effect.
 
 > [!NOTE]
-> This property was originally named and supported in Chromium browsers as `inset-area`, with the same property values. Both property names will be supported for a while, for backwards compatibility purposes.
+> This property was originally named and supported in Chromium browsers as `inset-area`, with the same property values. Both property names will be supported for a short while, for backwards compatibility purposes.
 
 ## Syntax
 
