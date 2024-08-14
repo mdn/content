@@ -4,7 +4,6 @@ slug: Web/CSS/masonry-auto-flow
 page-type: css-property
 status:
   - experimental
-browser-compat: css.properties.masonry-auto-flow
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
