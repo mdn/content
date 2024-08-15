@@ -13,11 +13,9 @@ The
 property is a string that reflects the [`datetime`](/en-US/docs/Web/HTML/Element/time#datetime) HTML attribute, containing a machine-readable form of the element's date and
 time value.
 
-For valid values, see the [`<time>` reference](/en-US/docs/Web/HTML/Element/time#valid_datetime_values).
-
 ## Value
 
-A string.
+A string. For valid string formats, see the [`datetime` valid values](/en-US/docs/Web/HTML/Element/time#valid_datetime_values).
 
 ## Examples
 
