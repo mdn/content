@@ -144,7 +144,7 @@ For more information, refer to the [CORS documentation](/en-US/docs/Web/HTTP/COR
 
 - {{HTTPHeader("Content-Digest")}} {{experimental_inline}}
   - : Provides a {{Glossary("digest")}} of the stream of octets framed in an HTTP message (the message content) dependent on {{HTTPHeader("Content-Encoding")}} and {{HTTPHeader("Content-Range")}}.
-- {{HTTPHeader("Digest")}} {{deprecated_inline}}
+- {{HTTPHeader("Digest")}} {{deprecated_inline}} {{non-standard_inline}}
   - : Provides a {{Glossary("digest")}} of the a resource.
     See {{HTTPHeader("Content-Digest")}} and {{HTTPHeader("Repr-Digest")}}.
 - {{HTTPHeader("Repr-Digest")}} {{experimental_inline}}
@@ -153,7 +153,7 @@ For more information, refer to the [CORS documentation](/en-US/docs/Web/HTTP/COR
 - {{HTTPHeader("Want-Content-Digest")}} {{experimental_inline}}
   - : States the wish for a {{HTTPHeader("Content-Digest")}} header.
     It is the `Content-` analogue of {{HTTPHeader("Want-Repr-Digest")}}.
-- {{HTTPHeader("Want-Digest")}} {{deprecated_inline}}
+- {{HTTPHeader("Want-Digest")}} {{deprecated_inline}} {{non-standard_inline}}
   - : States the wish for a {{HTTPHeader("Digest")}} header.
     See {{HTTPHeader("Want-Content-Digest")}} and {{HTTPHeader("Want-Repr-Digest")}} instead.
 - {{HTTPHeader("Want-Repr-Digest")}} {{experimental_inline}}
@@ -182,7 +182,7 @@ For more information, refer to the [CORS documentation](/en-US/docs/Web/HTTP/COR
 
 ## Range requests
 
-HTTP [range requests](/en-US/docs/Web/HTTP/Range_requests) allow the client to ask the server for a portion of a resource back to a client.
+HTTP [range requests](/en-US/docs/Web/HTTP/Range_requests) allow the client to request a portion of a resource from the server.
 Range requests are useful for applications like media players that support random access, data tools that know they need only part of a large file, and download managers that let the user pause and resume a download.
 
 - {{HTTPHeader("Accept-Ranges")}}
