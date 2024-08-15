@@ -110,10 +110,8 @@ The _datetime value_ (the machine-readable value of the datetime) is the value o
     <tr>
       <td>Valid global date and time string</td>
       <td style="max-width:12em">
-        <em
-          >Any combination of a valid local date and time string followed by a
-          valid time-zone offset string</em
-        >
+        Any combination of a valid local date and time string followed by a
+        valid time-zone offset string
       </td>
       <td>
         <code>2013-12-25 11:12+0200</code><br />
