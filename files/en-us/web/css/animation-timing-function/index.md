@@ -250,7 +250,7 @@ btn.addEventListener("click", () => {
 
 The following image shows graphs of all the `linear()` function values used in this example. Time(input) is plotted on the x-axis and the output is on the y-axis. As per the syntax, the input(time) ranges from 0 to 100% and the output ranges from -∞ to ∞.
 
-![An image showing 'linear' function graphs](linear-function-graphs.png)
+![An image showing 'linear' function graphs](https://mdn.github.io/shared-assets/images/diagrams/css/animation-easing/linear-function-graphs.png)
 
 Note that the output can go in the backward direction.
 
@@ -360,7 +360,7 @@ btn.addEventListener("click", () => {
 
 The following image shows graphs of all the cubic bezier function values used in this example. The input(time) ranges from 0 to 1 and the output ranges from -∞ to ∞.
 
-![An image showing 'cubic-bezier' function graphs](cubic-bezier-function-graphs.png)
+![An image showing 'cubic-bezier' function graphs](https://mdn.github.io/shared-assets/images/diagrams/css/animation-easing/cubic-bezier-function-graphs.png)
 
 ### Step examples
 
@@ -491,7 +491,7 @@ btn.addEventListener("click", () => {
 
 The following image shows graphs of all the `step()` function values used in this example. The input(time) and output ranges from 0 to 1.
 
-![image showing 'steps' function graphs](step-function-graphs.png)
+![image showing 'steps' function graphs](https://mdn.github.io/shared-assets/images/diagrams/css/animation-easing/step-function-graphs.png)
 
 ## Specifications
 
