@@ -49,7 +49,7 @@ white-space: unset;
 - `normal`
   - : Sequences of white space are [collapsed](#collapsing_of_white_space). Newline characters in the source are handled the same as other white spaces. Lines are broken as necessary to fill line boxes.
 - `nowrap`
-  - : [Collapses](#collapsing_of_white_space) white space as for `normal`, but suppresses line breaks (text wrapping) within the source.
+  - : [Collapses](#collapsing_of_white_space) white space as the `normal` value does, but suppresses line breaks (text wrapping) within the source.
 - `pre`
   - : Sequences of white space are preserved. Lines are only broken at newline characters in the source and at {{HTMLElement("br")}} elements.
 - `pre-wrap`
@@ -303,7 +303,7 @@ text {
 
 #### Result
 
-{{EmbedLiveSample("multiple_lines_in_svg_text_element", "100%", 150)}}
+{{EmbedLiveSample("multiple_lines_in_svg_text_element", "100%", 350)}}
 
 ## Specifications
 
