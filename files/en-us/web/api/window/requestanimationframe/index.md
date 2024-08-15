@@ -77,11 +77,11 @@ function step(timeStamp) {
   element.style.transform = `translateX(${shift}px)`;
   if (shift < 200) {
     previousTimeStamp = timeStamp;
-    window.requestAnimationFrame(step);
+    requestAnimationFrame(step);
   }
 }
 
-window.requestAnimationFrame(step);
+requestAnimationFrame(step);
 ```
 
 The following three examples illustrate different approaches to setting the zero point in time,
