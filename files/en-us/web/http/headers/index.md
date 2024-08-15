@@ -237,7 +237,7 @@ Range requests are useful for applications like media players that support rando
   - : Lets sites opt in to reporting and enforcement of [Certificate Transparency](/en-US/docs/Web/Security/Certificate_Transparency) to detect use of misissued certificates for that site.
 - {{HTTPHeader("Permissions-Policy")}}
   - : Provides a mechanism to allow and deny the use of browser features in a website's own frame, and in {{htmlelement("iframe")}}s that it embeds.
-- {{HTTPHeader("Reporting-Endpoints")}}
+- {{HTTPHeader("Reporting-Endpoints")}} {{experimental_inline}}
   - : Response header that allows website owners to specify one or more endpoints used to receive errors such as CSP violation reports, {{HTTPHeader("Cross-Origin-Opener-Policy")}} reports, or other generic violations.
 - {{HTTPHeader("Strict-Transport-Security")}} ({{Glossary("HSTS")}})
   - : Force communication using HTTPS instead of HTTP.
