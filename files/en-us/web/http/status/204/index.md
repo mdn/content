@@ -53,7 +53,7 @@ Content-Length: 0
 ## Compatibility notes
 
 Although this status code is intended for responses with no body, servers may erroneously include data after the headers. This issue is observable in persistent connections, where the invalid body may include a distinct response to a subsequent request.
-The HTTP protocol allows browsers to handle such responses differently (there is an ongoing discussion regarding the specification text in the [HTTP Working Group's `http-core` GitHub repository](https://github.com/httpwg/http-core/issues/26)).
+The HTTP protocol allows browsers to handle such responses differently (there is an ongoing discussion regarding the specification text in the [HTTPWG `http-core` GitHub repository](https://github.com/httpwg/http-core/issues/26)).
 
 Apple Safari rejects any such data.
 Google Chrome and Microsoft Edge discard up to four invalid bytes preceding a valid response.
