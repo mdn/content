@@ -147,23 +147,23 @@ The `chrome_settings_overrides` key is an object that may have the following pro
           </dd>
           <dt><code>image_url</code> {{optional_inline}}</dt>
           <dd>String: URL used for image search.</dd>
-          <dt><code>image_url_post_params<code> {{optional_inline}}</dt>
+          <dt><code>image_url_post_params</code> {{optional_inline}}</dt>
           <dd>String: POST parameters to send to <code>image_url</code>.</dd>
-          <dt><code>instant_url<code> {{optional_inline}}</dt>
+          <dt><code>instant_url</code> {{optional_inline}}</dt>
           <dd>String: URL used for instant search.</dd>
-          <dt><code>instant_url_post_params<code> {{optional_inline}}</dt>
+          <dt><code>instant_url_post_params</code> {{optional_inline}}</dt>
           <dd>String: POST parameters to send to <code>instant_url</code>.</dd>
-          <dt><code>keyword<code> {{optional_inline}}</dt>
+          <dt><code>keyword</code> {{optional_inline}}</dt>
           <dd>String: Address bar keyword for the search engine.</dd>
-          <dt><code>prepopulated_id<code> {{optional_inline}}</dt>
+          <dt><code>prepopulated_id</code> {{optional_inline}}</dt>
           <dd>The ID of a built-in search engine to use.</dd>
-          <dt><code>search_url_post_params<code> {{optional_inline}}</dt>
+          <dt><code>search_url_post_params</code> {{optional_inline}}</dt>
           <dd>String: POST parameters to send to <code>search_url</code>.</dd>
-          <dt><code>suggest_url<code> {{optional_inline}}</dt>
+          <dt><code>suggest_url</code> {{optional_inline}}</dt>
           <dd>
             String: URL used for search suggestions. This must be an HTTPS URL.
           </dd>
-          <dt><code>suggest_url_post_params<code> {{optional_inline}}</dt>
+          <dt><code>suggest_url_post_params</code> {{optional_inline}}</dt>
           <dd>String: POST parameters to send to <code>suggest_url</code>.</dd>
         </dl>
       </td>
