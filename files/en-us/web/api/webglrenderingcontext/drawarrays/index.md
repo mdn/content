@@ -56,6 +56,9 @@ None ({{jsxref("undefined")}}).
 gl.drawArrays(gl.POINTS, 0, 8);
 ```
 
+> [!NOTE]
+> If `mode` is `POINTS`, [`gl_PointSize`](https://www.opengl.org/sdk/docs/man4/html/gl_PointSize.xhtml) may need to be set for `drawArrays` to render, as its value is unknown if not explicitly written. Only some GPUs set its default as `1.0`.
+
 ## Specifications
 
 {{Specifications}}
