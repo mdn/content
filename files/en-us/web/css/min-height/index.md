@@ -56,7 +56,11 @@ min-height: unset;
 - `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
   - : Uses the `fit-content` formula with the available space replaced by the specified argument, i.e. `min(max-content, max(min-content, argument))`.
 - `stretch` {{Experimental_Inline}}
-  - : Limits minimum height of the [margin box](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#parts_of_a_box) to the size of the element's [containing block](/en-US/docs/Web/CSS/Containing_block#identifying_the_containing_block). The `stretch` behaves as `100%` but it applies the resulting size to its margin box instead of the box indicated by [box-sizing](/en-US/docs/Web/CSS/box-sizing).
+
+  - : Limits the minimum height of the element's [margin box](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#parts_of_a_box) to the height of its [containing block](/en-US/docs/Web/CSS/Containing_block#identifying_the_containing_block). It attempts to make the margin box fill the available space in the containing block, so in a way behaving similar to `100%` but applying the resulting size to the margin box rather than the box determined by [box-sizing](/en-US/docs/Web/CSS/box-sizing).
+
+    > [!NOTE]
+    > Refer the [browser compatiblity section](#browser_compatibility) to know about the aliases used by the browsers and the current status of the implementation of the `stretch` property.
 
 ## Formal definition
 
