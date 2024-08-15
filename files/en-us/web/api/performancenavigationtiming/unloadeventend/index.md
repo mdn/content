@@ -22,7 +22,7 @@ The `unloadEventEnd` property can have the following values:
 
 ### Measuring `unload` event handler time
 
-The `unloadEventEnd` property can be used to measure how long it takes process the[`unload`](/en-US/docs/Web/API/Window/unload_event) event handler.
+The `unloadEventEnd` property can be used to measure how long it takes to process the [`unload`](/en-US/docs/Web/API/Window/unload_event) event handler.
 
 This is useful to measure the time of long running [`unload`](/en-US/docs/Web/API/Window/load_event) event handlers.
 
