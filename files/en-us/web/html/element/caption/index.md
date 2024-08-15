@@ -33,6 +33,8 @@ The following attributes are deprecated and should not be used. They are documen
 
 See {{HTMLElement("table")}} for a complete table example introducing common standards and best practices.
 
+### Table with caption
+
 This example demonstrates a basic table that includes a caption describing the data presented.
 
 Such a "title" is helpful for users who are quickly scanning the page, and it is especially beneficial for visually impaired users, allowing them to determine the table's relevance quickly without the need to have a screen reader read the contents of many cells just to find out what the table is about.

@@ -148,7 +148,7 @@ To check if a font technology is supported by a browser within CSS, use the {{cs
 | `color-sbix`        | Standard bitmap graphics tables                                                               |
 | `color-svg`         | SVG multi-colored tables                                                                      |
 | `features-aat`      | TrueType `morx` and `kerx` tables                                                             |
-| `features-graphite` | Graphite features, namely `Silf`, `Glat` , `Gloc` , `Feat`, and `Sill` tables                 |
+| `features-graphite` | Graphite features, namely `Silf`, `Glat`, `Gloc`, `Feat`, and `Sill` tables                   |
 | `features-opentype` | OpenType `GSUB` and `GPOS` tables                                                             |
 | `incremental`       | Incremental font loading                                                                      |
 | `palettes`          | Font palettes by means of `font-palette` to select one of many color palettes in the font     |

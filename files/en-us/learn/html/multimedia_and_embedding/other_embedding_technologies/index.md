@@ -49,7 +49,7 @@ With the history lesson out of the way, let's move on and see how to use some of
 
 ## Active learning: classic embedding uses
 
-In this article we are going to jump straight into an active learning section, to immediately give you a real idea of just what embedding technologies are useful for. The online world is very familiar with [YouTube](https://www.youtube.com), but many people don't know about some of the sharing facilities it has available. Let's look at how YouTube allows us to embed a video in any page we like using an {{htmlelement("iframe")}}.
+In this article we are going to jump straight into an active learning section, to immediately give you a real idea of just what embedding technologies are useful for. The online world is very familiar with [YouTube](https://www.youtube.com/), but many people don't know about some of the sharing facilities it has available. Let's look at how YouTube allows us to embed a video in any page we like using an {{htmlelement("iframe")}}.
 
 1. First, go to YouTube and find a video you like.
 2. Below the video, you'll find a _Share_ button — select this to display the sharing options.

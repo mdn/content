@@ -12,7 +12,7 @@ This chapter introduces the concepts, objects and functions used to work with an
 
 In JavaScript, numbers are implemented in [double-precision 64-bit binary format IEEE 754](https://en.wikipedia.org/wiki/Double-precision_floating-point_format) (i.e., a number between ±2^−1022 and ±2^+1023, or about ±10^−308 to ±10^+308, with a numeric precision of 53 bits). Integer values up to ±2^53 − 1 can be represented exactly.
 
-In addition to being able to represent floating-point numbers, the number type has three symbolic values: `+`{{jsxref("Infinity")}}, `-`{{jsxref("Infinity")}}, and {{jsxref("NaN")}} (not-a-number).
+In addition to being able to represent floating-point numbers, the number type has three symbolic values: {{jsxref("Infinity")}}, `-Infinity`, and {{jsxref("NaN")}} (not-a-number).
 
 See also [JavaScript data types and structures](/en-US/docs/Web/JavaScript/Data_structures) for context with other primitive types in JavaScript.
 

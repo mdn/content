@@ -46,7 +46,7 @@ text-decoration-style: unset;
 - wavy
   - : Draws a wavy line.
 - \-moz-none
-  - : Draws no line. Use {{ cssxref("text-decoration-line") }}`: none` instead.
+  - : Draws no line. Use {{cssxref("text-decoration-line", "text-decoration-line: none")}} instead.
 
 ## Formal definition
 

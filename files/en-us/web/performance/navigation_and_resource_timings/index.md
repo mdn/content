@@ -184,7 +184,7 @@ The order is:
         {{domxref("PerformanceTiming.unloadEventStart","unloadEventStart")}}
       </td>
       <td>
-        When the {{DOMxRef("Window.unload_event", "unload")}}>
+        When the {{DOMxRef("Window.unload_event", "unload")}}
         event has been thrown, indicating the time at which the previous
         document in the window began to unload. If there is no previous
         document, or if the previous document or one of the needed redirects is

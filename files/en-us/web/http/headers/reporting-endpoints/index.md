@@ -2,10 +2,12 @@
 title: Reporting-Endpoints
 slug: Web/HTTP/Headers/Reporting-Endpoints
 page-type: http-header
+status:
+  - experimental
 browser-compat: http.headers.Reporting-Endpoints
 ---
 
-{{HTTPSidebar}}
+{{HTTPSidebar}}{{SeeCompatTable}}
 
 The HTTP **`Reporting-Endpoints`** response header allows website administrators to specify one or more endpoints that are used to receive errors such as CSP violation reports, {{HTTPHeader("Cross-Origin-Opener-Policy")}} reports, or other generic violations.
 

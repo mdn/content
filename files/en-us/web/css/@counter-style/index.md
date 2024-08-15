@@ -40,7 +40,7 @@ The `@counter-style` at-rule is identified by a [counter style name](#counter_st
 
 - {{cssxref("@counter-style/system", "system")}}
 
-  - : Specifies the algorithm to be used for converting the integer value of a counter to a string representation. If the value is `cyclic`, `numeric`, `alphabetic`, `symbolic`, or `fixed`, the `symbols` descriptor must also be specified. If the value is `additive` , the `additive-symbols` descriptor must also be specified.
+  - : Specifies the algorithm to be used for converting the integer value of a counter to a string representation. If the value is `cyclic`, `numeric`, `alphabetic`, `symbolic`, or `fixed`, the `symbols` descriptor must also be specified. If the value is `additive`, the `additive-symbols` descriptor must also be specified.
 
 - {{cssxref("@counter-style/symbols", "symbols")}}
 

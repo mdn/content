@@ -191,7 +191,7 @@ form {
 .infobox {
   position-anchor: --myAnchor;
   position: fixed;
-  inset-area: top span-all;
+  position-area: top span-all;
   margin-bottom: 5px;
   position-visibility: always;
 }
@@ -233,7 +233,7 @@ Select different `position-visibility` values and then scroll the page up and do
 - {{cssxref("anchor-name")}}
 - {{cssxref("position-anchor")}}
 - {{cssxref("position")}}
-- {{cssxref("inset-area")}}
+- {{cssxref("position-area")}}
 - [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
 - [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide
 - [Handling overflow: try fallbacks and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide

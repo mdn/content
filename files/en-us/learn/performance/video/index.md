@@ -49,13 +49,13 @@ The sections below describe the following optimization techniques:
 
 ### Compress all videos
 
-Most video compression work compares adjacent frames within a video, with the intent of removing detail that is identical in both frames. Compress the video and export to multiple video formats, including WebM, MPEG-4/H.264, and Ogg/Theora.
+Most video compression work compares adjacent frames within a video, with the intent of removing detail that is identical in both frames. Compress the video and export to multiple video formats, including WebM, and MPEG-4/H.264.
 
 Your video editing software probably has a feature to reduce file size. If not, there are online tools, such as [FFmpeg](https://www.ffmpeg.org/) (discussed in section below), that encode, decode, convert, and perform other optimization functions.
 
 ### Optimize `<source>` order
 
-Order video source from smallest to largest. For example, given video compressions in three different formats at 10MB, 12MB, and 13MB, declare the smallest first and the largest last:
+Order video source from smallest to largest. For example, given video compressions in the formats at 10MB and 12MB, declare the 10MB resource first:
 
 ```html
 <video width="400" height="300" controls="controls">
@@ -63,8 +63,6 @@ Order video source from smallest to largest. For example, given video compressio
   <source src="video.webm" type="video/webm" />
   <!-- MPEG-4/H.264: 12 MB -->
   <source src="video.mp4" type="video/mp4" />
-  <!-- Ogg/Theora: 13 MB -->
-  <source src="video.ogv" type="video/ogv" />
 </video>
 ```
 
@@ -91,7 +89,7 @@ ffmpeg -i original.mp4 -an -c:v copy audioFreeVersion.mp4
 
 ### Video preload
 
-The preload attribute has three available options: `auto`|`metadata`|`none`. The default setting is `metadata`. These settings control how much of a video file downloads with page load. You can save data by deferring download for less popular videos.
+The preload attribute has three available options: `auto`, `metadata`, and `none`. The default setting is `metadata`. These settings control how much of a video file downloads with page load. You can save data by deferring download for less popular videos.
 
 Setting `preload="none"` results in none of the video being downloaded until playback. It delays startup, but offers significant data savings for videos with a low probability of playback.
 
