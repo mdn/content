@@ -37,8 +37,8 @@ The _datetime value_ (the machine-readable value of the datetime) is the value o
 <table class="no-markdown">
   <thead>
     <tr>
-      <th scope="col">Microsyntax</th>
       <th scope="col">Description</th>
+      <th scope="col">Microsyntax</th>
       <th scope="col">Examples</th>
     </tr>
   </thead>
