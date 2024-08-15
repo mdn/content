@@ -145,7 +145,7 @@ We've associated the two elements, but they are not yet tethered. To tether them
 
 ## Positioning elements relative to their anchor
 
-As we saw above, associating a positioned element with an anchor is not really much use on its own. Our goal is to place the positioned element relative to its associated anchor element. This is done either by setting a [CSS `anchor()` function](#using-inset-properties-with-anchor-function-values) value on an [inset property](/en-US/docs/Glossary/Inset_properties), [specifying an `inset-area`](#setting_an_inset-area), or centering the positioned element with the [`anchor-center` placement value](#centering_on_the_anchor_using_anchor-center).
+As we saw above, associating a positioned element with an anchor is not really much use on its own. Our goal is to place the positioned element relative to its associated anchor element. This is done either by setting a [CSS `anchor()` function](#using-inset-properties-with-anchor-function-values) value on an [inset property](/en-US/docs/Glossary/Inset_properties), [specifying a `position-area`](#setting_a_position-area), or centering the positioned element with the [`anchor-center` placement value](#centering_on_the_anchor_using_anchor-center).
 
 > [!NOTE]
 > The anchor element must be a visible DOM node for the association and positioning to work. If it is hidden (for example via [`display: none`](/en-US/docs/Web/CSS/display#none)), the positioned element will be positioned relative to its nearest positioned ancestor. We discuss how to hide an anchor-positioned element when its anchor disappears in [Conditional hiding using `position-visibility`](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding#conditional_hiding_using_position-visibility).
@@ -295,11 +295,11 @@ This gives us the following result:
 
 The positioned element is `5px` below and `5px` to the right of the anchor element. If you scroll the document up and down, the positioned element maintains its position relative to the anchor element — it is fixed to the anchor element, not the viewport.
 
-### Setting an `inset-area`
+### Setting a `position-area`
 
-The {{cssxref("inset-area")}} property provides an alternative to the `anchor()` function for positioning elements relative to anchors. The `inset-area` property works on the concept of a 3x3 grid of tiles, with the anchor element being the center tile. The `inset-area` property can be used to position the anchor positioned element in any of the nine tiles, or have it span across two or three tiles.
+The {{cssxref("position-area")}} property provides an alternative to the `anchor()` function for positioning elements relative to anchors. The `position-area` property works on the concept of a 3x3 grid of tiles, with the anchor element being the center tile. The `position-area` property can be used to position the anchor positioned element in any of the nine tiles, or have it span across two or three tiles.
 
-![The inset-area grid, as described below](inset-area.png)
+![The position-area grid, as described below](position-area.png)
 
 The grid tiles are broken up into rows and columns:
 
@@ -308,7 +308,7 @@ The grid tiles are broken up into rows and columns:
 
 The dimensions of the center tile are defined by the [containing block](/en-US/docs/Web/CSS/Containing_block) of the anchor element, while the distance between the center tile and the grid's outer edge is defined by the positioned element's containing block.
 
-`inset-area` property values are composed of one or two values based on the row and column values described above, with spanning options available to define the region of the grid where the element should positioned.
+`position-area` property values are composed of one or two values based on the row and column values described above, with spanning options available to define the region of the grid where the element should positioned.
 
 For example:
 
@@ -330,9 +330,9 @@ If you only specify one value, the effect is different depending on which value 
 - A value of `center` acts as if both values are set to `center` (so, `center center`).
 
 > [!NOTE]
-> See the [`<inset-area>`](/en-US/docs/Web/CSS/inset-area_value) value reference page for a detailed description of all the available values. Mixing a logical value with a physical value will invalidate the declaration.
+> See the [`<position-area>`](/en-US/docs/Web/CSS/position-area_value) value reference page for a detailed description of all the available values. Mixing a logical value with a physical value will invalidate the declaration.
 
-Let's demonstrate some of these values; this example uses the same HTML and base CSS styes as the previous example, except that we've included a {{htmlelement("select")}} element to enable changing the positioned element's `inset-area` value.
+Let's demonstrate some of these values; this example uses the same HTML and base CSS styes as the previous example, except that we've included a {{htmlelement("select")}} element to enable changing the positioned element's `position-area` value.
 
 ```html hidden
 <p>
@@ -363,8 +363,8 @@ Let's demonstrate some of these values; this example uses the same HTML and base
 </p>
 
 <form>
-  <label for="inset-area-select">Choose an inset-area:</label>
-  <select id="inset-area-select" name="inset-area-select">
+  <label for="position-area-select">Choose a position-area:</label>
+  <select id="position-area-select" name="position-area-select">
     <option>top</option>
     <option>bottom</option>
     <option>left</option>
@@ -426,7 +426,7 @@ form {
 }
 ```
 
-The infobox is given fixed positioning and associated with the anchor using CSS. When loaded, it is set to be tethered to the anchor with `inset-area: top;`, which causes it to be positioned at the top of the inset-area grid. This will be overridden once you select different values from the `<select>` menu.
+The infobox is given fixed positioning and associated with the anchor using CSS. When loaded, it is set to be tethered to the anchor with `position-area: top;`, which causes it to be positioned at the top of the position-area grid. This will be overridden once you select different values from the `<select>` menu.
 
 ```css hidden
 .infobox {
@@ -443,11 +443,11 @@ The infobox is given fixed positioning and associated with the anchor using CSS.
 .infobox {
   position: fixed;
   position-anchor: --myAnchor;
-  inset-area: top;
+  position-area: top;
 }
 ```
 
-We also include a short script to apply new `inset-area` values chosen from the `<select>` menu to the infobox:
+We also include a short script to apply new `position-area` values chosen from the `<select>` menu to the infobox:
 
 ```js
 const infobox = document.querySelector(".infobox");
@@ -456,26 +456,26 @@ const selectElem = document.querySelector("select");
 selectElem.addEventListener("change", () => {
   const area = selectElem.value;
 
-  // Set the inset-area to the value chosen in the select box
-  infobox.style.insetArea = area;
+  // Set the position-area to the value chosen in the select box
+  infobox.style.positionArea = area;
 });
 ```
 
-Try selecting new `inset-area` values from the `<select>` menu to see the effect they have on the position of the infobox:
+Try selecting new `position-area` values from the `<select>` menu to see the effect they have on the position of the infobox:
 
-{{ EmbedLiveSample("Setting an `inset-area`", "100%", "250") }}
+{{ EmbedLiveSample("Setting an `position-area`", "100%", "250") }}
 
 ### Positioned element width
 
 In the above example, we did not explicitly size the positioned element in either dimension. We deliberately omitted sizing to allow you to observe the behavior this causes.
 
-When a positioned element is placed into `inset-area` grid cells without explicit sizing, it aligns with the grid area specified and behaves as if {{cssxref("width")}} were set to {{cssxref("max-content")}}. It is sized according to its [containing block](/en-US/docs/Web/CSS/Containing_block) size, which is the width of its content. This size was imposed by setting `position: fixed`. Auto-sized absolutely and fixed-positioned elements are automatically sized, stretching as wide as needed to fit the text content, while constrained by the edge of the viewport. In this case, when placed on the left side of the grid with any `left` or `inline-start` value, the text wraps. If the anchored element's `max-content` size is narrower or shorter than its anchor, they won't grow to match the size of the anchor.
+When a positioned element is placed into `position-area` grid cells without explicit sizing, it aligns with the grid area specified and behaves as if {{cssxref("width")}} were set to {{cssxref("max-content")}}. It is sized according to its [containing block](/en-US/docs/Web/CSS/Containing_block) size, which is the width of its content. This size was imposed by setting `position: fixed`. Auto-sized absolutely and fixed-positioned elements are automatically sized, stretching as wide as needed to fit the text content, while constrained by the edge of the viewport. In this case, when placed on the left side of the grid with any `left` or `inline-start` value, the text wraps. If the anchored element's `max-content` size is narrower or shorter than its anchor, they won't grow to match the size of the anchor.
 
-If the positioned element is centered vertically, such as with `inset-area: bottom center`, it will align with the grid cell specified and the width will be the same as the anchor element. In this case, its minimum height is the anchor element's containing block size. It will not overflow, as the `min-width` is {{cssxref("min-content")}}, meaning it will be at least as wide as its longest word.
+If the positioned element is centered vertically, such as with `position-area: bottom center`, it will align with the grid cell specified and the width will be the same as the anchor element. In this case, its minimum height is the anchor element's containing block size. It will not overflow, as the `min-width` is {{cssxref("min-content")}}, meaning it will be at least as wide as its longest word.
 
 ## Centering on the anchor using `anchor-center`
 
-While you can center the anchor-positioned element using `inset-area`'s `center` values, inset properties combined with the `anchor()` function provide more control over the exact position. CSS anchor positioning provides a way to center an anchor-positioned element relative to its anchor when inset properties, rather than `inset-area`, are used to tether.
+While you can center the anchor-positioned element using `position-area`'s `center` values, inset properties combined with the `anchor()` function provide more control over the exact position. CSS anchor positioning provides a way to center an anchor-positioned element relative to its anchor when inset properties, rather than `position-area`, are used to tether.
 
 The properties {{cssxref("justify-self")}}, {{cssxref("align-self")}}, {{cssxref("justify-items")}}, and {{cssxref("align-items")}} (and their {{cssxref("place-items")}} and {{cssxref("place-self")}} shorthands) exist to allow developers to easily align elements in the inline or block direction inside various layout systems, for example along the main or cross axis in the case of flex children. CSS anchor positioning provides an additional value for these properties, `anchor-center`, which aligns a positioned element with the center of its default anchor.
 
@@ -601,7 +601,7 @@ This rule sizes the positioned element's inline size to 4 times the anchor eleme
 }
 ```
 
-Let's look at an example. The HTML and base CSS are the same as in the previous examples, except that the anchor element is given a [`tabindex="0"`](/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute to make it focusable. The infobox is given fixed positioning and associated with the anchor in the same way as before. However, this time around we tether it to the right of the anchor using an `inset-area`, and give it a width five times the width of the anchor's width:
+Let's look at an example. The HTML and base CSS are the same as in the previous examples, except that the anchor element is given a [`tabindex="0"`](/en-US/docs/Web/HTML/Global_attributes/tabindex) attribute to make it focusable. The infobox is given fixed positioning and associated with the anchor in the same way as before. However, this time around we tether it to the right of the anchor using a `position-area`, and give it a width five times the width of the anchor's width:
 
 ```html hidden
 <p>
@@ -667,7 +667,7 @@ body {
 .infobox {
   position: fixed;
   position-anchor: --myAnchor;
-  inset-area: right;
+  position-area: right;
   margin-left: 5px;
   width: calc(anchor-size(width) * 5);
 }

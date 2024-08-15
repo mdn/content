@@ -26,7 +26,7 @@ If you are not sure about committing to learning web development in-depth and wa
 
 > [!CALLOUT]
 >
-> #### Looking to become a front-end web developer?
+> **Looking to become a front-end web developer?**
 >
 > If you want to become a front-end web developer and are not sure what to learn first, we'd suggest using the [MDN Curriculum](/en-US/curriculum/) to plan your learning. It provides a structured learning pathway covering the essential skills and practices for being a successful front-end developer, along with recommended learning resources.
 >
