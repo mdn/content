@@ -33,23 +33,27 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
+### Using setParameter()
+
 This example demonstrates how to pass parameters from JavaScript to an XSLT stylesheet using `setParameter()`, allowing for dynamic modification of the transformation output based on these parameters.
+
+#### HTML
 
 ```html
 <div id="result"></div>
 ```
 
+#### JavaScript
+
 ```js
-// Sample XML data
 const xmlString = `
 <items>
-    <item>Item 1</item>
-    <item>Item 2</item>
-    <item>Item 3</item>
+  <item>Item 1</item>
+  <item>Item 2</item>
+  <item>Item 3</item>
 </items>
 `;
 
-// Sample XSLT stylesheet
 const xsltString = `
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:param name="showItems" select="'yes'"/>
@@ -66,16 +70,13 @@ const xsltString = `
 </xsl:stylesheet>
 `;
 
-// Parse the XML and XSLT strings into DOM objects
 const parser = new DOMParser();
 const xmlDoc = parser.parseFromString(xmlString, "application/xml");
 const xsltDoc = parser.parseFromString(xsltString, "application/xml");
 
-// Create an XSLTProcessor instance
 const xsltProcessor = new XSLTProcessor();
 xsltProcessor.importStylesheet(xsltDoc);
 
-// Set parameters dynamically
 xsltProcessor.setParameter(null, "showItems", "yes");
 xsltProcessor.setParameter(null, "highlightColor", "lightblue");
 
@@ -85,6 +86,10 @@ const resultFragment = xsltProcessor.transformToFragment(xmlDoc, document);
 // Display the transformed result in the page
 document.getElementById("result").appendChild(resultFragment);
 ```
+
+#### Result
+
+{{EmbedLiveSample("using_setParameter", "", "200")}}
 
 ## Specifications
 
