@@ -9,7 +9,8 @@ browser-compat: javascript.statements.import.import_attributes
 
 {{jsSidebar("Statements")}}
 
-> **Note:** A previous version of this proposal used the `assert` keyword instead of `with`. The assertion feature is now non-standard. Check the [browser compatibility table](#browser_compatibility) for details.
+> [!NOTE]
+> A previous version of this proposal used the `assert` keyword instead of `with`. The assertion feature is now non-standard. Check the [browser compatibility table](#browser_compatibility) for details.
 
 The **import attributes** feature instructs the host about how a module should be loaded, including the behavior of module resolution, fetching, parsing, and evaluation. It's supported in [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) declarations, [`export...from`](/en-US/docs/Web/JavaScript/Reference/Statements/export#re-exporting_aggregating) declarations, and dynamic [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import).
 
@@ -65,7 +66,8 @@ Failed to load module script: Expected a JavaScript module script but the server
 
 Instead, you must provide an attribute to tell the host that this file must contain JSON. To validate the module's type (via MIME type), you use the attribute key called `type`. To validate that the module is a JSON module, the value is `"json"`.
 
-> **Note:** The actual `type` attribute value does not correspond directly to the MIME type. It's separately specified by the [HTML specification](https://html.spec.whatwg.org/multipage/webappapis.html#module-type-allowed).
+> [!NOTE]
+> The actual `type` attribute value does not correspond directly to the MIME type. It's separately specified by the [HTML specification](https://html.spec.whatwg.org/multipage/webappapis.html#module-type-allowed).
 
 Therefore, the code above should be re-written as:
 
@@ -132,7 +134,8 @@ In `index.html`:
 
 Start a local HTTP server (see [troubleshooting](/en-US/docs/Web/JavaScript/Guide/Modules#troubleshooting)) and go to the `index.html` page. You should see `John` on the page.
 
-> **Note:** JSON modules only have one default export. You cannot do named imports from them (like `import { name } from "data.json"`).
+> [!NOTE]
+> JSON modules only have one default export. You cannot do named imports from them (like `import { name } from "data.json"`).
 
 ## Specifications
 
