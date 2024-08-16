@@ -27,22 +27,26 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
+### Using importStylesheet()
+
 This example shows how `importStylesheet()` loads an XSLT stylesheet into an XSLTProcessor for use in transforming XML data.
+
+#### HTML
 
 ```html
 <div id="result"></div>
 ```
 
+#### JavaScript
+
 ```js
-// Simple XML data
 const xmlString = `
 <items>
-    <item>Item 1</item>
-    <item>Item 2</item>
+  <item>Item 1</item>
+  <item>Item 2</item>
 </items>
 `;
 
-// Simple XSLT stylesheet
 const xsltString = `
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:template match="/">
@@ -55,12 +59,10 @@ const xsltString = `
 </xsl:stylesheet>
 `;
 
-// Parse the XML and XSLT strings into DOM objects
 const parser = new DOMParser();
 const xmlDoc = parser.parseFromString(xmlString, "application/xml");
 const xsltDoc = parser.parseFromString(xsltString, "application/xml");
 
-// Create an XSLTProcessor instance
 const xsltProcessor = new XSLTProcessor();
 
 // Import the XSLT stylesheet into the XSLTProcessor
@@ -72,6 +74,10 @@ const resultFragment = xsltProcessor.transformToFragment(xmlDoc, document);
 // Display the transformed result in the page
 document.getElementById("result").appendChild(resultFragment);
 ```
+
+#### Result
+
+{{EmbedLiveSample("using_importStylesheet", "", "200")}}
 
 ## Specifications
 
