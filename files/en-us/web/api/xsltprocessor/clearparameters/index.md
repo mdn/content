@@ -39,7 +39,6 @@ This example shows how `clearParameters()` can be used to reset all parameters b
 #### JavaScript
 
 ```js
-// Simple XML data
 const xmlString = `
 <items>
   <item>Item 1</item>
