@@ -26,7 +26,7 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-### using clearParameters()
+### Using clearParameters()
 
 This example shows how `clearParameters()` can be used to reset all parameters back to their default values as specified in the XSLT stylesheet.
 
