@@ -62,7 +62,9 @@ const xsltString = `
     <ul>
       <xsl:if test="$showItems = 'yes'">
         <xsl:for-each select="items/item">
-          <li style="background-color: {$highlightColor};"><xsl:value-of select="."/></li>
+          <li style="background-color: {$highlightColor};">
+            <xsl:value-of select="."/>
+          </li>
         </xsl:for-each>
       </xsl:if>
     </ul>
