@@ -206,21 +206,25 @@ let alicesKeyPair;
 let bobsKeyPair;
 
 async function changeKeys() {
-  alicesKeyPair = await window.crypto.subtle.generateKey(
-    {
-      name: "X25519",
-    },
-    false,
-    ["deriveBits"],
-  );
+  try {
+    alicesKeyPair = await window.crypto.subtle.generateKey(
+      {
+        name: "X25519",
+      },
+      false,
+      ["deriveBits"],
+    );
 
-  bobsKeyPair = await window.crypto.subtle.generateKey(
-    {
-      name: "X25519",
-    },
-    false,
-    ["deriveBits"],
-  );
+    bobsKeyPair = await window.crypto.subtle.generateKey(
+      {
+        name: "X25519",
+      },
+      false,
+      ["deriveBits"],
+    );
+  } catch (e) {
+    log(e);
+  }
 }
 
 changeKeys();
