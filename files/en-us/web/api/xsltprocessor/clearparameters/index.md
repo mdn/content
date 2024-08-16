@@ -26,23 +26,28 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
+### using clearParameters()
+
 This example shows how `clearParameters()` can be used to reset all parameters back to their default values as specified in the XSLT stylesheet.
+
+#### HTML
 
 ```HTML
 <div id="result"></div>
 ```
 
+#### JavaScript
+
 ```js
 // Simple XML data
 const xmlString = `
 <items>
-    <item>Item 1</item>
-    <item>Item 2</item>
-    <item>Item 3</item>
+  <item>Item 1</item>
+  <item>Item 2</item>
+  <item>Item 3</item>
 </items>
 `;
 
-// Simple XSLT stylesheet
 const xsltString = `
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:param name="showItems" select="'yes'"/>
@@ -58,16 +63,13 @@ const xsltString = `
 </xsl:stylesheet>
 `;
 
-// Parse XML and XSLT
 const parser = new DOMParser();
 const xmlDoc = parser.parseFromString(xmlString, "application/xml");
 const xsltDoc = parser.parseFromString(xsltString, "application/xml");
 
-// Create XSLTProcessor and import the stylesheet
 const xsltProcessor = new XSLTProcessor();
 xsltProcessor.importStylesheet(xsltDoc);
 
-// Set parameters to control the display
 xsltProcessor.setParameter(null, "showItems", "yes");
 
 // Perform transformation and display result
@@ -82,6 +84,10 @@ resultFragment = xsltProcessor.transformToFragment(xmlDoc, document);
 document.getElementById("result").appendChild(document.createElement("hr"));
 document.getElementById("result").appendChild(resultFragment);
 ```
+
+#### Result
+
+{{EmbedLiveSample("using_clearParameters", "", "200")}}
 
 ## Specifications
 
