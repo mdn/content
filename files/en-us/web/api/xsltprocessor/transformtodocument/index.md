@@ -33,28 +33,32 @@ A {{domxref("Document")}}. The actual interface depends on the [output method](h
 
 ## Examples
 
+### Using transformToDocument()
+
 This example demonstrates how to use `transformToDocument()` to transform an XML document using XSLT, resulting in a new XML document structure.
+
+#### HTML
 
 ```html
 <div id="result"></div>
 ```
 
+#### JavaScript
+
 ```js
-// Sample XML data
 const xmlString = `
 <books>
-    <book>
-        <title>Book 1</title>
-        <author>Author 1</author>
-    </book>
-    <book>
-        <title>Book 2</title>
-        <author>Author 2</author>
-    </book>
+  <book>
+    <title>Book 1</title>
+    <author>Author 1</author>
+  </book>
+  <book>
+    <title>Book 2</title>
+    <author>Author 2</author>
+  </book>
 </books>
 `;
 
-// Sample XSLT stylesheet
 const xsltString = `
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:output method="xml" indent="yes"/>
@@ -71,12 +75,10 @@ const xsltString = `
 </xsl:stylesheet>
 `;
 
-// Parse the XML and XSLT strings into DOM objects
 const parser = new DOMParser();
 const xmlDoc = parser.parseFromString(xmlString, "application/xml");
 const xsltDoc = parser.parseFromString(xsltString, "application/xml");
 
-// Create an XSLTProcessor instance
 const xsltProcessor = new XSLTProcessor();
 xsltProcessor.importStylesheet(xsltDoc);
 
@@ -90,6 +92,10 @@ const resultString = serializer.serializeToString(resultDoc);
 // Display the transformed XML in the page
 document.getElementById("result").textContent = resultString;
 ```
+
+#### Result
+
+{{EmbedLiveSample("using_transformToDocument", "", "200")}}
 
 ## Specifications
 
