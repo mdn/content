@@ -11,7 +11,8 @@ The SVG **`<text>`** element draws a graphics element consisting of text. It's p
 
 If text is included in SVG not inside of a `<text>` element, it is not rendered. This is different than being hidden by default, as setting the {{SVGAttr('display')}} property won't show the text.
 
-> **Note:** the `<text>` element does not wrap by default, to make this happen it needs to be styled with the {{CSSXRef("white-space")}} CSS property.
+> [!NOTE]
+> The `<text>` element does not wrap by default, to make this happen it needs to be styled with the {{CSSXRef("white-space")}} CSS property.
 
 ## Example
 
@@ -53,17 +54,17 @@ svg {
 ## Attributes
 
 - {{SVGAttr("x")}}
-  - : The x coordinate of the starting point of the text baseline.
-    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage) ; _Default value_: `0`; _Animatable_: **yes**
+  - : The x coordinate of the starting point of the text baseline, or the x coordinate of each individual glyph if a list of values is provided.
+    _Value type_: List of ([**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage)) ; _Default value_: `0`; _Animatable_: **yes**
 - {{SVGAttr("y")}}
-  - : The y coordinate of the starting point of the text baseline.
-    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage) ; _Default value_: `0`; _Animatable_: **yes**
+  - : The y coordinate of the starting point of the text baseline, or the y coordinate of each individual glyph if a list of values is provided.
+    _Value type_: List of ([**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage)) ; _Default value_: `0`; _Animatable_: **yes**
 - {{SVGAttr("dx")}}
-  - : Shifts the text position horizontally from a previous text element.
-    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage) ; _Default value_: _none_; _Animatable_: **yes**
+  - : Shifts the text position horizontally from a previous text element, or shifts the position of each individual glyph if a list of values is provided.
+    _Value type_: List of ([**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage)) ; _Default value_: _none_; _Animatable_: **yes**
 - {{SVGAttr("dy")}}
-  - : Shifts the text position vertically from a previous text element.
-    _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage) ; _Default value_: _none_; _Animatable_: **yes**
+  - : Shifts the text position vertically from a previous text element, or shifts the position of each individual glyph if a list of values is provided.
+    _Value type_: List of ([**\<length>**](/en-US/docs/Web/SVG/Content_type#length)|[**\<percentage>**](/en-US/docs/Web/SVG/Content_type#percentage)) ; _Default value_: _none_; _Animatable_: **yes**
 - {{SVGAttr("rotate")}}
   - : Rotates orientation of each individual glyph. Can rotate glyphs individually.
     _Value type_: [**\<list-of-number>**](/en-US/docs/Web/SVG/Content_type#list-of-ts) ; _Default value_: none; _Animatable_: **yes**

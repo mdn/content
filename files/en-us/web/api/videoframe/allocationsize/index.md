@@ -33,6 +33,10 @@ allocationSize(options)
           - : An integer representing the offset in bytes where the given plane begins.
         - `stride`
           - : An integer representing the number of bytes, including padding, used by each row of the plane.
+    - `format` {{Optional_Inline}}
+      - : A pixel format for the pixel data in the `destination`. Can be set to `"RGBA"`, `"RGBX"`, `"BGRA"`, `"BGRX"`. If unspecified, the {{domxref("VideoFrame.format","format")}} will be used.
+    - `colorSpace` {{Optional_Inline}}
+      - : Specifies the color space of the pixel data in the `destination`. Can be set to `"srgb"` for the [sRGB color space](https://en.wikipedia.org/wiki/SRGB) or `"display-p3"` for the [display-p3 color space](https://en.wikipedia.org/wiki/DCI-P3). Only applicable for RGB pixel formats. If unspecified, `"srgb` will be used.
 
 ### Return value
 

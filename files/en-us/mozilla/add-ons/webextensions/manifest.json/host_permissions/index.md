@@ -39,9 +39,13 @@ Use the `host_permissions` key to request access for the APIs in your extension 
 
 ### Requested permissions and user prompts
 
-Most browsers treat `host_permissions` as optional. If you request permissions using this key, users _may_ get prompted to grant those permissions during installation. As of June 2023, Safari, Firefox, and some Chromium-based browsers don't prompt the user during installation.
+Users can [grant or revoke host permissions](https://support.mozilla.org/en-US/kb/extensions-button#w_website-permissions) on an ad hoc basis. Therefore., most browsers treat `host_permissions` as optional.
 
-Users can also grant or revoke host permissions on an ad hoc basis. For example, in Firefox, users can do this using the [extensions panel](https://blog.mozilla.org/addons/2022/11/17/unified-extensions-button-and-how-to-handle-permissions-in-manifest-v3/).
+On installation, when you request permissions using this key:
+
+- Until Firefox 126, a Manifest V3 extension's requested host permissions weren't displayed in the install prompt. From Firefox 127, host permissions listed in `host_permissions` and `content_scripts` are displayed in the install prompt. However, if an extension update requests new host permissions, these are not shown to the user. See ([Firefox bug 1893232](https://bugzil.la/1893232)).
+- Chrome displays the permissions in the install prompt.
+- Safari doesn't display requested host permissions in the install prompt.
 
 Your extension can check whether it has all the required permissions immediately after installation using {{WebExtAPIRef("permissions.contains")}}. If it doesn't have the necessary permissions, it can request them using {{WebExtAPIRef("permissions.request")}}. Providing an onboarding step to explain why some permissions are necessary before requesting them might also be helpful.
 

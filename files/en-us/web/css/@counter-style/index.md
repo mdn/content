@@ -33,13 +33,14 @@ The `@counter-style` at-rule is identified by a [counter style name](#counter_st
 
   - : Provides a name for your counter style. It is specified as a case-sensitive {{cssxref("custom-ident")}} without quotes. The value should not be equal to `none`. Like all custom identifiers, the value of your counter style can't be a [CSS-wide keyword](/en-US/docs/Web/CSS/CSS_Types#css-wide_keywords). Avoid other enumerated CSS property values, including values of [list](/en-US/docs/Web/CSS/CSS_lists#properties) and [counter style](/en-US/docs/Web/CSS/CSS_counter_styles#properties) properties. The name of your counter can't be the case-insensitive {{cssxref("list-style-type")}} property values of `decimal`, `disc`, `square`, `circle`, `disclosure-open`, and `disclosure-closed`.
 
-    > **Note:** The non-overridable counter style names `decimal`, `disc`, `square`, `circle`, `disclosure-open`, and `disclosure-closed` cannot be used as the name of a custom counter. However, they are valid in other contexts where the `<counter-style-name>` data type is expected, such as in `system: extends <counter-style-name>`.
+    > [!NOTE]
+    > The non-overridable counter style names `decimal`, `disc`, `square`, `circle`, `disclosure-open`, and `disclosure-closed` cannot be used as the name of a custom counter. However, they are valid in other contexts where the `<counter-style-name>` data type is expected, such as in `system: extends <counter-style-name>`.
 
 ### Descriptors
 
 - {{cssxref("@counter-style/system", "system")}}
 
-  - : Specifies the algorithm to be used for converting the integer value of a counter to a string representation. If the value is `cyclic`, `numeric`, `alphabetic`, `symbolic`, or `fixed`, the `symbols` descriptor must also be specified. If the value is `additive` , the `additive-symbols` descriptor must also be specified.
+  - : Specifies the algorithm to be used for converting the integer value of a counter to a string representation. If the value is `cyclic`, `numeric`, `alphabetic`, `symbolic`, or `fixed`, the `symbols` descriptor must also be specified. If the value is `additive`, the `additive-symbols` descriptor must also be specified.
 
 - {{cssxref("@counter-style/symbols", "symbols")}}
 
@@ -121,11 +122,11 @@ The above code produces the following result:
 
 {{EmbedLiveSample('Specifying symbols with counter-style', '', '300')}}
 
-See more examples on the [demo page](https://mdn.github.io/css-examples/counter-style-demo/).
+See more examples on the [demo page](https://mdn.github.io/css-examples/counter-style-demo/) ([code](https://github.com/mdn/css-examples/tree/main/counter-style-demo)).
 
 ### Ready-made counter styles
 
-Find a collection of over 100 `counter-style` code snippets in the [Ready-made Counter Styles](https://www.w3.org/TR/predefined-counter-styles/) document. This document provides counter styles that meet the needs of languages and cultures around the world.
+Find a collection of over 100 `counter-style` code snippets in the [Ready-made Counter Styles](https://www.w3.org/TR/predefined-counter-styles/) document. This document provides counters that meet the needs of languages and cultures around the world.
 
 The [Counter styles converter](https://r12a.github.io/app-counters/) pulls from this list to test and create copy and paste code for counter styles.
 
@@ -139,7 +140,8 @@ The [Counter styles converter](https://r12a.github.io/app-counters/) pulls from 
 
 ## See also
 
+- {{Cssxref("counter", "counter()")}}
+- {{Cssxref("counters", "counters()")}}
+- {{cssxref("symbols", "symbols()")}}
 - {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}, {{Cssxref("list-style-type")}}
-- {{cssxref("symbols", "symbols()")}}, the functional notation creating anonymous counter styles.
-- CSS {{Cssxref("counter", "counter()")}} and {{Cssxref("counters", "counters()")}} functions
-- [Counter style demo](https://mdn.github.io/css-examples/counter-style-demo/) ([code](https://github.com/mdn/css-examples/tree/main/counter-style-demo))
+- [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module

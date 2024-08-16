@@ -105,7 +105,8 @@ If you set your character encoding to `ISO-8859-1`, for example (the character s
 
 ![A web page containing English and Japanese characters, with the character encoding set to latin. The Japanese characters don't display correctly.](bad-encoding.png)
 
-> **Note:** Some browsers (like Chrome) automatically fix incorrect encodings, so depending on what browser you use, you may not see this problem. You should still set an encoding of `utf-8` on your page anyway to avoid any potential problems in other browsers.
+> [!NOTE]
+> Some browsers (like Chrome) automatically fix incorrect encodings, so depending on what browser you use, you may not see this problem. You should still set an encoding of `utf-8` on your page anyway to avoid any potential problems in other browsers.
 
 ### Active learning: Experiment with character encoding
 
@@ -158,9 +159,11 @@ The description is also used on search engine result pages. Let's go through an 
 
    ![A Yahoo search result for "Mozilla Developer Network"](mdn-search-result.png)
 
-> **Note:** In Google, you will see some relevant subpages of MDN Web Docs listed below the main homepage link — these are called sitelinks, and are configurable in [Google's webmaster tools](https://search.google.com/search-console/about?hl=en) — a way to make your site's search results better in the Google search engine.
+> [!NOTE]
+> In Google, you will see some relevant subpages of MDN Web Docs listed below the main homepage link — these are called sitelinks, and are configurable in [Google's webmaster tools](https://search.google.com/search-console/about?hl=en) — a way to make your site's search results better in the Google search engine.
 
-> **Note:** Many `<meta>` features just aren't used anymore. For example, the keyword `<meta>` element (`<meta name="keywords" content="fill, in, your, keywords, here">`) — which is supposed to provide keywords for search engines to determine the relevance of that page for different search terms — is ignored by search engines, because spammers were just filling the keyword list with hundreds of keywords, biasing results.
+> [!NOTE]
+> Many `<meta>` features just aren't used anymore. For example, the keyword `<meta>` element (`<meta name="keywords" content="fill, in, your, keywords, here">`) — which is supposed to provide keywords for search engines to determine the relevance of that page for different search terms — is ignored by search engines, because spammers were just filling the keyword list with hundreds of keywords, biasing results.
 
 ### Other types of metadata
 
@@ -203,39 +206,43 @@ Here is an example of a favicon in a bookmarks panel:
 
 ![The Firefox bookmarks panel, showing a bookmarked example with a favicon displayed next to it.](bookmark-favicon.png)
 
-There are lots of other icon types to consider these days as well. For example, you'll find this in the source code of the MDN Web Docs homepage:
+You may also need different icons for different contexts. For example, you'll find this in the source code of the MDN Web Docs homepage:
 
 ```html
-<!-- third-generation iPad with high-resolution Retina display: -->
+<link rel="icon" href="/favicon-48x48.[some hex hash].png" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.[some hex hash].png" />
+```
+
+This is a way to make the site show an icon when saved to an Apple device's home screen. You may even want to provide different icons for different devices, to ensure that the icon looks good on all devices. For example:
+
+```html
+<!-- iPad Pro with high-resolution Retina display: -->
 <link
   rel="apple-touch-icon"
-  sizes="144x144"
-  href="https://developer.mozilla.org/static/img/favicon144.png" />
-<!-- iPhone with high-resolution Retina display: -->
+  sizes="167x167"
+  href="/apple-touch-icon-167x167.png" />
+<!-- 3x resolution iPhone: -->
 <link
   rel="apple-touch-icon"
-  sizes="114x114"
-  href="https://developer.mozilla.org/static/img/favicon114.png" />
-<!-- first- and second-generation iPad: -->
+  sizes="180x180"
+  href="/apple-touch-icon-180x180.png" />
+<!-- non-Retina iPad, iPad mini, etc.: -->
 <link
   rel="apple-touch-icon"
-  sizes="72x72"
-  href="https://developer.mozilla.org/static/img/favicon72.png" />
-<!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-<link
-  rel="apple-touch-icon"
-  href="https://developer.mozilla.org/static/img/favicon57.png" />
+  sizes="152x152"
+  href="/apple-touch-icon-152x152.png" />
+<!-- 2x resolution iPhone and other devices: -->
+<link rel="apple-touch-icon" href="/apple-touch-icon-120x120.png" />
 <!-- basic favicon -->
-<link
-  rel="icon"
-  href="https://developer.mozilla.org/static/img/favicon32.png" />
+<link rel="icon" href="/favicon.ico" />
 ```
 
 The comments explain what each icon is used for — these elements cover things like providing a nice high resolution icon to use when the website is saved to an iPad's home screen.
 
-Don't worry too much about implementing all these types of icon right now — this is a fairly advanced feature, and you won't be expected to have knowledge of this to progress through the course. The main purpose here is to let you know what such things are, in case you come across them while browsing other websites' source code.
+Don't worry too much about implementing all these types of icon right now — this is a fairly advanced feature, and you won't be expected to have knowledge of this to progress through the course. The main purpose here is to let you know what such things are, in case you come across them while browsing other websites' source code. If you do want to learn more about all these values and how to choose them, read the {{HTMLElement("link")}} element's reference page.
 
-> **Note:** If your site uses a Content Security Policy (CSP) to enhance its security, the policy applies to the favicon. If you encounter problems with the favicon not loading, verify that the {{HTTPHeader("Content-Security-Policy")}} header's [`img-src` directive](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) is not preventing access to it.
+> [!NOTE]
+> If your site uses a Content Security Policy (CSP) to enhance its security, the policy applies to the favicon. If you encounter problems with the favicon not loading, verify that the {{HTTPHeader("Content-Security-Policy")}} header's [`img-src` directive](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) is not preventing access to it.
 
 ## Applying CSS and JavaScript to HTML
 
@@ -253,7 +260,8 @@ Just about all websites you'll use in the modern day will employ {{glossary("CSS
   <script src="my-js-file.js" defer></script>
   ```
 
-  > **Note:** The `<script>` element may look like a {{glossary("void element")}}, but it's not, and so needs a closing tag. Instead of pointing to an external script file, you can also choose to put your script inside the `<script>` element.
+  > [!NOTE]
+  > The `<script>` element may look like a {{glossary("void element")}}, but it's not, and so needs a closing tag. Instead of pointing to an external script file, you can also choose to put your script inside the `<script>` element.
 
 ### Active learning: applying CSS and JavaScript to a page
 
@@ -268,7 +276,8 @@ If done correctly, when you save your HTML and refresh your browser you should b
 - The JavaScript has added an empty list to the page. Now when you click anywhere outside the list, a dialog box will pop up asking you to enter some text for a new list item. When you press the OK button, a new list item will be added to the list containing the text. When you click on an existing list item, a dialog box will pop up allowing you to change the item's text.
 - The CSS has caused the background to go green, and the text to become bigger. It has also styled some of the content that the JavaScript has added to the page (the red bar with the black border is the styling the CSS has added to the JS-generated list.)
 
-> **Note:** If you get stuck in this exercise and can't get the CSS/JS to apply, try checking out our [css-and-js.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/css-and-js.html) example page.
+> [!NOTE]
+> If you get stuck in this exercise and can't get the CSS/JS to apply, try checking out our [css-and-js.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/css-and-js.html) example page.
 
 ## Setting the primary language of the document
 

@@ -71,7 +71,7 @@ delete globalThis.x; // TypeError in strict mode. Fails silently otherwise.
 delete x; // SyntaxError in strict mode. Fails silently otherwise.
 ```
 
-In both NodeJS [CommonJS](https://www.commonjs.org/) modules and native [ECMAScript modules](/en-US/docs/Web/JavaScript/Guide/Modules), top-level variable declarations are scoped to the module, and are not added as properties to the global object.
+In both NodeJS [CommonJS](https://wiki.commonjs.org/wiki/CommonJS) modules and native [ECMAScript modules](/en-US/docs/Web/JavaScript/Guide/Modules), top-level variable declarations are scoped to the module, and are not added as properties to the global object.
 
 The list that follows the `var` keyword is called a _{{Glossary("binding")}} list_ and is separated by commas, where the commas are _not_ [comma operators](/en-US/docs/Web/JavaScript/Reference/Operators/Comma_operator) and the `=` signs are _not_ [assignment operators](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment). Initializers of later variables can refer to earlier variables in the list and get the initialized value.
 

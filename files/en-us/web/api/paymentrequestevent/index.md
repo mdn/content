@@ -20,7 +20,7 @@ The **`PaymentRequestEvent`** interface of the {{domxref("Payment Handler API", 
 
 ## Instance properties
 
-- {{domxref("PaymentRequestEvent.instrumentKey","instrumentKey")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+- {{domxref("PaymentRequestEvent.instrumentKey","instrumentKey")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}} {{experimental_inline}}
   - : Returns an object reflecting the payment instrument selected by the user or an empty string if the user has not registered or chosen a payment instrument.
 - {{domxref("PaymentRequestEvent.methodData","methodData")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns an array of objects containing payment method identifiers for the payment methods that the website accepts and any associated payment method specific data.
@@ -37,6 +37,8 @@ The **`PaymentRequestEvent`** interface of the {{domxref("Payment Handler API", 
 
 ## Instance methods
 
+- {{domxref("PaymentRequestEvent.changePaymentMethod","changePaymentMethod()")}} {{Experimental_Inline}}
+  - : Gets an updated total, given payment method details.
 - {{domxref("PaymentRequestEvent.openWindow","openWindow()")}} {{Experimental_Inline}}
   - : Opens the specified URL in a new window, if and only if the given URL is on the same origin as the calling page. It returns a {{jsxref("Promise")}} that resolves with a reference to a {{domxref("WindowClient")}}.
 - {{domxref("PaymentRequestEvent.respondWith","respondWith()")}} {{Experimental_Inline}}

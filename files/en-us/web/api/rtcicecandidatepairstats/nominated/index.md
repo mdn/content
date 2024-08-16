@@ -19,7 +19,8 @@ A Boolean value which is set to `true` by the ICE layer if the controlling
 user agent has indicated that the candidate pair should be used to configure the WebRTC
 connection between the two peers.
 
-> **Note:** If more than one candidate pair are nominated at the same
+> [!NOTE]
+> If more than one candidate pair are nominated at the same
 > time, the one whose priority is higher will be selected for use.
 
 Once a candidate pair has been nominated and the two peers have each reconfigured

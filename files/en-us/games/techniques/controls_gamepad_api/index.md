@@ -12,10 +12,6 @@ This article looks at implementing an effective, cross-browser control system fo
 
 Historically playing games on a console connected to your TV was always a totally different experience to gaming on the PC, mostly because of the unique controls. Eventually, extra drivers and plugins allowed us to use console gamepads with desktop games — either native games or those running in the browser. Now we have the [Gamepad API](/en-US/docs/Web/API/Gamepad_API), which gives us the ability to play browser-based games using gamepad controllers without any plugins. The Gamepad API achieves this by providing an interface exposing button presses and axis changes that can be used inside JavaScript code to handle the input. These are good times for browser gaming.
 
-## API status and browser support
-
-The [Gamepad API](https://www.w3.org/TR/gamepad/) is still at the Working Draft stage in the W3C process, which means its implementation might still change, but saying that the [browser support](https://caniuse.com/gamepad) is already quite good. Firefox 29+ and Chrome 35+ support it out of the box. Opera supports the API in version 22+ (not surprising given that they now use Chrome's Blink engine.) And Microsoft implemented support for the API in Edge recently, which means four main browsers now supporting the Gamepad API.
-
 ## Which gamepads are best?
 
 The most popular gamepads right now are those from the Xbox 360, Xbox One, PS3 and PS4 — they have been heavily tested and work well with the Gamepad API implementation in browsers across Windows and macOS.
@@ -24,7 +20,7 @@ There's also a number of other devices with various different button layouts tha
 
 ## Case Study: Hungry Fridge
 
-The [GitHub Game Off II](https://github.blog/2013-10-30-github-game-off-ii/) competition ran in November 2013 and [Enclave Games](https://enclavegames.com/) decided to take part in it. The theme for the competition was "change", so they submitted a game where you have to feed the Hungry Fridge by tapping the healthy food (apples, carrots, lettuces) and avoid the "bad" food (beer, burgers, pizza.) A countdown changes the type of food the Fridge wants to eat every few seconds, so you have to be careful and act quickly.
+The [GitHub Game Off II](https://github.blog/open-source/gaming/github-game-off-ii/) competition ran in November 2013 and [Enclave Games](https://enclavegames.com/) decided to take part in it. The theme for the competition was "change", so they submitted a game where you have to feed the Hungry Fridge by tapping the healthy food (apples, carrots, lettuces) and avoid the "bad" food (beer, burgers, pizza.) A countdown changes the type of food the Fridge wants to eat every few seconds, so you have to be careful and act quickly.
 
 The second, hidden "change" implementation is the ability to transform the static Fridge into a full-blown moving, shooting and eating machine. When you connect the controller, the game significantly changes (Hungry Fridge turns into the Super Turbo Hungry Fridge) and you're able to control the armored fridge using the Gamepad API. You have to shoot down the food, but once again you also have to find the type of food the Fridge wants to eat at each point, or else you'll lose energy.
 
@@ -36,7 +32,8 @@ The full version of the Hungry Fridge game was built first, and then to showcase
 
 The code explained below is from the full version of the Hungry Fridge game, but it's almost identical to the one from the demo — the only difference is that the full version uses the `turbo` variable to decide whether the game will be launched using Super Turbo mode. It works independently, so it could be turned on even if the gamepad is not connected.
 
-> **Note:** Easter Egg time: There's a hidden option to launch Super Turbo Hungry Fridge on the desktop without having a gamepad connected — click the gamepad icon in the top right corner of the screen. It will launch the game in the Super Turbo mode and you'll be able to control the Fridge with the keyboard: A and D for turning the turret left and right, W for shooting and arrow keys for movement.
+> [!NOTE]
+> Easter Egg time: There's a hidden option to launch Super Turbo Hungry Fridge on the desktop without having a gamepad connected — click the gamepad icon in the top right corner of the screen. It will launch the game in the Super Turbo mode and you'll be able to control the Fridge with the keyboard: A and D for turning the turret left and right, W for shooting and arrow keys for movement.
 
 ## Implementation
 

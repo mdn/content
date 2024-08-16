@@ -14,7 +14,7 @@ Specifically, `inert` does the following:
 - Prevents the {{domxref("Element/click_event", "click")}} event from being fired when the user clicks on the element.
 - Prevents the {{domxref("Element/focus_event", "focus")}} event from being raised by preventing the element from gaining focus.
 - Prevents any contents of the element from being found/matched during any use of the browser's find-in-page feature.
-- Prevents users from selecting text within the element — akin to using the CSS property {{domxref("CSS/user-select", "user-select")}} to disable text selection.
+- Prevents users from selecting text within the element — akin to using the CSS property {{cssxref("user-select")}} to disable text selection.
 - Prevents users from editing any contents of the element that are otherwise editable.
 - Hides the element and its content from assistive technologies by excluding them from the accessibility tree.
 
@@ -28,7 +28,8 @@ The `inert` attribute can be added to sections of content that should not be int
 
 The `inert` attribute can also be added to elements that should be offscreen or hidden. An inert element, along with its descendants, gets removed from the tab order and accessibility tree.
 
-> **Note:** While `inert` is a global attribute and can be applied to any element, it is generally used for sections of content. To make individual controls "inert", consider using the [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled) attribute, along with CSS [`:disabled`](/en-US/docs/Web/CSS/:disabled) styles, instead.
+> [!NOTE]
+> While `inert` is a global attribute and can be applied to any element, it is generally used for sections of content. To make individual controls "inert", consider using the [`disabled`](/en-US/docs/Web/HTML/Attributes/disabled) attribute, along with CSS [`:disabled`](/en-US/docs/Web/CSS/:disabled) styles, instead.
 
 ## Accessibility concerns
 
@@ -48,5 +49,5 @@ While providing visual and non-visual cues about content inertness, also remembe
 
 - HTML {{HTMLElement("dialog")}} element
 - {{domxref("HTMLElement.inert")}} HTML DOM property
-- [Introducing inert](https://developer.chrome.com/docs/css-ui/inert)
+- [Introducing inert](https://web.dev/articles/inert)
 - [The "inert" attribute is finally coming to the web](https://www.stefanjudis.com/blog/the-inert-attribute-is-finally-coming-to-the-web/)

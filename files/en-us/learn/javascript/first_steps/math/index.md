@@ -41,13 +41,14 @@ We even have different types of number systems! Decimal is base 10 (meaning it u
 
 - **Binary** — The lowest level language of computers; 0s and 1s.
 - **Octal** — Base 8, uses 0–7 in each digit.
-- **Hexadecimal** — Base 16, uses 0–9 and then a–f in each digit. You may have encountered these numbers before when setting [colors in CSS](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#hexadecimal_values).
+- **Hexadecimal** — Base 16, uses 0–9 and then a–f in each digit. You may have encountered these numbers before when setting [colors in CSS](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#hexadecimal_rgb_values).
 
 **Before you start to get worried about your brain melting, stop right there!** For a start, we are just going to stick to decimal numbers throughout this course; you'll rarely come across a need to start thinking about other types, if ever.
 
 The second bit of good news is that unlike some other programming languages, JavaScript only has one data type for numbers, both integers and decimals — you guessed it, {{jsxref("Number")}}. This means that whatever type of numbers you are dealing with in JavaScript, you handle them in exactly the same way.
 
-> **Note:** Actually, JavaScript has a second number type, {{Glossary("BigInt")}}, used for very, very large integers. But for the purposes of this course, we'll just worry about `Number` values.
+> [!NOTE]
+> Actually, JavaScript has a second number type, {{Glossary("BigInt")}}, used for very, very large integers. But for the purposes of this course, we'll just worry about `Number` values.
 
 ### It's all numbers to me
 
@@ -181,9 +182,11 @@ Arithmetic operators are used for performing mathematical calculations in JavaSc
   </tbody>
 </table>
 
-> **Note:** You'll sometimes see numbers involved in arithmetic referred to as {{Glossary("Operand", "operands")}}.
+> [!NOTE]
+> You'll sometimes see numbers involved in arithmetic referred to as {{Glossary("Operand", "operands")}}.
 
-> **Note:** You may sometimes see exponents expressed using the older {{jsxref("Math.pow()")}} method, which works in a very similar way. For example, in `Math.pow(7, 3)`, `7` is the base and `3` is the exponent, so the result of the expression is `343`. `Math.pow(7, 3)` is equivalent to `7**3`.
+> [!NOTE]
+> You may sometimes see exponents expressed using the older {{jsxref("Math.pow()")}} method, which works in a very similar way. For example, in `Math.pow(7, 3)`, `7` is the base and `3` is the exponent, so the result of the expression is `343`. `Math.pow(7, 3)` is equivalent to `7**3`.
 
 We probably don't need to teach you how to do basic math, but we would like to test your understanding of the syntax involved. Try entering the examples below into your [developer tools JavaScript console](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) to familiarize yourself with the syntax.
 
@@ -237,7 +240,8 @@ If you want to override operator precedence, you can put parentheses around the 
 
 Try it and see.
 
-> **Note:** A full list of all JavaScript operators and their precedence can be found in [Operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence).
+> [!NOTE]
+> A full list of all JavaScript operators and their precedence can be found in [Operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence).
 
 ## Increment and decrement operators
 
@@ -274,7 +278,8 @@ num2--;
 num2;
 ```
 
-> **Note:** You can make the browser do it the other way round — increment/decrement the variable _then_ return the value — by putting the operator at the start of the variable instead of the end. Try the above examples again, but this time use `++num1` and `--num2`.
+> [!NOTE]
+> You can make the browser do it the other way round — increment/decrement the variable _then_ return the value — by putting the operator at the start of the variable instead of the end. Try the above examples again, but this time use `++num1` and `--num2`.
 
 ## Assignment operators
 
@@ -352,7 +357,8 @@ let y = 4; // y contains the value 4
 x *= y; // x now contains the value 12
 ```
 
-> **Note:** There are lots of [other assignment operators available](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators), but these are the basic ones you should learn now.
+> [!NOTE]
+> There are lots of [other assignment operators available](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#assignment_operators), but these are the basic ones you should learn now.
 
 ## Active learning: sizing a canvas box
 
@@ -386,7 +392,8 @@ Sometimes we will want to run true/false tests, then act accordingly depending o
 | `<=`     | Less than or equal to    | Tests whether the left value is smaller than or equal to the right one.      | `3 <= 2`      |
 | `>=`     | Greater than or equal to | Tests whether the left value is greater than or equal to the right one.      | `5 >= 4`      |
 
-> **Note:** You may see some people using `==` and `!=` in their tests for equality and non-equality. These are valid operators in JavaScript, but they differ from `===`/`!==`. The former versions test whether the values are the same but not whether the values' datatypes are the same. The latter, strict versions test the equality of both the values and their datatypes. The strict versions tend to result in fewer errors, so we recommend you use them.
+> [!NOTE]
+> You may see some people using `==` and `!=` in their tests for equality and non-equality. These are valid operators in JavaScript, but they differ from `===`/`!==`. The former versions test whether the values are the same but not whether the values' datatypes are the same. The latter, strict versions test the equality of both the values and their datatypes. The strict versions tend to result in fewer errors, so we recommend you use them.
 
 If you try entering some of these values in a console, you'll see that they all return `true`/`false` values — those booleans we mentioned in the last article. These are very useful, as they allow us to make decisions in our code, and they are used every time we want to make a choice of some kind. For example, booleans can be used to:
 
@@ -425,7 +432,8 @@ function updateBtn() {
 
 You can see the equality operator being used just inside the `updateBtn()` function. In this case, we are not testing if two mathematical expressions have the same value — we are testing whether the text content of a button contains a certain string — but it is still the same principle at work. If the button is currently saying "Start machine" when it is pressed, we change its label to "Stop machine", and update the label as appropriate. If the button is currently saying "Stop machine" when it is pressed, we swap the display back again.
 
-> **Note:** Such a control that swaps between two states is generally referred to as a **toggle**. It toggles between one state and another — light on, light off, etc.
+> [!NOTE]
+> Such a control that swaps between two states is generally referred to as a **toggle**. It toggles between one state and another — light on, light off, etc.
 
 ## Test your skills!
 
@@ -437,6 +445,7 @@ In this article, we have covered the fundamental information you need to know ab
 
 In the next article, we'll explore text and how JavaScript allows us to manipulate it.
 
-> **Note:** If you do enjoy math and want to read more about how it is implemented in JavaScript, you can find a lot more detail in MDN's main JavaScript section. Great places to start are our [Numbers and dates](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates) and [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators) articles.
+> [!NOTE]
+> If you do enjoy math and want to read more about how it is implemented in JavaScript, you can find a lot more detail in MDN's main JavaScript section. Great places to start are our [Numbers and dates](/en-US/docs/Web/JavaScript/Guide/Numbers_and_dates) and [Expressions and operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators) articles.
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}

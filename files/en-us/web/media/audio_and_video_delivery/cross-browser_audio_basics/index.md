@@ -27,7 +27,8 @@ The code below is an example of a basic audio implementation using HTML5:
 </audio>
 ```
 
-> **Note:** You can also use an MP4 file instead of MP3. MP4 files typically contain [AAC](https://en.wikipedia.org/wiki/Advanced_Audio_Coding) encoded audio. You can use `type="audio/mp4"`. (Currently, browsers that support mp3 also support mp4 audio).
+> [!NOTE]
+> You can also use an MP4 file instead of MP3. MP4 files typically contain [AAC](https://en.wikipedia.org/wiki/Advanced_Audio_Coding) encoded audio. You can use `type="audio/mp4"`. (Currently, browsers that support mp3 also support mp4 audio).
 
 - Here we define an {{ htmlelement("audio") }} element with multiple sources — we do this as not all browsers support the same audio formats. To ensure reasonable coverage, we should specify at least two different formats. The two formats that will give maximum coverage are mp3 and ogg vorbis.
 - We do this using the {{ htmlelement("source") }} element, which takes the attributes `src` and `type`.
@@ -54,7 +55,8 @@ Specifying `autoplay` will cause the audio to start playing as soon as possible 
 <audio autoplay>…</audio>
 ```
 
-> **Note:** This value is often ignored on mobile platforms, and its use is not recommended unless really necessary. Autoplaying audio (and video) is usually really annoying. Plus browsers have policies that will block autoplay entirely in many situations. See the [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide) for details.
+> [!NOTE]
+> This value is often ignored on mobile platforms, and its use is not recommended unless really necessary. Autoplaying audio (and video) is usually really annoying. Plus browsers have policies that will block autoplay entirely in many situations. See the [Autoplay guide for media and Web Audio APIs](/en-US/docs/Web/Media/Autoplay_guide) for details.
 
 #### loop
 
@@ -72,7 +74,8 @@ If you want the audio to start muted (no volume), add the `muted` attribute.
 <audio muted>…</audio>
 ```
 
-> **Note:** This value is often ignored on mobile platforms.
+> [!NOTE]
+> This value is often ignored on mobile platforms.
 
 #### preload
 
@@ -84,7 +87,8 @@ The `preload` attribute allows you to specify a preference for how the browser p
 2. `metadata`: Download the audio metadata; this is usually the best option, as it allows you to access and display information such as audio length, and allow the browser to work out which audio file it should use.
 3. `auto`: Download the whole audio file as soon as possible. This is generally not a good option unless you can guarantee your users will have a fast network connection.
 
-> **Note:** This value is often ignored on mobile platforms.
+> [!NOTE]
+> This value is often ignored on mobile platforms.
 
 ```html
 <audio preload="auto">…</audio>
@@ -175,7 +179,8 @@ The `pause()` method is used to tell the audio to pause. It takes no parameters.
 audio.pause();
 ```
 
-> **Note:** There is no stop method — to implement a stop function, you'd have to pause the media then set the [`currentTime`](#currenttime) property value to 0.
+> [!NOTE]
+> There is no stop method — to implement a stop function, you'd have to pause the media then set the [`currentTime`](#currenttime) property value to 0.
 
 #### canPlayType
 
@@ -196,7 +201,8 @@ if (audio.canPlayType("audio/mpeg")) {
 
 In practice, we usually check if the result is true or false. Non-empty strings are true.
 
-> **Note:** A very early spec specified that the browser should return `no` instead of an empty string, but thankfully the number of people using older browsers that implement this version of the spec are few and far between.
+> [!NOTE]
+> A very early spec specified that the browser should return `no` instead of an empty string, but thankfully the number of people using older browsers that implement this version of the spec are few and far between.
 
 #### currentTime
 
@@ -556,7 +562,8 @@ There are also a couple of events related to buffering:
 - `seeked`
   - : `seeked` occurs when the `seeking` attribute changes to `false`.
 
-> **Note:** You can read more on [Buffering, Seeking and Time Ranges](/en-US/docs/Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges) elsewhere.
+> [!NOTE]
+> You can read more on [Buffering, Seeking and Time Ranges](/en-US/docs/Web/Media/Audio_and_video_delivery/buffering_seeking_time_ranges) elsewhere.
 
 ## See also
 
@@ -565,4 +572,4 @@ There are also a couple of events related to buffering:
 - [Event reference > Media](/en-US/docs/Web/Events#media)
 - [Using HTML audio and video](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
 - [Creating a cross-browser video player](/en-US/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player)
-- [jPlayer](https://jplayer.org): An open source audio and video library for jQuery and Zepto.
+- [jPlayer](https://jplayer.org/): An open source audio and video library for jQuery and Zepto.

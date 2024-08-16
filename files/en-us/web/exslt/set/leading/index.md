@@ -21,11 +21,12 @@ set:leading(nodeSet1, nodeSet2)
 - `nodeSet2`
   - : The node set to compare against.
 
-### Returns
+### Return value
 
 A node-set containing the nodes from `nodeSet1` whose values precede the first node in `nodeSet2`.
 
-> **Note:** If the first node in `nodeSet2` isn't contained in `nodeSet1`, an empty set is returned. If `nodeSet2` is empty, then the result is `nodeSet1`.
+> [!NOTE]
+> If the first node in `nodeSet2` isn't contained in `nodeSet1`, an empty set is returned. If `nodeSet2` is empty, then the result is `nodeSet1`.
 
 ## Specifications
 

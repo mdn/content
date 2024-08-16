@@ -14,7 +14,8 @@ sets up a function that will be called whenever the specified event is delivered
 Common targets are {{domxref("Element")}}, or its children, {{domxref("Document")}}, and {{domxref("Window")}},
 but the target may be any object that supports events (such as {{domxref("IDBRequest")}}).
 
-> **Note:** The `addEventListener()` method is the _recommended_ way to register an event listener. The benefits are as follows:
+> [!NOTE]
+> The `addEventListener()` method is the _recommended_ way to register an event listener. The benefits are as follows:
 >
 > - It allows adding more than one handler for an event. This is particularly
 >   useful for libraries, JavaScript modules, or any other kind of
@@ -25,7 +26,8 @@ but the target may be any object that supports events (such as {{domxref("IDBReq
 The method `addEventListener()` works by adding a function, or an object that implements a `handleEvent()` function, to the list of event listeners for the specified event type
 on the {{domxref("EventTarget")}} on which it's called. If the function or object is already in the list of event listeners for this target, the function or object is not added a second time.
 
-> **Note:** If a particular anonymous function is in the list of event listeners registered for a certain target, and then later in the code, an identical anonymous function is given in an `addEventListener` call, the second function will _also_ be added to the list of event listeners for that target.
+> [!NOTE]
+> If a particular anonymous function is in the list of event listeners registered for a certain target, and then later in the code, an identical anonymous function is given in an `addEventListener` call, the second function will _also_ be added to the list of event listeners for that target.
 >
 > Indeed, anonymous functions are not identical even if defined using
 > the _same_ unchanging source-code called repeatedly, **even if in a loop**.
@@ -91,7 +93,8 @@ addEventListener(type, listener, useCapture)
     the event. See [DOM Level 3 Events](https://www.w3.org/TR/DOM-Level-3-Events/#event-flow) and [JavaScript Event order](https://www.quirksmode.org/js/events_order.html#link4) for a detailed explanation.
     If not specified, `useCapture` defaults to `false`.
 
-    > **Note:** For event listeners attached to the event target, the event is in the target phase, rather than the capturing and bubbling phases.
+    > [!NOTE]
+    > For event listeners attached to the event target, the event is in the target phase, rather than the capturing and bubbling phases.
     > Event listeners in the _capturing_ phase are called before event listeners in any non-capturing phases.
 
 - `wantsUntrusted` {{optional_inline}} {{non-standard_inline}}
@@ -328,11 +331,11 @@ class SomeClass {
 
   someMethod(e) {
     console.log(this.name);
-    switch (e.keyCode) {
-      case 5:
+    switch (e.code) {
+      case "ArrowUp":
         // some code here…
         break;
-      case 6:
+      case "ArrowDown":
         // some code here…
         break;
     }
@@ -345,54 +348,21 @@ myObject.register();
 
 ### Getting data into and out of an event listener
 
-It may seem that event listeners are like islands, and that it is extremely difficult
-to pass them any data, much less to get any data back from them after they execute.
 Event listeners only take one argument,
-the [Event Object](/en-US/docs/Learn/JavaScript/Building_blocks/Events#event_objects),
+an {{domxref("Event")}} or a subclass of `Event`,
 which is automatically passed to the listener, and the return value is ignored.
-So how can we get data in and back out of them? There are a number of
-good methods for doing this.
+Therefore, to get data into and out of an event listener, instead of passing the data through parameters and return values, you need to create [closures](/en-US/docs/Web/JavaScript/Closures) instead.
 
-#### Getting data into an event listener using "this"
-
-As mentioned [above](#specifying_this_using_bind), you can use
-`Function.prototype.bind()` to pass a value to an event listener via the
-`this` reference variable.
-
-```js
-const myButton = document.getElementById("my-button-id");
-const someString = "Data";
-
-myButton.addEventListener("click", passIntoEvtListener.bind(someString));
-
-//function declaration for event listener
-function passIntoEvtListener(e) {
-  console.log("Expected Value:", this); // Expected Value: 'Data'
-  console.log("current target:", e.currentTarget.id); // current target: my-button-id
-}
-```
-
-This method is suitable when you don't need to know which HTML element the event
-listener fired on programmatically from within the event listener. The primary benefit
-to doing this is that the event listener receives the data in much the same way that it
-would if you were to actually pass it through its argument list.
-
-#### Getting data into an event listener using the outer scope property
-
-When an outer scope contains a variable declaration (with `const`,
-`let`), all the inner functions declared in that scope have access to that
-variable (look [here](/en-US/docs/Glossary/Function#different_types_of_functions) for
-information on outer/inner functions, and [here](/en-US/docs/Web/JavaScript/Reference/Statements/var#implicit_globals_and_outer_function_scope)
-for information on variable scope). Therefore, one of the simplest ways to access data
-from outside of an event listener is to make it accessible to the scope in which the
-event listener is declared.
+The functions passed as event listeners have access to all variables declared in the outer scopes that contain the function.
 
 ```js
 const myButton = document.getElementById("my-button-id");
 let someString = "Data";
 
 myButton.addEventListener("click", () => {
-  console.log(someString); // Expected Value: 'Data'
+  console.log(someString);
+  // 'Data' on first click,
+  // 'Data Again' on second click
 
   someString = "Data Again";
 });
@@ -400,63 +370,7 @@ myButton.addEventListener("click", () => {
 console.log(someString); // Expected Value: 'Data' (will never output 'Data Again')
 ```
 
-> **Note:** Although inner scopes have access to `const`,
-> `let` variables from outer scopes, you cannot expect any changes to these
-> variables to be accessible after the event listener definition, within the same outer
-> scope. Why? Because by the time the event listener would execute, the scope in which
-> it was defined would have already finished executing.
-
-#### Getting data into and out of an event listener using objects
-
-Unlike most functions in JavaScript, objects are retained in memory as long as a
-variable referencing them exists in memory. This, and the fact that objects can have
-properties, and that they can be passed around by reference, makes them likely
-candidates for sharing data among scopes. Let's explore this.
-
-> **Note:** Functions in JavaScript are actually objects. (Hence they too
-> can have properties, and will be retained in memory even after they finish executing
-> if assigned to a variable that persists in memory.)
-
-Because object properties can be used to store data in memory as long as a variable
-referencing the object exists in memory, you can actually use them to get data into an
-event listener, and any changes to the data back out after an event handler executes.
-Consider this example.
-
-```js
-const myButton = document.getElementById("my-button-id");
-const someObject = { aProperty: "Data" };
-
-myButton.addEventListener("click", () => {
-  console.log(someObject.aProperty); // Expected Value: 'Data'
-
-  someObject.aProperty = "Data Again"; // Change the value
-});
-
-setInterval(() => {
-  if (someObject.aProperty === "Data Again") {
-    console.log("Data Again: True");
-    someObject.aProperty = "Data"; // Reset value to wait for next event execution
-  }
-}, 5000);
-```
-
-In this example, even though the scope in which both the event listener and the
-interval function are defined would have finished executing before the original value of
-`someObject.aProperty` would have changed, because `someObject`
-persists in memory (by _reference_) in both the event listener and interval
-function, both have access to the same data (i.e. when one changes the data, the other
-can respond to the change).
-
-> **Note:** Objects are stored in variables by reference, meaning only the
-> memory location of the actual data is stored in the variable. Among other things, this
-> means variables that "store" objects can actually affect other variables that get
-> assigned ("store") the same object reference. When two variables reference the same
-> object (e.g., `let a = b = {aProperty: 'Yeah'};`), changing the data in
-> either variable will affect the other.
-
-> **Note:** Because objects are stored in variables by reference, you can
-> return an object from a function to keep it alive (preserve it in memory so you don't
-> lose the data) after that function stops executing.
+Read [the function guide](/en-US/docs/Web/JavaScript/Guide/Functions#function_scope) for more information about function scopes.
 
 ### Memory issues
 
@@ -717,6 +631,9 @@ also available to the event handler when using an arrow function.
     </a>
   </div>
 </div>
+<hr />
+<button class="clear-button">Clear logs</button>
+<section class="demo-logs"></section>
 ```
 
 #### CSS
@@ -749,7 +666,30 @@ also available to the event handler when using an arrow function.
 }
 ```
 
+```css hidden
+.demo-logs {
+  width: 530px;
+  height: 16rem;
+  background-color: #ddd;
+  overflow-x: auto;
+  padding: 1rem;
+}
+```
+
 #### JavaScript
+
+```js hidden
+const clearBtn = document.querySelector(".clear-button");
+const demoLogs = document.querySelector(".demo-logs");
+
+function log(msg) {
+  demoLogs.innerText += `${msg}\n`;
+}
+
+clearBtn.addEventListener("click", () => {
+  demoLogs.innerText = "";
+});
+```
 
 ```js
 const outer = document.querySelector(".outer");
@@ -784,27 +724,27 @@ inner1.addEventListener("click", passiveHandler, passive);
 inner2.addEventListener("click", nonePassiveHandler, nonePassive);
 
 function onceHandler(event) {
-  alert("outer, once");
+  log("outer, once");
 }
 function noneOnceHandler(event) {
-  alert("outer, none-once, default");
+  log("outer, none-once, default\n");
 }
 function captureHandler(event) {
   //event.stopImmediatePropagation();
-  alert("middle, capture");
+  log("middle, capture");
 }
 function noneCaptureHandler(event) {
-  alert("middle, none-capture, default");
+  log("middle, none-capture, default");
 }
 function passiveHandler(event) {
   // Unable to preventDefault inside passive event listener invocation.
   event.preventDefault();
-  alert("inner1, passive, open new page");
+  log("inner1, passive, open new page");
 }
 function nonePassiveHandler(event) {
   event.preventDefault();
   //event.stopPropagation();
-  alert("inner2, none-passive, default, not open new page");
+  log("inner2, none-passive, default, not open new page");
 }
 ```
 
@@ -812,7 +752,7 @@ function nonePassiveHandler(event) {
 
 Click the outer, middle, inner containers respectively to see how the options work.
 
-{{ EmbedLiveSample('Example_of_options_usage', 600, 310, '') }}
+{{ EmbedLiveSample('Example_of_options_usage', 600, 630) }}
 
 Before using a particular value in the `options` object, it's a
 good idea to ensure that the user's browser supports it, since these are an addition

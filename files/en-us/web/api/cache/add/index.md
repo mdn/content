@@ -53,7 +53,7 @@ A {{jsxref("Promise")}} that resolves with `undefined`.
 
 ## Examples
 
-This code block waits for an {{domxref("InstallEvent")}} to fire, then calls {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} to handle the install process for the app. This consists of calling {{domxref("CacheStorage.open")}} to create a new cache, then using {{domxref("Cache.add")}} to add an asset to it.
+This code block waits for an {{domxref("InstallEvent")}} to fire, then calls {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} to handle the install process for the app. This consists of calling {{domxref("CacheStorage.open")}} to create a new cache, then using `Cache.add` to add an asset to it.
 
 ```js
 this.addEventListener("install", (event) => {
@@ -73,4 +73,4 @@ this.addEventListener("install", (event) => {
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
-- {{domxref("caches")}}
+- {{domxref("Window.caches")}} and {{domxref("WorkerGlobalScope.caches")}}

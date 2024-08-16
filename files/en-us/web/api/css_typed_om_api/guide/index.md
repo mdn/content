@@ -67,7 +67,7 @@ In [browsers that support `computedStyleMap()`](/en-US/docs/Web/API/Element/comp
 
 {{EmbedLiveSample("Getting_all_the_properties_and_values", 120, 300)}}
 
-Did you realize how many default CSS properties a link had? Update the JavaScript on line 2 to select the {{htmlelement("p")}} rather than the {{htmlelement("a")}}. You'll notice a difference in the [`margin-top`](/en-US/docs/Web/CSS/margin-top) and [`margin-bottom`](/en-US/docs/Web/CSS/margin-bottom) default computed values.
+Did you realize how many default CSS properties a link had? Update the first `document.querySelector` call to select the {{htmlelement("p")}} rather than the {{htmlelement("a")}}. You'll notice a difference in the [`margin-top`](/en-US/docs/Web/CSS/margin-top) and [`margin-bottom`](/en-US/docs/Web/CSS/margin-bottom) default computed values.
 
 ### .get() method / custom properties
 
@@ -124,7 +124,7 @@ for (const value of ofInterest) {
 
 We included {{cssxref('border-left-color')}} to demonstrate that, had we included all the properties, every value that defaults to [`currentcolor`](/en-US/docs/Web/CSS/color_value) (including {{cssxref('caret-color')}}, {{cssxref('outline-color')}}, {{cssxref('text-decoration-color')}}, {{cssxref('column-rule-color')}}, etc.) would return `rgb(255 0 0)`. The link has inherited `font-weight: bold;` from the paragraph's styles, listing it as `font-weight: 700`. Custom properties, like our `--color: red`, are properties. As such, they are accessible via `get()`.
 
-You'll note that custom properties retain the value as written in the stylesheet, whereas computed styles will be listed as the computed value — {{cssxref('color')}} was listed as an [`rgb()`](/en-US/docs/Web/CSS/color_value) value and the {{cssxref('font-weight')}} returned was `700` even though we use a {{cssxref('&lt;color&gt;', 'named color')}} and the `bold` keyword.
+You'll note that custom properties retain the value as written in the stylesheet, whereas computed styles will be listed as the computed value — {{cssxref('color')}} was listed as an [`rgb()`](/en-US/docs/Web/CSS/color_value) value and the {{cssxref('font-weight')}} returned was `700` even though we use a [named color](/en-US/docs/Web/CSS/named-color) and the `bold` keyword.
 
 ### CSSUnitValue and CSSKeywordValue
 

@@ -44,7 +44,7 @@ let updating = browser.tabs.update(
 
       - : `boolean`. Whether the new URL should replace the old URL in the tab's navigation history, as accessed via the "Back" button.
 
-        For example, suppose the user creates a new tab using Ctrl+T. By default, in Firefox, this would load "about:newtab". If your extension then updates this page using {{WebExtAPIRef("tabs.update")}}, without `loadReplace`, the "Back" button will be enabled and will take the user back to "about:newtab". If the extension sets `loadReplace`, then the "Back" button will be disabled and it will be just as if the URL supplied by the extension was the first page visited in that tab.
+        For example, suppose the user creates a new tab using Ctrl+T. By default, in Firefox, this would load "about:newtab". If your extension then updates this page using `tabs.update`, without `loadReplace`, the "Back" button will be enabled and will take the user back to "about:newtab". If the extension sets `loadReplace`, then the "Back" button will be disabled and it will be just as if the URL supplied by the extension was the first page visited in that tab.
 
         Note though that the original URL will still appear in the browser's global history.
 
@@ -122,7 +122,8 @@ querying.then(updateFirstTab, onError);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-update) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-update) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

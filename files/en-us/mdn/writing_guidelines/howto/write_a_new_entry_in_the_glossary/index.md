@@ -30,7 +30,8 @@ The first paragraph of any glossary page is a simple and short description of th
 Preferably, this should be no more than two sentences.
 Make sure anyone reading the description can immediately understand the defined term.
 
-> **Note:** Please don't copy-and-paste from other definitions or content on the internet.
+> [!NOTE]
+> Please don't copy-and-paste from other definitions or content on the internet.
 > (And especially not Wikipedia, since its range of license versions is smaller and incompatible with MDN.) Your glossary entry should be original content.
 
 #### Writing a good glossary entry

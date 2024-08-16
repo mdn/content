@@ -29,7 +29,7 @@ _This interface has no methods, but inherits methods from its parent, {{DOMxRef(
 ### MathML
 
 ```html
-<math xmlns="http://www.w3.org/1998/Math/MathML">
+<math>
   <msqrt>
     <mi>x</mi>
   </msqrt>

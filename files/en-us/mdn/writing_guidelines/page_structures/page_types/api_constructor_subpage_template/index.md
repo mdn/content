@@ -69,7 +69,7 @@ browser-compat: path.to.feature.NameOfTheConstructor
 > - `\{{APIRef("GroupDataName")}}` — this generates the left-hand reference sidebar showing quick reference links related to the current page.
 >   For example, every page in the [WebVR API](/en-US/docs/Web/API/WebVR_API) has the same sidebar, which points to the other pages in the API.
 >   To generate the correct sidebar for your API, you need to add a `GroupData` entry to our GitHub repo, and include the entry's name inside the macro call in place of _GroupDataName_.
->   See our [API reference sidebars](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars) guide for information on how to do this. Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.
+>   See our [API reference sidebars](/en-US/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars) guide for information on how to do this. Remember to remove the `\{{MDNSidebar}}` macro when you copy this page.
 >
 > Do not provide status header macros manually. Refer to the section [How to add or update feature statuses](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses) to add these statuses to the page.
 >
@@ -119,7 +119,8 @@ Each example must have an H3 heading naming the example. The heading should be d
 
 See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples) for more information.
 
-> **Note:** Sometimes you will want to link to examples given on another page.
+> [!NOTE]
+> Sometimes you will want to link to examples given on another page.
 >
 > **Scenario 1:** If you have some examples on this page and some more examples on another page:
 >
@@ -144,7 +145,7 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 > ```md
 > ## Examples
 >
-> For examples of this API, see [the page on fetch()](https://example.org).
+> For examples of this API, see [the page on fetch()](https://example.org/).
 > ```
 
 ## Specifications

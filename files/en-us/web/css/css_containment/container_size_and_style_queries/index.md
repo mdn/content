@@ -28,7 +28,7 @@ There are two types of container queries: _container size queries_ and _containe
 
 In this guide, we learn the basics of container queries by looking at:
 
-1. [container size queries](#container-size-queries),
+1. [container size queries](#container_size_queries_2),
 2. [naming containers](#naming_containers) to limit their scope, and
 3. using the `style()` functional notation within the {{cssxref("@container")}} at rule's `<container-condition>` to create [style queries with custom properties](#style_queries_for_custom_properties).
 
@@ -112,7 +112,7 @@ Container names also enable querying styles from elements that aren't a direct p
 
 Set `container-name: none` to prevent the container from matching any named container queries. That removes all associated container query names, but does not prevent the element from matching unnamed queries.
 
-To prevent an element from being a size container, set `container-type: normal`. This removes containment, meaning the element isn't a size container (it can still be a [style container](#container_style_queries).
+To prevent an element from being a size container, set `container-type: normal`. This removes containment, meaning the element isn't a size container (it can still be a [style container](#container_style_queries)).
 
 To prevent an element from being matched by any container queries, provide it with an unused `container-name`.
 
@@ -324,7 +324,7 @@ output {
 }
 ```
 
-The first style feature query is a custom property with no value. This query type returns true when the computed value for the custom property value is different from the `initial-value` for that property. In this case, it will be true when the value of `--theme` is any value other than any syntax equivalent value of`#f00` ( such as `red`). When true, the {{htmlelement("output")}} will have a 5px dotted outline. The outline color is the current value of `--theme`. The default text {{cssxref("color")}} is grey.
+The first style feature query is a custom property with no value. This query type returns true when the computed value for the custom property value is different from the `initial-value` for that property. In this case, it will be true when the value of `--theme` is any value other than any syntax equivalent value of `#f00` ( such as `red`). When true, the {{htmlelement("output")}} will have a 5px dotted outline. The outline color is the current value of `--theme`. The default text {{cssxref("color")}} is grey.
 
 ```css
 @container style(--theme) {
@@ -361,7 +361,8 @@ Because we set `syntax: "<color>";`, the CSS variable can only be assigned valid
 
 If you enter `unset` or `gibberish`, the JavaScript updates the `style` on the {{HTMLElement("body")}} to `--theme: unset` or `--theme: gibberish`. Neither of these are colors. Both are invalid and ignored. This means the initial value is inherited and unchanged, with `style(--theme)` returning false and `style(--theme: red)` returning true.
 
-> **Note:** When declaring custom properties, consider using `@property` with the {{cssxref("@property/syntax","syntax")}} descriptor so the browser can properly compare computed values.
+> [!NOTE]
+> When declaring custom properties, consider using `@property` with the {{cssxref("@property/syntax","syntax")}} descriptor so the browser can properly compare computed values.
 
 ### Nested queries
 

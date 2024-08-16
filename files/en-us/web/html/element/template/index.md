@@ -26,11 +26,18 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
       - : Hides the internal shadow root DOM from JavaScript.
 
-    > **Note:** If this attribute is set, the HTML parser creates a {{domxref("ShadowRoot")}} object in the DOM.
-    > If the attribute is not set, or not set to an allowed value, then a {{domxref("HTMLTemplateElement")}} is constructed.
+    > [!NOTE]
+    > The HTML parser creates a {{domxref("ShadowRoot")}} object in the DOM for the first `<template>` in a node with this attribute set to an allowed value.
+    > If the attribute is not set, or not set to an allowed value — or if a `ShadowRoot` has already been declaratively created in the same parent — then an {{domxref("HTMLTemplateElement")}} is constructed.
     > A {{domxref("HTMLTemplateElement")}} cannot subsequently be changed into a shadow root after parsing, for example, by setting {{domxref("HTMLTemplateElement.shadowRootMode")}}.
 
-    > **Note:** You may find the non-standard `shadowroot` attribute in older tutorials and examples that used to be supported in Chrome 90-110. This attribute has since been removed and replaced by the standard `shadowrootmode` attribute.
+    > [!NOTE]
+    > You may find the non-standard `shadowroot` attribute in older tutorials and examples that used to be supported in Chrome 90-110. This attribute has since been removed and replaced by the standard `shadowrootmode` attribute.
+
+- `shadowrootclonable`
+
+  - : Sets the value of the [`clonable`](/en-US/docs/Web/API/ShadowRoot/clonable) property of a [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) created using this element to `true`.
+    If set, a clone of the shadow host (the parent element of this `<template>`) created with {{domxref("Node.cloneNode()")}} or {{domxref("Document.importNode()")}} will include a shadow root in the copy.
 
 - `shadowrootdelegatesfocus`
 
@@ -38,10 +45,10 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     If this is set and a non-focusable element in the shadow tree is selected, then focus is delegated to the first focusable element in the tree.
     The value defaults to `false`.
 
-- `shadowrootclonable`
+- `shadowrootserializable` {{experimental_inline}}
 
-  - : Sets the value of the [`clonable`](/en-US/docs/Web/API/ShadowRoot/clonable) property of a [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) created using this element to `true`.
-    If set, a clone of the shadow host (the parent element of this `<template>`) created with {{domxref("Node.cloneNode()")}} or {{domxref("Document.importNode()")}} will include a shadow root in the copy.
+  - : Sets the value of the [`serializable`](/en-US/docs/Web/API/ShadowRoot/serializable) property of a [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) created using this element to `true`.
+    If set, the shadow root may be serialized by calling the {{DOMxRef('Element.getHTML()')}} or {{DOMxRef('ShadowRoot.getHTML()')}} methods with the `options.serializableShadowRoots` parameter set `true`.
     The value defaults to `false`.
 
 ## Usage notes
@@ -50,15 +57,20 @@ There are two main ways to use the `<template>` element.
 
 ### Template document fragment
 
-By default, the element's content is not rendered, but is parsed into a [document fragment](/en-US/docs/Web/API/DocumentFragment).
-Using the {{domxref("HTMLTemplateElement.content", "content")}} property in JavaScript, this fragment can be cloned via the {{domxref("Node.cloneNode", "cloneNode")}} method and inserted into the DOM.
+By default, the element's content is not rendered.
+The corresponding {{domxref("HTMLTemplateElement")}} interface includes a standard {{domxref("HTMLTemplateElement.content", "content")}} property (without an equivalent content/markup attribute). This `content` property is read-only and holds a {{domxref("DocumentFragment")}} that contains the DOM subtree represented by the template.
+This fragment can be cloned via the {{domxref("Node.cloneNode", "cloneNode")}} method and inserted into the DOM.
+
+Be careful when using the `content` property because the returned `DocumentFragment` can exhibit unexpected behavior.
+For more details, see the [Avoiding DocumentFragment pitfalls](#avoiding_documentfragment_pitfalls) section below.
 
 ### Declarative Shadow DOM
 
-If the element contains the [`shadowrootmode`](#shadowrootmode) attribute, the HTML parser will immediately generate a shadow DOM. The element is replaced in the DOM by its content wrapped in a [shadow root](/en-US/docs/Glossary/Shadow_tree), which is attached to the parent element.
+If the `<template>` element contains the [`shadowrootmode`](#shadowrootmode) attribute with a value of either `open` or `closed`, the HTML parser will immediately generate a shadow DOM. The element is replaced in the DOM by its content wrapped in a {{domxref("ShadowRoot")}}, which is attached to the parent element.
 This is the declarative equivalent of calling {{domxref("Element.attachShadow()")}} to attach a shadow root to an element.
 
-The corresponding {{domxref("HTMLTemplateElement")}} interface includes a standard {{domxref("HTMLTemplateElement.content", "content")}} property (without an equivalent content/markup attribute). This `content` property is read-only and holds a {{domxref("DocumentFragment")}} that contains the DOM subtree represented by the template. Be careful when using the `content` property because the returned `DocumentFragment` can exhibit unexpected behavior. For more details, see the [Avoiding DocumentFragment pitfalls](#avoiding_documentfragment_pitfalls) section below.
+If the element has any other value for `shadowrootmode`, or does not have the `shadowrootmode` attribute, the parser generates a {{domxref("HTMLTemplateElement")}}.
+Similarly, if there are multiple declarative shadow roots, only the first one is replaced by a {{domxref("ShadowRoot")}} — subsequent instances are parsed as {{domxref("HTMLTemplateElement")}} objects.
 
 ## Examples
 
@@ -370,8 +382,8 @@ Since `firstClone` is a `DocumentFragment`, only its children are added to `cont
 - {{HTMLElement("slot")}} HTML element
 - {{CSSXref(":host")}}, {{CSSXref(":host_function", ":host()")}}, and {{CSSXref(":host-context", ":host-context()")}} CSS pseudo-classes
 - {{CSSXref("::part")}} and {{CSSXref("::slotted")}} CSS pseudo-elements
-- [`ShadowRoot`]("/en-US/docs/Web/API/ShadowRoot) interface
+- [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) interface
 - [Using templates and slots](/en-US/docs/Web/API/Web_components/Using_templates_and_slots)
 - [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module
 - [Declarative Shadow DOM (with html)](/en-US/docs/Web/API/Web_components/Using_shadow_DOM#declaratively_with_html) in _Using Shadow DOM_
-- [Declarative shadow DOM](https://developer.chrome.com/docs/css-ui/declarative-shadow-dom) on developer.chrome.com (2023)
+- [Declarative shadow DOM](https://web.dev/articles/declarative-shadow-dom) on web.dev (2023)

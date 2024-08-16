@@ -26,7 +26,8 @@ Alternatively, the {{HTMLElement("meta")}} element can be used to configure a po
   content="default-src 'self'; img-src https://*; child-src 'none';" />
 ```
 
-> **Note:** Some features, such as sending CSP violation reports, are only available when using the HTTP headers.
+> [!NOTE]
+> Some features, such as sending CSP violation reports, are only available when using the HTTP headers.
 
 ## Threats
 
@@ -122,14 +123,13 @@ The server permits access only to documents being loaded specifically over HTTPS
 
 ### Example 5
 
-A website administrator of a web mail site wants to allow HTML in email, as well as images loaded from anywhere, but not JavaScript or other potentially dangerous content.
+A website administrator of a web mail site wants to allow HTML in email, as well as images loaded from anywhere, but JavaScript or other potentially dangerous content can only come from the same origin as the mail server.
 
 ```http
 Content-Security-Policy: default-src 'self' *.example.com; img-src *
 ```
 
-Note that this example doesn't specify a {{CSP("script-src")}}; with the example CSP,
-this site uses the setting specified by the {{CSP("default-src")}} directive, which means that scripts can be loaded only from the originating server.
+Note that this example doesn't specify a {{CSP("script-src")}}, so the {{CSP("default-src")}} directive will be used for JavaScript sources as a fallback.
 
 ## Testing your policy
 
@@ -167,14 +167,14 @@ Content-Security-Policy: default-src 'self'; report-to csp-endpoint
 You need to set up a server to receive reports at the given URL (`https://example.com/csp-reports` in this case) that accepts a JSON object sent with an `application/csp-report` {{HTTPHeader("Content-Type")}}.
 The server handling these requests can then store or process the incoming reports in a way that best suits your needs.
 
-If you want to have multiple endpoints that handle different types of reports, the `Reporting-Endpoints` header can contains a comma-separated list of endpoints:
+If you want to have multiple endpoints that handle different types of reports, the `Reporting-Endpoints` header can contain a comma-separated list of endpoints:
 
 ```http
 Reporting-Endpoints: csp-endpoint="https://example.com/csp-reports",
                      hpkp-endpoint="https://example.com/hpkp-reports"
 ```
 
-> **Warning:**
+> [!WARNING]
 > The `report-uri` directive is deprecated and it's recommended to send CSP reports using {{CSP("report-to")}} instead.
 > See the {{CSP("report-uri")}} documentation for details on how to specify both directives for backwards compatibility.
 

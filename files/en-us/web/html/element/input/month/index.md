@@ -92,7 +92,8 @@ This value must be a year-month pairing which is earlier than or equal to the on
 A Boolean attribute which, if present, means this field cannot be edited by the user.
 Its `value` can, however, still be changed from JavaScript code that directly sets the value of the {{domxref("HTMLInputElement.value")}} property.
 
-> **Note:** Because a read-only field cannot have a value, `required` does not have any effect on inputs with the `readonly` attribute also specified.
+> [!NOTE]
+> Because a read-only field cannot have a value, `required` does not have any effect on inputs with the `readonly` attribute also specified.
 
 ### step
 
@@ -101,7 +102,8 @@ Only values which are equal to the basis for stepping ([`min`](#min) if specifie
 
 A string value of `any` means that no stepping is implied, and any value is allowed (barring other constraints, such as [`min`](#min) and [`max`](#max)).
 
-> **Note:** When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring numbers in the positive direction when there are two equally close options.
+> [!NOTE]
+> When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring numbers in the positive direction when there are two equally close options.
 
 For `month` inputs, the value of `step` is given in months, with a scaling factor of 1 (since the underlying numeric value is also in months).
 The default value of `step` is 1 month.
@@ -226,7 +228,8 @@ input:valid + span::after {
 }
 ```
 
-> **Warning:** HTML form validation is _not_ a substitute for scripts that ensure that the entered data is in the proper format.
+> [!WARNING]
+> HTML form validation is _not_ a substitute for scripts that ensure that the entered data is in the proper format.
 > It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely.
 > It's also possible for someone to bypass your HTML entirely and submit the data directly to your server.
 > If your server-side code fails to validate the data it receives, disaster could strike when improperly-formatted data is submitted (or data which is too large, of the wrong type, and so forth).
@@ -452,7 +455,8 @@ function populateYears() {
 }
 ```
 
-> **Note:** Remember that some years have 53 weeks in them (see [Weeks per year](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year))!
+> [!NOTE]
+> Remember that some years have 53 weeks in them (see [Weeks per year](https://en.wikipedia.org/wiki/ISO_week_date#Weeks_per_year))!
 > You'll need to take this into consideration when developing production apps.
 
 ## Technical summary
@@ -478,13 +482,18 @@ function populateYears() {
       <td>
         <a href="/en-US/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
         <a href="/en-US/docs/Web/HTML/Element/input#list"><code>list</code></a>,
-        <a href="/en-US/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>, and
-        <a href="/en-US/docs/Web/HTML/Element/input#step"><code>step</code></a>.
+        <a href="/en-US/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#step"><code>step</code></a>
       </td>
     </tr>
     <tr>
       <td><strong>IDL attributes</strong></td>
-      <td><code>value</code></td>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Element/input#list"><code>list</code></a>,
+        <a href="/en-US/docs/Web/HTML/Element/input#value"><code>value</code></a>,
+        <code>valueAsDate</code>,
+        <code>valueAsNumber</code>
+      </td>
     </tr>
     <tr>
       <td><strong>DOM interface</strong></td>
@@ -500,7 +509,7 @@ function populateYears() {
     </tr>
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>
-      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"><code>no corresponding role</code></a></td>
+      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">no corresponding role</a></td>
     </tr>
   </tbody>
 </table>
@@ -517,6 +526,6 @@ function populateYears() {
 
 - The generic {{HTMLElement("input")}} element and the interface used to manipulate it, {{domxref("HTMLInputElement")}}
 - [Date and time formats used in HTML](/en-US/docs/Web/HTML/Date_and_time_formats)
-- [Date and Time picker tutorial](/en-US/docs/Learn/Forms/Basic_native_form_controls#date_and_time_picker)
+- [Date and Time picker tutorial](/en-US/docs/Learn/Forms/HTML5_input_types#date_and_time_pickers)
 - [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Element/input/datetime-local), [`<input type="date">`](/en-US/docs/Web/HTML/Element/input/date), [`<input type="time">`](/en-US/docs/Web/HTML/Element/input/time), and [`<input type="week">`](/en-US/docs/Web/HTML/Element/input/week)
 - [Compatibility of CSS properties](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

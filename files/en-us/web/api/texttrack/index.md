@@ -7,7 +7,12 @@ browser-compat: api.TextTrack
 
 {{APIRef("WebVTT")}}
 
-The `TextTrack` interface—part of the API for handling WebVTT (text tracks on media presentations)—describes and controls the text track associated with a particular {{HTMLElement("track")}} element.
+The **`TextTrack`** interface of the [WebVTT API](/en-US/docs/Web/API/WebVTT_API) represents a text track associated with a media element.
+
+An object of this type owns the list of {{domxref("VTTCue")}} objects that will be displayed over the video at various points.
+
+`TextTrack` objects can be added to a {{domxref("HTMLVideoElement")}} or {{domxref("HTMLAudioElement")}} element using the {{domxref("HTMLMediaElement.addTextTrack()")}} method, which has the same effect as adding text tracks declaratively using {{htmlelement("track")}} elements inside a {{htmlelement("video")}} or {{htmlelement("audio")}} element.
+The `TextTrack` objects are stored in a {{domxref("TextTrackList")}}, which can be retrieved using the {{domxref("HTMLMediaElement.textTracks")}} property.
 
 {{InheritanceDiagram}}
 
@@ -36,7 +41,8 @@ _This interface also inherits properties from {{domxref("EventTarget")}}._
 
 _This interface also inherits methods from {{domxref("EventTarget")}}._
 
-> **Note:** The {{domxref("TextTrackCue")}} interface is an abstract class used as the parent for other cue interfaces such as {{domxref("VTTCue")}}. Therefore, when adding or removing a cue you will be passing in one of the cue types that inherit from `TextTrackCue`.
+> [!NOTE]
+> The {{domxref("TextTrackCue")}} interface is an abstract class used as the parent for other cue interfaces such as {{domxref("VTTCue")}}. Therefore, when adding or removing a cue you will be passing in one of the cue types that inherit from `TextTrackCue`.
 
 - {{domxref("TextTrack.addCue()")}}
   - : Adds a cue (specified as a {{domxref("TextTrackCue")}} object) to the track's list of cues.

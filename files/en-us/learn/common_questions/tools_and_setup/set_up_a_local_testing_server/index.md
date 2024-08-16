@@ -56,11 +56,36 @@ For VSCode, you can check the following free extension:
 
 - `vscode-preview-server`. You can check it on its [home page](https://marketplace.visualstudio.com/items?itemName=yuichinukiyama.vscode-preview-server).
 
+### Using Node.js
+
+The Node.js [`http-server`](https://www.npmjs.com/package/http-server) module is an easiest way to host HTML files in any directory.
+
+To use the module:
+
+1. Run the following commands to check if Node.js is already installed:
+
+   ```bash
+   node -v
+   npm -v
+   npx -v
+   ```
+
+2. If Node.js is not installed, you need to install it. Follow the [download instructions](https://nodejs.org/en/download/) in the Node.js docs, then run the above commands again to check if the installation is successful.
+
+3. Let's assume the directory is `/path/to/project`. Run the following command to start the server:
+
+   ```bash
+   npx http-server /path/to/project -o -p 9999
+   ```
+
+   This hosts all files in the `/path/to/project` directory on `localhost:9999`. The option `-o` will open the `index.html` page in a web browser. If `index.html` doesn't exist, then the directory is displayed instead.
+
 ### Using Python
 
 Another way to achieve this is to use Python's `http.server` module.
 
-> **Note:** Older versions of Python (up to version 2.7) provided a similar module named `SimpleHTTPServer`. If you are using Python 2.x, you can follow this guide by replacing all uses of `http.server` with `SimpleHTTPServer`. However, we recommend you use the latest version of Python.
+> [!NOTE]
+> Older versions of Python (up to version 2.7) provided a similar module named `SimpleHTTPServer`. If you are using Python 2.x, you can follow this guide by replacing all uses of `http.server` with `SimpleHTTPServer`. However, we recommend you use the latest version of Python.
 
 To do this:
 
@@ -104,7 +129,8 @@ To do this:
 
 5. By default, this will run the contents of the directory on a local web server, on port 8000. You can go to this server by going to the URL `localhost:8000` in your web browser. Here you'll see the contents of the directory listed — click the HTML file you want to run.
 
-> **Note:** If you already have something running on port 8000, you can choose another port by running the server command followed by an alternative port number, e.g. `python3 -m http.server 7800` (Python 3.x) or `python -m SimpleHTTPServer 7800` (Python 2.x). You can then access your content at `localhost:7800`.
+> [!NOTE]
+> If you already have something running on port 8000, you can choose another port by running the server command followed by an alternative port number, e.g. `python3 -m http.server 7800` (Python 3.x) or `python -m SimpleHTTPServer 7800` (Python 2.x). You can then access your content at `localhost:7800`.
 
 ## Running server-side languages locally
 
@@ -113,7 +139,7 @@ The best approach for working with server side languages, such as Python, PHP, o
 If you're working with a web framework, usually the framework will provide its own development server.
 For example, the following languages/frameworks come with a development server:
 
-- Python web frameworks, such as [Django](/en-US/docs/Learn/Server-side/Django), [Flask](https://flask.palletsprojects.com/), and [Pyramid](https://trypyramid.com).
+- Python web frameworks, such as [Django](/en-US/docs/Learn/Server-side/Django), [Flask](https://flask.palletsprojects.com/), and [Pyramid](https://trypyramid.com/).
 - Node/JavaScript frameworks such as [Express Web Framework (Node.js/JavaScript)](/en-US/docs/Learn/Server-side/Express_Nodejs)
 - PHP has its own [built-in development server](https://www.php.net/manual/en/features.commandline.webserver.php):
 
@@ -122,5 +148,5 @@ For example, the following languages/frameworks come with a development server:
   php -S localhost:8000
   ```
 
-If you're not working directly with with a server-side framework or a programming language that provides a development server, Python's `http.server` module can also be used to test server-side code written in languages such as Python, PHP, JavaScript, and so on, by invoking server-side Common Gateway Interface (CGI) scripts.
+If you're not working directly with a server-side framework or a programming language that provides a development server, Python's `http.server` module can also be used to test server-side code written in languages such as Python, PHP, JavaScript, and so on, by invoking server-side Common Gateway Interface (CGI) scripts.
 For examples of how to use this feature see [Execute a Script Remotely Through the Common Gateway Interface (CGI)](https://realpython.com/python-http-server/#execute-a-script-remotely-through-the-common-gateway-interface-cgi) in _How to Launch an HTTP Server in One Line of Python Code_ on realpython.com.

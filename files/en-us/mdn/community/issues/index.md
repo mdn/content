@@ -28,7 +28,7 @@ Avoid doing the following:
 
 ## Guidelines for reporting an issue
 
-[Issues](https://docs.github.com/en/github/managing-your-work-on-github/about-issues) are used to track bugs. An issue must be a single actionable task or a collection of related actionable tasks and must have a clear outcome.
+[Issues](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues) are used to track bugs. An issue must be a single actionable task or a collection of related actionable tasks and must have a clear outcome.
 
 ### Before filing an issue
 
@@ -57,7 +57,7 @@ If you think you've found a bug with the content on MDN Web Docs or with the loo
     - Update the status of a task in the issue description instead of commenting on the issue. Use [task lists](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/about-task-lists) in the description if an issue has multiple parts. This helps others who may otherwise need to scroll through comments on the issue to determine the status of various tasks.
     - Comments in an issue should be limited to details or context that help resolve the issue.
 
-- If the information you provide in the issue is incomplete, then you might be contacted later during the [issue triaging process](#review_issue_to_determine_completeness_of_information).
+- If the information you provide in the issue is incomplete, then you might be contacted later during the [issue triaging process](#review_the_issue_for_completeness_of_information).
 
 - If you find yourself in one of the following situations, move the conversation to [MDN's discussion on GitHub](https://github.com/orgs/mdn/discussions):
 
@@ -100,7 +100,8 @@ These are the general steps for working on an issue:
 
 1. **Find an issue:** If you're looking to contribute, search for issues with [`good first issue`, `help wanted`](#set_other_labels) or [`p3`](#set_a_priority_label) label. Most repositories have issues with these labels. You are welcome to browse and pick an issue that is suitable for your skill set. Another useful place to look for issues to work on is the [MDN Contributors Task Board](https://github.com/orgs/mdn/projects/25). This project view lists open issues from multiple repositories. You can filter the list based on the topics (`Labels` column) you're interested in. See the description of some of the [labels](#set_other_labels) that get applied during the issue triage process.
 
-   > **Note:** An issue with the `needs triage` label indicates that the MDN Web Docs core team has not reviewed the issue yet, and you shouldn't begin work on it.
+   > [!NOTE]
+   > An issue with the `needs triage` label indicates that the MDN Web Docs core team has not reviewed the issue yet, and you shouldn't begin work on it.
 
 2. **Assign the issue to yourself:** After finding an issue you'd like to work on, make sure that the issue is not assigned to anybody else. Add a comment saying you would like to work on the issue, and if you are able to, [assign the issue to yourself](https://docs.github.com/en/issues/tracking-your-work-with-issues/assigning-issues-and-pull-requests-to-other-github-users#assigning-an-individual-issue-or-pull-request).
 
@@ -125,7 +126,8 @@ If the bug is small, such as a typo or a minor sentence improvement, or involves
 For all other type of bugs, begin by [opening the issue](#guidelines_for_reporting_an_issue). Add a comment about your intent to work on the issue and if possible, describe your proposed solution or steps to fix the issue.
 Wait for the issue to be triaged, so that the MDN Web Docs team can verify that the issue is legit and approves your proposed solution.
 
-> **Note:** If you open a pull request before the issue has been triaged, your time and effort might go waste if the linked issue is deemed invalid or the solution does not match the one expected by the MDN Web Docs team.
+> [!NOTE]
+> If you open a pull request before the issue has been triaged, your time and effort might go waste if the linked issue is deemed invalid or the solution does not match the one expected by the MDN Web Docs team.
 > After the issue is triaged, assign the issue to yourself.
 
 Using the [guidelines on working on an issue](#guidelines_for_working_on_an_issue), try to fix the problem by updating the appropriate source, such as:
@@ -223,4 +225,5 @@ Next, set the following labels as appropriate:
 - `document not written`: Set this label if the issue involves a necessary document that has not been written yet, usually because a link points to it.
 - `needs content update`: Set this label if the issue fix in another repository will need an equivalent fix in the `mdn/content` repository.
 
-  > **Note:** After the triage process is complete, remove the `needs triage` label.
+  > [!NOTE]
+  > After the triage process is complete, remove the `needs triage` label.

@@ -15,7 +15,8 @@ After a feature is enabled by default in a release build, it is no longer consid
 
 Experimental features can be enabled or disabled using the [Firefox Configuration Editor](https://support.mozilla.org/en-US/kb/about-config-editor-firefox) (enter `about:config` in the Firefox address bar) by modifying the associated _preference_ listed below.
 
-> **Note:** For editors - when adding features to these tables, please try to include a link to the relevant bug or bugs using `[Firefox bug <number>](https://bugzil.la/<number>)`.
+> [!NOTE]
+> For editors - when adding features to these tables, please try to include a link to the relevant bug or bugs using `[Firefox bug <number>](https://bugzil.la/<number>)`.
 
 ## HTML
 
@@ -94,7 +95,7 @@ HTML password input elements ([`<input type="password">`](/en-US/docs/Web/HTML/E
     </tr>
     <tr>
       <th>Preference name</th>
-      <td colspan="2"><code>layout.forms.input-type-show-password-button.enabled</code></td>
+      <td colspan="2"><code>layout.forms.reveal-password-button.enabled</code></td>
     </tr>
   </tbody>
 </table>
@@ -183,55 +184,6 @@ The {{cssxref("initial-letter")}} CSS property is part of the [CSS Inline Layout
     </tr>
   </tbody>
 </table>
-
-### content-visibility: auto value
-
-The [`content-visibility`](/en-US/docs/Web/CSS/content-visibility) CSS property value `auto` allows content to skip rendering if it is not [relevant to the user](/en-US/docs/Web/CSS/CSS_containment#relevant_to_the_user).
-(See [Firefox bug 1798485](https://bugzil.la/1798485) for more details.)
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>113</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>109</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>109</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>109</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>layout.css.content-visibility.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
-Note:
-
-- The related {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} event and associated {{domxref("ContentVisibilityAutoStateChangeEvent")}} interface were added in version 110, and are gated by the same preference.
-  These can be used by application code to monitor visibility changes and stop processes related to rendering the element when the user agent is [skipping its contents](/en-US/docs/Web/CSS/CSS_containment#skips_its_contents).
-  (See [Firefox bug 1791759](https://bugzil.la/1791759) for more details.)
-- The {{domxref("Element.checkVisibility()")}} `options` object parameter now takes the property `contentVisibilityAuto`, which can be set `true` to test if the element has `content-visibility: auto` set and is currently skipping rendering its content (the `options` object also takes new values `opacityProperty` and `visibilityProperty` but these are not related to `content-visibility`).
-  (See [Firefox bug 1859852](https://bugzil.la/1859852) for more details).
 
 ### `from` keyword for relative colors
 
@@ -355,48 +307,6 @@ The {{cssxref("backdrop-filter")}} property applies filter effects to the area b
   </tbody>
 </table>
 
-### Masonry grid layout
-
-Adds support for a [masonry-style layout](/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout) based on grid layout where one axis has a masonry layout and the other has a normal grid layout. This allows developers to easily create gallery style layouts like on Pinterest. See [Firefox bug 1607954](https://bugzil.la/1607954) for more details.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>77</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>77</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>77</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>77</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2">
-        <code>layout.css.grid-template-masonry-value.enabled</code>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ### fit-content() function
 
 The {{cssxref("fit-content_function", "fit-content()")}} function as it applies to {{cssxref("width")}} and other sizing properties. This function is already well-supported for CSS Grid Layout track sizing. (See [Firefox bug 1312588](https://bugzil.la/1312588) for more details.)
@@ -485,6 +395,46 @@ For more information, see [Firefox bug 1807685](https://bugzil.la/1807685), [Fir
   </tbody>
 </table>
 
+### @scope at-rule
+
+The [@scope](/en-US/docs/Web/CSS/@scope) [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) allows you to select specific child elements without having to overly increase the specificity of CSS selectors ([Firefox bug 1886441](https://bugzil.la/1886441)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>128</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>128</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>128</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>128</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.at-scope.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ### @font-face src feature checking
 
 The `@font-face` [`src` descriptor](/en-US/docs/Web/CSS/@font-face/src) now supports the `tech()` function, allowing fallback of whether a font resource is downloaded based on whether the user-agent supports a particular font feature or technology.
@@ -526,7 +476,7 @@ See [Firefox bug 1715546](https://bugzil.la/1715546) for more details.
   </tbody>
 </table>
 
-### font-variant-emoji
+### font-variant-emoji property
 
 The CSS [`font-variant-emoji`](/en-US/docs/Web/CSS/font-variant-emoji) property allows you to set a default presentation style for displaying emojis.
 See ([Firefox bug 1461589](https://bugzil.la/1461589)) for more details.
@@ -567,7 +517,7 @@ See ([Firefox bug 1461589](https://bugzil.la/1461589)) for more details.
   </tbody>
 </table>
 
-### page-orientation
+### page-orientation descriptor
 
 The **`page-orientation`** [CSS](/en-US/docs/Web/CSS) descriptor for the {{cssxref("@page")}} at-rule controls the rotation of a printed page. It handles the flow of content across pages when the orientation of a page is changed. This behavior differs from the [`size`](/en-US/docs/Web/CSS/@page/size) descriptor in that a user can define the direction in which to rotate the page.
 See ([Firefox bug 1673987](https://bugzil.la/1673987)) for more details.
@@ -964,7 +914,8 @@ Specifically, the disabled properties are:
 
 The `<h1>` heading doesn't decrease in font size now when nested within [sectioning elements](/en-US/docs/Web/HTML/Content_categories#sectioning_content) `<article>`, `<aside>`, `<nav>`, and `<section>`. The UA styles for `<h1>` nested within sectioning elements are no longer relevant since the outline algorithm [has been removed](https://github.com/whatwg/html/pull/7829) from the HTML specification. ([Firefox bug 1883896](https://bugzil.la/1883896)).
 
-> **Note:** The preference for this feature works in reverse: it's set to `false` in the Nightly build, which removes the UA styling for headings nested in sectioning elements. It's set to `true` in all other channels, which retains the existing UA styling for the nested headings.
+> [!NOTE]
+> The preference for this feature works in reverse: it's set to `false` in the Nightly build, which removes the UA styling for headings nested in sectioning elements. It's set to `true` in all other channels, which retains the existing UA styling for the nested headings.
 
 <table>
   <thead>
@@ -1006,7 +957,7 @@ The `<h1>` heading doesn't decrease in font size now when nested within [section
 
 ### `shape()` function
 
-The CSS [`shape()`](/en-US/docs/Web/CSS/basic-shape/shape) function is a [`<basic-shape>`](/en-US/docs/Web/CSS/basic-shape) data type that enables you to define a shape in the {{cssxref("clip-path")}} and {{cssxref("offset-path")}} properties using one or more "shape commands". These commands are very similar to the [SVG path commands](/en-US/docs/Web/SVG/Attribute/d#path_commands). The `shape()` function is similar in some respects to the `{{cssxref("path","path()")}}` function, but unlike `path()`, which uses the [SVG path](/en-US/docs/Web/SVG/Element/path) syntax, `shape()` uses standard CSS syntax. This enables you to easily create and edit shapes and also allows the use of CSS math functions.
+The CSS [`shape()`](/en-US/docs/Web/CSS/basic-shape/shape) function is a [`<basic-shape>`](/en-US/docs/Web/CSS/basic-shape) data type that enables you to define a shape in the {{cssxref("clip-path")}} and {{cssxref("offset-path")}} properties using one or more "shape commands". These commands are very similar to the [SVG path commands](/en-US/docs/Web/SVG/Attribute/d#path_commands). The `shape()` function is similar in some respects to the `{{cssxref("basic-shape/path","path()")}}` function, but unlike `path()`, which uses the [SVG path](/en-US/docs/Web/SVG/Element/path) syntax, `shape()` uses standard CSS syntax. This enables you to easily create and edit shapes and also allows the use of CSS math functions.
 For more details, see [Firefox bug 1823463](https://bugzil.la/1823463) for the `shape()` function support in `clip-path`, [Firefox bug 1884424](https://bugzil.la/1884424) for the function's support in `offset-path`, and [Firefox bug 1884425](https://bugzil.la/1884425) for its interpolation support.
 
 <table>
@@ -1045,12 +996,9 @@ For more details, see [Firefox bug 1823463](https://bugzil.la/1823463) for the `
   </tbody>
 </table>
 
-## SVG
+### `@starting-style` at-rule
 
-### transition-behavior property
-
-The {{cssxref("transition-behavior")}} property is enabled by default in the Nightly release or by setting the `layout.css.transition-behavior.enabled` preference to `true`.
-Authors can use this property to control whether to apply CSS transitions to properties with a [discrete animation type](/en-US/docs/Web/CSS/CSS_animated_properties#discrete) ([Firefox bug 1882408](https://bugzil.la/1882408), [Firefox bug 1805727](https://bugzil.la/1805727)).
+The CSS [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) at-rule allows you to set the starting styles of an element for a CSS transition, when the element has no default initial style. This is particularly useful for elements that are hidden from view on the first paint such as [`popover`](/en-US/docs/Web/HTML/Global_attributes/popover) or ['dialog'](/en-US/docs/Web/HTML/Element/dialog). Does not yet support animating from `display: none`. For more details, see [Firefox bug 1834876](https://bugzil.la/1834876) and [Firefox bug 1834877](https://bugzil.la/1834877).
 
 <table>
   <thead>
@@ -1063,32 +1011,112 @@ Authors can use this property to control whether to apply CSS transitions to pro
   <tbody>
     <tr>
       <th>Nightly</th>
-      <td>125</td>
+      <td>127</td>
       <td>Yes</td>
     </tr>
     <tr>
       <th>Developer Edition</th>
-      <td>125</td>
+      <td>127</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Beta</th>
-      <td>125</td>
+      <td>127</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Release</th>
-      <td>125</td>
+      <td>127</td>
       <td>No</td>
     </tr>
     <tr>
       <th>Preference name</th>
-      <td colspan="2">
-      <code>layout.css.transition-behavior.enabled</code>
-    </td>
+      <td colspan="2"><code>layout.css.starting-style-at-rules.enabled</code></td>
     </tr>
   </tbody>
 </table>
+
+### Symmetrical `letter-spacing`
+
+The CSS {{cssxref("letter-spacing")}} property now splits the specified letter spacing evenly on both sides of each character. This is unlike the current behavior where spacing is added primarily to one side. This approach can improve text spacing, especially in mixed-directional text [Firefox bug 1891446](https://bugzil.la/1891446).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>128</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>127</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>127</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>127</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.letter-spacing.model</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### `calc()` color channel support in relative colors
+
+The CSS [`calc()`](/en-US/docs/Web/CSS/calc) function can now parse color channels in [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors#using_math_functions), allowing you to correctly calculate changes to colors in different color spaces or while using different functional notations [Firefox bug 1889561](https://bugzil.la/1889561).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>127</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>127</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>127</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>127</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>layout.css.relative-color-syntax.enabled</code></td>
+    </tr>
+  </tbody>
+</table>
+
+## SVG
 
 ### SVGPathSeg APIs
 
@@ -1133,92 +1161,6 @@ This includes: `SVGPathSegList`, [SVGPathElement.getPathSegAtLength()](/en-US/do
 </table>
 
 ## JavaScript
-
-### SharedArrayBuffer is growable
-
-The {{jsxref("SharedArrayBuffer")}} is now growable using the {{jsxref("SharedArrayBuffer.prototype.grow()")}} method.
-The maximum allowed size of the buffer is specified using the `options.maxByteLength` parameter to the [`SharedArrayBuffer()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffer#maxbytelength).
-The {{jsxref("SharedArrayBuffer.prototype.growable")}} and {{jsxref("SharedArrayBuffer.prototype.maxByteLength")}} properties indicate whether the buffer can be grow, and its maximum allowed size, respectively.
-([Firefox bug 1842773](https://bugzil.la/1842773)).
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>124</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>124</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>124</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>124</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>javascript.options.experimental.sharedarraybuffer_growable</code></td>
-    </tr>
-  </tbody>
-</table>
-
-### ArrayBuffer is resizable
-
-The {{jsxref("ArrayBuffer")}} can now be resized using the {{jsxref("ArrayBuffer.prototype.resize()")}} method.
-The maximum allowed size of the buffer is specified using the `options.maxByteLength` parameter to the [`ArrayBuffer()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer#maxbytelength).
-The {{jsxref("ArrayBuffer.prototype.resizable")}} and {{jsxref("ArrayBuffer.prototype.maxByteLength")}} properties indicate whether the buffer can be resized, and its maximum allowed size, respectively.
-([Firefox bug 1842773](https://bugzil.la/1842773).)
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>124</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>124</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>124</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>124</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>javascript.options.experimental.arraybuffer_resizable</code></td>
-    </tr>
-  </tbody>
-</table>
 
 ## APIs
 
@@ -1442,7 +1384,7 @@ Note that, as shown below, the feature is only available on Nightly builds (irre
   </tbody>
 </table>
 
-#### OpenFont COLRv1 fonts
+### OpenFont COLRv1 fonts
 
 This feature provides support for the [OpenFont COLRv1 font specification](https://docs.microsoft.com/en-us/typography/opentype/spec/).
 This enables compression-friendly color vector fonts with gradients, compositing and blending to be loaded using the CSS [`@font-face`](/en-US/docs/Web/CSS/@font-face) rule, or the [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API).
@@ -1484,49 +1426,7 @@ See [Firefox bug 1740530](https://bugzil.la/1740530) for more details.
   </tbody>
 </table>
 
-#### CSS Properties and Values API
-
-The [CSS Properties and Values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API) allows developers to register custom CSS properties through JavaScript via [`registerProperty()`](/en-US/docs/Web/API/CSS/registerProperty_static) or in CSS using the [`@property`](/en-US/docs/Web/CSS/@property) at-rule.
-Registering properties using these two methods allows for type checking, default values, and properties that do or do not inherit values from their parent elements.
-See [Firefox bug 1840480](https://bugzil.la/1840480) for more details.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>116</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>116</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>116</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>116</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>layout.css.property-and-value-api.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
-#### CSS Custom Highlight API
+### CSS Custom Highlight API
 
 The [CSS Custom Highlight API](/en-US/docs/Web/API/CSS_Custom_Highlight_API) provides a mechanism for styling arbitrary text ranges in a document (generalizing the behavior of other highlight pseudo-elements such as {{cssxref('::selection')}}, {{cssxref('::spelling-error')}}, {{cssxref('::grammar-error')}}, and {{cssxref('::target-text')}}).
 The ranges are defined in JavaScript using [`Range`](/en-US/docs/Web/API/Range) instances grouped in a [`Highlight`](/en-US/docs/Web/API/Highlight), and then registered with a name using [`HighlightRegistry`](/en-US/docs/Web/API/HighlightRegistry).
@@ -1779,47 +1679,6 @@ Enabling this feature adds the {{domxref("HTMLMediaElement.audioTracks")}} and {
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>media.track.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
-#### HTML Sanitizer API
-
-The {{domxref('HTML Sanitizer API')}} allow developers to take untrusted strings of HTML and sanitize them for safe insertion into a document's DOM. Default elements within each configuration property (those to be sanitized) are still under consideration.
-Due to this the config parameter has not been implemented (see {{domxref('Sanitizer.sanitizer()', 'the constructor')}} for more information). See [Firefox bug 1673309](https://bugzil.la/1673309) for more details.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>84</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>84</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>84</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>84</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.security.sanitizer.enabled</code></td>
     </tr>
   </tbody>
 </table>
@@ -2213,50 +2072,6 @@ These two preferences add a "Not secure" text label in the address bar next to t
   </tbody>
 </table>
 
-### Upgrading mixed display content
-
-When enabled, this preference causes Firefox to automatically upgrade requests for media content from HTTP to HTTPS on secure pages. The intent is to prevent mixed-content conditions in which some content is loaded securely while other content is insecure. If the upgrade fails (because the media's host doesn't support HTTPS), the media is not loaded. (See [Firefox bug 1435733](https://bugzil.la/1435733) for more details.)
-
-This also changes the console warning; if the upgrade succeeds, the message indicates that the request was upgraded, instead of showing a warning.
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version added</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>84</td>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>60</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>60</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>60</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2">
-        <code>security.mixed_content.upgrade_display_content</code>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
 ### Permissions Policy / Feature policy
 
 [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy) allows web developers to selectively enable, disable, and modify the behavior of certain features and APIs in the browser. It is similar to CSP but controls features instead of security behavior.
@@ -2306,7 +2121,8 @@ Note that supported policies can be set through the [`allow`](/en-US/docs/Web/HT
 
 The [`Clear-Site-Data`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data) HTTP response header `cache` directive clears the browser cache for the requesting website.
 
-> **Note:** This was originally enabled by default, but put behind a preference in version 94 ([Firefox bug 1729291](https://bugzil.la/1729291)).
+> [!NOTE]
+> This was originally enabled by default, but put behind a preference in version 94 ([Firefox bug 1729291](https://bugzil.la/1729291)).
 
 <table>
   <thead>
@@ -2346,7 +2162,133 @@ The [`Clear-Site-Data`](/en-US/docs/Web/HTTP/Headers/Clear-Site-Data) HTTP respo
   </tbody>
 </table>
 
+### Privacy Preserving Attribution API (PPA)
+
+[PPA API](https://support.mozilla.org/kb/privacy-preserving-attribution) provides an alternative to user tracking for ad attribution using the new `navigator.privateAttribution` object with `saveImpression()` and `measureConversion()` methods. Read more about PPA [in the explainer](https://github.com/mozilla/explainers/tree/main/ppa-experiment). This experiment can be enabled for websites via [origin trial](https://wiki.mozilla.org/Origin_Trials) or in the browser by setting the preference to `1`. ([Firefox bug 1900929](https://bugzil.la/1900929)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>128</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>128</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>128</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>128</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2">
+        <code>dom.origin-trials.private-attribution.state</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 ## HTTP
+
+### Cookies Having Independent Partitioned State (CHIPS)
+
+[CHIPS](/en-US/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies), or "partitioned cookies", allow developers to opt a cookie into partitioned storage, with separate cookie storage for each top-level site. Partitioned cookies can only be read within the same top-level site they were set on and its subdomains. This blocks cross-site tracking, while still enabling legitimate uses of third-party cookies such as persisting state of embedded maps or chat widgets across different subdomains of a site. Partitioned cookies are set using the [`partitioned`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#partitioned) directive of the `Set-Cookie` HTTP header. ([Firefox bug 1898253](https://bugzil.la/1898253)).
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>128</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>128</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>128</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>128</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2">
+        <code>network.cookie.CHIPS.enabled</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+### Accept header with MIME type image/jxl
+
+The HTTP [`Accept`](/en-US/docs/Web/HTTP/Headers/Accept) header in [default requests and image requests](/en-US/docs/Web/HTTP/Content_negotiation/List_of_default_Accept_values) can be configured via a preference to indicate support for the `image/jxl` MIME type.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>128</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>128</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>128</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>128</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2">
+        <code>image.jxl.enabled</code>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ### SameSite=Lax by default
 

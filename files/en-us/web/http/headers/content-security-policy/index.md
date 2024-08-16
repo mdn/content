@@ -48,7 +48,8 @@ where `<policy-directive>` consists of:
   - : Defines the valid sources for [web workers](/en-US/docs/Web/API/Web_Workers_API) and nested browsing contexts loaded using elements such as
     {{HTMLElement("frame")}} and {{HTMLElement("iframe")}}.
 
-    > **Warning:** Instead of **`child-src`**,
+    > [!WARNING]
+    > Instead of **`child-src`**,
     > if you want to regulate nested browsing contexts and workers,
     > you should use the {{CSP("frame-src")}} and {{CSP("worker-src")}} directives, respectively.
 
@@ -68,13 +69,14 @@ where `<policy-directive>` consists of:
 - {{CSP("manifest-src")}}
   - : Specifies valid sources of application manifest files.
 - {{CSP("media-src")}}
-  - : Specifies valid sources for loading media using the {{HTMLElement("audio")}} ,
+  - : Specifies valid sources for loading media using the {{HTMLElement("audio")}},
     {{HTMLElement("video")}} and {{HTMLElement("track")}} elements.
 - {{CSP("object-src")}}
 
   - : Specifies valid sources for the {{HTMLElement("object")}} and {{HTMLElement("embed")}} elements.
 
-    > **Note:** Elements controlled by `object-src` are perhaps
+    > [!NOTE]
+    > Elements controlled by `object-src` are perhaps
     > coincidentally considered legacy HTML elements and are not receiving new standardized
     > features (such as the security attributes `sandbox` or `allow`
     > for `<iframe>`). Therefore it is **recommended** to
@@ -135,7 +137,8 @@ Reporting directives control the reporting process of CSP violations. See also t
     These violation reports consist of {{Glossary("JSON")}} documents sent via an HTTP
     `POST` request to the specified URI.
 
-    > **Warning:** Though the {{CSP("report-to")}} directive is intended
+    > [!WARNING]
+    > Though the {{CSP("report-to")}} directive is intended
     > to replace the deprecated **`report-uri`** directive,
     > {{CSP("report-to")}} is not supported in most browsers yet.
     > So for compatibility with current browsers
@@ -150,7 +153,8 @@ Reporting directives control the reporting process of CSP violations. See also t
     > the **`report-uri`** directive will be ignored.
 
 - {{CSP("report-to")}}
-  - : Fires a `SecurityPolicyViolationEvent`.
+  - : Provides the browser with a token identifying the reporting endpoint or group of endpoints for sending CSP violation information.
+    The endpoints that the token represents may be provided through other HTTP headers, such as {{HTTPHeader("Reporting-Endpoints")}}.
 
 ### Other directives
 
@@ -170,12 +174,6 @@ Reporting directives control the reporting process of CSP violations. See also t
 
 - {{CSP("block-all-mixed-content")}} {{deprecated_inline}}
   - : Prevents loading any assets using HTTP when the page is loaded using HTTPS.
-- {{CSP("plugin-types")}} {{deprecated_inline}} {{Non-standard_Inline}}
-  - : Restricts the set of plugins that can be embedded into a document by limiting the
-    types of resources which can be loaded.
-- {{CSP("referrer")}} {{deprecated_inline}} {{non-standard_inline}}
-  - : Used to specify information in the [Referer](/en-US/docs/Web/HTTP/Headers/Referer) (sic) header for links away
-    from a page. Use the {{HTTPHeader("Referrer-Policy")}} header instead.
 
 ## Values
 
@@ -290,7 +288,7 @@ would have occurred:
 Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violation-report-endpoint/
 ```
 
-See [Mozilla Web Security Guidelines](https://infosec.mozilla.org/guidelines/web_security#examples-3) for more examples.
+See [Content Security Policy (CSP) implementation](/en-US/docs/Web/Security/Practical_implementation_guides/CSP) for more examples.
 
 ## Specifications
 

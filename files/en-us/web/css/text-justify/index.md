@@ -7,7 +7,7 @@ browser-compat: css.properties.text-justify
 
 {{CSSRef}}
 
-The **`text-justify`** CSS property sets what type of justification should be applied to text when {{cssxref("text-align")}}`: justify;` is set on an element.
+The **`text-justify`** [CSS](/en-US/docs/Web/CSS) property sets what type of justification should be applied to text when {{cssxref("text-align", "text-align: justify;")}} is set on an element.
 
 ## Syntax
 

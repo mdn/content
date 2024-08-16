@@ -63,7 +63,8 @@ content mypackage location/ contentaccessible=yes
 
 This shouldn't be something you need to do very often, but it's available for those rare cases in which it's needed. Note that it's possible that Firefox may alert the user that your extension uses the `contentaccessible` flag in this way, as it does constitute a potential security risk.
 
-> **Note:** Because Firefox 2 doesn't understand the `contentaccessible` flag (it will ignore the entire line containing the flag), if you want your add-on to be compatible with both Firefox 2 and Firefox 3, you should do something like this:
+> [!NOTE]
+> Because Firefox 2 doesn't understand the `contentaccessible` flag (it will ignore the entire line containing the flag), if you want your add-on to be compatible with both Firefox 2 and Firefox 3, you should do something like this:
 >
 > ```bash
 > content mypackage location/

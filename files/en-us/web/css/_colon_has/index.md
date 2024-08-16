@@ -28,7 +28,7 @@ The `:has()` pseudo-class takes on the [specificity](/en-US/docs/Web/CSS/Specifi
 }
 ```
 
-If the `:has()` pseudo-class itself is not supported in a browser, the entire selector block will fail unless `:has()` is in a forgiving selector list, such as in [`:is()`](/en-US/docs/Web/CSS/:is) and [`:where()`](/en-US/docs/Web/CSS/:where)).
+If the `:has()` pseudo-class itself is not supported in a browser, the entire selector block will fail unless `:has()` is in a forgiving selector list, such as in [`:is()`](/en-US/docs/Web/CSS/:is) and [`:where()`](/en-US/docs/Web/CSS/:where).
 
 The `:has()` pseudo-class cannot be nested within another `:has()`. This is because many pseudo-elements exist conditionally based on the styling of their ancestors and allowing these to be queried by `:has()` can introduce cyclic querying.
 
@@ -102,7 +102,7 @@ h1:has(+ h2) {
 
 {{EmbedLiveSample('With_the_sibling_combinator', 600, 150)}}
 
-This example shows two similar texts side-by-side for comparison – the left one with an `H1` heading followed by a paragraph and the right one with an `H1` heading followed by an `H2` heading and then a paragraph. In the example on the right, `:has()` helps to select the `H1` element that is immediately followed by an `H2` element (indicated by the next-sibling combinator[`+`](/en-US/docs/Web/CSS/Next-sibling_combinator)) and the CSS rule reduces the spacing after such an `H1` element. Without the `:has()` pseudo-class, you cannot use CSS selectors to select a preceding sibling of a different type or a parent element.
+This example shows two similar texts side-by-side for comparison – the left one with an `H1` heading followed by a paragraph and the right one with an `H1` heading followed by an `H2` heading and then a paragraph. In the example on the right, `:has()` helps to select the `H1` element that is immediately followed by an `H2` element (indicated by the next-sibling combinator [`+`](/en-US/docs/Web/CSS/Next-sibling_combinator)) and the CSS rule reduces the spacing after such an `H1` element. Without the `:has()` pseudo-class, you cannot use CSS selectors to select a preceding sibling of a different type or a parent element.
 
 ### With the :is() pseudo-class
 
@@ -233,4 +233,4 @@ Similarly, for the negative lookahead case, in the regular expression `abc(?!xyz
 - [CSS selector structure](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure)
 - [Selector list](/en-US/docs/Web/CSS/Selector_list)
 - [CSS selector module](/en-US/docs/Web/CSS/CSS_selectors)
-- [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+- [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)

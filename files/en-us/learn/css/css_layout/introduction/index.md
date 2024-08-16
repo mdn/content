@@ -67,13 +67,14 @@ Note how the HTML is displayed in the exact order in which it appears in the sou
 
 The elements that appear one below the other are described as **block** elements, in contrast to **inline** elements, which appear beside one another like the individual words in a paragraph.
 
-> **Note:** The direction in which block element contents are laid out is described as the Block Direction. The Block Direction runs vertically in a language such as English, which has a horizontal writing mode. It would run horizontally in any language with a Vertical Writing Mode, such as Japanese. The corresponding Inline Direction is the direction in which inline contents (such as a sentence) would run.
+> [!NOTE]
+> The direction in which block element contents are laid out is described as the Block Direction. The Block Direction runs vertically in a language such as English, which has a horizontal writing mode. It would run horizontally in any language with a Vertical Writing Mode, such as Japanese. The corresponding Inline Direction is the direction in which inline contents (such as a sentence) would run.
 
 For many of the elements on your page, the normal flow will create exactly the layout you need. However, for more complex layouts you will need to alter this default behavior using some of the tools available to you in CSS. Starting with a well-structured HTML document is very important because you can then work with the way things are laid out by default rather than fighting against it.
 
 The methods that can change how elements are laid out in CSS are:
 
-- **The {{cssxref("display")}} property** — Standard values such as `block`, `inline` or `inline-block` can change how elements behave in normal flow, for example, by making a block-level element behave like an inline-level element (see [Types of CSS boxes](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#block_and_inline_boxes) for more information). We also have entire layout methods that are enabled via specific `display` values, for example, [CSS Grid](/en-US/docs/Learn/CSS/CSS_layout/Grids) and [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox), which alter how child elements are laid out inside their parents.
+- **The {{cssxref("display")}} property** — Standard values such as `block`, `inline` or `inline-block` can change how elements behave in normal flow, for example, by making a block-level element behave like an inline-level element (see [Types of CSS boxes](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#block_and_inline_boxes) for more information). We also have entire layout methods that are enabled via specific `display` values, for example, [CSS grid](/en-US/docs/Learn/CSS/CSS_layout/Grids) and [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox), which alter how child elements are laid out inside their parents.
 - **Floats** — Applying a {{cssxref("float")}} value such as `left` can cause block-level elements to wrap along one side of an element, like the way images sometimes have text floating around them in magazine layouts.
 - **The {{cssxref("position")}} property** — Allows you to precisely control the placement of boxes inside other boxes. `static` positioning is the default in normal flow, but you can cause elements to be laid out differently using other values, for example, as fixed to the top of the browser viewport.
 - **Table layout** — Features designed for styling parts of an HTML table can be used on non-table elements using `display: table` and associated properties.
@@ -161,7 +162,8 @@ As a simple example, we can add the {{cssxref("flex")}} property to all of our c
 
 {{ EmbedLiveSample('Setting_the_flex_property', '300', '200') }}
 
-> **Note:** This has been a very short introduction to what is possible in Flexbox. To find out more, see our [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox) article.
+> [!NOTE]
+> This has been a very short introduction to what is possible in flexbox. To find out more, see our [Flexbox](/en-US/docs/Learn/CSS/CSS_layout/Flexbox) article.
 
 ## Grid Layout
 
@@ -169,7 +171,7 @@ While flexbox is designed for one-dimensional layout, Grid Layout is designed fo
 
 ### Setting display: grid
 
-Similar to flexbox, we enable Grid Layout with its specific display value — `display: grid`. The below example uses similar markup to the flex example, with a container and some child elements. In addition to using `display: grid`, we also define some row and column _tracks_ for the parent using the {{cssxref("grid-template-rows")}} and {{cssxref("grid-template-columns")}} properties respectively. We've defined three columns, each of `1fr`, as well as two rows of `100px`. We don't need to put any rules on the child elements; they're automatically placed into the cells our grid's created.
+Similar to flexbox, we enable grid layout with its specific display value — `display: grid`. The below example uses similar markup to the flex example, with a container and some child elements. In addition to using `display: grid`, we also define some row and column _tracks_ for the parent using the {{cssxref("grid-template-rows")}} and {{cssxref("grid-template-columns")}} properties respectively. We've defined three columns, each of `1fr`, as well as two rows of `100px`. We don't need to put any rules on the child elements; they're automatically placed into the cells our grid's created.
 
 ```css hidden
 * {
@@ -255,7 +257,8 @@ Once you have a grid, you can explicitly place your items on it, rather than rel
 
 {{ EmbedLiveSample('Placing_items_on_the_grid', '300', '330') }}
 
-> **Note:** These two examples reveal just a small sample of the power of Grid layout. To learn more, see our [Grid Layout](/en-US/docs/Learn/CSS/CSS_layout/Grids) article.
+> [!NOTE]
+> These two examples reveal just a small sample of the power of grid layout. To learn more, see our [Grid Layout](/en-US/docs/Learn/CSS/CSS_layout/Grids) article.
 
 The rest of this guide covers other layout methods that are less important for the main layout of your page, but still help to achieve specific tasks. By understanding the nature of each layout task you will soon find that when you look at a particular component of your design, the type of layout most suitable for it will often be clear.
 
@@ -321,7 +324,8 @@ p {
 
 {{ EmbedLiveSample('Floats', '100%', 600) }}
 
-> **Note:** Floats are fully explained in our lesson on the [float and clear](/en-US/docs/Learn/CSS/CSS_layout/Floats) properties. Prior to techniques such as Flexbox and Grid Layout, floats were used as a method of creating column layouts. You may still come across these methods on the web; we will cover these in the lesson on [legacy layout methods](/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods).
+> [!NOTE]
+> Floats are fully explained in our lesson on the [float and clear](/en-US/docs/Learn/CSS/CSS_layout/Floats) properties. Prior to techniques such as flexbox and grid layout, floats were used as a method of creating column layouts. You may still come across these methods on the web; we will cover these in the lesson on [legacy layout methods](/en-US/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods).
 
 ## Positioning techniques
 
@@ -595,7 +599,8 @@ body {
 
 {{ EmbedLiveSample('Sticky_positioning', '100%', 200) }}
 
-> **Note:** To find out more about positioning, see our [Positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning) article.
+> [!NOTE]
+> To find out more about positioning, see our [Positioning](/en-US/docs/Learn/CSS/CSS_layout/Positioning) article.
 
 ## Table layout
 
@@ -672,7 +677,8 @@ This gives us the following result:
 
 You can also see this example live at [css-tables-example.html](https://mdn.github.io/learning-area/css/styling-boxes/box-model-recap/css-tables-example.html) (see the [source code](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/box-model-recap/css-tables-example.html) too.)
 
-> **Note:** Table layout, unlike the other topics of this page, won't be further covered in this module. Use [grid layout](#grid_layout) instead.
+> [!NOTE]
+> Table layout, unlike the other topics of this page, won't be further covered in this module. Use [grid layout](#grid_layout) instead.
 
 ## Multi-column layout
 

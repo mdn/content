@@ -34,7 +34,7 @@ customElements.define(
   "my-paragraph",
   class extends HTMLElement {
     constructor() {
-      let templateContent = document.getElementById("my-paragraph").content;
+      let templateContent = document.getElementById("custom-paragraph").content;
       super() // returns element this scope
         .attachShadow({ mode: "open" }) // sets AND returns this.shadowRoot
         .append(templateContent.cloneNode(true));

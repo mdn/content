@@ -33,7 +33,8 @@ Take your webpages to the next level by harnessing JavaScript. Learn in this art
 
 {{Glossary("JavaScript")}} is a programming language mostly used client-side to make webpages interactive. You _can_ create amazing webpages without JavaScript, but JavaScript opens up a whole new level of possibilities.
 
-> **Note:** In this article we're going over the HTML code you need to make JavaScript take effect. If you want to learn JavaScript itself, you can start with our [JavaScript basics](/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics) article. If you already know something about JavaScript or if you have a background with other programming languages, we suggest you jump directly into our [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide).
+> [!NOTE]
+> In this article we're going over the HTML code you need to make JavaScript take effect. If you want to learn JavaScript itself, you can start with our [JavaScript basics](/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics) article. If you already know something about JavaScript or if you have a background with other programming languages, we suggest you jump directly into our [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide).
 
 ## How to trigger JavaScript from HTML
 

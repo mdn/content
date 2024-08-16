@@ -103,6 +103,10 @@ Include a table of the events fired on this type of element, if any.
 | event 2    | Explain briefly when it is fired |
 | etc.       |                                  |
 
+## Accessibility
+
+Warn of any potential accessibility concerns that exist with using this element, and how to work around them. Remove this section if there are none to list.
+
 ## Examples
 
 Note that we use the plural "Examples" even if the page only contains one example.
@@ -113,7 +117,8 @@ Each example must have an H3 heading (`###`) naming the example. The heading sho
 
 See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples) for more information.
 
-> **Note:** Sometimes you will want to link to examples given on another page.
+> [!NOTE]
+> Sometimes you will want to link to examples given on another page.
 >
 > **Scenario 1:** If you have some examples on this page and some more examples on another page:
 >
@@ -138,12 +143,8 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 > ```md
 > ## Examples
 >
-> For examples of this API, see [the page on fetch()](https://example.org).
+> For examples of this API, see [the page on fetch()](https://example.org/).
 > ```
-
-## Accessibility concerns
-
-Optionally, warn of any potential accessibility concerns that exist with using this element, and how to work around them. Remove this section if there are none to list.
 
 ## Technical summary
 

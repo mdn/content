@@ -12,7 +12,8 @@ The **`imageSmoothingQuality`** property of the
 {{domxref("CanvasRenderingContext2D")}} interface, part of the [Canvas API](/en-US/docs/Web/API/Canvas_API), lets you set the quality of
 image smoothing.
 
-> **Note:** For this property to have an effect,
+> [!NOTE]
+> For this property to have an effect,
 > {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}}
 > must be `true`.
 

@@ -16,6 +16,8 @@ default state, which is usually `prompt`.
 This method is called on the global {{domxref("Permissions")}} object
 {{domxref("navigator.permissions")}}.
 
+This method is removed from the main permissions API specification because its use case is unclear. Permissions are managed by the browser and the current permission model does not involve the site developer being able to imperatively request or revoke permissions. Browsers have shipped this API behind preferences but it's unlikely to reach the standards track. For more context, see the [original discussion to remove `permissions.revoke()`](https://github.com/w3c/permissions/issues/46).
+
 ## Syntax
 
 ```js-nolint
@@ -41,12 +43,14 @@ revoke(descriptor)
       - : Indicates whether you need and/or receive system
         exclusive messages. The default is `false`.
 
-> **Note:** As of Firefox 44, the permissions for [Notifications](/en-US/docs/Web/API/Notifications_API) and [Push](/en-US/docs/Web/API/Push_API) have been merged. If permission is
+> [!NOTE]
+> As of Firefox 44, the permissions for [Notifications](/en-US/docs/Web/API/Notifications_API) and [Push](/en-US/docs/Web/API/Push_API) have been merged. If permission is
 > granted (e.g. by the user, in the relevant permissions dialog),
 > `navigator.permissions.query()` will return `true` for both
 > `notifications` and `push`.
 
-> **Note:** The `persistent-storage` permission allows an
+> [!NOTE]
+> The `persistent-storage` permission allows an
 > origin to use a persistent box (i.e., [persistent storage](https://storage.spec.whatwg.org/#persistence)) for its
 > storage, as per the [Storage API](https://storage.spec.whatwg.org/).
 

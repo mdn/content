@@ -55,7 +55,8 @@ The following attributes are deprecated and should not be used. They are documen
 
   - : Specifies the width of the table. Use the {{cssxref("width")}} CSS property instead, as this attribute is deprecated.
 
-    > **Note:** While no HTML specification includes `height` as a `<table>` attribute, some browsers support a non-standard interpretation of `height`. The unitless value sets a minimum absolute height in pixels. If set as a percent value, the minimum table height will be relative to the parent container's height. Use the {{cssxref("min-height")}} CSS property instead, as this attribute is deprecated.
+    > [!NOTE]
+    > While no HTML specification includes `height` as a `<table>` attribute, some browsers support a non-standard interpretation of `height`. The unitless value sets a minimum absolute height in pixels. If set as a percent value, the minimum table height will be relative to the parent container's height. Use the {{cssxref("min-height")}} CSS property instead, as this attribute is deprecated.
 
 ## Visual layout of table contents
 
@@ -88,6 +89,38 @@ For styling purpose the table elements may be thought of as being put on six sup
 ![Table element layers](table_element_layers.png)
 
 The background set on an element in one layer will be visible only if the layers above it have transparent background. A missing cell is rendered as if an anonymous table-cell box occupied that place.
+
+## Accessibility
+
+### Captions
+
+By supplying a {{HTMLElement("caption")}} element whose value clearly and concisely describes the table's purpose, it helps the people decide if they need to check the rest of the table content or skip over it.
+
+This helps people navigating with the aid of assistive technology such as a screen reader, people experiencing low vision conditions, and people with cognitive concerns.
+
+- [MDN Adding a caption to your table with \<caption>](/en-US/docs/Learn/HTML/Tables/Advanced#adding_a_caption_to_your_table_with_caption)
+- [Caption & Summary • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/caption-summary/)
+
+### Scoping rows and columns
+
+The [`scope`](/en-US/docs/Web/HTML/Element/th#scope) attribute on header cells ({{HTMLElement("th")}} elements) is redundant in simple contexts, because scope is inferred. However, some assistive technologies may fail to draw correct inferences, so specifying header scope may improve user experiences. In complex tables, [`scope`](/en-US/docs/Web/HTML/Element/th#scope) can be specified to provide necessary information about the cells related to a header.
+
+- [MDN Tables for visually impaired users](/en-US/docs/Learn/HTML/Tables/Advanced#tables_for_visually_impaired_users)
+- [Tables with two headers • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/two-headers/)
+- [Tables with irregular headers • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/irregular/)
+- [H63: Using the scope attribute to associate header cells and data cells in data tables | W3C Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/H63.html)
+
+### Complicated tables
+
+Assistive technologies such as screen readers may have difficulty parsing tables that are so complex that header cells can't be associated in a strictly horizontal or vertical way. This is typically indicated by the presence of the [`colspan`](/en-US/docs/Web/HTML/Element/td#colspan) and [`rowspan`](/en-US/docs/Web/HTML/Element/td#rowspan) attributes.
+
+Ideally, consider alternate ways to present the table's content, including breaking it apart into a collection of smaller, related tables that don't have to rely on using the [`colspan`](/en-US/docs/Web/HTML/Element/td#colspan) and [`rowspan`](/en-US/docs/Web/HTML/Element/td#rowspan) attributes. In addition to helping people who use assistive technology understand the table's content, this may also benefit people with cognitive concerns who may have difficulty understanding the associations the table layout is describing.
+
+If the table cannot be broken apart, use a combination of the [`id`](/en-US/docs/Web/HTML/Global_attributes#id) and [`headers`](/en-US/docs/Web/HTML/Element/td#headers) attributes to programmatically associate each table cell with the header(s) ({{HTMLElement("th")}} elements) the cell is associated with.
+
+- [MDN Tables for visually impaired users](/en-US/docs/Learn/HTML/Tables/Advanced#tables_for_visually_impaired_users)
+- [Tables with multi-level headers • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/multi-level/)
+- [H43: Using id and headers attributes to associate data cells with header cells in data tables | Techniques for W3C WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/H43.html)
 
 ## Examples
 
@@ -227,7 +260,8 @@ This is accomplished by introducing the [`scope`](/en-US/docs/Web/HTML/Element/t
 
 The CSS and visual result are unchanged—the adaptation provides valuable contextual information for assistive technologies such as screen readers to help identify which cells the headers relate to.
 
-> **Note:** If the table structure is even more complex, the (additional) use of the [`headers`](/en-US/docs/Web/HTML/Element/th#headers) attribute on the {{HTMLElement("th")}} and {{HTMLElement("td")}} elements may improve accessibility and help assistive technologies identify the relationships between cells; see [Complicated tables](#complicated_tables).
+> [!NOTE]
+> If the table structure is even more complex, the (additional) use of the [`headers`](/en-US/docs/Web/HTML/Element/th#headers) attribute on the {{HTMLElement("th")}} and {{HTMLElement("td")}} elements may improve accessibility and help assistive technologies identify the relationships between cells; see [Complicated tables](#complicated_tables).
 
 ### Explicitly specifying table section groups
 
@@ -270,7 +304,7 @@ Since the first row ({{HTMLElement("tr")}} element) contains only column header 
 </table>
 ```
 
-Once again, the CSS and visual result are unchanged—specifying such table section groups provides valuable contextual information for assistive technologies, including screen readers and search engines, as well as for styling in the CSS, which will be shown ion a later example.
+Once again, the CSS and visual result are unchanged—specifying such table section groups provides valuable contextual information for assistive technologies, including screen readers and search engines, as well as for styling in the CSS, which will be shown in a later example.
 
 ### Column and row spanning
 
@@ -900,38 +934,6 @@ tr:last-child td {
 #### Result
 
 {{EmbedLiveSample('Displaying_large_tables_in_small_spaces', '100%', 240)}}
-
-## Accessibility concerns
-
-### Captions
-
-By supplying a {{HTMLElement("caption")}} element whose value clearly and concisely describes the table's purpose, it helps the people decide if they need to check the rest of the table content or skip over it.
-
-This helps people navigating with the aid of assistive technology such as a screen reader, people experiencing low vision conditions, and people with cognitive concerns.
-
-- [MDN Adding a caption to your table with \<caption>](/en-US/docs/Learn/HTML/Tables/Advanced#adding_a_caption_to_your_table_with_caption)
-- [Caption & Summary • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/caption-summary/)
-
-### Scoping rows and columns
-
-The [`scope`](/en-US/docs/Web/HTML/Element/th#scope) attribute on header cells ({{HTMLElement("th")}} elements) is redundant in simple contexts, because scope is inferred. However, some assistive technologies may fail to draw correct inferences, so specifying header scope may improve user experiences. In complex tables, [`scope`](/en-US/docs/Web/HTML/Element/th#scope) can be specified to provide necessary information about the cells related to a header.
-
-- [MDN Tables for visually impaired users](/en-US/docs/Learn/HTML/Tables/Advanced#tables_for_visually_impaired_users)
-- [Tables with two headers • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/two-headers/)
-- [Tables with irregular headers • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/irregular/)
-- [H63: Using the scope attribute to associate header cells and data cells in data tables | W3C Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/H63.html)
-
-### Complicated tables
-
-Assistive technologies such as screen readers may have difficulty parsing tables that are so complex that header cells can't be associated in a strictly horizontal or vertical way. This is typically indicated by the presence of the [`colspan`](/en-US/docs/Web/HTML/Element/td#colspan) and [`rowspan`](/en-US/docs/Web/HTML/Element/td#rowspan) attributes.
-
-Ideally, consider alternate ways to present the table's content, including breaking it apart into a collection of smaller, related tables that don't have to rely on using the [`colspan`](/en-US/docs/Web/HTML/Element/td#colspan) and [`rowspan`](/en-US/docs/Web/HTML/Element/td#rowspan) attributes. In addition to helping people who use assistive technology understand the table's content, this may also benefit people with cognitive concerns who may have difficulty understanding the associations the table layout is describing.
-
-If the table cannot be broken apart, use a combination of the [`id`](/en-US/docs/Web/HTML/Global_attributes#id) and [`headers`](/en-US/docs/Web/HTML/Element/td#headers) attributes to programmatically associate each table cell with the header(s) ({{HTMLElement("th")}} elements) the cell is associated with.
-
-- [MDN Tables for visually impaired users](/en-US/docs/Learn/HTML/Tables/Advanced#tables_for_visually_impaired_users)
-- [Tables with multi-level headers • Tables • W3C WAI Web Accessibility Tutorials](https://www.w3.org/WAI/tutorials/tables/multi-level/)
-- [H43: Using id and headers attributes to associate data cells with header cells in data tables | Techniques for W3C WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/H43.html)
 
 ## Technical summary
 

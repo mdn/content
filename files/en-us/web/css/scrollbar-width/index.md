@@ -51,9 +51,10 @@ scrollbar-width: unset;
       </tbody>
     </table>
 
-> **Note:** User Agents must apply any `scrollbar-width` value set on the root element to the viewport.
+> [!NOTE]
+> User Agents must apply any `scrollbar-width` value set on the root element to the viewport.
 
-## Accessibility concerns
+## Accessibility
 
 Use this property with caution — setting `scrollbar-width` to `thin` or `none` can make content hard or impossible to scroll if the author does not provide an alternative scrolling mechanism. While swiping gestures or mouse wheels can enable scrolling on such content, some devices have no scroll alternative.
 

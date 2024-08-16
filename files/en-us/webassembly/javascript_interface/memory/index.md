@@ -18,6 +18,9 @@ Originally you could only perform memory operations on a single memory in the Wa
 More recent implementations allow WebAssembly [memory instructions](/en-US/docs/WebAssembly/Reference/Memory) to operate on a specified memory.
 For more information see [Multiple memories](/en-US/docs/WebAssembly/Understanding_the_text_format#multiple_memories) in _Understanding WebAssembly text format_.
 
+> [!NOTE]
+> WebAssembly memory is always in little-endian format, regardless of the platform it's run on. Therefore, for portability, you should read and write multi-byte values in JavaScript using {{jsxref("DataView")}}.
+
 ## Constructor
 
 - [`WebAssembly.Memory()`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/Memory)
@@ -46,7 +49,7 @@ const memory = new WebAssembly.Memory({
 });
 ```
 
-The following example (see [memory.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/memory.html) on GitHub, and [view it live also](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)) fetches and instantiates the loaded "memory.wasm" bytecode using the [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) function, while importing the memory created in the line above. It then stores some values in that memory, exports a function, and uses the exported function to sum those values.
+The following example (see [memory.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/memory.html) on GitHub, and [view it live also](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)) fetches and instantiates the loaded "memory.wasm" bytecode using the [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) function, while importing the memory created in the line above. It then stores some values in that memory, exports a function, and uses the exported function to sum those values. Note the use of {{jsxref("DataView")}} to access the memory so we always use little-endian format.
 
 ```js
 const memory = new WebAssembly.Memory({
@@ -57,9 +60,9 @@ const memory = new WebAssembly.Memory({
 WebAssembly.instantiateStreaming(fetch("memory.wasm"), {
   js: { mem: memory },
 }).then((obj) => {
-  const summands = new Uint32Array(memory.buffer);
+  const summands = new DataView(memory.buffer);
   for (let i = 0; i < 10; i++) {
-    summands[i] = i;
+    summands.setUint32(i * 4, i, true); // WebAssembly is little endian
   }
   const sum = obj.instance.exports.accumulate(0, 10);
   console.log(sum);
@@ -70,8 +73,8 @@ Another way to get a `WebAssembly.Memory` object is to have it exported by a Web
 
 ```js
 WebAssembly.instantiateStreaming(fetch("memory.wasm")).then((obj) => {
-  const values = new Uint32Array(obj.instance.exports.memory.buffer);
-  console.log(values[0]);
+  const values = new DataView(obj.instance.exports.memory.buffer);
+  console.log(values.getUint32(0, true));
 });
 ```
 

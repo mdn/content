@@ -90,4 +90,4 @@ The availability of FedCM within `<iframe>`s enables a couple of use cases:
 
 ## See also
 
-- [Federated Credential Management API](https://developer.chrome.com/docs/privacy-sandbox/fedcm/)
+- [Federated Credential Management API](https://developers.google.com/privacy-sandbox/cookies/fedcm)

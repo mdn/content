@@ -17,6 +17,8 @@ JavaScript files should be served with the `text/javascript` [MIME type](/en-US/
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
+- {{domxref("HTMLScriptElement.attributionSrc")}} {{securecontext_inline}} {{experimental_inline}}
+  - : Gets and sets the [`attributionsrc`](/en-US/docs/Web/HTML/Element/script#attributionsrc) attribute on an {{htmlelement("script")}} element programmatically, reflecting the value of that attribute. `attributionsrc` specifies that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header along with the script resource request. On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} or {{httpheader("Attribution-Reporting-Register-Trigger")}} header in the response, to register a JavaScript-based [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#javascript-based_event_sources) or [attribution trigger](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_triggers#javascript-based_attribution_triggers), respectively.
 - {{domxref("HTMLScriptElement.async")}}
   - : A boolean value that controls how the script should be executed. For classic scripts, if the `async` property is set to `true`, the external script will be fetched in parallel to parsing and evaluated as soon as it is available. For [module scripts](/en-US/docs/Web/JavaScript/Guide/Modules), if the `async` property is set to `true`, the script and all their dependencies will be fetched in parallel to parsing and evaluated as soon as they are available.
 - {{domxref("HTMLScriptElement.blocking")}} {{Experimental_Inline}}
@@ -43,7 +45,8 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
   - : A string that joins and returns the contents of all {{domxref("Text")}} nodes inside the {{HTMLElement("script")}} element (ignoring other nodes like comments) in tree order. On setting, it acts the same way as the {{domxref("Node.textContent")}} property.
 
-    > **Note:** When inserted using the {{domxref("Document.write()")}} method, {{HTMLElement("script")}} elements execute (typically synchronously), but when inserted using {{domxref("Element.innerHTML")}} or {{domxref("Element.outerHTML")}}, they do not execute at all.
+    > [!NOTE]
+    > When inserted using the {{domxref("Document.write()")}} method, {{HTMLElement("script")}} elements execute (typically synchronously), but when inserted using {{domxref("Element.innerHTML")}} or {{domxref("Element.outerHTML")}}, they do not execute at all.
 
 - {{domxref("HTMLScriptElement.type")}}
   - : A string representing the type of the script. It reflects the `type` attribute of the {{HTMLElement("script")}} element.
@@ -68,7 +71,7 @@ _No specific events; inherits events from its parent, {{domxref("HTMLElement")}}
 
 Let's create a function that imports new scripts within a document creating a {{HTMLElement("script")}} node _immediately before_ the {{HTMLElement("script")}} that hosts the following code (through {{domxref("document.currentScript")}}).
 These scripts will be **asynchronously** executed.
-For more details, see the [`defer`](#defer_property) and [`async`](#async_property) properties.
+For more details, see the [`defer`](/en-US/docs/Web/API/HTMLScriptElement/defer) and [`async`](/en-US/docs/Web/API/HTMLScriptElement/async) properties.
 
 ```js
 function loadError(oError) {

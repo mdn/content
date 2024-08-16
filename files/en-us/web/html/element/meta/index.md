@@ -20,7 +20,8 @@ The type of metadata provided by the `<meta>` element can be one of the followin
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-> **Note:** the attribute [`name`](#name) has a specific meaning for the `<meta>` element, and the [`itemprop`](/en-US/docs/Web/HTML/Global_attributes/itemprop) attribute must not be set on the same `<meta>` element that has any existing [`name`](#name), [`http-equiv`](#http-equiv) or [`charset`](#charset) attributes.
+> [!NOTE]
+> The attribute [`name`](#name) has a specific meaning for the `<meta>` element, and the [`itemprop`](/en-US/docs/Web/HTML/Global_attributes/itemprop) attribute must not be set on the same `<meta>` element that has any existing [`name`](#name), [`http-equiv`](#http-equiv) or [`charset`](#charset) attributes.
 
 - `charset`
   - : This attribute declares the document's character encoding. If the attribute is present, its value must be an ASCII case-insensitive match for the string `"utf-8"`, because UTF-8 is the only valid encoding for HTML5 documents. `<meta>` elements which declare a character encoding must be located entirely within the first 1024 bytes of the document.
@@ -51,7 +52,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
       - The number of seconds until the page should be reloaded - only if the [`content`](#content) attribute contains a non-negative integer.
       - The number of seconds until the page should redirect to another - only if the [`content`](#content) attribute contains a non-negative integer followed by the string '`;url=`', and a valid URL.
 
-      > **Warning:**
+      The timer starts when the page is _completely loaded_, which is after the {{domxref("Window/load_event", "load")}} and {{domxref("Window/pageshow_event", "pageshow")}} events have both fired.
+
+      > [!WARNING]
       >
       > Pages set with a `refresh` value run the risk of having the time interval being too short. People navigating with the aid of assistive technology such as a screen reader may be unable to read through and understand the page's content before being automatically redirected. The abrupt, unannounced updating of the page content may also be disorienting for people experiencing low vision conditions.
       >

@@ -13,7 +13,8 @@ browser-compat: api.VRFieldOfView.downDegrees
 
 The **`downDegrees`** read-only property of the {{domxref("VRFieldOfView")}} interface returns the number of degrees downwards that the field of view extends in.
 
-> **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
+> [!NOTE]
+> This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
 ## Value
 

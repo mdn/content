@@ -39,7 +39,7 @@ animation-duration: unset;
 
   - : For time-based animations, `auto` is equivalent to a value of `0s` (see below). For [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations), `auto` fills the entire timeline with the animation.
 
-- `{{cssxref("&lt;time&gt;")}}`
+- {{cssxref("&lt;time&gt;")}}
 
   - : The time that an animation takes to complete one cycle. This may be specified in either seconds (`s`) or milliseconds (`ms`). The value must be positive or zero and the unit is required.
 
@@ -49,11 +49,14 @@ animation-duration: unset;
     - If `animation-fill-mode` is set to `forwards` or `both`, the last frame of the animation will be displayed, as defined by `animation-direction`, after the `animation-delay` expires.
     - If `animation-fill-mode` is set to `none`, the animation will have no visible effect.
 
-> **Note:** Negative values are invalid, causing the declaration to be ignored. Some early, prefixed, implementations may consider them as identical to `0s`.
+> [!NOTE]
+> Negative values are invalid, causing the declaration to be ignored. Some early, prefixed, implementations may consider them as identical to `0s`.
 
-> **Note:** When you specify multiple comma-separated values on an `animation-*` property, they are applied to the animations in the order in which the {{cssxref("animation-name")}}s appear. For situations where the number of animations and `animation-*` property values do not match, see [Setting multiple animation property values](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations#setting_multiple_animation_property_values).
+> [!NOTE]
+> When you specify multiple comma-separated values on an `animation-*` property, they are applied to the animations in the order in which the {{cssxref("animation-name")}}s appear. For situations where the number of animations and `animation-*` property values do not match, see [Setting multiple animation property values](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations#setting_multiple_animation_property_values).
 
-> **Note:** When creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations), specifying an `animation-duration` value in seconds or milliseconds doesn't really make sense. In tests, it seemed to have no effect on scroll progress timeline animations, while on view progress timeline animations it seemed to push the animation to happen nearer the end of the timeline. However, Firefox requires an `animation-duration` to be set for it to successfully apply the animation. You are therefore advised to set `animation-duration` to `1ms` so that animations will work in Firefox, but the effect is not altered too much by it.
+> [!NOTE]
+> When creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations), specifying an `animation-duration` value in seconds or milliseconds doesn't really make sense. In tests, it seemed to have no effect on scroll progress timeline animations, while on view progress timeline animations it seemed to push the animation to happen nearer the end of the timeline. However, Firefox requires an `animation-duration` to be set for it to successfully apply the animation. You are therefore advised to set `animation-duration` to `1ms` so that animations will work in Firefox, but the effect is not altered too much by it.
 
 ## Formal definition
 

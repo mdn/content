@@ -8,7 +8,8 @@ page-type: firefox-release-notes
 
 This article provides information about the changes in Firefox 92 that will affect developers. Firefox 92 was released on September 7, 2021.
 
-> **Note:** See also [Time for a review of Firefox 92](https://hacks.mozilla.org/2021/09/time-for-a-review-of-firefox-92/) on Mozilla Hacks.
+> [!NOTE]
+> See also [Time for a review of Firefox 92](https://hacks.mozilla.org/2021/09/time-for-a-review-of-firefox-92/) on Mozilla Hacks.
 
 ## Changes for web developers
 
@@ -28,7 +29,7 @@ No changes
 
 - {{jsxref("Object.hasOwn()")}} can be used to test whether a property was defined on an object or inherited ([Firefox bug 1721149](https://bugzil.la/1721149)).
 - The default 5MB storage quota is now available to each origin. The quota previously applied to an entire domain group (also known as {{Glossary("eTLD", "eTLD+1")}} domain; e.g., `*.wikipedia.org`). ([Firefox bug 1064466](https://bugzil.la/1064466)).
-- Storage quotas for {{domxref("Window.localStorage")}} are now shared with [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) and {{domxref("Cache", "Cache API")}} ([Firefox bug 742822](https://bugzil.la/742822)).
+- Storage quotas for {{domxref("Window.localStorage")}} are now shared with [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) and {{domxref("Cache")}} ([Firefox bug 742822](https://bugzil.la/742822)).
 
 ### HTTP
 
@@ -47,7 +48,7 @@ No changes
 
 #### Media, WebRTC, and Web Audio
 
-- Access to audio output devices, like speakers and headphones, is now protected by the [speaker-selection](speaker-selection) feature policy ([Firefox bug 1577199](https://bugzil.la/1577199)).
+- Access to audio output devices, like speakers and headphones, is now protected by the [speaker-selection](/en-US/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) feature policy ([Firefox bug 1577199](https://bugzil.la/1577199)).
 
 ### WebDriver conformance (Marionette)
 

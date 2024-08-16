@@ -11,7 +11,8 @@ browser-compat: api.Window.moveBy
 The **`moveBy()`** method of the {{domxref("Window")}}
 interface moves the current window by a specified amount.
 
-> **Note:** This function moves the window relative to its current
+> [!NOTE]
+> This function moves the window relative to its current
 > location. In contrast, {{domxref("window.moveTo()")}} moves the window to an absolute
 > location.
 
@@ -54,6 +55,12 @@ As of Firefox 7, websites can no longer move a browser window [in the following 
 
 1. You can't move a window or tab that wasn't created by {{domxref("Window.open()")}}.
 2. You can't move a window or tab when it's in a window with more than one tab.
+
+> [!NOTE]
+> This function might not move the window synchronously.
+> In some environments (like Wayland, or mobile) it might not move the window
+> at all. Currently there's no way to listen to a move event, see
+> [CSS Working Group issue #7693](https://github.com/w3c/csswg-drafts/issues/7693).
 
 ## See also
 

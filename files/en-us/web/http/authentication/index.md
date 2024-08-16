@@ -19,12 +19,13 @@ The challenge and response flow works like this:
 2. A client that wants to authenticate itself with the server can then do so by including an {{HTTPHeader("Authorization")}} request header with the credentials.
 3. Usually a client will present a password prompt to the user and will then issue the request including the correct `Authorization` header.
 
-![A sequence diagram illustrating HTTP messages between a client and a server lifeline.](http-auth-sequence-diagram.png)
+![A sequence diagram illustrating HTTP messages between a client and a server lifeline.](https://mdn.github.io/shared-assets/images/diagrams/http/authentication/basic-auth.svg)
 
 The general message flow above is the same for most (if not all) [authentication schemes](#authentication_schemes).
 The actual information in the headers and the way it is encoded does change!
 
-> **Warning:** The "Basic" authentication scheme used in the diagram above sends the credentials encoded but not encrypted.
+> [!WARNING]
+> The "Basic" authentication scheme used in the diagram above sends the credentials encoded but not encrypted.
 > This would be completely insecure unless the exchange was over a secure connection (HTTPS/TLS).
 
 ### Proxy authentication
@@ -92,7 +93,7 @@ Some common authentication schemes include:
 - **Mutual**
   - : See {{rfc(8120)}}
 - **Negotiate** / **NTLM**
-  - : See [RFC4599](https://www.ietf.org/rfc/rfc4559.txt)
+  - : See [RFC4599](https://datatracker.ietf.org/doc/html/rfc4559)
 - **VAPID**
   - : See {{rfc(8292)}}
 - **SCRAM**

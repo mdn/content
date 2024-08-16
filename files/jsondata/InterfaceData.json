@@ -552,6 +552,10 @@
       "inh": "CSSRule",
       "impl": []
     },
+    "CSSFunctionRule": {
+      "inh": "CSSGroupingRule",
+      "impl": []
+    },
     "CSSGroupingRule": {
       "inh": "CSSRule",
       "impl": []
@@ -648,8 +652,8 @@
       "inh": "CSSRule",
       "impl": []
     },
-    "CSSNestRule": {
-      "inh": "CSSGroupingRule",
+    "CSSNestedDeclarations": {
+      "inh": "CSSRule",
       "impl": []
     },
     "CSSNumericArray": {
@@ -1448,6 +1452,18 @@
       "inh": "Sensor",
       "impl": []
     },
+    "HandwritingDrawing": {
+      "inh": "",
+      "impl": []
+    },
+    "HandwritingRecognizer": {
+      "inh": "",
+      "impl": []
+    },
+    "HandwritingStroke": {
+      "inh": "",
+      "impl": []
+    },
     "HashChangeEvent": {
       "inh": "Event",
       "impl": []
@@ -2220,10 +2236,6 @@
       "inh": "",
       "impl": []
     },
-    "MLActivation": {
-      "inh": "",
-      "impl": []
-    },
     "MLContext": {
       "inh": "",
       "impl": []
@@ -2772,6 +2784,10 @@
       "inh": "",
       "impl": []
     },
+    "RealTimeReporting": {
+      "inh": "",
+      "impl": []
+    },
     "RelativeOrientationSensor": {
       "inh": "OrientationSensor",
       "impl": []
@@ -2861,6 +2877,10 @@
       "impl": []
     },
     "RTCIceCandidate": {
+      "inh": "",
+      "impl": []
+    },
+    "RTCIceCandidatePair": {
       "inh": "",
       "impl": []
     },
@@ -3125,6 +3145,10 @@
       "impl": []
     },
     "Storage": {
+      "inh": "",
+      "impl": []
+    },
+    "StorageAccessHandle": {
       "inh": "",
       "impl": []
     },

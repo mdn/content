@@ -18,7 +18,8 @@ specified direction.
 
 If the key range is not specified or is null, then the range includes all the keys.
 
-> **Note:** Cursors returned by `openKeyCursor()` do not
+> [!NOTE]
+> Cursors returned by `openKeyCursor()` do not
 > make the referenced value available as [`IDBIndex.openCursor`](/en-US/docs/Web/API/IDBIndex/openCursor) does.
 > This makes obtaining a list of keys much more efficient.
 
@@ -76,7 +77,7 @@ corresponding primary key of the referenced record into an HTML table.
 
 ```js
 function displayDataByIndex() {
-  tableEntry.innerHTML = "";
+  tableEntry.textContent = "";
   const transaction = db.transaction(["contactsList"], "readonly");
   const objectStore = transaction.objectStore("contactsList");
 
@@ -86,8 +87,10 @@ function displayDataByIndex() {
     const cursor = event.target.result;
     if (cursor) {
       const tableRow = document.createElement("tr");
-      tableRow.innerHTML =
-        `<td>${cursor.key}</td>` + `<td>${cursor.primaryKey}</td>`;
+      tableRow.appendChild(document.createElement("td")).textContent =
+        cursor.key;
+      tableRow.appendChild(document.createElement("td")).textContent =
+        cursor.primaryKey;
       tableEntry.appendChild(tableRow);
 
       cursor.continue();

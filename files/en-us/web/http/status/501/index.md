@@ -2,7 +2,7 @@
 title: 501 Not Implemented
 slug: Web/HTTP/Status/501
 page-type: http-status-code
-browser-compat: http.status.501
+spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.501
 ---
 
 {{HTTPSidebar}}
@@ -15,7 +15,7 @@ This status can also send a {{HTTPHeader("Retry-After")}} header, telling the re
 
 If the server _does_ recognize the method, but intentionally does not support it, the appropriate response is {{HTTPStatus(405, "405 Method Not Allowed")}}.
 
-> **Note:**
+> [!NOTE]
 >
 > - A 501 error is not something you can fix, but requires a fix by the web server you are trying to access.
 > - A 501 response is cacheable by default; that is, unless caching headers instruct otherwise.
@@ -29,7 +29,3 @@ If the server _does_ recognize the method, but intentionally does not support it
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}

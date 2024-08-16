@@ -53,7 +53,8 @@ A color in hexadecimal string notation always begins with the character `"#"`. A
 
 As shown above, the red, green, and blue color components can each be represented as a double-digit hex value representing a number between 0 (`00`) and 255 (`FF`) or a single-digit hex value (a number between 0 (`0`) and 15 (`F`).
 
-> **Note:** The leading `0x` in the values above indicates a hexadecimal integer literal. Hexadecimal integers can include digits (`0` - `9`) and the letters `a` – `f` and `A` – `F`. The case of a character does not change its value. Therefore: `0xa` = `0xA` = `10` and `0xf` = `0xF` = `15`.
+> [!NOTE]
+> The leading `0x` in the values above indicates a hexadecimal integer literal. Hexadecimal integers can include digits (`0` - `9`) and the letters `a` – `f` and `A` – `F`. The case of a character does not change its value. Therefore: `0xa` = `0xA` = `10` and `0xf` = `0xF` = `15`.
 
 These two hex colors are equivalent color values; they're both red:
 
@@ -239,7 +240,8 @@ th {
 
 The last value is semi-opaque; it includes the optional alpha value, preceded by a forward slash.
 
-> **Note:** When you omit the hue's unit, it's assumed to be in degrees (`deg`).
+> [!NOTE]
+> When you omit the hue's unit, it's assumed to be in degrees (`deg`).
 
 ### HWB functional notation
 
@@ -336,7 +338,7 @@ Wouldn't it be fantastic if you could simply change the hue channel of a color o
 
 The CIELAB and Oklab color spaces represent the entire range of colors that humans can see. CIE lab color functions include [`lch()`](/en-US/docs/Web/CSS/color_value/lch) and [`lab()`](/en-US/docs/Web/CSS/color_value/lab). Oklab color functions include [`oklch()`](/en-US/docs/Web/CSS/color_value/oklch) and [`oklab()`](/en-US/docs/Web/CSS/color_value/oklab). The primary purpose of these models is that they are uniform so that a given distance between any two points in the color space should appear equally different to a viewer. Oklab is a color space that uses the same model type as CIELAB but is built using additional numerical optimization steps, so the values are considered more accurate than CIELAB. Because of this optimization, hues are more perceptually uniform.
 
-The `lch()` and `oklch()` functions use lightness (`L`), chroma (`C`), and hue (`H`), and are discussed further in this section. The [`lab()` and `oklab()`](#lab-and-oklab) functions work differently, using lightness (`L`), red/green-ness (along the `a`-axis), and yellow/blue-ness (along the `b`-axis). These axes are referred to as rectangular coordinates. The main benefit of these color functions is that the "lightness" is perceived lightness; it is the brightness of a color as perceived by the human eye rather than the lightness as compared to other colors.
+The `lch()` and `oklch()` functions use lightness (`L`), chroma (`C`), and hue (`H`), and are discussed further in this section. The [`lab()` and `oklab()`](#lab_and_oklab) functions work differently, using lightness (`L`), red/green-ness (along the `a`-axis), and yellow/blue-ness (along the `b`-axis). These axes are referred to as rectangular coordinates. The main benefit of these color functions is that the "lightness" is perceived lightness; it is the brightness of a color as perceived by the human eye rather than the lightness as compared to other colors.
 
 Similar to the sRGB hue color functions, the hue (`h`) value in `lch()` and `oklch()` is a number, an angle, or the keyword `none` (equivalent to `0deg`) representing the color's `<hue>` angle. However, the colors at each angle value are not the same. The angles corresponding to particular hues differ across the sRGB, CIELAB (used by `lch()`), and Oklab (used by `oklch()`) color spaces.
 
@@ -537,7 +539,7 @@ The [`lab()`](/en-US/docs/Web/CSS/color_value/lab) functional notation expresses
 Similar to `lch()` and `oklch()`, the `lightness` is either:
 
 - A {{cssxref("percentage")}}, with `0%` being completely black and `100%` being completely white.
-- A number between `0` and `100` for `lab()` and `0` and `1` for `oklab()`, where `0` is completely black and`1`/`100` is completely white.
+- A number between `0` and `100` for `lab()` and `0` and `1` for `oklab()`, where `0` is completely black and `1`/`100` is completely white.
 
 The `a` value is `<number>` between `-125` and `125` for `lab()` or `-0.4` and `0.4` for `oklab()`, a `<percentage>` between `-100%` and `100%`, or the keyword `none` (equivalent to `0%` in this case). This value specifies the color's distance along the a-axis in the color space, which defines how green (moving towards -100%) or red (moving towards +100%) the color is.
 

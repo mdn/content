@@ -22,12 +22,7 @@ Render-blocking resources are static files, such as fonts, CSS, and JavaScript t
 In addition to the automatic render-blocking mechanism, `blocking="render"` can be provided as an attribute and value to {{HTMLElement("script")}}, {{HTMLElement("style")}} or {{HTMLElement("link")}} elements to specify explicit render-blocking. For example:
 
 ```html
-<link
-  blocking="render"
-  rel="preload"
-  href="critical-font.woff2"
-  as="font"
-  crossorigin />
+<script blocking="render" src="important.js" defer></script>
 ```
 
 ## Value

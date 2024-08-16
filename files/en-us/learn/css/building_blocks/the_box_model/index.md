@@ -73,7 +73,8 @@ You can change the inner display type for example by setting `display: flex;`. T
 
 When you move on to learn about CSS Layout in more detail, you will encounter [`flex`](/en-US/docs/Learn/CSS/CSS_layout/Flexbox), and various other inner values that your boxes can have, for example [`grid`](/en-US/docs/Learn/CSS/CSS_layout/Grids).
 
-> **Note:** To read more about the values of display, and how boxes work in block and inline layout, take a look at the MDN guide [Block and Inline Layout](/en-US/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow).
+> [!NOTE]
+> To read more about the values of display, and how boxes work in block and inline layout, take a look at the MDN guide [Block and Inline Layout](/en-US/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow).
 
 ## Examples of different display types
 
@@ -140,7 +141,8 @@ The _actual_ space taken up by the box will be 410px wide (350 + 25 + 25 + 5 + 5
 
 ![Showing the size of the box when the standard box model is being used.](standard-box-model.png)
 
-> **Note:** The margin is not counted towards the actual size of the box — sure, it affects the total space that the box will take up on the page, but only the space outside the box. The box's area stops at the border — it does not extend into the margin.
+> [!NOTE]
+> The margin is not counted towards the actual size of the box — sure, it affects the total space that the box will take up on the page, but only the space outside the box. The box's area stops at the border — it does not extend into the margin.
 
 ### The alternative CSS box model
 
@@ -196,7 +198,8 @@ In the example below, you can see two boxes. Both have a class of `.box`, which 
 
 {{EmbedGHLiveSample("css-examples/learn/box-model/box-models.html", '100%', 1100)}}
 
-> **Note:** You can find a solution for this task [here](https://github.com/mdn/css-examples/blob/main/learn/solutions.md#the-box-model).
+> [!NOTE]
+> You can find a solution for this task [here](https://github.com/mdn/css-examples/blob/main/learn/solutions.md#the-box-model).
 
 ### Use browser DevTools to view the box model
 

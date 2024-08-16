@@ -14,7 +14,7 @@ browser-compat: api.PaymentResponse.payerPhone
 The `payerPhone` read-only property of the {{domxref("PaymentResponse")}}
 interface returns the phone number supplied by the user. This option is only present
 when the `requestPayerPhone` option is set to `true` in the
-{{domxref('PaymentOptions')}} object passed to the
+`options` object passed to the
 {{domxref('PaymentRequest.PaymentRequest','PaymentRequest')}} constructor.
 
 ## Value

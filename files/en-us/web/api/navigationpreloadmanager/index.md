@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.NavigationPreloadManager
 ---
 
-{{APIRef("Service Workers API")}}{{SecureContext_Header}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`NavigationPreloadManager`** interface of the [Service Worker API](/en-US/docs/Web/API/Service_Worker_API) provides methods for managing the preloading of resources in parallel with service worker bootup.
 
@@ -25,7 +25,7 @@ The result of a preload fetch request is waited on using the promise returned by
 
 ## Description
 
-Service workers handle {{domxref("fetch()")}} events on behalf of a site, for pages within a given scope.
+Service workers handle {{domxref("Window/fetch", "fetch()")}} events on behalf of a site, for pages within a given scope.
 When a user navigates to a page that uses a service worker, the browser boots up the worker (if it isn't already running), then sends it a fetch event and waits for the result.
 On receiving an event, the worker returns the resource from a cache if it is present, or otherwise fetches the resource from the remote server (storing a copy for returning in future requests).
 
@@ -35,7 +35,7 @@ Service workers are often already started (they remain active for some time afte
 Even if a service worker does have to boot, much of the time it may be returning values from a cache, which is very fast.
 However, in those cases where a worker has to boot before it can start fetching a remote resource, then the delay can be significant.
 
-The {{domxref("NavigationPreloadManager")}} provides a mechanism to allow fetching of the resources to run in parallel with service worker boot, so that by the time the worker is able to handle the fetch request from the browser, the resource may already have been fully or partially downloaded.
+The `NavigationPreloadManager` provides a mechanism to allow fetching of the resources to run in parallel with service worker boot, so that by the time the worker is able to handle the fetch request from the browser, the resource may already have been fully or partially downloaded.
 This makes the case where the worker has to start up "no worse" than when the worker is already started, and in some cases better.
 
 The preload manager sends the {{HTTPHeader("Service-Worker-Navigation-Preload")}} HTTP header with preload requests, allowing responses to be customized for preload requests.
@@ -43,7 +43,7 @@ This might be used, for example, to reduce the data sent to just part of the ori
 
 ## Examples
 
-The examples here are from [Speed up Service Worker with Navigation Preloads](https://developer.chrome.com/blog/navigation-preload/) (developer.chrome.com).
+The examples here are from [Speed up Service Worker with Navigation Preloads](https://web.dev/blog/navigation-preload) (developer.chrome.com).
 
 ### Feature detection and enabling navigation preloading
 
@@ -97,7 +97,8 @@ addEventListener("fetch", (event) => {
 The browser sends the HTTP header {{HTTPHeader("Service-Worker-Navigation-Preload")}} with preload requests, with a default directive value of `true`.
 This allows servers to differentiate between normal and preload fetch requests, and to send different responses in each case if required.
 
-> **Note:** If the response from preload and normal fetch operations can be different, then the server must set `Vary: Service-Worker-Navigation-Preload` to ensure that the different responses are cached.
+> [!NOTE]
+> If the response from preload and normal fetch operations can be different, then the server must set `Vary: Service-Worker-Navigation-Preload` to ensure that the different responses are cached.
 
 The header value can be changed to any other string value using {{domxref("NavigationPreloadManager.setHeaderValue()")}} in order to provide additional context for the prefetch operation.
 For example, you might set the value to the ID of your most recently cached resource, so that the server won't return any resources unless they are actually needed.
@@ -115,7 +116,7 @@ navigator.serviceWorker.ready
   });
 ```
 
-[Speed up Service Worker with Navigation Preloads > Custom responses for preloads](https://developer.chrome.com/blog/navigation-preload/) provides a more complete example of a site where the response for an article web page is constructed from a cached header and footer, so that only the article content is returned for a prefetch.
+[Speed up Service Worker with Navigation Preloads > Custom responses for preloads](https://web.dev/blog/navigation-preload) provides a more complete example of a site where the response for an article web page is constructed from a cached header and footer, so that only the article content is returned for a prefetch.
 
 ### Getting the state
 
@@ -143,4 +144,4 @@ navigator.serviceWorker.ready
 
 ## See also
 
-- [Speed up Service Worker with Navigation Preloads](https://developer.chrome.com/blog/navigation-preload/) (developer.chrome.com)
+- [Speed up Service Worker with Navigation Preloads](https://web.dev/blog/navigation-preload) (developer.chrome.com)

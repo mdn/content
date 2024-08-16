@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.NavigationPreloadManager.enable
 ---
 
-{{APIRef("Service Workers API")}}{{SecureContext_Header}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`enable()`** method of the {{domxref("NavigationPreloadManager")}} interface is used to enable preloading of resources managed by the service worker.
 It returns a promise that resolves with `undefined`.

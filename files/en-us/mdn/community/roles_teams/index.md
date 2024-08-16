@@ -110,7 +110,8 @@ To be eligible to be a maintainer, you must meet one or more of the following re
 - Consented to commit spending at least 16 hours per month working on the project.
 - Attended the community meeting that takes place once every two months.
 
-> **Note:** If there is someone you think is eligible for this role, you may [nominate a maintainer](#nominating_a_maintainer).
+> [!NOTE]
+> If there is someone you think is eligible for this role, you may [nominate a maintainer](#nominating_a_maintainer).
 
 **Privileges:**
 
@@ -121,7 +122,8 @@ Maintainers have the permissions to approve and merge pull requests.
 Owners have wide permissions to manage users and [GitHub teams](https://github.com/orgs/mdn/teams), maintain access across repositories in the [MDN organization](https://github.com/mdn), maintain repository settings, and deploy to production.
 Owners are bound by all the requirements of other contributor roles.
 
-> **Note:** The role of an owner is currently limited to Mozilla staff.
+> [!NOTE]
+> The role of an owner is currently limited to Mozilla staff.
 
 **Requirements:**
 
@@ -132,7 +134,7 @@ In addition to the responsibilities of other contributor roles, owners have the 
 - Suggesting, documenting, and implementing new policies through the [pull request process](/en-US/docs/MDN/Community/Pull_requests).
 - Following and contributing to issues and discussions across the MDN organization.
 - Ensuring that an issue or pull request gets feedback from one or more members within one week.
-- [Archiving](https://help.github.com/articles/about-archiving-repositories/) or deleting unmaintained repositories.
+- [Archiving](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories) or deleting unmaintained repositories.
 - Discussing GitHub features, selecting the ones to use, and documenting decisions.
 
 **Privileges:**
@@ -295,7 +297,7 @@ We define inactivity as:
 
 Inactivity harms the project; it may lead to unexpected delays, contributor attrition, and a loss of trust in the project. Contributors must be active to set an example and show commitment to the project.
 
-Please communicate with the community team to avoid demotion or removal should your time commitments change; instead you can proactively choose to [step down for a while or move to emeritus status](#stepping-down-or-applying-for-emeritus-status).
+Please communicate with the community team to avoid demotion or removal should your time commitments change; instead you can proactively choose to [step down for a while or move to emeritus status](#stepping_down_or_applying_for_emeritus_status).
 
 ## Teams
 

@@ -7,9 +7,10 @@ browser-compat: css.properties.page-break-before
 
 {{CSSRef}}
 
-> **Warning:** This property has been replaced by the {{cssxref("break-before")}} property.
+> [!WARNING]
+> This property has been replaced by the {{cssxref("break-before")}} property.
 
-The **`page-break-before`** CSS property adjusts page breaks _before_ the current element.
+The **`page-break-before`** [CSS](/en-US/docs/Web/CSS) property adjusts page breaks _before_ the current element.
 
 This property applies to block elements that generate a box. It won't apply on an empty {{ HTMLElement("div") }} that won't generate a box.
 

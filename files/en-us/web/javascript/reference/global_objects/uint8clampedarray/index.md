@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Uint8ClampedArray
 
 {{JSRef}}
 
-The **`Uint8ClampedArray`** typed array represents an array of 8-bit unsigned integers clamped to 0–255. The contents are initialized to `0`. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
+The **`Uint8ClampedArray`** typed array represents an array of 8-bit unsigned integers clamped to 0–255. The contents are initialized to `0` unless initialization data is explicitly provided. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
 
 `Uint8ClampedArray` is a subclass of the hidden {{jsxref("TypedArray")}} class.
 

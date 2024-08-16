@@ -48,7 +48,15 @@ The key can contain three kinds of permissions:
 
 ## Host permissions
 
-> **Note:** When using Manifest V3 or higher, host permissions must be specified in the [`host_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) manifest key.
+> [!NOTE]
+> How you request host permissions depends on whether you want them at install time or runtime and which manifest version your extension is using.
+>
+> - Manifest V2:
+>   - install time request with this (`permissions`) manifest key.
+>   - runtime request with the [`optional_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) manifest key.
+> - Manifest V3 or higher:
+>   - install time request with the [`host_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) manifest key.
+>   - runtime request with the [`optional_host_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_host_permissions) manifest key.
 
 Host permissions are specified as [match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns), and each pattern identifies a group of URLs for which the extension is requesting extra privileges. For example, a host permission could be `"*://developer.mozilla.org/*"`.
 
@@ -57,7 +65,7 @@ The extra privileges include:
 - [XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest) and [fetch](/en-US/docs/Web/API/Fetch_API) access to those origins without cross-origin restrictions (even for requests made from content scripts)
 - the ability to read tab-specific metadata without the "tabs" permission, such as the `url`, `title`, and `favIconUrl` properties of {{WebExtAPIRef("tabs.Tab")}} objects
 - the ability to [inject content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#loading_content_scripts) and styles programmatically into pages served from those origins.
-- the ability to receive events from the {{webextAPIref("webrequest")}} API for these hosts
+- the ability to receive events from the {{webextAPIref("webRequest")}} API for these hosts
 - the ability to access cookies for that host using the {{webextAPIref("cookies")}} API, as long as the `"cookies"` API permission is also included.
 - bypassing tracking protection for extension pages where a host is specified as a full domain or with wildcards. Content scripts, however, can only bypass tracking protection for hosts specified with a full domain.
 
@@ -133,12 +141,12 @@ These permissions are available in Manifest V2 and above unless otherwise noted:
 
 In most cases the permission just grants access to the API, with the following exceptions:
 
-- `tabs` gives you access to {{webextAPIref("tabs", "privileged parts of the <code>tabs</code> API")}} without the need for [host permissions](#host_permissions): `Tab.url`, `Tab.title`, and `Tab.faviconUrl`.
+- `tabs` gives you access to [privileged parts of the `tabs` API](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs) without the need for [host permissions](#host_permissions): `Tab.url`, `Tab.title`, and `Tab.faviconUrl`.
 
   - In Firefox 85 and earlier, you also need `tabs` if you want to include `url` in the `queryInfo` parameter to {{webextAPIref("tabs/query", "tabs.query()")}}. The rest of the `tabs` API can be used without requesting any permission.
   - As of Firefox 86 and Chrome 50, matching [host permissions](#host_permissions) can also be used instead of the "tabs" permission.
 
-- `webRequestBlocking` enables you to use the `"blocking"` argument, so you can {{webextAPIref("WebRequest", "modify and cancel requests")}}.
+- `webRequestBlocking` enables you to use the `"blocking"` argument, so you can [modify and cancel requests](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest).
 - `downloads.open` lets you use the {{WebExtAPIRef("downloads.open()")}} API.
 - `tabHide` lets you use the {{WebExtAPIRef("tabs.hide()")}} API.
 
@@ -161,7 +169,8 @@ The intention of this permission is to enable extensions to fulfill a common use
 
 For example, consider an extension that wants to run a script in the current page when the user clicks a browser action. If the `activeTab` permission did not exist, the extension would need to ask for the host permission `<all_urls>`. But this gives the extension more power than it needs: it could now execute scripts in _any tab_, _any time_ it likes, instead of just the active tab and only in response to a user action.
 
-> **Note:** You can only get access to the tab/data that was there, when the user interaction occurred (e.g. the click). When the active tab navigates away (e.g., due to finishing loading or some other event), the permission does not grant you access to the tab anymore.
+> [!NOTE]
+> You can only get access to the tab/data that was there, when the user interaction occurred (e.g. the click). When the active tab navigates away (e.g., due to finishing loading or some other event), the permission does not grant you access to the tab anymore.
 
 The `activeTab` permission enables scripting access to the top level tab's page and same origin frames. Running scripts or modifying styles inside [cross-origin](/en-US/docs/Web/Security/Same-origin_policy#cross-origin_network_access) frames may require additional [host permissions](#host_permissions). Of course, [restrictions and limitations](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#permissions_restrictions_and_limitations) related to particular sites and URI schemes are applied as well.
 

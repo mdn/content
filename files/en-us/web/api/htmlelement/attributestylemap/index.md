@@ -8,7 +8,7 @@ browser-compat: api.HTMLElement.attributeStyleMap
 
 {{APIRef("CSSOM")}}
 
-The **`attributeStyleMap`** read-only property of the {{domxref("HTMLElement")}} interface returns a live {{domxref("StylePropertyMap")}} object that contains a list of style properties of the element that are defined in the element's inline [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute, or assigned using the {{domxref("HTMLElement.style", "style")}} property of the {{domxref("HTMLElement")}} interface via script.
+The **`attributeStyleMap`** read-only property of the {{domxref("HTMLElement")}} interface returns a live {{domxref("StylePropertyMap")}} object that contains a list of style properties of the element that are defined in the element's inline `style` attribute, or assigned using the {{domxref("HTMLElement.style", "style")}} property of the {{domxref("HTMLElement")}} interface via script.
 
 Shorthand properties are expanded. If you set `border-top: 1px solid black`, the longhand properties ({{cssxref("border-top-color")}}, {{cssxref("border-top-style")}}, and {{cssxref("border-top-width")}}) are set instead.
 
@@ -22,7 +22,7 @@ A live {{domxref("StylePropertyMap")}} object.
 
 ## Examples
 
-The following code snippet shows the relationship between HTML `style` attribute and `attributeStyleMap` property:
+The following code snippet shows the relationship between the `style` attribute and the `attributeStyleMap` property:
 
 ```html
 <div style="white-space: pre-line;">
@@ -61,3 +61,5 @@ for (const property of element.attributeStyleMap) {
 ## See also
 
 - {{domxref("HTMLElement.style")}}
+- {{domxref("SVGElement.attributeStyleMap")}}
+- {{domxref("MathMLElement.attributeStyleMap")}}

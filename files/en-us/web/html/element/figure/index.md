@@ -19,7 +19,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_a
 
 - Usually a `<figure>` is an image, illustration, diagram, code snippet, etc., that is referenced in the main flow of a document, but that can be moved to another part of the document or to an appendix without affecting the main flow.
 - A caption can be associated with the `<figure>` element by inserting a {{HTMLElement("figcaption")}} inside it (as the first or the last child). The first `<figcaption>` element found in the figure is presented as the figure's caption.
-- The `<figcaption>` provides the {{glossary("accessible description")}} for the parent `<figure>`.
+- The `<figcaption>` provides the {{glossary("accessible name")}} for the parent `<figure>`.
 
 ## Examples
 

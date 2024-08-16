@@ -30,11 +30,12 @@ A generic {{domxref("Event")}}.
 
 ## Usage notes
 
-Although examples demonstrating how to share subscription related information with the application server tend to use {{domxref("fetch()")}}, this is not necessarily the best choice for real-world use, since it will not work if the app is offline, for example.
+Although examples demonstrating how to share subscription related information with the application server tend to use {{domxref("WorkerGlobalScope/fetch", "fetch()")}}, this is not necessarily the best choice for real-world use, since it will not work if the app is offline, for example.
 
 Consider using another method to synchronize subscription information between your service worker and the app server, or make sure your code using `fetch()` is robust enough to handle cases where attempts to exchange data fail.
 
-> **Note:** In earlier drafts of the specification, this event was defined to be sent when a {{domxref("PushSubscription")}} has expired.
+> [!NOTE]
+> In earlier drafts of the specification, this event was defined to be sent when a {{domxref("PushSubscription")}} has expired.
 
 ## Examples
 
@@ -45,7 +46,7 @@ self.addEventListener(
   "pushsubscriptionchange",
   (event) => {
     const conv = (val) =>
-      btoa(String.fromCharCode.apply(null, new Uint8Array(val)));
+      self.btoa(String.fromCharCode.apply(null, new Uint8Array(val)));
     const getPayload = (subscription) => ({
       endpoint: subscription.endpoint,
       publicKey: conv(subscription.getKey("p256dh")),
@@ -72,7 +73,7 @@ self.addEventListener(
 );
 ```
 
-When a `pushsubscriptionchange` event arrives, indicating that the subscription has expired, we resubscribe by calling the push manager's {{domxref("PushManager.subscribe", "subscribe()")}} method. When the returned promise is resolved, we receive the new subscription. This is delivered to the app server using a {{domxref("fetch()")}} call to post a {{Glossary("JSON")}} formatted rendition of the subscription's {{domxref("PushSubscription.endpoint", "endpoint")}} to the app server.
+When a `pushsubscriptionchange` event arrives, indicating that the subscription has expired, we resubscribe by calling the push manager's {{domxref("PushManager.subscribe", "subscribe()")}} method. When the returned promise is resolved, we receive the new subscription. This is delivered to the app server using a {{domxref("WorkerGlobalScope/fetch", "fetch()")}} call to post a {{Glossary("JSON")}} formatted rendition of the subscription's {{domxref("PushSubscription.endpoint", "endpoint")}} to the app server.
 
 You can also use the `onpushsubscriptionchange` event handler property to set up the event handler:
 

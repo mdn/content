@@ -65,4 +65,4 @@ If `gripSpace` is non-`null`, the function proceeds to get the pose for the `gri
 
 - [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)
 - [Inputs and input sources](/en-US/docs/Web/API/WebXR_Device_API/Inputs)
-- [Using gamepads in WebXR applications](/en-US/docs/Web/WebXR%20Device%20API/Gamepads)
+- [Using gamepads in WebXR applications](/en-US/docs/Web/API/WebXR_Device_API/Gamepads)

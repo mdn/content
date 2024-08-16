@@ -11,7 +11,7 @@ The **`IDBRequest`** interface of the IndexedDB API provides access to results o
 
 The request object does not initially contain any information about the result of the operation, but once information becomes available, an event is fired on the request, and the information becomes available through the properties of the `IDBRequest` instance.
 
-All asynchronous operations immediately return an {{domxref("IDBRequest")}} instance. Each request has a `readyState` that is set to the `'pending'` state; this changes to `'done'` when the request is completed or fails. When the state is set to `done`, every request returns a `result` and an `error`, and an event is fired on the request. When the state is still `pending`, any attempt to access the `result` or `error` raises an `InvalidStateError` exception.
+All asynchronous operations immediately return an `IDBRequest` instance. Each request has a `readyState` that is set to the `'pending'` state; this changes to `'done'` when the request is completed or fails. When the state is set to `done`, every request returns a `result` and an `error`, and an event is fired on the request. When the state is still `pending`, any attempt to access the `result` or `error` raises an `InvalidStateError` exception.
 
 In plain words, all asynchronous methods return a request object. If the request has been completed successfully, the result is made available through the `result` property and an event indicating success is fired at the request ({{domxref("IDBRequest.success_event", "success")}}). If an error occurs while performing the operation, the exception is made available through the `error` property and an error event is fired ({{domxref("IDBRequest.error_event", "error")}}).
 
@@ -60,11 +60,13 @@ const DBOpenRequest = window.indexedDB.open("toDoList", 4);
 // these two event handlers act on the database being
 // opened successfully, or not
 DBOpenRequest.onerror = (event) => {
-  note.innerHTML += "<li>Error loading database.</li>";
+  note.appendChild(document.createElement("li")).textContent =
+    "Error loading database.";
 };
 
 DBOpenRequest.onsuccess = (event) => {
-  note.innerHTML += "<li>Database initialized.</li>";
+  note.appendChild(document.createElement("li")).textContent =
+    "Database initialized.";
 
   // store the result of opening the database.
   db = DBOpenRequest.result;

@@ -14,9 +14,11 @@ The **`createPolicy()`** method of the {{domxref("TrustedTypePolicyFactory")}} i
 
 In Chrome a policy with a name of "default" creates a special policy that will be used if a string (rather than a Trusted Type object) is passed to an injection sink. This can be used in a transitional phase while moving from an application that inserted strings into injection sinks.
 
-> **Note:** The above behavior is not yet settled in the specification and may change in future.
+> [!NOTE]
+> The above behavior is not yet settled in the specification and may change in future.
 
-> **Warning:** A lax default policy could defeat the purpose of using Trusted Types, and therefore should be defined with strict rules to ensure it cannot be used to run dangerous code.
+> [!WARNING]
+> A lax default policy could defeat the purpose of using Trusted Types, and therefore should be defined with strict rules to ensure it cannot be used to run dangerous code.
 
 ## Syntax
 
@@ -56,7 +58,7 @@ The below code creates a policy with the name `"myEscapePolicy"` with a function
 
 ```js
 const escapeHTMLPolicy = trustedTypes.createPolicy("myEscapePolicy", {
-  createHTML: (string) => string.replace(/>/g, "<"),
+  createHTML: (string) => string.replace(/</g, "&lt;"),
 });
 ```
 

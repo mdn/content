@@ -14,7 +14,8 @@ property of the [Canvas 2D API](/en-US/docs/Web/API/Canvas_API) specifies the
 color, gradient, or pattern to use inside shapes. The default style is `#000`
 (black).
 
-> **Note:** For more examples of fill and stroke styles, see [Applying styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) in the [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial).
+> [!NOTE]
+> For more examples of fill and stroke styles, see [Applying styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) in the [Canvas tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial).
 
 ## Value
 

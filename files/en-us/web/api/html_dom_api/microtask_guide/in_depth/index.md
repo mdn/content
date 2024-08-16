@@ -16,7 +16,8 @@ Starting with the addition of timeouts and intervals as part of the Web API ({{d
 
 ## JavaScript execution contexts
 
-> **Note:** The details here are generally not important to most JavaScript programmers. This information is provided as a basis for why microtasks are useful and how they function; if you don't care, you can skip this and come back later if you find that you need to.
+> [!NOTE]
+> The details here are generally not important to most JavaScript programmers. This information is provided as a basis for why microtasks are useful and how they function; if you don't care, you can skip this and come back later if you find that you need to.
 
 When a fragment of JavaScript code runs, it runs inside an **execution context**. There are three types of code that create a new execution context:
 
@@ -27,9 +28,9 @@ When a fragment of JavaScript code runs, it runs inside an **execution context**
 Each context is, in essence, a level of scope within your code. As one of these code segments begins execution, a new context is constructed in which to run it; that context is then destroyed when the code exits. Consider the JavaScript program below:
 
 ```js
-let outputElem = document.getElementById("output");
+const outputElem = document.getElementById("output");
 
-let userLanguages = {
+const userLanguages = {
   Mike: "en",
   Teresa: "es",
 };
@@ -37,7 +38,7 @@ let userLanguages = {
 function greetUser(user) {
   function localGreeting(user) {
     let greeting;
-    let language = userLanguages[user];
+    const language = userLanguages[user];
 
     switch (language) {
       case "es":
@@ -50,7 +51,7 @@ function greetUser(user) {
     }
     return greeting;
   }
-  outputElem.innerHTML += `${localGreeting(user)}<br>\r`;
+  outputElem.innerText += `${localGreeting(user)}\n`;
 }
 
 greetUser("Mike");
@@ -91,7 +92,7 @@ Here we look at how the runtime functions in slightly more detail.
 
 ### Event loops
 
-Each agent is driven by an **event loop**, which collects any user and other events, enqueuing tasks to handle each callback. It then runs any pending JavaScript tasks, then any pending microtasks, then performs any needed rendering and painting before looping again to check for pending tasks.
+Each agent is driven by an [event loop](/en-US/docs/Web/JavaScript/Event_loop), which is repeatedly processed. During each iteration, it runs at most one pending JavaScript task, then any pending microtasks, then performs any needed rendering and painting before looping again.
 
 Your website or app's code runs in the same **{{Glossary("thread")}}**, sharing the same **event loop**, as the user interface of the web browser itself. This is the **{{Glossary("main thread")}}**, and in addition to running your site's main code body, it handles receiving and dispatching user and other events, rendering and painting web content, and so forth.
 
@@ -118,12 +119,12 @@ The specifics may vary from browser to browser, depending on how they're impleme
 
 #### Tasks vs. microtasks
 
-A **task** is any JavaScript scheduled to be run by the standard mechanisms such as initially starting to execute a program, an event triggering a callback, and so forth. Other than by using events, you can enqueue a task by using {{domxref("setTimeout()")}} or {{domxref("setInterval()")}}.
+A **task** is anything scheduled to be run by the standard mechanisms such as initially starting to execute a script, asynchronously dispatching an event, and so forth. Other than by using events, you can enqueue a task by using {{domxref("setTimeout()")}} or {{domxref("setInterval()")}}.
 
 The difference between the task queue and the microtask queue is simple but very important:
 
-- When executing tasks from the task queue, the runtime executes each task that is in the queue at the moment a new iteration of the event loop begins. Tasks added to the queue after the iteration begins _will not run until the next iteration_.
-- Each time a task exits, and the execution context stack is empty, each microtask in the microtask queue is executed, one after another. The difference is that execution of microtasks continues until the queue is empty—even if new ones are scheduled in the interim. In other words, microtasks can enqueue new microtasks and those new microtasks will execute before the next task begins to run, and before the end of the current event loop iteration.
+- When a new iteration of the event loop begins, the runtime executes the next task from the task queue. Further tasks and tasks added to the queue after the start of the iteration _will not run until the next iteration_.
+- Whenever a task exits and the execution context stack is empty, all microtasks in the microtask queue are executed in turn. The difference is that execution of microtasks continues until the queue is empty—even if new ones are scheduled in the interim. In other words, microtasks can enqueue new microtasks and those new microtasks will execute before the next task begins to run, and before the end of the current event loop iteration.
 
 ### Problems
 
@@ -145,6 +146,7 @@ The microtask queue has been around for a while, but it's historically been used
 
 - [Microtask guide](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide)
 - {{domxref("queueMicrotask()")}}
+- [The Event Loop](/en-US/docs/Web/JavaScript/Event_loop)
 - [Asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous)
   - [Introducing asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing)
   - [Cooperative asynchronous JavaScript: Timeouts and intervals](/en-US/docs/Learn/JavaScript/Asynchronous)

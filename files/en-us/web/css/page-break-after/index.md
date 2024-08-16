@@ -7,9 +7,10 @@ browser-compat: css.properties.page-break-after
 
 {{CSSRef}}
 
-> **Warning:** This property has been replaced by the {{cssxref("break-after")}} property.
+> [!WARNING]
+> This property has been replaced by the {{cssxref("break-after")}} property.
 
-The **`page-break-after`** CSS property adjusts page breaks _after_ the current element.
+The **`page-break-after`** [CSS](/en-US/docs/Web/CSS) property adjusts page breaks _after_ the current element.
 
 {{EmbedInteractiveExample("pages/css/page-break-after.html")}}
 

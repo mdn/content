@@ -23,7 +23,7 @@ there are no tones pending.
 ### Exceptions
 
 - `InvalidCharacterError` {{domxref("DOMException")}}
-  - : Thrown if a character is not a DTMF tone character (0-9, A-D, # or ,).
+  - : Thrown if a character is not a DTMF tone character (`0-9`, `A-D`, `#`, or `,`).
 
 ### Tone buffer format
 
@@ -45,14 +45,15 @@ are permitted by the DTMF standard.
   - : This character instructs the dialing process to pause for two seconds before sending
     the next character in the buffer.
 
-> **Note:** All other characters are unrecognized and will cause
+> [!NOTE]
+> All other characters are unrecognized and will cause
 > {{domxref("RTCDTMFSender.insertDTMF", "insertDTMF()")}} to throw an
 > `InvalidCharacterError` {{domxref("DOMException")}}.
 
 #### Using tone buffer strings
 
 For example, if you're writing code to control a voicemail system by sending DTMF
-codes, you might use a string such as "\*,1,5555". In this example, we would send "\*" to
+codes, you might use a string such as `"*,1,5555"`. In this example, we would send `"*"` to
 request access to the VM system, then, after a pause, send a "1" to start playback of
 voicemail messages, then after a pause, dial "5555" as a PIN number to open the
 messages.

@@ -10,7 +10,8 @@ browser-compat: api.Window.unload_event
 
 {{APIRef}}{{deprecated_header}}
 
-> **Warning:** Developers should avoid using this event. See "Usage notes" below.
+> [!WARNING]
+> Developers should avoid using this event. See "Usage notes" below.
 
 The **`unload`** event is fired when the document or a child resource is being unloaded.
 
@@ -65,7 +66,7 @@ The best event to use to signal the end of a user's session is the [`visibilityc
 
 If you're specifically trying to detect page unload events, it's best to listen for the `pagehide` event.
 
-See the [Page Lifecycle API](https://developer.chrome.com/blog/page-lifecycle-api/#the-unload-event) guide for more information about the problems associated with the `unload` event.
+See the [Page Lifecycle API](https://developer.chrome.com/docs/web-platform/page-lifecycle-api#the-unload-event) guide for more information about the problems associated with the `unload` event.
 
 ## Examples
 
@@ -131,7 +132,7 @@ When the parent frame is unloaded, events will be fired in the order described b
 - [Don't lose user and app state, use Page Visibility](https://www.igvita.com/2015/11/20/dont-lose-user-and-app-state-use-page-visibility/) explains in
   detail why you should use `visibilitychange`, not
   `beforeunload`/`unload`.
-- [Page Lifecycle API](https://developer.chrome.com/blog/page-lifecycle-api/#developer-recommendations-for-each-state) gives best-practices guidance on handling
+- [Page Lifecycle API](https://developer.chrome.com/docs/web-platform/page-lifecycle-api#developer-recommendations-for-each-state) gives best-practices guidance on handling
   page lifecycle behavior in your web applications.
 - [PageLifecycle.js](https://github.com/GoogleChromeLabs/page-lifecycle): a JavaScript library that deals with cross-browser inconsistencies in page lifecycle behavior.
 - [Back/forward cache](https://web.dev/articles/bfcache) explains what the back/forward cache is, and its implications for various page lifecycle events.

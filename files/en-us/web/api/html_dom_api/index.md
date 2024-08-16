@@ -156,8 +156,6 @@ These interfaces represent specific HTML elements (or sets of related elements w
 - {{DOMxRef("HTMLFontElement")}} {{deprecated_inline}}
 - {{DOMxRef("HTMLFrameElement")}} {{deprecated_inline}}
 - {{DOMxRef("HTMLFrameSetElement")}} {{deprecated_inline}}
-- {{DOMxRef("HTMLIsIndexElement")}} {{deprecated_inline}}
-- {{DOMxRef("HTMLMenuItemElement")}} {{deprecated_inline}}
 
 ### Web app and browser integration interfaces
 
@@ -235,6 +233,8 @@ The History API interfaces let you access information about the browser's histor
 - {{DOMxRef("HashChangeEvent")}}
 - {{DOMxRef("History")}}
 - {{DOMxRef("Location")}}
+- {{DOMxRef("PageRevealEvent")}}
+- {{DOMxRef("PageSwapEvent")}}
 - {{DOMxRef("PageTransitionEvent")}}
 - {{DOMxRef("PopStateEvent")}}
 

@@ -9,9 +9,10 @@ spec-urls: https://w3c.github.io/webappsec-credential-management/#dom-federatedc
 
 The **`FederatedCredentialInit`** dictionary represents the object passed to {{domxref("CredentialsContainer.create()")}} as the value of the `federated` option: that is, when creating a {{domxref("FederatedCredential")}} object representing a credential associated with a federated identify provider.
 
-> **Note:** The [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API) supersedes the {{domxref("FederatedCredential")}} interface in favor of the {{domxref("IdentityCredential")}} interface.
+> [!NOTE]
+> The [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedCM_API) supersedes the {{domxref("FederatedCredential")}} interface in favor of the {{domxref("IdentityCredential")}} interface.
 >
-> The `FederatedCredentialInit` dictionary is not used when working with the `IdentityCredential`interface.
+> The `FederatedCredentialInit` dictionary is not used when working with the `IdentityCredential` interface.
 
 ## Instance properties
 

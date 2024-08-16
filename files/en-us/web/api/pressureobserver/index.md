@@ -18,7 +18,7 @@ The **`PressureObserver`** interface is part of the [Compute Pressure API](/en-U
 
 ## Static properties
 
-- {{domxref("PressureObserver.knownSources_static", "PressureObserver.knwonSources")}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{domxref("PressureObserver.knownSources_static", "PressureObserver.knownSources")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : Returns an array of {{domxref("PressureRecord.source","source")}} values supported by the user agent.
 
 ## Instance methods

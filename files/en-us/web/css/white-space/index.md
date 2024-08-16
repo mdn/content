@@ -7,7 +7,7 @@ browser-compat: css.properties.white-space
 
 {{CSSRef}}
 
-The **`white-space`** CSS property sets how {{Glossary("whitespace", "white space")}} inside an element is handled.
+The **`white-space`** [CSS](/en-US/docs/Web/CSS) property sets how {{Glossary("whitespace", "white space")}} inside an element is handled.
 
 {{EmbedInteractiveExample("pages/css/white-space.html")}}
 
@@ -16,7 +16,8 @@ The property specifies two things:
 - Whether and how white space is [collapsed](#collapsing_of_white_space).
 - Whether and how lines wrap.
 
-> **Note:** To make words break _within themselves_, use {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}}, or {{CSSxRef("hyphens")}} instead.
+> [!NOTE]
+> To make words break _within themselves_, use {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}}, or {{CSSxRef("hyphens")}} instead.
 
 ## Syntax
 
@@ -128,7 +129,8 @@ The following table summarizes the behavior of the various `white-space` keyword
   </tbody>
 </table>
 
-> **Note:** There is a distinction made between **spaces** and **other space separators**. These are defined as follows:
+> [!NOTE]
+> There is a distinction made between **spaces** and **other space separators**. These are defined as follows:
 >
 > - spaces
 >   - : Spaces (U+0020), tabs (U+0009), and segment breaks (such as newlines).
@@ -231,9 +233,10 @@ select.addEventListener("change", (e) => {
 
 ### Multiple lines in SVG text element
 
-The {{CSSXRef("white-space")}} CSS property can be used to create multiple lines in a {{SVGElement("text")}} element, which does not wrap by default.
+The `white-space` CSS property can be used to create multiple lines in a {{SVGElement("text")}} element, which does not wrap by default.
 
-> **Note:** At time of writing this feature has [limited support](#browser_compatibility).
+> [!NOTE]
+> At time of writing this feature has [limited support](#browser_compatibility).
 
 #### HTML
 

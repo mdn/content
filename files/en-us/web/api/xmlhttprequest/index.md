@@ -42,7 +42,8 @@ _This interface also inherits properties of {{domxref("XMLHttpRequestEventTarget
 
   - : Returns a string containing the response string returned by the HTTP server. Unlike {{domxref("XMLHttpRequest.status")}}, this includes the entire text of the response message ("`OK`", for example).
 
-    > **Note:** According to the HTTP/2 specification {{RFC(7540, "Response Pseudo-Header Fields", "8.1.2.4")}}, HTTP/2 does not define a way to carry the version or reason phrase that is included in an HTTP/1.1 status line.
+    > [!NOTE]
+    > According to the HTTP/2 specification {{RFC(7540, "Response Pseudo-Header Fields", "8.1.2.4")}}, HTTP/2 does not define a way to carry the version or reason phrase that is included in an HTTP/1.1 status line.
 
 - {{domxref("XMLHttpRequest.timeout")}}
   - : The time in milliseconds a request can take before automatically being terminated.
@@ -76,6 +77,8 @@ _This interface also inherits properties of {{domxref("XMLHttpRequestEventTarget
   - : Overrides the MIME type returned by the server.
 - {{domxref("XMLHttpRequest.send()")}}
   - : Sends the request. If the request is asynchronous (which is the default), this method returns as soon as the request is sent.
+- {{domxref("XMLHttpRequest.setAttributionReporting()")}} {{securecontext_inline}} {{experimental_inline}}
+  - : Indicates that you want the request's response to be able to register an attribution source or trigger event.
 - {{domxref("XMLHttpRequest.setRequestHeader()")}}
   - : Sets the value of an HTTP request header. You must call `setRequestHeader()` after {{domxref("XMLHttpRequest.open", "open()")}}, but before {{domxref("XMLHttpRequest.send", "send()")}}.
 

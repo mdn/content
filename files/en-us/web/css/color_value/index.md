@@ -10,7 +10,8 @@ browser-compat: css.types.color
 The **`<color>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) represents a color.
 A `<color>` may also include an [alpha-channel](https://en.wikipedia.org/wiki/Alpha_compositing) _transparency value_, indicating how the color should [composite](https://www.w3.org/TR/compositing-1/#simplealphacompositing) with its background.
 
-> **Note:** Although `<color>` values are precisely defined, their actual appearance may vary (sometimes significantly) from device to device. This is because most devices are not calibrated, and some browsers do not support output devices' [color profiles](https://en.wikipedia.org/wiki/ICC_profile).
+> [!NOTE]
+> Although `<color>` values are precisely defined, their actual appearance may vary (sometimes significantly) from device to device. This is because most devices are not calibrated, and some browsers do not support output devices' [color profiles](https://en.wikipedia.org/wiki/ICC_profile).
 
 ## Syntax
 
@@ -69,15 +70,15 @@ A `<color>` value can be specified using one of the methods listed below:
 - By keywords: {{CSSXref("&lt;named-color&gt;")}} (such as `blue` or `pink`), {{CSSXref("&lt;system-color&gt;")}}, and [`currentcolor`](#currentcolor_keyword).
 - By hexadecimal notations: {{CSSXref("&lt;hex-color&gt;")}} (such as `#ff0000`).
 - By `<color-function>`, with parameters in a {{glossary("color space")}} using functional notations:
-  - [sRGB](https://en.wikipedia.org/wiki/SRGB) color space: {{CSSXref("color_value/hsl", "hsl()")}}, {{CSSXref("color_value/hwb", "hwb()")}}, {{CSSXref("color_value/rgb", "rgb()")}};
-  - [CIELAB](https://en.wikipedia.org/wiki/CIELAB_color_space) color space: {{CSSXref("color_value/lab", "lab()")}}, {{CSSXref("color_value/lch", "lch()")}};
-  - [Oklab](https://bottosson.github.io/posts/oklab/) color space: {{CSSXref("color_value/oklab", "oklab()")}}, {{CSSXref("color_value/oklch", "oklch()")}};
+  - [sRGB](https://en.wikipedia.org/wiki/SRGB) color space: {{CSSXref("color_value/hsl", "hsl()")}}, {{CSSXref("color_value/hwb", "hwb()")}}, and {{CSSXref("color_value/rgb", "rgb()")}}.
+  - [CIELAB](https://en.wikipedia.org/wiki/CIELAB_color_space) color space: {{CSSXref("color_value/lab", "lab()")}} and {{CSSXref("color_value/lch", "lch()")}}.
+  - [Oklab](https://bottosson.github.io/posts/oklab/) color space: {{CSSXref("color_value/oklab", "oklab()")}} and {{CSSXref("color_value/oklch", "oklch()")}}.
   - Other color spaces: {{CSSXref("color_value/color", "color()")}}.
 - By using [relative color](/en-US/docs/Web/CSS/CSS_colors/Relative_colors) syntax to output a new color based on an existing color. Any of the above color functions can take an **origin color** preceded by the `from` keyword and followed by definitions of the channel values for the new **output color**.
 - By mixing two colors: {{CSSXref("color_value/color-mix", "color-mix()")}}.
-- By specifying two colors, the first used for light color-schemes and the second used for dark color-schemes: {{CSSXref("color_value/light-dark", "light-dark()")}}.
+- By specifying two colors, using the first for light color-schemes and the second for dark color-schemes: {{CSSXref("color_value/light-dark", "light-dark()")}}.
 
-### currentcolor keyword
+### `currentcolor` keyword
 
 The `currentcolor` keyword represents the value of an element's {{Cssxref("color")}} property. This lets you use the `color` value on properties that do not receive it by default.
 
@@ -127,7 +128,8 @@ color-mix(in oklch, oklch(none 0.2 10), oklch(60% none 30))
 color-mix(in oklch, oklch(60% 0.2 10), oklch(60% 0.2 30))
 ```
 
-> **Note:** If a component is missing from both colors, this component will be missing after the interpolation.
+> [!NOTE]
+> If a component is missing from both colors, this component will be missing after the interpolation.
 
 #### Interpolating colors from different spaces: analogous components
 
@@ -156,7 +158,7 @@ lch(80% 30 none)
 color(display-p3 0.7 0.5 none)
 ```
 
-the preprocessing procedure is:
+The preprocessing procedure is:
 
 1. Replace the missing components in both colors with a zero value:
 
@@ -186,7 +188,7 @@ the preprocessing procedure is:
    oklch(63.612% 0.1522 78.748)
    ```
 
-## Accessibility concerns
+## Accessibility
 
 Some people have difficulty distinguishing colors. The [WCAG 2.2](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Use_of_color) recommendation strongly advises against using color as the only means of conveying a specific message, action, or result. See [color and color contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast) for more information.
 
@@ -196,9 +198,9 @@ Some people have difficulty distinguishing colors. The [WCAG 2.2](/en-US/docs/We
 
 ## Examples
 
-### Color value tester
+### Exploring color values
 
-In this example we provide a `<div>` and a text input. Entering a valid color into the input causes the `<div>` to adopt that color, allowing you to test our color values.
+In this example, we provide a `<div>` and a text input. Entering a valid color into the input causes the `<div>` to adopt that color, allowing you to test our color values.
 
 #### HTML
 
@@ -243,9 +245,9 @@ inputElem.addEventListener("input", () => {
 
 #### Result
 
-{{EmbedLiveSample("color_value_tester", "100%", 300)}}
+{{EmbedLiveSample("exploring_color_values", "100%", 300)}}
 
-### Fully saturated sRGB colors
+### Generating fully saturated sRGB colors
 
 This example shows fully saturated sRGB colors in the sRGB color space.
 
@@ -321,9 +323,9 @@ div:nth-child(12) {
 
 #### Result
 
-{{EmbedLiveSample("fully_saturated_srgb_colors", "100%", 200)}}
+{{EmbedLiveSample("generating_fully_saturated_sRGB_colors", "100%", 200)}}
 
-### Reds of different shades
+### Creating different shades of red
 
 This example shows reds of different shades in the sRGB color space.
 
@@ -377,9 +379,9 @@ div:nth-child(6) {
 
 #### Result
 
-{{EmbedLiveSample("reds_of_different_shades", "100%", 150)}}
+{{EmbedLiveSample("creating_different_shades_of_red", "100%", 150)}}
 
-### Reds of different saturations
+### Creating reds of different saturation
 
 This example shows reds of different saturations in the sRGB color space.
 
@@ -431,7 +433,7 @@ div:nth-child(6) {
 
 #### Result
 
-{{EmbedLiveSample("reds_of_different_saturations", "100%", 150)}}
+{{EmbedLiveSample("creating_reds_of_different_saturation", "100%", 150)}}
 
 ## Specifications
 

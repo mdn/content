@@ -25,7 +25,8 @@ formatRangeToParts(startDate, endDate)
 This method receives two {{jsxref("Date")}}s and returns an {{jsxref("Array")}} of
 objects containing the _locale-specific_ tokens representing each part of the formatted date range.
 
-> **Note:** The return values shown in your locale may differ from those listed below.
+> [!NOTE]
+> The return values shown in your locale may differ from those listed below.
 
 ```js
 const date1 = new Date(Date.UTC(1906, 0, 10, 10, 0, 0)); // Wed, 10 Jan 1906 10:00:00 GMT

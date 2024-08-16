@@ -25,7 +25,8 @@ The `alert` role should only be used for text content, not interactive elements 
 
 The `alert` role is added to the node containing an alert message, **not** the element causing the alert to be triggered. Alerts are [assertive live regions](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions). Setting `role="alert"` is equivalent to setting [`aria-live="assertive"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live) and [`aria-atomic="true"`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-atomic). As they don't receive focus, focus does not need to be managed and no user interaction should be required.
 
-> **Warning:** Because of its intrusive nature, the `alert` role must be used sparingly and only in situations where the user's immediate attention is required.
+> [!WARNING]
+> Because of its intrusive nature, the `alert` role must be used sparingly and only in situations where the user's immediate attention is required.
 
 The [`alert`](https://www.w3.org/TR/wai-aria-1.1/#alert) role is of the five [live region](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) roles. Dynamic changes that are less urgent should use a less aggressive method, such as including `aria-live="polite"` or using an other live region role like [`status`](/en-US/docs/Web/Accessibility/ARIA/Roles/status_role). If the user is expected to close the alert, then the [`alertdialog`](/en-US/docs/Web/Accessibility/ARIA/Roles/alertdialog_role) role should be used instead.
 
@@ -72,9 +73,9 @@ Using JavaScript, you can dynamically change the content _inside_ the element wi
 
 ```js
 // clear the contents of the container
-document.getElementById("alertContainer").innerHTML = "";
+document.getElementById("alertContainer").textContent = "";
 // inject the new alert message
-document.getElementById("alertContainer").innerHTML =
+document.getElementById("alertContainer").textContent =
   "Your session will expire in " + expiration + " minutes";
 ```
 
@@ -102,9 +103,9 @@ However, make sure that the container is not hidden using `display:none`, as thi
 
 ```js
 // clear the contents of the container
-document.getElementById("hiddenAlertContainer").innerHTML = "";
+document.getElementById("hiddenAlertContainer").textContent = "";
 // inject the new alert message
-document.getElementById("hiddenAlertContainer").innerHTML =
+document.getElementById("hiddenAlertContainer").textContent =
   "All items were removed from your inventory.";
 ```
 

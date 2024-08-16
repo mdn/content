@@ -46,7 +46,7 @@ These states can then be used as custom state pseudo-class selectors in a simila
 
 ### Setting custom element states
 
-To make the {{domxref("CustomStateSet")}} available, a custom element must first call {{domxref("HTMLElement.attachInternals()")}} in order to attach an {{domxref("ElementInternals")}} object.
+To make the `CustomStateSet` available, a custom element must first call {{domxref("HTMLElement.attachInternals()")}} in order to attach an {{domxref("ElementInternals")}} object.
 `CustomStateSet` is then returned by {{domxref("ElementInternals.states")}}.
 Note that `ElementInternals` cannot be attached to a custom element based on a built-in element, so this feature only works for autonomous custom elements (see [github.com/whatwg/html/issues/5166](https://github.com/whatwg/html/issues/5166)).
 
@@ -77,7 +77,8 @@ CSS can also be used to match a custom state [within a custom element's shadow D
 
 Additionally, the `:state()` pseudo-class can be used after the [`::part()`](/en-US/docs/Web/CSS/::part) pseudo-element to match the [shadow parts](/en-US/docs/Web/CSS/CSS_shadow_parts) of a custom element that are in a particular state.
 
-> **Warning:** Browsers that do not yet support [`:state()`](/en-US/docs/Web/CSS/:state) will use a CSS `<dashed-ident>` for selecting custom states, which is now deprecated.
+> [!WARNING]
+> Browsers that do not yet support [`:state()`](/en-US/docs/Web/CSS/:state) will use a CSS `<dashed-ident>` for selecting custom states, which is now deprecated.
 > For information about how to support both approaches see the [Compatibility with `<dashed-ident>` syntax](#compability_with_dashed-ident_syntax) section below.
 
 ## Examples
@@ -111,17 +112,20 @@ class LabeledCheckbox extends HTMLElement {
   connectedCallback() {
     const shadowRoot = this.attachShadow({ mode: "open" });
     shadowRoot.innerHTML = `<style>
-        :host {
-          display: block;
-        }
-       :host::before {
-         content: '[ ]';
-         white-space: pre;
-         font-family: monospace;
-       }
-       :host(:state(checked))::before { content: '[x]'; }
-       </style>
-       <slot>Label</slot>`;
+  :host {
+    display: block;
+  }
+  :host::before {
+    content: "[ ]";
+    white-space: pre;
+    font-family: monospace;
+  }
+  :host(:state(checked))::before {
+    content: "[x]";
+  }
+</style>
+<slot>Label</slot>
+`;
   }
 
   get checked() {
@@ -140,7 +144,26 @@ class LabeledCheckbox extends HTMLElement {
     // Toggle the 'checked' property when the element is clicked
     this.checked = !this.checked;
   }
+
+  static isStateSyntaxSupported() {
+    return CSS.supports("selector(:state(checked))");
+  }
 }
+
+customElements.define("labeled-checkbox", LabeledCheckbox);
+
+// Display a warning to unsupported browsers
+document.addEventListener("DOMContentLoaded", () => {
+  if (!LabeledCheckbox.isStateSyntaxSupported()) {
+    if (!document.getElementById("state-warning")) {
+      const warning = document.createElement("div");
+      warning.id = "state-warning";
+      warning.style.color = "red";
+      warning.textContent = "This feature is not supported by your browser.";
+      document.body.insertBefore(warning, document.body.firstChild);
+    }
+  }
+});
 ```
 
 In the `LabeledCheckbox` class:
@@ -199,6 +222,7 @@ class LabeledCheckbox extends HTMLElement {
     super();
     this._boundOnClick = this._onClick.bind(this);
     this.addEventListener("click", this._boundOnClick);
+
     // Attach an ElementInternals to get states property
     this._internals = this.attachInternals();
   }
@@ -206,17 +230,20 @@ class LabeledCheckbox extends HTMLElement {
   connectedCallback() {
     const shadowRoot = this.attachShadow({ mode: "open" });
     shadowRoot.innerHTML = `<style>
-        :host {
-          display: block;
-        }
-       :host::before {
-         content: '[ ]';
-         white-space: pre;
-         font-family: monospace;
-       }
-       :host(:state(checked))::before { content: '[x]'; }
-       </style>
-       <slot>Label</slot>`;
+  :host {
+    display: block;
+  }
+  :host::before {
+    content: "[ ]";
+    white-space: pre;
+    font-family: monospace;
+  }
+  :host(:state(checked))::before {
+    content: "[x]";
+  }
+</style>
+<slot>Label</slot>
+`;
   }
 
   get checked() {
@@ -235,9 +262,25 @@ class LabeledCheckbox extends HTMLElement {
     // Toggle the 'checked' property when the element is clicked
     this.checked = !this.checked;
   }
+
+  static isStateSyntaxSupported() {
+    return CSS.supports("selector(:state(checked))");
+  }
 }
 
 customElements.define("labeled-checkbox", LabeledCheckbox);
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (!LabeledCheckbox.isStateSyntaxSupported()) {
+    if (!document.getElementById("state-warning")) {
+      const warning = document.createElement("div");
+      warning.id = "state-warning";
+      warning.style.color = "red";
+      warning.textContent = "This feature is not supported by your browser.";
+      document.body.insertBefore(warning, document.body.firstChild);
+    }
+  }
+});
 ```
 
 First, we define the custom element class `QuestionBox`, which extends `HTMLElement`.
@@ -250,7 +293,8 @@ class QuestionBox extends HTMLElement {
     super();
     const shadowRoot = this.attachShadow({ mode: "open" });
     shadowRoot.innerHTML = `<div><slot>Question</slot></div>
-       <labeled-checkbox part='checkbox'>Yes</labeled-checkbox>`;
+<labeled-checkbox part="checkbox">Yes</labeled-checkbox>
+`;
   }
 }
 ```
@@ -331,16 +375,26 @@ class ManyStateElement extends HTMLElement {
 
     const shadowRoot = this.attachShadow({ mode: "open" });
     shadowRoot.innerHTML = `<style>
-        :host {
-          display: block;
-          font-family: monospace;
-        }
-       :host::before { content: '[ unknown ]'; white-space: pre; }
-       :host(:state(loading))::before { content: '[ loading ]' }
-       :host(:state(interactive))::before { content: '[ interactive ]' }
-       :host(:state(complete))::before { content: '[ complete ]' }
-       </style>
-       <slot>Click me</slot>`;
+  :host {
+    display: block;
+    font-family: monospace;
+  }
+  :host::before {
+    content: "[ unknown ]";
+    white-space: pre;
+  }
+  :host(:state(loading))::before {
+    content: "[ loading ]";
+  }
+  :host(:state(interactive))::before {
+    content: "[ interactive ]";
+  }
+  :host(:state(complete))::before {
+    content: "[ complete ]";
+  }
+</style>
+<slot>Click me</slot>
+`;
   }
 
   get state() {
@@ -350,17 +404,17 @@ class ManyStateElement extends HTMLElement {
   set state(stateName) {
     // Set internal state to passed value
     // Add identifier matching state and delete others
-    if (stateName == "loading") {
+    if (stateName === "loading") {
       this._state = "loading";
       this._internals.states.add("loading");
       this._internals.states.delete("interactive");
       this._internals.states.delete("complete");
-    } else if (stateName == "interactive") {
+    } else if (stateName === "interactive") {
       this._state = "interactive";
       this._internals.states.delete("loading");
       this._internals.states.add("interactive");
       this._internals.states.delete("complete");
-    } else if (stateName == "complete") {
+    } else if (stateName === "complete") {
       this._state = "complete";
       this._internals.states.delete("loading");
       this._internals.states.delete("interactive");
@@ -378,9 +432,25 @@ class ManyStateElement extends HTMLElement {
       this.state = "loading";
     }
   }
+
+  static isStateSyntaxSupported() {
+    return CSS.supports("selector(:state(loading))");
+  }
 }
 
 customElements.define("many-state-element", ManyStateElement);
+
+document.addEventListener("DOMContentLoaded", () => {
+  if (!LabeledCheckbox.isStateSyntaxSupported()) {
+    if (!document.getElementById("state-warning")) {
+      const warning = document.createElement("div");
+      warning.id = "state-warning";
+      warning.style.color = "red";
+      warning.textContent = "This feature is not supported by your browser.";
+      document.body.insertBefore(warning, document.body.firstChild);
+    }
+  }
+});
 ```
 
 #### HTML

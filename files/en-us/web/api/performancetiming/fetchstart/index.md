@@ -10,7 +10,8 @@ browser-compat: api.PerformanceTiming.fetchStart
 
 {{APIRef("Performance API")}}{{Deprecated_Header}}
 
-> **Warning:** This interface of this property is deprecated in the [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete). Please use the {{domxref("PerformanceNavigationTiming")}}
+> [!WARNING]
+> This interface of this property is deprecated in the [Navigation Timing Level 2 specification](https://w3c.github.io/navigation-timing/#obsolete). Please use the {{domxref("PerformanceNavigationTiming")}}
 > interface instead.
 
 The legacy
@@ -34,5 +35,4 @@ Use the {{domxref("PerformanceNavigationTiming")}} interface instead.
 
 ## See also
 
-- The {{domxref("PerformanceTiming")}} interface it belongs
-  to.**`PerformanceTiming.fetchStart`**
+- The {{domxref("PerformanceTiming")}} interface it belongs to.
