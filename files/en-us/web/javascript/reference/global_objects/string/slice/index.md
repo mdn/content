@@ -15,13 +15,14 @@ returns it as a new string, without modifying the original string.
 ## Syntax
 
 ```js-nolint
+slice()
 slice(indexStart)
 slice(indexStart, indexEnd)
 ```
 
 ### Parameters
 
-- `indexStart`
+- `indexStart` {{optional_inline}}
   - : The index of the first character to include in the returned substring.
 - `indexEnd` {{optional_inline}}
   - : The index of the first character to exclude from the returned substring.
