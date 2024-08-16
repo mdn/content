@@ -40,7 +40,7 @@ This example demonstrates how to use `transformToDocument()` to transform an XML
 #### HTML
 
 ```html
-<div id="result"></div>
+<pre id="result"></pre>
 ```
 
 #### JavaScript
