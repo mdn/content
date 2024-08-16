@@ -60,8 +60,8 @@ const xsltString1 = `
 
 const xmlString2 = `
 <fruits>
-    <fruit>Apple</fruit>
-    <fruit>Banana</fruit>
+  <fruit>Apple</fruit>
+  <fruit>Banana</fruit>
 </fruits>
 `;
 
