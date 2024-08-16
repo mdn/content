@@ -32,22 +32,26 @@ An object that is the value associated with the parameter. It can be of any type
 
 ## Examples
 
+### Using getParameter()
+
 This example shows how to use `getParameter()` to check the value of a parameter that controls the behavior of an XSLT transformation.
+
+#### HTML
 
 ```html
 <div id="result"></div>
 ```
 
+#### JavaScript
+
 ```js
-// Simple XML data
 const xmlString = `
 <items>
-    <item>Item 1</item>
-    <item>Item 2</item>
+  <item>Item 1</item>
+  <item>Item 2</item>
 </items>
 `;
 
-// Simple XSLT stylesheet
 const xsltString = `
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:param name="showItems" select="'yes'"/>
@@ -63,19 +67,15 @@ const xsltString = `
 </xsl:stylesheet>
 `;
 
-// Parse XML and XSLT
 const parser = new DOMParser();
 const xmlDoc = parser.parseFromString(xmlString, "application/xml");
 const xsltDoc = parser.parseFromString(xsltString, "application/xml");
 
-// Create XSLTProcessor and import the stylesheet
 const xsltProcessor = new XSLTProcessor();
 xsltProcessor.importStylesheet(xsltDoc);
 
-// Set parameter to show items
 xsltProcessor.setParameter(null, "showItems", "no");
 
-// Get and display the current parameter value
 const currentParamValue = xsltProcessor.getParameter(null, "showItems");
 console.log(`Current showItems parameter: ${currentParamValue}`);
 
@@ -95,6 +95,10 @@ resultFragment = xsltProcessor.transformToFragment(xmlDoc, document);
 document.getElementById("result").appendChild(document.createElement("hr"));
 document.getElementById("result").appendChild(resultFragment);
 ```
+
+#### Result
+
+{{EmbedLiveSample("using_getParameters", "", "200")}}
 
 ## Specifications
 
