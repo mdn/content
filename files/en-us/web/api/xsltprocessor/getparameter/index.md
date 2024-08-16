@@ -36,64 +36,12 @@ An object that is the value associated with the parameter. It can be of any type
 
 This example shows how to use `getParameter()` to check the value of a parameter that controls the behavior of an XSLT transformation.
 
-#### HTML
-
-```html
-<div id="result"></div>
-```
-
 #### JavaScript
 
 ```js
-const xmlString = `
-<items>
-  <item>Item 1</item>
-  <item>Item 2</item>
-</items>
-`;
-
-const xsltString = `
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  <xsl:param name="showItems" select="'yes'"/>
-  <xsl:template match="/">
-    <ul>
-      <xsl:if test="$showItems = 'yes'">
-        <xsl:for-each select="items/item">
-          <li><xsl:value-of select="."/></li>
-        </xsl:for-each>
-      </xsl:if>
-    </ul>
-  </xsl:template>
-</xsl:stylesheet>
-`;
-
-const parser = new DOMParser();
-const xmlDoc = parser.parseFromString(xmlString, "application/xml");
-const xsltDoc = parser.parseFromString(xsltString, "application/xml");
-
 const xsltProcessor = new XSLTProcessor();
-xsltProcessor.importStylesheet(xsltDoc);
-
-xsltProcessor.setParameter(null, "showItems", "no");
-
-const currentParamValue = xsltProcessor.getParameter(null, "showItems");
-console.log(`Current showItems parameter: ${currentParamValue}`);
-
-// Perform transformation and display result
-let resultFragment = xsltProcessor.transformToFragment(xmlDoc, document);
-document.getElementById("result").appendChild(resultFragment);
-
-// Change the parameter value
-xsltProcessor.setParameter(null, "showItems", "yes");
-
-// Get and display the updated parameter value
-const updatedParamValue = xsltProcessor.getParameter(null, "showItems");
-console.log(`Updated showItems parameter: ${updatedParamValue}`);
-
-// Perform transformation again and display the result
-resultFragment = xsltProcessor.transformToFragment(xmlDoc, document);
-document.getElementById("result").appendChild(document.createElement("hr"));
-document.getElementById("result").appendChild(resultFragment);
+xsltProcessor.setParameter(null, "foo", "bar");
+console.log(xsltProcessor.getParameter(null, "foo")); // "bar"
 ```
 
 #### Result
