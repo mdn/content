@@ -59,6 +59,9 @@ max-height: unset;
 - `stretch` {{Experimental_Inline}}
   - : Limits the maximum height of the element's [margin box](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#parts_of_a_box) to the height of its [containing block](/en-US/docs/Web/CSS/Containing_block#identifying_the_containing_block). It attempts to make the margin box fill the available space in the containing block, so in a way behaving similar to `100%` but applying the resulting size to the margin box rather than the box determined by [box-sizing](/en-US/docs/Web/CSS/box-sizing).
 
+    > [!NOTE]
+    > To check aliases used by browsers for the `stretch` value and its implementation status, see the [Browser compatibility](#browser_compatibility) section.
+
 ## Accessibility
 
 Ensure that elements set with a `max-height` are not truncated and/or do not obscure other content when the page is zoomed to increase text size.

@@ -31,7 +31,6 @@ max-inline-size: max-content;
 max-inline-size: min-content;
 max-inline-size: fit-content;
 max-inline-size: fit-content(20em);
-max-inline-size: stretch;
 
 /* Global values */
 max-inline-size: inherit;
