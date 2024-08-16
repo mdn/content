@@ -29,7 +29,7 @@ None ({{jsxref("undefined")}}).
 
 ### Using importStylesheet()
 
-This example shows how `importStylesheet()` loads an XSLT stylesheet into an XSLTProcessor for use in transforming XML data.
+This example shows how `importStylesheet()` loads an XSLT stylesheet into an `XSLTProcessor` for use in transforming XML data.
 
 #### HTML
 
