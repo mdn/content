@@ -1,16 +1,15 @@
 ---
-title: "HTML attribute: writingsuggestions"
-short-title: writingsuggestions
-slug: Web/HTML/Attributes/writingsuggestions
+title: writingsuggestions
+slug: Web/HTML/Global_attributes/writingsuggestions
 page-type: html-attribute
 browser-compat: html.global_attributes.writingsuggestions
 ---
 
-{{HTMLSidebar}}
+{{HTMLSidebar("Global_attributes")}}
 
-The **`writingsuggestions`** global attribute allows you to turn browser-provided writing suggestions on or off.
+The **`writingsuggestions`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) allows developers to turn on or off the writing assistance that browsers provide to users when entering text in editable fields on the web.
 
-Certain browsers provide auto-complete suggestions to users as they type in editable fields on web pages. While this can be helpful to users, you might want to turn them off in some cases, such as when providing your own form of auto-complete suggestions.
+Certain browsers provide writing suggestions to users as they type in editable fields. Suggestions usually appear as greyed-out text positioned after the text cursor and which completes the user's sentence. While this can be helpful to users, developers might want to turn writing suggestions off in some cases, such as when providing their own form of writing suggestions.
 
 The `writingsuggestions` attribute can be set on editable fields such as {{htmlelement('input')}} or {{htmlelement('textarea')}} elements, or on other HTML elements to control the behavior of the browser's suggestions on sections of a page, or on the entire page.
 
