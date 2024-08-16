@@ -69,18 +69,20 @@ const xsltDoc = parser.parseFromString(xsltString, "application/xml");
 const xsltProcessor = new XSLTProcessor();
 xsltProcessor.importStylesheet(xsltDoc);
 
+// Set the 'showItems' parameter to 'yes' and perform transformation
 xsltProcessor.setParameter(null, "showItems", "yes");
-
-// Perform transformation and display result
 let resultFragment = xsltProcessor.transformToFragment(xmlDoc, document);
 document.getElementById("result").appendChild(resultFragment);
+
+// Add a horizontal rule to separate the results
+document.getElementById("result").appendChild(document.createElement("hr"));
 
 // Clear all parameters
 xsltProcessor.clearParameters();
 
-// Perform transformation again (this will use the default value for 'showItems')
+// Set the 'showItems' parameter to 'no' and perform transformation
+xsltProcessor.setParameter(null, "showItems", "no");
 resultFragment = xsltProcessor.transformToFragment(xmlDoc, document);
-document.getElementById("result").appendChild(document.createElement("hr"));
 document.getElementById("result").appendChild(resultFragment);
 ```
 
