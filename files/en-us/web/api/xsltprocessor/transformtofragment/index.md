@@ -29,28 +29,32 @@ A {{domxref("DocumentFragment")}}.
 
 ## Examples
 
+### Using transformToFragment()
+
 This example demonstrates how to use `transformToFragment()` to transform XML data into HTML, which can then be directly inserted into the DOM as a document fragment.
+
+#### HTML
 
 ```html
 <div id="result"></div>
 ```
 
+#### JavaScript
+
 ```js
-// Sample XML data
 const xmlString = `
 <books>
-    <book>
-        <title>Book 1</title>
-        <author>Author 1</author>
-    </book>
-    <book>
-        <title>Book 2</title>
-        <author>Author 2</author>
-    </book>
+  <book>
+    <title>Book 1</title>
+    <author>Author 1</author>
+  </book>
+  <book>
+    <title>Book 2</title>
+    <author>Author 2</author>
+  </book>
 </books>
 `;
 
-// Sample XSLT stylesheet
 const xsltString = `
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:output method="html"/>
@@ -67,12 +71,10 @@ const xsltString = `
 </xsl:stylesheet>
 `;
 
-// Parse the XML and XSLT strings into DOM objects
 const parser = new DOMParser();
 const xmlDoc = parser.parseFromString(xmlString, "application/xml");
 const xsltDoc = parser.parseFromString(xsltString, "application/xml");
 
-// Create an XSLTProcessor instance
 const xsltProcessor = new XSLTProcessor();
 xsltProcessor.importStylesheet(xsltDoc);
 
@@ -82,6 +84,10 @@ const resultFragment = xsltProcessor.transformToFragment(xmlDoc, document);
 // Insert the result into the page
 document.getElementById("result").appendChild(resultFragment);
 ```
+
+#### Result
+
+{{EmbedLiveSample("using_transformToFragment", "", "200")}}
 
 ## Specifications
 
