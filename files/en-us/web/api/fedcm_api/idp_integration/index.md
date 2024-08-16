@@ -295,4 +295,4 @@ Once the user is signed in to the IdP, the IdP should:
 
 ## See also
 
-- [Federated Credential Management API](https://developers.google.com/privacy-sandbox/3pcd/fedcm) on developers.google.com (2023)
+- [Federated Credential Management API](https://developers.google.com/privacy-sandbox/cookies/fedcm) on developers.google.com (2023)

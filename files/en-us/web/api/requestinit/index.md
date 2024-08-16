@@ -124,7 +124,7 @@ You can also construct a `Request` with a `RequestInit`, and pass the `Request` 
 
     The format of this option is `<hash-algo>-<hash-source>` where:
 
-    - `<hash-algo>` is one of the following values:`sha256`, `sha384`, or `sha512`
+    - `<hash-algo>` is one of the following values: `sha256`, `sha384`, or `sha512`
     - `<hash-source>` is the {{glossary("base64", "Base64-encoding")}} of the result of hashing the resource with the specified hash algorithm.
 
     Defaults to an empty string.

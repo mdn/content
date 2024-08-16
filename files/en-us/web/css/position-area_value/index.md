@@ -1,22 +1,22 @@
 ---
-title: <inset-area>
-slug: Web/CSS/inset-area_value
+title: <position-area>
+slug: Web/CSS/position-area_value
 page-type: css-type
 status:
   - experimental
-browser-compat: css.properties.inset-area
+browser-compat: css.properties.position-area
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`<inset-area>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) defines the cell or spanned cells of an **inset-area grid**, an 3x3 grid whose center cell is an anchor element.
+The **`<position-area>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/CSS_Types) defines the cell or spanned cells of a **position-area grid**, a 3x3 grid whose center cell is an anchor element.
 
-The `<inset-area>` keyword values can be set as the value of the {{cssxref("inset-area")}} property to place an anchor-positioned element in a specific location relative to its associated anchor element.
+The `<position-area>` keyword values can be set as the value of the {{cssxref("position-area")}} property to place an anchor-positioned element in a specific location relative to its associated anchor element.
 
 ## Syntax
 
 ```plain
-<inset-area> = [
+<position-area> = [
   [ left | center | right | span-left | span-right | x-start | x-end | span-x-start | span-x-end | x-self-start | x-self-end | span-x-self-start | span-x-self-end | span-all ]
 ||
   [ top | center | bottom | span-top | span-bottom | y-start | y-end | span-y-start | span-y-end | y-self-start | y-self-end | span-y-self-start | span-y-self-end | span-all ]
@@ -37,49 +37,49 @@ The `<inset-area>` keyword values can be set as the value of the {{cssxref("inse
 
 ## Description
 
-Inset areas work on the concept of an **inset-area grid**, a 3x3 grid of tiles composed of four grid lines, two on each axis, with an anchor element being the center tile:
+Position areas work on the concept of a **position-area grid**, a 3x3 grid of tiles composed of four grid lines, two on each axis, with an anchor element being the center tile:
 
-![The inset-area grid, as described below](inset-area.png)
+![The position-area grid, as described below](position-area.png)
 
-When used as the value of a positioned element`s inset-area` property, the dimensions of the center tile are defined by the [containing block](/en-US/docs/Web/CSS/Containing_block) of the element's default anchor element. The dimensions of the grid's outer edge are defined by the positioned element's containing block. Logical keyterms are generally based on the writing mode and direction of the containing block, except for the `self-*` keyterms, which are calculated from the writing mode of the anchor-positioned element.
+When used as the value of a positioned element's `position-area` property, the dimensions of the center tile are defined by the [containing block](/en-US/docs/Web/CSS/Containing_block) of the element's default anchor element. The dimensions of the grid's outer edge are defined by the positioned element's containing block. Logical keyterms are generally based on the writing mode and direction of the containing block, except for the `self-*` keyterms, which are calculated from the writing mode of the anchor-positioned element.
 
 The grid tiles are broken up into rows and columns:
 
 - The three rows are represented by the physical values `top`, `center`, and `bottom`. They also have logical equivalents such as `block-start`, `center`, and `block-end`, and coordinate equivalents — `y-start`, `center`, and `y-end`.
 - The three columns are represented by the physical values `left`, `center`, and `right`. They also have logical equivalents such as `inline-start`, `center`, and `inline-end`, and coordinate equivalents — `x-start`, `center`, and `x-end`.
 
-`<inset-area>` values contain one or two keywords defining a specific area of the inset-area grid. Setting an `<inset-area>` value on a positioned element's `inset-area` property places its containing block in the specified grid area:
+`<position-area>` values contain one or two keywords defining a specific area of the position-area grid. Setting a `position-area` value on a positioned element places its containing block in the specified grid area:
 
 ```css
 /* Examples: Two keywords to place the element in a single specific tile */
-inset-area: top left;
-inset-area: bottom right;
-inset-area: start end;
-inset-area: center end;
-inset-area: block-start center;
-inset-area: inline-start block-end;
-inset-area: x-start y-end;
-inset-area: center y-self-end;
+position-area: top left;
+position-area: bottom right;
+position-area: start end;
+position-area: center end;
+position-area: block-start center;
+position-area: inline-start block-end;
+position-area: x-start y-end;
+position-area: center y-self-end;
 
 /* Examples: Two keywords to span the element across two tiles */
-inset-area: top span-left;
-inset-area: span-bottom right;
-inset-area: center span-start;
-inset-area: inline-start span-block-end;
-inset-area: y-start span-x-end;
+position-area: top span-left;
+position-area: span-bottom right;
+position-area: center span-start;
+position-area: inline-start span-block-end;
+position-area: y-start span-x-end;
 
 /* Examples: Two keywords to span the element across three tiles */
-inset-area: top span-all;
-inset-area: block-end span-all;
-inset-area: x-self-start span-all;
+position-area: top span-all;
+position-area: block-end span-all;
+position-area: x-self-start span-all;
 
 /* Examples: One keyword with an implicit second keyword  */
-inset-area: top; /* equiv: top span-all */
-inset-area: inline-start; /* equiv: inline-start span-all */
-inset-area: center; /* equiv: center center */
-inset-area: span-all; /* equiv: center center */
-inset-area: start; /* equiv: start start */
-inset-area: end; /* equiv: end end */
+position-area: top; /* equiv: top span-all */
+position-area: inline-start; /* equiv: inline-start span-all */
+position-area: center; /* equiv: center center */
+position-area: span-all; /* equiv: center center */
+position-area: start; /* equiv: start start */
+position-area: end; /* equiv: end end */
 ```
 
 The different types of keywords that can be used include:
@@ -90,11 +90,11 @@ The different types of keywords that can be used include:
 - [Coordinate grid keywords](#coordinate_grid_keywords)
 
 > [!NOTE]
-> Generally, you can't mix different types in one value, e.g. physical and logical. To do so results in invalid values. For example, `inset-area: bottom inline-end` is not a valid value because it mixes physical and logical keywords.
+> Generally, you can't mix different types in one value, e.g. physical and logical. To do so results in invalid values. For example, `position-area: bottom inline-end` is not a valid value because it mixes physical and logical keywords.
 
 ## Physical grid keywords
 
-The physical grid keywords specify a cell or section of the `inset-area` grid using physical values. These values are not affected by {{cssxref("writing-mode")}} or {{cssxref("direction")}} settings.
+The physical grid keywords specify a cell or section of the `position-area` grid using physical values. These values are not affected by {{cssxref("writing-mode")}} or {{cssxref("direction")}} settings.
 
 With physical row and column keywords, you can specify one keyword from each of the two lists below to select a single specific grid tile:
 
@@ -103,9 +103,9 @@ With physical row and column keywords, you can specify one keyword from each of 
 
 For example, `top left` selects the top left tile, while `center right` selects the center tile of the right-hand column.
 
-### Spanning physical grid keywords
+### Physical spanning grid keywords
 
-The physical spanning keywords — when combined with a physical row or column keyword — specify a second grid tile for the inset area to expand into. When such a combination is set as an `inset-area` property value, a selected element is initially placed in the center of the specified row or column; it then spans in the direction specified in the spanning keyword, spanning two grid tiles:
+The physical spanning keywords — when combined with a physical row or column keyword — specify a second grid tile for the position area to expand into. When such a combination is set as a `position-area` property value, a selected element is initially placed in the center of the specified row or column; it then spans in the direction specified in the spanning keyword, spanning two grid tiles:
 
 - `span-left`
 
@@ -134,7 +134,7 @@ For example, `top span-left` spans the top-center and top-left grid cells.
 
 ### Physical grid keyword defaults
 
-If only a single physical keyword is specified in the `inset-area` value, the other value is implied as follows:
+If only a single physical keyword is specified in the `position-area` value, the other value is implied as follows:
 
 - `left`, `right`, `top`, or `bottom`
 
@@ -146,11 +146,11 @@ If only a single physical keyword is specified in the `inset-area` value, the ot
 
 ## Logical grid keywords
 
-The logical grid keywords specify an area of the inset area grid using logical values. With these values, the position and direction are affected by {{cssxref("writing-mode")}} and {{cssxref("direction")}} settings on either the element's [containing block](/en-US/docs/Web/CSS/Containing_block) or, in the case of the `self` keywords, the positioned element itself. There are two types of logical keywords; generic and explicit.
+The logical grid keywords specify an area of the position area grid using logical values. With these values, the position and direction are affected by {{cssxref("writing-mode")}} and {{cssxref("direction")}} settings on either the element's [containing block](/en-US/docs/Web/CSS/Containing_block) or, in the case of the `self` keywords, the positioned element itself. There are two types of logical keywords; generic and explicit.
 
 ### Generic logical row and column keywords
 
-The generic logical keywords use the same terms for inline and block directions, with the direction determined by the position of the keyterm within a pair of `<inset-area>` values. The first value in a pair of values defines the block direction position and the second value defines the inline value. You can specify one or two keyterms from the following list. Specifying two from this list defines a single specific grid tile. The keyword position or direction is:
+The generic logical keywords use the same terms for the inline and block directions, with the direction determined by the position of the keyterm within a pair of `<position-area>` values. The first value defines the block direction position and the second value defines the inline value. You can specify one or two keyterms from the following list. Specifying two from this list defines a single specific grid tile. The keyword position or direction is:
 
 - `start`
 
@@ -170,13 +170,13 @@ The generic logical keywords use the same terms for inline and block directions,
 
 - `center`
 
-  - : The center of the grid's block or inline direction, depending on whether this keyword is first or second, respectively.
+  - : The center of the grid's block direction (if this keyword is specified first) or inline direction (if this keyword is specified second).
 
 For example, `start end` and `self-start self-end` both describe the position at the start of the block direction and the end of the inline direction. With `writing-mode: horizontal-tb` set, this is the top right of the anchor element, whereas with `writing-mode: vertical-rl` it is the bottom right of the anchor.
 
-#### Spanning generic logical row and column keywords
+#### Generic logical spanning row and column keywords
 
-The generic logical spanning keywords — when combined with a logical row or column keyword — specify a second grid tile for the inset area to expand into. When such a combination is set as an `inset-area` property value, a selected element is initially placed in the center of the specified row or column, and it then spans in the direction specified in the spanning keyword, spanning two grid tiles:
+The generic logical spanning keywords — when combined with a logical row or column keyword — specify a second grid tile for the position area to expand into. When such a combination is set as a `position-area` property value, a selected element is initially placed in the center of the specified row or column, and it then spans in the direction specified in the spanning keyword, spanning two grid tiles:
 
 - `span-start`
 
@@ -194,7 +194,7 @@ The generic logical spanning keywords — when combined with a logical row or co
 
   - : Span the center tile and the end tile of the grid row/column, calculated from the element's own writing mode.
 
-For example, `start span-end` and `self-start span-self-end` both specify a grid inset area that starts in the center of the start block row, and spans across the tiles in that row that are also in the inline center and end columns. With `writing-mode: horizontal-tb` set, this would span over the top center and top right of the anchor, whereas with `writing-mode: vertical-rl` set it would span the element over the right center and bottom right.
+For example, `start span-end` and `self-start span-self-end` both specify a grid position area that starts in the center of the start block row, and spans across the tiles in that row that sit in the inline center and end columns. With `writing-mode: horizontal-tb` set, this would span over the top center and top right of the anchor, whereas with `writing-mode: vertical-rl` set it would span the element over the right center and bottom right.
 
 ### Explicit inline and block logical keywords
 
@@ -221,9 +221,9 @@ For example, `block-start inline-end` specifies the tile at the start of the blo
 > [!NOTE]
 > The specification defines `self` equivalents of these keywords — `block-self-start`, `block-self-end`, `inline-self-start`, and `inline-self-end`. However, these are not currently supported in any browser.
 
-#### Spanning explicit inline and block logical keywords
+#### Explicit inline and block logical spanning keywords
 
-The generic logical spanning keywords — when combined with a logical row or column keyword — specify a second grid tile for the inset area to expand into. When such a combination is set as an `inset-area` property value, a selected element is initially placed in the center of the specified row or column, based on the containing block's writing mode, and it then spans in the direction specified in the spanning keyword, spanning two grid tiles:
+The explicit logical spanning keywords — when combined with a logical row or column keyword — specify a second grid tile for the position area to expand into. When such a combination is set as a `position-area` property value, a selected element is initially placed in the center of the specified row or column, based on the containing block's writing mode, and it then spans in the direction specified in the spanning keyword, spanning two grid tiles:
 
 - `span-block-start`
 
@@ -241,7 +241,7 @@ The generic logical spanning keywords — when combined with a logical row or co
 
   - : Span the center tile and the inline-end tile of the specified block row.
 
-For example, `block-end span-inline-start` selects the center tile of the end block row and spans across the tiles in that row that are in the inline center and start columns. With `writing-mode: horizontal-tb` set, this would span the bottom-center and bottom-left grid tiles, whereas with `writing-mode: vertical-rl` set it would span the left-center and top-left grid tiles.
+For example, `block-end span-inline-start` selects the center tile of the end block row and spans across the tiles in that row that sit in the inline center and start columns. With `writing-mode: horizontal-tb` set, this would span the bottom-center and bottom-left grid tiles, whereas with `writing-mode: vertical-rl` set it would span the left-center and top-left grid tiles.
 
 > [!NOTE]
 > The specification defines `self` equivalents of these keywords, for example — `span-self-block-start`, `span-self-block-end`, `span-self-inline-start`, and `span-self-inline-end`. However, these are not currently supported in any browser.
@@ -251,7 +251,7 @@ For example, `block-end span-inline-start` selects the center tile of the end bl
 
 ### Logical grid keyword defaults
 
-If only a single logical `<inset-area>` keyword is specified, the other value is implied as follows:
+If only a single logical `<position-area>` keyword is specified, the other value is implied as follows:
 
 - `start`, `end`, `self-start`, or `self-end`
 
@@ -271,7 +271,7 @@ If only a single logical `<inset-area>` keyword is specified, the other value is
 
 ## Coordinate grid keywords
 
-These keywords specify the cells of the `inset-area` grid using x- and y-coordinate values. Its position/direction will be affected by {{cssxref("writing-mode")}} and/or {{cssxref("direction")}} settings on either an element's [containing block](/en-US/docs/Web/CSS/Containing_block) or, in the case of the `self` keywords, the element itself.
+These keywords specify the cells of the `position-area` grid using x- and y-coordinate values. Its position/direction will be affected by {{cssxref("writing-mode")}} and/or {{cssxref("direction")}} settings on either an element's [containing block](/en-US/docs/Web/CSS/Containing_block) or, in the case of the `self` keywords, the element itself.
 
 However, the grid cells are defined according to physical axes rather than block/inline directions:
 
@@ -326,9 +326,9 @@ The y-axis keywords include:
 
 For example, `x-end y-start` and `x-self-end y-self-start` both select the grid cell at end of the x-axis and the start of the y-axis. With `writing-mode: horizontal-tb` set, this would be the cell to the top right of the anchor, whereas with `writing-mode: vertical-rl` is at the top left.
 
-### Spanning coordinate grid keywords
+### Coordinate spanning keywords
 
-When combined with a coordinate row or column keyword, the coordinate-spanning keywords specify a second grid tile for the inset area to expand into. When such a combination is set as an `inset-area` property value, a selected element is initially placed in the center of the specified row or column, and it then spans in the direction specified in the spanning keyword, spanning two grid tiles:
+When combined with a coordinate row or column keyword, the coordinate-spanning keywords specify a second grid tile for the position area to expand into. When such a combination is set as a `position-area` property value, a selected element is initially placed in the center of the specified row or column, and it then spans in the direction specified in the spanning keyword, spanning two grid tiles:
 
 - `span-x-start`
 
@@ -346,14 +346,14 @@ When combined with a coordinate row or column keyword, the coordinate-spanning k
 
   - : Span the center tile and the y-end tile of the specified x-axis column.
 
-For example, `y-end span-x-end` selects the tile at the center of the end y-row, and spans across the tiles in that row that are also in the x-center and x-end columns. With `writing-mode: horizontal-tb` set, the inset grid area would span the grid tiles at the bottom-center and bottom-right, whereas with `writing-mode: vertical-rl` set it would span the bottom-center and bottom-left tiles.
+For example, `y-end span-x-end` selects the tile at the center of the end y-row, and spans across the tiles in that row that sit in the x-center and x-end columns. With `writing-mode: horizontal-tb` set, the position grid area would span the grid tiles at the bottom-center and bottom-right, whereas with `writing-mode: vertical-rl` set it would span the bottom-center and bottom-left tiles.
 
 > [!NOTE]
 > The specification doesn't define separate coordinate `self` spanning keywords, but these are not needed — the spanning keywords can be used with both coordinate row and column keywords.
 
 ### Coordinate grid keyword defaults
 
-If only a single coordinate grid `<inset-area>` keyword is specified, the other value is implied as follows:
+If only a single coordinate grid `<position-area>` keyword is specified, the other value is implied as follows:
 
 - `x-start`, `x-self-start`, `x-end`, `x-self-end`, `y-start`, `y-self-start`, `y-end`, or `y-self-end`
 
@@ -369,7 +369,7 @@ If only a single coordinate grid `<inset-area>` keyword is specified, the other 
 
 ## Examples
 
-See the {{cssxref("inset-area")}} property page.
+See the {{cssxref("position-area")}} property page.
 
 For detailed information on anchor features and usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module landing page and the [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide.
 
@@ -383,7 +383,7 @@ For detailed information on anchor features and usage, see the [CSS anchor posit
 
 ## See also
 
-- {{cssxref("inset-area")}}
+- {{cssxref("position-area")}}
 - {{cssxref("anchor-name")}}
 - {{cssxref("position-anchor")}}
 - [`anchor()`](/en-US/docs/Web/CSS/anchor) function
