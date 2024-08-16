@@ -55,13 +55,18 @@ const xsltString = `
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:param name="showItems" select="'yes'"/>
   <xsl:template match="/">
-    <ul>
-      <xsl:if test="$showItems = 'yes'">
+    <!-- If showItems is 'yes', display the list of items -->
+    <xsl:if test="$showItems = 'yes'">
+      <ul>
         <xsl:for-each select="items/item">
           <li><xsl:value-of select="."/></li>
         </xsl:for-each>
-      </xsl:if>
-    </ul>
+      </ul>
+    </xsl:if>
+    <!-- If showItems is 'no', display a message -->
+    <xsl:if test="$showItems = 'no'">
+      <div>No content to show</div>
+    </xsl:if>
   </xsl:template>
 </xsl:stylesheet>
 `;
@@ -73,18 +78,19 @@ const xsltDoc = parser.parseFromString(xsltString, "application/xml");
 const xsltProcessor = new XSLTProcessor();
 xsltProcessor.importStylesheet(xsltDoc);
 
-xsltProcessor.setParameter(null, "showItems", "yes");
-
-// Perform transformation and display result
+// Set 'showItems' to 'no' and perform the first transformation
+xsltProcessor.setParameter(null, "showItems", "no");
 const resultContainer = document.getElementById("result");
-const resultFragment = xsltProcessor.transformToFragment(xmlDoc, document);
+let resultFragment = xsltProcessor.transformToFragment(xmlDoc, document);
 resultContainer.appendChild(resultFragment);
 
-// Remove parameter to hide items
+// Add a horizontal rule to separate the results
 resultContainer.appendChild(document.createElement("hr"));
+
+// Remove the 'showItems' parameter, reverting it to the default value ('yes')
 xsltProcessor.removeParameter(null, "showItems");
-const resultFragment2 = xsltProcessor.transformToFragment(xmlDoc, document);
-resultContainer.appendChild(resultFragment2);
+resultFragment = xsltProcessor.transformToFragment(xmlDoc, document);
+resultContainer.appendChild(resultFragment);
 ```
 
 #### Result
