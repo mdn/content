@@ -51,13 +51,16 @@ const xsltString = `
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:param name="showItems" select="'yes'"/>
   <xsl:template match="/">
-    <ul>
-      <xsl:if test="$showItems = 'yes'">
+    <xsl:if test="$showItems = 'yes'">
+      <ul>
         <xsl:for-each select="items/item">
           <li><xsl:value-of select="."/></li>
         </xsl:for-each>
-      </xsl:if>
-    </ul>
+      </ul>
+    </xsl:if>
+    <xsl:if test="$showItems = 'no'">
+      <div>No content to show</div>
+    </xsl:if>
   </xsl:template>
 </xsl:stylesheet>
 `;
