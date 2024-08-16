@@ -18,8 +18,7 @@ There are two types of custom element:
 
 - **Customized built-in elements** inherit from standard HTML elements such as {{domxref("HTMLImageElement")}} or {{domxref("HTMLParagraphElement")}}. Their implementation extends the behavior of select instances of the standard element.
 
-  > [!NOTE]
-  > [Safari does not plan to support custom built-in elements](https://github.com/WebKit/standards-positions/issues/97) and [browser vendors are exploring alternative solutions to customizing built-ins](https://github.com/WICG/webcomponents/issues/1029). Check the [browser compatibility](#browser_compatibility) section for support information.
+  > [!NOTE] > [Safari does not plan to support custom built-in elements](https://github.com/WebKit/standards-positions/issues/97) and [browser vendors are exploring alternative solutions to customizing built-ins](https://github.com/WICG/webcomponents/issues/1029). Check the [browser compatibility](#browser_compatibility) section for support information.
 
 ## Implementing a custom element
 
