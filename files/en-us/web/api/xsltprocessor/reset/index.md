@@ -26,22 +26,26 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
+### Using reset()
+
 This example demonstrates how the `reset()` method allows the same `XSLTProcessor` instance to be reused for multiple transformations with different stylesheets.
+
+#### HTML
 
 ```html
 <div id="result"></div>
 ```
 
+#### JavaScript
+
 ```js
-// First XML data
 const xmlString1 = `
 <items>
-    <item>Item A</item>
-    <item>Item B</item>
+  <item>Item A</item>
+  <item>Item B</item>
 </items>
 `;
 
-// First XSLT stylesheet
 const xsltString1 = `
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:template match="/">
@@ -54,7 +58,6 @@ const xsltString1 = `
 </xsl:stylesheet>
 `;
 
-// Second XML data
 const xmlString2 = `
 <fruits>
     <fruit>Apple</fruit>
@@ -62,7 +65,6 @@ const xmlString2 = `
 </fruits>
 `;
 
-// Second XSLT stylesheet
 const xsltString2 = `
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:template match="/">
@@ -75,14 +77,12 @@ const xsltString2 = `
 </xsl:stylesheet>
 `;
 
-// Parse the XML and XSLT strings into DOM objects
 const parser = new DOMParser();
 const xmlDoc1 = parser.parseFromString(xmlString1, "application/xml");
 const xsltDoc1 = parser.parseFromString(xsltString1, "application/xml");
 const xmlDoc2 = parser.parseFromString(xmlString2, "application/xml");
 const xsltDoc2 = parser.parseFromString(xsltString2, "application/xml");
 
-// Create an XSLTProcessor instance
 const xsltProcessor = new XSLTProcessor();
 
 // Import the first XSLT stylesheet and transform the first XML
@@ -99,6 +99,10 @@ resultFragment = xsltProcessor.transformToFragment(xmlDoc2, document);
 document.getElementById("result").appendChild(document.createElement("hr"));
 document.getElementById("result").appendChild(resultFragment);
 ```
+
+#### Result
+
+{{EmbedLiveSample("using_reset", "", "200")}}
 
 ## Specifications
 
