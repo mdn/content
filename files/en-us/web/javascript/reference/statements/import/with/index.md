@@ -75,17 +75,17 @@ Therefore, the code above should be re-written as:
 import data from "https://example.com/data.json" with { type: "json" };
 ```
 
-This particular attribute changes how the module is fetched (the browser sends the request with `{{HTTPHeader("Accept")}}: application/json` header), but does _not_ change how the module is parsed or evaluated. The runtime already knows to parse the module as JSON given the response MIME type. It only uses the attribute to do _after-the-fact_ checking that the `data.json` module is, in fact, a JSON module. For example, if the response header changes to `Content-Type: text/javascript` instead, the program will fail with the error shown above.
+The `type` attribute changes how the module is fetched (the browser sends the request with `{{HTTPHeader("Accept")}}: application/json` header), but does _not_ change how the module is parsed or evaluated. The runtime already knows to parse the module as JSON given the response MIME type. It only uses the attribute to do _after-the-fact_ checking that the `data.json` module is, in fact, a JSON module. For example, if the response header changes to `Content-Type: text/javascript` instead, the program will fail with a similar error as above.
 
-If the attribute is absent, browsers implicitly assume that the module is JavaScript, and fail if the module is not JavaScript (for example, JSON). This ensures that module types are always strictly validated and prevents any security risks. Other non-browser runtimes are free to implement their own behavior. The specification explicitly calls out `type: "json"` to be supported — if a module is asserted to be `type: "json"` and the runtime does not fail this import, then it must be parsed as JSON. However, there's no behavior requirement otherwise: for imports without `type: "json"` attribute, the runtime may still parse it as JSON if security is not an issue in this environment. In reality, non-browser runtimes such as Node and Deno align with browser semantics and enforce `type` for JSON modules.
+The specification explicitly calls out `type: "json"` to be supported — if a module is asserted to be `type: "json"` and the runtime does not fail this import, then it must be parsed as JSON. However, there's no behavior requirement otherwise: for imports without `type: "json"` attribute, the runtime may still parse it as JSON if security is not an issue in this environment. Browsers, on the other hand, implicitly assume that the module is JavaScript, and fail if the module is not JavaScript (for example, JSON). This ensures that module types are always strictly validated and prevents any security risks. In reality, non-browser runtimes such as Node and Deno align with browser semantics and enforce `type` for JSON modules.
 
-The `type` attribute also supports other module types. For example, the HTML spec also defines the `css` type:
+The `type` attribute also supports other module types. For example, the HTML spec also defines the `css` type, which imports a {{domxref("CSSStyleSheet")}} object:
 
 ```js
 import styles from "https://example.com/styles.css" with { type: "css" };
 ```
 
-The attributes syntax is designed to be extensible — although only `type` is specified by the language, the runtime can extend it with other attributes. An attribute can change the runtime's behavior at every stage of the module loading process:
+The attributes syntax is designed to be extensible — although only `type` is specified by the language, the runtime can read and process other attributes. An attribute can change the runtime's behavior at every stage of the module loading process:
 
 - Resolution: the attribute is part of the module specifier (the string in the `from` clause). Therefore, given the same string path, different attributes may lead to entirely different modules being loaded. For example, [TypeScript supports the `resolution-mode` attribute](https://devblogs.microsoft.com/typescript/announcing-typescript-5-3/#stable-support-resolution-mode-in-import-types).
 
