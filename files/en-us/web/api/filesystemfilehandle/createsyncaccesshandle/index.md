@@ -164,7 +164,7 @@ If the message data is something else, we:
 
 - Create a new {{domxref("TextEncoder")}} and {{domxref("TextDecoder")}} to handle encoding and decoding the text content later on.
 - Encode the message data and write the result to the end of the file using {{domxref("FileSystemSyncAccessHandle.write", "write()")}}, then update the file size contained in the `size` variable.
-- Create a {{domxref("DataView")}} to contain the file contents, and read the content into it using {{domxref("FileSystemSyncAccessHandle.read", "read()")}}.
+- Create a {{jsxref("DataView")}} to contain the file contents, and read the content into it using {{domxref("FileSystemSyncAccessHandle.read", "read()")}}.
 - Decode the `DataView` contents and log it to the console.
 
 ```js
