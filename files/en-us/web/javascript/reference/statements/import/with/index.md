@@ -16,7 +16,7 @@ The **import attributes** feature instructs the host about how a module should b
 
 ## Syntax
 
-Attributes can be attached to any kind of `import`/`export from` statement, including default import, namespace import, etc. It follows the module specifier string and starts with the `with` keyword.
+Attributes can be attached to any kind of `import`/`export from` statement, including default import, namespace import, etc. They follow the module specifier string and are prefixed by the `with` keyword.
 
 ```js-nolint
 import { names } from "module-name" with {};
@@ -33,7 +33,7 @@ export { names } from "module-name" with { key: "data", key2: "data2", /* …, *
 ### Parameters
 
 - `keyN`
-  - : An attribute key. Can be an identifier or a string literal. All keys must be unique and must be known to the host.
+  - : An attribute key. Can be an identifier or a string literal. All keys must be unique and must be known to the runtime.
 - `"dataN"`
   - : An attribute value. Must be a string literal.
 
@@ -81,7 +81,7 @@ This particular attribute changes how the module is fetched (the browser sends t
 Failed to load module script: Expected a JSON module script but the server responded with a MIME type of "text/javascript". Strict MIME type checking is enforced for module scripts per HTML spec.
 ```
 
-If the attribute is absent, browsers implicitly assume that the module is JavaScript, and fail if the module is not JavaScript (for example, JSON). This ensures that module types are always strictly validated and prevents any security risks. Other non-browser hosts are free to implement their own behavior. The specification explicitly calls out `type: "json"` to be supported — if a module is asserted to be `type: "json"` and the host does not fail this import, then it must be parsed as JSON. However, there's no behavior requirement otherwise: for imports without `type: "json"` attribute, the host may still parse it as JSON if security is not an issue in this environment.
+If the attribute is absent, browsers implicitly assume that the module is JavaScript, and fail if the module is not JavaScript (for example, JSON). This ensures that module types are always strictly validated and prevents any security risks. Other non-browser hosts are free to implement their own behavior. The specification explicitly calls out `type: "json"` to be supported — if a module is asserted to be `type: "json"` and the host does not fail this import, then it must be parsed as JSON. However, there's no behavior requirement otherwise: for imports without `type: "json"` attribute, the host may still parse it as JSON if security is not an issue in this environment. In reality, non-browser runtimes such as Node and Deno align with browser semantics and enforce `type` for JSON modules.
 
 The `type` attribute also supports other module types. For example, the HTML spec also defines the `css` type:
 
