@@ -69,7 +69,7 @@ where `<policy-directive>` consists of:
 - {{CSP("manifest-src")}}
   - : Specifies valid sources of application manifest files.
 - {{CSP("media-src")}}
-  - : Specifies valid sources for loading media using the {{HTMLElement("audio")}} ,
+  - : Specifies valid sources for loading media using the {{HTMLElement("audio")}},
     {{HTMLElement("video")}} and {{HTMLElement("track")}} elements.
 - {{CSP("object-src")}}
 
@@ -153,7 +153,8 @@ Reporting directives control the reporting process of CSP violations. See also t
     > the **`report-uri`** directive will be ignored.
 
 - {{CSP("report-to")}}
-  - : Fires a `SecurityPolicyViolationEvent`.
+  - : Provides the browser with a token identifying the reporting endpoint or group of endpoints for sending CSP violation information.
+    The endpoints that the token represents may be provided through other HTTP headers, such as {{HTTPHeader("Reporting-Endpoints")}}.
 
 ### Other directives
 

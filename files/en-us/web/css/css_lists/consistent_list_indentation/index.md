@@ -14,7 +14,7 @@ To understand why this is the case, and more importantly how to avoid the proble
 
 ### The stand-alone list item
 
-First, we consider the pure list item, not nested in a list of items. When using the HTML {{htmlelement("li")}} element, the browser sets the {{cssxref("display")}} value to `list-item`. Whether list items not nested in a list are provided a marker (otherwise known as a "bullet") depends on the browser. We can remove that bullet with {{cssxref("list-style-type")}}`: none`.
+First, we consider the pure list item, not nested in a list of items. When using the HTML {{htmlelement("li")}} element, the browser sets the {{cssxref("display")}} value to `list-item`. Whether list items not nested in a list are provided a marker (otherwise known as a "bullet") depends on the browser. We can remove that bullet with {{cssxref("list-style-type", "list-style-type: none")}}.
 
 ```css
 li {

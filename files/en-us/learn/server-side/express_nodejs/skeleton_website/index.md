@@ -404,7 +404,7 @@ npm install
 > ```
 >
 > Major versions change the compatibility.
-> For those updates we'll need to manually update the `package.json`and code that uses the library, and extensively re-test the project.
+> For those updates we'll need to manually update the `package.json` and code that uses the library, and extensively re-test the project.
 
 ### www file
 
