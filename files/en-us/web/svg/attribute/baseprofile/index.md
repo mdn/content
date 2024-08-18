@@ -4,7 +4,7 @@ slug: Web/SVG/Attribute/baseProfile
 page-type: svg-attribute
 status:
   - deprecated
-spec-urls: https://www.w3.org/TR/SVG11/struct.html#SVGElementBaseProfileAttribute
+browser-compat: svg.elements.svg.baseProfile
 ---
 
 {{SVGRef}}{{Deprecated_Header}}

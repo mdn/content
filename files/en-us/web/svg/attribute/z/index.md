@@ -2,9 +2,9 @@
 title: z
 slug: Web/SVG/Attribute/z
 page-type: svg-attribute
-spec-urls:
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-fepointlight-z
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-fespotlight-z
+browser-compat:
+  - svg.elements.fePointLight.z
+  - svg.elements.feSpotLight.z
 ---
 
 {{SVGRef}}

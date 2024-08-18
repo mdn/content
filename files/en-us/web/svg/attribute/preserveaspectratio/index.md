@@ -2,9 +2,12 @@
 title: preserveAspectRatio
 slug: Web/SVG/Attribute/preserveAspectRatio
 page-type: svg-attribute
-spec-urls:
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-feimage-preserveaspectratio
-  - https://svgwg.org/svg2-draft/coords.html#PreserveAspectRatioAttribute
+browser-compat:
+  - svg.elements.feImage.preserveAspectRatio
+  - svg.elements.image.preserveAspectRatio
+  - svg.elements.svg.preserveAspectRatio
+  - svg.elements.symbol.preserveAspectRatio
+  - svg.elements.view.preserveAspectRatio
 ---
 
 {{SVGRef}}

@@ -4,7 +4,7 @@ slug: Web/SVG/Attribute/xlink:title
 page-type: svg-attribute
 status:
   - deprecated
-browser-compat: svg.global_attributes.xlink_title
+browser-compat: svg.elements.a.xlink_title
 ---
 
 {{SVGRef}}{{Deprecated_Header}}

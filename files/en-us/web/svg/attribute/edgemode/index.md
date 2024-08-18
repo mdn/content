@@ -2,7 +2,9 @@
 title: edgeMode
 slug: Web/SVG/Attribute/edgeMode
 page-type: svg-attribute
-spec-urls: https://drafts.fxtf.org/filter-effects/#element-attrdef-feconvolvematrix-edgemode
+browser-compat:
+  - svg.elements.feConvolveMatrix.edgeMode
+  - svg.elements.feGaussianBlur.edgeMode
 ---
 
 {{SVGRef}}

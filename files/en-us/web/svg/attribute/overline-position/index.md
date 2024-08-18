@@ -2,6 +2,7 @@
 title: overline-position
 slug: Web/SVG/Attribute/overline-position
 page-type: svg-attribute
+browser-compat: svg.elements.font-face.overline-position
 ---
 
 {{SVGRef}}

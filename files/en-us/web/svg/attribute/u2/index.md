@@ -4,7 +4,9 @@ slug: Web/SVG/Attribute/u2
 page-type: svg-attribute
 status:
   - deprecated
-browser-compat: svg.elements.hkern.u2
+browser-compat:
+  - svg.elements.hkern.u2
+  - svg.elements.vkern.u2
 ---
 
 {{SVGRef}}{{Deprecated_Header}}

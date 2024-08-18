@@ -2,7 +2,9 @@
 title: lengthAdjust
 slug: Web/SVG/Attribute/lengthAdjust
 page-type: svg-attribute
-browser-compat: svg.elements.text.lengthAdjust
+browser-compat:
+  - svg.elements.text.lengthAdjust
+  - svg.elements.tspan.lengthAdjust
 ---
 
 {{SVGRef}}

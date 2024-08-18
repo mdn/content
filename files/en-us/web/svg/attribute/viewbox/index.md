@@ -2,7 +2,11 @@
 title: viewBox
 slug: Web/SVG/Attribute/viewBox
 page-type: svg-attribute
-spec-urls: https://svgwg.org/svg2-draft/coords.html#ViewBoxAttribute
+browser-compat:
+  - svg.elements.marker.viewBox
+  - svg.elements.svg.viewBox
+  - svg.elements.symbol.viewBox
+  - svg.elements.view.viewBox
 ---
 
 {{SVGRef}}

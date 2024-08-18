@@ -4,9 +4,7 @@ slug: Web/SVG/Attribute/name
 page-type: svg-attribute
 status:
   - deprecated
-spec-urls:
-  - https://www.w3.org/TR/SVG11/fonts.html#FontFaceNameElementNameAttribute
-  - https://www.w3.org/TR/SVG11/color.html#ColorProfileElementNameAttribute
+browser-compat: svg.elements.font-face-name.name
 ---
 
 {{SVGRef}}{{Deprecated_Header}}

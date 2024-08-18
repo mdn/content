@@ -4,7 +4,10 @@ slug: Web/SVG/Attribute/vert-origin-x
 page-type: svg-attribute
 status:
   - deprecated
-browser-compat: svg.elements.font.vert-origin-x
+browser-compat:
+  - svg.elements.font.vert-origin-x
+  - svg.elements.glyph.vert-origin-x
+  - svg.elements.missing-glyph.vert-origin-x
 ---
 
 {{SVGRef}}{{Deprecated_Header}}

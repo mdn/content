@@ -2,6 +2,7 @@
 title: strikethrough-position
 slug: Web/SVG/Attribute/strikethrough-position
 page-type: svg-attribute
+browser-compat: svg.elements.font-face.strikethrough-position
 ---
 
 {{SVGRef}}

@@ -2,9 +2,10 @@
 title: cx
 slug: Web/SVG/Attribute/cx
 page-type: svg-attribute
-spec-urls:
-  - https://svgwg.org/svg2-draft/geometry.html#CX
-  - https://svgwg.org/svg2-draft/pservers.html#RadialGradientElementCXAttribute
+browser-compat:
+  - svg.elements.circle.cx
+  - svg.elements.ellipse.cx
+  - svg.elements.radialGradient.cx
 ---
 
 {{SVGRef}}

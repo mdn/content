@@ -2,9 +2,7 @@
 title: values
 slug: Web/SVG/Attribute/values
 page-type: svg-attribute
-spec-urls:
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-fecolormatrix-values
-  - https://svgwg.org/specs/animations/#ValuesAttribute
+browser-compat: svg.elements.feColorMatrix.values
 ---
 
 {{SVGRef}}

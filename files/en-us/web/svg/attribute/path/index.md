@@ -2,9 +2,9 @@
 title: path
 slug: Web/SVG/Attribute/path
 page-type: svg-attribute
-spec-urls:
-  - https://svgwg.org/svg2-draft/text.html#TextPathElementPathAttribute
-  - https://svgwg.org/specs/animations/#AnimateMotionElementPathAttribute
+browser-compat:
+  - svg.elements.animateMotion.path
+  - svg.elements.textPath.path
 ---
 
 {{SVGRef}}

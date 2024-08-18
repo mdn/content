@@ -4,7 +4,10 @@ slug: Web/SVG/Attribute/vert-adv-y
 page-type: svg-attribute
 status:
   - deprecated
-browser-compat: svg.elements.font.vert-adv-y
+browser-compat:
+  - svg.elements.font.vert-adv-y
+  - svg.elements.glyph.vert-adv-y
+  - svg.elements.missing-glyph.vert-adv-y
 ---
 
 {{SVGRef}}{{Deprecated_Header}}

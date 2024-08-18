@@ -2,7 +2,9 @@
 title: "SVG attribute: crossorigin"
 slug: Web/SVG/Attribute/crossorigin
 page-type: svg-attribute
-browser-compat: svg.elements.image.crossorigin
+browser-compat:
+  - svg.elements.feImage.crossorigin
+  - svg.elements.image.crossorigin
 ---
 
 {{SVGRef}}

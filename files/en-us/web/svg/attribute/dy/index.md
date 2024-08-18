@@ -2,10 +2,12 @@
 title: dy
 slug: Web/SVG/Attribute/dy
 page-type: svg-attribute
-spec-urls:
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-fedropshadow-dy
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-feoffset-dy
-  - https://svgwg.org/svg2-draft/text.html#TextElementDYAttribute
+browser-compat:
+  - svg.elements.feDropShadow.dy
+  - svg.elements.feOffset.dy
+  - svg.elements.glyphRef.dy
+  - svg.elements.text.dy
+  - svg.elements.tspan.dy
 ---
 
 {{SVGRef}}

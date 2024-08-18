@@ -2,6 +2,7 @@
 title: strikethrough-thickness
 slug: Web/SVG/Attribute/strikethrough-thickness
 page-type: svg-attribute
+browser-compat: svg.elements.font-face.strikethrough-thickness
 ---
 
 {{SVGRef}}

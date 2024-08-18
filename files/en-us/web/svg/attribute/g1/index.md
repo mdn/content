@@ -4,7 +4,9 @@ slug: Web/SVG/Attribute/g1
 page-type: svg-attribute
 status:
   - deprecated
-browser-compat: svg.elements.hkern.g1
+browser-compat:
+  - svg.elements.hkern.g1
+  - svg.elements.vkern.g1
 ---
 
 {{SVGRef}}{{Deprecated_Header}}

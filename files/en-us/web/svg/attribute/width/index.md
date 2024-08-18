@@ -2,12 +2,15 @@
 title: width
 slug: Web/SVG/Attribute/width
 page-type: svg-attribute
-spec-urls:
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-width
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-primitive-width
-  - https://drafts.fxtf.org/css-masking-1/#element-attrdef-mask-width
-  - https://svgwg.org/svg2-draft/geometry.html#Sizing
-  - https://svgwg.org/svg2-draft/pservers.html#PatternElementWidthAttribute
+browser-compat:
+  - svg.elements.filter.width
+  - svg.elements.foreignObject.width
+  - svg.elements.image.width
+  - svg.elements.mask.width
+  - svg.elements.pattern.width
+  - svg.elements.rect.width
+  - svg.elements.svg.width
+  - svg.elements.use.width
 ---
 
 {{SVGRef}}

@@ -2,7 +2,9 @@
 title: ry
 slug: Web/SVG/Attribute/ry
 page-type: svg-attribute
-spec-urls: https://svgwg.org/svg2-draft/geometry.html#RY
+browser-compat:
+  - svg.elements.ellipse.ry
+  - svg.elements.rect.ry
 ---
 
 {{SVGRef}}

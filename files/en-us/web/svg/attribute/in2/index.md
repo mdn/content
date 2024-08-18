@@ -2,10 +2,10 @@
 title: in2
 slug: Web/SVG/Attribute/in2
 page-type: svg-attribute
-spec-urls:
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-fedisplacementmap-in2
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-fecomposite-in2
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-feblend-in2
+browser-compat:
+  - svg.elements.feBlend.in2
+  - svg.elements.feComposite.in2
+  - svg.elements.feDisplacementMap.in2
 ---
 
 {{SVGRef}}

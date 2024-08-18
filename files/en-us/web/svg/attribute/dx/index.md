@@ -2,10 +2,12 @@
 title: dx
 slug: Web/SVG/Attribute/dx
 page-type: svg-attribute
-spec-urls:
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-fedropshadow-dx
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-feoffset-dx
-  - https://svgwg.org/svg2-draft/text.html#TextElementDXAttribute
+browser-compat:
+  - svg.elements.feDropShadow.dx
+  - svg.elements.feOffset.dx
+  - svg.elements.glyphRef.dx
+  - svg.elements.text.dx
+  - svg.elements.tspan.dx
 ---
 
 {{SVGRef}}

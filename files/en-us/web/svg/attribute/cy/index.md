@@ -2,9 +2,10 @@
 title: cy
 slug: Web/SVG/Attribute/cy
 page-type: svg-attribute
-spec-urls:
-  - https://svgwg.org/svg2-draft/geometry.html#CY
-  - https://svgwg.org/svg2-draft/pservers.html#RadialGradientElementCYAttribute
+browser-compat:
+  - svg.elements.circle.cy
+  - svg.elements.ellipse.cy
+  - svg.elements.radialGradient.cy
 ---
 
 {{SVGRef}}

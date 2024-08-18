@@ -2,9 +2,9 @@
 title: points
 slug: Web/SVG/Attribute/points
 page-type: svg-attribute
-spec-urls:
-  - https://svgwg.org/svg2-draft/shapes.html#PolygonElementPointsAttribute
-  - https://svgwg.org/svg2-draft/shapes.html#PolylineElementPointsAttribute
+browser-compat:
+  - svg.elements.polygon.points
+  - svg.elements.polyline.points
 ---
 
 {{SVGRef}}

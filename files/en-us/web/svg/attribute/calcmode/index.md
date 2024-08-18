@@ -2,7 +2,7 @@
 title: calcMode
 slug: Web/SVG/Attribute/calcMode
 page-type: svg-attribute
-spec-urls: https://svgwg.org/specs/animations/#CalcModeAttribute
+browser-compat: svg.elements.animateMotion.calcMode
 ---
 
 {{SVGRef}}

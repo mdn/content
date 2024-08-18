@@ -4,7 +4,7 @@ slug: Web/SVG/Attribute/rotate
 page-type: svg-attribute
 status:
   - experimental
-spec-urls: https://svgwg.org/specs/animations/#RotateAttribute
+browser-compat: svg.elements.animateMotion.rotate
 ---
 
 {{SVGRef}}

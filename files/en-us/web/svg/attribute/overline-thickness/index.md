@@ -2,6 +2,7 @@
 title: overline-thickness
 slug: Web/SVG/Attribute/overline-thickness
 page-type: svg-attribute
+browser-compat: svg.elements.font-face.overline-thickness
 ---
 
 {{SVGRef}}

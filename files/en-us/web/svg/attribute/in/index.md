@@ -2,7 +2,21 @@
 title: in
 slug: Web/SVG/Attribute/in
 page-type: svg-attribute
-spec-urls: https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-primitive-in
+browser-compat:
+  - svg.elements.feBlend.in
+  - svg.elements.feColorMatrix.in
+  - svg.elements.feComponentTransfer.in
+  - svg.elements.feComposite.in
+  - svg.elements.feConvolveMatrix.in
+  - svg.elements.feDiffuseLighting.in
+  - svg.elements.feDisplacementMap.in
+  - svg.elements.feDropShadow.in
+  - svg.elements.feGaussianBlur.in
+  - svg.elements.feMergeNode.in
+  - svg.elements.feMorphology.in
+  - svg.elements.feOffset.in
+  - svg.elements.feSpecularLighting.in
+  - svg.elements.feTile.in
 ---
 
 {{SVGRef}}

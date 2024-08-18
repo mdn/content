@@ -2,7 +2,7 @@
 title: attributeName
 slug: Web/SVG/Attribute/attributeName
 page-type: svg-attribute
-spec-urls: https://svgwg.org/specs/animations/#AttributeNameAttribute
+browser-compat: svg.elements.animate.attributeName
 ---
 
 {{SVGRef}}

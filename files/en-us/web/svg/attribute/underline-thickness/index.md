@@ -2,6 +2,7 @@
 title: underline-thickness
 slug: Web/SVG/Attribute/underline-thickness
 page-type: svg-attribute
+browser-compat: svg.elements.font-face.underline-thickness
 ---
 
 {{SVGRef}}

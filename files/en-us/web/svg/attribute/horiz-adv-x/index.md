@@ -4,7 +4,10 @@ slug: Web/SVG/Attribute/horiz-adv-x
 page-type: svg-attribute
 status:
   - deprecated
-browser-compat: svg.elements.font.horiz-adv-x
+browser-compat:
+  - svg.elements.font.horiz-adv-x
+  - svg.elements.glyph.horiz-adv-x
+  - svg.elements.missing-glyph.horiz-adv-x
 ---
 
 {{SVGRef}}{{Deprecated_Header}}

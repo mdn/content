@@ -2,10 +2,7 @@
 title: transform
 slug: Web/SVG/Attribute/transform
 page-type: svg-attribute
-spec-urls:
-  - https://drafts.csswg.org/css-transforms/#svg-transform
-  - https://drafts.csswg.org/css-transforms/#svg-transform
-  - https://svgwg.org/svg2-draft/coords.html#TransformProperty
+browser-compat: svg.global_attributes.transform
 ---
 
 {{SVGRef}}

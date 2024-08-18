@@ -2,7 +2,9 @@
 title: rx
 slug: Web/SVG/Attribute/rx
 page-type: svg-attribute
-spec-urls: https://svgwg.org/svg2-draft/geometry.html#RX
+browser-compat:
+  - svg.elements.ellipse.rx
+  - svg.elements.rect.rx
 ---
 
 {{SVGRef}}

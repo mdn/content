@@ -4,7 +4,7 @@ slug: Web/SVG/Attribute/attributeType
 page-type: svg-attribute
 status:
   - deprecated
-spec-urls: https://www.w3.org/TR/SVG11/animate.html#AttributeTypeAttribute
+browser-compat: svg.elements.animate.attributeType
 ---
 
 {{SVGRef}}{{Deprecated_Header}}

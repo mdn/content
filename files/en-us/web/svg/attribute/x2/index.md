@@ -2,9 +2,9 @@
 title: x2
 slug: Web/SVG/Attribute/x2
 page-type: svg-attribute
-spec-urls:
-  - https://svgwg.org/svg2-draft/shapes.html#LineElementX2Attribute
-  - https://svgwg.org/svg2-draft/pservers.html#LinearGradientElementX2Attribute
+browser-compat:
+  - svg.elements.line.x2
+  - svg.elements.linearGradient.x2
 ---
 
 {{SVGRef}}

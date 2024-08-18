@@ -2,6 +2,7 @@
 title: underline-position
 slug: Web/SVG/Attribute/underline-position
 page-type: svg-attribute
+browser-compat: svg.elements.font-face.underline-position
 ---
 
 {{SVGRef}}
