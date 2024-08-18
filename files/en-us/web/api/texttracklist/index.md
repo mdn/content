@@ -42,7 +42,7 @@ _This interface also inherits methods from its parent interface, {{domxref("Even
 - [`change`](/en-US/docs/Web/API/TextTrackList/change_event)
   - : Fired when a text track has been made active or inactive.
     Also available via the `onchange` property.
-- [`removetrack`](/en-US/docs/Web/API/TextTrackList/removeTrack_event)
+- [`removetrack`](/en-US/docs/Web/API/TextTrackList/removetrack_event)
   - : Fired when a new text track has been removed from the media element.
     Also available via the `onremovetrack` property.
 
