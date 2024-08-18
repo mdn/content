@@ -3,7 +3,7 @@ title: "HTMLInputElement: checkValidity() method"
 short-title: checkValidity()
 slug: Web/API/HTMLInputElement/checkValidity
 page-type: web-api-instance-method
-browser-compat: api.HTMLObjectElement.checkValidity
+browser-compat: api.HTMLInputElement.checkValidity
 ---
 
 {{APIRef("HTML DOM")}}

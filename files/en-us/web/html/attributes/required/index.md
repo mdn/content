@@ -3,6 +3,10 @@ title: "HTML attribute: required"
 short-title: required
 slug: Web/HTML/Attributes/required
 page-type: html-attribute
+browser-compat:
+  - html.elements.input.required
+  - html.elements.select.required
+  - html.elements.textarea.required
 ---
 
 {{HTMLSidebar}}

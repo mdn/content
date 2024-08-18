@@ -2,7 +2,6 @@
 title: DOMHighResTimeStamp
 slug: Web/API/DOMHighResTimeStamp
 page-type: web-api-interface
-browser-compat: api.DOMHighResTimestamp
 ---
 
 {{APIRef("Performance API")}}
