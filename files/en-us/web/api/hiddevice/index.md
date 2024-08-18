@@ -22,7 +22,7 @@ This interface also inherits properties from {{domxref("EventTarget")}}.
 - {{domxref("HIDDevice.vendorId")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the vendorId of the HID device.
 - {{domxref("HIDDevice.productId")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns the productID of the HID device.
+  - : Returns the productId of the HID device.
 - {{domxref("HIDDevice.productName")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a string containing the product name of the HID device.
 - {{domxref("HIDDevice.collections")}} {{ReadOnlyInline}} {{Experimental_Inline}}
