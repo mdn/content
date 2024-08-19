@@ -24,9 +24,7 @@ These icons uniquely identify your web app in different contexts, such as in an 
 
 ### Values
 
-The value of the `icons` member is an array of objects. Each object represents an icon to be used in a specific context. For example, you can add icons to represent your web app on devices with different screen sizes. You can add different icons for integration with various operating systems. You can also add icons for splash screens or app notifications.
-
-### Properties
+The value of the `icons` member is an array of objects. Each object represents an icon to be used in a specific context. For example, you can add icons to represent your web app on devices with different screen sizes, for integration with various operating systems, for splash screens, or for app notifications.
 
 Each object in the array includes one or more of the following properties (`src` is the only required property):
 
