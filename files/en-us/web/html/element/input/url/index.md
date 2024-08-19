@@ -13,14 +13,12 @@ browser-compat: html.elements.input.type_url
 
 The input value is automatically validated to ensure that it's either empty or a properly-formatted URL before the form can be submitted. The {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS pseudo-classes are automatically applied as appropriate to visually denote whether the current value of the field is a valid URL or not.
 
-On browsers that don't support inputs of type `url`, a `url` input falls back to being a standard {{HTMLElement("input/text", "text")}} input.
-
 ## Value
 
-The {{HTMLElement("input")}} element's [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute contains a string which is automatically validated as conforming to URL syntax. More specifically, there are two possible value formats that will pass validation:
+The {{HTMLElement("input")}} element's [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute contains a string that is automatically validated as conforming to URL syntax. More specifically, there are two possible value formats that will pass validation:
 
-1. An empty string ("") indicating that the user did not enter a value or that the value was removed.
-2. A single properly-formed absolute URL. This doesn't necessarily mean the URL address exists, but it is at least formatted correctly. In simple terms, this means `urlscheme://restofurl`.
+1. An empty string ("") indicates the user did not enter a value or that the value was removed.
+2. A single properly-formed absolute URL. This doesn't necessarily mean the URL address exists, but it is at least formatted correctly. An entry matching `urlscheme://restofurl` can be valid, even if the `urlscheme` entered doesn't exist.
 
 See [Validation](#validation) for details on how URLs are validated to ensure that they're formatted properly.
 
@@ -34,7 +32,7 @@ The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{H
 
 ### maxlength
 
-The maximum string length (measured in UTF-16 code units) that the user can enter into the `url` input. This must be an integer value of 0 or higher. If no `maxlength` is specified, or an invalid value is specified, the `url` input has no maximum length. This value must also be greater than or equal to the value of `minlength`.
+The maximum string length (measured in UTF-16 code units) that the user can enter into the `url` input. This must be an integer value of `0` or higher. If no `maxlength` is specified, or an invalid value is specified, the `url` input has no maximum length. This value must also be greater than or equal to the value of `minlength`.
 
 The input will fail [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) if the length of the text value of the field is greater than `maxlength` UTF-16 code units long. Constraint validation is only applied when the value is changed by the user.
 
@@ -66,10 +64,10 @@ If the control's content has one directionality ({{Glossary("LTR")}} or {{Glossa
 
 ### readonly
 
-A Boolean attribute which, if present, means this field cannot be edited by the user. Its `value` can, however, still be changed by JavaScript code directly setting the {{domxref("HTMLInputElement")}} `value` property.
+The [`readonly`](/en-US/docs/Web/HTML/Attributes/readonly) Boolean attribute, if present, means this field cannot be edited by the user. Its `value` can, however, still be changed by JavaScript code directly setting the {{domxref("HTMLInputElement")}} `value` property.
 
 > [!NOTE]
-> Because a read-only field cannot have a value, `required` does not have any effect on inputs with the `readonly` attribute also specified.
+> Because a read-only field cannot have a value, [`required`](/en-US/docs/Web/HTML/Attributes/required) does not have any effect on inputs with the `readonly` attribute also specified.
 
 ### size
 
@@ -79,18 +77,18 @@ This does _not_ set a limit on how many characters the user can enter into the f
 
 ### spellcheck
 
-`spellcheck` is a global attribute which is used to indicate whether to enable spell checking for an element. It can be used on any editable content, but here we consider specifics related to the use of `spellcheck` on {{HTMLElement("input")}} elements. The permitted values for `spellcheck` are:
+The [`spellcheck`](/en-US/docs/Web/HTML/Global_attributes/spellcheck) global attribute is used to indicate whether to enable spell-checking for an element. It can be used on any editable content, but here we consider specifics related to the use of `spellcheck` on {{HTMLElement("input")}} elements. The permitted values for `spellcheck` are:
 
 - `false`
-  - : Disable spell checking for this element.
+  - : Disable spell-checking for this element.
 - `true`
-  - : Enable spell checking for this element.
+  - : Enable spell-checking for this element.
 - "" (empty string) or no value
-  - : Follow the element's default behavior for spell checking. This may be based upon a parent's `spellcheck` setting or other factors.
+  - : Follow the element's default behavior for spell-checking. This may be based upon a parent's `spellcheck` setting or other factors.
 
-An input field can have spell checking enabled if it doesn't have the [readonly](#readonly) attribute set and is not disabled.
+An input field can have spell-checking enabled if it doesn't have the [readonly](#readonly) attribute set and is not disabled.
 
-The value returned by reading `spellcheck` may not reflect the actual state of spell checking within a control, if the {{Glossary("user agent", "user agent's")}} preferences override the setting.
+The value returned by reading `spellcheck` may not reflect the actual state of spell-checking within a control if the {{Glossary("user agent", "user agent's")}} preferences override the setting.
 
 ## Non-standard attributes
 
@@ -98,18 +96,12 @@ The following non-standard attributes are also available on some browsers. As a 
 
 ### autocorrect
 
-A Safari extension, the `autocorrect` attribute is a string which indicates whether to activate automatic correction while the user is editing this field. Permitted values are:
+A Safari extension, the `autocorrect` attribute is a string that indicates whether to activate automatic correction while the user is editing this field. Permitted values are:
 
 - `on`
   - : Enable automatic correction of typos, as well as processing of text substitutions if any are configured.
 - `off`
   - : Disable automatic correction and text substitutions.
-
-### mozactionhint {{deprecated_inline}}
-
-A Mozilla extension, which provides a hint as to what sort of action will be taken if the user presses the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field.
-
-<strong>Deprecated: Use [`enterkeyhint`](/en-US/docs/Web/HTML/Global_attributes#enterkeyhint) instead.</strong>
 
 ## Using URL inputs
 
@@ -122,7 +114,7 @@ It's important, however, to note that this is not enough to ensure that the spec
 
 ### A simple URL input
 
-Currently, all browsers which implement this element implement it as a standard text input field with basic validation features. In its most basic form, a URL input can be implemented like this:
+This element is implemented as a standard text input field with basic validation features. In its most basic form, a URL input can be implemented like this:
 
 ```html
 <input id="myURL" name="myURL" type="url" />
@@ -152,7 +144,7 @@ Here, we have a `url` input with the placeholder `http://www.example.com`. Note 
 
 ### Controlling the input size
 
-You can control not only the physical length of the input box, but also the minimum and maximum lengths allowed for the input text itself.
+You can control both the physical length of the input box and the minimum and maximum lengths allowed for the input text.
 
 #### Physical input element size
 
@@ -269,7 +261,7 @@ If you need the entered URL to be restricted further than just "any string that 
 
 For example, let's say you're building a support page for employees of Myco, Inc. which will let them contact their IT department for help if one of their pages has a problem. In our simplified form, the user needs to enter the URL of the page that has a problem, and a message describing what is wrong. But we want the URL to only successfully validate if the entered URL is in a Myco domain.
 
-Since inputs of type `url` validate against both the standard URL validation _and_ the specified [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern), you can implement this easily. Let's see how:
+Since inputs of type `url` validate against both the standard URL validation _and_ the specified [`pattern`](/en-US/docs/Web/HTML/Element/input#pattern), you can implement this with a regular expression. Let's see how:
 
 ```css hidden
 div {
@@ -326,9 +318,9 @@ input:valid + span::after {
 
 First of all, the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute is specified, making it mandatory that a valid URL be provided.
 
-Second, in the `url` input we set `pattern` to `".*\.myco\..*"`. This simple regular expression requests a string that has any number of characters, followed by a dot, followed by "myco", followed by a dot, followed by any number of characters. And because the browser runs both the standard URL filter _and_ our custom pattern against the specified text, we wind up with a validation which says "make sure this is a valid URL, and also in a Myco domain."
+Second, in the `url` input, we set `pattern` to `".*\.myco\..*"`. This regular expression requests a string that has any number of characters, followed by a dot, followed by "myco", followed by a dot, followed by any number of characters. And because the browser runs both the standard URL filter _and_ our custom pattern against the specified text, we wind up with a validation that says "make sure this is a valid URL, and also in a Myco domain."
 
-This isn't perfect, but it is good enough for this simple demo's requirements.
+This isn't perfect, but it is good enough for this basic demo's requirements.
 
 It's advisable to use the [`title`](/en-US/docs/Web/HTML/Global_attributes#title) attribute along with `pattern`. If you do, the `title` _must_ describe the pattern; it should explain what format the data should take on, rather than any other information. That's because the `title` may be displayed or spoken as part of a validation error message. For example, the browser might present the message "The entered text doesn't match the required pattern." followed by your specified `title`. If your `title` is something like "URL", the result would be the message "The entered text doesn't match the required pattern. URL", which is not a good user experience.
 
