@@ -57,32 +57,42 @@ http://www.example.com:80/path/to/myfile.html?key1=value1&key2=value2#SomewhereI
 
 `http://` is the [_scheme_](/en-US/docs/Web/URI/Schemes) of the URL, indicating which protocol the browser must use. Usually it is the HTTP protocol or its secured version, HTTPS. The Web requires one of these two, but browsers also know how to handle other protocols such as `mailto:` (to open a mail client) or `ftp:` to handle a file transfer, so don't be surprised if you see such protocols. Common schemes are:
 
-| Scheme                           | Description                                                          |
-| -------------------------------- | -------------------------------------------------------------------- |
-| data                             | [Data URLs](/en-US/docs/Web/URI/Schemes/data)                        |
-| file                             | Host-specific file names                                             |
-| ftp                              | {{Glossary("FTP","File Transfer Protocol")}}                         |
-| http/https                       | [Hyper text transfer protocol (Secure)](/en-US/docs/Glossary/HTTP)   |
-| javascript                       | URL-embedded JavaScript code                                         |
-| mailto                           | Electronic mail address                                              |
-| resource {{Non-standard_inline}} | Firefox and Firefox browser extensions to load resources internally  |
-| ssh                              | Secure shell                                                         |
-| tel                              | telephone                                                            |
-| urn                              | Uniform Resource Names                                               |
-| view-source                      | Source code of the resource                                          |
-| ws/wss                           | [WebSocket connections (Secure)](/en-US/docs/Web/API/WebSockets_API) |
+- [`blob`](/en-US/docs/Web/API/URL/createObjectURL_static)
+  - : Binary Large Object; a pointer to a large in-memory object
+- [`data`](/en-US/docs/Web/URI/Schemes/data)
+  - : Data directly embedded in the URL
+- `file`
+  - : Host-specific file names
+- `ftp`
+  - : {{Glossary("FTP","File Transfer Protocol")}}
+- `http/https`
+  - : [Hyper text transfer protocol (Secure)](/en-US/docs/Glossary/HTTP)
+- `javascript`
+  - : URL-embedded JavaScript code
+- `mailto`
+  - : Electronic mail address
+- [`resource`](/en-US/docs/Web/URI/Schemes/resource) {{Non-standard_inline}}
+  - : Firefox and Firefox browser extensions to load resources internally
+- `ssh`
+  - : Secure shell
+- `tel`
+  - : telephone
+- `urn`
+  - : Uniform Resource Names
+- `view-source`
+  - : Source code of the resource
+- `ws/wss`
+  - : [WebSocket connections (Secure)](/en-US/docs/Web/API/WebSockets_API)
 
 When using URLs in {{Glossary("HTML")}} content, you should generally only use a few of these URL schemes. When referring to subresources — that is, files that are being loaded as part of a larger document — you should only use the HTTP and HTTPS schemes. Increasingly, browsers are removing support for using FTP to load subresources, for security reasons.
 
 FTP is still acceptable at the top level (such as typed directly into the browser's URL bar, or the target of a link), although some browsers may delegate loading FTP content to another application.
 
-### Host name
+### Authority
 
 ![Domain Name](mdn-url-domain@x2.png)
 
 `www.example.com` is the _host name_, or domain name, indicating which Web server is being requested. Alternatively, it is possible to directly use an {{Glossary("IP address")}}, but because it is less convenient, it is not often used on the Web.
-
-### Port
 
 ![Port](mdn-url-port@x2.png)
 
