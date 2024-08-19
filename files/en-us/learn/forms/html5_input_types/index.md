@@ -238,7 +238,7 @@ Here we store references to the `range` input and the `output` in two variables.
 
 ## Date and time pickers
 
-Generally, for a good user experience when gathering date and time values, it is important to provide a calendar selection UI. These enables users to select dates without needing to context switch to a native calendar application or potentially entering them in differing formats that are hard to parse. The last minute of the previous millennium can be expressed in the following different ways: `1999/12/31`, `23:59`, or `12/31/99T11:59PM`.
+Generally, for a good user experience when gathering date and time values, it is important to provide a calendar selection UI. These enable users to select dates without needing to context switch to a native calendar application or potentially entering them in differing formats that are hard to parse. The last minute of the previous millennium can be expressed in the following different ways: `1999/12/31`, `23:59`, or `12/31/99T11:59PM`.
 
 HTML date controls are available to handle this specific kind of data, providing calendar widgets and making the data uniform.
 
