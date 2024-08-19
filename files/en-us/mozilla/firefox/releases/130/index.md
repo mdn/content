@@ -20,6 +20,9 @@ This article provides information about the changes in Firefox 130 that affect d
 
 ### CSS
 
+- The [`hyphens`](/en-US/docs/Web/CSS/hyphens) CSS property is now properly supported for Czech and Slovak languages.
+  Among other things, this ensures that words will will no longer split on syllables ([Firefox bug 1908931](https://bugzil.la/1908931)).
+
 #### Removals
 
 ### JavaScript
