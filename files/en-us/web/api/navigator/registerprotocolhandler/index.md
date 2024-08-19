@@ -92,13 +92,27 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-In this example, a page served from `https://burgers.example.org/` contains a link like this:
+### Registering a handler for the mailto protocol
+
+It's fairly common for web pages to link to resources using non-`https` protocols. An example is the `mailto:` protocol. Web authors can use a `mailto` link when they want to provide a convenient way for users to send an email directly from the webpage:
 
 ```html
-<a href="web+burger:cheeseburger">cheeseburger</a>
+<a href="mailto:webmaster@example.com">Web Master</a>
 ```
 
-It registers the `web+burger` with code like this:
+When the link is activated, the browser should launch the default desktop application for handling email. You can think of this as a _desktop-based_ protocol handler.
+
+Web-based protocol handlers allow web-based applications to participate in the process too. A webpage can register to handle `mailto` links with code like this:
+
+```js
+navigator.registerProtocolHandler("mailto", "https://mail.example.org/?to=%s");
+```
+
+After this, when the user visits a page containing a `mailto` link, the browser will (after possibly asking the browser for confirmation) navigate to `https://mail.example.org/?to=mailto:webmaster@example.com`. This page could parse the URL parameter to extract the address, and use this to initialize an email.
+
+### Registering a handler for a custom protocol
+
+In this example, a page registers a handler for the `web+burger` protocol with code like this:
 
 ```js
 navigator.registerProtocolHandler(
@@ -107,7 +121,13 @@ navigator.registerProtocolHandler(
 );
 ```
 
-If the registration was successful, then if the user activates the `web+burger` link, the browser will navigate to `https://burgers.example.org/?burger=web+burger:cheeseburger`.
+Subsequently, the user visit a page containing a link like this:
+
+```html
+<a href="web+burger:cheeseburger">cheeseburger</a>
+```
+
+If the user activates the `web+burger` link, the browser will (after possibly asking the user for confirmation) navigate to `https://burgers.example.org/?burger=web+burger:cheeseburger`.
 
 ## Specifications
 
