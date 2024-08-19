@@ -54,8 +54,8 @@ function updateResult() {
   result.value = aValue + bValue;
 }
 
-a.addEventListener("input", updateResult);
-b.addEventListener("input", updateResult);
+form.addEventListener("input", updateResult);
+
 updateResult();
 ```
 
