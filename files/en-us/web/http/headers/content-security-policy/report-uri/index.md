@@ -10,12 +10,12 @@ browser-compat: http.headers.Content-Security-Policy.report-uri
 {{HTTPSidebar}}{{deprecated_header}}
 
 > [!WARNING]
-> The {{CSP("report-to")}} directive is intended to replace `report-uri`, and in browser that support `report-to`, the `report-uri` directive is ignored.
+> The {{CSP("report-to")}} directive is intended to replace `report-uri`, and in browsers that support `report-to`, the `report-uri` directive is ignored.
 >
-> However until `report-to` is broadly supported you should specify both headers as shown:
+> However until `report-to` is broadly supported you can specify both headers as shown:
 >
 > ```http
-> Content-Security-Policy: …; report-uri https://endpoint.example.com; report-to groupname
+> Content-Security-Policy: …; report-uri https://endpoint.example.com; report-to endpoint_name
 > ```
 
 The deprecated HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`report-uri`** directive instructs the user agent to report attempts to violate the Content Security Policy.
