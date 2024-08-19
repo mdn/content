@@ -48262,36 +48262,6 @@
       "BenoitL"
     ]
   },
-  "Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers": {
-    "modified": "2019-03-24T00:11:06.750Z",
-    "contributors": [
-      "sundevour",
-      "chrisdavidmills",
-      "thgh",
-      "ObooChin",
-      "Jeremie",
-      "groovecoder",
-      "teoli",
-      "staktrace",
-      "ethertank",
-      "Skierpage",
-      "sebmozilla",
-      "Crash",
-      "tito",
-      "Brettz9",
-      "Chris Chittleborough",
-      "Sheppy",
-      "Dabear",
-      "Mgjbot",
-      "Varmaa",
-      "Potappo",
-      "Shamrin",
-      "Dmose",
-      "MarkFinkle",
-      "Mcaruso",
-      "Callek"
-    ]
-  },
   "Web/API/Navigator/requestMediaKeySystemAccess": {
     "modified": "2020-10-15T21:34:19.510Z",
     "contributors": [
