@@ -11707,13 +11707,6 @@
 /en-US/docs/Web/CSS/single-transition-timing-function	/en-US/docs/Web/CSS/easing-function
 /en-US/docs/Web/CSS/speak-as	/en-US/docs/Web/CSS/@counter-style/speak-as
 /en-US/docs/Web/CSS/static	/en-US/docs/Web/CSS/position
-/en-US/docs/Web/CSS/stroke-dasharray	/en-US/docs/Web/SVG/Attribute/stroke-dasharray
-/en-US/docs/Web/CSS/stroke-dashoffset	/en-US/docs/Web/SVG/Attribute/stroke-dashoffset
-/en-US/docs/Web/CSS/stroke-linecap	/en-US/docs/Web/SVG/Attribute/stroke-linecap
-/en-US/docs/Web/CSS/stroke-linejoin	/en-US/docs/Web/SVG/Attribute/stroke-linejoin
-/en-US/docs/Web/CSS/stroke-miterlimit	/en-US/docs/Web/SVG/Attribute/stroke-miterlimit
-/en-US/docs/Web/CSS/stroke-opacity	/en-US/docs/Web/SVG/Attribute/stroke-opacity
-/en-US/docs/Web/CSS/stroke-width	/en-US/docs/Web/SVG/Attribute/stroke-width
 /en-US/docs/Web/CSS/suffix	/en-US/docs/Web/CSS/@counter-style/suffix
 /en-US/docs/Web/CSS/symbols()	/en-US/docs/Web/CSS/symbols
 /en-US/docs/Web/CSS/symbols-descriptor	/en-US/docs/Web/CSS/@counter-style/symbols
