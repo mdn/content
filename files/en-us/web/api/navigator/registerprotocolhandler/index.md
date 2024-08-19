@@ -102,7 +102,7 @@ It's fairly common for web pages to link to resources using non-`https` protocol
 
 When the link is activated, the browser should launch the default desktop application for handling email. You can think of this as a _desktop-based_ protocol handler.
 
-Web-based protocol handlers allow web-based applications to participate in the process too. A webpage can register to handle `mailto` links with code like this:
+Web-based protocol handlers allow web-based applications to participate in the process too. An email web app at `mail.example.org` can register to handle `mailto` links with code like this:
 
 ```js
 navigator.registerProtocolHandler("mailto", "https://mail.example.org/?to=%s");
