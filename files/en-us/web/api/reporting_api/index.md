@@ -71,6 +71,27 @@ These interfaces are defined as part of the HTTP [Content Security Policy (CSP)]
 - {{domxref("SecurityPolicyViolationEvent")}}
   - : Represents the event object of a `securitypolicyviolation` event fired on an element, document, or worker when its CSP is violated.
 
+## Related HTTP Headers
+
+These HTTP response headers define the endpoints where reports are sent.
+
+- {{HTTPHeader("Reporting-Endpoints")}}
+  - : Set the name and URL of reporting endpoints, which can then be used in the `report-to` directive of the `Content-Security-Header` HTTP header.
+- {{HTTPHeader("Report-To")}}
+  - : Set the name and URL of reporting endpoint groups, which can then be used in the `report-to` directive of the `Content-Security-Header` HTTP header.
+- {{HTTPHeader("Content-Security-Policy")}}
+
+  - : The following headers can be used to set the reporting endpoint where reports are sent by the user agent:
+
+    - {{CSP("report-to")}}
+
+      - : Provides the browser with a token identifying the reporting endpoint or group of endpoints for sending CSP violation information.
+        The endpoints that the token represents may be provided through other HTTP headers, such as {{HTTPHeader("Reporting-Endpoints")}}.
+
+    - {{CSP("report-uri")}} {{deprecated_inline}}
+
+      - : Provides the browser with a the URL where CSP violation reports should be sent.
+
 ## Examples
 
 In our [deprecation_report.html](https://mdn.github.io/dom-examples/reporting-api/deprecation_report.html) example, we create a simple reporting observer to observe usage of deprecated features on our web page:

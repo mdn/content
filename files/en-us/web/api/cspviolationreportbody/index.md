@@ -116,7 +116,7 @@ Configuring a web page to send a CSP violation report is similar to the previous
 As before, you need to configure your page so that there is a violation.
 
 In addition, you also need to specify the endpoints where the report will be sent.
-We specify endpoints using the {{httpheader("Reporting-Endpoints")}} response header: these must be secure URLs (HTTPS).
+A server specifies endpoints using the {{httpheader("Reporting-Endpoints")}} response header: these must be secure URLs (HTTPS).
 The CSP {{CSP("report-to")}} directive is then used to specify that the particular endpoint is used for reporting CPS violations:
 
 ```http
