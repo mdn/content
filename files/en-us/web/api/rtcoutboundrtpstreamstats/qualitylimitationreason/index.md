@@ -3,7 +3,7 @@ title: "RTCOutboundRtpStreamStats: qualityLimitationReason property"
 short-title: qualityLimitationReason
 slug: Web/API/RTCOutboundRtpStreamStats/qualityLimitationReason
 page-type: web-api-instance-property
-browser-compat: api.RTCOutboundRtpStreamStats.qualityLimitationReason
+browser-compat: api.RTCStatsReport.type_outbound-rtp.qualityLimitationReason
 ---
 
 {{APIRef("WebRTC")}}

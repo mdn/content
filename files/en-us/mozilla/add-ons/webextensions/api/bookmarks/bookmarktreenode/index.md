@@ -14,7 +14,7 @@ An object of type `bookmarks.BookmarkTreeNode` represents a node in the bookmark
 An {{jsxref("object")}} with the following properties:
 
 - `children` {{optional_inline}}
-  - : An {{jsxref("array")}} of {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} objects which represent the node's children. The list is ordered in the list in which the children appear in the user interface. This field is omitted if the node isn't a folder.
+  - : An {{jsxref("array")}} of `bookmarks.BookmarkTreeNode` objects which represent the node's children. The list is ordered in the list in which the children appear in the user interface. This field is omitted if the node isn't a folder.
 - `dateAdded` {{optional_inline}}
   - : A number representing the creation date of the node in [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
 - `dateGroupModified` {{optional_inline}}

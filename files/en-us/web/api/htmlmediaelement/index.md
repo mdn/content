@@ -131,8 +131,8 @@ _This interface also inherits methods from its ancestors {{domxref("HTMLElement"
 
 _These methods are obsolete and should not be used, even if a browser still supports them._
 
-- {{domxref("HTMLMediaElement.mozCaptureStream()")}} {{Non-standard_Inline}}
-  - : \[enter description]
+- {{domxref("HTMLMediaElement.captureStream", "HTMLMediaElement.mozCaptureStream()")}} {{Non-standard_Inline}}
+  - : The Firefox-prefixed equivalent of {{domxref("HTMLMediaElement.captureStream()")}}. See its [browser compatibility](/en-US/docs/Web/API/HTMLMediaElement/captureStream#browser_compatibility) for details.
 - {{domxref("HTMLMediaElement.mozCaptureStreamUntilEnded()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : \[enter description]
 - {{domxref("HTMLMediaElement.mozGetMetadata()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
