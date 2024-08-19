@@ -104,7 +104,11 @@ ECDH is specified in [RFC 6090](https://datatracker.ietf.org/doc/html/rfc6090).
 #### X25519
 
 X25519 is a key agreement algorithm like ECDH, but built on the [Curve25519](https://en.wikipedia.org/wiki/Curve25519) elliptic curve, which is part of the Edwards-Curve Digital Signature Algorithm (EdDSA) family of algorithms defined in {{rfc("8032")}}.
-The algorithm is specified in {{rfc("7748")}}.
+
+The Curve25519 algorithms are widely used in cryptography, and are considered to be some of the most efficient/fast available.
+By comparison with the NIST (National Institute of Standards and Technology) curve key exchange algorithms used with ECDH, Curve25519 is simpler to implement, and its non-governmental origin means that the decisions behind its design choices are transparent and open.
+
+X25519 is specified in {{rfc("7748")}}.
 
 ## Examples
 
