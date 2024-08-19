@@ -92,3 +92,11 @@ A \<coordinate> is a length in the user coordinate system that is the given dist
 ```
 
 {{EmbedLiveSample("Simple usage", "100%", "100")}}
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
