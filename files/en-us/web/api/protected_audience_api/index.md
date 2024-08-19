@@ -11,6 +11,9 @@ browser-compat:
 
 {{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("Protected Audience API")}}
 
+> [!NOTE]
+> An [Enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment) is required to use the Protected Audience API in your applications. See the [Enrollment](#enrollment_and_local_testing) section for details of what sub-features are gated by enrollment.
+
 The **Protected Audience API** allows developers to implement remarketing and custom audience advertising use cases. It uses on-device auctions to choose relevant ads to display related to websites the user has previously visited. The Protected Audience API doesn't use third-party cookies or other tracking technologies — third parties cannot use it to track user browsing behavior across sites.
 
 ## Concepts and usage
@@ -29,7 +32,7 @@ Let's illustrate how the Protected Audience API works via an example.
 
 Say we have a online shop that sells shoes, `shoe-shop.example`, which wants to advertise its products across the web. To do so, it will buy ad-space to display its adverts, either directly or via a third-party called a **Demand-side platform** (DSP). The DSP is an ad tech service for automating ad impression purchasing across a range of publisher sites. In this scenario we'll refer to the shop and/or DSP as the **buyer**.
 
-The other party in our scenario will be a publisher site that displays ads in return for ad revenue. Let's say it's an online fashion magazine, `fashion.example`, which publishes articles about shoes, clothing, makeup, and more. This site will sell ad space to compaines that want to advertise their products, usually via a **Sell-side platform** (SSP). The SSP is an ad tech service for automating selling ad space (often known as ad inventory) — in doing so, it is offered to multiple ad exchanges, ad networks, and DSPs. In this scenario we'll refer to the publisher and/or SSP as the **seller**.
+The other party in our scenario will be a publisher site that displays ads in return for ad revenue. Let's say it's an online fashion magazine, `fashion.example`, which publishes articles about shoes, clothing, makeup, and more. This site will sell ad space to companies that want to advertise their products, usually via a **Sell-side platform** (SSP). The SSP is an ad tech service for automating selling ad space (often known as ad inventory) — in doing so, it is offered to multiple ad exchanges, ad networks, and DSPs. In this scenario we'll refer to the publisher and/or SSP as the **seller**.
 
 The buyer wants to add users that browse their site to a specific interest group for shoes. Later on, when those users visit contextually relevant places (such as the seller's site), they want to display ads for their shoes on that site. Multiple buyers will be interested in the same ad space at the same time, therefore the Protected Audience API provides a real-time auction mechanism where relevant buyers can bid for the space, and the seller chooses the most relevant ad to display for each user.
 
@@ -37,17 +40,19 @@ The buyer wants to add users that browse their site to a specific interest group
 
 The steps involved are as follows:
 
-1. When a user visits the buyer's site, the buyer can invoke the {{domxref("Navigator.joinAdInterestGroup()")}} method — this in effect asks the user's browser to add an interest group to its list of stored interest groups that it is a member of. An interest group is equivalent to a remarketing list in traditional advertising, and contains the following information:
+1. A user visits the buyer's site.
+2. The buyer can invoke the {{domxref("Navigator.joinAdInterestGroup()")}} method — this in effect asks the user's browser to add an interest group to its list of stored interest groups that it is a member of. An interest group is equivalent to a remarketing list in traditional advertising, and contains the following information:
    - A name, indicating what the interest is. In this case, an appropriate name might be `shoes` or `fashion-shoes`.
    - The URL of the interest group owner. This might be the shop itself, i.e. `shoe-shop.example`, or the DSP acting on their behalf, for example `https://dsp.example`.
    - Configuration information required for the browser to include the buyer in ad auctions (see step 2.), such as bidding logic code, real-time data, and appropriate ad metadata.
      > [!NOTE]
      > The interest groups can be updated when required by invoking the {{domxref("Navigator.updateAdInterestGroups()")}} method. This securely fetches updates from the buyer's servers; rate-limiting is applied to mitigate abuse.
-2. Later on, when the user visits the seller's site, the seller invokes the {{domxref("Navigator.runAdAuction()")}} method. This runs seller-specific code that chooses the most desirable ad to display to the user. The decision of which ad to display is based on information taken from interest groups the user's browser is a member of that were invited to bid in the auction (see Step 1.) — which includes the bidding logic code mentioned earlier — and contextual data from the seller.
+3. Later on, the user visits the seller's site.
+4. The seller invokes the {{domxref("Navigator.runAdAuction()")}} method. This runs seller-specific code that chooses the most desirable ad to display to the user. The decision of which ad to display is based on information taken from interest groups the user's browser is a member of that were invited to bid in the auction (see Step 1.) — which includes the bidding logic code mentioned earlier — and contextual data from the seller.
    > [!NOTE]
    > To avoid leaking any sensitive information, the browser runs buyer- and seller-specific code inside dedicated **script runners**, which are modified [worklets](/en-US/docs/Web/API/Worklet), each associated with a single domain. The worklets cannot communicate with the seller page or the network — they serve only to load the buyer or seller logic, fetch any associated real-time data, run the code, and return the output.
-3. The ad associated with the winning bid in the ad auction is displayed on the seller's site in a {{htmlelement("fencedframe")}}.
-4. The browser sends signals back to the seller and the buyer that won the auction to let them know the auction results. They can then report the auction results via developer-defined functions: `reportResult()` in the seller's code and `reportWin()` in the buyer's code.
+5. The ad associated with the winning bid in the ad auction is displayed on the seller's site in a {{htmlelement("fencedframe")}}.
+6. The browser sends signals back to the seller and the buyer that won the auction to let them know the auction results. They can then report the auction results via developer-defined functions: `reportResult()` in the seller's code and `reportWin()` in the buyer's code.
 
 For more information on implementing the functionality required for the above steps, see:
 
@@ -75,61 +80,75 @@ When auctions complete, and ads are chosen, {{htmlelement("fencedframe")}} eleme
 ## Interfaces
 
 - {{domxref("ForDebuggingOnly")}}
-  - : xxx
+  - : Defines methods for reporting auction wins and losses from inside the `generateBid()` and `scoreAd()` user-defined functions for debugging purposes.
 - {{domxref("ProtectedAudience")}}
-  - : xxx
+  - : Defines the {{domxref("ProtectedAudience.queryFeatureSupport", "queryFeatureSupport()")}} method, which is used to determine support for Protected Audience API features.
 - {{domxref("RealTimeReporting")}}
-  - : xxx
+  - : Defines methods for real-time reporting, such as {{domxref("RealTimeReporting.contributeToHistogram", "contributeToHistogram()")}}
 
 ### Extensions to other interfaces
 
 - {{domxref("fetch()")}}, the `adAuctionHeaders` option
-  - : xxx
+  - : Allows `DirectFromSellerSignals` to be sent via an {{httpheader("Ad-Auction-Signals")}} header, or additional bids to be sent via an {{httpheader("Ad-Auction-Additional-Bid")}} header, in response to a `fetch()` request.
 - {{domxref("HTMLIFrameElement.adAuctionHeaders")}}
-  - : xxx
+  - : Allows `DirectFromSellerSignals` to be sent via an {{httpheader("Ad-Auction-Signals")}} header, or additional bids to be sent via an {{httpheader("Ad-Auction-Additional-Bid")}} header, in response to an {{htmlelement("iframe")}} navigation. Echoes the value of the `adAuctionHeaders` attribute.
 - {{domxref("Navigator.canLoadAdAuctionFencedFrame()")}}
-  - : xxx
+  - : Returns a boolean value that indicates whether an ad auction-created {{htmlelement("fencedframe")}} is allowed to be loaded in the current browsing context.
 - {{domxref("Navigator.clearOriginJoinedAdInterestGroups()")}}
-  - : xxx
+  - : Requests the user's browser to leave all interest groups that were previously joined on the current top-level frame's origin.
 - {{domxref("Navigator.createAuctionNonce()")}}
-  - : xxx
+  - : Generates an auction nonce, which is included in the configuration object of a {{domxref("Navigator.runAdAuction()")}} call to prevent unintended replaying of additional bids, if included in an auction.
+- {{domxref("Navigator.deprecatedReplaceInURN()")}}
+  - : Substitutes specified strings inside the mapped URL corresponding to a given opaque URN or {{domxref("FencedFrameConfig")}}'s internal `url` property.
 - {{domxref("Navigator.joinAdInterestGroup()")}}
-  - : xxx
+  - : Requests the user's browser to add an interest group to its list of stored interest groups that it is a member of.
 - {{domxref("Navigator.leaveAdInterestGroup()")}}
-  - : xxx
+  - : Requests the user's browser to leave a previously-joined interest group.
 - {{domxref("Navigator.protectedAudience()")}}
-  - : xxx
+  - : Returns the current browsing context's {{domxref("ProtectedAudience")}} object, which can be used to determine support for Protected Audience API features.
 - {{domxref("Navigator.runAdAuction()")}}
-  - : xxx
+  - : Initiates an real-time auction on the seller/publisher site that determines which ad is to be shown in the associated ad space.
 - {{domxref("Navigator.updateAdInterestGroups()")}}
-  - : xxx
+  - : Updates an interest group that the browser is already a member of with information obtained from its update URL, if it has one.
+
+### HTML additions
+
+- {{htmlelement("iframe")}}, the `adAuctionHeaders` attribute
+  - : Allows `DirectFromSellerSignals` to be sent via an {{httpheader("Ad-Auction-Signals")}} header in response to an `<iframe>` navigation.
 
 ### User-defined functions
 
+- `generateBid()`
+  - : Generates a bid for each interest group the user's browser is a member of that was invited to bid in an auction. Contained in the buyer's code referenced by the interest group configuration's `BiddingLogicURL` property.
+- `reportAdditionalBidWin()`
+  - : Reports the results of the auction to the buyer when the winning bid is an additional bid.
 - `reportResult()`
-  - : xxx
+  - : Reports the results of the auction to the seller.
 - `reportWin()`
-  - : xxx
-- MORE OF THESE?
+  - : Reports the results of the auction to the buyer.
+- `scoreAd()`
+  - : Calculates a desirability score for each individual ad referenced by interest groups the user's browser is a member of that were invited to bid in the auction. Contained in the seller's code referenced by the auction configuration's `decisionLogicURL` property.
+
+MORE OF THESE?
 
 ## HTTP headers
 
 - {{httpheader("Ad-Auction-Allow-Trusted-Scoring-Signals-From")}}
-  - : xxx
+  - : Sent in response to a request to a `trustedScoringSignalsURL` contained in a {{domxref("Navigator.runAdAuction()")}} config object. Contains a structured headers list of strings describing origins from which fetching trusted signals is permitted.
 - {{httpheader("Ad-Auction-Signals")}}
-  - : xxx
+  - : Sent in response to a `fetch()` request or `<iframe>` navigation that includes an `adAuctionHeaders` property/attribute and contains `DirectFromSellerSignals`.
 - {{httpheader("Ad-Auction-Additional-Bid")}}
-  - : xxx
+  - : Sent in response to a `fetch()` request or `<iframe>` navigation that includes an `adAuctionHeaders` property/attribute and contains additional bid information.
 - {{httpheader("Sec-Ad-Auction-Fetch")}}
-  - : xxx
+  - : Sent with a `fetch()` request or `<iframe>` navigation that includes an `adAuctionHeaders` property/attribute and contains additional bid information, to indicate to the server that each `Ad-Auction-Additional-Bid` response header from the server will be decoded as an additional bid and loaded into the auction.
 - {{httpheader("Permissions-Policy")}} {{httpheader("Permissions-Policy/join-ad-interest-group", "join-ad-interest-group")}} directive
-  - : xxx
+  - : Controls whether the current document is allowed to invoke the {{domxref("Navigator.joinAdInterestGroup()")}} method.
 - {{httpheader("Permissions-Policy")}} {{httpheader("Permissions-Policy/run-ad-auction", "run-ad-auction")}} directive
-  - : xxx
+  - : Controls whether the current document is allowed to invoke the {{domxref("Navigator.runAdAuction()")}} method.
 
 ## Enrollment and local testing
 
-To use the Protected Audience API in your sites, you must specify it in the [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment). If you don't do this, the API flow is blocked at response time, i.e. {{domxref("Navigator.joinAdInterestGroup()")}}, {{domxref("Navigator.runAdAuction()")}}, {{domxref("ForDebuggingOnly.reportAdAuctionWin()")}}, {{domxref("ForDebuggingOnly.reportAdAuctionLoss()")}}, and `sendReportTo()` calls will fail.
+To use the Protected Audience API in your sites, you must specify it in the [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment). If you don't do this, the API flow is blocked at response time, i.e. {{domxref("Navigator.joinAdInterestGroup()")}}, {{domxref("Navigator.leaveAdInterestGroup()")}}, {{domxref("Navigator.clearOriginJoinedAdInterestGroups()")}}, {{domxref("Navigator.runAdAuction()")}}, {{domxref("ForDebuggingOnly.reportAdAuctionWin()")}}, {{domxref("ForDebuggingOnly.reportAdAuctionLoss()")}}, and `sendReportTo()` calls will fail.
 
 You can still test your Protected Audience API code locally without enrollment. To allow local testing, enable the following Chrome developer flag:
 
