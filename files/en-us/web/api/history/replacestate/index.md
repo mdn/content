@@ -14,6 +14,13 @@ URL passed in the method parameters. This method is particularly useful
 when you want to update the state object or URL of the current history entry in response
 to some user action.
 
+> [!NOTE]
+> Browsers might throw an error if `replaceState()` is called frequently. See below links.
+
+- [Chromium issue](https://crbug.com/1038223)
+- [WebKit issue](https://developer.apple.com/forums/thread/36650)
+- [Firefox issue](https://bugzilla.mozilla.org/show_bug.cgi?id=1314912)
+
 ## Syntax
 
 ```js-nolint
