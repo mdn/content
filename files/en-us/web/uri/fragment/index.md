@@ -28,7 +28,7 @@ The **fragment** of a URI is the last part of the URI, starting with the `#` cha
 - `#syntax`
   - : The browser will scroll to the element with the `id="syntax"` in the document (which, for this page, is the [Syntax](#syntax) heading).
 - `#:~:text=fragment`
-  - : The browser will highlight the text `fragment` in the document.
+  - : The browser will highlight the text [`fragment`](#:~:text=fragment) in the document.
 - `#t=10,20`
   - : The video or audio will start playing from the 10th second.
 

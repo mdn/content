@@ -49,3 +49,4 @@ protocol:
 - [URIs](/en-US/docs/Web/URI)
 - [Data URLs](/en-US/docs/Web/URI/Schemes/data)
 - [Resource URLs](/en-US/docs/Web/URI/Schemes/resource)
+- [IANA list of URI schemes](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml)

@@ -2,7 +2,7 @@
 title: URIs
 slug: Web/URI
 page-type: guide
-spec-urls: https://httpwg.org/specs/rfc9110.html#uri
+spec-urls: https://www.rfc-editor.org/rfc/rfc3986.html
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/URI")}}
@@ -55,34 +55,7 @@ http://www.example.com:80/path/to/myfile.html?key1=value1&key2=value2#SomewhereI
 
 ![Protocol](mdn-url-protocol@x2.png)
 
-`http://` is the [_scheme_](/en-US/docs/Web/URI/Schemes) of the URL, indicating which protocol the browser must use. Usually it is the HTTP protocol or its secured version, HTTPS. The Web requires one of these two, but browsers also know how to handle other protocols such as `mailto:` (to open a mail client) or `ftp:` to handle a file transfer, so don't be surprised if you see such protocols. Common schemes are:
-
-- [`blob`](/en-US/docs/Web/API/URL/createObjectURL_static)
-  - : Binary Large Object; a pointer to a large in-memory object
-- [`data`](/en-US/docs/Web/URI/Schemes/data)
-  - : Data directly embedded in the URL
-- `file`
-  - : Host-specific file names
-- `ftp`
-  - : {{Glossary("FTP","File Transfer Protocol")}}
-- `http/https`
-  - : [Hyper text transfer protocol (Secure)](/en-US/docs/Glossary/HTTP)
-- `javascript`
-  - : URL-embedded JavaScript code
-- `mailto`
-  - : Electronic mail address
-- [`resource`](/en-US/docs/Web/URI/Schemes/resource) {{Non-standard_inline}}
-  - : Firefox and Firefox browser extensions to load resources internally
-- `ssh`
-  - : Secure shell
-- `tel`
-  - : telephone
-- `urn`
-  - : Uniform Resource Names
-- `view-source`
-  - : Source code of the resource
-- `ws/wss`
-  - : [WebSocket connections (Secure)](/en-US/docs/Web/API/WebSockets_API)
+`http://` is the [_scheme_](/en-US/docs/Web/URI/Schemes) of the URL, indicating which protocol the browser must use. Usually it is the HTTP protocol or its secured version, HTTPS. The Web requires one of these two, but browsers also know how to handle other protocols such as `mailto:` (to open a mail client) or `ftp:` to handle a file transfer, so don't be surprised if you see such protocols. The [schemes](/en-US/docs/Web/URI/Schemes) reference provides a list of the most common schemes, and documentation for some of them.
 
 When using URLs in {{Glossary("HTML")}} content, you should generally only use a few of these URL schemes. When referring to subresources — that is, files that are being loaded as part of a larger document — you should only use the HTTP and HTTPS schemes. Increasingly, browsers are removing support for using FTP to load subresources, for security reasons.
 
@@ -138,4 +111,3 @@ mailto:help@supercyberhelpdesk.info
 ## See also
 
 - [What is a URL?](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
-- [IANA list of URI schemes](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml)

@@ -7,7 +7,7 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc3986.html#section-3.1
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/URI")}}
 
-The **authority** of a URI is the part of the URI that comes after the scheme and before the path. It consists of three parts: user information, host, and port.
+The **authority** of a URI is the section that comes after the [scheme](/en-US/docs/Web/URI/Schemes) and before the path. It may have up to three parts: user information, host, and port.
 
 ## Syntax
 
@@ -27,17 +27,17 @@ user@host:port
   - : The _user_ is optional and is used for authentication purposes. It is not commonly used in web URIs.
 
     > [!WARNING]
-    > Providing user information directly in the URI is not recommended, as it can expose sensitive information. Use other methods like HTTP authentication or session cookies instead. Sometimes, phishing sites trick users by display misleading URLs whose "user" part appears as if it's a domain name, known as [semantic URL attack](https://en.wikipedia.org/wiki/Semantic_URL_attack).
+    > Providing user information directly in HTTP URLs is not recommended, as it can expose sensitive information. Use other methods like HTTP authentication or session cookies instead. Sometimes, phishing sites trick users by display misleading URLs whose "user" part appears as if it's a domain name, known as [semantic URL attack](https://en.wikipedia.org/wiki/Semantic_URL_attack).
 
 ## Examples
 
-- `developer.mozilla.org`
+- `https://developer.mozilla.org`
   - : The host is `developer.mozilla.org`. The port is not specified but will default to 443 if accessed via `https:`.
-- `localhost:8080`
+- `http://localhost:8080`
   - : The host is `localhost` and the port is `8080`. `localhost` is a special host name that the browser resolves to the local address `127.0.0.1`.
-- `postgres:admin123@db:5432`
+- `postgresql://postgres:admin123@db:5432`
   - : The host is `db`, and the port is `5432`. It also specifies a user `postgres` and its password `admin123`. This can be used to connect to a PostgreSQL database.
-- `cnn.example.com&story=breaking_news@10.0.0.1`
+- `https://cnn.example.com&story=breaking_news@10.0.0.1`
   - : A misleading URL that looks like it's pointing to a trusted website. However, the host name is `10.0.0.1`, and the `cnn.example.com&story=breaking_news` part is the "user".
 
 ## See also
