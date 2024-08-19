@@ -90,15 +90,15 @@ FTP is still acceptable at the top level (such as typed directly into the browse
 
 ### Authority
 
+The URI [_authority_](/en-US/docs/Web/URI/Authority) is comprised of user info (optional and usually unspecified), the host name, and the port.
+
 ![Domain Name](mdn-url-domain@x2.png)
 
-`www.example.com` is the _host name_, or domain name, indicating which Web server is being requested. Alternatively, it is possible to directly use an {{Glossary("IP address")}}, but because it is less convenient, it is not often used on the Web.
+`www.example.com` is the _host name_ of the URI, indicating which Web server is being requested. Here, we use a domain name; alternatively, it is possible to directly use an {{Glossary("IP address")}}, but because it is less convenient, it is not often used on the Web.
 
 ![Port](mdn-url-port@x2.png)
 
 `:80` is the _port_ of the URL, indicating the technical "gate" used to access the resources on the web server. It is usually omitted if the web server uses the standard ports of the HTTP protocol (80 for HTTP and 443 for HTTPS) to grant access to its resources. Otherwise, it is mandatory.
-
-The host name and the port are collectively known as the [_authority_](/en-US/docs/Web/URI/Authority).
 
 ### Path
 
