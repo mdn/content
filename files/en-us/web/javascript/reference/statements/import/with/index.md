@@ -2,8 +2,6 @@
 title: Import attributes
 slug: Web/JavaScript/Reference/Statements/import/with
 page-type: javascript-language-feature
-status:
-  - experimental
 browser-compat: javascript.statements.import.import_attributes
 ---
 
