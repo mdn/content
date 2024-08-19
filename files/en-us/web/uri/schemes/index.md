@@ -26,7 +26,7 @@ protocol:
     - `ftp`
       - : {{Glossary("FTP","File Transfer Protocol")}}
     - `http/https`
-      - : [Hyper text transfer protocol (Secure)](/en-US/docs/Glossary/HTTP)
+      - : Hyper text transfer protocol (Secure) ({{glossary("HTTP")}}/{{glossary("HTTPS")}})
     - `javascript`
       - : URL-embedded JavaScript code
     - `mailto`

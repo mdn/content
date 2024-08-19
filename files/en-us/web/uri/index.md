@@ -94,7 +94,7 @@ The URI [_authority_](/en-US/docs/Web/URI/Authority) is comprised of user info (
 
 ![Domain Name](mdn-url-domain@x2.png)
 
-`www.example.com` is the _host name_ of the URI, indicating which Web server is being requested. Here, we use a domain name; alternatively, it is possible to directly use an {{Glossary("IP address")}}, but because it is less convenient, it is not often used on the Web.
+`www.example.com` is the _host name_ of the URI, indicating which Web server is being requested. Here, we use a domain name. It is also possible to directly use an {{Glossary("IP address")}}, but because it is less convenient, it is rare to do so, unless the server doesn't have a registered domain name.
 
 ![Port](mdn-url-port@x2.png)
 
