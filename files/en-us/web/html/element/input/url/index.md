@@ -318,7 +318,7 @@ input:valid + span::after {
 
 First of all, the [`required`](/en-US/docs/Web/HTML/Element/input#required) attribute is specified, making it mandatory that a valid URL be provided.
 
-Second, in the `url` input, we set `pattern` to `".*\.myco\..*"`. This regular expression requests a string that has any number of characters, followed by a dot, followed by "myco", followed by a dot, followed by any number of characters. And because the browser runs both the standard URL filter _and_ our custom pattern against the specified text, we wind up with a validation that says "make sure this is a valid URL, and also in a Myco domain."
+Second, in the `url` input, we set `pattern` to `".*\.myco\..*"`. This regular expression requests a string that has any number of characters, followed by a dot, followed by "myco", followed by a dot, followed by any number of characters. Because the browser runs both the standard URL filter _and_ our custom pattern against the specified text, we wind up with a validation that says "make sure this is a valid URL, and also in a Myco domain."
 
 This isn't perfect, but it is good enough for this basic demo's requirements.
 
