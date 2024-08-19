@@ -7,7 +7,8 @@ browser-compat: html.manifest.icons
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
-The `icons` manifest member is used to specify one or more image files that serve as iconic representations of your web application in different contexts. These icons represent your web app among a list of other applications. They can also be used to integrate your web app with an operating system's task switcher, system settings, home screen, and other places when an app icon is needed.
+The `icons` manifest member is used to specify one or more image files that define the icons to represent your web application.
+These icons uniquely identify your web app in different contexts, such as in an operating system's task switcher, system settings, home screen, app listings, and other places when application icons are displayed.
 
 ## Syntax
 
