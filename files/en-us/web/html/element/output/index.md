@@ -35,7 +35,7 @@ Many browsers implement this element as an [`aria-live`](/en-US/docs/Web/Accessi
 In the following example, the form provides a slider whose value can range between `0` and `100`, and an {{HTMLElement("input")}} element into which you can enter a second number. The two numbers are added together, and the result is displayed in the `<output>` element each time the value of any of the controls changes.
 
 ```html
-<form>
+<form id="example-form">
   <input type="range" id="b" name="b" value="50" /> +
   <input type="number" id="a" name="a" value="10" /> =
   <output name="result" for="a b">60</output>
@@ -43,20 +43,20 @@ In the following example, the form provides a slider whose value can range betwe
 ```
 
 ```js
-document.addEventListener("DOMContentLoaded", function () {
-  const a = document.getElementById("a");
-  const b = document.getElementById("b");
-  const result = document.querySelector('output[name="result"]');
+const form = document.getElementById("example-form");
+const a = form.elements["a"];
+const b = form.elements["b"];
+const result = form.elements["result"];
 
-  function updateResult() {
-    result.value = parseInt(a.value) + parseInt(b.value);
-  }
+function updateResult() {
+  const aValue = parseInt(a.value);
+  const bValue = parseInt(b.value);
+  result.value = aValue + bValue;
+}
 
-  a.addEventListener("input", updateResult);
-  b.addEventListener("input", updateResult);
-
-  updateResult();
-});
+a.addEventListener("input", updateResult);
+b.addEventListener("input", updateResult);
+updateResult();
 ```
 
 ### Result
