@@ -45,7 +45,7 @@ This type of field is set using the value `email` for the [`type`](/en-US/docs/W
 
 {{EmbedLiveSample('email','100%','50')}}
 
-When this [`type`](/en-US/docs/Web/HTML/Element/input#type) is used, the value must be an email address to be valid. Any other content causes the browser to display an error when the form is submitted. You can see this in action in the below screenshot.
+When this [`type`](/en-US/docs/Web/HTML/Element/input#type) is used, the value must be an email address to be valid. Any other content causes the browser to display an error when the form is submitted. You can see this in action in the screenshot below.
 
 ![An invalid email input showing the message "Please enter an email address."](email_address_invalid.png)
 
@@ -238,7 +238,7 @@ Here we store references to the `range` input and the `output` in two variables.
 
 ## Date and time pickers
 
-Generally, for a good user experience when gathering date and time values, it is important to provide a calendar selection UI, enabling users to select dates without necessitating context switching to a native calendar application or potentially entering them in differing formats that are hard to parse. The last minute of the previous millennium can be expressed in the following different ways: `1999/12/31`, `23:59`, or `12/31/99T11:59PM`.
+Generally, for a good user experience when gathering date and time values, it is important to provide a calendar selection UI. These enables users to select dates without needing to context switch to a native calendar application or potentially entering them in differing formats that are hard to parse. The last minute of the previous millennium can be expressed in the following different ways: `1999/12/31`, `23:59`, or `12/31/99T11:59PM`.
 
 HTML date controls are available to handle this specific kind of data, providing calendar widgets and making the data uniform.
 
