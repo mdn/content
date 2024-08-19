@@ -108,7 +108,7 @@ Web-based protocol handlers allow web-based applications to participate in the p
 navigator.registerProtocolHandler("mailto", "https://mail.example.org/?to=%s");
 ```
 
-After this, when the user visits a page containing a `mailto` link, the browser will (after possibly asking the browser for confirmation) navigate to `https://mail.example.org/?to=mailto:webmaster@example.com`. This page could parse the URL parameter to extract the address, and use this to initialize an email.
+After this, when the user clicks a `mailto` link on any website, the browser will (after possibly asking the browser for confirmation) navigate to `https://mail.example.org/?to=mailto:webmaster@example.com`. This page could parse the URL parameter to extract the address, and use this to initialize an email.
 
 ### Registering a handler for a custom protocol
 
