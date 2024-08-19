@@ -96,7 +96,7 @@ FTP is still acceptable at the top level (such as typed directly into the browse
 
 ![Port](mdn-url-port@x2.png)
 
-`:80` is the _port_ or the URL, indicating the technical "gate" used to access the resources on the web server. It is usually omitted if the web server uses the standard ports of the HTTP protocol (80 for HTTP and 443 for HTTPS) to grant access to its resources. Otherwise, it is mandatory.
+`:80` is the _port_ of the URL, indicating the technical "gate" used to access the resources on the web server. It is usually omitted if the web server uses the standard ports of the HTTP protocol (80 for HTTP and 443 for HTTPS) to grant access to its resources. Otherwise, it is mandatory.
 
 The host name and the port are collectively known as the [_authority_](/en-US/docs/Web/URI/Authority).
 
