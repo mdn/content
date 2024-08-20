@@ -9,7 +9,7 @@ browser-compat: http.headers.Report-To
 
 > [!WARNING]
 > This header has been replaced by the {{HTTPHeader("Reporting-Endpoints")}} HTTP response header.
-> It is a deprecated part of an earlier iteration of the Reporting API specification.
+> It is a deprecated part of an earlier iteration of the [Reporting API](/en-US/docs/Web/API/Reporting_API) specification.
 
 The HTTP **`Report-To`** {{glossary("response header")}} allows website administrators to define named groups of endpoints, that can then be used as the destination for warning and error reports, such as those used as the target for CSP violation reports, {{HTTPHeader("Cross-Origin-Opener-Policy")}} reports, deprecation reports, or other generic violations.
 
@@ -119,4 +119,4 @@ It was previously part of the [Reporting API](/en-US/docs/Web/API/Reporting_API)
 - {{HTTPHeader("Content-Security-Policy")}}
 - {{CSP("report-to")}} directive
 - {{HTTPHeader("Content-Security-Policy-Report-Only")}}
-- [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP#enabling_reporting) guide
+- [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP#violation_reporting) guide

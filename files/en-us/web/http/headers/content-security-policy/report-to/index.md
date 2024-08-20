@@ -40,7 +40,36 @@ Content-Security-Policy: …; report-to <endpoint_name>
 
 `<endpoint_name>` is the name of an endpoint provided by the {{HTTPHeader("Reporting-Endpoints")}} HTTP response header.
 
-It can also be the name of a group provided in the {{HTTPHeader("Report-To")}} {{deprecated_inline}} HTTP response header, but this header is deprecated and should not be used.
+The endpoint name can also be the name of a group that is provided by the server in the {{HTTPHeader("Report-To")}} {{deprecated_inline}} HTTP response header, but this header is deprecated and should not be used.
+
+### Violation report syntax
+
+A CSP violation report is a JSON-serialized version of the {{domxref("Report")}} object, with a `type` property that has a the value `"csp-violation"`, and a `body` that is the serialized form of a {{domxref("CSPViolationReportBody")}} object (see the respective objects for their property definitions).
+Reports are sent to the target endpoint in a POST operation with the {{HTTPHeader("Content-Type")}} of `application/reports+json`.
+
+The JSON for a single report might look like this:
+
+```json
+{
+  "age": 53531,
+  "body": {
+    "blockedURL": "inline",
+    "columnNumber": 39,
+    "disposition": "enforce",
+    "documentURL": "https://example.com/csp-report",
+    "effectiveDirective": "script-src-elem",
+    "lineNumber": 121,
+    "originalPolicy": "default-src 'self'; report-to csp-endpoint-name",
+    "referrer": "https://www.google.com/",
+    "sample": "console.log(\"lo\")",
+    "sourceFile": "https://example.com/csp-report",
+    "statusCode": 200
+  },
+  "type": "csp-violation",
+  "url": "https://example.com/csp-report",
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36"
+}
+```
 
 ## Usage notes
 
@@ -69,8 +98,6 @@ The server can set this an endpoint name as the target for sending CSP violation
 ```http
 Content-Security-Policy: default-src 'self'; report-to name-of-endpoint
 ```
-
-<!-- {{HTTPHeader("Content-Security-Policy-Report-Only")}} for more information and examples. -->
 
 ## Specifications
 

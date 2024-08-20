@@ -76,12 +76,13 @@ These interfaces are defined as part of the HTTP [Content Security Policy (CSP)]
 These HTTP response headers define the endpoints where reports are sent.
 
 - {{HTTPHeader("Reporting-Endpoints")}}
-  - : Set the name and URL of reporting endpoints, which can then be used in the `report-to` directive of the `Content-Security-Header` HTTP header.
-- {{HTTPHeader("Report-To")}}
-  - : Set the name and URL of reporting endpoint groups, which can then be used in the `report-to` directive of the `Content-Security-Header` HTTP header.
+  - : Set the name and URL of reporting endpoints.
+    These can be used in the `report-to` directive, which may be used with a number of HTTP headers including `Content-Security-Header`.
+- {{HTTPHeader("Report-To")}} {{deprecated_inline}}
+  - : Set the name and URL of reporting endpoint groups, which may be used with a number of HTTP headers including `Content-Security-Header`.
 - {{HTTPHeader("Content-Security-Policy")}}
 
-  - : The following headers can be used to set the reporting endpoint where reports are sent by the user agent:
+  - : The following CSP directives set the reporting endpoint (where reports are sent by the user agent) for CSP violations:
 
     - {{CSP("report-to")}}
 
@@ -93,6 +94,8 @@ These HTTP response headers define the endpoints where reports are sent.
       - : Provides the browser with a the URL where CSP violation reports should be sent.
 
 ## Examples
+
+### Reporting deprecated features
 
 In our [deprecation_report.html](https://mdn.github.io/dom-examples/reporting-api/deprecation_report.html) example, we create a simple reporting observer to observe usage of deprecated features on our web page:
 

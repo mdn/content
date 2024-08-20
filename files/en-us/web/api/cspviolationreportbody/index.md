@@ -9,11 +9,17 @@ browser-compat: api.CSPViolationReportBody
 
 The `CSPViolationReportBody` interface is an extension of the [Reporting API](/en-US/docs/Web/API/Reporting_API) that represents the body of a Content Security Policy (CSP) violation report.
 
-CSP violations are thrown when the webpage attempts to load a resource that violates the CSP set by the {{HTTPHeader("Content-Security-Policy")}} HTTP header.
+CSP violations are thrown when the webpage attempts to load a resource that violates the policy set by the {{HTTPHeader("Content-Security-Policy")}} HTTP header.
 
-An object of this type is returned in the `body` property of each of the [reports](/en-US/docs/Web/API/ReportingObserver/ReportingObserver#reports) returned in the {{domxref("ReportingObserver")}} callback that have a `type` of `"csp-violation"`.
+CSP violation reports are returned in the [reports](/en-US/docs/Web/API/ReportingObserver/ReportingObserver#reports) parameter of the {{domxref("ReportingObserver")}} callback that have a `type` of `"csp-violation"`.
+The `body` property of those reports is an instance of `CSPViolationReportBody`.
 
-A JSON serialization of this object is included in the `body` property of the JSON report object send to the endpoint specified in the [`report-to`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-to) policy directive of the {{HTTPHeader("Content-Security-Policy")}} header.
+CSP violation reports may also be sent as JSON objects to the endpoint specified in the [`report-to`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-to) policy directive of the {{HTTPHeader("Content-Security-Policy")}} header.
+These reports similarly have a `type` of `"csp-violation"`, and a body property that is a serialization of an instance of this interface.
+
+> [!NOTE]
+> The CSP violation reports sent by the reporting API when an endpoint is specified using the CSP [`report-to`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-to) directive are similar (but not identical) to the "CSP report" [JSON objects](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-uri#violation_report_syntax) sent back when endpoints are specified using the [`report-uri`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-uri) directive.
+> The reporting API and `report-to` are intended to replace the older report format and the `report-uri` directive.
 
 {{InheritanceDiagram}}
 
