@@ -126,11 +126,11 @@ Within a keyframe, `animation-timing-function` is an at-rule-specific descriptor
 
 ## Examples
 
-All the examples in this section animate `width` and `background-color` properties of `<div>` elements. The width is being animated from `0` to `100%`, and the background color is being animated from lime to magenta.
+All the examples in this section animate the `width` and `background-color` properties of several `<div>` elements with different `animation-timing-function` values. The width is being animated from `0` to `100%`, and the background color is being animated from lime to magenta.
 
 ### Linear function examples
 
-The example demonstrates `linear()` easing.
+The example demonstrates the effects of various `linear()` easing function values.
 
 ```html hidden
 <div class="parent">
@@ -248,15 +248,15 @@ btn.addEventListener("click", () => {
 
 {{EmbedLiveSample("Linear function examples", 600, 280)}}
 
-The following image shows graphs of all the `linear()` function values used in this example. Time(input) is plotted on the x-axis and the output is on the y-axis. As per the syntax, the input(time) ranges from 0 to 100% and the output ranges from -∞ to ∞.
+The following image shows graphs of all the `linear()` function values used in this example. Input progress (time) is plotted on the x-axis and output progress is plotted on the y-axis. As per the syntax, the input progress ranges from 0 to 100%, and the output ranges from 0 to 1.
 
 ![An image showing 'linear' function graphs](https://mdn.github.io/shared-assets/images/diagrams/css/animation-easing/linear-function-graphs.png)
 
-Note that the output can go in the backward direction.
+Note that the output can go forward or backward.
 
-### Cubic-Bezier examples
+### Cubic-Bézier examples
 
-The example demonstrates bezier curve easing.
+The example demonstrates the effects of various bézier curve easing functions.
 
 ```html hidden
 <div class="parent">
@@ -358,13 +358,13 @@ btn.addEventListener("click", () => {
 
 {{EmbedLiveSample("Cubic-Bezier_examples", 600, 230)}}
 
-The following image shows graphs of all the cubic bezier function values used in this example. The input(time) ranges from 0 to 1 and the output ranges from -∞ to ∞.
+The following image shows graphs of all the cubic bézier function values used in this example. The input progress(time) ranges from 0 to 1 and the output progress ranges from 0 to 1.
 
 ![An image showing 'cubic-bezier' function graphs](https://mdn.github.io/shared-assets/images/diagrams/css/animation-easing/cubic-bezier-function-graphs.png)
 
 ### Step examples
 
-The example demonstrates step easing.
+This example demonstrates the effects of several step easing function values.
 
 ```html hidden
 <div class="parent">
@@ -489,7 +489,7 @@ btn.addEventListener("click", () => {
 
 {{EmbedLiveSample("Step_examples", 600, 330)}}
 
-The following image shows graphs of all the `step()` function values used in this example. The input(time) and output ranges from 0 to 1.
+The following image shows graphs of all the `step()` function values used in this example. The input progress (time) and output progress range from 0 to 1.
 
 ![image showing 'steps' function graphs](https://mdn.github.io/shared-assets/images/diagrams/css/animation-easing/step-function-graphs.png)
 
@@ -506,5 +506,5 @@ The following image shows graphs of all the `step()` function values used in thi
 - [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
 - {{cssxref('easing-function')}}
 - JavaScript {{domxref("AnimationEvent")}} API
-- [Cubic bezier generation tool](https://cubic-bezier.com)
+- [Cubic bézier generation tool](https://cubic-bezier.com)
 - Other related animation properties: {{cssxref("animation")}}, {{cssxref("animation-composition")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-name")}}, {{cssxref("animation-play-state")}}, {{cssxref("animation-timeline")}}
