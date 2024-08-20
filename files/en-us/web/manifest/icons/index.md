@@ -38,7 +38,7 @@ Each object in the array can have one or more of the following properties (`src`
 
 - `type`
 
-  - : A string that specifies the media type (also known as the {{Glossary("MIME type")}}) of the icon. The value should be in the format `image/<subtype>`, where `<subtype>` is a specific image format; for example, `image/png` indicates a PNG image. This property is optional; if not specified, a browser typically uses the file extension to determine the image type.
+  - : A string that specifies the {{Glossary("MIME type")}} of the icon. The value should be in the format `image/<subtype>`, where `<subtype>` is a specific image format; for example, `image/png` indicates a PNG image. This property is optional; if not specified, a browser typically uses the file extension to determine the image type.
 
 - `purpose`
   - : A string that specifies one or more the purposes of the icon, which indicate how the icon should be used by the browser or operating system. The value can be a single keyword or multiple space-separated keywords. Valid keyword values include `monochrome`, `maskable`, and `any` and are case-sensitive. This property is optional; `any` is assumed if no value is specified. If multiple values are specified, they should be listed in the following order of precedence:
