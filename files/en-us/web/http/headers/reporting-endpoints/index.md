@@ -83,3 +83,4 @@ Reporting-Endpoints: csp-endpoint="https://example.com/csp-reports",
 - {{HTTPHeader("Content-Security-Policy")}}
 - {{CSP("report-to")}} directive
 - [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP#violation_reporting) guide
+- [Reporting API](/en-US/docs/Web/API/Reporting_API)

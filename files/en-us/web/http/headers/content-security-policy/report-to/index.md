@@ -112,3 +112,4 @@ Content-Security-Policy: default-src 'self'; report-to name-of-endpoint
 - {{HTTPHeader("Reporting-Endpoints")}}
 - {{HTTPHeader("Content-Security-Policy")}}
 - {{HTTPHeader("Content-Security-Policy-Report-Only")}}
+- [Reporting API](/en-US/docs/Web/API/Reporting_API)
