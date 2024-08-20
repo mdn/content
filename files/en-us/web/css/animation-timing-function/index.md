@@ -246,7 +246,7 @@ btn.addEventListener("click", () => {
 }
 ```
 
-{{EmbedLiveSample("Linear function examples", 600, 280)}}
+{{EmbedLiveSample("Linear function examples", 600, 300)}}
 
 The following image shows graphs of all the `linear()` function values used in this example. Input progress (time) is plotted on the x-axis and output progress is plotted on the y-axis. As per the syntax, the input progress ranges from 0 to 100%, and the output ranges from 0 to 1.
 
@@ -356,7 +356,7 @@ btn.addEventListener("click", () => {
 }
 ```
 
-{{EmbedLiveSample("Cubic-Bezier_examples", 600, 230)}}
+{{EmbedLiveSample("Cubic-Bezier_examples", 600, 250)}}
 
 The following image shows graphs of all the cubic bézier function values used in this example. The input progress(time) ranges from 0 to 1 and the output progress ranges from 0 to 1.
 
@@ -487,7 +487,7 @@ btn.addEventListener("click", () => {
 }
 ```
 
-{{EmbedLiveSample("Step_examples", 600, 330)}}
+{{EmbedLiveSample("Step_examples", 600, 350)}}
 
 The following image shows graphs of all the `step()` function values used in this example. The input progress (time) and output progress range from 0 to 1.
 
