@@ -128,28 +128,20 @@ for example.
 
 ### Reporting directives
 
-Reporting directives control the destination URL for CSP violation reports.
-These violation reports consist of {{Glossary("JSON")}} documents sent via an HTTP `POST` request to the specified URI.
-
-> [!WARNING]
-> The {{CSP("report-to")}} directive is intended to replace `report-uri`, and in browsers that support `report-to`, the `report-uri` directive is ignored.
->
-> However until `report-to` is broadly supported you should specify both headers as shown (where `endpoint_name` is the name of a separately provided endpoint):
->
-> ```http
-> Content-Security-Policy: …; report-uri https://endpoint.example.com; report-to endpoint_name
-> ```
+Reporting directives control the destination URL for CSP violation reports in `Content-Security-Policy` and {{HTTPHeader("Content-Security-Policy-Report-Only")}}.
 
 - {{CSP("report-to")}}
 
   - : Provides the browser with a token identifying the reporting endpoint or group of endpoints for sending CSP violation information.
     The endpoints that the token represents may be provided through other HTTP headers, such as {{HTTPHeader("Reporting-Endpoints")}}.
 
-- {{CSP("report-uri")}} {{deprecated_inline}}
-
-  - : Provides the browser with a the URL where CSP violation reports should be sent.
-
-See also the {{HTTPHeader("Content-Security-Policy-Report-Only")}} header.
+    > [!WARNING]
+    > This directive is intended to replace [`report-uri`](#report-uri), and in browsers that support `report-to`, the `report-uri` directive is ignored.
+    > However until `report-to` is broadly supported you should specify both headers as shown (where `endpoint_name` is the name of a separately provided endpoint):
+    >
+    > ```http
+    > Content-Security-Policy: …; report-uri https://endpoint.example.com; report-to endpoint_name
+    > ```
 
 ### Other directives
 
@@ -168,7 +160,12 @@ See also the {{HTTPHeader("Content-Security-Policy-Report-Only")}} header.
 ### Deprecated directives
 
 - {{CSP("block-all-mixed-content")}} {{deprecated_inline}}
+
   - : Prevents loading any assets using HTTP when the page is loaded using HTTPS.
+
+- {{CSP("report-uri")}} {{deprecated_inline}}
+  - : Provides the browser with a the URL where CSP violation reports should be sent.
+    This has been superseded by the [`report-to`](#report-to) directive.
 
 ## Values
 
