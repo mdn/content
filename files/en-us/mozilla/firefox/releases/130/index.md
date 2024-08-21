@@ -74,6 +74,11 @@ This article provides information about the changes in Firefox 130 that affect d
 
 These features are newly shipped in Firefox 130 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
 
+- **Request video frame callback:** `media.rvfc.enabled`.
+
+  The {{domxref('HTMLVideoElement/requestVideoFrameCallback','requestVideoFrameCallback()')}} method of the {{domxref('HTMLVideoElement')}} interface registers a callback function that runs when a new video frame is sent to the compositor. This enables developers to perform efficient operations on each video frame, such as video analysis, painting to a canvas, synchronization with external audio sources, and so on. The method returns a callback handle that can be passed to {{domxref('HTMLVideoElement.cancelVideoFrameCallback()')}} in order to cancel the outstanding callback request.
+  Both methods are are enabled by default on the nightly build. ([Firefox bug 1800882](https://bugzil.la/1800882)).
+
 ## Older versions
 
 {{Firefox_for_developers}}
