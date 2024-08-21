@@ -43,6 +43,8 @@ This article provides information about the changes in Firefox 130 that affect d
 
 ### APIs
 
+- The [X25519](/en-US/docs/Web/API/SubtleCrypto/deriveKey#x25519) digital signature algorithm is supported by the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API), and can be used in the {{domxref("SubtleCrypto")}} methods: {{domxref("SubtleCrypto.deriveKey()", "deriveKey()")}}, {{domxref("SubtleCrypto.deriveBits()", "deriveBits()")}}, {{domxref("SubtleCrypto.generateKey()", "generateKey()")}}, {{domxref("SubtleCrypto.importKey()", "importKey()")}} and {{domxref("SubtleCrypto.exportKey()", "exportKey()")}} ([Firefox bug 1904836](https://bugzil.la/1904836)).
+
 #### DOM
 
 #### Media, WebRTC, and Web Audio
