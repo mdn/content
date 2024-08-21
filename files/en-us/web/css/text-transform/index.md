@@ -35,6 +35,7 @@ text-transform: uppercase;
 text-transform: lowercase;
 text-transform: full-width;
 text-transform: full-size-kana;
+text-transform: math-auto;
 
 /* Global values */
 text-transform: inherit;
