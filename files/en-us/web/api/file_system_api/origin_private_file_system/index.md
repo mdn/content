@@ -179,7 +179,7 @@ size = accessHandle.getSize();
 const dataView = new DataView(new ArrayBuffer(size));
 
 // Read the entire file into the data view.
-accessHandle.read(dataView);
+accessHandle.read(dataView, { at: 0 });
 // Logs `"Some textMore content"`.
 console.log(textDecoder.decode(dataView));
 

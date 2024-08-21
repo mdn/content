@@ -78,7 +78,7 @@ A few very common safety net tool types you will find being used by developers a
 
 [ESLint](https://eslint.org/) is the industry standard JavaScript linter — a highly configurable tool for catching potential syntax errors and encouraging "best practices" throughout your code. Some companies and projects have also [shared their ESLint configs](https://www.npmjs.com/search?q=keywords:eslintconfig).
 
-You can also find linting tools for other languages, such as [stylelint](https://stylelint.io).
+You can also find linting tools for other languages, such as [stylelint](https://stylelint.io/).
 
 #### Source code control
 

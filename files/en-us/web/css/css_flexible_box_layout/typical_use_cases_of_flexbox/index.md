@@ -60,7 +60,7 @@ Whether you use flexbox or grid to lay out a list of card components, these layo
 
 ![Two card components showing that the internals of the component do not stretch with the wrapper.](flex-cards.png)
 
-Flexbox solves this. We make the card a flex container, with {{cssxref("flex-direction")}}`: column`. We then set the content area to `flex: 1`, which is the shorthand for `flex: 1 1 0` — the item can grow and shrink from a flex basis of `0`. As this is the only item that can grow, it takes up all available space in the flex container and pushes the footer to the bottom. If you remove the `flex` property from the live example you will see the footer moves up to sit directly under the content.
+Flexbox solves this. We make the card a flex container, with {{cssxref("flex-direction", "flex-direction: column")}}. We then set the content area to `flex: 1`, which is the shorthand for `flex: 1 1 0` — the item can grow and shrink from a flex basis of `0`. As this is the only item that can grow, it takes up all available space in the flex container and pushes the footer to the bottom. If you remove the `flex` property from the live example you will see the footer moves up to sit directly under the content.
 
 {{EmbedGHLiveSample("css-examples/flexbox/use-cases/cards.html", '100%', 800)}}
 

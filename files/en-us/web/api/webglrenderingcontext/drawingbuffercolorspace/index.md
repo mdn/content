@@ -30,7 +30,7 @@ const canvas = document.getElementById("canvas");
 const gl = canvas.getContext("webgl");
 gl.drawingBufferColorSpace = "display-p3";
 gl.clearColor(1, 0, 0, 1);
-gl.clear(glP3.COLOR_BUFFER_BIT);
+gl.clear(gl.COLOR_BUFFER_BIT);
 ```
 
 ## Specifications

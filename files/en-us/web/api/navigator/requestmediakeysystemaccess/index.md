@@ -81,7 +81,7 @@ requestMediaKeySystemAccess(keySystem, supportedConfigurations)
     - `persistentState`
 
       - : A string indicating whether the returned object must be able to persist session data or any other type of state.
-        The values are the same as for `distinctiveIdentifier` and have the same meaning: `required`, `optional` (default) ,`not-allowed`.
+        The values are the same as for `distinctiveIdentifier` and have the same meaning: `required`, `optional` (default), `not-allowed`.
         Only "temporary" sessions may be created when persistent state is not allowed.
 
     - `sessionTypes`

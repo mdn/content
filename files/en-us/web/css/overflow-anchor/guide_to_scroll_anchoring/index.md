@@ -77,7 +77,6 @@ Additionally, {{cssxref("position")}} changes anywhere inside the scrolling box 
 
 - [Explainer document on the WICG site](https://github.com/WICG/ScrollAnchoring/blob/master/explainer.md)
 - [Scroll anchoring for web developers on the Chromium blog](https://blog.chromium.org/2017/04/scroll-anchoring-for-web-developers.html)
-- [Implement a pin-to-bottom scrolling element using scroll anchoring](https://blog.eqrion.net/pin-to-bottom/)
 
 ## Browser compatibility
 

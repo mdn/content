@@ -33,7 +33,7 @@ color-interpolation-filters: unset;
 ### Values
 
 - `linearRGB`
-  - : Indicates that color interpolation should occur in the linearized RGB color space as described in [the sRGB specification](https://webstore.iec.ch/publication/6169). This is the default property value.
+  - : Indicates that color interpolation should occur in the linearized RGB color space as described in [the sRGB specification](https://webstore.iec.ch/en/publication/6169). This is the default property value.
 - `sRGB`
   - : Indicates that color interpolation should occur in the gamma-encoded sRGB color space.
 - `auto`
@@ -59,4 +59,4 @@ color-interpolation-filters: unset;
 
 - SVG {{SVGAttr("color-interpolation-filters")}} attribute
 - SVG {{SVGAttr("color-interpolation")}} attribute
-- [sRGB specification](https://webstore.iec.ch/publication/6169)
+- [sRGB specification](https://webstore.iec.ch/en/publication/6169)

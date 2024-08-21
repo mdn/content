@@ -38,7 +38,7 @@ The sub-properties of the {{cssxref("animation")}} property are:
   - : Specifies the name of the {{cssxref("@keyframes")}} at-rule describing an animation's keyframes.
 - {{cssxref("animation-play-state")}}
   - : Specifies whether to pause or play an animation sequence.
-- {{cssxref("animation-timeline")}} {{experimental_inline}}
+- {{cssxref("animation-timeline")}}
   - : Specifies the timeline that is used to control the progress of a CSS animation.
 - {{cssxref("animation-timing-function")}}
   - : Specifies how an animation transitions through keyframes by establishing acceleration curves.
@@ -430,7 +430,7 @@ The HTML contains two {{htmlelement("p")}} elements with a {{htmlelement("div")}
 </div>
 
 <p>
-  This is another paragraph to show that <code>display: none; </code> is being
+  This is another paragraph to show that <code>display: none;</code> is being
   applied and removed on the above <code>&lt;div&gt; </code>. If only its
   <code>opacity</code> was being changed, it would always take up the space in
   the DOM.
@@ -525,5 +525,5 @@ The code renders as follows:
 ## See also
 
 - {{domxref("AnimationEvent", "AnimationEvent")}}
-- [CSS animation tips and tricks](/en-US/docs/Web/CSS/CSS_animations/Tips)
 - [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [Using the Web Animations API](/en-US/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API)

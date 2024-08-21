@@ -43,7 +43,7 @@ There's also the [Building up a basic demo with A-Frame](/en-US/docs/Games/Techn
 
 Coding raw WebGL is fairly complex, but you'll want to get to grips with it in the long run, as your projects get more advanced (see our [WebGL documentation](/en-US/docs/Web/API/WebGL_API) to get started.) For real-world projects you'll probably also make use of a framework to speed up development and help you manage the project you're working on. Using a framework for 3D games also helps optimize the performance as a lot is taken care of by the tools you use, so you can focus on building the game itself.
 
-The most popular JavaScript 3D library is [Three.js](https://threejs.org/), a multipurpose tool that makes common 3D techniques simpler to implement. There are other popular game development libraries and frameworks worth checking too; [A-Frame](https://aframe.io), [PlayCanvas](https://playcanvas.com/) and [Babylon.js](https://www.babylonjs.com/) are among the most recognizable ones with rich documentation, online editors and active communities.
+The most popular JavaScript 3D library is [Three.js](https://threejs.org/), a multipurpose tool that makes common 3D techniques simpler to implement. There are other popular game development libraries and frameworks worth checking too; [A-Frame](https://aframe.io/), [PlayCanvas](https://playcanvas.com/) and [Babylon.js](https://www.babylonjs.com/) are among the most recognizable ones with rich documentation, online editors and active communities.
 
 ### Building up a basic demo with A-Frame
 
