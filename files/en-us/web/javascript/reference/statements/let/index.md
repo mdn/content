@@ -94,7 +94,7 @@ The term "temporal" is used because the zone depends on the order of execution (
 }
 ```
 
-Using the `typeof` operator for a `let` (or `const`) variable in its TDZ will throw a {{jsxref("ReferenceError")}}:
+Using the `typeof` operator for a variable in its TDZ will throw a {{jsxref("ReferenceError")}}:
 
 ```js example-bad
 {
