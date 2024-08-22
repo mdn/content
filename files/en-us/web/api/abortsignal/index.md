@@ -122,8 +122,16 @@ This allows code to differentiate between timeouts (for which user notification 
 ```js
 const url = "video.mp4";
 
+let signal;
+
 try {
-  const res = await fetch(url, { signal: AbortSignal.timeout(5000) });
+  signal = AbortSignal.timeout(timeout);
+} catch {
+  console.log("AbortSignal.timeout() method is not supported");
+}
+
+try {
+  const res = await fetch(url, { signal });
   const result = await res.blob();
   // …
 } catch (err) {
@@ -133,8 +141,6 @@ try {
     console.error(
       "Fetch aborted by user action (browser stop button, closing tab, etc.",
     );
-  } else if (err.name === "TypeError") {
-    console.error("AbortSignal.timeout() method is not supported");
   } else {
     // A network error, or some other problem.
     console.error(`Error: type: ${err.name}, message: ${err.message}`);
