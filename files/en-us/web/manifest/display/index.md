@@ -12,7 +12,7 @@ The `display` manifest member is used to specify your preferred display mode for
 ## Syntax
 
 ```json
-"display": "fullscreen | standalone | minimal-ui | browser"
+"display": "fullscreen" | "standalone" | "minimal-ui" | "browser"
 ```
 
 ### Values
