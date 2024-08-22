@@ -122,16 +122,8 @@ This allows code to differentiate between timeouts (for which user notification 
 ```js
 const url = "video.mp4";
 
-let signal;
-
 try {
-  signal = AbortSignal.timeout(timeout);
-} catch {
-  console.log("AbortSignal.timeout() method is not supported");
-}
-
-try {
-  const res = await fetch(url, { signal });
+  const res = await fetch(url, { signal: AbortSignal.timeout(5000) });
   const result = await res.blob();
   // …
 } catch (err) {
