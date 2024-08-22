@@ -29,7 +29,7 @@ A boolean value, `true` if the element meets all validation constraints.
 In the following example, calling `checkValidity()` returns either `true` or `false`.
 
 ```js
-let element = document.getElementById("myButton");
+const element = document.getElementById("myButton");
 console.log(element.checkValidity());
 ```
 
