@@ -1,14 +1,14 @@
 ---
-title: "HTMLTextareaElement: checkValidity() method"
+title: "HTMLTextAreaElement: checkValidity() method"
 short-title: checkValidity()
-slug: Web/API/HTMLTextareaElement/checkValidity
+slug: Web/API/HTMLTextAreaElement/checkValidity
 page-type: web-api-instance-method
-browser-compat: api.HTMLTextareaElement.checkValidity
+browser-compat: api.HTMLTextAreaElement.checkValidity
 ---
 
 {{APIRef("Web Components")}}
 
-The **`checkValidity()`** method of the {{domxref("HTMLTextareaElement")}} interface checks if the {{HTMLElement("textarea")}} element meets all of the [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) rules applied to it.
+The **`checkValidity()`** method of the {{domxref("HTMLTextAreaElement")}} interface checks if the {{HTMLElement("textarea")}} element meets all of the [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) rules applied to it.
 
 The method returns `false` if the `<textarea>` value does not meet all the validation constraints applied to it or if the element has a custom validation message set, and `true` if if the element does meet all of the constraints applied and no custom validity message is set or it is set to the empty string.
 
@@ -31,7 +31,7 @@ A boolean value.
 In the following example, calling `checkValidity()` returns either `true` or `false`.
 
 ```js
-let element = document.getElementById("myTextarea");
+let element = document.getElementById("myTextArea");
 console.log(element.checkValidity());
 ```
 
@@ -45,7 +45,7 @@ console.log(element.checkValidity());
 
 ## See also
 
-- {{domxref("HTMLTextareaElement.reportValidity()")}}
+- {{domxref("HTMLTextAreaElement.reportValidity()")}}
 - {{HTMLElement("textarea")}}
 - {{HTMLElement("form")}}
 - [Learn: Client-side form validation](/en-US/docs/Learn/Forms/Form_validation)

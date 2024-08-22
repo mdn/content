@@ -1,14 +1,14 @@
 ---
-title: "HTMLTextareaElement: reportValidity() method"
+title: "HTMLTextAreaElement: reportValidity() method"
 short-title: reportValidity()
-slug: Web/API/HTMLTextareaElement/reportValidity
+slug: Web/API/HTMLTextAreaElement/reportValidity
 page-type: web-api-instance-method
-browser-compat: api.HTMLTextareaElement.reportValidity
+browser-compat: api.HTMLTextAreaElement.reportValidity
 ---
 
 {{APIRef("HTML DOM")}}
 
-The **`reportValidity()`** method of the {{domxref('HTMLTextareaElement')}} interface performs the same validity checking steps as the {{domxref("HTMLTextareaElement.checkValidity", "checkValidity()")}} method. If the value is invalid, this method also fires the {{domxref("HTMLTextareaElement.invalid_event", "invalid")}} event on the element, and (if the event isn't canceled) reports the problem to the user.
+The **`reportValidity()`** method of the {{domxref('HTMLTextAreaElement')}} interface performs the same validity checking steps as the {{domxref("HTMLTextAreaElement.checkValidity", "checkValidity()")}} method. If the value is invalid, this method also fires the {{domxref("HTMLTextAreaElement.invalid_event", "invalid")}} event on the element, and (if the event isn't canceled) reports the problem to the user.
 
 ## Syntax
 
@@ -36,6 +36,6 @@ Returns `true` if the element's value has no validity problems; otherwise, retur
 
 - {{HTMLElement("textarea")}}
 - {{HTMLElement("form")}}
-- {{domxref("HTMLTextareaElement.checkValidity()")}}
+- {{domxref("HTMLTextAreaElement.checkValidity()")}}
 - [Learn: Client-side form validation](/en-US/docs/Learn/Forms/Form_validation)
 - [Guide: Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)

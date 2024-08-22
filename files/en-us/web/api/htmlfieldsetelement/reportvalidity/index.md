@@ -1,14 +1,14 @@
 ---
-title: "HTMLFieldsetElement: reportValidity() method"
+title: "HTMLFieldSetElement: reportValidity() method"
 short-title: reportValidity()
-slug: Web/API/HTMLFieldsetElement/reportValidity
+slug: Web/API/HTMLFieldSetElement/reportValidity
 page-type: web-api-instance-method
-browser-compat: api.HTMLFieldsetElement.reportValidity
+browser-compat: api.HTMLFieldSetElement.reportValidity
 ---
 
 {{APIRef("HTML DOM")}}
 
-The **`reportValidity()`** method of the {{domxref('HTMLFieldsetElement')}} interface performs the same validity checking steps as the {{domxref("HTMLFieldsetElement.checkValidity", "checkValidity()")}} method.
+The **`reportValidity()`** method of the {{domxref('HTMLFieldSetElement')}} interface performs the same validity checking steps as the {{domxref("HTMLFieldSetElement.checkValidity", "checkValidity()")}} method.
 
 This method, part of the constraint validation API, always returns `true` as `<fieldset>` objects are never candidates for constraint validation.
 
@@ -38,6 +38,6 @@ Returns `true`.
 
 - {{HTMLElement("fieldset")}}
 - {{HTMLElement("form")}}
-- {{domxref("HTMLFieldsetElement.checkValidity()")}}
+- {{domxref("HTMLFieldSetElement.checkValidity()")}}
 - [Learn: Client-side form validation](/en-US/docs/Learn/Forms/Form_validation)
 - [Guide: Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
