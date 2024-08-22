@@ -53,7 +53,7 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
 
   - : Any of the following units:
     - {{cssxref("&lt;length&gt;")}} sets an absolute value.
-    - {{cssxref("&lt;percentage&gt;")}} sets a percentage of the width or height of the containing block's content area.
+    - {{cssxref("&lt;percentage&gt;")}} sets a percentage of the width or height of the containing block's content area. Percentage value of `flex-basis` is resolved against the flex item's flex container. If the flex container's size is indefinite, the used value for `flex-basis` is `content`.
     - `auto` uses the value of the {{cssxref("width")}} in horizontal writing mode, and the value of the {{cssxref("height")}} in vertical writing mode; when the corresponding value is also `auto`, the `content` value is used instead.
     - {{cssxref("max-content")}} sets the intrinsic preferred width.
     - {{cssxref("min-content")}} sets the intrinsic minimum width.
@@ -169,6 +169,63 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
 #### Results
 
 {{EmbedLiveSample('Setting_flex_item_initial_sizes', '', '360')}}
+
+### Flex basis `0` vs `0%`
+
+In this example we have two flex containers with flex direction column. None of the flex containers and their flex items have height explicitly set. Flex items of the first container use flex-basie value `0` and flex items of the second container use flex-basis value `0%`. The heights of `section` elements can not exceed `200px` but their children have height `300px`.
+
+#### HTML
+
+```html
+<div class="container basis-0">
+  <div>heading</div>
+  <section>
+    flex-basis: 0;
+    <div class="content"></div>
+  </section>
+</div>
+<div class="container basis-0-percent">
+  <div>heading</div>
+  <section>
+    flex-basis: 0%;
+    <div class="content"></div>
+  </section>
+</div>
+```
+
+```css
+.container {
+  width: 40vw;
+  padding: 1rem;
+  border: 1px dashed blue;
+
+  display: inline-flex;
+  flex-direction: column;
+}
+
+section {
+  border: 1px solid red;
+
+  overflow: auto;
+  min-height: 200px;
+}
+
+.content {
+  background: wheat;
+  height: 300px;
+}
+
+.container.basis-0 > * {
+  flex-basis: 0;
+}
+.container.basis-0-percent > * {
+  flex-basis: 0%;
+}
+```
+
+{{EmbedLiveSample('flex_basis_0_vs_0', '100%', '400')}}
+
+In the left container, with `flex-basis: 0` the section element receives initial main size of zero, and it grows till the limit `200px`. In the right container, with `flex-basis: 0%` the section element receives initial main size of `300px`. This is becaue the flex container doesn't have definite height set, so the percentage flex basis values resolve to [`content`](#content) value.
 
 ## Specifications
 
