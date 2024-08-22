@@ -193,16 +193,14 @@ async function agreeSharedSecretKey() {
 
 ### X25519 derived shared key
 
-This example is much the same as the example above, except that it uses keys generated using the X25519 algorithm rather than ECDH, and it is a live example.
-
 In this example Alice and Bob each generate an X25519 key pair, then exchange public keys.
 They then each use `deriveKey()` to derive a shared AES key from their own private key and each other's public key.
-Their respective AES keys can encrypt and decrypt messages send between them.
+They can use this shared key to encrypt and decrypt messages they exchange.
 
 #### HTML
 
-First we define an HTML {{HTMLElement("input")}} for user to enter the plaintext message that Alice will send.
-This is followed by another two elements for displaying the cyphertext after Alice has encypted the plain text with her derived private key, and for displaying the text after Bob has decrypted it with his derived private key.
+First we define an HTML {{HTMLElement("input")}} that you will use to enter the plaintext message that "Alice" will send.
+This is followed by another two elements for displaying the ciphertext after Alice has encrypted the plaintext with her copy of the secret key, and for displaying the text after Bob has decrypted it with his copy of the secret key.
 
 At the end is a button that the user can click to start the encryption process.
 
@@ -266,7 +264,9 @@ function log(text) {
 ```
 
 The code below shows how we use `deriveKey()`.
-This takes the algorithm and public key of the remote party, the private key of the local party, they algorithm of the derived key, and the "usages" for the new key, and creates a derived key.
+We pass in the remote party's X25519 public key, the local party's X25519 private key, and specify that the derived key should be an AES-GCM key. We also set the derived key to be non-extractable, and suitable for encryption and decryption.
+
+The function returns the derived AES-GCM key.
 We use this further down in the code to create shared keys for Bob and Alice.
 
 ```js
@@ -292,7 +292,7 @@ function deriveSecretKey(privateKey, publicKey) {
 }
 ```
 
-Next we define the functions that Alice will use to UTF-8 encode and then encrypt her plaintext message, and that Bob will use to decrypt and then decode the message.
+Next we define the functions that Alice will use to {{glossary("UTF-8")}} encode and then encrypt her plaintext message, and that Bob will use to decrypt and then decode the message.
 The both take the shared key of the caller, an "initialization vector", and the text to be encrypted or decrypted.
 
 The [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm) algorithm requires that the initialization vector passed to the `encrypt()` and `decrypt()` methods is the same.
@@ -336,7 +336,7 @@ async function decryptMessage(key, initializationVector, ciphertext) {
 
 The `agreeSharedSecretKey()` function below is called on loading to generate pairs and shared keys for Alice and Bob.
 It also adds a click handler for the "Encrypt" button that will trigger encryption and then decryption of the text defined in the first `<input>`.
-Note that alll the code is inside a `try...catch` handler, to ensure that we can log the case where key generation fails because the X25519 algorithm is not supported.
+Note that all the code is inside a `try...catch` handler, to ensure that we can log the case where key generation fails because the X25519 algorithm is not supported.
 
 ```js
 async function agreeSharedSecretKey() {
