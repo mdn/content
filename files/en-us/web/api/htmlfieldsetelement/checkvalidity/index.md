@@ -29,7 +29,7 @@ A boolean value, `true`.
 In the following example, calling `checkValidity()` returns `true`.
 
 ```js
-let element = document.getElementById("myFieldSet");
+const element = document.getElementById("myFieldSet");
 console.log(element.checkValidity());
 ```
 

@@ -31,7 +31,7 @@ A boolean value.
 In the following example, calling `checkValidity()` returns either `true` or `false`.
 
 ```js
-let element = document.getElementById("myTextArea");
+const element = document.getElementById("myTextArea");
 console.log(element.checkValidity());
 ```
 
