@@ -32,6 +32,7 @@ Other possible causes include:
 - The server did not respond to the actual request (even if it responded to the
   {{Glossary("Preflight request")}}). One scenario might be an HTTP service being
   developed that panicked without returning any data.
+- The window is in "Private Browsing" mode
 
 ## See also
 
