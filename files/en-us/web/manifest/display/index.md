@@ -12,12 +12,12 @@ The `display` manifest member is used to specify your preferred display mode for
 ## Syntax
 
 ```json
-"display": "standalone"
+"display": "fullscreen | standalone | minimal-ui | browser"
 ```
 
 ### Values
 
-The value of the `display` member is a string. The possible values include `fullscreen`, `standalone`, `minimal-ui`, and `browser`. If a browser does not support the specified display mode, it follows a pre-defined fallback chain: `fullscreen` → `standalone` → `minimal-ui` → `browser`. If `display` is not specified, the default value `browser` is used.
+The value of the `display` member is a string that can take one of the following values, listed in the order of fallback if a browser does not support the specified mode:
 
 - `fullscreen`
 
