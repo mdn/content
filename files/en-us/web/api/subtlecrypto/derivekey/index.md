@@ -118,7 +118,7 @@ X25519 is specified in {{rfc("7748")}}.
 > [!NOTE]
 > You can [try the working examples](https://mdn.github.io/dom-examples/web-crypto/derive-key/index.html) on GitHub.
 
-### ECDH
+### ECDH: derive shared secret key
 
 In this example Alice and Bob each generate an ECDH key pair, then exchange public keys.
 They then use `deriveKey()` to derive a shared AES key, that they could use to encrypt messages.
@@ -194,7 +194,7 @@ async function agreeSharedSecretKey() {
 }
 ```
 
-### X25519 derived shared key
+### X25519: derive shared secret key
 
 In this example Alice and Bob each generate an X25519 key pair, then exchange public keys.
 They then each use `deriveKey()` to derive a shared AES key from their own private key and each other's public key.
@@ -462,7 +462,7 @@ The log area at the bottom provide information about the keys that are generated
 
 {{EmbedLiveSample("X25519 derived shared key", "100%", "400px")}}
 
-### PBKDF2
+### PBKDF2: derive AES key from password
 
 In this example we ask the user for a password, then use it to derive an AES key using PBKDF2, then use the AES key to encrypt a message.
 [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/derive-key/pbkdf2.js)
@@ -503,7 +503,7 @@ async function encrypt(plaintext, salt, iv) {
 }
 ```
 
-### HKDF
+### HKDF: derive AES key from shared secret
 
 In this example, we encrypt a message `plainText` given a shared secret `secret`, which might itself have been derived using an algorithm such as ECDH.
 Instead of using the shared secret directly, we use it as key material for the HKDF function, to derive an AES-GCM encryption key, which we then use to encrypt the message.
