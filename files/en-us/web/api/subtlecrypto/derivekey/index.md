@@ -412,13 +412,14 @@ async function agreeSharedSecretKey() {
     const encryptedInput = document.querySelector("#encrypted");
     const decryptedInput = document.querySelector("#decrypted");
 
-    // Define the initialization vector that will be used for encrypting and decrypting the message.
-    const initializationVector = window.crypto.getRandomValues(
-      new Uint8Array(8),
-    );
-
     encryptButton.addEventListener("click", async () => {
       log(`Plaintext: ${messageInput.value}`);
+
+      // Define the initialization vector used when encrypting and decrypting.
+      // This must be regenerated for every message!
+      const initializationVector = window.crypto.getRandomValues(
+        new Uint8Array(8),
+      );
 
       // Alice can use her copy of the shared key to encrypt the message.
       const encryptedMessage = await encryptMessage(
