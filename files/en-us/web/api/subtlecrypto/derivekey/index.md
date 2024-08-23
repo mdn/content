@@ -223,7 +223,7 @@ At the end is a button that the user can click to start the encryption process.
     type="text"
     id="encrypted"
     name="encrypted"
-    size="25"
+    size="30"
     value=""
     readonly />
 
