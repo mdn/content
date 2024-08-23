@@ -36,7 +36,7 @@ No notable changes
 - [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) HTTP header directives [`script-src-elem`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-elem) and [`script-src-attr`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-attr) are now supported.
   A server can use these to specify valid sources for JavaScript `<script>` elements, and for inline script event handlers like `onclick`, respectively ([Firefox bug 1529337](https://bugzil.la/1529337)).
 - [`Content-Security-Policy`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) violation reports now include `effective-directive` and `status-code` properties.
-  For more information, see [Violation report syntax](/en-US/docs/Web/HTTP/CSP#violation_report_syntax) ([Firefox bug 1192684](https://bugzil.la/1192684)).
+  For more information, see [Violation report syntax](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-uri#violation_report_syntax) ([Firefox bug 1192684](https://bugzil.la/1192684)).
 
 ### APIs
 
