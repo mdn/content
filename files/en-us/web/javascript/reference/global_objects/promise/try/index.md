@@ -52,7 +52,6 @@ new Promise((resolve, reject) => {
 
 `Promise.try()` provides a more concise and readable alternative.
 
-
 Note that `Promise.try()` is _not_ equivalent to this, despite being highly similar:
 
 ```js
