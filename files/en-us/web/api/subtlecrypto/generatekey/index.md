@@ -229,8 +229,6 @@ The information about the created keys is logged below (or an error string if th
 
 This code generates an X25519 public and private key pair that can be used in {{domxref("SubtleCrypto.deriveKey()")}} to create a shared key, or in {{domxref("SubtleCrypto.deriveBits()")}} to create a shared secret.
 
-The code is almost exactly the same as that for the Ed25519 algorithm in the previous section, except that it uses a different algorithm name, and the allowed `keyUsages` are different.
-
 ```html hidden
 <input id="run-button" type="button" value="Run" />
 <pre id="log">Click "Run" button</pre>
@@ -260,7 +258,7 @@ function log(text) {
 Code for generating a key pair using the `X25519` algorithm and logging the information in each key is shown below.
 Note that the code is run in a `try..catch` block because not all browsers support this algorithm.
 
-The JavaScript first gets the `#sign-button` and `#message` {{HTMLElement("input")}} elements, then adds a listener for the `click` event on the button.
+The JavaScript first gets the `#run-button` and `#log` {{HTMLElement("input")}} elements, then adds a listener for the `click` event on the button.
 The event handler clears the log and runs the other operations passing the content of the `<input>` element.
 
 ```js

@@ -149,7 +149,9 @@ We then use Alice's private key and Bob's public key to derive a secret, and com
 
 #### HTML
 
-The HTML is just a button that an be pressed to generate all the keys and the shared key.
+The HTML is defines two buttons.
+The "Change keys" button is pressed to generate new key pairs for Alice and Bob.
+The "Derive bits" button is pressed to derive a shared secret with the current set of key pairs.
 
 ```html
 <input id="buttonDeriveKeys" type="button" value="Derive bits" />
@@ -240,14 +242,14 @@ changeKeysButton.addEventListener("click", async () => {
 });
 ```
 
-The code below adds a handler function that is invoked every time the "Derive-bits" button is pressed.
+The code below adds a handler function that is invoked every time the "Derive bits" button is pressed.
 The handler generates the shared secrets for Alice and Bob using the `deriveSharedSecret()` method defined above, and logs them for easy comparison.
 
 ```js
 const deriveBitsButton = document.querySelector("#buttonDeriveKeys");
 
 deriveBitsButton.addEventListener("click", async () => {
-  // Generate 2 ECDH key pairs: one for Alice and one for Bob
+  // Generate 2 X25519 key pairs: one for Alice and one for Bob
   // In more normal usage, they would generate their key pairs
   // separately and exchange public keys securely
 
@@ -274,8 +276,8 @@ deriveBitsButton.addEventListener("click", async () => {
 
 #### Result
 
-Press the "Derive-bits" button to generate and log a shared secret from Bob and Alices keys.
-Press the "Change keys" button to change the keys used by both parties.
+Press the "Derive bits" button to generate and log a shared secret from Bob and Alice's keys.
+Press the "Change keys" button to change the X25519 keys used by both parties.
 
 {{EmbedLiveSample("X25519", "100%", "340px")}}
 
