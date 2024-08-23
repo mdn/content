@@ -22,7 +22,7 @@ A {{jsxref("Date")}} object or `null` if a conversion is impossible.
 
 ### Retrieving a date value
 
-This example demonstrates that the `valueAsDate` property with an `<input>` of type {{HTMLElement("input/week", "week")}}.
+This example demonstrates accessing the `valueAsDate` property on an `<input>` of type {{HTMLElement("input/week", "week")}}.
 
 #### HTML
 
