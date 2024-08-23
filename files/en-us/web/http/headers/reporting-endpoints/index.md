@@ -17,7 +17,7 @@ When used for reporting [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP
 For more details on setting up CSP reporting, see the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP#violation_reporting) documentation.
 
 > [!NOTE]
-> This header replaces {{HTTPHeader("Report-To")}} {{deprecated_inline}} for declaring endpoints, and should be used by preference.
+> This header replaces {{HTTPHeader("Report-To")}} {{deprecated_inline}} for declaring endpoints, and should be used in preference.
 
 <table class="properties">
   <tbody>

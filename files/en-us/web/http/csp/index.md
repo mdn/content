@@ -152,8 +152,8 @@ The recommended method for reporting CSP violations is to use the [Reporting API
 
 > [!WARNING]
 > You can also use the CSP {{CSP("report-uri")}} directive to specify a target URL for CSP violation reports.
-> This sends a slightly different JSON report format as a POST with {{HTTPHeader("Content-Type")}} of `application/csp-report`.
-> This approach is deprecated, but you should declare both until {{CSP("report-uri")}} is supported in all browsers.
+> This sends a slightly different JSON report format via a `POST` operation with a {{HTTPHeader("Content-Type")}} of `application/csp-report`.
+> This approach is deprecated, but you should declare both until {{CSP("report-to")}} is supported in all browsers.
 > For more information about the approach see the {{CSP("report-uri")}} topic.
 
 A server can inform clients where to send reports using the {{HTTPHeader("Reporting-Endpoints")}} HTTP response header.
@@ -164,7 +164,7 @@ For example, to define a reporting endpoint named `csp-endpoint` which accepts r
 Reporting-Endpoints: csp-endpoint="https://example.com/csp-reports"
 ```
 
-If you wanted to have multiple endpoints that handle different types of reports, the `Reporting-Endpoints` header can contain a comma-separated list of endpoints:
+If you want to have multiple endpoints that handle different types of reports, you would specify them like this:
 
 ```http
 Reporting-Endpoints: csp-endpoint="https://example.com/csp-reports",
@@ -179,8 +179,8 @@ Reporting-Endpoints: csp-endpoint="https://example.com/csp-reports"
 Content-Security-Policy: default-src 'self'; report-to csp-endpoint
 ```
 
-When a CSP violation occurs, the browser sends the report as a JSON object to the specified endpoint in an HTTP POST, with the {{HTTPHeader("Content-Type")}} of `application/reports+json`.
-The report is a serialized form of the {{domxref("Report")}} object, with a `type` property with value `"csp-violation"`, and a `body` that is the serialized form of a {{domxref("CSPViolationReportBody")}} object.
+When a CSP violation occurs, the browser sends the report as a JSON object to the specified endpoint via an HTTP `POST` operation, with a {{HTTPHeader("Content-Type")}} of `application/reports+json`.
+The report is a serialized form of the {{domxref("Report")}} object containing a `type` property with a value of `"csp-violation"`, and a `body` that is the serialized form of a {{domxref("CSPViolationReportBody")}} object.
 
 A typical object might look like this:
 
@@ -206,7 +206,7 @@ A typical object might look like this:
 }
 ```
 
-You need to set up a server to receive reports with the given JSON format and content type..
+You need to set up a server to receive reports with the given JSON format and content type.
 The server handling these requests can then store or process the incoming reports in a way that best suits your needs.
 
 ## Browser compatibility

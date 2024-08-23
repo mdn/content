@@ -30,12 +30,12 @@ A reporting server at these endpoints can collect the reports, and process and p
 
 The {{httpheader("Reporting-Endpoints")}} HTTP header is used to specify details about the different endpoints that a user-agent has available to it for delivering reports.
 The `report-to` directive can then be used on particular HTTP response headers to indicate the specific endpoint that will be used for the associated report.
-For example, the CSP {{CSP("report-to")}} directive can be used on the {{HTTPHeader("Content-Security-Policy")}} or {{HTTPHeader("Content-Security-Policy-Report-Only")}} HTTP headers to specify the endpoint to send CSP violation reports.
+For example, the CSP {{CSP("report-to")}} directive can be used on the {{HTTPHeader("Content-Security-Policy")}} or {{HTTPHeader("Content-Security-Policy-Report-Only")}} HTTP headers to specify the endpoint that CSP violation reports should be sent to.
 
 > [!NOTE]
 > There is no absolute guarantee of report delivery — a report could still fail to be collected if a serious error occurs.
 
-The reports themselves are sent to the target endpoint by the user agent in a POST operation with the {{HTTPHeader("Content-Type")}} of `application/reports+json`.
+The reports themselves are sent to the target endpoint by the user agent in a `POST` operation with a {{HTTPHeader("Content-Type")}} of `application/reports+json`.
 They are serializations of {{domxref("Report")}} objects, where the `type` indicates the type of report, the `url` indicates the origin of the report, and the `body` contains a serialization of the API interface that corresponds to the report type.
 For example, CSP violation reports have a `type` of `csp-violation` and a `body` that is a serialization of a {{domxref("CSPViolationReportBody")}} object.
 
@@ -48,22 +48,23 @@ This method is not as failsafe as sending reports to the server because any page
 
 A `ReportingObserver` object is created using the {{domxref("ReportingObserver.ReportingObserver", "ReportingObserver()")}} constructor, which is passed two parameters:
 
-- A callback function that has available as parameters the reports available in the observer's report queue, and a copy of the same `ReportingObserver` object, so observation can be controlled directly from inside the callback. The callback runs when observation starts.
-- An options dictionary that allows you to specify the type of reports to collect, and whether the reports that were generated before the observer was able to be created should be observable (`buffered: true`).
+- A callback function with two parameters — an array of the reports available in the observer's report queue and a copy of the same `ReportingObserver` object, which allows observation to be controlled directly from inside the callback. The callback runs when observation starts.
+- An options dictionary that allows you to specify the type of reports to collect, and whether reports generated before the observer was created should be observable (`buffered: true`).
 
 Methods are then available on the observer to start collecting reports ({{domxref("ReportingObserver.observe()")}}), retrieve the reports currently in the report queue ({{domxref("ReportingObserver.takeRecords()")}}), and disconnect the observer so it can no longer collect records ({{domxref("ReportingObserver.disconnect()")}}).
 
 ### Report types
 
-Reports send to reporting endpoints and reporting observers are essentially the same: they have an origin `url`, `type`, and a `body` that is an instance of interface that corresponds with that type (the only difference is that server reports are JSON serializations of the objects).
+Reports sent to reporting endpoints and reporting observers are essentially the same: they have an origin `url`, a `type`, and a `body` that is an instance of the interface corresponding with that type.
+The only difference is that server reports are JSON serializations of the objects.
 
 The mapping of report `type` to `body` is shown below.
 
-| type            | body                                  | Description                                                                 |
+| `type`            | `body`                                  | Items reported                                                                 |
 | --------------- | ------------------------------------- | --------------------------------------------------------------------------- |
-| `deprecation`   | {{domxref("DeprecationReportBody")}}  | Deprecated features used by site                                            |
-| `intervention`  | {{domxref("InterventionReportBody")}} | Features blocked by user agent, for example, if permissions are not granted |
-| `csp-violation` | {{domxref("CSPViolationReportBody")}} | Violations of the CSP policy                                                |
+| `deprecation`   | {{domxref("DeprecationReportBody")}}  | Deprecated features used by the site.                                            |
+| `intervention`  | {{domxref("InterventionReportBody")}} | Features blocked by the user agent, for example, if permissions are not granted. |
+| `csp-violation` | {{domxref("CSPViolationReportBody")}} | Violations of the site's CSP policy.                                                |
 
 ### Generating reports via WebDriver
 
@@ -94,16 +95,16 @@ These interfaces are defined as part of the HTTP [Content Security Policy (CSP)]
 These HTTP response headers define the endpoints where reports are sent.
 
 - {{HTTPHeader("Reporting-Endpoints")}}
-  - : Set the name and URL of reporting endpoints.
-    These can be used in the `report-to` directive, which may be used with a number of HTTP headers including `Content-Security-Header`.
+  - : Sets the name and URL of reporting endpoints.
+    These can be used in the `report-to` directive, which may be used with a number of HTTP headers including {{httpheader("Content-Security-Header")}}.
 - {{HTTPHeader("Report-To")}} {{deprecated_inline}}
-  - : Set the name and URL of reporting endpoint groups, which may be used with a number of HTTP headers including `Content-Security-Header`.
+  - : Sets the name and URL of reporting endpoint groups, which may be used with a number of HTTP headers including `Content-Security-Header`.
 
 Report endpoints can be set for the following reports using the `report-to` directive on the corresponding headers:
 
 - CSP Violations
 
-  - : {{CSP("report-to")}} on {{HTTPHeader("Content-Security-Policy")}} or {{HTTPHeader("Content-Security-Policy-Report-Only")}}
+  - : {{CSP("report-to")}} on {{HTTPHeader("Content-Security-Policy")}} or {{HTTPHeader("Content-Security-Policy-Report-Only")}}.
 
 ## Examples
 

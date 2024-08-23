@@ -11,15 +11,15 @@ The `CSPViolationReportBody` interface is an extension of the [Reporting API](/e
 
 CSP violations are thrown when the webpage attempts to load a resource that violates the policy set by the {{HTTPHeader("Content-Security-Policy")}} HTTP header.
 
-CSP violation reports are returned in the [reports](/en-US/docs/Web/API/ReportingObserver/ReportingObserver#reports) parameter of the {{domxref("ReportingObserver")}} callback that have a `type` of `"csp-violation"`.
+CSP violation reports are returned in the [reports](/en-US/docs/Web/API/ReportingObserver/ReportingObserver#reports) parameter of {{domxref("ReportingObserver")}} callbacks that have a `type` of `"csp-violation"`.
 The `body` property of those reports is an instance of `CSPViolationReportBody`.
 
 CSP violation reports may also be sent as JSON objects to the endpoint specified in the [`report-to`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-to) policy directive of the {{HTTPHeader("Content-Security-Policy")}} header.
-These reports similarly have a `type` of `"csp-violation"`, and a body property that is a serialization of an instance of this interface.
+These reports similarly have a `type` of `"csp-violation"`, and a `body` property containing a serialization of an instance of this interface.
 
 > [!NOTE]
-> The CSP violation reports sent by the reporting API when an endpoint is specified using the CSP [`report-to`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-to) directive are similar (but not identical) to the "CSP report" [JSON objects](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-uri#violation_report_syntax) sent back when endpoints are specified using the [`report-uri`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-uri) directive.
-> The reporting API and `report-to` are intended to replace the older report format and the `report-uri` directive.
+> CSP violation reports sent by the Reporting API, when an endpoint is specified using the CSP [`report-to`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-to) directive, are similar (but not identical) to the "CSP report" [JSON objects](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-uri#violation_report_syntax) sent when endpoints are specified using the [`report-uri`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/report-uri) directive.
+> The Reporting API and `report-to` directive are intended to replace the older report format and the `report-uri` directive.
 
 {{InheritanceDiagram}}
 
@@ -93,7 +93,7 @@ const observer = new ReportingObserver(
 observer.observe();
 ```
 
-If we were to log the violation report object, it might look similar to the object below.
+If we were to log the violation report object, it would look similar to the object below.
 Note that the `body` is an instance of the `CSPViolationReportBody` and the `type` is `"csp-violation"`.
 
 ```js
@@ -121,16 +121,16 @@ Note that the `body` is an instance of the `CSPViolationReportBody` and the `typ
 Configuring a web page to send a CSP violation report is similar to the previous example.
 As before, you need to configure your page so that there is a violation.
 
-In addition, you also need to specify the endpoints where the report will be sent.
+In addition, you also need to specify the endpoint(s) where the report will be sent.
 A server specifies endpoints using the {{httpheader("Reporting-Endpoints")}} response header: these must be secure URLs (HTTPS).
-The CSP {{CSP("report-to")}} directive is then used to specify that the particular endpoint is used for reporting CPS violations:
+The CSP {{CSP("report-to")}} directive is then used to specify that a particular endpoint is used for reporting CSP violations:
 
 ```http
 Reporting-Endpoints: csp-endpoint="https://example.com/csp-report-to"
 Content-Security-Policy: default-src 'self'; report-to csp-endpoint
 ```
 
-As before, we can trigger the violation loading by loading an external script from a location that is not covered by our CSP header:
+As before, we can trigger the violation by loading an external script from a location that is not allowed by our CSP header:
 
 ```html
 <!-- This should generate a CSP violation -->
@@ -138,7 +138,7 @@ As before, we can trigger the violation loading by loading an external script fr
 ```
 
 The violation report will then be sent to the indicated endpoint as a JSON file.
-As you see from the example below, the `type` is `"csp-violation"` and the `body` property is a serialization of the `CSPViolationReportBody` object:
+As you can see from the example below, the `type` is `"csp-violation"` and the `body` property is a serialization of the `CSPViolationReportBody` object:
 
 ```json
 [

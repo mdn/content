@@ -11,9 +11,9 @@ browser-compat: http.headers.Report-To
 > This header has been replaced by the {{HTTPHeader("Reporting-Endpoints")}} HTTP response header.
 > It is a deprecated part of an earlier iteration of the [Reporting API](/en-US/docs/Web/API/Reporting_API) specification.
 
-The HTTP **`Report-To`** {{glossary("response header")}} allows website administrators to define named groups of endpoints, that can then be used as the destination for warning and error reports, such as those used as the target for CSP violation reports, {{HTTPHeader("Cross-Origin-Opener-Policy")}} reports, deprecation reports, or other generic violations.
+The HTTP **`Report-To`** {{glossary("response header")}} allows website administrators to define named groups of endpoints that can be used as the destination for warning and error reports, such as CSP violation reports, {{HTTPHeader("Cross-Origin-Opener-Policy")}} reports, deprecation reports, or other generic violations.
 
-`Report-To` is often used in conjunction with other headers that select a particular group of endpoints to use for particular kind of report.
+`Report-To` is often used in conjunction with other headers that select a group of endpoints to use for a particular kind of report.
 For example, the {{HTTPHeader("Content-Security-Policy")}} header {{CSP("report-to")}} directive can be used to select the group used for reporting CSP violations.
 
 <table class="properties">
@@ -71,7 +71,7 @@ Report-To: { "group": "csp-endpoints",
               ] }
 ```
 
-The server can then set that it wants this group to be the target for sending CSP violation reports by specifying the group name as the value of the {{CSP("report-to")}} directive:
+The server can then specify that it wants this group to be the target for sending CSP violation reports by setting the group name as the value of the {{CSP("report-to")}} directive:
 
 ```http
 Content-Security-Policy: script-src https://example.com/; report-to csp-endpoints

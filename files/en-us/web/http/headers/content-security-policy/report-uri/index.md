@@ -19,7 +19,7 @@ browser-compat: http.headers.Content-Security-Policy.report-uri
 > ```
 
 The deprecated HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`report-uri`** directive instructs the user agent to report attempts to violate the Content Security Policy.
-These violation reports consist of [JSON documents](#violation_report_syntax) sent via an HTTP POST request to the specified URI.
+These violation reports consist of [JSON documents](#violation_report_syntax) sent via an HTTP `POST` request to the specified URI.
 
 The directive has no effect in and of itself, but only gains meaning in combination with other directives.
 
@@ -53,8 +53,8 @@ Content-Security-Policy: report-uri <uri> <uri>;
 
 ### Violation report syntax
 
-The report JSON object is sent in an HTTP POST with the {{HTTPHeader("Content-Type")}} of `application/csp-report`.
-It is an object with the single top level property `"csp-report"` that contains an object with the following properties:
+The report JSON object is sent via an HTTP `POST` operation with a {{HTTPHeader("Content-Type")}} of `application/csp-report`.
+It is an object with a single top-level property `"csp-report"``, which contains an object with the following properties:
 
 - `blocked-uri`
   - : The URI of the resource that was blocked from loading by the Content Security Policy.
@@ -65,7 +65,7 @@ It is an object with the single top level property `"csp-report"` that contains 
   - : The URI of the document in which the violation occurred.
 - `effective-directive`
   - : The directive whose enforcement caused the violation.
-    Some browsers may provide different values, such as Chrome providing `style-src-elem`/`style-src-attr`, even when the actually enforced directive was `style-src`.
+    Some browsers may provide different values, such as Chrome providing `style-src-elem`/`style-src-attr`, even when the enforced directive was `style-src`.
 - `original-policy`
   - : The original policy as specified by the `Content-Security-Policy` HTTP header.
 - `referrer` {{Deprecated_Inline}} {{Non-standard_Inline}}
@@ -83,7 +83,7 @@ It is an object with the single top level property `"csp-report"` that contains 
 ### CSP violation report with Content-Security-Policy
 
 Let's consider a page located at `http://example.com/signup.html`.
-It uses the following policy, disallowing everything but stylesheets from `cdn.example.com`.
+It uses the following policy, disallowing everything except stylesheets loaded from `cdn.example.com`.
 
 ```http
 Content-Security-Policy: default-src 'none'; style-src cdn.example.com; report-to /_/csp-reports
@@ -106,7 +106,7 @@ The HTML of `signup.html` looks like this:
 ```
 
 Can you spot the mistake? Stylesheets are allowed to be loaded only from `cdn.example.com`, yet the website tries to load one from its own origin (`http://example.com`).
-A browser capable of enforcing CSP would send the following violation report as a POST request to `http://example.com/_/csp-reports`, when the document is visited:
+A browser capable of enforcing CSP would send the following violation report as a `POST` request to `http://example.com/_/csp-reports` when the document is visited:
 
 ```json
 {
@@ -125,14 +125,14 @@ A browser capable of enforcing CSP would send the following violation report as 
 
 As you can see, the report includes the full path to the violating resource in `blocked-uri`.
 This is not always the case.
-For example, if the `signup.html` attempted to load CSS from `http://anothercdn.example.com/stylesheet.css`, the browser would _not_ include the full path, but only the origin
+For example, if `signup.html` attempted to load CSS from `http://anothercdn.example.com/stylesheet.css`, the browser would _not_ include the full path, only the origin,
 (`http://anothercdn.example.com`) in order to prevent leaking sensitive information about cross-origin resources.
 The CSP specification [gives an explanation](https://www.w3.org/TR/CSP/#security-violation-reports) of this behavior.
 
 ### CSP violation report with Content-Security-Policy-Report-Only
 
 The `report-uri` directive can also be used with the {{httpheader("Content-Security-Policy-Report-Only")}} response header.
-This header allows the browser to report but not block on violations.
+This header allows the browser to report but not block on violations when testing.
 
 The HTTP header would be much the same.
 
@@ -165,7 +165,7 @@ Given a server that sends responses with the following `Content-Security-Policy`
 Content-Security-Policy: default-src https:; report-uri /csp-violation-report-endpoint/
 ```
 
-`/csp-violation-report-endpoint/` could for example run a PHP something like the following that logs the JSON detailing the violation and, if the violation is the first one added to the log file, sends an email to an administrator:
+`/csp-violation-report-endpoint/` could for example run a PHP script like the following that logs the JSON detailing the violation and, if the violation is the first one added to the log file, sends an email to an administrator:
 
 ```php
 <?php
