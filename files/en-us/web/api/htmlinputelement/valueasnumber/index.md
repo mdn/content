@@ -20,7 +20,7 @@ A number that represents the value of the element or `NaN` if numeric conversion
 
 ### Retrieving a number value
 
-In this example, the log displays the current value of the {{HTMLElement("input/number", "number")}}. input when change.
+In this example, the log displays the current value of the {{HTMLElement("input/number", "number")}} input when changed.
 
 #### HTML
 
