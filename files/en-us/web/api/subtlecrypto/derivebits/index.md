@@ -144,7 +144,7 @@ Promise.all([generateAlicesKeyPair, generateBobsKeyPair]).then((values) => {
 
 ### X25519
 
-In this live example Alice and Bob each generate an X25519 key pair.
+In this example Alice and Bob each generate an X25519 key pair.
 We then use Alice's private key and Bob's public key to derive a secret, and compare that with the secret generated using Bobs's private key and Alices's public key to show that they are shared/identical.
 
 #### HTML
