@@ -50,7 +50,7 @@ li:first-of-type + li {
 </ul>
 ```
 
-### Result
+#### Result
 
 {{EmbedLiveSample("Basic usage", "100%", 100)}}
 
@@ -80,7 +80,7 @@ li:has( + li:last-of-type) {
 </ul>
 ```
 
-### Result
+#### Result
 
 {{EmbedLiveSample("Selecting a previous sibling", "100%", 100)}}
 
