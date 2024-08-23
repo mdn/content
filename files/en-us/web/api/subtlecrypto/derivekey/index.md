@@ -293,11 +293,9 @@ function deriveSecretKey(privateKey, publicKey) {
 ```
 
 Next we define the functions that Alice will use to {{glossary("UTF-8")}} encode and then encrypt her plaintext message, and that Bob will use to decrypt and then decode the message.
-The both take the shared key of the caller, an "initialization vector", and the text to be encrypted or decrypted.
+They both take as arguments the shared AES key, an [initialization vector](/en-US/docs/Web/API/AesGcmParams#iv), and the text to be encrypted or decrypted.
 
-The [AES-GCM](/en-US/docs/Web/API/SubtleCrypto/encrypt#aes-gcm) algorithm requires that the initialization vector passed to the `encrypt()` and `decrypt()` methods is the same.
-Note however that while it has to be unique, it does not have to be secret, and can be shared with the remote party along with the public keys (in this case we'll just make it directly available).
-For more information see {{domxref("AesGcmParams")}}, which describes the object passed to the methods.
+The same initialization vector must be used for encryption and decryption, but it does not need to be secret, so usually it is sent alongside the encrypted message. In this case, though, since we're not actually sending a message, we just make it directly available.
 
 ```js
 async function encryptMessage(key, initializationVector, message) {
