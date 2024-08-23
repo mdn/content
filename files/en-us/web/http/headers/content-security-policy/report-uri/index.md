@@ -59,7 +59,7 @@ The report JSON object is sent via an HTTP `POST` operation with a {{HTTPHeader(
 > The content should be properly sanitized before storing or rendering.
 > This is particularly true of the [script-sample](#script-sample) property, if supplied.
 
-The report JSON object has a single top-level property `"csp-report"``, which contains an object with the following properties:
+The report JSON object has a single top-level property, `"csp-report"`, which contains an object with the following properties:
 
 - `blocked-uri`
   - : The URI of the resource that was blocked from loading by the Content Security Policy.
