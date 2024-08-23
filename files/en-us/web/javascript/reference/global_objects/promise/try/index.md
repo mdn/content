@@ -32,7 +32,7 @@ A {{jsxref("Promise")}} that is:
 
 ## Description
 
-You may have an API that takes a callback. The callback may be synchronous or asynchronous. You want to handle everything uniformly by wrapping the result in a promise. The most straightforward way might be {{jsxref("Promise/resolve", "Promise.resolve(func())")}}. The problem is that if `func()` synchronously throws an error, this error would not be caught and turned into a rejected promise. The correct way to do so is the following, which `Promise.try(func)` is equivalent to:
+You may have an API that takes a callback. The callback may be synchronous or asynchronous. You want to handle everything uniformly by wrapping the result in a promise. The most straightforward way might be {{jsxref("Promise/resolve", "Promise.resolve(func())")}}. The problem is that if `func()` synchronously throws an error, this error would not be caught and turned into a rejected promise. The correct way to do so is the following, which `Promise.try(func)` is equivalent to (although it should not be used as a polyfill):
 
 ```js
 new Promise((resolve) => resolve(func()));
