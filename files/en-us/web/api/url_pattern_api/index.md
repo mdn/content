@@ -27,8 +27,8 @@ can contain:
 - Non-capturing groups (`/books{/old}?`) which make parts of a pattern optional
   or be matched multiple times.
 - {{jsxref("RegExp")}} groups (`/books/(\\d+)`) which make arbitrarily complex
-  regex matches with a few [limitations](#regex_matchers_limitations). _Note the
-  parentheses define the contents as a regex and are not part of the regex._
+  regex matches with a few [limitations](#regex_matchers_limitations). _Note that the
+  parentheses are not part of the regex but instead define their contents as a regex._
 
 You can find details about the syntax in the [pattern syntax](#pattern_syntax)
 section below.
