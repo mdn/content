@@ -63,7 +63,7 @@ If you delete the number in the widget, the result is `NaN`.
 
 ### Retrieving a date value as a number
 
-This example demonstrated that the `valueAsNumber` property with an `<input>` of type {{HTMLElement("input/datetime-local", "datetime-local")}}.
+This example demonstrates the `valueAsNumber` property of an `<input>` with type {{HTMLElement("input/datetime-local", "datetime-local")}}.
 
 #### HTML
 

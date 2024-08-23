@@ -61,7 +61,7 @@ inputElement.addEventListener("keyup", () => {
 
 ### Retrieving a color value
 
-This example demonstrated that the `value` property with an `<input>` of type {{HTMLElement("input/color", "color")}}.
+This example demonstrates that the `value` property with an `<input>` of type {{HTMLElement("input/color", "color")}}.
 
 #### HTML
 
