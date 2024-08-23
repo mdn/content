@@ -32,9 +32,9 @@ cleared when the _page session_ ends.
 
 Data stored in `sessionStorage` **is specific to the protocol of the
 page**. In particular, data stored by a script on a site accessed with HTTP
-(e.g., <http://example.com/>) is
+(e.g., `http://example.com/`) is
 put in a different `sessionStorage` object from the same site accessed with
-HTTPS (e.g., <https://example.com/>).
+HTTPS (e.g., `https://example.com/`).
 
 The keys and the values are _always_ in the UTF-16 string
 format, which uses two bytes per character. As with objects, integer keys are

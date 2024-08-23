@@ -177,7 +177,7 @@ It is advisable to put the content into a single page. If you want to pull in ne
 
 If you must use `<iframe>`s, then use them sparingly.
 
-#### Lazy loading iframes
+### Lazy loading iframes
 
 In the same way as `<img>` elements, you can also use the `loading` attribute to instruct the browser to lazy-load `<iframe>` content that is initially offscreen, thereby improving performance:
 

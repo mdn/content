@@ -200,6 +200,6 @@ Last, a Route has the ability to handle common events resulting from configuring
 
 Both `loading` and `error` can render default templates as well as customized templates defined elsewhere in the application, unifying loading/error states.
 
-More information on [everything a Route can do is found in the API documentation](https://api.emberjs.com/ember/release/classes/Route/).
+More information on [everything a Route can do is found in the API documentation](https://api.emberjs.com/ember/release/classes/route/).
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}

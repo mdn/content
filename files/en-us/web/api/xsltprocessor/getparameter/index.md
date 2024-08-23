@@ -32,6 +32,16 @@ An object that is the value associated with the parameter. It can be of any type
 
 ## Examples
 
+### Using getParameter()
+
+This example shows how to use `getParameter()` to check the value of a parameter that controls the behavior of an XSLT transformation.
+
+```js
+const xsltProcessor = new XSLTProcessor();
+xsltProcessor.setParameter(null, "foo", "bar");
+console.log(xsltProcessor.getParameter(null, "foo")); // "bar"
+```
+
 ## Specifications
 
 {{Specifications}}
