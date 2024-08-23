@@ -10,9 +10,9 @@ browser-compat: api.HTMLInputElement.valueAsDate
 
 The **`valueAsDate`** property of the {{DOMxRef("HTMLInputElement")}} interface represents the current value of the {{htmlelement("input")}} element as a {{jsxref("Date")}}, or `null` if conversion is not possible.
 
-This property can also be set directly, for example to set a default date based on some condition.
+This property can also be set directly, for example to set a default date based on some condition. If the provided value is neither `null` nor a `Date` object, a {{jsxref("TypeError")}} is thrown. If the provided value is `null` or an [invalid date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date), the input value is set to the empty string.
 
-Throws an `InvalidStateError` {{domxref("DOMException")}} if the control isn't date- or time-based.
+This property always returns `null` when accessed on an input that isn't date- or time-based. When setting this property on such an input, an `InvalidStateError` {{domxref("DOMException")}} is thrown.
 
 ## Value
 
@@ -38,7 +38,7 @@ We include an `<input>` of type `week`:
 
 #### JavaScript
 
-When no date or time is selected, the empty string resolves to `NaN`. Each time a selection is made, a {{domxref("HTMLElement/change_event", "change")}} event is fired, updating the `<pre>` content showing the {{DOMXref("HTMLInputElement.value")}} of the form control compared to that value as a number.
+When no date or time is selected, the empty input resolves to `null`. Each time a selection is made, a {{domxref("HTMLElement/change_event", "change")}} event is fired, updating the `<pre>` content showing the {{DOMXref("HTMLInputElement.value")}} of the form control compared to that value as a date.
 
 ```js
 const logElement = document.getElementById("log");
@@ -114,7 +114,7 @@ inputElement.addEventListener("change", () => {
 
 #### Results
 
-{{EmbedLiveSample("Parsing a `valueAsDate` value", "", 100)}}
+{{EmbedLiveSample("Parsing a valueAsDate value", "", 100)}}
 
 The date may be a day off due to your local timezone.
 
