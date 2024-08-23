@@ -224,6 +224,8 @@ async function changeKeys() {
       false,
       ["deriveBits"],
     );
+
+    log("Keys changed");
   } catch (e) {
     log(e);
   }
@@ -234,11 +236,10 @@ changeKeys();
 const changeKeysButton = document.querySelector("#buttonChangeKeys");
 
 changeKeysButton.addEventListener("click", async () => {
-  // Generate 2 ECDH key pairs: one for Alice and one for Bob
+  // Generate 2 X25519 key pairs: one for Alice and one for Bob
   // In more normal usage, they would generate their key pairs
   // separately and exchange public keys securely
   changeKeys();
-  log("Keys changed");
 });
 ```
 
