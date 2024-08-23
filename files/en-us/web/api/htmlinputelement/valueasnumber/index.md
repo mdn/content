@@ -36,7 +36,7 @@ We include an {{htmlelement("input")}} of type `number` and an associated {{html
 
 #### JavaScript
 
-The `<pre>` element's {{domxref("HTMLElement.innerText", "innerText")}} is updated to the current value of the `<input>` every time a {{domxref("Element/change_event", "change")}} event is fired.
+The `<pre>` element's {{domxref("HTMLElement.innerText", "innerText")}} is updated to the current value of the `<input>` every time a {{domxref("HTMLElement/change_event", "change")}} event is fired.
 
 ```js
 const logElement = document.getElementById("log");
