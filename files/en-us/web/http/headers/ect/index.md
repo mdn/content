@@ -4,7 +4,7 @@ slug: Web/HTTP/Headers/ECT
 page-type: http-header
 status:
   - experimental
-browser-compat: http.headers.ect
+browser-compat: http.headers.ECT
 ---
 
 {{HTTPSidebar}} {{SeeCompatTable}}

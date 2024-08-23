@@ -233,9 +233,8 @@ When the numbers of channels of the input and the output don't match, up-mixing,
         <em>Down-mix from quad to mono</em>.<br />All four input channels
         (<code>L</code>, <code>R</code>, <code>SL</code>, and <code>SR</code>)
         are equally combined to produce the unique output channel
-        (<code>M</code>).<br /><code
-          >output.M = 0.25 * (input.L + input.R + </code
-        ><code>input.SL + input.SR</code><code>)</code>
+        (<code>M</code>).<br />
+        <code>output.M = 0.25 * (input.L + input.R + input.SL + input.SR)</code>
       </td>
     </tr>
     <tr>
@@ -246,10 +245,9 @@ When the numbers of channels of the input and the output don't match, up-mixing,
         (<code>L</code> and <code>SL</code>) are equally combined to produce the
         unique left output channel (<code>L</code>). And similarly, both right
         input channels (<code>R</code> and <code>SR</code>) are equally combined
-        to produce the unique right output channel (<code>R</code>).<br /><code
-          >output.L = 0.5 * (input.L + input.SL</code
-        ><code>)</code><br /><code>output.R = 0.5 * (input.R + input.SR</code
-        ><code>)</code>
+        to produce the unique right output channel (<code>R</code>).<br />
+        <code>output.L = 0.5 * (input.L + input.SL)</code><br />
+        <code>output.R = 0.5 * (input.R + input.SR)</code>
       </td>
     </tr>
     <tr>
@@ -260,10 +258,13 @@ When the numbers of channels of the input and the output don't match, up-mixing,
         <code>R</code>, <code>SL</code>, and <code>SR</code> input channels are
         used for their respective output channels (<code>L</code> and
         <code>R</code>). Center (<code>C</code>) and subwoofer
-        (<code>LFE</code>) channels are left silent.<br /><code
-          >output.L = input.L<br />output.R = input.R<br />output.C = 0<br />output.LFE
-          = 0<br />output.SL = input.SL<br />output.SR = input.SR</code
-        >
+        (<code>LFE</code>) channels are left silent.<br />
+        <code>output.L = input.L</code><br />
+        <code>output.R = input.R</code><br />
+        <code>output.C = 0</code><br />
+        <code>output.LFE = 0</code><br />
+        <code>output.SL = input.SL</code><br />
+        <code>output.SR = input.SR</code>
       </td>
     </tr>
     <tr>
@@ -275,10 +276,8 @@ When the numbers of channels of the input and the output don't match, up-mixing,
         channels are all mixed together. The surround channels are slightly
         attenuated, and the regular lateral channels are power-compensated to
         make them count as a single channel by multiplying by <code>√2/2</code>.
-        The subwoofer (<code>LFE</code>) channel is lost.<br /><code
-          >output.M = 0.7071 * (input.L + input.R) + input.C + 0.5 * (input.SL +
-          input.SR)</code
-        >
+        The subwoofer (<code>LFE</code>) channel is lost.<br />
+        <code>output.M = 0.7071 * (input.L + input.R) + input.C + 0.5 * (input.SL + input.SR)</code>
       </td>
     </tr>
     <tr>
@@ -292,10 +291,9 @@ When the numbers of channels of the input and the output don't match, up-mixing,
         or <code>SR</code>) and mixed to each lateral channel. As it is mixed
         down to two channels, it is mixed at a lower power: in each case, it is
         multiplied by <code>√2/2</code>. The subwoofer (<code>LFE</code>)
-        channel is lost.<br /><code
-          >output.L = input.L + 0.7071 * (input.C + input.SL)<br />output.R =
-          input.R </code
-        ><code>+ 0.7071 * (input.C + input.SR)</code>
+        channel is lost.<br />
+        <code>output.L = input.L + 0.7071 * (input.C + input.SL)</code><br />
+        <code>output.R = input.R + 0.7071 * (input.C + input.SR)</code>
       </td>
     </tr>
     <tr>
@@ -307,11 +305,11 @@ When the numbers of channels of the input and the output don't match, up-mixing,
         <code>R</code>). As it is mixed down to two channels, it is mixed at a
         lower power: in each case, it is multiplied by <code>√2/2</code>. The
         surround channels are passed unchanged. The subwoofer (<code>LFE</code>)
-        channel is lost.<br /><code
-          >output.L = input.L + 0.7071 * input.C<br />output.R = input.R +
-          0.7071 * input.C<br />output.SL = input.SL<br />output.SR =
-          input.SR</code
-        >
+        channel is lost.<br />
+        <code>output.L = input.L + 0.7071 * input.C</code><br />
+        <code>output.R = input.R + 0.7071 * input.C</code><br />
+        <code>output.SL = input.SL</code><br />
+        <code>output.SR = input.SR</code>
       </td>
     </tr>
     <tr>
