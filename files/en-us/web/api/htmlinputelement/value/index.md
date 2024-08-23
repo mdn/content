@@ -77,7 +77,7 @@ We include an `<input>` of type `color`:
 
 #### JavaScript
 
-The `<pre>` element's {{domxref("HTMLElement.innerText", "innerText")}} is updated with the default color value (`#000000`) and then updated every time a {{domxref("Element/change_event", "change")}} event is fired.
+The `<pre>` element's {{domxref("HTMLElement.innerText", "innerText")}} is updated with the default color value (`#000000`) and then updated every time a {{domxref("HTMLElement/change_event", "change")}} event is fired.
 
 ```js
 const logElement = document.getElementById("log");
