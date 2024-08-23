@@ -32,13 +32,13 @@ A {{jsxref("Promise")}} that is:
 
 ## Description
 
-You may have an API that takes a callback. The callback may be synchronous or asynchronous. You want to handle everything uniformly by wrapping the result in a promise. The most straightforward way might be {{jsxref("Promise/resolve", "Promise.resolve(func())")}}. The problem is that if `func()` synchronously throws an error, this error would not be caught and turned into a rejected promise. The correct way to do so is the following, which `Promise.try(func)` is exactly equivalent to:
+You may have an API that takes a callback. The callback may be synchronous or asynchronous. You want to handle everything uniformly by wrapping the result in a promise. The most straightforward way might be {{jsxref("Promise/resolve", "Promise.resolve(func())")}}. The problem is that if `func()` synchronously throws an error, this error would not be caught and turned into a rejected promise. The correct way to do so is the following, which `Promise.try(func)` is equivalent to:
 
 ```js
 new Promise((resolve) => resolve(func()));
 ```
 
-Except that `Promise.try()` is perhaps more concise and readable. To be more exact, the following is a more faithful representation of the implementation of `Promise.try()` (although it should still not be used as a polyfill):
+For the built-in `Promise()` constructor, errors thrown from the executor are automatically caught and turned into rejections, so the above would also be equivalent to:
 
 ```js
 new Promise((resolve, reject) => {
@@ -50,7 +50,8 @@ new Promise((resolve, reject) => {
 });
 ```
 
-For the built-in `Promise()` constructor, errors thrown from the executor are automatically caught and turned into rejections, so these two examples are equivalent.
+`Promise.try()` provides a more concise and readable alternative.
+
 
 Note that `Promise.try()` is _not_ equivalent to this, despite being highly similar:
 
