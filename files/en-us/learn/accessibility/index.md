@@ -51,7 +51,7 @@ To get the most out of this module, it would be a good idea to either work throu
 
 ## See also
 
-- [Learn Accessible Web Design](https://v2.scrimba.com/learn-accessible-web-design-c031?via=mdn)
+- [Learn Accessible Web Design](https://v2.scrimba.com/learn-accessible-web-design-c031?via=mdn) <sup>_MDN Curriculum partner_</sup>
   - : [Scrimba's](https://scrimba.com?via=mdn) _Learn Accessible Web Design_ course teaches you how to write accessible HTML by solving interactive coding challenges and fixing a real-world website.
 - [Start Building Accessible Web Applications Today](https://egghead.io/courses/start-building-accessible-web-applications-today)
   - : An excellent series of video tutorials by Marcy Sutton.
