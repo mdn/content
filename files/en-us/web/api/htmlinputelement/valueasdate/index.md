@@ -63,7 +63,7 @@ inputElement.addEventListener("change", () => {
 
 {{EmbedLiveSample("Retrieving a date value", "", 100)}}
 
-### Parsing a `valueAsDate` value
+### Using Date methods
 
 This example demonstrates applying {{jsxref("Date")}} methods directly to the `valueAsDate` property of an `<input>` of type {{HTMLElement("input/date", "date")}}.
 
@@ -81,7 +81,7 @@ We include an `<input>` of type `date`:
 
 #### JavaScript
 
-When no date is selected, the empty string resolves to `null`. Each time a selection is made, a {{domxref("HTMLElement/change_event", "change")}} event is fired, we print the selected date using the
+When no date is selected, the empty string resolves to `null`. Each time a selection is made, a {{domxref("HTMLElement/change_event", "change")}} event is fired. We then populate the log with the date selected, formatted using the `Date` object's {{jsxref("Date.prototype.toLocaleDateString()", "toLocaleDateString()")}} method.
 
 ```js
 const logElement = document.getElementById("log");
@@ -114,7 +114,7 @@ inputElement.addEventListener("change", () => {
 
 #### Results
 
-{{EmbedLiveSample("Parsing a valueAsDate value", "", 100)}}
+{{EmbedLiveSample("Using Date methods", "", 100)}}
 
 The date may be a day off due to your local timezone.
 
