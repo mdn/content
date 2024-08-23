@@ -54,7 +54,12 @@ Content-Security-Policy: report-uri <uri> <uri>;
 ### Violation report syntax
 
 The report JSON object is sent via an HTTP `POST` operation with a {{HTTPHeader("Content-Type")}} of `application/csp-report`.
-It is an object with a single top-level property `"csp-report"``, which contains an object with the following properties:
+
+> [!NOTE] Violation reports should be considered attacker-controlled data.
+> The content should be properly sanitized before storing or rendering.
+> This is particularly true of the [script-sample](#script-sample) property, if supplied.
+
+The report JSON object has a single top-level property `"csp-report"``, which contains an object with the following properties:
 
 - `blocked-uri`
   - : The URI of the resource that was blocked from loading by the Content Security Policy.
@@ -71,8 +76,12 @@ It is an object with a single top-level property `"csp-report"``, which contains
 - `referrer` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : The referrer of the document in which the violation occurred.
 - `script-sample`
+
   - : The first 40 characters of the inline script, event handler, or style that caused the violation.
-    Only applicable to `script-src*` and `style-src*` violations, when they contain the `'report-sample'`
+    Violations originating from external files are not included in the report.
+
+    This is only applicable to [`script-src*`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#script-src) and [`style-src*`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#style-src) violations, when the corresponding `Content-Security-Policy` directive contains the [`'report-sample'`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#report-sample) keyword.
+
 - `status-code`
   - : The HTTP status code of the resource on which the global object was instantiated.
 - `violated-directive` {{deprecated_inline}}
@@ -86,7 +95,7 @@ Let's consider a page located at `http://example.com/signup.html`.
 It uses the following policy, disallowing everything except stylesheets loaded from `cdn.example.com`.
 
 ```http
-Content-Security-Policy: default-src 'none'; style-src cdn.example.com; report-to /_/csp-reports
+Content-Security-Policy: default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports
 ```
 
 The HTML of `signup.html` looks like this:
