@@ -31,7 +31,7 @@ This example demonstrates how to select the next sibling if that next sibling is
 
 #### CSS
 
-We only style the `<li>` that comes immediately after an `<li>` that is the first of it's type:
+We only style the `<li>` that comes immediately after an `<li>` that is the first of its type:
 
 ```css
 li:first-of-type + li {
