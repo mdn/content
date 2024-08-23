@@ -110,7 +110,7 @@ wss.close({
 ```
 
 > [!NOTE]
-> Depending on the server setup and status code you use, the server may choose to ignore a custom code in favor of a standard code that is correct for the closing reason.
+> Depending on the server setup and status code you use, the server may choose to ignore a custom code in favor of a valid code that is correct for the closing reason.
 
 ## A complete sample client
 
