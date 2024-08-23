@@ -65,7 +65,7 @@ inputElement.addEventListener("change", () => {
 
 ### Parsing a `valueAsDate` value
 
-This example demonstrates applying {{jsxref("Date")}} methods directly to the `valueAsDate` property of the `HTMLInputElement` interface applied to an `<input>` of type {{HTMLElement("input/date", "date")}}.
+This example demonstrates applying {{jsxref("Date")}} methods directly to the `valueAsDate` property of an `<input>` of type {{HTMLElement("input/date", "date")}}.
 
 #### HTML
 
