@@ -42,7 +42,8 @@ deriveKey(algorithm, baseKey, derivedKeyAlgorithm, extractable, keyUsages)
 - `extractable`
   - : A boolean value indicating whether it will be possible to export the key using {{domxref("SubtleCrypto.exportKey()")}} or {{domxref("SubtleCrypto.wrapKey()")}}.
 - `keyUsages`
-  - : An {{jsxref("Array")}} indicating what can be done with the derived key. Note that the key usages must be allowed by the algorithm set in `derivedKeyAlgorithm`.
+  - : An {{jsxref("Array")}} indicating what can be done with the derived key.
+    Note that the key usages must be allowed by the algorithm set in `derivedKeyAlgorithm`.
     Possible values of the array are:
     - `encrypt`: The key may be used to [encrypt](/en-US/docs/Web/API/SubtleCrypto/encrypt) messages.
     - `decrypt`: The key may be used to [decrypt](/en-US/docs/Web/API/SubtleCrypto/decrypt) messages.
@@ -86,7 +87,8 @@ HKDF is specified in [RFC 5869](https://datatracker.ietf.org/doc/html/rfc5869).
 
 #### PBKDF2
 
-PBKDF2 is also a _key derivation function_. It's designed to derive key material from some relatively low-entropy input, such as a password.
+PBKDF2 is also a _key derivation function_.
+It's designed to derive key material from some relatively low-entropy input, such as a password.
 It derives key material by applying a function such as HMAC to the input password along with some salt, and repeating this process many times.
 The more times the process is repeated, the more computationally expensive key derivation is: this makes it harder for an attacker to use brute-force to discover the key using a dictionary attack.
 
@@ -96,7 +98,8 @@ PBKDF2 is specified in [RFC 2898](https://datatracker.ietf.org/doc/html/rfc2898)
 
 #### ECDH
 
-ECDH (Elliptic Curve Diffie-Hellman) is a _key-agreement algorithm_. It enables two people who each have an ECDH public/private key pair to generate a shared secret: that is, a secret that they — and no one else — share.
+ECDH (Elliptic Curve Diffie-Hellman) is a _key-agreement algorithm_.
+It enables two people who each have an ECDH public/private key pair to generate a shared secret: that is, a secret that they — and no one else — share.
 They can then use this shared secret as a symmetric key to secure their communication, or can use the secret as an input to derive such a key (for example, using the HKDF algorithm).
 
 ECDH is specified in [RFC 6090](https://datatracker.ietf.org/doc/html/rfc6090).
@@ -451,8 +454,7 @@ The log area at the bottom provide information about the keys that are generated
 
 ### PBKDF2
 
-In this example we ask the user for a password, then use it to derive an AES key using
-PBKDF2, then use the AES key to encrypt a message.
+In this example we ask the user for a password, then use it to derive an AES key using PBKDF2, then use the AES key to encrypt a message.
 [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/derive-key/pbkdf2.js)
 
 ```js
@@ -493,7 +495,9 @@ async function encrypt(plaintext, salt, iv) {
 
 ### HKDF
 
-In this example, we encrypt a message `plainText` given a shared secret `secret`, which might itself have been derived using an algorithm such as ECDH. Instead of using the shared secret directly, we use it as key material for the HKDF function, to derive an AES-GCM encryption key, which we then use to encrypt the message. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/derive-key/hkdf.js)
+In this example, we encrypt a message `plainText` given a shared secret `secret`, which might itself have been derived using an algorithm such as ECDH.
+Instead of using the shared secret directly, we use it as key material for the HKDF function, to derive an AES-GCM encryption key, which we then use to encrypt the message.
+[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/derive-key/hkdf.js)
 
 ```js
 /*
