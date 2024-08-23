@@ -83,6 +83,13 @@ These features are newly shipped in Firefox 130 but are disabled by default. To 
   The {{domxref('HTMLVideoElement/requestVideoFrameCallback','requestVideoFrameCallback()')}} method of the {{domxref('HTMLVideoElement')}} interface registers a callback function that runs when a new video frame is sent to the compositor. This enables developers to perform efficient operations on each video frame, such as video analysis, painting to a canvas, synchronization with external audio sources, and so on. The method returns a callback handle that can be passed to {{domxref('HTMLVideoElement.cancelVideoFrameCallback()')}} in order to cancel the outstanding callback request.
   Both methods are are enabled by default on the nightly build. ([Firefox bug 1800882](https://bugzil.la/1800882)).
 
+- **CSP violation reports using the Reporting API:** `dom.reporting.enabled`.
+
+  The [Reporting API](/en-US/docs/Web/API/Reporting_API) can be used for reporting [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) violations.
+  This includes support for {{domxref('Report')}} objects that have a `type` property with the value `"csp-violation"` and `body` property that is an instance of the {{domxref('CSPViolationReportBody')}} interface, the {{CSP("report-to")}} directive of the {{httpheader('Content-Security-Policy')}} HTTP response header, and the {{httpheader('Reporting-Endpoints')}} and {{httpheader('Report-To')}} HTTP response headers.
+  This feature is disabled by default.
+  ([Firefox bug 1391243](https://bugzil.la/1391243)).
+
 ## Older versions
 
 {{Firefox_for_developers}}
