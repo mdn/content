@@ -60,11 +60,11 @@ The only difference is that server reports are JSON serializations of the object
 
 The mapping of report `type` to `body` is shown below.
 
-| `type`            | `body`                                  | Items reported                                                                 |
-| --------------- | ------------------------------------- | --------------------------------------------------------------------------- |
+| `type`          | `body`                                | Items reported                                                                   |
+| --------------- | ------------------------------------- | -------------------------------------------------------------------------------- |
 | `deprecation`   | {{domxref("DeprecationReportBody")}}  | Deprecated features used by the site.                                            |
 | `intervention`  | {{domxref("InterventionReportBody")}} | Features blocked by the user agent, for example, if permissions are not granted. |
-| `csp-violation` | {{domxref("CSPViolationReportBody")}} | Violations of the site's CSP policy.                                                |
+| `csp-violation` | {{domxref("CSPViolationReportBody")}} | Violations of the site's CSP policy.                                             |
 
 ### Generating reports via WebDriver
 
