@@ -63,7 +63,7 @@ The next-sibling combinator can be included within the {{cssxref(":has", ":has()
 We only style the `<li>` with a next sibling that is an `<li>` that is the last of it's type:
 
 ```css
-li:has( + li:last-of-type) {
+li:has(+ li:last-of-type) {
   color: red;
   font-weight: bold;
 }
