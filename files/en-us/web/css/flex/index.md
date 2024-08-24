@@ -94,7 +94,7 @@ Commonly desired flexbox effects can be achieved using the following `flex` valu
 - `flex: <number [1,∞]>`: The flex item's main size will be proportional to the number set. This value expands to `flex: <number> 1 0`. This sets the `flex-basis` to zero and makes the flex item flexible. The item will be at least as wide or tall as its minimum size, with the container's positive available space being proportionally distributed based on the growth factors of this item and its sibling flex items. If all the flex items use this pattern, all will be sized in proportion to their numeric values.
 
   > [!WARNING]
-  > The browsers use `flex-basis` value `0%` when the `flex-basis` is not specified in a `flex` value. This is not the same as `flex-basis` value `0` which is what the specification says. This may affect flex layout in some cases.
+  > The browsers use `flex-basis` value `0%` when the `flex-basis` is not specified in a `flex` value. This is not the same as `flex-basis` value `0` which is what the specification says. This may affect flex layout in some cases. See this effect demonstrated in the [Flex-basis `0` versus `0%`](en-US/docs/Web/CSS/flex-basis#flex_basis_0_vs_0) example.
 
 ## Description
 
