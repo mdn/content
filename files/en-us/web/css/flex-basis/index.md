@@ -174,7 +174,6 @@ The `flex-basis` property is specified as either the keyword `content` or a `<'w
 
 This example demonstrates the difference between a `flex-basis` of `0` verus a `flex-basis` of `0%` when `flex-direction` is set to `column` and the flex containers and flex items don't have a set height; while `0` is an absolute length, percentage flex-basis values resolve to [`content`](#content) values.
 
-
 #### HTML
 
 We include two same-structure flex containers. These which will be styled similarly, except for their `flex-basis` values. The containers each have two children: a heading `<div>` and a `<section>`. The `<section>` element has a content `<div>` child, which will not be set as a flex item but will be given a height.
@@ -198,7 +197,7 @@ We include two same-structure flex containers. These which will be styled simila
 
 #### CSS
 
-We style the containers as inline flex containers that will appear side by side to better enable comparing them. We set the `flex-direction` to the column. The first container's flex items have a `flex-basis` value of  `0` and the second container's flex item have a `flex-basis` value of `0%`.  Neither the flex containers nor their flex items have a height explicitly set, but the heights of `section` elements can not exceed `200px` and their children have height `300px`.
+We style the containers as inline flex containers that will appear side by side to better enable comparing them. We set the `flex-direction` to the column. The first container's flex items have a `flex-basis` value of `0` and the second container's flex item have a `flex-basis` value of `0%`. Neither the flex containers nor their flex items have a height explicitly set, but the heights of `section` elements can not exceed `200px` and their children have height `300px`.
 
 ```css
 .container {
