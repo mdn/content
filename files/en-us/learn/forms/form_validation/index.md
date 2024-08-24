@@ -755,7 +755,7 @@ input.invalid {
   background-color: #fdd;
 }
 
-input:focus:invalid {
+input:focus.invalid {
   outline: none;
 }
 
