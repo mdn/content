@@ -4,7 +4,7 @@
  * - Markdown header updates
  */
 
-import fs from "node:fs/promises";
+import fs from "node:fs";
 import {
   execGit,
   getRootDir,
@@ -14,6 +14,7 @@ import {
   stringToFragment,
 } from "./utils.js";
 
+const rootDir = getRootDir();
 const deletedSlugs = [];
 const addedFragmentDetails = [];
 let deletedFragmentDetails = [];
@@ -97,7 +98,25 @@ function getFragmentDetails(fromStaging = true) {
         .map((header) => header.replace(/-#+ /g, ""))
         .map((header) => stringToFragment(header))
         .filter((header) => !addedFragments.includes(header))
-        .forEach((header) => deletedFragmentDetails.push(`${path}#${header}`));
+        .filter((header) => {
+          // check if another header with same name exists in the file
+          const content = fs.readFileSync(
+            `${rootDir}/files/en-us/${path}/index.md`,
+            "utf-8",
+          );
+          const duplicateHeader = [...content.matchAll(/^#+ .*?$/gm)]
+            .map((match) => match[0].toLowerCase())
+            .map((h) => h.replace(/#+ /g, ""))
+            .map((h) => stringToFragment(h))
+            .find((h) => h === header);
+          return !duplicateHeader;
+        })
+        .forEach((header) => {
+          const fragment = `${path}#${header}`;
+          if (!deletedFragmentDetails.includes(fragment)) {
+            deletedFragmentDetails.push(fragment);
+          }
+        });
 
       addedFragments.forEach((header) =>
         addedFragmentDetails.push(`${path}#${header}`),
@@ -125,10 +144,10 @@ if (deletedSlugs.length < 1 && deletedFragmentDetails.length < 1) {
   process.exit(0);
 }
 
-for await (const filePath of walkSync(getRootDir())) {
+for await (const filePath of walkSync(rootDir)) {
   if (filePath.endsWith("index.md")) {
     try {
-      const content = await fs.readFile(filePath, "utf-8");
+      const content = fs.readFileSync(filePath, "utf-8");
       const relativePath = filePath.substring(filePath.indexOf("files/en-us"));
 
       // check deleted links
