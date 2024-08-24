@@ -750,7 +750,7 @@ input#mail {
 }
 
 /* This is our style for the invalid fields */
-input.invalid {
+input#mail.invalid {
   border-color: #900;
   background-color: #fdd;
 }
