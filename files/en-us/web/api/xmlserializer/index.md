@@ -9,6 +9,9 @@ browser-compat: api.XMLSerializer
 
 The `XMLSerializer` interface provides the {{domxref("XMLSerializer.serializeToString", "serializeToString()")}} method to construct an XML string representing a {{Glossary("DOM")}} tree.
 
+> [!NOTE]
+> The resulting XML string is not guaranteed to necessarily be valid XML, for instance, if element names or attribute names are not permissible XML names.
+
 ## Constructor
 
 - {{domxref("XMLSerializer.XMLSerializer", "XMLSerializer()")}}
