@@ -20,6 +20,7 @@ returns the last child of the node, or `null` if there are no child nodes.
 ## Value
 
 A {{domxref("Node")}} that is the last child of the node, or `null` if there are no child nodes.
+If a node has only one child node , that node will be referred as its firstChild as well as lastChild.
 
 ## Example
 
