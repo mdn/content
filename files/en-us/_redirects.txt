@@ -10014,7 +10014,6 @@
 /en-US/docs/Web/API/WebGL2RenderingContext/clearBufferfv	/en-US/docs/Web/API/WebGL2RenderingContext/clearBuffer
 /en-US/docs/Web/API/WebGL2RenderingContext/clearBufferiv	/en-US/docs/Web/API/WebGL2RenderingContext/clearBuffer
 /en-US/docs/Web/API/WebGL2RenderingContext/clearBufferuiv	/en-US/docs/Web/API/WebGL2RenderingContext/clearBuffer
-/en-US/docs/Web/API/WebGL2RenderingContext/compressedTexImage3D	/en-US/docs/Web/API/WebGLRenderingContext/compressedTexImage2D
 /en-US/docs/Web/API/WebGL2RenderingContext/samplerParameterf	/en-US/docs/Web/API/WebGL2RenderingContext/samplerParameter
 /en-US/docs/Web/API/WebGL2RenderingContext/samplerParameteri	/en-US/docs/Web/API/WebGL2RenderingContext/samplerParameter
 /en-US/docs/Web/API/WebGL2RenderingContext/uniform1ui	/en-US/docs/Web/API/WebGL2RenderingContext/uniform
