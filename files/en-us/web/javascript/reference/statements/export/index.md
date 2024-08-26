@@ -213,6 +213,12 @@ The "export from" syntax allows the `as` token to be omitted, which makes the de
 export { default, function2 } from "bar.js";
 ```
 
+`export from` supports all features that `import` supports — for example, [import attributes](/en-US/docs/Web/JavaScript/Reference/Statements/import/with):
+
+```js
+export { default } from "./data.json" with { type: "json" };
+```
+
 ## Examples
 
 ### Using named exports

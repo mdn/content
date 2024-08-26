@@ -40,7 +40,7 @@ The **`animation-iteration-count`** property is specified as one or more comma-s
 
 - `infinite`
   - : The animation will repeat forever.
-- `{{cssxref("&lt;number&gt;")}}`
+- {{cssxref("&lt;number&gt;")}}
   - : The number of times the animation will repeat; this is `1` by default. You may specify non-integer values to play part of an animation cycle: for example, `0.5` will play half of the animation cycle. Negative values are invalid.
 
 > [!NOTE]

@@ -211,4 +211,4 @@ customElements.define("my-custom-element", MyCustomElement);
 - {{domxref("ShadowRoot.delegatesFocus")}}
 - {{domxref("ShadowRoot.slotAssignment")}}
 - Declaratively attach a shadow root with the [`shadowrootmode`](/en-US/docs/Web/HTML/Element/template#shadowrootmode) attribute of the [`<template>` element](/en-US/docs/Web/HTML/Element/template)
-- [Declarative shadow DOM](https://developer.chrome.com/docs/css-ui/declarative-shadow-dom) on developer.chrome.com (2023)
+- [Declarative shadow DOM](https://web.dev/articles/declarative-shadow-dom) on web.dev (2023)

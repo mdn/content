@@ -94,7 +94,7 @@ User agents based on WebKit or Blink, such as Safari and Chrome, support several
 
 ## -webkit-prefixed properties with standard equivalents
 
-Several old `-webkit-`prefixed properties have standard equivalents. Even if the name and syntax may be different, they shouldn't be used anymore at all.
+Several old `-webkit-` prefixed properties have standard equivalents. Even if the name and syntax may be different, they shouldn't be used anymore at all.
 
 For each of them, use the standard equivalent provided.
 

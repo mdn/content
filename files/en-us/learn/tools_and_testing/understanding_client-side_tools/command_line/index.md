@@ -316,7 +316,7 @@ Getting to know your system will prove useful in years to come — learn how the
 
 Now we've had a look at some of the built-in commands your system comes equipped with, let's look at how we can install a third-party CLI tool and make use of it.
 
-The vast ecosystem of installable tools for front-end web development currently exists mostly inside [npm](https://www.npmjs.com), a privately owned, package hosting service that works closely together with Node.js.
+The vast ecosystem of installable tools for front-end web development currently exists mostly inside [npm](https://www.npmjs.com/), a privately owned, package hosting service that works closely together with Node.js.
 This is slowly expanding — you can expect to see more package providers as time goes on.
 
 [Installing Node.js](https://nodejs.org/en/) also installs the npm command line tool (and a supplementary npm-centric tool called npx), which offers a gateway to installing additional command line tools. Node.js and npm work the same across all systems: macOS, Windows, and Linux.

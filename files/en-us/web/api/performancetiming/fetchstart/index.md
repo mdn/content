@@ -35,5 +35,4 @@ Use the {{domxref("PerformanceNavigationTiming")}} interface instead.
 
 ## See also
 
-- The {{domxref("PerformanceTiming")}} interface it belongs
-  to.**`PerformanceTiming.fetchStart`**
+- The {{domxref("PerformanceTiming")}} interface it belongs to.
