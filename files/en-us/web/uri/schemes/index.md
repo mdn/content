@@ -41,7 +41,7 @@ protocol:
       - : Uniform Resource Names
     - `view-source`
       - : Source code of the resource
-    - `ws/wss`
+    - `ws` / `wss`
       - : [WebSocket connections (Secure)](/en-US/docs/Web/API/WebSockets_API)
 
 ## See also
