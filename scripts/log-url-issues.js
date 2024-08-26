@@ -43,7 +43,7 @@ function getFileAnchors(path) {
     .map((h) => stringToFragment(h));
   anchorCache.set(path, headerAnchors);
   return headerAnchors;
-} 
+}
 
 function getDeletedSlugs(fromStaging = true) {
   let result = "";
