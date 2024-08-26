@@ -133,10 +133,11 @@ function iteratorToStream(iterator) {
     async pull(controller) {
       const { value, done } = await iterator.next();
 
+      if (value) {
+        controller.enqueue(value);
+      }
       if (done) {
         controller.close();
-      } else {
-        controller.enqueue(value);
       }
     },
   });
