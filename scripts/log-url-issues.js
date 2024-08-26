@@ -15,6 +15,7 @@ import {
 } from "./utils.js";
 
 const rootDir = getRootDir();
+const fileCache = new Map();
 const deletedSlugs = [];
 const addedFragmentDetails = [];
 let deletedFragmentDetails = [];
@@ -62,8 +63,6 @@ function getDeletedSlugs(fromStaging = true) {
       );
     }
   }
-
-  console.log("deletedSlugs", deletedSlugs);
 }
 
 function getFragmentDetails(fromStaging = true) {
@@ -100,10 +99,15 @@ function getFragmentDetails(fromStaging = true) {
         .filter((header) => !addedFragments.includes(header))
         .filter((header) => {
           // check if another header with same name exists in the file
-          const content = fs.readFileSync(
-            `${rootDir}/files/en-us/${path}/index.md`,
-            "utf-8",
-          );
+          const modifiedFilePath = `${rootDir}/files/en-us/${path}/index.md`;
+          let content = "";
+          if (!fileCache.has(modifiedFilePath)) {
+            content = fs.readFileSync(modifiedFilePath, "utf-8");
+            fileCache.set(modifiedFilePath, content);
+          } else {
+            content = fileCache.get(modifiedFilePath);
+          }
+
           const duplicateHeader = [...content.matchAll(/^#+ .*?$/gm)]
             .map((match) => match[0].toLowerCase())
             .map((h) => h.replace(/#+ /g, ""))
@@ -123,8 +127,6 @@ function getFragmentDetails(fromStaging = true) {
       );
     }
   }
-
-  console.log("deletedFragmentDetails", deletedFragmentDetails);
 }
 
 if (process.argv[2] !== "--workflow") {
@@ -143,6 +145,9 @@ if (deletedSlugs.length < 1 && deletedFragmentDetails.length < 1) {
   console.log("Nothing to check. 🎉");
   process.exit(0);
 }
+
+console.log("deletedSlugs", deletedSlugs);
+console.log("deletedFragmentDetails", deletedFragmentDetails);
 
 for await (const filePath of walkSync(rootDir)) {
   if (filePath.endsWith("index.md")) {
