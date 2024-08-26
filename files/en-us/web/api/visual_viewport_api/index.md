@@ -34,123 +34,73 @@ The first two events allow you to position elements relative to the visual viewp
 
 ## Examples
 
-Our [Visual viewport events](https://visual-viewport-events.glitch.me/) example provides a basic demonstration of how the different visual viewport features work, including the three event types. Load the page in a supporting mobile browser and try pinch-zooming and panning around the displayed grid of boxes. On `resize` and `scroll`, the "Total" box is repositioned to keep the same position relative to the visual viewport. On `scrollend`, it updates to show which boxes are in view, and the sum of their numbers. A more complex application could use these techniques to scroll around map tiles and display relevant information for each one shown on the screen.
+Our [Visual viewport events](https://visual-viewport-events.glitch.me/) example provides a basic demonstration of how the different visual viewport features work, including the three event types. Load the page in supporting desktop and mobile browsers and try scrolling around the displayed grid of boxes. Also try pinch-zooming on the mobile browser. On `resize` and `scroll`, the information box is repositioned to keep the same position relative to the visual viewport, and the viewport and scroll information it shows is updated. Also, on `resize` and `scroll` we change the box color to indicate something is happening, changing it back on `scrollend`.
 
-The example HTML can be seen below. The "Total" box is represented by the {{htmlelement("div")}} with the `id` of `total`. The grid container is represented by the `grid` `<div>`, and each individual box is represented by a `gridbox` `<div>`.
+You'll find that on desktop browsers the {{domxref("Window.scrollX")}} and {{domxref("Window.scrollY")}} values are updated as the window is scrolled — the visual viewport position does not change. On mobile browsers however, the {{domxref("VisualViewport.offsetLeft")}} and {{domxref("VisualViewport.offsetTop")}} values are generally updated — it is usually the visual viewport that changes rather than the window position.
+
+The example HTML can be seen below. The information box is represented by a {{htmlelement("div")}} with an `id` of `output`.
 
 ```html
-<p>
-  On a mobile device, try pinch-zooming and pan around the boxes. On scrollend,
-  the "Total" box will update to show which boxes are in view, and the sum of
-  their numbers.
+<p id="instructions">
+  Try scrolling around on a desktop and a mobile browser to see how the reported
+  values change. Also try pinch/zooming on a mobile browser to see the effect.
 </p>
-<div id="total" class="note"></div>
-<div id="grid" class="grid">
-  <div id="box1" class="gridbox">1</div>
-  <div id="box10" class="gridbox">10</div>
-  <div id="box3" class="gridbox">3</div>
-  <div id="box8" class="gridbox">8</div>
-  <div id="box5" class="gridbox">5</div>
-  <div id="box6" class="gridbox">6</div>
-  <div id="box7" class="gridbox">7</div>
-  <div id="box4" class="gridbox">4</div>
-  <div id="box9" class="gridbox">9</div>
-  <div id="box2" class="gridbox">2</div>
+<div id="output">
+  <p id="visual-info"></p>
+  <hr />
+  <p id="window-info"></p>
 </div>
 ```
 
 We won't explain the example's CSS for the sake of brevity — it is not important for understanding the demo. You can check it out at the example link above.
 
-In the JavaScript, we start by getting a reference to the `total` box we'll be updating as the page is zoomed and scrolled, and we also define an empty array called `visibleBoxes` that we'll use to store references to which boxes can be seen in the visual viewport when a scroll action finishes.
+In the JavaScript, we start by getting references to the information box we'll be updating as the page is zoomed and scrolled, as well as the two paragraphs contained within it. The first one will contain reported {{domxref("VisualViewport.offsetLeft")}} and {{domxref("VisualViewport.offsetTop")}} values, while the second one will contain reported {{domxref("Window.scrollX")}} and {{domxref("Window.scrollY")}} values.
 
 ```js
-const total = document.getElementById("total");
-const visibleBoxes = [];
+const output = document.getElementById("output");
+const visualInfo = document.getElementById("visual-info");
+const windowInfo = document.getElementById("window-info");
 ```
 
-Next, we define the two key functions we'll run when the events fire. `scrollUpdater()` will fire on `resize` and `scroll`: this function updates the position of the `total` box relative to the visual viewport by querying the {{domxref("VisualViewport.offsetTop")}} and {{domxref("VisualViewport.offsetLeft")}} properties and using their values to update the values of the relevant {{glossary("inset properties")}}. We also change the `total` box's background color to indicate that something is happening.
+Next, we define the two key functions we'll run when the events fire:
 
-The `scrollEndUpdater()` function will fire on `scrollend`: this returns the `note` box to its original color and invokes other functions — `updateVisibleBoxes()` to detect which boxes are currently showing in the visual viewport and `updateSum()` to display their numbers and the sum total inside `total`.
+- `scrollUpdater()` will fire on `resize` and `scroll`: this function updates the position of the information box relative to the visual viewport by querying the {{domxref("VisualViewport.offsetTop")}} and {{domxref("VisualViewport.offsetLeft")}} properties and using their values to update the values of the relevant {{glossary("inset properties")}}. We also change the information box's background color to indicate that something is happening, and run the `updateText()` function to update the values shown in the box.
+- The `scrollEndUpdater()` function will fire on `scrollend`: this returns the information box to its original color and runs the `updateText()` function to make sure the latest values are shown on `scrollend`.
 
 ```js
 const scrollUpdater = () => {
-  total.style.top = `${visualViewport.offsetTop + 10}px`;
-  total.style.left = `${visualViewport.offsetLeft + 10}px`;
-  total.style.background = "yellow";
+  output.style.top = `${visualViewport.offsetTop + 10}px`;
+  output.style.left = `${visualViewport.offsetLeft + 10}px`;
+  output.style.background = "yellow";
+  updateText();
 };
 
 const scrollendUpdater = () => {
-  total.style.background = "lime";
-  updateVisibleBoxes();
-  updateSum();
+  output.style.background = "lime";
+  updateText();
 };
 ```
 
-The next two functions are:
-
-- `isVisible()`: This takes a DOM element as input and calculates its left, top, right, and bottom edge positions. It then calculates the lower and upper horizontal and vertical bounds inside which the box will be visible inside the visual viewport. The function then tests to see if the box is within those bounds, horizontally and vertically, calculating a `true`/`false` value for each. Both have to be `true` for the function return value to be `true`.
-- `updateVisibleBoxes()`: This gets a reference to all the grid boxes, and for each one, runs `isVisible()` to check whether the box is visible. It pushes the visible boxes to the `visibleBoxes` array after emptying it.
+The `updateText()` function looks like so — it sets the {{domxref("HTMLElement.innerText()")}} of the first paragraph to show the current `VisualViewport.offsetLeft` and `VisualViewport.offsetTop` values, and the `HTMLElement.innerText()` of the second paragraph to show the current `Window.scrollX` and `Window.scrollY` values. After defining `updateText()`, we immediately invoke it so that the information box displays correctly on page load.
 
 ```js
-function isVisible(box) {
-  const x = box.offsetLeft;
-  const y = box.offsetTop;
-  const right = x + box.offsetWidth;
-  const bottom = y + box.offsetHeight;
-
-  const horLowerBound = window.scrollX + visualViewport.offsetLeft;
-  const horUpperBound =
-    window.scrollX + visualViewport.offsetLeft + visualViewport.width;
-  const horizontal =
-    (x > horLowerBound && x < horUpperBound) ||
-    (right > horLowerBound && right < horUpperBound);
-
-  const verLowerBound = window.scrollY + visualViewport.offsetTop;
-  const verUpperBound =
-    window.scrollY + visualViewport.offsetTop + visualViewport.height;
-  const vertical =
-    (y > verLowerBound && y < verUpperBound) ||
-    (bottom > verLowerBound && bottom < verUpperBound);
-
-  return horizontal && vertical;
+function updateText() {
+  visualInfo.innerText = `Visual viewport left: ${visualViewport.offsetLeft.toFixed(2)}
+    top: ${visualViewport.offsetTop.toFixed(2)}`;
+  windowInfo.innerText = `Window scrollX: ${window.scrollX.toFixed(2)}
+    scrollY: ${window.scrollY.toFixed(2)}`;
 }
 
-function updateVisibleBoxes() {
-  const boxes = document.querySelectorAll(".gridbox");
-  visibleBoxes.length = 0;
-
-  for (const box of boxes) {
-    if (isVisible(box)) {
-      visibleBoxes.push(box);
-    }
-  }
-}
+updateText();
 ```
 
-Next, the `updateSum()` function calculates the total of the visible box's numbers and stores each individual number in an array. It uses these to update the text displayed in the `total` box.
-
-```js
-function updateSum() {
-  let sumTotal = 0;
-  const summands = [];
-
-  for (const box of visibleBoxes) {
-    console.log(`${box.id} is visible`);
-
-    const n = parseInt(box.innerText);
-
-    sumTotal += n;
-    summands.push(n);
-  }
-
-  total.innerText = `Total: ${summands.join(" + ")} = ${sumTotal}`;
-}
-```
+> [!NOTE]
+> We truncate all values to two decimal places using the {{jsxref("Number.toFixed()")}} method because some browsers display them as a subpixel value, potentially with a large number of decimal places.
 
 Now we set event handler properties on both the visual viewport and the {{domxref("Window")}} object to run the key functions at the appropriate times on both mobile and desktop:
 
-- We set the handlers on `window` so that the `total` box position and contents will update on conventional window scrolling operations, for example when you scroll the page on a desktop browser.
-- We set the handlers on `visualViewport` so that the `total` box position and contents will update on visual viewport scrolling/zooming operations, for example when you pinch-zoom and then scroll the page on a mobile browser.
+- We set the handlers on `window` so that the information box position and contents will update on conventional window scrolling operations, for example when you scroll the page on a desktop browser.
+- We set the handlers on `visualViewport` so that the information box position and contents will update on visual viewport scrolling/zooming operations, for example when you pinch-zoom and then scroll the page on a mobile browser.
 
 ```js
 visualViewport.onresize = scrollUpdater;
@@ -162,13 +112,6 @@ window.onscrollend = scrollendUpdater;
 ```
 
 `scrollUpdater()` will fire on `resize` and `scroll`, while `scrollEndUpdater()` will fire on `scrollend`.
-
-Finally, we run the `scrollUpdater()` and `scrollEndUpdater()` functions so that the `total` box will show the results of the initial page state when it first loads.
-
-```js
-updateVisibleBoxes();
-updateSum();
-```
 
 ## Specifications
 
