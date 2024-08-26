@@ -19,7 +19,7 @@ events.Event.addListener(listener)
 
 - `listener`
 
-  - : Function to be called when the event occurs. The parameters of this function depend on the type of event.
+  - : Function called when the event occurs. The parameters of this function depend on the type of event.
 
 ## Browser compatibility
 

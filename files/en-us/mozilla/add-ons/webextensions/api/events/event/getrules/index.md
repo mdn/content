@@ -7,7 +7,7 @@ browser-compat: webextensions.api.events.Event.getRules
 
 {{AddonSidebar}}
 
-Retrieves all the rules registered for the event.
+Retrieves all the rules registered for a declarative event.
 
 ## Syntax
 
@@ -19,11 +19,11 @@ events.Event.getRules(ruleIdentifiers, callback)
 
 - `ruleIdentifiers` {{optional_inline}}
 
-  - : `array` of `string`. If an array of `string` is passed, only rules with identifiers contained in this array are returned, otherwise all rules registered are returned.
+  - : `array` of `string`. Identifiers for the rules to return. If no array is passed, all rules are returned.
 
 - `callback`
 
-  - : `function`. The parameter of the callback function is an array of `events.Rule` objects that are currently registered.
+  - : `function`. The parameter of the callback function is an array of {{WebExtAPIRef("events.Rule")}} objects.
 
 ## Browser compatibility
 

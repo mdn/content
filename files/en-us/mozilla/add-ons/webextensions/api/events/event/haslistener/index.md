@@ -7,7 +7,7 @@ browser-compat: webextensions.api.events.Event.hasListener
 
 {{AddonSidebar}}
 
-Check if the listener has been registered to the event.
+Checks if a listener is registered to the event.
 
 ## Syntax
 
@@ -23,7 +23,7 @@ events.Event.hasListener(listener)
 
 ### Return value
 
-A `boolean` value: `true` if the listener has been registered to the event, `false` otherwise.
+A boolean value: `true` if the listener is registered to the event. Otherwise,`false`.
 
 ## Browser compatibility
 

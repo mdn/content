@@ -7,7 +7,7 @@ browser-compat: webextensions.api.events.Event.addRules
 
 {{AddonSidebar}}
 
-Registers rules to handle events.
+Registers rules for a declarative event.
 
 ## Syntax
 
@@ -19,11 +19,11 @@ events.Event.addRules(rules, callback)
 
 - `rules`
 
-  - : `array` of `events.Rule`. Specify the rules to be registered. Rules here do not replace previously registered rules.
+  - : `array` of {{WebExtAPIRef("events.Rule")}}. Rules to register. These rules do not replace the registered rules.
 
 - `callback` {{optional_inline}}
 
-  - : `function`. Called when the rules are registered. The parameter of the callback function is an array of `events.Rule` objects that were successfully registered.
+  - : `function`. Called when the rules are registered. The parameter of the callback function is an array of the {{WebExtAPIRef("events.Rule")}} objects registered.
 
 ## Browser compatibility
 

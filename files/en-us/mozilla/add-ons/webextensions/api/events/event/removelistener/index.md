@@ -7,7 +7,7 @@ browser-compat: webextensions.api.events.Event.removeListener
 
 {{AddonSidebar}}
 
-Deregisters an event listener previously registered to the event.
+Removes an event listener registered with {{WebExtAPIRef("events.Event.addListener()")}} from the event.
 
 ## Syntax
 
@@ -19,7 +19,7 @@ events.Event.removeListener(listener)
 
 - `listener`
 
-  - : `function`. The listener that shall be removed.
+  - : `function`. The listener to remove.
 
 ## Browser compatibility
 

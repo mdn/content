@@ -7,7 +7,7 @@ browser-compat: webextensions.api.events.Event.removeRules
 
 {{AddonSidebar}}
 
-Removes an array of rules that were previously registered to the event.
+Removes rules that were registered on a declarative event using {{WebExtAPIRef("events.Event.addRules()")}}.
 
 ## Syntax
 
@@ -19,7 +19,7 @@ events.Event.removeRules(ruleIdentifiers, callback)
 
 - `ruleIdentifiers` {{optional_inline}}
 
-  - : `array` of `string`. If an array of `string` is passed, only rules with identifiers contained in this array are removed, otherwise all rules registered are removed.
+  - : `array` of `string`. Identifiers for the rules to remove. If no array is passed, all rules are removed.
 
 - `callback` {{optional_inline}}
 
