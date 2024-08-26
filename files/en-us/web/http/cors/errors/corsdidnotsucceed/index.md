@@ -26,7 +26,7 @@ Other possible causes include:
   This has been changed with [Bug 1488740](https://bugzil.la/1488740).
 - The server did not respond to the actual request (even if it responded to the {{Glossary("Preflight request")}}).
   One scenario might be an HTTP service being developed that panicked without returning any data.
-- The window is in "Private Browsing" mode.
+- The window is in "Private Browsing" mode (which may have security requirements that could block a CORS request).
 
 ## See also
 
