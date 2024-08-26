@@ -152,7 +152,8 @@ console.log("deletedFragmentDetails", deletedFragmentDetails);
 for await (const filePath of walkSync(rootDir)) {
   if (filePath.endsWith("index.md")) {
     try {
-      const content = fs.readFileSync(filePath, "utf-8");
+      const content =
+        fileCache.get(filePath) || fs.readFileSync(filePath, "utf-8");
       const relativePath = filePath.substring(filePath.indexOf("files/en-us"));
 
       // check deleted links
