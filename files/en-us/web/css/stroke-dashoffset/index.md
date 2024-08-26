@@ -36,9 +36,13 @@ stroke-dashoffset: unset;
 
   - : A number of SVG units, the size of which defined by the current unit space. The value given, if other than `0`, moves the starting point from the start of the dash array to another point within it. Thus, positive values will appear to shift the dash-gap pattern _backwards_, and negative values will appear to shift the pattern _forwards_.
 
-- {{cssxref("&lt;length-percentage&gt;")}}
+- {{cssxref("&lt;length&gt;")}}
 
-  - : Pixel units are handled the same as SVG units (see `<number>`, above) and font-based lengths such as `em` are calculated with repect to the element's SVG value for the text size; the effects of other length units may depend on the browser. Percentages are defined to be calculated as a percentage of the current SVG viewport's diagonal measure, _not_ the overall length of the stroke path. The shifting effect for any value is the same as for `<number>` values (see above).
+  - : Pixel units are handled the same as SVG units (see `<number>`, above) and font-based lengths such as `em` are calculated with repect to the element's SVG value for the text size; the effects of other length units may depend on the browser. The shifting effect for any value is the same as for `<number>` values (see above).
+
+- {{cssxref("&lt;percentage&gt;")}}
+
+  - : Percentages refer to the normalized diagonal of the current SVG viewport, which is calculated as <math><mfrac><msqrt><mrow><msup><mi>&lt;width&gt;</mi><mn>2</mn></msup><mo>+</mo><msup><mi>&lt;height&gt;</mi><mn>2</mn></msup></mrow></msqrt><msqrt><mn>2</mn></msqrt></mfrac></math>, _not_ to the overall length of the stroke path. Negative values are invalid.
 
 ## Formal definition
 
