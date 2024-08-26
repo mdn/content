@@ -45,15 +45,15 @@ The following values are defined, but not supported in any browser:
 
 - `arcs`
 
-  - : _(Unsupported.)\* Indicates that an \_arcs corner_ is to be used to join path segments. The arc's shape is formed by extending the outer edges of the stroke at the join point with arcs that have the same curvature as the outer edges at the join point.
+  - : _(Unsupported.)_ Indicates that an _arcs corner_ is to be used to join path segments. The arc's shape is formed by extending the outer edges of the stroke at the join point with arcs that have the same curvature as the outer edges at the join point.
 
 - `crop`
 
-  - : \_(Unsupported.)\* Indicates the corner should extend past the join point by the minimum amount necessary to form a convex corner. This is functionally equivalent to `miter` (see below) with a {{CSSxref('stroke-miterlimit')}} value of `1`.
+  - : _(Unsupported.)_ Indicates the corner should extend past the join point by the minimum amount necessary to form a convex corner. This is functionally equivalent to `miter` (see above) with a {{CSSxref('stroke-miterlimit')}} value of `1`.
 
 - `fallback`
 
-  - : \_(Unsupported; at risk.)\* behaves identically to `crop bevel` when the {{CSSxref('stroke-miterlimit')}} value is exceeded.
+  - : _(Unsupported; at risk.)_ behaves identically to `crop bevel` when the {{CSSxref('stroke-miterlimit')}} value is exceeded.
 
 ## Formal definition
 
