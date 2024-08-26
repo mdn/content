@@ -76,18 +76,18 @@ This does _not_ set a limit on how many characters the user can enter into the f
 
 ### `spellcheck`
 
-`spellcheck` is a global attribute which is used to indicate whether to enable spell checking for an element. It can be used on any editable content, but here we consider specifics related to the use of `spellcheck` on {{HTMLElement("input")}} elements. The permitted values for `spellcheck` are:
+The [`spellcheck`](/en-US/docs/Web/HTML/Global_attributes#spellcheck) global attribute is used to indicate whether to enable spell-checking for an element. It can be used on any editable content, but here we consider specifics related to the use of `spellcheck` on {{HTMLElement("input")}} elements. The permitted values for `spellcheck` are:
 
 - `false`
-  - : Disable spell checking for this element.
+  - : Disable spell-checking for this element.
 - `true`
-  - : Enable spell checking for this element.
+  - : Enable spell-checking for this element.
 - `""` (empty string) or no value
-  - : Follow the element's default behavior for spell checking. This may be based upon a parent's `spellcheck` setting or other factors.
+  - : Follow the element's default behavior for spell-checking. This may be based upon a parent's `spellcheck` setting or other factors.
 
-An input field can have spell checking enabled if it doesn't have the [readonly](#readonly) attribute set and is not disabled.
+An input field can have spell-checking enabled if it doesn't have the [readonly](#readonly) attribute set and is not disabled.
 
-The value returned by reading `spellcheck` may not reflect the actual state of spell checking within a control, if the {{Glossary("user agent", "user agent's")}} preferences override the setting.
+The value returned by reading `spellcheck` may not reflect the actual state of spell-checking within a control, if the {{Glossary("user agent", "user agent's")}} preferences override the setting.
 
 ## Non-standard attributes
 
@@ -95,18 +95,12 @@ The following non-standard attributes are also available on some browsers. As a 
 
 ### `autocorrect`
 
-A Safari extension, the `autocorrect` attribute is a string which indicates whether to activate automatic correction while the user is editing this field. Permitted values are:
+A Safari extension, the `autocorrect` attribute is a string that indicates whether to activate automatic correction while the user is editing this field. Permitted values are:
 
 - `on`
   - : Enable automatic correction of typos, as well as processing of text substitutions if any are configured.
 - `off`
   - : Disable automatic correction and text substitutions.
-
-### `mozactionhint` {{deprecated_inline}}
-
-A Mozilla extension, which provides a hint as to what sort of action will be taken if the user presses the <kbd>Enter</kbd> or <kbd>Return</kbd> key while editing the field.
-
-<strong>Deprecated: Use [`enterkeyhint`](/en-US/docs/Web/HTML/Global_attributes#enterkeyhint) instead.</strong>
 
 ## Using text inputs
 

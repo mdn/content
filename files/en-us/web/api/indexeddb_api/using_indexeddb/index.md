@@ -53,7 +53,7 @@ The first thing you'll want to do with almost all of the requests you generate i
 
 ```js
 request.onerror = (event) => {
-  // Do something with request.errorCode!
+  // Do something with request.error!
 };
 request.onsuccess = (event) => {
   // Do something with request.result!
@@ -87,7 +87,7 @@ As mentioned above, error events bubble. Error events are targeted at the reques
 db.onerror = (event) => {
   // Generic error handler for all errors targeted at this database's
   // requests!
-  console.error(`Database error: ${event.target.errorCode}`);
+  console.error(`Database error: ${event.target.error?.message}`);
 };
 ```
 

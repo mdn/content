@@ -127,7 +127,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     - `allow-top-navigation-by-user-activation`
       - : Lets the resource navigate the top-level browsing context, but only if initiated by a user gesture.
     - `allow-top-navigation-to-custom-protocols`
-      - : Allows navigations to non-`http` protocols built into browser or [registered by a website](/en-US/docs/Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers). This feature is also activated by `allow-popups` or `allow-top-navigation` keyword.
+      - : Allows navigations to non-`http` protocols built into browser or [registered by a website](/en-US/docs/Web/API/Navigator/registerProtocolHandler). This feature is also activated by `allow-popups` or `allow-top-navigation` keyword.
 
     > [!NOTE]
     >
