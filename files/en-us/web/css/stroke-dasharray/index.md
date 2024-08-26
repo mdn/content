@@ -105,7 +105,7 @@ Where the stroke turns a corner, the pattern is carried along, as it were. At th
 
 This example includes an odd-number of comma-separated `<number>` values to demonstrates how the value is repeated if an odd number of values is given in order to set an even number of values.
 
-#### html
+#### HTML
 
 In this case, we define two rectangles.
 
