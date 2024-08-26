@@ -44,7 +44,7 @@ The value is a list of comma and/or white space separated `<number>`, `<length>`
 
 - {{cssxref("&lt;number&gt;")}}
 
-  - : A number of SVG units, the size of which defined by the current unit space. The value given, if other than `0`, moves the starting point from the start of the dash array to another point within it. Negative values are invalid.
+  - : A number of SVG units, the size of which are defined by the current unit space. Negative values are invalid.
 
 - {{cssxref("&lt;length&gt;")}}
 
