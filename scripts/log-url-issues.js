@@ -21,6 +21,16 @@ const addedFragmentDetails = [];
 let deletedFragmentDetails = [];
 let isAllOk = true;
 
+function getFileContent(path) {
+  if (fileCache.has(path)) {
+    return fileCache.get(path);
+  }
+
+  const content = fs.readFileSync(path, "utf-8");
+  fileCache.set(path, content);
+  return content;
+}
+
 function getDeletedSlugs(fromStaging = true) {
   let result = "";
 
@@ -99,15 +109,9 @@ function getFragmentDetails(fromStaging = true) {
         .filter((header) => !addedFragments.includes(header))
         .filter((header) => {
           // check if another header with same name exists in the file
-          const modifiedFilePath = `${rootDir}/files/en-us/${path}/index.md`;
-          let content = "";
-          if (!fileCache.has(modifiedFilePath)) {
-            content = fs.readFileSync(modifiedFilePath, "utf-8");
-            fileCache.set(modifiedFilePath, content);
-          } else {
-            content = fileCache.get(modifiedFilePath);
-          }
-
+          const content = getFileContent(
+            `${rootDir}/files/en-us/${path}/index.md`,
+          );
           const duplicateHeader = [...content.matchAll(/^#+ .*?$/gm)]
             .map((match) => match[0].toLowerCase())
             .map((h) => h.replace(/#+ /g, ""))
