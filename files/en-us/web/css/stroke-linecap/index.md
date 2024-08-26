@@ -53,11 +53,11 @@ stroke-linecap: unset;
 
 ### Linecaps
 
-This example demonstrates the property's three keyword values
+This example demonstrates the property's three keyword values.
 
 #### HTML
 
-To set things up, we first set up a light-gray rectangle. Then, in a group, three paths are defined whose length is exactly the same as the width of the rectangle, and all of which start at the left edge of the rectangle. They are all set to have a `dodgerblue` stroke with a width of seven.
+We first set up a light-gray rectangle. Then, in a group, three paths are defined whose length is exactly the same as the width of the rectangle, and all of which start at the left edge of the rectangle. They are all set to have a `dodgerblue` stroke with a width of seven.
 
 ```html
 <svg viewBox="0 0 100 50" width="500" height="250">
@@ -72,7 +72,7 @@ To set things up, we first set up a light-gray rectangle. Then, in a group, thre
 
 #### CSS
 
-We apply a different linecap style to each path via CSS.
+We then apply a different linecap style to each path via CSS.
 
 ```css
 path:nth-of-type(1) {
