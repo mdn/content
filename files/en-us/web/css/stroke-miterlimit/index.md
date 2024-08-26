@@ -13,7 +13,7 @@ This property applies to any SVG corner-generating shape or text-content element
 
 ## Description
 
-When two line segments meet at a sharp angle and `miter` joins have been specified for {{ CSSxref("stroke-linejoin") }} or default to that value, it is possible for the miter to extend far beyond the thickness of the line stroking the path. The `stroke-miterlimit` ratio is used to define a limit, past which the join is converted from a miter to a bevel.
+When two line segments meet at a sharp angle and `miter` joins have been specified for {{ CSSxref("stroke-linejoin") }}, or if they default to that value, it is possible for the miter to extend far beyond the thickness of the line stroking the path. The `stroke-miterlimit` ratio is used to define a limit, past which the join is converted from a miter to a bevel.
 
 The ratio of miter length (the distance between the outer tip and the inner corner of the miter) to {{ CSSxref("stroke-width") }} is directly related to the angle (theta) between the segments in user space by the formula:
 
@@ -23,7 +23,7 @@ The ratio of miter length (the distance between the outer tip and the inner corn
 </math>
 <!-- prettier-ignore-end -->
 
-For example, a miter limit of `1.414` converts miters to bevels for theta less than 90 degrees, a limit of `4.0` converts them for theta less than approximately 29 degrees, and a limit of `10.0` converts them for theta less than approximately 11.5 degrees.
+For example, a miter limit of `1.414` converts miters to bevels for a theta value of less than 90 degrees, a limit of `4.0` converts them for a theta less than approximately 29 degrees, and a limit of `10.0` converts them for theta less than approximately 11.5 degrees.
 
 ## Syntax
 
