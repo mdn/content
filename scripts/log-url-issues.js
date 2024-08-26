@@ -16,6 +16,7 @@ import {
 
 const rootDir = getRootDir();
 const fileCache = new Map();
+const anchorCache = new Map();
 const deletedSlugs = [];
 const addedFragmentDetails = [];
 let deletedFragmentDetails = [];
@@ -30,6 +31,19 @@ function getFileContent(path) {
   fileCache.set(path, content);
   return content;
 }
+
+function getFileAnchors(path) {
+  if (anchorCache.has(path)) {
+    return anchorCache.get(path);
+  }
+  const content = getFileContent(path);
+  const headerAnchors = [...content.matchAll(/^#+ .*?$/gm)]
+    .map((match) => match[0].toLowerCase())
+    .map((h) => h.replace(/#+ /g, ""))
+    .map((h) => stringToFragment(h));
+  anchorCache.set(path, headerAnchors);
+  return headerAnchors;
+} 
 
 function getDeletedSlugs(fromStaging = true) {
   let result = "";
@@ -109,15 +123,10 @@ function getFragmentDetails(fromStaging = true) {
         .filter((header) => !addedFragments.includes(header))
         .filter((header) => {
           // check if another header with same name exists in the file
-          const content = getFileContent(
+          const headerAnchors = getFileAnchors(
             `${rootDir}/files/en-us/${path}/index.md`,
           );
-          const duplicateHeader = [...content.matchAll(/^#+ .*?$/gm)]
-            .map((match) => match[0].toLowerCase())
-            .map((h) => h.replace(/#+ /g, ""))
-            .map((h) => stringToFragment(h))
-            .find((h) => h === header);
-          return !duplicateHeader;
+          return !headerAnchors.includes(header);
         })
         .forEach((header) => {
           const fragment = `${path}#${header}`;
@@ -157,7 +166,7 @@ for await (const filePath of walkSync(rootDir)) {
   if (filePath.endsWith("index.md")) {
     try {
       const content =
-        fileCache.get(filePath) || fs.readFileSync(filePath, "utf-8");
+        fileCache.get(filePath) ?? fs.readFileSync(filePath, "utf-8");
       const relativePath = filePath.substring(filePath.indexOf("files/en-us"));
 
       // check deleted links
