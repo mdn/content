@@ -62,7 +62,7 @@ canvas.addEventListener("pointerdown", (e) => {
 
 // Listen for a `pointermove` and get the color assigned to this pen
 // if persistentDeviceId exists and the pen has been color mapped
-canvas.addEventListener("pointermove", function (e) {
+canvas.addEventListener("pointermove", (e) => {
   if (e.persistentDeviceId && pen_to_color_map.has(e.persistentDeviceId)) {
     const pen_color = pen_to_color_map.get(e.persistentDeviceId);
     // Do some inking on the <canvas>
