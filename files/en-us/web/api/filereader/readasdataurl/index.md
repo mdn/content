@@ -12,7 +12,7 @@ The **`readAsDataURL()`** method of the {{domxref("FileReader")}} interface is u
 {{domxref("Blob")}} or {{domxref("File")}}. When the read operation is finished, the
 {{domxref("FileReader.readyState","readyState")}} property becomes `DONE`, and the
 {{domxref("FileReader/loadend_event", "loadend")}} event is triggered. At that time, the
-{{domxref("FileReader.result","result")}} attribute contains the data as a [data: URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) representing the
+{{domxref("FileReader.result","result")}} attribute contains the data as a [data: URL](/en-US/docs/Web/URI/Schemes/data) representing the
 file's data as a base64 encoded string.
 
 > [!NOTE]
