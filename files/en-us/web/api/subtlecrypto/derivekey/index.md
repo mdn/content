@@ -202,10 +202,7 @@ They can use this shared key to encrypt and decrypt messages they exchange.
 
 #### HTML
 
-First we define an HTML {{HTMLElement("input")}} that you will use to enter the plaintext message that "Alice" will send.
-This is followed by another two elements for displaying the ciphertext after Alice has encrypted the plaintext with her copy of the secret key, and for displaying the text after Bob has decrypted it with his copy of the secret key.
-
-At the end is a button that the user can click to start the encryption process.
+First we define an HTML {{HTMLElement("input")}} that you will use to enter the plaintext message that "Alice" will send, and a button that you can click to start the encryption process.
 
 ```html
 <label for="message">Plaintext message from Alice (Enter):</label>
@@ -216,7 +213,11 @@ At the end is a button that the user can click to start the encryption process.
   size="50"
   value="The lion roars near dawn" />
 <input id="encrypt-button" type="button" value="Encrypt" />
+```
 
+This is followed by another two elements for displaying the ciphertext after Alice has encrypted the plaintext with her copy of the secret key, and for displaying the text after Bob has decrypted it with his copy of the secret key.
+
+```html
 <div id="results">
   <label for="encrypted">Encrypted (Alice)</label>
   <input
@@ -277,12 +278,11 @@ The code below shows how we use `deriveKey()`.
 We pass in the remote party's X25519 public key, the local party's X25519 private key, and specify that the derived key should be an AES-GCM key.
 We also set the derived key to be non-extractable, and suitable for encryption and decryption.
 
-The function returns the derived AES-GCM key.
-We use this further down in the code to create shared keys for Bob and Alice.
+We use this function further down in the code to create shared keys for Bob and Alice.
 
 ```js
 /*
-Derive an AES key, given:
+Derive an AES-GCM key, given:
 - our X25519 private key
 - their X25519 public key
 */
