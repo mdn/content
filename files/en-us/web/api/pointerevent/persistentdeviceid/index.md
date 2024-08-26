@@ -47,7 +47,7 @@ const canvas = document.querySelector("#inking-surface");
 
 // Listen for a pointerdown event and map the persistentDeviceId to a color
 // if it exists and has not been mapped yet
-canvas.addEventListener("pointerdown", function (e) {
+canvas.addEventListener("pointerdown", (e) => {
   if (
     e.persistentDeviceId &&
     e.persistentDeviceId > 1 &&
