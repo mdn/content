@@ -1,10 +1,10 @@
 ---
 title: Resource URLs
-slug: Web/HTTP/Basics_of_HTTP/Resource_URLs
+slug: Web/URI/Schemes/resource
 page-type: guide
 ---
 
-{{HTTPSidebar}}{{non-standard_header}}
+{{QuickLinksWithSubpages("/en-US/docs/Web/URI")}}{{non-standard_header}}
 
 Resource URLs, URLs prefixed with the `resource:` scheme, are used by
 Firefox and Firefox browser extensions to load resources internally, but some of the
@@ -12,11 +12,11 @@ information is available to sites the browser connects to as well.
 
 ## Syntax
 
-Resource URLs are composed of two parts: a prefix (`resource:`), and a URL
+Resource URLs are composed of two parts: a prefix (`resource:`), and a path
 pointing to the resource you want to load:
 
 ```url
-resource://<url>
+resource://<path>
 ```
 
 An example:
@@ -32,9 +32,9 @@ loaded the next one:
 resource://<File-loader> -> <File-loaded>
 ```
 
-Please refer to [Identifying resources on the web](/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web) for more general details.
+Please refer to [the URI reference](/en-US/docs/Web/URI) for more general details.
 
-In this article, we focus on resource URIs, which are used internally by Firefox to
+In this article, we focus on resource URLs, which are used internally by Firefox to
 point to built-in resources.
 
 ## Threats
@@ -64,17 +64,17 @@ this information.
 
 ## Solution
 
-In order to fix this problem, Mozilla changed the behavior of loading resource: URIs in
+In order to fix this problem, Mozilla changed the behavior of loading `resource:` URLs in
 [Firefox bug 863246](https://bugzil.la/863246), which landed in [Firefox 57 (Quantum)](/en-US/docs/Mozilla/Firefox/Releases/57).
 
-In the past, web content was able to access whatever `resource:` URIs were
+In the past, web content was able to access whatever `resource:` URLs were
 desired — not only Firefox's internal resources, but also extensions' assets. Now this
 behavior is prohibited by default.
 
 It is however still necessary for Firefox to load resources in web content under
 certain circumstances. For example, if you open the view source page (View Page Source
 or View Selection Source), you will find it requires `viewsource.css` through
-a `resource:` URI. Resources that have to be exposed to web content have
+a `resource:` URL. Resources that have to be exposed to web content have
 been moved to a new location named `resource://content-accessible/`, which is
 isolated and only contains non-sensitive resources. In this way we can keep essential
 resources exposed and have most threats eliminated.
@@ -94,6 +94,6 @@ resource: is Firefox only.
 
 ## See also
 
-- [Identifying resources on the Web](/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)
+- [URIs](/en-US/docs/Web/URI)
 - [What is a URL?](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
 - [IANA list of URI schemes](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml) (`resource:` is [covered here](https://www.iana.org/assignments/uri-schemes/prov/resource))
