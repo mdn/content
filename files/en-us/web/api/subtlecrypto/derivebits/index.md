@@ -235,12 +235,10 @@ changeKeys();
 
 const changeKeysButton = document.querySelector("#buttonChangeKeys");
 
-changeKeysButton.addEventListener("click", async () => {
-  // Generate 2 X25519 key pairs: one for Alice and one for Bob
-  // In more normal usage, they would generate their key pairs
-  // separately and exchange public keys securely
-  changeKeys();
-});
+// Generate 2 X25519 key pairs: one for Alice and one for Bob
+// In more normal usage, they would generate their key pairs
+// separately and exchange public keys securely
+changeKeysButton.addEventListener("click", changeKeys);
 ```
 
 The code below adds a handler function that is invoked every time the "Derive bits" button is pressed.
