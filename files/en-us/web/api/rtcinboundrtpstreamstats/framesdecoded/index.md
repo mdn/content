@@ -3,7 +3,7 @@ title: "RTCInboundRtpStreamStats: framesDecoded property"
 short-title: framesDecoded
 slug: Web/API/RTCInboundRtpStreamStats/framesDecoded
 page-type: web-api-instance-property
-browser-compat: api.RTCInboundRtpStreamStats.framesDecoded
+browser-compat: api.RTCStatsReport.type_inbound-rtp.framesDecoded
 ---
 
 {{APIRef("WebRTC")}}

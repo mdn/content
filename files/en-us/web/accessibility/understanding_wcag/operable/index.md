@@ -50,7 +50,7 @@ This guideline covers the necessity of making core website functionality availab
       <td>
         <p>
           When entering a section of functionality using the keyboard, you
-          should be able to get out of that section again using *only* the
+          should be able to get out of that section again using <em>only</em> the
           keyboard. For example, if you press <kbd>Enter</kbd>/<kbd>Return</kbd>
           on a focused button to open an options window, you should be able to
           close that window again and return to the main content using the
@@ -552,9 +552,9 @@ The conformance criteria under this guideline ensures that users are able to int
  </tr>
  <tr>
  <td> 2.5.8 Target size minimum (AA)</td>
- <td> Target size for pointer inputs should be at least `24px` wide by `24px` tall except for the following areas:
+ <td> Target size for pointer inputs should be at least <code>24px</code> wide by <code>24px</code> tall except for the following areas:
  <ul>
-  <li> <strong>Spacing:</strong>Targets that are less than `24px x 24px` are positioned so that if a `24px` diameter circle is centered on each target's bounding box, the circles do not intersect with any other target or the circle for another undersized target.</li>
+  <li> <strong>Spacing:</strong>Targets that are less than <code>24px x 24px</code> are positioned so that if a <code>24px</code> diameter circle is centered on each target's bounding box, the circles do not intersect with any other target or the circle for another undersized target.</li>
   <li> <strong>Equivalent:</strong> A separate control that achieves the same function that meets this standard is available on the same page.</li>
   <li> <strong>Inline:</strong> The target is located within a line of text with its size constrained by the line height or surrounding non-target text.</li>
   <li> <strong>User agent control:</strong> The target's size is determined by the user agent and has not been modified by the author.</li>

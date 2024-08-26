@@ -8,7 +8,7 @@ browser-compat: api.CredentialsContainer.create
 
 {{APIRef("Credential Management API")}}{{SecureContext_Header}}
 
-The **`create()`** method of the {{domxref("CredentialsContainer")}} interface creates a new {{glossary("credential")}}, which can then be stored and later used to authenticate users via {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}}.
+The **`create()`** method of the {{domxref("CredentialsContainer")}} interface creates a new {{glossary("credential")}}, which can then be stored and later retrieved using the {{domxref("CredentialsContainer.get", "navigator.credentials.get()")}} method. The retrieved credential can then be used by a website to authenticate a user.
 
 This method supports three different types of credential:
 

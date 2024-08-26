@@ -16,7 +16,7 @@ A `TreeWalker` can be created using the {{domxref("Document.createTreeWalker()")
 _This interface doesn't inherit any property._
 
 - {{domxref("TreeWalker.root")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("Node")}} representing the root node as specified when the `TreeWalker` was created.
+  - : Returns the root {{domxref("Node")}} as specified when the `TreeWalker` was created.
 - {{domxref("TreeWalker.whatToShow")}} {{ReadOnlyInline}}
 
   - : Returns an `unsigned long` being a bitmask made of constants describing the types of {{domxref("Node")}} that must be presented. Non-matching nodes are skipped, but their children may be included, if relevant. The possible values are:
@@ -38,7 +38,7 @@ _This interface doesn't inherit any property._
     | `NodeFilter.SHOW_TEXT`                                   | `4`                                                     | Shows {{ domxref("Text") }} nodes.                                                                                                                                                                                                                                                                                                                                               |
 
 - {{domxref("TreeWalker.filter")}} {{ReadOnlyInline}}
-  - : Returns a `NodeFilter` used to select the relevant nodes.
+  - : Returns the `NodeFilter` associated with this `TreeWalker` used to select the relevant nodes.
 - {{domxref("TreeWalker.currentNode")}}
   - : Is the {{domxref("Node")}} on which the `TreeWalker` is currently pointing at.
 

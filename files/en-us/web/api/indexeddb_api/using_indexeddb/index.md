@@ -53,7 +53,7 @@ The first thing you'll want to do with almost all of the requests you generate i
 
 ```js
 request.onerror = (event) => {
-  // Do something with request.errorCode!
+  // Do something with request.error!
 };
 request.onsuccess = (event) => {
   // Do something with request.result!
@@ -87,7 +87,7 @@ As mentioned above, error events bubble. Error events are targeted at the reques
 db.onerror = (event) => {
   // Generic error handler for all errors targeted at this database's
   // requests!
-  console.error(`Database error: ${event.target.errorCode}`);
+  console.error(`Database error: ${event.target.error?.message}`);
 };
 ```
 
@@ -648,7 +648,7 @@ Further reading for you to find out more information if desired.
 ### Tutorials and guides
 
 - [Databinding UI Elements with IndexedDB (2012)](https://web.dev/articles/indexeddb-uidatabinding)
-- [IndexedDB — The Store in Your Browser](<https://docs.microsoft.com/previous-versions/msdn10/gg679063(v=msdn.10)>)
+- [IndexedDB — The Store in Your Browser](<https://learn.microsoft.com/en-us/previous-versions/msdn10/gg679063(v=msdn.10)>)
 
 ### Libraries
 
@@ -656,7 +656,7 @@ Further reading for you to find out more information if desired.
 - [Dexie.js](https://dexie.org/): A wrapper for IndexedDB that allows much faster code development via nice, simple syntax.
 - [JsStore](https://jsstore.net/): A simple and advanced IndexedDB wrapper having SQL like syntax.
 - [MiniMongo](https://github.com/mWater/minimongo): A client-side in-memory MongoDB backed by localstorage with server sync over http. MiniMongo is used by MeteorJS.
-- [PouchDB](https://pouchdb.com): A client-side implementation of CouchDB in the browser using IndexedDB
+- [PouchDB](https://pouchdb.com/): A client-side implementation of CouchDB in the browser using IndexedDB
 - [IDB](https://github.com/jakearchibald/idb): A tiny library that mostly mirrors the IndexedDB API but with small usability improvements.
 - [idb-keyval](https://www.npmjs.com/package/idb-keyval): A super-simple-small (\~600B) promise-based keyval store implemented with IndexedDB
 - [$mol_db](https://github.com/hyoo-ru/mam_mol/tree/master/db): Tiny (\~1.3kB) TypeScript facade with promise-based API and automatic migrations.

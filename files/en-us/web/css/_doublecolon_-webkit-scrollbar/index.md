@@ -40,7 +40,7 @@ You can use the following pseudo-elements to customize various parts of the scro
 
 ## Accessibility
 
-Authors should avoid styling scrollbars, as changing the appearance of scrollbars away from the default [breaks external consistency](https://inclusivedesignprinciples.org/#be-consistent) which negatively impacts usability. If styling scrollbars, ensure there is enough color contrast and touch targets are at least 44px wide and tall. See [Techniques for WCAG 2.0: G183: Using a contrast ratio of 3:1](https://www.w3.org/TR/WCAG20-TECHS/G183.html) and [Understanding WCAG 2.1 : Target Size](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html).
+Authors should avoid styling scrollbars, as changing the appearance of scrollbars away from the default [breaks external consistency](https://inclusivedesignprinciples.info/#be-consistent) which negatively impacts usability. If styling scrollbars, ensure there is enough color contrast and touch targets are at least 44px wide and tall. See [Techniques for WCAG 2.0: G183: Using a contrast ratio of 3:1](https://www.w3.org/TR/WCAG20-TECHS/G183.html) and [Understanding WCAG 2.1 : Target Size](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html).
 
 ## Examples
 

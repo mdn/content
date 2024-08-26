@@ -62,4 +62,4 @@ Check out [Federated Credential Management API (FedCM)](/en-US/docs/Web/API/FedC
 
 ## See also
 
-- [Federated Credential Management API](https://developer.chrome.com/docs/privacy-sandbox/fedcm/)
+- [Federated Credential Management API](https://developers.google.com/privacy-sandbox/cookies/fedcm)

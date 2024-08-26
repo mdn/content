@@ -59,7 +59,7 @@ The values includes the `<image>` to be used as the mask border, and optionally 
   - : Used to specify that a border box is to have no mask image.
 - {{cssxref("length")}}
   - : The size of the mask image's offset. See {{cssxref("&lt;length&gt;")}} for possible units.
-- `{{cssxref("percentage")}}`
+- {{cssxref("percentage")}}
   - : The mask image's offset has a percentage value relative to the border box's corresponding dimension (width or height).
 - {{cssxref("number")}}
   - : The size of the mask image's offset in pixels.
@@ -74,7 +74,7 @@ The values includes the `<image>` to be used as the mask border, and optionally 
 
 The outset values, or edge offsets, define the distances from the top, right, bottom, and left edges of the image, in that order. The values can be set as {{cssxref("length")}}, {{cssxref("number")}}, or {{cssxref("percentage")}}, with numbers interpreted as pixel lengths.
 
-Border repeat styles, when included, are interpreted in the order of `<repeat-x> <repeat-y>`. If only one value is declared, the value is the same for both axes. While similar to `{{cssxref("background-repeat")}}`, the `cover` and `contain` values are not supported.
+Border repeat styles, when included, are interpreted in the order of `<repeat-x> <repeat-y>`. If only one value is declared, the value is the same for both axes. While similar to {{cssxref("background-repeat")}}, the `cover` and `contain` values are not supported.
 
 ## Formal definition
 
