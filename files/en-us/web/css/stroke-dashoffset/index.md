@@ -7,15 +7,20 @@ browser-compat: css.properties.stroke-dashoffset
 
 {{CSSRef}}
 
-The **`stroke-dashoffset`** [CSS](/en-US/docs/Web/CSS) property defined an offset for the starting point of the rendering of the associated dash array. It applies to any SVG shape or text-content element (see {{SVGAttr("stroke-dashoffset")}} for a full list), but as an inherited property, it may be applied to elements such as {{SVGElement("g")}} and still have the intended effect on descendant elements' strokes.
+The **`stroke-dashoffset`** [CSS](/en-US/docs/Web/CSS) property defines an offset for the starting point of the rendering of an [SVG](/en-US/docs/Web/SVG) element's associated {{CSSxref("stroke-dasharray", "dash array")}}. If present, it overrides the element's {{SVGAttr("stroke-dashoffset")}} attribute.
+
+This property applies to any SVG shape or text-content element (see {{SVGAttr("stroke-dashoffset")}} for a full list), but as an inherited property, it may be applied to elements such as {{SVGElement("g")}} and still have the intended effect on descendant elements' strokes.
 
 ## Syntax
 
 ```css
+/* Keyword */
 stroke-dashoffset: none;
+
+/* Length and percentage values */
+stroke-dashoffset: 2;
 stroke-dashoffset: 2px;
 stroke-dashoffset: 2%;
-stroke-dashoffset: 2;
 
 /* Global values */
 stroke-dashoffset: inherit;
@@ -27,7 +32,7 @@ stroke-dashoffset: unset;
 
 ### Values
 
-- {{cssxref("&lt;number&gt;")}}
+- {{cssxref("&lt;number&gt;")}} {{non-standard_Inline}}
 
   - : A number of SVG units, the size of which defined by the current unit space. The value given, if other than `0`, moves the starting point from the start of the dash array to another point within it. Thus, positive values will appear to shift the dash-gap pattern _backwards_, and negative values will appear to shift the pattern _forwards_.
 

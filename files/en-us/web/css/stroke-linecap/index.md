@@ -7,7 +7,9 @@ browser-compat: css.properties.stroke-linecap
 
 {{CSSRef}}
 
-The **`stroke-linecap`** [CSS](/en-US/docs/Web/CSS) property defines the shape to be used at the end of open subpaths of strokes. It applies to any SVG shape that can have unclosed strokes and text-content element (see {{SVGAttr("stroke-linecap")}} for a full list), but as an inherited property, it may be applied to elements such as {{SVGElement("g")}} and still have the intended effect on descendant elements' strokes.
+The **`stroke-linecap`** [CSS](/en-US/docs/Web/CSS) property defines the shape to be used at the end of open subpaths of [SVG](/en-US/docs/Web/SVG) elements' unclosed strokes. If present, it overrides the element's {{SVGAttr("stroke-linecap")}} attribute.
+
+This property applies to any SVG shape that can have unclosed strokes and text-content element (see {{SVGAttr("stroke-linecap")}} for a full list), but as an inherited property, it may be applied to elements such as {{SVGElement("g")}} and still have the intended effect on descendant elements' strokes.
 
 ## Syntax
 
@@ -29,7 +31,7 @@ stroke-linecap: unset;
 
 - `butt`
 
-  - : Indicates that the stroke for each subpath does not extend beyond its two endpoints. On a zero-length subpath, the path will not be rendered at all. The default value.
+  - : Indicates that the stroke for each subpath does not extend beyond its two endpoints. On a zero-length subpath, the path will not be rendered at all. This is the default value.
 
 - `round`
 
@@ -51,7 +53,11 @@ stroke-linecap: unset;
 
 ### Linecaps
 
-To set things up, we first set up a light-gray rectangle. Then, in a group, three paths are defined whose length is exactly the same as the width of the rectangle, and all of which start at the left edge of the rectangle. They are all set to have a dodgerblue stroke with a width of seven.
+This example demonstrates the property's three keyword values
+
+#### HTML
+
+To set things up, we first set up a light-gray rectangle. Then, in a group, three paths are defined whose length is exactly the same as the width of the rectangle, and all of which start at the left edge of the rectangle. They are all set to have a `dodgerblue` stroke with a width of seven.
 
 ```html
 <svg viewBox="0 0 100 50" width="500" height="250">
@@ -64,7 +70,9 @@ To set things up, we first set up a light-gray rectangle. Then, in a group, thre
 </svg>
 ```
 
-We then apply a different linecap style to each path via CSS.
+#### CSS
+
+We apply a different linecap style to each path via CSS.
 
 ```css
 path:nth-of-type(1) {
@@ -78,9 +86,11 @@ path:nth-of-type(3) {
 }
 ```
 
-The first path has `butt` linecaps, which essentially means the stroke will run exactly to the end points (both the start and the end) of the path, and no further. The second path has `square` linecaps, so the visible path extends out past the end points of the path, making the overall length of the path appear to be 87, since the path length is 80 and each of the two square caps is 3.5 wide. The third path has `circle` caps, so while it also appears to be 87 units long, the two caps are semicircular instead of square.
+#### Results
 
 {{EmbedLiveSample("Linecaps", "500", "250")}}
+
+The first path has `butt` linecaps, which essentially means the stroke runs exactly to the end points (both the start and the end) of the path, and no further. The second path has `square` linecaps, so the visible path extends out past the end points of the path, making the overall length of the path appear to be 87, since the path length is 80 and each of the two square caps is 3.5 wide. The third path has `circle` caps, so while it also appears to be 87 units long, the two caps are semicircular instead of square.
 
 ## Specifications
 
@@ -92,5 +102,11 @@ The first path has `butt` linecaps, which essentially means the stroke will run 
 
 ## See also
 
+- {{cssxref("stroke-dasharray")}}
+- {{cssxref("stroke-dashoffset")}}
+- {{cssxref("stroke-linejoin")}}
+- {{cssxref("stroke-miterlimit")}}
+- {{cssxref("stroke-opacity")}}
+- {{cssxref("stroke-width")}}
+- {{cssxref("stroke")}}
 - SVG {{SVGAttr("stroke-linecap")}} attribute
-- CSS {{CSSxref("stroke")}} property

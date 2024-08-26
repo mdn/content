@@ -7,7 +7,9 @@ browser-compat: css.properties.stroke-linejoin
 
 {{CSSRef}}
 
-The **`stroke-linejoin`** [CSS](/en-US/docs/Web/CSS) property defines the shape to be used at the corners of stroked paths. It applies to any SVG corner-generating shape or text-content element (see {{SVGAttr("stroke-linejoin")}} for a full list), but as an inherited property, it may be applied to elements such as {{SVGElement("g")}} and still have the intended effect on descendant elements'
+The **`stroke-linejoin`** [CSS](/en-US/docs/Web/CSS) property defines the shape to be used at the corners of an [SVG](/en-US/docs/Web/SVG) element's stroked paths. If present, it overrides the element's {{SVGAttr("stroke-linejoin")}} attribute.
+
+This property applies to any SVG corner-generating shape or text-content element (see {{SVGAttr("stroke-linejoin")}} for a full list), but as an inherited property, it may be applied to elements such as {{SVGElement("g")}} and still have the intended effect on descendant elements'
 
 ## Syntax
 
@@ -27,13 +29,23 @@ stroke-linejoin: unset;
 
 ### Values
 
-- `arcs`
-
-  - : _(Unsupported.)\* Indicates that an \_arcs corner_ is to be used to join path segments. The arc's shape is formed by extending the outer edges of the stroke at the join point with arcs that have the same curvature as the outer edges at the join point.
-
 - `bevel`
 
   - : Indicates that a bevelled corner is to be used to join path segments. The bevel is formed by truncating the corner by a line perpendicular to a line that bisects the difference in the subpath angles where they meet the join point.
+
+- `miter`
+
+  - : Indicates that a sharp corner is to be used to join path segments. The corner is formed by extending the outer edges of the stroke at the tangents of the path segments until they intersect. This is the default value.
+
+- `round`
+
+  - : Indicates that a round corner is to be used to join path segments. This is accomplished by cropping the join as per `bevel`, and then appending a filled arc tangent in order to round the corner.
+
+The following values are defined, but not supported in any browser:
+
+- `arcs`
+
+  - : _(Unsupported.)\* Indicates that an \_arcs corner_ is to be used to join path segments. The arc's shape is formed by extending the outer edges of the stroke at the join point with arcs that have the same curvature as the outer edges at the join point.
 
 - `crop`
 
@@ -42,14 +54,6 @@ stroke-linejoin: unset;
 - `fallback`
 
   - : \_(Unsupported; at risk.)\* behaves identically to `crop bevel` when the {{CSSxref('stroke-miterlimit')}} value is exceeded.
-
-- `miter`
-
-  - : Indicates that a sharp corner is to be used to join path segments. The corner is formed by extending the outer edges of the stroke at the tangents of the path segments until they intersect. The default value.
-
-- `round`
-
-  - : Indicates that a round corner is to be used to join path segments. This is accomplished by cropping the join as per `bevel`, and then appending a filled arc tangent in order to round the corner.
 
 ## Formal definition
 
@@ -63,7 +67,11 @@ stroke-linejoin: unset;
 
 ### Line-joining styles
 
-First, we set up four identical paths, all of which have a black stroke with a width of one and no fill.
+This example demonstrates the three currently supported keyword values for `stroke-linejoin`.
+
+#### HTML
+
+We set up four identical paths, all of which have a black stroke with a width of one and no fill.
 
 ```html
 <svg viewBox="0 0 15 12" xmlns="http://www.w3.org/2000/svg">
@@ -75,6 +83,8 @@ First, we set up four identical paths, all of which have a black stroke with a w
   </g>
 </svg>
 ```
+
+#### CSS
 
 To each of the four paths, a supported line-joining value is applied. The first is beveled, the second rounded, the third mitered, and the fourth also mitered but with a {{CSSxref('stroke-miterlimit')}} of `2`, which forces the corner to be beveled instead of mitered.
 
@@ -94,6 +104,8 @@ path:nth-child(4) {
 }
 ```
 
+#### Results
+
 {{EmbedLiveSample("Line-joining styles", "500", "600")}}
 
 ## Specifications
@@ -106,6 +118,11 @@ path:nth-child(4) {
 
 ## See also
 
+- {{cssxref("stroke-dasharray")}}
+- {{cssxref("stroke-dashoffset")}}
+- {{cssxref("stroke-linecap")}}
+- {{cssxref("stroke-miterlimit")}}
+- {{cssxref("stroke-opacity")}}
+- {{cssxref("stroke-width")}}
+- {{cssxref("stroke")}}
 - SVG {{SVGAttr("stroke-linejoin")}} attribute
-- CSS {{CSSxref("stroke-miterlimit")}} property
-- CSS {{CSSxref("stroke")}} property

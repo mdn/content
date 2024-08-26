@@ -7,14 +7,16 @@ browser-compat: css.properties.stroke-width
 
 {{CSSRef}}
 
-The **`stroke-width`** [CSS](/en-US/docs/Web/CSS) property defines the width of a stroke applied to the shape. It applies to any SVG shape or text-content element (see {{SVGAttr("stroke-width")}} for a full list), but as an inherited property, it may be applied to elements such as {{SVGElement("g")}} and still have the intended effect on descendant elements' strokes. If the value evaluates to zero, the stroke is not drawn.
+The **`stroke-width`** [CSS](/en-US/docs/Web/CSS) property defines the width of a stroke applied to the [SVG](/en-US/docs/Web/SVG) shape. If present, it overrides the element's {{SVGAttr("stroke-width")}} attribute.
+
+This property applies to any SVG shape or text-content element (see {{SVGAttr("stroke-width")}} for a full list), but as an inherited property, it may be applied to elements such as {{SVGElement("g")}} and still have the intended effect on descendant elements' strokes. If the value evaluates to zero, the stroke is not drawn.
 
 ## Syntax
 
 ```css
-/* number values */
-stroke-width: 0;
-stroke-width: 1.414;
+/* Length and percentage values */
+stroke-width: 0%;
+stroke-width: 1.414px;
 
 /* Global values */
 stroke-width: inherit;
@@ -26,13 +28,17 @@ stroke-width: unset;
 
 ### Values
 
-- {{cssxref("&lt;number&gt;")}}
+- {{cssxref("&lt;length&gt;")}}
+
+  - : Pixel units are handled the same as SVG units (see `<number>`, above) and font-based lengths such as `em` are calculated with repect to the element's SVG value for the text size; the effects of other length units may depend on the browser.
+
+- {{cssxref("&lt;percentage&gt;")}}
+
+  - : Percentages refer to the normalized diagonal of the current SVG viewport, which is calculated as <math><mfrac><msqrt><mrow><msup><mi>&lt;width&gt;</mi><mn>2</mn></msup><mo>+</mo><msup><mi>&lt;height&gt;</mi><mn>2</mn></msup></mrow></msqrt><msqrt><mn>2</mn></msqrt></mfrac></math>.
+
+- {{cssxref("&lt;number&gt;")}} {{non-standard_inline}}
 
   - : A number of SVG units, the size of which defined by the current unit space.
-
-- {{cssxref("&lt;length-percentage&gt;")}}
-
-  - : Pixel units are handled the same as SVG units (see `<number>`, above) and font-based lengths such as `em` are calculated with repect to the element's SVG value for the text size; the effects of other length units may depend on the browser. Percentages are defined to be calculated as a percentage of the current SVG viewport's diagonal measure.
 
 ## Formal definition
 
@@ -45,6 +51,10 @@ stroke-width: unset;
 ## Examples
 
 ### Various stroke widths
+
+This example demonstrates various value syntaxes for the `stroke-width` property.
+
+#### HTML
 
 First, we set up five multi-segment paths, all of which use a black stroke with a width of one, and no fill. Each path creates a series of mountain symbols, going from left (a shallow corner angle) to right (an extreme corner angle).
 
@@ -69,6 +79,8 @@ First, we set up five multi-segment paths, all of which use a black stroke with 
 </svg>
 ```
 
+#### CSS
+
 To the first four paths, we apply stroke width values as pairs to show how bare number values and pixel values are functionally equivalent. For the first two paths, the values are `.25` and `.25px`. For the second two paths, the values are `1` and `1px`.
 
 For the fifth and last path, a value of `5%` is applied, thus setting a stroke width that is five percent as wide as the SVG viewport's diagonal measure is long.
@@ -91,6 +103,8 @@ path:nth-child(5) {
 }
 ```
 
+#### Results
+
 {{EmbedLiveSample("Various stroke widths", "400", "540")}}
 
 ## Specifications
@@ -103,5 +117,12 @@ path:nth-child(5) {
 
 ## See also
 
+- {{CSSxref("stroke")}}
+- {{cssxref("stroke-dasharray")}}
+- {{cssxref("stroke-dashoffset")}}
+- {{cssxref("stroke-linecap")}}
+- {{cssxref("stroke-linejoin")}}
+- {{cssxref("stroke-miterlimit")}}
+- {{cssxref("stroke-opacity")}}
+- {{CSSxref("fill")}}
 - SVG {{SVGAttr("stroke-width")}} attribute
-- CSS {{CSSxref("stroke")}} property

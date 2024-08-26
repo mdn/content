@@ -7,12 +7,17 @@ browser-compat: css.properties.stroke-dasharray
 
 {{CSSRef}}
 
-The **`stroke-dasharray`** [CSS](/en-US/docs/Web/CSS) property defines a pattern of dashes and gaps used in the painting of a shape's stroke. It applies to any SVG shape or text-content element (see {{SVGAttr("stroke-dasharray")}} for a full list), but as an inherited property, it may be applied to elements such as {{SVGElement("g")}} and still have the intended effect on descendant elements' strokes.
+The **`stroke-dasharray`** [CSS](/en-US/docs/Web/CSS) property defines a pattern of dashes and gaps used in the painting of the [SVG](/en-US/docs/Web/SVG) shape's stroke. If present, it overrides the element's {{SVGAttr("stroke-dasharray")}} attribute.
+
+This property applies to any SVG shape or text-content element (see {{SVGAttr("stroke-dasharray")}} for a full list), but as an inherited property, it may be applied to elements such as {{SVGElement("g")}} and still have the intended effect on descendant elements' strokes.
 
 ## Syntax
 
 ```css
+/* Keywords */
 stroke-dasharray: none;
+
+/* Numeric, length, and percentage values */
 stroke-dasharray: 2px, 5px;
 stroke-dasharray: 20%, 50%;
 stroke-dasharray: 2, 5;
@@ -31,17 +36,23 @@ stroke-dasharray: unset;
 
 ### Values
 
+The value is a list of comma and/or white space separated `<number>`, `<length>`, and / or `<percentage>` values that specify the lengths of alternating dashes and gaps, or the keyword `none`. If an odd number of values are given, the entire value will be repeated in order to set an even number of values.
+
 - `none`
 
   - : The stroke will be drawn without any dashes. The default value.
 
 - {{cssxref("&lt;number&gt;")}}
 
-  - : A number of SVG units, the size of which defined by the current unit space. The value given, if other than `0`, moves the starting point from the start of the dash array to another point within it. If an odd number of values are given, the entire value will be repeated in order to set an even number of values. Negative values are invalid.
+  - : A number of SVG units, the size of which defined by the current unit space. The value given, if other than `0`, moves the starting point from the start of the dash array to another point within it. Negative values are invalid.
 
-- {{cssxref("&lt;length-percentage&gt;")}}
+- {{cssxref("&lt;length&gt;")}}
 
-  - : Pixel units are handled the same as SVG units (see `<number>`, above) and font-based lengths such as `em` are calculated with repect to the element's SVG value for the text size; the effects of other length units may depend on the browser. Percentages are defined to be calculated as a percentage of the current SVG viewport. If an odd number of values are given, the entire value will be repeated in order to set an even number of values. Negative values are invalid.
+  - : Pixel units are handled the same as SVG units (see `<number>`, above) and font-based lengths such as `em` are calculated with repect to the element's SVG value for the text size; the effects of other length units may depend on the browser. Negative values are invalid.
+
+- {{cssxref("&lt;percentage&gt;")}}
+
+  - : Percentages refer to the normalized diagonal of the current SVG viewport, which is calculated as <math><mfrac><msqrt><mrow><msup><mi>&lt;width&gt;</mi><mn>2</mn></msup><mo>+</mo><msup><mi>&lt;height&gt;</mi><mn>2</mn></msup></mrow></msqrt><msqrt><mn>2</mn></msqrt></mfrac></math>. Negative values are invalid.
 
 ## Formal definition
 
@@ -54,6 +65,10 @@ stroke-dasharray: unset;
 ## Examples
 
 ### Basic dash array
+
+This example demonstrates basic usage of the `stroke-dasharray` property using space-separated `<number>` values.
+
+#### HTML
 
 First, we set up a basic SVG rectangle shape. To this rectangle, a red stroke with a width of `2` is applied.
 
@@ -70,19 +85,27 @@ First, we set up a basic SVG rectangle shape. To this rectangle, a red stroke wi
 </svg>
 ```
 
-Via CSS, we define a dash pattern for the stroke: six units of dash, followed by six units of space. This means the gaps between dashes will be the same length as the dashes themselves.
+#### CSS
+
+We define a dash pattern for the stroke: ten units of dash, followed by five units of space. This means the gaps between dashes will be half the length as the dashes themselves.
 
 ```css
 rect {
-  stroke-dasharray: 6, 6;
+  stroke-dasharray: 10 5;
 }
 ```
 
-Where the stroke turns a corner, the pattern is carried along, as it were. At the top left corner, where the start and end of the stroke meet, the six-unit-long starting dash appears to join with the part of the dash pattern seen at the end of the path, creating what looks like a longer-than-six-units line bending around the corner.
+#### Results
 
 {{EmbedLiveSample("Basic dash array", "500", "250")}}
 
+Where the stroke turns a corner, the pattern is carried along, as it were. At the top left corner, where the start and end of the stroke meet, the ten-unit-long starting dash appears to join with the part of the dash pattern seen at the end of the path, creating what looks like a longer-than-ten-units line bending around the corner.
+
 ### Dash array repetition
+
+This example includes an odd-number of comma-separated `<number>` values to demonstrates how the value is repeated if an odd number of values is given in order to set an even number of values.
+
+#### html
 
 In this case, we define two rectangles.
 
@@ -107,7 +130,9 @@ In this case, we define two rectangles.
 </svg>
 ```
 
-To the first rectangle, we define a dasharray of `5,5,1`, which calls for five units of dash, five of gap, and one unit of dash. However, because this is an odd number of numbers, the entire set of numbers is repeated, thus creating a value identical to that applied to the second rectangle.
+#### CSS
+
+To the first rectangle, we define a dasharray of `5, 5, 1`, which calls for five units of dash, five of gap, and one unit of dash. However, because this is an odd number of numbers, the entire set of numbers is repeated, thus creating a value identical to that applied to the second rectangle.
 
 ```css
 rect:nth-of-type(1) {
@@ -118,11 +143,17 @@ rect:nth-of-type(2) {
 }
 ```
 
-The reason an even count of numbers is required is so that every dash array begins with a dash and ends with a gap. Thus, the pattern defined is a five-unit dash, a five-unit gap, a one-unit dash, a five-unit gap, a five-unit dash, and a one-unit gap. In the resulting stroke, every instance of a one-unit gap between two five-unit dashes indicates a place where the dash array starts over.
+#### Result
 
 {{EmbedLiveSample("Dash array repetition", "500", "500")}}
 
+The reason an even count of numbers is required is so that every dash array begins with a dash and ends with a gap. Thus, the pattern defined is a five-unit dash, a five-unit gap, a one-unit dash, a five-unit gap, a five-unit dash, and a one-unit gap. In the resulting stroke, every instance of a one-unit gap between two five-unit dashes indicates a place where the dash array starts over.
+
 ### Percentage and pixel values
+
+This example demonstrates the use of `<percentage>` and `<length>` values within the `stroke-dasharray` property value.
+
+#### HTML
 
 As in the previous example, we define two rectangles.
 
@@ -147,6 +178,8 @@ As in the previous example, we define two rectangles.
 </svg>
 ```
 
+#### CSS
+
 This time, rather than collections of bare numbers, we use pixel units and percentages.
 
 ```css
@@ -158,9 +191,11 @@ rect:nth-of-type(2) {
 }
 ```
 
-The results are essentially indistinguishable from the results in the previous example.
+#### Results
 
 {{EmbedLiveSample("Percentage and pixel values", "500", "500")}}
+
+The results are essentially indistinguishable from the results in the previous example.
 
 ## Specifications
 
@@ -172,6 +207,11 @@ The results are essentially indistinguishable from the results in the previous e
 
 ## See also
 
+- {{cssxref("stroke-dashoffset")}}
+- {{cssxref("stroke-linecap")}}
+- {{cssxref("stroke-linejoin")}}
+- {{cssxref("stroke-miterlimit")}}
+- {{cssxref("stroke-opacity")}}
+- {{cssxref("stroke-width")}}
+- {{cssxref("stroke")}}
 - SVG {{SVGAttr("stroke-dasharray")}} attribute
-- CSS {{CSSxref("stroke-dashoffset")}} property
-- CSS {{CSSxref("stroke")}} property
