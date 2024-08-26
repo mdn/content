@@ -82,7 +82,7 @@ The `flex` property may be specified using one, two, or three values.
 - `<'flex-shrink'>`
   - : Defines the {{cssxref("flex-shrink")}} of the flex item. Negative values are considered invalid. Defaults to `1` when omitted. (initial is `1`)
 - `<'flex-basis'>`
-  - : Defines the {{cssxref("flex-basis")}} of the flex item. A preferred size of `0` must have a unit to avoid being interpreted as a flexibility. Defaults to `0%` when omitted. The initial value is `auto`.
+- : Defines the {{cssxref("flex-basis")}} of the flex item. Defaults to `0%` when omitted. The initial value is `auto`.
 - `none`
   - : The item is sized according to its `width` and `height` properties. It is fully inflexible: it neither shrinks nor grows in relation to the flex container. This is equivalent to setting `flex: 0 0 auto`.
 
