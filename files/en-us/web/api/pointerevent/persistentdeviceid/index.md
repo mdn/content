@@ -35,13 +35,13 @@ Assuming the following HTML:
 The following JavaScript assigns a different inking color to each unique pen interacting with a canvas:
 
 ```js
-const COLOR_BLUE = 0;
-const COLOR_GREEN = 1;
-const COLOR_YELLOW = 2;
-const COLORS = [COLOR_BLUE, COLOR_GREEN, COLOR_YELLOW];
+const colorBlue = 0;
+const colorGreen = 1;
+const colorYellow = 2;
+const colors = [colorBlue, colorGreen, colorYellow];
 
-const pen_to_color_map = new Map();
-const color_assignment_index = 0;
+const penToColorMap = new Map();
+const colorAssignmentIndex = 0;
 
 const canvas = document.querySelector("#inking-surface");
 
@@ -51,20 +51,20 @@ canvas.addEventListener("pointerdown", (e) => {
   if (
     e.persistentDeviceId &&
     e.persistentDeviceId > 1 &&
-    !pen_to_color_map.has(e.persistentDeviceId)
+    !penToColorMap.has(e.persistentDeviceId)
   ) {
-    pen_to_color_map.set(e.persistentDeviceId, COLORS[color_assignment_index]);
+    penToColorMap.set(e.persistentDeviceId, colors[colorAssignmentIndex]);
 
     // Bump the color assignment index and loop back over if needed
-    color_assignment_index = (color_assignment_index + 1) % COLORS.length;
+    colorAssignmentIndex = (colorAssignmentIndex + 1) % colors.length;
   }
 });
 
 // Listen for a `pointermove` and get the color assigned to this pen
 // if persistentDeviceId exists and the pen has been color mapped
 canvas.addEventListener("pointermove", (e) => {
-  if (e.persistentDeviceId && pen_to_color_map.has(e.persistentDeviceId)) {
-    const pen_color = pen_to_color_map.get(e.persistentDeviceId);
+  if (e.persistentDeviceId && penToColorMap.has(e.persistentDeviceId)) {
+    const penColor = penToColorMap.get(e.persistentDeviceId);
     // Do some inking on the <canvas>
   }
 });

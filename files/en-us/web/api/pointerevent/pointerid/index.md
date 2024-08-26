@@ -14,7 +14,8 @@ event. The identifier is unique, being different from the identifiers of all oth
 active pointer events. Since the value may be randomly generated, it is not guaranteed
 to convey any particular meaning.
 
-> [!NOTE] > `pointerId` is implemented inconsistently across browsers and does not always persist for each ink stroke or interaction with the screen. For a reliable way of identifying multiple pointing devices on a screen simultaneously, see {{domxref("PointerEvent.persistentDeviceId")}}.
+> [!NOTE]
+> The `pointerId` property is implemented inconsistently across browsers and does not always persist for each ink stroke or interaction with the screen. For a reliable way of identifying multiple pointing devices on a screen simultaneously, see {{domxref("PointerEvent.persistentDeviceId")}}.
 
 ## Value
 
