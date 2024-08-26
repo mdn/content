@@ -259,7 +259,7 @@ Code for generating a key pair using the `X25519` algorithm and logging the info
 Note that the code is run in a `try..catch` block because not all browsers support this algorithm.
 
 The JavaScript first gets the `#run-button` and `#log` {{HTMLElement("input")}} elements, then adds a listener for the `click` event on the button.
-The event handler clears the log and runs the other operations passing the content of the `<input>` element.
+The event handler clears the log, generates an X25519 key pair, and logs some of its properties.
 
 ```js
 const button = document.querySelector("#run-button");
