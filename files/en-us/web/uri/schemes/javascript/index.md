@@ -8,13 +8,13 @@ spec-urls: https://html.spec.whatwg.org/multipage/browsing-the-web.html#the-java
 {{QuickLinksWithSubpages("/en-US/docs/Web/URI")}}
 
 > [!WARNING]
-> Using `javascript:` URLs on the web is discouraged as it may lead to execution of arbitrary code, similar to the ramifications of using [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval). It may also be inaccessible because it deviates from normal link behavior.
+> Using `javascript:` URLs on the web is discouraged as it may lead to execution of arbitrary code, similar to the ramifications of using [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval). It may also reduce {{glossary("accessibility")}} because it deviates from normal link behavior.
 
-`javascript:` URLs, URLs prefixed with the `javascript:` scheme, are used as if they were a kind of navigation target but actually executes JavaScript when the browser goes to the target location.
+**JavaScript URLs**, URLs prefixed with the `javascript:` scheme, are used as fake navigation targets that execute JavaScript when the browser attempts to navigate. If the URL evaluates to a string, it is treated as HTML and rendered by the browser.
 
 ## Syntax
 
-`javascript:` URLs start with the `javascript:` scheme and are followed by JavaScript code. The code will be parsed as a script.
+JavaScript URLs start with the `javascript:` scheme and are followed by JavaScript code. The code will be parsed as a script.
 
 ```url
 javascript:<script>
@@ -32,7 +32,9 @@ javascript:<script>
 > [!NOTE]
 > Some other contexts that use URLs, such as the [`href`](/en-US/docs/Web/HTML/Element/link#href) attribute of `<link>` elements, do not allow `javascript:` URLs, because they are resource locations, not navigation targets. For these cases, if you want to write JavaScript inline, use [`data:`](/en-US/docs/Web/URI/Schemes/data) URLs with the `text/javascript` MIME type.
 
-When a browser attempts to navigate to such a location, it parses and executes the script body. The script may have a _completion value_ (not a return value), which is the same value if the script were executed with [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval). If the last statement is an [expression](/en-US/docs/Web/JavaScript/Reference/Statements/Expression_statement), the completion value is the value of that expression. If this completion value is a string, that string is treated as an HTML document and the browser navigates to a new page with that content, using the same URL as the current page. If the completion value is not a string, the browser only executes the code and does not navigate. Therefore, it's often recommended that if the script ends with a function call like `javascript:foo()`, you should prefix it with {{jsxref("Operators/void", "void")}} to prevent accidental navigation if the function happens to return a string.
+When a browser attempts to navigate to such a location, it parses and executes the script body. The script may have a _completion value_ (not a return value), which is the same value if the script were executed with [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval).
+
+If the last statement is an [expression](/en-US/docs/Web/JavaScript/Reference/Statements/Expression_statement), the completion value is the value of that expression. If this completion value is a string, that string is treated as an HTML document and the browser navigates to a new page with that content, using the same URL as the current page. If the completion value is not a string, the browser only executes the code and does not navigate. Therefore, it's often recommended that if the script ends with a function call like `javascript:foo()`, you should prefix it with {{jsxref("Operators/void", "void")}} to prevent accidental navigation if the function happens to return a string.
 
 `javascript:` navigation may be blocked by [content security policy](/en-US/docs/Web/HTTP/CSP) settings, in particular {{CSP("script-src")}}.
 
