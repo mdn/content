@@ -2,10 +2,13 @@
 title: Report-To
 slug: Web/HTTP/Headers/Report-To
 page-type: http-header
+status:
+  - deprecated
+  - non-standard
 browser-compat: http.headers.Report-To
 ---
 
-{{HTTPSidebar}}
+{{HTTPSidebar}}{{deprecated_header}}{{non-standard_header}}
 
 > [!WARNING]
 > This header has been replaced by the {{HTTPHeader("Reporting-Endpoints")}} HTTP response header.
