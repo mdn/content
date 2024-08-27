@@ -142,6 +142,144 @@ Promise.all([generateAlicesKeyPair, generateBobsKeyPair]).then((values) => {
 });
 ```
 
+### X25519
+
+In this example Alice and Bob each generate an X25519 key pair.
+We then use Alice's private key and Bob's public key to derive a secret, and compare that with the secret generated using Bobs's private key and Alices's public key to show that they are shared/identical.
+
+#### HTML
+
+The HTML is defines two buttons.
+The "Change keys" button is pressed to generate new key pairs for Alice and Bob.
+The "Derive bits" button is pressed to derive a shared secret with the current set of key pairs.
+
+```html
+<input id="buttonDeriveKeys" type="button" value="Derive bits" />
+<input id="buttonChangeKeys" type="button" value="Change keys" />
+```
+
+```html hidden
+<pre id="log"></pre>
+```
+
+```css hidden
+#log {
+  height: 150px;
+  width: 90%;
+  white-space: pre-wrap; /* wrap pre blocks */
+  overflow-wrap: break-word; /* break on words */
+  overflow-y: auto;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
+#### JavaScript
+
+```js hidden
+const logElement = document.querySelector("#log");
+function log(text) {
+  logElement.innerText = `${logElement.innerText}${text}\n`;
+  logElement.scrollTop = logElement.scrollHeight;
+}
+```
+
+The function to generate a shared secret using the X25519 algorithm is shown below.
+This takes a private key from one party and the public key from another.
+
+```js
+async function deriveSharedSecret(privateKey, publicKey) {
+  return await window.crypto.subtle.deriveBits(
+    {
+      name: "X25519",
+      public: publicKey,
+    },
+    privateKey,
+    128,
+  );
+}
+```
+
+The code below adds a function to generate new keys for Alice and Bob.
+This is done the first time the JavaScript is loaded, and repeated whenever the "Change keys" button is pressed (this allows us to see the effect of changing the keys on the shared secret).
+
+```js
+let alicesKeyPair;
+let bobsKeyPair;
+
+async function changeKeys() {
+  try {
+    alicesKeyPair = await window.crypto.subtle.generateKey(
+      {
+        name: "X25519",
+      },
+      false,
+      ["deriveBits"],
+    );
+
+    bobsKeyPair = await window.crypto.subtle.generateKey(
+      {
+        name: "X25519",
+      },
+      false,
+      ["deriveBits"],
+    );
+
+    log("Keys changed");
+  } catch (e) {
+    log(e);
+  }
+}
+
+changeKeys();
+
+const changeKeysButton = document.querySelector("#buttonChangeKeys");
+
+// Generate 2 X25519 key pairs: one for Alice and one for Bob
+// In more normal usage, they would generate their key pairs
+// separately and exchange public keys securely
+changeKeysButton.addEventListener("click", changeKeys);
+```
+
+The code below adds a handler function that is invoked every time the "Derive bits" button is pressed.
+The handler generates the shared secrets for Alice and Bob using the `deriveSharedSecret()` method defined above, and logs them for easy comparison.
+
+```js
+const deriveBitsButton = document.querySelector("#buttonDeriveKeys");
+
+deriveBitsButton.addEventListener("click", async () => {
+  // Generate 2 X25519 key pairs: one for Alice and one for Bob
+  // In more normal usage, they would generate their key pairs
+  // separately and exchange public keys securely
+
+  // Alice then generates a secret using her private key and Bob's public key.
+  // Bob could generate the same secret using his private key and Alice's public key.
+
+  const sharedSecretAlice = await deriveSharedSecret(
+    alicesKeyPair.privateKey,
+    bobsKeyPair.publicKey,
+  );
+
+  let buffer = new Uint8Array(sharedSecretAlice, 0, 10);
+  log(`${buffer}…[${sharedSecretAlice.byteLength} bytes total] (Alice secret)`);
+
+  const sharedSecretBob = await deriveSharedSecret(
+    bobsKeyPair.privateKey,
+    alicesKeyPair.publicKey,
+  );
+
+  buffer = new Uint8Array(sharedSecretBob, 0, 10);
+  log(`${buffer}…[${sharedSecretAlice.byteLength} bytes total] (Bob secret)`);
+});
+```
+
+#### Result
+
+Press the "Derive bits" button to generate and log a shared secret from Bob and Alice's keys.
+Press the "Change keys" button to change the X25519 keys used by both parties.
+
+{{EmbedLiveSample("X25519", "100%", "340px")}}
+
 ### PBKDF2
 
 In this example we ask the user for a password, then use it to derive some bits using

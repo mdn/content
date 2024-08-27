@@ -67,9 +67,9 @@ A {{jsxref("Promise")}} that fulfills with a {{domxref("CryptoKey")}} (for symme
 The promise is rejected when the following exception is encountered:
 
 - `SyntaxError` {{domxref("DOMException")}}
-  - : Raised when the result is a {{domxref("CryptoKey")}} of type `secret` or `private` but `keyUsages` is empty.
+  - : Raised when the result is a {{domxref("CryptoKey")}} of type `secret` or `private` but `keyUsages` is empty, or invalid for the algorithm type.
 - `SyntaxError` {{domxref("DOMException")}}
-  - : Raised when the result is a {{domxref("CryptoKeyPair")}} and its `privateKey.usages` attribute is empty.
+  - : Raised when the result is a {{domxref("CryptoKeyPair")}} and its `privateKey.usages` attribute is empty, or invalid for the algorithm type.
 
 ## Examples
 
@@ -224,6 +224,88 @@ async function test() {
 The information about the created keys is logged below (or an error string if the browser does not allow the key to be created).
 
 {{EmbedLiveSample("Ed25519", "100%", "240px")}}
+
+### X25519 key generation
+
+This code generates an X25519 public and private key pair that can be used in {{domxref("SubtleCrypto.deriveKey()")}} to create a shared key, or in {{domxref("SubtleCrypto.deriveBits()")}} to create a shared secret.
+
+```html hidden
+<input id="run-button" type="button" value="Run" />
+<pre id="log">Click "Run" button</pre>
+```
+
+```css hidden
+#log {
+  height: 170px;
+  white-space: pre-wrap; /* wrap pre blocks */
+  overflow-wrap: break-word; /* break on words */
+  overflow-y: auto;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
+```js hidden
+const logElement = document.querySelector("#log");
+function log(text) {
+  logElement.innerText = `${logElement.innerText}${text}\n`;
+  logElement.scrollTop = logElement.scrollHeight;
+}
+```
+
+#### JavaScript
+
+Code for generating a key pair using the `X25519` algorithm and logging the information in each key is shown below.
+Note that the code is run in a `try..catch` block because not all browsers support this algorithm.
+
+The JavaScript first gets the `#run-button` and `#log` {{HTMLElement("input")}} elements, then adds a listener for the `click` event on the button.
+The event handler clears the log, generates an X25519 key pair, and logs some of its properties.
+
+```js
+const button = document.querySelector("#run-button");
+const input = document.querySelector("#log");
+
+button.addEventListener("click", () => {
+  // Clear log
+  logElement.innerText = "";
+  logElement.scrollTop = logElement.scrollHeight;
+  // Run test
+  test();
+});
+
+async function test() {
+  try {
+    // Create a key pair and use destructuring assignment to assign to variables
+    const { publicKey, privateKey } = await crypto.subtle.generateKey(
+      {
+        name: "X25519",
+      },
+      true,
+      ["deriveKey", "deriveBits"],
+    );
+
+    // Log the properties of the keys
+    log(`publicKey: ${publicKey}`);
+    log(` type: ${publicKey.type}`);
+    log(` extractable: ${publicKey.extractable}`);
+    log(` algorithm: ${JSON.stringify(publicKey.algorithm)}`);
+    log(` usages: ${publicKey.usages}`);
+    log(`privateKey: ${privateKey}`);
+    log(` type: ${privateKey.type}`);
+    log(` extractable: ${privateKey.extractable}`);
+    log(` algorithm: ${JSON.stringify(privateKey.algorithm)}`);
+    log(` usages: ${privateKey.usages}`);
+  } catch (error) {
+    log(error);
+  }
+}
+```
+
+#### Result
+
+The information about the created keys is logged below (or an error string if the browser does not allow the key to be created).
+
+{{EmbedLiveSample("X25519", "100%", "240px")}}
 
 ## Specifications
 
