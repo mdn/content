@@ -116,7 +116,112 @@ The **_root intersection rectangle_** is the rectangle used to check against the
 - If the intersection root has an overflow clip, the root intersection rectangle is the root element's content area.
 - Otherwise, the root intersection rectangle is the intersection root's bounding client rectangle (as returned by calling {{domxref("Element.getBoundingClientRect", "getBoundingClientRect()")}} on it).
 
-The root intersection rectangle can be adjusted further by setting the **root margin**, `rootMargin`, when creating the {{domxref("IntersectionObserver")}}. The values in `rootMargin` define offsets added to each side of the intersection root's bounding box to create the final intersection root bounds (which are disclosed in {{domxref("IntersectionObserverEntry.rootBounds")}} when the callback is executed).
+The root intersection rectangle can be adjusted further by setting the **root margin**, `rootMargin`, when creating the {{domxref("IntersectionObserver")}}. The values in `rootMargin` define offsets added to each side of the intersection root's bounding box to create the final intersection root bounds (which are disclosed in {{domxref("IntersectionObserverEntry.rootBounds")}} when the callback is executed). Positive values grow the box, while negative values shrink it.
+
+In the example below, we have a scrollable box and an element that's initially out of view. You can adjust the root right margin, and see that:
+
+- If the margin is negative, then even when the red element starts to become visible, it's still not considered intersecting with the root because the root's bounding box is shrunk.
+- If the margin is positive, the red element is considered intersecting with the root even if it's not visible, because it's intersecting with the root's margin area.
+
+```html hidden
+<div class="demo">
+  <div id="container">
+    <div id="elem"></div>
+    <div id="gutter"></div>
+  </div>
+  <div id="marginIndicator"></div>
+</div>
+<div class="controls">
+  <label>
+    Set the right margin of the root:
+    <input id="margin" type="number" value="0" step="5" />px
+  </label>
+  <label>
+    You can also use this slider to scroll the container:
+    <input id="scrollAmount" type="range" min="0" max="300" value="0" />
+  </label>
+  <p>Current intersection ratio: <span id="output"></span></p>
+</div>
+```
+
+```css hidden
+.demo {
+  display: flex;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+}
+
+#container {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  overflow-x: scroll;
+  border: 1px solid black;
+}
+
+#marginIndicator {
+  position: relative;
+  height: 100px;
+  background-color: blue;
+  opacity: 0.5;
+}
+
+#elem {
+  background-color: red;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 200px;
+}
+
+#gutter {
+  width: 500px;
+  height: 100px;
+}
+```
+
+```js hidden
+let observer;
+function createObserver() {
+  if (observer) {
+    observer.disconnect();
+  }
+  observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        output.textContent = entry.intersectionRatio.toFixed(2);
+      });
+    },
+    {
+      threshold: Array.from({ length: 1000 }, (_, i) => i / 1000),
+      root: container,
+      rootMargin: `0px ${margin.value}px 0px 0px`,
+    },
+  );
+  if (margin.valueAsNumber < 0) {
+    marginIndicator.style.width = `${-margin.valueAsNumber}px`;
+    marginIndicator.style.left = `${margin.valueAsNumber}px`;
+    marginIndicator.style.backgroundColor = "blue";
+  } else {
+    marginIndicator.style.width = `${margin.valueAsNumber}px`;
+    marginIndicator.style.left = "0px";
+    marginIndicator.style.backgroundColor = "green";
+  }
+  observer.observe(elem);
+}
+createObserver();
+margin.addEventListener("input", () => {
+  createObserver();
+});
+scrollAmount.addEventListener("input", () => {
+  container.scrollLeft = scrollAmount.value;
+});
+```
+
+{{EmbedLiveSample("the intersection root and root margin", "", 300)}}
 
 #### Thresholds
 
