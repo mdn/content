@@ -25,7 +25,7 @@ syntax: "*"; /* any valid token */
 
 ## Values
 
-A string with a supported syntax as defined by the specification. Supported syntaxes are a subset of [CSS types](/en-US/docs/Web/CSS/CSS_Types). These may be used along, or a number of types can be used in combination.
+A string with a supported syntax as defined by the specification. Supported syntaxes are a subset of [CSS types](/en-US/docs/Web/CSS/CSS_Types). These may be used alone, or a number of types can be used in combination.
 
 - `"<length>"`
   - : Any valid {{cssxref("&lt;length&gt;")}} values.

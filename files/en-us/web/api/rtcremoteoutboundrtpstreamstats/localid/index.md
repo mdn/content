@@ -176,7 +176,7 @@ Each one represents approximately one second of time (since that's much time we'
 
 ### Try it and fork it
 
-This example is [available on Glitch for you to try out](https://websocket-webrtc-chat-with-stats.glitch.me), examine, or remix.
+This example is [available on Glitch for you to try out](https://websocket-webrtc-chat-with-stats.glitch.me/), examine, or remix.
 
 [Remix It](https://glitch.com/edit/?utm_content=project_websocket-webrtc-chat-with-stats&utm_source=remix_this&utm_medium=button&utm_campaign=glitchButton#!/remix/websocket-webrtc-chat-with-stats)
 

@@ -2,12 +2,10 @@
 title: Intl.DurationFormat.prototype.formatToParts()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat/formatToParts
 page-type: javascript-instance-method
-status:
-  - experimental
 browser-compat: javascript.builtins.Intl.DurationFormat.formatToParts
 ---
 
-{{JSRef}} {{SeeCompatTable}}
+{{JSRef}}
 
 The **`formatToParts()`** method of {{jsxref("Intl.DurationFormat")}} instances allows locale-aware formatting of strings produced by {{jsxref("Intl.DurationFormat")}} formatters.
 

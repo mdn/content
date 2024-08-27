@@ -48,7 +48,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
       - The {{HTTPHeader("Content-Disposition")}} HTTP header
       - The final segment in the URL [path](/en-US/docs/Web/API/URL/pathname)
-      - The {{Glossary("MIME_type", "media type")}} (from the {{HTTPHeader("Content-Type")}} header, the start of a [`data:` URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs), or {{domxref("Blob.type")}} for a [`blob:` URL](/en-US/docs/Web/API/URL/createObjectURL_static))
+      - The {{Glossary("MIME_type", "media type")}} (from the {{HTTPHeader("Content-Type")}} header, the start of a [`data:` URL](/en-US/docs/Web/URI/Schemes/data), or {{domxref("Blob.type")}} for a [`blob:` URL](/en-US/docs/Web/API/URL/createObjectURL_static))
 
     - `filename`: defining a value suggests it as the filename. `/` and `\` characters are converted to underscores (`_`). Filesystems may forbid other characters in filenames, so browsers will adjust the suggested name if necessary.
 
@@ -65,13 +65,17 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
   - : The URL that the hyperlink points to. Links are not restricted to HTTP-based URLs — they can use any URL scheme supported by browsers:
 
-    - Sections of a page with document fragments
-    - Specific text portions with [text fragments](/en-US/docs/Web/Text_fragments)
-    - Pieces of media files with media fragments
     - Telephone numbers with `tel:` URLs
     - Email addresses with `mailto:` URLs
     - SMS text messages with `sms:` URLs
+    - Executable code with [`javascript:` URLs](/en-US/docs/Web/URI/Schemes/javascript)
     - While web browsers may not support other URL schemes, websites can with [`registerProtocolHandler()`](/en-US/docs/Web/API/Navigator/registerProtocolHandler)
+
+    Moreover other URL features can locate specific parts of the resource, including:
+
+    - Sections of a page with document fragments
+    - Specific text portions with [text fragments](/en-US/docs/Web/URI/Fragment/Text_fragments)
+    - Pieces of media files with media fragments
 
 - `hreflang`
   - : Hints at the human language of the linked URL. No built-in functionality. Allowed values are the same as [the global `lang` attribute](/en-US/docs/Web/HTML/Global_attributes/lang).
@@ -169,7 +173,7 @@ Assistive software has shortcuts to list all links on a page. However, strong li
 
 ### onclick events
 
-Anchor elements are often abused as fake buttons by setting their `href` to `#` or `javascript:void(0)` to prevent the page from refreshing, then listening for their `click` events .
+Anchor elements are often abused as fake buttons by setting their `href` to `#` or [`javascript:void(0)`](/en-US/docs/Web/URI/Schemes/javascript) to prevent the page from refreshing, then listening for their `click` events.
 
 These bogus `href` values cause unexpected behavior when copying/dragging links, opening links in a new tab/window, bookmarking, or when JavaScript is loading, errors, or is disabled. They also convey incorrect semantics to assistive technologies, like screen readers.
 
@@ -550,4 +554,4 @@ Using `target="_blank"` without [`rel="noreferrer"`](/en-US/docs/Web/HTML/Attrib
 - {{CSSxRef(":link")}} is a CSS pseudo-class that will match `<a>` elements with URL in `href` attribute that was not yet visited by the user.
 - {{CSSxRef(":visited")}} is a CSS pseudo-class that will match `<a>` elements with URL in `href` attribute that was visited by the user in the past.
 - {{CSSxRef(":any-link")}} is a CSS pseudo-class that will match `<a>` elements with `href` attribute.
-- [Text fragments](/en-US/docs/Web/Text_fragments) are user-agent instructions added to URLs that allow content authors to link to specific text on a page, without IDs being required.
+- [Text fragments](/en-US/docs/Web/URI/Fragment/Text_fragments) are user-agent instructions added to URLs that allow content authors to link to specific text on a page, without IDs being required.

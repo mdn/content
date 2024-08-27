@@ -2,7 +2,13 @@
 title: "<h1>–<h6>: The HTML Section Heading elements"
 slug: Web/HTML/Element/Heading_Elements
 page-type: html-element
-browser-compat: html.elements.h1
+browser-compat:
+  - html.elements.h1
+  - html.elements.h2
+  - html.elements.h3
+  - html.elements.h4
+  - html.elements.h5
+  - html.elements.h6
 ---
 
 {{HTMLSidebar}}

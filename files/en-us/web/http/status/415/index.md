@@ -42,7 +42,7 @@ If the server implementation expects at least a MIME type `Content-Type: applica
 HTTP/1.1 415 Unsupported Media Type
 Date: Fri, 28 Jun 2024 12:00:00 GMT
 Server: Apache/2.4.41 (Ubuntu)
-Accept: application/json; charset=UTF-8
+Accept-Post: application/json; charset=UTF-8
 Content-Length: 0
 ```
 
@@ -62,13 +62,13 @@ Content-Type: application/x-www-form-urlencoded
 }
 ```
 
-In this case, the server responds with a 415, with the required content type for the request in the {{HTTPHeader("Accept")}} header:
+In this case, the server responds with a 415, with the required content type for the request in the {{HTTPHeader("Accept-Post")}} header:
 
 ```http
 HTTP/1.1 415 Unsupported Media Type
 Date: Fri, 28 Jun 2024 12:00:00 GMT
 Server: Apache/2.4.41 (Ubuntu)
-Accept: application/json; charset=UTF-8
+Accept-Post: application/json; charset=UTF-8
 Content-Length: 0
 ```
 
@@ -81,4 +81,4 @@ Content-Length: 0
 - [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
 - {{HTTPHeader("Content-Type")}}
 - {{HTTPHeader("Content-Encoding")}}
-- {{HTTPHeader("Accept")}}
+- {{HTTPHeader("Accept-Post")}}

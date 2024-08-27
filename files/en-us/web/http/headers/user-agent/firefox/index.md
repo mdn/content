@@ -109,7 +109,7 @@ The Klar user agent is the same as [Focus](#focus_for_ios).
 
 ## Firefox for iOS
 
-Firefox for iOS uses the default Mobile Safari UA string, with an additional **FxiOS/\<version>** token on iPod and iPhone, similar to how [Chrome for iOS identifies itself](https://developer.chrome.com/docs/multidevice/user-agent/#chrome_for_ios_user_agent).
+Firefox for iOS uses the default Mobile Safari UA string, with an additional **FxiOS/\<version>** token on iPod and iPhone, similar to how [Chrome for iOS identifies itself](https://chromium.googlesource.com/chromium/src/+/HEAD/docs/ios/user_agent.md).
 
 | Form factor | Firefox for iOS user agent string                                                                                                           |
 | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------- |

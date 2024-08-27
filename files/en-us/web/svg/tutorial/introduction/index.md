@@ -12,7 +12,7 @@ page-type: guide
 
 ![Mozilla dino logo](dino.svg)
 
-SVG came about in 1999 after several competing formats had been submitted to the [W3C](https://www.w3.org) and failed to be fully ratified. SVG is supported by all major [browsers](https://caniuse.com/#search=svg). A downside is loading SVG can be slow. SVG does offer benefits, some of which include having a [DOM interface](/en-US/docs/Web/API) available for it, and not requiring third-party extensions. Whether or not to use it often depends on your specific use case.
+SVG came about in 1999 after several competing formats had been submitted to the [W3C](https://www.w3.org/) and failed to be fully ratified. SVG is supported by all major [browsers](https://caniuse.com/#search=svg). A downside is loading SVG can be slow. SVG does offer benefits, some of which include having a [DOM interface](/en-US/docs/Web/API) available for it, and not requiring third-party extensions. Whether or not to use it often depends on your specific use case.
 
 ## Basic ingredients
 
