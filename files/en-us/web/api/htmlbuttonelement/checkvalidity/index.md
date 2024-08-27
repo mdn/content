@@ -11,7 +11,7 @@ browser-compat: api.HTMLButtonElement.checkValidity
 The **`checkValidity()`** method of the {{domxref("HTMLButtonElement")}} interface returns a boolean value which indicates if the element meets any [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) rules applied to it. If false, the method also fires the `invalid` event on the element.
 
 > [!NOTE]
-> An HTML {{htmlelement("button")}} element with a non-null {{domxref("HTMLButtonElement.validationMessage", "validationMessage"}} is considered invalid, will match the CSS {{cssxref(":invalid")}} pseudo-class, and will cause `checkValidity()` to return false. Use the {{domxref("HTMLButtonElement.setCustomValidity()")}} method to set the {{domxref("HTMLButtonElement.validationMessage")}} to the empty string to enable the {{domxref("HTMLButtonElement.validity", "validity")}} state to be valid.
+> An HTML {{htmlelement("button")}} element with a non-null {{domxref("HTMLButtonElement.validationMessage", "validationMessage")}} is considered invalid, will match the CSS {{cssxref(":invalid")}} pseudo-class, and will cause `checkValidity()` to return false. Use the {{domxref("HTMLButtonElement.setCustomValidity()")}} method to set the {{domxref("HTMLButtonElement.validationMessage")}} to the empty string to enable the {{domxref("HTMLButtonElement.validity", "validity")}} state to be valid.
 
 ## Syntax
 

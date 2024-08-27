@@ -10,7 +10,7 @@ browser-compat: api.HTMLButtonElement.reportValidity
 
 The **`reportValidity()`** method of the {{domxref('HTMLButtonElement')}} interface performs the same validity checking steps as the {{domxref("HTMLButtonElement.checkValidity", "checkValidity()")}} method. If the element fails to meet any [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) rules, the method returns `false`, fires the `invalid` event on the element, and (if the event isn't canceled) reports the problem to the user.
 
-An HTML {{htmlelement("button")}} element with a non-null {{domxref("HTMLButtonElement.validationMessage", "validationMessage"}} is considered invalid, will match the CSS {{cssxref(":invalid")}} pseudo-class, and will cause `reportValidity()` to display the validation message to the user and return `false`. Use the {{domxref("HTMLButtonElement.setCustomValidity()")}} method to set the {{domxref("HTMLButtonElement.validationMessage")}} to the empty string to enable the {{domxref("HTMLButtonElement.validity", "validity")}} state to be valid.
+An HTML {{htmlelement("button")}} element with a non-null {{domxref("HTMLButtonElement.validationMessage", "validationMessage")}} is considered invalid, will match the CSS {{cssxref(":invalid")}} pseudo-class, and will cause `reportValidity()` to display the validation message to the user and return `false`. Use the {{domxref("HTMLButtonElement.setCustomValidity()")}} method to set the {{domxref("HTMLButtonElement.validationMessage")}} to the empty string to enable the {{domxref("HTMLButtonElement.validity", "validity")}} state to be valid.
 
 ## Syntax
 
@@ -43,8 +43,9 @@ We create a form that only contains a few buttons:
   <p>
     <button type="button" id="report">reportValidity()</button>
   </p>
-  <p id="log"></p>
 </form>
+
+<p id="log"></p>
 ```
 
 #### CSS
@@ -119,7 +120,7 @@ const toggleButton = () => {
 
 #### Results
 
-{{EmbedLiveSample("Custom error message", "100%", 120)}}
+{{EmbedLiveSample("Custom error message", "100%", 220)}}
 
 The button is by default valid. Activate "THIS BUTTON" to change the value, content, and add a custom error message. Activating the "reportValidity()" button checks the validity of the button, reporting the custom error message to the user and throwing an `invalid` event if the button does not pass contstraint validation due to the message.
 
