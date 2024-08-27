@@ -25,7 +25,7 @@ webSocket = new WebSocket(url, protocols);
 - `url`
   - : The URL to which to connect; this should be the URL to which the WebSocket server will respond.
     This should use the URL scheme `wss://`, although some software may allow you to use the insecure `ws://` for a local connection.
-    Relative URL values and `https` and `http://` schemes are also allowed in [most recent browser versions](/en-US/docs/Web/API/WebSocket/WebSocket#browser_compatibility).
+    Relative URL values and `https://` and `http://` schemes are also allowed in [most recent browser versions](/en-US/docs/Web/API/WebSocket/WebSocket#browser_compatibility).
 - `protocols` {{optional_inline}}
   - : Either a single protocol string or an array of protocol strings.
     These strings are used to indicate sub-protocols, so that a single server can implement multiple WebSocket sub-protocols (for example, you might want one server to be able to handle different types of interactions depending on the specified `protocol`).

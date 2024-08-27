@@ -47,7 +47,7 @@ Sec-WebSocket-Key: <key>
 ## Examples
 
 The client will initiate a WebSocket handshake with a request like the following.
-Note that this starts as an HTTP `GET` request (HTTP/1.1 or later), in addition to `Sec-WebSocket-Key`, the request includes the {{httpheader("Upgrade")}} heading, indicating the intent to upgrade from HTTP to a web socket.
+Note that this starts as an HTTP `GET` request (HTTP/1.1 or later), in addition to `Sec-WebSocket-Key`, the request includes the {{httpheader("Upgrade")}} header, indicating the intent to upgrade from HTTP to a web socket.
 
 ```http
 GET /chat HTTP/1.1
@@ -58,7 +58,7 @@ Sec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==
 Sec-WebSocket-Version: 13
 ```
 
-The response from the server should include the `Sec-WebSocket-Accept` header with a value that is calculated from `Sec-WebSocket-Key` in the request, and confirms the intent to upgrade the connection to a web socket:
+The response from the server should include the `Sec-WebSocket-Accept` header with a value that is calculated from the `Sec-WebSocket-Key` header in the request, and confirms the intent to upgrade the connection to a web socket:
 
 ```http
 HTTP/1.1 101 Switching Protocols

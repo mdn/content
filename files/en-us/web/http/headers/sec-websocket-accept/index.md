@@ -10,7 +10,7 @@ spec-urls: https://datatracker.ietf.org/doc/html/rfc6455#section-11.3.3
 
 The **Sec-WebSocket-Accept** HTTP {{glossary("response header")}} is used in the [WebSocket](/en-US/docs/Web/API/WebSockets_API) opening [handshake](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#the_websocket_handshake) to indicate that the server is willing to upgrade to a WebSocket connection.
 
-This header must appear no more than once in the response, and has a directive value that is calculated from the {{HTTPHeader("Sec-WebSocket-Key")}} sent in the corresponding request.
+This header must appear no more than once in the response, and has a directive value that is calculated from the {{HTTPHeader("Sec-WebSocket-Key")}} request header sent in the corresponding request.
 
 <table class="properties">
   <tbody>
@@ -40,7 +40,7 @@ Sec-WebSocket-Accept: <hashed key>
 ## Examples
 
 The client will initiate a WebSocket handshake with a request like the following.
-Note that this starts as an HTTP `GET` request (HTTP/1.1 or later) and includes the {{httpheader("Upgrade")}} heading indicating the intent to upgrade to a web socket.
+Note that this starts as an HTTP `GET` request (HTTP/1.1 or later) and includes the {{httpheader("Upgrade")}} header indicating the intent to upgrade to a web socket.
 It also includes `Sec-WebSocket-Key`, which is used in the calculation of `Sec-WebSocket-Accept` to confirm the intent to upgrade the connection to a web socket.
 
 ```http
@@ -52,7 +52,7 @@ Sec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==
 Sec-WebSocket-Version: 13
 ```
 
-The response from the server should include the `Sec-WebSocket-Accept` header with a value that is calculated from `Sec-WebSocket-Key` in the request, and confirms the intent to upgrade the connection to a web socket:
+The response from the server should include the `Sec-WebSocket-Accept` header with a value that is calculated from the `Sec-WebSocket-Key` header in the request, and confirms the intent to upgrade the connection to a web socket:
 
 ```http
 HTTP/1.1 101 Switching Protocols
