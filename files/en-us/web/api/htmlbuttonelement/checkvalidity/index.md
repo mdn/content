@@ -52,4 +52,3 @@ console.log(element.checkValidity());
 - [Learn: Client-side form validation](/en-US/docs/Learn/Forms/Form_validation)
 - [Guide: Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
 - CSS {{cssxref(":valid")}} and {{cssxref(":invalid")}} pseudo-classes
-- [CodePen example of an invalid `<button>`](https://codepen.io/estelle/pen/abgKeEp)
