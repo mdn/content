@@ -292,10 +292,21 @@ The following request headers are not _strictly_ "fetch metadata request headers
 
 ## WebSockets
 
+Headers used by the [WebSockets API](/en-US/docs/Web/API/WebSockets_API) in the [WebSocket handshake](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#the_websocket_handshake):
+
 - {{HTTPHeader("Sec-WebSocket-Accept")}}
-  - : Sent from server to client and indicates that the server is willing to initiate a WebSocket connection.
+  - : Response header that indicates that the server is willing to upgrade to a WebSocket connection.
+- {{HTTPHeader("Sec-WebSocket-Extensions")}}
+  - : Request header that indicates the WebSocket extensions supported by the client in preference order.
+    Response header that indicates the extension selected by the server.
 - {{HTTPHeader("Sec-WebSocket-Key")}}
-  - : Sent from client to server to confirm that it "really wants" to request that an HTTP client is upgraded to become a WebSocket.
+  - : Request header containing a key that verifies that the client explicitly intends to open a `WebSocket`.
+- {{HTTPHeader("Sec-WebSocket-Protocol")}}
+  - : Request header that indicates the sub-protocols supported by the client in preference order.
+    Response header that indicates the the sub-protocol selected by the server.
+- {{HTTPHeader("Sec-WebSocket-Version")}}
+  - : Request header that indicates the version of the WebSocket protocol used by the client.
+    Response header that is sent only if the requested version is not supported by the server, which indicates the versions that the server does support.
 
 ## Other
 
