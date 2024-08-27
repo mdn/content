@@ -29,7 +29,7 @@ Firefox 12 was shipped on April 24, 2012. This page summarizes the changes in Fi
 
 - {{domxref("DOMParser")}} now supports parsing of HTML document fragments.
 - {{domxref("XMLHttpRequest")}} now supports timeouts using the `timeout` property and "timeout" event, as well as the `ontimeout` event handler on the {{domxref("XMLHttpRequestEventTarget")}} interface.
-- {{domxref("XMLHttpRequest")}} can now load from [`data:` URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs).
+- {{domxref("XMLHttpRequest")}} can now load from [`data:` URLs](/en-US/docs/Web/URI/Schemes/data).
 - When downloading large amounts of data, {{domxref("XMLHttpRequest")}} progress event handlers are now called periodically with the `responseType` set to "moz-blob" and the response being a {{domxref("Blob")}} containing all of the data received so far. This lets progress handlers begin processing data without having to wait for it all to arrive.
 - Gecko now supports [multi-touch](/en-US/docs/Web/API/Touch_events) (instead of just single touches at a time) on Android.
 - While editing text using an IME, the `input` event is now sent whenever the contents of the element being edited have been changed; this happens after the `compositionupdate` event has been sent to indicate that the IME's text has been changed. You can use the `input` event handler, therefore, to monitor changes to the actual content of the element.

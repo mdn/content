@@ -116,7 +116,7 @@ Because the information is in a database, it can also more easily be shared and 
 > [!NOTE]
 > Your imagination doesn't have to work hard to see the benefit of server-side code for efficient storage and delivery of information:
 >
-> 1. Go to [Amazon](https://www.amazon.com) or some other e-commerce site.
+> 1. Go to [Amazon](https://www.amazon.com/) or some other e-commerce site.
 > 2. Search for a number of keywords and note how the page structure doesn't change, even though the results do.
 > 3. Open two or three different products. Note again how they have a common structure and layout, but the content for different products has been pulled from the database.
 >

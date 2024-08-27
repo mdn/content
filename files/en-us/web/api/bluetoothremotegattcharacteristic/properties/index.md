@@ -25,5 +25,3 @@ The properties of this characteristic.
 ## Browser compatibility
 
 {{Compat}}
-
-{{APIRef("Web Bluetooth")}}

@@ -36,7 +36,7 @@ The instance properties are listed below:
 | {{cssxref("height")}}              | `CSSPositionTryDescriptors.height`            | `CSSPositionTryDescriptors["height"]`              |
 | {{cssxref("inline-size")}}         | `CSSPositionTryDescriptors.inlineSize`        | `CSSPositionTryDescriptors["inline-size"]`         |
 | {{cssxref("inset")}}               | `CSSPositionTryDescriptors.inset`             | `CSSPositionTryDescriptors["inset"]`               |
-| {{cssxref("inset-area")}}          | `CSSPositionTryDescriptors.insetArea`         | `CSSPositionTryDescriptors["inset-area"]`          |
+| {{cssxref("position-area")}}       | `CSSPositionTryDescriptors.positionArea`      | `CSSPositionTryDescriptors["position-area"]`       |
 | {{cssxref("inset-block")}}         | `CSSPositionTryDescriptors.insetBlock`        | `CSSPositionTryDescriptors["inset-block"]`         |
 | {{cssxref("inset-block-end")}}     | `CSSPositionTryDescriptors.insetBlockEnd`     | `CSSPositionTryDescriptors["inset-block-end"]`     |
 | {{cssxref("inset-block-start")}}   | `CSSPositionTryDescriptors.insetBlockStart`   | `CSSPositionTryDescriptors["inset-block-start"]`   |
@@ -80,7 +80,7 @@ The CSS includes a `@position-try` at-rule with a name of `--custom-right` and t
 
 ```css
 @position-try --custom-right {
-  inset-area: right;
+  position-area: right;
   width: 100px;
   margin: 0 0 0 10px;
 }
@@ -91,7 +91,7 @@ const myRules = document.styleSheets[0].cssRules;
 const tryOption = myRules[0]; // a CSSPositionTryRule
 console.log(tryOption.style); // "[object CSSPositionTryDescriptors]"
 console.log(tryOption.style.margin); // "0 0 0 10px"
-console.log(tryOption.style["inset-area"]); // "right"
+console.log(tryOption.style["position-area"]); // "right"
 ```
 
 ## Specifications

@@ -299,7 +299,7 @@ First of all, we need some additional HTML to represent the webpage's main conte
 
 ### Changes to the existing CSS
 
-Next we need to make some small changes to the existing CSS, to get the info-box placed and positioned. Change your `.info-box` rule to get rid of `margin: 0 auto;` (we no longer want the info-box centered), add {{cssxref("position")}}`: fixed;`, and stick it to the {{cssxref("top")}} of the browser viewport.
+Next we need to make some small changes to the existing CSS, to get the info-box placed and positioned. Change your `.info-box` rule to get rid of `margin: 0 auto;` (we no longer want the info-box centered), add {{cssxref("position", "position: fixed;")}}, and stick it to the {{cssxref("top")}} of the browser viewport.
 
 It should now look like this:
 
@@ -417,7 +417,7 @@ A lot going on here — let's discuss it bit by bit:
 - First, we set some simple {{cssxref("background-color")}} and {{cssxref("color")}} on the info box.
 - Next, we set a fixed {{cssxref("width")}} on the panel, and make its {{cssxref("height")}} the entire height of the browser viewport.
 - We also include some horizontal {{cssxref("padding")}} to space it out a bit.
-- Next we set {{cssxref("position")}}`: fixed;` on the panel so it will always appear in the same place, even if the page has content to scroll. We glue it to the {{cssxref("top")}} of the viewport, and set it so that by default it is offscreen to the {{cssxref("right")}}.
+- Next we set {{cssxref("position", "position: fixed;")}} on the panel so it will always appear in the same place, even if the page has content to scroll. We glue it to the {{cssxref("top")}} of the viewport, and set it so that by default it is offscreen to the {{cssxref("right")}}.
 - Finally, we set a {{cssxref("transition")}} on the element. Transition is an interesting feature that allows you to make changes between states happen smoothly, rather than just going "on" or "off" abruptly. In this case, we intend to make the panel slide smoothly onscreen when the checkbox is checked. (Or to put it another way, when the question mark icon is clicked.)
 
 ### Setting the checked state
@@ -430,7 +430,7 @@ There is one final bit of CSS to add — put the following at the bottom of your
 }
 ```
 
-The rule states that when the info-panel has `.open` class set on it, set the {{cssxref("right")}} property of the `<aside>` to `0px`, which causes the panel to appear on the screen again (smoothly due to the transition). Removing the `.open`` class hides the panel again.
+The rule states that when the info-panel has `.open` class set on it, set the {{cssxref("right")}} property of the `<aside>` to `0px`, which causes the panel to appear on the screen again (smoothly due to the transition). Removing the `.open` class hides the panel again.
 
 To add/remove the `.open` class from the info-panel with a click of the button we need to use some JavaScript. Add the following code in between {{htmlelement("script")}} tags:
 

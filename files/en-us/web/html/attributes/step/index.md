@@ -1,5 +1,6 @@
 ---
 title: "HTML attribute: step"
+short-title: step
 slug: Web/HTML/Attributes/step
 page-type: html-attribute
 browser-compat: html.elements.input.step

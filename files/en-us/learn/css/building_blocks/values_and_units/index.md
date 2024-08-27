@@ -153,7 +153,7 @@ Most of these units are more useful when used for print, rather than screen outp
 
 Relative length units are relative to something else. For example:
 
-- `em` and `rem` are relative to the font size of the parent element and the root element, respectively.
+- `em` is relative to the font size of this element, or the font size of the parent element when used for {{cssxref("font-size")}}. `rem` is relative to the font size of the root element.
 - `vh` and `vw` are relative to the viewport's height and width, respectively.
 
 The benefit of using relative units is that with some careful planning you can make it so the size of text or other elements scales relative to everything else on the page. For a complete list of the relative units available, see the reference page for the {{cssxref("length")}} type.
@@ -166,7 +166,7 @@ In the example below, you can see how some relative and absolute length units be
 
 The second box has a width set in `vw` (viewport width) units. This value is relative to the viewport width, and so 10vw is 10 percent of the width of the viewport. If you change the width of your browser window, the size of the box should change. However this example is embedded into the page using an [`<iframe>`](/en-US/docs/Web/HTML/Element/iframe), so this won't work. To see this in action you'll have to [try the example after opening it in its own browser tab](https://mdn.github.io/css-examples/learn/values-units/length.html).
 
-The third box uses `em` units. These are relative to the font size. I've set a font size of `1em` on the containing {{htmlelement("div")}}, which has a class of `.wrapper`. Change this value to `1.5em` and you will see that the font size of all the elements increases, but only the last item will get wider, as its width is relative to that font size.
+The third box uses `em` units. These are relative to the element's font size. I've set a font size of `1em` on the containing {{htmlelement("div")}}, which has a class of `.wrapper`. Change this value to `1.5em` and you will see that the font size of all the elements increases, but only the last item will get wider, as its width is relative to that font size.
 
 After following the instructions above, try playing with the values in other ways, to see what you get.
 
@@ -180,9 +180,9 @@ The HTML illustrated below is a set of nested lists — we have two lists in tot
 
 To start with, we set 16px as the font size on the `<html>` element.
 
-**To recap, the em unit means "my parent element's font-size"** in the case of typography. The {{htmlelement("li")}} elements inside the {{htmlelement("ul")}} with a `class` of `ems` take their sizing from their parent. So each successive level of nesting gets progressively larger, as each has its font size set to `1.3em` — 1.3 times its parent's font size.
+**To recap, the `em` unit means "my parent element's font-size"** if used for `font-size` (and "my own font-size" when used for anything else). The {{htmlelement("li")}} elements inside the {{htmlelement("ul")}} with a `class` of `ems` take their sizing from their parent. So each successive level of nesting gets progressively larger, as each has its font size set to `1.3em` — 1.3 times its parent element's font size.
 
-**To recap, the rem unit means "The root element's font-size"** (rem stands for "root em"). The {{htmlelement("li")}} elements inside the {{htmlelement("ul")}} with a `class` of `rems` take their sizing from the root element (`<html>`). This means that each successive level of nesting does not keep getting larger.
+**To recap, the `rem` unit means "The root element's font-size"** (rem stands for "root em"). The {{htmlelement("li")}} elements inside the {{htmlelement("ul")}} with a `class` of `rems` take their sizing from the root element (`<html>`). This means that each successive level of nesting does not keep getting larger.
 
 However, if you change the `<html>` element's `font-size` in the CSS you will see that everything else changes relative to it — both `rem`- and `em`-sized text.
 
@@ -339,7 +339,7 @@ If you want to go beyond keywords, hexadecimal, and `rgb()` for colors, you migh
 Hue is the property that allows us to tell the difference or similarity between colors like red, orange, yellow, green, blue, etc.
 The key concept is that you can specify a hue in an [`<angle>`](/en-US/docs/Web/CSS/angle) because most of the color models describe hues using a {{glossary("color wheel")}}.
 
-There are several color functions that include a [`<hue>`](/en-US/docs/Web/CSS/hue) component, including `hsl()`,`hwb()`, and [`lch()`](/en-US/docs/Web/CSS/color_value/lch). Other color functions, like [`lab()`](/en-US/docs/Web/CSS/color_value/lab), define colors based on what humans can see.
+There are several color functions that include a [`<hue>`](/en-US/docs/Web/CSS/hue) component, including `hsl()`, `hwb()`, and [`lch()`](/en-US/docs/Web/CSS/color_value/lch). Other color functions, like [`lab()`](/en-US/docs/Web/CSS/color_value/lab), define colors based on what humans can see.
 
 If you want to find out more about these functions and color spaces, see the [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color) guide, the [`<color>`](/en-US/docs/Web/CSS/color_value) reference that lists all the different ways you can use colors in CSS, and the [CSS color module](/en-US/docs/Web/CSS/CSS_colors) that provides an overview of all the color types in CSS and the properties that use color values.
 

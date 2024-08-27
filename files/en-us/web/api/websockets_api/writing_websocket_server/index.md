@@ -12,7 +12,7 @@ This server conforms to [RFC 6455](https://datatracker.ietf.org/doc/html/rfc6455
 
 ## First steps
 
-WebSockets communicate over a [TCP (Transmission Control Protocol)](https://en.wikipedia.org/wiki/Transmission_Control_Protocol) connection. Luckily, C# has a [TcpListener](https://docs.microsoft.com/en-us/dotnet/api/system.net.sockets.tcplistener?view=net-6.0) class which does as the name suggests. It is in the `System.Net.Sockets` namespace.
+WebSockets communicate over a [TCP (Transmission Control Protocol)](https://en.wikipedia.org/wiki/Transmission_Control_Protocol) connection. Luckily, C# has a [TcpListener](https://learn.microsoft.com/en-us/dotnet/api/system.net.sockets.tcplistener?view=net-6.0) class which does as the name suggests. It is in the `System.Net.Sockets` namespace.
 
 > [!NOTE]
 > It is a good idea to include the namespace with the `using` keyword in order to write less. It allows usage of a namespace's classes without typing the full namespace every time.
@@ -140,7 +140,7 @@ You must:
 1. Obtain the value of the "Sec-WebSocket-Key" request header without any leading or trailing whitespace
 2. Concatenate it with "258EAFA5-E914-47DA-95CA-C5AB0DC85B11" (a special GUID specified by RFC 6455)
 3. Compute SHA-1 and Base64 hash of the new value
-4. Write the hash back as the value of "Sec-WebSocket-Accept" response header in an HTTP response
+4. Write the hash back as the value of {{httpheader("Sec-WebSocket-Accept")}} response header in an HTTP response
 
 ```cs
 if (new System.Text.RegularExpressions.Regex("^GET").IsMatch(data))

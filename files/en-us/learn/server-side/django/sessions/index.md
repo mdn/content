@@ -14,10 +14,7 @@ This is a relatively simple example, but it does show how you can use the sessio
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Complete all previous tutorial topics, including <a
-          href="/en-US/docs/Learn/Server-side/Django/Generic_views"
-          >Django Tutorial Part 6: Generic list and detail views</a
-        >
+        Complete all previous tutorial topics, including <a href="/en-US/docs/Learn/Server-side/Django/Generic_views">Django Tutorial Part 6: Generic list and detail views</a>
       </td>
     </tr>
     <tr>
@@ -126,7 +123,8 @@ def index(request):
 
     # Number of visits to this view, as counted in the session variable.
     num_visits = request.session.get('num_visits', 0)
-    request.session['num_visits'] = num_visits + 1
+    num_visits += 1
+    request.session['num_visits'] = num_visits
 
     context = {
         'num_books': num_books,

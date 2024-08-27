@@ -12,7 +12,7 @@ Edge is included with Windows 10 and Windows 11, and is also available for macOS
 
 ## See also
 
-- [Official website](https://www.microsoft.com/edge)
+- [Official website](https://www.microsoft.com/en-us/edge)
 - [Microsoft Edge](https://en.wikipedia.org/wiki/Microsoft_Edge) on Wikipedia
 - Related glossary terms:
 - Related glossary terms:

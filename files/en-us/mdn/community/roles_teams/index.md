@@ -134,7 +134,7 @@ In addition to the responsibilities of other contributor roles, owners have the 
 - Suggesting, documenting, and implementing new policies through the [pull request process](/en-US/docs/MDN/Community/Pull_requests).
 - Following and contributing to issues and discussions across the MDN organization.
 - Ensuring that an issue or pull request gets feedback from one or more members within one week.
-- [Archiving](https://help.github.com/articles/about-archiving-repositories/) or deleting unmaintained repositories.
+- [Archiving](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories) or deleting unmaintained repositories.
 - Discussing GitHub features, selecting the ones to use, and documenting decisions.
 
 **Privileges:**

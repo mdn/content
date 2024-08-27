@@ -41,7 +41,7 @@ The toolchain that we are creating in this article will be used to build and dep
 
 In this article we're going to use the following tools and features:
 
-- [JSX](https://react.dev/learn/writing-markup-with-jsx), a [React](https://react.dev)-related set of syntax extensions that allow you to do things like defining component structures inside JavaScript. You won't need to know React to follow this tutorial, but we've included this to give you an idea of how a non-native web language could be integrated into a toolchain.
+- [JSX](https://react.dev/learn/writing-markup-with-jsx), a [React](https://react.dev/)-related set of syntax extensions that allow you to do things like defining component structures inside JavaScript. You won't need to know React to follow this tutorial, but we've included this to give you an idea of how a non-native web language could be integrated into a toolchain.
 - The latest built-in JavaScript features (at the time of writing), such as [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import).
 - Useful development tools such as [Prettier](https://prettier.io/) for formatting and [ESLint](https://eslint.org/) for linting.
 - [PostCSS](https://postcss.org/) to provide CSS nesting capabilities.
@@ -319,7 +319,7 @@ export default [
 > [!NOTE]
 > Our configuration for `eslint-plugin-react-hooks` is a bit awkward, compared to the one-line additions for `eslint-plugin-react` configurations. This is because `eslint-plugin-react-hooks` doesn't support the new ESLint config format yet. See [facebook/react#28313](https://github.com/facebook/react/issues/28313) for more information.
 
-There's a complete [list of ESLint rules](https://eslint.org/docs/rules/) that you can tweak and configure to your heart's content and many companies and teams have published their [own ESLint configurations](https://www.npmjs.com/search?q=keywords:eslintconfig), which can sometimes be useful either to get inspiration or to select one that you feel suits your own standards. A forewarning though: ESLint configuration is a very deep rabbit hole!
+There's a complete [list of ESLint rules](https://eslint.org/docs/latest/rules/) that you can tweak and configure to your heart's content and many companies and teams have published their [own ESLint configurations](https://www.npmjs.com/search?q=keywords:eslintconfig), which can sometimes be useful either to get inspiration or to select one that you feel suits your own standards. A forewarning though: ESLint configuration is a very deep rabbit hole!
 
 For the sake of simplicity, in this chapter, we're not going to explore all the features of ESLint, since this configuration works for our particular project and its requirements. However, bear in mind that if you want to refine and enforce a rule about how your code looks (or validates), it's very likely that it can be done with the right ESLint configuration.
 
@@ -349,10 +349,11 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
+  base: "/npm-experiment/",
 });
 ```
 
-Read the [Vite documentation](https://vitejs.dev/guide/) for more information on how to configure Vite.
+Read the [Vite documentation](https://vitejs.dev/guide/) for more information on how to configure Vite. Because our site is deployed on GitHub pages, it will be hosted at `https://your-username.github.io/your-repo-name`, so you should set the `base` option according to your GitHub repository's name—but you can always adjust it later when we get to [deployment](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment).
 
 ### CSS transformation
 

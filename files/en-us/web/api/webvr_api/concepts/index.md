@@ -23,7 +23,7 @@ The first VR gaming attempts were big and expensive — in 1991 Virtuality Group
 
 ### VR in recent times
 
-So what's new? Virtual Reality hardware needs to deliver high-precision, low-latency data to deliver an acceptable user experience; computers running VR applications need to be powerful enough to handle all this information. It has not been until recently that such accuracy and power has been available at an affordable cost, if at all. Early VR prototypes cost tens of thousands of dollars, whereas more recent headsets such as the [HTC VIVE](https://www.vive.com/uk/) and [Oculus Rift](https://www.oculus.com/rift/) are available for hundreds of dollars, and cheaper solutions are available — mobile device-based solutions like [Gear VR](https://www.samsung.com/global/galaxy/what-is/gear-vr/) and [Google Cardboard](https://arvr.google.com/cardboard/).
+So what's new? Virtual Reality hardware needs to deliver high-precision, low-latency data to deliver an acceptable user experience; computers running VR applications need to be powerful enough to handle all this information. It has not been until recently that such accuracy and power has been available at an affordable cost, if at all. Early VR prototypes cost tens of thousands of dollars, whereas more recent headsets such as the [HTC VIVE](https://www.vive.com/uk/) and [Meta Quest](https://www.meta.com/quest/quest-3/) are available for hundreds of dollars, and cheaper solutions are available — mobile device-based solutions like [Google Cardboard](https://arvr.google.com/cardboard/).
 
 On the software side, Valve has created [SteamVR](https://store.steampowered.com/search/?category1=993) software, which is compatible with the VIVE and other solutions, and serves to provide access to software, such as a usable VR UI.
 
@@ -168,7 +168,7 @@ DoF is directly related to the tracking of the user's head movement.
 
 Although our field of view is much larger (approximately 180º), we need to be aware that only in a small portion of that field can you perceive symbols (the center 60º) or read text (the center 10º). If you do not have an eye tracking sensor we assume that the center of the screen is where the user is focusing their eyes.
 
-This limitation is important to consider when deciding where to place visuals on the app canvas — too far toward the edge of the cone of focus can lead to eye strain much more quickly. Read very interesting post [Quick VR Mockups with Illustrator](https://blog.mozvr.com/quick-vr-prototypes/).
+This limitation is important to consider when deciding where to place visuals on the app canvas — too far toward the edge of the cone of focus can lead to eye strain much more quickly.
 
 ### 3D Positional Audio
 
