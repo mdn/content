@@ -3,7 +3,7 @@ title: Sec-WebSocket-Protocol
 slug: Web/HTTP/Headers/Sec-WebSocket-Protocol
 page-type: http-header
 browser-compat: http.headers.Sec-WebSocket-Protocol
-spec-urls: https://datatracker.ietf.org/doc/html/rfc6455#section-11.3.3
+spec-urls: https://datatracker.ietf.org/doc/html/rfc6455#section-11.3.4
 ---
 
 {{HTTPSidebar}}
@@ -35,8 +35,16 @@ The sub-protocol selected by the server is made available to the web application
 
 ## Syntax
 
+Request:
+
 ```http
 Sec-WebSocket-Protocol: <sub-protocols>
+```
+
+Response:
+
+```http
+Sec-WebSocket-Protocol: <selected-sub-protocol>
 ```
 
 ## Directives
@@ -91,6 +99,5 @@ Sec-WebSocket-Protocol: soap
 - {{HTTPHeader("Sec-WebSocket-Accept")}}
 - {{HTTPHeader("Sec-WebSocket-Key")}}
 - {{HTTPHeader("Sec-WebSocket-Version")}}
-- {{HTTPHeader("Sec-WebSocket-Protocol")}}
 - {{HTTPHeader("Sec-WebSocket-Extensions")}}
 - [The WebSocket handshake](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#the_websocket_handshake) and [Subprotocols](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#subprotocols) in _Writing WebSocket servers_
