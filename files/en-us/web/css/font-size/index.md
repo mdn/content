@@ -15,18 +15,18 @@ The **`font-size`** [CSS](/en-US/docs/Web/CSS) property sets the size of the fon
 
 ```css
 /* <absolute-size> values */
-font-size: xx-small; /* 0.60 */
-font-size: x-small; /* 0.75 */
-font-size: small; /* 0.889 */
-font-size: medium; /* 1.0 (browser default, usually 16px) */
-font-size: large; /* 1.2 */
-font-size: x-large; /* 1.5 */
-font-size: xx-large; /* 2.0 */
-font-size: xxx-large; /* 3.0 */
+font-size: xx-small;
+font-size: x-small;
+font-size: small;
+font-size: medium;
+font-size: large;
+font-size: x-large;
+font-size: xx-large;
+font-size: xxx-large;
 
 /* <relative-size> values */
-font-size: smaller; /* 0.8 times the parent element's font size */
-font-size: larger; /* 1.2 times the parent element's font size */
+font-size: smaller;
+font-size: larger;
 
 /* <length> values */
 font-size: 12px;
@@ -50,11 +50,11 @@ font-size: unset;
 
 - `xx-small`, `x-small`, `small`, `medium`, `large`, `x-large`, `xx-large`, `xxx-large`
 
-  - : Absolute-size keywords, based on the user's default font size (which is `medium`).
+  - : [Absolute-size](/en-US/docs/Web/CSS/absolute-size) keywords, based on the user's default font size (which is `medium`).
 
 - `larger`, `smaller`
 
-  - : Relative-size keywords. The font will be larger or smaller relative to the parent element's font size, roughly by the ratio used to separate the absolute-size keywords above.
+  - : [Relative-size](/en-US/docs/Web/CSS/relative-size) keywords. The font will be larger or smaller relative to the parent element's font size, roughly by the ratio used to separate the absolute-size keywords above.
 
 - {{cssxref("&lt;length&gt;")}}
 
