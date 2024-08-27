@@ -161,7 +161,7 @@ This example shows three images: the image with a `hue-rotate()` filter function
             <feColorMatrix type="hueRotate" values="90" />
           </filter>
           <image
-            xlink:href="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+            href="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
             filter="url(#hue-rotate)"
             width="220"
             height="220" />
