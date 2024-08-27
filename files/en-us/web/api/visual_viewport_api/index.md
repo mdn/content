@@ -81,7 +81,7 @@ const scrollendUpdater = () => {
 };
 ```
 
-The `updateText()` function looks like so — it sets the {{domxref("HTMLElement.innerText()")}} of the first paragraph to show the current `VisualViewport.offsetLeft` and `VisualViewport.offsetTop` values, and the `HTMLElement.innerText()` of the second paragraph to show the current `Window.scrollX` and `Window.scrollY` values. After defining `updateText()`, we immediately invoke it so that the information box displays correctly on page load.
+The `updateText()` function looks like so — it sets the {{domxref("HTMLElement.innerText")}} of the first paragraph to show the current `VisualViewport.offsetLeft` and `VisualViewport.offsetTop` values, and the `HTMLElement.innerText` of the second paragraph to show the current `Window.scrollX` and `Window.scrollY` values. After defining `updateText()`, we immediately invoke it so that the information box displays correctly on page load.
 
 ```js
 function updateText() {
