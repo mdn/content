@@ -71,6 +71,10 @@ elem.addEventListener(
 elem.dispatchEvent(event);
 ```
 
+> [!WARNING]
+> The examples are not interchangable but represent their common usages.
+> The shown `initEvent` call passes `true` for the parameters `cancelable` and `bubbles`, which are missing and therefore `false` with the Event constructor.
+
 ### Event bubbling
 
 It is often desirable to trigger an event from a child element, and have an ancestor catch it; optionally, with data:
