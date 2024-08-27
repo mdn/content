@@ -3,6 +3,7 @@
   "version": "0.2",
   "language": "en-US",
   "languageId": "*",
+  "useGitignore": true,
   "dictionaries": [
     "project-words",
     "ignored-words",

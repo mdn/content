@@ -12,10 +12,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-        with:
-          repository: mdn/content
-          ref: main
-          path: content
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v4
@@ -27,7 +23,7 @@ jobs:
         run: |
           npm install
           echo Running spelling check...
-          output=$(npx cspell --no-progress --config .vscode/cspell.json "content/**/*.md" || exit 0)
+          output=$(npx cspell --no-progress --gitignore --config .vscode/cspell.json "**/*.md" || exit 0)
           echo "$output"
           echo "OUTPUT<<EOF" >> $GITHUB_ENV
           echo "$output" >> $GITHUB_ENV
@@ -41,7 +37,7 @@ jobs:
           title: Weekly spelling check
           body: |
             Typos and unknown words:
-            
+
             ```
             ${{ env.OUTPUT }}
             ```
