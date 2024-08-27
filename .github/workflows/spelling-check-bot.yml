@@ -40,10 +40,13 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           title: Weekly spelling check
           body: |
-            ## Found typos and unknown words:
+            Typos and unknown words:
+            
+            ```
             ${{ env.OUTPUT }}
+            ```
 
             > [!TIP]
-            > Add valid words to the [ignored-words.txt](https://github.com/mdn/content/blob/main/.vscode/ignored-words.txt) or [project-words.txt](https://github.com/mdn/content/blob/main/.vscode/project-words.txt) file, and fix the typos.
+            > To exclude words from the spellchecker, you can add valid words (web technology terms or abbreviations) to the [project-words.txt](https://github.com/mdn/content/blob/main/.vscode/project-words.txt) dictionary for IDE autocompletion. To ignore strings that are not words (`AABBCC` in code, for instance), you can add them to [ignored-words.txt](https://github.com/mdn/content/blob/main/.vscode/ignored-words.txt).
         env:
           OUTPUT: ${{ env.OUTPUT }}
