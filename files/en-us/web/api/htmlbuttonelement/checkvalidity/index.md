@@ -8,7 +8,10 @@ browser-compat: api.HTMLButtonElement.checkValidity
 
 {{APIRef("Web Components")}}
 
-The **`checkValidity()`** method of the {{domxref("HTMLButtonElement")}} interface checks if the element meets any [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) rules applied to it.
+The **`checkValidity()`** method of the {{domxref("HTMLButtonElement")}} interface returns a boolean value which indicates if the element meets any [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) rules applied to it. If false, the method also fires the `invalid` event on the element.
+
+> [!NOTE]
+> An HTML {{htmlelement("button")}} element with a non-null {{domxref("HTMLButtonElement.validationMessage", "validationMessage"}} is considered invalid, will match the CSS {{cssxref(":invalid")}} pseudo-class, and will cause `checkValidity()` to return false. Use the {{domxref("HTMLButtonElement.setCustomValidity()")}} method to set the {{domxref("HTMLButtonElement.validationMessage")}} to the empty string to enable the {{domxref("HTMLButtonElement.validity", "validity")}} state to be valid.
 
 ## Syntax
 
@@ -22,7 +25,7 @@ None.
 
 ### Return value
 
-A boolean value, `true` if the element meets all validation constraints.
+A boolean value.
 
 ## Examples
 
@@ -48,3 +51,5 @@ console.log(element.checkValidity());
 - {{HTMLElement("form")}}
 - [Learn: Client-side form validation](/en-US/docs/Learn/Forms/Form_validation)
 - [Guide: Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
+- CSS {{cssxref(":valid")}} and {{cssxref(":invalid")}} pseudo-classes
+- [CodePen example of an invalid `<button>`](https://codepen.io/estelle/pen/abgKeEp)

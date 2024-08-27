@@ -169,3 +169,4 @@ If you activate the "reportValidity()" button before entering an age, the `repor
 - [checkValidity](/en-US/docs/Web/API/HTMLInputElement/checkValidity)
 - [Learn: Client-side form validation](/en-US/docs/Learn/Forms/Form_validation)
 - [Guide: Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
+- CSS {{cssxref(":valid")}} and {{cssxref(":invalid")}} pseudo-classes
