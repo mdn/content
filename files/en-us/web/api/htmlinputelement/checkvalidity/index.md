@@ -8,9 +8,9 @@ browser-compat: api.HTMLInputElement.checkValidity
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLInputElement.checkValidity()`** method returns a boolean value which indicates validity of the value of the element.
+The **`checkValidity()`** method of the {{domxref("HTMLInputElement")}} interface returns a boolean value which indicates if the element meets the [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) rules applied to it.
 
-Returns `trye` if the input's {{domxref("HTMLInputElement.validity", "validity")}} object's `valid` property is true. The the {{domxref("HTMLInputElement.validationMessage", "validationMessage")}} must be null or the empty string for the `checkValidity()` method to return `true`. This method also fires the {{domxref("HTMLInputElement/invalid_event", "invalid")}} event on the element if the value is invalid or otherwise returns false.
+This method returns `true` if the input's {{domxref("HTMLInputElement.validity", "validity")}} object's `valid` property is true. The {{domxref("HTMLInputElement.validationMessage", "validationMessage")}} must be null or the empty string for the `checkValidity()` method to return `true`. This method also fires the {{domxref("HTMLInputElement/invalid_event", "invalid")}} event on the element if the value is invalid or otherwise returns false.
 
 > [!NOTE]
 > The input is considered invalid if the input is suffering from a custom error, even if the value is otherwise valid according to [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). This occurs when the {{domxref("HTMLInputElement.setCustomValidity()")}} method set a custom error message when the value was invalid and the error message has not been reset to the empty string. See the [`reportValidity()` custom error message](/en-US/docs/Web/API/HTMLInputElement/reportValidity) example for more information.
