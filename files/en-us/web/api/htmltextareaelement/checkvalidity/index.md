@@ -10,7 +10,7 @@ browser-compat: api.HTMLTextAreaElement.checkValidity
 
 The **`checkValidity()`** method of the {{domxref("HTMLTextAreaElement")}} interface checks if the {{HTMLElement("textarea")}} element meets all of the [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) rules applied to it.
 
-The method returns `false` if the `<textarea>` value does not meet all the validation constraints applied to it or if the element has a custom validation message set, and `true` if if the element does meet all of the constraints applied and no custom validity message is set or it is set to the empty string.
+The method returns `false` if the `<textarea>` value does not meet all the validation constraints applied to it or if the element has a custom validation message set, and `true` otherwise.
 
 ## Syntax
 

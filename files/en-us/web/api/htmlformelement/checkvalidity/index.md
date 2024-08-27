@@ -8,7 +8,7 @@ browser-compat: api.HTMLFormElement.checkValidity
 
 {{APIRef("Web Components")}}
 
-The **`checkValidity()`** method of the {{domxref("HTMLFormElement")}} interface checks if the form controls associated with the form, either nested within the or associated via the `form` attribute, meet the [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) rules applied to them.
+The **`checkValidity()`** method of the {{domxref("HTMLFormElement")}} interface checks if the form controls associated with the form, either nested within the form or associated via the `form` attribute, meet the [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) rules applied to them.
 
 Returns `true` if the element's child and otherwise associated controls that are subject to constraint validation satisfy those constraints; returns `false` if any associated control does not satisfy their constraints or, if subject to constaint validation, has a non-null custom validity message.
 
