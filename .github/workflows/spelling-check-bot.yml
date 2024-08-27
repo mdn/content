@@ -12,18 +12,15 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-
+        with:
+          repository: mdn/content
+          ref: main
+          path: content
       - name: Setup Node.js environment
         uses: actions/setup-node@v4
         with:
           node-version-file: ".nvmrc"
           cache: yarn
-
-      - uses: actions/checkout@v4
-        with:
-          repository: mdn/content
-          ref: main
-          path: content
 
       - name: Run scripts
         run: |
