@@ -34,7 +34,7 @@ The first two events allow you to position elements relative to the visual viewp
 
 ## Examples
 
-Our [Visual viewport events](https://visual-viewport-events.glitch.me/) example provides a basic demonstration of how the different visual viewport features work, including the three event types. Load the page in supporting desktop and mobile browsers and try scrolling around the displayed grid of boxes. Also try pinch-zooming on the mobile browser. On `resize` and `scroll`, the information box is repositioned to keep the same position relative to the visual viewport, and the viewport and scroll information it shows is updated. Also, on `resize` and `scroll` we change the box color to indicate something is happening, changing it back on `scrollend`.
+Our [Visual Viewport API](https://mdn.github.io/dom-examples/visual-viewport-api/) example provides a basic demonstration of how the different visual viewport features work, including the three event types. Load the page in supporting desktop and mobile browsers and try scrolling around the page and pinch-zooming. On `resize` and `scroll`, the information box is repositioned to keep the same position relative to the visual viewport, and the viewport and scroll information it shows is updated. Also, on `resize` and `scroll` we change the box color to indicate something is happening, changing it back on `scrollend`.
 
 You'll find that on desktop browsers the {{domxref("Window.scrollX")}} and {{domxref("Window.scrollY")}} values are updated as the window is scrolled — the visual viewport position does not change. On mobile browsers however, the {{domxref("VisualViewport.offsetLeft")}} and {{domxref("VisualViewport.offsetTop")}} values are generally updated — it is usually the visual viewport that changes rather than the window position.
 
@@ -42,8 +42,7 @@ The example HTML can be seen below. The information box is represented by a {{ht
 
 ```html
 <p id="instructions">
-  Try scrolling around on a desktop and a mobile browser to see how the reported
-  values change. Also try pinch/zooming on a mobile browser to see the effect.
+  Try scrolling around and pinch-zooming to see how the reported values change.
 </p>
 <div id="output">
   <p id="visual-info"></p>
@@ -100,7 +99,7 @@ updateText();
 Now we set event handler properties on both the visual viewport and the {{domxref("Window")}} object to run the key functions at the appropriate times on both mobile and desktop:
 
 - We set the handlers on `window` so that the information box position and contents will update on conventional window scrolling operations, for example when you scroll the page on a desktop browser.
-- We set the handlers on `visualViewport` so that the information box position and contents will update on visual viewport scrolling/zooming operations, for example when you pinch-zoom and then scroll the page on a mobile browser.
+- We set the handlers on `visualViewport` so that the information box position and contents will update on visual viewport scrolling/zooming operations, for example when you scroll and pinch-zoom the page on a mobile browser.
 
 ```js
 visualViewport.onresize = scrollUpdater;
