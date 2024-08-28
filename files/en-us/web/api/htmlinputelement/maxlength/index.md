@@ -33,7 +33,7 @@ You can use the `maxLength` property to retrieve or set the `<input>`'s `maxleng
 ```js
 const inputElement = document.querySelector("#password");
 console.log(`Element's maxLength: ${inputElement.maxLength}`); // "Element's maxlength: 20"
-inputElement.maxLength = "18"; // updates the element's maxlength attribute value
+inputElement.maxLength = 18; // updates the element's maxlength attribute value
 ```
 
 ## Specifications

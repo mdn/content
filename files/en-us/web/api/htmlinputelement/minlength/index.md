@@ -33,7 +33,7 @@ You can use the `minLength` property to retrieve or set the `<input>`'s `minleng
 ```js
 const inputElement = document.querySelector("#password");
 console.log(`Element's minLength: ${inputElement.minLength}`); // "Element's minlength: 8"
-inputElement.minLength = "12"; // updates the element's minlength attribute value
+inputElement.minLength = 12; // updates the element's minlength attribute value
 ```
 
 ## Specifications
