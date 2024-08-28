@@ -70,4 +70,4 @@ console.log(scripts.map((script) => script.id)); // ["script-2"]
 {{Compat}}
 
 > [!NOTE]
-> This API is based on Chromium's [`chrome.scripting`](https://developer.chrome.com/docs/extensions/reference/scripting/#method-getRegisteredContentScripts) API.
+> This API is based on Chromium's [`chrome.scripting`](https://developer.chrome.com/docs/extensions/reference/api/scripting#method-getRegisteredContentScripts) API.
