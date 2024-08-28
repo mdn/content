@@ -85,7 +85,7 @@ With `WebSocketStream`, the information previously available via the `WebSocket`
 const { code, reason } = await wss.closed;
 ```
 
-The promise rejects in the event of an unclean close.
+The promise rejects in the event of an unclean close operation.
 
 As mentioned earlier, the WebSocket connection can be closed using an {{domxref("AbortController")}}. The necessary {{domxref("AbortSignal")}} is passed to the `WebSocketStream` constructor during creation, and {{domxref("AbortController.abort()")}} can then be called when required:
 
