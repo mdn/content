@@ -18,11 +18,12 @@ Later HTTP specifications don't mention "content headers" or expand on the list 
 
 These headers may be present in both HTTP request and response messages and include:
 
+- {{HTTPHeader("Content-Encoding")}}
 - {{HTTPHeader("Content-Length")}}
 - {{HTTPHeader("Content-Range")}}
 - {{HTTPHeader("Content-Type")}}
 - {{HTTPHeader("Trailer")}}
-- {{HTTPHeader("Content-Encoding")}}
+- {{HTTPHeader("Transfer-Encoding")}}
 
 ## See also
 
