@@ -104,7 +104,7 @@ The HTML specification defines the following set of standard metadata names:
 
   - `normal`
     - : The document is unaware of color schemes and should be rendered using the default color palette.
-  - \[`light` | `dark`]+
+  - `light`, `dark`, `light dark`, `dark light`
     - : One or more color schemes supported by the document. Specifying the same color scheme more than once has the same effect as specifying it only once. Indicating multiple color schemes indicates that the first scheme is preferred by the document, but that the second specified scheme is acceptable if the user prefers it.
   - `only light`
     - : Indicates that the document _only_ supports light mode, with a light background and dark foreground colors. By specification, `only dark` _is not valid_, because forcing a document to render in dark mode when it isn't truly compatible with it can result in unreadable content; all major browsers default to light mode if not otherwise configured.

@@ -18,7 +18,7 @@ Firefox supports a number of _Mozilla extensions to [CSS](/en-US/docs/Web/CSS)_,
 - {{CSSxRef("box-align", "-moz-box-align")}} {{deprecated_inline}}
 - {{CSSxRef("box-direction", "-moz-box-direction")}} {{deprecated_inline}}
 - {{CSSxRef("box-flex", "-moz-box-flex")}} {{deprecated_inline}}
-- {{CSSxRef("box-ordinal-group" ,"-moz-box-ordinal-group")}} {{deprecated_inline}}
+- {{CSSxRef("box-ordinal-group", "-moz-box-ordinal-group")}} {{deprecated_inline}}
 - {{CSSxRef("box-orient", "-moz-box-orient")}} {{deprecated_inline}}
 - {{CSSxRef("box-pack", "-moz-box-pack")}} {{deprecated_inline}}
 - {{CSSxRef("-moz-float-edge")}} {{deprecated_inline}}
@@ -437,7 +437,7 @@ Properties: {{CSSxRef("width")}}, {{CSSxRef("min-width")}}, and {{CSSxRef("max-w
 - {{CSSxRef(":-moz-handler-disabled")}}
 - {{CSSxRef("::-moz-inline-table")}}
 
-### L
+### L – M
 
 - {{CSSxRef(":-moz-last-node")}}
 - {{CSSxRef("::-moz-list-bullet")}}
@@ -448,6 +448,7 @@ Properties: {{CSSxRef("width")}}, {{CSSxRef("min-width")}}, and {{CSSxRef("max-w
 - {{CSSxRef(":-moz-lwtheme")}}
 - {{CSSxRef(":-moz-lwtheme-brighttext")}}
 - {{CSSxRef(":-moz-lwtheme-darktext")}}
+- {{CSSxRef("::-moz-meter-bar")}}
 
 ### N – R
 

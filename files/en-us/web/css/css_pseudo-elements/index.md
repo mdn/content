@@ -73,6 +73,14 @@ Pseudo-elements enable targeting entities not included in HTML and sections of c
 
   - {{CSSXref("::part")}}
 
+- [CSS view transitions](/en-US/docs/Web/CSS/CSS_view_transitions) module
+
+  - {{cssxref("::view-transition")}} {{Experimental_Inline}}
+  - {{cssxref("::view-transition-image-pair()")}} {{Experimental_Inline}}
+  - {{cssxref("::view-transition-group()")}} {{Experimental_Inline}}
+  - {{cssxref("::view-transition-new()")}} {{Experimental_Inline}}
+  - {{cssxref("::view-transition-old()")}} {{Experimental_Inline}}
+
 - [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors)
 
   - [Attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors)
@@ -91,7 +99,7 @@ Pseudo-elements enable targeting entities not included in HTML and sections of c
   - {{cssxref("content")}} property
   - {{cssxref("quotes")}} property
 
-- [Text fragments](/en-US/docs/Web/Text_fragments)
+- [Text fragments](/en-US/docs/Web/URI/Fragment/Text_fragments)
 
 - {{DOMXref("AnimationEvent.pseudoElement")}} property
 - {{DOMXref("KeyframeEffect.pseudoElement")}} property

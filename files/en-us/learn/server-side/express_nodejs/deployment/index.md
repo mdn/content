@@ -501,7 +501,7 @@ Next, we will set up a Glitch account, upload the Library project from GitHub, a
 
 To start using Glitch you will first need to create an account:
 
-- Go to [glitch.com](https://glitch.com) and click the **Sign up** button in the top toolbar.
+- Go to [glitch.com](https://glitch.com/) and click the **Sign up** button in the top toolbar.
 - Select GitHub in the popup to sign up using your GitHub credentials.
 - You'll then be logged in to the Glitch dashboard: <https://glitch.com/dashboard>.
 
@@ -636,7 +636,7 @@ Having installed all the dependencies, Railway will look for scripts named "buil
 
 > [!NOTE]
 > Railway uses [Nixpacks](https://nixpacks.com/docs) to recognize various web application frameworks written in different programming languages.
-> You don't need to know anything else for this tutorial, but you can find out more about options for deploying node applications in [Nixpacks Node](https://nixpacks.com/docsproviders/node).
+> You don't need to know anything else for this tutorial, but you can find out more about options for deploying node applications in [Nixpacks Node](https://nixpacks.com/docs/providers/node).
 
 Once the application is running it can configure itself using information provided in [environment variables](https://docs.railway.app/guides/variables).
 For example, an application that uses a database must get the address using a variable.

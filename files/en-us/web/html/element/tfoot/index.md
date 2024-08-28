@@ -49,6 +49,8 @@ The following attributes are deprecated and should not be used. They are documen
 
 See {{HTMLElement("table")}} for a complete table example introducing common standards and best practices.
 
+### Table with footer
+
 This example demonstrates a table divided into a head section with column headers, a body section with the table's main data, and a foot section summarizing data of one column.
 
 #### HTML

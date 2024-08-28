@@ -867,7 +867,7 @@ For {{SVGElement('foreignObject')}}, `x` defines the x coordinate of the upper l
   </tbody>
 </table>
 
-> [!Note]
+> [!NOTE]
 > The x-axis coordinate of the `<foreignObject>` can also be defined with the {{cssxref("x")}} _geometry property_. If set in CSS, the `x` property value overrides the `x` attribute value.
 
 ### `<glyphRef>`
@@ -937,7 +937,7 @@ For {{SVGElement('image')}}, `x` defines the x coordinate of the upper left corn
   </tbody>
 </table>
 
-> [!Note]
+> [!NOTE]
 > The x-axis coordinate of the `<image>` can also be defined with the {{cssxref("x")}} _geometry property_. If set in CSS, the `x` property value overrides the `x` attribute value.
 
 ### `<mask>`
@@ -1033,7 +1033,7 @@ For {{SVGElement('rect')}}, `x` defines the x coordinate of the upper left corne
   </tbody>
 </table>
 
-> [!Note]
+> [!NOTE]
 > The x-axis coordinate of the `<rect>` can also be defined with the {{cssxref("x")}} _geometry property_. If set in CSS, the `x` property value overrides the `x` attribute value.
 
 ### `<svg>`
@@ -1069,7 +1069,7 @@ For {{SVGElement('svg')}}, `x` defines the x coordinate of the upper left corner
   </tbody>
 </table>
 
-> [!Note]
+> [!NOTE]
 > The x-axis coordinate of the `<svg>` can also be defined with the {{cssxref("x")}} _geometry property_. If set in CSS, the `x` property value overrides the `x` attribute value.
 
 ### `<text>`
@@ -1299,7 +1299,7 @@ For {{SVGElement('use')}}, `x` defines the x coordinate of the upper left corner
   </tbody>
 </table>
 
-> [!Note]
+> [!NOTE]
 > Declaring a `<length>` or `<percentage>` value in CSS using the {{cssxref("x")}} _geometry property_ overrides the x-axis coordinate of the `<use>` set by the `x` attribute in some browsers.
 > This behavior is non-standard, deprecated, and likely to be removed in future browser versions.
 

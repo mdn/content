@@ -82,7 +82,7 @@ textTrackElem.addEventListener("cuechange", (event) => {
 The JavaScript interface that represents the `<track>` element is {{domxref("HTMLTrackElement")}}.
 The text track associated with an element can be obtained from the {{domxref("HTMLTrackElement.track")}} property, and is of type {{domxref("TextTrack")}}.
 
-`TextTrack` objects also can be added to a {{domxref("HTMLVideoElement")}} or {{domxref("HTMLAudioElement")}} elements using the {{domxref("HTMLMediaElement.addTrack()")}} method.
+`TextTrack` objects also can be added to a {{domxref("HTMLVideoElement")}} or {{domxref("HTMLAudioElement")}} elements using the {{domxref("HTMLMediaElement.addTextTrack()")}} method.
 The `TextTrack` objects associated with a media element stored in a {{domxref("TextTrackList")}}, which can be retrieved using the {{domxref("HTMLMediaElement.textTracks")}} property.
 
 ## Examples

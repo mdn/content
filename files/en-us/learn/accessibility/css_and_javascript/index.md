@@ -207,7 +207,7 @@ There are many instances where a visual design will require that not all content
 
 Screen reader users don't care about any of this — they are happy with the content as long as the source order makes sense, and they can get to it all. Absolute positioning (as used in this example) is generally seen as one of the best mechanisms of hiding content for visual effect because it doesn't stop screen readers from getting to it.
 
-On the other hand, you shouldn't use {{cssxref("visibility")}}`:hidden` or {{cssxref("display")}}`:none`, because they do hide content from screen readers. Unless of course, there is a good reason why you want this content to be hidden from screen readers.
+On the other hand, you shouldn't use {{cssxref("visibility", "visibility: hidden")}} or {{cssxref("display", "display: none")}}, because they do hide content from screen readers. Unless of course, there is a good reason why you want this content to be hidden from screen readers.
 
 > **Note:** [Invisible Content Just for Screen Reader Users](https://webaim.org/techniques/css/invisiblecontent/) has a lot more useful detail surrounding this topic.
 

@@ -22,4 +22,4 @@ For SPA in application layer context, most of the popular SPA frameworks have th
 
 - [Angular router](https://angular.io/guide/router)
 - [React router](https://reactrouter.com/)
-- [Vue router](https://router.vuejs.org)
+- [Vue router](https://router.vuejs.org/)

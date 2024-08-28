@@ -22,11 +22,11 @@ depthRange(zNear, zFar)
 - `zNear`
   - : A {{domxref("WebGL_API/Types", "GLclampf")}} specifying the mapping of the near clipping plane to
     window or viewport coordinates. Clamped to the range 0 to 1 and must be less than or
-    equal to `zFar`. The default value i`s 0.`
+    equal to `zFar`. The default value is 0.
 - `zFar`
   - : A {{domxref("WebGL_API/Types", "GLclampf")}} specifying the mapping of the far clipping plane to window
     or viewport coordinates. Clamped to the range 0 to 1. The default value
-    i`s 1.`
+    is 1.
 
 ### Return value
 

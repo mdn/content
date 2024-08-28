@@ -15,7 +15,7 @@ There are some limitations to using the `path()` function. The path has to be de
 
 ## Syntax
 
-When used in {{cssxref("offset-path")}} or {{SVGAttr("d")}}:
+When used in {{cssxref("offset-path")}} or {{cssxref("d")}}:
 
 ```css
 path(<string>)

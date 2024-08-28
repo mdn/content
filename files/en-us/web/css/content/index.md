@@ -376,7 +376,7 @@ When generating content on regular elements (rather than just on pseudo-elements
 
 ### Element replacement with `<gradient>`
 
-This example demonstrates how an element's contents can be replaced by any type of `<image>`, in this case, a CSS gradient. The element's contents are replaced with a {{cssxref("gradient/linear-gradient" ,"linear-gradient()")}}. With {{cssxref("@supports")}}, we provide alt text support and a {{cssxref("gradient/repeating-linear-gradient" ,"repeating-linear-gradient()")}} for browsers that support alt text with element content replacement.
+This example demonstrates how an element's contents can be replaced by any type of `<image>`, in this case, a CSS gradient. The element's contents are replaced with a {{cssxref("gradient/linear-gradient", "linear-gradient()")}}. With {{cssxref("@supports")}}, we provide alt text support and a {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}} for browsers that support alt text with element content replacement.
 
 #### HTML
 
@@ -414,7 +414,7 @@ Check the [browser compatibility chart](#browser_compatibility). All browsers su
 
 ### Element replacement with `image-set()`
 
-This example replaces an element's content with a {{cssxref("image/image-set" ,"image-set()")}}. If the users display has normal resolution the `1x.png` will be displayed screens with a higher resolution will display the `2x.png` image.
+This example replaces an element's content with a {{cssxref("image/image-set", "image-set()")}}. If the users display has normal resolution the `1x.png` will be displayed screens with a higher resolution will display the `2x.png` image.
 
 #### HTML
 

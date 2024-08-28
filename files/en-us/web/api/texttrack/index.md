@@ -11,7 +11,7 @@ The **`TextTrack`** interface of the [WebVTT API](/en-US/docs/Web/API/WebVTT_API
 
 An object of this type owns the list of {{domxref("VTTCue")}} objects that will be displayed over the video at various points.
 
-`TextTrack` objects can be added to a {{domxref("HTMLVideoElement")}} or {{domxref("HTMLAudioElement")}} element using the {{domxref("HTMLMediaElement.addTrack()")}} method, which has the same effect as adding text tracks declaratively using {{htmlelement("track")}} elements inside a {{htmlelement("video")}} or {{htmlelement("audio")}} element.
+`TextTrack` objects can be added to a {{domxref("HTMLVideoElement")}} or {{domxref("HTMLAudioElement")}} element using the {{domxref("HTMLMediaElement.addTextTrack()")}} method, which has the same effect as adding text tracks declaratively using {{htmlelement("track")}} elements inside a {{htmlelement("video")}} or {{htmlelement("audio")}} element.
 The `TextTrack` objects are stored in a {{domxref("TextTrackList")}}, which can be retrieved using the {{domxref("HTMLMediaElement.textTracks")}} property.
 
 {{InheritanceDiagram}}

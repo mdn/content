@@ -27,7 +27,7 @@ The first panel on the left contains two components: a {{HTMLElement("video")}} 
 
 This is straightforward, and we'll see how it ties together when we get into the JavaScript code.
 
-Next, we have a {{HTMLElement("canvas")}} element into which the captured frames are stored, potentially manipulated in some way, and then converted into an output image file. This canvas is kept hidden by styling the canvas with {{cssxref("display")}}`:none`, to avoid cluttering up the screen — the user does not need to see this intermediate stage.
+Next, we have a {{HTMLElement("canvas")}} element into which the captured frames are stored, potentially manipulated in some way, and then converted into an output image file. This canvas is kept hidden by styling the canvas with {{cssxref("display", "display: none")}}, to avoid cluttering up the screen — the user does not need to see this intermediate stage.
 
 We also have an {{HTMLElement("img")}} element into which we will draw the image — this is the final display shown to the user.
 
