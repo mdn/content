@@ -11,7 +11,7 @@ browser-compat: api.HTMLInputElement.minLength
 The **`minLength`** property of the {{domxref("HTMLInputElement")}} interface indicates the minimum number of characters required for the value of the {{HTMLElement("input")}} element to be valid. It reflects the element's [`minlength`](/en-US/docs/Web/HTML/Element/input#minLength) attribute. If no `minlength` attribute is set, the value is `-1` and there is no minimum length required.
 
 > [!NOTE]
-> If the input has a value, and that value has fewer characters than the `minlength` attribute requires, the read-only {{domxref("ValidityState.tooShort", "tooShort")}} property of a {{domxref("ValidityState")}} object will be `true` and the element will match the {{cssxref(":invalid")}} pseudo-class.
+> If the input has a value, and that value has fewer characters than the `minlength` attribute requires, the element is considered invalid and the {{domxref("ValidityState")}} object's {{domxref("ValidityState.tooShort", "tooShort")}} property will be `true`.
 
 ## Value
 
