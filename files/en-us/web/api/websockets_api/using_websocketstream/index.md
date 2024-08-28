@@ -30,7 +30,7 @@ if ("WebSocketStream" in self) {
 To create a WebSocket client, you first need to create a new `WebSocketStream` instance using the {{domxref("WebSocketStream.WebSocketStream", "WebSocketStream()")}} constructor. In its simplest form, it takes the URL of the WebSocket server as an argument:
 
 ```js
-const wss = new WebSocketStream("example.com/wss");
+const wss = new WebSocketStream("wss://example.com/wss");
 ```
 
 It can also take an options object containing custom protocols and/or an {{domxref("AbortSignal")}} (see [Closing the connection](#closing_the_connection)):
@@ -145,6 +145,9 @@ In the supporting code path, we begin by defining a variable containing the WebS
 const wsURL = "ws://127.0.0.1/";
 const wss = new WebSocketStream(wsURL);
 ```
+
+> [!NOTE]
+> Best practice is to use secure WebSockets (`wss://`) in production apps. However, in this demo we are connecting to localhost, therefore we need to use the non-secure WebSocket protocol (`ws://`) for the example to work.
 
 The main bulk of our code is contained within the `start()` function, which we define and then immediately invoke. We await the {{domxref("WebSocketStream.opened", "opened")}} promise, then after it fulfills write a message to let the reader know the connection is successful and create {{domxref("ReadableStreamDefaultReader")}} and {{domxref("WritableStreamDefaultWriter")}} instances from the returned `readable` and `writable` properties.
 

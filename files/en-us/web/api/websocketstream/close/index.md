@@ -47,7 +47,7 @@ None (`undefined`).
 ## Examples
 
 ```js
-const wsURL = "ws://127.0.0.1/";
+const wsURL = "wss://127.0.0.1/";
 const wss = new WebSocketStream(wsURL);
 
 setTimeout(() => {
