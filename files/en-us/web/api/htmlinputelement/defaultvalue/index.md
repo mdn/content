@@ -8,7 +8,7 @@ browser-compat: api.HTMLInputElement.defaultValue
 
 {{ApiRef("HTML DOM")}}
 
-The **`defaultValue`** property of the {{domxref("HTMLInputElement")}} interface indicates the original (or default) value of the {{HTMLElement("input")}} element's [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute as originally specified in the HTML that created the control.
+The **`defaultValue`** property of the {{domxref("HTMLInputElement")}} interface indicates the original (or default) value of the {{HTMLElement("input")}} element. It reflects the element's [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute.
 
 ## Value
 

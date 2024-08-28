@@ -8,7 +8,7 @@ browser-compat: api.HTMLInputElement.step
 
 {{ApiRef("HTML DOM")}}
 
-The **`step`** property of the {{domxref("HTMLInputElement")}} interface indicates the step of the {{HTMLElement("input")}} element, generally defined set by the numeric or date-time input element's [`step`](/en-US/docs/Web/HTML/Element/input#step) attribute. The `step` property can also be used to provide an element with a `step` value. Valid values include the string `any`, a positive integer, or a positive floating point number
+The **`step`** property of the {{domxref("HTMLInputElement")}} interface indicates the step of the {{HTMLElement("input")}} element, generally defined set by the numeric or date-time input element's [`step`](/en-US/docs/Web/HTML/Element/input#step) attribute. It reflects the element's [`step`](/en-US/docs/Web/HTML/Element/input#step) attribute. Valid values include the string `"any"` or a string containing a positive floating point number.
 
 The string value represents the element's `step` attribute, which works with `min` and `max` attributes, minumum and maximum values, to limit the increments at which a range, numeric or date-time value can be set. If not set to `any`, the control accepts only values at multiples of the step value greater than the minimum. If not set, the `step` property is an empty string.
 
