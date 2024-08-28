@@ -23,7 +23,7 @@ The method to retrieve the redirected resource is always {{HTTPMethod("GET")}}.
 ### 303 response on form submission
 
 The client in this example sends a {{HTTPMethod("POST")}} request to submit a form to a generic subscription.
-The server may send back a 303 with a confirmation page in the {{HTTPHeader("Location")}} header so the user is redirected there after receiving the respose:
+The server may send back a response with a `303` status and a confirmation page in the {{HTTPHeader("Location")}} header, so the user is redirected there after receiving the response:
 
 ```http
 POST /subscribe HTTP/1.1
