@@ -20,7 +20,7 @@ A string.
 ## Examples
 
 ```js
-const wss = new WebSocketStream("example.com/wss");
+const wss = new WebSocketStream("wss://example.com/wss");
 
 // Logs "example.com/wss" to the console
 console.log(wss.url);
