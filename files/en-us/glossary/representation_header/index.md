@@ -8,7 +8,8 @@ page-type: glossary-definition
 
 A **representation header** (or 'representation metadata') is an {{glossary("HTTP_header", "HTTP header")}} that describes how to interpret the data contained in the message.
 
-For example, data might be formatted as a particular media type such as XML, JSON, HTML or Markdown, or localized to a particular written language or geographical region.
+For example, the content in a particular message might be encoded for transport, the whole resource might be formatted as a particular media type such as XML, JSON, HTML or Markdown, localized to a particular written language or geographical region, and/or compressed using a particular algorithm.
+The representation headers allow the underlying data to be extracted and understood.
 The underlying resource is semantically the same in each case, but its representation is different.
 
 While representations are different forms of resources, representations can themselves also be transmitted in various forms: an HTTP message frames (cf., e.g., HTTP/1.1's {{HTTPHeader("Transfer-Encoding")}}), a particular stream of octets (cf., e.g., {{HTTPHeader("Content-Range")}}) derived from the _selected representation_.
