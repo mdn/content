@@ -7,10 +7,9 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.303
 
 {{HTTPSidebar}}
 
-The HTTP **`303 See Other`** [redirection response](/en-US/docs/Web/HTTP/Status#redirection_messages) status code indicates that redirects don't link to the requested resource, but to a URL in the {{HTTPHeader("Location")}} header that describes the resource.
-For example, the redirected page may be a confirmation page, an upload status page, or a representation of a real-world object (see [HTTP range-14](https://en.wikipedia.org/wiki/HTTPRange-14)).
+The HTTP **`303 See Other`** [redirection response](/en-US/docs/Web/HTTP/Status#redirection_messages) status code indicates that the browser should redirect to the URL in the {{HTTPHeader("Location")}} header instead of rendering the requested resource.
 
-This response code is often sent back as a result of {{HTTPMethod("PUT")}} or {{HTTPMethod("POST")}} methods so the client may retrieve a confirmation or cache the results of an action.
+This response code is often sent back as a result of {{HTTPMethod("PUT")}} or {{HTTPMethod("POST")}} methods so the client may retrieve a confirmation, or view a representation of a real-world object (see [HTTP range-14](https://en.wikipedia.org/wiki/HTTPRange-14)).
 The method to retrieve the redirected resource is always {{HTTPMethod("GET")}}.
 
 ## Status

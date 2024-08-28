@@ -28,8 +28,8 @@ With `302`, older clients incorrectly changed the method to {{HTTPMethod("GET")}
 
 ### 307 response to a moved resource
 
-The following {{HTTPMethod("GET")}} request to is made to a resource with a `307` redirection in place.
-The {{HTTPHeader("Location")}} header shows the new URL in place for the resource.
+The following {{HTTPMethod("GET")}} request to is made to a resource that has a `307` redirection in place.
+The {{HTTPHeader("Location")}} header provides the URL of the redirected resource.
 
 ```http
 GET /en-US/docs/AJAX HTTP/2

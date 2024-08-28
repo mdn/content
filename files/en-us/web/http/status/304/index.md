@@ -8,6 +8,7 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.304
 {{HTTPSidebar}}
 
 The HTTP **`304 Not Modified`** [redirection response](/en-US/docs/Web/HTTP/Status#redirection_messages) status code indicates that there is no need to retransmit the requested resources.
+
 This response code is sent when the request is a [conditional](/en-US/docs/Web/HTTP/Conditional_requests) {{HTTPMethod("GET")}} or {{HTTPMethod("HEAD")}} request with an {{HTTPHeader("If-None-Match")}} or an {{HTTPHeader("If-Modified-Since")}} header and the condition evaluates to 'false'.
 It confirms that the resource cached by the client is still valid and that the server would have sent a {{HTTPStatus("200", "200 OK")}} response with the resource if the condition evaluated to 'true'.
 
@@ -34,6 +35,7 @@ The response must not contain a body and must include the headers that would hav
 ### 304 response to conditional requests
 
 The examples below show {{HTTPMethod("GET")}} requests made using [curl](https://curl.se/) with conditional request headers and the HTTP responses received in return.
+
 The first example would return a {{HTTPStatus("200", "200 OK")}} if we know the resource has been updated since the timestamp in the {{HTTPHeader("If-Modified-Since")}} header.
 For illustration, the request uses a future date of 21st November 2050 to check whether if the resource has been updated since this date:
 
