@@ -31,10 +31,6 @@ hsl(from #0000FF h s calc(l + 20))
 hsl(from rgb(200 0 0) calc(h + 30) s calc(l + 30))
 ```
 
-The `hsla()` function can also be used to express sRGB colors. This is an alias for `hsl()` that accepts the same parameters.
-
-> **Note:** `hsl()`/`hsla()` can also be written in a legacy form in which all values are separated with commas, for example `hsl(120, 75%, 25%)` or `hsla(120deg, 75%, 25%, 0.8)`. The `none` value is not permitted in the comma-separated legacy syntax, the `deg` on the hue value is optional, and the `%` units are required for the saturation and lightness values.
-
 ### Values
 
 Below are descriptions of the allowed values for both absolute and [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors).
@@ -85,9 +81,6 @@ The parameters are as follows:
   - : A {{CSSXref("&lt;percentage&gt;")}} or the keyword `none` (equivalent to `0%` in this case). This represents the lightness of the output color. Here `100%` is white, `0%` is black, and `50%` is "normal".
 - `A` {{optional_inline}}
   - : An {{CSSXref("&lt;alpha-value&gt;")}} representing the alpha channel value of the output color, where the number `0` corresponds to `0%` (fully transparent) and `1` corresponds to `100%` (fully opaque). Additionally, the keyword `none` can be used to explicitly specify no alpha channel. If the `A` channel value is not explicitly specified, it defaults to the alpha channel value of the origin color. If included, the value is preceded by a slash (`/`).
-
-> [!NOTE]
-> The `hsla()` alias can also be used to output relative colors, and to specify origin colors. When using `hsla()` to output a relative color, you must use the comma-less modern syntax.
 
 > [!NOTE]
 > To fully enable the representation of the full spectrum of visible colors, the output of relative `hsl()` color functions is serialized to `color(srgb)`. That means that querying the output color value via the {{DOMxRef("HTMLElement.style")}} property or the {{DOMxRef("CSSStyleDeclaration.getPropertyValue()")}} method returns the output color as a [`color(srgb ...)`](/en-US/docs/Web/CSS/color_value/color) value.
@@ -300,63 +293,6 @@ div.comma-separated {
 #### Result
 
 {{EmbedLiveSample("legacy_syntax_comma-separated_values", "100%", 150)}}
-
-### Legacy versus modern syntax
-
-The example demonstrates how the `hsla()` syntax is an alias for `hsl()`; both are supported using both modern and legacy (comma-separated) syntaxes.
-
-#### HTML
-
-```html
-<div class="modern">HSL</div>
-<div class="legacy">HSL</div>
-<div class="modernWithAlpha">HSL</div>
-<div class="modernHSLA">HSLA</div>
-<div class="legacyHSLA">HSLA</div>
-```
-
-#### CSS
-
-```css
-div {
-  width: 100px;
-  min-height: 50px;
-  font-family: sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-body {
-  display: flex;
-  gap: 20px;
-}
-```
-
-```css
-div.modern {
-  background-color: hsl(90 80% 50%);
-}
-
-div.legacy {
-  background-color: hsl(90, 80%, 50%);
-}
-
-div.modernWithAlpha {
-  background-color: hsl(90 80% 50% / 50%);
-}
-
-div.modernHSLA {
-  background-color: hsla(90 80% 50% / 50%);
-}
-
-div.legacyHSLA {
-  background-color: hsla(90, 80%, 50%, 0.5);
-}
-```
-
-#### Result
-
-{{EmbedLiveSample("legacy_versus_modern_syntax", "100%", 70)}}
 
 ## Specifications
 
