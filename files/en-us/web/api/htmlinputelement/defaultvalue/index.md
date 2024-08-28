@@ -16,38 +16,19 @@ A string representing the default, or original, value of the `<input>` element.
 
 ## Example
 
-This example demonstrates retrieving the original and current values of an input element.
-
-### HTML
+Given the following HTML:
 
 ```html
-<p>
-  <label for="planet">Which planet were you born on?</label>
-  <input id="planet" type="text" value="Azarath" />
-</p>
-<p>
-  <input type="button" value="Run JS" id="btn" />
-</p>
-<p id="log"></p>
+<label for="planet">Which planet were you born on?</label>
+<input id="planet" type="text" value="Azarath" />
 ```
 
-### JavaScript
+The following will provide the same results, no matter what the user enters into the text input.
 
 ```js
-const runButton = document.querySelector("#btn");
 const inputElement = document.querySelector("#planet");
-const log = document.querySelector("#log");
-
-runButton.addEventListener("click", () => {
-  log.innerHTML = `Current value: ${inputElement.value} <br /> Original value: ${inputElement.defaultValue}`;
-});
+console.log(`Original value: ${inputElement.defaultValue}`); // "Original value: Azarath"
 ```
-
-### Results
-
-{{EmbedLiveSample('Example', '', '120')}}
-
-Change the value of the input, then click "Run JS" to see the results.
 
 ## Specifications
 
