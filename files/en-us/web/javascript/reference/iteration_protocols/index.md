@@ -494,6 +494,98 @@ console.log([...someString]); // ["bye"]
 console.log(`${someString}`); // "hi"
 ```
 
+### Concurrent modifications when iterating
+
+Almost all iterables have the same underlying semantic: they don't copy the data at the time when iteration starts. Rather, they keep a pointer and move it around. Therefore, if you add, delete, or modify elements in the collection while iterating over the collection, you may inadvertently change whether other _unchanged_ elements in the collection are visited. This is very similar to how [iterative array methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#mutating_initial_array_in_iterative_methods) work.
+
+Consider the following case using a {{domxref("URLSearchParams")}}:
+
+```js
+const searchParams = new URLSearchParams(
+  "deleteme1=value1&key2=value2&key3=value3",
+);
+
+// Delete unwanted keys
+for (const [key, value] of searchParams) {
+  console.log(key);
+  if (key.startsWith("deleteme")) {
+    searchParams.delete(key);
+  }
+}
+
+// Output:
+// deleteme1
+// key3
+```
+
+Note how it never logs `key2`. This is because a `URLSearchParams` is underlyingly a list of key-value pairs. When `deleteme1` is visited and deleted, all other entries are shifted to the left by one, so `key2` occupies the position that `deleteme1` used to be in, and when the pointer moves to the next key, it lands on `key3`.
+
+Certain iterable implementations avoid this problem by setting "tombstone" values to avoid shifting the remaining values. Consider the similar code using a `Map`:
+
+```js
+const myMap = new Map([
+  ["deleteme1", "value1"],
+  ["key2", "value2"],
+  ["key3", "value3"],
+]);
+
+for (const [key, value] of myMap) {
+  console.log(key);
+  if (key.startsWith("deleteme")) {
+    myMap.delete(key);
+  }
+}
+
+// Output:
+// deleteme1
+// key2
+// key3
+```
+
+Note how it logs all keys. This is because `Map` doesn't shift the remaining keys when one is deleted. If you want to implement something similar, here's how it may look:
+
+```js
+const tombstone = Symbol("tombstone");
+
+class MyIterable {
+  #data;
+  constructor(data) {
+    this.#data = data;
+  }
+  delete(deletedKey) {
+    for (let i = 0; i < this.#data.length; i++) {
+      if (this.#data[i][1] === deletedKey) {
+        this.#data[i] = tombstone;
+        return true;
+      }
+    }
+    return false;
+  }
+  *[Symbol.iterator]() {
+    for (let i = 0; i < this.#data.length; i++) {
+      if (this.#data[i] !== tombstone) {
+        yield this.#data[i];
+      }
+    }
+  }
+}
+
+const myIterable = new MyIterable([
+  ["deleteme1", "value1"],
+  ["key2", "value2"],
+  ["key3", "value3"],
+]);
+for (const [key, value] of myIterable) {
+  console.log(key);
+  if (key.startsWith("deleteme")) {
+    myIterable.delete(key);
+  }
+}
+```
+
+> [!WARNING]
+> Concurrent modifications, in general, are very bug-prone and confusing. Unless you know precisely how the iterable is implemented, it's best to avoid modifying the collection while iterating over it.
+
 ## Specifications
 
 {{Specifications}}

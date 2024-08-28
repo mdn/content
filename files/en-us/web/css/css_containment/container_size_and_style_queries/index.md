@@ -112,7 +112,7 @@ Container names also enable querying styles from elements that aren't a direct p
 
 Set `container-name: none` to prevent the container from matching any named container queries. That removes all associated container query names, but does not prevent the element from matching unnamed queries.
 
-To prevent an element from being a size container, set `container-type: normal`. This removes containment, meaning the element isn't a size container (it can still be a [style container](#container_style_queries).
+To prevent an element from being a size container, set `container-type: normal`. This removes containment, meaning the element isn't a size container (it can still be a [style container](#container_style_queries)).
 
 To prevent an element from being matched by any container queries, provide it with an unused `container-name`.
 
@@ -324,7 +324,7 @@ output {
 }
 ```
 
-The first style feature query is a custom property with no value. This query type returns true when the computed value for the custom property value is different from the `initial-value` for that property. In this case, it will be true when the value of `--theme` is any value other than any syntax equivalent value of`#f00` ( such as `red`). When true, the {{htmlelement("output")}} will have a 5px dotted outline. The outline color is the current value of `--theme`. The default text {{cssxref("color")}} is grey.
+The first style feature query is a custom property with no value. This query type returns true when the computed value for the custom property value is different from the `initial-value` for that property. In this case, it will be true when the value of `--theme` is any value other than any syntax equivalent value of `#f00` ( such as `red`). When true, the {{htmlelement("output")}} will have a 5px dotted outline. The outline color is the current value of `--theme`. The default text {{cssxref("color")}} is grey.
 
 ```css
 @container style(--theme) {

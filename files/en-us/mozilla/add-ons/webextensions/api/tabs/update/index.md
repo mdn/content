@@ -44,7 +44,7 @@ let updating = browser.tabs.update(
 
       - : `boolean`. Whether the new URL should replace the old URL in the tab's navigation history, as accessed via the "Back" button.
 
-        For example, suppose the user creates a new tab using Ctrl+T. By default, in Firefox, this would load "about:newtab". If your extension then updates this page using {{WebExtAPIRef("tabs.update")}}, without `loadReplace`, the "Back" button will be enabled and will take the user back to "about:newtab". If the extension sets `loadReplace`, then the "Back" button will be disabled and it will be just as if the URL supplied by the extension was the first page visited in that tab.
+        For example, suppose the user creates a new tab using Ctrl+T. By default, in Firefox, this would load "about:newtab". If your extension then updates this page using `tabs.update`, without `loadReplace`, the "Back" button will be enabled and will take the user back to "about:newtab". If the extension sets `loadReplace`, then the "Back" button will be disabled and it will be just as if the URL supplied by the extension was the first page visited in that tab.
 
         Note though that the original URL will still appear in the browser's global history.
 
@@ -65,8 +65,8 @@ let updating = browser.tabs.update(
         For security reasons, in Firefox, this may not be a privileged URL. So passing any of the following URLs will fail, with {{WebExtAPIRef("runtime.lastError")}} being set to an error message:
 
         - chrome: URLs
-        - javascript: URLs
-        - data: URLs
+        - [javascript: URLs](/en-US/docs/Web/URI/Schemes/javascript)
+        - [data: URLs](/en-US/docs/Web/URI/Schemes/data)
         - file: URLs (i.e., files on the filesystem. However, to use a file packaged inside the extension, see below)
         - privileged about: URLs (for example, `about:config`, `about:addons`, `about:debugging`, `about:newtab`). Non-privileged URLs (e.g., `about:blank`) are allowed.
 

@@ -5,7 +5,7 @@ slug: Web/API/CaptureController/CaptureController
 page-type: web-api-constructor
 status:
   - experimental
-browser-compat: api.CaptureController.setFocusBehavior
+browser-compat: api.CaptureController.CaptureController
 ---
 
 {{APIRef("Screen Capture API")}}{{SeeCompatTable}}{{SecureContext_Header}}

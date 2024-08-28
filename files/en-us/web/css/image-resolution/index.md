@@ -31,7 +31,7 @@ image-resolution: unset;
 
 ### Values
 
-- `{{cssxref("&lt;resolution&gt;")}}`
+- {{cssxref("&lt;resolution&gt;")}}
   - : Specifies the intrinsic resolution explicitly.
 - `from-image`
   - : Uses the intrinsic resolution as specified by the image format. If the image does not specify its own resolution, the explicitly specified resolution is used (if given), else it defaults to `1dppx` (1 image pixel per CSS px unit).

@@ -285,6 +285,7 @@ P
 - {{CSSxRef(":picture-in-picture")}}
 - {{CSSxRef(":placeholder-shown")}}
 - {{CSSxRef(":playing")}}
+- {{CSSxRef(":popover-open")}}
 
 R
 
