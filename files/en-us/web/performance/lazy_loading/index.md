@@ -94,4 +94,4 @@ When browser compatibility is crucial, there are a few options:
 ## See also
 
 - [Render blocking CSS](https://web.dev/articles/critical-rendering-path/render-blocking-css)
-- [Use lazy loading to improve loading speed](https://web.dev/articles/lazy-loading)
+- [Browser-level image lazy loading for the web](https://web.dev/articles/browser-level-image-lazy-loading)

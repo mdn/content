@@ -167,7 +167,7 @@ If no existing sender exists that can be reused, a new one is created. This also
 results in the creation of the associated objects that must exist. The process of
 creating a new sender results in these changes:
 
-- The new `RTCRtpSender` is created with the specified `track` and set of `stream`(s).
+- The new `RTCRtpSender` is created with the specified track and set of stream(s).
 - A new {{domxref("RTCRtpReceiver")}} is created with a _new_ {{domxref("MediaStreamTrack")}} as its {{domxref("RTCRtpReceiver.track", "track")}} property (not the track specified as a parameter when calling `addTrack()`).
   This track's {{domxref("MediaStreamTrack.kind", "kind")}} is set to match the `kind` of the track provided as an input parameter.
 - A new {{domxref("RTCRtpTransceiver")}} is created and associated with the new sender and receiver.

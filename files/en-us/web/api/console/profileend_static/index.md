@@ -1,7 +1,7 @@
 ---
 title: "console: profileEnd() static method"
 short-title: profileEnd()
-slug: Web/API/console/profileend_static
+slug: Web/API/console/profileEnd_static
 page-type: web-api-instance-method
 status:
   - non-standard

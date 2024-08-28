@@ -15,7 +15,7 @@ The **Fenced Frame API** provides functionality for controlling content embedded
 
 One major source of [privacy](/en-US/docs/Web/Privacy) and [security](/en-US/docs/Web/Security) problems on the web is content embedded in {{htmlelement("iframe")}} elements. Historically `<iframe>`s have been used to set third-party cookies, which can be used to share information and track users across sites. In addition, content embedded in an `<iframe>` can communicate with its embedding document (for example, using {{domxref("Window.postMessage()")}}).
 
-The embedding document can also use scripting to read various forms of information from the `<iframe>` — for example you can potentially get significant tracking/fingerprinting data from reading the embedded URL from the `src` property, especially if it contains [URL parameters](/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web#query). The `<iframe>` can also access the embedding context's DOM, and vice versa.
+The embedding document can also use scripting to read various forms of information from the `<iframe>` — for example you can potentially get significant tracking/fingerprinting data from reading the embedded URL from the `src` property, especially if it contains [URL parameters](/en-US/docs/Web/URI#query). The `<iframe>` can also access the embedding context's DOM, and vice versa.
 
 Most modern browsers are working on mechanisms to partition storage so that cookie data can no longer be used for tracking (for example see [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies) or [Firefox State Partitioning](/en-US/docs/Web/Privacy/State_Partitioning)).
 
@@ -25,6 +25,8 @@ Most modern browsers are working on mechanisms to partition storage so that cook
 - A `<fencedframe>` can access cross-site data, but only in a very specific set of controlled circumstances that preserve user privacy.
 - A `<fencedframe>` cannot be freely manipulated or have its data accessed via regular scripting (for example reading or setting the source URL). `<fencedframe>` content can only be embedded via [specific APIs](#use_cases).
 - A `<fencedframe>` cannot access the embedding context's DOM, nor can the embedding context access the `<fencedframe>`'s DOM.
+
+For more information about the communication model of fenced frames, read the [communication with embedded frames](/en-US/docs/Web/API/Fenced_frame_API/Communication_with_embedded_frames) guide.
 
 ### Use cases
 
@@ -55,7 +57,7 @@ const frame = document.createElement("fencedframe");
 frame.config = frameConfig;
 ```
 
-`resolveToConfig: true` must be passed in to the `runAdAuction()` call to obtain a `FencedFrameConfig` object. If `resolveToConfig` is set to `false`, the resulting {{jsxref("Promise")}} will resolve to an opaque [URN](/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web#urns) (for example `urn:uuid:c36973b5-e5d9-de59-e4c4-364f137b3c7a`) that can only be used in an `<iframe>`.
+`resolveToConfig: true` must be passed in to the `runAdAuction()` call to obtain a `FencedFrameConfig` object. If `resolveToConfig` is set to `false`, the resulting {{jsxref("Promise")}} will resolve to an opaque [URN](/en-US/docs/Web/URI#urns) (for example `urn:uuid:c36973b5-e5d9-de59-e4c4-364f137b3c7a`) that can only be used in an `<iframe>`.
 
 Either way, the browser stores a URL containing the target location of the content to embed — mapped to the opaque URN, or the `FencedFrameConfig`'s internal `url` property. The URL value cannot be read by JavaScript running in the embedding context.
 
@@ -146,5 +148,5 @@ The following demos all make use of `<fencedframe>`s:
 
 ## See also
 
-- [Fenced frames](https://developers.google.com/privacy-sandboxfenced-frame/) on developers.google.com
+- [Fenced frames](https://developers.google.com/privacy-sandbox/relevance/fenced-frame) on developers.google.com
 - [The Privacy Sandbox](https://developers.google.com/privacy-sandbox) on developers.google.com

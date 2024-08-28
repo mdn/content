@@ -1,5 +1,6 @@
 ---
 title: "HTML attribute: rel"
+short-title: rel
 slug: Web/HTML/Attributes/rel
 page-type: html-attribute
 browser-compat:
@@ -72,7 +73,7 @@ The `rel` attribute has no default value. If the attribute is omitted or if none
       ```
 
     - With an [`hreflang`](/en-US/docs/Web/HTML/Element/link#hreflang) attribute that differs from the document language, it indicates a translation.
-    - With the [`type`](/en-US/docs/Web/HTML/Element/link#type) attribute value of `"application/rss+xml"`or `"application/atom+xml"`, it creates a hyperlink referencing a syndication feed.
+    - With the [`type`](/en-US/docs/Web/HTML/Element/link#type) attribute value of `"application/rss+xml"` or `"application/atom+xml"`, it creates a hyperlink referencing a syndication feed.
 
       ```html
       <link

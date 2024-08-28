@@ -35,7 +35,7 @@ setInterval(func, delay, arg1, arg2, /* …, */ argN)
 - `delay` {{optional_inline}}
   - : The time, in milliseconds (thousandths of a second), the timer should delay in between executions of the specified function or code. Defaults to 0 if not specified.
     See [Delay restrictions](#delay_restrictions) below for details on the permitted range of `delay` values.
-- `arg1`, …,`argN` {{optional_inline}}
+- `arg1`, …, `argN` {{optional_inline}}
   - : Additional arguments which are passed through to the function specified by _func_ once the timer expires.
 
 ### Return value

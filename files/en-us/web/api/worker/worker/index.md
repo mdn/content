@@ -31,7 +31,7 @@ new Worker(aURL, options)
     - `type`
       - : A string specifying the type of worker to create. The value can be `classic` or `module`. If not specified, the default used is `classic`.
     - `credentials`
-      - : A string specifying the type of credentials to use for the worker. The value can be `omit`, `same-origin`, or _`include`. If not specified, or if type is `classic`, the default used is `omit` (no credentials required)._
+      - : A string specifying the type of credentials to use for the worker. The value can be `omit`, `same-origin`, or _`include`. If not specified, or if type is `classic`, the default used is `same-origin` (only include credentials for same-origin requests)._
     - `name`
       - : A string specifying an identifying name for the {{domxref("DedicatedWorkerGlobalScope")}} representing the scope of the worker, which is mainly useful for debugging purposes.
 

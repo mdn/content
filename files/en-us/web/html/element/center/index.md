@@ -57,7 +57,7 @@ This element implements the {{domxref("HTMLElement")}} interface.
 {{EmbedLiveSample("Example 3 (CSS alternative)")}}
 
 > [!NOTE]
-> Applying {{Cssxref("text-align")}}`:center` to a {{HTMLElement("div")}} or {{HTMLElement("p")}} element centers the _contents_ of those elements while leaving their overall dimensions unchanged.
+> Applying {{cssxref("text-align", "text-align: center")}} to a {{HTMLElement("div")}} or {{HTMLElement("p")}} element centers the _contents_ of those elements while leaving their overall dimensions unchanged.
 
 <!-- ## Technical summary -->
 

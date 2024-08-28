@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.MIDIPort
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}
+{{securecontext_header}}{{APIRef("Web MIDI API")}}
 
 The **`MIDIPort`** interface of the {{domxref('Web MIDI API','','',' ')}} represents a MIDI input or output port.
 

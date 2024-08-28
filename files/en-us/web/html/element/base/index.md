@@ -22,7 +22,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 - `href`
   - : The base URL to be used throughout the document for relative URLs.
     Absolute and relative URLs are allowed.
-    [`data:`](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) and `javascript:` URLs are not allowed.
+    [`data:`](/en-US/docs/Web/URI/Schemes/data) and [`javascript:`](/en-US/docs/Web/URI/Schemes/javascript) URLs are not allowed.
 - `target`
 
   - : A **keyword** or **author-defined name** of the default {{Glossary("browsing context")}} to show the results of navigation from {{HTMLElement("a")}}, {{HTMLElement("area")}}, or {{HTMLElement("form")}} elements without explicit `target` attributes. The following keywords have special meanings:
