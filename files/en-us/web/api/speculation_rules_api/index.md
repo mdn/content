@@ -179,7 +179,9 @@ For prerender:
 Sec-Purpose: prefetch;prerender
 ```
 
-Servers can respond based on this header, for example, to log speculative load requests, return different content, or even prevent speculative loading from happening. If a non-success response code is returned (any HTTP status other than 200 or 304), then the page will not be prefetched/prerendered. This is the easiest way to prevent speculative loading, although it is usually a better approach to allow the prefetch/prerender, and use JavaScript to delay any actions that should only happen when the page is actually viewed.
+Servers can respond based on this header, for example, to log speculative load requests, return different content, or even prevent speculative loading from happening. If a non-success response code is returned (any HTTP status other than in the 200-299 range after redirects), then the page will not be prefetched/prerendered. In addition the 204 and 205 status codes also prevent prerendering (but do not prevent prefetch).
+
+Using a non-success code (for example a 503) is the easiest way to prevent speculative loading server-side, although it is usually a better approach to allow the prefetch/prerender, and use JavaScript to delay any actions that should only happen when the page is actually viewed.
 
 ### JavaScript prefetch detection
 
@@ -387,8 +389,8 @@ APIs that require the containing document's {{domxref("Document.visibilityState"
 - Download links, i.e. {{htmlelement("a")}} and {{htmlelement("area")}} elements with the `download` attribute, will have their downloads delayed until prerendering has finished.
 - No cross-site navigations: Any prerendering document that navigates to a different site will be immediately discarded before a request to that other site is sent.
 - Restricted URLs: Prerendering documents cannot host non-HTTP(S) top-level URLs. Including the following URL types will cause the prerender to be immediately discarded:
-  - `javascript:` URLs
-  - `data:` URLs
+  - [`javascript:` URLs](/en-US/docs/Web/URI/Schemes/javascript)
+  - [`data:` URLs](/en-US/docs/Web/URI/Schemes/data)
   - `blob:` URLs
   - `about:` URLs, including `about:blank` and `about:srcdoc`
 - Session storage: {{domxref("Window.sessionStorage")}} can be used, but the behavior is very specific, to avoid breaking sites that expect only one page to access the tab's session storage at a time. A prerendered page therefore starts out with a clone of the tab's session storage state from when it was created. Upon activation, the prerendered page's storage clone is discarded, and the tab's main storage state is used instead. Pages that use session storage can use the {{domxref("Document.prerenderingchange_event", "prerenderingchange")}} event to detect when this storage swap occurs.

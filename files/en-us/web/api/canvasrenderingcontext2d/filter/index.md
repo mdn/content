@@ -122,7 +122,9 @@ photo of a rhino.
 ```html
 <canvas id="canvas" width="400" height="150"></canvas>
 <div style="display:none;">
-  <img id="source" src="rhino.jpg" />
+  <img
+    id="source"
+    src="https://mdn.github.io/shared-assets/images/examples/rhino.jpg" />
 </div>
 ```
 

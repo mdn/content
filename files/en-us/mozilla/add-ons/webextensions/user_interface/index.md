@@ -222,7 +222,7 @@ Extensions that use WebExtension APIs are provided with several user interface o
       </td>
       <td>
         <img
-          alt="Example showing the result of the firefox_code_search WebExtension&#x27;s customization of the address bar suggestions."
+          alt="Example of a custom panel on developer tools."
           src="developer_panel_tab.png"
         />
       </td>

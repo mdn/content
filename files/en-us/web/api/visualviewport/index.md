@@ -49,6 +49,9 @@ Listen to these events using {{domxref("EventTarget.addEventListener", "addEvent
 - {{domxref("VisualViewport/scroll_event", "scroll")}}
   - : Fired when the visual viewport is scrolled.
     Also available via the `onscroll` property.
+- {{domxref("VisualViewport/scrollend_event", "scrollend")}}
+  - : Fired when a scrolling operation on the visual viewport ends.
+    Also available via the `onscrollend` property.
 
 ## Examples
 

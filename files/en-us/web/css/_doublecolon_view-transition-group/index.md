@@ -53,7 +53,7 @@ In addition, the element's transform is animated from the "old" view state's scr
 ## Examples
 
 ```css
-view-transition-group(embed-container) {
+::view-transition-group(embed-container) {
   animation-duration: 0.3s;
   animation-timing-function: ease;
   z-index: 1;

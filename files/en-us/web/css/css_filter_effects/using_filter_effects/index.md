@@ -143,7 +143,7 @@ p {
 ```html hidden
 <div
   class="container"
-  style="background-image: url(listen_to_black_women.jpg);">
+  style="background-image: url('https://mdn.github.io/shared-assets/images/examples/listen_to_black_women.jpg');">
   <p>
     Text on images can be illegible and inaccessible even with a drop shadow.
   </p>
@@ -272,13 +272,21 @@ The [`<filter>`](/en-US/docs/Web/SVG/Element/filter)'s {{SVGAttr("stdDeviation")
   <tbody>
     <tr>
       <td>
-        <img class="filter" src="flag.jpg" alt="Pride flag" />
+        <img
+          class="filter"
+          src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+          alt="Pride flag" />
       </td>
       <td>
-        <img src="flag.jpg" alt="Pride flag" class="svgFilter" />
+        <img
+          src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+          alt="Pride flag"
+          class="svgFilter" />
       </td>
       <td>
-        <img src="flag.jpg" alt="Pride flag" />
+        <img
+          src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+          alt="Pride flag" />
       </td>
     </tr>
   </tbody>
@@ -290,7 +298,9 @@ The [`<filter>`](/en-US/docs/Web/SVG/Element/filter)'s {{SVGAttr("stdDeviation")
   <filter id="blur">
     <feGaussianBlur stdDeviation="3.5" edgeMode="duplicate" />
   </filter>
-  <image xlink:href="asset/flag.jpg" filter="url(#blur)" />
+  <image
+    xlink:href="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+    filter="url(#blur)" />
 </svg>
 ```
 
