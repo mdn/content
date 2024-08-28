@@ -91,7 +91,7 @@ As mentioned earlier, the WebSocket connection can be closed using an {{domxref(
 
 ```js
 const controller = new AbortController();
-const wss = new WebSocketStream("example.com/wss", {
+const wss = new WebSocketStream("wss://example.com/wss", {
   signal: controller.signal,
 });
 
