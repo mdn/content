@@ -11,7 +11,7 @@ spec-urls:
 {{CSSRef}}
 
 > [!NOTE]
-> The `rgba()` functional notation is an alias for `rgb()`. They both work the same. It is recommend to use `rgb()`.
+> The `rgba()` functional notation is an alias for `rgb()`. They are exactly equivalent. It is recommended to use `rgb()`.
 
 The **`rgb()`** functional notation expresses a color in the {{glossary("RGB", "sRGB")}} {{glossary("color space")}} according to its red, green, and blue components. An optional alpha component represents the color's transparency.
 

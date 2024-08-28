@@ -11,7 +11,7 @@ spec-urls:
 {{CSSRef}}
 
 > [!NOTE]
-> The `hsla()` functional notation is an alias for `hsl()`. They both work the same. It is recommend to use `hsl()`.
+> The `hsla()` functional notation is an alias for `hsl()`. They are exactly equivalent. It is recommended to use `hsl()`.
 
 The **`hsl()`** functional notation expresses a color in the {{glossary("RGB", "sRGB")}} {{glossary("color space")}} according to its _hue_, _saturation_, and _lightness_ components. An optional _alpha_ component represents the color's transparency.
 
