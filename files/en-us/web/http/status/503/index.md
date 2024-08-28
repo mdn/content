@@ -8,7 +8,8 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.503
 {{HTTPSidebar}}
 
 The HTTP **`503 Service Unavailable`** [server error response](/en-US/docs/Web/HTTP/Status#server_error_responses) status code indicates that the server is not ready to handle the request.
-Common causes are a server that is down for maintenance or that is overloaded.
+
+Common causes are that a server is down for maintenance or that it is overloaded.
 This response should be used for temporary conditions and the {{HTTPHeader("Retry-After")}} HTTP header should contain the estimated time for the recovery of the service, if possible.
 
 A user-friendly page explaining the problem should be sent along with this response.
