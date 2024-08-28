@@ -9,10 +9,13 @@ spec-urls: https://httpwg.org/specs/rfc9110.html#status.300
 
 The HTTP **`300 Multiple Choices`** [redirection response](/en-US/docs/Web/HTTP/Status#redirection_messages) status code indicates that the request has more than one possible response.
 The user-agent or the user should choose one of them.
-There is no standardized way of choosing one of the responses, so this response code is rarely used.
+There is no standardized way of automatically choosing one of the responses, so this status code is rarely used.
 
-If the server has a preferred choice that the client should request, it should generate a {{HTTPHeader("Location")}} header.
+The server should include content in the response that contains a list of resource metadata and URIs from which the user or user agent can choose.
+The format of the content is implementation-specific, but may be based on content negotiation and should be easily parsed by the user agent, therefore HTML or JSON are good candidates.
 See [Content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) for more information.
+
+If the server has a preferred choice that the client should request, it should include it in a {{HTTPHeader("Location")}} header.
 
 ## Status
 

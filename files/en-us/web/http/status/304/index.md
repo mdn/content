@@ -34,56 +34,69 @@ The response must not contain a body and must include the headers that would hav
 
 ### 304 response to conditional requests
 
-The examples below show {{HTTPMethod("GET")}} requests made using [curl](https://curl.se/) with conditional request headers and the HTTP responses received in return.
-
-The first example would return a {{HTTPStatus("200", "200 OK")}} if we know the resource has been updated since the timestamp in the {{HTTPHeader("If-Modified-Since")}} header.
-For illustration, the request uses a future date of 21st November 2050 to check whether if the resource has been updated since this date:
+The examples below show {{HTTPMethod("GET")}} requests made using [curl](https://curl.se/) with conditional request headers.
+The `--http1.1` flag is used to force the HTTP/1.1 protocol for readability.
+The request uses a future date of 21st November 2050 to check whether if the resource has been updated after this date:
 
 ```bash
-curl -I --header 'If-Modified-Since: Tue, 21 Nov 2050 08:00:00 GMT' \
+curl --http1.1 -I --header 'If-Modified-Since: Tue, 21 Nov 2050 08:00:00 GMT' \
  https://developer.mozilla.org/en-US/
 ```
 
+This will perform the following request:
+
 ```http
-> Request
-GET /en-US/ HTTP/2
+GET /en-US/ HTTP/1.1
 Host: developer.mozilla.org
-User-Agent: curl/8.1.2
+User-Agent: curl/8.7.1
 Accept: */*
 If-Modified-Since: Tue, 21 Nov 2050 08:00:00 GMT
-
-< Response
-HTTP/2 304
-date: Tue, 21 Nov 2023 08:44:28 GMT
-expires: Tue, 21 Nov 2023 08:53:14 GMT
-age: 3194
-etag: "e27d81b845c3716cdb5d4220d78e2799"
-cache-control: public, max-age=3600
 ```
 
-A `304 Not Modified` response is also returned in response to a {{HTTPMethod("GET")}} request containing an {{HTTPHeader("If-None-Match")}} header with the {{HTTPHeader("ETag")}} from the response above.
-Because the `etag` value exists, a matching entity tag fails the condition, and a `304` response is returned:
+The response would be {{HTTPStatus("200", "200 OK")}} if the resource was updated after the timestamp in the {{HTTPHeader("If-Modified-Since")}} header.
+Instead, we have a `304` response that includes {{HTTPHeader("ETag")}}, {{HTTPHeader("Age")}} and {{HTTPHeader("Expires")}} headers:
+
+```http
+HTTP/1.1 304 Not Modified
+Date: Wed, 28 Aug 2024 09:52:35 GMT
+Expires: Wed, 28 Aug 2024 10:01:53 GMT
+Age: 3279
+ETag: "b20a0973b226eeea30362acb81f9e0b3"
+Cache-Control: public, max-age=3600
+Vary: Accept-Encoding
+X-cache: hit
+Alt-Svc: clear
+```
+
+If you run another `curl` command with a fresh `etag` value from the previous response in an {{HTTPHeader("If-None-Match")}} header, you receive a `304 Not Modified` if the request contains :
 
 ```bash
-curl -I --header 'If-None-Match: "e27d81b845c3716cdb5d4220d78e2799"' \
+curl --http1.1 -I --header 'If-None-Match: "e27d81b845c3716cdb5d4220d78e2799"' \
  https://developer.mozilla.org/en-US/
 ```
 
-```http
-> Request
-GET /en-US/ HTTP/2
-Host: developer.mozilla.org
-User-Agent: curl/8.1.2
-Accept: */*
-If-None-Match: "e27d81b845c3716cdb5d4220d78e2799"
+This will perform the following request:
 
-< Response
-HTTP/2 304
-date: Tue, 21 Nov 2023 08:47:37 GMT
-expires: Tue, 21 Nov 2023 09:38:23 GMT
-age: 2920
-etag: "e27d81b845c3716cdb5d4220d78e2799"
-cache-control: public, max-age=3600
+```http
+GET /en-US/ HTTP/1.1
+Host: developer.mozilla.org
+User-Agent: curl/8.7.1
+Accept: */*
+If-None-Match: "b20a0973b226eeea30362acb81f9e0b3"
+```
+
+Because the `etag` value matches at the time of the request, the entity tag fails the condition, and a `304` response is returned:
+
+```http
+HTTP/1.1 304 Not Modified
+Date: Wed, 28 Aug 2024 10:36:35 GMT
+Expires: Wed, 28 Aug 2024 11:02:17 GMT
+Age: 662
+ETag: "b20a0973b226eeea30362acb81f9e0b3"
+Cache-Control: public, max-age=3600
+Vary: Accept-Encoding
+X-cache: hit
+Alt-Svc: clear
 ```
 
 ## Specifications
@@ -93,7 +106,7 @@ cache-control: public, max-age=3600
 ## Compatibility notes
 
 Browser behavior differs if this response erroneously includes a body on persistent connections.
-See {{HTTPStatus("204")}} for more details.
+See {{HTTPStatus("204", "204 No Content")}} for more details.
 
 ## See also
 

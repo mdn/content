@@ -8,7 +8,9 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.307
 {{HTTPSidebar}}
 
 The HTTP **`307 Temporary Redirect`** [redirection response](/en-US/docs/Web/HTTP/Status#redirection_messages) status code indicates that the resource requested has been temporarily moved to the URL in the {{HTTPHeader("Location")}} header.
-A browser redirects automatically to the new page, but the ranking value in search engines (colloquially named "link juice" in {{Glossary("SEO")}} terms) is **not sent** to the new URL.
+
+A browser receiving this status will automatically request the resource at the URL in the `Location` header, redirecting the user to the new page.
+Search engines receiving this response will not attribute links to the original URL to the new resource, meaning no {{Glossary("SEO")}} value is transferred to the new URL.
 
 The method and the body of the original request are reused to perform the redirected request.
 In the cases where you want the request method to be changed to {{HTTPMethod("GET")}}, use {{HTTPStatus("303", "303 See Other")}} instead.

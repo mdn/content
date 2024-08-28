@@ -7,10 +7,10 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.301
 
 {{HTTPSidebar}}
 
-The HTTP **`301 Moved Permanently`** [redirection response](/en-US/docs/Web/HTTP/Status#redirection_messages) status code indicates that the requested resource has been definitively moved to the URL in the {{HTTPHeader("Location")}} header.
+The HTTP **`301 Moved Permanently`** [redirection response](/en-US/docs/Web/HTTP/Status#redirection_messages) status code indicates that the requested resource has been permanently moved to the URL in the {{HTTPHeader("Location")}} header.
 
 A browser receiving this status will automatically request the resource at the URL in the `Location` header, redirecting the user to the new page.
-Search engines receiving this response will attribute links to the original URL to the redirected resource instead, passing the {{Glossary("SEO")}} ranking to the new URL.
+Search engines receiving this response will attribute links to the original URL to the redirected resource, passing the {{Glossary("SEO")}} ranking to the new URL.
 
 > [!NOTE]
 > Although the [specification](#specifications) requires the request method and the body to remain unchanged when redirection is performed, not all user-agents meet this requirement.
@@ -27,7 +27,6 @@ Search engines receiving this response will attribute links to the original URL 
 ### 301 response to a moved resource
 
 The following {{HTTPMethod("GET")}} request to is made to a resource with a `301` redirection in place.
-The response includes the `301` status along with the {{HTTPHeader("Location")}} header that indicates the URL where the resource has moved.
 
 ```http
 GET /en-US/docs/AJAX HTTP/2
@@ -35,6 +34,8 @@ Host: developer.mozilla.org
 User-Agent: curl/8.6.0
 Accept: */*
 ```
+
+The response includes the `301` status along with the {{HTTPHeader("Location")}} header that indicates the URL where the resource has moved.
 
 ```http
 HTTP/2 301
