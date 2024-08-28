@@ -24,9 +24,10 @@ See [Content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) for more inf
 
 ### 300 response with a `Location` header
 
-The following example shows how reactive negotiation (or [agent-driven negotiation](/en-US/docs/Web/HTTP/Content_negotiation#agent-driven_negotiation)) may look like.
-In this scenario, a `300` response with details of different representations of a resource is sent by the server, and the client chooses which resource it wants.
-The downsides to this approach is that the content may have a different format or syntax depending on the implementation, and that it includes an additional request-response exchange which slows down the overall client-server interaction:
+The following example shows how reactive negotiation (or [agent-driven negotiation](/en-US/docs/Web/HTTP/Content_negotiation#agent-driven_negotiation)) may look.
+In this scenario, a `300` response is sent by the server with details of different representations of the requested resource.
+The browser would then choose one of the options (or defer the decision to the user), and send a new request to fetch the selected resource.
+Note that in this case the server response also includes the `Location` header to indicate the resource that it would prefer to return.
 
 ```http
 GET /resource HTTP/1.1
@@ -53,6 +54,8 @@ Location: http://example.com/resource-html
   ]
 }
 ```
+
+The downsides of this approach are that the content may have a different format or syntax depending on the implementation, and that the interaction includes an additional request-response exchange — which slows down the interaction.
 
 ## Specifications
 
