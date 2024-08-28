@@ -32,7 +32,7 @@ Assuming the following HTML:
 <canvas id="inking-surface" width="1280" height="720"></canvas>
 ```
 
-The following JavaScript assigns a different inking color to each unique pen interacting with a canvas:
+The following JavaScript assigns a different inking color to each unique pointer interacting with a canvas:
 
 ```js
 const colorBlue = 0;
@@ -40,7 +40,7 @@ const colorGreen = 1;
 const colorYellow = 2;
 const colors = [colorBlue, colorGreen, colorYellow];
 
-const penToColorMap = new Map();
+const pointerToColorMap = new Map();
 const colorAssignmentIndex = 0;
 
 const canvas = document.querySelector("#inking-surface");
@@ -48,23 +48,19 @@ const canvas = document.querySelector("#inking-surface");
 // Listen for a pointerdown event and map the persistentDeviceId to a color
 // if it exists and has not been mapped yet
 canvas.addEventListener("pointerdown", (e) => {
-  if (
-    e.persistentDeviceId &&
-    e.persistentDeviceId > 1 &&
-    !penToColorMap.has(e.persistentDeviceId)
-  ) {
-    penToColorMap.set(e.persistentDeviceId, colors[colorAssignmentIndex]);
+  if (e.persistentDeviceId && !pointerToColorMap.has(e.persistentDeviceId)) {
+    pointerToColorMap.set(e.persistentDeviceId, colors[colorAssignmentIndex]);
 
     // Bump the color assignment index and loop back over if needed
     colorAssignmentIndex = (colorAssignmentIndex + 1) % colors.length;
   }
 });
 
-// Listen for a `pointermove` and get the color assigned to this pen
-// if persistentDeviceId exists and the pen has been color mapped
+// Listen for a `pointermove` and get the color assigned to this pointer
+// if persistentDeviceId exists and the pointer has been color mapped
 canvas.addEventListener("pointermove", (e) => {
-  if (e.persistentDeviceId && penToColorMap.has(e.persistentDeviceId)) {
-    const penColor = penToColorMap.get(e.persistentDeviceId);
+  if (e.persistentDeviceId && pointerToColorMap.has(e.persistentDeviceId)) {
+    const pointerColor = pointerToColorMap.get(e.persistentDeviceId);
     // Do some inking on the <canvas>
   }
 });
