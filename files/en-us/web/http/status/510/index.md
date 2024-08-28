@@ -7,9 +7,7 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc2774#section-7
 
 {{HTTPSidebar}}
 
-The HTTP **`510 Not Extended`** [server error response](/en-US/docs/Web/HTTP/Status#server_error_responses) status code is sent in the context of the HTTP Extension Framework ({{RFC("2774")}}).
-A client may send a request that contains an extension declaration that describes the extension to be used to process a request.
-If the server receives such a request, but any described extensions are not supported, the server responds with a `510` status.
+The HTTP **`510 Not Extended`** [server error response](/en-US/docs/Web/HTTP/Status#server_error_responses) status code is sent when the client request declares an HTTP Extension ({{RFC("2774")}}) that should be used to process the request, but the extension is not supported.
 
 ## Status
 
