@@ -14,7 +14,7 @@ These headers were defined as "Payload headers" in {{RFC("7231")}}, but are now 
 Later HTTP specifications don't mention "content headers" or expand on the list of relevant headers, but the semantics remain the same, so this way of classifying headers is still useful.
 
 > [!NOTE]
-> Content headers are not mutually exclusive with {{Glossary("Representation header", "Representation headers")}} which are typically more relevant to understanding HTTP message semantics.
+> There is some overlap between content headers and {{Glossary("Representation header", "representation headers")}}.
 
 These headers may be present in both HTTP request and response messages and include:
 
