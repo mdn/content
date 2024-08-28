@@ -30,7 +30,7 @@ Given the following HTML:
   <option value="Azarath" />
   <option value="Krypton" />
   <option value="Tamaran" />
-  <datalist></datalist>
+</datalist>
 </datalist>
 ```
 
