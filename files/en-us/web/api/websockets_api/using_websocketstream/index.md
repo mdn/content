@@ -20,7 +20,7 @@ This article explains how to use the {{domxref("WebSocketStream")}} API to creat
 To check whether the `WebSocketStream` API is supported, you can use the following:
 
 ```js
-if ("WebSocketStream" in window) {
+if ("WebSocketStream" in self) {
   // WebSocketStream is supported
 }
 ```
