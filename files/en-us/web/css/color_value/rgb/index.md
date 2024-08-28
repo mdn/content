@@ -28,6 +28,13 @@ rgb(255 255 255 / 50%)
 rgb(from green r g b / 0.5)
 rgb(from #0000FF calc(r + 40) calc(g + 40) b)
 rgb(from hwb(120deg 10% 20%) r g calc(b + 200))
+
+* Legacy 'rgba()' alias */
+rgba(0 255 255)
+
+/* Legacy format */
+rgb(0, 255, 255)
+rgba(0, 255, 255, 50%)
 ```
 
 ### Values
