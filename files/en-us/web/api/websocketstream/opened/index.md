@@ -37,7 +37,7 @@ function writeToScreen(message) {
   output.insertAdjacentHTML("beforeend", `<p>${message}</p>`);
 }
 
-if ("WebSocketStream" in window) {
+if ("WebSocketStream" in self) {
   const wsURL = "ws://127.0.0.1/";
   const wss = new WebSocketStream(wsURL);
 
