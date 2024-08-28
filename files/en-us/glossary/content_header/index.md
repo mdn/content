@@ -6,11 +6,12 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-**Content headers** are a group of [HTTP headers](/en-US/docs/Web/HTTP/Headers) that describe the bodies of HTTP messages.
-They specifically describe the {{Glossary("HTTP Content", "message content")}}, rather than the representation of a resource, meaning the length of message data, which part of the resource is carried in the data (for multi-part messages), any encoding applied for transport, and message integrity checks.
+**Content headers** are the group of [HTTP headers](/en-US/docs/Web/HTTP/Headers) that describe the content of the body of an HTTP message, after any message framing in the body has been removed.
+They specifically describe the properties of the {{Glossary("HTTP Content", "message content")}} that is conveyed in a particular message _as it is transported_, such as the length of the content, the transport encoding, which part of the resource is carried in the data (for multi-part messages), and message integrity checks.
+They differ from the {{Glossary("Representation header", "Representation headers")}}, which describe the encoding, media type, language, and other characteristics of the resource, and allow the underlying data to be interpreted.
 
-These headers were defined as "Payload headers" in {{RFC("7231")}}, but "content" is used instead because data contained in HTTP/2 and HTTP/3 frame payloads could be header data, body data, or other control information.
-Later HTTP specifications don't mention "content headers" or expand on the list of relevant headers, but the semantics remain the same, so this way of classifying headers still applies.
+These headers were defined as "Payload headers" in {{RFC("7231")}}, but are now referred to as "Content headers" because data contained in HTTP/2 and HTTP/3 frame payloads could be header data, body data, or other control information.
+Later HTTP specifications don't mention "content headers" or expand on the list of relevant headers, but the semantics remain the same, so this way of classifying headers is still useful.
 
 > [!NOTE]
 > Content headers are not mutually exclusive with {{Glossary("Representation header", "Representation headers")}} which are typically more relevant to understanding HTTP message semantics.
