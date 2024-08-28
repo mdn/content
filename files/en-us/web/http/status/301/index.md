@@ -8,7 +8,9 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.301
 {{HTTPSidebar}}
 
 The HTTP **`301 Moved Permanently`** [redirection response](/en-US/docs/Web/HTTP/Status#redirection_messages) status code indicates that the requested resource has been definitively moved to the URL in the {{HTTPHeader("Location")}} header.
-A browser redirects automatically to the new page, and the ranking value in search engines (colloquially named "link juice" in {{Glossary("SEO")}} terms) is sent to the new URL.
+
+A browser receiving this status will automatically request the resource at the URL in the `Location` header, redirecting the user to the new page.
+Search engines receiving this response will attribute links to the original URL to the redirected resource instead, passing the {{Glossary("SEO")}} ranking to the new URL.
 
 > [!NOTE]
 > Although the [specification](#specifications) requires the request method and the body to remain unchanged when redirection is performed, not all user-agents meet this requirement.
