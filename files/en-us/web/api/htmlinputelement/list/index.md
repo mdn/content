@@ -17,7 +17,7 @@ The `list` attribute identifies a `<datalist>` in the same tree providing predef
 
 ## Value
 
-A {{domxref("HTMLDataListElement")}} or `null`.
+An {{domxref("HTMLDataListElement")}} or `null`.
 
 ## Example
 
