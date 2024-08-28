@@ -11,7 +11,7 @@ browser-compat: api.HTMLInputElement.maxLength
 The **`maxLength`** property of the {{domxref("HTMLInputElement")}} interface indicates the maximum number of characters (in Unicode code points) allowed to be entered for the value of the {{HTMLElement("input")}} element, and the maximum number of characters allowed for the value to be valid. It reflects the element's [`maxlength`](/en-US/docs/Web/HTML/Element/input#maxLength) attribute. If no `maxlength` attribute is set, the value is `-1`, and there is no limit on the length of the value.
 
 > [!NOTE]
-> Browser generally prevent users from entering more characters than the `maxlength` attribute allows. Should the length be longer, the read-only {{domxref("ValidityState.tooLong", "tooLong")}} property of a {{domxref("ValidityState")}} object will be `true` element will match the {{cssxref(":invalid")}} pseudo-class.
+> Browser generally prevent users from entering more characters than the `maxlength` attribute allows. Should the length be longer, the element is considered invalid and the {{domxref("ValidityState")}} object's {{domxref("ValidityState.tooLong", "tooLong")}} property will be `true`.
 
 ## Value
 
