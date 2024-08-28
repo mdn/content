@@ -29,7 +29,6 @@ Given the following HTML:
   <option value="Krypton" />
   <option value="Tamaran" />
 </datalist>
-</datalist>
 ```
 
 You can retrieve the `<datalist>` element associated with the `<input>`:
