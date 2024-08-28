@@ -889,15 +889,15 @@
   resolved "https://registry.yarnpkg.com/@mdn/bcd-utils-api/-/bcd-utils-api-0.0.7.tgz#555e80c33df520df068943e6b18ebc07f0e24d19"
   integrity sha512-IHkkypEjlIkBkx4mJ2//Xbzog9M/Lzne1Sl8db2cIHJ/5pe3NCqSLwSchmqzcUN+/WJr/U+V3tNAbWunk2xZcA==
 
-"@mdn/browser-compat-data@^5.5.48":
+"@mdn/browser-compat-data@^5.5.49":
   version "5.5.49"
   resolved "https://registry.yarnpkg.com/@mdn/browser-compat-data/-/browser-compat-data-5.5.49.tgz#338a242528a66b2f4cb44a320db13887c27e08f3"
   integrity sha512-FNYbYIA8WEff/+A8iMGstZhArpgy5ZxZ9uQRsBQ+qXsiKTYn3WjxpCmJRw3CFUOqFlQSZDkC3v1y3BijRnE1Pg==
 
-"@mdn/yari@2.61.0":
-  version "2.61.0"
-  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-2.61.0.tgz#0934c552b0d45b8bdf0971cb00e7f7af74451356"
-  integrity sha512-xNkxTzAV2suOPa553JBqES3Oix6QLO4aqDxKb4gsJ3aZcWvC2WcI2tTSyu9vjFGoSYhNPQHfkQ80t5k1yXFCtQ==
+"@mdn/yari@2.62.0":
+  version "2.62.0"
+  resolved "https://registry.yarnpkg.com/@mdn/yari/-/yari-2.62.0.tgz#ef71c9a2e06455bd9556a000431af013f160609a"
+  integrity sha512-N6y6Sc8hdNMn4u2n3u+CbDc+CZQ6+/Fq8ZZae2KVogI7zMAbFl6L06e5TcEPeb4i6pX1cEFk4p9xPtJx59P+OQ==
   dependencies:
     "@caporal/core" "^2.0.7"
     "@codemirror/lang-css" "^6.2.1"
@@ -907,7 +907,7 @@
     "@codemirror/theme-one-dark" "^6.1.2"
     "@fast-csv/parse" "^5.0.0"
     "@mdn/bcd-utils-api" "^0.0.7"
-    "@mdn/browser-compat-data" "^5.5.48"
+    "@mdn/browser-compat-data" "^5.5.49"
     "@mozilla/glean" "5.0.3"
     "@sentry/node" "^8.26.0"
     "@stripe/stripe-js" "^4.3.0"
