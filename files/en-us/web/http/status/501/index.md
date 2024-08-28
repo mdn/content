@@ -8,7 +8,8 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.501
 {{HTTPSidebar}}
 
 The HTTP **`501 Not Implemented`** [server error response](/en-US/docs/Web/HTTP/Status#server_error_responses) status code means that the server does not support the functionality required to fulfill the request.
-This status may also include a {{HTTPHeader("Retry-After")}} header, telling the client when to retry the request to check if the functionality is supported by then.
+
+A response with this status may also include a {{HTTPHeader("Retry-After")}} header, telling the client that they can retry the request after the specified time has elapsed.
 A 501 response is cacheable by default unless caching headers instruct otherwise.
 
 `501` is the appropriate response when the server does not recognize the request method and is incapable of supporting it for any resource.

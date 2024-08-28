@@ -8,11 +8,10 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.500
 {{HTTPSidebar}}
 
 The HTTP **`500 Internal Server Error`** [server error response](/en-US/docs/Web/HTTP/Status#server_error_responses) status code indicates that the server encountered an unexpected condition that prevented it from fulfilling the request.
-This error is a generic "catch-all" response to server issues.
-Usually, this indicates the server cannot find a more appropriate [5XX error](/en-US/docs/Web/HTTP/Status#server_error_responses) to respond with.
+This error is a generic "catch-all" response to server issues, indicating that the server cannot find a more appropriate [5XX error](/en-US/docs/Web/HTTP/Status#server_error_responses) to respond with.
 
 If you're a visitor seeing `500` errors on a web page, these issues require investigation by server owners or administrators.
-The causes of `500` errors vary and can range from improper server configuration to out-of-memory (OOM) issues, unhandled exceptions, improper file permissions, or other complex factors.
+There are many possible causes of `500` errors, including: improper server configuration, out-of-memory (OOM) issues, unhandled exceptions, improper file permissions, or other complex factors.
 Server administrators may proactively log occurrences of server error responses, like the `500` status code, with details about the initiating requests to improve the stability of a service in the future.
 
 ## Status
