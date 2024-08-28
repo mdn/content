@@ -34,7 +34,7 @@ Given the following HTML:
 </datalist>
 ```
 
-You can retrieve or set the id of the `<datalist>` associated with the `<input>` attribute
+You can retrieve the `<datalist>` element associated with the `<input>`:
 
 ```js
 const inputElement = document.querySelector("#planet");
