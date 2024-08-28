@@ -548,7 +548,7 @@ The positioned element is positioned relative to both anchor elements. Drag them
 ## See also
 
 - {{cssxref("position-anchor")}}
-- {{cssxref("inset-area")}}
+- {{cssxref("position-area")}}
 - {{cssxref("anchor-size()")}} function
 - [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide
 - [Handling overflow: try fallbacks and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide

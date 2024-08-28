@@ -133,8 +133,6 @@ try {
     console.error(
       "Fetch aborted by user action (browser stop button, closing tab, etc.",
     );
-  } else if (err.name === "TypeError") {
-    console.error("AbortSignal.timeout() method is not supported");
   } else {
     // A network error, or some other problem.
     console.error(`Error: type: ${err.name}, message: ${err.message}`);

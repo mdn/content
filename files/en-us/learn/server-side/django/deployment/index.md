@@ -168,7 +168,7 @@ A full checklist of settings you might want to change is provided in [Deployment
 python3 manage.py check --deploy
 ```
 
-#### Gunicorn
+### Gunicorn
 
 [Gunicorn](https://gunicorn.org/) is a pure-Python HTTP server that is commonly used for serving Django WSGI applications.
 
@@ -181,7 +181,7 @@ Then install _Gunicorn_ locally on the command line using _pip_:
 pip3 install gunicorn
 ```
 
-#### Database configuration
+### Database configuration
 
 SQLite, the default Django database that you've been using for development, is a reasonable choice for small to medium websites.
 Unfortunately it cannot be used on some popular hosting services, such as Heroku, because they don't provide persistent data storage in the application environment (a requirement of SQLite).
@@ -194,7 +194,7 @@ The database connection information will be supplied to Django using an environm
 Rather than hard-coding this information into Django, we'll use the [dj-database-url](https://pypi.org/project/dj-database-url/) package to parse the `DATABASE_URL` environment variable and automatically convert it to Django's desired configuration format.
 In addition to installing the _dj-database-url_ package we'll also need to install [psycopg2](https://www.psycopg.org/), as Django needs this to interact with Postgres databases.
 
-##### dj-database-url
+#### dj-database-url
 
 _dj-database-url_ is used to extract the Django database configuration from an environment variable.
 
@@ -204,7 +204,7 @@ Install it locally so that it becomes part of our [requirements](#requirements) 
 pip3 install dj-database-url
 ```
 
-##### settings.py
+#### settings.py
 
 Open **/locallibrary/settings.py** and copy the following configuration into the bottom of the file:
 
@@ -222,7 +222,7 @@ if 'DATABASE_URL' in os.environ:
 Django will now use the database configuration in `DATABASE_URL` if the environment variable is set; otherwise it uses the default SQLite database.
 The value `conn_max_age=500` makes the connection persistent, which is far more efficient than recreating the connection on every request cycle (this is optional and can be removed if needed).
 
-##### psycopg2
+#### psycopg2
 
 <!-- Django 4.2 now supports Psycopg (3) : https://docs.djangoproject.com/en/5.0/releases/4.2/#psycopg-3-support
   But didn't work on Railway!
@@ -240,7 +240,7 @@ Note that Django will use the SQLite database during development by default, unl
 You can switch to Postgres completely and use the same hosted database for development and production by setting the same environment variable in your development environment (Railway makes it easy to use the same environment for production and development).
 Alternatively you can also install and use a [self-hosted Postgres database](https://www.psycopg.org/docs/install.html) on your local computer.
 
-#### Serving static files in production
+### Serving static files in production
 
 During development we use Django and the Django development web server to serve both our dynamic HTML and our static files (CSS, JavaScript, etc.).
 This is inefficient for static files, because the requests have to pass through Django even though Django doesn't do anything with them.
@@ -267,7 +267,7 @@ python3 manage.py collectstatic
 For this tutorial, _collectstatic_ can be run before the application is uploaded, copying all the static files in the application to the location specified in `STATIC_ROOT`.
 `Whitenoise` then finds the files from the location defined by `STATIC_ROOT` (by default) and serves them at the base URL defined by `STATIC_URL`.
 
-##### settings.py
+#### settings.py
 
 Open **/locallibrary/settings.py** and copy the following configuration into the bottom of the file.
 The `BASE_DIR` should already have been defined in your file (the `STATIC_URL` may already have been defined within the file when it was created.
@@ -286,7 +286,7 @@ STATIC_URL = '/static/'
 
 We'll actually do the file serving using a library called [WhiteNoise](https://pypi.org/project/whitenoise/), which we install and configure in the next section.
 
-#### Whitenoise
+### Whitenoise
 
 There are many ways to serve static files in production (we saw the relevant Django settings in the previous sections).
 The [WhiteNoise](https://pypi.org/project/whitenoise/) project provides one of the easiest methods for serving static assets directly from Gunicorn in production.
@@ -295,7 +295,7 @@ Check out [WhiteNoise](https://pypi.org/project/whitenoise/) documentation for a
 
 The steps to set up _WhiteNoise_ to use with the project are [given here](https://whitenoise.readthedocs.io/en/stable/django.html) (and reproduced below):
 
-##### Install whitenoise
+#### Install whitenoise
 
 Install whitenoise locally using the following command:
 
@@ -303,7 +303,7 @@ Install whitenoise locally using the following command:
 pip3 install whitenoise
 ```
 
-##### settings.py
+#### settings.py
 
 To install _WhiteNoise_ into your Django application, open **/locallibrary/settings.py**, find the `MIDDLEWARE` setting and add the `WhiteNoiseMiddleware` near the top of the list, just below the `SecurityMiddleware`:
 
@@ -336,7 +336,7 @@ STORAGES = {
 
 You don't need to do anything else to configure _WhiteNoise_ because it uses your project settings for `STATIC_ROOT` and `STATIC_URL` by default.
 
-#### Requirements
+### Requirements
 
 The Python requirements of your web application should be stored in a file **requirements.txt** in the root of your repository.
 Many hosting services will automatically install dependencies in this file (in others you have to do this yourself).

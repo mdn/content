@@ -539,7 +539,7 @@ The [`lab()`](/en-US/docs/Web/CSS/color_value/lab) functional notation expresses
 Similar to `lch()` and `oklch()`, the `lightness` is either:
 
 - A {{cssxref("percentage")}}, with `0%` being completely black and `100%` being completely white.
-- A number between `0` and `100` for `lab()` and `0` and `1` for `oklab()`, where `0` is completely black and`1`/`100` is completely white.
+- A number between `0` and `100` for `lab()` and `0` and `1` for `oklab()`, where `0` is completely black and `1`/`100` is completely white.
 
 The `a` value is `<number>` between `-125` and `125` for `lab()` or `-0.4` and `0.4` for `oklab()`, a `<percentage>` between `-100%` and `100%`, or the keyword `none` (equivalent to `0%` in this case). This value specifies the color's distance along the a-axis in the color space, which defines how green (moving towards -100%) or red (moving towards +100%) the color is.
 

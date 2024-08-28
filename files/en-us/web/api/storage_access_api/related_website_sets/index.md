@@ -29,7 +29,7 @@ Related website are a progressive enhancement mechanism that works alongside the
 You should bear in mind that:
 
 - The Chrome-only {{domxref("Document.requestStorageAccessFor()")}} method — which allows top-level sites to request storage access on behalf of embedded origin content — is only supported on domains within a related website set. See [Using the Storage Access API](/en-US/docs/Web/API/Storage_Access_API/Using) for an example.
-- When Chrome first supported the standard Storage Access API (that is, the {{domxref("Document.hasStorageAccess()")}} and {{domxref("Document.requestStorageAccess()")}}methods), it required calling sites to be part of a related website set. This is no longer the case.
+- When Chrome first supported the standard Storage Access API (that is, the {{domxref("Document.hasStorageAccess()")}} and {{domxref("Document.requestStorageAccess()")}} methods), it required calling sites to be part of a related website set. This is no longer the case.
 
 ## How does RWS work?
 
@@ -161,5 +161,5 @@ Two browser vendors [oppose](/en-US/docs/Glossary/Web_standards#opposing_standar
 ## See also
 
 - [Storage Access API](/en-US/docs/Web/API/Storage_Access_API)
-- [Related Website Sets](https://developers.google.com/privacy-sandbox/3pcd/related-website-sets) on developers.google.com (2023)
-- [Related Website Sets: developer guide](https://developers.google.com/privacy-sandbox/3pcd/related-website-sets-integration) on developers.google.com (2023)
+- [Related Website Sets](https://developers.google.com/privacy-sandbox/cookies/related-website-sets) on developers.google.com (2023)
+- [Related Website Sets: developer guide](https://developers.google.com/privacy-sandbox/cookies/related-website-sets-integration) on developers.google.com (2023)

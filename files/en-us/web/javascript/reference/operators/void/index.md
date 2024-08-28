@@ -76,7 +76,7 @@ This is a bit longer than wrapping the function expression in parentheses, which
 
 ### JavaScript URIs
 
-When a browser follows a `javascript:` URI, it evaluates the code in the URI
+When a browser follows a [`javascript:` URI](/en-US/docs/Web/URI/Schemes/javascript), it evaluates the code in the URI
 and then replaces the contents of the page with the returned value, unless the returned
 value is {{jsxref("undefined")}}. The `void` operator can be used to return
 `undefined`. For example:

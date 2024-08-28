@@ -787,7 +787,7 @@
         "Window",
         "WorkletGlobalScope"
       ],
-      "methods": [],
+      "methods": ["reportError"],
       "properties": [],
       "events": [
         "Document: DOMContentLoaded",
@@ -1237,10 +1237,12 @@
       "interfaces": [
         "Presentation",
         "PresentationAvailability",
-        "PresentationDeviceInfoManager",
-        "PresentationRequest",
-        "PresentationSession",
-        "PresentationSessionConnectEvent"
+        "PresentationConnection",
+        "PresentationConnectionAvailableEvent",
+        "PresentationConnectionCloseEvent",
+        "PresentationConnectionList",
+        "PresentationReceiver",
+        "PresentationRequest"
       ],
       "methods": [],
       "properties": ["Navigator.presentation"],
@@ -1300,8 +1302,8 @@
         "InterventionReportBody",
         "Report",
         "ReportBody",
-        "ReportError",
-        "ReportingObserver"
+        "ReportingObserver",
+        "SecurityPolicyViolationEvent"
       ],
       "methods": [],
       "properties": [],

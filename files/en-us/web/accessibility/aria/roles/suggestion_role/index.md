@@ -39,7 +39,7 @@ We could even provide an information box saying who made the suggestion and when
 </div>
 ```
 
-Browsers tend to provide a default black strikethrough for deletions, and a black underline for insertions, but you'll probably want to use
+Browsers tend to provide a default black strikethrough for deletions, and a black underline for insertions when using the HTML elements that implicitly expose these roles. But when using explicit ARIA roles to modify HTML elements, such as divs, you'll need to use CSS to customize the visual styling for such deletions and insertions.
 
 ## Best practices
 

@@ -37,7 +37,7 @@ Relevant directives include the {{Glossary("fetch directive", "fetch directives"
     Unlike other values below, single quotes shouldn't be used.
     You can also specify data schemes (not recommended).
 
-    - `data:` Allows [`data:` URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) to be used as a content source.
+    - `data:` Allows [`data:` URLs](/en-US/docs/Web/URI/Schemes/data) to be used as a content source.
       _This is insecure; an attacker can also inject arbitrary `data:` URLs. Use this sparingly and definitely not for scripts._
     - `mediastream:` Allows [`mediastream:` URIs](/en-US/docs/Web/API/Media_Capture_and_Streams_API) to be used as a content source.
     - `blob:` Allows [`blob:` URIs](/en-US/docs/Web/API/Blob) to be used as a content source.
@@ -60,9 +60,9 @@ Relevant directives include the {{Glossary("fetch directive", "fetch directives"
     The single quotes are required.
 - `'unsafe-hashes'`
   - : Allows enabling specific inline [event handlers](/en-US/docs/Web/Events/Event_handlers).
-    If you only need to allow inline event handlers and not inline {{HTMLElement("script")}} elements or `javascript:` URLs, this is a safer method than using the `unsafe-inline` expression.
+    If you only need to allow inline event handlers and not inline {{HTMLElement("script")}} elements or [`javascript:` URLs](/en-US/docs/Web/URI/Schemes/javascript), this is a safer method than using the `unsafe-inline` expression.
 - `'unsafe-inline'`
-  - : Allows the use of inline resources, such as inline {{HTMLElement("script")}} elements, `javascript:` URLs, inline event handlers, and inline {{HTMLElement("style")}} elements.
+  - : Allows the use of inline resources, such as inline {{HTMLElement("script")}} elements, [`javascript:` URLs](/en-US/docs/Web/URI/Schemes/javascript), inline event handlers, and inline {{HTMLElement("style")}} elements.
     The single quotes are required.
 - `'none'`
   - : Refers to the empty set; that is, no URLs match.
