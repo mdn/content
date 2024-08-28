@@ -6,8 +6,7 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-A **representation header** (or 'representation metadata') is an {{glossary("HTTP_header", "HTTP header")}} that describes a particular _representation_ of a resource.
-When a message includes content, the representation header fields describe how to interpret the data.
+A **representation header** (or 'representation metadata') is an {{glossary("HTTP_header", "HTTP header")}} that describes how to interpret the data contained in the message.
 
 For example, data might be formatted as a particular media type such as XML, JSON, HTML or Markdown, or localized to a particular written language or geographical region.
 The underlying resource is semantically the same in each case, but its representation is different.
