@@ -40,7 +40,7 @@ new WebSocketStream(url, options)
 The most basic example takes the URL of a WebSocket server as an argument:
 
 ```js
-const wss = new WebSocketStream("example.com/wss");
+const wss = new WebSocketStream("wss://example.com/wss");
 ```
 
 A more advanced example could also include an options object containing custom protocols and/or an {{domxref("AbortSignal")}}:
