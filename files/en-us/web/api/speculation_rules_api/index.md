@@ -179,7 +179,9 @@ For prerender:
 Sec-Purpose: prefetch;prerender
 ```
 
-Servers can respond based on this header, for example, to log speculative load requests, return different content, or even prevent speculative loading from happening. If a non-success response code is returned (any HTTP status other than 200 or 304), then the page will not be prefetched/prerendered. This is the easiest way to prevent speculative loading, although it is usually a better approach to allow the prefetch/prerender, and use JavaScript to delay any actions that should only happen when the page is actually viewed.
+Servers can respond based on this header, for example, to log speculative load requests, return different content, or even prevent speculative loading from happening. If a non-success response code is returned (any HTTP status other than in the 200-299 range after redirects), then the page will not be prefetched/prerendered. In addition the 204 and 205 status codes also prevent prerendering (but do not prevent prefetch).
+
+Using a non-success code (for example a 503) is the easiest way to prevent speculative loading server-side, although it is usually a better approach to allow the prefetch/prerender, and use JavaScript to delay any actions that should only happen when the page is actually viewed.
 
 ### JavaScript prefetch detection
 

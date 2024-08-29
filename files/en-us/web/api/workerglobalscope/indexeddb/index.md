@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.indexedDB
 ---
 
-{{APIRef("IndexedDB")}}
+{{APIRef("IndexedDB")}}{{AvailableInWorkers("worker")}}
 
 The **`indexedDB`** read-only property of the {{domxref("WorkerGlobalScope")}} interface provides a mechanism for workers to
 asynchronously access the capabilities of indexed databases.
