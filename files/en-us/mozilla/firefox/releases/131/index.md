@@ -58,6 +58,8 @@ This article provides information about the changes in Firefox 131 that affect d
 
 ## Changes for add-on developers
 
+- The 10 MB quota for data stored by the {{WebExtAPIRef("storage.session")}} API is now enforced in Firefox Nightly 131. Previously, Firefox didn't implement this quota. This enforcement rolls out to release versions of Firefox from version 134. This enables extensions that rely on the previous behavior to correct any issues.
+
 ### Removals
 
 ### Other
