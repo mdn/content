@@ -7,7 +7,7 @@ browser-compat: css.properties.stroke-dashoffset
 
 {{CSSRef}}
 
-The **`stroke-dashoffset`** [CSS](/en-US/docs/Web/CSS) property defines an offset for the starting point of the rendering of an [SVG](/en-US/docs/Web/SVG) element's associated {{CSSxref("stroke-dasharray", "dash array")}}. If present, it overrides the element's {{SVGAttr("stroke-dashoffset")}} attribute.
+The **`stroke-dashoffset`** [CSS](/en-US/docs/Web/CSS) property defines an offset for the starting point of the rendering of an [SVG](/en-US/docs/Web/SVG) element's associated [dash array](/en-US/docs/Web/CSS/stroke-dasharray). If present, it overrides the element's {{SVGAttr("stroke-dashoffset")}} attribute.
 
 This property applies to any SVG shape or text-content element (see {{SVGAttr("stroke-dashoffset")}} for a full list), but as an inherited property, it may be applied to elements such as {{SVGElement("g")}} and still have the intended effect on descendant elements' strokes.
 
