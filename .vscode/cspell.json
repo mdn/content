@@ -5,8 +5,8 @@
   "languageId": "*",
   "useGitignore": true,
   "dictionaries": [
-    "project-words",
-    "ignored-words",
+    "terms-abbreviations",
+    "ignore-list",
     "bash",
     "css",
     "cpp",
@@ -67,13 +67,13 @@
   "allowCompoundWords": true,
   "dictionaryDefinitions": [
     {
-      "name": "project-words",
-      "path": "./project-words-list.txt",
+      "name": "terms-abbreviations",
+      "path": "./terms-abbreviations.txt",
       "addWords": true
     },
     {
-      "name": "ignored-words",
-      "path": "./ignored-words-list.txt",
+      "name": "ignore-list",
+      "path": "./ignore-list.txt",
       "addWords": false,
       "noSuggest": true
     }
