@@ -43,6 +43,6 @@ jobs:
             ```
 
             > [!TIP]
-            > To exclude words from the spellchecker, you can add valid words (web technology terms or abbreviations) to the [project-words.txt](https://github.com/mdn/content/blob/main/.vscode/project-words.txt) dictionary for IDE autocompletion. To ignore strings that are not words (`AABBCC` in code, for instance), you can add them to [ignored-words.txt](https://github.com/mdn/content/blob/main/.vscode/ignored-words.txt).
+            > To exclude words from the spellchecker, you can add valid words (web technology terms or abbreviations) to the [project-words-list.txt](https://github.com/mdn/content/blob/main/.vscode/project-words-list.txt) dictionary for IDE autocompletion. To ignore strings that are not words (`AABBCC` in code, for instance), you can add them to [ignored-words-list.txt](https://github.com/mdn/content/blob/main/.vscode/ignored-words-list.txt).
         env:
           OUTPUT: ${{ env.OUTPUT }}

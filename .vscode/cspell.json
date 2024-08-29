@@ -68,12 +68,12 @@
   "dictionaryDefinitions": [
     {
       "name": "project-words",
-      "path": "./project-words.txt",
+      "path": "./project-words-list.txt",
       "addWords": true
     },
     {
       "name": "ignored-words",
-      "path": "./ignored-words.txt",
+      "path": "./ignored-words-list.txt",
       "addWords": false,
       "noSuggest": true
     }
