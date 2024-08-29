@@ -72,7 +72,7 @@ p {
 ```html hidden
 <div
   class="container"
-  style="background-image: url(listen_to_black_women.jpg);">
+  style="background-image: url('https://mdn.github.io/shared-assets/images/examples/listen_to_black_women.jpg');">
   <p>
     Text on images can be illegible and inaccessible even with a drop shadow.
   </p>
@@ -147,7 +147,7 @@ This example shows three images: the image with a `hue-rotate()` filter function
       <td>
         <img
           style="filter: hue-rotate(90deg)"
-          src="flag.jpg"
+          src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
           alt="Pride flag with rotated colors" />
       </td>
       <td>
@@ -161,14 +161,18 @@ This example shows three images: the image with a `hue-rotate()` filter function
             <feColorMatrix type="hueRotate" values="90" />
           </filter>
           <image
-            xlink:href="flag.jpg"
+            href="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
             filter="url(#hue-rotate)"
             width="220"
             height="220" />
         </svg>
       </td>
 
-      <td><img src="flag.jpg" alt="Pride flag" /></td>
+      <td>
+        <img
+          src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
+          alt="Pride flag" />
+      </td>
     </tr>
   </tbody>
 </table>

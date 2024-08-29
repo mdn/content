@@ -204,7 +204,7 @@ function draw() {
       }
     }
   };
-  img.src = "rhino.jpg";
+  img.src = "https://mdn.github.io/shared-assets/images/examples/rhino.jpg";
 }
 
 draw();
@@ -236,7 +236,11 @@ In this example, we'll use the same rhino as in the previous example, but we'll 
 ```html
 <canvas id="canvas" width="150" height="150"></canvas>
 <div style="display: none;">
-  <img id="source" src="rhino.jpg" width="300" height="227" />
+  <img
+    id="source"
+    src="https://mdn.github.io/shared-assets/images/examples/rhino.jpg"
+    width="300"
+    height="227" />
   <img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
 </div>
 ```

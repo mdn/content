@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.btoa
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{AvailableInWorkers("worker")}}
 
 The **`btoa()`** method of the {{domxref("WorkerGlobalScope")}} interface creates a
 {{glossary("Base64")}}-encoded {{Glossary("ASCII")}} string from a _binary string_ (i.e., a
