@@ -10,7 +10,7 @@ browser-compat: api.HTMLDetailsElement.name
 
 The **`name`** property of the {{domxref("HTMLDetailsElement")}} interface enables multiple {{htmlelement("details")}} elements to be connected together, where only one for the `<details>` elements can be open at once. This allows developers to easily create UI features such as accordions without scripting.
 
-The name attribute specifies a group name — give multiple `<details>` elements the same name value to group them. Only one of the grouped `<details>` elements can be open at a time — opening one will cause another to close. If multiple grouped `<details>` elements are given the open attribute, only the first one in the source order will be rendered open.
+The name attribute specifies a group name — give multiple `<details>` elements the same name value to group them. Only one of the grouped `<details>` elements can be open at a time — opening one will cause another to close. If multiple grouped `<details>` elements are given the `open` attribute, only the first one in the source order will be rendered open.
 
 ## Value
 
