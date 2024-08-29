@@ -144,6 +144,9 @@ function iteratorToStream(iterator) {
 }
 ```
 
+> [!WARNING]
+> This example assumes that the return value (`value` when `done` is `true`), if present, is also a chunk to be enqueued. Some iterator APIs may use the return value for different purposes. You may need to adjust the code based on the API you are interacting with.
+
 ### Async iteration of a stream using for await...of
 
 This example shows how you can process the `fetch()` response using a [`for await...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of) loop to iterate through the arriving chunks.
