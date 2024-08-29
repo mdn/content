@@ -15,7 +15,7 @@ An `SVGAngle` object can be associated with a particular element. The associated
 
 Every `SVGAngle` object operates in one of two modes:
 
-1. **_Reflect the base value_** of a reflected animatable attribute (being exposed through the {{SVGAttr("baseVal")}} member of an {{domxref("SVGAnimatedAngle")}}),
+1. **_Reflect the base value_** of a reflected animatable attribute (being exposed through the {{domxref("SVGAnimatedAngle.baseVal", "baseVal")}} member of an {{domxref("SVGAnimatedAngle")}}),
 2. **_Be detached_,** which is the case for `SVGAngle` objects created with {{domxref("SVGSVGElement.createSVGAngle()")}}.
 
 ## Constants

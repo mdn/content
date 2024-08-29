@@ -33,7 +33,7 @@ drawArrays(mode, first, count)
     - `gl.TRIANGLES`: Draws a triangle for a group of three vertices.
 
     > [!NOTE]
-    > If `mode` is `POINTS`, [`gl_PointSize`](https://www.opengl.org/sdk/docs/man4/html/gl_PointSize.xhtml) may need to be set for `drawArrays` to render, as its value is unknown if not explicitly written. Only some GPUs set its default as `1.0`.
+    > If `mode` is `POINTS`, [`gl_PointSize`](https://registry.khronos.org/OpenGL-Refpages/gl4/html/gl_PointSize.xhtml) may need to be set for `drawArrays` to render, as its value is unknown if not explicitly written. Only some GPUs set its default as `1.0`.
 
 - `first`
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the starting index in the array of vector points.
