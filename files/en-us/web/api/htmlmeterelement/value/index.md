@@ -8,13 +8,13 @@ browser-compat: api.HTMLMeterElement.value
 
 {{ APIRef("HTML DOM") }}
 
-The **`value`** property of the {{DOMxRef("HTMLMeterElement")}} interface represents the current value of the {{htmlelement("meter")}} element as a `double`. It reflects the element's [`value`](/en-US/docs/Web/HTML/Element/meter#value) attribute. If no `value` is set, the {{DOMxRef("HTMLMeterElement.min")}} value or `0`, whichever is greater.
+The **`value`** property of the {{DOMxRef("HTMLMeterElement")}} interface represents the current value of the {{htmlelement("meter")}} element as a floating-point number. It reflects the element's [`value`](/en-US/docs/Web/HTML/Element/meter#value) attribute. If no `value` is set, it is the {{DOMxRef("HTMLMeterElement.min")}} value or `0`, whichever is greater.
 
 This property can also be set directly, for example to set a default value based on some condition.
 
 ## Value
 
-A number. The value of `value`, or either {{DOMxRef("HTMLMeterElement.min")}} or `0`, whichever if greater, if not defined.
+A number. Defaults to either {{DOMxRef("HTMLMeterElement.min")}} or `0`, whichever if greater, if not defined.
 
 ## Examples
 
