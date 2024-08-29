@@ -6,9 +6,9 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-**Debouncing**, in the context of programming, means to "batch" all operations that were requested in an interval into a single invocation.
+**Debouncing**, in the context of programming, means to "batch" all operations requested during a specific interval into a single invocation.
 
-Debouncing is very similar to {{glossary("throttle", "throttling")}}. The key difference is that when invocations happens continuously, throttling ensures that the operation is still performed at a certain maximum rate, while debouncing waits indefinitely until the invocations stop for a certain amount of time.
+Debouncing is very similar to {{glossary("throttle", "throttling")}}. The key difference is that throttling enforces limits on continuous operations, while debouncing waits for invocations to stop for a specific time to consolidate many noisy invocations into one single invocation.
 
 A typical use case of debouncing is when responding to user input. When the user is typing, no other action should be taken to avoid the UI becoming laggy. When the user pauses typing, we can start processing the input, such as filtering results, giving suggestions, etc. If the function `search` is debounced by 10 milliseconds, it means:
 

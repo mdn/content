@@ -6,7 +6,7 @@ page-type: glossary-definition
 
 {{GlossarySidebar}}
 
-**Throttling** originally means to slow down the rate of fluid flow through obstruction. In the context of programming, it refers to slowing down a process such that an operation can only be performed at a certain maximum rate.
+**Throttling** originally meant slowing down the rate of fluid flow using an obstruction. In the context of programming, it refers to slowing down a process such that an operation can only be performed at a certain rate.
 
 Throttling is very similar to {{glossary("debounce", "debouncing")}}. The key difference is that when invocations happen continuously, throttling ensures that the operation is still performed at a certain maximum rate, while debouncing waits indefinitely until the invocations stop for a certain amount of time.
 
