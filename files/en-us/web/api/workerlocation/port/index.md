@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.WorkerLocation.port
 ---
 
-{{ApiRef("WorkerLocation")}}
+{{ApiRef("WorkerLocation")}}{{AvailableInWorkers("worker")}}
 
 The **`port`** property of a {{domxref("WorkerLocation")}} object returns the {{domxref("URL.port", "port")}} part of the worker's location.
 
