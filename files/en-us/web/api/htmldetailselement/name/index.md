@@ -14,7 +14,7 @@ The name attribute specifies a group name — give multiple `<details>` elements
 
 ## Value
 
-A string which is used to group multiple `<details>` elements together. The value can be anything but can not be empty.
+A string. The empty string if the element is not part of any group.
 
 ## Specifications
 
