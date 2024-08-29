@@ -7,11 +7,13 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc2295#section-8.1
 
 {{HTTPSidebar}}
 
-The HTTP **`506 Variant Also Negotiates`** [server error response](/en-US/docs/Web/HTTP/Status#server_error_responses) status code is returned in Transparent Content Negotiation (TCN) when there is recursive content negotiation.
+The HTTP **`506 Variant Also Negotiates`** [server error response](/en-US/docs/Web/HTTP/Status#server_error_responses) status code is returned during Transparent Content Negotiation (TCN) when there is recursive loop in the process of selecting a resource.
 
-Transparent content negotiation enables a client to retrieve the best variant of a given resource when the server supports multiple variants.
-A server sends a `506` status code if it is sending a choice response which itself has multiple variants.
-This is due to a server misconfiguration with circular references in choice responses.
+Transparent Content Negotiation enables a client and server to collaboratively decide the best variant of a given resource when the server has multiple variants.
+A server sends a `506` status code due to server misconfiguration when there are circular references when creating choice responses.
+
+Transparent Content Negotiation is not supported in most modern browsers due to complexity in implementations, lack of standardization of how clients automatically choose from responses, and the additional round-trips that slow down client-server interaction.
+[Server-driven content negotiation](/en-US/docs/Web/HTTP/Content_negotiation#server-driven_content_negotiation) is instead common, where a server directly chooses the most appropriate resource for the client based on the request headers ({{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Accept")}}, etc.).
 
 ## Status
 
@@ -28,14 +30,25 @@ This is due to a server misconfiguration with circular references in choice resp
 ### Resource with variants
 
 In the following example, a client requests a page in the `fr` locale using the {{HTTPHeader("Accept-Language")}} header.
+This can be performed using curl:
+
+```bash
+curl  -H "Negotiate: trans" -H "Accept-Language: fr;" http://example.com/index
+```
+
+This produces the following request:
 
 ```http
-GET /highlight-page HTTP/1.1
+GET /index HTTP/1.1
 Host: example.com
+User-Agent: curl/8.7.1
+Accept: */*
+Negotiate: trans
 Accept-Language: fr
 ```
 
-Due to server misconfiguration, the variant response for `fr` points to a [type map](https://httpd.apache.org/docs/trunk/mod/mod_negotiation.html#typemaps) which itself causes transparent negotiation to be done:
+Due to server misconfiguration, the variant response for `fr` points to a [type map](https://httpd.apache.org/docs/trunk/mod/mod_negotiation.html#typemaps) which itself causes transparent negotiation to be performed.
+The server may detect this condition by the presence of a `TCN` header in a choice response before it is sent:
 
 ```http
 HTTP/1.1 506 Variant Also Negotiates
@@ -43,6 +56,9 @@ Date: Mon, 22 Jul 2024 10:00:00 GMT
 Server: Apache/2.4.41 (Unix)
 Content-Type: text/html; charset=UTF-8
 Content-Length: 233
+TCN: list
+Vary: negotiate,accept-language
+Alternates: {"index.html.en" 1 {type text/html} {language en} {length 48}}, {"another-map.html.fr.map" 1 {type text/html} {language fr} {length 45}}}}
 
 <html>
 <head>
@@ -57,7 +73,9 @@ Content-Length: 233
 
 ## See also
 
+- {{HTTPStatus("300", "300 Multiple Choices")}}
 - {{RFC("2295")}}
 - [Content negotiation](/en-US/docs/Web/HTTP/Content_negotiation)
 - [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
 - [Content Negotiation](https://httpd.apache.org/docs/2.4/content-negotiation.html) in Apache HTTP Server documentation
+- [Apache httpd `mod_negotiation.c` source](https://github.com/apache/httpd/blob/6a2433cb3fbc30c8a55f450a046e4b0f69e73143/modules/mappers/mod_negotiation.c#L2687-L2691) showing conditions that trigger `HTTP_VARIANT_ALSO_VARIES` response.
