@@ -9,13 +9,16 @@ spec-urls: https://httpwg.org/specs/rfc9110.html#status.300
 
 The HTTP **`300 Multiple Choices`** [redirection response](/en-US/docs/Web/HTTP/Status#redirection_messages) status code indicates that the request has more than one possible response.
 The user-agent or the user should choose one of them.
-There is no standardized way of automatically choosing one of the responses, so this status code is rarely used.
+
+> [!NOTE]
+> In Transparent Content Negotiation (TCN), a client and server collaboratively decide the best variant of a given resource when the server has multiple variants.
+> Most modern browsers have poor support due to complexity in implementations, lack of standardization of how clients automatically choose from responses, and the additional round-trips that slow down client-server interaction.
+> [Server-driven content negotiation](/en-US/docs/Web/HTTP/Content_negotiation#server-driven_content_negotiation) is far more common, where a server chooses the most appropriate resource for the client based on the request headers ({{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Accept")}}, etc.).
 
 The server should include content in the response that contains a list of resource metadata and URIs from which the user or user agent can choose.
-The format of the content is implementation-specific, but may be based on content negotiation and should be easily parsed by the user agent, therefore HTML or JSON are good candidates.
-See [Content negotiation](/en-US/docs/Web/HTTP/Content_negotiation) for more information.
+The format of the content is implementation-specific, but should be easily parsed by the user agent (such as HTML or JSON).
 
-If the server has a preferred choice that the client should request, it should include it in a {{HTTPHeader("Location")}} header.
+If the server has a preferred choice that the client should request, it can include it in a {{HTTPHeader("Location")}} header.
 
 ## Status
 
@@ -25,40 +28,59 @@ If the server has a preferred choice that the client should request, it should i
 
 ## Examples
 
-### 300 response with a `Location` header
+### 300 response with list of resources
 
-The following example shows how reactive negotiation (or [agent-driven negotiation](/en-US/docs/Web/HTTP/Content_negotiation#agent-driven_negotiation)) may look.
-In this scenario, a `300` response is sent by the server with details of different representations of the requested resource.
-The browser would then choose one of the options (or defer the decision to the user), and send a new request to fetch the selected resource.
-Note that in this case the server response also includes the `Location` header to indicate the resource that it would prefer to return.
+The following example demonstrates how Transparent Content Negotiation.
+An Apache server offers multiple variants of a resource defined in a [type map](https://httpd.apache.org/docs/trunk/mod/mod_negotiation.html#typemaps); `index.html.en` for the `en` locale, and `index.html.fr` for a `fr` locale:
+
+```plain
+URI: index.html.en
+Content-Language: en
+
+URI: index.html.fr
+Content-Language: fr
+```
+
+A `Negotiate: trans` request header indicates that the client wants to use TCN to choose a resource.
+Poor browser support for this mechanism means a user agent such as curl must be used instead:
+
+```bash
+ curl -v -H "Negotiate: trans" http://localhost/index
+```
+
+This produces the following request:
 
 ```http
-GET /resource HTTP/1.1
-Host: example.com
-Accept: application/json
+GET /index HTTP/1.1
+Host: localhost
+User-Agent: curl/8.7.1
+Accept: */*
+Negotiate: trans
 ```
+
+We receive a `300` response with details of different representations of the requested resource:
 
 ```http
 HTTP/1.1 300 Multiple Choices
-Content-Type: application/json
-Location: http://example.com/resource-html
+Date: Fri, 30 Aug 2024 09:21:48 GMT
+Server: Apache/2.4.59 (Unix)
+Alternates: {"index.html.en" 1 {type text/html} {language en} {length 48}}, {"index.html.fr" 1 {type text/html} {language fr} {length 45}}
+Vary: negotiate,accept-language
+TCN: list
+Content-Length: 419
+Content-Type: text/html; charset=iso-8859-1
 
-{
-  "message": "Multiple choices available.",
-  "choices": [
-    {
-      "contentType": "text/pdf",
-      "uri": "http://example.com/resource-pdf"
-    },
-    {
-      "contentType": "text/html",
-      "uri": "http://example.com/resource-html"
-    }
-  ]
-}
+<html><head>
+<title>300 Multiple Choices</title>
+</head><body>
+<h1>Multiple Choices</h1>
+Available variants:
+<ul>
+<li><a href="index.html.en">index.html.en</a> , type text/html, language en</li>
+<li><a href="index.html.fr">index.html.fr</a> , type text/html, language fr</li>
+</ul>
+</body></html>
 ```
-
-The downsides of this approach are that the content may have a different format or syntax depending on the implementation, and that the interaction includes an additional request-response exchange — which slows down the interaction.
 
 ## Specifications
 
@@ -71,3 +93,6 @@ The downsides of this approach are that the content may have a different format 
 - {{HTTPStatus("301", "301 Moved Permanently")}}
 - {{HTTPStatus("302", "302 Found")}} temporary redirect
 - {{HTTPStatus("308", "308 Permanent Redirect")}}
+- {{HTTPStatus("506", "506 Variant Also Negotiates")}}
+- [Apache Server Negotiation Algorithm](https://httpd.apache.org/docs/current/en/content-negotiation.html#algorithm)
+- {{RFC("2295", "Transparent Content Negotiation in HTTP")}}
