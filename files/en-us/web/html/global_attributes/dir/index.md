@@ -30,7 +30,7 @@ It can have the following values:
 
 ## Inheritance
 
-If an element has no `dir` attribute, then it inherits it from its [parent node](/en-US/docs/Glossary/Node/DOM), which in turn may inherit it from its parent, and so on.
+If an element has no `dir` attribute, it will inherit the `dir` value set on its [parent node](/en-US/docs/Glossary/Node/DOM), which in turn may inherit it from its parent, and so on.
 
 ## Specifications
 
