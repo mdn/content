@@ -8,9 +8,7 @@ browser-compat: api.HTMLButtonElement.reportValidity
 
 {{APIRef("HTML DOM")}}
 
-The **`reportValidity()`** method of the {{domxref('HTMLButtonElement')}} interface performs the same validity checking steps as the {{domxref("HTMLButtonElement.checkValidity", "checkValidity()")}} method. If the element fails to meet any [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) rules, the method returns `false`, fires the `invalid` event on the element, and (if the event isn't canceled) reports the problem to the user.
-
-An HTML {{htmlelement("button")}} element with a non-null {{domxref("HTMLButtonElement.validationMessage", "validationMessage")}} is considered invalid, will match the CSS {{cssxref(":invalid")}} pseudo-class, and will cause `reportValidity()` to display the validation message to the user and return `false`. Use the {{domxref("HTMLButtonElement.setCustomValidity()")}} method to set the {{domxref("HTMLButtonElement.validationMessage")}} to the empty string to set the {{domxref("HTMLButtonElement.validity", "validity")}} state to be valid.
+The **`reportValidity()`** method of the {{domxref("HTMLButtonElement")}} interface performs the same validity checking steps as the {{domxref("HTMLButtonElement.checkValidity", "checkValidity()")}} method. In addition, if the {{domxref("HTMLElement/invalid_event", "invalid")}} event is not canceled, the browser displays the problem to the user.
 
 ## Syntax
 
@@ -24,11 +22,11 @@ None.
 
 ### Return value
 
-A boolean value.
+Returns `true` if the element's value has no validity problems; otherwise, returns `false`.
 
 ### Examples
 
-This far fetched example, demonstrates how a button can be made invalid.
+This far fetched example demonstrates how a button can be made invalid.
 
 #### HTML
 
@@ -134,9 +132,9 @@ The button is by default valid. Activate "THIS BUTTON" to change the value, cont
 
 ## See also
 
+- {{domxref("HTMLButtonElement.checkValidity()")}}
 - {{HTMLElement("button")}}
 - {{HTMLElement("form")}}
-- {{domxref("HTMLButtonElement.checkValidity()")}}
 - [Learn: Client-side form validation](/en-US/docs/Learn/Forms/Form_validation)
 - [Guide: Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
 - CSS {{cssxref(":valid")}} and {{cssxref(":invalid")}} pseudo-classes

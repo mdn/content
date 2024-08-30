@@ -8,9 +8,7 @@ browser-compat: api.HTMLFieldSetElement.reportValidity
 
 {{APIRef("HTML DOM")}}
 
-The **`reportValidity()`** method of the {{domxref("HTMLFieldSetElement")}} interface checks if the element is valid, performing the same validity checking steps as the {{domxref("HTMLFieldSetElement.checkValidity", "checkValidity()")}} method.
-
-Part of the constraint validation API, this method always returns `true` as `<fieldset>` objects are never candidates for constraint validation.
+The **`reportValidity()`** method of the {{domxref("HTMLFieldSetElement")}} interface performs the same validity checking steps as the {{domxref("HTMLFieldSetElement.checkValidity", "checkValidity()")}} method. It always returns true because {{HTMLElement("fieldset")}} elements are never candidates for [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) .
 
 ## Syntax
 
@@ -24,7 +22,7 @@ None.
 
 ### Return value
 
-Returns `true`.
+A boolean value, `true`.
 
 ## Specifications
 
@@ -36,8 +34,8 @@ Returns `true`.
 
 ## See also
 
+- {{domxref("HTMLFieldSetElement.checkValidity()")}}
 - {{HTMLElement("fieldset")}}
 - {{HTMLElement("form")}}
-- {{domxref("HTMLFieldSetElement.checkValidity()")}}
 - [Learn: Client-side form validation](/en-US/docs/Learn/Forms/Form_validation)
 - [Guide: Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)

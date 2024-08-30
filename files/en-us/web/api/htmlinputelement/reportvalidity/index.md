@@ -8,11 +8,7 @@ browser-compat: api.HTMLInputElement.reportValidity
 
 {{APIRef("HTML DOM")}}
 
-The **`reportValidity()`** method of the {{domxref('HTMLInputElement')}} interface returns a boolean value which indicates validity of the value of the element. If `false` – if the value is invalid because it does not meet constraint validation or if the {{domxref("ValidityState")}}'s `valid` property is {{glossary("truthy")}} – this method fires the {{domxref("HTMLInputElement.invalid_event", "invalid")}} event on the element, and reports the problem to the user.
-
-The method will return `false` if and display a message (even if the value is valid) if the input has a non-empty {{domxref("HTMLInputElement.validationMessage", "validationMessage")}}. This occurs when the {{domxref("HTMLInputElement.setCustomValidity()")}} method set a custom error message when the value and the error message, and remains so until the `validationMessage` is {{glossary("falsy")}}. The {{domxref("HTMLInputElement.validity", "validity")}} object's `valid` property must be true and the {{domxref("HTMLInputElement.validationMessage", "validationMessage")}} must be null or the empty string for `reportValidity()` to return `true`, in which case it will neither fire an `invalid` event nor display an error message to the user.
-
-To check validation without showing an error message, use the [`checkValidity()`](/en-US/docs/Web/API/HTMLInputElement/checkValidity) method instead.
+The **`reportValidity()`** method of the {{domxref("HTMLInputElement")}} interface performs the same validity checking steps as the {{domxref("HTMLInputElement.checkValidity", "checkValidity()")}} method. In addition, if the {{domxref("HTMLElement/invalid_event", "invalid")}} event is not canceled, the browser displays the problem to the user.
 
 ## Syntax
 
@@ -166,7 +162,9 @@ If you activate the "reportValidity()" button before entering an age, the `repor
 
 ## See also
 
-- [checkValidity](/en-US/docs/Web/API/HTMLInputElement/checkValidity)
+- {{domxref("HTMLInputElement.checkValidity()")}}
+- {{HTMLElement("input")}}
+- {{HTMLElement("form")}}
 - [Learn: Client-side form validation](/en-US/docs/Learn/Forms/Form_validation)
 - [Guide: Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
 - CSS {{cssxref(":valid")}} and {{cssxref(":invalid")}} pseudo-classes
