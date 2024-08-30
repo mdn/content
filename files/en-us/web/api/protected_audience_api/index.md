@@ -14,7 +14,7 @@ browser-compat:
 > [!NOTE]
 > An [Enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment) is required to use the Protected Audience API in your applications. See the [Enrollment](#enrollment_and_local_testing) section for details of what sub-features are gated by enrollment.
 
-The **Protected Audience API** allows developers to implement remarketing and custom audience advertising use cases. It uses on-device auctions to choose relevant ads to display related to websites the user has previously visited. The Protected Audience API doesn't use third-party cookies or other tracking technologies — third parties cannot use it to track user browsing behavior across sites.
+The **Protected Audience API** allows developers to implement remarketing and custom audience advertising use cases. It uses on-device auctions to choose relevant ads to display related to websites the user has previously visited. The Protected Audience API doesn't use [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies) or other tracking technologies — third parties cannot use it to track user browsing behavior across sites.
 
 ## Concepts and usage
 
@@ -56,7 +56,7 @@ The steps involved are as follows:
 
 For more information on implementing the functionality required for the above steps, see:
 
-- [Protected Audience API: Joining an ad interest group](#)
+- [Protected Audience API: Joining an ad interest group](/en-US/docs/Web/API/Protected_Audience_API/Join_ad_interest_group)
 - [Protected Audience API: Running an ad auction](#)
 - [Protected Audience API: Reporting aunction results](#)
 
