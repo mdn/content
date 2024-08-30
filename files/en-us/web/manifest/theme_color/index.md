@@ -24,10 +24,10 @@ This color application can provide a more native app-like experience for your we
 
   - : A string that specifies a [valid color value](/en-US/docs/Web/CSS/color_value).
 
-  > [!NOTE]
-  > Browsers may ignore the alpha component of the color based on the context.
-  > In most environments, `theme_color` cannot be transparent.
-  > It's recommended to use fully opaque colors (alpha value of 1 or 100%) to ensure consistent behavior across different platforms and browsers.
+    > [!NOTE]
+    > Browsers may ignore the alpha component of the color based on the context.
+    > In most environments, `theme_color` cannot be transparent.
+    > It's recommended to use fully opaque colors (alpha value of 1 or 100%) to ensure consistent behavior across different platforms and browsers.
 
 ## Description
 
