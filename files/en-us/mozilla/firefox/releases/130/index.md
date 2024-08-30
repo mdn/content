@@ -61,9 +61,20 @@ This article provides information about the changes in Firefox 130 that affect d
 
 #### General
 
+- System add-ons are now completely disabled by default ([Firefox bug 1904310](https://bugzil.la/1904310)).
+- Fixed an issue with the internal prompt listener to correctly select the appropriate user prompt on Android ([Firefox bug 1902264](https://bugzil.la/1902264)).
+
 #### WebDriver BiDi
 
+- Added support for the `browsingContext.navigationFailed` event, which is triggered when a navigation attempt fails to complete ([Firefox bug 1846601](https://bugzil.la/1846601)).
+- The `network.setCacheBehavior` command now allows defining the network cache behavior both globally and for individual navigables simultaneously ([Firefox bug 1905307](https://bugzil.la/1905307)).
+- The `network.responseCompleted` and `network.fetchError`events are now emitted when the actual request stops, eliminating a race condition where `browsingContext.domContentLoaded` and `browsingContext.load` events were emitted before the `network.responseCompleted` event ([Firefox bug 1882803](https://bugzil.la/1882803)).
+- Data URLs (e.g., for background images or fetch requests) are now fully supported across all network events ([Firefox bug 1904343](https://bugzil.la/1904343)).
+- Fixed an issue where the `network.authRequired` event was sent out multiple times with each call to the `network.continue_with_auth` command ([Firefox bug 1899711](https://bugzil.la/1899711)).
+
 #### Marionette
+
+- Fixed an issue in `WebDriver:ElementSendKeys` so that it only scrolls the element into view if it is not already visible ([Firefox bug 1906095](https://bugzil.la/1906095)).
 
 ## Changes for add-on developers
 
