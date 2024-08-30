@@ -71,6 +71,8 @@ Alt-Svc: clear
 ```
 
 Now run another `curl` command using the `etag` value from the previous response with the {{HTTPHeader("If-None-Match")}} condition (since this `etag` is the current version of the resource on the server we expect to receive a `304 Not Modified` response):
+
+```bash
 curl --http1.1 -I --header 'If-None-Match: "b20a0973b226eeea30362acb81f9e0b3"' \
  https://developer.mozilla.org/en-US/
 ```
