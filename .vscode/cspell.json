@@ -3,7 +3,10 @@
   "version": "0.2",
   "language": "en-US",
   "languageId": "*",
+  "useGitignore": true,
   "dictionaries": [
+    "terms-abbreviations",
+    "ignore-list",
     "bash",
     "css",
     "cpp",
@@ -17,7 +20,6 @@
     "markdown",
     "node",
     "npm",
-    "project-words",
     "python",
     "softwareTerms",
     "svelte",
@@ -37,10 +39,9 @@
     // TODO - add some details what these match
     "\\(#\\w*\\)",
     "\\]\\(\\S*\\)",
-    "\\]\\(\\S*\\)",
     "\\*\\*\\w\\*\\*\\w*",
     "\\*\\w\\*\\w*",
-    "#[\\w-]*",
+    "#[À-ž\\w-]*",
     "aria-activedescendant=\"(?:[^\\\"]+|\\.)*\"",
     "aria-controls=\"(?:[^\\\"]+|\\.)*\"",
     "aria-describedby=\"(?:[^\\\"]+|\\.)*\"",
@@ -55,18 +56,26 @@
     "for=\"(?:[^\\\"]+|\\.)*\"",
     "HexValues",
     "href=\"(?:[^\\\"]+|\\.)*\"",
-    "id=\"(?:[^\\\"]+|\\.)*\"",
+    "(?<=id)=\"(?:[^\\\"]+|\\.)*\"",
     "lang=\".*\">.*</",
     "src=\"(?:[^\\\"]+|\\.)*\"",
     "url\\(\"data\\:image/svg\\+xml.*\"\\)[,;]",
-    "Urls"
+    "Urls",
+    "favourite-colour",
+    "ucaf:.*\""
   ],
   "allowCompoundWords": true,
   "dictionaryDefinitions": [
     {
-      "name": "project-words",
-      "path": "./project-words.txt",
+      "name": "terms-abbreviations",
+      "path": "./terms-abbreviations.txt",
       "addWords": true
+    },
+    {
+      "name": "ignore-list",
+      "path": "./ignore-list.txt",
+      "addWords": false,
+      "noSuggest": true
     }
   ],
   "enableFiletypes": ["xml"]

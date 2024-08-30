@@ -3,10 +3,12 @@ title: "ChapterInformation: artwork property"
 short-title: artwork
 slug: Web/API/ChapterInformation/artwork
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.ChapterInformation.artwork
 ---
 
-{{APIRef("Media Session API")}}
+{{APIRef("Media Session API")}}{{SeeCompatTable}}
 
 The **`artwork`** read-only property of the
 {{domxref("ChapterInformation")}} interface returns an {{jsxref("Array")}} of objects representing images associated with the chapter.

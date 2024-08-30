@@ -18,7 +18,7 @@ As of HTTP/1.1, the connection is no longer closed after completing the third ph
 
 In client-server protocols, it is the client which establishes the connection. Opening a connection in HTTP means initiating a connection in the underlying transport layer, usually this is TCP.
 
-With TCP the default port, for an HTTP server on a computer, is port 80. Other ports can also be used, like 8000 or 8080. The URL of a page to fetch contains both the domain name, and the port number, though the latter can be omitted if it is 80. See [Identifying resources on the Web](/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web) for more details.
+With TCP the default port, for an HTTP server on a computer, is port 80. Other ports can also be used, like 8000 or 8080. The URL of a page to fetch contains both the domain name, and the port number, though the latter can be omitted if it is 80. See [the URL reference](/en-US/docs/Web/URI) for more details.
 
 > [!NOTE]
 > The client-server model does not allow the server to send data to the client without an explicit request for it. However, various Web APIs enable this use case, including the [Push API](/en-US/docs/Web/API/Push_API), [Server-sent events](/en-US/docs/Web/API/Server-sent_events), and the [WebSockets API](/en-US/docs/Web/API/WebSockets_API).
@@ -156,7 +156,7 @@ X-Cache: Error from cloudfront
 
 ## See also
 
-- [Identifying resources on the Web](/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)
+- [URLs](/en-US/docs/Web/URI)
 - [HTTP headers](/en-US/docs/Web/HTTP/Headers)
 - [HTTP request methods](/en-US/docs/Web/HTTP/Methods)
 - [HTTP response status codes](/en-US/docs/Web/HTTP/Status)

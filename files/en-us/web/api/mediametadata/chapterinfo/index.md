@@ -3,10 +3,12 @@ title: "MediaMetadata: chapterInfo property"
 short-title: chapterInfo
 slug: Web/API/MediaMetadata/chapterInfo
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.MediaMetadata.chapterInfo
 ---
 
-{{APIRef("Media Session API")}}
+{{APIRef("Media Session API")}}{{SeeCompatTable}}
 
 The **`chapterInfo`** read-only property of the {{domxref("MediaMetadata")}} interface returns an array of chapter information metadata associated with playing media, represented by {{domxref("ChapterInformation")}} object instances.
 

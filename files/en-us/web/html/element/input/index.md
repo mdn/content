@@ -1112,7 +1112,7 @@ Specific attributes and their values can lead to a specific error {{domxref('Val
       <td><a href="#step"><code>step</code></a></td>
       <td>{{domxref('validityState.stepMismatch')}}</td>
       <td>
-        The value doesn't match the step increment. Increment default is <code>1</code>, so only integers are valid on<code> type="number"</code>
+        The value doesn't match the step increment. Increment default is <code>1</code>, so only integers are valid on <code>type="number"</code>
         is step is not included. <code>step="any"</code> will never throw this error.
       </td>
     </tr>
@@ -1304,7 +1304,7 @@ Firefox uses the following heuristics to determine the locale to validate the us
                 with no <code>list</code> attribute: <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/searchbox_role"><code>searchbox</code></a>
               </li>
               <li>
-                with <code>list</code> attribute:<a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role"><code>combobox</code></a>
+                with <code>list</code> attribute: <a href="/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role"><code>combobox</code></a>
               </li>
             </ul>
           </li>

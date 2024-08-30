@@ -432,7 +432,7 @@ The curly braces around `subject` are another feature of JSX's syntax. The curly
 <h1>Hello, {subject + ' :)'}!</h1>
 {/* Hello, REACT */}
 <h1>Hello, {subject.toUpperCase()}</h1>
-{/* Hello, 4 */}
+{/* Hello, 4! */}
 <h1>Hello, {2 + 2}!</h1>
 ```
 
@@ -509,5 +509,10 @@ In React:
 - You can render JavaScript expressions in JSX by putting them between curly braces, like `{so}`.
 - Some JSX attributes are different than HTML attributes so that they don't conflict with JavaScript reserved words. For example, `class` in HTML translates to `className` in JSX.
 - Props are written just like attributes inside component calls and are passed into components.
+
+## See also
+
+- [Learn React](https://v2.scrimba.com/learn-react-c0e?via=mdn) <sup>_MDN Curriculum partner_</sup>
+  - : [Scrimba's](https://scrimba.com?via=mdn) _Learn React_ course is the ultimate React 101 — the perfect starting point for any React beginner. Learn the basics of modern React by solving 140+ interactive coding challenges and building eight fun projects.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}

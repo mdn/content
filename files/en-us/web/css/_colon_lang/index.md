@@ -27,7 +27,7 @@ The **`:lang()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/
 ### Parameters
 
 - `<language-code>`
-  - : A comma separated list of one or more {{cssxref("&lt;string&gt;")}}s that target an element with a language value according to [BCP 47](https://tools.ietf.org/html/bcp47) language codes.
+  - : A comma separated list of one or more {{cssxref("&lt;string&gt;")}}s that target an element with a language value according to [BCP 47](https://www.rfc-editor.org/info/bcp47) language codes.
     Matching by language range is case-insensitive.
 
 ## Description

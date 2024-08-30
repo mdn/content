@@ -23,7 +23,7 @@ there are no tones pending.
 ### Exceptions
 
 - `InvalidCharacterError` {{domxref("DOMException")}}
-  - : Thrown if a character is not a DTMF tone character (0-9, A-D, # or ,).
+  - : Thrown if a character is not a DTMF tone character (`0-9`, `A-D`, `#`, or `,`).
 
 ### Tone buffer format
 

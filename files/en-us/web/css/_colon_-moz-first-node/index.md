@@ -3,11 +3,12 @@ title: ":-moz-first-node"
 slug: Web/CSS/:-moz-first-node
 page-type: css-pseudo-class
 status:
+  - experimental
   - non-standard
 browser-compat: css.selectors.-moz-first-node
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{Non-standard_header}}{{CSSRef}}{{SeeCompatTable}}
 
 The **`:-moz-first-node`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that represents any element that is the first child node of some other element. It differs from {{Cssxref(":first-child")}} because it does not match a first-child element with (non-whitespace) text before it.
 

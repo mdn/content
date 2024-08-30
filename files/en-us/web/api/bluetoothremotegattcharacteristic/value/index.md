@@ -25,5 +25,3 @@ The currently cached characteristic value.
 ## Browser compatibility
 
 {{Compat}}
-
-{{APIRef("Web Bluetooth")}}
