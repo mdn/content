@@ -49,7 +49,7 @@ Sec-WebSocket-Protocol: <selected-sub-protocol>
 
 ## Directives
 
-- \<sub-protocols>
+- `<sub-protocols>`
   - : A comma-separated list of sub-protocol names, in the order of preference.
     The sub-protocols may be selected from the [IANA WebSocket Subprotocol Name Registry](https://www.iana.org/assignments/websocket/websocket.xml#subprotocol-name), or may be a custom name jointly understood by the client and the server.
 
