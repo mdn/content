@@ -39,22 +39,22 @@ You can override this default in the following ways:
 
 - Using the [`theme-color`](/en-US/docs/Web/HTML/Element/meta/name/theme-color) value of the `name` attribute in the HTML `<meta>` element: You can specify a theme color for a web page that's different from the manifest `theme_color` specified for your app. This enables you to set unique theme colors for individual pages within your app.
 
-```html
-<meta name="theme-color" content="#9370DB" />
-```
+  ```html
+  <meta name="theme-color" content="#9370DB" />
+  ```
 
 - Combining the `<meta name="theme-color">` element with media queries: You can specify the theme color to be used based on user's color scheme preference.
 
-```html
-<meta
-  name="theme-color"
-  content="#F4E6D8"
-  media="(prefers-color-scheme: light)" />
-<meta
-  name="theme-color"
-  content="#5D4037"
-  media="(prefers-color-scheme: dark)" />
-```
+  ```html
+  <meta
+    name="theme-color"
+    content="#F4E6D8"
+    media="(prefers-color-scheme: light)" />
+  <meta
+    name="theme-color"
+    content="#5D4037"
+    media="(prefers-color-scheme: dark)" />
+  ```
 
 These override methods provide you the flexibility to adapt your app's appearance for specific pages or user preferences, improving the overall user experience.
 
