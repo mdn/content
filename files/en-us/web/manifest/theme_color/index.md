@@ -7,9 +7,10 @@ browser-compat: html.manifest.theme_color
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
-The `theme_color` member specifies the default theme color for your web application's user interface.
+The `theme_color` member specifies the default color for your web application's user interface.
 This color may be applied to various browser UI elements, such as the toolbar, address bar, and status bar.
 It can be particularly noticeable in contexts like the task switcher or when the app is added to the home screen.
+
 This color application can provide a more native app-like experience for your web app, especially when it's loaded in [standalone](/en-US/docs/Web/Manifest/display#standalone) mode.
 
 ## Syntax
@@ -32,12 +33,12 @@ This color application can provide a more native app-like experience for your we
 ## Description
 
 While optional, specifying a `theme_color` allows you to extend your app's visual identity beyond its content areas.
-Choose a `theme_color` that aligns with your app's brand guidelines, which can enhance user recognition and recall, particularly when your app is viewed alongside other applications or system interfaces.
+Choose a `theme_color` that aligns with your app's brand guidelines, as this can enhance user recognition and recall, particularly when your app is viewed alongside other applications or system interfaces.
 
 In browsers that support `theme_color`, the value specified in the manifest file serves as the default theme color for your web app across all pages where the manifest is applied.
 You can override this default in the following ways:
 
-- Using the [`theme-color`](/en-US/docs/Web/HTML/Element/meta/name/theme-color) value of the `name` attribute in the HTML `<meta>` element: You can specify a theme color for a web page that's different from the manifest `theme_color` specified for your app. This enables you to set unique theme colors for individual pages within your app.
+- Using the [`theme-color`](/en-US/docs/Web/HTML/Element/meta/name/theme-color) value of the `name` attribute in the HTML `<meta>` element: You can specify a theme color for a web page that's different from the manifest `theme_color` specified for your app. This enables you to set different theme colors for individual pages within your app.
 
   ```html
   <meta name="theme-color" content="#9370DB" />
