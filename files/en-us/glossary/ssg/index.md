@@ -1,5 +1,5 @@
 ---
-title: SSG
+title: Statis site generator (SSG)
 slug: Glossary/SSG
 page-type: glossary-definition
 ---
