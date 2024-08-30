@@ -7,7 +7,10 @@ browser-compat: html.manifest.theme_color
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
-The `theme_color` member specifies the default theme color for your web application's user interface. This color may be applied to various browser UI elements, such as the toolbar, address bar, and status bar. It can be particularly noticeable in contexts like the task switcher or when the app is added to the home screen. This color application can provide a more native app-like experience for your web app, especially when it's loaded in [standalone](/en-US/docs/Web/Manifest/display#standalone) mode.
+The `theme_color` member specifies the default theme color for your web application's user interface.
+This color may be applied to various browser UI elements, such as the toolbar, address bar, and status bar.
+It can be particularly noticeable in contexts like the task switcher or when the app is added to the home screen.
+This color application can provide a more native app-like experience for your web app, especially when it's loaded in [standalone](/en-US/docs/Web/Manifest/display#standalone) mode.
 
 ## Syntax
 
@@ -22,13 +25,17 @@ The `theme_color` member specifies the default theme color for your web applicat
   - : A string that specifies a [valid color value](/en-US/docs/Web/CSS/color_value).
 
   > [!NOTE]
-  > Browsers may ignore the alpha component of the color based on the context. In most environments, `theme_color` cannot be transparent. It's recommended to use fully opaque colors (alpha value of 1 or 100%) to ensure consistent behavior across different platforms and browsers.
+  > Browsers may ignore the alpha component of the color based on the context.
+  > In most environments, `theme_color` cannot be transparent.
+  > It's recommended to use fully opaque colors (alpha value of 1 or 100%) to ensure consistent behavior across different platforms and browsers.
 
 ## Description
 
-While optional, specifying a `theme_color` allows you to extend your app's visual identity beyond its content areas. Choose a `theme_color` that aligns with your app's brand guidelines, which can enhance user recognition and recall, particularly when your app is viewed alongside other applications or system interfaces.
+While optional, specifying a `theme_color` allows you to extend your app's visual identity beyond its content areas.
+Choose a `theme_color` that aligns with your app's brand guidelines, which can enhance user recognition and recall, particularly when your app is viewed alongside other applications or system interfaces.
 
-In browsers that support `theme_color`, the value specified in the manifest file serves as the default theme color for your web app across all pages where the manifest is applied. You can override this default in the following ways:
+In browsers that support `theme_color`, the value specified in the manifest file serves as the default theme color for your web app across all pages where the manifest is applied.
+You can override this default in the following ways:
 
 - Using the [`theme-color`](/en-US/docs/Web/HTML/Element/meta/name/theme-color) value of the `name` attribute in the HTML `<meta>` element: You can specify a theme color for a web page that's different from the manifest `theme_color` specified for your app. This enables you to set unique theme colors for individual pages within your app.
 
@@ -51,7 +58,8 @@ In browsers that support `theme_color`, the value specified in the manifest file
 
 These override methods provide you the flexibility to adapt your app's appearance for specific pages or user preferences, improving the overall user experience.
 
-Browsers may also adjust the applied theme color based on user preferences. If a user has set a preference for light or dark mode, browsers may override the manifest `theme_color` value to support any [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) media query defined in your app's CSS.
+Browsers may also adjust the applied theme color based on user preferences.
+If a user has set a preference for light or dark mode, browsers may override the manifest `theme_color` value to support any [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) media query defined in your app's CSS.
 
 ```css
 body {
