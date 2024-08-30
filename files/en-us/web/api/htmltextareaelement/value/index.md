@@ -8,9 +8,7 @@ browser-compat: api.HTMLTextAreaElement.value
 
 {{ APIRef("HTML DOM") }}
 
-The **`value`** property of the {{DOMxRef("HTMLTextAreaElement")}} interface represents the value of the {{htmlelement("textarea")}} element as a string, which is an empty string if the widget contains no content. It reflects the raw value contained in the control.
-
-This property can also be set directly, for example to set or update the value based on some condition.
+The **`value`** property of the {{DOMxRef("HTMLTextAreaElement")}} interface represents the value of the {{htmlelement("textarea")}} element as a string, which is an empty string if the widget contains no content. It returns or sets the raw value contained in the control.
 
 ## Value
 
