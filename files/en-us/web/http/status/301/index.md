@@ -26,7 +26,7 @@ Search engines receiving this response will attribute links to the original URL 
 
 ### 301 response to a moved resource
 
-The following {{HTTPMethod("GET")}} request to is made to a resource with a `301` redirection in place.
+The following {{HTTPMethod("GET")}} request is made to a resource with a `301` redirection in place.
 
 ```http
 GET /en-US/docs/AJAX HTTP/2

@@ -36,14 +36,16 @@ The response must not contain a body and must include the headers that would hav
 
 The examples below show {{HTTPMethod("GET")}} requests made using [curl](https://curl.se/) with conditional request headers.
 The `--http1.1` flag is used to force the HTTP/1.1 protocol for readability.
-The request uses a future date of 21st November 2050 to check whether if the resource has been updated after this date:
+
+The first request uses an `If-Modified-Since` condition with a future date of 21st November 2050.
+This must evaluate to `false`, because the resource can't have been updated after a time that hasn't happened yet:
 
 ```bash
 curl --http1.1 -I --header 'If-Modified-Since: Tue, 21 Nov 2050 08:00:00 GMT' \
  https://developer.mozilla.org/en-US/
 ```
 
-This will perform the following request:
+This will result in the following HTTP request:
 
 ```http
 GET /en-US/ HTTP/1.1
@@ -53,8 +55,8 @@ Accept: */*
 If-Modified-Since: Tue, 21 Nov 2050 08:00:00 GMT
 ```
 
-The response would be {{HTTPStatus("200", "200 OK")}} if the resource was updated after the timestamp in the {{HTTPHeader("If-Modified-Since")}} header.
-Instead, we have a `304` response that includes {{HTTPHeader("ETag")}}, {{HTTPHeader("Age")}} and {{HTTPHeader("Expires")}} headers:
+The response would be {{HTTPStatus("200", "200 OK")}} with the current version of the resource if the resource had been updated after the timestamp in the {{HTTPHeader("If-Modified-Since")}} header.
+Instead, we get a `304` response that includes {{HTTPHeader("ETag")}}, {{HTTPHeader("Age")}} and {{HTTPHeader("Expires")}} headers, telling us our cached version of the resource is still current:
 
 ```http
 HTTP/1.1 304 Not Modified
@@ -68,14 +70,12 @@ X-cache: hit
 Alt-Svc: clear
 ```
 
-If you run another `curl` command with a fresh `etag` value from the previous response in an {{HTTPHeader("If-None-Match")}} header, you receive a `304 Not Modified` if the request contains :
-
-```bash
-curl --http1.1 -I --header 'If-None-Match: "e27d81b845c3716cdb5d4220d78e2799"' \
+Now run another `curl` command using the `etag` value from the previous response with the {{HTTPHeader("If-None-Match")}} condition (since this `etag` is the current version of the resource on the server we expect to receive a `304 Not Modified` response):
+curl --http1.1 -I --header 'If-None-Match: "b20a0973b226eeea30362acb81f9e0b3"' \
  https://developer.mozilla.org/en-US/
 ```
 
-This will perform the following request:
+This will result in the following HTTP request:
 
 ```http
 GET /en-US/ HTTP/1.1
