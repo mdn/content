@@ -36,7 +36,8 @@ new WebSocket(url, protocols)
     The allowed values are those that can be specified in the {{httpheader("Sec-WebSocket-Protocol")}} HTTP header.
     These are values selected from the [IANA WebSocket Subprotocol Name Registry](https://www.iana.org/assignments/websocket/websocket.xml#subprotocol-name), such as `soap`, `wamp`, `ship` and so on, or may be a custom name jointly understood by the client and the server.
 
-    > [!NOTE] The connection is not established until the sub-protocol is negotiated with the server.
+    > [!NOTE]
+    > The connection is not established until the sub-protocol is negotiated with the server.
     > The selected protocol can then be read from {{domxref("WebSocket.protocol")}}: it will be the empty string if a connection cannot be established.
 
 ### Exceptions
