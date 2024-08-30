@@ -30,8 +30,8 @@ If the server has a preferred choice that the client should request, it can incl
 
 ### 300 response with list of resources
 
-The following example demonstrates how Transparent Content Negotiation.
-An Apache server offers multiple variants of a resource defined in a [type map](https://httpd.apache.org/docs/trunk/mod/mod_negotiation.html#typemaps); `index.html.en` for the `en` locale, and `index.html.fr` for a `fr` locale:
+The following example demonstrates a Transparent Content Negotiation request-response exchange.
+An Apache server offers multiple variants of a resource defined in a [type map](https://httpd.apache.org/docs/trunk/mod/mod_negotiation.html#typemaps); `index.html.en` for a resource in English, and `index.html.fr` for a French version:
 
 ```plain
 URI: index.html.en
