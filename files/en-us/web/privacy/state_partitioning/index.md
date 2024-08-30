@@ -290,12 +290,14 @@ preference. This pref holds a comma separated list of origins to exempt.
 The pref value should follow the following format
 `first-party_origin_1,third-party_origin_1;first-party_origin_2,third-party_origin_2;...`.
 
-For example, to disable partitioning for `tracker.example`
-on `example.com` and for `social.example` on
-`news.example`, you would set the pref to the following:
+You can use `*` as a wildcard.
+
+For example, to disable partitioning for `tracker.example` on `example.com`, for
+`social.example` on `news.example`, and for `videos.example` on all sites, you
+would set the pref to the following:
 
 ```plain
-https://tracker.example,http://example.com;https://social.example,https://news.example
+https://example.com,https://tracker.example;https://news.example,https://social.example;*,https://videos.example
 ```
 
 <section id="Quick_links">
