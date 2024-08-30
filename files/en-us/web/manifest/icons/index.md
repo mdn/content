@@ -15,9 +15,10 @@ These icons uniquely identify your web app in different contexts, such as in an 
 ```json
 "icons": [
   {
-    "src": "icon/lowres.webp",
-    "sizes": "48x48",
-    "type": "image/webp"
+    "src": "iconURL",
+    "sizes": "widthxheight",
+    "type": "mimeType",
+    "purpose": "keywordValue"
   }
 ]
 ```
@@ -32,15 +33,15 @@ Each object in the array can have one or more of the following properties (`src`
 
   - : A string that specifies the path to the icon image file. If `src` is a relative URL, the path is resolved relative to the URL of the manifest file. For example, the relative URL `images/icon-192x192.png` for the manifest file located at `https://example.com/manifest.json` will be resolved as `https://example.com/images/icon-192x192.png`. `src` is a required property.
 
-- `sizes`
+- `sizes` {{Optional_Inline}}
 
   - : A string that specifies one or more dimensions of the icon. Each dimension is specified as `<width>x<height>`. Mutiple dimensions are separated by spaces, as in `48x48 96x96`. Specifying multiple sizes allows a browser to select the most appropriate one for the context. The `sizes` property uses the same syntax as the [`sizes`](/en-US/docs/Web/HTML/Element/link#sizes) attribute of the `<link>` HTML element. This property is optional; if not specifed, the default value of `any` is used, which indicates that the icon can be used at any size.
 
-- `type`
+- `type` {{Optional_Inline}}
 
   - : A string that specifies the {{Glossary("MIME type")}} of the icon. The value should be in the format `image/<subtype>`, where `<subtype>` is a specific image format; for example, `image/png` indicates a PNG image. This property is optional; if not specified, a browser typically uses the file extension to determine the image type.
 
-- `purpose`
+- `purpose` {{Optional_Inline}}
 
   - : A string that specifies one or more purposes of the icon, which indicate how the icon should be used by the browser or operating system. The value can be a single keyword or multiple space-separated keywords. This property is optional; `any` is assumed if no value is specified. If multiple values are specified, they should be listed in order of precedence.
     Valid values are case-sensitive and listed below in order of precedence:
