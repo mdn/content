@@ -14,7 +14,7 @@ This property can also be set directly, for example to set or update the value b
 
 ## Value
 
-A string containing the contents of the {{htmlelement("textarea")}} element, .
+A string containing the contents of the {{htmlelement("textarea")}} element.
 
 ## Examples
 
