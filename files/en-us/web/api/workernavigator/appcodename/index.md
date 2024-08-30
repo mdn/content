@@ -8,7 +8,7 @@ status:
 browser-compat: api.WorkerNavigator.appCodeName
 ---
 
-{{APIRef("HTML DOM")}} {{Deprecated_Header}}
+{{APIRef("HTML DOM")}} {{Deprecated_Header}}{{AvailableInWorkers("worker")}}
 
 The value of the **`WorkerNavigator.appCodeName`** property is
 always "`Mozilla`", in any browser. This property is kept only for

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WorkerGlobalScope.importScripts
 ---
 
-{{APIRef("Web Workers API")}}
+{{APIRef("Web Workers API")}}{{AvailableInWorkers("worker")}}
 
 The **`importScripts()`** method of the {{domxref("WorkerGlobalScope")}} interface synchronously imports one or more scripts into the worker's scope.
 

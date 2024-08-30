@@ -8,7 +8,7 @@ browser-compat: api.HTMLInputElement.valueAsNumber
 
 {{ APIRef("HTML DOM") }}
 
-The **`valueAsNumber`** property of the {{DOMxRef("HTMLInputElement")}} interface represents the current value of the {{htmlelement("input")}} element as a number or `NaN` if converting to a numeric value is not impossible.
+The **`valueAsNumber`** property of the {{DOMxRef("HTMLInputElement")}} interface represents the current value of the {{htmlelement("input")}} element as a number or `NaN` if converting to a numeric value is not possible.
 
 This property can also be set directly, for example to set a default numeric value based on some condition.
 
