@@ -25,7 +25,7 @@ None.
 
 ### Return value
 
-A boolean value.
+Returns `true` if the element's value has no validity problems; otherwise, returns `false`.
 
 ## Examples
 

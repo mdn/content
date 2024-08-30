@@ -22,7 +22,7 @@ None.
 
 ### Return value
 
-A boolean value.
+Returns `true` if the associated controls' values have no validity problems; otherwise, returns `false`.
 
 ## Examples
 
