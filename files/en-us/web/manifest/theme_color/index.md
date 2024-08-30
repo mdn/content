@@ -20,7 +20,7 @@ This color application can provide a more native app-like experience for your we
 
 ### Values
 
-- colorValue
+- `colorValue`
 
   - : A string that specifies a [valid color value](/en-US/docs/Web/CSS/color_value).
 
