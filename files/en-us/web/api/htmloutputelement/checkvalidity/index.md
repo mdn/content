@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.HTMLOutputElement.checkValidity
 ---
 
-{{APIRef("Web Components")}}
+{{APIRef("HTML DOM")}}
 
 The **`checkValidity()`** method of the {{domxref("HTMLOutputElement")}} interface checks if the element is valid, but always returns true because {{HTMLElement("output")}} elements are never candidates for [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) .
 
@@ -22,7 +22,7 @@ None.
 
 ### Return value
 
-The boolean value `true`.
+A boolean value, `true`.
 
 ## Examples
 

@@ -8,12 +8,10 @@ browser-compat: api.HTMLInputElement.checkValidity
 
 {{APIRef("HTML DOM")}}
 
-The **`checkValidity()`** method of the {{domxref("HTMLInputElement")}} interface returns a boolean value which indicates if the element meets the [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) rules applied to it.
-
-This method returns `true` if the input's {{domxref("HTMLInputElement.validity", "validity")}} object's `valid` property is true. The {{domxref("HTMLInputElement.validationMessage", "validationMessage")}} must be null or the empty string for the `checkValidity()` method to return `true`. This method also fires the {{domxref("HTMLInputElement/invalid_event", "invalid")}} event on the element if the value is invalid or otherwise returns false.
+The **`checkValidity()`** method of the {{domxref("HTMLInputElement")}} interface returns a boolean value which indicates if the element meets any [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) rules applied to it. If false, the method also fires an {{domxref("HTMLElement/invalid_event", "invalid")}} event on the element. Because there's no default browser behavior for `checkValidity()`, canceling this `invalid` event has no effect.
 
 > [!NOTE]
-> The input is considered invalid if the input is suffering from a custom error, even if the value is otherwise valid according to [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). This occurs when the {{domxref("HTMLInputElement.setCustomValidity()")}} method set a custom error message when the value was invalid and the error message has not been reset to the empty string. See the [`reportValidity()` custom error message](/en-US/docs/Web/API/HTMLInputElement/reportValidity) example for more information.
+> An HTML {{htmlelement("input")}} element with a non-null {{domxref("HTMLInputElement.validationMessage", "validationMessage")}} is considered invalid, will match the CSS {{cssxref(":invalid")}} pseudo-class, and will cause `checkValidity()` to return false. Use the {{domxref("HTMLInputElement.setCustomValidity()")}} method to set the {{domxref("HTMLInputElement.validationMessage")}} to the empty string to set the {{domxref("HTMLInputElement.validity", "validity")}} state to be valid.
 
 ## Syntax
 
@@ -27,7 +25,7 @@ None.
 
 ### Return value
 
-Returns `true` if the value of the element has no validity problems; otherwise returns `false`.
+A boolean value.
 
 ## Examples
 
@@ -82,7 +80,9 @@ When `false`, if the value is missing, below 21, above 65, or othewise invalid, 
 
 ## See also
 
-- [`reportValidity()`](/en-US/docs/Web/API/HTMLInputElement/reportValidity)
+- {{domxref("HTMLInputElement.reportValidity()")}}
+- {{HTMLElement("input")}}
+- {{HTMLElement("form")}}
 - [Learn: Client-side form validation](/en-US/docs/Learn/Forms/Form_validation)
 - [Guide: Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
 - CSS {{cssxref(":valid")}} and {{cssxref(":invalid")}} pseudo-classes

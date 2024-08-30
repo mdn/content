@@ -6,14 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.HTMLFormElement.checkValidity
 ---
 
-{{APIRef("Web Components")}}
+{{APIRef("HTML DOM")}}
 
-The **`checkValidity()`** method of the {{domxref("HTMLFormElement")}} interface checks if the form, including all the controls associated with it, meet applied [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) rules.
-
-When invoked, the user agent must constraints of the form element are validated. The method returns `true` if the constraint validation returns a positive result, `false` otherwise. It is up to the programmer to decide how to respond to `false`. To alert the user to errors within the form, use {{domxref("HTMLFormElement.reportValidity()")}} instead.
-
-> [!NOTE]
-> When the form is checked, the {{domxref("HTMLInputElement.invalid_event", "invalid")}} event is fired on every associated form control that does not satisfy their constraints, but not on the form element itself.
+The **`checkValidity()`** method of the {{domxref("HTMLFormElement")}} interface returns a boolean value which indicates if all associated controls meet any [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) rules applied to them. The method also fires an {{domxref("HTMLElement/invalid_event", "invalid")}} event on each invalid element, but not on the form element itself. Because there's no default browser behavior for `checkValidity()`, canceling this `invalid` event has no effect.
 
 ## Syntax
 

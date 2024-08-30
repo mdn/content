@@ -6,11 +6,12 @@ page-type: web-api-instance-method
 browser-compat: api.HTMLTextAreaElement.checkValidity
 ---
 
-{{APIRef("Web Components")}}
+{{APIRef("HTML DOM")}}
 
-The **`checkValidity()`** method of the {{domxref("HTMLTextAreaElement")}} interface checks if the {{HTMLElement("textarea")}} element meets all of the [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) rules applied to it.
+The **`checkValidity()`** method of the {{domxref("HTMLTextAreaElement")}} interface returns a boolean value which indicates if the element meets any [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) rules applied to it. If false, the method also fires an {{domxref("HTMLElement/invalid_event", "invalid")}} event on the element. Because there's no default browser behavior for `checkValidity()`, canceling this `invalid` event has no effect.
 
-The method returns `false` if the `<textarea>` value does not meet all the validation constraints applied to it or if the element has a custom validation message set, and `true` otherwise.
+> [!NOTE]
+> An HTML {{htmlelement("textarea")}} element with a non-null {{domxref("HTMLTextAreaElement.validationMessage", "validationMessage")}} is considered invalid, will match the CSS {{cssxref(":invalid")}} pseudo-class, and will cause `checkValidity()` to return false. Use the {{domxref("HTMLTextAreaElement.setCustomValidity()")}} method to set the {{domxref("HTMLTextAreaElement.validationMessage")}} to the empty string to set the {{domxref("HTMLTextAreaElement.validity", "validity")}} state to be valid.
 
 ## Syntax
 
@@ -50,3 +51,4 @@ console.log(element.checkValidity());
 - {{HTMLElement("form")}}
 - [Learn: Client-side form validation](/en-US/docs/Learn/Forms/Form_validation)
 - [Guide: Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
+- CSS {{cssxref(":valid")}} and {{cssxref(":invalid")}} pseudo-classes
