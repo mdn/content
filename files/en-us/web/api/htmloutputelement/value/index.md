@@ -15,12 +15,12 @@ The **`value`** property of the {{DOMxRef("HTMLOutputElement")}} interface repre
 
 ## Value
 
-A string containing the contents of the {{htmlelement("output")}} element, .
+A string containing the contents of the {{htmlelement("output")}} element.
 
 ## Examples
 
 ```js
-const outputElement = document.getElementById("#log");
+const outputElement = document.getElementById("log");
 console.log(`value: ${outputElement.value}`);
 ```
 
