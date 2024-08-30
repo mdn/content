@@ -18,7 +18,7 @@ This response should be used for temporary conditions and the {{HTTPHeader("Retr
 A user-friendly page explaining the problem should be sent along with this response.
 
 > [!NOTE]
-> Caching-related headers sent with this response should have special attention; a `503` status is often temporary and responses shouldn't usually be cached as clients may receive outdated error pages after a fix has been deployed.
+> Caching-related headers sent with this response require special attention; a `503` status is often temporary and responses shouldn't usually be cached as clients may receive outdated error pages after a fix has been deployed.
 
 ## Status
 
