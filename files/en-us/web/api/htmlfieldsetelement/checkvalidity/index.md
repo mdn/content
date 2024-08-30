@@ -1,14 +1,14 @@
 ---
-title: "HTMLObjectElement: checkValidity() method"
+title: "HTMLFieldSetElement: checkValidity() method"
 short-title: checkValidity()
-slug: Web/API/HTMLObjectElement/checkValidity
+slug: Web/API/HTMLFieldSetElement/checkValidity
 page-type: web-api-instance-method
-browser-compat: api.HTMLObjectElement.checkValidity
+browser-compat: api.HTMLFieldSetElement.checkValidity
 ---
 
 {{APIRef("HTML DOM")}}
 
-The **`checkValidity()`** method of the {{domxref("HTMLObjectElement")}} interface checks if the element is valid, but always returns true because {{HTMLElement("object")}} elements are never candidates for [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) .
+The **`checkValidity()`** method of the {{domxref("HTMLFieldSetElement")}} interface checks if the element is valid, but always returns true because {{HTMLElement("fieldset")}} elements are never candidates for [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) .
 
 ## Syntax
 
@@ -29,7 +29,7 @@ A boolean value, `true`.
 In the following example, calling `checkValidity()` returns `true`.
 
 ```js
-const element = document.getElementById("myObjectElement");
+const element = document.getElementById("myFieldSet");
 console.log(element.checkValidity());
 ```
 
@@ -43,8 +43,8 @@ console.log(element.checkValidity());
 
 ## See also
 
-- {{domxref("HTMLObjectElement.reportValidity()")}}
-- {{HTMLElement("object")}}
+- {{domxref("HTMLFieldSetElement.reportValidity()")}}
+- {{HTMLElement("fieldset")}}
 - {{HTMLElement("form")}}
 - [Learn: Client-side form validation](/en-US/docs/Learn/Forms/Form_validation)
 - [Guide: Constraint validation](/en-US/docs/Web/HTML/Constraint_validation)
