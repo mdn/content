@@ -129,7 +129,7 @@ The following table summarizes the behavior of the various `white-space` keyword
   </tbody>
 </table>
 
-The default size of a tab is equal to 8 spaces. In the case of `normal`, `nowrap`, and `pre-line` values, every tab is converted to a space (U+0020) character.
+A tab defaults to 8 spaces and can be configured using the [`tab-size`](/en-US/docs/Web/CSS/tab-size) property. In the case of `normal`, `nowrap`, and `pre-line` values, every tab is converted to a space (U+0020) character.
 
 > [!NOTE]
 > There is a distinction made between **spaces** and **other space separators**. These are defined as follows:

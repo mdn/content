@@ -33,7 +33,7 @@ tab-size: unset;
 ### Values
 
 - {{CSSxRef("&lt;number&gt;")}}
-  - : A multiple of the advance width of the space character (U+0020) to be used as the width of tabs. Must be non-negative. Advance width is the distance a cursor or a print head moves before printing the next character.
+  - : A multiple of the advance width of the space character (U+0020) to be used as the width of tabs. Must be non-negative. The advance width means the distance a cursor or a print head moves before printing the next character.
 - {{CSSxRef("&lt;length&gt;")}}
   - : The width of tabs. Must be non-negative.
 
