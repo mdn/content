@@ -16,7 +16,7 @@ Values of this type are `strings`. Possible values are:
 - `"normal"`
   - : The window is at the default size or user-selected size.
 - `"minimized"`
-  - : The window is only visible as an icon in the taskbar or .
+  - : The window is only visible as an icon in the taskbar.
 - `"maximized"`
   - : The window fills the screen on which it is displayed not including any screen areas reserved by the operating system.
 - `"fullscreen"`
