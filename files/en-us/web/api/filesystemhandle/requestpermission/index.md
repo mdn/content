@@ -40,6 +40,12 @@ requestPermission(descriptor)
 - {{jsxref("TypeError")}}
   - : Thrown if no parameter is specified or the `mode` is not that of
     `'read'` or `'readwrite'`
+- `SecurityError` {{domxref("DOMException")}}
+  - : Thrown if the call was blocked by the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy) or it was not called via a user interaction such as a button press.
+
+## Security
+
+[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
 
 ## Examples
 
