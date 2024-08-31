@@ -73,7 +73,7 @@ To get the footer working, we need to implement the following three areas of fun
 
    ```js
    get incomplete() {
-     return this.todos.filterBy('isCompleted', false);
+     return this.todos.filter((todo) => !todo.isCompleted);
    }
    ```
 
