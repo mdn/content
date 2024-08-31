@@ -40,7 +40,7 @@ jobs:
           ~~~
 
           > [!TIP]
-          > To exclude words from the spellchecker, you can add valid words (web technology terms or abbreviations) to the [terms-abbreviations.txt](https://github.com/mdn/content/blob/main/.vscode/terms-abbreviations.txt) dictionary for IDE autocompletion. To ignore strings that are not words (`AABBCC` in code, for instance), you can add them to [ignore-list.txt](https://github.com/mdn/content/blob/main/.vscode/ignore-list.txt).
+          > To exclude words from the spellchecker, you can add valid words (web technology terms or abbreviations) to the [terms-abbreviations.txt](https://github.com/mdn/content/blob/main/.vscode/terms-abbreviations.txt) dictionary for IDE autocompletion. To ignore strings that are not words (\`AABBCC\` in code, for instance), you can add them to [ignore-list.txt](https://github.com/mdn/content/blob/main/.vscode/ignore-list.txt).
           EOM
           )
 
