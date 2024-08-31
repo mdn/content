@@ -7,9 +7,7 @@ browser-compat: javascript.builtins.Iterator
 
 {{JSRef}}
 
-An **`Array Iterator`** object is an object that conforms to the [iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol) by providing a `next()` method that returns an iterator result object. All built-in iterators inherit from the `Iterator` class. The `Iterator` class provides a [`[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/Symbol.iterator) method that returns the iterator object itself, making the iterator also [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol). It also provides some helper methods for working with iterators.
-
-`Array Iterator` is a hidden subclass of the {{jsxref("Iterator")}} class.
+An **`Array Iterator`** object is an object that conforms to the [iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterator_protocol) by providing a `next()` method that returns an iterator result object. All Array Iterators inherit from a hidden prototype object `ArrayIteratorPrototype` which in tern inherits from the `Iterator` class. The `Iterator` class provides a [`[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/Symbol.iterator) method that returns the iterator object itself, making the iterator also [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol). It also provides some helper methods for working with iterators.
 
 ## Description
 
@@ -21,25 +19,19 @@ Most [Array-Like](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#arra
 
 ## Constructor
 
-_Inherits constructor from its parent
+_Inherits constructor from its ancestor_
 
 - {{jsxref("Iterator/Iterator", "Iterator")}}
 
-## Static properties
-
-_Also inherits static properties from its parent {{jsxref("Iterator")}}_.
-
-## Static methods
-
-_Inherits static methods from its parent {{jsxref("Iterator")}}_.
+  Array Iterators are not instantiated via direct call of a constructor but from one of the associated Array methods.
 
 ## Instance properties
 
-_Also inherits instance properties from its parent {{jsxref("Iterator")}}_.
+_Also inherits instance properties from its ancestor {{jsxref("Iterator")}}_.
 
 ## Instance methods
 
-_Inherits instance methods from its parent {{jsxref("Iterator")}}_.
+_Inherits instance methods from its ancestor {{jsxref("Iterator")}}_.
 
 ## Examples
 
