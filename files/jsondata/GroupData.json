@@ -1019,7 +1019,11 @@
         "VideoPlaybackQuality"
       ],
       "methods": ["HTMLVideoElement.getVideoPlaybackQuality()"],
-      "properties": ["VideoTrack.sourceBuffer", "TextTrack.sourceBuffer"],
+      "properties": [
+        "AudioTrack.sourceBuffer",
+        "VideoTrack.sourceBuffer",
+        "TextTrack.sourceBuffer"
+      ],
       "events": []
     },
     "MediaStream Recording": {
