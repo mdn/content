@@ -294,6 +294,8 @@ The following request headers are not _strictly_ "fetch metadata request headers
 
 - {{HTTPHeader("Sec-WebSocket-Accept")}}
   - : Sent from server to client and indicates that the server is willing to initiate a WebSocket connection.
+- {{HTTPHeader("Sec-WebSocket-Key")}}
+  - : Sent from client to server to confirm that it "really wants" to request that an HTTP client is upgraded to become a WebSocket.
 
 ## Other
 
@@ -412,6 +414,8 @@ Network client hints allow a server to choose what information is sent based on 
 - {{HTTPHeader("DNT")}} {{deprecated_inline}} {{non-standard_inline}}
   - : Request header that indicates the user's tracking preference (Do Not Track).
     Deprecated in favor of Global Privacy Control (GPC), which is communicated to servers using the {{HTTPHeader("Sec-GPC")}} header, and accessible to clients via {{domxref("navigator.globalPrivacyControl")}}.
+- {{HTTPHeader("Tk")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : Response header that indicates the tracking status that applied to the corresponding request. Used in conjunction with DNT.
 - {{HTTPHeader("Sec-GPC")}} {{non-standard_inline}} {{experimental_inline}}
   - : Indicates whether the user consents to a website or service selling or sharing their personal information with third parties.
 
