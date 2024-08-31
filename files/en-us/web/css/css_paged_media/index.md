@@ -1,4 +1,4 @@
----
+---index.md
 title: CSS paged media
 slug: Web/CSS/CSS_paged_media
 page-type: css-module
