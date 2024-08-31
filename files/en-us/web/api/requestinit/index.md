@@ -171,7 +171,7 @@ You can also construct a `Request` with a `RequestInit`, and pass the `Request` 
     - `low`
       - : A low priority fetch request relative to other requests of the same type.
     - `auto`
-      - : Automatically determine the priority of the fetch request relative to other requests of the same type .
+      - : Automatically determine the priority of the fetch request relative to other requests of the same type.
 
     Defaults to `auto`.
 
