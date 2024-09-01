@@ -136,14 +136,6 @@ chrome.storage.local.get("kitten", (items) => {
 });
 ```
 
-Or with an arrow function
-
-```js
-chrome.storage.local.get("kitten", (items) => {
-  console.log(items.kitten); // -> {name:"Mog", eats:"mice"}
-});
-```
-
 Or using a Promise
 
 ```js
