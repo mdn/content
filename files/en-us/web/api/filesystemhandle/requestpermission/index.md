@@ -32,8 +32,7 @@ requestPermission(descriptor)
 
 ### Return value
 
-{{domxref('PermissionStatus.state')}} which is one of `'granted'`,
-`'denied'` or `'prompt'`.
+A {{jsxref("Promise")}} that resolves with {{domxref('PermissionStatus.state')}} which is one of `'granted'`, `'denied'` or `'prompt'`. It may also reject with one of the exceptions below.
 
 ### Exceptions
 
