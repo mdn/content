@@ -43,4 +43,4 @@ To use this API you need to have the "alarms" [permission](/en-US/docs/Mozilla/A
 {{Compat}}
 
 > [!NOTE]
-> This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/alarms/) API.
+> This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/api/alarms) API.
