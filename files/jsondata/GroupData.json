@@ -1721,6 +1721,13 @@
       "properties": [],
       "events": []
     },
+    "URL Fragment Text Directives": {
+      "overview": ["/en-US/docs/Web/URI/Fragment/Text_fragments"],
+      "guides": ["/en-US/docs/Web/URI/Fragment/Text_fragments"],
+      "interfaces": ["FragmentDirective"],
+      "methods": [],
+      "properties": ["Document.fragmentDirective"]
+    },
     "URL Pattern API": {
       "overview": ["URL Pattern API"],
       "interfaces": ["URLPattern"],
