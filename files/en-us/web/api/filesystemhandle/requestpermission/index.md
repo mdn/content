@@ -40,7 +40,9 @@ A {{jsxref("Promise")}} that resolves with {{domxref('PermissionStatus.state')}}
   - : Thrown if no parameter is specified or the `mode` is not that of
     `'read'` or `'readwrite'`
 - `SecurityError` {{domxref("DOMException")}}
-  - : Thrown if the call was blocked by the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy) or it was not called via a user interaction such as a button press.
+  - : Thrown in one of the following cases:
+    - The method was called in a context that's not [same-origin](/en-US/docs/Web/Security/Same-origin_policy) as the top-level context (i.e. a cross-origin iframe).
+    - There was no transient user activation such as a button press. This includes when the handle is in a non-Window context which cannot consume user activation, such as a worker.
 
 ## Security
 
