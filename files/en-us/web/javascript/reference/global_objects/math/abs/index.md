@@ -24,7 +24,7 @@ Math.abs(x)
 
 ### Return value
 
-The absolute value of `x`. If `x` is negative (including `-0`), returns `-x`. Otherwise, returns `x`. The result is therefore always a positive number or `0`.
+The absolute value of `x`. The result is always a positive number of `x` or `0` (including `-0`).
 
 ## Description
 
