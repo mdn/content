@@ -35,7 +35,7 @@ Each object in the array can have one or more of the following properties (`src`
 
 - `sizes` {{Optional_Inline}}
 
-  - : A string that specifies one or more dimensions of the icon. Each dimension is specified as `<width>x<height>`. Mutiple dimensions are separated by spaces, as in `48x48 96x96`. Specifying multiple sizes allows a browser to select the most appropriate one for the context. The `sizes` property uses the same syntax as the [`sizes`](/en-US/docs/Web/HTML/Element/link#sizes) attribute of the `<link>` HTML element. This property is optional; if not specifed, the default value of `any` is used, which indicates that the icon can be used at any size.
+  - : A string that specifies one or more sizes at which the icon can be used, and is similar to the HTML `<link>` element's [`sizes`](/en-US/docs/Web/HTML/Element/link#sizes) attribute. Each size is specified as `<width>x<height>`. Multiple sizes can be specified, separated by spaces, as in `48x48 96x96`. When multiple icons are available, browsers may use the `sizes` value to use the most suitable icon for a display context. This property is optional; if not specified, the behavior may vary depending on the browser's implementation. For raster images like PNG, specifying exact available sizes is recommended. For vector formats like SVG, you can use "any" to indicate scalability.
 
 - `type` {{Optional_Inline}}
 
