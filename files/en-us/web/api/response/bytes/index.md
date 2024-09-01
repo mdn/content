@@ -122,7 +122,7 @@ if ("bytes" in Response.prototype) {
 ```
 
 The `checkSignature()` method is defined below.
-This fetches a file at with the given `url`, and uses `response.bytes()` to get its contents as a byte array.
+This fetches a file at the given `url`, and uses `response.bytes()` to get its contents as a byte array.
 The initial bytes are then compared to the initial signature bytes of a number of common file types.
 The file name and the file type are then logged.
 
