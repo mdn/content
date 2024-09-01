@@ -1,4 +1,4 @@
----
+files/en-us/glossary/ide/index.md---
 title: IDE
 slug: Glossary/IDE
 page-type: glossary-definition
