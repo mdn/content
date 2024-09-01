@@ -1722,7 +1722,7 @@
       "events": []
     },
     "URL Fragment Text Directives": {
-      "overview": ["/en-US/docs/Web/URI/Fragment/Text_fragments"],
+      "overview": ["URL Fragment Text Directives"],
       "guides": ["/en-US/docs/Web/URI/Fragment/Text_fragments"],
       "interfaces": ["FragmentDirective"],
       "methods": [],
