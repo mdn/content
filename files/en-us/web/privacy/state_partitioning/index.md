@@ -36,7 +36,7 @@ Our current [default cookie policy](/en-US/docs/Web/Privacy/Storage_Access_Polic
 
 State Partitioning is a different approach to preventing cross-site tracking.
 Rather than block access to certain stateful APIs in a third-party context, Firefox provides embedded resources with a separate storage bucket for every top-level website.
-More specifically, Firefox double-keys all client-side state by the _[origin](https://html.spec.whatwg.org/multipage/browsers.html#origin)_of the resource being loaded and by the _top-level [site](https://html.spec.whatwg.org/multipage/browsers.html#site)_.
+More specifically, Firefox double-keys all client-side state by the _[origin](https://html.spec.whatwg.org/multipage/browsers.html#origin)_of the resource being loaded and by the top-level [site](https://html.spec.whatwg.org/multipage/browsers.html#site).
 In most instances, the top-level site is the scheme and {{Glossary("eTLD", "eTLD+1")}} of the top-level page being visited by the user.
 
 In the example below `example.com` is embedded in `A.example` and `B.example`.
@@ -127,7 +127,7 @@ These heuristics are intended to allow some third-party integrations that are co
 
 > [!WARNING]
 > Storage access heuristics are a transitional feature meant to prevent website breakage.
->  They should not be relied upon for current and future web development.
+> They should not be relied upon for current and future web development.
 
 #### Opener Heuristics
 
