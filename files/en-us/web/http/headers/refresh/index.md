@@ -36,7 +36,7 @@ Refresh: <time>; url=<url>
 - `<time>`
   - : A non-negative number of seconds after which to refresh the page. Fractional parts are recognized but ignored; you should only specify integers.
 - `<url>` {{optional_inline}}
-  - : If present, the browser will redirect to the specified URL instead of refreshing with the current URL. This URL can be quoted or unquoted. The `url=` prefix is case-insensitive and optional
+  - : If present, the browser will redirect to the specified URL instead of refreshing with the current URL. This URL can be quoted or unquoted. The `url=` prefix is case-insensitive and optional.
 
 ## Examples
 
