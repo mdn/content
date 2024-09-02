@@ -14,7 +14,7 @@ Search engines receiving this response will attribute links to the original URL 
 
 > [!NOTE]
 > The Fetch Standard requires user agents to change the method to GET (if it was originally POST), the HTTP specification permits them to do so.
-> Use the `301` code only as a response for {{HTTPMethod("GET")}} or {{HTTPMethod("HEAD")}} methods and use the {{HTTPStatus("308", "308 Permanent Redirect")}} for {{HTTPMethod("POST")}} methods instead, as the method change is explicitly prohibited with this status.
+> Use the `301` code only as a response for {{HTTPMethod("GET")}} or {{HTTPMethod("HEAD")}} methods and use the {{HTTPStatus("308", "308 Permanent Redirect")}} for other methods (typically {{HTTPMethod("POST")}}), as altering the method when handling `308` responses is explicitly prohibited.
 
 ## Status
 
