@@ -37,10 +37,10 @@ const interestGroupOptions = {
   owner: "https://dsp.example",
   name: "fashion shoes",
   lifetimeMs: oneWeekInSeconds,
-  biddingLogicUrl: "https://dsp.example/bid.js",
+  biddingLogicURL: "https://dsp.example/bid.js",
   ads: [
     {
-      renderUrl: "https://dsp.example/ads/default-ad.html",
+      renderURL: "https://dsp.example/ads/default-ad.html",
       metadata: {
         adName: "default-ad",
       },
@@ -59,13 +59,13 @@ The option properties as follows:
   - : The name of the group. This can be anything you like, but it should clearly describe the kind of product the interest group is related to.
 - `lifetimeMs`
   - : The time, in milliseconds, that the browser will be a member of the interest group for. In the above example we have set the lifetime as one week. The maximum allowable lifetime is 30 days after the most recent site visit, but this can be extended by a subsquent `joinAdInterestGroup()` call with the same `owner` and `name`. If the value is set to `0` or less, it will cause the browser to leave the interest group.
-- `biddingLogicUrl`
-  - : The URL of the ad buyer's bidding logic JavaScript code, which is run during the ad auction to generate the interest group's auction bid. The JavaScript must contain an author-defined [`generateBid()`](#) function, which must return an object containing the correct information for the browser to process the buyer's bid. See [Run an ad auction](/en-US/docs/Web/API/Protected_Audience_API/Run_ad_auction) for more information on where this script fits into the overall process. `biddingLogicUrl`s must be valid HTTPS URLs that contain no fragment or credentials. They must also be same-origin with the `owner`.
+- `biddingLogicURL`
+  - : The URL of the ad buyer's bidding logic JavaScript code, which is run during the ad auction to generate the interest group's auction bid. The JavaScript must contain an author-defined [`generateBid()`](#) function, which must return an object containing the correct information for the browser to process the buyer's bid. See [Running an ad auction](/en-US/docs/Web/API/Protected_Audience_API/Run_ad_auction) for more information on where this script fits into the overall process. `biddingLogicURL`s must be valid HTTPS URLs that contain no fragment or credentials. They must also be same-origin with the `owner`.
 - `ads`
 
   - : An array of objects representing the different ads related to this interest group, which may be shown in the group owner wins an ad auction. The sub-properties shown here are as follows:
 
-    - `renderUrl`
+    - `renderURL`
       - : The URL of the ad to be displayed if this ad is chosen.
     - `metaData`
 

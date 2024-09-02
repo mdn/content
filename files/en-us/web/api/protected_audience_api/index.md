@@ -58,7 +58,7 @@ For more information on implementing the functionality required for the above st
 
 - [Protected Audience API: Joining an ad interest group](/en-US/docs/Web/API/Protected_Audience_API/Join_ad_interest_group)
 - [Protected Audience API: Running an ad auction](#)
-- [Protected Audience API: Reporting aunction results](#)
+- [Protected Audience API: Reporting auction results](#)
 
 ### Use cases
 

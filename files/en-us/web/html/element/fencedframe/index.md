@@ -39,16 +39,8 @@ Permissions delegated from the top-level context to a fenced frame for allowing 
 
 The only features that can be enabled by a policy inside fenced frames are the specific features designed to be used inside fenced frames:
 
-- [Protected Audience API](https://developers.google.com/privacy-sandbox/relevance/protected-audience)
-  - `attribution-reporting`
-  - `private-aggregation`
-  - `shared-storage`
-  - `shared-storage-select-url`
+- [Protected Audience API](/en-US/docs/Web/API/Protected_Audience_API)
 - [Shared Storage API](/en-US/docs/Web/API/Shared_Storage_API)
-  - `attribution-reporting`
-  - `private-aggregation`
-  - `shared-storage`
-  - `shared-storage-select-url`
 
 Currently these are always enabled inside fenced frames. In the future, which ones are enabled will be controllable using the `<fencedframe>` `allow` attribute. Blocking privacy sandbox features in this manner will also block the fenced frame from loading — there will be no communication channel at all.
 
