@@ -1,5 +1,5 @@
 ---
-title: Refresjh
+title: Refresh
 slug: Web/HTTP/Headers/Refresh
 page-type: http-header
 browser-compat: http.headers.Refresh
