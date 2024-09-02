@@ -66,6 +66,10 @@ This article provides information about the changes in Firefox 131 that affect d
 
 These features are newly shipped in Firefox 131 but are disabled by default. To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`. You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
 
+- **Regular expression (?ims-ims:...) modifiers:** `javascript.options.experimental.regexp_modifiers`
+
+  The [(?ims-ims:...)](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Modifier) regular expression modifiers allow you to make changes to only take effect in a specific part of a regex pattern. ([Firefox bug 1899813](https://bugzil.la/1899813)).
+
 ## Older versions
 
 {{Firefox_for_developers}}
