@@ -32,6 +32,13 @@ genType dFdy(genType)
 genType fwidth(genType)
 ```
 
+- `dFdx()`
+  - : Returns the derivative in `x` using local differencing for the input argument `p`.
+- `dFdy()`
+  - : Returns the derivative in `y` using local differencing for the input argument `p`. These two functions are commonly used to estimate the filter width used to anti-alias procedural textures.
+- `fwidth()`
+  - : Returns the sum of the absolute derivative in `x` and `y` using local differencing for the input argument `p`. I.e. `abs(dFdx(p)) + abs(dFdy(p))`
+
 ## Examples
 
 Enabling the extensions:
