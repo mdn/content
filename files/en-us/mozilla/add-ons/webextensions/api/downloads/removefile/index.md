@@ -70,7 +70,7 @@ searching.then(remove, onError);
 {{WebExtExamples}}
 
 > [!NOTE]
-> This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#method-removeFile) API.
+> This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#method-removeFile) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

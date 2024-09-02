@@ -13,7 +13,7 @@ The **`<basic-shape>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/C
 
 ## Syntax
 
-The `<basic-shape>` data type is used to create basic shapes including rectangles by [container inset](#syntax_for_rectangles_by_container_insets), by [coordinate distance](#syntax_for_rectangles_by_distance), or by [set dimensions](#syntax_for_rectangles_with_dimensions), [circles](#syntax_for_circles), [ellipses](#syntax_for_ellipses), [polygons](#syntax_for_polygons), [paths](#syntax_for_paths), and [author created shapes](#syntax_for_shapes_experimental). These basic shapes are defined using one `<basic_shape>` CSS functions, with each value requiring a parameter that follows the shape's function-specific syntax.
+The `<basic-shape>` data type is used to create basic shapes including rectangles by [container inset](#syntax_for_rectangles_by_container_insets), by [coordinate distance](#syntax_for_rectangles_by_distance), or by [set dimensions](#syntax_for_rectangles_with_dimensions), [circles](#syntax_for_circles), [ellipses](#syntax_for_ellipses), [polygons](#syntax_for_polygons), [paths](#syntax_for_paths), and [author created shapes](#syntax_for_shapes). These basic shapes are defined using one `<basic_shape>` CSS functions, with each value requiring a parameter that follows the shape's function-specific syntax.
 
 ### Common parameters
 
@@ -35,7 +35,7 @@ The parameters common across the syntax of some basic shape functions include:
 
 - `<fill-rule>`
 
-  - : Sets the {{SVGAttr("fill-rule")}} that is used to determine how the interior of the shape defined by the basic shapes [polygon](#syntax_for_polygons), [path](#syntax_for_paths), and [shape](#syntax_for_shapes_experimental) is to be filled. Possible values are `nonzero` (the default) and `evenodd`.
+  - : Sets the {{SVGAttr("fill-rule")}} that is used to determine how the interior of the shape defined by the basic shapes [polygon](#syntax_for_polygons), [path](#syntax_for_paths), and [shape](#syntax_for_shapes) is to be filled. Possible values are `nonzero` (the default) and `evenodd`.
 
     > **Note:** `<fill-rule>` is not supported in {{cssxref("offset-path")}} and using it invalidates the property.
 

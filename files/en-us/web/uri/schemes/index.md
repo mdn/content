@@ -27,7 +27,7 @@ protocol:
       - : {{Glossary("FTP","File Transfer Protocol")}}
     - `http` / `https`
       - : Hyper text transfer protocol (Secure) ({{glossary("HTTP")}}/{{glossary("HTTPS")}})
-    - `javascript`
+    - [`javascript`](/en-US/docs/Web/URI/Schemes/javascript)
       - : URL-embedded JavaScript code
     - `mailto`
       - : Electronic mail address
@@ -43,6 +43,10 @@ protocol:
       - : Source code of the resource
     - `ws` / `wss`
       - : [WebSocket connections (Secure)](/en-US/docs/Web/API/WebSockets_API)
+
+## Specifications
+
+{{Specifications}}
 
 ## See also
 

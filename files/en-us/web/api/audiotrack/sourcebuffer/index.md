@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.AudioTrack.sourceBuffer
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("Media Source Extensions")}}
 
 The read-only **{{domxref("AudioTrack")}}**
 property **`sourceBuffer`** returns the

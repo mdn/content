@@ -52,7 +52,7 @@ paragraph elements of a particular parent (either the document itself or one of 
 nested {{HTMLElement("div")}} elements).
 
 ```html-nolint
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
