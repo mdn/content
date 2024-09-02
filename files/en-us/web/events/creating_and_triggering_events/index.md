@@ -56,7 +56,7 @@ The older approach to creating events uses APIs inspired by Java. The following 
 const event = document.createEvent("Event");
 
 // Define that the event name is 'build'.
-event.initEvent("build", true, true);
+event.initEvent("build");
 
 // Listen for the event.
 elem.addEventListener(
@@ -70,10 +70,6 @@ elem.addEventListener(
 // target can be any Element or other EventTarget.
 elem.dispatchEvent(event);
 ```
-
-> [!WARNING]
-> The examples are not interchangable but represent their common usages.
-> The shown `initEvent` call passes `true` for the parameters `cancelable` and `bubbles`, which are missing and therefore `false` with the Event constructor.
 
 ### Event bubbling
 
