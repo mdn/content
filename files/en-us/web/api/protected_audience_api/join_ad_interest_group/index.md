@@ -60,7 +60,7 @@ The option properties as follows:
 - `lifetimeMs`
   - : The time, in milliseconds, that the browser will be a member of the interest group for. In the above example we have set the lifetime as one week. The maximum allowable lifetime is 30 days after the most recent site visit, but this can be extended by a subsquent `joinAdInterestGroup()` call with the same `owner` and `name`. If the value is set to `0` or less, it will cause the browser to leave the interest group.
 - `biddingLogicUrl`
-  - : The URL of the ad buyer's bidding logic code, which is run during the ad auction to generate the interest group's auction bid. See [Bidding logic code](#bidding_logic_code) for more information on what this typically contains. `biddingLogicUrl`s must be valid HTTPS URLs that contain no fragment or credentials. They must also be same-origin with the `owner`.
+  - : The URL of the ad buyer's bidding logic JavaScript code, which is run during the ad auction to generate the interest group's auction bid. The JavaScript must contain an author-defined [`generateBid()`](#) function, which must return an object containing the correct information for the browser to process the buyer's bid. See [Run an ad auction](/en-US/docs/Web/API/Protected_Audience_API/Run_ad_auction) for more information on where this script fits into the overall process. `biddingLogicUrl`s must be valid HTTPS URLs that contain no fragment or credentials. They must also be same-origin with the `owner`.
 - `ads`
 
   - : An array of objects representing the different ads related to this interest group, which may be shown in the group owner wins an ad auction. The sub-properties shown here are as follows:
@@ -168,7 +168,3 @@ The interest group `owner` implicitly grants permission to run join or leave req
    - `"leaveAdInterestGroup": true`: The `frame.origin` has permission to run `leaveAdInterestGroup()` and `clearOriginJoinedAdInterestGroups()`.
 
 Browsers may delay these requests or run them out of order due to network constraints, however, all pending join and leave requests for a single owner must be run in the order in which they were made. Same-origin operations should be applied immediately. When a page or `<iframe>` is navigated, the browser will attempt to complete pending join and leave requests that are blocked on a network fetch, but may choose to drop them if there are more than 20 for a single top-level frame.
-
-## Bidding logic code
-
-?
