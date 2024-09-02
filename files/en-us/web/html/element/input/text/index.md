@@ -25,6 +25,16 @@ If no validation constraints are in place for the input (see [Validation](#valid
 
 In addition to the attributes that operate on all {{HTMLElement("input")}} elements regardless of their type, text inputs support the following attributes.
 
+### autocorrect
+
+The [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes#autocorrect) global attribute is a string that indicates whether to activate automatic correction while the user is editing this field.
+Permitted values are:
+
+- `on`
+  - : Enable automatic correction of typos, as well as processing of text substitutions if any are configured.
+- `off`
+  - : Disable automatic correction and text substitutions.
+
 ### `list`
 
 The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The {{HTMLElement("datalist")}} provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the [`type`](/en-US/docs/Web/HTML/Element/input#type) are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.
@@ -92,15 +102,6 @@ The value returned by reading `spellcheck` may not reflect the actual state of s
 ## Non-standard attributes
 
 The following non-standard attributes are also available on some browsers. As a general rule, you should avoid using them unless it can't be helped.
-
-### `autocorrect`
-
-A Safari extension, the `autocorrect` attribute is a string that indicates whether to activate automatic correction while the user is editing this field. Permitted values are:
-
-- `on`
-  - : Enable automatic correction of typos, as well as processing of text substitutions if any are configured.
-- `off`
-  - : Disable automatic correction and text substitutions.
 
 ## Using text inputs
 

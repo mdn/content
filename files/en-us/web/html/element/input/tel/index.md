@@ -24,6 +24,16 @@ The {{HTMLElement("input")}} element's [`value`](/en-US/docs/Web/HTML/Element/in
 
 In addition to the attributes that operate on all {{HTMLElement("input")}} elements regardless of their type, telephone number inputs support the following attributes.
 
+### autocorrect
+
+The [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes#autocorrect) global attribute is used to indicate whether to activate automatic spelling correction while the user is editing this field.
+Permitted values are:
+
+- `on`
+  - : Enable automatic correction of typos, as well as processing of text substitutions if any are configured.
+- `off`
+  - : Disable automatic correction and text substitutions.
+
 ### list
 
 The values of the list attribute is the {{domxref("Element.id", "id")}} of a {{HTMLElement("datalist")}} element located in the same document. The {{HTMLElement("datalist")}} provides a list of predefined values to suggest to the user for this input. Any values in the list that are not compatible with the [`type`](/en-US/docs/Web/HTML/Element/input#type) are not included in the suggested options. The values provided are suggestions, not requirements: users can select from this predefined list or provide a different value.
@@ -76,15 +86,6 @@ This does _not_ set a limit on how many characters the user can enter into the f
 ## Non-standard attributes
 
 The following non-standard attributes are available to telephone number input fields. As a general rule, you should avoid using them unless it can't be helped.
-
-### autocorrect
-
-A Safari extension, the `autocorrect` attribute is a string which indicates whether to activate automatic correction while the user is editing this field. Permitted values are:
-
-- `on`
-  - : Enable automatic correction of typos, as well as processing of text substitutions if any are configured.
-- `off`
-  - : Disable automatic correction and text substitutions.
 
 ## Using tel inputs
 
