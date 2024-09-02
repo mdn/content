@@ -141,9 +141,7 @@ playButton.addEventListener("click", () => {
 
 ## Specifications
 
-Since the August 29 2014 [Web Audio API specification](https://webaudio.github.io/web-audio-api/#dom-baseaudiocontext-createscriptprocessor) publication, this feature has been deprecated. It is no longer on track to become a standard.
-
-It was replaced by [AudioWorklets](/en-US/docs/Web/API/AudioWorklet) and the {{domxref("AudioWorkletNode")}} interface.
+{{Specifications}}
 
 ## Browser compatibility
 

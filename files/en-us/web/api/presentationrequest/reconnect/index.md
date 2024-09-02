@@ -53,6 +53,10 @@ _P_, a [Promise](https://www.w3.org/TR/presentation-api/#dfn-promise).
 
 10. [Reject](https://www.w3.org/TR/presentation-api/#dfn-rejecting-a-promise) _P_ with a [`NotFoundError`](https://www.w3.org/TR/presentation-api/#dfn-notfounderror) exception.
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

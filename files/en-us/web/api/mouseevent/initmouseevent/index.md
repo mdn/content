@@ -142,9 +142,7 @@ simulateClick();
 
 ## Specifications
 
-This feature is not part of any specification. It is no longer on track to becoming a standard.
-
-Use the {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}} constructor instead.
+{{Specifications}}
 
 ## Browser compatibility
 
