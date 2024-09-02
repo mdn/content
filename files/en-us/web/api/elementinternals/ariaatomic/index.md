@@ -24,7 +24,7 @@ A string with one of the following values:
 
 ## Examples
 
-In this example the value of `ariaAtomic` is set to "true" in the constructor for a custom element .
+In this example the value of `ariaAtomic` is set to "true" in the constructor for a custom element.
 
 ```js
 class MyCustomElement extends HTMLElement {

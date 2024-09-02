@@ -73,7 +73,7 @@ See the [WebGL constants](/en-US/docs/Web/API/WebGL_API/Constants) page.
   - : Specifies a sub-rectangle of the current 3D texture.
 - {{domxref("WebGL2RenderingContext.copyTexSubImage3D()")}}
   - : Copies pixels from the current [`WebGLFramebuffer`](/en-US/docs/Web/API/WebGLFramebuffer) into an existing 3D texture sub-image.
-- {{domxref("WebGLRenderingContext.compressedTexImage2D")}}
+- {{domxref("WebGL2RenderingContext.compressedTexImage3D")}}
   - : Specifies a three-dimensional texture image in a compressed format.
 - {{domxref("WebGL2RenderingContext.compressedTexSubImage3D()")}}
   - : Specifies a three-dimensional sub-rectangle for a texture image in a compressed format.

@@ -46,6 +46,8 @@ A user may make a selection from left to right (in document order) or right to l
   - : Indicates if a certain node is part of the selection.
 - {{DOMxRef("Selection.deleteFromDocument()")}}
   - : Deletes the selection's content from the document.
+- {{DOMxRef("Selection.empty()")}}
+  - : Removes all ranges from the selection, leaving the {{domxref("Selection.anchorNode", "anchorNode")}} and {{domxref("Selection.focusNode","focusNode")}} properties equal to `null` and nothing selected.
 - {{DOMxRef("Selection.extend()")}}
   - : Moves the focus of the selection to a specified point.
 - {{DOMxRef("Selection.getComposedRanges()")}} {{experimental_inline}}
@@ -62,6 +64,8 @@ A user may make a selection from left to right (in document order) or right to l
   - : Adds all the children of the specified node to the selection.
 - {{DOMxRef("Selection.setBaseAndExtent()")}}
   - : Sets the selection to be a range including all or parts of two specified DOM nodes, and any content located between them.
+- {{DOMxRef("Selection.setPosition()")}}
+  - : Collapses the current selection to a single point.
 - {{DOMxRef("Selection.toString()")}}
   - : Returns a string currently being represented by the selection object, i.e. the currently selected text.
 

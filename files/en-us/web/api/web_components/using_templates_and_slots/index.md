@@ -259,7 +259,7 @@ Now let's take that **`<element-details>`** element and actually use it in our d
 
 About that snippet, notice these points:
 
-- The snippet has two instances of **`<element-details>`** elements which both use the [`slot`](/en-US/docs/Web/HTML/Global_attributes#slot) attribute to reference the [named slots](/en-US/docs/Web/HTML/Element/slot#name) `"element-name"` and `"description"` we put in the `<element-details>` [shadow root](/en-US/docs/Web/API/ShadowRoot) .
+- The snippet has two instances of **`<element-details>`** elements which both use the [`slot`](/en-US/docs/Web/HTML/Global_attributes#slot) attribute to reference the [named slots](/en-US/docs/Web/HTML/Element/slot#name) `"element-name"` and `"description"` we put in the `<element-details>` [shadow root](/en-US/docs/Web/API/ShadowRoot).
 - Only the first of those two **`<element-details>`** elements references the `"attributes"` [named slot](/en-US/docs/Web/HTML/Element/slot#name). The second `<element-details>` element lacks any reference to the `"attributes"` [named slot](/en-US/docs/Web/HTML/Element/slot#name).
 - The first `<element-details>` element references the `"attributes"` [named slot](/en-US/docs/Web/HTML/Element/slot#name) using a {{HTMLElement("dl")}} element with {{HTMLElement("dt")}} and {{HTMLElement("dd")}} children.
 

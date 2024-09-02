@@ -371,7 +371,7 @@ This guideline refers to the ability of content to be consumed by users in multi
 
 ## Guideline 1.4: Make it easier for users to see and hear content including separating foreground from background
 
-This guideline relates to making sure core content is easy to discern from backgrounds and other decoration. The classic example is color (both color contrast and use of color to convey instructions), but it applies in other situations too.
+This guideline relates to making sure core content is easy to discern from backgrounds and other decoration. The classic example is color (both [color contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast) and [use of color](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Use_of_color) to convey instructions), but it applies in other situations too.
 
 <table class="standard-table">
   <thead>
@@ -392,10 +392,13 @@ This guideline relates to making sure core content is easy to discern from backg
       </td>
       <td>
         See
+        <a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Use_of_color"
+          >Use of color</a
+        >,
         <a
           href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#color_and_color_contrast"
           >Color and color contrast</a
-        >
+        >,
         and
         <a
           href="/en-US/docs/Learn/Forms/How_to_structure_a_web_form#multiple_labels"
@@ -439,6 +442,9 @@ This guideline relates to making sure core content is easy to discern from backg
       </td>
       <td>
         See
+        <a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast"
+          >Color contrast</a
+        > and
         <a
           href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#color_and_color_contrast"
           >Color and color contrast</a

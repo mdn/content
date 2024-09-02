@@ -57,7 +57,7 @@ If the element representing the current page in the breadcrumb was not a link, t
 - `page`
   - : Represents the current page within a set of pages such as the link to the current document in a breadcrumb.
 - `step`
-  - : Represents the current step within a process such as the current step in an enumerated multi step checkout flow .
+  - : Represents the current step within a process such as the current step in an enumerated multi step checkout flow.
 - `location`
   - : Represents the current location within an environment or context such as the image that is visually highlighted as the current component of a flow chart.
 - `date`
