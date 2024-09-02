@@ -22,7 +22,7 @@ Consider a web page that uses infinite scrolling. It uses a vendor-provided libr
 
 The Intersection Observer API lets code register a callback function that is executed whenever a particular element enters or exits an intersection with another element (or the {{Glossary("viewport")}}), or when the intersection between two elements changes by a specified amount. This way, sites no longer need to do anything on the main thread to watch for this kind of element intersection, and the browser is free to optimize the management of intersections as it sees fit.
 
-One thing the Intersection Observer API can't do: trigger logic based the exact number of pixels that overlap or specifically which ones they are. It only solves the common use case of "If they intersect by somewhere around _N_%, I need to do something."
+One thing the Intersection Observer API can't do: trigger logic based on the exact number of pixels that overlap, or specifically on which ones they are. It only solves the common use case of "If they intersect by somewhere around _N_%, I need to do something."
 
 ## Intersection observer concepts and usage
 
