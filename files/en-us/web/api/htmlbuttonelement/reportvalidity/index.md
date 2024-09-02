@@ -120,7 +120,7 @@ const toggleButton = () => {
 
 {{EmbedLiveSample("Custom error message", "100%", 220)}}
 
-The button is by default valid. Activate "THIS BUTTON" to change the value, content, and add a custom error message. Activating the "reportValidity()" button checks the validity of the button, reporting the custom error message to the user and throwing an `invalid` event if the button does not pass contstraint validation due to the message.
+The button is by default valid. Activate "THIS BUTTON" to change the value, content, and add a custom error message. Activating the "reportValidity()" button checks the validity of the button, reporting the custom error message to the user and throwing an `invalid` event if the button does not pass constraint validation due to the message.
 
 ## Specifications
 
