@@ -17,7 +17,7 @@ The **URL fragment text directives** API allows web apps to interact with _text 
 
 - {{domxref("FragmentDirective")}}
   - : A (currently) empty object.
-     The existence of an object of this type in {{domxref("document.fragmentDirective")}} is used for feature detection.
+    The existence of an object of this type in {{domxref("document.fragmentDirective")}} is used for feature detection.
 
 ## Extensions to other interfaces
 
