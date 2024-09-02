@@ -9,10 +9,8 @@ browser-compat: webextensions.api.storage.StorageArea.getBytesInUse
 
 Gets the amount of storage space, in bytes, used by one or more items stored in the storage area.
 
-This method is supported in {{WebExtAPIRef("storage.local")}}, {{WebExtAPIRef("storage.session")}}, and {{WebExtAPIRef("storage.sync")}}. It's not supported in {{WebExtAPIRef("storage.managed")}}.
-
 > [!NOTE]
-> Firefox only provided support in {{WebExtAPIRef("storage.session")}} from Firefox 131. Firefox doesn't provide this method in {{WebExtAPIRef("storage.sync")}}, see [Firefox bug 1385832](https://bugzil.la/1385832).
+> Firefox only provided support in {{WebExtAPIRef("storage.session")}} from Firefox 131. Firefox doesn't provide this method in {{WebExtAPIRef("storage.sync")}}, see [Firefox bug 1385832](https://bugzil.la/1385832). Firefox doesn't provide this method in {{WebExtAPIRef("storage.managed")}}.
 
 This is an asynchronous method that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
@@ -23,6 +21,10 @@ let gettingSpace = browser.storage.<storageType>.getBytesInUse(
   keys                      // null, string, or array of strings
 )
 ```
+
+Where `<storageType>` is one of the storage types — {{WebExtAPIRef("storage.sync", "sync")}}, {{WebExtAPIRef("storage.local", "local")}}, {{WebExtAPIRef("storage.session", "session")}}, or {{WebExtAPIRef("storage.managed", "managed")}}.
+
+In Firefox, `<storageType>` can't be {{WebExtAPIRef("storage.local")}}, because of [bug 1385832](https://bugzil.la/1385832), and {{WebExtAPIRef("storage.managed")}} isn't supported.
 
 ### Parameters
 

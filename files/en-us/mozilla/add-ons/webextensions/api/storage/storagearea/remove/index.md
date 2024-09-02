@@ -19,7 +19,7 @@ let removingItem = browser.storage.<storageType>.remove(
 )
 ```
 
-`<storageType>` is one of the writable storage types — {{WebExtAPIRef("storage.local")}}, {{WebExtAPIRef("storage.session")}}, or {{WebExtAPIRef("storage.sync")}}.
+Where `<storageType>` is one of the writable storage types — {{WebExtAPIRef("storage.local")}}, {{WebExtAPIRef("storage.session")}}, or {{WebExtAPIRef("storage.sync")}}.
 
 ### Parameters
 

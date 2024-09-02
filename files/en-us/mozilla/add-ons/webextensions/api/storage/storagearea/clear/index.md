@@ -17,7 +17,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 let clearing = browser.storage.<storageType>.clear()
 ```
 
-`<storageType>` is one of the writable storage types — {{WebExtAPIRef("storage.local")}}, {{WebExtAPIRef("storage.session")}}, or {{WebExtAPIRef("storage.sync")}}
+Where `<storageType>` is one of the writable storage types — {{WebExtAPIRef("storage.local")}}, {{WebExtAPIRef("storage.session")}}, or {{WebExtAPIRef("storage.sync")}}
 
 ### Parameters
 

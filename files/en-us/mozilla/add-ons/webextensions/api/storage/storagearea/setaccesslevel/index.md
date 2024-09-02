@@ -23,7 +23,7 @@ await browser.storage.<storageType>.setAccessLevel(
 )
 ```
 
-`<storageType>` can be the {{WebExtAPIRef("storage.session")}} storage type.
+Where `<storageType>` is the {{WebExtAPIRef("storage.session")}} storage type.
 
 ### Parameters
 
