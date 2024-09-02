@@ -119,8 +119,8 @@ You can start to explore the different features available in Google's [Privacy S
 - [Federated Credential Management](/en-US/docs/Web/API/FedCM_API) (FedCM) API: Enables federated identity services allowing users to sign in to multiple sites and services.
 - [Private State Tokens](https://developers.google.com/privacy-sandbox/protections/private-state-tokens): Enables anti-fraud and anti-spam by exchanging limited, non-identifying information across sites.
 - [Topics API](/en-US/docs/Web/API/Topics_API): Enables interest-based advertising and content personalization.
-- [Protected Audience API](https://developers.google.com/privacy-sandbox/relevance/protected-audience): Use data from one app or site to help select an ad when the user is visiting another app or site.
-- [Attribution Reporting API](https://developers.google.com/privacy-sandbox/relevance/attribution-reporting): Enables measurement of ad impressions and conversions.
+- [Protected Audience API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience): Use data from one app or site to help select an ad when the user is visiting another app or site.
+- [Attribution Reporting API](https://developers.google.com/privacy-sandbox/private-advertising/attribution-reporting): Enables measurement of ad impressions and conversions.
 
 ## See also
 

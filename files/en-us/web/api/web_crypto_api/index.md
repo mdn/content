@@ -25,7 +25,7 @@ The {{domxref("Crypto.subtle")}} property gives access to an object implementing
 ## Interfaces
 
 - {{domxref("Crypto")}}
-  - : Provides basic cryptography features, such as a cryptographically strong random number generator, and access to cryptographic primitives via a [`SubtleCrypto`](#subtlecryto) object.
+  - : Provides basic cryptography features, such as a cryptographically strong random number generator, and access to cryptographic primitives via a {{domxref("SubtleCrypto")}} object.
     An object of this type can be accessed in the global scope using {{domxref("Window.crypto")}} or {{domxref("WorkerGlobalScope.crypto")}}.
 - {{domxref("SubtleCrypto")}}
   - : Represents an object that provides low-level cryptographic functions for key generation, encryption, decryption, key wrapping and unwrapping, and so on.
