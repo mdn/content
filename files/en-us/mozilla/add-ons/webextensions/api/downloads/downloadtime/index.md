@@ -28,7 +28,7 @@ A `DownloadTime` can be one of three different types:
 {{WebExtExamples}}
 
 > [!NOTE]
-> This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#type-DownloadTime) API.
+> This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#type-DownloadTime) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

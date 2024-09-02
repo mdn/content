@@ -81,7 +81,7 @@ const buffer = audioCtx.createBuffer(1, 22050, 22050);
 ```
 
 If you use this call, you will get a mono buffer (one channel), that, when played back
-on an `AudioContext` running at 44100Hz, will be automatically \*resampled\* to
+on an `AudioContext` running at 44100Hz, will be automatically _resampled_ to
 44100Hz (and therefore yield 44100 frames), and last for 1.0 second: 44100 frames /
 44100Hz = 1 second.
 

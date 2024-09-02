@@ -2,10 +2,12 @@
 title: anchor()
 slug: Web/CSS/anchor
 page-type: css-function
+status:
+  - experimental
 browser-compat: css.types.anchor
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`anchor()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) can be used within an **anchor-positioned** element's [inset property](#properties_that_accept_anchor_function_values) values, returning a length value relative to the position of the edges of its associated anchor element.
 
@@ -546,7 +548,7 @@ The positioned element is positioned relative to both anchor elements. Drag them
 ## See also
 
 - {{cssxref("position-anchor")}}
-- {{cssxref("inset-area")}}
+- {{cssxref("position-area")}}
 - {{cssxref("anchor-size()")}} function
 - [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide
 - [Handling overflow: try fallbacks and conditional hiding](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide

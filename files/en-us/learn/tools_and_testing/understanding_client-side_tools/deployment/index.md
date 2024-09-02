@@ -126,13 +126,16 @@ Now we have three tasks ahead of us:
 
    Change the URL to your own repository, and run it now.
 
+   > [!NOTE]
+   > After you've chosen your repository name, make sure the `base` option in your `vite.config.js` reflects this name, as mentioned in [the previous chapter](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain#javascript_transformation). Otherwise, the JavaScript and CSS assets will not be linked correctly.
+
 6. Now we're ready to push our code to GitHub; run the following command now:
 
    ```bash
    git push origin main
    ```
 
-   At this point, you'll be prompted to enter a username and password before Git will allow the push to be sent. This is because we used the HTTPS option rather than the SSH option, as seen in the screenshot earlier. For this, you need your GitHub username and then — if you do not have two-factor authentication (2FA) turned on — your GitHub password. We would always encourage you to use 2FA if possible, but bear in mind that if you do, you'll also need to use a "personal access token". GitHub help pages has an [excellent and simple walkthrough covering how to get one](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
+   At this point, you'll be prompted to enter a username and password before Git will allow the push to be sent. This is because we used the HTTPS option rather than the SSH option, as seen in the screenshot earlier. For this, you need your GitHub username and then — if you do not have two-factor authentication (2FA) turned on — your GitHub password. We would always encourage you to use 2FA if possible, but bear in mind that if you do, you'll also need to use a "personal access token". GitHub help pages has an [excellent and simple walkthrough covering how to get one](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).
 
 > [!NOTE]
 > If you are interested in using the SSH option, thereby avoiding the need to enter your username and password every time you push to GitHub, [this tutorial walks you through how](https://docs.github.com/en/authentication/connecting-to-github-with-ssh).
@@ -146,7 +149,7 @@ So with our project committed in git and pushed to our GitHub repository, the ne
 
 ## Using GitHub Actions for deployment
 
-GitHub Actions, like ESLint configuration, is another deep rabbit hole to dive into. It's not easy to get right on your first try, but for popular tasks like "build a static website and deploy it to GitHub Pages", there are many examples to copy and paste from. You can follow the instructions in [Publishing with a custom GitHub Actions workflow](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow). You can check [our GitHub Action file](https://github.com/mdn/client-toolchain-example/tree/main/.github/workflows/github-pages.yml) for a working example. (The name of the file doesn't matter.)
+GitHub Actions, like ESLint configuration, is another deep rabbit hole to dive into. It's not easy to get right on your first try, but for popular tasks like "build a static website and deploy it to GitHub Pages", there are many examples to copy and paste from. You can follow the instructions in [Publishing with a custom GitHub Actions workflow](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow). You can check [our GitHub Action file](https://github.com/mdn/client-toolchain-example/blob/main/.github/workflows/github-pages.yml) for a working example. (The name of the file doesn't matter.)
 
 After you commit this file to the main branch, you should see a little green tick next to the commit title:
 
@@ -154,7 +157,7 @@ After you commit this file to the main branch, you should see a little green tic
 
 If you see a yellow dot, it means the action is running, and if you see a red cross, it means the action failed. Click on the icon and you can see the status and the logs of your own build action (named "Deploy build" in our case).
 
-After waiting for a few more minutes, you can visit your GitHub Pages URL to see your website live on the web. The link looks like `https://<your-name>.github.io/<repo-name>`. For our example, it's at <https://mdn.github.io/client-toolchain-example>.
+After waiting for a few more minutes, you can visit your GitHub Pages URL to see your website live on the web. The link looks like `https://<your-name>.github.io/<repo-name>`. For our example, it's at <https://mdn.github.io/client-toolchain-example/>.
 
 Now for one final link in our toolchain: a test to ensure our code works.
 
@@ -266,7 +269,7 @@ Let's summarize all the parts of the toolchain:
 - Code quality and maintenance are performed by ESLint and Prettier. These tools are added as `devDependencies` to the project via `npm install --dev eslint prettier eslint-plugin-react ...` (the ESLint plugin is needed because this particular project uses React).
 - There are two configuration files that the code quality tools read: `eslint.config.js` and `.prettierrc`.
 - During development, we continue to add dependencies using npm. The Vite development server is running in the background to watch for changes and to automatically build our source.
-- Deployment is handled by pushing our changes to GitHub (on the "main" branch), which triggers a build and deployment using GitHub Actions to publish the project. For our instance this URL is <https://mdn.github.io/client-toolchain-example>; you will have your own unique URL.
+- Deployment is handled by pushing our changes to GitHub (on the "main" branch), which triggers a build and deployment using GitHub Actions to publish the project. For our instance this URL is <https://mdn.github.io/client-toolchain-example/>; you will have your own unique URL.
 - We also have a simple test that blocks the building and deployment of the site if the GitHub API feed isn't giving us the correct data format.
 
 For those of you wanting a challenge, consider whether you can optimize some part of this toolchain. Some questions to ask yourself:
@@ -274,7 +277,7 @@ For those of you wanting a challenge, consider whether you can optimize some par
 - Can we extract only the features of plotly.js that we need? This will reduce the JavaScript bundle size.
 - Maybe you want to add other tools, such as TypeScript for type checking, or stylelint for CSS linting?
 - Could React be swapped out for [something smaller](https://preactjs.com/)?
-- Could you add more tests to prevent a bad build from deploying, such as [performance audits](https://developer.chrome.com/docs/lighthouse/performance/)?
+- Could you add more tests to prevent a bad build from deploying, such as [performance audits](https://developer.chrome.com/docs/lighthouse/performance/performance-scoring)?
 - Could you set up a notification to let you know when a new deploy succeeded or failed?
 
 {{PreviousMenu("Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain", "Learn/Tools_and_testing/Understanding_client-side_tools")}}

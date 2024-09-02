@@ -219,4 +219,4 @@ function clearLog(event) {
 
 - [Pointer Events now in Firefox Nightly](https://hacks.mozilla.org/2015/08/pointer-events-now-in-firefox-nightly/); Mozilla Hacks; by Matt Brubeck and Jason Weathersby; 2015-Aug-04
 - [jQuery Pointer Events Polyfill](https://github.com/jquery-archive/PEP)
-- [Gestures](https://material.io/design/interaction/gestures.html); Material Design
+- [Gestures](https://m2.material.io/design/interaction/gestures.html); Material Design

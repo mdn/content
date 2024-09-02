@@ -17,7 +17,7 @@ In addition to broad feature sets like ligatures or lining figures (numerals tha
 
 ## Discovering availability of features in fonts
 
-This is sometimes the trickiest thing to work out if you don't have any documentation that came with the fonts (many type designers and foundries will provide sample pages and CSS just for this very reason). But there are some sites that make it easier to figure out. You can visit [wakamaifondue.com](https://wakamaifondue.com), drop your font file on the circle where instructed, and in a few moments you'll have a full report on all the capabilities and features of your font. [Axis-praxis.org](https://www.axis-praxis.org/) also offers a similar capability, with the ability to click on the features to turn them on or off in a given text block.
+This is sometimes the trickiest thing to work out if you don't have any documentation that came with the fonts (many type designers and foundries will provide sample pages and CSS just for this very reason). But there are some sites that make it easier to figure out. You can visit [wakamaifondue.com](https://wakamaifondue.com/), drop your font file on the circle where instructed, and in a few moments you'll have a full report on all the capabilities and features of your font. [Axis-praxis.org](https://www.axis-praxis.org/) also offers a similar capability, with the ability to click on the features to turn them on or off in a given text block.
 
 ## Why you would use them?
 
@@ -203,7 +203,7 @@ For example, small caps can be set several ways, but if you want to ensure that 
 
 ### Web font analysis tools
 
-- [Wakamai Fondue](https://wakamaifondue.com)
+- [Wakamai Fondue](https://wakamaifondue.com/)
 - [Axis Praxis](https://www.axis-praxis.org/)
 
 ### W3C Specifications

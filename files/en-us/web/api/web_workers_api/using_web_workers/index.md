@@ -52,6 +52,15 @@ Creating a new worker is simple. All you need to do is call the {{domxref("Worke
 const myWorker = new Worker("worker.js");
 ```
 
+> [!NOTE]
+> Bundlers, including [Webpack](https://webpack.js.org/guides/web-workers/), [Vite](https://vitejs.dev/guide/features.html#web-workers), and [Parcel](https://parceljs.org/languages/javascript/#web-workers), recommend passing URLs that are resolved relative to [`import.meta.url`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta#url) to the `Worker()` constructor. For example:
+>
+> ```js
+> const myWorker = new Worker(new URL("worker.js", import.meta.url));
+> ```
+>
+> This way, the path is relative to the current script instead of the current HTML page, which allows the bundler to safely do optimizations like renaming (because otherwise the `worker.js` URL may point to a file not controlled by the bundler, so it cannot make any assumptions).
+
 ### Sending messages to and from a dedicated worker
 
 The magic of workers happens via the {{domxref("Worker.postMessage", "postMessage()")}} method and the {{domxref("Worker.message_event", "onmessage")}} event handler. When you want to send a message to the worker, you post messages to it like this ([main.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-web-worker/main.js)):
@@ -161,7 +170,7 @@ Here we'll concentrate on the differences between dedicated and shared workers. 
 
 ### Spawning a shared worker
 
-Spawning a new shared worker is pretty much the same as with a dedicated worker, but with a different constructor name (see [index.html](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker/index.html) and [index2.html](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker/index2.html)) — each one has to spin up the worker using code like the following:
+Spawning a new shared worker is pretty much the same as with a dedicated worker, but with a different constructor name (see [index.html](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-shared-worker/index.html) and [index2.html](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-shared-worker/index2.html)) — each one has to spin up the worker using code like the following:
 
 ```js
 const myWorker = new SharedWorker("worker.js");
@@ -176,7 +185,7 @@ The port connection needs to be started either implicitly by use of the `onmessa
 
 ### Sending messages to and from a shared worker
 
-Now messages can be sent to the worker as before, but the `postMessage()` method has to be invoked through the port object (again, you'll see similar constructs in both [multiply.js](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker/multiply.js) and [square.js](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker/square.js)):
+Now messages can be sent to the worker as before, but the `postMessage()` method has to be invoked through the port object (again, you'll see similar constructs in both [multiply.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-shared-worker/multiply.js) and [square.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-shared-worker/square.js)):
 
 ```js
 squareNumber.onchange = () => {
@@ -185,7 +194,7 @@ squareNumber.onchange = () => {
 };
 ```
 
-Now, on to the worker. There is a bit more complexity here as well ([worker.js](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker/worker.js)):
+Now, on to the worker. There is a bit more complexity here as well ([worker.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-shared-worker/worker.js)):
 
 ```js
 onconnect = (e) => {
@@ -204,7 +213,7 @@ We use the `ports` attribute of this event object to grab the port and store it 
 
 Next, we add an `onmessage` handler on the port to do the calculation and return the result to the main thread. Setting up this `onmessage` handler in the worker thread also implicitly opens the port connection back to the parent thread, so the call to `port.start()` is not actually needed, as noted above.
 
-Finally, back in the main script, we deal with the message (again, you'll see similar constructs in both [multiply.js](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker/multiply.js) and [square.js](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker/square.js)):
+Finally, back in the main script, we deal with the message (again, you'll see similar constructs in both [multiply.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-shared-worker/multiply.js) and [square.js](https://github.com/mdn/dom-examples/blob/main/web-workers/simple-shared-worker/square.js)):
 
 ```js
 myWorker.port.onmessage = (e) => {
@@ -808,7 +817,7 @@ Most browsers enable you to debug web workers in their JavaScript debuggers in _
 
 To learn how to debug web workers, see the documentation for each browser's JavaScript debugger:
 
-- [Chrome Sources panel](https://developer.chrome.com/docs/devtools/javascript/sources/)
+- [Chrome Sources panel](https://developer.chrome.com/docs/devtools/sources)
 - [Firefox JavaScript Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/)
 
 ## Functions and interfaces available in workers

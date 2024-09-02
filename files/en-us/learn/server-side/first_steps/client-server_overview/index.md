@@ -128,7 +128,7 @@ Allow: GET
 X-Cache-Info: caching
 Content-Length: 41823
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US" dir="ltr" class="redesign no-js"  data-ffo-opensanslight=false data-ffo-opensans=false >
 <head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8">

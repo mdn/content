@@ -87,6 +87,10 @@ DBOpenRequest.onsuccess = (event) => {
 };
 ```
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

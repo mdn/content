@@ -1,5 +1,6 @@
 ---
 title: "HTML attribute: dirname"
+short-title: dirname
 slug: Web/HTML/Attributes/dirname
 page-type: html-attribute
 browser-compat:

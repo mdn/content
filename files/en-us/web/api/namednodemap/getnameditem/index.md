@@ -12,7 +12,7 @@ The **`getNamedItem()`** method of the {{domxref("NamedNodeMap")}} interface ret
 
 > [!NOTE]
 > This method is also called when you use the operator `[]` syntax.
-> So, `myMap[str]`is equivalent to `myMap.getNamedItem(str)` where `str` is a string.
+> So, `myMap[str]` is equivalent to `myMap.getNamedItem(str)` where `str` is a string.
 
 ## Syntax
 

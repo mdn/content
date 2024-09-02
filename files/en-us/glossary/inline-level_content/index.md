@@ -44,6 +44,7 @@ body {
 
 ## See also
 
-- [Block-level content](/en-US/docs/Glossary/Block-level_content)
+- Related glossary terms:
+  - {{Glossary("Block-level content")}}
 - [Inline formatting context](/en-US/docs/Web/CSS/Inline_formatting_context)
 - {{cssxref("display")}}

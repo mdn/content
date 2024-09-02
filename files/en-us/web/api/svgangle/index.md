@@ -7,15 +7,15 @@ browser-compat: api.SVGAngle
 
 {{APIRef("SVG")}}
 
-The `SVGAngle` interface is used to represent a value that can be an {{cssxref("&lt;angle&gt;")}} or {{cssxref("&lt;number&gt;")}} value. An `SVGAngle` reflected through the {{SVGAttr("animVal")}} attribute is always read only.
+The `SVGAngle` interface is used to represent a value that can be an {{cssxref("&lt;angle&gt;")}} or {{cssxref("&lt;number&gt;")}} value.
 
-An `SVGAngle` object can be designated as read only, which means that attempts to modify the object will result in an exception being thrown.
+The `SVGAngle` returned from {{domxref("SVGAnimatedAngle.animVal")}} and {{domxref("SVGAnimatedAngle.baseVal")}} is read only, but the `SVGAngle` returned from {{domxref("SVGSVGElement.createSVGAngle()")}} is writable. When designated as read only, attempts to modify the object will result in an exception being thrown.
 
 An `SVGAngle` object can be associated with a particular element. The associated element is used to determine which element's content attribute to update if the object reflects an attribute. Unless otherwise described, an `SVGAngle` object is not associated with any element.
 
 Every `SVGAngle` object operates in one of two modes:
 
-1. **_Reflect the base value_** of a reflected animatable attribute (being exposed through the {{SVGAttr("baseVal")}} member of an {{domxref("SVGAnimatedAngle")}}),
+1. **_Reflect the base value_** of a reflected animatable attribute (being exposed through the {{domxref("SVGAnimatedAngle.baseVal", "baseVal")}} member of an {{domxref("SVGAnimatedAngle")}}),
 2. **_Be detached_,** which is the case for `SVGAngle` objects created with {{domxref("SVGSVGElement.createSVGAngle()")}}.
 
 ## Constants

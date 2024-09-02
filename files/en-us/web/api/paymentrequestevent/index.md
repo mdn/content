@@ -37,6 +37,8 @@ The **`PaymentRequestEvent`** interface of the {{domxref("Payment Handler API", 
 
 ## Instance methods
 
+- {{domxref("PaymentRequestEvent.changePaymentMethod","changePaymentMethod()")}} {{Experimental_Inline}}
+  - : Gets an updated total, given payment method details.
 - {{domxref("PaymentRequestEvent.openWindow","openWindow()")}} {{Experimental_Inline}}
   - : Opens the specified URL in a new window, if and only if the given URL is on the same origin as the calling page. It returns a {{jsxref("Promise")}} that resolves with a reference to a {{domxref("WindowClient")}}.
 - {{domxref("PaymentRequestEvent.respondWith","respondWith()")}} {{Experimental_Inline}}

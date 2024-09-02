@@ -116,7 +116,7 @@ They generally fall into two categories.
 
 **Third party APIs** are not built into the browser by default, and you generally have to grab their code and information from somewhere on the Web. For example:
 
-- The [Twitter API](https://developer.twitter.com/en/docs) allows you to do things like displaying your latest tweets on your website.
+- The [Twitter API](https://developer.x.com/en/docs) allows you to do things like displaying your latest tweets on your website.
 - The [Google Maps API](https://developers.google.com/maps/) and [OpenStreetMap API](https://wiki.openstreetmap.org/wiki/API) allows you to embed custom maps into your website, and other such functionality.
 
 > [!NOTE]
@@ -276,8 +276,10 @@ This works great, but what if we wanted to put our JavaScript in an external fil
    }
    ```
 
-4. Save and refresh your browser, and you should see the same thing!
-   It works just the same, but now we've got our JavaScript in an external file.
+4. Save and refresh your browser. You'll discover that clicking the button has no effect, and if you check your browser's console, you'll see an error along the lines of `Cross-origin request blocked`. That's because like many external resources, JavaScript modules need to be loaded from the [same origin](/en-US/docs/Web/Security/Same-origin_policy) as the HTML, and `file://` URLs don't qualify. There are two solutions to fix this problem:
+   - Our recommended solution is to follow the [guide to set up a local testing server](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server). With the server program running and serving the `apply-javascript-external.html` and `script.js` files on port `8000`, open your browser and go to `http://localhost:8000`.
+   - If you cannot run a local server, you can also use `<script defer src="script.js"></script>` instead of `<script type="module" src="script.js"></script>`. See [Script loading strategies](#script_loading_strategies) below for more information. But note that features we use in other parts of the tutorial may require a local HTTP server anyway.
+5. Now the website works just the same as before, but now we've got our JavaScript in an external file.
    This is generally a good thing in terms of organizing your code and making it reusable across multiple HTML files.
    Plus, the HTML is easier to read without huge chunks of script dumped in it.
 
@@ -343,7 +345,7 @@ There are a few different strategies to make sure your JavaScript only runs afte
 - In the external JavaScript example above, the script element is placed in the head of the document, before the HTML body is parsed. But because we're using `<script type="module">`, the code is treated as a [module](/en-US/docs/Web/JavaScript/Guide/Modules) and the browser waits for all HTML to be processed before executing JavaScript modules. (You could also place external scripts at the bottom of the body. But if there is a lot of HTML and the network is slow, it may take a lot of time before the browser can even start fetching and loading the script, so placing external scripts in the head is usually better.)
 - If you still want to use non-module scripts in the document head, which could block the whole page from displaying, and could cause errors because it executes before the HTML is parsed:
 
-  - For external scripts, you should add the `defer` and `async` attributes on the {{htmlelement("script")}} element.
+  - For external scripts, you should add the `defer` (or if you don't need the HTML to be ready, the `async`) attribute on the {{htmlelement("script")}} element.
   - For internal scripts, you should wrap the code in a [`DOMContentLoaded` event listener](/en-US/docs/Web/API/Document/DOMContentLoaded_event).
 
   This is beyond the scope of the tutorial at this point, but unless you need to support very old browsers, you don't have to do this and can just use `<script type="module">` instead.
@@ -354,13 +356,13 @@ As with HTML and CSS, it is possible to write comments into your JavaScript code
 Comments are very useful, and you should use them often, particularly for larger applications.
 There are two types:
 
-- A single line comment is written after a double forward slash (//), e.g.
+- A single line comment is written after a double forward slash (`//`), e.g.
 
   ```js
   // I am a comment
   ```
 
-- A multi-line comment is written between the strings /\* and \*/, e.g.
+- A multi-line comment is written between the strings `/*` and `*/`, e.g.
 
   ```js
   /*

@@ -55,9 +55,9 @@ None ({{jsxref("undefined")}}).
 
 ### Drawing a full ellipse
 
-This example draws an ellipse at an angle of π/4 radians (45**°**). To
-make a full ellipse, the arc begins at an angle of 0 radians (0**°**), and
-ends at an angle of 2π radians (360**°**).
+This example draws an ellipse at an angle of π/4 radians (45°). To
+make a full ellipse, the arc begins at an angle of 0 radians (0°), and
+ends at an angle of 2π radians (360°).
 
 #### HTML
 

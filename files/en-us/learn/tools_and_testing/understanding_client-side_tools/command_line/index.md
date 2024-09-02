@@ -86,7 +86,7 @@ Better programs exist for providing a terminal experience on Windows, such as Po
 
 However, the best option for Windows in the modern day is the Windows Subsystem for Linux (WSL) — a compatibility layer for running Linux operating systems directly from inside Windows 10, allowing you to run a "true terminal" directly on Windows, without needing a virtual machine.
 
-This can be installed directly from the Windows store for free. You can find all the documentation you need in the [Windows Subsystem for Linux Documentation](https://docs.microsoft.com/windows/wsl/).
+This can be installed directly from the Windows store for free. You can find all the documentation you need in the [Windows Subsystem for Linux Documentation](https://learn.microsoft.com/en-us/windows/wsl/).
 
 ![a screenshot of the Windows subsystem for Linux documentation](wsl.png)
 
@@ -316,7 +316,7 @@ Getting to know your system will prove useful in years to come — learn how the
 
 Now we've had a look at some of the built-in commands your system comes equipped with, let's look at how we can install a third-party CLI tool and make use of it.
 
-The vast ecosystem of installable tools for front-end web development currently exists mostly inside [npm](https://www.npmjs.com), a privately owned, package hosting service that works closely together with Node.js.
+The vast ecosystem of installable tools for front-end web development currently exists mostly inside [npm](https://www.npmjs.com/), a privately owned, package hosting service that works closely together with Node.js.
 This is slowly expanding — you can expect to see more package providers as time goes on.
 
 [Installing Node.js](https://nodejs.org/en/) also installs the npm command line tool (and a supplementary npm-centric tool called npx), which offers a gateway to installing additional command line tools. Node.js and npm work the same across all systems: macOS, Windows, and Linux.
@@ -374,7 +374,7 @@ Once you've installed node, open up the terminal and run the following command t
 npm install --save-dev prettier
 ```
 
-You can now run the file locally using the [npx](https://docs.npmjs.com/cli/commands/npx) tool.
+You can now run the file locally using the [npx](https://docs.npmjs.com/cli/commands/npx/) tool.
 Running the command without any arguments, as with many other commands, will offer up usage and help information.
 Try this now:
 

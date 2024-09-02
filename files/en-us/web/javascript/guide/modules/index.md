@@ -364,6 +364,24 @@ An import map like the one below then provides a mapping to the actual script fi
 If `dependency_script` changes, then its hash contained in the file name changes as well. In this case, we only need to update the import map to reflect the changed name of the module.
 We don't have to update the source of any JavaScript code that depends on it, because the specifier in the import statement does not change.
 
+## Loading non-JavaScript resources
+
+One exciting feature that a unified module architecture brings is the ability to load non-JavaScript resources as modules. For example, you can import JSON as a JavaScript object, or import CSS as a {{domxref("CSSStyleSheet")}} object.
+
+You must explicitly declare what kind of resource you are importing. By default, the browser assumes that the resource is JavaScript, and will throw an error if the resolved resource is something else. To import JSON, CSS, or other types of resource, use the [import attributes](/en-US/docs/Web/JavaScript/Reference/Statements/import/with) syntax:
+
+```js
+import colors from "./colors.json" with { type: "json" };
+import styles from "./styles.css" with { type: "css" };
+```
+
+Browsers will also perform validation on the module type, and fail if, for example, `./data.json` does not resolve to a JSON file. This ensures that you don't accidentally execute code when you just intend to import data. Once imported successfully, you can now use the imported value as a normal JavaScript object or `CSSStyleSheet` object.
+
+```js
+console.log(colors.map((color) => color.value));
+document.adoptedStyleSheets = [styles];
+```
+
 ## Applying the module to your HTML
 
 Now we just need to apply the `main.js` module to our HTML page. This is very similar to how we apply a regular script to a page, with a few notable differences.

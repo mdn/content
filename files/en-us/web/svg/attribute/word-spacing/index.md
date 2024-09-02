@@ -77,4 +77,4 @@ svg {
 
 ## See also
 
-- {{cssxref("word-spacing")}}
+- CSS {{cssxref("word-spacing")}} property

@@ -26,7 +26,7 @@ If you are not sure about committing to learning web development in-depth and wa
 
 > [!CALLOUT]
 >
-> #### Looking to become a front-end web developer?
+> **Looking to become a front-end web developer?**
 >
 > If you want to become a front-end web developer and are not sure what to learn first, we'd suggest using the [MDN Curriculum](/en-US/curriculum/) to plan your learning. It provides a structured learning pathway covering the essential skills and practices for being a successful front-end developer, along with recommended learning resources.
 >
@@ -112,6 +112,8 @@ If you're interested in helping develop/improve the content, take a look at [how
 
 ## See also
 
+- [The Frontend Developer Career Path](https://v2.scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>_MDN Curriculum partner_</sup>
+  - : [Scrimba's](https://scrimba.com?via=mdn) _Frontend Developer Career Path_ teaches all you need to know to be a competent front-end web developer, with fun interactive lessons and challenges, knowledgeable teachers, and a supportive community. Go from zero to landing your first front-end job! Many of the course components are available as standalone free versions.
 - [Learn JavaScript](https://learnjavascript.online/)
   - : An excellent resource for aspiring web developers — Learn JavaScript in an interactive environment, with short lessons and interactive tests, guided by automated assessment. The first 40 lessons are free, and the complete course is available for a small one-time payment.
 - [Codecademy](https://www.codecademy.com/)

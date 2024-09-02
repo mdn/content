@@ -83,7 +83,7 @@ Mixed content requests are insecure requests for resources from a [secure contex
 The following examples demonstrate secure, insecure, and mixed content requests:
 
 - `http://insecure.com` loads `http://also.insecure.com` — is not a mixed content request because both origins are insecure.
-- `https://secure.com` loads `http://insecure.com` — is a mixed content request because the insecure resource`http://insecure.com` is loaded into the secure context `https://secure.com`.
+- `https://secure.com` loads `http://insecure.com` — is a mixed content request because the insecure resource `http://insecure.com` is loaded into the secure context `https://secure.com`.
 - `http://insecure.com` loads `https://secure.com` in an `<iframe>`, which in turn loads `http://also.insecure.com` — loading `https://secure.com` into `http://insecure.com` is not a mixed content request (there is no restriction on loading a secure context into an insecure context).
   However loading `http://also.insecure.com` into the secure frame `https://secure.com` is a mixed content request.
 - `https://secure.com` frames a `data:` URL, which loads `http://insecure.com` — this is a mixed content request, because `https://secure.com` (and hence `data:`) were securely loaded and `http://insecure.com` is insecure.

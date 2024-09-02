@@ -34,5 +34,3 @@ None ({{jsxref("undefined")}}).
 ## Browser compatibility
 
 {{Compat}}
-
-{{APIRef("Web Bluetooth")}}

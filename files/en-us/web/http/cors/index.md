@@ -13,7 +13,7 @@ An example of a cross-origin request: the front-end JavaScript code served from 
 
 For security reasons, browsers restrict cross-origin HTTP requests initiated from scripts. For example, `fetch()` and {{domxref("XMLHttpRequest")}} follow the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy). This means that a web application using those APIs can only request resources from the same origin the application was loaded from unless the response from other origins includes the right CORS headers.
 
-![Diagrammatic representation of CORS mechanism](cors_principle.png)
+![Diagrammatic representation of CORS mechanism](https://mdn.github.io/shared-assets/images/diagrams/http/cors/fetching-page-cors.svg)
 
 The CORS mechanism supports secure cross-origin requests and data transfers between browsers and servers. Browsers use CORS in APIs such as `fetch()` or `XMLHttpRequest` to mitigate the risks of cross-origin HTTP requests.
 
@@ -252,7 +252,7 @@ Keep-Alive: timeout=2, max=99
 Connection: Keep-Alive
 Content-Type: text/plain
 
-[Some XML payload]
+[Some XML content]
 ```
 
 #### Preflighted requests and redirects
@@ -331,7 +331,7 @@ Keep-Alive: timeout=2, max=100
 Connection: Keep-Alive
 Content-Type: text/plain
 
-[text/plain payload]
+[text/plain content]
 ```
 
 Although the request's `Cookie` header contains the cookie destined for the content on `https://bar.other`, if bar.other did not respond with an {{HTTPHeader("Access-Control-Allow-Credentials")}} with value `true`, as demonstrated in this example, the response would be ignored and not made available to the web content.

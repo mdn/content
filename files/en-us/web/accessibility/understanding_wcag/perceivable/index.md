@@ -211,7 +211,7 @@ This guideline refers to the ability of content to be consumed by users in multi
           <li>
             Image alt text. Content images should have text available that
             clearly describes the image's contents, which can be
-            programmatically associated with it (e.g., `alt` text),
+            programmatically associated with it (e.g., alt text),
             or otherwise is easy to associate (e.g., describes it and is sat
             right next to it). This should mean that the full meaning can still
             be inferred even if you can't see the image.
@@ -371,7 +371,7 @@ This guideline refers to the ability of content to be consumed by users in multi
 
 ## Guideline 1.4: Make it easier for users to see and hear content including separating foreground from background
 
-This guideline relates to making sure core content is easy to discern from backgrounds and other decoration. The classic example is color (both color contrast and use of color to convey instructions), but it applies in other situations too.
+This guideline relates to making sure core content is easy to discern from backgrounds and other decoration. The classic example is color (both [color contrast](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast) and [use of color](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Use_of_color) to convey instructions), but it applies in other situations too.
 
 <table class="standard-table">
   <thead>
@@ -392,10 +392,13 @@ This guideline relates to making sure core content is easy to discern from backg
       </td>
       <td>
         See
+        <a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Use_of_color"
+          >Use of color</a
+        >,
         <a
           href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#color_and_color_contrast"
           >Color and color contrast</a
-        >
+        >,
         and
         <a
           href="/en-US/docs/Learn/Forms/How_to_structure_a_web_form#multiple_labels"
@@ -411,7 +414,7 @@ This guideline relates to making sure core content is easy to discern from backg
         volume.
       </td>
       <td>
-        Use native `&#x3C;button>`s to provide accessible keyboard
+        Use native <code>&lt;button&gt;</code>s to provide accessible keyboard
         controls, as shown in
         <a
           href="/en-US/docs/Web/Media/Audio_and_video_delivery/Video_player_styling_basics"
@@ -439,6 +442,9 @@ This guideline relates to making sure core content is easy to discern from backg
       </td>
       <td>
         See
+        <a href="/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast"
+          >Color contrast</a
+        > and
         <a
           href="/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#color_and_color_contrast"
           >Color and color contrast</a
@@ -511,7 +517,7 @@ This guideline relates to making sure core content is easy to discern from backg
           </li>
           <li>
             Line height should be at least 1.5 times the text size within
-            paragraphs (e.g., `line-height: 1.5;`), and at least 2.25
+            paragraphs (e.g., <code>line-height: 1.5;</code>), and at least 2.25
             times the text size between paragraphs (e.g., <code
               >padding: 2.25rem;</code
             >).

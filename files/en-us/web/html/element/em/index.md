@@ -29,9 +29,27 @@ By default, the visual result is the same. However, the semantic meaning is diff
 
 This means the right one to use depends on the situation. Neither is for purely decorative purposes, that's what CSS styling is for.
 
-An example for `<em>` could be: "Just _do_ it already!", or: "We _had_ to do something about it". A person or software reading the text would pronounce the words in italics with an emphasis, using verbal stress.
+Examples for `<em>` could be:
 
-An example for `<i>` could be: "The _Queen Mary_ sailed last night". Here, there is no added emphasis or importance on the word "Queen Mary". It is merely indicated that the object in question is not a queen named Mary, but a ship named _Queen Mary_. Another example for `<i>` could be: "The word _the_ is an article".
+```html live-sample___em-example
+<p>Just <em>do</em> it already!</p>
+<p>We <em>had</em> to do something about it.</p>
+```
+
+{{EmbedLiveSample('em-example', "", 85)}}
+
+A person or software reading the text would pronounce the words in italics with an emphasis, using verbal stress.
+
+Examples for `<i>` could be:
+
+```html live-sample___i-example
+<p>The word <i>the</i> is an article.</p>
+<p>The <i>Queen Mary</i> sailed last night.</p>
+```
+
+{{EmbedLiveSample('i-example', "", 85)}}
+
+Here, there is no added emphasis or importance on the word "Queen Mary". It is merely indicated that the object in question is not a queen named Mary but a ship named "Queen Mary".
 
 ## Examples
 
