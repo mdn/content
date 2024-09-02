@@ -15,7 +15,7 @@ You don't create `FileSystemEntry` objects directly. Instead, you will receive a
 
 The `FileSystemEntry` interface includes methods that you would expect for manipulating files and directories, but it also includes a convenient method for obtaining the URL of the entry: [`toURL()`](#tourl). It also introduces a new URL scheme: `filesystem:`.
 
-You can use the `filesystem:` scheme on Google Chrome to see all the files and folders that are stored in the origin of your app. Just use `filesystem:` scheme for the root directory of the origin of the app. For example, if your app is in [`http://www.example.com`](https://www.example.com), open `filesystem:http://www.example.com/temporary/` in a tab. Chrome shows a read-only list of all the files and folders stored the origin of your app.
+You can use the `filesystem:` scheme on Google Chrome to see all the files and folders that are stored in the origin of your app. Just use `filesystem:` scheme for the root directory of the origin of the app. For example, if your app is in [`http://www.example.com`](https://www.example.com/), open `filesystem:http://www.example.com/temporary/` in a tab. Chrome shows a read-only list of all the files and folders stored the origin of your app.
 
 ### Example
 

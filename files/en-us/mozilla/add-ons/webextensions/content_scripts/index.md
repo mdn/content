@@ -72,7 +72,7 @@ The set of domains can be restricted further through enterprise policies: Firefo
 
 ### Limitations
 
-Whole tabs or frames may be loaded using [`data:` URI](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs), {{DOMxRef("URL.createObjectURL_static", "Blob")}} objects, and other similar techniques. Support of content scripts injection into such special documents varies across browsers, see the Firefox [bug #1411641 comment 41](https://bugzil.la/1411641#c41) for some details.
+Whole tabs or frames may be loaded using [`data:` URI](/en-US/docs/Web/URI/Schemes/data), {{DOMxRef("URL.createObjectURL_static", "Blob")}} objects, and other similar techniques. Support of content scripts injection into such special documents varies across browsers, see the Firefox [bug #1411641 comment 41](https://bugzil.la/1411641#c41) for some details.
 
 ## Content script environment
 
@@ -222,7 +222,7 @@ This is accomplished by exposing more privileged XHR and fetch instances in the 
 > This is not possible in Manifest V3, as `content.XMLHttpRequest` and `content.fetch()` are not available.
 
 > [!NOTE]
-> In Chrome, starting with version 73, and Firefox, starting with version 101 when using Manifest V3, content scripts are subject to the same [CORS](/en-US/docs/Web/HTTP/CORS) policy as the page they are running within. Only backend scripts have elevated cross-domain privileges. See [Changes to Cross-Origin Requests in Chrome Extension Content Scripts](https://www.chromium.org/Home/chromium-security/extension-content-script-fetches).
+> In Chrome, starting with version 73, and Firefox, starting with version 101 when using Manifest V3, content scripts are subject to the same [CORS](/en-US/docs/Web/HTTP/CORS) policy as the page they are running within. Only backend scripts have elevated cross-domain privileges. See [Changes to Cross-Origin Requests in Chrome Extension Content Scripts](https://www.chromium.org/Home/chromium-security/extension-content-script-fetches/).
 
 ## Communicating with background scripts
 

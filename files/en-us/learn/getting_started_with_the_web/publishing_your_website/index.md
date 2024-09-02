@@ -29,7 +29,7 @@ In addition, you will need a {{Glossary("FTP", "File Transfer Protocol (FTP)")}}
 
 - MDN does not promote specific commercial hosting companies or domain name registrars. To find hosting companies and registrars, just search for "web hosting" and "domain names". All registrars will have a feature to allow you to check if the domain name you want is available.
 - Your home or office {{Glossary("ISP", "internet service provider")}} may provide some limited hosting for a small website. The available feature set will be limited, but it might be perfect for your first experiments.
-- There are also free services available like [Neocities](https://neocities.org/), [Google Sites](https://sites.google.com/), [Blogger](https://www.blogger.com), and [WordPress](https://wordpress.com/). Sometimes you get what you pay for, but sometimes these resources are good enough for your initial experiments.
+- There are also free services available like [Neocities](https://neocities.org/), [Google Sites](https://sites.google.com/), [Blogger](https://www.blogger.com/), and [WordPress](https://wordpress.com/). Sometimes you get what you pay for, but sometimes these resources are good enough for your initial experiments.
 - Many companies provide hosting and domains.
 
 ### Using an online tool like GitHub or Google App Engine

@@ -91,7 +91,7 @@ The CSS Typed OM exposes CSS values as typed JavaScript objects to allow their p
 
 - [CSS Typed OM reference](/en-US/docs/Web/API/CSS_Typed_OM_API)
 - [CSS Typed OM guide](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)
-- [Working with the new CSS Typed Object Model](https://developer.chrome.com/blog/cssom/)
+- [Working with the new CSS Typed Object Model](https://developer.chrome.com/docs/css-ui/cssom)
 
 ### CSS Painting API
 

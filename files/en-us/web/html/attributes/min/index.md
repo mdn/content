@@ -1,5 +1,6 @@
 ---
 title: "HTML attribute: min"
+short-title: min
 slug: Web/HTML/Attributes/min
 page-type: html-attribute
 browser-compat:

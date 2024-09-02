@@ -60,8 +60,8 @@ This example draws a complete circle with the `arc()` method.
 #### JavaScript
 
 The arc is given an x-coordinate of 100, a y-coordinate of 75, and a radius of 50. To
-make a full circle, the arc begins at an angle of 0 radians (0**°**), and
-ends at an angle of 2π radians (360**°**).
+make a full circle, the arc begins at an angle of 0 radians (0°), and
+ends at an angle of 2π radians (360°).
 
 ```js
 const canvas = document.querySelector("canvas");

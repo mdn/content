@@ -11,7 +11,7 @@ The **`TextTrack`** interface of the [WebVTT API](/en-US/docs/Web/API/WebVTT_API
 
 An object of this type owns the list of {{domxref("VTTCue")}} objects that will be displayed over the video at various points.
 
-`TextTrack` objects can be added to a {{domxref("HTMLVideoElement")}} or {{domxref("HTMLAudioElement")}} element using the {{domxref("HTMLMediaElement.addTrack()")}} method, which has the same effect as adding text tracks declaratively using {{htmlelement("track")}} elements inside a {{htmlelement("video")}} or {{htmlelement("audio")}} element.
+`TextTrack` objects can be added to a {{domxref("HTMLVideoElement")}} or {{domxref("HTMLAudioElement")}} element using the {{domxref("HTMLMediaElement.addTextTrack()")}} method, which has the same effect as adding text tracks declaratively using {{htmlelement("track")}} elements inside a {{htmlelement("video")}} or {{htmlelement("audio")}} element.
 The `TextTrack` objects are stored in a {{domxref("TextTrackList")}}, which can be retrieved using the {{domxref("HTMLMediaElement.textTracks")}} property.
 
 {{InheritanceDiagram}}
@@ -36,6 +36,8 @@ _This interface also inherits properties from {{domxref("EventTarget")}}._
   - : A string which specifies the text language in which the text track's contents is written. The value must adhere to the format specified in {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}, just like the HTML [`lang`](/en-US/docs/Web/HTML/Global_attributes#lang) attribute. For example, this can be `"en-US"` for United States English or `"pt-BR"` for Brazilian Portuguese.
 - {{domxref("TextTrack.mode")}}
   - : A string specifying the track's current mode, which must be one of the permitted values. Changing this property's value changes the track's current mode to match. The default is `disabled`, unless the {{HTMLElement("track")}} element's [`default`](/en-US/docs/Web/HTML/Element/track#default) boolean attribute is set to `true` — in which case the default mode is `showing`.
+- {{domxref("TextTrack.sourceBuffer", "sourceBuffer")}} {{ReadOnlyInline}}
+  - : The {{domxref("SourceBuffer")}} that created the track. Returns null if the track was not created by a {{domxref("SourceBuffer")}} or the {{domxref("SourceBuffer")}} has been removed from the {{domxref("MediaSource.sourceBuffers")}} attribute of its parent media source.
 
 ## Instance methods
 

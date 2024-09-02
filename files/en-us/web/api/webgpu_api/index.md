@@ -21,7 +21,7 @@ WebGL and the [GLSL](<https://www.khronos.org/opengl/wiki/Core_Language_(GLSL)>)
 
 However, WebGL has some fundamental issues that needed addressing:
 
-- Since WebGL's release, a new generation of native GPU APIs have appeared — the most popular being [Microsoft's Direct3D 12](https://docs.microsoft.com/en-us/windows/win32/direct3d12/direct3d-12-graphics), [Apple's Metal](https://developer.apple.com/metal/), and [The Khronos Group's Vulkan](https://www.vulkan.org/) — which provide a multitude of new features. There are no more updates planned to OpenGL (and therefore WebGL), so it won't get any of these new features. WebGPU on the other hand will have new features added to it going forwards.
+- Since WebGL's release, a new generation of native GPU APIs have appeared — the most popular being [Microsoft's Direct3D 12](https://learn.microsoft.com/en-us/windows/win32/direct3d12/direct3d-12-graphics), [Apple's Metal](https://developer.apple.com/metal/), and [The Khronos Group's Vulkan](https://www.vulkan.org/) — which provide a multitude of new features. There are no more updates planned to OpenGL (and therefore WebGL), so it won't get any of these new features. WebGPU on the other hand will have new features added to it going forwards.
 - WebGL is based wholly around the use case of drawing graphics and rendering them to a canvas. It does not handle general-purpose GPU (GPGPU) computations very well. GPGPU computations are becoming more and more important for many different use cases, for example those based on machine learning models.
 - 3D graphics apps are becoming increasingly demanding, both in terms of the number of objects to be rendered simultaneously, and usage of new rendering features.
 
@@ -609,5 +609,5 @@ The whole API is available only in a [secure context](/en-US/docs/Web/Security/S
 ## See also
 
 - [WebGPU best practices](https://toji.dev/webgpu-best-practices/)
-- [WebGPU explainer](https://gpuweb.github.io/gpuweb/explainer)
+- [WebGPU explainer](https://gpuweb.github.io/gpuweb/explainer/)
 - [WebGPU — All of the cores, none of the canvas](https://surma.dev/things/webgpu/)

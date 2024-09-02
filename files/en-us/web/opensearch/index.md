@@ -13,7 +13,7 @@ Firefox also supports additional features not in the OpenSearch standard, such a
 OpenSearch description files can be advertised as described in [Autodiscovery of search plugins](#autodiscovery_of_search_plugins).
 
 > [!WARNING]
-> OpenSearch plugins can't be uploaded anymore on [addons.mozilla.org](https://addons.mozilla.org) (AMO). Search engine feature must use WebExtension API with [chrome settings](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides) in `manifest.json` file.
+> OpenSearch plugins can't be uploaded anymore on [addons.mozilla.org](https://addons.mozilla.org/) (AMO). Search engine feature must use WebExtension API with [chrome settings](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides) in `manifest.json` file.
 
 ## OpenSearch description file
 
@@ -42,7 +42,7 @@ The XML file that describes a search engine follows the basic template below. Se
 
   - : URL of an icon for the search engine. When possible, include a 16×16 image of type `image/x-icon` (such as `/favicon.ico`) and a 64×64 image of type `image/jpeg` or `image/png`.
 
-    The URL may also use the [`data:` URL scheme](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs). (You can generate a `data:` URL from an icon file at [The `data:` URL kitchen](https://software.hixie.ch/utilities/cgi/data/data).)
+    The URL may also use the [`data:` URL scheme](/en-US/docs/Web/URI/Schemes/data). (You can generate a `data:` URL from an icon file at [The `data:` URL kitchen](https://software.hixie.ch/utilities/cgi/data/data).)
 
     ```xml
     <Image height="16" width="16" type="image/x-icon">https://example.com/favicon.ico</Image>
@@ -126,7 +126,7 @@ For example:
 ```
 
 > [!NOTE]
-> At this time, [addons.mozilla.org](https://addons.mozilla.org) (AMO) doesn't support automatic updating of OpenSearch plugins. If you want to put your search plugin on AMO, remove the auto-updating feature before submitting it.
+> At this time, [addons.mozilla.org](https://addons.mozilla.org/) (AMO) doesn't support automatic updating of OpenSearch plugins. If you want to put your search plugin on AMO, remove the auto-updating feature before submitting it.
 
 ## Troubleshooting Tips
 

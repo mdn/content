@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.RTCRtpSender.getParameters
 ---
 
-{{DefaultAPISidebar("WebRTC")}}
+{{APIRef("WebRTC")}}
 
 The **`getParameters()`** method of the {{domxref("RTCRtpSender")}} interface returns an object describing the current configuration for how the sender's {{domxref("RTCRtpSender.track", "track")}} will be encoded and transmitted to a remote {{domxref("RTCRtpReceiver")}}.
 

@@ -54,4 +54,4 @@ try {
 {{Compat}}
 
 > [!NOTE]
-> This API is based on Chromium's [`chrome.scripting`](https://developer.chrome.com/docs/extensions/reference/scripting/#method-unregisterContentScripts) API.
+> This API is based on Chromium's [`chrome.scripting`](https://developer.chrome.com/docs/extensions/reference/api/scripting#method-unregisterContentScripts) API.

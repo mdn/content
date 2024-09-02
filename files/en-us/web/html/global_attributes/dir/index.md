@@ -28,6 +28,10 @@ It can have the following values:
 > [!NOTE]
 > Browsers might allow users to change the directionality of {{ HTMLElement("input") }} and {{ HTMLElement("textarea") }}s in order to assist with authoring content. Chrome and Safari provide a directionality option in the contextual menu of input fields while Legacy Edge uses the key combinations <kbd>Ctrl</kbd> + <kbd>Left Shift</kbd> and <kbd>Ctrl</kbd> + <kbd>Right Shift</kbd>. Firefox uses <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>X</kbd> but does NOT update the **`dir`** attribute value.
 
+## Inheritance
+
+If an element has no `dir` attribute, it will inherit the `dir` value set on its [parent node](/en-US/docs/Glossary/Node/DOM), which in turn may inherit it from its parent, and so on.
+
 ## Specifications
 
 {{Specifications}}

@@ -128,7 +128,7 @@ If Node is installed, you'll see a version number. If it isn't, you'll see an er
 
 You may use the Yarn package manager as an alternative to npm but we'll assume you're using npm in this set of tutorials. See [Package management basics](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management) for more information on npm and yarn.
 
-If you're using Windows, you will need to install some software to give you parity with Unix/macOS terminal in order to use the terminal commands mentioned in this tutorial. **Gitbash** (which comes as part of the [git for Windows toolset](https://gitforwindows.org/)) or **[Windows Subsystem for Linux](https://docs.microsoft.com/windows/wsl/about)** (**WSL**) are both suitable. See [Command line crash course](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line) for more information on these, and on terminal commands in general.
+If you're using Windows, you will need to install some software to give you parity with Unix/macOS terminal in order to use the terminal commands mentioned in this tutorial. **Gitbash** (which comes as part of the [git for Windows toolset](https://gitforwindows.org/)) or **[Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/about)** (**WSL**) are both suitable. See [Command line crash course](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line) for more information on these, and on terminal commands in general.
 
 Also bear in mind that React and ReactDOM produce apps that only work on a fairly modern set of browsers like Firefox, Microsoft Edge, Safari, or Chrome when working through these tutorials.
 
@@ -198,7 +198,7 @@ The **`public`** directory contains static files that will be served directly to
 
 The **`src`** directory is where we'll spend most of our time, as it's where the source code for our application lives. You'll notice that some JavaScript files in this directory end in the extension `.jsx`. This extension is necessary for any file that contains JSX – it tells Vite to turn the JSX syntax into JavaScript that your browser can understand. The `src/assets` directory contains the React logo you saw in the browser.
 
-The `package.json` and `package-lock.json` files contain metadata about our project. These files are not unique to React applications: Vite populated `package.json` for us, and npm created `package-lock.json` for when we installed the app's dependencies. You don't need to understand these files at all to complete this tutorial. However, if you'd like to learn more about them, you can read about [`package.json`](https://docs.npmjs.com/cli/v9/configuring-npm/package-json/) and [`package-lock.json`](https://docs.npmjs.com/cli/v9/configuring-npm/package-lock-json) in the npm docs. We also talk about `package.json` in our [Package management basics](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management) tutorial.
+The `package.json` and `package-lock.json` files contain metadata about our project. These files are not unique to React applications: Vite populated `package.json` for us, and npm created `package-lock.json` for when we installed the app's dependencies. You don't need to understand these files at all to complete this tutorial. However, if you'd like to learn more about them, you can read about [`package.json`](https://docs.npmjs.com/cli/v9/configuring-npm/package-json/) and [`package-lock.json`](https://docs.npmjs.com/cli/v9/configuring-npm/package-lock-json/) in the npm docs. We also talk about `package.json` in our [Package management basics](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management) tutorial.
 
 ### Customizing our dev script
 
@@ -432,7 +432,7 @@ The curly braces around `subject` are another feature of JSX's syntax. The curly
 <h1>Hello, {subject + ' :)'}!</h1>
 {/* Hello, REACT */}
 <h1>Hello, {subject.toUpperCase()}</h1>
-{/* Hello, 4 */}
+{/* Hello, 4! */}
 <h1>Hello, {2 + 2}!</h1>
 ```
 
@@ -509,5 +509,10 @@ In React:
 - You can render JavaScript expressions in JSX by putting them between curly braces, like `{so}`.
 - Some JSX attributes are different than HTML attributes so that they don't conflict with JavaScript reserved words. For example, `class` in HTML translates to `className` in JSX.
 - Props are written just like attributes inside component calls and are passed into components.
+
+## See also
+
+- [Learn React](https://v2.scrimba.com/learn-react-c0e?via=mdn) <sup>_MDN Curriculum partner_</sup>
+  - : [Scrimba's](https://scrimba.com?via=mdn) _Learn React_ course is the ultimate React 101 — the perfect starting point for any React beginner. Learn the basics of modern React by solving 140+ interactive coding challenges and building eight fun projects.
 
 {{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}

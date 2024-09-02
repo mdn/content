@@ -64,7 +64,7 @@ WebAssembly.instantiateStreaming(fetch("table2.wasm"), importObject).then(
 );
 ```
 
-Note how you've got to include a second function invocation operator at the end of the accessor to actually invoke the referenced function and log the value stored inside it (e.g. `get(0)()` rather than `get(0)`) .
+Note how you've got to include a second function invocation operator at the end of the accessor to actually invoke the referenced function and log the value stored inside it (e.g. `get(0)()` rather than `get(0)`).
 
 This example shows that we're creating and accessing the table from JavaScript, but the same table is visible and callable inside the Wasm instance, too.
 

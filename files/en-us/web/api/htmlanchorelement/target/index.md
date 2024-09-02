@@ -17,7 +17,7 @@ It reflects the [`target`](/en-US/docs/Web/HTML/Element/a#target) attribute of t
 A string representing the target. Its value can be:
 
 - The name of a {{HTMLElement("frame")}}.
-- One of the [keyword with specific values](/en-US/docs/Web/HTML/Element/a#target):`_blank`, `_self`, `_parent`, or `_top`.
+- One of the [keyword with specific values](/en-US/docs/Web/HTML/Element/a#target): `_blank`, `_self`, `_parent`, or `_top`.
 
 ## Example
 

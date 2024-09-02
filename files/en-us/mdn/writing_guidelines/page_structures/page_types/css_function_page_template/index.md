@@ -182,7 +182,7 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 > ```md
 > ## Examples
 >
-> For examples of this function, see [the page on basic-shape](https://example.org).
+> For examples of this function, see [the page on basic-shape](https://example.org/).
 > ```
 
 ## Specifications

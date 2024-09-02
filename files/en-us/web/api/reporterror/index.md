@@ -6,7 +6,7 @@ page-type: web-api-global-function
 browser-compat: api.reportError
 ---
 
-{{APIRef}} {{AvailableInWorkers}}
+{{APIRef("DOM")}} {{AvailableInWorkers}}
 
 The **`reportError()`** global method may be used to report errors to the console or global event handlers, emulating an uncaught JavaScript exception.
 

@@ -131,7 +131,7 @@ This example uses microdata attributes to represent structured data for a produc
 </table>
 
 > [!NOTE]
-> A handy tool for extracting microdata structures from HTML is Google's [Structured Data Testing Tool](https://developers.google.com/search/docs/advanced/structured-data). Try it on the HTML shown here.
+> A handy tool for extracting microdata structures from HTML is Google's [Structured Data Testing Tool](https://developers.google.com/search/docs/appearance/structured-data). Try it on the HTML shown here.
 
 #### HTML
 
