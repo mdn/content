@@ -89,18 +89,19 @@ An input field can have spell-checking enabled if it doesn't have the [readonly]
 
 The value returned by reading `spellcheck` may not reflect the actual state of spell-checking within a control, if the {{Glossary("user agent", "user agent's")}} preferences override the setting.
 
-## Non-standard attributes
-
-The following non-standard attributes are available to search input fields. As a general rule, you should avoid using them unless it can't be helped.
-
 ### autocorrect
 
-A Safari extension, the `autocorrect` attribute is a string which indicates whether to activate automatic correction while the user is editing this field. Permitted values are:
+[`autocorrect`](/en-US/docs/Web/HTML/Global_attributes#autocorrect) is a global attribute that is used to indicate whether to activate automatic spelling correction while the user is editing this field.
+Permitted values are:
 
 - `on`
   - : Enable automatic correction of typos, as well as processing of text substitutions if any are configured.
 - `off`
   - : Disable automatic correction and text substitutions.
+
+## Non-standard attributes
+
+The following non-standard attributes are available to search input fields. As a general rule, you should avoid using them unless it can't be helped.
 
 ### incremental
 
