@@ -297,7 +297,7 @@ https://example.com,https://tracker.example;https://news.example,https://social.
 ```
 
 You can use `*` as a wildcard for either the first or third party.
-For example, to disable partitioning for `videos.example` on all sites, or to disable all partitiononing on `unpartitioned.example`, you would set the pref to the following:
+For example, to disable partitioning for `videos.example` on all sites, or to disable all partitioning on `unpartitioned.example`, you would set the pref to the following:
 
 ```plain
 *,https://videos.example;unpartitioned.example,*
