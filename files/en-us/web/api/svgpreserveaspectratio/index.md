@@ -255,6 +255,10 @@ An `SVGPreserveAspectRatio` object can be designated as read only, which means t
 
 The `SVGPreserveAspectRatio` interface do not provide any specific methods.
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

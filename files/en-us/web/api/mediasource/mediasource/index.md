@@ -46,6 +46,10 @@ if ("MediaSource" in window && MediaSource.isTypeSupported(mimeCodec)) {
 // …
 ```
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}
