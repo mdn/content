@@ -152,7 +152,7 @@ The code snippet below shows how this works. Continuing the "youngest team" exam
 ```django
 #best/templates/best/index.html
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <body>
     {% if youngest_teams %}
