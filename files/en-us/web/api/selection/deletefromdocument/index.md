@@ -9,7 +9,7 @@ browser-compat: api.Selection.deleteFromDocument
 {{ ApiRef("DOM") }}
 
 The **`deleteFromDocument()`** method of the
-{{domxref("Selection")}} interface deletes the selected {{ domxref("Node", "Nodes") }} from the document's DOM.
+{{domxref("Selection")}} interface invokes the {{domxref("Range.deleteContents()")}} method on the selected {{domxref("Range")}}.
 
 ## Syntax
 
