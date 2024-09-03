@@ -28,7 +28,7 @@ document.queryCommandEnabled(command)
 ### Return value
 
 Returns a boolean value which is `true` if the command is enabled
-and `false` if the command isn't`.`
+and `false` if the command isn't.
 
 ## Notes
 

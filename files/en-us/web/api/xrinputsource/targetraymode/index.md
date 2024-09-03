@@ -17,7 +17,7 @@ Typically a target ray is drawn from the source of the targeting system along th
 
 A target ray emitted by a hand controller:
 
-![A screenshot showing a target ray being emitted by a hand controller](example-target-ray.gif)
+![A screenshot showing a target ray being emitted by a hand controller](https://mdn.github.io/shared-assets/images/examples/hand-controller-target-ray.gif)
 
 The target ray can be anything from a simple line (ideally fading over distance) to an animated effect, such as the science-fiction "phaser" style shown in the screenshot above.
 

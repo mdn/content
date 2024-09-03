@@ -2,7 +2,6 @@
 title: CSS selector page template
 slug: MDN/Writing_guidelines/Page_structures/Page_types/CSS_selector_page_template
 page-type: mdn-writing-guide
-browser-compat: css.selectors.NameOfTheSelector
 ---
 
 {{MDNSidebar}}
@@ -132,7 +131,7 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 > ```md
 > ## Examples
 >
-> For examples of this API, see [the page on fetch()](https://example.org).
+> For examples of this API, see [the page on fetch()](https://example.org/).
 > ```
 
 ## Specifications

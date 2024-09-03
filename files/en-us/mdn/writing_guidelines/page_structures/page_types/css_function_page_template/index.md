@@ -2,7 +2,6 @@
 title: CSS function page template
 slug: MDN/Writing_guidelines/Page_structures/Page_types/CSS_function_page_template
 page-type: mdn-writing-guide
-browser-compat: css.functions.NameOfTheFunction
 ---
 
 {{MDNSidebar}}
@@ -182,7 +181,7 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 > ```md
 > ## Examples
 >
-> For examples of this function, see [the page on basic-shape](https://example.org).
+> For examples of this function, see [the page on basic-shape](https://example.org/).
 > ```
 
 ## Specifications

@@ -77,15 +77,14 @@ Suppose our HTML declares a `<form>` element:
 
 ```html
 <form id="userinfo">
-  <div>
+  <p>
     <label for="username">Enter your name:</label>
     <input type="text" id="username" name="username" value="Dominic" />
-  </div>
-
-  <div>
+  </p>
+  <p>
     <label for="avatar">Select an avatar</label>
     <input type="file" id="avatar" name="avatar" required />
-  </div>
+  </p>
   <input type="submit" value="Submit" />
 </form>
 ```

@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.MIDIPort
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}
+{{securecontext_header}}{{APIRef("Web MIDI API")}}
 
 The **`MIDIPort`** interface of the {{domxref('Web MIDI API','','',' ')}} represents a MIDI input or output port.
 
@@ -50,7 +50,7 @@ A `MIDIPort` instance is created when a new MIDI device is connected. Therefore 
     - `"closed"`
       - : The device that this `MIDIPort` represents has not been opened, or has been closed.
     - `"pending"`
-      - : The device that this `MIDIPort` represents has been opened but has subsequently disconnected .
+      - : The device that this `MIDIPort` represents has been opened but has subsequently disconnected.
 
 ## Instance methods
 

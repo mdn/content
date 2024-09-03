@@ -67,7 +67,7 @@ It is recommended to provide a fallback mechanism for browsers without MathML su
 <script src="https://fred-wang.github.io/mathml.css/mspace.js"></script>
 ```
 
-If you need more complex constructions, you might instead consider using the heavier [MathJax](https://www.mathjax.org) library as a MathML polyfill:
+If you need more complex constructions, you might instead consider using the heavier [MathJax](https://www.mathjax.org/) library as a MathML polyfill:
 
 ```html
 <script src="https://fred-wang.github.io/mathjax.js/mpadded-min.js"></script>
@@ -198,7 +198,7 @@ cat input.html | node TeXZilla.js streamfilter > output.html
 After running that command, a file `output.html` containing the following HTML output is created. The formulas delimited by dollars have been converted into MathML:
 
 ```html-nolint
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />

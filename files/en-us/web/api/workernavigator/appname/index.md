@@ -8,7 +8,7 @@ status:
 browser-compat: api.WorkerNavigator.appName
 ---
 
-{{APIRef("HTML DOM")}} {{Deprecated_Header}}
+{{APIRef("HTML DOM")}} {{Deprecated_Header}}{{AvailableInWorkers("worker")}}
 
 The value of the **`WorkerNavigator.appName`** property is always
 "`Netscape`", in any browser. This property is kept only for compatibility

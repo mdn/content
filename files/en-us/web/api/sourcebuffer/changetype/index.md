@@ -52,8 +52,12 @@ None ({{jsxref("undefined")}}).
 ## Usage notes
 
 If the {{domxref("MediaSource.readyState", "readyState")}} property of the parent {{domxref("MediaSource")}} is set to `"ended"`, calling `changeType()`
-will set the `readyState` property to`"open"` and
+will set the `readyState` property to `"open"` and
 fire a simple event named {{domxref("MediaSource.sourceopen_event", "sourceopen")}} at the parent media source.
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

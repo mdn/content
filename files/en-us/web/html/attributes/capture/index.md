@@ -1,5 +1,6 @@
 ---
 title: "HTML attribute: capture"
+short-title: capture
 slug: Web/HTML/Attributes/capture
 page-type: html-attribute
 browser-compat: html.elements.input.capture

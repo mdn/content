@@ -26,7 +26,7 @@ isScriptURL(value)
 
 ### Return value
 
-A {{jsxref("boolean")}}that is true if the object is a valid {{domxref("TrustedScriptURL")}} object.
+A {{jsxref("boolean")}} that is true if the object is a valid {{domxref("TrustedScriptURL")}} object.
 
 ## Examples
 

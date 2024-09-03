@@ -2,7 +2,6 @@
 title: API event subpage template
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_event_subpage_template
 page-type: mdn-writing-guide
-browser-compat: path.to.feature.NameOfTheEvent_event
 ---
 
 {{MDNSidebar}}
@@ -172,7 +171,7 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 > ```md
 > ## Examples
 >
-> For examples of this API, see [the page on fetch()](https://example.org).
+> For examples of this API, see [the page on fetch()](https://example.org/).
 > ```
 
 ## Specifications

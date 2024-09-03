@@ -170,18 +170,11 @@ button {
 }
 
 label {
-  position: relative;
   display: inline-block;
 }
 
 p label {
   width: 100%;
-}
-
-label em {
-  position: absolute;
-  right: 5px;
-  top: 20px;
 }
 ```
 

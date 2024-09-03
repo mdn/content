@@ -14,7 +14,7 @@ The advantage of the {{WebExtAPIRef("proxy.onRequest")}} approach is that the co
 Apart from this API, extensions can also use the [`browserSettings.proxyConfig`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy/settings) property to configure global proxy settings.
 
 > [!NOTE]
-> Chrome, Edge, and Opera have [an extension API also called "proxy"](https://developer.chrome.com/docs/extensions/reference/proxy/) which is functionally similar to this API, in that extensions can use it to implement a proxying policy. However, the design of the Chrome API is completely different to this API. Because this API is incompatible with the Chrome `proxy` API, this API is only available through the `browser` namespace.
+> Chrome, Edge, and Opera have [an extension API also called "proxy"](https://developer.chrome.com/docs/extensions/reference/api/proxy) which is functionally similar to this API, in that extensions can use it to implement a proxying policy. However, the design of the Chrome API is completely different to this API. Because this API is incompatible with the Chrome `proxy` API, this API is only available through the `browser` namespace.
 
 To use this API you need to have the "proxy" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). Also, where you want to intercept requests, you also need [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the URLs of intercepted requests.
 

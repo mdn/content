@@ -47,7 +47,7 @@ First, a look at the HTML. This is simple enough, with the label and input as we
   <input type="time" id="startTime" />
   <p>
     Value of the <code>time</code> input:
-    <code> "<span id="value">n/a</span>"</code>.
+    <code>"<span id="value">n/a</span>"</code>.
   </p>
 </form>
 ```

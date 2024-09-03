@@ -50,7 +50,7 @@ This guideline covers the necessity of making core website functionality availab
       <td>
         <p>
           When entering a section of functionality using the keyboard, you
-          should be able to get out of that section again using *only* the
+          should be able to get out of that section again using <em>only</em> the
           keyboard. For example, if you press <kbd>Enter</kbd>/<kbd>Return</kbd>
           on a focused button to open an options window, you should be able to
           close that window again and return to the main content using the
