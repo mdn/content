@@ -362,8 +362,6 @@ const endGame = () => {
 };
 ```
 
-> **Note:** `getAnimations()` and `effect` are not shipping in all browsers as of this writing, but the polyfill does support them today.
-
 ## Callbacks and promises
 
 CSS Animations and Transitions have their own event listeners, and these are also possible with the Web Animations API:
