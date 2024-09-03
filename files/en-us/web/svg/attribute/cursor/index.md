@@ -54,6 +54,10 @@ The following elements can use the `cursor` attribute
 - [Container elements](/en-US/docs/Web/SVG/Element#container_elements)
 - [Graphics elements](/en-US/docs/Web/SVG/Element#graphics_elements)
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

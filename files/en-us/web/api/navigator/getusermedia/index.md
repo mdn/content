@@ -95,10 +95,11 @@ if (navigator.getUserMedia) {
 }
 ```
 
-## Browser compatibility
+## Specifications
 
-> [!WARNING]
-> New code should use {{domxref("MediaDevices.getUserMedia")}} instead.
+{{Specifications}}
+
+## Browser compatibility
 
 {{Compat}}
 

@@ -59,7 +59,7 @@ h3::before {
 
 You can specify the increment or decrement amount after the counter name. It can be a positive or negative number, but defaults to `1` if no integer is provided.
 
-Apart from increment or decrement, counters can also be explicitly set to a value using {{cssxref("counter-increment")}} property.
+Apart from being incremented or decremented, counters can also be explicitly set to a value using the {{cssxref("counter-set")}} property.
 
 ```css
 .done::before {
