@@ -55,7 +55,7 @@ Only include a `title` if expanding the abbreviation or acronym in the text is n
 </p>
 ```
 
-{{EmbedLiveSample("Accessibility_concerns")}}
+{{EmbedLiveSample("Accessibility")}}
 
 This is especially helpful for people who are unfamiliar with the terminology or concepts discussed in the content, people who are new to the language, and people with cognitive concerns.
 

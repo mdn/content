@@ -31,6 +31,10 @@ None ({{jsxref("undefined")}}).
 const result = location.toString(); // Returns 'https://developer.mozilla.org/en-US/docs/Web'
 ```
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

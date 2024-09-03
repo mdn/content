@@ -3848,6 +3848,10 @@
       "inh": "EventTarget",
       "impl": []
     },
+    "Viewport": {
+      "inh": "",
+      "impl": []
+    },
     "ViewTimeline": {
       "inh": "ScrollTimeline",
       "impl": []
@@ -4104,10 +4108,6 @@
       "inh": "Event",
       "impl": []
     },
-    "WindowSharedStorage": {
-      "inh": "SharedStorage",
-      "impl": []
-    },
     "Worker": {
       "inh": "EventTarget",
       "impl": []
@@ -4142,10 +4142,6 @@
     },
     "WorkletGroupEffect": {
       "inh": "",
-      "impl": []
-    },
-    "WorkletSharedStorage": {
-      "inh": "SharedStorage",
       "impl": []
     },
     "WritableStream": {

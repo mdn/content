@@ -51,7 +51,7 @@ The problem with using `overflow` to create a new BFC is that the `overflow` pro
 
 **using `display: flow-root`**
 
-The `display: flow-root` value lets us create a new BFC without any other potentially problematic side-effects. Using `display: flow-root` on the containing block creates a new BFC .
+The `display: flow-root` value lets us create a new BFC without any other potentially problematic side-effects. Using `display: flow-root` on the containing block creates a new BFC.
 
 With `display: flow-root;` on the `<div>`, everything inside that container participates in the block formatting context of that container, and floats will not poke out of the bottom of the element.
 

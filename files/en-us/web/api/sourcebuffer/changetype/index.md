@@ -55,6 +55,10 @@ If the {{domxref("MediaSource.readyState", "readyState")}} property of the paren
 will set the `readyState` property to `"open"` and
 fire a simple event named {{domxref("MediaSource.sourceopen_event", "sourceopen")}} at the parent media source.
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

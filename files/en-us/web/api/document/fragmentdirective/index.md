@@ -8,7 +8,7 @@ status:
 browser-compat: api.Document.fragmentDirective
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef("URL Fragment Text Directives")}}{{SeeCompatTable}}
 
 The **`fragmentDirective`** read-only property of the {{domxref("Document")}} interface returns the {{domxref("FragmentDirective")}} for the current document.
 

@@ -52,7 +52,7 @@ See also [`window.captureEvents`](/en-US/docs/Web/API/Window/captureEvents)
 
 ## Specifications
 
-This is not part of any specification.
+{{Specifications}}
 
 ## Browser compatibility
 
