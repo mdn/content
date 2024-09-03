@@ -193,7 +193,7 @@ export default class TodoDataService extends Service {
 
 Here, the `todos` property on the service will maintain our list of todos contained inside an array, and we'll mark it with `@tracked`, because when the value of `todos` is updated we want the UI to update as well.
 
-And just like before, the `add()` function that will be called from the template. We are calling `push()` method on our `todos` array to add `newTodo` to `todos` array and then using the spread operator to create a new array, which will trigger the reactivity system to update the UI.
+And just like before, the `add()` function that will be called from the template. We [spread our `todos` array](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) to add `newTodo` to it, which creates a new array and will trigger the reactivity system to update the UI.
 
 ## Using the service from our header component
 
