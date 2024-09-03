@@ -186,8 +186,7 @@ export default class TodoDataService extends Service {
   add(text) {
     let newTodo = new Todo(text);
 
-    this.todos.push(newTodo);
-    this.todos = [...this.todos];
+    this.todos = [...this.todos, newTodo];
   }
 }
 ```
