@@ -27,9 +27,9 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-This example lets you delete selected nodes by clicking a button. Upon clicking the
+This example lets you delete selected text and/or nodes by clicking a button. Upon clicking the
 button, the
-{{domxref("Window.getSelection()")}} method gets the selected objects, and the
+{{domxref("Window.getSelection()")}} method gets the selected content, and the
 `deleteFromDocument()` method removes it.
 
 ### HTML
@@ -39,7 +39,7 @@ button, the
 <p>
   Once you do, you can remove the selected content by clicking the button below.
 </p>
-<h2>All of the selected nodes are removed.</h2>
+<h2>All of the selected text/nodes are removed.</h2>
 <button>Delete selected text</button>
 ```
 
