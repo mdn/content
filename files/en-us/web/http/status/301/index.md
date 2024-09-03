@@ -13,8 +13,8 @@ A browser receiving this status will automatically request the resource at the U
 Search engines receiving this response will attribute links to the original URL to the redirected resource, passing the {{Glossary("SEO")}} ranking to the new URL.
 
 > [!NOTE]
-> The Fetch Standard requires user agents to change the method to GET (if it was originally POST), the HTTP specification permits them to do so.
-> Use the `301` code only as a response for {{HTTPMethod("GET")}} or {{HTTPMethod("HEAD")}} methods and use the {{HTTPStatus("308", "308 Permanent Redirect")}} for other methods (typically {{HTTPMethod("POST")}}), as altering the method when handling `308` responses is explicitly prohibited.
+> In the [Fetch Standard](https://fetch.spec.whatwg.org/#http-redirect-fetch), when a user agent receives a `301` in response to a {{HTTPMethod("POST")}} request, it uses the {{HTTPMethod("GET")}} method in the subsequent redirection request, as permitted by the HTTP [specification](#specifications).
+> To avoid user agents modifying the request, use {{HTTPStatus("308", "308 Permanent Redirect")}} instead, as altering the method after a `308` response is prohibited.
 
 ## Status
 
