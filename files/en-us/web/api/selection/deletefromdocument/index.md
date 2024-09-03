@@ -39,7 +39,7 @@ button, the
 <p>
   Once you do, you can remove the selected content by clicking the button below.
 </p>
-<h2>All of the selected text/nodes are removed.</h2>
+<h2>All of the selected text/nodes will be removed.</h2>
 <button>Delete selected text</button>
 ```
 
