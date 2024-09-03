@@ -16,12 +16,12 @@ This color application can provide a more native app-like experience for your we
 ## Syntax
 
 ```json
-"theme_color": "colorValue"
+"theme_color": "<color-value>"
 ```
 
 ### Values
 
-- `colorValue`
+- `<color-value>`
 
   - : A string that specifies a [valid color value](/en-US/docs/Web/CSS/color_value).
 
