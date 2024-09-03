@@ -94,7 +94,7 @@ body {
 
 ```json
 {
-  "name": "MyWebApp",
+  "name": "My First App",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#ff4500"
