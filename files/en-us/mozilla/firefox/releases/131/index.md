@@ -30,6 +30,8 @@ This article provides information about the changes in Firefox 131 that affect d
 
 ### HTTP
 
+- A {{httpheader("Set-Cookie")}} HTTP header with the attribute value of [`SameSite=None`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#none) must now also include the [`Secure`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#secure) attribute. This ensures that cookies set with `SameSite=None` are only ever sent over HTTPS channels. ([Firefox bug 1909673](https://bugzil.la/1909673)).
+
 #### Removals
 
 ### Security
