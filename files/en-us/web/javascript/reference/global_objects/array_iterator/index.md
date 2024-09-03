@@ -38,14 +38,14 @@ _Inherits instance methods from its ancestor {{jsxref("Iterator")}}_.
 #### HTMLCollection Iterator
 Retrieve an `Array Iterator` from Array-Like objects with no iterator methods. This is possible through the use of [`Function.prototype.call()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call) to call array methods on array-like objects.
 ```js
-/* Create an HTMLCollection containing all elements in the document */
+// Create an HTMLCollection containing all elements in the document
 const collection = document.getElementsByTagName('*');
-/* call the array values method with collection as this */
+// Call the array values method with collection as this
 const arrValues = [].values.call(collection);
 for (const value of arrValues) {
   console.log(value);
 }
-/* Also works with the other Array->Iterator methods */
+// Also works with the other Array->Iterator methods
 const arrKeys = [].keys.call(collection);
 const arrEntries = [].entries.call(collection);
 const arrIter = [][Symbol.iterator].call(collection);
@@ -97,25 +97,25 @@ console.log([...arrIterCopy]);//[1,2,3]
 In scenarios where a reference to the original array is not available, there are methods to copy an array iterator without consuming it. 
 ```js
 const copyArrIter = function copyArrIter(arrIter){
-  /* Method used to redefine object properties */
+  // Method used to redefine object properties
   const objDefProp = (obj, prop, def) => Object.defineProperty(obj, prop, {
     value: def,
     writable: true,
     enumerable: false,
     configurable: true,
   });
-  /* Creating an array temporarily consumes the original array iterator */
+  // Creating an array temporarily consumes the original array iterator
   const arr = [...arrIter];
-  /* Create a copy to replace the consumed iterator */
+  // Create a copy to replace the consumed iterator
   const newArrIter = arr.values();
-  /* By replacing next and Symbol.iterator, the original is effectively restored */
+  // By replacing next and Symbol.iterator, the original is effectively restored
   objDefProp(arrIter, "next", function next() {
     return newArrIter.next();
   });
   objDefProp(arrIter, Symbol.iterator, function iterator() {
     return newArrIter;
   });
-  /* return a copy using the reference array */
+  // Return a copy using the reference array
   return arr.values();
 }
 
