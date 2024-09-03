@@ -55,8 +55,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
       - : This instruction specifies:
 
-        - The number of seconds until the page should be reloaded - only if the [`content`](#content) attribute contains a non-negative integer.
-        - The number of seconds until the page should redirect to another - only if the [`content`](#content) attribute contains a non-negative integer followed by the string '`;url=`', and a valid URL.
+        - The number of seconds until the page should be reloaded - if the [`content`](#content) attribute's value is a non-negative integer.
+        - The number of seconds until the page should redirect to another - if the [`content`](#content) attribute's value is a non-negative integer followed by `;url=` and a valid URL.
 
         The timer starts when the page is _completely loaded_, which is after the {{domxref("Window/load_event", "load")}} and {{domxref("Window/pageshow_event", "pageshow")}} events have both fired.
 
