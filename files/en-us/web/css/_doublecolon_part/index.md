@@ -19,13 +19,13 @@ custom-element::part(foo) {
 
 The global [`part`](/en-US/docs/Web/HTML/Global_attributes/part) attribute makes a shadow tree element visible to its parent DOM. The part names declared using the `part` attribute are used as the parameter of the `::part()` pseudo-element. In this way, you can apply CSS styles to elements in the shadow tree from outside of it.
 
-Part names are similar to CSS classes: multiple elements can have the same part name, and a single element can have multiple part names. All the part names used in `::part()` pseudo-element must be present in `part` value declared on the shadow tree element. Also order of the part name sin `::part()` doesn't matter, i.e. the selectors `::part(tab active)` and `::part(active tab)` are the same.
+Part names are similar to CSS classes: multiple elements can have the same part name, and a single element can have multiple part names. All the part names used in `::part()` pseudo-element must be present in `part` value declared on the shadow tree element. Also order of the part name sin `::part()` doesn't matter, i.e., the selectors `::part(tab active)` and `::part(active tab)` are the same.
 
 The `::part()` pseudo-element is only visible to the parent DOM. This means that when a shadow tree is nested, the parts are not visible to any ancestors other than the direct parent. The [exportparts](/en-US/docs/Web/HTML/Global_attributes/exportparts) attribute solves this limitation by explicitly exporting already defined `part` names.
 
 [Pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes) (such as `::part(label):hover`) can be appended to the `::part()` selector, but the [structural pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#tree-structural_pseudo-classes) (such as `:empty`) or any other pseudo-classes that match based on tree information rather than local element information (such as `:last-child`) can not be appended.
 
-Additional pseudo-elements, such as `::before`, can be appended to the `::part()` selector, but additional `::part()` element can't be appended. For example, `::part(confirm-button)::part(active)` never matches anything, i.e it is not the same as `::part(confirm-button active)`. This is because doing so would expose more structural information than is intended.
+Additional pseudo-elements, such as `::before`, can be appended to the `::part()` selector, but additional `::part()` element can't be appended. For example, `::part(confirm-button)::part(active)` never matches anything, i.e, it is not the same as `::part(confirm-button active)`. This is because doing so would expose more structural information than is intended.
 
 ## Syntax
 
