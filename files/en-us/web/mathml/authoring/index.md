@@ -198,7 +198,7 @@ cat input.html | node TeXZilla.js streamfilter > output.html
 After running that command, a file `output.html` containing the following HTML output is created. The formulas delimited by dollars have been converted into MathML:
 
 ```html-nolint
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />

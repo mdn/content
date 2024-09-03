@@ -252,7 +252,7 @@ Keep-Alive: timeout=2, max=99
 Connection: Keep-Alive
 Content-Type: text/plain
 
-[Some XML payload]
+[Some XML content]
 ```
 
 #### Preflighted requests and redirects
@@ -331,7 +331,7 @@ Keep-Alive: timeout=2, max=100
 Connection: Keep-Alive
 Content-Type: text/plain
 
-[text/plain payload]
+[text/plain content]
 ```
 
 Although the request's `Cookie` header contains the cookie destined for the content on `https://bar.other`, if bar.other did not respond with an {{HTTPHeader("Access-Control-Allow-Credentials")}} with value `true`, as demonstrated in this example, the response would be ignored and not made available to the web content.

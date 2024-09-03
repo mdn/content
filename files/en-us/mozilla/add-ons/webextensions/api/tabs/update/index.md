@@ -65,8 +65,8 @@ let updating = browser.tabs.update(
         For security reasons, in Firefox, this may not be a privileged URL. So passing any of the following URLs will fail, with {{WebExtAPIRef("runtime.lastError")}} being set to an error message:
 
         - chrome: URLs
-        - javascript: URLs
-        - data: URLs
+        - [javascript: URLs](/en-US/docs/Web/URI/Schemes/javascript)
+        - [data: URLs](/en-US/docs/Web/URI/Schemes/data)
         - file: URLs (i.e., files on the filesystem. However, to use a file packaged inside the extension, see below)
         - privileged about: URLs (for example, `about:config`, `about:addons`, `about:debugging`, `about:newtab`). Non-privileged URLs (e.g., `about:blank`) are allowed.
 
@@ -123,7 +123,7 @@ querying.then(updateFirstTab, onError);
 {{Compat}}
 
 > [!NOTE]
-> This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-update) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-update) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

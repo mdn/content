@@ -50,7 +50,7 @@ A `MIDIPort` instance is created when a new MIDI device is connected. Therefore 
     - `"closed"`
       - : The device that this `MIDIPort` represents has not been opened, or has been closed.
     - `"pending"`
-      - : The device that this `MIDIPort` represents has been opened but has subsequently disconnected .
+      - : The device that this `MIDIPort` represents has been opened but has subsequently disconnected.
 
 ## Instance methods
 

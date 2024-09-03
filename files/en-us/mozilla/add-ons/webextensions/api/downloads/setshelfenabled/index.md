@@ -34,7 +34,7 @@ This API is also available as `browser.downloads.setShelfEnabled()`.
 {{WebExtExamples}}
 
 > [!NOTE]
-> This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#method-setShelfEnabled) API.
+> This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#method-setShelfEnabled) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

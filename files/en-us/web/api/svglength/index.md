@@ -356,6 +356,10 @@ value: 26.66666603088379, valueInSpecifiedUnits 8: 0.277777761220932, valueAsStr
   </tbody>
 </table>
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}
