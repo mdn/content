@@ -15,10 +15,10 @@ These icons uniquely identify your web app in different contexts, such as in an 
 ```json
 "icons": [
   {
-    "src": "iconURL",
-    "sizes": "widthxheight",
-    "type": "mimeType",
-    "purpose": "keywordValue"
+    "src": "<icon-url>",
+    "sizes": "<size-values>",
+    "type": "<mime-type>",
+    "purpose": "<purpose-keyword>"
   }
 ]
 ```
@@ -31,7 +31,7 @@ Each object in the array can have one or more of the following properties (`src`
 
 - `src`
 
-  - : A string that specifies the path to the icon image file. If `src` is a relative URL, the path is resolved relative to the URL of the manifest file. For example, the relative URL `images/icon-192x192.png` for the manifest file located at `https://example.com/manifest.json` will be resolved as `https://example.com/images/icon-192x192.png`. `src` is a required property.
+  - : A string that specifies the path to the icon image file. If `src` is a relative URL, the path is resolved relative to the URL of the manifest file. For example, the relative URL `images/icon-192x192.png` for the manifest file located at `https://example.com/manifest.json` will be resolved as `https://example.com/images/icon-192x192.png`.
 
 - `sizes` {{Optional_Inline}}
 
@@ -48,7 +48,7 @@ Each object in the array can have one or more of the following properties (`src`
     - `monochrome`
       - : Indicates that the icon is intended to be used as a monochrome icon with a solid fill. With this value, a browser discards the color information in the icon and uses only the alpha channel as a mask over any solid fill.
     - `maskable`
-      - : Indicates that the icon is designed with icon masks and safe zone in mind, such that any part of the image outside the safe zone can be ignored and masked away by a browser.
+      - : Indicates that the icon is designed with icon masks and safe zone in mind, such that any part of the image outside the safe zone can be ignored and masked away.
     - `any`
       - : Indicates that the icon can be used in any context. This is the default value.
 
@@ -60,7 +60,7 @@ When working with icon images, both security and performance are important consi
 
 The browser's ability to fetch an icon image is governed by the Content Security Policy ({{Glossary("CSP")}}) of the manifest's owner document, specifically by the [`img-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) directive. This security aspect is related to the `src` property. For example, if the `img-src` directive in a CSP header specifies `icons.example.com`, icons from only that domain would be fetchable. In a manifest with two icons, one from `icons.example.com/lowres` and another from `other.com/hi-res`, only the former would be fetched successfully because of CSP restrictions.
 
-The `type` property plays a part in determining performance. While this property is optional, specifying it can improve performance significantly. It allows browsers to quickly ignore images with formats they do not support. If you don't specify the `type` property, it is recommended to specify clear file extensions for the icon images to ensure correct handling by the browser.
+The `type` property plays a part in determining performance. While this property is optional, specifying it can improve performance significantly. It allows browsers to quickly ignore images with formats they do not support. If you don't specify the `type` property, it is recommended to specify appropriate and unambiguous file extensions for the icon images to ensure correct handling by the browser.
 
 ## Examples
 
