@@ -93,6 +93,10 @@ installButton.addEventListener("click", async () => {
 });
 ```
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

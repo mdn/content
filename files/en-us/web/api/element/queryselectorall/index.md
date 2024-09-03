@@ -34,7 +34,7 @@ querySelectorAll(selectors)
 ### Return value
 
 A non-live {{domxref("NodeList")}} containing one {{domxref("Element")}} object for
-each descendant node that matches at least one of the specified selectors.
+each descendant node that matches at least one of the specified selectors. The elements are in document order — that is, parents before children, earlier siblings before later siblings.
 
 > [!NOTE]
 > If the specified `selectors` include a [CSS pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements), the returned list

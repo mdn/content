@@ -61,6 +61,10 @@ The `SVGAnimatedNumber` interface is used for attributes which take a list of nu
 
 The `SVGAnimatedNumberList` interface do not provide any specific methods.
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

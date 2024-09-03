@@ -7,10 +7,12 @@ browser-compat: http.methods.GET
 
 {{HTTPSidebar}}
 
-The **HTTP `GET` method** requests a representation of the specified resource. Requests using `GET` should only be used to request data (they shouldn't include data).
+The **HTTP `GET` method** requests a representation of the specified resource.
+Requests using `GET` should only be used to request data and shouldn't include {{Glossary("HTTP Content", "content")}}.
 
 > [!NOTE]
-> Sending body/payload in a `GET` request may cause some existing implementations to reject the request — while not prohibited by the specification, the semantics are undefined. It is better to just avoid sending payloads in `GET` requests.
+> While not strictly prohibited by the specification, the semantics of sending a message body in `GET` requests are undefined.
+> Some systems may reject the request with a {{HTTPStatus("400")}} or another [4XX client error](/en-US/docs/Web/HTTP/Status#client_error_responses).
 
 <table class="properties">
   <tbody>

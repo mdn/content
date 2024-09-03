@@ -40,7 +40,7 @@ f.color = "green";
 
 ## Specifications
 
-The `<font>` element has been deprecated and is no longer supported and, as a result, neither is `<font>.color`.
+{{Specifications}}
 
 ## Browser compatibility
 

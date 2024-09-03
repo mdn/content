@@ -496,7 +496,7 @@ if (isset($_FILES['myFile'])) {
     move_uploaded_file($_FILES['myFile']['tmp_name'], "uploads/" . $_FILES['myFile']['name']);
     exit;
 }
-?><!DOCTYPE html>
+?><!doctype html>
 <html lang="en-US">
 <head>
   <meta charset="UTF-8">
