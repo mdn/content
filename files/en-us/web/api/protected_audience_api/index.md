@@ -57,8 +57,8 @@ The steps involved are as follows:
 For more information on implementing the functionality required for the above steps, see:
 
 - [Protected Audience API: Joining an ad interest group](/en-US/docs/Web/API/Protected_Audience_API/Join_ad_interest_group)
-- [Protected Audience API: Running an ad auction](#)
-- [Protected Audience API: Reporting auction results](#)
+- [Protected Audience API: Running an ad auction](/en-US/docs/Web/API/Protected_Audience_API/Run_ad_auction)
+- [Protected Audience API: Reporting auction results](/en-US/docs/Web/API/Protected_Audience_API/Report_auction_results)
 
 ### Use cases
 

@@ -10,7 +10,7 @@ status:
 
 This article explains how to use the [Protected Audience API](/en-US/docs/Web/API/Protected_Audience_API) to run an ad auction on the user's browser when a seller site is visited that contains some ad space that buyers may want to bid for, to display ads relevant to that user. Relevant ads are defined by the [interest groups](/en-US/docs/Web/API/Protected_Audience_API/Join_ad_interest_group) the user's browser is a member of.
 
-## Basic process
+## Process summary
 
 Returning to the scenario that we outlined in the [How does it work?](/en-US/docs/Web/API/Protected_Audience_API#how_does_it_work) section of the API landing page, we now turn our attention to the part of the process where the user visits a publisher (seller) site, `fashion.example`, which displays ads in return for ad revenue. We are assuming that the user has already visited the buyer site and had their browser added to the `fashion-shoes` interest group.
 
@@ -27,7 +27,7 @@ To summarize:
 > [!NOTE]
 > To avoid leaking any sensitive information, the browser runs buyer- and seller-specific code inside dedicated **script runners**, which are modified [worklets](/en-US/docs/Web/API/Worklet), each associated with a single domain. The worklets cannot communicate with the seller page or the network — they serve only to load the buyer or seller logic, fetch any associated real-time data, run the code, and return the output.
 
-In the sections below, we'll look each of these steps in detail, except for Step 5. — you can find more details about reporting in [Reporting auction results](/en-US/docs/Web/API/Protected_Audience_API/reporting_auction_results).
+In the sections below, we'll look each of these steps in detail, except for Step 5. — you can find more details about reporting in [Reporting auction results](/en-US/docs/Web/API/Protected_Audience_API/Report_auction_results).
 
 ## A typical `runAdAuction()` call
 

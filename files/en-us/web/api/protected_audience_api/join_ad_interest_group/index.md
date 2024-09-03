@@ -12,7 +12,7 @@ This article explains how to use the [Protected Audience API](/en-US/docs/Web/AP
 
 Later on, when the same user visits a site that could potentially display ads related to that interest group, the Protected Audience API can be used to [run an ad auction](/en-US/docs/Web/API/Protected_Audience_API/Run_ad_auction) to choose the most relevant ad to display to them based on that interest. If the interest group own is invited to bid in the auction, they will have one of their ads displayed, should they win.
 
-## Basic process
+## Process summary
 
 Let's say a user visits a site where a company is talking about its products, for example a Shoe company. This might be the company's own site (`shoe-shop.example`), or another site like a fashion blog that has articles about shoes. From their browsing behavior, it is reasonable for the company to surmise that the user has an interest in shoes, and therefore add them to an interest group related to shoes. The company can then target the user with ads relevant to this interest in the future.
 
