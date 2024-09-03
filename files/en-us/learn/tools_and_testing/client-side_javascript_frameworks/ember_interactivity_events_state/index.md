@@ -182,10 +182,7 @@ Update the existing `export default class TodoDataService extends Service { }` b
 export default class TodoDataService extends Service {
   @tracked todos = [];
 
-  get all() {
-    return this.todos;
-  }
-
+  @action
   add(text) {
     let newTodo = new Todo(text);
 
