@@ -1,5 +1,6 @@
 ---
-title: GET
+title: GET method
+short-title: GET
 slug: Web/HTTP/Methods/GET
 page-type: http-method
 browser-compat: http.methods.GET
@@ -8,7 +9,7 @@ browser-compat: http.methods.GET
 {{HTTPSidebar}}
 
 The **HTTP `GET` method** requests a representation of the specified resource.
-Requests using `GET` should only be used to request data and shouldn't include {{Glossary("HTTP Content", "content")}}.
+Requests using `GET` should only be used to request data and shouldn't contain a body.
 
 > [!NOTE]
 > While not strictly prohibited by the specification, the semantics of sending a message body in `GET` requests are undefined.

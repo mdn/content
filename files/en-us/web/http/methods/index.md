@@ -1,5 +1,6 @@
 ---
 title: HTTP request methods
+short-title: Request methods
 slug: Web/HTTP/Methods
 page-type: landing-page
 browser-compat: http.methods
@@ -7,12 +8,15 @@ browser-compat: http.methods
 
 {{HTTPSidebar}}
 
-HTTP defines a set of **request methods** to indicate the desired action to be performed for a given resource. Although they can also be nouns, these request methods are sometimes referred to as _HTTP verbs_. Each of them implements a different semantic, but some common features are shared by a group of them: e.g. a request method can be {{glossary("Safe/HTTP", "safe")}}, {{glossary("idempotent")}}, or {{glossary("cacheable")}}.
+HTTP defines a set of **request methods** to indicate the purpose of the request and what is expected if the request is successful.
+Although they can also be nouns, these request methods are sometimes referred to as _HTTP verbs_.
+Each of the request methods implement a different semantic, but some characteristics are shared, specifically request methods can be {{glossary("Safe/HTTP", "safe")}}, {{glossary("idempotent")}}, and {{glossary("cacheable")}}.
 
 - [`GET`](/en-US/docs/Web/HTTP/Methods/GET)
-  - : The `GET` method requests a representation of the specified resource. Requests using `GET` should only retrieve data.
+  - : The `GET` method requests a representation of the specified resource.
+    Requests using `GET` should only retrieve data and should not contain a request body.
 - [`HEAD`](/en-US/docs/Web/HTTP/Methods/HEAD)
-  - : The `HEAD` method asks for a response identical to a `GET` request, but without the response body.
+  - : The `HEAD` method asks for a response identical to a `GET` request, but without a response body.
 - [`POST`](/en-US/docs/Web/HTTP/Methods/POST)
   - : The `POST` method submits an entity to the specified resource, often causing a change in state or side effects on the server.
 - [`PUT`](/en-US/docs/Web/HTTP/Methods/PUT)
