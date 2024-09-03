@@ -2030,13 +2030,6 @@ Notifications have the [`requireInteraction`](/en-US/docs/Web/API/Notification/r
   </tbody>
 </table>
 
-### Web Codecs API (Android)
-
-The [Web Codecs API](/en-US/docs/Web/API/WebCodecs_API) gives web developers low-level access to the individual frames of a video stream and chunks of audio.
-The API is supported on Firefox desktop from version 130.
-The API is supported in nightly builds for Android, or behind the preference <code>dom.media.webcodecs.enabled</code> (from version 130).
-([Firefox bug 1908572](https://bugzil.la/1908572)).
-
 ## Security and privacy
 
 ### Block plain text requests from Flash on encrypted pages
