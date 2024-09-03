@@ -45,6 +45,7 @@ This article provides information about the changes in Firefox 130 that affect d
 ### APIs
 
 - The [X25519](/en-US/docs/Web/API/SubtleCrypto/deriveKey#x25519) digital signature algorithm is supported by the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API), and can be used in the {{domxref("SubtleCrypto")}} methods: {{domxref("SubtleCrypto.deriveKey()", "deriveKey()")}}, {{domxref("SubtleCrypto.deriveBits()", "deriveBits()")}}, {{domxref("SubtleCrypto.generateKey()", "generateKey()")}}, {{domxref("SubtleCrypto.importKey()", "importKey()")}} and {{domxref("SubtleCrypto.exportKey()", "exportKey()")}} ([Firefox bug 1904836](https://bugzil.la/1904836)).
+- The [Web Codecs API](/en-US/docs/Web/API/WebCodecs_API) is supported on desktop releases, giving web developers low-level access to the individual frames of a video stream and chunks of audio (Android releases are supported in Nightly builds). The new interfaces include: [`VideoEncoder`](/en-US/docs/Web/API/VideoEncoder), [`VideoDecoder`](/en-US/docs/Web/API/VideoDecoder), [`EncodedVideoChunk`](/en-US/docs/Web/API/EncodedVideoChunk), [`VideoFrame`](/en-US/docs/Web/API/VideoFrame), and [`VideoColorSpace`](/en-US/docs/Web/API/VideoColorSpace). ([Firefox bug 1908572](https://bugzil.la/1908572)).
 
 #### DOM
 

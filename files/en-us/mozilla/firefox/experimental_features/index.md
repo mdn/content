@@ -2030,47 +2030,12 @@ Notifications have the [`requireInteraction`](/en-US/docs/Web/API/Notification/r
   </tbody>
 </table>
 
-### Web Codecs API
+### Web Codecs API (Android)
 
 The [Web Codecs API](/en-US/docs/Web/API/WebCodecs_API) gives web developers low-level access to the individual frames of a video stream and chunks of audio.
-The following interfaces are supported (on Linux desktop only): [`VideoEncoder`](/en-US/docs/Web/API/VideoEncoder), [`VideoDecoder`](/en-US/docs/Web/API/VideoDecoder), [`EncodedVideoChunk`](/en-US/docs/Web/API/EncodedVideoChunk), [`VideoFrame`](/en-US/docs/Web/API/VideoFrame), [`VideoColorSpace`](/en-US/docs/Web/API/VideoColorSpace).
-([Firefox bug 1874445](https://bugzil.la/1874445)).
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version changed</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>123</td>
-      <td>Yes. Linux desktop only.</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>123</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>123</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>123</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.media.webcodecs.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
+The API is supported on Firefox desktop from version 130.
+The API is supported in nightly builds for Android, or behind the preference <code>dom.media.webcodecs.enabled</code> (from version 130).
+([Firefox bug 1908572](https://bugzil.la/1908572)).
 
 ## Security and privacy
 
