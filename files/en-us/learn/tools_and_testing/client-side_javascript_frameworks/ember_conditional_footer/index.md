@@ -77,7 +77,7 @@ To get the footer working, we need to implement the following three areas of fun
    }
    ```
 
-   Using Javascript's `filter()` method, we're able to easily filter Objects in our array based on simple equals conditions. Here we're asking for all the todo items where the `isCompleted` property is equal to `false`, and because `isCompleted` is `@tracked` in our `Todo` object, this getter will re-compute when the value changes on an Object in the array.
+   Using the [`filter()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) method, we're asking for all the todo items where the `isCompleted` property is equal to `false`, and because `isCompleted` is `@tracked` in our `Todo` object, this getter will re-compute when the value changes on an Object in the array.
 
 4. Next, add the following action underneath the existing `add(text)` action:
 
