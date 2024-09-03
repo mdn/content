@@ -29,19 +29,19 @@ The value of the `icons` member is an array of objects. Each object represents a
 
 Each object in the array can have one or more of the following properties (`src` is the only required property):
 
-- `src`
+- `<icon-url>`
 
   - : A string that specifies the path to the icon image file. If `src` is a relative URL, the path is resolved relative to the URL of the manifest file. For example, the relative URL `images/icon-192x192.png` for the manifest file located at `https://example.com/manifest.json` will be resolved as `https://example.com/images/icon-192x192.png`.
 
-- `sizes` {{Optional_Inline}}
+- `<size-values>` {{Optional_Inline}}
 
   - : A string that specifies one or more sizes at which the icon can be used, and is similar to the HTML `<link>` element's [`sizes`](/en-US/docs/Web/HTML/Element/link#sizes) attribute. Each size is specified as `<width>x<height>`. Multiple sizes can be specified, separated by spaces, as in `48x48 96x96`. When multiple icons are available, browsers may use the `sizes` value to use the most suitable icon for a display context. This property is optional; if not specified, the behavior may vary depending on the browser's implementation. For raster images like PNG, specifying exact available sizes is recommended. For vector formats like SVG, you can use "any" to indicate scalability.
 
-- `type` {{Optional_Inline}}
+- `<mime-type>` {{Optional_Inline}}
 
   - : A string that specifies the {{Glossary("MIME type")}} of the icon. The value should be in the format `image/<subtype>`, where `<subtype>` is a specific image format; for example, `image/png` indicates a PNG image. This property is optional; if not specified, a browser typically uses the file extension to determine the image type.
 
-- `purpose` {{Optional_Inline}}
+- `<purpose-keyword>` {{Optional_Inline}}
 
   - : A string that specifies one or more purposes of the icon, which indicate how the icon should be used by the browser or operating system. The value can be a single keyword or multiple space-separated keywords. This property is optional; `any` is assumed if no value is specified. If multiple values are specified, they should be listed in order of precedence.
     Valid values are case-sensitive and listed below in order of precedence:
