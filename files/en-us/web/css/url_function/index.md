@@ -1,13 +1,13 @@
 ---
 title: url()
-slug: Web/CSS/url
+slug: Web/CSS/url_function
 page-type: css-function
 browser-compat: css.types.url
 ---
 
 {{CSSRef}}
 
-The **`url()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is used to include a file. The parameter is an absolute URL, a relative URL, a blob URL, or a data URL. The **`url()`** function can be passed as a parameter of another CSS functions, like the {{cssxref("attr")}} function. Depending on the property for which it is a value, the resource sought can be an image, font, or a stylesheet. The `url()` functional notation is the value for the `<url>` data type.
+The **`url()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Functions) is used to include a file. The parameter is an absolute URL, a relative URL, a blob URL, or a data URL. The **`url()`** function can be passed as a parameter of another CSS function, like the {{cssxref("attr")}} function. Depending on the property for which it is a value, the resource sought can be an image, font, or a stylesheet. The `url()` functional notation is the value for the `<url>` data type.
 
 > [!NOTE]
 > There is a difference between a {{Glossary("URI")}} and a {{Glossary("URL")}}. A URI identifies a resource. A URL is a type of URI, and describes the _location_ of a resource. A URI can be either a URL or a name ({{Glossary("URN")}}) of a resource.
@@ -16,9 +16,11 @@ The **`url()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/CSS_Fu
 
 ```css
 /* Simple usage */
+url("https://example.com/images/myImg.jpg");
+url('https://example.com/images/myImg.jpg');
 url(https://example.com/images/myImg.jpg);
-url(data:image/png;base64,iRxVB0…);
-url(myFont.woff);
+url("data:image/jpg;base64,iRxVB0…");
+url(myImg.jpg);
 url(#IDofSVGpath);
 
 /* associated properties */
@@ -55,7 +57,7 @@ Relative URLs, if used, are relative to the URL of the stylesheet (not to the UR
 
 The **`url()`** function can be included as a value for
 {{cssxref('background')}}, {{cssxref('background-image')}}, {{cssxref('border')}}, {{cssxref('border-image')}}, {{cssxref('border-image-source')}}, {{cssxref('content')}}, {{cssxref('cursor')}}, {{cssxref('filter')}}, {{cssxref('list-style')}}, {{cssxref('list-style-image')}}, {{cssxref('mask')}}, {{cssxref('mask-image')}}, {{cssxref('offset-path')}}, {{cssxref('clip-path')}},
-[src](/en-US/docs/Web/CSS/@font-face/src) as part of a [@font-face](/en-US/docs/Web/CSS/@font-face) block, and [@counter-style/symbol](/en-US/docs/Web/CSS/@counter-style/symbols)
+[src](/en-US/docs/Web/CSS/@font-face/src) as part of a [`@font-face`](/en-US/docs/Web/CSS/@font-face) block, and [@counter-style/`symbol`](/en-US/docs/Web/CSS/@counter-style/symbols)
 
 ## Syntax
 
@@ -63,9 +65,9 @@ The **`url()`** function can be included as a value for
 
 - `<string>`
 
-  - : A string which may specify a URL or the ID of an SVG shape.
+  - : A string that may specify a URL or the ID of an SVG shape.
 
-    - \<url>
+    - url
 
       - : A URL, which is a relative or absolute address, or pointer, to the web resource to be included, or a data URL, optionally in single or double quotes. Quotes are required if the URL includes parentheses, whitespace, or quotes, unless these characters are escaped, or if the address includes control characters above 0x7e. Double quotes cannot occur inside double quotes and single quotes cannot occur inside single quotes unless escaped. The following are all valid and equivalent:
 
@@ -78,7 +80,7 @@ The **`url()`** function can be included as a value for
         If you choose to write the URL without quotes, use a backslash (`\`) before any parentheses, whitespace characters, single quotes (`'`) and double quotes (`"`) that are part of the URL.
 
     - path
-      - : References the ID of an [SVG shape](/en-US/docs/Web/SVG/Tutorial/Basic_Shapes) — `circle`, `ellipse`, `line`, `path`, `polygon`, `polyline`, or `rect` — using the shape's geometry as the path.
+      - : References the ID of an [SVG shape](/en-US/docs/Web/SVG/Tutorial/Basic_Shapes) or an [SVG filter](/en-US/docs/Web/SVG/Element/filter).
 
 - `<url-modifier>`
   - : In the future, the `url()` function may support specifying a modifier, an identifier or a functional notation, which alters the meaning of the URL string. This is not supported and not fully defined in the specification.
@@ -91,21 +93,42 @@ url( <string> <url-modifier>* )
 
 ## Examples
 
-### A url used in the background property
+### As the background property value
 
 ```css
-.topbanner {
-  background: url("topbanner.png") #00d no-repeat fixed;
+body {
+  background: url("https://mdn.github.io/shared-assets/images/examples/leopard.jpg")
+    #00d no-repeat fixed;
 }
 ```
 
-### A url loading an image as a list bullet
+{{EmbedLiveSample("As the background property value", "100%", "200")}}
+
+### For setting an image as a list bullet
+
+```html hidden
+<ul>
+  <li>one</li>
+  <li>two</li>
+  <li>there</li>
+</ul>
+```
+
+```css hidden
+ul {
+  font-size: 3rem;
+  margin: 0;
+}
+```
 
 ```css
 ul {
-  list-style: square url(http://www.example.com/redball.png);
+  list-style: outside
+    url("https://mdn.github.io/shared-assets/images/examples/firefox-logo.svg");
 }
 ```
+
+{{EmbedLiveSample("For setting an image as a list bullet", "100%", "200")}}
 
 ### Usage in the content property
 
@@ -113,9 +136,9 @@ ul {
 
 ```html
 <ul>
-  <li>Item 1</li>
-  <li>Item 2</li>
-  <li>Item 3</li>
+  <li>One</li>
+  <li>Two</li>
+  <li>Three</li>
 </ul>
 ```
 
@@ -123,38 +146,27 @@ ul {
 
 ```css
 li::after {
-  content: " - " url(star.gif);
+  content: " - "
+    url("https://mdn.github.io/shared-assets/images/examples/star-white_16x16.png
+");
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample("Usage_in_the_content_property", "100%", 110)}}
+{{EmbedLiveSample("Usage_in_the_content_property", "100%", "110")}}
 
 ### Using a data URL
 
-#### HTML
-
-```html
-<div class="background"></div>
-```
-
 #### CSS
 
-```css hidden
-.background {
-  height: 100vh;
-}
-```
-
 ```css
-.background {
-  background: yellow;
+body {
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='45'%3E%3Cpath d='M10 10h60' stroke='%2300F' stroke-width='5'/%3E%3Cpath d='M10 20h60' stroke='%230F0' stroke-width='5'/%3E%3Cpath d='M10 30h60' stroke='red' stroke-width='5'/%3E%3C/svg%3E");
 }
 ```
 
-{{EmbedLiveSample("Using_a_data_URL", "100%", 50)}}
+{{EmbedLiveSample("Using_a_data_URL", "100%", 100)}}
 
 ### Usage in filters
 
