@@ -81,6 +81,10 @@ When auctions complete, and ads are chosen, {{htmlelement("fencedframe")}} eleme
 
 - {{domxref("ForDebuggingOnly")}}
   - : Defines methods for reporting auction wins and losses from inside the `generateBid()` and `scoreAd()` user-defined functions for debugging purposes.
+- {{domxref("InterestGroupBiddingAndScoringScriptRunnerGlobalScope")}}
+  - : Exposes appropriate interfaces to buyer and seller script runners to provide access for user-defined functions to debugging and reporting functionality (defined on `ForDebuggingOnly` and `RealTimeReporting`).
+- {{domxref("InterestGroupReportingScriptRunnerGlobalScope")}}
+  - : Exposes appropriate interfaces to buyer and seller script runners to provide access for user-defined functions to reporting functionality.
 - {{domxref("ProtectedAudience")}}
   - : Defines the {{domxref("ProtectedAudience.queryFeatureSupport", "queryFeatureSupport()")}} method, which is used to determine support for Protected Audience API features.
 - {{domxref("RealTimeReporting")}}
@@ -128,8 +132,6 @@ When auctions complete, and ads are chosen, {{htmlelement("fencedframe")}} eleme
   - : Reports the results of the auction to the buyer.
 - `scoreAd()`
   - : Calculates a desirability score for each individual ad referenced by interest groups the user's browser is a member of that were invited to bid in the auction. Contained in the seller's code referenced by the auction configuration's `decisionLogicURL` property.
-
-MORE OF THESE?
 
 ## HTTP headers
 

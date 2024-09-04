@@ -77,7 +77,7 @@ The option properties as follows:
 - `auctionSignals`
   - : Any value containing arbitrary metadata related to the auction that is shared with the buyer (passed into `generateBid()`) and the seller (passed into `scoreAd()`). Can also be expressed as a promise if you wish the values to be passed asynchronously. This gives the seller an opportunity to provide information about the page context (such as ad size and publisher ID), the type of auction (for example, first-price vs second-price), etc..
 - `sellerSignals`
-  - : Any value containing arbitrary metadata related to the seller that is shared with the seller only (passed into `scoreAd()`). Can also be expressed as a promise if you wish the values to be passed asynchronously.
+  - : Any value containing arbitrary metadata related to the seller that is shared with the seller only at this stage (passed into `scoreAd()`). Can also be expressed as a promise if you wish the values to be passed asynchronously.
 - `sellerTimeout`
   - : A number representing the maximum allowable runtime in milliseconds of the seller's `scoreAd()` script. If a value is not specified, the default 50ms is used. The maximum allowed `sellerTimeout` is 500ms — higher values will be clamped to this maximum.
 - `perBuyerSignals`
