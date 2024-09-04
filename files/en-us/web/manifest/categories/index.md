@@ -18,7 +18,7 @@ There is no standard list of possible values, but the W3C maintains [a list of k
 ## Syntax
 
 ```json
-"categories": ["category1", "category2", "category3"]
+"categories": ["<category-name>", "<category-name>", ...]
 ```
 
 ## Examples

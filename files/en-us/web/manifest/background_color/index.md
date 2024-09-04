@@ -19,7 +19,7 @@ Therefore `background_color` should match the {{cssxref("background-color")}} CS
 ## Syntax
 
 ```json
-"background_color": "colorValue"
+"background_color": "<color-value>"
 ```
 
 ## Examples

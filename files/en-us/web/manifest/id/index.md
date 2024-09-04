@@ -19,7 +19,7 @@ If the `id` is unspecified or invalid in any way (such as not a string, not a va
 ## Syntax
 
 ```json
-"id": "identifierString"
+"id": "<app-identifier>"
 ```
 
 ## Examples

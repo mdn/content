@@ -18,8 +18,8 @@ After registering a web app as a protocol handler, when a user clicks on a hyper
 ```json
 "protocol_handlers": [
   {
-    "protocol": "protocolString",
-    "url": "urlString"
+    "protocol": "<protocol>",
+    "url": "<url>"
   }
   ]
 ```

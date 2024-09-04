@@ -14,13 +14,13 @@ The `shortcuts` member defines an array of shortcuts or links to key tasks or pa
 ```json
 "shortcuts": [
   {
-    "name": "displayName",
-    "short_name": "shortName",
-    "description": "shortcutDescription",
-    "url": "shortcutURL",
+    "name": "<app-name>",
+    "short_name": "<short-app-name>",
+    "description": "<description>",
+    "url": "<url>",
     "icons": [
       {
-        "src": "iconURL",
+        "src": "<icon-url>",
         "sizes": "<size-values>",
         "type": "<mime-type>",
         "purpose": "<purpose-keyword>"

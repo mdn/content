@@ -12,7 +12,7 @@ The `short_name` member is a string that represents the name of the web applicat
 ## Syntax
 
 ```json
-"name": "shortAppName"
+"name": "<short-app-name>"
 ```
 
 ## Examples

@@ -23,10 +23,10 @@ For example, a PWA can be registered to handle files that match the `text/plain`
 ```json
 "file_handlers": [
   {
-    "action": "actionURL",
+    "action": "<action-url>",
     "accept": {
-      "mimeType1": ["fileExtension1", "fileExtension2"],
-      "mimeType2": ["fileExtension3", "fileExtension4"]
+      "<mime-type>": ["<file-Extension>", ...],
+      ...
     }
   }
 ]

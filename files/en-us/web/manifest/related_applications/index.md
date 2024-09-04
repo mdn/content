@@ -20,8 +20,8 @@ The `related_applications` field is an array of objects specifying native applic
 "related_applications": [
   {
     "platform": "<platform-keyword>",
-    "url": "applicationURL",
-    "id": "applicationId"
+    "url": "<app-url>",
+    "id": "<app-id>"
   }
 ]
 ```

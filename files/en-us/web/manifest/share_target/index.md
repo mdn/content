@@ -20,17 +20,17 @@ Once registered and installed, a PWA that uses the Web Share Target API acts as 
 
 ```json
 "share_target": {
-  "action": "targetURL",
-  "enctype": "encodingType",
-  "method": <http-method-keyword>,
+  "action": "<target-url>",
+  "enctype": "<encoding-type>",
+  "method": "<http-method-keyword>",
   "params": {
-    "title": "titleParam",
-    "text": "textParam",
-    "url": "urlParam",
+    "title": "<title>",
+    "text": "<text>",
+    "url": "<url>",
     "files": [
       {
-        "name": "fileName",
-        "accept": ["mimeType", "fileExtension"]
+        "name": "<file-name>",
+        "accept": ["<mime-type>", "<file-extension>"]
       }
     ]
   }

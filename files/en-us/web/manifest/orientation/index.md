@@ -17,7 +17,7 @@ The `orientation` member defines the default orientation for all the website's t
 ## Syntax
 
 ```json
-"orientation": "any" | "natural" | "landscape" | "landscape-primary" | "landscape-secondary" | "portrait" | "portrait-primary" | "portrait-secondary"
+"orientation": "<orientation-keyword>"
 ```
 
 ### Values

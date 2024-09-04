@@ -16,7 +16,7 @@ If `scope` is unspecified or invalid in any way (such as not a string, not a val
 ## Syntax
 
 ```json
-"scope": "urlString"
+"scope": "<scope-url>"
 ```
 
 ## Examples

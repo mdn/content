@@ -12,7 +12,7 @@ The `name` member is a string that represents the name of the web application as
 ## Syntax
 
 ```json
-"name": "appName"
+"name": "<app-name>"
 ```
 
 ## Examples

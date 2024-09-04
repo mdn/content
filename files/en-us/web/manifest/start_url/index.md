@@ -17,7 +17,7 @@ A valid `start_url` needs to be same-origin with the document that references th
 ## Syntax
 
 ```json
-"start_url": "startURL"
+"start_url": "<url>"
 ```
 
 ## Examples
