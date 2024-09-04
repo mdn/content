@@ -18,7 +18,7 @@ These icons uniquely identify your web app in different contexts, such as in an 
     "src": "<icon-url>",
     "sizes": "<size-values>",
     "type": "<mime-type>",
-    "purpose": "<purpose-keyword>"
+    "purpose": "<purpose-keywords>"
   }
 ]
 ```
@@ -49,7 +49,7 @@ Each icon object can have one or more properties, with `src` being the only requ
     The value should be in the format `image/<subtype>`, where `<subtype>` is a specific image format; for example, `image/png` indicates a PNG image.
     If omitted, browsers typically infer the image type from the file extension.
 
-- `<purpose-keyword>` {{Optional_Inline}}
+- `<purpose-keywords>` {{Optional_Inline}}
 
   - : A case-sensitive keyword string that specifies one or more contexts in which the icon can be used by the browser or operating system.
     The value can be a single keyword or multiple space-separated keywords.
