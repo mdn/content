@@ -36,9 +36,9 @@ Each icon object can have one or more properties, with `src` being the only requ
 - `<size-values>` {{Optional_Inline}}
 
   - : A string that specifies one or more sizes at which the icon file can be used.
-    For raster formats like PNG, each size is specified as `<width in pixels>x<height in pixels>`.
+    Each size is specified as `<width in pixels>x<height in pixels>`.
     Multiple sizes can be specified, separated by spaces, for example: `48x48 96x96`.
-    When multiple icons are available, browsers may use `<size-values>` to select the most suitable icon for a display context. For raster images, specifying the exact available sizes is recommended. For vector formats like SVG, you can use `any` to indicate scalability.
+    When multiple icons are available, browsers may use `<size-values>` to select the most suitable icon for a display context. For raster formats like PNG, specifying the exact available sizes is recommended. For vector formats like SVG, you can use `any` to indicate scalability.
     If `<size-values>` is not specified, the selection and display of the icon may vary depending on the browser's implementation.
 
     Note that the format of `<size-values>` is similar to the HTML `<link>` element's [`sizes`](/en-US/docs/Web/HTML/Element/link#sizes) attribute.
