@@ -18,8 +18,8 @@ It is similar to the CSS {{cssxref("filter")}} property and accepts the same val
 The `filter` property accepts a value of `"none"` or one or more
 of the following filter functions in a string.
 
-- [`url()`](/en-US/docs/Web/CSS/url)
-  - : A CSS {{cssxref("url", "url()")}}. Takes an IRI pointing to an SVG filter element,
+- [`url()`](/en-US/docs/Web/CSS/url_function)
+  - : A CSS {{cssxref("url_function", "url()")}}. Takes an IRI pointing to an SVG filter element,
     which may be embedded in an external XML file.
 - [`blur()`](/en-US/docs/Web/CSS/filter-function/blur)
   - : A CSS {{cssxref("&lt;length&gt;")}}. Applies a Gaussian blur to the drawing. It
