@@ -312,7 +312,7 @@ Great! We now have a working checkbox where we can set the state programmaticall
 
 We can use the {{domxref("Crypto.randomUUID()")}} method to generate a unique string to keep component `id`s unique. `randomUUID()` is built into modern browsers and provides a straightforward way to ensure uniqueness without relying on external libraries.
 
-Next, add an `id` field to the `data` property as shown below; this uses `crypto.randomUUID()` to return a unique string and prefixes it with `todo-`:
+Next, add an `id` field to the `data` property as shown below; this uses `crypto.randomUUID()` to return a unique string, which we then prefix with `todo-`:
 
 ```js
 export default {
