@@ -3,7 +3,6 @@ title: URL Fragment Text Directives
 slug: Web/API/URL_Fragment_Text_Directives
 page-type: web-api-overview
 browser-compat:
-  - html.elements.a.text_fragments
   - api.Document.fragmentDirective
   - api.FragmentDirective
   - css.selectors.target-text
