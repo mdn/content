@@ -170,7 +170,7 @@ Memory imports work just like function imports, only Memory objects are passed a
 - They allow a single Memory object to be imported by multiple module instances, which is a critical building block for implementing dynamic linking in WebAssembly.
 
 > [!NOTE]
-> You can find our complete demo at [memory.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/memory.html) ([see it live also](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)) .
+> You can find our complete demo at [memory.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/memory.html) ([see it live also](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)).
 
 ## Tables
 

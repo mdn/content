@@ -1,7 +1,7 @@
 ---
 title: "USBDevice: productId property"
 short-title: productId
-slug: Web/API/USBDevice/productID
+slug: Web/API/USBDevice/productId
 page-type: web-api-instance-property
 status:
   - experimental

@@ -25,7 +25,7 @@ In this guide we'll introduce the different credential types and explain at a hi
 > Although we're describing all the credential types together here, the different credential types are defined in several different specifications, which extend the main Credential Management API specification.
 >
 > - [Credential Management API](https://w3c.github.io/webappsec-credential-management/) defines passwords and legacy federated credentials.
-> - [Federated Credential Management API](https://fedidcg.github.io/FedCM/) defines the new federated credentials.
+> - [Federated Credential Management API](https://w3c-fedid.github.io/FedCM/) defines the new federated credentials.
 > - [WebOTP API](https://wicg.github.io/web-otp/) defines OTP credentials.
 > - [Web Authentication API](https://w3c.github.io/webauthn/) defines Web Authentication assertions.
 

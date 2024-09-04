@@ -349,10 +349,11 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
+  base: "/npm-experiment/",
 });
 ```
 
-Read the [Vite documentation](https://vitejs.dev/guide/) for more information on how to configure Vite.
+Read the [Vite documentation](https://vitejs.dev/guide/) for more information on how to configure Vite. Because our site is deployed on GitHub pages, it will be hosted at `https://your-username.github.io/your-repo-name`, so you should set the `base` option according to your GitHub repository's name—but you can always adjust it later when we get to [deployment](/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment).
 
 ### CSS transformation
 

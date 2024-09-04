@@ -55,7 +55,7 @@ This includes a crossorigin font preload and an `<img>` loaded from the addition
 200 OK
 Content-Type: text/html
 
-<!DOCTYPE html>
+<!doctype html>
 ...
 <link rel="preload" href="https://cdn.example.com/fonts/myfont.woff2" as="font" type="font/woff2" crossorigin>
 ...
@@ -79,7 +79,7 @@ This includes a link to the stylesheet, which may already have been preloaded fr
 200 OK
 Content-Type: text/html
 
-<!DOCTYPE html>
+<!doctype html>
 ...
 <link rel="stylesheet" rel="preload" href="style.css" />
 ...
@@ -106,7 +106,7 @@ The stylesheet has already been preloaded, but will not be used when rendering t
 Content-Security-Policy: style-src: none;
 Content-Type: text/html
 
-<!DOCTYPE html>
+<!doctype html>
 ...
 <link rel="stylesheet" rel="preload" href="style.css" />
 ...

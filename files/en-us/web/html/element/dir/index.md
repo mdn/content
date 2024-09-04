@@ -29,7 +29,7 @@ Like all other HTML elements, this element supports the [global attributes](/en-
 
 ## Specifications
 
-Not part of any current specifications.
+{{Specifications}}
 
 ## Browser compatibility
 

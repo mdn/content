@@ -102,7 +102,7 @@ Here are some other tips for providing secure logins:
   > [!NOTE]
   > Some phishing sites can be very sophisticated and hard to distinguish from a real website. You should therefore educate your users to not trust random links in emails and SMS messages. If they receive a message along the lines of "Urgent, you need to log in now to resolve an issue", they should go to the site directly in a new tab and try logging in directly rather than clicking the link in the message. Or they could phone or email you to discuss the message they received.
 
-- Protect against brute force attacks on login pages with [rate limiting](https://www.cloudflare.com/en-gb/learning/bots/what-is-rate-limiting/), account lockouts after a certain number of unsuccessful attempts, and [CAPTCHA challenges](https://en.wikipedia.org/wiki/CAPTCHA).
+- Protect against brute force attacks on login pages with {{glossary("rate limit", "rate limiting")}}, account lockouts after a certain number of unsuccessful attempts, and [CAPTCHA challenges](https://en.wikipedia.org/wiki/CAPTCHA).
 - Manage user login sessions with unique [session IDs](https://en.wikipedia.org/wiki/Session_ID), and automatically log out users after periods of inactivity.
 
 ### Don't include sensitive data in URL query strings

@@ -35,5 +35,5 @@ console.log(frame.allow);
 
 ## See also
 
-- [Fenced frames](https://developers.google.com/privacy-sandbox/relevance/fenced-frame) on developers.google.com
+- [Fenced frames](https://developers.google.com/privacy-sandbox/private-advertising/fenced-frame) on developers.google.com
 - [The Privacy Sandbox](https://developers.google.com/privacy-sandbox) on developers.google.com
