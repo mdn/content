@@ -38,7 +38,7 @@ The Document API, also sometimes called the DOM API, allows you to modify a DOM 
 
 ## Reading and modifying the tree
 
-Suppose the author wants to change the header of the above document and write two paragraphs instead of one. The following script would do the job:
+Suppose the author wants to change the header of the below document and write two paragraphs instead of one. The following script would do the job:
 
 ### HTML
 
