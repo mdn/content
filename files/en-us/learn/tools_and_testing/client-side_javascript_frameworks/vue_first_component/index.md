@@ -310,7 +310,7 @@ Try changing `true` to `false` and back again, reloading your app in between to 
 
 Great! We now have a working checkbox where we can set the state programmatically. However, we can currently only add one `ToDoList` component to the page because the `id` is hardcoded. This would result in errors with assistive technology since the `id` is needed to correctly map labels to their checkboxes. To fix this, we can programmatically set the `id` in the component data.
 
-We can use the native `crypto.randomUUID()` method to generate a unique string for keeping component `id`s unique. This method is built into modern browsers and provides a straightforward way to ensure uniqueness without relying on external libraries.
+We can use the {{domxref("Crypto.randomUUID()")}} method to generate a unique string to keep component `id`s unique. `randomUUID()` is built into modern browsers and provides a straightforward way to ensure uniqueness without relying on external libraries.
 
 Next, add an `id` field to our data property, so the component object ends up looking like so (`crypto.randomUUID()` returns a unique string with the specified prefix — `todo-`):
 
