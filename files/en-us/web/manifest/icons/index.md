@@ -125,3 +125,5 @@ This example shows how to declare multiple icons for different scenarios and dev
 ## See also
 
 - [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types#webp_image)
+- [Monochrome icons and solid fills](https://w3c.github.io/manifest/#monochrome-icons-and-solid-fills)
+- [Icon masks and safe zone](https://w3c.github.io/manifest/#icon-masks)
