@@ -15,7 +15,7 @@ The `launch_handler` member defines values that control the launch of a web appl
 
 ```json
 "launch_handler": {
-  "client_mode": ["<context-keyword>", "<context-keyword>", ...]
+  "client_mode": ["<context-keyword>", "<context-keyword>"]
 }
 ```
 

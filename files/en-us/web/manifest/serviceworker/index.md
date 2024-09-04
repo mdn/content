@@ -18,7 +18,7 @@ The `serviceworker` member specifies a serviceworker that is Just-In-Time (JIT)-
 "serviceworker": {
   "scope": "<scope-path>",
   "src": "<script-path>",
-  "use_cache": <cache-boolean>
+  "use_cache": true
 }
 ```
 

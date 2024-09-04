@@ -16,7 +16,7 @@ The `display_override` member solves this by letting the developer provide a seq
 ## Syntax
 
 ```json
-"display_override": ["<display-keyword>", "<display-keyword>", ...]
+"display_override": ["<display-keyword>", "<display-keyword>"]
 ```
 
 ### Values

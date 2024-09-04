@@ -16,7 +16,7 @@ If omitted, `prefer_related_applications` defaults to `false`.
 ## Syntax
 
 ```json
-"prefer_related_applications": <preference-boolean>
+"prefer_related_applications": true
 ```
 
 ## Examples

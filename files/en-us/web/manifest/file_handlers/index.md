@@ -25,8 +25,8 @@ For example, a PWA can be registered to handle files that match the `text/plain`
   {
     "action": "<action-url>",
     "accept": {
-      "<mime-type>": ["<file-Extension>", ...],
-      ...
+      "<mime-type>": ["<file-Extension>", "<file-Extension>"],
+      "<mime-type>": ["<file-Extension>"]
     }
   }
 ]
