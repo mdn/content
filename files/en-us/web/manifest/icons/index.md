@@ -51,8 +51,17 @@ Each icon object can have one or more properties, with `src` being the only requ
 
 - `<purpose-keyword>` {{Optional_Inline}}
 
-  - : A string that specifies one or more purposes of the icon, which indicate how the icon should be used by the browser or operating system. The value can be a single keyword or multiple space-separated keywords. This property is optional; `any` is assumed if no value is specified. If multiple values are specified, they should be listed in order of precedence.
-    Valid values are case-sensitive and listed below in order of precedence:
+  - : A case-sensitive keyword string that specifies one or more contexts in which the icon can be used by the browser or operating system.
+     The value can be a single keyword or multiple space-separated keywords.
+     If omitted, the browser can use the icon for `any` purpose.
+     
+     Browsers use these values as hints to determine where and how an icon is displayed.
+     For example, a `monochrome` icon might be used as a badge or pinned icon with a solid fill, which is visually distinct from a full-color launch icon.
+     With multiple keywords, say `monochrome maskable`, the browser can use the icon for any of those purposes.
+     If an unrecognized purpose is included along with valid values (e.g., `monochrome fizzbuzz`), the icon can still be used for the valid purposes.
+     However, if only unrecognized purposes are specified (e.g., "fizzbuzz"), those values will be ignored.
+    
+    Valid values include:
     - `monochrome`
       - : Indicates that the icon is intended to be used as a monochrome icon with a solid fill. With this value, a browser discards the color information in the icon and uses only the alpha channel as a mask over any solid fill.
     - `maskable`
