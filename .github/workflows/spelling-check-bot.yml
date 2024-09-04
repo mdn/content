@@ -24,6 +24,8 @@ jobs:
           npm install
           echo Running spelling check...
           output=$(npx cspell --no-progress --gitignore --config .vscode/cspell.json "**/*.md" || exit 0)
+          output=$(node scripts/linkify-logs.js "${output}")
+          output=$(echo "$output" | sed 's/^/- /')
           echo "$output"
           echo "OUTPUT<<EOF" >> $GITHUB_ENV
           echo "$output" >> $GITHUB_ENV
@@ -35,16 +37,13 @@ jobs:
           comment_body=$(cat<<EOM
           Typos and unknown words:
 
-          ~~~
           ${OUTPUT}
-          ~~~
 
           > [!TIP]
           > To exclude words from the spellchecker, you can add valid words (web technology terms or abbreviations) to the [terms-abbreviations.txt](https://github.com/mdn/content/blob/main/.vscode/terms-abbreviations.txt) dictionary for IDE autocompletion. To ignore strings that are not words (\`AABBCC\` in code, for instance), you can add them to [ignore-list.txt](https://github.com/mdn/content/blob/main/.vscode/ignore-list.txt).
           EOM
           )
           comment_body+=$'\n\n'$(echo "(comment last updated: $(date +'%Y-%m-%d %H:%M:%S'))")
-
           gh api \
             --method PATCH \
             -H "Accept: application/vnd.github+json" \
