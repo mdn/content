@@ -73,11 +73,11 @@ To get the footer working, we need to implement the following three areas of fun
 
    ```js
    get incomplete() {
-     return this.todos.filterBy('isCompleted', false);
+     return this.todos.filter((todo) => !todo.isCompleted);
    }
    ```
 
-   Using Ember's [`ArrayProxy.filterBy()`](https://api.emberjs.com/ember/4.2/classes/ArrayProxy/methods/filterBy?anchor=filterBy) method, we're able to easily filter Objects in our array based on simple equals conditions. Here we're asking for all the todo items where the `isCompleted` property is equal to `false`, and because `isCompleted` is `@tracked` in our `Todo` object, this getter will re-compute when the value changes on an Object in the array.
+   Using the [`filter()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) method, we're asking for all the todo items where the `isCompleted` property is equal to `false`, and because `isCompleted` is `@tracked` in our `Todo` object, this getter will re-compute when the value changes on an Object in the array.
 
 4. Next, add the following action underneath the existing `add(text)` action:
 

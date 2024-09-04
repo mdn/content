@@ -2,7 +2,6 @@
 title: API constructor subpage template
 slug: MDN/Writing_guidelines/Page_structures/Page_types/API_constructor_subpage_template
 page-type: mdn-writing-guide
-browser-compat: path.to.feature.NameOfTheConstructor
 ---
 
 {{MDNSidebar}}
