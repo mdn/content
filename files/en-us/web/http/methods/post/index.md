@@ -7,17 +7,22 @@ browser-compat: http.methods.POST
 
 {{HTTPSidebar}}
 
-The **HTTP `POST` method** sends data to the server. The type of the body of the request is indicated by the {{HTTPHeader("Content-Type")}} header.
+The **HTTP `POST` request method** sends data to the server. The type of the body of the request is indicated by the {{HTTPHeader("Content-Type")}} header.
 
-The difference between {{HTTPMethod("PUT")}} and `POST` is that `PUT` is idempotent: calling it once or several times successively has the same effect (that is no _side_ effect), where successive identical `POST` may have additional effects, like passing an order several times.
+The difference between {{HTTPMethod("PUT")}} and `POST` is that `PUT` is {{Glossary("idempotent")}}: calling it once is no different from calling it several times successively (there are no _side_ effects).
+Successive identical `POST` requests may have additional effects, such as creating the same order several times.
 
-A `POST` request is typically sent via an [HTML form](/en-US/docs/Learn/Forms) and results in a change on the server. In this case, the content type is selected by putting the adequate string in the [`enctype`](/en-US/docs/Web/HTML/Element/form#enctype) attribute of the {{HTMLElement("form")}} element or the [`formenctype`](/en-US/docs/Web/HTML/Element/input#formenctype) attribute of the {{HTMLElement("input") }} or {{HTMLElement("button")}} elements:
+[HTML forms](/en-US/docs/Learn/Forms) typically send data using `POST` and this usually results in a change on the server.
+In this case, the content type is selected via an appropriate string in the [`enctype`](/en-US/docs/Web/HTML/Element/form#enctype) attribute of the {{HTMLElement("form")}} element or the [`formenctype`](/en-US/docs/Web/HTML/Element/input#formenctype) attribute of the {{HTMLElement("input") }} or {{HTMLElement("button")}} elements:
 
-- `application/x-www-form-urlencoded`: the keys and values are encoded in key-value tuples separated by `'&'`, with a `'='` between the key and the value. Non-alphanumeric characters in both keys and values are {{Glossary("Percent-encoding", "percent-encoded")}}: this is the reason why this type is not suitable to use with binary data (use `multipart/form-data` instead)
-- `multipart/form-data`: each value is sent as a block of data ("body part"), with a user agent-defined delimiter ("boundary") separating each part. The keys are given in the `Content-Disposition` header of each part.
+- `application/x-www-form-urlencoded`: the keys and values are encoded in key-value tuples separated by an ampersand (`&`), with an equals symbol (`=`) between the key and the value (e.g., `firstname=Frida&lastname=Kahlo`).
+  Non-alphanumeric characters in both keys and values are {{Glossary("Percent-encoding", "percent-encoded")}}: this is the reason why this type is not suitable to use with binary data and you should use `multipart/form-data` instead for this purpose instead.
+- `multipart/form-data`: each value is sent as a block of data ("body part"), with a user agent-defined delimiter (for example, `boundary="delimiter12345"`) separating each part.
+  The keys are described in the {{HTTPHeader("Content-Disposition")}} header of each part or block of data.
 - `text/plain`
 
-When the `POST` request is sent via a method other than an HTML form, such as a {{domxref("Window/fetch", "fetch()")}} call, the body can take any type. As described in the HTTP 1.1 specification, `POST` is designed to allow a uniform method to cover the following functions:
+When the `POST` request is sent via a method other than an HTML form, such as a {{domxref("Window/fetch", "fetch()")}} call, the body can be any type.
+As described in the HTTP 1.1 specification, `POST` is designed to allow a uniform method to cover the following functions:
 
 - Annotation of existing resources
 - Posting a message to a bulletin board, newsgroup, mailing list, or similar group of articles;
@@ -62,36 +67,44 @@ When the `POST` request is sent via a method other than an HTML form, such as a 
 POST /test
 ```
 
-## Example
+## Examples
 
-A simple form using the default `application/x-www-form-urlencoded` content type:
+### URL-encoded form submission
+
+A form using the default `application/x-www-form-urlencoded` content sends a request where the body contains the form data in a key-value format as follows:
 
 ```http
 POST /test HTTP/1.1
-Host: foo.example
+Host: example.com
 Content-Type: application/x-www-form-urlencoded
 Content-Length: 27
 
 field1=value1&field2=value2
 ```
 
-A form using the `multipart/form-data` content type:
+### Multipart form submission
+
+A form using the `multipart/form-data` content type is used when the form includes files or large data.
+This request body delineates each part of the form using a boundary string.
+An example of a request in this format:
 
 ```http
 POST /test HTTP/1.1
-Host: foo.example
-Content-Type: multipart/form-data;boundary="boundary"
+Host: example.com
+Content-Type: multipart/form-data;boundary="delimiter12345"
 
---boundary
+--delimiter12345
 Content-Disposition: form-data; name="field1"
 
 value1
---boundary
+--delimiter12345
 Content-Disposition: form-data; name="field2"; filename="example.txt"
 
 value2
---boundary--
+--delimiter12345--
 ```
+
+The {{HTTPHeader("Content-Disposition")}} header indicates how the form data should be processed, specifying the field `name` and `filename`, if appropriate.
 
 ## Specifications
 
@@ -103,6 +116,9 @@ value2
 
 ## See also
 
-- {{HTTPHeader("Content-Type")}}
-- {{HTTPHeader("Content-Disposition")}}
-- {{HTTPMethod("GET")}}
+- [HTTP request methods](/en-US/docs/Web/HTTP/Methods)
+- [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
+- [HTTP headers](/en-US/docs/Web/HTTP/Headers)
+- {{HTTPHeader("Content-Type")}} header
+- {{HTTPHeader("Content-Disposition")}} header
+- {{HTTPMethod("GET")}} method

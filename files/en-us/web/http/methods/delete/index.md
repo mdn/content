@@ -7,8 +7,9 @@ browser-compat: http.methods.DELETE
 
 {{HTTPSidebar}}
 
-The **HTTP `DELETE` request method** deletes the specified
-resource.
+The **HTTP `DELETE` request method** asks the server to delete a specified resource.
+
+Content sent in a `DELETE` request has no defined semantics, and therefore should be omitted.
 
 <table class="properties">
   <tbody>
@@ -47,34 +48,52 @@ resource.
 DELETE /file.html HTTP/1.1
 ```
 
-## Example
+## Examples
 
-### Request
+### Successfully deleting a resource
+
+The following request asks the server to delete the resource `file.html`:
 
 ```http
 DELETE /file.html HTTP/1.1
 Host: example.com
 ```
 
-### Responses
+If the request is successful, there are several possible [successful response status codes](/en-US/docs/Web/HTTP/Status#successful_responses).
+A {{HTTPStatus("204", "204 No Content")}} means the request has been enacted by the server and no additional information needs to be sent back to the client:
 
-If a `DELETE` method is successfully applied, there are several response
-status codes possible:
+```http
+HTTP/1.1 204 No Content
+Date: Wed, 04 Sep 2024 10:16:04 GMT
+```
 
-- A {{HTTPStatus("202")}} (`Accepted`) status code if the action will
-  likely succeed but has not yet been enacted.
-- A {{HTTPStatus("204")}} (`No Content`) status code if the action has been
-  enacted and no further information is to be supplied.
-- A {{HTTPStatus("200")}} (`OK`) status code if the action has been enacted
-  and the response message includes a representation describing the status.
+A {{HTTPStatus("200", "200 OK")}} means the request has been enacted by the server and the response body includes a representation describing the outcome:
 
 ```http
 HTTP/1.1 200 OK
-Date: Wed, 21 Oct 2015 07:28:00 GMT
+Content-Type: text/html; charset=UTF-8
+Date: Fri, 21 Jun 2024 14:18:33 GMT
+Content-Length: 1234
 
 <html>
   <body>
-    <h1>File deleted.</h1>
+    <h1>File "file.html" deleted.</h1>
+  </body>
+</html>
+```
+
+A {{HTTPStatus("202", "202 Accepted")}} means the request will likely succeed but has not yet been enacted by the server:
+
+```http
+HTTP/1.1 202 Accepted
+Date: Wed, 26 Jun 2024 12:00:00 GMT
+Content-Type: text/html; charset=UTF-8
+Content-Length: 1234
+
+<html>
+  <body>
+    <h1>Deletion of "file.html" accepted.</h1>
+    <p>See <a href="http://example.com/tasks/123/status">the status monitor</a> for details.</p>
   </body>
 </html>
 ```
@@ -89,4 +108,7 @@ Date: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## See also
 
-- HTTP status: {{HTTPStatus("200")}}, {{HTTPStatus("202")}}, {{HTTPStatus("204")}}
+- HTTP statuses: {{HTTPStatus("200")}}, {{HTTPStatus("202")}}, {{HTTPStatus("204")}}
+- [HTTP request methods](/en-US/docs/Web/HTTP/Methods)
+- [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
+- [HTTP headers](/en-US/docs/Web/HTTP/Headers)

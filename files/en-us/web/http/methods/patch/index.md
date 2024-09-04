@@ -11,15 +11,14 @@ The **HTTP `PATCH` request method** applies partial modifications to a resource.
 
 `PATCH` is somewhat analogous to the "update" concept found in {{Glossary("CRUD")}} (in general, HTTP is different than {{Glossary("CRUD")}}, and the two should not be confused).
 
-A `PATCH` request is considered a set of instructions on how to modify a resource. Contrast this with {{HTTPMethod("PUT")}}; which is a complete representation of a resource.
+In comparison with {{HTTPMethod("PUT")}}, a `PATCH` serves as a set of instructions for modifying a resource, whereas `PUT` represents a complete replacement of the resource.
+A `PUT` request is always {{Glossary("idempotent")}} (repeating the same request multiple times results in the resource remaining in the same state), whereas a `PATCH` request may not always be idempotent.
+For instance, if a resource includes an auto-incrementing counter, a `PUT` request will overwrite the counter (since it replaces the entire resource), but a `PATCH` request may not.
 
-A `PATCH` is not necessarily idempotent, although it can be. Contrast this with {{HTTPMethod("PUT")}}; which is always idempotent. The word "idempotent" means that any number of repeated, identical requests will leave the resource in the same state. For example if an auto-incrementing counter field is an integral part of the resource, then a {{HTTPMethod("PUT")}} will naturally overwrite it (since it overwrites everything), but not necessarily so for `PATCH`.
+Like {{HTTPMethod("POST")}}, a `PATCH` request can potentially have side effects on other resources.
 
-`PATCH` (like {{HTTPMethod("POST")}}) _may_ have side-effects on other resources.
-
-To find out whether a server supports `PATCH`, a server can advertise its support by adding it to the list in the {{HTTPHeader("Allow")}} or {{HTTPHeader("Access-Control-Allow-Methods")}} (for [CORS](/en-US/docs/Web/HTTP/CORS)) response headers.
-
-Another (implicit) indication that `PATCH` is allowed, is the presence of the {{HTTPHeader("Accept-Patch")}} header, which specifies the patch document formats accepted by the server.
+A server can advertise support for `PATCH` by adding it to the list in the {{HTTPHeader("Allow")}} or {{HTTPHeader("Access-Control-Allow-Methods")}} (for [CORS](/en-US/docs/Web/HTTP/CORS)) response headers.
+Another implicit indication that `PATCH` is supported is the {{HTTPHeader("Accept-Patch")}} header (usually after an {{HTTPMethod("OPTIONS")}} request on a resource), which lists the media-types the server is able to understand in a `PATCH` request for a resource.
 
 <table class="properties">
   <tbody>
@@ -58,9 +57,9 @@ Another (implicit) indication that `PATCH` is allowed, is the presence of the {{
 PATCH /file.txt HTTP/1.1
 ```
 
-## Example
+## Examples
 
-### Request
+### Successfully modifying a resource
 
 ```http
 PATCH /file.txt HTTP/1.1
@@ -72,11 +71,9 @@ Content-Length: 100
 [description of changes]
 ```
 
-### Response
-
-A successful response is indicated by any [2xx](https://httpwg.org/specs/rfc9110.html#status.2xx) status code.
-
-In the example below a {{HTTPStatus("204")}} response code is used, because the response does not contain a body (alternatively, a {{HTTPStatus("200")}} response that contains a body with information about the action could be used instead).
+A successful response is indicated by any of the [successful response status codes](/en-US/docs/Web/HTTP/Status#successful_responses).
+In the example response, a {{HTTPStatus("204", "204 No Content")}} status code is used because the response does not contain a body.
+Alternatively, a {{HTTPStatus("200", "200 OK")}} response that contains a body with information about the action could be used instead:
 
 ```http
 HTTP/1.1 204 No Content
@@ -90,6 +87,9 @@ ETag: "e0023aa4f"
 
 ## See also
 
+- [HTTP request methods](/en-US/docs/Web/HTTP/Methods)
+- [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
+- [HTTP headers](/en-US/docs/Web/HTTP/Headers)
 - {{HTTPStatus("204")}}
-- {{HTTPHeader("Allow")}}, {{HTTPHeader("Access-Control-Allow-Methods")}}
-- {{HTTPHeader("Accept-Patch")}} – specifies the patch document formats accepted by the server.
+- {{HTTPHeader("Allow")}}, {{HTTPHeader("Access-Control-Allow-Methods")}} headers
+- {{HTTPHeader("Accept-Patch")}} – specifies the patch document formats accepted by the server

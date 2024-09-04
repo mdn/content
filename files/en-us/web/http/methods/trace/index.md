@@ -7,11 +7,14 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc9110#TRACE
 
 {{HTTPSidebar}}
 
-The **HTTP `TRACE` method** performs a message loop-back test along the path to the target resource, providing a useful debugging mechanism.
+The **HTTP `TRACE` request method** performs a message loop-back test along the path to the target resource, providing a debugging mechanism.
 
-The final recipient of the request should reflect the message received, excluding any fields that might include sensitive data, back to the client as the message body of a {{HTTPStatus("200")}} (`OK`) response with a {{HTTPHeader("Content-Type")}} of `message/http`. The final recipient is either the origin server or the first server to receive a {{HTTPHeader("Max-Forwards")}} value of 0 in the request.
+The final recipient of the request should reflect the message as received (excluding any fields that might include sensitive data) back to the client as the message body of a {{HTTPStatus("200", "200 OK")}} response with a {{HTTPHeader("Content-Type")}} of `message/http`.
+The final recipient is either the origin server or the first server to receive a {{HTTPHeader("Max-Forwards")}} value of `0` in the request.
 
-Note that the client must not send content in the request, or generate fields that might include sensitive data, such as stored user credentials or cookies.
+The client must not send {{Glossary("HTTP Content", "content")}} in the request, or generate headers that might include sensitive data such as user credentials or cookies.
+Not all servers implement the `TRACE` method, and some server owners have historically disallowed the use of the `TRACE` method due to security concerns.
+In such cases, a {{HTTPStatus("405", "405 Method Not Allowed")}} [client error response](/en-US/docs/Web/HTTP/Status#client_error_responses) will be sent.
 
 <table class="properties">
   <tbody>
@@ -48,10 +51,41 @@ Note that the client must not send content in the request, or generate fields th
 TRACE /index.html
 ```
 
+## Examples
+
+### Method not allowed error response
+
+A `TRACE` request can be performed using `curl`:
+
+```bash
+curl -v -X TRACE example.com
+```
+
+This produces the following HTTP request:
+
+```http
+TRACE / HTTP/1.1
+Host: example.com
+User-Agent: curl/8.7.1
+Accept: */*
+```
+
+If the method is explicitly disallowed, the server will send back a `405` response:
+
+```http
+HTTP/1.1 405 Method Not Allowed
+Content-Length: 0
+Date: Wed, 04 Sep 2024 11:50:24 GMT
+Server: ECLF (dcd/7D2D)
+```
+
 ## Specifications
 
 {{Specifications}}
 
 ## See also
 
-- [HTTP methods](/en-US/docs/Web/HTTP/Methods)
+- [HTTP request methods](/en-US/docs/Web/HTTP/Methods)
+- [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
+- [HTTP headers](/en-US/docs/Web/HTTP/Headers)
+- [Cross-Site Tracing (XST)](https://owasp.org/www-community/attacks/Cross_Site_Tracing)

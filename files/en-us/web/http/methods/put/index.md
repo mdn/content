@@ -9,7 +9,8 @@ browser-compat: http.methods.PUT
 
 The **HTTP `PUT` request method** creates a new resource or replaces a representation of the target resource with the request {{Glossary("HTTP Content", "content")}}.
 
-The difference between `PUT` and {{HTTPMethod("POST")}} is that `PUT` is idempotent: calling it once or several times successively has the same effect (that is no _side_ effect), whereas successive identical {{HTTPMethod("POST")}} requests may have additional effects, akin to placing an order several times.
+The difference between `PUT` and {{HTTPMethod("POST")}} is that `PUT` is {{Glossary("idempotent")}}: calling it once is no different from calling it several times successively (there are no _side_ effects).
+Successive identical `POST` requests may have additional effects, such as creating the same order several times.
 
 <table class="properties">
   <tbody>
@@ -48,9 +49,11 @@ The difference between `PUT` and {{HTTPMethod("POST")}} is that `PUT` is idempot
 PUT /new.html HTTP/1.1
 ```
 
-## Example
+## Examples
 
-### Request
+### Successfully creating a resource
+
+The following `PUT` request asks to create a resource at `example.com/new.html` with the content `<p>New File</p>`:
 
 ```http
 PUT /new.html HTTP/1.1
@@ -61,16 +64,14 @@ Content-length: 16
 <p>New File</p>
 ```
 
-### Responses
-
-If the target resource does not have a current representation and the `PUT` request successfully creates one, then the origin server must inform the user agent by sending a {{HTTPStatus("201")}} (`Created`) response.
+If the target resource **does not** have a current representation and the `PUT` request successfully creates one, then the origin server must send a {{HTTPStatus("201", "201 Created")}} response:
 
 ```http
 HTTP/1.1 201 Created
 Content-Location: /new.html
 ```
 
-If the target resource does have a current representation and that representation is successfully modified in accordance with the state of the enclosed representation, then the origin server must send either a {{HTTPStatus("200")}} (`OK`) or a {{HTTPStatus("204")}} (`No Content`) response to indicate successful completion of the request.
+If the target resource **does** have a current representation and that representation is successfully modified with the state in the request, the origin server must send either a {{HTTPStatus("200", "200 OK")}} or a {{HTTPStatus("204", "204 No Content")}} to indicate successful completion of the request:
 
 ```http
 HTTP/1.1 204 No Content
@@ -87,5 +88,7 @@ Content-Location: /existing.html
 
 ## See also
 
-- {{HTTPStatus("201")}}
-- {{HTTPStatus("204")}}
+- [HTTP request methods](/en-US/docs/Web/HTTP/Methods)
+- [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
+- [HTTP headers](/en-US/docs/Web/HTTP/Headers)
+- {{HTTPStatus("201", "201 Created")}}, {{HTTPStatus("204", "204 No Content")}} response statuses
