@@ -76,7 +76,6 @@ function step(timeStamp) {
   const shift = Math.min(0.1 * elapsed, 200);
   element.style.transform = `translateX(${shift}px)`;
   if (shift < 200) {
-    previousTimeStamp = timeStamp;
     requestAnimationFrame(step);
   }
 }
