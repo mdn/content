@@ -35,11 +35,19 @@ Each icon object can have one or more properties, with `src` being the only requ
 
 - `<size-values>` {{Optional_Inline}}
 
-  - : A string that specifies one or more sizes at which the icon can be used, and is similar to the HTML `<link>` element's [`sizes`](/en-US/docs/Web/HTML/Element/link#sizes) attribute. Each size is specified as `<width>x<height>`. Multiple sizes can be specified, separated by spaces, as in `48x48 96x96`. When multiple icons are available, browsers may use the `sizes` value to use the most suitable icon for a display context. This property is optional; if not specified, the behavior may vary depending on the browser's implementation. For raster images like PNG, specifying exact available sizes is recommended. For vector formats like SVG, you can use "any" to indicate scalability.
+  - : A string that specifies one or more sizes at which the icon file can be used.
+     For raster formats like PNG, each size is specified as `<width in pixels>x<height in pixels>`.
+     Multiple sizes can be specified, separated by spaces, for example: `48x48 96x96`.
+     When multiple icons are available, browsers may use `<size-values>` to select the most suitable icon for a display context. For raster images, specifying the exact available sizes is recommended. For vector formats like SVG, you can use `any` to indicate scalability.
+     If `<size-values>` is not specified, the selection and display of the icon may vary depending on the browser's implementation.
+     
+     Note that the format of `<size-values>` is similar to the HTML `<link>` element's [`sizes`](/en-US/docs/Web/HTML/Element/link#sizes) attribute. 
 
 - `<mime-type>` {{Optional_Inline}}
 
-  - : A string that specifies the {{Glossary("MIME type")}} of the icon. The value should be in the format `image/<subtype>`, where `<subtype>` is a specific image format; for example, `image/png` indicates a PNG image. This property is optional; if not specified, a browser typically uses the file extension to determine the image type.
+  - : A string that specifies the {{Glossary("MIME type")}} of the icon.
+    The value should be in the format `image/<subtype>`, where `<subtype>` is a specific image format; for example, `image/png` indicates a PNG image.
+    If omitted, browsers typically infer the image type from the file extension.
 
 - `<purpose-keyword>` {{Optional_Inline}}
 
