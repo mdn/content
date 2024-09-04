@@ -22,7 +22,7 @@ Once registered and installed, a PWA that uses the Web Share Target API acts as 
 "share_target": {
   "action": "targetURL",
   "enctype": "encodingType",
-  "method": "GET" | "POST",
+  "method": <http-method-keyword>,
   "params": {
     "title": "titleParam",
     "text": "textParam",

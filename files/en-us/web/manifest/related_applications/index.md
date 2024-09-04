@@ -19,7 +19,7 @@ The `related_applications` field is an array of objects specifying native applic
 ```json
 "related_applications": [
   {
-    "platform": "platformValue",
+    "platform": "<platform-keyword>",
     "url": "applicationURL",
     "id": "applicationId"
   }

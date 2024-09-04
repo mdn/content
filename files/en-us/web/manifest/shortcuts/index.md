@@ -21,9 +21,9 @@ The `shortcuts` member defines an array of shortcuts or links to key tasks or pa
     "icons": [
       {
         "src": "iconURL",
-        "sizes": "iconWidthxiconHeight",
-        "type": "image/imageFormat",
-        "purpose": "monochrome" | "maskable | "any"
+        "sizes": "<size-values>",
+        "type": "<mime-type>",
+        "purpose": "<purpose-keyword>"
       }
     ]
   }

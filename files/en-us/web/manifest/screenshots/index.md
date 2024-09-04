@@ -16,12 +16,12 @@ The `screenshots` member defines an array of screenshots intended to showcase th
 ```json
 "screenshots": [
   {
-    "form_factor": "narrow" | "wide",
-    "label": "screenshotName",
-    "platform": "platformKeyword",
-    "sizes": "imageWidthximageHeight",
-    "src": "imageURL",
-    "type": "image/imageFormat"
+    "form_factor": "<device-keyword>",
+    "label": "<accessible-name>",
+    "platform": "<platform-keyword>",
+    "sizes": "<size-values>",
+    "src": "<image-url>",
+    "type": "<mime-type>"
   }
 ]
 ```
