@@ -59,7 +59,7 @@ Each icon object can have one or more properties, with `src` being the only requ
     For example, a `monochrome` icon might be used as a badge or pinned icon with a solid fill, which is visually distinct from a full-color launch icon.
     With multiple keywords, say `monochrome maskable`, the browser can use the icon for any of those purposes.
     If an unrecognized purpose is included along with valid values (e.g., `monochrome fizzbuzz`), the icon can still be used for the valid purposes.
-    However, if only unrecognized purposes are specified (e.g., "fizzbuzz"), then it will be ignored.
+    However, if only unrecognized purposes are specified (e.g., `fizzbuzz`), then it will be ignored.
 
     Valid values include:
 
