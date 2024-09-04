@@ -31,7 +31,7 @@ Each icon object can have one or more properties, with `src` being the only requ
 
 - `<icon-url>`
 
-  - : A string that specifies the path to the icon image file. If `src` is a relative URL, the path is resolved relative to the URL of the manifest file. For example, the relative URL `images/icon-192x192.png` for the manifest file located at `https://example.com/manifest.json` will be resolved as `https://example.com/images/icon-192x192.png`.
+  - : A string that specifies the path to the icon image file. If `<icon-url>` is relative, the path is resolved relative to the manifest file's URL. For example, the relative URL `images/icon-192x192.png` for the manifest file located at `https://example.com/manifest.json` will be resolved as `https://example.com/images/icon-192x192.png`.
 
 - `<size-values>` {{Optional_Inline}}
 
