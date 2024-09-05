@@ -67,6 +67,10 @@ dc.onopen = (ev) => {
 };
 ```
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

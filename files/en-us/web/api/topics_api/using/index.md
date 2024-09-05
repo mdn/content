@@ -171,4 +171,4 @@ You can also test your Topics API code locally without [enrollment](/en-US/docs/
 
 ## See also
 
-- [Topics API](https://developers.google.com/privacy-sandbox/relevance/topics) on developers.google.com (2023)
+- [Topics API](https://developers.google.com/privacy-sandbox/private-advertising/topics) on developers.google.com (2023)
