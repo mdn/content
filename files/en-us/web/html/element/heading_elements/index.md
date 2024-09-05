@@ -88,7 +88,7 @@ Given the following page structure:
 <h3>Abdomen</h3>
 ```
 
-Screen readers would generate an ordered list like this:
+Screen readers would generate a list like this:
 
 1. `h1` Beetles
 
