@@ -84,4 +84,4 @@ Browse the complete [JavaScript reference](/en-US/docs/Web/JavaScript/Reference)
 - [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
   - : Learn how to work with JavaScript's functions to develop your applications.
 - [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
-  - : JavaScript classes are the most appropriate way to do object-oriented programming.
+  - : JavaScript classes are the most effective method for implementing object-oriented programming.
