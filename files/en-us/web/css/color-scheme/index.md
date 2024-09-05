@@ -7,7 +7,14 @@ browser-compat: css.properties.color-scheme
 
 {{CSSRef}}
 
-The **`color-scheme`** [CSS](/en-US/docs/Web/CSS) property allows an element to indicate which color schemes it can comfortably be rendered in.
+The **`color-scheme`** [CSS](/en-US/docs/Web/CSS) property allows an element to indicate which color schemes it can comfortably be rendered in. User agents change the following aspects of the browser-controlled UI to match the used color scheme:
+
+- the color of the canvas surface
+- the default colors of scrollbars and other interaction UI
+- the default colors of form controls
+- the default colors of other browser-provided UI, such as "spellcheck" underlines
+
+Component authors must use [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) media query to support the color schemes on reset of the elements.
 
 Common choices for operating system color schemes are "light" and "dark", or "day mode" and "night mode". When a user selects one of these color schemes, the operating system makes adjustments to the user interface. This includes [form controls](/en-US/docs/Learn/Forms), [scrollbars](/en-US/docs/Web/CSS/CSS_scrollbars_styling), and the used values of [CSS system colors](/en-US/docs/Web/CSS/CSS_colors).
 
@@ -35,11 +42,11 @@ The `color-scheme` property's value must be one of the following keywords.
 ### Values
 
 - `normal`
-  - : Indicates that the element isn't aware of any color schemes, and so should be rendered using the browser's default color scheme.
+  - : If [page's supported color schems](/en-US/docs/Web/HTML/Element/meta/name#color-scheme) are set then the value indicates that the element supports the page's color schemes. If the page's color scheme is not set, the element does not support any color scheme.
 - `light`
-  - : Indicates that the element can be rendered using the operating system light color scheme.
+  - : Indicates that the element can be rendered using the operating system _light_ color scheme.
 - `dark`
-  - : Indicates that the element can be rendered using the operating system dark color scheme.
+  - : Indicates that the element can be rendered using the operating system _dark_ color scheme.
 - `only`
 
   - : Forbids the user agent from overriding the color scheme for the element.
