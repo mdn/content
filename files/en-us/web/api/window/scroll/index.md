@@ -27,7 +27,7 @@ scroll(options)
   - : The pixel along the vertical axis of the document that you
     want displayed in the upper left.
 - `options`
-  - : An object containing the following parameters:
+  - : An object containing the following properties:
     - `top`
       - : Specifies the number of pixels along the Y axis to scroll the window or element.
     - `left`

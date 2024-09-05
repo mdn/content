@@ -27,7 +27,7 @@ scrollBy(options)
   - : The vertical pixel value that you want to scroll
     by.
 - `options`
-  - : An object containing the following parameters:
+  - : An object containing the following properties:
     - `top`
       - : Specifies the number of pixels along the Y axis to scroll the window or element.
     - `left`
