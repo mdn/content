@@ -60,7 +60,7 @@ A common navigation technique for users of screen reading software is to quickly
 
 #### Nesting
 
-Headings may be nested as subsections to reflect the organization of the content of the page. Most screen readers can also generate an ordered list of all the headings on a page, which can help a person quickly determine the hierarchy of the content.
+Headings may be nested as subsections to reflect the organization of the content of the page. Most screen readers can also generate an ordered list of all the headings on a page, which can help a person quickly determine the content hierarchy and navigate to different headings.
 
 Given the following page structure:
 
