@@ -13,7 +13,7 @@ The **Sec-WebSocket-Extensions** HTTP {{glossary("request header", "request")}} 
 In a request the header specifies one or more extensions that the web application would like to use, in order of preference.
 These can be added as in multiple headers, or as comma separate values added to a single header.
 
-In a response the header can only appear once, where it specifies the extension selected by the server.
+In a response the header can only appear once, where it specifies the extension selected by the server from the client's preferences.
 This value must be the first extension that the server supports from the list provided in the request header.
 
 <table class="properties">
@@ -52,7 +52,7 @@ Sec-WebSocket-Extensions: <selected-extension>
 
 ## Examples
 
-The HTTP request below shows the opening handshake where a client supports the superspeed and colormode extensions.
+The HTTP request below shows the opening handshake where a client supports the `permessage-deflate` and `client_max_window_bits` extensions.
 
 ```http
 GET /chat HTTP/1.1
@@ -61,7 +61,7 @@ Upgrade: websocket
 Connection: Upgrade
 Sec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==
 Sec-WebSocket-Version: 13
-Sec-WebSocket-Extensions: superspeed, colormode; depth=16
+Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
 ```
 
 The request below with separate headers for each extension is equivalent:
@@ -73,18 +73,18 @@ Upgrade: websocket
 Connection: Upgrade
 Sec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==
 Sec-WebSocket-Version: 13
-Sec-WebSocket-Extensions: superspeed
-Sec-WebSocket-Extensions: colormode; depth=16
+Sec-WebSocket-Extensions: permessage-deflate
+Sec-WebSocket-Extensions: client_max_window_bits
 ```
 
-The response below might be sent from a server to indicate that it will support the `superspeed` extension:
+The response below might be sent from a server to indicate that it will support the `permessage-deflate` extension:
 
 ```http
 HTTP/1.1 101 Switching Protocols
 Upgrade: websocket
 Connection: Upgrade
 Sec-WebSocket-Accept: s3pPLMBiTxaQ9kYGzzhZRbK+xOo=
-Sec-WebSocket-Extensions: superspeed
+Sec-WebSocket-Extensions: permessage-deflate
 ```
 
 ## Specifications

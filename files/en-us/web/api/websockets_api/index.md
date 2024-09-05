@@ -33,12 +33,14 @@ The HTTP headers are used in the [WebSocket handshake](/en-US/docs/Web/API/WebSo
   - : An HTTP {{glossary("response header")}} used in the _WebSocket opening handshake_ to indicate that the server is willing to upgrade to a WebSocket connection.
     The value in the directive is calculated from the value of `Sec-WebSocket-Key` in the corresponding request.
 - {{HTTPHeader("Sec-WebSocket-Version")}}
-  - : An HTTP header that indicates the version of the WebSocket protocol understood by the client in requests.
-    In responses, the presence of the header indicates that the requested version is not supported by the server, and lists the versions that it does support.
+  - : An HTTP header that in requests indicates the version of the WebSocket protocol understood by the client.  
+    In responses, it is sent only if the requested protocol version is not supported by the server, and lists the versions that the server supports.
 - {{HTTPHeader("Sec-WebSocket-Protocol")}}
-  - : An HTTP header that indicates the sub-protocols supported by the client in requests, and in responses the sub-protocol selected by the server.
+  - : An HTTP header that in requests indicates the sub-protocols supported by the client in preferred order.
+    In responses, it indicates the the sub-protocol selected by the server from the client's preferences.  
 - {{HTTPHeader("Sec-WebSocket-Extensions")}}
-  - : An HTTP header that indicates protocol-level WebSocket extensions supported by the client in requests, and in responses the extension selected by the server.
+  - : An HTTP header that in requests indicates the WebSocket extensions supported by the client in preferred order.
+    In responses, it indicates the extension selected by the server from the client's preferences.
 
 ## Guides
 

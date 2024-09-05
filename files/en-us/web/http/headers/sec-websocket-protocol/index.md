@@ -75,7 +75,7 @@ Sec-WebSocket-Protocol: soap
 Sec-WebSocket-Protocol: wamp
 ```
 
-The response from the server will include the `Sec-WebSocket-Protocol` header, selecting the first sub-protocol that it supports.
+The response from the server will include the `Sec-WebSocket-Protocol` header, selecting the first sub-protocol that it supports from the client's preferences.
 Below that is shown as `soap`:
 
 ```http

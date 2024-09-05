@@ -15,8 +15,8 @@ The current version of the protocol at time of writing is 13.
 The header is automatically added to requests by user agents when a {{domxref("WebSocket")}} connection is established.
 
 The server uses the version to determine if it can understand the protocol.
-If the server doesn't support the version, or any header in the handshake is not understood or has an incorrect value, the server should send a response with status {{httpstatus("400")}} ("Bad Request") and immediately close the socket.
-In this case it should also include `Sec-WebSocket-Version` in the response, listing the versions that it does support.
+If the server doesn't support the version, or any header in the handshake is not understood or has an incorrect value, the server should send a response with status {{httpstatus("400", "400 Bad Request")}} and immediately close the socket.
+It should also include `Sec-WebSocket-Version` in the `400` response, listing the versions that it does support.
 The versions can be specified in individual headers, or as comma-separate values in a single header.
 
 The header should not be sent in responses if the server understands the version specified by the client.

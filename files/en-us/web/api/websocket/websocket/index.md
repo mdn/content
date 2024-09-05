@@ -31,7 +31,7 @@ new WebSocket(url, protocols)
     If it is omitted, an empty array is used by default, i.e. `[]`.
 
     A single server can implement multiple WebSocket sub-protocols, and handle different types of interactions depending on the specified value.
-    Note however that only one sub-protocol can be selected.
+    Note however that only one sub-protocol can be selected per connection.
 
     The allowed values are those that can be specified in the {{httpheader("Sec-WebSocket-Protocol")}} HTTP header.
     These are values selected from the [IANA WebSocket Subprotocol Name Registry](https://www.iana.org/assignments/websocket/websocket.xml#subprotocol-name), such as `soap`, `wamp`, `ship` and so on, or may be a custom name jointly understood by the client and the server.
