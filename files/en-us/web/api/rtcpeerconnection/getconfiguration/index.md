@@ -22,7 +22,7 @@ getConfiguration()
 
 ### Parameters
 
-This method takes no input parameters.
+None.
 
 ### Return value
 
