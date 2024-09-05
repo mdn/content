@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.btoa
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{AvailableInWorkers("worker")}}
 
 The **`btoa()`** method of the {{domxref("WorkerGlobalScope")}} interface creates a
 {{glossary("Base64")}}-encoded {{Glossary("ASCII")}} string from a _binary string_ (i.e., a
@@ -75,7 +75,7 @@ For how to work around this limitation when dealing with arbitrary Unicode text,
 ## See also
 
 - [A polyfill of `btoa`](https://github.com/zloirock/core-js#base64-utility-methods) is available in [`core-js`](https://github.com/zloirock/core-js)
-- [`data` URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)
+- [`data` URLs](/en-US/docs/Web/URI/Schemes/data)
 - {{domxref("WorkerGlobalScope.atob()")}}
 - {{domxref("Window.btoa()")}}: the same method, but in window scopes.
 - {{Glossary("Base64")}}

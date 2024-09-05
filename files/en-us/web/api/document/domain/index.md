@@ -39,7 +39,7 @@ The getter for this property returns the domain portion of the current document'
 origin. In most cases, this will be the hostname portion of the document's URL. However,
 there are some exceptions:
 
-- If the page has an opaque {{glossary("origin")}}, e.g. for a page with a [data URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs), then it will
+- If the page has an opaque {{glossary("origin")}}, e.g. for a page with a [data URL](/en-US/docs/Web/URI/Schemes/data), then it will
   return the empty string.
 - If the `document.domain` [setter](#setting_the_domain) has been used, then
   it will return the value that was set.
@@ -141,7 +141,7 @@ modern isolation features:
 Finally, setting `document.domain` does not change the origin used for
 origin-checks by some Web APIs, preventing sub-domain access via this mechanism.
 Affected APIs include (but are not limited to):
-{{domxref("Window.localStorage")}}, [IndexDB API](/en-US/docs/Web/API/IndexedDB_API), {{domxref("BroadcastChannel")}}, {{domxref("SharedWorker")}} .
+{{domxref("Window.localStorage")}}, [IndexDB API](/en-US/docs/Web/API/IndexedDB_API), {{domxref("BroadcastChannel")}}, {{domxref("SharedWorker")}}.
 
 ## Specifications
 

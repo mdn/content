@@ -88,6 +88,10 @@ The `SVGAnimatedTransformList` interface is used for attributes which take a lis
 
 The `SVGAnimatedTransformList` interface doesn't provide any specific methods.
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

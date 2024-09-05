@@ -64,7 +64,7 @@ This will tend to be specific to the service provider, but in general it means c
 {{WebExtExamples("h2")}}
 
 > [!NOTE]
-> This API is based on Chromium's [`chrome.identity`](https://developer.chrome.com/docs/extensions/reference/identity/) API.
+> This API is based on Chromium's [`chrome.identity`](https://developer.chrome.com/docs/extensions/reference/api/identity) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

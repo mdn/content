@@ -48,8 +48,6 @@ Spelling out the acronym or abbreviation in full the first time it is used on a 
 
 Only include a `title` if expanding the abbreviation or acronym in the text is not possible. Having a difference between the announced word or phrase and what is displayed on the screen, especially if it's technical jargon the reader may not be familiar with, can be jarring.
 
-#### HTML
-
 ```html
 <p>
   JavaScript Object Notation (<abbr>JSON</abbr>) is a lightweight
@@ -57,9 +55,7 @@ Only include a `title` if expanding the abbreviation or acronym in the text is n
 </p>
 ```
 
-#### Result
-
-{{EmbedLiveSample("Accessibility_concerns")}}
+{{EmbedLiveSample("Accessibility")}}
 
 This is especially helpful for people who are unfamiliar with the terminology or concepts discussed in the content, people who are new to the language, and people with cognitive concerns.
 
