@@ -17,7 +17,7 @@ There are several reporting mechanisms available to developers within and around
    - The buyer's bidding logic JavaScript, available at the URL specified in the [`biddingLogicURL`](/en-US/docs/Web/API/Navigator.joinAdInterestGroup#biddingLogicURL) property passed into a `joinAdInterestGroup()` call, can contain a [`reportWin()`](#) function that serves to report an auction win to the buyer.
    - The seller's bidding logic JavaScript, available at the URL specified in the [`decisionLogicURL`](/en-US/docs/Web/API/Navigator.runAdAuction#decisionLogicURL) property passed into a `runAdAuction()` call, can contain a [`reportResult()`](#) function that report the auction results to the seller.
 
-2. Ad engagement: When the winning ad has been rendered inside a {{htmlelement("fencedframe")}} or {{htmlelement("iframe")}}, you can create reports in which data from the ad — such as clicks or impressions — is associated with Protected Audience API signals. In the case of `<iframe>` ads, this can be done directly from the `reportWin()`/`reportResult()` functions. In the case of `<fencedframe>` ads, communication between the frame and embedding origin is much more limited, so reporting is done via a specialised ad [beacon](/en-US/docs/Web/API/Beacon_API) set up via the {{domxref("InterestGroupScriptRunnerGlobalScope.registerAdBeacon", "registerAdBeacon()")}} method.
+2. Ad engagement: When the winning ad has been rendered inside a {{htmlelement("fencedframe")}} or {{htmlelement("iframe")}}, you can create reports in which data from the ad — such as clicks or impressions — is associated with Protected Audience API signals. This reporting is done via a specialised ad [beacon](/en-US/docs/Web/API/Beacon_API) set up via the {{domxref("InterestGroupScriptRunnerGlobalScope.registerAdBeacon", "registerAdBeacon()")}} method.
 
 3. Conversion attribution: When a user has clicked the winning ad (or interacted with it in some other way), it is useful for the buyer to be able to measure conversions — for example, did the user later go on to view or purchase the advertised product on the buyer's main site? To provide this functionality, the ad beacon can be [registered as an attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources), allowing the conversions to be reported via the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API).
 
@@ -81,7 +81,7 @@ function reportResult(auctionConfig, browserSignals) {
 This function takes the following arguments:
 
 - `auctionConfig`
-  - : A copy of the options object
+  - : A copy of the options object originally passed into the originating `runAdAuction()` call.
 - `browserSignals`
   - : An object created by the browser, containing information such as the URLs of the top-level calling host, group owner, ad to render, etc.
 
@@ -94,17 +94,150 @@ This mechanism is useful, as it gives the seller a chance to pass some data to t
 > [!NOTE]
 > This example contains a limited subset of the available arguments. For more information, see the [`reportResult()`](#) reference page.
 
-Other things to cover:
+## Reporting ad engagement
 
-- https://developer.mozilla.org/en-US/docs/Web/API/Fence/reportEvent
-  undefined sendReportTo(DOMString url);
-  undefined registerAdBeacon(record<DOMString, USVString> map);
-  undefined registerAdMacro(DOMString name, USVString value);
+After an ad has been displayed, it is useful to gather data on how many times the ad is interacted with (for example via a click). The Protected Audience API enables this data to be collected and associated with signals from the seller, buyer, etc.
 
-  also engagement report, whatever that is
+There are a couple of problems to overcome. The ad is rendered _after_ the auction finishes, therefore the auction signals will not be available at that time. Information from the two different times needs to be associated together. In addition, content embedded inside {{htmlelement("fencedframe")}} elements cannot communicate with the embedding document.
 
-  mention attribution reporting api for conversion data when ad is clicked.
+To overcome these problems, the reporting process is set up in two steps:
 
-  Things not to cover:
+1. Registering a specialised ad [beacon](/en-US/docs/Web/API/Beacon_API) to send your reporting data in response to a custom event occurring. This is done over in the reporting functions in the bidding/scoring logic.
+2. Later on, in the embedded ad code, triggering the custom event that will trigger the beacon to send the reporting data, and at the same time attaching its own data to the resulting request.
 
-  - All of the private aggregation API stuff, like the events, and using the contributeToHistogram() methos in biddingLogic(). Document that API separately.
+[EDITORIAL: In https://developers.google.com/privacy-sandbox/private-advertising/protected-audience-api/reporting, it says "The sendReportTo() function described above can be used to associate auction data with event-level data from an iframe", but no example is provided, and I don't understand how this could work. Do we need to cover this?]
+
+### Registering the ad beacon
+
+Inside the `reportWin()` and `reportResult()` author-defined functions, the browser makes available the {{domxref("InterestGroupScriptRunnerGlobalScope.registerAdBeacon", "registerAdBeacon()")}} method. This registers a specialised ad [beacon](/en-US/docs/Web/API/Beacon_API) to send your reporting data. The method accepts an object [map](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) as an argument, in which each property name is a string representing a type of event to respond to, each value is a reporting URL to send a request to in response to the event. You can include the signal data you wish to report as query parameters in the URL.
+
+Let's look at an example. Over in the buyer's bidding logic, we could include a `reportWin()` function like the following:
+
+```js
+function reportWin(auctionSignals, browserSignals) {
+  const { campaignId } = auctionSignals;
+
+  registerAdBeacon({
+    click: `${browserSignals.interestGroupOwner}/report/click?campaignId=${campaignId}`,
+  });
+}
+```
+
+This registers an ad beacon that will send a request to the buyer's reporting server location when a click occurs on the ad. The first part of the URL is determined from the `interestGroupOwner` property available in the [`browserSignals`](#) argument passed into `reportWin()`. The data being sent in the URL params is a unique campaign ID available in the [`auctionSignals`](#) argument. The `campaignId` will have been set in the [`auctionSignals`](/en-US/docs/Web/API/Navigator.runAdAuction#auctionSignals) property passed into the `runAdAuction()` call that started off the auction process.
+
+We can also report this campaign ID to the seller when the ad is clicked in a very similar way:
+
+```js
+function reportResult(auctionConfig) {
+  const { campaignId } = auctionConfig.auctionSignals;
+
+  registerAdBeacon({
+    click: `${auctionConfig.seller}/report/click?campaignId=${campaignId}`,
+  });
+}
+```
+
+In this case, the server address URL portion and the `campaignId` are retrieved from the `auctionConfig` argument, which contains a copy of the options object originally passed into the originating `runAdAuction()` call.
+
+### Triggering the custom event
+
+Inside the `<fencedframe>` or `<iframe>` code, the custom event is triggered using the {{domxref("Fence.reportEvent()")}} method. A basic example looks like so:
+
+```js
+adElement.addEventListener("click", () => {
+  window.fence.reportEvent({
+    eventType: "click",
+    eventData: JSON.stringify({ clickX: "123", clickY: "456" }),
+    destination: ["buyer", "seller"],
+  });
+});
+```
+
+This casues the beacon to send a [`POST`](/en-US/docs/Web/HTTP/Methods/POST) request to the reporting URL. The arguments passed to this method are:
+
+- A string representing the custom event type being reported. This must match the event type specified in the `registerAdBeacon()` call to successfully trigger the beacon to send the request.
+- A string representing the data from the ad frame to include in the request payload sent by the beacon. Here we are providing the X and Y coordinates of the mouse click on the ad.
+- An array of strings representing the destinations with registered ad beacons that will receive the event. In this case we want the buyer and the seller to send report data via their beacons when the event is triggered.
+
+[EDITORIAL: How is the registered beacon associated with the ad frame, so when an event is triggered, the correct beacons send requests? Does this happen automagically in the browser somehow?]
+
+If the document calling `reportEvent()` is cross-origin to the to the origin of the fenced frame content (specified inside the associated {{domxref("FencedFrameConfig")}}), then both the fenced frame root and the cross-origin document need to opt-in:
+
+- To opt in the fenced frame root, serve it with an {{httpheader("Allow-Cross-Origin-Event-Reporting")}} response header.
+- To opt in the cross-origin document, include a `crossOriginExposed: true` property in the argument passed into its `reportEvent()` call.
+
+### Sending report data to a custom destination URL
+
+Sometimes you will want the `reportEvent()` call to trigger sending the report data to a custom URL, different to the one specific in `registerAdBeacon()`. This can be done by specifying a custom URL in the `reportEvent()` call's [`destinationURL`](/en-US/docs/Web/API/Fence/reportEvent#destinationurl) property:
+
+```js
+window.fence.reportEvent({
+  eventType: "click",
+  eventData: JSON.stringify({ clickX: "123", clickY: "456" }),
+  destination: ["buyer", "seller"],
+  destinationURL: "http://some-other.example",
+});
+```
+
+The `destinationURL` can include substitution macros that are substituted with values registered by {{domxref("InterestGroupReportingScriptRunnerGlobalScope.registerAdMacro", "registerAdMacro()")}} calls inside the buyer's [`reportWin()`](#) reporting logic (this is not available inside the seller's [`reportResult()`](#) reporting logic). For example, you might want to include `PUBLISHER_ID` and `SOURCE_URL_ENC` values inside the `destinationURL`, which are defined inside `reportWin()`.
+
+You first need to register these values via `registerAdMacro()`:
+
+```js
+function reportWin(auctionSignals, browserSignals) {
+  const { campaignId } = auctionSignals;
+
+  registerAdBeacon({
+    click: `${browserSignals.interestGroupOwner}/report/click?campaignId=${campaignId}`,
+  });
+
+  registerAdMacro("PUBLISHER_ID", "123a");
+  registerAdMacro("SOURCE_URL_ENC", "http%3A%2F%2Fpub%2Eexample%2Fpage");
+}
+```
+
+You can then specify these inside the `destinationURL`:
+
+```js
+window.fence.reportEvent({
+  eventType: "click",
+  eventData: JSON.stringify({ clickX: "123", clickY: "456" }),
+  destination: ["buyer", "seller"],
+  destinationURL:
+    "http://some-other.example?cid=555&pub_id=${PUBLISHER_ID}&site=${SOURCE_URL_ENC}&t=123'",
+});
+```
+
+> [!NOTE]
+> The macro values must be URL-encoded (percent encoded). If either the macro name or value contains characters that are cannot be represented in URL-encoded strings, the `registerAdMacro()` call will fail with a `TypeError`.
+
+## Reporting conversions
+
+When a user has clicked the winning ad (or interacted with it in some other way), it is useful to be able to measure conversions — for example, did the user later go on to view or purchase the advertised product on the buyer's main site? The [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) is designed for this exact purpose, and can be integrated with Protected Audience API reporting like so:
+
+1. Call `registerAdBeacon()` in the reporting logic, like before, to register the ad beacon. However, this time specify the custom event as one of the keywords `reserved.top_navigation_start` or `reserved.top_navigation_commit`:
+
+   ```js
+   function reportWin(auctionSignals, browserSignals) {
+     const { campaignId } = auctionSignals;
+
+     registerAdBeacon({
+       "reserved.top_navigation_start": `${browserSignals.interestGroupOwner}/report/click?campaignId=${campaignId}`,
+       "reserved.top_navigation_commit": `${browserSignals.interestGroupOwner}/report/click?campaignId=${campaignId}`,
+     });
+   }
+   ```
+
+   A `reserved.top_navigation_start` beacon will be sent when a top-level navigation begins, whereas a `reserved.top_navigation_commit` beacon will be sent when the navigation successfully completes. Beacons registered with these event types will automatically send requests with a {{httpheader("Attribution-Reporting-Eligible")}}, meaning that they are eligible to be [registered as an attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources).
+
+2. Inside the `<fencedframe>` or `<iframe>` code, trigger the custom event using the {{domxref("Fence.setReportEventDataForAutomaticBeacons()")}} method:
+
+   ```js
+   window.fence.setReportEventDataForAutomaticBeacons({
+     eventType: "reserved.top_navigation_commit",
+     eventData: JSON.stringify({ clickX: "123", clickY: "456" }),
+     destination: ["buyer", "seller"],
+   });
+   ```
+
+[EDITORIAL: The explainer talked about the beacons being automatic, and browser-generated, in such cases, but I don't really get this. You still need to register the beacons using `registerAdBeacon()`, so how are thay automatic?]
