@@ -16,6 +16,8 @@ These can be added as in multiple headers, or as comma separate values added to 
 In a response the header can only appear once, where it specifies the extension selected by the server from the client's preferences.
 This value must be the first extension that the server supports from the list provided in the request header.
 
+The request header is automatically added by the browser based on its own capabilities, and does not depend on parameters passed to the constructor when the `WebSocket` is created.
+
 <table class="properties">
   <tbody>
     <tr>
