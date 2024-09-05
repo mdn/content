@@ -58,7 +58,9 @@ Below is a list of all of the attributes available in SVG along with links to re
 ### D
 
 - {{SVGAttr("d")}}
+- {{SVGAttr("data-*")}}
 - {{SVGAttr("decelerate")}}
+- {{SVGAttr("decoding")}}
 - {{SVGAttr("descent")}}
 - {{SVGAttr("diffuseConstant")}}
 - {{SVGAttr("direction")}}
@@ -117,6 +119,7 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("hreflang")}}
 - {{SVGAttr("horiz-adv-x")}}
 - {{SVGAttr("horiz-origin-x")}}
+- {{SVGAttr("horiz-origin-y")}}
 
 ### I
 
@@ -228,6 +231,7 @@ Below is a list of all of the attributes available in SVG along with links to re
 - {{SVGAttr("scale")}}
 - {{SVGAttr("seed")}}
 - {{SVGAttr("shape-rendering")}}
+- {{SVGAttr("side")}}
 - {{SVGAttr("slope")}}
 - {{SVGAttr("spacing")}}
 - {{SVGAttr("specularConstant")}}

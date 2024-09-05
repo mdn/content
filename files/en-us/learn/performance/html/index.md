@@ -153,7 +153,7 @@ You can also lazy load video content by using the `preload` attribute. For examp
 
 Giving `preload` a value of `none` tells the browser to not preload any of the video data before the user decides to play it, which is obviously good for performance. Instead, it will just show the image indicated by the `poster` attribute. Different browsers have different default video loading behavior, so it is good to be explicit.
 
-See [Lazy loading video](https://web.dev/articles/lazy-loading-video) on web.dev for detailed information.
+See [Fast playback with audio and video preload](https://web.dev/articles/fast-playback-with-preload) on web.dev for detailed information.
 
 ## Handling embedded content
 

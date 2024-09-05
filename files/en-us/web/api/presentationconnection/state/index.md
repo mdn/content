@@ -17,6 +17,10 @@ The **`state`** attribute reflects the [presentation connection](https://www.w3.
 - **`closed`**: The [presentation connection](https://www.w3.org/TR/presentation-api/#dfn-presentation-connection) has been closed or could not be opened. The connection may be reopened by calling [`reconnect()`](https://www.w3.org/TR/presentation-api/#dom-presentationrequest-reconnect). No communication is possible in this state.
 - **`terminated`**: The [receiving browsing context](https://www.w3.org/TR/presentation-api/#dfn-receiving-browsing-context) has terminated. Any [presentation connection](https://www.w3.org/TR/presentation-api/#dfn-presentation-connection) to that [presentation](https://www.w3.org/TR/presentation-api/#dfn-presentation) has also terminated and cannot be reopened. No communication is possible.
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

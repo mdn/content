@@ -76,8 +76,7 @@ _The `PerformanceTiming`_ _interface doesn't inherit any methods._
 
 ## Specifications
 
-This feature is no longer on track to become a standard, as the [Navigation Timing specification](https://w3c.github.io/navigation-timing/#obsolete) has marked it as deprecated.
-Use the {{domxref("PerformanceNavigationTiming")}} interface instead.
+{{Specifications}}
 
 ## Browser compatibility
 

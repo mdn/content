@@ -55,7 +55,7 @@ createReader()
 
 ##### Parameters
 
-None
+None.
 
 ##### Return value
 
@@ -247,7 +247,7 @@ removeRecursively()
 
 ##### Parameters
 
-None
+None.
 
 ##### Return value
 

@@ -1019,7 +1019,11 @@
         "VideoPlaybackQuality"
       ],
       "methods": ["HTMLVideoElement.getVideoPlaybackQuality()"],
-      "properties": ["VideoTrack.sourceBuffer", "TextTrack.sourceBuffer"],
+      "properties": [
+        "AudioTrack.sourceBuffer",
+        "VideoTrack.sourceBuffer",
+        "TextTrack.sourceBuffer"
+      ],
       "events": []
     },
     "MediaStream Recording": {
@@ -1716,6 +1720,13 @@
       "methods": [],
       "properties": [],
       "events": []
+    },
+    "URL Fragment Text Directives": {
+      "overview": ["URL Fragment Text Directives"],
+      "guides": ["/en-US/docs/Web/URI/Fragment/Text_fragments"],
+      "interfaces": ["FragmentDirective"],
+      "methods": [],
+      "properties": ["Document.fragmentDirective"]
     },
     "URL Pattern API": {
       "overview": ["URL Pattern API"],

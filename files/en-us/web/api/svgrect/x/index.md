@@ -3,6 +3,7 @@ title: "SVGRect: x property"
 short-title: x
 slug: Web/API/SVGRect/x
 page-type: web-api-instance-property
+browser-compat: api.SVGRect.x
 ---
 
 {{APIRef("SVG")}}
@@ -91,3 +92,11 @@ A \<coordinate> is a length in the user coordinate system that is the given dist
 ```
 
 {{EmbedLiveSample("Simple usage", "100%", "100")}}
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

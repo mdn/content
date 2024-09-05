@@ -27,7 +27,7 @@ An `@import` rule _must_ be defined at the top of the stylesheet, before any oth
 where:
 
 - _url_
-  - : Is a {{CSSxRef("&lt;string&gt;")}}, a `<url>`, or a {{CSSxRef("url")}} function representing the location of the resource to import. The URL may be absolute or relative.
+  - : Is a {{CSSxRef("string")}} or a {{cssxref("url_value", "&lt;url&gt;")}} type representing the location of the resource to import. The URL may be absolute or relative.
 - _list-of-media-queries_
   - : Is a comma-separated list of [media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries), which specify the media-dependent conditions for applying the CSS rules defined in the linked URL. If the browser does not support any of these queries, it does not load the linked resource.
 - _layer-name_

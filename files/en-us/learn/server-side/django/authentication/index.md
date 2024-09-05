@@ -30,7 +30,7 @@ In this tutorial, we'll show you how to allow users to log in to your site with 
 Django provides an authentication and authorization ("permission") system, built on top of the session framework discussed in the [previous tutorial](/en-US/docs/Learn/Server-side/Django/Sessions), that allows you to verify user credentials and define what actions each user is allowed to perform. The framework includes built-in models for `Users` and `Groups` (a generic way of applying permissions to more than one user at a time), permissions/flags that designate whether a user may perform a task, forms and views for logging in users, and view tools for restricting content.
 
 > [!NOTE]
-> According to Django the authentication system aims to be very generic, and so does not provide some features provided in other web authentication systems. Solutions for some common problems are available as third-party packages. For example, throttling of login attempts and authentication against third parties (e.g. OAuth).
+> According to Django the authentication system aims to be very generic, and so does not provide some features provided in other web authentication systems. Solutions for some common problems are available as third-party packages. For example, {{glossary("throttle", "throttling")}} of login attempts and authentication against third parties (e.g. OAuth).
 
 In this tutorial, we'll show you how to enable user authentication in the [LocalLibrary](/en-US/docs/Learn/Server-side/Django/Tutorial_local_library_website) website, create your own login and logout pages, add permissions to your models, and control access to pages. We'll use the authentication/permissions to display lists of books that have been borrowed for both users and librarians.
 

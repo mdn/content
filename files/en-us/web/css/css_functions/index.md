@@ -229,7 +229,7 @@ The {{CSSxRef("&lt;image&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_Types) 
 ### Image functions
 
 - {{CSSxRef("image/image","image()")}}
-  - : Defines an {{CSSxRef("&lt;image&gt;")}} in a similar fashion to the {{CSSxRef("url", "url()")}} function, but with added functionality including specifying the image's directionality and fallback images for when the preferred image is not supported.
+  - : Defines an {{CSSxRef("&lt;image&gt;")}} in a similar fashion to the {{cssxref("url_value", "&lt;url&gt;")}} type, but with added functionality including specifying the image's directionality and fallback images for when the preferred image is not supported.
 - {{CSSxRef("image/image-set","image-set()")}}
   - : Picks the most appropriate CSS image from a given set, primarily for high pixel density screens.
 - {{CSSxRef("cross-fade", "cross-fade()")}}
@@ -279,7 +279,7 @@ The following functions are used as a value of properties to reference a value d
   - : Uses the attributes defined on HTML element.
 - {{CSSxRef("env", "env()")}}
   - : Uses the user-agent defined as environment variable.
-- {{CSSxRef("url", "url()")}}
+- {{cssxref("url_value", "&lt;url&gt;")}}
   - : Uses a file from the specified URL.
 - {{CSSxRef("var", "var()")}}
   - : Uses the custom property value instead of any part of a value of another property.
