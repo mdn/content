@@ -18,9 +18,9 @@ The **`@custom-media`** CSS [at-rule](/en-US/docs/Web/CSS/At-rule) defines alias
 
 ### Values
 
--  _<extension-name>_
+- `<extension-name>`
   - : A name identifying the custom media.
-- _<media-query-list>_
+- `<media-query-list>`
   - : A comma-separated list of of _<media-query>_ values.
 
 ## Description
@@ -47,15 +47,12 @@ The `@custom-media` at-rule is used on responsive websites which use a particula
 @custom-media --narrow-window (max-width: 32em);
 
 @media (--narrow-window) {
-  /* narrow window styles */
 }
 
 @media (--narrow-window) and (hover) {
-  /* narrow window styles when hovering over elements */
 }
 
 @media (--narrow-window) and (orientation: portrait) {
-  /* narrow window styles for portrait orientation */
 }
 ```
 
@@ -83,12 +80,11 @@ By grouping all breakpoints in a single location, it's easier to control the res
 ### Complex queries with a list of quereis
 
 The custom media query is evaluated logically. For instance, the following code snippet:
- 
+
 ```css
 @custom-media --modern (color), (hover);
 
 @media (--modern) and (width > 1024px) {
-  .a { color: green; }
 }
 ```
 
@@ -96,7 +92,6 @@ Is equivalent to:
 
 ```css
 @media ( (color) or (hover) ) and (width > 1024px) {
-  .a { color: green; }
 }
 ```
 
@@ -104,7 +99,6 @@ The following would be incorrect:
 
 ```css
 @media (color), (hover) and (width > 1024px) {
-  .a { color: green; }
 }
 ```
 
