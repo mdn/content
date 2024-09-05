@@ -19,8 +19,10 @@ resizeBy(xDelta, yDelta)
 
 ### Parameters
 
-- `xDelta` is the number of pixels to grow the window horizontally.
-- `yDelta` is the number of pixels to grow the window vertically.
+- `xDelta`
+  - : The number of pixels to grow the window horizontally.
+- `yDelta`
+  - : The number of pixels to grow the window vertically.
 
 ### Return value
 
