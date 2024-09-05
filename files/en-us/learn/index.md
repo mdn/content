@@ -114,7 +114,8 @@ If you're interested in helping develop/improve the content, take a look at [how
 
 - [The Frontend Developer Career Path](https://v2.scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>_MDN Curriculum partner_</sup>
   - : [Scrimba's](https://scrimba.com?via=mdn) _Frontend Developer Career Path_ teaches all you need to know to be a competent front-end web developer, with fun interactive lessons and challenges, knowledgeable teachers, and a supportive community. Go from zero to landing your first front-end job! Many of the course components are available as standalone free versions.
-  - [Learn HTML] (https://programiz.pro/course/learn-html) Interactive HTML course to build a strong foundation in creating and structuring web content.
+- [Learn HTML](https://programiz.pro/course/learn-html)
+  - : Interactive HTML course to build a strong foundation in creating and structuring web content from Programiz PRO.
 - [Learn JavaScript](https://learnjavascript.online/)
   - : An excellent resource for aspiring web developers — Learn JavaScript in an interactive environment, with short lessons and interactive tests, guided by automated assessment. The first 40 lessons are free, and the complete course is available for a small one-time payment.
 - [Codecademy](https://www.codecademy.com/)
