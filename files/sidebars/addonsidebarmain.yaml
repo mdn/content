@@ -62,7 +62,7 @@ l10n:
     Channels: 渠道
     Blog: 附加组件博客
     Forums: 附加组件论坛
-    Contact_us: 联系我们
+    "#Contact_us": 联系我们
   es:
     WebExtensions: Extensiones de navegador
     Themes: Temas
