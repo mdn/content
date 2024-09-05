@@ -147,8 +147,7 @@ ul {
 ```css
 li::after {
   content: " - "
-    url("https://mdn.github.io/shared-assets/images/examples/star-white_16x16.png
-");
+    url("https://mdn.github.io/shared-assets/images/examples/star-white_16x16.png");
 }
 ```
 
