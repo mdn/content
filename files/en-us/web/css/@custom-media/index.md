@@ -21,7 +21,7 @@ The **`@custom-media`** CSS [at-rule](/en-US/docs/Web/CSS/At-rule) defines alias
 - `<extension-name>`
   - : A name identifying the custom media.
 - `<media-query-list>`
-  - : A comma-separated list of of _<media-query>_ values.
+  - : A comma-separated list of of `<media-query>` values.
 
 ## Description
 
@@ -91,7 +91,7 @@ The custom media query is evaluated logically. For instance, the following code 
 Is equivalent to:
 
 ```css
-@media ( (color) or (hover) ) and (width > 1024px) {
+@media ((color) or (hover)) and (width > 1024px) {
 }
 ```
 
