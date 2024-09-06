@@ -37,7 +37,7 @@ The the `u` (unicode) flag can be used allow the dot to match astral characters 
 Note that a pattern such as `.*` is still capable of _consuming_ astral characters as part of a larger context, even without the `u` flag.
 
 ```js
-"😄".match(/.*/s)
+"😄".match(/.*/s);
 // Array [ "😄" ]
 ```
 
