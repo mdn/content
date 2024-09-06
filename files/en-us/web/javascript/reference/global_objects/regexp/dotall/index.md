@@ -27,7 +27,7 @@ This effectively means the dot will match any UTF-16 code unit. However, it will
 // Array(3) [ "😄", "\ud83d", "\ude04" ]
 ```
 
-The the `u` (unicode) flag can be used allow the dot to match astral characters as a single character.
+The [`u`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) (unicode) flag can be used to allow the dot to match astral characters as a single character.
 
 ```js
 "😄".match(/./su);
