@@ -92,31 +92,6 @@ async function doSomething(action) {
 }
 ```
 
-### Calling try() on a non-Promise constructor
-
-`Promise.try()` is a generic method. It can be called on any constructor that implements the same signature as the `Promise()` constructor. For example, we can call it on a constructor that passes `console.log` as the `resolve` and `reject` functions to `executor`:
-
-```js
-class NotPromise {
-  constructor(executor) {
-    // The "resolve" and "reject" functions behave nothing like the native
-    // promise's, but Promise.try() just calls resolve
-    executor(
-      (value) => console.log("Resolved", value),
-      (reason) => console.log("Rejected", reason),
-    );
-  }
-}
-
-const p = Promise.try.call(NotPromise, () => "hello");
-// Logs: Resolved hello
-
-const p2 = Promise.try.call(NotPromise, () => {
-  throw new Error("oops");
-});
-// Logs: Rejected Error: oops
-```
-
 ## Specifications
 
 {{Specifications}}
