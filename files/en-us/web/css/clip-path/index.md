@@ -56,7 +56,7 @@ The `clip-path` property is specified as one or a combination of the values list
 ### Values
 
 - `<clip-source>`
-  - : A {{cssxref("url", "url()")}} referencing an [SVG](/en-US/docs/Web/SVG) {{SVGElement("clipPath")}} element.
+  - : A {{cssxref("url_value", "&lt;url&gt;")}} referencing an [SVG](/en-US/docs/Web/SVG) {{SVGElement("clipPath")}} element.
 - {{cssxref("&lt;basic-shape&gt;")}}
 
   - : A shape whose size and position is defined by the `<geometry-box>` value. If no geometry box is specified, the `border-box` will be used as the reference box. One of:

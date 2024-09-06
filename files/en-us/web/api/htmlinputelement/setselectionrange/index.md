@@ -29,16 +29,15 @@ setSelectionRange(selectionStart, selectionEnd, selectionDirection)
 
 ### Parameters
 
-If `selectionEnd` is less than `selectionStart`, then both are
-treated as the value of `selectionEnd`.
-
 - `selectionStart`
   - : The 0-based index of the first selected character. An index greater than the length
     of the element's value is treated as pointing to the end of the value.
 - `selectionEnd`
+
   - : The 0-based index of the character _after_ the last selected character. An
     index greater than the length of the element's value is treated as pointing to the end
-    of the value.
+    of the value. If `selectionEnd` is less than `selectionStart`, then both are treated as the value of `selectionEnd`.
+
 - `selectionDirection` {{optional_inline}}
 
   - : A string indicating the direction in which the selection is considered to have been
