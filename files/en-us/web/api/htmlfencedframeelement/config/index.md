@@ -10,7 +10,7 @@ browser-compat: api.HTMLFencedFrameElement.config
 
 {{SeeCompatTable}}{{APIRef("Fenced Frame API")}}
 
-The **`config`** property of the {{domxref("HTMLFencedFrameElement")}} contains a {{domxref("FencedFrameConfig")}} object, which represents the navigation of a {{htmlelement("fencedframe")}}, i.e. what content will be displayed in it. A `FencedFrameConfig` is returned from a source such as the [Protected Audience API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience).
+The **`config`** property of the {{domxref("HTMLFencedFrameElement")}} contains a {{domxref("FencedFrameConfig")}} object, which represents the navigation of a {{htmlelement("fencedframe")}}, i.e. what content will be displayed in it. A `FencedFrameConfig` is returned from a source such as the [Protected Audience API](/en-US/docs/Web/API/Protected_Audience_API).
 
 ## Value
 
@@ -23,7 +23,7 @@ When its value is set to a {{domxref("FencedFrameConfig")}} object instance, the
 
 ## Examples
 
-To set what content will be shown in a `<fencedframe>`, a utilizing API (such as [Protected Audience](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience) or [Shared Storage](https://developers.google.com/privacy-sandbox/private-advertising/shared-storage)) generates a {{domxref("FencedFrameConfig")}} object, which is then set as the value of the `<fencedframe>`'s `config` property.
+To set what content will be shown in a `<fencedframe>`, a utilizing API (such as [Protected Audience](/en-US/docs/Web/API/Protected_Audience_API) or [Shared Storage](/en-US/docs/Web/API/Shared_Storage_API)) generates a {{domxref("FencedFrameConfig")}} object, which is then set as the value of the `<fencedframe>`'s `config` property.
 
 The following example gets a `FencedFrameConfig` from a Protected Audience API's ad auction, which is then used to display the winning ad in a `<fencedframe>`:
 

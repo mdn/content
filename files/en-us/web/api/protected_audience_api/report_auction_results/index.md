@@ -8,9 +8,14 @@ status:
 
 {{SeeCompatTable}}{{securecontext_header}}{{DefaultAPISidebar("Protected Audience API")}}
 
-There are several reporting mechanisms available to developers within and around the [Protected Audience API](/en-US/docs/Web/API/Protected_Audience_API). These provide reports of auction results, ad engegement, and conversion attribution. This article explains how these different mechanaisms work.
+There are several reporting mechanisms available to developers within and around the [Protected Audience API](/en-US/docs/Web/API/Protected_Audience_API). These provide reports of auction results, ad engegement, and conversion attribution. This article explains how these different mechanisms work.
+
+> [!NOTE]
+> The event-level reporting mechanisms that exist in the Protected Audience API today are transition mechanisms. In the future, alternative solutions will be designed to better support existing use cases.
 
 ## Report mechanism summary
+
+There are several event-level reporting machansims:
 
 1. Auction results: When an in-browser [ad auction has been run](/en-US/docs/Web/API/Protected_Audience_API/Run_ad_auction), and a winning ad has been chosen, the results of the auction can be reported back to the seller and the winning buyer via author-defined functions located inside the seller's decision logic and the buyer's bidding logic.
 
@@ -20,6 +25,11 @@ There are several reporting mechanisms available to developers within and around
 2. Ad engagement: When the winning ad has been rendered inside a {{htmlelement("fencedframe")}} or {{htmlelement("iframe")}}, you can create reports in which data from the ad — such as clicks or impressions — is associated with Protected Audience API signals. This reporting is done via a specialised ad [beacon](/en-US/docs/Web/API/Beacon_API) set up via the {{domxref("InterestGroupScriptRunnerGlobalScope.registerAdBeacon", "registerAdBeacon()")}} method.
 
 3. Conversion attribution: When a user has clicked the winning ad (or interacted with it in some other way), it is useful for the buyer to be able to measure conversions — for example, did the user later go on to view or purchase the advertised product on the buyer's main site? To provide this functionality, the ad beacon can be [registered as an attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources), allowing the conversions to be reported via the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API).
+
+In addition, the [Private Aggregation API](https://developers.google.com/privacy-sandbox/private-advertising/private-aggregation) can be used to generate summary reports from Protected Audience data.
+
+> [!NOTE]
+> A summary report differs from an event-level report in that it doesn't reveal information about each individual event. For example, with an event-level report, you can determine that users A, B and C have seen ad campaign A. With summary reports, you can measure the number of users that have seen campaign A and [noise](https://developers.google.com/privacy-sandbox/private-advertising/aggregation-service#noise-scale) is added to protect user privacy.
 
 ## Reporting auction results
 
@@ -161,7 +171,7 @@ This casues the beacon to send a [`POST`](/en-US/docs/Web/HTTP/Methods/POST) req
 
 [EDITORIAL: How is the registered beacon associated with the ad frame, so when an event is triggered, the correct beacons send requests? Does this happen automagically in the browser somehow?]
 
-If the document calling `reportEvent()` is cross-origin to the to the origin of the fenced frame content (specified inside the associated {{domxref("FencedFrameConfig")}}), then both the fenced frame root and the cross-origin document need to opt-in:
+If the document calling `reportEvent()` is cross-origin to the to the origin of the fenced frame root (specified inside the associated {{domxref("FencedFrameConfig")}}), then both the fenced frame root and the cross-origin document need to opt-in:
 
 - To opt in the fenced frame root, serve it with an {{httpheader("Allow-Cross-Origin-Event-Reporting")}} response header.
 - To opt in the cross-origin document, include a `crossOriginExposed: true` property in the argument passed into its `reportEvent()` call.
@@ -215,7 +225,7 @@ window.fence.reportEvent({
 
 When a user has clicked the winning ad (or interacted with it in some other way), it is useful to be able to measure conversions — for example, did the user later go on to view or purchase the advertised product on the buyer's main site? The [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) is designed for this exact purpose, and can be integrated with Protected Audience API reporting like so:
 
-1. Call `registerAdBeacon()` in the reporting logic, like before, to register the ad beacon. However, this time specify the custom event as one of the keywords `reserved.top_navigation_start` or `reserved.top_navigation_commit`:
+1. Call `registerAdBeacon()` in the reporting logic, like before, to register the ad beacon. However, this time specify the custom event as one of the automatic event types `reserved.top_navigation_start` or `reserved.top_navigation_commit`:
 
    ```js
    function reportWin(auctionSignals, browserSignals) {
@@ -228,9 +238,9 @@ When a user has clicked the winning ad (or interacted with it in some other way)
    }
    ```
 
-   A `reserved.top_navigation_start` beacon will be sent when a top-level navigation begins, whereas a `reserved.top_navigation_commit` beacon will be sent when the navigation successfully completes. Beacons registered with these event types will automatically send requests with a {{httpheader("Attribution-Reporting-Eligible")}}, meaning that they are eligible to be [registered as an attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources).
+   A `reserved.top_navigation_start` beacon will be sent when a top-level navigation begins, whereas a `reserved.top_navigation_commit` beacon will be sent when the navigation successfully completes. Beacons registered with these event types will automatically send requests with a {{httpheader("Attribution-Reporting-Eligible")}} header, meaning that they are eligible to be [registered as an attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources).
 
-2. Inside the `<fencedframe>` or `<iframe>` code, trigger the custom event using the {{domxref("Fence.setReportEventDataForAutomaticBeacons()")}} method:
+2. Inside the `<fencedframe>` or `<iframe>` code, specify the automatic event type, event data, and destination(s) using the {{domxref("Fence.setReportEventDataForAutomaticBeacons()")}} method:
 
    ```js
    window.fence.setReportEventDataForAutomaticBeacons({
@@ -240,4 +250,24 @@ When a user has clicked the winning ad (or interacted with it in some other way)
    });
    ```
 
-[EDITORIAL: The explainer talked about the beacons being automatic, and browser-generated, in such cases, but I don't really get this. You still need to register the beacons using `registerAdBeacon()`, so how are thay automatic?]
+## Generating summary reports
+
+The [Private Aggregation API](https://developers.google.com/privacy-sandbox/private-advertising/private-aggregation) can be used to generate summary reports from Protected Audience data. Summary reports are noisy, aggregated reports, with the associated data collected in buckets. A bucket is represented by an aggregation key, and information can be encoded into the key. For example, you could record the number of ad impression events occuring for different ad campaigns, geographic territories, or user statuses into different buckets.
+
+You can aggregate the signals available within script runners to your server using the {{domxref("PrivateAggregation.contributeToHistogram()")}} method. This is available in the buyer bidding logic, seller scoring logic, and the buyer/seller reporting logic.
+
+In the example below, the winning bid is aggregated into an interest group owner bucket:
+
+```js
+function convertBuyerToBucket(igOwner) {}
+function convertWinningBidToValue(winningBid) {}
+
+function reportResult(auctionConfig, browserSignals) {
+  privateAggregation.contributeToHistogram({
+    bucket: convertBuyerToBucket(browserSignals.interestGroupOwner),
+    value: convertWinningBidToValue(browserSignals.bid),
+  });
+}
+```
+
+Until the Private Aggregation API is documented on MDN, see the [Private Aggregation API explainer](https://github.com/patcg-individual-drafts/private-aggregation-api) for more information on this API.

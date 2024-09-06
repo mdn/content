@@ -10,7 +10,7 @@ status:
 
 This article explains how to use the [Protected Audience API](/en-US/docs/Web/API/Protected_Audience_API) to add a user's browser to an advertising **interest group**.
 
-Later on, when the same user visits a site that could potentially display ads related to that interest group, the Protected Audience API can be used to [run an ad auction](/en-US/docs/Web/API/Protected_Audience_API/Run_ad_auction) to choose the most relevant ad to display to them based on that interest. If the interest group own is invited to bid in the auction, they will have one of their ads displayed, should they win.
+Later on, when the same user visits a site that could potentially display ads related to that interest group, the Protected Audience API can be used to [run an ad auction](/en-US/docs/Web/API/Protected_Audience_API/Run_ad_auction) to choose the most relevant ad to display to them based on that interest. If the interest group owner is invited to bid in the auction, they will have one of their ads displayed, should they win.
 
 ## Process summary
 

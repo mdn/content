@@ -74,7 +74,7 @@ Without this title, they have to navigate into the `<iframe>` to determine what 
 
 ## Examples
 
-To set what content will be shown in a `<fencedframe>`, a utilizing API (such as [Protected Audience](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience) or [Shared Storage](https://developers.google.com/privacy-sandbox/private-advertising/shared-storage)) generates a {{domxref("FencedFrameConfig")}} object, which is then set as the value of the `<fencedframe>`'s `config` property.
+To set what content will be shown in a `<fencedframe>`, a utilizing API (such as [Protected Audience](/en-US/docs/Web/API/Protected_Audience_API) or [Shared Storage](/en-US/docs/Web/API/Shared_Storage_API)) generates a {{domxref("FencedFrameConfig")}} object, which is then set as the value of the `<fencedframe>`'s `config` property.
 
 The following example gets a `FencedFrameConfig` from a Protected Audience API's ad auction, which is then used to display the winning ad in a `<fencedframe>`:
 
@@ -160,4 +160,4 @@ frame.config = frameConfig;
 
 - [Fenced Frame API](/en-US/docs/Web/API/Fenced_frame_API)
 - [Fenced frames](https://developers.google.com/privacy-sandbox/private-advertising/fenced-frame) on developers.google.com
-- [The Privacy Sandbox](https://developers.google.com/privacy-sandbox) on developers.google.com
+- [The Privacy Sandbox](/en-US/docs/Web/Privacy/Privacy_sandbox)

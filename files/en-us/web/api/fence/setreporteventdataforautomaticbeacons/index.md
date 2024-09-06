@@ -11,9 +11,9 @@ browser-compat: api.Fence.setReportEventDataForAutomaticBeacons
 {{SeeCompatTable}}{{APIRef("Fenced Frame API")}}
 
 The **`setReportEventDataForAutomaticBeacons()`** method of the
-{{domxref("Fence")}} interface specifies event data that will be sent when a navigation occurs inside a {{htmlelement("fencedframe")}}. This data will be sent via an [beacon](/en-US/docs/Web/API/Beacon_API) to one or more specific URLs registered via the {{domxref("InterestGroupReportingScriptRunnerGlobalScope.registerAdBeacon", "registerAdBeacon()")}} method of the [Protected Audience API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience), for the purpose of collecting reporting data for ad auction results.
+{{domxref("Fence")}} interface specifies event data that will be sent when an automatic event (such as a navigation) occurs inside a {{htmlelement("fencedframe")}}. This data will be sent via an ad [beacon](/en-US/docs/Web/API/Beacon_API) to one or more specific URLs registered via the {{domxref("InterestGroupReportingScriptRunnerGlobalScope.registerAdBeacon", "registerAdBeacon()")}} method of the [Protected Audience API](/en-US/docs/Web/API/Protected_Audience_API), for the purpose of collecting reporting data for ad auction results.
 
-> **Note:** {{domxref("Fence.reportEvent", "reportEvent()")}} provides similar report data submission, except in that case the submission is triggered via an explicit method call rather than a navigation.
+> **Note:** {{domxref("Fence.reportEvent", "reportEvent()")}} provides similar report data submission, except in that case the event is triggered via an explicit method call, rather than being automatic.
 
 ## Syntax
 
@@ -26,9 +26,9 @@ setReportEventDataForAutomaticBeacons(event)
 - `event`
   - : an object representing the data to send. The possible properties are as follows:
     - `eventType`
-      - : A string representing the type of event that is being reported. The available values are:
-        - `reserved.top_navigation_start`: An event fired when a top-level navigation begins.
-        - `reserved.top_navigation_commit`: An event fired when a top-level navigation completes.
+      - : A string representing the type of automatic event that is being responded to. The available values are:
+        - `reserved.top_navigation_start`: When a top-level navigation begins.
+        - `reserved.top_navigation_commit`: When a top-level navigation completes.
     - `eventData`
       - : A string representing the data to be sent.
     - `destination`
@@ -39,7 +39,7 @@ setReportEventDataForAutomaticBeacons(event)
         - `"direct-seller"`: The seller that directly ran the auction the buyer bid in. If the ad was a single-level auction, the value used will be `"seller"`. If the ad was a multi-level auction, the value used will be `"component-seller"`.
         - `"shared-storage-select-url"`: A [Shared Storage API](https://developers.google.com/privacy-sandbox/private-advertising/shared-storage) storage location, as defined in a {{domxref("WindowSharedStorage.selectURL", "Window.sharedStorage.selectURL()")}} method call.
     - `once` {{optional_inline}}
-      - : A boolean value. If set to `true`, the beacon will only be sent for the next event, and beacons will not be sent for subsequent events until `setReportEventDataForAutomaticBeacons()` is invoked again. For example, when used with a `click` handler this can be used to send beacon data only for specific top-level navigations, rather than for every top-level navigation. This property defaults to `false`.
+      - : A boolean value. If set to `true`, the beacon will only be sent for the next automatic event, and beacons will not be sent for subsequent events until `setReportEventDataForAutomaticBeacons()` is invoked again. For example, when used with a `reserved.top_navigation_start` event this can be used to send beacon data only for the first top-level navigation start, rather than for every instance. This property defaults to `false`.
 
 ### Return value
 

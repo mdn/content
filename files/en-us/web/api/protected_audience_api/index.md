@@ -150,7 +150,7 @@ When auctions complete, and ads are chosen, {{htmlelement("fencedframe")}} eleme
 
 ## Enrollment and local testing
 
-To use the Protected Audience API in your sites, you must specify it in the [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment). If you don't do this, the API flow is blocked at response time, i.e. {{domxref("Navigator.joinAdInterestGroup()")}}, {{domxref("Navigator.leaveAdInterestGroup()")}}, {{domxref("Navigator.clearOriginJoinedAdInterestGroups()")}}, {{domxref("Navigator.runAdAuction()")}}, {{domxref("ForDebuggingOnly.reportAdAuctionWin()")}}, {{domxref("ForDebuggingOnly.reportAdAuctionLoss()")}}, and `sendReportTo()` calls will fail.
+To use the Protected Audience API in your sites, you must specify participating origins (for example group owner, seller, and reporting URLs) in the [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Privacy_sandbox/Enrollment). If you don't do this, the API flow is blocked at response time, i.e. {{domxref("Navigator.joinAdInterestGroup()")}}, {{domxref("Navigator.leaveAdInterestGroup()")}}, {{domxref("Navigator.clearOriginJoinedAdInterestGroups()")}}, {{domxref("Navigator.runAdAuction()")}}, {{domxref("ForDebuggingOnly.reportAdAuctionWin()")}}, {{domxref("ForDebuggingOnly.reportAdAuctionLoss()")}}, and `sendReportTo()` calls will fail.
 
 You can still test your Protected Audience API code locally without enrollment. To allow local testing, enable the following Chrome developer flag:
 

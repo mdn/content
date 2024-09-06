@@ -11,7 +11,7 @@ browser-compat: api.FencedFrameConfig.setSharedStorageContext
 {{APIRef("Fenced Frame API")}}{{SeeCompatTable}}
 
 The **`setSharedStorageContext()`** method of the
-{{domxref("FencedFrameConfig")}} interface passes in contextual data from the embedding document to the `<fencedframe>`'s [shared storage](https://developers.google.com/privacy-sandbox/private-advertising/shared-storage).
+{{domxref("FencedFrameConfig")}} interface passes in contextual data from the embedding document to the `<fencedframe>`'s [shared storage](/en-US/docs/Web/API/Shared_Storage_API).
 
 ## Syntax
 
@@ -32,9 +32,9 @@ None (`Undefined`).
 
 ### Passing contextual data via `setSharedStorageContext()`
 
-You can use the [Private Aggregation API](https://developers.google.com/privacy-sandbox/private-advertising/private-aggregation) to create reports that combine event-level data inside fenced frames with contextual data from the embedding document. `setSharedStorageContext()` can be used to pass contextual data from the embedder to shared storage worklets initiated by the [Protected Audience API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience).
+You can use the [Private Aggregation API](https://developers.google.com/privacy-sandbox/private-advertising/private-aggregation) to create reports that combine event-level data inside fenced frames with contextual data from the embedding document. `setSharedStorageContext()` can be used to pass contextual data from the embedder to shared storage worklets initiated by the [Protected Audience API](/en-US/docs/Web/API/Protected_Audience_API).
 
-In the following example, we store data from both the embedding page and the fenced frame in [shared storage](https://developers.google.com/privacy-sandbox/private-advertising/shared-storage).
+In the following example, we store data from both the embedding page and the fenced frame in [shared storage](/en-US/docs/Web/API/Shared_Storage_API).
 
 In the embedding page, we will set a mock event ID as the shared storage context using `setSharedStorageContext()`:
 
