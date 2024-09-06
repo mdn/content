@@ -112,7 +112,7 @@ We start by defining the named cascade layers, prior to using them, without any 
 
 #### Assigning rules to layers with nesting
 
-Here the `.foo` selector assigns its rules to the **base** `@layer`. The nested **support** `@layer` creates the `base.support` sub-layer, and the `&` nesting selector is used to create the rules for the `.foo .bar` selector .
+Here the `.foo` selector assigns its rules to the **base** `@layer`. The nested **support** `@layer` creates the `base.support` sub-layer, and the `&` nesting selector is used to create the rules for the `.foo .bar` selector.
 
 ```css
 .foo {

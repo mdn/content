@@ -27,9 +27,7 @@ t.border = "2";
 
 ## Specifications
 
-W3C DOM 2 HTML Specification [_HTMLTableElement.border_](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-50969400).
-
-This attribute is deprecated in HTML 4.0.
+{{Specifications}}
 
 ## Browser compatibility
 

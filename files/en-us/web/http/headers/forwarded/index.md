@@ -2,7 +2,7 @@
 title: Forwarded
 slug: Web/HTTP/Headers/Forwarded
 page-type: http-header
-browser-compat: http.headers.Forwarded
+spec-urls: https://datatracker.ietf.org/doc/html/rfc7239
 ---
 
 {{HTTPSidebar}}
