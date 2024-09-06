@@ -75,6 +75,10 @@ These features are newly shipped in Firefox 131 but are disabled by default. To 
 
   The [(?ims-ims:...)](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Modifier) regular expression modifiers allow you to make changes to only take effect in a specific part of a regex pattern. ([Firefox bug 1899813](https://bugzil.la/1899813)).
 
+- **Permissions for microphone and camera:** `permissions.media.query.enabled`
+
+  The `microphone` and `camera` [permissions](/en-US/docs/Web/API/Permissions_API) can now be used in the {{domxref("Permissions.query()")}} method to test whether access to the corresponding hardware have been granted, denied, or still requires user approval ([Firefox bug 1609427](https://bugzil.la/1609427), [Firefox bug 1915222](https://bugzil.la/1915222)).
+
 ## Older versions
 
 {{Firefox_for_developers}}
