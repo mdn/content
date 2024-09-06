@@ -17,7 +17,7 @@ Once the form data has been validated on the client-side, it is okay to submit t
         <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML"
           >understanding of HTML</a
         >, and basic knowledge of
-        <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP">HTTP</a> and
+        <a href="/en-US/docs/Web/HTTP">HTTP</a> and
         <a href="/en-US/docs/Learn/Server-side/First_steps"
           >server-side programming</a
         >.

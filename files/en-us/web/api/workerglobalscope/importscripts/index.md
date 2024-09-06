@@ -30,7 +30,7 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `NetworkError`
-  - : Imported scripts were served without a `text/javascript` MIME type or without one of the permitted [legacy JavaScript MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#legacy_javascript_mime_types).
+  - : Imported scripts were served without a `text/javascript` MIME type or without one of the permitted [legacy JavaScript MIME types](/en-US/docs/Web/HTTP/MIME_types#legacy_javascript_mime_types).
 - {{jsxref("TypeError")}}
   - : Thrown if the current {{domxref("WorkerGlobalScope")}} is a module. Use [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) instead.
 
