@@ -31,7 +31,7 @@ jobs:
           echo "$output" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
 
-      - name: Report issues
+      - name: Report spellcheck errors
         if: env.OUTPUT != ''
         run: |
           comment_body=$(cat<<EOM
