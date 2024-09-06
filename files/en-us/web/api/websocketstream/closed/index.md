@@ -4,6 +4,7 @@ short-title: closed
 slug: Web/API/WebSocketStream/closed
 page-type: web-api-instance-property
 status:
+  - experimental
   - non-standard
 browser-compat: api.WebSocketStream.closed
 ---
@@ -11,7 +12,7 @@ browser-compat: api.WebSocketStream.closed
 {{APIRef("WebSockets API")}}{{non-standard_header}}
 
 The **`closed`** read-only property of the
-{{domxref("WebSocketStream")}} interface returns a {{jsxref("Promise")}} that fulfills with an object once the socket connection is closed. The object contains the closing code and reason sent by the server.
+{{domxref("WebSocketStream")}} interface returns a {{jsxref("Promise")}} that fulfills with an object once the socket connection is closed. The object contains the closing code and reason, as sent by the server.
 
 ## Value
 
@@ -22,55 +23,20 @@ A promise, which fulfills with an object containing the following properties:
 - `reason`
   - : A string representing a human-readable description of the reason why the socket connection is closed.
 
+The promise rejects if the WebSocket connection did not close cleanly (for a clean close, the associated TCP connection must be closed _after_ the WebSocket closing handshake is completed).
+
 ## Examples
 
 ```js
-const output = document.querySelector("#output");
+const wsURL = "wss://127.0.0.1/";
+const wss = new WebSocketStream(wsURL);
 
-function writeToScreen(message) {
-  output.insertAdjacentHTML("beforeend", `<p>${message}</p>`);
-}
-
-if ("WebSocketStream" in self) {
-  const wsURL = "wss://127.0.0.1/";
-  const wss = new WebSocketStream(wsURL);
-
-  console.log(wss.url);
-
-  async function start() {
-    const { readable, writable } = await wss.opened;
-    writeToScreen("CONNECTED");
-    const reader = readable.getReader();
-    const writer = writable.getWriter();
-
-    await writer.write("ping");
-    writeToScreen("SENT: ping");
-
-    while (true) {
-      const { value, done } = await reader.read();
-      writeToScreen(`RECEIVED: ${value}`);
-      if (done) {
-        break;
-      }
-
-      setTimeout(async () => {
-        await writer.write("ping");
-        writeToScreen("SENT: ping");
-      }, 5000);
-    }
-  }
-
-  start();
-
-  wss.closed.then((result) => {
-    writeToScreen(
-      `DISCONNECTED: code ${result.closeCode}, message "${result.reason}"`,
-    );
-    console.error("Socket closed", result.closeCode, result.reason);
-  });
-} else {
-  writeToScreen("Your browser does not support WebSocketStream");
-}
+wss.closed.then((result) => {
+  writeToScreen(
+    `DISCONNECTED: code ${result.closeCode}, message "${result.reason}"`,
+  );
+  console.log("Socket closed", result.closeCode, result.reason);
+});
 ```
 
 See [Using WebSocketStream to write a client](/en-US/docs/Web/API/WebSockets_API/Using_WebSocketStream) for a complete example with full explanation.

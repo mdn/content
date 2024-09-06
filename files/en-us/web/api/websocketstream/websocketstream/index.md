@@ -4,6 +4,7 @@ short-title: WebSocketStream()
 slug: Web/API/WebSocketStream/WebSocketStream
 page-type: web-api-constructor
 status:
+  - experimental
   - non-standard
 browser-compat: api.WebSocketStream.WebSocketStream
 ---
@@ -16,6 +17,7 @@ The **`WebSocketStream()`** constructor creates a new
 ## Syntax
 
 ```js-nolint
+new WebSocketStream(url)
 new WebSocketStream(url, options)
 ```
 
@@ -24,9 +26,9 @@ new WebSocketStream(url, options)
 - `url`
   - : A string representing the URL of the WebSocket server you want to connect to with this `WebSocketStream` instance. Allowed URL schemes are `"ws"`, `"wss"`, `"http"`, and `"https"`.
 - `options` {{optional_inline}}
-  - : An object than can contain the following properties:
+  - : An object that can contain the following properties:
     - `protocols` {{optional_inline}}
-      - : An array of strings representing custom protocols to use for the connection.
+      - : A single string or an array of strings representing the sub-protocol(s) that the client would like to use, for example `"chat"` or `"chatv2"`. Subprotocols may be selected from the [IANA WebSocket Subprotocol Name Registry](https://www.iana.org/assignments/websocket/websocket.xml#subprotocol-name) or may be custom names jointly understood by the client and the server. A single server can implement multiple WebSocket sub-protocols, and handle different types of interactions depending on the specified value. If it is omitted, an empty array is used by default.
     - `signal` {{optional_inline}}
       - : An {{domxref("AbortSignal")}} belonging to an {{domxref("AbortController")}} that you want to use to close the WebSocket connection.
 
@@ -59,8 +61,7 @@ At a later time, {{domxref("AbortController.abort()")}} can be called when requi
 controller.abort();
 ```
 
-> [!NOTE]
-> Alternatively, you can use the {{domxref("WebSocketStream.close()")}} method to close a connection, however this is mainly needed if you wish to specify a custom code and reason for the server to report.
+Alternatively, you can use the {{domxref("WebSocketStream.close()")}} method to close a connection, however this is mainly needed if you wish to specify a custom code and reason for the server to report.
 
 See [Using WebSocketStream to write a client](/en-US/docs/Web/API/WebSockets_API/Using_WebSocketStream) for a complete example with full explanation.
 

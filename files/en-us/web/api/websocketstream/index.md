@@ -3,6 +3,7 @@ title: WebSocketStream
 slug: Web/API/WebSocketStream
 page-type: web-api-interface
 status:
+  - experimental
   - non-standard
 browser-compat: api.WebSocketStream
 ---
@@ -23,9 +24,9 @@ The **`WebSocketStream`** interface of the {{domxref("WebSockets API", "WebSocke
 - {{domxref("WebSocketStream.url", "url")}} {{ReadOnlyInline}}
   - : Returns the URL of the WebSocket server that the `WebSocketStream` instance was created with.
 - {{domxref("WebSocketStream.closed", "closed")}} {{ReadOnlyInline}}
-  - : Returns a {{jsxref("Promise")}} that fulfills with an object once the socket connection is closed. The object contains the closing code and reason sent by the server.
+  - : Returns a {{jsxref("Promise")}} that fulfills with an object once the socket connection is closed. The object contains the closing code and reason as sent by the server.
 - {{domxref("WebSocketStream.opened", "opened")}} {{ReadOnlyInline}}
-  - : Returns a {{jsxref("Promise")}} that fulfills with an object once the socket connection is successfully opened. The object contains several useful features, including a {{domxref("ReadableStream")}} and a {{domxref("WritableStream")}} instance for receiving and sending data on the connection.
+  - : Returns a {{jsxref("Promise")}} that fulfills with an object once the socket connection is successfully opened. Among other features, this object contains a {{domxref("ReadableStream")}} and a {{domxref("WritableStream")}} instance for receiving and sending data on the connection.
 
 ## Instance methods
 

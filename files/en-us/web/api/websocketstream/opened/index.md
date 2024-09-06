@@ -4,6 +4,7 @@ short-title: opened
 slug: Web/API/WebSocketStream/opened
 page-type: web-api-instance-property
 status:
+  - experimental
   - non-standard
 browser-compat: api.WebSocketStream.opened
 ---
@@ -11,7 +12,7 @@ browser-compat: api.WebSocketStream.opened
 {{APIRef("WebSockets API")}}{{non-standard_header}}
 
 The **`opened`** read-only property of the
-{{domxref("WebSocketStream")}} interface returns a {{jsxref("Promise")}} that fulfills with an object once the socket connection is successfully opened. The object contains several useful features, including a {{domxref("ReadableStream")}} and a {{domxref("WritableStream")}} instance for receiving and sending data on the connection.
+{{domxref("WebSocketStream")}} interface returns a {{jsxref("Promise")}} that fulfills with an object once the socket connection is successfully opened. Among other features, this object contains a {{domxref("ReadableStream")}} and a {{domxref("WritableStream")}} instance for receiving and sending data on the connection.
 
 ## Value
 
@@ -20,55 +21,38 @@ A promise, which fulfills with an object containing the following properties:
 - `extensions`
   - : A string representing any extensions applied to the `WebSocketStream`. Such extensions are not currently defined, but may be in the future. Currently returns an empty string.
 - `protocol`
-  - : A string representing any custom protocol used to open the current WebSocket connection, as specified in the [`protocols`](/en-US/docs/Web/API/WebSocketStream/WebSocketStream#protocols) option of the `WebSocketStream()` constructor. Returns an empty string if no custom protocol was used.
+  - : A string representing any custom protocol used to open the current WebSocket connection, as specified in the [`protocols`](/en-US/docs/Web/API/WebSocketStream/WebSocketStream#protocols) option of the `WebSocketStream()` constructor. Returns an empty string if no custom protocol was set during instantiation.
 - `readable`
   - : A {{domxref("ReadableStream")}} instance. Call {{domxref("ReadableStream.getReader()")}} on it to obtain a {{domxref("ReadableStreamDefaultReader")}} instance that can be used to read incoming WebSocket data.
 - `writable`
   - : A {{domxref("WritableStream")}} instance. Call {{domxref("WritableStream.getWriter()")}} on it to obtain a {{domxref("WritableStreamDefaultWriter")}} instance that can be used to write data to the WebSocket connection.
 
-The promise rejects in the event of an unclean close.
+The promise rejects if the WebSocket connection fails.
 
 ## Examples
 
 ```js
-const output = document.querySelector("#output");
+const wsURL = "wss://127.0.0.1/";
+const wss = new WebSocketStream(wsURL);
 
-function writeToScreen(message) {
-  output.insertAdjacentHTML("beforeend", `<p>${message}</p>`);
-}
+async function start() {
+  const { readable, writable, extensions, protocol } = await wss.opened;
 
-if ("WebSocketStream" in self) {
-  const wsURL = "wss://127.0.0.1/";
-  const wss = new WebSocketStream(wsURL);
+  const reader = readable.getReader();
+  const writer = writable.getWriter();
 
-  console.log(wss.url);
+  await writer.write("ping");
 
-  async function start() {
-    const { readable, writable } = await wss.opened;
-    writeToScreen("CONNECTED");
-    const reader = readable.getReader();
-    const writer = writable.getWriter();
-
-    await writer.write("ping");
-    writeToScreen("SENT: ping");
-
-    while (true) {
-      const { value, done } = await reader.read();
-      writeToScreen(`RECEIVED: ${value}`);
-      if (done) {
-        break;
-      }
-
-      setTimeout(async () => {
-        await writer.write("ping");
-        writeToScreen("SENT: ping");
-      }, 5000);
+  while (true) {
+    const { value, done } = await reader.read();
+    if (done) {
+      break;
     }
-  }
 
-  start();
-} else {
-  writeToScreen("Your browser does not support WebSocketStream");
+    setTimeout(async () => {
+      await writer.write("ping");
+    }, 5000);
+  }
 }
 ```
 

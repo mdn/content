@@ -4,6 +4,7 @@ short-title: url
 slug: Web/API/WebSocketStream/url
 page-type: web-api-instance-property
 status:
+  - experimental
   - non-standard
 browser-compat: api.WebSocketStream.url
 ---

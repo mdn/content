@@ -3,17 +3,15 @@ title: Using WebSocketStream to write a client
 slug: Web/API/WebSockets_API/Using_WebSocketStream
 page-type: guide
 status:
+  - experimental
   - non-standard
 ---
 
 {{DefaultAPISidebar("WebSockets API")}}{{non-standard_header}}
 
-The {{domxref("WebSocketStream")}} API is a modern reimagining of WebSocket client-side JavaScript functionality. It is promise-based, and therefore simpler to work with than the traditional {{domxref("WebSocket")}} API in the modern JavaScript scosystem. In addition, it uses the [Streams API](/en-US/docs/Web/API/Streams_API) to handle receiving and sending messages, meaning that socket connections can take advantage of stream [backpressure](/en-US/docs/Web/API/Streams_API/Concepts#backpressure) automatically, regulating the speed of reading or writing to avoid bottlenecks in the application.
+The {{domxref("WebSocketStream")}} API is a {{jsxref("Promise")}}-based alternative to {{domxref("WebSocket")}} for creating and using client-side WebSocket connections. `WebSocketStream` uses the [Streams API](/en-US/docs/Web/API/Streams_API) to handle receiving and sending messages, meaning that socket connections can take advantage of stream [backpressure](/en-US/docs/Web/API/Streams_API/Concepts#backpressure) automatically, regulating the speed of reading or writing to avoid bottlenecks in the application.
 
-This article explains how to use the {{domxref("WebSocketStream")}} API to create a simple WebSocket client.
-
-> [!NOTE]
-> Backpressure is an issue with the traditional `WebSocket` API — it has no way to apply backpressure, therefore when messages arrive faster than the application can process them, the application will either fill up the device's memory by buffering those messages, become unresponsive due to 100% CPU usage, or both.
+This article explains how to use the {{domxref("WebSocketStream")}} API to create a WebSocket client.
 
 ## Feature detection
 
@@ -61,10 +59,10 @@ const writer = writable.getWriter();
 To write data to the socket, you can use {{domxref("WritableStreamDefaultWriter.write()")}}:
 
 ```js
-await writer.write("My message");
+writer.write("My message");
 ```
 
-To read data from the socket, you can continuously call {{domxref("ReadableStreamDefaultReader.read()")}} until the stream is done (i.e. until the returned `value` is `undefined`, and `done` is `true`):
+To read data from the socket, you can continuously call {{domxref("ReadableStreamDefaultReader.read()")}} until the stream has finished, which is indicated by `done` being `true`:
 
 ```js
 while (true) {
@@ -85,8 +83,6 @@ With `WebSocketStream`, the information previously available via the `WebSocket`
 const { code, reason } = await wss.closed;
 ```
 
-The promise rejects in the event of an unclean close operation.
-
 As mentioned earlier, the WebSocket connection can be closed using an {{domxref("AbortController")}}. The necessary {{domxref("AbortSignal")}} is passed to the `WebSocketStream` constructor during creation, and {{domxref("AbortController.abort()")}} can then be called when required:
 
 ```js
@@ -100,7 +96,7 @@ const wss = new WebSocketStream("wss://example.com/wss", {
 controller.abort();
 ```
 
-Alternatively you can use the {{domxref("WebSocketStream.close()")}} method to close a connection, however this is mainly needed if you wish to specify a custom code and reason for the server to report:
+Alternatively you can use the {{domxref("WebSocketStream.close()")}} method to close a connection. This is mainly used if you wish to specify a custom code and reason for the server to report:
 
 ```js
 wss.close({
@@ -119,10 +115,20 @@ To demonstrate basic usage of `WebSocketStream`, we've created a sample client. 
 > [!NOTE]
 > To get the example working, you'll also need a server component. We wrote our client to work along with the Deno server explained in [Writing a WebSocket server in JavaScript (Deno)](/en-US/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_JavaScript_Deno), but any compatible server will do.
 
-First we grab a reference to a DOM element into which we will write output messages, and define a utility function that writes a message to it:
+The HTML for the demo is as follows. It includes informational {{htmlelment("h1")}} and {{htmlelment("h1")}} elements, a {{htmlelment("button")}} to close the WebSocket connection that is initially disabled, and a {{htmlelment("div")}} for us to write output messages into.
+
+```html
+<h2>WebSocketStream Test</h2>
+<p>Sends a ping every five seconds</p>
+<button id="close" disabled>Close socket connection</button>
+<div id="output"></div>
+```
+
+Now on to the JavaScript. First we grab references to the output `<div>` and the close `<button>`, and define a utility function that writes messages to the `<div>`:
 
 ```js
 const output = document.querySelector("#output");
+const closeBtn = document.querySelector("#close");
 
 function writeToScreen(message) {
   output.insertAdjacentHTML("beforeend", `<p>${message}</p>`);
@@ -132,10 +138,10 @@ function writeToScreen(message) {
 Next, we create an `if ... else` structure to feature detect `WebSocketStream` and output an informative message on non-supporting browsers:
 
 ```js
-if ("WebSocketStream" in self) {
-  // supporting code path
-} else {
+if (!("WebSocketStream" in self)) {
   writeToScreen("Your browser does not support WebSocketStream");
+} else {
+  // supporting code path
 }
 ```
 
@@ -151,12 +157,13 @@ const wss = new WebSocketStream(wsURL);
 
 The main bulk of our code is contained within the `start()` function, which we define and then immediately invoke. We await the {{domxref("WebSocketStream.opened", "opened")}} promise, then after it fulfills write a message to let the reader know the connection is successful and create {{domxref("ReadableStreamDefaultReader")}} and {{domxref("WritableStreamDefaultWriter")}} instances from the returned `readable` and `writable` properties.
 
-Next, we `write()` a `"ping"` value to the socket and communicate that to the user. At this point, the server will respond with a `"pong"` message. We await the `read()` of the read message, communicate it to the user, then write another `"ping"` to the server after a timeout of 5 seconds. This continues the `"ping"`/`"pong"` loop indefinitely.
+Next, we create a `start()` function that sends "ping" messages to the server and receives "pong" messages back, and invoke it. In the function body we await the `wss.opened` promise and create a reader and writer from its fulfillment values. Once the socket is open, we communicate that to the user and enable the close button. Next, we `write()` a `"ping"` value to the socket and communicate that to the user. At this point, the server will respond with a `"pong"` message. We await the `read()` of the response, communicate it to the user, then write another `"ping"` to the server after a timeout of 5 seconds. This continues the `"ping"`/`"pong"` loop indefinitely.
 
 ```js
 async function start() {
   const { readable, writable } = await wss.opened;
   writeToScreen("CONNECTED");
+  closeBtn.disabled = false;
   const reader = readable.getReader();
   const writer = writable.getWriter();
 
@@ -180,26 +187,28 @@ async function start() {
 start();
 ```
 
-Finally, we include a promise-style code section to inform the user of the code and reason if the WebSocket connection is closed for any reason, as signalled by the {{domxref("WebSocketStream.closed", "closed")}} promise fulfilling:
+We now include a promise-style code section to inform the user of the code and reason if the WebSocket connection is closed, as signalled by the {{domxref("WebSocketStream.closed", "closed")}} promise fulfilling:
 
 ```js
 wss.closed.then((result) => {
   writeToScreen(
     `DISCONNECTED: code ${result.closeCode}, message "${result.reason}"`,
   );
-  console.error("Socket closed", result.closeCode, result.reason);
+  console.log("Socket closed", result.closeCode, result.reason);
 });
 ```
 
-You can test this out by including something like the following after the previous code block:
+Finally, we add an event listener to the close button that closes the conenction using the `close()` method, with a code and custom reason. The function also disables the close button — we don't want users to press it once the connection is already closed.
 
 ```js
-setTimeout(async () => {
+closeBtn.addEventListener("click", () => {
   wss.close({
     code: 1000,
     reason: "That's all folks",
   });
-}, 10000);
+
+  closeBtn.disabled = false;
+});
 ```
 
 ### Full listing
@@ -211,24 +220,32 @@ setTimeout(async () => {
     <meta charset="utf-8" />
     <title>WebSocketStream Test</title>
   </head>
+
   <body>
     <h2>WebSocketStream Test</h2>
     <p>Sends a ping every five seconds</p>
+    <button id="close" disabled>Close socket connection</button>
     <div id="output"></div>
     <script>
       const output = document.querySelector("#output");
+      const closeBtn = document.querySelector("#close");
 
       function writeToScreen(message) {
         output.insertAdjacentHTML("beforeend", `<p>${message}</p>`);
       }
 
-      if ("WebSocketStream" in self) {
+      if (!("WebSocketStream" in self)) {
+        writeToScreen("Your browser does not support WebSocketStream");
+      } else {
         const wsURL = "ws://127.0.0.1/";
         const wss = new WebSocketStream(wsURL);
 
+        console.log(wss.url);
+
         async function start() {
-          const { readable, writable } = await wss.opened;
+          const { readable, writable, extensions, protocol } = await wss.opened;
           writeToScreen("CONNECTED");
+          closeBtn.disabled = false;
           const reader = readable.getReader();
           const writer = writable.getWriter();
 
@@ -255,17 +272,17 @@ setTimeout(async () => {
           writeToScreen(
             `DISCONNECTED: code ${result.closeCode}, message "${result.reason}"`,
           );
-          console.error("Socket closed", result.closeCode, result.reason);
+          console.log("Socket closed", result.closeCode, result.reason);
         });
 
-        // setTimeout(async () => {
-        //   wss.close({
-        //     code: 1000,
-        //     reason: "That's all folks"
-        //   });
-        // }, 10000);
-      } else {
-        writeToScreen("Your browser does not support WebSocketStream");
+        closeBtn.addEventListener("click", () => {
+          wss.close({
+            code: 1000,
+            reason: "That's all folks",
+          });
+
+          closeBtn.disabled = false;
+        });
       }
     </script>
   </body>
