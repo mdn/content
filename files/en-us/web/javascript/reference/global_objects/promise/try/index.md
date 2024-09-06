@@ -38,19 +38,7 @@ You may have an API that takes a callback. The callback may be synchronous or as
 new Promise((resolve) => resolve(func()));
 ```
 
-Except that `Promise.try()` is perhaps more concise and readable. To be more exact, the following is a more faithful representation of the implementation of `Promise.try()` (although it should still not be used as a polyfill):
-
-```js
-new Promise((resolve, reject) => {
-  try {
-    resolve(func());
-  } catch (error) {
-    reject(error);
-  }
-});
-```
-
-For the built-in `Promise()` constructor, errors thrown from the executor are automatically caught and turned into rejections, so these two examples are equivalent.
+For the built-in `Promise()` constructor, errors thrown from the executor are automatically caught and turned into rejections, so these two examples are equivalent, except that `Promise.try()` is perhaps more concise and readable.
 
 Note that `Promise.try()` is _not_ equivalent to this, despite being highly similar:
 
