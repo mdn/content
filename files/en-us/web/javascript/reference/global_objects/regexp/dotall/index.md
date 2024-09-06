@@ -20,7 +20,7 @@ The **`dotAll`** accessor property of {{jsxref("RegExp")}} instances returns whe
 - U+2028 LINE SEPARATOR
 - U+2029 PARAGRAPH SEPARATOR
 
-This effectively means the dot will match any UTF-16 code unit. However, it will _not_ match characters that are outside of the Unicode Basic Multilingual Plane (BMP), also known as astral characters, which are represented as [surrogate pairs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters) and necessitate matching with two `.` patterns instead of one.
+This effectively means the dot will match any UTF-16 code unit. However, it will _not_ match characters that are outside of the Unicode Basic Multilingual Plane (BMP), also known as astral characters, which are represented as [surrogate pairs](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_characters_unicode_code_points_and_grapheme_clusters) and necessitate matching with two `.` patterns instead of one.
 
 ```js
 "😄".match(/(.)(.)/s);
