@@ -7,7 +7,7 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc5789
 
 {{HTTPSidebar}}
 
-The **HTTP `PATCH` request method** applies partial modifications to a resource.
+The **`PATCH`** HTTP method applies partial modifications to a resource.
 
 `PATCH` is somewhat analogous to the "update" concept found in {{Glossary("CRUD")}} (in general, HTTP is different than {{Glossary("CRUD")}}, and the two should not be confused).
 
