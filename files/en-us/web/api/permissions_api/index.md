@@ -11,9 +11,10 @@ spec-urls: https://w3c.github.io/permissions/
 
 {{DefaultAPISidebar("Permissions API")}}{{AvailableInWorkers}}
 
-The **Permissions API** provides a consistent programmatic way to query the status of API permissions attributed to the current context. For example, the Permissions API can be used to determine if permission to access a particular API has been granted or denied, or requires specific user permission.
+The **Permissions API** provides a consistent programmatic way to query the status of API permissions attributed to the current context.
+For example, it can be used to determine if permission to access a particular feature or API has been granted, denied, or requires specific user permission.
 
-Note that the permissions from this API effectively aggregate all security restrictions for the context, including any requirement for an API to be used in a secure context, [Permissions-Policy](/en-US/docs/Web/HTTP/Headers/Permissions-Policy) restrictions applied to the document, and user prompts.
+The permissions from this API effectively aggregate all security restrictions for the context, including any requirement for an API to be used in a secure context, [Permissions-Policy](/en-US/docs/Web/HTTP/Headers/Permissions-Policy) restrictions applied to the document, and user prompts.
 So, for example, if an API is restricted by permissions policy, the returned permission would be `denied` and the user would not be prompted for access.
 
 ## Concepts and usage
@@ -46,12 +47,6 @@ A non-exhaustive list of permission-aware APIs includes:
 - [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API): `midi`
 - [Window Management API](/en-US/docs/Web/API/Window_Management_API): `window-management`
 
-## Examples
-
-We have created a simple example called Location Finder. You can [run the example live](https://chrisdavidmills.github.io/location-finder-permissions-api/), or [view the source code on GitHub](https://github.com/chrisdavidmills/location-finder-permissions-api/tree/gh-pages).
-
-Read more about how it works in our article [Using the Permissions API](/en-US/docs/Web/API/Permissions_API/Using_the_Permissions_API).
-
 ## Interfaces
 
 - {{domxref("Permissions")}}
@@ -63,6 +58,12 @@ Read more about how it works in our article [Using the Permissions API](/en-US/d
 
 - {{domxref("Navigator.permissions")}} and {{domxref("WorkerNavigator.permissions")}} {{ReadOnlyInline}}
   - : Provides access to the {{domxref("Permissions")}} object from the main context and worker context respectively.
+
+## Examples
+
+We have created a simple example called Location Finder. You can [run the example live](https://chrisdavidmills.github.io/location-finder-permissions-api/), or [view the source code on GitHub](https://github.com/chrisdavidmills/location-finder-permissions-api/tree/gh-pages).
+
+Read more about how it works in our article [Using the Permissions API](/en-US/docs/Web/API/Permissions_API/Using_the_Permissions_API).
 
 ## Specifications
 
