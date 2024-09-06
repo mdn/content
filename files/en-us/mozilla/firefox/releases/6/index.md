@@ -84,7 +84,7 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 ### SVG
 
 - The {{ SVGAttr("pathLength") }} attribute is now supported.
-- SVG patterns, gradients, and filters now work correctly when loaded from [`data:` URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs).
+- SVG patterns, gradients, and filters now work correctly when loaded from [`data:` URLs](/en-US/docs/Web/URI/Schemes/data).
 
 ### MathML
 

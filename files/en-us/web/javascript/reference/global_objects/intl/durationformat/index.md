@@ -2,23 +2,21 @@
 title: Intl.DurationFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat
 page-type: javascript-class
-status:
-  - experimental
 browser-compat: javascript.builtins.Intl.DurationFormat
 ---
 
-{{JSRef}} {{SeeCompatTable}}
+{{JSRef}}
 
 The **`Intl.DurationFormat`** object enables language-sensitive duration formatting.
 
 ## Constructor
 
-- {{jsxref("Intl/DurationFormat/DurationFormat", "Intl.DurationFormat()")}} {{experimental_inline}}
+- {{jsxref("Intl/DurationFormat/DurationFormat", "Intl.DurationFormat()")}}
   - : Creates a new `Intl.DurationFormat` object.
 
 ## Static methods
 
-- {{jsxref("Intl/DurationFormat/supportedLocalesOf", "Intl.DurationFormat.supportedLocalesOf()")}} {{experimental_inline}}
+- {{jsxref("Intl/DurationFormat/supportedLocalesOf", "Intl.DurationFormat.supportedLocalesOf()")}}
   - : Returns an array containing those of the provided locales that are supported without having to fall back to the runtime's default locale.
 
 ## Instance properties
@@ -32,11 +30,11 @@ These properties are defined on `Intl.DurationFormat.prototype` and shared by al
 
 ## Instance methods
 
-- {{jsxref("Intl/DurationFormat/format", "Intl.DurationFormat.prototype.format()")}} {{experimental_inline}}
+- {{jsxref("Intl/DurationFormat/format", "Intl.DurationFormat.prototype.format()")}}
   - : Getter function that formats a duration according to the locale and formatting options of this `DurationFormat` object.
-- {{jsxref("Intl/DurationFormat/formatToParts", "Intl.DurationFormat.prototype.formatToParts()")}} {{experimental_inline}}
+- {{jsxref("Intl/DurationFormat/formatToParts", "Intl.DurationFormat.prototype.formatToParts()")}}
   - : Returns an {{jsxref("Array")}} of objects representing the formatted duration in parts.
-- {{jsxref("Intl/DurationFormat/resolvedOptions", "Intl.DurationFormat.prototype.resolvedOptions()")}} {{experimental_inline}}
+- {{jsxref("Intl/DurationFormat/resolvedOptions", "Intl.DurationFormat.prototype.resolvedOptions()")}}
   - : Returns a new object with properties reflecting the locale and formatting options computed during initialization of the object.
 
 ## Examples

@@ -127,6 +127,13 @@ In addition to the basic HTML global attributes, the following global attributes
     - `auto` or an _empty string_, which automatically shows the virtual keyboard when the element is focused or tapped.
     - `manual`, which decouples focus and tap on the element from the virtual keyboard's state.
 
+- [`writingsuggestions`](/en-US/docs/Web/HTML/Global_attributes/writingsuggestions)
+
+  - : Used to control the behavior of the browser's writing suggestions in an input field, a section of a page, or the entire page.
+
+    - `false`, which disables the browser's writing suggestions.
+    - `true` or an _empty string_, which enables writing suggestions.
+
 ## Specifications
 
 {{Specifications}}

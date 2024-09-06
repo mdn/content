@@ -7,7 +7,7 @@ browser-compat: html.global_attributes.class
 
 {{HTMLSidebar("Global_attributes")}}
 
-The **`class`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is a list of the classes of the element, separated by [ACSII whitespace](/en-US/docs/Glossary/Whitespace#in_html).
+The **`class`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) is a list of the classes of the element, separated by [ASCII whitespace](/en-US/docs/Glossary/Whitespace#in_html).
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-class.html","tabbed-standard")}}
 
@@ -19,7 +19,7 @@ Though the specification doesn't put requirements on the name of classes, web de
 
 ### Syntax
 
-The `class` attribute is a list of class values separated by [ACSII whitespace](/en-US/docs/Glossary/Whitespace#in_html).
+The `class` attribute is a list of class values separated by [ASCII whitespace](/en-US/docs/Glossary/Whitespace#in_html).
 
 Each class value may contain any Unicode characters (except, of course, ASCII whitespace). However, when used in CSS selectors, either from JavaScript using APIs like {{domxref("Document.querySelector()")}} or in CSS stylesheets, class attribute values must be valid [CSS identifiers](/en-US/docs/Web/CSS/ident). This means that if a class attribute value is not a valid CSS identifier (for example, `my?class` or `1234`) then it must be escaped before being used in a selector, either using the {{domxref("CSS.escape_static", "CSS.escape()")}} method or [manually](/en-US/docs/Web/CSS/ident#escaping_characters).
 

@@ -113,7 +113,7 @@ The elements included by `HTMLFormElement.elements` and `HTMLFormElement.length`
 - {{HTMLElement("select")}}
 - {{HTMLElement("textarea")}}
 
-No other elements are included in the list returned by `elements`, which makes it an excellent way to get at the elements most important when processing forms.
+No other elements are included in the list returned by `elements`, which makes it an excellent way to get at the most important elements when processing forms.
 
 ## Examples
 

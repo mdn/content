@@ -270,7 +270,7 @@ function tag(strings) {
 }
 
 tag`string text line 1 \n string text line 2`;
-// Logs "string text line 1 \n string text line 2" ,
+// Logs "string text line 1 \n string text line 2",
 // including the two characters '\' and 'n'
 ```
 

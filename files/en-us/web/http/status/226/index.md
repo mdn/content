@@ -46,7 +46,7 @@ The `IM` header indicates that the `vcdiff` algorithm is used, and the `Delta-Ba
 
 ```http
 HTTP/1.1 226 IM Used
-ETag: "efgh5678"
+ETag: "5678a23"
 IM: vcdiff
 Content-Type: text/plain
 Content-Length: 123

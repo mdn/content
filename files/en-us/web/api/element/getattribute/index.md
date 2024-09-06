@@ -24,7 +24,8 @@ getAttribute(attributeName)
 
 ### Parameters
 
-- `attributeName` is the name of the attribute whose value you want to get.
+- `attributeName`
+  - : The name of the attribute whose value you want to get.
 
 ### Return value
 

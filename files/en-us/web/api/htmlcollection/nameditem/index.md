@@ -11,7 +11,7 @@ browser-compat: api.HTMLCollection.namedItem
 The **`namedItem()`** method of the {{domxref("HTMLCollection")}} interface returns
 the first {{domxref("Element")}} in the collection whose `id` or `name` attribute match the specified name, or `null` if no element matches.
 
-In JavaScript, using the array bracket syntax with a {{jsxref("String")}}, like `collection["value"]` is equivalent to `collection.namedItem("value")`.
+In JavaScript, instead of calling `collection.namedItem("value")`, you can also directly access the name on the collection, like `collection["value"]`, unless the name collides with one of the existing `HTMLCollection` properties.
 
 ## Syntax
 
@@ -21,11 +21,12 @@ namedItem(key)
 
 ### Parameters
 
-- `key` is a string representing the value of the `id` or `name` attribute of the element we are looking for.
+- `key`
+  - : A string representing the value of the `id` or `name` attribute of the element we are looking for.
 
 ### Return value
 
-- `item` is the first {{domxref("Element")}} in the {{domxref("HTMLCollection")}} matching the _key_, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), if there are none.
+The first {{domxref("Element")}} in the {{domxref("HTMLCollection")}} matching the `key`, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if there is none. Always returns `null` if `key` is the empty string.
 
 ## Example
 
