@@ -24,7 +24,7 @@ The HTTP reference documentation contains detailed information about headers, re
 - [HTTP status response codes](/en-US/docs/Web/HTTP/Status)
   - : Response status codes indicate the outcome of a specific HTTP request.
     Responses are grouped in five classes: informational, successful, redirections, client errors, and server errors.
-- [HTTP resources and specifications](/en-US/docs/Web/HTTP/resources_and_specifications)
+- [HTTP resources and specifications](/en-US/docs/Web/HTTP/Resources_and_specifications)
   - : This page lists relevant resources about HTTP since it was first specified in the early 1990s.
 
 ## HTTP concepts
@@ -50,7 +50,7 @@ On top of these concepts, numerous extensions have been developed over the years
 - [Content negotiation](/en-US/docs/Web/HTTP/Content_negotiation)
   - : HTTP defines a set of message headers, starting with [`Accept`](/en-US/docs/Web/HTTP/Headers/Accept) as a way for a browser to announce the format, language, or encoding it prefers.
     This article explains how this advertisement happens, how the server is expected to react, and how it chooses the most adequate response to a request.
-- [Proxy servers and tunneling](/en-US/docs/Web/HTTP/proxy_servers_and_tunneling)
+- [Proxy servers and tunneling](/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling)
   - : A proxy can be on the user's local computer, or anywhere between the user's computer and a destination server on the Internet.
     This page outlines some basics about proxies and introduces a few configuration options.
 - [Connection management in HTTP/1.x](/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x)
