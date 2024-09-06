@@ -14,7 +14,7 @@ HTTP is a [stateless protocol](https://en.wikipedia.org/wiki/Stateless_protocol)
 
 ## References
 
-The HTTP reference documentation contains detailed information about headers, request methods, and status responses.
+The HTTP reference documentation contains detailed information about headers, request methods, status responses, and lists relevant specifications and standards documents.
 
 - [HTTP headers](/en-US/docs/Web/HTTP/Headers)
   - : Message headers are used to send metadata about a resource or a HTTP message, and to describe the behavior of the client or the server.
@@ -24,6 +24,8 @@ The HTTP reference documentation contains detailed information about headers, re
 - [HTTP status response codes](/en-US/docs/Web/HTTP/Status)
   - : Response status codes indicate the outcome of a specific HTTP request.
     Responses are grouped in five classes: informational, successful, redirections, client errors, and server errors.
+- [HTTP resources and specifications](/en-US/docs/Web/HTTP/resources_and_specifications)
+  - : This page lists relevant resources about HTTP since it was first specified in the early 1990s.
 
 ## HTTP concepts
 
@@ -45,15 +47,18 @@ On top of these concepts, numerous extensions have been developed over the years
     A shortlist of common types used by web developers can be found in [Common MIME types](Web/HTTP/MIME_types/Common_types).
 - [Compression in HTTP](/en-US/docs/Web/HTTP/Compression)
   - : Browsers and servers compress their messages before sending them over the network to reduce the amount of data that needs to be transmitted, improving transfer speed and bandwidth utilization.
+- [Content negotiation](/en-US/docs/Web/HTTP/Content_negotiation)
+  - : HTTP defines a set of message headers, starting with [`Accept`](/en-US/docs/Web/HTTP/Headers/Accept) as a way for a browser to announce the format, language, or encoding it prefers.
+    This article explains how this advertisement happens, how the server is expected to react, and how it chooses the most adequate response to a request.
+- [Proxy servers and tunneling](/en-US/docs/Web/HTTP/proxy_servers_and_tunneling)
+  - : A proxy can be on the user's local computer, or anywhere between the user's computer and a destination server on the Internet.
+    This page outlines some basics about proxies and introduces a few configuration options.
 - [Connection management in HTTP/1.x](/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x)
   - : HTTP/1.1 was the first version of HTTP to support persistent connections and pipelining.
     This article explains both concepts, including the pros and cons of each.
 - [Protocol upgrade mechanism](/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism)
   - : HTTP/1.1 provides a mechanism to upgrade an already-established connection to a different protocol using the {{HTTPHeader("Upgrade")}} header.
     A client can upgrade a connection from HTTP/1.1 to HTTP/2, or an HTTP(S) connection to a [WebSocket](/en-US/docs/Web/API/WebSocket) (`ws` / `wss`).
-- [Content negotiation](/en-US/docs/Web/HTTP/Content_negotiation)
-  - : HTTP defines a set of message headers, starting with [`Accept`](/en-US/docs/Web/HTTP/Headers/Accept) as a way for a browser to announce the format, language, or encoding it prefers.
-    This article explains how this advertisement happens, how the server is expected to react, and how it chooses the most adequate response to a request.
 - [Evolution of HTTP](/en-US/docs/Web/HTTP/Evolution_of_HTTP)
   - : HTTP was created in the early 1990s and has been extended several times.
     This article goes through its history and describes HTTP/0.9, HTTP/1.0, HTTP/1.1, through HTTP/2 and HTTP/3, as well as novelties introduced over the years.
