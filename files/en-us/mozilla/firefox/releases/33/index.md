@@ -25,7 +25,7 @@ Highlights
 - Editor preferences
 - WebIDE
 
-For details please [see the hacks post](https://hacks.mozilla.org/2014/07/event-listeners-popup-media-sidebar-cubic-bezier-editor-more-firefox-developer-tools-episode-33/). Special thanks to the 33 contributors that added [all the features and fixes](https://mzl.la/1pGLFDs) in this release.
+For details please [see the hacks post](https://hacks.mozilla.org/2014/07/event-listeners-popup-media-sidebar-cubic-bezier-editor-more-firefox-developer-tools-episode-33/). Special thanks to the 33 contributors that added [all the features and fixes](https://bugzilla.mozilla.org/buglist.cgi?list_id=10808131&resolution=FIXED&chfieldto=2014-07-21&chfield=resolution&query_format=advanced&chfieldfrom=2014-06-09&chfieldvalue=FIXED&component=Developer%20Tools) in this release.
 
 ### CSS
 
