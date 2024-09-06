@@ -68,13 +68,26 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 
   - : The name of the button, submitted as a pair with the button's `value` as part of the form data, when that button is used to submit the form.
 
-- `invoketarget`
+- `command`
 
-  - : Turns a `<button>` element into an Invoker control button; takes the ID of the element to control as its value. See the {{domxref("Invokers API", "Invokers API", "", "nocode")}} landing page for more details.
+  - : Specifies the action to be performed on an element being controlled by a control `<button>`, specified via the `commandfor` attribute. The possible values are:
 
-- `invokeaction`
+    - `"show-modal"`
+      - : The button will show a {{domxref("HTMLDialogElement", "dialog")}} as modal. If the dialog is already modal, no action will be taken.
+    - `"close"`
+      - : The button will close a {{domxref("HTMLDialogElement", "dialog")}} element. If the dialog is already closed, no action will be taken.
+    - `"show-popover"`
+      - : The button will show a hidden popover. If you try to show an already showing popover, no action will be taken. See the {{domxref("Popover API", "Popover API", "", "nocode")}} landing page for more details.
+    - `"hide-popover"`
+      - : The button will hide a showing popover. If you try to hide an already hidden popover, no action will be taken. See the {{domxref("Popover API", "Popover API", "", "nocode")}} landing page for more details.
+    - `"toggle-popover"`
+      - : The button will toggle a popover between showing and hidden. If the popover is hidden, it will be shown; if the popover is showing, it will be hidden. See the {{domxref("Popover API", "Popover API", "", "nocode")}} landing page for more details.
+    - Custom values
+      - : The button can take additional custom values that are prefixed with a two hyphen characters (`--`). Buttons with a custom value will dispatch the {{domxref("CommandEvent")}} on the controlled element.
 
-  - : Specifies the action to be performed on the element being controlled by an Invoker.
+- `commandfor`
+
+  - : Turns a `<button>` element into a control button, controlling the given interactive element; takes the ID of the element to control as its value.
 
 - `popovertarget`
 
