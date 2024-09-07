@@ -141,7 +141,7 @@ const p2 = Promise.try.call(NotPromise, () => {
 // Logs: Rejected Error: oops
 ```
 
-Unlike `Promise()`, this `NotPromise()` constructor *does not* gracefully handle exceptions while running the executor. But despite the `throw`, `Promise.try()` still catches the exception, passing it to `reject()` to log out.
+Unlike `Promise()`, this `NotPromise()` constructor _does not_ gracefully handle exceptions while running the executor. But despite the `throw`, `Promise.try()` still catches the exception, passing it to `reject()` to log out.
 
 ## Specifications
 
