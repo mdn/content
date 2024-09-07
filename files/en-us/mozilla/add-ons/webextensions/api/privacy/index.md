@@ -27,7 +27,7 @@ To use the privacy API, you must have the "privacy" [API permission](/en-US/docs
 {{WebExtExamples("h2")}}
 
 > [!NOTE]
-> This API is based on Chromium's [`chrome.privacy`](https://developer.chrome.com/docs/extensions/reference/privacy/) API.
+> This API is based on Chromium's [`chrome.privacy`](https://developer.chrome.com/docs/extensions/reference/api/privacy) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

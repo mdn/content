@@ -37,7 +37,7 @@ Values of this type are objects. They contain the following properties:
     If an extension wants to redirect a public (e.g. HTTPS) URL to an [extension page](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages), the extension's manifest.json file must contain a [web_accessible_resources](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) key that lists the URL for the extension page.
 
 - `requestHeaders` {{optional_inline}}
-  - : {{WebExtAPIRef('webRequest.HttpHeaders')}}. This is an {{WebExtAPIRef('webRequest.HttpHeaders', "HttpHeaders")}} object, an array in which each object represents a header. If set, the request is made with these headers rather than the original headers. You can only set this property in {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}} .
+  - : {{WebExtAPIRef('webRequest.HttpHeaders')}}. This is an {{WebExtAPIRef('webRequest.HttpHeaders', "HttpHeaders")}} object, an array in which each object represents a header. If set, the request is made with these headers rather than the original headers. You can only set this property in {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}.
 - `responseHeaders` {{optional_inline}}
   - : {{WebExtAPIRef('webRequest.HttpHeaders')}}. This is an {{WebExtAPIRef('webRequest.HttpHeaders', "HttpHeaders")}} object, an array in which each object represents a header. If set, the server is assumed to have responded with these response headers instead of the originals. You can only set this property in {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}. If multiple extensions attempt to set the same header (for example, `Content-Security-Policy`), only one of the changes will be successful.
 - `upgradeToSecure` {{optional_inline}}
@@ -50,7 +50,7 @@ Values of this type are objects. They contain the following properties:
 {{WebExtExamples}}
 
 > [!NOTE]
-> This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/webRequest/#type-BlockingResponse) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
+> This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest#type-BlockingResponse) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

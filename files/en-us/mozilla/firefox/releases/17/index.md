@@ -28,7 +28,7 @@ Firefox 17 shipped on November 20, 2012. This article lists key changes that are
 - Support DOM Meta key on Linux again ([Firefox bug 751749](https://bugzil.la/751749)).
 - On {{domxref("HTMLMediaElement")}}, a new method, `mozGetMetadata`, that returns a JavaScript object whose properties represent metadata from the playing media resource as {key: value} pairs ([Firefox bug 763010](https://bugzil.la/763010)).
 - Support for {{domxref("Range.intersectsNode")}} has been added again; it has been removed in Gecko 1.9 ([Firefox bug 579638](https://bugzil.la/579638).
-- {{domxref("Range.compareBoundaryPoints()")}} now throws a {{domxref("DOMException")}} with the `NOT_SUPPORTED_ERR` value when the comparison method is invalid ([Firefox bug 714279](https://bugzil.la/714279)) .
+- {{domxref("Range.compareBoundaryPoints()")}} now throws a {{domxref("DOMException")}} with the `NOT_SUPPORTED_ERR` value when the comparison method is invalid ([Firefox bug 714279](https://bugzil.la/714279)).
 - {{domxref("Event.initEvent()")}} has been adapted to the spec: it doesn't throw anymore if called after the dispatch of the event, it is only a no-op ([Firefox bug 768310](https://bugzil.la/768310)).
 - The non-standard {{domxref("XMLHttpRequest", "XMLHttpRequest.onuploadrequest")}} property has been removed ([Firefox bug 761278](https://bugzil.la/761278)).
 - The method {{domxref("XMLHttpRequest.getAllResponseHeaders()")}} now separates them with a CRLF (instead of a LF), as requested by the spec ([Firefox bug 730925](https://bugzil.la/730925)).

@@ -50,6 +50,10 @@ const img0 = images.item(0); // You can use the item() method this way
 const img1 = images[1]; // But this notation is easier and more common
 ```
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

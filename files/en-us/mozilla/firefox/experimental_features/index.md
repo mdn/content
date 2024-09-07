@@ -1162,6 +1162,46 @@ This includes: `SVGPathSegList`, [SVGPathElement.getPathSegAtLength()](/en-US/do
 
 ## JavaScript
 
+### Regular expression (?ims-ims:...) modifiers
+
+The [(?ims-ims:...)](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Modifier) regular expression modifiers allow you to make changes to only take effect in a specific part of a regex pattern.
+
+<table>
+  <thead>
+    <tr>
+      <th>Release channel</th>
+      <th>Version added</th>
+      <th>Enabled by default?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Nightly</th>
+      <td>131</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <th>Developer Edition</th>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Beta</th>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Release</th>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <th>Preference name</th>
+      <td colspan="2"><code>javascript.options.experimental.regexp_modifiers</code></td>
+    </tr>
+  </tbody>
+</table>
+
 ## APIs
 
 ### Graphics: Canvas, WebGL, and WebGPU
@@ -2026,48 +2066,6 @@ Notifications have the [`requireInteraction`](/en-US/docs/Web/API/Notification/r
     <tr>
       <th>Preference name</th>
       <td colspan="2"><code>dom.webnotifications.requireinteraction.enabled</code></td>
-    </tr>
-  </tbody>
-</table>
-
-### Web Codecs API
-
-The [Web Codecs API](/en-US/docs/Web/API/WebCodecs_API) gives web developers low-level access to the individual frames of a video stream and chunks of audio.
-The following interfaces are supported (on Linux desktop only): [`VideoEncoder`](/en-US/docs/Web/API/VideoEncoder), [`VideoDecoder`](/en-US/docs/Web/API/VideoDecoder), [`EncodedVideoChunk`](/en-US/docs/Web/API/EncodedVideoChunk), [`VideoFrame`](/en-US/docs/Web/API/VideoFrame), [`VideoColorSpace`](/en-US/docs/Web/API/VideoColorSpace).
-([Firefox bug 1874445](https://bugzil.la/1874445)).
-
-<table>
-  <thead>
-    <tr>
-      <th>Release channel</th>
-      <th>Version changed</th>
-      <th>Enabled by default?</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Nightly</th>
-      <td>123</td>
-      <td>Yes. Linux desktop only.</td>
-    </tr>
-    <tr>
-      <th>Developer Edition</th>
-      <td>123</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Beta</th>
-      <td>123</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Release</th>
-      <td>123</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Preference name</th>
-      <td colspan="2"><code>dom.media.webcodecs.enabled</code></td>
     </tr>
   </tbody>
 </table>
