@@ -34,13 +34,19 @@ A {{jsxref("Promise")}} that is:
 
 You may have an API that takes a callback. The callback may be synchronous or asynchronous. You want to handle everything uniformly by wrapping the result in a promise. The most straightforward way might be {{jsxref("Promise/resolve", "Promise.resolve(func())")}}. The problem is that if `func()` synchronously throws an error, this error would not be caught and turned into a rejected promise.
 
-`Promise.try(func)` is essentially the same as this more common approach (lifting a function call result into a promise, fulfilled or rejected):
+The common approach (lifting a function call result into a promise, fulfilled or rejected) often looks like this:
 
 ```js
 new Promise((resolve) => resolve(func()));
 ```
 
-For the built-in `Promise()` constructor, errors thrown from the executor are automatically caught and turned into rejections, so these two examples are mostly equivalent, except that `Promise.try()` is more concise and readable.
+But `Promise.try()` is more helpful here:
+
+```js
+Promise.try(func);
+```
+
+For the built-in `Promise()` constructor, errors thrown from the executor are automatically caught and turned into rejections, so these two approaches are mostly equivalent, except that `Promise.try()` is more concise and readable.
 
 Note that `Promise.try()` is _not_ equivalent to this, despite being highly similar:
 
@@ -96,7 +102,9 @@ async function doSomething(action) {
 
 ### Calling try() on a non-Promise constructor
 
-`Promise.try()` is a generic method. It can be called on any constructor that implements the same signature as the `Promise()` constructor. The following is a slightly more faithful approximation of the actual `Promise.try()` (although it should still not be used as a polyfill):
+`Promise.try()` is a generic method. It can be called on any constructor that implements the same signature as the `Promise()` constructor.
+
+The following is a slightly more faithful approximation of the actual `Promise.try()` (although it should still not be used as a polyfill):
 
 ```js
 Promise.try = function(func){
@@ -110,7 +118,7 @@ Promise.try = function(func){
 };
 ```
 
-Because of how `Promise.try()` is safely implemented (i.e., the `try..catch`), we can safely invoke `Promise.try()` with its `this` set to any custom constructor.
+Because of how `Promise.try()` is implemented (i.e., the `try..catch`), we can safely invoke `Promise.try()` with its `this` set to any custom constructor.
 
 ```js
 class NotPromise {
