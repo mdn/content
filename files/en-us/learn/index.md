@@ -76,7 +76,7 @@ There are patterns that make it easier to find these resources, for example:
 ## Getting our code examples
 
 The code examples you'll encounter in the Learning Area are all [available on GitHub](https://github.com/mdn/learning-area/).
-If you want to copy them all to your computer, the easiest way is to [download a ZIP of the latest master code branch](https://codeload.github.com/mdn/learning-area/zip/main).
+If you want to copy them all to your computer, the easiest way is to [download a ZIP of the latest main code branch](https://codeload.github.com/mdn/learning-area/zip/main).
 
 If you prefer to copy the repo in a more flexible way that allows for automatic updates, you can follow the more complex instructions:
 
