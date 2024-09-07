@@ -101,7 +101,7 @@ Earlier on in the course we got you to type some simple JavaScript commands into
    > [!NOTE]
    > This error didn't come up as soon as the page was loaded because this error occurred inside a function (inside the `checkGuess() { }` block). As you'll learn in more detail in our later [functions article](/en-US/docs/Learn/JavaScript/Building_blocks/Functions), code inside functions runs in a separate scope than code outside functions. In this case, the code was not run and the error was not thrown until the `checkGuess()` function was run by line 86.
 
-4. The line number given in the error is 80. Have a look at line 80, and you'll see the following code:
+4. The line number given in the error is 78. Have a look at line 78, and you'll see the following code:
 
    ```js
    lowOrHi.textContent = "Last guess was too high!";
