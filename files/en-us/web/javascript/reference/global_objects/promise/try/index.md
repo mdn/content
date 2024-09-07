@@ -118,7 +118,7 @@ Promise.try = function (func) {
 };
 ```
 
-Because of how `Promise.try()` is implemented (i.e., the `try..catch`), we can safely invoke `Promise.try()` with its `this` set to any custom constructor.
+Because of how `Promise.try()` is implemented (i.e., the `try..catch`), we can safely invoke `Promise.try()` with its `this` set to any custom constructor, and it will never synchronously throw an error.
 
 ```js
 class NotPromise {
@@ -126,8 +126,8 @@ class NotPromise {
     // The "resolve" and "reject" functions behave nothing like the native
     // promise's, but Promise.try() just calls resolve
     executor(
-      (value) => console.log(`Resolved ${value}`),
-      (reason) => console.log(`Rejected ${reason}`),
+      (value) => console.log("Resolved",value),
+      (reason) => console.log("Rejected",reason),
     );
   }
 }
