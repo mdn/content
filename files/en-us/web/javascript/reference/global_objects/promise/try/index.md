@@ -107,7 +107,7 @@ async function doSomething(action) {
 The following is a slightly more faithful approximation of the actual `Promise.try()` (although it should still not be used as a polyfill):
 
 ```js
-Promise.try = function(func){
+Promise.try = function (func) {
   return new this((resolve, reject) => {
     try {
       resolve(func());
