@@ -90,7 +90,7 @@ If you prefer to copy the repo in a more flexible way that allows for automatic 
 
 4. You can now enter the directory and find the files you are after (either using your Finder/File Explorer or the [`cd` command](<https://en.wikipedia.org/wiki/Cd_(command)>)).
 
-You can update the `learning-area` repository with any changes made to the master version on GitHub with the following steps:
+You can update the `learning-area` repository with any changes made to the main version on GitHub with the following steps:
 
 1. In your command prompt/terminal, go inside the `learning-area` directory using `cd`. For example, if you were in the parent directory:
 
