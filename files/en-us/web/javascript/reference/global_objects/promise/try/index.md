@@ -126,8 +126,8 @@ class NotPromise {
     // The "resolve" and "reject" functions behave nothing like the native
     // promise's, but Promise.try() just calls resolve
     executor(
-      (value) => console.log("Resolved",value),
-      (reason) => console.log("Rejected",reason),
+      (value) => console.log("Resolved", value),
+      (reason) => console.log("Rejected", reason),
     );
   }
 }
