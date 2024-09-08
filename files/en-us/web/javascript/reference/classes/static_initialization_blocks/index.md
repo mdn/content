@@ -41,7 +41,7 @@ A {{jsxref("Statements/class", "class")}} can have any number of `static {}` ini
 These are [evaluated](/en-US/docs/Web/JavaScript/Reference/Classes#evaluation_order), along with any interleaved static field initializers, in the order they are declared.
 Any static initialization of a super class is performed first, before that of its sub classes.
 
-The scope of the variables declared inside the static block is local to the block. This includes `var`, `function`, `const`, and `let` declarations. `var` declarations _do_ hoist, but only within the block.
+The scope of the variables declared inside the static block is local to the block. This includes `var`, `function`, `const`, and `let` declarations. `var` declarations will not be hoisted out of the static block.
 
 ```js
 var y = "Outer y";
