@@ -284,10 +284,7 @@ Here are some popular editors:
         >, <a href="mailto:tm-support@macromates.com">Email</a>
       </td>
       <td>
-        <a href="https://macromates.com/manual/en/">Online Manual</a>,
-        <a href="https://macromates.com" rel="external"
-          >Wiki</a
-        >
+        <a href="https://macromates.com/manual/en/">Online Manual</a>
       </td>
       <td>
         <a href="https://macromates.com/textmate/manual/bundles" rel="external"
@@ -428,7 +425,7 @@ If you like _lots_ of features and your editor is slowing down because of all yo
 - [Aptana Studio](https://www.axway.com/en/aptana)
 - [Eclipse](https://www.eclipse.org/)
 - [Komodo IDE](https://www.activestate.com/products/komodo-ide/)
-- [NetBeans IDE](https://netbeans.apache.org/front/main/index.html)
+- [NetBeans IDE](https://netbeans.apache.org/)
 - [Visual Studio](https://visualstudio.microsoft.com/)
 - [WebStorm](https://www.jetbrains.com/webstorm/)
 
