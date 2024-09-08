@@ -2,10 +2,12 @@
 title: "@custom-media"
 slug: Web/CSS/@custom-media
 page-type: css-at-rule
+status:
+  - experimental
 browser-compat: css.at-rules.custom-media
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{SeeCompatTable}}
 
 The **`@custom-media`** CSS [at-rule](/en-US/docs/Web/CSS/At-rule) defines aliases for long and complex [media queries](/en-US/docs/Web/CSS/CSS_media_queries). Instead of using hardcoded {{CSSxRef("@media")}} values, in multiple places and files, custom media query sets a media query in a single line of code.
 
