@@ -73,7 +73,7 @@ These are included for completeness, but in most cases are rarely, if ever, usef
 
 ### 2. Widget roles
 
-The various widget role are used to define common interactive patterns. Similar to the document structure roles, some of these roles duplicate the semantics of native HTML elements that are well supported, and should not be used. The difference between the two lists is that, generally, the widget roles require JavaScript interaction and the document structure roles don't necessarily.
+Widget roles are used to define common interactive patterns. Like document structure roles, some widget roles have the same semantics as well-supported native HTML elements, and therefore should be avoided. The key difference is that widget roles typically require JavaScript for interaction, while document structure roles often do not.
 
 - [scrollbar](/en-US/docs/Web/Accessibility/ARIA/Roles/scrollbar_role)
 - [searchbox](/en-US/docs/Web/Accessibility/ARIA/Roles/searchbox_role)
