@@ -50,7 +50,7 @@ class A {
   static field = "Inner y";
   static {
     // var y only hoisted inside block
-    console.log(y);  // undefined <-- not 'Outer y'
+    console.log(y); // undefined <-- not 'Outer y'
 
     var y = this.field;
   }
