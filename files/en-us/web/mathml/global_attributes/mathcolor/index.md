@@ -17,6 +17,7 @@ The **`mathcolor`** [global attribute](/en-US/docs/Web/MathML/Global_attributes)
 ## Syntax
 
 <!-- markdownlint-disable search-replace -->
+
 ```html-nolint
 <!-- Keyword values -->
 <math mathcolor="currentcolor">
@@ -50,6 +51,7 @@ The **`mathcolor`** [global attribute](/en-US/docs/Web/MathML/Global_attributes)
 <math mathcolor="hwb(1.5708rad 60% 0%)">
 <math mathcolor="hwb(.25turn 0% 40% / 50%)">
 ```
+
 <!-- markdownlint-enable search-replace -->
 
 ### Values
