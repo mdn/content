@@ -25,8 +25,26 @@ The Permissions API provides the tools to allow developers to implement a consis
 The `permissions` property has been made available on the {{domxref("Navigator")}} object, both in the standard browsing context and the worker context ({{domxref("WorkerNavigator")}} — so permission checks are available inside workers), and returns a {{domxref("Permissions")}} object that provides access to the Permissions API functionality.
 
 Once you have this object you can then use the {{domxref("Permissions.query()")}} method to return a promise that resolves with the {{domxref("PermissionStatus")}} for a specific API.
-Note that if the status is `prompt` the user must acknowledge a prompt to grant access to the feature.
-The mechanism for launching this prompt will depend on the specific API — it is not defined as part of the Permissions API.
+
+### Requesting permission
+
+If the permission status is `prompt`, the user must acknowledge a prompt to grant access to the feature.
+
+The mechanism that triggers this prompt will depend on the specific API — it is not defined as part of the Permissions API.
+Generally the trigger is code calling a method to access or open the feature, or that registers for notifications from the feature that will subsequently access it.
+
+Note that not all features require a prompt.
+Permission might be granted by a `Permission Policy`, implicitly by {{glossary("transient activation")}}, or via some other mechanism.
+
+### Revoking permission
+
+Permission revocation is not managed by the API.
+More specifically, a {{domxref("Permissions.revoke()")}} method was proposed, but has since been removed from those browsers where it was implemented.
+
+Users can manually remove permission for particular sites using browser settings:
+
+- **Firefox**: _Hamburger Menu > Settings > Privacy & Security > Permissions_ (then select the **Settings** button for the permission of interest).
+- **Chrome**: _Hamburger Menu > Settings > Show advanced settings_. In the _Privacy_ section, click _Content Settings_. In the resulting dialog, find the _Location_ section and select _Ask when a site tries to…_. Finally, click _Manage Exceptions_ and remove the permissions you granted to the sites you are interested in.
 
 ### Permission-aware APIs
 
