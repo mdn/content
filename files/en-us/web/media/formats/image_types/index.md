@@ -1034,8 +1034,8 @@ However, software reading TIFF files is only required to support the first image
 TIFF supports a variety of color spaces, not just RGB.
 These include CMYK, YCbCr, and others, making TIFF a good choice for storing images intended for print, film, or television media.
 
-Long ago, some browsers supported TIFF images in web content; today, however, you need to use special libraries or browser add-ons to do so.
-As such, TIFF files are not useful within the context of web content, _but_ it's common to provide downloadable TIFF files when distributing photos and other artwork intended for precision editing or printing.
+Other than Safari, browsers do not natively support TIFF images in web content except by using special libraries or browser add-ons.
+As such, TIFF files are not broadly used for displaying web content, _but_ it's common to provide downloadable TIFF files when distributing photos and other artwork intended for precision editing or printing.
 
 <table class="standard-table">
   <tbody>
@@ -1056,7 +1056,7 @@ As such, TIFF files are not useful within the context of web content, _but_ it's
     <tr>
       <th scope="row">Browser compatibility</th>
       <td>
-        No browsers integrate support for TIFF; its value is as a download format
+        Safari
       </td>
     </tr>
     <tr>
