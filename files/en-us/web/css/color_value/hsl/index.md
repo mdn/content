@@ -306,6 +306,63 @@ div.comma-separated {
 
 {{EmbedLiveSample("legacy_syntax_comma-separated_values", "100%", 150)}}
 
+### Legacy versus modern syntax
+
+The example demonstrates how the `hsla()` syntax is an alias for `hsl()`; both are supported using both modern and legacy (comma-separated) syntaxes.
+
+#### HTML
+
+```html
+<div class="modern">HSL</div>
+<div class="legacy">HSL</div>
+<div class="modernWithAlpha">HSL</div>
+<div class="modernHSLA">HSLA</div>
+<div class="legacyHSLA">HSLA</div>
+```
+
+#### CSS
+
+```css
+div {
+  width: 100px;
+  min-height: 50px;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body {
+  display: flex;
+  gap: 20px;
+}
+```
+
+```css
+div.modern {
+  background-color: hsl(90 80% 50%);
+}
+
+div.legacy {
+  background-color: hsl(90, 80%, 50%);
+}
+
+div.modernWithAlpha {
+  background-color: hsl(90 80% 50% / 50%);
+}
+
+div.modernHSLA {
+  background-color: hsla(90 80% 50% / 50%);
+}
+
+div.legacyHSLA {
+  background-color: hsla(90, 80%, 50%, 0.5);
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("legacy_versus_modern_syntax", "100%", 70)}}
+
 ## Specifications
 
 {{Specifications}}
