@@ -50,14 +50,14 @@ It is valid for the input types including: {{HTMLElement("input/date", "date")}}
     </tr>
     <tr>
       <td>{{HTMLElement("input/time", "time")}}</td>
-      <td><code>hh:mm</code></td>
+      <td><code>HH:mm</code></td>
       <td><code>&#x3C;input type="time" min="09:00" step="900"></code></td>
     </tr>
     <tr>
       <td>
         {{HTMLElement("input/datetime-local", "datetime-local")}}
       </td>
-      <td><code>yyyy-mm-ddThh:mm</code></td>
+      <td><code>yyyy-mm-ddTHH:mm</code></td>
       <td>
         <code>&#x3C;input type="datetime-local" min="2019-12-25T19:30"></code>
       </td>

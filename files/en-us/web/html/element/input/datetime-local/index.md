@@ -32,7 +32,7 @@ You can set a default value for the input by including a date and time inside th
 
 {{ EmbedLiveSample('Value', 600, 60) }}
 
-One thing to note is that the displayed date and time formats differ from the actual `value`; the displayed date and time are formatted according to the user's locale as reported by their operating system, whereas the date/time `value` is always formatted `YYYY-MM-DDThh:mm`. When the above value is submitted to the server, for example, it will look like `partydate=2024-06-01T08:30`.
+One thing to note is that the displayed date and time formats differ from the actual `value`; the displayed date and time are formatted according to the user's locale as reported by their operating system, whereas the date/time `value` is always formatted `YYYY-MM-DDTHH:mm`. When the above value is submitted to the server, for example, it will look like `partydate=2024-06-01T08:30`.
 
 > [!NOTE]
 > Also bear in mind that if such data is submitted via HTTP [`GET`](/en-US/docs/Web/HTTP/Methods/GET), the colon character will need to be escaped for inclusion in the URL parameters, e.g. `partydate=2024-06-01T08%3A30`. See {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} for one way to do this.
@@ -50,13 +50,13 @@ In addition to the attributes common to all {{HTMLElement("input")}} elements, `
 
 ### max
 
-The latest date and time to accept. If the [`value`](/en-US/docs/Web/HTML/Element/input#value) entered into the element is later than this timestamp, the element fails [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). If the value of the `max` attribute isn't a valid string that follows the format `YYYY-MM-DDThh:mm`, then the element has no maximum value.
+The latest date and time to accept. If the [`value`](/en-US/docs/Web/HTML/Element/input#value) entered into the element is later than this timestamp, the element fails [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). If the value of the `max` attribute isn't a valid string that follows the format `YYYY-MM-DDTHH:mm`, then the element has no maximum value.
 
 This value must specify a date string later than or equal to the one specified by the `min` attribute.
 
 ### min
 
-The earliest date and time to accept; timestamps earlier than this will cause the element to fail [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). If the value of the `min` attribute isn't a valid string that follows the format `YYYY-MM-DDThh:mm`, then the element has no minimum value.
+The earliest date and time to accept; timestamps earlier than this will cause the element to fail [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). If the value of the `min` attribute isn't a valid string that follows the format `YYYY-MM-DDTHH:mm`, then the element has no minimum value.
 
 This value must specify a date string earlier than or equal to the one specified by the `max` attribute.
 
@@ -168,7 +168,7 @@ input:valid + span::after {
 > HTML form validation is _not_ a substitute for scripts that ensure that the entered data is in the proper format. It's far too easy for someone to make adjustments to the HTML that allow them to bypass the validation, or to remove it entirely. It's also possible for someone to bypass your HTML entirely and submit the data directly to your server. If your server-side code fails to validate the data it receives, problems can arise when improperly-formatted data is submitted (or data that is too large, is of the wrong type, and so forth).
 
 > [!NOTE]
-> With a `datetime-local` input, the date value is always normalized to the format `YYYY-MM-DDThh:mm`.
+> With a `datetime-local` input, the date value is always normalized to the format `YYYY-MM-DDTHH:mm`.
 
 ## Examples
 
