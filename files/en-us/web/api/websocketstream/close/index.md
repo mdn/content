@@ -12,9 +12,9 @@ browser-compat: api.WebSocketStream.close
 {{APIRef("WebSockets API")}}{{non-standard_header}}
 
 The **`close()`** method of the
-{{domxref("WebSocketStream")}} interface closes the WebSocket connection. The method optionally accepts an object specifying a custom code and reason for the server to report.
+{{domxref("WebSocketStream")}} interface closes the WebSocket connection. The method optionally accepts an object containing a custom code and/or reason indicating why the connection was closed.
 
-An alternative mechanism for closing a `WebSocketStream` is to specify an {{domxref("AbortSignal")}} in the [`signal`](/en-US/docs/Web/API/WebSocketStream/WebSocketStream#signal) option of the constructor upon creation. The associated {{domxref("AbortController")}} can then be used to close the WebSocket connection. This is generally the preferred mechanism. However, `close()` can be used if you wish to specify a custom code and reason for the server to report.
+An alternative mechanism for closing a `WebSocketStream` is to specify an {{domxref("AbortSignal")}} in the [`signal`](/en-US/docs/Web/API/WebSocketStream/WebSocketStream#signal) option of the constructor upon creation. The associated {{domxref("AbortController")}} can then be used to close the WebSocket connection. This is generally the preferred mechanism. However, `close()` can be used if you wish to specify a custom code and/or reason.
 
 ## Syntax
 
@@ -28,7 +28,7 @@ close(options)
 - `options` {{optional_inline}}
   - : An options object containing the following properties:
     - `closeCode` {{optional_inline}}
-      - : A number representing the closing code sent by the server (see the full list of [`CloseEvent` status codes](/en-US/docs/Web/API/CloseEvent/code#value)).
+      - : A number representing the closing code (see the full list of [`CloseEvent` status codes](/en-US/docs/Web/API/CloseEvent/code#value)).
     - `reason` {{optional_inline}}
       - : A string representing a human-readable description of the reason why the socket connection is closed. The maximum allowed length for a `reason` string is 123 bytes. The string is automatically encoded as UTF-8 when the function is invoked.
 

@@ -21,7 +21,7 @@ A promise, which fulfills with an object containing the following properties:
 - `extensions`
   - : A string representing any extensions applied to the `WebSocketStream`. Such extensions are not currently defined, but may be in the future. Currently returns an empty string.
 - `protocol`
-  - : A string representing any custom protocol used to open the current WebSocket connection, as specified in the [`protocols`](/en-US/docs/Web/API/WebSocketStream/WebSocketStream#protocols) option of the `WebSocketStream()` constructor. Returns an empty string if no custom protocol was set during instantiation.
+  - : A string representing the sub-protocol used to open the current WebSocket connection (chosen from the options specified in the [`protocols`](/en-US/docs/Web/API/WebSocketStream/WebSocketStream#protocols) option of the `WebSocketStream()` constructor). Returns an empty string if no sub-protocol has been used to open the connection (i.e. no sub-protocol options were included in the constructor call).
 - `readable`
   - : A {{domxref("ReadableStream")}} instance. Call {{domxref("ReadableStream.getReader()")}} on it to obtain a {{domxref("ReadableStreamDefaultReader")}} instance that can be used to read incoming WebSocket data.
 - `writable`
@@ -41,7 +41,7 @@ async function start() {
   const reader = readable.getReader();
   const writer = writable.getWriter();
 
-  await writer.write("ping");
+  writer.write("ping");
 
   while (true) {
     const { value, done } = await reader.read();
@@ -49,8 +49,8 @@ async function start() {
       break;
     }
 
-    setTimeout(async () => {
-      await writer.write("ping");
+    setTimeout(() => {
+      writer.write("ping");
     }, 5000);
   }
 }

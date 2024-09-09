@@ -39,22 +39,27 @@ The **`WebSocketStream`** interface of the {{domxref("WebSockets API", "WebSocke
 const output = document.querySelector("#output");
 
 function writeToScreen(message) {
-  output.insertAdjacentHTML("beforeend", `<p>${message}</p>`);
+  const pElem = document.createElement("p");
+  pElem.textContent = message;
+  output.appendChild(pElem);
 }
 
-if ("WebSocketStream" in self) {
-  const wsURL = "wss://127.0.0.1/";
+if (!("WebSocketStream" in self)) {
+  writeToScreen("Your browser does not support WebSocketStream");
+} else {
+  const wsURL = "ws://127.0.0.1/";
   const wss = new WebSocketStream(wsURL);
 
   console.log(wss.url);
 
   async function start() {
-    const { readable, writable } = await wss.opened;
+    const { readable, writable, extensions, protocol } = await wss.opened;
     writeToScreen("CONNECTED");
+    closeBtn.disabled = false;
     const reader = readable.getReader();
     const writer = writable.getWriter();
 
-    await writer.write("ping");
+    writer.write("ping");
     writeToScreen("SENT: ping");
 
     while (true) {
@@ -64,16 +69,14 @@ if ("WebSocketStream" in self) {
         break;
       }
 
-      setTimeout(async () => {
-        await writer.write("ping");
+      setTimeout(() => {
+        writer.write("ping");
         writeToScreen("SENT: ping");
       }, 5000);
     }
   }
 
   start();
-} else {
-  writeToScreen("Your browser does not support WebSocketStream");
 }
 ```
 

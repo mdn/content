@@ -12,16 +12,16 @@ browser-compat: api.WebSocketStream.closed
 {{APIRef("WebSockets API")}}{{non-standard_header}}
 
 The **`closed`** read-only property of the
-{{domxref("WebSocketStream")}} interface returns a {{jsxref("Promise")}} that fulfills with an object once the socket connection is closed. The object contains the closing code and reason, as sent by the server.
+{{domxref("WebSocketStream")}} interface returns a {{jsxref("Promise")}} that fulfills with an object once the socket connection is closed. The object contains the closing code and reason.
 
 ## Value
 
 A promise, which fulfills with an object containing the following properties:
 
 - `closeCode`
-  - : A number representing the closing code sent by the server (see the full list of [`CloseEvent` status codes](/en-US/docs/Web/API/CloseEvent/code#value)).
+  - : A number representing the closing code (see the full list of [`CloseEvent` status codes](/en-US/docs/Web/API/CloseEvent/code#value)).
 - `reason`
-  - : A string representing a human-readable description of the reason why the socket connection is closed.
+  - : A string representing a human-readable description of the reason why the socket connection was closed.
 
 The promise rejects if the WebSocket connection did not close cleanly (for a clean close, the associated TCP connection must be closed _after_ the WebSocket closing handshake is completed).
 
