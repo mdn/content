@@ -16,8 +16,6 @@ The **`mathcolor`** [global attribute](/en-US/docs/Web/MathML/Global_attributes)
 
 ## Syntax
 
-<!-- markdownlint-disable search-replace -->
-
 ```html-nolint
 <!-- Keyword values -->
 <math mathcolor="currentcolor">
@@ -35,12 +33,10 @@ The **`mathcolor`** [global attribute](/en-US/docs/Web/MathML/Global_attributes)
 <math mathcolor="#009900aa">
 
 <!-- <rgb()> values -->
-<math mathcolor="rgb(34, 12, 64, 0.6)">
 <math mathcolor="rgb(34 12 64 / 0.6)">
 <math mathcolor="rgb(34.6 12 64 / 60%)">
 
 <!-- <hsl()> values -->
-<math mathcolor="hsl(30, 100%, 50%, 0.6)">
 <math mathcolor="hsl(30 100% 50% / 0.6)">
 <math mathcolor="hsl(30.2 100% 50% / 60%)">
 
@@ -51,8 +47,6 @@ The **`mathcolor`** [global attribute](/en-US/docs/Web/MathML/Global_attributes)
 <math mathcolor="hwb(1.5708rad 60% 0%)">
 <math mathcolor="hwb(.25turn 0% 40% / 50%)">
 ```
-
-<!-- markdownlint-enable search-replace -->
 
 ### Values
 

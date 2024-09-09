@@ -239,7 +239,7 @@
       },
       {
         "name": "old-color-value-syntax",
-        "message": "Dont't use the old syntax that uses commas. Use the new syntax that uses spaces instead.",
+        "message": "Don't use the old syntax that uses commas. Use the new syntax that uses spaces instead.",
         "searchPattern": "/(rgb|hsl)a?\\( ?\\d+,/gm",
         "searchScope": "code",
       },

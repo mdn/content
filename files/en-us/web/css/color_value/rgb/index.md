@@ -25,7 +25,7 @@ rgb(255 255 255 / 50%)
 
 /* Relative values */
 rgb(from green r g b / 0.5)
-rgb(from #0000FF calc(r + 40) calc(g + 40) b)
+rgb(from #0000ff calc(r + 40) calc(g + 40) b)
 rgb(from hwb(120deg 10% 20%) r g calc(b + 200))
 ```
 
