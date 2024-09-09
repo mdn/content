@@ -65,8 +65,15 @@ As described in the HTTP 1.1 specification, `POST` is designed to allow a unifor
 ## Syntax
 
 ```http
-POST /test
+POST <request-target>["?"<query>] HTTP/1.1
 ```
+
+- `<request-target>`
+  - : Identifies the target resource of the request when combined with the information provided in the {{HTTPHeader("Host")}} header.
+    This is an absolute path (e.g., `/path/to/file.html`) in requests to an origin server, and an absolute URL in requests to proxies (e.g., `http://www.example.com/path/to/file.html`).
+- `<query>`
+  - : An optional query component preceded by a question-mark `?`.
+    Often used to carry identifying information in the form of `key=value` pairs.
 
 ## Examples
 

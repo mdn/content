@@ -42,9 +42,19 @@ A client can specify a URL with this method, or an asterisk (`*`) to refer to th
 ## Syntax
 
 ```http
-OPTIONS /index.html HTTP/1.1
-OPTIONS * HTTP/1.1
+OPTIONS *|<request-target>["?"<query>] HTTP/1.1
 ```
+
+The request target may be either in 'asterisk form' `*` indicating the whole server, or a request target as is common with other methods:
+
+- `*`
+  - : Indicates that the client wishes to request `OPTIONS` for the server as a whole, as opposed to a specific named resource of that server.
+- `<request-target>`
+  - : Identifies the target resource of the request when combined with the information provided in the {{HTTPHeader("Host")}} header.
+    This is an absolute path (e.g., `/path/to/file.html`) in requests to an origin server, and an absolute URL in requests to proxies (e.g., `http://www.example.com/path/to/file.html`).
+- `<query>`
+  - : An optional query component preceded by a question-mark `?`.
+    Often used to carry identifying information in the form of `key=value` pairs.
 
 ## Examples
 
@@ -56,7 +66,16 @@ To find out which request methods a server supports, one can use the `curl` comm
 curl -X OPTIONS https://example.org -i
 ```
 
-The response then contains an {{HTTPHeader("Allow")}} header that holds the allowed methods:
+This creates the following HTTP request:
+
+```http
+OPTIONS / HTTP/2
+Host: example.org
+User-Agent: curl/8.7.1
+Accept: */*
+```
+
+The response contains an {{HTTPHeader("Allow")}} header that holds the allowed methods:
 
 ```http
 HTTP/1.1 204 No Content

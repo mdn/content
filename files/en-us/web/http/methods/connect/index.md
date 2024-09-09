@@ -12,13 +12,15 @@ The **`CONNECT`** HTTP method requests that a {{Glossary("Proxy server", "proxy"
 The request target is unique to this method in that it consists of only the host and port number of the tunnel destination, separated by a colon.
 Any [2XX successful response status code](/en-US/docs/Web/HTTP/Status#successful_responses) means that the proxy will switch to 'tunnel mode' and any data in the success response body is from the server identified by the request target.
 
-The `CONNECT` method can be used to access websites behind a proxy using {{Glossary("TLS")}} ({{Glossary("HTTPS")}}) if all external traffic is restricted to pass through a proxy as follows:
+If a website is behind a proxy and it's enforced that all external traffic must pass through the proxy, the `CONNECT` method allows you to establish a {{Glossary("TLS")}} ({{Glossary("HTTPS")}}) connection with that website as follows:
 
 - The client asks the proxy to tunnel the {{Glossary("TCP")}} connection to the desired destination.
-- The proxy server makes the connection on behalf of the client.
+- The proxy server makes a secure connection to the server on behalf of the client.
 - Once the connection is established, the proxy server continues to relay the TCP stream to and from the client.
 
-A HTTP tunnel can enable network traffic that would otherwise be restricted (SSH or FTP) using the HTTP(S) protocol.
+Aside from enabling secure access to websites behind proxies, a HTTP tunnel provides a way to allow traffic that would otherwise be restricted (SSH or FTP) over the HTTP(S) protocol.
+
+`CONNECT` is a hop-by-hop method, meaning proxies will only forward the `CONNECT` request if there is another inbound proxy in front of the origin server since most origin servers do not implement `CONNECT`.
 
 > [!WARNING]
 > If you are running a proxy that supports `CONNECT`, restrict its use to a set of known ports or a configurable list of safe request targets.
@@ -59,8 +61,13 @@ A HTTP tunnel can enable network traffic that would otherwise be restricted (SSH
 ## Syntax
 
 ```http
-CONNECT www.example.com:443 HTTP/1.1
+CONNECT <host>:<port> HTTP/1.1
 ```
+
+- `<host>`
+  - : A host which may be a registered hostname (e.g., `example.com`) or an IP address (IPv4, IPv6).
+- `<port>`
+  - : A port number in decimal (e.g., `80`, `443`). There is no default port, so a client **must** send one.
 
 ## Examples
 
