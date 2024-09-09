@@ -22,7 +22,7 @@ There are 6 categories of ARIA roles:
 
 ### 1. Document structure roles
 
-Document Structure roles are used to provide a structural description for a section of content. Most of these roles should no longer be used as browsers now support semantic HTML element with the same meaning. The roles without HTML equivalents, such as presentation, toolbar and tooltip roles, provide information on the document structure to assistive technologies such as screen readers as equivalent native HTML tags are not available.
+Document Structure roles are used to provide a structural description for a section of content. Most of these roles should no longer be used as browsers now support semantic HTML elements with the same meaning. The roles without HTML equivalents, such as presentation, toolbar and tooltip roles, provide information on the document structure to assistive technologies such as screen readers as equivalent native HTML tags are not available.
 
 - [toolbar](/en-US/docs/Web/Accessibility/ARIA/Roles/toolbar_role)
 - [tooltip](/en-US/docs/Web/Accessibility/ARIA/Roles/tooltip_role)
