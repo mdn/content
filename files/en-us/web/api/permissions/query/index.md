@@ -10,7 +10,8 @@ browser-compat: api.Permissions.query
 
 The **`query()`** method of the {{domxref("Permissions")}} interface returns the state of a user permission on the global scope.
 
-The permissions supported by each browser versions are listed in the [compatibility data of the `Permissions` interface](/en-US/docs/Web/API/Permissions#browser_compatibility) (see also the relevant source code for [Firefox values](https://searchfox.org/mozilla-central/source/dom/webidl/Permissions.webidl#10), [Chromium values](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/third_party/blink/renderer/modules/permissions/permission_descriptor.idl), and [WebKit values](https://github.com/WebKit/WebKit/blob/main/Source/WebCore/Modules/permissions/PermissionName.idl)).
+The user permission names are defined in the respective specifications for each feature.
+The permissions supported by different browser versions are listed in the [compatibility data of the `Permissions` interface](/en-US/docs/Web/API/Permissions#browser_compatibility) (see also the relevant source code for [Firefox values](https://searchfox.org/mozilla-central/source/dom/webidl/Permissions.webidl#10), [Chromium values](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/third_party/blink/renderer/modules/permissions/permission_descriptor.idl), and [WebKit values](https://github.com/WebKit/WebKit/blob/main/Source/WebCore/Modules/permissions/PermissionName.idl)).
 
 The APIs that are gated by each permission are listed in [Permission-aware APIs](/en-US/docs/Web/API/Permissions_API#permission-aware_apis) in the [Permissions API](/en-US/docs/Web/API/Permissions_API) overview topic.
 
@@ -30,7 +31,7 @@ query(permissionDescriptor)
     All permissions have a name:
 
     - `name`
-      - : A string containing the name of the API whose permissions you want to query.
+      - : A string containing the name of the API whose permissions you want to query, such as `camera`, `bluetooth`, `camera`, `geolocation` (see [`Permissions`](/en-US/docs/Web/API/Permissions#browser_compatibility) for a more complete list).
         The returned {{jsxref("Promise")}} will reject with a {{jsxref("TypeError")}} if the permission name is not supported by the browser.
 
     For the `push` permissions you can also specify:

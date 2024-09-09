@@ -25,7 +25,8 @@ The Permissions API provides the tools to allow developers to implement a consis
 The `permissions` property has been made available on the {{domxref("Navigator")}} object, both in the standard browsing context and the worker context ({{domxref("WorkerNavigator")}} — so permission checks are available inside workers), and returns a {{domxref("Permissions")}} object that provides access to the Permissions API functionality.
 
 Once you have this object you can then use the {{domxref("Permissions.query()")}} method to return a promise that resolves with the {{domxref("PermissionStatus")}} for a specific API.
-Note that if the status is `prompt` the user must acknowledge a prompt before accessing the feature, and that the mechanism for launching this prompt will depend on the specific API — it is not defined as part of the Permissions API.
+Note that if the status is `prompt` the user must acknowledge a prompt to grant access to the feature.
+The mechanism for launching this prompt will depend on the specific API — it is not defined as part of the Permissions API.
 
 ### Permission-aware APIs
 
@@ -33,8 +34,9 @@ Not all APIs' permission statuses can be queried using the Permissions API.
 A non-exhaustive list of permission-aware APIs includes:
 
 - [Background Synchronization API](/en-US/docs/Web/API/Background_Synchronization_API): `background-sync` (should always be granted)
+- [Clipboard_API](/en-US/docs/Web/API/Clipboard_API#security_considerations): `clipboard-read`, `clipboard-write`
 - [Compute Pressure API](/en-US/docs/Web/API/Compute_Pressure_API): `compute-pressure`
-- [Geolocation API](/en-US/docs/Web/API/Geolocation_API): `geolocation`
+- [Geolocation API](/en-US/docs/Web/API/Geolocation_API#security_considerations): `geolocation`
 - [Local Font Access API](/en-US/docs/Web/API/Local_Font_Access_API): `local-fonts`
 - [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API): `microphone`, `camera`
 - [Notifications API](/en-US/docs/Web/API/Notifications_API): `notifications`
@@ -44,6 +46,7 @@ A non-exhaustive list of permission-aware APIs includes:
 - [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs): `accelerometer`, `gyroscope`, `magnetometer`, `ambient-light-sensor`
 - [Storage Access API](/en-US/docs/Web/API/Storage_Access_API): `storage-access`, `top-level-storage-access`
 - [Storage API](/en-US/docs/Web/API/Storage_API): `persistent-storage`
+- [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API): `bluetooth`
 - [Web MIDI API](/en-US/docs/Web/API/Web_MIDI_API): `midi`
 - [Window Management API](/en-US/docs/Web/API/Window_Management_API): `window-management`
 
@@ -61,9 +64,10 @@ A non-exhaustive list of permission-aware APIs includes:
 
 ## Examples
 
-We have created a simple example called Location Finder. You can [run the example live](https://chrisdavidmills.github.io/location-finder-permissions-api/), or [view the source code on GitHub](https://github.com/chrisdavidmills/location-finder-permissions-api/tree/gh-pages).
+We have created a simple example called Location Finder.
+You can [run the example live](https://chrisdavidmills.github.io/location-finder-permissions-api/), [view the source code on GitHub](https://github.com/chrisdavidmills/location-finder-permissions-api/tree/gh-pages), or read more about how it works in our article [Using the Permissions API](/en-US/docs/Web/API/Permissions_API/Using_the_Permissions_API).
 
-Read more about how it works in our article [Using the Permissions API](/en-US/docs/Web/API/Permissions_API/Using_the_Permissions_API).
+The [`Permissions.query()` example](/en-US/docs/Web/API/Permissions/query#test_support_for_various_permissions) also so shows code that tests most permissions on the current browser and logs the result.
 
 ## Specifications
 
