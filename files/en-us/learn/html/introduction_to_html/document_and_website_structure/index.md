@@ -138,15 +138,17 @@ Our example seen above is represented by the following code (you can also [find 
           <h3>Subsection</h3>
 
           <p>
-            Donec ut librero sed accu vehicula ultricies a non tortor. Lorem ipsum
-            dolor sit amet, consectetur adipisicing elit. Aenean ut gravida lorem.
-            Ut turpis felis, pulvinar a semper sed, adipiscing id dolor.
+            Donec ut librero sed accu vehicula ultricies a non tortor. Lorem
+            ipsum dolor sit amet, consectetur adipisicing elit. Aenean ut
+            gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id
+            dolor.
           </p>
 
           <p>
             Pelientesque auctor nisi id magna consequat sagittis. Curabitur
-            dapibus, enim sit amet elit pharetra tincidunt feugiat nist imperdiet.
-            Ut convallis libero in urna ultrices accumsan. Donec sed odio eros.
+            dapibus, enim sit amet elit pharetra tincidunt feugiat nist
+            imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed
+            odio eros.
           </p>
         </section>
 
@@ -156,15 +158,15 @@ Our example seen above is represented by the following code (you can also [find 
           <p>
             Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum
             soclis natoque penatibus et manis dis parturient montes, nascetur
-            ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem
-            facilisis semper ac in est.
+            ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at
+            sem facilisis semper ac in est.
           </p>
 
           <p>
             Vivamus fermentum semper porta. Nunc diam velit, adipscing ut
             tristique vitae sagittis vel odio. Maecenas convallis ullamcorper
-            ultricied. Curabitur ornare, ligula semper consectetur sagittis, nisi
-            diam iaculis velit, is fringille sem nunc vet mi.
+            ultricied. Curabitur ornare, ligula semper consectetur sagittis,
+            nisi diam iaculis velit, is fringille sem nunc vet mi.
           </p>
         </section>
       </article>
