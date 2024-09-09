@@ -7,7 +7,7 @@ browser-compat: http.methods.HEAD
 
 {{HTTPSidebar}}
 
-The **HTTP `HEAD` request method** requests the metadata of a resource in the form of [headers](/en-US/docs/Web/HTTP/Headers) that the server would have sent if the {{HTTPMethod("GET")}} method was used instead.
+The **`HEAD`** HTTP methos requests the metadata of a resource in the form of [headers](/en-US/docs/Web/HTTP/Headers) that the server would have sent if the {{HTTPMethod("GET")}} method was used instead.
 This method can be used in cases where a URL might produce a large download, for example, a `HEAD` request can read the {{HTTPHeader("Content-Length")}} header to check the file size before downloading the file with a `GET`.
 
 If the response to a `HEAD` request shows that a cached URL response is now outdated, the cached copy is invalidated even if no `GET` request was made.

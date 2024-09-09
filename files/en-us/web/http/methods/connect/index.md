@@ -7,7 +7,7 @@ browser-compat: http.methods.CONNECT
 
 {{HTTPSidebar}}
 
-The **HTTP `CONNECT` request method** requests that a {{Glossary("Proxy server", "proxy")}} establish a HTTP tunnel to a destination server, and if successful, blindly forward data in both directions until the tunnel is closed.
+The **`CONNECT`** HTTP method requests that a {{Glossary("Proxy server", "proxy")}} establish a HTTP tunnel to a destination server, and if successful, blindly forward data in both directions until the tunnel is closed.
 
 The request target is unique to this method in that it consists of only the host and port number of the tunnel destination, separated by a colon.
 Any [2XX successful response status code](/en-US/docs/Web/HTTP/Status#successful_responses) means that the proxy will switch to 'tunnel mode' and any data in the success response body is from the server identified by the request target.

@@ -7,7 +7,7 @@ browser-compat: http.methods.DELETE
 
 {{HTTPSidebar}}
 
-The **HTTP `DELETE` request method** asks the server to delete a specified resource.
+The **`DELETE`** HTTP method asks the server to delete a specified resource.
 
 Content sent in a `DELETE` request has no defined semantics, and therefore should be omitted.
 

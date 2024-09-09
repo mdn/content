@@ -7,7 +7,7 @@ browser-compat: http.methods.OPTIONS
 
 {{HTTPSidebar}}
 
-The **HTTP `OPTIONS` request method** requests permitted communication options for a given URL or server.
+The **`OPTIONS`** HTTP method requests permitted communication options for a given URL or server.
 A client can specify a URL with this method, or an asterisk (`*`) to refer to the entire server.
 
 <table class="properties">

@@ -7,7 +7,7 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc9110#TRACE
 
 {{HTTPSidebar}}
 
-The **HTTP `TRACE` request method** performs a message loop-back test along the path to the target resource, providing a debugging mechanism.
+The **`TRACE`** HTTP method performs a message loop-back test along the path to the target resource, providing a debugging mechanism.
 
 The final recipient of the request should reflect the message as received (excluding any fields that might include sensitive data) back to the client as the message body of a {{HTTPStatus("200", "200 OK")}} response with a {{HTTPHeader("Content-Type")}} of `message/http`.
 The final recipient is either the origin server or the first server to receive a {{HTTPHeader("Max-Forwards")}} value of `0` in the request.

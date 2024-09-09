@@ -7,7 +7,7 @@ browser-compat: http.methods.POST
 
 {{HTTPSidebar}}
 
-The **HTTP `POST` request method** sends data to the server. The type of the body of the request is indicated by the {{HTTPHeader("Content-Type")}} header.
+The **`POST`** HTTP method sends data to the server. The type of the body of the request is indicated by the {{HTTPHeader("Content-Type")}} header.
 
 The difference between {{HTTPMethod("PUT")}} and `POST` is that `PUT` is {{Glossary("idempotent")}}: calling it once is no different from calling it several times successively (there are no _side_ effects).
 Successive identical `POST` requests may have additional effects, such as creating the same order several times.
