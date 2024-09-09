@@ -26,8 +26,8 @@ The **WebSocket API** is an advanced technology that makes it possible to open a
 The HTTP headers are used in the [WebSocket handshake](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#the_websocket_handshake):
 
 - {{HTTPHeader("Sec-WebSocket-Key")}}
-  - : An HTTP request header that contains a key from the client.
-    This is part of the [WebSocket opening handshake](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#the_websocket_handshake), and is part of the information used by the server to verify that the client explicitly intends to open a WebSocket.
+  - : An HTTP request header that contains a nonce from the client.
+    This is used in the [WebSocket opening handshake](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#the_websocket_handshake) to verify that the client explicitly intends to open a WebSocket.
     It is added automatically by the browser.
 - {{HTTPHeader("Sec-WebSocket-Accept")}}
   - : An HTTP {{glossary("response header")}} used in the _WebSocket opening handshake_ to indicate that the server is willing to upgrade to a WebSocket connection.
