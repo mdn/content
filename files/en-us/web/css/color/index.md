@@ -15,6 +15,7 @@ For an overview of using color in HTML, see [Applying color to HTML elements usi
 
 ## Syntax
 
+<!-- markdownlint-disable search-replace -->
 ```css
 /* Keyword values */
 color: currentcolor;
@@ -61,6 +62,7 @@ color: revert;
 color: revert-layer;
 color: unset;
 ```
+<!-- markdownlint-enable search-replace -->
 
 The `color` property is specified as a single {{cssxref("&lt;color&gt;")}} value.
 

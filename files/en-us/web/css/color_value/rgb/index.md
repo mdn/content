@@ -16,6 +16,7 @@ The **`rgb()`** functional notation expresses a color in the {{glossary("RGB", "
 
 ## Syntax
 
+<!-- markdownlint-disable search-replace -->
 ```css
 /* Absolute values */
 rgb(255 255 255)
@@ -26,6 +27,7 @@ rgb(from green r g b / 0.5)
 rgb(from #0000FF calc(r + 40) calc(g + 40) b)
 rgb(from hwb(120deg 10% 20%) r g calc(b + 200))
 ```
+<!-- markdownlint-enable search-replace -->
 
 The `rgba()` function can also be used to express sRGB colors. This is an alias for `rgb()` that accepts the same parameters.
 
@@ -277,6 +279,7 @@ For legacy reasons, the `rgb()` function accepts a form in which all values are 
 
 #### CSS
 
+<!-- markdownlint-disable search-replace -->
 ```css
 div {
   width: 100px;
@@ -292,6 +295,7 @@ div.comma-separated {
   background-color: rgb(255, 0, 0, 0.5);
 }
 ```
+<!-- markdownlint-enable search-replace -->
 
 #### Result
 

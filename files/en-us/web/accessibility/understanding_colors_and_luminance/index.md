@@ -52,6 +52,7 @@ It's important to know that there are variations even within one {{glossary("col
 
 These are examples of the CSS notations used to define a color. Here the example color for each is a fully opaque magenta:
 
+<!-- markdownlint-disable search-replace -->
 ```css
 /* named color */
 color: magenta;
@@ -94,6 +95,7 @@ oklch(0.7 0.32 328.37 / 1);
 color(xyz-d65 0.59 0.28 0.96);
 color(xyz-d65 0.59 0.28 0.96 / 1);
 ```
+<!-- markdownlint-enable search-replace -->
 
 The first example uses one of the defined [named colors](/en-US/docs/Web/CSS/named-color).
 

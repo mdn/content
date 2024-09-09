@@ -18,6 +18,7 @@ Defining _complementary colors_ with `hsl()` can be done by adding or subtractin
 
 ## Syntax
 
+<!-- markdownlint-disable search-replace -->
 ```css
 /* Absolute values */
 hsl(120deg 75% 25%)
@@ -34,6 +35,7 @@ hsl(from rgb(200 0 0) calc(h + 30) s calc(l + 30))
 The `hsla()` function can also be used to express sRGB colors. This is an alias for `hsl()` that accepts the same parameters.
 
 > **Note:** `hsl()`/`hsla()` can also be written in a legacy form in which all values are separated with commas, for example `hsl(120, 75%, 25%)` or `hsla(120deg, 75%, 25%, 0.8)`. The `none` value is not permitted in the comma-separated legacy syntax, the `deg` on the hue value is optional, and the `%` units are required for the saturation and lightness values.
+<!-- markdownlint-enable search-replace -->
 
 ### Values
 
@@ -281,6 +283,7 @@ For legacy reasons, the `hsl()` function accepts a form in which all values are 
 
 #### CSS
 
+<!-- markdownlint-disable search-replace -->
 ```css
 div {
   width: 100px;
@@ -296,6 +299,7 @@ div.comma-separated {
   background-color: hsl(0, 100%, 50%, 0.5);
 }
 ```
+<!-- markdownlint-enable search-replace -->
 
 #### Result
 
@@ -332,6 +336,7 @@ body {
 }
 ```
 
+<!-- markdownlint-disable search-replace -->
 ```css
 div.modern {
   background-color: hsl(90 80% 50%);
@@ -353,6 +358,7 @@ div.legacyHSLA {
   background-color: hsla(90, 80%, 50%, 0.5);
 }
 ```
+<!-- markdownlint-enable search-replace -->
 
 #### Result
 
