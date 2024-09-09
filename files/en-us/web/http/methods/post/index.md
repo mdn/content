@@ -13,15 +13,16 @@ The difference between {{HTTPMethod("PUT")}} and `POST` is that `PUT` is {{Gloss
 Successive identical `POST` requests may have additional effects, such as creating the same order several times.
 
 [HTML forms](/en-US/docs/Learn/Forms) typically send data using `POST` and this usually results in a change on the server.
-In this case, the content type is selected via an appropriate string in the [`enctype`](/en-US/docs/Web/HTML/Element/form#enctype) attribute of the {{HTMLElement("form")}} element or the [`formenctype`](/en-US/docs/Web/HTML/Element/input#formenctype) attribute of the {{HTMLElement("input") }} or {{HTMLElement("button")}} elements:
+For HTML forms the format/encoding of the body content is determined by the [`enctype`](/en-US/docs/Web/HTML/Element/form#enctype) attribute of the {{HTMLElement("form")}} element or the [`formenctype`](/en-US/docs/Web/HTML/Element/input#formenctype) attribute of the {{HTMLElement("input") }} or {{HTMLElement("button")}} elements.
+The encoding may be one of the following:
 
 - `application/x-www-form-urlencoded`: the keys and values are encoded in key-value tuples separated by an ampersand (`&`), with an equals symbol (`=`) between the key and the value (e.g., `firstname=Frida&lastname=Kahlo`).
-  Non-alphanumeric characters in both keys and values are {{Glossary("Percent-encoding", "percent-encoded")}}: this is the reason why this type is not suitable to use with binary data and you should use `multipart/form-data` instead for this purpose instead.
+  Non-alphanumeric characters in both keys and values are {{Glossary("Percent-encoding", "percent-encoded")}}: this is the reason why this type is not suitable to use with binary data and you should use `multipart/form-data` for this purpose instead.
 - `multipart/form-data`: each value is sent as a block of data ("body part"), with a user agent-defined delimiter (for example, `boundary="delimiter12345"`) separating each part.
   The keys are described in the {{HTTPHeader("Content-Disposition")}} header of each part or block of data.
 - `text/plain`
 
-When the `POST` request is sent via a method other than an HTML form, such as a {{domxref("Window/fetch", "fetch()")}} call, the body can be any type.
+When the `POST` request is sent following a {{domxref("Window/fetch", "fetch()")}} call, or for any other reason than an HTML form, the body can be any type.
 As described in the HTTP 1.1 specification, `POST` is designed to allow a uniform method to cover the following functions:
 
 - Annotation of existing resources
@@ -71,7 +72,7 @@ POST /test
 
 ### URL-encoded form submission
 
-A form using the default `application/x-www-form-urlencoded` content sends a request where the body contains the form data in a key-value format as follows:
+A form using `application/x-www-form-urlencoded` content encoding (the default) sends a request where the body contains the form data in `key=value` pairs, with each pair separated by an `&` symbol, as shown below:
 
 ```http
 POST /test HTTP/1.1
@@ -84,7 +85,7 @@ field1=value1&field2=value2
 
 ### Multipart form submission
 
-A form using the `multipart/form-data` content type is used when the form includes files or large data.
+The `multipart/form-data` encoding is used when a form includes files or a lot of data.
 This request body delineates each part of the form using a boundary string.
 An example of a request in this format:
 

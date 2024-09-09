@@ -9,7 +9,7 @@ browser-compat: http.methods.DELETE
 
 The **`DELETE`** HTTP method asks the server to delete a specified resource.
 
-Content sent in a `DELETE` request has no defined semantics, and therefore should be omitted.
+The `DELETE` method has no defined semantics for the message body, so this should be empty.
 
 <table class="properties">
   <tbody>
@@ -60,14 +60,14 @@ Host: example.com
 ```
 
 If the request is successful, there are several possible [successful response status codes](/en-US/docs/Web/HTTP/Status#successful_responses).
-A {{HTTPStatus("204", "204 No Content")}} means the request has been enacted by the server and no additional information needs to be sent back to the client:
+A {{HTTPStatus("204", "204 No Content")}} response means the request was successful and no additional information needs to be sent back to the client:
 
 ```http
 HTTP/1.1 204 No Content
 Date: Wed, 04 Sep 2024 10:16:04 GMT
 ```
 
-A {{HTTPStatus("200", "200 OK")}} means the request has been enacted by the server and the response body includes a representation describing the outcome:
+A {{HTTPStatus("200", "200 OK")}} response means the request was successful and the response body includes a representation describing the outcome:
 
 ```http
 HTTP/1.1 200 OK
@@ -82,7 +82,7 @@ Content-Length: 1234
 </html>
 ```
 
-A {{HTTPStatus("202", "202 Accepted")}} means the request will likely succeed but has not yet been enacted by the server:
+A {{HTTPStatus("202", "202 Accepted")}} response means the request has been accepted and will probably succeed, but the resource has not yet been deleted by the server.
 
 ```http
 HTTP/1.1 202 Accepted

@@ -12,7 +12,7 @@ Requests using `GET` should only be used to request data and shouldn't contain a
 
 > [!NOTE]
 > The semantics of sending a message body in `GET` requests are undefined.
-> Some systems may reject the request with a [4XX client error](/en-US/docs/Web/HTTP/Status#client_error_responses) response.
+> Some servers may reject the request with a [4XX client error](/en-US/docs/Web/HTTP/Status#client_error_responses) response.
 
 <table class="properties">
   <tbody>
@@ -53,7 +53,7 @@ GET /index.html
 
 ### Successfully retrieving a resource
 
-The following `GET` request asks for `example.com/contact`:
+The following `GET` request asks for the resource at `example.com/contact`:
 
 ```http
 GET /contact HTTP/1.1
@@ -62,7 +62,7 @@ User-Agent: curl/8.6.0
 Accept: */*
 ```
 
-The server sends back the resource with a {{HTTPStatus("200", "200 OK")}} response:
+The server sends back the resource with a {{HTTPStatus("200", "200 OK")}} status code, indicating success:
 
 ```http
 HTTP/1.1 200 OK

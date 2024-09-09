@@ -63,7 +63,7 @@ The following curl command creates a `HEAD` request for `example.com`:
 curl --head example.com
 ```
 
-This is the equivalent to a `GET` request, except the server shouldn't send any content in the response.
+This is the equivalent to a `GET` request, except the server shouldn't include a message body in the response.
 It creates an HTTP request that looks like this:
 
 ```http
@@ -74,7 +74,7 @@ Accept: */*
 ```
 
 The server sends back a {{HTTPStatus("200", "200 OK")}} response comprised only of headers.
-The response is effectively metadata that describes the resource instead of the resource itself (some [caching](/en-US/docs/Web/HTTP/Caching) headers are omitted for brevity):
+The response is effectively metadata that describes the resource instead of the resource itself (some [caching](/en-US/docs/Web/HTTP/Caching) headers are omitted in this example for brevity):
 
 ```http
 HTTP/1.1 200 OK
