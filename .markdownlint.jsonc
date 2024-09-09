@@ -234,15 +234,15 @@
       {
         "name": "rgba-hsla-color-values",
         "message": "Don't use 'rgba()' or 'hsla()' color values. Use 'rgb()' or 'hsl()' instead.",
-        "searchPattern": "/(rgba|hsla)\\( ?\\d/gm",
+        "searchPattern": "/(rgb|hsl)a\\( ?\\d/gm",
         "searchScope": "code",
       },
       {
         "name": "old-color-value-syntax",
         "message": "Dont't use the old syntax that uses commas. Use the new syntax that uses spaces instead.",
-        "searchPattern": "/(rgb|hsl)\\( ?\\d+,/gm",
+        "searchPattern": "/(rgb|hsl)a?\\( ?\\d+,/gm",
         "searchScope": "code",
-      }
+      },
     ],
   },
 }
