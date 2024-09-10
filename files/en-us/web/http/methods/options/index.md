@@ -8,6 +8,7 @@ browser-compat: http.methods.OPTIONS
 {{HTTPSidebar}}
 
 The **`OPTIONS`** HTTP method requests permitted communication options for a given URL or server.
+This can be used to test the allowed HTTP methods for a request, or to determine whether a request would succeed when making a CORS preflighted request.
 A client can specify a URL with this method, or an asterisk (`*`) to refer to the entire server.
 
 <table class="properties">
@@ -52,7 +53,7 @@ The request target may be either in 'asterisk form' `*` indicating the whole ser
 - `<request-target>`
   - : Identifies the target resource of the request when combined with the information provided in the {{HTTPHeader("Host")}} header.
     This is an absolute path (e.g., `/path/to/file.html`) in requests to an origin server, and an absolute URL in requests to proxies (e.g., `http://www.example.com/path/to/file.html`).
-- `<query>`
+- `<query>` {{optional_inline}}
   - : An optional query component preceded by a question-mark `?`.
     Often used to carry identifying information in the form of `key=value` pairs.
 

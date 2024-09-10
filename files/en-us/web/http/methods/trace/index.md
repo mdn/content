@@ -7,7 +7,7 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc9110#TRACE
 
 {{HTTPSidebar}}
 
-The **`TRACE`** HTTP method performs a message loop-back test along the path to the target resource, providing a debugging mechanism.
+The **`TRACE`** HTTP method performs a message loop-back test along the path to the target resource.
 
 The final recipient of the request should reflect the message as received (excluding any fields that might include sensitive data) back to the client as the message body of a {{HTTPStatus("200", "200 OK")}} response with a {{HTTPHeader("Content-Type")}} of `message/http`.
 The final recipient is either the origin server or the first server to receive a {{HTTPHeader("Max-Forwards")}} value of `0` in the request.
@@ -54,7 +54,7 @@ TRACE <request-target>["?"<query>] HTTP/1.1
 - `<request-target>`
   - : Identifies the target resource of the request when combined with the information provided in the {{HTTPHeader("Host")}} header.
     This is an absolute path (e.g., `/path/to/file.html`) in requests to an origin server, and an absolute URL in requests to proxies (e.g., `http://www.example.com/path/to/file.html`).
-- `<query>`
+- `<query>` {{optional_inline}}
   - : An optional query component preceded by a question-mark `?`.
     Often used to carry identifying information in the form of `key=value` pairs.
 
