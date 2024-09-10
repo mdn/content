@@ -1515,7 +1515,7 @@ Note that, as shown below, the feature is only available on Nightly builds (irre
 
 ### OpenFont COLRv1 fonts
 
-This feature provides support for the [OpenFont COLRv1 font specification](https://docs.microsoft.com/en-us/typography/opentype/spec/).
+This feature provides support for the [OpenFont COLRv1 font specification](https://learn.microsoft.com/en-us/typography/opentype/spec/).
 This enables compression-friendly color vector fonts with gradients, compositing and blending to be loaded using the CSS [`@font-face`](/en-US/docs/Web/CSS/@font-face) rule, or the [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API).
 See [Firefox bug 1740530](https://bugzil.la/1740530) for more details.
 

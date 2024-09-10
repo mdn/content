@@ -62,4 +62,4 @@ Firefox ESR is the long-term support edition of Firefox for desktop for use by o
 ## See also
 
 - [Mailing list](https://groups.google.com/a/mozilla.org/g/firefox-dev)
-- [Release schedule](https://wiki.mozilla.org/Release_Management/Calendar)
+- [Release schedule](https://whattrainisitnow.com/calendar/)
