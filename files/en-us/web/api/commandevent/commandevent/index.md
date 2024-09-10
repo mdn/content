@@ -8,6 +8,8 @@ status:
 browser-compat: api.CommandEvent.CommandEvent
 ---
 
+{{APIRef("Invoker Commands API")}}{{SeeCompatTable}}
+
 The **`CommandEvent()`** constructor creates a new {{domxref("CommandEvent")}} object.
 
 ## Syntax

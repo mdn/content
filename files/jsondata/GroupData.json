@@ -945,7 +945,7 @@
     },
     "Invoker Commands API": {
       "overview": ["Invoker Commands API"],
-      "guides": ["/docs/Web/API/Invoker_Commands_API"],
+      "guides": [],
       "interfaces": ["CommandEvent"],
       "methods": [],
       "properties": [

@@ -8,7 +8,7 @@ status:
 browser-compat: api.HTMLButtonElement.command
 ---
 
-{{ APIRef("DOM") }}
+{{APIRef("Invoker Commands API")}}{{SeeCompatTable}}
 
 The **`command`** property of the {{domxref("HTMLButtonElement")}} interface gets and sets the action to be performed on an element being controlled by a button. For this to have an effect, [`commandfor`](/en-US/docs/Web/HTML/Element/button#commandfor) must be set.
 

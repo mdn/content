@@ -8,7 +8,7 @@ status:
 browser-compat: api.CommandEvent.source
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef("Invoker Commands API")}}{{SeeCompatTable}}
 
 The **`source`** read-only property of the {{domxref("CommandEvent")}} interface returns an {{domxref("EventTarget")}} representing the control that invoked the given command.
 
