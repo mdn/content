@@ -31,33 +31,33 @@ These icons uniquely identify your web app in different contexts, such as in an 
     Each object represents an icon to be used in a specific context. For example, you can add icons to represent your web app on devices with different screen sizes, for integration with various operating systems, for splash screens, or for app notifications.
     Each icon object can have one or more properties, with `src` being the only required property. The possible values for these properties are:
 
-  - `src`
+    - `src`
 
-    - : A string that specifies the path to the icon image file.
+      - : A string that specifies the path to the icon image file.
       If `src` is relative, the path is resolved relative to the manifest file's URL.
       For example, the relative URL `images/icon-192x192.png` for the manifest file located at `https://example.com/manifest.json` will be resolved as `https://example.com/images/icon-192x192.png`.
 
-  - `sizes` {{Optional_Inline}}
+    - `sizes` {{Optional_Inline}}
 
-    - : A string that specifies one or more sizes at which the icon file can be used.
-      Each `<size-value>` is specified as `<width in pixels>x<height in pixels>`.
-      Multiple `<size-value>` tokens can be specified, separated by spaces, for example: `48x48 96x96`.
-      When multiple icons are available, browsers may use `<size-values>` to select the most suitable icon for a display context.
-      For raster formats like PNG, specifying the exact available sizes is recommended.
-      For vector formats like SVG, you can use `any` to indicate scalability.
-      If `<size-values>` is not specified, the selection and display of the icon may vary depending on the browser's implementation.
+      - : A string that specifies one or more sizes at which the icon file can be used.
+        Each `<size-value>` is specified as `<width in pixels>x<height in pixels>`.
+        Multiple `<size-value>` tokens can be specified, separated by spaces, for example: `48x48 96x96`.
+        When multiple icons are available, browsers may use `<size-values>` to select the most suitable icon for a display context.
+        For raster formats like PNG, specifying the exact available sizes is recommended.
+        For vector formats like SVG, you can use `any` to indicate scalability.
+        If `<size-values>` is not specified, the selection and display of the icon may vary depending on the browser's implementation.
 
-      Note that the format of `<size-values>` is similar to the HTML `<link>` element's [`sizes`](/en-US/docs/Web/HTML/Element/link#sizes) attribute.
+        Note that the format of `<size-values>` is similar to the HTML `<link>` element's [`sizes`](/en-US/docs/Web/HTML/Element/link#sizes) attribute.
 
-  - `type` {{Optional_Inline}}
+    - `type` {{Optional_Inline}}
 
-    - : A string that specifies the {{Glossary("MIME type")}} of the icon.
-      The value should be in the format `image/<subtype>`, where `<subtype>` is a specific image format; for example, `image/png` indicates a PNG image.
-      If omitted, browsers typically infer the image type from the file extension.
+      - : A string that specifies the {{Glossary("MIME type")}} of the icon.
+        The value should be in the format `image/<subtype>`, where `<subtype>` is a specific image format; for example, `image/png` indicates a PNG image.
+        If omitted, browsers typically infer the image type from the file extension.
 
-  - `purpose` {{Optional_Inline}}
+    - `purpose` {{Optional_Inline}}
 
-    - : A case-sensitive keyword string that specifies one or more contexts in which the icon can be used by the browser or operating system.
+      - : A case-sensitive keyword string that specifies one or more contexts in which the icon can be used by the browser or operating system.
       The value can be a single keyword or multiple space-separated keywords.
       If omitted, the browser can use the icon for any purpose.
 
@@ -69,15 +69,15 @@ These icons uniquely identify your web app in different contexts, such as in an 
 
       Valid values include:
 
-      - `monochrome`
-
-        - : Indicates that the icon is intended to be used as a monochrome icon with a solid fill.
+        - `monochrome`
+          - : Indicates that the icon is intended to be used as a monochrome icon with a solid fill.
           With this value, a browser discards the color information in the icon and uses only the alpha channel as a mask over any solid fill.
 
-      - `maskable`
-        - : Indicates that the icon is designed with icon masks and safe zone in mind, such that any part of the image outside the safe zone can be ignored and masked away.
-      - `any`
-        - : Indicates that the icon can be used in any context. This is the default value.
+        - `maskable`
+          - : Indicates that the icon is designed with icon masks and safe zone in mind, such that any part of the image outside the safe zone can be ignored and masked away.
+        
+        - `any`
+          - : Indicates that the icon can be used in any context. This is the default value.
 
 ## Description
 
