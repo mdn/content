@@ -21,7 +21,7 @@ The format of the string must follow one of the following HTML microsyntaxes (se
 | ------------------------ | -------------------------------- | ------------------------- |
 | Valid name color string  | _nameOfColor (case insensitive)_ | `Green`, `green`, `GREEN` |
 | Valid hex color string   | _#RRGGBB_                        | `#008000`                 |
-| RGB using decimal values | _rgb(x,x,x) (x in 0-255 range)_  | `rgb(0 128 0)`            |
+| RGB using decimal values | _rgb(x x x) (x in 0-255 range)_  | `rgb(0 128 0)`            |
 
 ## Value
 
