@@ -15,6 +15,8 @@ The `name` manifest member is used to specify the name of your web application a
 "name": "<app-name>"
 ```
 
+### Keys
+
 - `name`
   - : A string that specifies the full name of your web app.
 

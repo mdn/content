@@ -15,6 +15,8 @@ The `short_name` manifest member is used to specify a short name for your web ap
 "short_name": "<short-app-name>"
 ```
 
+### Keys
+
 - `short_name`
   - : A string that specifies a short version of your web app's [`name`](/en-US/docs/Web/Manifest/name).
 
@@ -43,7 +45,7 @@ Consider a web app that helps users plan and log their hiking adventures. The `n
 "short_name": "TrailNav"
 ```
 
-The app's short name `TrailNav` is concise and is suitable for limited space contexts. It maintains a connection to the app's full name and is easy to remember.
+The app's shorter name `TrailNav` is concise and is suitable for limited space contexts. It maintains a connection to the app's full name and is easy to remember.
 
 ## Specifications
 
