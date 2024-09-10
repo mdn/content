@@ -8,7 +8,7 @@ browser-compat: api.HTMLDataListElement.options
 
 {{APIRef("HTML DOM")}}
 
-The **`options`** read-only property of the {{domxref("HTMLDataListElement")}} interface returns an {{domxref("HTMLCollection")}} of {{domxref("HTMLOptionElement")}} elements contained in this datalist. These descendant options are used to provide predined options for the input control associated with the datalist.
+The **`options`** read-only property of the {{domxref("HTMLDataListElement")}} interface returns an {{domxref("HTMLCollection")}} of {{domxref("HTMLOptionElement")}} elements contained in a {{htmlelement("datalist")}}. The descendant {{htmlelement("option")}} elements provide predefined options for the {{htmlelement("input")}} control associated with the `<datalist>`.
 
 ## Value
 
@@ -27,3 +27,4 @@ An {{domxref("HTMLCollection")}} of {{domxref("HTMLOptionElement")}} elements.
 - {{domxref("HTMLDataListElement")}}
 - {{domxref("HTMLOptionElement")}}
 - {{htmlelement("datalist")}}
+- {{htmlelement("option")}}
