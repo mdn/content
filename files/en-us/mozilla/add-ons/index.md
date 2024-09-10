@@ -22,8 +22,6 @@ In the past, there were several toolsets for developing Firefox extensions, but 
 
 Extensions written using WebExtensions APIs for Firefox are designed to be cross-browser compatible. In most cases, it will run in Chrome, Edge, and Opera with few if any changes. They are also fully compatible with multiprocess Firefox. You can see [the APIs currently supported in Firefox and other browsers](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs).
 
-For more information and support, please visit our [wiki page.](https://wiki.mozilla.org/Add-ons/developer/communication)
-
 ### Extension Workshop
 
 The [Firefox Extension Workshop](https://extensionworkshop.com) can help you develop extensions for Firefox and give your users simple, yet powerful ways to customize their browsing experience. You'll find:
