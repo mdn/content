@@ -7,7 +7,7 @@ browser-compat: css.properties.contain-intrinsic-size
 
 {{CSSRef}}
 
-The **`contain-intrinsic-size`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets the size of an element that a browser will use for layout when the element is subject to [size containment](/en-US/docs/Web/CSS/CSS_containment#size_containment).
+The **`contain-intrinsic-size`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Shorthand_properties) sets the size of an element that a browser will use for layout when the element is subject to [size containment](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#size_containment).
 
 ## Constituent properties
 
@@ -20,7 +20,7 @@ This property is a shorthand for the following CSS properties:
 
 ```css
 /* Keyword values */
-contain-intrinsic-width: none;
+contain-intrinsic-size: none;
 
 /* <length> values */
 contain-intrinsic-size: 1000px;
@@ -359,6 +359,8 @@ However if the content is hidden, having a `contain-intrinsic-size` of `none` co
 
 ## See also
 
-- [content-visibility: the new CSS property that boosts your rendering performance](https://web.dev/articles/content-visibility) (web.dev)
 - {{CSSxRef("contain-intrinsic-block-size")}}
 - {{CSSxRef("contain-intrinsic-inline-size")}}
+- [Using CSS containment](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment)
+- [CSS containment](/en-US/docs/Web/CSS/CSS_containment) module
+- [`content-visibility`: the new CSS property that boosts your rendering performance](https://web.dev/articles/content-visibility) via web.dev (2020)

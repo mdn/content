@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.ReadableStream.pipeTo
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`pipeTo()`** method of the {{domxref("ReadableStream")}} interface pipes the current `ReadableStream` to a given {{domxref("WritableStream")}} and returns a {{jsxref("Promise")}} that fulfills when the piping process completes successfully, or rejects if any errors were encountered.
 
@@ -71,7 +71,7 @@ The same example, but using {{jsxref("Operators/await", "await")}}:
   // Fetch the original image
   const response = await fetch("png-logo.png");
   // Retrieve its body as ReadableStream
-  response.body
+  await response.body
     .pipeThrough(new PNGTransformStream())
     .pipeTo(new FinalDestinationStream());
 })();

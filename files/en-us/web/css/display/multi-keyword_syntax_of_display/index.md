@@ -8,7 +8,8 @@ page-type: guide
 
 The [CSS display module](/en-US/docs/Web/CSS/CSS_display) defines a multi-keyword syntax for the CSS [`display`](/en-US/docs/Web/CSS/display) property. This guide explains the multi-keyword syntax.
 
-> **Note:** multi-keyword syntax is also referred to as "two-value syntax" or "multi-value syntax."
+> [!NOTE]
+> Multi-keyword syntax is also referred to as "two-value syntax" or "multi-value syntax."
 
 ## What happens when we change the value of the display property?
 
@@ -20,7 +21,7 @@ h1 {
 }
 ```
 
-The `display` property also lets us use [CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout) and [Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) when `display: grid` or `display: flex` is set. The important concept to understand is that changing an element's `display` value can change the formatting context of its direct children. When you use `display: flex` or `display: grid`, the element's children become flex or grid items and respond to the properties in grid and flexbox specifications.
+The `display` property also lets us use [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) and [Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) when `display: grid` or `display: flex` is set. The important concept to understand is that changing an element's `display` value can change the formatting context of its direct children. When you use `display: flex` or `display: grid`, the element's children become flex or grid items and respond to the properties in grid and flexbox specifications.
 
 What grid and flexbox demonstrate, however, is that an element has both an **outer** and an **inner** display type. The outer display type describes whether the element is block-level or inline-level. The inner display type describes how the children of that box behave.
 

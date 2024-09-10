@@ -5,19 +5,18 @@ page-type: web-api-interface
 browser-compat: api.ExtendableEvent
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
 
 The **`ExtendableEvent`** interface extends the lifetime of the [`install`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/install_event) and [`activate`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/activate_event) events dispatched on the global scope as part of the service worker lifecycle. This ensures that any functional events (like {{domxref("FetchEvent")}}) are not dispatched until it upgrades database schemas and deletes the outdated cache entries.
 
 If {{domxref("ExtendableEvent.waitUntil","waitUntil()")}} is called outside of the `ExtendableEvent` handler, the browser should throw an `InvalidStateError`; note also that multiple calls will stack up, and the resulting promises will be added to the list of [extend lifetime promises](https://w3c.github.io/ServiceWorker/#extendableevent-extend-lifetime-promises).
 
-> **Note:** The behavior described in the above paragraph was fixed in Firefox 43 (see [Firefox bug 1180274](https://bugzil.la/1180274).)
-
 This interface inherits from the {{domxref("Event")}} interface.
 
 {{InheritanceDiagram}}
 
-> **Note:** This interface is only available when the global scope is a {{domxref("ServiceWorkerGlobalScope")}}. It is not available when it is a {{domxref("Window")}}, or the scope of another kind of worker.
+> [!NOTE]
+> This interface is only available when the global scope is a {{domxref("ServiceWorkerGlobalScope")}}. It is not available when it is a {{domxref("Window")}}, or the scope of another kind of worker.
 
 ## Constructor
 
@@ -41,7 +40,8 @@ This code snippet is from the [service worker prefetch sample](https://github.co
 
 The code snippet also shows a best practice for versioning caches used by the service worker. Though there's only one cache in this example, the same approach can be used for multiple caches. It maps a shorthand identifier for a cache to a specific, versioned cache name.
 
-> **Note:** In Chrome, logging statements are visible via the "Inspect" interface for the relevant service worker accessed via chrome://serviceworker-internals.
+> [!NOTE]
+> In Chrome, logging statements are visible via the "Inspect" interface for the relevant service worker accessed via chrome://serviceworker-internals.
 
 ```js
 const CACHE_VERSION = 1;
@@ -82,7 +82,8 @@ self.addEventListener("install", (event) => {
 });
 ```
 
-> **Note:** When fetching resources, it's very important to use `{mode: 'no-cors'}` if there is any chance that the resources are served off of a server that doesn't support {{glossary("CORS")}}. In this example, [www.chromium.org](https://www.chromium.org/) doesn't support CORS.
+> [!NOTE]
+> When fetching resources, it's very important to use `{mode: 'no-cors'}` if there is any chance that the resources are served off of a server that doesn't support {{glossary("CORS")}}. In this example, [www.chromium.org](https://www.chromium.org/) doesn't support CORS.
 
 ## Specifications
 

@@ -2,12 +2,10 @@
 title: CSSStartingStyleRule
 slug: Web/API/CSSStartingStyleRule
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.CSSStartingStyleRule
 ---
 
-{{ APIRef("CSSOM") }}{{SeeCompatTable}}
+{{ APIRef("CSSOM") }}
 
 The **`CSSStartingStyleRule`** interface of the [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model) represents a CSS {{CSSxRef("@starting-style")}} at-rule.
 
@@ -15,11 +13,11 @@ The **`CSSStartingStyleRule`** interface of the [CSS Object Model](/en-US/docs/W
 
 ## Instance properties
 
-_This interface inherits properties from its parent, {{domxref("CSSGroupingRule")}}._
+_Inherits properties from its ancestors {{domxref("CSSGroupingRule")}} and {{domxref("CSSRule")}}._
 
 ## Instance methods
 
-_This interface inherits methods from its parent, {{domxref("CSSGroupingRule")}}._
+_Inherits methods from its ancestors {{domxref("CSSGroupingRule")}} and {{domxref("CSSRule")}}._
 
 ## Specifications
 

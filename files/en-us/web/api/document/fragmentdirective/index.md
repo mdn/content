@@ -8,7 +8,7 @@ status:
 browser-compat: api.Document.fragmentDirective
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef("URL Fragment Text Directives")}}{{SeeCompatTable}}
 
 The **`fragmentDirective`** read-only property of the {{domxref("Document")}} interface returns the {{domxref("FragmentDirective")}} for the current document.
 
@@ -38,5 +38,5 @@ This functionality is mainly intended for feature detection at present. In the f
 
 ## See also
 
-- [Text fragments](/en-US/docs/Web/Text_fragments)
+- [Text fragments](/en-US/docs/Web/URI/Fragment/Text_fragments)
 - {{cssxref("::target-text")}}

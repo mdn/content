@@ -45,7 +45,7 @@ A {{domxref("Response")}} object.
 ## Examples
 
 In our [Fetch Response clone example](https://github.com/mdn/dom-examples/blob/main/fetch/fetch-response-clone/index.html) (see [Fetch Response clone live](https://mdn.github.io/dom-examples/fetch/fetch-response-clone/)) we create a new {{domxref("Request")}} object using the {{domxref("Request.Request","Request()")}} constructor, passing it a JPG path.
-We then fetch this request using {{domxref("fetch()")}}.
+We then fetch this request using {{domxref("Window/fetch", "fetch()")}}.
 When the fetch resolves successfully, we clone it, extract a blob from both responses using two {{domxref("Response.blob")}} calls, create object URLs out of the blobs using
 {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}, and display them in two separate {{htmlelement("img")}} elements.
 

@@ -6,14 +6,12 @@ page-type: web-api-instance-method
 browser-compat: api.IDBCursor.continue
 ---
 
-{{APIRef("IndexedDB")}}
+{{APIRef("IndexedDB")}} {{AvailableInWorkers}}
 
 The **`continue()`** method of the {{domxref("IDBCursor")}}
 interface advances the cursor to the next position along its direction, to the item
 whose key matches the optional key parameter. If no key is specified, the cursor
 advances to the immediate next position, based on its direction.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

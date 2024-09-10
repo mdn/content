@@ -17,7 +17,8 @@ XR device and are currently available. These controllers may include handheld
 controllers, XR-equipped gloves, optically tracked hands, and gaze-based input methods.
 Keyboards, gamepads, and mice are _not_ considered WebXR input sources.
 
-> **Note:** Traditional gamepad controllers are supported using the [Gamepad API](/en-US/docs/Web/API/Gamepad_API).
+> [!NOTE]
+> Traditional gamepad controllers are supported using the [Gamepad API](/en-US/docs/Web/API/Gamepad_API).
 
 ## Value
 

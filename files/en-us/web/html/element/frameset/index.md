@@ -11,7 +11,8 @@ browser-compat: html.elements.frameset
 
 The **`<frameset>`** [HTML](/en-US/docs/Web/HTML) element is used to contain {{HTMLElement("frame")}} elements.
 
-> **Note:** Because the use of frames is now discouraged in favor of using {{HTMLElement("iframe")}}, this element is not typically used by modern websites.
+> [!NOTE]
+> Because the use of frames is now discouraged in favor of using {{HTMLElement("iframe")}}, this element is not typically used by modern websites.
 
 ## Attributes
 
@@ -35,8 +36,10 @@ A frameset document has a `<frameset>` element instead of a {{HTMLElement("body"
     <!-- Document metadata goes here -->
   </head>
   <frameset cols="50%, 50%">
-    <frame src="https://developer.mozilla.org/en/HTML/Element/iframe" />
-    <frame src="https://developer.mozilla.org/en/HTML/Element/frame" />
+    <frame
+      src="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe" />
+    <frame
+      src="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/frame" />
   </frameset>
 </html>
 ```

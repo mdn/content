@@ -6,11 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.StorageManager.getDirectory
 ---
 
-{{securecontext_header}}{{APIRef("File System API")}}
+{{securecontext_header}}{{APIRef("File System API")}} {{AvailableInWorkers}}
 
 The **`getDirectory()`** method of the {{domxref("StorageManager")}} interface is used to obtain a reference to a {{domxref("FileSystemDirectoryHandle")}} object allowing access to a directory and its contents, stored in the [origin private file system](/en-US/docs/Web/API/File_System_API/Origin_private_file_system) (OPFS).
-
-{{AvailableInWorkers}}
 
 ## Syntax
 
@@ -72,7 +70,8 @@ onmessage = async (e) => {
 };
 ```
 
-> **Note:** In earlier versions of the spec, {{domxref("FileSystemSyncAccessHandle.close()", "close()")}}, {{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}, {{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}, and {{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} were wrongly specified as asynchronous methods, and older versions of some browsers implement them in this way. However, all current browsers that support these methods implement them as synchronous methods.
+> [!NOTE]
+> In earlier versions of the spec, {{domxref("FileSystemSyncAccessHandle.close()", "close()")}}, {{domxref("FileSystemSyncAccessHandle.flush()", "flush()")}}, {{domxref("FileSystemSyncAccessHandle.getSize()", "getSize()")}}, and {{domxref("FileSystemSyncAccessHandle.truncate()", "truncate()")}} were wrongly specified as asynchronous methods, and older versions of some browsers implement them in this way. However, all current browsers that support these methods implement them as synchronous methods.
 
 ## Specifications
 
@@ -85,5 +84,6 @@ onmessage = async (e) => {
 ## See also
 
 - {{domxref("StorageManager")}}
-- {{domxref("navigator.storage")}}
+- {{domxref("Navigator.storage")}}
+- {{domxref("WorkerNavigator.storage")}}
 - {{domxref("FileSystemDirectoryHandle")}}

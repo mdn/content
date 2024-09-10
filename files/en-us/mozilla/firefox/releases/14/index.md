@@ -76,4 +76,4 @@ _No change._
 
 ## See also
 
-{{Firefox_for_developers('13')}}
+{{Firefox_for_developers}}

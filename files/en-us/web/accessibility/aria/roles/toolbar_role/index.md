@@ -7,6 +7,8 @@ spec-urls:
   - https://www.w3.org/WAI/ARIA/apg/patterns/toolbar/examples/toolbar/
 ---
 
+{{AccessibilitySidebar}}
+
 The `toolbar` role defines the containing element as a collection of commonly used function buttons or controls represented in a compact visual form.
 
 ## Description
@@ -96,15 +98,7 @@ If any of the otherwise interactive elements within the toolbar are disabled, co
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [The CSS `:focus` pseudoclass](/en-US/docs/Web/CSS/:focus)
 - [The CSS `:focus-within` pseudoclass](/en-US/docs/Web/CSS/:focus-within)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

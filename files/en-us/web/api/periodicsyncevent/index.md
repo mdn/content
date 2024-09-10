@@ -7,7 +7,7 @@ status:
 browser-compat: api.PeriodicSyncEvent
 ---
 
-{{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}
+{{APIRef("Periodic Background Sync")}}{{SeeCompatTable}}{{AvailableInWorkers("service")}}
 
 The **`PeriodicSyncEvent`** interface of the {{domxref('Web Periodic Background Synchronization API', '', '', 'nocode')}} provides a way to run tasks in the service worker with network connectivity.
 

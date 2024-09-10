@@ -53,7 +53,7 @@ The `background-color` property is specified as a single `<color>` value.
 - {{cssxref("&lt;color&gt;")}}
   - : The uniform color of the background. It is rendered behind any {{cssxref("background-image")}} that is specified, although the color will still be visible through any transparency in the image.
 
-## Accessibility concerns
+## Accessibility
 
 It is important to ensure that the contrast ratio between the background color and the color of the text placed over it is high enough that people experiencing low vision conditions will be able to read the content of the page.
 
@@ -73,7 +73,11 @@ Color contrast ratio is determined by comparing the luminance of the text and ba
 
 ## Examples
 
-### HTML
+### Colorize boxes
+
+This example demonstrates the applying `background-color` to HTML {{HTMLelement("div")}} elements using different CSS {{cssxref("color_value", "&lt;color&gt;")}} values.
+
+#### HTML
 
 ```html
 <div class="exampleone">Lorem ipsum dolor sit amet, consectetuer</div>
@@ -83,7 +87,7 @@ Color contrast ratio is determined by comparing the luminance of the text and ba
 <div class="examplethree">Lorem ipsum dolor sit amet, consectetuer</div>
 ```
 
-### CSS
+#### CSS
 
 ```css
 .exampleone {
@@ -101,9 +105,65 @@ Color contrast ratio is determined by comparing the luminance of the text and ba
 }
 ```
 
-### Result
+#### Result
 
-{{EmbedLiveSample("Examples", 200, 150)}}
+{{EmbedLiveSample("Colorize boxes", 200, 150)}}
+
+### Colorize tables
+
+This example demonstrates the use of `background-color` on HTML {{HTMLelement("table")}} elements, including {{HTMLelement("tr")}} rows and {{HTMLelement("td")}} cells.
+
+#### HTML
+
+```html
+<table>
+  <tr id="r1">
+    <td id="c11">11</td>
+    <td id="c12">12</td>
+    <td id="c13">13</td>
+  </tr>
+  <tr id="r2">
+    <td id="c21">21</td>
+    <td id="c22">22</td>
+    <td id="c23">23</td>
+  </tr>
+  <tr id="r3">
+    <td id="c31">31</td>
+    <td id="c32">32</td>
+    <td id="c33">33</td>
+  </tr>
+</table>
+```
+
+#### CSS
+
+```css
+table {
+  border-collapse: collapse;
+  border: solid black 1px;
+  width: 250px;
+  height: 150px;
+}
+td {
+  border: solid 1px black;
+}
+#r1 {
+  background-color: lightblue;
+}
+#c12 {
+  background-color: cyan;
+}
+#r2 {
+  background-color: grey;
+}
+#r3 {
+  background-color: olive;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Colorize tables', "100%", "100%")}}
 
 ## Specifications
 
@@ -118,4 +178,3 @@ Color contrast ratio is determined by comparing the luminance of the text and ba
 - [Multiple backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
 - The {{cssxref("&lt;color&gt;")}} data type
 - Other color-related properties: {{cssxref("color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, and {{cssxref("column-rule-color")}}
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color)

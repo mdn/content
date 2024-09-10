@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Notification.tag
 ---
 
-{{APIRef("Web Notifications")}}{{securecontext_header}}
+{{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
 
 The **`tag`** read-only property of the
 {{domxref("Notification")}} interface signifies an identifying tag for the notification,
@@ -17,8 +17,6 @@ The idea of notification tags is that more than one notification can share the s
 tag, linking them together. One notification can then be programmatically replaced with
 another to avoid the users' screen being filled up with a huge number of similar
 notifications.
-
-{{AvailableInWorkers}}
 
 ## Value
 

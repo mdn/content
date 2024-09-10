@@ -78,7 +78,8 @@ console.log(equal(x + y, z, 2000 * Number.EPSILON)); // true
 
 In addition to magnitude, it is important to consider the _accuracy_ of your input. For example, if the numbers are collected from a form input and the input value can only be adjusted by steps of `0.1` (i.e. [`<input type="number" step="0.1">`](/en-US/docs/Web/HTML/Attributes/step)), it usually makes sense to allow a much larger tolerance, such as `0.01`, since the data only has a precision of `0.1`.
 
-> **Note:** Important takeaway: do not simply use `Number.EPSILON` as a threshold for equality testing. Use a threshold that is appropriate for the magnitude and accuracy of the numbers you are comparing.
+> [!NOTE]
+> Important takeaway: do not simply use `Number.EPSILON` as a threshold for equality testing. Use a threshold that is appropriate for the magnitude and accuracy of the numbers you are comparing.
 
 ## Specifications
 

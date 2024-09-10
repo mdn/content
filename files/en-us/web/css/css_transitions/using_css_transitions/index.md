@@ -19,7 +19,8 @@ CSS transitions let you decide which properties to animate (by [_listing them ex
 
 The Web author can define which property has to be animated and in which way. This allows the creation of complex transitions. However, some properties are [not animatable](/en-US/docs/Web/CSS/CSS_animated_properties) as it doesn't make sense to animate them.
 
-> **Note:** The `auto` value is often a very complex case. The specification recommends not animating from and to `auto`. Some user agents, like those based on Gecko, implement this requirement and others, like those based on WebKit, are less strict. Using animations with `auto` may lead to unpredictable results, depending on the browser and its version, and should be avoided.
+> [!NOTE]
+> The `auto` value is often a very complex case. The specification recommends not animating from and to `auto`. Some user agents, like those based on Gecko, implement this requirement and others, like those based on WebKit, are less strict. Using animations with `auto` may lead to unpredictable results, depending on the browser and its version, and should be avoided.
 
 ## Defining transitions
 
@@ -219,7 +220,7 @@ The HTML contains two {{htmlelement("p")}} elements with a {{htmlelement("div")}
 </div>
 
 <p>
-  This is another paragraph to show that <code>display: none; </code> is being
+  This is another paragraph to show that <code>display: none;</code> is being
   applied and removed on the above <code>&lt;div&gt; </code>. If only its
   <code>opacity</code> was being changed, it would always take up the space in
   the DOM.
@@ -287,7 +288,8 @@ The code renders as follows:
 
 ## JavaScript examples
 
-> **Note:** Care should be taken when using a transition immediately after:
+> [!NOTE]
+> Care should be taken when using a transition immediately after:
 >
 > - adding the element to the DOM using `.appendChild()`
 > - removing an element's `display: none;` property.
@@ -356,7 +358,8 @@ el.addEventListener("transitionrun", signalStart, true);
 el.addEventListener("transitionstart", signalStart, true);
 ```
 
-> **Note:** The `transitionend` event doesn't fire if the transition is aborted before the transition is completed because either the element is made {{cssxref("display")}}`: none` or the animating property's value is changed.
+> [!NOTE]
+> The `transitionend` event doesn't fire if the transition is aborted before the transition is completed because either the element is made {{cssxref("display", "display: none")}} or the animating property's value is changed.
 
 ## Specifications
 

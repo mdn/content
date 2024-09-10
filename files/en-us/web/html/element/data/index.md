@@ -11,6 +11,32 @@ The **`<data>`** [HTML](/en-US/docs/Web/HTML) element links a given piece of con
 
 {{EmbedInteractiveExample("pages/tabbed/data.html", "tabbed-shorter")}}
 
+## Attributes
+
+This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
+
+- `value`
+  - : This attribute specifies the machine-readable translation of the content of the element.
+
+## Examples
+
+The following example displays product names but also associates each name with a product number.
+
+```html
+<p>New Products</p>
+<ul>
+  <li><data value="398">Mini Ketchup</data></li>
+  <li><data value="399">Jumbo Ketchup</data></li>
+  <li><data value="400">Mega Jumbo Ketchup</data></li>
+</ul>
+```
+
+### Result
+
+{{EmbedLiveSample('Examples')}}
+
+## Technical summary
+
 <table class="properties">
   <tbody>
     <tr>
@@ -38,7 +64,7 @@ The **`<data>`** [HTML](/en-US/docs/Web/HTML) element links a given piece of con
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
@@ -69,30 +95,6 @@ The **`<data>`** [HTML](/en-US/docs/Web/HTML) element links a given piece of con
     </tr>
   </tbody>
 </table>
-
-## Attributes
-
-This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-- `value`
-  - : This attribute specifies the machine-readable translation of the content of the element.
-
-## Examples
-
-The following example displays product names but also associates each name with a product number.
-
-```html
-<p>New Products</p>
-<ul>
-  <li><data value="398">Mini Ketchup</data></li>
-  <li><data value="399">Jumbo Ketchup</data></li>
-  <li><data value="400">Mega Jumbo Ketchup</data></li>
-</ul>
-```
-
-### Result
-
-{{EmbedLiveSample('Examples')}}
 
 ## Specifications
 

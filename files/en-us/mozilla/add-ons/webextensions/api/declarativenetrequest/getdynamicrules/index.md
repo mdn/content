@@ -17,7 +17,11 @@ let gettingDynamicRules = browser.declarativeNetRequest.getDynamicRules();
 
 ### Parameters
 
-This function takes no parameters.
+- `filter` {{optional_inline}}
+
+  - : An object to filter the list of returned rules.
+    - `ruleIds` {{optional_inline}}
+      - : An array of `integer`. The IDs of the rules to return.
 
 ### Return value
 

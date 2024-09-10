@@ -27,7 +27,7 @@ var(--custom-prop, var(--default-value));
 var(--custom-prop, var(--default-value, red));
 ```
 
-The first argument to the function is the name of the custom property to be substituted. An optional second argument to the function serves as a fallback value. If the custom property referenced by the first argument is invalid, the function uses the second value.
+The first argument to the function is the name of the custom property to be substituted. An optional second argument to the function serves as a fallback value. If the custom property referenced by the first argument is not defined or equals a [CSS-wide keyword](/en-US/docs/Web/CSS/CSS_Values_and_Units#css-wide_values), the function uses the second value.
 
 The syntax of the fallback, like that of custom properties, allows commas. For example, `var(--foo, red, blue)` defines a fallback of `red, blue`; that is, anything between the first comma and the end of the function is considered a fallback value.
 
@@ -39,9 +39,9 @@ The syntax of the fallback, like that of custom properties, allows commas. For e
 
 - `<declaration-value>`
 
-  - : The custom property's fallback value, which is used in case the custom property is invalid in the used context. This value may contain any character except some characters with special meaning like newlines, unmatched closing brackets, i.e. `)`, `]`, or `}`, top-level semicolons, or exclamation marks. The fallback value can itself be a custom property using the `var()` syntax.
+  - : The custom property's fallback value, which is used in case the custom property is not defined or equals a [CSS-wide keyword](/en-US/docs/Web/CSS/CSS_Values_and_Units#css-wide_values). This value may contain any character except some characters with special meaning like newlines, unmatched closing brackets, i.e. `)`, `]`, or `}`, top-level semicolons, or exclamation marks. The fallback value can itself be a custom property using the `var()` syntax. If the fallback value is omitted, and the custom property is not defined, the `var()` function resolves to an [invalid value](#invalid_values).
 
-    > **Note:** `var(--a,)` is valid, specifying that if the `--a` custom property is invalid or missing, the `var()` should be replaced with nothing.
+    > **Note:** `var(--a,)` is valid, specifying that if the `--a` custom property is not defined or equals a [CSS-wide keyword](/en-US/docs/Web/CSS/CSS_Values_and_Units#css-wide_values), the `var()` should be replaced with nothing.
 
 ### Formal syntax
 
@@ -182,6 +182,52 @@ body {
 {{EmbedLiveSample("Using a custom property as a fallback")}}
 
 Since `--main-bg-color` isn't set, the body's `background-color` will fall back to `--backup-bg-color`, which is teal.
+
+### Invalid values
+
+`var()` functions can resolve to invalid values if:
+
+- The custom property is not defined and no fallback value is provided.
+- The custom property is defined but its value is an invalid value for the property it is used in.
+
+When this happens, the property is treated as if it has value {{cssxref("unset")}}. This is because variables can't "fail early" like other syntax errors can, so by the time the user agent realizes a property value is invalid, it has already thrown away the other cascaded values.
+
+For example:
+
+#### HTML
+
+```html
+<p class="p1">Undefined variable</p>
+<p class="p2">Invalid variable</p>
+<p class="p3">Invalid literal color</p>
+```
+
+#### CSS
+
+```css
+p {
+  color: red;
+}
+
+.p1 {
+  color: var(--invalid-color);
+}
+
+.p2 {
+  --invalid-color: 20px;
+  color: var(--invalid-color);
+}
+
+.p3 {
+  color: 20px;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("Invalid values")}}
+
+Note how the paragraphs using `var()` are reset to the default black, but the paragraph with an invalid literal color is still red, because the `color: 20px` declaration is simply ignored.
 
 ## Specifications
 

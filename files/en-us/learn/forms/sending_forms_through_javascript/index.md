@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 
 {{LearnSidebar}}
 
-When a user submits an HTML form, for example by clicking the {{glossary("Submit_button", "submit button")}}, the browser makes an [HTTP](/en-US/docs/Web/HTTP) request to send the data in the form. But instead of this declarative approach, web apps sometimes use JavaScript APIs such as {{domxref("fetch()")}} to send data programmatically to an endpoint that expects a form submission. This article explains why this is an important use case and how to do it.
+When a user submits an HTML form, for example by clicking the {{glossary("Submit_button", "submit button")}}, the browser makes an [HTTP](/en-US/docs/Web/HTTP) request to send the data in the form. But instead of this declarative approach, web apps sometimes use JavaScript APIs such as {{domxref("Window/fetch", "fetch()")}} to send data programmatically to an endpoint that expects a form submission. This article explains why this is an important use case and how to do it.
 
 ## Why use JavaScript to submit form data?
 
@@ -14,7 +14,7 @@ Standard HTML form submission, as described in our article on [sending form data
 
 However, many web apps, especially {{glossary("progressive web apps")}} and {{glossary("SPA", "single-page apps")}}, use JavaScript APIs to request data from the server and update the relevant parts of the page, avoiding the overhead of a full page load.
 
-For this reason, when these web apps want to submit form data, they use HTML forms only to collect input from the user, but not for data submission. When the user tries to send the data, the application takes control and sends the data using a JavaScript API such as {{domxref("fetch()")}}.
+For this reason, when these web apps want to submit form data, they use HTML forms only to collect input from the user, but not for data submission. When the user tries to send the data, the application takes control and sends the data using a JavaScript API such as {{domxref("Window/fetch", "fetch()")}}.
 
 ## The problem with JavaScript form submission
 
@@ -77,15 +77,14 @@ Suppose our HTML declares a `<form>` element:
 
 ```html
 <form id="userinfo">
-  <div>
+  <p>
     <label for="username">Enter your name:</label>
     <input type="text" id="username" name="username" value="Dominic" />
-  </div>
-
-  <div>
+  </p>
+  <p>
     <label for="avatar">Select an avatar</label>
     <input type="file" id="avatar" name="avatar" required />
-  </div>
+  </p>
   <input type="submit" value="Submit" />
 </form>
 ```

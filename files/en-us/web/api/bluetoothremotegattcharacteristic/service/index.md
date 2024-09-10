@@ -24,5 +24,3 @@ An instance {{domxref("BluetoothRemoteGATTService")}}.
 ## Browser compatibility
 
 {{Compat}}
-
-{{APIRef("Web Bluetooth")}}

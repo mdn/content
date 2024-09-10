@@ -51,7 +51,7 @@ const opts = { multiple: true };
 
 async function getContacts() {
   try {
-    const contacts = await navigator.contacts.select(props, ops);
+    const contacts = await navigator.contacts.select(props, opts);
     const contactAddress = contacts[0].address[0];
     console.log(contactAddress);
   } catch (ex) {

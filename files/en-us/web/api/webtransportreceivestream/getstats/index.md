@@ -8,14 +8,12 @@ status:
 browser-compat: api.WebTransportReceiveStream.getStats
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The **`getStats()`** method of the {{domxref("WebTransportReceiveStream")}} interface asynchronously returns an object containing statistics for the current stream.
 
 The statistics include the total number of ordered bytes that have arrived on this stream (ignoring network overhead, up until the first missing byte) and the total number that have been read by the application.
 It therefore provides a measure of how quickly the application is consuming bytes from the server on this particular stream.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

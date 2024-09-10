@@ -49,5 +49,9 @@ By working through the articles listed below, you will go from nothing to gettin
 
 ## See also
 
-- [Web Demystified](https://www.youtube.com/playlist?list=PLo3w8EB99pqLEopnunz-dOOBJ8t-Wgt2g): A great series of videos explaining web fundamentals, aimed at complete beginners to web development. Created by [Jérémie Patonnier](https://github.com/JeremiePat).
-- [The web and web standards](/en-US/docs/Learn/Getting_started_with_the_web/The_web_and_web_standards): This article provides some useful background on the Web — how it came about, what web standard technologies are, how they work together, why "web developer" is a great career to choose, and what kinds of best practices you'll learn about through the course.
+- [The Frontend Developer Career Path](https://v2.scrimba.com/the-frontend-developer-career-path-c0j?via=mdn) <sup>_MDN Curriculum partner_</sup>
+  - : [Scrimba's](https://scrimba.com?via=mdn) _Frontend Developer Career Path_ teaches all you need to know to be a competent front-end web developer, with fun interactive lessons and challenges, knowledgeable teachers, and a supportive community. Go from zero to landing your first front-end job! Many of the course components are available as standalone free versions.
+- [Web Demystified](https://www.youtube.com/playlist?list=PLo3w8EB99pqLEopnunz-dOOBJ8t-Wgt2g)
+  - : A great series of videos explaining web fundamentals, aimed at complete beginners to web development. Created by [Jérémie Patonnier](https://github.com/JeremiePat).
+- [The web and web standards](/en-US/docs/Learn/Getting_started_with_the_web/The_web_and_web_standards)
+  - : This article provides some useful background on the Web — how it came about, what web standard technologies are, how they work together, why "web developer" is a great career to choose, and what kinds of best practices you'll learn about through the course.

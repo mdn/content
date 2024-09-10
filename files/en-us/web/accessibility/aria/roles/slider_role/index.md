@@ -5,6 +5,8 @@ page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#slider
 ---
 
+{{AccessibilitySidebar}}
+
 The `slider` role defines an input where the user selects a value from within a given range.
 
 ## Description
@@ -23,7 +25,8 @@ The `slider` role, similar to HTML's `input` of type `range`, [`<input type="ran
 
 While all three of these ranges have the same ARIA states and properties, the `slider` role is the only read-write range: it is the only one whose value changes via user interaction. As such, it must be able to receive focus. In addition, keyboard interaction, mouse clicks, and touch interaction must be supported.
 
-> **Warning:** To change the slider value, touch-based assistive technologies need to respond to user gestures for increasing and decreasing the value by synthesizing key events.
+> [!WARNING]
+> To change the slider value, touch-based assistive technologies need to respond to user gestures for increasing and decreasing the value by synthesizing key events.
 > Fully test slider widgets using assistive technologies on devices where touch is a primary input mechanism before using the `slider` role (and all range widgets).
 
 #### Common attributes
@@ -54,7 +57,8 @@ Unlike the read-only `meter` and `progressbar` roles, a `slider` is an input, ac
 
 The slider represents the range of possible values. The position of the slider thumb along the slider represents the current value. User actions that must be supported include changing the value by dragging the thumb or clicking the slider for pointing devices and using directional keys such as arrow keys for the keyboard users. See [keyboard interactions](#keyboard_interactions) below.
 
-> **Note:** It is recommended to use native [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range) elements rather than the `slider` role. User agents provide a stylized widget for the range input element, based on the current `value` as it relates to the minimum and maximum values. When using non-semantic elements, all features of the native semantic element need to be recreated with ARIA attributes, JavaScript and CSS.
+> [!NOTE]
+> It is recommended to use native [`<input type="range">`](/en-US/docs/Web/HTML/Element/input/range) elements rather than the `slider` role. User agents provide a stylized widget for the range input element, based on the current `value` as it relates to the minimum and maximum values. When using non-semantic elements, all features of the native semantic element need to be recreated with ARIA attributes, JavaScript and CSS.
 
 ### Range with multiple thumbs
 
@@ -209,11 +213,3 @@ It is recommended to use a native {{HTMLElement("input")}} of type `range`, [`<i
   - [Horizontal Multi-Thumb Slider](https://www.w3.org/TR/2019/WD-wai-aria-practices-1.2-20191218/examples/slider/multithumb-slider.html)
   - [Horizontal Slider](https://www.w3.org/TR/2019/WD-wai-aria-practices-1.2-20191218/examples/slider/slider-1.html)
   - [Slider with `aria-orientation` and `aria-valuetext`](https://www.w3.org/TR/2019/WD-wai-aria-practices-1.2-20191218/examples/slider/slider-2.html)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

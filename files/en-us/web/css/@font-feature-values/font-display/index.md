@@ -2,7 +2,6 @@
 title: font-display
 slug: Web/CSS/@font-feature-values/font-display
 page-type: css-at-rule-descriptor
-browser-compat: css.at-rules.font-feature-values.font-display
 spec-urls: https://drafts.csswg.org/css-fonts/#descdef-font-feature-values-font-display
 ---
 
@@ -72,4 +71,4 @@ There is no browser implementing this feature.
 ## See also
 
 - {{cssxref("@font-face/font-display", "font-display")}} descriptor for {{cssxref("@font-face")}} at-rule
-- {{cssxref("css_fonts", "CSS fonts")}} module
+- [CSS fonts](/en-US/docs/Web/CSS/CSS_fonts) module

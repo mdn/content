@@ -5,6 +5,8 @@ page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#rowheader
 ---
 
+{{AccessibilitySidebar}}
+
 An element with `role="rowheader"` is a [cell](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role) containing header information for a [row](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role) within a tabular structure of a [`grid`](/en-US/docs/Web/Accessibility/ARIA/Roles/grid_role), [`table`](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role) or [`treegrid`](/en-US/docs/Web/Accessibility/ARIA/Roles/treegrid_role).
 
 ## Description
@@ -40,7 +42,8 @@ It is a structural equivalent to the {{HTMLElement('th')}} element with a scope 
 
 To create an ARIA row header, add `role="rowheader"` to the element. That row header must be nested within a `row`, which, in turn, is nested within a `rowgroup`, or directly within a `grid`, `table` or `treegrid`.
 
-> **Note:** Using the native [table elements](/en-US/docs/Learn/HTML/Tables/Basics) whenever possible, is strongly encouraged.
+> [!NOTE]
+> Using the native [table elements](/en-US/docs/Learn/HTML/Tables/Basics) whenever possible, is strongly encouraged.
 
 ### Associated WAI-ARIA roles, states, and properties
 
@@ -57,7 +60,8 @@ None
 
 None.
 
-> **Note:** The first rule of ARIA use is if you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and **adding** an ARIA role, state or property to make it accessible, then do so. Employ the HTML `<table>`, `<tr>`, `<th>`, `<td>`, and other [table elements](/en-US/docs/Learn/HTML/Tables/Basics) instead of the ARIA table roles whenever possible.
+> [!NOTE]
+> The first rule of ARIA use is if you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and **adding** an ARIA role, state or property to make it accessible, then do so. Employ the HTML `<table>`, `<tr>`, `<th>`, `<td>`, and other [table elements](/en-US/docs/Learn/HTML/Tables/Basics) instead of the ARIA table roles whenever possible.
 
 ## Examples
 
@@ -131,7 +135,7 @@ Only use {{HTMLElement('table')}}, {{HTMLElement('tbody')}}, {{HTMLElement('thea
 </table>
 ```
 
-Above is the semantic way of writing a table. The ARIA roles are only necessary if the native semantics of the table, and therefore the table row headers, are obliterated, such as by setting the [display property to flex or grid](/en-US/docs/Web/CSS/display#accessibility_concerns).
+Above is the semantic way of writing a table. The ARIA roles are only necessary if the native semantics of the table, and therefore the table row headers, are obliterated, such as by setting the [display property to flex or grid](/en-US/docs/Web/CSS/display#accessibility).
 
 ### Added benefits
 
@@ -149,11 +153,3 @@ none
 - [ARIA `cell` role](/en-US/docs/Web/Accessibility/ARIA/Roles/cell_role)
 - [ARIA `row` role](/en-US/docs/Web/Accessibility/ARIA/Roles/row_role)
 - [ARIA `gridcell` role](/en-US/docs/Web/Accessibility/ARIA/Roles/gridcell_role)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

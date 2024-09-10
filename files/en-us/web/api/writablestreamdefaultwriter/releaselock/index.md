@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WritableStreamDefaultWriter.releaseLock
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`releaseLock()`** method of the
 {{domxref("WritableStreamDefaultWriter")}} interface releases the writer's lock on the

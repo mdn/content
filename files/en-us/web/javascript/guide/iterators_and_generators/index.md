@@ -69,7 +69,8 @@ while (!result.done) {
 console.log("Iterated over sequence of size:", result.value); // [5 numbers returned, that took interval in between: 0 to 10]
 ```
 
-> **Note:** It is not possible to know reflectively whether a particular object is an iterator. If you need to do this, use [Iterables](#iterables).
+> [!NOTE]
+> It is not possible to know reflectively whether a particular object is an iterator. If you need to do this, use [Iterables](#iterables).
 
 ## Generator functions
 
@@ -96,11 +97,11 @@ function* makeRangeIterator(start = 0, end = Infinity, step = 1) {
 
 An object is **iterable** if it defines its iteration behavior, such as what values are looped over in a {{jsxref("Statements/for...of", "for...of")}} construct. Some built-in types, such as {{jsxref("Array")}} or {{jsxref("Map")}}, have a default iteration behavior, while other types (such as {{jsxref("Object")}}) do not.
 
-In order to be **iterable**, an object must implement the **@@iterator** method. This means that the object (or one of the objects up its [prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)) must have a property with a {{jsxref("Symbol.iterator")}} key.
+In order to be **iterable**, an object must implement the `[Symbol.iterator]()` method. This means that the object (or one of the objects up its [prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)) must have a property with a {{jsxref("Symbol.iterator")}} key.
 
 It may be possible to iterate over an iterable more than once, or only once. It is up to the programmer to know which is the case.
 
-Iterables which can iterate only once (such as Generators) customarily return `this` from their **@@iterator** method, whereas iterables which can be iterated many times must return a new iterator on each invocation of **@@iterator**.
+Iterables which can iterate only once (such as Generators) customarily return `this` from their `[Symbol.iterator]()` method, whereas iterables which can be iterated many times must return a new iterator on each invocation of `[Symbol.iterator]()`.
 
 ```js
 function* makeIterator() {
@@ -117,10 +118,10 @@ for (const itItem of iter) {
 console.log(iter[Symbol.iterator]() === iter); // true
 
 // This example show us generator(iterator) is iterable object,
-// which has the @@iterator method return the `iter` (itself),
+// which has the [Symbol.iterator]() method return the `iter` (itself),
 // and consequently, the it object can iterate only _once_.
 
-// If we change the @@iterator method of `iter` to a function/generator
+// If we change the [Symbol.iterator]() method of `iter` to a function/generator
 // which returns a new iterator/generator object, `iter`
 // can iterate many times
 
@@ -192,9 +193,10 @@ a;
 
 Generators compute their `yield`ed values _on demand_, which allows them to efficiently represent sequences that are expensive to compute (or even infinite sequences, as demonstrated above).
 
-The {{jsxref("Generator/next", "next()")}} method also accepts a value, which can be used to modify the internal state of the generator. A value passed to `next()` will be received by `yield` .
+The {{jsxref("Generator/next", "next()")}} method also accepts a value, which can be used to modify the internal state of the generator. A value passed to `next()` will be received by `yield`.
 
-> **Note:** A value passed to the _first_ invocation of `next()` is always ignored.
+> [!NOTE]
+> A value passed to the _first_ invocation of `next()` is always ignored.
 
 Here is the fibonacci generator using `next(x)` to restart the sequence:
 

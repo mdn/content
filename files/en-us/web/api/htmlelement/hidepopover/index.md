@@ -33,9 +33,11 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
+### Hiding a popover
+
 The following example provides functionality to hide a popover by pressing a particular key on the keyboard.
 
-### HTML
+#### HTML
 
 ```html
 <button popovertarget="mypopover">Toggle popover's display</button>
@@ -44,7 +46,7 @@ The following example provides functionality to hide a popover by pressing a par
 </div>
 ```
 
-### JavaScript
+#### JavaScript
 
 ```js
 const popover = document.getElementById("mypopover");
@@ -56,9 +58,9 @@ document.addEventListener("keydown", (event) => {
 });
 ```
 
-### Result
+#### Result
 
-{{EmbedLiveSample("","100%",100)}}
+{{EmbedLiveSample("Hiding a popover","100%",100)}}
 
 ## Specifications
 

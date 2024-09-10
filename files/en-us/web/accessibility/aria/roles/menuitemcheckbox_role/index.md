@@ -7,6 +7,8 @@ spec-urls:
   - https://www.w3.org/WAI/ARIA/apg/patterns/menubar/examples/menubar-navigation/
 ---
 
+{{AccessibilitySidebar}}
+
 A `menuitemcheckbox` is a `menuitem` with a checkable state whose possible values are `true`, `false`, or `mixed`.
 
 ## Description
@@ -17,9 +19,9 @@ These three elements can only be contained in, or owned by, an element with role
 
 Menu items, including `menuitemcheckbox` elements, may be grouped within `group` elements or separated by elements with the [`separator`](/en-US/docs/Web/Accessibility/ARIA/Roles/separator_role) role or other equivalent native role such as {{HTMLElement('fieldset')}} and {{HTMLElement('hr')}}.
 
-Menu items containing the role of `menuitemcheckbox` must include the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) attribute to expose the checkbox's state to assistive technology, unless using [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox), in which case the ['checked'](/en-US/docs/Web/HTML/Element/input/checkbox#checked) attribute should be used.
+Menu items containing the role of `menuitemcheckbox` must include the [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-checked) attribute to expose the checkbox's state to assistive technology, unless using [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox), in which case the [`checked`](/en-US/docs/Web/HTML/Element/input/checkbox#checked) attribute should be used.
 
-Similar to the 'checked' attribute of {{HTMLElement('input')}}s of type `checkbox`, the `aria-checked` attribute of a `menuitemcheckbox` indicates whether the menu item is checked (`true`), unchecked (`false`), or represents a sub-level menu of other menu items that have a mixture of checked and unchecked values (`mixed`). The `mixed` value is similar to the checkbox's [`indeterminate`](/en-US/docs/Web/HTML/Element/input/checkbox#indeterminate_state_checkboxes) attribute, which gives the appearance of a third, neither checked nor unchecked, state. If missing, the value defaults to `false`.
+Similar to the `checked` attribute of {{HTMLElement('input')}}s of type `checkbox`, the `aria-checked` attribute of a `menuitemcheckbox` indicates whether the menu item is checked (`true`), unchecked (`false`), or represents a sub-level menu of other menu items that have a mixture of checked and unchecked values (`mixed`). The `mixed` value is similar to the checkbox's [`indeterminate`](/en-US/docs/Web/HTML/Element/input/checkbox#indeterminate_state_checkboxes) attribute, which gives the appearance of a third, neither checked nor unchecked, state.
 
 An accessible name is required. Ideally, the accessible name should come from an associated {{htmlelement('label')}} element if using `<input type="checkbox">` or visible, descendant content. Realize if the label or descendant content is not sufficient and, preferably, [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) is used referencing non-descendant content or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) is used, these two ARIA properties will hide other descendant content from assistive technologies.
 
@@ -131,16 +133,8 @@ The first rule of ARIA is: if a native HTML element or attribute has the semanti
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`menuitemradio` role](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
 - [`checkbox` role](/en-US/docs/Web/Accessibility/ARIA/Roles/checkbox_role)
 - [`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

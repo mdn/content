@@ -8,11 +8,9 @@ browser-compat:
 spec-urls: https://url.spec.whatwg.org/#api
 ---
 
-{{DefaultAPISidebar("URL API")}}
+{{DefaultAPISidebar("URL API")}} {{AvailableInWorkers}}
 
 The URL API is a component of the URL standard, which defines what constitutes a valid {{Glossary("URL", "Uniform Resource Locator")}} and the API that accesses and manipulates URLs. The URL standard also defines concepts such as domains, hosts, and IP addresses, and also attempts to describe in a standard way the legacy `application/x-www-form-urlencoded` {{Glossary("MIME type")}} used to submit web forms' contents as a set of key/value pairs.
-
-{{AvailableInWorkers}}
 
 ## Concepts and usage
 
@@ -95,7 +93,7 @@ function fillTableWithParameters(tbl) {
 }
 ```
 
-A working version of this example can be [found on Glitch](https://url-api.glitch.me). Just add parameters to the URL when loading the page to see them in the table. For instance, try [`https://url-api.glitch.me?from=mdn&excitement=high&likelihood=inconceivable`](https://url-api.glitch.me?from=mdn&excitement=high&likelihood=inconceivable).
+A working version of this example can be [found on Glitch](https://url-api.glitch.me/). Just add parameters to the URL when loading the page to see them in the table. For instance, try [`https://url-api.glitch.me?from=mdn&excitement=high&likelihood=inconceivable`](https://url-api.glitch.me?from=mdn&excitement=high&likelihood=inconceivable).
 
 ## Specifications
 

@@ -13,26 +13,14 @@ The only image formats SVG software must support are {{glossary("JPEG")}}, {{glo
 
 SVG files displayed with `<image>` are [treated as an image](/en-US/docs/Web/SVG/SVG_as_an_Image): external resources aren't loaded, {{cssxref(":visited")}} styles [aren't applied](/en-US/docs/Web/CSS/Privacy_and_the_:visited_selector), and they cannot be interactive. To include dynamic SVG elements, try {{SVGElement("use")}} with an external URL. To include SVG files and run scripts inside them, try {{HTMLElement("object")}} inside of {{SVGElement("foreignObject")}}.
 
-> **Note:** The HTML spec defines `<image>` as a synonym for {{HTMLElement("img")}} while parsing HTML. This specific element and its behavior only apply inside SVG documents or inline SVGs.
+> [!NOTE]
+> The HTML spec defines `<image>` as a synonym for {{HTMLElement("img")}} while parsing HTML. This specific element and its behavior only apply inside SVG documents or inline SVGs.
 
 ## Usage context
 
 {{svginfo}}
 
 ## Attributes
-
-### Global attributes
-
-- [Conditional processing attributes](/en-US/docs/Web/SVG/Attribute#conditional_processing_attributes)
-- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-- [Graphical event attributes](/en-US/docs/Web/SVG/Attribute#graphical_event_attributes)
-- [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
-- [Xlink attributes](/en-US/docs/Web/SVG/Attribute#xlink_attributes)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-- {{SVGAttr("transform")}}
-
-### Specific attributes
 
 - {{SVGAttr("x")}}: Positions the image horizontally from the origin.
 - {{SVGAttr("y")}}: Positions the image vertically from the origin.

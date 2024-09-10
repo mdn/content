@@ -94,7 +94,7 @@ Some tools recognize `new URL("./lib/helper.js", import.meta.url).href` as a dep
 
 This means that `import.meta.resolve()` is not required to be implemented by all conformant JavaScript implementations. However, `import.meta.resolve()` may also be available in non-browser environments:
 
-- Deno implements [compatibility with browser behavior](https://deno.land/manual/runtime/import_meta_api).
+- Deno implements [compatibility with browser behavior](https://docs.deno.com/runtime/reference/deno_namespace_apis/#import.meta).
 - Node.js also implements [the `import.meta.resolve()` function](https://nodejs.org/docs/latest/api/esm.html#importmetaresolvespecifier), but adds an additional `parent` parameter if you use the `--experimental-import-meta-resolve` flag.
 
 ## Examples

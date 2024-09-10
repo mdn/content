@@ -9,7 +9,8 @@ browser-compat: webextensions.api.tabs.getCurrent
 
 Get a {{WebExtAPIRef("tabs.Tab")}} containing information about the tab that this script is running in.
 
-> **Note:** This function is only useful in contexts where there is a browser tab, such as an [options page](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#options_pages).
+> [!NOTE]
+> This function is only useful in contexts where there is a browser tab, such as an [options page](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#options_pages).
 >
 > If you call it from a background script or a popup, it will return `undefined`.
 
@@ -52,7 +53,8 @@ gettingCurrent.then(onGot, onError);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-getCurrent) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-getCurrent) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

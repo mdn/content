@@ -25,60 +25,12 @@ Common use cases for `<picture>`:
 - **Art direction.** Cropping or modifying images for different `media` conditions (for example, loading a simpler version of an image which has too many details, on smaller displays).
 - **Offering alternative image formats**, for cases where certain formats are not supported.
 
-  > **Note:** For example, newer formats like [AVIF](/en-US/docs/Web/Media/Formats/Image_types#avif_image) or [WEBP](/en-US/docs/Web/Media/Formats/Image_types#webp_image) have many advantages, but might not be supported by the browser. A list of supported image formats can be found in: [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types).
+  > [!NOTE]
+  > For example, newer formats like [AVIF](/en-US/docs/Web/Media/Formats/Image_types#avif_image) or [WEBP](/en-US/docs/Web/Media/Formats/Image_types#webp_image) have many advantages, but might not be supported by the browser. A list of supported image formats can be found in: [Image file type and format guide](/en-US/docs/Web/Media/Formats/Image_types).
 
 - **Saving bandwidth and speeding page load times** by loading the most appropriate image for the viewer's display.
 
 If providing higher-density versions of an image for high-DPI (Retina) display, use [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset) on the `<img>` element instead. This lets browsers opt for lower-density versions in data-saving modes, and you don't have to write explicit `media` conditions.
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Content_categories"
-          >Content categories</a
-        >
-      </th>
-      <td>
-        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
-          >Flow content</a
-        >, phrasing content, embedded content
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted content</th>
-      <td>
-        Zero or more {{HTMLElement("source")}} elements, followed by one
-        {{HTMLElement("img")}} element, optionally intermixed with
-        script-supporting elements.
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted parents</th>
-      <td>Any element that allows embedded content.</td>
-    </tr>
-    <tr>
-      <th scope="row">Implicit ARIA role</th>
-      <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">Permitted ARIA roles</th>
-      <td>No <code>role</code> permitted</td>
-    </tr>
-    <tr>
-      <th scope="row">DOM interface</th>
-      <td>{{domxref("HTMLPictureElement")}}</td>
-    </tr>
-  </tbody>
-</table>
 
 ## Attributes
 
@@ -88,7 +40,8 @@ This element includes only [global attributes](/en-US/docs/Web/HTML/Global_attri
 
 You can use the {{cssxref("object-position")}} property to adjust the positioning of the image within the element's frame, and the {{cssxref("object-fit")}} property to control how the image is resized to fit within the frame.
 
-> **Note:** Use these properties on the child `<img>` element, **not** the `<picture>` element.
+> [!NOTE]
+> Use these properties on the child `<img>` element, **not** the `<picture>` element.
 
 ## Examples
 
@@ -161,6 +114,57 @@ The `type` attribute specifies a [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP
   <img src="photo.jpg" alt="photo" />
 </picture>
 ```
+
+## Technical summary
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        <a href="/en-US/docs/Web/HTML/Content_categories#flow_content"
+          >Flow content</a
+        >, phrasing content, embedded content
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted content</th>
+      <td>
+        Zero or more {{HTMLElement("source")}} elements, followed by one
+        {{HTMLElement("img")}} element, optionally intermixed with
+        script-supporting elements.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Tag omission</th>
+      <td>None, both the starting and ending tag are mandatory.</td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted parents</th>
+      <td>Any element that allows embedded content.</td>
+    </tr>
+    <tr>
+      <th scope="row">Implicit ARIA role</th>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >No corresponding role</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Permitted ARIA roles</th>
+      <td>No <code>role</code> permitted</td>
+    </tr>
+    <tr>
+      <th scope="row">DOM interface</th>
+      <td>{{domxref("HTMLPictureElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 

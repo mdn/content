@@ -6,11 +6,9 @@ page-type: web-api-instance-property
 browser-compat: api.WebTransport.closed
 ---
 
-{{APIRef("WebTransport API")}}{{SecureContext_Header}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The **`closed`** read-only property of the {{domxref("WebTransport")}} interface returns a promise that resolves when the transport is closed.
-
-{{AvailableInWorkers}}
 
 ## Value
 

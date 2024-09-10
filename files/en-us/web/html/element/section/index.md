@@ -118,7 +118,7 @@ Depending on the content, including a heading could also be good for SEO, so it 
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
@@ -140,7 +140,7 @@ Depending on the content, including a heading could also be good for SEO, so it 
         >
         if the element has an
         <a
-          href="https://developer.paciellogroup.com/blog/2017/04/what-is-an-accessible-name/"
+          href="/en-US/docs/Glossary/Accessible_name"
           >accessible name</a
         >, otherwise
         <code

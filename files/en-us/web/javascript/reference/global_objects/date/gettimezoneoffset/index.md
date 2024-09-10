@@ -45,6 +45,8 @@ In a region that annually shifts in and out of Daylight Saving Time (DST), as `d
 
 > **Note:** `getTimezoneOffset()`'s behavior will never differ based on the time when the code is run — its behavior is always consistent when running in the same region. Only the value of `date` affects the result.
 
+> **Note:** [Many countries have experimented with not changing the time twice a year](https://en.wikipedia.org/wiki/Daylight_saving_time_by_country#Past_observance) and this has meant that DST has continued over the winter too. For example in the UK DST lasted from 2:00AM 18 February 1968 to 3:00AM 31 October 1971, so during the winter the clocks were not set back.
+
 In most implementations, the [IANA time zone database](https://en.wikipedia.org/wiki/Daylight_saving_time#IANA_time_zone_database) (tzdata) is used to precisely determine the offset of the local timezone at the moment of the `date`. However, if such information is unavailable, an implementation may return zero.
 
 ## Examples

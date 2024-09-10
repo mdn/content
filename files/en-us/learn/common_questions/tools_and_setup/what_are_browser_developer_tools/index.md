@@ -8,7 +8,8 @@ page-type: learn-faq
 
 Every modern web browser includes a powerful suite of developer tools. These tools do a range of things, from inspecting currently-loaded HTML, CSS and JavaScript to showing which assets the page has requested and how long they took to load. This article explains how to use the basic functions of your browser's devtools.
 
-> **Note:** Before you run through the examples below, open the [Beginner's example site](https://mdn.github.io/beginner-html-site-scripted/) that we built during the [Getting started with the Web](/en-US/docs/Learn/Getting_started_with_the_web) article series. You should have this open as you follow the steps below.
+> [!NOTE]
+> Before you run through the examples below, open the [Beginner's example site](https://mdn.github.io/beginner-html-site-scripted/) that we built during the [Getting started with the Web](/en-US/docs/Learn/Getting_started_with_the_web) article series. You should have this open as you follow the steps below.
 
 ## How to open the devtools in your browser
 
@@ -26,7 +27,7 @@ How do you pull it up? Three ways:
 
 - **_Menu bar:_**
 
-  - **Firefox:** Menu ![Firefox hamburger menu icon that has more options to customize and control Firefox.](2014-01-10-13-08-08-f52b8c.png) _➤ Web Developer ➤ Toggle Tools,_ or _Tools ➤_ _Web Developer ➤ Toggle Tools_
+  - **Firefox:** Menu ![Firefox hamburger menu icon that has more options to customize and control Firefox.](2014-01-10-13-08-08-f52b8c.png) _➤ More tools ➤ Web Developer Tools_
   - **Chrome:** _More tools ➤ Developer tools_
   - **Safari:** _Develop ➤ Show Web Inspector._ If you can't see the _Develop_ menu, go to _Safari ➤ Preferences ➤ Advanced_, and check the _Show Develop menu in menu bar_ checkbox.
   - **Opera**: _Developer ➤ Developer tools_
@@ -82,7 +83,7 @@ You'll notice a number of clickable tabs at the top of the CSS Viewer:
 - _Layout_: In Firefox, this area includes two sections:
 
   - _Box Model_: represents visually the current element's box model, so you can see at a glance what padding, border and margin is applied to it, and how big its content is.
-  - _Grid_: If the page you are inspecting uses CSS Grid, this section allows you to view the grid details.
+  - _Grid_: If the page you are inspecting uses CSS grid, this section allows you to view the grid details.
 
 - _Fonts_: In Firefox, the _Fonts_ tab shows the fonts applied to the current element.
 
@@ -145,7 +146,7 @@ The final section, **Scopes**, shows what values are visible from various points
 Find out more about the JavaScript debugger in different browsers:
 
 - [Firefox JavaScript Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html))
-- [Microsoft Edge Debugger](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/devtools-guide/debugger)
+- [Microsoft Edge Debugger](https://learn.microsoft.com/en-us/archive/microsoft-edge/legacy/developer/devtools-guide/debugger)
 - [Chrome Debugger](https://developer.chrome.com/docs/devtools/javascript/)
 - [Safari Debugger](https://developer.apple.com/safari/tools/)
 
@@ -155,7 +156,7 @@ The JavaScript console is an incredibly useful tool for debugging JavaScript tha
 
 If the developer tools are already open, click or press the Console tab.
 
-If not, Firefox allows you to open the console directly using <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd> or using the menu command: Menu ![Firefox menu](2014-01-10-13-08-08-f52b8c.png) _➤ Web Developer ➤ Web Console,_ or _Tools ➤_ _Web Developer ➤ Web Console._ On other browser, open the developer tools and then click the Console tab.
+If not, Firefox allows you to open the console directly using <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd> or using the menu command: Menu ![Firefox menu](2014-01-10-13-08-08-f52b8c.png) _➤ Web Developer ➤ Web Console,_ or _Tools ➤_ _Web Developer ➤ Web Console._ On other browsers, open the developer tools and then click the Console tab.
 
 This will give you a window like the following:
 

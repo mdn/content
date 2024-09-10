@@ -7,6 +7,8 @@ spec-urls:
   - https://www.w3.org/WAI/ARIA/apg/practices/structural-roles/#when_to_use_structural_roles
 ---
 
+{{AccessibilitySidebar}}
+
 The `heading` role defines this element as a heading to a page or section, with the [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-level) attribute providing for more structure.
 
 ## Description
@@ -39,7 +41,8 @@ This role does not require any special keyboard navigation. As with any heading,
 - Changing attribute values
   - : Usually not required, unless dynamically inserting content. In that case, the newly-added headings need `aria-level` attributes whose values are consistent with the rest of the document structure.
 
-> **Note:** Instead of using a `<div>` or `<span>` with a `heading` role and `aria-level`, consider using a native {{HTMLElement("Heading_Elements", "h1")}} through {{HTMLElement("Heading_Elements", "h6")}} elements instead to indicate that this text is a heading, and what part of the structure it represents.
+> [!NOTE]
+> Instead of using a `<div>` or `<span>` with a `heading` role and `aria-level`, consider using a native {{HTMLElement("Heading_Elements", "h1")}} through {{HTMLElement("Heading_Elements", "h6")}} elements instead to indicate that this text is a heading, and what part of the structure it represents.
 
 ## Examples
 
@@ -75,7 +78,8 @@ However, instead, you should do:
 
 ## Accessibility concerns
 
-> **Warning:** Using [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) will hide the content of your heading from assistive technologies, reading the label instead of the heading.
+> [!WARNING]
+> Using [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) will hide the content of your heading from assistive technologies, reading the label instead of the heading.
 
 If you must use the `heading` role and [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-level) attribute, do not go over level 6 so that you are consistent with HTML. Although theoretically you can go higher, and some screen readers may support it, the results can be unpredictable with other browser and screen reader combinations.
 
@@ -109,11 +113,3 @@ The heading role overrides the native semantic meaning of the element it is bein
 ## See also
 
 - [`<h1>` through `<h6>`: The HTML Section Heading elements](/en-US/docs/Web/HTML/Element/Heading_Elements)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

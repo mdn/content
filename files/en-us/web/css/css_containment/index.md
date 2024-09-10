@@ -68,6 +68,10 @@ Container queries are similar to dimension [media queries](/en-US/docs/Web/CSS/C
 
   - : Describes the basic aims of CSS containment and how to leverage `contain` and `content-visibility` for a better user experience.
 
+- [Using container size and style queries](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)
+
+  - : A guide to writing container size and style queries with `@container`, including style queries for custom properties, query syntax and names, and nesting container queries.
+
 ## Related concepts
 
 - [Layout and the containing block](/en-US/docs/Web/CSS/Containing_block)
@@ -85,6 +89,7 @@ Container queries are similar to dimension [media queries](/en-US/docs/Web/CSS/C
 
 - CSS box sizing module
 
+  - {{CSSxRef("aspect-ratio")}} property
   - {{cssxref("contain-intrinsic-size")}} shorthand property
   - {{CSSxRef("contain-intrinsic-inline-size")}} property
   - {{CSSxRef("contain-intrinsic-size")}} property
@@ -106,4 +111,5 @@ Container queries are similar to dimension [media queries](/en-US/docs/Web/CSS/C
 
 - [Using feature queries](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
 - [Using CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Understanding aspect ratios](/en-US/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
 - {{cssxref("@supports")}} at-rule

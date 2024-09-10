@@ -20,6 +20,6 @@ The **CSS ruby layout** module provides the rendering model and formatting contr
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - {{HTMLElement('ruby')}}

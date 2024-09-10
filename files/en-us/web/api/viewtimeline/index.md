@@ -58,7 +58,7 @@ The HTML for the example is shown below.
   </p>
 
   <p>
-    Dolor sed viverra ipsum nunc aliquet. Sed sed risus pretium quam vulputate
+    Dolor sed viverra ipsum nunc aliquet. Sed risus pretium quam vulputate
     dignissim. Tortor aliquam nulla facilisi cras. A erat nam at lectus urna
     duis convallis convallis. Nibh ipsum consequat nisl vel pretium lectus.
     Sagittis aliquam malesuada bibendum arcu vitae elementum. Malesuada bibendum
@@ -124,7 +124,7 @@ p {
 
 #### JavaScript
 
-In the JavaScript, we grab references to the `subject` and `output` `<div>`s, then create a new {{domxref("ViewTimeline")}}, associating it with the `subject` element to specify that the timeline progress is based on this element's visibility through its scrolling ancestor, setting a `block` axis, and setting `inset` values to adjust the position of the box in which the subject is deemed to be visible.
+In the JavaScript, we grab references to the `subject` and `output` `<div>`s, then create a new `ViewTimeline`, associating it with the `subject` element to specify that the timeline progress is based on this element's visibility through its scrolling ancestor, setting a `block` axis, and setting `inset` values to adjust the position of the box in which the subject is deemed to be visible.
 
 We then animate the `subject` element with the Web Animations API. Last of all, we display the `subject`, `startOffset`, and `endOffset` values in the `output` element.
 

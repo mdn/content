@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.RTCEncodedVideoFrame.getMetadata
 ---
 
-{{APIRef("WebRTC")}}
+{{APIRef("WebRTC")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`getMetadata()`** method of the {{domxref("RTCEncodedVideoFrame")}} interface returns an object containing the metadata associated with the frame.
 

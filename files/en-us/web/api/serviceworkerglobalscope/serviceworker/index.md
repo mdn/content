@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.ServiceWorkerGlobalScope.serviceWorker
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers("service")}}
 
 The **`serviceWorker`** read-only property of the {{domxref("ServiceWorkerGlobalScope")}} interface returns a reference to the {{domxref("ServiceWorker")}} object, which represents the service worker.
 

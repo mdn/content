@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.VideoFrame.close
 ---
 
-{{APIRef("Web Codecs API")}}
+{{APIRef("Web Codecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`close()`** method of the {{domxref("VideoFrame")}} interface clears all states and releases the reference to the media resource.
 

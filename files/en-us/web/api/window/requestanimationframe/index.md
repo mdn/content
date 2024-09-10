@@ -1,7 +1,7 @@
 ---
 title: "Window: requestAnimationFrame() method"
 short-title: requestAnimationFrame()
-slug: Web/API/window/requestAnimationFrame
+slug: Web/API/Window/requestAnimationFrame
 page-type: web-api-instance-method
 browser-compat: api.Window.requestAnimationFrame
 ---
@@ -19,10 +19,12 @@ refresh rate. The most common refresh rate is 60hz,
 background tabs or hidden {{ HTMLElement("iframe") }}s, in order to improve
 performance and battery life.
 
-> **Note:** Your callback function must call `requestAnimationFrame()` again if
+> [!NOTE]
+> Your callback function must call `requestAnimationFrame()` again if
 > you want to animate another frame. `requestAnimationFrame()` is one-shot.
 
-> **Warning:** Be sure always to use the first argument (or some other method for
+> [!WARNING]
+> Be sure always to use the first argument (or some other method for
 > getting the current time) to calculate how much the animation will progress in
 > a frame — **otherwise, the animation will run faster on high refresh-rate screens**.
 > For ways to do that, see the examples below.
@@ -36,22 +38,14 @@ requestAnimationFrame(callback)
 ### Parameters
 
 - `callback`
-  - The function to call when it's time to update your animation for the next
-    repaint. This callback function is passed a single argument: a
-    {{domxref("DOMHighResTimeStamp")}} indicating the end time of the previous frame's
-    rendering (based on the number of milliseconds since
-    [time origin](/en-US/docs/Web/API/DOMHighResTimeStamp#the_time_origin)).
-  - The timestamp is a decimal number, in milliseconds, but with a minimal
-    precision of 1 millisecond. For `Window` objects (not `Workers`), it is equal to
-    {{domxref("AnimationTimeline/currentTime", "document.timeline.currentTime")}}. This timestamp is shared
-    between all windows that run on the same agent (all same-origin windows
-    and, more importantly, same-origin iframes) — which allows synchronizing
-    animations across multiple `requestAnimationFrame` callbacks. The timestamp
-    value is also similar to calling {{domxref('performance.now()')}} at the start
-    of the callback function, but it is never the same value.
-  - When multiple callbacks queued by `requestAnimationFrame()` begin to fire in
-    a single frame, each receives the same timestamp even though time has passed
-    during the computation of every previous callback's workload.
+
+  - : The function to call when it's time to update your animation for the next repaint. This callback function is passed a single argument:
+
+    - `timestamp`
+
+      - : A {{domxref("DOMHighResTimeStamp")}} indicating the end time of the previous frame's rendering (based on the number of milliseconds since [time origin](/en-US/docs/Web/API/Performance/timeOrigin)). The timestamp is a decimal number, in milliseconds, but with a minimal precision of 1 millisecond. For `Window` objects (not `Workers`), it is equal to {{domxref("AnimationTimeline/currentTime", "document.timeline.currentTime")}}. This timestamp is shared between all windows that run on the same agent (all same-origin windows and, more importantly, same-origin iframes) — which allows synchronizing animations across multiple `requestAnimationFrame` callbacks. The timestamp value is also similar to calling {{domxref('performance.now()')}} at the start of the callback function, but it is never the same value.
+
+        When multiple callbacks queued by `requestAnimationFrame()` begin to fire in a single frame, each receives the same timestamp even though time has passed during the computation of every previous callback's workload.
 
 ### Return value
 
@@ -70,32 +64,23 @@ milliseconds) with `0.1 * elapsed`. The element's final position is 200px
 
 ```js
 const element = document.getElementById("some-element-you-want-to-animate");
-let start, previousTimeStamp;
-let done = false;
+let start;
 
-function step(timeStamp) {
+function step(timestamp) {
   if (start === undefined) {
-    start = timeStamp;
+    start = timestamp;
   }
-  const elapsed = timeStamp - start;
+  const elapsed = timestamp - start;
 
-  if (previousTimeStamp !== timeStamp) {
-    // Math.min() is used here to make sure the element stops at exactly 200px
-    const count = Math.min(0.1 * elapsed, 200);
-    element.style.transform = `translateX(${count}px)`;
-    if (count === 200) done = true;
-  }
-
-  if (elapsed < 2000) {
-    // Stop the animation after 2 seconds
-    previousTimeStamp = timeStamp;
-    if (!done) {
-      window.requestAnimationFrame(step);
-    }
+  // Math.min() is used here to make sure the element stops at exactly 200px
+  const shift = Math.min(0.1 * elapsed, 200);
+  element.style.transform = `translateX(${shift}px)`;
+  if (shift < 200) {
+    requestAnimationFrame(step);
   }
 }
 
-window.requestAnimationFrame(step);
+requestAnimationFrame(step);
 ```
 
 The following three examples illustrate different approaches to setting the zero point in time,
@@ -114,12 +99,12 @@ and the first call to the callback function.
 ```js
 let zero;
 requestAnimationFrame(firstFrame);
-function firstFrame(timeStamp) {
-  zero = timeStamp;
-  animate(timeStamp);
+function firstFrame(timestamp) {
+  zero = timestamp;
+  animate(timestamp);
 }
-function animate(timeStamp) {
-  const value = (timeStamp - zero) / duration;
+function animate(timestamp) {
+  const value = (timestamp - zero) / duration;
   if (value < 1) {
     element.style.opacity = value;
     requestAnimationFrame((t) => animate(t));
@@ -129,14 +114,14 @@ function animate(timeStamp) {
 
 This example uses {{domxref("AnimationTimeline/currentTime", "document.timeline.currentTime")}} to set a zero value
 before the first call to `requestAnimationFrame`. `document.timeline.currentTime`
-aligns with the `timeStamp` argument, so the zero value is equivalent to the
+aligns with the `timestamp` argument, so the zero value is equivalent to the
 0th frame's timestamp.
 
 ```js
 const zero = document.timeline.currentTime;
 requestAnimationFrame(animate);
-function animate(timeStamp) {
-  const value = (timeStamp - zero) / duration; // animation-timing-function: linear
+function animate(timestamp) {
+  const value = (timestamp - zero) / duration; // animation-timing-function: linear
   if (value < 1) {
     element.style.opacity = value;
     requestAnimationFrame((t) => animate(t));

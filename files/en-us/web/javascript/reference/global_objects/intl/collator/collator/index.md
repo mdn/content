@@ -29,7 +29,7 @@ Intl.Collator(locales, options)
 
 - `locales` {{optional_inline}}
 
-  - : A string with a BCP 47 language tag or an {{jsxref("Intl.Locale")}} instance, or an array of such locale identifiers. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
+  - : A string with a BCP 47 language tag or an {{jsxref("Intl.Locale")}} instance, or an array of such locale identifiers. The runtime's default locale is used when `undefined` is passed or when none of the specified locale identifiers is supported. For the general form and interpretation of the `locales` argument, see [the parameter description on the `Intl` main page](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_argument).
 
     The following Unicode extension keys are allowed:
 
@@ -76,7 +76,7 @@ Intl.Collator(locales, options)
         The default is `"variant"` for usage `"sort"`; it's locale dependent for usage `"search"` per spec, but the core functionality of `"search"` is accent-insensitive and case-insensitive filtering, so `"base"` makes the most sense (and perhaps `"case"`).
 
     - `ignorePunctuation`
-      - : Whether punctuation should be ignored. Possible values are `true` and `false`; the default is `false`.
+      - : Whether punctuation should be ignored. Possible values are `true` and `false`. The default is `true` for Thai (`th`) and `false` for all other languages.
 
 ### Exceptions
 

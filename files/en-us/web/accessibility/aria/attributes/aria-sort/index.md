@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-sort
 ---
 
+{{AccessibilitySidebar}}
+
 The `aria-sort` attribute indicates if items in a table or grid are sorted in ascending or descending order.
 
 ## Description
@@ -77,13 +79,8 @@ Used in roles:
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [Sortable table example](https://www.w3.org/TR/wai-aria-practices-1.2/examples/table/sortable-table.html) -W3C
 - [`aria-pressed`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-pressed)
 - The {{HTMLElement('th')}} element
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

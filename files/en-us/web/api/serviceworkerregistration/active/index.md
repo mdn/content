@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.ServiceWorkerRegistration.active
 ---
 
-{{APIRef("Service Workers API")}}{{SecureContext_Header}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The **`active`** read-only property of the
 {{domxref("ServiceWorkerRegistration")}} interface returns a service worker whose
@@ -17,11 +17,10 @@ An active worker controls a {{domxref("Client")}} if the client's URL
 falls within the scope of the registration (the `scope` option set when
 {{domxref("ServiceWorkerContainer.register")}} is first called.)
 
-> **Note:** Once an active worker is `activating`, neither a
+> [!NOTE]
+> Once an active worker is `activating`, neither a
 > runtime script error nor a force termination of the active worker prevents the active
 > worker from getting `activated`.
-
-{{AvailableInWorkers}}
 
 ## Value
 

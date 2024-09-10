@@ -11,7 +11,8 @@ browser-compat: api.CSSValue
 
 The **`CSSValue`** interface represents the current computed value of a CSS property.
 
-> **Note:** This interface was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
+> [!NOTE]
+> This interface was part of an attempt to create a typed CSS Object Model. This attempt has been abandoned, and most browsers do
 > not implement it.
 >
 > To achieve your purpose, you can use:

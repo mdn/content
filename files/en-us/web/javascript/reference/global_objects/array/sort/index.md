@@ -27,12 +27,20 @@ sort(compareFn)
 
 - `compareFn` {{optional_inline}}
 
-  - : A function that defines the sort order. The return value should be a number whose sign indicates the relative order of the two elements: negative if `a` is less than `b`, positive if `a` is greater than `b`, and zero if they are equal. `NaN` is treated as `0`. The function is called with the following arguments:
+  - : A function that determines the order of the elements. The function is called with the following arguments:
 
     - `a`
       - : The first element for comparison. Will never be `undefined`.
     - `b`
       - : The second element for comparison. Will never be `undefined`.
+
+    It should return a number where:
+
+    - A negative value indicates that `a` should come before `b`.
+    - A positive value indicates that `a` should come after `b`.
+    - Zero or `NaN` indicates that `a` and `b` are considered equal.
+
+    To memorize this, remember that `(a, b) => a - b` sorts numbers in ascending order.
 
     If omitted, the array elements are converted to strings, then sorted according to each character's Unicode code point value.
 
@@ -50,7 +58,8 @@ Unicode order. All `undefined` elements are sorted to the end of the array.
 
 The `sort()` method preserves empty slots. If the source array is [sparse](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), the empty slots are moved to the end of the array, and always come after all the `undefined`.
 
-> **Note:** In UTF-16, Unicode characters above `\uFFFF` are
+> [!NOTE]
+> In UTF-16, Unicode characters above `\uFFFF` are
 > encoded as two surrogate code units, of the range
 > `\uD800` - `\uDFFF`. The value of each code unit is taken
 > separately into account for the comparison. Thus the character formed by the surrogate

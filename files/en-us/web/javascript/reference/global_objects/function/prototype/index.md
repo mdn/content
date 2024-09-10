@@ -9,7 +9,8 @@ spec-urls: https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-functi
 
 The **`prototype`** data property of a {{jsxref("Function")}} instance is used when the function is used as a constructor with the [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) operator. It will become the new object's prototype.
 
-> **Note:** Not all {{jsxref("Function")}} objects have the `prototype` property — see [description](#description).
+> [!NOTE]
+> Not all {{jsxref("Function")}} objects have the `prototype` property — see [description](#description).
 
 ## Value
 
@@ -17,7 +18,7 @@ An object.
 
 {{js_property_attributes(1, 0, 0)}}
 
-> **Note:** The `prototype` property of [classes](/en-US/docs/Web/JavaScript/Reference/Classes) is not writable.
+> **Note:** [Classes](/en-US/docs/Web/JavaScript/Reference/Classes) are a type of function, so most of the description here applies to the `prototype` property of classes too. The only salient difference is that the `prototype` property of a class is not writable.
 
 ## Description
 

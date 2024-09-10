@@ -8,7 +8,8 @@ page-type: firefox-release-notes
 
 Firefox 10 shipped on January 31, 2012. This article provides information about the new features and key bugs fixed in this release, as well as links to more detailed documentation for both web developers and add-on developers.
 
-> **Note:** Firefox 10 is the first release of this browser with two digits. This may lead to problem with some UA-sniffing scripts. Be sure to check them, and those contained in 3rd-party software you embed in your pages, like libraries. For more information about this, look at the [Firefox goes 2-digit article on hack.mozilla.org](https://hacks.mozilla.org/2012/01/firefox-goes-2-digit-time-to-check-your-ua-sniffing-scripts/).
+> [!NOTE]
+> Firefox 10 is the first release of this browser with two digits. This may lead to problem with some UA-sniffing scripts. Be sure to check them, and those contained in 3rd-party software you embed in your pages, like libraries. For more information about this, look at the [Firefox goes 2-digit article on hack.mozilla.org](https://hacks.mozilla.org/2012/01/firefox-goes-2-digit-time-to-check-your-ua-sniffing-scripts/).
 
 ## Changes for Web developers
 
@@ -59,13 +60,13 @@ Firefox 10 shipped on January 31, 2012. This article provides information about 
 
 #### WebGL
 
-- Firefox 10 now supports the [`OES_standard_derivatives`](https://www.khronos.org/registry/webgl/extensions/OES_standard_derivatives/) extension.
+- Firefox 10 now supports the [`OES_standard_derivatives`](https://registry.khronos.org/webgl/extensions/OES_standard_derivatives/) extension.
 - [New preferences have been added](/en-US/docs/Web/API/WebGL_API#webgl_debugging_and_testing) to help test WebGL code for compatibility with minimally-capable devices on your full development platform.
 
 #### Web Workers
 
 - The attribute `XMLHttpRequest.responseType` and `XMLHttpRequest.response` are now available from inside [Workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers#section_2).
-- The [`Worker()`](/en-US/docs/Web/API/Worker#worker) constructor now accepts [data URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs).
+- The [`Worker()`](/en-US/docs/Web/API/Worker#worker) constructor now accepts [data URLs](/en-US/docs/Web/URI/Schemes/data).
 
 #### IndexedDB
 
@@ -116,7 +117,8 @@ Great progress has been made to update IndexedDB to the latest draft specificati
 
 For an overview of likely issues that may arise when updating your add-ons to support Firefox 10, see [Updating add-ons for Firefox 10](/en-US/docs/Mozilla/Firefox/Updating_add-ons_for_Firefox_10).
 
-> **Note:** The old [`PRBool`](/en-US/docs/PRBool) data type has been retired! Anywhere in the documentation that refers to it now uses the standard C++ `bool` type instead. Documentation will be updated in the future, but for now, just keep this in mind.
+> [!NOTE]
+> The old [`PRBool`](/en-US/docs/PRBool) data type has been retired! Anywhere in the documentation that refers to it now uses the standard C++ `bool` type instead. Documentation will be updated in the future, but for now, just keep this in mind.
 
 ### Manifests
 

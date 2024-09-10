@@ -14,7 +14,8 @@ The **`charCode`** read-only property of the
 {{domxref("KeyboardEvent")}} interface returns the Unicode value of a character key
 pressed during a {{domxref("Element/keypress_event", "keypress")}} event.
 
-> **Warning:** Do not use this property, as it is deprecated. Instead, get the
+> [!WARNING]
+> Do not use this property, as it is deprecated. Instead, get the
 > Unicode value of the character using the {{domxref("KeyboardEvent.key", "key")}}
 > property.
 
@@ -69,8 +70,7 @@ input.addEventListener("keypress", (e) => {
 - `charCode` is never set in the {{domxref("Element/keydown_event", "keydown")}} and
   {{domxref("Element/keyup_event", "keyup")}} events. In these cases, `keyCode` is set instead.
 - To get the code of the key regardless of whether it was stored in
-  `keyCode` or `charCode`, query the {{
-    domxref("UIEvent/which", "which") }} property.
+  `keyCode` or `charCode`, query the {{domxref("UIEvent/which", "which")}} property.
 - Characters entered through an {{glossary("IME")}} do not register through `keyCode` or
   `charCode`.
 - For a list of the `charCode` values associated with particular keys, run

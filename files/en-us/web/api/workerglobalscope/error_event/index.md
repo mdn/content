@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.WorkerGlobalScope.error_event
 ---
 
-{{APIRef("Web Workers API")}}
+{{APIRef("Web Workers API")}}{{AvailableInWorkers("worker")}}
 
 The **`error`** event of the {{domxref("WorkerGlobalScope")}} interface fires when an error occurs in the worker.
 
@@ -17,7 +17,7 @@ Use the event name in methods like {{domxref("EventTarget.addEventListener", "ad
 ```js
 addEventListener("error", (event) => {});
 
-onerror = (event) => {};
+onerror = (message, filename, lineno, colno, error) => {};
 ```
 
 ## Event type

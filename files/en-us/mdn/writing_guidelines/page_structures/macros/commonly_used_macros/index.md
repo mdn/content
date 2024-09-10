@@ -16,7 +16,7 @@ See [Other macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Oth
 MDN provides a number of link macros for easing the creation of links to reference pages, glossary entries, and other topics.
 
 Link macros are recommended over normal Markdown links because they are succinct and translation-friendly.
-For example a glossary or reference link created using a macro does not need to be translated: in other locales it will automatically link to the correct version of the file.
+For example, a glossary or reference link created using a macro does not need to be translated: in other locales it will automatically link to the correct version of the file.
 
 ### Glossary links
 
@@ -28,7 +28,7 @@ This macro accepts one required parameter and one optional parameter:
 
 ### Linking to pages in references
 
-There are macros for locale-independent linking to pages in specific reference areas of MDN: JavaScript, CSS, HTML elements, SVG etc.
+There are macros for locale-independent linking to pages in specific reference areas of MDN: JavaScript, CSS, HTML elements, SVG, etc.
 
 The macros are easy to use.
 Minimally all you need to do is specify the name of the item to link to in the first argument.
@@ -45,7 +45,7 @@ Most macros will also take a second argument allowing you to change the display 
   <tbody>
     <tr>
       <td>
-        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/cssxref.ejs">CSSxRef</a>
+        <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/cssxref.ejs">CSSxRef</a>
       </td>
       <td>
         <a href="/en-US/docs/Web/CSS/Reference">CSS Reference</a> (/Web/CSS/Reference)
@@ -56,7 +56,7 @@ Most macros will also take a second argument allowing you to change the display 
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/DOMxRef.ejs">DOMxRef</a>
+        <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/DOMxRef.ejs">DOMxRef</a>
       </td>
       <td><a href="/en-US/docs/Web/API">DOM Reference</a> (/Web/API)</td>
       <td>
@@ -68,7 +68,7 @@ Most macros will also take a second argument allowing you to change the display 
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/HTMLElement.ejs">HTMLElement</a>
+        <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/HTMLElement.ejs">HTMLElement</a>
       </td>
       <td>
         <a href="/en-US/docs/Web/HTML/Element">HTML Elements reference</a> (/Web/HTML/Element)
@@ -79,7 +79,7 @@ Most macros will also take a second argument allowing you to change the display 
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/jsxref.ejs">JSxRef</a>
+        <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/jsxref.ejs">JSxRef</a>
       </td>
       <td>
         <a href="/en-US/docs/Web/JavaScript/Reference">JavaScript reference</a> (/Web/JavaScript/Reference).
@@ -90,7 +90,7 @@ Most macros will also take a second argument allowing you to change the display 
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/SVGAttr.ejs">SVGAttr</a>
+        <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/SVGAttr.ejs">SVGAttr</a>
       </td>
       <td>
         <a href="/en-US/docs/Web/SVG/Attribute">SVG attribute reference</a> (/Web/SVG/Attribute).
@@ -102,7 +102,7 @@ Most macros will also take a second argument allowing you to change the display 
     <tr>
       <td>
         <a
-          href="https://github.com/mdn/yari/tree/main/kumascript/macros/SVGElement.ejs">SVGElement</a>
+          href="https://github.com/mdn/yari/blob/main/kumascript/macros/SVGElement.ejs">SVGElement</a>
       </td>
       <td>
         <a href="/en-US/docs/Web/SVG/Attribute">SVG Element reference</a> (/Web/SVG/Element).
@@ -124,7 +124,7 @@ Most macros will also take a second argument allowing you to change the display 
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/HTTPMethod.ejs">HTTPMethod</a>
+        <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/HTTPMethod.ejs">HTTPMethod</a>
       </td>
       <td>
         <a href="/en-US/docs/Web/HTTP/Methods">HTTP request methods</a> (/Web/HTTP/Methods).
@@ -135,7 +135,7 @@ Most macros will also take a second argument allowing you to change the display 
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/HTTPStatus.ejs">HTTPStatus</a>
+        <a href="https://github.com/mdn/yari/blob/main/kumascript/macros/HTTPStatus.ejs">HTTPStatus</a>
       </td>
       <td>
         <a href="/en-US/docs/Web/HTTP/Status">HTTP response status codes</a> (/Web/HTTP/Status)
@@ -152,7 +152,7 @@ Most macros will also take a second argument allowing you to change the display 
 [`Previous`](https://github.com/mdn/yari/blob/main/kumascript/macros/Previous.ejs), [`Next`](https://github.com/mdn/yari/blob/main/kumascript/macros/Next.ejs), and [`PreviousNext`](https://github.com/mdn/yari/blob/main/kumascript/macros/PreviousNext.ejs) provide navigation controls for articles which are part of sequences.
 For the single-way templates, the only parameter needed is the wiki location of the previous or next article in the sequence.
 For [`PreviousNext`](https://github.com/mdn/yari/blob/main/kumascript/macros/PreviousNext.ejs), the two parameters needed are the wiki locations of the appropriate articles.
-The first parameter is for the previous article and the second is for the next article.
+The first parameter is for the previous article, and the second is for the next article.
 
 ## Code samples
 
@@ -237,29 +237,30 @@ The templates should be placed directly underneath the main page title (or bread
 They can also be used to mark up a section on a page.
 
 - [`non-standard_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Non-standard_Header.ejs): `\{{Non-standard_Header}}` {{Non-standard_Header}}
-- [`SeeCompatTable`](https://github.com/mdn/yari/blob/main/kumascript/macros/SeeCompatTable.ejs) should be used on pages that document [experimental features](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
+- [`SeeCompatTable`](https://github.com/mdn/yari/blob/main/kumascript/macros/SeeCompatTable.ejs) used on pages
+  that document [experimental features](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
   Example: `\{{SeeCompatTable}}` {{SeeCompatTable}}
 - [`deprecated_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/Deprecated_Header.ejs): `\{{Deprecated_Header}}` {{Deprecated_Header}}
 - [`secureContext_header`](https://github.com/mdn/yari/blob/main/kumascript/macros/secureContext_header.ejs).
-  Should be used on main pages like interface pages, API overview pages, and API entry points (e.g. `navigator.xyz`) but usually not on sub-pages like method and property pages.
+  Should be used on main pages like interface pages, API overview pages, and API entry points (e.g. `navigator.xyz`) but usually not on subpages like method and property pages.
   Example: `\{{SecureContext_Header}}` {{SecureContext_Header}}
 
-### Indicating that a feature is available in web workers
+#### Indicating that a feature is available in web workers
 
 The [`AvailableInWorkers`](https://github.com/mdn/yari/blob/main/kumascript/macros/AvailableInWorkers.ejs) macro inserts a localized note box indicating that a feature is available in a [Web worker](/en-US/docs/Web/API/Web_Workers_API) context.
-You can use the argument `notservice` to indicate that a feature works in web workers except for service workers.
+You can use the argument `window_and_worker_except_service` to indicate that a feature works in web workers except for service workers.
 
-#### Syntax
+##### Syntax
 
 ```plain
 \{{AvailableInWorkers}}
-\{{AvailableInWorkers("notservice")}}
+\{{AvailableInWorkers("window_and_worker_except_service")}}
 ```
 
-#### Examples
+##### Examples
 
 {{AvailableInWorkers}}
-{{AvailableInWorkers("notservice")}}
+{{AvailableInWorkers("window_and_worker_except_service")}}
 
 ## Browser compatibility and specification macros
 
@@ -277,4 +278,5 @@ The following macros are included on all reference pages, but are also supported
 - [Sidebar macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars)
 - [Page templates](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types#page_templates)
 - [Page components](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#page_components)
-- [List of macros](https://github.com/mdn/yari/tree/main/kumascript/macros) on Github
+- [Feature status macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status)
+- [List of macros](https://github.com/mdn/yari/tree/main/kumascript/macros) on GitHub

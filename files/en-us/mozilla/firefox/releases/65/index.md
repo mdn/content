@@ -78,7 +78,7 @@ _No changes._
 ### JavaScript
 
 - {{jsxref("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}} is now supported ([Firefox bug 1504334](https://bugzil.la/1504334)).
-- Strings now have a maximum {{jsxref("String/length","length","","1")}} of `2**30 - 2` (\~1GB) instead of `2**28 - 1` (\~256MB) ([Firefox bug 1509542](https://bugzil.la/1509542)).
+- Strings now have a maximum {{jsxref("String/length","length","", 1)}} of `2**30 - 2` (\~1GB) instead of `2**28 - 1` (\~256MB) ([Firefox bug 1509542](https://bugzil.la/1509542)).
 - The {{jsxref("globalThis")}} property, which always refers to the top-level global object, has been implemented ([Firefox bug 1317422](https://bugzil.la/1317422)).
 
 ### APIs
@@ -192,4 +192,4 @@ _No changes._
 
 ## Older versions
 
-{{Firefox_for_developers(64)}}
+{{Firefox_for_developers}}

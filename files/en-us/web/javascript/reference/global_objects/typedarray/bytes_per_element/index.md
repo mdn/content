@@ -41,6 +41,7 @@ Uint8Array.BYTES_PER_ELEMENT; // 1
 Uint8ClampedArray.BYTES_PER_ELEMENT; // 1
 Int16Array.BYTES_PER_ELEMENT; // 2
 Uint16Array.BYTES_PER_ELEMENT; // 2
+Float16Array.BYTES_PER_ELEMENT; // 2
 Int32Array.BYTES_PER_ELEMENT; // 4
 Uint32Array.BYTES_PER_ELEMENT; // 4
 Float32Array.BYTES_PER_ELEMENT; // 4
@@ -57,6 +58,7 @@ new Uint8Array([]).BYTES_PER_ELEMENT; // 1
 new Uint8ClampedArray([]).BYTES_PER_ELEMENT; // 1
 new Int16Array([]).BYTES_PER_ELEMENT; // 2
 new Uint16Array([]).BYTES_PER_ELEMENT; // 2
+new Float16Array([]).BYTES_PER_ELEMENT; // 2
 new Int32Array([]).BYTES_PER_ELEMENT; // 4
 new Uint32Array([]).BYTES_PER_ELEMENT; // 4
 new Float32Array([]).BYTES_PER_ELEMENT; // 4

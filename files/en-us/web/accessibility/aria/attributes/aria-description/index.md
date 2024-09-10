@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-description
 ---
 
+{{AccessibilitySidebar}}
+
 The global `aria-description` attribute defines a string value that describes or annotates the current element.
 
 > **Note:** `aria-description` is still in W3C Editor's Draft for ARIA 1.3. For the time being, continue to use [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby), which has been supported since ARIA 1.1.
@@ -49,16 +51,8 @@ Used in **ALL** roles.
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [HTML `title` attribute](/en-US/docs/Web/HTML/Global_attributes/title)
 - [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
 - [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA states and properties**](/en-US/docs/Web/Accessibility/ARIA/Attributes)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
-
-</section>

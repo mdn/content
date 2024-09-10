@@ -80,4 +80,4 @@ Firefox 2 provides an enhanced version of the same clean user interface offered 
 
 ## See also
 
-{{Firefox_for_developers('2')}}
+{{Firefox_for_developers}}

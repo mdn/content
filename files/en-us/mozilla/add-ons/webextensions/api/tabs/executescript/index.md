@@ -9,7 +9,8 @@ browser-compat: webextensions.api.tabs.executeScript
 
 Injects JavaScript code into a page.
 
-> **Note:** When using Manifest V3 or higher, use {{WebExtAPIRef("scripting.executeScript()")}} to execute scripts.
+> [!NOTE]
+> When using Manifest V3 or higher, use {{WebExtAPIRef("scripting.executeScript()")}} to execute scripts.
 
 You can inject code into pages whose URL can be expressed using a [match pattern](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns). To do so, its scheme must be one of: `http`, `https`, or `file`.
 
@@ -70,7 +71,8 @@ let executing = browser.tabs.executeScript(
 
       - : `string`. Code to inject, as a text string.
 
-        > **Warning:** Don't use this property to interpolate untrusted data into JavaScript, as this could lead to a security issue.
+        > [!WARNING]
+        > Don't use this property to interpolate untrusted data into JavaScript, as this could lead to a security issue.
 
     - `file` {{optional_inline}}
 
@@ -114,7 +116,8 @@ Here the results array will contain the string "`my result`" as an element.
 
 The result values must be [structured cloneable](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) (see [Data cloning algorithm](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm)).
 
-> **Note:** The last statement may be also a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), but this feature is unsupported by [webextension-polyfill](https://github.com/mozilla/webextension-polyfill#tabsexecutescript) library.
+> [!NOTE]
+> The last statement may be also a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), but this feature is unsupported by [webextension-polyfill](https://github.com/mozilla/webextension-polyfill#tabsexecutescript) library.
 
 If any error occurs, the promise will be rejected with an error message.
 
@@ -180,7 +183,8 @@ executing.then(onExecuted, onError);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-executeScript) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

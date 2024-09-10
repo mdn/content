@@ -6,12 +6,13 @@ page-type: web-api-constructor
 browser-compat: api.Notification.Notification
 ---
 
-{{APIRef("Web Notifications")}}{{securecontext_header}}
+{{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
 
 The **`Notification()`** constructor creates a new
 {{domxref("Notification")}} object instance, which represents a user notification.
 
-{{AvailableInWorkers}}
+> [!NOTE]
+> Trying to create a notification inside the {{domxref("ServiceWorkerGlobalScope")}} using the `Notification()` constructor will throw a `TypeError`. Use {{domxref("ServiceWorkerRegistration.showNotification()")}} instead.
 
 ## Syntax
 
@@ -88,7 +89,7 @@ new Notification(title, options)
     - `silent` {{optional_inline}}
       - : A boolean value specifying whether the
         notification is silent (no sounds or vibrations issued), regardless of the device
-        settings. The default is `null`. If `true`, then `vibrate` must not be present.
+        settings. The default, `null`, means to respect device defaults. If `true`, then `vibrate` must not be present.
 
 ### Return value
 
@@ -107,17 +108,11 @@ An instance of the {{domxref("Notification")}} object.
 
 ## Examples
 
-In our
-[`Emogotchi demo`](https://chrisdavidmills.github.io/emogotchi/)
-([see source code](https://github.com/chrisdavidmills/emogotchi)), we run a
-`spawnNotification()` function when we want to trigger a notification. The
-function is passed parameters to specify the body, icon, and title we want, and then it
-creates the necessary `options` object and triggers the notification by using
-the `Notification()` constructor.
+Here is a most basic example to only show a notification if permission is already granted. For more complete examples, see the {{domxref("Notification")}} page.
 
 ```js
-function spawnNotification(body, icon, title) {
-  const notification = new Notification(title, { body, icon });
+if (Notification.permission === "granted") {
+  const notification = new Notification("Hi there!");
 }
 ```
 

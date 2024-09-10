@@ -98,7 +98,7 @@ At-rules can be nested within other at-rules. Below you can see an example of th
 
 ### Nesting Cascade Layers (`@layer`)
 
-[Cascade Layers](/en-US/docs/Web/CSS/@layer) can be nested to [create child-layers](/en-US/docs/Web/CSS/@layer#nesting_layers). These are joined with a `.`(dot).
+[Cascade Layers](/en-US/docs/Web/CSS/@layer) can be nested to [create child-layers](/en-US/docs/Web/CSS/@layer#nesting_layers). These are joined with a `.` (dot).
 
 #### Defining the parent & child layers
 
@@ -112,7 +112,7 @@ We start by defining the named cascade layers, prior to using them, without any 
 
 #### Assigning rules to layers with nesting
 
-Here the `.foo` selector assigns its rules to the **base** `@layer`. The nested **support** `@layer` creates the `base.support` sub-layer, and the `&` nesting selector is used to create the rules for the `.foo .bar` selector .
+Here the `.foo` selector assigns its rules to the **base** `@layer`. The nested **support** `@layer` creates the `base.support` sub-layer, and the `&` nesting selector is used to create the rules for the `.foo .bar` selector.
 
 ```css
 .foo {
@@ -142,9 +142,10 @@ Here the `.foo` selector assigns its rules to the **base** `@layer`. The nested 
 }
 ```
 
-## See Also
+## See also
 
 - [CSS Nesting](/en-US/docs/Web/CSS/CSS_nesting) module
 - [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector)
 - [Using CSS nesting](/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting)
 - [Nesting and specificity](/en-US/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)
+- [Nesting container queries](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#nested_queries)

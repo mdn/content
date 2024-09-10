@@ -14,6 +14,8 @@ name. If the named attribute does not exist, the value returned will either be
 `null` or `""` (the empty string); see [Notes](#notes) for
 details.
 
+If you are working with HTML documents and you don't need to specify the requested attribute as being part of a specific namespace, use the {{domxref("Element.getAttribute()", "getAttribute()")}} method instead.
+
 ## Syntax
 
 ```js-nolint
@@ -32,7 +34,8 @@ getAttributeNS(namespace, name)
 The string value of the specified attribute. If the attribute doesn't exist, the result
 is `null`.
 
-> **Note:** Earlier versions of the DOM specification had
+> [!NOTE]
+> Earlier versions of the DOM specification had
 > this method described as returning an empty string for non-existent attributes, but it
 > was not typically implemented this way since null makes more sense. The DOM4
 > specification now says this method should return null for non-existent attributes.
@@ -58,7 +61,7 @@ custom namespace.
 </svg>
 ```
 
-In an HTML document the attribute has to be accessed with `test:foo` since
+In an HTML document, the attribute has to be accessed with `test:foo` since
 namespaces are not supported.
 
 ```html
@@ -96,13 +99,10 @@ namespaces are not supported.
 
 ## Notes
 
-Namespaces are only supported in XML documents. HTML documents have to use
-`getAttribute()` instead.
-
-`getAttributeNS()` differs from {{domxref("element.getAttribute()",
-  "getAttribute()")}} in that it allows you to further specify the requested attribute as
+`getAttributeNS()` differs from {{domxref("element.getAttribute()", "getAttribute()")}}
+in that it allows you to further specify the requested attribute as
 being part of a particular namespace, as in the example above, where the attribute is
-part of the fictional "specialspace" namespace on Mozilla.
+part of the fictional "test" namespace.
 
 Prior to the DOM4 specification, this method was specified to return an empty string
 rather than null for non-existent attributes. However, most browsers instead returned
@@ -112,8 +112,6 @@ browsers return an empty string. For that reason, you should use
 existence prior to calling `getAttributeNS()` if it is possible that the
 requested attribute does not exist on the specified element.
 
-{{DOMAttributeMethods}}
-
 ## Specifications
 
 {{Specifications}}
@@ -121,3 +119,9 @@ requested attribute does not exist on the specified element.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("Element.hasAttributeNS()")}}
+- {{domxref("Element.setAttributeNS()")}}
+- {{domxref("Element.removeAttributeNS()")}}

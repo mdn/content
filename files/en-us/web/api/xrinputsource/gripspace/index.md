@@ -14,9 +14,8 @@ The read-only {{domxref("XRInputSource")}} property **`gripSpace`** returns an {
 
 An {{domxref("XRSpace")}} object representing the position and orientation of the input
 device in virtual space, suitable for rendering an image of the device into the scene.
-`gripSpace` is `null` if the input source is inherently
-untrackable. For example, only inputs whose {{domxref("XRInputSource.targetRayMode",
-  "targetRayMode")}} is `tracked-pointer` provide a `gripSpace`.
+`gripSpace` is `null` if the input source is not inherently
+trackable. For example, only inputs whose {{domxref("XRInputSource.targetRayMode", "targetRayMode")}} is `tracked-pointer` provide a `gripSpace`.
 
 Imagine that the controller is shaped like a straight rod, held in the user's fist. The
 native origin of the grip space is located at the centroid—the center of mass—of the

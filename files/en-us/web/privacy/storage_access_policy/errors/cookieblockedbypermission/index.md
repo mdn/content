@@ -1,10 +1,10 @@
 ---
 title: "Blocked: Custom cookie permission"
-slug: Web/Privacy/Storage_access_policy/Errors/CookieBlockedByPermission
+slug: Web/Privacy/Storage_Access_Policy/Errors/CookieBlockedByPermission
 page-type: guide
 ---
 
-{{QuicklinksWithSubPages("Web/Privacy/Storage_access_policy/Errors")}}
+{{QuicklinksWithSubPages("Web/Privacy/Storage_Access_Policy/Errors")}}
 
 ## Message
 
@@ -25,4 +25,4 @@ The permission can be changed or removed by:
 
 ## See also
 
-- [Content blocking](https://support.mozilla.org/en-US/kb/content-blocking) on [support.mozilla.org](https://support.mozilla.org)
+- [Content blocking](https://support.mozilla.org/en-US/kb/content-blocking) on [support.mozilla.org](https://support.mozilla.org/)

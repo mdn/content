@@ -8,9 +8,7 @@ browser-compat: api.AudioBufferSourceNode.loopStart
 
 {{ APIRef("Web Audio API") }}
 
-The **`loopStart`** property of the {{
-  domxref("AudioBufferSourceNode") }} interface is a floating-point value indicating, in
-seconds, where in the {{domxref("AudioBuffer")}} the restart of the play must happen.
+The **`loopStart`** property of the {{domxref("AudioBufferSourceNode")}} interface is a floating-point value indicating, in seconds, where in the {{domxref("AudioBuffer")}} the restart of the play must happen.
 
 The `loopStart` property's default value is `0`.
 
@@ -30,7 +28,8 @@ The example then sets the `loop` property to `true`, so the track loops, and pla
 
 The user can set the `loopStart` and `loopEnd` properties using [range controls](/en-US/docs/Web/HTML/Element/input/range).
 
-> **Note:** You can [run the full example live](https://mdn.github.io/webaudio-examples/audio-buffer-source-node/loop/) (or [view the source](https://github.com/mdn/webaudio-examples/tree/main/audio-buffer-source-node/loop).)
+> [!NOTE]
+> You can [run the full example live](https://mdn.github.io/webaudio-examples/audio-buffer-source-node/loop/) (or [view the source](https://github.com/mdn/webaudio-examples/tree/main/audio-buffer-source-node/loop).)
 
 ```js
 let audioCtx;

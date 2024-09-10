@@ -10,9 +10,7 @@ browser-compat: api.CSSUnparsedValue.entries
 
 The **`CSSUnparsedValue.entries()`** method
 returns an array of a given object's own enumerable property `[key, value]`
-pairs in the same order as that provided by a {{jsxref("Statements/for...in",
-  "for...in")}} loop (the difference being that a for-in loop enumerates properties in the
-prototype chain as well).
+pairs in the same order as that provided by a {{jsxref("Statements/for...in", "for...in")}} loop (the difference being that a for-in loop enumerates properties in the prototype chain as well).
 
 ## Syntax
 

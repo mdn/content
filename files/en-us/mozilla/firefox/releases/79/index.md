@@ -97,4 +97,4 @@ See also [Firefox 79: The safe return of shared memory, new tooling, and platfor
 
 ## Older versions
 
-{{Firefox_for_developers(78)}}
+{{Firefox_for_developers}}

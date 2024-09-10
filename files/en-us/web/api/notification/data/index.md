@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Notification.data
 ---
 
-{{APIRef("Web Notifications")}}{{securecontext_header}}
+{{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
 
 The **`data`** read-only property of the
 {{domxref("Notification")}} interface returns a structured clone of the notification's
@@ -15,8 +15,6 @@ data, as specified in the `data` option of the
 
 The notification's data can be any arbitrary data that you want associated with the
 notification.
-
-{{AvailableInWorkers}}
 
 ## Value
 

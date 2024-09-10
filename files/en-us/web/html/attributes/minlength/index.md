@@ -1,5 +1,6 @@
 ---
 title: "HTML attribute: minlength"
+short-title: minlength
 slug: Web/HTML/Attributes/minlength
 page-type: html-attribute
 browser-compat:
@@ -14,6 +15,8 @@ The **`minlength`** attribute defines the minimum [string length](/en-US/docs/We
 The length is measured in UTF-16 code units, which ([for most scripts](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/length#strings_with_length_not_equal_to_the_number_of_characters)) is equivalent to the number of characters. If no `minlength` is specified, or an invalid value is specified, the input has no minimum length. This value must be less than or equal to the value of [maxlength](/en-US/docs/Web/HTML/Attributes/maxlength), otherwise the value will never be valid, as it is impossible to meet both criteria.
 
 The input will fail constraint validation if the length of the text value of the field is less than minlength UTF-16 code units long, with {{domxref('validityState.tooShort')}} returning `true`. Constraint validation is only applied when the value is changed by the user. Once submission fails, some browsers will display an error message indicating the minimum length required and the current length.
+
+`minlength` does not imply [`required`](/en-US/docs/Web/HTML/Attributes/required); an input only violates a `minlength` constraint if the user has input a value. If an input is not `required`, an empty string can be submitted even if `minlength` is set.
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-minlength.html", "tabbed-shorter")}}
 
