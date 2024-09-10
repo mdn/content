@@ -146,7 +146,7 @@ The final section, **Scopes**, shows what values are visible from various points
 Find out more about the JavaScript debugger in different browsers:
 
 - [Firefox JavaScript Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html))
-- [Microsoft Edge Debugger](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/devtools-guide/debugger)
+- [Microsoft Edge Debugger](https://learn.microsoft.com/en-us/archive/microsoft-edge/legacy/developer/devtools-guide/debugger)
 - [Chrome Debugger](https://developer.chrome.com/docs/devtools/javascript/)
 - [Safari Debugger](https://developer.apple.com/safari/tools/)
 
