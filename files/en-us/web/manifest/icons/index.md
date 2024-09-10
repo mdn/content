@@ -28,7 +28,9 @@ These icons uniquely identify your web app in different contexts, such as in an 
 - `icons`
 
   - : An array of objects.
-    Each object represents an icon to be used in a specific context. For example, you can add icons to represent your web app on devices with different screen sizes, for integration with various operating systems, for splash screens, or for app notifications.
+    Each object represents an icon to be used in a specific context.
+    For example, you can add icons to represent your web app on devices with different screen sizes, for integration with various operating systems, for splash screens, or for app notifications.
+
     Each icon object can have one or more properties, with `src` being the only required property. The possible values for these properties are:
 
     - `src`
@@ -61,25 +63,25 @@ These icons uniquely identify your web app in different contexts, such as in an 
         The value can be a single keyword or multiple space-separated keywords.
         If omitted, the browser can use the icon for any purpose.
 
-      Browsers use these values as hints to determine where and how an icon is displayed.
-      For example, a `monochrome` icon might be used as a badge or pinned icon with a solid fill, which is visually distinct from a full-color launch icon.
-      With multiple keywords, say `monochrome maskable`, the browser can use the icon for any of those purposes.
-      If an unrecognized purpose is included along with valid values (e.g., `monochrome fizzbuzz`), the icon can still be used for the valid purposes.
-      However, if only unrecognized purposes are specified (e.g., `fizzbuzz`), then it will be ignored.
+        Browsers use these values as hints to determine where and how an icon is displayed.
+        For example, a `monochrome` icon might be used as a badge or pinned icon with a solid fill, which is visually distinct from a full-color launch icon.
+        With multiple keywords, say `monochrome maskable`, the browser can use the icon for any of those purposes.
+        If an unrecognized purpose is included along with valid values (e.g., `monochrome fizzbuzz`), the icon can still be used for the valid purposes.
+        However, if only unrecognized purposes are specified (e.g., `fizzbuzz`), then it will be ignored.
 
-      Valid values include:
+        Valid values include:
 
-      - `monochrome`
+        - `monochrome`
 
-        - : Indicates that the icon is intended to be used as a monochrome icon with a solid fill.
-          With this value, a browser discards the color information in the icon and uses only the alpha channel as a mask over any solid fill.
+          - : Indicates that the icon is intended to be used as a monochrome icon with a solid fill.
+            With this value, a browser discards the color information in the icon and uses only the alpha channel as a mask over any solid fill.
 
-      - `maskable`
+        - `maskable`
 
-        - : Indicates that the icon is designed with icon masks and safe zone in mind, such that any part of the image outside the safe zone can be ignored and masked away.
+          - : Indicates that the icon is designed with icon masks and safe zone in mind, such that any part of the image outside the safe zone can be ignored and masked away.
 
-      - `any`
-        - : Indicates that the icon can be used in any context. This is the default value.
+        - `any`
+          - : Indicates that the icon can be used in any context. This is the default value.
 
 ## Description
 
