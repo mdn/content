@@ -21,6 +21,27 @@ The **WebSocket API** is an advanced technology that makes it possible to open a
 - [`MessageEvent`](/en-US/docs/Web/API/MessageEvent)
   - : The event sent by the WebSocket object when a message is received from the server.
 
+## Related HTTP headers
+
+The HTTP headers are used in the [WebSocket handshake](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#the_websocket_handshake):
+
+- {{HTTPHeader("Sec-WebSocket-Key")}}
+  - : An HTTP request header that contains a nonce from the client.
+    This is used in the [WebSocket opening handshake](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#the_websocket_handshake) to verify that the client explicitly intends to open a WebSocket.
+    It is added automatically by the browser.
+- {{HTTPHeader("Sec-WebSocket-Accept")}}
+  - : An HTTP {{glossary("response header")}} used in the _WebSocket opening handshake_ to indicate that the server is willing to upgrade to a WebSocket connection.
+    The value in the directive is calculated from the value of `Sec-WebSocket-Key` in the corresponding request.
+- {{HTTPHeader("Sec-WebSocket-Version")}}
+  - : An HTTP header that in requests indicates the version of the WebSocket protocol understood by the client.
+    In responses, it is sent only if the requested protocol version is not supported by the server, and lists the versions that the server supports.
+- {{HTTPHeader("Sec-WebSocket-Protocol")}}
+  - : An HTTP header that in requests indicates the sub-protocols supported by the client in preferred order.
+    In responses, it indicates the the sub-protocol selected by the server from the client's preferences.
+- {{HTTPHeader("Sec-WebSocket-Extensions")}}
+  - : An HTTP header that in requests indicates the WebSocket extensions supported by the client in preferred order.
+    In responses, it indicates the extension selected by the server from the client's preferences.
+
 ## Guides
 
 - [Writing WebSocket client applications](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)

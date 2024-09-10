@@ -189,7 +189,7 @@ We can summarize how the whitespace here is handled as follows (there may be som
    ```html
    <block>⏎⇥</block>
    <block>◦◦Hello◦◦</block>
-   <block>⏎◦◦◦</block>
+   <block>⏎⏎◦◦◦</block>
    <block>◦◦World!◦◦</block>
    <block>◦◦⏎</block>
    ```
