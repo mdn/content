@@ -60,7 +60,7 @@ TRACE <request-target>["?"<query>] HTTP/1.1
 
 ## Examples
 
-### Method not allowed error response
+### Successful TRACE request
 
 A `TRACE` request can be performed using `curl`:
 
