@@ -26,7 +26,7 @@ These icons uniquely identify your web app in different contexts, such as in an 
 ### Keys
 
 - `icons`
-  : - An array of objects.
+  - : An array of objects.
   Each object represents an icon to be used in a specific context. For example, you can add icons to represent your web app on devices with different screen sizes, for integration with various operating systems, for splash screens, or for app notifications.
   Each icon object can have one or more properties, with `src` being the only required property. The possible values for these properties are:
 
