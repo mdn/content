@@ -9,7 +9,14 @@ browser-compat: api.CSSPositionTryDescriptors
 
 {{APIRef("CSSOM")}}{{SeeCompatTable}}
 
-The **`CSSPositionTryDescriptors`** interface describes an object representing a {{cssxref("@position-try")}} [at-rule](/en-US/docs/Web/CSS/At-rule).
+The **`CSSPositionTryDescriptors`** interface defines properties that represent the list of CSS descriptors that can be set in the body of a {{cssxref("@position-try")}} [at-rule](/en-US/docs/Web/CSS/At-rule).
+
+Each descriptor in the body of the corresponding {{cssxref("@position-try")}} at-rule can be accessed using either its property name in [bracket notation](/en-US/docs/Learn/JavaScript/Objects/Basics#bracket_notation) or the camel-case version of the property name "propertyName" in [dot notation](/en-US/docs/Learn/JavaScript/Objects/Basics#dot_notation).
+For example, you can access the CSS property "property-name" as `style["property-name"]` or `style.propertyName`, where `style` is a `CSSPositionTryDescriptors` instance.
+A property with a single-word name like {{cssxref("height")}} can be accessed using either notation: `style["height"]` or `style.height`.
+
+> [!NOTE]
+> The {{domxref("CSSPositionTryRule")}} interface represents a {{cssxref("@position-try")}} at-rule, and the {{domxref("CSSPositionTryRule.style")}} property is an instance of this object.
 
 {{InheritanceDiagram}}
 
@@ -17,58 +24,86 @@ The **`CSSPositionTryDescriptors`** interface describes an object representing a
 
 _Inherits properties from its ancestor {{domxref("CSSStyleDeclaration")}}._
 
-The `CSSPositionTryDescriptors` interface defines properties that represent the CSS properties that can be set inside a {{cssxref("@position-try")}} at-rule.
+The property names in snake-case and camel-case are:
 
-There are 35 CSS properties that can be accessed as CSS property names or camel-case. For each one:
-
-- `CSSPositionTryDescriptors.propertyName`
-  - : Represents the property value set in the `@position-try` at-rule using the camel-cased property name.
-- `CSSPositionTryDescriptors["property-name"]`
-  - : Represents the property value set in the `@position-try` at-rule using the CSS property name.
-
-The instance properties are listed below:
-
-| CSS&nbsp;property                  | Camel-case                                    | Property name                                      |
-| ---------------------------------- | --------------------------------------------- | -------------------------------------------------- |
-| {{cssxref("align-self")}}          | `CSSPositionTryDescriptors.alignSelf`         | `CSSPositionTryDescriptors["align-self"]`          |
-| {{cssxref("block-size")}}          | `CSSPositionTryDescriptors.blockSize`         | `CSSPositionTryDescriptors["block-size"]`          |
-| {{cssxref("bottom")}}              | `CSSPositionTryDescriptors.bottom`            | `CSSPositionTryDescriptors["bottom"]`              |
-| {{cssxref("height")}}              | `CSSPositionTryDescriptors.height`            | `CSSPositionTryDescriptors["height"]`              |
-| {{cssxref("inline-size")}}         | `CSSPositionTryDescriptors.inlineSize`        | `CSSPositionTryDescriptors["inline-size"]`         |
-| {{cssxref("inset")}}               | `CSSPositionTryDescriptors.inset`             | `CSSPositionTryDescriptors["inset"]`               |
-| {{cssxref("position-area")}}       | `CSSPositionTryDescriptors.positionArea`      | `CSSPositionTryDescriptors["position-area"]`       |
-| {{cssxref("inset-block")}}         | `CSSPositionTryDescriptors.insetBlock`        | `CSSPositionTryDescriptors["inset-block"]`         |
-| {{cssxref("inset-block-end")}}     | `CSSPositionTryDescriptors.insetBlockEnd`     | `CSSPositionTryDescriptors["inset-block-end"]`     |
-| {{cssxref("inset-block-start")}}   | `CSSPositionTryDescriptors.insetBlockStart`   | `CSSPositionTryDescriptors["inset-block-start"]`   |
-| {{cssxref("inset-inline")}}        | `CSSPositionTryDescriptors.insetInline`       | `CSSPositionTryDescriptors["inset-inline"]`        |
-| {{cssxref("inset-inline-end")}}    | `CSSPositionTryDescriptors.insetInlineEnd`    | `CSSPositionTryDescriptors["inset-inline-end"]`    |
-| {{cssxref("inset-inline-start")}}  | `CSSPositionTryDescriptors.insetInlineStart`  | `CSSPositionTryDescriptors["inset-inline-start"]`  |
-| {{cssxref("justify-self")}}        | `CSSPositionTryDescriptors.justifySelf`       | `CSSPositionTryDescriptors["justify-self"]`        |
-| {{cssxref("left")}}                | `CSSPositionTryDescriptors.left`              | `CSSPositionTryDescriptors["left"]`                |
-| {{cssxref("margin")}}              | `CSSPositionTryDescriptors.margin`            | `CSSPositionTryDescriptors["margin"]`              |
-| {{cssxref("margin-block")}}        | `CSSPositionTryDescriptors.marginBlock`       | `CSSPositionTryDescriptors["margin-block"]`        |
-| {{cssxref("margin-block-end")}}    | `CSSPositionTryDescriptors.marginBlockEnd`    | `CSSPositionTryDescriptors["margin-block-end"]`    |
-| {{cssxref("margin-block-start")}}  | `CSSPositionTryDescriptors.marginBlockStart`  | `CSSPositionTryDescriptors["margin-block-start"]`  |
-| {{cssxref("margin-bottom")}}       | `CSSPositionTryDescriptors.marginBottom`      | `CSSPositionTryDescriptors["margin-bottom"]`       |
-| {{cssxref("margin-inline")}}       | `CSSPositionTryDescriptors.marginInline`      | `CSSPositionTryDescriptors["margin-inline"]`       |
-| {{cssxref("margin-inline-end")}}   | `CSSPositionTryDescriptors.marginInlineEnd`   | `CSSPositionTryDescriptors["margin-inline-end"]`   |
-| {{cssxref("margin-inline-start")}} | `CSSPositionTryDescriptors.marginInlineStart` | `CSSPositionTryDescriptors["margin-inline-start"]` |
-| {{cssxref("margin-left")}}         | `CSSPositionTryDescriptors.marginLeft`        | `CSSPositionTryDescriptors["margin-left"]`         |
-| {{cssxref("margin-right")}}        | `CSSPositionTryDescriptors.marginRight`       | `CSSPositionTryDescriptors["margin-right"]`        |
-| {{cssxref("margin-top")}}          | `CSSPositionTryDescriptors.marginTop`         | `CSSPositionTryDescriptors["margin-top"]`          |
-| {{cssxref("max-block-size")}}      | `CSSPositionTryDescriptors.maxBlockSize`      | `CSSPositionTryDescriptors["max-block-size"]`      |
-| {{cssxref("max-height")}}          | `CSSPositionTryDescriptors.maxHeight`         | `CSSPositionTryDescriptors["max-height"]`          |
-| {{cssxref("max-inline-size")}}     | `CSSPositionTryDescriptors.maxInlineSize`     | `CSSPositionTryDescriptors["max-inline-size"]`     |
-| {{cssxref("max-width")}}           | `CSSPositionTryDescriptors.maxWidth`          | `CSSPositionTryDescriptors["max-width"]`           |
-| {{cssxref("min-block-size")}}      | `CSSPositionTryDescriptors.minBlockSize`      | `CSSPositionTryDescriptors["min-block-size"]`      |
-| {{cssxref("min-height")}}          | `CSSPositionTryDescriptors.minHeight`         | `CSSPositionTryDescriptors["min-height"]`          |
-| {{cssxref("min-inline-size")}}     | `CSSPositionTryDescriptors.minInlineSize`     | `CSSPositionTryDescriptors["min-inline-size"]`     |
-| {{cssxref("min-width")}}           | `CSSPositionTryDescriptors.minWidth`          | `CSSPositionTryDescriptors["min-width"]`           |
-| {{cssxref("place-self")}}          | `CSSPositionTryDescriptors.placeSelf`         | `CSSPositionTryDescriptors["place-self"]`          |
-| {{cssxref("position-anchor")}}     | `CSSPositionTryDescriptors.positionAnchor`    | `CSSPositionTryDescriptors["position-anchor"]`     |
-| {{cssxref("right")}}               | `CSSPositionTryDescriptors.right`             | `CSSPositionTryDescriptors["right"]`               |
-| {{cssxref("top")}}                 | `CSSPositionTryDescriptors.top`               | `CSSPositionTryDescriptors["top"]`                 |
-| {{cssxref("width")}}               | `CSSPositionTryDescriptors.width`             | `CSSPositionTryDescriptors["width"]`               |
+- `align-self` or `alignSelf`
+  - : A string representing the value of an {{cssxref("align-self")}} descriptor in the corresponding `@position-try` at-rule.
+- `block-size` or `blockSize`
+  - : A string representing the value of a {{cssxref("block-size")}} descriptor in the corresponding `@position-try` at-rule.
+- `bottom`
+  - : A string representing the value of a {{cssxref("bottom")}} descriptor in the corresponding `@position-try` at-rule.
+- `height`
+  - : A string representing the value of a {{cssxref("height")}} descriptor in the corresponding `@position-try` at-rule.
+- `inline-size` or `inlineSize`
+  - : A string representing the value of an {{cssxref("inline-size")}} descriptor in the corresponding `@position-try` at-rule.
+- `inset`
+  - : A string representing the value of an {{cssxref("inset")}} descriptor in the corresponding `@position-try` at-rule.
+- `position-area` or `positionArea`
+  - : A string representing the value of a {{cssxref("position-area")}} descriptor in the corresponding `@position-try` at-rule.
+- `inset-block` or `insetBlock`
+  - : A string representing the value of an {{cssxref("inset-block")}} descriptor in the corresponding `@position-try` at-rule.
+- `inset-block-end` or `insetBlockEnd`
+  - : A string representing the value of an {{cssxref("inset-block-end")}} descriptor in the corresponding `@position-try` at-rule.
+- `inset-block-start` or `insetBlockStart`
+  - : A string representing the value of an {{cssxref("inset-block-start")}} descriptor in the corresponding `@position-try` at-rule.
+- `inset-inline` or `insetInline`
+  - : A string representing the value of an {{cssxref("inset-inline")}} descriptor in the corresponding `@position-try` at-rule.
+- `inset-inline-end` or `insetInlineEnd`
+  - : A string representing the value of an {{cssxref("inset-inline-end")}} descriptor in the corresponding `@position-try` at-rule.
+- `inset-inline-start` or `insetInlineStart`
+  - : A string representing the value of an {{cssxref("inset-inline-start")}} descriptor in the corresponding `@position-try` at-rule.
+- `justify-self` or `justifySelf`
+  - : A string representing the value of a {{cssxref("justify-self")}} descriptor in the corresponding `@position-try` at-rule.
+- `left`
+  - : A string representing the value of a {{cssxref("left")}} descriptor in the corresponding `@position-try` at-rule.
+- `margin`
+  - : A string representing the value of a {{cssxref("margin")}} descriptor in the corresponding `@position-try` at-rule.
+- `margin-block` or `marginBlock`
+  - : A string representing the value of a {{cssxref("margin-block")}} descriptor in the corresponding `@position-try` at-rule.
+- `margin-block-end` or `marginBlockEnd`
+  - : A string representing the value of a {{cssxref("margin-block-end")}} descriptor in the corresponding `@position-try` at-rule.
+- `margin-block-start` or `marginBlockStart`
+  - : A string representing the value of a {{cssxref("margin-block-start")}} descriptor in the corresponding `@position-try` at-rule.
+- `margin-bottom` or `margiBottom`
+  - : A string representing the value of a {{cssxref("margin-bottom")}} descriptor in the corresponding `@position-try` at-rule.
+- `margin-inline` or `marginInline`
+  - : A string representing the value of a {{cssxref("margin-inline")}} descriptor in the corresponding `@position-try` at-rule.
+- `margin-inline-end` or `marginInlineEnd`
+  - : A string representing the value of a {{cssxref("margin-inline-end")}} descriptor in the corresponding `@position-try` at-rule.
+- `margin-inline-start` or `marginInlineStart`
+  - : A string representing the value of a {{cssxref("margin-inline-start")}} descriptor in the corresponding `@position-try` at-rule.
+- `margin-left` or `marginLeft`
+  - : A string representing the value of a {{cssxref("margin-left")}} descriptor in the corresponding `@position-try` at-rule.
+- `margin-right` or `marginRight`
+  - : A string representing the value of a {{cssxref("margin-right")}} descriptor in the corresponding `@position-try` at-rule.
+- `margin-top` or `marginTop`
+  - : A string representing the value of a {{cssxref("margin-top")}} descriptor in the corresponding `@position-try` at-rule.
+- `max-block-size` or `maxBlockSize`
+  - : A string representing the value of a {{cssxref("max-block-size")}} descriptor in the corresponding `@position-try` at-rule.
+- `max-height` or `maxHeight`
+  - : A string representing the value of a {{cssxref("max-height")}} descriptor in the corresponding `@position-try` at-rule.
+- `max-inline-size` or `maxInlineSize`
+  - : A string representing the value of a {{cssxref("max-inline-size")}} descriptor in the corresponding `@position-try` at-rule.
+- `max-width` or `maxWidth`
+  - : A string representing the value of a {{cssxref("max-width")}} descriptor in the corresponding `@position-try` at-rule.
+- `min-block-size` or `minBlockSize`
+  - : A string representing the value of a {{cssxref("min-block-size")}} descriptor in the corresponding `@position-try` at-rule.
+- `min-height` or `minHeight`
+  - : A string representing the value of a {{cssxref("min-height")}} descriptor in the corresponding `@position-try` at-rule.
+- `min-inline-size` or `minInlineSize`
+  - : A string representing the value of a {{cssxref("min-inline-size")}} descriptor in the corresponding `@position-try` at-rule.
+- `min-width` or `minWidth`
+  - : A string representing the value of a {{cssxref("min-width")}} descriptor in the corresponding `@position-try` at-rule.
+- `place-self` or `placeSelf`
+  - : A string representing the value of a {{cssxref("place-self")}} descriptor in the corresponding `@position-try` at-rule.
+- `position-anchor` or `positionAnchor`
+  - : A string representing the value of a {{cssxref("position-anchor")}} descriptor in the corresponding `@position-try` at-rule.
+- `right`
+  - : A string representing the value of a {{cssxref("right")}} descriptor in the corresponding `@position-try` at-rule.
+- `top`
+  - : A string representing the value of a {{cssxref("top")}} descriptor in the corresponding `@position-try` at-rule.
+- `width`
+  - : A string representing the value of a {{cssxref("width")}} descriptor in the corresponding `@position-try` at-rule.
 
 ## Instance methods
 
