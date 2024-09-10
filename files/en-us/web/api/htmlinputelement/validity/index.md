@@ -8,7 +8,7 @@ browser-compat: api.HTMLInputElement.validity
 
 {{APIRef("HTML DOM")}}
 
-The **`validity`** read-only property of the {{domxref("HTMLInputElement")}} interface returns a {{domxref("ValidityState")}} with the validity states that this element is in.
+The **`validity`** read-only property of the {{domxref("HTMLInputElement")}} interface returns a {{domxref("ValidityState")}} object that represents the validity states this element is in.
 
 ## Value
 

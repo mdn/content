@@ -8,7 +8,7 @@ browser-compat: api.HTMLTextAreaElement.validity
 
 {{APIRef("HTML DOM")}}
 
-The **`validity`** read-only property of the {{domxref("HTMLTextAreaElement")}} interface returns a {{domxref("ValidityState")}} with the validity states that this element is in.
+The **`validity`** read-only property of the {{domxref("HTMLTextAreaElement")}} interface returns a {{domxref("ValidityState")}} object that represents the validity states this element is in.
 
 ## Value
 
@@ -20,7 +20,8 @@ The following example gets the validity state of a text area element and process
 
 ```js
 const textArea = document.getElementById("myTextArea");
-if (!textArea.validity.valid) {
+const validityState = textArea.validity;
+if (!validityState.valid) {
   // Test each validity state
 }
 ```

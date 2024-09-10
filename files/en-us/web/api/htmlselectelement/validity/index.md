@@ -8,7 +8,7 @@ browser-compat: api.HTMLSelectElement.validity
 
 {{APIRef("HTML DOM")}}
 
-The **`validity`** read-only property of the {{domxref("HTMLSelectElement")}} interface returns a {{domxref("ValidityState")}} with the validity states that this element is in.
+The **`validity`** read-only property of the {{domxref("HTMLSelectElement")}} interface returns a {{domxref("ValidityState")}} object that represents the validity states this element is in.
 
 ## Value
 
@@ -20,7 +20,8 @@ The following example gets the validity state of a select element and processes 
 
 ```js
 const select = document.getElementById("mySelect");
-if (!select.validity.valid) {
+const validityState = select.validity;
+if (!validityState.valid) {
   // Test each validity state
 }
 ```
