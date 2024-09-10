@@ -512,7 +512,7 @@ div p + p {
 }
 ```
 
-The next example shows the equivalent CSS in a more compressed format without any extra white space. Although the two examples work the same, the one below is more difficult to read.
+The next example shows the equivalent CSS in a more compressed format, with all extra white space removed. Although the two examples work the same, the one below is more difficult to read.
 
 ```css-nolint
 body{font:1em/150% Helvetica,Arial,sans-serif;padding:1em;margin:0 auto;max-width:33em;}
