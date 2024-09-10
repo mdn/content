@@ -34,8 +34,8 @@ These icons uniquely identify your web app in different contexts, such as in an 
     - `src`
 
       - : A string that specifies the path to the icon image file.
-      If `src` is relative, the path is resolved relative to the manifest file's URL.
-      For example, the relative URL `images/icon-192x192.png` for the manifest file located at `https://example.com/manifest.json` will be resolved as `https://example.com/images/icon-192x192.png`.
+        If `src` is relative, the path is resolved relative to the manifest file's URL.
+        For example, the relative URL `images/icon-192x192.png` for the manifest file located at `https://example.com/manifest.json` will be resolved as `https://example.com/images/icon-192x192.png`.
 
     - `sizes` {{Optional_Inline}}
 
@@ -58,8 +58,8 @@ These icons uniquely identify your web app in different contexts, such as in an 
     - `purpose` {{Optional_Inline}}
 
       - : A case-sensitive keyword string that specifies one or more contexts in which the icon can be used by the browser or operating system.
-      The value can be a single keyword or multiple space-separated keywords.
-      If omitted, the browser can use the icon for any purpose.
+        The value can be a single keyword or multiple space-separated keywords.
+        If omitted, the browser can use the icon for any purpose.
 
       Browsers use these values as hints to determine where and how an icon is displayed.
       For example, a `monochrome` icon might be used as a badge or pinned icon with a solid fill, which is visually distinct from a full-color launch icon.
@@ -69,15 +69,17 @@ These icons uniquely identify your web app in different contexts, such as in an 
 
       Valid values include:
 
-        - `monochrome`
-          - : Indicates that the icon is intended to be used as a monochrome icon with a solid fill.
+      - `monochrome`
+
+        - : Indicates that the icon is intended to be used as a monochrome icon with a solid fill.
           With this value, a browser discards the color information in the icon and uses only the alpha channel as a mask over any solid fill.
 
-        - `maskable`
-          - : Indicates that the icon is designed with icon masks and safe zone in mind, such that any part of the image outside the safe zone can be ignored and masked away.
-        
-        - `any`
-          - : Indicates that the icon can be used in any context. This is the default value.
+      - `maskable`
+
+        - : Indicates that the icon is designed with icon masks and safe zone in mind, such that any part of the image outside the safe zone can be ignored and masked away.
+
+      - `any`
+        - : Indicates that the icon can be used in any context. This is the default value.
 
 ## Description
 
