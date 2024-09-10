@@ -19,9 +19,9 @@ This color application can provide a more native app-like experience for your we
 "theme_color": "<color-value>"
 ```
 
-### Values
+### Keys
 
-- `<color-value>`
+- `theme_color`
 
   - : A string that specifies a [valid color value](/en-US/docs/Web/CSS/color_value).
 
