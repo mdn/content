@@ -16,13 +16,15 @@ A {{domxref("ValidityState")}} object.
 
 ## Examples
 
-The following example gets the validity state of a button element and processes it if it is not valid:
+The following example demonstrates that a `<button>` is in an invalid state when a {{domxref("ValidityState/customError", "customError")}} is set; in this state, the `validityState`'s `validity` property is `false`, while {{domxref("HTMLFieldSetElement/checkValidity", "checkValidity()")}} returns `true` if the button's {{domxref("HTMLButtonElement/type", "type")}} is not `"submit"`, because such buttons are not candidates for [constraint validation](/en-US/docs/Web/HTML/Constraint_validation).
 
 ```js
 const button = document.getElementById("myButton");
-if (!button.validity.valid) {
-  // Test each validity state
-}
+button.setCustomValidity("This button is invalid.");
+const validityState = button.validity;
+console.log(validityState.valid); // false
+console.log(validityState.customError); // true
+console.log(button.checkValidity()); // false if the button is of the "submit" type, true otherwise
 ```
 
 ## Specifications
