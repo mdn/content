@@ -23,6 +23,10 @@ See {{HTTPHeader("Early-Data")}} for more information.
 
 {{Specifications}}
 
+## Browser compatibility
+
+{{Compat}}
+
 ## See also
 
 - [HTTP response status codes](/en-US/docs/Web/HTTP/Status)

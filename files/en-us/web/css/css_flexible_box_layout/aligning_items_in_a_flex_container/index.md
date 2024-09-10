@@ -89,7 +89,7 @@ The `align-content` property takes the following values:
 - `align-content: flex-start`
 - `align-content: flex-end`
 - `align-content: start`
-- `align-content: fend`
+- `align-content: end`
 - `align-content: center`
 - `align-content: space-between`
 - `align-content: space-around`

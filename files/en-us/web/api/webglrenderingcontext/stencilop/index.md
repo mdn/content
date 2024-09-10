@@ -19,8 +19,6 @@ stencilOp(fail, zfail, zpass)
 
 ### Parameters
 
-All three parameters accept all constants listed below.
-
 - `fail`
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the function to use when the stencil test fails.
     The default value is `gl.KEEP`.

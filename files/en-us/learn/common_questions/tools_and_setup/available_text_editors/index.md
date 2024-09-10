@@ -92,7 +92,7 @@ Here are some popular editors:
       </td>
       <td>
         <a
-          href="https://ingorichter.github.io/BracketsExtensionTweetBot/"
+          href="https://ingo-richter.io/BracketsExtensionTweetBot/"
           rel="external"
           >Yes</a
         >
@@ -104,8 +104,8 @@ Here are some popular editors:
       <td>$99</td>
       <td>Mac</td>
       <td>
-        <a href="https://twitter.com/panic">Twitter</a>,
-        <a href="https://panic.com/qa" rel="external">Forum</a>,
+        <a href="https://x.com/panic">Twitter</a>,
+        <a href="https://help.panic.com/" rel="external">Forum</a>,
         <a href="https://nova.app/help/">Online</a>
       </td>
       <td><a href="https://help.panic.com/nova/">eBook</a></td>
@@ -150,7 +150,7 @@ Here are some popular editors:
       <td>Yes</td>
     </tr>
     <tr>
-      <td><a href="https://www.espressoapp.com/">Espresso</a></td>
+      <td><a href="https://espressoapp.com/">Espresso</a></td>
       <td>Closed source</td>
       <td>$99</td>
       <td>Mac</td>
@@ -257,7 +257,7 @@ Here are some popular editors:
       <td>Windows, Mac, Linux</td>
       <td>
         <a
-          href="https://www.sublimetext.com/forum/viewforum.php?f=3"
+          href="https://forum.sublimetext.com/c/technical-support"
           rel="external"
           >Forum</a
         >
@@ -269,7 +269,7 @@ Here are some popular editors:
           Unofficial</a
         >
       </td>
-      <td><a href="https://sublime.wbond.net/">Yes</a></td>
+      <td><a href="https://packagecontrol.io/">Yes</a></td>
     </tr>
     <tr>
       <td><a href="https://macromates.com/" rel="external">TextMate</a></td>
@@ -277,20 +277,17 @@ Here are some popular editors:
       <td>$50</td>
       <td>Mac</td>
       <td>
-        <a href="https://twitter.com/macromates">Twitter</a>,
+        <a href="https://x.com/macromates">Twitter</a>,
         <a href="https://webchat.freenode.net/?channels=textmate">IRC</a>,
-        <a href="https://lists.macromates.com/listinfo/textmate" rel="external"
+        <a href="https://lists.macromates.com/postorius/lists/textmate.lists.macromates.com/" rel="external"
           >Mailing list</a
         >, <a href="mailto:tm-support@macromates.com">Email</a>
       </td>
       <td>
-        <a href="https://manual.macromates.com/en/">Online Manual</a>,
-        <a href="https://wiki.macromates.com/Main/HomePage" rel="external"
-          >Wiki</a
-        >
+        <a href="https://macromates.com/manual/en/">Online Manual</a>
       </td>
       <td>
-        <a href="https://wiki.macromates.com/Main/Plugins" rel="external"
+        <a href="https://macromates.com/textmate/manual/bundles" rel="external"
           >Yes</a
         >
       </td>
@@ -428,7 +425,7 @@ If you like _lots_ of features and your editor is slowing down because of all yo
 - [Aptana Studio](https://www.axway.com/en/aptana)
 - [Eclipse](https://www.eclipse.org/)
 - [Komodo IDE](https://www.activestate.com/products/komodo-ide/)
-- [NetBeans IDE](https://netbeans.apache.org//)
+- [NetBeans IDE](https://netbeans.apache.org/)
 - [Visual Studio](https://visualstudio.microsoft.com/)
 - [WebStorm](https://www.jetbrains.com/webstorm/)
 

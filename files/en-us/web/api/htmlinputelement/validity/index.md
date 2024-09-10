@@ -20,7 +20,8 @@ The following example gets the validity state of an input element and processes 
 
 ```js
 const input = document.getElementById("myInput");
-if (!input.validity.valid) {
+const validityState = input.validity;
+if (!validityState.valid) {
   // Test each validity state
 }
 ```

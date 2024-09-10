@@ -186,7 +186,7 @@ You can leave the blocks empty, or include default content to use when rendering
 > Template _tags_ are functions that you can use in a template to loop through lists, perform conditional operations based on the value of a variable, and so on. In addition to template tags, the template syntax allows you to reference variables that are passed into the template from the view, and use _template filters_ to format variables (for example, to convert a string to lower case).
 
 ```django
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     {% block title %}
@@ -230,7 +230,7 @@ We will use the following code snippet as the base template for the _LocalLibrar
 Create a new file **base_generic.html** in **/django-locallibrary-tutorial/catalog/templates/** and paste the following code to the file:
 
 ```django
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     {% block title %}

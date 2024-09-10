@@ -7,7 +7,7 @@ status:
 browser-compat: api.FragmentDirective
 ---
 
-{{SeeCompatTable}}
+{{APIRef("URL Fragment Text Directives")}}{{SeeCompatTable}}
 
 The **`FragmentDirective`** interface is an object exposed for feature detectability, that is, whether or not a browser supports text fragments.
 

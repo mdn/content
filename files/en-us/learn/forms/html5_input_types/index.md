@@ -150,7 +150,7 @@ Controls for entering numbers can be created with an {{HTMLElement("input")}} [`
 
 With the `number` input type, you can constrain the minimum and maximum values allowed by setting the [`min`](/en-US/docs/Web/HTML/Element/input#min) and [`max`](/en-US/docs/Web/HTML/Element/input#max) attributes.
 
-You can also use the `step` attribute to set the increment increase and decrease caused by pressing the spinner buttons. By default, the number input type only validates if the number is an integer, as the [`step`](/en-US/docs/Web/HTML/Attributes/step) attribute defaults to `1`. To allow float numbers, specify `step="any"` or a specific value, lik `step="0.01` to restrict the floating point. If omitted, as the `step` value defaults to `1`, only whole numbers are valid.
+You can also use the `step` attribute to set the increment increase and decrease caused by pressing the spinner buttons. By default, the number input type only validates if the number is an integer, as the [`step`](/en-US/docs/Web/HTML/Attributes/step) attribute defaults to `1`. To allow float numbers, specify `step="any"` or a specific value, like `step="0.01"` to restrict the floating point. If omitted, as the `step` value defaults to `1`, only whole numbers are valid.
 
 Let's look at some examples:
 

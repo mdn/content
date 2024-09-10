@@ -12,7 +12,7 @@ The **`changedTouches`** read-only property is a {{ domxref("TouchList") }} whos
 
 - For the {{domxref("Element/touchstart_event", "touchstart")}} event, it is a list of the touch points that became active with the current event.
 - For the {{domxref("Element/touchmove_event", "touchmove")}} event, it is a list of the touch points that have changed since the last event.
-- For the {{domxref("Element/touchend_event", "touchend")}} event, it is a list of the touch points that have been removed from the surface (that is, the set of touch points corresponding to fingers no longer touching the surface).
+- For the {{domxref("Element/touchend_event", "touchend")}} and {{domxref("Element/touchcancel_event", "touchcancel")}} events, it is a list of the touch points that have been removed from the surface (that is, the set of touch points corresponding to fingers no longer touching the surface).
 
 ## Value
 

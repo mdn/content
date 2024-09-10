@@ -59,7 +59,7 @@ h3::before {
 
 You can specify the increment or decrement amount after the counter name. It can be a positive or negative number, but defaults to `1` if no integer is provided.
 
-Apart from increment or decrement, counters can also be explicitly set to a value using {{cssxref("counter-increment")}} property.
+Apart from being incremented or decremented, counters can also be explicitly set to a value using the {{cssxref("counter-set")}} property.
 
 ```css
 .done::before {
@@ -217,9 +217,9 @@ div::after {
 
 {{EmbedLiveSample("Counter inheritance and propagation", "100%", 250)}}
 
-The section element initializes a counter named `primary` with value `3`, and all the child `<div>`s receive the inherited `primary` counter. The element 'D' creates a new `primary`(value `6`) counter which gets nested in the counter received from the parent, so the element has two counters named `primary` with values `3` and `6`.
+The section element initializes a counter named `primary` with value `3`, and all the child `<div>`s receive the inherited `primary` counter. The element 'D' creates a new `primary` (value `6`) counter which gets nested in the counter received from the parent, so the element has two counters named `primary` with values `3` and `6`.
 
-The element 'F' creates the `secondary`(value `5`) counter for the first time, and it passes the counter to the next sibling 'G'. The element 'G' passes the counter to the next element 'H' and so on. Next, the element 'I' creates a new counter with the same name `secondary`(value `10`), but it drops the `secondary`(value `5`) counter received from the previous sibling 'H' and passes its own counter to 'J'.
+The element 'F' creates the `secondary` (value `5`) counter for the first time, and it passes the counter to the next sibling 'G'. The element 'G' passes the counter to the next element 'H' and so on. Next, the element 'I' creates a new counter with the same name `secondary` (value `10`), but it drops the `secondary` (value `5`) counter received from the previous sibling 'H' and passes its own counter to 'J'.
 
 ### Difference between counter-set and counter-reset
 

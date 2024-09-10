@@ -8,7 +8,7 @@ browser-compat: api.HTMLObjectElement.reportValidity
 
 {{APIRef("HTML DOM")}}
 
-The **`reportValidity()`** method of the {{domxref("HTMLObjectElement")}} interface performs the same validity checking steps as the {{domxref("HTMLObjectElement.checkValidity", "checkValidity()")}} method. It always returns true because {{HTMLElement("object")}} elements are never candidates for [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) .
+The **`reportValidity()`** method of the {{domxref("HTMLObjectElement")}} interface performs the same validity checking steps as the {{domxref("HTMLObjectElement.checkValidity", "checkValidity()")}} method. It always returns true because {{HTMLElement("object")}} elements are never candidates for [constraint validation](/en-US/docs/Web/HTML/Constraint_validation).
 
 ## Syntax
 

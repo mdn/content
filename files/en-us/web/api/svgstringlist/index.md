@@ -297,6 +297,10 @@ An `SVGStringList` object can be designated as read only, which means that attem
   </tbody>
 </table>
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

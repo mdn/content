@@ -63,7 +63,7 @@ There are three possible values for `stroke-linecap`:
 
 Use `stroke-linejoin` to control how the joint between two line segments is drawn.
 
-![The stroke-linejoin attribute changes the look at the point where two lines join, with miter created an angled join, round rounding the corner, and bevel creating a beveled edge, flattening the corner .](svg_stroke_linejoin_example.png)
+![The stroke-linejoin attribute changes the look at the point where two lines join, with miter created an angled join, round rounding the corner, and bevel creating a beveled edge, flattening the corner.](svg_stroke_linejoin_example.png)
 
 ```xml
 <?xml version="1.0" standalone="no"?>
