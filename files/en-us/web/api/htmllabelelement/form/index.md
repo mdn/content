@@ -8,7 +8,7 @@ browser-compat: api.HTMLLabelElement.form
 
 {{APIRef("HTML DOM")}}
 
-The **`form`** read-only property of the {{domxref("HTMLLabelElement")}} interface returns an {{domxref("HTMLFormElement")}} object that owns the {{domxref("HTMLLabelElement.control", "control")}} associated with this label, or `null` if this label is not associated with a control owned by a form.
+The **`form`** read-only property of the {{domxref("HTMLLabelElement")}} interface returns an {{domxref("HTMLFormElement")}} object that owns the {{domxref("HTMLLabelElement.control", "control")}} associated with this {{HTMLElement("label")}}, or `null` if this label is not associated with a control owned by a form.
 
 This property is just a shortcut for `label.control.form`.
 

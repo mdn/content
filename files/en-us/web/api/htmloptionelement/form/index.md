@@ -8,7 +8,7 @@ browser-compat: api.HTMLOptionElement.form
 
 {{APIRef("HTML DOM")}}
 
-The **`form`** read-only property of the {{domxref("HTMLOptionElement")}} interface returns an {{domxref("HTMLFormElement")}} object that owns the {{domxref("HTMLSelectElement")}} associated with this option, or `null` if this option is not associated with a select owned by a form.
+The **`form`** read-only property of the {{domxref("HTMLOptionElement")}} interface returns an {{domxref("HTMLFormElement")}} object that owns the {{domxref("HTMLSelectElement")}} associated with this {{htmlelement("option")}}, or `null` if this option is not associated with a {{htmlelement("select")}} owned by a form.
 
 ## Value
 

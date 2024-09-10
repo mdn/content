@@ -8,7 +8,7 @@ browser-compat: api.HTMLTextAreaElement.form
 
 {{APIRef("HTML DOM")}}
 
-The **`form`** read-only property of the {{domxref("HTMLTextAreaElement")}} interface returns an {{domxref("HTMLFormElement")}} object that owns this text area, or `null` if this text area is not owned by any form.
+The **`form`** read-only property of the {{domxref("HTMLTextAreaElement")}} interface returns an {{domxref("HTMLFormElement")}} object that owns this {{htmlelement("textarea")}}, or `null` if this textarea is not owned by any form.
 
 ## Value
 
@@ -27,4 +27,5 @@ An {{domxref("HTMLFormElement")}} or `null`.
 - {{domxref("HTMLTextAreaElement")}}
 - {{domxref("HTMLFormElement")}}
 - {{HTMLElement("textarea")}}
+- HTML [`form`](/en-US/docs/Web/HTML/Element/textarea#form) attribute
 - [HTML forms guide](/en-US/docs/Learn/Forms)

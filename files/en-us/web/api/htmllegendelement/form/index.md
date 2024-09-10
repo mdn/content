@@ -8,7 +8,7 @@ browser-compat: api.HTMLLegendElement.form
 
 {{APIRef("HTML DOM")}}
 
-The **`form`** read-only property of the {{domxref("HTMLLegendElement")}} interface returns an {{domxref("HTMLFormElement")}} object that owns the {{domxref("HTMLFieldSetElement")}} associated with this legend, or `null` if this legend is not associated with a fieldset owned by a form.
+The **`form`** read-only property of the {{domxref("HTMLLegendElement")}} interface returns an {{domxref("HTMLFormElement")}} object that owns the {{domxref("HTMLFieldSetElement")}} associated with this {{htmlelement("legend")}}, or `null` if this legend is not associated with a {{htmlelement("fieldset")}} owned by a form.
 
 ## Value
 

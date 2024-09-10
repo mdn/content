@@ -8,7 +8,7 @@ browser-compat: api.HTMLFieldSetElement.form
 
 {{APIRef("HTML DOM")}}
 
-The **`form`** read-only property of the {{domxref("HTMLFieldSetElement")}} interface returns an {{domxref("HTMLFormElement")}} object that owns this fieldset, or `null` if this fieldset is not owned by any form.
+The **`form`** read-only property of the {{domxref("HTMLFieldSetElement")}} interface returns an {{domxref("HTMLFormElement")}} object that owns this {{htmlelement("fieldset")}}, or `null` if this fieldset is not owned by any form.
 
 ## Value
 
@@ -27,4 +27,5 @@ An {{domxref("HTMLFormElement")}} or `null`.
 - {{domxref("HTMLFieldSetElement")}}
 - {{domxref("HTMLFormElement")}}
 - {{HTMLElement("fieldset")}}
+- HTML [`form`](/en-US/docs/Web/HTML/Element/fieldset#form) attribute
 - [HTML forms guide](/en-US/docs/Learn/Forms)

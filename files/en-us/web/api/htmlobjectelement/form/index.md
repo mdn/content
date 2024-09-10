@@ -8,7 +8,7 @@ browser-compat: api.HTMLObjectElement.form
 
 {{APIRef("HTML DOM")}}
 
-The **`form`** read-only property of the {{domxref("HTMLObjectElement")}} interface returns an {{domxref("HTMLFormElement")}} object that owns this object, or `null` if this object is not owned by any form.
+The **`form`** read-only property of the {{domxref("HTMLObjectElement")}} interface returns an {{domxref("HTMLFormElement")}} object that owns this {{htmlelement("object")}}, or `null` if this object element is not owned by any form.
 
 ## Value
 
