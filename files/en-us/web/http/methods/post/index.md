@@ -26,10 +26,10 @@ When the `POST` request is sent following a {{domxref("Window/fetch", "fetch()")
 As described in the HTTP 1.1 specification, `POST` is designed to allow a uniform method to cover the following functions:
 
 - Annotation of existing resources
-- Posting a message to a bulletin board, newsgroup, mailing list, or similar group of articles;
-- Adding a new user through a signup modal;
-- Providing a block of data, such as the result of submitting a form, to a data-handling process;
-- Extending a database through an append operation.
+- Posting a message to a bulletin board, newsgroup, mailing list, or similar group of articles
+- Adding a new user through a signup form
+- Providing a block of data, such as the result of submitting a form, to a data-handling process
+- Extending a database through an append operation
 
 <table class="properties">
   <tbody>

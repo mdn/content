@@ -77,13 +77,19 @@ User-Agent: curl/8.7.1
 Accept: */*
 ```
 
-If the method is explicitly disallowed, the server will send back a `405` response:
+A {{HTTPStatus("200", "200 OK")}} response with the request headers contained in response body is sent back to the client:
 
 ```http
-HTTP/1.1 405 Method Not Allowed
-Content-Length: 0
+HTTP/1.1 200 OK
+Content-Length: 123
 Date: Wed, 04 Sep 2024 11:50:24 GMT
-Server: ECLF (dcd/7D2D)
+Server: Apache/2.4.59 (Unix)
+Content-Type: message/http
+
+TRACE / HTTP/1.1
+Host: example.com
+User-Agent: curl/8.7.1
+Accept: */*
 ```
 
 ## Specifications

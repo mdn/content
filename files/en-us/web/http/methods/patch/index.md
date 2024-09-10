@@ -68,23 +68,48 @@ PATCH <request-target>["?"<query>] HTTP/1.1
 
 ### Successfully modifying a resource
 
-```http
-PATCH /file.txt HTTP/1.1
-Host: www.example.com
-Content-Type: application/example
-If-Match: "e0023aa4e"
-Content-Length: 100
+Assume there is a resource on the server representing a user with a numeric ID of `123` in the following format:
 
-[description of changes]
+```json
+{
+  "firstName": "Example",
+  "LastName": "User",
+  "userId": 123,
+  "signupDate": "2024-09-09T21:48:58Z",
+  "status": "active",
+  "registeredDevice": {
+    "id": 1,
+    "name": "personal",
+    "manufacturer": {
+      "name": "Hardware corp"
+    }
+  }
+}
 ```
 
-A successful response is indicated by any of the [successful response status codes](/en-US/docs/Web/HTTP/Status#successful_responses).
-In the example response, a {{HTTPStatus("204", "204 No Content")}} status code is used because the response does not contain a body.
-Alternatively, a {{HTTPStatus("200", "200 OK")}} response that contains a body with information about the action could be used instead:
+Instead of sending a JSON object to fully overwrite a resource, a `PATCH` modifies only specific parts of the resource.
+This request updates the `status` field:
+
+```http
+PATCH /users/123 HTTP/1.1
+Host: example.com
+Content-Type: application/json
+Content-Length: 27
+Authorization: Bearer ABC123
+
+{
+  "status": "suspended"
+}
+```
+
+The interpretation and authentication of the `PATCH` request depend on the implementation.
+Success can be indicated by any of the [successful response status codes](/en-US/docs/Web/HTTP/Status#successful_responses).
+In this example, a {{HTTPStatus("204", "204 No Content")}} is used as there's no need to transmit a body with additional context about the operation.
+An {{HTTPHeader("ETag")}} is provided so the caller can perform a [conditional request](/en-US/docs/Web/HTTP/Conditional_requests) in future:
 
 ```http
 HTTP/1.1 204 No Content
-Content-Location: /file.txt
+Content-Location: /users/123
 ETag: "e0023aa4f"
 ```
 

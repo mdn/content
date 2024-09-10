@@ -9,10 +9,10 @@ browser-compat: http.methods.CONNECT
 
 The **`CONNECT`** HTTP method requests that a {{Glossary("Proxy server", "proxy")}} establish a HTTP tunnel to a destination server, and if successful, blindly forward data in both directions until the tunnel is closed.
 
-The request target is unique to this method in that it consists of only the host and port number of the tunnel destination, separated by a colon.
+The request target is unique to this method in that it consists of only the host and port number of the tunnel destination, separated by a colon (see [Syntax](#syntax) for details).
 Any [2XX successful response status code](/en-US/docs/Web/HTTP/Status#successful_responses) means that the proxy will switch to 'tunnel mode' and any data in the success response body is from the server identified by the request target.
 
-If a website is behind a proxy and it's enforced that all external traffic must pass through the proxy, the `CONNECT` method allows you to establish a {{Glossary("TLS")}} ({{Glossary("HTTPS")}}) connection with that website as follows:
+If a website is behind a proxy and it's enforced via network rules that all external traffic must pass through the proxy, the `CONNECT` method allows you to establish a {{Glossary("TLS")}} ({{Glossary("HTTPS")}}) connection with that website:
 
 - The client asks the proxy to tunnel the {{Glossary("TCP")}} connection to the desired destination.
 - The proxy server makes a secure connection to the server on behalf of the client.
