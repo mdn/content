@@ -36,7 +36,7 @@ marker-end: unset;
 
 - `<marker-ref>`
 
-  - : A {{cssxref("url", "&lt;url&gt;")}} that refers to a marker defined by an SVG {{SVGElement('marker')}} element, to be drawn at the last vertex of the element's path. If the URL reference is invalid, no marker will be drawn at the path's last vertex.
+  - : A {{cssxref("url_value", "&lt;url&gt;")}} that refers to a marker defined by an SVG {{SVGElement('marker')}} element, to be drawn at the last vertex of the element's path. If the URL reference is invalid, no marker will be drawn at the path's last vertex.
 
 ## Formal definition
 

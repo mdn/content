@@ -24,8 +24,10 @@ moveTo(x, y)
 
 ### Parameters
 
-- `x` is the horizontal coordinate to be moved to.
-- `y` is the vertical coordinate to be moved to.
+- `x`
+  - : The horizontal coordinate to be moved to.
+- `y`
+  - : The vertical coordinate to be moved to.
 
 ### Return value
 

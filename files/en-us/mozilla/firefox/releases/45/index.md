@@ -128,7 +128,7 @@ _No change._
 
 ### XUL
 
-- Tab Groups [have been removed](https://support.mozilla.org/kb/tab-groups-removal).
+- Tab Groups [have been removed](https://support.mozilla.org/en-US/kb/tab-groups-removal).
 
 ### JavaScript code modules
 

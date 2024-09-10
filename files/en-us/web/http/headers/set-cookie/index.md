@@ -115,7 +115,9 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 
 - `Partitioned` {{optional_inline}}{{experimental_inline}}
 
-  - : Indicates that the cookie should be stored using partitioned storage. See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies) for more details.
+  - : Indicates that the cookie should be stored using partitioned storage.
+    Note that if this is set, the [`Secure` directive](#secure) must also be set.
+    See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies) for more details.
 
 - `Path=<path-value>` {{optional_inline}}
 
