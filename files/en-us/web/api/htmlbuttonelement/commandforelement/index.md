@@ -12,7 +12,7 @@ browser-compat: api.HTMLButtonElement.commandForElement
 
 The **`commandForElement`** property of the {{domxref("HTMLButtonElement")}} interface gets and sets the element to control via a button.
 
-It is the JavaScript equivalent of the [`commandfor`](/en-US/docs/Web/HTML/Element/button#invoketarget) HTML attribute.
+It is the JavaScript equivalent of the [`commandfor`](/en-US/docs/Web/HTML/Element/button#commandfor) HTML attribute.
 
 ## Value
 
@@ -37,5 +37,6 @@ toggleBtn.commandForElement = popover;
 
 ## See also
 
-- [command](/en-US/docs/Web/API/HTMLButtonElement/command)
-- [CommandEvent](/en-US/docs/Web/API/CommandEvent)
+- {{domxref("Invoker Commands API", "Invoker Commands API", "", "nocode")}}
+- {{domxref("HTMLButtonElement.command", "command")}} property
+- {{domxref("CommandEvent", "CommandEvent")}} interface

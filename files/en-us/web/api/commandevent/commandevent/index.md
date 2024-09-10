@@ -44,4 +44,7 @@ A new {{domxref("CommandEvent")}} object.
 
 ## See also
 
-- {{domxref("CommandEvent")}}, the interface of the objects it constructs.
+- {{domxref("Invoker Commands API", "Invoker Commands API", "", "nocode")}}
+- {{domxref("HTMLButtonElement.command", "command")}} property
+- {{domxref("HTMLButtonElement.commandForElement", "commandForElement")}} property
+- {{domxref("CommandEvent", "CommandEvent")}} interface

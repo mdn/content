@@ -1,0 +1,119 @@
+---
+title: Invoker Commands API
+slug: Web/API/Invoker_Commands_API
+page-type: web-api-overview
+status:
+  - experimental
+browser-compat:
+  - api.CommandEvent
+  - api.HTMLButtonElement.commandForElement
+  - api.HTMLButtonElement.command
+---
+
+{{DefaultAPISidebar("Invoker Commands API")}}
+
+The Invoker Commands API provides a way to declaratively assign behaviors to buttons, allowing control of interactive elements when the button is enacted (clicked or invoked via a keypress, such as the spacebar or return key).
+
+## Concepts and usage
+
+A common pattern on the web is to have {{domxref("HTMLButtonElement", "button")}} elements control various aspects of the page, such as opening and closing {{domxref("Popover API", "popovers", "", "nocode")}} or {{domxref("HTMLDialogElement", "dialog")}} elements, formatting text, and more.
+
+Historically creating these kinds of controls has required JavaScript event listeners added to the button which can then call the APIs on the element they control. The {{domxref("HTMLButtonElement.commandForElement", "commandForElement")}} and {{domxref("HTMLButtonElement.command", "command")}} provide a way to do this declaratively for a limited set of actions.
+
+## HTML Attributes
+
+- {{domxref("HTMLButtonElement.commandForElement", "commandForElement")}}
+  - : Turns a {{htmlelement("button")}} element into a control button, controlling the given interactive element; takes the ID of the element to control as its value.
+- {{domxref("HTMLButtonElement.command", "command")}} provide a way to do this declaratively for a limited set of actions.
+
+  - : Specifies the action to be performed on an element being controlled by a control `<button>`, specified via the `commandfor` attribute. The possible values are:
+
+    - `"show-modal"`
+      - : The button will show a {{htmlelement("dialog")}} as modal. If the dialog is already modal, no action will be taken.
+    - `"close"`
+      - : The button will close a {{htmlelement("dialog")}} element. If the dialog is already closed, no action will be taken.
+    - `"show-popover"`
+      - : The button will show a hidden popover. If you try to show an already showing popover, no action will be taken. See the {{domxref("Popover API", "Popover API", "", "nocode")}} landing page for more details.
+    - `"hide-popover"`
+      - : The button will hide a showing popover. If you try to hide an already hidden popover, no action will be taken. See the {{domxref("Popover API", "Popover API", "", "nocode")}} landing page for more details.
+    - `"toggle-popover"`
+      - : The button will toggle a popover between showing and hidden. If the popover is hidden, it will be shown; if the popover is showing, it will be hidden. See the {{domxref("Popover API", "Popover API", "", "nocode")}} landing page for more details.
+    - Custom values
+      - : This attribute can represent custom values that are prefixed with a two hyphen characters (`--`). Buttons with a custom value will dispatch the {{domxref("CommandEvent")}} on the controlled element.
+
+## Interfaces
+
+- {{domxref("CommandEvent")}}
+  - : Represents an event notifying the user that a command has been issued. It is the event object for the {{domxref("HTMLElement/command_event", "command")}} event. The event fires on element referenced by {{domxref("HTMLButtonElement.commandForElement", "commandForElement")}}.
+
+## Extensions to other interfaces
+
+### Instance properties
+
+- {{domxref("HTMLButtonElement.commandForElement")}}
+  - : Gets and sets the element being controlled by the control button. The JavaScript equivalent of the [`commandfor`](/en-US/docs/Web/HTML/Element/button#commandfor) HTML attribute.
+- {{domxref("HTMLButtonElement.command")}}
+  - : Gets and sets the action to be performed on the element being controlled by the control button. Reflects the value of the [`command`](/en-US/docs/Web/HTML/Element/button#command) HTML attribute.
+
+### Events
+
+- `HTMLElement` {{domxref("HTMLElement.command_event", "command")}} event
+  - : Fired on the element referenced by the control button.
+
+## Examples
+
+### Creating declarative popovers
+
+```html
+<button commandfor="mypopover" command="toggle-popover">
+  Toggle the popover
+</button>
+<div id="mypopover" popover>
+  <button commandfor="mypopover" command="hide-popover">Close</button>
+  Popover content
+</div>
+```
+
+### Creating declarative dialogs
+
+```html
+<button commandfor="mydialog" command="show-modal">Show modal dialog</button>
+<dialog id="mydialog">
+  <button commandfor="mydialog" command="close">Close</button>
+  Dialog Content
+</dialog>
+```
+
+### Creating custom commands
+
+```html
+<button commandfor="myimage" command="--rotate-left">Rotate left</button>
+<button commandfor="myimage" command="--rotate-right">Rotate right</button>
+<img id="myimg" src="..." />
+```
+
+```js
+const myImg = document.getElementById("myimg");
+
+myImg.addEventListener("command", (event) => {
+  if (event.command == "--rotate-left") {
+    myImg.style.rotate = "-90deg";
+  } else if (event.command == "--rotate-right") {
+    myImg.style.rotate = "90deg";
+  }
+});
+```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- {{domxref("HTMLButtonElement.command", "command")}} property
+- {{domxref("HTMLButtonElement.commandForElement", "commandForElement")}} property
+- {{domxref("CommandEvent", "CommandEvent")}} interface

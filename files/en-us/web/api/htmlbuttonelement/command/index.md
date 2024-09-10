@@ -56,5 +56,6 @@ myImage.addEventListener("command", (event) => {
 
 ## See also
 
-- [commandForElement](/en-US/docs/Web/API/HTMLButtonElement/commandForElement)
-- [CommandEvent](/en-US/docs/Web/API/CommandEvent)
+- {{domxref("Invoker Commands API", "Invoker Commands API", "", "nocode")}}
+- {{domxref("HTMLButtonElement.commandForElement", "commandForElement")}} property
+- {{domxref("CommandEvent", "CommandEvent")}} interface

@@ -73,9 +73,9 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
   - : Specifies the action to be performed on an element being controlled by a control `<button>`, specified via the `commandfor` attribute. The possible values are:
 
     - `"show-modal"`
-      - : The button will show a {{domxref("HTMLDialogElement", "dialog")}} as modal. If the dialog is already modal, no action will be taken.
+      - : The button will show a {{htmlelement("dialog")}} as modal. If the dialog is already modal, no action will be taken.
     - `"close"`
-      - : The button will close a {{domxref("HTMLDialogElement", "dialog")}} element. If the dialog is already closed, no action will be taken.
+      - : The button will close a {{htmlelement("dialog")}} element. If the dialog is already closed, no action will be taken.
     - `"show-popover"`
       - : The button will show a hidden popover. If you try to show an already showing popover, no action will be taken. See the {{domxref("Popover API", "Popover API", "", "nocode")}} landing page for more details.
     - `"hide-popover"`
@@ -83,11 +83,11 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     - `"toggle-popover"`
       - : The button will toggle a popover between showing and hidden. If the popover is hidden, it will be shown; if the popover is showing, it will be hidden. See the {{domxref("Popover API", "Popover API", "", "nocode")}} landing page for more details.
     - Custom values
-      - : The button can take additional custom values that are prefixed with a two hyphen characters (`--`). Buttons with a custom value will dispatch the {{domxref("CommandEvent")}} on the controlled element.
+      - : This attribute can represent custom values that are prefixed with a two hyphen characters (`--`). Buttons with a custom value will dispatch the {{domxref("CommandEvent")}} on the controlled element.
 
 - `commandfor`
 
-  - : Turns a `<button>` element into a control button, controlling the given interactive element; takes the ID of the element to control as its value.
+  - : Turns a {{htmlelement("button")}} element into a control button, controlling the given interactive element; takes the ID of the element to control as its value.
 
 - `popovertarget`
 
