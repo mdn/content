@@ -12,34 +12,38 @@ The `display` manifest member is used to specify your preferred display mode for
 ## Syntax
 
 ```json
-"display": "standalone"
+"display": "<display-keyword>"
 ```
 
-### Values
+### Keys
 
-The value of the `display` member is a string. The possible values include `fullscreen`, `standalone`, `minimal-ui`, and `browser`. If a browser does not support the specified display mode, it follows a pre-defined fallback chain: `fullscreen` → `standalone` → `minimal-ui` → `browser`. If `display` is not specified, the default value `browser` is used.
+- `display`
 
-- `fullscreen`
+  - : A string with keyword values. If not specified, the default value `browser` is used. The keyword values include:
 
-  - : Opens the app with browser UI elements hidden and uses the entirety of the available display area. Use this value for apps where fullscreen engagement is crucial and desired. For example, use it for a game app that can take up the entire screen without any browser controls visible, providing a fully immersive gaming experience.
+    - `fullscreen`
 
-    > [!NOTE]
-    > The `fullscreen` value of the manifest's `display` member works separately from the [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API). The `fullscreen` display mode changes the state of the entire browser window to full screen, while the Fullscreen API only makes a specific element within the window go full screen. Therefore, a web app can be in `fullscreen` display mode while {{DOMxRef("Document.fullscreenElement")}} is `null` and {{DOMxRef("Document.fullscreenEnabled")}} is `false`.
+      - : Opens the app with browser UI elements hidden and uses the entirety of the available display area. Use this value for apps where fullscreen engagement is crucial and desired. For example, use it for a game app that can take up the entire screen without any browser controls visible, providing a fully immersive gaming experience.
 
-- `standalone`
+        > [!NOTE]
+        > The `fullscreen` value of the manifest's `display` member works separately from the [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API). The `fullscreen` display mode changes the state of the entire browser window to full screen, while the Fullscreen API only makes a specific element within the window go full screen. Therefore, a web app can be in `fullscreen` display mode while {{DOMxRef("Document.fullscreenElement")}} is `null` and {{DOMxRef("Document.fullscreenEnabled")}} is `false`.
 
-  - : Opens the app to look and feel like a standalone native app. This can include the app having a different window and its own icon in the app launcher. The browser will exclude UI elements such as a URL bar but can still include other UI elements such as the status bar. For example, use it for a task manager app that opens in its own window without the browser's URL bar, while still displaying the device's status bar for battery and notifications, thereby providing an integrated experience.
+    - `standalone`
 
-- `minimal-ui`
+      - : Opens the app to look and feel like a standalone native app. This can include the app having a different window and its own icon in the app launcher. The browser will exclude UI elements such as a URL bar but can still include other UI elements such as the status bar. For example, use it for a task manager app that opens in its own window without the browser's URL bar, while still displaying the device's status bar for battery and notifications, thereby providing an integrated experience.
 
-  - : Opens the app to look and feel like a standalone app but with a minimal set of UI elements for navigation. The specific elements can vary by browser but typically include navigation controls like back, forward, reload, and possibly a way to view the app's URL. Additionally, the browser may include platform-specific UI elements that provide functionality for sharing and printing content. Use this value for apps where displaying a minimal browser interface is beneficial. For example, use it for a news reading or other general reading apps that show only the essential browser controls like back and reload buttons, providing a cleaner and less distracting interface.
+    - `minimal-ui`
 
-- `browser`
-  - : Opens the app in a conventional browser tab or new window, using the platform-specific convention for opening links. Use this value for apps that are designed to be used within a browser context, where full browser functionality is needed. This is the default value if no `display` mode is specified.
+      - : Opens the app to look and feel like a standalone app but with a minimal set of UI elements for navigation. The specific elements can vary by browser but typically include navigation controls like back, forward, reload, and possibly a way to view the app's URL. Additionally, the browser may include platform-specific UI elements that provide functionality for sharing and printing content. Use this value for apps where displaying a minimal browser interface is beneficial. For example, use it for a news reading or other general reading apps that show only the essential browser controls like back and reload buttons, providing a cleaner and less distracting interface.
+
+    - `browser`
+      - : Opens the app in a conventional browser tab or new window, using the platform-specific convention for opening links. Use this value for apps that are designed to be used within a browser context, where full browser functionality is needed. This is the default value if no `display` mode is specified.
 
 ## Description
 
 After a browser applies a `display` mode to an {{Glossary("application context")}}, it becomes the default display mode for the top-level browsing context. The browser may override this display mode for security reasons or provide users with a means for switching to another `display` mode.
+
+If a browser does not support the specified display mode, it follows a pre-defined fallback chain: `fullscreen` → `standalone` → `minimal-ui` → `browser`.
 
 Use the {{cssxref("@media/display-mode", "display-mode")}} media feature to determine the current `display` mode applied by the browser, which is useful for ensuring your app behaves as expected in different display contexts. Additionally, the `display-mode` media feature allows you to adjust your app's styles based on the `display` mode currently being used. This can help provide a consistent user experience regardless of whether the website is launched from a URL or from a desktop icon.
 
