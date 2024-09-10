@@ -471,7 +471,7 @@ Try adding comments in your CSS.
 
 ## White space
 
-White space means actual spaces, tabs and new lines. Just as browsers ignore extra white space in HTML, browsers ignore extra white space inside CSS. The value of extra white space is how it can improve readability.
+White space means actual spaces, tabs and new lines. Just as browsers ignore extra white space in HTML, browsers ignore extra white space inside CSS. The value of white space is how it can improve readability.
 
 In the example below, each declaration (and rule start/end) has its own line. This is arguably a good way to write CSS. It makes it easier to maintain and understand CSS.
 
