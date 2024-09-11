@@ -1,5 +1,5 @@
 ---
-title: "<input>: The Input (Form Input) element"
+title: "<input>: The HTML Input element"
 slug: Web/HTML/Element/input
 page-type: html-element
 browser-compat: html.elements.input
