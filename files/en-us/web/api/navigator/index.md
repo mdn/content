@@ -179,7 +179,7 @@ _Doesn't inherit any method._
 - {{domxref("Navigator.unregisterProtocolHandler()")}} {{SecureContext_Inline}}
   - : Unregister a website that is a handler for a given protocol.
 - {{domxref("Navigator.updateAdInterestGroups()")}} {{SecureContext_Inline}} {{Experimental_Inline}}
-  - : Updates an interest group that the browser is already a member of with information obtained from its update URL, if it has one.
+  - : Updates interest groups that the browser is already a member of with information obtained from their update URLs.
 - {{domxref("Navigator.vibrate()")}}
   - : Causes vibration on devices with support for it. Does nothing if vibration support isn't available.
 

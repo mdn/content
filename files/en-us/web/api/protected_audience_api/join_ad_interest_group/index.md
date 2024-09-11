@@ -48,7 +48,7 @@ const interestGroupOptions = {
   ],
 };
 
-navigator.joinAdInterestGroup(interestGroup);
+navigator.joinAdInterestGroup(interestGroupOptions);
 ```
 
 The option properties as follows:
@@ -80,13 +80,15 @@ The option properties as follows:
 
 Subsequent calls to `joinAdInterestGroup()` with the same `owner` and `name` will overwrite previously-stored values for that interest group.
 
-There is also a method available for updating specific values stored inside a previously-joined interest group, {{domxref("Navigator.updateAdInterestGroups()")}}. Any values can be updated except for the group `owner` and `name` — these cannot be changed. The method is invoked with no parameters:
+There is also a method available for updating specific values stored inside previously-joined interest groups, {{domxref("Navigator.updateAdInterestGroups()")}}. Any values can be updated except for the group `owner` and `name` — these cannot be changed. The calling origin must be same-origin with the owner of the groups being updated.
+
+The method is invoked with no parameters:
 
 ```js
 navigator.updateAdInterestGroups();
 ```
 
-The update information is retrieved from the [`updateURL`](/en-US/docs/Web/API/Navigator.updateAdInterestGroups#updateURL) property of the options object passed into the originating `joinAdInterestGroup()` call.
+Update information is retrieved from the [`updateURL`](/en-US/docs/Web/API/Navigator.joinAdInterestGroup#updateURL) property of the options object passed into each group's originating `joinAdInterestGroup()` call.
 
 ## Leaving interest groups
 

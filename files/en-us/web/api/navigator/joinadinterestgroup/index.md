@@ -12,6 +12,9 @@ browser-compat: api.Navigator.joinAdInterestGroup
 
 The **`joinAdInterestGroup()`** method of the {{domxref("Navigator")}} interface requests the user's browser to add an interest group to its list of stored interest groups that it is a member of.
 
+> [!NOTE]
+> Subsequent calls to `joinAdInterestGroup()` with the same `owner` and `name` will overwrite previously-stored values for that interest group.
+
 For more information on how this works, see [Protected Audience API: Joining an ad interest group](/en-US/docs/Web/API/Protected_Audience_API/Join_ad_interest_group).
 
 ## Syntax
@@ -142,7 +145,7 @@ joinAdInterestGroup(options)
 
 ### Return value
 
-A {{jsxref("Promise")}} that fulfills with `Undefined`.
+A {{jsxref("Promise")}} that fulfills with {{jsxref("undefined")}}.
 
 ### Exceptions
 

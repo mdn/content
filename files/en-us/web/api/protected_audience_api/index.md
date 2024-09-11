@@ -113,7 +113,7 @@ When auctions complete, and ads are chosen, {{htmlelement("fencedframe")}} eleme
 - {{domxref("Navigator.runAdAuction()")}}
   - : Initiates an real-time auction on the seller/publisher site that determines which ad is to be shown in the associated ad space.
 - {{domxref("Navigator.updateAdInterestGroups()")}}
-  - : Updates an interest group that the browser is already a member of with information obtained from its update URL, if it has one.
+  - : Updates interest groups that the browser is already a member of with information obtained from their update URLs.
 
 ### HTML additions
 

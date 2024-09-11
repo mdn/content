@@ -34,7 +34,7 @@ leaveAdInterestGroup(group)
 
 ### Return value
 
-A promise that fulfills with `Undefined`.
+A {{jsxref("Promise")}} that fulfills with {{jsxref("undefined")}}.
 
 ### Exceptions
 

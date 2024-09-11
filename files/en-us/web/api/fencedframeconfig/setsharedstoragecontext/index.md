@@ -26,7 +26,7 @@ setSharedStorageContext(context)
 
 ### Return value
 
-None (`Undefined`).
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
