@@ -101,7 +101,7 @@ When auctions complete, and ads are chosen, {{htmlelement("fencedframe")}} eleme
 - {{domxref("Navigator.clearOriginJoinedAdInterestGroups()")}}
   - : Requests the user's browser to leave all interest groups with a specified owner that were previously joined on the current top-level frame's origin.
 - {{domxref("Navigator.createAuctionNonce()")}}
-  - : Generates an auction nonce, which is included in the configuration object of a {{domxref("Navigator.runAdAuction()")}} call to prevent unintended replaying of additional bids, if included in an auction.
+  - : Generates an auction nonce, which is included in the configuration object of a {{domxref("Navigator.runAdAuction()")}} call to prevent unintended replaying of additional bids.
 - {{domxref("Navigator.deprecatedReplaceInURN()")}}
   - : Substitutes specified strings inside the mapped URL corresponding to a given opaque URN or {{domxref("FencedFrameConfig")}}'s internal `url` property.
 - {{domxref("Navigator.joinAdInterestGroup()")}}

@@ -147,7 +147,7 @@ _Doesn't inherit any method._
 - {{domxref("Navigator.clearOriginJoinedAdInterestGroups()")}} {{SecureContext_Inline}} {{Experimental_Inline}}
   - : Requests the user's browser to leave all ad interest groups with a specified owner that were previously joined on the current top-level frame's origin.
 - {{domxref("Navigator.createAuctionNonce()")}} {{SecureContext_Inline}} {{Experimental_Inline}}
-  - : Generates an auction nonce, which is included in the configuration object of a {{domxref("Navigator.runAdAuction()")}} call to prevent unintended replaying of additional bids, if included in an auction.
+  - : Generates an auction nonce, which is included in the configuration object of a {{domxref("Navigator.runAdAuction()")}} call to prevent unintended replaying of additional bids.
 - {{domxref("Navigator.deprecatedReplaceInURN()")}} {{SecureContext_Inline}} {{Experimental_Inline}}
   - : Substitutes specified strings inside the mapped URL corresponding to a given opaque URN or `FencedFrameConfig`'s internal `url` property. This method has been made available as a temporary measure (hence "deprecated") to enable that substitution for fenced frame URLs, helping ad tech providers to migrate existing implementations across to [privacy sandbox](https://developers.google.com/privacy-sandbox) APIs.
 - {{domxref("Navigator.getAutoplayPolicy()")}} {{Experimental_Inline}}

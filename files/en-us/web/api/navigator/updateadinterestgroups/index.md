@@ -35,8 +35,6 @@ None.
 
 None ({{jsxref("undefined")}}).
 
-### Exceptions
-
 ## Examples
 
 ```js
