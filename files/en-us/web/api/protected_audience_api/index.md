@@ -99,7 +99,7 @@ When auctions complete, and ads are chosen, {{htmlelement("fencedframe")}} eleme
 - {{domxref("Navigator.canLoadAdAuctionFencedFrame()")}}
   - : Returns a boolean value that indicates whether an ad auction-created {{htmlelement("fencedframe")}} can be loaded in the current browsing context.
 - {{domxref("Navigator.clearOriginJoinedAdInterestGroups()")}}
-  - : Requests the user's browser to leave all interest groups that were previously joined on the current top-level frame's origin.
+  - : Requests the user's browser to leave all interest groups with a specified owner that were previously joined on the current top-level frame's origin.
 - {{domxref("Navigator.createAuctionNonce()")}}
   - : Generates an auction nonce, which is included in the configuration object of a {{domxref("Navigator.runAdAuction()")}} call to prevent unintended replaying of additional bids, if included in an auction.
 - {{domxref("Navigator.deprecatedReplaceInURN()")}}
@@ -107,7 +107,7 @@ When auctions complete, and ads are chosen, {{htmlelement("fencedframe")}} eleme
 - {{domxref("Navigator.joinAdInterestGroup()")}}
   - : Requests the user's browser to add an interest group to its list of stored interest groups that it is a member of.
 - {{domxref("Navigator.leaveAdInterestGroup()")}}
-  - : Requests the user's browser to leave a previously-joined interest group.
+  - : Requests the user's browser to leave an ad interest group previously joined on the current top-level frame's origin.
 - {{domxref("Navigator.protectedAudience()")}}
   - : Returns the current browsing context's {{domxref("ProtectedAudience")}} object, which can be used to determine support for Protected Audience API features.
 - {{domxref("Navigator.runAdAuction()")}}

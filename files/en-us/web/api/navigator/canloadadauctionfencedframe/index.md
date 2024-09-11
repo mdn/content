@@ -32,7 +32,7 @@ The method might return `false` because fenced frames are not supported in the c
 
 ## Examples
 
-If this example snippet, we test the current context's support for embedding protected audience `<fencedframe>` elements via `canLoadAdAuctionFencedFrame()` and set the auction config options object's `resolveToConfig` property equal to its return value. We then pass the config object into {{domxref("Navigator.runAdAuction()")}} to start an ad auction:
+In the following example snippet, we test the current context's support for embedding protected audience `<fencedframe>` elements via `canLoadAdAuctionFencedFrame()` and set the auction config options object's `resolveToConfig` property equal to its return value. We then pass the config object into {{domxref("Navigator.runAdAuction()")}} to start an ad auction:
 
 - If `resolveToConfig` is `true`, the `runAdAuction()` promise resolves with a {{domxref("FencedFrameConfig")}} object containing the required information for displaying the winning ad in a `<fencedframe>`.
 - If `resolveToConfig` is `false`, the `runAdAuction()`promise resolves with an opaque [URN](/en-US/docs/Web/URI#urns) containing the required information for displaying the winning ad in an `<iframe>`.

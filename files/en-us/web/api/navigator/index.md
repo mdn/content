@@ -143,7 +143,7 @@ _Doesn't inherit any method._
 - {{domxref("Navigator.clearAppBadge()")}} {{SecureContext_Inline}}
   - : Clears a badge on the current app's icon and returns a {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
 - {{domxref("Navigator.clearOriginJoinedAdInterestGroups()")}} {{SecureContext_Inline}} {{Experimental_Inline}}
-  - : Requests the user's browser to leave all interest groups that were previously joined on the current top-level frame's origin.
+  - : Requests the user's browser to leave all ad interest groups with a specified owner that were previously joined on the current top-level frame's origin.
 - {{domxref("Navigator.createAuctionNonce()")}} {{SecureContext_Inline}} {{Experimental_Inline}}
   - : Generates an auction nonce, which is included in the configuration object of a {{domxref("Navigator.runAdAuction()")}} call to prevent unintended replaying of additional bids, if included in an auction.
 - {{domxref("Navigator.deprecatedReplaceInURN()")}} {{SecureContext_Inline}} {{Experimental_Inline}}
@@ -159,7 +159,7 @@ _Doesn't inherit any method._
 - {{domxref("Navigator.joinAdInterestGroup()")}} {{SecureContext_Inline}} {{Experimental_Inline}}
   - : Requests the user's browser to add an interest group to its list of stored interest groups that it is a member of.
 - {{domxref("Navigator.leaveAdInterestGroup()")}} {{SecureContext_Inline}} {{Experimental_Inline}}
-  - : Requests the user's browser to leave a previously-joined interest group.
+  - : Requests the user's browser to leave an ad interest group previously joined on the current top-level frame's origin.
 - {{domxref("Navigator.protectedAudience()")}} {{SecureContext_Inline}} {{Experimental_Inline}}
 
   - : Returns the current browsing context's {{domxref("ProtectedAudience")}} object, which can be used to determine support for Protected Audience API features.

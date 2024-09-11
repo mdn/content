@@ -101,21 +101,21 @@ navigator.leaveAdInterestGroup({
 
 The `owner` and `name` properties have exactly the same definition as they do for `joinAdInterestGroup()`; here we are specifying `owner` and `name` of the group we want to leave rather than join.
 
-Note that the options object parameter is optional — you can omit it in cases where `leaveAdInterestGroup()` is called from inside an ad that is being targeted at a specific interest group will cause the browser to leave that group.
+The object parameter is optional — you can omit it in cases where `leaveAdInterestGroup()` is called from inside an ad that is being targeted at a specific interest group. This will cause the browser to leave that group.
 
 To leave multiple interest groups with one operation, the buyer can call the {{domxref("Navigator.clearOriginJoinedAdInterestGroups()")}} method, which looks like this:
 
 ```js
-navigator.leaveAdInterestGroup({
+navigator.clearOriginJoinedAdInterestGroups({
   owner: "https://dsp.example",
-  {
+  [
     "fashion shoes",
     "another group name"
-  }
+  ]
 });
 ```
 
-This requests the browser to leave all interest groups owned by the specified owner that were previously joined on the current top-level frame's origin, except for the ones specified in the optional sub-object.
+This requests the browser to leave all interest groups owned by the specified owner that were previously joined on the current top-level frame's origin, except for the ones named in the optional array.
 
 > [!NOTE]
 > When calling `leaveAdInterestGroup()` or `clearOriginJoinedAdInterestGroups()` from a document embedded in an {{htmlelement("iframe")}}, The document must be same-origin with the `owner` of the interest group(s) you are trying to leave for the operation to succeed.
