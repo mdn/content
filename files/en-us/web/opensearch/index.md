@@ -42,7 +42,7 @@ The XML file that describes a search engine follows the basic template below. Se
 
   - : URL of an icon for the search engine. When possible, include a 16×16 image of type `image/x-icon` (such as `/favicon.ico`) and a 64×64 image of type `image/jpeg` or `image/png`.
 
-    The URL may also use the [`data:` URL scheme](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs). (You can generate a `data:` URL from an icon file at [The `data:` URL kitchen](https://software.hixie.ch/utilities/cgi/data/data).)
+    The URL may also use the [`data:` URL scheme](/en-US/docs/Web/URI/Schemes/data). (You can generate a `data:` URL from an icon file at [The `data:` URL kitchen](https://software.hixie.ch/utilities/cgi/data/data).)
 
     ```xml
     <Image height="16" width="16" type="image/x-icon">https://example.com/favicon.ico</Image>
@@ -138,7 +138,7 @@ If there is a mistake in your Search Plugin XML, you could run into errors when 
 - You **must** include a `text/html` URL — search plugins including only Atom or [RSS](/en-US/docs/Glossary/RSS) URL types (which is valid, but Firefox doesn't support) will also generate the "could not download the search plugin" error.
 - Remotely fetched favicons must not be larger than 10KB (see [Firefox bug 361923](https://bugzil.la/361923)).
 
-In addition, the search plugin service provides a logging mechanism that may be useful to plugin developers. Use `about:config` to set the pref '`browser.search.log`' to `true`. Then, logging information will appear in Firefox's [Browser Console](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html)(Tools ➤ Browser Tools ➤ Browser Console) when search plugins are added.
+In addition, the search plugin service provides a logging mechanism that may be useful to plugin developers. Use `about:config` to set the pref '`browser.search.log`' to `true`. Then, logging information will appear in Firefox's [Browser Console](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html) (Tools ➤ Browser Tools ➤ Browser Console) when search plugins are added.
 
 ## Reference Material
 

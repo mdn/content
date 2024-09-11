@@ -17,12 +17,12 @@ Whitespace is any string of text composed only of spaces, tabs or line breaks (t
 In the case of HTML, whitespace is largely ignored — whitespace in between words is treated as a single character, and whitespace at the start and end of elements and outside elements is ignored. Take the following minimal example:
 
 ```html-nolint
-<!DOCTYPE html>
+<!doctype html>
 
   <h1>      Hello      World!     </h1>
 ```
 
-This source code contains a couple of line feeds after the `DOCTYPE` and a bunch of space characters before, after, and inside the `<h1>` element, but the browser doesn't seem to care at all and just shows the words "Hello World!" as if these characters didn't exist at all:
+This source code contains a couple of line feeds after the `doctype` and a bunch of space characters before, after, and inside the `<h1>` element, but the browser doesn't seem to care at all and just shows the words "Hello World!" as if these characters didn't exist at all:
 
 {{EmbedLiveSample('HTML_largely_ignores_whitespace')}}
 
@@ -189,7 +189,7 @@ We can summarize how the whitespace here is handled as follows (there may be som
    ```html
    <block>⏎⇥</block>
    <block>◦◦Hello◦◦</block>
-   <block>⏎◦◦◦</block>
+   <block>⏎⏎◦◦◦</block>
    <block>◦◦World!◦◦</block>
    <block>◦◦⏎</block>
    ```

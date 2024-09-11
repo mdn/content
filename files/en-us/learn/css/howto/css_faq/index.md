@@ -10,16 +10,16 @@ In this article, you'll find some frequently-asked questions (FAQs) about CSS, a
 
 ## Why doesn't my CSS, which is valid, render correctly?
 
-Browsers use the `DOCTYPE` declaration to choose whether to show the document using a mode that is more compatible with Web standards or with old browser bugs. Using a correct and modern `DOCTYPE` declaration at the start of your HTML will improve browser standards compliance.
+Browsers use the `doctype` declaration to choose whether to show the document using a mode that is more compatible with Web standards or with old browser bugs. Using a correct and modern `doctype` declaration at the start of your HTML will improve browser standards compliance.
 
 Modern browsers have two main rendering modes:
 
-- _Quirks Mode_: also called backwards-compatibility mode, allows legacy webpages to be rendered as their authors intended, following the non-standard rendering rules used by older browsers. Documents with an incomplete, incorrect, or missing `DOCTYPE` declaration or a known `DOCTYPE` declaration in common use before 2001 will be rendered in Quirks Mode.
-- _Standards Mode_: the browser attempts to follow the W3C standards strictly. New HTML pages are expected to be designed for standards-compliant browsers, and as a result, pages with a modern `DOCTYPE` declaration will be rendered with Standards Mode.
+- _Quirks Mode_: also called backwards-compatibility mode, allows legacy webpages to be rendered as their authors intended, following the non-standard rendering rules used by older browsers. Documents with an incomplete, incorrect, or missing `doctype` declaration or a known `doctype` declaration in common use before 2001 will be rendered in Quirks Mode.
+- _Standards Mode_: the browser attempts to follow the W3C standards strictly. New HTML pages are expected to be designed for standards-compliant browsers, and as a result, pages with a modern `doctype` declaration will be rendered with Standards Mode.
 
 Gecko-based browsers have a third [limited quirks mode](https://en.wikipedia.org/wiki/Quirks_mode#Limited_quirks_mode) that has only a few minor quirks.
 
-The standard `DOCTYPE` declaration that will trigger standards mode is:
+The standard `doctype` declaration that will trigger standards mode is:
 
 ```html
 <!doctype html>

@@ -276,8 +276,10 @@ The following request headers are not _strictly_ "fetch metadata request headers
 
 ## Server-sent events
 
-- {{HTTPHeader("Report-To")}}
-  - : Used to specify a server endpoint for the browser to send warning and error reports to.
+- {{HTTPHeader("Reporting-Endpoints")}}
+  - : Response header used to specify server endpoints where the browser should send warning and error reports when using the [Reporting API](/en-US/docs/Web/API/Reporting_API).
+- {{HTTPHeader("Report-To")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : Response header used to specify server endpoints where the browser should send warning and error reports when using the [Reporting API](/en-US/docs/Web/API/Reporting_API).
 
 ## Transfer coding
 
@@ -290,8 +292,21 @@ The following request headers are not _strictly_ "fetch metadata request headers
 
 ## WebSockets
 
+Headers used by the [WebSockets API](/en-US/docs/Web/API/WebSockets_API) in the [WebSocket handshake](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#the_websocket_handshake):
+
 - {{HTTPHeader("Sec-WebSocket-Accept")}}
-  - : Sent from server to client and indicates that the server is willing to initiate a WebSocket connection.
+  - : Response header that indicates that the server is willing to upgrade to a WebSocket connection.
+- {{HTTPHeader("Sec-WebSocket-Extensions")}}
+  - : In requests, this header indicates the WebSocket extensions supported by the client in preferred order.
+    In responses, it indicates the extension selected by the server from the client's preferences.
+- {{HTTPHeader("Sec-WebSocket-Key")}}
+  - : Request header containing a key that verifies that the client explicitly intends to open a `WebSocket`.
+- {{HTTPHeader("Sec-WebSocket-Protocol")}}
+  - : In requests, this header indicates the sub-protocols supported by the client in preferred order.
+    In responses, it indicates the the sub-protocol selected by the server from the client's preferences.
+- {{HTTPHeader("Sec-WebSocket-Version")}}
+  - : In requests, this header indicates the version of the WebSocket protocol used by the client.
+    In responses, it is sent only if the requested protocol version is not supported by the server, and lists the versions that the server supports.
 
 ## Other
 
@@ -410,6 +425,8 @@ Network client hints allow a server to choose what information is sent based on 
 - {{HTTPHeader("DNT")}} {{deprecated_inline}} {{non-standard_inline}}
   - : Request header that indicates the user's tracking preference (Do Not Track).
     Deprecated in favor of Global Privacy Control (GPC), which is communicated to servers using the {{HTTPHeader("Sec-GPC")}} header, and accessible to clients via {{domxref("navigator.globalPrivacyControl")}}.
+- {{HTTPHeader("Tk")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : Response header that indicates the tracking status that applied to the corresponding request. Used in conjunction with DNT.
 - {{HTTPHeader("Sec-GPC")}} {{non-standard_inline}} {{experimental_inline}}
   - : Indicates whether the user consents to a website or service selling or sharing their personal information with third parties.
 

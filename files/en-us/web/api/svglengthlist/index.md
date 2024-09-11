@@ -298,6 +298,10 @@ An `SVGLengthList` is indexable and can be accessed like an array.
   </tbody>
 </table>
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

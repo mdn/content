@@ -9,7 +9,7 @@ browser-compat: html.elements.input.type_time
 
 {{htmlelement("input")}} elements of type **`time`** create input fields designed to let the user easily enter a time (hours and minutes, and optionally seconds).
 
-While the control's user interface appearance is based on the browser and operating system, the features are the same. The value is always a 24-hour `hh:mm` or `hh:mm:ss` formatted time, with leading zeros, regardless of the UI's input format.
+While the control's user interface appearance is based on the browser and operating system, the features are the same. The value is always a 24-hour `HH:mm` or `HH:mm:ss` formatted time, with leading zeros, regardless of the UI's input format.
 
 {{EmbedInteractiveExample("pages/tabbed/input-time.html", "tabbed-standard")}}
 
@@ -35,7 +35,7 @@ timeControl.value = "15:30";
 
 ### Time value format
 
-The `value` of the `time` input is always in 24-hour format that includes leading zeros: `hh:mm`, regardless of the input format, which is likely to be selected based on the user's locale (or by the user agent). If the time includes seconds (see [Using the step attribute](#using_the_step_attribute)), the format is always `hh:mm:ss`. You can learn more about the format of the time value used by this input type in [Time strings](/en-US/docs/Web/HTML/Date_and_time_formats#time_strings).
+The `value` of the `time` input is always in 24-hour format that includes leading zeros: `HH:mm`, regardless of the input format, which is likely to be selected based on the user's locale (or by the user agent). If the time includes seconds (see [Using the step attribute](#using_the_step_attribute)), the format is always `HH:mm:ss`. You can learn more about the format of the time value used by this input type in [Time strings](/en-US/docs/Web/HTML/Date_and_time_formats#time_strings).
 
 In this example, you can see the time input's value by entering a time and seeing how it changes afterward.
 
@@ -69,7 +69,7 @@ startTime.addEventListener(
 
 {{EmbedLiveSample("Time_value_format", 600, 80)}}
 
-When a form including a `time` input is submitted, the value is encoded before being included in the form's data. The form's data entry for a time input will always be in the form `name=hh%3Amm`, or `name=hh%3Amm%3Ass` if seconds are included (see [Using the step attribute](#using_the_step_attribute)).
+When a form including a `time` input is submitted, the value is encoded before being included in the form's data. The form's data entry for a time input will always be in the form `name=HH%3Amm`, or `name=HH%3Amm%3Ass` if seconds are included (see [Using the step attribute](#using_the_step_attribute)).
 
 ## Additional attributes
 

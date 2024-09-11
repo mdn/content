@@ -12,7 +12,7 @@ This article provides information about the changes in Firefox 127 that affect d
 
 ### HTML
 
-- `data:` and `javascript:` URLs are now forbidden in the [`href`](/en-US/docs/Web/HTML/Element/base#href) attribute of the `<base>` element ([Firefox bug 1850967](https://bugzil.la/1850967)).
+- [`data:`](/en-US/docs/Web/URI/Schemes/data) and [`javascript:`](/en-US/docs/Web/URI/Schemes/javascript) URLs are now forbidden in the [`href`](/en-US/docs/Web/HTML/Element/base#href) attribute of the `<base>` element ([Firefox bug 1850967](https://bugzil.la/1850967)).
 
 ### CSS
 
@@ -74,6 +74,7 @@ This article provides information about the changes in Firefox 127 that affect d
 - [`host_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) for Manifest V3 extensions are now displayed to users during installation ([Firefox bug 1889402](https://bugzil.la/1889402)). However, if an extension update requests new host permissions, these are not shown to the user. See ([Firefox bug 1893232](https://bugzil.la/1893232)).
 - Addition of the {{WebExtAPIRef("runtime.getContexts")}} function that returns information about the contexts associated with the extension ([Firefox bug 1875480](https://bugzil.la/1875480)).
 - For Manifest V3 extensions, adds fall back to the user-defined shortcuts for the special [`_execute_browser_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands#special_shortcuts) command if there are no user-defined shortcuts for `_execute_action`. This enables extensions migrating from Manifest V2 to V3 to preserve any user-defined shortcuts for the browser action ([Firefox bug 1797811](https://bugzil.la/1797811)).
+- Extensions with an embedded [options page](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) now support automatic switching to the dark theme based on user preferences ([Firefox bug 1888866](https://bugzil.la/1888866)).
 
 ## Experimental web features
 

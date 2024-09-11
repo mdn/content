@@ -1,5 +1,5 @@
 ---
-title: "<input>: The Input (Form Input) element"
+title: "<input>: The HTML Input element"
 slug: Web/HTML/Element/input
 page-type: html-element
 browser-compat: html.elements.input
@@ -1227,6 +1227,27 @@ Firefox uses the following heuristics to determine the locale to validate the us
 - Try the language specified by any `Content-Language` HTTP header. Or,
 - If none specified, use the browser's locale.
 
+## Accessibility
+
+### Labels
+
+When including inputs, it is an accessibility requirement to add labels alongside. This is needed so those who use assistive technologies can tell what the input is for. Also, clicking or touching a label gives focus to the label's associated form control. This improves the accessibility and usability for sighted users, increases the area a user can click or touch to activate the form control. This is especially useful (and even needed) for radio buttons and checkboxes, which are tiny. For more information about labels in general see [Labels](#labels).
+
+The following is an example of how to associate the `<label>` with an `<input>` element in the above style. You need to give the `<input>` an `id` attribute. The `<label>` then needs a `for` attribute whose value is the same as the input's `id`.
+
+```html
+<label for="peas">Do you like peas?</label>
+<input type="checkbox" name="peas" id="peas" />
+```
+
+### Size
+
+Interactive elements such as form input should provide an area large enough that it is easy to activate them. This helps a variety of people, including people with motor control issues and people using non-precise forms of input such as a stylus or fingers. A minimum interactive size of 44×44 [CSS pixels](https://www.w3.org/TR/WCAG21/#dfn-css-pixels) is recommended.
+
+- [Understanding Success Criterion 2.5.5: Target Size | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
+- [Target Size and 2.5.5 | Adrian Roselli](https://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
+- [Quick test: Large touch targets - The A11Y Project](https://www.a11yproject.com/posts/large-touch-targets/)
+
 ## Technical summary
 
 <table class="properties">
@@ -1407,27 +1428,6 @@ Firefox uses the following heuristics to determine the locale to validate the us
     </tr>
   </tbody>
 </table>
-
-## Accessibility concerns
-
-### Labels
-
-When including inputs, it is an accessibility requirement to add labels alongside. This is needed so those who use assistive technologies can tell what the input is for. Also, clicking or touching a label gives focus to the label's associated form control. This improves the accessibility and usability for sighted users, increases the area a user can click or touch to activate the form control. This is especially useful (and even needed) for radio buttons and checkboxes, which are tiny. For more information about labels in general see [Labels](#labels) .
-
-The following is an example of how to associate the `<label>` with an `<input>` element in the above style. You need to give the `<input>` an `id` attribute. The `<label>` then needs a `for` attribute whose value is the same as the input's `id`.
-
-```html
-<label for="peas">Do you like peas?</label>
-<input type="checkbox" name="peas" id="peas" />
-```
-
-### Size
-
-Interactive elements such as form input should provide an area large enough that it is easy to activate them. This helps a variety of people, including people with motor control issues and people using non-precise forms of input such as a stylus or fingers. A minimum interactive size of 44×44 [CSS pixels](https://www.w3.org/TR/WCAG21/#dfn-css-pixels) is recommended.
-
-- [Understanding Success Criterion 2.5.5: Target Size | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
-- [Target Size and 2.5.5 | Adrian Roselli](https://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
-- [Quick test: Large touch targets - The A11Y Project](https://www.a11yproject.com/posts/large-touch-targets/)
 
 ## Specifications
 

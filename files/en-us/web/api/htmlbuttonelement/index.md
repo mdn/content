@@ -60,6 +60,11 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 _Inherits methods from its parent, {{domxref("HTMLElement")}}_.
 
+- {{domxref("HTMLButtonElement.checkValidity()")}}
+  - : Returns `true` if the element's value has no validity problems; otherwise, returns `false`.
+- {{domxref("HTMLButtonElement.reportValidity()")}}
+  - : Performs the same action as `checkValidity()`, but also reports the result to the user if the `invalid` event was not canceled.
+
 ## Specifications
 
 {{Specifications}}

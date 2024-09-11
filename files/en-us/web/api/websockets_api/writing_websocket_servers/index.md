@@ -33,7 +33,7 @@ The handshake is the "Web" in WebSockets. It's the bridge from HTTP to WebSocket
 
 Even though you're building a server, a client still has to start the WebSocket handshake process by contacting the server and requesting a WebSocket connection. So, you must know how to interpret the client's request. The **client** will send a pretty standard HTTP request with headers that looks like this (the HTTP version **must** be 1.1 or greater, and the method **must** be `GET`):
 
-```bash
+```http
 GET /chat HTTP/1.1
 Host: example.com:8000
 Upgrade: websocket
@@ -57,7 +57,7 @@ The most interesting header here is {{HTTPHeader("Sec-WebSocket-Key")}}. Let's l
 
 When the **server** receives the handshake request, it should send back a special response that indicates that the protocol will be changing from HTTP to WebSocket. That header looks something like the following (remember each header line ends with `\r\n` and put an extra `\r\n` after the last one to indicate the end of the header):
 
-```bash
+```http
 HTTP/1.1 101 Switching Protocols
 Upgrade: websocket
 Connection: Upgrade
@@ -206,7 +206,7 @@ Think of a subprotocol as a custom [XML schema](https://en.wikipedia.org/wiki/XM
 
 A client has to ask for a specific subprotocol. To do so, it will send something like this _as part of the original handshake_:
 
-```bash
+```http
 GET /chat HTTP/1.1
 ...
 Sec-WebSocket-Protocol: soap, wamp
@@ -214,7 +214,7 @@ Sec-WebSocket-Protocol: soap, wamp
 
 or, equivalently:
 
-```bash
+```http
 ...
 Sec-WebSocket-Protocol: soap
 Sec-WebSocket-Protocol: wamp
@@ -222,7 +222,7 @@ Sec-WebSocket-Protocol: wamp
 
 Now the server must pick one of the protocols that the client suggested and it supports. If there is more than one, send the first one the client sent. Imagine our server can use both `soap` and `wamp`. Then, in the response handshake, it sends:
 
-```bash
+```http
 Sec-WebSocket-Protocol: soap
 ```
 

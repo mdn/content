@@ -125,11 +125,11 @@ A {{jsxref("Promise")}} to a {{domxref("BluetoothDevice")}} object.
 
 ```js
 // Discovery options match any devices advertising:
-// . The standard heart rate service.
-// . Both 16-bit service IDs 0x1802 and 0x1803.
-// . A proprietary 128-bit UUID service c48e6067-5295-48d3-8d5c-0395f61792b1.
-// . Devices with name "ExampleName".
-// . Devices with name starting with "Prefix".
+// - The standard heart rate service.
+// - Both 16-bit service IDs 0x1802 and 0x1803.
+// - A proprietary 128-bit UUID service c48e6067-5295-48d3-8d5c-0395f61792b1.
+// - Devices with name "ExampleName".
+// - Devices with name starting with "Prefix".
 //
 // And enables access to the battery service if devices
 // include it, even if devices do not advertise that service.

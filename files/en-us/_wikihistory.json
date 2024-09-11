@@ -2694,6 +2694,10 @@
     "modified": "2020-09-14T07:48:57.436Z",
     "contributors": ["darby", "roshan0708", "iigmir"]
   },
+  "Glossary/HTTP_Content": {
+    "modified": "2020-12-04T06:44:11.807Z",
+    "contributors": ["chrisdavidmills", "hamishwillee"]
+  },
   "Glossary/HTTP_header": {
     "modified": "2020-11-30T03:35:20.276Z",
     "contributors": [
@@ -3854,10 +3858,6 @@
       "kscarfone",
       "panaggio"
     ]
-  },
-  "Glossary/Payload_body": {
-    "modified": "2020-12-04T06:44:11.807Z",
-    "contributors": ["chrisdavidmills", "hamishwillee"]
   },
   "Glossary/Perceived_performance": {
     "modified": "2019-05-20T13:01:45.834Z",
@@ -86802,10 +86802,6 @@
       "Heycam"
     ]
   },
-  "Web/CSS/masonry-auto-flow": {
-    "modified": "2020-11-12T04:50:46.255Z",
-    "contributors": ["rachelandrew", "chrisdavidmills"]
-  },
   "Web/CSS/math-style": {
     "modified": "2020-12-12T22:36:34.292Z",
     "contributors": ["sideshowbarker", "chrisdavidmills", "rachelandrew"]
@@ -90642,7 +90638,7 @@
       "teoli"
     ]
   },
-  "Web/CSS/url": {
+  "Web/CSS/url_value": {
     "modified": "2020-12-11T11:18:33.507Z",
     "contributors": [
       "rachelandrew",
@@ -98423,70 +98419,6 @@
       "fscholz"
     ]
   },
-  "Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs": {
-    "modified": "2020-02-15T14:08:06.893Z",
-    "contributors": [
-      "francoraphael",
-      "ExE-Boss",
-      "Alpha",
-      "MechaLynx",
-      "nckx",
-      "xavdid",
-      "david_ross",
-      "fscholz",
-      "teoli",
-      "chrisdavidmills",
-      "ethertank",
-      "dbruant"
-    ]
-  },
-  "Web/HTTP/Basics_of_HTTP/Data_URLs": {
-    "modified": "2020-11-21T14:56:28.316Z",
-    "contributors": [
-      "simon04",
-      "idleray",
-      "pygy",
-      "cvickery",
-      "hinell",
-      "mfuji09",
-      "aetonsi",
-      "Peppesterest",
-      "Alpha",
-      "chrisdavidmills",
-      "Ethan",
-      "fscholz",
-      "DomenicDenicola",
-      "HTMLValidator",
-      "teoli",
-      "Jonathan_Watt",
-      "oldhill",
-      "groovecoder",
-      "ajdavdson1",
-      "ModMaker",
-      "jsx",
-      "Butterfly87",
-      "Delapouite",
-      "valentin.gosu",
-      "Sheppy",
-      "Emmanuel_Vallois",
-      "Null",
-      "jwhittaker",
-      "kscarfone",
-      "fusionchess",
-      "brianblakely",
-      "ziyunfei",
-      "Rob W",
-      "nK0de",
-      "jreschke",
-      "boaz",
-      "toja",
-      "Sevenspade",
-      "Sephr",
-      "Nickolay",
-      "Np",
-      "Waldo"
-    ]
-  },
   "Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP": {
     "modified": "2020-09-25T15:02:32.165Z",
     "contributors": [
@@ -98509,19 +98441,6 @@
       "david_ross",
       "DarrenLester",
       "teoli"
-    ]
-  },
-  "Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web": {
-    "modified": "2020-11-16T01:23:20.622Z",
-    "contributors": [
-      "prajaraksh",
-      "Sheppy",
-      "evansdianga",
-      "danielgormly",
-      "neel-hektor",
-      "david_ross",
-      "teoli",
-      "fscholz"
     ]
   },
   "Web/HTTP/Basics_of_HTTP/MIME_types": {
@@ -98592,10 +98511,6 @@
       "fscholz",
       "teoli"
     ]
-  },
-  "Web/HTTP/Basics_of_HTTP/Resource_URLs": {
-    "modified": "2019-03-23T22:04:02.489Z",
-    "contributors": ["ExE-Boss", "gmierz", "David_B", "chrisdavidmills"]
   },
   "Web/HTTP/Browser_detection_using_the_user_agent": {
     "modified": "2020-07-11T11:53:53.804Z",
@@ -100849,10 +100764,6 @@
       "fscholz",
       "teoli"
     ]
-  },
-  "Web/HTTP/Resources_and_URIs": {
-    "modified": "2020-03-26T15:01:51.205Z",
-    "contributors": ["pettll", "Sheppy", "teoli", "fscholz"]
   },
   "Web/HTTP/Resources_and_specifications": {
     "modified": "2019-07-29T05:42:08.432Z",
@@ -126869,6 +126780,87 @@
       "Sheppy",
       "alispivak"
     ]
+  },
+  "Web/URI": {
+    "modified": "2020-11-16T01:23:20.622Z",
+    "contributors": [
+      "prajaraksh",
+      "Sheppy",
+      "evansdianga",
+      "danielgormly",
+      "neel-hektor",
+      "david_ross",
+      "teoli",
+      "fscholz"
+    ]
+  },
+  "Web/URI/Authority/Choosing_between_www_and_non-www_URLs": {
+    "modified": "2020-02-15T14:08:06.893Z",
+    "contributors": [
+      "francoraphael",
+      "ExE-Boss",
+      "Alpha",
+      "MechaLynx",
+      "nckx",
+      "xavdid",
+      "david_ross",
+      "fscholz",
+      "teoli",
+      "chrisdavidmills",
+      "ethertank",
+      "dbruant"
+    ]
+  },
+  "Web/URI/Schemes/data": {
+    "modified": "2020-11-21T14:56:28.316Z",
+    "contributors": [
+      "simon04",
+      "idleray",
+      "pygy",
+      "cvickery",
+      "hinell",
+      "mfuji09",
+      "aetonsi",
+      "Peppesterest",
+      "Alpha",
+      "chrisdavidmills",
+      "Ethan",
+      "fscholz",
+      "DomenicDenicola",
+      "HTMLValidator",
+      "teoli",
+      "Jonathan_Watt",
+      "oldhill",
+      "groovecoder",
+      "ajdavdson1",
+      "ModMaker",
+      "jsx",
+      "Butterfly87",
+      "Delapouite",
+      "valentin.gosu",
+      "Sheppy",
+      "Emmanuel_Vallois",
+      "Null",
+      "jwhittaker",
+      "kscarfone",
+      "fusionchess",
+      "brianblakely",
+      "ziyunfei",
+      "Rob W",
+      "nK0de",
+      "jreschke",
+      "boaz",
+      "toja",
+      "Sevenspade",
+      "Sephr",
+      "Nickolay",
+      "Np",
+      "Waldo"
+    ]
+  },
+  "Web/URI/Schemes/resource": {
+    "modified": "2019-03-23T22:04:02.489Z",
+    "contributors": ["ExE-Boss", "gmierz", "David_B", "chrisdavidmills"]
   },
   "Web/WebDriver": {
     "modified": "2020-10-15T22:03:17.889Z",

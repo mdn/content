@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.WorkerNavigator
 ---
 
-{{APIRef("Web Workers API")}}
+{{APIRef("Web Workers API")}}{{AvailableInWorkers("worker")}}
 
 The **`WorkerNavigator`** interface represents a subset of the {{DOMxRef("Navigator")}} interface allowed to be accessed from a {{DOMxRef("Worker")}}. Such an object is initialized for each worker and is available via the {{DOMxRef("WorkerGlobalScope.navigator", "self.navigator")}} property.
 
@@ -62,9 +62,9 @@ _The `WorkerNavigator` interface doesn't inherit any property._
 
 _The `WorkerNavigator` interface doesn't inherit any method._
 
-- {{domxref("Navigator.clearAppBadge()")}} {{SecureContext_Inline}}
+- {{domxref("WorkerNavigator.clearAppBadge()")}} {{SecureContext_Inline}}
   - : Clears a badge on the current app's icon and returns a {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
-- {{domxref("Navigator.setAppBadge()")}} {{SecureContext_Inline}}
+- {{domxref("WorkerNavigator.setAppBadge()")}} {{SecureContext_Inline}}
   - : Sets a badge on the icon associated with this app and returns a {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
 
 ## Specifications

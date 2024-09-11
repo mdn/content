@@ -57,7 +57,7 @@ _No changes._
 
 #### Service workers
 
-- The service worker [Clients API](/en-US/docs/Web/API/Clients) can now find and communicate with windows in a separate browser process ([Firefox bug 1293277](https://bugzil.la/1293277)) .
+- The service worker [Clients API](/en-US/docs/Web/API/Clients) can now find and communicate with windows in a separate browser process ([Firefox bug 1293277](https://bugzil.la/1293277)).
 - Nested about:blank and about:srcdoc iframes will now inherit their parent's controlling service worker. Fixed in ([Firefox bug 1293277](https://bugzil.la/1293277)) and ([Firefox bug 1426979](https://bugzil.la/1426979)).
 - When a service worker provides a {{domxref("Response")}} to {{domxref("FetchEvent.respondWith()")}}, the {{domxref("Response.url")}} value will now be propagated to the intercepted network request as the final resolved URL. In the past the {{domxref("Request.url","FetchEvent.request.url")}} was used for this instead. This means, for example, if a service worker intercepts a stylesheet or worker script, then the provided `Response.url` will be used to resolve any relative {{cssxref("@import")}} or {{domxref("WorkerGlobalScope.importScripts()","importScripts()")}} subresource loads ([Firefox bug 1222008](https://bugzil.la/1222008)).
 - `FetchEvent.respondWith()` will now trigger a network error if the {{domxref("Request.mode","FetchEvent.request.mode")}} is `"same-origin"` and the provided {{domxref("Response.type")}} is `"cors"`. ([Firefox bug 1222008](https://bugzil.la/1222008))

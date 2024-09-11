@@ -94,6 +94,10 @@ The following elements can use the `clip-rule` attribute, but only if they are i
 
 - [Graphics elements](/en-US/docs/Web/SVG/Element#graphics_elements)
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}
