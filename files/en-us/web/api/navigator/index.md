@@ -67,6 +67,8 @@ _Doesn't inherit any properties._
   - : Returns a {{domxref("Permissions")}} object that can be used to query and update permission status of APIs covered by the [Permissions API](/en-US/docs/Web/API/Permissions_API).
 - {{domxref("Navigator.presentation")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a reference to the {{domxref("Presentation")}} API.
+- {{domxref("Navigator.protectedAudience")}} {{SecureContext_Inline}} {{Experimental_Inline}}
+  - : Returns the current browsing context's {{domxref("ProtectedAudience")}} object, which can be used to determine support for the [Protected Audience API](/en-US/docs/Web/API/Protected_Audience_API) and specific features.
 - {{domxref("Navigator.scheduling")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a {{domxref("Scheduling")}} object for the current document.
 - {{domxref("Navigator.serial")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
@@ -160,10 +162,6 @@ _Doesn't inherit any method._
   - : Requests the user's browser to add an interest group to its list of stored interest groups that it is a member of.
 - {{domxref("Navigator.leaveAdInterestGroup()")}} {{SecureContext_Inline}} {{Experimental_Inline}}
   - : Requests the user's browser to leave an ad interest group previously joined on the current top-level frame's origin.
-- {{domxref("Navigator.protectedAudience()")}} {{SecureContext_Inline}} {{Experimental_Inline}}
-
-  - : Returns the current browsing context's {{domxref("ProtectedAudience")}} object, which can be used to determine support for Protected Audience API features.
-
 - {{domxref("Navigator.registerProtocolHandler()")}} {{SecureContext_Inline}}
   - : Allows websites to register themselves as a possible handler for a given protocol.
 - {{domxref("Navigator.requestMediaKeySystemAccess()")}} {{SecureContext_Inline}}

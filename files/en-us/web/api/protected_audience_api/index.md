@@ -86,7 +86,7 @@ When auctions complete, and ads are chosen, {{htmlelement("fencedframe")}} eleme
 - {{domxref("InterestGroupReportingScriptRunnerGlobalScope")}}
   - : Exposes appropriate interfaces to buyer and seller script runners to provide access to reporting functionality for user-defined functions (defined on `ForDebuggingOnly` and `RealTimeReporting`).
 - {{domxref("ProtectedAudience")}}
-  - : Defines the {{domxref("ProtectedAudience.queryFeatureSupport", "queryFeatureSupport()")}} method, which is used to determine support for Protected Audience API features.
+  - : Can be used to determine support for the Protected Audience API and specific features.
 - {{domxref("RealTimeReporting")}}
   - : Defines methods for real-time reporting, such as {{domxref("RealTimeReporting.contributeToHistogram", "contributeToHistogram()")}}
 
@@ -108,8 +108,8 @@ When auctions complete, and ads are chosen, {{htmlelement("fencedframe")}} eleme
   - : Requests the user's browser to add an interest group to its list of stored interest groups that it is a member of.
 - {{domxref("Navigator.leaveAdInterestGroup()")}}
   - : Requests the user's browser to leave an ad interest group previously joined on the current top-level frame's origin.
-- {{domxref("Navigator.protectedAudience()")}}
-  - : Returns the current browsing context's {{domxref("ProtectedAudience")}} object, which can be used to determine support for Protected Audience API features.
+- {{domxref("Navigator.protectedAudience")}}
+  - : Returns the current browsing context's {{domxref("ProtectedAudience")}} object, which can be used to determine support for the Protected Audience API and specific features.
 - {{domxref("Navigator.runAdAuction()")}}
   - : Initiates an real-time auction on the seller/publisher site that determines which ad is to be shown in the associated ad space.
 - {{domxref("Navigator.updateAdInterestGroups()")}}
