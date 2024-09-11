@@ -8,7 +8,7 @@ browser-compat: api.HTMLTextAreaElement.defaultValue
 
 {{ APIRef("HTML DOM") }}
 
-The **`defaultValue`** property of the {{DOMxRef("HTMLTextAreaElement")}} interface represents the default text content of this text area. Getting and setting this value is equivalent to getting and setting its {{domxref("Node.textContent", "textContent")}}.
+The **`defaultValue`** property of the {{DOMxRef("HTMLTextAreaElement")}} interface represents the default text content of this text area. Getting and setting this value is equivalent to getting and setting {{domxref("Node.textContent", "textContent")}} on the {{htmlelement("textarea")}}.
 
 ## Value
 
@@ -16,12 +16,12 @@ A string.
 
 ## Examples
 
-In the example below, even when the text area has been modified by the user, the `defaultValue` still returns the value originally written in the HTML. If `defaultValue` is set, any user input is overwritten.
+In the example below, the `defaultValue` still returns the value originally written in the HTML. If a default value is set, either via HTML or the `defaultValue` property, user input will update the `value` but will not overwrite the `defaultValue`.
 
 ```js
 const textareaElement = document.getElementById("comment");
 console.log(textArea.defaultValue);
-textArea.defaultValue = "This is now the default text";
+textArea.defaultValue = "This is the default text now!";
 ```
 
 ## Specifications

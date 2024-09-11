@@ -8,7 +8,7 @@ browser-compat: api.HTMLTextAreaElement.required
 
 {{ APIRef("HTML DOM") }}
 
-The **`required`** property of the {{DOMxRef("HTMLTextAreaElement")}} interface specifies that the user must fill in a value before submitting a form. It reflects the `<textarea>` element's [`required`](/en-US/docs/Web/HTML/Element/textarea#required) attribute.
+The **`required`** property of the {{DOMxRef("HTMLTextAreaElement")}} interface specifies that the user must fill in a value before submitting a form. It reflects the {{htmlelement("textarea")}} element's [`required`](/en-US/docs/Web/HTML/Element/textarea#required) attribute.
 
 ## Value
 
@@ -33,3 +33,4 @@ console.log(textArea.required);
 
 - {{HTMLElement("textarea")}}
 - {{DOMXref("HTMLTextAreaElement.validity")}}
+- {{cssxref(":required")}} pseudo-class

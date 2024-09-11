@@ -19,7 +19,7 @@ See [`wrap`](/en-US/docs/Web/HTML/Element/textarea#wrap) for the possible values
 ```js
 const textareaElement = document.getElementById("comment");
 const oldWrap = textArea.wrap;
-textArea.wrap = "hard"; // wrap the text at the specified width
+textArea.wrap = "hard"; // Add line breaks (CR+LF) during form submission
 ```
 
 ## Specifications

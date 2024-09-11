@@ -12,13 +12,14 @@ The **`rows`** property of the {{DOMxRef("HTMLTextAreaElement")}} interface is a
 
 ## Value
 
-A positive integer. Defaults to 2.
+A positive integer. Defaults to `2`.
 
 ## Examples
 
 ```js
 const textareaElement = document.getElementById("comment");
-textArea.rows = 20;
+const textLines = textArea.rows;
+textArea.rows = textLines + 2;
 ```
 
 ## Specifications
@@ -34,3 +35,4 @@ textArea.rows = 20;
 - {{HTMLElement("textarea")}}
 - {{DOMXref("HTMLTextAreaElement.cols")}}
 - {{DOMXref("HTMLTextAreaElement.wrap")}}
+- CSS {{cssxref("resize")}} property

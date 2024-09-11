@@ -12,7 +12,7 @@ The **`autocomplete`** property of the {{DOMxRef("HTMLTextAreaElement")}} interf
 
 ## Value
 
-A string that is `"on"`, `"off"`, or the empty string `""` if unspecified.
+A string that is `"on"`, `"off"`, or the empty string `""` if unspecified or set to an invalid value.
 
 ## Examples
 
