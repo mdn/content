@@ -3,12 +3,10 @@ title: "AudioEncoder: configure() method"
 short-title: configure()
 slug: Web/API/AudioEncoder/configure
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.AudioEncoder.configure
 ---
 
-{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_dedicated")}}
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`configure()`** method of the {{domxref("AudioEncoder")}} interface enqueues a control message to configure the audio encoder for encoding chunks.
 

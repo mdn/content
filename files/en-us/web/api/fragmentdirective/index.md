@@ -2,12 +2,10 @@
 title: FragmentDirective
 slug: Web/API/FragmentDirective
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.FragmentDirective
 ---
 
-{{APIRef("URL Fragment Text Directives")}}{{SeeCompatTable}}
+{{APIRef("URL Fragment Text Directives")}}
 
 The **`FragmentDirective`** interface is an object exposed for feature detectability, that is, whether or not a browser supports text fragments.
 
