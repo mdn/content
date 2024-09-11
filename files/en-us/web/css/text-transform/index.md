@@ -66,7 +66,7 @@ text-transform: unset;
 - `full-size-kana`
   - : Generally used for {{htmlelement("ruby")}} annotation text, the keyword converts all small Kana characters to the equivalent full-size Kana, to compensate for legibility issues at the small font sizes typically used in ruby.
 - `math-auto`
-  - : Used to automatically render text in math italic where appropriate. It transforms ASCII and Greek letters to [italic mathematical symbols](https://www.unicode.org/charts/PDF/U1D400.pdf) but only if it's applied on a text node containing a single character. For example, "x" will become "𝑥" (U+1D465), but "exp" will stay as "exp".
+  - : Used to automatically render text in math italic where appropriate. It transforms Latin and Greek letters, and a few other math-related symbols, to [italic mathematical symbols](https://www.unicode.org/charts/PDF/U1D400.pdf) but only if it's applied on a text node containing a single character. For example, "x" will become "𝑥" (U+1D465), but "exp" will stay as "exp".
     It is primarily used to specify the behavior of {{mathmlelement("mi")}} elements in MathML. You should generally use MathML markup which automatically applies the right styling.
 
 ## Accessibility
@@ -460,16 +460,16 @@ p:nth-of-type(2) {
 In this example, we use pure HTML markup to create a math formula:
 
 ```html
-<div class="math">
-  (<span>sin</span>&#8198;<span>x</span>)<sup>2</sup> +
-  (<span>cos</span>&#8198;<span>x</span>)<sup>2</sup> = 1
+<div>
+  (<span class="math-id">sin</span>&#8198;<span class="math-id">x</span>)<sup>2</sup> +
+  (<span class="math-id">cos</span>&#8198;<span class="math-id">x</span>)<sup>2</sup> = 1
 </div>
 ```
 
-We give the whole math container `text-transform: math-auto`. This will be inherited by each child element. However, note how only the `x` characters become italic, while the `sin` and `cos` remain unchanged.
+We give every `.math-id` element `text-transform: math-auto`. However, note how only the `x` characters become italic, while the `sin` and `cos` remain unchanged.
 
 ```css
-.math {
+.math-id {
   text-transform: math-auto;
 }
 ```
