@@ -37,6 +37,8 @@ where:
     If the browser does not conform to the conditions specified in the _supports-condition_, it may not fetch the linked stylesheet, and even if downloaded through some other path, will not load it.
     The syntax of `supports()` is almost identical to that described in {{CSSxRef("@supports")}}, and that topic can be used as a more complete reference.
 
+Use `@import` together with the `layer` keyword or `layer()` function to import external style sheets (from frameworks, widget stylesheets, libraries, etc.) into layers.
+
 ## Description
 
 Imported rules must come before all other types of rules, except {{CSSxRef("@charset")}} rules and layer creating [`@layer`](/en-US/docs/Web/CSS/@layer) statements.

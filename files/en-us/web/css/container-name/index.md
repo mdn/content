@@ -17,6 +17,8 @@ When a containment context is given a name, it can be specifically targeted usin
 ## Syntax
 
 ```css
+container-name: none;
+
 /* A single name */
 container-name: myLayout;
 
@@ -33,13 +35,16 @@ container-name: unset;
 
 ### Values
 
-- `<container-name>`
+- `none`
+
+  - : Default value. The query container has no name.
+
+- {{cssxref("custom-ident")}}
 
   - : A case-sensitive string that is used to identify the container.
-
     The following conditions apply:
 
-    - The name can be any valid {{cssxref("custom-ident")}}, but must not equal `default`.
+    - The name must not equal `or`, `and`, `not`, or `default`.
     - The name value must not be in quotes.
     - The dashed ident intended to denote author-defined identifiers (e.g., `--container-name`) is permitted.
     - A list of multiple names separated by a space is allowed.

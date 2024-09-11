@@ -2157,7 +2157,7 @@ If more function keys are available, their names continue the pattern here by co
       <td><code>VK_F16</code> (0x7F)</td>
       <td><code>kVK_F16</code> (0x6A)</td>
       <td>
-        <code>GDK_KEY_F16</code> (0xFFCD)<br /><code>Qt::Key_F16</code>6
+        <code>GDK_KEY_F16</code> (0xFFCD)<br /><code>Qt::Key_F16</code>
         (0x0100003F)
       </td>
       <td><code>KEYCODE_F16</code></td>

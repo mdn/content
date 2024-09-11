@@ -3,12 +3,10 @@ title: "Document: fragmentDirective property"
 short-title: fragmentDirective
 slug: Web/API/Document/fragmentDirective
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.Document.fragmentDirective
 ---
 
-{{APIRef("URL Fragment Text Directives")}}{{SeeCompatTable}}
+{{APIRef("URL Fragment Text Directives")}}
 
 The **`fragmentDirective`** read-only property of the {{domxref("Document")}} interface returns the {{domxref("FragmentDirective")}} for the current document.
 

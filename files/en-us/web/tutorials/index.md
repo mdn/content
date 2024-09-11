@@ -23,7 +23,7 @@ These resources are created by forward-thinking companies and web developers who
   - : A comprehensive reference for HTML elements, and how the different browsers support them.
 - [Creating a Simple Web Page with HTML](https://www.theblogstarter.com/html-for-beginners/)
   - : An HTML guide for beginners that includes explanations of common tags, including HTML tags. Also includes a step-by-step guide to creating a basic web page with code examples.
-- [HTML Challenges](https://wikiversity.org/wiki/Web_Design/HTML_Challenges)
+- [HTML Challenges](https://en.wikiversity.org/wiki/Web_Design/HTML_Challenges)
   - : Use these challenges to hone your HTML skills (for example, "Should I use an \<h2> element or a \<strong> element?"), focusing on meaningful markup.
 
 ### Intermediate level
@@ -141,4 +141,4 @@ These resources are created by forward-thinking companies and web developers who
 ### Extension Development
 
 - [WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions)
-  - : WebExtensions is a cross-browser system for developing browser add-ons. To a large extent, the system is compatible with the [extension API](https://developer.chrome.com/docs/extensions/reference/) supported by Google Chrome and Opera. Extensions written for these browsers will in most cases run in Firefox or [Microsoft Edge](https://docs.microsoft.com/archive/microsoft-edge/legacy/developer/) with [just a few changes](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/). The API is also fully compatible with [multiprocess Firefox](https://wiki.mozilla.org/Firefox/multiprocess).
+  - : WebExtensions is a cross-browser system for developing browser add-ons. To a large extent, the system is compatible with the [extension API](https://developer.chrome.com/docs/extensions/reference/) supported by Google Chrome and Opera. Extensions written for these browsers will in most cases run in Firefox or [Microsoft Edge](https://learn.microsoft.com/en-us/archive/microsoft-edge/legacy/developer/) with [just a few changes](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/). The API is also fully compatible with [multiprocess Firefox](https://wiki.mozilla.org/Firefox/multiprocess).

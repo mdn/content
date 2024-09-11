@@ -3,12 +3,10 @@ title: "AudioData: clone() method"
 short-title: clone()
 slug: Web/API/AudioData/clone
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.AudioData.clone
 ---
 
-{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}{{SeeCompatTable}}
+{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`clone()`** method of the {{domxref("AudioData")}} interface creates a new `AudioData` object with reference to the same media resource as the original.
 

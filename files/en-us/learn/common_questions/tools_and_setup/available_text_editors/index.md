@@ -277,7 +277,7 @@ Here are some popular editors:
       <td>$50</td>
       <td>Mac</td>
       <td>
-        <a href="https://twitter.com/macromates">Twitter</a>,
+        <a href="https://x.com/macromates">Twitter</a>,
         <a href="https://webchat.freenode.net/?channels=textmate">IRC</a>,
         <a href="https://lists.macromates.com/postorius/lists/textmate.lists.macromates.com/" rel="external"
           >Mailing list</a
