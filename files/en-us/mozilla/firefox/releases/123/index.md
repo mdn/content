@@ -67,8 +67,6 @@ The `IDBLocaleAwareKeyRange` interface has been removed ([Firefox bug 1730706](h
 
 #### Marionette
 
-- Addition of fhe {{WebExtAPIRef("contextualIdentities.move")}} function enables items to be moved in the list of contextual identities. This function enables extensions to customize the order in which contextual identities display in the UI ([Firefox bug 1333395](https://bugzil.la/1333395)).
-- The {{domxref("PointerEvent.getCoalescedEvents()")}} method (which was restricted to use in secure contexts only in Firefox 120 ([Firefox bug 1858434](https://bugzil.la/1858434))) is now available for use by extensions in all contexts [Firefox bug 1870498](https://bugzil.la/1870498)).
 - Fixed a bug with [Element Send Keys](https://w3c.github.io/webdriver/#element-send-keys) where sending text containing surrogate pairs would fail ([Firefox bug 1866431](https://bugzil.la/1866431)).
 
 ## Changes for add-on developers
