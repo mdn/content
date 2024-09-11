@@ -28,8 +28,7 @@ getElementsByTagNameNS(namespace, name)
 
 ### Return value
 
-A live {{DOMxRef("HTMLCollection")}} (but see the note below) of
-found elements in the order they appear in the tree.
+A live {{DOMxRef("HTMLCollection")}} of found elements in the order they appear in the tree.
 
 > [!NOTE]
 > Currently parameters in this method are case-sensitive, but they were case-insensitive in Firefox 3.5 and before.
