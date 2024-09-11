@@ -20,19 +20,17 @@ getElementsByTagNameNS(namespace, name)
 ### Parameters
 
 - `namespace`
-  - : The namespace URI of elements to look for (see
-    {{domxref("Element.namespaceURI", "element.namespaceURI")}}).
+  - : The namespace URI of elements to look for (see {{domxref("Element.namespaceURI", "element.namespaceURI")}}).
 - `name`
-  - : Either the local name of elements to look for or the special
-    value `*`, which matches all elements (see {{domxref("Element.localName", "element.localName")}}).
+
+  - : Either the local name of elements to look for or the special value `*`, which matches all elements (see {{domxref("Element.localName", "element.localName")}}).
+
+    > [!NOTE]
+    > Unlike {{domxref("document.getElementsByTagName()")}}, the parameters for `getElementsByTagNameNS()` are case-sensitive.
 
 ### Return value
 
 A live {{DOMxRef("HTMLCollection")}} of found elements in the order they appear in the tree.
-
-> [!NOTE]
-> Currently parameters in this method are case-sensitive, but they were case-insensitive in Firefox 3.5 and before.
-> See the [developer release note for Firefox 3.6](/en-US/docs/Mozilla/Firefox/Releases/3.6#dom) and a note in Browser compatibility section in {{domxref("Element.getElementsByTagNameNS")}} for details.
 
 ## Examples
 
