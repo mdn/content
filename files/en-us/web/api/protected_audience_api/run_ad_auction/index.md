@@ -85,7 +85,7 @@ The option properties as follows:
 - `perBuyerTimeouts`
   - : A sequence of record types, with the structure `(id, value)`, representing the maximum allowable runtime in milliseconds of each buyer's `generateBid()` script. The sequence behaves like an [ordered map](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map): In each case, the `id` is a string containing the URL of the group owner, and the `value` is a number representing their timeout value. If a value is not specified, the default 50ms is used. The maximum allowed buyer timeout is 500ms — higher values will be clamped to this maximum.
 - `resolveToConfig`
-  - : A boolean value; if set to `true`, the `runAdAuction()` call will fulfill with a `FencedFrameConfig` object containing the required information for displaying the winning ad in a `<fencedframe>`. If set to false, the `runAdAuction()` call will fulfill with an opaque [URN](/en-US/docs/Web/URI#urns) containing the required information for displaying the winning ad in an `<iframe>`.
+  - : A boolean value; if set to `true`, the `runAdAuction()` call will fulfill with a `FencedFrameConfig` object containing the required information for displaying the winning ad in a `<fencedframe>`. If set to `false`, the `runAdAuction()` call will fulfill with an opaque [URN](/en-US/docs/Web/URI#urns) containing the required information for displaying the winning ad in an `<iframe>`.
 
 > [!NOTE]
 > This example contains a limited subset of the available properties. For more information, see the {{domxref("Navigator.runAdAuction()")}} reference page.

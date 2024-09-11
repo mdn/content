@@ -97,7 +97,7 @@ When auctions complete, and ads are chosen, {{htmlelement("fencedframe")}} eleme
 - {{domxref("HTMLIFrameElement.adAuctionHeaders")}}
   - : Allows `DirectFromSellerSignals` to be sent via an {{httpheader("Ad-Auction-Signals")}} header, or additional bids to be sent via an {{httpheader("Ad-Auction-Additional-Bid")}} header, in response to an {{htmlelement("iframe")}} navigation. Echoes the value of the `adAuctionHeaders` attribute.
 - {{domxref("Navigator.canLoadAdAuctionFencedFrame()")}}
-  - : Returns a boolean value that indicates whether an ad auction-created {{htmlelement("fencedframe")}} is allowed to be loaded in the current browsing context.
+  - : Returns a boolean value that indicates whether an ad auction-created {{htmlelement("fencedframe")}} can be loaded in the current browsing context.
 - {{domxref("Navigator.clearOriginJoinedAdInterestGroups()")}}
   - : Requests the user's browser to leave all interest groups that were previously joined on the current top-level frame's origin.
 - {{domxref("Navigator.createAuctionNonce()")}}
