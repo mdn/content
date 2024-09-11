@@ -8,7 +8,11 @@ browser-compat: api.HTMLButtonElement.willValidate
 
 {{APIRef("HTML DOM")}}
 
-The **`willValidate`** read-only property of the {{domxref("HTMLButtonElement")}} interface indicates whether the button is a candidate for [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). It is `false` if any conditions bar it from constraint validation, including: its {{domxref("HTMLButtonElement.type", "type")}} is `reset` or `button`; it has a {{HTMLElement("datalist")}} ancestor; or the {{domxref("HTMLButtonElement.disabled", "disabled")}} property is set to `true`.
+The **`willValidate`** read-only property of the {{domxref("HTMLButtonElement")}} interface indicates whether the {{htmlelement("button")}} element is a candidate for [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). It is `false` if any conditions bar it from constraint validation, including:
+
+- Its {{domxref("HTMLButtonElement.type", "type")}} is `reset` or `button`;
+- It has a {{HTMLElement("datalist")}} ancestor;
+- The {{domxref("HTMLButtonElement.disabled", "disabled")}} property is `true`.
 
 ## Value
 

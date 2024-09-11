@@ -8,7 +8,11 @@ browser-compat: api.HTMLInputElement.willValidate
 
 {{APIRef("HTML DOM")}}
 
-The **`willValidate`** read-only property of the {{domxref("HTMLInputElement")}} interface indicates whether the element is a candidate for [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). It is `false` if any conditions bar it from constraint validation, including: its {{domxref("HTMLInputElement.type", "type")}} is one of `hidden`, `reset` or `button`; it has a {{HTMLElement("datalist")}} ancestor; or its {{domxref("HTMLInputElement.disabled", "disabled")}} property is `true`.
+The **`willValidate`** read-only property of the {{domxref("HTMLInputElement")}} interface indicates whether the {{htmlelement("input")}} element is a candidate for [constraint validation](/en-US/docs/Web/HTML/Constraint_validation). It is `false` if any conditions bar it from constraint validation, including:
+
+- Its {{domxref("HTMLInputElement.type", "type")}} is one of `hidden`, `reset` or `button`;
+- It has a {{HTMLElement("datalist")}} ancestor;
+- Its {{domxref("HTMLInputElement.disabled", "disabled")}} property is `true`.
 
 ## Value
 
