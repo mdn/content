@@ -34,3 +34,4 @@ textArea.cols = 80;
 - {{HTMLElement("textarea")}}
 - {{DOMXref("HTMLTextAreaElement.rows")}}
 - {{DOMXref("HTMLTextAreaElement.wrap")}}
+- CSS {{cssxref("resize")}} property
