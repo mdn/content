@@ -8,14 +8,12 @@ status:
 browser-compat: api.WebTransportSendStream.getStats
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{securecontext_header}}
+{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{securecontext_header}} {{AvailableInWorkers}}
 
 The **`getStats()`** method of the {{domxref("WebTransportSendStream")}} interface asynchronously returns an object containing statistics for the current stream.
 
 The statistics include the total number of bytes written to the stream, the number that have been sent (ignoring packet overhead), and the number of bytes that have been set at least once, and the number that have been acknowledged (up until the first sequentially-ordered non-acknowledged byte).
 It therefore provides a measure of how quickly the application is sending bytes to the server on this particular stream.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 

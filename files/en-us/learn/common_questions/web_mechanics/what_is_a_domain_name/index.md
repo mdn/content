@@ -68,7 +68,7 @@ Each of those parts provides specific information about the whole domain name.
 
     The label located right before the TLD is also called a _Secondary Level Domain_ (SLD).
 
-    A domain name can have many labels (or components). It is not mandatory nor necessary to have 3 labels to form a domain name. For instance, www\.inf.ed.ac.uk is a valid domain name. For any domain you control (e.g. [mozilla.org](https://www.mozilla.org/en-US/)), you can create "subdomains" with different content located at each, like [developer.mozilla.org](/), [iot.mozilla.org](https://iot.mozilla.org/), or [bugzilla.mozilla.org](https://bugzilla.mozilla.org).
+    A domain name can have many labels (or components). It is not mandatory nor necessary to have 3 labels to form a domain name. For instance, [informatics.ed.ac.uk](https://informatics.ed.ac.uk/) is a valid domain name. For any domain you control (e.g. [mozilla.org](https://www.mozilla.org/en-US/)), you can create "subdomains" with different content located at each, like [developer.mozilla.org](/), [support.mozilla.org](https://support.mozilla.org/), or [bugzilla.mozilla.org](https://bugzilla.mozilla.org/).
 
 ### Buying a domain name
 
@@ -80,7 +80,8 @@ Instead, you pay for the right to use a domain name for one or more years. You c
 
 Companies called registrars use domain name registries to keep track of technical and administrative information connecting you to your domain name.
 
-> **Note:** For some domain name, it might not be a registrar which is in charge of keeping track. For instance, every domain name under `.fire` is managed by Amazon.
+> [!NOTE]
+> For some domain name, it might not be a registrar which is in charge of keeping track. For instance, every domain name under `.fire` is managed by Amazon.
 
 #### Finding an available domain name
 
@@ -144,7 +145,8 @@ The process is quite straightforward:
 3. Fill out the form with all required details. Make sure, especially, that you have not misspelled your desired domain name. Once it's paid for, it's too late!
 4. The registrar will let you know when the domain name is properly registered. Within a few hours, all DNS servers will have received your DNS information.
 
-> **Note:** In this process the registrar asks you for your real-world address. Make sure you fill it properly, since in some countries registrars may be forced to close the domain if they cannot provide a valid address.
+> [!NOTE]
+> In this process the registrar asks you for your real-world address. Make sure you fill it properly, since in some countries registrars may be forced to close the domain if they cannot provide a valid address.
 
 #### DNS refreshing
 

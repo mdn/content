@@ -1,6 +1,6 @@
 ---
 title: Ending a call
-slug: Web/API/WebRTC_API/build_a_phone_with_peerjs/connect_peers/End_a_call
+slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/End_a_call
 page-type: guide
 ---
 
@@ -32,8 +32,10 @@ You've nearly finished! The last thing you want to do is ensure your callers hav
 
 3. Test out your app again, and try closing a call.
 
-> **Note:** The `on('close')` event that is called on the `conn` variable isn't available in Firefox yet; this just means that in Firefox each caller will have to hang up individually.
+> [!NOTE]
+> The `on('close')` event that is called on the `conn` variable isn't available in Firefox yet; this just means that in Firefox each caller will have to hang up individually.
 
-> **Warning:** The way we've currently coded things means that when a connection is closed, both browsers will be updated **only** if the person who started the call presses "Hang up" first. If the person who answered the call clicks "Hang up" first, the other caller will also have to click "Hang up" to see the correct HTML.
+> [!WARNING]
+> The way we've currently coded things means that when a connection is closed, both browsers will be updated **only** if the person who started the call presses "Hang up" first. If the person who answered the call clicks "Hang up" first, the other caller will also have to click "Hang up" to see the correct HTML.
 
 {{PreviousMenuNext("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Answer_a_call", "Web/API/WebRTC_API/Build_a_phone_with_peerjs/Deployment_and_further_reading")}}

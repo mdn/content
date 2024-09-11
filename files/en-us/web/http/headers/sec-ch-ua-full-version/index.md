@@ -9,7 +9,8 @@ browser-compat: http.headers.Sec-CH-UA-Full-Version
 
 {{HTTPSidebar}}{{Deprecated_Header}}{{SecureContext_Header}}
 
-> **Note:** This is being replaced by the {{HTTPHeader("Sec-CH-UA-Full-Version-List")}}.
+> [!NOTE]
+> This is being replaced by the {{HTTPHeader("Sec-CH-UA-Full-Version-List")}}.
 
 The **`Sec-CH-UA-Full-Version`** [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) request header provides the user-agent's full version string.
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Cache.matchAll
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`matchAll()`** method of the {{domxref("Cache")}}
 interface returns a {{jsxref("Promise")}} that resolves to an array of all matching
@@ -85,4 +85,4 @@ caches.open("v1").then((cache) => {
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - {{domxref("Cache")}}
-- {{domxref("caches")}}
+- {{domxref("Window.caches")}} and {{domxref("WorkerGlobalScope.caches")}}

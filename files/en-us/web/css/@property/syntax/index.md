@@ -25,7 +25,7 @@ syntax: "*"; /* any valid token */
 
 ## Values
 
-A string with a supported syntax as defined by the specification. Supported syntaxes are a subset of [CSS types](/en-US/docs/Web/CSS/CSS_Types). These may be used along, or a number of types can be used in combination.
+A string with a supported syntax as defined by the specification. Supported syntaxes are a subset of [CSS types](/en-US/docs/Web/CSS/CSS_Types). These may be used alone, or a number of types can be used in combination.
 
 - `"<length>"`
   - : Any valid {{cssxref("&lt;length&gt;")}} values.
@@ -40,7 +40,7 @@ A string with a supported syntax as defined by the specification. Supported synt
 - `"<image>"`
   - : Any valid {{cssxref("&lt;image&gt;")}} values.
 - `"<url>"`
-  - : Any valid {{cssxref("url","url()")}} values.
+  - : Any valid {{cssxref("url_value", "&lt;url&gt;")}} values.
 - `"<integer>"`
   - : Any valid {{cssxref("&lt;integer&gt;")}} values.
 - `"<angle>"`
@@ -66,7 +66,7 @@ A string with a supported syntax as defined by the specification. Supported synt
 
 ## Examples
 
-Add type checking to `--my-color` {{cssxref('--*', 'custom property')}}, using the `<color>` syntax:
+Add type checking to `--my-color` [custom property](/en-US/docs/Web/CSS/--*), using the `<color>` syntax:
 
 Using [CSS](/en-US/docs/Web/CSS) {{cssxref('@property')}} [at-rule](/en-US/docs/Web/CSS/At-rule):
 
@@ -102,4 +102,4 @@ window.CSS.registerProperty({
 - [CSS Properties and Values API](/en-US/docs/Web/API/CSS_Properties_and_Values_API)
 - [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API)
 - [CSS Typed Object Model](/en-US/docs/Web/API/CSS_Typed_OM_API)
-- [CSS Houdini](/en-US/docs/Web/API/Houdini)
+- [Houdini APIs](/en-US/docs/Web/API/Houdini_APIs)

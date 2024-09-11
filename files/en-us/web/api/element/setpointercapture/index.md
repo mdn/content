@@ -15,16 +15,7 @@ be targeted at the capture element until capture is released (via
 {{domxref("Element.releasePointerCapture()")}} or the
 {{domxref("Element/pointerup_event", "pointerup")}} event is fired).
 
-> **Note:** Pointer capture will cause the target to capture all subsequent pointer events as if they were occurring over the capturing target. Accordingly, `pointerover`, `pointerenter`, `pointerleave`, and `pointerout` **will not fire** as long as this capture is set.
-> For touchscreen browsers that allow [direct manipulation](https://w3c.github.io/pointerevents/#dfn-direct-manipulation), an [implicit pointer capture](https://w3c.github.io/pointerevents/#dfn-implicit-pointer-capture) will be called on the element when a `pointerdown` event triggers. The capture can be released manually by calling {{domxref('element.releasePointerCapture')}} on the target element, or it will be implicitly released after a `pointerup` or `pointercancel` event.
-
-### Overview of pointer capture
-
-_Pointer capture_ allows events for a particular _pointer event_
-({{domxref("PointerEvent")}}) to be re-targeted to a particular element instead of the
-normal (or _hit test_) target at a pointer's location. This can be used to ensure
-that an element continues to receive pointer events even if the pointer device's contact
-moves off the element (such as by scrolling or panning).
+See [pointer events](/en-US/docs/Web/API/Pointer_events#pointer_capture) for an overview and examples of how pointer capture works.
 
 ## Syntax
 
@@ -111,4 +102,4 @@ slider.onpointerup = stopSliding;
 
 - {{domxref("Element.hasPointerCapture","Element.hasPointerCapture()")}}
 - {{domxref("Element.releasePointerCapture","Element.releasePointerCapture()")}}
-- {{domxref("Pointer_events","Pointer Events")}}
+- [Pointer events](/en-US/docs/Web/API/Pointer_events)

@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.captivePortal.onStateChanged
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fires when the captive portal state changes.
 

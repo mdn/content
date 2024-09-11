@@ -21,6 +21,7 @@ It clones by recursing through the input object while maintaining a map of previ
   - Property descriptors, setters, getters, and similar metadata-like features are not duplicated.
     For example, if an object is marked readonly with a [property descriptor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor), it will be read/write in the duplicate, since that's the default.
   - The prototype chain is not walked or duplicated.
+  - [Class private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) are not duplicated. (Although private properties of built-in types may.)
 
 ## Supported types
 

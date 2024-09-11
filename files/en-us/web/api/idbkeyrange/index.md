@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.IDBKeyRange
 ---
 
-{{APIRef("IndexedDB")}}
+{{APIRef("IndexedDB")}} {{AvailableInWorkers}}
 
 The **`IDBKeyRange`** interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) represents a continuous interval over some data type that is used for keys. Records can be retrieved from {{domxref("IDBObjectStore")}} and {{domxref("IDBIndex")}} objects using keys or a range of keys. You can limit the range using lower and upper bounds. For example, you can iterate over all values of a key in the value range A–Z.
 
@@ -36,8 +36,6 @@ A key is in a key range if the following conditions are true:
   - `undefined`
   - Greater than key value
   - Equal to key value if `upperOpen` is `false`.
-
-{{AvailableInWorkers}}
 
 ## Instance properties
 
@@ -71,7 +69,8 @@ A key is in a key range if the following conditions are true:
 The following example illustrates how you'd use a key range. Here we declare a `keyRangeValue` as a range between values of `"A"` and `"F"`. We open a transaction (using {{domxref("IDBTransaction")}}) and an object store, and open a cursor with {{domxref("IDBObjectStore.openCursor")}}, declaring `keyRangeValue` as its optional key range value. This means that the cursor will only retrieve records with keys inside that range. This range includes the values `"A"` and `"F"`, as we haven't declared that they should be open bounds.
 If we used `IDBKeyRange.bound("A", "F", true, true);`, then the range would not include `"A"` and `"F"`, only the values between them.
 
-> **Note:** For a more complete example allowing you to experiment with key range, have a look at our [IDBKeyRange-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange) repo ([view the example live too](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/).)
+> [!NOTE]
+> For a more complete example allowing you to experiment with key range, have a look at our [IDBKeyRange-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange) repo ([view the example live too](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/).)
 
 ```js
 function displayData() {
@@ -108,7 +107,6 @@ function displayData() {
 - [Using IndexedDB](/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - Starting transactions: {{domxref("IDBDatabase")}}
 - Using transactions: {{domxref("IDBTransaction")}}
-- Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
 - Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

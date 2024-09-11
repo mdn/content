@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.permissions.onRemoved
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when some permissions are removed from the extension.
 
@@ -54,4 +54,5 @@ browser.permissions.onRemoved.addListener(handleRemoved);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.permissions`](https://developer.chrome.com/docs/extensions/reference/permissions/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.permissions`](https://developer.chrome.com/docs/extensions/reference/api/permissions) API.

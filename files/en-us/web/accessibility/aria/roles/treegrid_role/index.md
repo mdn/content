@@ -7,6 +7,8 @@ spec-urls:
   - https://www.w3.org/WAI/ARIA/apg/patterns/treegrid/examples/treegrid-1/
 ---
 
+{{AccessibilitySidebar}}
+
 The `treegrid` role identifies an element as being grid whose rows can be expanded and collapsed in the same manner as for a `tree`.
 
 ## Description
@@ -151,12 +153,4 @@ It is important for all cells to be able to receive or contain keyboard focus be
 
 {{Specifications}}
 
-## See Also
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>
+## See also

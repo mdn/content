@@ -13,7 +13,8 @@ browser-compat: api.VREyeParameters.renderWidth
 
 The **`renderWidth`** read-only property of the {{domxref("VREyeParameters")}} interface describes the recommended render target width of each eye viewport, in pixels.
 
-> **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
+> [!NOTE]
+> This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
 This is already in device pixel units, so there's no need to multiply by [Window.devicePixelRatio](/en-US/docs/Web/API/Window/devicePixelRatio) before setting to [HTMLCanvasElement.width.](/en-US/docs/Web/API/HTMLCanvasElement/width)
 

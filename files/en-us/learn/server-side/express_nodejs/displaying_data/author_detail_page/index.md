@@ -4,6 +4,8 @@ slug: Learn/Server-side/Express_Nodejs/Displaying_data/Author_detail_page
 page-type: learn-module-chapter
 ---
 
+{{LearnSidebar}}
+
 The author detail page needs to display the information about the specified `Author`, identified using their (automatically generated) `_id` field value, along with a list of all the `Book` objects associated with that `Author`.
 
 ## Controller
@@ -61,7 +63,7 @@ block content
 
   div(style='margin-left:20px;margin-top:20px')
 
-    h4 Books
+    h2(style='font-size: 1.5rem;') Books
     if author_books.length
       dl
         each book in author_books
@@ -80,7 +82,8 @@ Run the application and open your browser to `http://localhost:3000/`. Select th
 
 ![Author Detail Page - Express Local Library site](locallibary_express_author_detail.png)
 
-> **Note:** The appearance of the author _lifespan_ dates is ugly! We'll address that in the final challenge in this article.
+> [!NOTE]
+> The appearance of the author _lifespan_ dates is ugly! We'll address that in the final challenge in this article.
 
 ## Next steps
 

@@ -59,7 +59,8 @@ You might think that vector images would solve these problems, and they do to a 
 
 This kind of problem didn't exist when the web first existed, in the early to mid 90s — back then the only devices in existence to browse the Web were desktops and laptops, so browser engineers and spec writers didn't even think to implement solutions. _Responsive image technologies_ were implemented recently to solve the problems indicated above by letting you offer the browser several image files, either all showing the same thing but containing different numbers of pixels (_resolution switching_), or different images suitable for different space allocations (_art direction_).
 
-> **Note:** The new features discussed in this article — [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset)/[`sizes`](/en-US/docs/Web/HTML/Element/img#sizes)/{{htmlelement("picture")}} — are all supported in modern desktop and mobile browsers.
+> [!NOTE]
+> The new features discussed in this article — [`srcset`](/en-US/docs/Web/HTML/Element/img#srcset)/[`sizes`](/en-US/docs/Web/HTML/Element/img#sizes)/{{htmlelement("picture")}} — are all supported in modern desktop and mobile browsers.
 
 ## How do you create responsive images?
 
@@ -106,7 +107,8 @@ The `srcset` and `sizes` attributes look complicated, but they're not too hard t
 2. A space
 3. The **width of the slot** the image will fill when the media condition is true (`480px`)
 
-> **Note:** For the slot width, rather than providing an absolute width (for example, `480px`), you can alternatively provide a width relative to the viewport (for example, `50vw`) — but not a percentage. You may have noticed that the last slot width has no media condition (this is the default that is chosen when none of the media conditions are true). The browser ignores everything after the first matching condition, so be careful how you order the media conditions.
+> [!NOTE]
+> In `sizes`, you can use any [length value](/en-US/docs/Web/CSS/length). For example, rather than providing an absolute width (for example, `480px`), you can alternatively provide a width relative to the viewport (for example, `50vw`). However, you cannot use a percentage as the slot width. You may have noticed that the last slot width has no media condition (this is the default that is chosen when none of the media conditions are true). The browser ignores everything after the first matching condition, so be careful how you order the media conditions.
 
 So, with these attributes in place, the browser will:
 
@@ -117,17 +119,21 @@ So, with these attributes in place, the browser will:
 
 And that's it! At this point, if a supporting browser with a viewport width of 480px loads the page, the `(max-width: 600px)` media condition will be true, and so the browser chooses the `480px` slot. The `elva-fairy-480w.jpg` will be loaded, as its inherent width (`480w`) is closest to the slot size. The 800px picture is 128KB on disk, whereas the 480px version is only 63KB — a saving of 65KB. Now, imagine if this was a page that had many pictures on it. Using this technique could save mobile users a lot of bandwidth.
 
-> **Note:** When testing this with a desktop browser, if the browser fails to load the narrower images when you've got its window set to the narrowest width, have a look at what the viewport is (you can approximate it by going into the browser's JavaScript console and typing in `document.querySelector('html').clientWidth`). Different browsers have minimum sizes that they'll let you reduce the window width to, and they might be wider than you'd think. When testing it with a mobile browser, you can use tools like Firefox's `about:debugging` page to inspect the page loaded on the mobile using the desktop developer tools.
+> [!NOTE]
+> When testing this with a desktop browser, if the browser fails to load the narrower images when you've got its window set to the narrowest width, have a look at what the viewport is (you can approximate it by going into the browser's JavaScript console and typing in `document.querySelector('html').clientWidth`). Different browsers have minimum sizes that they'll let you reduce the window width to, and they might be wider than you'd think. When testing it with a mobile browser, you can use tools like Firefox's `about:debugging` page to inspect the page loaded on the mobile using the desktop developer tools.
 >
 > To see which images were loaded, you can use Firefox DevTools's [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) tab or Chrome DevTools's [Network](https://developer.chrome.com/docs/devtools/network/) panel. For Chrome, you may also want to [disable cache](https://stackoverflow.com/a/7000899/13725861) to prevent it from picking already downloaded images.
 
 Older browsers that don't support these features will just ignore them. Instead, those browsers will go ahead and load the image referenced in the [`src`](/en-US/docs/Web/HTML/Element/img#src) attribute as normal.
 
-> **Note:** In the {{htmlelement("head")}} of the example linked above, you'll find the line `<meta name="viewport" content="width=device-width">`: this forces mobile browsers to adopt their real viewport width for loading web pages (some mobile browsers lie about their viewport width, and instead load pages at a larger viewport width then shrink the loaded page down, which is not very helpful for responsive images or design).
+> [!NOTE]
+> In the {{htmlelement("head")}} of the example linked above, you'll find the line `<meta name="viewport" content="width=device-width">`: this forces mobile browsers to adopt their real viewport width for loading web pages (some mobile browsers lie about their viewport width, and instead load pages at a larger viewport width then shrink the loaded page down, which is not very helpful for responsive images or design).
 
 ### Resolution switching: Same size, different resolutions
 
-If you're supporting multiple display resolutions, but everyone sees your image at the same real-world size on the screen, you can allow the browser to choose an appropriate resolution image by using `srcset` with x-descriptors and without `sizes` — a somewhat easier syntax! You can find an example of what this looks like in [srcset-resolutions.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html) (see also [the source code](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html)):
+Suppose you have an image that will be rendered at the same real-world size on displays that have different screen resolutions. You can provide a better user experience on high resolution displays by serving a higher resolution version of the image.
+
+To achieve this you can allow the browser to choose an appropriate resolution image by using `srcset` with x-descriptors and without `sizes` — a somewhat easier syntax! You can find an example of what this looks like in [srcset-resolutions.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html) (see also [the source code](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html)):
 
 ```html
 <img
@@ -136,7 +142,11 @@ If you're supporting multiple display resolutions, but everyone sees your image 
   alt="Elva dressed as a fairy" />
 ```
 
-![A picture of a little girl dressed up as a fairy, with an old camera film effect applied to the image](resolution-example.png)In this example, the following CSS is applied to the image so that it will have a width of 320 pixels on the screen (also called CSS pixels):
+Note that even though the image is always displayed with the same size, on higher resolution displays you get to see more details.
+
+![A picture of a little girl dressed up as a fairy, with an old camera film effect applied to the image](resolution-example.png)
+
+In this example, the following CSS is applied to the image so that it will have a width of 320 pixels on the screen (also called CSS pixels):
 
 ```css
 img {
@@ -174,7 +184,8 @@ This code allows us to display a suitable image on both wide screen and narrow s
 
 ![Our example site as viewed on a wide screen - here the first image works OK, as it is big enough to see the detail in the center.](picture-element-wide.png)![Our example site as viewed on a narrow screen with the picture element used to switch the first image to a portrait close up of the detail, making it a lot more useful on a narrow screen](picture-element-narrow.png)
 
-> **Note:** You should use the `media` attribute only in art direction scenarios; when you do use `media`, don't also offer media conditions within the `sizes` attribute.
+> [!NOTE]
+> You should use the `media` attribute only in art direction scenarios; when you do use `media`, don't also offer media conditions within the `sizes` attribute.
 
 ### Why can't we just do this using CSS or JavaScript?
 

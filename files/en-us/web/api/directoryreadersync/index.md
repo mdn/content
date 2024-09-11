@@ -12,7 +12,8 @@ browser-compat: api.DirectoryReaderSync
 
 The `DirectoryReaderSync` interface lets you read the entries in a directory.
 
-> **Warning:** This interface is deprecated and is no more on the standard track.
+> [!WARNING]
+> This interface is deprecated and is no more on the standard track.
 > _Do not use it anymore._ Use the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) instead.
 
 ## Basic concepts
@@ -106,13 +107,13 @@ Returns a list of entries from a specific directory. Call this method until an e
 readEntries()
 ```
 
+##### Parameters
+
+None.
+
 ##### Return value
 
-Array containing [`FileEntrySync`](/en-US/docs/Web/API/FileEntrySync) and [`DirectoryEntrySync`](/en-US/docs/Web/API/DirectoryEntrySync)
-
-##### Parameter
-
-None
+Array containing [`FileEntrySync`](/en-US/docs/Web/API/FileEntrySync) and [`DirectoryEntrySync`](/en-US/docs/Web/API/DirectoryEntrySync).
 
 ##### Exceptions
 

@@ -19,18 +19,24 @@ _Also inherits properties from its parent, {{DOMxRef("Element")}}._
   - : A string representing the access key assigned to the element.
 - {{DOMxRef("HTMLElement.accessKeyLabel")}} {{ReadOnlyInline}}
   - : Returns a string containing the element's assigned access key.
+- {{DOMxRef("HTMLElement.anchorElement")}} {{ReadOnlyInline}}&nbsp;{{non-standard_inline}} {{experimental_inline}}
+  - : Returns a reference to the element's anchor element, or `null` if it doesn't have one.
 - {{DOMxRef("HTMLElement.attributeStyleMap")}} {{ReadOnlyInline}}
   - : A {{DOMxRef("StylePropertyMap")}} representing the declarations of the element's [`style`](/en-US/docs/Web/HTML/Global_attributes#style) attribute.
+- {{domxref("HTMLElement.autocapitalize", "autocapitalize")}}
+  - : A string that represents the element's capitalization behavior for user input. Valid values are: `none`, `off`, `on`, `characters`, `words`, `sentences`.
 - {{domxref("HTMLElement.autofocus")}}
   - : A boolean value reflecting the [`autofocus`](/en-US/docs/Web/HTML/Element/select#autofocus) HTML global attribute, which indicates whether the control should be focused when the page loads, or when dialog or popover become shown if specified in an element inside {{htmlelement("dialog")}} elements or elements whose popover attribute is set.
 - {{DOMxRef("HTMLElement.contentEditable")}}
   - : A string, where a value of `true` means the element is editable and a value of `false` means it isn't.
 - {{DOMxRef("HTMLElement.dataset")}} {{ReadOnlyInline}}
-  - : Returns a {{DOMxRef("DOMStringMap")}} with which script can read and write the element's [custom data attributes](/en-US/docs/Learn/HTML/Howto/Use_data_attributes) (`data-*`) .
+  - : Returns a {{DOMxRef("DOMStringMap")}} with which script can read and write the element's [custom data attributes](/en-US/docs/Learn/HTML/Howto/Use_data_attributes) (`data-*`).
 - {{DOMxRef("HTMLElement.dir")}}
   - : A string, reflecting the `dir` global attribute, representing the directionality of the element. Possible values are `"ltr"`, `"rtl"`, and `"auto"`.
 - {{DOMxRef("HTMLElement.draggable")}}
   - : A boolean value indicating if the element can be dragged.
+- {{DOMxRef("HTMLElement.editContext")}} {{experimental_inline}}
+  - : Returns the {{DOMxRef("EditContext")}} associated with the element, or `null` if there isn't one.
 - {{DOMxRef("HTMLElement.enterKeyHint")}}
   - : A string defining what action label (or icon) to present for the enter key on virtual keyboards.
 - {{DOMxRef("HTMLElement.hidden")}}

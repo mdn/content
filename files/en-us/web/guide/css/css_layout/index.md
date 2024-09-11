@@ -89,7 +89,7 @@ CSS Grid Layout introduces a two-dimensional grid system to CSS. Grids can be us
   - : Using grid to build some common layouts.
 - [Subgrid](/en-US/docs/Web/CSS/CSS_grid_layout/Subgrid)
   - : An explanation of the subgrid value, part of Grid Level 2.
-- [Masonry Layout](/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout) {{experimental_inline}}
+- [Masonry Layout](/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout)
   - : An explanation of the masonry layout feature in Grid Level 3.
 
 ## Alignment

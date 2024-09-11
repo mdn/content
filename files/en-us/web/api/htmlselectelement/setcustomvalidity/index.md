@@ -21,7 +21,8 @@ setCustomValidity(string)
 
 ### Parameters
 
-- `string` is the string containing the error message.
+- `string`
+  - : The string containing the error message.
 
 ### Return value
 

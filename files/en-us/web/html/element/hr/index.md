@@ -72,7 +72,7 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>It must have start tag, but must not have an end tag.</td>
+      <td>Must have a start tag and must not have an end tag.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
@@ -111,4 +111,4 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
 ## See also
 
 - {{HTMLElement('p')}}
-- [`<hr>` in `<select>`](/en-US/docs/Web/HTML/Element/select#hr_in_select)
+- [`<hr>` in `<select>`](/en-US/docs/Web/HTML/Element/select#select_with_grouping_options)

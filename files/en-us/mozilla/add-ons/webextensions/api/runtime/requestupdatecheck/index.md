@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.runtime.requestUpdateCheck
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Checks to see if an update for the extension is available.
 
@@ -62,7 +62,8 @@ requestingCheck.then(onRequested, onError);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#method-requestUpdateCheck) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#method-requestUpdateCheck) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

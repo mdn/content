@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.alarms.onAlarm
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when any alarm set by the extension goes off.
 
@@ -55,4 +55,5 @@ browser.alarms.onAlarm.addListener(handleAlarm);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/alarms/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/api/alarms) API.

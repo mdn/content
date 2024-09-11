@@ -18,7 +18,7 @@ CSS conditional rules now include feature queries; the `@supports` at-rule enabl
 
 The CSS conditional rules module also expands `@media` to enable nesting at-rules, with the related [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) module removing unused media types and adding many media features and conditions that can be targeted.
 
-The [CSS container queries module](/en-US/docs/Web/CSS/CSS_container_queries) defines similar conditional rules, but based on an element's parent rather than the viewport.
+The [CSS container queries module](/en-US/docs/Web/CSS/CSS_containment/Container_queries) defines similar conditional rules, but based on an element's parent rather than the viewport.
 
 There are plans to further extend possible queries by adding the generalized conditional rule `@when` and the chained conditional rule `@else`. These two at-rules are not yet supported.
 
@@ -29,7 +29,8 @@ There are plans to further extend possible queries by adding the generalized con
 - {{cssxref("@media")}}
 - {{cssxref("@supports")}}
 
-> **Note:** The CSS conditional rules module introduces two at-rules that have not been implemented: `@else` and `@when`.
+> [!NOTE]
+> The CSS conditional rules module introduces two at-rules that have not been implemented: `@else` and `@when`.
 
 ### Functions
 
@@ -38,7 +39,8 @@ There are plans to further extend possible queries by adding the generalized con
 - [`selector()`](/en-US/docs/Web/CSS/@supports#function_syntax)
 - [`supports()`](/en-US/docs/Web/CSS/@import#supports-condition)
 
-> **Note:** The CSS conditional rules module introduces a CSS function that has not been implemented: `media()`.
+> [!NOTE]
+> The CSS conditional rules module introduces a CSS function that has not been implemented: `media()`.
 
 ### data types
 
@@ -57,7 +59,6 @@ There are plans to further extend possible queries by adding the generalized con
 
 - {{glossary("media/CSS", "Media")}}
 - Supports query (See [feature query](/en-US/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries))
-- [Conditional group rules](/en-US/docs/Web/CSS/At-rule#conditional_group_rules)
 
 ## Guides
 
@@ -91,12 +92,15 @@ There are plans to further extend possible queries by adding the generalized con
   - [`<media-query-list>`](/en-US/docs/Web/SVG/Attribute/media)
   - [CSS logical operators](/en-US/docs/Web/CSS/@media#logical_operators) (`not`, `or`, and `and`)
 
+- [CSS containment](/en-US/docs/Web/CSS/CSS_containment)
+
+  - {{cssxref("@container")}} at-rule
+
 - [CSSOM view](/en-US/docs/Web/CSS/CSSOM_view) module
 
   - {{domxref("CSS")}} API
   - {{domxref("CSSGroupingRule")}} API
   - {{domxref("MediaQueryList")}} API
-  - {{domxref("CSSOMString")}} API
   - {{domxref("CSSRule")}} API
   - {{domxref("MediaList")}} interface
     - {{domxref("MediaList.mediaText")}} property
@@ -119,6 +123,6 @@ There are plans to further extend possible queries by adding the generalized con
 
 ## See also
 
-- [CSS container queries](/en-US/docs/Web/CSS/CSS_container_queries) module
+- [CSS container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries) module
 - [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries) module
 - [CSS cascade and inheritance](/en-US/docs/Web/CSS/CSS_cascade) module

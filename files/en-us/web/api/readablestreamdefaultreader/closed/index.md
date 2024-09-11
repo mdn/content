@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.ReadableStreamDefaultReader.closed
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`closed`** read-only property of the
 {{domxref("ReadableStreamDefaultReader")}} interface returns a

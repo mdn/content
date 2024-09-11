@@ -55,7 +55,7 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
 - [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
   - : New CSS transitions support is available in Firefox 4.
 - Computed values in CSS
-  - : Support for `-moz-calc` has been added. This lets you specify `{{cssxref("&lt;length&gt;")}}` values as mathematical expressions.
+  - : Support for `-moz-calc` has been added. This lets you specify {{cssxref("length")}} values as mathematical expressions.
 - Selector grouping
   - : Support for `:-moz-any` to group selectors and factorize combinators.
 - Background image subrectangle support
@@ -187,7 +187,7 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
       <td><code>-moz-calc</code></td>
       <td>
         Lets you specify
-        {{cssxref("&lt;length&gt;")}} values as
+        {{cssxref("length")}} values as
         mathematical expressions.
       </td>
     </tr>
@@ -224,7 +224,7 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
 - The {{cssxref("overflow")}} property no longer applies to table-group elements (`<thead>`, `<tbody>`, and `<tfoot>`).
 - The `-moz-appearance` property now supports the `-moz-win-borderless-glass` value, which applies a borderless Aero Glass look to an element.
 - The [`-moz-device-pixel-ratio`](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#-moz-device-pixel-ratio) media feature has been added, allowing the use of the device pixels per CSS pixel ratio to be used in [Media Queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries).
-- Gecko's handling of [CSS units](/en-US/docs/Web/CSS/length) has been revised to better match other browsers, and to more accurately translate absolute lengths into screen pixel counts based on the device's DPI.
+- Gecko's handling of CSS {{cssxref("length")}} units has been revised to better match other browsers, and to more accurately translate absolute lengths into screen pixel counts based on the device's DPI.
 
 ### Graphics and video
 
@@ -264,11 +264,11 @@ The following changes were made to the {{domxref("CanvasRenderingContext2D")}} i
 
 Several HTML elements have had their DOM interfaces changed to the ones required by the HTML5 specification, as shown below.
 
-| Interface in Firefox 3.6                                 | Interface in Firefox 4                           | HTML Element                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| -------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [`HTMLSpanElement`](/en-US/docs/Web/API/HTMLSpanElement) | [`HTMLElement`](/en-US/docs/Web/API/HTMLElement) | {{HTMLElement("abbr")}}, {{HTMLElement("acronym")}}, {{HTMLElement("address")}}, {{HTMLElement("b")}}, {{HTMLElement("bdo")}}, {{HTMLElement("big")}}, `<blink>`, {{HTMLElement("center")}}, {{HTMLElement("cite")}}, {{HTMLElement("code")}}, {{HTMLElement("dd")}}, {{HTMLElement("dfn")}}, {{HTMLElement("dt")}}, {{HTMLElement("em")}}, {{HTMLElement("i")}}, {{HTMLElement("kbd")}}, `<listing>`, {{HTMLElement("nobr")}}, {{HTMLElement("plaintext")}}, {{HTMLElement("s")}}, {{HTMLElement("samp")}}, {{HTMLElement("small")}}, {{HTMLElement("strike")}}, {{HTMLElement("strong")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, , {{HTMLElement("tt")}}, {{HTMLElement("u")}}, {{HTMLElement("var")}}, {{HTMLElement("xmp")}} |
-| [`HTMLDivElement`](/en-US/docs/Web/API/HTMLDivElement)   | [`HTMLElement`](/en-US/docs/Web/API/HTMLElement) | {{HTMLElement("noembed")}}, {{HTMLElement("noframes")}}, {{HTMLElement("noscript")}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| [`HTMLWBRElement`](/en-US/docs/DOM/HTMLWBRElement)       | [`HTMLElement`](/en-US/docs/Web/API/HTMLElement) | {{HTMLElement("wbr")}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Interface in Firefox 3.6                                 | Interface in Firefox 4                           | HTML Element                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| -------------------------------------------------------- | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`HTMLSpanElement`](/en-US/docs/Web/API/HTMLSpanElement) | [`HTMLElement`](/en-US/docs/Web/API/HTMLElement) | {{HTMLElement("abbr")}}, {{HTMLElement("acronym")}}, {{HTMLElement("address")}}, {{HTMLElement("b")}}, {{HTMLElement("bdo")}}, {{HTMLElement("big")}}, `<blink>`, {{HTMLElement("center")}}, {{HTMLElement("cite")}}, {{HTMLElement("code")}}, {{HTMLElement("dd")}}, {{HTMLElement("dfn")}}, {{HTMLElement("dt")}}, {{HTMLElement("em")}}, {{HTMLElement("i")}}, {{HTMLElement("kbd")}}, `<listing>`, {{HTMLElement("nobr")}}, {{HTMLElement("plaintext")}}, {{HTMLElement("s")}}, {{HTMLElement("samp")}}, {{HTMLElement("small")}}, {{HTMLElement("strike")}}, {{HTMLElement("strong")}}, {{HTMLElement("sub")}}, {{HTMLElement("sup")}}, {{HTMLElement("tt")}}, {{HTMLElement("u")}}, {{HTMLElement("var")}}, {{HTMLElement("xmp")}} |
+| [`HTMLDivElement`](/en-US/docs/Web/API/HTMLDivElement)   | [`HTMLElement`](/en-US/docs/Web/API/HTMLElement) | {{HTMLElement("noembed")}}, {{HTMLElement("noframes")}}, {{HTMLElement("noscript")}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| [`HTMLWBRElement`](/en-US/docs/DOM/HTMLWBRElement)       | [`HTMLElement`](/en-US/docs/Web/API/HTMLElement) | {{HTMLElement("wbr")}}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
 #### Miscellaneous DOM changes
 
@@ -319,7 +319,8 @@ For an overview of the changes implemented in JavaScript 1.8.5, see [New in Java
 - [Using the Web Console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)
   - : The Web Console tool is a useful debugging aid for web developers and extension developers alike.
 
-> **Note:**The Error Console is disabled by default starting in Gecko 2.0. You can re-enable it by changing the `devtools.errorconsole.enabled` preference to `true` and restarting the browser.
+> [!NOTE]
+> The Error Console is disabled by default starting in Gecko 2.0. You can re-enable it by changing the `devtools.errorconsole.enabled` preference to `true` and restarting the browser.
 
 ## Changes for Mozilla and add-on developers
 
@@ -403,7 +404,7 @@ Remote XUL is no longer supported; this affects XUL documents being served throu
 - New `TabPinned` and `TabUnpinned` events are available, allowing you to detect when tabs are pinned and unpinned.
 - The new `TabAttrModified` event is sent when a tab's `label`, `crop`, `busy`, `image`, or `selected` attributes change.
 - `<xul:tab>` elements now have a `pinned` attribute, letting you determine whether or not a tab is currently pinned.
-- The `setDirectionIndicator` class on `<xul:tree> elements hasn't done anything for some time now; now it's not used at all anymore.
+- The `setDirectionIndicator` class on `<xul:tree>` elements hasn't done anything for some time now; now it's not used at all anymore.
 - The `<xul:window>` element now has a `chromemargin` attribute that lets you set the margin between chrome and content on each side of a window; you can use this to draw into the title bar, for example.
 - The `<xul:window>` element now has a `disablechrome` attribute; this is used to hide most of the chrome in a window when it's being used to display in-browser UI, such as `about:addons`.
 - The `<xul:window>` element now has a `disablefastfind` attribute, which lets you disable the find bar in a window when the content doesn't support it. This is used, for example, by the add-ons panel.
@@ -498,4 +499,4 @@ In addition to the specific changes referenced below, it's important to note tha
 
 ## See also
 
-{{Firefox_for_developers('3.6')}}
+{{Firefox_for_developers}}

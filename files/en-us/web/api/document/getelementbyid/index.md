@@ -12,7 +12,8 @@ The **`getElementById()`** method of the {{domxref("Document")}} interface retur
 
 If you need to get access to an element which doesn't have an ID, you can use {{domxref("Document.querySelector", "querySelector()")}} to find the element using any {{Glossary("CSS selector", "selector")}}.
 
-> **Note:** IDs should be unique inside a document. If two or more elements in a document have the same ID, this method returns the first element found.
+> [!NOTE]
+> IDs should be unique inside a document. If two or more elements in a document have the same ID, this method returns the first element found.
 
 ## Syntax
 
@@ -20,7 +21,8 @@ If you need to get access to an element which doesn't have an ID, you can use {{
 getElementById(id)
 ```
 
-> **Note:** The capitalization of `"Id"` in the name of this method _must_ be correct for the code to function; `getElementByID()` is _not_ valid and will not work, however natural it may seem.
+> [!NOTE]
+> The capitalization of `"Id"` in the name of this method _must_ be correct for the code to function; `getElementByID()` is _not_ valid and will not work, however natural it may seem.
 
 ### Parameters
 
@@ -115,4 +117,4 @@ In non-HTML documents, the DOM implementation must have information on which att
 
 - {{domxref("Document")}} reference for other methods and properties you can use to get references to elements in the document.
 - {{domxref("Document.querySelector()")}} for selectors via queries like `'div.myclass'`
-- [xml:id](https://www.w3.org/TR/xml-id/) - has a utility method for allowing `getElementById()` to obtain 'xml:id' in {{glossary("XML")}} documents
+- {{domxref("Document.evaluate()")}} - has a utility method for selecting by `xml:id` in {{glossary("XML")}} documents

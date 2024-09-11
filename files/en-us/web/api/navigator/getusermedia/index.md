@@ -8,7 +8,7 @@ status:
 browser-compat: api.Navigator.getUserMedia
 ---
 
-{{APIRef("Media Capture and Streams")}}{{deprecated_header}}
+{{APIRef("Media Capture and Streams")}}{{deprecated_header}}{{SecureContext_Header}}
 
 The deprecated **`Navigator.getUserMedia()`** method prompts the user for permission to use up to one video input device (such as a camera or shared screen) and up to one audio input device (such as a microphone) as the source for a {{domxref("MediaStream")}}.
 
@@ -16,7 +16,8 @@ If permission is granted, a `MediaStream` whose video and/or audio tracks come f
 If permission is denied, no compatible input devices exist, or any other error condition occurs, the error callback is executed with an object describing what went wrong.
 If the user instead doesn't make a choice at all, neither callback is executed.
 
-> **Note:** This is a legacy method.
+> [!NOTE]
+> This is a legacy method.
 > Please use the newer {{domxref("MediaDevices.getUserMedia", "navigator.mediaDevices.getUserMedia()")}} instead.
 > While technically not deprecated, this old callback version is marked as such, since the specification strongly encourages using the newer promise returning version.
 
@@ -94,9 +95,11 @@ if (navigator.getUserMedia) {
 }
 ```
 
-## Browser compatibility
+## Specifications
 
-> **Warning:** New code should use {{domxref("MediaDevices.getUserMedia")}} instead.
+{{Specifications}}
+
+## Browser compatibility
 
 {{Compat}}
 

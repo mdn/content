@@ -2,7 +2,7 @@
 title: itemscope
 slug: Web/HTML/Global_attributes/itemscope
 page-type: html-attribute
-browser-compat: html.global_attributes.itemscope
+spec-urls: https://html.spec.whatwg.org/multipage/microdata.html#attr-itemscope
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -13,7 +13,8 @@ A related attribute, [`itemtype`](/en-US/docs/Web/HTML/Global_attributes/itemtyp
 
 Every HTML element may have an `itemscope` attribute specified. An `itemscope` element that does not have an associated `itemtype` must have an associated `itemref`.
 
-> **Note:** Find more about `itemtype` attributes at <https://schema.org/Thing>
+> [!NOTE]
+> Find more about `itemtype` attributes at <https://schema.org/Thing>
 
 ### itemscope id attributes
 
@@ -74,7 +75,7 @@ The following example specifies the `itemtype` as "http\://schema.org/Movie", an
 
 ### Representing structured data for a recipe
 
-There are four `itemscope` attributes in the following example. Each `itemscope` attribute sets the scope of its corresponding `itemtype` attribute. The `itemtype`s, `Recipe`, `AggregateRating`, and `NutritionInformation` in the following example are part of the [schema.org](www.schema.org) structured data for a recipe, as specified by the first `itemtype`, `http://schema.org/Recipe`.
+There are four `itemscope` attributes in the following example. Each `itemscope` attribute sets the scope of its corresponding `itemtype` attribute. The `itemtype`s, `Recipe`, `AggregateRating`, and `NutritionInformation` in the following example are part of the [schema.org](https://www.schema.org/) structured data for a recipe, as specified by the first `itemtype`, `http://schema.org/Recipe`.
 
 <table class="standard-table">
   <tbody>
@@ -191,7 +192,8 @@ There are four `itemscope` attributes in the following example. Each `itemscope`
   </tbody>
 </table>
 
-> **Note:** A handy tool for extracting microdata structures from HTML is Google's [Rich Results Testing Tool](https://search.google.com/test/rich-results). Try it on the HTML shown here.
+> [!NOTE]
+> A handy tool for extracting microdata structures from HTML is Google's [Rich Results Testing Tool](https://search.google.com/test/rich-results). Try it on the HTML shown here.
 
 #### HTML
 
@@ -265,10 +267,6 @@ There are four `itemscope` attributes in the following example. Each `itemscope`
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

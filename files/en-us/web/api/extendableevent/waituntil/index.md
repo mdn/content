@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.ExtendableEvent.waitUntil
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
 
 The **`ExtendableEvent.waitUntil()`**
 method tells the event dispatcher that work is ongoing. It can also be used to detect
@@ -32,9 +32,6 @@ The `waitUntil()` method must be initially called within the event callback,
 but after that it can be called multiple times, until all the promises passed to it
 settle.
 
-> **Note:** The behavior described in the above paragraph was fixed in
-> Firefox 43 (see [Firefox bug 1180274](https://bugzil.la/1180274)).
-
 ## Syntax
 
 ```js-nolint
@@ -43,7 +40,8 @@ waitUntil(promise)
 
 ### Parameters
 
-A {{jsxref("Promise")}}.
+- `promise`
+  - : A {{jsxref("Promise")}} that extends the lifetime of the event.
 
 ### Return value
 

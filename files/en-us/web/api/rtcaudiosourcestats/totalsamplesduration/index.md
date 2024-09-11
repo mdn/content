@@ -10,12 +10,13 @@ browser-compat: api.RTCStatsReport.type_media-source.totalSamplesDuration
 
 {{APIRef("WebRTC")}}{{SeeCompatTable}}
 
-The {{domxref("RTCAudioSourceStats")}} dictionary's **`totalSamplesDuration`** property represents the combined duration of all samples produced by the media source over the lifetime of this stats object, in seconds.
+The **`totalSamplesDuration`** property of the {{domxref("RTCAudioSourceStats")}} dictionary represents the combined duration of all samples produced by the media source over the lifetime of this stats object, in seconds.
 It does not include samples dropped before reaching this media source. <!-- Dropped samples in `droppedSamplesDuration`; not implemented -->
 
 This can be used with {{domxref("RTCAudioSourceStats.totalAudioEnergy", "totalAudioEnergy")}} to compute an [average audio level over different intervals](/en-US/docs/Web/API/RTCAudioSourceStats#description).
 
-> **Note:** For audio duration of remotely sourced tracks, see {{domxref("RTCInboundRtpStreamStats.totalSamplesDuration")}}.
+> [!NOTE]
+> For audio duration of remotely sourced tracks, see {{domxref("RTCInboundRtpStreamStats.totalSamplesDuration")}}.
 
 ## Value
 

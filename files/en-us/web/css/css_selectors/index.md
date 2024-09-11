@@ -19,7 +19,7 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 
 - `+` ([Next-sibling combinator](/en-US/docs/Web/CSS/Next-sibling_combinator))
 - `>` ([Child combinator](/en-US/docs/Web/CSS/Child_combinator))
-- `||` ([Column combinator](/en-US/docs/Web/CSS/Column_combinator)) {{Experimental_Inline}}
+- `||` ([Column combinator](/en-US/docs/Web/CSS/Column_combinator))
 - `~` ([Subsequent sibling combinator](/en-US/docs/Web/CSS/Subsequent-sibling_combinator))
 - " " ([Descendant combinator](/en-US/docs/Web/CSS/Descendant_combinator))
 - `|` ([Namespace separator](/en-US/docs/Web/CSS/Namespace_separator))
@@ -102,10 +102,10 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 - {{glossary("Pseudo-class")}} glossary term
 - [Functional pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#functional_pseudo-classes)
 - [Combinators](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#combinators)
-- [Simple selector](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#simple-selector)
-- [Compound selector](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#compound-selector)
-- [Complex selector](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#complex-selector)
-- [Relative selector](/en-US/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#relative-selector)
+- [Simple selector](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#simple_selector)
+- [Compound selector](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector)
+- [Complex selector](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#complex_selector)
+- [Relative selector](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#relative_selector)
 - [Selector list](/en-US/docs/Web/CSS/Selector_list)
 - [Specificity](/en-US/docs/Web/CSS/Specificity)
 
@@ -135,17 +135,16 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 
   - : Learn the different UI pseudo-classes available for styling forms in different states.
 
-- [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+- [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
 
   - : The selectors API enables using selectors in JavaScript to retrieve element nodes from the DOM.
 
 ## Related concepts
 
 - {{CSSXref(":popover-open")}} pseudo-class
+- {{CSSXref(":state","state()")}} pseudo-class
 - [CSS nesting](/en-US/docs/Web/CSS/CSS_nesting) module
-
-  - : [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector)
-
+  - [`&` nesting selector](/en-US/docs/Web/CSS/Nesting_selector)
 - [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module
 
   - {{CSSXref(":host")}} pseudo-class
@@ -178,7 +177,6 @@ Selectors, whether used in CSS or JavaScript, enable targeting HTML elements bas
 - Other [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements)
 
   - {{CSSxRef("::cue")}}
-  - {{CSSxRef("::cue-region")}}
 
 - {{CSSXref("@namespace")}} at-rule
 

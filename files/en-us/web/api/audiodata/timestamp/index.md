@@ -8,9 +8,9 @@ status:
 browser-compat: api.AudioData.timestamp
 ---
 
-{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
+{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}{{SeeCompatTable}}
 
-The **`duration`** read-only property of the {{domxref("AudioData")}} interface returns the timestamp of this `AudioData` object.
+The **`timestamp`** read-only property of the {{domxref("AudioData")}} interface returns the timestamp of this `AudioData` object.
 
 ## Value
 

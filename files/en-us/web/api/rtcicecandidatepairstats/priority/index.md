@@ -5,10 +5,11 @@ slug: Web/API/RTCIceCandidatePairStats/priority
 page-type: web-api-instance-property
 status:
   - deprecated
+  - non-standard
 browser-compat: api.RTCStatsReport.type_candidate-pair.priority
 ---
 
-{{APIRef("WebRTC")}}{{deprecated_header}}
+{{APIRef("WebRTC")}}{{deprecated_header}}{{non-standard_header}}
 
 The _obsolete_ {{domxref("RTCIceCandidatePairStats")}}
 property **`priority`** reports the priority of the candidate
@@ -23,7 +24,8 @@ other pairs on the same peer connection. The higher this value, the better the W
 layer thinks this pair of candidates is compared to the others, and the more likely a
 pair is to be selected for use.
 
-> **Note:** This property was removed from the specification as its value
+> [!NOTE]
+> This property was removed from the specification as its value
 > cannot be guaranteed to be accurately represented in a JavaScript number. You can
 > calculate its value using the algorithm described in {{RFC(5245, "", "5.7.2")}} if
 > you need this information and can accept the risk that the result may not be entirely

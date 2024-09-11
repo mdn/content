@@ -6,7 +6,8 @@ page-type: guide
 
 {{CSSRef}}
 
-> **Note:** This is a template page for a CSS Cookbook page. Please use this as a raw template when you create a new cookbook page.
+> [!NOTE]
+> This is a template page for a CSS Cookbook page. Please use this as a raw template when you create a new cookbook page.
 > _Comment in italics are information about how to use part of the template._
 
 _Description of the problem this recipe solves or the pattern you are demonstrating._
@@ -36,10 +37,6 @@ _If there are useful alternative methods for building the recipe, or fallback re
 ## Accessibility concerns
 
 _Include this is there are any specific things to watch out for in regard to accessibility. If not relevant for your pattern this can be omitted._
-
-## Browser compatibility
-
-_List the key properties you used in the `browser-compat` frontmatter metadata key. Then use the `\{{Compat}}` macro in this section to automatically generate a compatibility table for the listed properties._
 
 ## See also
 

@@ -4,9 +4,7 @@ slug: Web/Accessibility/Cognitive_accessibility
 page-type: guide
 ---
 
-<section id="Quick_links">
-  {{ListSubpagesForSidebar("Web/Accessibility", 1)}}
-</section>
+{{AccessibilitySidebar}}
 
 Cognitive accessibility covers accessibility considerations for people with cognition and learning disabilities. This document introduces cognitive accessibility and improving accessibility of the web for people with cognitive and learning differences.
 
@@ -169,7 +167,7 @@ Provide an expanded form of the abbreviation the first time it is used, followed
 
 ### Reading level
 
-Content should be written as clearly and as possible. A good rule to go by is to make content simple enough that it can be understood the first time. Methods to achieve this include:
+Content should be written as clearly as possible. A good rule to go by is to make content simple enough that it can be understood the first time. Methods to achieve this include:
 
 - Using short, simple words.
 - Writing short sentences.
@@ -189,7 +187,7 @@ There are multiple techniques that can help teach people how to pronounce words:
 - Provide a glossary with pronunciation.
 - Use the {{HTMLElement('ruby')}} element to illustrate how a word is pronounced.
 
-Providing guidance on how to pronounce words helps many different kinds of people, including those who prefer to read aloud, non-native language speakers, and people who may unfamiliar with the meaning of a term in context.
+Providing guidance on how to pronounce words helps many different kinds of people, including those who prefer to read aloud, non-native language speakers, and people who are unfamiliar with the meaning of a term in context.
 
 Another solution is to use glyphs or diacritical marks to illustrate pronunciation. However, if this technique is used, there must be a mechanism to turn it off. Further, it is helpful to link to a guide to the marks being used, as their meaning may not be obvious.
 
@@ -279,6 +277,6 @@ The above are good design practices. They will benefit everyone.
 - [Understanding WCAG Guidelines](/en-US/docs/Web/Accessibility/Understanding_WCAG)
 - [Accessibility overview](/en-US/docs/Learn/Accessibility)
 - [Web Content Accessibility Guidelines](https://www.w3.org/WAI/standards-guidelines/wcag/), including [cognitive accessibility guidelines](#wcag_guidelines)
-- [CThe W3Cs cognitive and Learning Disabilities Accessibility Task Force](https://www.w3.org/WAI/GL/task-forces/coga/)
+- [The W3C's Cognitive and Learning Disabilities Accessibility Task Force](https://www.w3.org/WAI/GL/task-forces/coga/)
 - [WebAIM Cognitive information](https://webaim.org/articles/cognitive/)
 - [CDC information on disabilities](https://www.cdc.gov/ncbddd/disabilityandhealth/)

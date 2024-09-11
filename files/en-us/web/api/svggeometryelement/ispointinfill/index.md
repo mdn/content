@@ -87,7 +87,7 @@ for (const point of points) {
   pointEl.style.cx = point[0];
   pointEl.style.cy = point[1];
   pointEl.style.r = 5;
-  pointEl.style.fill = isPointInFill ? "seagreen" : "rgb(255 0 0 / 0.5)";
+  pointEl.style.fill = isPointInFill ? "seagreen" : "rgb(255 0 0 / 50%)";
   svg.appendChild(pointEl);
 }
 ```

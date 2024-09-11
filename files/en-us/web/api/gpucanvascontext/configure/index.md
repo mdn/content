@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUCanvasContext.configure
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`configure()`** method of the
 {{domxref("GPUCanvasContext")}} interface configures the context to use for rendering with a given {{domxref("GPUDevice")}}. When called the canvas will initially be cleared to transparent black.

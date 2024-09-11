@@ -52,7 +52,7 @@ box-shadow: unset;
 
 Specify a single box-shadow using:
 
-- Two, three, or four [`<length>`](/en-US/docs/Web/CSS/length) values.
+- Two, three, or four {{cssxref("length")}} values.
 
   - If only two values are given, they are interpreted as `<offset-x>` and `<offset-y>` values.
   - If a third value is given, it is interpreted as a `<blur-radius>`.
@@ -76,7 +76,7 @@ To specify multiple shadows, provide a comma-separated list of shadows.
 
     - If two values are specified, they are interpreted as `<offset-x>` (horizontal offset) and `<offset-y>` (vertical offset) values. Negative `<offset-x>` value places the shadow to the left of the element. Negative `<offset-y>` value places the shadow above the element.\
       If not specified, the value of `0` is used for the missing length. If both `<offset-x>` and `<offset-y>` are set to `0`, the shadow is placed behind the element (and may generate a blur effect if `<blur-radius>` and/or `<spread-radius>` is set).
-    - If three values are specified, the third value is interpreted as `<blur-radius>`. The larger this value, the bigger the blur, so the shadow becomes bigger and lighter. Negative values are not allowed. If not specified, it will be set to`0` (meaning that the shadow's edge will be sharp). The specification does not include an exact algorithm for how the blur radius should be calculated; however, it does elaborate as follows:
+    - If three values are specified, the third value is interpreted as `<blur-radius>`. The larger this value, the bigger the blur, so the shadow becomes bigger and lighter. Negative values are not allowed. If not specified, it will be set to `0` (meaning that the shadow's edge will be sharp). The specification does not include an exact algorithm for how the blur radius should be calculated; however, it does elaborate as follows:
 
       > …for a long, straight shadow edge, this should create a color transition the length of the blur distance that is perpendicular to and centered on the shadow's edge, and that ranges from the full shadow color at the radius endpoint inside the shadow to fully transparent at the endpoint outside it.
 
@@ -87,7 +87,7 @@ To specify multiple shadows, provide a comma-separated list of shadows.
 
 ### Interpolation
 
-When animating shadows, such as when multiple shadow values on a box transition to new values on hover, the values are interpolated. {{Glossary("Interpolation")}} determines intermediate values of properties, such as the blur radius, spread radius, and color, as shadows transition. For each shadow in a list of shadows, the color, x, y, blur, and spread transition; the color as [`<color>`](/en-US/docs/Web/CSS/color_value), and the other values as [`<length>`](/en-US/docs/Web/CSS/length)s.
+When animating shadows, such as when multiple shadow values on a box transition to new values on hover, the values are interpolated. {{Glossary("Interpolation")}} determines intermediate values of properties, such as the blur radius, spread radius, and color, as shadows transition. For each shadow in a list of shadows, the color, x, y, blur, and spread transition; the color as [`<color>`](/en-US/docs/Web/CSS/color_value), and the other values as {{cssxref("length")}}s.
 
 In interpolating multiple shadows between two comma-separated lists of multiple box shadows, the shadows are paired, in order, with interpolation occurring between paired shadows. If the lists of shadows have different lengths, then the shorter list is padded at the end with shadows whose color is `transparent`, and X, Y, and blur are `0`, with the inset, or lack of inset, being set to match. If in any pair of shadows, one has `inset` set and the other does not, the entire shadow list is uninterpolated; the shadows will change to the new values without an animating effect.
 

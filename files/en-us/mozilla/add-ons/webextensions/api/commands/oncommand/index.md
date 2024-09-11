@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.commands.onCommand
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when a command is executed using its associated keyboard shortcut.
 
@@ -34,7 +34,7 @@ Events have three functions:
 
 - `listener`
 
-  - : The function called when a user enters the command's shortcut. The function is passed this argument:
+  - : The function called when a user enters the command's shortcut. The function is passed these arguments:
 
     - `name`
       - : `string`. Name of the command. This matches the name given to the command in its [manifest.json entry](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
@@ -72,4 +72,5 @@ browser.commands.onCommand.addListener((command) => {
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.commands`](https://developer.chrome.com/docs/extensions/reference/commands/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.commands`](https://developer.chrome.com/docs/extensions/reference/api/commands) API.

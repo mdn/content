@@ -20,7 +20,8 @@ Displaying and updating a badge is done by using the [Badging API](/en-US/docs/W
 
 App badges are only supported when a PWA is installed on its host operating system. Badges appear on the app icon which only exists after the app has been installed.
 
-> **Note:** This article focuses on the {{domxref("Navigator.setAppBadge()")}} and {{domxref("Navigator.clearAppBadge()")}} methods from the Badging API and ignores the `Navigator.setClientBadge` and `Navigator.clearClientBadge`. Although these methods are defined in the [Badging API specification](https://w3c.github.io/badging/) too, they are for displaying badges on documents, not on application icons.
+> [!NOTE]
+> This article focuses on the {{domxref("Navigator.setAppBadge()")}} and {{domxref("Navigator.clearAppBadge()")}} methods from the Badging API and ignores the `Navigator.setClientBadge` and `Navigator.clearClientBadge`. Although these methods are defined in the [Badging API specification](https://w3c.github.io/badging/) too, they are for displaying badges on documents, not on application icons.
 
 ### Desktop support
 
@@ -30,7 +31,7 @@ Safari and Firefox on desktop do not support the Badging API and do not support 
 
 ### Mobile support
 
-Badges are supported on mobile operating systems, including Chromium-based browsers running on Android and in Safari on iOS and iPadOS, starting with iPadOS 16.4.
+Badges are supported in Safari on iOS and iPadOS, starting with iPadOS 16.4. The badging API is not supported on Chromium-based browsers running on Android. Instead, Android automatically shows a badge on the PWA's app icon when there is an unread notification, just as it does for Android apps.
 
 ## Badge best practices
 
@@ -38,7 +39,7 @@ Before learning how to use badges, consider these best practices to ensure your 
 
 ### Check for support
 
-To ensure the Badging API is [supported](#support-for-badges) in the user's browser and operating system, to prevent throwing a JavaScript error, check for support before using the API:
+To ensure the Badging API is [supported](#support_for_badges) in the user's browser and operating system, to prevent throwing a JavaScript error, check for support before using the API:
 
 ```js
 if (navigator.setAppBadge) {
@@ -70,7 +71,7 @@ Like notifications, badges can be a very effective way to re-engage users with y
 
 Make sure to update your application badge in real-time. This means updating the badge count to reflect how many new items are actually left for the user to consume, and clearing the app badge when there are no new items.
 
-For example, if an email client app receives new messages in the background, it should update its badge to display the right number of unread messages in the inbox, potentially filtering out messages from other folders such as a spam folder. It's possible to [update badges in the background](#updating-the-badge-in-the-background) by using the `navigator.setAppBadge()` method from a service worker.
+For example, if an email client app receives new messages in the background, it should update its badge to display the right number of unread messages in the inbox, potentially filtering out messages from other folders such as a spam folder. It's possible to [update badges in the background](#updating_the_badge_in_the_background) by using the `navigator.setAppBadge()` method from a service worker.
 
 Once the user launches the app and starts reading messages, the email client app should update its badge accordingly by calling `navigator.setAppBadge()` with the new unread messages count, or by calling `navigator.clearAppBadge()` when there are no unread messages.
 
@@ -119,7 +120,8 @@ Badges can be useful to re-engage users with your app when they're not already u
 PWAs can use the following mechanisms to update in the background and display, update, or hide their badges:
 
 - [Push API](/en-US/docs/Web/API/Push_API)
-  - : PWAs can use this API to receive messages from a server even when the app is not running.
+  - : PWAs can use this API to receive messages from a server even when the app is not running. Most browsers require a notification to be displayed whenever a push message is received. This is fine for some use cases (for example, showing a notification when updating the badge), but makes it impossible to subtly update the badge without displaying a notification. In addition, users must grant your site notification permission in order to receive push messages.
+    For more information, see the [ServiceWorkerRegistration: showNotification() method](/en-US/docs/Web/API/ServiceWorkerRegistration/showNotification).
 - [Background Synchronization API](/en-US/docs/Web/API/Background_Synchronization_API)
   - : PWAs can use this API to run code in the background when a stable network connection is detected.
 - [Web Periodic Background Synchronization API](/en-US/docs/Web/API/Web_Periodic_Background_Synchronization_API)
@@ -142,11 +144,14 @@ self.addEventListener("push", (event) => {
       navigator.clearAppBadge();
     }
   }
+  // It's obligatory to show the notification to the user.
+  self.registration.showNotification(`${unreadCount} unread messages`);
 });
 ```
 
 ## See also
 
 - [How to create an app badge](https://web.dev/patterns/web-apps/badges/)
-- [Re-engage users with badges, notifications, and push messages](https://learn.microsoft.com/microsoft-edge/progressive-web-apps-chromium/how-to/notifications-badges)
+- [Badging for app icons](https://developer.chrome.com/docs/capabilities/web-apis/badging-api)
+- [Re-engage users with badges, notifications, and push messages](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/notifications-badges)
 - [Codelab: Build a push notification server](https://web.dev/articles/push-notifications-server-codelab)

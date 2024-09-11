@@ -5,6 +5,8 @@ page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#math
 ---
 
+{{AccessibilitySidebar}}
+
 The `math` role indicates that the content represents a mathematical expression.
 
 ## Description
@@ -42,15 +44,7 @@ Had an image been used, the `alt` attribute would be used along with the `math` 
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [MathML on MDN](/en-US/docs/Web/MathML) and the [`<math>`](/en-US/docs/Web/MathML/Element/math) element (not HTML)
 - [The MathML specification](https://www.w3.org/TR/MathML3/)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles", 1)}}
-
-</section>

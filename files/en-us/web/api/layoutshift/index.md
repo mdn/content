@@ -17,7 +17,7 @@ A layout shift happens when any element that is visible in the viewport changes 
 
 The Layout Instability API provides a way to measure and report on these layout shifts. All tools for debugging layout shifts, including those in the browser's developer tools, use this API. The API can also be used to observe and debug layout shifts by logging the information to the console, to send the data to a server endpoint, or to web page analytics.
 
-Popular performance tools, use this API to calculate a [Cumulative Layout Shift (CLS)](https://web.dev/articles/cls) score.
+Performance tools can use this API to calculate a {{glossary("CLS")}} score.
 
 {{InheritanceDiagram}}
 
@@ -87,4 +87,4 @@ observer.observe({ type: "layout-shift", buffered: true });
 ## See also
 
 - {{domxref("LayoutShiftAttribution")}}
-- [Cumulative Layout Shift (CLS)](https://web.dev/articles/cls)
+- {{glossary("CLS")}}

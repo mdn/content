@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.query
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Gets all tabs that have the specified properties, or all tabs if no properties are specified.
 
@@ -14,19 +14,21 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 ## Syntax
 
 ```js-nolint
-let querying = browser.tabs.query(queryObj)
+let querying = browser.tabs.query(queryInfo)
 ```
 
 ### Parameters
 
-- `queryObj`
+- `queryInfo`
 
-  - : `object`. The `query()` function will only get tabs whose properties match the properties included here.
+  - : `object`. The `query()` function gets the tabs whose properties match the properties included here.
 
     See the {{WebExtAPIRef("tabs.Tab")}} documentation to learn more about these properties.
 
     - `active` {{optional_inline}}
       - : `boolean`. Whether the tabs are active in their windows.
+    - `attention` {{optional_inline}}
+      - : `boolean`. Indicates whether the tabs are drawing attention.
     - `audible` {{optional_inline}}
       - : `boolean`. Whether the tabs are audible.
     - `autoDiscardable` {{optional_inline}}
@@ -142,7 +144,8 @@ browser.tabs.query({ url: "*://*.mozilla.org/*" }).then(logTabs, onError);
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-query) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-query) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

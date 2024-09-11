@@ -13,7 +13,8 @@ browser-compat: api.WindowSharedStorage.run
 The **`run()`** method of the
 {{domxref("WindowSharedStorage")}} interface executes a [run operation](/en-US/docs/Web/API/SharedStorageRunOperation) that is registered in a module added to the current origin's {{domxref("SharedStorageWorklet")}}.
 
-> **Note:** The [Run output gate](/en-US/docs/Web/API/Shared_Storage_API#run) is intended as a generic way to process some shared storage data.
+> [!NOTE]
+> The [Run output gate](/en-US/docs/Web/API/Shared_Storage_API#run) is intended as a generic way to process some shared storage data.
 
 ## Syntax
 
@@ -61,7 +62,7 @@ async function measureUniqueReach() {
 measureUniqueReach();
 ```
 
-See [Unique reach measurement](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/unique-reach/) for a full explanation of this example. See [Shared Storage API](/en-US/docs/Web/API/Shared_Storage_API) for more examples.
+See [Unique reach measurement](https://developers.google.com/privacy-sandbox/private-advertising/private-aggregation/unique-reach) for a full explanation of this example. See [Shared Storage API](/en-US/docs/Web/API/Shared_Storage_API) for more examples.
 
 ## Specifications
 

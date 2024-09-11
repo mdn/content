@@ -15,7 +15,7 @@ The **`shippingOption`** read-only property of
 the `PaymentRequest` interface returns the ID attribute of the shipping
 option selected by the user. This option is only present when the
 `requestShipping` option is set to `true` in the
-{{domxref('PaymentOptions')}} object passed to the
+`options` object passed to the
 {{domxref('PaymentRequest.PaymentRequest','PaymentRequest')}} constructor.
 
 ## Value

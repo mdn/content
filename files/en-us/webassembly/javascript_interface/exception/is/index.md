@@ -12,7 +12,8 @@ The **`is()`** prototype method of the [`Exception`](/en-US/docs/WebAssembly/Jav
 The method might be used to test that a tag is correct before passing it to [`Exception.prototype.getArg()`](/en-US/docs/WebAssembly/JavaScript_interface/Exception/getArg) to get the passed values.
 It can be used on tags created in JavaScript or created in WebAssembly code and exported to JavaScript.
 
-> **Note:** It is not enough that the tag has an identical sequence of data types — it must have the same _identity_ (be the same tag) as was used to create the exception.
+> [!NOTE]
+> It is not enough that the tag has an identical sequence of data types — it must have the same _identity_ (be the same tag) as was used to create the exception.
 
 ## Syntax
 

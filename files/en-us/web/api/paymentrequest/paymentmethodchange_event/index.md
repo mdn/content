@@ -43,17 +43,12 @@ _In addition to the properties below, this interface includes properties inherit
 
 Let's take a look at an example. This code creates a new {{domxref("PaymentRequest")}}, adds a handler for the `paymentmethodchange` event by calling the request's {{domxref("EventTarget.addEventListener", "addEventListener()")}}, then calls {{domxref("PaymentRequest.show", "show()")}} to present the payment interface to the user.
 
-The code assumes the existence of a method `detailsForShipping()`, which returns an object containing the shipping options for the `ground` shipping method, in the form found in the {{domxref("PaymentShippingOption")}} dictionary. By doing so, the payment form defaults to the ground shipping method.
+The code assumes the existence of a method `detailsForTransaction()`, which will return an object that can be passed as the [`details`](/en-US/docs/Web/API/PaymentRequest/PaymentRequest#details) argument to the `PaymentRequest` constructor.
 
 ```js
-const options = {
-  requestShipping: true,
-};
-
 const paymentRequest = new PaymentRequest(
   paymentMethods,
-  detailsForShipping("ground"),
-  options,
+  detailsForTransaction(),
 );
 
 paymentRequest.addEventListener(
@@ -85,7 +80,7 @@ handlePaymentChange = (event) => {
 
 This begins by looking at the event's {{domxref("PaymentMethodChangeEvent.methodName", "methodName")}} property; if that indicates that the user is trying to use Apple Pay, we pass the {{domxref("PaymentMethodChangeEvent.methodDetails", "methodDetails")}} into a function called `calculateServiceFee()`, which we might create to take the information about the transaction, such as the underlying credit card being used to service the Apple Pay request, and compute and return an object that specifies changes to be applied to the {{domxref("PaymentRequest")}} in order to add any service fees that the payment method might require.
 
-Before the event handler returns, it calls the event's {{domxref("PaymentMethodChangeEvent.updateWith()")}} method to integrate the changes into the request.
+Before the event handler returns, it calls the event's {{domxref("PaymentRequestUpdateEvent.updateWith()", "updateWith()")}} method to integrate the changes into the request.
 
 ## Specifications
 
@@ -100,6 +95,5 @@ Before the event handler returns, it calls the event's {{domxref("PaymentMethodC
 - [Payment Request API](/en-US/docs/Web/API/Payment_Request_API)
 - [Using the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
 - {{domxref("PaymentRequest.merchantvalidation_event", "merchantvalidation")}} event
-- {{domxref("PaymentRequest.payerdetailchange_event", "payerdetailchange")}} event
 - {{domxref("PaymentRequest.shippingaddresschange_event", "shippingaddresschange")}} event
 - {{domxref("PaymentRequest.shippingoptionchange_event", "shippingoptionchange")}} event

@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.topSites.MostVisitedURL
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The `MostVisitedURL` type contains two properties: the title of a page and its URL.
 
@@ -28,7 +28,8 @@ Values of this type are objects. They contain the following properties:
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.topSites`](https://developer.chrome.com/docs/extensions/reference/topSites/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.topSites`](https://developer.chrome.com/docs/extensions/reference/api/topSites) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

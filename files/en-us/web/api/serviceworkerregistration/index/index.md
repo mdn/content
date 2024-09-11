@@ -8,7 +8,7 @@ status:
 browser-compat: api.ServiceWorkerRegistration.index
 ---
 
-{{APIRef("Service Workers API")}}{{SeeCompatTable}}
+{{APIRef("Service Workers API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`index`** read-only property of the
 {{domxref("ServiceWorkerRegistration")}} interface returns a reference to the
@@ -54,6 +54,5 @@ const contentIndex = self.registration.index;
 
 ## See also
 
-- {{domxref("Content Index API")}}
+- [Content Index API](/en-US/docs/Web/API/Content_Index_API)
 - [An introductory article on the Content Index API](https://developer.chrome.com/docs/capabilities/web-apis/content-indexing-api)
-- [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/)

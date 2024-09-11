@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.runtime.openOptionsPage
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 If your extension has an [options page](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) defined, this method opens it.
 
@@ -48,7 +48,8 @@ opening.then(onOpened, onError);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#method-openOptionsPage) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#method-openOptionsPage) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

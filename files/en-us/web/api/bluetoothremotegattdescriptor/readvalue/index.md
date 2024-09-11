@@ -8,7 +8,7 @@ status:
 browser-compat: api.BluetoothRemoteGATTDescriptor.readValue
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The
 **`BluetoothRemoteGATTDescriptor.readValue()`**

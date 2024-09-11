@@ -6,13 +6,14 @@ page-type: web-api-instance-method
 browser-compat: api.ReadableStreamDefaultController.error
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`error()`** method of the
 {{domxref("ReadableStreamDefaultController")}} interface causes any future interactions
 with the associated stream to error.
 
-> **Note:** The `error()` method can be called
+> [!NOTE]
+> The `error()` method can be called
 > more than once, and can be called when the stream is not readable.
 
 ## Syntax

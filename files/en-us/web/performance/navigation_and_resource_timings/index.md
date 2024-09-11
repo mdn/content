@@ -184,7 +184,7 @@ The order is:
         {{domxref("PerformanceTiming.unloadEventStart","unloadEventStart")}}
       </td>
       <td>
-        When the {{DOMxRef("Window.unload_event", "unload")}}>
+        When the {{DOMxRef("Window.unload_event", "unload")}}
         event has been thrown, indicating the time at which the previous
         document in the window began to unload. If there is no previous
         document, or if the previous document or one of the needed redirects is
@@ -343,7 +343,7 @@ const tls = time.requestStart - time.secureConnectionStart;
 
 ## Performance Entry API
 
-The general performance timings above are deprecated but fully supported. We now have the {{domxref('PerformanceEntry', 'Performance Entry API')}}, which provides for marking and measuring times along the navigation and resource loading process. You can also create marks:
+The general performance timings above are deprecated but fully supported. We now have the [Performance Entry API](/en-US/docs/Web/API/PerformanceEntry), which provides for marking and measuring times along the navigation and resource loading process. You can also create marks:
 
 ```js
 performance.getEntriesByType("navigation").forEach((navigation) => {

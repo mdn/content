@@ -7,13 +7,16 @@ browser-compat: css.properties.counter-set
 
 {{CSSRef}}
 
-The **`counter-set`** [CSS](/en-US/docs/Web/CSS) property sets [CSS counters](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) to the given values.
+The **`counter-set`** [CSS](/en-US/docs/Web/CSS) property sets [CSS counters](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) on the element to the given values.
 
-The `counter-set` property will create a new counter for each named counter in the list of space-separated counter and value pairs that doesn't already exist. If a named counter in the list is missing a value, the value of the counter will be set to `0`.
+If the counters don't exist the `counter-set` property creates a new counter for each named counter in the list of space-separated counter and value pairs. However, to create a new counter it is recommended to use the {{cssxref("counter-reset")}} CSS property.
+
+If a named counter in the list is missing a value, the value of the counter will be set to `0`.
 
 {{EmbedInteractiveExample("pages/css/counter-set.html")}}
 
-> **Note:** The counter's value can be incremented or decremented using the {{cssxref("counter-increment")}} CSS property.
+> [!NOTE]
+> The counter's value can be incremented or decremented using the {{cssxref("counter-increment")}} CSS property.
 
 ## Syntax
 

@@ -8,9 +8,9 @@ status:
 browser-compat: api.ContentIndexEvent.id
 ---
 
-{{APIRef("Content Index API")}}{{SeeCompatTable}}
+{{APIRef("Content Index API")}}{{SeeCompatTable}}{{AvailableInWorkers("service")}}
 
-The read-only **`id`** property of the
+The **`id`** read-only property of the
 {{domxref("ContentIndexEvent")}} interface is a {{jsxref('String')}} which identifies
 the deleted content index via its `id`.
 
@@ -46,5 +46,4 @@ self.addEventListener("contentdelete", (event) => {
 ## See also
 
 - [An introductory article on the Content Index API](https://developer.chrome.com/docs/capabilities/web-apis/content-indexing-api)
-- [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/)
 - [Service Worker API, along with information about Cache and CacheStorage](/en-US/docs/Web/API/Service_Worker_API)

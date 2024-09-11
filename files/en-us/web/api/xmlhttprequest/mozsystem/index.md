@@ -7,6 +7,6 @@ status:
   - non-standard
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
 **`mozSystem`** is a boolean. If true, the same origin policy is not enforced on the request.

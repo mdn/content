@@ -16,7 +16,8 @@ To access the clipboard, the newer [Clipboard API](/en-US/docs/Web/API/Clipboard
 
 Most commands affect the document's [selection](/en-US/docs/Web/API/Selection). For example, some commands (bold, italics, etc.) format the currently selected text, while others delete the selection, insert new elements (replacing the selection) or affect an entire line (indenting). Only the currently active editable element can be modified, but some commands (e.g. `copy`) can work without an editable element.
 
-> **Note:** Modifications performed by `execCommand()` may or may not trigger {{domxref("Element/beforeinput_event", "beforeinput")}} and {{domxref("Element/input_event", "input")}} events, depending on the browser and configuration. If triggered, the handlers for the events will run before `execCommand()` returns. Authors need to be careful about such recursive calls, especially if they call `execCommand()` in response to these events. From Firefox 82, nested `execCommand()` calls will always fail, see [bug 1634262](https://bugzil.la/1634262).
+> [!NOTE]
+> Modifications performed by `execCommand()` may or may not trigger {{domxref("Element/beforeinput_event", "beforeinput")}} and {{domxref("Element/input_event", "input")}} events, depending on the browser and configuration. If triggered, the handlers for the events will run before `execCommand()` returns. Authors need to be careful about such recursive calls, especially if they call `execCommand()` in response to these events. From Firefox 82, nested `execCommand()` calls will always fail, see [bug 1634262](https://bugzil.la/1634262).
 
 ## Syntax
 
@@ -44,7 +45,7 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
     - `decreaseFontSize`
       - : Adds a {{HTMLElement("small")}} tag around the selection or at the insertion point.
     - `defaultParagraphSeparator`
-      - : Changes the paragraph separator used when new paragraphs are created in editable text regions. See [Differences in markup generation](/en-US/docs/Web/HTML/Global_attributes/contenteditable#differences_in_markup_generation) for more details.
+      - : Changes the paragraph separator used when new paragraphs are created in editable text regions.
     - `delete`
       - : Deletes the current selection.
     - `enableAbsolutePositionEditor`
@@ -121,7 +122,8 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
       - : Removes the [anchor element](/en-US/docs/Web/HTML/Element/a) from a selected hyperlink.
     - `useCSS` {{Deprecated_inline}}
       - : Toggles the use of HTML tags or CSS for the generated markup. Requires a boolean true/false as a value argument.
-        > **Note:** This argument is logically backwards (i.e., use `false` to use CSS,
+        > [!NOTE]
+        > This argument is logically backwards (i.e., use `false` to use CSS,
         > `true` to use HTML). This has been deprecated in favor of `styleWithCSS`.
     - `styleWithCSS`
       - : Replaces the `useCSS` command. `true` modifies/generates `style` attributes in markup, false generates presentational elements.
@@ -218,7 +220,7 @@ function insertText(newText, selector) {
 
 ## Specifications
 
-This feature is not part of any current specification, but there is an [unofficial draft](https://w3c.github.io/editing/docs/execCommand/) attempting to specify it.
+{{Specifications}}
 
 ## Browser compatibility
 

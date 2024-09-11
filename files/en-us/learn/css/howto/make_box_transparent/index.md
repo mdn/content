@@ -22,7 +22,8 @@ Try changing the opacity and alpha channel values in the below examples to see m
 
 {{EmbedGHLiveSample("css-examples/howto/opacity.html", '100%', 770)}}
 
-> **Note:** Take care that your text retains enough contrast with the background in cases where you are overlaying an image; otherwise you may make the content hard to read.
+> [!NOTE]
+> Take care that your text retains enough contrast with the background in cases where you are overlaying an image; otherwise you may make the content hard to read.
 
 ## See also
 

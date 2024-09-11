@@ -6,9 +6,14 @@ page-type: web-api-event
 browser-compat: api.ServiceWorkerGlobalScope.notificationclick_event
 ---
 
-{{APIRef("Web Notifications")}}
+{{APIRef("Web Notifications")}}{{SecureContext_Header}}{{AvailableInWorkers("service")}}
 
-The **`notificationclick`** event is fired to indicate that a system notification spawned by {{domxref("ServiceWorkerRegistration.showNotification()")}} has been clicked.
+The **`notificationclick`** event of the {{domxref("ServiceWorkerGlobalScope")}} interface is fired to indicate that a system notification spawned by {{domxref("ServiceWorkerRegistration.showNotification()")}} has been clicked.
+
+Notifications created on the main thread or in workers which aren't service workers
+using the {{domxref("Notification.Notification","Notification()")}} constructor will
+instead receive a {{domxref("Notification/click_event", "click")}} event on the {{domxref("Notification")}} object
+itself.
 
 This event is not cancelable and does not bubble.
 
@@ -24,13 +29,13 @@ onnotificationclick = (event) => {};
 
 ## Event type
 
-A {{domxref("NotificationEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("NotificationEvent")}}. Inherits from {{domxref("ExtendableEvent")}} and {{domxref("Event")}}.
 
 {{InheritanceDiagram("NotificationEvent")}}
 
 ## Event properties
 
-_Inherits properties from its ancestor, {{domxref("Event")}}_.
+_Inherits properties from its ancestors, {{domxref("ExtendableEvent")}} and {{domxref("Event")}}_.
 
 - {{domxref("NotificationEvent.notification")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("Notification")}} object representing the notification that was clicked to fire the event.
@@ -87,7 +92,7 @@ self.onnotificationclick = (event) => {
 };
 ```
 
-You can handle event actions using `event.action` within a {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} event handler:
+You can handle event actions using `event.action` within a `notificationclick` event handler:
 
 ```js
 navigator.serviceWorker.register("sw.js");

@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.sessions.getWindowValue
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Retrieves a value previously stored by a call to {{WebExtAPIRef("sessions.setWindowValue")}}.
 

@@ -26,7 +26,8 @@ The process of recording a stream is simple:
 6. Recording stops automatically when the source media stops playing.
 7. You can stop recording at any time by calling {{domxref("MediaRecorder.stop()")}}.
 
-> **Note:** Individual {{domxref("Blob")}}s containing slices of the recorded media will not necessarily be individually playable. The media needs to be reassembled before playback.
+> [!NOTE]
+> Individual {{domxref("Blob")}}s containing slices of the recorded media will not necessarily be individually playable. The media needs to be reassembled before playback.
 
 If anything goes wrong during recording, an {{domxref("MediaRecorder/error_event", "error")}} event is sent to the `MediaRecorder`. You can listen for `error` events by setting up a {{domxref("MediaRecorder.error_event", "onerror")}} event handler.
 
@@ -130,7 +131,7 @@ To learn more about using the MediaStream Recording API, see [Using the MediaStr
 
 - [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API) landing page
 - {{domxref("MediaDevices.getUserMedia()")}}
-- [simpl.info MediaStream Recording demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://twitter.com/sw12)
+- [simpl.info MediaStream Recording demo](https://simpl.info/mediarecorder/), by [Sam Dutton](https://github.com/samdutton)
 - [HTML5's Media Recorder API in Action on Chrome and Firefox](https://blog.addpipe.com/mediarecorder-api/)
 - [MediaRecorder polyfill](https://github.com/ai/audio-recorder-polyfill) for Safari and Edge
 - [TutorRoom](https://github.com/chrisjohndigital/TutorRoom): HTML video capture/playback/download using getUserMedia and the MediaStream Recording API ([source on GitHub](https://github.com/chrisjohndigital/TutorRoom))

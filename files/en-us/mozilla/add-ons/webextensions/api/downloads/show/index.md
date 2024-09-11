@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.downloads.show
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The **`show()`** function of the {{WebExtAPIRef("downloads")}} API shows the downloaded file in its containing folder in the underlying platform's file manager.
 
@@ -63,7 +63,8 @@ searching.then(openDownload, onError);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#method-show) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#method-show) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

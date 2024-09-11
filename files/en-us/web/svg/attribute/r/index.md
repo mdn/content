@@ -16,6 +16,8 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement("circle")}}
 - {{SVGElement("radialGradient")}}
 
+When the value is set as a percentage, it refers to the normalized diagonal of the current SVG viewport.
+
 ## Example
 
 ```css hidden
@@ -86,7 +88,8 @@ For {{SVGElement('circle')}}, `r` defines the radius of the circle and therefor 
   </tbody>
 </table>
 
-> **Note:** Starting with SVG2, `r` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for circles.
+> [!NOTE]
+> The radius size of a `<circle>` can also be defined with the {{cssxref("r")}} _geometry property_.
 
 ## radialGradient
 

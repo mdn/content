@@ -40,10 +40,10 @@ The following example shows the use of the `height` and `width` properties along
             arrImages[i].style.height +
             ", style.width=" +
             arrImages[i].style.width +
-            "<\/li>";
+            "</li>";
         }
 
-        strHtml += "<\/ul>";
+        strHtml += "</ul>";
 
         objOutput.innerHTML = strHtml;
       }
@@ -52,14 +52,16 @@ The following example shows the use of the `height` and `width` properties along
   <body onload="init();">
     <p>
       Image 1: no height, width, or style
-      <img id="image1" src="http://www.mozilla.org/images/mozilla-banner.gif" />
+      <img
+        id="image1"
+        src="https://www.mozilla.org/images/mozilla-banner.gif" />
     </p>
 
     <p>
       Image 2: height="50", width="500", but no style
       <img
         id="image2"
-        src="http://www.mozilla.org/images/mozilla-banner.gif"
+        src="https://www.mozilla.org/images/mozilla-banner.gif"
         height="50"
         width="500" />
     </p>
@@ -68,7 +70,7 @@ The following example shows the use of the `height` and `width` properties along
       Image 3: no height, width, but style="height: 50px; width: 500px;"
       <img
         id="image3"
-        src="http://www.mozilla.org/images/mozilla-banner.gif"
+        src="https://www.mozilla.org/images/mozilla-banner.gif"
         style="height: 50px; width: 500px;" />
     </p>
 
@@ -157,7 +159,7 @@ const ss = document.styleSheets;
 
 for (let i = 0; i < ss.length; i++) {
   for (let j = 0; j < ss[i].cssRules.length; j++) {
-    dump(`${ss[i].cssRules[j].selectorText}\n`);
+    console.log(`${ss[i].cssRules[j].selectorText}\n`);
   }
 }
 ```
@@ -239,7 +241,7 @@ However, stopEvent also calls an event object method, {{domxref("event.stopPropa
 
 ## Example 6: getComputedStyle
 
-This example demonstrates how the {{domxref("window.getComputedStyle")}} method can be used to get the styles of an element that are not set using the `style` attribute or with JavaScript (e.g., `elt.style.backgroundColor="rgb(173, 216, 230)"`). These latter types of styles can be retrieved with the more direct {{domxref("HTMLElement.style", "elt.style")}} property, whose properties are listed in the [DOM CSS Properties List](/en-US/docs/Web/CSS/Reference).
+This example demonstrates how the {{domxref("window.getComputedStyle")}} method can be used to get the styles of an element that are not set using the `style` attribute or with JavaScript (e.g., `elt.style.backgroundColor="rgb(173 216 230)"`). These latter types of styles can be retrieved with the more direct {{domxref("HTMLElement.style", "elt.style")}} property, whose properties are listed in the [DOM CSS Properties List](/en-US/docs/Web/CSS/Reference).
 
 `getComputedStyle()` returns a {{domxref("CSSStyleDeclaration")}} object, whose individual style properties can be referenced with this object's {{domxref("CSSStyleDeclaration.getPropertyValue()", "getPropertyValue()")}} method, as the following example document shows.
 
@@ -278,7 +280,7 @@ This example demonstrates how the {{domxref("window.getComputedStyle")}} method 
     <style>
       #d1 {
         margin-left: 10px;
-        background-color: rgb(173, 216, 230);
+        background-color: rgb(173 216 230);
         height: 20px;
         max-width: 20px;
       }
@@ -306,7 +308,7 @@ This example demonstrates how the {{domxref("window.getComputedStyle")}} method 
 
 This example uses DOM methods to display all the properties of the {{domxref("Window.load_event", "onload")}} {{domxref("event")}} object and their values in a table. It also shows a useful technique of using a [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loop to iterate over the properties of an object to get their values.
 
-The properties of event objects differs greatly between browsers, the [WHATWG DOM Standard](https://dom.spec.whatwg.org) lists the standard properties, however many browsers have extended these greatly.
+The properties of event objects differs greatly between browsers, the [WHATWG DOM Standard](https://dom.spec.whatwg.org/) lists the standard properties, however many browsers have extended these greatly.
 
 Put the following code into a blank text file and load it into a variety of browsers, you'll be surprised at the different number and names of properties. You might also like to add some elements in the page and call this function from different event handlers.
 
@@ -344,7 +346,7 @@ Put the following code into a blank text file and load it into a variety of brow
         }
 
         const event = e || window.event;
-        document.getElementById("eventType").innerHTML = event.type;
+        document.getElementById("eventType").textContent = event.type;
 
         const table = document.createElement("table");
         const thead = table.createTHead();
@@ -414,4 +416,4 @@ To add a row and some cells to an existing table:
 
 - A table's {{domxref("element.innerHTML","innerHTML")}} property should never be used to modify a table, although you can use it to write an entire table or the content of a cell.
 - If DOM Core methods {{domxref("document.createElement")}} and {{domxref("Node.appendChild")}} are used to create rows and cells, IE requires that they are appended to a {{HTMLElement("tbody")}} element, whereas other browsers will allow appending to a {{HTMLElement("table")}} element (the rows will be added to the last `<tbody>` element).
-- There are a number of other convenience methods belonging to the [`HTMLTableElement` interface](/en-US/docs/Web/API/HTMLTableElement#methods) that can be used for creating and modifying tables.
+- There are a number of other convenience methods belonging to the [`HTMLTableElement` interface](/en-US/docs/Web/API/HTMLTableElement#instance_methods) that can be used for creating and modifying tables.

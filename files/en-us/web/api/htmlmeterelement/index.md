@@ -18,7 +18,7 @@ _Also inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLMeterElement.high")}}
   - : A `double` representing the value of the high boundary, reflecting the [`high`](/en-US/docs/Web/HTML/Element/meter#high) attribute.
 - {{domxref("HTMLMeterElement.low")}}
-  - : A `double` representing the value of the low boundary, reflecting the [`low`](/en-US/docs/Web/HTML/Element/meter#low)attribute.
+  - : A `double` representing the value of the low boundary, reflecting the [`low`](/en-US/docs/Web/HTML/Element/meter#low) attribute.
 - {{domxref("HTMLMeterElement.max")}}
   - : A `double` representing the maximum value, reflecting the [`max`](/en-US/docs/Web/HTML/Element/meter#max) attribute.
 - {{domxref("HTMLMeterElement.min")}}

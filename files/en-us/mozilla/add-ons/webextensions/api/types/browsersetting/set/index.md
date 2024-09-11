@@ -4,7 +4,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/set
 page-type: webextension-api-function
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Use `BrowserSetting.set()` to change the browser setting to a new value.
 
@@ -72,9 +72,8 @@ browser.browserAction.onClicked.addListener(() => {
 
 {{WebExtExamples}}
 
-> **Note:**
->
-> This API is based on Chromium's [`chrome.types`](https://developer.chrome.com/docs/extensions/reference/types/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.types`](https://developer.chrome.com/docs/extensions/reference/api/types) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -15,7 +15,8 @@ This interface inherits from {{domxref("AuthenticatorResponse")}}.
 
 {{InheritanceDiagram}}
 
-> **Note:** This interface is restricted to top-level contexts. Use from within an {{HTMLElement("iframe")}} element will not have any effect.
+> [!NOTE]
+> This interface is restricted to top-level contexts. Use from within an {{HTMLElement("iframe")}} element will not have any effect.
 
 ## Instance properties
 

@@ -2,12 +2,10 @@
 title: "@scope"
 slug: Web/CSS/@scope
 page-type: css-at-rule
-status:
-  - experimental
 browser-compat: css.at-rules.scope
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`@scope`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) enables you to select elements in specific DOM subtrees, targeting elements precisely without writing overly-specific selectors that are hard to override, and without coupling your selectors too tightly to the DOM structure.
 
@@ -80,7 +78,8 @@ This is where `@scope` is useful. It allows you to define a precise scope inside
 
 The `.article-body` scope root selector defines the upper bound of the DOM tree scope in which the ruleset will be applied, and the `figure` scope limit selector defines the lower bound. As a result, only {{htmlelement("img")}} elements inside a `<section>` with a class of `article-body`, but not inside {{htmlelement("figure")}} elements, will be selected.
 
-> **Note:** This kind of scoping — with an upper and lower bound — is commonly referred to as a **donut scope**.
+> [!NOTE]
+> This kind of scoping — with an upper and lower bound — is commonly referred to as a **donut scope**.
 
 If you want to select all images inside a `<section>` with a class of `article-body`, you can omit the scope limit:
 
@@ -110,7 +109,8 @@ Or you could include your `@scope` block inline inside a `<style>` element, whic
 </section>
 ```
 
-> **Note:** It is important to understand that, while `@scope` allows you to isolate the application of selectors to specific DOM subtrees, it does not completely isolate the applied styles to within those subtrees. This is most noticeable with inheritance — properties that are inherited by children (for example {{cssxref("color")}} or {{cssxref("font-family")}}) will still be inherited, beyond any set scope limit.
+> [!NOTE]
+> It is important to understand that, while `@scope` allows you to isolate the application of selectors to specific DOM subtrees, it does not completely isolate the applied styles to within those subtrees. This is most noticeable with inheritance — properties that are inherited by children (for example {{cssxref("color")}} or {{cssxref("font-family")}}) will still be inherited, beyond any set scope limit.
 
 ### The `:scope` pseudo-class
 
@@ -209,7 +209,7 @@ When using the `&` selector inside a `@scope` block, `&` represents the scope ro
   & & { ... }
 
   /* Doesn't work */
-  :root :root { ... }
+  :scope :scope { ... }
 }
 ```
 
@@ -277,7 +277,8 @@ To fix this, you can use `@scope` as follows:
 
 Now the innermost paragraph is correctly colored black. This is because it is only one DOM tree hierarchy level away from the `.light-theme` scope root, but two levels away from the `.dark-theme` scope root. Therefore, the light style wins.
 
-> **Note:** Scoping proximity overrules source order but is itself overridden by other, higher-priority criteria such as [importance](/en-US/docs/Web/CSS/important), [layers](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers), and [specificity](/en-US/docs/Web/CSS/Specificity).
+> [!NOTE]
+> Scoping proximity overrules source order but is itself overridden by other, higher-priority criteria such as [importance](/en-US/docs/Web/CSS/important), [layers](/en-US/docs/Learn/CSS/Building_blocks/Cascade_layers), and [specificity](/en-US/docs/Web/CSS/Specificity).
 
 ## Formal syntax
 

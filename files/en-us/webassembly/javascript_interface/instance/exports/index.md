@@ -23,7 +23,7 @@ that is exported by the `Instance`.
 
 ```js
 const importObject = {
-  imports: {
+  my_namespace: {
     imported_func(arg) {
       console.log(arg);
     },
@@ -35,7 +35,8 @@ WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
 );
 ```
 
-> **Note:** You can also find this example as [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/instantiate-streaming.html)
+> [!NOTE]
+> You can also find this example as [instantiate-streaming.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/instantiate-streaming.html)
 > on GitHub ([view it live also](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html)).
 
 ## Specifications

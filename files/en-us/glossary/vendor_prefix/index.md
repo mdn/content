@@ -70,7 +70,7 @@ window.requestAnimationFrame =
   window.msRequestAnimationFrame;
 ```
 
-If you encounter the above code in a code base, you can safely remove all but the first line. All browsers support [`requestAnimationFrame`](/en-US/docs/Web/API/window/requestAnimationFrame#browser_compatibility) without vendor prefixes, and without `window`:
+If you encounter the above code in a code base, you can safely remove all but the first line. All browsers support [`requestAnimationFrame`](/en-US/docs/Web/API/Window/requestAnimationFrame#browser_compatibility) without vendor prefixes, and without `window`:
 
 ```js
 requestAnimationFrame(callback);

@@ -5,12 +5,10 @@ page-type: web-api-interface
 browser-compat: api.Lock
 ---
 
-{{APIRef("Web Locks API")}}{{securecontext_header}}
+{{APIRef("Web Locks API")}}{{securecontext_header}} {{AvailableInWorkers}}
 
 The **`Lock`** interface of the [Web Locks API](/en-US/docs/Web/API/Web_Locks_API) provides the name and mode of a lock.
 This may be a newly requested lock that is received in the callback to {{domxref('LockManager.request','LockManager.request()')}}, or a record of an active or queued lock returned by {{domxref('LockManager.query()')}}.
-
-{{AvailableInWorkers}}
 
 ## Instance properties
 

@@ -42,21 +42,73 @@ Elements are placed in a last-in/first out (LIFO) stack in the top layer. The `:
 
 ## Examples
 
-### Styling the backdrop for fullscreen video
+### Styling a modal dialog's backdrop
 
-In this example, the backdrop style used when a video is shifted to fullscreen mode is configured to be a grey-blue color rather than the black it defaults to in most browsers.
+In this example, we use the `::backdrop` pseudo-element to style the backdrop that is used when a modal {{htmlelement("dialog")}} is open.
+
+#### HTML
+
+We include a {{htmlelement("button")}} that, when clicked, will open the included `<dialog>`. When the `<dialog>` is opened, we give focus to the button that closes the dialog:
+
+```html
+<dialog>
+  <button autofocus>Close</button>
+  <p>This modal dialog has a beautiful backdrop!</p>
+</dialog>
+<button>Show the dialog</button>
+```
+
+#### CSS
+
+We add a background to the backdrop, creating a colorful donut using [CSS gradients](/en-US/docs/Web/CSS/gradient):
 
 ```css
-video::backdrop {
-  background-color: #448;
+::backdrop {
+  background-image: radial-gradient(
+      circle,
+      #fff 0 5vw,
+      transparent 5vw 20vw,
+      #fff 20vw 22.5vw,
+      #eee 22.5vw
+    ),
+    conic-gradient(
+      #272b66 0 50grad,
+      #2d559f 50grad 100grad,
+      #9ac147 100grad 150grad,
+      #639b47 150grad 200grad,
+      #e1e23b 200grad 250grad,
+      #f7941e 250grad 300grad,
+      #662a6c 300grad 350grad,
+      #9a1d34 350grad 400grad,
+      #43a1cd 100grad 150grad,
+      #ba3e2e
+    );
 }
 ```
 
-The resulting screen looks like this:
+#### JavaScript
 
-![An almost full-screen video player with purple above and below the player as the video player doesn't completely fill the screen.](bbb-backdrop.png)
+The dialog is opened modally using the [`.showModal()`](/en-US/docs/Web/API/HTMLDialogElement/showModal) method and closed using the [`.close()`](/en-US/docs/Web/API/HTMLDialogElement/close) method.
 
-[See this example in action](https://mdn.github.io/css-examples/backdrop/index.html), after changing the color of the background cause the video to go fullscreen to see the change to the backdrop color.
+```js
+const dialog = document.querySelector("dialog");
+const showButton = document.querySelector("dialog + button");
+const closeButton = document.querySelector("dialog button");
+
+// "Show the dialog" button opens the dialog modally
+showButton.addEventListener("click", () => {
+  dialog.showModal();
+});
+
+// "Close" button closes the dialog
+closeButton.addEventListener("click", () => {
+  dialog.close();
+});
+```
+
+#### Results
+
+{{EmbedLiveSample("Styling a modal dialog's backdrop", 450, 300)}}
 
 ## Specifications
 

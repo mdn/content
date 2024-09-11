@@ -43,7 +43,8 @@ To get started, let's return to our number guessing game — except this time we
 1. To get started, open the local copy inside your favorite text editor, and your browser.
 2. Try playing the game — you'll notice that when you press the "Submit guess" button, it doesn't work!
 
-> **Note:** You might well have your own version of the game example that doesn't work, which you might want to fix! We'd still like you to work through the article with our version, so that you can learn the techniques we are teaching here. Then you can go back and try to fix your example.
+> [!NOTE]
+> You might well have your own version of the game example that doesn't work, which you might want to fix! We'd still like you to work through the article with our version, so that you can learn the techniques we are teaching here. Then you can go back and try to fix your example.
 
 At this point, let's consult the developer console to see if it reports any syntax errors, then try to fix them. You'll learn how below.
 
@@ -64,7 +65,8 @@ Earlier on in the course we got you to type some simple JavaScript commands into
 
 3. If we look at line 86 in our code editor, we'll find this line:
 
-   > **Warning:** Error message may not be on line 86.
+   > [!WARNING]
+   > Error message may not be on line 86.
    >
    > If you are using any code editor with an extension that launches a live server on your local machine, this will cause extra code to be injected. Because of this, the developer tools will list the error as occurring on a line that is not 86.
 
@@ -75,7 +77,8 @@ Earlier on in the course we got you to type some simple JavaScript commands into
 4. The error message says "guessSubmit.addeventListener is not a function", which means that the function we're calling is not recognized by the JavaScript interpreter. Often, this error message actually means that we've spelled something wrong. If you are not sure of the correct spelling of a piece of syntax, it is often good to look up the feature on MDN. The best way to do this currently is to search for "mdn _name-of-feature_" with your favorite search engine. Here's a shortcut to save you some time in this instance: [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener).
 5. So, looking at this page, the error appears to be that we've spelled the function name wrong! Remember that JavaScript is case-sensitive, so any slight difference in spelling or casing will cause an error. Changing `addeventListener` to `addEventListener` should fix this. Do this now.
 
-> **Note:** See our [TypeError: "x" is not a function](/en-US/docs/Web/JavaScript/Reference/Errors/Not_a_function) reference page for more details about this error.
+> [!NOTE]
+> See our [TypeError: "x" is not a function](/en-US/docs/Web/JavaScript/Reference/Errors/Not_a_function) reference page for more details about this error.
 
 ### Syntax errors round two
 
@@ -95,7 +98,8 @@ Earlier on in the course we got you to type some simple JavaScript commands into
 
    It's the same error, but different browsers describe it in a different way.
 
-   > **Note:** This error didn't come up as soon as the page was loaded because this error occurred inside a function (inside the `checkGuess() { }` block). As you'll learn in more detail in our later [functions article](/en-US/docs/Learn/JavaScript/Building_blocks/Functions), code inside functions runs in a separate scope than code outside functions. In this case, the code was not run and the error was not thrown until the `checkGuess()` function was run by line 86.
+   > [!NOTE]
+   > This error didn't come up as soon as the page was loaded because this error occurred inside a function (inside the `checkGuess() { }` block). As you'll learn in more detail in our later [functions article](/en-US/docs/Learn/JavaScript/Building_blocks/Functions), code inside functions runs in a separate scope than code outside functions. In this case, the code was not run and the error was not thrown until the `checkGuess()` function was run by line 86.
 
 4. The line number given in the error is 80. Have a look at line 80, and you'll see the following code:
 
@@ -128,7 +132,8 @@ Earlier on in the course we got you to type some simple JavaScript commands into
 9. So we need a class selector here, which begins with a dot (`.`), but the selector being passed into the `querySelector()` method in line 49 has no dot. This could be the problem! Try changing `lowOrHi` to `.lowOrHi` in line 49.
 10. Try saving and refreshing again, and your `console.log()` statement should return the `<p>` element we want. Phew! Another error fixed! You can delete your `console.log()` line now, or keep it to reference later on — your choice.
 
-> **Note:** See our [TypeError: "x" is (not) "y"](/en-US/docs/Web/JavaScript/Reference/Errors/Unexpected_type) reference page for more details about this error.
+> [!NOTE]
+> See our [TypeError: "x" is (not) "y"](/en-US/docs/Web/JavaScript/Reference/Errors/Unexpected_type) reference page for more details about this error.
 
 ### Syntax errors round three
 
@@ -194,24 +199,6 @@ Try updating both lines like this, then save and refresh — the game should now
 
 There are other common errors you'll come across in your code. This section highlights most of them.
 
-### SyntaxError: missing ; before statement
-
-This error generally means that you have missed a semicolon at the end of one of your lines of code, but it can sometimes be more cryptic. For example, if we change this line inside the `checkGuess()` function:
-
-```js
-const userGuess = Number(guessField.value);
-```
-
-to
-
-```js example-bad
-const userGuess === Number(guessField.value);
-```
-
-It throws this error because it thinks you are trying to do something different. You should make sure that you don't mix up the assignment operator (`=`) — which sets a variable to be equal to a value — with the strict equality operator (`===`), which tests whether one value is equal to another, and returns a `true`/`false` result.
-
-> **Note:** See our [SyntaxError: missing ; before statement](/en-US/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement) reference page for more details about this error.
-
 ### The program always says you've won, regardless of the guess you enter
 
 This could be another symptom of mixing up the assignment and strict equality operators. For example, if we were to change this line inside `checkGuess()`:
@@ -232,7 +219,8 @@ the test would always return `true`, causing the program to report that the game
 
 This one is pretty simple — it generally means that you've missed the closing parenthesis at the end of a function/method call.
 
-> **Note:** See our [SyntaxError: missing ) after argument list](/en-US/docs/Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list) reference page for more details about this error.
+> [!NOTE]
+> See our [SyntaxError: missing ) after argument list](/en-US/docs/Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list) reference page for more details about this error.
 
 ### SyntaxError: missing : after property id
 
@@ -254,13 +242,14 @@ This has caused the browser to think that we are trying to pass the contents of 
 
 This is easy — it generally means that you've missed one of your curly braces from a function or conditional structure. We got this error by deleting one of the closing curly braces near the bottom of the `checkGuess()` function.
 
-### SyntaxError: expected expression, got '_string_' or SyntaxError: unterminated string literal
+### SyntaxError: expected expression, got '_string_' or SyntaxError: string literal contains an unescaped line break
 
 These errors generally mean that you've left off a string value's opening or closing quote mark. In the first error above, _string_ would be replaced with the unexpected character(s) that the browser found instead of a quote mark at the start of a string. The second error means that the string has not been ended with a quote mark.
 
 For all of these errors, think about how we tackled the examples we looked at in the walkthrough. When an error arises, look at the line number you are given, go to that line and see if you can spot what's wrong. Bear in mind that the error is not necessarily going to be on that line, and also that the error might not be caused by the exact same problem we cited above!
 
-> **Note:** See our [SyntaxError: Unexpected token](/en-US/docs/Web/JavaScript/Reference/Errors/Unexpected_token) and [SyntaxError: unterminated string literal](/en-US/docs/Web/JavaScript/Reference/Errors/Unterminated_string_literal) reference pages for more details about these errors.
+> [!NOTE]
+> See our [SyntaxError: Unexpected token](/en-US/docs/Web/JavaScript/Reference/Errors/Unexpected_token) and [SyntaxError: string literal contains an unescaped line break](/en-US/docs/Web/JavaScript/Reference/Errors/String_literal_EOL) reference pages for more details about these errors.
 
 ## Summary
 

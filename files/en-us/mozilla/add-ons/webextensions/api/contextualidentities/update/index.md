@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.contextualIdentities.update
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Updates properties of a contextual identity, given its cookie store ID.
 

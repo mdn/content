@@ -8,8 +8,7 @@ browser-compat: api.History.pushState
 
 {{APIRef("History API")}}
 
-In an [HTML](/en-US/docs/Web/HTML) document, the
-**`history.pushState()`** method adds an entry to the browser's
+The **`pushState()`** method of the {{domxref("History")}} interface adds an entry to the browser's
 session history stack.
 
 ## Syntax
@@ -31,7 +30,8 @@ pushState(state, unused, url)
 
     The `state` object can be anything that can be serialized.
 
-    > **Note:** Some browsers save `state` objects to the user's disk so they can be restored after the user restarts the browser, and impose a size limit on the serialized representation of a `state` object, and will throw an exception if you pass a `state` object whose serialized representation is larger than that size limit. So in cases where you want to ensure you have more space than what some browsers might impose, you're encouraged to use {{domxref("Window.sessionStorage", "sessionStorage")}} and/or {{domxref("Window.localStorage", "localStorage")}}.
+    > [!NOTE]
+    > Some browsers save `state` objects to the user's disk so they can be restored after the user restarts the browser, and impose a size limit on the serialized representation of a `state` object, and will throw an exception if you pass a `state` object whose serialized representation is larger than that size limit. So in cases where you want to ensure you have more space than what some browsers might impose, you're encouraged to use {{domxref("Window.sessionStorage", "sessionStorage")}} and/or {{domxref("Window.localStorage", "localStorage")}}.
 
 - `unused`
 
@@ -49,6 +49,13 @@ pushState(state, unused, url)
 ### Return value
 
 None ({{jsxref("undefined")}}).
+
+### Exceptions
+
+- `SecurityError` {{domxref("DOMException")}}
+  - : Thrown if the associated document is not fully active, or if the provided `url` parameter is not a valid URL. Browsers also throttle navigations and may throw this error, generate a warning, or ignore the call if it's called too frequently.
+- `DataCloneError` {{domxref("DOMException")}}
+  - : Thrown if the provided `state` parameter is not serializable.
 
 ## Description
 

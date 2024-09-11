@@ -2,7 +2,16 @@
 title: Media Capture and Streams API (Media Stream)
 slug: Web/API/Media_Capture_and_Streams_API
 page-type: web-api-overview
-browser-compat: api.MediaStream
+browser-compat:
+  - api.MediaStream
+  - api.MediaStreamTrack
+  - api.MediaDevices
+  - api.MediaDeviceInfo
+  - api.InputDeviceInfo
+  - api.CanvasCaptureMediaStreamTrack
+spec-urls:
+  - https://w3c.github.io/mediacapture-main/
+  - https://w3c.github.io/mediacapture-fromelement/
 ---
 
 {{DefaultAPISidebar("Media Capture and Streams")}}
@@ -30,14 +39,12 @@ In these reference articles, you'll find the fundamental information you'll need
 - {{domxref("MediaDeviceInfo")}}
 - {{domxref("MediaDevices")}}
 - {{domxref("MediaStream")}}
-- {{domxref("MediaStreamEvent")}}
 - {{domxref("MediaStreamTrack")}}
 - {{domxref("MediaStreamTrackEvent")}}
 - {{domxref("MediaTrackConstraints")}}
 - {{domxref("MediaTrackSettings")}}
 - {{domxref("MediaTrackSupportedConstraints")}}
 - {{domxref("OverconstrainedError")}}
-- {{domxref("URL")}}
 
 ## Events
 
@@ -60,5 +67,4 @@ The [Taking still photos with getUserMedia()](/en-US/docs/Web/API/Media_Capture_
 ## See also
 
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API) - the introductory page to the API
-- {{domxref("mediaDevices.getUserMedia()")}}
 - [Taking still photos with WebRTC](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos): a demonstration and tutorial about using `getUserMedia()`.

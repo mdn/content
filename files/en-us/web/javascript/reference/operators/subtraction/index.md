@@ -23,30 +23,23 @@ The `-` operator is overloaded for two types of operands: number and [BigInt](/e
 
 ## Examples
 
-### Subtraction with numbers
+### Subtraction using numbers
 
 ```js
-// Number - Number -> subtraction
 5 - 3; // 2
-
-// Number - Number -> subtraction
 3 - 5; // -2
 ```
 
-### Subtraction with non-numbers
+Other non-BigInt values are coerced to numbers:
 
 ```js
-// String - Number -> subtraction
 "foo" - 3; // NaN; "foo" is converted to the number NaN
-
-// Number - String -> subtraction
 5 - "3"; // 2; "3" is converted to the number 3
 ```
 
-### Subtraction with BigInts
+### Subtraction using BigInts
 
 ```js
-// BigInt - BigInt -> subtraction
 2n - 1n; // 1n
 ```
 
@@ -55,6 +48,13 @@ You cannot mix BigInt and number operands in subtraction.
 ```js example-bad
 2n - 1; // TypeError: Cannot mix BigInt and other types, use explicit conversions
 2 - 1n; // TypeError: Cannot mix BigInt and other types, use explicit conversions
+```
+
+To do subtraction with a BigInt and a non-BigInt, convert either operand:
+
+```js
+2n - BigInt(1); // 1n
+Number(2n) - 1; // 1
 ```
 
 ## Specifications

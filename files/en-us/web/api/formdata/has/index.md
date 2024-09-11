@@ -6,11 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.FormData.has
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers}}
 
 The **`has()`** method of the {{domxref("FormData")}} interface returns whether a `FormData` object contains a certain key.
-
-> **Note:** This method is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 
 ## Syntax
 

@@ -52,9 +52,11 @@ As the structure of at-rules varies widely, please see [At-rule](/en-US/docs/Web
 
 ## Index
 
-> **Note:** This index does not include SVG-exclusive [presentation attributes](/en-US/docs/Web/SVG/Attribute/Presentation), which can be used as CSS properties on [SVG](/en-US/docs/Web/SVG) elements.
+> [!NOTE]
+> This index does not include SVG-exclusive presentation attributes, which can be used as CSS properties on [SVG](/en-US/docs/Web/SVG) elements.
 
-> **Note:** The property names in this index do **not** include the JavaScript names which do differ from the CSS standard names.
+> [!NOTE]
+> The property names in this index do **not** include the JavaScript names which do differ from the CSS standard names.
 
 {{CSS_Ref}}
 
@@ -99,7 +101,7 @@ Combinators are selectors that establish a relationship between two or more simp
 - [Pseudo elements](/en-US/docs/Web/CSS/Pseudo-elements) `::`
   - : Represents entities that are not included in HTML.
 
-> **Callout:**
+> [!CALLOUT]
 >
 > See also [selectors in the Selectors specification](https://drafts.csswg.org/selectors/) and the [pseudo-element specification](https://drafts.csswg.org/css-pseudo/).
 
@@ -130,7 +132,7 @@ Combinators are selectors that establish a relationship between two or more simp
 
 ### Layout
 
-- [Block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context)
+- [Block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context)
 - [Box model](/en-US/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
 - [Containing block](/en-US/docs/Web/CSS/Containing_block)
 - [Layout mode](/en-US/docs/Web/CSS/Layout_mode)
@@ -144,13 +146,14 @@ Combinators are selectors that establish a relationship between two or more simp
 ### Major object types
 
 - {{DOMxRef("Document.styleSheets")}}
-- `{{DOMxRef("StyleSheetList", "styleSheets", "", 1)}}[i].{{DOMxRef("CSSRuleList", "cssRules", "", 1)}}`
-- `cssRules[i].{{DOMxRef("CSSRule.cssText", "cssText", "", 1)}}` (selector & style)
-- `cssRules[i].{{DOMxRef("CSSStyleRule.selectorText", "selectorText", "", 1)}}`
 - {{DOMxRef("HTMLElement.style")}}
-- `HTMLElement.style.{{DOMxRef("CSSStyleDeclaration.cssText", "cssText", "", 1)}}` (just style)
 - {{DOMxRef("Element.className")}}
 - {{DOMxRef("Element.classList")}}
+- {{DOMxRef("StyleSheetList")}}
+- {{DOMxRef("CSSRuleList")}}
+- {{DOMxRef("CSSRule")}}
+- {{DOMxRef("CSSStyleRule")}}
+- {{DOMxRef("CSSStyleDeclaration")}}
 
 ### Important methods
 

@@ -18,12 +18,14 @@ The `PerformanceEntry` instances will always be one of the following subclasses:
 - {{domxref("LargestContentfulPaint")}}
 - {{domxref("LayoutShift")}}
 - {{domxref("PerformanceEventTiming")}}
+- {{domxref("PerformanceLongAnimationFrameTiming")}}
 - {{domxref("PerformanceLongTaskTiming")}}
 - {{domxref("PerformanceMark")}}
 - {{domxref("PerformanceMeasure")}}
 - {{domxref("PerformanceNavigationTiming")}}
 - {{domxref("PerformancePaintTiming")}}
 - {{domxref("PerformanceResourceTiming")}}
+- {{domxref("PerformanceScriptTiming")}}
 - {{domxref("PerformanceServerTiming")}}
 - {{domxref("TaskAttributionTiming")}}
 - {{domxref("VisibilityStateEntry")}}

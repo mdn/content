@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.devtools.panels.create
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Adds a new panel to the devtools.
 
@@ -65,7 +65,8 @@ browser.devtools.panels
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/docs/extensions/reference/devtools_panels/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/docs/extensions/reference/api/devtools/panels) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

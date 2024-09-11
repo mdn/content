@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.MIDIPort.version
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("Web MIDI API")}}
+{{securecontext_header}}{{APIRef("Web MIDI API")}}
 
 The **`version`** read-only property of the {{domxref("MIDIPort")}} interface returns the version of the port.
 

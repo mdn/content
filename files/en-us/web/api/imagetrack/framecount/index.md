@@ -8,7 +8,7 @@ status:
 browser-compat: api.ImageTrack.frameCount
 ---
 
-{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
+{{APIRef("WebCodecs API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`frameCount`** property of the {{domxref("ImageTrack")}} interface returns the number of frames in the track.
 

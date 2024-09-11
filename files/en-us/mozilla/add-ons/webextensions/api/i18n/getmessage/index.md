@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.i18n.getMessage
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Gets the localized string for the specified message.
 
@@ -77,7 +77,8 @@ If `target.url` is "https\://developer.mozilla.org", then the value of message, 
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.i18n`](https://developer.chrome.com/docs/extensions/reference/i18n/#method-getMessage) API. This documentation is derived from [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/extensions/common/api/i18n.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.i18n`](https://developer.chrome.com/docs/extensions/reference/api/i18n#method-getMessage) API. This documentation is derived from [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/extensions/common/api/i18n.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

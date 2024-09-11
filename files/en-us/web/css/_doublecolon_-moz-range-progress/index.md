@@ -11,7 +11,8 @@ browser-compat: css.selectors.-moz-range-progress
 
 The **`::-moz-range-progress`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) is a [Mozilla extension](/en-US/docs/Web/CSS/Mozilla_Extensions) that represents the lower portion of the _track_ (i.e., groove) in which the indicator slides in an {{HTMLElement("input")}} of `type="range"`. This portion corresponds to values lower than the value currently selected by the _thumb_ (i.e., virtual knob).
 
-> **Note:** Using `::-moz-range-progress` with anything but an `<input type="range">` doesn't match anything and has no effect.
+> [!NOTE]
+> Using `::-moz-range-progress` with anything but an `<input type="range">` doesn't match anything and has no effect.
 
 ## Syntax
 

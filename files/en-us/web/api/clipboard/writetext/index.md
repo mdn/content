@@ -41,7 +41,7 @@ Additional security requirements are covered in the [Security consideration](/en
 This example sets the clipboard's contents to the string "\<empty clipboard>".
 
 ```js
-button.addEventListener("click", writeClipboardText("<empty clipboard>"));
+button.addEventListener("click", () => writeClipboardText("<empty clipboard>"));
 
 async function writeClipboardText(text) {
   try {

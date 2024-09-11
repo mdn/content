@@ -40,9 +40,7 @@ several interesting capabilities:
   **tee** the readable stream. This returns an array containing two new
   `ReadableStream` objects, each of which returns the contents of the
   `Blob`.
-- Call the returned stream's {{domxref("ReadableStream.pipeThrough",
-    "pipeThrough()")}} method to pipe the stream through a {{domxref("TransformStream")}}
-  or any other readable and writable pair.
+- Call the returned stream's {{domxref("ReadableStream.pipeThrough", "pipeThrough()")}} method to pipe the stream through a {{domxref("TransformStream")}} or any other readable and writable pair.
 
 ## Specifications
 

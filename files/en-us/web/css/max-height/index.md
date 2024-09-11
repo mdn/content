@@ -18,6 +18,8 @@ The **`max-height`** [CSS](/en-US/docs/Web/CSS) property sets the maximum height
 ```css
 /* <length> value */
 max-height: 3.5em;
+max-height: anchor-size(height);
+max-height: calc(anchor-size(--myAnchor self-block, 250px) + 2em);
 
 /* <percentage> value */
 max-height: 75%;
@@ -28,6 +30,7 @@ max-height: max-content;
 max-height: min-content;
 max-height: fit-content;
 max-height: fit-content(20em);
+max-height: stretch;
 
 /* Global values */
 max-height: inherit;
@@ -50,11 +53,17 @@ max-height: unset;
 - `min-content`
   - : The intrinsic minimum `max-height`.
 - `fit-content`
-  - : Use the available space, but not more than [max-content](/en-US/docs/Web/CSS/max-content), i.e `min(max-content, max(min-content, stretch))`.
-- `fit-content({{cssxref("&lt;length-percentage&gt;")}})` {{Experimental_Inline}}
+  - : Use the available space, but not more than [max-content](/en-US/docs/Web/CSS/max-content), i.e. `min(max-content, max(min-content, stretch))`.
+- `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
   - : Uses the `fit-content` formula with the available space replaced by the specified argument, i.e. `min(max-content, max(min-content, argument))`.
+- `stretch`
 
-## Accessibility concerns
+  - : Limits the maximum height of the element's [margin box](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#parts_of_a_box) to the height of its [containing block](/en-US/docs/Web/CSS/Containing_block#identifying_the_containing_block). It attempts to make the margin box fill the available space in the containing block, so in a way behaving similar to `100%` but applying the resulting size to the margin box rather than the box determined by [box-sizing](/en-US/docs/Web/CSS/box-sizing).
+
+    > [!NOTE]
+    > To check aliases used by browsers for the `stretch` value and its implementation status, see the [Browser compatibility](#browser_compatibility) section.
+
+## Accessibility
 
 Ensure that elements set with a `max-height` are not truncated and/or do not obscure other content when the page is zoomed to increase text size.
 

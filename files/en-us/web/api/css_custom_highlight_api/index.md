@@ -237,3 +237,5 @@ The result is shown below. Type text within the search field to highlight matche
 ## See also
 
 - [CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web](https://css-tricks.com/css-custom-highlight-api-early-look/)
+- HTML [`contentEditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute
+- CSS {{cssxref("pseudo-elements")}}

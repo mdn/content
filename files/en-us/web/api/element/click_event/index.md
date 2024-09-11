@@ -10,9 +10,12 @@ browser-compat: api.Element.click_event
 
 An element receives a **`click`** event when any of the following occurs:
 
-- a pointing-device button (such as a mouse's primary button) is both pressed and released while the pointer is located inside the element.
-- a touch gesture is performed on the element
-- the <kbd>Space</kbd> key or <kbd>Enter</kbd> key is pressed while the element is focused
+- A pointing-device button (such as a mouse's primary button) is both pressed and released while the pointer is located inside the element.
+- A touch gesture is performed on the element.
+- Any user interaction that is equivalent to a click occurs, such as pressing the <kbd>Space</kbd> key or <kbd>Enter</kbd> key while the element is focused.
+
+> [!NOTE]
+> In practice, browsers don't fire the `click` event for custom controls such as a `<div>` with `tabindex="0"`. To check the reason behind this behavior, see this [Chromium issue](https://crbug.com/40776466).
 
 If the button is pressed on one element and the pointer is moved outside the element before the button is released, the event is fired on the most specific ancestor element that contained both elements.
 
@@ -36,7 +39,8 @@ A {{domxref("PointerEvent")}}. Inherits from {{domxref("MouseEvent")}}.
 
 {{InheritanceDiagram("PointerEvent")}}
 
-> **Note:** In earlier versions of the specification the event type for this event was a {{domxref("MouseEvent")}}, and this is still the type passed in Firefox and Safari.
+> [!NOTE]
+> In earlier versions of the specification the event type for this event was a {{domxref("MouseEvent")}}, and this is still the type passed in Firefox and Safari.
 
 ## Event properties
 

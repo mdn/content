@@ -29,15 +29,15 @@ conic-gradient(in hsl longer hue, red, blue, green, red)
 
 /* Color wheel */
 conic-gradient(
-  hsl(360, 100%, 50%),
-  hsl(315, 100%, 50%),
-  hsl(270, 100%, 50%),
-  hsl(225, 100%, 50%),
-  hsl(180, 100%, 50%),
-  hsl(135, 100%, 50%),
-  hsl(90, 100%, 50%),
-  hsl(45, 100%, 50%),
-  hsl(0, 100%, 50%)
+  hsl(360 100% 50%),
+  hsl(315 100% 50%),
+  hsl(270 100% 50%),
+  hsl(225 100% 50%),
+  hsl(180 100% 50%),
+  hsl(135 100% 50%),
+  hsl(90 100% 50%),
+  hsl(45 100% 50%),
+  hsl(0 100% 50%)
 )
 ```
 
@@ -52,7 +52,8 @@ conic-gradient(
 - `<color-hint>`
   - : An {{Glossary("interpolation")}} hint defining how the gradient progresses between adjacent color stops. The length defines at which point between two color stops the gradient color should reach the midpoint of the color transition. If omitted, the midpoint of the color transition is the midpoint between two color stops.
 
-> **Note:** Rendering of [color stops in CSS gradients](#gradient_with_multiple_color_stops) follows the same rules as color stops in [SVG gradients](/en-US/docs/Web/SVG/Tutorial/Gradients).
+> [!NOTE]
+> Rendering of [color stops in CSS gradients](#gradient_with_multiple_color_stops) follows the same rules as color stops in [SVG gradients](/en-US/docs/Web/SVG/Tutorial/Gradients).
 
 ## Description
 
@@ -62,7 +63,8 @@ To create a conic gradient that repeats so as to fill a 360 degree rotation, use
 
 Because `<gradient>`s belong to the `<image>` data type, they can only be used where `<image>`s can be used. For this reason, `conic-gradient()` won't work on {{CSSxRef("background-color")}} and other properties that use the {{CSSxRef("&lt;color&gt;")}} data type.
 
-> **Note:** Why is it called a "conic" gradient? If the color stops are much lighter on one side than the other, it can look like a cone from above.
+> [!NOTE]
+> Why is it called a "conic" gradient? If the color stops are much lighter on one side than the other, it can look like a cone from above.
 
 ### Composition of a conic gradient
 
@@ -70,7 +72,7 @@ The conic-gradient syntax is similar to the radial-gradient syntax, but the colo
 
 ![color stops along the circumference of a conic gradient and the axis of a radial gradient.](screenshot_2018-11-29_21.09.19.png)
 
-A conic gradient is specified by indicating a rotation angle, the center of the gradient, and then specifying a list of color-stops. Unlike linear and radial gradients, whose color-stops are placed by specifying a [length](/en-US/docs/Web/CSS/length), the color-stops of a conic gradient are specified with an [angle](/en-US/docs/Web/CSS/angle). Units include `deg` for degrees, `grad` for gradients, `rad` for radians, and `turn` for turns. There are 360 degrees, 400 gradians, 2π radians, and 1 turn in a circle. Browsers supporting conic gradients also accept percent values, with 100% equaling 360 degrees, but this is not in the specification.
+A conic gradient is specified by indicating a rotation angle, the center of the gradient, and then specifying a list of color-stops. Unlike linear and radial gradients, whose color-stops are placed by specifying a {{cssxref("length")}}, the color-stops of a conic gradient are specified with an [angle](/en-US/docs/Web/CSS/angle). Units include `deg` for degrees, `grad` for gradients, `rad` for radians, and `turn` for turns. There are 360 degrees, 400 gradians, 2π radians, and 1 turn in a circle. Browsers supporting conic gradients also accept percent values, with 100% equaling 360 degrees, but this is not in the specification.
 
 Similar to radial gradients, the conic gradient syntax provides for positioning the center of the gradient anywhere within, or even outside, the image. The values for the position are similar to the syntax for 2-value background-position.
 
@@ -117,7 +119,7 @@ And, yes, you can mix and match different angle units, but don't. The above is h
 
 {{csssyntax}}
 
-## Accessibility concerns
+## Accessibility
 
 Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users. While it is possible to create pie charts, checkerboards, and other effects with conic gradients, CSS images provide no native way to assign alternative text, and therefore the image represented by the conic gradient will not be accessible to screen reader users. If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.
 
@@ -212,7 +214,8 @@ div {
       #000 0.25turn 0.5turn,
       #fff 0.5turn 0.75turn,
       #000 0.75turn
-    ) top left / 25% 25% repeat;
+    )
+    top left / 25% 25% repeat;
   border: 1px solid;
 }
 ```

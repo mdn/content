@@ -4,7 +4,7 @@ slug: Web/API/WebSockets_API/Writing_a_WebSocket_server_in_JavaScript_Deno
 page-type: guide
 ---
 
-{{DefaultAPISidebar("Websockets API")}}
+{{DefaultAPISidebar("WebSockets API")}}
 
 This example shows you how to create a WebSocket API server using Deno, with an accompanying web page.
 
@@ -54,7 +54,7 @@ Deno.serve({
 
 `Deno.upgradeWebSocket()` upgrades the connection to a WebSocket connection, which is explained further in [Protocol upgrade mechanism](/en-US/docs/Web/HTTP/Protocol_upgrade_mechanism).
 
-[`Deno.serve()`](https://deno.land/api@v1.36.4?s=Deno.serve) uses `Deno.listen()` and `Deno.serveHttp()` under the hood, and is a higher-level interface to easily set up a HTTP server. Without it, the code would look something like this.
+[`Deno.serve()`](https://docs.deno.com/api/deno/~/Deno.serve) uses `Deno.listen()` and `Deno.serveHttp()` under the hood, and is a higher-level interface to easily set up a HTTP server. Without it, the code would look something like this.
 
 ```js
 for await (const conn of Deno.listen({ port: 80 })) {

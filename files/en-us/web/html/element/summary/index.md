@@ -21,6 +21,8 @@ The `<summary>` element's contents can be any heading content, plain text, or HT
 
 A `<summary>` element may _only_ be used as the first child of a `<details>` element. When the user clicks on the summary, the parent `<details>` element is toggled open or closed, and then a {{domxref("HTMLDetailsElement/toggle_event", "toggle")}} event is sent to the `<details>` element, which can be used to let you know when this state change occurs.
 
+The content of the `<details>` provides the {{glossary("accessible description")}} for the `<summary>`.
+
 ### Default label text
 
 If a `<details>` element's first child is not a `<summary>` element, the {{Glossary("user agent")}} will use a default string (typically "Details") as the label for the disclosure box.
@@ -79,7 +81,8 @@ You can use heading elements in `<summary>`, like this:
 
 This currently has some spacing issues that could be addressed using CSS.
 
-> **Warning:** Because the `<summary>` element has a default role of [button](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role) (which strips all roles from child elements), this example will not work for users of assistive technologies such as screen readers. The `<h4>` will have its role removed and thus will not be treated as a heading for these users.
+> [!WARNING]
+> Because the `<summary>` element has a default role of [button](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role) (which strips all roles from child elements), this example will not work for users of assistive technologies such as screen readers. The `<h4>` will have its role removed and thus will not be treated as a heading for these users.
 
 ### HTML in summaries
 
@@ -104,13 +107,22 @@ This example adds some semantics to the `<summary>` element to indicate the labe
 
 <table class="properties">
   <tbody>
+     <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        none
+      </td>
+    </tr>
     <tr>
       <th scope="row">Permitted content</th>
       <td>
         <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >Phrasing content</a
-        >
-        or one element of
+        >, optionally intermixed with
         <a href="/en-US/docs/Web/HTML/Content_categories#heading_content"
           >Heading content</a
         >

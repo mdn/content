@@ -35,7 +35,8 @@ If no value is specified, the default paint order is `fill`, `stroke`, `markers`
 
 When one value is specified, that one is painted first, followed by the other two in their default order relative to one another. When two values are specified, they will be painted in the order they are specified in, followed by the unspecified one.
 
-> **Note:** In the case of this property, markers are only appropriate when drawing SVG shapes involving the use of the `marker-*` properties (e.g. [`marker-start`](/en-US/docs/Web/SVG/Attribute/marker-start)) and [`<marker>`](/en-US/docs/Web/SVG/Element/marker) element. They do not apply to HTML text, so in that case, you can only determine the order of `stroke` and `fill`.
+> [!NOTE]
+> In the case of this property, markers are only appropriate when drawing SVG shapes involving the use of the `marker-*` properties (e.g. [`marker-start`](/en-US/docs/Web/SVG/Attribute/marker-start)) and [`<marker>`](/en-US/docs/Web/SVG/Element/marker) element. They do not apply to HTML text, so in that case, you can only determine the order of `stroke` and `fill`.
 
 ### Values
 
@@ -87,6 +88,40 @@ text {
 #### Result
 
 {{EmbedLiveSample("Reversing_the_paint_order_of_stroke_and_fill", "100%", 165)}}
+
+### Reversing the paint order of stroke and fill using HTML
+
+To control the fill and stroke order in HTML, you can use the {{cssxref("-webkit-text-stroke-color")}} and {{cssxref("-webkit-text-stroke-width")}} CSS properties.
+
+#### HTML
+
+```html
+<div>stroke in front</div>
+<div class="stroke-behind">stroke behind</div>
+```
+
+#### CSS
+
+```css
+div {
+  font-family: sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  fill: black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  -webkit-text-stroke-color: red;
+  -webkit-text-stroke-width: 4px;
+}
+
+.stroke-behind {
+  paint-order: stroke fill;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("Reversing_the_paint_order_of_stroke_and_fill_using_HTML", "100%", 165)}}
 
 ## Specifications
 

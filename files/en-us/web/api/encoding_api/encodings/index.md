@@ -312,7 +312,7 @@ These are generally applicable anywhere character encodings are used.
         "<code>iso-ir-58</code>", "<code>x-gbk</code>"
       </td>
       <td>
-        <a href="https://en.wikipedia.org/wiki/GBK">gbk</a>
+        <a href="https://en.wikipedia.org/wiki/GBK_(character_encoding)">gbk</a>
       </td>
     </tr>
     <tr>

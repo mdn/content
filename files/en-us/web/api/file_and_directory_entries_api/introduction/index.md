@@ -113,7 +113,7 @@ When using the asynchronous API, always use the error callbacks. Although the er
 
 The File and Directory Entries API is designed to be used with other APIs and elements on the web platform. For example, you are likely to use one of the following:
 
-- {{domxref("fetch()")}}
+- {{domxref("Window/fetch", "fetch()")}}
 - Drag and Drop API
 - Web Workers (for the synchronous version of the File and Directory Entries API)
 - The `input` element (to programmatically obtain a list of files from the element)

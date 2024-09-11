@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.downloads.DownloadQuery
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The `DownloadQuery` type of the {{WebExtAPIRef("downloads")}} API defines a set of parameters that can be used to search the downloads manager for a specific set of downloads.
 
@@ -74,7 +74,8 @@ Values of this type are objects. They contain the following properties:
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#type-DownloadQuery) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#type-DownloadQuery) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

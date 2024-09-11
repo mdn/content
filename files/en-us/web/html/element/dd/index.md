@@ -13,10 +13,7 @@ The **`<dd>`** [HTML](/en-US/docs/Web/HTML) element provides the description, de
 
 ## Attributes
 
-This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
-
-- `nowrap` {{Non-standard_inline}} {{Deprecated_Inline}}
-  - : If the value of this attribute is set to `yes`, the definition text will not wrap. The default value is `no`.
+This element only includes the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
 ## Examples
 
@@ -57,7 +54,7 @@ For examples, see the [examples provided for the `<dl>` element](/en-US/docs/Web
         A {{HTMLElement("dl")}} or a
         {{HTMLElement("div")}} that is a child of a
         {{HTMLElement("dl")}}.<br />This element can be used after a
-        {{HTMLElement("dt")}} or another {{HTMLElement("dd")}}
+        {{HTMLElement("dt")}} or another <code>&lt;dd&gt;</code>
         element.
       </td>
     </tr>

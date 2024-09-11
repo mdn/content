@@ -21,7 +21,7 @@ transform: rotate(asin(pi / 5));
 transform: rotate(asin(e / 3));
 ```
 
-### Parameter
+### Parameters
 
 The `asin(number)` function accepts only one value as its parameter.
 

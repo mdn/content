@@ -12,21 +12,31 @@ The **`toggle`** event fires when the `open`/`closed` state of a {{HtmlElement("
 
 This event is not cancelable and does not bubble.
 
-> **Note:** The `toggle` event is also available in a different form on {{domxref("HTMLElement")}}; this version fires on [popover elements](/en-US/docs/Web/API/Popover_API) just after they are shown or hidden. See the `HTMLElement` {{domxref("HTMLElement.toggle_event", "toggle event")}} page for more information.
+> [!NOTE]
+> The `toggle` event is also available in a different form on {{domxref("HTMLElement")}}; this version fires on [popover elements](/en-US/docs/Web/API/Popover_API) just after they are shown or hidden. See the `HTMLElement` {{domxref("HTMLElement.toggle_event", "toggle")}} event page for more information.
 
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
+```js example-good
 addEventListener("toggle", (event) => {});
 
 ontoggle = (event) => {};
 ```
 
+```html example-bad
+<details ontoggle="console.log(this.open)" open>...</details>
+```
+
+> [!NOTE]
+> In the example above the event listener will be called once without any user interaction because the `open` attribute is set. Using event handlers like this [is discouraged](/en-US/docs/Web/HTML/Attributes#event_handler_attributes).
+
 ## Event type
 
-A generic {{domxref("Event")}}.
+A {{domxref("ToggleEvent")}}. Inherits from {{domxref("Event")}}.
+
+{{InheritanceDiagram("ToggleEvent")}}
 
 ## Examples
 

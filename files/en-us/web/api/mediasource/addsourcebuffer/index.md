@@ -40,10 +40,7 @@ created and added to the media source.
   - : Thrown if the {{domxref("MediaSource")}} is not in the `"open"`
     {{domxref("MediaSource.readyState", "readyState")}}.
 - `NotSupportedError` {{domxref("DOMException")}}
-  - : Thrown if the specified `mimeType` isn't supported by the {{Glossary("user
-    agent")}}, or is not compatible with the MIME types of other
-    {{domxref("SourceBuffer")}} objects that are already included in the media source's
-    {{domxref("MediaSource.sourceBuffers", "sourceBuffers")}} list.
+  - : Thrown if the specified `mimeType` isn't supported by the {{Glossary("user agent")}}, or is not compatible with the MIME types of other {{domxref("SourceBuffer")}} objects that are already included in the media source's {{domxref("MediaSource.sourceBuffers", "sourceBuffers")}} list.
 - `QuotaExceededError` {{domxref("DOMException")}}
   - : Thrown if the user agent can't handle any more `SourceBuffer` objects, or creating
     a new `SourceBuffer` using the given `mimeType` would result in

@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.downloads.showDefaultFolder
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The **`showDefaultFolder()`** function of the {{WebExtAPIRef("downloads")}} API opens the default downloads folder in the platform's file manager.
 
@@ -37,7 +37,8 @@ showBtn.onclick = () => {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#method-showDefaultFolder) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#method-showDefaultFolder) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -128,7 +128,7 @@ _No change._
 
 ### XUL
 
-- Tab Groups [have been removed](https://support.mozilla.org/kb/tab-groups-removal).
+- Tab Groups [have been removed](https://support.mozilla.org/en-US/kb/tab-groups-removal).
 
 ### JavaScript code modules
 
@@ -148,4 +148,4 @@ Starting in Firefox 45, search plugins located in the user's profile's `searchpl
 
 ## Older versions
 
-{{Firefox_for_developers(44)}}
+{{Firefox_for_developers}}
