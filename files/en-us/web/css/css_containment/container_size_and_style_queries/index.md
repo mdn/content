@@ -66,9 +66,9 @@ The `<container-condition>` in this example contains a single `<size-query>` —
 
 ## Naming containers
 
-A `<container-condition>` can include an optional case-sensitive {{cssxref("container-name")}}. A container name makes the container condition more specific. Such container condition is evaluated against only the elements that have `container-name` set to the name.
+A `<container-condition>` can include an optional case-sensitive {{cssxref("container-name")}}. A container name makes the container condition more specific — it is evaluated only against elements that have that name set in the `container-name` property.
 
-The {{cssxref("container-name")}} property specifies a list of query container names that can be used in `@container` rules. The `<container-name>` is a case-sensitive {{cssxref("ident")}}. The container names enable targeting any container ancestor of the element. Without a container name the query matches only the nearest container ancestor.
+The {{cssxref("container-name")}} property specifies a list of query `<container-name>` values that can be used in `@container` rules; these are case-sensitive {{cssxref("ident")}} values. The container names enable targeting any container ancestor of the element. Without a container name, the query matches only the nearest container ancestor.
 
 ```css
 @container [ <container-name> ]? <container-query> {
@@ -76,7 +76,7 @@ The {{cssxref("container-name")}} property specifies a list of query container n
 }
 ```
 
-After you add names to your `@container` at rules, you can use the {{cssxref("container-name")}} property or the {{cssxref("container")}} shorthand to target specific container elements. Styles inside the named `@container` at rules will be applied to only the matching elements inside the containers with the same names that satisfy the container query.
+After you add names to your `@container` at rules, you can use the {{cssxref("container-name")}} property or the {{cssxref("container")}} shorthand to target specific container elements. Styles inside the named `@container` at rules will be applied only to matching elements inside containers with those names set, which satisfy the container queries.
 
 ```css
 @container card (orientation: landscape) {
@@ -89,7 +89,7 @@ After you add names to your `@container` at rules, you can use the {{cssxref("co
 }
 ```
 
-In the above example, the styles within the container query block will apply to the descendants of all {{htmlelement("li")}} elements with a width that is greater than their height. Note that if there are other elements, such as `.bottom-panel > .card`, with `container-name: card` applied to them that match the size query, the styles will also be applied to those elements' descendants.
+In the above example, the styles within the container query block will apply to the descendants of all {{htmlelement("li")}} elements with a width that is greater than their height. Note that other elements with `container-name: card` applied to them that match the size query will also have these styles applied to their elements' descendants.
 
 ```css
 @container wide (min-width: 20em) {
@@ -106,7 +106,7 @@ In the above example, the styles within the container query block will apply to 
 }
 ```
 
-In the above example, the element has two container names, `wide` and `narrow`. The descendants of any element with `class="sizeContainer"` will get the styles from the `wide` or `narrow` query applied (or both if that element is precisely a 20em square).
+In the above example, the element has two container names, `wide` and `narrow`. The descendants of any elements with `class="sizeContainer"` will get the styles from the `wide` or `narrow` query applied (or both if an element is precisely 20em wide).
 
 The default value `container-type: normal` prevents the container from being a query container, meaning the element is not a size container but it can still be a [style container](#container_style_queries). The default value `container-name: none` states the container has no name, but it does not prevent the element from matching unnamed queries.
 
