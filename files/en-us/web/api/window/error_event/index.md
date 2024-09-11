@@ -58,7 +58,12 @@ When canceled, the error won't appear in the console, but the current script wil
 The event handler's signature is asymmetric between `addEventListener()` and `onerror`. The event handler passed to `Window.addEventListener()` receives a single {{domxref("ErrorEvent")}} object, while the `onerror` handler receives five arguments, matching the {{domxref("ErrorEvent")}} object's properties:
 
 - `message`
+
   - : A string containing a human-readable error message describing the problem. Same as {{domxref("ErrorEvent.message")}}.
+
+    > [!NOTE]
+    > In HTML, the [content event handler attribute](/en-US/docs/Web/HTML/Attributes#event_handler_attributes) `onerror` on the {{HTMLElement("body")}} element attaches `error` event listeners to `window` (_not_ the `<body>` element). For this event handler, the first parameter is called `event`, not `message`, although it still contains a string; that is, you would use `<body onerror="console.error(event)">` to log the error message.
+
 - `source`
   - : A string containing the URL of the script that generated the error.
 - `lineno`
