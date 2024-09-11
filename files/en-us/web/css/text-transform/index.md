@@ -461,8 +461,13 @@ In this example, we use pure HTML markup to create a math formula:
 
 ```html
 <div>
-  (<span class="math-id">sin</span>&#8198;<span class="math-id">x</span>)<sup>2</sup> +
-  (<span class="math-id">cos</span>&#8198;<span class="math-id">x</span>)<sup>2</sup> = 1
+  (<span class="math-id">sin</span>&#8198;<span class="math-id">x</span>)<sup
+    >2</sup
+  >
+  + (<span class="math-id">cos</span>&#8198;<span class="math-id">x</span>)<sup
+    >2</sup
+  >
+  = 1
 </div>
 ```
 
