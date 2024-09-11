@@ -3,12 +3,10 @@ title: "EncodedAudioChunk: copyTo() method"
 short-title: copyTo()
 slug: Web/API/EncodedAudioChunk/copyTo
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.EncodedAudioChunk.copyTo
 ---
 
-{{APIRef("WebCodecs API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_dedicated")}}
+{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`copyTo()`** method of the {{domxref("EncodedAudioChunk")}} interface copies the encoded chunk of audio data.
 
