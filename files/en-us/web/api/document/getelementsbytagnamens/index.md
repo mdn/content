@@ -33,7 +33,7 @@ found elements in the order they appear in the tree.
 
 > [!NOTE]
 > In DOM level 3 and earlier, the returned value is a {{DOMxRef("NodeList")}}, but this method has always returned a `HTMLCollection` in Firefox.
-> Older versions of Opera return a `NodeList`, but with a `namedItem` method implemented, which makes it similar to a `HTMLCollection`. 
+> Older versions of Opera return a `NodeList`, but with a `namedItem` method implemented, which makes it similar to a `HTMLCollection`.
 > See [bug 14869](https://bugzil.la/14869) for details.
 
 > [!NOTE]
