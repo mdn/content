@@ -34,6 +34,7 @@ inputElement.accept = ".doc,.docx,.xml,application/msword"; // sets the accept v
 
 - {{domxref("HTMLInputElement.type")}}
 - {{domxref("HTMLInputElement.multiple")}}
+- {{domxref("HTMLInputElement.capture")}}
 - [File type specifiers](/en-US/docs/Web/HTML/Element/input/file#unique_file_type_specifiers)
 - [Using files from web applications](/en-US/docs/Web/API/File_API/Using_files_from_web_applications)
 - [File API](/en-US/docs/Web/API/File_API)
