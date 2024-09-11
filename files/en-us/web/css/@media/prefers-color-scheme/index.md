@@ -99,7 +99,7 @@ The left boxes shows Theme A and Theme B as they would appear without the `prefe
 
 ### Inherited color scheme in embedded elements
 
-The following example shows how to use the `prefers-color-scheme` in an embedded element with the color schemes inherited from a parent element.
+The following example shows how to use the `prefers-color-scheme` media feature in an embedded element to inherit a color scheme from a parent element.
 A script is used to set the source of the `<img>` elements and their `alt` attributes. This would normally be done in HTML as `<img src="circle.svg" alt="circle" />`.
 
 You should see three circles, with one drawn in a different color.

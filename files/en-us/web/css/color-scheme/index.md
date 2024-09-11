@@ -7,14 +7,14 @@ browser-compat: css.properties.color-scheme
 
 {{CSSRef}}
 
-The **`color-scheme`** [CSS](/en-US/docs/Web/CSS) property allows an element to indicate which color schemes it can comfortably be rendered in. User agents change the following aspects of the browser-controlled UI to match the used color scheme:
+The **`color-scheme`** [CSS](/en-US/docs/Web/CSS) property allows an element to indicate which color schemes it can comfortably be rendered in. User agents change the following aspects of the UI chrome to match the used color scheme:
 
-- the color of the canvas surface
-- the default colors of scrollbars and other interaction UI
-- the default colors of form controls
-- the default colors of other browser-provided UI, such as "spellcheck" underlines
+- The color of the canvas surface.
+- The default colors of scrollbars and other interaction UI.
+- The default colors of form controls.
+- The default colors of other browser-provided UI, such as "spellcheck" underlines.
 
-Component authors must use [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) media query to support the color schemes on reset of the elements.
+Component authors must use the [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) media feature to support the color schemes on the rest of the elements.
 
 Common choices for operating system color schemes are "light" and "dark", or "day mode" and "night mode". When a user selects one of these color schemes, the operating system makes adjustments to the user interface. This includes [form controls](/en-US/docs/Learn/Forms), [scrollbars](/en-US/docs/Web/CSS/CSS_scrollbars_styling), and the used values of [CSS system colors](/en-US/docs/Web/CSS/CSS_colors).
 
@@ -42,7 +42,7 @@ The `color-scheme` property's value must be one of the following keywords.
 ### Values
 
 - `normal`
-  - : If [page's supported color schems](/en-US/docs/Web/HTML/Element/meta/name#color-scheme) are set then the value indicates that the element supports the page's color schemes. If the page's color scheme is not set, the element does not support any color scheme.
+  - : Indicates that the element can be rendered using the page's [color scheme](/en-US/docs/Web/HTML/Element/meta/name#color-scheme) settings. If the page does not have a color scheme set, the element is rendered using the page's default color settings.
 - `light`
   - : Indicates that the element can be rendered using the operating system _light_ color scheme.
 - `dark`
