@@ -22,7 +22,7 @@ Advertisers commonly try to discern the interests of users they display ads to o
 
 Traditionally, advertisers have learned about user interests by tracking their behavior across sites using technologies such as third-party cookies. An ad will typically be embedded on a web page in an {{htmlelement("iframe")}}, which can set a cookie containing information about the user and the subjects they are interested in.
 
-Later on, when the user decides to visit the advertiser's site, provided it is from the same domain as the ad, that site can access the third-party cookie set previously by the ad. The advertiser can associate data from multiple third-party cookies set by ads, building up a profile of the user, their interests, and other information besides. This is bad for user [privacy](/en-US/docs/Web/Privacy). At this point, any page from the same domain can get access to that information, and unscrupulous companies often sell this information to other companies.
+Later on, when the user decides to visit the advertiser's site, provided it is from the same domain as the ad, that site can access the third-party cookie set previously by the ad. The advertiser can associate data from multiple third-party cookies set by ads, building up a profile of the user, their interests, and other information besides. This is bad for user [privacy](/en-US/docs/Web/Privacy). At this point, any page from the same domain can get access to that information, and unscrupulous companies often sell this information to other companies. To protect user privacy, browsers are [phasing out the availability of third-party cookies](/en-US/blog/goodbye-third-party-cookies/) for an increasing proportion of users.
 
 The Protected Audience API is designed to allow advertisers to select relevant ads based on user interests, and content publishers to display those ads and earn ad revenue, without cross-site tracking. The user's browser holds the information about what they are interested in and what ads are displayed to them, not the advertisers or ad tech platforms. This information is held securely, and cannot be accessed by third parties.
 
@@ -82,9 +82,9 @@ When auctions complete, and ads are chosen, {{htmlelement("fencedframe")}} eleme
 - {{domxref("ForDebuggingOnly")}}
   - : Defines methods for reporting auction wins and losses from inside the `generateBid()` and `scoreAd()` user-defined functions for debugging purposes.
 - {{domxref("InterestGroupBiddingAndScoringScriptRunnerGlobalScope")}}
-  - : Exposes appropriate interfaces to buyer and seller script runners to provide access for user-defined functions to debugging and reporting functionality (defined on `ForDebuggingOnly` and `RealTimeReporting`).
+  - : Exposes appropriate interfaces to buyer and seller script runners to provide access to bidding and scoring functionality for user-defined functions.
 - {{domxref("InterestGroupReportingScriptRunnerGlobalScope")}}
-  - : Exposes appropriate interfaces to buyer and seller script runners to provide access for user-defined functions to reporting functionality.
+  - : Exposes appropriate interfaces to buyer and seller script runners to provide access to reporting functionality for user-defined functions (defined on `ForDebuggingOnly` and `RealTimeReporting`).
 - {{domxref("ProtectedAudience")}}
   - : Defines the {{domxref("ProtectedAudience.queryFeatureSupport", "queryFeatureSupport()")}} method, which is used to determine support for Protected Audience API features.
 - {{domxref("RealTimeReporting")}}
