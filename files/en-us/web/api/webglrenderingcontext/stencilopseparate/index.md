@@ -20,9 +20,6 @@ stencilOpSeparate(face, fail, zfail, zpass)
 
 ### Parameters
 
-The `fail`, `zfail` and `zpass` parameters accept all
-constants listed below.
-
 - `face`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying whether the front and/or back stencil state is
@@ -83,8 +80,7 @@ gl.stencilOpSeparate(gl.FRONT, gl.INCR, gl.DECR, gl.INVERT);
 ```
 
 To get the current information about stencil and depth pass or fail, query the
-following constants with {{domxref("WebGLRenderingContext.getParameter",
-  "getParameter()")}}.
+following constants with {{domxref("WebGLRenderingContext.getParameter", "getParameter()")}}.
 
 ```js
 gl.getParameter(gl.STENCIL_FAIL);

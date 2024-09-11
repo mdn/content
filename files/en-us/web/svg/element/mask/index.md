@@ -62,7 +62,7 @@ svg {
   - : This attribute defines the width of the masking area.
     _Value type_: [**\<length>**](/en-US/docs/Web/SVG/Content_type#length) ; _Default value_: `120%`; _Animatable_: **yes**
 
-## Usage notes
+## Usage context
 
 {{svginfo}}
 

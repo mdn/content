@@ -8,16 +8,9 @@ browser-compat: api.AudioContext.createMediaStreamTrackSource
 
 {{ APIRef("Web Audio API") }}
 
-The **`createMediaStreamTrackSource()`** method of the {{
-  domxref("AudioContext") }} interface creates and returns a
-{{domxref("MediaStreamTrackAudioSourceNode")}} which represents an audio source whose
-data comes from the specified {{domxref("MediaStreamTrack")}}.
+The **`createMediaStreamTrackSource()`** method of the {{domxref("AudioContext")}} interface creates and returns a {{domxref("MediaStreamTrackAudioSourceNode")}} which represents an audio source whose data comes from the specified {{domxref("MediaStreamTrack")}}.
 
-This differs from {{domxref("AudioContext.createMediaStreamSource",
-  "createMediaStreamSource()")}}, which creates a
-{{domxref("MediaStreamAudioSourceNode")}} whose audio comes from the audio track in a
-specified {{domxref("MediaStream")}} whose {{domxref("MediaStreamTrack.id", "id")}} is
-first, lexicographically (alphabetically).
+This differs from {{domxref("AudioContext.createMediaStreamSource", "createMediaStreamSource()")}}, which creates a {{domxref("MediaStreamAudioSourceNode")}} whose audio comes from the audio track in a specified {{domxref("MediaStream")}} whose {{domxref("MediaStreamTrack.id", "id")}} is first, lexicographically (alphabetically).
 
 ## Syntax
 

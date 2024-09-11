@@ -3,12 +3,10 @@ title: "EncodedAudioChunk: timestamp property"
 short-title: timestamp
 slug: Web/API/EncodedAudioChunk/timestamp
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.EncodedAudioChunk.timestamp
 ---
 
-{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
+{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`timestamp`** read-only property of the {{domxref("EncodedAudioChunk")}} interface returns an integer indicating the timestamp of the audio in microseconds.
 

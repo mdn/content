@@ -38,7 +38,7 @@ If the device provides an indication of the direction in which it is pointed, th
 
 **A target ray emitted by a hand controller.**
 
-![A screenshot showing a target ray being emitted by a hand controller](example-target-ray.gif)
+![A screenshot showing a target ray being emitted by a hand controller](https://mdn.github.io/shared-assets/images/examples/hand-controller-target-ray.gif)
 
 If the device includes a trigger or other squeezable input, such as a hand gesture device that recognizes when the user squeezes their fist, that action is called a **primary squeeze action**. A primary squeeze action should correspond to a gripping act in reality, such as taking hold of an object or pressing a trigger on a tool or weapon. When a squeeze action begins, such as by the user pressing the trigger or tightening their grip, a {{domxref("XRSession.squeezestart_event", "squeezestart")}} event is sent to the `XRSession`. Once the action is completed and the user has released the trigger or the grip, a {{domxref("XRSession.squeeze_event", "squeeze")}} event is sent. This is followed by a {{domxref("XRSession.squeezeend_event", "squeezeend")}}, which is also sent if the action is aborted rather than completed.
 

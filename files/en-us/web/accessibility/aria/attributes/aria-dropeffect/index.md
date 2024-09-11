@@ -7,6 +7,8 @@ status:
 spec-urls: https://w3c.github.io/aria/#aria-dropeffect
 ---
 
+{{AccessibilitySidebar}}
+
 The global `aria-dropeffect` attribute indicates what functions may be performed when a dragged object is released on the drop target. {{deprecated_inline}}
 
 ## Description
@@ -60,8 +62,3 @@ Used in **ALL** roles.
 - {{domxref('dataTransfer')}}
 - {{domxref('DataTransfer.dropEffect')}}
 - {{domxref("HTMLElement/dragstart_event", "dragstart")}}
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

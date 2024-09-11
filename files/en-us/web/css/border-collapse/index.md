@@ -185,3 +185,4 @@ table td {
 
 - {{cssxref("border-spacing")}}, {{cssxref("border-style")}}
 - The `border-collapse` property alters the appearance of the {{htmlelement("table")}} HTML element.
+- [CSS table](/en-US/docs/Web/CSS/CSS_table) module

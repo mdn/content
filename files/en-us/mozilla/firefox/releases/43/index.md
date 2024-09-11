@@ -6,7 +6,7 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) Firefox 43 was released on December 15, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
+[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) Firefox 43 was released on December 15, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
 ## Changes for Web developers
 
@@ -84,7 +84,7 @@ _No change._
 - Experimental support for {{domxref("Selection")}} events {{domxref("Document/selectionchange_event", "selectionchange")}} and {{domxref("Node/selectstart_event", "selectstart")}}, as well as the {{domxref("Document.selectionchange_event", "Document.onselectionchange")}} and {{domxref("Node/selectstart_event", "HTMLInputElement.onselectstart")}} event handlers property has been added ([Firefox bug 571294](https://bugzil.la/571294)). The `selectionchange` event is fired on the {{domxref("Document")}} if the associated `Selection` object is concerned, or on the specific {{domxref("HTMLInputElement")}} or {{domxref("HTMLTextAreaElement")}} ([Firefox bug 1196479](https://bugzil.la/1196479)). This feature is controlled by the `dom.select_events.enabled` preference, which defaults to `false`, except on Nightly.
 - Support for {{domxref("MouseEvent.offsetX")}} and {{domxref("MouseEvent.offsetY")}} have been activated on Firefox for Android and Firefox OS ([Firefox bug 1204841](https://bugzil.la/1204841)).
 - The `HTMLCanvasElement.mozFetchAsStream()` method has been removed ([Firefox bug 1206030](https://bugzil.la/1206030)).
-- The constructor {{domxref("Request.Request", "Request()")}} as well as {{domxref("fetch()")}} will now raise a {{jsxref("TypeError")}} exception when used with a URL containing a username and password ([Firefox bug 1195820](https://bugzil.la/1195820)).
+- The constructor {{domxref("Request.Request", "Request()")}} as well as {{domxref("Window/fetch", "fetch()")}} will now raise a {{jsxref("TypeError")}} exception when used with a URL containing a username and password ([Firefox bug 1195820](https://bugzil.la/1195820)).
 
 ### MathML
 

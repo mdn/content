@@ -41,4 +41,5 @@ let redirectURL = browser.identity.getRedirectURL();
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`identity`](https://developer.chrome.com/docs/extensions/reference/identity/) API.
+> [!NOTE]
+> This API is based on Chromium's [`identity`](https://developer.chrome.com/docs/extensions/reference/api/identity) API.

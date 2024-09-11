@@ -7,7 +7,7 @@ browser-compat: api.BatteryManager
 
 {{ApiRef("Battery API")}}{{securecontext_header}}
 
-The `BatteryManager` interface of the {{domxref("Battery Status API", "", "", "nocode")}} provides information about the system's battery charge level. The {{domxref("navigator.getBattery()")}} method returns a promise that resolves with a `BatteryManager` interface.
+The **`BatteryManager`** interface of the {{domxref("Battery Status API", "", "", "nocode")}} provides information about the system's battery charge level. The {{domxref("navigator.getBattery()")}} method returns a promise that resolves with a `BatteryManager` interface.
 
 Since Chrome 103, the `BatteryManager` interface of {{domxref("Battery Status API", "", "", "nocode")}} only expose to secure context.
 
@@ -31,6 +31,8 @@ _Also inherits properties from its parent interface, {{domxref("EventTarget")}}.
 _Also inherits methods from its parent interface, {{domxref("EventTarget")}}._
 
 ## Events
+
+_Also inherits events from its parent interface, {{domxref("EventTarget")}}._
 
 - {{domxref("BatteryManager/chargingchange_event", "chargingchange")}}
   - : Fired when the battery charging state (the {{domxref("BatteryManager.charging", "charging")}} property) is updated.

@@ -7,7 +7,7 @@ browser-compat: css.properties.forced-color-adjust
 
 {{CSSRef}}
 
-The **`forced-color-adjust`** CSS property allows authors to opt certain elements out of forced colors mode. This then restores the control of those values to CSS.
+The **`forced-color-adjust`** [CSS](/en-US/docs/Web/CSS) property allows authors to opt certain elements out of forced colors mode. This then restores the control of those values to CSS.
 
 ## Syntax
 
@@ -100,6 +100,5 @@ The following screenshot shows the image above in Windows High Contrast Mode:
 
 ## See also
 
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color)
 - [Styling for Windows high contrast with standards for forced colors.](https://blogs.windows.com/msedgedev/2020/09/17/styling-for-windows-high-contrast-with-new-standards-for-forced-colors/)
 - {{cssxref("print-color-adjust")}}

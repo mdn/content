@@ -93,7 +93,7 @@ Values of this type are objects. They contain the following properties:
 
 ## Lifecycle
 
-The lifecycle of a `Port` is described [in the Chrome docs](https://developer.chrome.com/docs/extensions/mv3/messaging/#port-lifetime).
+The lifecycle of a `Port` is described [in the Chrome docs](https://developer.chrome.com/docs/extensions/develop/concepts/messaging#port-lifetime).
 
 There is, however, one important difference between Firefox and Chrome, stemming from the fact that the `runtime.connect` and `tabs.connect` APIs are broadcast channels. This means that there may be potentially more than one recipient, and this results in ambiguity when one of the contexts with a `runtime.onConnect` call is closed. In Chrome, a port stays active as long as there is any other recipient. In Firefox, the port closes when any of the contexts unloads. In other words, the disconnection condition,
 
@@ -218,7 +218,8 @@ browser.browserAction.onClicked.addListener(() => {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#type-Port) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#type-Port) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

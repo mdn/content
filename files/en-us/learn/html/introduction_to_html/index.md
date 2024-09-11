@@ -8,20 +8,12 @@ page-type: learn-module
 
 At its heart, {{glossary("HTML")}} is a language made up of {{Glossary("Element","elements")}}, which can be applied to pieces of text to give them different meaning in a document (Is it a paragraph? Is it a bulleted list? Is it part of a table?), structure a document into logical sections (Does it have a header? Three columns of content? A navigation menu?), and embed content such as images and videos into a page. This module will introduce the first two of these and introduce fundamental concepts and syntax you need to know to understand HTML.
 
-> **Callout:**
->
-> #### Looking to become a front-end web developer?
->
-> We have put together a course that includes all the essential information you need to
-> work towards your goal.
->
-> [**Get started**](/en-US/docs/Learn/Front-end_web_developer)
-
 ## Prerequisites
 
 Before starting this module, you don't need any previous HTML knowledge, but you should have at least basic familiarity with using computers and using the web passively (i.e., just looking at it and consuming content). You should have a basic work environment set up (as detailed in [Installing basic software](/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software)), and understand how to create and manage files (as detailed in [Dealing with files](/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files)). Both are parts of our [Getting started with the web](/en-US/docs/Learn/Getting_started_with_the_web) complete beginner's module.
 
-> **Note:** If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you could try out (most of) the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).
+> [!NOTE]
+> If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you could try out (most of) the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).
 
 ## Guides
 
@@ -50,3 +42,8 @@ The following assessments will test your understanding of the HTML basics covere
   - : We all learn to write a letter sooner or later; it is also a useful example to test out text formatting skills. In this assessment, you'll be given a letter to mark up.
 - [Structuring a page of content](/en-US/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)
   - : This assessment tests your ability to use HTML to structure a simple page of content, containing a header, a footer, a navigation menu, main content, and a sidebar.
+
+## See also
+
+- [Learn HTML and CSS](https://v2.scrimba.com/learn-html-and-css-c0p?via=mdn) <sup>_MDN Curriculum partner_</sup>
+  - : [Scrimba's](https://scrimba.com?via=mdn) _Learn HTML and CSS_ course teaches you HTML and CSS through building and deploying five awesome projects, with fun interactive lessons and challenges taught by knowledgeable teachers.

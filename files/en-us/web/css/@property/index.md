@@ -7,7 +7,7 @@ browser-compat: css.at-rules.property
 
 {{CSSRef}}
 
-The **`@property`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) is part of the [CSS Houdini](/en-US/docs/Web/API/Houdini_APIs) umbrella of APIs. It allows developers to explicitly define their {{cssxref('--*', 'CSS custom properties')}}, allowing for property type checking and constraining, setting default values, and defining whether a custom property can inherit values or not.
+The **`@property`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/At-rule) is part of the [CSS Houdini](/en-US/docs/Web/API/Houdini_APIs) umbrella of APIs. It allows developers to explicitly define their [CSS custom properties](/en-US/docs/Web/CSS/--*), allowing for property type checking and constraining, setting default values, and defining whether a custom property can inherit values or not.
 
 The `@property` rule represents a custom property registration directly in a stylesheet without having to run any JS. Valid `@property` rules result in a registered custom property, as if {{domxref('CSS.registerProperty_static', 'registerProperty()')}} had been called with equivalent parameters.
 
@@ -37,7 +37,7 @@ The `@property` rule represents a custom property registration directly in a sty
   - : Sets the initial value for the property.
 
 The `@property` rule must include both the {{cssxref("@property/syntax","syntax")}} and {{cssxref("@property/inherits","inherits")}} descriptors; if either are missing, the entire `@property` rule is invalid and ignored.
-The {{cssxref("@property/initial-value","initial-value")}} descriptor is also required, unless the syntax is the [`*` universal syntax definition](https://drafts.css-houdini.org/css-properties-values-api/#universal-syntax-definition) (e.g., `initial-value: *`).
+The {{cssxref("@property/initial-value","initial-value")}} descriptor is also required, unless the syntax is the [`*` universal syntax definition](https://drafts.css-houdini.org/css-properties-values-api/#universal-syntax-definition) (e.g., `syntax: "*"`).
 If the `initial-value` descriptor is required and omitted, the entire `@property` rule is invalid and ignored.
 
 Unknown descriptors are invalid and ignored, but do not invalidate the `@property` rule.
@@ -118,7 +118,7 @@ The two custom properties, `--item-size: 20%` and `--item-color: orange;` are se
 
 For item one, none of these custom properties have been set. The `--item-size` is inheritable, so the value `20%` set on its parent `container` is used. On the other hand, the property `--item-color` is not inheritable, so the value `orange` set on the parent is not considered. Instead the default initial value `aqua` is used.
 
-For item two, CSS global keywords are set for both custom properties which are valid values for all value types and therefore valid no matter the `syntax` descriptor value. The `--item-size` is set to `initial` and uses the `initial-value: 40%;` set in the `@property` declaration. The `initial` value means the`initialValue` value for the property is used. The `--item-color` is set to `inherit`, explicitly inheriting the `orange` value from its parent even though the custom property is set to otherwise not be inherited. This is why item two is orange.
+For item two, CSS global keywords are set for both custom properties which are valid values for all value types and therefore valid no matter the `syntax` descriptor value. The `--item-size` is set to `initial` and uses the `initial-value: 40%;` set in the `@property` declaration. The `initial` value means the `initialValue` value for the property is used. The `--item-color` is set to `inherit`, explicitly inheriting the `orange` value from its parent even though the custom property is set to otherwise not be inherited. This is why item two is orange.
 
 For item three, the `--item-size` value gets set to `1000px`. While `1000px` is a {{cssxref("length")}} value, the `@property` declaration requires the value be a `<percentage>`, so the declaration is not valid and is ignored, meaning the inheritable `20%` set on the parent is used. The `xyz` value is also invalid. As `registerProperty()` set `--item-color` to not be inherited, the default initial value of `aqua` is used and not the parent's `orange` value.
 

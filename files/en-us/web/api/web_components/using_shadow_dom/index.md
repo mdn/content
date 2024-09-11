@@ -64,6 +64,10 @@ You can affect the nodes in the shadow DOM in exactly the same way as non-shadow
 
 Before shadow DOM was made available to web developers, browsers were already using it to encapsulate the inner structure of an element. Think for example of a {{htmlelement("video")}} element, with the default browser controls exposed. All you see in the DOM is the `<video>` element, but it contains a series of buttons and other controls inside its shadow DOM. The shadow DOM spec enables you to manipulate the shadow DOM of your own custom elements.
 
+### Attribute inheritance
+
+The shadow tree and {{ HTMLElement("slot") }} elements inherit the [`dir`](/en-US/docs/Web/HTML/Global_attributes/dir) and [`lang`](/en-US/docs/Web/HTML/Global_attributes/lang) attributes from their shadow host.
+
 ## Creating a shadow DOM
 
 ### Imperatively with JavaScript
@@ -103,9 +107,10 @@ Creating a shadow DOM via JavaScript API might be a good option for client-side 
 
 {{EmbedGHLiveSample("dom-examples/shadow-dom/shadowrootmode/simple.html", "", "")}}
 
-> **Note:** By default, contents of `<template>` are not displayed. In this case, because the `shadowrootmode="open"` was included, the shadow root is rendered. In supporting browsers, the visible contents within that shadow root are displayed.
+> [!NOTE]
+> By default, contents of `<template>` are not displayed. In this case, because the `shadowrootmode="open"` was included, the shadow root is rendered. In supporting browsers, the visible contents within that shadow root are displayed.
 
-After the browser parses the HTML, it replaces {{htmlelement("template")}} element with its content wrapped in a [shadow root](/en-US/docs/Glossary/Shadow_tree) that's attached to the parent element, the `<div id="host">` in our example. The resulting DOM tree looks like this:
+After the browser parses the HTML, it replaces {{htmlelement("template")}} element with its content wrapped in a [shadow root](/en-US/docs/Glossary/Shadow_tree) that's attached to the parent element, the `<div id="host">` in our example. The resulting DOM tree looks like this (there's no `<template>` element in the DOM tree):
 
 ```plain
 - DIV id="host"
@@ -114,7 +119,7 @@ After the browser parses the HTML, it replaces {{htmlelement("template")}} eleme
       - #text: I'm in the shadow DOM
 ```
 
-Note that there's no `<template>` element in the DOM tree.
+Note that in addition to the `shadowrootmode`, you can use `<template>` attributes such as `shadowrootclonable` and `shadowrootdelegatesfocus` to specify other properties of the generated shadow root.
 
 ## Encapsulation from JavaScript
 

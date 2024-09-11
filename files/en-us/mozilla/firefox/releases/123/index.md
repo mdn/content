@@ -16,6 +16,10 @@ This article provides information about the changes in Firefox 123 that affect d
 
 - The {{htmlelement("template")}} element now supports a `shadowrootmode` attribute that allows declarative creation of a shadow DOM subtree. The attribute can be set to either `open` or `closed`, which expose or hide JavaScript in the shadow DOM from external code, respectively. These are the same values as the `mode` option of the {{domxref("Element.attachShadow()", "attachShadow()")}} method. ([Firefox bug 1870052](https://bugzil.la/1870052))
 
+### CSS
+
+No notable changes.
+
 ### JavaScript
 
 - The {{jsxref("Date.parse()")}} global object has had a number of bug fixes to bring it into line with how other browsers parse the values being passed.
@@ -67,7 +71,7 @@ The `IDBLocaleAwareKeyRange` interface has been removed ([Firefox bug 1730706](h
 
 ## Changes for add-on developers
 
-- Addition of fhe {{WebExtAPIRef("contextualIdentities.move")}} function enables items to be moved in the list of contextual identities. This function enables extensions to customize the order in which contextual identities display in the UI ([Firefox bug 1333395](https://bugzil.la/1333395)).
+- Addition of the {{WebExtAPIRef("contextualIdentities.move")}} function enables items to be moved in the list of contextual identities. This function enables extensions to customize the order in which contextual identities display in the UI ([Firefox bug 1333395](https://bugzil.la/1333395)).
 
 ## Experimental web features
 

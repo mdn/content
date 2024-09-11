@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Reflect.construct
 
 {{JSRef}}
 
-The **`Reflect.construct()`** static method is like the {{jsxref("Operators/new", "new")}} operator, but as a function. It is equivalent to calling `new target(...args)`. It gives also the added option to specify a different [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) value.
+The **`Reflect.construct()`** static method is like the {{jsxref("Operators/new", "new")}} operator, but as a function. It is equivalent to calling `new target(...args)`. It additionally allows to specify a different [`new.target`](/en-US/docs/Web/JavaScript/Reference/Operators/new.target) value.
 
 {{EmbedInteractiveExample("pages/js/reflect-construct.html", "taller")}}
 
@@ -38,7 +38,7 @@ A new instance of `target` (or `newTarget`, if present), initialized by `target`
 
 ## Description
 
-`Reflect.apply()` provides the reflective semantic of a constructor call. That is, `Reflect.construct(target, argumentsList, newTarget)` is semantically equivalent to:
+`Reflect.construct()` provides the reflective semantic of a constructor call. That is, `Reflect.construct(target, argumentsList, newTarget)` is semantically equivalent to:
 
 ```js
 new target(...argumentsList);

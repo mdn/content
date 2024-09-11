@@ -31,9 +31,6 @@ Current members of the MDN Product Advisory Board are:
 - **Brian Kardell**
   Developer Advocate, Igalia
   - : Brian is a Developer Advocate at Igalia. He participates in W3C where he is Igalia's Advisory Committee Representative and participates in various working groups and community groups. He also has represented the Open JS Foundation there.
-- **Joe Medley**
-  Senior Technical Writer, Web Developer Relations at Google
-  - : Joe has led Google's effort to create web platform reference documentation for the last five years, which means he spends a lot of time on MDN. In addition to editing the Chrome beta release announcements targeted at web developers, he writes the occasional article for web.dev. Joe came to Web Developer Relations after a long career writing developer reference documentation for enterprise applications and a degree in education from the University of Central Missouri.
 - **Eric Meyer**
   Developer Advocate, Igalia
   - : [Eric](https://meyerweb.com/) ([@meyerweb](https://mastodon.social/@Meyerweb)) is an [author](https://meyerweb.com/eric/writing.html), speaker, blogger, sometimes teacher and consultant, Developer Advocate at [Igalia](https://www.igalia.com/), and co-founder of [An Event Apart](https://aneventapart.com/). He's been working on the Web since 1993 and still finds it deeply compelling.
@@ -42,7 +39,7 @@ Current members of the MDN Product Advisory Board are:
   - : Laura is a software developer, advocate, and mentor. She is passionate about sharing her knowledge and connecting with different tech communities worldwide. Thanks to her contributions, she has been recognized as a Google Developer Expert and a Woman Techmakers Ambassador. As a mentor, she helped startups participating in accelerator programs like Google Launchpad and the World Food Programme by the United Nations. Currently, she is a web developer advocate for Samsung Internet. She contributes to web standards and spreads the word about advanced web features, helping developers create great and more inclusive web apps.
 - **Sheila Moussavi**
   Principal, Bocoup
-  - : Sheila is a Principal at [Bocoup](https://bocoup.com/about), where she leads a team working on web standards like HTML and CSS, and no-code programming tools like [Scratch](https://www.scratchfoundation.org/). Sheila oversees Bocoup's web standards strategy at the W3C, and is passionate about building more equitable spaces in web standards and stronger connections between the standards process and web developer education. Throughout her career in tech (and previously in health equity and disability justice), she has been focused on cultivating effective, justice-oriented organizations and work spaces.
+  - : Sheila is a Principal at [Bocoup](https://www.bocoup.com/about), where she leads a team working on web standards like HTML and CSS, and no-code programming tools like [Scratch](https://www.scratchfoundation.org/). Sheila oversees Bocoup's web standards strategy at the W3C, and is passionate about building more equitable spaces in web standards and stronger connections between the standards process and web developer education. Throughout her career in tech (and previously in health equity and disability justice), she has been focused on cultivating effective, justice-oriented organizations and work spaces.
 - **Robert Nyman**
   Global Lead for Programs & Initiatives, Web Developer Relations, at Google
   - : Robert Nyman is the Global Lead for Developer Feedback & Communities, Web Platform at Google. In his role, he works to make the web the best platform for developers. Prior to Google, Robert was a technical evangelist at Mozilla, focused on the Open Web and the company's various products and initiatives. He lives in Stockholm, and has a passion for traveling and meeting people. He claims the title of "Most Well-Traveled Speaker" on Lanyrd, having presented in 42 countries.
@@ -55,6 +52,7 @@ Current members of the MDN Product Advisory Board are:
 - Ali Spivak, Okta
 - Daniel Appelquist, Samsung
 - Jory Burson, Bocoup
+- Joe Medley, Formerly Google
 - Meggin Kearney, Google
 - Erika Doyle Navara, Microsoft
 - Patrick Kettner, Microsoft

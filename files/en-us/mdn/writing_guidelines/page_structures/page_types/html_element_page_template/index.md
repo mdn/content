@@ -2,7 +2,6 @@
 title: HTML element page template
 slug: MDN/Writing_guidelines/Page_structures/Page_types/HTML_element_page_template
 page-type: mdn-writing-guide
-browser-compat: path.to.feature.NameOfTheElement
 ---
 
 {{MDNSidebar}}
@@ -34,7 +33,7 @@ browser-compat: path.to.feature.NameOfTheElement
 >     Format as `'<NameOfTheElement>: Description of element's purpose'`.
 >     For example, the [`<video>`](/en-US/docs/Web/HTML/Element/video) element has a _title_ of: **'\<video>: The Video Embed element'**.
 > - **slug**
->   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`).
+>   - : The end of the URL path after `https://developer.mozilla.org/en-US/docs/`.
 >     This will be formatted like `Web/HTML/Element/NameOfTheElement`, where the element name is in _lower case_.
 >     For example, the [`<video>`](/en-US/docs/Web/HTML/Element/video) element has a _slug_ of `Web/HTML/Element/video`.
 > - **page-type**
@@ -103,6 +102,10 @@ Include a table of the events fired on this type of element, if any.
 | event 2    | Explain briefly when it is fired |
 | etc.       |                                  |
 
+## Accessibility
+
+Warn of any potential accessibility concerns that exist with using this element, and how to work around them. Remove this section if there are none to list.
+
 ## Examples
 
 Note that we use the plural "Examples" even if the page only contains one example.
@@ -113,7 +116,8 @@ Each example must have an H3 heading (`###`) naming the example. The heading sho
 
 See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples) for more information.
 
-> **Note:** Sometimes you will want to link to examples given on another page.
+> [!NOTE]
+> Sometimes you will want to link to examples given on another page.
 >
 > **Scenario 1:** If you have some examples on this page and some more examples on another page:
 >
@@ -138,12 +142,8 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 > ```md
 > ## Examples
 >
-> For examples of this API, see [the page on fetch()](https://example.org).
+> For examples of this API, see [the page on fetch()](https://example.org/).
 > ```
-
-## Accessibility concerns
-
-Optionally, warn of any potential accessibility concerns that exist with using this element, and how to work around them. Remove this section if there are none to list.
 
 ## Technical summary
 

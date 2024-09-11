@@ -53,8 +53,7 @@ drawn at 400px.
 ### JavaScript
 
 JavaScript looks at the `width` property to determine the width of the image
-at the moment. This is performed in the window's {{domxref("Window.load_event",
-  "load")}} and {{domxref("Window.resize_event", "resize")}} event handlers so the most
+at the moment. This is performed in the window's {{domxref("Window.load_event", "load")}} and {{domxref("Window.resize_event", "resize")}} event handlers so the most
 current width information is always available.
 
 ```js

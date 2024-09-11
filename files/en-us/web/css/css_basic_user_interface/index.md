@@ -34,10 +34,10 @@ To see the code for this basic user interface sample, [view the source on GitHub
   - {{CSSxRef("caret-color")}}
   - {{CSSxRef("caret-shape")}}
 - {{CSSxRef("cursor")}}
-- {{CSSxRef("nav-down")}} {{Experimental_Inline}}
-- {{CSSxRef("nav-left")}} {{Experimental_Inline}}
-- {{CSSxRef("nav-right")}} {{Experimental_Inline}}
-- {{CSSxRef("nav-up")}} {{Experimental_Inline}}
+- {{CSSxRef("nav-down")}}
+- {{CSSxRef("nav-left")}}
+- {{CSSxRef("nav-right")}}
+- {{CSSxRef("nav-up")}}
 - {{CSSxRef("outline")}}, shorthand for:
   - {{CSSxRef("outline-color")}}
   - {{CSSxRef("outline-style")}}

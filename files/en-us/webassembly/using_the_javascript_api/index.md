@@ -8,13 +8,15 @@ page-type: guide
 
 If you have already [compiled a module from another language using tools like Emscripten](/en-US/docs/WebAssembly/C_to_Wasm), or [loaded and run the code yourself](/en-US/docs/WebAssembly/Loading_and_running), the next step is to learn more about using the other features of the WebAssembly JavaScript API. This article teaches you what you'll need to know.
 
-> **Note:** If you are unfamiliar with the basic concepts mentioned in this article and need more explanation, read [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts) first, then come back.
+> [!NOTE]
+> If you are unfamiliar with the basic concepts mentioned in this article and need more explanation, read [WebAssembly concepts](/en-US/docs/WebAssembly/Concepts) first, then come back.
 
 ## Some simple examples
 
 Let's run through some examples that explain how to use the WebAssembly JavaScript API, and how to use it to load a Wasm module in a web page.
 
-> **Note:** You can find the sample code in our [webassembly-examples](https://github.com/mdn/webassembly-examples) GitHub repo.
+> [!NOTE]
+> You can find the sample code in our [webassembly-examples](https://github.com/mdn/webassembly-examples) GitHub repo.
 
 ### Preparing the example
 
@@ -24,17 +26,17 @@ Let's run through some examples that explain how to use the WebAssembly JavaScri
 
    ```wasm
    (module
-     (func $i (import "imports" "imported_func") (param i32))
+     (func $i (import "my_namespace" "imported_func") (param i32))
      (func (export "exported_func")
        i32.const 42
        call $i))
    ```
 
-4. In the second line, you will see that the import has a two-level namespace — the internal function `$i` is imported from `imports.imported_func`. We need to reflect this two-level namespace in JavaScript when writing the object to be imported into the Wasm module. Create a `<script></script>` element in your HTML file, and add the following code to it:
+4. In the second line, you will see that the import has a two-level namespace — the internal function `$i` is imported from `my_namespace.imported_func`. We need to reflect this two-level namespace in JavaScript when writing the object to be imported into the Wasm module. Create a `<script></script>` element in your HTML file, and add the following code to it:
 
    ```js
    const importObject = {
-     imports: { imported_func: (arg) => console.log(arg) },
+     my_namespace: { imported_func: (arg) => console.log(arg) },
    };
    ```
 
@@ -54,7 +56,8 @@ WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
 
 The net result of this is that we call our exported WebAssembly function `exported_func`, which in turn calls our imported JavaScript function `imported_func`, which logs the value provided inside the WebAssembly instance (42) to the console. If you save your example code now and load it a browser that supports WebAssembly, you'll see this in action!
 
-> **Note:** This is a convoluted, long-winded example that achieves very little, but it does serve to illustrate what is possible — using WebAssembly code alongside JavaScript in your web applications. As we've said elsewhere, WebAssembly doesn't aim to replace JavaScript; the two instead can work together, drawing on each other's strengths.
+> [!NOTE]
+> This is a convoluted, long-winded example that achieves very little, but it does serve to illustrate what is possible — using WebAssembly code alongside JavaScript in your web applications. As we've said elsewhere, WebAssembly doesn't aim to replace JavaScript; the two instead can work together, drawing on each other's strengths.
 
 ### Loading our Wasm module without streaming
 
@@ -103,13 +106,14 @@ Let's start exploring this by looking at a quick example.
    WebAssembly memory exposes its bytes by providing a buffer getter/setter that returns an ArrayBuffer. For example, to write 42 directly into the first word of linear memory, you can do this:
 
    ```js
-   new Uint32Array(memory.buffer)[0] = 42;
+   const data = new DataView(memory.buffer);
+   data.setUint32(0, 42, true);
    ```
 
-   You can then return the same value using:
+   Note the use of `true`, which enforces little-endian read and write, since WebAssembly memory is always little-endian. You can then return the same value using:
 
    ```js
-   new Uint32Array(memory.buffer)[0];
+   data.getUint32(0, true);
    ```
 
 3. Try this now in your demo — save what you've added so far, load it in your browser, then try entering the above two lines in your JavaScript console.
@@ -134,7 +138,8 @@ Let's make the above assertions clearer by looking at a more involved memory exa
 
 1. make a local copy of `memory.wasm` in the same directory as before.
 
-   > **Note:** You can see the module's text representation at [memory.wat](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/memory.wat).
+   > [!NOTE]
+   > You can see the module's text representation at [memory.wat](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/memory.wat).
 
 2. Go back to your `memory.html` sample file, and fetch, compile, and instantiate your Wasm module as before — add the following to the bottom of your script:
 
@@ -149,24 +154,23 @@ Let's make the above assertions clearer by looking at a more involved memory exa
 3. Since this module exports its memory, given an Instance of this module called instance we can use an exported function `accumulate()` to create and populate an input array directly in the module instance's linear memory (`mem`). Add the following into your code, where indicated:
 
    ```js
-   const i32 = new Uint32Array(memory.buffer);
-
+   const summands = new DataView(memory.buffer);
    for (let i = 0; i < 10; i++) {
-     i32[i] = i;
+     summands.setUint32(i * 4, i, true);
    }
-
    const sum = results.instance.exports.accumulate(0, 10);
    console.log(sum);
    ```
 
-Note how we create the {{jsxref("Uint32Array")}} view on the Memory object's buffer ([`Memory.prototype.buffer`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/buffer)), not on the Memory itself.
+Note how we create the {{jsxref("DataView")}} view on the Memory object's buffer ([`Memory.prototype.buffer`](/en-US/docs/WebAssembly/JavaScript_interface/Memory/buffer)), not on the Memory itself.
 
 Memory imports work just like function imports, only Memory objects are passed as values instead of JavaScript functions. Memory imports are useful for two reasons:
 
 - They allow JavaScript to fetch and create the initial contents of memory before or concurrently with module compilation.
 - They allow a single Memory object to be imported by multiple module instances, which is a critical building block for implementing dynamic linking in WebAssembly.
 
-> **Note:** You can find our complete demo at [memory.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/memory.html) ([see it live also](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)) .
+> [!NOTE]
+> You can find our complete demo at [memory.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/memory.html) ([see it live also](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)).
 
 ## Tables
 
@@ -186,7 +190,8 @@ Let's look at a simple table example — a WebAssembly module that creates and e
 
 1. Make a local copy of `table.wasm` in a new directory.
 
-   > **Note:** You can see the module's text representation at [table.wat](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/table.wat).
+   > [!NOTE]
+   > You can see the module's text representation at [table.wat](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/table.wat).
 
 2. Create a new copy of our [HTML template](https://github.com/mdn/webassembly-examples/blob/main/template/template.html) in the same directory and call it `table.html`.
 3. As before, fetch, compile, and instantiate your Wasm module — add the following into a {{htmlelement("script")}} element at the bottom of your HTML body:
@@ -207,7 +212,8 @@ Let's look at a simple table example — a WebAssembly module that creates and e
 
 This code accesses each function reference stored in the table in turn, and instantiates them to print the values they hold to the console — note how each function reference is retrieved with a [`Table.prototype.get()`](/en-US/docs/WebAssembly/JavaScript_interface/Table/get) call, then we add an extra set of parentheses on the end to actually invoke the function.
 
-> **Note:** You can find our complete demo at [table.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/table.html) ([see it live also](https://mdn.github.io/webassembly-examples/js-api-examples/table.html)).
+> [!NOTE]
+> You can find our complete demo at [table.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/table.html) ([see it live also](https://mdn.github.io/webassembly-examples/js-api-examples/table.html)).
 
 ## Globals
 
@@ -238,9 +244,9 @@ const output = document.getElementById("output");
 function assertEq(msg, got, expected) {
   const result =
     got === expected
-      ? `SUCCESS! Got: ${got}<br>`
-      : `FAIL!<br>Got: ${got}<br>Expected: ${expected}<br>`;
-  output.innerHTML += `Testing ${msg}: ${result}`;
+      ? `SUCCESS! Got: ${got}\n`
+      : `FAIL!\nGot: ${got}\nExpected: ${expected}\n`;
+  output.innerText += `Testing ${msg}: ${result}`;
 }
 
 assertEq("WebAssembly.Global exists", typeof WebAssembly.Global, "function");
@@ -266,14 +272,15 @@ WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
 );
 ```
 
-> **Note:** You can see the example [running live on GitHub](https://mdn.github.io/webassembly-examples/js-api-examples/global.html); see also the [source code](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/global.html).
+> [!NOTE]
+> You can see the example [running live on GitHub](https://mdn.github.io/webassembly-examples/js-api-examples/global.html); see also the [source code](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/global.html).
 
 ## Multiplicity
 
 Now we've demonstrated usage of the main key WebAssembly building blocks, this is a good place to mention the concept of multiplicity. This provides WebAssembly with a multitude of advances in terms of architectural efficiency:
 
 - One module can have N Instances, in the same way that one function literal can produce N closure values.
-- One module instance can use 0–1 memory instances, which provide the "address space" of the instance. Future versions of WebAssembly may allow 0–N memory instances per module instance (see [Multiple Memories](https://webassembly.org/roadmap/)).
+- One module instance can use 0–1 memory instances, which provide the "address space" of the instance. Future versions of WebAssembly may allow 0–N memory instances per module instance (see [Multiple Memories](https://webassembly.org/features/)).
 - One module instance can use 0–1 table instances — this is the "function address space" of the instance, used to implement C function pointers. Future versions of WebAssembly may allow 0–N table instances per module instance.
 - One memory or table instance can be used by 0–N module instances — these instances all share the same address space, allowing [dynamic linking](https://github.com/WebAssembly/tool-conventions/blob/main/DynamicLinking.md).
 

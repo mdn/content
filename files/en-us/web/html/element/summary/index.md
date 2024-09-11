@@ -81,7 +81,8 @@ You can use heading elements in `<summary>`, like this:
 
 This currently has some spacing issues that could be addressed using CSS.
 
-> **Warning:** Because the `<summary>` element has a default role of [button](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role) (which strips all roles from child elements), this example will not work for users of assistive technologies such as screen readers. The `<h4>` will have its role removed and thus will not be treated as a heading for these users.
+> [!WARNING]
+> Because the `<summary>` element has a default role of [button](/en-US/docs/Web/Accessibility/ARIA/Roles/button_role) (which strips all roles from child elements), this example will not work for users of assistive technologies such as screen readers. The `<h4>` will have its role removed and thus will not be treated as a heading for these users.
 
 ### HTML in summaries
 
@@ -106,13 +107,22 @@ This example adds some semantics to the `<summary>` element to indicate the labe
 
 <table class="properties">
   <tbody>
+     <tr>
+      <th scope="row">
+        <a href="/en-US/docs/Web/HTML/Content_categories"
+          >Content categories</a
+        >
+      </th>
+      <td>
+        none
+      </td>
+    </tr>
     <tr>
       <th scope="row">Permitted content</th>
       <td>
         <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content"
           >Phrasing content</a
-        >
-        or one element of
+        >, optionally intermixed with
         <a href="/en-US/docs/Web/HTML/Content_categories#heading_content"
           >Heading content</a
         >

@@ -8,7 +8,7 @@ status:
 browser-compat: api.PaymentRequestEvent.paymentRequestOrigin
 ---
 
-{{SeeCompatTable}}{{APIRef("Payment Handler API")}}
+{{SeeCompatTable}}{{APIRef("Payment Handler API")}}{{AvailableInWorkers("service")}}
 
 The **`paymentRequestOrigin`** read-only property of the
 {{domxref("PaymentRequestEvent")}} interface returns the origin where the

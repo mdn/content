@@ -16,7 +16,8 @@ target element was at {{domxref("Element/touchstart_event", "touchstart")}} time
 You can think of it as how many separate fingers are able to be identified as touching
 the screen.
 
-> **Note:** Touches inside the array are not necessarily ordered by order of occurrences (the
+> [!NOTE]
+> Touches inside the array are not necessarily ordered by order of occurrences (the
 > i-th element in the array being the i-th touch that happened). You cannot assume a specific order. To determine the order of occurrences of the touches, use the `touch` object IDs.
 
 ## Value
@@ -27,12 +28,12 @@ time.
 ## Examples
 
 This example illustrates the {{domxref("TouchEvent")}} object's
-{{domxref("TouchEvent.touches")}} property. The {{domxref("TouchEvent.touches")}}
+`TouchEvent.touches` property. The `TouchEvent.touches`
 property is a {{domxref("TouchList")}} object and containing a list of
 {{domxref("Touch")}} objects for every point of contact currently touching the surface.
 
 In following code snippet, the {{domxref("Element/touchstart_event", "touchstart")}} event handler checks the length
-of the {{domxref("TouchEvent.touches")}} list to determine the number of touch points
+of the `TouchEvent.touches` list to determine the number of touch points
 that were activated and then invokes different handlers depending on the number of touch
 points.
 

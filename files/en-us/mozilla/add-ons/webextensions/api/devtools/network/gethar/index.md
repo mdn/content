@@ -47,7 +47,8 @@ logRequestsButton.addEventListener("click", logRequests);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.devtools.network`](https://developer.chrome.com/docs/extensions/reference/devtools_network/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.devtools.network`](https://developer.chrome.com/docs/extensions/reference/api/devtools/network) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -8,7 +8,8 @@ page-type: firefox-release-notes
 
 This article provides information about the changes in Firefox 91 that will affect developers. Firefox 91 was released on August 10, 2021.
 
-> **Note:** See also [Hopping on Firefox 91](https://hacks.mozilla.org/2021/08/hopping-on-firefox-91/) on Mozilla Hacks.
+> [!NOTE]
+> See also [Hopping on Firefox 91](https://hacks.mozilla.org/2021/08/hopping-on-firefox-91/) on Mozilla Hacks.
 
 ## Changes for web developers
 
@@ -28,8 +29,8 @@ No changes
 ### JavaScript
 
 - {{jsxref("Intl/DateTimeFormat/formatRange", "Intl.DateTimeFormat.prototype.formatRange()")}} and {{jsxref("Intl/DateTimeFormat/formatRangeToParts", "Intl.DateTimeFormat.prototype.formatRangeToParts()")}} are now supported in release builds. The `formatRange()` method returns a localized and formatted string for the range between two {{jsxref("Date")}} objects (e.g. "1/05/21 – 1/10/21"). The `formatRangeToParts()` method returns an array containing the locale-specific _parts_ of a formatted date range ([Firefox bug 1653024](https://bugzil.la/1653024)).
-- The {{jsxref("Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat() constructor")}} allows four new `timeZoneName` options for formatting how the timezone is displayed. These include the localized GMT formats `shortOffset` and `longOffset`, and the generic non-location formats `shortGeneric` and `longGeneric` ([Firefox bug 1653024](https://bugzil.la/1653024)).
-- The {{jsxref("Global_Objects/Error/Error", "Error() constructor")}} can now take the error `cause` as value in the `option` parameter.
+- The {{jsxref("Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat()")}} constructor allows four new `timeZoneName` options for formatting how the timezone is displayed. These include the localized GMT formats `shortOffset` and `longOffset`, and the generic non-location formats `shortGeneric` and `longGeneric` ([Firefox bug 1653024](https://bugzil.la/1653024)).
+- The {{jsxref("Global_Objects/Error/Error", "Error()")}} constructor can now take the error `cause` as value in the `option` parameter.
   This allows code to catch errors and throw new/modified versions that retain the original error and stack trace ([Firefox bug 1679653](https://bugzil.la/1679653)).
 
 ### HTTP

@@ -110,8 +110,6 @@ SVG makes use of a number of data types. This article lists these types along wi
 
     where `color-keyword` matches (case insensitively) one of the color keywords listed in [CSS Color Module Level 3](https://www.w3.org/TR/css-color-3/), or one of the system color keywords listed in [User preferences for colors](https://www.w3.org/TR/2008/REC-CSS2-20080411/ui.html#system-colors) (CSS2, section 18.2).
 
-    The corresponding SVG DOM interface definitions for \<color> are defined the one defined by CSS. SVG's extension to color, including the ability to specify ICC-based colors, are represented using DOM interface {{domxref("SVGColor")}}.
-
 ## Coordinate
 
 - \<coordinate>
@@ -134,7 +132,7 @@ SVG makes use of a number of data types. This article lists these types along wi
 ## FuncIRI
 
 - \<FuncIRI>
-  - : Functional notation for a reference. The syntax for this reference is the same as the {{cssxref("url", "CSS URI")}}.
+  - : Functional notation for a reference. The syntax for this reference is the same as the [CSS URI](/en-US/docs/Web/CSS/url_value).
 
 ## Integer
 
@@ -171,7 +169,7 @@ SVG makes use of a number of data types. This article lists these types along wi
     ```
 
     _IRIs_ are used in the {{SVGAttr("href")}} attribute.
-    Some attributes allow both _IRIs_ and text strings as content. To disambiguate a text string from a relative IRI, the functional notation \<FuncIRI> is used. This is an _IRI_ delimited with a functional notation. Note: For historical reasons, the delimiters are "`url(`" and "`)`", for compatibility with the CSS specifications. The _FuncIRI_ form is used in presentation attributes .
+    Some attributes allow both _IRIs_ and text strings as content. To disambiguate a text string from a relative IRI, the functional notation \<FuncIRI> is used. This is an _IRI_ delimited with a functional notation. Note: For historical reasons, the delimiters are "`url(`" and "`)`", for compatibility with the CSS specifications. The _FuncIRI_ form is used in presentation attributes.
 
     SVG makes extensive use of _IRI_ references, both absolute and relative, to other objects. For example, to fill a rectangle with a linear gradient, you first define a {{SVGElement("linearGradient")}} element and give it an ID, as in:
 
@@ -294,8 +292,6 @@ SVG makes use of a number of data types. This article lists these types along wi
     ```
 
     The `context-fill` and `context-stroke` values allow for inheriting values in [marker](/en-US/docs/Web/SVG/Element/marker) and [use](/en-US/docs/Web/SVG/Element/use) elements.
-
-    Within the SVG DOM, \<paint> values are represented using {{domxref("SVGPaint")}} objects.
 
 ## Percentage
 

@@ -22,7 +22,7 @@ However, this does not work as a general rule, because many registrars allow org
 
 Because this is a matter of the registrar's policies, it's impossible to tell algorithmically whether a given domain name suffix (like `ac.uk`) is publicly registrable or not. The [Public Suffix List](https://publicsuffix.org/) is a list of all suffixes under which organizations can directly register names: that is, it is a list of eTLDs.
 
-The related concept **eTLD+1** means an eTLD plus the next part of the domain name. Because eTLDs are registrable, all domains with the same eTLD+1 are owned by the same organization.
+The related concept **eTLD+1** means an eTLD plus the next part of the domain name. Because eTLD+1s are registrable, all domains with the same eTLD+1 are owned by the same organization.
 
 For example, all the following are eTLD+1 domains:
 

@@ -45,9 +45,9 @@ counter-reset: unset;
 The `counter-reset` property accepts a list of one or more space-separated counter names or the keyword `none`. For counter names, regular counters use the format `<counter-name>`, and reversed counters use `reversed(<counter-name>)`, where `<counter-name>` is a {{cssxref("custom-ident", "&lt;custom-ident&gt;")}} or `list-item` for the built-in {{HTMLElement("ol")}} counter. Optionally, each counter name can be followed by an `<integer>` to set its initial value.
 
 - {{cssxref("custom-ident", "&lt;custom-ident&gt;")}}
-  - : Specifies the counter name to create and initialize using the {{cssxref("custom-ident", "&lt;custom-ident&gt;")}} format.
+  - : Specifies the counter name to create and initialize using the {{cssxref("custom-ident", "&lt;custom-ident&gt;")}} format. The `reversed()` functional notation can be used to mark the counter reversed.
 - {{cssxref("&lt;integer&gt;")}}
-  - : The value to reset the counter to on each occurrence of the element.
+  - : The initial value to set on the newly created counter.
     Defaults to `0` if not specified.
 - `none`
   - : Specifies that no counter initialization should occur.
@@ -57,7 +57,8 @@ The `counter-reset` property accepts a list of one or more space-separated count
 
 The `counter-reset` property can create both regular and, in browsers that support it, reversed counters. You can create multiple regular and reversed counters, each separated by a space. Counters can be a standalone name or a space-separated name-value pair.
 
-After creating a counter using `counter-reset`, you can adjust its value by using the {{cssxref("counter-set")}} property. This is counterintuitive because, despite its name, the `counter-reset` property is used for creating and initializing counters, while the `counter-set` property is used for resetting the value of an existing counter.
+> [!WARNING]
+> There is [a difference between `counter-reset` and `counter-set` properties](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters#difference_between_counter-set_and_counter-reset). After creating a counter using `counter-reset`, you can adjust its value by using the {{cssxref("counter-set")}} property. This is counterintuitive because, despite its name, the `counter-reset` property is used for creating and initializing counters, while the `counter-set` property is used for resetting the value of an existing counter.
 
 Setting `counter-increment: none` on a selector with greater specificity overrides the creation of the named counter set on selectors with lower specificity.
 
@@ -132,7 +133,48 @@ ol {
 
 {{EmbedLiveSample("Overriding the list-item counter", 140, 300)}}
 
-Using `counter-reset`, we were able to set the implicit `list-item` counter to start counting at `3`, similar to the effect of writing [`<ol start="3">`](/en-US/docs/Web/HTML/Element/ol#start) in HTML.
+Using `counter-reset`, we set the implicit `list-item` counter to start counting at `3` for every `ol`. Then, the first item would be numbered 4, second would be numbered 5, etc., similar to the effect of writing [`<ol start="4">`](/en-US/docs/Web/HTML/Element/ol#start) in HTML.
+
+### Using a reverse counter
+
+In the following example, we've declared a reversed counter named 'priority'. The counter is being used to number five tasks.
+
+```html
+<ul class="stack">
+  <li>Task A</li>
+  <li>Task B</li>
+  <li>Task C</li>
+  <li>Task D</li>
+  <li>Task E</li>
+</ul>
+```
+
+```css hidden
+@supports not (counter-reset: reversed(priority)) {
+  .stack {
+    display: none;
+  }
+  body::after {
+    content: "Your browser doesn't support the reversed counters yet.";
+  }
+}
+```
+
+```css
+li::before {
+  content: counter(priority) ". ";
+  counter-increment: priority -1;
+}
+
+.stack {
+  counter-reset: reversed(priority);
+  list-style: none;
+}
+```
+
+{{EmbedLiveSample("Using a reverse counter", 140, 150)}}
+
+In the output, the items are numbered in reversed order from 5 to 1. Notice in the code we haven't specified the counter's initial value. The browser automatically calculates the initial value at layout-time using the counter increment value.
 
 ## Specifications
 

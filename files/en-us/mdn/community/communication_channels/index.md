@@ -6,7 +6,7 @@ page-type: mdn-community-guide
 
 {{MDNSidebar}}
 
-There are various communication channels using which community can contact MDN Web Docs staff and participate in discussions.
+There are various communication channels that the community can use to contact MDN Web Docs staff and participate in discussions.
 
 ## Chat rooms
 
@@ -43,7 +43,7 @@ Check out the MDN-specific [discussion guidelines](/en-US/docs/MDN/Community/Dis
 
 ## Social media
 
-You can follow MDN Web Docs on [Mastodon](https://mozilla.social/@mdn) and [Twitter](https://twitter.com/MozDevNet).
+You can follow MDN Web Docs on [Mastodon](https://mozilla.social/@mdn) and [X](https://x.com/MozDevNet).
 Feel free to tag us in your posts if you want to share something with us or say hello, although we can't guarantee that we can respond to everything.
 
 ## Forums

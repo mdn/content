@@ -1,7 +1,7 @@
 ---
 title: "USBDevice: vendorId property"
 short-title: vendorId
-slug: Web/API/USBDevice/vendorID
+slug: Web/API/USBDevice/vendorId
 page-type: web-api-instance-property
 status:
   - experimental

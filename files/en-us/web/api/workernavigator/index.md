@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.WorkerNavigator
 ---
 
-{{APIRef("Web Workers API")}}
+{{APIRef("Web Workers API")}}{{AvailableInWorkers("worker")}}
 
 The **`WorkerNavigator`** interface represents a subset of the {{DOMxRef("Navigator")}} interface allowed to be accessed from a {{DOMxRef("Worker")}}. Such an object is initialized for each worker and is available via the {{DOMxRef("WorkerGlobalScope.navigator", "self.navigator")}} property.
 
@@ -46,7 +46,7 @@ _The `WorkerNavigator` interface doesn't inherit any property._
 - {{DOMxRef("WorkerNavigator.product")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : Always returns `'Gecko'`, on any browser. This property is kept only for compatibility purposes.
 - {{domxref("WorkerNavigator.serial")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
-  - : Returns a {{domxref("Serial")}} object, which represents the entry point into the {{domxref("Web Serial API")}} to enable the control of serial ports.
+  - : Returns a {{domxref("Serial")}} object, which represents the entry point into the [Web Serial API](/en-US/docs/Web/API/Web_Serial_API). to enable the control of serial ports.
 - {{domxref("WorkerNavigator.serviceWorker")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a {{domxref("ServiceWorkerContainer")}} object, which provides access to registration, removal, upgrade, and communication with the {{domxref("ServiceWorker")}} objects for the [associated document](https://html.spec.whatwg.org/multipage/browsers.html#concept-document-window).
 - {{DOMxRef("WorkerNavigator.storage")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
@@ -62,9 +62,9 @@ _The `WorkerNavigator` interface doesn't inherit any property._
 
 _The `WorkerNavigator` interface doesn't inherit any method._
 
-- {{domxref("Navigator.clearAppBadge()")}} {{SecureContext_Inline}}
+- {{domxref("WorkerNavigator.clearAppBadge()")}} {{SecureContext_Inline}}
   - : Clears a badge on the current app's icon and returns a {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
-- {{domxref("Navigator.setAppBadge()")}} {{SecureContext_Inline}}
+- {{domxref("WorkerNavigator.setAppBadge()")}} {{SecureContext_Inline}}
   - : Sets a badge on the icon associated with this app and returns a {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
 
 ## Specifications

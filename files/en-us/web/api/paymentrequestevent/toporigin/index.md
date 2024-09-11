@@ -8,7 +8,7 @@ status:
 browser-compat: api.PaymentRequestEvent.topOrigin
 ---
 
-{{SeeCompatTable}}{{APIRef("Payment Handler API")}}
+{{SeeCompatTable}}{{APIRef("Payment Handler API")}}{{AvailableInWorkers("service")}}
 
 The **`topOrigin`** read-only property of the
 {{domxref("PaymentRequestEvent")}} interface returns the top-level payee origin where

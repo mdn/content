@@ -440,7 +440,8 @@ btn.addEventListener("click", () => {
 
 5. After the loop, we check whether we set a contact, and if not we set the paragraph text to "Contact not found.".
 
-> **Note:** You can view the [full source code on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/contact-search.html) too (also [see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html)).
+> [!NOTE]
+> You can view the [full source code on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/contact-search.html) too (also [see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html)).
 
 ## Skipping iterations with continue
 
@@ -488,7 +489,8 @@ Here's the output:
 3. If the square root and the rounded down square root do not equal one another (`!==`), it means that the square root is not an integer, so we are not interested in it. In such a case, we use the `continue` statement to skip on to the next loop iteration without recording the number anywhere.
 4. If the square root is an integer, we skip past the `if` block entirely, so the `continue` statement is not executed; instead, we concatenate the current `i` value plus a space at the end of the paragraph content.
 
-> **Note:** You can view the [full source code on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/integer-squares.html) too (also [see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html)).
+> [!NOTE]
+> You can view the [full source code on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/integer-squares.html) too (also [see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html)).
 
 ## while and do...while
 
@@ -534,7 +536,8 @@ while (i < cats.length) {
 console.log(myFavoriteCats); // "My cats are called Pete, Biggles, and Jasmine."
 ```
 
-> **Note:** This still works just the same as expected — have a look at it [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html) (also view the [full source code](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/while.html)).
+> [!NOTE]
+> This still works just the same as expected — have a look at it [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html) (also view the [full source code](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/while.html)).
 
 The [do...while](/en-US/docs/Web/JavaScript/Reference/Statements/do...while) loop is very similar, but provides a variation on the while structure:
 
@@ -573,9 +576,11 @@ do {
 console.log(myFavoriteCats); // "My cats are called Pete, Biggles, and Jasmine."
 ```
 
-> **Note:** Again, this works just the same as expected — have a look at it [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html) (also view the [full source code](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/do-while.html)).
+> [!NOTE]
+> Again, this works just the same as expected — have a look at it [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html) (also view the [full source code](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/do-while.html)).
 
-> **Warning:** With while and do...while — as with all loops — you must make sure that the initializer is incremented or, depending on the case, decremented, so the condition eventually becomes false.
+> [!WARNING]
+> With while and do...while — as with all loops — you must make sure that the initializer is incremented or, depending on the case, decremented, so the condition eventually becomes false.
 > If not, the loop will go on forever, and either the browser will force it to stop, or it will crash. This is called an **infinite loop**.
 
 ## Active learning: Launch countdown
@@ -599,7 +604,8 @@ Specifically, we want you to:
 
 - Remember to include an iterator! However, in this example we are counting down after each iteration, not up, so you **don't** want `i++` — how do you iterate downwards?
 
-> **Note:** If you start typing the loop (for example (while(i>=0)), the browser might get stuck because you have not yet entered the end condition. So be careful with this. You can start writing your code in a comment to deal with this issue and remove the comment after you finish.
+> [!NOTE]
+> If you start typing the loop (for example (while(i>=0)), the browser might get stuck because you have not yet entered the end condition. So be careful with this. You can start writing your code in a comment to deal with this issue and remove the comment after you finish.
 
 If you make a mistake, you can always reset the example with the "Reset" button.
 If you get really stuck, press "Show solution" to see a solution.
@@ -613,8 +619,8 @@ If you get really stuck, press "Show solution" to see a solution.
   Press Esc to move focus away from the code area (Tab inserts a tab character).
 </p>
 <textarea id="code" class="playable-code" style="height: 300px;width: 95%">
-let output = document.querySelector('.output');
-output.innerHTML = '';
+const output = document.querySelector('.output');
+output.textContent = "";
 
 // let i = 10;
 
@@ -682,7 +688,7 @@ solution.addEventListener("click", function () {
 });
 
 let jsSolution = `const output = document.querySelector('.output');
-output.innerHTML = '';
+output.textContent = "";
 
 let i = 10;
 
@@ -710,12 +716,12 @@ window.addEventListener("load", updateCode);
 // make it write a tab at the caret position instead
 
 textarea.onkeydown = function (e) {
-  if (e.keyCode === 9) {
+  if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
   }
 
-  if (e.keyCode === 27) {
+  if (e.code === "Escape") {
     textarea.blur();
   }
 };
@@ -891,12 +897,12 @@ window.addEventListener("load", updateCode);
 // make it write a tab at the caret position instead
 
 textarea.onkeydown = function (e) {
-  if (e.keyCode === 9) {
+  if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
   }
 
-  if (e.keyCode === 27) {
+  if (e.code === "Escape") {
     textarea.blur();
   }
 };
@@ -983,7 +989,8 @@ do {
 } while (condition)
 ```
 
-> **Note:** There are other loop types/features too, which are useful in advanced/specialized situations and beyond the scope of this article. If you want to go further with your loop learning, read our advanced [Loops and iteration guide](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration).
+> [!NOTE]
+> There are other loop types/features too, which are useful in advanced/specialized situations and beyond the scope of this article. If you want to go further with your loop learning, read our advanced [Loops and iteration guide](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration).
 
 ## Test your skills!
 

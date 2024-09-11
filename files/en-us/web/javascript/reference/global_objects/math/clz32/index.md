@@ -34,7 +34,7 @@ If `x` is not a number, it will be converted to a number first, then converted t
 
 If the converted 32-bit unsigned integer is `0`, `32` is returned, because all bits are `0`. If the most significant bit is `1` (i.e. the number is greater than or equal to 2<sup>31</sup>), `0` is returned.
 
-This function is particularly useful for systems that compile to JS, like [Emscripten](https://emscripten.org).
+This function is particularly useful for systems that compile to JS, like [Emscripten](https://emscripten.org/).
 
 ## Examples
 

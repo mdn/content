@@ -9,7 +9,8 @@ browser-compat: webextensions.api.storage.onChanged
 
 Fired when {{WebExtAPIRef('storage.StorageArea.set','storageArea.set')}}, {{WebExtAPIRef('storage.StorageArea.remove','storageArea.remove')}}, or {{WebExtAPIRef('storage.StorageArea.clear','storageArea.clear')}} executes against a storage area, returning details of only changed keys. A callback is called only when there are changes to the underlying data.
 
-> **Note:** In Firefox, the information returned includes all keys within the storage area {{WebExtAPIRef('storage.StorageArea.set','storageArea.set')}} ran against whether they changed or not. Also, a callback may be invoked when there is no change to the underlying data. Details of the changed items are found by examining each returned key's {{WebExtAPIRef('storage.StorageChange')}} object. See [Firefox bug 1833153](https://bugzil.la/1833153).
+> [!NOTE]
+> In Firefox, the information returned includes all keys within the storage area {{WebExtAPIRef('storage.StorageArea.set','storageArea.set')}} ran against whether they changed or not. Also, a callback may be invoked when there is no change to the underlying data. Details of the changed items are found by examining each returned key's {{WebExtAPIRef('storage.StorageChange')}} object. See [Firefox bug 1833153](https://bugzil.la/1833153).
 
 ## Syntax
 
@@ -70,7 +71,8 @@ browser.storage.onChanged.addListener(logStorageChange);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/storage/#event-onChanged) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage#event-onChanged) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

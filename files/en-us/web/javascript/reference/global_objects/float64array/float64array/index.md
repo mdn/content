@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Float64Array.Float64Array
 
 {{JSRef}}
 
-The **`Float64Array()`** constructor creates {{jsxref("Float64Array")}} objects. The contents are initialized to `0`.
+The **`Float64Array()`** constructor creates {{jsxref("Float64Array")}} objects. The contents are initialized to `0` unless initialization data is explicitly provided.
 
 ## Syntax
 

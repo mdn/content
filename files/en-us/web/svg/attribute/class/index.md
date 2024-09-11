@@ -2,7 +2,7 @@
 title: class
 slug: Web/SVG/Attribute/class
 page-type: svg-attribute
-browser-compat: svg.attributes.style.class
+browser-compat: svg.global_attributes.class
 ---
 
 {{SVGRef}}
@@ -134,6 +134,10 @@ The following elements can use the `class` attribute:
 - {{ SVGElement("tref") }}
 - {{ SVGElement("tspan") }}
 - {{ SVGElement("use") }}
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -4,7 +4,7 @@
  * - Markdown header updates
  */
 
-import fs from "node:fs/promises";
+import fs from "node:fs";
 import {
   execGit,
   getRootDir,
@@ -14,30 +14,79 @@ import {
   stringToFragment,
 } from "./utils.js";
 
+const rootDir = getRootDir();
+const fileCache = new Map();
+const anchorCache = new Map();
 const deletedSlugs = [];
 const addedFragmentDetails = [];
 let deletedFragmentDetails = [];
 let isAllOk = true;
 
-function getDeletedSlugs() {
-  // git status --short --porcelain
-  let result = execGit(["status", "--short", "--porcelain"], { cwd: "." });
-
-  if (result.trim()) {
-    deletedSlugs.push(
-      ...result
-        .split("\n")
-        .filter(
-          (line) =>
-            /^\s*D\s+/gi.test(line) &&
-            line.includes("files/en-us") &&
-            (IMG_RX.test(line) || line.includes("index.md")),
-        )
-        .map((line) => line.replaceAll(/^\s*|files\/en-us\/|\/index.md/gm, ""))
-        .map((line) => line.split(/\s+/)[1]),
-    );
+function getFileContent(path) {
+  if (fileCache.has(path)) {
+    return fileCache.get(path);
   }
-  console.log("deletedSlugs", deletedSlugs);
+
+  const content = fs.readFileSync(path, "utf-8");
+  fileCache.set(path, content);
+  return content;
+}
+
+function getFileAnchors(path) {
+  if (anchorCache.has(path)) {
+    return anchorCache.get(path);
+  }
+  const content = getFileContent(path);
+  const headerAnchors = [...content.matchAll(/^#+ .*?$/gm)]
+    .map((match) => match[0].toLowerCase())
+    .map((h) => h.replace(/#+ /g, ""))
+    .map((h) => stringToFragment(h));
+  anchorCache.set(path, headerAnchors);
+  return headerAnchors;
+}
+
+function getDeletedSlugs(fromStaging = true) {
+  let result = "";
+
+  if (fromStaging) {
+    // git status --short --porcelain
+    result = execGit(["status", "--short", "--porcelain"], { cwd: "." });
+    if (result.trim()) {
+      deletedSlugs.push(
+        ...result
+          .split("\n")
+          .filter(
+            (line) =>
+              /^\s*D\s+/gi.test(line) &&
+              line.includes("files/en-us") &&
+              (IMG_RX.test(line) || line.includes("index.md")),
+          )
+          .map((line) =>
+            line.replaceAll(/^\s+|files\/en-us\/|\/index.md/gm, ""),
+          )
+          .map((line) => line.split(/\s+/)[1]),
+      );
+    }
+  } else {
+    // git diff --summary origin/main...HEAD
+    result = execGit(["diff", "--summary", "origin/main...HEAD"], { cwd: "." });
+    if (result.trim()) {
+      deletedSlugs.push(
+        ...result
+          .split("\n")
+          .filter(
+            (line) =>
+              line.includes("delete mode") &&
+              line.includes("files/en-us") &&
+              (IMG_RX.test(line) || line.includes("index.md")),
+          )
+          .map((line) => line.replace(/^\s*delete mode \d+ /gm, ""))
+          .map((line) =>
+            line.replaceAll(/^\s+|files\/en-us\/|\/index.md/gm, ""),
+          ),
+      );
+    }
+  }
 }
 
 function getFragmentDetails(fromStaging = true) {
@@ -72,21 +121,34 @@ function getFragmentDetails(fromStaging = true) {
         .map((header) => header.replace(/-#+ /g, ""))
         .map((header) => stringToFragment(header))
         .filter((header) => !addedFragments.includes(header))
-        .forEach((header) => deletedFragmentDetails.push(`${path}#${header}`));
+        .filter((header) => {
+          // check if another header with same name exists in the file
+          const absPath = `${rootDir}/files/en-us/${path}/index.md`;
+          if (!fs.existsSync(absPath)) {
+            return true;
+          }
+          const headerAnchors = getFileAnchors(absPath);
+          return !headerAnchors.includes(header);
+        })
+        .forEach((header) => {
+          const fragment = `${path}#${header}`;
+          if (!deletedFragmentDetails.includes(fragment)) {
+            deletedFragmentDetails.push(fragment);
+          }
+        });
 
       addedFragments.forEach((header) =>
         addedFragmentDetails.push(`${path}#${header}`),
       );
     }
   }
-
-  console.log("deletedFragmentDetails", deletedFragmentDetails);
 }
 
 if (process.argv[2] !== "--workflow") {
   getDeletedSlugs();
   getFragmentDetails();
 } else {
+  getDeletedSlugs(false);
   getFragmentDetails(false);
 }
 
@@ -99,10 +161,14 @@ if (deletedSlugs.length < 1 && deletedFragmentDetails.length < 1) {
   process.exit(0);
 }
 
-for await (const filePath of walkSync(getRootDir())) {
+console.log("deletedSlugs", deletedSlugs);
+console.log("deletedFragmentDetails", deletedFragmentDetails);
+
+for await (const filePath of walkSync(rootDir)) {
   if (filePath.endsWith("index.md")) {
     try {
-      const content = await fs.readFile(filePath, "utf-8");
+      const content =
+        fileCache.get(filePath) ?? fs.readFileSync(filePath, "utf-8");
       const relativePath = filePath.substring(filePath.indexOf("files/en-us"));
 
       // check deleted links

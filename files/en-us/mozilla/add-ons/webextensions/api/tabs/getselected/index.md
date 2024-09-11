@@ -9,7 +9,8 @@ browser-compat: webextensions.api.tabs.getSelected
 
 {{AddonSidebar}}
 
-> **Warning:** This method has been deprecated. Use {{WebExtAPIRef("tabs.query", "tabs.query({active: true})")}} instead.
+> [!WARNING]
+> This method has been deprecated. Use {{WebExtAPIRef("tabs.query", "tabs.query({active: true})")}} instead.
 
 Gets the tab that is selected in the specified window.
 
@@ -38,7 +39,8 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-getSelected) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-getSelected) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -9,7 +9,8 @@ browser-compat: svg.elements.animateMotion
 
 The SVG **`<animateMotion>`** element provides a way to define how an element moves along a motion path.
 
-> **Note:** To reuse an existing path, it will be necessary to use an {{SVGElement("mpath")}} element inside the `<animateMotion>` element instead of the {{SVGAttr("path")}} attribute.
+> [!NOTE]
+> To reuse an existing path, it will be necessary to use an {{SVGElement("mpath")}} element inside the `<animateMotion>` element instead of the {{SVGAttr("path")}} attribute.
 
 ## Example
 
@@ -58,7 +59,8 @@ svg {
   - : This attribute defines a rotation applied to the element animated along a path, usually to make it pointing in the direction of the animation.
     _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Content_type#number)|`auto`|`auto-reverse`; _Default value_: `0`; _Animatable_: **no**
 
-> **Note:** For `<animateMotion>`, the default value for the {{SVGAttr("calcMode")}} attribute is `paced`.
+> [!NOTE]
+> For `<animateMotion>`, the default value for the {{SVGAttr("calcMode")}} attribute is `paced`.
 
 ### Animation Attributes
 
@@ -68,8 +70,8 @@ svg {
   - : {{SVGAttr("calcMode")}}, {{SVGAttr("values")}}, {{SVGAttr("keyTimes")}}, {{SVGAttr("keySplines")}}, {{SVGAttr("from")}}, {{SVGAttr("to")}}, {{SVGAttr("by")}}
 - [Other Animation attributes](/en-US/docs/Web/SVG/Attribute#animation_attributes)
   - : Most notably: {{SVGAttr("attributeName")}}, {{SVGAttr("additive")}}, {{SVGAttr("accumulate")}}
-- [Animation event attributes](/en-US/docs/Web/SVG/Attribute#animation_event_attributes)
-  - : Most notably: {{SVGAttr("onbegin")}}, {{SVGAttr("onend")}}, {{SVGAttr("onrepeat")}}
+- [Animation event attributes](/en-US/docs/Web/SVG/Attribute#event_attributes)
+  - : Most notably: `onbegin`, `onend`, `onrepeat`
 
 ## Usage notes
 

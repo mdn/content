@@ -25,7 +25,7 @@ page-type: learn-module-chapter
       <th scope="row">Objective:</th>
       <td>
         To understand the fundamental concepts of grid layout as well as how to
-        implement it with CSS Grid.
+        implement it with CSS grid.
       </td>
     </tr>
   </tbody>
@@ -41,8 +41,8 @@ A grid will typically have **columns**, **rows**, and then gaps between each row
 
 ## Creating your grid in CSS
 
-Having decided on the grid that your design needs, you can use CSS Grid Layout to create it. We'll look at the basic features of Grid Layout first and then explore how to create a simple grid system for your project.
-The following video provides a nice visual explanation of using CSS Grid:
+Having decided on the grid that your design needs, you can use CSS grid layout to create it. We'll look at the basic features of grid layout first and then explore how to create a simple grid system for your project.
+The following video provides a nice visual explanation of using CSS grid:
 
 {{EmbedYouTube("KOvGeFUHAC0")}}
 
@@ -58,7 +58,7 @@ Similar to how you define flexbox, you define a grid layout by setting the value
 }
 ```
 
-Unlike Flexbox, the items will not immediately look any different. Declaring `display: grid` gives you a one column grid, so your items will continue to display one below the other as they do in normal flow.
+Unlike flexbox, the items will not immediately look any different. Declaring `display: grid` gives you a one column grid, so your items will continue to display one below the other as they do in normal flow.
 
 To see something that looks more grid-like, we'll need to add some columns to the grid. Let's add three 200-pixel columns. You can use any length unit or percentage to create these column tracks.
 
@@ -161,7 +161,8 @@ body {
 
 {{ EmbedLiveSample('Flexible_grids_with_the_fr_unit', '100%', 200) }}
 
-> **Note:** The `fr` unit distributes _available_ space, not _all_ space. Therefore, if one of your tracks has something large inside it, there will be less free space to share.
+> [!NOTE]
+> The `fr` unit distributes _available_ space, not _all_ space. Therefore, if one of your tracks has something large inside it, there will be less free space to share.
 
 ### Gaps between tracks
 
@@ -214,7 +215,8 @@ body {
 
 {{ EmbedLiveSample('Gaps_between_tracks', '100%', 250) }}
 
-> **Note:** The `gap` properties (`column-gap`, `row-gap` and `gap`) used to be prefixed by `grid-`. The spec has changed but the prefixed versions will be maintained as an alias. To be on the safe side and make your code more bulletproof, you can add both properties:
+> [!NOTE]
+> The `gap` properties (`column-gap`, `row-gap` and `gap`) used to be prefixed by `grid-`. The spec has changed but the prefixed versions will be maintained as an alias. To be on the safe side and make your code more bulletproof, you can add both properties:
 >
 > ```css
 > .container {
@@ -472,7 +474,8 @@ aside {
 
 {{ EmbedLiveSample('Line-based_placement', '100%', 550) }}
 
-> **Note:** You can also use the value `-1` to target the end column or row line, then count inwards from the end using negative values. Note also that lines count always from the edges of the explicit grid, not the [implicit grid](/en-US/docs/Glossary/Grid).
+> [!NOTE]
+> You can also use the value `-1` to target the end column or row line, then count inwards from the end using negative values. Note also that lines count always from the edges of the explicit grid, not the [implicit grid](/en-US/docs/Glossary/Grid).
 
 ## Positioning with grid-template-areas
 
@@ -865,9 +868,9 @@ aside {
 </div>
 ```
 
-{{ EmbedLiveSample('Grid frameworks in CSS Grid', '100%', 600) }}
+{{ EmbedLiveSample('Grid frameworks in CSS grid', '100%', 600) }}
 
-If you use the [Firefox Grid Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) to overlay the grid lines on your design, you can see how our 12-column grid works.
+If you use the [Firefox grid inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) to overlay the grid lines on your design, you can see how our 12-column grid works.
 
 ![A 12 column grid overlaid on our design.](learn-grids-inspector.png)
 
@@ -877,7 +880,7 @@ You've reached the end of this article, but can you remember the most important 
 
 ## Summary
 
-In this overview, we've toured the main features of CSS Grid Layout. You should be able to start using it in your designs. To dig further into the specification, read our guides on Grid Layout, which can be found below.
+In this overview, we've toured the main features of CSS grid layout. You should be able to start using it in your designs. To dig further into the specification, read our guides on grid layout, which can be found below.
 
 ## See also
 

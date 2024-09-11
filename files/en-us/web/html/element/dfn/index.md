@@ -7,7 +7,11 @@ browser-compat: html.elements.dfn
 
 {{HTMLSidebar}}
 
-The **`<dfn>`** [HTML](/en-US/docs/Web/HTML) element indicates a term to be defined. The `<dfn>` element should be used in a complete definition statement, where the ancestor {{HTMLElement("p")}} element, the {{HTMLElement("dt")}}/{{HTMLElement("dd")}} pairing, or the nearest {{HTMLElement("section")}} ancestor of the `<dfn>` element, is considered to be the full definition of the term.
+The **`<dfn>`** [HTML](/en-US/docs/Web/HTML) element indicates a term to be defined. The `<dfn>` element should be used in a complete definition statement, where the full definition of the term can be one of the following:
+
+- The ancestor paragraph (a block of text, sometimes marked by a {{HTMLElement("p")}} element)
+- The {{HTMLElement("dt")}}/{{HTMLElement("dd")}} pairing
+- The nearest [section](/en-US/docs/Web/HTML/Content_categories#sectioning_content) ancestor of the `<dfn>` element,
 
 {{EmbedInteractiveExample("pages/tabbed/dfn.html", "tabbed-shorter")}}
 
@@ -29,7 +33,8 @@ The term being defined is identified following these rules:
 2. If the `<dfn>` contains a single child element and does not have any text content of its own, and the child element is an {{HTMLElement("abbr")}} element with a `title` attribute itself, then the exact value of the `<abbr>` element's `title` is the term being defined.
 3. Otherwise, the text content of the `<dfn>` element is the term being defined. This is shown [in the first example below](#basic_identification_of_a_term).
 
-> **Note:** If the `<dfn>` element has a `title` attribute, it _must_ contain the term being defined and no other text.
+> [!NOTE]
+> If the `<dfn>` element has a `title` attribute, it _must_ contain the term being defined and no other text.
 
 ### Links to `<dfn>` elements
 
@@ -130,14 +135,15 @@ Note the `<abbr>` element nested inside the `<dfn>`. The former establishes that
       </th>
       <td>
         <a href="/en-US/docs/Web/HTML/Content_categories#flow_content">Flow content</a>,
-        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">phrasing content</a>, palpable content.
+        <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">phrasing content</a>,
+        <a href="/en-US/docs/Web/HTML/Content_categories#palpable_content">palpable content</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Permitted content</th>
       <td>
         <a href="/en-US/docs/Web/HTML/Content_categories#phrasing_content">Phrasing content</a>,
-        but no {{HTMLElement("dfn")}} element must be a descendant.
+        but no <code>&lt;dfn&gt;</code> element must be a descendant.
       </td>
     </tr>
     <tr>

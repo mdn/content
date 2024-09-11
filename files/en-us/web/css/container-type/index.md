@@ -13,7 +13,8 @@ Size containment turns off the ability of an element to get size information fro
 
 The container size has to be set explicitly or by context — for example, block elements, flex containers, and grid containers stretching to the full width of their parent. If an explicit or contextual size is not available, elements with size containment will collapse.
 
-> **Note:** When using the `container-type` and {{cssxref("container-name")}} properties, the `style` and `layout` values of the {{cssxref("contain")}} property are automatically applied.
+> [!NOTE]
+> When using the `container-type` and {{cssxref("container-name")}} properties, the `style` and `layout` values of the {{cssxref("contain")}} property are automatically applied.
 
 ## Syntax
 
@@ -48,7 +49,7 @@ container-type: unset;
     Inline size containment is applied to the element. The inline size of the element can be computed in isolation, ignoring the child elements.
 
 - `normal`
-  - : The element is not a query container for any container size queries, but remains a query container for container style queries.
+  - : Default value. The element is not a query container for any container size queries, but remains a query container for [container style queries](/en-US/docs/Web/CSS/@container#container_style_queries).
 
 ## Formal definition
 

@@ -138,9 +138,7 @@ numbers.
 
 ### Replacing a substring within a string
 
-The following example replaces a substring within a string. It will replace both
-individual characters and substrings. The function call at the end of the example
-changes the string `Brave New World` to `Brave New Web`.
+The following example replaces a substring within a string. It will replace both individual characters and substrings. The function call at the end of the example creates a string `Brave New Web` from the original string `Brave New World`.
 
 ```js
 // Replaces oldS with newS in the string fullS

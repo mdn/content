@@ -24,10 +24,12 @@ A pointer's _hit test_ is the process a browser uses to determine the target ele
 
 _This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref("Event")}}._
 
-- {{domxref('PointerEvent.altitudeAngle')}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{domxref('PointerEvent.altitudeAngle')}} {{ReadOnlyInline}}
   - : Represents the angle between a transducer (a pointer or stylus) axis and the X-Y plane of a device screen.
-- {{domxref('PointerEvent.azimuthAngle')}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{domxref('PointerEvent.azimuthAngle')}} {{ReadOnlyInline}}
   - : Represents the angle between the Y-Z plane and the plane containing both the transducer (a pointer or stylus) axis and the Y axis.
+- {{domxref('PointerEvent.persistentDeviceId')}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : A unique identifier for the pointing device generating the `PointerEvent`.
 - {{domxref('PointerEvent.pointerId')}} {{ReadOnlyInline}}
   - : A unique identifier for the pointer causing the event.
 - {{domxref('PointerEvent.width')}} {{ReadOnlyInline}}
@@ -60,7 +62,8 @@ _This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref
 
 The `PointerEvent` interface has several event types. To determine which event fired, look at the event's {{domxref("Event.type", "type")}} property.
 
-> **Note:** It's important to note that in many cases, both pointer and mouse events get sent (in order to let non-pointer-specific code still interact with the user). If you use pointer events, you should call {{domxref("Event.preventDefault()", "preventDefault()")}} to keep the mouse event from being sent as well.
+> [!NOTE]
+> It's important to note that in many cases, both pointer and mouse events get sent (in order to let non-pointer-specific code still interact with the user). If you use pointer events, you should call {{domxref("Event.preventDefault()", "preventDefault()")}} to keep the mouse event from being sent as well.
 
 - {{domxref('Element/pointerover_event', 'pointerover')}}
   - : This event is fired when a pointing device is moved into an element's hit test boundaries.
@@ -70,7 +73,8 @@ The `PointerEvent` interface has several event types. To determine which event f
 
   - : The event is fired when a pointer becomes _active_. For mouse, it is fired when the device transitions from no buttons pressed to at least one button pressed. For touch, it is fired when physical contact is made with the digitizer. For pen, it is fired when the stylus makes physical contact with the digitizer.
 
-    > **Note:** For touchscreen browsers that allow [direct manipulation](https://w3c.github.io/pointerevents/#dfn-direct-manipulation), a `pointerdown` event triggers [implicit pointer capture](https://w3c.github.io/pointerevents/#dfn-implicit-pointer-capture), which causes the target to capture all subsequent pointer events as if they were occurring over the capturing target. Accordingly, `pointerover`, `pointerenter`, `pointerleave`, and `pointerout` **will not fire** as long as this capture is set. The capture can be released manually by calling {{ domxref('element.releasePointerCapture') }} on the target element, or it will be implicitly released after a `pointerup` or `pointercancel` event.
+    > [!NOTE]
+    > For touchscreen browsers that allow [direct manipulation](https://w3c.github.io/pointerevents/#dfn-direct-manipulation), a `pointerdown` event triggers [implicit pointer capture](https://w3c.github.io/pointerevents/#dfn-implicit-pointer-capture), which causes the target to capture all subsequent pointer events as if they were occurring over the capturing target. Accordingly, `pointerover`, `pointerenter`, `pointerleave`, and `pointerout` **will not fire** as long as this capture is set. The capture can be released manually by calling {{ domxref('element.releasePointerCapture') }} on the target element, or it will be implicitly released after a `pointerup` or `pointercancel` event.
 
 - {{domxref('Element/pointermove_event', 'pointermove')}}
   - : This event is fired when a pointer changes coordinates.
@@ -103,6 +107,6 @@ Examples of each property, event type, and global event handler are included in 
 
 ## See also
 
-- {{domxref("Touch_events","Touch Events")}}
+- [Touch events](/en-US/docs/Web/API/Touch_events)
 - {{domxref("GestureEvent")}}
 - {{cssxref("touch-action")}}

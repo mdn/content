@@ -22,8 +22,7 @@ In general, positive values of `y` mean downward, and negative values of
 
 A double-precision floating-point value indicating the y coordinate's value for the
 point. This value is **unrestricted**, meaning that it is allowed to be
-infinite or invalid (that is, its value may be {{jsxref("NaN")}} or {{jsxref("Infinity",
-  "±Infinity")}}).
+infinite or invalid (that is, its value may be {{jsxref("NaN")}} or {{jsxref("Infinity", "±Infinity")}}).
 
 ## Specifications
 

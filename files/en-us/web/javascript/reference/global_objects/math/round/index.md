@@ -30,7 +30,8 @@ The value of `x` rounded to the nearest integer.
 
 If the fractional portion of the argument is greater than 0.5, the argument is rounded to the integer with the next higher absolute value. If it is less than 0.5, the argument is rounded to the integer with the lower absolute value. If the fractional portion is exactly 0.5, the argument is rounded to the next integer in the direction of +∞.
 
-> **Note:** This differs from many languages' `round()` functions, which often round half-increments _away from zero_, giving a different result in the case of negative numbers with a fractional part of exactly 0.5.
+> [!NOTE]
+> This differs from many languages' `round()` functions, which often round half-increments _away from zero_, giving a different result in the case of negative numbers with a fractional part of exactly 0.5.
 
 `Math.round(x)` is not exactly the same as [`Math.floor(x + 0.5)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor). When `x` is -0, or -0.5 ≤ x < 0, `Math.round(x)` returns -0, while `Math.floor(x + 0.5)` returns 0. However, neglecting that difference and potential precision errors, `Math.round(x)` and `Math.floor(x + 0.5)` are generally equivalent.
 

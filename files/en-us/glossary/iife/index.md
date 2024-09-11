@@ -25,7 +25,7 @@ The name IIFE is promoted by Ben Alman in [his blog](https://web.archive.org/web
 
 It is a design pattern which is also known as a {{glossary("Self-Executing Anonymous Function")}} and contains two major parts:
 
-1. The first is the anonymous function with lexical scope enclosed within the {{jsxref("Operators/Grouping", "Grouping Operator")}} `()`. This prevents accessing variables within the IIFE idiom as well as polluting the global scope.
+1. The first is the anonymous function with lexical scope enclosed within the [grouping operator](/en-US/docs/Web/JavaScript/Reference/Operators/Grouping) `()`. This prevents accessing variables within the IIFE idiom as well as polluting the global scope.
 2. The second part creates the immediately invoked function expression `()` through which the JavaScript engine will directly interpret the function.
 
 ## Use cases
@@ -155,7 +155,6 @@ When clicked, these buttons alert 0 and 1.
 ## See also
 
 - [IIFE](https://en.wikipedia.org/wiki/Immediately-invoked_function_expression) (Wikipedia)
-- [Glossary](/en-US/docs/Glossary)
-
+- Related glossary terms:
   - {{Glossary("Function")}}
   - {{Glossary("Self-Executing Anonymous Function")}}

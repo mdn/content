@@ -1,13 +1,18 @@
 ---
 title: "HTML attribute: size"
+short-title: size
 slug: Web/HTML/Attributes/size
 page-type: html-attribute
-browser-compat: html.elements.attribute.size
+browser-compat:
+  - html.elements.select.size
+  - html.elements.input.size
 ---
 
 {{HTMLSidebar}}
 
-The **`size`** attribute defines the width of the {{htmlelement('input')}} and the height of the {{htmlelement('select')}} element. For the `input`, if the `type` attribute is {{HTMLElement("input/text", "text")}} or {{HTMLElement("input/password", "password")}} then it's the number of characters. This must be an integer value of 0 or higher. If no `size` is specified, or an invalid value is specified, the input has no size declared, and the form control will be the default width based on the user agent. If CSS targets the element with properties impacting the width, CSS takes precedence.
+The **`size`** attribute defines the width of the {{htmlelement('input')}} and the height of the {{htmlelement('select')}} element. For an `input` element, it defines the number of characters that the user agent allows the user to see when editing the value. For a `select` element, it defines the number of options that should be shown to the user. This must be a valid non-negative integer greater than zero.
+
+If no `size` is specified, or an invalid value is specified, the input has no size declared, and the form control will be the default width based on the user agent. If CSS targets the element with properties impacting the width, CSS takes precedence.
 
 The `size` attribute has no impact on constraint validation.
 

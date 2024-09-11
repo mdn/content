@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.XMLHttpRequestUpload.progress_event
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
 The **`progress`** event is fired periodically when a request receives more data.
 

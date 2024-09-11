@@ -20,7 +20,8 @@ setAttributeNode(attribute)
 
 ### Parameters
 
-- `attribute` is the `Attr` node to set on the element.
+- `attribute`
+  - : The {{domxref("Attr")}} node to add to the element.
 
 ### Return value
 

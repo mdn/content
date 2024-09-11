@@ -3,12 +3,10 @@ title: "CustomStateSet: add() method"
 short-title: add()
 slug: Web/API/CustomStateSet/add
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.CustomStateSet.add
 ---
 
-{{APIRef("Web Components")}}{{SeeCompatTable}}
+{{APIRef("Web Components")}}
 
 The **`add`** method of the {{domxref("CustomStateSet")}} interface adds value representing a custom state to the `CustomStateSet`.
 

@@ -7,7 +7,8 @@ browser-compat: webextensions.api.extension.getExtensionTabs
 
 {{AddonSidebar}}
 
-> **Warning:** This method has been deprecated. Use {{WebExtAPIRef("extension.getViews()")}} instead.
+> [!WARNING]
+> This method has been deprecated. Use {{WebExtAPIRef("extension.getViews()")}} instead.
 
 Returns an array of the JavaScript [Window](/en-US/docs/Web/API/Window) objects for each of the tabs running inside the current extension. If `windowId` is specified, returns only the Window objects of tabs attached to the specified window.
 
@@ -36,7 +37,8 @@ This API is also available as `browser.extension.getExtensionTabs()`.
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/extension/#method-getExtensionTabs) API. This documentation is derived from [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/api/extension#method-getExtensionTabs) API. This documentation is derived from [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

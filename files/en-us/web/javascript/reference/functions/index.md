@@ -17,13 +17,15 @@ For more examples and explanations, see the [JavaScript guide about functions](/
 
 Function values are typically instances of [`Function`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function). See {{jsxref("Function")}} for information on properties and methods of `Function` objects. Callable values cause [`typeof`](/en-US/docs/Web/JavaScript/Reference/Operators/typeof) to return `"function"` instead of `"object"`.
 
-> **Note:** Not all callable values are `instanceof Function`. For example, the `Function.prototype` object is callable but not an instance of `Function`. You can also manually set the [prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) of your function so it no longer inherits from `Function.prototype`. However, such cases are extremely rare.
+> [!NOTE]
+> Not all callable values are `instanceof Function`. For example, the `Function.prototype` object is callable but not an instance of `Function`. You can also manually set the [prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) of your function so it no longer inherits from `Function.prototype`. However, such cases are extremely rare.
 
 ### Return value
 
 By default, if a function's execution doesn't end at a [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) statement, or if the `return` keyword doesn't have an expression after it, then the return value is {{jsxref("undefined")}}. The `return` statement allows you to return an arbitrary value from the function. One function call can only return one value, but you can simulate the effect of returning multiple values by returning an object or array and [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) the result.
 
-> **Note:** Constructors called with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) have a different set of logic to determine their return values.
+> [!NOTE]
+> Constructors called with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new) have a different set of logic to determine their return values.
 
 ### Passing arguments
 
@@ -76,7 +78,7 @@ Broadly speaking, JavaScript has four kinds of functions:
 - Async function: returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise); can be paused and resumed with the [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) operator
 - Async generator function: returns an [`AsyncGenerator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator) object; both the `await` and `yield` operators can be used
 
-For every kind of function, there are three ways to define it:
+For every kind of function, there are multiple ways to define it:
 
 - Declaration
   - : [`function`](/en-US/docs/Web/JavaScript/Reference/Statements/function), [`function*`](/en-US/docs/Web/JavaScript/Reference/Statements/function*), [`async function`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function), [`async function*`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function*)
@@ -247,7 +249,7 @@ function myFunc({ a, b }, c = 1, ...rest) {
 There are some consequences if one of the above non-simple parameter syntaxes is used:
 
 - You cannot apply `"use strict"` to the function body — this causes a [syntax error](/en-US/docs/Web/JavaScript/Reference/Errors/Strict_non_simple_params).
-- Even if the function is not in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), the [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object stops syncing with the named parameters, and [`arguments.callee`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee) throws an error when accessed.
+- Even if the function is not in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), certain strict mode function features apply, including that the [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object stops syncing with the named parameters, [`arguments.callee`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/callee) throws an error when accessed, and duplicate parameter names are not allowed.
 
 ### The arguments object
 

@@ -8,7 +8,8 @@ page-type: firefox-release-notes
 
 This article provides information about the changes in Firefox 90 that will affect developers. Firefox 90 was released on July 13th, 2021.
 
-> **Note:** See also [Getting lively with Firefox 90](https://hacks.mozilla.org/2021/07/getting-lively-with-firefox-90/) on Mozilla Hacks.
+> [!NOTE]
+> See also [Getting lively with Firefox 90](https://hacks.mozilla.org/2021/07/getting-lively-with-firefox-90/) on Mozilla Hacks.
 
 ## Changes for web developers
 
@@ -45,7 +46,7 @@ This article provides information about the changes in Firefox 90 that will affe
 #### DOM
 
 - Support was added for the deprecated {{DOMxref("WheelEvent")}} properties: `WheelEvent.wheelDelta`, `WheelEvent.wheelDeltaX`, and `WheelEvent.wheelDeltaY`. This allows Firefox to work with a small subset of pages that were broken by recent compatibility improvements to `WheelEvent` ([Firefox bug 1708829](https://bugzil.la/1708829)).
-- The {{domxref("CanvasRenderingContext2D")}} interface of the {{domxref("Canvas API")}} now provides a {{domxref('CanvasRenderingContext2D.createConicGradient()','createConicGradient()')}} method. This returns a {{domxref('CanvasGradient')}} much like the existing {{domxref('CanvasRenderingContext2D.createLinearGradient()','linear')}} and {{domxref('CanvasRenderingContext2D.createRadialGradient()','radial')}} gradients, but allows a gradient to move around a point defined by coordinates. See [Firefox bug 1627014](https://bugzil.la/1627014) for more details.
+- The {{domxref("CanvasRenderingContext2D")}} interface of the [Canvas API](/en-US/docs/Web/API/Canvas_API) now provides a {{domxref('CanvasRenderingContext2D.createConicGradient()','createConicGradient()')}} method. This returns a {{domxref('CanvasGradient')}} much like the existing {{domxref('CanvasRenderingContext2D.createLinearGradient()','linear')}} and {{domxref('CanvasRenderingContext2D.createRadialGradient()','radial')}} gradients, but allows a gradient to move around a point defined by coordinates. See [Firefox bug 1627014](https://bugzil.la/1627014) for more details.
 - Support for the `matrix` protocol has been added and can now be passed into the {{domxref('Navigator.registerProtocolHandler()')}} method as a valid scheme.
 
 ### WebDriver conformance (Marionette)

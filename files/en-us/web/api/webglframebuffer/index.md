@@ -19,6 +19,8 @@ The `WebGLFramebuffer` object does not define any methods or properties of its o
 - {{domxref("WebGLRenderingContext.createFramebuffer()")}}
 - {{domxref("WebGLRenderingContext.deleteFramebuffer()")}}
 - {{domxref("WebGLRenderingContext.isFramebuffer()")}}
+- {{domxref("WebGLRenderingContext.framebufferRenderbuffer()")}}
+- {{domxref("WebGLRenderingContext.framebufferTexture2D()")}}
 
 ## Examples
 
@@ -44,4 +46,6 @@ const buffer = gl.createFramebuffer();
 - {{domxref("WebGLRenderingContext.createFramebuffer()")}}
 - {{domxref("WebGLRenderingContext.deleteFramebuffer()")}}
 - {{domxref("WebGLRenderingContext.isFramebuffer()")}}
+- {{domxref("WebGLRenderingContext.framebufferRenderbuffer()")}}
+- {{domxref("WebGLRenderingContext.framebufferTexture2D()")}}
 - Other buffers: {{domxref("WebGLBuffer")}}, {{domxref("WebGLRenderbuffer")}}

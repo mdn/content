@@ -10,13 +10,11 @@ browser-compat: api.BaseAudioContext.createBufferSource
 
 The `createBufferSource()` method of the {{ domxref("BaseAudioContext") }}
 Interface is used to create a new {{ domxref("AudioBufferSourceNode") }}, which can be
-used to play audio data contained within an {{ domxref("AudioBuffer") }} object. {{
-    domxref("AudioBuffer") }}s are created using
-{{domxref("BaseAudioContext.createBuffer")}} or returned by
-{{domxref("BaseAudioContext.decodeAudioData")}} when it successfully decodes an audio
-track.
+used to play audio data contained within an {{ domxref("AudioBuffer") }} object.
+{{domxref("AudioBuffer")}}s are created using {{domxref("BaseAudioContext.createBuffer")}} or returned by {{domxref("BaseAudioContext.decodeAudioData")}} when it successfully decodes an audio track.
 
-> **Note:** The {{domxref("AudioBufferSourceNode.AudioBufferSourceNode", "AudioBufferSourceNode()")}}
+> [!NOTE]
+> The {{domxref("AudioBufferSourceNode.AudioBufferSourceNode", "AudioBufferSourceNode()")}}
 > constructor is the recommended way to create a {{domxref("AudioBufferSourceNode")}}; see
 > [Creating an AudioNode](/en-US/docs/Web/API/AudioNode#creating_an_audionode).
 
@@ -40,16 +38,17 @@ In this example, we create a two second buffer, fill it with white noise, and th
 it via an {{ domxref("AudioBufferSourceNode") }}. The comments should clearly explain
 what is going on.
 
-> **Note:** You can also [run the code live](https://mdn.github.io/webaudio-examples/audio-buffer/),
+> [!NOTE]
+> You can also [run the code live](https://mdn.github.io/webaudio-examples/audio-buffer/),
 > or [view the source](https://github.com/mdn/webaudio-examples/blob/main/audio-buffer/index.html).
 
 ```js
-const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+const audioCtx = new AudioContext();
 const button = document.querySelector("button");
 const pre = document.querySelector("pre");
 const myScript = document.querySelector("script");
 
-pre.innerHTML = myScript.innerHTML;
+pre.textContent = myScript.textContent;
 
 // Stereo
 const channels = 2;

@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-readonly
 ---
 
+{{AccessibilitySidebar}}
+
 The `aria-readonly` attribute indicates that the element is not editable, but is otherwise operable.
 
 ## Description
@@ -21,9 +23,11 @@ Examples include:
 
 If the non-changeable value shouldn't be able to receive focus, use [`aria-disabled`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-disabled) instead.
 
-> **Note:** When using semantic HTML form controls, if you set the `readonly` attribute, you don't need to include `aria-readonly="true"`.
+> [!NOTE]
+> When using semantic HTML form controls, if you set the `readonly` attribute, you don't need to include `aria-readonly="true"`.
 
-> **Note:** The value of `<input type="checkbox">` can not be edited making `readonly` not relevant. However, when creating checkboxes with `role="checkbox"` the `aria-readonly` attribute _is_ supported.
+> [!NOTE]
+> The value of `<input type="checkbox">` can not be edited making `readonly` not relevant. However, when creating checkboxes with `role="checkbox"` the `aria-readonly` attribute _is_ supported.
 
 ## Values
 
@@ -69,8 +73,3 @@ Inherited into roles:
 
 - [HTML `readonly` attribute](/en-US/docs/Web/HTML/Attributes/readonly)
 - [`aria-disabled`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-disabled)
-
-<section id="Quick_links">
-<strong><a href="/en-US/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA states and properties</a></strong>
-{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/aria/Attributes")}}
-</section>

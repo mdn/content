@@ -43,7 +43,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-gl.clearColor(1, 0.5, 0.5, 3);
+gl.clearColor(1, 0.5, 0.5, 1);
 ```
 
 To get the current clear color, query the `COLOR_CLEAR_VALUE` constant which

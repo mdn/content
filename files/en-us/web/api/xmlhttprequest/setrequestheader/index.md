@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.XMLHttpRequest.setRequestHeader
 ---
 
-{{APIRef("XMLHttpRequest API")}}
+{{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
 The {{domxref("XMLHttpRequest")}} method **`setRequestHeader()`** sets the value of an HTTP request header.
 When using `setRequestHeader()`, you must call it after calling {{domxref("XMLHttpRequest.open", "open()")}}, but before calling {{domxref("XMLHttpRequest.send", "send()")}}.
@@ -20,7 +20,8 @@ For security reasons, there are several {{Glossary("Forbidden_header_name", "for
 
 In addition, the [`Authorization`](/en-US/docs/Web/HTTP/Headers/Authorization) HTTP header may be added to a request, but will be removed if the request is redirected cross-origin.
 
-> **Note:** For your custom fields, you may encounter a "**not allowed by Access-Control-Allow-Headers in preflight response**" exception when you send requests across domains.
+> [!NOTE]
+> For your custom fields, you may encounter a "**not allowed by Access-Control-Allow-Headers in preflight response**" exception when you send requests across domains.
 > In this situation, you need to set up the {{HTTPHeader("Access-Control-Allow-Headers")}} in your response header at server side.
 
 ## Syntax

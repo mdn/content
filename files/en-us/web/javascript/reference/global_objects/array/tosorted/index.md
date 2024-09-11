@@ -19,13 +19,7 @@ toSorted(compareFn)
 ### Parameters
 
 - `compareFn` {{optional_inline}}
-
-  - : Specifies a function that defines the sort order. If omitted, the array elements are converted to strings, then sorted according to each character's Unicode code point value.
-
-    - `a`
-      - : The first element for comparison.
-    - `b`
-      - : The second element for comparison.
+  - : A function that determines the order of the elements. If omitted, the array elements are converted to strings, then sorted according to each character's Unicode code point value. See {{jsxref("Array/sort", "sort()")}} for more information.
 
 ### Return value
 

@@ -25,5 +25,3 @@ An instance of {{domxref("BluetoothDevice")}}.
 ## Browser compatibility
 
 {{Compat}}
-
-{{APIRef("Web Bluetooth")}}

@@ -2,14 +2,15 @@
 title: clip-path
 slug: Web/SVG/Attribute/clip-path
 page-type: svg-attribute
-browser-compat: svg.attributes.presentation.clip-path
+browser-compat: svg.global_attributes.clip-path
 ---
 
 {{SVGRef}}
 
 The **`clip-path`** presentation attribute defines or associates a clipping path with the element it is related to.
 
-> **Note:** As a presentation attribute `clip-path` can be used as a CSS property.
+> [!NOTE]
+> As a presentation attribute `clip-path` can be used as a CSS property.
 
 You can use this attribute with the following SVG elements:
 
@@ -118,7 +119,8 @@ svg {
 - \<geometry-box>
   - : An extra information to tell how a {{cssxref('basic-shape')}} is applied to an element: `fill-box` indicates to use the object bounding box; `stroke-box` indicates to use the object bounding box extended with the stroke; `view-box` indicates to use the nearest SVG viewport as the reference box.
 
-> **Note:** For more details on the clip-path syntax, see the CSS property {{cssxref('clip-path')}} reference page.
+> [!NOTE]
+> For more details on the clip-path syntax, see the CSS property {{cssxref('clip-path')}} reference page.
 
 ## Specifications
 

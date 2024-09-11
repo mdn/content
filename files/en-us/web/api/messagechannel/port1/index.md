@@ -6,13 +6,11 @@ page-type: web-api-instance-property
 browser-compat: api.MessageChannel.port1
 ---
 
-{{APIRef("Channel Messaging API")}}
+{{APIRef("Channel Messaging API")}} {{AvailableInWorkers}}
 
 The **`port1`** read-only property of the
 {{domxref("MessageChannel")}} interface returns the first port of the message channel —
 the port attached to the context that originated the channel.
-
-{{AvailableInWorkers}}
 
 ## Value
 

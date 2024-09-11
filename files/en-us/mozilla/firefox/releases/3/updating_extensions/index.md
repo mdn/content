@@ -28,11 +28,12 @@ Change it to indicate compatibility with Firefox 3:
 
 Then reinstall your extension.
 
-Note that Firefox 3 does away with the extra ".0" in the version number, so instead of using "3.0.0.\*, you only need to use "3.0.\*".
+Note that Firefox 3 does away with the extra ".0" in the version number, so instead of using `3.0.0.*`, you only need to use `3.0.*`.
 
 There have been (and will continue to be) a number of API changes that will likely break some extensions. We're still working on compiling a complete list of these changes.
 
-> **Note:** If your extension still uses an [`Install.js`](/en-US/docs/Install.js) script instead of an [install manifest](/en-US/docs/Install_Manifests), you need to make the transition to an install manifest now. Firefox 3 no longer supports `install.js` scripts in XPI files.
+> [!NOTE]
+> If your extension still uses an [`Install.js`](/en-US/docs/Install.js) script instead of an [install manifest](/en-US/docs/Install_Manifests), you need to make the transition to an install manifest now. Firefox 3 no longer supports `install.js` scripts in XPI files.
 
 ### Add localizations to the install manifest
 
@@ -150,7 +151,7 @@ Extensions that attempt to overlay onto the "appcontent" box try to float chrome
 _Add simple changes you had to make while updating your extension to work with Firefox 3 here._
 
 - `chrome://browser/base/utilityOverlay.js` is no longer supported for security reasons. If you were previously using this, you should switch to `chrome://browser/content/utilityOverlay.js`.
-- `nsIAboutModule` implementations are now required to support the `getURIFlags` method. See [nsIAboutModule.idl](https://dxr.mozilla.org/mozilla-central/source/netwerk/protocol/about/nsIAboutModule.idl) for documentation. This affects extensions that provide new `about:` URIs. ([Firefox bug 337746](https://bugzil.la/337746))
+- `nsIAboutModule` implementations are now required to support the `getURIFlags` method. See [nsIAboutModule.idl](https://searchfox.org/mozilla-central/source/netwerk/protocol/about/nsIAboutModule.idl) for documentation. This affects extensions that provide new `about:` URIs. ([Firefox bug 337746](https://bugzil.la/337746))
 - The [`<xul:tabbrowser>`](/en-US/docs/Mozilla/Tech/XUL/tabbrowser) element is no longer part of "toolkit" ([Firefox bug 339964](https://bugzil.la/339964)). This means this element is no longer available to XUL applications and extensions. It continues to be used in the main Firefox window (browser.xul).
 - Changes to `nsISupports_proxies` and possibly to threading-related interfaces need to be documented.
 - If you use XML processing instructions, such as `<?xml-stylesheet ?>` in your XUL files, be aware of the changes made in [Firefox bug 319654](https://bugzil.la/319654):

@@ -126,6 +126,7 @@ const paddleWidth = 75;
 let paddleX = (canvas.width - paddleWidth) / 2;
 let rightPressed = false;
 let leftPressed = false;
+let interval = 0;
 const brickRowCount = 5;
 const brickColumnCount = 3;
 const brickWidth = 75;
@@ -257,7 +258,7 @@ function draw() {
 }
 
 function startGame() {
-  const interval = setInterval(draw, 10);
+  interval = setInterval(draw, 10);
 }
 
 document.getElementById("runButton").addEventListener("click", function () {
@@ -267,7 +268,8 @@ document.getElementById("runButton").addEventListener("click", function () {
 
 {{embedlivesample("compare_your_code", 600, 360)}}
 
-> **Note:** Try adding more points per brick hit, print out the number of collected points in the end game alert box.
+> [!NOTE]
+> Try adding more points per brick hit, print out the number of collected points in the end game alert box.
 
 ## Next steps
 

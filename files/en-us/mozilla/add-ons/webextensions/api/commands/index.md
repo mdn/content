@@ -36,9 +36,8 @@ Listen for the user executing commands that you have registered using the [`comm
 
 {{Compat}}
 
-> **Note:**
->
-> This API is based on Chromium's [`chrome.commands`](https://developer.chrome.com/docs/extensions/reference/commands/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.commands`](https://developer.chrome.com/docs/extensions/reference/api/commands) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

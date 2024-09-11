@@ -18,7 +18,7 @@ Values of this type are strings. Possible values are:
 - "disabled"
   - : Disables all zooming in the tab. The tab will revert to the default zoom level, and all attempted zoom changes will be ignored.
 - "manual"
-  - : The extension will handle zoom changes itself, by listening for the {{WebExtAPIRef("tabs.onZoomChange")}} event and scaling the page accordingly. This mode does not support `per-origin` zooming: it will ignore the `scope` {{WebExtAPIRef("tabs.zoomSettings", "zoom setting")}} and always use `per-tab`.
+  - : The extension will handle zoom changes itself, by listening for the {{WebExtAPIRef("tabs.onZoomChange")}} event and scaling the page accordingly. This mode does not support `per-origin` zooming: it will ignore the `scope` [zoom setting](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/tabs/ZoomSettings) and always use `per-tab`.
 
 ## Browser compatibility
 
@@ -26,7 +26,8 @@ Values of this type are strings. Possible values are:
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#type-ZoomSettingsMode) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#type-ZoomSettingsMode) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

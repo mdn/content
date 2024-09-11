@@ -10,7 +10,7 @@ Developing and publishing your game is not enough. You have to let the world kno
 
 ## Competitions
 
-Taking part in [competitions](https://www.bestsevenreviews.com/category/online-games/) will not only level up your gamedev skills and let you meet new devs to befriend and learn from — and it will also get you involved in the community. If you make a good game for a competition and win some prizes in the process your game will automatically be promoted by the organizers and other attendees. You'll be rich and famous, or so they say.
+Taking part in competitions will not only level up your gamedev skills and let you meet new devs to befriend and learn from — and it will also get you involved in the community. If you make a good game for a competition and win some prizes in the process your game will automatically be promoted by the organizers and other attendees. You'll be rich and famous, or so they say.
 
 Many great games get started as a quick, sloppy demo submitted to a competition. If both the idea and the execution are good enough, you will succeed. Plus competitions generally require games to follow a mandatory theme, so you can get creative around a theme if you are stuck for ideas.
 
@@ -20,7 +20,7 @@ You should definitely create your own website containing all the information abo
 
 You should also blog about everything related to your gamedev activities. Write about your development process, nasty bugs you encounter, funny stories, lessons learned, and the ups and downs of being a game developer. Continually publishing information about your games will help educate others, increase your reputation in the community, and further improve SEO. A further option is to publish [monthly reports](https://end3r.com/blog/?s=monthly+report) that summarize all your progress — it helps you see what you've accomplished throughout the month and what's still left to do, and it keeps reminding people that your game is coming out soon — building buzz is always good.
 
-While you can create your website from scratch, there are also tools that can help make the process easier. [ManaKeep](https://manakeep.com) is a website builder made for indie game developers and provides a great starting point to create your website. [Presskit()](https://dopresskit.com/) is a press kit builder that helps you create a press page to share with the media.
+While you can create your website from scratch, there are also tools that can help make the process easier. [ManaKeep](https://manakeep.com/) is a website builder made for indie game developers and provides a great starting point to create your website. [Presskit()](https://dopresskit.com/) is a press kit builder that helps you create a press page to share with the media.
 
 ## Social media
 

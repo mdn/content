@@ -2,7 +2,7 @@
 title: TRACE
 slug: Web/HTTP/Methods/TRACE
 page-type: http-method
-browser-compat: http.methods.TRACE
+spec-urls: https://www.rfc-editor.org/rfc/rfc9110#TRACE
 ---
 
 {{HTTPSidebar}}
@@ -36,7 +36,7 @@ Note that the client must not send content in the request, or generate fields th
       <td>No</td>
     </tr>
     <tr>
-      <th scope="row">Allowed in HTML forms</th>
+      <th scope="row">Allowed in <a href="/en-US/docs/Learn/Forms">HTML forms</a></th>
       <td>No</td>
     </tr>
   </tbody>
@@ -51,10 +51,6 @@ TRACE /index.html
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

@@ -12,11 +12,13 @@ browser-compat: api.VREyeParameters
 
 The **`VREyeParameters`** interface of the [WebVR API](/en-US/docs/Web/API/WebVR_API) represents all the information required to correctly render a scene for a given eye, including field of view information.
 
-> **Note:** This interface was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
+> [!NOTE]
+> This interface was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
 This interface is accessible through the {{domxref("VRDisplay.getEyeParameters()")}} method.
 
-> **Warning:** The values in this interface should not be used to compute view or projection matrices. In order to ensure the widest possible hardware compatibility use the matrices provided by {{domxref("VRFrameData")}}.
+> [!WARNING]
+> The values in this interface should not be used to compute view or projection matrices. In order to ensure the widest possible hardware compatibility use the matrices provided by {{domxref("VRFrameData")}}.
 
 ## Instance properties
 
@@ -24,6 +26,10 @@ This interface is accessible through the {{domxref("VRDisplay.getEyeParameters()
   - : Represents the offset from the center point between the user's eyes to the center of the eye, measured in meters.
 - {{domxref("VREyeParameters.fieldOfView")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : Describes the current field of view for the eye, which can vary as the user adjusts their interpupillary distance (IPD).
+- {{domxref("VREyeParameters.maximumFieldOfView")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
+  - : Describes the maximum supported field of view for the current eye.
+- {{domxref("VREyeParameters.minimumFieldOfView")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
+  - : Describes the minimum supported field of view for the current eye.
 - {{domxref("VREyeParameters.renderWidth")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : Describes the recommended render target width of each eye viewport, in pixels.
 - {{domxref("VREyeParameters.renderHeight")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}

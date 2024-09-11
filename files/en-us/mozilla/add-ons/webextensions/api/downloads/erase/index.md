@@ -13,7 +13,8 @@ To remove the files from disk, you need to use {{WebExtAPIRef("downloads.removeF
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-> **Note:** If you want to remove a downloaded file from disk _and_ erase it from history, you have to call {{WebExtAPIRef("downloads.removeFile()")}} before you call `erase()`. If you try it the other way around you'll get an error when calling {{WebExtAPIRef("downloads.removeFile()")}}, because it no longer exists according to the browser.
+> [!NOTE]
+> If you want to remove a downloaded file from disk _and_ erase it from history, you have to call {{WebExtAPIRef("downloads.removeFile()")}} before you call `erase()`. If you try it the other way around you'll get an error when calling {{WebExtAPIRef("downloads.removeFile()")}}, because it no longer exists according to the browser.
 
 ## Syntax
 
@@ -74,7 +75,8 @@ erasing.then(onErased, onError);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#method-erase) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#method-erase) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

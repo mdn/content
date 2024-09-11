@@ -17,7 +17,7 @@ For example, a client might be asking a server if it would allow a {{HTTPMethod(
 ```http
 OPTIONS /resource/foo
 Access-Control-Request-Method: DELETE
-Access-Control-Request-Headers: Origin, X-Requested-With
+Access-Control-Request-Headers: x-requested-with
 Origin: https://foo.bar.org
 ```
 
@@ -28,7 +28,7 @@ HTTP/1.1 204 No Content
 Connection: keep-alive
 Access-Control-Allow-Origin: https://foo.bar.org
 Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE
-Access-Control-Allow-Headers: Origin, X-Requested-With
+Access-Control-Allow-Headers: X-Requested-With
 Access-Control-Max-Age: 86400
 ```
 
@@ -36,5 +36,6 @@ The preflight response can be optionally cached for the requests created in the 
 
 ## See also
 
-- {{Glossary("CORS")}}
+- Related glossary terms:
+  - {{Glossary("CORS")}}
 - {{HTTPMethod("OPTIONS")}}

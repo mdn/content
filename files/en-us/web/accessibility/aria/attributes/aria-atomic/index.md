@@ -5,6 +5,8 @@ page-type: aria-attribute
 spec-urls: https://w3c.github.io/aria/#aria-atomic
 ---
 
+{{AccessibilitySidebar}}
+
 In ARIA live regions, the global `aria-atomic` attribute indicates whether assistive technologies such as a screen reader will present all, or only parts of, the changed region based on the change notifications defined by the [`aria-relevant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) attribute.
 
 ## Description
@@ -33,11 +35,3 @@ Used in **ALL** [roles](/en-US/docs/Web/Accessibility/ARIA/Roles).
 ## See also
 
 - [Event.ariaAtomic](/en-US/docs/Web/API/Element/ariaAtomic)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA states and properties**](/en-US/docs/Web/Accessibility/ARIA/Attributes)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
-
-</section>
