@@ -266,7 +266,7 @@ In this example, we have a {{htmlelement("fieldset")}} with four radio buttons. 
 <output>I change colors</output>
 ```
 
-JavaScript updates the value of the CSS `--theme` variable on the {{htmlelement("body")}} element, which is an ancestor of the {{htmlelement("fieldset")}} and {{htmlelement("output")}} elements, whenever a radio button is selected. When the text `<input>` is updated, the {{domxref("HTMLInputElement.value", "value")}} of the `other` radio button is updated only if the `other` radio button is {{domxref("HTMLInputElement.checked", "checked")}}, which in turn updates the value of `--theme`.
+JavaScript updates the value of the CSS `--theme` variable on the {{htmlelement("body")}} element, which is an ancestor of the {{htmlelement("fieldset")}} and {{htmlelement("output")}} elements, whenever a radio button is selected. When the text `<input>` is updated, the {{domxref("HTMLInputElement.value", "value")}} of the `other` radio button is updated only if the `other` radio button is checked, which in turn updates the value of `--theme`.
 
 ```js
 const radios = document.querySelectorAll('input[name="selection"]');
