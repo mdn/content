@@ -1,5 +1,5 @@
 ---
-title: The event loop
+title: Concurrency model and Event loop
 slug: Web/JavaScript/Event_loop
 page-type: guide
 ---
