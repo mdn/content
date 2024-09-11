@@ -179,10 +179,6 @@ Some properties only apply to input element types that support the corresponding
 
   - : A string that represents the element's [`autocomplete`](/en-US/docs/Web/HTML/Element/input#autocomplete) attribute, indicating whether the value of the control can be automatically completed by the browser.
 
-- {{domxref("HTMLInputElement.capture", "capture")}}
-
-  - : A string that represents the element's [`capture`](/en-US/docs/Web/HTML/Element/input#capture) attribute, indicating the media capture input method in file upload controls.
-
 - {{domxref("HTMLInputElement.max", "max")}}
 
   - : A string that represents the element's [`max`](/en-US/docs/Web/HTML/Element/input#max) attribute, containing the maximum (numeric or date-time) value for this item, which must not be less than its minimum ([`min`](/en-US/docs/Web/HTML/Element/input#min) attribute) value.
