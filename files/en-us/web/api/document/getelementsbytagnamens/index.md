@@ -32,11 +32,6 @@ A live {{DOMxRef("HTMLCollection")}} (but see the note below) of
 found elements in the order they appear in the tree.
 
 > [!NOTE]
-> In DOM level 3 and earlier, the returned value is a {{DOMxRef("NodeList")}}, but this method has always returned a `HTMLCollection` in Firefox.
-> Older versions of Opera return a `NodeList`, but with a `namedItem` method implemented, which makes it similar to a `HTMLCollection`.
-> See [bug 14869](https://bugzil.la/14869) for details.
-
-> [!NOTE]
 > Currently parameters in this method are case-sensitive, but they were case-insensitive in Firefox 3.5 and before.
 > See the [developer release note for Firefox 3.6](/en-US/docs/Mozilla/Firefox/Releases/3.6#dom) and a note in Browser compatibility section in {{domxref("Element.getElementsByTagNameNS")}} for details.
 
