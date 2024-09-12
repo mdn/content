@@ -6,7 +6,8 @@ page-type: guide
 
 {{HTTPSidebar}}
 
-HTTP has a concept of _conditional requests_, where the result, and even the success of a request, can be changed by comparing the affected resources with the value of a _validator_. Such requests can be useful to validate the content of a cache, and sparing a useless control, to verify the integrity of a document, like when resuming a download, or when preventing lost updates when uploading or modifying a document on the server.
+HTTP has a concept of _conditional requests_, where the result, and even the success of a request, can be controlled by comparing the affected resources with a _validator_.
+These requests are useful for validating cached content, ensuring the integrity of a document when resuming a download, or preventing lost updates when uploading or modifying a document on the server.
 
 ## Principles
 
@@ -145,4 +146,4 @@ In both cases it's clear, conditional requests are a fundamental feature behind 
 
 - {{HTTPStatus("304", "304 Not Modified")}}
 - {{HTTPHeader("If-None-Match")}}
-- [Apache server `mod_deflate.c`](https://github.com/apache/httpd/blob/4348e8cb7d8c41b1c8019ceb0a1612bb4a3384f7/modules/filters/mod_deflate.c#L495-L500) source showing how ETags are transformed during compression
+- [Apache Server `mod_deflate.c`](https://github.com/apache/httpd/blob/4348e8cb7d8c41b1c8019ceb0a1612bb4a3384f7/modules/filters/mod_deflate.c#L495-L500) transforms ETags during compression
