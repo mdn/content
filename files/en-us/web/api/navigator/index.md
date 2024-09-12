@@ -169,7 +169,7 @@ _Doesn't inherit any method._
 - {{domxref("Navigator.requestMIDIAccess()")}} {{SecureContext_Inline}}
   - : Returns a {{jsxref('Promise')}} representing a request for access to MIDI devices on the user's system.
 - {{domxref("Navigator.runAdAuction()")}} {{SecureContext_Inline}} {{Experimental_Inline}}
-  - : Initiates an real-time auction on the seller/publisher site that determines which ad is to be shown in the associated ad space.
+  - : Initiates a real-time auction on the seller/publisher site that determines which ad is to be shown in the associated ad space.
 - {{domxref("Navigator.sendBeacon()")}}
   - : Used to asynchronously transfer a small amount of data using {{Glossary("HTTP")}} from the User Agent to a web server.
 - {{domxref("Navigator.setAppBadge()")}} {{SecureContext_Inline}}

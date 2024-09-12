@@ -27,7 +27,7 @@ joinAdInterestGroup(options)
 
 - `options`
 
-  - : An options object containing the following properties:
+  - : An options object that can contain the following properties:
 
     - `lifetimeMs`
 
