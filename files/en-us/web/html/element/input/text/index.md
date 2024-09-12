@@ -27,7 +27,7 @@ In addition to the attributes that operate on all {{HTMLElement("input")}} eleme
 
 ### autocorrect
 
-The [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes#autocorrect) global attribute is a string that indicates whether to activate automatic correction while the user is editing this field.
+The [`autocorrect`](/en-US/docs/Web/HTML/Global_attributes/autocorrect) global attribute is a string that indicates whether to activate automatic correction while the user is editing this field.
 Permitted values are:
 
 - `on`
