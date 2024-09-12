@@ -18,6 +18,10 @@ when the `requestPayerEmail` option is set to `true` in the
 
 A string.
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

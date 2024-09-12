@@ -18,6 +18,10 @@ option is only present when the `requestPayerName` option is set to
 
 A string containing the payer name.
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}
