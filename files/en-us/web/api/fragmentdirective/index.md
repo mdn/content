@@ -25,7 +25,7 @@ None.
 
 ### Checking if text fragments are supported
 
-The code below logs whether or not text fragments are supported by checking that {{domxref("Document.fragmentDirective")}} is defined.
+The code below logs whether or not text fragments are supported in your browser by checking that {{domxref("Document.fragmentDirective")}} is defined.
 Note that the object is empty, and at present is mainly intended for feature detection.
 In the future, it might include other information.
 
@@ -48,9 +48,9 @@ function log(text) {
 
 ```js
 if (document.fragmentDirective) {
-  log("Text fragments are supported");
+  log("Your browser supports text fragments.");
 } else {
-  log("Text fragments are not supported");
+  log("Text fragments are not supported in your browser.");
 }
 ```
 
