@@ -104,10 +104,6 @@ The {{HTMLElement("input/color", "color")}} type can show predefined colors in a
 
 {{EmbedLiveSample("Color_type", 600, 70)}}
 
-### Password type
-
-The specification allows linking `<datalist>` with a {{HTMLElement("input/password", "password")}} type, but no browser supports it for security reasons.
-
 ## Technical summary
 
 <table class="properties">
