@@ -64,7 +64,7 @@ HEAD <request-target>["?"<query>] HTTP/1.1
 
 ### Successfully retrieving resource metadata
 
-The following curl command creates a `HEAD` request for `example.com`:
+The following `curl` command creates a `HEAD` request for `example.com`:
 
 ```bash
 curl --head example.com
