@@ -119,6 +119,10 @@ response.addEventListener("payerdetailchange", async (ev) => {
 });
 ```
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}
