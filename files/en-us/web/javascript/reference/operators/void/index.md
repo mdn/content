@@ -76,7 +76,7 @@ This is a bit longer than wrapping the function expression in parentheses, which
 
 Note that this trick only applies to immediately-invoked functions defined with the `function` keyword. Attempting to use the `void` operator to avoid parentheses for an arrow function results in a syntax error.
 
-```js
+```js example-bad
 void () => { console.log('iife!'); }(); // SyntaxError: Malformed arrow function parameter list
 ```
 
