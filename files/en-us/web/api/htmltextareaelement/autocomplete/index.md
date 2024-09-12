@@ -12,7 +12,7 @@ The **`autocomplete`** property of the {{DOMxRef("HTMLTextAreaElement")}} interf
 
 ## Value
 
-A string; the value of the `autocomplete` attribute (`"on"`, `"off"`, or a [`<token-list>`](/en-US/docs/Web/HTML/Attributes/autocomplete#token_list_tokens)) or the empty string `""` if unspecified.
+A string representing the value of the `autocomplete` attribute (`"on"`, `"off"`, or a [`<token-list>`](/en-US/docs/Web/HTML/Attributes/autocomplete#token_list_tokens)) or the empty string (`""`) if unspecified.
 
 ## Examples
 
