@@ -19,11 +19,11 @@ These icons uniquely identify your web app in different contexts, such as in an 
     "src": "icon/basic-icon.png"
   }
 
-/* Single icon with the multiple purposes */
+/* Single icon with multiple purposes */
 "icons":
   {
     "src": "icon/basic-icon.png",
-    "purpose": "maskable any"
+    "purpose": "monochrome maskable any"
   }
 
 /* Two icons with various properties */
