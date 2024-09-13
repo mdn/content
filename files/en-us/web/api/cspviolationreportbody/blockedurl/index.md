@@ -8,11 +8,11 @@ browser-compat: api.CSPViolationReportBody.blockedURL
 
 {{APIRef("Reporting API")}}
 
-The **`blockedURL`** read-only property of the {{domxref("CSPViolationReportBody")}} interface represent the URL of the resource that was blocked because it violates a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP).
+The **`blockedURL`** read-only property of the {{domxref("CSPViolationReportBody")}} interface represent the URL of a resource that was blocked because it violates a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP).
 
 ## Value
 
-An string containing the blocked URL.
+An string containing the URL of the blocked resource.
 
 ## Examples
 

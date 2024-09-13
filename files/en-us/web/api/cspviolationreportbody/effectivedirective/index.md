@@ -8,7 +8,7 @@ browser-compat: api.CSPViolationReportBody.effectiveDirective
 
 {{APIRef("Reporting API")}}
 
-The **`effectiveDirective`** read-only property of the {{domxref("CSPViolationReportBody")}} interface is a string that represents effective [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) directive that was violated.
+The **`effectiveDirective`** read-only property of the {{domxref("CSPViolationReportBody")}} interface is a string that represents the effective [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) directive that was violated.
 
 Note that this contains the specific directive that was effectively violated, such as `script-src-elem`, and not the policy that was specified, which may have been the (more general) `default-src`.
 
