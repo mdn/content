@@ -12,8 +12,10 @@ The **`sourceFile`** read-only property of the {{domxref("CSPViolationReportBody
 
 For a violation triggered by the use of an inline script, `sourceFile` is the URL of the current document.
 Similarly, if a document successfully loads a script that then violates the document CSP, the `sourceFile` is the URL of the script.
+
 Note however that if a document with a CSP that blocks external resources attempts to load an external resource, `sourceFile` will be `null`.
-This is because the browser extracts the value from _the global object_ of the file that triggered the violation: in this case the external resource is never loaded and therefore has no corresponding global object.
+This is because the browser extracts the value from _the global object_ of the file that triggered the violation.
+Because of the CSP restriction the external resource is never loaded, and therefore has no corresponding global object.
 
 This property is most useful alongside {{domxref("CSPViolationReportBody.lineNumber")}} and {{domxref("CSPViolationReportBody.columnNumber")}}, which provide the location within the file that resulted in a violation.
 
@@ -92,7 +94,8 @@ lineNumber: 17
 columnNumber: 0
 ```
 
-The result is the same for Firefox (except that it correctly reports the columnNumber).
+Note that the column number is (incorrectly) set to `0`.
+The result is similar for Firefox, which correctly reports the `columnNumber`.
 
 ```plain
 sourceFile: http://127.0.0.1:9999/inline/
