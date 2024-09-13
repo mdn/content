@@ -19,7 +19,6 @@ These icons uniquely identify your web app in different contexts, such as in an 
     "src": "icon/basic-icon.png"
   }
 
-
 /* Single icon with the multiple purposes */
 "icons":
   {
