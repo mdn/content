@@ -23,8 +23,7 @@ An {{domxref("XRRigidTransform")}} which provides the position and orientation o
 
 ## Examples
 
-This handler for the {{domxref("XRSession")}} event {{domxref("XRSession.select_event",
-  "select")}} handles events for tracked pointers. It determines the targeted object by
+This handler for the {{domxref("XRSession")}} event {{domxref("XRSession.select_event", "select")}} handles events for tracked pointers. It determines the targeted object by
 passing the event frame's pose into a function called `findTargetUsingRay()`,
 then dispatches the event differently depending on the user's handedness; this is done
 by comparing the value of the {{domxref("XRInputSource")}} property

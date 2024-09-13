@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Date.toUTCString
 
 The **`toUTCString()`** method of {{jsxref("Date")}} instances returns a string representing this date in the [RFC 7231](https://datatracker.ietf.org/doc/html/rfc7231#section-7.1.1.1) format, with negative years allowed. The timezone is always UTC. `toGMTString()` is an alias of this method.
 
-{{EmbedInteractiveExample("pages/js/date-toutcstring.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/date-toutcstring.html", "shorter")}}
 
 ## Syntax
 
@@ -17,13 +17,17 @@ The **`toUTCString()`** method of {{jsxref("Date")}} instances returns a string 
 toUTCString()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A string representing the given date using the UTC time zone (see description for the format). Returns `"Invalid Date"` if the date is [invalid](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).
 
 ## Description
 
-The value returned by `toUTCString()` is a string in the form `Www, dd Mmm yyyy hh:mm:ss GMT`, where:
+The value returned by `toUTCString()` is a string in the form `Www, dd Mmm yyyy HH:mm:ss GMT`, where:
 
 | Format String | Description                                                  |
 | ------------- | ------------------------------------------------------------ |
@@ -31,7 +35,7 @@ The value returned by `toUTCString()` is a string in the form `Www, dd Mmm yyyy 
 | `dd`          | Day of month, as two digits with leading zero if required    |
 | `Mmm`         | Month, as three letters (e.g. `Jan`, `Feb`)                  |
 | `yyyy`        | Year, as four or more digits with leading zeroes if required |
-| `hh`          | Hour, as two digits with leading zero if required            |
+| `HH`          | Hour, as two digits with leading zero if required            |
 | `mm`          | Minute, as two digits with leading zero if required          |
 | `ss`          | Seconds, as two digits with leading zero if required         |
 

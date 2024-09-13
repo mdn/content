@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.StorageManager.estimate
 ---
 
-{{securecontext_header}}{{APIRef("Storage")}}
+{{securecontext_header}}{{APIRef("Storage")}} {{AvailableInWorkers}}
 
 The **`estimate()`** method of the {{domxref("StorageManager")}} interface asks the Storage Manager for how much storage the current [origin](/en-US/docs/Glossary/Same-origin_policy) takes up (`usage`), and how much space is available (`quota`).
 
@@ -33,13 +33,19 @@ A {{jsxref('Promise')}} that resolves to an object with the following properties
 - `usageDetails` {{Non-standard_Inline}}
   - : An object containing a breakdown of `usage` by storage system. All included properties will have a `usage` greater than 0 and any storage system with 0 `usage` will be excluded from the object.
 
-> **Note:** The returned values are not exact: between compression, deduplication, and obfuscation for security reasons, they will be imprecise.
+> [!NOTE]
+> The returned values are not exact: between compression, deduplication, and obfuscation for security reasons, they will be imprecise.
 
 You may find that the `quota` varies from origin to origin. This variance is based on factors such as:
 
 - How often the user visits
 - Public site popularity data
 - User engagement signals like bookmarking, adding to homescreen, or accepting push notifications
+
+### Exceptions
+
+- `TypeError`
+  - : Thrown if obtaining a local storage shelf failed. For example, if the current origin is an opaque origin or if the user has disabled storage.
 
 ## Examples
 
@@ -50,7 +56,7 @@ In this example, we obtain the usage estimates and present the percentage of sto
 ```html
 <label>
   You're currently using about <output id="percent"> </output>% of your
-  available storage.
+  estimated storage quota (<output id="quota"></output>).
 </label>
 ```
 
@@ -62,6 +68,8 @@ navigator.storage.estimate().then((estimate) => {
     (estimate.usage / estimate.quota) *
     100
   ).toFixed(2);
+  document.getElementById("quota").value =
+    (estimate.quota / 1024 / 1024).toFixed(2) + "MB";
 });
 ```
 
@@ -79,7 +87,7 @@ navigator.storage.estimate().then((estimate) => {
 
 ## See also
 
-- Storage API
+- [Storage API](/en-US/docs/Web/API/Storage_API)
 - {{domxref("Storage")}}, the object returned by {{domxref("Window.localStorage")}}
 - {{domxref("StorageManager")}}
 - {{domxref("navigator.storage")}}

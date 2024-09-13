@@ -33,7 +33,8 @@ The possible values of the `channelCountMode` enumerated value, and their meanin
 
     The following AudioNode children default to this value: {{domxref("AudioDestinationNode")}}, {{domxref("AnalyserNode")}}, {{domxref("ChannelSplitterNode")}}, {{domxref("ChannelMergerNode")}}
 
-> **Note:** In older versions of the spec, the default for a {{domxref("ChannelSplitterNode")}} was `max`.
+> [!NOTE]
+> In older versions of the spec, the default for a {{domxref("ChannelSplitterNode")}} was `max`.
 
 ## Examples
 

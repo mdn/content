@@ -43,7 +43,7 @@ blendEquation(mode)
     - `gl.MIN`: Minimum of source and destination
     - `gl.MAX`: Maximum of source and destination
 
-### Exception
+### Exceptions
 
 If _mode_ is not one of the three possible values, a
 `gl.INVALID_ENUM` error is thrown.

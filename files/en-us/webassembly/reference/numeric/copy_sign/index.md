@@ -1,6 +1,7 @@
 ---
 title: Copy sign
 slug: WebAssembly/Reference/Numeric/Copy_sign
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

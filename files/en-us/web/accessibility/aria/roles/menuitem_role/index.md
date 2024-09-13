@@ -4,8 +4,10 @@ slug: Web/Accessibility/ARIA/Roles/menuitem_role
 page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#menuitem
-  - https://w3c.github.io/aria-practices/#menu
+  - https://www.w3.org/WAI/ARIA/apg/patterns/menubar/examples/menubar-navigation/
 ---
+
+{{AccessibilitySidebar}}
 
 The `menuitem` role indicates the element is an option in a set of choices contained by a `menu` or `menubar`.
 
@@ -76,7 +78,7 @@ When items in a `menubar` are arranged vertically and items in menu containers a
   </button>
   <ul id="menu" role="menu" aria-labelledby="menubutton">
     <li role="presentation">
-      <a role="menuitem" href="#description"> Description </a>
+      <a role="menuitem" href="#description">Description</a>
     </li>
     <li role="presentation">
       <a
@@ -91,13 +93,13 @@ When items in a `menubar` are arranged vertically and items in menu containers a
       </a>
     </li>
     <li role="presentation">
-      <a role="menuitem" href="#examples"> Examples </a>
+      <a role="menuitem" href="#examples">Examples</a>
     </li>
     <li role="presentation">
-      <a role="menuitem" href="#specifications"> Specifications </a>
+      <a role="menuitem" href="#specifications">Specifications</a>
     </li>
     <li role="presentation">
-      <a role="menuitem" href="#see_also"> See Also </a>
+      <a role="menuitem" href="#see_also">See Also</a>
     </li>
   </ul>
 </div>
@@ -107,17 +109,9 @@ When items in a `menubar` are arranged vertically and items in menu containers a
 
 {{Specifications}}
 
-## See Also
+## See also
 
 - [`menuitemcheckbox` role](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role)
 - [`menuitemradio` role](/en-US/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
 - [`listitem` role](/en-US/docs/Web/Accessibility/ARIA/Roles/listitem_role)
 - [`option` role](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
-
-</section>

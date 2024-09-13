@@ -19,6 +19,8 @@ If the writing mode is vertically oriented, the value of `max-inline-size` relat
 /* <length> values */
 max-inline-size: 300px;
 max-inline-size: 25em;
+max-inline-size: anchor-size(width);
+max-inline-size: anchor-size(--myAnchor self-block, 200px);
 
 /* <percentage> values */
 max-inline-size: 75%;
@@ -27,6 +29,7 @@ max-inline-size: 75%;
 max-inline-size: none;
 max-inline-size: max-content;
 max-inline-size: min-content;
+max-inline-size: fit-content;
 max-inline-size: fit-content(20em);
 
 /* Global values */

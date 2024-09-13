@@ -6,7 +6,7 @@ page-type: guide
 
 {{CSSRef}}
 
-The properties defined in the **CSS multi-column layout module** extend the _block layout mode_ , enabling the easy definition of multiple columns of text. People have trouble reading text if lines are too long. If it takes too long for the eyes to move from the end of one line to the beginning of the next, readers can lose track of which line they were on. To provide for a better user experience when reading text making use of a large screen, you should limit the width of text by using columns of text placed side by side, just as newspapers do.
+The properties defined in the **CSS multi-column layout module** extend the _block layout mode_, enabling the easy definition of multiple columns of text. People have trouble reading text if lines are too long. If it takes too long for the eyes to move from the end of one line to the beginning of the next, readers can lose track of which line they were on. To provide for a better user experience when reading text making use of a large screen, you should limit the width of text by using columns of text placed side by side, just as newspapers do.
 
 ## Using columns
 
@@ -217,4 +217,4 @@ There is a gap between columns. The recommended default is `1em`. This size can 
 
 ## Conclusion
 
-CSS columns are a layout primitive that can help make large blocks of text easier to read when responsive content is viewed on wide viewports. Imaginative developers may find many uses for them, especially in conjunction with [container queries](/en-US/docs/Web/CSS/CSS_container_queries) and with the automatic height balancing feature.
+CSS columns are a layout primitive that can help make large blocks of text easier to read when responsive content is viewed on wide viewports. Imaginative developers may find many uses for them, especially in conjunction with [container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries) and with the automatic height balancing feature.

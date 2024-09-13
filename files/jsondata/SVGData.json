@@ -12,7 +12,6 @@
           "gradientElements",
           "&lt;a&gt;",
           "&lt;clipPath&gt;",
-          "&lt;color-profile&gt;",
           "&lt;cursor&gt;",
           "&lt;filter&gt;",
           "&lt;font&gt;",
@@ -162,22 +161,6 @@
       ],
       "interfaces": ["SVGClipPathElement"]
     },
-    "color-profile": {
-      "categories": ["noCategory"],
-      "content": {
-        "description": "anyNumberOfElementsAnyOrder",
-        "elements": ["descriptiveElements"]
-      },
-      "attributes": [
-        "coreAttributes",
-        "xLinkAttributes",
-        "'local'",
-        "'name'",
-        "'rendering-intent'",
-        "'xlink:href'"
-      ],
-      "interfaces": ["SVGColorProfileElement"]
-    },
     "cursor": {
       "categories": ["noCategory"],
       "content": {
@@ -207,7 +190,6 @@
           "gradientElements",
           "&lt;a&gt;",
           "&lt;clipPath&gt;",
-          "&lt;color-profile&gt;",
           "&lt;cursor&gt;",
           "&lt;filter&gt;",
           "&lt;font&gt;",
@@ -702,7 +684,6 @@
         "'y'",
         "'width'",
         "'height'",
-        "'filterRes'",
         "'filterUnits'",
         "'primitiveUnits'",
         "'xlink:href'"
@@ -854,7 +835,6 @@
           "gradientElements",
           "&lt;a&gt;",
           "&lt;clipPath&gt;",
-          "&lt;color-profile&gt;",
           "&lt;cursor&gt;",
           "&lt;filter&gt;",
           "&lt;font&gt;",
@@ -895,7 +875,6 @@
           "gradientElements",
           "&lt;a&gt;",
           "&lt;clipPath&gt;",
-          "&lt;color-profile&gt;",
           "&lt;cursor&gt;",
           "&lt;filter&gt;",
           "&lt;font&gt;",
@@ -950,55 +929,6 @@
         "'xlink:href'"
       ],
       "interfaces": ["SVGGlyphRefElement"]
-    },
-    "hatch": {
-      "categories": ["neverRenderedElement", "paintServerElement"],
-      "content": {
-        "description": "anyNumberOfElementsAnyOrder",
-        "elements": [
-          "animationElements",
-          "descriptiveElements",
-          "&lt;hatchpath&gt;",
-          "&lt;script&gt;",
-          "&lt;style&gt;"
-        ]
-      },
-      "attributes": [
-        "coreAttributes",
-        "globalEventAttributes",
-        "presentationAttributes",
-        "styleAttributes",
-        "'x'",
-        "'y'",
-        "'pitch'",
-        "'rotate'",
-        "'hatchUnits'",
-        "'hatchContentUnits'",
-        "'transform'",
-        "'href'"
-      ],
-      "interfaces": ["SVGHatchElement"]
-    },
-    "hatchpath": {
-      "categories": ["noCategory"],
-      "content": {
-        "description": "anyNumberOfElementsAnyOrder",
-        "elements": [
-          "animationElements",
-          "descriptiveElements",
-          "&lt;script&gt;",
-          "&lt;style&gt;"
-        ]
-      },
-      "attributes": [
-        "coreAttributes",
-        "globalEventAttributes",
-        "presentationAttributes",
-        "styleAttributes",
-        "'d'",
-        "'offset'"
-      ],
-      "interfaces": ["SVGHatchpathElement"]
     },
     "hkern": {
       "categories": ["fontElement"],
@@ -1097,7 +1027,6 @@
           "gradientElements",
           "&lt;a&gt;",
           "&lt;clipPath&gt;",
-          "&lt;color-profile&gt;",
           "&lt;cursor&gt;",
           "&lt;filter&gt;",
           "&lt;font&gt;",
@@ -1144,7 +1073,6 @@
           "gradientElements",
           "&lt;a&gt;",
           "&lt;clipPath&gt;",
-          "&lt;color-profile&gt;",
           "&lt;cursor&gt;",
           "&lt;filter&gt;",
           "&lt;font&gt;",
@@ -1197,7 +1125,6 @@
           "gradientElements",
           "&lt;a&gt;",
           "&lt;clipPath&gt;",
-          "&lt;color-profile&gt;",
           "&lt;cursor&gt;",
           "&lt;filter&gt;",
           "&lt;font&gt;",
@@ -1273,7 +1200,6 @@
           "gradientElements",
           "&lt;a&gt;",
           "&lt;clipPath&gt;",
-          "&lt;color-profile&gt;",
           "&lt;cursor&gt;",
           "&lt;filter&gt;",
           "&lt;font&gt;",
@@ -1473,7 +1399,6 @@
           "gradientElements",
           "&lt;a&gt;",
           "&lt;clipPath&gt;",
-          "&lt;color-profile&gt;",
           "&lt;cursor&gt;",
           "&lt;filter&gt;",
           "&lt;font&gt;",
@@ -1506,8 +1431,6 @@
         "'width'",
         "'height'",
         "'preserveAspectRatio'",
-        "'contentScriptType'",
-        "'contentStyleType'",
         "'viewBox'"
       ],
       "interfaces": ["SVGSVGElement"]
@@ -1555,7 +1478,6 @@
           "gradientElements",
           "&lt;a&gt;",
           "&lt;clipPath&gt;",
-          "&lt;color-profile&gt;",
           "&lt;cursor&gt;",
           "&lt;filter&gt;",
           "&lt;font&gt;",
@@ -1741,8 +1663,7 @@
         "'externalResourcesRequired'",
         "'viewBox'",
         "'preserveAspectRatio'",
-        "'zoomAndPan'",
-        "'viewTarget'"
+        "'zoomAndPan'"
       ],
       "interfaces": ["SVGViewElement"]
     },

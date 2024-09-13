@@ -6,13 +6,11 @@ page-type: web-api-instance-method
 browser-compat: api.Headers.values
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}} {{AvailableInWorkers}}
 
 The **`Headers.values()`** method returns an
 {{jsxref("Iteration_protocols",'iterator')}} allowing to go through all values contained
 in this object. The values are {{jsxref("String")}} objects.
-
-> **Note:** This method is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 
 ## Syntax
 
@@ -44,7 +42,7 @@ for (const value of myHeaders.values()) {
 
 The result is:
 
-```
+```plain
 text/xml
 Accept-Language
 ```

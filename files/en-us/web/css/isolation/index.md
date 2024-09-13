@@ -74,13 +74,13 @@ The `isolation` property is specified as one of the keyword values listed below.
 }
 
 .big-square {
-  background-color: rgb(0, 255, 0);
+  background-color: rgb(0 255 0);
   width: 200px;
   height: 210px;
 }
 
 .small-square {
-  background-color: rgb(0, 255, 0);
+  background-color: rgb(0 255 0);
   width: 100px;
   height: 100px;
   border: 1px solid black;

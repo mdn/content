@@ -4,7 +4,7 @@ slug: Web/API/WebGL_API/By_example/Hello_vertex_attributes
 page-type: guide
 ---
 
-{{PreviousNext("Learn/WebGL/By_example/Hello_GLSL","Learn/WebGL/By_example/Textures_from_code")}}
+{{DefaultAPISidebar("WebGL")}}{{PreviousNext("Learn/WebGL/By_example/Hello_GLSL","Learn/WebGL/By_example/Textures_from_code")}}
 
 This WebGL example demonstrates how to combine shader programming and user interaction by sending user input to the shader using vertex attributes.
 
@@ -102,9 +102,8 @@ function setupWebGL(evt) {
   if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
     const linkErrLog = gl.getProgramInfoLog(program);
     cleanup();
-    document.querySelector(
-      "p",
-    ).textContent = `Shader program did not link successfully. Error log: ${linkErrLog}`;
+    document.querySelector("p").textContent =
+      `Shader program did not link successfully. Error log: ${linkErrLog}`;
     return;
   }
 

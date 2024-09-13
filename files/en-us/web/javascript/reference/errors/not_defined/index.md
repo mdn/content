@@ -11,7 +11,7 @@ non-existent variable referenced somewhere.
 
 ## Message
 
-```
+```plain
 ReferenceError: "x" is not defined (V8-based & Firefox)
 ReferenceError: Can't find variable: x (Safari)
 ```
@@ -25,7 +25,8 @@ ReferenceError: Can't find variable: x (Safari)
 There is a non-existent variable referenced somewhere. This variable needs to be
 declared, or you need to make sure it is available in your current script or [scope](/en-US/docs/Glossary/Scope).
 
-> **Note:** When loading a library (such as jQuery), make sure it is
+> [!NOTE]
+> When loading a library (such as jQuery), make sure it is
 > loaded before you access library variables, such as "$". Put the
 > {{HTMLElement("script")}} element that loads the library before your code that uses
 > it.

@@ -7,9 +7,9 @@ browser-compat: api.DataTransfer
 
 {{APIRef("HTML Drag and Drop API")}}
 
-The **`DataTransfer`** object is used to hold the data that is being dragged during a drag and drop operation. It may hold one or more data items, each of one or more data types. For more information about drag and drop, see [HTML Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API).
+The **`DataTransfer`** object is used to hold any data transferred between contexts, such as a drag and drop operation, or clipboard read/write. It may hold one or more data items, each of one or more data types.
 
-This object is available from the {{domxref("DragEvent.dataTransfer","dataTransfer")}} property of all {{domxref("DragEvent","drag events")}}.
+`DataTransfer` was primarily designed for the [HTML Drag and Drop API](/en-US/docs/Web/API/HTML_Drag_and_Drop_API), as the {{domxref("DragEvent.dataTransfer")}} property, and is still specified in the HTML drag-and-drop section, but it is now also used by other APIs, such as {{domxref("ClipboardEvent.clipboardData")}} and {{domxref("InputEvent.dataTransfer")}}. However, other APIs only use certain parts of its interface, ignoring properties such as `dropEffect`. Documentation of `DataTransfer` will primarily discuss its usage in drag-and-drop operations, and you should refer to the other APIs' documentation for usage of `DataTransfer` in those contexts.
 
 ## Constructor
 
@@ -18,27 +18,21 @@ This object is available from the {{domxref("DragEvent.dataTransfer","dataTransf
 
 ## Instance properties
 
-### Standard properties
-
 - {{domxref("DataTransfer.dropEffect")}}
   - : Gets the type of drag-and-drop operation currently selected or sets the operation to a new type. The value must be `none`, `copy`, `link` or `move`.
 - {{domxref("DataTransfer.effectAllowed")}}
   - : Provides all of the types of operations that are possible. Must be one of `none`, `copy`, `copyLink`, `copyMove`, `link`, `linkMove`, `move`, `all` or `uninitialized`.
-- {{domxref("DataTransfer.files")}}
+- {{domxref("DataTransfer.files")}} {{ReadOnlyInline}}
   - : Contains a list of all the local files available on the data transfer. If the drag operation doesn't involve dragging files, this property is an empty list.
 - {{domxref("DataTransfer.items")}} {{ReadOnlyInline}}
   - : Gives a {{domxref("DataTransferItemList")}} object which is a list of all of the drag data.
 - {{domxref("DataTransfer.types")}} {{ReadOnlyInline}}
   - : An array of strings giving the formats that were set in the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event.
 
-### Gecko properties
-
-{{SeeCompatTable}}
-
 ## Instance methods
 
-### Standard methods
-
+- {{domxref("DataTransfer.addElement()")}} {{experimental_inline}} {{non-standard_inline}}
+  - : Sets the drag source for the given element. This will be the element on which {{domxref("HTMLElement/drag_event", "drag")}} and {{domxref("HTMLElement/dragend_event", "dragend")}} events are fired, and not the default target (the node that was dragged). Firefox-specific.
 - {{domxref("DataTransfer.clearData()")}}
   - : Remove the data associated with a given type. The type argument is optional. If the type is empty or not specified, the data associated with all types is removed. If data for the specified type does not exist, or the data transfer contains no data, this method will have no effect.
 - {{domxref("DataTransfer.getData()")}}
@@ -47,10 +41,6 @@ This object is available from the {{domxref("DragEvent.dataTransfer","dataTransf
   - : Set the data for a given type. If data for the type does not exist, it is added at the end, such that the last item in the types list will be the new format. If data for the type already exists, the existing data is replaced in the same position.
 - {{domxref("DataTransfer.setDragImage()")}}
   - : Set the image to be used for dragging if a custom one is desired.
-
-### Gecko methods
-
-{{Non-standard_Header}}
 
 ## Examples
 

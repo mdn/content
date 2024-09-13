@@ -11,7 +11,7 @@ attempted to redefine a property, but that property is [non-configurable](/en-US
 
 ## Message
 
-```
+```plain
 TypeError: Cannot redefine property: "x" (V8-based)
 TypeError: can't redefine non-configurable property "x" (Firefox)
 TypeError: Attempting to change value of a readonly property. (Safari)

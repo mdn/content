@@ -5,11 +5,11 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.declarativeNetRequest.Redirect
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Details describing how a redirect should be performed, as the `redirect` property of a {{WebExtAPIRef("declarativeNetRequest.RuleAction", "RuleAction")}}. Only valid for redirect rules.
 
-> **Note:**
+> [!NOTE]
 > A redirect action does not redirect the request, and the request continues as usual when:
 >
 > - the action does not change the request.

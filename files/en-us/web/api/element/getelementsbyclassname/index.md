@@ -46,7 +46,8 @@ immediately appears in the collection.
 The opposite is also true; as elements no longer match the set of names, they are
 immediately removed from the collection.
 
-> **Note:** In [quirks mode](/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode), the
+> [!NOTE]
+> In [quirks mode](/en-US/docs/Web/HTML/Quirks_Mode_and_Standards_Mode), the
 > class names are compared in a case-insensitive fashion. Otherwise, they're case
 > sensitive.
 

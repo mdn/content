@@ -10,8 +10,9 @@ browser-compat: api.NamedNodeMap.getNamedItem
 
 The **`getNamedItem()`** method of the {{domxref("NamedNodeMap")}} interface returns the {{domxref("Attr")}} corresponding to the given name, or `null` if there is no corresponding attribute.
 
-> **Note:** This method is also called when you use the operator `[]` syntax.
-> So, `myMap[str]`is equivalent to `myMap.getNamedItem(str)` where `str` is a string.
+> [!NOTE]
+> This method is also called when you use the operator `[]` syntax.
+> So, `myMap[str]` is equivalent to `myMap.getNamedItem(str)` where `str` is a string.
 
 ## Syntax
 
@@ -45,7 +46,7 @@ And 'boum' has ${attrMap["boum"] ? "been" : "not been"} found.`;
 
 {{EmbedLiveSample("Example", "100%", 80)}}
 
-## Specification
+## Specifications
 
 {{Specifications}}
 

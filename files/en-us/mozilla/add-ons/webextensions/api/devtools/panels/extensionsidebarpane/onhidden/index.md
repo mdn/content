@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.devtools.panels.ExtensionSidebarPane.onHidden
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Called when the sidebar pane becomes hidden, as a result of the user switching away from it.
 
@@ -57,4 +57,5 @@ browser.devtools.panels.elements.createSidebarPane("My pane").then(onCreated);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/docs/extensions/reference/devtools_panels/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/docs/extensions/reference/api/devtools/panels) API.

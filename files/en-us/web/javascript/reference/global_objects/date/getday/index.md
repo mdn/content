@@ -17,6 +17,10 @@ The **`getDay()`** method of {{jsxref("Date")}} instances returns the day of the
 getDay()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 An integer, between 0 and 6, representing the day of the week for the given date according to local time: 0 for Sunday, 1 for Monday, 2 for Tuesday, and so on. Returns `NaN` if the date is [invalid](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).

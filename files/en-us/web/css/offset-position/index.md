@@ -2,19 +2,20 @@
 title: offset-position
 slug: Web/CSS/offset-position
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.offset-position
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
-The **`offset-position`** CSS property defines the [initial position](https://www.w3.org/TR/motion-1/#valdef-offsetpath-initial-position) of the {{cssxref("offset-path")}}.
+The **`offset-position`** [CSS](/en-US/docs/Web/CSS) property defines the initial position of an element along a path. This property is typically used in combination with the {{cssxref("offset-path")}} property to create a motion effect. The value of `offset-position` determines where the element gets placed initially for moving along an offset path if an `offset-path` function such as {{cssxref("basic-shape/path", "path()")}} does not specify its own starting position.
+
+The `offset-position` property is part of a motion system based on {{cssxref("offset")}} constituent properties, including {{cssxref("offset-anchor")}}, {{cssxref("offset-distance")}}, and `offset-path`. These properties work together to create various motion effects along a path.
 
 ## Syntax
 
 ```css
 /* Keyword values */
+offset-position: normal;
 offset-position: auto;
 offset-position: top;
 offset-position: bottom;
@@ -46,10 +47,12 @@ offset-position: unset;
 
 ### Values
 
+- `normal`
+  - : Indicates that the element does not have an offset starting position and places the element at `50% 50%` of the containing block. This is the default value.
 - `auto`
-  - : The initial position is the position of the box specified by the {{cssxref("position")}} property.
-- `<position>`
-  - : A {{cssxref("&lt;position&gt;")}}. A position defines an x/y coordinate, to place an item relative to the edges of an element's box. It can be defined using one to four values. If two non-keyword values are used, the first value represents the horizontal position and the second represents the vertical position. If only one value is specified, the second value is assumed to be `center`. If three or four values are used, the length-percentage values are offsets for the preceding keyword value(s). For more explanation of these value types, see {{cssxref("background-position")}}.
+  - : Indicates that the offset starting position is the top-left corner of the element's box.
+- {{cssxref("&lt;position&gt;")}}
+  - : Specifies the position as an x/y coordinate to place an element relative to its box edges. The position can be defined using one to four values. If two non-keyword values are used, the first value represents the horizontal position and the second represents the vertical position. If only one value is specified, the second value is assumed to be `center`. If three or four values are used, the {{cssxref("length-percentage")}} values are offsets for the preceding keyword value(s). For more explanation of these value types, see {{cssxref("background-position")}}.
 
 ## Formal definition
 
@@ -61,10 +64,26 @@ offset-position: unset;
 
 ## Examples
 
-### Setting initial offset position
+### Setting initial offset-position for an offset-path
+
+In this example, the {{cssxref("offset-path")}} property is used to define the path along which the `cyan` element should move. The value of the {{cssxref("basic-shape/path", "path()")}} CSS function is an [SVG data path](/en-US/docs/Web/SVG/Attribute/d) that describes a curved path. The element moves along this curved path during the `move` animation.
+
+#### HTML
 
 ```html
-<div id="motion-demo"></div>
+<div id="wrap">
+  <div id="motion-demo"></div>
+</div>
+```
+
+#### CSS
+
+```css hidden
+#wrap {
+  width: 260px;
+  height: 160px;
+  border: 1px dashed black;
+}
 ```
 
 ```css
@@ -78,14 +97,144 @@ offset-position: unset;
 }
 
 @keyframes move {
-  0% {
+  0%,
+  20% {
     offset-distance: 0%;
   }
+  80%,
   100% {
     offset-distance: 100%;
   }
 }
 ```
+
+#### Result
+
+{{EmbedLiveSample('Setting_initial_offset_position_for_an_offset-path', '100%', 200)}}
+
+### Comparing various offset starting positions
+
+This example visually compares various initial offset starting position of an element when {{cssxref("ray", "ray()")}} is used to specify a value for the {{cssxref("offset-path")}} property. The number inside the element box indicates the element to which CSS is applied as well as the element's anchor point.
+
+```html hidden
+<div class="wrap">
+  <div class="box">0</div>
+  <div class="box box0">0</div>
+  <pre>
+    offset-position: normal;
+    /* No offset-path specified */
+  </pre>
+</div>
+
+<div class="wrap">
+  <div class="box">0</div>
+  <div class="box box1">1</div>
+  <pre>
+    offset-position: normal;
+    offset-path: ray(0deg);
+  </pre>
+</div>
+
+<div class="wrap">
+  <div class="box">0</div>
+  <div class="box box2">2</div>
+  <pre>
+    offset-position: auto;
+    offset-path: ray(0deg);
+  </pre>
+</div>
+
+<div class="wrap">
+  <div class="box">0</div>
+  <div class="box box3">3</div>
+  <pre>
+    offset-position: left top;
+    offset-path: ray(0deg);
+  </pre>
+</div>
+
+<div class="wrap">
+  <div class="box">0</div>
+  <div class="box box4">4</div>
+  <pre>
+    offset-position: 30% 70%;
+    offset-path: ray(120deg);
+  </pre>
+</div>
+```
+
+```css hidden
+.wrap {
+  position: relative;
+  width: 80vw;
+  height: 120px;
+  border: 1px solid black;
+  margin: 0 2em 4em 5em;
+  text-align: center;
+}
+
+pre {
+  font-size: 1em;
+  text-align: right;
+  padding-right: 10px;
+  line-height: 1em;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+}
+
+.box + .box {
+  opacity: 1;
+}
+```
+
+```css
+.box {
+  background-color: green;
+  border-top: 6px dashed white;
+  background-clip: border-box;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  opacity: 20%;
+  color: white;
+}
+
+.box0 {
+  offset-position: normal;
+}
+
+.box1 {
+  offset-position: normal;
+  offset-path: ray(0deg);
+}
+
+.box2 {
+  offset-position: auto;
+  offset-path: ray(0deg);
+}
+
+.box3 {
+  offset-position: left top;
+  offset-path: ray(0deg);
+}
+
+.box4 {
+  offset-position: 30% 70%;
+  offset-path: ray(120deg);
+}
+```
+
+#### Result
+
+{{EmbedLiveSample('Comparing various offset starting positions', '100%', 930)}}
+
+In `box0`, the absence of the `offset-path` property means that an `offset-position` of either `normal` or `auto` has no effect. When `offset-position` is `normal`, the ray starts at the center of the containing block (i.e., `50% 50%`). This is the default starting position of an offset path and is used when no `offset-position` is specified. Notice the difference between offset starting positions `auto` and `left top`. The value `auto` aligns the element's anchor point to its own top-left corner, whereas the value `left top` aligns the element's anchor point to the top-left corner of the containing block.
 
 ## Specifications
 

@@ -22,19 +22,19 @@ The `<bdi>` element is used to wrap a span of text and instructs the bidirection
 
 For example, consider some text like:
 
-```
+```plain
 EMBEDDED-TEXT - 1st place
 ```
 
 If `EMBEDDED-TEXT` is LTR, this works fine. But if `EMBEDDED-TEXT` is RTL, then `- 1` will be treated as RTL text (because it consists of neutral and weak characters). The result will be garbled:
 
-```
+```plain
 1 - EMBEDDED-TEXTst place
 ```
 
 If you know the directionality of `EMBEDDED-TEXT` in advance, you can fix this problem by wrapping `EMBEDDED-TEXT` in a {{HTMLElement("span")}} with the [`dir`](/en-US/docs/Web/HTML/Global_attributes#dir) attribute set to the known directionality. But if you don't know the directionality - for example, because `EMBEDDED-TEXT` is being read from a database or entered by the user - you should use `<bdi>` to prevent the directionality of `EMBEDDED-TEXT` from affecting its surroundings.
 
-Though the same visual effect can be achieved using the CSS rule {{cssxref("unicode-bidi")}}`: isolate` on a {{HTMLElement("span")}} or another text-formatting element, HTML authors should not use this approach because it is not semantic and browsers are allowed to ignore CSS styling.
+Though the same visual effect can be achieved using the CSS rule {{cssxref("unicode-bidi", "unicode-bidi: isolate")}} on a {{HTMLElement("span")}} or another text-formatting element, HTML authors should not use this approach because it is not semantic and browsers are allowed to ignore CSS styling.
 
 Embedding the characters in `<span dir="auto">` has the same effect as using `<bdi>`, but its semantics are less clear.
 
@@ -65,7 +65,7 @@ body {
 }
 ```
 
-{{ EmbedLiveSample('No_bdi_with_only_LTR','','120','','','bdi-example') }}
+{{ EmbedLiveSample('No_bdi_with_only_LTR','','120') }}
 
 ### No bdi with RTL text
 
@@ -88,7 +88,7 @@ body {
 }
 ```
 
-{{ EmbedLiveSample('No_bdi_with_RTL_text','','120','','','bdi-example') }}
+{{ EmbedLiveSample('No_bdi_with_RTL_text','','120') }}
 
 ### Using bdi with LTR and RTL text
 
@@ -111,7 +111,7 @@ body {
 }
 ```
 
-{{ EmbedLiveSample('Using_bdi_with_LTR_and_RTL_text','','120','','','bdi-example') }}
+{{ EmbedLiveSample('Using_bdi_with_LTR_and_RTL_text','','120') }}
 
 ## Technical summary
 
@@ -142,7 +142,7 @@ body {
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
@@ -156,8 +156,10 @@ body {
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/generic_role"
+            >generic</a
+          ></code
         >
       </td>
     </tr>

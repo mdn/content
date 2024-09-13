@@ -114,6 +114,6 @@ The following APIs can be used by a service worker to perform tasks in the backg
 
 ## See also
 
-- [Progressive web apps](https://web.dev/progressive-web-apps/) on web.dev
+- [Progressive web apps](https://web.dev/explore/progressive-web-apps) on web.dev
 - [Learn PWA](https://web.dev/learn/pwa/) on web.dev
 - [Progressive web apps](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/) on learn.microsoft.com (2023)

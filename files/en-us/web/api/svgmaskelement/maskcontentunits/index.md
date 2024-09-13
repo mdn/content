@@ -10,7 +10,8 @@ browser-compat: api.SVGMaskElement.maskContentUnits
 
 The read-only **`maskContentUnits`** property of the {{domxref("SVGMaskElement")}} interface reflects the {{SVGAttr("maskContentUnits")}} attribute. It indicates which coordinate system to use for the contents of the {{SVGElement("mask")}} element.
 
-> **Note:** Although this property is read-only, it is merely a container for two values you can modify, {{domxref("SVGAnimatedEnumeration.baseVal", "baseVal")}} and {{domxref("SVGAnimatedEnumeration.animVal", "animVal")}}.
+> [!NOTE]
+> Although this property is read-only, it is merely a container for two values you can modify, {{domxref("SVGAnimatedEnumeration.baseVal", "baseVal")}} and {{domxref("SVGAnimatedEnumeration.animVal", "animVal")}}.
 
 ## Value
 
@@ -62,12 +63,12 @@ svg {
     <rect id="r4" x="55" y="0" width="45" height="45" />
 
     <!-- The first 3 rect are masked with useSpaceOnUse units -->
-    <use mask="url(#mask1)" xlink:href="#r1" fill="blue" />
-    <use mask="url(#mask1)" xlink:href="#r2" fill="yellow" />
-    <use mask="url(#mask1)" xlink:href="#r3" fill="green" />
+    <use mask="url(#mask1)" href="#r1" fill="blue" />
+    <use mask="url(#mask1)" href="#r2" fill="yellow" />
+    <use mask="url(#mask1)" href="#r3" fill="green" />
 
     <!-- The last rect is masked with objectBoundingBox units -->
-    <use mask="url(#mask2)" xlink:href="#r4" fill="lightblue" />
+    <use mask="url(#mask2)" href="#r4" fill="lightblue" />
   </svg>
 </div>
 <pre id="log"></pre>

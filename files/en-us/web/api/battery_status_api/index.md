@@ -2,20 +2,27 @@
 title: Battery Status API
 slug: Web/API/Battery_Status_API
 page-type: web-api-overview
-browser-compat: api.BatteryManager
+browser-compat:
+  - api.BatteryManager
+  - api.Navigator.getBattery
+spec-urls: https://w3c.github.io/battery/
 ---
 
-{{DefaultAPISidebar("Battery API")}}
+{{DefaultAPISidebar("Battery API")}}{{securecontext_header}}
 
 The **Battery Status API**, more often referred to as the **Battery API**, provides information about the system's battery charge level and lets you be notified by events that are sent when the battery level or charging status change. This can be used to adjust your app's resource usage to reduce battery drain when the battery is low, or to save changes before the battery runs out in order to prevent data loss.
 
-> **Note:** This API is _not available_ in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) (not exposed via {{domxref("WorkerNavigator")}}).
+> [!NOTE]
+> This API is _not available_ in [Web Workers](/en-US/docs/Web/API/Web_Workers_API) (not exposed via {{domxref("WorkerNavigator")}}).
 
 ## Interfaces
 
 - {{domxref("BatteryManager")}}
   - : Provides information about the system's battery charge level.
-- {{domxref("navigator.getBattery()")}} {{ReadOnlyInline}}
+
+### Extensions to other interfaces
+
+- {{domxref("Navigator.getBattery()")}}
   - : Returns a {{JSxRef("Promise")}} that resolves with a {{DOMxRef("BatteryManager")}} object.
 
 ## Example

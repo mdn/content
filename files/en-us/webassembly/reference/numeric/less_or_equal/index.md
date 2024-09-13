@@ -1,6 +1,7 @@
 ---
 title: Less or equal
 slug: WebAssembly/Reference/Numeric/Less_or_equal
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

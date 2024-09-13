@@ -8,7 +8,7 @@ status:
 browser-compat: api.XRView.isFirstPersonObserver
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The {{domxref("XRView")}} interface's read-only **`isFirstPersonObserver`** property is a boolean indicating if the `XRView` is a first-person observer view.
 

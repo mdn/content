@@ -1,6 +1,7 @@
 ---
 title: OR
 slug: WebAssembly/Reference/Numeric/OR
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

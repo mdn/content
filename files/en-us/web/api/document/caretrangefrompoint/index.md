@@ -41,6 +41,10 @@ One of the following:
 
 Visit the {{domxref("Document.caretPositionFromPoint#Examples", "Document.caretPositionFromPoint")}} page to view a live sample of this method.
 
+## Specifications
+
+Not part of any specification.
+
 ## Browser compatibility
 
 {{Compat}}

@@ -8,7 +8,7 @@ status:
 browser-compat: api.XRSession.requestLightProbe
 ---
 
-{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`requestLightProbe()`** method of the
 {{domxref("XRSession")}} interface returns a {{jsxref("Promise")}} that resolves with an {{domxref("XRLightProbe")}} object that estimates lighting information at a given point in the user's environment.

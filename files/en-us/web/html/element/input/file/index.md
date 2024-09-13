@@ -15,7 +15,8 @@ browser-compat: html.elements.input.type_file
 
 A file input's [`value`](/en-US/docs/Web/HTML/Element/input#value) attribute contains a string that represents the path to the selected file(s). If no file is selected yet, the value is an empty string (`""`). When the user selected multiple files, the `value` represents the first file in the list of files they selected. The other files can be identified using the [input's `HTMLInputElement.files` property](/en-US/docs/Web/API/File_API/Using_files_from_web_applications#getting_information_about_selected_files).
 
-> **Note:** The value is [always the file's name prefixed with `C:\fakepath\`](https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly), which isn't the real path of the file. This is to prevent malicious software from guessing the user's file structure.
+> [!NOTE]
+> The value is [always the file's name prefixed with `C:\fakepath\`](https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly), which isn't the real path of the file. This is to prevent malicious software from guessing the user's file structure.
 
 ## Additional attributes
 
@@ -96,7 +97,8 @@ This produces the following output:
 
 {{EmbedLiveSample('A_basic_example', 650, 90)}}
 
-> **Note:** You can find this example on GitHub too — see the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/simple-file.html), and also [see it running live](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html).
+> [!NOTE]
+> You can find this example on GitHub too — see the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/simple-file.html), and also [see it running live](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html).
 
 Regardless of the user's device or operating system, the file input provides a button that opens up a file picker dialog that allows the user to choose a file.
 
@@ -111,7 +113,7 @@ Each `File` object contains the following information:
 - `name`
   - : The file's name.
 - `lastModified`
-  - : A number specifying the date and time at which the file was last modified, in milliseconds since the UNIX epoch (January 1, 1970 at midnight).
+  - : A number specifying the date and time at which the file was last modified, in milliseconds since the UNIX epoch (January 1, 1970, at midnight).
 - `lastModifiedDate` {{deprecated_inline}}
   - : A {{jsxref("Date")}} object representing the date and time at which the file was last modified. _This is deprecated and should not be used. Use `lastModified` instead._
 - `size`
@@ -121,7 +123,8 @@ Each `File` object contains the following information:
 - `webkitRelativePath` {{non-standard_inline}}
   - : A string specifying the file's path relative to the base directory selected in a directory picker (that is, a `file` picker in which the [`webkitdirectory`](#webkitdirectory) attribute is set). _This is non-standard and should be used with caution._
 
-> **Note:** You can set as well as get the value of `HTMLInputElement.files` in all modern browsers; this was most recently added to Firefox, in version 57 (see [Firefox bug 1384030](https://bugzil.la/1384030)).
+> [!NOTE]
+> You can set as well as get the value of `HTMLInputElement.files` in all modern browsers; this was most recently added to Firefox, in version 57 (see [Firefox bug 1384030](https://bugzil.la/1384030)).
 
 ### Limiting accepted file types
 
@@ -162,13 +165,34 @@ This produces a similar-looking output to the previous example:
 
 {{EmbedLiveSample('Limiting_accepted_file_types', 650, 90)}}
 
-> **Note:** You can find this example on GitHub too — see the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/file-with-accept.html), and also [see it running live](https://mdn.github.io/learning-area/html/forms/file-examples/file-with-accept.html).
+> [!NOTE]
+> You can find this example on GitHub too — see the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/file-with-accept.html), and also [see it running live](https://mdn.github.io/learning-area/html/forms/file-examples/file-with-accept.html).
 
 It may look similar, but if you try selecting a file with this input, you'll see that the file picker only lets you select the file types specified in the `accept` value (the exact interface differs across browsers and operating systems).
 
 The `accept` attribute doesn't validate the types of the selected files; it provides hints for browsers to guide users towards selecting the correct file types. It is still possible (in most cases) for users to toggle an option in the file chooser that makes it possible to override this and select any file they wish, and then choose incorrect file types.
 
 Because of this, you should make sure that the `accept` attribute is backed up by appropriate server-side validation.
+
+### Detecting cancellations
+
+The `cancel` event is fired when the user does not change their selection, reselecting the previously selected files. The `cancel` event is also fired when the file picker dialog gets closed, or canceled, via the "cancel" button or the <kbd>escape</kbd> key.
+
+For example, the following code will log to the console if the user closes the popup without selecting a file:
+
+```js
+const elem = document.createElement("input");
+elem.type = "file";
+elem.addEventListener("cancel", () => {
+  console.log("Cancelled.");
+});
+elem.addEventListener("change", () => {
+  if (elem.files.length == 1) {
+    console.log("File selected: ", elem.files[0]);
+  }
+});
+elem.click();
+```
 
 ### Notes
 
@@ -185,7 +209,8 @@ Because of this, you should make sure that the `accept` attribute is backed up b
 
 In this example, we'll present a slightly more advanced file chooser that takes advantage of the file information available in the `HTMLInputElement.files` property, as well as showing off a few clever tricks.
 
-> **Note:** You can see the complete source code for this example on GitHub — [file-example.html](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/file-example.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/file-examples/file-example.html)). We won't explain the CSS; the JavaScript is the main focus.
+> [!NOTE]
+> You can see the complete source code for this example on GitHub — [file-example.html](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/file-example.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/file-examples/file-example.html)). We won't explain the CSS; the JavaScript is the main focus.
 
 First of all, let's look at the HTML:
 
@@ -215,7 +240,6 @@ html {
 }
 
 form {
-  width: 580px;
   background: #ccc;
   margin: 0 auto;
   padding: 20px;
@@ -300,7 +324,7 @@ Whenever the `updateImageDisplay()` function is invoked, we:
 - If it is, we:
 
   - Print out its name and file size into a list item inside the previous `<div>` (obtained from `file.name` and `file.size`). The custom `returnFileSize()` function returns a nicely-formatted version of the size in bytes/KB/MB (by default the browser reports the size in absolute bytes).
-  - Generate a thumbnail preview of the image by calling {{domxref("URL/createObjectURL_static", "URL.createObjectURL(curFiles[i])")}}. Then, insert the image into the list item too by creating a new {{htmlelement("img")}} and setting its [`src`](/en-US/docs/Web/HTML/Element/img#src) to the thumbnail.
+  - Generate a thumbnail preview of the image by calling {{domxref("URL/createObjectURL_static", "URL.createObjectURL(file)")}}. Then, insert the image into the list item too by creating a new {{htmlelement("img")}} and setting its [`src`](/en-US/docs/Web/HTML/Element/img#src) to the thumbnail.
 
 - If the file type is invalid, we display a message inside a list item telling the user that they need to select a different file type.
 
@@ -328,6 +352,7 @@ function updateImageDisplay() {
         )}.`;
         const image = document.createElement("img");
         image.src = URL.createObjectURL(file);
+        image.alt = image.title = file.name;
 
         listItem.appendChild(image);
         listItem.appendChild(para);
@@ -368,14 +393,27 @@ The `returnFileSize()` function takes a number (of bytes, taken from the current
 
 ```js
 function returnFileSize(number) {
-  if (number < 1024) {
+  if (number < 1e3) {
     return `${number} bytes`;
-  } else if (number >= 1024 && number < 1048576) {
-    return `${(number / 1024).toFixed(1)} KB`;
-  } else if (number >= 1048576) {
-    return `${(number / 1048576).toFixed(1)} MB`;
+  } else if (number >= 1e3 && number < 1e6) {
+    return `${(number / 1e3).toFixed(1)} KB`;
+  } else {
+    return `${(number / 1e6).toFixed(1)} MB`;
   }
 }
+```
+
+> [!NOTE]
+> The "KB" and "MB" units here use the [SI prefix](https://en.wikipedia.org/wiki/Binary_prefix) convention of 1KB = 1000B, similar to macOS. Different systems represent file sizes differently—for example, Ubuntu uses IEC prefixes where 1KiB = 1024B, while RAM specifications often use SI prefixes to represent powers of two (1KB = 1024B). For this reason, we used `1e3` (`1000`) and `1e6` (`100000`) instead of `1024` and `1048576`. In your application, you should communicate the unit system clearly to your users if the exact size is important.
+
+```js hidden
+const button = document.querySelector("form button");
+button.addEventListener("click", (e) => {
+  e.preventDefault();
+  const para = document.createElement("p");
+  para.append("Image uploaded!");
+  preview.replaceChildren(para);
+});
 ```
 
 The example looks like this; have a play:
@@ -396,8 +434,9 @@ The example looks like this; have a play:
     <tr>
       <td><strong>Events</strong></td>
       <td>
-        {{domxref("HTMLElement/change_event", "change")}} and
-        {{domxref("HTMLElement/input_event", "input")}}
+        {{domxref("HTMLElement/change_event", "change")}},
+        {{domxref("Element/input_event", "input")}} and
+        {{domxref("HTMLElement/cancel_event", "cancel")}}
       </td>
     </tr>
     <tr>
@@ -428,7 +467,7 @@ The example looks like this; have a play:
     </tr>
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>
-      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"><code>no corresponding role</code></a></td>
+      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">no corresponding role</a></td>
     </tr>
   </tbody>
 </table>

@@ -27,7 +27,7 @@ registerPaint(name, classRef)
 - `classRef`
   - : A reference to the class that implements the worklet.
 
-## Return value
+### Return value
 
 None ({{jsxref("undefined")}}).
 
@@ -81,7 +81,7 @@ the `CSS.paintWorklet.addModule()` method:
 ```
 
 You can then use the `{{cssxref('image/paint', 'paint()')}}` CSS function in your
-CSS anywhere an `{{cssxref('&lt;image&gt;')}}` value is valid.
+CSS anywhere an {{cssxref('&lt;image&gt;')}} value is valid.
 
 ```css
 li {
@@ -100,4 +100,4 @@ li {
 ## See also
 
 - [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API)
-- [Houdini APIs](/en-US/docs/Web/Guide/Houdini)
+- [Houdini APIs](/en-US/docs/Web/API/Houdini_APIs)

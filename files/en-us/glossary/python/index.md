@@ -10,7 +10,7 @@ page-type: glossary-definition
 
 It was created by Guido van Rossum as a successor to another language (called ABC) between 1985 and 1990, and is currently used on a large array of domains like web development, desktop applications, data science, DevOps, and automation/productivity.
 
-Python is developed under an OSI-approved open source license, making it freely usable and distributable, even for commercial use. Python's license is administered by the [Python Software Foundation](https://www.python.org/psf/).
+Python is developed under an OSI-approved open source license, making it freely usable and distributable, even for commercial use. Python's license is administered by the [Python Software Foundation](https://www.python.org/psf-landing/).
 
 ## See also
 
@@ -19,10 +19,8 @@ Python is developed under an OSI-approved open source license, making it freely 
 - [Tutorials Point Python tutorial](https://www.tutorialspoint.com/python/index.htm)
 - [AlphaCodingSkills Python Tutorial](https://www.alphacodingskills.com/python/python-tutorial.php)
 - [Django Web Framework (Python)](/en-US/docs/Learn/Server-side/Django) on MDN
-- [Glossary](/en-US/docs/Glossary)
-
+- Related glossary terms:
   - {{Glossary("Java")}}
   - {{Glossary("JavaScript")}}
   - {{Glossary("PHP")}}
-  - {{Glossary("Python")}}
   - {{Glossary("Ruby")}}

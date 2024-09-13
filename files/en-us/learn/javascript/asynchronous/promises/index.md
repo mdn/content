@@ -13,7 +13,7 @@ page-type: learn-module-chapter
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, a reasonable understanding of JavaScript
+        A reasonable understanding of JavaScript
         fundamentals, including event handling.
       </td>
     </tr>
@@ -24,13 +24,14 @@ page-type: learn-module-chapter
   </tbody>
 </table>
 
-In the last article, we talked about the use of callbacks to implement asynchronous functions. With that design, you call the asynchronous function, passing in your callback function. The function returns immediately and calls your callback when the operation is finished.
+In the [previous article](/en-US/docs/Learn/JavaScript/Asynchronous/Introducing), we talked about the use of callbacks to implement asynchronous functions. With that design, you call the asynchronous function, passing in your callback function. The function returns immediately and calls your callback when the operation is finished.
 
 With a promise-based API, the asynchronous function starts the operation and returns a {{jsxref("Promise")}} object. You can then attach handlers to this promise object, and these handlers will be executed when the operation has succeeded or failed.
 
 ## Using the fetch() API
 
-> **Note:** In this article, we will explore promises by copying code samples from the page into your browser's JavaScript console. To set this up:
+> [!NOTE]
+> In this article, we will explore promises by copying code samples from the page into your browser's JavaScript console. To set this up:
 >
 > 1. open a browser tab and visit <https://example.org>
 > 2. in that tab, open the JavaScript console in your [browser's developer tools](/en-US/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)
@@ -38,7 +39,7 @@ With a promise-based API, the asynchronous function starts the operation and ret
 
 In this example, we'll download the JSON file from <https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json>, and log some information about it.
 
-To do this, we'll make an **HTTP request** to the server. In an HTTP request, we send a request message to a remote server, and it sends us back a response. In this case, we'll send a request to get a JSON file from the server. Remember in the last article, where we made HTTP requests using the {{domxref("XMLHttpRequest")}} API? Well, in this article, we'll use the {{domxref("fetch", "fetch()")}} API, which is the modern, promise-based replacement for `XMLHttpRequest`.
+To do this, we'll make an **HTTP request** to the server. In an HTTP request, we send a request message to a remote server, and it sends us back a response. In this case, we'll send a request to get a JSON file from the server. Remember in the last article, where we made HTTP requests using the {{domxref("XMLHttpRequest")}} API? Well, in this article, we'll use the {{domxref("Window/fetch", "fetch()")}} API, which is the modern, promise-based replacement for `XMLHttpRequest`.
 
 Copy this into your browser's JavaScript console:
 
@@ -143,7 +144,7 @@ In the last article, we saw that error handling can get very difficult with nest
 
 To support error handling, `Promise` objects provide a {{jsxref("Promise/catch", "catch()")}} method. This is a lot like `then()`: you call it and pass in a handler function. However, while the handler passed to `then()` is called when the asynchronous operation _succeeds_, the handler passed to `catch()` is called when the asynchronous operation _fails_.
 
-If you add `catch()` to the end of a promise chain, then it will be called when any of the asynchronous function calls fails. So you can implement an operation as several consecutive asynchronous function calls, and have a single place to handle all errors.
+If you add `catch()` to the end of a promise chain, then it will be called when any of the asynchronous function calls fail. So you can implement an operation as several consecutive asynchronous function calls, and have a single place to handle all errors.
 
 Try this version of our `fetch()` code. We've added an error handler using `catch()`, and also modified the URL so the request will fail.
 
@@ -179,7 +180,7 @@ First, a promise can be in one of three states:
 - **fulfilled**: the asynchronous function has succeeded. When a promise is fulfilled, its `then()` handler is called.
 - **rejected**: the asynchronous function has failed. When a promise is rejected, its `catch()` handler is called.
 
-Note that what "succeeded" or "failed" means here is up to the API in question: for example, `fetch()` considers a request successful if the server returned an error like [404 Not Found](/en-US/docs/Web/HTTP/Status/404), but not if a network error prevented the request being sent.
+Note that what "succeeded" or "failed" means here is up to the API in question. For example, `fetch()` rejects the returned promise if (among other reasons) a network error prevented the request being sent, but fulfills the promise if the server sent a response, even if the response was an error like [404 Not Found](/en-US/docs/Web/HTTP/Status/404).
 
 Sometimes, we use the term **settled** to cover both **fulfilled** and **rejected**.
 
@@ -355,23 +356,27 @@ Instead, you'd need to do something like:
 
 ```js
 async function fetchProducts() {
-  try {
-    const response = await fetch(
-      "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
-    );
-    if (!response.ok) {
-      throw new Error(`HTTP error: ${response.status}`);
-    }
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error(`Could not get products: ${error}`);
+  const response = await fetch(
+    "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json",
+  );
+  if (!response.ok) {
+    throw new Error(`HTTP error: ${response.status}`);
   }
+  const data = await response.json();
+  return data;
 }
 
 const promise = fetchProducts();
-promise.then((data) => console.log(data[0].name));
+promise
+  .then((data) => {
+    console.log(data[0].name);
+  })
+  .catch((error) => {
+    console.error(`Could not get products: ${error}`);
+  });
 ```
+
+Here, we moved the `try...catch` back to the `catch` handler on the returned promise. This means our `then` handler doesn't have to deal with the case where an error got caught inside the `fetchProducts` function, causing `data` to be `undefined`. Handle errors as the last step of your promise chain.
 
 Also, note that you can only use `await` inside an `async` function, unless your code is in a [JavaScript module](/en-US/docs/Web/JavaScript/Guide/Modules). That means you can't do this in a normal script:
 
@@ -388,6 +393,7 @@ try {
   console.log(data[0].name);
 } catch (error) {
   console.error(`Could not get products: ${error}`);
+  throw error;
 }
 ```
 

@@ -13,7 +13,7 @@ as non-extensible.
 
 ## Message
 
-```
+```plain
 TypeError: Cannot add property x, object is not extensible (V8-based)
 TypeError: Cannot define property x, object is not extensible (V8-based)
 TypeError: can't define property "x": Object is not extensible (Firefox)

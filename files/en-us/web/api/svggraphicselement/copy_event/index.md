@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Element.copy_event
 ---
 
-{{APIRef}}
+{{APIRef("SVG")}}
 
 The **`copy`** event fires on {{domxref("SVGGraphicsElement", "SVGGraphicsElements")}} when the user initiates a copy action through the browser's user interface.
 

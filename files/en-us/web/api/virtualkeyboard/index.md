@@ -7,7 +7,7 @@ status:
 browser-compat: api.VirtualKeyboard
 ---
 
-{{SeeCompatTable}}{{APIRef("VirtualKeyboard API")}}
+{{SeeCompatTable}}{{APIRef("VirtualKeyboard API")}}{{securecontext_header}}
 
 The **`VirtualKeyboard`** interface of the [VirtualKeyboard API](/en-US/docs/Web/API/VirtualKeyboard_API) is useful on devices that have on-screen virtual keyboards, such as tablets, mobile phones, or other devices where a hardware keyboard may not be available.
 
@@ -19,26 +19,26 @@ You access the `VirtualKeyboard` interface by using {{domxref("navigator.virtual
 
 ## Instance properties
 
-_The `VirtualKeyboard` interface doesn't inherit any properties._
+_The `VirtualKeyboard` interface inherits properties from its parent, {{domxref("EventTarget")}}._
 
 - {{DOMxRef("VirtualKeyboard.boundingRect")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A {{domxref("DOMRect")}} that describes the geometry of the virtual keyboard.
 - {{DOMxRef("VirtualKeyboard.overlaysContent")}} {{Experimental_Inline}}
   - : A {{jsxref('Boolean')}} that defines whether the browser should stop handling the on-screen virtual keyboard.
 
-### Events
-
-- {{domxref("VirtualKeyboard.geometrychange_event", "geometrychange")}} {{Experimental_Inline}}
-  - : Fires when the geometry of the on-screen virtual keyboard changes, which happens when the virtual keyboard appears or disappears.
-
 ## Instance methods
 
-_The `VirtualKeyboard` interface doesn't inherit any methods_.
+_The `VirtualKeyboard` interface inherits methods from its parent, {{domxref("EventTarget")}}._
 
 - {{domxref('VirtualKeyboard.show()')}} {{experimental_inline}}
   - : Show the virtual keyboard.
 - {{domxref('VirtualKeyboard.hide()')}} {{experimental_inline}}
   - : Hide the virtual keyboard.
+
+## Events
+
+- {{domxref("VirtualKeyboard.geometrychange_event", "geometrychange")}} {{Experimental_Inline}}
+  - : Fires when the geometry of the on-screen virtual keyboard changes, which happens when the virtual keyboard appears or disappears.
 
 ## Example
 

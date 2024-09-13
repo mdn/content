@@ -9,7 +9,8 @@ browser-compat: http.headers.Content-Security-Policy.form-action
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`form-action`** directive restricts the URLs which can be used as the target of form submissions from a given context.
 
-> **Warning:** Whether `form-action` should block redirects after a form submission is [debated](https://github.com/w3c/webappsec-csp/issues/8) and browser implementations of this aspect are inconsistent (e.g. Firefox 57 doesn't block the redirects whereas Chrome 63 does).
+> [!WARNING]
+> Whether `form-action` should block redirects after a form submission is [debated](https://github.com/w3c/webappsec-csp/issues/8) and browser implementations of this aspect are inconsistent (e.g. Firefox 57 doesn't block the redirects whereas Chrome 63 does).
 
 <table class="properties">
   <tbody>
@@ -53,7 +54,7 @@ Note that this same set of values can be used in all {{Glossary("fetch directive
 
 ### Apache configuration
 
-```html
+```apacheconf
 <IfModule mod_headers.c>
   Header set Content-Security-Policy "form-action 'none';"
 </IfModule>
@@ -61,7 +62,7 @@ Note that this same set of values can be used in all {{Glossary("fetch directive
 
 ### Nginx configuration
 
-```
+```nginx
 add_header Content-Security-Policy "form-action 'none';"
 ```
 

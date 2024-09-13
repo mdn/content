@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUBuffer.unmap
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`unmap()`** method of the
 {{domxref("GPUBuffer")}} interface unmaps the mapped range of the `GPUBuffer`, making its contents available for use by the GPU again after it has previously been mapped with {{domxref("GPUBuffer.mapAsync()")}} (the GPU cannot access a mapped `GPUBuffer`).

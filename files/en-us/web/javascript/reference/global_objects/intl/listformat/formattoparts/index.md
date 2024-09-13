@@ -11,7 +11,7 @@ The **`formatToParts()`** method of {{jsxref("Intl.ListFormat")}} instances
 returns an {{jsxref("Array")}} of objects representing the different components that
 can be used to format a list of values in a locale-aware fashion.
 
-{{EmbedInteractiveExample("pages/js/intl-listformat-prototype-formattoparts.html")}}
+{{EmbedInteractiveExample("pages/js/intl-listformat-prototype-formattoparts.html", "taller")}}
 
 ## Syntax
 
@@ -60,7 +60,7 @@ console.table(myListFormat.formatToParts(fruits));
 //  { "type": "element", "value": "Apple" },
 //  { "type": "literal", "value": ", " },
 //  { "type": "element", "value": "Orange" },
-//  { "type": "literal", "value": ", and " },
+//  { "type": "literal", "value": " and " },
 //  { "type": "element", "value": "Pineapple" }
 // ]
 ```

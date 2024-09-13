@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.webRequest.StreamFilter.resume
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Resumes a request that was previously suspended through a call to {{WebExtAPIRef("webRequest.StreamFilter.suspend()", "suspend()")}}.
 

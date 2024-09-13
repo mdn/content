@@ -7,7 +7,7 @@ status:
 browser-compat: api.BluetoothRemoteGATTService
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
+{{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The `BluetoothRemoteGATTService` interface of the [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API) represents a
 service provided by a GATT server, including a device, a list of referenced services,
@@ -44,5 +44,3 @@ and a list of the characteristics of this service.
 ## Browser compatibility
 
 {{Compat}}
-
-{{APIRef("Web Bluetooth")}}

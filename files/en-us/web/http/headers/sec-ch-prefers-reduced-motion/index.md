@@ -62,7 +62,8 @@ Vary: Sec-CH-Prefers-Reduced-Motion
 Critical-CH: Sec-CH-Prefers-Reduced-Motion
 ```
 
-> **Note:** We've also specified `Sec-CH-Prefers-Reduced-Motion` in the {{httpheader("Vary")}} header to indicate to the browser that the served content will differ based on this header value, even if the URL stays the same, so the browser shouldn't just use an existing cached response and instead should cache this response separately. Each header listed in the `Critical-CH` header should also be present in the `Accept-CH` and `Vary` headers.
+> [!NOTE]
+> We've also specified `Sec-CH-Prefers-Reduced-Motion` in the {{httpheader("Vary")}} header to indicate to the browser that the served content will differ based on this header value, even if the URL stays the same, so the browser shouldn't just use an existing cached response and instead should cache this response separately. Each header listed in the `Critical-CH` header should also be present in the `Accept-CH` and `Vary` headers.
 
 The client automatically retries the request (due to `Critical-CH` being specified above), telling the server via `Sec-CH-Prefers-Reduced-Motion` that it has a user preference for reduced-motion animations:
 
@@ -85,7 +86,8 @@ The client will include the header in subsequent requests in the current session
 ## See also
 
 - [Client hints](/en-US/docs/Web/HTTP/Client_hints)
+- [`prefers-reduced-motion` CSS Media Query](/en-US/docs/Web/CSS/@media/prefers-reduced-motion)
 - [User-Agent Client Hints API](/en-US/docs/Web/API/User-Agent_Client_Hints_API)
-- [Improving user privacy and developer experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints/) (web.dev)
+- [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)
 - {{HTTPHeader("Accept-CH")}}
 - [HTTP Caching > Vary](/en-US/docs/Web/HTTP/Caching#vary) and {{HTTPHeader("Vary")}}

@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.ReadableStreamBYOBReader.read
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`read()`** method of the {{domxref("ReadableStreamBYOBReader")}} interface is used to read data into a view on a user-supplied buffer from an associated [readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams).
 A request for data will be satisfied from the stream's internal queues if there is any data present.
@@ -44,7 +44,7 @@ The following are possible:
 
 - If a chunk is available and the stream is still active, the promise fulfills with an object of the form:
 
-  ```
+  ```js
   { value: theChunk, done: false }
   ```
 
@@ -54,13 +54,13 @@ The following are possible:
 
 - If the stream is closed, the promise fulfills with an object of the form (where `theChunk` has the same properties as above):
 
-  ```
+  ```js
   { value: theChunk, done: true }
   ```
 
 - If the stream is cancelled, the promise fulfills with an object of the form:
 
-  ```
+  ```js
   { value: undefined, done: true }
   ```
 

@@ -125,16 +125,6 @@ The table below shows each of these operations using an image of the MDN logo co
 
 ## Attributes
 
-### Global attributes
-
-- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-- [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
-- [Filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-
-### Specific attributes
-
 - {{SVGAttr("in")}}: First input for the given filter primitive.
 - {{SVGAttr("in2")}}: Second input for the given filter primitive (works the same as the `in` attribute).
 - {{SVGAttr("operator")}}: `over` | `in` | `out` | `atop` | `xor` | `lighter` | `arithmetic`
@@ -159,51 +149,27 @@ This example defines filters for each of the supported operations (`over`, `atop
   xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs>
     <filter id="imageOver">
-      <feImage
-        xlink:href="mdn_logo_only_color.png"
-        x="10px"
-        y="10px"
-        width="160px" />
+      <feImage href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
       <feComposite in2="SourceGraphic" operator="over" />
     </filter>
     <filter id="imageIn">
-      <feImage
-        xlink:href="mdn_logo_only_color.png"
-        x="10px"
-        y="10px"
-        width="160px" />
+      <feImage href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
       <feComposite in2="SourceGraphic" operator="in" />
     </filter>
     <filter id="imageOut">
-      <feImage
-        xlink:href="mdn_logo_only_color.png"
-        x="10px"
-        y="10px"
-        width="160px" />
+      <feImage href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
       <feComposite in2="SourceGraphic" operator="out" />
     </filter>
     <filter id="imageAtop">
-      <feImage
-        xlink:href="mdn_logo_only_color.png"
-        x="10px"
-        y="10px"
-        width="160px" />
+      <feImage href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
       <feComposite in2="SourceGraphic" operator="atop" />
     </filter>
     <filter id="imageXor">
-      <feImage
-        xlink:href="mdn_logo_only_color.png"
-        x="10px"
-        y="10px"
-        width="160px" />
+      <feImage href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
       <feComposite in2="SourceGraphic" operator="xor" />
     </filter>
     <filter id="imageArithmetic">
-      <feImage
-        xlink:href="mdn_logo_only_color.png"
-        x="10px"
-        y="10px"
-        width="160px" />
+      <feImage href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
       <feComposite
         in2="SourceGraphic"
         operator="arithmetic"
@@ -213,11 +179,7 @@ This example defines filters for each of the supported operations (`over`, `atop
         k4="0.4" />
     </filter>
     <filter id="imageLighter">
-      <feImage
-        xlink:href="mdn_logo_only_color.png"
-        x="10px"
-        y="10px"
-        width="160px" />
+      <feImage href="mdn_logo_only_color.png" x="10px" y="10px" width="160px" />
       <feComposite in2="SourceGraphic" operator="lighter" />
     </filter>
   </defs>
@@ -301,6 +263,7 @@ This example defines filters for each of the supported operations (`over`, `atop
 
 ## See also
 
+- [SVG filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes)
 - {{SVGElement("filter")}}
 - {{SVGElement("animate")}}
 - {{SVGElement("set")}}

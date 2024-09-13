@@ -107,3 +107,9 @@ The card should change background and as the width of the page transitions throu
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [CSS containment module](/en-US/docs/Web/CSS/CSS_containment)
+- [Container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries)
+- [Using container size and style queries](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)

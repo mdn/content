@@ -7,7 +7,7 @@ browser-compat: svg.elements.view
 
 {{SVGRef}}
 
-A view is a defined way to view the image, like a zoom level or a detail view.
+The `<view>` SVG element defines a particular view of an SVG document. A specific view can be displayed by referencing the `<view>` element's [`id`](/en-US/docs/Web/HTML/Global_attributes/id) as the target fragment of a URL.
 
 ## Usage context
 
@@ -15,18 +15,9 @@ A view is a defined way to view the image, like a zoom level or a detail view.
 
 ## Attributes
 
-### Global attributes
-
-- [Aria attributes](/en-US/docs/Web/SVG/Attribute#aria_attributes)
-- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-- [Global event attributes](/en-US/docs/Web/SVG/Attribute#global_event_attributes)
-
-### Specific attributes
-
 - {{SVGAttr("viewBox")}}
 - {{SVGAttr("preserveAspectRatio")}}
 - {{SVGAttr("zoomAndPan")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-- {{SVGAttr("viewTarget")}} {{Deprecated_Inline}}
 
 ## Example
 

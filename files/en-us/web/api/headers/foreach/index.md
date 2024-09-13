@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Headers.forEach
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}} {{AvailableInWorkers}}
 
 The **`Headers.forEach()`** method executes a callback function once per each key/value pair in the [`Headers`](/en-US/docs/Web/API/Headers) object.
 
@@ -59,7 +59,7 @@ myHeaders.forEach((value, key) => {
 
 The result is:
 
-```
+```plain
 compression ==> gzip
 content-type ==> application/json
 cookie ==> This is a demo cookie

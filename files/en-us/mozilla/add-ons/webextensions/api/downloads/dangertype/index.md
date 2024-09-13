@@ -5,13 +5,14 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.downloads.DangerType
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The `DangerType` type of the {{WebExtAPIRef("downloads")}} API defines a set of possible reasons that a downloadable file might be considered dangerous.
 
 A {{WebExtAPIRef('downloads.DownloadItem')}}'s `danger` property will contain a string taken from the values defined in this type.
 
-> **Note:** These string constants will never change, however the set of DangerTypes may change.
+> [!NOTE]
+> These string constants will never change, however the set of DangerTypes may change.
 
 ## Type
 
@@ -40,7 +41,8 @@ Values of this type are strings. Possible values are:
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#type-DangerType) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#type-DangerType) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

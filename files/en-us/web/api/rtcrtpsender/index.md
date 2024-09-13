@@ -19,6 +19,8 @@ With it, you can configure the encoding used for the corresponding track, get in
   - : The {{domxref("MediaStreamTrack")}} which is being handled by the `RTCRtpSender`. If `track` is `null`, the `RTCRtpSender` doesn't transmit anything.
 - {{domxref("RTCRtpSender.transport")}} {{ReadOnlyInline}}
   - : The {{domxref("RTCDtlsTransport")}} over which the sender is exchanging the RTP and RTCP packets used to manage transmission of media and control data. This value is `null` until the transport is established. When bundling is in use, more than transceiver may be sharing the same transport object.
+- {{domxref("RTCRtpSender.transform")}}
+  - : An {{domxref("RTCRtpScriptTransform")}}<!-- or {{domxref("SFrameTransform")}} --> is used to insert a transform stream ({{domxref("TransformStream")}}) running in a worker thread into the sender pipeline, allowing stream transforms to be applied to encoded video and audio frames after they are output by a codec, and before they are sent.
 
 ### Obsolete properties
 
@@ -27,7 +29,7 @@ With it, you can configure the encoding used for the corresponding track, get in
 
 ## Static methods
 
-- {{domxref("RTCRtpSender.getCapabilities()")}}
+- {{domxref("RTCRtpSender.getCapabilities_static", "RTCRtpSender.getCapabilities()")}}
   - : Returns an object describing the system's capabilities for sending a specified kind of media data.
 
 ## Instance methods
@@ -39,7 +41,7 @@ With it, you can configure the encoding used for the corresponding track, get in
 - {{domxref("RTCRtpSender.setParameters()")}}
   - : Applies changes to parameters which configure how the `track` is encoded and transmitted to the remote peer.
 - {{domxref("RTCRtpSender.setStreams()")}}
-  - : Sets the {{domxref("MediaStream")}}(s) associated with the {{domxref("RTCRtpSender.track", "track")}} being transmitted by this sender.
+  - : Sets the {{domxref("MediaStream", "stream(s)", "", 1)}} associated with the {{domxref("RTCRtpSender.track", "track")}} being transmitted by this sender.
 - {{domxref("RTCRtpSender.replaceTrack()")}}
   - : Attempts to replace the track currently being sent by the `RTCRtpSender` with another track, without performing renegotiation. This method can be used, for example, to toggle between the front- and rear-facing cameras on a device.
 

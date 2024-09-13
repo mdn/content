@@ -10,7 +10,8 @@ browser-compat: api.TouchEvent.TouchEvent
 
 The **`TouchEvent()`** constructor creates a new {{domxref("TouchEvent")}} object.
 
-> **Note:** If you construct a synthetic event using this constructor, that event will not be _trusted_, for security reasons.
+> [!NOTE]
+> If you construct a synthetic event using this constructor, that event will not be _trusted_, for security reasons.
 > Only browser-generated `TouchEvent` objects are trusted and only trusted events trigger default actions.
 
 ## Syntax
@@ -30,7 +31,7 @@ new TouchEvent(type, options)
     - `touches` {{optional_inline}}
       - : A {{domxref("TouchList")}}, defaulting to an empty one, that is a list of objects for every point of contact currently touching the surface.
     - `targetTouches` {{optional_inline}}
-      - : A {{domxref("TouchList")}}, defaulting to an empty one,, that is a list of objects for every point of contact that is touching the surface
+      - : A {{domxref("TouchList")}}, defaulting to an empty one, that is a list of objects for every point of contact that is touching the surface
         _and_ started on the element that is the target of the current event.
     - `changedTouches` {{optional_inline}}
       - : and defaulting to `[]`, of type `Touch[]`, that is a list of objects for every point of contact which contributed to the event.

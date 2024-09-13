@@ -58,7 +58,7 @@ To use this API you need to have the "webNavigation" [permission](/en-US/docs/Mo
 - {{WebExtAPIRef("webNavigation.onCommitted")}}
   - : Fired when a navigation is committed. At least part of the new document has been received from the server and the browser has decided to switch to the new document.
 - {{WebExtAPIRef("webNavigation.onDOMContentLoaded")}}
-  - : Fired when the [DOMContentLoaded](/en-US/docs/Web/API/Window/DOMContentLoaded_event) event is fired in the page.
+  - : Fired when the [DOMContentLoaded](/en-US/docs/Web/API/Document/DOMContentLoaded_event) event is fired in the page.
 - {{WebExtAPIRef("webNavigation.onCompleted")}}
   - : Fired when a document, including the resources it refers to, is completely loaded and initialized. This is equivalent to the DOM [`load`](/en-US/docs/Web/API/Window/load_event) event.
 - {{WebExtAPIRef("webNavigation.onErrorOccurred")}}
@@ -78,7 +78,8 @@ To use this API you need to have the "webNavigation" [permission](/en-US/docs/Mo
 
 {{WebExtExamples("h2")}}
 
-> **Note:** This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/webNavigation/) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/api/webNavigation) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

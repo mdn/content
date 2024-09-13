@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.notifications.NotificationOptions
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 This type contains all the data needed to:
 
@@ -72,4 +72,5 @@ Note that `appIconMaskUrl` and `isClickable` are not supported.
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/notifications/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications) API.

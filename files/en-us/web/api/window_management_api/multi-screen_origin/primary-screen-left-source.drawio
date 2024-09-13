@@ -1,0 +1,85 @@
+<mxfile host="app.diagrams.net" modified="2023-09-05T07:39:16.948Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/118.0" etag="zdt1ocIMYwY0P0IQihPp" version="21.1.4" type="device">
+  <diagram name="Page-1" id="Gzl_CqcP1fjfskOx1EJc">
+    <mxGraphModel dx="1202" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="SDmlWv0pgotIPSEPmgka-19" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" width="640" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="SDmlWv0pgotIPSEPmgka-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="80" width="320" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="SDmlWv0pgotIPSEPmgka-2" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="80" width="240" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="SDmlWv0pgotIPSEPmgka-6" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="380" y="60" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="SDmlWv0pgotIPSEPmgka-7" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#3333FF;strokeWidth=2;" edge="1" parent="SDmlWv0pgotIPSEPmgka-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint y="20" as="sourcePoint" />
+            <mxPoint x="40" y="20" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SDmlWv0pgotIPSEPmgka-8" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#3333FF;strokeWidth=2;" edge="1" parent="SDmlWv0pgotIPSEPmgka-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="20" as="sourcePoint" />
+            <mxPoint x="20" y="40" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SDmlWv0pgotIPSEPmgka-9" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="60" y="60" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="SDmlWv0pgotIPSEPmgka-3" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#3333FF;strokeWidth=2;" edge="1" parent="SDmlWv0pgotIPSEPmgka-9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint y="20" as="sourcePoint" />
+            <mxPoint x="40" y="20" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SDmlWv0pgotIPSEPmgka-4" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#3333FF;strokeWidth=2;" edge="1" parent="SDmlWv0pgotIPSEPmgka-9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="20" as="sourcePoint" />
+            <mxPoint x="20" y="40" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SDmlWv0pgotIPSEPmgka-10" value="&lt;div align=&quot;left&quot;&gt;Multi-screen origin and primary screen left/top: (0,0)&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="90" y="25" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SDmlWv0pgotIPSEPmgka-11" value="&lt;div align=&quot;left&quot;&gt;Secondary screen left/top and availLeft/availTop: (1920,0)&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="410" y="25" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SDmlWv0pgotIPSEPmgka-12" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="80" y="90" as="sourcePoint" />
+            <mxPoint x="400" y="90" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SDmlWv0pgotIPSEPmgka-13" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="60" y="70" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="SDmlWv0pgotIPSEPmgka-14" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#3333FF;strokeWidth=2;" edge="1" parent="SDmlWv0pgotIPSEPmgka-13">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint y="20" as="sourcePoint" />
+            <mxPoint x="40" y="20" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SDmlWv0pgotIPSEPmgka-15" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#3333FF;strokeWidth=2;" edge="1" parent="SDmlWv0pgotIPSEPmgka-13">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="20" as="sourcePoint" />
+            <mxPoint x="20" y="40" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SDmlWv0pgotIPSEPmgka-16" value="&lt;div align=&quot;left&quot;&gt;Primary screen availLeft/availTop: (0,25)&lt;br&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="90" y="85" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SDmlWv0pgotIPSEPmgka-17" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;1920 x 1080&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="175" y="155" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="SDmlWv0pgotIPSEPmgka-18" value="1440 x 900" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="455" y="135" width="130" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

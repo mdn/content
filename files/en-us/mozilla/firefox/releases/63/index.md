@@ -55,7 +55,7 @@ _No changes._
 
 - The {{JSxRef("Symbol.prototype.description")}} property has been implemented ([Firefox bug 1472170](https://bugzil.la/1472170)).
 - The {{JSxRef("Object.fromEntries()")}} method has been added ([Firefox bug 1469019](https://bugzil.la/1469019)).
-- When you try to access a property of an undefined object, the error message is now much improved. Considering the case where `x` is undefined and you try to access `x.y`, instead of `TypeError: x is undefined` the console now returns the more descriptive [`x is undefined; can't access its "y" property`](/en-US/docs/Web/JavaScript/Reference/Errors/Unexpected_type) ([Firefox bug 1259822](https://bugzil.la/1259822)).
+- When you try to access a property of an undefined object, the error message is now much improved. Considering the case where `x` is undefined and you try to access `x.y`, instead of "TypeError: x is undefined" the console now returns the more descriptive [x is undefined; can't access its "y" property](/en-US/docs/Web/JavaScript/Reference/Errors/Unexpected_type) ([Firefox bug 1259822](https://bugzil.la/1259822)).
 
 #### Removals
 
@@ -110,7 +110,7 @@ _No changes._
 #### Removals
 
 - The obsolete and non-standard Firefox-only methods {{DOMxRef("Window.back()")}} and {{DOMxRef("Window.forward()")}} have been removed. Please use the {{DOMxRef("History.back", "window.history.back()")}} and {{DOMxRef("History.forward", "window.history.forward()")}} methods instead ([Firefox bug 1479486](https://bugzil.la/1479486)).
-- The {{DOMxRef("URL.createObjectURL", "createObjectURL()")}} and {{DOMxRef("URL.revokeObjectURL", "revokeObjectURL()")}} methods are no longer available on {{DOMxRef("ServiceWorker")}} instances due to the potential they introduced for memory leaks to occur ([Firefox bug 1264182](https://bugzil.la/1264182)).
+- The {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} and {{DOMxRef("URL.revokeObjectURL_static", "URL.revokeObjectURL()")}} methods are no longer available on {{DOMxRef("ServiceWorker")}} instances due to the potential they introduced for memory leaks to occur ([Firefox bug 1264182](https://bugzil.la/1264182)).
 - Since it was deprecated in the specification anyway, the limited support for Doppler effects on {{DOMxRef("PannerNode")}} has been removed from the Web Audio API. The {{DOMxRef("AudioListener")}} properties `dopplerFactor` and `speedOfSound` have been removed, along with the `PannerNode` method `setVelocity()` ([Firefox bug 1148354](https://bugzil.la/1148354)).
 
 ### CSSOM
@@ -214,4 +214,4 @@ _No changes._
 
 ## Older versions
 
-{{Firefox_for_developers(62)}}
+{{Firefox_for_developers}}

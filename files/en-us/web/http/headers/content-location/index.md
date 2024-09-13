@@ -40,8 +40,8 @@ Content-Location: <url>
 ## Directives
 
 - \<url>
-  - : A [relative](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL#examples_of_relative_urls)
-    (to the request URL) or [absolute](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL#examples_of_absolute_urls)
+  - : A [relative](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL#absolute_urls_vs._relative_urls)
+    (to the request URL) or [absolute](/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL#absolute_urls_vs._relative_urls)
     URL.
 
 ## Examples
@@ -126,7 +126,7 @@ When the form is submitted, the site generates a receipt for the transaction. Th
 server could use `Content-Location` to indicate that receipt's URL for future
 access.
 
-```
+```http
 HTTP/1.1 200 OK
 Content-Type: text/html; charset=utf-8
 Content-Location: /my-receipts/38

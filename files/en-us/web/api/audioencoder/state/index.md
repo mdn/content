@@ -3,12 +3,10 @@ title: "AudioEncoder: state property"
 short-title: state
 slug: Web/API/AudioEncoder/state
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.AudioEncoder.state
 ---
 
-{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`state`** read-only property of the {{domxref("AudioEncoder")}} interface returns the current state of the underlying codec.
 

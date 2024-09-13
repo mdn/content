@@ -38,14 +38,14 @@ A {{jsxref("Map", "map")}}, with each entry being an extensions' identifier stri
 const publicKey = {
   // Here are the extension "inputs"
   extensions: {
-    appid: "https://accounts.example.com"
+    appid: "https://accounts.example.com",
   },
   allowCredentials: {
     id: "fgrt46jfgd...",
-    transports: ["usb", "nfc"]
-    type: "public-key"
+    transports: ["usb", "nfc"],
+    type: "public-key",
   },
-  challenge: new Uint8Array(16) /* from the server */
+  challenge: new Uint8Array(16) /* from the server */,
 };
 
 navigator.credentials
@@ -67,7 +67,8 @@ navigator.credentials
 
 {{Compat}}
 
-> **Note:** Extensions are optional and different browsers may recognize different extensions. Processing extensions is always optional for the client: if a browser does not recognize a given extension, it will just ignore it. For information on which extensions are supported by which browsers, see [Web Authentication extensions](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions).
+> [!NOTE]
+> Extensions are optional and different browsers may recognize different extensions. Processing extensions is always optional for the client: if a browser does not recognize a given extension, it will just ignore it. For information on which extensions are supported by which browsers, see [Web Authentication extensions](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions).
 
 ## See also
 

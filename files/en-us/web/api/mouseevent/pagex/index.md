@@ -22,7 +22,7 @@ See [Coordinate systems](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems#page)
 
 ## Value
 
-A floating-point number of pixels from the left edge of the _document_ at which the mouse was clicked, regardless of any scrolling or viewport positioning that may be in effect.
+A `double` floating-point number of pixels from the left edge of the _document_ at which the mouse was clicked, regardless of any scrolling or viewport positioning that may be in effect.
 
 This property was originally specified in the Touch Events specification as a long integer, but was redefined in the CSSOM View Module to be a double-precision
 floating-point number to allow for subpixel precision.
@@ -116,3 +116,4 @@ Prior to being added to the CSSOM View specification, `pageX` and `pageY` were a
 ## See also
 
 - {{domxref("MouseEvent.pageY")}}
+- [Coordinate systems](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems)

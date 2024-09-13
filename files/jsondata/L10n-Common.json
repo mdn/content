@@ -44,24 +44,24 @@
     "zh-TW": "指南"
   },
   "Implemented_by": {
-    "en-US": "Implemented by:",
-    "es": "Implementado por:",
-    "fr": "Implémenté(e) par&nbsp;:",
-    "ja": "実装先:",
-    "ko": "구현:",
-    "pt-BR": "Implementado por:",
-    "ru": "Выполняется:",
-    "zh-CN": "实现于：",
-    "zh-TW": "實現於："
+    "en-US": "Implemented by",
+    "es": "Implementado por",
+    "fr": "Implémenté(e) par",
+    "ja": "実装先",
+    "ko": "구현",
+    "pt-BR": "Implementado por",
+    "ru": "Реализуется в",
+    "zh-CN": "实现于",
+    "zh-TW": "實現於"
   },
   "Inheritance": {
-    "en-US": "Inheritance:",
+    "en-US": "Inheritance",
     "es": "Herencia",
-    "fr": "Héritage&nbsp;:",
-    "ja": "継承:",
-    "ko": "상속:",
-    "pt-BR": "Herança:",
-    "ru": "Наследование:",
+    "fr": "Héritage",
+    "ja": "継承",
+    "ko": "상속",
+    "pt-BR": "Herança",
+    "ru": "Наследование",
     "zh-CN": "继承",
     "zh-TW": "繼承"
   },
@@ -72,6 +72,7 @@
     "ja": "インスタンスメソッド",
     "ko": "인스턴스 메서드",
     "pt-BR": "Métodos de instância",
+    "ru": "Методы экземпляра",
     "zh-CN": "实例方法",
     "zh-TW": "實體方法"
   },
@@ -82,6 +83,7 @@
     "ja": "インスタンスプロパティ",
     "ko": "인스턴스 속성",
     "pt-BR": "Propriedades de instância",
+    "ru": "Свойства экземпляра",
     "zh-CN": "实例属性",
     "zh-TW": "實體屬性"
   },
@@ -114,6 +116,7 @@
     "ja": "[ページがまだ書かれていません]",
     "ko": "[페이지가 아직 작성되지 않았습니다]",
     "pt-BR": "[Página ainda não foi escrita]",
+    "ru": "[Страница ещё не создана]",
     "zh-CN": "[页面尚未撰写]",
     "zh-TW": "[頁面尚未被撰寫]"
   },
@@ -135,7 +138,7 @@
     "ja": "リファレンス",
     "ko": "참고서",
     "pt-BR": "Referência",
-    "ru": "Руководство",
+    "ru": "Справочник",
     "zh-CN": "参考",
     "zh-TW": "參考"
   },
@@ -151,15 +154,15 @@
     "zh-TW": "$1 的相關頁面"
   },
   "Related_pages_wo_group": {
-    "en-US": "Related pages:",
-    "es": "Páginas relacionadas:",
-    "fr": "Pages similaires&nbsp;:",
-    "ja": "関連するページ:",
-    "ko": "관련 페이지:",
-    "pt-BR": "Páginas relacionadas:",
-    "ru": "Похожие страницы:",
-    "zh-CN": "相关页面：",
-    "zh-TW": "相關頁面："
+    "en-US": "Related pages",
+    "es": "Páginas relacionadas",
+    "fr": "Pages similaires",
+    "ja": "関連するページ",
+    "ko": "관련 페이지",
+    "pt-BR": "Páginas relacionadas",
+    "ru": "Похожие страницы",
+    "zh-CN": "相关页面",
+    "zh-TW": "相關頁面"
   },
   "Static_methods": {
     "en-US": "Static methods",
@@ -168,6 +171,7 @@
     "ja": "静的メソッド",
     "ko": "정적 메서드",
     "pt-BR": "Métodos estáticos",
+    "ru": "Статические методы",
     "zh-CN": "静态方法",
     "zh-TW": "靜態方法"
   },
@@ -178,17 +182,18 @@
     "ja": "静的プロパティ",
     "ko": "정적 속성",
     "pt-BR": "Propriedades estáticas",
+    "ru": "Статические свойства",
     "zh-CN": "静态属性",
     "zh-TW": "靜態屬性"
   },
   "TranslationCTA": {
     "en-US": "Our volunteers haven't translated this article into your language yet. Join us and help get the job done!",
     "es": "Nuestros voluntarios aún no han traducido este artículo al Español. ¡Únete a nosotros y ayuda a traducirlo!",
-    "fr": "Nos volontaires n'ont pas encore traduit cet article en français. Rejoignez-nous et aidez-nous à le faire&nbsp;!",
+    "fr": "Nos volontaires n'ont pas encore traduit cet article en français. Rejoignez-nous et aidez-nous à le faire!",
     "ja": "まだボランティアによって日本語に翻訳されていない記事です。 MDN に参加して、翻訳してみませんか？",
     "ko": "이 문서는 아직 한국어로 번역되지 않았습니다. 저희와 함께 번역을 끝낼 수 있게 도와주세요!",
     "pt-BR": "Nossos voluntários ainda não traduziram este artigo para sua linguagem. Junte-se a nós e nos ajude a traduzir!",
-    "ru": "Наши волонтёры ещё не перевели данную статью на Русский. Присоединяйтесь к нам и помогите закончить эту работу!",
+    "ru": "Наши волонтёры ещё не перевели данную статью на русский язык. Присоединяйтесь к нам и помогите закончить эту работу!",
     "zh-CN": "此页面仍未被本地化，期待你的翻译！",
     "zh-TW": "此頁面仍未被本地化，期待你的翻譯！"
   },
@@ -231,16 +236,16 @@
     "ja": "セクション",
     "ko": "섹션",
     "pt-BR": "sessão",
-    "ru": "секция"
+    "ru": "раздел"
   },
   "summary": {
     "en-US": "The documentation about this has not yet been written; please consider contributing!",
     "es": "La documentación acerca de este tema no ha sido escrita todavía. ¡Por favor considera contribuir!",
-    "fr": "Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant&nbsp;!",
+    "fr": "Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant!",
     "ja": "この項目についての文書はまだ書かれていません。書いてみませんか？",
     "ko": "이 문서는 아직 작성되지 않았습니다. 기여해 주시겠어요?",
     "pt-BR": "A documentação sobre isto ainda não foi escrita; por favor considere contribuir!",
-    "ru": "Документация об этом ещё не написана; пожалуйста, поспособствуйте её написанию!",
+    "ru": "Документация об этом ещё не написана. Пожалуйста, поспособствуйте её написанию!",
     "zh-CN": "此文档尚未被撰写，期待你的贡献！",
     "zh-TW": "此說明文件尚未被撰寫，期待你的貢獻！"
   }

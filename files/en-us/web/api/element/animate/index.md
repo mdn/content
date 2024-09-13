@@ -13,7 +13,8 @@ is a shortcut method which creates a new {{domxref("Animation")}}, applies it to
 element, then plays the animation. It returns the created {{domxref("Animation")}}
 object instance.
 
-> **Note:** Elements can have multiple animations applied to them. You can get a list of the
+> [!NOTE]
+> Elements can have multiple animations applied to them. You can get a list of the
 > animations that affect an element by calling {{domxref("Element.getAnimations()")}}.
 
 ## Syntax
@@ -40,7 +41,7 @@ animate(keyframes, options)
 
         - A string that can be `normal` (meaning no change to the animation's attachment range), a CSS {{cssxref("length-percentage")}} representing an offset, a `<timeline-range-name>`, or a `<timeline-range-name>` with a `<length-percentage>` following it. For example:
 
-          ```
+          ```plain
           "normal"
           "entry"
           "cover 100%"

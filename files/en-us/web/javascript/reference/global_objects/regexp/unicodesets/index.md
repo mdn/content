@@ -19,7 +19,8 @@ The **`unicodeSets`** accessor property of {{jsxref("RegExp")}} instances return
 
 Some valid `u`-mode regexes become invalid in `v`-mode. Specifically, the character class syntax is different and some characters can no longer appear literally. For more information, see [`v`-mode character class](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#v-mode_character_class).
 
-> **Note:** The `v` mode does not interpret grapheme clusters as single characters; they are still multiple code points. For example, `/[🇺🇳]/v` is still able to match `"🇺"`.
+> [!NOTE]
+> The `v` mode does not interpret grapheme clusters as single characters; they are still multiple code points. For example, `/[🇺🇳]/v` is still able to match `"🇺"`.
 
 The set accessor of `unicodeSets` is `undefined`. You cannot change this property directly.
 
@@ -44,12 +45,12 @@ console.log(regex.unicodeSets); // true
 ## See also
 
 - {{jsxref("RegExp.prototype.lastIndex")}}
-- {{JSxRef("RegExp.prototype.dotAll")}}
-- {{JSxRef("RegExp.prototype.global")}}
-- {{JSxRef("RegExp.prototype.hasIndices")}}
-- {{JSxRef("RegExp.prototype.ignoreCase")}}
-- {{JSxRef("RegExp.prototype.multiline")}}
-- {{JSxRef("RegExp.prototype.source")}}
-- {{JSxRef("RegExp.prototype.sticky")}}
-- {{JSxRef("RegExp.prototype.unicode")}}
+- {{jsxref("RegExp.prototype.dotAll")}}
+- {{jsxref("RegExp.prototype.global")}}
+- {{jsxref("RegExp.prototype.hasIndices")}}
+- {{jsxref("RegExp.prototype.ignoreCase")}}
+- {{jsxref("RegExp.prototype.multiline")}}
+- {{jsxref("RegExp.prototype.source")}}
+- {{jsxref("RegExp.prototype.sticky")}}
+- {{jsxref("RegExp.prototype.unicode")}}
 - [RegExp v flag with set notation and properties of strings](https://v8.dev/features/regexp-v-flag) on v8.dev (2022)

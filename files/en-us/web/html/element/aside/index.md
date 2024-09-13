@@ -75,7 +75,7 @@ This example uses `<aside>` to mark up a paragraph in an article. The paragraph 
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
@@ -91,7 +91,7 @@ This example uses `<aside>` to mark up a paragraph in an article. The paragraph 
       <th scope="row">Implicit ARIA role</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Complementary_role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/complementary_role"
             >complementary</a
           ></code
         >

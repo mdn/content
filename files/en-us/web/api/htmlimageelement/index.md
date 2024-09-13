@@ -22,6 +22,8 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLImageElement.alt")}}
   - : A string that reflects the [`alt`](/en-US/docs/Web/HTML/Element/img#alt) HTML attribute, thus indicating the alternate fallback content to be displayed if the image has not been loaded.
+- {{domxref("HTMLImageElement.attributionSrc")}} {{securecontext_inline}} {{experimental_inline}}
+  - : Gets and sets the [`attributionsrc`](/en-US/docs/Web/HTML/Element/img#attributionsrc) attribute on an {{htmlelement("img")}} element programmatically, reflecting the value of that attribute. `attributionsrc` specifies that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header along with the image request. On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} or {{httpheader("Attribution-Reporting-Register-Trigger")}} header in the response, to register an image-based [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#html-based_event_sources) or [attribution trigger](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_triggers#html-based_attribution_triggers), respectively.
 - {{domxref("HTMLImageElement.complete")}} {{ReadOnlyInline}}
   - : Returns a boolean value that is `true` if the browser has finished fetching the image, whether successful or not. That means this value is also `true` if the image has no {{domxref("HTMLImageElement.src", "src")}} value indicating an image to load.
 - {{domxref("HTMLImageElement.crossOrigin")}}
@@ -30,7 +32,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : Returns a string representing the URL from which the currently displayed image was loaded. This may change as the image is adjusted due to changing conditions, as directed by any [media queries](/en-US/docs/Web/CSS/CSS_media_queries) which are in place.
 - {{domxref("HTMLImageElement.decoding")}}
   - : An optional string representing a hint given to the browser on how it should decode the image. If this value is provided, it must be one of the possible permitted values: `sync` to decode the image synchronously, `async` to decode it asynchronously, or `auto` to indicate no preference (which is the default). Read the {{domxref("HTMLImageElement.decoding", "decoding")}} page for details on the implications of this property's values.
-- {{domxref("HTMLImageElement.fetchPriority")}} {{Experimental_Inline}}
+- {{domxref("HTMLImageElement.fetchPriority")}}
   - : An optional string representing a hint given to the browser on how it should prioritize fetching of the image relative to other images. If this value is provided, it must be one of the possible permitted values: `high` to fetch at a high priority, `low` to fetch at a low priority, or `auto` to indicate no preference (which is the default).
 - {{domxref("HTMLImageElement.height")}}
   - : An integer value that reflects the [`height`](/en-US/docs/Web/HTML/Element/img#height) HTML attribute, indicating the rendered height of the image in CSS pixels.
@@ -83,7 +85,7 @@ _Inherits methods from its parent, {{domxref("HTMLElement")}}._
 
 ## Errors
 
-If an error occurs while trying to load or render the image, and an `onerror` event handler has been configured to handle the {{domxref("Element/error_event", "error")}} event, that event handler will get called. This can happen in a number of situations, including:
+If an error occurs while trying to load or render the image, and an `onerror` event handler has been configured to handle the {{domxref("HTMLElement/error_event", "error")}} event, that event handler will get called. This can happen in a number of situations, including:
 
 - The [`src`](/en-US/docs/Web/HTML/Element/img#src) attribute is empty or `null`.
 - The specified `src` URL is the same as the URL of the page the user is currently on.

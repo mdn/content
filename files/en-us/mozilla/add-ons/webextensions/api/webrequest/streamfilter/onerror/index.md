@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.webRequest.StreamFilter.onerror
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 An event handler that will be called when an error occurs. This is most often because an invalid request ID was passed into {{WebExtAPIRef("webRequest.filterResponseData()")}}.
 

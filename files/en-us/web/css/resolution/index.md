@@ -26,7 +26,8 @@ The `<resolution>` data type consists of a strictly positive {{cssxref("&lt;numb
 - `x`
   - : Alias for `dppx`.
 
-> **Note:** Although the number `0` is always the same regardless of unit, the unit may not be omitted. In other words, `0` is invalid and does not represent `0dpi`, `0dpcm`, or `0dppx`.
+> [!NOTE]
+> Although the number `0` is always the same regardless of unit, the unit may not be omitted. In other words, `0` is invalid and does not represent `0dpi`, `0dpcm`, or `0dppx`.
 
 ## Examples
 
@@ -34,6 +35,18 @@ The `<resolution>` data type consists of a strictly positive {{cssxref("&lt;numb
 
 ```css
 @media print and (min-resolution: 300dpi) {
+  /* … */
+}
+
+@media (resolution: 120dpcm) {
+  /* … */
+}
+
+@media (min-resolution: 2dppx) {
+  /* … */
+}
+
+@media (resolution: 1x) {
   /* … */
 }
 ```

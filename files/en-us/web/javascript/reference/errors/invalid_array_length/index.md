@@ -17,10 +17,12 @@ From Firefox version 89 the maximum value of {{jsxref("ArrayBuffer")}} is 2<sup>
 
 ## Message
 
-```
+```plain
 RangeError: invalid array length (V8-based & Firefox)
-RangeError: Array buffer allocation failed (V8-based)
 RangeError: Array size is not a small enough positive integer. (Safari)
+
+RangeError: Invalid array buffer length (V8-based)
+RangeError: length too large (Safari)
 ```
 
 ## Error type
@@ -29,20 +31,13 @@ RangeError: Array size is not a small enough positive integer. (Safari)
 
 ## What went wrong?
 
-An invalid array length might appear in these situations:
+The error might appear when attempting to produce an {{jsxref("Array")}} or {{jsxref("ArrayBuffer")}} with an invalid length, which includes:
 
-- Creating an {{jsxref("Array")}} or {{jsxref("ArrayBuffer")}} with a negative length, or setting a negative value for the {{jsxref("Array/length", "length")}} property.
-- Creating an {{jsxref("Array")}} or setting the {{jsxref("Array/length", "length")}} property greater than 2<sup>32</sup>-1.
-- Creating an {{jsxref("ArrayBuffer")}} that is bigger than 2<sup>32</sup>-1 (2GiB-1) on a 32-bit system, or 2<sup>33</sup> (8GiB) on a 64-bit system.
-- Creating an {{jsxref("Array")}} or setting the {{jsxref("Array/length", "length")}} property to a floating-point number.
-- Before Firefox 89: Creating an {{jsxref("ArrayBuffer")}} that is bigger than 2<sup>32</sup>-1 (2GiB-1).
+- Negative length, via the constructor or setting the {{jsxref("Array/length", "length")}} property.
+- Non-integer length, via the constructor or setting the {{jsxref("Array/length", "length")}} property. (The `ArrayBuffer` constructor coerces the length to an integer, but the `Array` constructor does not.)
+- Exceeding the maximum length supported by the platform. For arrays, the maximum length is 2<sup>32</sup>-1. For `ArrayBuffer`, the maximum length is 2<sup>31</sup>-1 (2GiB-1) on 32-bit systems, or 2<sup>33</sup> (8GiB) on 64-bit systems. This can happen via the constructor, setting the `length` property, or array methods that implicitly set the length property (such as {{jsxref("Array/push", "push")}} and {{jsxref("Array/concat", "concat")}}).
 
-If you are creating an `Array`, using the constructor, you probably want to
-use the literal notation instead, as the first argument is interpreted as the length of
-the `Array`.
-
-Otherwise, you might want to clamp the length before setting the length property, or
-using it as argument of the constructor.
+If you are creating an `Array` using the constructor, you probably want to use the literal notation instead, as the first argument is interpreted as the length of the `Array`. Otherwise, you might want to clamp the length before setting the length property, or using it as argument of the constructor.
 
 ## Examples
 
@@ -62,6 +57,12 @@ b.length = b.length + 1; // set the length property to 2^32
 b.length = 2.5; // set the length property to a floating-point number
 
 const c = new Array(2.5); // pass a floating-point number
+
+// Concurrent modification that accidentally grows the array infinitely
+const arr = [1, 2, 3];
+for (const e of arr) {
+  arr.push(e * 10);
+}
 ```
 
 ### Valid cases
@@ -69,7 +70,7 @@ const c = new Array(2.5); // pass a floating-point number
 ```js example-good
 [Math.pow(2, 40)]; // [ 1099511627776 ]
 [-1]; // [ -1 ]
-new ArrayBuffer(Math.pow(2, 32) - 1);
+new ArrayBuffer(Math.pow(2, 31) - 1);
 new ArrayBuffer(Math.pow(2, 33)); // 64-bit systems after Firefox 89
 new ArrayBuffer(0);
 
@@ -84,6 +85,11 @@ b.length = Math.min(0xffffffff, b.length + 1);
 b.length = 3;
 
 const c = new Array(3);
+
+// Because array methods save the length before iterating, it is safe to grow
+// the array during iteration
+const arr = [1, 2, 3];
+arr.forEach((e) => arr.push(e * 10));
 ```
 
 ## See also

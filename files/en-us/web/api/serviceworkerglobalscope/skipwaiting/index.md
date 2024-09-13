@@ -6,9 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.ServiceWorkerGlobalScope.skipWaiting
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers("service")}}
 
-The **`ServiceWorkerGlobalScope.skipWaiting()`** method of the {{domxref("ServiceWorkerGlobalScope")}} forces the waiting service worker to become the active service worker.
+The **`skipWaiting()`** method of the {{domxref("ServiceWorkerGlobalScope")}} interface forces the waiting service worker to become the active service worker.
 
 Use this method with {{domxref("Clients.claim()")}} to ensure that updates to the underlying service worker take effect immediately for both the current client and all other active clients.
 
@@ -55,7 +55,5 @@ self.addEventListener("install", (event) => {
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{domxref("Clients.claim()")}}
-- {{jsxref("Promise", "Promises")}}
 - [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)

@@ -22,22 +22,12 @@ To present layers to the XR device, add them to the `layers` render state using 
 
 ## Instance properties
 
-_Inherits properties from its parent, {{domxref("XRCompositionLayer")}}._
+_Inherits properties from its parent, {{domxref("XRCompositionLayer")}} and {{domxref("EventTarget")}}._
 
-- {{domxref("XRCompositionLayer.blendTextureSourceAlpha")}}
-  - : A boolean enabling the layer's texture alpha channel.
-- {{domxref("XRCompositionLayer.chromaticAberrationCorrection")}}
-  - : A boolean enabling optical chromatic aberration correction for the layer if the device supports it, [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) otherwise.
 - {{domxref("XRProjectionLayer.fixedFoveation")}} {{Experimental_Inline}}
   - : A number indicating the amount of foveation used by the XR compositor for the layer. Fixed Foveated Rendering (FFR) renders the edges of the eye textures at a lower resolution than the center and reduces the GPU load.
 - {{domxref("XRProjectionLayer.ignoreDepthValues")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : A boolean indicating that the XR compositor is not making use of depth buffer values when rendering the layer.
-- {{domxref("XRCompositionLayer.layout")}} {{ReadOnlyInline}}
-  - : The layout type of the layer.
-- {{domxref("XRCompositionLayer.mipLevels")}} {{ReadOnlyInline}}
-  - : The actual number of mip levels in the color and texture data for the layer.
-- {{domxref("XRCompositionLayer.needsRedraw")}} {{ReadOnlyInline}}
-  - : A boolean signaling that the layer should be re-rendered in the next frame.
 - {{domxref("XRProjectionLayer.textureArrayLength")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : The layer's layer count for array textures when using `texture-array` as the `textureType`.
 - {{domxref("XRProjectionLayer.textureHeight")}} {{ReadOnlyInline}} {{Experimental_Inline}}
@@ -48,15 +38,6 @@ _Inherits properties from its parent, {{domxref("XRCompositionLayer")}}._
 ## Instance methods
 
 _Inherits methods from its parents, {{domxref("XRCompositionLayer")}} and {{domxref("EventTarget")}}_.
-
-- {{domxref("EventTarget.addEventListener()")}}
-  - : Registers an event handler of a specific event type on the `EventTarget`.
-- {{domxref("XRCompositionLayer.destroy()")}}
-  - : Deletes the underlying layer attachments.
-- {{domxref("EventTarget.dispatchEvent()")}}
-  - : Dispatches an event to this `EventTarget`.
-- {{domxref("EventTarget.removeEventListener()")}}
-  - : Removes an event listener from the `EventTarget`.
 
 ## Specifications
 

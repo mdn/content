@@ -5,15 +5,13 @@ page-type: web-api-interface
 browser-compat: api.PerformanceMark
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}} {{AvailableInWorkers}}
 
 **`PerformanceMark`** is an interface for {{domxref("PerformanceEntry")}} objects with an {{domxref("PerformanceEntry.entryType","entryType")}} of "`mark`".
 
 Entries of this type are typically created by calling {{domxref("Performance.mark","performance.mark()")}} to add a _named_ {{domxref("DOMHighResTimeStamp")}} (the _mark_) to the browser's performance timeline. To create a performance mark that isn't added to the browser's performance timeline, use the constructor.
 
 {{InheritanceDiagram}}
-
-{{AvailableInWorkers}}
 
 ## Constructor
 

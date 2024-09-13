@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.IDBDatabase.createObjectStore
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`createObjectStore()`** method of the
 {{domxref("IDBDatabase")}} interface creates and returns a new {{domxref("IDBObjectStore")}}.
@@ -16,10 +16,8 @@ define important optional properties. You can use the property to uniquely ident
 individual objects in the store. As the property is an identifier, it should be unique
 to every object, and every object should have that property.
 
-This method can be called _only_ within a [`versionchange`](/en-US/docs/Web/API/IDBTransaction#version_change)
+This method can be called _only_ within a [`versionchange`](/en-US/docs/Web/API/IDBDatabase/versionchange_event)
 transaction.
-
-{{AvailableInWorkers}}
 
 ## Syntax
 
@@ -53,7 +51,7 @@ A new {{domxref("IDBObjectStore")}}.
 
 ### Exceptions
 
-This method may raise a {{domxref("DOMException")}} with a {{domxref("DOMError")}} of
+This method may raise a {{domxref("DOMException")}} with a `name` of
 one of the following types:
 
 - `InvalidStateError` {{domxref("DOMException")}}
@@ -63,7 +61,7 @@ one of the following types:
   - : Thrown if a request is made on a source database that does not exist
     (for example, when the database has been deleted or removed). In Firefox previous to version 41,
     an `InvalidStateError` was raised in this case as well, which
-    was misleading; this has now been fixed (see [Webkit bug 1176165](https://bugzil.la/1176165)).
+    was misleading; this has now been fixed (see [Firefox bug 1176165](https://bugzil.la/1176165)).
 - `ConstraintError` {{domxref("DOMException")}}
   - : Thrown if an object store with the given name (based on a case-sensitive comparison)
     already exists in the connected database.
@@ -86,7 +84,8 @@ request.onupgradeneeded = (event) => {
   const db = event.target.result;
 
   db.onerror = (event) => {
-    note.innerHTML += "<li>Error loading database.</li>";
+    note.appendChild(document.createElement("li")).textContent =
+      "Error loading database.";
   };
 
   // Create an objectStore for this database
@@ -105,7 +104,8 @@ request.onupgradeneeded = (event) => {
 
   objectStore.createIndex("notified", "notified", { unique: false });
 
-  note.innerHTML += "<li>Object store created.</li>";
+  note.appendChild(document.createElement("li")).textContent =
+    "Object store created.";
 };
 ```
 

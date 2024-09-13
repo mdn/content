@@ -13,7 +13,7 @@ Programming languages are very useful for rapidly completing repetitive tasks, f
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy, a basic understanding of HTML and CSS,
+        A basic understanding of HTML, CSS, and
         <a href="/en-US/docs/Learn/JavaScript/First_steps"
           >JavaScript first steps</a
         >.
@@ -82,7 +82,7 @@ function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   for (let i = 0; i < 100; i++) {
     ctx.beginPath();
-    ctx.fillStyle = "rgba(255,0,0,0.5)";
+    ctx.fillStyle = "rgb(255 0 0 / 50%)";
     ctx.arc(
       random(canvas.width),
       random(canvas.height),
@@ -104,7 +104,7 @@ You don't have to understand all the code for now, but let's look at the part of
 ```js
 for (let i = 0; i < 100; i++) {
   ctx.beginPath();
-  ctx.fillStyle = "rgba(255,0,0,0.5)";
+  ctx.fillStyle = "rgb(255 0 0 / 50%)";
   ctx.arc(
     random(canvas.width),
     random(canvas.height),
@@ -126,7 +126,7 @@ If we weren't using a loop here, we'd have to repeat the following code for ever
 
 ```js
 ctx.beginPath();
-ctx.fillStyle = "rgba(255,0,0,0.5)";
+ctx.fillStyle = "rgb(255 0 0 / 50%)";
 ctx.arc(
   random(canvas.width),
   random(canvas.height),
@@ -161,7 +161,7 @@ for (const cat of cats) {
 In this example, `for (const cat of cats)` says:
 
 1. Given the collection `cats`, get the first item in the collection.
-2. Assign it to the variable `cat` and then run the code between the curly brackets `{}`.
+2. Assign it to the variable `cat` and then run the code between the curly braces `{}`.
 3. Get the next item, and repeat (2) until you've reached the end of the collection.
 
 ### map() and filter()
@@ -185,7 +185,7 @@ console.log(upperCats);
 
 Here we pass a function into {{jsxref("Array.prototype.map()","cats.map()")}}, and `map()` calls the function once for each item in the array, passing in the item. It then adds the return value from each function call to a new array, and finally returns the new array. In this case the function we provide converts the item to uppercase, so the resulting array contains all our cats in uppercase:
 
-```
+```js-nolint
 [ "LEOPARD", "SERVAL", "JAGUAR", "TIGER", "CARACAL", "LION" ]
 ```
 
@@ -207,7 +207,7 @@ console.log(filtered);
 This looks a lot like `map()`, except the function we pass in returns a [boolean](/en-US/docs/Learn/JavaScript/First_steps/Variables#booleans): if it returns `true`, then the item is included in the new array.
 Our function tests that the item starts with the letter "L", so the result is an array containing only cats whose names start with "L":
 
-```
+```js-nolint
 [ "Leopard", "Lion" ]
 ```
 
@@ -266,7 +266,7 @@ function calculate() {
     const newResult = `${i} x ${i} = ${i * i}`;
     results.textContent += `${newResult}\n`;
   }
-  results.textContent += "\nFinished!";
+  results.textContent += "\nFinished!\n\n";
 }
 
 const calculateBtn = document.querySelector("#calculate");
@@ -347,13 +347,13 @@ console.log(myFavoriteCats); // "My cats are called Pete, Biggles, Jasmine, "
 
 The final output sentence isn't very well-formed:
 
-```
+```plain
 My cats are called Pete, Biggles, Jasmine,
 ```
 
 We'd prefer it to handle the last cat differently, like this:
 
-```
+```plain
 My cats are called Pete, Biggles, and Jasmine.
 ```
 
@@ -440,7 +440,8 @@ btn.addEventListener("click", () => {
 
 5. After the loop, we check whether we set a contact, and if not we set the paragraph text to "Contact not found.".
 
-> **Note:** You can view the [full source code on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/contact-search.html) too (also [see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html)).
+> [!NOTE]
+> You can view the [full source code on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/contact-search.html) too (also [see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html)).
 
 ## Skipping iterations with continue
 
@@ -488,7 +489,8 @@ Here's the output:
 3. If the square root and the rounded down square root do not equal one another (`!==`), it means that the square root is not an integer, so we are not interested in it. In such a case, we use the `continue` statement to skip on to the next loop iteration without recording the number anywhere.
 4. If the square root is an integer, we skip past the `if` block entirely, so the `continue` statement is not executed; instead, we concatenate the current `i` value plus a space at the end of the paragraph content.
 
-> **Note:** You can view the [full source code on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/integer-squares.html) too (also [see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html)).
+> [!NOTE]
+> You can view the [full source code on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/integer-squares.html) too (also [see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html)).
 
 ## while and do...while
 
@@ -496,7 +498,7 @@ Here's the output:
 
 First, let's have a look at the [while](/en-US/docs/Web/JavaScript/Reference/Statements/while) loop. This loop's syntax looks like so:
 
-```
+```js-nolint
 initializer
 while (condition) {
   // code to run
@@ -534,11 +536,12 @@ while (i < cats.length) {
 console.log(myFavoriteCats); // "My cats are called Pete, Biggles, and Jasmine."
 ```
 
-> **Note:** This still works just the same as expected — have a look at it [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html) (also view the [full source code](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/while.html)).
+> [!NOTE]
+> This still works just the same as expected — have a look at it [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html) (also view the [full source code](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/while.html)).
 
 The [do...while](/en-US/docs/Web/JavaScript/Reference/Statements/do...while) loop is very similar, but provides a variation on the while structure:
 
-```
+```js-nolint
 initializer
 do {
   // code to run
@@ -573,9 +576,11 @@ do {
 console.log(myFavoriteCats); // "My cats are called Pete, Biggles, and Jasmine."
 ```
 
-> **Note:** Again, this works just the same as expected — have a look at it [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html) (also view the [full source code](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/do-while.html)).
+> [!NOTE]
+> Again, this works just the same as expected — have a look at it [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html) (also view the [full source code](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/do-while.html)).
 
-> **Warning:** With while and do...while — as with all loops — you must make sure that the initializer is incremented or, depending on the case, decremented, so the condition eventually becomes false.
+> [!WARNING]
+> With while and do...while — as with all loops — you must make sure that the initializer is incremented or, depending on the case, decremented, so the condition eventually becomes false.
 > If not, the loop will go on forever, and either the browser will force it to stop, or it will crash. This is called an **infinite loop**.
 
 ## Active learning: Launch countdown
@@ -599,7 +604,8 @@ Specifically, we want you to:
 
 - Remember to include an iterator! However, in this example we are counting down after each iteration, not up, so you **don't** want `i++` — how do you iterate downwards?
 
-> **Note:** If you start typing the loop (for example (while(i>=0)), the browser might get stuck because you have not yet entered the end condition. So be careful with this. You can start writing your code in a comment to deal with this issue and remove the comment after you finish.
+> [!NOTE]
+> If you start typing the loop (for example (while(i>=0)), the browser might get stuck because you have not yet entered the end condition. So be careful with this. You can start writing your code in a comment to deal with this issue and remove the comment after you finish.
 
 If you make a mistake, you can always reset the example with the "Reset" button.
 If you get really stuck, press "Show solution" to see a solution.
@@ -613,8 +619,8 @@ If you get really stuck, press "Show solution" to see a solution.
   Press Esc to move focus away from the code area (Tab inserts a tab character).
 </p>
 <textarea id="code" class="playable-code" style="height: 300px;width: 95%">
-let output = document.querySelector('.output');
-output.innerHTML = '';
+const output = document.querySelector('.output');
+output.textContent = "";
 
 // let i = 10;
 
@@ -682,7 +688,7 @@ solution.addEventListener("click", function () {
 });
 
 let jsSolution = `const output = document.querySelector('.output');
-output.innerHTML = '';
+output.textContent = "";
 
 let i = 10;
 
@@ -710,12 +716,12 @@ window.addEventListener("load", updateCode);
 // make it write a tab at the caret position instead
 
 textarea.onkeydown = function (e) {
-  if (e.keyCode === 9) {
+  if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
   }
 
-  if (e.keyCode === 27) {
+  if (e.code === "Escape") {
     textarea.blur();
   }
 };
@@ -891,12 +897,12 @@ window.addEventListener("load", updateCode);
 // make it write a tab at the caret position instead
 
 textarea.onkeydown = function (e) {
-  if (e.keyCode === 9) {
+  if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
   }
 
-  if (e.keyCode === 27) {
+  if (e.code === "Escape") {
     textarea.blur();
   }
 };
@@ -947,7 +953,7 @@ Let's have a look at them all again.
 
 First `for...of`:
 
-```
+```js-nolint
 for (const item of array) {
   // code to run
 }
@@ -955,7 +961,7 @@ for (const item of array) {
 
 `for`:
 
-```
+```js-nolint
 for (initializer; condition; final-expression) {
   // code to run
 }
@@ -963,7 +969,7 @@ for (initializer; condition; final-expression) {
 
 `while`:
 
-```
+```js-nolint
 initializer
 while (condition) {
   // code to run
@@ -974,7 +980,7 @@ while (condition) {
 
 and finally `do...while`:
 
-```
+```js-nolint
 initializer
 do {
   // code to run
@@ -983,7 +989,8 @@ do {
 } while (condition)
 ```
 
-> **Note:** There are other loop types/features too, which are useful in advanced/specialized situations and beyond the scope of this article. If you want to go further with your loop learning, read our advanced [Loops and iteration guide](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration).
+> [!NOTE]
+> There are other loop types/features too, which are useful in advanced/specialized situations and beyond the scope of this article. If you want to go further with your loop learning, read our advanced [Loops and iteration guide](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration).
 
 ## Test your skills!
 

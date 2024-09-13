@@ -7,11 +7,12 @@ status:
 browser-compat: javascript.builtins.String.link
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{JSRef}} {{Deprecated_Header}}
 
-The **`link()`** method creates a string that embeds a string in an {{HTMLElement("a")}} element (`<a href="...">str</a>`), to be used as a hypertext link to another URL.
+The **`link()`** method of {{jsxref("String")}} values creates a string that embeds this string in an {{HTMLElement("a")}} element (`<a href="...">str</a>`), to be used as a hypertext link to another URL.
 
-> **Note:** All [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods) are deprecated and only standardized for compatibility purposes. Use [DOM APIs](/en-US/docs/Web/API/Document_Object_Model) such as [`document.createElement()`](/en-US/docs/Web/API/Document/createElement) instead.
+> [!NOTE]
+> All [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods) are deprecated and only standardized for compatibility purposes. Use [DOM APIs](/en-US/docs/Web/API/Document_Object_Model) such as [`document.createElement()`](/en-US/docs/Web/API/Document/createElement) instead.
 
 ## Syntax
 
@@ -32,14 +33,28 @@ A string beginning with an `<a href="url">` start tag (double quotes in `url` ar
 
 ### Using link()
 
-The following example displays the word "MDN" as a hypertext link that returns the user to the Mozilla Developer Network.
+The code below creates an HTML string and then replaces the document's body with it:
 
 ```js
-const hotText = "MDN";
-const url = "https://developer.mozilla.org/";
+const contentString = "MDN Web Docs";
 
-console.log(`Click to return to ${hotText.link(url)}`);
-// Click to return to <a href="https://developer.mozilla.org/">MDN</a>
+document.body.innerHTML = contentString.link("https://developer.mozilla.org/");
+```
+
+This will create the following HTML:
+
+```html
+<a href="https://developer.mozilla.org/">MDN Web Docs</a>
+```
+
+Instead of using `link()` and creating HTML text directly, you should use DOM APIs such as [`document.createElement()`](/en-US/docs/Web/API/Document/createElement). For example:
+
+```js
+const contentString = "MDN Web Docs";
+const elem = document.createElement("a");
+elem.href = "https://developer.mozilla.org/";
+elem.innerText = contentString;
+document.body.appendChild(elem);
 ```
 
 ## Specifications
@@ -53,5 +68,5 @@ console.log(`Click to return to ${hotText.link(url)}`);
 ## See also
 
 - [Polyfill of `String.prototype.link` in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- {{jsxref("String.prototype.anchor()")}}
-- {{domxref("document.links")}}
+- [HTML wrapper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#html_wrapper_methods)
+- {{HTMLElement("a")}}

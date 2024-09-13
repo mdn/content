@@ -11,7 +11,7 @@ reduce function is used.
 
 ## Message
 
-```
+```plain
 TypeError: Reduce of empty array with no initial value (V8-based & Firefox & Safari)
 ```
 

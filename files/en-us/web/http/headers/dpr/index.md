@@ -34,7 +34,7 @@ If a server uses the `DPR` hint to choose which resource is sent in a response, 
 
 If the `DPR` header appears more than once in a message the last occurrence is used.
 
-> **Note:**
+> [!NOTE]
 >
 > - Client Hints are accessible only on secure origins (via TLS).
 > - A server has to opt in to receive the `DPR` header from the client, by sending the {{HTTPHeader("Accept-CH")}} response header.
@@ -78,7 +78,7 @@ Content-DPR: 2.0
 
 ## See also
 
-- [Improving user privacy and developer experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints/) (web.dev)
+- [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)
 - Device client hints
 
   - {{HTTPHeader("Content-DPR")}}

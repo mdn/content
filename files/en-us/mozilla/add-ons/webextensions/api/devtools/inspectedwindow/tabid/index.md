@@ -5,7 +5,7 @@ page-type: webextension-api-property
 browser-compat: webextensions.api.devtools.inspectedWindow.tabId
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The ID of the {{WebExtAPIRef("tabs.Tab", "tab")}} that this instance of the devtools is attached to, represented as a number.
 
@@ -42,7 +42,8 @@ browser.runtime.onMessage.addListener(handleMessage);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.devtools`](https://developer.chrome.com/docs/extensions/mv3/devtools/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.devtools`](https://developer.chrome.com/docs/extensions/how-to/devtools/extend-devtools) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

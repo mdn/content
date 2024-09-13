@@ -8,7 +8,7 @@ status:
 browser-compat: api.ImageCapture.takePhoto
 ---
 
-{{APIRef("MediaStream Image")}}{{SeeCompatTable}}
+{{APIRef("Image Capture API")}}{{SeeCompatTable}}
 
 The **`takePhoto()`** method of the
 {{domxref("ImageCapture")}} interface takes a single exposure using the video capture
@@ -46,6 +46,13 @@ takePhoto(photoSettings)
 ### Return value
 
 A {{jsxref("Promise")}} that resolves with a {{domxref("Blob")}}.
+
+### Exceptions
+
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if `readyState` property of the `MediaStreamTrack` passing in the constructor is not `live`.
+- `UnknownError` {{domxref("DOMException")}}
+  - : Thrown if the operation can't complete for any reason.
 
 ## Examples
 

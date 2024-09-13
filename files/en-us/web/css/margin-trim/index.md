@@ -30,7 +30,7 @@ margin-trim: revert-layer;
 margin-trim: unset;
 ```
 
-## Values
+### Values
 
 - `none`
 

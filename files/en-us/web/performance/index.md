@@ -29,24 +29,18 @@ The MDN [Web Performance Learning Area](/en-US/docs/Learn/Performance) contains 
 - [Web performance basics](/en-US/docs/Learn/Performance/Web_Performance_Basics)
   - : In addition to the front end components of HTML, CSS, JavaScript, and media files, there are features that can make applications slower and features that can make applications subjectively and objectively faster. There are many APIs, developer tools, best practices, and bad practices relating to web performance. Here we'll introduce many of these features ad the basic level and provide links to deeper dives to improve performance for each topic.
 - [HTML performance features](/en-US/docs/Learn/Performance/HTML)
-  - : Some attributes and the source order of your markup can impact the performance or your website. By minimizing the number of DOM nodes, making sure the best order and attributes are used for including content such as styles, scripts, media, and third-party scripts, you can drastically improve the user experience. This article looks in detail at how HTML can be used to ensure maximum performance.
+  - : Some attributes and the source order of your markup can impact the performance of your website. By minimizing the number of DOM nodes, making sure the best order and attributes are used for including content such as styles, scripts, media, and third-party scripts, you can drastically improve the user experience. This article looks in detail at how HTML can be used to ensure maximum performance.
 - [Multimedia: images and video](/en-US/docs/Learn/Performance/Multimedia)
   - : The lowest hanging fruit of web performance is often media optimization. Serving different media files based on each user agent's capability, size, and pixel density is possible. Additional tips like removing audio tracks from background videos can improve performance even further. In this article we discuss the impact video, audio, and image content has on performance, and the methods to ensure that impact is as minimal as possible.
 - [CSS performance features](/en-US/docs/Learn/Performance/CSS)
   - : CSS may be a less important optimization focus for improved performance, but there are some CSS features that impact performance more than others. In this article we look at some CSS properties that impact performance and suggested ways of handling styles to ensure performance is not negatively impacted.
 - [JavaScript performance best practices](/en-US/docs/Learn/Performance/JavaScript)
   - : JavaScript, when used properly, can allow for interactive and immersive web experiences — or it can significantly harm download time, render time, in-app performance, battery life, and user experience. This article outlines some JavaScript best practices that should be considered to ensure even complex content is as performant as possible.
-- [Mobile performance](/en-US/docs/Learn/Performance/Mobile)
-  - : With web access on mobile devices being so popular, and all mobile platforms having fully-fledged web browsers, but possibly limited bandwidth, CPU and battery life, it is important to consider the performance of your web content on these platforms. This article looks at mobile-specific performance considerations.
 
 ## Using Performance APIs
 
-- [Performance API](/en-US/docs/Web/API/Performance_API/Using_the_Performance_API)
-  - : This guide describes how to use the [`Performance`](/en-US/docs/Web/API/Performance) interfaces that are defined in the [High-Resolution Time](https://w3c.github.io/hr-time/) standard.
 - [Resource Timing API](/en-US/docs/Web/API/Performance_API/Resource_timing)
-  - : [Resource loading and timing](/en-US/docs/Web/API/Performance_API/Resource_timing) the loading of those resources, including managing the resource buffer and coping with CORS
-- [The performance timeline](/en-US/docs/Web/API/Performance_Timeline/Using_Performance_Timeline)
-  - : The [Performance Timeline](/en-US/docs/Web/API/Performance_Timeline) standard defines extensions to the [`Performance`](/en-US/docs/Web/API/Performance) interface to support client-side latency measurements within applications. Together, these interfaces can be used to help identify an application's performance bottlenecks.
+  - : [Resource loading and timing](/en-US/docs/Web/API/Performance_API/Resource_timing) the loading of those resources, including managing the resource buffer and coping with [CORS](/en-US/docs/Web/HTTP/CORS).
 - [User Timing API](/en-US/docs/Web/API/Performance_API/User_timing)
   - : Create application specific timestamps using the [user timing API](/en-US/docs/Web/API/Performance_API/User_timing)'s "mark" and "measure" entry types - that are part of the browser's performance timeline.
 - [Beacon API](/en-US/docs/Web/API/Beacon_API)
@@ -73,7 +67,6 @@ The MDN [Web Performance Learning Area](/en-US/docs/Learn/Performance) contains 
 - {{glossary('First contentful paint')}}
 - {{glossary('First CPU idle')}}
 - {{glossary('First input delay')}}
-- {{glossary('First interactive')}}
 - {{glossary('First meaningful paint')}}
 - {{glossary('First paint')}}
 - {{glossary('HTTP')}}
@@ -136,9 +129,9 @@ CSS
 
 JavaScript
 
-- [DOMContentLoaded](/en-US/docs/Web/API/Window/DOMContentLoaded_event)
+- [DOMContentLoaded](/en-US/docs/Web/API/Document/DOMContentLoaded_event)
 - [Garbage collection](/en-US/docs/Glossary/Garbage_collection)
-- [requestAnimationFrame](/en-US/docs/Web/API/window/requestAnimationFrame)
+- [requestAnimationFrame](/en-US/docs/Web/API/Window/requestAnimationFrame)
 
 APIs
 
@@ -151,7 +144,7 @@ APIs
 - [Navigator.deviceMemory](/en-US/docs/Web/API/Navigator/deviceMemory)
 - [Intersection Observer](/en-US/docs/Web/API/Intersection_Observer_API)
 - [Using the User Timing API](/en-US/docs/Web/API/Performance_API/User_timing)
-- [High Resolution Timing API](/en-US/docs/Web/API/DOMHighResTimeStamp) ([https://w3c.github.io/hr-time/)](https://w3c.github.io/hr-time/)
+- [High Resolution Timing API](/en-US/docs/Web/API/DOMHighResTimeStamp) (<https://w3c.github.io/hr-time/>)
 - [Resource Timing API](/en-US/docs/Web/API/Performance_API/Resource_timing)
 - [Page Visibility](/en-US/docs/Web/API/Page_Visibility_API)
 - [Cooperative Scheduling of Background Tasks API](/en-US/docs/Web/API/Background_Tasks_API)
@@ -159,7 +152,7 @@ APIs
   - [requestIdleCallback()](/en-US/docs/Web/API/Window/requestIdleCallback)
 
 - [Beacon API](/en-US/docs/Web/API/Beacon_API)
-- Resource Hints - [dns-prefetch](/en-US/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control), preconnect, [prefetch](/en-US/docs/Glossary/Prefetch), and prerender
+- Resource Hints - [dns-prefetch](/en-US/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control), [preconnect](/en-US/docs/Web/HTML/Attributes/rel/preconnect), [prefetch](/en-US/docs/Glossary/Prefetch), and prerender
 - [FetchEvent.preloadResponse](/en-US/docs/Web/API/FetchEvent/preloadResponse)
 - [Performance Server Timing API](/en-US/docs/Web/API/PerformanceServerTiming)
 
@@ -167,7 +160,7 @@ Headers
 
 - [Content-encoding](/en-US/docs/Web/HTTP/Headers/Content-Encoding)
 - HTTP/2
-- [gZip](/en-US/docs/Glossary/GZip_compression)
+- [gZip](/en-US/docs/Glossary/gzip_compression)
 - Client Hints
 
 Tools

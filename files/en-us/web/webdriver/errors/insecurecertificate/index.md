@@ -29,7 +29,7 @@ except exceptions.InsecureCertificateException as e:
 
 Output:
 
-```
+```plain
 Hit an insecure cert on https://self-signed.badssl.com/
 ```
 

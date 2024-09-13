@@ -31,7 +31,7 @@ position: unset;
 ### Values
 
 - `static`
-  - : The element is positioned according to the normal flow of the document. The {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, and {{cssxref("z-index")}} properties have _no effect_. This is the default value.
+  - : The element is positioned according to the [Normal Flow](/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow) of the document. The {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, and {{cssxref("z-index")}} properties have _no effect_. This is the default value.
 - `relative`
 
   - : The element is positioned according to the normal flow of the document, and then offset _relative to itself_ based on the values of `top`, `right`, `bottom`, and `left`. The offset does not affect the position of any other elements; thus, the space given for the element in the page layout is the same as if position were `static`.
@@ -46,7 +46,7 @@ position: unset;
 
 - `fixed`
 
-  - : The element is removed from the normal document flow, and no space is created for the element in the page layout. The element is positioned relative to its initial [containing block](/en-US/docs/Web/CSS/Containing_block#identifying_the_containing_block). Its final position is determined by the values of `top`, `right`, `bottom`, and `left`.
+  - : The element is removed from the normal document flow, and no space is created for the element in the page layout. The element is positioned relative to its initial [containing block](/en-US/docs/Web/CSS/Containing_block#identifying_the_containing_block), which is the viewport in the case of visual media. Its final position is determined by the values of `top`, `right`, `bottom`, and `left`.
 
     This value always creates a new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context). In printed documents, the element is placed in the same position on _every page_.
 
@@ -56,13 +56,16 @@ position: unset;
 
     This value always creates a new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context). Note that a sticky element "sticks" to its nearest ancestor that has a "scrolling mechanism" (created when `overflow` is `hidden`, `scroll`, `auto`, or `overlay`), even if that ancestor isn't the nearest actually scrolling ancestor.
 
+    > [!NOTE]
+    > At least one [inset](/en-US/docs/Web/CSS/inset) property ({{cssxref("top")}}, {{cssxref("inset-block-start")}}, {{cssxref("right")}}, {{cssxref("inset-inline-end")}}, etc.) needs to be set to a non-`auto` value for the axis on which the element needs to be made sticky. If both `inset` properties for an axis are set to `auto`, on that axis the `sticky` value will behave as `relative`.
+
 ## Description
 
 ### Types of positioning
 
 - A **positioned element** is an element whose [computed](/en-US/docs/Web/CSS/computed_value) `position` value is either `relative`, `absolute`, `fixed`, or `sticky`. (In other words, it's anything except `static`.)
 - A **relatively positioned element** is an element whose [computed](/en-US/docs/Web/CSS/computed_value) `position` value is `relative`. The {{Cssxref("top")}} and {{Cssxref("bottom")}} properties specify the vertical offset from its normal position; the {{Cssxref("left")}} and {{Cssxref("right")}} properties specify the horizontal offset.
-- An **absolutely positioned element** is an element whose [computed](/en-US/docs/Web/CSS/computed_value) `position` value is `absolute` or `fixed`. The {{Cssxref("top")}}, {{Cssxref("right")}}, {{Cssxref("bottom")}}, and {{Cssxref("left")}} properties specify offsets from the edges of the element's [containing block](/en-US/docs/Web/CSS/Containing_block). (The containing block is the ancestor relative to which the element is positioned.) If the element has margins, they are added to the offset. The element establishes a new [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context) (BFC) for its contents.
+- An **absolutely positioned element** is an element whose [computed](/en-US/docs/Web/CSS/computed_value) `position` value is `absolute` or `fixed`. The {{Cssxref("top")}}, {{Cssxref("right")}}, {{Cssxref("bottom")}}, and {{Cssxref("left")}} properties specify offsets from the edges of the element's [containing block](/en-US/docs/Web/CSS/Containing_block). (The containing block is the ancestor relative to which the element is positioned.) If the element has margins, they are added to the offset. The element establishes a new [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context) (BFC) for its contents.
 - A **stickily positioned element** is an element whose [computed](/en-US/docs/Web/CSS/computed_value) `position` value is `sticky`. It's treated as relatively positioned until its [containing block](/en-US/docs/Web/CSS/Containing_block) crosses a specified threshold (such as setting {{Cssxref("top")}} to value other than auto) within its flow root (or the container it scrolls within), at which point it is treated as "stuck" until meeting the opposite edge of its [containing block](/en-US/docs/Web/CSS/Containing_block).
 
 Most of the time, absolutely positioned elements that have {{Cssxref("height")}} and {{Cssxref("width")}} set to `auto` are sized so as to fit their contents. However, non-[replaced](/en-US/docs/Web/CSS/Replaced_element), absolutely positioned elements can be made to fill the available vertical space by specifying both {{Cssxref("top")}} and {{Cssxref("bottom")}} and leaving {{Cssxref("height")}} unspecified (that is, `auto`). They can likewise be made to fill the available horizontal space by specifying both {{Cssxref("left")}} and {{Cssxref("right")}} and leaving {{Cssxref("width")}} as `auto`.
@@ -72,7 +75,7 @@ Except for the case just described (of absolutely positioned elements filling th
 - If both `top` and `bottom` are specified (technically, not `auto`), `top` wins.
 - If both `left` and `right` are specified, `left` wins when {{Cssxref("direction")}} is `ltr` (English, horizontal Japanese, etc.) and `right` wins when {{Cssxref("direction")}} is `rtl` (Persian, Arabic, Hebrew, etc.).
 
-## Accessibility concerns
+## Accessibility
 
 Ensure that elements positioned with an `absolute` or `fixed` value do not obscure other content when the page is zoomed to increase text size.
 
@@ -275,7 +278,7 @@ Fixed positioning is similar to absolute positioning, with the exception that th
 
 ### Sticky positioning
 
-Sticky positioning can be thought of as a hybrid of relative and fixed positioning when its nearest scrolling ancestor is the viewport. A stickily positioned element is treated as relatively positioned until it crosses a specified threshold, at which point it is treated as fixed until it reaches the boundary of its parent. For example:
+The following CSS rule positions the element with id `one` relatively until the viewport is scrolled such that the element is 10 pixels from the top. Beyond that threshold, the element is fixed to 10 pixels from the top.
 
 ```css
 #one {
@@ -284,13 +287,13 @@ Sticky positioning can be thought of as a hybrid of relative and fixed positioni
 }
 ```
 
-The above CSS rule would position the element with id _one_ relatively until the viewport was scrolled such that the element would be less than 10 pixels from the top. Beyond that threshold, the element would be fixed to 10 pixels from the top.
+#### List with sticky headings
 
 A common use for sticky positioning is for the headings in an alphabetized list. The "B" heading will appear just below the items that begin with "A" until they are scrolled offscreen. Rather than sliding offscreen with the rest of the content, the "B" heading will then remain fixed to the top of the viewport until all the "B" items have scrolled offscreen, at which point it will be covered up by the "C" heading, and so on.
 
 You must specify a threshold with at least one of `top`, `right`, `bottom`, or `left` for sticky positioning to behave as expected. Otherwise, it will be indistinguishable from relative positioning.
 
-#### HTML
+##### HTML
 
 ```html
 <dl>
@@ -325,7 +328,7 @@ You must specify a threshold with at least one of `top`, `right`, `bottom`, or `
 </dl>
 ```
 
-#### CSS
+##### CSS
 
 ```css
 * {
@@ -368,9 +371,75 @@ dd + dd {
 }
 ```
 
-#### Result
+##### Result
 
-{{EmbedLiveSample('Sticky_positioning', '', '300px')}}
+{{EmbedLiveSample('List with sticky headings', '', '300px')}}
+
+#### Sticky position with all the inset boundaries set
+
+The following example demonstrates an element's behavior when all inset boundaries are set. Here, we have two light bulb emojis in a paragraph. The light bulbs use sticky positioning, and the inset boundaries are specified as 50px from the top, 100px from the right, 50px from the bottom, and 50px from the left. A gray background on the parent div element marks the inset area.
+
+##### HTML
+
+```html
+Use scrollbars to put the light bulbs(💡) in the right place in the following
+text:
+<div>
+  <p>
+    The representation of an idea by a light bulb(<span class="bulb">💡</span>)
+    is a commonly used metaphor that symbolizes the moment of inspiration or the
+    birth of a new idea. The association between a light bulb and an idea can be
+    traced back to the invention of the incandescent light bulb(<span
+      class="bulb"
+      >💡</span
+    >) by Thomas Edison in the late 19th century. The light bulb is a powerful
+    symbol because it represents illumination, clarity, and the sudden
+    brightening of one's thoughts or understanding. When someone has an idea, it
+    is often described as a light bulb turning on in their mind, signifying a
+    moment of insight or creativity. The image of a light bulb also suggests the
+    idea of energy, power, and the potential for growth and development.
+  </p>
+</div>
+```
+
+##### CSS
+
+```css hidden
+div {
+  width: 400px;
+  height: 200px;
+  overflow: scroll;
+  scrollbar-width: thin;
+  font-size: 16px;
+  font-family: verdana;
+  border: 1px solid;
+}
+
+p {
+  width: 600px;
+  user-select: none;
+  margin: 0;
+  border: 110px solid transparent;
+}
+```
+
+```css
+.bulb {
+  position: sticky;
+  inset: 50px 100px 50px 100px;
+}
+
+div {
+  /* mark area defined by the inset boundaries using gray color */
+  background: linear-gradient(#9999, #9999) 100px 50px / 192px 100px no-repeat;
+}
+```
+
+##### Result
+
+{{EmbedLiveSample('Sticky position with all the inset boundaries set', '', '300px')}}
+
+When you put both bulbs in their proper place, you'll notice that they are relatively positioned inside the inset area. When you move them out of the inset area, they are fixed (sticky) to the inset boundary in that direction.
 
 ## Specifications
 

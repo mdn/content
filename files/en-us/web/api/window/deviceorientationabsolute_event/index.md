@@ -6,9 +6,9 @@ page-type: web-api-event
 browser-compat: api.Window.deviceorientationabsolute_event
 ---
 
-{{ApiRef}}
+{{APIRef("Device Orientation Events")}}{{securecontext_header}}
 
-The **`deviceorientationabsolute`** event is sent to the `ondeviceorientationabsolute` event handler on a {{domxref('Window')}} event when absolute device orientation changes.
+The **`deviceorientationabsolute`** event is fired when absolute device orientation changes.
 
 This event is not cancelable and does not bubble.
 
@@ -53,7 +53,6 @@ A {{domxref("DeviceOrientationEvent")}}. Inherits from {{domxref("Event")}}.
 
 ## See also
 
-- {{domxref("Window.deviceorientation_event", "deviceorientation")}}
-- {{ domxref("DeviceOrientationEvent") }}
-- {{DOMxRef("window.deviceorientation_event", "deviceorientation") }} event
+- {{DOMxRef("window.devicemotion_event", "devicemotion")}} event
+- {{DOMxRef("window.deviceorientation_event", "deviceorientation")}} event
 - [Detecting device orientation](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation)

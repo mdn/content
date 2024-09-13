@@ -12,7 +12,7 @@ such as a [symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol), 
 
 ## Message
 
-```
+```plain
 TypeError: Cannot create property 'x' on number '1' (V8-based)
 TypeError: can't assign to property "x" on 1: not an object (Firefox)
 TypeError: Attempted to assign to readonly property. (Safari)

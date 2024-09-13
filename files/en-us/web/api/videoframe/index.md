@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.VideoFrame
 ---
 
-{{APIRef("Web Codecs API")}}
+{{APIRef("Web Codecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`VideoFrame`** interface of the [Web Codecs API](/en-US/docs/Web/API/WebCodecs_API) represents a frame of a video.
 
@@ -21,7 +21,7 @@ an {{domxref("HTMLVideoElement")}},
 an {{domxref("HTMLCanvasElement")}},
 an {{domxref("ImageBitmap")}},
 an {{domxref("OffscreenCanvas")}},
-or another {{domxref("VideoFrame")}}).
+or another `VideoFrame`).
 This means that a frame can be created from an image or video element.
 
 A second constructor enables the creation of a `VideoFrame` from its binary pixel representation in an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}}.
@@ -46,7 +46,7 @@ Created frames may then turned into a media track, for example with the {{domxre
 - {{domxref("VideoFrame.visibleRect")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("DOMRectReadOnly")}} describing the visible rectangle of pixels for this `VideoFrame`.
 - {{domxref("VideoFrame.displayWidth")}} {{ReadOnlyInline}}
-  - : Returns the width of the `VideoFrame` when displayed after applying aspect ratio adjustments.
+  - : Returns the width of the `VideoFrame` when displayed after applying {{glossary("aspect ratio")}} adjustments.
 - {{domxref("VideoFrame.displayHeight")}} {{ReadOnlyInline}}
   - : Returns the height of the `VideoFrame` when displayed after applying aspect ratio adjustments.
 - {{domxref("VideoFrame.duration")}} {{ReadOnlyInline}}
@@ -69,7 +69,7 @@ Created frames may then turned into a media track, for example with the {{domxre
 
 ## Examples
 
-In the following example frames are returned from a {{domxref("MediaStreamTrackProcessor")}}, then encoded. See the full example and read more about it in the article [Video processing with WebCodecs](https://web.dev/webcodecs/).
+In the following example frames are returned from a {{domxref("MediaStreamTrackProcessor")}}, then encoded. See the full example and read more about it in the article [Video processing with WebCodecs](https://developer.chrome.com/docs/web-platform/best-practices/webcodecs).
 
 ```js
 let frame_counter = 0;
@@ -106,5 +106,5 @@ while (true) {
 
 ## See also
 
-- [Video processing with WebCodecs](https://web.dev/webcodecs/)
+- [Video processing with WebCodecs](https://developer.chrome.com/docs/web-platform/best-practices/webcodecs)
 - [WebCodecs examples](https://w3c.github.io/webcodecs/samples/)

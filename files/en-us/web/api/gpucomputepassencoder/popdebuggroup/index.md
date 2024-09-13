@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUComputePassEncoder.popDebugGroup
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`popDebugGroup()`** method of the
 {{domxref("GPUComputePassEncoder")}} interface ends a compute pass debug group, which is begun with a {{domxref("GPUComputePassEncoder.pushDebugGroup", "pushDebugGroup()")}} call.

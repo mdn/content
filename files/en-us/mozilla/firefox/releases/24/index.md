@@ -30,7 +30,7 @@ page-type: firefox-release-notes
 - Support for the {{domxref("Comment.Comment", "Comment()")}} constructor has been added ([Firefox bug 869006](https://bugzil.la/869006)).
 - Support for the {{domxref("DocumentFragment.DocumentFragment", "DocumentFragment()")}} constructor has been added ([Firefox bug 869002](https://bugzil.la/869002)).
 - The {{domxref("FocusEvent")}} interface has been implemented ([Firefox bug 855741](https://bugzil.la/855741)).
-- Support for the {{domxref("ChildNode.remove()")}} method has been added ([Firefox bug 856629](https://bugzil.la/856629)).
+- Support for the {{domxref("Element.remove", "ChildNode.remove()")}} method has been added ([Firefox bug 856629](https://bugzil.la/856629)).
 - The WebVTT interfaces related to the {{HTMLElement("track")}} element, {{domxref("HTMLTrackElement")}}, {{domxref("TextTrack")}}, {{domxref("TextTrackCue")}}, {{domxref("TextTrackList")}}, and {{domxref("TextTrackCueList")}} have been implemented behind the `media.webvtt.enabled` property, defaulting to `false` ([Firefox bug 833385](https://bugzil.la/833385)).
 - The {{domxref("Gamepad")}} interface, and {{domxref("Navigator.getGamepads")}} have been implemented behind the `dom.gamepad.enabled` property, defaulting to `false` ([Firefox bug 690935](https://bugzil.la/690935)).
 - On desktop Firefox only, `HTMLCanvasElement.getContext()` can now take the `webgl` value, in addition to `experimental-webgl` ([Firefox bug 870232](https://bugzil.la/870232)).
@@ -40,7 +40,7 @@ page-type: firefox-release-notes
 
 - The Network inspector now lets you filter by content type (CSS/image/font etc.) and see the relevant size and load times.
 - The Devtools options panel to the left lets you disable/enable JavaScript temporarily.
-- Extension developers may use the new [Browser Console](https://mihai.sucan.ro/mihai/blog/the-browser-console-is-replacing-the-error-console) for Chrome-level scripts (Replaces Error Console).
+- Extension developers may use the new [Browser Console](https://mihai.sucan.ro/mihai/blog/the-browser-console-is-replacing-the-error-console/) for Chrome-level scripts (Replaces Error Console).
 - The source map syntax has been changed to use `//#` instead of `//@` ([Firefox bug 870361](https://bugzil.la/870361)).
 
 ### MathML
@@ -60,4 +60,4 @@ page-type: firefox-release-notes
 
 ## Older versions
 
-{{Firefox_for_developers('23')}}
+{{Firefox_for_developers}}

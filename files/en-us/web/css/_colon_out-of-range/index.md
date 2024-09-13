@@ -13,7 +13,8 @@ The **`:out-of-range`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/We
 
 This pseudo-class is useful for giving the user a visual indication that a field's current value is outside the permitted limits.
 
-> **Note:** This pseudo-class only applies to elements that have (and can take) a range limitation. In the absence of such a limitation, the element can neither be "in-range" nor "out-of-range."
+> [!NOTE]
+> This pseudo-class only applies to elements that have (and can take) a range limitation. In the absence of such a limitation, the element can neither be "in-range" nor "out-of-range."
 
 ## Syntax
 
@@ -59,11 +60,11 @@ input {
 }
 
 input:in-range {
-  background-color: rgba(0, 255, 0, 0.25);
+  background-color: rgb(0 255 0 / 25%);
 }
 
 input:out-of-range {
-  background-color: rgba(255, 0, 0, 0.25);
+  background-color: rgb(255 0 0 / 25%);
   border: 2px solid red;
 }
 

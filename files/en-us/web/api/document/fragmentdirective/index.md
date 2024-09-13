@@ -3,12 +3,10 @@ title: "Document: fragmentDirective property"
 short-title: fragmentDirective
 slug: Web/API/Document/fragmentDirective
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.Document.fragmentDirective
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{APIRef("URL Fragment Text Directives")}}
 
 The **`fragmentDirective`** read-only property of the {{domxref("Document")}} interface returns the {{domxref("FragmentDirective")}} for the current document.
 
@@ -18,34 +16,38 @@ A {{domxref("FragmentDirective")}} object.
 
 ## Examples
 
-Try running the following in a supporting browser's devtools, in a tab with one or more matched text fragments:
+### Checking if text fragments are supported
 
-```js
-document.fragmentDirective;
+The code below logs whether or not text fragments are supported in your browser by checking for existence of the object.
+Note that the object is empty, and at present it is mainly intended for feature detection.
+In the future, it might include other information.
+
+```html hidden
+<pre id="log"></pre>
 ```
 
-You should get a {{domxref("FragmentDirective")}} object instance returned with a structure similar to the following:
-
-```js
-items: [
-  {
-    prefix: "",
-    textStart: "Module Workers",
-    textEnd: "",
-    suffix: "support",
-    type: "text",
-  },
-  {
-    prefix: "feedback on",
-    textStart: "usability",
-    textEnd: "",
-    suffix: "",
-    type: "text",
-  },
-];
+```js hidden
+const logElement = document.querySelector("#log");
+function log(text) {
+  logElement.innerText = text;
+}
 ```
 
-This functionality is mainly intended for feature detection at present, but in future, it could be expanded to include other information such as translation hints.
+```css hidden
+#log {
+  height: 20px;
+}
+```
+
+```js
+if (document.fragmentDirective) {
+  log("Your browser supports text fragments.");
+} else {
+  log("Text fragments are not supported in your browser.");
+}
+```
+
+{{EmbedLiveSample("Checking if text fragments are supported","100%","30px")}}
 
 ## Specifications
 
@@ -57,5 +59,5 @@ This functionality is mainly intended for feature detection at present, but in f
 
 ## See also
 
-- [Text fragments](/en-US/docs/Web/Text_fragments)
+- [Text fragments](/en-US/docs/Web/URI/Fragment/Text_fragments)
 - {{cssxref("::target-text")}}

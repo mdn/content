@@ -12,7 +12,8 @@ browser-compat: api.VRFieldOfView
 
 The **`VRFieldOfView`** interface of the [WebVR API](/en-US/docs/Web/API/WebVR_API) represents a field of view defined by 4 different degree values describing the view from a center point.
 
-> **Note:** This interface was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
+> [!NOTE]
+> This interface was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
 ## Instance properties
 
@@ -52,25 +53,31 @@ function reportFieldOfView() {
     const listitem1 = document.createElement("li");
     const listitem2 = document.createElement("li");
 
-    listitem1.innerHTML =
-      `<strong>Left eye parameters</strong><br>` +
-      `Offset: ${lEye.offset}<br>` +
-      `Render width: ${lEye.renderWidth}<br>` +
-      `Render height: ${lEye.renderHeight}<br>` +
-      `Up degrees: ${lFOV.upDegrees}<br>` +
-      `Right degrees: ${lFOV.rightDegrees}<br>` +
-      `Down degrees: ${lFOV.downDegrees}<br>` +
-      `Left degrees: ${lFOV.leftDegrees}`;
+    listitem1.innerText = `
+Offset: ${lEye.offset}
+Render width: ${lEye.renderWidth}
+Render height: ${lEye.renderHeight}
+Up degrees: ${lFOV.upDegrees}
+Right degrees: ${lFOV.rightDegrees}
+Down degrees: ${lFOV.downDegrees}
+Left degrees: ${lFOV.leftDegrees}`;
+    listitem1.insertBefore(
+      document.createElement("strong"),
+      listitem1.firstChild,
+    ).textContent = "Left eye parameters";
 
-    listitem2.innerHTML =
-      `<strong>Right eye parameters</strong><br>` +
-      `Offset: ${rEye.offset}<br>` +
-      `Render width: ${rEye.renderWidth}<br>` +
-      `Render height: ${rEye.renderHeight}<br>` +
-      `Up degrees: ${rFOV.upDegrees}<br>` +
-      `Right degrees: ${rFOV.rightDegrees}<br>` +
-      `Down degrees: ${rFOV.downDegrees}<br>` +
-      `Left degrees: ${rFOV.leftDegrees}`;
+    listitem2.innerText = `
+Offset: ${rEye.offset}
+Render width: ${rEye.renderWidth}
+Render height: ${rEye.renderHeight}
+Up degrees: ${rFOV.upDegrees}
+Right degrees: ${rFOV.rightDegrees}
+Down degrees: ${rFOV.downDegrees}
+Left degrees: ${rFOV.leftDegrees}`;
+    listitem2.insertBefore(
+      document.createElement("strong"),
+      listitem2.firstChild,
+    ).textContent = "Right eye parameters";
 
     list.appendChild(listitem1);
     list.appendChild(listitem2);
@@ -90,5 +97,4 @@ Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/Web
 
 ## See also
 
-- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.
+- [WebVR API](/en-US/docs/Web/API/WebVR_API)

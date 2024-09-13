@@ -5,6 +5,8 @@ page-type: aria-role
 spec-urls: https://w3c.github.io/aria/#img
 ---
 
+{{AccessibilitySidebar}}
+
 The ARIA `img` role can be used to identify multiple elements inside page content that should be considered as a single image. These elements could be images, code snippets, text, emojis, or other content that can be combined to deliver information in a visual manner.
 
 ```html
@@ -69,7 +71,7 @@ For example, if you use emojis in your text, the meaning might be obvious to a s
 
 This seems to work OK across some browser/screen reader combinations, but some of them end up reading the label out twice. Use with caution and test thoroughly.
 
-Another example where this might be suitable is when using ASCII emoji combinations, like the legendary "Table flip":
+Another example where this might be suitable is when using {{Glossary("ASCII")}} emoji combinations, like the legendary "Table flip":
 
 ```html
 <div role="img" aria-label="Table flip">
@@ -132,11 +134,3 @@ From the assistive technology user's perspective, the heading does not exist sin
 - [ARIA: `presentation` role](/en-US/docs/Web/Accessibility/ARIA/Roles/presentation_role)
 - [Accessibility Object Model](https://wicg.github.io/aom/spec/)
 - [ARIA in HTML](https://w3c.github.io/html-aria/)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
-
-</section>

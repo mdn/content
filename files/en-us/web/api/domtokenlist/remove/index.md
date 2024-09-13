@@ -16,7 +16,7 @@ removes the specified _tokens_ from the list.
 ```js-nolint
 remove(token1)
 remove(token1, token2)
-remove(token1, token2, /* … ,*/ tokenN)
+remove(token1, token2, /* …, */ tokenN)
 ```
 
 ### Parameters
@@ -39,8 +39,7 @@ list into the `<span>`'s {{domxref("Node.textContent")}}.
 First, the HTML:
 
 ```html
-<div id="ab" class="a b c"></div>
-<div id="a" class="a b c"></div>
+<span id="ab" class="a b c"></span> <span id="a" class="a b c"></span>
 ```
 
 Now the JavaScript:

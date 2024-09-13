@@ -47,7 +47,8 @@ The **Internet** is the backbone of the Web, the technical infrastructure that m
 
 When two computers need to communicate, you have to link them, either physically (usually with an [Ethernet cable](https://en.wikipedia.org/wiki/Ethernet_crossover_cable)) or wirelessly (for example with [Wi-Fi](https://en.wikipedia.org/wiki/WiFi) or [Bluetooth](https://en.wikipedia.org/wiki/Bluetooth) systems). All modern computers can sustain any of those connections.
 
-> **Note:** For the rest of this article, we will only talk about physical cables, but wireless networks work the same.
+> [!NOTE]
+> For the rest of this article, we will only talk about physical cables, but wireless networks work the same.
 
 ![Two computers linked together](internet-schema-1.png)
 
@@ -81,7 +82,7 @@ So we are connected to the telephone infrastructure. The next step is to send th
 
 ### Finding computers
 
-If you want to send a message to a computer, you have to specify which one. Thus any computer linked to a network has a unique address that identifies it, called an "IP address" (where IP stands for _Internet Protocol_). It's an address made of a series of four numbers separated by dots, for example: `192.168.2.10`.
+If you want to send a message to a computer, you have to specify which one. Thus any computer linked to a network has a unique address that identifies it, called an "IP address" (where IP stands for _Internet Protocol_). It's an address made of a series of four numbers separated by dots, for example: `192.0.2.172`.
 
 That's perfectly fine for computers, but we human beings have a hard time remembering that sort of address. To make things easier, we can alias an IP address with a human-readable name called a _domain name_. For example (at the time of writing; IP addresses can change) `google.com` is the domain name used on top of the IP address `142.250.190.78`. So using the domain name is the easiest way for us to reach a computer over the Internet.
 

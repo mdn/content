@@ -6,18 +6,25 @@ page-type: javascript-error
 
 {{jsSidebar("Errors")}}
 
-The JavaScript exceptions "unexpected token" occur when a specific language construct
-was expected, but something else was provided. This might be a simple typo.
+The JavaScript exceptions "unexpected token" occur when the parser does not see a token it recognizes at the given position, so it cannot make sense of the structure of the program. This might be a simple typo.
 
 ## Message
 
 ```plain
-SyntaxError: expected expression, got "x"
-SyntaxError: expected property name, got "x"
-SyntaxError: expected target, got "x"
-SyntaxError: expected rest argument name, got "x"
-SyntaxError: expected closing parenthesis, got "x"
-SyntaxError: expected '=>' after argument list, got "x"
+SyntaxError: Unexpected token ';' (V8-based)
+SyntaxError: Unexpected identifier 'x' (V8-based)
+SyntaxError: Unexpected number (V8-based)
+SyntaxError: Unexpected string (V8-based)
+SyntaxError: Unexpected regular expression (V8-based)
+SyntaxError: Unexpected template string (V8-based)
+
+SyntaxError: unexpected token: identifier (Firefox)
+SyntaxError: expected expression, got "x" (Firefox)
+SyntaxError: expected property name, got "x" (Firefox)
+SyntaxError: expected target, got "x" (Firefox)
+SyntaxError: expected meta, got "x" (Firefox)
+SyntaxError: expected rest argument name, got "x" (Firefox)
+SyntaxError: expected closing parenthesis, got "x" (Firefox)
 ```
 
 ## Error type
@@ -35,7 +42,7 @@ be a simple typo.
 
 For example, when chaining expressions, trailing commas are not allowed.
 
-```js example-bad
+```js-nolint example-bad
 for (let i = 0; i < 5,; ++i) {
   console.log(i);
 }
@@ -50,13 +57,13 @@ for (let i = 0; i < 5; ++i) {
 }
 ```
 
-### Not enough brackets
+### Not enough parentheses
 
-Sometimes, you leave out brackets around `if` statements:
+Sometimes, you leave out parentheses around `if` statements:
 
-```js example-bad
+```js-nolint example-bad
 function round(n, upperBound, lowerBound) {
-  if (n > upperBound) || (n < lowerBound) { // Not enough brackets here!
+  if (n > upperBound) || (n < lowerBound) { // Not enough parenthese here!
     throw new Error(`Number ${n} is more than ${upperBound} or less than ${lowerBound}`);
   } else if (n < (upperBound + lowerBound) / 2) {
     return lowerBound;
@@ -66,8 +73,8 @@ function round(n, upperBound, lowerBound) {
 } // SyntaxError: expected expression, got '||'
 ```
 
-The brackets may look correct at first, but note how the `||` is outside the
-brackets. Correct would be putting brackets around the `||`:
+The parentheses may look correct at first, but note how the `||` is outside the
+parentheses. Correct would be putting parentheses around the `||`:
 
 ```js-nolint example-good
 function round(n, upperBound, lowerBound) {

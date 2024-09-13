@@ -5,15 +5,13 @@ page-type: web-api-interface
 browser-compat: api.IDBCursorWithValue
 ---
 
-{{APIRef("IndexedDB")}}
+{{APIRef("IndexedDB")}} {{AvailableInWorkers}}
 
 The **`IDBCursorWithValue`** interface of the [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) represents a [cursor](/en-US/docs/Web/API/IndexedDB_API/Basic_Terminology#cursor) for traversing or iterating over multiple records in a database. It is the same as the {{domxref("IDBCursor")}}, except that it includes the `value` property.
 
 The cursor has a source that indicates which index or object store it is iterating over. It has a position within the range, and moves in a direction that is increasing or decreasing in the order of record keys. The cursor enables an application to asynchronously process all the records in the cursor's range.
 
 You can have an unlimited number of cursors at the same time. You always get the same `IDBCursorWithValue` object representing a given cursor. Operations are performed on the underlying index or object store.
-
-{{AvailableInWorkers}}
 
 {{InheritanceDiagram}}
 

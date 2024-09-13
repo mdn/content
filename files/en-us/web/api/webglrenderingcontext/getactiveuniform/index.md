@@ -28,8 +28,7 @@ getActiveUniform(program, index)
 - `index`
   - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the index of the uniform attribute to get. This
     value is an index 0 to N - 1 as returned
-    by {{domxref("WebGLRenderingContext.getProgramParameter",
-    "gl.getProgramParameter(program, gl.ACTIVE_UNIFORMS)")}}.
+    by {{domxref("WebGLRenderingContext.getProgramParameter", "gl.getProgramParameter(program, gl.ACTIVE_UNIFORMS)")}}.
 
 ### Return value
 
@@ -83,7 +82,7 @@ The `type` attribute of the return value will be one of the following:
 
 When `gl.linkProgram` is called, WebGL creates a list of active uniforms.
 These are possible values of the `name` attribute of return values of
-{{domxref("WebGLRenderingContext.getActiveUniform()", "getActiveUniform")}}. WebGL
+`getActiveUniform`. WebGL
 generates one or more entries in the list depending on the declared type of the uniform
 in the shader:
 

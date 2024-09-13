@@ -61,7 +61,7 @@ page-type: guide
 
 ### Articles
 
-- [Hands-on XSL](https://www.ibm.com/developerworks/library/x-hands-on-xsl/) by Don R. Day
+- [Hands-on XSL](https://developer.ibm.com/technologies/web-development/) by Don R. Day
 - [What is XSLT?](https://www.xml.com/pub/a/2000/08/holman/index.html) by G. Ken Holman
 
 ### Tutorials/Examples
@@ -72,7 +72,7 @@ page-type: guide
 
 ### Other
 
-- [Extensible Stylesheet Language (XSL)](http://xml.coverpages.org/xsl.html)
+- [Extensible Stylesheet Language (XSL)](https://xml.coverpages.org/xsl.html)
 - **XSL-List**
 
   - **Subscribe**: <https://www.mulberrytech.com/xsl/xsl-list/index.html>

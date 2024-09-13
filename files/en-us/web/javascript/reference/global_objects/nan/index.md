@@ -43,7 +43,7 @@ There are five different types of operations that return `NaN`:
 
 ### Testing against NaN
 
-To tell if a value is `NaN`, use {{jsxref("Number.isNaN()")}} or {{jsxref("Global_Objects/isNaN", "isNaN()")}} to most clearly determine whether a value is `NaN` — or, since `NaN` is the only value that compares unequal to itself, you can perform a self-comparison like `x !== x`.
+To tell if a value is `NaN`, use {{jsxref("Number.isNaN()")}} or {{jsxref("isNaN()")}} to most clearly determine whether a value is `NaN` — or, since `NaN` is the only value that compares unequal to itself, you can perform a self-comparison like `x !== x`.
 
 ```js
 NaN === NaN; // false
@@ -89,20 +89,30 @@ For more information about `NaN` and its comparison, see [Equality comparison an
 
 ### Observably distinct NaN values
 
-There's a motivation for `NaN` being unequal to itself. It's possible to produce two floating point numbers with different binary representations but are both `NaN`, because in [IEEE 754 encoding](https://en.wikipedia.org/wiki/NaN#Floating_point), any floating point number with exponent `0x7ff` and a non-zero mantissa is `NaN`. In JavaScript, you can do bit-level manipulation using [typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays).
+It's possible to produce two floating point numbers with different binary representations but are both `NaN`, because in [IEEE 754 encoding](https://en.wikipedia.org/wiki/NaN#Floating_point), any floating point number with exponent `0x7ff` and a non-zero mantissa is `NaN`. In JavaScript, you can do bit-level manipulation using [typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays).
 
 ```js
 const f2b = (x) => new Uint8Array(new Float64Array([x]).buffer);
 const b2f = (x) => new Float64Array(x.buffer)[0];
 // Get a byte representation of NaN
 const n = f2b(NaN);
-// Change the first bit, which is the sign bit and doesn't matter for NaN
-n[0] = 1;
+const m = f2b(NaN);
+// Change the sign bit, which doesn't matter for NaN
+n[7] += 2 ** 7;
+// n[0] += 2**7; for big endian processors
 const nan2 = b2f(n);
 console.log(nan2); // NaN
 console.log(Object.is(nan2, NaN)); // true
 console.log(f2b(NaN)); // Uint8Array(8) [0, 0, 0, 0, 0, 0, 248, 127]
-console.log(f2b(nan2)); // Uint8Array(8) [1, 0, 0, 0, 0, 0, 248, 127]
+console.log(f2b(nan2)); // Uint8Array(8) [0, 0, 0, 0, 0, 0, 248, 255]
+// Change the first bit, which is the least significant bit of the mantissa and doesn't matter for NaN
+m[0] = 1;
+// m[7] = 1; for big endian processors
+const nan3 = b2f(m);
+console.log(nan3); // NaN
+console.log(Object.is(nan3, NaN)); // true
+console.log(f2b(NaN)); // Uint8Array(8) [0, 0, 0, 0, 0, 0, 248, 127]
+console.log(f2b(nan3)); // Uint8Array(8) [1, 0, 0, 0, 0, 0, 248, 127]
 ```
 
 ### Silently escaping NaN
@@ -125,4 +135,4 @@ NaN ** 0 === 1; // true
 
 - {{jsxref("Number.NaN")}}
 - {{jsxref("Number.isNaN()")}}
-- {{jsxref("isNaN", "isNaN()")}}
+- {{jsxref("isNaN()")}}

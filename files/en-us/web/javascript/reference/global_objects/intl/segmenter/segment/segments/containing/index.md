@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Intl.Segments.containing
 
 The **`containing()`** method of [`Segments`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) instances returns an object describing the segment in the string that includes the code unit at the specified index.
 
-{{EmbedInteractiveExample("pages/js/intl-segments-prototype-containing.html")}}
+{{EmbedInteractiveExample("pages/js/segments-prototype-containing.html")}}
 
 ## Syntax
 
@@ -19,10 +19,10 @@ containing(codeUnitIndex)
 
 ### Parameters
 
-- `codeUnitIndex` {{ optional_inline }}
+- `codeUnitIndex` {{optional_inline}}
   - : A number specifying the index of the code unit in the original input string. If the value is omitted, it defaults to `0`.
 
-### Return Value
+### Return value
 
 An object describing the segment of the original string with the following properties, or `undefined` if the supplied index value is out of bounds.
 

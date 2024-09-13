@@ -32,7 +32,7 @@ A `RequestCache` value. The available values are:
   - If there is a match, _fresh or stale_, it will be returned from the cache.
   - If there is no match, the browser will make a normal request, and will update the cache with the downloaded resource.
 
-- `only-if-cached` — The browser looks for a matching request in its HTTP cache.
+- `only-if-cached` — The browser looks for a matching request in its HTTP cache. {{experimental_inline}}
 
   - If there is a match, _fresh or stale_, it will be returned from the cache.
   - If there is no match, the browser will respond with a [504 Gateway timeout](/en-US/docs/Web/HTTP/Status/504) status.
@@ -118,7 +118,7 @@ fetch("some.json", {
     /* consume the (possibly stale) response */
   })
   .catch((error) => {
-    /* Can be an AbortError/DOMError or a TypeError */
+    /* Can be an AbortError/DOMException or a TypeError */
   });
 ```
 

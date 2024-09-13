@@ -8,7 +8,8 @@ page-type: firefox-release-notes
 
 This article provides information about the changes in Firefox 89 that will affect developers. Firefox 89 was released on June 1, 2021.
 
-> **Note:** See also [Looking fine with Firefox 89](https://hacks.mozilla.org/2021/06/looking-fine-with-firefox-89/) on Mozilla Hacks.
+> [!NOTE]
+> See also [Looking fine with Firefox 89](https://hacks.mozilla.org/2021/06/looking-fine-with-firefox-89/) on Mozilla Hacks.
 
 ## Changes for web developers
 
@@ -24,7 +25,7 @@ _No changes._
 
 - The {{cssxref("@media/forced-colors","forced-colors")}} media feature has been implemented ([Firefox bug 1659511](https://bugzil.la/1659511)).
 - The {{cssxref("@font-face/ascent-override", "ascent-override")}}, {{cssxref("@font-face/descent-override", "descent-override")}}, and {{cssxref("@font-face/line-gap-override", "line-gap-override")}} `@font-face` descriptors have been implemented ([Firefox bug 1681691](https://bugzil.la/1681691) and [Firefox bug 1704494](https://bugzil.la/1704494)).
-- The `type()` function for {{cssxref("image-set","image-set()")}} has been implemented ([Firefox bug 1695404](https://bugzil.la/1695404)).
+- The `type()` function for {{cssxref("image/image-set")}} has been implemented ([Firefox bug 1695404](https://bugzil.la/1695404)).
 - The {{cssxref("aspect-ratio")}} CSS property is now supported ([Firefox bug 1672073](https://bugzil.la/1672073)).
 
 ### JavaScript
@@ -67,4 +68,4 @@ _No changes._
 
 ## Older versions
 
-{{Firefox_for_developers(88)}}
+{{Firefox_for_developers}}

@@ -24,7 +24,7 @@ Like with the shape elements, text can be colorized with the `fill` attribute an
 
 ## Setting font properties
 
-An essential part of a text is the font in which it is displayed. SVG offers a set of attributes, many similar to their CSS counterparts, to enable font selection. Each of the following properties can be set as an attribute or via a CSS declaration: {{SVGAttr("font-family")}}, {{SVGAttr("font-style")}}, {{SVGAttr("font-weight")}}, {{SVGAttr("font-variant")}}, {{SVGAttr("font-stretch")}}, {{SVGAttr("font-size")}}, {{SVGAttr("font-size-adjust")}}, {{SVGAttr("kerning")}}, {{SVGAttr("letter-spacing")}}, {{SVGAttr("word-spacing")}} and {{SVGAttr("text-decoration")}}.
+An essential part of a text is the font in which it is displayed. SVG offers a set of attributes, many similar to their CSS counterparts, to enable font selection. Each of the following properties can be set as an attribute or via a CSS declaration: {{SVGAttr("font-family")}}, {{SVGAttr("font-style")}}, {{SVGAttr("font-weight")}}, {{SVGAttr("font-variant")}}, {{SVGAttr("font-stretch")}}, {{SVGAttr("font-size")}}, {{SVGAttr("font-size-adjust")}}, {{SVGAttr("letter-spacing")}}, {{SVGAttr("word-spacing")}} and {{SVGAttr("text-decoration")}}.
 
 ## Other text-related elements
 
@@ -69,13 +69,13 @@ The `tspan` element has the following custom attributes:
 
 ### textPath
 
-This element fetches via its `xlink:href` attribute an arbitrary path and aligns the characters, which it encircles, along this path:
+This element fetches via its `href` attribute an arbitrary path and aligns the characters, which it encircles, along this path:
 
 ```html
 <svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
   <path id="my_path" d="M 20,20 C 80,60 100,40 120,20" fill="transparent" />
   <text>
-    <textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#my_path">
+    <textPath xmlns:xlink="http://www.w3.org/1999/xlink" href="#my_path">
       A curve.
     </textPath>
   </text>

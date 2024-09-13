@@ -69,7 +69,7 @@ Let's look at a simple example that explains all of this:
 
 <p>
   We are separated by our margins. Because of margin collapsing, we are
-  separated by the width of one of our margins, not both.
+  separated by the size of one of our margins, not both.
 </p>
 
 <p>
@@ -89,8 +89,8 @@ body {
 }
 
 p {
-  background: rgba(255, 84, 104, 0.3);
-  border: 2px solid rgb(255, 84, 104);
+  background: rgb(255 84 104 / 30%);
+  border: 2px solid rgb(255 84 104);
   padding: 10px;
   margin: 10px;
 }

@@ -7,13 +7,17 @@ browser-compat: javascript.builtins.WeakRef.deref
 
 {{JSRef}}
 
-The **`deref()`** method returns the {{jsxref("WeakRef")}} instance's target value, or `undefined` if the target value has been garbage-collected.
+The **`deref()`** method of {{jsxref("WeakRef")}} instances returns this `WeakRef`'s target value, or `undefined` if the target value has been garbage-collected.
 
 ## Syntax
 
 ```js-nolint
 deref()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

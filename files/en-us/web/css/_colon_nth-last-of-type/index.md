@@ -18,7 +18,7 @@ The `nth-last-of-type` pseudo-class is specified with a single argument, which r
 See {{Cssxref(":nth-last-child")}} for a more detailed explanation of its syntax.
 
 ```css-nolint
-:nth-last-of-type(<an-plus-b> | even | odd) {
+:nth-last-of-type(<An+B> | even | odd) {
   /* ... */
 }
 ```

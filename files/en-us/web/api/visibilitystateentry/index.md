@@ -20,7 +20,8 @@ There are two key visibility state change times that this API reports on:
 
 The performance timeline will always have a "`visibility-state`" entry with a `startTime` of `0` and a `name` representing the initial page visibility state.
 
-> **Note:** Like other Performance APIs, this API extends {{domxref("PerformanceEntry")}}.
+> [!NOTE]
+> Like other Performance APIs, this API extends {{domxref("PerformanceEntry")}}.
 
 {{InheritanceDiagram}}
 
@@ -28,13 +29,13 @@ The performance timeline will always have a "`visibility-state`" entry with a `s
 
 This interface has no properties but it extends the properties of {{domxref("PerformanceEntry")}} by qualifying and constraining them as follows:
 
-- {{domxref("PerformanceEntry.entryType")}}
+- {{domxref("PerformanceEntry.entryType")}} {{experimental_inline}}
   - : Returns "`visibility-state`".
-- {{domxref("PerformanceEntry.name")}}
+- {{domxref("PerformanceEntry.name")}} {{experimental_inline}}
   - : Returns either `"visible"` or `"hidden"`.
-- {{domxref("PerformanceEntry.startTime")}}
+- {{domxref("PerformanceEntry.startTime")}} {{experimental_inline}}
   - : Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the visibility state change occurred.
-- {{domxref("PerformanceEntry.duration")}}
+- {{domxref("PerformanceEntry.duration")}} {{experimental_inline}}
   - : Returns 0.
 
 ## Instance methods

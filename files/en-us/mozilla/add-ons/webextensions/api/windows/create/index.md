@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.windows.create
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Creates a new window.
 
@@ -41,7 +41,7 @@ let creating = browser.windows.create(
         - if the URL(s) given in `url` point to [extension pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages) (that is, they are pages included with this extension and loaded with the "moz-extension:" protocol) then scripts _are_ by default allowed to close those tabs.
 
     - `cookieStoreId` {{optional_inline}}
-      - : `integer`. If present, specifies the `CookieStoreId` for all tabs that will be created when the window is opened.
+      - : `integer`. If present, specifies the `CookieStoreId` for all the tabs created when the window is opened. See [Work with contextual identities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) for more information on using `cookieStoreId`.
     - `focused` {{optional_inline}}
       - : `boolean`. If `true`, the new window will be focused. If `false`, the new window will be opened in the background and the currently focused window will stay focused. Defaults to `true`.
     - `height` {{optional_inline}}
@@ -139,7 +139,8 @@ browser.browserAction.onClicked.addListener((tab) => {
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/windows/#method-create) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/api/windows#method-create) API. This documentation is derived from [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

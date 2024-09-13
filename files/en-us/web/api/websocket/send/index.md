@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.WebSocket.send
 ---
 
-{{APIRef("Web Sockets API")}}
+{{APIRef("WebSockets API")}}
 
 The **`WebSocket.send()`** method enqueues the specified data
 to be transmitted to the server over the WebSocket connection, increasing the value of
@@ -37,8 +37,8 @@ send(data)
         `bufferedAmount` by the requisite number of bytes.
     - {{domxref("Blob")}}
       - : Specifying a `Blob` enqueues the blob's raw data to be transmitted in
-        a binary frame. The value of `bufferedAmount` is increased by the byte
-        size of that raw data.
+        a binary frame (the {{domxref("Blob.type")}} is ignored).
+        The value of `bufferedAmount` is increased by the byte size of that raw data.
     - {{jsxref("TypedArray")}} or a {{jsxref("DataView")}}
       - : You can send any [JavaScript typed array](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) object as a binary frame;
         its binary data contents are queued in the buffer,

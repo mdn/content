@@ -100,7 +100,8 @@ MyClass.prototype.myMethod = function () {
 })();
 ```
 
-> **Note:** Private fields and methods are new features in classes with no trivial equivalent in function constructors.
+> [!NOTE]
+> Private fields and methods are new features in classes with no trivial equivalent in function constructors.
 
 ### Constructing a class
 
@@ -173,7 +174,7 @@ console.log(red);
 
 You should see some output like this:
 
-```
+```plain
 Object { values: (3) […] }
   values: Array(3) [ 255, 0, 0 ]
 ```
@@ -323,7 +324,7 @@ const red = new Color(255, 0, 0);
 console.log(red.values[0]); // 0; It's not 255 anymore, because the H value for pure red is 0
 ```
 
-The user assumption that `values` means the RGB value suddenly collapses, and it may cause their logic to break. So, if you are an implementor of a class, you would want to hide the internal data structure of your instance from your user, both to keep the API clean and to prevent the user's code from breaking when you do some "harmless refactors". In classes, this is done through [_private fields_](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields).
+The user assumption that `values` means the RGB value suddenly collapses, and it may cause their logic to break. So, if you are an implementor of a class, you would want to hide the internal data structure of your instance from your user, both to keep the API clean and to prevent the user's code from breaking when you do some "harmless refactors". In classes, this is done through [_private fields_](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties).
 
 A private field is an identifier prefixed with `#` (the hash symbol). The hash is an integral part of the field's name, which means a private property can never have name clash with a public property. In order to refer to a private field anywhere in the class, you must _declare_ it in the class body (you can't create a private property on the fly). Apart from this, a private field is pretty much equivalent to a normal property.
 
@@ -348,11 +349,12 @@ console.log(red.getRed()); // 255
 
 Accessing private fields outside the class is an early syntax error. The language can guard against this because `#privateField` is a special syntax, so it can do some static analysis and find all usage of private fields before even evaluating the code.
 
-```js example-bad
+```js-nolint example-bad
 console.log(red.#values); // SyntaxError: Private field '#values' must be declared in an enclosing class
 ```
 
-> **Note:** Code run in the Chrome console can access private properties outside the class. This is a DevTools-only relaxation of the JavaScript syntax restriction.
+> [!NOTE]
+> Code run in the Chrome console can access private properties outside the class. This is a DevTools-only relaxation of the JavaScript syntax restriction.
 
 Private fields in JavaScript are _hard private_: if the class does not implement methods that expose these private fields, there's absolutely no mechanism to retrieve them from outside the class. This means you are safe to do any refactors to your class's private fields, as long as the behavior of exposed methods stay the same.
 
@@ -419,11 +421,12 @@ class Color {
 }
 ```
 
-> **Note:** Keep in mind that the `#` is a special identifier syntax, and you can't use the field name as if it's a string. `"#values" in anotherColor` would look for a property name literally called `"#values"`, instead of a private field.
+> [!NOTE]
+> Keep in mind that the `#` is a special identifier syntax, and you can't use the field name as if it's a string. `"#values" in anotherColor` would look for a property name literally called `"#values"`, instead of a private field.
 
 There are some limitations in using private properties: the same name can't be declared twice in a single class, and they can't be deleted. Both lead to early syntax errors.
 
-```js example-bad
+```js-nolint example-bad
 class BadIdeas {
   #firstName;
   #firstName; // syntax error occurs here
@@ -470,7 +473,7 @@ In this case, pretty much every field and method is private to the class. Thus, 
 
 ## Accessor fields
 
-`color.getRed()` and `color.setRed()` allow us to read and write to the red value of a color. If you come from languages like Java, you will be very familiar with this pattern. However, using methods to simply access a property is still somewhat unergonomic in JavaScript. _Accessor fields_ allow us to manipulate something as if its an "actual property".
+`color.getRed()` and `color.setRed()` allow us to read and write to the red value of a color. If you come from languages like Java, you will be very familiar with this pattern. However, using methods to simply access a property is still somewhat unergonomic in JavaScript. _Accessor fields_ allow us to manipulate something as if it is an "actual property".
 
 ```js
 class Color {
@@ -537,7 +540,8 @@ class MyClass {
 
 With the `Date` example, we have also encountered the [`Date.now()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/now) method, which returns the current date. This method does not belong to any date instance — it belongs to the class itself. However, it's put on the `Date` class instead of being exposed as a global `DateNow()` function, because it's mostly useful when dealing with date instances.
 
-> **Note:** Prefixing utility methods with what they deal with is called "namespacing" and is considered a good practice. For example, in addition to the older, unprefixed [`parseInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt) method, JavaScript also later added the prefixed [`Number.parseInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/parseInt) method to indicate that it's for dealing with numbers.
+> [!NOTE]
+> Prefixing utility methods with what they deal with is called "namespacing" and is considered a good practice. For example, in addition to the older, unprefixed [`parseInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt) method, JavaScript also later added the prefixed [`Number.parseInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/parseInt) method to indicate that it's for dealing with numbers.
 
 [_Static properties_](/en-US/docs/Web/JavaScript/Reference/Classes/static) are a group of class features that are defined on the class itself, rather than on individual instances of the class. These features include:
 
@@ -690,7 +694,7 @@ console.log(ColorWithAlpha.isValid(255, 0, 0, -1)); // false
 
 Derived classes don't have access to the parent class's private fields — this is another key aspect to JavaScript private fields being "hard private". Private fields are scoped to the class body itself and do not grant access to _any_ outside code.
 
-```js example-bad
+```js-nolint example-bad
 class ColorWithAlpha extends Color {
   log() {
     console.log(this.#values); // SyntaxError: Private field '#values' must be declared in an enclosing class

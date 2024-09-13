@@ -72,7 +72,7 @@ And the MIME type should be set to `application/x-ns-proxy-autoconfig`.
 
 Next, you should configure your server to map the .pac filename extension to the MIME type.
 
-> **Note:**
+> [!NOTE]
 >
 > - The JavaScript function should always be saved to a file by itself but not be embedded in a HTML file or any other file.
 > - The examples at the end of this document are complete. There is no additional syntax needed to save it into a file and use it. (Of course, the JavaScripts must be edited to reflect your site's domain name and/or subnets.)
@@ -114,10 +114,11 @@ These functions can be used in building the PAC file:
 
   - `ProxyConfig.bindings` {{deprecated_inline}}
 
-> **Note:** pactester (part of the [pacparser](https://github.com/manugarg/pacparser) package) was used to test the following syntax examples.
+> [!NOTE]
+> pactester (part of the [pacparser](https://github.com/manugarg/pacparser) package) was used to test the following syntax examples.
 >
 > - The PAC file is named `proxy.pac`
-> - Command line: `pactester -p ~/pacparser-master/tests/proxy.pac -u http://www.mozilla.org` (passes the `host` parameter `www.mozilla.org` and the `url` parameter `http://www.mozilla.org`)
+> - Command line: `pactester -p ~/pacparser-master/tests/proxy.pac -u https://www.mozilla.org` (passes the `host` parameter `www.mozilla.org` and the `url` parameter `https://www.mozilla.org`)
 
 ### isPlainHostName()
 
@@ -246,8 +247,8 @@ function alertEval(str) {
   alert(`${str} is ${eval(str)}`);
 }
 function FindProxyForURL(url, host) {
-  alertEval('isInNet(host, "63.245.213.24", "255.255.255.255")');
-  // "PAC-alert: isInNet(host, "63.245.213.24", "255.255.255.255") is true"
+  alertEval('isInNet(host, "192.0.2.172", "255.255.255.255")');
+  // "PAC-alert: isInNet(host, "192.0.2.172", "255.255.255.255") is true"
 }
 ```
 
@@ -288,7 +289,7 @@ Concatenates the four dot-separated bytes into one 4-byte word and converts it t
 #### Example
 
 ```js
-convert_addr("104.16.41.2"); // returns the decimal number 1745889538
+convert_addr("192.0.2.172"); // returns the decimal number 1745889538
 ```
 
 ### myIpAddress()
@@ -307,7 +308,7 @@ myIpAddress()
 
 Returns the server IP address of the machine Firefox is running on, as a string in the dot-separated integer format.
 
-> **Warning:** myIpAddress() returns the same IP address as the server address returned by **`nslookup localhost`** on a Linux machine. It does not return the public IP address.
+> **Warning:** `myIpAddress()` returns the same IP address as the server address returned by **`nslookup localhost`** on a Linux machine. It does not return the public IP address.
 
 #### Example
 
@@ -359,7 +360,8 @@ Support for particular glob expression syntax varies across browsers:
 `*` (match any number of characters) and `?` (match one character) are always supported,
 while `[characters]` and `[^characters]` are additionally supported by some implementations (including Firefox).
 
-> **Note:** If supported by the client, JavaScript regular expressions typically provide a more powerful and consistent way to pattern-match URLs (and other strings).
+> [!NOTE]
+> If supported by the client, JavaScript regular expressions typically provide a more powerful and consistent way to pattern-match URLs (and other strings).
 
 #### Examples
 
@@ -376,7 +378,8 @@ shExpMatch("http://home.netscape.com/people/montulli/index.html", "*/ari/*"); //
 weekdayRange(wd1, wd2, [gmt])
 ```
 
-> **Note:** (Before Firefox 49) wd1 must be less than wd2 if you want the function to evaluate these parameters as a range. See the warning below.
+> [!NOTE]
+> (Before Firefox 49) wd1 must be less than wd2 if you want the function to evaluate these parameters as a range. See the warning below.
 
 #### Parameters
 
@@ -410,7 +413,7 @@ weekdayRange("FRI", "MON") // returns true Friday and Monday only (note, the ord
 
 #### Syntax
 
-```
+```js-nolint
 dateRange(<day> | <month> | <year>, [gmt])  // ambiguity is resolved by assuming year is greater than 31
 dateRange(<day1>, <day2>, [gmt])
 dateRange(<month1>, <month2>, [gmt])
@@ -420,21 +423,22 @@ dateRange(<month1>, <year1>, <month2>, <year2>, [gmt])
 dateRange(<day1>, <month1>, <year1>, <day2>, <month2>, <year2>, [gmt])
 ```
 
-> **Note:** (Before Firefox 49) day1 must be less than day2, month1 must be less than month2, and year1 must be less than year2 if you want the function to evaluate these parameters as a range. See the warning below.
+> [!NOTE]
+> (Before Firefox 49) day1 must be less than day2, month1 must be less than month2, and year1 must be less than year2 if you want the function to evaluate these parameters as a range. See the warning below.
 
 #### Parameters
 
 - day
   - : Is the ordered day of the month between 1 and 31 (as an integer).
 
-```
+```plain
 1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20|21|22|23|24|25|26|27|28|29|30|31
 ```
 
 - month
   - : Is one of the ordered month strings below.
 
-```
+```plain
 "JAN"|"FEB"|"MAR"|"APR"|"MAY"|"JUN"|"JUL"|"AUG"|"SEP"|"OCT"|"NOV"|"DEC"
 ```
 
@@ -483,7 +487,8 @@ dateRange(1995, 1997);
 timeRange(<hour1>, <min1>, <sec1>, <hour2>, <min2>, <sec2>, [gmt])
 ```
 
-> **Note:** (Before Firefox 49) the category hour1, min1, sec1 must be less than the category hour2, min2, sec2 if you want the function to evaluate these parameters as a range. See the warning below.
+> [!NOTE]
+> (Before Firefox 49) the category hour1, min1, sec1 must be less than the category hour2, min2, sec2 if you want the function to evaluate these parameters as a range. See the warning below.
 
 #### Parameters
 
@@ -537,7 +542,8 @@ alert("Error: shouldn't reach this clause.") // log a simple message
 
 ### Use proxy for everything except local hosts
 
-> **Note:** Since all of the examples that follow are very specific, they have not been tested.
+> [!NOTE]
+> Since all of the examples that follow are very specific, they have not been tested.
 
 All hosts which aren't fully qualified, or the ones that are in local domain, will be connected to directly. Everything else will go through `w3proxy.mozilla.org:8080`. If the proxy goes down, connections become direct automatically:
 
@@ -551,7 +557,8 @@ function FindProxyForURL(url, host) {
 }
 ```
 
-> **Note:** This is the simplest and most efficient autoconfig file for cases where there's only one proxy.
+> [!NOTE]
+> This is the simplest and most efficient autoconfig file for cases where there's only one proxy.
 
 ## Example 2
 
@@ -575,7 +582,8 @@ function FindProxyForURL(url, host) {
 
 The above example will use the proxy for everything except local hosts in the mozilla.org domain, with the further exception that hosts `www.mozilla.org` and `merchant.mozilla.org` will go through the proxy.
 
-> **Note:** The order of the above exceptions for efficiency: `localHostOrDomainIs()` functions only get executed for URLs that are in local domain, not for every URL. Be careful to note the parentheses around the _or_ expression before the _and_ expression to achieve the above-mentioned efficient behavior.
+> [!NOTE]
+> The order of the above exceptions for efficiency: `localHostOrDomainIs()` functions only get executed for URLs that are in local domain, not for every URL. Be careful to note the parentheses around the _or_ expression before the _and_ expression to achieve the above-mentioned efficient behavior.
 
 ## Example 3
 
@@ -615,7 +623,7 @@ In this example all of the hosts in a given subnet are connected-to directly, ot
 
 ```js
 function FindProxyForURL(url, host) {
-  if (isInNet(host, "198.95.0.0", "255.255.0.0")) {
+  if (isInNet(host, "192.0.2.172", "255.255.0.0")) {
     return "DIRECT";
   }
   return "PROXY proxy.mydomain.com:8080";
@@ -629,7 +637,7 @@ function FindProxyForURL(url, host) {
   if (
     isPlainHostName(host) ||
     dnsDomainIs(host, ".mydomain.com") ||
-    isInNet(host, "198.95.0.0", "255.255.0.0")
+    isInNet(host, "192.0.2.0", "255.255.0.0")
   ) {
     return "DIRECT";
   } else {
@@ -688,7 +696,8 @@ function FindProxyForURL(url, host) {
 }
 ```
 
-> **Note:** The same can be accomplished using the [`shExpMatch()`](#shexpmatch) function described earlier.
+> [!NOTE]
+> The same can be accomplished using the [`shExpMatch()`](#shexpmatch) function described earlier.
 
 For example:
 
@@ -698,7 +707,8 @@ if (shExpMatch(url, "http:*")) {
 }
 ```
 
-> **Note:** The autoconfig file can be output by a CGI script. This is useful, for example, when making the autoconfig file act differently based on the client IP address (the `REMOTE_ADDR` environment variable in CGI).
+> [!NOTE]
+> The autoconfig file can be output by a CGI script. This is useful, for example, when making the autoconfig file act differently based on the client IP address (the `REMOTE_ADDR` environment variable in CGI).
 >
 > Usage of `isInNet()`, `isResolvable()` and `dnsResolve()` functions should be carefully considered, as they require the DNS server to be consulted. All the other autoconfig-related functions are mere string-matching functions that don't require the use of a DNS server. If a proxy is used, the proxy will perform its DNS lookup which would double the impact on the DNS server. Most of the time these functions are not necessary to achieve the desired result.
 
@@ -708,4 +718,4 @@ Proxy auto-config was introduced into Netscape Navigator 2.0 in the late 1990s, 
 
 The most "original" implementation of PAC and its JavaScript libraries is, therefore, `nsProxyAutoConfig.js` found in early versions of Firefox. These utilities are found in many other open-source systems including [Chromium](https://source.chromium.org/chromium/chromium/src/+/main:services/proxy_resolver/pac_js_library.h). Firefox later integrated the file into [`ProxyAutoConfig.cpp`](https://searchfox.org/mozilla-central/source/netwerk/base/ProxyAutoConfig.cpp) as a C++ string literal. To extract it into its own file, it suffices to copy the chunk into JavaScript with a `console.log` directive to print it.
 
-Microsoft in general made its own implementation. There used to be [some problems with their libraries](https://en.wikipedia.org/wiki/Proxy_auto-config#Old_Microsoft_problems), but most are resolved by now. They have defined [some new "Ex" suffixed functions](https://docs.microsoft.com/windows/win32/winhttp/ipv6-extensions-to-navigator-auto-config-file-format) around the address handling parts to support IPv6. The feature is supported by Chromium, but not yet by Firefox ([bugzilla #558253](https://bugzil.la/558253)).
+Microsoft in general made its own implementation. There used to be [some problems with their libraries](https://en.wikipedia.org/wiki/Proxy_auto-config#Old_Microsoft_problems), but most are resolved by now. They have defined [some new "Ex" suffixed functions](https://learn.microsoft.com/en-us/windows/win32/winhttp/ipv6-extensions-to-navigator-auto-config-file-format) around the address handling parts to support IPv6. The feature is supported by Chromium, but not yet by Firefox ([bugzilla #558253](https://bugzil.la/558253)).

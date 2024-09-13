@@ -72,6 +72,10 @@ gl.samplerParameteri(sampler, gl.TEXTURE_MAG_FILTER, gl.NEAREST);
 
 ## Specifications
 
+{{Specifications}}
+
+## Browser compatibility
+
 {{Compat}}
 
 ## See also

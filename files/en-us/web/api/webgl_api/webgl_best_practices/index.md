@@ -38,7 +38,7 @@ Similarly to extensions, the limits of your system will be different than your c
 
 The minimum requirements for WebGL are quite low. In practice, effectively all systems support at least the following:
 
-```
+```plain
 MAX_CUBE_MAP_TEXTURE_SIZE: 4096
 MAX_RENDERBUFFER_SIZE: 4096
 MAX_TEXTURE_SIZE: 4096
@@ -107,7 +107,7 @@ In production code, avoid such entry points, especially on the browser main thre
 - `getShader/ProgramParameter()`, `getShader/ProgramInfoLog()`, other `get`s on shaders/programs: flush + shader compile + round-trip, if not done after shader compilation is complete. (See also [parallel shader compilation](#compile_shaders_and_link_programs_in_parallel) below.)
 - `get*Parameter()` in general: possible flush + round-trip. In some cases, these will be cached to avoid the round-trip, but try to avoid relying on this.
 - `checkFramebufferStatus()`: possible flush + round-trip.
-- `getBufferSubData()`: usual finish + round-trip. (This is okay for READ buffers in conjunction with fences - see [async data readback](#non-blocking_async_data_downloadreadback) below.)
+- `getBufferSubData()`: usual finish + round-trip. (This is okay for READ buffers in conjunction with fences - see [async data readback](#use_non-blocking_async_data_readback) below.)
 - `readPixels()` to the CPU (i.e. without an UNPACK buffer bound): finish + round-trip. Instead, use GPU-GPU `readPixels` in conjunction with async data readback.
 
 ## Always enable vertex attrib 0 as an array
@@ -204,7 +204,7 @@ for (const [vs, fs, prog] of programs) {
 
 ## Prefer KHR_parallel_shader_compile
 
-While we've described a pattern to allow browsers to compile and link in parallel, normally checking `COMPILE_STATUS` or `LINK_STATUS` blocks until the compile or link completes. In browsers where it's available, the [KHR_parallel_shader_compile](https://www.khronos.org/registry/webgl/extensions/KHR_parallel_shader_compile/) extension provides a _non-blocking_ `COMPLETION_STATUS` query. Prefer to enable and use this extension.
+While we've described a pattern to allow browsers to compile and link in parallel, normally checking `COMPILE_STATUS` or `LINK_STATUS` blocks until the compile or link completes. In browsers where it's available, the [KHR_parallel_shader_compile](https://registry.khronos.org/webgl/extensions/KHR_parallel_shader_compile/) extension provides a _non-blocking_ `COMPLETION_STATUS` query. Prefer to enable and use this extension.
 
 Example usage:
 
@@ -233,7 +233,7 @@ This technique may not work in all applications, for example those which require
 
 ## Don't check shader compile status unless linking fails
 
-There are very few errors that are guaranteed to cause shader compilation failure, but cannot be deferred to link time. The [ESSL3 spec](https://www.khronos.org/registry/OpenGL/specs/es/3.0/GLSL_ES_Specification_3.00.pdf) says this under "Error Handling":
+There are very few errors that are guaranteed to cause shader compilation failure, but cannot be deferred to link time. The [ESSL3 spec](https://registry.khronos.org/OpenGL/specs/es/3.0/GLSL_ES_Specification_3.00.pdf) says this under "Error Handling":
 
 > The implementation should report errors as early a possible but in any case must satisfy the following:
 >
@@ -260,7 +260,7 @@ if (!gl.getShaderParameter(fs, gl.COMPILE_STATUS)) {
 }
 
 gl.linkProgram(prog);
-if (!gl.getProgramParameter(vs, gl.LINK_STATUS)) {
+if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) {
   console.error(`Link failed: ${gl.getProgramInfoLog(prog)}`);
 }
 ```
@@ -271,7 +271,7 @@ Consider:
 gl.compileShader(vs);
 gl.compileShader(fs);
 gl.linkProgram(prog);
-if (!gl.getProgramParameter(vs, gl.LINK_STATUS)) {
+if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) {
   console.error(`Link failed: ${gl.getProgramInfoLog(prog)}`);
   console.error(`vs info-log: ${gl.getShaderInfoLog(vs)}`);
   console.error(`fs info-log: ${gl.getShaderInfoLog(fs)}`);
@@ -288,7 +288,7 @@ If you have a float texture, iOS requires that you use `highp sampler2D foo;`, o
 
 The vertex language has the following predeclared globally scoped default precision statements:
 
-```
+```glsl
 precision highp float;
 precision highp int;
 precision lowp sampler2D;
@@ -297,7 +297,7 @@ precision lowp samplerCube;
 
 The fragment language has the following predeclared globally scoped default precision statements:
 
-```
+```glsl
 precision mediump int;
 precision lowp sampler2D;
 precision lowp samplerCube;
@@ -315,7 +315,7 @@ If `highp float` is available, `GL_FRAGMENT_PRECISION_HIGH` will be defined as `
 
 A good pattern for "always give me the highest precision":
 
-```
+```glsl
 #ifdef GL_FRAGMENT_PRECISION_HIGH
 precision highp float;
 #else
@@ -428,11 +428,11 @@ Depth and stencil attachments and formats are actually inseparable on many devic
 
 ## texImage/texSubImage uploads (esp. videos) can cause pipeline flushes
 
-Most texture uploads from DOM elements will incur a processing pass that will temporarily switch GL Programs internally, causing a pipeline flush. (Pipelines are formalized explicitly in Vulkan\[[1](https://www.khronos.org/registry/vulkan/specs/1.2/html/chap9.html#VkGraphicsPipelineCreateInfo)] et al, but are implicit behind-the-scenes in OpenGL and WebGL. Pipelines are more or less the tuple of shader program, depth/stencil/multisample/blend/rasterization state)
+Most texture uploads from DOM elements will incur a processing pass that will temporarily switch GL Programs internally, causing a pipeline flush. (Pipelines are formalized explicitly in [Vulkan](https://registry.khronos.org/vulkan/specs/1.2/html/chap9.html#VkGraphicsPipelineCreateInfo) et al, but are implicit behind-the-scenes in OpenGL and WebGL. Pipelines are more or less the tuple of shader program, depth/stencil/multisample/blend/rasterization state)
 
 In WebGL:
 
-```
+```glsl
     …
     useProgram(prog1)
 <pipeline flush>
@@ -446,7 +446,7 @@ In WebGL:
 
 Behind the scenes in the browser:
 
-```
+```glsl
     …
     useProgram(prog1)
 <pipeline flush>
@@ -471,7 +471,7 @@ Prefer doing uploads before starting drawing, or at least between pipelines:
 
 In WebGL:
 
-```
+```glsl
     …
     bindTexture(webgl_texture)
     texImage2D(HTMLVideoElement)
@@ -486,7 +486,7 @@ In WebGL:
 
 Behind the scenes in the browser:
 
-```
+```glsl
     …
     bindTexture(webgl_texture)
     -texImage2D(HTMLVideoElement):
@@ -512,7 +512,7 @@ The WebGL 2.0 `texImage*` API lets you define each mip level independently and a
 
 Further, some drivers might unconditionally allocate the whole mip-chain (+30% memory!) even if you only want a single level.
 
-So, prefer `texStorage`+`texSubImage` for textures in WebGL 2
+So, prefer `texStorage` + `texSubImage` for textures in WebGL 2.
 
 ## Use invalidateFramebuffer
 
@@ -560,7 +560,7 @@ async function getBufferSubDataAsync(
   gl.getBufferSubData(target, srcByteOffset, dstBuffer, dstOffset, length);
   gl.bindBuffer(target, null);
 
-  return dest;
+  return dstBuffer;
 }
 
 async function readPixelsAsync(gl, x, y, w, h, format, type, dest) {
@@ -577,7 +577,7 @@ async function readPixelsAsync(gl, x, y, w, h, format, type, dest) {
 }
 ```
 
-### `devicePixelRatio` and high-dpi rendering
+## `devicePixelRatio` and high-dpi rendering
 
 Handling `devicePixelRatio !== 1.0` is tricky. While the common approach is to set `canvas.width = width * devicePixelRatio`, this will cause moire artifacts with non-integer values of `devicePixelRatio`, as is common with UI scaling on Windows, as well as zooming on all platforms.
 
@@ -585,7 +585,7 @@ Instead, we can use non-integer values for CSS's `top`/`bottom`/`left`/`right` t
 
 Demo: [Device pixel presnap](https://kdashg.github.io/misc/webgl/device-pixel-presnap.html)
 
-### ResizeObserver and 'device-pixel-content-box'
+## ResizeObserver and 'device-pixel-content-box'
 
 On supporting browsers (Chromium?), `ResizeObserver` can be used with `'device-pixel-content-box'` to request a callback that includes the true device pixel size of an element. This can be used to build an async-but-accurate function:
 
@@ -619,3 +619,11 @@ Please refer to [the specification](https://www.w3.org/TR/resize-observer/#resiz
 Using the [ImageBitmapOptions dictionary](https://html.spec.whatwg.org/multipage/imagebitmap-and-animations.html#imagebitmapoptions) is essential for properly preparing textures for upload to WebGL, but unfortunately there's no obvious way to query exactly which dictionary members are supported by a given browser.
 
 [This JSFiddle](https://jsfiddle.net/ptkyewhx/) illustrates how to determine which dictionary members a given browser supports.
+
+## Use `WEBGL_provoking_vertex` when it's available
+
+When assembling vertices into primitives such as triangles and lines, in OpenGL's convention, the last vertex of the primitive is considered the "provoking vertex". This is relevant when using `flat` vertex attribute interpolation in ESSL300 (WebGL 2); the attribute value from the provoking vertex is used for all of the vertices of the primitive.
+
+Nowadays, many browsers' WebGL implementations are hosted on top of different graphics APIs than OpenGL, and some of these APIs use the first vertex as the provoking vertex for drawing commands. Emulating OpenGL's provoking vertex convention can be computationally expensive on some of these APIs.
+
+For this reason, the [WEBGL_provoking_vertex](https://registry.khronos.org/webgl/extensions/WEBGL_provoking_vertex/) extension has been introduced. If a WebGL implementation exposes this extension, this is a hint to the application that changing the convention to `FIRST_VERTEX_CONVENTION_WEBGL` will improve performance. It is strongly recommended that applications using flat shading check for the presence of this extension, and use it to do so if it's available. Note that this may require changes to the application's vertex buffers or shaders.

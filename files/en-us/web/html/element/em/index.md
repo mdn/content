@@ -29,18 +29,36 @@ By default, the visual result is the same. However, the semantic meaning is diff
 
 This means the right one to use depends on the situation. Neither is for purely decorative purposes, that's what CSS styling is for.
 
-An example for `<em>` could be: "Just _do_ it already!", or: "We _had_ to do something about it". A person or software reading the text would pronounce the words in italics with an emphasis, using verbal stress.
+Examples for `<em>` could be:
 
-An example for `<i>` could be: "The _Queen Mary_ sailed last night". Here, there is no added emphasis or importance on the word "Queen Mary". It is merely indicated that the object in question is not a queen named Mary, but a ship named _Queen Mary_. Another example for `<i>` could be: "The word _the_ is an article".
+```html live-sample___em-example
+<p>Just <em>do</em> it already!</p>
+<p>We <em>had</em> to do something about it.</p>
+```
+
+{{EmbedLiveSample('em-example', "", 85)}}
+
+A person or software reading the text would pronounce the words in italics with an emphasis, using verbal stress.
+
+Examples for `<i>` could be:
+
+```html live-sample___i-example
+<p>The word <i>the</i> is an article.</p>
+<p>The <i>Queen Mary</i> sailed last night.</p>
+```
+
+{{EmbedLiveSample('i-example', "", 85)}}
+
+Here, there is no added emphasis or importance on the word "Queen Mary". It is merely indicated that the object in question is not a queen named Mary but a ship named "Queen Mary".
 
 ## Examples
 
-The `<em>` element is often used to indicate an implicit or explicit contrast.
+In this example, the `<em>` element is used to highlight an implicit or explicit contrast between two ingredient lists:
 
 ```html
 <p>
-  In HTML 5, what was previously called
-  <em>block-level</em> content is now called <em>flow</em> content.
+  Ice cream is made with milk, sweetener, and cream. Frozen custard, on the
+  other hand, is made of milk, cream, sweetener, and <em>egg yolks</em>.
 </p>
 ```
 
@@ -77,7 +95,7 @@ The `<em>` element is often used to indicate an implicit or explicit contrast.
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
@@ -91,8 +109,9 @@ The `<em>` element is often used to indicate an implicit or explicit contrast.
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
+        <code
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/structural_roles#structural_roles_with_html_equivalents">emphasis</a
+          ></code
         >
       </td>
     </tr>

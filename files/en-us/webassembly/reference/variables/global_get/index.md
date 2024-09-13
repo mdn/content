@@ -1,6 +1,7 @@
 ---
 title: Global get
 slug: WebAssembly/Reference/Variables/Global_get
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

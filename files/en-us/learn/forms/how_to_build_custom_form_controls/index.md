@@ -1,6 +1,7 @@
 ---
 title: How to build custom form controls
 slug: Learn/Forms/How_to_build_custom_form_controls
+page-type: learn-module-chapter
 ---
 
 {{LearnSidebar}}
@@ -9,7 +10,8 @@ There are some cases where the available native HTML form controls may seem like
 
 In this article, we will discuss how to build a custom control. To that end, we will work with an example: rebuilding the {{HTMLElement("select")}} element. We will also discuss how, when, and whether building your own control makes sense, and what to consider when building a control is a requirement.
 
-> **Note:** We'll focus on building the control, not on how to make the code generic and reusable; that would involve some non-trivial JavaScript code and DOM manipulation in an unknown context, and that is out of the scope of this article.
+> [!NOTE]
+> We'll focus on building the control, not on how to make the code generic and reusable; that would involve some non-trivial JavaScript code and DOM manipulation in an unknown context, and that is out of the scope of this article.
 
 ## Design, structure, and semantics
 
@@ -74,10 +76,10 @@ Designing new interactions is generally only an option for very large industry p
 It is best not to invent new user interactions. For any interaction you do add, it is vital to spend time in the design stage; if you define a behavior poorly, or forget to define one, it will be very hard to redefine it once the users have gotten used to it. If you have doubts, ask for the opinions of others, and if you have the budget for it, do not hesitate to [perform user tests](https://en.wikipedia.org/wiki/Usability_testing). This process is called UX Design. If you want to learn more about this topic, you should check out the following helpful resources:
 
 - [UXMatters.com](https://www.uxmatters.com/)
-- [UXDesign.com](http://uxdesign.com/)
 - [The UX Design section of SmashingMagazine](https://www.smashingmagazine.com/)
 
-> **Note:** Also, in most systems there is a way to open the {{HTMLElement("select")}} element with the keyboard to look at all the available choices (this is the same as clicking the {{HTMLElement("select")}} element with a mouse). This is achieved with <kbd>Alt</kbd> + <kbd>Down</kbd> on Windows. We didn't implement this in our example, but it would be easy to do so, as the mechanism has already been implemented for the `click` event.
+> [!NOTE]
+> Also, in most systems there is a way to open the {{HTMLElement("select")}} element with the keyboard to look at all the available choices (this is the same as clicking the {{HTMLElement("select")}} element with a mouse). This is achieved with <kbd>Alt</kbd> + <kbd>Down</kbd> on Windows. We didn't implement this in our example, but it would be easy to do so, as the mechanism has already been implemented for the `click` event.
 
 ## Defining the HTML structure and (some) semantics
 
@@ -120,7 +122,7 @@ The required styles are those necessary to handle the three states of our contro
 ```css
 .select {
   /* This will create a positioning context for the list of options;
-     adding this to .select{{cssxref(':focus-within')}} will be a better option when fully supported
+     adding this to `.select:focus-within` will be a better option when fully supported
   */
   position: relative;
 
@@ -134,9 +136,9 @@ We need an extra class `active` to define the look and feel of our control when 
 ```css
 .select.active,
 .select:focus {
-  outline: none;
+  outline-color: transparent;
 
-  /* This {{cssxref('box-shadow')}} property is not exactly required, however it's imperative to ensure
+  /* This box-shadow property is not exactly required, however it's imperative to ensure
      active state is visible, especially to keyboard users, that we use it as a default value. */
   box-shadow: 0 0 3px 1px #227755;
 }
@@ -167,7 +169,8 @@ We need an extra class to handle when the list of options is hidden. This is nec
 }
 ```
 
-> **Note:** We could also have used `transform: scale(1, 0)` to give the option list no height and full width.
+> [!NOTE]
+> We could also have used `transform: scale(1, 0)` to give the option list no height and full width.
 
 ### Beautification
 
@@ -176,7 +179,7 @@ So now that we have the basic functionality in place, the fun can start. The fol
 ```css
 .select {
   /* The computations are made assuming 1em equals 16px which is the default value in most browsers.
-     If you are lost with px to em conversion, try http://riddle.pl/emcalc/ */
+     If you are lost with px to em conversion, try https://nekocalc.com/px-to-em-converter */
   font-size: 0.625em; /* this (10px) is the new font size context for em value in this context */
   font-family: Verdana, Arial, sans-serif;
 
@@ -188,7 +191,7 @@ So now that we have the basic functionality in place, the fun can start. The fol
 
   border: 0.2em solid #000;
   border-radius: 0.4em;
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45);
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%);
 
   /* The first declaration is for browsers that do not support linear gradients. */
   background: #f0f0f0;
@@ -210,7 +213,7 @@ So now that we have the basic functionality in place, the fun can start. The fol
 We don't need an extra element to design the down arrow; instead, we're using the {{cssxref("::after")}} pseudo-element. It could also be implemented using a simple background image on the `select` class.
 
 ```css
-.select:after {
+.select::after {
   content: "▼"; /* We use the unicode character U+25BC; make sure to set a charset meta tag */
   position: absolute;
   z-index: 1; /* This will be important to keep the arrow from overlapping the list of options */
@@ -261,7 +264,7 @@ Next, let's style the list of options:
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.2em 0.4em rgb(0 0 0 / 40%);
   background: #f0f0f0;
 }
 ```
@@ -305,7 +308,7 @@ So here's the result with our three states ([check out the source code here](/en
 .select.active,
 .select:focus {
   box-shadow: 0 0 3px 1px #227755;
-  outline: none;
+  outline-color: transparent;
 }
 
 .select .optList {
@@ -331,7 +334,7 @@ So here's the result with our three states ([check out the source code here](/en
   border: 0.2em solid #000; /* 2px */
   border-radius: 0.4em; /* 4px */
 
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
 
   background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
@@ -347,7 +350,7 @@ So here's the result with our three states ([check out the source code here](/en
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;
@@ -381,7 +384,7 @@ So here's the result with our three states ([check out the source code here](/en
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.2em 0.4em rgb(0 0 0 / 40%);
 
   box-sizing: border-box;
 
@@ -427,7 +430,7 @@ So here's the result with our three states ([check out the source code here](/en
 .select.active,
 .select:focus {
   box-shadow: 0 0 3px 1px #227755;
-  outline: none;
+  outline-color: transparent;
 }
 
 .select .optList {
@@ -453,7 +456,7 @@ So here's the result with our three states ([check out the source code here](/en
   border: 0.2em solid #000; /* 2px */
   border-radius: 0.4em; /* 4px */
 
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
 
   background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
@@ -469,7 +472,7 @@ So here's the result with our three states ([check out the source code here](/en
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;
@@ -503,7 +506,7 @@ So here's the result with our three states ([check out the source code here](/en
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.2em 0.4em rgb(0 0 0 / 40%);
 
   box-sizing: border-box;
 
@@ -549,7 +552,7 @@ So here's the result with our three states ([check out the source code here](/en
 .select.active,
 .select:focus {
   box-shadow: 0 0 3px 1px #227755;
-  outline: none;
+  outline-color: transparent;
 }
 
 .select .optList {
@@ -575,7 +578,7 @@ So here's the result with our three states ([check out the source code here](/en
   border: 0.2em solid #000; /* 2px */
   border-radius: 0.4em; /* 4px */
 
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
 
   background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
@@ -591,7 +594,7 @@ So here's the result with our three states ([check out the source code here](/en
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;
@@ -625,7 +628,7 @@ So here's the result with our three states ([check out the source code here](/en
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.2em 0.4em rgb(0 0 0 / 40%);
 
   box-sizing: border-box;
 
@@ -651,7 +654,8 @@ So here's the result with our three states ([check out the source code here](/en
 
 Now that our design and structure are ready, we can write the JavaScript code to make the control actually work.
 
-> **Warning:** The following is educational code, not production code, and should not be used as-is. It is neither future-proof nor will work on legacy browsers. It also has redundant parts that should be optimized in production code.
+> [!WARNING]
+> The following is educational code, not production code, and should not be used as-is. It is neither future-proof nor will work on legacy browsers. It also has redundant parts that should be optimized in production code.
 
 ### Why isn't it working?
 
@@ -661,13 +665,13 @@ Before starting, it's important to remember **JavaScript in the browser is an un
 - The script did not load: This is one of the most common cases, especially in the mobile world where the network is not very reliable.
 - The script is buggy: You should always consider this possibility.
 - The script conflicts with a third-party script: This can happen with tracking scripts or any bookmarklets the user uses.
-- The script conflicts with, or is affected by, a browser extension (such as Firefox's [NoScript](https://addons.mozilla.org/fr/firefox/addon/noscript/) extension) or Chrome's [ScriptBlock](https://chrome.google.com/webstore/detail/scriptblock/hcdjknjpbnhdoabbngpmfekaecnpajba).
+- The script conflicts with, or is affected by, a browser extension (such as Firefox's [NoScript](https://addons.mozilla.org/fr/firefox/addon/noscript/) extension or Chrome's [ScriptBlock](https://chromewebstore.google.com/detail/scriptblock/hcdjknjpbnhdoabbngpmfekaecnpajba) extension).
 - The user is using a legacy browser, and one of the features you require is not supported: This will happen frequently when you make use of cutting-edge APIs.
 - The user is interacting with the content before the JavaScript has been fully downloaded, parsed, and executed.
 
 Because of these risks, it's really important to seriously consider what will happen if your JavaScript doesn't work. We'll discuss options to consider and cover the basics in our example (a full discussion of solving this issue for all scenarios would require a book). Just remember, it is vital to make your script generic and reusable.
 
-In our example, if our JavaScript code isn't running, we'll fall back to displaying a standard {{HTMLElement("select")}} element. We include our control and the {{HTMLElement("select")}}; which one is displayed depends on the class of the body element, with the class of the body element being updated by the script that makes the control function, when it loads successfully
+In our example, if our JavaScript code isn't running, we'll fall back to displaying a standard {{HTMLElement("select")}} element. We include our control and the {{HTMLElement("select")}}; which one is displayed depends on the class of the body element, with the class of the body element being updated by the script that makes the control function, when it loads successfully.
 
 To achieve this, we need two things:
 
@@ -704,7 +708,7 @@ Second, we need two new classes to let us hide the unneeded element: we visually
 .widget select,
 .no-widget .select {
   /* This CSS selector basically says:
-     - either we have set the body class to "widget" and thus we hide the actual {{HTMLElement("select")}} element
+     - either we have set the body class to "widget" and thus we hide the actual <select> element
      - or we have not changed the body class, therefore the body class is still "no-widget",
        so the elements whose class is "select" must be hidden */
   position: absolute;
@@ -808,7 +812,7 @@ Check out the [full source code](/en-US/docs/Learn/Forms/How_to_build_custom_for
 .select.active,
 .select:focus {
   box-shadow: 0 0 3px 1px #227755;
-  outline: none;
+  outline-color: transparent;
 }
 
 .select .optList {
@@ -834,7 +838,7 @@ Check out the [full source code](/en-US/docs/Learn/Forms/How_to_build_custom_for
   border: 0.2em solid #000; /* 2px */
   border-radius: 0.4em; /* 4px */
 
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
 
   background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
@@ -850,7 +854,7 @@ Check out the [full source code](/en-US/docs/Learn/Forms/How_to_build_custom_for
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;
@@ -884,7 +888,7 @@ Check out the [full source code](/en-US/docs/Learn/Forms/How_to_build_custom_for
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.2em 0.4em rgb(0 0 0 / 40%);
 
   box-sizing: border-box;
 
@@ -915,7 +919,8 @@ window.addEventListener("load", () => {
 
 {{EmbedLiveSample("With_JS",120,130)}}
 
-> **Note:** If you really want to make your code generic and reusable, instead of doing a class switch it's far better to just add the widget class to hide the {{HTMLElement("select")}} elements, and to dynamically add the DOM tree representing the custom control after every {{HTMLElement("select")}} element in the page.
+> [!NOTE]
+> If you really want to make your code generic and reusable, instead of doing a class switch it's far better to just add the widget class to hide the {{HTMLElement("select")}} elements, and to dynamically add the DOM tree representing the custom control after every {{HTMLElement("select")}} element in the page.
 
 ### Making the job easier
 
@@ -1105,7 +1110,7 @@ Check out the [full source code](/en-US/docs/Learn/Forms/How_to_build_custom_for
 .select.active,
 .select:focus {
   box-shadow: 0 0 3px 1px #227755;
-  outline: none;
+  outline-color: transparent;
 }
 
 .select .optList {
@@ -1131,7 +1136,7 @@ Check out the [full source code](/en-US/docs/Learn/Forms/How_to_build_custom_for
   border: 0.2em solid #000; /* 2px */
   border-radius: 0.4em; /* 4px */
 
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
 
   background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
@@ -1147,7 +1152,7 @@ Check out the [full source code](/en-US/docs/Learn/Forms/How_to_build_custom_for
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;
@@ -1181,7 +1186,7 @@ Check out the [full source code](/en-US/docs/Learn/Forms/How_to_build_custom_for
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.2em 0.4em rgb(0 0 0 / 40%);
 
   box-sizing: border-box;
 
@@ -1270,7 +1275,7 @@ window.addEventListener("load", () => {
     });
 
     select.addEventListener("keyup", (event) => {
-      if (event.keyCode === 27) {
+      if (event.key === "Escape") {
         deactivateSelect(select);
       }
     });
@@ -1308,7 +1313,7 @@ function updateValue(select, index) {
   nativeWidget.selectedIndex = index;
 
   // We update the value placeholder accordingly
-  value.innerHTML = optionList[index].innerHTML;
+  value.textContent = optionList[index].textContent;
 
   // And we highlight the corresponding option of our custom control
   highlightOption(select, optionList[index]);
@@ -1365,11 +1370,20 @@ window.addEventListener("load", () => {
       // When the user hits the down arrow, we jump to the next option
       if (event.key === "ArrowDown" && index < optionList.length - 1) {
         index++;
+        // Prevent the default action of the ArrowDown key press.
+        // Without this, the page would scroll down when the ArrowDown key is pressed.
+        event.preventDefault();
       }
 
       // When the user hits the up arrow, we jump to the previous option
       if (event.key === "ArrowUp" && index > 0) {
         index--;
+        // Prevent the default action of the ArrowUp key press.
+        event.preventDefault();
+      }
+      if (event.key === "Enter" || event.key === " ") {
+        // If Enter or Space is pressed, toggle the option list
+        toggleOptList(select);
       }
 
       updateValue(select, index);
@@ -1380,7 +1394,11 @@ window.addEventListener("load", () => {
 
 In the code above, it's worth noting the use of the [`tabIndex`](/en-US/docs/Web/API/HTMLElement/tabIndex) property. Using this property is necessary to ensure that the native control will never gain focus, and to make sure that our custom control gains focus when the user uses their keyboard or mouse.
 
-With that, we're done! Here's the result ([check out the source code here](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_4)):
+With that, we're done!
+
+#### Live example
+
+Check out the [source code here](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_4).
 
 ```html hidden
 <form class="no-widget">
@@ -1422,7 +1440,7 @@ With that, we're done! Here's the result ([check out the source code here](/en-U
 .select.active,
 .select:focus {
   box-shadow: 0 0 3px 1px #227755;
-  outline: none;
+  outline-color: transparent;
 }
 
 .select .optList {
@@ -1448,7 +1466,7 @@ With that, we're done! Here's the result ([check out the source code here](/en-U
   border: 0.2em solid #000; /* 2px */
   border-radius: 0.4em; /* 4px */
 
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
 
   background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
@@ -1464,7 +1482,7 @@ With that, we're done! Here's the result ([check out the source code here](/en-U
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;
@@ -1498,7 +1516,7 @@ With that, we're done! Here's the result ([check out the source code here](/en-U
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.2em 0.4em rgb(0 0 0 / 40%);
 
   box-sizing: border-box;
 
@@ -1557,7 +1575,7 @@ function updateValue(select, index) {
   const optionList = select.querySelectorAll(".option");
 
   nativeWidget.selectedIndex = index;
-  value.innerHTML = optionList[index].innerHTML;
+  value.textContent = optionList[index].textContent;
   highlightOption(select, optionList[index]);
 }
 
@@ -1637,7 +1655,7 @@ window.addEventListener("load", () => {
 });
 ```
 
-{{EmbedLiveSample("Handling_the_controls_value",120,130)}}
+{{EmbedLiveSample("live_example_2",120,130)}}
 
 But wait a second, are we really done?
 
@@ -1671,7 +1689,8 @@ To support the [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/listbox_role
 </div>
 ```
 
-> **Note:** Including both the `role` attribute and a `class` attribute is not necessary. Instead of using `.option` use the `[role="option"]` [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) in your CSS.
+> [!NOTE]
+> Including both the `role` attribute and a `class` attribute is not necessary. Instead of using `.option` use the `[role="option"]` [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) in your CSS.
 
 ### The `aria-selected` attribute
 
@@ -1694,14 +1713,18 @@ function updateValue(select, index) {
   optionList[index].setAttribute("aria-selected", "true");
 
   nativeWidget.selectedIndex = index;
-  value.innerHTML = optionList[index].innerHTML;
+  value.textContent = optionList[index].textContent;
   highlightOption(select, optionList[index]);
 }
 ```
 
 It might have seemed simpler to let a screen reader focus on the off-screen select and ignore our stylized one, but this is not an accessible solution. Screen readers are not limited to blind people; people with low vision and even perfect vision use them as well. For this reason, you can not have the screen reader focus on an off-screen element.
 
-Below is the final result of all these changes (you'll get a better feel for this by trying it with an assistive technology such as [NVDA](https://www.nvaccess.org/) or [VoiceOver](https://www.apple.com/accessibility/vision/)). Check out the [full source code here](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_5).
+Below is the final result of all these changes (you'll get a better feel for this by trying it with an assistive technology such as [NVDA](https://www.nvaccess.org/) or [VoiceOver](https://www.apple.com/accessibility/vision/)).
+
+#### Live example
+
+Check out the [full source code here](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls/Example_5).
 
 ```html hidden
 <form class="no-widget">
@@ -1743,7 +1766,7 @@ Below is the final result of all these changes (you'll get a better feel for thi
 .select.active,
 .select:focus {
   box-shadow: 0 0 3px 1px #227755;
-  outline: none;
+  outline-color: transparent;
 }
 
 .select .optList {
@@ -1769,7 +1792,7 @@ Below is the final result of all these changes (you'll get a better feel for thi
   border: 0.2em solid #000; /* 2px */
   border-radius: 0.4em; /* 4px */
 
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45); /* 0 1px 2px */
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%); /* 0 1px 2px */
 
   background: #f0f0f0;
   background: linear-gradient(0deg, #e3e3e3, #fcfcfc 50%, #f0f0f0);
@@ -1785,7 +1808,7 @@ Below is the final result of all these changes (you'll get a better feel for thi
   vertical-align: top;
 }
 
-.select:after {
+.select::after {
   content: "▼";
   position: absolute;
   z-index: 1;
@@ -1819,7 +1842,7 @@ Below is the final result of all these changes (you'll get a better feel for thi
   border-top-width: 0.1em;
   border-radius: 0 0 0.4em 0.4em;
 
-  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0.2em 0.4em rgb(0 0 0 / 40%);
 
   box-sizing: border-box;
 
@@ -1884,7 +1907,7 @@ function updateValue(select, index) {
   optionList[index].setAttribute("aria-selected", "true");
 
   nativeWidget.selectedIndex = index;
-  value.innerHTML = optionList[index].innerHTML;
+  value.textContent = optionList[index].textContent;
   highlightOption(select, optionList[index]);
 }
 
@@ -1938,13 +1961,13 @@ window.addEventListener("load", () => {
     select.addEventListener("keyup", (event) => {
       let index = getIndex(select);
 
-      if (event.keyCode === 27) {
+      if (event.key === "Escape") {
         deactivateSelect(select);
       }
-      if (event.keyCode === 40 && index < optionList.length - 1) {
+      if (event.key === "ArrowDown" && index < optionList.length - 1) {
         index++;
       }
-      if (event.keyCode === 38 && index > 0) {
+      if (event.key === "ArrowUp" && index > 0) {
         index--;
       }
 
@@ -1954,7 +1977,7 @@ window.addEventListener("load", () => {
 });
 ```
 
-{{EmbedLiveSample("The_aria-selected_attribute",120,130)}}
+{{EmbedLiveSample("live_example_3",120,130)}}
 
 If you want to move forward, the code in this example needs some improvement before it becomes generic and reusable. This is an exercise you can try to perform. Two hints to help you in this: the first argument for all our functions is the same, which means those functions need the same context. Building an object to share that context would be wise.
 
@@ -1970,11 +1993,35 @@ We can start with a completely semantic, accessible, unordered list of {{htmlele
 <fieldset>
   <legend>Pick a fruit</legend>
   <ul class="styledSelect">
-    <li><input type="radio" name="fruit" value="Cherry" id="fruitCherry" checked><label for="fruitCherry">Cherry</label></li>
-    <li><input type="radio" name="fruit" value="Lemon" id="fruitLemon"><label for="fruitLemon">Lemon</label></li>
-    <li><input type="radio" name="fruit" value="Banana" id="fruitBanana"><label for="fruitBanana"">Banana</label></li>
-    <li><input type="radio" name="fruit" value="Strawberry" id="fruitStrawberry"><label for="fruitStrawberry">Strawberry</label></li>
-    <li><input type="radio" name="fruit" value="Apple" id="fruitApple"><label for="fruitApple">Apple</label></li>
+    <li>
+      <input
+        type="radio"
+        name="fruit"
+        value="Cherry"
+        id="fruitCherry"
+        checked />
+      <label for="fruitCherry">Cherry</label>
+    </li>
+    <li>
+      <input type="radio" name="fruit" value="Lemon" id="fruitLemon" />
+      <label for="fruitLemon">Lemon</label>
+    </li>
+    <li>
+      <input type="radio" name="fruit" value="Banana" id="fruitBanana" />
+      <label for="fruitBanana">Banana</label>
+    </li>
+    <li>
+      <input
+        type="radio"
+        name="fruit"
+        value="Strawberry"
+        id="fruitStrawberry" />
+      <label for="fruitStrawberry">Strawberry</label>
+    </li>
+    <li>
+      <input type="radio" name="fruit" value="Apple" id="fruitApple" />
+      <label for="fruitApple">Apple</label>
+    </li>
   </ul>
 </fieldset>
 ```
@@ -2003,13 +2050,13 @@ We'll do a little styling of the radio button list (not the legend/fieldset) to 
 }
 .styledSelect:not(:focus-within) input:not(:checked) + label {
   height: 0;
-  outline: none;
+  outline-color: transparent;
   overflow: hidden;
 }
 .styledSelect:not(:focus-within) input:checked + label {
   border: 0.2em solid #000;
   border-radius: 0.4em;
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45);
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%);
 }
 .styledSelect:not(:focus-within) input:checked + label::after {
   content: "▼";
@@ -2022,7 +2069,7 @@ We'll do a little styling of the radio button list (not the legend/fieldset) to 
 .styledSelect:focus-within {
   border: 0.2em solid #000;
   border-radius: 0.4em;
-  box-shadow: 0 0.1em 0.2em rgba(0, 0, 0, 0.45);
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 45%);
 }
 .styledSelect:focus-within input:checked + label {
   background-color: #333;
@@ -2059,7 +2106,7 @@ If you do create alternative controls via radio buttons, your own JavaScript, or
 
 - [Your first HTML form](/en-US/docs/Learn/Forms/Your_first_form)
 - [How to structure an HTML form](/en-US/docs/Learn/Forms/How_to_structure_a_web_form)
-- [The native form widgets](/en-US/docs/Learn/Forms/Basic_native_form_controls)
+- [The native form controls](/en-US/docs/Learn/Forms/Basic_native_form_controls)
 - [HTML5 input types](/en-US/docs/Learn/Forms/HTML5_input_types)
 - [Additional form controls](/en-US/docs/Learn/Forms/Other_form_controls)
 - [UI pseudo-classes](/en-US/docs/Learn/Forms/UI_pseudo-classes)
@@ -2070,7 +2117,7 @@ If you do create alternative controls via radio buttons, your own JavaScript, or
 ### Advanced Topics
 
 - [Sending forms through JavaScript](/en-US/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- **How to build custom form widgets**
+- **How to build custom form controls**
 - [HTML forms in legacy browsers](/en-US/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
 - [Advanced styling for HTML forms](/en-US/docs/Learn/Forms/Advanced_form_styling)
-- [Property compatibility table for form widgets](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [Property compatibility table for form controls](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

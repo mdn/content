@@ -21,8 +21,8 @@ x < y
 
 The operands are compared with multiple rounds of coercion, which can be summarized as follows:
 
-- First, objects are [converted to primitives](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion) by calling its [`[@@toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (with `"number"` as hint), [`valueOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf), and [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) methods, in that order. The left operand is always coerced before the right one. Note that although `[@@toPrimitive]()` is called with the `"number"` hint (meaning there's a slight preference for the object to become a number), the return value is not [converted to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), since strings are still specially handled.
-- If both values are strings, they are compared as strings, based on the values of the Unicode code points they contain.
+- First, objects are [converted to primitives](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion) by calling its [`[Symbol.toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (with `"number"` as hint), [`valueOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf), and [`toString()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) methods, in that order. The left operand is always coerced before the right one. Note that although `[Symbol.toPrimitive]()` is called with the `"number"` hint (meaning there's a slight preference for the object to become a number), the return value is not [converted to a number](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion), since strings are still specially handled.
+- If both values are strings, they are compared as strings, based on the values of the UTF-16 code units (not Unicode code points) they contain.
 - Otherwise JavaScript attempts to convert non-numeric types to numeric values:
   - Boolean values `true` and `false` are converted to 1 and 0 respectively.
   - `null` is converted to 0.
@@ -45,7 +45,8 @@ x > y === y < x;
 x >= y === y <= x;
 ```
 
-> **Note:** One observable difference between `<` and `>` is the order of coercion, especially if the coercion to primitive has side effects. All comparison operators coerce the left operand before the right operand.
+> [!NOTE]
+> One observable difference between `<` and `>` is the order of coercion, especially if the coercion to primitive has side effects. All comparison operators coerce the left operand before the right operand.
 
 ## Examples
 
@@ -55,6 +56,8 @@ x >= y === y <= x;
 "a" < "b"; // true
 "a" < "a"; // false
 "a" < "3"; // false
+
+"\uD855\uDE51" < "\uFF3A"; // true
 ```
 
 ### String to number comparison
@@ -126,7 +129,8 @@ console.log(l < r && r < l);
 // true
 ```
 
-> **Warning:** This can be a source of confusion. If your objects provide custom primitive conversion logic, make sure it is _idempotent_: multiple coercions should return the same value.
+> [!WARNING]
+> This can be a source of confusion. If your objects provide custom primitive conversion logic, make sure it is _idempotent_: multiple coercions should return the same value.
 
 ## Specifications
 
@@ -138,6 +142,6 @@ console.log(l < r && r < l);
 
 ## See also
 
-- [Greater than operator](/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than)
-- [Greater than or equal operator](/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal)
-- [Less than or equal operator](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal)
+- [Greater than (`>`)](/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than)
+- [Greater than or equal (`>=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal)
+- [Less than or equal (`<=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal)

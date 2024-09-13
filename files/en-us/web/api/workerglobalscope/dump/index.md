@@ -9,11 +9,11 @@ status:
 browser-compat: api.WorkerGlobalScope.dump
 ---
 
-{{APIRef("Web Workers API")}}{{Non-standard_Header}}{{Deprecated_Header}}
+{{APIRef("Web Workers API")}}{{Non-standard_Header}}{{Deprecated_Header}}{{AvailableInWorkers("worker")}}
 
 The **`WorkerGlobalScope.dump()`** method logs messages to the browser's standard output (`stdout`). If the browser was started from a terminal, output sent to `dump()` will appear in the terminal. This is the same as {{domxref("Window.dump()")}}, but for workers.
 
-Output from `dump()` is _not_ sent to the browser's developer tools console. To log to the developer tools console, use [`console.log()`](/en-US/docs/Web/API/console/log).
+Output from `dump()` is _not_ sent to the browser's developer tools console. To log to the developer tools console, use [`console.log()`](/en-US/docs/Web/API/console/log_static).
 
 ## Syntax
 

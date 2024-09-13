@@ -13,7 +13,8 @@ A **`FinalizationRegistry`** object lets you request a callback when a value is 
 
 `FinalizationRegistry` provides a way to request that a _cleanup callback_ get called at some point when a value registered with the registry has been _reclaimed_ (garbage-collected). (Cleanup callbacks are sometimes called _finalizers_.)
 
-> **Note:** Cleanup callbacks should not be used for essential program logic. See [Notes on cleanup callbacks](#notes_on_cleanup_callbacks) for details.
+> [!NOTE]
+> Cleanup callbacks should not be used for essential program logic. See [Notes on cleanup callbacks](#notes_on_cleanup_callbacks) for details.
 
 You create the registry passing in the callback:
 
@@ -92,8 +93,8 @@ These properties are defined on `FinalizationRegistry.prototype` and shared by a
 
 - {{jsxref("Object/constructor", "FinalizationRegistry.prototype.constructor")}}
   - : The constructor function that created the instance object. For `FinalizationRegistry` instances, the initial value is the {{jsxref("FinalizationRegistry/FinalizationRegistry", "FinalizationRegistry")}} constructor.
-- `FinalizationRegistry.prototype[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"FinalizationRegistry"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+- `FinalizationRegistry.prototype[Symbol.toStringTag]`
+  - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"FinalizationRegistry"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 

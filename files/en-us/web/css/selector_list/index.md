@@ -66,7 +66,7 @@ h1 + p {
 
 ## Valid and invalid selector lists
 
-An invalid selector represents, and therefore matches, nothing. When a selector list contains an invalid selector, the entire style block is ignored, except for the {{CSSxRef(":is", ":is()")}} and {{CSSxRef(":where", ":where()")}} pseudo-classes that accept [forgiving selector lists](#forgiving-selector-list).
+An invalid selector represents, and therefore matches, nothing. When a selector list contains an invalid selector, the entire style block is ignored, except for the {{CSSxRef(":is", ":is()")}} and {{CSSxRef(":where", ":where()")}} pseudo-classes that accept [forgiving selector lists](#forgiving_selector_list).
 
 ### Invalid selector list
 

@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.RelativeOrientationSensor
 ---
 
-{{APIRef("Sensor API")}}
+{{securecontext_header}}{{APIRef("Sensor API")}}
 
 The **`RelativeOrientationSensor`** interface of the [Sensor APIs](/en-US/docs/Web/API/Sensor_APIs) describes the device's physical orientation without regard to the Earth's reference coordinate system.
 
@@ -36,7 +36,8 @@ _No specific events; inherits events from its ancestor, {{domxref('Sensor')}}._
 
 The following example, which is loosely based on [Intel's Orientation Phone demo](https://intel.github.io/generic-sensor-demos/orientation-phone/), instantiates an `RelativeOrientationSensor` with a frequency of 60 times a second.
 
-> **Note:** The Intel demo this is based on uses the `AbsoluteOrientationSensor`. On each reading it uses {{domxref('OrientationSensor.quaternion')}} to rotate a visual model of a phone.
+> [!NOTE]
+> The Intel demo this is based on uses the `AbsoluteOrientationSensor`. On each reading it uses {{domxref('OrientationSensor.quaternion')}} to rotate a visual model of a phone.
 
 ```js
 const options = { frequency: 60, referenceFrame: "device" };

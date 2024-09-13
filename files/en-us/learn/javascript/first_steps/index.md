@@ -1,5 +1,5 @@
 ---
-title: JavaScript First Steps
+title: JavaScript first steps
 slug: Learn/JavaScript/First_steps
 page-type: learn-module
 ---
@@ -7,15 +7,6 @@ page-type: learn-module
 {{LearnSidebar}}
 
 In our first JavaScript module, we first answer some fundamental questions such as "what is JavaScript?", "what does it look like?", and "what can it do?", before moving on to taking you through your first practical experience of writing JavaScript. After that, we discuss some key building blocks in detail, such as variables, strings, numbers and arrays.
-
-> **Callout:**
->
-> #### Looking to become a front-end web developer?
->
-> We have put together a course that includes all the essential information you need to
-> work towards your goal.
->
-> [**Get started**](/en-US/docs/Learn/Front-end_web_developer)
 
 ## Prerequisites
 
@@ -25,7 +16,8 @@ Before starting this module, you don't need any previous JavaScript knowledge, b
 - [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML).
 - [Introduction to CSS](/en-US/docs/Learn/CSS/First_steps).
 
-> **Note:** If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you could try out (most of) the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).
+> [!NOTE]
+> If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you could try out (most of) the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).
 
 ## Guides
 
@@ -55,5 +47,7 @@ The following assessment will test your understanding of the JavaScript basics c
 
 ## See also
 
+- [Scrimba: Learn JavaScript](https://v2.scrimba.com/learn-javascript-c0v?via=mdn) <sup>_MDN Curriculum partner_</sup>
+  - : [Scrimba's](https://scrimba.com?via=mdn) _Learn JavaScript_ course teaches you JavaScript through solving 140+ interactive coding challenges, building projects including a game, a browser extension, and even a mobile app. Scrimba features fun interactive lessons taught by knowledgeable teachers.
 - [Learn JavaScript](https://learnjavascript.online/)
   - : An excellent resource for aspiring web developers — Learn JavaScript in an interactive environment, with short lessons and interactive tests, guided by automated assessment. The first 40 lessons are free, and the complete course is available for a small one-time payment.

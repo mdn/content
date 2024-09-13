@@ -5,19 +5,19 @@ page-type: web-api-interface
 browser-compat: api.OffscreenCanvasRenderingContext2D
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}{{AvailableInWorkers}}
 
 The **`OffscreenCanvasRenderingContext2D`** interface is a {{domxref("CanvasRenderingContext2D")}} rendering context for drawing to the bitmap of an `OffscreenCanvas` object.
 It is similar to the `CanvasRenderingContext2D` object, with the following differences:
 
-- there is no support for user-interface features (`drawFocusIfNeeded`, and `scrollPathIntoView`)
+- there is no support for user-interface features (`drawFocusIfNeeded`)
 - its `canvas` attribute refers to an `OffscreenCanvas` object rather than a {{HtmlElement("canvas")}} element
-- it has a `commit()` method for pushing rendered images to the context's `OffscreenCanvas` object's placeholder {{HtmlElement("canvas")}} element
+- the bitmap for the placeholder {{HtmlElement("canvas")}} element belonging to the `OffscreenCanvas` object is updated during the rendering update of the `Window` or `Worker` that owns the `OffscreenCanvas`
 
 ## Example
 
 The following code snippet creates a {{domxref("Worker")}} object using the {{domxref("Worker.Worker", "Worker()")}} constructor.
-The `transferControlToOffscreen()` method is used to transfer the `OffscreenCanvas` object to the worker:
+The `transferControlToOffscreen()` method is used to get an `OffscreenCanvas` object from the {{HtmlElement("canvas")}} element so it can be transferred to the worker:
 
 ```js
 const canvas = document.getElementById("canvas");
@@ -44,17 +44,15 @@ For a full example, see our [OffscreenCanvas worker example](https://github.com/
 
 The following method is new to the `OffscreenCanvasRenderingContext2D` interface and does not exist in the `CanvasRenderingContext2D` interface:
 
-- {{domxref("OffscreenCanvasRenderingContext2D.commit()", "commit()")}}
+- {{domxref("OffscreenCanvasRenderingContext2D.commit()", "commit()")}} {{deprecated_inline}} {{non-standard_inline}}
   - : Pushes the rendered image to the context's `OffscreenCanvas` object's placeholder {{HtmlElement("canvas")}} element.
 
 ## Unsupported features
 
-The following user interface methods are **not supported** by the `OffscreenCanvasRenderingContext2D` interface:
+The following user interface method is **not supported** by the `OffscreenCanvasRenderingContext2D` interface:
 
 - {{domxref("CanvasRenderingContext2D.drawFocusIfNeeded()")}}
   - : If a given element is focused, this method draws a focus ring around the current path.
-- {{domxref("CanvasRenderingContext2D.scrollPathIntoView()")}} {{Experimental_Inline}}
-  - : Scrolls the current path or a given path into the view.
 
 ## Inherited properties and methods
 
@@ -62,7 +60,7 @@ _The following properties and methods are inherited from {{domxref("CanvasRender
 
 ### Context
 
-- {{domxref("CanvasRenderingContext2D.isContextLost()")}} {{Experimental_Inline}}
+- {{domxref("CanvasRenderingContext2D.isContextLost()")}}
   - : Returns `true` if the rendering context was lost.
 
 ### Drawing rectangles
@@ -84,7 +82,7 @@ The following methods and properties control drawing text. See also the {{domxre
   - : Draws (strokes) a given text at the given (x, y) position.
 - {{domxref("CanvasRenderingContext2D.measureText()")}}
   - : Returns a {{domxref("TextMetrics")}} object.
-- {{domxref("CanvasRenderingContext2D.textRendering")}} {{Experimental_Inline}}
+- {{domxref("CanvasRenderingContext2D.textRendering")}}
   - : Text rendering. Possible values: `auto` (default), `optimizeSpeed`, `optimizeLegibility`,
 
 ### Line styles
@@ -118,17 +116,17 @@ The following properties control how text is laid out.
   - : Baseline alignment setting. Possible values: `top`, `hanging`, `middle`, `alphabetic` (default), `ideographic`, `bottom`.
 - {{domxref("CanvasRenderingContext2D.direction")}}
   - : Directionality. Possible values: `ltr`, `rtl`, `inherit` (default).
-- {{domxref("CanvasRenderingContext2D.letterSpacing")}} {{Experimental_Inline}}
+- {{domxref("CanvasRenderingContext2D.letterSpacing")}}
   - : Letter spacing. Default: `0px`.
 - {{domxref("CanvasRenderingContext2D.fontKerning")}}
   - : Font kerning. Possible values: `auto` (default), `normal`, `none`.
-- {{domxref("CanvasRenderingContext2D.fontStretch")}} {{experimental_inline}}
+- {{domxref("CanvasRenderingContext2D.fontStretch")}}
   - : Font stretch. Possible values: `ultra-condensed`, `extra-condensed`, `condensed`, `semi-condensed`, `normal` (default), `semi-expanded`, `expanded`, `extra-expanded`, `ultra-expanded`.
-- {{domxref("CanvasRenderingContext2D.fontVariantCaps")}} {{experimental_inline}}
+- {{domxref("CanvasRenderingContext2D.fontVariantCaps")}}
   - : Font variant caps. Possible values: `normal` (default), `small-caps`, `all-small-caps`, `petite-caps`, `all-petite-caps`, `unicase`, `titling-caps`.
 - {{domxref("CanvasRenderingContext2D.textRendering")}} {{experimental_inline}}
   - : Text rendering. Possible values: `auto` (default), `optimizeSpeed`, `optimizeLegibility`, `geometricPrecision`.
-- {{domxref("CanvasRenderingContext2D.wordSpacing")}} {{experimental_inline}}
+- {{domxref("CanvasRenderingContext2D.wordSpacing")}}
   - : Word spacing. Default value: `0px`
 
 ### Fill and stroke styles
@@ -186,6 +184,8 @@ The following methods can be used to manipulate paths of objects.
   - : Adds an elliptical arc to the current path.
 - {{domxref("CanvasRenderingContext2D.rect()")}}
   - : Creates a path for a rectangle at position (x, y) with a size that is determined by _width_ and _height_.
+- {{domxref("CanvasRenderingContext2D.roundRect()")}}
+  - : Creates a path for a rectangle with rounded corners at position (x, y) with a size that is determined by _width_ and _height_ and radii determined by _radii_.
 
 ### Drawing paths
 
@@ -199,8 +199,6 @@ The following methods can be used to manipulate paths of objects.
   - : Reports whether or not the specified point is contained in the current path.
 - {{domxref("CanvasRenderingContext2D.isPointInStroke()")}}
   - : Reports whether or not the specified point is inside the area contained by the stroking of a path.
-- {{domxref("CanvasRenderingContext2D.roundRect()")}}
-  - : Addition to CanvasPath that allows users to render rectangles with rounded corners.
 
 ### Transformations
 
@@ -273,12 +271,10 @@ The `CanvasRenderingContext2D` rendering context contains a variety of drawing s
 
 ## Unsupported properties and methods
 
-The following methods are **not supported** in the `OffscreenCanvasRenderingContext2D` interface:
+The following method is **not supported** in the `OffscreenCanvasRenderingContext2D` interface:
 
 - {{domxref("CanvasRenderingContext2D.drawFocusIfNeeded()")}}
   - : If a given element is focused, this method draws a focus ring around the current path.
-- {{domxref("CanvasRenderingContext2D.scrollPathIntoView()")}} {{Experimental_Inline}}
-  - : Scrolls the current path or a given path into the view.
 
 ## Specifications
 

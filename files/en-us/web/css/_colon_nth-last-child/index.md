@@ -49,7 +49,8 @@ By passing a selector argument, we can select the **nth-last** element that matc
 }
 ```
 
-> **Note:** This is different from moving the selector outside of the function, like:
+> [!NOTE]
+> This is different from moving the selector outside of the function, like:
 
 ```css
 li.important: nth-last-child(-n + 3);
@@ -133,7 +134,7 @@ tr:nth-last-child(2) {
 
 ### Quantity query
 
-A _quantity query_ styles elements depending on how many of them there are. In this example, list items turn red when there are at least three of them in a given list. This is accomplished by combining the capabilities of the `nth-last-child` pseudo-class and the [general sibling combinator](/en-US/docs/Web/CSS/General_sibling_combinator).
+A _quantity query_ styles elements depending on how many of them there are. In this example, list items turn red when there are at least three of them in a given list. This is accomplished by combining the capabilities of the `nth-last-child` pseudo-class and the [subsequent-sibling combinator](/en-US/docs/Web/CSS/Subsequent-sibling_combinator).
 
 #### HTML
 

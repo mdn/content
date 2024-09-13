@@ -10,10 +10,12 @@ The JavaScript exception "can't convert BigInt to number" occurs when an arithme
 
 ## Message
 
-```
+```plain
+TypeError: Cannot convert a BigInt value to a number (V8-based)
 TypeError: Cannot mix BigInt and other types, use explicit conversions (V8-based)
 TypeError: BigInts have no unsigned right shift, use >> instead (V8-based)
 TypeError: can't convert BigInt to number (Firefox)
+TypeError: Conversion from 'BigInt' to 'number' is not allowed. (Safari)
 TypeError: Invalid mix of BigInt and other type in addition/multiplication/…. (Safari)
 TypeError: BigInt does not support >>> operator (Safari)
 ```
@@ -25,6 +27,8 @@ TypeError: BigInt does not support >>> operator (Safari)
 ## What went wrong?
 
 The two sides of an arithmetic operator must both be BigInts or both not. If an operation involves a mix of BigInts and numbers, it's ambiguous whether the result should be a BigInt or number, since there may be loss of precision in both cases.
+
+The error also happens when a BigInt is implicitly converted to a number via the [number coercion](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion) process. For example, if a BigInt is passed to a built-in method that expects a number.
 
 The error can also happen if the [unsigned right shift operator (`>>>`)](/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift) is used between two BigInts. In Firefox, the message is the same: "can't convert BigInt to number".
 

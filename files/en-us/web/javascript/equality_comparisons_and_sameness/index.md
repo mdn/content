@@ -181,7 +181,7 @@ However, this way of thinking implies that the equality comparisons form a one-d
 
 ### When to use Object.is() versus triple equals
 
-In general, the only time {{jsxref("Object.is")}}'s special behavior towards zeros is likely to be of interest is in the pursuit of certain meta-programming schemes, especially regarding property descriptors, when it is desirable for your work to mirror some of the characteristics of {{jsxref("Object.defineProperty")}}. If your use case does not require this, it is suggested to avoid {{jsxref("Object.is")}} and use [`===`](/en-US/docs/Web/JavaScript/Reference/Operators) instead. Even if your requirements involve having comparisons between two {{jsxref("NaN")}} values evaluate to `true`, generally it is easier to special-case the {{jsxref("NaN")}} checks (using the {{jsxref("isNaN")}} method available from previous versions of ECMAScript) than it is to work out how surrounding computations might affect the sign of any zeros you encounter in your comparison.
+In general, the only time {{jsxref("Object.is")}}'s special behavior towards zeros is likely to be of interest is in the pursuit of certain meta-programming schemes, especially regarding property descriptors, when it is desirable for your work to mirror some of the characteristics of {{jsxref("Object.defineProperty")}}. If your use case does not require this, it is suggested to avoid {{jsxref("Object.is")}} and use [`===`](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) instead. Even if your requirements involve having comparisons between two {{jsxref("NaN")}} values evaluate to `true`, generally it is easier to special-case the {{jsxref("NaN")}} checks (using the {{jsxref("isNaN")}} method available from previous versions of ECMAScript) than it is to work out how surrounding computations might affect the sign of any zeros you encounter in your comparison.
 
 Here's a non-exhaustive list of built-in methods and operators that might cause a distinction between `-0` and `+0` to manifest itself in your code:
 
@@ -224,4 +224,4 @@ console.log(f2b(nan2)); // Uint8Array(8) [1, 0, 0, 0, 0, 0, 248, 127]
 
 ## See also
 
-- [JS Comparison Table](https://dorey.github.io/JavaScript-Equality-Table/)
+- [JS Comparison Table](https://dorey.github.io/JavaScript-Equality-Table/) by [dorey](https://github.com/dorey)

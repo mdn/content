@@ -31,48 +31,30 @@ translateZ(tz)
 ### Values
 
 - `tz`
-  - : A {{cssxref("&lt;length&gt;")}} representing the z-component of the translating vector. A positive value moves the
+  - : A {{cssxref("&lt;length&gt;")}} representing the z-component of the translating vector [0, 0, tz]. In [Cartesian coordinate system](/en-US/docs/Web/CSS/transform-function#cartesian_coordinates) it represents shift along z-axis. A positive value moves the
     element towards the viewer, and a negative value farther away.
 
 <table class="standard-table">
   <thead>
     <tr>
-      <th scope="col">Cartesian coordinates on ℝ^2</th>
-      <th scope="col">Homogeneous coordinates on ℝℙ^2</th>
-      <th scope="col">Cartesian coordinates on ℝ^3</th>
-      <th scope="col">Homogeneous coordinates on ℝℙ^3</th>
+      <th scope="col"><a href="/en-US/docs/Web/CSS/transform-function#cartesian_coordinates">Cartesian coordinates</a> on <a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^2</a></th>
+      <th scope="col"><a href="https://en.wikipedia.org/wiki/Homogeneous_coordinates">Homogeneous coordinates</a> on <a href="https://en.wikipedia.org/wiki/Real_projective_plane">ℝℙ^2</a></th>
+      <th scope="col">Cartesian coordinates on <a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^3</a></th>
+      <th scope="col">Homogeneous coordinates on <a href="https://en.wikipedia.org/wiki/Real_projective_space">ℝℙ^3</a></th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td colspan="2">
-        This transformation applies to the 3D space and can't be represented on
-        the plane.
+        This transformation applies to the 3D space and can't be represented on the plane.
       </td>
       <td>
-        A translation is not a linear transformation in ℝ^3 and can't be
-        represented using a Cartesian-coordinate matrix.
+        A translation is not a linear transformation in ℝ^3 and can't be represented using a Cartesian-coordinate matrix.
       </td>
       <td>
-        <math
-          ><mrow><mo>(</mo
-            ><mtable
-              ><mtr
-                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>1</mn> </mtd><mtd><mi>t</mi> </mtd></mtr
-              ><mtr
-                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
-                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
-              ></mtable
-            ><mo>)</mo></mrow
-          ></math
-        >
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mi>t</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{cccc} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & t \\ 0 & 0 & 0 & 1 \end{array} \right)</annotation></semantics>
+        </math>
       </td>
     </tr>
   </tbody>
@@ -121,7 +103,8 @@ Note if the `perspective()` value is less than the `translateZ()` value, such as
 further than the user's viewport. The smaller the difference between the perspective and translateZ values, the closer
 the user is to the element and the larger the translated element will seem.
 
-> **Note:** As the composition of transforms isn't commutative, the order you write the different functions is significant. In particular, in general, you want `perspective()` to be placed before `translateZ()`.
+> [!NOTE]
+> As the composition of transforms isn't commutative, the order you write the different functions is significant. In particular, in general, you want `perspective()` to be placed before `translateZ()`.
 
 ### Result
 

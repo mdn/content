@@ -46,7 +46,7 @@ navigation.addEventListener("navigate", (event) => {
     event.intercept({
       async handler() {
         // The URL has already changed, so show a placeholder while
-        //fetching the new content, such as a spinner or loading page
+        // fetching the new content, such as a spinner or loading page
         renderArticlePagePlaceholder();
 
         // Fetch the new content and display when ready
@@ -58,7 +58,8 @@ navigation.addEventListener("navigate", (event) => {
 });
 ```
 
-> **Note:** Before the Navigation API was available, to do something similar you'd have to listen for all click events on links, run `event.preventDefault()`, perform the appropriate {{domxref("History.pushState()")}} call, then set up the page view based on the new URL. And this wouldn't handle all navigations — only user-initiated link clicks.
+> [!NOTE]
+> Before the Navigation API was available, to do something similar you'd have to listen for all click events on links, run `event.preventDefault()`, perform the appropriate {{domxref("History.pushState()")}} call, then set up the page view based on the new URL. And this wouldn't handle all navigations — only user-initiated link clicks.
 
 ### Handling scrolling using `scroll()`
 

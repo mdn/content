@@ -7,9 +7,10 @@ status:
 browser-compat: javascript.builtins.RegExp.n
 ---
 
-{{JSRef}} {{deprecated_header}}
+{{JSRef}} {{Deprecated_Header}}
 
-> **Note:** All `RegExp` static properties that expose the last match state globally are deprecated. See [deprecated RegExp features](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp) for more information.
+> [!NOTE]
+> All `RegExp` static properties that expose the last match state globally are deprecated. See [deprecated RegExp features](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#regexp) for more information.
 
 The **`RegExp.$1, …, RegExp.$9`** static accessor properties return parenthesized substring matches.
 
@@ -27,7 +28,7 @@ The number of possible parenthesized substrings is unlimited, but the `RegExp` o
 
 ### Using $n with RegExp.prototype.test()
 
-The following script uses the {{jsxref("RegExp.prototype.test()", "test()")}} method of the {{jsxref("RegExp")}} instance to grab a number in a generic string.
+The following script uses the {{jsxref("RegExp.prototype.test()")}} method to grab a number in a generic string.
 
 ```js
 const str = "Test 24";
@@ -47,8 +48,8 @@ Please note that any operation involving the usage of other regular expressions 
 
 ## See also
 
-- {{jsxref("RegExp.input", "RegExp.input ($_)")}}
-- {{jsxref("RegExp.lastMatch", "RegExp.lastMatch ($&amp;)")}}
-- {{jsxref("RegExp.lastParen", "RegExp.lastParen ($+)")}}
-- {{jsxref("RegExp.leftContext", "RegExp.leftContext ($`)")}}
-- {{jsxref("RegExp.rightContext", "RegExp.rightContext ($')")}}
+- [`RegExp.input` (`$_`)](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/input)
+- [`RegExp.lastMatch` (`$&`)](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastMatch)
+- [`RegExp.lastParen` (`$+`)](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastParen)
+- [`RegExp.leftContext` (`` $` ``)](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/leftContext)
+- [`RegExp.rightContext` (`$'`)](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/rightContext)

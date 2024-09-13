@@ -10,7 +10,8 @@ WebRTC lets you build peer-to-peer communication of arbitrary data, audio, or vi
 
 This article doesn't get into details of the actual APIs involved in establishing and handling a WebRTC connection; it reviews the process in general with some information about why each step is required. See [Signaling and video calling](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling) for an actual example with a step-by-step explanation of what the code does.
 
-> **Note:** This page is currently under construction, and some of the content will move to other pages as the WebRTC guide material is built out. Pardon our dust!
+> [!NOTE]
+> This page is currently under construction, and some of the content will move to other pages as the WebRTC guide material is built out. Pardon our dust!
 
 ## Establishing the connection
 
@@ -30,7 +31,7 @@ Why, you may wonder, is something fundamental to the process of establishing a W
 
 In particular, if a developer already has a method in place for connecting two devices, it doesn't make sense for them to have to use another one, defined by the specification, just for WebRTC. Since WebRTC doesn't live in a vacuum, there is likely other connectivity in play, so it makes sense to avoid having to add additional connection channels for signaling if an existing one can be used.
 
-In order to exchange signaling information, you can choose to send JSON objects back and forth over a WebSocket connection, or you could use XMPP or SIP over an appropriate channel, or you could use {{domxref("XMLHttpRequest")}} over {{Glossary("HTTPS")}} with polling, or any other combination of technologies you can come up with. You could even use email as the signaling channel.
+In order to exchange signaling information, you can choose to send JSON objects back and forth over a WebSocket connection, or you could use XMPP or SIP over an appropriate channel, or you could use {{domxref("Window/fetch", "fetch()")}} over {{Glossary("HTTPS")}} with polling, or any other combination of technologies you can come up with. You could even use email as the signaling channel.
 
 It's also worth noting that the channel for performing signaling doesn't even need to be over the network. One peer can output a data object that can be printed out, physically carried (on foot or by carrier pigeon) to another device, entered into that device, and a response then output by that device to be returned on foot, and so forth, until the WebRTC peer connection is open. It'd be very high latency but it could be done.
 
@@ -62,7 +63,8 @@ There's a sequence of things that have to happen in order to make it possible to
 
 Sometimes, during the lifetime of a WebRTC session, network conditions change. One of the users might transition from a cellular to a Wi-Fi network, or the network might become congested, for example. When this happens, the ICE agent may choose to perform **ICE restart**. This is a process by which the network connection is renegotiated, exactly the same way the initial ICE negotiation is performed, with one exception: media continues to flow across the original network connection until the new one is up and running. Then media shifts to the new network connection and the old one is closed.
 
-> **Note:** Different browsers support ICE restart under different sets of conditions. Not all browsers will perform ICE restart due to network congestion, for example.
+> [!NOTE]
+> Different browsers support ICE restart under different sets of conditions. Not all browsers will perform ICE restart due to network congestion, for example.
 
 If you need to change the configuration of the connection in some way (such as changing to a different set of ICE servers), you can do so before restarting ICE by calling {{domxref("RTCPeerConnection.setConfiguration()")}} with an updated configuration object before restarting ICE.
 

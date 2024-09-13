@@ -52,9 +52,9 @@ A browser action is a button that your extension adds to the browser's toolbar. 
 
 This key is replaced by [`action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) in Manifest V3 extensions.
 
-If you supply a popup, then the popup is opened when the user clicks the button, and your JavaScript running in the popup can handle the user's interaction with it. If you don't supply a popup, then a click event is dispatched to your extension's [background scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) when the user clicks the button.
+You must specify this key to include a browser toolbar button in your extension. When specified, you can manipulate the button programmatically using the {{WebExtAPIRef("browserAction")}} API.
 
-You can also create and manipulate browser actions programmatically using the [browserAction API](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/browserAction).
+If you supply a popup, then the popup is opened when the user clicks the button, and your JavaScript running in the popup can handle the user's interaction with it. If you don't supply a popup, then a click event is dispatched to your extension's [background scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) when the user clicks the button.
 
 ## Syntax
 
@@ -83,7 +83,7 @@ The `browser_action` key is an object that may have any of the following propert
         <p>Optional, defaulting to <code>false</code>.</p>
         <div class="notecard warning">
           <p>
-            Do not set <code>browser_style</code> to true: it is deprecated in Manifest V3, and support will be removed in Firefox 118. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles#manifest_v3_migration">Manifest V3 migration for <code>browser_style</code></a>.
+            Do not set <code>browser_style</code> to true: it isn't supported in Manifest V3, starting with Firefox 118. See <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles#manifest_v3_migration">Manifest V3 migration for <code>browser_style</code></a>.
           </p>
         </div>
         <p>
@@ -196,7 +196,7 @@ The `browser_action` key is an object that may have any of the following propert
         <p>
           You cannot specify multiple icons of the same sizes.<br /><br />See
           <a
-            href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes"
+            href="#choosing_icon_sizes"
             >Choosing icon sizes</a
           >
           for more guidance on this.

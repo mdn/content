@@ -8,8 +8,7 @@ browser-compat: api.Range.getBoundingClientRect
 
 {{ApiRef("DOM")}}
 
-The **`Range.getBoundingClientRect()`** method returns a {{
-  domxref("DOMRect") }} object that bounds the contents of the range; this is a rectangle
+The **`Range.getBoundingClientRect()`** method returns a {{domxref("DOMRect")}} object that bounds the contents of the range; this is a rectangle
 enclosing the union of the bounding rectangles for all the elements in the range.
 
 This method is useful for determining the viewport coordinates of the cursor or

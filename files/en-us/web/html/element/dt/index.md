@@ -59,19 +59,23 @@ For examples, see the [examples provided for the `<dl>` element](/en-US/docs/Web
         {{Glossary("W3C")}} HTML 5.2 and later) a
         {{HTMLElement("div")}} that is a child of a
         {{HTMLElement("dl")}}.<br />This element can be used before a
-        {{HTMLElement("dd")}} or another {{HTMLElement("dt")}}
+        {{HTMLElement("dd")}} or another <code>&lt;dt&gt;</code>
         element.
       </td>
     </tr>
     <tr>
       <th scope="row">Implicit ARIA role</th>
-      <td><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/term_role"><code>term</code></a></td>
+      <td>
+        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+          >No corresponding role</a
+        >
+      </td>
     </tr>
     <tr>
       <th scope="row">Permitted ARIA roles</th>
       <td>
         <code
-          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/Listitem_role"
+          ><a href="/en-US/docs/Web/Accessibility/ARIA/Roles/listitem_role"
             >listitem</a
           ></code
         >

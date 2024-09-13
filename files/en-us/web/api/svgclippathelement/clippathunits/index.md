@@ -10,7 +10,8 @@ browser-compat: api.SVGClipPathElement.clipPathUnits
 
 The read-only **`clipPathUnits`** property of the {{domxref("SVGClipPathElement")}} interface reflects the {{SVGAttr("clipPathUnits")}} attribute of a {{SVGElement("clipPath")}} element which defines the coordinate system to use for the content of the element.
 
-> **Note:** Although this property is read-only, it is merely a container for two values you can modify, {{domxref("SVGAnimatedEnumeration.baseVal", "baseVal")}} and {{domxref("SVGAnimatedEnumeration.animVal", "animVal")}}.
+> [!NOTE]
+> Although this property is read-only, it is merely a container for two values you can modify, {{domxref("SVGAnimatedEnumeration.baseVal", "baseVal")}} and {{domxref("SVGAnimatedEnumeration.animVal", "animVal")}}.
 
 ## Value
 
@@ -51,12 +52,12 @@ svg {
     <rect id="r4" x="55" y="0" width="45" height="45" />
 
     <!-- The first 3 rect are clipped with userSpaceOnUse units -->
-    <use clip-path="url(#clip1)" xlink:href="#r1" fill="red" />
-    <use clip-path="url(#clip1)" xlink:href="#r2" fill="blue" />
-    <use clip-path="url(#clip1)" xlink:href="#r3" fill="yellow" />
+    <use clip-path="url(#clip1)" href="#r1" fill="red" />
+    <use clip-path="url(#clip1)" href="#r2" fill="blue" />
+    <use clip-path="url(#clip1)" href="#r3" fill="yellow" />
 
     <!-- The last rect is clipped with objectBoundingBox units -->
-    <use clip-path="url(#clip2)" xlink:href="#r4" fill="green" />
+    <use clip-path="url(#clip2)" href="#r4" fill="green" />
   </svg>
 </div>
 <pre id="log"></pre>

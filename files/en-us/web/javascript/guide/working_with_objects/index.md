@@ -253,7 +253,7 @@ myCar[propertyName] = "Mustang";
 console.log(myCar); // { make: 'Ford', model: 'Mustang' }
 ```
 
-However, beware of using square brackets to access properties whose names are given by external input. This may make your code susceptible to [object injection attacks](https://github.com/nodesecurity/eslint-plugin-security/blob/main/docs/the-dangers-of-square-bracket-notation.md).
+However, beware of using square brackets to access properties whose names are given by external input. This may make your code susceptible to [object injection attacks](https://github.com/eslint-community/eslint-plugin-security/blob/main/docs/the-dangers-of-square-bracket-notation.md).
 
 Nonexistent properties of an object have value {{jsxref("undefined")}} (and not [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)).
 
@@ -266,8 +266,8 @@ myCar.nonexistentProperty; // undefined
 There are three native ways to list/traverse object properties:
 
 - [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loops. This method traverses all of the enumerable string properties of an object as well as its prototype chain.
-- {{jsxref("Object.keys", "Object.keys(myObj)")}}. This method returns an array with only the enumerable own string property names ("keys") in the object `myObj`, but not those in the prototype chain.
-- {{jsxref("Object.getOwnPropertyNames", "Object.getOwnPropertyNames(myObj)")}}. This method returns an array containing all the own string property names in the object `myObj`, regardless of if they are enumerable or not.
+- {{jsxref("Object.keys()")}}. This method returns an array with only the enumerable own string property names ("keys") in the object `myObj`, but not those in the prototype chain.
+- {{jsxref("Object.getOwnPropertyNames()")}}. This method returns an array containing all the own string property names in the object `myObj`, regardless of if they are enumerable or not.
 
 You can use the bracket notation with [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) to iterate over all the enumerable properties of an object. To illustrate how this works, the following function displays the properties of the object when you pass the object and the object's name as arguments to the function:
 
@@ -287,7 +287,7 @@ function showProps(obj, objName) {
 
 The term "own property" refers to the properties of the object, but excluding those of the prototype chain. So, the function call `showProps(myCar, 'myCar')` would print the following:
 
-```
+```plain
 myCar.make = Ford
 myCar.model = Mustang
 myCar.year = 1969
@@ -512,7 +512,7 @@ For more information about comparison operators, see [equality operators](/en-US
 
 ## See also
 
-- To dive deeper, read about [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
-- To learn about classes (an alternative way to create objects), read the [JavaScript classes](/en-US/docs/Web/JavaScript/Reference/Classes) reference.
+- [Inheritance and the prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
 
 {{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Using_classes")}}

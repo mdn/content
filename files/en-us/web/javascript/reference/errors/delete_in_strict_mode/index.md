@@ -10,7 +10,7 @@ The JavaScript [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode)-o
 
 ## Message
 
-```
+```plain
 SyntaxError: Delete of an unqualified identifier in strict mode. (V8-based)
 SyntaxError: applying the 'delete' operator to an unqualified name is deprecated (Firefox)
 SyntaxError: Cannot delete unqualified property 'a' in strict mode. (Safari)
@@ -34,9 +34,9 @@ This error only happens in [strict mode code](/en-US/docs/Web/JavaScript/Referen
 
 ### Freeing the contents of a variable
 
-Attempting to delete a plain variable, doesn't work in JavaScript and it throws an error in strict mode:
+Attempting to delete a plain variable throws an error in strict mode:
 
-```js example-bad
+```js-nolint example-bad
 "use strict";
 
 var x;

@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.sessions.Session
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The `Session` object represents a tab or window that the user has closed in the current browsing session.
 
@@ -35,7 +35,8 @@ Values of this type are objects. They contain the following properties:
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.sessions`](https://developer.chrome.com/docs/extensions/reference/sessions/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.sessions`](https://developer.chrome.com/docs/extensions/reference/api/sessions) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -13,10 +13,9 @@ As you start to work on larger stylesheets and big projects you will discover th
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy,
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >basic software installed</a
+          >Basic software installed</a
         >, basic knowledge of
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
@@ -199,7 +198,7 @@ By ordering things in this way, we at least have an idea in which part of the st
 
 ### Avoid overly-specific selectors
 
-If you create very specific selectors, you will often find that you need to duplicate chunks of your CSS to apply the same rules to another element. For example, you might have something like the below selector, which applies the rule to a `<p>` with a class of `box` inside an `<article>` with a class of `main`.
+If you create very specific selectors, you will often find that you need to duplicate chunks of your CSS to apply the same rules to another element. For example, you might have something like the selector below, which applies the rule to a `<p>` with a class of `box` inside an `<article>` with a class of `main`.
 
 ```css
 article.main p.box {
@@ -311,7 +310,7 @@ The work that Nicole Sullivan did in describing this approach and promoting it m
 
 #### BEM
 
-BEM stands for Block Element Modifier. In BEM a block is a stand-alone entity such as a button, menu, or logo. An element is something like a list item or a title that is tied to the block it is in. A modifier is a flag on a block or element that changes the styling or behavior. You will be able to recognize code that uses BEM due to the extensive use of dashes and underscores in the CSS classes. For example, look at the classes applied to this HTML from the page about [BEM Naming conventions](http://getbem.com/naming/):
+BEM stands for Block Element Modifier. In BEM a block is a stand-alone entity such as a button, menu, or logo. An element is something like a list item or a title that is tied to the block it is in. A modifier is a flag on a block or element that changes the styling or behavior. You will be able to recognize code that uses BEM due to the extensive use of dashes and underscores in the CSS classes. For example, look at the classes applied to this HTML from the page about [BEM Naming conventions](https://getbem.com/naming/):
 
 ```html
 <form class="form form--theme-xmas form--simple">
@@ -333,7 +332,7 @@ Read more about this system [BEM 101](https://css-tricks.com/bem-101/) on CSS Tr
 
 #### Other common systems
 
-There are a large number of these systems in use. Other popular approaches include [Scalable and Modular Architecture for CSS (SMACSS)](http://smacss.com/), created by Jonathan Snook, [ITCSS](https://itcss.io/) from Harry Roberts, and [Atomic CSS (ACSS)](https://acss.io/), originally created by Yahoo!. If you come across a project that uses one of these approaches, then the advantage is that you will be able to search and find many articles and guides to help you understand how to code in the same style.
+There are a large number of these systems in use. Other popular approaches include [Scalable and Modular Architecture for CSS (SMACSS)](https://smacss.com/), created by Jonathan Snook, [ITCSS](https://itcss.io/) from Harry Roberts, and [Atomic CSS (ACSS)](https://acss.io/), originally created by Yahoo!. If you come across a project that uses one of these approaches, then the advantage is that you will be able to search and find many articles and guides to help you understand how to code in the same style.
 
 The disadvantage of using such a system is that they can seem overly complex, especially for smaller projects.
 
@@ -343,7 +342,7 @@ Another way to organize CSS is to take advantage of some of the tooling that is 
 
 Using any of these tools will require that your development environment be able to run the scripts that do the pre- and post-processing. Many code editors can do this for you, or you can install command line tools to help.
 
-The most popular pre-processor is [Sass](https://sass-lang.com/). This is not a Sass tutorial, so I will briefly explain a couple of the things that Sass can do, which are really helpful in terms of organization even if you don't use any of the other Sass features. If you want to learn a lot more about Sass, start with the [Sass basics](https://sass-lang.com/guide) article, then move on to their other documentation.
+The most popular pre-processor is [Sass](https://sass-lang.com/). This is not a Sass tutorial, so I will briefly explain a couple of the things that Sass can do, which are really helpful in terms of organization even if you don't use any of the other Sass features. If you want to learn a lot more about Sass, start with the [Sass basics](https://sass-lang.com/guide/) article, then move on to their other documentation.
 
 #### Defining variables
 
@@ -371,7 +370,7 @@ Once compiled to CSS, you would end up with the following CSS in the final style
 
 I mentioned above that one way to organize CSS is to break down stylesheets into smaller stylesheets. When using Sass you can take this to another level and have lots of very small stylesheets — even going as far as having a separate stylesheet for each component. By using the included functionality in Sass (partials), these can all be compiled together into one or a small number of stylesheets to actually link into your website.
 
-So, for example, with [partials](https://sass-lang.com/documentation/at-rules/use#partials), you could have several style files inside a directory, say `foundation/_code.scss`, `foundation/_lists.scss`, `foundation/_footer.scss`, `foundation/_links.scss`, etc. You could then use the Sass `@use` rule to load them into other stylesheets:
+So, for example, with [partials](https://sass-lang.com/documentation/at-rules/use/#partials), you could have several style files inside a directory, say `foundation/_code.scss`, `foundation/_lists.scss`, `foundation/_footer.scss`, `foundation/_links.scss`, etc. You could then use the Sass `@use` rule to load them into other stylesheets:
 
 ```scss
 // foundation/_index.scss
@@ -388,11 +387,12 @@ If the partials are all loaded into an index file, as implied above, you can the
 @use "foundation";
 ```
 
-> **Note:** A simple way to try out Sass is to use [CodePen](https://codepen.io) — you can enable Sass for your CSS in the Settings for a Pen, and CodePen will then run the Sass parser for you in order that you can see the resulting webpage with regular CSS applied. Sometimes you will find that CSS tutorials have used Sass rather than plain CSS in their CodePen demos, so it is handy to know a little bit about it.
+> [!NOTE]
+> A simple way to try out Sass is to use [CodePen](https://codepen.io/) — you can enable Sass for your CSS in the Settings for a Pen, and CodePen will then run the Sass parser for you in order that you can see the resulting webpage with regular CSS applied. Sometimes you will find that CSS tutorials have used Sass rather than plain CSS in their CodePen demos, so it is handy to know a little bit about it.
 
 #### Post-processing for optimization
 
-If you are concerned about adding size to your stylesheets, for example, by adding a lot of additional comments and whitespace, then a post-processing step could be to optimize the CSS by stripping out anything unnecessary in the production version. An example of a post-processor solution for doing this would be [cssnano](https://cssnano.co/).
+If you are concerned about adding size to your stylesheets, for example, by adding a lot of additional comments and whitespace, then a post-processing step could be to optimize the CSS by stripping out anything unnecessary in the production version. An example of a post-processor solution for doing this would be [cssnano](https://cssnano.github.io/cssnano/).
 
 ## Summary
 
@@ -400,6 +400,6 @@ This is the final part of our building blocks module, and as you can see there a
 
 To learn more about layout in CSS, see the [CSS Layout](/en-US/docs/Learn/CSS/CSS_layout) module.
 
-You should also now have the skills to explore the rest of the [MDN CSS](/en-US/docs/Web/CSS) material. You can look up properties and values, explore our [CSS Cookbook](/en-US/docs/Web/CSS/Layout_cookbook) for patterns to use, or continue reading in some of the specific guides, such as our [Guide to CSS Grid Layout](/en-US/docs/Web/CSS/CSS_grid_layout).
+You should also now have the skills to explore the rest of the [MDN CSS](/en-US/docs/Web/CSS) material. You can look up properties and values, explore our [CSS Cookbook](/en-US/docs/Web/CSS/Layout_cookbook) for patterns to use, or continue reading in some of the specific guides, such as our [Guide to CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout).
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Debugging_CSS", "Learn/CSS/Building_blocks/Fundamental_CSS_comprehension", "Learn/CSS/Building_blocks")}}

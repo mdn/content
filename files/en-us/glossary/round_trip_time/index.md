@@ -9,7 +9,12 @@ page-type: glossary-definition
 **Round Trip Time (RTT)** is the length time it takes for a data packet to be sent to a destination plus the time it takes for an acknowledgment of that packet to be received back at the origin. The RTT between a network and server can be determined by using the `ping` command.
 
 ```bash
-$ ping example.com
+ping example.com
+```
+
+This will output something like:
+
+```plain
 PING example.com (216.58.194.174): 56 data bytes
 64 bytes from 216.58.194.174: icmp_seq=0 ttl=55 time=25.050 ms
 64 bytes from 216.58.194.174: icmp_seq=1 ttl=55 time=23.781 ms
@@ -25,5 +30,6 @@ In the above example, the average round trip time is shown on the final line as 
 
 ## See also
 
-- [Time to First Byte (TTFB)](/en-US/docs/Glossary/Time_to_first_byte)
-- [Latency](/en-US/docs/Glossary/Latency)
+- Related glossary terms:
+  - {{Glossary("Time to First Byte")}} (TTFB)
+  - {{Glossary("Latency")}}

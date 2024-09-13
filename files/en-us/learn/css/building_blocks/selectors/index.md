@@ -13,10 +13,9 @@ In {{Glossary("CSS")}}, selectors are used to target the {{glossary("HTML")}} el
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy,
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >basic software installed</a
+          >Basic software installed</a
         >, basic knowledge of
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
@@ -78,7 +77,7 @@ h1,
 
 In the live example below try combining the two selectors which have identical declarations. The visual display should be the same after combining them.
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/selector-list.html", '100%', 1100)}}
+{{EmbedGHLiveSample("css-examples/learn/selectors/selector-list.html", '100%', 1150)}}
 
 When you group selectors in this way, if any selector is syntactically invalid, the whole rule will be ignored.
 
@@ -108,21 +107,21 @@ There are a few different groupings of selectors, and knowing which type of sele
 
 ### Type, class, and ID selectors
 
-This group includes selectors that target an HTML element such as an `<h1>`.
+Type selectors target an HTML element such as an [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements):
 
 ```css
 h1 {
 }
 ```
 
-It also includes selectors which target a class:
+Class selectors target an element that has a specific value for its [`class`](/en-US/docs/Web/HTML/Global_attributes/class) attribute:
 
 ```css
 .box {
 }
 ```
 
-or, an ID:
+ID selectors target an element that has a specific value for its [`id`](/en-US/docs/Web/HTML/Global_attributes/id) attribute:
 
 ```css
 #unique {

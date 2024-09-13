@@ -13,8 +13,15 @@ The read-only **`childNodes`** property of the {{domxref("Node")}} interface ret
 the first child node is assigned index `0`. Child nodes include elements, text and
 comments.
 
-> **Note:** The {{domxref("NodeList")}} being live means that its content is changed each time
+> [!NOTE]
+> The {{domxref("NodeList")}} being live means that its content is changed each time
 > new children are added or removed.
+>
+> Browsers insert text nodes into a document to represent whitespace in the source markup.
+> Therefore a node obtained, for example, using `Node.childNodes[0]`
+> may refer to a whitespace text node rather than the actual element the author intended to get.
+>
+> See [Whitespace in the DOM](/en-US/docs/Web/API/Document_Object_Model/Whitespace) for more information.
 
 The items in the collection of nodes are objects, not strings. To get data from node
 objects, use their properties. For example, to get the name of the first
@@ -32,7 +39,8 @@ To get a collection containing only elements, use {{domxref("Element.children")}
 
 A live {{domxref("NodeList")}} containing the children of the node.
 
-> **Note:** Several calls to `childNodes` return the _same_ {{domxref("NodeList")}}.
+> [!NOTE]
+> Several calls to `childNodes` return the _same_ {{domxref("NodeList")}}.
 
 ## Examples
 

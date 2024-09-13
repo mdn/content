@@ -34,8 +34,6 @@ Cache-Control: private
 
 Personalized contents are usually controlled by cookies, but the presence of a cookie does not always indicate that it is private, and thus a cookie alone does not make the response private.
 
-Note that if the response has an `Authorization` header, it cannot be stored in the private cache (or a shared cache, unless `public` is specified).
-
 ### Shared cache
 
 The shared cache is located between the client and the server and can store responses that can be shared among users. And shared caches can be further sub-classified into **proxy caches** and **managed caches**.
@@ -125,7 +123,7 @@ For the example response, the meaning of `max-age` is the following:
 
 As long as the stored response remains fresh, it will be used to fulfill client requests.
 
-When a response is stored in a shared cache, it is necessary to inform the client of the response's age. Continuing with the example, if the shared cache stored the response for one day, the shared cache would send the following response to subsequent client requests.
+When a response is stored in a shared cache, it is possible to tell the client the age of the response. Continuing with the example, if the shared cache stored the response for one day, the shared cache would send the following response to subsequent client requests.
 
 ```http
 HTTP/1.1 200 OK
@@ -159,7 +157,11 @@ If both `Expires` and `Cache-Control: max-age` are available, `max-age` is defin
 
 The way that responses are distinguished from one another is essentially based on their URLs:
 
-![keyed with url](keyed-with-url.png)
+| URL                              | Response body            |
+| -------------------------------- | ------------------------ |
+| `https://example.com/index.html` | `<!doctype html>...`     |
+| `https://example.com/style.css`  | `body { ...`             |
+| `https://example.com/script.js`  | `function main () { ...` |
 
 But the contents of responses are not always the same, even if they have the same URL. Especially when content negotiation is performed, the response from the server can depend on the values of the `Accept`, `Accept-Language`, and `Accept-Encoding` request headers.
 
@@ -171,7 +173,12 @@ Vary: Accept-Language
 
 That causes the cache to be keyed based on a composite of the response URL and the `Accept-Language` request header — rather than being based just on the response URL.
 
-![keyed with url and language](keyed-with-url-and-language.png)
+| URL                              | `Accept-Language` | Response body            |
+| -------------------------------- | ----------------- | ------------------------ |
+| `https://example.com/index.html` | `ja-JP`           | `<!doctype html>...`     |
+| `https://example.com/index.html` | `en-US`           | `<!doctype html>...`     |
+| `https://example.com/style.css`  | `ja-JP`           | `body { ...`             |
+| `https://example.com/script.js`  | `ja-JP`           | `function main () { ...` |
 
 Also, if you are providing content optimization (for example, for responsive design) based on the user agent, you may be tempted to include "`User-Agent`" in the value of the `Vary` header. However, the `User-Agent` request header generally has a very large number of variations, which drastically reduces the chance that the cache will be reused. So if possible, instead consider a way to vary behavior based on feature detection rather than based on the `User-Agent` request header.
 
@@ -257,7 +264,8 @@ The server will return `304 Not Modified` if the value of the `ETag` header it d
 
 But if the server determines the requested resource should now have a different `ETag` value, the server will instead respond with a `200 OK` and the latest version of the resource.
 
-> **Note:** RFC9110 prefers that servers send both `ETag` and `Last-Modified` for a `200` response if possible.
+> [!NOTE]
+> RFC9110 prefers that servers send both `ETag` and `Last-Modified` for a `200` response if possible.
 > During cache revalidation, if both `If-Modified-Since` and `If-None-Match` are present, then `If-None-Match` takes precedence for the validator.
 > If you are only considering caching, you may think that `Last-Modified` is unnecessary.
 > However, `Last-Modified` is not just useful for caching; it is a standard HTTP header that is also used by content-management (CMS) systems to display the last-modified time, by crawlers to adjust crawl frequency, and for other various purposes.
@@ -348,7 +356,7 @@ As a workaround for outdated implementations that ignore `no-store`, you may see
 Cache-Control: no-store, no-cache, max-age=0, must-revalidate, proxy-revalidate
 ```
 
-It is [recommended](https://docs.microsoft.com/troubleshoot/developer/browsers/connectivity-navigation/how-to-prevent-caching) to use `no-cache` as an alternative for dealing with such outdated implementations, and it is not a problem if `no-cache` is given from the beginning, since the server will always receive the request.
+It is [recommended](https://learn.microsoft.com/en-us/previous-versions/troubleshoot/browsers/connectivity-navigation/how-to-prevent-caching) to use `no-cache` as an alternative for dealing with such outdated implementations, and it is not a problem if `no-cache` is given from the beginning, since the server will always receive the request.
 
 If it is the shared cache that you are concerned about, you can make sure to prevent unintended caching by also adding `private`:
 
@@ -519,7 +527,7 @@ So the HTML above makes it difficult to cache `bundle.js` and `build.css` with `
 
 Therefore, you can serve the JavaScript and CSS with URLs that include a changing part based on a version number or hash value. Some of the ways to do that are shown below.
 
-```
+```plain
 # version in filename
 bundle.v123.js
 
@@ -549,7 +557,7 @@ With that design, both JavaScript and CSS resources can be cached for a long tim
 
 Some commonly-used cache-header values are shown below.
 
-```
+```plain
 36 cache-control max-age=0
 37 cache-control max-age=604800
 38 cache-control max-age=2592000
@@ -568,7 +576,8 @@ Note that number `41` has the longest `max-age` (1 year), but with `public`.
 
 The `public` value has the effect of making the response storable even if the `Authorization` header is present.
 
-> **Note:** The `public` directive should only be used if there is a need to store the response when the `Authorization` header is set.
+> [!NOTE]
+> The `public` directive should only be used if there is a need to store the response when the `Authorization` header is set.
 > It is not required otherwise, because a response will be stored in the shared cache as long as `max-age` is given.
 
 So if the response is personalized with basic authentication, the presence of `public` may cause problems. If you are concerned about that, you can choose the second-longest value, `38` (1 month).
@@ -611,7 +620,8 @@ ETag: YsAIAAAA-QG4G6kCMAMBAAAAAAAoK
 
 **Cache busting** is a technique to make a response cacheable over a long period by changing the URL when the content changes. The technique can be applied to all subresources, such as images.
 
-> **Note:** When evaluating the use of `immutable` and QPACK:
+> [!NOTE]
+> When evaluating the use of `immutable` and QPACK:
 > If you're concerned that `immutable` changes the predefined value provided by QPACK, consider that
 > in this case, the `immutable` part can be encoded separately by splitting the `Cache-Control` value into two lines — though this is dependent on the encoding algorithm a particular QPACK implementation uses.
 

@@ -19,7 +19,7 @@ The **`MIDIConnectionEvent`** interface of the [Web MIDI API](/en-US/docs/Web/AP
 ## Instance properties
 
 - {{domxref("MIDIConnectionEvent.port")}} {{ReadOnlyInline}}
-  - : Returns a reference to a {{domxref("MIDIPort")}} instance for a port that has been connected or disconnected."
+  - : Returns a reference to a {{domxref("MIDIPort")}} instance for a port that has been connected or disconnected.
 
 ## Examples
 

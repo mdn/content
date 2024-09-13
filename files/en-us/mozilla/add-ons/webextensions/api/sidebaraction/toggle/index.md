@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.sidebarAction.toggle
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Toggles the visibility of the sidebar in the active window, if the sidebar belongs to the extension.
 

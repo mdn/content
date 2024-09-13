@@ -16,7 +16,7 @@ CT logs are built upon the foundation of the _Merkle tree_ data structure. Nodes
 
 In the context of certificate transparency, the data hashed by the leaf nodes are the certificates that have been issued by the various different CAs operating today. Certificate inclusion can be verified via an _audit proof_ which can be generated and verified efficiently, in logarithmic O(log n) time.
 
-Certificate transparency initially came about in 2013 against a backdrop of CA compromises (DigiNotar breach in 2011), questionable decisions (Trustwave subordinate root incident in 2012) and technical issuance issues (weak, 512-bit certificate issuance by Digicert Sdn Bhd of Malaysia).
+Certificate transparency initially came about in 2013 against a backdrop of CA compromises (DigiNotar breach in 2011), questionable decisions (Trustwave subordinate root incident in 2012) and technical issuance issues (weak, 512-bit certificate issuance by DigiCert Sdn Bhd of Malaysia).
 
 ## Implementation
 
@@ -36,6 +36,6 @@ With the latter methods, servers will need to be updated to send the required da
 
 Google Chrome requires CT log inclusion for all certificates issues with a notBefore date of after 30 April 2018. Users will be prevented from visiting sites using non-compliant TLS certificates. Chrome had previously required CT inclusion for _Extended Validation_ (EV) and Symantec-issued certificates.
 
-Apple [requires](https://support.apple.com/en-gb/HT205280) a varying number of SCTs in order for Safari and other servers to trust server certificates.
+Apple [requires](https://support.apple.com/en-gb/103214) a varying number of SCTs in order for Safari and other servers to trust server certificates.
 
 Firefox [does not](https://bugzil.la/1281469) currently check or require the use of CT logs for sites that users visit.

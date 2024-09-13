@@ -13,7 +13,8 @@ browser-compat: api.VRStageParameters.sittingToStandingTransform
 
 The **`sittingToStandingTransform`** read-only property of the {{domxref("VRStageParameters")}} interface contains a matrix that transforms the sitting-space view matrices of {{domxref("VRFrameData")}} to standing-space.
 
-> **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
+> [!NOTE]
+> This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
 Basically, this can be passed into your WebGL code to transform the rendered view from a sitting to standing view.
 
@@ -37,5 +38,4 @@ Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/Web
 
 ## See also
 
-- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.
+- [WebVR API](/en-US/docs/Web/API/WebVR_API)

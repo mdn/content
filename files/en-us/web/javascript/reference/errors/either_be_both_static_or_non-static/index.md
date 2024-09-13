@@ -10,7 +10,7 @@ The JavaScript exception "mismatched placement" occurs when a private [getter](/
 
 ## Message
 
-```
+```plain
 SyntaxError: Identifier '#x' has already been declared (V8-based)
 SyntaxError: getter and setter for private name #x should either be both static or non-static (Firefox)
 SyntaxError: Cannot declare a private non-static getter if there is a static private setter with used name. (Safari)
@@ -28,7 +28,7 @@ Private [getters](/en-US/docs/Web/JavaScript/Reference/Functions/get) and [sette
 
 ### Mismatched placement
 
-```js example-bad
+```js-nolint example-bad
 class Test {
   static set #foo(_) {}
   get #foo() {}
@@ -37,7 +37,7 @@ class Test {
 // SyntaxError: getter and setter for private name #foo should either be both static or non-static
 ```
 
-Since `foo` is [private](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields), the methods must be either both {{jsxref("Classes/static", "static")}}:
+Since `foo` is [private](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties), the methods must be either both {{jsxref("Classes/static", "static")}}:
 
 ```js example-good
 class Test {
@@ -60,4 +60,4 @@ class Test {
 - {{jsxref("Functions/get", "get")}}
 - {{jsxref("Functions/set", "set")}}
 - {{jsxref("Classes/static", "static")}}
-- [Private class features](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields)
+- [Private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties)

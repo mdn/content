@@ -9,13 +9,18 @@ browser-compat: javascript.builtins.Intl.Locale.getTextInfo
 
 The **`getTextInfo()`** method of {{jsxref("Intl.Locale")}} instances returns the ordering of characters indicated by either `ltr` (left-to-right) or by `rtl` (right-to-left) for this locale.
 
-> **Note:** In some versions of some browsers, this method was implemented as an accessor property called `textInfo`. However, because it returns a new object on each access, it is now implemented as a method to prevent the situation of `locale.textInfo === locale.textInfo` returning `false`. Check the [browser compatibility table](#browser_compatibility) for details.
+> [!NOTE]
+> In some versions of some browsers, this method was implemented as an accessor property called `textInfo`. However, because it returns a new object on each access, it is now implemented as a method to prevent the situation of `locale.textInfo === locale.textInfo` returning `false`. Check the [browser compatibility table](#browser_compatibility) for details.
 
 ## Syntax
 
 ```js-nolint
 getTextInfo()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -52,4 +57,4 @@ console.log(es.getTextInfo().direction); // "ltr"
 
 ## See also
 
-- {{jsxref("Intl/Locale", "Intl.Locale")}}
+- {{jsxref("Intl.Locale")}}

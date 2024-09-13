@@ -9,7 +9,8 @@ browser-compat: http.headers.Upgrade
 
 The HTTP 1.1 (only) `Upgrade` header can be used to upgrade an already established client/server connection to a different protocol (over the same transport protocol). For example, it can be used by a client to upgrade a connection from HTTP 1.1 to HTTP 2.0, or an HTTP or HTTPS connection into a WebSocket.
 
-> **Warning:** HTTP/2 explicitly disallows the use of this mechanism/header; it is specific to HTTP/1.1.
+> [!WARNING]
+> HTTP/2 explicitly disallows the use of this mechanism/header; it is specific to HTTP/1.1.
 
 <table class="properties">
   <tbody>
@@ -48,7 +49,7 @@ If the server decides to upgrade the connection, it must:
 
 1. Send back a {{HTTPStatus(101, "101 Switching Protocols")}} response status with an `Upgrade` header that specifies the protocol(s) being switched to. For example:
 
-   ```
+   ```http
    HTTP/1.1 101 Switching Protocols
    Upgrade: foo/2
    Connection: Upgrade

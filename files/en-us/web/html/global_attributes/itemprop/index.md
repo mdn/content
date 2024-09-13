@@ -2,7 +2,7 @@
 title: itemprop
 slug: Web/HTML/Global_attributes/itemprop
 page-type: html-attribute
-browser-compat: html.global_attributes.itemprop
+spec-urls: https://html.spec.whatwg.org/multipage/microdata.html#names:-the-itemprop-attribute
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -91,7 +91,7 @@ When a string value can't be easily read and understood by a person (e.g., a lon
 
 ### An item with a property whose value is a product ID
 
-The ID is not human-friendly, so the product's name is used the human-visible text instead of the ID.
+The ID is not human-friendly, so the product's name is used instead.
 
 ```html
 <h1 itemscope>
@@ -152,7 +152,7 @@ The outer item above has two properties, "name" and "band". The "name" is "Amand
 
 ### All the properties separated from their items
 
-This example is the same as the previous one, but all the properties are separated from their items
+This example is the same as the previous one, but all the properties are separated from their items.
 
 ```html
 <div itemscope id="amanda" itemref="a b"></div>
@@ -196,7 +196,8 @@ An element introducing a property can also introduce multiple properties at once
 </div>
 ```
 
-> **Note:** There is no relationship between the microdata and the content of the document where the microdata is marked up.
+> [!NOTE]
+> There is no relationship between the microdata and the content of the document where the microdata is marked up.
 
 ### Same structured data marked up in two different ways
 
@@ -284,7 +285,8 @@ A property is an unordered set of unique tokens that are case-sensitive and repr
 
    1. A string that contains no "`.`" (U+002E FULL STOP) characters and no "`:`" characters (U+003A COLON) and is used as a proprietary item property name (again, one not defined in a public specification).
 
-> **Note:** The rules above disallow ":" characters in non-URL values because otherwise they could not be distinguished from URLs. Values with "." characters are reserved for future extensions. Space characters are disallowed because otherwise the values would be parsed as multiple tokens.
+> [!NOTE]
+> The rules above disallow ":" characters in non-URL values because otherwise they could not be distinguished from URLs. Values with "." characters are reserved for future extensions. Space characters are disallowed because otherwise the values would be parsed as multiple tokens.
 
 ## Values
 
@@ -292,7 +294,7 @@ The property value of a name-value pair is as given for the first matching case 
 
 - If the element has an `itemscope` attribute
 
-  - The value is the **item** created by the element.
+  - The value is the **item** created by the element
 
 - If the element is a `meta` element
 
@@ -332,7 +334,7 @@ If a property's value is a `URL`, the property must be specified using a URL pro
 
 Names are unordered relative to each other, but if a particular name has multiple values, they do have a relative order.
 
-In the following example, the "a" property has the values "1" and "2", _in that order_, but whether the "a" property comes before the "b" property or not is not important
+In the following example, the "a" property has the values "1" and "2", _in that order_, but whether the "a" property comes before the "b" property or not is not important.
 
 ```html
 <div itemscope>
@@ -342,7 +344,7 @@ In the following example, the "a" property has the values "1" and "2", _in that 
 </div>
 ```
 
-The following is equivalent
+Here are several equivalent examples:
 
 ```html
 <div itemscope>
@@ -352,8 +354,6 @@ The following is equivalent
 </div>
 ```
 
-As is the following
-
 ```html
 <div itemscope>
   <p itemprop="a">1</p>
@@ -361,8 +361,6 @@ As is the following
   <p itemprop="a">2</p>
 </div>
 ```
-
-And the following
 
 ```html
 <div id="x">
@@ -428,10 +426,6 @@ This example uses microdata attributes to represent the following structured dat
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

@@ -8,7 +8,7 @@ status:
 browser-compat: api.PresentationRequest.reconnect
 ---
 
-{{APIRef("Presentation API")}}{{SeeCompatTable}}
+{{APIRef("Presentation API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 When the `reconnect(presentationId)` method is called on a `PresentationRequest` _presentationRequest_, the [user agent](https://www.w3.org/TR/presentation-api/#dfn-user-agents) _MUST_ run the following steps to _reconnect to a presentation_:
 
@@ -52,6 +52,10 @@ _P_, a [Promise](https://www.w3.org/TR/presentation-api/#dfn-promise).
    9. Abort all remaining steps.
 
 10. [Reject](https://www.w3.org/TR/presentation-api/#dfn-rejecting-a-promise) _P_ with a [`NotFoundError`](https://www.w3.org/TR/presentation-api/#dfn-notfounderror) exception.
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

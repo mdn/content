@@ -40,7 +40,7 @@ Using {{cssxref("@property")}} however, we can declare the custom property with 
 
 ## Houdini worklets
 
-A feature of Houdini is the {{domxref("Worklet")}}. A worklet is a module, written in JavaScript, that extends CSS using one of the Houdini APIs. You can see an example worklet on the {{domxref("PaintWorklet.registerPaint()")}} page. Once a worklet has been registered you can use it in CSS just like any other value. This means that even if you are not a JavaScript developer, you can access Houdini APIs by using worklets other people have created.
+A feature of Houdini is the {{domxref("Worklet")}}. A worklet is a module, written in JavaScript, that extends CSS using one of the Houdini APIs. You can see an example worklet on the {{domxref("PaintWorkletGlobalScope.registerPaint()")}} page. Once a worklet has been registered you can use it in CSS just like any other value. This means that even if you are not a JavaScript developer, you can access Houdini APIs by using worklets other people have created.
 
 The [Houdini.how](https://houdini.how/) website has a number of worklets that you can try on your own site.
 
@@ -72,4 +72,4 @@ The {{CSSxRef("@property")}} at-rule allows you to register an advanced custom p
 
 - [Interactive introduction to Houdini](https://houdini.glitch.me/)
 - [A Practical Overview of CSS Houdini](https://www.smashingmagazine.com/2020/03/practical-overview-css-houdini/)
-- [Smarter custom properties with Houdini's new API](https://web.dev/css-props-and-vals/)
+- [Smarter custom properties with Houdini's new API](https://web.dev/articles/css-props-and-vals)

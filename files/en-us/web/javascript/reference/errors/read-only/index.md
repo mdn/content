@@ -12,7 +12,7 @@ property that was assigned to is a read-only property.
 
 ## Message
 
-```
+```plain
 TypeError: Cannot assign to read only property 'x' of #<Object> (V8-based)
 TypeError: "x" is read-only (Firefox)
 TypeError: Attempted to assign to readonly property. (Safari)

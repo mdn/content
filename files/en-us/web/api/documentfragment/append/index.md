@@ -9,8 +9,8 @@ browser-compat: api.DocumentFragment.append
 {{APIRef("DOM")}}
 
 The **`DocumentFragment.append()`** method
-inserts a set of {{domxref("Node")}} objects or string objects after
-the last child of the document fragment. String objects
+inserts a set of {{domxref("Node")}} objects or strings after
+the last child of the document fragment. Strings
 are inserted as equivalent {{domxref("Text")}} nodes.
 
 This method appends a child to a `DocumentFragment`. To append to an arbitrary element in the tree, see {{domxref("Element.append()")}}.
@@ -20,13 +20,13 @@ This method appends a child to a `DocumentFragment`. To append to an arbitrary e
 ```js-nolint
 append(param1)
 append(param1, param2)
-append(param1, param2, /* … ,*/ paramN)
+append(param1, param2, /* …, */ paramN)
 ```
 
 ### Parameters
 
 - `param1`, …, `paramN`
-  - : A set of {{domxref("Node")}} or string objects to insert.
+  - : A set of {{domxref("Node")}} objects or strings to insert.
 
 ### Return value
 

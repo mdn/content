@@ -4,7 +4,7 @@ slug: Web/HTTP/Headers/Downlink
 page-type: http-header
 status:
   - experimental
-browser-compat: http.headers.downlink
+browser-compat: http.headers.Downlink
 ---
 
 {{HTTPSidebar}} {{SeeCompatTable}}
@@ -31,7 +31,8 @@ The `Downlink` value is given in Mbps and rounded to the nearest 25 kilobits per
 
 The hint allows a server to choose what information is sent based on the network bandwidth. For example, a server might choose to send smaller versions of images and other resources on low bandwidth networks.
 
-> **Note:** The {{HTTPHeader("Vary")}} header is used in responses to indicate that a different resource is sent for every different value of the header (see [HTTP Caching Vary](/en-US/docs/Web/HTTP/Caching#vary)). Even if {{HTTPHeader("Downlink")}} is used to configure what resources are sent, consider omitting it in the {{HTTPHeader("Vary")}} header — it is likely to change often, which effectively makes the resource uncacheable.
+> [!NOTE]
+> The {{HTTPHeader("Vary")}} header is used in responses to indicate that a different resource is sent for every different value of the header (see [HTTP Caching Vary](/en-US/docs/Web/HTTP/Caching#vary)). Even if `Downlink` is used to configure what resources are sent, consider omitting it in the {{HTTPHeader("Vary")}} header — it is likely to change often, which effectively makes the resource uncacheable.
 
 ## Syntax
 
@@ -68,7 +69,7 @@ Downlink: 1.7
 
 ## See also
 
-- [Improving user privacy and developer experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints/) (web.dev)
+- [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)
 - Network client hints
 
   - {{HTTPHeader("RTT")}}

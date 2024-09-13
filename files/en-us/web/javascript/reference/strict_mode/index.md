@@ -5,9 +5,10 @@ page-type: guide
 spec-urls: https://tc39.es/ecma262/multipage/strict-mode-of-ecmascript.html
 ---
 
-{{JsSidebar("More")}}
+{{jsSidebar("More")}}
 
-> **Note:** Sometimes you'll see the default, non-strict mode referred to as _[sloppy mode](/en-US/docs/Glossary/Sloppy_mode)_. This isn't an official term, but be aware of it, just in case.
+> [!NOTE]
+> Sometimes you'll see the default, non-strict mode referred to as _[sloppy mode](/en-US/docs/Glossary/Sloppy_mode)_. This isn't an official term, but be aware of it, just in case.
 
 JavaScript's strict mode is a way to _opt in_ to a restricted variant of JavaScript, thereby implicitly opting-out of "[sloppy mode](/en-US/docs/Glossary/Sloppy_mode)". Strict mode isn't just a subset: it _intentionally_ has different semantics from normal code. Browsers not supporting strict mode will run strict mode code with different behavior from browsers that do, so don't rely on strict mode without feature-testing for support for the relevant aspects of strict mode. Strict mode code and non-strict mode code can coexist, so scripts can opt into strict mode incrementally.
 
@@ -51,7 +52,7 @@ function myNotStrictFunction() {
 
 The `"use strict"` directive can only be applied to the body of functions with simple parameters. Using `"use strict"` in functions with [rest](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), [default](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters), or [destructured](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) parameters is a [syntax error](/en-US/docs/Web/JavaScript/Reference/Errors/Strict_non_simple_params).
 
-```js example-bad
+```js-nolint example-bad
 function sum(a = 1, b = 2) {
   // SyntaxError: "use strict" not allowed in function with default parameter
   "use strict";
@@ -167,7 +168,7 @@ delete [].length; // TypeError
 
 Strict mode also forbids deleting plain names. `delete name` in strict mode is a syntax error:
 
-```js example-bad
+```js-nolint example-bad
 "use strict";
 
 var x;
@@ -186,7 +187,7 @@ delete globalThis.x;
 
 Strict mode requires that function parameter names be unique. In sloppy mode, the last duplicated argument hides previous identically-named arguments. Those previous arguments remain available through [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments), so they're not completely inaccessible. Still, this hiding makes little sense and is probably undesirable (it might hide a typo, for example), so in strict mode, duplicate argument names are a syntax error:
 
-```js example-bad
+```js-nolint example-bad
 function sum(a, a, c) {
   // syntax error
   "use strict";
@@ -194,11 +195,13 @@ function sum(a, a, c) {
 }
 ```
 
+It is also a syntax error in non-strict mode to have duplicate parameter names, if the function has a default parameter, rest parameter, or destructured parameter.
+
 #### Legacy octal literals
 
-Strict mode [forbids a `0`-prefixed octal literal or octal escape sequence](/en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_octal). In sloppy mode, a number beginning with a `0`, such as `0644`, is interpreted as an octal number (`0644 === 420`), if all digits are smaller than 8. Novice developers sometimes believe a leading-zero prefix has no semantic meaning, so they might use it as an alignment device — but this changes the number's meaning! A leading-zero syntax for the octal is rarely useful and can be mistakenly used, so strict mode makes it a syntax error:
+Strict mode [forbids a `0`-prefixed octal literal](/en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_octal_literal). In sloppy mode, a number beginning with a `0`, such as `0644`, is interpreted as an octal number (`0644 === 420`), if all digits are smaller than 8. Novice developers sometimes believe a leading-zero prefix has no semantic meaning, so they might use it as an alignment device — but this changes the number's meaning! A leading-zero syntax for the octal is rarely useful and can be mistakenly used, so strict mode makes it a syntax error:
 
-```js example-bad
+```js-nolint example-bad
 "use strict";
 const sum =
   015 + // syntax error
@@ -213,7 +216,7 @@ const sumWithOctal = 0o10 + 8;
 console.log(sumWithOctal); // 16
 ```
 
-Octal escape sequences, such as `"\45"`, which is equal to `"%"`, can be used to represent characters by extended-ASCII character code numbers in octal. In strict mode, this is a syntax error. More formally, it's disallowed to have `\` followed by any decimal digit other than `0`, or `\0` followed by a decimal digit; for example `\9` and `\07`.
+Octal escape sequences, such as `"\45"`, which is equal to `"%"`, can be used to represent characters by extended-{{Glossary("ASCII")}} character code numbers in octal. In strict mode, this is a [syntax error](/en-US/docs/Web/JavaScript/Reference/Errors/Deprecated_octal_escape_sequence). More formally, it's disallowed to have `\` followed by any decimal digit other than `0`, or `\0` followed by a decimal digit; for example `\9` and `\07`.
 
 #### Setting properties on primitive values
 
@@ -236,7 +239,8 @@ Duplicate property names used to be considered a {{jsxref("SyntaxError")}} in st
 const o = { p: 1, p: 2 }; // syntax error prior to ECMAScript 2015
 ```
 
-> **Note:** Making code that used to error become non-errors is always considered backwards-compatible. This is a good part of the language being strict about throwing errors: it leaves room for future semantic changes.
+> [!NOTE]
+> Making code that used to error become non-errors is always considered backwards-compatible. This is a good part of the language being strict about throwing errors: it leaves room for future semantic changes.
 
 ### Simplifying scope management
 
@@ -246,7 +250,7 @@ Strict mode simplifies how variable names map to particular variable definitions
 
 Strict mode prohibits [`with`](/en-US/docs/Web/JavaScript/Reference/Statements/with). The problem with `with` is that any name inside the block might map either to a property of the object passed to it, or to a variable in surrounding (or even global) scope, at runtime; it's impossible to know which beforehand. Strict mode makes `with` a syntax error, so there's no chance for a name in a `with` to refer to an unknown location at runtime:
 
-```js example-bad
+```js-nolint example-bad
 "use strict";
 const x = 17;
 with (obj) {
@@ -286,7 +290,7 @@ Strict mode makes [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/a
 
 The names `eval` and `arguments` can't be bound or assigned in language syntax. All these attempts to do so are syntax errors:
 
-```js example-bad
+```js-nolint example-bad
 "use strict";
 eval = 17;
 arguments++;
@@ -426,5 +430,5 @@ These differences are very subtle differences. It's possible that a test suite d
 
 ## See also
 
-- [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules)
+- [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) guide
 - [Lexical grammar](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar)

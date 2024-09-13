@@ -34,7 +34,7 @@ If the desired resource width is not known at the time of the request or the res
 
 If the `Width` header appears more than once in a message the last occurrence is used.
 
-> **Note:**
+> [!NOTE]
 >
 > - Client Hints are accessible only on secure origins (via TLS).
 > - A server has to opt in to receive the `Width` header from the client, by sending the {{HTTPHeader("Accept-CH")}} response header.
@@ -72,7 +72,7 @@ Width: 1920
 
 ## See also
 
-- [Improving user privacy and developer experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints/) (web.dev)
+- [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)
 - Device client hints
 
   - {{HTTPHeader("Content-DPR")}}

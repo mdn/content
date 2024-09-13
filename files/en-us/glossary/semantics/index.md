@@ -55,8 +55,8 @@ These are _some_ of the roughly 100 semantic [elements](/en-US/docs/Web/HTML/Ele
 - {{htmlelement("details")}}
 - {{htmlelement("figcaption")}}
 - {{htmlelement("figure")}}
-- {{htmlelement("form")}}
 - {{htmlelement("footer")}}
+- {{htmlelement("form")}}
 - {{htmlelement("header")}}
 - {{htmlelement("main")}}
 - {{htmlelement("mark")}}
@@ -70,23 +70,5 @@ These are _some_ of the roughly 100 semantic [elements](/en-US/docs/Web/HTML/Ele
 - [HTML element reference](/en-US/docs/Web/HTML/Element#inline_text_semantics) on MDN
 - [Using HTML sections and outlines](/en-US/docs/Web/HTML/Element/Heading_Elements#usage_notes) on MDN
 - [The meaning of semantics in computer science](https://en.wikipedia.org/wiki/Semantics#Computer_science) on Wikipedia
-- [Glossary](/en-US/docs/Glossary)
-
+- Related glossary terms:
   - {{Glossary("SEO")}}
-
-- Semantic elements in HTML:
-
-  - {{htmlelement("article")}}
-  - {{htmlelement("aside")}}
-  - {{htmlelement("details")}}
-  - {{htmlelement("figcaption")}}
-  - {{htmlelement("figure")}}
-  - {{htmlelement("footer")}}
-  - {{htmlelement("form")}}
-  - {{htmlelement("header")}}
-  - {{htmlelement("main")}}
-  - {{htmlelement("mark")}}
-  - {{htmlelement("nav")}}
-  - {{htmlelement("section")}}
-  - {{htmlelement("summary")}}
-  - {{htmlelement("time")}}

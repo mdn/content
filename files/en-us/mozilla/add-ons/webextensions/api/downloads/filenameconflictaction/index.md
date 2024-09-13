@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.downloads.FilenameConflictAction
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The `FilenameConflictAction` type of the {{WebExtAPIRef("downloads")}} API specifies what to do if the name of a downloaded file conflicts with an existing file.
 
@@ -28,7 +28,8 @@ Values of this type are strings. Possible values are:
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#type-FilenameConflictAction) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#type-FilenameConflictAction) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

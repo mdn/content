@@ -44,7 +44,8 @@ Servers should ignore this header if it contains any other value.
 
 ## Directives
 
-> **Note:** These directives correspond to the values in [`Request.mode`](/en-US/docs/Web/API/Request/mode#value).
+> [!NOTE]
+> These directives correspond to the values in [`Request.mode`](/en-US/docs/Web/API/Request/mode#value).
 
 - `cors`
   - : The request is a [CORS protocol](/en-US/docs/Web/HTTP/CORS) request.
@@ -92,5 +93,5 @@ Sec-Fetch-Site: cross-site
   - {{HTTPHeader("Sec-Fetch-Site")}}
   - {{HTTPHeader("Sec-Fetch-User")}}
 
-- [Protect your resources from web attacks with Fetch Metadata](https://web.dev/fetch-metadata/) (web.dev)
+- [Protect your resources from web attacks with Fetch Metadata](https://web.dev/articles/fetch-metadata) (web.dev)
 - [Fetch Metadata Request Headers playground](https://secmetadata.appspot.com/) (secmetadata.appspot.com)

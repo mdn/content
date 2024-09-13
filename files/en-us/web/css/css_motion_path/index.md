@@ -49,6 +49,10 @@ The idea is that when you want to animate an element moving along a path, you pr
 - {{cssxref("offset-position")}}
 - {{cssxref("offset-rotate")}}
 
+### Functions
+
+- {{cssxref("ray")}}
+
 ## Specifications
 
 {{Specifications}}

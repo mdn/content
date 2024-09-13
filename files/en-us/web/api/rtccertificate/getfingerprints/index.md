@@ -21,7 +21,7 @@ getFingerprints()
 
 ### Parameters
 
-None
+None.
 
 ### Return value
 
@@ -30,7 +30,7 @@ Each fingerprint is represented by an object with the following properties:
 
 - `algorithm`
   - : A string indicating the hash function algorithm used to create the fingerprint in `value`.
-    Allowed values include: `"sha-1"`, `"sha-224"`, `"sha-256"`,`"sha-384"`, `"sha-512"`, `"md5"`, `"md2"`.<!-- from [RFC4572] Section 5. -->
+    Allowed values include: `"sha-1"`, `"sha-224"`, `"sha-256"`, `"sha-384"`, `"sha-512"`, `"md5"`, `"md2"`.<!-- from [RFC4572] Section 5. -->
 - `value`
   - : A string containing the certificate fingerprint in lowercase hex string, as calculated with the `algorithm` hash function.
     The format is more precisely defined in [RFC4572, Section 5](https://www.rfc-editor.org/rfc/rfc4572#section-5).

@@ -18,7 +18,7 @@ This event is sent by the WebRTC layer to the website or application, so you wil
 ## Constructor
 
 - {{domxref("RTCTrackEvent.RTCTrackEvent", "RTCTrackEvent()")}}
-  - : Creates and returns a new `RTCTrackEvent` object, initialized with properties taken from the specified {{domxref("RTCTrackEventInit")}} dictionary. You will probably not need to create new track events yourself, since they're typically created by the WebRTC infrastructure and sent to the connection's {{domxref("RTCPeerConnection.track_event", "ontrack")}} event handler.
+  - : Creates and returns a new `RTCTrackEvent` object. You will probably not need to create new track events yourself, since they're typically created by the WebRTC infrastructure and sent to the connection's {{domxref("RTCPeerConnection.track_event", "ontrack")}} event handler.
 
 ## Instance properties
 
@@ -45,7 +45,8 @@ In addition, the {{domxref("MediaStreamTrack")}} specified by the receiver's {{d
 
 You can add a `track` event listener to be notified when the new track is available so that you can, for example, attach its media to a {{HTMLElement("video")}} element, using either {{domxref("EventTarget.addEventListener", "RTCPeerConnection.addEventListener()")}} or the `ontrack` event handler property.
 
-> **Note:** It may be helpful to keep in mind that you receive the `track` event when a new inbound track has been added to your connection, and you call {{domxref("RTCPeerConnection.addTrack", "addTrack()")}} to add a track to the far end of the connection, thereby triggering a `track` event on the remote peer.
+> [!NOTE]
+> It may be helpful to keep in mind that you receive the `track` event when a new inbound track has been added to your connection, and you call {{domxref("RTCPeerConnection.addTrack", "addTrack()")}} to add a track to the far end of the connection, thereby triggering a `track` event on the remote peer.
 
 ## Example
 

@@ -1,5 +1,5 @@
 ---
-title: "location: search property"
+title: "Location: search property"
 short-title: search
 slug: Web/API/Location/search
 page-type: web-api-instance-property

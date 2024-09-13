@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Clients.claim
 ---
 
-{{APIRef("Service Worker Clients")}}
+{{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
 
 The **`claim()`** method of the {{domxref("Clients")}} interface allows an active service worker to set itself as the {{domxref("ServiceWorkerContainer.controller", "controller")}} for all clients within its {{domxref("ServiceWorkerRegistration.scope", "scope")}}.
 This triggers a "`controllerchange`" event on {{domxref("ServiceWorkerContainer","navigator.serviceWorker")}} in any clients that become controlled by this service worker.
@@ -51,7 +51,5 @@ self.addEventListener("activate", (event) => {
 ## See also
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [The service worker lifecycle](https://web.dev/service-worker-lifecycle/)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise", "Promises")}}
+- [The service worker lifecycle](https://web.dev/articles/service-worker-lifecycle)
 - {{domxref("ServiceWorkerGlobalScope.skipWaiting()", "self.skipWaiting()")}} - skip the service worker's waiting phase

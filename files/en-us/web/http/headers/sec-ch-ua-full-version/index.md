@@ -9,7 +9,8 @@ browser-compat: http.headers.Sec-CH-UA-Full-Version
 
 {{HTTPSidebar}}{{Deprecated_Header}}{{SecureContext_Header}}
 
-> **Note:** This is being replaced by the {{HTTPHeader("Sec-CH-UA-Full-Version-List")}}.
+> [!NOTE]
+> This is being replaced by the {{HTTPHeader("Sec-CH-UA-Full-Version-List")}}.
 
 The **`Sec-CH-UA-Full-Version`** [user agent client hint](/en-US/docs/Web/HTTP/Client_hints#user-agent_client_hints) request header provides the user-agent's full version string.
 
@@ -74,6 +75,6 @@ Sec-CH-UA-Platform: "Windows"
 
 - [Client hints](/en-US/docs/Web/HTTP/Client_hints)
 - [User-Agent Client Hints API](/en-US/docs/Web/API/User-Agent_Client_Hints_API)
-- [Improving user privacy and developer experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints/) (web.dev)
+- [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)
 - {{HTTPHeader("Accept-CH")}}
 - [HTTP Caching > Vary](/en-US/docs/Web/HTTP/Caching#vary) and {{HTTPHeader("Vary")}}

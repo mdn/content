@@ -49,8 +49,7 @@ const myMap = new Map([
 
 ## See also
 
-- A polyfill of `Map` is available in
-  [`core-js`](https://github.com/zloirock/core-js#map)
+- [Polyfill for `Map` in `core-js`](https://github.com/zloirock/core-js#map)
 - {{jsxref("Set")}}
 - {{jsxref("WeakMap")}}
 - {{jsxref("WeakSet")}}

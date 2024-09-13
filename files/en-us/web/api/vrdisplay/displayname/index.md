@@ -13,7 +13,8 @@ browser-compat: api.VRDisplay.displayName
 
 The **`displayName`** read-only property of the {{domxref("VRDisplay")}} interface returns a human-readable name to identify the `VRDisplay`.
 
-> **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
+> [!NOTE]
+> This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
 This will generally be something like "Oculus VR HMD (HMD)" or "Oculus VR HMD (Sensor)".
 
@@ -37,5 +38,4 @@ Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/Web
 
 ## See also
 
-- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.
+- [WebVR API](/en-US/docs/Web/API/WebVR_API)

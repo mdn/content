@@ -7,7 +7,7 @@ status:
 browser-compat: api.GPUTexture
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`GPUTexture`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} represents a container used to store 1D, 2D, or 3D arrays of data, such as images, to use in GPU rendering operations.
 
@@ -45,7 +45,7 @@ A `GPUTexture` object instance is created using the {{domxref("GPUDevice.createT
 
 ## Examples
 
-In the WebGPU samples [Textured Cube sample](https://webgpu.github.io/webgpu-samples/samples/texturedCube), a texture to use on the faces of a cube is created by:
+In the WebGPU samples [Textured Cube sample](https://webgpu.github.io/webgpu-samples/samples/texturedCube/), a texture to use on the faces of a cube is created by:
 
 - Loading the image into an {{domxref("HTMLImageElement")}} and creating an image bitmap using {{domxref("createImageBitmap()")}}.
 - Creating a new `GPUTexture` using `createTexture()`.
@@ -53,13 +53,13 @@ In the WebGPU samples [Textured Cube sample](https://webgpu.github.io/webgpu-sam
 
 ```js
 //...
-let cubeTexture: GPUTexture; // Sample is written in TypeScript
+let cubeTexture;
 {
   const img = document.createElement("img");
 
   img.src = new URL(
     "../../../assets/img/Di-3d.png",
-    import.meta.url
+    import.meta.url,
   ).toString();
 
   await img.decode();
@@ -78,7 +78,7 @@ let cubeTexture: GPUTexture; // Sample is written in TypeScript
   device.queue.copyExternalImageToTexture(
     { source: imageBitmap },
     { texture: cubeTexture },
-    [imageBitmap.width, imageBitmap.height]
+    [imageBitmap.width, imageBitmap.height],
   );
 }
 //...

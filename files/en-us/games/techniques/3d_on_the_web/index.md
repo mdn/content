@@ -33,9 +33,9 @@ It's hard to imagine a game without collision detection — we always need to wo
 - [2D collision detection](/en-US/docs/Games/Techniques/2D_collision_detection)
 - [3D collision detection](/en-US/docs/Games/Techniques/3D_collision_detection)
 
-### WebVR
+### WebXR
 
-The concept of virtual reality is not new, but it's storming onto the web thanks to hardware advancements such as the [Oculus Rift](https://www.oculus.com/rift/), and the (currently experimental) [WebVR API](/en-US/docs/Web/API/WebVR_API) for capturing information from VR hardware and making it available for use in JavaScript applications. For more, read [WebVR — Virtual Reality for the Web](/en-US/docs/Games/Techniques/3D_on_the_web/WebVR).
+The concept of virtual reality is not new, but it's storming onto the web thanks to hardware advancements such as the [Meta Quest](https://www.meta.com/quest/), and the (currently experimental) [WebXR API](/en-US/docs/Web/API/WebXR_Device_API) for capturing information from XR hardware and making it available for use in JavaScript applications. For more, read [WebXR — Virtual and Augmented Reality for the Web](/en-US/docs/Games/Techniques/3D_on_the_web/WebXR).
 
 There's also the [Building up a basic demo with A-Frame](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame) article showing you how easy it is to build 3D environments for virtual reality using the [A-Frame](https://aframe.io/) framework.
 
@@ -43,7 +43,7 @@ There's also the [Building up a basic demo with A-Frame](/en-US/docs/Games/Techn
 
 Coding raw WebGL is fairly complex, but you'll want to get to grips with it in the long run, as your projects get more advanced (see our [WebGL documentation](/en-US/docs/Web/API/WebGL_API) to get started.) For real-world projects you'll probably also make use of a framework to speed up development and help you manage the project you're working on. Using a framework for 3D games also helps optimize the performance as a lot is taken care of by the tools you use, so you can focus on building the game itself.
 
-The most popular JavaScript 3D library is [Three.js](https://threejs.org/), a multipurpose tool that makes common 3D techniques simpler to implement. There are other popular game development libraries and frameworks worth checking too; [A-Frame](https://aframe.io), [PlayCanvas](https://playcanvas.com/) and [Babylon.js](https://www.babylonjs.com/) are among the most recognizable ones with rich documentation, online editors and active communities.
+The most popular JavaScript 3D library is [Three.js](https://threejs.org/), a multipurpose tool that makes common 3D techniques simpler to implement. There are other popular game development libraries and frameworks worth checking too; [A-Frame](https://aframe.io/), [PlayCanvas](https://playcanvas.com/) and [Babylon.js](https://www.babylonjs.com/) are among the most recognizable ones with rich documentation, online editors and active communities.
 
 ### Building up a basic demo with A-Frame
 
@@ -63,7 +63,7 @@ Three.js, like any other library, gives you a huge advantage: instead of writing
 
 ### Other tools
 
-Both [Unity](https://unity.com/) and [Unreal](https://www.unrealengine.com/) can export your game to [WebGL](/en-US/docs/Web/API/WebGL_API) with [asm.js](/en-US/docs/Games/Tools/asm.js), so you're free to use their tools and techniques to build games that will be exported to the web.
+Both [Unity](https://unity.com/) and [Unreal](https://www.unrealengine.com/en-US) can export your game to [WebGL](/en-US/docs/Web/API/WebGL_API) with [asm.js](/en-US/docs/Games/Tools/asm.js), so you're free to use their tools and techniques to build games that will be exported to the web.
 
 ![Illustration of three 3D geometry shapes: a grey torus, a blue cube, and a yellow cylinder.](shapes.png)
 

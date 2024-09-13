@@ -31,14 +31,20 @@ There are some additional syntax restrictions:
 
 ## Description
 
-Sometimes it is desirable to allow access to a property that returns a dynamically
-computed value, or you may want to reflect the status of an internal variable without
-requiring the use of explicit method calls. In JavaScript, this can be accomplished with
-the use of a _getter_.
+Sometimes, it is desirable to allow access to a property that returns a dynamically computed value, or you may want to reflect the status of an internal variable without requiring the use of explicit method calls. In JavaScript, this can be accomplished with the use of a _getter_.
 
-It is not possible to simultaneously have a getter bound to a property and have that
-property actually hold a value, although it _is_ possible to use a getter and a
-setter in conjunction to create a type of pseudo-property.
+An object property is either a data property or an accessor property, but it cannot simultaneously be both. Read {{jsxref("Object.defineProperty()")}} for more information. The getter syntax allows you to specify the getter function in an object initializer.
+
+```js
+const obj = {
+  get prop() {
+    // getter, the code executed when reading obj.prop
+    return someValue;
+  },
+};
+```
+
+Properties defined using this syntax are own properties of the created object, and they are configurable and enumerable.
 
 ## Examples
 
@@ -51,8 +57,7 @@ which will return the last array item in `log`.
 const obj = {
   log: ["example", "test"],
   get latest() {
-    if (this.log.length === 0) return undefined;
-    return this.log[this.log.length - 1];
+    return this.log.at(-1);
   },
 };
 console.log(obj.latest); // "test"
@@ -84,7 +89,7 @@ console.log(instance.msg); // "hello cake"
 
 Getter properties are defined on the `prototype` property of the class and are thus shared by all instances of the class. Unlike getter properties in object literals, getter properties in classes are not enumerable.
 
-Static setters and private setters use similar syntaxes, which are described in the [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static) and [private class features](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields) pages.
+Static getters and private getters use similar syntaxes, which are described in the [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static) and [private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) pages.
 
 ### Deleting a getter using the `delete` operator
 
@@ -149,19 +154,20 @@ the cost.
 
 An additional optimization technique to lazify or delay the calculation of a property
 value and cache it for later access are _smart_ (or _[memoized](https://en.wikipedia.org/wiki/Memoization)_) getters.
-The value is calculated the first time the getter is called, and is then cached so
+The value is calculated the first time the getter is called and is then cached so
 subsequent accesses return the cached value without recalculating it. This is useful in
 the following situations:
 
 - If the calculation of a property value is expensive (takes much RAM or CPU time,
   spawns worker threads, retrieves remote file, etc.).
-- If the value isn't needed just now. It will be used later, or in some case it's not
+- If the value isn't needed just now. It will be used later, or in some cases, it's not
   used at all.
 - If it's used, it will be accessed several times, and there is no need to
   re-calculate that value will never be changed or shouldn't be re-calculated.
 
-> **Note:** This means that you shouldn't write a lazy getter for a property whose value you
-> expect to change, because if the getter is lazy then it will not recalculate the
+> [!NOTE]
+> This means that you shouldn't write a lazy getter for a property whose value you
+> expect to change, because if the getter is lazy, then it will not recalculate the
 > value.
 >
 > Note that getters are not "lazy" or "memoized" by nature; you must implement this
@@ -221,7 +227,7 @@ console.log(
 
 ## See also
 
-- [Working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_objects)
+- [Working with objects](/en-US/docs/Web/JavaScript/Guide/Working_with_objects) guide
 - [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
 - [`set`](/en-US/docs/Web/JavaScript/Reference/Functions/set)
 - {{jsxref("Object.defineProperty()")}}
@@ -229,3 +235,4 @@ console.log(
 - {{jsxref("Statements/class", "class")}}
 - [Property accessors](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors)
 - [Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments](https://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/) by Jeff Walden (2010)
+- [More SpiderMonkey changes: ancient, esoteric, very rarely used syntax for creating getters and setters is being removed](https://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/) by Jeff Walden (2010)

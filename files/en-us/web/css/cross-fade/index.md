@@ -12,7 +12,8 @@ It can be used for many simple image manipulations, such as tinting an image wit
 
 ## Syntax
 
-> **Warning:** The specification and current implementations have different syntaxes.
+> [!WARNING]
+> The specification and current implementations have different syntaxes.
 > The specification syntax is explained first.
 
 ### Specification syntax
@@ -44,10 +45,10 @@ A 25% value renders the first image at 25% and the second at 75%. The 75% value 
 The above could also have been written as:
 
 ```css
-cross-fade(url(white.png) 0%,   url(black.png)); /* fully black */
-cross-fade(url(white.png) 25%,  url(black.png)); /* 25% white, 75% black */
-cross-fade(url(white.png),      url(black.png)); /* 50% white, 50% black */
-cross-fade(url(white.png) 75%,  url(black.png)); /* 75% white, 25% black */
+cross-fade(url(white.png) 0%, url(black.png)); /* fully black */
+cross-fade(url(white.png) 25%, url(black.png)); /* 25% white, 75% black */
+cross-fade(url(white.png), url(black.png)); /* 50% white, 50% black */
+cross-fade(url(white.png) 75%, url(black.png)); /* 75% white, 25% black */
 cross-fade(url(white.png) 100%, url(black.png)); /* fully white */
 cross-fade(url(green.png) 75%, url(red.png) 75%); /* both green and red at 75% */
 ```
@@ -89,7 +90,7 @@ The percent is the opacity of the first declared image. The included percentage 
 
 The green/red example (with the percentages totaling 150%) and the yellow/red/blue example (with three images) from the specification syntax section, are not possible in this implementation.
 
-## Accessibility concerns
+## Accessibility
 
 Browsers do not provide any special information on background images to assistive technology. This is important primarily for screen readers, as a screen reader will not announce its presence and therefore convey nothing to its users.
 If the image contains information critical to understanding the page's overall purpose, it is better to describe it semantically in the document.
@@ -138,7 +139,7 @@ When using background images, make sure the contrast in color is great enough th
 ## See also
 
 - {{cssxref("image")}}
-- {{cssxref("url")}}
+- {{cssxref("url_value", "&lt;url&gt;")}}
 - {{cssxref("image/image", "image()")}}
 - {{cssxref("image/image-set", "image-set()")}}
 - {{cssxref("element")}}

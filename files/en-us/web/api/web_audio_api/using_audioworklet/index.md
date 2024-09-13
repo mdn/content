@@ -28,7 +28,7 @@ Throughout the remainder of this article, we'll look at these steps in more deta
 
 The example code found on this page is derived from [this working example](https://mdn.github.io/webaudio-examples/audioworklet/) which is part of MDN's [GitHub repository of Web Audio examples](https://github.com/mdn/webaudio-examples/). The example creates an oscillator node and adds white noise to it using an {{domxref("AudioWorkletNode")}} before playing the resulting sound out. Slider controls are available to allow controlling the gain of both the oscillator and the audio worklet's output.
 
-[**See the code**](https://github.com/mdn/webaudio-examples/tree/master/audioworklet)
+[**See the code**](https://github.com/mdn/webaudio-examples/tree/main/audioworklet)
 
 [**Try it live**](https://mdn.github.io/webaudio-examples/audioworklet/)
 
@@ -170,7 +170,8 @@ Specifying a value of `true` as the result from your `process()` function in ess
 
 Returning `false` from the `process()` method tells the API that it should follow its normal logic and shut down your processor node if it deems it appropriate to do so. If the API determines that your node is no longer needed, `process()` will not be called again.
 
-> **Note:** At this time, unfortunately, Chrome does not implement this algorithm in a manner that matches the current standard. Instead, it keeps the node alive if you return `true` and shuts it down if you return `false`. Thus for compatibility reasons you must always return `true` from `process()`, at least on Chrome. However, once [this Chrome issue](https://crbug.com/921354) is fixed, you will want to change this behavior if possible as it may have a slight negative impact on performance.
+> [!NOTE]
+> At this time, unfortunately, Chrome does not implement this algorithm in a manner that matches the current standard. Instead, it keeps the node alive if you return `true` and shuts it down if you return `false`. Thus for compatibility reasons you must always return `true` from `process()`, at least on Chrome. However, once [this Chrome issue](https://crbug.com/921354) is fixed, you will want to change this behavior if possible as it may have a slight negative impact on performance.
 
 ## Creating an audio processor worklet node
 
@@ -178,7 +179,7 @@ To create an audio node that pumps blocks of audio data through an {{domxref("Au
 
 1. Load and install the audio processor module
 2. Create an {{domxref("AudioWorkletNode")}}, specifying the audio processor module to use by its name
-3. Connect inputs to the `AudioWorkletNode` and its outputs to appropriate destinations (either other nodes or to the {{domxref("AudioContext")}} object's {{domxref("AudioContext.destination", "destination")}} property.
+3. Connect inputs to the `AudioWorkletNode` and its outputs to appropriate destinations (either other nodes or to the {{domxref("AudioContext")}} object's {{domxref("BaseAudioContext/destination", "destination")}} property.
 
 To use an audio worklet processor, you can use code similar to the following:
 
@@ -207,7 +208,7 @@ In order to ensure the context is usable, this starts by creating the context if
 You can then create a new audio processor node by doing this:
 
 ```js
-let newProcessorNode = createMyAudioProcessor();
+let newProcessorNode = await createMyAudioProcessor();
 ```
 
 If the returned value, `newProcessorNode`, is non-`null`, we have a valid audio context with its hiss processor node in place and ready to use.
@@ -283,7 +284,7 @@ Here, if `gain.length` indicates that there's only a single value in the `gain` 
 
 ### Accessing parameters from the main thread script
 
-Your main thread script can access the parameters just like it can any other node. To do so, first you need to get a reference to the parameter by calling the {{domxref("AudioWorkletNode")}}'s {{domxref("AudioWorkletNode.parameters", "parameters")}} property's {{domxref("AudioParamMap.get", "get()")}} method:
+Your main thread script can access the parameters just like it can any other node. To do so, first you need to get a reference to the parameter by calling the {{domxref("AudioWorkletNode")}}'s {{domxref("AudioWorkletNode.parameters", "parameters")}} property's [`get()`](/en-US/docs/Web/API/AudioParamMap#get) method:
 
 ```js
 let gainParam = myAudioWorkletNode.parameters.get("gain");

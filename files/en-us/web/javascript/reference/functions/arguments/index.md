@@ -5,7 +5,7 @@ page-type: javascript-language-feature
 browser-compat: javascript.functions.arguments
 ---
 
-{{JSSidebar("Functions")}}
+{{jsSidebar("Functions")}}
 
 **`arguments`** is an array-like object accessible inside [functions](/en-US/docs/Web/JavaScript/Guide/Functions) that contains the values of the arguments passed to that function.
 
@@ -13,7 +13,8 @@ browser-compat: javascript.functions.arguments
 
 ## Description
 
-> **Note:** In modern code, [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) should be preferred.
+> [!NOTE]
+> In modern code, [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters) should be preferred.
 
 The `arguments` object is a local variable available within all non-[arrow](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) functions. You can refer to a function's arguments inside that function by using its `arguments` object. It has entries for each argument the function was called with, with the first entry's index at `0`.
 
@@ -49,7 +50,7 @@ Each argument index can also be set or reassigned:
 arguments[1] = "new value";
 ```
 
-Non-strict functions that only has simple parameters (that is, no rest, default, or destructured parameters) will sync the new value of parameters with the `arguments` object, and vice versa:
+Non-strict functions that only have simple parameters (that is, no rest, default, or destructured parameters) will sync the new value of parameters with the `arguments` object, and vice versa:
 
 ```js
 function func(a) {
@@ -90,11 +91,12 @@ funcWithDefault3(); // undefined; 0
 
 This is the same behavior exhibited by all [strict-mode functions](/en-US/docs/Web/JavaScript/Reference/Strict_mode#making_eval_and_arguments_simpler), regardless of the type of parameters they are passed. That is, assigning new values to parameters in the body of the function never affects the `arguments` object, nor will assigning new values to the `arguments` indices affect the value of parameters, even when the function only has simple parameters.
 
-> **Note:** You cannot write a `"use strict";` directive in the body of a function definition that accepts rest, default, or destructured parameters. Doing so will throw [a syntax error](/en-US/docs/Web/JavaScript/Reference/Errors/Strict_non_simple_params).
+> [!NOTE]
+> You cannot write a `"use strict";` directive in the body of a function definition that accepts rest, default, or destructured parameters. Doing so will throw [a syntax error](/en-US/docs/Web/JavaScript/Reference/Errors/Strict_non_simple_params).
 
 ### arguments is an array-like object
 
-`arguments` is an array-like object, which means that `arguments` has a {{jsxref("Functions/arguments/length", "length")}} property and properties indexed from zero, but it doesn't have {{JSxRef("Array")}}'s built-in methods like {{jsxref("Array/forEach", "forEach()")}} or {{jsxref("Array/map", "map()")}}. However, it can be converted to a real `Array`, using one of [`slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice), {{jsxref("Array.from()")}}, or [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax).
+`arguments` is an array-like object, which means that `arguments` has a {{jsxref("Functions/arguments/length", "length")}} property and properties indexed from zero, but it doesn't have {{jsxref("Array")}}'s built-in methods like {{jsxref("Array/forEach", "forEach()")}} or {{jsxref("Array/map", "map()")}}. However, it can be converted to a real `Array`, using one of [`slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice), {{jsxref("Array.from()")}}, or [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax).
 
 ```js
 const args = Array.prototype.slice.call(arguments);
@@ -104,7 +106,7 @@ const args = Array.from(arguments);
 const args = [...arguments];
 ```
 
-For common use cases, using it as an array-like object is sufficient, since it both [is iterable](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator) and has `length` and number indices. For example, [`Function.prototype.apply()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) accepts array-like objects.
+For common use cases, using it as an array-like object is sufficient, since it both [is iterable](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/Symbol.iterator) and has `length` and number indices. For example, [`Function.prototype.apply()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply) accepts array-like objects.
 
 ```js
 function midpoint() {
@@ -118,12 +120,12 @@ console.log(midpoint(3, 1, 4, 1, 5)); // 3
 
 ## Properties
 
-- {{jsxref("Functions/arguments/callee", "arguments.callee")}} {{Deprecated_Inline}}
+- {{jsxref("Functions/arguments/callee", "arguments.callee")}} {{deprecated_inline}}
   - : Reference to the currently executing function that the arguments belong to. Forbidden in strict mode.
 - {{jsxref("Functions/arguments/length", "arguments.length")}}
   - : The number of arguments that were passed to the function.
-- {{jsxref("Functions/arguments/@@iterator", "arguments[@@iterator]")}}
-  - : Returns a new {{jsxref("Array/@@iterator", "Array iterator", "", 0)}} object that contains the values for each index in `arguments`.
+- [`arguments[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments/Symbol.iterator)
+  - : Returns a new [array iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator) object that contains the values for each index in `arguments`.
 
 ## Examples
 
@@ -196,6 +198,6 @@ console.log(typeof arguments[0]); // returns the type of the first argument
 
 ## See also
 
-- [Functions guide](/en-US/docs/Web/JavaScript/Guide/Functions)
+- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions) guide
 - [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
 - [Rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)

@@ -7,22 +7,29 @@ status:
 browser-compat: api.Serial
 ---
 
-{{DefaultAPISidebar("Web Serial API")}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{DefaultAPISidebar("Web Serial API")}}{{SecureContext_Header}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **Web Serial API** provides a way for websites to read from and write to serial devices. These devices may be connected via a serial port, or be USB or Bluetooth devices that emulate a serial port.
 
 ## Concepts and Usage
 
-The Web Serial API is one of a set of APIs that allow websites to communicate with peripherals connected to a user's computer. It provides the ability to connect to devices that are required by the operating system to communicate via the serial API, rather than USB which can be accessed via the {{domxref("WebUSB API")}}, or input devices that can be accessed via {{domxref("WebHID API")}}.
+The Web Serial API is one of a set of APIs that allow websites to communicate with peripherals connected to a user's computer. It provides the ability to connect to devices that are required by the operating system to communicate via the serial API, rather than USB which can be accessed via the [WebUSB API](/en-US/docs/Web/API/WebUSB_API), or input devices that can be accessed via [WebHID API](/en-US/docs/Web/API/WebHID_API).
 
 Examples of serial devices include 3D printers, and microcontrollers such as the [BBC micro:bit board](https://microbit.org/).
 
 ## Interfaces
 
-- {{domxref("Serial")}}
+- {{domxref("Serial")}} {{Experimental_Inline}}
   - : Provides attributes and methods for finding and connecting to serial ports from a web page.
-- {{domxref("SerialPort")}}
+- {{domxref("SerialPort")}} {{Experimental_Inline}}
   - : Provides access to a serial port on the host device.
+
+## Extensions to other interfaces
+
+- {{domxref("Navigator.serial")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns a {{domxref("Serial")}} object, which represents the entry point into the Web Serial API to enable the control of serial ports.
+- {{domxref("WorkerNavigator.serial")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns a {{domxref("Serial")}} object, which represents the entry point into the Web Serial API to enable the control of serial ports.
 
 ## Examples
 
@@ -97,5 +104,5 @@ while (port.readable) {
 
 ## See also
 
-- [Read from and write to a serial port](https://web.dev/serial/)
+- [Read from and write to a serial port](https://developer.chrome.com/docs/capabilities/serial)
 - [Getting started with the Web Serial API](https://codelabs.developers.google.com/codelabs/web-serial#0)

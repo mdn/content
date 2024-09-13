@@ -13,10 +13,9 @@ Once all basic math notations are known, it remains to consider tabular layout w
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy,
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >basic software installed</a
+          >Basic software installed</a
         >, basic knowledge of
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
@@ -215,7 +214,8 @@ This is again similar to [HTML tables](/en-US/docs/Learn/HTML/Tables/Basics#allo
 
 {{ EmbedLiveSample('allowing_cells_to_span_multiple_rows_and_columns', 700, 200, "", "") }}
 
-> **Note:** For historical reason, the MathML attribute for column spanning is called `columnspan` not `colspan`.
+> [!NOTE]
+> For historical reason, the MathML attribute for column spanning is called `columnspan` not `colspan`.
 
 ## Usage for advanced layout
 
@@ -297,7 +297,8 @@ Besides representing matrix-like objects, MathML tables are sometimes used for a
 
 {{ EmbedLiveSample('Usage_for_advanced_layout', 700, 200, "", "") }}
 
-> **Warning:** The [`<mtable>` article](/en-US/docs/Web/MathML/Element/mtable) provides more advanced layout options via special attributes such as alignment or spacing. These originated before CSS equivalents and were originally designed and intended for renderers which were not-CSS aware. However, these attributes may not be implemented in all browsers. In the future, it is likely that usages of `<mtable>` for layout-only purpose (i.e. not actual matrix-like objects) can be replaced with CSS-based alternatives.
+> [!WARNING]
+> The [`<mtable>` article](/en-US/docs/Web/MathML/Element/mtable) provides more advanced layout options via special attributes such as alignment or spacing. These originated before CSS equivalents and were originally designed and intended for renderers which were not-CSS aware. However, these attributes may not be implemented in all browsers. In the future, it is likely that usages of `<mtable>` for layout-only purpose (i.e. not actual matrix-like objects) can be replaced with CSS-based alternatives.
 
 ## Summary
 

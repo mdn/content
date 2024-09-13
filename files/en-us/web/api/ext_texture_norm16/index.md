@@ -17,7 +17,8 @@ When this extension is enabled:
 
 WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 
-> **Note:** This extension is only available to {{domxref("WebGL2RenderingContext", "WebGL 2", "", 1)}} contexts.
+> [!NOTE]
+> This extension is only available to {{domxref("WebGL2RenderingContext", "WebGL 2", "", 1)}} contexts.
 
 ## Constants
 
@@ -31,11 +32,11 @@ WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExt
   - : RGBA 16-bit unsigned format. Color-renderable.
 - `ext.R16_SNORM_EXT`
   - : Red 16-bit signed normalized format.
-- `ext.RG16_SNORM__EXT`
+- `ext.RG16_SNORM_EXT`
   - : RG 16-bit signed normalized format.
-- `ext.RGB16_SNORM__EXT`
+- `ext.RGB16_SNORM_EXT`
   - : RGB 16-bit signed normalized format.
-- `ext.RGBA16_SNORM__EXT`
+- `ext.RGBA16_SNORM_EXT`
   - : RGBA 16-bit signed normalized format.
 
 ## Examples

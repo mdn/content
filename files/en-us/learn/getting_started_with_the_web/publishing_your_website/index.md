@@ -29,7 +29,7 @@ In addition, you will need a {{Glossary("FTP", "File Transfer Protocol (FTP)")}}
 
 - MDN does not promote specific commercial hosting companies or domain name registrars. To find hosting companies and registrars, just search for "web hosting" and "domain names". All registrars will have a feature to allow you to check if the domain name you want is available.
 - Your home or office {{Glossary("ISP", "internet service provider")}} may provide some limited hosting for a small website. The available feature set will be limited, but it might be perfect for your first experiments.
-- There are also free services available like [Neocities](https://neocities.org/), [Google Sites](https://sites.google.com/), [Blogger](https://www.blogger.com), and [WordPress](https://wordpress.com/). Sometimes you get what you pay for, but sometimes these resources are good enough for your initial experiments.
+- There are also free services available like [Neocities](https://neocities.org/), [Google Sites](https://sites.google.com/), [Blogger](https://www.blogger.com/), and [WordPress](https://wordpress.com/). Sometimes you get what you pay for, but sometimes these resources are good enough for your initial experiments.
 - Many companies provide hosting and domains.
 
 ### Using an online tool like GitHub or Google App Engine
@@ -64,11 +64,13 @@ Now let's examine how to easily publish your site via GitHub Pages.
    Check the "_Initialize this repository with a README"_ box. Then click _Create repository_.![A sample of a GitHub repository page](github-create-repo.png)
 4. Drag and drop the content of your website folder into your repository. Then click _Commit changes_.
 
-   > **Note:** Make sure your folder has an `index.html` file.
+   > [!NOTE]
+   > Make sure your folder has an `index.html` file.
 
 5. Navigate your browser to _username_.github.io to see your website online. For example, for the username _chrisdavidmills_, go to [_chrisdavidmills_.github.io](https://chrisdavidmills.github.io/).
 
-   > **Note:** It may take a few minutes for your website to go live. If your website does not display immediately, wait a few minutes. Try again.
+   > [!NOTE]
+   > It may take a few minutes for your website to go live. If your website does not display immediately, wait a few minutes. Try again.
 
 To learn more, see [GitHub Pages Help](https://docs.github.com/en/pages/getting-started-with-github-pages).
 

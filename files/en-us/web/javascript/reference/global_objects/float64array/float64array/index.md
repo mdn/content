@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Float64Array.Float64Array
 
 {{JSRef}}
 
-The **`Float64Array()`** constructor creates {{jsxref("Float64Array")}} objects. The contents are initialized to `0`.
+The **`Float64Array()`** constructor creates {{jsxref("Float64Array")}} objects. The contents are initialized to `0` unless initialization data is explicitly provided.
 
 ## Syntax
 
@@ -77,6 +77,7 @@ console.log(float64FromIterable);
 ## See also
 
 - [Polyfill of `Float64Array` in `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
+- [JavaScript typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) guide
+- {{jsxref("TypedArray")}}
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

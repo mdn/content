@@ -53,11 +53,6 @@ _This interface also inherits methods from its parent, {{domxref("HTMLElement")}
 - {{domxref("HTMLFormElement.submit", "submit()")}}
   - : Submits the form to the server.
 
-### Deprecated methods
-
-- {{domxref("HTMLFormElement.requestAutocomplete()")}} {{deprecated_inline}}
-  - : Triggers a native browser interface to assist the user in completing the fields which have an [autofill field name](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#autofill-field-name) value that is not `off` or `on`. The form will receive an event once the user has finished with the interface, the event will either be `autocomplete` when the fields have been filled or `autocompleteerror` when there was a problem.
-
 ## Events
 
 Listen to these events using `addEventListener()`, or by assigning an event listener to the `oneventname` property of this interface.
@@ -118,7 +113,7 @@ The elements included by `HTMLFormElement.elements` and `HTMLFormElement.length`
 - {{HTMLElement("select")}}
 - {{HTMLElement("textarea")}}
 
-No other elements are included in the list returned by `elements`, which makes it an excellent way to get at the elements most important when processing forms.
+No other elements are included in the list returned by `elements`, which makes it an excellent way to get at the most important elements when processing forms.
 
 ## Examples
 

@@ -7,11 +7,11 @@ status:
 browser-compat: api.BackgroundFetchEvent
 ---
 
-{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
+{{APIRef("Background Fetch API")}}{{SeeCompatTable}}{{AvailableInWorkers("service")}}
 
-The **`BackgroundFetchEvent`** interface of the {{domxref('Background Fetch API','','',' ')}} is the event type for background fetch events dispatched on the {{domxref("ServiceWorkerGlobalScope", "service worker global scope")}}.
+The **`BackgroundFetchEvent`** interface of the {{domxref('Background Fetch API', "", "", "nocode")}} is the event type for background fetch events dispatched on the {{domxref("ServiceWorkerGlobalScope", "service worker global scope", "", "nocode")}}.
 
-It is the event type passed to `onbackgroundfetchabort` and `onbackgroundfetchclick`.
+It is the event type passed to {{domxref("ServiceWorkerGlobalScope/backgroundfetchclick_event", "backgroundfetchclick")}} event and {{domxref("ServiceWorkerGlobalScope/backgroundfetchabort_event", "backgroundfetchabort")}} event.
 
 {{InheritanceDiagram}}
 
@@ -22,16 +22,14 @@ It is the event type passed to `onbackgroundfetchabort` and `onbackgroundfetchcl
 
 ## Instance properties
 
-_Inherits properties from its ancestor, {{domxref("Event")}}_.
+_Also inherits properties from its parent, {{domxref("ExtendableEvent")}}._
 
 - {{domxref("BackgroundFetchEvent.registration")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the {{domxref("BackgroundFetchRegistration")}} that the event was initialized to.
 
-### Event handlers
-
-None.
-
 ## Instance methods
+
+_Also inherits methods from its parent, {{domxref("ExtendableEvent")}}._
 
 None.
 

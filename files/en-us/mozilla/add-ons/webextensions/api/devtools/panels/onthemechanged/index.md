@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.devtools.panels.onThemeChanged
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when the devtools theme changes.
 
@@ -51,4 +51,5 @@ browser.devtools.panels.onThemeChanged.addListener((newThemeName) => {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/docs/extensions/reference/devtools_panels/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/docs/extensions/reference/api/devtools/panels) API.

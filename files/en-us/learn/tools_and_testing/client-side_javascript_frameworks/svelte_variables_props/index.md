@@ -107,7 +107,7 @@ The state of our component will be represented by these three top-level variable
 
 At the moment, our displayed to-do items are all static. We want to iterate over each item in our `todos` array and render the markup for each task, so let's do that now.
 
-HTML doesn't have a way of expressing logic — like conditionals and loops. Svelte does. In this case we use the [`{#each}`](https://svelte.dev/docs#each) directive to iterate over the `todos` array. The second parameter, if provided, will contain the index of the current item. Also, a key expression can be provided, which will uniquely identify each item. Svelte will use it to diff the list when data changes, rather than adding or removing items at the end, and it's a good practice to always specify one. Finally, an `:else` block can be provided, which will be rendered when the list is empty.
+HTML doesn't have a way of expressing logic — like conditionals and loops. Svelte does. In this case we use the [`{#each}`](https://svelte.dev/docs/logic-blocks#each) directive to iterate over the `todos` array. The second parameter, if provided, will contain the index of the current item. Also, a key expression can be provided, which will uniquely identify each item. Svelte will use it to diff the list when data changes, rather than adding or removing items at the end, and it's a good practice to always specify one. Finally, an `:else` block can be provided, which will be rendered when the list is empty.
 
 Let's give it a try.
 
@@ -259,7 +259,8 @@ We could recalculate them after toggling and removing to-dos, but there's an eas
 
 We can tell Svelte that we want our `totalTodos` and `completedTodos` variables to be reactive by prefixing them with `$:`. Svelte will generate the code to automatically update them whenever data they depend on is changed.
 
-> **Note:** Svelte uses the `$:` [JavaScript label statement syntax](/en-US/docs/Web/JavaScript/Reference/Statements/label) to mark reactive statements. Just like the `export` keyword being used to declare props, this may look a little alien. This is another example in which Svelte takes advantage of valid JavaScript syntax and gives it a new purpose — in this case to mean "re-run this code whenever any of the referenced values change". Once you get used to it, there's no going back.
+> [!NOTE]
+> Svelte uses the `$:` [JavaScript label statement syntax](/en-US/docs/Web/JavaScript/Reference/Statements/label) to mark reactive statements. Just like the `export` keyword being used to declare props, this may look a little alien. This is another example in which Svelte takes advantage of valid JavaScript syntax and gives it a new purpose — in this case to mean "re-run this code whenever any of the referenced values change". Once you get used to it, there's no going back.
 
 Update your `totalTodos` and `completedTodos` variable definitions inside `src/components/Todos.svelte` to look like so:
 
@@ -290,7 +291,7 @@ Now on to the next major task for this article — let's add some functionality 
 
    Whenever the value of the variable `newTodoName` changes, it will be reflected in the `value` attribute of the input, and whenever a key is pressed in the input, we will update the contents of the variable `newTodoName`.
 
-   This is a manual implementation of two-way data binding for an input box. But we don't need to do this — Svelte provides an easier way to bind any property to a variable, using the [`bind:property`](https://svelte.dev/docs#bind_element_property) directive:
+   This is a manual implementation of two-way data binding for an input box. But we don't need to do this — Svelte provides an easier way to bind any property to a variable, using the [`bind:property`](https://svelte.dev/docs/element-directives#bind-property) directive:
 
    ```svelte
    <input bind:value={newTodoName} />
@@ -313,7 +314,8 @@ Now on to the next major task for this article — let's add some functionality 
    $: console.log("newTodoName: ", newTodoName);
    ```
 
-   > **Note:** As you may have noticed, reactive statements aren't limited to variable declarations. You can put _any_ JavaScript statement after the `$:` sign.
+   > [!NOTE]
+   > As you may have noticed, reactive statements aren't limited to variable declarations. You can put _any_ JavaScript statement after the `$:` sign.
 
 4. Now try going back to `localhost:5042`, pressing <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd> to open your browser console and typing something into the input field. You should see your entries logged. At this point, you can delete the reactive `console.log()` if you wish.
 5. Next up we'll create a function to add the new to-do — `addTodo()` — which will push a new `todo` object onto the `todos` array. Add this to the bottom of your `<script>` block inside `src/components/Todos.svelte`:
@@ -325,7 +327,8 @@ Now on to the next major task for this article — let's add some functionality 
    }
    ```
 
-   > **Note:** For the moment we are just assigning the same `id` to every to-do, but don't worry, we will fix that soon.
+   > [!NOTE]
+   > For the moment we are just assigning the same `id` to every to-do, but don't worry, we will fix that soon.
 
 6. Now we want to update our HTML so that we call `addTodo()` whenever the form is submitted. Update the NewTodo form's opening tag like so:
 
@@ -333,9 +336,9 @@ Now on to the next major task for this article — let's add some functionality 
    <form on:submit|preventDefault={addTodo}>
    ```
 
-   The [`on:eventname`](https://svelte.dev/docs#on_element_event) directive supports adding modifiers to the DOM event with the `|` character. In this case, the `preventDefault` modifier tells Svelte to generate the code to call `event.preventDefault()` before running the handler. Explore the previous link to see what other modifiers are available.
+   The [`on:eventname`](https://svelte.dev/docs/element-directives#on-eventname) directive supports adding modifiers to the DOM event with the `|` character. In this case, the `preventDefault` modifier tells Svelte to generate the code to call `event.preventDefault()` before running the handler. Explore the previous link to see what other modifiers are available.
 
-7. If you try adding new to-dos at this point, the new to-dos are added to the to-dos array, but our UI is not updated. Remember that in Svelte [reactivity is triggered with assignments](https://svelte.dev/docs#2_Assignments_are_reactive). That means that the `addTodo()` function is executed, the element is added to the `todos` array, but Svelte won't detect that the push method modified the array, so it won't refresh the tasks `<ul>`.
+7. If you try adding new to-dos at this point, the new to-dos are added to the to-dos array, but our UI is not updated. Remember that in Svelte [reactivity is triggered with assignments](https://svelte.dev/docs/svelte-components#script-2-assignments-are-reactive). That means that the `addTodo()` function is executed, the element is added to the `todos` array, but Svelte won't detect that the push method modified the array, so it won't refresh the tasks `<ul>`.
 
    Just adding `todos = todos` to the end of the `addTodo()` function would solve the problem, but it seems strange to have to include that at the end of the function. Instead, we'll take out the `push()` method and use [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) to achieve the same result: we'll assign a value to the `todos` array equal to the `todos` array plus the new object.
 
@@ -367,7 +370,8 @@ If you try to add new to-dos in your app now, you'll be able to add a new to-do 
    }
    ```
 
-   > **Note:** As you can see, reactive statements are not limited to one-liners. The following would work too, but it is a little less readable: `$: newTodoId = totalTodos ? Math.max(...todos.map((t) => t.id)) + 1 : 1`
+   > [!NOTE]
+   > As you can see, reactive statements are not limited to one-liners. The following would work too, but it is a little less readable: `$: newTodoId = totalTodos ? Math.max(...todos.map((t) => t.id)) + 1 : 1`
 
 2. How does Svelte achieve this? The compiler parses the whole reactive statement, and detects that it depends on the `totalTodos` variable and the `todos` array. So whenever either of them is modified, this code is re-evaluated, updating `newTodoId` accordingly.
 
@@ -392,8 +396,8 @@ Finally for this article, let's implement the ability to filter our to-dos by st
      filter === "active"
        ? todos.filter((t) => !t.completed)
        : filter === "completed"
-       ? todos.filter((t) => t.completed)
-       : todos;
+         ? todos.filter((t) => t.completed)
+         : todos;
    ```
 
    We use the `filter` variable to control the active filter: _all_, _active_, or _completed_. Just assigning one of these values to the filter variable will activate the filter and update the list of to-dos. Let's see how to achieve this.
@@ -426,7 +430,8 @@ Finally for this article, let's implement the ability to filter our to-dos by st
 
    We will show the current filter by applying the `btn__primary` class to the active filter button. To conditionally apply style classes to an element we use the `class:name={value}` directive. If the value expression evaluates to truthy, the class name will be applied. You can add many of these directives, with different conditions, to the same element. So when we issue `class:btn__primary={filter === 'all'}`, Svelte will apply the `btn__primary` class if filter equals all.
 
-   > **Note:** Svelte provides a shortcut which allows us to shorten `<div class:active={active}>` to `<div class:active>` when the class matches the variable name.
+   > [!NOTE]
+   > Svelte provides a shortcut which allows us to shorten `<div class:active={active}>` to `<div class:active>` when the class matches the variable name.
 
    Something similar happens with `aria-pressed={filter === 'all'}`: when the JavaScript expression passed between curly braces evaluates to a truthy value, the `aria-pressed` attribute will be added to the button.
 
@@ -443,7 +448,8 @@ Finally for this article, let's implement the ability to filter our to-dos by st
 
    After analyzing our code, Svelte detects that our `filterTodos()` function depends on the variables `filter` and `todos`. And, just like with any other dynamic expression embedded in the markup, whenever any of these dependencies changes, the DOM will be updated accordingly. So whenever `filter` or `todos` changes, the `filterTodos()` function will be re-evaluated and the items inside the loop will be updated.
 
-> **Note:** Reactivity can be tricky sometimes. Svelte recognizes `filter` as a dependency because we are referencing it in the `filterTodos(filter, todo)` expression. `filter` is a top-level variable, so we might be tempted to remove it from the helper function params, and just call it like this: `filterTodos(todo)`. This would work, but now Svelte has no way to find out that `{#each filterTodos(todos) }` depends on `filter`, and the list of filtered to-dos won't be updated when the filter changes. Always remember that Svelte analyzes our code to find out dependencies, so it's better to be explicit about it and not rely on the visibility of top-level variables. Besides, it's a good practice to make our code clear and explicit about what information it is using.
+> [!NOTE]
+> Reactivity can be tricky sometimes. Svelte recognizes `filter` as a dependency because we are referencing it in the `filterTodos(filter, todo)` expression. `filter` is a top-level variable, so we might be tempted to remove it from the helper function params, and just call it like this: `filterTodos(todo)`. This would work, but now Svelte has no way to find out that `{#each filterTodos(todos) }` depends on `filter`, and the list of filtered to-dos won't be updated when the filter changes. Always remember that Svelte analyzes our code to find out dependencies, so it's better to be explicit about it and not rely on the visibility of top-level variables. Besides, it's a good practice to make our code clear and explicit about what information it is using.
 
 ## The code so far
 

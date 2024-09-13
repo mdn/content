@@ -116,7 +116,7 @@ The print controls allow the user to select how the `section`s in the `article` 
     <ul>
       <li>@top-left-corner</li>
       <li>@top-left</li>
-      <li>@top-middle</li>
+      <li>@top-center</li>
       <li>@top-right</li>
       <li>@top-right-corner</li>
       <li>@left-top</li>
@@ -127,7 +127,7 @@ The print controls allow the user to select how the `section`s in the `article` 
       <li>@right-bottom</li>
       <li>@bottom-left-corner</li>
       <li>@bottom-left</li>
-      <li>@bottom-middle</li>
+      <li>@bottom-center</li>
       <li>@bottom-right</li>
       <li>@bottom-right-corner</li>
     </ul>
@@ -152,40 +152,40 @@ fieldset {
 }
 ```
 
-The first part of the CSS sets up the **named** pages, these include the size and orientation and also some content to go in the [`@top-middle` margin](/en-US/docs/Web/CSS/@page#margin_at-rules) of the printed pages.
+The first part of the CSS sets up the **named** pages, these include the size and orientation and also some content to go in the [`@top-center` margin](/en-US/docs/Web/CSS/@page#margin_at-rules) of the printed pages.
 
 ```css
 @page toc {
   size: a4 portrait;
-  @top-middle {
+  @top-center {
     content: "Table of contents";
   }
 }
 
 @page foreword {
   size: a4 portrait;
-  @top-middle {
+  @top-center {
     content: "Foreword";
   }
 }
 
 @page introduction {
   size: a4 portrait;
-  @top-middle {
+  @top-center {
     content: "Introduction";
   }
 }
 
 @page conclusion {
   size: a4 portrait;
-  @top-middle {
+  @top-center {
     content: "Conclusion";
   }
 }
 
 @page chapter {
   size: a4 landscape;
-  @top-middle {
+  @top-center {
     content: "Chapter";
   }
 }

@@ -23,7 +23,8 @@ A pseudo-class consists of a colon (`:`) followed by the pseudo-class name (e.g.
 
 Pseudo-classes let you apply a style to an element not only in relation to the content of the document tree, but also in relation to external factors like the history of the navigator ({{CSSxRef(":visited")}}, for example), the status of its content (like {{CSSxRef(":checked")}} on certain form elements), or the position of the mouse (like {{CSSxRef(":hover")}}, which lets you know if the mouse is over an element or not).
 
-> **Note:** In contrast to pseudo-classes, [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) can be used to style a _specific part_ of an element.
+> [!NOTE]
+> In contrast to pseudo-classes, [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) can be used to style a _specific part_ of an element.
 
 ## Element display state pseudo-classes
 
@@ -72,6 +73,8 @@ These pseudo-classes relate to form elements, and enable selecting elements base
   - : Matches when a form element is required.
 - {{CSSxRef(":optional")}}
   - : Matches when a form element is optional.
+- {{CSSxRef(":user-valid")}}
+  - : Represents an element with correct input, but only when the user has interacted with it.
 - {{CSSxRef(":user-invalid")}}
   - : Represents an element with incorrect input, but only when the user has interacted with it.
 
@@ -169,7 +172,7 @@ These pseudo-classes require some interaction by the user in order for them to a
 
 ## Functional pseudo-classes
 
-These pseudo-classes accept a [selector list](/en-US/docs/Web/CSS/Selector_list#selector_list) or [forgiving selector list](/en-US/docs/Web/CSS/Selector_list#forgiving_selector_list) as a parameter.
+These pseudo-classes accept a [selector list](/en-US/docs/Web/CSS/Selector_list) or [forgiving selector list](/en-US/docs/Web/CSS/Selector_list#forgiving_selector_list) as a parameter.
 
 - [`:is()`](/en-US/docs/Web/CSS/:is)
   - : The matches-any pseudo-class matches any element that matches any of the selectors in the list provided. The list is forgiving.
@@ -207,13 +210,13 @@ B
 C
 
 - {{CSSxRef(":checked")}}
-- {{CSSxRef(":current")}} {{Experimental_Inline}}
+- {{CSSxRef(":current")}}
 
 D
 
 - {{CSSxRef(":default")}}
 - {{CSSxRef(":defined")}}
-- {{CSSxRef(":dir", ":dir()")}} {{Experimental_Inline}}
+- {{CSSxRef(":dir", ":dir()")}}
 - {{CSSxRef(":disabled")}}
 
 E
@@ -226,11 +229,11 @@ F
 - {{CSSxRef(":first")}}
 - {{CSSxRef(":first-child")}}
 - {{CSSxRef(":first-of-type")}}
-- {{CSSxRef(":fullscreen")}}
-- {{CSSxRef(":future")}} {{Experimental_Inline}}
 - {{CSSxRef(":focus")}}
 - {{CSSxRef(":focus-visible")}}
 - {{CSSxRef(":focus-within")}}
+- {{CSSxRef(":fullscreen")}}
+- {{CSSxRef(":future")}} {{Experimental_Inline}}
 
 H
 
@@ -254,7 +257,7 @@ L
 - {{CSSxRef(":last-of-type")}}
 - {{CSSxRef(":left")}}
 - {{CSSxRef(":link")}}
-- {{CSSxRef(":local-link")}} {{Experimental_Inline}}
+- {{CSSxRef(":local-link")}}
 
 M
 
@@ -264,9 +267,7 @@ N
 
 - {{CSSxRef(":not", ":not()")}}
 - {{CSSxRef(":nth-child", ":nth-child()")}}
-- {{CSSxRef(":nth-col", ":nth-col()")}} {{Experimental_Inline}}
 - {{CSSxRef(":nth-last-child", ":nth-last-child()")}}
-- {{CSSxRef(":nth-last-col", ":nth-last-col()")}} {{Experimental_Inline}}
 - {{CSSxRef(":nth-last-of-type", ":nth-last-of-type()")}}
 - {{CSSxRef(":nth-of-type", ":nth-of-type()")}}
 
@@ -279,11 +280,12 @@ O
 
 P
 
-- {{CSSxRef(":past")}} {{Experimental_Inline}}
+- {{CSSxRef(":past")}}
+- {{CSSxRef(":paused")}}
 - {{CSSxRef(":picture-in-picture")}}
 - {{CSSxRef(":placeholder-shown")}}
-- {{CSSxRef(":paused")}}
 - {{CSSxRef(":playing")}}
+- {{CSSxRef(":popover-open")}}
 
 R
 
@@ -296,7 +298,7 @@ R
 S
 
 - {{CSSxRef(":scope")}}
-- {{CSSxRef(":state", ":state()")}} {{Experimental_Inline}}
+- {{CSSxRef(":state", ":state()")}}
 
 T
 
@@ -305,7 +307,7 @@ T
 
 U
 
-- {{CSSxRef(":user-invalid")}} {{Experimental_Inline}}
+- {{CSSxRef(":user-invalid")}}
 
 V
 

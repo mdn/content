@@ -5,7 +5,7 @@ page-type: webextension-api-property
 browser-compat: webextensions.api.devtools.panels.themeName
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The name of the currently selected devtools theme.
 
@@ -21,4 +21,5 @@ This is a string whose possible values are:
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/docs/extensions/reference/devtools_panels/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/docs/extensions/reference/api/devtools/panels) API.

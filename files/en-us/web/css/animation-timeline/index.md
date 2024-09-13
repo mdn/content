@@ -21,7 +21,7 @@ The following types of timelines can be set via `animation-timeline`:
   - A _named view progress timeline_ is one where the subject is explicitly named using the {{cssxref("view-timeline-name")}} property (or the {{cssxref("view-timeline")}} shorthand property). The name is then linked to the element to animate by specifying it as the value of that element's `animation-timeline` property. This is a key point — with named view progress timelines, the element to animate does not have to be the same as the subject.
   - An _anonymous view progress timeline_ is one where the subject is given a {{cssxref("animation-timeline/view", "view()")}} function as an `animation-timeline` value, causing it to be animated based on its position inside its nearest parent scroller.
 
-> **Note:** {{cssxref("animation-timeline")}} is included in the {{cssxref("animation")}} shorthand as a reset-only value. This means that including `animation` resets a previously-declared `animation-timeline` value to `auto`, but a specific value cannot be set via `animation`. When creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations), you need to declare `animation-timeline` after declaring any `animation` shorthand for it to take effect.
+> **Note:** `animation-timeline` is included in the {{cssxref("animation")}} shorthand as a reset-only value. This means that including `animation` resets a previously-declared `animation-timeline` value to `auto`, but a specific value cannot be set via `animation`. When creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations), you need to declare `animation-timeline` after declaring any `animation` shorthand for it to take effect.
 
 <!-- {{EmbedInteractiveExample("pages/css/animation-name.html")}} -->
 
@@ -63,13 +63,13 @@ animation-timeline: unset;
 
   - : The animation's timeline is the document's default [DocumentTimeline](/en-US/docs/Web/API/DocumentTimeline).
 
-- `scroll()` {{Experimental_Inline}}
+- `scroll()`
 
   - : An anonymous scroll progress timeline is provided by some ancestor scroller of the current element. The function parameters allow you to select the scroller, and the scrolling axis the timeline will be measured along.
 
     See {{cssxref("animation-timeline/scroll", "scroll()")}} for more information.
 
-- `view()` {{Experimental_Inline}}
+- `view()`
 
   - : An anonymous view progress timeline is provided by the subject that `animation-timeline: view();` is set on. The function parameters allow you to select the scrollbar axis along which timeline progress will be tracked and an inset that adjusts the position of the box in which the subject is deemed to be visible.
 
@@ -79,9 +79,11 @@ animation-timeline: unset;
 
   - : A {{cssxref('dashed-ident')}} identifying a named timeline previously declared with the {{cssxref('scroll-timeline-name')}} or {{cssxref('view-timeline-name')}} property (or the {{cssxref('scroll-timeline')}} or {{cssxref('view-timeline')}} shorthand property).
 
-    > **Note:** If two or more timelines share the same name, the last declared within the cascade will be used. Also, if no timeline is found that matches the given name, the animation is not associated with a timeline.
+    > [!NOTE]
+    > If two or more timelines share the same name, the last declared within the cascade will be used. Also, if no timeline is found that matches the given name, the animation is not associated with a timeline.
 
-    > **Note:** The [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident) values must start with `--`. This helps avoid name clashes with standard CSS keywords.
+    > [!NOTE]
+    > The [`<dashed-ident>`](/en-US/docs/Web/CSS/dashed-ident) values must start with `--`. This helps avoid name clashes with standard CSS keywords.
 
 ## Formal definition
 
