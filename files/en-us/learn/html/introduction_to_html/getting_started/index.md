@@ -390,7 +390,7 @@ textarea.onkeyup = () => {
 
 ### Boolean attributes
 
-Sometimes you will see attributes written without values. This is entirely acceptable. These are called Boolean attributes. Boolean attributes can only have one value, which is generally the same as the attribute name. For example, consider the [`disabled`](/en-US/docs/Web/HTML/Element/input#disabled) attribute, which you can assign to form input elements. (You use this to _disable_ the form input elements so the user can't make entries. The disabled elements typically have a grayed-out appearance.) For example:
+Sometimes you will see attributes written without values. This is entirely acceptable. These are called [Boolean attributes](/en-US/docs/Glossary/Boolean/HTML). When a boolean attribute is written without a value, or with any value, even like `"false"`, the boolean attribute is always set to true. Otherwise, if the attribute is not written in an HTML tag, the attribute is set to false. The spec requires the attribute's value to either be the empty string (including when the attribute has no value explicitly specified) or the same as the attribute's name, but other values work the same. For example, consider the [`disabled`](/en-US/docs/Web/HTML/Element/input#disabled) attribute, which you can assign to form input elements. (You use this to _disable_ the form input elements so the user can't make entries. The disabled elements typically have a grayed-out appearance.) For example:
 
 ```html
 <input type="text" disabled="disabled" />

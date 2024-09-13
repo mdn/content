@@ -180,7 +180,7 @@ When calling `tabs.remove()`:
 #### Manifest "key" property
 
 - **In Firefox:** As Firefox uses random UUIDs for `web_accessible_resources`, this property is unsupported. Firefox extensions can fix their extension ID through the `browser_specific_settings.gecko.id` manifest key (see [browser_specific_settings.gecko](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings#firefox_gecko_properties)).
-- **In Chrome:** When working with an unpacked extension, the manifest may include a [`"key"` property](https://developer.chrome.com/docs/extensions/mv3/manifest/key/) to pin the extension ID across different machines. This is mainly useful when working with `web_accessible_resources`.
+- **In Chrome:** When working with an unpacked extension, the manifest may include a [`"key"` property](https://developer.chrome.com/docs/extensions/reference/manifest/key) to pin the extension ID across different machines. This is mainly useful when working with `web_accessible_resources`.
 
 #### Content script HTTP(S) requests
 
@@ -244,7 +244,7 @@ The tables are generated from compatibility data stored as [JSON files in GitHub
 
 ### App persistence
 
-- **In Firefox:** When a native messaging connection is closed, Firefox kills the subprocesses if they do not break away. On Windows, the browser puts the native application's process into a [Job object](<https://msdn.microsoft.com/library/windows/desktop/ms684161(v=vs.85).aspx>) and kills the job. Suppose the native application launches other processes and wants them to remain open after the native application is killed. In that case, the native application must use `CreateProcess`, instead of `ShellExecute`, to launch the additional process with the [`CREATE_BREAKAWAY_FROM_JOB`](<https://msdn.microsoft.com/library/windows/desktop/ms684863(v=vs.85).aspx>) flag.
+- **In Firefox:** When a native messaging connection is closed, Firefox kills the subprocesses if they do not break away. On Windows, the browser puts the native application's process into a [Job object](https://learn.microsoft.com/en-us/windows/win32/procthread/job-objects) and kills the job. Suppose the native application launches other processes and wants them to remain open after the native application is killed. In that case, the native application must use `CreateProcess`, instead of `ShellExecute`, to launch the additional process with the [`CREATE_BREAKAWAY_FROM_JOB`](https://learn.microsoft.com/en-us/windows/win32/procthread/process-creation-flags) flag.
 
 ## Data cloning algorithm
 

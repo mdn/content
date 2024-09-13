@@ -222,7 +222,7 @@ Sec-WebSocket-Protocol: wamp
 
 Now the server must pick one of the protocols that the client suggested and it supports. If there is more than one, send the first one the client sent. Imagine our server can use both `soap` and `wamp`. Then, in the response handshake, it sends:
 
-```bash
+```http
 Sec-WebSocket-Protocol: soap
 ```
 

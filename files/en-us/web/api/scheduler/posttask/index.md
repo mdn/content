@@ -129,7 +129,7 @@ runTask2();
 ### Permanent priorities
 
 [Task priorities](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#task_priorities) may be set using `priority` parameter in the optional second argument.
-Priorities that are set in this way cannot be changed (are [immutable]/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#mutable_and_immutable_task_priority)).
+Priorities that are set in this way cannot be changed (are [immutable](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#mutable_and_immutable_task_priority)).
 
 Below we post two groups of three tasks, each member in reverse order of priority.
 The final task has the default priority.
@@ -175,7 +175,7 @@ bckg 2
 ### Changing task priorities
 
 [Task priorities](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#task_priorities) can also take their initial value from a {{domxref("TaskSignal")}} passed to `postTask()` in the optional second argument.
-If set in this way, the priority of the task [can then be changed]/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#mutable_and_immutable_task_priority) using the controller associated with the signal.
+If set in this way, the priority of the task [can then be changed](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#mutable_and_immutable_task_priority) using the controller associated with the signal.
 
 > [!NOTE]
 > Setting and changing task priorities using a signal only works when the `options.priority` argument to `postTask()` is not set, and when the `options.signal` is a {{domxref("TaskSignal")}} (and not an {{domxref("AbortSignal")}}).

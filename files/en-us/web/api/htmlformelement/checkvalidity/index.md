@@ -10,6 +10,9 @@ browser-compat: api.HTMLFormElement.checkValidity
 
 The **`checkValidity()`** method of the {{domxref("HTMLFormElement")}} interface returns a boolean value which indicates if all associated controls meet any [constraint validation](/en-US/docs/Web/HTML/Constraint_validation) rules applied to them. The method also fires an {{domxref("HTMLElement/invalid_event", "invalid")}} event on each invalid element, but not on the form element itself. Because there's no default browser behavior for `checkValidity()`, canceling this `invalid` event has no effect.
 
+> [!NOTE]
+> The {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS pseudo-classes are applied to `<form>` elements based on the validity of its owned form controls, not the validity of the `<form>` element itself.
+
 ## Syntax
 
 ```js-nolint

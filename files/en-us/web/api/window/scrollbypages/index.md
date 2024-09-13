@@ -21,8 +21,9 @@ scrollByPages(pages)
 
 ### Parameters
 
-- `pages` is the number of pages to scroll. It may be a positive or
-  negative integer.
+- `pages`
+  - : The number of pages to scroll. It may be a positive or
+    negative integer.
 
 ### Return value
 

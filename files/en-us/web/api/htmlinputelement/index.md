@@ -162,6 +162,10 @@ Some properties only apply to input element types that support the corresponding
 
   - : A string that represents the element's [`accept`](/en-US/docs/Web/HTML/Element/input#accept) attribute, containing comma-separated list of file types that can be selected.
 
+- {{domxref("HTMLInputElement.capture", "capture")}}
+
+  - : A string that represents the element's [`capture`](/en-US/docs/Web/HTML/Element/input#capture) attribute, indicating the media capture input method in file upload controls.
+
 - {{domxref("HTMLInputElement.files", "files")}}
 
   - : A {{domxref("FileList")}} that represents the files selected for upload.
@@ -178,10 +182,6 @@ Some properties only apply to input element types that support the corresponding
 - {{domxref("HTMLInputElement.autocomplete", "autocomplete")}}
 
   - : A string that represents the element's [`autocomplete`](/en-US/docs/Web/HTML/Element/input#autocomplete) attribute, indicating whether the value of the control can be automatically completed by the browser.
-
-- {{domxref("HTMLInputElement.capture", "capture")}}
-
-  - : A string that represents the element's [`capture`](/en-US/docs/Web/HTML/Element/input#capture) attribute, indicating the media capture input method in file upload controls.
 
 - {{domxref("HTMLInputElement.max", "max")}}
 

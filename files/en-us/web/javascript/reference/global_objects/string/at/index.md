@@ -34,8 +34,8 @@ The following example provides a function which returns the last character found
 
 ```js
 // A function which returns the last character of a given string
-function returnLast(arr) {
-  return arr.at(-1);
+function returnLast(str) {
+  return str.at(-1);
 }
 
 let invoiceRef = "myinvoice01";
