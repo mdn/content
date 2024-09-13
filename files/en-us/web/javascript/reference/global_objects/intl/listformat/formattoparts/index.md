@@ -60,7 +60,7 @@ console.table(myListFormat.formatToParts(fruits));
 //  { "type": "element", "value": "Apple" },
 //  { "type": "literal", "value": ", " },
 //  { "type": "element", "value": "Orange" },
-//  { "type": "literal", "value": ", and " },
+//  { "type": "literal", "value": " and " },
 //  { "type": "element", "value": "Pineapple" }
 // ]
 ```
