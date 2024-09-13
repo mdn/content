@@ -16,15 +16,38 @@ A {{domxref("FragmentDirective")}} object.
 
 ## Examples
 
-Try running the following in a supporting browser's devtools, in a tab with one or more matched text fragments:
+### Checking if text fragments are supported
 
-```js
-document.fragmentDirective;
-// returns an empty FragmentDirective object, if supported
-// undefined otherwise
+The code below logs whether or not text fragments are supported in your browser by checking for existence of the object.
+Note that the object is empty, and at present it is mainly intended for feature detection.
+In the future, it might include other information.
+
+```html hidden
+<pre id="log"></pre>
 ```
 
-This functionality is mainly intended for feature detection at present. In the future, the `FragmentDirective` object could include additional information.
+```js hidden
+const logElement = document.querySelector("#log");
+function log(text) {
+  logElement.innerText = text;
+}
+```
+
+```css hidden
+#log {
+  height: 20px;
+}
+```
+
+```js
+if (document.fragmentDirective) {
+  log("Your browser supports text fragments.");
+} else {
+  log("Text fragments are not supported in your browser.");
+}
+```
+
+{{EmbedLiveSample("Checking if text fragments are supported","100%","30px")}}
 
 ## Specifications
 
