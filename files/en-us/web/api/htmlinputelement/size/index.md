@@ -10,7 +10,7 @@ browser-compat: api.HTMLInputElement.size
 
 The **`size`** property of the {{DOMxRef("HTMLInputElement")}} interface defines the number of visible characters displayed while a edits the element's value. It reflects the {{htmlelement("input")}} element's [`size`](/en-US/docs/Web/HTML/Element/input#size) attribute.
 
-Relevant to the [`text`](/en-US/docs/Web/HTML/Element/input/text), [`search`](/en-US/docs/Web/HTML/Element/input/search), [`tel`](/en-US/docs/Web/HTML/Element/input/tel), [`email`](/en-US/docs/Web/HTML/Element/input/email), [`url`](/en-US/docs/Web/HTML/Element/input/url), and [`password`](/en-US/docs/Web/HTML/Element/input/password) input type only, the `size` is a valid non-negative integer greater than zero. If omitted or invalid, the value is `20`.
+The `size` property is relevant to the [`text`](/en-US/docs/Web/HTML/Element/input/text), [`search`](/en-US/docs/Web/HTML/Element/input/search), [`tel`](/en-US/docs/Web/HTML/Element/input/tel), [`email`](/en-US/docs/Web/HTML/Element/input/email), [`url`](/en-US/docs/Web/HTML/Element/input/url), and [`password`](/en-US/docs/Web/HTML/Element/input/password) input type only. The value is a non-negative integer greater than zero. If omitted or invalid, the value is `20`.
 
 ## Value
 
