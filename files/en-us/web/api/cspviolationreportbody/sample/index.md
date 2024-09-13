@@ -8,7 +8,7 @@ browser-compat: api.CSPViolationReportBody.sample
 
 {{APIRef("Reporting API")}}
 
-The **`sample`** read-only property of the {{domxref("CSPViolationReportBody")}} interface is a string that contains a part of the resource that was in violation of the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP).
+The **`sample`** read-only property of the {{domxref("CSPViolationReportBody")}} interface is a string that contains a part of the resource that violated the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP).
 
 This sample is usually the first 40 characters of the inline script, event handler, or style that violated a CSP restriction.
 If not populated it is the empty string `""`.
@@ -21,7 +21,7 @@ In addition, a sample is only included if the `Content-Security-Policy` directiv
 
 ## Value
 
-A string containing a sample of the resource that caused the violation, usually the first 40 characters, or the empty string.
+A string containing a sample of the resource that violated the CSP, usually the first 40 characters, or the empty string.
 
 ## Examples
 

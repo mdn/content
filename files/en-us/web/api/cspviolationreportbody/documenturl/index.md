@@ -8,11 +8,11 @@ browser-compat: api.CSPViolationReportBody.documentURL
 
 {{APIRef("Reporting API")}}
 
-The **`documentURL`** read-only property of the {{domxref("CSPViolationReportBody")}} interface is a string that represents the URL of the document or worker in which the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) violation occurred.
+The **`documentURL`** read-only property of the {{domxref("CSPViolationReportBody")}} interface is a string that represents the URL of the document or worker that violated the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP).
 
 ## Value
 
-A string containing the URL of the document or worker in which the violation occurred.
+A string containing the URL of the document or worker that violated the CSP.
 
 ## Examples
 

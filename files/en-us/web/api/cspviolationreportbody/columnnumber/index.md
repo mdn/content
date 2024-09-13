@@ -8,9 +8,9 @@ browser-compat: api.CSPViolationReportBody.columnNumber
 
 {{APIRef("Reporting API")}}
 
-The **`columnNumber`** read-only property of the {{domxref("CSPViolationReportBody")}} interface indicates the column in the source file that caused the reported CSP violation.
+The **`columnNumber`** read-only property of the {{domxref("CSPViolationReportBody")}} interface indicates the column in the source file that violated the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP).
 
-This property is most useful alongside {{domxref("CSPViolationReportBody.sourceFile")}} and {{domxref("CSPViolationReportBody.lineNumber")}}, as it provides the location of the column in that file and line where the error occurred.
+This property is most useful alongside {{domxref("CSPViolationReportBody.sourceFile")}} and {{domxref("CSPViolationReportBody.lineNumber")}}, as it provides the location of the column in that file and line that resulted in a violation.
 
 ## Value
 

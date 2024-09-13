@@ -8,11 +8,11 @@ browser-compat: api.CSPViolationReportBody.statusCode
 
 {{APIRef("Reporting API")}}
 
-The **`statusCode`** read-only property of the {{domxref("CSPViolationReportBody")}} interface is a number representing the [HTTP status code](/en-US/docs/Web/HTTP/Status) of the window or worker in which the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) violation occurred.
+The **`statusCode`** read-only property of the {{domxref("CSPViolationReportBody")}} interface is a number representing the [HTTP status code](/en-US/docs/Web/HTTP/Status) of the response to the request that triggered a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP) violation (when loading a window or worker).
 
 ## Value
 
-A number representing the HTTP status code of the window or worker in which the violation occurred.
+A number representing the HTTP status code of the response to the request that triggered the CSP violation.
 
 ## Examples
 

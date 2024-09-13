@@ -8,9 +8,9 @@ browser-compat: api.CSPViolationReportBody.sourceFile
 
 {{APIRef("Reporting API")}}
 
-The **`sourceFile`** read-only property of the {{domxref("CSPViolationReportBody")}} interface indicates the path of the source file that caused the reported CSP violation.
+The **`sourceFile`** read-only property of the {{domxref("CSPViolationReportBody")}} interface indicates the path of the source file that violated the [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP).
 
-This property is most useful alongside {{domxref("CSPViolationReportBody.lineNumber")}} and {{domxref("CSPViolationReportBody.columnNumber")}}, which provide the location of the violation within the file.
+This property is most useful alongside {{domxref("CSPViolationReportBody.lineNumber")}} and {{domxref("CSPViolationReportBody.columnNumber")}}, which provide the location within the file that resulted in a violation.
 
 ## Value
 
