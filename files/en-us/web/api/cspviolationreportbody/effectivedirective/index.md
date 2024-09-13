@@ -24,7 +24,8 @@ Each time the callback function in invoked, we log the directive in the first en
 ```js
 const observer = new ReportingObserver(
   (reports, observer) => {
-    console.log(`Directive: ${reports[0].body.effectiveDirective}`); // For example: style-src-elem
+    console.log(`Directive: ${reports[0].body.effectiveDirective}`);
+    // For example: style-src-elem
   },
   {
     types: ["csp-violation"],

@@ -27,7 +27,8 @@ Each time the callback function in invoked, we log the disposition in the first 
 ```js
 const observer = new ReportingObserver(
   (reports, observer) => {
-    console.log(`Disposition: ${reports[0].body.disposition}`); // For example: "enforce"
+    console.log(`Disposition: ${reports[0].body.disposition}`);
+    // For example: "enforce"
   },
   {
     types: ["csp-violation"],
