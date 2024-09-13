@@ -33,7 +33,7 @@ console.log(selectElement.length);
 
 - {{HTMLElement("select")}}
 - {{HTMLElement("option")}}
-- {{DOMXref(HTMLSelectElement.options")}}
-- {{DOMXref(HTMLSelectElement.selectedOptions")}}
-- {{DOMXref(HTMLSelectElement.multiple")}}
-- {{DOMXref(HTMLSelectElement.selectedIndex")}}
+- {{DOMXref("HTMLSelectElement.options")}}
+- {{DOMXref("HTMLSelectElement.selectedOptions")}}
+- {{DOMXref("HTMLSelectElement.multiple")}}
+- {{DOMXref("HTMLSelectElement.selectedIndex")}}

@@ -32,6 +32,6 @@ console.log(selectElement.multiple);
 ## See also
 
 - {{HTMLElement("select")}}
-- {{DOMXref(HTMLSelectElement.selectedOptions")}}
-- {{DOMXref(HTMLSelectElement.length")}}
-- {{DOMXref(HTMLSelectElement.selectedIndex")}}
+- {{DOMXref("HTMLSelectElement.selectedOptions")}}
+- {{DOMXref("HTMLSelectElement.length")}}
+- {{DOMXref("HTMLSelectElement.selectedIndex")}}
