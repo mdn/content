@@ -6,9 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.PointerEvent.getCoalescedEvents
 ---
 
-{{APIRef("Pointer Events")}}
-
-<div class='notecard secure'><h4>Secure context</h4><p> In web page scripts, this feature is available only in <a href='/en-US/docs/Web/Security/Secure_Contexts'>secure contexts</a> (HTTPS) in some or all <a href='#browser_compatibility'>supporting browsers</a>. In Firefox, when called from a web extension content script, this feature is available in all contexts.</p></div>
+{{APIRef("Pointer Events")} {{securecontext_header}}
 
 The **`getCoalescedEvents()`** method of the {{domxref("PointerEvent")}} interface returns a sequence of `PointerEvent` instances that were coalesced (merged) into a single {{domxref('Element/pointermove_event', 'pointermove')}} or {{domxref('Element/pointerrawupdate_event', 'pointerrawupdate')}} event.
 Instead of a stream of many {{domxref('Element/pointermove_event', 'pointermove')}} events, user agents coalesce multiple updates into a single event.
