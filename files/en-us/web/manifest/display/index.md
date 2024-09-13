@@ -11,11 +11,15 @@ The `display` manifest member is used to specify your preferred display mode for
 
 ## Syntax
 
-```json
-"display": "<display-keyword>"
+```json-nolint
+/* Keyword values */
+"display": "fullscreen"
+"display": "standalone"
+"display": "minimal-ui"
+"display": "browser"
 ```
 
-### Keys
+### Values
 
 - `display`
 
@@ -67,6 +71,8 @@ As shown in the code below, you can adjust an app's style depending on the `disp
 ```
 
 ## Examples
+
+### Specifying standalone display mode
 
 The following example manifest file for the web app named "HackerWeb" defines how the app should appear and behave when installed on a user's device. The `display` member is set to `standalone`, which specifies that the app should open in a separate window without the typical browser UI elements like the URL bar.
 

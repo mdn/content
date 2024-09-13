@@ -12,26 +12,44 @@ These icons uniquely identify your web app in different contexts, such as in an 
 
 ## Syntax
 
-```json
+```json-nolint
+/* Single icon with the minimum required property */
+"icons":
+  {
+    "src": "icon/basic-icon.png"
+  }
+
+
+/* Single icon with the multiple purposes */
+"icons":
+  {
+    "src": "icon/basic-icon.png",
+    "purpose": "maskable any"
+  }
+
+/* Two icons with various properties */
 "icons": [
   {
-    "src": "<icon-url>",
-    "sizes": "<size-values>",
-    "type": "<mime-type>",
-    "purpose": "<purpose-keywords>"
+  "src": "icon/lowres.png",
+  "sizes": "48x48"
+  },
+  {
+  "src": "maskable_icon.png",
+  "sizes": "48x48",
+  "type": "image/png"
   }
 ]
 ```
 
-### Keys
+### Values
 
 - `icons`
 
-  - : An array of objects.
+  - : An object or an array of objects.
     Each object represents an icon to be used in a specific context.
     For example, you can add icons to represent your web app on devices with different screen sizes, for integration with various operating systems, for splash screens, or for app notifications.
 
-    Each icon object can have one or more keys. Of these, only `src` is a required key. The possible keys include:
+    Each icon object can have one or more properties. Of these, only `src` is required. The possible properties include:
 
     - `src`
 
@@ -106,25 +124,27 @@ This example shows how to declare multiple icons for different scenarios and dev
 - For larger icons (`257x257` and above), an [SVG](/en-US/docs/Web/Media/Formats/Image_types#svg_scalable_vector_graphics) file is specified. The `sizes` value of this icon is set to `any`, which allows a browser to use this icon at any size. SVG icons maintain their quality at larger sizes. These icons ate ideal for high-resolution displays like in [progressive web apps (PWAs)](/en-US/docs/Web/Progressive_web_apps).
 
 ```json
-"icons": [
-  {
-    "src": "icon/lowres.webp",
-    "sizes": "48x48",
-    "type": "image/webp"
-  },
-  {
-    "src": "icon/lowres",
-    "sizes": "48x48"
-  },
-  {
-    "src": "icon/hd_hi.ico",
-    "sizes": "72x72 96x96 128x128 256x256"
-  },
-  {
-    "src": "icon/hd_hi.svg",
-    "sizes": "any"
-  }
-]
+{
+  "icons": [
+    {
+      "src": "icon/lowres.webp",
+      "sizes": "48x48",
+      "type": "image/webp"
+    },
+    {
+      "src": "icon/lowres",
+      "sizes": "48x48"
+    },
+    {
+      "src": "icon/hd_hi.ico",
+      "sizes": "72x72 96x96 128x128 256x256"
+    },
+    {
+      "src": "icon/hd_hi.svg",
+      "sizes": "any"
+    }
+  ]
+}
 ```
 
 ## Specifications
