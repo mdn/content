@@ -61,15 +61,14 @@ A search using Wikipedia with the results shown in a new window:
 ```js
 async function search() {
   try {
-    // This will fail, if the user has removed the search engine
-    // or has other version of the search engine installed (e.g. Wikipedia (de)).
+    // this will fail if `Wikipedia (en)` is not an engine of the browser
     await browser.search.search({
       query: "styracosaurus",
       engine: "Wikipedia (en)",
       disposition: "NEW_WINDOW",
     });
   } catch (ex) {
-    // Initiate a search manually
+    // initiate a search manually for fallback
     await browser.windows.create({
       url: "https://en.wikipedia.org/w/index.php?title=Special:Search&search=styracosaurus",
     });
@@ -84,15 +83,14 @@ A search using Wikipedia with the results shown in the current tab:
 ```js
 async function search(tab) {
   try {
-    // This will fail, if the user has removed the search engine
-    // or has other version of the search engine installed (e.g. Wikipedia (de)).
+    // this will fail if `Wikipedia (en)` is not an engine of the browser
     await browser.search.search({
       query: "styracosaurus",
       engine: "Wikipedia (en)",
       tabId: tab.id,
     });
   } catch (ex) {
-    // Initiate a search manually
+    // initiate a search manually for fallback
     await browser.tabs.update(tab.id, {
       url: "https://en.wikipedia.org/w/index.php?title=Special:Search&search=styracosaurus",
     });
