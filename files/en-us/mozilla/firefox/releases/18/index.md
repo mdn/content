@@ -89,4 +89,4 @@ The following interfaces have been removed.
 
 ### Older versions
 
-{{Firefox_for_developers('17')}}
+{{Firefox_for_developers}}

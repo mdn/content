@@ -5,7 +5,7 @@ page-type: css-module
 spec-urls: https://drafts.csswg.org/css-multicol/
 ---
 
-{{CSSRef("CSS3 Multicol")}}
+{{CSSRef}}
 The **CSS multi-column layout** module lets you divide content across multiple columns. By using the properties in this module, you can define the preferred number and width of columns, the gap size between columns, and the visual appearance of the optional column dividing lines (known as column rules). You can also define how content should flow from column to column and how to break content between columns.
 
 ## Multi-column layout in action
@@ -16,7 +16,8 @@ In this example, the 1967 speech from Canada's centennial, _A Lament for Confede
 
 To see the code for this columned layout, [view the source on GitHub](https://github.com/mdn/css-examples/blob/main/modules/multicol.html).
 
-> **Note:** Multiple-column layout is closely related to [paged media](/en-US/docs/Web/CSS/CSS_paged_media). Each column box is a fragment, much like each printed page is a fragment of a document. Using the properties defined in the [CSS fragmentation](/en-US/docs/Web/CSS/CSS_fragmentation) module, you can control how content breaks between columns and pages.
+> [!NOTE]
+> Multiple-column layout is closely related to [paged media](/en-US/docs/Web/CSS/CSS_paged_media). Each column box is a fragment, much like each printed page is a fragment of a document. Using the properties defined in the [CSS fragmentation](/en-US/docs/Web/CSS/CSS_fragmentation) module, you can control how content breaks between columns and pages.
 
 ## Reference
 
@@ -36,7 +37,8 @@ To see the code for this columned layout, [view the source on GitHub](https://gi
   - {{cssxref("column-count")}}
   - {{cssxref("column-width")}}
 
-> **Note:** Bear in mind that setting container height and line length can pose challenges for people with visual or cognitive disabilities. [WCAG Success Criterion 1.4.8](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background) states that even when the text size is doubled, content should not need to be scrolled.
+> [!NOTE]
+> Bear in mind that setting container height and line length can pose challenges for people with visual or cognitive disabilities. [WCAG Success Criterion 1.4.8](/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background) states that even when the text size is doubled, content should not need to be scrolled.
 
 ## Guides
 
@@ -60,7 +62,7 @@ To see the code for this columned layout, [view the source on GitHub](https://gi
 - {{cssxref("height")}}, {{cssxref("max-height")}}, and {{cssxref("block-size")}} CSS properties
 - {{cssxref("width")}}, {{cssxref("max-width")}}, and {{cssxref("inline-size")}} CSS properties
 - {{cssxref("line-style")}} enumerated data type
-- [Block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context) guide
+- [Block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context) guide
 
 ## Specifications
 

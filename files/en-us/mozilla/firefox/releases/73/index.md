@@ -25,7 +25,7 @@ _No changes._
 
 #### Removals
 
-- The proprietary [`-moz-touch-enabled`](/en-US/docs/Web/CSS/@media/-moz-touch-enabled) media query has been removed ([Firefox bug 1486964](https://bugzil.la/1486964)). You should use [`pointer: coarse`](/en-US/docs/Web/CSS/@media/pointer) instead.
+- The proprietary `-moz-touch-enabled` media query has been removed ([Firefox bug 1486964](https://bugzil.la/1486964)). You should use [`pointer: coarse`](/en-US/docs/Web/CSS/@media/pointer) instead.
 
 ### SVG
 
@@ -81,4 +81,4 @@ _No changes._
 
 ## Older versions
 
-{{Firefox_for_developers(72)}}
+{{Firefox_for_developers}}

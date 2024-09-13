@@ -11,9 +11,10 @@ browser-compat: api.VRPose.position
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
-The **`position`** read-only property of the {{domxref("VRPose")}} interface returns the position of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}} as a 3D vector.
+The **`position`** read-only property of the {{domxref("VRPose")}} interface returns the position of the {{domxref("VRDisplay")}} at the current timestamp as a 3D vector.
 
-> **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
+> [!NOTE]
+> This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
 The coordinate system is as follows:
 
@@ -23,13 +24,15 @@ The coordinate system is as follows:
 
 Positions are measured in meters from an origin point — this point is either the position the sensor was first read at, or the position of the sensor at the point that {{domxref("VRDisplay.resetPose()")}} was last called.
 
-> **Note:** By default, all positions are given as a sitting space position. Transforming this point with {{domxref("VRStageParameters.sittingToStandingTransform")}} — when you are working with a room display for example — converts this to a standing space position.
+> [!NOTE]
+> By default, all positions are given as a sitting space position. Transforming this point with {{domxref("VRStageParameters.sittingToStandingTransform")}} — when you are working with a room display for example — converts this to a standing space position.
 
 ## Value
 
 A {{jsxref("Float32Array")}}, or null if the VR sensor is not able to provide position data.
 
-> **Note:** User agents may provide emulated position values through techniques such as neck modeling; when doing so they should still report {{domxref("VRDisplayCapabilities.hasPosition")}} as false.
+> [!NOTE]
+> User agents may provide emulated position values through techniques such as neck modeling; when doing so they should still report {{domxref("VRDisplayCapabilities.hasPosition")}} as false.
 
 ## Examples
 
@@ -47,5 +50,4 @@ Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/Web
 
 ## See also
 
-- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.
+- [WebVR API](/en-US/docs/Web/API/WebVR_API)

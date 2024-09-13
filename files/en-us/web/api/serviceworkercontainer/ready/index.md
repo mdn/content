@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.ServiceWorkerContainer.ready
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`ready`** read-only property of
 the {{domxref("ServiceWorkerContainer")}} interface provides a way of delaying code

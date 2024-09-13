@@ -3,7 +3,7 @@ title: "MediaTrackConstraints: displaySurface property"
 short-title: displaySurface
 slug: Web/API/MediaTrackConstraints/displaySurface
 page-type: web-api-instance-property
-browser-compat: api.MediaTrackConstraints.displaySurface
+browser-compat: api.MediaStreamTrack.applyConstraints.displaySurface_constraint
 ---
 
 {{APIRef("Media Capture and Streams")}}
@@ -20,6 +20,9 @@ A [`ConstrainDOMString`](/en-US/docs/Web/API/MediaTrackConstraints#constraindoms
 This value _does not_ add or remove display sources in the browser's user interface, but may reorder them. You can't use this property to limit the user to a subset of the three display-surface values `window`, `browser`, and `monitor` — but, as you will see below, you can see what was chosen, and reject it.
 
 See [how constraints are defined](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints#how_constraints_are_defined).
+
+> [!NOTE]
+> You cannot set [`monitorTypeSurfaces: "exclude"`](/en-US/docs/Web/API/MediaDevices/getDisplayMedia#monitortypesurfaces) at the same time as `displaySurface: "monitor"` as the two settings are contradictory. Trying to do so will result in the associated `getDisplayMedia()` call failing with a `TypeError`.
 
 ## Usage notes
 

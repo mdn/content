@@ -9,13 +9,17 @@ browser-compat: javascript.builtins.Date.getMinutes
 
 The **`getMinutes()`** method of {{jsxref("Date")}} instances returns the minutes for this date according to local time.
 
-{{EmbedInteractiveExample("pages/js/date-getminutes.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/date-getminutes.html", "shorter")}}
 
 ## Syntax
 
 ```js-nolint
 getMinutes()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

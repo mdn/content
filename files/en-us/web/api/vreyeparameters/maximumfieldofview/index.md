@@ -13,7 +13,8 @@ browser-compat: api.VREyeParameters.maximumFieldOfView
 
 The **`maximumFieldOfView`** read-only property of the {{domxref("VREyeParameters")}} interface describes the maximum supported field of view for the current eye.
 
-> **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
+> [!NOTE]
+> This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
 ## Value
 
@@ -31,6 +32,5 @@ Until all browsers have implemented the new [WebXR APIs](/en-US/docs/Web/API/Web
 
 ## See also
 
-- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API).
+- [WebVR API](/en-US/docs/Web/API/WebVR_API)
 - {{domxref("VRFieldOfView")}}
-- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.

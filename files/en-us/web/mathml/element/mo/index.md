@@ -20,15 +20,15 @@ In addition to the [global MathML attributes](/en-US/docs/Web/MathML/Global_attr
 - `largeop`
   - : A [`<boolean>`](/en-US/docs/Web/MathML/Values#mathml-specific_types) indicating whether the operator should be drawn bigger when [`math-style`](/en-US/docs/Web/CSS/math-style) is set to `normal`.
 - `lspace`
-  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the amount of space before the operator.
+  - : A {{cssxref("length-percentage")}} indicating the amount of space before the operator.
 - `maxsize`
-  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the maximum size of the operator when it is stretchy.
+  - : A {{cssxref("length-percentage")}} indicating the maximum size of the operator when it is stretchy.
 - `minsize`
-  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the minimum size of the operator when it is stretchy.
+  - : A {{cssxref("length-percentage")}} indicating the minimum size of the operator when it is stretchy.
 - `movablelimits`
   - : A [`<boolean>`](/en-US/docs/Web/MathML/Values#mathml-specific_types) indicating whether attached under- and overscripts move to sub- and superscript positions when [`math-style`](/en-US/docs/Web/CSS/math-style) is set to `compact`.
 - `rspace`
-  - : A [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) indicating the amount of space after the operator.
+  - : A {{cssxref("length-percentage")}} indicating the amount of space after the operator.
 - `separator`
   - : A [`<boolean>`](/en-US/docs/Web/MathML/Values#mathml-specific_types) indicating whether the operator is a separator (such as commas). There is no visual effect for this attribute.
 - `stretchy`
@@ -36,7 +36,8 @@ In addition to the [global MathML attributes](/en-US/docs/Web/MathML/Global_attr
 - `symmetric`
   - : A [`<boolean>`](/en-US/docs/Web/MathML/Values#mathml-specific_types) indicating whether a stretchy operator should be vertically symmetric around the imaginary math axis (centered fraction line).
 
-> **Note:** For the `lspace`, `maxsize`, `minsize` and `rspace` attributes, some browsers may also accept [legacy MathML lengths](/en-US/docs/Web/MathML/Values#legacy_mathml_lengths).
+> [!NOTE]
+> For the `lspace`, `maxsize`, `minsize` and `rspace` attributes, some browsers may also accept [legacy MathML lengths](/en-US/docs/Web/MathML/Values#legacy_mathml_lengths).
 
 ## Examples
 

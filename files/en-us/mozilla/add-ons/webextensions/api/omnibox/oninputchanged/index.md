@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.omnibox.onInputChanged
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired whenever the user changes their input, after they have started interacting with your extension by entering its keyword in the address bar and then pressing the space key.
 
@@ -125,4 +125,5 @@ browser.omnibox.onInputEntered.addListener((url, disposition) => {
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.omnibox`](https://developer.chrome.com/docs/extensions/reference/omnibox/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.omnibox`](https://developer.chrome.com/docs/extensions/reference/api/omnibox) API.

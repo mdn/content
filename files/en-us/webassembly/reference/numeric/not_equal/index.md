@@ -1,6 +1,7 @@
 ---
 title: Not equal
 slug: WebAssembly/Reference/Numeric/Not_equal
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

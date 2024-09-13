@@ -48,7 +48,7 @@ Once forced breaks have been applied, soft breaks may be added if needed, but no
   - : Avoids any page break within the principal box.
 - `avoid-column`
   - : Avoids any column break within the principal box.
-- `avoid-region` {{experimental_inline}}
+- `avoid-region`
   - : Avoids any region break within the principal box.
 
 ## Page break aliases

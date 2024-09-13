@@ -17,7 +17,8 @@ This includes:
 - Restoring a frozen page on mobile OSes
 - Returning to the page using the browser's forward or back buttons
 
-> **Note:** During the initial page load, the `pageshow` event fires _after_ the {{domxref("Window/load_event", "load")}} event.
+> [!NOTE]
+> During the initial page load, the `pageshow` event fires _after_ the {{domxref("Window/load_event", "load")}} event.
 
 ## Syntax
 

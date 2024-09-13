@@ -4,7 +4,7 @@ slug: Web/API/WebGL_API/By_example/Textures_from_code
 page-type: guide
 ---
 
-{{PreviousNext("Learn/WebGL/By_example/Hello_vertex_attributes","Learn/WebGL/By_example/Video_textures")}}
+{{DefaultAPISidebar("WebGL")}}{{PreviousNext("Learn/WebGL/By_example/Hello_vertex_attributes","Learn/WebGL/By_example/Video_textures")}}
 
 This WebGL example provides a simple demonstration of procedural texturing with fragment shaders. That is, using code to generate textures for use in shading WebGL objects.
 
@@ -108,9 +108,8 @@ function setupWebGL(evt) {
   if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
     const linkErrLog = gl.getProgramInfoLog(program);
     cleanup();
-    document.querySelector(
-      "p",
-    ).textContent = `Shader program did not link successfully. Error log: ${linkErrLog}`;
+    document.querySelector("p").textContent =
+      `Shader program did not link successfully. Error log: ${linkErrLog}`;
     return;
   }
   initializeAttributes();

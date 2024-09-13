@@ -5,11 +5,14 @@ page-type: web-api-interface
 browser-compat: api.NotificationEvent
 ---
 
-{{APIRef("Web Notifications")}}
+{{APIRef("Web Notifications")}}{{AvailableInWorkers("service")}}
 
-The parameter passed into the {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "onnotificationclick")}} handler, the `NotificationEvent` interface represents a notification click event that is dispatched on the {{domxref("ServiceWorkerGlobalScope")}} of a {{domxref("ServiceWorker")}}.
+The **`NotificationEvent`** interface of the {{domxref("Notifications API", "", "", "nocode")}} represents a notification event dispatched on the {{domxref("ServiceWorkerGlobalScope")}} of a {{domxref("ServiceWorker")}}.
 
 This interface inherits from the {{domxref("ExtendableEvent")}} interface.
+
+> [!NOTE]
+> Only persistent notification events, fired at the {{domxref("ServiceWorkerGlobalScope")}} object, implement the `NotificationEvent` interface. Non-persistent notification events, fired at the {{domxref("Notification")}} object, implement the `Event` interface.
 
 {{InheritanceDiagram}}
 
@@ -20,7 +23,7 @@ This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 
 ## Instance properties
 
-_Inherits properties from its ancestor, {{domxref("Event")}}_.
+_Also inherits properties from its parent interface, {{domxref("ExtendableEvent")}}_.
 
 - {{domxref("NotificationEvent.notification")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("Notification")}} object representing the notification that was clicked to fire the event.
@@ -29,10 +32,7 @@ _Inherits properties from its ancestor, {{domxref("Event")}}_.
 
 ## Instance methods
 
-_Inherits methods from its parent, {{domxref("ExtendableEvent")}}_.
-
-- {{domxref("ExtendableEvent.waitUntil", "ExtendableEvent.waitUntil()")}}
-  - : Extends the lifetime of the event. Tells the browser that work is ongoing.
+_Also inherits methods from its parent interface, {{domxref("ExtendableEvent")}}_.
 
 ## Example
 
@@ -62,7 +62,8 @@ self.addEventListener("notificationclick", (event) => {
 
 {{Specifications}}
 
-> **Note:** This interface is specified in the [Notifications API](/en-US/docs/Web/API/Notifications_API), but accessed through {{domxref("ServiceWorkerGlobalScope")}}.
+> [!NOTE]
+> This interface is specified in the [Notifications API](/en-US/docs/Web/API/Notifications_API), but accessed through {{domxref("ServiceWorkerGlobalScope")}}.
 
 ## Browser compatibility
 

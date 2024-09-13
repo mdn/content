@@ -13,7 +13,8 @@ The
 property of the Canvas 2D API specifies the alpha (transparency) value that is applied
 to shapes and images before they are drawn onto the canvas.
 
-> **Note:** See also the chapter [Applying styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) in the [Canvas Tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial).
+> [!NOTE]
+> See also the chapter [Applying styles and color](/en-US/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors) in the [Canvas Tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial).
 
 ## Value
 
@@ -93,8 +94,7 @@ for (let i = 0; i < 7; i++) {
 }
 ```
 
-{{EmbedLiveSample("Overlaying_transparent_shapes", "180", "180",
-  "canvas_globalalpha.png")}}
+{{EmbedLiveSample("Overlaying_transparent_shapes", "", "180")}}
 
 ## Specifications
 

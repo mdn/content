@@ -43,15 +43,14 @@ If the `radix` is smaller than `2` or bigger than
 
 ### Number.parseInt vs. parseInt
 
-This method has the same functionality as the global {{jsxref("parseInt",
-  "parseInt()")}} function:
+This method has the same functionality as the global {{jsxref("parseInt()")}} function:
 
 ```js
 Number.parseInt === parseInt; // true
 ```
 
 Its purpose is modularization of globals. Please see
-{{jsxref("parseInt", "parseInt()")}} for more detail and examples.
+{{jsxref("parseInt()")}} for more detail and examples.
 
 ## Specifications
 
@@ -64,5 +63,5 @@ Its purpose is modularization of globals. Please see
 ## See also
 
 - [Polyfill of `Number.parseInt` in `core-js`](https://github.com/zloirock/core-js#ecmascript-number)
-- The {{jsxref("Number")}} object it belongs to.
-- The global {{jsxref("parseInt", "parseInt()")}} method.
+- {{jsxref("Number")}}
+- {{jsxref("parseInt()")}}

@@ -13,22 +13,14 @@ Manually running tests on several browsers and devices, several times per day, c
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>,
-        <a href="/en-US/docs/Learn/CSS">CSS</a>, and
-        <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages; an idea
-        of the high level
-        <a
-          href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
-          >principles of cross-browser testing</a
-        >.
+        Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, and <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages;
+        an idea of the high level <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction">principles of cross-browser testing</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To provide an understanding of what automated testing entails, how it
-        can make your life easier, and how to make use of some of the commercial
-        products that make things easier.
+        To provide an understanding of what automated testing entails, how it can make your life easier, and how to make use of some of the commercial products that make things easier.
       </td>
     </tr>
   </tbody>
@@ -41,11 +33,12 @@ Throughout this module we have detailed loads of different ways in which you can
 We agree — testing all the things we've looked at in previous articles manually can be a real pain. Fortunately, there are tools to help us automate some of this pain away. There are two main ways in which we can automate the tests we've been talking about in this module:
 
 1. Use a task runner such as [Grunt](https://gruntjs.com/) or [Gulp](https://gulpjs.com/), or [npm scripts](https://docs.npmjs.com/misc/scripts/) to run tests and clean up code during your build process. This is a great way to perform tasks like linting and minifying code, adding in CSS prefixes or transpiling nascent JavaScript features for maximum cross-browser reach, and so on.
-2. Use a browser automation system like [Selenium](https://www.selenium.dev/) to run specific tests on installed browsers and return results, alerting you to failures in browsers as they crop up. Commercial cross-browser testing apps like [LambdaTest](https://www.lambdatest.com/), [Sauce Labs](https://saucelabs.com/), [BrowserStack](https://www.browserstack.com/), and [TestingBot](https://testingbot.com) are based on Selenium, but allow you to access their set up remotely using a simple interface, saving you the hassle of setting up your own testing system.
+2. Use a browser automation system like [Selenium](https://www.selenium.dev/) to run specific tests on installed browsers and return results, alerting you to failures in browsers as they crop up. Commercial cross-browser testing apps like [Sauce Labs](https://saucelabs.com/) and [BrowserStack](https://www.browserstack.com/) are based on Selenium, but allow you to access their set up remotely using a simple interface, saving you the hassle of setting up your own testing system.
 
 We will look at how to set up your own Selenium-based testing system in the next article. In this article, we'll look at how to set up a task runner, and use the basic functionality of commercial systems like the ones mentioned above.
 
-> **Note:** the above two categories are not mutually exclusive. It is possible to set up a task runner to access a service like Sauce Labs, or LambdaTest via an API, run cross browser tests, and return results. We will look at this below as well.
+> [!NOTE]
+> The above two categories are not mutually exclusive. It is possible to set up a task runner to access a service like Sauce Labs, or LambdaTest via an API, run cross browser tests, and return results. We will look at this below as well.
 
 ## Using a task runner to automate testing tools
 
@@ -70,7 +63,8 @@ Most tools these days are based on {{Glossary("Node.js")}}, so you'll need to in
    npm install npm@latest -g
    ```
 
-> **Note:** If the above command fails with permissions errors, [Fixing npm permissions](https://docs.npmjs.com/getting-started/fixing-npm-permissions/) should sort you out.
+> [!NOTE]
+> If the above command fails with permissions errors, [Fixing npm permissions](https://docs.npmjs.com/getting-started/fixing-npm-permissions/) should sort you out.
 
 To start using Node/npm-based packages on your projects, you need to set up your project directories as npm projects. This is easy to do.
 
@@ -115,7 +109,25 @@ With this, you are ready to move on.
 Let's look at setting up Gulp and using it to automate some testing tools.
 
 1. To begin with, create a test npm project using the procedure detailed at the bottom of the previous section.
-2. Next, you'll need some sample HTML, CSS and JavaScript content to test your system on — make copies of our sample [index.html](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/automation/index.html), [main.js](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/automation/main.js), and [style.css](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/automation/style.css) files in a subfolder with the name `src` inside your project folder. You can try your own test content if you like, but bear in mind that such tools won't work on internal JS/CSS — you need external files.
+   Also, update the `package.json` file with the line: `"type": "module"` so that it'll look something like this:
+
+   ```json
+   {
+     "name": "node-test",
+     "version": "1.0.0",
+     "description": "Test for npm projects",
+     "main": "index.js",
+     "scripts": {
+       "test": "test"
+     },
+     "author": "Chris Mills",
+     "license": "MIT",
+     "type": "module"
+   }
+   ```
+
+2. Next, you'll need some sample HTML, CSS and JavaScript content to test your system on — make copies of our sample [index.html](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/automation/index.html), [main.js](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/automation/main.js), and [style.css](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/automation/style.css) files in a subfolder with the name `src` inside your project folder.
+   You can try your own test content if you like, but bear in mind that such tools won't work on internal JS/CSS — you need external files.
 3. First, install gulp globally (meaning, it will be available across all projects) using the following command:
 
    ```bash
@@ -128,15 +140,15 @@ Let's look at setting up Gulp and using it to automate some testing tools.
    npm install --save-dev gulp
    ```
 
-5. Now create a new file inside your project directory called `gulpfile.js`. This is the file that will run all our tasks. Inside this file, put the following:
+5. Now create a new file inside your project directory called `gulpfile.mjs`. This is the file that will run all our tasks. Inside this file, put the following:
 
    ```js
-   const gulp = require("gulp");
+   import gulp from "gulp";
 
-   exports.default = function (cb) {
+   export default function (cb) {
      console.log("Gulp running");
      cb();
-   };
+   }
    ```
 
    This requires the `gulp` module we installed earlier, and then exports a default task that does nothing except for printing a message to the terminal — this is useful for letting us know that Gulp is working. Each gulp task is exported in the same basic format — `exports.taskName = taskFunction`. Each function takes one parameter — a callback to run when the task is completed.
@@ -172,13 +184,13 @@ To use each plugin, you need to first install it via npm, then require any depen
 2. Add the following dependency to `gulpfile.js`:
 
    ```js
-   const htmltidy = require("gulp-htmltidy");
+   import htmltidy from "gulp-htmltidy";
    ```
 
 3. Add the following test to the bottom of `gulpfile.js`:
 
    ```js
-   function html() {
+   export function html() {
      return gulp
        .src("src/index.html")
        .pipe(htmltidy())
@@ -186,16 +198,10 @@ To use each plugin, you need to first install it via npm, then require any depen
    }
    ```
 
-4. Export the html task using:
+4. Change the default export to:
 
    ```js
-   exports.html = html;
-   ```
-
-5. Change the default export to:
-
-   ```js
-   exports.default = html;
+   export default html;
    ```
 
 Here we are grabbing our development `index.html` file with `gulp.src()`, which allows us to grab a source file to do something with.
@@ -216,14 +222,14 @@ In the input version of the file, you may have noticed that we put an empty {{ht
 2. Add the following dependencies to `gulpfile.js`:
 
    ```js
-   const autoprefixer = require("gulp-autoprefixer");
-   const csslint = require("gulp-csslint");
+   import autoprefixer from "gulp-autoprefixer";
+   import csslint from "gulp-csslint";
    ```
 
 3. Add the following test to the bottom of `gulpfile.js`:
 
    ```js
-   function css() {
+   export function css() {
      return gulp
        .src("src/style.css")
        .pipe(csslint())
@@ -245,22 +251,10 @@ In the input version of the file, you may have noticed that we put an empty {{ht
    ]
    ```
 
-5. Add this line after the const definitions:
+5. Change the default task to:
 
    ```js
-   const { series } = require("gulp");
-   ```
-
-6. Export the css task using:
-
-   ```js
-   exports.css = css;
-   ```
-
-7. Change the default task to:
-
-   ```js
-   exports.default = series(html, css);
+   export default gulp.series(html, css);
    ```
 
 Here we grab our `style.css` file, run csslint on it (which outputs a list of any errors in your CSS to the terminal), then runs it through autoprefixer to add any prefixes needed to make nascent CSS features run in older browsers. At the end of the pipe chain, we output our modified prefixed CSS to the `build` directory. Note that this only works if csslint doesn't find any errors — try removing a curly brace from your CSS file and re-running gulp to see what output you get!
@@ -278,14 +272,14 @@ Here we grab our `style.css` file, run csslint on it (which outputs a list of an
 2. Add the following dependencies to `gulpfile.js`:
 
    ```js
-   const babel = require("gulp-babel");
-   const jshint = require("gulp-jshint");
+   import babel from "gulp-babel";
+   import jshint from "gulp-jshint";
    ```
 
 3. Add the following test to the bottom of `gulpfile.js`:
 
    ```js
-   function js() {
+   export function js() {
      return gulp
        .src("src/main.js")
        .pipe(jshint())
@@ -299,16 +293,10 @@ Here we grab our `style.css` file, run csslint on it (which outputs a list of an
    }
    ```
 
-4. Export the js task using:
+4. Change the default task to:
 
    ```js
-   exports.js = js;
-   ```
-
-5. Change the default task to:
-
-   ```js
-   exports.default = series(html, css, js);
+   export default gulp.series(html, css, js);
    ```
 
 Here we grab our `main.js` file, run `jshint` on it and output the results to the terminal using `jshint.reporter`; we then pass the file to babel, which converts it to old style syntax and outputs the result into the `build` directory. Our original code included a [fat arrow function](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions), which babel has modified into an old style function.
@@ -326,18 +314,17 @@ If you get errors, check that you've added all the dependencies and the tests as
 Gulp comes with a `watch()` function that you can use to watch your files and run tests whenever you save a file. For example, try adding the following to the bottom of your `gulpfile.js`:
 
 ```js
-function watch() {
+export function watch() {
   gulp.watch("src/*.html", html);
   gulp.watch("src/*.css", css);
   gulp.watch("src/*.js", js);
 }
-
-exports.watch = watch;
 ```
 
 Now try entering the `gulp watch` command into your terminal. Gulp will now watch your directory, and run the appropriate tasks whenever you save a change to an HTML, CSS, or JavaScript file.
 
-> **Note:** The `*` character is a wildcard character — here we're saying "run these tasks when any files of these types are saved. You could also use wildcards in your main tasks, for example `gulp.src('src/*.css')` would grab all your CSS files and then run piped tasks on them.
+> [!NOTE]
+> The `*` character is a wildcard character — here we're saying "run these tasks when any files of these types are saved. You could also use wildcards in your main tasks, for example `gulp.src('src/*.css')` would grab all your CSS files and then run piped tasks on them.
 
 There's a lot more you can do with Gulp. The [Gulp plugin directory](https://gulpjs.com/plugins/) has literally thousands of plugins to search through.
 
@@ -356,7 +343,8 @@ The basic premise with such applications is that the company that runs each one 
 
 You can then step up a gear, using an API to access functionality programmatically, which means that such apps can be combined with task runners, such as your own local Selenium environments and others, to create automated tests.
 
-> **Note:** There are other commercial browser testing systems available but in this article, we'll focus on LambdaTest, Sauce Labs, and BrowserStack. We're not saying that these are necessarily the best tools available, but they are good ones that are simple for beginners to get up and running with.
+> [!NOTE]
+> There are other commercial browser testing systems available but in this article, we'll focus on LambdaTest, Sauce Labs, and BrowserStack. We're not saying that these are necessarily the best tools available, but they are good ones that are simple for beginners to get up and running with.
 
 ### LambdaTest
 
@@ -365,7 +353,8 @@ You can then step up a gear, using an API to access functionality programmatical
 1. Let's get started by [signing up on LambdaTest](https://accounts.lambdatest.com/register) for free.
 2. Sign in. This should happen automatically after you verify your email address.
 
-> **Note:** Unlike other cloud-based cross browser testing service providers, LambdaTest offers a freemium account where you get lifetime access to their platform. The only difference between their premium and their freemium plan is on the amount of consumption. For automation testing through their Selenium Grid, LambdaTest offers 60 minutes per month of free testing.
+> [!NOTE]
+> Unlike other cloud-based cross browser testing service providers, LambdaTest offers a freemium account where you get lifetime access to their platform. The only difference between their premium and their freemium plan is on the amount of consumption. For automation testing through their Selenium Grid, LambdaTest offers 60 minutes per month of free testing.
 
 #### The basics: Manual tests
 
@@ -381,7 +370,8 @@ Once you sign in to LambdaTest, you will be routed to the LambdaTest Dashboard. 
 4. With the in-built image editor, highlight your screenshot before you push it to your colleagues.![Highlight a bug](mark-as-bug-3.png)
 5. Using the mark as bug button you can push bugs to numerous third-party tools such as Jira, Asana, Trello, and more. That way you can log a bug directly from your test session on LambdaTest to your project management instance. Check out all the [third-party LambdaTest integrations](https://www.lambdatest.com/integrations).
 
-> **Note:** All the videos and images captured inside a test session are captured inside the gallery, test logs, and issue tracker at LambdaTest.
+> [!NOTE]
+> All the videos and images captured inside a test session are captured inside the gallery, test logs, and issue tracker at LambdaTest.
 
 ### Sauce Labs
 
@@ -410,7 +400,8 @@ The [Sauce Labs dashboard](https://app.saucelabs.com/dashboard/manual) has a lot
 
 Once you stop the session, you'll return to the Manual Tests tab, where you'll see an entry for each of the previous manual sessions you started. Clicking on one of these entries shows more data for the session. In here you can download any screenshots you took, watch a video of the session, view data logs, and more.
 
-> **Note:** This is already very useful, and way more convenient than having to set up all these emulators and virtual machines by yourself.
+> [!NOTE]
+> This is already very useful, and way more convenient than having to set up all these emulators and virtual machines by yourself.
 
 #### Advanced: The Sauce Labs API
 
@@ -423,39 +414,32 @@ Let's have a brief look at how we'd access the API using Node.js and [node-sauce
 1. First, set up a new npm project to test this out, as detailed in [Setting up Node and npm](#setting_up_node_and_npm). Use a different directory name than before, like `sauce-test` for example.
 2. Install the Node Sauce Labs wrapper using the following command:
 
-   ```
+   ```bash
    npm install saucelabs
    ```
 
 3. Create a new file inside your project root called `call_sauce.js`. give it the following contents:
 
    ```js
-   const SauceLabs = require("saucelabs");
+   const SauceLabs = require("saucelabs").default;
 
-   let myAccount = new SauceLabs({
-     username: "your-sauce-username",
-     password: "your-sauce-api-key",
-   });
-
-   myAccount.getAccountDetails((err, res) => {
-     console.log(res);
-     myAccount.getServiceStatus((err, res) => {
-       // Status of the Sauce Labs services
-       console.log(res);
-       myAccount.getJobs((err, jobs) => {
-         // Get a list of all your jobs
-         for (const job of jobs) {
-           myAccount.showJob(job.id, (err, res) => {
-             let str = `${res.id}: Status: ${res.status}`;
-             if (res.error) {
-               str += `\x1b[31m Error: ${res.error}\x1b[0m`;
-             }
-             console.log(str);
-           });
-         }
-       });
+   (async () => {
+     const myAccount = new SauceLabs({
+       username: "your-sauce-username",
+       password: "your-sauce-api-key",
      });
-   });
+
+     // Get full WebDriver URL from the client depending on region:
+     console.log(myAccount.webdriverEndpoint);
+
+     // Get job details of last run job
+     const jobs = await myAccount.listJobs("your-sauce-username", {
+       limit: 1,
+       full: true,
+     });
+
+     console.log(jobs);
+   })();
    ```
 
 4. You'll need to fill in your Sauce Labs username and API key in the indicated places. These can be retrieved from your [User Settings](https://app.saucelabs.com/user-settings) page. Fill these in now.
@@ -490,7 +474,8 @@ Clicking on one of those browser icons will load up your choice of platform/devi
 
 ![Test Devices](browserstack-test-device-sized.png)
 
-> **Note:** The blue device icon next to some of the mobile device choices signals that you will be testing on a real device; choices without that icon will be run on an emulator.
+> [!NOTE]
+> The blue device icon next to some of the mobile device choices signals that you will be testing on a real device; choices without that icon will be run on an emulator.
 
 You'll find that you can enter URLs into the address bar, and use the other controls like you'd expect on a real device. You can even do things like copy and paste from the device to your clipboard, scroll up and down by dragging with the mouse, or use appropriate gestures (e.g. pinch/zoom, two fingers to scroll) on the touchpads of supporting devices (e.g. MacBook). Note that not all features are available on all devices.
 
@@ -512,7 +497,8 @@ The features here are as follows:
 - _Features_ — Shows you what features the current configuration supports, e.g. copy to clipboard, gesture support, etc.
 - _Stop_ — Ends the session.
 
-> **Note:** This is already very useful, and way more convenient than having to set up all these emulators and virtual machines by yourself.
+> [!NOTE]
+> This is already very useful, and way more convenient than having to set up all these emulators and virtual machines by yourself.
 
 #### Other basic features
 
@@ -558,7 +544,7 @@ Let's have a brief look at how we'd access the API using Node.js.
    getPlanDetails();
    ```
 
-3. You'll need to fill in your BrowserStack username and API key in the indicated places. These can be retrieved from your [BrowserStack automation dashboard](https://www.browserstack.com/automate). Fill these in now.
+3. You'll need to fill in your BrowserStack username and API key in the indicated places. These can be retrieved from your [BrowserStack Account & Profile Details](https://www.browserstack.com/accounts/profile/details), under the Authentication & Security section. Fill these in now.
 4. Make sure everything is saved, and run your file like so:
 
    ```bash
@@ -729,7 +715,7 @@ Below is an example on how to interact with the TestingBot API with the NodeJS c
 1. First, set up a new npm project to test this out, as detailed in [Setting up Node and npm](#setting_up_node_and_npm). Use a different directory name than before, like `tb-test` for example.
 2. Install the Node TestingBot wrapper using the following command:
 
-   ```
+   ```bash
    npm install testingbot-api
    ```
 

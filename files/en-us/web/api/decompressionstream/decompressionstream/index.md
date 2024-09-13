@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.DecompressionStream.DecompressionStream
 ---
 
-{{APIRef("Compression Streams API")}}
+{{APIRef("Compression Streams API")}}{{AvailableInWorkers}}
 
 The **`DecompressionStream()`** constructor creates a new {{domxref("DecompressionStream")}} object which decompresses a stream of data.
 
@@ -30,7 +30,7 @@ new DecompressionStream(format)
     - `"deflate-raw"`
       - : Decompress the stream using the [DEFLATE](https://www.rfc-editor.org/rfc/rfc1951) algorithm without a header and trailing checksum.
 
-## Exceptions
+### Exceptions
 
 - {{jsxref("TypeError")}}
   - : Thrown if the format passed to the constructor is not supported.

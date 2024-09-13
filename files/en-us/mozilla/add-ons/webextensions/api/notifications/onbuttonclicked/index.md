@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.notifications.onButtonClicked
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fired when the user clicks one of the notification's buttons.
 
@@ -45,4 +45,5 @@ Events have three functions:
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/notifications/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications) API.

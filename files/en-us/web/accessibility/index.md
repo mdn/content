@@ -4,9 +4,7 @@ slug: Web/Accessibility
 page-type: landing-page
 ---
 
-<section id="Quick_links">
-  {{ListSubpagesForSidebar("Web/Accessibility", 1)}}
-</section>
+{{AccessibilitySidebar}}
 
 **Accessibility** (often abbreviated to **A11y** — as in, "a", then 11 characters, and then "y") in web development means enabling as many people as possible to use websites, even when those people's abilities are limited in some way.
 

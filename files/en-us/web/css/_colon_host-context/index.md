@@ -13,7 +13,8 @@ In other words, this allows a custom element, or anything within that custom ele
 
 One typical use of this is with a descendant selector expression — for example `h1` — to select only instances of the custom element that are inside an `<h1>`. Another typical use would be to allow inner elements to react to classes or attributes on any ancestor elements - for example, applying a different text color when a `.dark-theme` class is applied to `<body>`.
 
-> **Note:** This has no effect when used outside a shadow DOM.
+> [!NOTE]
+> This has no effect when used outside a shadow DOM.
 
 {{EmbedInteractiveExample("pages/tabbed/pseudo-class-host-context.html", "tabbed-shorter")}}
 
@@ -73,7 +74,7 @@ style.textContent =
   ":host-context(h1) { font-style: italic; }" +
   ':host-context(h1):after { content: " - no links in headers!" }' +
   ":host(.footer) { color : red; }" +
-  ":host { background: rgba(0,0,0,0.1); padding: 2px 5px; }";
+  ":host { background: rgb(0 0 0 / 10%); padding: 2px 5px; }";
 ```
 
 The `:host-context(h1) { font-style: italic; }` and `:host-context(h1):after { content: " - no links in headers!" }` rules style the instance of the `<context-span>` element (the shadow host in this instance) inside the `<h1>`. We've used it to make it clear that the custom element shouldn't appear inside the `<h1>` in our design.
@@ -89,5 +90,9 @@ The `:host-context(h1) { font-style: italic; }` and `:host-context(h1):after { c
 ## See also
 
 - [Web components](/en-US/docs/Web/API/Web_components)
-- {{cssxref(":host")}}
-- {{cssxref(":host_function", ":host()")}}
+- CSS {{cssxref(":host")}} pseudo-class
+- CSS {{cssxref(":host_function", ":host()")}} pseudo-class
+- CSS {{cssxref(":state",":state()")}} pseudo-class
+- CSS {{CSSXref("::slotted")}} pseudo-element
+- HTML {{HTMLElement("template")}} element
+- [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module

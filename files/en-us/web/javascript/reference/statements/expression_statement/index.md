@@ -46,7 +46,7 @@ In order for an expression to be used as a statement, it must not be ambiguous w
 
 Therefore, all of the following are invalid:
 
-```js example-bad
+```js-nolint example-bad
 function foo() {
   console.log("foo");
 }(); // SyntaxError: Unexpected token '('
@@ -117,7 +117,8 @@ function range2(start, end) {
 }
 ```
 
-> **Warning:** This only demonstrates a capability of the language. Excessive use of expression statements as a substitute for control-flow statements can make code much less readable.
+> [!WARNING]
+> This only demonstrates a capability of the language. Excessive use of expression statements as a substitute for control-flow statements can make code much less readable.
 
 ## Specifications
 

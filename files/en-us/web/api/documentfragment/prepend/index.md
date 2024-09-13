@@ -9,8 +9,8 @@ browser-compat: api.DocumentFragment.prepend
 {{APIRef("DOM")}}
 
 The **`DocumentFragment.prepend()`** method
-inserts a set of {{domxref("Node")}} objects or string objects before
-the first child of the document fragment. String objects
+inserts a set of {{domxref("Node")}} objects or strings before
+the first child of the document fragment. Strings
 are inserted as equivalent {{domxref("Text")}} nodes.
 
 This method prepends a child to a `DocumentFragment`. To prepend to an arbitrary element in the tree, see {{domxref("Element.prepend()")}}.
@@ -20,13 +20,13 @@ This method prepends a child to a `DocumentFragment`. To prepend to an arbitrary
 ```js-nolint
 prepend(param1)
 prepend(param1, param2)
-prepend(param1, param2, /* … ,*/ paramN)
+prepend(param1, param2, /* …, */ paramN)
 ```
 
 ### Parameters
 
 - `param1`, …, `paramN`
-  - : A set of {{domxref("Node")}} or string objects to insert.
+  - : A set of {{domxref("Node")}} objects or strings to insert.
 
 ### Return value
 

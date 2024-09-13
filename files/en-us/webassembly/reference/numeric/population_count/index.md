@@ -1,6 +1,7 @@
 ---
 title: Population count
 slug: WebAssembly/Reference/Numeric/Population_count
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

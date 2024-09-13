@@ -8,7 +8,7 @@ browser-compat: api.RTCDataChannel.error_event
 
 {{APIRef("WebRTC")}}
 
-A WebRTC {{domxref("RTCDataChannel.error_event", "error")}} event is sent to an {{domxref("RTCDataChannel")}} object's `onerror` event handler when an error occurs on the data channel.
+A WebRTC `error` event is sent to an {{domxref("RTCDataChannel")}} object's `onerror` event handler when an error occurs on the data channel.
 
 The {{domxref("RTCErrorEvent")}} object provides details about the error that occurred; see that article for details.
 
@@ -114,11 +114,11 @@ dc.addEventListener(
 
 The received event provides details in an {{domxref("RTCError")}} object called {{domxref("RTCErrorEvent.error", "error")}}; `RTCError` is an extension of the {{domxref("DOMException")}} interface. The error's {{domxref("DOMException.name", "name")}} is `RTCError` and the {{domxref("DOMException.message", "message")}} is an error string specified by the WebRTC layer.
 
-Error information is output to the console using {{domxref("console.error()")}}. The `message` string is always output, as is information about the source file's name, line number, and column number at which the error occurred.
+Error information is output to the console using {{domxref("console/error_static", "console.error()")}}. The `message` string is always output, as is information about the source file's name, line number, and column number at which the error occurred.
 
 In addition, however, depending on the value of {{domxref("RTCError.errorDetail", "errorDetail")}}, additional information may be output. Each error type has a different set of information output. For example, an SDP syntax error displays the line number of the error within the SDP, and an SCTP error displays a message corresponding to the SCTP cause code. Other error types similarly output appropriate information.
 
-You can also set up an event handler for `error` events using the `RTCDataChannel` interface's {{domxref("RTCDataChannel.error_event", "onerror")}} event handler property:
+You can also set up an event handler for `error` events using the `RTCDataChannel` interface's `onerror` event handler property:
 
 ```js
 dc.onerror = (ev) => {
@@ -128,7 +128,8 @@ dc.onerror = (ev) => {
 };
 ```
 
-> **Note:** Since `RTCError` is not one of the legacy errors, the value of {{domxref("DOMException.code", "RTCError.code")}} is always 0.
+> [!NOTE]
+> Since `RTCError` is not one of the legacy errors, the value of {{domxref("DOMException.code", "RTCError.code")}} is always 0.
 
 ## Specifications
 

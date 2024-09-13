@@ -123,7 +123,7 @@ In an SVG document, the viewport is the visible area of the SVG image. You can s
 <svg height="300" width="400"></svg>
 ```
 
-In this example, the viewport has an aspect ratio of 3:4 and is, by default, 400 by 300 units, with a unit generally being a CSS pixel.
+In this example, the viewport has an {{glossary("aspect ratio")}} of 3:4 and is, by default, 400 by 300 units, with a unit generally being a CSS pixel.
 
 SVG also has an internal coordinate system defined via the [viewBox](/en-US/docs/Web/SVG/Attribute/viewBox) attribute, which is not related to this viewport discussion.
 

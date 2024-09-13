@@ -9,7 +9,7 @@ browser-compat: javascript.builtins.Date.toString
 
 The **`toString()`** method of {{jsxref("Date")}} instances returns a string representing this date interpreted in the local timezone.
 
-{{EmbedInteractiveExample("pages/js/date-tostring.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/date-tostring.html", "shorter")}}
 
 ## Syntax
 
@@ -17,13 +17,17 @@ The **`toString()`** method of {{jsxref("Date")}} instances returns a string rep
 toString()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A string representing the given date (see description for the format). Returns `"Invalid Date"` if the date is [invalid](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date).
 
 ## Description
 
-The `toString()` method is part of the [type coercion protocol](/en-US/docs/Web/JavaScript/Data_structures#type_coercion). Because `Date` has a [`[@@toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive) method, that method always takes priority over `toString()` when a `Date` object is implicitly [coerced to a string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion). However, `Date.prototype[@@toPrimitive]()` still calls `this.toString()` internally.
+The `toString()` method is part of the [type coercion protocol](/en-US/docs/Web/JavaScript/Data_structures#type_coercion). Because `Date` has a [`[Symbol.toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/Symbol.toPrimitive) method, that method always takes priority over `toString()` when a `Date` object is implicitly [coerced to a string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion). However, `Date.prototype[Symbol.toPrimitive]()` still calls `this.toString()` internally.
 
 The {{jsxref("Date")}} object overrides the {{jsxref("Object/toString", "toString()")}} method of {{jsxref("Object")}}. `Date.prototype.toString()` returns a string representation of the Date as interpreted in the local timezone, containing both the date and the time — it joins the string representation specified in {{jsxref("Date/toDateString", "toDateString()")}} and {{jsxref("Date/toTimeString", "toTimeString()")}} together, adding a space in between. For example: "Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)".
 
@@ -32,7 +36,7 @@ The {{jsxref("Date")}} object overrides the {{jsxref("Object/toString", "toStrin
 - If you only want to get the _date_ part, use {{jsxref("Date/toDateString", "toDateString()")}}.
 - If you only want to get the _time_ part, use {{jsxref("Date/toTimeString", "toTimeString()")}}.
 - If you want to make the date interpreted as UTC instead of local timezone, use {{jsxref("Date/toUTCString", "toUTCString()")}}.
-- If you want to format the date in a more user-friendly format (e.g. localization), use {{jsxref("Date/toUTCString", "toUTCString()")}}.
+- If you want to format the date in a more user-friendly format (e.g. localization), use {{jsxref("Date/toLocaleString", "toLocaleString()")}}.
 
 ## Examples
 

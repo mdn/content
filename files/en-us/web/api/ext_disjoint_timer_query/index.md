@@ -12,9 +12,10 @@ The **EXT_disjoint_timer_query** extension is part of the [WebGL API](/en-US/doc
 
 WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 
-> **Note:** This extension should be available in {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} contexts only. {{domxref("EXT_disjoint_timer_query_webgl2")}} is available in {{domxref("WebGL2RenderingContext", "WebGL 2", "", 1)}} contexts .
+> [!NOTE]
+> This extension should be available in {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} contexts only. {{domxref("EXT_disjoint_timer_query_webgl2")}} is available in {{domxref("WebGL2RenderingContext", "WebGL 2", "", 1)}} contexts.
 >
-> In WebGL 2, the {{domxref("getQueryObject")}} was renamed to {{domxref("getQueryParameter")}}.
+> In WebGL 2, the OpenGL method `getQueryObject()` is renamed to {{domxref("WebGL2RenderingContext.getQueryParameter")}}.
 > In WebGL 2, other queries (such as occlusion queries and primitive queries) are possible using {{domxref("WebGLQuery")}} objects.
 
 ## Types
@@ -48,11 +49,11 @@ This extension exposes seven new constants.
 This extension exposes eight new methods.
 
 - {{domxref("EXT_disjoint_timer_query.createQueryEXT()", "ext.createQueryEXT()")}}
-  - : Creates a new {{domxref("WebGLTimerQueryEXT")}}.
+  - : Creates a new {{domxref("WebGLQuery")}}.
 - {{domxref("EXT_disjoint_timer_query.deleteQueryEXT()", "ext.deleteQueryEXT()")}}
-  - : Deletes a given {{domxref("WebGLTimerQueryEXT")}}.
+  - : Deletes a given {{domxref("WebGLQuery")}}.
 - {{domxref("EXT_disjoint_timer_query.isQueryEXT()", "ext.isQueryEXT()")}}
-  - : Returns `true` if a given object is a valid {{domxref("WebGLTimerQueryEXT")}}.
+  - : Returns `true` if a given object is a valid {{domxref("WebGLQuery")}}.
 - {{domxref("EXT_disjoint_timer_query.beginQueryEXT()", "ext.beginQueryEXT()")}}
   - : The timer starts when all commands prior to `beginQueryEXT` have been fully executed.
 - {{domxref("EXT_disjoint_timer_query.endQueryEXT()", "ext.endQueryEXT()")}}

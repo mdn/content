@@ -14,5 +14,6 @@ Many programming commands are also synchronous — for example when you type in 
 
 ## See also
 
-- {{glossary("Asynchronous")}}
-- [Synchronous and asynchronous requests](/en-US/docs/Web/API/XMLHttpRequest/Synchronous_and_Asynchronous_Requests) using the [XMLHttpRequest()](/en-US/docs/Web/API/XMLHttpRequest) {{glossary("API")}}
+- Related glossary terms:
+  - {{glossary("Asynchronous")}}
+- [Asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous)

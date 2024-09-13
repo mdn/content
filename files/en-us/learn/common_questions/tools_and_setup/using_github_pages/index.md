@@ -15,8 +15,8 @@ GitHub is a very important and useful community to get involved in, and Git/GitH
 ### Basic GitHub setup
 
 1. First of all, [install Git](https://git-scm.com/downloads) on your machine. This is the underlying version control system software that GitHub works on top of.
-2. Next, [sign up for a GitHub account](https://github.com/join). It's simple and easy.
-3. Once you've signed up, log in to [github.com](https://github.com) with your username and password.
+2. Next, [sign up for a GitHub account](https://github.com/signup). It's simple and easy.
+3. Once you've signed up, log in to [github.com](https://github.com/) with your username and password.
 
 ### Preparing your code for upload
 
@@ -42,12 +42,13 @@ The best way to upload your code to GitHub is via the command line — this is a
 
 ![Terminal/command prompt opened. No command has been entered.](command-line.png)
 
-> **Note:** You could also consider using a [Git graphical user interface](https://git-scm.com/downloads/guis) to do the same work, if you feel uncomfortable with the command line.
+> [!NOTE]
+> You could also consider using a [Git graphical user interface](https://git-scm.com/downloads/guis) to do the same work, if you feel uncomfortable with the command line.
 
 Every operating system comes with a command line tool:
 
 - **Windows**: **Command Prompt** can be accessed by pressing the Windows key, typing _Command Prompt_, and choosing it from the list that appears. Note that Windows has its own command conventions differing from Linux and macOS, so the commands below may vary on your machine.
-- **OS X**: **Terminal** can be found in _Applications > Utilities_.
+- **macOS**: **Terminal** can be found in _Applications > Utilities_.
 - **Linux**: Usually you can pull up a terminal with _Ctrl + Alt + T_. If that doesn't work, look for **Terminal** in an app bar or menu.
 
 This may seem a bit scary at first, but don't worry — you'll soon get the hang of the basics. You tell the computer to do something in the terminal by typing in a command and hitting Enter, as seen above.

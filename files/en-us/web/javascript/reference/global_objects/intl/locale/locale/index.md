@@ -37,11 +37,11 @@ new Intl.Locale(tag, options)
     - `collation`
       - : The collation. Any syntactically valid string following the `type` grammar is accepted, but the implementation only recognizes certain kinds, which are listed in [`Intl.Locale.prototype.getCollations`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getCollations#supported_collation_types).
     - `numberingSystem`
-      - : The numbering system. Any syntactically valid string following the `type` grammar is accepted, but the implementation only recognizes certain kinds, which are listed in [`Intl.Locale.prototype.getNumberingSystems`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getNumberingSystems#supported_numbering_systems).
+      - : The numbering system. Any syntactically valid string following the `type` grammar is accepted, but the implementation only recognizes certain kinds, which are listed in [`Intl.Locale.prototype.getNumberingSystems`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getNumberingSystems#supported_numbering_system_types).
     - `caseFirst`
       - : The case-first sort option. Possible values are `"upper"`, `"lower"`, or `"false"`.
     - `hourCycle`
-      - : The hour cycle. Possible values are `"h11"`, `"h12"`, `"h23"`, or `"h24"`.
+      - : The hour cycle. Possible values are `"h23"`, `"h12"`, `"h11"`, or the practically unused `"h24"`, which are explained in [`Intl.Locale.prototype.getHourCycles`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/getHourCycles#supported_hour_cycle_types)
     - `numeric`
       - : The numeric sort option. A boolean.
 
@@ -49,7 +49,7 @@ new Intl.Locale(tag, options)
 
 ### Basic usage
 
-At its very simplest, the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor takes
+At its very simplest, the `Intl.Locale()` constructor takes
 a locale identifier string as its argument:
 
 ```js
@@ -79,6 +79,6 @@ console.log(locale.hourCycle); // "h12"
 
 ## See also
 
+- [Polyfill of `Intl.Locale` in FormatJS](https://formatjs.io/docs/polyfills/intl-locale/)
 - {{jsxref("Intl.Collator")}}
-- [Unicode locale identifiers spec](https://www.unicode.org/reports/tr35/#Canonical_Unicode_Locale_Identifiers)
-- [A polyfill of `Intl.Locale` in FormatJS](https://formatjs.io/docs/polyfills/intl-locale/)
+- [Canonical Unicode Locale Identifiers](https://www.unicode.org/reports/tr35/#Canonical_Unicode_Locale_Identifiers) in the Unicode locale data markup language spec

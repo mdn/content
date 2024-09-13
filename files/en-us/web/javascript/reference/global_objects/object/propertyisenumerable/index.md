@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Object.propertyIsEnumerable
 
 {{JSRef}}
 
-The **`propertyIsEnumerable()`** method returns a boolean indicating whether the specified property is the object's [enumerable own](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) property.
+The **`propertyIsEnumerable()`** method of {{jsxref("Object")}} instances returns a boolean indicating whether the specified property is this object's [enumerable own](/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) property.
 
 {{EmbedInteractiveExample("pages/js/object-prototype-propertyisenumerable.html", "taller")}}
 

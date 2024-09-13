@@ -7,23 +7,23 @@ browser-compat: javascript.builtins.Array.concat
 
 {{JSRef}}
 
-The **`concat()`** method is used to merge two or more arrays.
+The **`concat()`** method of {{jsxref("Array")}} instances is used to merge two or more arrays.
 This method does not change the existing arrays, but instead returns a new array.
 
-{{EmbedInteractiveExample("pages/js/array-concat.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/array-concat.html", "shorter")}}
 
 ## Syntax
 
 ```js-nolint
 concat()
-concat(value0)
-concat(value0, value1)
-concat(value0, value1, /* … ,*/ valueN)
+concat(value1)
+concat(value1, value2)
+concat(value1, value2, /* …, */ valueN)
 ```
 
 ### Parameters
 
-- `valueN` {{optional_inline}}
+- `value1`, …, `valueN` {{optional_inline}}
   - : Arrays and/or values to concatenate into a new array. If all
     `valueN` parameters are omitted, `concat` returns a
     [shallow copy](/en-US/docs/Glossary/Shallow_copy) of the existing array on which it is called. See the description below
@@ -41,7 +41,7 @@ The `concat()` method is a [copying method](/en-US/docs/Web/JavaScript/Reference
 
 The `concat()` method preserves empty slots if any of the source arrays is [sparse](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays).
 
-The `concat()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). The `this` value is treated in the same way as the other arguments (except it will be converted to an object first), which means plain objects will be directly prepended to the resulting array, while array-like objects with truthy `@@isConcatSpreadable` will be spread into the resulting array.
+The `concat()` method is [generic](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). The `this` value is treated in the same way as the other arguments (except it will be converted to an object first), which means plain objects will be directly prepended to the resulting array, while array-like objects with truthy `[Symbol.isConcatSpreadable]` will be spread into the resulting array.
 
 ## Examples
 
@@ -154,7 +154,7 @@ console.log(Array.prototype.concat.call(arrayLike, 3, 4)); // [1, 2, 3, 4]
 ## See also
 
 - [Polyfill of `Array.prototype.concat` in `core-js` with fixes and implementation of modern behavior like `Symbol.isConcatSpreadable` support](https://github.com/zloirock/core-js#ecmascript-array)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.push()")}}
 - {{jsxref("Array.prototype.unshift()")}}

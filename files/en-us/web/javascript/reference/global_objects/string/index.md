@@ -13,12 +13,11 @@ sequence of characters.
 ## Description
 
 Strings are useful for holding data that can be represented in text form. Some of the
-most-used operations on strings are to check their {{jsxref("String/length",
-  "length")}}, to build and concatenate them using the
-[+ and += string operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#string_operators),
+most-used operations on strings are to check their {{jsxref("String/length", "length")}}, to build and concatenate them using the
+[`+` and `+=` string operators](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators#string_operators),
 checking for the existence or location of substrings with the
-{{jsxref("String.prototype.indexOf()", "indexOf()")}} method, or extracting substrings
-with the {{jsxref("String.prototype.substring()", "substring()")}} method.
+{{jsxref("String/indexOf", "indexOf()")}} method, or extracting substrings
+with the {{jsxref("String/substring", "substring()")}} method.
 
 ### Creating strings
 
@@ -45,7 +44,7 @@ with this form you can interpolate expressions. For more information on the synt
 ### Character access
 
 There are two ways to access an individual character in a string. The first is the
-{{jsxref("String.prototype.charAt()", "charAt()")}} method:
+{{jsxref("String/charAt", "charAt()")}} method:
 
 ```js
 "cat".charAt(1); // gives value "a"
@@ -114,7 +113,7 @@ The `localeCompare()` method enables string comparison in a similar fashion as `
 
 Note that JavaScript distinguishes between `String` objects and
 {{Glossary("Primitive", "primitive string")}} values. (The same is true of
-{{jsxref("Boolean")}} and {{jsxref("Global_Objects/Number", "Numbers")}}.)
+{{jsxref("Boolean")}} and {{jsxref("Number", "Numbers")}}.)
 
 String literals (denoted by double or single quotes) and strings returned from
 `String` calls in a non-constructor context (that is, called without using
@@ -135,7 +134,8 @@ console.log(typeof strPrim3); // "string"
 console.log(typeof strObj); // "object"
 ```
 
-> **Warning:** You should rarely find yourself using `String` as a constructor.
+> [!WARNING]
+> You should rarely find yourself using `String` as a constructor.
 
 String primitives and `String` objects also give different results when
 using {{jsxref("Global_Objects/eval", "eval()")}}. Primitives passed to
@@ -154,7 +154,7 @@ when it expects a primitive string instead, although generally, authors need not
 about the distinction.
 
 A `String` object can always be converted to its primitive counterpart with
-the {{jsxref("String.prototype.valueOf()", "valueOf()")}} method.
+the {{jsxref("String/valueOf", "valueOf()")}} method.
 
 ```js
 console.log(eval(s2.valueOf())); // returns the number 4
@@ -171,7 +171,7 @@ Many built-in operations that expect strings first coerce their arguments to str
 - Numbers are converted with the same algorithm as [`toString(10)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString).
 - [BigInts](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) are converted with the same algorithm as [`toString(10)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toString).
 - [Symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) throw a {{jsxref("TypeError")}}.
-- Objects are first [converted to a primitive](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion) by calling its [`[@@toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (with `"string"` as hint), `toString()`, and `valueOf()` methods, in that order. The resulting primitive is then converted to a string.
+- Objects are first [converted to a primitive](/en-US/docs/Web/JavaScript/Data_structures#primitive_coercion) by calling its [`[Symbol.toPrimitive]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) (with `"string"` as hint), `toString()`, and `valueOf()` methods, in that order. The resulting primitive is then converted to a string.
 
 There are several ways to achieve nearly the same effect in JavaScript.
 
@@ -185,18 +185,18 @@ Depending on your use case, you may want to use `` `${x}` `` (to mimic built-in 
 
 Strings are represented fundamentally as sequences of [UTF-16 code units](https://en.wikipedia.org/wiki/UTF-16). In UTF-16 encoding, every code unit is exact 16 bits long. This means there are a maximum of 2<sup>16</sup>, or 65536 possible characters representable as single UTF-16 code units. This character set is called the [basic multilingual plane (BMP)](<https://en.wikipedia.org/wiki/Plane_(Unicode)#Basic_Multilingual_Plane>), and includes the most common characters like the Latin, Greek, Cyrillic alphabets, as well as many East Asian characters. Each code unit can be written in a string with `\u` followed by exactly four hex digits.
 
-However, the entire Unicode character set is much, much bigger than 65536. The extra characters are stored in UTF-16 as _surrogate pairs_, which are pairs of 16-bit code units that represent a single character. To avoid ambiguity, the two parts of the pair must be between `0xD800` and `0xDFFF`, and these code units are not used to encode single-code-unit characters. (More precisely, high surrogates have values between `0xD800` and `0xDBFF`, inclusive, while low surrogates have values between `0xDC00` and `0xDFFF`, inclusive.) Each Unicode character, comprised of one or two UTF-16 code units, is also called a _Unicode code point_. Each Unicode code point can be written in a string with `\u{xxxxxx}` where `xxxxxx` represents 1–6 hex digits.
+However, the entire Unicode character set is much, much bigger than 65536. The extra characters are stored in UTF-16 as _surrogate pairs_, which are pairs of 16-bit code units that represent a single character. To avoid ambiguity, the two parts of the pair must be between `0xD800` and `0xDFFF`, and these code units are not used to encode single-code-unit characters. (More precisely, leading surrogates, also called high-surrogate code units, have values between `0xD800` and `0xDBFF`, inclusive, while trailing surrogates, also called low-surrogate code units, have values between `0xDC00` and `0xDFFF`, inclusive.) Each Unicode character, comprised of one or two UTF-16 code units, is also called a _Unicode code point_. Each Unicode code point can be written in a string with `\u{xxxxxx}` where `xxxxxx` represents 1–6 hex digits.
 
 A "lone surrogate" is a 16-bit code unit satisfying one of the descriptions below:
 
-- It is in the range `0xD800`–`0xDBFF`, inclusive (i.e. is a high surrogate), but it is the last code unit in the string, or the next code unit is not a low surrogate.
-- It is in the range `0xDC00`–`0xDFFF`, inclusive (i.e. is a low surrogate), but it is the first code unit in the string, or the previous code unit is not a high surrogate.
+- It is in the range `0xD800`–`0xDBFF`, inclusive (i.e. is a leading surrogate), but it is the last code unit in the string, or the next code unit is not a trailing surrogate.
+- It is in the range `0xDC00`–`0xDFFF`, inclusive (i.e. is a trailing surrogate), but it is the first code unit in the string, or the previous code unit is not a leading surrogate.
 
 Lone surrogates do not represent any Unicode character. Although most JavaScript built-in methods handle them correctly because they all work based on UTF-16 code units, lone surrogates are often not valid values when interacting with other systems — for example, [`encodeURI()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI) will throw a {{jsxref("URIError")}} for lone surrogates, because URI encoding uses UTF-8 encoding, which does not have any encoding for lone surrogates. Strings not containing any lone surrogates are called _well-formed_ strings, and are safe to be used with functions that do not deal with UTF-16 (such as `encodeURI()` or {{domxref("TextEncoder")}}). You can check if a string is well-formed with the {{jsxref("String/isWellFormed", "isWellFormed()")}} method, or sanitize lone surrogates with the {{jsxref("String/toWellFormed", "toWellFormed()")}} method.
 
 On top of Unicode characters, there are certain sequences of Unicode characters that should be treated as one visual unit, known as a _grapheme cluster_. The most common case is emojis: many emojis that have a range of variations are actually formed by multiple emojis, usually joined by the \<ZWJ> (`U+200D`) character.
 
-You must be careful which level of characters you are iterating on. For example, [`split("")`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) will split by UTF-16 code units and will separate surrogate pairs. String indexes also refer to the index of each UTF-16 code unit. On the other hand, [`@@iterator()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator) iterates by Unicode code points. Iterating through grapheme clusters will require some custom code.
+You must be careful which level of characters you are iterating on. For example, [`split("")`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) will split by UTF-16 code units and will separate surrogate pairs. String indexes also refer to the index of each UTF-16 code unit. On the other hand, [`[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator) iterates by Unicode code points. Iterating through grapheme clusters will require some custom code.
 
 ```js
 "😄".split(""); // ['\ud83d', '\ude04']; splits into two lone surrogates
@@ -219,8 +219,7 @@ You must be careful which level of characters you are iterating on. For example,
 ## Constructor
 
 - {{jsxref("String/String", "String()")}}
-  - : Creates a new `String` object. It performs type conversion when called as
-    a function, rather than as a constructor, which is usually more useful.
+  - : Creates `String` objects. When called as a function, it returns primitive values of type String.
 
 ## Static methods
 
@@ -264,12 +263,12 @@ These properties are own properties of each `String` instance.
 - {{jsxref("String.prototype.includes()")}}
   - : Determines whether the calling string contains `searchString`.
 - {{jsxref("String.prototype.indexOf()")}}
-  - : Returns the index within the calling {{jsxref("String")}} object of the first
+  - : Returns the index within this string of the first
     occurrence of `searchValue`, or `-1` if not found.
 - {{jsxref("String.prototype.isWellFormed()")}}
   - : Returns a boolean indicating whether this string contains any [lone surrogates](#utf-16_characters_unicode_code_points_and_grapheme_clusters).
 - {{jsxref("String.prototype.lastIndexOf()")}}
-  - : Returns the index within the calling {{jsxref("String")}} object of the last
+  - : Returns the index within this string of the last
     occurrence of `searchValue`, or `-1` if not found.
 - {{jsxref("String.prototype.localeCompare()")}}
   - : Returns a number indicating whether the reference string
@@ -311,7 +310,7 @@ These properties are own properties of each `String` instance.
 - {{jsxref("String.prototype.startsWith()")}}
   - : Determines whether the calling string begins with the characters of string
     `searchString`.
-- {{jsxref("String.prototype.substr()")}} {{Deprecated_Inline}}
+- {{jsxref("String.prototype.substr()")}} {{deprecated_inline}}
   - : Returns a portion of the string, starting at the specified index and extending for a given number of characters afterwards.
 - {{jsxref("String.prototype.substring()")}}
   - : Returns a new string containing characters of the calling string from (or between)
@@ -322,7 +321,7 @@ These properties are own properties of each `String` instance.
     current locale.
 
     For most languages, this will return the same as
-    {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}}.
+    {{jsxref("String/toLowerCase", "toLowerCase()")}}.
 
 - {{jsxref("String.prototype.toLocaleUpperCase()")}}
 
@@ -330,7 +329,7 @@ These properties are own properties of each `String` instance.
     current locale.
 
     For most languages, this will return the same as
-    {{jsxref("String.prototype.toUpperCase()", "toUpperCase()")}}.
+    {{jsxref("String/toUpperCase", "toUpperCase()")}}.
 
 - {{jsxref("String.prototype.toLowerCase()")}}
   - : Returns the calling string value converted to lowercase.
@@ -350,41 +349,42 @@ These properties are own properties of each `String` instance.
 - {{jsxref("String.prototype.valueOf()")}}
   - : Returns the primitive value of the specified object. Overrides the
     {{jsxref("Object.prototype.valueOf()")}} method.
-- [`String.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator)
+- [`String.prototype[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator)
   - : Returns a new iterator object that iterates over the code points of a String value,
     returning each code point as a String value.
 
 ### HTML wrapper methods
 
-> **Warning:** Deprecated. Avoid these methods.
+> [!WARNING]
+> Deprecated. Avoid these methods.
 >
 > They are of limited use, as they are based on a very old HTML standard and provide only a subset of the currently available HTML tags and attributes. Many of them create deprecated or non-standard markup today. In addition, they do simple string concatenation without any validation or sanitation, which makes them a potential security threat when directly inserted using [`innerHTML`](/en-US/docs/Web/API/Element/innerHTML). Use [DOM APIs](/en-US/docs/Web/API/Document_Object_Model) such as [`document.createElement()`](/en-US/docs/Web/API/Document/createElement) instead.
 
-- {{jsxref("String.prototype.anchor()")}} {{Deprecated_Inline}}
+- {{jsxref("String.prototype.anchor()")}} {{deprecated_inline}}
   - : [`<a name="name">`](/en-US/docs/Web/HTML/Element/a#name) (hypertext target)
-- {{jsxref("String.prototype.big()")}} {{Deprecated_Inline}}
+- {{jsxref("String.prototype.big()")}} {{deprecated_inline}}
   - : {{HTMLElement("big")}}
-- {{jsxref("String.prototype.blink()")}} {{Deprecated_Inline}}
+- {{jsxref("String.prototype.blink()")}} {{deprecated_inline}}
   - : `<blink>`
-- {{jsxref("String.prototype.bold()")}} {{Deprecated_Inline}}
+- {{jsxref("String.prototype.bold()")}} {{deprecated_inline}}
   - : {{HTMLElement("b")}}
-- {{jsxref("String.prototype.fixed()")}} {{Deprecated_Inline}}
+- {{jsxref("String.prototype.fixed()")}} {{deprecated_inline}}
   - : {{HTMLElement("tt")}}
-- {{jsxref("String.prototype.fontcolor()")}} {{Deprecated_Inline}}
+- {{jsxref("String.prototype.fontcolor()")}} {{deprecated_inline}}
   - : [`<font color="color">`](/en-US/docs/Web/HTML/Element/font#color)
-- {{jsxref("String.prototype.fontsize()")}} {{Deprecated_Inline}}
+- {{jsxref("String.prototype.fontsize()")}} {{deprecated_inline}}
   - : [`<font size="size">`](/en-US/docs/Web/HTML/Element/font#size)
-- {{jsxref("String.prototype.italics()")}} {{Deprecated_Inline}}
+- {{jsxref("String.prototype.italics()")}} {{deprecated_inline}}
   - : {{HTMLElement("i")}}
-- {{jsxref("String.prototype.link()")}} {{Deprecated_Inline}}
+- {{jsxref("String.prototype.link()")}} {{deprecated_inline}}
   - : [`<a href="url">`](/en-US/docs/Web/HTML/Element/a#href) (link to URL)
-- {{jsxref("String.prototype.small()")}} {{Deprecated_Inline}}
+- {{jsxref("String.prototype.small()")}} {{deprecated_inline}}
   - : {{HTMLElement("small")}}
-- {{jsxref("String.prototype.strike()")}} {{Deprecated_Inline}}
+- {{jsxref("String.prototype.strike()")}} {{deprecated_inline}}
   - : {{HTMLElement("strike")}}
-- {{jsxref("String.prototype.sub()")}} {{Deprecated_Inline}}
+- {{jsxref("String.prototype.sub()")}} {{deprecated_inline}}
   - : {{HTMLElement("sub")}}
-- {{jsxref("String.prototype.sup()")}} {{Deprecated_Inline}}
+- {{jsxref("String.prototype.sup()")}} {{deprecated_inline}}
   - : {{HTMLElement("sup")}}
 
 Note that these methods do not check if the string itself contains HTML tags, so it's possible to create invalid HTML:
@@ -403,17 +403,17 @@ The only escaping they do is to replace `"` in the attribute value (for {{jsxref
 
 ### String conversion
 
-It's possible to use `String` as a more reliable
-{{jsxref("String.prototype.toString()", "toString()")}} alternative, as it works when
-used on [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) and {{jsxref("undefined")}}. For example:
+The `String()` function is a more reliable way of converting values to strings than calling the `toString()` method of the value, as the former works when used on [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) and {{jsxref("undefined")}}. For example:
 
 ```js
+// You cannot access properties on null or undefined
+
 const nullVar = null;
-nullVar.toString(); // TypeError: nullVar is null
+nullVar.toString(); // TypeError: Cannot read properties of null
 String(nullVar); // "null"
 
 const undefinedVar = undefined;
-undefinedVar.toString(); // TypeError: undefinedVar is undefined
+undefinedVar.toString(); // TypeError: Cannot read properties of undefined
 String(undefinedVar); // "undefined"
 ```
 
@@ -427,5 +427,5 @@ String(undefinedVar); // "undefined"
 
 ## See also
 
-- [Text formatting in the JavaScript Guide](/en-US/docs/Web/JavaScript/Guide/Text_formatting)
+- [Text formatting](/en-US/docs/Web/JavaScript/Guide/Text_formatting) guide
 - {{jsxref("RegExp")}}

@@ -19,7 +19,7 @@ The following image shows the effect that the {{htmlelement("meta")}} element ab
 
 ![Image showing the effect of using theme-color](theme-color.png)
 
-_Image credit: from [Icons & Browser Colors](https://web.dev/icons-and-browser-colors/), created and shared by Google and used according to terms described in the [Creative Commons 4.0 Attribution License](https://creativecommons.org/licenses/by/4.0/)._
+_Image credit: from [Icons & Browser Colors](https://web.dev/articles/icons-and-browser-colors), created and shared by Google and used according to terms described in the [Creative Commons 4.0 Attribution License](https://creativecommons.org/licenses/by/4.0/)._
 
 You can provide a media type or query inside the [`media`](/en-US/docs/Web/HTML/Element/meta#media) attribute; the color will then only be set if the media condition is true. For example:
 

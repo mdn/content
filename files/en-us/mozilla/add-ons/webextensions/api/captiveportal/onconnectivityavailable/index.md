@@ -5,7 +5,7 @@ page-type: webextension-api-event
 browser-compat: webextensions.api.captivePortal.onConnectivityAvailable
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Fires when the captive portal service determines that the user can connect to the internet.
 

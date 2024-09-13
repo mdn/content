@@ -55,8 +55,8 @@ playback to begin:
 - Listen for the {{domxref("HTMLMediaElement.canplay_event", "canplay")}} event. It
   is sent to the `<audio>` element when there's enough audio
   available to begin playback, although interruptions may occur.
-- Listen for the {{domxref("HTMLMediaElement.canplaythrough_event",
-  "canplaythrough")}} event. It is sent when it's estimated that the audio should be
+- Listen for the {{domxref("HTMLMediaElement.canplaythrough_event", "canplaythrough")}} event.
+  It is sent when it's estimated that the audio should be
   able to play to the end without interruption.
 
 The event-based approach is best:
@@ -74,8 +74,7 @@ If all references to an audio element created using
 the `Audio()` constructor are deleted, the element itself won't be removed
 from memory by the JavaScript runtime's garbage collection mechanism if playback is
 currently underway. Instead, the audio will keep playing and the object will remain in
-memory until playback ends or is paused (such as by calling
-{{domxref("HTMLMediaElement.pause", "pause()")}}). At that time, the object becomes
+memory until playback ends. At that time, the object becomes
 subject to garbage collection.
 
 ## Specifications

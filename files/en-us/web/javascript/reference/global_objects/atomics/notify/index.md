@@ -10,7 +10,8 @@ browser-compat: javascript.builtins.Atomics.notify
 The **`Atomics.notify()`** static
 method notifies up some agents that are sleeping in the wait queue.
 
-> **Note:** This operation only works with an {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}} that views a {{jsxref("SharedArrayBuffer")}}.
+> [!NOTE]
+> This operation only works with an {{jsxref("Int32Array")}} or {{jsxref("BigInt64Array")}} that views a {{jsxref("SharedArrayBuffer")}}.
 > It will return `0` on non-shared `ArrayBuffer` objects.
 
 ## Syntax
@@ -26,8 +27,7 @@ Atomics.notify(typedArray, index, count)
 - `index`
   - : The position in the `typedArray` to wake up on.
 - `count` {{optional_inline}}
-  - : The number of sleeping agents to notify. Defaults to {{jsxref("Infinity",
-    "+Infinity")}}.
+  - : The number of sleeping agents to notify. Defaults to {{jsxref("Infinity")}}.
 
 ### Return value
 

@@ -5,13 +5,13 @@ page-type: web-api-interface
 browser-compat: api.VideoColorSpace
 ---
 
-{{APIRef("WebCodecs API")}}
+{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`VideoColorSpace`** interface of the {{domxref('WebCodecs API','','',' ')}} represents the color space of a video.
 
 ## Constructor
 
-- {{domxref("VideoColorSpace.VideoColorSpace", "VideoColorSpace()")}} {{Experimental_Inline}}
+- {{domxref("VideoColorSpace.VideoColorSpace", "VideoColorSpace()")}}
   - : Creates a new `VideoColorSpace` object.
 
 ## Instance properties

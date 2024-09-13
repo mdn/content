@@ -21,7 +21,7 @@ str:tokenize(string, delimiters)
 - `delimiters`
   - : Each character in this string is used as a word separator while tokenizing.
 
-### Returns
+### Return value
 
 A node-set of `token` elements, each containing one token from the `string`.
 

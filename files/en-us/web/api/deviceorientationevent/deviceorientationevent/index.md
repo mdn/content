@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.DeviceOrientationEvent.DeviceOrientationEvent
 ---
 
-{{APIRef("Device Orientation Events")}}
+{{APIRef("Device Orientation Events")}}{{securecontext_header}}
 
 The **`DeviceOrientationEvent()`** constructor creates a new {{domxref("DeviceOrientationEvent")}} object.
 
@@ -43,7 +43,7 @@ new DeviceOrientationEvent(type, options)
       - : A boolean value that indicates whether or not the device is providing orientation data absolutely.
         It defaults to `false`.
 
-## Return value
+### Return value
 
 A new {{domxref("DeviceOrientationEvent")}} object.
 

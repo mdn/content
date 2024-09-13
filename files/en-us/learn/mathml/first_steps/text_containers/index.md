@@ -13,10 +13,9 @@ Now that you get a better idea of MathML, we move focus on text containers (vari
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy,
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >basic software installed</a
+          >Basic software installed</a
         >, basic knowledge of
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
@@ -140,7 +139,7 @@ tokenElements.forEach((token) => {
 });
 document.getElementById("clearOutput").addEventListener("click", () => {
   clearHighlight();
-  outputDiv.innerHTML = "";
+  outputDiv.textContent = "";
 });
 ```
 
@@ -168,7 +167,8 @@ Finally, read the MathML source to verify whether that corresponds to your expec
 </math>
 ```
 
-> **Note:** It is sometimes difficult to decide the token element to use for a given text content. In practice, choosing the wrong element should not cause major issues because all token elements are generally rendered the same by browser implementations (for visual display and for assistive technologies). However, the `<mi>` and `<mo>` elements have special distinguishing features that one should be aware of. They are explained in the following sections.
+> [!NOTE]
+> It is sometimes difficult to decide the token element to use for a given text content. In practice, choosing the wrong element should not cause major issues because all token elements are generally rendered the same by browser implementations (for visual display and for assistive technologies). However, the `<mi>` and `<mo>` elements have special distinguishing features that one should be aware of. They are explained in the following sections.
 
 ## Automatic italicization of \<mi>
 
@@ -181,9 +181,14 @@ One typographic convention in mathematics is to use italic letters for variables
 </math>
 ```
 
+{{ EmbedLiveSample('Automatic italicization of <mi>', 700, 50) }}
+
 > **Note:** [This table from MathML Core](https://w3c.github.io/mathml-core/#italic-mappings) provide the exhaustive list of characters that are subject to italicization, together with the corresponding italic characters.
 
-It is sometimes needed to revert this default italic transformation. For that purpose, just attach a `mathvariant="normal"` attribute on the `<mi>` element. Compare the rendering of the uppercase gamma letters in the following formula:
+## Reverting automatic italicization of \<mi>
+
+In order to revert this default italic transformation you can attach a `mathvariant="normal"` attribute on the `<mi>` element.
+Compare the rendering of the uppercase gamma letters in the following formula:
 
 ```html
 <math>
@@ -192,7 +197,10 @@ It is sometimes needed to revert this default italic transformation. For that pu
 </math>
 ```
 
-> **Note:** Although the [`mathvariant`](/en-US/docs/Web/MathML/Global_attributes/mathvariant) provides other values to perform such transformations, it is recommended to just pick the desired [Mathematical Alphanumeric Symbols](https://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols) when possible.
+{{ EmbedLiveSample('Reverting automatic italicization of <mi>', 700, 50) }}
+
+> [!NOTE]
+> Although you can apply this transformation, normally you'd just use the desired [Mathematical Alphanumeric Symbols](https://en.wikipedia.org/wiki/Mathematical_Alphanumeric_Symbols).
 
 ## Operator properties of \<mo>
 
@@ -311,7 +319,8 @@ document.getElementById("showSolution").addEventListener(
 
 {{ EmbedLiveSample('active_learning_spot_the_difference', 700, 500, "", "") }}
 
-> **Note:** An obvious difference is that the source code became much more verbose with MathML. Recall that this tutorial is about learning the language but in practice MathML content is generally not written manually. See the [Authoring MathML](/en-US/docs/Web/MathML/Authoring) page for more information.
+> [!NOTE]
+> An obvious difference is that the source code became much more verbose with MathML. Recall that this tutorial is about learning the language but in practice MathML content is generally not written manually. See the [Authoring MathML](/en-US/docs/Web/MathML/Authoring) page for more information.
 
 ### Active learning: stretchy operators
 
@@ -407,7 +416,7 @@ tokenElements.forEach((token) => {
 });
 document.getElementById("clearOutput").addEventListener("click", () => {
   clearHighlight();
-  outputDiv.innerHTML = "";
+  outputDiv.textContent = "";
 });
 ```
 
@@ -450,7 +459,8 @@ As usual, you are invited to read the source code when you are done:
 </math>
 ```
 
-> **Warning:** Special [math fonts](/en-US/docs/Web/MathML/Fonts) are generally required to make that stretching possible, the previous example relies on [web fonts](/en-US/docs/Learn/CSS/Styling_text/Web_fonts).
+> [!WARNING]
+> Special [math fonts](/en-US/docs/Web/MathML/Fonts) are generally required to make that stretching possible, the previous example relies on [web fonts](/en-US/docs/Learn/CSS/Styling_text/Web_fonts).
 
 ## Summary
 

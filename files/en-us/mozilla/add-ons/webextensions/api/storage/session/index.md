@@ -5,7 +5,7 @@ page-type: webextension-api-property
 browser-compat: webextensions.api.storage.session
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 Represents the `session` storage area. Items in `session` storage are stored in memory for the duration of the browser session and are not persisted to disk.
 By default, it's not exposed to content scripts, but this behavior can be changed through {{WebExtAPIRef("storage.StorageArea.setAccessLevel", "storage.session.setAccessLevel()")}}.
@@ -44,7 +44,8 @@ The `session` object implements the events defined on the {{WebExtAPIRef("storag
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/storage/#property-session) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage#property-session) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

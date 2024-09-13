@@ -4,6 +4,8 @@ slug: Learn/Server-side/Express_Nodejs/Displaying_data/Book_detail_page
 page-type: learn-module-chapter
 ---
 
+{{LearnSidebar}}
+
 The _Book detail page_ needs to display the information for a specific `Book` (identified using its automatically generated `_id` field value), along with information about each associated copy in the library (`BookInstance`). Wherever we display an author, genre, or book instance, these should be linked to the associated detail page for that item.
 
 ## Controller
@@ -34,7 +36,8 @@ exports.book_detail = asyncHandler(async (req, res, next) => {
 });
 ```
 
-> **Note:** We don't need to require any additional modules in this step, as we already imported the dependencies when we implemented the home page controller.
+> [!NOTE]
+> We don't need to require any additional modules in this step, as we already imported the dependencies when we implemented the home page controller.
 
 The approach is exactly the same as described for the [Genre detail page](/en-US/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page).
 The route controller function uses `Promise.all()` to query the specified `Book` and its associated copies (`BookInstance`) in parallel.
@@ -52,18 +55,18 @@ extends layout
 block content
   h1 Title: #{book.title}
 
-  p #[strong Author:]
+  p #[strong Author: ]
     a(href=book.author.url) #{book.author.name}
   p #[strong Summary:] #{book.summary}
   p #[strong ISBN:] #{book.isbn}
-  p #[strong Genre:]
+  p #[strong Genre: ]
     each val, index in book.genre
       a(href=val.url) #{val.name}
       if index < book.genre.length - 1
-        |,
+        |,&nbsp;
 
   div(style='margin-left:20px;margin-top:20px')
-    h4 Copies
+    h2(style='font-size: 1.5rem;') Copies
 
     each val in book_instances
       hr
@@ -76,7 +79,7 @@ block content
       p #[strong Imprint:] #{val.imprint}
       if val.status!='Available'
         p #[strong Due back:] #{val.due_back}
-      p #[strong Id:]
+      p #[strong Id: ]
         a(href=val.url) #{val._id}
 
     else
@@ -85,14 +88,15 @@ block content
 
 Almost everything in this template has been demonstrated in previous sections.
 
-> **Note:** The list of genres associated with the book is implemented in the template as below. This adds a comma after every genre associated with the book except for the last one.
+> [!NOTE]
+> The list of genres associated with the book is implemented in the template as below. This adds a comma and a non breaking space after every genre associated with the book except for the last one.
 >
 > ```pug
->   p #[strong Genre:]
+>   p #[strong Genre: ]
 >     each val, index in book.genre
 >       a(href=val.url) #{val.name}
 >       if index < book.genre.length - 1
->         |,
+>         |,&nbsp;
 > ```
 
 ## What does it look like?

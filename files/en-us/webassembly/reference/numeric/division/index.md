@@ -1,6 +1,7 @@
 ---
 title: Division
 slug: WebAssembly/Reference/Numeric/Division
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

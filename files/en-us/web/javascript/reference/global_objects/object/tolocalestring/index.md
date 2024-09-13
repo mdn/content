@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Object.toLocaleString
 
 {{JSRef}}
 
-The **`toLocaleString()`** method returns a string representing the object. This method is meant to be overridden by derived objects for locale-specific purposes.
+The **`toLocaleString()`** method of {{jsxref("Object")}} instances returns a string representing this object. This method is meant to be overridden by derived objects for locale-specific purposes.
 
 {{EmbedInteractiveExample("pages/js/object-prototype-tolocalestring.html")}}
 

@@ -1,6 +1,7 @@
 ---
 title: Compiling an Existing C Module to WebAssembly
 slug: WebAssembly/existing_C_to_Wasm
+page-type: guide
 ---
 
 {{WebAssemblySidebar}}
@@ -32,14 +33,15 @@ This is a good simple program to test whether you can get the source code of lib
 To compile this program, you need to tell the compiler where it can find libwebp's header files using the `-I` flag and also pass it all the C files of libwebp that it needs. A useful strategy is to just give it **all** the C files and rely on the compiler to strip out everything that is unnecessary. It seems to work brilliantly for this library:
 
 ```bash
-$ emcc -O3 -s WASM=1 -s EXPORTED_RUNTIME_METHODS='["cwrap"]' \
+emcc -O3 -s WASM=1 -s EXPORTED_RUNTIME_METHODS='["cwrap"]' \
     -I libwebp \
     webp.c \
     libwebp/src/{dec,dsp,demux,enc,mux,utils}/*.c \
     libwebp/sharpyuv/*.c
 ```
 
-> **Note:** This strategy will not work with every C project. Many projects rely on autoconf/automake to generate system-specific code before compilation. Emscripten provides `emconfigure` and `emmake` to wrap these commands and inject the appropriate parameters. You can find more in the [Emscripten documentation](https://emscripten.org/docs/compiling/Building-Projects.html).
+> [!NOTE]
+> This strategy will not work with every C project. Many projects rely on autoconf/automake to generate system-specific code before compilation. Emscripten provides `emconfigure` and `emmake` to wrap these commands and inject the appropriate parameters. You can find more in the [Emscripten documentation](https://emscripten.org/docs/compiling/Building-Projects.html).
 
 Now you only need some HTML and JavaScript to load your new module:
 
@@ -59,7 +61,8 @@ And you will see the correct version number in the [output](https://googlechrome
 
 ![Screenshot of the DevTools console showing the correct version number.](version.png)
 
-> **Note:** libwebp returns the current version a.b.c as a hexadecimal number 0xabc. For example, v0.6.1 is encoded as 0x000601 = 1537.
+> [!NOTE]
+> libwebp returns the current version a.b.c as a hexadecimal number 0xabc. For example, v0.6.1 is encoded as 0x000601 = 1537.
 
 ### Get an image from JavaScript into Wasm
 
@@ -190,6 +193,6 @@ document.body.appendChild(img);
 
 Behold, the glory of a new WebP image.
 
-[Demo](https://googlechrome.github.io/samples/webassembly/image.html) | [Original Article](https://web.dev/emscripting-a-c-library/)
+[Demo](https://googlechrome.github.io/samples/webassembly/image.html) | [Original Article](https://web.dev/articles/emscripting-a-c-library)
 
 ![DevTools network panel and the generated image.](result.jpg)

@@ -8,7 +8,7 @@ status:
 browser-compat: api.PresentationConnection.state
 ---
 
-{{APIRef("Presentation API")}}{{SeeCompatTable}}
+{{APIRef("Presentation API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`state`** attribute reflects the [presentation connection](https://www.w3.org/TR/presentation-api/#dfn-presentation-connection)'s current state. Depending on the current [`PresentationConnectionState`](https://www.w3.org/TR/presentation-api/#idl-def-presentationconnectionstate), the `state` attribute can hold one of the following values.
 
@@ -16,6 +16,10 @@ The **`state`** attribute reflects the [presentation connection](https://www.w3.
 - **`connected`**: The [presentation connection](https://www.w3.org/TR/presentation-api/#dfn-presentation-connection) is established and communication is possible.
 - **`closed`**: The [presentation connection](https://www.w3.org/TR/presentation-api/#dfn-presentation-connection) has been closed or could not be opened. The connection may be reopened by calling [`reconnect()`](https://www.w3.org/TR/presentation-api/#dom-presentationrequest-reconnect). No communication is possible in this state.
 - **`terminated`**: The [receiving browsing context](https://www.w3.org/TR/presentation-api/#dfn-receiving-browsing-context) has terminated. Any [presentation connection](https://www.w3.org/TR/presentation-api/#dfn-presentation-connection) to that [presentation](https://www.w3.org/TR/presentation-api/#dfn-presentation) has also terminated and cannot be reopened. No communication is possible.
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

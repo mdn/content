@@ -9,7 +9,7 @@ browser-compat: webextensions.api.menus
 
 Add items to the browser's menu system.
 
-This API is modeled on Chrome's ["contextMenus"](https://developer.chrome.com/docs/extensions/reference/contextMenus/) API, which enables Chrome extensions to add items to the browser's context menu. The `browser.menus` API adds a few features to Chrome's API.
+This API is modeled on Chrome's ["contextMenus"](https://developer.chrome.com/docs/extensions/reference/api/contextMenus) API, which enables Chrome extensions to add items to the browser's context menu. The `browser.menus` API adds a few features to Chrome's API.
 
 Before Firefox 55 this API was also originally named `contextMenus`, and that name has been retained as an alias, so you can use `contextMenus` to write code that works in Firefox and also in other browsers.
 
@@ -20,6 +20,8 @@ Except for [`menus.getTargetElement()`](/en-US/docs/Mozilla/Add-ons/WebExtension
 ## Creating menu items
 
 To create a menu item call the {{WebExtAPIRef("menus.create()")}} method. You pass this method an object containing options for the item, including the item ID, item type, and the contexts in which it should be shown.
+
+In a Firefox extension using non-persistent [background pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts) (Event pages) or in any Chrome extension, you call `menus.create` from within a {{WebExtAPIRef("runtime.onInstalled")}} listener. In a Firefox extension using persistent background pages, you make a top-level call. See {{WebExtAPIRef("menus.create()")}} for more information.
 
 Listen for clicks on your menu item by adding a listener to the {{WebExtAPIRef("menus.onClicked")}} event. This listener will be passed a {{WebExtAPIRef("menus.OnClickData")}} object containing the event's details.
 
@@ -170,9 +172,8 @@ browser.menus.create(
 
 {{Compat}}
 
-> **Note:**
->
-> This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/contextMenus/) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/api/contextMenus) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

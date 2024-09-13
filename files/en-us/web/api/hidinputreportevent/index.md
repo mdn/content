@@ -9,7 +9,7 @@ browser-compat: api.HIDInputReportEvent
 
 {{securecontext_header}}{{APIRef("WebHID API")}}{{SeeCompatTable}}
 
-The **`HIDInputReportEvent`** interface of the {{domxref('WebHID API')}} is passed to {{domxref("HIDDevice.inputreport_event")}} when an input report is received from any associated HID device.
+The **`HIDInputReportEvent`** interface of the [WebHID API](/en-US/docs/Web/API/WebHID_API) is passed to {{domxref("HIDDevice.inputreport_event", "inputreport")}} event of `HIDDevice` when an input report is received from any associated HID device.
 
 {{InheritanceDiagram}}
 
@@ -30,7 +30,7 @@ _This interface inherits methods from its parent, {{domxref("Event")}}._
 
 ## Examples
 
-The following example demonstrates listening for an `inputReport` that will allow the application to detect which button is pressed on a Joy-Con Right device. You can see more examples, and live demos in the article [Connecting to uncommon HID devices](https://web.dev/hid/).
+The following example demonstrates listening for an `inputReport` that will allow the application to detect which button is pressed on a Joy-Con Right device. You can see more examples, and live demos in the article [Connecting to uncommon HID devices](https://developer.chrome.com/docs/capabilities/hid).
 
 ```js
 device.addEventListener("inputreport", (event) => {

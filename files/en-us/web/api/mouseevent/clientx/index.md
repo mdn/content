@@ -14,7 +14,7 @@ For example, clicking on the left edge of the viewport will always result in a m
 
 ## Value
 
-A `double` floating point value.
+A `double` floating point value in pixels.
 
 ## Examples
 
@@ -56,5 +56,5 @@ function logKey(e) {
 
 - {{ domxref("MouseEvent") }}
 - {{domxref("MouseEvent.clientY","clientY")}}
-- {{domxref("MouseEvent.screenX","screenX")}} /
-  {{domxref("MouseEvent.screenY","screenY")}}
+- {{domxref("MouseEvent.screenX","screenX")}} / {{domxref("MouseEvent.screenY","screenY")}}
+- [Coordinate systems](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems)

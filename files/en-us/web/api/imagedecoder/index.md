@@ -7,7 +7,7 @@ status:
 browser-compat: api.ImageDecoder
 ---
 
-{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`ImageDecoder`** interface of the {{domxref('WebCodecs API','','','true')}} provides a way to unpack and decode encoded image data.
 
@@ -29,7 +29,7 @@ The **`ImageDecoder`** interface of the {{domxref('WebCodecs API','','','true')}
 
 ## Static methods
 
-- {{domxref("ImageDecoder.isTypeSupported()")}} {{Experimental_Inline}}
+- {{domxref("ImageDecoder.isTypeSupported_static", "ImageDecoder.isTypeSupported()")}} {{Experimental_Inline}}
   - : Indicates if the provided [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) is supported for unpacking and decoding.
 
 ## Instance methods

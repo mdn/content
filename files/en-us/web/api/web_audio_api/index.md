@@ -31,7 +31,8 @@ Timing is controlled with high precision and low latency, allowing developers to
 
 The Web Audio API also allows us to control how audio is _spatialized_. Using a system based on a _source-listener model_, it allows control of the _panning model_ and deals with _distance-induced attenuation_ induced by a moving source (or moving listener).
 
-> **Note:** You can read about the theory of the Web Audio API in a lot more detail in our article [Basic concepts behind Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API).
+> [!NOTE]
+> You can read about the theory of the Web Audio API in a lot more detail in our article [Basic concepts behind Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API).
 
 ## Web Audio API target audience
 
@@ -213,9 +214,8 @@ You can find a number of examples at our [webaudio-example repo](https://github.
 - [Visualizations with Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
 - [Web audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
 - [Controlling multiple parameters with ConstantSourceNode](/en-US/docs/Web/API/Web_Audio_API/Controlling_multiple_parameters_with_ConstantSourceNode)
-- [Mixing Positional Audio and WebGL (2012)](https://web.dev/webaudio-positional-audio/)
-- [Developing Game Audio with the Web Audio API (2012)](https://auth.web.dev/webaudio-games/)
-- [Porting webkitAudioContext code to standards based AudioContext](/en-US/docs/Web/API/Web_Audio_API/Migrating_from_webkitAudioContext)
+- [Mixing Positional Audio and WebGL (2012)](https://web.dev/articles/webaudio-positional-audio)
+- [Developing Game Audio with the Web Audio API (2012)](https://web.dev/articles/webaudio-games)
 
 ### Libraries
 

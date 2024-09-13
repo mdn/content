@@ -1,7 +1,8 @@
 ---
 title: WebAssembly.Global() constructor
 slug: WebAssembly/JavaScript_interface/Global/Global
-browser-compat: javascript.builtins.WebAssembly.Global.Global
+page-type: webassembly-constructor
+browser-compat: webassembly.api.Global.Global
 ---
 
 {{WebAssemblySidebar}}
@@ -52,9 +53,9 @@ const output = document.getElementById("output");
 function assertEq(msg, got, expected) {
   const result =
     got === expected
-      ? `SUCCESS! Got: ${got}<br>`
-      : `FAIL!<br>Got: ${got}<br>Expected: ${expected}<br>`;
-  output.innerHTML += `Testing ${msg}: ${result}`;
+      ? `SUCCESS! Got: ${got}\n`
+      : `FAIL!\nGot: ${got}\nExpected: ${expected}\n`;
+  output.innerText += `Testing ${msg}: ${result}`;
 }
 
 assertEq("WebAssembly.Global exists", typeof WebAssembly.Global, "function");
@@ -80,8 +81,9 @@ WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
 );
 ```
 
-> **Note:** You can see the example [running live on GitHub](https://mdn.github.io/webassembly-examples/js-api-examples/global.html);
-> see also the [source code](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html).
+> [!NOTE]
+> You can see the example [running live on GitHub](https://mdn.github.io/webassembly-examples/js-api-examples/global.html);
+> see also the [source code](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/global.html).
 
 ## Specifications
 

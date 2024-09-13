@@ -17,7 +17,8 @@ The panner node is spatialized in relation to the AudioContext's
 attribute), which represents the position and orientation of the person listening to the
 audio.
 
-> **Note:** The {{domxref("PannerNode.PannerNode", "PannerNode()")}}
+> [!NOTE]
+> The {{domxref("PannerNode.PannerNode", "PannerNode()")}}
 > constructor is the recommended way to create a {{domxref("PannerNode")}}; see
 > [Creating an AudioNode](/en-US/docs/Web/API/AudioNode#creating_an_audionode).
 
@@ -49,7 +50,7 @@ as a stereo. In the example you can see this being controlled by the functions
 panner position via the `PositionPanner()` function.
 
 To see a complete implementation, check out our [panner-node example](https://mdn.github.io/webaudio-examples/panner-node/)
-([view the source code](https://github.com/mdn/webaudio-examples/tree/master/panner-node)) — this demo transports you to the 2.5D "Room of metal", where you can
+([view the source code](https://github.com/mdn/webaudio-examples/tree/main/panner-node)) — this demo transports you to the 2.5D "Room of metal", where you can
 play a track on a boom box and then walk around the boom box to see how the sound
 changes!
 
@@ -143,7 +144,8 @@ function positionPanner() {
 }
 ```
 
-> **Note:** In terms of working out what position values to apply to the
+> [!NOTE]
+> In terms of working out what position values to apply to the
 > listener and panner, to make the sound appropriate to what the visuals are doing on
 > screen, there is quite a bit of math involved, but you will soon get used to it with a
 > bit of experimentation.

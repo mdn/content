@@ -44,7 +44,8 @@ _`VRDisplayEvent` also inherits properties from its parent object, {{domxref("Ev
 
 You can use the `vrdisplaydisconnect` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:
 
-> **Note:** This event was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
+> [!NOTE]
+> This event was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
 ```js
 window.addEventListener("vrdisplaydisconnect", () => {
@@ -74,5 +75,4 @@ Until all browsers have implemented the new [WebXR Device API](https://immersive
 
 ## See also
 
-- [WebVR API homepage](/en-US/docs/Web/API/WebVR_API)
-- <https://mixedreality.mozilla.org/> — demos, downloads, and other resources from the Mozilla VR team.
+- [WebVR API](/en-US/docs/Web/API/WebVR_API)

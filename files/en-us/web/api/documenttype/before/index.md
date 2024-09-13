@@ -18,7 +18,7 @@ Strings are inserted as equivalent {{domxref("Text")}} nodes.
 ```js-nolint
 before(param1)
 before(param1, param2)
-before(param1, param2, /* … ,*/ paramN)
+before(param1, param2, /* …, */ paramN)
 ```
 
 ### Parameters
@@ -41,7 +41,7 @@ None ({{jsxref("undefined")}}).
 
 Comment nodes are valid before doctype declarations but not advisable
 given they trigger quirks mode in IE. A
-[conditional comment](/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#ie_conditional_comments)
+[conditional comment](https://en.wikipedia.org/wiki/Conditional_comment)
 works for IE as well, though:
 
 ```js

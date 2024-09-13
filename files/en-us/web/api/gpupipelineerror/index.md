@@ -7,7 +7,7 @@ status:
 browser-compat: api.GPUPipelineError
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`GPUPipelineError`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} describes a pipeline failure. This is the value received when a {{jsxref("Promise")}} returned by a {{domxref("GPUDevice.createComputePipelineAsync()")}} or {{domxref("GPUDevice.createRenderPipelineAsync()")}} call rejects.
 

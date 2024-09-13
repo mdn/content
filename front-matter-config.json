@@ -4,7 +4,7 @@
     "title": "Front matter schema",
     "type": "object",
     "additionalProperties": false,
-    "required": ["title", "slug"],
+    "required": ["title", "slug", "page-type"],
     "properties": {
       "title": {
         "title": "Title",
@@ -196,12 +196,10 @@
                 "landing-page",
                 "web-api-overview",
                 "web-api-global-function",
-                "web-api-global-property",
                 "web-api-interface",
                 "web-api-constructor",
                 "web-api-instance-method",
                 "web-api-instance-property",
-                "web-api-instance-event",
                 "web-api-static-method",
                 "web-api-static-property",
                 "web-api-event",
@@ -285,6 +283,31 @@
           "properties": {
             "page-type": {
               "enum": ["guide", "landing-page", "web-manifest-member"]
+            }
+          }
+        },
+        "else": false
+      },
+      {
+        "if": {
+          "properties": {
+            "slug": { "type": "string", "pattern": "^WebAssembly/" }
+          }
+        },
+        "then": {
+          "properties": {
+            "page-type": {
+              "enum": [
+                "guide",
+                "landing-page",
+                "webassembly-function",
+                "webassembly-constructor",
+                "webassembly-interface",
+                "webassembly-instance-property",
+                "webassembly-instance-method",
+                "webassembly-static-method",
+                "webassembly-instruction"
+              ]
             }
           }
         },

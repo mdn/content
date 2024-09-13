@@ -7,10 +7,8 @@ browser-compat: javascript.builtins.Map
 
 {{JSRef}}
 
-The **`Map`** object holds key-value pairs and remembers the original insertion
-order of the keys. Any value (both objects and
-{{glossary("Primitive", "primitive values")}}) may be used as
-either a key or a value.
+The **`Map`** object holds key-value pairs and remembers the original insertion order of the keys.
+Any value (both objects and {{Glossary("Primitive", "primitive values")}}) may be used as either a key or a value.
 
 {{EmbedInteractiveExample("pages/js/map.html", "taller")}}
 
@@ -112,8 +110,7 @@ cases:
           iterates
           <strong>all</strong> of an object's properties; the various mechanisms
           each include different subsets of properties.
-          ({{jsxref("Statements/for...in",
-          "for-in")}}
+          ({{jsxref("Statements/for...in", "for-in")}}
           includes only enumerable string-keyed properties;
           {{jsxref("Object.keys")}} includes only own, enumerable,
           string-keyed properties;
@@ -281,7 +278,7 @@ interface RTCStatsReport {
 
 `Map`-like objects are either read-only or read-writable (see the `readonly` keyword in the IDL above).
 
-- Read-only `Map`-like objects have the property [`size`](#map.prototype.size), and the methods: [`entries()`](#map.prototype.entries), [`forEach()`](#map.prototype.foreach), [`get()`](#map.prototype.get), [`has()`](#map.prototype.has), [`keys()`](#map.prototype.keys), [`values()`](#map.prototype.values), and [`@@iterator`](#map.prototypeiterator).
+- Read-only `Map`-like objects have the property [`size`](#map.prototype.size), and the methods: [`entries()`](#map.prototype.entries), [`forEach()`](#map.prototype.foreach), [`get()`](#map.prototype.get), [`has()`](#map.prototype.has), [`keys()`](#map.prototype.keys), [`values()`](#map.prototype.values), and [`[Symbol.iterator]()`](#map.prototypesymbol.iterator).
 - Writeable `Map`-like objects additionally have the methods: [`clear()`](#map.prototype.clear), [`delete()`](#map.prototype.delete), and [`set()`](#map.prototype.set).
 
 The methods and properties have the same behavior as the equivalent entities in `Map`, except for the restriction on the types of the keys and values.
@@ -302,8 +299,13 @@ The following are examples of read-only `Map`-like browser objects:
 
 ## Static properties
 
-- {{jsxref("Map/@@species", "Map[@@species]")}}
+- [`Map[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.species)
   - : The constructor function that is used to create derived objects.
+
+## Static methods
+
+- {{jsxref("Map.groupBy()")}}
+  - : Groups the elements of a given iterable using the values returned by a provided callback function. The final returned `Map` uses the unique values from the test function as keys, which can be used to get the array of elements in each group.
 
 ## Instance properties
 
@@ -313,8 +315,8 @@ These properties are defined on `Map.prototype` and shared by all `Map` instance
   - : The constructor function that created the instance object. For `Map` instances, the initial value is the {{jsxref("Map/Map", "Map")}} constructor.
 - {{jsxref("Map.prototype.size")}}
   - : Returns the number of key/value pairs in the `Map` object.
-- `Map.prototype[@@toStringTag]`
-  - : The initial value of the [`@@toStringTag`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Map"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
+- `Map.prototype[Symbol.toStringTag]`
+  - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"Map"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Instance methods
 
@@ -338,7 +340,7 @@ These properties are defined on `Map.prototype` and shared by all `Map` instance
   - : Sets the value for the passed key in the `Map` object. Returns the `Map` object.
 - {{jsxref("Map.prototype.values()")}}
   - : Returns a new Iterator object that contains the values for each element in the `Map` object in insertion order.
-- [`Map.prototype[@@iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/@@iterator)
+- [`Map.prototype[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator)
   - : Returns a new Iterator object that contains a two-member array of `[key, value]` for each element in the `Map` object in insertion order.
 
 ## Examples
@@ -424,7 +426,7 @@ for (const [key, value] of myMap.entries()) {
 ### Iterating Map with forEach()
 
 Maps can be iterated using the
-{{jsxref("Map.prototype.forEach", "forEach()")}} method:
+{{jsxref("Map/forEach", "forEach()")}} method:
 
 ```js
 myMap.forEach((value, key) => {
@@ -470,7 +472,8 @@ console.log(clone.get(1)); // one
 console.log(original === clone); // false (useful for shallow comparison)
 ```
 
-> **Note:** Keep in mind that _the data itself_ is not cloned.
+> [!NOTE]
+> Keep in mind that _the data itself_ is not cloned.
 
 Maps can be merged, maintaining key uniqueness:
 
@@ -527,8 +530,7 @@ console.log(merged.get(3)); // three
 
 ## See also
 
-- A polyfill of `Map` is available in
-  [`core-js`](https://github.com/zloirock/core-js#map)
+- [Polyfill for `Map` in `core-js`](https://github.com/zloirock/core-js#map)
 - {{jsxref("Set")}}
 - {{jsxref("WeakMap")}}
 - {{jsxref("WeakSet")}}

@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.downloads.getFileIcon
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The **`getFileIcon()`** function of the {{WebExtAPIRef("downloads")}} API retrieves an icon for the specified download.
 
@@ -74,7 +74,8 @@ searching.then(getIcon, onError);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#method-getFileIcon) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#method-getFileIcon) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

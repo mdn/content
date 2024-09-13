@@ -1,7 +1,8 @@
 ---
 title: WebAssembly.Tag
 slug: WebAssembly/JavaScript_interface/Tag
-browser-compat: javascript.builtins.WebAssembly.Tag
+page-type: webassembly-interface
+browser-compat: webassembly.api.Tag
 ---
 
 {{WebAssemblySidebar}}
@@ -15,7 +16,8 @@ The same unique tag instance must be used to access the values of the exception 
 This tag can be passed to a WebAssembly module as a tag import, where it will become a typed tag defined in the _tag section_ of the WebAssembly module.
 You can also export a tag defined in a module and use it to inspect exceptions thrown from the module.
 
-> **Note:** You can't access the values of an exception with a new tag that just happens to have the same parameters; it's a different tag!
+> [!NOTE]
+> You can't access the values of an exception with a new tag that just happens to have the same parameters; it's a different tag!
 > This ensures that WebAssembly modules can keep exception information internal if required.
 > Code can still catch and rethrow exceptions that it does not understand.
 
@@ -63,7 +65,8 @@ The WebAssembly module might then import the tag as shown below:
 
 If the tag was used to throw an exception that propagated to JavaScript, we could use the tag to inspect its values.
 
-> **Note:** There are many alternatives. We could also use the tag to create a [`WebAssembly.Exception`](/en-US/docs/WebAssembly/JavaScript_interface/Exception) and throw that from a function called by WebAssembly.
+> [!NOTE]
+> There are many alternatives. We could also use the tag to create a [`WebAssembly.Exception`](/en-US/docs/WebAssembly/JavaScript_interface/Exception) and throw that from a function called by WebAssembly.
 
 ## Specifications
 

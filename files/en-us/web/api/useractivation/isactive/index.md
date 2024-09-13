@@ -8,7 +8,7 @@ browser-compat: api.UserActivation.isActive
 
 {{APIRef("HTML DOM")}}
 
-The read-only **`isActive`** property of the {{domxref("UserActivation")}} interface indicates whether the current window has transient user activation (see {{Glossary("transient activation")}}).
+The read-only **`isActive`** property of the {{domxref("UserActivation")}} interface indicates whether the current window has {{Glossary("transient activation", "transient user activation")}}.
 
 ## Value
 

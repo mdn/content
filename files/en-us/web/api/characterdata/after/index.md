@@ -23,7 +23,7 @@ after(...nodes)
 ### Parameters
 
 - `nodes`
-  - : A set of {{domxref("Node")}} or strings to insert.
+  - : A set of {{domxref("Node")}} objects or strings to insert.
 
 ### Exceptions
 
@@ -50,7 +50,8 @@ h1TextNode.data;
 // "CharacterData.after()"
 ```
 
-> **Note:** If you rather want to append text to the current node,
+> [!NOTE]
+> If you rather want to append text to the current node,
 > the [`appendData()`](/en-US/docs/Web/API/CharacterData/appendData) method lets you append to the current node's data.
 
 ## Specifications

@@ -17,22 +17,14 @@ In this article, we will teach you how to install your own automation environmen
         <a href="/en-US/docs/Learn/CSS">CSS</a>, and
         <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages; an idea
         of the high-level
-        <a
-          href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
-          >principles of cross browser testing</a
-        >, and
-        <a
-          href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing"
-          >automated testing</a
-        >.
+        <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction">principles of cross browser testing</a>, and
+        <a href="/en-US/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing">automated testing</a>.
       </td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To show how to set up a Selenium testing environment locally and run
-        tests with it, and how to integrate it with tools like LambdaTest, Sauce
-        Labs, and BrowserStack.
+        To show how to set up a Selenium testing environment locally and run tests with it, and how to integrate it with tools like LambdaTest, Sauce Labs, and BrowserStack.
       </td>
     </tr>
   </tbody>
@@ -48,7 +40,8 @@ Different browsers require different drivers to allow WebDriver to communicate w
 
 We will cover writing and running Selenium tests using Node.js, as it is quick and easy to get started, and a more familiar environment for front end devs.
 
-> **Note:** If you want to find out how to use WebDriver with other server-side environments, also check out [Platforms Supported by Selenium](https://www.selenium.dev/downloads/) for some useful links.
+> [!NOTE]
+> If you want to find out how to use WebDriver with other server-side environments, also check out [Platforms Supported by Selenium](https://www.selenium.dev/downloads/) for some useful links.
 
 ### Setting up Selenium in Node
 
@@ -59,15 +52,17 @@ We will cover writing and running Selenium tests using Node.js, as it is quick a
    npm install selenium-webdriver
    ```
 
-> **Note:** It is still a good idea to follow these steps even if you previously installed selenium-webdriver and downloaded the browser drivers. You should make sure that everything is up-to-date.
+> [!NOTE]
+> It is still a good idea to follow these steps even if you previously installed selenium-webdriver and downloaded the browser drivers. You should make sure that everything is up-to-date.
 
 Next, you need to download the relevant drivers to allow WebDriver to control the browsers you want to test. You can find details of where to get them from on the [selenium-webdriver](https://www.npmjs.com/package/selenium-webdriver) page (see the table in the first section.) Obviously, some of the browsers are OS-specific, but we're going to stick with Firefox and Chrome, as they are available across all the main OSes.
 
-1. Download the latest [GeckoDriver](https://github.com/mozilla/geckodriver/releases/) (for Firefox) and [ChromeDriver](https://chromedriver.storage.googleapis.com/index.html) drivers.
+1. Download the latest [GeckoDriver](https://github.com/mozilla/geckodriver/releases/) (for Firefox) and [ChromeDriver](https://developer.chrome.com/docs/chromedriver/downloads) drivers.
 2. Unpack them into somewhere fairly easy to navigate to, like the root of your home user directory.
 3. Add the `chromedriver` and `geckodriver` driver's location to your system `PATH` variable. This should be an absolute path from the root of your hard disk, to the directory containing the drivers. For example, if we were using a macOS machine, our user name was bob, and we put our drivers in the root of our home folder, the path would be `/Users/bob`.
 
-> **Note:** Just to reiterate, the path you add to `PATH` needs to be the path to the directory containing the drivers, not the paths to the drivers themselves! This is a common mistake.
+> [!NOTE]
+> Just to reiterate, the path you add to `PATH` needs to be the path to the directory containing the drivers, not the paths to the drivers themselves! This is a common mistake.
 
 To set your `PATH` variable on a macOS system and on most Linux systems:
 
@@ -103,33 +98,23 @@ OK, let's try a quick test to make sure everything is working.
 2. Give it the following contents, then save it:
 
    ```js
-   const webdriver = require("selenium-webdriver");
-   const By = webdriver.By;
-   const until = webdriver.until;
+   const { Builder, Browser, By, Key, until } = require("selenium-webdriver");
 
-   const driver = new webdriver.Builder().forBrowser("firefox").build();
-
-   driver.get("http://www.google.com");
-
-   driver.findElement(By.name("q")).sendKeys("webdriver");
-
-   driver.sleep(1000).then(() => {
-     driver.findElement(By.name("q")).sendKeys(webdriver.Key.TAB);
-   });
-
-   driver.findElement(By.name("btnK")).click();
-
-   driver.sleep(2000).then(() => {
-     driver.getTitle().then((title) => {
-       if (title === "webdriver - Google Search") {
-         console.log("Test passed");
-       } else {
-         console.log("Test failed");
-       }
-       driver.quit();
-     });
-   });
+   (async function example() {
+     const driver = await new Builder().forBrowser(Browser.FIREFOX).build();
+     try {
+       await driver.get("https://www.google.com/ncr");
+       await driver.findElement(By.name("q")).sendKeys("webdriver", Key.RETURN);
+       await driver.wait(until.titleIs("webdriver - Google Search"), 1000);
+     } finally {
+       await driver.sleep(2000); // Delay long enough to see search page!
+       await driver.quit();
+     }
+   })();
    ```
+
+   > [!NOTE]
+   > This function is an {{glossary("IIFE")}} (Immediately Invoked Function Expression).
 
 3. In terminal, make sure you are inside your project folder, then enter the following command:
 
@@ -137,48 +122,43 @@ OK, let's try a quick test to make sure everything is working.
    node google_test
    ```
 
-You should see an instance of Firefox automatically open up! Google should automatically be loaded in a tab, "webdriver" should be entered in the search box, and the search button will be clicked. WebDriver will then wait for 2 seconds; the document title is then accessed, and if it is "webdriver - Google Search", we will return a message to claim the test is passed. WebDriver will then close down the Firefox instance and stop.
+You should see an instance of Firefox automatically open up! Google should automatically be loaded in a tab, "webdriver" should be entered in the search box, and the search button will be clicked. WebDriver will then wait for 1 second; the document title is then accessed, and if it is "webdriver - Google Search", we will return a message to claim the test is passed.
+We then wait four seconds, after which WebDriver will then close down the Firefox instance and stop.
 
 ## Testing in multiple browsers at once
 
 There is also nothing to stop you running the test on multiple browsers simultaneously. Let's try this!
 
-1. Create another new file inside your project directory called `google_test_multiple.js`. You can feel free to change the references to some of the other browsers we added, remove them, etc., depending on what browsers you have available to test on your operating system. You'll need to make sure you have the right browser drivers set up on your system. In terms of what string to use inside the `.forBrowser()` method for other browsers, see the [Browser enum](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/index_exports_Browser.html) reference page.
+1. Create another new file inside your project directory called `google_test_multiple.js`. You can feel free to change the references to some of the other browsers we added, remove them, etc., depending on what browsers you have available to test on your operating system. You'll need to make sure you have the right browser drivers set up on your system. In terms of what string to use inside the `.forBrowser()` method for other browsers, see the [Browser enum](https://www.selenium.dev/selenium/docs/api/javascript/global.html#Browser) reference page.
 2. Give it the following contents, then save it:
 
    ```js
-   const webdriver = require("selenium-webdriver");
-   const By = webdriver.By;
-   const until = webdriver.until;
+   const { Builder, Browser, By, Key } = require("selenium-webdriver");
 
-   let driver_fx = new webdriver.Builder().forBrowser("firefox").build();
+   const driver_fx = new Builder().forBrowser(Browser.FIREFOX).build();
 
-   let driver_chr = new webdriver.Builder().forBrowser("chrome").build();
+   const driver_chr = new Builder().forBrowser(Browser.CHROME).build();
+
+   async function searchTest(driver) {
+     try {
+       await driver.get("http://www.google.com");
+       await driver.findElement(By.name("q")).sendKeys("webdriver", Key.RETURN);
+       await driver.sleep(2000).then(async () => {
+         await driver.getTitle().then(async (title) => {
+           if (title === "webdriver - Google Search") {
+             console.log("Test passed");
+           } else {
+             console.log("Test failed");
+           }
+         });
+       });
+     } finally {
+       driver.quit();
+     }
+   }
 
    searchTest(driver_fx);
    searchTest(driver_chr);
-
-   function searchTest(driver) {
-     driver.get("http://www.google.com");
-     driver.findElement(By.name("q")).sendKeys("webdriver");
-
-     driver.sleep(1000).then(() => {
-       driver.findElement(By.name("q")).sendKeys(webdriver.Key.TAB);
-     });
-
-     driver.findElement(By.name("btnK")).click();
-
-     driver.sleep(2000).then(() => {
-       driver.getTitle().then((title) => {
-         if (title === "webdriver - Google Search") {
-           console.log("Test passed");
-         } else {
-           console.log("Test failed");
-         }
-         driver.quit();
-       });
-     });
-   }
    ```
 
 3. In terminal, make sure you are inside your project folder, then enter the following command:
@@ -195,28 +175,27 @@ Fun huh? Let's move on, look at the basics of WebDriver syntax, in a bit more de
 
 ## WebDriver syntax crash course
 
-Let's have a look at a few key features of the webdriver syntax. For more complete details, you should consult the [selenium-webdriver JavaScript API reference](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/) for a detailed reference and the Selenium main documentation's [Selenium WebDriver](https://www.selenium.dev/documentation/webdriver/), which contain multiple examples to learn from written in different languages.
+Let's have a look at a few key features of the webdriver syntax. For more complete details, you should consult the [selenium-webdriver JavaScript API reference](https://www.selenium.dev/selenium/docs/api/javascript/) for a detailed reference and the Selenium main documentation's [Selenium WebDriver](https://www.selenium.dev/documentation/webdriver/), which contain multiple examples to learn from written in different languages.
 
 ### Starting a new test
 
-To start up a new test, you need to include the `selenium-webdriver` module like this:
+To start up a new test, you need to include the `selenium-webdriver` module, importing the `Builder` constructor and `Browser` interface:
 
 ```js
-const webdriver = require("selenium-webdriver");
-const By = webdriver.By;
-const until = webdriver.until;
+const { Builder, Browser } = require("selenium-webdriver");
 ```
 
-Next, you need to create a new instance of a driver, using the `new webdriver.Builder()` constructor. This needs to have the `forBrowser()` method chained onto it to specify what browser you want to test with this builder, and the `build()` method to actually build it (see the [Builder class reference](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/index_exports_Builder.html) for detailed information on these features).
+You use the `Builder()` constructor to create a new instance of a driver, chaining the `forBrowser()` method to specify what browser you want to test with this builder.
+The `build()` method is chained at the end to actually build the driver instance (see the [Builder class reference](https://www.selenium.dev/selenium/docs/api/javascript/Builder.html) for detailed information on these features).
 
 ```js
-let driver = new webdriver.Builder().forBrowser("firefox").build();
+let driver = new Builder().forBrowser(Browser.FIREFOX).build();
 ```
 
 Note that it is possible to set specific configuration options for browsers to be tested, for example you can set a specific version and OS to test in the `forBrowser()` method:
 
 ```js
-let driver = new webdriver.Builder().forBrowser("firefox", "46", "MAC").build();
+let driver = new Builder().forBrowser(Browser.FIREFOX, "46", "MAC").build();
 ```
 
 You could also set these options using an environment variable, for example:
@@ -228,11 +207,11 @@ SELENIUM_BROWSER=firefox:46:MAC
 Let's create a new test to allow us to explore this code as we talk about it. Inside your selenium test project directory, create a new file called `quick_test.js`, and add the following code to it:
 
 ```js
-const webdriver = require("selenium-webdriver");
-const By = webdriver.By;
-const until = webdriver.until;
+const { Builder, Browser } = require("selenium-webdriver");
 
-const driver = new webdriver.Builder().forBrowser("firefox").build();
+(async function example() {
+  const driver = await new Builder().forBrowser(Browser.FIREFOX).build();
+})();
 ```
 
 ### Getting the document you want to test
@@ -243,7 +222,8 @@ To load the page you actually want to test, you use the `get()` method of the dr
 driver.get("http://www.google.com");
 ```
 
-> **Note:** See the [WebDriver class reference](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebDriver.html) for details of the features in this section and the ones below it.
+> [!NOTE]
+> See the [WebDriver class reference](https://www.selenium.dev/selenium/docs/api/javascript/WebDriver.html) for details of the features in this section and the ones below it.
 
 You can use any URL to point to your resource, including a `file://` URL to test a local document:
 
@@ -261,12 +241,17 @@ driver.get("http://localhost:8888/fake-div-buttons.html");
 
 But it is better to use a remote server location so the code is more flexible — when you start using a remote server to run your tests (see later on), your code will break if you try to use local paths.
 
-Add this line to the bottom of `quick_test.js` now:
+Update your `example()` function as follows:
 
 ```js
-driver.get(
-  "https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html",
-);
+const { Builder, Browser } = require("selenium-webdriver");
+
+(async function example() {
+  const driver = await new Builder().forBrowser(Browser.FIREFOX).build();
+  driver.get(
+    "https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html",
+  );
+})();
 ```
 
 ### Interacting with the document
@@ -277,12 +262,20 @@ Now we've got a document to test, we need to interact with it in some way, which
 const element = driver.findElement(By.id("myElementId"));
 ```
 
-One of the most useful ways to find an element by CSS — the By.css method allows you to select an element using a CSS selector
+One of the most useful ways to find an element by CSS — the `By.css()` method allows you to select an element using a CSS selector.
 
-Enter the following at the bottom of your `quick_test.js` code now:
+Update your `example()` function now as follows:
 
 ```js
-const button = driver.findElement(By.css("button:nth-of-type(1)"));
+const { Builder, Browser, By } = require("selenium-webdriver");
+
+(async function example() {
+  const driver = await new Builder().forBrowser(Browser.FIREFOX).build();
+  driver.get(
+    "https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html",
+  );
+  const button = driver.findElement(By.css("button:nth-of-type(1)"));
+})();
 ```
 
 ### Testing your element
@@ -297,7 +290,25 @@ button.getText().then((text) => {
 });
 ```
 
-Add this to `quick_test.js` now.
+Add this to the bottom of the `example()` function now as shown below:
+
+```js
+const { Builder, Browser, By } = require("selenium-webdriver");
+
+(async function example() {
+  const driver = await new Builder().forBrowser(Browser.FIREFOX).build();
+
+  driver.get(
+    "https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html",
+  );
+
+  const button = driver.findElement(By.css("button:nth-of-type(1)"));
+
+  button.getText().then((text) => {
+    console.log(`Button text is '${text}'`);
+  });
+})();
+```
 
 Making sure you are inside your project directory, try running the test:
 
@@ -307,38 +318,87 @@ node quick_test.js
 
 You should see the button's text label reported inside the console.
 
-Let's do something a bit more useful. Delete the previous code entry, then add this line at the bottom instead:
+Let's do something a bit more useful. Replace the previous code entry with this line of code, `button.click();` as shown below:
 
 ```js
-button.click();
+const { Builder, Browser, By } = require("selenium-webdriver");
+
+(async function example() {
+  const driver = await new Builder().forBrowser(Browser.FIREFOX).build();
+  driver.get(
+    "https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html",
+  );
+
+  const button = driver.findElement(By.css("button:nth-of-type(1)"));
+
+  button.click();
+})();
 ```
 
 Try running your test again; the button will be clicked, and the `alert()` popup should appear. At least we know the button is working!
 
-You can interact with the popup too. Add the following to the bottom of the code, and try testing it again:
+You can interact with the popup too. Update the `example()` function as follows, and try testing it again:
 
 ```js
-const alert = driver.switchTo().alert();
+const { Builder, Browser, By, until } = require("selenium-webdriver");
 
-alert.getText().then((text) => {
-  console.log(`Alert text is '${text}'`);
-});
+(async function example() {
+  const driver = await new Builder().forBrowser(Browser.FIREFOX).build();
 
-alert.accept();
+  driver.get(
+    "https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html",
+  );
+
+  const button = driver.findElement(By.css("button:nth-of-type(1)"));
+
+  button.click();
+
+  await driver.wait(until.alertIsPresent());
+
+  const alert = driver.switchTo().alert();
+
+  alert.getText().then((text) => {
+    console.log(`Alert text is '${text}'`);
+  });
+
+  alert.accept();
+})();
 ```
 
-Next, let's try entering some text into one of the form elements. Add the following code and try running your test again:
+Next, let's try entering some text into one of the form elements. Update the `example()` function as follows and try running your test again:
 
 ```js
-const input = driver.findElement(By.id("name"));
-input.sendKeys("Filling in my form");
+const { Builder, Browser, By, until } = require("selenium-webdriver");
+
+(async function example() {
+  const driver = await new Builder().forBrowser(Browser.FIREFOX).build();
+  driver.get(
+    "https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html",
+  );
+
+  const input = driver.findElement(By.id("name"));
+  input.sendKeys("Filling in my form");
+
+  const button = driver.findElement(By.css("button:nth-of-type(1)"));
+
+  button.click();
+  await driver.wait(until.alertIsPresent());
+
+  const alert = driver.switchTo().alert();
+
+  alert.getText().then((text) => {
+    console.log(`Alert text is '${text}'`);
+  });
+
+  alert.accept();
+})();
 ```
 
-You can submit key presses that can't be represented by normal characters using properties of the `webdriver.Key` object. For example, above we used this construct to tab out of the form input before submitting it:
+You can submit key presses that can't be represented by normal characters using properties of the `Key` object. For example, above we used this construct to tab out of the form input before submitting it:
 
 ```js
 driver.sleep(1000).then(() => {
-  driver.findElement(By.name("q")).sendKeys(webdriver.Key.TAB);
+  driver.findElement(By.name("q")).sendKeys(Key.TAB);
 });
 ```
 
@@ -362,22 +422,54 @@ driver.sleep(2000).then(() => {
 
 The `sleep()` method accepts a value that specifies the time to wait in milliseconds — the method returns a promise that resolves at the end of that time, at which point the code inside the `then()` executes. In this case we get the title of the current page with the `getTitle()` method, then return a pass or fail message depending on what its value is.
 
-We could add a `sleep()` method to our `quick_test.js` test too — try wrapping your last line of code in a block like this:
+We could add a `sleep()` method to our `quick_test.js` test too — try updating your `example()` function like this:
 
 ```js
-driver.sleep(2000).then(() => {
-  input.sendKeys("Filling in my form");
-  input.getAttribute("value").then((value) => {
-    if (value !== "") {
-      console.log("Form input editable");
-    }
-  });
-});
+const { Builder, Browser, By, until } = require("selenium-webdriver");
+
+const driver = new Builder().forBrowser("firefox").build();
+
+(async function example() {
+  try {
+    driver.get(
+      "https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html",
+    );
+
+    driver.sleep(2000).then(() => {
+      const input = driver.findElement(By.id("name"));
+
+      input.sendKeys("Filling in my form");
+      input.getAttribute("value").then((value) => {
+        if (value !== "") {
+          console.log("Form input editable");
+        }
+      });
+    });
+
+    const button = driver.findElement(By.css("button:nth-of-type(1)"));
+
+    button.click();
+
+    await driver.wait(until.alertIsPresent());
+
+    const alert = driver.switchTo().alert();
+
+    alert.getText().then((text) => {
+      console.log(`Alert text is '${text}'`);
+    });
+
+    alert.accept();
+  } finally {
+    await driver.sleep(4000); // Delay long enough to see search page!
+    driver.quit();
+  }
+})();
 ```
 
-WebDriver will now wait for 2 seconds before filling in the form field. We then test whether its value got filled in (i.e. is not empty) by using `getAttribute()` to retrieve it's `value` attribute value, and print a message to the console if it is not empty.
+WebDriver will now wait for 2 seconds before filling in the form field. We then test whether its value got filled in (i.e. is not empty) by using `getAttribute()` to retrieve its `value` attribute value, and print a message to the console if it is not empty.
 
-> **Note:** There is also a method called [`wait()`](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebDriver.html#wait), which repeatedly tests a condition for a certain length of time, and then carries on executing the code. This also makes use of the [util library](https://www.selenium.dev/selenium/docs/api/javascript/module/selenium-webdriver/lib/until.html), which defines common conditions to use along with `wait()`.
+> [!NOTE]
+> There is also a method called [`wait()`](https://www.selenium.dev/selenium/docs/api/javascript/WebDriver.html#wait), which repeatedly tests a condition for a certain length of time, and then carries on executing the code. This also makes use of the [util library](https://www.selenium.dev/selenium/docs/api/javascript/lib_until.js.html), which defines common conditions to use along with `wait()`.
 
 ### Shutting down drivers after use
 
@@ -430,9 +522,7 @@ Let's write an example:
 2. Give it the following contents:
 
    ```js
-   const webdriver = require("selenium-webdriver");
-   const By = webdriver.By;
-   const until = webdriver.until;
+   const { By, Builder } = require("selenium-webdriver");
 
    // username: Username can be found at automation dashboard
    const USERNAME = "{username}";
@@ -462,7 +552,7 @@ Let's write an example:
      const gridUrl = `https://${USERNAME}:${KEY}@${GRID_HOST}`;
 
      // setup and build selenium driver object
-     const driver = new webdriver.Builder()
+     const driver = new Builder()
        .usingServer(gridUrl)
        .withCapabilities(capabilities)
        .build();
@@ -470,12 +560,16 @@ Let's write an example:
      // navigate to a URL, search for a text and get title of page
      driver.get("https://www.google.com/ncr").then(function () {
        driver
-         .findElement(webdriver.By.name("q"))
+         .findElement(By.name("q"))
          .sendKeys("LambdaTest\n")
          .then(function () {
            driver.getTitle().then((title) => {
              setTimeout(() => {
-               console.log(title);
+               if (title === "LambdaTest - Google Search") {
+                 driver.executeScript("lambda-status=passed");
+               } else {
+                 driver.executeScript("lambda-status=failed");
+               }
                driver.quit();
              }, 5000);
            });
@@ -496,28 +590,17 @@ Let's write an example:
    The test will be sent to LambdaTest, and the output of your test will be reflected on your LambdaTest console.
    If you wish to extract these results for reporting purpose from LambdaTest platform then you can do so by using [LambdaTest restful API](https://www.lambdatest.com/blog/lambdatest-launches-api-for-selenium-automation/).
 
-5. Now if you go to your [LambdaTest Automation dashboard](https://www.lambdatest.com/selenium-automation), you'll see your test listed; from here you'll be able to see videos, screenshots, and other such data.
-   [![LambdaTest Automation Dashboard](automation-logs-1.jpg)](https://www.lambdatest.com/blog/wp-content/uploads/2019/02/Automation-logs-1.jpg)You can retrieve network, command, exception, and Selenium logs for every test within your test build. You will also find a video recording of your Selenium script execution.
+5. Now if you go to your [LambdaTest Automation dashboard](https://accounts.lambdatest.com/dashboard), you'll see your test listed; from here you'll be able to see videos, screenshots, and other such data.
+   You will also see a status of **passed** or **failed** instead of **completed**, because of the `if` or `else` blocks of code.
 
-> **Note:** The _HELP_ button on LambdaTest Automation Dashboard will provide you with an ample amount of information to help you get started with LambdaTest automation. You can also follow our documentation about [running first Selenium script in Node JS](https://www.lambdatest.com/support/docs/quick-guide-to-run-node-js-tests-on-lambdatest-selenium-grid/).
+   [![LambdaTest Automation Dashboard](automation-logs-1.jpg)](https://www.lambdatest.com/blog/wp-content/uploads/2019/02/Automation-logs-1.jpg)
+   You can retrieve network, command, exception, and Selenium logs for every test within your test build. You will also find a video recording of your Selenium script execution.
 
-> **Note:** If you don't want to write out the capabilities objects for your tests by hand, you can generate them using the [Selenium Desired Capabilities Generator](https://www.lambdatest.com/capabilities-generator/).
+> [!NOTE]
+> The _HELP_ button on LambdaTest Automation Dashboard will provide you with an ample amount of information to help you get started with LambdaTest automation. You can also follow our documentation about [running first Selenium script in Node JS](https://www.lambdatest.com/support/docs/quick-guide-to-run-node-js-tests-on-lambdatest-selenium-grid/).
 
-#### Filling in test details on LambdaTest programmatically
-
-When executing numerous automation tests, marking their status as passed or failed makes the task a lot easier.
-
-1. Use the below command for marking a status as **passed** on LambdaTest.
-
-   ```bash
-   driver.executeScript("lambda-status=passed");
-   ```
-
-2. Use the below command for marking a status as **failed** on LambdaTest.
-
-   ```bash
-   driver.executeScript("lambda-status=failed");
-   ```
+> [!NOTE]
+> If you don't want to write out the capabilities objects for your tests by hand, you can generate them using the [Selenium Desired Capabilities Generator](https://www.lambdatest.com/capabilities-generator/).
 
 ### BrowserStack
 
@@ -529,51 +612,47 @@ Let's write an example:
 2. Give it the following contents:
 
    ```js
-   const webdriver = require("selenium-webdriver");
-   const By = webdriver.By;
-   const until = webdriver.until;
+   const { Builder, By, Key } = require("selenium-webdriver");
+   const request = require("request");
 
    // Input capabilities
    const capabilities = {
-     browserName: "Firefox",
-     browser_version: "56.0 beta",
-     os: "OS X",
-     os_version: "Sierra",
-     resolution: "1280x1024",
-     "browserstack.user": "YOUR-USER-NAME",
-     "browserstack.key": "YOUR-ACCESS-KEY",
-     "browserstack.debug": "true",
-     build: "First build",
+     "bstack:options": {
+       os: "OS X",
+       osVersion: "Sonoma",
+       browserVersion: "17.0",
+       local: "false",
+       seleniumVersion: "3.14.0",
+       userName: "YOUR-USER-NAME",
+       accessKey: "YOUR-ACCESS-KEY",
+     },
+     browserName: "Safari",
    };
 
-   const driver = new webdriver.Builder()
+   const driver = new Builder()
      .usingServer("http://hub-cloud.browserstack.com/wd/hub")
      .withCapabilities(capabilities)
      .build();
 
-   driver.get("http://www.google.com");
-   driver.findElement(By.name("q")).sendKeys("webdriver");
-
-   driver.sleep(1000).then(() => {
-     driver.findElement(By.name("q")).sendKeys(webdriver.Key.TAB);
-   });
-
-   driver.findElement(By.name("btnK")).click();
-
-   driver.sleep(2000).then(() => {
-     driver.getTitle().then((title) => {
+   (async function bStackGoogleTest() {
+     try {
+       await driver.get("https://www.google.com/");
+       await driver.findElement(By.name("q")).sendKeys("webdriver", Key.RETURN);
+       await driver.sleep(2000);
+       const title = await driver.getTitle();
        if (title === "webdriver - Google Search") {
          console.log("Test passed");
        } else {
          console.log("Test failed");
        }
-     });
-   });
-
-   driver.quit();
+     } finally {
+       await driver.sleep(4000); // Delay long enough to see search page!
+       await driver.quit();
+     }
+   })();
    ```
 
-3. From your [BrowserStack automation dashboard](https://www.browserstack.com/automate), get your user name and access key (see _Username and Access Keys_). Replace the `YOUR-USER-NAME` and `YOUR-ACCESS-KEY` placeholders in the code with your actual user name and access key values (and make sure you keep them secure).
+3. From your [BrowserStack Account - Summary](https://www.browserstack.com/accounts/profile/details), get your user name and access key (see _Username and Access Keys_). Replace the `YOUR-USER-NAME` and `YOUR-ACCESS-KEY` placeholders in the code with your actual user name and access key values (and make sure you keep them secure).
 4. Run your test with the following command:
 
    ```bash
@@ -587,9 +666,11 @@ Let's write an example:
 
 If you click on the link for your test, you'll get to a new screen where you will be able to see a video recording of the test, and multiple detailed logs of information pertaining to it.
 
-> **Note:** The _Resources_ menu option on the Browserstack automation dashboard contains a wealth of useful information on using it to run automated tests. See [Node JS Documentation for writing automate test scripts in Node JS](https://www.browserstack.com/docs/automate/selenium/getting-started/nodejs) for the node-specific information. Explore the docs to find out all the useful things BrowserStack can do.
+> [!NOTE]
+> The _Resources_ menu option on the Browserstack automation dashboard contains a wealth of useful information on using it to run automated tests. See [Node JS Documentation for writing automate test scripts in Node JS](https://www.browserstack.com/docs/automate/selenium/getting-started/nodejs) for the node-specific information. Explore the docs to find out all the useful things BrowserStack can do.
 
-> **Note:** If you don't want to write out the capabilities objects for your tests by hand, you can generate them using the generators embedded in the docs. See [Run your first test](https://www.browserstack.com/docs/automate/selenium/getting-started/nodejs#run-your-first-test).
+> [!NOTE]
+> If you don't want to write out the capabilities objects for your tests by hand, you can generate them using the generators embedded in the docs. See [Run your first test](https://www.browserstack.com/docs/automate/selenium/getting-started/nodejs#run-your-first-test).
 
 #### Filling in BrowserStack test details programmatically
 
@@ -597,19 +678,25 @@ You can use the BrowserStack REST API and some other capabilities to annotate yo
 
 Let's update our `bstack_google_test.js` demo, to show how these features work:
 
-1. First, we'll need to import the node request module, so we can use it to send requests to the REST API. Add the following line at the very top of your code:
+1. Install the request module by running the following command inside your project directory:
+
+   ```js
+   npm install request
+   ```
+
+2. Then, we'll need to import the node request module, so we can use it to send requests to the REST API. Add the following line at the very top of your code:
 
    ```js
    const request = require("request");
    ```
 
-2. Now we'll update our `capabilities` object to include a project name — add the following line before the closing curly brace, remembering to add a comma at the end of the previous line (you can vary the build and project names to organize the tests in different windows in the BrowserStack automation dashboard):
+3. Now we'll update our `capabilities` object to include a project name — add the following line before the closing curly brace, remembering to add a comma at the end of the previous line (you can vary the build and project names to organize the tests in different windows in the BrowserStack automation dashboard):
 
    ```js
    'project' : 'Google test 2'
    ```
 
-3. Next we need to access the `sessionId` of the current session, so we know where to send the request (the ID is included in the request URL, as you'll see later). Include the following lines just below the block that creates the `driver` object (`let driver …`) :
+4. Next we need to access the `sessionId` of the current session, so we know where to send the request (the ID is included in the request URL, as you'll see later). Include the following lines just below the block that creates the `driver` object (`let driver …`) :
 
    ```js
    let sessionId;
@@ -619,7 +706,7 @@ Let's update our `bstack_google_test.js` demo, to show how these features work:
    });
    ```
 
-4. Finally, update the `driver.sleep(2000)` block near the bottom of the code to add REST API calls (again, replace the `YOUR-USER-NAME` and `YOUR-ACCESS-KEY` placeholders in the code with your actual user name and access key values):
+5. Finally, update the `driver.sleep(2000)` block near the bottom of the code to add REST API calls (again, replace the `YOUR-USER-NAME` and `YOUR-ACCESS-KEY` placeholders in the code with your actual user name and access key values):
 
    ```js
    driver.sleep(2000).then(() => {
@@ -651,7 +738,7 @@ Let's update our `bstack_google_test.js` demo, to show how these features work:
 
 These are fairly intuitive — once the test completes, we send an API call to BrowserStack to update the test with a passed or failed status, and a reason for the result.
 
-If you now go back to your [BrowserStack automation dashboard](https://www.browserstack.com/automate) page, you should see your test session available, as before, but with the updated data attached to it:
+If you now go back to your [BrowserStack automation dashboard](https://live.browserstack.com/dashboard) page, you should see your test session available, as before, but with the updated data attached to it:
 
 ![BrowserStack Custom Results](bstack_custom_results.png)
 
@@ -665,13 +752,11 @@ Let's write an example:
 2. Give it the following contents:
 
    ```js
-   const webdriver = require("selenium-webdriver");
-   const By = webdriver.By;
-   const until = webdriver.until;
+   const { Builder, By, Key } = require("selenium-webdriver");
    const username = "YOUR-USER-NAME";
    const accessKey = "YOUR-ACCESS-KEY";
 
-   const driver = new webdriver.Builder()
+   const driver = new Builder()
      .withCapabilities({
        browserName: "chrome",
        platform: "Windows XP",
@@ -689,7 +774,7 @@ Let's write an example:
    driver.findElement(By.name("q")).sendKeys("webdriver");
 
    driver.sleep(1000).then(() => {
-     driver.findElement(By.name("q")).sendKeys(webdriver.Key.TAB);
+     driver.findElement(By.name("q")).sendKeys(Key.TAB);
    });
 
    driver.findElement(By.name("btnK")).click();
@@ -719,9 +804,11 @@ Let's write an example:
 5. Now if you go to your [Sauce Labs Automated Test dashboard](https://app.saucelabs.com/dashboard/tests) page, you'll see your test listed; from here you'll be able to see videos, screenshots, and other such data.
    ![Sauce Labs automated test](sauce_labs_automated_test.png)
 
-> **Note:** Sauce Labs' [Platform Configurator](https://saucelabs.com/platform/platform-configurator#/) is a useful tool for generating capability objects to feed to your driver instances, based on what browser/OS you want to test on.
+> [!NOTE]
+> Sauce Labs' [Platform Configurator](https://saucelabs.com/products/platform-configurator#/) is a useful tool for generating capability objects to feed to your driver instances, based on what browser/OS you want to test on.
 
-> **Note:** for more useful details on testing with Sauce Labs and Selenium, check out [Getting Started with Selenium for Automated Website Testing](https://docs.saucelabs.com/web-apps/automated-testing/selenium/), and [Instant Selenium Node.js Tests](https://docs.saucelabs.com/web-apps/automated-testing/selenium/sample-scripts/#nodejs).
+> [!NOTE]
+> For more useful details on testing with Sauce Labs and Selenium, check out [Getting Started with Selenium for Automated Website Testing](https://docs.saucelabs.com/web-apps/automated-testing/selenium/), and [Instant Selenium Node.js Tests](https://docs.saucelabs.com/web-apps/automated-testing/selenium/sample-scripts/#nodejs).
 
 #### Filling in Sauce Labs test details programmatically
 
@@ -806,11 +893,11 @@ If you don't want to use a service like Sauce Labs or BrowserStack, you can alwa
 Now we've got the server running, let's create a demo test that will run on the remote selenium server.
 
 1. Create a copy of your `google_test.js` file, and call it `google_test_remote.js`; put it in your project directory.
-2. Update the second code block (which starts with `let driver = …`) like so
+2. Update the line of code (which starts with `const driver = …`) like so
 
    ```js
-   let driver = new webdriver.Builder()
-     .forBrowser("firefox")
+   const driver = new Builder()
+     .forBrowser(Browser.FIREFOX)
      .usingServer("http://localhost:4444/wd/hub")
      .build();
    ```
@@ -838,7 +925,8 @@ To get started, see for example:
 - [Using LambdaTest with Jenkins](https://www.lambdatest.com/support/docs/jenkins-with-lambdatest/)
 - [Using Sauce Labs with Travis CI](https://docs.travis-ci.com/user/sauce-connect/)
 
-> **Note:** If you wish to perform continuous testing with **codeless automation** then you can use [Endtest](https://endtest.io) or [TestingBot](https://testingbot.com).
+> [!NOTE]
+> If you wish to perform continuous testing with **codeless automation** then you can use [Endtest](https://www.endtest.io/) or [TestingBot](https://testingbot.com/).
 
 ## Summary
 

@@ -7,7 +7,7 @@ browser-compat: css.properties.transform-box
 
 {{CSSRef}}
 
-The **`transform-box`** CSS property defines the layout box to which the {{cssxref("transform")}}, individual transform properties {{cssxref("translate")}},{{cssxref("scale")}}, and {{cssxref("rotate")}}, and {{cssxref("transform-origin")}} properties relate.
+The **`transform-box`** [CSS](/en-US/docs/Web/CSS) property defines the layout box to which the {{cssxref("transform")}}, individual transform properties {{cssxref("translate")}}, {{cssxref("scale")}}, and {{cssxref("rotate")}}, and {{cssxref("transform-origin")}} properties relate.
 
 ## Syntax
 
@@ -32,9 +32,9 @@ The `transform-box` property is specified as one of the keyword values listed be
 ### Values
 
 - `content-box`
-  - : The content box is used as the reference box. The reference box of a {{htmlElement("table")}} is the border box of its table wrapper box, not its table box.
+  - : The content box is used as the reference box. The reference box of a {{htmlElement("table")}} is the border box of its [table wrapper box](/en-US/docs/Glossary/Table_Wrapper_Box), not its table box.
 - `border-box`
-  - : The border box is used as the reference box. The reference box of a {{htmlElement("table")}} is the border box of its table wrapper box, not its table box.
+  - : The border box is used as the reference box. The reference box of a {{htmlElement("table")}} is the border box of its [table wrapper box](/en-US/docs/Glossary/Table_Wrapper_Box), not its table box.
 - `fill-box`
   - : The object bounding box is used as the reference box. For elements with associated CSS layout box, acts as `content-box`.
 - `stroke-box`

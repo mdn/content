@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.HTMLVideoElement.requestPictureInPicture
 ---
 
-{{ APIRef("HTML DOM") }}
+{{APIRef("Picture-in-Picture API")}}
 
 The **{{domxref("HTMLVideoElement")}}** method
 **`requestPictureInPicture()`** issues an asynchronous request
@@ -14,8 +14,7 @@ to display the video in picture-in-picture mode.
 
 It's not guaranteed that the video will be put into picture-in-picture. If permission
 to enter that mode is granted, the returned {{jsxref("Promise")}} will resolve and the
-video will receive a {{domxref("HTMLVideoElement.enterpictureinpicture_event",
-  "enterpictureinpicture")}} event to let it know that it's now in picture-in-picture.
+video will receive a {{domxref("HTMLVideoElement.enterpictureinpicture_event", "enterpictureinpicture")}} event to let it know that it's now in picture-in-picture.
 
 ## Syntax
 
@@ -34,8 +33,14 @@ object that can be used to listen when a user will resize that floating window.
 
 ### Exceptions
 
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : Thrown if the feature is not supported (for example, disabled by a user preference or by a platform limitation).
 - `SecurityError` {{domxref("DOMException")}}
-  - : Use of this feature was blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+  - : Thrown if the feature is blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if the video element's `readState` is `HAVE_NOTHING`, or if the video element has no video track, or if the video element's `disablePictureInPicture` attribute is `true`.
+- `NotAllowedError` {{domxref("DOMException")}}
+  - : Thrown if `document.pictureInPictureElement` is `null` and the document does not have {{Glossary("transient activation")}}.
 
 ## Security
 

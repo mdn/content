@@ -6,7 +6,8 @@ page-type: how-to
 
 {{PWASidebar}}
 
-> **Warning:** The technique described here depends on the {{domxref("Window.beforeinstallprompt_event", "beforeinstallprompt")}} event, which is non-standard and currently only implemented in Chromium-based browsers.
+> [!WARNING]
+> The technique described here depends on the {{domxref("Window.beforeinstallprompt_event", "beforeinstallprompt")}} event, which is non-standard and currently only implemented in Chromium-based browsers.
 
 By default, if the user visits your website, and the browser determines that the site is [installable as a PWA](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#installability), then the browser will display some built-in UI — an icon in the URL bar, for example — to install the site. If the user clicks the icon, then the browser shows an install prompt containing, at a minimum, the app's [name](/en-US/docs/Web/Manifest/name) and [icon](/en-US/docs/Web/Manifest/icons). If the user agrees to install the app, then it will be installed.
 
@@ -136,4 +137,4 @@ window.addEventListener("beforeinstallprompt", async (event) => {
 
 - [Making PWAs installable](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable)
 - {{domxref("Window.beforeinstallprompt_event", "beforeinstallprompt")}} event
-- [How to provide your own in-app install experience](https://web.dev/customize-install/) on web.dev (2021)
+- [How to provide your own in-app install experience](https://web.dev/articles/customize-install) on web.dev (2021)

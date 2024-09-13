@@ -11,13 +11,17 @@ The **`getFullYear()`** method of {{jsxref("Date")}} instances returns the year 
 
 Use this method instead of the {{jsxref("Date/getYear", "getYear()")}} method.
 
-{{EmbedInteractiveExample("pages/js/date-getfullyear.html","shorter")}}
+{{EmbedInteractiveExample("pages/js/date-getfullyear.html", "shorter")}}
 
 ## Syntax
 
 ```js-nolint
 getFullYear()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

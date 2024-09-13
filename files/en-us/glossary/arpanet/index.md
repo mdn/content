@@ -11,3 +11,6 @@ The **ARPANET** (Advanced Research Projects Agency NETwork) was an early compute
 ## See also
 
 - [ARPANET](https://en.wikipedia.org/wiki/ARPANET) on Wikipedia
+- Related glossary terms:
+  - {{Glossary("arpa", ".arpa")}}
+  - {{Glossary("TCP")}}

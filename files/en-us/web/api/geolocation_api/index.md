@@ -40,6 +40,9 @@ For further information on Geolocation usage, read [Using the Geolocation API](/
   - : Represents the coordinates of a user's position; a `GeolocationCoordinates` instance contains latitude, longitude, and other important related information.
 - {{domxref("GeolocationPositionError")}}
   - : A `GeolocationPositionError` is returned by an unsuccessful call to one of the methods contained inside {{domxref("Geolocation")}}, inside an error callback, and contains an error code and message.
+
+### Extensions to other interfaces
+
 - {{domxref("Navigator.geolocation")}}
   - : The entry point into the API. Returns a {{domxref("Geolocation")}} object instance, from which all other functionality can be accessed.
 

@@ -32,7 +32,7 @@ Because there is no "+" operator to concatenate the string, JavaScript expects t
 argument for the `log` function to be just `"PI: "`. In that case,
 it should be terminated by a closing parenthesis.
 
-```js example-bad
+```js-nolint example-bad
 console.log("PI: " Math.PI);
 // SyntaxError: missing ) after argument list
 ```
@@ -44,7 +44,7 @@ console.log("PI: " + Math.PI);
 // "PI: 3.141592653589793"
 ```
 
-Alternatively, you can consider using a [template literal](/en-US/docs/Web/JavaScript/Reference/Template_literals), or take advantage of the fact that [`console.log`](/en-US/docs/Web/API/console/log) accepts multiple parameters:
+Alternatively, you can consider using a [template literal](/en-US/docs/Web/JavaScript/Reference/Template_literals), or take advantage of the fact that [`console.log`](/en-US/docs/Web/API/console/log_static) accepts multiple parameters:
 
 ```js example-good
 console.log(`PI: ${Math.PI}`);
@@ -53,14 +53,14 @@ console.log("PI:", Math.PI);
 
 ### Unterminated strings
 
-```js example-bad
+```js-nolint example-bad
 console.log('"Java" + "Script" = \"' + "Java" + 'Script\");
 // SyntaxError: missing ) after argument list
 ```
 
 Here JavaScript thinks that you meant to have `);` inside the string and
 ignores it, and it ends up not knowing that you meant the `);` to end the
-function `console.log`. To fix this, we could put a`'` after the
+function `console.log`. To fix this, we could put a `'` after the
 "Script" string:
 
 ```js example-good
@@ -70,4 +70,4 @@ console.log('"Java" + "Script" = "' + "Java" + 'Script"');
 
 ## See also
 
-- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions)
+- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions) guide

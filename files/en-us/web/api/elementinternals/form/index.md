@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.ElementInternals.form
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("Web Components")}}
 
 The **`form`** read-only property of the {{domxref("ElementInternals")}} interface returns the {{domxref("HTMLFormElement")}} associated with this element.
 

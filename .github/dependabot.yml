@@ -6,8 +6,16 @@ updates:
     schedule:
       interval: daily
     open-pull-requests-limit: 10
+    labels:
+      - "automated pr"
+      - "dependencies"
+      - "javascript"
 
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "daily"
+    labels:
+      - "automated pr"
+      - "dependencies"
+      - "github actions"

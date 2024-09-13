@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Map.entries
 
 {{JSRef}}
 
-The **`entries()`** method returns a new _[map iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that contains the `[key, value]` pairs for each element in the `Map` object in insertion order.
+The **`entries()`** method of {{jsxref("Map")}} instances returns a new _[map iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that contains the `[key, value]` pairs for each element in this map in insertion order.
 
 {{EmbedInteractiveExample("pages/js/map-prototype-entries.html")}}
 
@@ -16,6 +16,10 @@ The **`entries()`** method returns a new _[map iterator](/en-US/docs/Web/JavaScr
 ```js-nolint
 entries()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

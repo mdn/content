@@ -38,7 +38,7 @@ alert("Hello world!");
 
 Both produce:
 
-![Black alert dialog box. At the top left small circle icon follow by white open and close brackets containing this white text: JavaScript application. Below on the left, a Hello world! white text. And on the bottom right a small blue button. The button's text is: ok in black.](alerthelloworld.png)
+![Black alert dialog box. At the top left small circle icon follow by white open and close square brackets containing this white text: JavaScript application. Below on the left, a Hello world! white text. And on the bottom right a small blue button. The button's text is: ok in black.](alerthelloworld.png)
 
 ## Notes
 

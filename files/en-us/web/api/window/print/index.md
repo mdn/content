@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Window.print
 ---
 
-{{ ApiRef() }}
+{{APIRef}}
 
 Opens the print dialog to print the current document.
 
@@ -38,6 +38,6 @@ None ({{jsxref("undefined")}}).
 
 ## See also
 
-- [Printing](/en-US/docs/Web/Guide/Printing)
+- [Printing](/en-US/docs/Web/CSS/CSS_media_queries/Printing)
 - {{ domxref("window.beforeprint_event", "beforeprint") }} event
 - {{ domxref("window.afterprint_event", "afterprint") }} event

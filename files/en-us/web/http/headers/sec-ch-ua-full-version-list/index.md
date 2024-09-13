@@ -38,7 +38,8 @@ The header therefore allows the server to customize its response based on both s
 The header may include "fake" brands in any position and with any name.
 This is a feature designed to prevent servers from rejecting unknown user agents outright, forcing user agents to lie about their brand identity.
 
-> **Note:** This is similar to {{HTTPHeader("Sec-CH-UA")}}, but includes the full version number instead of the significant version number for each brand.
+> [!NOTE]
+> This is similar to {{HTTPHeader("Sec-CH-UA")}}, but includes the full version number instead of the significant version number for each brand.
 
 ## Syntax
 
@@ -90,6 +91,6 @@ Sec-CH-UA-Platform: "Linux"
 
 - [Client hints](/en-US/docs/Web/HTTP/Client_hints)
 - [User-Agent Client Hints API](/en-US/docs/Web/API/User-Agent_Client_Hints_API)
-- [Improving user privacy and developer experience with User-Agent Client Hints](https://web.dev/user-agent-client-hints/) (web.dev)
+- [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)
 - {{HTTPHeader("Accept-CH")}}
 - [HTTP Caching > Vary](/en-US/docs/Web/HTTP/Caching#vary) and {{HTTPHeader("Vary")}}

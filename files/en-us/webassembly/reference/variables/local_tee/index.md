@@ -1,6 +1,7 @@
 ---
 title: Local tee
 slug: WebAssembly/Reference/Variables/Local_tee
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

@@ -4,7 +4,7 @@ slug: Web/API/WebGL_API/By_example/Simple_color_animation
 page-type: guide
 ---
 
-{{PreviousNext("Learn/WebGL/By_example/Clearing_by_clicking","Learn/WebGL/By_example/Color_masking")}}
+{{DefaultAPISidebar("WebGL")}}{{PreviousNext("Learn/WebGL/By_example/Clearing_by_clicking","Learn/WebGL/By_example/Color_masking")}}
 
 A very basic color animation created using {{Glossary("WebGL")}}, performed by clearing the drawing buffer with a different random color every second.
 
@@ -80,7 +80,7 @@ window.addEventListener(
       // Stop animation by clearing the timer.
       clearInterval(timer);
     }
-    // Call stopAnimation() once to setup the initial event
+    // Call stopAnimation() once to set up the initial event
     // handlers for canvas and button.
     stopAnimation({ type: "click" });
 

@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.TransformStream
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`TransformStream`** interface of the [Streams API](/en-US/docs/Web/API/Streams_API) represents a concrete implementation of the [pipe chain](/en-US/docs/Web/API/Streams_API/Concepts#pipe_chains) _transform stream_ concept.
 
@@ -180,4 +180,4 @@ Note that this is not resilient to other influences.
 ## See also
 
 - [WHATWG Stream Visualizer](https://whatwg-stream-visualizer.glitch.me/), for a basic visualization of readable, writable, and transform streams.
-- [Streams—The Definitive Guide](https://web.dev/streams/)
+- [Streams—The Definitive Guide](https://web.dev/articles/streams)

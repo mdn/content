@@ -21,7 +21,7 @@ for (variable in object)
 ### Parameters
 
 - `variable`
-  - : Receives a string property name on each iteration. May be either a declaration with [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const), [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), or [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var), or an [assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment) target (e.g. a previously declared variable or an object property). Variables declared with `var` are not local to the loop, i.e. they are in the same scope the `for...in` loop is in.
+  - : Receives a string property name on each iteration. May be either a declaration with [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const), [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let), or [`var`](/en-US/docs/Web/JavaScript/Reference/Statements/var), or an [assignment](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment) target (e.g. a previously declared variable, an object property, or a [destructuring assignment pattern](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)). Variables declared with `var` are not local to the loop, i.e. they are in the same scope the `for...in` loop is in.
 - `object`
   - : Object whose non-symbol enumerable properties are iterated over.
 - `statement`
@@ -30,6 +30,11 @@ for (variable in object)
 ## Description
 
 The loop will iterate over all enumerable properties of the object itself and those the object inherits from its prototype chain (properties of nearer prototypes take precedence over those of prototypes further away from the object in its prototype chain).
+
+Like other looping statements, you can use [control flow statements](/en-US/docs/Web/JavaScript/Reference/Statements#control_flow) inside `statement`:
+
+- {{jsxref("Statements/break", "break")}} stops `statement` execution and goes to the first statement after the loop.
+- {{jsxref("Statements/continue", "continue")}} stops `statement` execution and goes to the next iteration of the loop.
 
 A `for...in` loop only iterates over enumerable, non-symbol properties. Objects created from built–in constructors like `Array` and `Object` have inherited non–enumerable properties from `Array.prototype` and `Object.prototype`, such as {{jsxref("Array")}}'s {{jsxref("Array/indexOf", "indexOf()")}} method or {{jsxref("Object")}}'s {{jsxref("Object/toString", "toString()")}} method, which will not be visited in the `for...in` loop.
 
@@ -71,8 +76,8 @@ It is better to use a {{jsxref("Statements/for", "for")}} loop with a numeric in
 
 If you only want to consider properties attached to the object itself, and not its prototypes, you can use one of the following techniques:
 
-- {{jsxref("Object.keys", "Object.keys(myObject)")}}
-- {{jsxref("Object.getOwnPropertyNames", "Object.getOwnPropertyNames(myObject)")}}
+- {{jsxref("Object.keys()")}}
+- {{jsxref("Object.getOwnPropertyNames()")}}
 
 `Object.keys` will return a list of enumerable own string properties, while `Object.getOwnPropertyNames` will also contain non-enumerable ones.
 
@@ -99,7 +104,7 @@ for (const prop in obj) {
 
 ### Iterating own properties
 
-The following function illustrates the use of {{jsxref("Object.hasOwn", "Object.hasOwn()")}}: the inherited properties are not displayed.
+The following function illustrates the use of {{jsxref("Object.hasOwn()")}}: the inherited properties are not displayed.
 
 ```js
 const triangle = { a: 1, b: 2, c: 3 };
@@ -124,7 +129,8 @@ for (const prop in obj) {
 
 ### Concurrent modification
 
-> **Warning:** You should not write code like this yourself. It is only included here to illustrate the behavior of `for...in` in some corner cases.
+> [!WARNING]
+> You should not write code like this yourself. It is only included here to illustrate the behavior of `for...in` in some corner cases.
 
 Properties added to the current object during iteration are never visited:
 

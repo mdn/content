@@ -29,7 +29,7 @@ The **`InkPresenter`** interface of the [Ink API](/en-US/docs/Web/API/Ink_API) p
 
 In this example, we draw a trail onto a 2D canvas. Near the start of the code, we call {{domxref("Ink.requestPresenter()")}}, passing it the canvas as the presentation area for it to take care of and storing the promise it returns in the `presenter` variable.
 
-Later on, in the `pointermove` event listener, the new position of the trailhead is drawn onto the canvas each time the event fires. In addition, the {{domxref("InkPresenter")}} object returned when the `presenter` promise fulfills has its {{domxref("InkPresenter.updateInkTrailStartPoint", "updateInkTrailStartPoint()")}} method invoked; this is passed:
+Later on, in the `pointermove` event listener, the new position of the trailhead is drawn onto the canvas each time the event fires. In addition, the `InkPresenter` object returned when the `presenter` promise fulfills has its {{domxref("InkPresenter.updateInkTrailStartPoint", "updateInkTrailStartPoint()")}} method invoked; this is passed:
 
 - The last trusted pointer event representing the rendering point for the current frame.
 - A `style` object containing color and diameter settings.
@@ -40,7 +40,7 @@ The result is that a delegated ink trail is drawn ahead of the default browser r
 const ctx = canvas.getContext("2d");
 let presenter = navigator.ink.requestPresenter({ presentationArea: canvas });
 let move_cnt = 0;
-let style = { color: "rgba(0, 0, 255, 1)", diameter: 10 };
+let style = { color: "rgb(0 0 255 / 100%)", diameter: 10 };
 
 function getRandomInt(min, max) {
   min = Math.ceil(min);
@@ -56,10 +56,13 @@ canvas.addEventListener("pointermove", (evt) => {
     let r = getRandomInt(0, 255);
     let g = getRandomInt(0, 255);
     let b = getRandomInt(0, 255);
-    style = { color: "rgba(" + r + ", " + g + ", " + b + ", 1)", diameter: 10 };
+    style = {
+      color: "rgb(" + r + " " + g + " " + b + " / 100%)",
+      diameter: 10,
+    };
     move_cnt = 0;
     document.getElementById("div").style.backgroundColor =
-      "rgba(" + r + ", " + g + ", " + b + ", 1)";
+      "rgb(" + r + " " + g + " " + b + " / 100%)";
   }
   move_cnt += 1;
   presenter.then(function (v) {
@@ -76,7 +79,8 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 ```
 
-> **Note:** See this example running live — [Delegated ink trail](https://mabian-ms.github.io/delegated-ink-trail.html).
+> [!NOTE]
+> See this example running live — [Delegated ink trail](https://mabian-ms.github.io/delegated-ink-trail.html).
 
 ## Specifications
 

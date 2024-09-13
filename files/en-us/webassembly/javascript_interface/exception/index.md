@@ -1,10 +1,11 @@
 ---
 title: WebAssembly.Exception
 slug: WebAssembly/JavaScript_interface/Exception
-browser-compat: javascript.builtins.WebAssembly.Exception
+page-type: webassembly-interface
+browser-compat: webassembly.api.Exception
 ---
 
-{{WebAssemblySidebar}}
+{{WebAssemblySidebar}} {{AvailableInWorkers}}
 
 The **`WebAssembly.Exception`** object represents a runtime exception thrown from WebAssembly to JavaScript, or thrown from JavaScript to a WebAssembly exception handler.
 
@@ -19,8 +20,6 @@ Without the matching tag, exceptions can be caught and re-thrown, but they can't
 In order to make exception-throwing faster, exceptions thrown from WebAssembly generally do not include a stack trace.
 WebAssembly code that needs to provide a stack trace must call a JavaScript function to create the exception, passing `options.traceStack=true` parameter in the constructor.
 The constructor may then return an exception with a stack trace attached to the [`stack`](/en-US/docs/WebAssembly/JavaScript_interface/Exception/stack) property.
-
-{{AvailableInWorkers}}
 
 ## Constructor
 
@@ -71,7 +70,7 @@ Consider the following WebAssembly code, which is assumed to be compiled to a fi
 )
 ```
 
-The code below calls [`WebAssembly.instantiateStreaming`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming) to import the **example.wasm** file, passing in an "import object" (`importObject`) that includes a new [`WebAssembly.Tag`](/en-US/docs/WebAssembly/JavaScript_interface/Tag) named `tagToImport`.
+The code below calls [`WebAssembly.instantiateStreaming`](/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) to import the **example.wasm** file, passing in an "import object" (`importObject`) that includes a new [`WebAssembly.Tag`](/en-US/docs/WebAssembly/JavaScript_interface/Tag) named `tagToImport`.
 The import object defines an object with properties that match the `import` statement in the WebAssembly code.
 
 Once the file is instantiated, the code calls the exported WebAssembly `run()` method, which will immediately throw an exception.

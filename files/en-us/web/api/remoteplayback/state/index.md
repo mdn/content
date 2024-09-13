@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.RemotePlayback.state
 ---
 
-{{DefaultAPISidebar("Remote Playback API")}}
+{{APIRef("Remote Playback API")}}
 
 The **`state`** read-only property of the {{domxref("RemotePlayback")}} interface returns the current state of the `RemotePlayback` connection.
 
@@ -23,7 +23,7 @@ One of:
 
 ## Examples
 
-In the following example the value of {{domxref("RemotePlayback.state")}} is printed to the console when the user agent successfully connects.
+In the following example the value of `RemotePlayback.state` is printed to the console when the user agent successfully connects.
 
 ```js
 RemotePlayback.onconnect = () => {

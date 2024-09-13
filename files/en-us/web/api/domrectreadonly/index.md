@@ -7,36 +7,36 @@ browser-compat: api.DOMRectReadOnly
 
 {{APIRef("Geometry Interfaces")}}
 
-The **`DOMRectReadOnly`** interface specifies the standard properties used by {{domxref("DOMRect")}} to define a rectangle whose properties are immutable.
+The **`DOMRectReadOnly`** interface specifies the standard properties (also used by {{domxref("DOMRect")}}) to define a rectangle whose properties are immutable.
 
 ## Constructor
 
 - {{domxref("DOMRectReadOnly.DOMRectReadOnly","DOMRectReadOnly()")}}
-  - : Defined to create a new `DOMRectReadOnly` object. Note that this constructor cannot be called by 3rd party JavaScript; doing so returns an `"Illegal constructor"` {{jsxref('TypeError')}}.
+  - : Defined to create a new `DOMRectReadOnly` object.
 
 ## Instance properties
 
 - {{domxref("DOMRectReadOnly.x")}} {{ReadOnlyInline}}
-  - : The x coordinate of the `DOMRect`'s origin.
+  - : Returns the x coordinate of the `DOMRectReadOnly`'s origin.
 - {{domxref("DOMRectReadOnly.y")}} {{ReadOnlyInline}}
-  - : The y coordinate of the `DOMRect`'s origin.
+  - : Returns the y coordinate of the `DOMRectReadOnly`'s origin.
 - {{domxref("DOMRectReadOnly.width")}} {{ReadOnlyInline}}
-  - : The width of the `DOMRect`.
+  - : Returns the width of the `DOMRectReadOnly`.
 - {{domxref("DOMRectReadOnly.height")}} {{ReadOnlyInline}}
-  - : The height of the `DOMRect`.
+  - : Returns the height of the `DOMRectReadOnly`.
 - {{domxref("DOMRectReadOnly.top")}} {{ReadOnlyInline}}
-  - : Returns the top coordinate value of the `DOMRect` (usually the same as `y`).
+  - : Returns the top coordinate value of the `DOMRectReadOnly` (usually the same as `y`).
 - {{domxref("DOMRectReadOnly.right")}} {{ReadOnlyInline}}
-  - : Returns the right coordinate value of the `DOMRect` (usually the same as `x + width`).
+  - : Returns the right coordinate value of the `DOMRectReadOnly` (usually the same as `x + width`).
 - {{domxref("DOMRectReadOnly.bottom")}} {{ReadOnlyInline}}
-  - : Returns the bottom coordinate value of the `DOMRect` (usually the same as `y + height`).
+  - : Returns the bottom coordinate value of the `DOMRectReadOnly` (usually the same as `y + height`).
 - {{domxref("DOMRectReadOnly.left")}} {{ReadOnlyInline}}
-  - : Returns the left coordinate value of the `DOMRect` (usually the same as `x`).
+  - : Returns the left coordinate value of the `DOMRectReadOnly` (usually the same as `x`).
 
 ## Static methods
 
 - {{domxref("DOMRectReadOnly/fromRect_static", "DOMRectReadOnly.fromRect()")}}
-  - : Creates a new `DOMRect` object with a given location and dimensions.
+  - : Creates a new `DOMRectReadOnly` object with a given location and dimensions.
 
 ## Specifications
 

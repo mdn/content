@@ -9,22 +9,22 @@ browser-compat: api.Element.after
 {{APIRef("DOM")}}
 
 The **`Element.after()`** method inserts a set of
-{{domxref("Node")}} or string objects in the children list of the
+{{domxref("Node")}} objects or strings in the children list of the
 `Element`'s parent, just after the `Element`.
-String objects are inserted as equivalent {{domxref("Text")}} nodes.
+Strings are inserted as equivalent {{domxref("Text")}} nodes.
 
 ## Syntax
 
 ```js-nolint
 after(node1)
 after(node1, node2)
-after(node1, node2, /* … ,*/ nodeN)
+after(node1, node2, /* …, */ nodeN)
 ```
 
 ### Parameters
 
 - `node1`, …, `nodeN`
-  - : A set of {{domxref("Node")}} or string objects to insert.
+  - : A set of {{domxref("Node")}} objects or strings to insert.
 
 ### Return value
 

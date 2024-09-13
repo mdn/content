@@ -14,7 +14,7 @@ On a related note, any attribute in an LRE and some attributes of a limited numb
 <xsl:variable name="image-dir">/images</xsl:variable>
 ```
 
-The expression to be evaluated is placed inside curly brackets:
+The expression to be evaluated is placed inside curly braces:
 
 ```xml
 <img src="{$image-dir}/mygraphic.jpg"/>

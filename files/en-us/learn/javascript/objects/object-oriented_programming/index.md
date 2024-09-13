@@ -8,7 +8,8 @@ page-type: learn-module-chapter
 
 Object-oriented programming (OOP) is a programming paradigm fundamental to many programming languages, including Java and C++. In this article, we'll provide an overview of the basic concepts of OOP. We'll describe three main concepts: **classes and instances**, **inheritance**, and **encapsulation**. For now, we'll describe these concepts without reference to JavaScript in particular, so all the examples are given in {{Glossary("Pseudocode", "pseudocode")}}.
 
-> **Note:** To be precise, the features described here are of a particular style of OOP called **class-based** or "classical" OOP. When people talk about OOP, this is generally the type that they mean.
+> [!NOTE]
+> To be precise, the features described here are of a particular style of OOP called **class-based** or "classical" OOP. When people talk about OOP, this is generally the type that they mean.
 
 After that, in JavaScript, we'll look at how constructors and the prototype chain relate to these OOP concepts, and how they differ. In the next article, we'll look at some additional features of JavaScript that make it easier to implement object-oriented programs.
 
@@ -47,7 +48,7 @@ So `Professor` could be a **class** in our system. The definition of the class l
 
 In pseudocode, a `Professor` class could be written like this:
 
-```
+```plain
 class Professor
     properties
         name
@@ -66,7 +67,7 @@ On its own, a class doesn't do anything: it's a kind of template for creating co
 
 Generally, the constructor is written out as part of the class definition, and it usually has the same name as the class itself:
 
-```
+```plain
 class Professor
     properties
         name
@@ -101,7 +102,7 @@ Suppose in our school we also want to represent students. Unlike professors, stu
 
 However, students do have a name and may also want to introduce themselves, so we might write out the definition of a student class like this:
 
-```
+```plain
 class Student
     properties
         name
@@ -116,7 +117,7 @@ It would be helpful if we could represent the fact that students and professors 
 
 We start by observing that students and professors are both people, and people have names and want to introduce themselves. We can model this by defining a new class `Person`, where we define all the common properties of people. Then, `Professor` and `Student` can both **derive** from `Person`, adding their extra properties:
 
-```
+```plain
 class Person
     properties
         name
@@ -180,7 +181,7 @@ if (student.year > 1) {
 
 The problem is, if we decide to change the criteria for allowing students to study archery - for example by also requiring the parent or guardian to give their permission - we'd need to update every place in our system that performs this test. It would be better to have a `canStudyArchery()` method on `Student` objects, that implements the logic in one place:
 
-```
+```plain
 class Student : extends Person
     properties
        year
@@ -201,7 +202,7 @@ That way, if we want to change the rules about studying archery, we only have to
 
 In many OOP languages, we can prevent other code from accessing an object's internal state by marking some properties as `private`. This will generate an error if code outside the object tries to access them:
 
-```
+```plain
 class Student : extends Person
     properties
        private year

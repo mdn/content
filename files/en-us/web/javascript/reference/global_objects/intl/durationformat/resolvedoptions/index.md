@@ -2,12 +2,10 @@
 title: Intl.DurationFormat.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat/resolvedOptions
 page-type: javascript-instance-method
-status:
-  - experimental
 browser-compat: javascript.builtins.Intl.DurationFormat.resolvedOptions
 ---
 
-{{JSRef}} {{SeeCompatTable}}
+{{JSRef}}
 
 The **`resolvedOptions()`** method of {{jsxref("Intl.DurationFormat")}} instances returns a new object with properties reflecting the locale and date and time formatting options computed during initialization of this {{jsxref("Intl.DurationFormat")}} object.
 
@@ -16,6 +14,10 @@ The **`resolvedOptions()`** method of {{jsxref("Intl.DurationFormat")}} instance
 ```js-nolint
 resolvedOptions()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

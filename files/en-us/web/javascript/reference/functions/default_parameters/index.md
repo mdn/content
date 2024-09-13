@@ -14,7 +14,7 @@ browser-compat: javascript.functions.default_parameters
 ## Syntax
 
 ```js-nolint
-function fnName(param1 = defaultValue1, /* … ,*/ paramN = defaultValueN) {
+function fnName(param1 = defaultValue1, /* …, */ paramN = defaultValueN) {
   // …
 }
 ```
@@ -69,7 +69,8 @@ f(); // [1, undefined]
 f(2); // [2, undefined]
 ```
 
-> **Note:** The first default parameter and all parameters after it will not contribute to the function's [`length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length).
+> [!NOTE]
+> The first default parameter and all parameters after it will not contribute to the function's [`length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/length).
 
 The default parameter initializers live in their own scope, which is a parent of the scope created for the function body.
 
@@ -99,11 +100,22 @@ f(); // undefined
 f(5); // 5
 ```
 
+The default parameter allows any expression, but you cannot use {{jsxref("Operators/await", "await")}} or {{jsxref("Operators/yield", "yield")}} that would pause the evaluation of the default expression. The parameter must be initialized _synchronously_.
+
+```js example-bad
+async function f(a = await Promise.resolve(1)) {
+  return a;
+}
+```
+
+> [!NOTE]
+> Because the default parameter is evaluated when the function is called, not when the function is defined, the validity of the `await` and `yield` operators depends on the function itself, not its surrounding function. For example, if the current function is not `async`, `await` will be parsed as an identifier and follow normal [identifier syntax rules](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#identifiers), even when this function is nested in an `async` function.
+
 ## Examples
 
 ### Passing undefined vs. other falsy values
 
-In the second call in this example, even if the first argument is set explicitly to `undefined` (though not `null` or other {{glossary("falsy")}} values), the value of the `num` argument is still the default.
+In the second call in this example, even if the first argument is set explicitly to `undefined` (though not `null` or other {{Glossary("falsy")}} values), the value of the `num` argument is still the default.
 
 ```js
 function test(num = 1) {
@@ -183,6 +195,7 @@ function withDefaults(
 
 function withoutDefaults(a, b, c, d, e, f, g) {
   switch (arguments.length) {
+    case 0:
     case 1:
       b = 5;
     case 2:
@@ -242,7 +255,7 @@ preFilledObject({ z: 2 }); // 2
 
 ## See also
 
-- [Functions guide](/en-US/docs/Web/JavaScript/Guide/Functions)
+- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions) guide
 - [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
 - [Rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters)
 - [Nullish coalescing operator (`??`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)

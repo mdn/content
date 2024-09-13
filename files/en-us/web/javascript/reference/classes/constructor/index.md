@@ -9,7 +9,8 @@ browser-compat: javascript.classes.constructor
 
 The **`constructor`** method is a special method of a [class](/en-US/docs/Web/JavaScript/Reference/Classes) for creating and initializing an object instance of that class.
 
-> **Note:** This page introduces the `constructor` syntax. For the `constructor` property present on all objects, see {{jsxref("Object.prototype.constructor")}}.
+> [!NOTE]
+> This page introduces the `constructor` syntax. For the `constructor` property present on all objects, see {{jsxref("Object.prototype.constructor")}}.
 
 {{EmbedInteractiveExample("pages/js/classes-constructor.html")}}
 
@@ -19,7 +20,7 @@ The **`constructor`** method is a special method of a [class](/en-US/docs/Web/Ja
 constructor() { /* … */ }
 constructor(argument0) { /* … */ }
 constructor(argument0, argument1) { /* … */ }
-constructor(argument0, argument1, /* … ,*/ argumentN) { /* … */ }
+constructor(argument0, argument1, /* …, */ argumentN) { /* … */ }
 ```
 
 There are some additional syntax restrictions:
@@ -50,19 +51,20 @@ otto.introduce(); // Hello, my name is Otto
 If you don't provide your own constructor, then a default constructor will be supplied for you.
 If your class is a base class, the default constructor is empty:
 
-```js
+```js-nolint
 constructor() {}
 ```
 
 If your class is a derived class, the default constructor calls the parent constructor, passing along any arguments that were provided:
 
-```js
+```js-nolint
 constructor(...args) {
   super(...args);
 }
 ```
 
-> **Note:** The difference between an explicit constructor like the one above and the default constructor is that the latter doesn't actually invoke [the array iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator) through [argument spreading](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax).
+> [!NOTE]
+> The difference between an explicit constructor like the one above and the default constructor is that the latter doesn't actually invoke [the array iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator) through [argument spreading](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax).
 
 That enables code like this to work:
 
@@ -165,7 +167,7 @@ class ChildClass extends ParentClass {
 console.log(new ChildClass()); // TypeError: Derived constructors may only return object or undefined
 ```
 
-If the parent class constructor returns an object, that object will be used as the `this` value on which [class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) of the derived class will be defined. This trick is called ["return overriding"](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields#returning_overriding_object), which allows a derived class's fields (including [private](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields) ones) to be defined on unrelated objects.
+If the parent class constructor returns an object, that object will be used as the `this` value on which [class fields](/en-US/docs/Web/JavaScript/Reference/Classes/Public_class_fields) of the derived class will be defined. This trick is called ["return overriding"](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties#returning_overriding_object), which allows a derived class's fields (including [private](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) ones) to be defined on unrelated objects.
 
 The `constructor` follows normal [method](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions) syntax, so [parameter default values](/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters), [rest parameters](/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters), etc. can all be used.
 
@@ -183,7 +185,7 @@ const person = new Person();
 person.introduce(); // Hello, my name is Anonymous
 ```
 
-The constructor must be a literal name. Computed properties cannot become constructors.
+The constructor must be a literal name. [Computed properties](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names) cannot become constructors.
 
 ```js
 class Foo {
@@ -280,7 +282,7 @@ console.log(newInstance.name); // Rectangle
 
 ## See also
 
-- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes)
+- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes) guide
 - [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
 - [Static initialization blocks](/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)
 - {{jsxref("Statements/class", "class")}}

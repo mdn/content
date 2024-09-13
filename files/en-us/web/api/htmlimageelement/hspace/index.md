@@ -30,7 +30,8 @@ The value specified for `hspace` is mapped to the {{cssxref("margin-left")}}
 and {{cssxref("margin-right")}} properties to specify the width of those margins in
 pixels.
 
-> **Warning:** This property is obsolete. You should instead use the CSS
+> [!WARNING]
+> This property is obsolete. You should instead use the CSS
 > {{cssxref("margin")}} property and its longhand forms to establish margins around
 > an `<img>`.
 

@@ -65,7 +65,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 </template>
 ```
 
-> **Note:** You can see this complete example in action at [element-details](https://github.com/mdn/web-components-examples/tree/main/element-details) (see it [running live](https://mdn.github.io/web-components-examples/element-details/)). In addition, you can find an explanation at [Using templates and slots](/en-US/docs/Web/API/Web_components/Using_templates_and_slots).
+> [!NOTE]
+> You can see this complete example in action at [element-details](https://github.com/mdn/web-components-examples/tree/main/element-details) (see it [running live](https://mdn.github.io/web-components-examples/element-details/)). In addition, you can find an explanation at [Using templates and slots](/en-US/docs/Web/API/Web_components/Using_templates_and_slots).
 
 ## Technical summary
 
@@ -101,7 +102,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
     </tr>
     <tr>
       <th scope="row">Tag omission</th>
-      <td>{{no_tag_omission}}</td>
+      <td>None, both the starting and ending tag are mandatory.</td>
     </tr>
     <tr>
       <th scope="row">Permitted parents</th>
@@ -138,3 +139,10 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- HTML {{HTMLElement("template")}} element
+- HTML [`slot`](/en-US/docs/Web/HTML/Global_attributes/slot) attribute
+- CSS {{CSSXref("::slotted")}} pseudo-element
+- [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module

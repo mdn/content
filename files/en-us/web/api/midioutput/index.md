@@ -19,7 +19,7 @@ _This interface doesn't implement any specific properties, but inherits properti
 
 _This interface also inherits methods from {{domxref("MIDIPort")}}._
 
-- {{domxref("MIDIoutput.send()")}}
+- {{domxref("MIDIOutput.send()")}}
   - : Queues a message to be sent to the MIDI port.
 - {{domxref("MIDIOutput.clear()")}}
   - : Clears any pending send data from the queue.

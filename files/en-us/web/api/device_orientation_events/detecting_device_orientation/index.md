@@ -7,7 +7,7 @@ browser-compat:
   - api.DeviceOrientationEvent
 ---
 
-{{DefaultAPISidebar("Device Orientation Events")}} {{securecontext_header}}
+{{DefaultAPISidebar("Device Orientation Events")}}{{securecontext_header}}
 
 Increasingly, web-enabled devices are capable of determining their **orientation**; that is, they can report data indicating changes to their orientation with relation to the pull of gravity. In particular, hand-held devices such as mobile phones can use this information to automatically rotate the display to remain upright, presenting a wide-screen view of the web content when the device is rotated so that its width is greater than its height.
 
@@ -19,13 +19,11 @@ The second event is the {{domxref("DeviceMotionEvent")}}, which is sent when a c
 
 All you need to do in order to begin receiving orientation change is to listen to the {{domxref("Window.deviceorientation_event", "deviceorientation")}} event:
 
-> **Note:** [parallax](https://github.com/wagerfield/parallax) is a polyfill for normalizing the accelerometer and gyroscope data on mobile devices. This is useful for overcoming some of the differences in device support for device orientation.
-
 ```js
 window.addEventListener("deviceorientation", handleOrientation, true);
 ```
 
-After registering your event listener (in this case, a JavaScript function called handleOrientation()), your listener function periodically gets called with updated orientation data.
+After registering your event listener (in this case, a JavaScript function called `handleOrientation()`), your listener function periodically gets called with updated orientation data.
 
 The orientation event contains four values:
 
@@ -47,6 +45,8 @@ function handleOrientation(event) {
 }
 ```
 
+> **Note:** [parallax](https://github.com/wagerfield/parallax) is a polyfill for normalizing the accelerometer and gyroscope data on mobile devices. This is useful for overcoming some of the differences in device support for device orientation.
+
 ### Orientation values explained
 
 The value reported for each axis indicates the amount of rotation around a given axis in reference to a standard coordinate frame. These are described in greater detail in the [Orientation and motion data explained](/en-US/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained) article which is summarized below.
@@ -65,7 +65,8 @@ So let's imagine a ball in a garden:
 <div class="garden">
   <div class="ball"></div>
 </div>
-
+Hold the device parallel to the ground. Rotate along its x and y axes to see the
+ball move up/down and left/right respectively.
 <pre class="output"></pre>
 ```
 
@@ -105,7 +106,7 @@ function handleOrientation(event) {
   let x = event.beta; // In degree in the range [-180,180)
   let y = event.gamma; // In degree in the range [-90,90)
 
-  output.textContent = `beta : ${x}\n`;
+  output.textContent = `beta: ${x}\n`;
   output.textContent += `gamma: ${y}\n`;
 
   // Because we don't want to have the device upside down
@@ -123,9 +124,9 @@ function handleOrientation(event) {
   y += 90;
 
   // 10 is half the size of the ball
-  // It center the positioning point to the center of the ball
-  ball.style.top = `${(maxY * y) / 180 - 10}px`;
-  ball.style.left = `${(maxX * x) / 180 - 10}px`;
+  // It centers the positioning point to the center of the ball
+  ball.style.left = `${(maxY * y) / 180 - 10}px`; // rotating device around the y axis moves the ball horizontally
+  ball.style.top = `${(maxX * x) / 180 - 10}px`; // rotating device around the x axis moves the ball vertically
 }
 
 window.addEventListener("deviceorientation", handleOrientation);
@@ -143,7 +144,7 @@ Motion events are handled the same way as the orientation events except that the
 window.addEventListener("devicemotion", handleMotion, true);
 ```
 
-What's really changed are the information provided within the {{domxref("DeviceMotionEvent")}} object passed as a parameter of the _HandleMotion_ function.
+What's really changed are the information provided within the {{domxref("DeviceMotionEvent")}} object passed as a parameter of the event listener (`handleMotion()` in our example).
 
 The motion event contains four properties:
 
@@ -158,15 +159,21 @@ The {{domxref("DeviceMotionEvent")}} objects provide web developers with informa
 
 For {{domxref("DeviceMotionEvent.acceleration","acceleration")}} and {{domxref("DeviceMotionEvent.accelerationIncludingGravity","accelerationIncludingGravity")}}, those axes correspond to the following:
 
-- `x`: Represents the axis from West to East
-- `y`: Represents the axis from South to North
-- `z`: Represents the axis perpendicular to the ground
+- `x`
+  - : Represents the axis from West to East
+- `y`
+  - : Represents the axis from South to North
+- `z`
+  - : Represents the axis perpendicular to the ground
 
 For {{domxref("DeviceMotionEvent.rotationRate","rotationRate")}}, the situation is a bit different; the information corresponds to the following in each case:
 
-- `alpha`: Represents a rotation rate along the axis perpendicular to the screen (or keyboard for desktop).
-- `beta`: Represents a rotation rate along the axis going from left to right of the plane of the screen (or keyboard for desktop).
-- `gamma`: Represents a rotation rate along the axis going from bottom to top of the plane of the screen (or keyboard for desktop).
+- `alpha`
+  - : Represents a rotation rate along the axis perpendicular to the screen (or keyboard for desktop).
+- `beta`
+  - : Represents a rotation rate along the axis going from left to right of the plane of the screen (or keyboard for desktop).
+- `gamma`
+  - : Represents a rotation rate along the axis going from bottom to top of the plane of the screen (or keyboard for desktop).
 
 Finally, {{domxref("DeviceMotionEvent.interval","interval")}} represents the interval of time, in milliseconds, at which data are obtained from the device.
 

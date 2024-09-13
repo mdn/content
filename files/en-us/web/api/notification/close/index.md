@@ -6,12 +6,13 @@ page-type: web-api-instance-method
 browser-compat: api.Notification.close
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
 
-The `close()` method of the {{domxref("Notification")}} interface is used to
+The **`close()`** method of the {{domxref("Notification")}} interface is used to
 close/remove a previously displayed notification.
 
-> **Note:** This API shouldn't be used just to have the notification
+> [!NOTE]
+> This API shouldn't be used just to have the notification
 > removed from the screen after a fixed delay since this method will also remove the
 > notification from any notification tray, preventing users from interacting with it
 > after it was initially shown. A valid use for this API would be to remove a

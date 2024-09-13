@@ -23,7 +23,7 @@ before(...nodes)
 ### Parameters
 
 - `nodes`
-  - : A set of {{domxref("Node")}} or strings to insert.
+  - : A set of {{domxref("Node")}} objects or strings to insert.
 
 ### Exceptions
 

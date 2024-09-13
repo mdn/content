@@ -20,7 +20,8 @@ The value syntax starts with the **name of the function**, followed by a left pa
 
 Functions can take multiple arguments, which are formatted similarly to CSS property values. Whitespace is allowed, but they are optional inside the parentheses. In some functional notations multiple arguments are separated by commas, while others use spaces.
 
-> **Note:** The CSS value functions are used as property values and should not be confused with pseudo-classes. The [functional pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#functional_pseudo-classes), [linguistic pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#linguistic_pseudo-classes), and several [tree-structural pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#tree-structural_pseudo-classes) require parameter values, but they're not value functions. The [conditional at-rules](/en-US/docs/Web/CSS/At-rule#conditional_group_rules) are also not value functions; the parentheses are used for groupings.
+> [!NOTE]
+> The CSS value functions are used as property values and should not be confused with pseudo-classes. The [functional pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#functional_pseudo-classes), [linguistic pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#linguistic_pseudo-classes), and several [tree-structural pseudo-classes](/en-US/docs/Web/CSS/Pseudo-classes#tree-structural_pseudo-classes) require parameter values, but they're not value functions. The conditional at-rules are also not value functions; the parentheses are used for groupings.
 
 ## Transform functions
 
@@ -90,6 +91,8 @@ The {{CSSxRef("&lt;transform-function&gt;")}} CSS [data type](/en-US/docs/Web/CS
 
 The math functions allow CSS numeric values to be written as mathematical expressions.
 
+Each of the pages below contains detailed information about a math function's syntax, browser compatibility data, examples, and more. For a holistic introduction to CSS math functions, see [Using CSS math functions](/en-US/docs/Web/CSS/CSS_Functions/Using_CSS_math_functions).
+
 ### Basic arithmetic
 
 - {{CSSxRef("calc", "calc()")}}
@@ -106,11 +109,11 @@ The math functions allow CSS numeric values to be written as mathematical expres
 
 ### Stepped value functions
 
-- {{CSSxRef("round", "round()")}} {{Experimental_Inline}}
+- {{CSSxRef("round", "round()")}}
   - : Calculates a rounded number based on a rounding strategy.
-- {{CSSxRef("mod", "mod()")}} {{Experimental_Inline}}
+- {{CSSxRef("mod", "mod()")}}
   - : Calculates a modulus (with the same sign as the divisor) when dividing one number by another.
-- {{CSSxRef("rem", "rem()")}} {{Experimental_Inline}}
+- {{CSSxRef("rem", "rem()")}}
   - : Calculates a remainder (with the same sign as the dividend) when dividing one number by another.
 
 ### Trigonometric functions
@@ -145,9 +148,9 @@ The math functions allow CSS numeric values to be written as mathematical expres
 
 ### Sign-related functions
 
-- {{CSSxRef("abs", "abs()")}} {{Experimental_Inline}}
+- {{CSSxRef("abs", "abs()")}}
   - : Calculates the absolute value of a number.
-- {{CSSxRef("sign", "sign()")}} {{Experimental_Inline}}
+- {{CSSxRef("sign", "sign()")}}
   - : Calculates the sign (positive or negative) of the number.
 
 ## Filter functions
@@ -197,10 +200,12 @@ The {{CSSxRef("color_value","&lt;color&gt;")}} CSS [data type](/en-US/docs/Web/C
   - : Specifies a particular, specified colorspace rather than the implicit sRGB colorspace.
 - {{CSSxRef("color_value/color-mix", "color-mix()")}}
   - : Mixes two color values in a given colorspace by a given amount.
-- {{CSSxRef("color_value/color-contrast", "color-contrast()")}} {{Experimental_Inline}}
+- {{CSSxRef("color_value/color-contrast", "color-contrast()")}}
   - : Selects the highest color contrast from a list of colors, compare to a base color value.
-- {{CSSxRef("color_value/device-cmyk", "device-cmyk()")}} {{Experimental_Inline}}
-  - : Defines CMYK colors in a device-independent way.
+- {{CSSxRef("color_value/device-cmyk", "device-cmyk()")}}
+  - : Defines CMYK colors in a device-dependent way.
+- {{CSSXref("color_value/light-dark", "light-dark()")}}
+  - : Returns one of two provided colors based on the current color scheme.
 
 ## Image functions
 
@@ -223,13 +228,13 @@ The {{CSSxRef("&lt;image&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_Types) 
 
 ### Image functions
 
-- {{CSSxRef("image/image","image()")}} {{Experimental_Inline}}
-  - : Defines an {{CSSxRef("&lt;image&gt;")}} in a similar fashion to the {{CSSxRef("url", "url()")}} function, but with added functionality including specifying the image's directionality and fallback images for when the preferred image is not supported.
+- {{CSSxRef("image/image","image()")}}
+  - : Defines an {{CSSxRef("&lt;image&gt;")}} in a similar fashion to the {{cssxref("url_value", "&lt;url&gt;")}} type, but with added functionality including specifying the image's directionality and fallback images for when the preferred image is not supported.
 - {{CSSxRef("image/image-set","image-set()")}}
   - : Picks the most appropriate CSS image from a given set, primarily for high pixel density screens.
 - {{CSSxRef("cross-fade", "cross-fade()")}}
   - : Blends two or more images at a defined transparency.
-- {{CSSxRef("element", "element()")}} {{Experimental_Inline}}
+- {{CSSxRef("element", "element()")}}
   - : Defines an {{CSSxRef("&lt;image&gt;")}} value generated from an arbitrary HTML element.
 - {{CSSxRef("image/paint", "paint()")}}
   - : Defines an {{CSSxRef("&lt;image&gt;")}} value generated with a PaintWorklet.
@@ -255,10 +260,16 @@ The {{CSSxRef("&lt;basic-shape&gt;")}} CSS [data type](/en-US/docs/Web/CSS/CSS_T
   - : Defines an ellipse shape.
 - {{CSSxRef("basic-shape/inset","inset()")}}
   - : Defines an inset rectangle shape.
+- {{CSSxRef("basic-shape/rect","rect()")}}
+  - : Defines a rectangle shape using the distances from the top and left edges of the reference box.
+- {{CSSxRef("basic-shape/xywh","xywh()")}}
+  - : Defines a rectangle shape using the specified distances from the top and left edges of the reference box and the rectangle width and height.
 - {{CSSxRef("basic-shape/polygon","polygon()")}}
   - : Defines a polygon shape.
-- {{CSSxRef("path", "path()")}}
+- {{CSSxRef("basic-shape/path", "path()")}}
   - : Accepts an SVG path string to enable a shape to be drawn.
+- {{CSSxRef("basic-shape/shape", "shape()")}}
+  - : Accepts a comma-separated list of commands defining the shape to be drawn.
 
 ## Reference functions
 
@@ -268,16 +279,16 @@ The following functions are used as a value of properties to reference a value d
   - : Uses the attributes defined on HTML element.
 - {{CSSxRef("env", "env()")}}
   - : Uses the user-agent defined as environment variable.
-- {{CSSxRef("url", "url()")}}
+- {{cssxref("url_value", "&lt;url&gt;")}}
   - : Uses a file from the specified URL.
 - {{CSSxRef("var", "var()")}}
   - : Uses the custom property value instead of any part of a value of another property.
 
 ## Grid functions
 
-The following functions are used to define a [CSS Grid](/en-US/docs/Web/CSS/CSS_grid_layout).
+The following functions are used to define a [CSS grid](/en-US/docs/Web/CSS/CSS_grid_layout).
 
-- {{CSSxRef("fit-content", "fit-content()")}}
+- {{CSSxRef("fit-content_function", "fit-content()")}}
   - : Clamps a given size to an available size according to the formula `min(maximum size, max(minimum size, argument))`.
 - {{CSSxRef("minmax", "minmax()")}}
   - : Defines a size range greater-than or equal-to _min_ and less-than or equal-to _max_.
@@ -305,9 +316,11 @@ CSS font functions are used with the {{CSSxRef("font-variant-alternates")}} prop
 
 The following functions are used as a value in transition and animation properties.
 
+- {{cssxref("easing-function#linear_easing_function", "linear()")}}
+  - : Easing function that interpolates linearly between its points.
 - {{cssxref("easing-function#cubic_b%C3%A9zier_easing_function", "cubic-bezier()")}}
   - : Easing function that defines a cubic Bézier curve.
-- {{cssxref("easing-function#step_easing_function", "steps()")}}
+- {{cssxref("easing-function#steps_easing_function", "steps()")}}
   - : Iteration along a specified number of stops along the transition, displaying each stop for equal lengths of time.
 
 ## Animation functions
@@ -318,6 +331,15 @@ The following functions are used as a value of different `animation-timeline` pr
   - : Sets the {{cssxref("animation-timeline")}} of an element to an _anonymous scroll progress timeline_.
 - {{cssxref("animation-timeline/view", "view()")}}
   - : Sets the {{cssxref("animation-timeline")}} of an element to an _anonymous view progress timeline_.
+
+## Anchor positioning functions
+
+The anchor positioning functions are used when positioning and sizing anchor-positioned elements relative to the location and size of their associated anchor elements.
+
+- {{cssxref("anchor", "anchor()")}}
+  - : Returns a length relative to the position of the edges of an anchor-positioned element's associated anchor element.
+- {{cssxref("anchor-size", "anchor-size()")}}
+  - : Returns a length relative to the size of the associated anchor element.
 
 ## See also
 

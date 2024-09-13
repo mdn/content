@@ -5,7 +5,7 @@ page-type: javascript-language-feature
 browser-compat: javascript.classes.public_class_fields
 ---
 
-{{JsSidebar("Classes")}}
+{{jsSidebar("Classes")}}
 
 **Public fields** are writable, enumerable, and configurable properties. As such, unlike their private counterparts, they participate in prototype inheritance.
 
@@ -30,7 +30,7 @@ There are some additional syntax restrictions:
 This page introduces public instance fields in detail.
 
 - For public static fields, see [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static).
-- For private fields, see [private class features](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields).
+- For private fields, see [private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties).
 - For public methods, see [method definitions](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions).
 - For public accessors, see [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get) and [setter](/en-US/docs/Web/JavaScript/Reference/Functions/set).
 
@@ -142,7 +142,8 @@ console.log(instance.d); // 3
 console.log(instance.b); // undefined
 ```
 
-> **Note:** This is more important with [private fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields), because accessing a non-initialized private field throws a {{jsxref("TypeError")}}, even if the private field is declared below. (If the private field is not declared, it would be an early {{jsxref("SyntaxError")}}.)
+> [!NOTE]
+> This is more important with [private fields](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties), because accessing a non-initialized private field throws a {{jsxref("TypeError")}}, even if the private field is declared below. (If the private field is not declared, it would be an early {{jsxref("SyntaxError")}}.)
 
 Because class fields are added using the [`[[DefineOwnProperty]]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty) semantic (which is essentially {{jsxref("Object.defineProperty()")}}), field declarations in derived classes do not invoke setters in the base class. This behavior differs from using `this.field = …` in the constructor.
 
@@ -169,7 +170,8 @@ class DerivedWithConstructor extends Base {
 const instance2 = new DerivedWithConstructor(); // Logs 1
 ```
 
-> **Note:** Before the class fields specification was finalized with the `[[DefineOwnProperty]]` semantic, most transpilers, including [Babel](https://babeljs.io/) and [tsc](https://www.typescriptlang.org/), transformed class fields to the `DerivedWithConstructor` form, which has caused subtle bugs after class fields were standardized.
+> [!NOTE]
+> Before the class fields specification was finalized with the `[[DefineOwnProperty]]` semantic, most transpilers, including [Babel](https://babeljs.io/) and [tsc](https://www.typescriptlang.org/), transformed class fields to the `DerivedWithConstructor` form, which has caused subtle bugs after class fields were standardized.
 
 ## Examples
 
@@ -245,9 +247,9 @@ console.log(new Professor("Radev", 54).name); // "Professor Radev"
 
 ## See also
 
-- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes)
+- [Using classes](/en-US/docs/Web/JavaScript/Guide/Using_classes) guide
 - [Classes](/en-US/docs/Web/JavaScript/Reference/Classes)
-- [Private class features](/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields)
+- [Private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties)
 - {{jsxref("Statements/class", "class")}}
 - [The semantics of all JS class elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html) by Shu-yu Guo (2018)
 - [Public and private class fields](https://v8.dev/features/class-fields) on v8.dev (2018)

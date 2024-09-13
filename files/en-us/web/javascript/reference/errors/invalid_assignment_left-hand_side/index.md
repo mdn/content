@@ -14,6 +14,10 @@ The JavaScript exception "invalid assignment left-hand side" occurs when there w
 SyntaxError: Invalid left-hand side in assignment (V8-based)
 SyntaxError: invalid assignment left-hand side (Firefox)
 SyntaxError: Left side of assignment is not a reference. (Safari)
+
+ReferenceError: Invalid left-hand side in assignment (V8-based)
+ReferenceError: cannot assign to function call (Firefox)
+ReferenceError: Left side of assignment is not a reference. (Safari)
 ```
 
 ## Error type
@@ -28,7 +32,7 @@ There was an unexpected assignment somewhere. This might be due to a mismatch of
 
 ### Typical invalid assignments
 
-```js example-bad
+```js-nolint example-bad
 if (Math.PI + 1 = 3 || Math.PI + 1 = 4) {
   console.log("no way!");
 }
@@ -54,9 +58,9 @@ const str = "Hello, "
 
 ### Assignments producing ReferenceErrors
 
-Invalid assignments don't always produce syntax errors. Sometimes the syntax is almost correct, but at runtime, the left hand side expression evaluates to a _value_ instead of a _reference_, so the assignment is still invalid. Such errors occur later in execution, when the line is actually executed.
+Invalid assignments don't always produce syntax errors. Sometimes the syntax is almost correct, but at runtime, the left hand side expression evaluates to a _value_ instead of a _reference_, so the assignment is still invalid. Such errors occur later in execution, when the statement is actually executed.
 
-```js example-bad
+```js-nolint example-bad
 function foo() {
   return { a: 1 };
 }
@@ -72,13 +76,14 @@ function foo() {
 foo().a = 1;
 ```
 
-> **Note:** In Firefox and Safari, the first example produces a `ReferenceError` in non-strict mode, and a `SyntaxError` in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode). Chrome throws a runtime `ReferenceError` for both strict and non-strict modes.
+> [!NOTE]
+> In Firefox and Safari, the first example produces a `ReferenceError` in non-strict mode, and a `SyntaxError` in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode). Chrome throws a runtime `ReferenceError` for both strict and non-strict modes.
 
 ### Using optional chaining as assignment target
 
 [Optional chaining](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) is not a valid target of assignment.
 
-```js example-bad
+```js-nolint example-bad
 obj?.foo = 1; // SyntaxError: invalid assignment left-hand side
 ```
 

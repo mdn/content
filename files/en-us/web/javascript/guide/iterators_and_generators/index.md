@@ -6,14 +6,14 @@ page-type: guide
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Typed_arrays", "Web/JavaScript/Guide/Meta_programming")}}
 
-Iterators and Generators bring the concept of iteration directly into the core language and provide a mechanism for customizing the behavior of {{jsxref("Statements/for...of","for...of")}} loops.
+Iterators and Generators bring the concept of iteration directly into the core language and provide a mechanism for customizing the behavior of {{jsxref("Statements/for...of", "for...of")}} loops.
 
 For details, see also:
 
 - [Iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
-- {{jsxref("Statements/for...of","for...of")}}
-- {{jsxref("Statements/function*","function*")}} and {{jsxref("Generator")}}
-- {{jsxref("Operators/yield","yield")}} and {{jsxref("Operators/yield*","yield*")}}
+- {{jsxref("Statements/for...of", "for...of")}}
+- {{jsxref("Statements/function*", "function*")}} and {{jsxref("Generator")}}
+- {{jsxref("Operators/yield", "yield")}} and {{jsxref("Operators/yield*", "yield*")}}
 
 ## Iterators
 
@@ -30,7 +30,7 @@ Once created, an iterator object can be iterated explicitly by repeatedly callin
 
 The most common iterator in JavaScript is the Array iterator, which returns each value in the associated array in sequence.
 
-While it is easy to imagine that all iterators could be expressed as arrays, this is not true. Arrays must be allocated in their entirety, but iterators are consumed only as necessary. Because of this, iterators can express sequences of unlimited size, such as the range of integers between `0` and {{jsxref("Global_Objects/Infinity", "Infinity")}}.
+While it is easy to imagine that all iterators could be expressed as arrays, this is not true. Arrays must be allocated in their entirety, but iterators are consumed only as necessary. Because of this, iterators can express sequences of unlimited size, such as the range of integers between `0` and {{jsxref("Infinity")}}.
 
 Here is an example which can do just that. It allows creation of a simple range iterator which defines a sequence of integers from `start` (inclusive) to `end` (exclusive) spaced `step` apart. Its final return value is the size of the sequence it created, tracked by the variable `iterationCount`.
 
@@ -58,22 +58,23 @@ function makeRangeIterator(start = 0, end = Infinity, step = 1) {
 Using the iterator then looks like this:
 
 ```js
-const it = makeRangeIterator(1, 10, 2);
+const iter = makeRangeIterator(1, 10, 2);
 
-let result = it.next();
+let result = iter.next();
 while (!result.done) {
   console.log(result.value); // 1 3 5 7 9
-  result = it.next();
+  result = iter.next();
 }
 
 console.log("Iterated over sequence of size:", result.value); // [5 numbers returned, that took interval in between: 0 to 10]
 ```
 
-> **Note:** It is not possible to know reflectively whether a particular object is an iterator. If you need to do this, use [Iterables](#iterables).
+> [!NOTE]
+> It is not possible to know reflectively whether a particular object is an iterator. If you need to do this, use [Iterables](#iterables).
 
 ## Generator functions
 
-While custom iterators are a useful tool, their creation requires careful programming due to the need to explicitly maintain their internal state. **Generator functions** provide a powerful alternative: they allow you to define an iterative algorithm by writing a single function whose execution is not continuous. Generator functions are written using the {{jsxref("Statements/function*","function*")}} syntax.
+While custom iterators are a useful tool, their creation requires careful programming due to the need to explicitly maintain their internal state. **Generator functions** provide a powerful alternative: they allow you to define an iterative algorithm by writing a single function whose execution is not continuous. Generator functions are written using the {{jsxref("Statements/function*", "function*")}} syntax.
 
 When called, generator functions do not initially execute their code. Instead, they return a special type of iterator, called a **Generator**. When a value is consumed by calling the generator's `next` method, the Generator function executes until it encounters the `yield` keyword.
 
@@ -96,11 +97,11 @@ function* makeRangeIterator(start = 0, end = Infinity, step = 1) {
 
 An object is **iterable** if it defines its iteration behavior, such as what values are looped over in a {{jsxref("Statements/for...of", "for...of")}} construct. Some built-in types, such as {{jsxref("Array")}} or {{jsxref("Map")}}, have a default iteration behavior, while other types (such as {{jsxref("Object")}}) do not.
 
-In order to be **iterable**, an object must implement the **@@iterator** method. This means that the object (or one of the objects up its [prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)) must have a property with a {{jsxref("Symbol.iterator")}} key.
+In order to be **iterable**, an object must implement the `[Symbol.iterator]()` method. This means that the object (or one of the objects up its [prototype chain](/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)) must have a property with a {{jsxref("Symbol.iterator")}} key.
 
 It may be possible to iterate over an iterable more than once, or only once. It is up to the programmer to know which is the case.
 
-Iterables which can iterate only once (such as Generators) customarily return `this` from their **@@iterator** method, whereas iterables which can be iterated many times must return a new iterator on each invocation of **@@iterator**.
+Iterables which can iterate only once (such as Generators) customarily return `this` from their `[Symbol.iterator]()` method, whereas iterables which can be iterated many times must return a new iterator on each invocation of `[Symbol.iterator]()`.
 
 ```js
 function* makeIterator() {
@@ -108,23 +109,23 @@ function* makeIterator() {
   yield 2;
 }
 
-const it = makeIterator();
+const iter = makeIterator();
 
-for (const itItem of it) {
+for (const itItem of iter) {
   console.log(itItem);
 }
 
-console.log(it[Symbol.iterator]() === it); // true
+console.log(iter[Symbol.iterator]() === iter); // true
 
 // This example show us generator(iterator) is iterable object,
-// which has the @@iterator method return the it (itself),
+// which has the [Symbol.iterator]() method return the `iter` (itself),
 // and consequently, the it object can iterate only _once_.
 
-// If we change it's @@iterator method to a function/generator
-// which returns a new iterator/generator object, (it)
+// If we change the [Symbol.iterator]() method of `iter` to a function/generator
+// which returns a new iterator/generator object, `iter`
 // can iterate many times
 
-it[Symbol.iterator] = function* () {
+iter[Symbol.iterator] = function* () {
   yield 2;
   yield 1;
 };
@@ -163,7 +164,7 @@ for (const value of myIterable) {
 
 ### Syntaxes expecting iterables
 
-Some statements and expressions expect iterables. For example: the {{jsxref("Statements/for...of","for-of")}} loops, {{jsxref("Operators/yield*","yield*")}}.
+Some statements and expressions expect iterables. For example: the {{jsxref("Statements/for...of", "for...of")}} loops, {{jsxref("Operators/Spread_syntax", "spread syntax", "", 1)}}, {{jsxref("Operators/yield*", "yield*")}}, and {{jsxref("Operators/Destructuring_assignment", "destructuring", "", 1)}} syntax.
 
 ```js
 for (const value of ["a", "b", "c"]) {
@@ -192,9 +193,10 @@ a;
 
 Generators compute their `yield`ed values _on demand_, which allows them to efficiently represent sequences that are expensive to compute (or even infinite sequences, as demonstrated above).
 
-The {{jsxref("Global_Objects/Generator/next","next()")}} method also accepts a value, which can be used to modify the internal state of the generator. A value passed to `next()` will be received by `yield` .
+The {{jsxref("Generator/next", "next()")}} method also accepts a value, which can be used to modify the internal state of the generator. A value passed to `next()` will be received by `yield`.
 
-> **Note:** A value passed to the _first_ invocation of `next()` is always ignored.
+> [!NOTE]
+> A value passed to the _first_ invocation of `next()` is always ignored.
 
 Here is the fibonacci generator using `next(x)` to restart the sequence:
 
@@ -226,10 +228,10 @@ console.log(sequence.next().value); // 1
 console.log(sequence.next().value); // 2
 ```
 
-You can force a generator to throw an exception by calling its {{jsxref("Global_Objects/Generator/throw","throw()")}} method and passing the exception value it should throw. This exception will be thrown from the current suspended context of the generator, as if the `yield` that is currently suspended were instead a `throw value` statement.
+You can force a generator to throw an exception by calling its {{jsxref("Generator/throw", "throw()")}} method and passing the exception value it should throw. This exception will be thrown from the current suspended context of the generator, as if the `yield` that is currently suspended were instead a `throw value` statement.
 
 If the exception is not caught from within the generator, it will propagate up through the call to `throw()`, and subsequent calls to `next()` will result in the `done` property being `true`.
 
-Generators have a {{jsxref("Global_Objects/Generator/return","return(value)")}} method that returns the given value and finishes the generator itself.
+Generators have a {{jsxref("Generator/return", "return()")}} method that returns the given value and finishes the generator itself.
 
 {{PreviousNext("Web/JavaScript/Guide/Typed_arrays", "Web/JavaScript/Guide/Meta_programming")}}

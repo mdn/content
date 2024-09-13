@@ -6,7 +6,8 @@ page-type: firefox-release-notes
 
 {{FirefoxSidebar}}
 
-[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/firefox/developer/)Firefox 51 was released on January 24, 2017. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
+[To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/).
+Firefox 51 was released on January 24, 2017. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
 ## Changes for Web developers
 
@@ -81,19 +82,19 @@ page-type: firefox-release-notes
 
 - Added {{SVGAttr("tabindex")}} attribute ([Firefox bug 778654](https://bugzil.la/778654)).
 - Added {{SVGAttr("href")}} attribute, which renders {{SVGAttr("xlink:href")}} obsolete ([Firefox bug 1245751](https://bugzil.la/1245751)).
-- You can now use custom data attributes on SVG elements through the {{domxref("SVGElement.dataset")}} property and the {{SVGAttr("data-*")}} set of SVG attributes ([Firefox bug 921834](https://bugzil.la/921834)).
+- You can now use custom data attributes on SVG elements through the {{domxref("HTMLElement.dataset")}} property and the {{SVGAttr("data-*")}} set of SVG attributes ([Firefox bug 921834](https://bugzil.la/921834)).
 - CSS Animations used in an SVG image which is presented in an {{HTMLElement("img")}} element now work again; this was an old regression ([Firefox bug 1190881](https://bugzil.la/1190881)).
 
 ### Web Workers
 
-- The non-standard and obsolete {{domxref("WorkerGlobalScope.onclose")}} event handler and {{domxref("Worker")}} use of the `close` event have been removed from Firefox.
+- The non-standard and obsolete {{domxref("DedicatedWorkerGlobalScope.close")}} event handler and {{domxref("Worker")}} use of the `close` event have been removed from Firefox.
 
 ### Networking
 
 - Scripts served with an `image/*`, `video/*`, `audio/*` or `text/csv` MIME type are now blocked and are not loaded or executed. This happen when they are declared using {{HTMLElement("script")}}, or loaded via {{domxref("Worker.importScripts()")}}, {{domxref("Worker.Worker","Worker()")}}, {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} ([Firefox bug 1229267](https://bugzil.la/1229267) and [Firefox bug 1288361](https://bugzil.la/1288361)).
 - Support for SHA-1 certificates from publicly-trusted certificate authorities has been removed ([Firefox bug 1302140](https://bugzil.la/1302140)). See also [Phasing Out SHA-1 on the Public Web](https://blog.mozilla.org/security/2016/10/18/phasing-out-sha-1-on-the-public-web/) for more information.
 - New WoSign and StartCom certificates will no longer be accepted ([Firefox bug 1309707](https://bugzil.la/1309707)), see [Distrusting New WoSign and StartCom Certificates](https://blog.mozilla.org/security/2016/10/24/distrusting-new-wosign-and-startcom-certificates/) for more information.
-- The [PAC](</en-US/docs/Mozilla/Projects/Necko/Proxy_Auto-Configuration_(PAC)_file>) `FindProxyForURL(url, host)` function now strips paths and queries from https\:// URLs to avoid information leakage (see [Firefox bug 1255474](https://bugzil.la/1255474), [Sniffing HTTPS URLS with malicious PAC files](https://www.contextis.com/us/blog/leaking-https-urls-20-year-old-vulnerability), or `CVE-2017-5384`).
+- The [PAC](</en-US/docs/Mozilla/Projects/Necko/Proxy_Auto-Configuration_(PAC)_file>) `FindProxyForURL(url, host)` function now strips paths and queries from https\:// URLs to avoid information leakage (see [Firefox bug 1255474](https://bugzil.la/1255474) and [CVE-2017-5384](https://nvd.nist.gov/vuln/detail/CVE-2017-5384)).
 
 ### XHR
 
@@ -117,10 +118,10 @@ page-type: firefox-release-notes
 
 - The {{domxref("DOMImplementation.hasFeature()")}} now returns `true` in all cases ([Firefox bug 984778](https://bugzil.la/984778)).
 - The {{domxref("HTMLInputElement")}} and {{domxref("HTMLTextAreaElement")}} properties `selectionStart` and `selectionEnd` now correctly return the current position of the text input cursor when there's no selection, instead of returning 0 ([Firefox bug 1287655](https://bugzil.la/1287655)).
-- The {{domxref("HTMLImageElement")}} interface and the corresponding {{HTMLElement("img")}} element now support the `onerror` event handler, sending {{domxref("Element/error_event", "error")}} events to the element whenever [errors occur attempting to load or interpret images](/en-US/docs/Web/API/HTMLImageElement#errors).
+- The {{domxref("HTMLImageElement")}} interface and the corresponding {{HTMLElement("img")}} element now support the `onerror` event handler, sending {{domxref("HTMLElement/error_event", "error")}} events to the element whenever [errors occur attempting to load or interpret images](/en-US/docs/Web/API/HTMLImageElement#errors).
 - You can now change a Web {{domxref("Animation")}}'s effect by setting the value of its {{domxref("Animation.effect", "effect")}} property. Previously, this property was read-only ([Firefox bug 1049975](https://bugzil.la/1049975)).
 - The Permissions API method {{domxref("Permissions.revoke()")}} has been put behind a preference (`dom.permissions.revoke.enable`) and disabled by default since its design and even its very existence is under discussion in the [Web Application Security Working Group](https://www.w3.org/2011/webappsec/).
-- The [Storage API](/en-US/docs/Web/API/Storage_API)'s {{domxref("NavigatorStorage.storage", "navigator.storage")}} property and {{domxref("StorageManager.estimate()")}} method have been implemented along with the needed supporting code. Storage unit persistence features are not yet implemented. See [Firefox bug 1267941](https://bugzil.la/1267941).
+- The [Storage API](/en-US/docs/Web/API/Storage_API)'s {{domxref("Navigator.storage")}} property and {{domxref("StorageManager.estimate()")}} method have been implemented along with the needed supporting code. Storage unit persistence features are not yet implemented. See [Firefox bug 1267941](https://bugzil.la/1267941).
 - For privacy reasons, both {{domxref("BatteryManager.chargingTime")}} and {{domxref("BatteryManager.dischargingTime")}} now round the returned value to the closest 15 minutes ([Firefox bug 1292655](https://bugzil.la/1292655)).
 
 ### Events
@@ -175,4 +176,4 @@ page-type: firefox-release-notes
 
 ## Older versions
 
-{{Firefox_for_developers(50)}}
+{{Firefox_for_developers}}

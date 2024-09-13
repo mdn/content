@@ -4,14 +4,16 @@ slug: Web/Accessibility/ARIA/Roles/listbox_role
 page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#listbox
-  - https://w3c.github.io/aria-practices/#Listbox
+  - https://www.w3.org/WAI/ARIA/apg/patterns/listbox/examples/listbox-scrollable/
 ---
+
+{{AccessibilitySidebar}}
 
 The `listbox` role is used for lists from which a user may select one or more items which are static and, unlike HTML {{HTMLElement('select')}} elements, may contain images.
 
 ## Description
 
-The `listbox` role is used to identify an element that creates a list from which a user may select one or more static items, similar to the HTML {{HTMLElement('select')}} element. Unlike {{HTMLElement('select')}}, a listbox can contain images. Each child of a listbox should have a role of [option](https://www.w3.org/TR/2010/WD-wai-aria-20100916/roles#option).
+The `listbox` role is used to identify an element that creates a list from which a user may select one or more static items, similar to the HTML {{HTMLElement('select')}} element. Unlike {{HTMLElement('select')}}, a listbox can contain images. Listboxes contain children whose role is [`option`](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role) or elements whose role is [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) which in turn contain children whose role is `option`.
 
 It is highly recommended using the HTML select element, or a group of radio buttons if only one item can be selected, or a group of checkboxes if multiple items can be selected, because there is a lot of keyboard interactivity to manage focus for all the descendants, and native HTML elements provide this functionality for you for free.
 
@@ -108,7 +110,7 @@ When the listbox role is added to an element, or such an element becomes visible
 
     - <kbd>Space</kbd>
 
-      : changes the selection state of the focused option .
+      : changes the selection state of the focused option.
 
     - <kbd>Shift + Down Arrow</kbd>
 
@@ -153,7 +155,8 @@ When the user clicks on an option, hits <kbd>Space</kbd> when focused on an opti
 2. Change the appearance of the option to reflect its selected state
 3. Update the [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) value on the listbox to the ID of the option the user just interacted with, even if they toggled the option to be unselected.
 
-> **Note:** The first rule of ARIA use is you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and **adding** an ARIA role, state or property to make it accessible, then do so. The {{HTMLElement('select')}} element with descendant {{HTMLElement('option')}} elements handles all the needed interactions natively.
+> [!NOTE]
+> The first rule of ARIA use is you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and **adding** an ARIA role, state or property to make it accessible, then do so. The {{HTMLElement('select')}} element with descendant {{HTMLElement('option')}} elements handles all the needed interactions natively.
 
 ## Examples
 
@@ -199,16 +202,16 @@ This could have more easily been handled with the native HTML {{HTMLElement('sel
 
 ### More examples
 
-- [Scrollable Listbox Example](https://w3c.github.io/aria-practices/examples/listbox/listbox-scrollable.html): Single-select listbox that scrolls to reveal more options, similar to HTML {{HTMLElement('select')}} with `size` attribute greater than one.
-- [Collapsible Dropdown Listbox Example](https://w3c.github.io/aria-practices/examples/listbox/listbox-collapsible.html): Single-select collapsible listbox that expands when activated, similar to HTML {{HTMLElement('select')}} with the attribute `size="1"`.
-- [Example Listboxes with Rearrangeable Options](https://w3c.github.io/aria-practices/examples/listbox/listbox-rearrangeable.html): Examples of both single-select and multi-select listboxes with accompanying toolbars where options can be added, moved, and removed.
+- [Scrollable Listbox Example](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/examples/listbox-scrollable/): Single-select listbox that scrolls to reveal more options, similar to HTML {{HTMLElement('select')}} with `size` attribute greater than one.
+- [Listbox Example with Grouped Options](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/examples/listbox-grouped/): Single-select listbox with grouped options, similar to HTML {{HTMLElement('select')}} with the attribute `size` set to greater than `"1"` and options grouped with `optgroup` elements.
+- [Example Listboxes with Rearrangeable Options](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/examples/listbox-rearrangeable/): Examples of both single-select and multi-select listboxes with accompanying toolbars where options can be added, moved, and removed.
 
 ## Best practices
 
 - To be keyboard-accessible, authors should [manage focus](https://www.w3.org/TR/wai-aria-1.1/#managingfocus) of all descendants of this role.
 - It is recommended that authors use different styling for the selection when the list is not focused, e.g. a non-active selection is often shown with a lighter background color.
 - If the listbox is not part of another widget, it should have the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) property set.
-- If one or more entries are not DOM children of listbox, additional `aria-*` properties will need to be set (see [ARIA Best Practices](https://www.w3.org/TR/wai-aria-practices/#listbox_div)).
+- If one or more entries are not DOM children of listbox, additional `aria-*` properties will need to be set (see [ARIA Best Practices](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/)).
 - If there is a valid reason to [expand](https://www.w3.org/TR/wai-aria-1.1/#aria-expanded) the listbox, the [`combobox`](/en-US/docs/Web/Accessibility/ARIA/Roles/combobox_role) role may be more appropriate.
 
 ## Specifications
@@ -226,11 +229,3 @@ This could have more easily been handled with the native HTML {{HTMLElement('sel
 - [ARIA: `listitem` role](/en-US/docs/Web/Accessibility/ARIA/Roles/listitem_role)
 - [ARIA Best Practices – Listbox](https://www.w3.org/WAI/ARIA/apg/patterns/listbox/)
 - [ARIA Role Model – Listbox](https://www.w3.org/TR/wai-aria-1.1/#listbox)
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
-
-</section>

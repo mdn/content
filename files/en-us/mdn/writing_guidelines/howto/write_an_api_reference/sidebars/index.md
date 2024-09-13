@@ -1,6 +1,6 @@
 ---
 title: API reference sidebars
-slug: MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars
+slug: MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars
 page-type: mdn-writing-guide
 ---
 
@@ -65,12 +65,12 @@ Note that most of the values included inside the listed sub-members equate to bo
 So for example, "Response" will result in a link being created like so:
 
 ```html
-<li><a href="/en-US/docs/Web/API">Response</a></li>
+<li><a href="/en-US/docs/Web/API/Response">Response</a></li>
 ```
 
 There are a few exceptions.
-For example the "guides" sub-member contains one or more sets of link information (title and slug) that defines links to associated guides/tutorials.
-In this case the slugs are appended to the end of the MDN docs root — `https://developer.mozilla.org/_<language-code>/docs` — allowing an article anywhere on MDN to be included.
+For example the "guides" sub-member contains the URLs that point to associated guides/tutorials.
+In this case the URLs are appended to the end of the MDN docs root — `https://developer.mozilla.org/<language-code>` — allowing an article anywhere on MDN to be included.
 
 Here are the available members.
 These are all technically optional, but it is strongly encouraged that instead of omitting them, you include empty arrays.
@@ -81,36 +81,28 @@ These are all technically optional, but it is strongly encouraged that instead o
    "Response" results in a link being made to [https://developer.mozilla.org/en-US/docs/Web/API/Response](/en-US/docs/Web/API/Response).
 3. `"methods"` — the value is an array that should contain any methods the spec adds to interfaces associated with other APIs, such as instantiation methods created on {{domxref("Navigator")}} or {{domxref("Window")}}.
    If there are a huge number of methods, you might want to consider only listing the most popular ones, or putting them first in the list.
-   "fetch()" results in a link being made to [https://developer.mozilla.org/en-US/docs/Web/API/fetch](/en-US/docs/Web/API/fetch).
+   "fetch()" results in a link being made to [https://developer.mozilla.org/en-US/docs/Web/API/fetch](/en-US/docs/Web/API/Window/fetch).
    Do _not_ list methods that are members of interfaces that are owned by the same API.
 4. `"properties"` — the value is an array that should contain all of the properties associated with the API.
    This can include properties that are members of interfaces defined in the API spec, and properties the API defines on other interfaces.
    If there are a huge number of properties, you might want to consider only listing the most popular ones, or putting them first in the list.
    "Headers.append" results in a link being made to [https://developer.mozilla.org/en-US/docs/Web/API/Headers/append](/en-US/docs/Web/API/Headers/append).
-5. `"events"` — the value is an array that should contain all of the events associated with the API, defined in the API spec, or elsewhere.
+5. `"events"` — the value is an array that should contain the _title_ of events that are part of the API bit are defined in interfaces that are _not_ part of the API (events belonging to interfaces in the API (`interfaces`) are documented by default).
    If there are a huge number of events, you might want to consider only listing the most popular ones, or putting them first in the list.
-   "animationstart" results in a link being made to [https://developer.mozilla.org/en-US/docs/Web/Events/animationstart](/en-US/docs/Web/API/Element/animationstart_event).
-6. `"guides"` — the value is an array containing one or more objects that define links to guides explain how to use the API.
-   Each object contains two sub-members — "url", which contains the partial URL pointing to the guide article, and "title", which defines the link test for the link.
-   As an example, the following object:
-
-   ```json
-   {
-     "url": "/docs/Web/API/Detecting_device_orientation",
-     "title": "Detecting device orientation"
-   }
-   ```
-
-   Creates a link with the title "Detecting device orientation", which points to [https://developer.mozilla.org/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation).
-
+   For example, `"Document: selectionchange"` is part of the [Selection API](/en-US/docs/Web/API/Selection_API) but `Document` is not, so we add the event to the array and it will be linked from the [Selection API](/en-US/docs/Web/API/Selection_API) topic.
+6. `"guides"` — the value is an array of strings, each that addresses a guide topic that explain how to use the API.
+   The strings contain the part of the guide's URL address after the language path: i.e. the `/docs/...` part of the guide URL.
+   For example, to link to the topic "Using Fetch" at `https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch`, the guide array would contain "/docs/Web/API/Fetch_API/Using_Fetch".
 7. `"dictionaries"` — an array of strings listing all of the dictionaries which are part of the API.
    Generally, only dictionaries used by more than one property or method should be listed here, unless they are of special significance or are likely to require being referenced from multiple pages.
    "CryptoKeyPair" results in a link to [https://developer.mozilla.org/en-US/docs/Web/API/CryptoKeyPair](/en-US/docs/Web/API/CryptoKeyPair).
-   > **Note:** MDN is moving away from separately documenting dictionaries.
+   > [!NOTE]
+   > MDN is moving away from separately documenting dictionaries.
    > Where possible, these are now described as objects in the places where they are used.
 8. `"types"` — an array of typedefs and enumerated types defined by the API.
    You may choose to only list those that are of special importance or are referenced from multiple pages, in order to keep the list short.
-   > **Note:** MDN is moving away from separately documenting typedefs.
+   > [!NOTE]
+   > MDN is moving away from separately documenting typedefs.
    > Where possible, these are now described as values in the places where they are used.
 9. `"callbacks"` — the value is an array containing a list of all the defined callback types for the API.
    You may find it unnecessary to use this group at all, even on APIs that include callback types, as often they are not useful to document separately.

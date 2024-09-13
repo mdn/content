@@ -4,8 +4,10 @@ slug: Web/Accessibility/ARIA/Roles/combobox_role
 page-type: aria-role
 spec-urls:
   - https://w3c.github.io/aria/#combobox,
-  - https://w3c.github.io/aria-practices/#combobox
+  - https://www.w3.org/WAI/ARIA/apg/patterns/combobox/examples/combobox-select-only/
 ---
+
+{{AccessibilitySidebar}}
 
 The `combobox` role identifies an element as an `input` that controls another element, such as a `listbox` or `grid`, that can dynamically pop up to help the user set the value of that `input`.
 
@@ -111,11 +113,3 @@ Every `combobox` must have an accessible name. If using an {{HTMLElement('input'
 - [ARIA Best Practices – Combobox](https://www.w3.org/WAI/ARIA/apg/patterns/combobox/)
 - [ARIA Role Model – Combobox](https://www.w3.org/TR/wai-aria-1.2/#combobox)
 - [Accessible combobox module](https://dequelabs.github.io/combobo/demo/) examples by Deque
-
-<section id="Quick_links">
-
-1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
-
-   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
-
-</section>

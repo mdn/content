@@ -18,16 +18,16 @@ The **`Function`** object provides methods for [functions](/en-US/docs/Web/JavaS
 
 These properties are defined on `Function.prototype` and shared by all `Function` instances.
 
-- {{jsxref("Function.prototype.arguments")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+- {{jsxref("Function.prototype.arguments")}} {{deprecated_inline}} {{non-standard_inline}}
   - : Represents the arguments passed to this function. For [strict](/en-US/docs/Web/JavaScript/Reference/Strict_mode), arrow, async, and generator functions, accessing the `arguments` property throws a {{jsxref("TypeError")}}. Use the {{jsxref("Functions/arguments", "arguments")}} object inside function closures instead.
-- {{jsxref("Function.prototype.caller")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+- {{jsxref("Function.prototype.caller")}} {{deprecated_inline}} {{non-standard_inline}}
   - : Represents the function that invoked this function. For [strict](/en-US/docs/Web/JavaScript/Reference/Strict_mode), arrow, async, and generator functions, accessing the `caller` property throws a {{jsxref("TypeError")}}.
 - {{jsxref("Object/constructor", "Function.prototype.constructor")}}
   - : The constructor function that created the instance object. For `Function` instances, the initial value is the {{jsxref("Function/Function", "Function")}} constructor.
 
 These properties are own properties of each `Function` instance.
 
-- {{jsxref("Function/displayName", "displayName")}} {{Non-standard_Inline}} {{Optional_Inline}}
+- {{jsxref("Function/displayName", "displayName")}} {{non-standard_inline}} {{optional_inline}}
   - : The display name of the function.
 - {{jsxref("Function/length", "length")}}
   - : Specifies the number of arguments expected by the function.
@@ -47,7 +47,7 @@ These properties are own properties of each `Function` instance.
 - {{jsxref("Function.prototype.toString()")}}
   - : Returns a string representing the source code of the function.
     Overrides the {{jsxref("Object.prototype.toString")}} method.
-- [`Function.prototype[@@hasInstance]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/@@hasInstance)
+- [`Function.prototype[Symbol.hasInstance]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Symbol.hasInstance)
   - : Specifies the default procedure for determining if a constructor function recognizes an object as one of the constructor's instances. Called by the [`instanceof`](/en-US/docs/Web/JavaScript/Reference/Operators/instanceof) operator.
 
 ## Examples
@@ -91,7 +91,7 @@ While this code works in web browsers, `f1()` will produce a `ReferenceError` in
 
 ## See also
 
-- [`function` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function)
+- [`function`](/en-US/docs/Web/JavaScript/Reference/Statements/function)
 - [`function` expression](/en-US/docs/Web/JavaScript/Reference/Operators/function)
 - {{jsxref("AsyncFunction")}}
 - {{jsxref("AsyncGeneratorFunction")}}

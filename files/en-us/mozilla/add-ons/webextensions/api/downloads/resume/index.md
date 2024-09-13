@@ -5,7 +5,7 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.downloads.resume
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The **`resume()`** function of the {{WebExtAPIRef("downloads")}} API resumes a paused download. If the request was successful, the download will be unpaused and progress will resume. The `resume()` call will fail if the download is not active: for example, because it has finished downloading.
 
@@ -51,7 +51,8 @@ resuming.then(onResumed, onError);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#method-resume) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#method-resume) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

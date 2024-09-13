@@ -6,9 +6,9 @@ page-type: web-api-static-property
 browser-compat: api.Notification.permission_static
 ---
 
-{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}
+{{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
 
-The `permission` read-only property of the {{domxref("Notification")}}
+The **`permission`** read-only static property of the {{domxref("Notification")}}
 interface indicates the current permission granted by the user for the current origin to
 display web notifications.
 

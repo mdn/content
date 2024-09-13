@@ -67,7 +67,7 @@ In all other cases, calling `RegExp()` with or without `new` both create a new `
 ### Exceptions
 
 - {{jsxref("SyntaxError")}}
-  - : Thrown if one of the following is true:
+  - : Thrown in one of the following cases:
     - `pattern` cannot be parsed as a valid regular expression.
     - `flags` contains repeated characters or any character outside of those allowed.
 
@@ -115,7 +115,6 @@ order.match(new RegExp(`\\b(${breakfasts.join("|")})\\b`, "g"));
 ## See also
 
 - [Polyfill of many modern `RegExp` features (`dotAll`, `sticky` flags, named capture groups, etc.) in `core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- [Regular Expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) chapter
-  in the [JavaScript Guide](/en-US/docs/Web/JavaScript/Guide)
+- [Regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions) guide
 - {{jsxref("String.prototype.match()")}}
 - {{jsxref("String.prototype.replace()")}}

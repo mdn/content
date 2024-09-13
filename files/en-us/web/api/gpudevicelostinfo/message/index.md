@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUDeviceLostInfo.message
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`message`** read-only property of the
 {{domxref("GPUDeviceLostInfo")}} interface provides a human-readable message that explains why the device was lost.

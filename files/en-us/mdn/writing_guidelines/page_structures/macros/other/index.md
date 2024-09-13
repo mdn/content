@@ -25,8 +25,8 @@ We have an assortment of macros that can be used to automatically generate the c
 - [`APIListAlpha`](https://github.com/mdn/yari/blob/main/kumascript/macros/APIListAlpha.ejs) builds a list of the current page's subpages, formatted as a list of API terms, divided up by first letter. There are three parameters. The first is 0 if you want to include all top-level subpages or 1 to leave out subpages with "." in their names. The second and third let you add text to display as part of the name in each link. This can be used to add "<" and ">" for element links, or to add "()" at the end of lists of method names.
 - [`SubpagesWithSummaries`](https://github.com/mdn/yari/blob/main/kumascript/macros/SubpagesWithSummaries.ejs) constructs a definition list of all the immediate children of the current page. There is no other formatting done. You can get a two-column list ready for use as a multi-column landing page using [`LandingPageListSubpages`](https://github.com/mdn/yari/blob/main/kumascript/macros/LandingPageListSubpages.ejs).
 
-### Quicklinks
+### Lists of links
 
-We have one macro specifically designed to create [quicklinks](/en-US/docs/MDN/Writing_guidelines/Page_structures/Quicklinks):
+We have one macro specifically designed to create [lists of links](/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars) within content:
 
-- [`QuickLinksWithSubpages`](https://github.com/mdn/yari/blob/main/kumascript/macros/QuickLinksWithSubpages.ejs) creates a set of quicklinks comprised of the pages below the current page (or specified page, if one is given). Up to two total levels of depth are generated.
+- [`QuickLinksWithSubpages`](https://github.com/mdn/yari/blob/main/kumascript/macros/QuickLinksWithSubpages.ejs) creates a list of links comprised of the pages below the current page (or specified page, if one is given). Up to two total levels of depth are generated.

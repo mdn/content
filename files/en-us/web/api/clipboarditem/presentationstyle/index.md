@@ -6,11 +6,11 @@ page-type: web-api-instance-property
 browser-compat: api.ClipboardItem.presentationStyle
 ---
 
-{{DefaultAPISidebar("Clipboard API")}}
+{{APIRef("Clipboard API")}} {{securecontext_header}}
 
-The read-only
-**`presentationStyle`** property of the {{domxref("ClipboardItem")}}
-interface returns a string indicating how an item should be presented.
+The read-only **`presentationStyle`** property of the {{domxref("ClipboardItem")}} interface returns a string indicating how an item should be presented.
+
+For example, in some contexts an image might be displayed inline, while in others it might be represented as an attachment.
 
 ## Value
 
@@ -45,5 +45,4 @@ async function getClipboardContents() {
 ## See also
 
 - [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
-- [Async Clipboard API demo on Glitch](https://async-clipboard-api.glitch.me/)
-- [Image support for Async Clipboard article](https://web.dev/async-clipboard/)
+- [Image support for Async Clipboard article](https://web.dev/articles/async-clipboard)

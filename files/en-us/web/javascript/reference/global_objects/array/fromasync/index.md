@@ -124,7 +124,7 @@ Array.fromAsync(
 `Array.fromAsync()` awaits each value yielded from the object sequentially. `Promise.all()` awaits all values concurrently.
 
 ```js
-function* makeAsyncIterable() {
+function* makeIterableOfPromises() {
   for (let i = 0; i < 5; i++) {
     yield new Promise((resolve) => setTimeout(resolve, 100));
   }
@@ -132,12 +132,12 @@ function* makeAsyncIterable() {
 
 (async () => {
   console.time("Array.fromAsync() time");
-  await Array.fromAsync(makeAsyncIterable());
+  await Array.fromAsync(makeIterableOfPromises());
   console.timeEnd("Array.fromAsync() time");
   // Array.fromAsync() time: 503.610ms
 
   console.time("Promise.all() time");
-  await Promise.all(makeAsyncIterable());
+  await Promise.all(makeIterableOfPromises());
   console.timeEnd("Promise.all() time");
   // Promise.all() time: 101.728ms
 })();
@@ -196,7 +196,7 @@ If you need to close the iterator, you need to use a {{jsxref("Statements/for...
 ## See also
 
 - [Polyfill of `Array.fromAsync` in `core-js`](https://github.com/zloirock/core-js#arrayfromasync)
-- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)
+- [Indexed collections](/en-US/docs/Web/JavaScript/Guide/Indexed_collections) guide
 - {{jsxref("Array")}}
 - {{jsxref("Array/Array", "Array()")}}
 - {{jsxref("Array.of()")}}

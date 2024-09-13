@@ -20,7 +20,7 @@ async function (param0) {
 async function (param0, param1) {
   statements
 }
-async function (param0, param1, /* … ,*/ paramN) {
+async function (param0, param1, /* …, */ paramN) {
   statements
 }
 
@@ -30,19 +30,20 @@ async function name(param0) {
 async function name(param0, param1) {
   statements
 }
-async function name(param0, param1, /* … ,*/ paramN) {
+async function name(param0, param1, /* …, */ paramN) {
   statements
 }
 ```
 
-> **Note:** An [expression statement](/en-US/docs/Web/JavaScript/Reference/Statements/Expression_statement) cannot begin with the keywords `async function` to avoid ambiguity with an [`async function` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/async_function). The `async function` keywords only begin an expression when they appear in a context that cannot accept statements.
+> [!NOTE]
+> An [expression statement](/en-US/docs/Web/JavaScript/Reference/Statements/Expression_statement) cannot begin with the keywords `async function` to avoid ambiguity with an [`async function` declaration](/en-US/docs/Web/JavaScript/Reference/Statements/async_function). The `async function` keywords only begin an expression when they appear in a context that cannot accept statements.
 
 ### Parameters
 
 - `name` {{optional_inline}}
   - : The function name. Can be omitted, in which case the function is _anonymous_. The name is only local to the function body.
 - `paramN` {{optional_inline}}
-  - : The name of an argument to be passed to the function.
+  - : The name of a formal parameter for the function. For the parameters' syntax, see the [Functions reference](/en-US/docs/Web/JavaScript/Guide/Functions#function_parameters).
 - `statements` {{optional_inline}}
   - : The statements which comprise the body of the function.
 
@@ -52,7 +53,7 @@ An `async function` expression is very similar to, and has almost the same synta
 
 ## Examples
 
-### Simple example
+### Using async function expression
 
 ```js
 function resolveAfter2Seconds(x) {
@@ -94,6 +95,8 @@ add(10).then((v) => {
 
 ## See also
 
+- [Functions](/en-US/docs/Web/JavaScript/Guide/Functions) guide
+- [Functions](/en-US/docs/Web/JavaScript/Reference/Functions)
 - {{jsxref("Statements/async_function", "async function")}}
-- {{jsxref("AsyncFunction")}} object
+- {{jsxref("AsyncFunction")}}
 - {{jsxref("Operators/await", "await")}}

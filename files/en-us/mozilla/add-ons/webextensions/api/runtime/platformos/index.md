@@ -5,7 +5,7 @@ page-type: webextension-api-type
 browser-compat: webextensions.api.runtime.PlatformOs
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
 The operating system the browser is running on.
 
@@ -15,12 +15,14 @@ Values of this type are strings. Possible values are:
 
 - `"mac"`
   - : The underlying operating system is macOS.
+- `"ios"`
+  - : The underlying operating system is iOS/iPadOS.
 - `"win"`
   - : The underlying operating system is Windows.
 - `"android"`
   - : The underlying operating system is Android.
 - `"cros"`
-  - : The underlying operating system is Chrome OS.
+  - : The underlying operating system is ChromeOS.
 - `"linux"`
   - : The underlying operating system is Linux.
 - `"openbsd"`
@@ -34,7 +36,8 @@ Values of this type are strings. Possible values are:
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/runtime/#type-PlatformOs) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#type-PlatformOs) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

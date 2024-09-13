@@ -1,6 +1,7 @@
 ---
 title: Nearest
 slug: WebAssembly/Reference/Numeric/Nearest
+page-type: webassembly-instruction
 ---
 
 {{WebAssemblySidebar}}

@@ -2,14 +2,12 @@
 title: FragmentDirective
 slug: Web/API/FragmentDirective
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.FragmentDirective
 ---
 
-{{SeeCompatTable}}
+{{APIRef("URL Fragment Text Directives")}}
 
-The **`FragmentDirective`** interface is an object representing the text fragments highlighted in the current document.
+The **`FragmentDirective`** interface is an object exposed to allow code to check whether or not a browser supports text fragments.
 
 It is accessed via the {{domxref("Document.fragmentDirective")}} property.
 
@@ -23,34 +21,38 @@ None.
 
 ## Examples
 
-Try running the following in a supporting browser's devtools, in a tab with one or more matched text fragments:
+### Checking if text fragments are supported
 
-```js
-document.fragmentDirective;
+The code below logs whether or not text fragments are supported in your browser by checking that {{domxref("Document.fragmentDirective")}} is defined.
+Note that the object is empty, and at present is mainly intended for feature detection.
+In the future, it might include other information.
+
+```html hidden
+<pre id="log"></pre>
 ```
 
-You should get a {{domxref("FragmentDirective")}} object instance returned with a structure similar to the following:
-
-```js
-items: [
-  {
-    prefix: "",
-    textStart: "Module Workers",
-    textEnd: "",
-    suffix: "support",
-    type: "text",
-  },
-  {
-    prefix: "feedback on",
-    textStart: "usability",
-    textEnd: "",
-    suffix: "",
-    type: "text",
-  },
-];
+```js hidden
+const logElement = document.querySelector("#log");
+function log(text) {
+  logElement.innerText = text;
+}
 ```
 
-This functionality is mainly intended for feature detection at present, but in future, it could be expanded to include other information such as translation hints.
+```css hidden
+#log {
+  height: 20px;
+}
+```
+
+```js
+if (document.fragmentDirective) {
+  log("Your browser supports text fragments.");
+} else {
+  log("Text fragments are not supported in your browser.");
+}
+```
+
+{{EmbedLiveSample("Checking if text fragments are supported","100%","30px")}}
 
 ## Specifications
 
@@ -62,5 +64,5 @@ This functionality is mainly intended for feature detection at present, but in f
 
 ## See also
 
-- [Text fragments](/en-US/docs/Web/Text_fragments)
+- [Text fragments](/en-US/docs/Web/URI/Fragment/Text_fragments)
 - {{cssxref("::target-text")}}

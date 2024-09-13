@@ -37,6 +37,8 @@ clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 clip-path: path(
   "M0.5,1 C0.5,1,0,0.7,0,0.3 A0.25,0.25,1,1,1,0.5,0.3 A0.25,0.25,1,1,1,1,0.3 C1,0.7,0.5,1,0.5,1 Z"
 );
+clip-path: rect(5px 5px 160px 145px round 20%);
+clip-path: xywh(0 5px 100% 75% round 15% 0);
 
 /* Box and shape values combined */
 clip-path: padding-box circle(50px at 0 100px);
@@ -54,7 +56,7 @@ The `clip-path` property is specified as one or a combination of the values list
 ### Values
 
 - `<clip-source>`
-  - : A {{cssxref("url", "url()")}} referencing an [SVG](/en-US/docs/Web/SVG) {{SVGElement("clipPath")}} element.
+  - : A {{cssxref("url_value", "&lt;url&gt;")}} referencing an [SVG](/en-US/docs/Web/SVG) {{SVGElement("clipPath")}} element.
 - {{cssxref("&lt;basic-shape&gt;")}}
 
   - : A shape whose size and position is defined by the `<geometry-box>` value. If no geometry box is specified, the `border-box` will be used as the reference box. One of:
@@ -67,8 +69,14 @@ The `clip-path` property is specified as one or a combination of the values list
       - : Defines an ellipse using two radii and a position.
     - {{cssxref("basic-shape/polygon","polygon()")}}
       - : Defines a polygon using an SVG filling rule and a set of vertices.
-    - {{cssxref("path","path()")}}
+    - {{cssxref("basic-shape/path","path()")}}
       - : Defines a shape using an optional SVG filling rule and an SVG path definition.
+    - {{cssxref("basic-shape/rect","rect()")}}
+      - : Defines a rectangle using the specified distances from the edges of the reference box.
+    - {{cssxref("basic-shape/shape","shape()")}}
+      - : Defines a shape using an optional SVG filling rule and shape commands for lines, curves, and arcs.
+    - {{cssxref("basic-shape/xywh","xywh()")}}
+      - : Defines a rectangle using the specified distances from the top and left edges of the reference box and the specified width and height of the rectangle.
 
 - `<geometry-box>`
 
@@ -92,7 +100,8 @@ The `clip-path` property is specified as one or a combination of the values list
 - `none`
   - : No clipping path is created.
 
-> **Note:** A computed value other than **`none`** results in the creation of a new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) the same way that CSS {{cssxref("opacity")}} does for values other than `1`.
+> [!NOTE]
+> A computed value other than **`none`** results in the creation of a new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) the same way that CSS {{cssxref("opacity")}} does for values other than `1`.
 
 ## Formal definition
 
@@ -588,6 +597,8 @@ svg text.em {
   <option value="circle(100px at 110px 100px)">circle</option>
   <option value="url(#cross)" selected>cross</option>
   <option value="inset(20px round 20px)">inset</option>
+  <option value="rect(10px 10px 180px 220px round 20px)">rect</option>
+  <option value="xywh(0 20% 90% 67% round 0 0 5% 5px)">xywh</option>
   <option value="path('M 0 200 L 0,110 A 110,90 0,0,1 240,100 L 200 340 z')">
     path
   </option>

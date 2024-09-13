@@ -2,13 +2,16 @@
 title: Masonry layout
 slug: Web/CSS/CSS_grid_layout/Masonry_layout
 page-type: guide
+status:
+  - experimental
+browser-compat:
+  - css.properties.grid-template-columns.masonry
+  - css.properties.grid-template-rows.masonry
 ---
 
-{{CSSRef}}
+{{CSSRef}} {{SeeCompatTable}}
 
 Level 3 of the [CSS grid layout](/en-US/docs/Web/CSS/CSS_grid_layout) specification includes a `masonry` value for {{cssxref("grid-template-columns")}} and {{cssxref("grid-template-rows")}}. This guide details what masonry layout is and how to use it.
-
-> **Warning:** This feature is only implemented in Firefox, and can be enabled by setting the flag `layout.css.grid-template-masonry-value.enabled` to `true` in `about:config`, in order to allow testing and providing of feedback.
 
 Masonry layout is a layout method where one axis uses a typical strict grid layout, most often columns, and the other a masonry layout. On the masonry axis, rather than sticking to a strict grid with gaps being left after shorter items, the items in the following row rise up to completely fill the gaps.
 
@@ -47,34 +50,15 @@ This example includes an item which has positioning for columns. Items with defi
 
 {{EmbedGHLiveSample("css-examples/grid/masonry/positioned.html", '100%', 1000)}}
 
-## Controlling the masonry axis
-
-The masonry axis operates under different rules as it is following the masonry layout rules rather than normal grid auto-placement rules. To control this axis we have three additional properties defined in the Grid Level 3 specification {{cssxref("align-tracks")}}, {{cssxref("justify-tracks")}}, and {{cssxref("masonry-auto-flow")}}.
-
-### masonry-auto-flow
-
-The `masonry-auto-flow` property gives you a way to change how the masonry algorithm behaves. Give it a value of `next` and items will display in order on the grid axis, rather than going into whichever track has the most free space. The value `positioned` will ignore items with definite placement and place items in order-modified document order.
-
-{{EmbedGHLiveSample("css-examples/grid/masonry/masonry-auto-flow.html", '100%', 1000)}}
-
-### align-tracks
-
-The `align-tracks` property allows for the alignment of items in grid containers with masonry in their block axis. The property aligns the items within their track, much in the way flex layout works. The property takes the same values as `align-content`, however you can specify multiple values to have different alignment values per track on the grid axis.
-
-If you specify more values than tracks the additional values are ignored. If there are more tracks than values any additional tracks will use the last specified value.
-
-{{EmbedGHLiveSample("css-examples/grid/masonry/align-tracks.html", '100%', 1000)}}
-
-### justify-tracks
-
-The `justify-tracks` property works in the same way as align-tracks, however it is used when the masonry axis is the inline axis.
-
-{{EmbedGHLiveSample("css-examples/grid/masonry/justify-tracks.html", '100%', 1000)}}
-
 ## Fallback
 
-In browsers that do not support masonry, regular grid auto-placement will be used instead.
+In browsers [that do not support masonry](#browser_compatibility), regular grid auto-placement will be used instead.
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 
-- [Native CSS Masonry Layout In CSS Grid](https://www.smashingmagazine.com/native-css-masonry-layout-css-grid/)
+- {{cssxref("grid-auto-flow")}} for controlling grid auto-placement
+- [Native CSS masonry layout in CSS grid](https://www.smashingmagazine.com/native-css-masonry-layout-css-grid/)

@@ -5,13 +5,24 @@ page-type: webextension-api-function
 browser-compat: webextensions.api.menus.create
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
-Creates a new menu item, given an options object defining properties for the item.
+Creates a menu item using an options object defining properties for the item.
 
 Unlike other asynchronous functions, this one does not return a promise, but uses an optional callback to communicate success or failure. This is because its return value is the ID of the new item.
 
-For compatibility with other browsers, Firefox makes this method available via the `contextMenus` namespace as well as the `menus` namespace. Note though that it's not possible to create tools menu items (`contexts: ["tools_menu"]`) using the `contextMenus` namespace.
+For compatibility with other browsers, Firefox makes this method available in the `contextMenus` namespace and `menus` namespace. However, it's not possible to create tools menu items (`contexts: ["tools_menu"]`) using the `contextMenus` namespace.
+
+> **Creating menus in persistent and non-persistent extensions**
+>
+> How you create menu items depends on whether your extension uses:
+>
+> - non-persistent background pages (an event page), where menus persist across browser and extension restarts. You call `menus.create` (with a menu-specific ID) from within a {{WebExtAPIRef("runtime.onInstalled")}} listener. This avoids repeated attempts to create the menu item when the pages restart, which would occur with a top-level call.
+> - persistent background pages:
+>   - in Chrome, menu items from persistent background pages are persisted. Create your menus in a {{WebExtAPIRef("runtime.onInstalled")}} listener.
+>   - in Firefox, menu items from persistent background pages are never persisted. Call `menus.create` unconditionally from the top level to register the menu items.
+>
+> See [Initialize the extension](/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts#initialize_the_extension) on the background scripts page and [Event-driven background scripts](https://extensionworkshop.com/documentation/develop/manifest-v3-migration-guide/#event-driven-background-scripts) on Extension Workshop for more information.
 
 ## Syntax
 
@@ -77,7 +88,8 @@ browser.menus.create(
         });
         ```
 
-        > **Note:** The top-level menu item uses the [icons](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) specified in the manifest rather than what is specified with this key.
+        > [!NOTE]
+        > The top-level menu item uses the [icons](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) specified in the manifest rather than what is specified with this key.
 
     - `id` {{optional_inline}}
       - : `string`. The unique ID to assign to this item. Is mandatory for non-persistent [background (event) pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts) in Manifest V2 and in Manifest V3. Cannot be the same as another ID for this extension.
@@ -190,7 +202,8 @@ browser.menus.onClicked.addListener((info, tab) => {
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/contextMenus/#method-create) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/api/contextMenus#method-create) API. This documentation is derived from [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

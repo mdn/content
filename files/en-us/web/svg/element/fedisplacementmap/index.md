@@ -21,16 +21,6 @@ where `P(x,y)` is the input image, {{SVGAttr("in")}}, and `P'(x,y)` is the desti
 
 ## Attributes
 
-### Global attributes
-
-- [Core attributes](/en-US/docs/Web/SVG/Attribute#core_attributes)
-- [Presentation attributes](/en-US/docs/Web/SVG/Attribute#presentation_attributes)
-- [Filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes)
-- {{SVGAttr("class")}}
-- {{SVGAttr("style")}}
-
-### Specific attributes
-
 - {{SVGAttr("in")}}
 - {{SVGAttr("in2")}}
 - {{SVGAttr("scale")}}
@@ -79,6 +69,7 @@ This element implements the {{domxref("SVGFEDisplacementMapElement")}} interface
 
 ## See also
 
+- [SVG filter primitive attributes](/en-US/docs/Web/SVG/Attribute#filter_primitive_attributes)
 - {{SVGElement("filter")}}
 - {{SVGElement("animate")}}
 - {{SVGElement("set")}}

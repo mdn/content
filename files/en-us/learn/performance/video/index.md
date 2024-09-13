@@ -13,10 +13,9 @@ As we learned in the previous section, media, namely images and video, account f
     <tr>
       <th scope="row">Prerequisites:</th>
       <td>
-        Basic computer literacy,
         <a
           href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >basic software installed</a
+          >Basic software installed</a
         >, and basic knowledge of
         <a href="/en-US/docs/Learn/Getting_started_with_the_web"
           >client-side web technologies</a
@@ -44,20 +43,19 @@ The sections below describe the following optimization techniques:
 
 - [compress all video](#compress_all_videos)
 - [optimize `<source>` order](#optimize_source_order)
-- [set autoplay](#video_autoplay)
 - [remove audio from muted video](#remove_audio_from_muted_hero_videos)
 - [optimize video preload](#video_preload)
 - [consider streaming](#consider_streaming)
 
 ### Compress all videos
 
-Most video compression work compares adjacent frames within a video, with the intent of removing detail that is identical in both frames. Compress the video and export to multiple video formats, including WebM, MPEG-4/H.264, and Ogg/Theora.
+Most video compression work compares adjacent frames within a video, with the intent of removing detail that is identical in both frames. Compress the video and export to multiple video formats, including WebM, and MPEG-4/H.264.
 
 Your video editing software probably has a feature to reduce file size. If not, there are online tools, such as [FFmpeg](https://www.ffmpeg.org/) (discussed in section below), that encode, decode, convert, and perform other optimization functions.
 
 ### Optimize `<source>` order
 
-Order video source from smallest to largest. For example, given video compressions in three different formats at 10MB, 12MB, and 13MB, declare the smallest first and the largest last:
+Order video source from smallest to largest. For example, given video compressions in the formats at 10MB and 12MB, declare the 10MB resource first:
 
 ```html
 <video width="400" height="300" controls="controls">
@@ -65,38 +63,17 @@ Order video source from smallest to largest. For example, given video compressio
   <source src="video.webm" type="video/webm" />
   <!-- MPEG-4/H.264: 12 MB -->
   <source src="video.mp4" type="video/mp4" />
-  <!-- Ogg/Theora: 13 MB -->
-  <source src="video.ogv" type="video/ogv" />
 </video>
 ```
 
 The browser downloads the first format it understands. The goal is to offer smaller versions ahead of larger versions. With the smallest version, make sure that the most compressed video still looks good. There are some compression algorithms that can make video look (bad) like an animated GIF. While a 128 Kb video may seem like it could provide a better user experience than a 10 MB download, a grainy GIF-like video may reflect poorly on the brand or project.
-
-See [CanIUse.com](https://caniuse.com/#search=video) for current browser support of video and other media types.
-
-### Video autoplay
-
-To ensure that a looping background video autoplays, you must add several attributes to the video tag: `autoplay`, `muted`, and `playsinline`.
-
-```html
-<video
-  autoplay=""
-  loop=""
-  muted="true"
-  playsinline=""
-  src="backgroundvideo.mp4"></video>
-```
-
-While the `loop` and `autoplay` make sense for a looping and autoplaying video, the `muted` attribute is required for autoplay in mobile browsers.
-
-`Playsinline` is required for mobile Safari, allowing videos to play without forcing fullscreen mode.
 
 ### Remove audio from muted hero videos
 
 For hero-video or other video without audio, removing audio is smart.
 
 ```html
-<video autoplay="" loop="" muted="true" playsinline="" id="hero-video">
+<video autoplay="" loop="" muted playsinline="" id="hero-video">
   <source src="banner_video.webm" type='video/webm; codecs="vp8, vorbis"' />
   <source src="web_banner.mp4" type="video/mp4" />
 </video>
@@ -112,7 +89,7 @@ ffmpeg -i original.mp4 -an -c:v copy audioFreeVersion.mp4
 
 ### Video preload
 
-The preload attribute has three available options: `auto`|`metadata`|`none`. The default setting is `metadata`. These settings control how much of a video file downloads with page load. You can save data by deferring download for less popular videos.
+The preload attribute has three available options: `auto`, `metadata`, and `none`. The default setting is `metadata`. These settings control how much of a video file downloads with page load. You can save data by deferring download for less popular videos.
 
 Setting `preload="none"` results in none of the video being downloaded until playback. It delays startup, but offers significant data savings for videos with a low probability of playback.
 

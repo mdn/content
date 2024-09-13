@@ -44,7 +44,7 @@ for (const key of list.keys()) {
 
 The result is:
 
-```
+```plain
 0
 1
 2

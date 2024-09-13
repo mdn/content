@@ -17,12 +17,12 @@ Whitespace is any string of text composed only of spaces, tabs or line breaks (t
 In the case of HTML, whitespace is largely ignored — whitespace in between words is treated as a single character, and whitespace at the start and end of elements and outside elements is ignored. Take the following minimal example:
 
 ```html-nolint
-<!DOCTYPE html>
+<!doctype html>
 
   <h1>      Hello      World!     </h1>
 ```
 
-This source code contains a couple of line feeds after the `DOCTYPE` and a bunch of space characters before, after, and inside the `<h1>` element, but the browser doesn't seem to care at all and just shows the words "Hello World!" as if these characters didn't exist at all:
+This source code contains a couple of line feeds after the `doctype` and a bunch of space characters before, after, and inside the `<h1>` element, but the browser doesn't seem to care at all and just shows the words "Hello World!" as if these characters didn't exist at all:
 
 {{EmbedLiveSample('HTML_largely_ignores_whitespace')}}
 
@@ -140,7 +140,7 @@ This is why people visiting the web page will see the phrase "Hello World!" nice
 
 ### Whitespace in block formatting contexts
 
-Above we just looked at elements that contain inline elements, and inline formatting contexts. If an element contains at least one block element, then it instead establishes what is called a [block formatting context](/en-US/docs/Web/Guide/CSS/Block_formatting_context).
+Above we just looked at elements that contain inline elements, and inline formatting contexts. If an element contains at least one block element, then it instead establishes what is called a [block formatting context](/en-US/docs/Web/CSS/CSS_display/Block_formatting_context).
 
 Within this context, whitespace is treated very differently.
 
@@ -189,7 +189,7 @@ We can summarize how the whitespace here is handled as follows (there may be som
    ```html
    <block>⏎⇥</block>
    <block>◦◦Hello◦◦</block>
-   <block>⏎◦◦◦</block>
+   <block>⏎⏎◦◦◦</block>
    <block>◦◦World!◦◦</block>
    <block>◦◦⏎</block>
    ```

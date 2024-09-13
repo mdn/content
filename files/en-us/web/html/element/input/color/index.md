@@ -19,7 +19,8 @@ The element's presentation may vary substantially from one browser and/or platfo
 
 The [`value`](/en-US/docs/Web/HTML/Element/input#value) of an {{HTMLElement("input")}} element of type `color` is always a string which contains a 7-character string specifying an RGB color in hexadecimal format. While you can input the color in either upper- or lower-case, it will be stored in lower-case form. The value is never in any other form, and is never empty.
 
-> **Note:** Setting the value to anything that isn't a valid, fully-opaque, RGB color _in hexadecimal notation_ will result in the value being set to `#000000`. In particular, you can't use CSS's standardized color names, or any CSS function syntax, to set the value. This makes sense when you keep in mind that HTML and CSS are separate languages and specifications. In addition, colors with an alpha channel are not supported; specifying a color in 9-character hexadecimal notation (e.g. `#009900aa`) will also result in the color being set to `#000000`.
+> [!NOTE]
+> Setting the value to anything that isn't a valid, fully-opaque, RGB color _in hexadecimal notation_ will result in the value being set to `#000000`. In particular, you can't use CSS's standardized color names, or any CSS function syntax, to set the value. This makes sense when you keep in mind that HTML and CSS are separate languages and specifications. In addition, colors with an alpha channel are not supported; specifying a color in 9-character hexadecimal notation (e.g. `#009900aa`) will also result in the color being set to `#000000`.
 
 ## Using color inputs
 
@@ -35,11 +36,11 @@ You can update the simple example above to set a default value, so that the colo
 
 {{EmbedLiveSample("Providing_a_default_color", 700, 30)}}
 
-If you don't specify a value, the default is `#000000`, which is black. The value must be in seven-character hexadecimal notation, meaning the "#" character followed by two digits each representing red, green, and blue, like this: `#rrggbb`. If you have colors that are in any other format (such as CSS color names or CSS color functions such as `rgb()` or `rgba()`), you'll have to convert them to hexadecimal before setting the `value`.
+If you don't specify a value, the default is `#000000`, which is black. The value must be in seven-character hexadecimal notation, meaning the "#" character followed by two digits each representing red, green, and blue, like this: `#rrggbb`. If you have colors that are in any other format (such as CSS color names or CSS color functions such as `rgb()` or `hsl()` ), you'll have to convert them to hexadecimal before setting the `value`.
 
 ### Tracking color changes
 
-As is the case with other {{HTMLElement("input")}} types, there are two events that can be used to detect changes to the color value: {{domxref("HTMLElement/input_event", "input")}} and {{domxref("HTMLElement/change_event", "change")}}. `input` is fired on the `<input>` element every time the color changes. The `change` event is fired when the user dismisses the color picker. In both cases, you can determine the new value of the element by looking at its [`value`](/en-US/docs/Web/HTML/Element/input#value).
+As is the case with other {{HTMLElement("input")}} types, there are two events that can be used to detect changes to the color value: {{domxref("Element/input_event", "input")}} and {{domxref("HTMLElement/change_event", "change")}}. `input` is fired on the `<input>` element every time the color changes. The `change` event is fired when the user dismisses the color picker. In both cases, you can determine the new value of the element by looking at its [`value`](/en-US/docs/Web/HTML/Element/input#value).
 
 Here's an example that watches changes over time to the color value:
 
@@ -70,7 +71,7 @@ A color input's value is considered to be invalid if the {{Glossary("user agent"
 
 ## Example
 
-Let's create an example which does a little more with the color input by tracking the {{domxref("HTMLElement/change_event", "change")}} and {{domxref("HTMLElement/input_event", "input")}} events to take the new color and apply it to every {{HTMLElement("p")}} element in the document.
+Let's create an example which does a little more with the color input by tracking the {{domxref("HTMLElement/change_event", "change")}} and {{domxref("Element/input_event", "input")}} events to take the new color and apply it to every {{HTMLElement("p")}} element in the document.
 
 ### HTML
 
@@ -119,7 +120,7 @@ function startup() {
 }
 ```
 
-This gets a reference to the color `<input>` element in a variable called `colorPicker`, then sets the color input's value to the value in `defaultColor`. Then the color input's {{domxref("HTMLElement/input_event", "input")}} event is set up to call our `updateFirst()` function, and the {{domxref("HTMLElement/change_event", "change")}} event is set to call `updateAll()`. These are both seen below.
+This gets a reference to the color `<input>` element in a variable called `colorPicker`, then sets the color input's value to the value in `defaultColor`. Then the color input's {{domxref("Element/input_event", "input")}} event is set up to call our `updateFirst()` function, and the {{domxref("HTMLElement/change_event", "change")}} event is set to call `updateAll()`. These are both seen below.
 
 Finally, we call {{domxref("HTMLInputElement.select", "select()")}} to select the text content of the color input if the control is implemented as a text field (this has no effect if a color picker interface is provided instead).
 
@@ -169,7 +170,7 @@ The final result looks like this:
       <td><strong>Events</strong></td>
       <td>
         {{domxref("HTMLElement/change_event", "change")}} and
-        {{domxref("HTMLElement/input_event", "input")}}
+        {{domxref("Element/input_event", "input")}}
       </td>
     </tr>
     <tr>
@@ -195,7 +196,7 @@ The final result looks like this:
     </tr>
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>
-      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"><code>no corresponding role</code></a></td>
+      <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">no corresponding role</a></td>
     </tr>
   </tbody>
 </table>

@@ -28,13 +28,14 @@ Vector graphics are very useful in many circumstances — they have small file s
   </tbody>
 </table>
 
-> **Note:** This article doesn't intend to teach you SVG; just what it is, and how to add it to web pages.
+> [!NOTE]
+> This article doesn't intend to teach you SVG; just what it is, and how to add it to web pages.
 
 ## What are vector graphics?
 
 On the web, you'll work with two types of images — **raster images**, and **vector images**:
 
-- **Raster images** are defined using a grid of pixels — a raster image file contains information showing exactly where each pixel is to be placed, and exactly what color it should be. Popular web raster formats include Bitmap (`.bmp`), PNG (`.png`), JPEG (`.jpg`), and GIF (`.gif`.)
+- **Raster images** are defined using a grid of pixels — a raster image file contains information showing exactly where each pixel is to be placed, and exactly what color it should be. Popular web raster formats include Bitmap (`.bmp`), PNG (`.png`), JPEG (`.jpg`), and GIF (`.gif`).
 - **Vector images** are defined using algorithms — a vector image file contains shape and path definitions that the computer can use to work out what the image should look like when rendered on the screen. The {{glossary("SVG")}} format allows us to create powerful vector graphics for use on the Web.
 
 To give you an idea of the difference between the two, let's look at an example. You can find this example live on our GitHub repo as [vector-versus-raster.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html) — it shows two seemingly identical images side by side, of a red star with a black drop shadow. The difference is that the left one is a PNG, and the right one is an SVG image.
@@ -45,15 +46,16 @@ The difference becomes apparent when you zoom in the page — the PNG image beco
 
 ![Two star images zoomed in, one crisp and the other blurry](raster-vector-zoomed.png)
 
-> **Note:** The images above are actually all PNGs — with the left-hand star in each case representing a raster image, and the right-hand star representing a vector image. Again, go to the [vector-versus-raster.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html) demo for a real example!
+> [!NOTE]
+> The images above are actually all PNGs — with the left-hand star in each case representing a raster image, and the right-hand star representing a vector image. Again, go to the [vector-versus-raster.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html) demo for a real example!
 
 Moreover, vector image files are much lighter than their raster equivalents, because they only need to hold a handful of algorithms, rather than information on every pixel in the image individually.
 
 ## What is SVG?
 
-[SVG](/en-US/docs/Web/SVG) is an {{glossary("XML")}}-based language for describing vector images. It's basically markup, like HTML, except that you've got many different elements for defining the shapes you want to appear in your image, and the effects you want to apply to those shapes. SVG is for marking up graphics, not content. At the simplest end of the spectrum, you've got elements for creating simple shapes, like {{svgelement("circle")}} and {{svgelement("rect")}}. More advanced SVG features include {{svgelement("feColorMatrix")}} (transform colors using a transformation matrix,) {{svgelement("animate")}} (animate parts of your vector graphic,) and {{svgelement("mask")}} (apply a mask over the top of your image.)
+[SVG](/en-US/docs/Web/SVG) is an {{glossary("XML")}}-based language for describing vector images. It's basically markup, like HTML, except that you've got many different elements for defining the shapes you want to appear in your image, and the effects you want to apply to those shapes. SVG is for marking up graphics, not content. SVG defines elements for creating basic shapes, like {{svgelement("circle")}} and {{svgelement("rect")}}, as well as elements for creating more complex shapes, like {{svgelement("path")}} and {{svgelement("polygon")}}. More advanced SVG features include {{svgelement("feColorMatrix")}} (transform colors using a transformation matrix), {{svgelement("animate")}} (animate parts of your vector graphic), and {{svgelement("mask")}} (apply a mask over the top of your image).
 
-As a simple example, the following code creates a circle and a rectangle:
+As a basic example, the following code creates a circle and a rectangle:
 
 ```html
 <svg
@@ -85,7 +87,8 @@ So why would anyone want to use raster graphics over SVG? Well, SVG does have so
 
 Raster graphics are arguably better for complex precision images such as photos, for the reasons described above.
 
-> **Note:** In Inkscape, save your files as Plain SVG to save space. Also, please refer to this [article describing how to prepare SVGs for the Web](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Web-Inkscape.html).
+> [!NOTE]
+> In Inkscape, save your files as Plain SVG to save space. Also, please refer to this [article describing how to prepare SVGs for the Web](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Web-Inkscape.html).
 
 ## Adding SVG to your pages
 
@@ -93,7 +96,7 @@ In this section we'll go through the different ways in which you can add SVG vec
 
 ### The quick way: `img` element
 
-To embed an SVG via an {{htmlelement("img")}} element, you just need to reference it in the src attribute as you'd expect. You will need a `height` or a `width` attribute (or both if your SVG has no inherent aspect ratio). If you have not already done so, please read [Images in HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML).
+To embed an SVG via an {{htmlelement("img")}} element, you just need to reference it in the src attribute as you'd expect. You will need a `height` or a `width` attribute (or both if your SVG has no inherent {{glossary("aspect ratio")}}). If you have not already done so, please read [Images in HTML](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML).
 
 ```html
 <img
@@ -278,12 +281,12 @@ window.addEventListener("load", updateCode);
 // make it write a tab at the caret position instead
 
 textarea.onkeydown = function (e) {
-  if (e.keyCode === 9) {
+  if (e.code === "Tab") {
     e.preventDefault();
     insertAtCaret("\t");
   }
 
-  if (e.keyCode === 27) {
+  if (e.code === "Escape") {
     textarea.blur();
   }
 };
@@ -331,7 +334,6 @@ In the last article of this module, we'll explore [responsive images](/en-US/doc
 ## See also
 
 - [SVG tutorial](/en-US/docs/Web/SVG/Tutorial/Getting_Started) on MDN
-- [Quick tips for responsive SVGs](https://thenewcode.com/744/Making-SVG-Responsive)
 - [Sara Soueidan's tutorial on responsive SVG images](https://tympanus.net/codrops/2014/08/19/making-svgs-responsive-with-css/)
 - [Accessibility benefits of SVG](https://www.w3.org/TR/SVG-access/)
 - [SVG Properties and CSS](https://css-tricks.com/svg-properties-and-css/)

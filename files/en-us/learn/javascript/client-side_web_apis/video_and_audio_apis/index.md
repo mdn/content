@@ -135,7 +135,7 @@ Now open the CSS file and have a look inside. The CSS for the example is not too
 
 - We start off with the {{cssxref("visibility")}} of the custom controls set to `hidden`. In our JavaScript later on, we will set the controls to `visible`, and remove the `controls` attribute from the `<video>` element. This is so that, if the JavaScript doesn't load for some reason, users can still use the video with the native controls.
 - We give the controls an {{cssxref("opacity")}} of 0.5 by default, so that they are less distracting when you are trying to watch the video. Only when you are hovering/focusing over the player do the controls appear at full opacity.
-- We lay out the buttons inside the control bar using Flexbox ({{cssxref("display")}}: flex), to make things easier.
+- We lay out the buttons inside the control bar using flexbox ({{cssxref("display")}}: flex), to make things easier.
 
 Next, let's look at our button icons:
 
@@ -144,7 +144,8 @@ Next, let's look at our button icons:
   font-family: "HeydingsControlsRegular";
   src: url("fonts/heydings_controls-webfont.eot");
   src:
-    url("fonts/heydings_controls-webfont.eot?#iefix") format("embedded-opentype"),
+    url("fonts/heydings_controls-webfont.eot?#iefix")
+      format("embedded-opentype"),
     url("fonts/heydings_controls-webfont.woff") format("woff"),
     url("fonts/heydings_controls-webfont.ttf") format("truetype");
   font-weight: normal;
@@ -186,7 +187,7 @@ Last but not least, let's look at the CSS for the timer:
 
 .timer div {
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgb(255 255 255 / 20%);
   left: 0;
   top: 0;
   width: 0;
@@ -201,7 +202,7 @@ Last but not least, let's look at the CSS for the timer:
 }
 ```
 
-- We set the outer `.timer` element to have `flex: 5`, so it takes up most of the width of the controls bar. We also give it {{cssxref("position")}}`: relative`, so that we can position elements inside it conveniently according to its boundaries, and not the boundaries of the {{htmlelement("body")}} element.
+- We set the outer `.timer` element to have `flex: 5`, so it takes up most of the width of the controls bar. We also give it {{cssxref("position", "position: relative")}}, so that we can position elements inside it conveniently according to its boundaries, and not the boundaries of the {{htmlelement("body")}} element.
 - The inner `<div>` is absolutely positioned to sit directly on top of the outer `<div>`. It is also given an initial width of 0, so you can't see it at all. As the video plays, the width will be increased via JavaScript as the video elapses.
 - The `<span>` is also absolutely positioned to sit near the left-hand side of the timer bar.
 - We also give our inner `<div>` and `<span>` the right amount of {{cssxref("z-index")}} so that the timer will be displayed on top, and the inner `<div>` below that. This way, we make sure we can see all the information — one box is not obscuring another.
@@ -458,8 +459,8 @@ Here are some suggestions for ways you could enhance the existing example we've 
 
 - {{domxref("HTMLMediaElement")}}
 - [Video and audio content](/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content) — simple guide to `<video>` and `<audio>` HTML.
-- [Audio and video delivery](/en-US/docs/Web/Guide/Audio_and_video_delivery) — detailed guide to delivering media inside the browser, with many tips, tricks, and links to further more advanced tutorials.
-- [Audio and video manipulation](/en-US/docs/Web/Guide/Audio_and_video_manipulation) — detailed guide to manipulating audio and video, e.g. with [Canvas API](/en-US/docs/Web/API/Canvas_API), [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), and more.
+- [Audio and video delivery](/en-US/docs/Web/Media/Audio_and_video_delivery) — detailed guide to delivering media inside the browser, with many tips, tricks, and links to further more advanced tutorials.
+- [Audio and video manipulation](/en-US/docs/Web/Media/Audio_and_video_manipulation) — detailed guide to manipulating audio and video, e.g. with [Canvas API](/en-US/docs/Web/API/Canvas_API), [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), and more.
 - {{htmlelement("video")}} and {{htmlelement("audio")}} reference pages.
 - [Guide to media types and formats on the web](/en-US/docs/Web/Media/Formats)
 

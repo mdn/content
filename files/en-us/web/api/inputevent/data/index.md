@@ -15,11 +15,11 @@ characters are deleted.
 
 ## Value
 
-A string.
+A string or `null`. The spec has an [overview](https://w3c.github.io/input-events/#overview) of its value in various cases.
 
 ## Examples
 
-In the following example, an event listener receives the [input](/en-US/docs/Web/API/HTMLElement/input_event) event. Any textual change
+In the following example, an event listener receives the [input](/en-US/docs/Web/API/Element/input_event) event. Any textual change
 to the {{htmlelement("input")}} element is retrieved by `InputEvent.data` and
 inserted into a paragraph using the
 [`Node.textContent`](/en-US/docs/Web/API/Node/textContent)

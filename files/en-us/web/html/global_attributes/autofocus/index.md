@@ -15,9 +15,10 @@ The **`autofocus`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) i
 
 No more than one element in the document or dialog may have the autofocus attribute. If applied to multiple elements the first one will receive focus.
 
-> **Note:** The `autofocus` attribute applies to all elements, not just form controls. For example, it might be used on a [contenteditable](/en-US/docs/Web/HTML/Global_attributes/contenteditable) area.
+> [!NOTE]
+> The `autofocus` attribute applies to all elements, not just form controls. For example, it might be used on a [contenteditable](/en-US/docs/Web/HTML/Global_attributes/contenteditable) area.
 
-## Accessibility considerations
+## Accessibility concerns
 
 Automatically focusing a form control can confuse visually-impaired people using screen-reading technology and people with cognitive impairments. When `autofocus` is assigned, screen-readers "teleport" their user to the form control without warning them beforehand.
 

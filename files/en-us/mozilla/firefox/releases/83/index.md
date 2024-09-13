@@ -8,7 +8,8 @@ page-type: firefox-release-notes
 
 This article provides information about the changes in Firefox 83 that will affect developers. Firefox 83 was released on November 17, 2020.
 
-> **Note:** See also [Firefox 83 is upon us](https://hacks.mozilla.org/2020/11/firefox-83-is-upon-us/) on Mozilla hacks
+> [!NOTE]
+> See also [Firefox 83 is upon us](https://hacks.mozilla.org/2020/11/firefox-83-is-upon-us/) on Mozilla hacks
 
 ## Changes for web developers
 
@@ -29,7 +30,7 @@ This article provides information about the changes in Firefox 83 that will affe
 
 ### JavaScript
 
-- [`Intl[@@toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/@@toStringTag) has been added, returning a default value of `Intl` (recent addition to the ECMA spec). ([Firefox bug 1670053](https://bugzil.la/1670053))
+- [`Intl[@@toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) has been added, returning a default value of `Intl` (recent addition to the ECMA spec). ([Firefox bug 1670053](https://bugzil.la/1670053))
 
 ### HTTP
 
@@ -50,4 +51,4 @@ _No changes._
 
 ## Older versions
 
-{{Firefox_for_developers(82)}}
+{{Firefox_for_developers}}

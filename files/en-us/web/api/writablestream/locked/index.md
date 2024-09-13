@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.WritableStream.locked
 ---
 
-{{APIRef("Streams")}}
+{{APIRef("Streams")}}{{AvailableInWorkers}}
 
 The **`locked`** read-only property of the {{domxref("WritableStream")}} interface returns a boolean indicating whether the `WritableStream` is locked to a writer.
 

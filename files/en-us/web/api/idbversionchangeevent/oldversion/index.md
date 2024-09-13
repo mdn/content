@@ -6,15 +6,13 @@ page-type: web-api-instance-property
 browser-compat: api.IDBVersionChangeEvent.oldVersion
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
 The **`oldVersion`** read-only property of the
 {{domxref("IDBVersionChangeEvent")}} interface returns the old version number of the
 database.
 
 When the opened database doesn't exist yet, the value of `oldVersion` is 0.
-
-{{AvailableInWorkers}}
 
 ## Value
 

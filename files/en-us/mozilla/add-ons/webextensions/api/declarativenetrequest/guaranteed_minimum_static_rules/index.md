@@ -5,9 +5,9 @@ page-type: webextension-api-property
 browser-compat: webextensions.api.declarativeNetRequest.GUARANTEED_MINIMUM_STATIC_RULES
 ---
 
-{{AddonSidebar()}}
+{{AddonSidebar}}
 
-The minimum number of static rules guaranteed to an extension across its enabled static rulesets. Any rules above this limit are count towards the global static rule limit.
+The minimum number of static rules guaranteed to an extension across its enabled static rulesets. Any rules above this limit are count towards the global static rule limit. See [static ruleset limits](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#static_ruleset_limits) for more information on the static ruleset limits.
 
 Its value is `30000` on Chrome.
 

@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.Client
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
 
 The `Client` interface represents an executable context such as a {{domxref("Worker")}}, or a {{domxref("SharedWorker")}}. {{domxref("Window")}} clients are represented by the more-specific {{domxref("WindowClient")}}. You can get `Client`/`WindowClient` objects from methods such as {{domxref("Clients.matchAll","Clients.matchAll()")}} and {{domxref("Clients.get","Clients.get()")}}.
 
@@ -16,6 +16,8 @@ The `Client` interface represents an executable context such as a {{domxref("Wor
 
 ## Instance properties
 
+- {{domxref("Client.frameType")}} {{ReadOnlyInline}}
+  - : The client's frame type as a string. It can be `"auxiliary"`, `"top-level"`, `"nested"`, or `"none"`.
 - {{domxref("Client.id")}} {{ReadOnlyInline}}
   - : The universally unique identifier of the client as a string.
 - {{domxref("Client.type")}} {{ReadOnlyInline}}
@@ -34,5 +36,3 @@ The `Client` interface represents an executable context such as a {{domxref("Wor
 ## See also
 
 - [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)

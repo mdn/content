@@ -7,7 +7,7 @@ status:
 browser-compat: api.ContentIndexEvent
 ---
 
-{{APIRef("Content Index API")}}{{SeeCompatTable}}
+{{APIRef("Content Index API")}}{{SeeCompatTable}}{{AvailableInWorkers("service")}}
 
 The **`ContentIndexEvent`** interface of the [content index](/en-US/docs/Web/API/Content_Index_API) defines the object used to represent the {{domxref("ServiceWorkerGlobalScope.contentdelete_event", 'contentdelete')}} event.
 
@@ -55,6 +55,5 @@ self.addEventListener("contentdelete", (event) => {
 
 ## See also
 
-- [An introductory article on the Content Index API](https://web.dev/content-indexing-api/)
-- [An app which uses the Content Index API to list and remove 'save for later' content](https://contentindex.dev/)
+- [An introductory article on the Content Index API](https://developer.chrome.com/docs/capabilities/web-apis/content-indexing-api)
 - [Service Worker API, along with information about Cache and CacheStorage](/en-US/docs/Web/API/Service_Worker_API)

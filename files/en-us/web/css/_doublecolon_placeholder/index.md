@@ -13,7 +13,8 @@ The **`::placeholder`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/
 
 Only the subset of CSS properties that apply to the {{cssxref("::first-line")}} pseudo-element can be used in a rule using `::placeholder` in its selector.
 
-> **Note:** In most browsers, the appearance of placeholder text is a translucent or light gray color by default.
+> [!NOTE]
+> In most browsers, the appearance of placeholder text is a translucent or light gray color by default.
 
 ## Syntax
 
@@ -23,7 +24,7 @@ Only the subset of CSS properties that apply to the {{cssxref("::first-line")}} 
 }
 ```
 
-## Accessibility concerns
+## Accessibility
 
 ### Color contrast
 
@@ -61,7 +62,7 @@ With this implementation, the hint content is available even if information is e
 
 ### Windows High Contrast Mode
 
-Placeholder text will appear with the same styling as user-entered text content when rendered in [Windows High Contrast Mode](https://www.smashingmagazine.com/2022/06/guide-windows-high-contrast-mode/)). This will make it difficult for some people to determine which content has been entered, and which content is placeholder text.
+Placeholder text will appear with the same styling as user-entered text content when rendered in [Windows High Contrast Mode](https://www.smashingmagazine.com/2022/06/guide-windows-high-contrast-mode/). This will make it difficult for some people to determine which content has been entered, and which content is placeholder text.
 
 ### Labels
 

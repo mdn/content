@@ -85,6 +85,10 @@ The `SVGAnimatedAngle` interface is used for attributes of basic type [\<angle>]
 
 The `SVGAnimatedAngle` interface do not provide any specific methods.
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

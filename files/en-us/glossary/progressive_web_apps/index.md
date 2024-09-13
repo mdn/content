@@ -15,4 +15,4 @@ These features include being installable, working offline, and being easy to syn
 ## See also
 
 - [Progressive web apps](/en-US/docs/Web/Progressive_web_apps) on MDN
-- [Progressive web apps](https://web.dev/progressive-web-apps/) on web.dev
+- [Progressive web apps](https://web.dev/explore/progressive-web-apps) on web.dev

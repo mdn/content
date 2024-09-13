@@ -11,6 +11,9 @@ The **`Gamepad`** interface of the [Gamepad API](/en-US/docs/Web/API/Gamepad_API
 
 A Gamepad object can be returned in one of two ways: via the `gamepad` property of the {{domxref("Window.gamepadconnected_event", "gamepadconnected")}} and {{domxref("Window.gamepaddisconnected_event", "gamepaddisconnected")}} events, or by grabbing any position in the array returned by the {{domxref("Navigator.getGamepads()")}} method.
 
+> [!NOTE]
+> The support of gamepad features varies across different combinations of platforms and controllers. Even if the controller supports a certain feature (for example, haptic feedback), the platform may not support it for that controller.
+
 ## Instance properties
 
 - {{domxref("Gamepad.axes")}} {{ReadOnlyInline}}
@@ -25,7 +28,7 @@ A Gamepad object can be returned in one of two ways: via the `gamepad` property 
   - : An enum defining what hand the controller is being held in, or is most likely to be held in.
 - {{domxref("Gamepad.hapticActuators")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : An array containing {{domxref("GamepadHapticActuator")}} objects, each of which represents haptic feedback hardware available on the controller.
-- {{domxref("Gamepad.vibrationActuator")}} {{ReadOnlyInline}} {{Non-standard_Inline}}
+- {{domxref("Gamepad.vibrationActuator")}} {{ReadOnlyInline}}
   - : A {{domxref("GamepadHapticActuator")}} object, which represents haptic feedback hardware available on the controller.
 - {{domxref("Gamepad.id")}} {{ReadOnlyInline}}
   - : A string containing identifying information about the controller.

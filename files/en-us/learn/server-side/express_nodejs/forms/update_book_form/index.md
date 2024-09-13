@@ -4,6 +4,8 @@ slug: Learn/Server-side/Express_Nodejs/forms/Update_Book_form
 page-type: learn-module-chapter
 ---
 
+{{LearnSidebar}}
+
 This final subarticle shows how to define a page to update `Book` objects. Form handling when updating a book is much like that for creating a book, except that you must populate the form in the `GET` route with values from the database.
 
 ## Controller—get route
@@ -15,9 +17,9 @@ Open **/controllers/bookController.js**. Find the exported `book_update_get()` c
 exports.book_update_get = asyncHandler(async (req, res, next) => {
   // Get book, authors and genres for form.
   const [book, allAuthors, allGenres] = await Promise.all([
-    Book.findById(req.params.id).populate("author").populate("genre").exec(),
-    Author.find().exec(),
-    Genre.find().exec(),
+    Book.findById(req.params.id).populate("author").exec(),
+    Author.find().sort({ family_name: 1 }).exec(),
+    Genre.find().sort({ name: 1 }).exec(),
   ]);
 
   if (book === null) {
@@ -28,13 +30,9 @@ exports.book_update_get = asyncHandler(async (req, res, next) => {
   }
 
   // Mark our selected genres as checked.
-  for (const genre of allGenres) {
-    for (const book_g of book.genre) {
-      if (genre._id.toString() === book_g._id.toString()) {
-        genre.checked = "true";
-      }
-    }
-  }
+  allGenres.forEach((genre) => {
+    if (book.genre.includes(genre._id)) genre.checked = "true";
+  });
 
   res.render("book_form", {
     title: "Update Book",
@@ -50,7 +48,8 @@ It `awaits` on the promise returned by `Promise.all()` to get the specified `Boo
 
 When the operations complete the function checks whether any books were found, and if none were found sends an error "Book not found" to the error handling middleware.
 
-> **Note:** Not finding any book results is **not an error** for a search — but it is for this application because we know there must be a matching book record! The code above compares for (`book===null`) in the callback, but it could equally well have daisy chained the method [orFail()](<https://mongoosejs.com/docs/api/query.html#Query.prototype.orFail()>) to the query.
+> [!NOTE]
+> Not finding any book results is **not an error** for a search — but it is for this application because we know there must be a matching book record! The code above compares for (`book===null`) in the callback, but it could equally well have daisy chained the method [orFail()](<https://mongoosejs.com/docs/api/query.html#Query.prototype.orFail()>) to the query.
 
 We then mark the currently selected genres as checked and then render the **book_form.pug** view, passing variables for `title`, book, all `authors`, and all `genres`.
 
@@ -63,12 +62,9 @@ Find the exported `book_update_post()` controller method, and replace it with th
 exports.book_update_post = [
   // Convert the genre to an array.
   (req, res, next) => {
-    if (!(req.body.genre instanceof Array)) {
-      if (typeof req.body.genre === "undefined") {
-        req.body.genre = [];
-      } else {
-        req.body.genre = new Array(req.body.genre);
-      }
+    if (!Array.isArray(req.body.genre)) {
+      req.body.genre =
+        typeof req.body.genre === "undefined" ? [] : [req.body.genre];
     }
     next();
   },
@@ -109,8 +105,8 @@ exports.book_update_post = [
 
       // Get all authors and genres for form
       const [allAuthors, allGenres] = await Promise.all([
-        Author.find().exec(),
-        Genre.find().exec(),
+        Author.find().sort({ family_name: 1 }).exec(),
+        Genre.find().sort({ name: 1 }).exec(),
       ]);
 
       // Mark our selected genres as checked.
@@ -129,9 +125,9 @@ exports.book_update_post = [
       return;
     } else {
       // Data from form is valid. Update the record.
-      const thebook = await Book.findByIdAndUpdate(req.params.id, book, {});
+      const updatedBook = await Book.findByIdAndUpdate(req.params.id, book, {});
       // Redirect to book detail page.
-      res.redirect(thebook.url);
+      res.redirect(updatedBook.url);
     }
   }),
 ];
@@ -166,7 +162,8 @@ The form should look just like the _Create book_ page, only with a title of 'Upd
 
 ![The update book section of the Local library application. The left column has a vertical navigation bar. The right column has a form to update the book with an heading that reads 'Update book'. There are five input fields labelled Title, Author, Summary, ISBN, Genre. Genre is a checkbox option field. There is a button labelled 'Submit' at the end.](locallibary_express_book_update_noerrors.png)
 
-> **Note:** The other pages for updating objects can be implemented in much the same way. We've left that as a challenge.
+> [!NOTE]
+> The other pages for updating objects can be implemented in much the same way. We've left that as a challenge.
 
 ## Next steps
 

@@ -7,7 +7,7 @@ status:
 browser-compat: api.BarcodeDetector
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("Barcode Detection API")}} {{AvailableInWorkers}} {{SeeCompatTable}}
+{{securecontext_header}}{{DefaultAPISidebar("Barcode Detection API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 The Barcode Detection API detects linear and two-dimensional barcodes in images.
 
@@ -16,9 +16,10 @@ The Barcode Detection API detects linear and two-dimensional barcodes in images.
 Support for barcode recognition within web apps unlocks a variety of use cases through supported barcode formats. QR codes can be used for online payments, web navigation or establishing social media connections, Aztec codes can be used to scan boarding passes and shopping apps can use EAN or UPC barcodes to compare prices of physical items.
 
 Detection is achieved through the {{domxref('BarcodeDetector.detect()','detect()')}} method, which takes an image object; it can be one of these objects:
-an {{domxref("SVGImageElement")}},
-an {{domxref("HTMLVideoElement")}},
-an {{domxref("HTMLCanvasElement")}},
+a {{domxref("HTMLImageElement")}},
+a {{domxref("SVGImageElement")}},
+a {{domxref("HTMLVideoElement")}},
+a {{domxref("HTMLCanvasElement")}},
 an {{domxref("ImageBitmap")}},
 an {{domxref("OffscreenCanvas")}},
 a {{domxref("VideoFrame")}},
@@ -58,7 +59,7 @@ The Barcode Detection API supports the following barcode formats:
       <td>
         A linear (one-dimensional), bidirectionally-decodable, self-checking
         barcode following iso15417 and able to encode all 128 characters of
-        ASCII (hence the naming).
+        {{Glossary("ASCII")}} (hence the naming).
       </td>
       <td>
         <img
@@ -230,7 +231,7 @@ You can check for formats supported by the user agent via the {{domxref('Barcode
 ## Interfaces
 
 - {{domxref("BarcodeDetector")}} {{Experimental_Inline}}
-  - : The **`BarcodeDetector`** interface of the Barcode Detection API allows detection of linear and two dimensional barcodes in images.
+  - : The `BarcodeDetector` interface of the Barcode Detection API allows detection of linear and two dimensional barcodes in images.
 
 ## Examples
 
@@ -240,7 +241,7 @@ This example tests for browser compatibility and creates a new barcode detector 
 
 ```js
 // check compatibility
-if (!("BarcodeDetector" in window)) {
+if (!("BarcodeDetector" in globalThis)) {
   console.log("Barcode Detector is not supported by this browser.");
 } else {
   console.log("Barcode Detector supported!");
@@ -289,4 +290,4 @@ barcodeDetector
 ## See also
 
 - [barcodefaq.com: A website with information about different barcodes and examples of the different types.](https://www.barcodefaq.com/)
-- [The Shape Detection API: a picture is worth a thousand words, faces, and barcodes](https://web.dev/shape-detection/#barcodedetector)
+- [The Shape Detection API: a picture is worth a thousand words, faces, and barcodes](https://developer.chrome.com/docs/capabilities/shape-detection#barcodedetector)

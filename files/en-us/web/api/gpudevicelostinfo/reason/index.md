@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUDeviceLostInfo.reason
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **`reason`** read-only property of the
 {{domxref("GPUDeviceLostInfo")}} interface defines the reason the device was lost in a machine-readable way.
