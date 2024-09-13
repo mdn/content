@@ -7,7 +7,12 @@ browser-compat: css.properties.scrollbar-width
 
 {{CSSRef}}
 
-The **`scrollbar-width`** property allows the author to set the maximum thickness of an element's scrollbars when they are shown. This property purpose is not related to the aesthetic of the scrollbar, but to be used in order to optimise the scrollbar space on a page or small element. It is not possible to specify a numerical value, and scrollbar-width only accepts predefined values.
+The **`scrollbar-width`** property allows the author to set the desired thickness of an element's scrollbars when they are shown.
+
+The purpose of the `scrollbar-width` is to optimize the space occupied by the scrollbar on a page or element; the purpose is not related to scrollbar aesthetics. The `scrollbar-width` predefined keyword values indicate to the user agent whether a normal or smaller scrollbar should be rendered. Avoid using `none`, as hiding a scrollbar negatively impacts [accessibility](/en-US/docs/Web/CSS/scrollbar-width#accessibility).
+
+> [!NOTE]
+> For elements that are scrollable only via programmatic means and not by direct user interaction, use the {{cssxref("overflow")}} property with a value of `hidden` rather than `scrollbar-width: none`.
 
 ## Syntax
 
