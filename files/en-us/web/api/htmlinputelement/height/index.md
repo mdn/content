@@ -10,7 +10,7 @@ browser-compat: api.HTMLInputElement.height
 
 The **`height`** property of the {{DOMxRef("HTMLInputElement")}} interface specifies the height of a control. It reflects the {{htmlelement("input")}} element's [`height`](/en-US/docs/Web/HTML/Element/input#height) attribute.
 
-The `height` property is valid for the [`image`](/en-US/docs/Web/HTML/Element/input/image) type only. It defines the block size of the image button in CSS pixels. If CSS sizing properties apply to the control, the value is the height of the rendered control, not the value of the `height` attribute. If no `height` is set and CSS does not impact the control's size, the `height` will be the intrinsic height of the image. If the image didn't load, the value will be the height of the `alt` text. The `height` will be `0` if the height is not known; if no `height` is set, CSS doesn't impact the height, the image didn't loaded, and either the value of the {{DOMxRef("HTMLInputElement.alt", "alt")}} is the empty string or no `src` is set.
+The `height` property is valid for the [`image`](/en-US/docs/Web/HTML/Element/input/image) type only. It defines the block size of the image button in CSS pixels. If CSS sizing properties apply to the control, the value is the height of the rendered control, not the value of the `height` attribute. If no `height` is set and CSS does not impact the control's size, the `height` will be the intrinsic height of the image. If the image didn't load, the value will be the height of the `alt` text. The `height` will be `0` if the height is not known; if no `height` is set, CSS doesn't impact the height, the image didn't load, and either the value of the {{DOMxRef("HTMLInputElement.alt", "alt")}} is the empty string or no `src` is set.
 
 ## Value
 
