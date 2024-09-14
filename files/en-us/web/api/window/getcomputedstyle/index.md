@@ -174,6 +174,7 @@ Java.
   `bottom:0` on an element with `height:30px` and a containing
   block of `height:100px`, Firefox's computed style for `top`
   returns `70px`, as 100 − 30 = 70.
+- For compatibility reasons, in serialized values, if the alpha is exactly `1`, then the [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb) function is used; otherwise, the `rgba()` form is used. In serialized strings, the color value functions use the legacy syntax, which uses commas as separators.
 
 ## Specifications
 

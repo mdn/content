@@ -37,6 +37,9 @@ rgb(0, 255, 255)
 rgb(0, 255, 255, 50%)
 ```
 
+> [!NOTE]
+> For compatibility reasons, when the [Web APIs](/en-US/docs/Web/API/Window/getComputedStyle) serialize color values, if the alpha is exactly `1`, then the [`rgb()`](/en-US/docs/Web/CSS/color_value/RGB) function is used; otherwise, the `rgba()` form is used. In serialized strings, the color value functions use the legacy syntax that uses commas as separators.
+
 ### Values
 
 Below are descriptions of the allowed values for both absolute and [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors).
