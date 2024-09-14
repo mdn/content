@@ -79,7 +79,9 @@ Consider using feature queries with {{cssxref("@supports")}} to test for support
   The background extends only to the edge of the content box.
 </p>
 <p class="text">The background is clipped to the foreground text.</p>
-<p class="border-area">The background is clipped to the area painted by the border.</p>
+<p class="border-area">
+  The background is clipped to the area painted by the border.
+</p>
 ```
 
 ### CSS
