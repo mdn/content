@@ -50,8 +50,6 @@ background-clip: unset;
 - `border-area`
   - : The background is painted within (clipped to) the area painted by the border, taking {{Cssxref("border-width")}} and {{Cssxref("border-style")}} into account but ignoring any transparency introduced by {{Cssxref("border-color")}}.
 
-
-
 ## Accessibility
 
 When using `background-clip: text`, check that the contrast ratio between the background color and the color of the text placed over it is high enough that people experiencing low vision conditions will be able to read the content of the page.
