@@ -1,5 +1,5 @@
 ---
-title: "StorageAccessHandle: SharedWorker() property"
+title: "StorageAccessHandle: SharedWorker() method"
 short-title: SharedWorker()
 slug: Web/API/StorageAccessHandle/SharedWorker
 page-type: web-api-instance-method
