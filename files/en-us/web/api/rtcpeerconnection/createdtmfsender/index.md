@@ -17,7 +17,7 @@ This method is deprecated and should not be used. Instead, use the {{domxref("RT
 
 ## Syntax
 
-```js
+```js-nolint
 createDTMFSender(track)
 ```
 
@@ -52,6 +52,10 @@ navigator.getUserMedia({ audio: true }, (stream) => {
   const dtmfSender = sender.dtmf;
 });
 ```
+
+## Specifications
+
+This feature is non-standard and not part of any specification.
 
 ## Browser compatibility
 
