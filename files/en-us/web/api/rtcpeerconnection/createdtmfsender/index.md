@@ -5,10 +5,11 @@ slug: Web/API/RTCPeerConnection/createDTMFSender
 page-type: web-api-instance-method
 status:
   - deprecated
+  - non-standard
 browser-compat: api.RTCPeerConnection.createDTMFSender
 ---
 
-{{APIRef("WebRTC")}}{{Deprecated_Header}}
+{{APIRef("WebRTC")}}{{Deprecated_Header}}{{non-standard_header}}
 
 The **`createDTMFSender()`** method of the {{domxref("RTCPeerConnection")}} interface creates a new {{domxref("RTCDTMFSender")}} object associated with the specified {{domxref("MediaStreamTrack")}}, which can be used to send DTMF tones over the connection.
 
@@ -54,7 +55,7 @@ navigator.getUserMedia({ audio: true }, (stream) => {
 
 ## Specifications
 
-{{Specifications}}
+This feature is non-standard and not part of any specification.
 
 ## Browser compatibility
 
