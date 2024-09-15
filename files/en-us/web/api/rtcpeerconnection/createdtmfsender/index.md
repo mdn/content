@@ -1,7 +1,7 @@
 ---
 title: "RTCPeerConnection: createDTMFSender() method"
 short-title: createDTMFSender()
-slug: Web/API/RTCPeerConnection/createdtmfsender
+slug: Web/API/RTCPeerConnection/createDTMFSender
 page-type: web-api-instance-method
 status:
   - deprecated
@@ -18,7 +18,7 @@ This method is deprecated and should not be used. Instead, use the {{domxref("RT
 ## Syntax
 
 ```js
-const dtmfSender = pc.createDTMFSender(track);
+createDTMFSender(track)
 ```
 
 ### Parameters
@@ -42,9 +42,7 @@ navigator.getUserMedia({ audio: true }, (stream) => {
 });
 ```
 
-## Migrating to RTCRtpSender.dtmf
-
-Above example can be rewritten using the `RTCRtpSender.dtmf` property:
+This could be rewritten using the `RTCRtpSender.dtmf` property:
 
 ```js
 navigator.getUserMedia({ audio: true }, (stream) => {
