@@ -10,7 +10,7 @@ browser-compat: api.HTMLInputElement.checked
 
 The **`checked`** property of the {{DOMxRef("HTMLInputElement")}} interface specifies the current checkedness of the element; that is, whether the form control is checked or not.
 
-The boolean `checked` property is relevant to the `radio` ([`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio)) and `checkbox` ([`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox)) input types. 
+The boolean `checked` property is relevant to the `radio` ([`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio)) and `checkbox` ([`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox)) input types.
 
 The presence of the boolean [`checked`](/en-US/docs/Web/HTML/Element/input#checked) attribute indicates the checkbox is checked by default. It does not indicate whether this checkbox is currently checked: if the checkbox's state is changed, this content attribute does not reflect the change; only the `HTMLInputElement`'s `checked` IDL attribute is updated.
 
