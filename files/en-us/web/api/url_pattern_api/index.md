@@ -749,5 +749,5 @@ console.log(result.pathname.groups.action); // 'view'
   [on GitHub](https://github.com/kenchris/urlpattern-polyfill)
 - The pattern syntax used by URLPattern is similar to the syntax used by
   [path-to-regexp](https://github.com/pillarjs/path-to-regexp)
-- [An implementation in Go](https://github.com/golang/go/)
+- [An implementation in Go](https://github.com/dunglas/go-urlpattern)
   of the standard is also available
