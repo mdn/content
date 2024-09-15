@@ -8,9 +8,9 @@ browser-compat: api.HTMLInputElement.defaultChecked
 
 {{ APIRef("HTML DOM") }}
 
-The **`defaultChecked`** property of the {{DOMxRef("HTMLInputElement")}} interface specifies the default checkedness state of the element. This property represents the {{htmlelement("input")}} element's default[`checked`](/en-US/docs/Web/HTML/Element/input#checked) state as originally specified in HTML that created this object.
+The **`defaultChecked`** property of the {{DOMxRef("HTMLInputElement")}} interface specifies the default checkedness state of the element. This property reflects the {{htmlelement("input")}} element's [`checked`](/en-US/docs/Web/HTML/Element/input#checked) attribute.
 
-The boolean `checked` attribute is valid for the `radio`([`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio)) and `checkbox` ([`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox)) input types.
+The boolean `checked` attribute is valid for the `radio` ([`<input type="radio">`](/en-US/docs/Web/HTML/Element/input/radio)) and `checkbox` ([`<input type="checkbox">`](/en-US/docs/Web/HTML/Element/input/checkbox)) input types.
 
 ## Value
 
