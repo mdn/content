@@ -23,7 +23,9 @@ A string.
 ### Basic example
 
 ```html
-<button id="toggleBtn" commandfor="mypopover" command="toggle-popover">Toggle popover</button>
+<button id="toggleBtn" commandfor="mypopover" command="toggle-popover">
+  Toggle popover
+</button>
 
 <div popover id="mypopover">
   <button commandfor="mypopover" command="hide-popover">Hide popover</button>
@@ -40,28 +42,22 @@ toggleBtn.command = "show-popover";
 ### Custom example, using events
 
 ```html
-<button commandfor="the-image" command="--rotate-left">
- Rotate Left
-</button>
+<button commandfor="the-image" command="--rotate-left">Rotate Left</button>
 
-<button commandfor="the-image" command="--rotate-right">
- Rotate Right
-</button>
+<button commandfor="the-image" command="--rotate-right">Rotate Right</button>
 
-<img id="the-image" src="photo.jpg">
+<img id="the-image" src="photo.jpg" />
 ```
 
 ```js
 const image = document.getElementById("the-image");
 
 image.addEventListener("command", (event) => {
-
-  if ( event.command == "--rotate-left" ) {
-    event.target.style.rotate = "-90deg"
-  } else if ( event.command == "--rotate-right" ) {
-    event.target.style.rotate = "90deg"
+  if (event.command == "--rotate-left") {
+    event.target.style.rotate = "-90deg";
+  } else if (event.command == "--rotate-right") {
+    event.target.style.rotate = "90deg";
   }
-
 });
 ```
 
