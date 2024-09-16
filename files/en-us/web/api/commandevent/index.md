@@ -33,6 +33,14 @@ _This interface inherits properties from its parent, {{DOMxRef("Event")}}._
 
 ### Basic example
 
+```html
+<button commandfor="mypopover" command="show-popover">Show popover</button>
+
+<div popover id="mypopover">
+  <button commandfor="mypopover" command="hide-popover">Hide popover</button>
+</div>
+```
+
 ```js
 const popover = document.getElementById("mypopover");
 
@@ -47,16 +55,29 @@ popover.addEventListener("command", (event) => {
 
 ### Custom example
 
+```html
+<button commandfor="the-image" command="--rotate-left">
+ Rotate Left
+</button>
+
+<button commandfor="the-image" command="--rotate-right">
+ Rotate Right
+</button>
+
+<img id="the-image" src="photo.jpg">
+```
+
 ```js
-const myImage = document.querySelector("img");
+const image = document.getElementById("the-image");
 
-// ...
+image.addEventListener("command", (event) => {
 
-myImage.addEventListener("command", (event) => {
-  if (event.command === "--rotate-right") {
-    console.log("My own custom invoke behavior");
-    myImage.style.rotate = "90deg";
+  if ( event.command == "--rotate-left" ) {
+    event.target.style.rotate = "-90deg"
+  } else if ( event.command == "--rotate-right" ) {
+    event.target.style.rotate = "90deg"
   }
+
 });
 ```
 
