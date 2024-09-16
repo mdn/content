@@ -49,7 +49,7 @@ The way to activate the accesskey depends on the browser and its platform:
     </tr>
     <tr>
       <th>Opera</th>
-      <td><kbd>Alt</kbd> + <kbd><em>key</em></kbd></td>
+      <td colspan="2"><kbd>Alt</kbd> + <kbd><em>key</em></kbd></td>
       <td><kbd>Control</kbd> + <kbd>Alt</kbd> + <kbd><em>key</em></kbd></td>
     </tr>
   </tbody>
