@@ -22,7 +22,7 @@ Possible values are:
 ## Examples
 
 In this example we create a new {{domxref("ReportingObserver")}} to observe content violation reports of type `"csp-violation"`.
-Each time the callback function in invoked, we log the disposition in the first entry of the reports array.
+Each time the callback function is invoked, we log the disposition in the first entry of the reports array.
 
 ```js
 const observer = new ReportingObserver(

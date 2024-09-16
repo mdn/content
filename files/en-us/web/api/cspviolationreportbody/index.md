@@ -28,7 +28,7 @@ These reports similarly have a `type` of `"csp-violation"`, and a `body` propert
 _Also inherits properties from its parent interface, {{DOMxRef("ReportBody")}}._
 
 - {{domxref("CSPViolationReportBody.blockedURL")}} {{ReadOnlyInline}}
-  - : A string representing the URL of the resource that was blocked because it violates the CSP.
+  - : A string representing either the type or the URL of the resource that was blocked because it violates the CSP.
 - {{domxref("CSPViolationReportBody.columnNumber")}} {{ReadOnlyInline}}
   - : The column number in the script at which the violation occurred.
 - {{domxref("CSPViolationReportBody.disposition")}} {{ReadOnlyInline}}
@@ -64,10 +64,16 @@ _Also inherits methods from its parent interface, {{DOMxRef("ReportBody")}}._
 To obtain a `CSPViolationReportBody` object, you must configure your page so that a CSP violation will occur.
 In this example, we will set our CSP to only allow content from the site's own origin, and then attempt to load a script from `apis.google.com`, which is an external origin.
 
-First, we will set our {{HTTPHeader("Content-Security-Policy")}} header:
+First, we will set our {{HTTPHeader("Content-Security-Policy")}} header in the HTTP response:
 
 ```http
 Content-Security-Policy: default-src 'self';
+```
+
+or in the HTML [`<meta>`](/en-US/docs/Web/HTML/Element/meta) element:
+
+```html
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'" />
 ```
 
 Then, we will attempt to load an external script:
@@ -82,7 +88,10 @@ Finally, we will create a new {{domxref("ReportingObserver")}} object to listen 
 ```js
 const observer = new ReportingObserver(
   (reports, observer) => {
-    const cspViolation = reports[0];
+    reports.forEach((violation) => {
+      console.log(violation);
+      console.log(JSON.stringify(violation));
+    });
   },
   {
     types: ["csp-violation"],
@@ -93,7 +102,7 @@ const observer = new ReportingObserver(
 observer.observe();
 ```
 
-If we were to log the violation report object, it would look similar to the object below.
+Above we log the each violation report object and a JSON-string version of the object, which might look similar to the object below.
 Note that the `body` is an instance of the `CSPViolationReportBody` and the `type` is `"csp-violation"`.
 
 ```js
@@ -130,7 +139,7 @@ Reporting-Endpoints: csp-endpoint="https://example.com/csp-report-to"
 Content-Security-Policy: default-src 'self'; report-to csp-endpoint
 ```
 
-As before, we can trigger the violation by loading an external script from a location that is not allowed by our CSP header:
+As before, we can trigger a violation by loading an external script from a location that is not allowed by our CSP header:
 
 ```html
 <!-- This should generate a CSP violation -->
@@ -153,7 +162,7 @@ As you can see from the example below, the `type` is `"csp-violation"` and the `
       "lineNumber": 1441,
       "originalPolicy": "default-src 'self'; report-to csp-endpoint",
       "referrer": "https://www.google.com/",
-      "sample": "console.log(\"lo\")",
+      "sample": "",
       "sourceFile": "https://example.com/csp-report-to",
       "statusCode": 200
     },

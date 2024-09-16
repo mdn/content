@@ -56,7 +56,7 @@ The document above also loads the external script `main.js`, which is shown belo
 Because this is loaded from the same domain as the HTML, it is not blocked by the CSP.
 
 The script creates a new {{domxref("ReportingObserver")}} to observe content violation reports of type `"csp-violation"`.
-Each time the callback function in invoked, we get the body of the first entry of the reports array, and use it to log the effectiveDirective and `originalPolicy` of the violation to the console.
+Each time the callback function is invoked, we get the body of the first entry of the reports array, and use it to log the effectiveDirective and `originalPolicy` of the violation to the console.
 
 ```js
 // main.js

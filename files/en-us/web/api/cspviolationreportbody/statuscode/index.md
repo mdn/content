@@ -17,12 +17,13 @@ A number representing the HTTP status code of the response to the request that t
 ## Examples
 
 In this example we create a new {{domxref("ReportingObserver")}} to observe content violation reports of type `"csp-violation"`.
-Each time the callback function in invoked, we log the status code for the first entry of the reports array.
+Each time the callback function is invoked, we log the status code for the first entry of the reports array.
 
 ```js
 const observer = new ReportingObserver(
   (reports, observer) => {
-    console.log(`statusCode: ${reports[0].body.statusCode}`); // For example: 200
+    console.log(`statusCode: ${reports[0].body.statusCode}`);
+    // For example: 200
   },
   {
     types: ["csp-violation"],
