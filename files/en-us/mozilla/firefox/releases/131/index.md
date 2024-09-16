@@ -18,6 +18,8 @@ This article provides information about the changes in Firefox 131 that affect d
 
 ### CSS
 
+- The `inset-area` CSS property has been renamed to {{CSSXRef("position-area")}}, this is part of the work for [Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning), so at present this property does nothing without the {{CSSXRef("anchor-name")}} and {{CSSXRef("position-anchor")}} properties. ([Firefox bug 1909673](https://bugzil.la/1909358) and [Firefox bug 1909673](https://bugzil.la/1838746)).
+
 #### Removals
 
 ### JavaScript
