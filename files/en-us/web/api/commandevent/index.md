@@ -25,7 +25,7 @@ It is the event object for the `HTMLElement` {{domxref("HTMLElement.command_even
 _This interface inherits properties from its parent, {{DOMxRef("Event")}}._
 
 - {{domxref("CommandEvent.source")}} {{ReadOnlyInline}}
-  - : An Element representing the control button that caused this invocation.
+  - : An {{domxref("HTMLButtonElement")}} representing the control button that caused this invocation.
 - {{domxref("CommandEvent.command")}} {{ReadOnlyInline}}
   - : A string representing the {{domxref("HTMLButtonElement.command", "command")}} value of the source control button.
 

@@ -16,7 +16,7 @@ It is the JavaScript equivalent of the [`commandfor`](/en-US/docs/Web/HTML/Eleme
 
 ## Value
 
-A reference to an element in the DOM.
+A reference to an existing {{domxref("HTMLElement")}} that the button controls.
 
 ## Examples
 
