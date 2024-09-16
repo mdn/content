@@ -18,7 +18,7 @@ The Invoker Commands API provides a way to declaratively assign behaviors to but
 
 A common pattern on the web is to have {{HTMLElement("button")}} elements control various aspects of the page, such as opening and closing {{domxref("Popover API", "popovers", "", "nocode")}} or {{HTMLElement("dialog")}} elements, formatting text, and more.
 
-Historically creating these kinds of controls has required JavaScript event listeners added to the button which can then call the APIs on the element they control. The {{domxref("HTMLButtonElement.commandForElement", "commandForElement")}} and {{domxref("HTMLButtonElement.command", "command")}} provide a way to do this declaratively for a limited set of actions.
+Historically creating these kinds of controls has required JavaScript event listeners added to the button which can then call the APIs on the element they control. The {{domxref("HTMLButtonElement.commandForElement", "commandForElement")}} and {{domxref("HTMLButtonElement.command", "command")}} provide a way to do this declaratively for a limited set of actions. This can be advantageous for built-in commands as the user does not have to wait for JavaScript to download and execute to make these buttons interactive.
 
 ## HTML Attributes
 
