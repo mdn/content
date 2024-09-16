@@ -17,7 +17,7 @@ The `related_applications` manifest member is used to specify one or more native
 ## Syntax
 
 ```json-nolint
-/* Single related application with both url and id */
+/* Single related native application with both url and id */
 "related_applications": [
   {
     "platform": "play",
@@ -26,7 +26,7 @@ The `related_applications` manifest member is used to specify one or more native
   }
 ]
 
-/* Single related application with only id */
+/* Single related native application with only id */
 "related_applications": [
   {
     "platform": "windows",
@@ -34,7 +34,7 @@ The `related_applications` manifest member is used to specify one or more native
   }
 ]
 
-/* Multiple related applications */
+/* Multiple related native applications */
 "related_applications": [
   {
     "platform": "play",
