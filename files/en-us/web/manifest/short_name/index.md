@@ -18,7 +18,7 @@ The `short_name` manifest member is used to specify a short name for your web ap
 "short_name": "Meditate"
 ```
 
-### Keys
+### Values
 
 - `short_name`
   - : A string that specifies a short version of your web app's [`name`](/en-US/docs/Web/Manifest/name).

@@ -21,7 +21,7 @@ The `start_url` manifest member is used to specify the URL that should be loaded
 "start_url": "../index.html"
 ```
 
-### Keys
+### Values
 
 - `start_url`
   - : A string that represents the starting URL of a web app.

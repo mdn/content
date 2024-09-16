@@ -18,7 +18,7 @@ The `name` manifest member is used to specify the name of your web application a
 "name": "Mindful Meditation"
 ```
 
-### Keys
+### Values
 
 - `name`
   - : A string that specifies the full name of your web app.
