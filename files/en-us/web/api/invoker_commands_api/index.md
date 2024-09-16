@@ -22,10 +22,9 @@ Historically creating these kinds of controls has required JavaScript event list
 
 ## HTML Attributes
 
-- {{domxref("HTMLButtonElement.commandForElement", "commandForElement")}}
+- [`commandfor`](/en-US/docs/Web/HTML/Element/button#commandfor):
   - : Turns a {{htmlelement("button")}} element into a control button, controlling the given interactive element; takes the ID of the element to control as its value.
-- {{domxref("HTMLButtonElement.command", "command")}} provide a way to do this declaratively for a limited set of actions.
-
+- [`command`](/en-US/docs/Web/HTML/Element/button#command):
   - : Specifies the action to be performed on an element being controlled by a control `<button>`, specified via the `commandfor` attribute. The possible values are:
 
     - `"show-modal"`
