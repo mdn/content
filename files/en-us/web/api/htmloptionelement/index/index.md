@@ -18,7 +18,7 @@ A number.
 
 ```js
 const optionElement = document.getElementById("myOption");
-console.log(optionElement.index); //0
+console.log(optionElement.index);
 ```
 
 ## Specifications
