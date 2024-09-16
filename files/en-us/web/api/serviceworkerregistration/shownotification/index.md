@@ -82,7 +82,7 @@ showNotification(title, options)
       - : When set indicates that no sounds or vibrations should be
         made. If _options_'s `silent` is `true`
         and _options_'s `vibrate` is present a `TypeError` exception
-        will be thrown. The default value is `false`.
+        will be thrown. The default value is `null`, means to respect device defaults.
     - `tag` {{optional_inline}}
       - : An ID for a given notification that allows you to find,
         replace, or remove the notification using a script if necessary.
