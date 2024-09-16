@@ -696,6 +696,7 @@ Chargoggagoggmanchauggagoggchaubunagungamaugg
 Charsets
 chatbox
 chatserver
+chatv
 chbox
 chbx
 checkedness
