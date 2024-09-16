@@ -106,7 +106,7 @@ joinAdInterestGroup(options)
 
     - `priority` {{optional_inline}}
 
-      - : A number that indicates the interest group's relative priority for participating in an auction. This comes into play when the `runAdAuction()` [`perBuyerGroupLimits`](/en-US/docs/Web/API/Navigator.runAdAuction#perBuyerGroupLimits) option is used to limit the number of buyers that can bid in the auction. groups with higher `priority` values are chosen first. In cases where some but not all interest groups with equal priority can participate in an auction due to `perBuyerGroupLimits`, participants are chosen randomly from the interest groups with that priority.
+      - : A number that indicates the interest group's relative priority for participating in an auction. This comes into play when the `runAdAuction()` [`perBuyerGroupLimits`](/en-US/docs/Web/API/Navigator.runAdAuction#perBuyerGroupLimits) option is used to limit the number of interest groups each buyer can have bidding in the auction. groups with higher `priority` values are chosen first. In cases where some but not all interest groups with equal priority can participate in an auction due to `perBuyerGroupLimits`, participants are chosen randomly from the interest groups with that priority.
 
     - `prioritySignalsOverrides` {{optional_inline}}
 
@@ -134,7 +134,7 @@ joinAdInterestGroup(options)
 
     - `trustedBiddingSignalsURL` {{optional_inline}}
 
-      - : An array of strings representing the base URL to request the interest group's trusted bidding signals. See [Fetching Real-Time Data from a Trusted Server](#) for more information.
+      - : A string representing the base URL to request the interest group's trusted bidding signals. See [Fetching Real-Time Data from a Trusted Server](#) for more information.
 
     - `updateURL` {{optional_inline}}
 

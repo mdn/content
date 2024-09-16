@@ -70,14 +70,14 @@ The option properties as follows:
 - `decisionLogicURL`
   - : The URL of the seller's bidding logic JavaScript code, which is run during the ad auction to generate the interest group's auction bid. The JavaScript must contain an author-defined [`generateBid()`](#) function, which is run on each received bid to generate suitability scores. `decisionLogicURL`s must be valid HTTPS URLs that contain no fragment or credentials. They must also be same-origin with the `seller`.
 - `interestGroupBuyers`
-  - : An array containing the URLs of the interest group [owners](/en-US/docs/Web/API/Navigator.joinAdInterestGroup#owner) invited to bid in the auction. All interest groups with these owners that the user's browser is a member of will be invited to bid in the auction, provided:
-    - The group's [`biddingLogicURL`](/en-US/docs/Web/API/Navigator.joinAdInterestGroup#biddingLogicURL) resolves successfully.
-    - The group has at least one ad creative listed in its [`ads`](/en-US/docs/Web/API/Navigator.joinAdInterestGroup#ads) array.
-    - The group's [`priority`](/en-US/docs/Web/API/Navigator.joinAdInterestGroup#priority) is greater than or equal to `0`.
+  - : An array containing the URLs of the interest group [owners](/en-US/docs/Web/API/Navigator/joinAdInterestGroup#owner) invited to bid in the auction. All interest groups with these owners that the user's browser is a member of will be invited to bid in the auction, provided:
+    - The group's [`biddingLogicURL`](/en-US/docs/Web/API/Navigator/joinAdInterestGroup#biddingLogicURL) resolves successfully.
+    - The group has at least one ad creative listed in its [`ads`](/en-US/docs/Web/API/Navigator/joinAdInterestGroup#ads) array.
+    - The group's [`priority`](/en-US/docs/Web/API/Navigator/joinAdInterestGroup#priority) is greater than or equal to `0`.
 - `auctionSignals`
-  - : Any value containing arbitrary metadata related to the auction that is shared with the buyer (passed into `generateBid()`) and the seller (passed into `scoreAd()`). Can also be expressed as a promise if you wish the values to be passed asynchronously. This gives the seller an opportunity to provide information about the page context (such as ad size and publisher ID), the type of auction (for example, first-price vs second-price), etc..
+  - : Arbitrary metadata related to the auction that is shared with the buyer (passed into `generateBid()`) and the seller (passed into `scoreAd()`). This property can take any value provided it is JSON-serializable. Can also be expressed as a promise if you wish the values to be passed asynchronously. This gives the seller an opportunity to provide information about the page context (such as ad size and publisher ID), the type of auction (for example, first-price vs second-price), etc.
 - `sellerSignals`
-  - : Any value containing arbitrary metadata related to the seller that is shared with the seller only at this stage (passed into `scoreAd()`). Can also be expressed as a promise if you wish the values to be passed asynchronously.
+  - : Arbitrary metadata related to the seller that is shared with the seller only at this stage (passed into `scoreAd()`). This property can take any value provided it is JSON-serializable. Can also be expressed as a promise if you wish the values to be passed asynchronously.
 - `sellerTimeout`
   - : A number representing the maximum allowable runtime in milliseconds of the seller's `scoreAd()` script. If a value is not specified, the default 50ms is used. The maximum allowed `sellerTimeout` is 500ms — higher values will be clamped to this maximum.
 - `perBuyerSignals`
@@ -188,7 +188,7 @@ navigator.runAdAuction(auctionConfig).then((selectedAd) => {
 });
 ```
 
-The fulfillment value can be one of two things:
+The fulfillment value can be one of two things, depending on the value set for the [`resolveToConfig`](/en-US/docs/Web/API/Navigator.runAdAuction#resolveToConfig) property passed into the `runAdAuction()`:
 
-- If the [`resolveToConfig`](/en-US/docs/Web/API/Navigator.runAdAuction#resolveToConfig) property passed into the `runAdAuction()` resolves to `true`, the promise will fulfill with a {{domxref("FencedFrameConfig")}} object. This can be set as the value of a {{htmlelement("fencedframe")}} element's {{domxref("HTMLFencedFrameElement.config")}} property to display the ad in the `<fencedframe>`.
-- If the `resolveToConfig` property passed into the `runAdAuction()` resolves to `false`, the promise will fulfill with an opaque [URN](/en-US/docs/Web/URI#urns). This can be set as the value of an {{htmlelement("iframe")}} element's {{domxref("HTMLIFrameElement.src")}} property to display the ad in the `<iframe>`.
+- If `resolveToConfig` is `true`, the promise will fulfill with a {{domxref("FencedFrameConfig")}} object. This can be set as the value of a {{htmlelement("fencedframe")}} element's {{domxref("HTMLFencedFrameElement.config")}} property to display the ad in the `<fencedframe>`.
+- If `resolveToConfig` is `false`, the promise will fulfill with an opaque [URN](/en-US/docs/Web/URI#urns). This can be set as the value of an {{htmlelement("iframe")}} element's {{domxref("HTMLIFrameElement.src")}} property to display the ad in the `<iframe>`.
