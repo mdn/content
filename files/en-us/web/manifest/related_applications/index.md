@@ -52,7 +52,7 @@ The `related_applications` manifest member is used to specify one or more native
 
 - `related_applications`
 
-  - : An object or an array of objects, each representing a platform-specific native application related to the web app. Each object must include a `platform` property and at least one of either a `url` or an `id` (or both).
+  - : An array of objects, each representing a platform-specific native application related to the web app. Each object must include a `platform` property and at least one of either a `url` or an `id` (or both).
 
     - `platform`
       - : A string that identifies the platform on which the application can be found. This is a required property. See the [list of available platform values](https://github.com/w3c/manifest/wiki/Platforms).
