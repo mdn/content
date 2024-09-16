@@ -8,7 +8,7 @@ browser-compat: api.SVGLengthList.getItem
 
 {{APIRef("SVG")}}
 
-The **`getItem()`** method of the {{domxref("SVGLengthList")}} interface returns the specified item from the list. The returned item is the item itself and not a copy. Any changes made to the item are immediately reflected in the list. The first item is number 0.
+The **`getItem()`** method of the {{domxref("SVGLengthList")}} interface returns the specified item from the list. The returned item is the item itself and not a copy. Any changes made to the item are immediately reflected in the list. The first item is indexed 0.
 
 ## Syntax
 
@@ -32,7 +32,7 @@ The {{domxref("SVGLength")}} at the specified index in the list.
 
 ## Examples
 
-See {{domxref("SVGLengthList")}} a complete example.
+See {{domxref("SVGLengthList")}} for a complete example.
 
 ## Specifications
 

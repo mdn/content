@@ -32,7 +32,7 @@ The {{domxref("SVGLength")}} that was added to the list.
 
 ## Examples
 
-See {{domxref("SVGLengthList")}} a complete example.
+See {{domxref("SVGLengthList")}} for a complete example.
 
 ## Specifications
 

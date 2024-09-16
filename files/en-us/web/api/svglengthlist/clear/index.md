@@ -8,7 +8,7 @@ browser-compat: api.SVGLengthList.clear
 
 {{APIRef("SVG")}}
 
-The **`clear()`** method of the {{domxref("SVGLengthList")}} interface clears all existing current items from the list, with the result being an empty list.
+The **`clear()`** method of the {{domxref("SVGLengthList")}} interface clears all existing items from the list, with the result being an empty list.
 
 ## Syntax
 
@@ -31,7 +31,7 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-See {{domxref("SVGLengthList")}} a complete example.
+See {{domxref("SVGLengthList")}} for a complete example.
 
 ## Specifications
 

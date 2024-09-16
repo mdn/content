@@ -8,7 +8,7 @@ browser-compat: api.SVGLengthList.insertItemBefore
 
 {{APIRef("SVG")}}
 
-The **`insertItemBefore()`** method of the {{domxref("SVGLengthList")}} interface inserts a new item into the list at the specified position. The first item is number 0. If the new item is already in a list, it is removed from its previous list before it is inserted into this list. The inserted item is the item itself and not a copy. If the item is already in this list, note that the index of the item to insert before is before the removal of the item. If the index is equal to 0, then the new item is inserted at the front of the list. If the index is greater than or equal to the {{domxref("SVGLengthList.length", "length")}}, then the new item is appended to the end of the list.
+The **`insertItemBefore()`** method of the {{domxref("SVGLengthList")}} interface inserts a new item into the list at the specified position. The first item is indexed 0. If the new item is already in a list, it is removed from its previous list before it is inserted into this list. The inserted item is the item itself and not a copy. If the item is already in this list, note that the index of the item to insert before is before the removal of the item. If the index is equal to 0, then the new item is inserted at the front of the list. If the index is greater than or equal to the {{domxref("SVGLengthList.length", "length")}}, then the new item is appended to the end of the list.
 
 ## Syntax
 
@@ -34,7 +34,7 @@ The {{domxref("SVGLength")}} that was added to the list.
 
 ## Examples
 
-See {{domxref("SVGLengthList")}} a complete example.
+See {{domxref("SVGLengthList")}} for a complete example.
 
 ## Specifications
 
