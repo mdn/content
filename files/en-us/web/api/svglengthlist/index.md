@@ -106,10 +106,6 @@ document
 
 {{Specifications}}
 
-## Specifications
-
-{{Specifications}}
-
 ## Browser compatibility
 
 {{Compat}}
