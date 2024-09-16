@@ -36,10 +36,10 @@ optionElement.text = "Updated text";
 
 ## See also
 
-- {{domxref("HTMLOptionElement.value")}}
-- {{domxref("HTMLOptionElement.label")}}
 - {{HTMLElement("select")}}
 - {{HTMLElement("datalist")}}
 - {{HTMLElement("optgroup")}}
-- {{domxref("HTMLScriptElement.text")}} property
-- {{domxref("HTMLAnchorElement.text")}} property
+- {{domxref("HTMLOptionElement.value")}}
+- {{domxref("HTMLOptionElement.label")}}
+- {{domxref("HTMLScriptElement.text")}}
+- {{domxref("HTMLAnchorElement.text")}}
