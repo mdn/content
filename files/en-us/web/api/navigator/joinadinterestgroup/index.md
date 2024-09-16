@@ -150,7 +150,7 @@ A {{jsxref("Promise")}} that fulfills with {{jsxref("undefined")}}.
 ### Exceptions
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Thrown if usage of the [Protected Audience API](/en-US/docs/Web/API/Protected_Audience_API) is disallowed by a {{httpheader("Permissions-Policy/join-ad-interest-group", "join-ad-interest-group")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+  - : Thrown if usage of `joinAdInterestGroup()` is disallowed by a {{httpheader("Permissions-Policy/join-ad-interest-group", "join-ad-interest-group")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 - `TypeError` {{domxref("DOMException")}}
   - : Thrown if:
     - The `lifetimeMS` option is not specified.

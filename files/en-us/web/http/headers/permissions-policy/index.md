@@ -138,6 +138,10 @@ You can specify
 
   - : Controls whether the current document is allowed to use the {{domxref("Idle Detection API", "Idle Detection API", "", "nocode")}} to detect when users are interacting with their devices, for example to report "available"/"away" status in chat applications.
 
+- {{httpheader('Permissions-Policy/join-ad-interest-group','join-ad-interest-group')}} {{Experimental_Inline}}
+
+  - : Controls whether the current document is allowed to invoke the {{domxref("Navigator.joinAdInterestGroup()")}} method.
+
 - {{httpheader('Permissions-Policy/local-fonts','local-fonts')}} {{Experimental_Inline}}
 
   - : Controls whether the current document is allowed to gather data on the user's locally-installed fonts via the {{DOMxRef("Window.queryLocalFonts()")}} method (see also the {{domxref("Local Font Access API", "Local Font Access API", "", "nocode")}}).
@@ -173,6 +177,10 @@ You can specify
 - {{httpheader("Permissions-Policy/publickey-credentials-get", "publickey-credentials-get")}}
 
   - : Controls whether the current document is allowed to use the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) to retrieve already stored public-key credentials, i.e., via {{domxref("CredentialsContainer.get", "navigator.credentials.get({publicKey: ..., ...})")}}.
+
+- {{httpheader('Permissions-Policy/run-ad-auction','run-ad-auction')}} {{Experimental_Inline}}
+
+  - : Controls whether the current document is allowed to invoke the {{domxref("Navigator.runAdAuction()")}} method.
 
 - {{httpheader('Permissions-Policy/screen-wake-lock', 'screen-wake-lock')}}
 

@@ -122,7 +122,7 @@ A {{jsxref("Promise")}} that fulfills with one of two values, depending on the v
 ### Exceptions
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Thrown if usage of the [Protected Audience API](/en-US/docs/Web/API/Protected_Audience_API) is disallowed by a {{httpheader("Permissions-Policy/run-ad-auction", "run-ad-auction")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
+  - : Thrown if usage of `runAdAuction()` is disallowed by a {{httpheader("Permissions-Policy/run-ad-auction", "run-ad-auction")}} [Permissions Policy](/en-US/docs/Web/HTTP/Permissions_Policy).
 - `TypeError` {{domxref("DOMException")}}
   - : Thrown if:
     - `decisionLogicURL` or `seller` are not specified.
