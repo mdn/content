@@ -3,12 +3,10 @@ title: "PointerEvent: altitudeAngle property"
 short-title: altitudeAngle
 slug: Web/API/PointerEvent/altitudeAngle
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.PointerEvent.altitudeAngle
 ---
 
-{{ APIRef("Pointer Events") }}{{SeeCompatTable}}
+{{ APIRef("Pointer Events") }}
 
 The **`altitudeAngle`** read-only property of the {{domxref("PointerEvent")}} interface represents the angle between a transducer (a pointer or stylus) axis and the X-Y plane of a device screen.
 The altitude angle describes whether the transducer is perpendicular to the screen, parallel, or at some angle in between.
