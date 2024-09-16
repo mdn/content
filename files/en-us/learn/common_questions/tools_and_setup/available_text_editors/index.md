@@ -194,23 +194,6 @@ Here are some popular editors:
     </tr>
     <tr>
       <td>
-        <a href="https://www.activestate.com/products/komodo-edit/" rel="external"
-          >Komodo Edit</a
-        >
-      </td>
-      <td>MPL</td>
-      <td>Free</td>
-      <td>Windows, Mac, Linux</td>
-      <td><a href="https://community.komodoide.com/" rel="external">Forum</a></td>
-      <td>
-        <a href="https://docs.activestate.com/komodo" rel="external"
-          >Online Manual</a
-        >
-      </td>
-      <td><a href="https://docs.activestate.com/komodo/12/manual/extensions.html">Yes</a></td>
-    </tr>
-    <tr>
-      <td>
         <a href="https://www.notepad-plus-plus.org/" rel="external"
           >Notepad++</a
         >
