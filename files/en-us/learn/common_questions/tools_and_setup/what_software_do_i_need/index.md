@@ -81,7 +81,7 @@ All desktop operating systems come with a basic text editor. These editors are a
         <ul>
           <li><a href="https://notepad-plus-plus.org/">Notepad++</a></li>
           <li>
-            <a href="https://www.visualstudio.com/">Visual Studio Code</a>
+            <a href="https://visualstudio.microsoft.com/">Visual Studio Code</a>
           </li>
           <li><a href="https://www.jetbrains.com/webstorm/">Web Storm</a></li>
           <li><a href="https://brackets.io/">Brackets</a></li>
@@ -109,7 +109,7 @@ All desktop operating systems come with a basic text editor. These editors are a
             >
           </li>
           <li>
-            <a href="https://www.visualstudio.com/">Visual Studio Code</a>
+            <a href="https://visualstudio.microsoft.com/">Visual Studio Code</a>
           </li>
           <li><a href="https://brackets.io/">Brackets</a></li>
           <li><a href="https://shiftedit.net/">ShiftEdit</a></li>
@@ -152,7 +152,7 @@ All desktop operating systems come with a basic text editor. These editors are a
           <li><a href="https://www.gnu.org/software/emacs/">Emacs</a></li>
           <li><a href="https://www.vim.org/" rel="external">Vim</a></li>
           <li>
-            <a href="https://www.visualstudio.com/">Visual Studio Code</a>
+            <a href="https://visualstudio.microsoft.com/">Visual Studio Code</a>
           </li>
           <li><a href="https://brackets.io/">Brackets</a></li>
           <li><a href="https://shiftedit.net/">ShiftEdit</a></li>

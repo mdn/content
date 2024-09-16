@@ -29,7 +29,7 @@ let detecting = browser.tabs.detectLanguage(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a string representing an ISO language code such as `en` or `fr`. For a complete list of languages supported by this method, see [kLanguageInfoTable](https://src.chromium.org/viewvc/chrome/trunk/src/third_party/cld/languages/internal/languages.cc#l23). For an unknown language, `"und"` will be returned (but see [bug 1288263](https://bugzil.la/1288263)). If any error occurs the promise will be rejected with an error message.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a string representing an ISO language code such as `en` or `fr`. For a complete list of languages supported by this method, see [kLanguageInfoTable](https://source.chromium.org/chromium/chromium/src/+/main:third_party/ced/src/util/languages/languages.cc;l=35). For an unknown language, `"und"` will be returned (but see [bug 1288263](https://bugzil.la/1288263)). If any error occurs the promise will be rejected with an error message.
 
 ## Examples
 

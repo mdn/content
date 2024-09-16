@@ -123,9 +123,11 @@ function getFragmentDetails(fromStaging = true) {
         .filter((header) => !addedFragments.includes(header))
         .filter((header) => {
           // check if another header with same name exists in the file
-          const headerAnchors = getFileAnchors(
-            `${rootDir}/files/en-us/${path}/index.md`,
-          );
+          const absPath = `${rootDir}/files/en-us/${path}/index.md`;
+          if (!fs.existsSync(absPath)) {
+            return true;
+          }
+          const headerAnchors = getFileAnchors(absPath);
           return !headerAnchors.includes(header);
         })
         .forEach((header) => {

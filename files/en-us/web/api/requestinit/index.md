@@ -2,7 +2,6 @@
 title: RequestInit
 slug: Web/API/RequestInit
 page-type: web-api-interface
-browser-compat: api.RequestInit
 spec-urls: https://fetch.spec.whatwg.org/#requestinit
 ---
 

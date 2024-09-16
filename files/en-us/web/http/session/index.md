@@ -94,7 +94,7 @@ X-XSS-Protection: 1; mode=block
 Vary: Accept-Encoding,Cookie
 Age: 7
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -121,7 +121,7 @@ Via: Moz-Cache-zlb05
 Connection: Keep-Alive
 Content-Length: 325 (the content contains a default page to display if the user-agent is not able to follow the link)
 
-<!DOCTYPE html>… (contains a site-customized page helping the user to find the missing resource)
+<!doctype html>… (contains a site-customized page helping the user to find the missing resource)
 ```
 
 Notification that the requested resource doesn't exist:
@@ -143,7 +143,7 @@ X-XSS-Protection: 1; mode=block
 Vary: Accept-Encoding,Cookie
 X-Cache: Error from cloudfront
 
-<!DOCTYPE html>… (contains a site-customized page helping the user to find the missing resource)
+<!doctype html>… (contains a site-customized page helping the user to find the missing resource)
 ```
 
 ### Response status codes
