@@ -32,29 +32,12 @@ scrollbar-width: unset;
 
 ### Values
 
-- `<scrollbar-width>`
-
-  - : Defines the width of the scrollbar as a keyword. It must be one of the following values:
-
-    <table class="standard-table">
-      <tbody>
-        <tr>
-          <td><code>auto</code></td>
-          <td>The default scrollbar width for the platform.</td>
-        </tr>
-        <tr>
-          <td><code>thin</code></td>
-          <td>
-            A thin scrollbar width variant on platforms that provide that option, or
-            a thinner scrollbar than the default platform scrollbar width.
-          </td>
-        </tr>
-        <tr>
-          <td><code>none</code></td>
-          <td>No scrollbar shown, however the element will still be scrollable.</td>
-        </tr>
-      </tbody>
-    </table>
+- `auto`
+  - : The default scrollbar width for the platform.
+- `thin`
+  - : A thin scrollbar width variant on platforms that provide that option, or a thinner scrollbar than the default platform scrollbar width.
+- `none`
+  - : No scrollbar shown, however the element will still be scrollable.
 
 > [!NOTE]
 > User Agents must apply any `scrollbar-width` value set on the root element to the viewport.
