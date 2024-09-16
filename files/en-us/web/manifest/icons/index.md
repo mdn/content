@@ -8,7 +8,6 @@ browser-compat: html.manifest.icons
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
 The `icons` manifest member is used to specify one or more image files that define the icons to represent your web application.
-These icons uniquely identify your web app in different contexts, such as in an operating system's task switcher, system settings, home screen, app listings, and other places when application icons are displayed.
 
 ## Syntax
 
@@ -24,7 +23,7 @@ These icons uniquely identify your web app in different contexts, such as in an 
 "icons": [
   {
     "src": "icon/basic-icon.png",
-    "purpose": "monochrome maskable any"
+    "purpose": "monochrome maskable"
   }
 ]
 
@@ -61,14 +60,14 @@ These icons uniquely identify your web app in different contexts, such as in an 
     - `sizes` {{Optional_Inline}}
 
       - : A string that specifies one or more sizes at which the icon file can be used.
-        Each `<size-value>` is specified as `<width in pixels>x<height in pixels>`.
-        Multiple `<size-value>` tokens can be specified, separated by spaces, for example: `48x48 96x96`.
-        When multiple icons are available, browsers may use `<size-values>` to select the most suitable icon for a display context.
+        Each size is specified as `<width in pixels>x<height in pixels>`.
+        If multiple sizes are specified, they are separated by spaces; for example, `48x48 96x96`.
+        When multiple icons are available, browsers may select the most suitable icon for a particular display context.
         For raster formats like PNG, specifying the exact available sizes is recommended.
         For vector formats like SVG, you can use `any` to indicate scalability.
-        If `<size-values>` is not specified, the selection and display of the icon may vary depending on the browser's implementation.
+        If `sizes` is not specified, the selection and display of the icon may vary depending on the browser's implementation.
 
-        Note that the format of `<size-values>` is similar to the HTML `<link>` element's [`sizes`](/en-US/docs/Web/HTML/Element/link#sizes) attribute.
+        Note that the format of `sizes` is similar to the HTML `<link>` element's [`sizes`](/en-US/docs/Web/HTML/Element/link#sizes) attribute.
 
     - `type` {{Optional_Inline}}
 
@@ -104,11 +103,17 @@ These icons uniquely identify your web app in different contexts, such as in an 
 
 ## Description
 
+Icons uniquely identify your web app in different contexts, such as in an operating system's task switcher, system settings, home screen, app listings, and other places when application icons are displayed.
+
 The context in which an icon can be used is determined by the browser and the operating system, based on the specified sizes and formats.
 
-When working with icon images, both security and performance are important considerations.
+## Security considerations
 
-The browser's ability to fetch an icon image is governed by the Content Security Policy ({{Glossary("CSP")}}) of the manifest's owner document, specifically by the [`img-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) directive. This security aspect is related to the `src` property. For example, if the `img-src` directive in a CSP header specifies `icons.example.com`, icons from only that domain would be fetchable. In a manifest with two icons, one from `icons.example.com/lowres` and another from `other.com/hi-res`, only the former would be fetched successfully because of CSP restrictions.
+The browser's ability to fetch an icon image is governed by the Content Security Policy ({{Glossary("CSP")}}) of the manifest's owner document, specifically by the [`img-src`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/img-src) directive. This security aspect is related to the `src` property.
+
+For example, if the `img-src` directive in a CSP header specifies `icons.example.com`, icons from only that domain would be fetchable. In a manifest with two icons, one from `icons.example.com/lowres` and another from `other.com/hi-res`, only the former would be fetched successfully because of CSP restrictions.
+
+## Performance considerations
 
 The `type` property plays a part in determining performance. While this property is optional, specifying it can improve performance significantly. It allows browsers to quickly ignore images with formats they do not support. If you don't specify the `type` property, it is recommended to specify appropriate and unambiguous file extensions for the icon images to ensure correct handling by the browser.
 
