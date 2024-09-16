@@ -11,8 +11,11 @@ The `name` manifest member is used to specify the name of your web application a
 
 ## Syntax
 
-```json
-"name": "<app-name>"
+```json-nolint
+/* Full names of web apps */
+"name": "Daily Task Planner"
+"name": "Recipe and Pantry Tracker"
+"name": "Mindful Meditation"
 ```
 
 ### Keys

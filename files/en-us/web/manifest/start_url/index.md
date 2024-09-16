@@ -11,8 +11,14 @@ The `start_url` manifest member is used to specify the URL that should be loaded
 
 ## Syntax
 
-```json
-"start_url": "<url>"
+```json-nolint
+/* Absolute URLs */
+"start_url": "https://example.com/myapp"
+"start_url": "https://myapp.com/home"
+
+/* Relative URLs */
+"start_url": "/"
+"start_url": "../index.html"
 ```
 
 ### Keys
@@ -20,8 +26,8 @@ The `start_url` manifest member is used to specify the URL that should be loaded
 - `start_url`
   - : A string that represents the starting URL of a web app.
     The value must be same-origin with the page that links to the manifest file.
-    If `<url>` is relative, it is resolved against the manifest file's URL.
-    If `start_url` is unspecified or `<url>` is invalid (i.e., not a string, not a valid URL, or not same-origin with the linking page), the URL of the page that links to the manifest file is used as a fallback.
+    If the value is relative, it is resolved against the manifest file's URL.
+    If `start_url` is unspecified or the value is invalid (i.e., not a string, not a valid URL, or not same-origin with the linking page), the URL of the page that links to the manifest file is used as a fallback.
 
 ## Description
 
