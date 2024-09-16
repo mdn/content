@@ -8,7 +8,7 @@ browser-compat: api.HTMLOptionElement.index
 
 {{APIRef("HTML DOM")}}
 
-The read-only **`index`** property of the {{DOMxRef("HTMLOptionElement")}} interface specifies the index of the element; that is, the position of the {{HTMLElement("option")}} within the list of options it belongs to, in tree-order, as an integer. If the option is not part of a list of options, it is the first and only option, and the value is `0`.
+The read-only **`index`** property of the {{DOMxRef("HTMLOptionElement")}} interface specifies the index of the element; that is, the position of the {{HTMLElement("option")}} within the list of options it belongs to, in tree-order, as an integer. If the `<option>` is not part of an option-list, the value is `0`.
 
 ## Value
 
