@@ -14,17 +14,19 @@ These icons uniquely identify your web app in different contexts, such as in an 
 
 ```json-nolint
 /* Single icon with the minimum required property */
-"icons":
+"icons": [
   {
     "src": "icon/basic-icon.png"
   }
+]
 
 /* Single icon with multiple purposes */
-"icons":
+"icons": [
   {
     "src": "icon/basic-icon.png",
     "purpose": "monochrome maskable any"
   }
+]
 
 /* Two icons with various properties */
 "icons": [
@@ -44,7 +46,7 @@ These icons uniquely identify your web app in different contexts, such as in an 
 
 - `icons`
 
-  - : An object or an array of objects.
+  - : An array of objects.
     Each object represents an icon to be used in a specific context.
     For example, you can add icons to represent your web app on devices with different screen sizes, for integration with various operating systems, for splash screens, or for app notifications.
 
