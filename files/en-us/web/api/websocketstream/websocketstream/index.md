@@ -28,7 +28,7 @@ new WebSocketStream(url, options)
 - `options` {{optional_inline}}
   - : An object that can contain the following properties:
     - `protocols` {{optional_inline}}
-      - : A single string or an array of strings representing the sub-protocol(s) that the client would like to use, for example `"chat"` or `"chatv2"`. Subprotocols may be selected from the [IANA WebSocket Subprotocol Name Registry](https://www.iana.org/assignments/websocket/websocket.xml#subprotocol-name) or may be custom names jointly understood by the client and the server. A single server can implement multiple WebSocket sub-protocols, and handle different types of interactions depending on the specified value. If it is omitted, an empty array is used by default. If `protocols` is included, the connection will only be established if the server reports that it has selected one of these sub-protocols.
+      - : A single string or an array of strings representing the sub-protocol(s) that the client would like to use, for example `"amqp"` or `"mqtt"`. Subprotocols may be selected from the [IANA WebSocket Subprotocol Name Registry](https://www.iana.org/assignments/websocket/websocket.xml#subprotocol-name) or may be custom names jointly understood by the client and the server. A single server can implement multiple WebSocket sub-protocols, and handle different types of interactions depending on the specified value. If it is omitted, an empty array is used by default. If `protocols` is included, the connection will only be established if the server reports that it has selected one of these sub-protocols.
     - `signal` {{optional_inline}}
       - : An {{domxref("AbortSignal")}} belonging to an {{domxref("AbortController")}} that you want to use to close the WebSocket connection.
 
@@ -50,7 +50,7 @@ A more advanced example could also include an options object containing custom p
 ```js
 const controller = new AbortController();
 const chatWSS = new WebSocketStream("wss://example.com/chat", {
-  protocols: ["chat", "chatv2"],
+  protocols: ["amqp", "mqtt"],
   signal: controller.signal,
 });
 ```

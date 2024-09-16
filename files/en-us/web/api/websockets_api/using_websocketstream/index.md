@@ -36,7 +36,7 @@ It can also take an options object containing custom protocols and/or an {{domxr
 ```js
 const controller = new AbortController();
 const chatWSS = new WebSocketStream("wss://example.com/chat", {
-  protocols: ["chat", "chatv2"],
+  protocols: ["amqp", "mqtt"],
   signal: controller.signal,
 });
 ```
