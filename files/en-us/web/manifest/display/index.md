@@ -49,7 +49,7 @@ After a browser applies a `display` mode to an {{Glossary("application context")
 
 If a browser does not support the specified display mode, it follows a pre-defined fallback chain: `fullscreen` → `standalone` → `minimal-ui` → `browser`.
 
-Use the {{cssxref("@media/display-mode", "display-mode")}} media feature to determine the current `display` mode applied by the browser, which is useful for ensuring your app behaves as expected in different display contexts. Additionally, the `display-mode` media feature allows you to adjust your app's styles based on the `display` mode currently being used. This can help provide a consistent user experience regardless of whether the website is launched from a URL or from a desktop icon.
+The {{cssxref("@media/display-mode", "display-mode")}} media feature can be used to configure your application styles and other behavior based on the current `display` mode. This can help provide a consistent user experience regardless of whether the website is launched from a URL or from a desktop icon.
 
 > [!NOTE]
 > The value of the `display-mode` media feature reflects the actual `display` mode being used by the browser.
