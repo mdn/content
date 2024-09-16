@@ -31,7 +31,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-const start = Date.now();
+const start = document.timeline.currentTime;
 
 let myReq;
 

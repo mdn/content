@@ -3,12 +3,10 @@ title: "AudioEncoder: isConfigSupported() static method"
 short-title: isConfigSupported()
 slug: Web/API/AudioEncoder/isConfigSupported_static
 page-type: web-api-static-method
-status:
-  - experimental
 browser-compat: api.AudioEncoder.isConfigSupported_static
 ---
 
-{{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_dedicated")}}
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`isConfigSupported()`** static method of the {{domxref("AudioEncoder")}} interface checks if the given config is supported (that is, if {{domxref("AudioEncoder")}} objects can be successfully configured with the given config).
 

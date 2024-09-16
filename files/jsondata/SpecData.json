@@ -1826,7 +1826,7 @@
   },
   "OES_standard_derivatives": {
     "name": "OES_standard_derivatives",
-    "url": "https://www.khronos.org/registry/webgl/extensions/OES_standard_derivatives/",
+    "url": "https://registry.khronos.org/webgl/extensions/OES_standard_derivatives/",
     "status": "REC"
   },
   "OES_texture_float": {
