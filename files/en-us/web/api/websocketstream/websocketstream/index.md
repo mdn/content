@@ -49,7 +49,7 @@ A more advanced example could also include an options object containing custom p
 
 ```js
 const controller = new AbortController();
-const chatWSS = new WebSocketStream("wss://example.com/chat", {
+const chatWSS = new WebSocketStream("wss://example.com/queue", {
   protocols: ["amqp", "mqtt"],
   signal: controller.signal,
 });
