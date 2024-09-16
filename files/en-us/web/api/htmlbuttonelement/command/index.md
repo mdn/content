@@ -18,7 +18,17 @@ It reflects the [`command`](/en-US/docs/Web/HTML/Element/button#command) HTML at
 
 A string.
 
+## Examples
+
 ### Basic example
+
+```html
+<button id="toggleBtn" commandfor="mypopover" command="toggle-popover">Toggle popover</button>
+
+<div popover id="mypopover">
+  <button commandfor="mypopover" command="hide-popover">Hide popover</button>
+</div>
+```
 
 ```js
 const popover = document.getElementById("mypopover");
@@ -29,20 +39,29 @@ toggleBtn.command = "show-popover";
 
 ### Custom example, using events
 
+```html
+<button commandfor="the-image" command="--rotate-left">
+ Rotate Left
+</button>
+
+<button commandfor="the-image" command="--rotate-right">
+ Rotate Right
+</button>
+
+<img id="the-image" src="photo.jpg">
+```
+
 ```js
-const toggleBtn = document.getElementById("toggleBtn");
-const myImage = document.querySelector("img");
+const image = document.getElementById("the-image");
 
-toggleBtn.commandForElement = myImage;
+image.addEventListener("command", (event) => {
 
-// Set a custom "command", must start with two hyphen characters (`--`)
-toggleBtn.command = "--rotate-right";
-
-myImage.addEventListener("command", (event) => {
-  if (event.command === "--rotate-right") {
-    console.log("My own custom invoke behavior");
-    myImage.style.rotate = "90deg";
+  if ( event.command == "--rotate-left" ) {
+    event.target.style.rotate = "-90deg"
+  } else if ( event.command == "--rotate-right" ) {
+    event.target.style.rotate = "90deg"
   }
+
 });
 ```
 
