@@ -64,7 +64,7 @@ The following property names, in snake-case (accessed using bracket notation) an
   - : A string representing the value of a {{cssxref("margin-block-end")}} descriptor.
 - `margin-block-start` or `marginBlockStart`
   - : A string representing the value of a {{cssxref("margin-block-start")}} descriptor.
-- `margin-bottom` or `margiBottom`
+- `margin-bottom` or `marginBottom`
   - : A string representing the value of a {{cssxref("margin-bottom")}} descriptor.
 - `margin-inline` or `marginInline`
   - : A string representing the value of a {{cssxref("margin-inline")}} descriptor.
