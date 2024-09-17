@@ -9,33 +9,19 @@ browser-compat: html.manifest.related_applications
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}{{SeeCompatTable}}
 
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Type</th>
+      <td><code>Array</code></td>
+    </tr>
+  </tbody>
+</table>
+
 The `related_applications` field is an array of objects specifying native applications that are installable by, or accessible to, the underlying platform — for example, a native Android application obtainable through the Google Play Store. Such applications are intended to be alternatives to the manifest's website that provides similar/equivalent functionality — like the native app equivalent.
 
 > [!NOTE]
 > Developer can specify that the native applications are preferred over the web application by setting `prefer_related_applications` to `true`.
-
-## Syntax
-
-```json
-"related_applications": [
-  {
-    "platform": "<platform-keyword>",
-    "url": "<app-url>",
-    "id": "<app-id>"
-  }
-]
-```
-
-### Values
-
-Application objects may contain the following properties:
-
-- `platform`
-  - : The platform on which the application can be found. [List of available values](https://github.com/w3c/manifest/wiki/Platforms)
-- `url`
-  - : The URL at which the application can be found.
-- `id`
-  - : The ID used to represent the application on the specified platform.
 
 ## Examples
 
@@ -54,6 +40,16 @@ Application objects may contain the following properties:
   }
 ]
 ```
+
+## Related application properties
+
+Application objects may contain the following properties:
+
+| Member     | Description                                                                                                                    |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| `platform` | The platform on which the application can be found. [List of available values](https://github.com/w3c/manifest/wiki/Platforms) |
+| `url`      | The URL at which the application can be found.                                                                                 |
+| `id`       | The ID used to represent the application on the specified platform.                                                            |
 
 ## Specifications
 
