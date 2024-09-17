@@ -108,7 +108,7 @@ custom-element:defined::before {
 
 We have also used the [`::before`](/en-US/docs/Web/CSS/::before) pseudo-element to show a "Loading..." overlay message until the element is defined. After definition, it is removed by setting the [`content`](/en-US/docs/Web/CSS/content) to an empty string.
 
-The following JavaScript has been used to define the custom element. As mentioned earlier, to allow you to see the state of the custom element before and after definition we run the {{domxref("CustomElementRegistry.define", "define()")}} method when the button is clicked.
+The following JavaScript has been used to define the custom element. To allow you to see the state of the custom element before and after definition we run the {{domxref("CustomElementRegistry.define", "define()")}} method when the button is clicked.
 
 ```js
 const btn = document.querySelector("#btn");
