@@ -16,12 +16,6 @@ Therefore `background_color` should match the {{cssxref("background-color")}} CS
 > [!NOTE]
 > The `background_color` member is only meant to improve the user experience while the main stylesheet is loading from the network or the storage media; it is not used by the user agent as the {{cssxref("background-color")}} CSS property when the progressive web app stylesheet is available.
 
-## Syntax
-
-```json
-"background_color": "<color-value>"
-```
-
 ## Examples
 
 ```json

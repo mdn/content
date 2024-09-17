@@ -12,16 +12,6 @@ browser-compat: html.manifest.serviceworker
 
 The `serviceworker` member specifies a serviceworker that is Just-In-Time (JIT)-installed and registered to run a web-based payment app providing a payment mechanism for a specified payment method in a merchant website. See {{domxref("Payment Handler API", "Payment Handler API", "", "nocode")}} for more details.
 
-## Syntax
-
-```json
-"serviceworker": {
-  "scope": "<scope-path>",
-  "src": "<script-path>",
-  "use_cache": true
-}
-```
-
 ### Values
 
 `serviceworker` objects may contain the following values:

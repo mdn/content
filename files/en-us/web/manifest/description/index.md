@@ -7,15 +7,6 @@ browser-compat: html.manifest.description
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Type</th>
-      <td><code>String</code></td>
-    </tr>
-  </tbody>
-</table>
-
 The `description` member is a string in which developers can explain what the application does. `description` is directionality-capable, which means it can be displayed left to right or right to left based on the values of the [`dir`](/en-US/docs/Web/Manifest) and [`lang`](/en-US/docs/Web/Manifest) manifest members.
 
 ## Examples

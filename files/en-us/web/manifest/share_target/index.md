@@ -16,27 +16,6 @@ Once registered and installed, a PWA that uses the Web Share Target API acts as 
 > [!NOTE]
 > If you want to share data using the Web Share API, see [Web Share API](/en-US/docs/Web/API/Web_Share_API) and [`navigator.share()`](/en-US/docs/Web/API/Navigator/share).
 
-## Syntax
-
-```json
-"share_target": {
-  "action": "<target-url>",
-  "enctype": "<encoding-type>",
-  "method": "<http-method-keyword>",
-  "params": {
-    "title": "<title>",
-    "text": "<text>",
-    "url": "<url>",
-    "files": [
-      {
-        "name": "<file-name>",
-        "accept": ["<mime-type>", "<file-extension>"]
-      }
-    ]
-  }
-}
-```
-
 ### Values
 
 The value of the `share_target` member is an object that defines how an application can receive shared data. This object may contain the following properties (`action` and `params` are required):

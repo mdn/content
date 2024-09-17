@@ -14,12 +14,6 @@ The `orientation` member defines the default orientation for all the website's t
 > [!NOTE]
 > The orientation can be changed at runtime via the [Screen Orientation API](/en-US/docs/Web/API/Screen_Orientation_API).
 
-## Syntax
-
-```json
-"orientation": "<orientation-keyword>"
-```
-
 ### Values
 
 `orientation` can take one of the following values:

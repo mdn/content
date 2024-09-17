@@ -15,12 +15,6 @@ There is no standard list of possible values, but the W3C maintains [a list of k
 
 > **Note:** `categories` values are lower-cased by the stores and catalogs before processing, so "News" and "news" are treated as the same value. Developers are encouraged to use lower case in the first place.
 
-## Syntax
-
-```json
-"categories": ["<category-name>", "<category-name>"]
-```
-
 ## Examples
 
 ```json

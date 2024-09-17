@@ -13,12 +13,6 @@ A valid `scope` needs to allow [`start_url`](/en-US/docs/Web/Manifest/start_url)
 
 If `scope` is unspecified or invalid in any way (such as not a string, not a valid URL, or causes `start_url` to be out of scope), the `start_url` is used, with its last path segment removed.
 
-## Syntax
-
-```json
-"scope": "<scope-url>"
-```
-
 ## Examples
 
 If the scope is relative, the manifest URL is used as a base URL:

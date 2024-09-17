@@ -13,12 +13,6 @@ The [`display`](/en-US/docs/Web/Manifest/display) member is used to determine th
 
 The `display_override` member solves this by letting the developer provide a sequence of display modes that the browser will consider before using the `display` member. Its value is an array of display modes that are considered in-order, and the first supported display mode is applied.
 
-## Syntax
-
-```json
-"display_override": ["<display-keyword>", "<display-keyword>"]
-```
-
 ### Values
 
 Display override objects are display-mode strings, the possible values are:

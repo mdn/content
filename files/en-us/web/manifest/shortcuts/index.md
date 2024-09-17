@@ -9,27 +9,6 @@ browser-compat: html.manifest.shortcuts
 
 The `shortcuts` member defines an array of shortcuts or links to key tasks or pages within a web app. A user agent can use these values to assemble a context menu to be displayed by the operating system when a user engages with the web app's icon. When user invokes a shortcut, the user agent will navigate to the address given by shortcut's `url` member.
 
-## Syntax
-
-```json
-"shortcuts": [
-  {
-    "name": "<app-name>",
-    "short_name": "<short-app-name>",
-    "description": "<description>",
-    "url": "<url>",
-    "icons": [
-      {
-        "src": "<icon-url>",
-        "sizes": "<size-values>",
-        "type": "<mime-type>",
-        "purpose": "<purpose-keyword>"
-      }
-    ]
-  }
-]
-```
-
 ### Values
 
 Shortcut objects may contain the following values (only `name` and `url` are required):

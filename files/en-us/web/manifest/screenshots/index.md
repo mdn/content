@@ -11,21 +11,6 @@ browser-compat: html.manifest.screenshots
 
 The `screenshots` member defines an array of screenshots intended to showcase the application. These images are intended to be used by progressive web app stores.
 
-## Syntax
-
-```json
-"screenshots": [
-  {
-    "form_factor": "<device-keyword>",
-    "label": "<accessible-name>",
-    "platform": "<platform-keyword>",
-    "sizes": "<size-values>",
-    "src": "<image-url>",
-    "type": "<mime-type>"
-  }
-]
-```
-
 ### Values
 
 The `screenshots` member is an array of objects each representing a screenshot. Each screenshot object may contain the following properties:
