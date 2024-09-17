@@ -3,12 +3,10 @@ title: "AudioDecoder: configure() method"
 short-title: configure()
 slug: Web/API/AudioDecoder/configure
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.AudioDecoder.configure
 ---
 
-{{securecontext_header}}{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`configure()`** method of the {{domxref("AudioDecoder")}} interface enqueues a control message to configure the audio decoder for decoding chunks.
 

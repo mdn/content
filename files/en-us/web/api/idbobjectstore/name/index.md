@@ -37,7 +37,7 @@ some data to an object store using `add()`. After the object store has been
 created, we log `objectStore.name` to
 the console. For a full working example, see
 our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app
-(>[view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
+([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 // Let us open our database

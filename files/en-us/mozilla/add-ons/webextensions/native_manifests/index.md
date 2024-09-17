@@ -143,7 +143,7 @@ The native messaging manifest is a file with a name that matches the string pass
   </tbody>
 </table>
 
-For example, here's the content of the `ping_pong.json` manifest file for the `ping_pong` native application from the [native messaging example](https://github.com/mdn/webextensions-examples/tree/master/native-messaging):
+For example, here's the content of the `ping_pong.json` manifest file for the `ping_pong` native application from the [native messaging example](https://github.com/mdn/webextensions-examples/tree/main/native-messaging):
 
 ```json
 {
@@ -217,7 +217,7 @@ The managed storage manifest is a file with a name that matches the ID specified
   </tbody>
 </table>
 
-For example, in the [favourite-colour example](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour) manage storage data is set in the file named `favourite-colour-examples@mozilla.org.json`, which contains:
+For example, in the [favourite-colour example](https://github.com/mdn/webextensions-examples/tree/main/favourite-colour) manage storage data is set in the file named `favourite-colour-examples@mozilla.org.json`, which contains:
 
 ```json
 {
@@ -373,7 +373,7 @@ The key should have a single default value, which is the path to the manifest.
 > [!WARNING]
 > As of Firefox 64, the 32-bit registry view [Wow6432Node](https://en.wikipedia.org/wiki/WoW64#Registry_and_file_system) will be checked first for these keys, followed by the "native" registry view. Use whichever is appropriate for your application.
 >
-> **For Firefox 63 and older:** This key should _not_ be created under [Wow6432Node](https://en.wikipedia.org/wiki/WoW64#Registry_and_file_system), even if the app is 32-bit. Previous versions of the browser will always look for the key under the "native" view of the registry, not the 32-bit emulation. To ensure that the key is created in the "native" view, you can pass the `KEY_WOW64_64KEY` or `KEY_WOW64_32KEY` flags into `RegCreateKeyEx`. See [Accessing an Alternate Registry View](https://docs.microsoft.com/windows/win32/winprog64/accessing-an-alternate-registry-view).
+> **For Firefox 63 and older:** This key should _not_ be created under [Wow6432Node](https://en.wikipedia.org/wiki/WoW64#Registry_and_file_system), even if the app is 32-bit. Previous versions of the browser will always look for the key under the "native" view of the registry, not the 32-bit emulation. To ensure that the key is created in the "native" view, you can pass the `KEY_WOW64_64KEY` or `KEY_WOW64_32KEY` flags into `RegCreateKeyEx`. See [Accessing an Alternate Registry View](https://learn.microsoft.com/en-us/windows/win32/winprog64/accessing-an-alternate-registry-view).
 
 For per-user visibility, create a registry key with the following name:
 

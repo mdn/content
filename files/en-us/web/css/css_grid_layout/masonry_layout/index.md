@@ -50,12 +50,6 @@ This example includes an item which has positioning for columns. Items with defi
 
 {{EmbedGHLiveSample("css-examples/grid/masonry/positioned.html", '100%', 1000)}}
 
-## masonry-auto-flow
-
-The `masonry-auto-flow` property gives you a way to change how the masonry algorithm behaves. Give it a value of `next` and items will display in order on the grid axis, rather than going into whichever track has the most free space. The value `positioned` will ignore items with definite placement and place items in order-modified document order.
-
-{{EmbedGHLiveSample("css-examples/grid/masonry/masonry-auto-flow.html", '100%', 1000)}}
-
 ## Fallback
 
 In browsers [that do not support masonry](#browser_compatibility), regular grid auto-placement will be used instead.
@@ -66,4 +60,5 @@ In browsers [that do not support masonry](#browser_compatibility), regular grid 
 
 ## See also
 
+- {{cssxref("grid-auto-flow")}} for controlling grid auto-placement
 - [Native CSS masonry layout in CSS grid](https://www.smashingmagazine.com/native-css-masonry-layout-css-grid/)

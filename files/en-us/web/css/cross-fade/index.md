@@ -139,7 +139,7 @@ When using background images, make sure the contrast in color is great enough th
 ## See also
 
 - {{cssxref("image")}}
-- {{cssxref("url")}}
+- {{cssxref("url_value", "&lt;url&gt;")}}
 - {{cssxref("image/image", "image()")}}
 - {{cssxref("image/image-set", "image-set()")}}
 - {{cssxref("element")}}
