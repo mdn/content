@@ -22,6 +22,8 @@ This article provides information about the changes in Firefox 131 that affect d
 
 ### JavaScript
 
+- Support for synchronous iterator helpers, including: {{jsxref("Iterator.prototype.drop()")}}, {{jsxref("Iterator.prototype.every()")}}, {{jsxref("Iterator.prototype.filter()")}}, {{jsxref("Iterator.prototype.find()")}}, {{jsxref("Iterator.prototype.flatMap()")}}, {{jsxref("Iterator.prototype.forEach()")}}, {{jsxref("Iterator.prototype.map()")}}, {{jsxref("Iterator.prototype.reduce()")}}, {{jsxref("Iterator.prototype.some()")}} , {{jsxref("Iterator.prototype.take()")}}. These allow `Array`-like operations on large (and possibly infinite) data structures, without having to create intermediate `Array` objects, and in cases where creating such an object would not be possible. For more information see [Iterator helpers](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helpers) in the `Iterator` interface. ([Firefox bug 1896390](https://bugzil.la/1896390)).
+
 #### Removals
 
 ### SVG
