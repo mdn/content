@@ -745,7 +745,7 @@ AuthorSchema.virtual("name").get(function () {
 
 // Virtual for author's URL
 AuthorSchema.virtual("url").get(function () {
-  // We don't use an arrow function as we'll need the this object
+  // We don't use an arrow function as we'll need this object
   return `/catalog/author/${this._id}`;
 });
 
