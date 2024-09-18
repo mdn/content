@@ -3781,7 +3781,6 @@ quaxxor
 queryphrase
 queryset
 querysets
-querystring
 quibusdam
 QUIC
 quickbrownfox

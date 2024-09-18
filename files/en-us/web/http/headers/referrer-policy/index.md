@@ -43,7 +43,7 @@ Referrer-Policy: unsafe-url
 - `no-referrer`
   - : The {{HTTPHeader("Referer")}} header will be omitted: sent requests do not include any referrer information.
 - `no-referrer-when-downgrade`
-  - : Send the {{glossary("origin")}}, path, and querystring in {{HTTPHeader("Referer")}} when the protocol security level stays the same or improves (HTTP→HTTP, HTTP→HTTPS, HTTPS→HTTPS). Don't send the {{HTTPHeader("Referer")}} header for requests to less secure destinations (HTTPS→HTTP, HTTPS→file).
+  - : Send the {{glossary("origin")}}, path, and query string in {{HTTPHeader("Referer")}} when the protocol security level stays the same or improves (HTTP→HTTP, HTTP→HTTPS, HTTPS→HTTPS). Don't send the {{HTTPHeader("Referer")}} header for requests to less secure destinations (HTTPS→HTTP, HTTPS→file).
 - `origin`
   - : Send only the {{glossary("origin")}} in the {{HTTPHeader("Referer")}} header.
     For example, a document at `https://example.com/page.html` will send the referrer `https://example.com/`.
@@ -55,7 +55,7 @@ Referrer-Policy: unsafe-url
   - : Send only the origin when the protocol security level stays the same (HTTPS→HTTPS). Don't send the {{HTTPHeader("Referer")}} header to less secure destinations (HTTPS→HTTP).
 - `strict-origin-when-cross-origin` (default)
 
-  - : Send the origin, path, and querystring when performing a same-origin request. For cross-origin requests send the origin (only) when the protocol security level stays same (HTTPS→HTTPS). Don't send the {{HTTPHeader("Referer")}} header to less secure destinations (HTTPS→HTTP).
+  - : Send the origin, path, and query string when performing a same-origin request. For cross-origin requests send the origin (only) when the protocol security level stays same (HTTPS→HTTPS). Don't send the {{HTTPHeader("Referer")}} header to less secure destinations (HTTPS→HTTP).
 
     > [!NOTE]
     > This is the default policy if no policy is specified, or if the provided value is invalid (see spec revision [November 2020](https://github.com/whatwg/fetch/pull/1066)). Previously the default was `no-referrer-when-downgrade`.
