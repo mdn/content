@@ -56,3 +56,9 @@ selectElem.addEventListener("change", () => {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{DOMxRef("HTMLSelectElement")}}
+- {{DOMxRef("HTMLOptionElement")}}
+- {{DOMxRef("HTMLOptionsCollection")}}
