@@ -48,7 +48,7 @@ We all learn to write a letter sooner or later; it is also a useful example to t
 ## Starting point
 
 To begin, get the [raw text you need to mark up](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/marking-up-a-letter-start/letter-text.txt), and the [CSS to style the HTML](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/marking-up-a-letter-start/css.txt).
-Create a new `.html` file using your text editor or use an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
+Create a new `.html` file using your text editor or use an online editor such as [Scrimba](https://v2.scrimba.com/new?in=o0mdn&tpl=s0b3t590ql), [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
 
 > [!NOTE]
 > If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).

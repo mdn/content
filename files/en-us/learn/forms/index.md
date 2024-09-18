@@ -17,7 +17,7 @@ Mastering forms however requires more than just HTML knowledge — you also need
 The above text is a good indicator as to why we've put web forms into its own standalone module, rather than trying to mix bits of it into the HTML, CSS, and JavaScript topic areas — form elements are more complex than most other HTML elements, and they also require a close marriage of related CSS and JavaScript techniques to get the most out of them.
 
 > [!NOTE]
-> If you are working on a computer/tablet/other device where you don't have the ability to create your own files, you could try out (most of) the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).
+> If you are working on a computer/tablet/other devices where you don't have the ability to create your own files, you can try out most of the code examples in an online coding environment such as [Scrimba](https://v2.scrimba.com/new?in=o0mdn&tpl=s0b3t590ql), [JSBin](https://jsbin.com/), or [Glitch](https://glitch.com/).
 
 ## Introductory guides
 
