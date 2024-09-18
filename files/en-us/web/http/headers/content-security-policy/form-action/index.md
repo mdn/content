@@ -31,16 +31,17 @@ The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`form-action`** direc
 
 ## Syntax
 
-One or more sources can be set for the `form-action` policy:
-
 ```http
-Content-Security-Policy: form-action <source>;
-Content-Security-Policy: form-action <source> <source>;
+Content-Security-Policy: form-action 'none';
+Content-Security-Policy: form-action <source-expression-list>;
 ```
 
-### Sources
+This directive may have either:
 
-`<source>` can be any one of the values listed in [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
+- the single keyword value `'none'`, meaning that no form submissions may be made
+- a list of _source expression_ values, meaning that form submissions may be made to URLs that match any of the given source expressions.
+
+The syntax for each source expression is given in [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources).
 
 ## Examples
 

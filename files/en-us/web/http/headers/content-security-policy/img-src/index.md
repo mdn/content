@@ -31,16 +31,17 @@ The HTTP {{HTTPHeader("Content-Security-Policy")}} **`img-src`** directive speci
 
 ## Syntax
 
-One or more sources can be allowed for the `img-src` policy:
-
 ```http
-Content-Security-Policy: img-src <source>;
-Content-Security-Policy: img-src <source> <source>;
+Content-Security-Policy: img-src 'none';
+Content-Security-Policy: img-src <source-expression-list>;
 ```
 
-### Sources
+This directive may have either:
 
-`<source>` can be any one of the values listed in [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
+- the single keyword value `'none'`, meaning that no resources of this type may be loaded
+- a list of _source expression_ values, meaning that resources of this type may be loaded if they match any of the given source expressions.
+
+The syntax for each source expression is given in [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources).
 
 ## Examples
 

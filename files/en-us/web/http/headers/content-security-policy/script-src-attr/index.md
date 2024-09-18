@@ -35,12 +35,17 @@ It does not apply to other JavaScript sources that can trigger script execution,
 
 ## Syntax
 
-One or more sources can be allowed for the `script-src-attr` policy:
-
 ```http
-Content-Security-Policy: script-src-attr <source>;
-Content-Security-Policy: script-src-attr <source> <source>;
+Content-Security-Policy: script-src-attr 'none';
+Content-Security-Policy: script-src-attr <source-expression-list>;
 ```
+
+This directive may have either:
+
+- the single keyword value `'none'`, meaning that no resources of this type may be loaded
+- a list of _source expression_ values, meaning that resources of this type may be loaded if they match any of the given source expressions.
+
+The syntax for each source expression is given in [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources).
 
 `script-src-attr` can be used in conjunction with {{CSP("script-src")}}, and will override that directive for checks on inline handlers:
 
@@ -48,10 +53,6 @@ Content-Security-Policy: script-src-attr <source> <source>;
 Content-Security-Policy: script-src <source>;
 Content-Security-Policy: script-src-attr <source>;
 ```
-
-### Sources
-
-`<source>` can be any one of the values listed in [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
 
 ## Examples
 

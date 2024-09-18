@@ -36,12 +36,17 @@ These are set using {{CSP("style-src-elem")}} (and valid sources for all styles 
 
 ## Syntax
 
-One or more sources can be allowed for the `style-src-attr` policy:
-
 ```http
-Content-Security-Policy: style-src-attr <source>;
-Content-Security-Policy: style-src-attr <source> <source>;
+Content-Security-Policy: style-src-attr 'none';
+Content-Security-Policy: style-src-attr <source-expression-list>;
 ```
+
+This directive may have either:
+
+- the single keyword value `'none'`, meaning that no resources of this type may be loaded
+- a list of _source expression_ values, meaning that resources of this type may be loaded if they match any of the given source expressions.
+
+The syntax for each source expression is given in [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources).
 
 `style-src-attr` can be used in conjunction with {{CSP("style-src")}}:
 
@@ -49,10 +54,6 @@ Content-Security-Policy: style-src-attr <source> <source>;
 Content-Security-Policy: style-src <source>;
 Content-Security-Policy: style-src-attr <source>;
 ```
-
-### Sources
-
-`<source>` can be any one of the values listed in [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
 
 ## Examples
 
