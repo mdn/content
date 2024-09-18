@@ -84,7 +84,7 @@ This article provides information about the changes in Firefox 69 that will affe
 #### New APIs
 
 - The [Resize Observer API](/en-US/docs/Web/API/Resize_Observer_API) is supported by default ([Firefox bug 1543839](https://bugzil.la/1543839)).
-- The Microtask API ({{domxref("queueMicrotask()")}}) has been implemented ([Firefox bug 1480236](https://bugzil.la/1480236)).
+- The Microtask API ({{domxref("Window.queueMicrotask()")}} and {{domxref("WorkerGlobalScope.queueMicrotask()")}}) has been implemented ([Firefox bug 1480236](https://bugzil.la/1480236)).
 
 #### DOM
 

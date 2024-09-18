@@ -219,7 +219,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Returns the text entered by the user in a prompt dialog.
 - {{DOMxRef("Window.queryLocalFonts()")}} {{Experimental_Inline}} {{SecureContext_Inline}}
   - : Returns a {{jsxref("Promise")}} that fulfills with an array of {{domxref("FontData")}} objects representing the font faces available locally.
-- {{domxref("queueMicrotask", "Window.queueMicrotask()")}}
+- {{domxref("Window.queueMicrotask()")}}
   - : Queues a microtask to be executed at a safe time prior to control returning to the browser's event loop.
 - {{domxref("reportError", "Window.reportError()")}}
   - : Reports an error in a script, emulating an unhandled exception.

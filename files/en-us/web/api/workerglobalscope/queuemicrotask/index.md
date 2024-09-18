@@ -1,14 +1,14 @@
 ---
-title: "Window: queueMicrotask() method"
+title: "WorkerGlobalScope: queueMicrotask() method"
 short-title: queueMicrotask()
-slug: Web/API/Window/queueMicrotask
+slug: Web/API/WorkerGlobalScope/queueMicrotask
 page-type: web-api-instance-method
 browser-compat: api.queueMicrotask
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("Web Workers API")}}{{AvailableInWorkers("worker")}}
 
-The **`queueMicrotask()`** method of the {{domxref("Window")}} interface
+The **`queueMicrotask()`** method of the {{domxref("WorkerGlobalScope")}} interface
 queues a microtask to be executed at a safe time prior to control returning to the
 browser's event loop.
 
@@ -83,7 +83,7 @@ MyElement.prototype.loadData = function (url) {
 
 ## See also
 
-- {{domxref("WorkerGlobalScope.queueMicrotask()")}}
+- {{domxref("Window.queueMicrotask()")}}
 - [Polyfill of `queueMicrotask()` in `core-js`](https://github.com/zloirock/core-js#queuemicrotask)
 - [Using microtasks in JavaScript with queueMicrotask()](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide)
 - [Asynchronous JavaScript](/en-US/docs/Learn/JavaScript/Asynchronous)

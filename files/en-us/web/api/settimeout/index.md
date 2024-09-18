@@ -464,5 +464,6 @@ See also the [`clearTimeout()` example](/en-US/docs/Web/API/clearTimeout#example
 - [Polyfill of `setTimeout` which allows passing arguments to the callback in `core-js`](https://github.com/zloirock/core-js#settimeout-and-setinterval)
 - {{domxref("clearTimeout")}}
 - {{domxref("setInterval()")}}
-- {{domxref("window.requestAnimationFrame")}}
-- {{domxref("queueMicrotask()")}}
+- {{domxref("Window.requestAnimationFrame")}}
+- {{domxref("Window.queueMicrotask()")}}
+- {{domxref("WorkerGlobalScope.queueMicrotask()")}}
