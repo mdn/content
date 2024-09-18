@@ -4,7 +4,7 @@ slug: Web/Manifest/screenshots
 page-type: web-manifest-member
 status:
   - experimental
-browser-compat: html.manifest.screenshots
+spec-urls: https://w3c.github.io/manifest-app-info/#screenshots-member
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}{{SeeCompatTable}}
@@ -93,4 +93,4 @@ The `screenshots` member is an array of objects each representing a screenshot. 
 
 ## Browser compatibility
 
-{{Compat}}
+The feature is not supported by any of the browser implement yet.

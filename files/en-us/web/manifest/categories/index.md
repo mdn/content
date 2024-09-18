@@ -2,7 +2,7 @@
 title: categories
 slug: Web/Manifest/categories
 page-type: web-manifest-member
-browser-compat: html.manifest.categories
+spec-urls: https://w3c.github.io/manifest-app-info/#categories-member
 ---
 
 {{QuickLinksWithSubpages("/en-US/docs/Web/Manifest")}}
@@ -34,4 +34,4 @@ The `categories` member is an array of strings defining the names of categories 
 
 ## Browser compatibility
 
-{{Compat}}
+The feature is not supported by any of the browser implement yet.
