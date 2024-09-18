@@ -27,6 +27,7 @@ background-clip: border-box;
 background-clip: padding-box;
 background-clip: content-box;
 background-clip: text;
+background-clip: border-area;
 
 /* Global values */
 background-clip: inherit;
@@ -46,6 +47,8 @@ background-clip: unset;
   - : The background is painted within (clipped to) the content box.
 - `text`
   - : The background is painted within (clipped to) the foreground text.
+- `border-area`
+  - : The background is painted within (clipped to) the area painted by the border, taking {{Cssxref("border-width")}} and {{Cssxref("border-style")}} into account but ignoring any transparency introduced by {{Cssxref("border-color")}}.
 
 ## Accessibility
 
@@ -76,6 +79,9 @@ Consider using feature queries with {{cssxref("@supports")}} to test for support
   The background extends only to the edge of the content box.
 </p>
 <p class="text">The background is clipped to the foreground text.</p>
+<p class="border-area">
+  The background is clipped to the area painted by the border.
+</p>
 ```
 
 ### CSS
@@ -105,11 +111,16 @@ p {
   background-clip: text;
   color: rgb(0 0 0 / 20%);
 }
+
+.border-area {
+  background-clip: border-area;
+  border-color: transparent;
+}
 ```
 
 #### Result
 
-{{EmbedLiveSample('Examples', 600, 580)}}
+{{EmbedLiveSample('Examples', 600, 630)}}
 
 ## Specifications
 
