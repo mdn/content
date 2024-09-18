@@ -1,7 +1,7 @@
 ---
 title: createImageBitmap() global function
 short-title: createImageBitmap()
-slug: Web/API/createImageBitmap
+slug: Web/API/Window/createImageBitmap
 page-type: web-api-global-function
 browser-compat: api.createImageBitmap
 ---

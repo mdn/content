@@ -8784,7 +8784,7 @@
 /en-US/docs/Web/API/IdleDetector/onchange	/en-US/docs/Web/API/IdleDetector/change_event
 /en-US/docs/Web/API/IdleDetector/requestPermission	/en-US/docs/Web/API/IdleDetector/requestPermission_static
 /en-US/docs/Web/API/Image	/en-US/docs/Web/API/HTMLImageElement/Image
-/en-US/docs/Web/API/ImageBitmapFactories/createImageBitmap	/en-US/docs/Web/API/createImageBitmap
+/en-US/docs/Web/API/ImageBitmapFactories/createImageBitmap	/en-US/docs/Web/API/Window/createImageBitmap
 /en-US/docs/Web/API/ImageBitmapRenderingContext/transferImageBitmap	/en-US/docs/Web/API/ImageBitmapRenderingContext/transferFromImageBitmap
 /en-US/docs/Web/API/ImageData.ImageData	/en-US/docs/Web/API/ImageData/ImageData
 /en-US/docs/Web/API/ImageData.data	/en-US/docs/Web/API/ImageData/data
@@ -10256,7 +10256,7 @@
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/caches	/en-US/docs/Web/API/Window/caches
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval	/en-US/docs/Web/API/clearInterval
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout	/en-US/docs/Web/API/clearTimeout
-/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap	/en-US/docs/Web/API/createImageBitmap
+/en-US/docs/Web/API/WindowOrWorkerGlobalScope/createImageBitmap	/en-US/docs/Web/API/Window/createImageBitmap
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated	/en-US/docs/Web/API/Window/crossOriginIsolated
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch	/en-US/docs/Web/API/Window/fetch
 /en-US/docs/Web/API/WindowOrWorkerGlobalScope/indexedDB	/en-US/docs/Web/API/Window/indexedDB
@@ -10439,6 +10439,7 @@
 /en-US/docs/Web/API/console/timeStamp	/en-US/docs/Web/API/console/timeStamp_static
 /en-US/docs/Web/API/console/trace	/en-US/docs/Web/API/console/trace_static
 /en-US/docs/Web/API/console/warn	/en-US/docs/Web/API/console/warn_static
+/en-US/docs/Web/API/createImageBitmap	/en-US/docs/Web/API/Window/createImageBitmap
 /en-US/docs/Web/API/crossOriginIsolated	/en-US/docs/Web/API/Window/crossOriginIsolated
 /en-US/docs/Web/API/crypto_property	/en-US/docs/Web/API/Window/crypto
 /en-US/docs/Web/API/document.URL	/en-US/docs/Web/API/Document/URL
