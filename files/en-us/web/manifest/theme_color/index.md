@@ -15,13 +15,15 @@ This color application can provide a more native app-like experience for your we
 
 ## Syntax
 
-```json
-"theme_color": "<color-value>"
+```json-nolint
+/* Valid color value */
+"theme_color": "rebeccapurple"
+"theme_color": "#4285f4"
 ```
 
 ### Values
 
-- `<color-value>`
+- `theme_color`
 
   - : A string that specifies a [valid color value](/en-US/docs/Web/CSS/color_value).
 
@@ -81,13 +83,17 @@ body {
 ### Using a named color
 
 ```json
-"theme_color": "red"
+{
+  "theme_color": "red"
+}
 ```
 
 ### Using an RGB value
 
 ```json
-"theme_color": "rgb(66, 133, 244)"
+{
+  "theme_color": "rgb(66, 133, 244)"
+}
 ```
 
 ### Using a hexadecimal value
