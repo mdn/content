@@ -39,7 +39,7 @@ setSelectionRange(selectionStart, selectionEnd, selectionDirection)
 
 - {{domxref("HTMLTextAreaElement.selectionDirection", "selectionDirection")}} {{optional_inline}}
 
-- : The keyword `"forward"`, `"backward"`, or the default `"none"` indicating the direction in which the selection is considered to have been performed.
+- : The keyword `"forward"`, `"backward"`, or the default `"none"` — indicating the direction in which the selection is considered to have been performed.
 
 ### Return value
 
