@@ -15,7 +15,7 @@ This method also updates the {{domxref("HTMLTextAreaElement.selectionStart")}}, 
 > [!NOTE]
 > The `<textarea>` must be focused to enable selecting a subsection of the text to be selected using the `setSelectionRange()` method. Setting focus also fires a `selectchange` event.
 
-To select **all** all of the text of an textarea element, use the {{domxref("HTMLTextAreaElement.select()")}} method.
+To select **all** of the text of an `<textarea>` element, use the {{domxref("HTMLTextAreaElement.select()")}} method.
 
 ## Syntax
 
