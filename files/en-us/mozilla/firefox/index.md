@@ -41,7 +41,7 @@ This is a version of Firefox tailored for developers. Firefox Developer Edition 
 
 Every four weeks, we take the features that are stable enough, and create a new version of Firefox Beta. Firefox Beta builds are for Firefox enthusiasts to test what's destined to become the next released Firefox version.
 
-[Download Firefox Beta](https://www.mozilla.org/en-US/firefox/channel/#beta)
+[Download Firefox Beta](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta)
 
 ### Firefox
 
