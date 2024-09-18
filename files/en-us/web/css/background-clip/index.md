@@ -11,7 +11,7 @@ The **`background-clip`** [CSS](/en-US/docs/Web/CSS) property sets whether an el
 
 {{EmbedInteractiveExample("pages/css/background-clip.html")}}
 
-The background is always drawn behind the border, so `background-clip: border-box` has visual effect only when the border is partially opaque or has transparent or partially opaque regions. Also, it makes no sense to have `background-clip: text` if the text is not transparent or partially opaque.
+The background is always drawn behind the border, so `background-clip: border-box` has a visual effect only when the border is partially opaque or has transparent or partially opaque regions. Also, the `background-clip: text` property has little to no visual effect if the text is fully or partially opaque.
 
 > [!NOTE]
 > Because the [root element](/en-US/docs/Web/HTML/Element/html) has a different background painting area, the `background-clip` property has no effect when specified on it. See "[The backgrounds of special elements.](https://drafts.csswg.org/css-backgrounds-3/#special-backgrounds)"
