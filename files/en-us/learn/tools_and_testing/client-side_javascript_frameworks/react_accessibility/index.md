@@ -118,7 +118,7 @@ Doing this will populate our `editFieldRef` and `editButtonRef` with references 
 console.log(editButtonRef.current);
 ```
 
-You'll see that the value of `editButtonRef.current` is `null` when the component first renders, but if you click an "Edit" button, it will log the `<input>` element to the console. This is because the ref is populated only after the component renders, and clicking the "Edit" button causes the component to re-render. Be sure to delete this log before moving on.
+You'll see that the value of `editButtonRef.current` is `null` when the component first renders, but if you click an "Edit" button, it will log the `<button>` element to the console. This is because the ref is populated only after the component renders, and clicking the "Edit" button causes the component to re-render. Be sure to delete this log before moving on.
 
 > [!NOTE]
 > Your logs will appear 6 times because we have 3 instances of `<Todo />` in our app and React renders our components twice in development.
