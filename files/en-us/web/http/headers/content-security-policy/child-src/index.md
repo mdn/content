@@ -35,18 +35,17 @@ network errors by the user agent.
 
 ## Syntax
 
-One or more sources can be allowed for the `child-src` policy:
-
 ```http
-Content-Security-Policy: child-src <source>;
-Content-Security-Policy: child-src <source> <source>;
+Content-Security-Policy: child-src 'none';
+Content-Security-Policy: child-src <source-expression-list>;
 ```
 
-### Sources
+This directive may have either:
 
-`<source>` can be any one of the values listed in [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
+- the single keyword value `'none'`, meaning that no resources of this type may be loaded
+- a list of _source expression_ values, meaning that resources of this type may be loaded if they match any of the given source expressions.
 
-Note that this same set of values can be used in all {{Glossary("fetch directive", "fetch directives")}} (and a [number of other directives](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#relevant_directives)).
+The syntax for each source expression is given in [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources).
 
 ## Examples
 

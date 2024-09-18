@@ -54,8 +54,6 @@ Content-Security-Policy: connect-src <source> <source>;
 
 `<source>` can be any one of the values listed in [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources).
 
-Note that this same set of values can be used in all {{Glossary("fetch directive", "fetch directives")}} (and a [number of other directives](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#relevant_directives)).
-
 ## Examples
 
 ### Violation cases

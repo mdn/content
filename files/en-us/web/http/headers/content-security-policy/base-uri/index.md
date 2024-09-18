@@ -28,16 +28,21 @@ The HTTP {{HTTPHeader("Content-Security-Policy")}} **`base-uri`** directive rest
 
 ## Syntax
 
-One or more _sources_ can be allowed for the base-uri policy:
-
 ```http
-Content-Security-Policy: base-uri <source>;
-Content-Security-Policy: base-uri <source> <source>;
+Content-Security-Policy: base-uri 'none';
+Content-Security-Policy: base-uri <source-expression-list>;
 ```
 
-### Sources
+This directive may have either:
 
-This directive uses the same [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources#sources) syntax for arguments as other CSP directives. However, only values that match URLs make sense for `base-uri`, including `<host-source>`, `<scheme-source>`, `'self'`, and `'none'`.
+- the single keyword value `'none'`, meaning that no base URI may be set using a `<base>` element
+- a list of _source expression_ values, meaning that a `<base>` element may set a base URI if it matches any of the given source expressions.
+
+The syntax for each source expression is given in [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources). However, only the following subset of those values apply to `base-uri`:
+
+- `<host-source>`
+- `<scheme-source>`
+- the keyword value `'self'`.
 
 ## Examples
 
