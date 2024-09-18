@@ -123,7 +123,8 @@ You can see this code in action in our [latest-download](https://github.com/mdn/
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#method-search) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#method-search) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

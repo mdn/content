@@ -34,7 +34,8 @@ Effective website security requires design effort across the whole of the websit
 
 The rest of this article gives you more details about a few common threats and some of the simple steps you can take to protect your site.
 
-> **Note:** This is an introductory topic, designed to help you start thinking about website security, but it is not exhaustive.
+> [!NOTE]
+> This is an introductory topic, designed to help you start thinking about website security, but it is not exhaustive.
 
 ## Website security threats
 
@@ -44,7 +45,8 @@ This section lists just a few of the most common website threats and how they ar
 
 XSS is a term used to describe a class of attacks that allow an attacker to inject client-side scripts _through_ the website into the browsers of other users. Because the injected code comes to the browser from the site, the code is _trusted_ and can do things like send the user's site authorization cookie to the attacker. When the attacker has the cookie, they can log into a site as though they were the user and do anything the user can, such as access their credit card details, see contact details, or change passwords.
 
-> **Note:** XSS vulnerabilities have been historically more common than any other type of security threat.
+> [!NOTE]
+> XSS vulnerabilities have been historically more common than any other type of security threat.
 
 The XSS vulnerabilities are divided into _reflected_ and _persistent_, based on how the site returns the injected scripts to a browser.
 
@@ -81,7 +83,8 @@ The modified statement creates a valid SQL statement that deletes the `users` ta
 
 To avoid this sort of attack, you must ensure that any user data that is passed to an SQL query cannot change the nature of the query. One way to do this is to [escape](https://en.wikipedia.org/wiki/Escape_character) all the characters in the user input that have a special meaning in SQL.
 
-> **Note:** The SQL statement treats the **'** character as the beginning and end of a string literal. By putting a backslash in front of this character (**\\'**), we escape the symbol, and tell SQL to instead treat it as a character (just a part of the string).
+> [!NOTE]
+> The SQL statement treats the **'** character as the beginning and end of a string literal. By putting a backslash in front of this character (**\\'**), we escape the symbol, and tell SQL to instead treat it as a character (just a part of the string).
 
 In the following statement, we escape the **'** character. The SQL will now interpret the name as the whole string in bold (which is a very odd name indeed, but not harmful).
 
@@ -91,7 +94,8 @@ SELECT * FROM users WHERE name = 'a\';DROP TABLE users; SELECT * FROM userinfo W
 
 Web frameworks will often take care of the character escaping for you. Django, for example, ensures that any user-data passed to querysets (model queries) is escaped.
 
-> **Note:** This section draws heavily on the information in [Wikipedia here](https://en.wikipedia.org/wiki/SQL_injection).
+> [!NOTE]
+> This section draws heavily on the information in [Wikipedia here](https://en.wikipedia.org/wiki/SQL_injection).
 
 ### Cross-Site Request Forgery (CSRF)
 
@@ -103,7 +107,8 @@ If a user clicks the submit button, an HTTP `POST` request will be sent to the s
 
 The result is that any user who clicks the _Submit_ button while they are logged in to the trading site will make the transaction. Josh gets rich.
 
-> **Note:** The trick here is that Josh doesn't need to have access to the user's cookies (or access credentials). The browser of the user stores this information and automatically includes it in all requests to the associated server.
+> [!NOTE]
+> The trick here is that Josh doesn't need to have access to the user's cookies (or access credentials). The browser of the user stores this information and automatically includes it in all requests to the associated server.
 
 One way to prevent this type of attack is for the server to require that `POST` requests include a user-specific site-generated secret. The secret would be supplied by the server when sending the web form used to make transfers. This approach prevents Josh from creating his own form, because he would have to know the secret that the server is providing for the user. Even if he found out the secret and created a form for a particular user, he would no longer be able to use that same form to attack every user.
 
@@ -125,7 +130,8 @@ For a comprehensive listing of website security threats see [Category: Web secur
 
 Almost all of the security exploits in the previous sections are successful when the web application trusts data from the browser. Whatever else you do to improve the security of your website, you should sanitize all user-originating data before it is displayed in the browser, used in SQL queries, or passed to an operating system or file system call.
 
-> **Warning:** The single most important lesson you can learn about website security is to **never trust data from the browser**. This includes, but is not limited to data in URL parameters of `GET` requests, `POST` requests, HTTP headers and cookies, and user-uploaded files. Always check and sanitize all incoming data. Always assume the worst.
+> [!WARNING]
+> The single most important lesson you can learn about website security is to **never trust data from the browser**. This includes, but is not limited to data in URL parameters of `GET` requests, `POST` requests, HTTP headers and cookies, and user-uploaded files. Always check and sanitize all incoming data. Always assume the worst.
 
 A number of other concrete steps you can take are:
 
@@ -134,6 +140,10 @@ A number of other concrete steps you can take are:
 - Keep track of the most popular threats (the [current OWASP list is here](https://owasp.org/www-project-top-ten/)) and address the most common vulnerabilities first.
 - Use [vulnerability scanning tools](https://owasp.org/www-community/Vulnerability_Scanning_Tools) to perform automated security testing on your site. Later on, your very successful website may also find bugs by offering a bug bounty [like Mozilla does here](https://www.mozilla.org/en-US/security/bug-bounty/faq-webapp/).
 - Only store and display data that you need. For example, if your users must store sensitive information like credit card details, only display enough of the card number that it can be identified by the user, and not enough that it can be copied by an attacker and used on another site. The most common pattern at this time is to only display the last 4 digits of a credit card number.
+- Keep software up-to-date.
+  Most servers have regular security updates that fix or mitigate known vulnerabilities.
+  If possible, schedule regular automated updates, and ideally, schedule updates during times when your website has the lowest amount of traffic.
+  It's best to back up your data before updating and test new software versions to make sure there's no compatibility issues on your server.
 
 Web frameworks can help mitigate many of the more common vulnerabilities.
 

@@ -123,7 +123,8 @@ There are several arguments against using video content for technical documentat
 - Video has accessibility problems: it's more expensive to produce generally than text, but especially to localize, or make usable by screen reader users.
 - Following on from the last point, video is much harder to edit/update/maintain than text content.
 
-> **Note:** It's worth keeping these problems in mind even when you are making videos, so you can try to alleviate some of them.
+> [!NOTE]
+> It's worth keeping these problems in mind even when you are making videos, so you can try to alleviate some of them.
 
 There are many popular video sites that provide a lot of video tutorials.
 MDN Web Docs isn't a video-driven site, but video does have a place on MDN Web Docs in certain contexts.
@@ -223,7 +224,8 @@ Plan carefully what you are actually going to record, and practice the steps a f
   Not everyone will be able to view your video in high definition.
   You will be able to zoom particular parts in post-production, but it's a good idea to zoom the app beforehand as well.
 
-> **Note:** Don't zoom so far that the UIs you are showing start to look unfamiliar or ugly.
+> [!NOTE]
+> Don't zoom so far that the UIs you are showing start to look unfamiliar or ugly.
 
 ### Recording
 
@@ -233,7 +235,8 @@ Make sure the mouse pointer doesn't obscure any icons or text that are important
 
 Remember to pause for a second or two at the end to show the result of the flow.
 
-> **Note:** If you are using a really simple tool like QuickTime Player and post production is not an option for some reason, you should get your windows set up in the right size to show the area you want to show. In the Firefox DevTools, you can use the [Rulers Tool](https://firefox-source-docs.mozilla.org/devtools-user/rulers/index.html) to make sure the viewport is at the right aspect ratio for the recording.
+> [!NOTE]
+> If you are using a really simple tool like QuickTime Player and post production is not an option for some reason, you should get your windows set up in the right size to show the area you want to show. In the Firefox DevTools, you can use the [Rulers Tool](https://firefox-source-docs.mozilla.org/devtools-user/rulers/index.html) to make sure the viewport is at the right aspect ratio for the recording.
 
 ### Post-processing
 
@@ -256,7 +259,8 @@ Crop the video to the desired aspect ratio, if required.
 Videos currently have to be uploaded to YouTube to be displayed on MDN Web Docs, for example, to the [mozhacks](https://www.youtube.com/user/mozhacks/videos) channel.
 Ask a member of MDN Web Docs team to upload the video if you don't have somewhere appropriate to put it.
 
-> **Note:** Mark the video as "unlisted" if it doesn't make sense out of the context of the page (if it's a short video, then it probably doesn't).
+> [!NOTE]
+> Mark the video as "unlisted" if it doesn't make sense out of the context of the page (if it's a short video, then it probably doesn't).
 
 ### Embedding
 

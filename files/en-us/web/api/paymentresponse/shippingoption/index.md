@@ -3,19 +3,16 @@ title: "PaymentResponse: shippingOption property"
 short-title: shippingOption
 slug: Web/API/PaymentResponse/shippingOption
 page-type: web-api-instance-property
-status:
-  - deprecated
-  - non-standard
 browser-compat: api.PaymentResponse.shippingOption
 ---
 
-{{securecontext_header}}{{APIRef("Payment Request API")}}{{Deprecated_header}}{{Non-standard_header}}
+{{securecontext_header}}{{APIRef("Payment Request API")}}
 
 The **`shippingOption`** read-only property of
 the `PaymentRequest` interface returns the ID attribute of the shipping
 option selected by the user. This option is only present when the
 `requestShipping` option is set to `true` in the
-{{domxref('PaymentOptions')}} object passed to the
+`options` object passed to the
 {{domxref('PaymentRequest.PaymentRequest','PaymentRequest')}} constructor.
 
 ## Value
@@ -70,6 +67,10 @@ function updateDetails(details, shippingOption, resolve, reject) {
   resolve(details);
 }
 ```
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

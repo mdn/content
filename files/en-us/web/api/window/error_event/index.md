@@ -17,10 +17,11 @@ Use the event name in methods like {{domxref("EventTarget.addEventListener", "ad
 ```js
 addEventListener("error", (event) => {});
 
-onerror = (event, source, lineno, colno, error) => {};
+onerror = (message, source, lineno, colno, error) => {};
 ```
 
-> **Note:** Due to historical reasons, `onerror` on `window` is the only event handler property that receives more than one argument.
+> [!NOTE]
+> For historical reasons, `onerror` on `Window` and {{domxref("WorkerGlobalScope")}} objects is the only event handler property that receives more than one argument.
 
 ## Event type
 
@@ -28,11 +29,11 @@ The event object is a {{domxref("ErrorEvent")}} instance if it was generated fro
 
 {{InheritanceDiagram("ErrorEvent")}}
 
-## Usage notes
+## Description
 
 ### Event handler property
 
-For historical reasons, the `onerror` event handler property, on `Window` objects only, has different behavior from other event handler properties.
+For historical reasons, the `onerror` event handler property, on `Window` and {{domxref("WorkerGlobalScope")}} objects only, has different behavior from other event handler properties.
 
 Note that this only applies to handlers assigned to `onerror`, not to handlers added using `addEventListener()`.
 
@@ -56,8 +57,13 @@ When canceled, the error won't appear in the console, but the current script wil
 
 The event handler's signature is asymmetric between `addEventListener()` and `onerror`. The event handler passed to `Window.addEventListener()` receives a single {{domxref("ErrorEvent")}} object, while the `onerror` handler receives five arguments, matching the {{domxref("ErrorEvent")}} object's properties:
 
-- `event`
+- `message`
+
   - : A string containing a human-readable error message describing the problem. Same as {{domxref("ErrorEvent.message")}}.
+
+    > [!NOTE]
+    > In HTML, the [content event handler attribute](/en-US/docs/Web/HTML/Attributes#event_handler_attributes) `onerror` on the {{HTMLElement("body")}} element attaches `error` event listeners to `window` (_not_ the `<body>` element). For this event handler, the first parameter is called `event`, not `message`, although it still contains a string; that is, you would use `<body onerror="console.error(event)">` to log the error message.
+
 - `source`
   - : A string containing the URL of the script that generated the error.
 - `lineno`
@@ -79,7 +85,8 @@ window.onerror = (a, b, c, d, e) => {
 };
 ```
 
-> **Note:** These parameter names are observable with an [HTML event handler attribute](/en-US/docs/Web/HTML/Attributes#event_handler_attributes), where the first parameter is called `event` instead of `message`.
+> [!NOTE]
+> These parameter names are observable with an [HTML event handler attribute](/en-US/docs/Web/HTML/Attributes#event_handler_attributes), where the first parameter is called `event` instead of `message`.
 
 This special behavior only happens for the `onerror` event handler on `window`. The [`Element.onerror`](/en-US/docs/Web/API/HTMLElement/error_event) handler still receives a single {{domxref("ErrorEvent")}} object.
 

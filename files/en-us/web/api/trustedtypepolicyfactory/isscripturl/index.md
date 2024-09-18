@@ -10,7 +10,8 @@ browser-compat: api.TrustedTypePolicyFactory.isScriptURL
 
 The **`isScriptURL()`** method of the {{domxref("TrustedTypePolicyFactory")}} interface returns true if it is passed a valid {{domxref("TrustedScriptURL")}} object.
 
-> **Note:** The purpose of the functions `isScriptURL()`, {{domxref("TrustedTypePolicyFactory.isHTML","isHTML()")}}, and {{domxref("TrustedTypePolicyFactory.isScript","isScript()")}} is to check if the object is a valid TrustedType object, created by a configured policy.
+> [!NOTE]
+> The purpose of the functions `isScriptURL()`, {{domxref("TrustedTypePolicyFactory.isHTML","isHTML()")}}, and {{domxref("TrustedTypePolicyFactory.isScript","isScript()")}} is to check if the object is a valid TrustedType object, created by a configured policy.
 
 ## Syntax
 
@@ -25,7 +26,7 @@ isScriptURL(value)
 
 ### Return value
 
-A {{jsxref("boolean")}}that is true if the object is a valid {{domxref("TrustedScriptURL")}} object.
+A {{jsxref("boolean")}} that is true if the object is a valid {{domxref("TrustedScriptURL")}} object.
 
 ## Examples
 

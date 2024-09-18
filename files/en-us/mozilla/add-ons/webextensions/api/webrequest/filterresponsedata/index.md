@@ -68,7 +68,7 @@ function listener(details) {
     let str = decoder.decode(event.data, { stream: true });
     // Just change any instance of Example in the HTTP response
     // to WebExtension Example.
-    str = str.replace(/Example/g, "WebExtension Example");
+    str = str.replaceAll("Example", "WebExtension Example");
     filter.write(encoder.encode(str));
     filter.disconnect();
   };
@@ -85,7 +85,8 @@ browser.webRequest.onBeforeRequest.addListener(
 
 {{WebExtExamples}}
 
-> **Note:** The example above only works for small requests that aren't chunked or streamed. More advanced examples are documented with {{WebExtAPIRef("webRequest.StreamFilter.ondata")}}.
+> [!NOTE]
+> The example above only works for small requests that aren't chunked or streamed. More advanced examples are documented with {{WebExtAPIRef("webRequest.StreamFilter.ondata")}}.
 
 ## Browser compatibility
 

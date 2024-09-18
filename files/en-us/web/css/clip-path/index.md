@@ -56,7 +56,7 @@ The `clip-path` property is specified as one or a combination of the values list
 ### Values
 
 - `<clip-source>`
-  - : A {{cssxref("url", "url()")}} referencing an [SVG](/en-US/docs/Web/SVG) {{SVGElement("clipPath")}} element.
+  - : A {{cssxref("url_value", "&lt;url&gt;")}} referencing an [SVG](/en-US/docs/Web/SVG) {{SVGElement("clipPath")}} element.
 - {{cssxref("&lt;basic-shape&gt;")}}
 
   - : A shape whose size and position is defined by the `<geometry-box>` value. If no geometry box is specified, the `border-box` will be used as the reference box. One of:
@@ -73,7 +73,7 @@ The `clip-path` property is specified as one or a combination of the values list
       - : Defines a shape using an optional SVG filling rule and an SVG path definition.
     - {{cssxref("basic-shape/rect","rect()")}}
       - : Defines a rectangle using the specified distances from the edges of the reference box.
-    - {{cssxref("basic-shape/shape","shape()")}} {{Experimental_Inline}}
+    - {{cssxref("basic-shape/shape","shape()")}}
       - : Defines a shape using an optional SVG filling rule and shape commands for lines, curves, and arcs.
     - {{cssxref("basic-shape/xywh","xywh()")}}
       - : Defines a rectangle using the specified distances from the top and left edges of the reference box and the specified width and height of the rectangle.
@@ -100,7 +100,8 @@ The `clip-path` property is specified as one or a combination of the values list
 - `none`
   - : No clipping path is created.
 
-> **Note:** A computed value other than **`none`** results in the creation of a new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) the same way that CSS {{cssxref("opacity")}} does for values other than `1`.
+> [!NOTE]
+> A computed value other than **`none`** results in the creation of a new [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) the same way that CSS {{cssxref("opacity")}} does for values other than `1`.
 
 ## Formal definition
 

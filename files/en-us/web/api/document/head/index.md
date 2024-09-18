@@ -36,7 +36,7 @@ An {{domxref("HTMLHeadElement")}}.
 ## Notes
 
 `document.head` is read-only. Trying to assign a value to this property will
-fail silently or, in [Strict Mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), throws a {{jsxref("TypeError")}} .
+fail silently or, in [Strict Mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), throws a {{jsxref("TypeError")}}.
 
 ## Specifications
 

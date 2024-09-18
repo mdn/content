@@ -8,7 +8,8 @@ page-type: learn-module-chapter
 
 Now it's time to dive deeper into Vue, and create our own custom component — we'll start by creating a component to represent each item in the todo list. Along the way, we'll learn about a few important concepts such as calling components inside other components, passing data to them via props, and saving data state.
 
-> **Note:** If you need to check your code against our version, you can find a finished version of the sample Vue app code in our [todo-vue repository](https://github.com/mdn/todo-vue). For a running live version, see <https://mdn.github.io/todo-vue/>.
+> [!NOTE]
+> If you need to check your code against our version, you can find a finished version of the sample Vue app code in our [todo-vue repository](https://github.com/mdn/todo-vue). For a running live version, see <https://mdn.github.io/todo-vue/>.
 
 <table>
   <tbody>
@@ -32,7 +33,7 @@ Now it's time to dive deeper into Vue, and create our own custom component — w
           more advanced features of Vue (like Single File Components or render
           functions), you'll need a terminal with
           <a
-            href="https://nodejs.org/en/download/"
+            href="https://nodejs.org/en/download/package-manager"
             rel="noopener noreferrer"
             target="_blank"
             >Node</a
@@ -153,7 +154,8 @@ In Vue, there are two ways to register props:
 - The first way is to just list props out as an array of strings. Each entry in the array corresponds to the name of a prop.
 - The second way is to define props as an object, with each key corresponding to the prop name. Listing props as an object allows you to specify default values, mark props as required, perform basic object typing (specifically around JavaScript primitive types), and perform simple prop validation.
 
-> **Note:** Prop validation only happens in development mode, so you can't strictly rely on it in production. Additionally, prop validation functions are invoked before the component instance is created, so they do not have access to the component state (or other props).
+> [!NOTE]
+> Prop validation only happens in development mode, so you can't strictly rely on it in production. Additionally, prop validation functions are invoked before the component instance is created, so they do not have access to the component state (or other props).
 
 For this component, we'll use the object registration method.
 
@@ -244,7 +246,8 @@ You'll note that the `data` property is a function. This is to keep the data val
 
 You use `this` to access a component's props and other properties from inside data, as you may expect. We'll see an example of this shortly.
 
-> **Note:** Because of the way that `this` works in arrow functions (binding to the parent's context), you wouldn't be able to access any of the necessary attributes from inside `data` if you used an arrow function. So don't use an arrow function for the `data` property.
+> [!NOTE]
+> Because of the way that `this` works in arrow functions (binding to the parent's context), you wouldn't be able to access any of the necessary attributes from inside `data` if you used an arrow function. So don't use an arrow function for the `data` property.
 
 So let's add a `data` property to our `ToDoItem` component. This will return an object containing a single property that we'll call `isDone`, whose value is `this.done`.
 
@@ -307,27 +310,11 @@ Try changing `true` to `false` and back again, reloading your app in between to 
 
 Great! We now have a working checkbox where we can set the state programmatically. However, we can currently only add one `ToDoList` component to the page because the `id` is hardcoded. This would result in errors with assistive technology since the `id` is needed to correctly map labels to their checkboxes. To fix this, we can programmatically set the `id` in the component data.
 
-We can use the [nanoid](https://github.com/ai/nanoid) package to help keep the index unique. This package exports a function `nanoid()` that generates a unique string. This will be sufficient for keeping component `id`s unique.
+We can use the {{domxref("Crypto.randomUUID()")}} method to generate a unique string to keep component `id`s unique. `randomUUID()` is built into modern browsers and provides a straightforward way to ensure uniqueness without relying on external libraries.
 
-Let's add the package to our project with npm; stop your server and enter the following command into your terminal:
-
-```bash
-npm install --save nanoid
-```
-
-> **Note:** If you prefer yarn, you could instead use `yarn add nanoid`.
-
-We can now import this package into our `ToDoItem` component. Add the following line at the top of `ToDoItem.vue`'s `<script>` element:
+Next, add an `id` field to the `data` property as shown below; this uses `crypto.randomUUID()` to return a unique string, which we then prefix with `todo-`:
 
 ```js
-import { nanoid } from "nanoid";
-```
-
-Next, add an `id` field to our data property, so the component object ends up looking like so (`nanoid()` returns a unique string with the specified prefix — `todo-`):
-
-```js
-import { nanoid } from "nanoid";
-
 export default {
   props: {
     label: { required: true, type: String },
@@ -336,7 +323,7 @@ export default {
   data() {
     return {
       isDone: this.done,
-      id: "todo-" + nanoid(),
+      id: "todo-" + crypto.randomUUID(),
     };
   },
 };

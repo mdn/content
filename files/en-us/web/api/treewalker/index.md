@@ -16,7 +16,7 @@ A `TreeWalker` can be created using the {{domxref("Document.createTreeWalker()")
 _This interface doesn't inherit any property._
 
 - {{domxref("TreeWalker.root")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("Node")}} representing the root node as specified when the `TreeWalker` was created.
+  - : Returns the root {{domxref("Node")}} as specified when the `TreeWalker` was created.
 - {{domxref("TreeWalker.whatToShow")}} {{ReadOnlyInline}}
 
   - : Returns an `unsigned long` being a bitmask made of constants describing the types of {{domxref("Node")}} that must be presented. Non-matching nodes are skipped, but their children may be included, if relevant. The possible values are:
@@ -38,7 +38,7 @@ _This interface doesn't inherit any property._
     | `NodeFilter.SHOW_TEXT`                                   | `4`                                                     | Shows {{ domxref("Text") }} nodes.                                                                                                                                                                                                                                                                                                                                               |
 
 - {{domxref("TreeWalker.filter")}} {{ReadOnlyInline}}
-  - : Returns a `NodeFilter` used to select the relevant nodes.
+  - : Returns the `NodeFilter` associated with this `TreeWalker` used to select the relevant nodes.
 - {{domxref("TreeWalker.currentNode")}}
   - : Is the {{domxref("Node")}} on which the `TreeWalker` is currently pointing at.
 
@@ -46,7 +46,8 @@ _This interface doesn't inherit any property._
 
 _This interface doesn't inherit any method._
 
-> **Note:** in the context of a `TreeWalker`, a node is _visible_ if it exists in the logical view determined by the `whatToShow` and `filter` parameter arguments. (Whether or not the node is visible on the screen is irrelevant.)
+> [!NOTE]
+> In the context of a `TreeWalker`, a node is _visible_ if it exists in the logical view determined by the `whatToShow` and `filter` parameter arguments. (Whether or not the node is visible on the screen is irrelevant.)
 
 - {{domxref("TreeWalker.parentNode()")}}
   - : Moves the current {{domxref("Node")}} to the first _visible_ ancestor node in the document order, and returns the found node. It also moves the current node to this one. If no such node exists, or if it is before that the _root node_ defined at the object construction, returns `null` and the current node is not changed.
@@ -55,7 +56,7 @@ _This interface doesn't inherit any method._
   - : Moves the current {{domxref("Node")}} to the first _visible_ child of the current node, and returns the found child. It also moves the current node to this child. If no such child exists, returns `null` and the current node is not changed. Note that the node returned by `firstChild()` is dependent on the value of `whatToShow` set during instantiation of the `TreeWalker` object. Assuming the following HTML tree, and if you set the `whatToShow` to `NodeFilter.SHOW_ALL` a call to `firstChild()` will return a `Text` node and not an `HTMLDivElement` object.
 
     ```html
-    <!DOCTYPE html>
+    <!doctype html>
     <html lang="en">
       <head><title>Demo</title>
       <body>

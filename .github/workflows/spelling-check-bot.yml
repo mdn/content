@@ -1,0 +1,54 @@
+name: Create an issue to report typos
+
+on:
+  schedule:
+    - cron: "0 0 * * mon"
+  workflow_dispatch:
+
+jobs:
+  sync:
+    if: github.repository == 'mdn/content'
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: ".nvmrc"
+          cache: yarn
+
+      - name: Run scripts
+        run: |
+          echo Running spelling check...
+          output=$(npx cspell --no-progress --gitignore --config .vscode/cspell.json "**/*.md" || exit 0)
+          if [ -n "${output}" ]; then
+            output=$(node scripts/linkify-logs.js "${output}")
+            output=$(echo "$output" | sed 's/^/- /')
+            echo "$output"
+            echo "OUTPUT<<EOF" >> $GITHUB_ENV
+            echo "$output" >> $GITHUB_ENV
+            echo "EOF" >> $GITHUB_ENV
+          else
+            echo "No typos found! 🎉"
+          fi
+
+      - name: Report spellcheck errors
+        if: env.OUTPUT != ''
+        run: |
+          issue=$(gh issue create --title "$TITLE" --label "$LABELS" --body "$BODY")
+          echo Issue URL ${issue}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TITLE: Weekly spelling check
+          LABELS: reported by automation,good first issue
+          BODY: |
+            Typos and unknown words:
+
+            ${{ env.OUTPUT }}
+
+            > [!TIP]
+            > To exclude words from the spellchecker, you can add valid words (web technology terms or abbreviations) to the [terms-abbreviations.txt](https://github.com/mdn/content/blob/main/.vscode/terms-abbreviations.txt) dictionary for IDE autocompletion. To ignore strings that are not words (\`AABBCC\` in code, for instance), you can add them to [ignore-list.txt](https://github.com/mdn/content/blob/main/.vscode/ignore-list.txt).

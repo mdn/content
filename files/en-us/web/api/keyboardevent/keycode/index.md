@@ -16,7 +16,8 @@ This is usually the decimal ASCII ({{RFC(20)}}) or Windows 1252 code correspondi
 
 You should avoid using this if possible; it's been deprecated for some time. Instead, you should use {{domxref("KeyboardEvent.code")}} (for the physical key pressed) or {{domxref("KeyboardEvent.key")}} (for the character the key maps to). Check compatibility for either property if you target very old browsers.
 
-> **Note:** Web developers shouldn't use the `keyCode` attribute for printable characters when handling `keydown` and `keyup` events. As described above, the `keyCode` attribute is not useful for printable characters, especially those input with the <kbd>Shift</kbd> or <kbd>Alt</kbd> key pressed.
+> [!NOTE]
+> Web developers shouldn't use the `keyCode` attribute for printable characters when handling `keydown` and `keyup` events. As described above, the `keyCode` attribute is not useful for printable characters, especially those input with the <kbd>Shift</kbd> or <kbd>Alt</kbd> key pressed.
 
 ## Value of keyCode
 
@@ -46,7 +47,8 @@ Firefox gets `keyCode` values from {{Glossary("ASCII")}} characters inputtable b
 
 Gecko sets `keyCode` values of punctuation keys as far as possible (when points 7.1 or 7.2 in the above list are reached) with the following rules:
 
-> **Warning:** The purpose of these new additional rules is for making users whose keyboard layouts map unicode characters to punctuation keys in a US keyboard layout can use web applications which support Firefox only with ASCII-capable keyboard layouts or just with a US keyboard layout. Otherwise, the newly mapped `keyCode` values may be conflict with other keys. For example, if the active keyboard layout is Russian, the `keyCode` value of **both** the `"Period"` key and `"Slash"` key are `190` (`KeyEvent.DOM_VK_PERIOD`). If you need to distinguish those keys but you don't want to support all keyboard layouts in the world by yourself, you should probably use {{domxref("KeyboardEvent.code")}}.
+> [!WARNING]
+> The purpose of these new additional rules is for making users whose keyboard layouts map unicode characters to punctuation keys in a US keyboard layout can use web applications which support Firefox only with ASCII-capable keyboard layouts or just with a US keyboard layout. Otherwise, the newly mapped `keyCode` values may be conflict with other keys. For example, if the active keyboard layout is Russian, the `keyCode` value of **both** the `"Period"` key and `"Slash"` key are `190` (`KeyEvent.DOM_VK_PERIOD`). If you need to distinguish those keys but you don't want to support all keyboard layouts in the world by yourself, you should probably use {{domxref("KeyboardEvent.code")}}.
 
 1. If running macOS or Linux:
 
@@ -942,8 +944,8 @@ Gecko sets `keyCode` values of punctuation keys as far as possible (when points 
       <td rowspan="2"><code>0x00 (0)</code>⚠️</td>
       <td rowspan="2"><code>0xDC (220)</code>⚠️</td>
       <td rowspan="2"><code>0x00 (0)</code>⚠️</td>
-      <td rowspan="2"><code>0xDC </code>(220)</td>
-      <td rowspan="2"><code>0xDC </code>(220)</td>
+      <td rowspan="2"><code>0xDC (220)</code></td>
+      <td rowspan="2"><code>0xDC (220)</code></td>
       <td rowspan="2"><code>0x00 (0)</code>⚠️</td>
       <td rowspan="2"><code>0x00 (0)</code>⚠️</td>
       <td rowspan="2"><code>0xDC (220)</code>⚠️</td>
@@ -2222,7 +2224,8 @@ Gecko sets `keyCode` values of punctuation keys as far as possible (when points 
   </tfoot>
 </table>
 
-> **Note:** Recent Mac doesn't have a <kbd>NumLock</kbd> key, and therefore state. That's why the unlocked state is not available.
+> [!NOTE]
+> Recent Mac doesn't have a <kbd>NumLock</kbd> key, and therefore state. That's why the unlocked state is not available.
 
 ## Constants for keyCode value
 
@@ -2275,7 +2278,7 @@ Gecko defines a lot of `keyCode` values in `KeyboardEvent` for making the mappin
       <td>0x0E (14)</td>
       <td>
         Reserved, but not used. {{deprecated_inline}} (Dropped, see
-        [Firefox bug 969247](https://bugzil.la/969247).)
+        <a href="https://bugzil.la/969247">Firefox bug 969247</a>.)
       </td>
     </tr>
     <tr>
@@ -3305,4 +3308,4 @@ On Windows, some values of virtual keycode are defined (reserved) for OEM specif
 
 Starting Gecko 21 (and older than 15), OEM specific key values are available on the keyCode attribute only on Windows. So they are not useful for usual web applications. They are useful only for intranet applications or in similar situations.
 
-See "[Manufacturer-specific Virtual-Key Codes (Windows CE 5.0)](<https://docs.microsoft.com/previous-versions/windows/embedded/aa452679(v=msdn.10)>)" in MSDN for the detail.
+See "[Manufacturer-specific Virtual-Key Codes (Windows CE 5.0)](<https://learn.microsoft.com/en-us/previous-versions/windows/embedded/aa452679(v=msdn.10)>)" in MSDN for the detail.

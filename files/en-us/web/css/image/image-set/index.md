@@ -70,7 +70,8 @@ This example shows how to use [`image-set()`](https://drafts.csswg.org/css-image
 
 {{EmbedGHLiveSample("css-examples/images/image-set.html", '100%', 600)}}
 
-> **Note:** In the above example, the `-webkit` prefixed version is also used to support Chrome and Safari. In Firefox 90, support was added for `-webkit-image-set()` as an alias to `image-set()` (in order to provide compat where developers had not added the standard property).
+> [!NOTE]
+> In the above example, the `-webkit` prefixed version is also used to support Chrome and Safari. In Firefox 90, support was added for `-webkit-image-set()` as an alias to `image-set()` (in order to provide compat where developers had not added the standard property).
 
 ### Using image-set() to provide alternative image formats
 
@@ -105,6 +106,6 @@ There is no inbuilt fallback for `image-set()`; therefore to include a {{cssxref
 - {{cssxref("image")}}
 - {{cssxref("image/image", "image()")}}
 - {{cssxref("element", "element()")}}
-- {{cssxref("url", "url()")}}
+- {{cssxref("url_value", "&lt;url&gt;")}}
 - {{cssxref("&lt;gradient&gt;")}}
 - {{cssxref("cross-fade", "cross-fade()")}}

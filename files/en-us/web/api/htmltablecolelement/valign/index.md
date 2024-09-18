@@ -12,9 +12,10 @@ browser-compat: api.HTMLTableColElement.vAlign
 
 The **`vAlign`** property of the {{domxref("HTMLTableColElement")}} interface is a string indicating how to vertically align text in a table {{htmlelement("col")}} column element.
 
-> **Note:** This property is deprecated, and CSS should be used to align text vertically in a column. Use the CSS {{cssxref("vertical-align")}} property, which takes precedence, to vertically align text in each column cell instead.
+> [!NOTE]
+> This property is deprecated, and CSS should be used to align text vertically in a column. Use the CSS {{cssxref("vertical-align")}} property, which takes precedence, to vertically align text in each column cell instead.
 >
-> As {{htmlelement("td")}} are not children of {{htmlelement("col")}}, you can't set it directly on a {{HTMLElement("col")}}element , you need to select the cells of the column using a `td:nth-child(n)` or similar (`n` is the column number).
+> As {{htmlelement("td")}} are not children of {{htmlelement("col")}}, you can't set it directly on a {{HTMLElement("col")}} element, you need to select the cells of the column using a `td:nth-child(n)` or similar (`n` is the column number).
 
 ## Value
 

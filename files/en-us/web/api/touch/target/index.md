@@ -16,9 +16,9 @@ The {{domxref("EventTarget")}} the {{domxref("Touch")}} object applies to.
 
 ## Examples
 
-This example illustrates how to access the {{domxref("Touch")}} object's {{domxref("Touch.target")}} property. The {{domxref("Touch.target")}} property is an {{domxref("Element")}} ({{domxref("EventTarget")}}) on which a touch point is started when contact is first placed on the surface.
+This example illustrates how to access the {{domxref("Touch")}} object's `Touch.target` property. The `Touch.target` property is an {{domxref("Element")}} ({{domxref("EventTarget")}}) on which a touch point is started when contact is first placed on the surface.
 
-In following simple code snippet, we assume the user initiates one or more touch contacts on the `source` element. When the {{domxref("Element/touchstart_event", "touchstart")}} event handler for this element is invoked, each touch point's {{domxref("Touch.target")}} property is accessed via the event's {{domxref("TouchEvent.targetTouches")}} list.
+In following simple code snippet, we assume the user initiates one or more touch contacts on the `source` element. When the {{domxref("Element/touchstart_event", "touchstart")}} event handler for this element is invoked, each touch point's `Touch.target` property is accessed via the event's {{domxref("TouchEvent.targetTouches")}} list.
 
 ```js
 // Register a touchmove listener for the 'source' element

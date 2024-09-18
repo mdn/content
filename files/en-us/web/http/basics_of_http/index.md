@@ -14,18 +14,10 @@ HTTP is an extensible protocol that relies on concepts like resources and Unifor
   - : Describes what HTTP is and its role in web architecture, including its position in the protocol stack.
 - [Evolution of HTTP](/en-US/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP)
   - : HTTP was created in the early 1990s and has been extended several times. This article goes through its history and describes HTTP/0.9, HTTP/1.0, HTTP/1.1, and the modern HTTP/2, as well as novelties introduced over the years.
-- [Resources and URIs](/en-US/docs/Web/HTTP/Resources_and_URIs)
-  - : A brief introduction to the concept of resources, identifiers, and locations on the web.
-- [Identifying resources on the Web](/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)
-  - : Describes how web resources are referenced and how to locate them.
-- [Data URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)
-  - : A specific kind of URI that directly embeds the resource it represents. Data URLs are very convenient, but have some caveats.
-- [Resource URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Resource_URLs) {{Non-standard_Inline}}
-  - : Resource URLs, those prefixed with the `resource` scheme are used by Firefox and Firefox browser extensions to load resources internally, but is also available to some sites the browser connects to as well.
+- [URIs](/en-US/docs/Web/URI)
+  - : URIs are used to locate resources on the web and can be used as the targets of HTTP requests.
 - [MIME types](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)
   - : Since HTTP/1.0, different types of content can be transmitted. This article explains how this is accomplished using the {{HTTPHeader("Content-Type")}} header and the MIME standard.
-- [Choosing between www and non-www URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs)
-  - : This article provides guidance on how to choose whether to use a www-prefixed domain or not, along with the consequences of that choice.
 - [Flow of an HTTP session](/en-US/docs/Web/HTTP/Session)
   - : This article describes a typical HTTP session; i.e. what happens when you follow a link or load an image into a web page.
 - [HTTP Messages](/en-US/docs/Web/HTTP/Messages)

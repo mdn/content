@@ -14,7 +14,8 @@ This event occurs based upon {{domxref("HTMLMediaElement")}} ({{HTMLElement("aud
 
 This event is not cancelable and does not bubble.
 
-> **Note:** The `ended` event doesn't fire if the [`loop`](/en-US/docs/Web/API/HTMLMediaElement/loop) property is `true` and [`playbackRate`](/en-US/docs/Web/API/HTMLMediaElement/playbackRate) is non-negative.
+> [!NOTE]
+> The `ended` event doesn't fire if the [`loop`](/en-US/docs/Web/API/HTMLMediaElement/loop) property is `true` and [`playbackRate`](/en-US/docs/Web/API/HTMLMediaElement/playbackRate) is non-negative.
 
 ## Syntax
 
@@ -72,7 +73,6 @@ video.onended = (event) => {
 - The HTMLMediaElement {{domxref("HTMLMediaElement.waiting_event", 'waiting')}} event
 - The HTMLMediaElement {{domxref("HTMLMediaElement.seeking_event", 'seeking')}} event
 - The HTMLMediaElement {{domxref("HTMLMediaElement.seeked_event", 'seeked')}} event
-- The HTMLMediaElement {{domxref("HTMLMediaElement.ended_event", 'ended')}} event
 - The HTMLMediaElement {{domxref("HTMLMediaElement.loadedmetadata_event", 'loadedmetadata')}} event
 - The HTMLMediaElement {{domxref("HTMLMediaElement.loadeddata_event", 'loadeddata')}} event
 - The HTMLMediaElement {{domxref("HTMLMediaElement.canplay_event", 'canplay')}} event
@@ -95,7 +95,7 @@ video.onended = (event) => {
 - {{HTMLElement("video")}}
 - [Media Capture and Streams](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 
-  - [Media Capture and Streams](/en-US/docs/Web/API/Media_Capture_and_Streams_API)[: ended event](/en-US/docs/Web/API/MediaStreamTrack/ended_event)
+  - [`MediaStreamTrack`: `ended` event](/en-US/docs/Web/API/MediaStreamTrack/ended_event)
 
 - [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
 

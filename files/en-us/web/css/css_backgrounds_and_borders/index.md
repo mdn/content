@@ -116,13 +116,13 @@ To see the code for this sample, [view the source on GitHub](https://github.com/
 - {{cssxref("border-start-start-radius")}} property
 - {{cssxref("border-start-end-radius")}} property
 - {{cssxref("border-end-start-radius")}} property
-- {{cssxref("border-end-end-radius ")}} property
+- {{cssxref("border-end-end-radius")}} property
 
 - {{cssxref("box-sizing")}} property
 - {{cssxref("box-decoration-break")}} property
 - {{cssxref("text-shadow")}} property
 
-- {{cssxref("url", "url()")}} CSS function
+- {{cssxref("url_value", "&lt;url&gt;")}} CSS type
 - [`<color>`](/en-US/docs/Web/CSS/color) data type
 - [`<image>`](/en-US/docs/Web/CSS/image) data type
 - [`<position>`](/en-US/docs/Web/CSS/position) data type

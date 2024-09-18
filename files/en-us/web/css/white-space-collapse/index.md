@@ -9,7 +9,8 @@ browser-compat: css.properties.white-space-collapse
 
 The **`white-space-collapse`** [CSS](/en-US/docs/Web/CSS) property controls how {{Glossary("whitespace", "white space")}} inside an element is collapsed.
 
-> **Note:** The `white-space-collapse` and {{CSSxRef("text-wrap")}} properties can be declared together using the {{CSSxRef("white-space")}} shorthand property.
+> [!NOTE]
+> The `white-space-collapse` and {{CSSxRef("text-wrap")}} properties can be declared together using the {{CSSxRef("white-space")}} shorthand property.
 
 ## Syntax
 
@@ -76,14 +77,17 @@ User agents handle white space collapsing as follows:
 
 <!-- prettier-ignore-start -->
 ```html
-<h2 class="collapse">Default behavior; all whitespace is 
-    collapsed          in the          heading     .</h2>
+<h2 class="collapse">Default behavior;
+  all   whitespace   is   collapsed
+  in    the          heading       .</h2>
 
-<h2 class="preserve">In this case all whitespace is 
-    preserved          in the          heading     .</h2>
+<h2 class="preserve">In this case
+  all   whitespace   is   preserved
+  in    the          heading       .</h2>
 
-<h2 class="preserve-breaks">In this case only the line break is 
-    preserved          in the          heading     .</h2>
+<h2 class="preserve-breaks">In this case only
+  the   line breaks  are  preserved
+  in    the          heading       .</h2>
 ```
 <!-- prettier-ignore-end -->
 

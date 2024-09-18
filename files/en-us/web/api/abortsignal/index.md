@@ -133,8 +133,6 @@ try {
     console.error(
       "Fetch aborted by user action (browser stop button, closing tab, etc.",
     );
-  } else if (err.name === "TypeError") {
-    console.error("AbortSignal.timeout() method is not supported");
   } else {
     // A network error, or some other problem.
     console.error(`Error: type: ${err.name}, message: ${err.message}`);
@@ -167,7 +165,8 @@ try {
 }
 ```
 
-> **Note:** Unlike when using {{domxref("AbortSignal/timeout_static", "AbortSignal.timeout()")}}, there is no way to tell whether the final abort was caused by a timeout.
+> [!NOTE]
+> Unlike when using {{domxref("AbortSignal/timeout_static", "AbortSignal.timeout()")}}, there is no way to tell whether the final abort was caused by a timeout.
 
 ### Implementing an abortable API
 

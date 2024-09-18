@@ -33,6 +33,7 @@ createImageBitmap(image, sx, sy, sw, sh, options)
     - {{domxref("ImageData")}}
     - {{domxref("ImageBitmap")}}
     - {{domxref("OffscreenCanvas")}}
+    - {{domxref("VideoFrame")}}
 - `sx`
   - : The x coordinate of the reference point of the rectangle from which the `ImageBitmap` will be extracted.
 - `sy`

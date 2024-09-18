@@ -1,5 +1,6 @@
 ---
 title: "HTML attribute: accept"
+short-title: accept
 slug: Web/HTML/Attributes/accept
 page-type: html-attribute
 browser-compat: html.elements.input.accept
@@ -103,7 +104,8 @@ This produces the following output:
 
 {{EmbedLiveSample('A_basic_example', 650, 60)}}
 
-> **Note:** You can find this example on GitHub too — see the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/simple-file.html), and also [see it running live](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html).
+> [!NOTE]
+> You can find this example on GitHub too — see the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/simple-file.html), and also [see it running live](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html).
 
 Regardless of the user's device or operating system, the file input provides a button that opens up a file picker dialog that allows the user to choose a file.
 

@@ -8,7 +8,8 @@ browser-compat: api.Document.writeln
 
 {{ ApiRef("DOM") }}
 
-> **Warning:** Use of the `document.writeln()` method is strongly discouraged.
+> [!WARNING]
+> Use of the `document.writeln()` method is strongly discouraged.
 >
 > As [the HTML spec itself warns](<https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#document.write()>):
 >
@@ -25,7 +26,8 @@ writeln(line)
 
 ### Parameters
 
-- `line` is string containing a line of text.
+- `line`
+  - : A string containing a line of text.
 
 ### Return value
 

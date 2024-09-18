@@ -9,7 +9,8 @@ browser-compat: webextensions.api.action
 
 Read and modify attributes of and listen to clicks on the browser toolbar button defined with the [`action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) manifest key.
 
-> **Note:** This API is available in Manifest V3 or higher. It replaces the Manifest V2 APIs {{WebExtAPIRef("browserAction")}} and, in Chrome and Safari, {{WebExtAPIRef("pageAction")}}.
+> [!NOTE]
+> This API is available in Manifest V3 or higher. It replaces the Manifest V2 APIs {{WebExtAPIRef("browserAction")}} and, in Chrome and Safari, {{WebExtAPIRef("pageAction")}}.
 
 A [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) is a button in the browser's toolbar.
 
@@ -77,7 +78,8 @@ With the `action` API, you can:
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/action/) API. This documentation is derived from [`action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/action.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/api/action) API. This documentation is derived from [`action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/action.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

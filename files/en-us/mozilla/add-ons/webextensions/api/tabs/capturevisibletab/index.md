@@ -9,7 +9,8 @@ browser-compat: webextensions.api.tabs.captureVisibleTab
 
 Creates a data URL encoding the image of an area of the active tab in the specified window. You must have the `<all_urls>` or `activeTab` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 
-> **Note:** In Firefox 125 and earlier, this method was only available with the `<all_urls>` permission.
+> [!NOTE]
+> In Firefox 125 and earlier, this method was only available with the `<all_urls>` permission.
 
 In addition to sites that extensions can normally access, this method allows extensions to capture sensitive sites that are otherwise restricted, including browser UI pages and other extensions' pages. These sensitive sites can only be captured with the `activeTab` permission. Chrome also permits file URLs to be captured when the extension has been granted file access.
 
@@ -60,7 +61,8 @@ browser.browserAction.onClicked.addListener(() => {
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-captureVisibleTab) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-captureVisibleTab) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

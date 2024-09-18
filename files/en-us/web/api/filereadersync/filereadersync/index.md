@@ -31,7 +31,8 @@ function readFile(blob) {
 }
 ```
 
-> **Note:** This snippet must be used inside a {{domxref("Worker")}}, as synchronous interfaces can't be used on the main thread.
+> [!NOTE]
+> This snippet must be used inside a {{domxref("Worker")}}, as synchronous interfaces can't be used on the main thread.
 
 ## Specifications
 

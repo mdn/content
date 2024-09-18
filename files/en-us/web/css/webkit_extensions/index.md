@@ -12,7 +12,8 @@ User agents based on WebKit or Blink, such as Safari and Chrome, support several
 
 ## -webkit-prefixed properties without standard equivalents
 
-> **Note:** Avoid using on websites. These properties will only work in WebKit- or Blink-based browsers except where specified.
+> [!NOTE]
+> Avoid using on websites. These properties will only work in WebKit- or Blink-based browsers except where specified.
 
 ### A-C
 
@@ -93,7 +94,7 @@ User agents based on WebKit or Blink, such as Safari and Chrome, support several
 
 ## -webkit-prefixed properties with standard equivalents
 
-Several old `-webkit-`prefixed properties have standard equivalents. Even if the name and syntax may be different, they shouldn't be used anymore at all.
+Several old `-webkit-` prefixed properties have standard equivalents. Even if the name and syntax may be different, they shouldn't be used anymore at all.
 
 For each of them, use the standard equivalent provided.
 
@@ -194,7 +195,8 @@ For each of them, use the standard equivalent provided.
 
 \* Now standard.
 
-> **Note:** If there is an invalid pseudo-class within in a chain or group of selectors, the whole selector list is invalid.
+> [!NOTE]
+> If there is an invalid pseudo-class within in a chain or group of selectors, the whole selector list is invalid.
 
 ## Pseudo-elements
 
@@ -218,7 +220,8 @@ For web-compatibility reasons, Blink, WebKit, and Gecko browsers treat all pseud
 
 \* Now standard.
 
-> **Note:** Generally, if there is an invalid pseudo-element or pseudo-class within in a chain or group of selectors, the whole selector list is invalid. If a pseudo-element (but not pseudo-class) has a -webkit- prefix, As of Firefox 63, Blink, WebKit and Gecko browsers assume it is valid, not invalidating the selector list.
+> [!NOTE]
+> Generally, if there is an invalid pseudo-element or pseudo-class within in a chain or group of selectors, the whole selector list is invalid. If a pseudo-element (but not pseudo-class) has a -webkit- prefix, As of Firefox 63, Blink, WebKit and Gecko browsers assume it is valid, not invalidating the selector list.
 
 ## Media features
 

@@ -52,9 +52,7 @@ rect2.bind("EnterFrame", function () {
 
 {{ EmbedLiveSample('Axis-Aligned_Bounding_Box', '700', '300') }}
 
-> [!NOTE]
->
-> [Another example without Canvas or external libraries](https://jsfiddle.net/jlr7245/217jrozd/3/).
+> **Note:** [Another example without Canvas or external libraries](https://jsfiddle.net/jlr7245/217jrozd/3/).
 
 ## Circle Collision
 
@@ -129,9 +127,7 @@ circle2.bind("EnterFrame", function () {
 
 {{ EmbedLiveSample('Circle_Collision', '700', '300') }}
 
-> [!NOTE]
->
-> [Here is another example without Canvas or external libraries.](https://jsfiddle.net/jlr7245/teb4znk0/20/)
+> **Note:** [Here is another example without Canvas or external libraries.](https://jsfiddle.net/jlr7245/teb4znk0/20/)
 
 ## Separating Axis Theorem
 
@@ -141,7 +137,7 @@ Implementing SAT is out of scope for this page so see the recommended tutorials 
 
 1. [Separating Axis Theorem (SAT) explanation](https://www.sevenson.com.au/programming/sat/)
 2. [Collision detection and response](https://www.metanetsoftware.com/technique/tutorialA.html)
-3. [Collision detection Using the Separating Axis Theorem](https://gamedevelopment.tutsplus.com/tutorials/collision-detection-using-the-separating-axis-theorem--gamedev-169)
+3. [Collision detection Using the Separating Axis Theorem](https://code.tutsplus.com/collision-detection-using-the-separating-axis-theorem--gamedev-169t)
 4. [SAT (Separating Axis Theorem)](https://dyn4j.org/2010/01/sat/)
 5. [Separating Axis Theorem](https://programmerart.weebly.com/separating-axis-theorem.html)
 

@@ -34,8 +34,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
     - `off`: The user must explicitly enter a value into this field for every use, or the document provides its own auto-completion method; the browser does not automatically complete the entry.
     - `on`: The browser can automatically complete the value based on values that the user has entered during previous uses.
+    - [`<token-list>`](/en-US/docs/Web/HTML/Attributes/autocomplete#token_list_tokens): An ordered set of space-separated autofill detail tokens, optionally preceded by a sectioning token, a billing or shipping grouping token, and/or a token identifying the type of recipient.
 
-    If the `autocomplete` attribute is not specified on a `<textarea>` element, then the browser uses the `autocomplete` attribute value of the `<textarea>` element's form owner. The form owner is either the {{HTMLElement("form")}} element that this `<textarea>` element is a descendant of or the form element whose `id` is specified by the `form` attribute of the input element. For more information, see the [`autocomplete`](/en-US/docs/Web/HTML/Element/form#autocomplete) attribute in {{HTMLElement("form")}}.
+    `<textarea>` elements that don't specify the `autocomplete` attribute inherit the `autocomplete` `on` or `off` status set on the `<textarea>`'s form owner. The form owner is either the {{HTMLElement("form")}} element that this `<textarea>` element is a descendant of or the form element whose `id` is specified by the `form` attribute of the input element. For more information, see the [`autocomplete`](/en-US/docs/Web/HTML/Element/form#autocomplete) attribute in {{HTMLElement("form")}}.
 
 - `autocorrect` {{non-standard_inline}}
 
@@ -67,7 +68,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
   - : A hint to the user of what can be entered in the control. Carriage returns or line-feeds within the placeholder text must be treated as line breaks when rendering the hint.
 
-    > **Note:** Placeholders should only be used to show an example of the type of data that should be entered into a form; they are _not_ a substitute for a proper {{HTMLElement("label")}} element tied to the input. See [`<input>` labels](/en-US/docs/Web/HTML/Element/input#labels) for a full explanation.
+    > [!NOTE]
+    > Placeholders should only be used to show an example of the type of data that should be entered into a form; they are _not_ a substitute for a proper {{HTMLElement("label")}} element tied to the input. See [`<input>` labels](/en-US/docs/Web/HTML/Element/input#labels) for a full explanation.
 
 - [`readonly`](/en-US/docs/Web/HTML/Attributes/readonly)
   - : This Boolean attribute indicates that the user cannot modify the value of the control. Unlike the `disabled` attribute, the `readonly` attribute does not prevent the user from clicking or selecting in the control. The value of a read-only control is still submitted with the form.
@@ -75,13 +77,13 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
   - : This attribute specifies that the user must fill in a value before submitting a form.
 - `rows`
   - : The number of visible text lines for the control. If it is specified, it must be a positive integer. If it is not specified, the default value is 2.
-- `spellcheck`
+- [`spellcheck`](/en-US/docs/Web/HTML/Global_attributes#spellcheck)
 
-  - : Specifies whether the `<textarea>` is subject to spell checking by the underlying browser/OS. The value can be:
+  - : Specifies whether the `<textarea>` is subject to spell-checking by the underlying browser/OS. The value can be:
 
     - `true`: Indicates that the element needs to have its spelling and grammar checked.
     - `default` : Indicates that the element is to act according to a default behavior, possibly based on the parent element's own `spellcheck` value.
-    - `false` : Indicates that the element should not be spell checked.
+    - `false` : Indicates that the element should not be spell-checked.
 
 - `wrap`
 
@@ -101,7 +103,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Global_attrib
 
 ### Baseline inconsistency
 
-The HTML specification doesn't define where the baseline of a `<textarea>` is, so different browsers set it to different positions. For Gecko, the `<textarea>` baseline is set on the baseline of the first line of the textarea, on another browser it may be set on the bottom of the `<textarea>` box. Don't use {{cssxref("vertical-align")}}`: baseline` on it; the behavior is unpredictable.
+The HTML specification doesn't define where the baseline of a `<textarea>` is, so different browsers set it to different positions. For Gecko, the `<textarea>` baseline is set on the baseline of the first line of the textarea, on another browser it may be set on the bottom of the `<textarea>` box. Don't use {{cssxref("vertical-align", "vertical-align: baseline")}} on it; the behavior is unpredictable.
 
 ### Controlling whether a textarea is resizable
 
@@ -194,7 +196,8 @@ textarea {
 
 {{EmbedLiveSample('Example using "placeholder"')}}
 
-> **Note:** Placeholders should only be used to show an example of the type of data that should be entered into a form; they are _not_ a substitute for a proper {{HTMLElement("label")}} element tied to the input. See [`<input>` labels](/en-US/docs/Web/HTML/Element/input#labels) for a full explanation.
+> [!NOTE]
+> Placeholders should only be used to show an example of the type of data that should be entered into a form; they are _not_ a substitute for a proper {{HTMLElement("label")}} element tied to the input. See [`<input>` labels](/en-US/docs/Web/HTML/Element/input#labels) for a full explanation.
 
 ### Disabled and readonly textareas
 

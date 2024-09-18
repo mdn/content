@@ -78,7 +78,8 @@ If the exact weight given is unavailable, then the following rule is used to det
 
 - If a weight greater than `500` is given, look for available weights greater than the target, in ascending order. If no match is found, look for available weights less than the target, in descending order.
 
-> **Note:** The fallback weight algorithm is only used for rendering. The computed value of the property is still the specified value.
+> [!NOTE]
+> The fallback weight algorithm is only used for rendering. The computed value of the property is still the specified value.
 
 ### Meaning of relative weights
 
@@ -145,20 +146,20 @@ Note that when using relative weights, only four font weights are considered —
 
 ### Common weight name mapping
 
-The numerical values `100` to `900` roughly correspond to the following common weight names (see the [OpenType specification](https://docs.microsoft.com/typography/opentype/spec/os2#usweightclass)):
+The numerical values `100` to `900` roughly correspond to the following common weight names (see the [OpenType specification](https://learn.microsoft.com/en-us/typography/opentype/spec/os2#usweightclass)):
 
-| Value | Common weight name                                                                                                          |
-| ----- | --------------------------------------------------------------------------------------------------------------------------- |
-| 100   | Thin (Hairline)                                                                                                             |
-| 200   | Extra Light (Ultra Light)                                                                                                   |
-| 300   | Light                                                                                                                       |
-| 400   | Normal (Regular)                                                                                                            |
-| 500   | Medium                                                                                                                      |
-| 600   | Semi Bold (Demi Bold)                                                                                                       |
-| 700   | Bold                                                                                                                        |
-| 800   | Extra Bold (Ultra Bold)                                                                                                     |
-| 900   | Black (Heavy)                                                                                                               |
-| 950   | [Extra Black (Ultra Black)](https://docs.microsoft.com/dotnet/api/system.windows.fontweights?view=netframework-4.8#remarks) |
+| Value | Common weight name                                                                                                                 |
+| ----- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| 100   | Thin (Hairline)                                                                                                                    |
+| 200   | Extra Light (Ultra Light)                                                                                                          |
+| 300   | Light                                                                                                                              |
+| 400   | Normal (Regular)                                                                                                                   |
+| 500   | Medium                                                                                                                             |
+| 600   | Semi Bold (Demi Bold)                                                                                                              |
+| 700   | Bold                                                                                                                               |
+| 800   | Extra Bold (Ultra Bold)                                                                                                            |
+| 900   | Black (Heavy)                                                                                                                      |
+| 950   | [Extra Black (Ultra Black)](https://learn.microsoft.com/en-us/dotnet/api/system.windows.fontweights?view=netframework-4.8#remarks) |
 
 ### Variable fonts
 

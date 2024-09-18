@@ -11,7 +11,8 @@ browser-compat: api.Notification.Notification
 The **`Notification()`** constructor creates a new
 {{domxref("Notification")}} object instance, which represents a user notification.
 
-> **Note:** Trying to create a notification inside the {{domxref("ServiceWorkerGlobalScope")}} using the `Notification()` constructor will throw a `TypeError`. Use {{domxref("ServiceWorkerRegistration.showNotification()")}} instead.
+> [!NOTE]
+> Trying to create a notification inside the {{domxref("ServiceWorkerGlobalScope")}} using the `Notification()` constructor will throw a `TypeError`. Use {{domxref("ServiceWorkerRegistration.showNotification()")}} instead.
 
 ## Syntax
 
@@ -88,7 +89,7 @@ new Notification(title, options)
     - `silent` {{optional_inline}}
       - : A boolean value specifying whether the
         notification is silent (no sounds or vibrations issued), regardless of the device
-        settings. The default is `null`. If `true`, then `vibrate` must not be present.
+        settings. The default, `null`, means to respect device defaults. If `true`, then `vibrate` must not be present.
 
 ### Return value
 

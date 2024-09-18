@@ -46,7 +46,8 @@ In most cases, `String.raw()` is used with template literals. The first syntax m
 
 `String.raw()` is the only built-in template literal tag. It has close semantics to an untagged literal since it concatenates all arguments and returns a string. You can even re-implement it with normal JavaScript code.
 
-> **Warning:** You should not use `String.raw` directly as an "identity" tag. See [Building an identity tag](#building_an_identity_tag) for how to implement this.
+> [!WARNING]
+> You should not use `String.raw` directly as an "identity" tag. See [Building an identity tag](#building_an_identity_tag) for how to implement this.
 
 If `String.raw()` is called with an object whose `raw` property doesn't have a `length` property or a non-positive `length`, it returns an empty string `""`. If `substitutions.length < strings.raw.length - 1` (i.e. there are not enough substitutions to fill the placeholders — which can't happen in a well-formed tagged template literal), the rest of the placeholders are filled with empty strings.
 
@@ -111,18 +112,17 @@ const reWildcard = makeURLRegExp(".*");
 
 Many tools give special treatment to literals tagged by a particular name.
 
-```js-nolint
+```js
 // Some formatters will format this literal's content as HTML
-const doc = html`<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <title>Hello</title>
-  </head>
-  <body>
-    <h1>Hello world!</h1>
-  </body>
-</html>
-`;
+const doc = html`<!doctype html>
+  <html lang="en-US">
+    <head>
+      <title>Hello</title>
+    </head>
+    <body>
+      <h1>Hello world!</h1>
+    </body>
+  </html>`;
 ```
 
 One might naïvely implement the `html` tag as:

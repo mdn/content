@@ -50,7 +50,7 @@ A `GPUCommandEncoder` object instance is created via the {{domxref("GPUDevice.cr
 
 - {{domxref("GPUCommandEncoder.resolveQuerySet", "resolveQuerySet()")}} {{Experimental_Inline}}
   - : Encodes a command that resolves a {{domxref("GPUQuerySet")}}, copying the results into a specified {{domxref("GPUBuffer")}}.
-- {{domxref("GPUCommandEncoder.writeTimestamp", "writeTimestamp()")}} {{deprecated_inline}} {{experimental_inline}}
+- {{domxref("GPUCommandEncoder.writeTimestamp", "writeTimestamp()")}} {{deprecated_inline}} {{experimental_inline}} {{non-standard_inline}}
   - : Encodes a command that writes a timestamp into a {{domxref("GPUQuerySet")}} once the previous commands recorded into the same queued {{domxref("GPUCommandBuffer")}} have been executed by the GPU.
 
 ## Examples
@@ -97,7 +97,8 @@ The commands encoded by the `GPUCommandEncoder` are recoded into a {{domxref("GP
 device.queue.submit([commandEncoder.finish()]);
 ```
 
-> **Note:** Study the [WebGPU samples](https://webgpu.github.io/webgpu-samples/) to find more command encoding examples.
+> [!NOTE]
+> Study the [WebGPU samples](https://webgpu.github.io/webgpu-samples/) to find more command encoding examples.
 
 ## Specifications
 

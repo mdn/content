@@ -3,12 +3,10 @@ title: "AudioEncoder: configure() method"
 short-title: configure()
 slug: Web/API/AudioEncoder/configure
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.AudioEncoder.configure
 ---
 
-{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_dedicated")}}
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`configure()`** method of the {{domxref("AudioEncoder")}} interface enqueues a control message to configure the audio encoder for encoding chunks.
 
@@ -42,7 +40,7 @@ configure(config)
 
           - : Allows an audio encoder to increase or lower its bitrate according to the content of the audio it is encoding, in order to preserve bandwidth/binary-size, while still maintaining a target quality. For example, an encoder might lower its bitrate when encoding silence, and revert to a full bitrate when encoding speech.
 
-          Specific codec encoder implementations may use slightly different terminology (for example, CBR vs VBR for Opus), but they should all map to the general concept of "constant" versus "variable" bitrate.
+        Specific codec encoder implementations may use slightly different terminology (for example, CBR vs VBR for Opus), but they should all map to the general concept of "constant" versus "variable" bitrate.
 
     - `opus` {{optional_inline}}
       - : Specifies codec configuration options specific to the Opus codec. Its value is an `OpusEncoderConfig` object, the possible properties of which are as follows:

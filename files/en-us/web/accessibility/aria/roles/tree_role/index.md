@@ -19,7 +19,8 @@ An example of a `tree` is a file system selection user interface: a tree view di
 
 ARIA tree views are navigated primarily with arrow keys on the keyboard instead of the <kbd>Tab</kbd>. This form of navigation is not common for most browser content, though normal and expected for native applications. For this reason, before creating a tree view, consider alternative options to address the functionality you need.
 
-> **Warning:** Tree views use navigation more similar to native applications than to web applications. For this reason, consider alternative options to address the functionality you need before creating a tree view.
+> [!WARNING]
+> Tree views use navigation more similar to native applications than to web applications. For this reason, consider alternative options to address the functionality you need before creating a tree view.
 
 ### Single and multiple select trees
 
@@ -92,7 +93,7 @@ For a vertically oriented `tree`, which is the default orientation:
 <ul>
 <li>When focus is on an open node, closes the node.
 <li>When focus is on a child node that is also either an end node or a closed node, moves focus to its parent node.
-<li>When focus is on a closed `tree`, does nothing.
+<li>When focus is on a closed tree, does nothing.
 </td>
 </tr>
 <tr>

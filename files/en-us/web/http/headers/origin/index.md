@@ -44,14 +44,14 @@ Origin: <scheme>://<hostname>:<port>
   - : The domain name or the IP address of the origin server.
 - `<port>` {{optional_inline}}
   - : Port number on which the server is listening.
-    If no port is given, the default port for the requested service is implied (e.g., "80" for an HTTP URL) .
+    If no port is given, the default port for the requested service is implied (e.g., "80" for an HTTP URL).
 
 ## Description
 
 The `Origin` header is similar to the {{HTTPHeader("Referer")}} header, but does not disclose the path, and may be `null`.
 It is used to provide the "security context" for the origin request, except in cases where the origin information would be sensitive or unnecessary.
 
-Broadly speaking, user agents add the {{httpheader("Origin")}} request header to:
+Broadly speaking, user agents add the `Origin` request header to:
 
 - {{Glossary("CORS", "cross origin")}} requests.
 - [same-origin](/en-US/docs/Web/Security/Same-origin_policy) requests except for {{HTTPMethod("GET")}} or {{HTTPMethod("HEAD")}} requests (i.e. they are added to same-origin {{HTTPMethod("POST")}}, {{HTTPMethod("OPTIONS")}}, {{HTTPMethod("PUT")}}, {{HTTPMethod("PATCH")}}, and {{HTTPMethod("DELETE")}} requests).
@@ -68,7 +68,8 @@ The `Origin` header value may be `null` in a number of cases, including (non-exh
 - Responses that are network errors.
 - [`Referrer-Policy`](/en-US/docs/Web/HTTP/Headers/Referrer-Policy) set to `no-referrer` for non-`cors` request modes (e.g. simple form posts).
 
-> **Note:** There is a more detailed listing of cases that may return `null` on Stack Overflow: [When do browsers send the Origin header? When do browsers set the origin to null?](https://stackoverflow.com/questions/42239643/when-do-browsers-send-the-origin-header-when-do-browsers-set-the-origin-to-null/42242802)
+> [!NOTE]
+> There is a more detailed listing of cases that may return `null` on Stack Overflow: [When do browsers send the Origin header? When do browsers set the origin to null?](https://stackoverflow.com/questions/42239643/when-do-browsers-send-the-origin-header-when-do-browsers-set-the-origin-to-null/42242802)
 
 ## Examples
 

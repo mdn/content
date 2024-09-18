@@ -11,9 +11,9 @@ browser-compat: svg.global_attributes.cursor
 
 The `cursor` attribute specifies the mouse cursor displayed when the mouse pointer is over an element.
 
-This attribute behaves exactly like the {{ cssxref("cursor","CSS cursor") }} property except that if the browser supports the {{ SVGElement("cursor") }} element, you should be able to use it with the [\<funciri>](/en-US/docs/Web/SVG/Content_type#funciri) notation.
+This attribute behaves exactly like the CSS {{cssxref("cursor")}} property except that if the browser supports the {{ SVGElement("cursor") }} element, you should be able to use it with the [\<funciri>](/en-US/docs/Web/SVG/Content_type#funciri) notation.
 
-As a presentation attribute, it also can be used as a property directly inside a CSS stylesheet, see {{ cssxref("cursor","CSS cursor") }} for further information.
+As a presentation attribute, it also can be used as a property directly inside a CSS stylesheet, see CSS {{cssxref("cursor")}} for further information.
 
 ## Usage context
 
@@ -54,10 +54,14 @@ The following elements can use the `cursor` attribute
 - [Container elements](/en-US/docs/Web/SVG/Element#container_elements)
 - [Graphics elements](/en-US/docs/Web/SVG/Element#graphics_elements)
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}
 
 ## See also
 
-- {{ cssxref("cursor","CSS cursor") }}
+- {{cssxref("cursor")}}

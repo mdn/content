@@ -194,7 +194,8 @@ h1, h2, .intro
 
 Try creating some CSS rules that use the selectors above. Add HTML to be styled by the selectors. If any of the syntax above is not familiar, try searching MDN.
 
-> **Note:** You will learn more about selectors in the next module: [CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors).
+> [!NOTE]
+> You will learn more about selectors in the next module: [CSS selectors](/en-US/docs/Learn/CSS/Building_blocks/Selectors).
 
 ### Specificity
 
@@ -267,9 +268,11 @@ Look up different values of properties listed below. Write CSS rules that apply 
 - {{cssxref("color")}}
 - {{cssxref("border")}}
 
-> **Warning:** If a property is unknown, or if a value is not valid for a given property, the declaration is processed as _invalid_. It is completely ignored by the browser's CSS engine.
+> [!WARNING]
+> If a property is unknown, or if a value is not valid for a given property, the declaration is processed as _invalid_. It is completely ignored by the browser's CSS engine.
 
-> **Warning:** In CSS (and other web standards), it has been agreed that US spelling is the standard where there is language variation or uncertainty. For example, `colour` should be spelled `color`, as `colour` will not work.
+> [!WARNING]
+> In CSS (and other web standards), it has been agreed that US spelling is the standard where there is language variation or uncertainty. For example, `colour` should be spelled `color`, as `colour` will not work.
 
 ### Functions
 
@@ -401,7 +404,8 @@ Later in the course, you will encounter many other examples of shorthand propert
 
 Try using the declarations (above) in your own CSS exercise to become more familiar with how it works. You can also experiment with different values.
 
-> **Warning:** One less obvious aspect of using CSS shorthand is how omitted values reset. A value not specified in CSS shorthand reverts to its initial value. This means an omission in CSS shorthand can **override previously set values**.
+> [!WARNING]
+> One less obvious aspect of using CSS shorthand is how omitted values reset. A value not specified in CSS shorthand reverts to its initial value. This means an omission in CSS shorthand can **override previously set values**.
 
 ## Comments
 
@@ -467,7 +471,7 @@ Try adding comments in your CSS.
 
 ## White space
 
-White space means actual spaces, tabs and new lines. Just as browsers ignore white space in HTML, browsers ignore white space inside CSS. The value of white space is how it can improve readability.
+White space means actual spaces, tabs and new lines. Just as browsers ignore extra white space in HTML, browsers ignore extra white space inside CSS. The benefit of white space is that it improves readability.
 
 In the example below, each declaration (and rule start/end) has its own line. This is arguably a good way to write CSS. It makes it easier to maintain and understand CSS.
 
@@ -508,22 +512,23 @@ div p + p {
 }
 ```
 
-The next example shows the equivalent CSS in a more compressed format. Although the two examples work the same, the one below is more difficult to read.
+The next example shows the equivalent CSS in a more compressed format, with all extra white space removed. Although the two examples work the same, the one below is more difficult to read.
 
 ```css-nolint
-body {font: 1em/150% Helvetica, Arial, sans-serif; padding: 1em; margin: 0 auto; max-width: 33em;}
-@media (min-width: 70em) { body { font-size: 130%;}}
+body{font:1em/150% Helvetica,Arial,sans-serif;padding:1em;margin:0 auto;max-width:33em;}
+@media(min-width:70em){body{font-size:130%;}}
 
-h1 {font-size: 1.5em;}
+h1{font-size:1.5em;}
 
-div p, #id:first-line {background-color: red; border-radius: 3px;}
-div p {margin: 0; padding: 1em;}
-div p + p {padding-top: 0;}
+div p,#id:first-line{background-color:red;border-radius:3px;}
+div p{margin:0;padding:1em;}
+div p+p{padding-top:0;}
 ```
 
 For your own projects, you will format your code according to personal preference. For team projects, you may find that a team or project has its own style guide.
 
-> **Warning:** Though white space separates values in CSS declarations, **property names never have white space**.
+> [!WARNING]
+> Though white space separates values in CSS declarations, **property names never have white space**.
 
 For example, these declarations are valid CSS:
 

@@ -107,7 +107,8 @@ Let's start by creating a writable store. Any component will be able to write to
    export const alert = writable("Welcome to the to-do list app!");
    ```
 
-> **Note:** Stores can be defined and used outside Svelte components, so you can organize them in any way you please.
+> [!NOTE]
+> Stores can be defined and used outside Svelte components, so you can organize them in any way you please.
 
 In the above code we import the `writable()` function from `svelte/store` and use it to create a new store called `alert` with an initial value of "Welcome to the to-do list app!". We then `export` the store.
 
@@ -330,7 +331,8 @@ As soon as we execute `$alert = …`, Svelte will run `alert.set()`. Our `Alert`
 
 We could do the same within any component or `.js` file.
 
-> **Note:** Outside Svelte components you cannot use the `$store` syntax. That's because the Svelte compiler won't touch anything outside Svelte components. In that case you'll have to rely on the `store.subscribe()` and `store.set()` methods.
+> [!NOTE]
+> Outside Svelte components you cannot use the `$store` syntax. That's because the Svelte compiler won't touch anything outside Svelte components. In that case you'll have to rely on the `store.subscribe()` and `store.set()` methods.
 
 ## Improving our Alert component
 
@@ -532,7 +534,8 @@ Svelte won't force you to organize your state management in a specific way; it j
 
 Our to-do list app is not particularly complex, so we won't move all our modification methods into a central place. We'll just leave them as they are, and instead concentrate on persisting our to-dos.
 
-> **Note:** If you are following this guide working from the Svelte REPL, you won't be able to complete this step. For security reasons the Svelte REPL works in a sandboxed environment which will not let you access web storage, and you will get a "The operation is insecure" error. In order to follow this section, you'll have to clone the repo and go to the `mdn-svelte-tutorial/06-stores` folder, or you can directly download the folder's content with `npx degit opensas/mdn-svelte-tutorial/06-stores`.
+> [!NOTE]
+> If you are following this guide working from the Svelte REPL, you won't be able to complete this step. For security reasons the Svelte REPL works in a sandboxed environment which will not let you access web storage, and you will get a "The operation is insecure" error. In order to follow this section, you'll have to clone the repo and go to the `mdn-svelte-tutorial/06-stores` folder, or you can directly download the folder's content with `npx degit opensas/mdn-svelte-tutorial/06-stores`.
 
 To implement a custom store that saves its content to web storage, we will need a writable store that does the following:
 
@@ -615,7 +618,8 @@ Moreover, because web storage only supports saving string values, we will have t
    <Todos bind:todos={$todos} />
    ```
 
-   > **Note:** This is the only change we have to make in order to use our custom store. `App.svelte` is completely transparent in terms of what kind of store we are using.
+   > [!NOTE]
+   > This is the only change we have to make in order to use our custom store. `App.svelte` is completely transparent in terms of what kind of store we are using.
 
 5. Go ahead and try your app again. Create a few to-dos and then close the browser. You may even stop the Svelte server and restart it. Upon revisiting the URL, your to-dos will still be there.
 6. You can also inspect it in the DevTools console. In the web console, enter the command `localStorage.getItem('mdn-svelte-todo')`. Make some changes to your app, like pressing the _Uncheck All_ button, and check the web storage content once more. You will get something like this:
@@ -654,11 +658,13 @@ Let's give our `Alert` component a fly `transition`. We'll open the `Alert.svelt
    >
    ```
 
-   > **Note:** The double curly braces are not special Svelte syntax. It's just a literal JavaScript object being passed as a parameter to the fly transition.
+   > [!NOTE]
+   > The double curly braces are not special Svelte syntax. It's just a literal JavaScript object being passed as a parameter to the fly transition.
 
 3. Try your app out again, and you'll see that the notifications now look a bit more appealing.
 
-> **Note:** Being a compiler allows Svelte to optimize the size of our bundle by excluding features that are not used. In this case, if we compile our app for production with `npm run build`, our `public/build/bundle.js` file will weight a little less than 22 KB. If we remove the `transitions:fly` directive Svelte is smart enough to realize the fly function is not being used and the `bundle.js` file size will drop down to just 18 KB.
+> [!NOTE]
+> Being a compiler allows Svelte to optimize the size of our bundle by excluding features that are not used. In this case, if we compile our app for production with `npm run build`, our `public/build/bundle.js` file will weight a little less than 22 KB. If we remove the `transitions:fly` directive Svelte is smart enough to realize the fly function is not being used and the `bundle.js` file size will drop down to just 18 KB.
 
 This is just the tip of the iceberg. Svelte has lots of options for dealing with animations and transitions. Svelte also supports specifying different transitions to apply when the element is added or removed from the DOM with the `in:fn`/`out:fn` directives, and it also allows you to define your [custom CSS](https://learn.svelte.dev/tutorial/custom-css-transitions) and [JavaScript](https://learn.svelte.dev/tutorial/custom-js-transitions) transitions. It also has several easing functions to specify the rate of change over time. Have a look at the [ease visualizer](https://svelte.dev/examples/easing) to explore the various ease functions available.
 

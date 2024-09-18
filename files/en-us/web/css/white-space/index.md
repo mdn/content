@@ -16,7 +16,8 @@ The property specifies two things:
 - Whether and how white space is [collapsed](#collapsing_of_white_space).
 - Whether and how lines wrap.
 
-> **Note:** To make words break _within themselves_, use {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}}, or {{CSSxRef("hyphens")}} instead.
+> [!NOTE]
+> To make words break _within themselves_, use {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}}, or {{CSSxRef("hyphens")}} instead.
 
 ## Syntax
 
@@ -46,9 +47,9 @@ white-space: unset;
 `white-space` property values can be specified as a single keyword chosen from the list of values below, or two values representing shorthand for the {{CSSxRef("white-space-collapse")}} and {{cssxref("text-wrap")}} properties.
 
 - `normal`
-  - : Sequences of white space are [collapsed](#collapsing_of_white_space). Newline characters in the source are handled the same as other white space. Lines are broken as necessary to fill line boxes.
+  - : Sequences of white space are [collapsed](#collapsing_of_white_space). Newline characters in the source are handled the same as other white spaces. Lines are broken as necessary to fill line boxes.
 - `nowrap`
-  - : [Collapses](#collapsing_of_white_space) white space as for `normal`, but suppresses line breaks (text wrapping) within the source.
+  - : [Collapses](#collapsing_of_white_space) white space as the `normal` value does, but suppresses line breaks (text wrapping) within the source.
 - `pre`
   - : Sequences of white space are preserved. Lines are only broken at newline characters in the source and at {{HTMLElement("br")}} elements.
 - `pre-wrap`
@@ -128,7 +129,10 @@ The following table summarizes the behavior of the various `white-space` keyword
   </tbody>
 </table>
 
-> **Note:** There is a distinction made between **spaces** and **other space separators**. These are defined as follows:
+A tab defaults to 8 spaces and can be configured using the [`tab-size`](/en-US/docs/Web/CSS/tab-size) property. In the case of `normal`, `nowrap`, and `pre-line` values, every tab is converted to a space (U+0020) character.
+
+> [!NOTE]
+> There is a distinction made between **spaces** and **other space separators**. These are defined as follows:
 >
 > - spaces
 >   - : Spaces (U+0020), tabs (U+0009), and segment breaks (such as newlines).
@@ -179,7 +183,6 @@ pre {
     <option>pre-wrap</option>
     <option>pre-line</option>
     <option>break-spaces</option>
-    <option>preserve nowrap</option>
   </select>
   }
 </div>
@@ -197,7 +200,7 @@ pre {
 
 ```css hidden
 .box {
-  width: 300px;
+  width: 350px;
   padding: 16px;
 }
 
@@ -209,6 +212,7 @@ pre {
 
 #css-code select {
   font-family: inherit;
+  width: 100px;
 }
 
 #results {
@@ -223,44 +227,11 @@ pre {
 const select = document.querySelector("#css-code select");
 const results = document.querySelector("#results p");
 select.addEventListener("change", (e) => {
-  results.setAttribute("style", `white-space: ${e.target.value}`);
+  results.style.setProperty("white-space", e.target.value);
 });
 ```
 
-{{EmbedLiveSample("In_action", "100%", 350)}}
-
-### Multiple lines in SVG text element
-
-The {{CSSXRef("white-space")}} CSS property can be used to create multiple lines in a {{SVGElement("text")}} element, which does not wrap by default.
-
-> **Note:** At time of writing this feature has [limited support](#browser_compatibility).
-
-#### HTML
-
-The text inside the `<text>` element needs to be split into multiple lines for the new-lines to be detected. After the first line the rest need to have their whitespace removed.
-
-```html-nolint
-<svg viewBox="0 0 320 150">
-  <text y="20" x="10">Here is an English paragraph
-that is broken into multiple lines
-in the source code so that it can
-be more easily read and edited
-in a text editor.
-  </text>
-</svg>
-```
-
-#### CSS
-
-```css
-text {
-  white-space: break-spaces;
-}
-```
-
-#### Result
-
-{{EmbedLiveSample("multiple_lines_in_svg_text_element", "100%", 150)}}
+{{EmbedLiveSample("In_action", "100%", 450)}}
 
 ### Controlling line wrapping in tables
 
@@ -303,6 +274,37 @@ td {
 
 {{EmbedLiveSample('Controlling line wrapping in tables', "100%", "100%")}}
 
+### Multiple lines in SVG text element
+
+The `white-space` CSS property can be used to create multiple lines in a {{SVGElement("text")}} element, which does not wrap by default.
+
+#### HTML
+
+The text inside the `<text>` element needs to be split into multiple lines for the new lines to be detected. After the first line the rest need to have their whitespace removed.
+
+```html-nolint
+<svg viewBox="0 0 320 150">
+  <text y="20" x="10">Here is an English paragraph
+that is broken into multiple lines
+in the source code so that it can
+be more easily read and edited
+in a text editor.
+  </text>
+</svg>
+```
+
+#### CSS
+
+```css
+text {
+  white-space: break-spaces;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("multiple_lines_in_svg_text_element", "100%", 350)}}
+
 ## Specifications
 
 {{Specifications}}
@@ -314,3 +316,4 @@ td {
 ## See also
 
 - Properties that define how words break _within themselves_: {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}}, {{CSSxRef("hyphens")}}
+- [`tab-size`](/en-US/docs/Web/CSS/tab-size)

@@ -2,12 +2,10 @@
 title: "::view-transition-old"
 slug: Web/CSS/::view-transition-old
 page-type: css-pseudo-element
-status:
-  - experimental
 browser-compat: css.selectors.view-transition-old
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`::view-transition-old`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents the "old" view state of a view transition — a static snapshot of the old view, before the transition.
 
@@ -47,7 +45,8 @@ The following default styling is included in the UA stylesheet:
 }
 ```
 
-> **Note:** Additional view transition styles are also setup to animate `::view-transition-old`. These are dynamically generated during the view transition; see the specification [setup transition pseudo-elements](https://drafts.csswg.org/css-view-transitions-1/#setup-transition-pseudo-elements) and [update pseudo-element styles](https://drafts.csswg.org/css-view-transitions-1/#update-pseudo-element-styles) sections for more details.
+> [!NOTE]
+> Additional view transition styles are also setup to animate `::view-transition-old`. These are dynamically generated during the view transition; see the specification [setup transition pseudo-elements](https://drafts.csswg.org/css-view-transitions-1/#setup-transition-pseudo-elements) and [update pseudo-element styles](https://drafts.csswg.org/css-view-transitions-1/#update-pseudo-element-styles) sections for more details.
 
 ## Syntax
 

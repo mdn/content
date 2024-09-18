@@ -10,7 +10,8 @@ browser-compat: api.PerformanceNavigationTiming.domInteractive
 
 The **`domInteractive`** read-only property returns a {{domxref("DOMHighResTimeStamp")}} representing the time immediately before the user agent sets the document's [`readyState`](/en-US/docs/Web/API/Document/readyState) to `"interactive"`.
 
-> **Note:** This property is **not** {{Glossary("Time to interactive")}} (TTI). This property refers to the time when DOM construction is finished and interaction to it from JavaScript is possible. See also the `interactive` state of {{domxref("Document.readyState")}} which corresponds to this property.
+> [!NOTE]
+> This property is **not** {{Glossary("Time to interactive")}} (TTI). This property refers to the time when DOM construction is finished and interaction to it from JavaScript is possible. See also the `interactive` state of {{domxref("Document.readyState")}} which corresponds to this property.
 
 Measuring DOM processing time may not be consequential unless your site has a very large HTML source to a construct a Document Object Model from.
 

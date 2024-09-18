@@ -13,7 +13,7 @@ The WebExtension `clipboard` API exists primarily because the standard Clipboard
 
 Reading from the clipboard is not supported by this API, because the clipboard can already be read using the standard web platform APIs. See [Interacting with the clipboard](/en-US/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard#reading_from_the_clipboard).
 
-This API is based on Chrome's [`clipboard`](https://developer.chrome.com/docs/extensions/reference/clipboard/) API, but that API is only available for Chrome apps, not extensions.
+This API is based on Chrome's [`clipboard`](https://developer.chrome.com/docs/apps/reference/clipboard) API, but that API is only available for Chrome apps, not extensions.
 
 To use this API you need the `"clipboardWrite"` extension [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
 
@@ -28,6 +28,5 @@ To use this API you need the `"clipboardWrite"` extension [permission](/en-US/do
 
 {{Compat}}
 
-> **Note:**
->
-> This API is based on Chromium's [`chrome.clipboard`](https://developer.chrome.com/docs/extensions/reference/clipboard/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.clipboard`](https://developer.chrome.com/docs/apps/reference/clipboard) API.

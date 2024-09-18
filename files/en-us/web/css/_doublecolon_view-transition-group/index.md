@@ -2,12 +2,10 @@
 title: "::view-transition-group"
 slug: Web/CSS/::view-transition-group
 page-type: css-pseudo-element
-status:
-  - experimental
 browser-compat: css.selectors.view-transition-group
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
 The **`::view-transition-group`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) represents a single view transition snapshot group.
 
@@ -30,7 +28,8 @@ By default, selected elements initially mirror the size and position of the {{cs
 
 If there's both an "old" and "new" view state, styles in the view transition style sheet animate this pseudo-element's {{cssxref("width")}} and {{cssxref("height")}} from the size of the "old" view state's border box to that of the "new" view state's border box.
 
-> **Note:** View transition styles are dynamically generated during the view transition; see the specification [setup transition pseudo-elements](https://drafts.csswg.org/css-view-transitions-1/#setup-transition-pseudo-elements) and [update pseudo-element styles](https://drafts.csswg.org/css-view-transitions-1/#update-pseudo-element-styles) sections for more details.
+> [!NOTE]
+> View transition styles are dynamically generated during the view transition; see the specification [setup transition pseudo-elements](https://drafts.csswg.org/css-view-transitions-1/#setup-transition-pseudo-elements) and [update pseudo-element styles](https://drafts.csswg.org/css-view-transitions-1/#update-pseudo-element-styles) sections for more details.
 
 In addition, the element's transform is animated from the "old" view state's screen space transform to the new view state's screen space transform. This style is generated dynamically since the values of animated properties are determined at the time that the transition begins.
 
@@ -54,7 +53,7 @@ In addition, the element's transform is animated from the "old" view state's scr
 ## Examples
 
 ```css
-view-transition-group(embed-container) {
+::view-transition-group(embed-container) {
   animation-duration: 0.3s;
   animation-timing-function: ease;
   z-index: 1;

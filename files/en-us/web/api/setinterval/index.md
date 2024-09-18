@@ -35,7 +35,7 @@ setInterval(func, delay, arg1, arg2, /* …, */ argN)
 - `delay` {{optional_inline}}
   - : The time, in milliseconds (thousandths of a second), the timer should delay in between executions of the specified function or code. Defaults to 0 if not specified.
     See [Delay restrictions](#delay_restrictions) below for details on the permitted range of `delay` values.
-- `arg1`, …,`argN` {{optional_inline}}
+- `arg1`, …, `argN` {{optional_inline}}
   - : Additional arguments which are passed through to the function specified by _func_ once the timer expires.
 
 ### Return value
@@ -45,7 +45,8 @@ The returned `intervalID` is a numeric, non-zero value which identifies the time
 It may be helpful to be aware that `setInterval()` and {{domxref("setTimeout()")}} share the same pool of IDs, and that `clearInterval()` and {{domxref("clearTimeout", "clearTimeout()")}} can technically be used interchangeably.
 For clarity, however, you should try to always match them to avoid confusion when maintaining your code.
 
-> **Note:** The `delay` argument is converted to a signed 32-bit integer.
+> [!NOTE]
+> The `delay` argument is converted to a signed 32-bit integer.
 > This effectively limits `delay` to 2147483647 ms, roughly 24.8 days, since it's specified as a signed integer in the IDL.
 
 ## Examples

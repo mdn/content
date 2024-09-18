@@ -299,7 +299,8 @@ th {
 
 {{EmbedLiveSample("Result")}}
 
-> **Note:** You can also find this on GitHub as [simple-table.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/simple-table.html) ([see it live also](https://mdn.github.io/learning-area/html/tables/basic/simple-table.html)).
+> [!NOTE]
+> You can also find this on GitHub as [simple-table.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/simple-table.html) ([see it live also](https://mdn.github.io/learning-area/html/tables/basic/simple-table.html)).
 
 ## Adding headers with \<th> elements
 
@@ -370,13 +371,15 @@ Let's have a go at improving this table.
 2. To recognize the table headers as headers, both visually and semantically, you can use the **[`<th>`](/en-US/docs/Web/HTML/Element/th)** element ('th' stands for 'table header'). This works in exactly the same way as a `<td>`, except that it denotes a header, not a normal cell. Go into your HTML, and change all the `<td>` elements surrounding the table headers into `<th>` elements.
 3. Save your HTML and load it in a browser, and you should see that the headers now look like headers.
 
-> **Note:** You can find our finished example at [dogs-table-fixed.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/dogs-table-fixed.html) on GitHub ([see it live also](https://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html)).
+> [!NOTE]
+> You can find our finished example at [dogs-table-fixed.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/dogs-table-fixed.html) on GitHub ([see it live also](https://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html)).
 
 ### Why are headers useful?
 
 We have already partially answered this question — it is easier to find the data you are looking for when the headers clearly stand out, and the design just generally looks better.
 
-> **Note:** Table headings come with some default styling — they are bold and centered even if you don't add your own styling to the table, to help them stand out.
+> [!NOTE]
+> Table headings come with some default styling — they are bold and centered even if you don't add your own styling to the table, to help them stand out.
 
 Tables headers also have an added benefit — along with the `scope` attribute (which we'll learn about in the next article), they allow you to make tables more accessible by associating each header with all the data in the same row or column. Screen readers are then able to read out a whole row or column of data at once, which is pretty useful.
 
@@ -438,7 +441,8 @@ Let's use `colspan` and `rowspan` to improve this table.
 3. Finally, use `rowspan` to make "Horse" and "Chicken" span across two rows.
 4. Save and open your code in a browser to see the improvement.
 
-> **Note:** You can find our finished example at [animals-table-fixed.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/animals-table-fixed.html) on GitHub ([see it live also](https://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html)).
+> [!NOTE]
+> You can find our finished example at [animals-table-fixed.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/animals-table-fixed.html) on GitHub ([see it live also](https://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html)).
 
 ## Providing common styling to columns
 
@@ -446,7 +450,8 @@ Let's use `colspan` and `rowspan` to improve this table.
 
 There is one last feature we'll tell you about in this article before we move on. HTML has a method of defining styling information for an entire column of data all in one place — the **[`<col>`](/en-US/docs/Web/HTML/Element/col)** and **[`<colgroup>`](/en-US/docs/Web/HTML/Element/colgroup)** elements. These exist because it can be a bit annoying and inefficient having to specify styling on columns — you generally have to specify your styling information on _every_ `<td>` or `<th>` in the column, or use a complex selector such as {{cssxref(":nth-child")}}.
 
-> **Note:** Styling columns like this is [limited to a few properties](https://www.w3.org/TR/CSS22/tables.html#columns): [`border`](/en-US/docs/Web/CSS/border), [`background`](/en-US/docs/Web/CSS/background), [`width`](/en-US/docs/Web/CSS/width), and [`visibility`](/en-US/docs/Web/CSS/visibility). To set other properties you'll have to either style every `<td>` or `<th>` in the column, or use a complex selector such as {{cssxref(":nth-child")}}.
+> [!NOTE]
+> Styling columns like this is [limited to a few properties](https://www.w3.org/TR/CSS22/tables.html#columns): [`border`](/en-US/docs/Web/CSS/border), [`background`](/en-US/docs/Web/CSS/background), [`width`](/en-US/docs/Web/CSS/width), and [`visibility`](/en-US/docs/Web/CSS/visibility). To set other properties you'll have to either style every `<td>` or `<th>` in the column, or use a complex selector such as {{cssxref(":nth-child")}}.
 
 Take the following simple example:
 
@@ -521,7 +526,8 @@ If we wanted to apply the styling information to both columns, we could just inc
 
 Just like `colspan` and `rowspan`, `span` takes a unitless number value that specifies the number of columns you want the styling to apply to.
 
-> **Note:** When the table, a column, and table cells in that column are all styled separately then styles applied to the cells are painted on top of column styles which are painted on top of the table. This is because the table layer is rendered first, then the columns' layer is rendered, with the [cells' layer rendered on top of all the other table layers](/en-US/docs/Web/HTML/Element/table#table_layers_and_transparency).
+> [!NOTE]
+> When the table, a column, and table cells in that column are all styled separately then styles applied to the cells are painted on top of column styles which are painted on top of the table. This is because the table layer is rendered first, then the columns' layer is rendered, with the [cells' layer rendered on top of all the other table layers](/en-US/docs/Web/HTML/Element/table#table_layers_and_transparency).
 
 ### Active learning: colgroup and col
 
@@ -537,10 +543,10 @@ Recreate the table by following the steps below.
 2. Add a `<colgroup>` element at the top of the table, just underneath the `<table>` tag, in which you can add your `<col>` elements (see the remaining steps below).
 3. The first two columns need to be left unstyled.
 4. Add a background color to the third column. The value for your `style` attribute is `background-color:#97DB9A;`
-5. Set a separate width on the fourth column. The value for your `style` attribute is `width: 42px;`
+5. Set a separate width on the fourth column. The value for your `style` attribute is `width: 100px;`
 6. Add a background color to the fifth column. The value for your `style` attribute is `background-color: #97DB9A;`
 7. Add a different background color plus a border to the sixth column, to signify that this is a special day and she's teaching a new class. The values for your `style` attribute are `background-color:#DCC48E; border:4px solid #C1437A;`
-8. The last two days are free days, so just set them to no background color but a set width; the value for the `style` attribute is `width: 42px;`
+8. The last two days are free days, so just set them to no background color but a set width; the value for the `style` attribute is `width: 100px;`
 
 See how you get on with the example. If you get stuck, or want to check your work, you can find our version on GitHub as [timetable-fixed.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/timetable-fixed.html) ([see it live also](https://mdn.github.io/learning-area/html/tables/basic/timetable-fixed.html)).
 

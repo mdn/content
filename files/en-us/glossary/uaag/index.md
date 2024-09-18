@@ -16,4 +16,3 @@ _User Agent {{glossary("Accessibility")}} Guidelines_ (**UAAG**) is a recommenda
   - {{Glossary("Accessibility")}}
   - {{Glossary("WAI")}}
   - {{Glossary("WCAG")}}
-  - {{Glossary("UAAG")}}

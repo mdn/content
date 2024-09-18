@@ -23,6 +23,7 @@ JavaScript allows trailing commas wherever a comma-separated list of values is a
 - [Function calls](#function_calls)
 - [Named imports](#named_imports)
 - [Named exports](#named_exports)
+- [Dynamic import](#trailing_commas_in_dynamic_import)
 - [Array and object destructuring](#trailing_commas_in_destructuring)
 
 In all these cases, the trailing comma is entirely optional and doesn't change the program's semantics in any way.
@@ -206,9 +207,22 @@ export { A, B, C, };
 export { A as B, C as D, E as F, };
 ```
 
+### Trailing commas in dynamic import
+
+Trailing commas are only allowed in [dynamic imports](/en-US/docs/Web/JavaScript/Reference/Operators/import) if the runtime also implements the second `options` parameter.
+
+```js-nolint
+import("D",);
+import(
+  "D",
+  { with: { type: "json" } },
+);
+```
+
 ### Quantifier prefix
 
-> **Note:** The trailing comma in a [quantifier](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers) actually changes its semantics from matching "exactly `n`" to matching "at least `n`".
+> [!NOTE]
+> The trailing comma in a [quantifier](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers) actually changes its semantics from matching "exactly `n`" to matching "at least `n`".
 
 ```js
 /x{2}/; // Exactly 2 occurrences of "x"; equivalent to /xx/

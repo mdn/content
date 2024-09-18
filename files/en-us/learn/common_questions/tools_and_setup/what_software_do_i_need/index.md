@@ -81,7 +81,7 @@ All desktop operating systems come with a basic text editor. These editors are a
         <ul>
           <li><a href="https://notepad-plus-plus.org/">Notepad++</a></li>
           <li>
-            <a href="https://www.visualstudio.com/">Visual Studio Code</a>
+            <a href="https://visualstudio.microsoft.com/">Visual Studio Code</a>
           </li>
           <li><a href="https://www.jetbrains.com/webstorm/">Web Storm</a></li>
           <li><a href="https://brackets.io/">Brackets</a></li>
@@ -109,7 +109,7 @@ All desktop operating systems come with a basic text editor. These editors are a
             >
           </li>
           <li>
-            <a href="https://www.visualstudio.com/">Visual Studio Code</a>
+            <a href="https://visualstudio.microsoft.com/">Visual Studio Code</a>
           </li>
           <li><a href="https://brackets.io/">Brackets</a></li>
           <li><a href="https://shiftedit.net/">ShiftEdit</a></li>
@@ -152,7 +152,7 @@ All desktop operating systems come with a basic text editor. These editors are a
           <li><a href="https://www.gnu.org/software/emacs/">Emacs</a></li>
           <li><a href="https://www.vim.org/" rel="external">Vim</a></li>
           <li>
-            <a href="https://www.visualstudio.com/">Visual Studio Code</a>
+            <a href="https://visualstudio.microsoft.com/">Visual Studio Code</a>
           </li>
           <li><a href="https://brackets.io/">Brackets</a></li>
           <li><a href="https://shiftedit.net/">ShiftEdit</a></li>
@@ -184,7 +184,8 @@ Here is a screenshot of an online text editor:
 
 When your website is ready for public viewing, you'll have to upload your webpages to your web server. You can buy space on a server from various providers (see [How much does it cost to do something on the web?](/en-US/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)). Once you settle on which provider to use, the provider will email you the access information, usually in the form of an SFTP URL, username, password, and other information needed to connect to their server. Bear in mind that (S)FTP is now somewhat old-fashioned, and other uploading systems are starting to become popular, such as [RSync](https://en.wikipedia.org/wiki/Rsync) and [Git/GitHub](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site).
 
-> **Note:** FTP is inherently insecure. You should make sure your hosting provider allows use of a secure connection, e.g. SFTP or RSync over SSH.
+> [!NOTE]
+> FTP is inherently insecure. You should make sure your hosting provider allows use of a secure connection, e.g. SFTP or RSync over SSH.
 
 Uploading files to a web server is a very important step while creating a website, so we cover it in detail in [a separate article](/en-US/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server). For now, here's a short list of free basic (S)FTP clients:
 

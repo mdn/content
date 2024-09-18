@@ -9,7 +9,8 @@ browser-compat: webextensions.api.tabs.onHighlightChanged
 
 {{AddonSidebar}}
 
-> **Warning:** This event is deprecated. Use {{WebExtAPIRef("tabs.onHighlighted")}} instead.
+> [!WARNING]
+> This event is deprecated. Use {{WebExtAPIRef("tabs.onHighlighted")}} instead.
 
 Fired when the highlighted or selected tabs in a window changes.
 
@@ -54,7 +55,8 @@ Events have three functions:
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#event-onHighlightChanged) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#event-onHighlightChanged) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

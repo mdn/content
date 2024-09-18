@@ -12,7 +12,8 @@ browser-compat: api.DirectoryEntrySync
 
 The `DirectoryEntrySync` interface represents a directory in a file system. It includes methods for creating, reading, looking up, and recursively removing files in a directory.
 
-> **Warning:** This interface is deprecated and is no more on the standard track.
+> [!WARNING]
+> This interface is deprecated and is no more on the standard track.
 > _Do not use it anymore._ Use the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API) instead.
 
 ## Basic concepts
@@ -54,7 +55,7 @@ createReader()
 
 ##### Parameters
 
-None
+None.
 
 ##### Return value
 
@@ -246,7 +247,7 @@ removeRecursively()
 
 ##### Parameters
 
-None
+None.
 
 ##### Return value
 

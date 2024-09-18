@@ -17,7 +17,8 @@ Values of this type are objects. They contain the following properties:
 
   - : `string`. This property only applies to cookies and indexedDB items. The removal is limited to items belonging to a specific [cookie store](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore) as specified by the ID. See [Work with contextual identities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities) for more information.
 
-    > **Note:** On Firefox Nightly removal of localStorage items by `cookieStoreId` is also supported.
+    > [!NOTE]
+    > On Firefox Nightly removal of localStorage items by `cookieStoreId` is also supported.
 
 - `hostnames` {{optional_inline}}
 
@@ -45,7 +46,8 @@ Values of this type are objects. They contain the following properties:
 
 {{Compat}}
 
-> **Note:** This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/browsingData/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

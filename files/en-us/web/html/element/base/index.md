@@ -15,13 +15,14 @@ A document's used base URL can be accessed by scripts with {{domxref('Node.baseU
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-> **Warning:** A `<base>` element must have an `href` attribute, a `target` attribute, or both.
+> [!WARNING]
+> A `<base>` element must have an `href` attribute, a `target` attribute, or both.
 > If at least one of these attributes are specified, the `<base>` element **must** come before other elements with attribute values that are URLs, such as a {{HTMLElement("link")}}'s `href` attribute.
 
 - `href`
   - : The base URL to be used throughout the document for relative URLs.
     Absolute and relative URLs are allowed.
-    [`data:`](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) and `javascript:` URLs are not allowed.
+    [`data:`](/en-US/docs/Web/URI/Schemes/data) and [`javascript:`](/en-US/docs/Web/URI/Schemes/javascript) URLs are not allowed.
 - `target`
 
   - : A **keyword** or **author-defined name** of the default {{Glossary("browsing context")}} to show the results of navigation from {{HTMLElement("a")}}, {{HTMLElement("area")}}, or {{HTMLElement("form")}} elements without explicit `target` attributes. The following keywords have special meanings:
@@ -85,7 +86,7 @@ This is to prevent dangling markup injection attacks, a script-less attack in wh
     <tr>
       <th scope="row">Permitted parents</th>
       <td>
-        A {{HTMLElement("head")}} that doesn't contain another {{HTMLElement("base")}} element.
+        A {{HTMLElement("head")}} that doesn't contain another <code>&lt;base&gt;</code> element.
       </td>
     </tr>
     <tr>

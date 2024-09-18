@@ -11,7 +11,8 @@ The **`marker-end`** attribute defines the arrowhead or polymarker that will be 
 
 For all shape elements, except {{SVGElement("polyline")}} and {{SVGElement("path")}}, the last vertex is the same as the first vertex. In this case, if the value of {{SVGAttr("marker-start")}} and `marker-end` are both not `none`, then two markers will be rendered on that final vertex. For `<path>` elements, for each closed subpath, the last vertex is the same as the first vertex. `marker-end` is only rendered on the final vertex of the [path data](/en-US/docs/Web/SVG/Attribute/d#path_commands).
 
-> **Note:** As a presentation attribute, `marker-end` can be used as a CSS property.
+> [!NOTE]
+> As a presentation attribute, `marker-end` can be used as a CSS property. See {{cssxref('marker-end')}} for more.
 
 You can use this attribute with the following SVG elements:
 
@@ -95,3 +96,4 @@ svg {
 - {{SVGElement("marker")}}
 - {{SVGAttr("marker-start")}}
 - {{SVGAttr("marker-mid")}}
+- CSS {{cssxref('marker-end')}} property

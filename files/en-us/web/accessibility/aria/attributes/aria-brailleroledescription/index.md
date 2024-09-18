@@ -42,9 +42,11 @@ A few rules to remember:
 - Avoid using Unicode Braille Patterns. If they must be used, ensure the `aria-brailleroledescription` value contains content other than unicode braille patterns, whitespace, and braille battern dots-0.
 - Ensure the value is always localized to the document's language.
 
-> **Warning:** If the content is only in unicode braille patterns, the value will not be translated according to the user's preferred translation table.
+> [!WARNING]
+> If the content is only in unicode braille patterns, the value will not be translated according to the user's preferred translation table.
 
-> **Note:** Do NOT use `aria-brailleroledescription` to replicate `aria-roledescription`. Only include this attribute when `aria-roledescription` does not provide an adequate braille representation.
+> [!NOTE]
+> Do NOT use `aria-brailleroledescription` to replicate `aria-roledescription`. Only include this attribute when `aria-roledescription` does not provide an adequate braille representation.
 
 The `aria-brailleroledescription` value will not be exposed to the braille user if:
 
@@ -52,7 +54,8 @@ The `aria-brailleroledescription` value will not be exposed to the braille user 
 - The element to which the attribute is applied has an explicit or implicit WAI-ARIA role where `aria-brailleroledescription` is prohibited, including the `generic` role.
 - The element to which the attribute is applied does not have a valid `aria-roledescription`.
 
-> **Note:** Test your sites and applications with daily users of assistive technologies, including braille readers, to ensure your content makes sense in braille.
+> [!NOTE]
+> Test your sites and applications with daily users of assistive technologies, including braille readers, to ensure your content makes sense in braille.
 
 ## Values
 

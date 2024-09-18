@@ -18,7 +18,8 @@ Therefore, to add specific styles to an element without altering other style val
 
 A style declaration is reset by setting it to `null` or an empty string, e.g., `elt.style.color = null`.
 
-> **Note:** CSS property names are converted to JavaScript identifier with these rules:
+> [!NOTE]
+> CSS property names are converted to JavaScript identifier with these rules:
 >
 > - If the property is made of one word, it remains as it is: `height` stays as is (in lowercase). As `float` is a reserved keyword in JavaScript, this property name was historically converted to `cssFloat`. All modern browsers now support the direct use of `float` in JavaScript to access the `float` CSS property, but `cssFloat` is used in older browsers and is still supported as an alias in modern browsers.
 > - If the property is made of several words, separated by dashes, the dashes are removed and it is converted to {{Glossary("camel_case", "camel case")}}: `background-attachment` becomes `backgroundAttachment`.
@@ -85,3 +86,4 @@ Note `font-weight` is not listed as a value for `elementStyle` as it is not defi
 - {{domxref("SVGElement.style")}}
 - {{domxref("MathMLElement.style")}}
 - {{domxref("HTMLElement.attributeStyleMap")}}
+- HTML [`style`](/en-US/docs/Web/HTML/Global_attributes/style) attribute

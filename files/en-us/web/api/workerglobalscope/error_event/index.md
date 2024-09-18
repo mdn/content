@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.WorkerGlobalScope.error_event
 ---
 
-{{APIRef("Web Workers API")}}
+{{APIRef("Web Workers API")}}{{AvailableInWorkers("worker")}}
 
 The **`error`** event of the {{domxref("WorkerGlobalScope")}} interface fires when an error occurs in the worker.
 
@@ -19,6 +19,11 @@ addEventListener("error", (event) => {});
 
 onerror = (message, filename, lineno, colno, error) => {};
 ```
+
+> [!NOTE]
+> For historical reasons, `onerror` on {{domxref("Window")}} and `WorkerGlobalScope` objects is the only event handler property that receives more than one argument.
+>
+> For more details about this, see the page for the {{domxref("Window.error_event", "error")}} event on `Window` objects.
 
 ## Event type
 

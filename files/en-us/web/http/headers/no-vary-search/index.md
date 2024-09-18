@@ -59,14 +59,14 @@ No-Vary-Search: key-order
 
 When this header is added to the associated responses, the following URLs would be treated as equivalent when searching the cache:
 
-```text
+```plain
 https://search.example.com?a=1&b=2&c=3
 https://search.example.com?b=2&a=1&c=3
 ```
 
 The presence of different URL parameters, however, will cause these URLs to be cached separately. For example:
 
-```text
+```plain
 https://search.example.com?a=1&b=2&c=3
 https://search.example.com?b=2&a=1&c=3&d=4
 ```
@@ -86,7 +86,8 @@ If your application behaves like the second example described above, you could c
 No-Vary-Search: params=("id")
 ```
 
-> **Note:** If a parameter is excluded from the cache key using `params`, if it is included in the URL it will be ignored for the purposes of cache matching, regardless of where it appears in the parameter list.
+> [!NOTE]
+> If a parameter is excluded from the cache key using `params`, if it is included in the URL it will be ignored for the purposes of cache matching, regardless of where it appears in the parameter list.
 
 ### Allowing responses from URLs with multiple different params to match the same cache entry
 

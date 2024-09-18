@@ -13,7 +13,8 @@ browser-compat: api.Navigator.appVersion
 Returns either "`4.0`" or a string representing version information about
 the browser.
 
-> **Note:** Do not rely on this property to return the correct browser version.
+> [!NOTE]
+> Do not rely on this property to return the correct browser version.
 
 ## Value
 

@@ -35,7 +35,7 @@ jobs:
         run: node scripts/update-interface-data.js ../webref/
 
       - name: Create pull request
-        uses: peter-evans/create-pull-request@v6
+        uses: peter-evans/create-pull-request@v7
         with:
           path: mdn-content
           token: ${{ secrets.AUTOMERGE_TOKEN }}

@@ -11,8 +11,6 @@ The **`accesskey`** [global attribute](/en-US/docs/Web/HTML/Global_attributes) p
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-accesskey.html","tabbed-shorter")}}
 
-> **Note:** In the WHATWG spec, it says you can specify multiple space-separated characters, and the browser will use the first one it supports. However, this does not work in most browsers. IE/Edge uses the first one it supports without problems, provided there are no conflicts with other commands.
-
 The way to activate the accesskey depends on the browser and its platform:
 
 <table class="standard-table">
@@ -27,29 +25,22 @@ The way to activate the accesskey depends on the browser and its platform:
       <th>Firefox</th>
       <td colspan="2"><kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd><em>key</em></kbd></td>
       <td>
-        <ul>
-          <li>Firefox 57+: <kbd>Control</kbd> + <kbd>Option</kbd> +
+        <kbd>Control</kbd> + <kbd>Option</kbd> +
         <kbd><em>key</em></kbd> or <kbd>Control</kbd> + <kbd>Alt</kbd> +
-        <kbd><em>key</em></kbd></li>
-          <li>Firefox 14-56: <kbd>Control</kbd> + <kbd>Alt</kbd> +
-        <kbd><em>key</em></kbd></li>
-          <li>Firefox 13 or older: <kbd>Control</kbd> +
-        <kbd><em>key</em></kbd></li>
-        </ul>
+        <kbd><em>key</em></kbd>
       </td>
     </tr>
     <tr>
-      <th>Edge</th>
+      <th>MS Edge</th>
       <td rowspan="2"><kbd>Alt</kbd> + <kbd><em>key</em></kbd></td>
       <td rowspan="2">
         <kbd>Control</kbd> + <kbd>Option</kbd> + <kbd><em>key</em></kbd><br>or <kbd>Control</kbd> + <kbd>Option</kbd> + <kbd>Shift</kbd> +
         <kbd><em>key</em></kbd>
       </td>
-      <td>n/a</td>
+      <td rowspan="2"><kbd>Control</kbd> + <kbd>Option</kbd> + <kbd><em>key</em></kbd></td>
     </tr>
     <tr>
       <th>Google Chrome</th>
-      <td><kbd>Control</kbd> + <kbd>Option</kbd> + <kbd><em>key</em></kbd></td>
     </tr>
     <tr>
       <th>Safari</th>
@@ -57,23 +48,16 @@ The way to activate the accesskey depends on the browser and its platform:
       <td><kbd>Control</kbd> + <kbd>Option</kbd> + <kbd><em>key</em></kbd></td>
     </tr>
     <tr>
-      <th>Opera 15+</th>
+      <th>Opera</th>
       <td colspan="2"><kbd>Alt</kbd> + <kbd><em>key</em></kbd></td>
       <td><kbd>Control</kbd> + <kbd>Alt</kbd> + <kbd><em>key</em></kbd></td>
-    </tr>
-    <tr>
-      <th>Opera 12</th>
-      <td colspan="3">
-        <kbd>Shift</kbd> + <kbd>Esc</kbd> opens a list of available accesskeys. Choose an item from the list by pressing
-        the <kbd><em>key</em></kbd>.
-      </td>
     </tr>
   </tbody>
 </table>
 
 ## Accessibility concerns
 
-In addition to poor browser support, there are numerous concerns with the `accesskey` attribute:
+There are numerous concerns with the `accesskey` attribute:
 
 - An `accesskey` value can conflict with a system or browser keyboard shortcut, or assistive technology functionality. What may work for one combination of operating system, assistive technology, and browser may not work with other combinations.
 - Certain `accesskey` values may not be present on certain keyboards, especially when internationalization is a concern. So adapting to specific languages could cause further problems.

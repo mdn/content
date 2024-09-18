@@ -11,7 +11,7 @@ Copies an image to the clipboard. The image is re-encoded before it is written t
 
 The image is provided as an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) containing the encoded image. JPEG and PNG formats are supported.
 
-Although this API is based on Chrome's [`clipboard.setImageData()`](https://developer.chrome.com/docs/extensions/reference/clipboard/) API, there are some differences:
+Although this API is based on Chrome's [`clipboard.setImageData()`](https://developer.chrome.com/docs/apps/reference/clipboard) API, there are some differences:
 
 - The Chrome API is only for apps, not extensions.
 - This API requires only the `"clipboardWrite"` permission, while the Chrome version also requires the `"clipboard"` permission.
@@ -67,4 +67,5 @@ fetch(browser.runtime.getURL("image.png"))
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.clipboard`](https://developer.chrome.com/docs/extensions/reference/clipboard/) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.clipboard`](https://developer.chrome.com/docs/apps/reference/clipboard) API.

@@ -27,29 +27,30 @@ To extract useful results from a shared storage worklet, you need to use an **ou
 
 The currently available output gates for the Shared Storage API are discussed in the sections below. In each section, we list typical use cases for each gate and provide links to guides with more information and code examples.
 
-> **Note:** More output gates will likely be added in the future to support additional use cases.
+> [!NOTE]
+> More output gates will likely be added in the future to support additional use cases.
 
 ### URL Selection
 
 The **URL Selection** output gate, accessed via the {{domxref("WindowSharedStorage.selectURL", "selectURL()")}} method, is used to select a URL from a provided list to display to the user, based on shared storage data. This gate be used for the following purposes:
 
-- [**Creative rotation**](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/creative-rotation/): Use stored data such as creative IDs, view counts, and user interaction to determine which creative content users see across different sites. This approach helps in balancing views and prevents overexposure of certain content, which in turn can help avoid a negative user experience.
-- [**A/B testing**](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/ab-testing/): Assign a user to an experiment group, then store group details in shared storage for cross-site access.
-- [**Custom user experiences**](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/known-customer/): Share custom content and calls-to-action based on a user's registration status or other user states.
+- [**Creative rotation**](https://developers.google.com/privacy-sandbox/private-advertising/shared-storage/creative-rotation): Use stored data such as creative IDs, view counts, and user interaction to determine which creative content users see across different sites. This approach helps in balancing views and prevents overexposure of certain content, which in turn can help avoid a negative user experience.
+- [**A/B testing**](https://developers.google.com/privacy-sandbox/private-advertising/shared-storage/ab-testing): Assign a user to an experiment group, then store group details in shared storage for cross-site access.
+- [**Custom user experiences**](https://developers.google.com/privacy-sandbox/private-advertising/shared-storage/known-customer): Share custom content and calls-to-action based on a user's registration status or other user states.
 
 ### Run
 
 The **Run** output gate, accessed via the {{domxref("WindowSharedStorage.run", "run()")}} method, is intended to be used in a generic way to process some shared storage data.
 
-The [Private Aggregation API](https://developer.chrome.com/docs/privacy-sandbox/private-aggregation/) can use the Run output gate to process shared storage data and generate aggregated reports. These reports can be used in the following use cases:
+The [Private Aggregation API](https://developers.google.com/privacy-sandbox/private-advertising/private-aggregation) can use the Run output gate to process shared storage data and generate aggregated reports. These reports can be used in the following use cases:
 
-- [**Unique reach reporting**](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/unique-reach/): Content producers and advertisers often want to know the number of unique viewers for their content. You can use shared storage to report the first time a user sees your ad or embedded publication and prevent duplicate counting for the same user on a different site, giving you an aggregated noisy report of approximate unique reach.
-- [**User demographic reporting**](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/user-demographics/): Content producers often want to understand the demographics of their audience. You can use shared storage to record user demographic data on your main site, and use aggregated reporting to report on it across other sites in embedded contexts.
-- [**K+ frequency measurement**](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/k-freq-reach/): Sometimes described as "effective frequency", K+ frequency refers to the minimum number of views needed before a user will recognize or recall certain content (often used in the context of ad views). You can use shared storage to build reports of unique users who have seen a piece of content at least K times.
+- [**Unique reach reporting**](https://developers.google.com/privacy-sandbox/private-advertising/private-aggregation/unique-reach): Content producers and advertisers often want to know the number of unique viewers for their content. You can use shared storage to report the first time a user sees your ad or embedded publication and prevent duplicate counting for the same user on a different site, giving you an aggregated noisy report of approximate unique reach.
+- [**User demographic reporting**](https://developers.google.com/privacy-sandbox/private-advertising/private-aggregation/user-demographics): Content producers often want to understand the demographics of their audience. You can use shared storage to record user demographic data on your main site, and use aggregated reporting to report on it across other sites in embedded contexts.
+- [**K+ frequency measurement**](https://developers.google.com/privacy-sandbox/private-advertising/private-aggregation/k-freq-reach): Sometimes described as "effective frequency", K+ frequency refers to the minimum number of views needed before a user will recognize or recall certain content (often used in the context of ad views). You can use shared storage to build reports of unique users who have seen a piece of content at least K times.
 
 ## Understanding how shared storage works
 
-There are two parts to using the Shared Storage API — writing data to storage and reading/processing it. To give you an idea of how these parts are handled, we'll walk you through the basic [A/B testing](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/ab-testing/) example from developer.chrome.com. In this example, a user is assigned to an experiment group, and the group details are stored in shared storage. Other sites are able to use this data when choosing a URL to display in a [fenced frame](/en-US/docs/Web/API/Fenced_frame_API).
+There are two parts to using the Shared Storage API — writing data to storage and reading/processing it. To give you an idea of how these parts are handled, we'll walk you through the basic [A/B testing](https://developers.google.com/privacy-sandbox/private-advertising/shared-storage/ab-testing) example from developer.chrome.com. In this example, a user is assigned to an experiment group, and the group details are stored in shared storage. Other sites are able to use this data when choosing a URL to display in a [fenced frame](/en-US/docs/Web/API/Fenced_frame_API).
 
 ### Writing to shared storage
 
@@ -76,7 +77,8 @@ async function injectContent() {
 }
 ```
 
-> **Note:** The `ignoreIfPresent: true` option causes the `set()` function to abort if the shared storage already contains a data item with the specified key.
+> [!NOTE]
+> The `ignoreIfPresent: true` option causes the `set()` function to abort if the shared storage already contains a data item with the specified key.
 
 ### Reading and processing data from shared storage
 
@@ -99,7 +101,8 @@ The URL Selection operation is a JavaScript class that must follow the rules bel
 - The actual functionality must be contained in an asynchronous `run()` method, which takes an array of objects containing URLs as its first parameter and a data object as its second parameter (when called, the data argument is optional).
 - The `run()` method must return a number, which will equate to the number of the URL chosen.
 
-> **Note:** Each output gate has a corresponding interface that defines the required structure of its class and `run()` method. For URL Selection, see {{domxref("SharedStorageSelectURLOperation")}}.
+> [!NOTE]
+> Each output gate has a corresponding interface that defines the required structure of its class and `run()` method. For URL Selection, see {{domxref("SharedStorageSelectURLOperation")}}.
 
 Once the operation is defined, it needs to be registered using {{domxref("SharedStorageWorkletGlobalScope.register()")}}.
 
@@ -120,7 +123,8 @@ register("ab-testing", SelectURLOperation);
 
 Notice how the value set in our main app context is retrieved using {{domxref("WorkletSharedStorage.get()")}}. To reiterate, to preserve privacy and mitigate data leakage, you can read values from shared storage only within a worklet.
 
-> **Note:** It is possible to define and register multiple operations in the same shared storage worklet module script with different names; see {{domxref("SharedStorageOperation")}} for an example.
+> [!NOTE]
+> It is possible to define and register multiple operations in the same shared storage worklet module script with different names; see {{domxref("SharedStorageOperation")}} for an example.
 
 #### Add the module to the shared storage worklet
 
@@ -263,5 +267,5 @@ For extensive demos, see the [Shared Storage API demo site](https://shared-stora
 
 ## See also
 
-- [Shared Storage](https://developer.chrome.com/docs/privacy-sandbox/shared-storage/) on developer.chrome.com
-- [The Privacy Sandbox](https://developer.chrome.com/docs/privacy-sandbox/) on developer.chrome.com
+- [Shared Storage](https://developers.google.com/privacy-sandbox/private-advertising/shared-storage) on developers.google.com
+- [The Privacy Sandbox](https://developers.google.com/privacy-sandbox) on developers.google.com

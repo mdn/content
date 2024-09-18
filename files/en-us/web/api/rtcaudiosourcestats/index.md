@@ -12,7 +12,8 @@ The **`RTCAudioSourceStats`** dictionary of the [WebRTC API](/en-US/docs/Web/API
 
 These statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} returned by {{domxref("RTCRtpSender.getStats()")}} or {{domxref("RTCPeerConnection.getStats()")}} until you find a report with the [`type`](#type) of `media-source` and a [`kind`](#kind) of `audio`.
 
-> **Note:** For audio information about remotely sourced tracks (that are being received), see {{domxref("RTCInboundRtpStreamStats")}}.
+> [!NOTE]
+> For audio information about remotely sourced tracks (that are being received), see {{domxref("RTCInboundRtpStreamStats")}}.
 
 ## Instance properties
 

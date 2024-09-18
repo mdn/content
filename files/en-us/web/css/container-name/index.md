@@ -11,11 +11,14 @@ The **container-name** [CSS](/en-US/docs/Web/CSS) property specifies a list of q
 A container query will apply styles to elements based on the size of the nearest ancestor with a containment context.
 When a containment context is given a name, it can be specifically targeted using the {{Cssxref("@container")}} at-rule instead of the nearest ancestor with containment.
 
-> **Note:** When using the {{cssxref("container-type")}} and `container-name` properties, the `style` and `layout` values of the {{cssxref("contain")}} property are automatically applied.
+> [!NOTE]
+> When using the {{cssxref("container-type")}} and `container-name` properties, the `style` and `layout` values of the {{cssxref("contain")}} property are automatically applied.
 
 ## Syntax
 
 ```css
+container-name: none;
+
 /* A single name */
 container-name: myLayout;
 
@@ -32,13 +35,16 @@ container-name: unset;
 
 ### Values
 
-- `<container-name>`
+- `none`
+
+  - : Default value. The query container has no name.
+
+- {{cssxref("custom-ident")}}
 
   - : A case-sensitive string that is used to identify the container.
-
     The following conditions apply:
 
-    - The name can be any valid {{cssxref("custom-ident")}}, but must not equal `default`.
+    - The name must not equal `or`, `and`, `not`, or `default`.
     - The name value must not be in quotes.
     - The dashed ident intended to denote author-defined identifiers (e.g., `--container-name`) is permitted.
     - A list of multiple names separated by a space is allowed.
@@ -74,7 +80,8 @@ Given the following HTML example which is a card component with a title and some
 To create a containment context, add the `container-type` property to an element in CSS.
 The following example creates two containment contexts, one for the card meta information and one for the post excerpt:
 
-> **Note:** A shorthand syntax for these declarations are described in the {{cssxref("container")}} page.
+> [!NOTE]
+> A shorthand syntax for these declarations are described in the {{cssxref("container")}} page.
 
 ```css
 .post-meta {

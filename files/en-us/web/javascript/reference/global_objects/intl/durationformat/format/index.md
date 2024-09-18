@@ -2,12 +2,10 @@
 title: Intl.DurationFormat.prototype.format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat/format
 page-type: javascript-instance-method
-status:
-  - experimental
 browser-compat: javascript.builtins.Intl.DurationFormat.format
 ---
 
-{{JSRef}} {{SeeCompatTable}}
+{{JSRef}}
 
 The **`format()`** method of {{jsxref("Intl.DurationFormat")}} instances formats a duration according to the locale and formatting options of this {{jsxref("Intl.DurationFormat")}} object.
 
@@ -26,7 +24,8 @@ format(duration)
 
 A string representing the given `duration` formatted according to the locale and formatting options of this {{jsxref("Intl.DurationFormat")}} object.
 
-> **Note:** Most of the time, the formatting returned by `format()` is consistent. However, the output may vary between implementations, even within the same locale — output variations are by design and allowed by the specification. It may also not be what you expect. For example, the string may use non-breaking spaces or be surrounded by bidirectional control characters. You should not compare the results of `format()` to hardcoded constants.
+> [!NOTE]
+> Most of the time, the formatting returned by `format()` is consistent. However, the output may vary between implementations, even within the same locale — output variations are by design and allowed by the specification. It may also not be what you expect. For example, the string may use non-breaking spaces or be surrounded by bidirectional control characters. You should not compare the results of `format()` to hardcoded constants.
 
 ## Examples
 

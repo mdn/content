@@ -12,7 +12,8 @@ It can be used for many simple image manipulations, such as tinting an image wit
 
 ## Syntax
 
-> **Warning:** The specification and current implementations have different syntaxes.
+> [!WARNING]
+> The specification and current implementations have different syntaxes.
 > The specification syntax is explained first.
 
 ### Specification syntax
@@ -138,7 +139,7 @@ When using background images, make sure the contrast in color is great enough th
 ## See also
 
 - {{cssxref("image")}}
-- {{cssxref("url")}}
+- {{cssxref("url_value", "&lt;url&gt;")}}
 - {{cssxref("image/image", "image()")}}
 - {{cssxref("image/image-set", "image-set()")}}
 - {{cssxref("element")}}

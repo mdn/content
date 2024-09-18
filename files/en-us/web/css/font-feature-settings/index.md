@@ -129,5 +129,5 @@ td.tabular {
 - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
 - {{cssxref("@font-face/src", "src")}}
 - {{cssxref("@font-face/unicode-range", "unicode-range")}}
-- [OpenType feature tags](https://docs.microsoft.com/typography/opentype/spec/featurelist) list
+- [OpenType feature tags](https://learn.microsoft.com/en-us/typography/opentype/spec/featurelist) list
 - [OpenType features in CSS](https://sparanoid.com/lab/opentype-features/)

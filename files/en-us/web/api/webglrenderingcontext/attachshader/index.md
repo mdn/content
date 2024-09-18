@@ -55,7 +55,6 @@ if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
 
 - {{domxref("WebGLProgram")}}
 - {{domxref("WebGLShader")}}
-- {{domxref("WebGLRenderingContext.attachShader()")}}
 - {{domxref("WebGLRenderingContext.compileShader()")}}
 - {{domxref("WebGLRenderingContext.createProgram()")}}
 - {{domxref("WebGLRenderingContext.createShader()")}}

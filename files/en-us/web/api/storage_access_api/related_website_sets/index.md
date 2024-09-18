@@ -4,13 +4,13 @@ slug: Web/API/Storage_Access_API/Related_website_sets
 page-type: guide
 status:
   - non-standard
-browser-compat: api.document.requestStorageAccessFor
 spec-urls: https://wicg.github.io/first-party-sets/
 ---
 
 {{DefaultAPISidebar("Storage Access API")}}
 
-> **Warning:** This feature is currently opposed by two browser vendors. See the [Standards positions](#standards_positions) section below for details of opposition.
+> [!WARNING]
+> This feature is currently opposed by two browser vendors. See the [Standards positions](#standards_positions) section below for details of opposition.
 
 Related website sets are a mechanism for defining a set of related sites that share trusted content. As a result, browsers can grant default access for these sites to [third-party cookies](/en-US/docs/Web/Privacy/Third-party_cookies) and [unpartitioned state](/en-US/docs/Web/Privacy/State_Partitioning#state_partitioning) when they have content embedded in other set members, without requiring users to grant access to the [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) via a permission prompt.
 
@@ -28,7 +28,7 @@ Related website are a progressive enhancement mechanism that works alongside the
 You should bear in mind that:
 
 - The Chrome-only {{domxref("Document.requestStorageAccessFor()")}} method — which allows top-level sites to request storage access on behalf of embedded origin content — is only supported on domains within a related website set. See [Using the Storage Access API](/en-US/docs/Web/API/Storage_Access_API/Using) for an example.
-- When Chrome first supported the standard Storage Access API (that is, the {{domxref("Document.hasStorageAccess()")}} and {{domxref("Document.requestStorageAccess()")}}methods), it required calling sites to be part of a related website set. This is no longer the case.
+- When Chrome first supported the standard Storage Access API (that is, the {{domxref("Document.hasStorageAccess()")}} and {{domxref("Document.requestStorageAccess()")}} methods), it required calling sites to be part of a related website set. This is no longer the case.
 
 ## How does RWS work?
 
@@ -72,7 +72,8 @@ A set is represented by a JSON structure. A hypothetical example is as follows:
 }
 ```
 
-> **Note:** The affiliation explanations must include a clear description of how the affiliation to the primary site is presented to users of those sites.
+> [!NOTE]
+> The affiliation explanations must include a clear description of how the affiliation to the primary site is presented to users of those sites.
 
 To use a set, its JSON must be added to the `related_website_sets.JSON` file available on the [Related Website Sets GitHub repository](https://github.com/GoogleChrome/related-website-sets/blob/main/related_website_sets.JSON), which Chrome then consumes to get the list of sets to apply RWS behavior to.
 
@@ -159,5 +160,5 @@ Two browser vendors [oppose](/en-US/docs/Glossary/Web_standards#opposing_standar
 ## See also
 
 - [Storage Access API](/en-US/docs/Web/API/Storage_Access_API)
-- [Related Website Sets](https://developer.chrome.com/docs/privacy-sandbox/related-website-sets/) on developer.chrome.com (2023)
-- [Related Website Sets: developer guide](https://developer.chrome.com/docs/privacy-sandbox/related-website-sets-integration/) on developer.chrome.com (2023)
+- [Related Website Sets](https://developers.google.com/privacy-sandbox/cookies/related-website-sets) on developers.google.com (2023)
+- [Related Website Sets: developer guide](https://developers.google.com/privacy-sandbox/cookies/related-website-sets-integration) on developers.google.com (2023)

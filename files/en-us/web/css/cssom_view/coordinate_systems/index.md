@@ -18,7 +18,8 @@ On the web, the default origin is the _top_-left corner of a given context (with
 
 When using the third dimension to layer objects from front to back, we use the z-axis. The z-axis runs from the viewer to the screen's surface. The CSS z-index attribute affects where positioned elements sit on this axis, giving the effect of moving away from or toward the viewer.
 
-> **Note:** It's actually possible to change the definitions and orientations of these coordinate systems using CSS properties such as {{cssxref("transform")}}. However, we'll only talk about the standard coordinate system for now.
+> [!NOTE]
+> It's actually possible to change the definitions and orientations of these coordinate systems using CSS properties such as {{cssxref("transform")}}. However, we'll only talk about the standard coordinate system for now.
 
 ## Standard CSSOM coordinate systems
 
@@ -33,14 +34,14 @@ The origin of the "client", "page", and "viewport" coordinates systems are highl
 
 Coordinates specified using the "offset" model use the top-left corner of the element being examined, or on which an event has occurred.
 
-For example, when a {{domxref("MouseEvent", "mouse event", "", 1)}} occurs, the position of the mouse as specified in the event's {{domxref("MouseEvent.offsetX", "offsetX")}} and {{domxref("MouseEvent.offsetY", "offsetY")}} properties are given relative to the top-left corner of the node to which the event has been delivered. The origin is inset by the distances specified by {{cssxref("padding-left")}} and {{cssxref("padding-top")}}.
+For example, when a {{domxref("MouseEvent", "mouse event", "", 1)}} occurs, the position of the mouse as specified in the event's {{domxref("MouseEvent.offsetX", "offsetX")}} and {{domxref("MouseEvent.offsetY", "offsetY")}} properties are given relative to the top-left corner of the node to which the event has been delivered. The origin is inset by `padding-edge` which is the edge between the padding area and the border area.
 
 ### Viewport
 
 The "viewport" (or "client") coordinate system uses as its origin the top-left corner of the viewport or browsing context in which the event occurred. This is the entire viewing area in which the document is presented.
 
 On a desktop computer, for example, the {{domxref("MouseEvent.clientX")}} and {{domxref("MouseEvent.clientY")}} properties indicate the position of the mouse cursor at the moment the event occurred, relative to the top-left corner of the {{domxref("window")}}.
-When using a stylus or a pointer, the {{domxref("Touch.clientX")}} and {{domxref("Touch.clientY")}} coordinates in a {{domxref("TouchEvent", "touch event")}} are relative to the same origin.
+When using a stylus or a pointer, the {{domxref("Touch.clientX")}} and {{domxref("Touch.clientY")}} coordinates in a [touch event](/en-US/docs/Web/API/TouchEvent) are relative to the same origin.
 
 The top-left corner of the window is always (0, 0), regardless of the content of the document or any scrolling that may have been done. In other words, scrolling the document will change the viewport coordinates of a given position within the document.
 
@@ -50,7 +51,7 @@ The "page" coordinate system gives the position of a pixel relative to the top-l
 That means that a point in an element within the document will have the same coordinates after the user scrolls horizontally or vertically in the document unless the element moves via layout changes.
 
 Mouse events' {{domxref("MouseEvent.pageX", "pageX")}} and {{domxref("MouseEvent.pageY", "pageY")}} properties provide the position of the mouse at the time the event was generated, given relative to the top-left corner of the document.
-{{domxref("Touch.pageX")}} and {{domxref("Touch.pageY")}} coordinates in a {{domxref("TouchEvent", "touch event")}} are relative to the same origin.
+{{domxref("Touch.pageX")}} and {{domxref("Touch.pageY")}} coordinates in a [touch event](/en-US/docs/Web/API/TouchEvent) are relative to the same origin.
 
 ### Screen
 
@@ -59,7 +60,7 @@ Each point in this coordinate system represents a single logical pixel, and so v
 The position of a given point within a document will change if the containing window is moved, for example, or if the user's screen geometry changes (by changing display resolution or by adding or removing monitors to their system).
 
 The {{domxref("MouseEvent.screenX")}} and {{domxref("MouseEvent.screenY")}} properties give the coordinates of a mouse event's position relative to the screen's origin.
-{{domxref("Touch.screenX")}} and {{domxref("Touch.screenY")}} coordinates in a {{domxref("TouchEvent", "touch event")}} are relative to the same origin.
+{{domxref("Touch.screenX")}} and {{domxref("Touch.screenY")}} coordinates in a [touch event](/en-US/docs/Web/API/TouchEvent) are relative to the same origin.
 
 ## Example
 
@@ -139,14 +140,14 @@ Here you can see the results in action. As you mouse in and around the blue box,
 ## See also
 
 - [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms): how to alter a coordinate system
-- Coordinates of a {{domxref("MouseEvent", "Mouse event")}}:
+- Coordinates of a {{domxref("MouseEvent")}}:
 
   - {{domxref("MouseEvent.offsetX")}} and {{domxref("MouseEvent.offsetY")}}
   - {{domxref("MouseEvent.clientX")}} and {{domxref("MouseEvent.clientY")}}
   - {{domxref("MouseEvent.pageX")}} and {{domxref("MouseEvent.pageY")}}
   - {{domxref("MouseEvent.screenX")}} and {{domxref("MouseEvent.screenY")}}
 
-- Coordinates of a {{domxref("Touch", "Touch event")}}:
+- Coordinates of a {{domxref("Touch")}}:
 
   - {{domxref("Touch.clientX")}} and {{domxref("Touch.clientY")}}
   - {{domxref("Touch.pageX")}} and {{domxref("Touch.pageY")}}

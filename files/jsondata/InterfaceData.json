@@ -552,6 +552,10 @@
       "inh": "CSSRule",
       "impl": []
     },
+    "CSSFunctionRule": {
+      "inh": "CSSGroupingRule",
+      "impl": []
+    },
     "CSSGroupingRule": {
       "inh": "CSSRule",
       "impl": []
@@ -858,6 +862,10 @@
     },
     "DelayNode": {
       "inh": "AudioNode",
+      "impl": []
+    },
+    "DelegatedInkTrailPresenter": {
+      "inh": "",
       "impl": []
     },
     "DeprecationReportBody": {
@@ -1904,10 +1912,6 @@
       "inh": "",
       "impl": []
     },
-    "InkPresenter": {
-      "inh": "",
-      "impl": []
-    },
     "InputDeviceCapabilities": {
       "inh": "",
       "impl": []
@@ -2232,10 +2236,6 @@
       "inh": "",
       "impl": []
     },
-    "MLActivation": {
-      "inh": "",
-      "impl": []
-    },
     "MLContext": {
       "inh": "",
       "impl": []
@@ -2258,10 +2258,6 @@
     },
     "MouseEvent": {
       "inh": "UIEvent",
-      "impl": []
-    },
-    "MutationEvent": {
-      "inh": "Event",
       "impl": []
     },
     "MutationObserver": {
@@ -2324,10 +2320,6 @@
       "inh": "",
       "impl": []
     },
-    "NavigatorLogin": {
-      "inh": "",
-      "impl": []
-    },
     "NavigatorManagedData": {
       "inh": "EventTarget",
       "impl": []
@@ -2381,6 +2373,10 @@
       "impl": []
     },
     "NotRestoredReasons": {
+      "inh": "",
+      "impl": []
+    },
+    "Observable": {
       "inh": "",
       "impl": []
     },
@@ -2684,6 +2680,10 @@
       "inh": "",
       "impl": []
     },
+    "PrivateAggregation": {
+      "inh": "",
+      "impl": []
+    },
     "ProcessingInstruction": {
       "inh": "CharacterData",
       "impl": []
@@ -2781,6 +2781,10 @@
       "impl": []
     },
     "ReadableStreamDefaultReader": {
+      "inh": "",
+      "impl": []
+    },
+    "RealTimeReporting": {
       "inh": "",
       "impl": []
     },
@@ -3182,6 +3186,10 @@
     },
     "SubmitEvent": {
       "inh": "Event",
+      "impl": []
+    },
+    "Subscriber": {
+      "inh": "",
       "impl": []
     },
     "SubtleCrypto": {
@@ -3845,7 +3853,7 @@
       "impl": []
     },
     "Viewport": {
-      "inh": "EventTarget",
+      "inh": "",
       "impl": []
     },
     "ViewTimeline": {
@@ -4104,10 +4112,6 @@
       "inh": "Event",
       "impl": []
     },
-    "WindowSharedStorage": {
-      "inh": "SharedStorage",
-      "impl": []
-    },
     "Worker": {
       "inh": "EventTarget",
       "impl": []
@@ -4142,10 +4146,6 @@
     },
     "WorkletGroupEffect": {
       "inh": "",
-      "impl": []
-    },
-    "WorkletSharedStorage": {
-      "inh": "SharedStorage",
       "impl": []
     },
     "WritableStream": {

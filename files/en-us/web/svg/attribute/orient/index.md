@@ -96,13 +96,15 @@ svg {
 
   - : If placed by {{SVGAttr("marker-start")}}, the marker is oriented 180° different from the orientation that would be used if `auto` were specified. For all other markers, `auto-start-reverse` means the same as `auto`.
 
-    > **Note:** This allows a single arrowhead marker to be defined that can be used for both the start and end of a path, i.e. which points outwards from both ends.
+    > [!NOTE]
+    > This allows a single arrowhead marker to be defined that can be used for both the start and end of a path, i.e. which points outwards from both ends.
 
 - `<angle>`
 
   - : This value indicates that the marker is oriented such that the specified angle is that measured between the shape's positive x-axis and the marker's positive x-axis.
 
-    > **Note:** For example, if a value of `45` is given, then the marker's positive x-axis would be pointing down and right in the shape's coordinate system.
+    > [!NOTE]
+    > For example, if a value of `45` is given, then the marker's positive x-axis would be pointing down and right in the shape's coordinate system.
 
 - `<number>`
   - : This value indicates an angle in degrees. The marker is oriented such that the specified angle is that measured between the shape's positive x-axis and the marker's positive x-axis.

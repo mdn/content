@@ -7,9 +7,10 @@ browser-compat: svg.global_attributes.stroke
 
 {{SVGRef}}
 
-The **`stroke`** attribute is a presentation attribute defining the color (_or any SVG paint servers like gradients or patterns_) used to paint the outline of the shape;
+The **`stroke`** attribute is a presentation attribute defining the color (_or any SVG paint servers like gradients or patterns_) used to paint the outline of the shape.
 
-> **Note:** As a presentation attribute `stroke` can be used as a CSS property.
+> [!NOTE]
+> As a presentation attribute, `stroke` can be used as a CSS property. See {{cssxref('stroke')}} for more.
 
 You can use this attribute with the following SVG elements:
 
@@ -90,7 +91,8 @@ The output is as follows:
 
 {{EmbedLiveSample("`context-stroke` example", '100%', 220)}}
 
-> **Note:** Elements can also use `context-stroke` and `context-fill` to inherit `stroke` and `fill` values when they are referenced by {{SVGElement('use')}} elements.
+> [!NOTE]
+> Elements can also use `context-stroke` and `context-fill` to inherit `stroke` and `fill` values when they are referenced by {{SVGElement('use')}} elements.
 
 ## Usage notes
 

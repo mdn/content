@@ -64,7 +64,6 @@ EmberJS has a plugin architecture, which means that add-ons can be installed and
 Examples include:
 
 - [PREmber](https://github.com/ef4/prember): Static website rendering for blogs or marketing content.
-- [FastBoot](https://ember-fastboot.com/): Server-side rendering, including improving search-engine optimization (SEO), or improving initial render performance of complex, highly interactive web pages.
 - [empress-blog](https://empress-blog.netlify.app/welcome/): Authoring blog posts in markdown while optimizing for SEO with PREmber.
 - [ember-service-worker](https://ember-service-worker.com/): Configuring a PWA so that the app can be installed on mobile devices, just like apps from the device's respective app-store.
 
@@ -91,12 +90,12 @@ The templating language is used to make build and runtime optimizations that oth
 
 This language also enables lighter asset payloads due to _compiling_ the templates into a "byte code" that can be parsed faster than JavaScript. The **Glimmer VM** enables extremely fast DOM change tracking without the need to manage and diff a cached virtual representation (which is a common approach to mitigating the slow I/O of DOM changes).
 
-For more information on the technical aspects of The Glimmer VM, the GitHub repository has some [documentation](https://github.com/glimmerjs/glimmer-vm/tree/master/guides) — specifically, [References](https://github.com/glimmerjs/glimmer-vm/blob/master/guides/04-references.md) and [Validators](https://github.com/glimmerjs/glimmer-vm/blob/master/guides/05-validators.md) may be of interest.
+For more information on the technical aspects of The Glimmer VM, the GitHub repository has some [documentation](https://github.com/glimmerjs/glimmer-vm/tree/main/guides) — specifically, [References](https://github.com/glimmerjs/glimmer-vm/blob/main/guides/04-references.md) and [Validators](https://github.com/glimmerjs/glimmer-vm/blob/main/guides/05-validators.md) may be of interest.
 
 Everything else in Ember is _just_ JavaScript. In particular, JavaScript classes. This is where most of the "framework" parts come into play, as there are [superclasses](<https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming)#Subclasses_and_superclasses>), where each type of _thing_ has a different purpose and different expected location within your project.
 
 Here is a demonstration the impact Ember has on the JavaScript that is in typical projects:
-[Gavin Demonstrates how < 20% of the JS written is specific to Ember](https://twitter.com/gavinjoyce/status/1174726713101705216).
+[Gavin Demonstrates how < 20% of the JS written is specific to Ember](https://x.com/gavinjoyce/status/1174726713101705216).
 
 ![a set of code files with the ember-specific JavaScript highlighted, showing that only 20% of the Ember code is Ember-specific](20percent-js-specific-ember.png)
 
@@ -227,7 +226,8 @@ If everything is working correctly, you should see a page like this:
 
 ![The default start page when you create a new Ember app, with a cartoon mascot, saying congratulations](ember-start-page.png)
 
-> **Note:** on Windows systems without [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/windows/wsl/install), you will experience slower build-times overall compared to macOS, Linux, and Windows _with_ WSL.
+> [!NOTE]
+> On Windows systems without [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/install), you will experience slower build-times overall compared to macOS, Linux, and Windows _with_ WSL.
 
 ## Summary
 

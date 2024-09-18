@@ -13,7 +13,7 @@ The `listbox` role is used for lists from which a user may select one or more it
 
 ## Description
 
-The `listbox` role is used to identify an element that creates a list from which a user may select one or more static items, similar to the HTML {{HTMLElement('select')}} element. Unlike {{HTMLElement('select')}}, a listbox can contain images. Each child of a listbox should have a role of [option](https://www.w3.org/TR/2010/WD-wai-aria-20100916/roles#option).
+The `listbox` role is used to identify an element that creates a list from which a user may select one or more static items, similar to the HTML {{HTMLElement('select')}} element. Unlike {{HTMLElement('select')}}, a listbox can contain images. Listboxes contain children whose role is [`option`](/en-US/docs/Web/Accessibility/ARIA/Roles/option_role) or elements whose role is [`group`](/en-US/docs/Web/Accessibility/ARIA/Roles/group_role) which in turn contain children whose role is `option`.
 
 It is highly recommended using the HTML select element, or a group of radio buttons if only one item can be selected, or a group of checkboxes if multiple items can be selected, because there is a lot of keyboard interactivity to manage focus for all the descendants, and native HTML elements provide this functionality for you for free.
 
@@ -110,7 +110,7 @@ When the listbox role is added to an element, or such an element becomes visible
 
     - <kbd>Space</kbd>
 
-      : changes the selection state of the focused option .
+      : changes the selection state of the focused option.
 
     - <kbd>Shift + Down Arrow</kbd>
 
@@ -155,7 +155,8 @@ When the user clicks on an option, hits <kbd>Space</kbd> when focused on an opti
 2. Change the appearance of the option to reflect its selected state
 3. Update the [`aria-activedescendant`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant) value on the listbox to the ID of the option the user just interacted with, even if they toggled the option to be unselected.
 
-> **Note:** The first rule of ARIA use is you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and **adding** an ARIA role, state or property to make it accessible, then do so. The {{HTMLElement('select')}} element with descendant {{HTMLElement('option')}} elements handles all the needed interactions natively.
+> [!NOTE]
+> The first rule of ARIA use is you can use a native feature with the semantics and behavior you require already built in, instead of re-purposing an element and **adding** an ARIA role, state or property to make it accessible, then do so. The {{HTMLElement('select')}} element with descendant {{HTMLElement('option')}} elements handles all the needed interactions natively.
 
 ## Examples
 

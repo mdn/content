@@ -2,7 +2,6 @@
 title: SVG element page template
 slug: MDN/Writing_guidelines/Page_structures/Page_types/SVG_element_page_template
 page-type: mdn-writing-guide
-browser-compat: path.to.feature.NameOfTheElement
 ---
 
 {{MDNSidebar}}
@@ -119,7 +118,8 @@ Each example must have an H3 heading (`###`) naming the example. The heading sho
 
 See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples) for more information.
 
-> **Note:** Sometimes you will want to link to examples given on another page.
+> [!NOTE]
+> Sometimes you will want to link to examples given on another page.
 >
 > **Scenario 1:** If you have some examples on this page and some more examples on another page:
 >
@@ -144,7 +144,7 @@ See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/P
 > ```md
 > ## Examples
 >
-> For examples of this API, see [the page on fetch()](https://example.org).
+> For examples of this API, see [the page on fetch()](https://example.org/).
 > ```
 
 ## Specifications

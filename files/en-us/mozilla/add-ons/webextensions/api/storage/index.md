@@ -24,7 +24,8 @@ Although this API is similar to {{domxref("Window.localStorage")}} it is recomme
 
 You can examine the stored data under the Extension Storage item in the [Storage Inspector](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html) tab of the [developer toolbox](https://extensionworkshop.com/documentation/develop/debugging/), accessible from `about:debugging`.
 
-> **Note:** The storage area is not encrypted and shouldn't be used for storing confidential user information.
+> [!NOTE]
+> The storage area is not encrypted and shouldn't be used for storing confidential user information.
 
 ## Types
 
@@ -57,7 +58,8 @@ You can examine the stored data under the Extension Storage item in the [Storage
 
 {{WebExtExamples("h2")}}
 
-> **Note:** This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/storage/) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage) API. This documentation is derived from [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

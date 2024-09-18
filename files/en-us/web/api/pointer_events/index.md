@@ -62,10 +62,12 @@ The following sub-sections contain short descriptions of each interface and prop
 
 The {{domxref("PointerEvent")}} interface extends the {{domxref("MouseEvent")}} interface and has the following properties.
 
-- {{ domxref('PointerEvent.altitudeAngle', 'altitudeAngle')}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{ domxref('PointerEvent.altitudeAngle', 'altitudeAngle')}} {{ReadOnlyInline}}
   - : Represents the angle between a transducer (a pointer or stylus) axis and the X-Y plane of a device screen.
-- {{ domxref('PointerEvent.azimuthAngle', 'azimuthAngle')}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{ domxref('PointerEvent.azimuthAngle', 'azimuthAngle')}} {{ReadOnlyInline}}
   - : Represents the angle between the Y-Z plane and the plane containing both the transducer (a pointer or stylus) axis and the Y axis.
+- {{domxref('PointerEvent.persistentDeviceId')}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : A unique identifier for the pointing device generating the `PointerEvent`.
 - {{ domxref('PointerEvent.pointerId','pointerId')}} {{ReadOnlyInline}}
   - : A unique identifier for the pointer causing the event.
 - {{ domxref('PointerEvent.width','width')}} {{ReadOnlyInline}}
@@ -131,40 +133,39 @@ This section contains examples of basic usage of using the pointer events interf
 This example registers a handler for every event type for the given element.
 
 ```html
-<html lang="en">
-  <script>
-    function over_handler(event) {}
-    function enter_handler(event) {}
-    function down_handler(event) {}
-    function move_handler(event) {}
-    function up_handler(event) {}
-    function cancel_handler(event) {}
-    function out_handler(event) {}
-    function leave_handler(event) {}
-    function rawupdate_handler(event) {}
-    function gotcapture_handler(event) {}
-    function lostcapture_handler(event) {}
+<div id="target">Touch me…</div>
+```
 
-    function init() {
-      const el = document.getElementById("target");
-      // Register pointer event handlers
-      el.onpointerover = over_handler;
-      el.onpointerenter = enter_handler;
-      el.onpointerdown = down_handler;
-      el.onpointermove = move_handler;
-      el.onpointerup = up_handler;
-      el.onpointercancel = cancel_handler;
-      el.onpointerout = out_handler;
-      el.onpointerleave = leave_handler;
-      el.onpointerrawupdate = rawupdate_handler;
-      el.ongotpointercapture = gotcapture_handler;
-      el.onlostpointercapture = lostcapture_handler;
-    }
-  </script>
-  <body onload="init();">
-    <div id="target">Touch me…</div>
-  </body>
-</html>
+```js
+function over_handler(event) {}
+function enter_handler(event) {}
+function down_handler(event) {}
+function move_handler(event) {}
+function up_handler(event) {}
+function cancel_handler(event) {}
+function out_handler(event) {}
+function leave_handler(event) {}
+function rawupdate_handler(event) {}
+function gotcapture_handler(event) {}
+function lostcapture_handler(event) {}
+
+function init() {
+  const el = document.getElementById("target");
+  // Register pointer event handlers
+  el.onpointerover = over_handler;
+  el.onpointerenter = enter_handler;
+  el.onpointerdown = down_handler;
+  el.onpointermove = move_handler;
+  el.onpointerup = up_handler;
+  el.onpointercancel = cancel_handler;
+  el.onpointerout = out_handler;
+  el.onpointerleave = leave_handler;
+  el.onpointerrawupdate = rawupdate_handler;
+  el.ongotpointercapture = gotcapture_handler;
+  el.onlostpointercapture = lostcapture_handler;
+}
+
+document.addEventListener("DOMContentLoaded", init);
 ```
 
 ### Event properties
@@ -172,74 +173,73 @@ This example registers a handler for every event type for the given element.
 This example illustrates accessing all of a pointer event's properties.
 
 ```html
-<html lang="en">
-  <script>
-    const id = -1;
+<div id="target">Touch me…</div>
+```
 
-    function process_id(event) {
-      // Process this event based on the event's identifier
-    }
-    function process_mouse(event) {
-      // Process the mouse pointer event
-    }
-    function process_pen(event) {
-      // Process the pen pointer event
-    }
-    function process_touch(event) {
-      // Process the touch pointer event
-    }
-    function process_tilt(tiltX, tiltY) {
-      // Tilt data handler
-    }
-    function process_pressure(pressure) {
-      // Pressure handler
-    }
-    function process_non_primary(event) {
-      // Non primary handler
-    }
+```js
+const id = -1;
 
-    function down_handler(ev) {
-      // Calculate the touch point's contact area
-      const area = ev.width * ev.height;
+function process_id(event) {
+  // Process this event based on the event's identifier
+}
+function process_mouse(event) {
+  // Process the mouse pointer event
+}
+function process_pen(event) {
+  // Process the pen pointer event
+}
+function process_touch(event) {
+  // Process the touch pointer event
+}
+function process_tilt(tiltX, tiltY) {
+  // Tilt data handler
+}
+function process_pressure(pressure) {
+  // Pressure handler
+}
+function process_non_primary(event) {
+  // Non primary handler
+}
 
-      // Compare cached id with this event's id and process accordingly
-      if (id === ev.identifier) process_id(ev);
+function down_handler(ev) {
+  // Calculate the touch point's contact area
+  const area = ev.width * ev.height;
 
-      // Call the appropriate pointer type handler
-      switch (ev.pointerType) {
-        case "mouse":
-          process_mouse(ev);
-          break;
-        case "pen":
-          process_pen(ev);
-          break;
-        case "touch":
-          process_touch(ev);
-          break;
-        default:
-          console.log(`pointerType ${ev.pointerType} is not supported`);
-      }
+  // Compare cached id with this event's id and process accordingly
+  if (id === ev.identifier) process_id(ev);
 
-      // Call the tilt handler
-      if (ev.tiltX !== 0 && ev.tiltY !== 0) process_tilt(ev.tiltX, ev.tiltY);
+  // Call the appropriate pointer type handler
+  switch (ev.pointerType) {
+    case "mouse":
+      process_mouse(ev);
+      break;
+    case "pen":
+      process_pen(ev);
+      break;
+    case "touch":
+      process_touch(ev);
+      break;
+    default:
+      console.log(`pointerType ${ev.pointerType} is not supported`);
+  }
 
-      // Call the pressure handler
-      process_pressure(ev.pressure);
+  // Call the tilt handler
+  if (ev.tiltX !== 0 && ev.tiltY !== 0) process_tilt(ev.tiltX, ev.tiltY);
 
-      // If this event is not primary, call the non primary handler
-      if (!ev.isPrimary) process_non_primary(ev);
-    }
+  // Call the pressure handler
+  process_pressure(ev.pressure);
 
-    function init() {
-      const el = document.getElementById("target");
-      // Register pointerdown handler
-      el.onpointerdown = down_handler;
-    }
-  </script>
-  <body onload="init();">
-    <div id="target">Touch me…</div>
-  </body>
-</html>
+  // If this event is not primary, call the non primary handler
+  if (!ev.isPrimary) process_non_primary(ev);
+}
+
+function init() {
+  const el = document.getElementById("target");
+  // Register pointerdown handler
+  el.onpointerdown = down_handler;
+}
+
+document.addEventListener("DOMContentLoaded", init);
 ```
 
 ## Determining the Primary Pointer
@@ -267,7 +267,8 @@ The following table provides the values of `button` and `buttons` for the variou
 | X2 (forward) Mouse                                                                   | `4`    | `16`    |
 | Pen eraser button                                                                    | `5`    | `32`    |
 
-> **Note:** The `button` property indicates a change in the state of the button. However, as in the case of touch, when multiple events occur with one event, all of them have the same value.
+> [!NOTE]
+> The `button` property indicates a change in the state of the button. However, as in the case of touch, when multiple events occur with one event, all of them have the same value.
 
 ## Capturing the pointer
 
@@ -276,58 +277,57 @@ Pointer capture allows events for a particular {{domxref("PointerEvent","pointer
 Pointer capture will cause the target to capture all subsequent pointer events as if they were occurring over the capturing target. Accordingly, `pointerover`, `pointerenter`, `pointerleave`, and `pointerout` **will not fire** as long as this capture is set.
 For touchscreen browsers that allow [direct manipulation](https://w3c.github.io/pointerevents/#dfn-direct-manipulation), an [implicit pointer capture](https://w3c.github.io/pointerevents/#dfn-implicit-pointer-capture) will be called on the element when a `pointerdown` event triggers. The capture can be released manually by calling {{domxref('element.releasePointerCapture')}} on the target element, or it will be implicitly released after a `pointerup` or `pointercancel` event.
 
-> **Note:** If you need to move an element in the DOM, then make sure to call `setPointerCapture()` **after DOM movements** so that `setPointerCapture()` will not lose track of it. E.g., if you need to use `Element.append()` to move an element somewhere else, then make sure to call `setPointerCapture()` on it only after the call to `Element.append()`.
+> [!NOTE]
+> If you need to move an element in the DOM, then make sure to call `setPointerCapture()` **after DOM movements** so that `setPointerCapture()` will not lose track of it. E.g., if you need to use `Element.append()` to move an element somewhere else, then make sure to call `setPointerCapture()` on it only after the call to `Element.append()`.
 
 The following example shows pointer capture being set on an element.
 
 ```html
-<html lang="en">
-  <script>
-    function downHandler(ev) {
-      let el = document.getElementById("target");
-      // Element 'target' will receive/capture further events
-      el.setPointerCapture(ev.pointerId);
-    }
+<div id="target">Touch me…</div>
+```
 
-    function init() {
-      let el = document.getElementById("target");
-      el.onpointerdown = downHandler;
-    }
-  </script>
-  <body onload="init();">
-    <div id="target">Touch me…</div>
-  </body>
-</html>
+```js
+function downHandler(ev) {
+  const el = document.getElementById("target");
+  // Element 'target' will receive/capture further events
+  el.setPointerCapture(ev.pointerId);
+}
+
+function init() {
+  const el = document.getElementById("target");
+  el.onpointerdown = downHandler;
+}
+
+document.addEventListener("DOMContentLoaded", init);
 ```
 
 The following example shows a pointer capture being released (when a {{domxref("Element/pointercancel_event", "pointercancel")}} event occurs. The browser does this automatically when a {{domxref("Element/pointerup_event", "pointerup")}} or {{domxref("Element/pointercancel_event", "pointercancel")}} event occurs.
 
 ```html
-<html lang="en">
-  <script>
-    function downHandler(ev) {
-      let el = document.getElementById("target");
-      // Element "target" will receive/capture further events
-      el.setPointerCapture(ev.pointerId);
-    }
+<div id="target">Touch me…</div>
+```
 
-    function cancelHandler(ev) {
-      let el = document.getElementById("target");
-      // Release the pointer capture
-      el.releasePointerCapture(ev.pointerId);
-    }
+```js
+function downHandler(ev) {
+  const el = document.getElementById("target");
+  // Element "target" will receive/capture further events
+  el.setPointerCapture(ev.pointerId);
+}
 
-    function init() {
-      let el = document.getElementById("target");
-      // Register pointerdown and pointercancel handlers
-      el.onpointerdown = downHandler;
-      el.onpointercancel = cancelHandler;
-    }
-  </script>
-  <body onload="init();">
-    <div id="target">Touch me…</div>
-  </body>
-</html>
+function cancelHandler(ev) {
+  const el = document.getElementById("target");
+  // Release the pointer capture
+  el.releasePointerCapture(ev.pointerId);
+}
+
+function init() {
+  const el = document.getElementById("target");
+  // Register pointerdown and pointercancel handlers
+  el.onpointerdown = downHandler;
+  el.onpointercancel = cancelHandler;
+}
+
+document.addEventListener("DOMContentLoaded", init);
 ```
 
 ## touch-action CSS property
@@ -388,7 +388,7 @@ Here are some _best practices_ to consider when using pointer events:
 
 {{Compat}}
 
-Some additional values have been defined for the {{cssxref("touch-action", "CSS touch-action")}} property as part of the [Pointer Events](https://w3c.github.io/pointerevents/) specification, but currently those values have limited implementation support.
+Some additional values have been defined for the CSS {{cssxref("touch-action")}} property as part of the [Pointer Events](https://w3c.github.io/pointerevents/) specification, but currently those values have limited implementation support.
 
 ## See also
 

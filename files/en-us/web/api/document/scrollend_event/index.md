@@ -15,7 +15,7 @@ Scroll position updates include smooth or instant mouse wheel scrolling, keyboar
 User gestures like touch panning or trackpad scrolling aren't complete until pointers or keys have released.
 If the scroll position did not change, then no scrollend event fires.
 
-For detecting when scrolling inside an element is complete, see {{domxref("Element/scrollend_event", "Element: scrollend event")}}.
+For detecting when scrolling inside an element is complete, see the {{domxref("Element/scrollend_event", "scrollend")}} event of `Element`.
 
 ## Syntax
 

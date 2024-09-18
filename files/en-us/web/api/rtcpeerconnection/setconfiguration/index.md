@@ -19,7 +19,8 @@ The most common use case for this method (and even then, probably not a very com
   Perhaps the user has moved into a new region, so using new regional ICE servers is necessary, for example.
   In this situation, one might call `setConfiguration()` to switch to new regional ICE servers, then initiate an [ICE restart](/en-US/docs/Web/API/WebRTC_API/Session_lifetime#ice_restart).
 
-> **Note:** You cannot change the identity information for a connection once it's already been set.
+> [!NOTE]
+> You cannot change the identity information for a connection once it's already been set.
 
 ## Syntax
 

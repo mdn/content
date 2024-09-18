@@ -10,7 +10,8 @@ browser-compat: api.RTCPeerConnection.addTrack
 
 The **`addTrack()`** method of the {{domxref("RTCPeerConnection")}} interface adds a new media track to the set of tracks which will be transmitted to the other peer.
 
-> **Note:** Adding a track to a connection triggers renegotiation by firing a {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event.
+> [!NOTE]
+> Adding a track to a connection triggers renegotiation by firing a {{DOMxRef("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event.
 > See [Starting negotiation](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling#starting_negotiation) for details.
 
 ## Syntax
@@ -37,7 +38,8 @@ Any tracks that are added to the same stream on the local end of the connection 
 
 The {{domxref("RTCRtpSender")}} object which will be used to transmit the media data.
 
-> **Note:** Every `RTCRtpSender` is paired with an {{domxref("RTCRtpReceiver")}} to make up an {{domxref("RTCRtpTransceiver")}}.
+> [!NOTE]
+> Every `RTCRtpSender` is paired with an {{domxref("RTCRtpReceiver")}} to make up an {{domxref("RTCRtpTransceiver")}}.
 > The associated receiver is muted (indicating that it is not able to deliver packets) until and unless one or more streams are added to the receiver by the remote peer.
 
 ### Exceptions
@@ -165,7 +167,7 @@ If no existing sender exists that can be reused, a new one is created. This also
 results in the creation of the associated objects that must exist. The process of
 creating a new sender results in these changes:
 
-- The new `RTCRtpSender` is created with the specified `track` and set of `stream`(s).
+- The new `RTCRtpSender` is created with the specified track and set of stream(s).
 - A new {{domxref("RTCRtpReceiver")}} is created with a _new_ {{domxref("MediaStreamTrack")}} as its {{domxref("RTCRtpReceiver.track", "track")}} property (not the track specified as a parameter when calling `addTrack()`).
   This track's {{domxref("MediaStreamTrack.kind", "kind")}} is set to match the `kind` of the track provided as an input parameter.
 - A new {{domxref("RTCRtpTransceiver")}} is created and associated with the new sender and receiver.

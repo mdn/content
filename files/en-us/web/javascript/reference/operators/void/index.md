@@ -74,9 +74,15 @@ This is a bit longer than wrapping the function expression in parentheses, which
 })();
 ```
 
+Note that this trick only applies to IIFEs defined with the `function` keyword. Attempting to use the `void` operator to avoid parentheses for an arrow function results in a syntax error. Arrow function expressions always require parentheses around them when being called.
+
+```js example-bad
+void () => { console.log("iife!"); }(); // SyntaxError: Malformed arrow function parameter list
+```
+
 ### JavaScript URIs
 
-When a browser follows a `javascript:` URI, it evaluates the code in the URI
+When a browser follows a [`javascript:` URI](/en-US/docs/Web/URI/Schemes/javascript), it evaluates the code in the URI
 and then replaces the contents of the page with the returned value, unless the returned
 value is {{jsxref("undefined")}}. The `void` operator can be used to return
 `undefined`. For example:

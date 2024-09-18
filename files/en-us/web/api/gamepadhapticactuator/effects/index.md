@@ -3,10 +3,12 @@ title: "GamepadHapticActuator: effects property"
 short-title: effects
 slug: Web/API/GamepadHapticActuator/effects
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.GamepadHapticActuator.effects
 ---
 
-{{APIRef("Gamepad API")}}
+{{APIRef("Gamepad API")}}{{SeeCompatTable}}
 
 The **`effects`** read-only property of the {{domxref("GamepadHapticActuator")}} interface returns an array of enumerated values representing the different haptic effects that the actuator supports.
 
@@ -19,7 +21,8 @@ An array representing the supported haptic effects. Possible included values are
 - `"trigger-rumble"`
   - : Localized rumbling effects on the surface of a controller's trigger buttons created by vibrational motors located in each button. These buttons most commonly take the form of spring-loaded triggers.
 
-> **Note:** If an effect is not listed that is known to be supported by the hardware, it may be that the browser does not support playing effects of that type.
+> [!NOTE]
+> If an effect is not listed that is known to be supported by the hardware, it may be that the browser does not support playing effects of that type.
 
 ## Examples
 

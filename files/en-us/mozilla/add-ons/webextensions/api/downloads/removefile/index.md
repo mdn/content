@@ -15,7 +15,8 @@ To remove a file from the downloads history, you need to use {{WebExtAPIRef("dow
 
 This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
-> **Note:** If you want to remove a downloaded file from disk _and_ erase it from history, you have to call `removeFile()` before you call {{WebExtAPIRef("downloads.erase()")}}. If you try it the other way around you'll get an error when calling `removeFile()`, because the browser will no longer have a record of the download.
+> [!NOTE]
+> If you want to remove a downloaded file from disk _and_ erase it from history, you have to call `removeFile()` before you call {{WebExtAPIRef("downloads.erase()")}}. If you try it the other way around you'll get an error when calling `removeFile()`, because the browser will no longer have a record of the download.
 
 ## Syntax
 
@@ -68,7 +69,8 @@ searching.then(remove, onError);
 
 {{WebExtExamples}}
 
-> **Note:** This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/downloads/#method-removeFile) API.
+> [!NOTE]
+> This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#method-removeFile) API.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

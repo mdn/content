@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.RTCError
 ---
 
-{{DefaultAPISidebar("WebRTC")}}
+{{APIRef("WebRTC")}}
 
 The **`RTCError`** interface describes an error which has occurred while handling [WebRTC](/en-US/docs/Web/API/WebRTC_API) operations. It's based upon the standard {{domxref("DOMException")}} interface that describes general DOM errors.
 
@@ -31,7 +31,8 @@ _In addition to the properties defined by the parent interface, {{domxref("DOMEx
 - {{domxref("RTCError.sentAlert", "sentAlert")}} {{ReadOnlyInline}}
   - : If `errorDetail` is `dtls-failure`, this property is an unsigned long integer indicating the fatal DTLS error that was sent out by this device. If `null`, no DTLS error was transmitted.
 
-> **Note:** All `RTCError` objects have their {{domxref("DOMException.name", "name")}} set to `OperationError`.
+> [!NOTE]
+> All `RTCError` objects have their {{domxref("DOMException.name", "name")}} set to `OperationError`.
 
 ## Examples
 
