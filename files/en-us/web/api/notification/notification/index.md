@@ -30,7 +30,7 @@ new Notification(title, options)
   - : An options object containing any custom settings that you want to apply to the notification. The possible options are:
 
     - `actions` {{optional_inline}}
-      - : Must be unspecified or empty. `actions` is only supported for persistent notifications fired from a service worker using {{domxref("ServiceWorkerRegistration.showNotification()")}}.
+      - : Must be unspecified or an empty array. `actions` is only supported for persistent notifications fired from a service worker using {{domxref("ServiceWorkerRegistration.showNotification()")}}.
     - `badge` {{optional_inline}}
       - : A string containing the URL of the image used to represent the notification when there isn't enough space to display the notification itself; for example, the Android Notification Bar. On Android devices, the badge should accommodate devices up to 4x resolution, about 96x96px, and the image will be automatically masked.
     - `body` {{optional_inline}}
