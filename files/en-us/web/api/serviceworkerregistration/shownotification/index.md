@@ -45,7 +45,7 @@ showNotification(title, options)
     - `body` {{optional_inline}}
       - : A string representing the body text of the notification, which is displayed below the title. The default is the empty string.
     - `data` {{optional_inline}} {{experimental_inline}}
-      - : Arbitrary data that you want associated with the notification. This can be of any data type. The default is `null`.
+      - : Arbitrary data that you want associated with the notification. This can be of any [structured-clonable](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm#supported_types) data type. The default is `null`.
     - `dir` {{optional_inline}}
       - : The direction in which to display the notification. It defaults to `auto`, which just adopts the browser's language setting behavior, but you can override that behavior by setting values of `ltr` and `rtl` (although most browsers seem to ignore these settings.)
     - `icon` {{optional_inline}}
