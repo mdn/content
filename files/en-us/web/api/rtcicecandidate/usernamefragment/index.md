@@ -82,7 +82,7 @@ const ssNewCandidate = (signalMsg) => {
     }
   }
 
-  pc.addIceCandidate(candidate).catch(reportError);
+  pc.addIceCandidate(candidate).catch(window.reportError);
 };
 ```
 

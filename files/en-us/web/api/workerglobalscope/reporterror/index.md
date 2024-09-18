@@ -1,14 +1,14 @@
 ---
-title: "Window: reportError() method"
+title: "WorkerGlobalScope: reportError() method"
 short-title: reportError()
-slug: Web/API/Window/reportError
+slug: Web/API/WorkerGlobalScope/reportError
 page-type: web-api-instance-method
 browser-compat: api.reportError
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("Web Workers API")}}{{AvailableInWorkers("worker")}}
 
-The **`reportError()`** method of the {{DOMxRef("Window")}} interface may be used to report errors to the console or event handlers of global scopes, emulating an uncaught JavaScript exception.
+The **`reportError()`** method of the {{DOMxRef("WorkerGlobalScope")}} interface may be used to report errors to the console or event handlers of global scopes, emulating an uncaught JavaScript exception.
 
 This feature is primarily intended for custom event-dispatching or callback-manipulating libraries.
 Libraries can use this feature to catch errors in callback code and re-throw them to the top level handler.
@@ -41,7 +41,7 @@ None ({{jsxref("undefined")}}).
 Feature test for the method using:
 
 ```js
-if (typeof window.reportError === "function") {
+if (typeof self.reportError === "function") {
   // function is defined
 }
 ```
@@ -51,14 +51,14 @@ Note that the handler assigned to `onerror` must return `true` to stop the event
 
 ```js
 const newError = new Error("Some error message", "someFile.js", 11);
-window.reportError(newError);
+self.reportError(newError);
 
-window.onerror = (message, source, lineno, colno, error) => {
+self.onerror = (message, source, lineno, colno, error) => {
   console.error(`message: ${error.message}, lineno: ${lineno}`);
   return true;
 };
 
-window.addEventListener("error", (error) => {
+self.addEventListener("error", (error) => {
   console.error(error.filename);
 });
 
@@ -77,8 +77,8 @@ window.addEventListener("error", (error) => {
 
 ## See also
 
-- {{DOMxRef("Window")}}
-- {{DOMxRef("WorkerGlobalScope.reportError()")}}
+- {{DOMxRef("WorkerGlobalScope")}}
+- {{DOMxRef("Window.reportError()")}}
 - {{DOMxRef("Window/error_event", "error")}} event
 - {{DOMxRef("WorkerGlobalScope/error_event", "error")}} event
 - {{DOMxRef("HTMLElement/error_event", "error")}} event

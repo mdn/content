@@ -121,7 +121,7 @@ async function handleNegotiationNeededEvent() {
     pc.setLocalDescription(offer);
     signalRemotePeer({ description: pc.localDescription });
   } catch (err) {
-    reportError(err);
+    window.reportError(err);
   }
 }
 ```
