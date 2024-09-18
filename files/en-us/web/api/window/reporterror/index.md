@@ -1,7 +1,7 @@
 ---
 title: reportError() global function
 short-title: reportError()
-slug: Web/API/reportError
+slug: Web/API/Window/reportError
 page-type: web-api-global-function
 browser-compat: api.reportError
 ---
