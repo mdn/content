@@ -1,7 +1,7 @@
 ---
 title: queueMicrotask() global function
 short-title: queueMicrotask()
-slug: Web/API/queueMicrotask
+slug: Web/API/Window/queueMicrotask
 page-type: web-api-global-function
 browser-compat: api.queueMicrotask
 ---
