@@ -7,11 +7,11 @@ browser-compat: css.selectors.host-context
 
 {{CSSRef}}
 
-The **`:host-context()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) function selects the shadow host of the [shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) containing the CSS it is used inside (so you can select a custom element from inside its shadow DOM) — but only if the selector given as the function's parameter matches the shadow host's ancestor(s) in the place it sits inside the DOM hierarchy.
+The **`:host-context()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) allows you to style elements within a [shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) differently based a selector of the shadow host (the element that has the shadow root) and its DOM ancestors.
 
-In other words, this allows a custom element, or anything within that custom element's shadow DOM, to apply different styles based on its position within the outer DOM or classes/attributes applied to ancestor elements.
+Normally, elements within a shadow DOM are isolated from the DOM outside of it. `:host-context()` allows you to "peek outside" of this Shadow DOM and check if any of the element's parent elements match a certain CSS selector. For example, applying a different text color to elements within a shadow root when a `.dark-theme` class is applied to `<body>`.
 
-One typical use of this is with a descendant selector expression — for example `h1` — to select only instances of the custom element that are inside an `<h1>`. Another typical use would be to allow inner elements to react to classes or attributes on any ancestor elements - for example, applying a different text color when a `.dark-theme` class is applied to `<body>`.
+Think of it like this: Imagine you have a chameleon (an element) living inside a greenhouse (the shadow host). `:host-context()` lets the chameleon change its appearance based on the greenhouse's environment. If the greenhouse is in a sunny location (a parent element with a "sunny-theme" class), the chameleon turns yellow. If the greenhouse is in a shady spot (a parent element with a "shady-theme" class), it turns blue.
 
 > [!NOTE]
 > This has no effect when used outside a shadow DOM.
