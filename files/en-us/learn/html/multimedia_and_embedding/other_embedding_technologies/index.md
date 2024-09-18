@@ -347,7 +347,7 @@ If you find yourself needing to embed plugin content, this is the kind of inform
       <td>ad hoc attributes with those names and values</td>
       <td>
         single-tag {{htmlelement("param")}} elements, contained within
-        <code>&#x3C;object></code> (<param> element is deprecated. See {{htmlelement("param")}} for more information)
+        <code>&#x3C;object></code> ({{htmlelement("param")}} element is deprecated. See {{htmlelement("param")}} for more information)
       </td>
     </tr>
     <tr>
