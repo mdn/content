@@ -8,7 +8,7 @@ browser-compat: api.HTMLElement.dir
 
 {{ApiRef("HTML DOM")}}
 
-The **`HTMLElement.dir`** property indicates the text writing directionality of the content of the current element. It reflects the element's [`dir`](/en-US/docs/Web/HTML/Global_attributes/dir) attribute.
+The **`HTMLElement.dir`** property indicates the text writing directionality of the content of the current element. It reflects the element's [`dir`](/en-US/docs/Web/HTML/Global_attributes/dir) attribute. Note that even if the `dir` attribute is unspecified, the element may still inherit directionality from its parent, which is not reflected by this property's value.
 
 The text writing directionality of an element is which direction that text goes (for support of different language systems). Arabic languages and Hebrew are typical languages using the RTL directionality.
 
