@@ -44,8 +44,9 @@ const start = textarea.selectionStart;
 - {{domxref("HTMLTextAreaElement.selectionEnd")}}
 - {{domxref("HTMLTextAreaElement.selectionDirection")}}
 - {{domxref("HTMLTextAreaElement.textLength")}}
-- {{domxref("HTMLTextAreaElement.selectionChange()")}}
 - {{domxref("HTMLTextAreaElement.select()")}}
-- {{HTMLElement("HTMLInputElement.selectionStart")}}
+- {{domxref("HTMLTextAreaElement.setSelectionRange()")}}
+- {{domxref("HTMLTextAreaElement.setRangeText()")}}
+- {{domxref("HTMLInputElement.selectionStart")}}
 - {{domxref("Selection")}}
 - {{cssxref("::selection")}} pseudo-element
