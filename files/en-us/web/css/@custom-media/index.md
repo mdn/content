@@ -9,7 +9,7 @@ browser-compat: css.at-rules.custom-media
 
 {{CSSRef}}{{SeeCompatTable}}
 
-The **`@custom-media`** CSS [at-rule](/en-US/docs/Web/CSS/At-rule) defines aliases for long and complex [media queries](/en-US/docs/Web/CSS/CSS_media_queries). Instead of using hardcoded {{CSSxRef("@media")}} values, in multiple places and files, custom media query sets a media query in a single line of code.
+The **`@custom-media`** CSS [at-rule](/en-US/docs/Web/CSS/At-rule) defines aliases for long and complex [media queries](/en-US/docs/Web/CSS/CSS_media_queries). Instead of using hardcoded {{CSSxRef("@media")}} values, in multiple CSS files, declare custom media query in a single location and use theme everywhere.
 
 ## Syntax
 
@@ -58,7 +58,7 @@ The `@custom-media` at-rule is used on responsive websites which use a particula
 }
 ```
 
-By changing one line of code, all media queries are updated.
+By changing one line of code, all media queries using this custom media query alies in all CSS files are updated accordingly.
 
 ### Grouping multiple responsive breakpoints
 
