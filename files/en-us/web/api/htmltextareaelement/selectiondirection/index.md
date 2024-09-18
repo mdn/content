@@ -40,8 +40,9 @@ const end = textarea.selectionDirection;
 - {{domxref("HTMLTextAreaElement.selectionStart")}}
 - {{domxref("HTMLTextAreaElement.selectionEnd")}}
 - {{domxref("HTMLTextAreaElement.textLength")}}
-- {{domxref("HTMLTextAreaElement.selectionChange()")}}
 - {{domxref("HTMLTextAreaElement.select()")}}
-- {{HTMLElement("HTMLInputElement.direction")}}
+- {{domxref("HTMLTextAreaElement.setSelectionRange()")}}
+- {{domxref("HTMLTextAreaElement.setRangeText()")}}
+- {{domxref("HTMLInputElement.selectionDirection")}}
 - {{domxref("Selection")}}
 - {{cssxref("::selection")}} pseudo-element
