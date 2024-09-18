@@ -120,7 +120,7 @@ p {
 
 #### Result
 
-{{EmbedLiveSample('Examples', 600, 620)}}
+{{EmbedLiveSample('Examples', 600, 630)}}
 
 ## Specifications
 
