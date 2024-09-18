@@ -79,10 +79,7 @@ showNotification(title, options)
         auto-minimize notifications after approximately twenty seconds. The default value
         is `false`.
     - `silent` {{optional_inline}}
-      - : When set indicates that no sounds or vibrations should be
-        made. If _options_'s `silent` is `true`
-        and _options_'s `vibrate` is present a `TypeError` exception
-        will be thrown. The default value is `null`, means to respect device defaults.
+      - : A boolean value specifying whether the notification is silent (no sounds or vibrations issued), regardless of the device settings. The default, `null`, means to respect device defaults. If `true`, then `vibrate` must not be present.
     - `tag` {{optional_inline}}
       - : An ID for a given notification that allows you to find,
         replace, or remove the notification using a script if necessary.
