@@ -41,7 +41,11 @@ This directive may have either:
 - the single keyword value `'none'`, meaning that no form submissions may be made
 - a list of _source expression_ values, meaning that form submissions may be made to URLs that match any of the given source expressions.
 
-The syntax for each source expression is given in [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources).
+The syntax for each source expression is given in [CSP Source Values](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/Sources). However, only the following subset of those values apply to `form-action`:
+
+- `<host-source>`
+- `<scheme-source>`
+- the keyword value `'self'`.
 
 ## Examples
 
