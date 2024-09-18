@@ -1,7 +1,7 @@
 ---
 title: structuredClone() global function
 short-title: structuredClone()
-slug: Web/API/structuredClone
+slug: Web/API/Window/structuredClone
 page-type: web-api-global-function
 browser-compat: api.structuredClone
 ---
