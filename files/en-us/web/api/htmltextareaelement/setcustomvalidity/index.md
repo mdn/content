@@ -8,7 +8,7 @@ browser-compat: api.HTMLTextAreaElement.setCustomValidity
 
 {{ APIRef("HTML DOM") }}
 
-The **`setCustomValidity()`** method of the {{DOMxRef("HTMLTextAreaElement")}} interface sets the custom validity message for the {{htmlelement("textarea")}} element to the specified message. Use the empty string to indicate that the element does _not_ have a custom validity error.
+The **`setCustomValidity()`** method of the {{DOMxRef("HTMLTextAreaElement")}} interface sets the custom validity message for the {{htmlelement("textarea")}} element. Use the empty string to indicate that the element does _not_ have a custom validity error.
 
 ## Syntax
 
@@ -19,7 +19,7 @@ setCustomValidity(string)
 ### Parameters
 
 - `string`
-  - : The string containing the error message.
+  - : The string containing the error message. The empty string removes any custom validity errors.
 
 ### Return value
 

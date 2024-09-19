@@ -8,7 +8,9 @@ browser-compat: api.HTMLFieldSetElement.setCustomValidity
 
 {{ APIRef("HTML DOM") }}
 
-The **`setCustomValidity()`** method of the {{DOMxRef("HTMLFieldSetElement")}} interface sets the custom validity message for the {{htmlelement("fieldset")}} element to the specified message. Use the empty string to indicate that the element does _not_ have a custom validity error.
+The **`setCustomValidity()`** method of the {{DOMxRef("HTMLFieldSetElement")}} interface sets the custom validity message for the {{htmlelement("fieldset")}} element. Use the empty string to indicate that the element does _not_ have a custom validity error.
+
+The `<fieldset>` element is not a candidate for constraint validation. The {{DOMxRef("HTMLFieldSetElement.reportValidity()", "reportValidity()")}} method will not cause the custom error message to be displayed to the user, but does set the {{DOMxRef("ValidityState.customError", "customError")}} property of the element's {{DOMxRef("ValidityState")}} object to `true` and the {{DOMxRef("ValidityState.valid", "valid")}} property to `false`.
 
 ## Syntax
 
@@ -19,7 +21,7 @@ setCustomValidity(string)
 ### Parameters
 
 - `string`
-  - : The string containing the error message.
+  - : The string containing the error message. The empty string removes any custom validity errors.
 
 ### Return value
 
