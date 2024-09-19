@@ -122,7 +122,7 @@ arr2.push(4);
 // arr remains unaffected
 ```
 
-Spread syntax effectively goes one level deep while copying an array. Therefore, it may be unsuitable for copying multidimensional arrays. The same is true with {{jsxref("Object.assign()")}} — no native operation in JavaScript does a deep clone. The web API method {{domxref("structuredClone()")}} allows deep copying values of certain [supported types](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm#supported_types). See [shallow copy](/en-US/docs/Glossary/Shallow_copy) for more details.
+Spread syntax effectively goes one level deep while copying an array. Therefore, it may be unsuitable for copying multidimensional arrays. The same is true with {{jsxref("Object.assign()")}} — no native operation in JavaScript does a deep clone. The web API method {{DOMxRef("Window.structuredClone", "structuredClone()")}} allows deep copying values of certain [supported types](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm#supported_types). See [shallow copy](/en-US/docs/Glossary/Shallow_copy) for more details.
 
 ```js example-bad
 const a = [[1], [2], [3]];

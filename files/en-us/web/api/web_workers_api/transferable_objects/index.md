@@ -14,7 +14,7 @@ For example, an {{jsxref("ArrayBuffer")}} is a transferable object that owns a b
 When such a buffer is transferred between threads, the associated memory resource is detached from the original buffer and attached to the buffer object created in the new thread.
 The buffer object in the original thread is no longer usable because it no longer owns a memory resource.
 
-Transferring may also be used when creating deep copies of objects with {{domxref("structuredClone()")}}.
+Transferring may also be used when creating deep copies of objects with {{DOMxRef("WorkerGlobalScope.structuredClone", "structuredClone()")}}.
 Following the cloning operation, the transferred resources are moved rather than copied to the cloned object.
 
 For both `postMessage()` and `structuredClone()`, transferred resources have to be attached to the data object, otherwise they would not be available on the receiving end, because the transferable array only indicates how certain resources should be sent, but does not actually send them (although they would always be detached).
@@ -48,7 +48,7 @@ console.log(uInt8Array.byteLength); // 0
 
 ## Transferring during a cloning operation
 
-The code below shows a {{domxref("structuredClone()")}} operation where the underlying buffer is copied from the original object to the clone.
+The code below shows a `structuredClone()` operation where the underlying buffer is copied from the original object to the clone.
 
 ```js
 const original = new Uint8Array(1024);
