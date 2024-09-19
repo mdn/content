@@ -191,7 +191,6 @@ and this CSS:
   width: 1px;
 }
 
-
 input.visually-hidden:is(:focus, :focus-within) + label {
   outline: thin dotted;
 }
