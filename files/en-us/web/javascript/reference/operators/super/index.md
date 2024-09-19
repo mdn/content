@@ -16,7 +16,7 @@ The `super.prop` and `super[expr]` expressions are valid in any [method definiti
 ## Syntax
 
 ```js-nolint
-super([arguments]) // calls the parent constructor.
+super(...arguments) // calls the parent constructor.
 super.propertyOnParent
 super[expression]
 ```
