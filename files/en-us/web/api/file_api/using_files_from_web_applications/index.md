@@ -186,7 +186,6 @@ and this CSS:
   height: 1px;
   width: 1px;
   overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
 }
 
 input.visually-hidden:is(:focus, :focus-within) + label {
