@@ -96,3 +96,4 @@ grid-template-columns: 200px 1fr min-content;
 
 - Related sizing keywords: {{cssxref("max-content")}}, {{cssxref("fit-content")}}
 - [CSS box sizing](/en-US/docs/Web/CSS/CSS_box_sizing) module
+- The {{cssxref("interpolate-size")}} property and {{cssxref("calc-size()")}} function for enabling animations to and from {{cssxref("min-content")}}.

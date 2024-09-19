@@ -148,3 +148,4 @@ div {
 - {{cssxref("anchor-size()")}}
 - {{cssxref("clamp", "clamp()")}}
 - {{cssxref("clamp", "minmax()")}}
+- The {{cssxref("interpolate-size")}} property and {{cssxref("calc-size()")}} function for enabling animations to and from [intrinsic](/en-US/docs/Glossary/Intrinsic_Size) `height` values such as {{cssxref("auto")}} and {{cssxref("fit-content")}}.

@@ -188,3 +188,4 @@ p.minblue {
 - {{cssxref("min-width")}}, {{cssxref("max-width")}}
 - The mapped logical properties: {{cssxref("block-size")}}, {{cssxref("inline-size")}}
 - {{cssxref("anchor-size()")}}
+- The {{cssxref("interpolate-size")}} property and {{cssxref("calc-size()")}} function for enabling animations to and from [intrinsic](/en-US/docs/Glossary/Intrinsic_Size) `width` values such as {{cssxref("auto")}} and {{cssxref("fit-content")}}.

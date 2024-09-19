@@ -534,4 +534,5 @@ Try entering some text inside the form inputs, and see how they grow when the va
 ## See also
 
 - {{cssxref("interpolate-size")}}
+- {{cssxref("calc()")}}
 - [Animate to height: auto; (and other intrinsic sizing keywords) in CSS](https://developer.chrome.com/docs/css-ui/animate-to-height-auto) on developer.chrome.com (2024)

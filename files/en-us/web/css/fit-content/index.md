@@ -71,3 +71,4 @@ block-size: fit-content;
 
 - Related sizing keywords: {{cssxref("min-content")}}, {{cssxref("max-content")}}
 - [CSS box sizing](/en-US/docs/Web/CSS/CSS_box_sizing) module
+- The {{cssxref("interpolate-size")}} property and {{cssxref("calc-size()")}} function for enabling animations to and from {{cssxref("fit-content")}}.
