@@ -58,7 +58,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Cancels the repeated execution set using {{domxref("setInterval()")}}.
 - {{domxref("clearTimeout()", "WorkerGlobalScope.clearTimeout()")}}
   - : Cancels the delayed execution set using {{domxref("setTimeout()")}}.
-- {{domxref("createImageBitmap()", "WorkerGlobalScope.createImageBitmap()")}}
+- {{domxref("WorkerGlobalScope.createImageBitmap()")}}
   - : Accepts a variety of different image sources, and returns a {{jsxref("Promise")}} which resolves to an {{domxref("ImageBitmap")}}. Optionally the source is cropped to the rectangle of pixels originating at _(sx, sy)_ with width sw, and height sh.
 - {{domxref("WorkerGlobalScope.dump()")}} {{deprecated_inline}} {{non-standard_inline}}
   - : Allows you to write a message to stdout — i.e. in your terminal. This is the same as Firefox's {{domxref("window.dump")}}, but for workers.

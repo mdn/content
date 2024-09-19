@@ -185,7 +185,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Closes the current window.
 - {{domxref("Window.confirm()")}}
   - : Displays a dialog with a message that the user needs to respond to.
-- {{domxref("createImageBitmap", "Window.createImageBitmap()")}}
+- {{domxref("Window.createImageBitmap()")}}
   - : Accepts a variety of different image sources, and returns a {{jsxref("Promise")}} which resolves to an {{domxref("ImageBitmap")}}. Optionally the source is cropped to the rectangle of pixels originating at _(sx, sy)_ with width sw, and height sh.
 - {{domxref("Window.dump()")}} {{Non-standard_Inline}}
   - : Writes a message to the console.

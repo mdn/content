@@ -120,7 +120,7 @@ The following criteria must be met when calling **`createTexture()`**, otherwise
 
 In the WebGPU samples [Textured Cube sample](https://webgpu.github.io/webgpu-samples/samples/texturedCube/), a texture to use on the faces of a cube is created by:
 
-- Loading the image into an {{domxref("HTMLImageElement")}} and creating an image bitmap using {{domxref("createImageBitmap()")}}.
+- Loading the image into an {{domxref("HTMLImageElement")}} and creating an image bitmap using {{domxref("Window.createImageBitmap", "createImageBitmap()")}}.
 - Creating a new texture using `createTexture()`.
 - Copying the image bitmap into the texture using {{domxref("GPUQueue.copyExternalImageToTexture()")}}.
 

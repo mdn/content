@@ -93,7 +93,7 @@ _No changes._
 - {{domxref("Performance.toJSON()")}} has been exposed to {{domxref("Web_Workers_API", "Web Workers", "", "1")}} ([Firefox bug 1504958](https://bugzil.la/1504958)).
 - {{domxref("XMLHttpRequest")}} requests will now throw a `NetworkError` if the requested content type is a `Blob`, and the request method is not `GET` ([Firefox bug 1502599](https://bugzil.la/1502599)).
 - The `-moz-` prefixed versions of many of the {{domxref("Fullscreen API", "", "", "1")}} features have been deprecated, and will now display deprecation warnings in the JavaScript console when encountered ([Firefox bug 1504946](https://bugzil.la/1504946)).
-- {{domxref("createImageBitmap()")}} now supports SVG images ({{domxref("SVGImageElement")}}) as an image source ([Firefox bug 1500768](https://bugzil.la/1500768)).
+- {{domxref("Window.createImageBitmap()")}} and {{domxref("WorkerGlobalScope.createImageBitmap()")}} now supports SVG images ({{domxref("SVGImageElement")}}) as an image source ([Firefox bug 1500768](https://bugzil.la/1500768)).
 
 #### DOM events
 
