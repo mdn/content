@@ -9,7 +9,7 @@ browser-compat: css.properties.interpolate-size
 
 {{CSSRef}}{{seecompattable}}
 
-The **`interpolate-size`** [CSS](/en-US/docs/Web/CSS) property enables you to enable [animations](/en-US/docs/Web/CSS/CSS_animations) and [transitions](/en-US/docs/Web/CSS/CSS_transitions) between a [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) value and an [intrinsic size value](/en-US/docs/Glossary/Intrinsic_Size) such as `auto`, [`fit-content`](/en-US/docs/Web/CSS/fit-content), or [`max-content`](/en-US/docs/Web/CSS/max-content).
+The **`interpolate-size`** [CSS](/en-US/docs/Web/CSS) property allows you to enable [animations](/en-US/docs/Web/CSS/CSS_animations) and [transitions](/en-US/docs/Web/CSS/CSS_transitions) between a [`<length-percentage>`](/en-US/docs/Web/CSS/length-percentage) value and an [intrinsic size value](/en-US/docs/Glossary/Intrinsic_Size) such as `auto`, [`fit-content`](/en-US/docs/Web/CSS/fit-content), or [`max-content`](/en-US/docs/Web/CSS/max-content).
 
 This property is typically used to animate the {{cssxref("width")}} and/or {{cssxref("height")}} of a container between a `<length-percentage>` and the full size of its content (i.e. between "closed" and "open" or "hide" and "reveal" states).
 
@@ -84,7 +84,7 @@ At the time of writing, the following intrinsic values can be opted-in to animat
 
 ### Basic `interpolate-size` usage
 
-This example demonstrates how to set `interpolate-size: allow-keywords` on a document to enable animations involving an intrinsic size. The demo features a character badge/"name tag", which can be hovered or focused to reveal information about the character. The reveal is handled by a {{cssxref("height")}} navigation between a set length and `max-content`.
+This example demonstrates how to set `interpolate-size: allow-keywords` on a document to enable animations involving an intrinsic size. The demo features a character badge/"name tag", which can be hovered or focused to reveal information about the character. The reveal is handled by a {{cssxref("height")}} transition between a set length and `max-content`.
 
 #### HTML
 
@@ -160,7 +160,7 @@ In the CSS, we first set `interpolate-size: allow-keywords` on the {{cssxref(":r
 }
 ```
 
-We then set the `<section>`'s {{cssxref("height")}} to `42px` and {{cssxref("overflow")}} to `hidden` so only the `<header>` is shown by default. Finally, we set the `<section>` `height` on {{cssxref(":hover")}} and {{cssxref(":focus")}} to `max-content`. The rest of the CSS has been hidden for brevity.
+We then set the `<section>`'s {{cssxref("height")}} to `42px` and {{cssxref("overflow")}} to `hidden` so only the `<header>` is shown by default, then specify a `transition` that animates the `<section>` `height` over 1 second during state change. Finally, we set the `<section>` `height` on {{cssxref(":hover")}} and {{cssxref(":focus")}} to `max-content`.
 
 ```css
 section {
@@ -174,6 +174,8 @@ section:focus {
   height: max-content;
 }
 ```
+
+The rest of the CSS has been hidden for brevity.
 
 #### Result
 
