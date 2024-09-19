@@ -10,7 +10,7 @@ browser-compat: api.HTMLInputElement.validationMessage
 
 The **`validationMessage`** read-only property of the {{domxref("HTMLInputElement")}} interface returns a string representing a localized message that describes the validation constraints that the {{htmlelement("input")}} control does not satisfy (if any).
 
-If the `<input>` element is not a candidate for constraint validation ({{domxref("HTMLInputElement.willValidate")}} is `false`), or it satisfies its constraints, the value is the empty string (`""`). The value is the empty string if the type is `hidden`, `reset` or `button`, the `<input>` element is disabled, or the `<input>` is not associated with a form as these are not candidates for constraint validation.
+If the `<input>` element is not a candidate for constraint validation ({{domxref("HTMLInputElement.willValidate")}} is `false`), or it satisfies its constraints, the value is the empty string (`""`).
 
 If the element is a candidate for constraint validation (`willValidate` is `true`) and the constraints are not met (the {{domxref("HTMLInputElement.validity")}} object's `valid` property is `false`), the value is the error message that would be shown to the user during validation.
 

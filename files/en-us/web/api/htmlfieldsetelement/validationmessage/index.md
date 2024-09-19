@@ -12,7 +12,7 @@ The **`validationMessage`** read-only property of the {{domxref("HTMLFieldSetEle
 
 ## Value
 
-A string; the empty string, `""`;
+The empty string, `""`;
 
 ## Specifications
 
