@@ -29,7 +29,7 @@ A floating-point, pseudo-random number between 0 (inclusive) and 1 (exclusive).
 
 ## Examples
 
-Note that as numbers in JavaScript are IEEE 754 floating point numbers with round-to-nearest-even behavior, the ranges claimed for the functions below (excluding the one for `Math.random()` itself) aren't exact. If extremely large bounds are chosen (2<sup>53</sup> or higher), it's possible in _extremely_ rare cases to reach the usually-excluded upper bound, especially if large bounds are chosen.
+Note that as numbers in JavaScript are IEEE 754 floating point numbers with round-to-nearest-even behavior, the ranges claimed for the functions below (excluding the one for `Math.random()` itself) aren't exact. If extremely large bounds are chosen (2<sup>53</sup> or higher), it's possible in _extremely_ rare cases to reach the usually-excluded upper bound. This is because floating point precision decreases as magnitude increases, so a tiny difference between the maximum attainable value and the upper bound may not be representable at the requested maximum, therefore causing the upper bound to become attainable.
 
 ### Getting a random number between 0 (inclusive) and 1 (exclusive)
 
