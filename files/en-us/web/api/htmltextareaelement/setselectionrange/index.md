@@ -26,20 +26,12 @@ setSelectionRange(selectionStart, selectionEnd, selectionDirection)
 
 ### Parameters
 
-- {{domxref("HTMLTextAreaElement.selectionStart", "selectionStart")}}
-
-  - : The index of the first selected character. An index greater than the length
-    of the element's value is treated as pointing to the end of the value.
-
-- {{domxref("HTMLTextAreaElement.selectionEnd", "selectionEnd")}}
-
-- : The index of the character _after_ the last selected character. An
-  index greater than the length of the element's value is treated as pointing to the end
-  of the value. If `selectionEnd` is less than `selectionStart`, then both are treated as the value of `selectionEnd`.
-
-- {{domxref("HTMLTextAreaElement.selectionDirection", "selectionDirection")}} {{optional_inline}}
-
-- : The keyword `"forward"`, `"backward"`, or the default `"none"` — indicating the direction in which the selection is considered to have been performed.
+- `selectionStart`
+  - : The index of the first selected character. An index greater than the length of the element's value is treated as pointing to the end of the value. See the {{domxref("HTMLTextAreaElement.selectionStart", "selectionStart")}} property for more information.
+- `selectionEnd`
+  - : The index of the character _after_ the last selected character. An index greater than the length of the element's value is treated as pointing to the end of the value. If `selectionEnd` is less than `selectionStart`, then both are treated as the value of `selectionEnd`. See the {{domxref("HTMLTextAreaElement.selectionEnd", "selectionEnd")}} property for more information.
+- `selectionDirection` {{optional_inline}}
+  - : The keyword `"forward"`, `"backward"`, or the default `"none"` — indicating the direction in which the selection is considered to have been performed. See the {{domxref("HTMLTextAreaElement.selectionDirection", "selectionDirection")}} property for more information.
 
 ### Return value
 

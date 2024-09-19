@@ -60,23 +60,7 @@ The example below illustrates what a link will look and behave like by default; 
 - Unvisited links are blue.
 - Visited links are purple.
 - Hovering a link makes the mouse pointer change to a little hand icon.
-- Focused links have an outline around them — you should be able to focus on the links on this page with the keyboard by pressing the tab key. (On Mac, you'll need to use
-
-  <kbd>option</kbd>
-
-  \+
-
-  <kbd>tab</kbd>
-
-  , or enable the [Full Keyboard Access: All controls](https://support.apple.com/guide/mac-help/use-your-keyboard-like-a-mouse-mchlp1399/mac) option by pressing
-
-  <kbd>Ctrl</kbd>
-
-  \+
-
-  <kbd>F7</kbd>
-
-  .)
+- Focused links have an outline around them — you should be able to focus on the links on this page with the keyboard by pressing the tab key.
 
 - Active links are red. Try holding down the mouse button on the link as you click it.
 
