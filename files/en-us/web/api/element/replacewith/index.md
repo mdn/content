@@ -74,3 +74,5 @@ with (node) {
 
 - {{domxref("Node.replaceChild()")}}
 - {{domxref("NodeList")}}
+- {{domxref("CharacterData.replaceWith()")}}
+- {{domxref("DocumentType.replaceWith()")}}
