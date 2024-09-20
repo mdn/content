@@ -53,7 +53,7 @@ Any arguments passed into the function are not cloned. Instead, they are passed 
 An Xray for an object refers to the original. Any changes to the argument made in the exported function affect the original object passed in. For example:
 
 ```js
-// ad// privileged scope: for example, a content script
+// privileged scope: for example, a content script
 function changeMyName(user) {
   user.name = "Bill";
 }
@@ -63,7 +63,7 @@ exportFunction(changeMyName, window, {
 ```
 
 ```js
-// ad// less-privileged scope: for example, a page script
+// less-privileged scope: for example, a page script
 var user = { name: "Jim" };
 var test = document.getElementById("test");
 test.addEventListener(
@@ -84,7 +84,7 @@ This behavior is subject to the normal rules of Xrays. For example, an expando p
 Xrays provide a filtered view of the original object. For example, functions aren't visible in the Xrays of JavaScript [`Object`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) types. If you need unfiltered access to the original, you can [waive Xrays](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html#waiving-xray-vision):
 
 ```js
-// ad// privileged scope: for example, a content script
+// privileged scope: for example, a content script
 function logUser(user) {
   // console.log(user.getUser());                 // error
   console.log(user.wrappedJSObject.getUser()); // "Bill"
@@ -95,7 +95,7 @@ exportFunction(logUser, window, {
 ```
 
 ```js
-// ad// less-privileged scope: for example, a page script
+// less-privileged scope: for example, a page script
 var user = {
   getUser: function () {
     return "Bill";
@@ -118,7 +118,7 @@ See [Xray vision](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xra
 If functions are given as arguments, these are also passed as Xrays. As you can call `Function` Xrays like normal functions, this means that passing callbacks into the exported function works:
 
 ```js
-// ad// privileged scope: for example, a content script
+// privileged scope: for example, a content script
 function logUser(getUser) {
   console.log(getUser()); // "Bill"
 }
@@ -128,7 +128,7 @@ exportFunction(logUser, unsafeWindow, {
 ```
 
 ```js
-// ad// less-privileged scope: for example, a page script
+// less-privileged scope: for example, a page script
 function getUser() {
   return "Bill";
 }
