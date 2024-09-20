@@ -21,7 +21,7 @@ See [Exporting functions that take arguments](#Exporting_functions_that_take_arg
 let exportFunctionuating = exportFunction(
   func,              // function
   targetScope,       // object
-  options            // object
+  options            // optional object
 );
 ```
 

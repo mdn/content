@@ -27,7 +27,7 @@ This enables privileged code, such as an extension, to share an object with less
 let clonedObject = cloneInto(
   obj,               // object
   targetScope,       // object
-  options            // object
+  options            // optional object
 );
 ```
 
