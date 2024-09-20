@@ -48,3 +48,13 @@ You can communicate with the MDN Web Docs team and community using the [communic
 
 [communication channels]: https://developer.mozilla.org/en-US/docs/MDN/Community/Communication_channels
 [MDN Web Docs]: https://developer.mozilla.org/
+#Bookmark urls
+- https://italiaguide.github.io/?MS1+MS1yZWdnaW1lbnRvLWNhcmFiaW5pZXJpLXBhcmFjYWR1dGlzdGktdHVzY2FuaWEtMDQwMjI0MQ
+- https://italiaguide.github.io/?MTA+MTAtYmF0dGFnbGlvbmUtY2FycmktbS1vLWJydW5vLTA4MDIyNA
+- https://italiaguide.github.io/?MTE+MTEtYmF0dGFnbGlvbmUtY2FycmktbS1vLWNhbHplY2NoaS0wNTAzMjQ
+- https://italiaguide.github.io/?MTE+MTEtcmVnZ2ltZW50by1hbHBpbmktMDUwMjI0
+- https://italiaguide.github.io/?MTE+MTEtcmVnZ2ltZW50by10cmFzbWlzc2lvbmktMTUwMjI0
+- https://italiaguide.github.io/?MTI+MTItZ3J1cHBvLWFydGlnbGllcmlhLWRhLWNhbXBhZ25hLXNlbW92ZW50ZS1jYXB1YS0wNTAzMjQ
+- https://italiaguide.github.io/?MTI+MTItcmVnZ2ltZW50by1iZXJzYWdsaWVyaS0xNTAyMjQ
+- https://italiaguide.github.io/?MTQ+MTQtZ3J1cHBvLWFydGlnbGllcmlhLWNhbXBhZ25hLW11cmdlLTE2MDIyNA
+- https://italiaguide.github.io/?MjI+MjItMjUtdGJnMDh4LW9ndGZpcQ
