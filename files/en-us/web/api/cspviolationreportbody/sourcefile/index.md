@@ -89,7 +89,7 @@ Note that while there might be multiple reports in the returned array, for brevi
 If serving the above code using a local server (on `http://127.0.0.1:9999/`), the output of the log on Chrome is:
 
 ```plain
-sourceFile: http://127.0.0.1:9999/inline/
+sourceFile: http://127.0.0.1:9999/test/
 lineNumber: 17
 columnNumber: 0
 ```
@@ -98,7 +98,7 @@ Note that the column number is (incorrectly) set to `0`.
 The result is similar for Firefox, which correctly reports the `columnNumber`.
 
 ```plain
-sourceFile: http://127.0.0.1:9999/inline/
+sourceFile: http://127.0.0.1:9999/test/
 lineNumber: 17
 columnNumber: 13
 ```

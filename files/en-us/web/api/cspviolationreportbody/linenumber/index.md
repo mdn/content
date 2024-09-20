@@ -53,6 +53,8 @@ The document also includes an inline script, which should therefore trigger a CS
 </html>
 ```
 
+Copy the above code into a file `test/index.html`.
+
 #### JavaScript (main.js)
 
 The document above also loads the external script `main.js`, which is shown below.
@@ -81,12 +83,14 @@ observer.observe();
 
 Note that while there might be multiple reports in the returned array, for brevity we only log the values of the first element.
 
+Copy the code above into `test/main.js` alongside the `index.html` file.
+
 #### Results
 
-If serving the above code using a local server (on `http://127.0.0.1:9999/`), the output of the log on Chrome is:
+If using a local server to load the HTML from `http://127.0.0.1:9999/test/` (or `http://127.0.0.1:9999/test/index.html`), the output of the log on Chrome is:
 
 ```plain
-sourceFile: http://127.0.0.1:9999/inline/
+sourceFile: http://127.0.0.1:9999/test/
 lineNumber: 17
 columnNumber: 0
 ```
@@ -95,7 +99,7 @@ Note that the column number is (incorrectly) set to `0`.
 The result is similar for Firefox, which correctly reports the `columnNumber`.
 
 ```plain
-sourceFile: http://127.0.0.1:9999/inline/
+sourceFile: http://127.0.0.1:9999/test/
 lineNumber: 17
 columnNumber: 13
 ```
