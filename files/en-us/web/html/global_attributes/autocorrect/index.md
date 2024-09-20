@@ -15,7 +15,7 @@ Autocorrection is relevant to editable text elements:
 - {{htmlelement("textarea")}} elements.
 - Any element that has the [`contenteditable`](/en-US/docs/Web/HTML/Global_attributes/contenteditable) attribute set.
 
-Elements have autocorrection enabled by default, except for within a {{htmlelement("form")}} element, where the default value is inherited from the form.
+Editable elements have autocorrection enabled by default, except for within a {{htmlelement("form")}} element, where the default value may be inherited from the form.
 Explicitly setting the attribute overrides the default.
 
 ## Value
@@ -26,17 +26,15 @@ Possible values are:
 
   - : Enable automatic correction of spelling and punctuation errors.
 
-    Setting any value other than `off`, including the empty string, is treated as `on`.
-
 - `off`
 
   - : Disable automatic correction of editable text.
 
-    The {{htmlelement("input")}} element types that don't support autocorrection always return `off`: [`password`](/en-US/docs/Web/HTML/Element/input/password), [`email`](/en-US/docs/Web/HTML/Element/input/email) and [`url`](/en-US/docs/Web/HTML/Element/input/url).
+The {{htmlelement("input")}} element types that don't support autocorrection always return `off`: [`password`](/en-US/docs/Web/HTML/Element/input/password), [`email`](/en-US/docs/Web/HTML/Element/input/email) and [`url`](/en-US/docs/Web/HTML/Element/input/url).
 
-The default value for editable elements that are not nested inside a `<form>` is `on`.
-Nested `<form>` elements inherit their their default value of `autocorrect` from the form (including {{htmlelement("button")}}, {{htmlelement("fieldset")}}, {{htmlelement("input")}}, {{htmlelement("output")}}, {{htmlelement("select")}}, and {{htmlelement("textarea")}}).
-The default value will be used if an element's `autocorrect` value is not explicitly set.
+For all other editable elements, setting any value other than `off` is always treated as `on` (including the empty string), and the default value for elements that are not nested inside a `<form>` is `on`.
+
+When nested in a `<form>`, the following elements inherit their their default value of `autocorrect` from the form if it has been set: {{htmlelement("button")}}, {{htmlelement("fieldset")}}, {{htmlelement("input")}}, {{htmlelement("output")}}, {{htmlelement("select")}}, and {{htmlelement("textarea")}}.
 
 ## Examples
 
