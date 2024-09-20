@@ -70,7 +70,7 @@ To use the module:
    npx -v
    ```
 
-2. If Node.js is not installed, you need to install it. Follow the [download instructions](https://nodejs.org/en/download/) in the Node.js docs, then run the above commands again to check if the installation is successful.
+2. If Node.js is not installed, you need to install it. Follow the [download instructions](https://nodejs.org/en/download/package-manager) in the Node.js docs, then run the above commands again to check if the installation is successful.
 
 3. Let's assume the directory is `/path/to/project`. Run the following command to start the server:
 
@@ -85,30 +85,23 @@ To use the module:
 Another way to achieve this is to use Python's `http.server` module.
 
 > [!NOTE]
-> Older versions of Python (up to version 2.7) provided a similar module named `SimpleHTTPServer`. If you are using Python 2.x, you can follow this guide by replacing all uses of `http.server` with `SimpleHTTPServer`. However, we recommend you use the latest version of Python.
+> Older versions of Python (up to version 2.7) provided a similar module named `SimpleHTTPServer`. Python 2 is already end-of-life so we recommend using Python 3.
 
 To do this:
 
-1. Install Python. If you are using Linux or macOS, it should be available on your system already. If you are a Windows user, you can get an installer from the Python homepage and follow the instructions to install it:
-
-   - Go to [python.org](https://www.python.org/)
-   - Under the Download section, click the link for Python "3.xxx".
-   - At the bottom of the page, click the _Windows Installer_ link to download the installer file.
-   - When it has downloaded, run it.
-   - On the first installer page, make sure you check the "Add Python 3.xxx to PATH" checkbox.
-   - Click _Install_, then click _Close_ when the installation has finished.
-
-2. Open your command prompt (Windows) / terminal (macOS/ Linux). To check if Python is installed, enter the following command:
+1. Run the following command to check if Python is already installed:
 
    ```bash
    python -V
    # If the above fails, try:
    python3 -V
    # Or, if the "py" command is available, try:
-   py -V
+   py -3 -V
    ```
 
-3. This should return a version number. If this is OK, navigate to the directory that contains the website code you want to test, using the `cd` command.
+2. If Python is not installed, you need to install it. Follow the [download instructions](https://www.python.org/downloads/) in the Python docs (we also have more detailed explanations in our [Django tutorial](/en-US/docs/Learn/Server-side/Django/development_environment#installing_python_3)), then run the above commands again to check if the installation is successful.
+
+3. If Python is set up, navigate to the directory that contains the website code you want to test, using the `cd` command.
 
    ```bash
    # include the directory name to enter it, for example
@@ -120,17 +113,14 @@ To do this:
 4. Enter the command to start up the server in that directory:
 
    ```bash
-   # If Python version returned above is 3.X
    # On Windows, try "python -m http.server" or "py -3 -m http.server"
    python3 -m http.server
-   # If Python version returned above is 2.X
-   python -m SimpleHTTPServer
    ```
 
 5. By default, this will run the contents of the directory on a local web server, on port 8000. You can go to this server by going to the URL `localhost:8000` in your web browser. Here you'll see the contents of the directory listed — click the HTML file you want to run.
 
 > [!NOTE]
-> If you already have something running on port 8000, you can choose another port by running the server command followed by an alternative port number, e.g. `python3 -m http.server 7800` (Python 3.x) or `python -m SimpleHTTPServer 7800` (Python 2.x). You can then access your content at `localhost:7800`.
+> If you already have something running on port 8000, you can choose another port by running the server command followed by an alternative port number, e.g. `python3 -m http.server 7800`. You can then access your content at `localhost:7800`.
 
 ## Running server-side languages locally
 

@@ -62,6 +62,7 @@ This article provides information about the changes in Firefox 120 that affect d
 - The [Minimum PIN Length Extension (`minPinLength`)](/en-US/docs/Web/API/Web_Authentication_API/WebAuthn_extensions#minpinlength) of the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API) is supported, allowing a relying party server to request the authenticator's minimum PIN length during creation/registration ([Firefox bug 1844450](https://bugzil.la/1844450)).
 - The {{domxref("Navigator.userActivation")}} property and {{domxref("UserActivation")}} interface are now supported.
   These can be used to check whether the user is interacting with the page, or has interacted with it since page load (see [Firefox bug 1791079](https://bugzil.la/1791079)).
+- The {{domxref("PointerEvent.getCoalescedEvents()")}} method is restricted to use in secure contexts only ([Firefox bug 1858434](https://bugzil.la/1858434)).
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -69,6 +70,10 @@ This article provides information about the changes in Firefox 120 that affect d
 
 - Added serialization support for `Proxy` and `Generator` objects ([Firefox bug 1841786](https://bugzil.la/1841786)).
 - Added `authChallenges` property (the list of authentication challenges present in the headers), to `responseStarted` and `responseCompleted` network events, which will be useful in order to handle the upcoming `network.authRequired` event ([Firefox bug 1855149](https://bugzil.la/1855149)).
+
+## Changes for add-on developers
+
+- Although {{domxref("PointerEvent.getCoalescedEvents()")}} has been restricted to secure contexts ([Firefox bug 1858434](https://bugzil.la/1858434)), content scripts can use this method in documents that aren't a secure context ([Firefox bug 1870498](https://bugzil.la/1870498)).
 
 ## Older versions
 

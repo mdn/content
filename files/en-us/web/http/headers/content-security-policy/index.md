@@ -260,7 +260,7 @@ Because the `unsafe-inline` and `unsafe-eval` directives are not set, inline scr
 Content-Security-Policy: default-src https:
 ```
 
-The same restictions can be applied using the HTML {{htmlelement("meta")}} element.
+The same restrictions can be applied using the HTML {{htmlelement("meta")}} element.
 
 ```html
 <meta http-equiv="Content-Security-Policy" content="default-src https:" />

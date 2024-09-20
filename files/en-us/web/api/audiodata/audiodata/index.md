@@ -3,12 +3,10 @@ title: "AudioData: AudioData() constructor"
 short-title: AudioData()
 slug: Web/API/AudioData/AudioData
 page-type: web-api-constructor
-status:
-  - experimental
 browser-compat: api.AudioData.AudioData
 ---
 
-{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}{{SeeCompatTable}}
+{{APIRef("WebCodecs API")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`AudioData()`** constructor creates a new {{domxref("AudioData")}} object which represents an individual audio sample.
 
@@ -39,7 +37,7 @@ new AudioData(init)
     - `numberOfChannels`
       - : An integer containing the number of channels in this sample.
     - `timestamp`
-      - : An integer indicating the data's time in microseconds .
+      - : An integer indicating the data's time in microseconds.
     - `data`
       - : A typed array of the audio data for this sample.
     - `transfer`

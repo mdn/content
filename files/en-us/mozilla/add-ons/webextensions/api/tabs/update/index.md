@@ -51,7 +51,7 @@ let updating = browser.tabs.update(
     - `muted` {{optional_inline}}
       - : `boolean`. Whether the tab should be muted.
     - `openerTabId` {{optional_inline}}
-      - : `integer`. The ID of the tab that opened this tab. If specified, the opener tab must be in the same window as this tab.
+      - : `integer`. The ID of the tab that opened this tab. If specified, the opener tab must be in the same window as this tab. Set to `-1` to clear the set `openerTabId`.
     - `pinned` {{optional_inline}}
       - : `boolean`. Whether the tab should be pinned.
     - `selected` {{deprecated_inline}} {{optional_inline}}
@@ -123,7 +123,7 @@ querying.then(updateFirstTab, onError);
 {{Compat}}
 
 > [!NOTE]
-> This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/tabs/#method-update) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
+> This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-update) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

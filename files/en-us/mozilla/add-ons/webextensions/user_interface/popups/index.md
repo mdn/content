@@ -48,7 +48,7 @@ In Firefox Android 57, the popup is shown as a normal page in a new tab.
 
 ## Popup design
 
-For details on how to design your popup's web page to match the style of Firefox, see the [Acorn Design System](https://acorn.firefox.com/latest/).
+For details on how to design your popup's web page to match the style of Firefox, see the [Acorn Design System](https://acorn.firefox.com/latest).
 
 ## Examples
 

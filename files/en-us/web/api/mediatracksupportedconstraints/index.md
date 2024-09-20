@@ -61,6 +61,10 @@ For tracks containing video sources from the user's screen contents, the followi
 - {{domxref("MediaTrackSupportedConstraints.logicalSurface", "logicalSurface")}}
   - : A Boolean value which is `true` if the {{domxref("MediaTrackConstraints.logicalSurface", "logicalSurface")}} constraint is supported in the current environment.
 
+## Specifications
+
+{{Specifications}}
+
 ## See also
 
 - [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)

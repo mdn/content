@@ -40,7 +40,7 @@ function foo() {
 }
 ```
 
-A script running in a [popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2) can call this function directly like this:
+A script running in a [popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups) can call this function directly like this:
 
 ```js
 // popup.js
@@ -56,7 +56,7 @@ page.foo(); // -> "I'm defined in background.js"
 {{Compat}}
 
 > [!NOTE]
-> This API is based on Chromium's [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/extension/#method-getBackgroundPage) API. This documentation is derived from [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) in the Chromium code.
+> This API is based on Chromium's [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/api/extension#method-getBackgroundPage) API. This documentation is derived from [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

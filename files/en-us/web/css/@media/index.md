@@ -120,9 +120,13 @@ Media feature expressions test for their presence or value, and are entirely opt
 - {{cssxref("@media/prefers-contrast", "prefers-contrast")}}
   - : Detects if the user has requested the system increase or decrease the amount of contrast between adjacent colors.
     Added in Media Queries Level 5.
+- {{cssxref("@media/prefers-reduced-data", "prefers-reduced-data")}}
+  - : Detects if the user has requested the web content that consumes less internet traffic.
 - {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}}
   - : The user prefers less motion on the page.
     Added in Media Queries Level 5.
+- {{cssxref("@media/prefers-reduced-transparency", "prefers-reduced-transparency")}}
+  - : Detects if a user has enabled a setting on their device to reduce the transparent or translucent layer effects used on the device.
 - {{cssxref("@media/resolution", "resolution")}}
   - : Pixel density of the output device.
 - {{cssxref("@media/scan", "scan")}}
@@ -130,6 +134,8 @@ Media feature expressions test for their presence or value, and are entirely opt
 - {{cssxref("@media/scripting", "scripting")}}
   - : Detects whether scripting (i.e. JavaScript) is available.
     Added in Media Queries Level 5.
+- {{cssxref("@media/shape", "shape")}}
+  - : Detects the shape of the device to distinguish rectangular and round displays.
 - {{cssxref("@media/update", "update")}}
   - : How frequently the output device can modify the appearance of content.
     Added in Media Queries Level 4.

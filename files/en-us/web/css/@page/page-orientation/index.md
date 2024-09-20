@@ -26,7 +26,7 @@ This descriptor helps with the layout and orientation of printed documents, espe
   page-orientation: rotate-left;
 }
 
-/* Displays the print content rotated counter-clockwise */
+/* Displays the print content rotated clockwise */
 @page {
   page-orientation: rotate-right;
 }

@@ -110,7 +110,7 @@ When the listbox role is added to an element, or such an element becomes visible
 
     - <kbd>Space</kbd>
 
-      : changes the selection state of the focused option .
+      : changes the selection state of the focused option.
 
     - <kbd>Shift + Down Arrow</kbd>
 

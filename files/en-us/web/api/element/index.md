@@ -222,6 +222,8 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
   - : Returns a live {{DOMxRef("HTMLCollection")}} containing all descendant elements, of a particular tag name, from the current element.
 - {{DOMxRef("Element.getElementsByTagNameNS()")}}
   - : Returns a live {{DOMxRef("HTMLCollection")}} containing all descendant elements, of a particular tag name and namespace, from the current element.
+- {{DOMxRef("Element.getHTML()")}}
+  - : Returns the DOM content of the element as an HTML string, optionally including any shadow DOM.
 - {{DOMxRef("Element.hasAttribute()")}}
   - : Returns a boolean value indicating if the element has the specified attribute or not.
 - {{DOMxRef("Element.hasAttributeNS()")}}
@@ -295,10 +297,14 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 - {{domxref("Element/afterscriptexecute_event","afterscriptexecute")}} {{Non-standard_Inline}}
   - : Fired when a script has been executed.
+- {{domxref("Element/beforeinput_event", "beforeinput")}}
+  - : Fired when the value of an input element is about to be modified.
 - {{domxref("Element/beforematch_event", "beforematch")}} {{Experimental_Inline}}
   - : Fires on an element that is in the [_hidden until found_](/en-US/docs/Web/HTML/Global_attributes/hidden) state, when the browser is about to reveal its content because the user has found the content through the "find in page" feature or through fragment navigation.
 - {{domxref("Element/beforescriptexecute_event","beforescriptexecute")}} {{Non-standard_Inline}}
   - : Fired when a script is about to be executed.
+- {{domxref("Element/beforexrselect_event", "beforexrselect")}} {{Experimental_Inline}}
+  - : Fired before WebXR select events ({{domxref("XRSession/select_event", "select")}}, {{domxref("XRSession/selectstart_event", "selectstart")}}, {{domxref("XRSession/selectend_event", "selectend")}}) are dispatched.
 - {{domxref("Element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}}
   - : Fires on any element with {{cssxref("content-visibility", "content-visibility: auto")}} set on it when it starts or stops being [relevant to the user](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#relevant_to_the_user) and [skipping its contents](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#skips_its_contents).
 - {{domxref("Element/scroll_event", "scroll")}}

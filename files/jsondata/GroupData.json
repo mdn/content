@@ -1019,7 +1019,11 @@
         "VideoPlaybackQuality"
       ],
       "methods": ["HTMLVideoElement.getVideoPlaybackQuality()"],
-      "properties": ["VideoTrack.sourceBuffer", "TextTrack.sourceBuffer"],
+      "properties": [
+        "AudioTrack.sourceBuffer",
+        "VideoTrack.sourceBuffer",
+        "TextTrack.sourceBuffer"
+      ],
       "events": []
     },
     "MediaStream Recording": {
@@ -1717,6 +1721,13 @@
       "properties": [],
       "events": []
     },
+    "URL Fragment Text Directives": {
+      "overview": ["URL Fragment Text Directives"],
+      "guides": ["/en-US/docs/Web/URI/Fragment/Text_fragments"],
+      "interfaces": ["FragmentDirective"],
+      "methods": [],
+      "properties": ["Document.fragmentDirective"]
+    },
     "URL Pattern API": {
       "overview": ["URL Pattern API"],
       "interfaces": ["URLPattern"],
@@ -2240,9 +2251,15 @@
         "/docs/Web/API/WebSockets_API/Writing_WebSocket_servers",
         "/docs/Web/API/WebSockets_API/Writing_WebSocket_server",
         "/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java",
-        "/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_JavaScript_Deno"
+        "/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_JavaScript_Deno",
+        "/docs/Web/API/WebSockets_API/Using_WebSocketStream"
       ],
-      "interfaces": ["WebSocket", "CloseEvent", "MessageEvent"],
+      "interfaces": [
+        "WebSocket",
+        "WebSocketStream",
+        "CloseEvent",
+        "MessageEvent"
+      ],
       "methods": [],
       "properties": [],
       "events": []

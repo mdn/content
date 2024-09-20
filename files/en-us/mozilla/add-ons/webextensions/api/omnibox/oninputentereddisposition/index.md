@@ -27,4 +27,4 @@ Values of this type are strings. They may take any one of the following values:
 {{Compat}}
 
 > [!NOTE]
-> This API is based on Chromium's [`chrome.omnibox`](https://developer.chrome.com/docs/extensions/reference/omnibox/) API.
+> This API is based on Chromium's [`chrome.omnibox`](https://developer.chrome.com/docs/extensions/reference/api/omnibox) API.

@@ -89,6 +89,7 @@ You can supply the body as an instance of any of the following types:
 - {{domxref("File")}}
 - {{domxref("URLSearchParams")}}
 - {{domxref("FormData")}}
+- {{domxref("ReadableStream")}}
 
 Note that just like response bodies, request bodies are streams, and making the request reads the stream, so if a request contains a body, you can't make it twice:
 
@@ -138,7 +139,7 @@ const response = await fetch("https://example.org/post", {
   headers: {
     "Content-Type": "application/json",
   },
-  // .,.
+  // ...
 });
 ```
 
@@ -150,7 +151,7 @@ myHeaders.append("Content-Type", "application/json");
 
 const response = await fetch("https://example.org/post", {
   headers: myHeaders,
-  // .,.
+  // ...
 });
 ```
 
