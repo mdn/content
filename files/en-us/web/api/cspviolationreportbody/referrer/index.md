@@ -16,8 +16,8 @@ The referrer is the page that caused the page with the CSP violation to be loade
 
 A string representing the URL for the referrer of the page with the CSP violation, or null.
 
-Note that if the referrer is an HTTP URL then any username, password or fragment is removed.
-If the URL scheme is not `http:` then just the scheme is returned.
+Note that if the referrer is an HTTP(S) URL then any username, password or fragment is removed.
+If the URL scheme is not `http:` or `https:` then just the scheme is returned.
 
 ## Examples
 
@@ -29,7 +29,7 @@ We navigate to the page from another page and log the `referrer`, `documentURL`,
 #### HTML
 
 First we define our referrer page `/bounce/index.html`.
-This is a very simple HTML page that has a link to another file `../report_sample/index.html`.
+This page just contains a link to another page `../report_sample/index.html`.
 
 ```html
 <!doctype html>
@@ -105,7 +105,7 @@ referrer: http://127.0.0.1:9999/bounce/
 blockedURL: inline
 ```
 
-Note that `referrer` is the page we navigated form, `documentURL` is the page with the CSP violation, and `blockedURL` is not an URL at all in this case, but an indication that the violation was caused by an unsafe inline script.
+Note that `referrer` is the page we navigated from, `documentURL` is the page with the CSP violation, and `blockedURL` is not an URL at all in this case, but an indication that the violation was caused by an unsafe inline script.
 
 ## Specifications
 

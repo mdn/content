@@ -8,23 +8,23 @@ browser-compat: api.CSPViolationReportBody.blockedURL
 
 {{APIRef("Reporting API")}}
 
-The **`blockedURL`** read-only property of the {{domxref("CSPViolationReportBody")}} interface is a string value or URL that represents the resource that was blocked because it violates a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP).
+The **`blockedURL`** read-only property of the {{domxref("CSPViolationReportBody")}} interface is a string value that represents the resource that was blocked because it violates a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP).
 
 ## Value
 
 An string containing a value or URL that represents the resource that violated the policy.
 
-If the value is not an URL of a resource, it must be one of the following strings:
+If the value is not the URL of a resource, it must be one of the following strings:
 
 - `inline`
-  - : An unsafe inline resource.
+  - : An inline resource.
     For example, an inline script that was used when [`'unsafe-inline'`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#unsafe-inline) was not specified in the CSP.
 - `eval`
-  - : An unsafe `eval()`.
-    For example, `eval` was used but [`'unsafe-eval'`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#unsafe-eval) was not specified in the CSP.
+  - : An `eval()`.
+    For example, `eval()` was used but [`'unsafe-eval'`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#unsafe-eval) was not specified in the CSP.
 - `wasm-eval`
-  - : An unsafe WASM evaluation.
-    For example, `eval` was used but [`'wasm-unsafe-eval'`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#wasm-unsafe-eval) was not specified in the CSP.
+  - : An WASM evaluation.
+    For example, `eval()` was used but [`'wasm-unsafe-eval'`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#wasm-unsafe-eval) was not specified in the CSP.
 - `trusted-types-policy`
   - : A resource that violated the [`trusted-types`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/trusted-types) CSP directive.
     For example, a {{domxref("TrustedTypePolicy")}} was created using {{domxref("TrustedTypePolicyFactory/createPolicy", "window.trustedTypes.createPolicy()")}} with a name that wasn't listed in the `trusted-types` directive, or the new policy did not provide adequate sanitization.
@@ -34,7 +34,7 @@ If the value is not an URL of a resource, it must be one of the following string
 
 ## Examples
 
-The following examples show HTML that would result some of the `blockedURL` values outlined above.
+The following examples show HTML that would result in some of the `blockedURL` values outlined above.
 
 The examples assume that you have a JavaScript file named `main.js` imported into your script from the same domain.
 The script, which is shown below, creates a new {{domxref("ReportingObserver")}} to observe content violation reports of type `"csp-violation"`.
