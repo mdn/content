@@ -83,22 +83,29 @@ Note that while there might be multiple reports in the returned array, for brevi
 
 #### Results
 
-If serving the above code using a local server (on `http://127.0.0.1:9999/`), the output of the log on Chrome is:
+You can try this out using a [local server](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server).
+Copy the above code into `test/index.html` and `test/main.js` and run the server in the root directory.
+Assuming the address of the local server is `http://127.0.0.1:9999`, you can then load the HTML file from `http://127.0.0.1:9999/test/` (or `http://127.0.0.1:9999/test/index.html`).
+
+With the above setup, the output of the log on Chrome is:
 
 ```plain
 sourceFile: http://127.0.0.1:9999/test/
-lineNumber: 17
+lineNumber: 15
 columnNumber: 0
 ```
 
-Note that the column number is (incorrectly) set to `0`.
-The result is similar for Firefox, which correctly reports the `columnNumber`.
+The result is similar for Firefox:
 
 ```plain
 sourceFile: http://127.0.0.1:9999/test/
-lineNumber: 17
+lineNumber: 15
 columnNumber: 13
 ```
+
+Note that the column number is different for the two browsers.
+Chrome always appears to report `0`.
+The value on Firefox appears to point to the second character after the end of the opening `<script>` element.
 
 ## Specifications
 

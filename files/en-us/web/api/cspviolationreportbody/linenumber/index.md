@@ -28,7 +28,7 @@ This example triggers a CSP violation using an inline script, and reports the vi
 
 #### HTML
 
-The HTML file below uses the [`<meta>`](/en-US/docs/Web/HTML/Element/meta) element to set the {{httpheader('Content-Security-Policy')}} `default-src` to `self`, which allows scripts and other resources to be loaded from the same domain, but does not allow inline scripts to be executed.
+The HTML file below uses the [`<meta>`](/en-US/docs/Web/HTML/Element/meta) element to set the {{httpheader('Content-Security-Policy')}} `default-src` to `self`, which allows scripts and other resources to be loaded from the same origin, but does not allow inline scripts to be executed.
 The document also includes an inline script, which should therefore trigger a CSP violation.
 
 ```html
@@ -52,8 +52,6 @@ The document also includes an inline script, which should therefore trigger a CS
   </body>
 </html>
 ```
-
-Copy the above code into a file `test/index.html`.
 
 #### JavaScript (main.js)
 
@@ -83,26 +81,31 @@ observer.observe();
 
 Note that while there might be multiple reports in the returned array, for brevity we only log the values of the first element.
 
-Copy the code above into `test/main.js` alongside the `index.html` file.
-
 #### Results
 
-If using a local server to load the HTML from `http://127.0.0.1:9999/test/` (or `http://127.0.0.1:9999/test/index.html`), the output of the log on Chrome is:
+You can try this out using a [local server](/en-US/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server).
+Copy the above code into `test/index.html` and `test/main.js` and run the server in the root directory.
+Assuming the address of the local server is `http://127.0.0.1:9999`, you can then load the HTML file from `http://127.0.0.1:9999/test/` (or `http://127.0.0.1:9999/test/index.html`).
+
+With the above setup, the output of the log on Chrome is:
 
 ```plain
 sourceFile: http://127.0.0.1:9999/test/
-lineNumber: 17
+lineNumber: 15
 columnNumber: 0
 ```
 
-Note that the column number is (incorrectly) set to `0`.
-The result is similar for Firefox, which correctly reports the `columnNumber`.
+The result is similar for Firefox:
 
 ```plain
 sourceFile: http://127.0.0.1:9999/test/
-lineNumber: 17
+lineNumber: 15
 columnNumber: 13
 ```
+
+Note that the column number is different for the two browsers.
+Chrome always appears to report `0`.
+The value on Firefox appears to point to the second character after the end of the opening `<script>` element.
 
 ## Specifications
 
