@@ -40,7 +40,7 @@ function foo() {
 }
 ```
 
-A script running in a [popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2) can call this function directly like this:
+A script running in a [popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups) can call this function directly like this:
 
 ```js
 // popup.js
