@@ -39,7 +39,7 @@ Possible values for this string are:
 - `default`
   - : The user decision is unknown; in this case the application will act as if permission was `denied`.
 
-The deprecated version of the method returns `undefined`
+The deprecated version of the method returns `undefined`.
 
 ## Examples
 

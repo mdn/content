@@ -127,7 +127,7 @@ Copy the butterfly image on the left by right-clicking the image and selecting "
 Then click on the empty frame on the right.
 The example will fetch the image data from the clipboard and display the image in the empty frame.
 
-{{EmbedLiveSample("Reading image data from clipboard", "100%", "200")}}
+{{EmbedLiveSample("Reading image data from clipboard", "100%", "250", "", "", "", "clipboard-read")}}
 
 > [!NOTE]
 > If prompted, grant permission in order to paste the image.
@@ -242,7 +242,7 @@ async function pasteData() {
 Copy some text or the butterfly (JPG) image below (to copy images right-click on them and then select "Copy image" from the context menu).
 Select the indicated frame below to paste this information from the clipboard into the frame.
 
-{{EmbedLiveSample("Reading data from the clipboard", "100%", "450")}}
+{{EmbedLiveSample("Reading data from the clipboard", "100%", "500", "", "", "", "clipboard-read")}}
 
 Notes:
 
@@ -346,7 +346,7 @@ pasteUnsanitizedButton.addEventListener("click", async () => {
 
 First click the "Copy HTML" button to write the HTML code from the first textarea to the clipboard. Then either click the "Paste HTML" button or the "Paste unsanitized HTML" button to paste the sanitized or unsanitized HTML code into the second textarea.
 
-{{EmbedLiveSample("Reading unsanitized HTML from the clipboard", "100%", "220")}}
+{{EmbedLiveSample("Reading unsanitized HTML from the clipboard", "100%", "250", "", "", "", "clipboard-read; clipboard-write")}}
 
 ## Specifications
 

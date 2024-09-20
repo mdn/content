@@ -17,3 +17,11 @@ A non-negative integer that represents the number of items in the list.
 ## Examples
 
 See {{domxref("SVGLengthList")}} for a complete example.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

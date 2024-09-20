@@ -56,4 +56,6 @@ document.doctype.replaceWith(svg_dt);
 
 ## See also
 
+- {{domxref("CharacterData.replaceWith()")}}
 - {{domxref("Element.replaceWith()")}}
+- {{domxref("CharacterData.replaceWith()")}}

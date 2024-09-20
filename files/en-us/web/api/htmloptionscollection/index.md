@@ -30,4 +30,6 @@ _This interface inherits the methods of its parent, [`HTMLCollection`](/en-US/do
 
 ## See also
 
-- [HTMLCollection](/en-US/docs/Web/API/HTMLCollection)
+- {{DOMxRef("HTMLOptionElement")}}
+- {{DOMxRef("HTMLCollection")}}
+- [Indexed collections guide](/en-US/docs/Web/JavaScript/Guide/Indexed_collections)

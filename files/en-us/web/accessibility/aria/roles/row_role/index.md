@@ -81,7 +81,7 @@ To create an interactive widget that has a tabular structure, use the grid patte
 
   - : The `aria-expanded` attribute, which defines the state of the row, can take one of three values, or be omitted:
 
-    - `aria-expanded="true`: Row is currently expanded.
+    - `aria-expanded="true"`: Row is currently expanded.
     - `aria-expanded="false"`: Row is currently collapsed.
     - `aria-expanded="undefined"` or the attribute is missing: The row is neither expandable nor collapsible.
 
@@ -91,7 +91,7 @@ To create an interactive widget that has a tabular structure, use the grid patte
 
   - : Only relevant if the row is in an interactive container, such as a grid or treegrid, but not relevant if the row is in a table. The `aria-selected` attribute can take one of three values, or be omitted:
 
-    - `aria-selected="true`: Row is currently selected
+    - `aria-selected="true"`: Row is currently selected
     - `aria-selected="false"`: Row is not currently selected.
     - `aria-selected="undefined"` or the attribute is missing: The row is not selectable.
 

@@ -25,7 +25,7 @@ None.
 
 ## Examples
 
-In this example a background script listens for a click on a [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2), then tries to print the currently active tab:
+In this example a background script listens for a click on a [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button), then tries to print the currently active tab:
 
 ```js
 browser.browserAction.onClicked.addListener(() => {

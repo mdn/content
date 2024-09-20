@@ -9,7 +9,7 @@ browser-compat: webextensions.api.runtime.getBackgroundPage
 
 Retrieves the {{DOMxRef("Window")}} object for the background page running inside the current extension. If the background page is non-persistent (an event page) and it is not running, the background page is started.
 
-This provides a convenient way for other privileged extension scripts to get direct access to the background script's scope. This enables them to access variables or call functions defined in that scope. "Privileged script" here includes scripts running in [options pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#options_pages), or scripts running in [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2) or [page action](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#page_actions) popups, but does _not_ include [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#content_scripts).
+This provides a convenient way for other privileged extension scripts to get direct access to the background script's scope. This enables them to access variables or call functions defined in that scope. "Privileged script" here includes scripts running in [options pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages), or scripts running in [browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) or [page action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions) popups, but does _not_ include [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts).
 
 Note that variables that were declared using [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) or [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let) do not appear in the `Window` object returned by this function.
 
@@ -56,7 +56,7 @@ function foo() {
 }
 ```
 
-A script running in a [popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2) can call this function directly like this:
+A script running in a [popup](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups) can call this function directly like this:
 
 ```js
 // popup.js
