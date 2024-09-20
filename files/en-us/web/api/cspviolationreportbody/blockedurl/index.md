@@ -27,7 +27,7 @@ If the value is not the URL of a resource, it must be one of the following strin
     For example, `eval()` was used but [`'wasm-unsafe-eval'`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy#wasm-unsafe-eval) was not specified in the CSP.
 - `trusted-types-policy`
   - : A resource that violated the [`trusted-types`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/trusted-types) CSP directive.
-    For example, a {{domxref("TrustedTypePolicy")}} was created using {{domxref("TrustedTypePolicyFactory/createPolicy", "window.trustedTypes.createPolicy()")}} with a name that wasn't listed in the `trusted-types` directive, or the new policy did not provide adequate sanitization.
+    For example, a {{domxref("TrustedTypePolicy")}} was created using {{domxref("TrustedTypePolicyFactory/createPolicy", "window.trustedTypes.createPolicy()")}} with a name that wasn't listed in the CSP `trusted-types` directive.
 - `trusted-types-sink`
   - : A resource that violated the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/trusted-types) CSP directive.
     For example, the directive was set to `script` but the document did not use a {{domxref("TrustedTypePolicy")}} to sanitize data before passing it to a sink such as {{domxref("Element.innerHTML")}}.
