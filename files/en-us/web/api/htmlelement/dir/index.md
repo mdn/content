@@ -16,10 +16,14 @@ The text writing directionality of an element is which direction that text goes 
 
 One of the following:
 
-- `"ltr"`, for left-to-right;
-- `"rtl"`, for right-to-left;
-- `"auto"` for specifying that the direction of the element must be determined based on the contents of the element.
-- `""`, the default value, which means the directionality is inherited from the parent element.
+- `"ltr"`
+  - : Left-to-right writing direction.
+- `"rtl"`
+  - : Right-to-left writing direction.
+- `"auto"`
+  - : The direction of the element must be determined based on the contents of the element.
+- `""`
+  - : The default value; the directionality is inherited from the parent element.
 
 ## Examples
 
