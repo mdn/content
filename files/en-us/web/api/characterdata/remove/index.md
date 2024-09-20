@@ -47,5 +47,6 @@ textnode.remove(); // Removes the text
 
 ## See also
 
-- {{domxref("Element.remove()")}}
 - {{domxref("CharacterData.deleteData()")}}
+- {{domxref("DocumentType.remove()")}}
+- {{domxref("Element.remove()")}}
