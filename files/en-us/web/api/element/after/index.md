@@ -90,6 +90,8 @@ console.log(container.outerHTML);
 
 - {{domxref("Element.before()")}}
 - {{domxref("Element.append()")}}
-- {{domxref("Node.appendChild()")}}
 - {{domxref("Element.insertAdjacentElement()")}}
+- {{domxref("CharacterData.after()")}}
+- {{domxref("DocumentType.after()")}}
+- {{domxref("Node.appendChild()")}}
 - {{domxref("NodeList")}}

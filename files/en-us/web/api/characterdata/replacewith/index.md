@@ -64,5 +64,5 @@ text.replaceWith(em); // Replace `Some text` by `Italic text`
 ## See also
 
 - {{domxref("CharacterData.replaceData()")}}
-- {{domxref("Element.replaceWith()")}}
 - {{domxref("DocumentType.replaceWith()")}}
+- {{domxref("Element.replaceWith()")}}
