@@ -41,5 +41,5 @@ checkbox.indeterminate = true;
 ## See also
 
 - {{domxref("HTMLInputElement")}}
-- {{domxref("HTMLFormElement.checked")}}
+- {{domxref("HTMLInputElement.checked")}}
 - {{HTMLElement("input")}}
