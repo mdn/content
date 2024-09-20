@@ -63,8 +63,8 @@ Many different headers can appear in requests. They can be divided in several gr
 
 ### Body
 
-The last part of a response is the body.
-Not all responses have one: responses with a status code that sufficiently answers the request without the need to include message {{Glossary("HTTP Content", "content")}} (like {{HTTPStatus("201", "201 Created")}} or {{HTTPStatus("204", "204 No Content")}}) usually don't.
+The last part of a request is the body.
+Not all requests have one: requests with a {{HTTPMethod("GET")}} _[HTTP method](/en-US/docs/Web/HTTP/Methods)_ should only be used to request data and shouldn't contain a body.
 
 Bodies can be broadly divided into two categories:
 
