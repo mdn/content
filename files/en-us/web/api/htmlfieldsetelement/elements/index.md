@@ -8,10 +8,10 @@ browser-compat: api.HTMLFieldSetElement.elements
 
 {{APIRef("HTML DOM")}}
 
-The **`elements`** read-only property of the {{domxref("HTMLFieldSetElement")}} interface returns an {{domxref("HTMLCollection")}} object containing all form control elements ({{htmlelement("button")}}, {{htmlelement("fieldset")}}, {{htmlelement("input")}}, {{htmlelement("object")}}, {{htmlelement("output")}}, {{htmlelement("select")}}, and {{htmlelement("textarea")}} elements) that are descendants of this field set.
+The **`elements`** read-only property of the {{domxref("HTMLFieldSetElement")}} interface returns an {{domxref("HTMLCollection")}} object containing all form control elements ({{htmlelement("button")}}, {{htmlelement("fieldset")}}, {{htmlelement("input")}}, {{htmlelement("object")}}, {{htmlelement("output")}}, {{htmlelement("select")}}, and {{htmlelement("textarea")}}) that are descendants of this field set.
 
 You can access a particular form control in the returned collection by using either an
-index or the element's `name` or `id` attributes.
+index or the element's `name` or `id` attributes. If multiple form controls share the same name, as is common with a group of radio buttons, using the shared name returns the first element with that value.
 
 ## Value
 
@@ -25,14 +25,14 @@ An {{domxref("HTMLCollection")}}.
     <legend>My fieldset</legend>
     <p>
       <label for="username">Username:</label>
-      <input type="text" name="username" />
+      <input type="text" id="username" name="username" />
     </p>
     <p>
       <label for="password">Password:</label>
-      <input type="password" name="password" />
+      <input type="password" id="password" name="password" />
     </p>
     <p>
-      <input type="checkbox" name="remember-me" />
+      <input type="checkbox" id="remember-me" name="remember-me" />
       <label for="remember-me">Remember me</label>
     </p>
   </fieldset>
@@ -42,7 +42,7 @@ An {{domxref("HTMLCollection")}}.
 ```js
 const fieldset = document.getElementById("my-fieldset");
 console.log(fieldset.elements.length); // 3
-console.log(fieldset.elements["username"].value); // ""
+console.log(fieldset.elements["remember-me"].value); // "on"
 ```
 
 ## Specifications
