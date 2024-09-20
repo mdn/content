@@ -41,6 +41,37 @@ The MDN Web Docs project welcomes contributions from everyone who shares our goa
 
 To find out how to get started, see the [CONTRIBUTING.md](CONTRIBUTING.md) document in this repository.
 By participating in and contributing to our projects and discussions, you acknowledge that you have read and agree to our [Code of Conduct](CODE_OF_CONDUCT.md), which means adhering to [Mozilla's Community Participation Guidelines](https://www.mozilla.org/en-US/about/governance/policies/participation/).
+#Bookmark
+- https://itoefl.github.io/A-Comprehensive-Guide-to-Free-English-Language-Certification-Tests/
+- https://itoefl.github.io/A-Comprehensive-Guide-to-Studying-Abroad-After-HSC-in-Bangladesh/
+- https://itoefl.github.io/Choosing-the-Right-English-Proficiency-Test-for-US-Universities/
+- https://itoefl.github.io/Crafting-Effective-IT-RFPs-A-Comprehensive-Guide/
+- https://itoefl.github.io/Effective-Strategies-for-Improving-Reading-Comprehension-in-Children/
+- https://itoefl.github.io/Effective-Strategies-for-Language-Learning/
+- https://itoefl.github.io/Effective-Strategies-for-Learning-English-as-a-Second-Language/
+- https://itoefl.github.io/Effective-Strategies-for-Mastering-English-in-Class-8-and-Beyond/
+- https://itoefl.github.io/Effective-Ways-to-Improve-Your-English-at-Home/
+- https://itoefl.github.io/How-Non-Native-English-Speakers-Can-Conquer-the-GRE/
+- https://itoefl.github.io/How-to-Prepare-for-the-DU-LLB-Entrance-Exam-A-Comprehensive-Guide/
+- https://itoefl.github.io/How-to-Succeed-in-Google-Summer-of-Code-GSoC-A-Comprehensive-Guide/
+- https://itoefl.github.io/IELTS-Exam-A-Comprehensive-Guide-to-Success/
+- https://itoefl.github.io/Mastering-English-for-Bank-Exams-Strategies-and-Insights/
+- https://itoefl.github.io/Mastering-IELTS-Speaking-Strategies-for-Success/
+- https://itoefl.github.io/Mastering-the-Art-of-Writing-Lessons-Learned/
+- https://itoefl.github.io/Navigating-English-Proficiency-Requirements-for-International-Students-in-U-S-Colleges/
+- https://itoefl.github.io/Navigating-Language-Proficiency-and-Career-Opportunities/
+- https://itoefl.github.io/Navigating-Scholarship-Opportunities-for-International-Students/
+- https://itoefl.github.io/Navigating-the-Job-Market-as-an-International-Student-in-Australia/
+- https://itoefl.github.io/Overcoming-Common-Challenges-in-English-Language-Learning/
+- https://itoefl.github.io/Preparing-for-JNU-Entrance-Exams-A-Comprehensive-Guide/
+- https://itoefl.github.io/The-Challenges-of-Native-English-Speakers-in-Achieving-a-High-IELTS-Score/
+- https://itoefl.github.io/The-Comprehensive-Guide-to-Studying-Abroad-Cost-Breakdown-and-Budgeting-Tips/
+- https://itoefl.github.io/The-Historical-Oversight-of-the-Maratha-Empire-in-Indian-Textbooks/
+- https://itoefl.github.io/The-Importance-of-Language-Proficiency-in-Academic-and-Career-Success/
+- https://itoefl.github.io/The-Quirks-of-English-Grammar-Understanding-Adjective-Order-and-More/
+- https://itoefl.github.io/The-Ultimate-Guide-to-Effective-Exam-Preparation/
+- https://itoefl.github.io/Understanding-SAT-Score-Validity-and-Usage/
+- https://itoefl.github.io/Understanding-the-English-Proficiency-Test-EPT-at-VIT-Vellore/
 
 ## Get in touch
 
