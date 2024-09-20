@@ -30,7 +30,7 @@ This article provides information about the changes in Firefox 131 that affect d
 
 ### HTTP
 
-- A {{httpheader("Set-Cookie")}} HTTP header with the attribute value of [`SameSite=None`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#none) must now also include the [`Secure`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#secure) attribute. This ensures that cookies set with `SameSite=None` are only ever sent over HTTPS channels. ([Firefox bug 1909673](https://bugzil.la/1909673)).
+- A {{httpheader("Set-Cookie")}} HTTP header with the attribute value of [`SameSite=None`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#none) must now also include the [`Secure`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#secure) attribute. This ensures that cookies set with `SameSite=None` are only ever sent over HTTPS channels. In addition, since Firefox interprets an unspecified `SameSite` value as `SameSite=None`, cookies that don't specify `SameSite` will have the same restriction. ([Firefox bug 1909673](https://bugzil.la/1909673)).
 - [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies), or "partitioned cookies", are now supported.
   This feature allow developers to opt a cookie into partitioned storage using the [`partitioned`](/en-US/docs/Web/HTTP/Headers/Set-Cookie#partitioned) directive of the {{HTTPHeader("Set-Cookie")}} HTTP header. When set, cookies have separate storage for each top-level site, and can only be read within the same top-level site they were set on and its subdomains. This blocks cross-site tracking, while still enabling legitimate uses of third-party cookies such as persisting state of embedded maps or chat widgets across different subdomains of a site. ([Firefox bug 1908160](https://bugzil.la/1908160)).
 
@@ -42,7 +42,7 @@ This article provides information about the changes in Firefox 131 that affect d
 
 ### APIs
 
-- The {{domxref('PointerEvent.altitudeAngle','altitudeAngle')}} and {{domxref('PointerEvent.azimuthAngle','azimuthAngle')}} properties of the {{domxref('PointerEvent')}} interface are supported, providing the angle between the pointer/stylus and the screen (X-Y plane), and the rotation of the stylus over the screen relative to its x-axis, respectively. ([Firefox bug 1909673](https://bugzil.la/1909673)).
+- The {{domxref('PointerEvent.altitudeAngle','altitudeAngle')}} and {{domxref('PointerEvent.azimuthAngle','azimuthAngle')}} properties of the {{domxref('PointerEvent')}} interface are supported, providing the angle between the pointer/stylus and the screen (X-Y plane), and the rotation of the stylus over the screen relative to its x-axis, respectively. ([Firefox bug 1656377](https://bugzil.la/1656377)).
 - [Text fragments](/en-US/docs/Web/URI/Fragment/Text_fragments) are now supported, allowing users to link to and highlight specific portions of text in a web page. This feature uses a particular syntax in the [URL fragment](/en-US/docs/Web/URI/Fragment) that identifies the target based on patterns in the rendered text.
   Website developers can also use the existence of the {{domxref("Document.fragmentDirective")}} property (an instance of the {{domxref("FragmentDirective")}} interface) to feature check for text fragment support, and the {{CSSxRef("::target-text")}} pseudo element to select and style text that has been selected using a text fragment link. ([Firefox bug 1914877](https://bugzil.la/1914877))
 

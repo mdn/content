@@ -62,6 +62,8 @@ h1TextNode.data;
 
 - {{domxref("CharacterData.appendData()")}}
 - {{domxref("CharacterData.after()")}}
+- {{domxref("DocumentType.before()")}}
+- {{domxref("Element.before()")}}
 - {{domxref("Element.append()")}}
 - {{domxref("Node.appendChild()")}}
 - {{domxref("Element.insertAdjacentElement()")}}

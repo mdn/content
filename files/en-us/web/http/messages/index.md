@@ -30,10 +30,10 @@ The start-line and HTTP headers of the HTTP message are collectively known as th
 > [!NOTE]
 > The start-line is called the "request-line" in requests.
 
-HTTP requests are messages sent by the client to initiate an action on the server. Their _request-line_ contain three elements:
+HTTP requests are messages sent by the client to initiate an action on the server. Their _request-line_ contains three elements:
 
 1. An _[HTTP method](/en-US/docs/Web/HTTP/Methods)_, a verb (like {{HTTPMethod("GET")}}, {{HTTPMethod("PUT")}} or {{HTTPMethod("POST")}}) or a noun (like {{HTTPMethod("HEAD")}} or {{HTTPMethod("OPTIONS")}}), that describes the action to be performed. For example, `GET` indicates that a resource should be fetched or `POST` means that data is pushed to the server (creating or modifying a resource, or generating a temporary document to send back).
-2. The _request target_, usually a {{glossary("URL")}}, or the absolute path of the protocol, port, and domain are usually characterized by the request context. The format of this request target varies between different HTTP methods. It can be
+2. The _request target_, usually a {{glossary("URL")}}, or the absolute path of the protocol, port, and domain are usually characterized by the request context. The format of this request target varies between different HTTP methods. It can be:
 
    - An absolute path, ultimately followed by a `'?'` and query string. This is the most common form, known as the _origin form_, and is used with `GET`, `POST`, `HEAD`, and `OPTIONS` methods.
      - `POST / HTTP/1.1`
@@ -63,8 +63,8 @@ Many different headers can appear in requests. They can be divided in several gr
 
 ### Body
 
-The last part of a response is the body.
-Not all responses have one: responses with a status code that sufficiently answers the request without the need to include message {{Glossary("HTTP Content", "content")}} (like {{HTTPStatus("201", "201 Created")}} or {{HTTPStatus("204", "204 No Content")}}) usually don't.
+The last part of a request is the body.
+Not all requests have one: requests with a {{HTTPMethod("GET")}} _[HTTP method](/en-US/docs/Web/HTTP/Methods)_ should only be used to request data and shouldn't contain a body.
 
 Bodies can be broadly divided into two categories:
 
