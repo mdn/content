@@ -43,3 +43,5 @@ checkbox.indeterminate = true;
 - {{domxref("HTMLInputElement")}}
 - {{domxref("HTMLInputElement.checked")}}
 - {{HTMLElement("input")}}
+- [Indeterminate state checkboxes](/en-US/docs/Web/HTML/Element/input/checkbox#indeterminate_state_checkboxes)
+- CSS {{cssxref(":indeterminate")}} property
