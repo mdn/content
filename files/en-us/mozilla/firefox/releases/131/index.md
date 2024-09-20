@@ -66,6 +66,9 @@ This article provides information about the changes in Firefox 131 that affect d
 
 ## Changes for add-on developers
 
+- {{WebExtAPIRef("tabs.onUpdated")}} is now triggered when `openerTabId` is changed through `tabs.update()` ([Firefox bug 1409262](https://bugzil.la/1409262)).
+- {{WebExtAPIRef("tabs.update")}} now accepts `openerTabId` set to `-1` to clear `openerTabId` ([Firefox bug 1409262](https://bugzil.la/1409262)).
+
 ### Removals
 
 ### Other
