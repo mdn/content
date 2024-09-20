@@ -97,6 +97,8 @@ The `orientation` manifest member is used to specify the default screen orientat
 Use the `orientation` manifest member to specify how your web app should be displayed on devices with variable screen orientations.
 This is particularly useful for mobile devices and tablets, where users can rotate the device.
 
+If the `orientation` member is not specified in the we app manifest or an invalid value is provided, the web app will typically use the device's natural orientation and any user or system-level orientation settings. Not specifying an orientation can be a deliberate choice, allowing your web app to adapt flexibly to different devices and user preferences.
+
 ```html hidden
 <div class="container">
   <div class="orientation">
