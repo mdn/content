@@ -103,14 +103,14 @@ This sets a policy of `Content-Security-Policy: default-src 'self'`, which does 
 The result of logging the `blockedURL` would be:
 
 ```plain
-Value: blockedURL
+blockedURL: inline
 ```
 
 ### blockedURL for trusted-types-policy resources
 
 The HTML below demonstrates the conditions that would result in a `blockedURL` of `trusted-types-policy`.
-First it defines a policy that allows `'unsafe-inline'` scripts to be executed.
-It also uses the `trusted-types` directive to specify that a {{domxref("TrustedTypePolicy")}} with the name `myPolicy` is allowed to be created.
+First it defines a policy that allows `'unsafe-inline'` scripts to be executed, so that we can create a {{domxref("TrustedTypePolicy")}} that will trigger a violation.
+The policy also uses the `trusted-types` directive to specify that a {{domxref("TrustedTypePolicy")}} with the name `myPolicy` is allowed to be created.
 
 ```html
 <!doctype html>
@@ -127,8 +127,8 @@ It also uses the `trusted-types` directive to specify that a {{domxref("TrustedT
   <script>
     const policy = trustedTypes.createPolicy("somePolicy", {
       createHTML: (string) => {
-        // Incorrect sanitization logic
-        return DOMPurify.sanitize(string);
+        // Some (insufficient) sanitization code
+        return string.replace(/</g, "&lt;");
       },
     });
   </script>
@@ -136,13 +136,18 @@ It also uses the `trusted-types` directive to specify that a {{domxref("TrustedT
 ```
 
 In the script a policy is created with the name `somePolicy`.
+
+> [!NOTE]
+> The particular policy we defined above is not a very good policy.
+> The aim of using trusted types is not to enforce a _particular_ policy, but to require enforcement of some policy, and ensure that the sanitization code is in one place and easy to review.
+
 Because this is not listed in the `trusted-types` directive it is a CSP violation, and we'd see the log output:
 
 ```plain
 blockedURL: trusted-types-policy
 ```
 
-Note that if we changed the name of the allowed policy to `somePolicy`, the page would no longer be in violation.
+If we changed the name of the allowed policy to `somePolicy`, the page would no longer be in violation.
 
 ### blockedURL for trusted-types-sink resources
 
@@ -167,33 +172,38 @@ In addition, it specifies the directive `require-trusted-types-for 'script'`, wh
   </body>
 
   <script>
-    const policy = trustedTypes.createPolicy("somePolicy", {
-      createHTML: (string) => {
-        // Incorrect sanitization logic
-        return DOMPurify.sanitize(string);
-      },
-    });
-
     function updateContent() {
       const userInput = document.getElementById("userInput").value;
 
       // Passing unsanitized content - a violation of the policy
       document.getElementById("content").innerHTML = userInput;
-
-      //Correct use of the policy
-      //const sanitizedInput = policy.createHTML(userInput);
-      //document.getElementById("content").innerHTML = sanitizedInput;
     }
   </script>
 </html>
 ```
 
-The `updateContent()` method passes unsanitized content to the element's `innerHTML` property, which will cause a CSP violation (note that code that would not cause the violation is commented out).
-
+The `updateContent()` method passes unsanitized content to the element's `innerHTML` property, which will cause a CSP violation.
 We'd see the log output:
 
 ```plain
 blockedURL: trusted-types-sink
+```
+
+In order to avoid the violation we would need to update the script to define a trusted type policy, and use it to sanitize the input passed to the element:
+
+```js
+const policy = trustedTypes.createPolicy("myPolicy", {
+  createHTML: (string) => {
+    // Some (insufficient) sanitization code
+    return string.replace(/</g, "&lt;");
+  },
+});
+
+function updateContent() {
+  const userInput = document.getElementById("userInput").value;
+  const sanitizedInput = policy.createHTML(userInput);
+  document.getElementById("content").innerHTML = sanitizedInput;
+}
 ```
 
 ## Specifications
