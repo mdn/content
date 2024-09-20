@@ -22,15 +22,14 @@ showNotification(title, options)
 ### Parameters
 
 - `title`
-  - : The title that must be shown within the notification.
+  - : Defines a title for the notification, which is shown at the top of the notification window.
 - `options` {{optional_inline}}
 
-  - : An object that allows configuring the notification. It can have the following
-    properties:
+  - : An options object containing any custom settings that you want to apply to the notification. The possible options are:
 
     - `actions` {{optional_inline}} {{experimental_inline}}
 
-      - : An array of actions to display in the notification. Each element in the array is an object with the following members:
+      - : An array of actions to display in the notification, for which the default is an empty array. Each element in the array can be an object with the following members:
 
         - `action`
           - : A string identifying a user action to be displayed on the notification.
@@ -39,62 +38,34 @@ showNotification(title, options)
         - `icon` {{optional_inline}}
           - : A string containing the URL of an icon to display with the action.
 
-        Appropriate responses are built using `event.action` within the
-        {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} event.
+        Appropriate responses are built using `event.action` within the {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} event.
 
     - `badge` {{optional_inline}} {{experimental_inline}}
-      - : A string containing the URL of an image
-        to represent the notification when there is not enough space to display the
-        notification itself such as for example, the Android Notification Bar. On Android
-        devices, the badge should accommodate devices up to 4x resolution, about 96 by 96
-        px, and the image will be automatically masked.
+      - : A string containing the URL of the image used to represent the notification when there isn't enough space to display the notification itself; for example, the Android Notification Bar. On Android devices, the badge should accommodate devices up to 4x resolution, about 96x96px, and the image will be automatically masked.
     - `body` {{optional_inline}}
-      - : A string representing an extra content to display within the
-        notification.
+      - : A string representing the body text of the notification, which is displayed below the title. The default is the empty string.
     - `data` {{optional_inline}} {{experimental_inline}}
-      - : Arbitrary data that you want to be associated with the
-        notification. This can be of any data type.
+      - : Arbitrary data that you want associated with the notification. This can be of any [structured-clonable](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm#supported_types) data type. The default is `null`.
     - `dir` {{optional_inline}}
-      - : The direction of the notification; it can be `auto`, `ltr` or `rtl`.
+      - : The direction in which to display the notification. It defaults to `auto`, which just adopts the browser's language setting behavior, but you can override that behavior by setting values of `ltr` and `rtl` (although most browsers seem to ignore these settings.)
     - `icon` {{optional_inline}}
-      - : A string containing the URL of an image to
-        be used as an icon by the notification.
+      - : A string containing the URL of an icon to be displayed in the notification.
     - `image` {{optional_inline}} {{experimental_inline}}
-      - : A string containing the URL of an image to
-        be displayed in the notification.
+      - : A string containing the URL of an image to be displayed in the notification.
     - `lang` {{optional_inline}}
-      - : Specify the lang used within the notification. This string
-        must be a valid language tag according to
-        {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
+      - : The notification's language, as specified using a string representing a language tag according to {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}. See the Sitepoint [ISO 2 letter language codes](https://www.sitepoint.com/iso-2-letter-language-codes/) page for a simple reference. The default is the empty string.
     - `renotify` {{optional_inline}} {{experimental_inline}}
-      - : A boolean that indicates whether to suppress vibrations
-        and audible alerts when reusing a `tag` value.
-        If _options_'s `renotify` is `true`
-        and _options_'s `tag` is the empty string a `TypeError` will be
-        thrown. The default is `false`.
+      - : A boolean value specifying whether the user should be notified after a new notification replaces an old one. The default is `false`, which means they won't be notified. If `true`, then `tag` also must be set.
     - `requireInteraction` {{optional_inline}} {{experimental_inline}}
-      - : Indicates that on devices with sufficiently
-        large screens, a notification should remain active until the user clicks or
-        dismisses it. If this value is absent or `false`, the desktop version of Chrome will
-        auto-minimize notifications after approximately twenty seconds. The default value
-        is `false`.
+      - : Indicates that a notification should remain active until the user clicks or dismisses it, rather than closing automatically. The default value is `false`.
     - `silent` {{optional_inline}}
-      - : When set indicates that no sounds or vibrations should be
-        made. If _options_'s `silent` is `true`
-        and _options_'s `vibrate` is present a `TypeError` exception
-        will be thrown. The default value is `false`.
+      - : A boolean value specifying whether the notification is silent (no sounds or vibrations issued), regardless of the device settings. The default, `null`, means to respect device defaults. If `true`, then `vibrate` must not be present.
     - `tag` {{optional_inline}}
-      - : An ID for a given notification that allows you to find,
-        replace, or remove the notification using a script if necessary.
+      - : A string representing an identifying tag for the notification. The default is the empty string.
     - `timestamp` {{optional_inline}}
       - : A timestamp, given as {{glossary("Unix time")}} in milliseconds, representing the time associated with the notification. This could be in the past when a notification is used for a message that couldn't immediately be delivered because the device was offline, or in the future for a meeting that is about to start.
     - `vibrate` {{optional_inline}} {{experimental_inline}}
-      - : A vibration pattern to run with the display of the
-        notification. A vibration pattern can be an array with as few as one member. The
-        values are times in milliseconds where the even indices (0, 2, 4, etc.) indicate
-        how long to vibrate and the odd indices indicate how long to pause. For
-        example, `[300, 100, 400]` would vibrate 300ms, pause 100ms, then
-        vibrate 400ms.
+      - : A [vibration pattern](/en-US/docs/Web/API/Vibration_API#vibration_patterns) for the device's vibration hardware to emit with the notification. If specified, `silent` must not be `true`.
 
 ### Return value
 
@@ -102,8 +73,14 @@ A {{jsxref('Promise')}} that resolves to `undefined`.
 
 ### Exceptions
 
-- `TypeError`
-  - : Thrown if current service worker's state is not `activating` or `activated`, or if the user has explicitly denied the browser's permission request to use the API.
+- {{jsxref("TypeError")}}
+  - : Thrown if:
+    - The current service worker's state is not `activating` or `activated`.
+    - The user has explicitly denied the browser's permission request to use the API.
+    - The `silent` option is `true` and the `vibrate` option is specified.
+    - The `renotify` option is `true` but the `tag` option is empty.
+- `DataCloneError` {{domxref("DOMException")}}
+  - : Thrown if serializing the `data` option failed for some reason.
 
 ## Examples
 

@@ -10,7 +10,7 @@ browser-compat:
 
 {{HTMLSidebar}}
 
-The Boolean **`multiple`** attribute, if set, means the form control accepts one or more values. Valid for the {{HTMLElement("input/email", "email")}} and {{HTMLElement("input/file", "file")}} input types and the {{HTMLElement("select")}}, the manner by which the user opts for multiple values depends on the form control.
+The Boolean **`multiple`** attribute, if set, means the form control accepts one or more values. The attribute is valid for the {{HTMLElement("input/email", "email")}} and {{HTMLElement("input/file", "file")}} input types and the {{HTMLElement("select")}}. The manner by which the user opts for multiple values depends on the form control.
 
 {{EmbedInteractiveExample("pages/tabbed/attribute-multiple.html", "tabbed-standard")}}
 

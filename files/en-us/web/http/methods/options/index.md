@@ -7,7 +7,9 @@ browser-compat: http.methods.OPTIONS
 
 {{HTTPSidebar}}
 
-The **HTTP `OPTIONS` method** requests permitted communication options for a given URL or server. A client can specify a URL with this method, or an asterisk (`*`) to refer to the entire server.
+The **`OPTIONS`** HTTP method requests permitted communication options for a given URL or server.
+This can be used to test the allowed HTTP methods for a request, or to determine whether a request would succeed when making a CORS preflighted request.
+A client can specify a URL with this method, or an asterisk (`*`) to refer to the entire server.
 
 <table class="properties">
   <tbody>
@@ -41,9 +43,19 @@ The **HTTP `OPTIONS` method** requests permitted communication options for a giv
 ## Syntax
 
 ```http
-OPTIONS /index.html HTTP/1.1
-OPTIONS * HTTP/1.1
+OPTIONS *|<request-target>["?"<query>] HTTP/1.1
 ```
+
+The request target may be either in 'asterisk form' `*` indicating the whole server, or a request target as is common with other methods:
+
+- `*`
+  - : Indicates that the client wishes to request `OPTIONS` for the server as a whole, as opposed to a specific named resource of that server.
+- `<request-target>`
+  - : Identifies the target resource of the request when combined with the information provided in the {{HTTPHeader("Host")}} header.
+    This is an absolute path (e.g., `/path/to/file.html`) in requests to an origin server, and an absolute URL in requests to proxies (e.g., `http://www.example.com/path/to/file.html`).
+- `<query>` {{optional_inline}}
+  - : An optional query component preceded by a question-mark `?`.
+    Often used to carry identifying information in the form of `key=value` pairs.
 
 ## Examples
 
@@ -55,7 +67,16 @@ To find out which request methods a server supports, one can use the `curl` comm
 curl -X OPTIONS https://example.org -i
 ```
 
-The response then contains an {{HTTPHeader("Allow")}} header that holds the allowed methods:
+This creates the following HTTP request:
+
+```http
+OPTIONS / HTTP/2
+Host: example.org
+User-Agent: curl/8.7.1
+Accept: */*
+```
+
+The response contains an {{HTTPHeader("Allow")}} header that holds the allowed methods:
 
 ```http
 HTTP/1.1 204 No Content
@@ -108,9 +129,8 @@ Keep-Alive: timeout=2, max=100
 Connection: Keep-Alive
 ```
 
-## Status Code
-
-Both {{HTTPStatus("200")}} OK and {{HTTPStatus("204")}} No Content are [permitted status codes](https://fetch.spec.whatwg.org/#ref-for-ok-status), but some browsers incorrectly believe `204 No Content` applies to the resource and do not send the subsequent request to fetch it.
+> [!NOTE]
+> Both {{HTTPStatus("200", "200 OK")}} and {{HTTPStatus("204", "204 No Content")}} are [permitted status codes](https://fetch.spec.whatwg.org/#ref-for-ok-status), but some browsers incorrectly believe `204 No Content` applies to the resource and do not send a subsequent request to fetch it.
 
 ## Specifications
 
@@ -122,5 +142,8 @@ Both {{HTTPStatus("200")}} OK and {{HTTPStatus("204")}} No Content are [permitte
 
 ## See also
 
+- [HTTP request methods](/en-US/docs/Web/HTTP/Methods)
+- [HTTP response status codes](/en-US/docs/Web/HTTP/Status)
+- [HTTP headers](/en-US/docs/Web/HTTP/Headers)
 - {{HTTPHeader("Allow")}} header
 - [CORS](/en-US/docs/Web/HTTP/CORS)

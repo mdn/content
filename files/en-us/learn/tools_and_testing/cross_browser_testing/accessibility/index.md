@@ -134,7 +134,7 @@ You can then press Enter/Return to follow a focused link or press a button (we'v
 
 Note that different browsers may have different keyboard control options available. Most modern browsers follow the tab pattern described above (you can also do Shift + Tab to move backwards through the focusable elements), but some browsers have their own idiosyncrasies:
 
-- Safari on Mac doesn't allow you to tab through links by default; to enable this, open _System Settings_, scroll down to _Keyboard_, and enable _Keyboard navigation_. If you're using an older version of macOS, see [Use your keyboard like a mouse with Mac](https://support.apple.com/en-is/guide/mac-help/mchlp1399/mac) on Apple's macOS User Guide.
+- Safari on Mac doesn't allow you to tab through links by default; to enable this, open _System Settings_, scroll down to _Keyboard_, and enable _Keyboard navigation_. If you're using an older version of macOS, see [Use your keyboard like a mouse with Mac](https://support.apple.com/guide/mac-help/use-your-keyboard-like-a-mouse-mh27469/mac) on Apple's macOS User Guide.
 
 > [!WARNING]
 > You should perform this kind of test/review on any new page you write — make sure that functionality can be accessed by the keyboard, and that the tab order provides a sensible navigation path through the document.
