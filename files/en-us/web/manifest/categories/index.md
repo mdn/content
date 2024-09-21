@@ -34,4 +34,4 @@ The `categories` member is an array of strings defining the names of categories 
 
 ## Browser compatibility
 
-The feature is not supported by any of the browser implement yet.
+The feature is not implemented by any browser yet.

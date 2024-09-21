@@ -93,4 +93,4 @@ The `screenshots` member is an array of objects each representing a screenshot. 
 
 ## Browser compatibility
 
-The feature is not supported by any of the browser implement yet.
+The feature is not implemented by any browser yet.
