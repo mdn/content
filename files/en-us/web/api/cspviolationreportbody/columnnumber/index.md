@@ -105,7 +105,7 @@ columnNumber: 13
 
 Note that the column number is different for the two browsers.
 Chrome always appears to report `0`.
-The value on Firefox appears to point to the second character after the end of the opening `<script>` element.
+The value on Firefox represents the first character after the end of the opening `<script>` element.
 
 ## Specifications
 
