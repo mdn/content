@@ -13,7 +13,7 @@ The function has access to its surrounding closure as if called in the privilege
 
 The exported function doesn't need to be added to the less privileged code's global window object; it can be exported to any object in the target scope.
 
-See [Exporting functions that take arguments](#Exporting_functions_that_take_arguments) to understand what happens if the functions you export accept arguments.
+See [Exporting functions that take arguments](#exporting_functions_that_take_arguments) to understand what happens if the functions you export accept arguments.
 
 ## Syntax
 
