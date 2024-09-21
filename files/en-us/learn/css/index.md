@@ -12,7 +12,7 @@ Cascading Style Sheets — or {{glossary("CSS")}} — is the first technology yo
 
 You should learn the basics of HTML before attempting any CSS. We recommend that you work through our [Introduction to HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML) module first.
 
-Once you understand the fundamentals of HTML, we recommend that you learn further HTML and CSS at the same time, moving back and forth between the two topics. This is because HTML is far more interesting and much more fun to learn when you apply CSS, and you can't learn CSS without knowing HTML.
+Once you understand the fundamentals of HTML, we recommend that you learn further HTML and CSS at the same time, moving back and forward between the two topics. This is because HTML is far more interesting and much more fun to learn when you apply CSS, and you can't learn CSS without knowing HTML.
 
 Before starting this topic, you should also be familiar with using computers and using the web passively (i.e., just looking at it, consuming the content). You should have a basic work environment set up, as detailed in [Installing basic software](/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software), and understand how to create and manage files, as detailed in [Dealing with files](/en-US/docs/Learn/Getting_started_with_the_web/Dealing_with_files) — both of which are parts of our [Getting started with the web](/en-US/docs/Learn/Getting_started_with_the_web) complete beginner's module.
 
