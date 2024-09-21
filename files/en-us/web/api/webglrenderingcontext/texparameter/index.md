@@ -8,7 +8,7 @@ browser-compat:
   - api.WebGLRenderingContext.texParameteri
 ---
 
-{{APIRef("WebGL")}}
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
 
 The **`WebGLRenderingContext.texParameter[fi]()`** methods of
 the [WebGL API](/en-US/docs/Web/API/WebGL_API) set texture parameters.
