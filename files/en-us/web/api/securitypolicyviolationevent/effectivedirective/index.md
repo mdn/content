@@ -34,4 +34,4 @@ document.addEventListener("securitypolicyviolation", (e) => {
 
 ## See also
 
-- [`CSPViolationReportBody.effectiveDirective`](/en-US/docs/Web/API/CSPViolationReportBody#cspviolationreportbody.effectivedirective)
+- {{domxref("CSPViolationReportBody.effectiveDirective")}}

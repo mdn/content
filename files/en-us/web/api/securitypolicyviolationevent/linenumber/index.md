@@ -32,4 +32,4 @@ document.addEventListener("securitypolicyviolation", (e) => {
 
 ## See also
 
-- [`CSPViolationReportBody.lineNumber`](/en-US/docs/Web/API/CSPViolationReportBody#cspviolationreportbody.linenumber)
+- {{domxref("CSPViolationReportBody.lineNumber")}}
