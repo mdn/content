@@ -8,7 +8,7 @@ status:
 browser-compat: api.GPUBuffer.usage
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`usage`** read-only property of the
 {{domxref("GPUBuffer")}} interface contains the {{glossary("bitwise flags")}} representing the allowed usages of the `GPUBuffer`.
