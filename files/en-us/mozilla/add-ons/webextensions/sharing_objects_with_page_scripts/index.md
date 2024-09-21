@@ -153,7 +153,7 @@ window.notify("Message from the page script!");
 
 ### cloneInto
 
-Given an object defined in the content script, [cloneInto()](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts/cloneinto) creates a clone of the object in the page script's scope, thereby making the clone accessible to page scripts. By default, this uses the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) to clone the object, meaning that functions in the object are not included in the clone. To include functions, pass the `cloneFunctions` option.
+Given an object defined in the content script, [cloneInto()](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts/cloneInto) creates a clone of the object in the page script's scope, thereby making the clone accessible to page scripts. By default, this uses the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) to clone the object, meaning that functions in the object are not included in the clone. To include functions, pass the `cloneFunctions` option.
 
 For example, here's a content script that defines an object that contains a function, then clones it into the page script's scope:
 
