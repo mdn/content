@@ -62,7 +62,7 @@ In this example the parent box has been given `display: flow-root` and so establ
 
 ```css
 .box {
-  background-color: rgb(224, 206, 247);
+  background-color: rgb(224 206 247);
   border: 5px solid rebeccapurple;
   display: flow-root;
 }

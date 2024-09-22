@@ -111,7 +111,7 @@ Beyond accessibility, this is another good reason to properly set up `<label>` e
 
 ### Indeterminate state checkboxes
 
-A checkbox can be in an **indeterminate** state. This is set using the {{domxref("HTMLInputElement")}} object's `indeterminate` property via JavaScript (it cannot be set using an HTML attribute):
+A checkbox can be in an **indeterminate** state. This is set using the {{domxref("HTMLInputElement")}} object's [`indeterminate`](/en-US/docs/Web/API/HTMLInputElement/indeterminate) property via JavaScript (it cannot be set using an HTML attribute):
 
 ```js
 inputInstance.indeterminate = true;

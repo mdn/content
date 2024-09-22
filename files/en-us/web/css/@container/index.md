@@ -20,7 +20,7 @@ Once an eligible query container has been selected for an element, each containe
 The `@container` at-rule has the following syntax:
 
 ```plain
-@container <container-condition> {
+@container <container-condition># {
   <stylesheet>
 }
 ```
@@ -33,10 +33,25 @@ For example:
     font-size: 1.5em;
   }
 }
+
 /* with an optional <container-name> */
 @container tall (height > 30rem) {
   h2 {
     line-height: 1.6;
+  }
+}
+
+/* multiple queries in a single condition */
+@container (width > 400px) and style(--responsive: true) {
+  h2 {
+    font-size: 1.5em;
+  }
+}
+
+/* condition list */
+@container card (width > 400px), style(--responsive: true) {
+  h2 {
+    font-size: 1.5em;
   }
 }
 ```

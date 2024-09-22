@@ -326,9 +326,6 @@ In the example below, we have added a background image to the containing block o
 
 **In this example, try changing the alpha channel values to see how it affects the color output.**
 
-> [!NOTE]
-> In older versions of CSS, the `rgb()` syntax didn't support an alpha parameter - you needed to use a different function called `rgba()` for that. These days you can pass an alpha parameter to `rgb()`. The `rgba()` function is an alias for `rgb()`.
-
 ### SRGB values
 
 The `sRGB` color space defines colors in the **red** (r), **green** (g), and **blue** (b) color space.
@@ -370,9 +367,6 @@ Let's update the RGB example to use HSL colors instead:
 Just like with `rgb()` you can pass an alpha parameter to `hsl()` to specify opacity:
 
 {{EmbedGHLiveSample("css-examples/learn/values-units/color-hsla.html", '100%', 900)}}
-
-> [!NOTE]
-> In older versions of CSS, the `hsl()` syntax didn't support an alpha parameter - you needed to use a different function called `hsla()` for that. These days you can pass an alpha parameter to `hsl()`, but for backwards compatibility with old websites, the `hsla()` syntax is still supported, and has exactly the same behavior as `hsl()`.
 
 ## Images
 

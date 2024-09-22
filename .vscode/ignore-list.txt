@@ -1123,6 +1123,7 @@ Digi
 Digianswer
 dignissim
 Dijit
+dimoulis
 dinocons
 dinodescr
 Dinos
@@ -1663,6 +1664,7 @@ Freecodecamp
 Freemium
 Freetype
 Freitag
+Frida
 fringilla
 fringille
 fromcharcode
@@ -2368,6 +2370,7 @@ JXON
 Kadir
 Kadlec
 kaios
+Kahlo
 Kakao
 Kaku
 Kaply
@@ -3778,7 +3781,6 @@ quaxxor
 queryphrase
 queryset
 querysets
-querystring
 quibusdam
 QUIC
 quickbrownfox
