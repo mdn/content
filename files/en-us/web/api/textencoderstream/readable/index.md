@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.TextEncoderStream.readable
 ---
 
-{{APIRef("Encoding API")}}
+{{APIRef("Encoding API")}}{{AvailableInWorkers}}
 
 The **`readable`** read-only property of the {{domxref("TextEncoderStream")}} interface returns a {{domxref("ReadableStream")}}.
 
