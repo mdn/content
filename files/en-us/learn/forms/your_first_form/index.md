@@ -294,10 +294,10 @@ Let's look at some of our form code again:
 </form>
 ```
 
-In our example, the form will send 3 pieces of data named "`user_name`", "`user_email`", and "`user_message`".
-That data will be sent to the URL "`/my-handling-form-page`" using the [HTTP `POST`](/en-US/docs/Web/HTTP/Methods/POST) method.
+In our example, the form will send 3 pieces of data named `user_name`, `user_email`, and `user_message`.
+That data will be sent to the URL `/my-handling-form-page` using the [HTTP `POST`](/en-US/docs/Web/HTTP/Methods/POST) method.
 
-On the server side, the script at the URL "`/my-handling-form-page`" will receive the data as a list of 3 key/value items contained in the HTTP request.
+On the server side, the script at the URL `/my-handling-form-page` will receive the data as a list of 3 key/value items contained in the HTTP request.
 The way this script will handle that data is up to you.
 Each server-side language (PHP, Python, Ruby, Java, C#, etc.) has its own mechanism of handling form data.
 It's beyond the scope of this guide to go deeply into that subject, but if you want to know more, we have provided some examples in our [Sending form data](/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data) article later on.
