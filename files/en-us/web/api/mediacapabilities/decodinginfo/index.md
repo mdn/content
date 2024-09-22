@@ -262,7 +262,7 @@ const videoConfig = {
 };
 
 // check support and performance
-navigator.mediaCapabilities.decodingInfo(audioConfig).then((result) => {
+navigator.mediaCapabilities.decodingInfo(videoConfig).then((result) => {
   if (result.supported) {
     log(
       `The video configuration is supported${result.smooth ? ", smooth" : ", not smooth"}${result.powerEfficient ? ", power efficient" : ", not power efficient"}.`,

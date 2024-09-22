@@ -72,31 +72,31 @@ f1();
 [Thenable objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables) are resolved just the same as actual `Promise` objects.
 
 ```js
-async function f() {
+async function f2() {
   const thenable = {
-    then(resolve, _reject) {
+    then(resolve) {
       resolve("resolved!");
     },
   };
   console.log(await thenable); // "resolved!"
 }
 
-f();
+f2();
 ```
 
 They can also be rejected:
 
 ```js
-async function f() {
+async function f2() {
   const thenable = {
-    then(resolve, reject) {
+    then(_, reject) {
       reject(new Error("rejected!"));
     },
   };
   await thenable; // Throws Error: rejected!
 }
 
-f();
+f2();
 ```
 
 ### Conversion to promise

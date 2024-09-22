@@ -129,7 +129,7 @@ _Also inherits methods from {{DOMxRef("EventTarget")}}._
 - {{DOMxRef("RTCPeerConnection.addStream", "addStream()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Adds a {{DOMxRef("MediaStream")}} as a local source of audio or video.
     Instead of using this obsolete method, you should instead use {{DOMxRef("RTCPeerConnection.addTrack", "addTrack()")}} once for each track you wish to send to the remote peer.
-- {{DOMxRef("RTCPeerConnection.createDTMFSender", "createDTMFSender()")}} {{Deprecated_Inline}}
+- {{DOMxRef("RTCPeerConnection.createDTMFSender", "createDTMFSender()")}} {{Deprecated_Inline}} {{non-standard_inline}}
   - : Creates a new {{DOMxRef("RTCDTMFSender")}}, associated to a specific {{DOMxRef("MediaStreamTrack")}}, that will be able to send {{Glossary("DTMF")}} phone signaling over the connection.
 - {{DOMxRef("RTCPeerConnection.removeStream", "removeStream()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Removes a {{DOMxRef("MediaStream")}} as a local source of audio or video.

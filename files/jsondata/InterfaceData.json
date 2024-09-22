@@ -864,6 +864,10 @@
       "inh": "AudioNode",
       "impl": []
     },
+    "DelegatedInkTrailPresenter": {
+      "inh": "",
+      "impl": []
+    },
     "DeprecationReportBody": {
       "inh": "ReportBody",
       "impl": []
@@ -1908,10 +1912,6 @@
       "inh": "",
       "impl": []
     },
-    "InkPresenter": {
-      "inh": "",
-      "impl": []
-    },
     "InputDeviceCapabilities": {
       "inh": "",
       "impl": []
@@ -2260,10 +2260,6 @@
       "inh": "UIEvent",
       "impl": []
     },
-    "MutationEvent": {
-      "inh": "Event",
-      "impl": []
-    },
     "MutationObserver": {
       "inh": "",
       "impl": []
@@ -2324,10 +2320,6 @@
       "inh": "",
       "impl": []
     },
-    "NavigatorLogin": {
-      "inh": "",
-      "impl": []
-    },
     "NavigatorManagedData": {
       "inh": "EventTarget",
       "impl": []
@@ -2381,6 +2373,10 @@
       "impl": []
     },
     "NotRestoredReasons": {
+      "inh": "",
+      "impl": []
+    },
+    "Observable": {
       "inh": "",
       "impl": []
     },
@@ -2681,6 +2677,10 @@
       "impl": []
     },
     "PressureRecord": {
+      "inh": "",
+      "impl": []
+    },
+    "PrivateAggregation": {
       "inh": "",
       "impl": []
     },
@@ -3186,6 +3186,10 @@
     },
     "SubmitEvent": {
       "inh": "Event",
+      "impl": []
+    },
+    "Subscriber": {
+      "inh": "",
       "impl": []
     },
     "SubtleCrypto": {
