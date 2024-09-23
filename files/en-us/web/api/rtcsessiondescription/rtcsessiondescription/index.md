@@ -45,7 +45,7 @@ This example uses the constructor to convert an SDP offer into an
 `RTCSessionDescription` object.
 
 > **Note:** This is no longer necessary, however;
-> [`RTCSessionDescriptionInit`](/en-US/docs/Web/API/RTCSessionDescription#rtcsessiondescriptioninit) and other methods which take
+> {{domxref("RTCPeerConnection.setLocalDescription()")}} and other methods which take
 > SDP as input now directly accept an object conforming to the
 > `RTCSessionDescriptionInit` dictionary, so you don't have to instantiate an
 > `RTCSessionDescription` yourself.
