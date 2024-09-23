@@ -14,9 +14,9 @@ The **`HTMLOptionsCollection`** interface represents a collection of [`<option>`
 ## Instance properties
 
 - {{domxref("HTMLOptionsCollection.length")}}
-  - : A number reflecting or setting the number of options in the collection.
+  - : Returns or sets the number of options in the collection.
 - {{domxref("HTMLOptionsCollection.selectedIndex")}}
-  - : A number reflecting the index of the first selected {{HTMLElement("option")}} element. The value `-1` indicates no element is selected.
+  - : The index number of the first selected {{HTMLElement("option")}} element. The value `-1` indicates no element is selected.
 
 ## Instance methods
 
