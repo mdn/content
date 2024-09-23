@@ -91,7 +91,9 @@ The order in which the promise returned by `scheduler.yield()` is resolved relat
 
 By default, `scheduler.yield()` is run with a [`'user-visible'`](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#user-visible) priority. However, the continuation from a `scheduler.yield()` has a slightly different behavior than `scheduler.postTask()` tasks of the same `priority`.
 
-`scheduler.yield()` enqueues its task at the front of a priority level's queue, while `scheduler.postTask()` tasks go at the end (in the spec, this is defined by a task queue's [effective priority](https://wicg.github.io/scheduling-apis/#scheduler-task-queue-effective-priority)). This means that with the same priority, the `scheduler.yield()` continuation will come first, allowing additional flexibility in how tasks can be scheduled.
+`scheduler.yield()` enqueues its task in a boosted task queue compared to a `scheduler.postTask()` of the same prioritiy level. So, for instance, a `scheduler.yield()` continuation with `'user-visible'` priority will be prioritized after `scheduler.postTask()` tasks of the higher `'user-blocking'` priority level, but before `scheduler.postTask()` tasks of the same `'user-visible'` priority (in the spec, this is defined by a task queue's [effective priority](https://wicg.github.io/scheduling-apis/#scheduler-task-queue-effective-priority)).
+
+This is sometimes described as `scheduler.yield()` enqueuing its task at the front of a priority level's queue, while `scheduler.postTask()` tasks go at the end. This can be a useful mental model. In situations with just a few tasks, this means that with the same priority, the `scheduler.yield()` continuation will come first, allowing additional flexibility in how tasks can be scheduled.
 
 ```js
 scheduler.postTask(() => console.log("user-visible postTask"));
@@ -108,6 +110,33 @@ will log
 user-blocking postTask
 user-visible yield
 user-visible postTask
+```
+
+However, in the cases where there are multiple `scheduler.yield()` calls, the distinction that the `scheduler.yield()` continuation tasks go into a boosted-priority _queue_ becomes important, because a second `scheduler.yield()` task won't be run before one that's already in the queue.
+
+If one fuction yields its work before a second function does, the first function to yield will continue first.
+
+```js
+async function first() {
+  console.log("starting first function");
+  await scheduler.yield();
+  console.log("ending first function");
+}
+
+async function second() {
+  console.log("starting second function");
+  await scheduler.yield();
+  console.log("ending second function");
+}
+```
+
+will log
+
+```plain
+starting first function
+starting second function
+ending first function
+ending second function
 ```
 
 ### Inheriting task priorities
@@ -139,6 +168,10 @@ background postTask
 ```
 
 `scheduler.yield()` continuations will inherit whatever priority the surrounding `scheduler.postTask()` task has, including if the task's priority was [changed dynamically](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#changing_task_priorities).
+
+#### Within `requestIdleCallback`
+
+Similar to a `scheduler.yield()` inheriting a priority from a surrounding `scheduler.postTask()`, it will also inherit priority if called within a {{domxref("Window.requestIdleCallback()")}} callback, with [`'background'`](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#background) priority. The `scheduler.yield()` will not be abortable, however.
 
 ### Aborting a yield
 
