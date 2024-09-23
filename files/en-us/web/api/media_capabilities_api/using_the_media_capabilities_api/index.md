@@ -5,7 +5,7 @@ page-type: guide
 browser-compat: api.MediaCapabilities
 ---
 
-{{APIRef("Media Capabilities API")}}
+{{DefaultAPISidebar("Media Capabilities API")}}
 
 The [Media Capabilities API](/en-US/docs/Web/API/Media_Capabilities_API) provides several key features to help you better decide how to handle media, but also to determine how well media is being handled, in real time.
 

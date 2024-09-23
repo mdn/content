@@ -24,7 +24,7 @@ A string representing the priority hint. Possible values are:
   - : Default mode, which indicates no preference for the fetch priority.
     The browser decides what is best for the user.
 
-If the `fetchpriority` attribute is not specified or is specified with any other value, it is the same as specifing it as `auto`.
+If the `fetchpriority` attribute is not specified or is specified with any other value, it is the same as specifying it as `auto`.
 
 The `fetchPriority` property allows you to signal high or low priority external script
 fetches. This can be useful when applied to {{HTMLElement("script")}} elements

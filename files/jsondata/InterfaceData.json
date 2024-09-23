@@ -2640,6 +2640,14 @@
       "inh": "EventTarget",
       "impl": []
     },
+    "PreferenceManager": {
+      "inh": "",
+      "impl": []
+    },
+    "PreferenceObject": {
+      "inh": "EventTarget",
+      "impl": []
+    },
     "Presentation": {
       "inh": "",
       "impl": []

@@ -102,7 +102,7 @@ If the object to clone contains functions, you must pass the `{cloneFunctions:tr
 ```js
 // content script
 var addonScriptObject = {
-  greetme: function () {
+  greetMe: function () {
     alert("hello from your extension");
   },
 };
@@ -117,7 +117,7 @@ var test = document.getElementById("test");
 test.addEventListener(
   "click",
   function () {
-    window.addonScriptObject.greetme();
+    window.addonScriptObject.greetMe();
   },
   false,
 );
