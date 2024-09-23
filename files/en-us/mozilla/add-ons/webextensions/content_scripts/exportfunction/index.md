@@ -18,7 +18,7 @@ See [Exporting functions that take arguments](#exporting_functions_that_take_arg
 ## Syntax
 
 ```js-nolint
-let exportFunctionuating = exportFunction(
+let exportedFunction = exportFunction(
   func,              // function
   targetScope,       // object
   options            // optional object
@@ -155,10 +155,10 @@ This script defines a function and then exports it to a content window:
 ```js
 // extension-script.js
 var salutation = "hello ";
-function greetme(user) {
+function greetMe(user) {
   return salutation + user;
 }
-exportFunction(greetme, window, { defineAs: "foo" });
+exportFunction(greetMe, window, { defineAs: "foo" });
 ```
 
 Instead of using `defineAs`, the script can assign the result of `exportFunction` to an object in the target scope:
@@ -166,10 +166,10 @@ Instead of using `defineAs`, the script can assign the result of `exportFunction
 ```js
 // extension-script.js
 var salutation = "hello ";
-function greetme(user) {
+function greetMe(user) {
   return salutation + user;
 }
-window.foo = exportFunction(greetme, window);
+window.foo = exportFunction(greetMe, window);
 ```
 
 Either way, code running in the content window's scope can call the function:
@@ -194,14 +194,14 @@ Now the extension script can attach the function to `bar`:
 
 ```js
 // extension-script.js
-exportFunction(greetme, window.bar, {
-  defineAs: "greetme",
+exportFunction(greetMe, window.bar, {
+  defineAs: "greetMe",
 });
 ```
 
 ```js
 // page-script.js
-var value = bar.greetme("bob");
+var value = bar.greetMe("bob");
 console.log(value);
 // "hello bob"
 ```

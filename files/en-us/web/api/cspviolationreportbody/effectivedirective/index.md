@@ -87,7 +87,7 @@ effectiveDirective: script-src-elem
 originalPolicy: default-src 'self'; report-to csp-endpoint
 ```
 
-Note that the `orginalPolicy` matches the `<meta>` content of the `Content-Security-Policy` directive in the HTML, and specifies that the policy is `self` by default (`default-src 'self'`).
+Note that the `originalPolicy` matches the `<meta>` content of the `Content-Security-Policy` directive in the HTML, and specifies that the policy is `self` by default (`default-src 'self'`).
 
 The `effectiveDirective` is `script-src-elem`, which specifies valid sources for JavaScript {{htmlelement("script")}} elements.
 This is the specific directive that has effectively been violated, even though `default-src` was set in the policy.
