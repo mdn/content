@@ -93,26 +93,24 @@ In terms of HTML code we need something like the following to implement these fo
 
 ```html
 <form action="/my-handling-form-page" method="post">
-  <ul>
-    <li>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="user_name" />
-    </li>
-    <li>
-      <label for="mail">Email:</label>
-      <input type="email" id="mail" name="user_email" />
-    </li>
-    <li>
-      <label for="msg">Message:</label>
-      <textarea id="msg" name="user_message"></textarea>
-    </li>
-  </ul>
+  <p>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="user_name" />
+  </p>
+  <p>
+    <label for="mail">Email:</label>
+    <input type="email" id="mail" name="user_email" />
+  </p>
+  <p>
+    <label for="msg">Message:</label>
+    <textarea id="msg" name="user_message"></textarea>
+  </p>
 </form>
 ```
 
 Update your form code to look like the above.
 
-The {{HTMLelement("li")}} elements are there to conveniently structure our code and make styling easier (see later in the article).
+The {{HTMLelement("p")}} elements are there to conveniently structure our code and make styling easier (see later in the article).
 For usability and accessibility, we include an explicit label for each form control.
 Note the use of the [`for`](/en-US/docs/Web/HTML/Attributes/for) attribute on all {{HTMLelement("label")}} elements, which takes as its value the [`id`](/en-US/docs/Web/HTML/Global_attributes/id) of the form control with which it is associated — this is how you associate a form control with its label.
 
@@ -152,12 +150,12 @@ by default this element is filled with this text
 ### The `<button>` element
 
 The markup for our form is almost complete; we just need to add a button to allow the user to send, or "submit", their data once they have filled out the form.
-This is done by using the {{HTMLelement("button")}} element; add the following just above the closing `</ul>` tag:
+This is done by using the {{HTMLelement("button")}} element; add the following just above the closing `</form>` tag:
 
 ```html
-<li class="button">
+<p class="button">
   <button type="submit">Send your message</button>
-</li>
+</p>
 ```
 
 The {{htmlelement("button")}} element also accepts a `type` attribute — this accepts one of three values: `submit`, `reset`, or `button`.
@@ -202,13 +200,7 @@ form {
   border-radius: 1em;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-form li + li {
+p + p {
   margin-top: 1em;
 }
 
@@ -275,22 +267,20 @@ Let's look at some of our form code again:
 
 ```html
 <form action="/my-handling-form-page" method="post">
-  <ul>
-    <li>
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="user_name" />
-    </li>
-    <li>
-      <label for="mail">Email:</label>
-      <input type="email" id="mail" name="user_email" />
-    </li>
-    <li>
-      <label for="msg">Message:</label>
-      <textarea id="msg" name="user_message"></textarea>
-    </li>
+  <p>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="user_name" />
+  </p>
+  <p>
+    <label for="mail">Email:</label>
+    <input type="email" id="mail" name="user_email" />
+  </p>
+  <p>
+    <label for="msg">Message:</label>
+    <textarea id="msg" name="user_message"></textarea>
+  </p>
 
-    …
-  </ul>
+  …
 </form>
 ```
 
@@ -408,4 +398,4 @@ That's only the beginning, however — now it's time to take a deeper look. Form
 
 - [How to build custom form controls](/en-US/docs/Learn/Forms/How_to_build_custom_form_controls)
 - [Sending forms through JavaScript](/en-US/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [Property compatibility table for form widgets](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
+- [Property compatibity table for form widgets](/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls)
