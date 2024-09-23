@@ -10,13 +10,13 @@ browser-compat: api.HTMLButtonElement.command
 
 {{APIRef("Invoker Commands API")}}{{SeeCompatTable}}
 
-The **`command`** property of the {{domxref("HTMLButtonElement")}} interface gets and sets the action to be performed on an element being controlled by a button. For this to have an effect, [`commandfor`](/en-US/docs/Web/HTML/Element/button#commandfor) must be set.
+The **`command`** property of the {{domxref("HTMLButtonElement")}} interface gets and sets the action to be performed on an element being controlled by this button. For this to have an effect, [`commandfor`](/en-US/docs/Web/HTML/Element/button#commandfor) must be set.
 
 It reflects the [`command`](/en-US/docs/Web/HTML/Element/button#command) HTML attribute.
 
 ## Value
 
-A string.
+A string. See the [`command`](/en-US/docs/Web/HTML/Element/button#command) attribute for valid values.
 
 ## Examples
 
@@ -72,5 +72,5 @@ image.addEventListener("command", (event) => {
 ## See also
 
 - {{domxref("Invoker Commands API", "Invoker Commands API", "", "nocode")}}
-- {{domxref("HTMLButtonElement.commandForElement", "commandForElement")}} property
-- {{domxref("CommandEvent", "CommandEvent")}} interface
+- {{domxref("HTMLButtonElement.commandForElement")}}
+- {{domxref("CommandEvent")}}

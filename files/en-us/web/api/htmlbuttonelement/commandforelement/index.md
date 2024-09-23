@@ -38,5 +38,5 @@ toggleBtn.commandForElement = popover;
 ## See also
 
 - {{domxref("Invoker Commands API", "Invoker Commands API", "", "nocode")}}
-- {{domxref("HTMLButtonElement.command", "command")}} property
-- {{domxref("CommandEvent", "CommandEvent")}} interface
+- {{domxref("HTMLButtonElement.command")}}
+- {{domxref("CommandEvent")}}

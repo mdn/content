@@ -14,7 +14,7 @@ The **`source`** read-only property of the {{domxref("CommandEvent")}} interface
 
 ## Value
 
-An {{domxref("EventTarget")}} object.
+An {{domxref("EventTarget")}} object. Usually an {{domxref("HTMLButtonElement")}}.
 
 ## Examples
 
@@ -47,5 +47,5 @@ document.body.addEventListener(
 ## See also
 
 - {{domxref("Invoker Commands API", "Invoker Commands API", "", "nocode")}}
-- {{domxref("HTMLButtonElement.command", "command")}} property
-- {{domxref("HTMLButtonElement.commandForElement", "commandForElement")}} property
+- {{domxref("HTMLButtonElement.command")}}
+- {{domxref("HTMLButtonElement.commandForElement")}}

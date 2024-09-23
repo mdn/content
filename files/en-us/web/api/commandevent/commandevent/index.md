@@ -23,7 +23,7 @@ new CommandEvent(type, options)
 
 - `type`
   - : A string with the name of the event.
-    It is case-sensitive and browsers set it to `beforeinput`, or `input`.
+    It is case-sensitive and browsers set it to `beforeinput` or `input`.
 - `options` {{optional_inline}}
   - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, can have the following properties:
     - `source` {{optional_inline}}
@@ -46,6 +46,6 @@ A new {{domxref("CommandEvent")}} object.
 ## See also
 
 - {{domxref("Invoker Commands API", "Invoker Commands API", "", "nocode")}}
-- {{domxref("HTMLButtonElement.command", "command")}} property
-- {{domxref("HTMLButtonElement.commandForElement", "commandForElement")}} property
-- {{domxref("CommandEvent", "CommandEvent")}} interface
+- {{domxref("HTMLButtonElement.command")}}
+- {{domxref("HTMLButtonElement.commandForElement"_}}
+- {{domxref("CommandEvent")}}

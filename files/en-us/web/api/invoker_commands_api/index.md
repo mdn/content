@@ -12,7 +12,7 @@ browser-compat:
 
 {{DefaultAPISidebar("Invoker Commands API")}}
 
-The Invoker Commands API provides a way to declaratively assign behaviors to buttons, allowing control of interactive elements when the button is enacted (clicked or invoked via a keypress, such as the spacebar or return key).
+The **Invoker Commands API** provides a way to declaratively assign behaviors to buttons, allowing control of interactive elements when the button is enacted (clicked or invoked via a keypress, such as the spacebar or return key).
 
 ## Concepts and usage
 
@@ -20,26 +20,12 @@ A common pattern on the web is to have {{HTMLElement("button")}} elements contro
 
 Historically creating these kinds of controls has required JavaScript event listeners added to the button which can then call the APIs on the element they control. The {{domxref("HTMLButtonElement.commandForElement", "commandForElement")}} and {{domxref("HTMLButtonElement.command", "command")}} provide a way to do this declaratively for a limited set of actions. This can be advantageous for built-in commands as the user does not have to wait for JavaScript to download and execute to make these buttons interactive.
 
-## HTML Attributes
+## HTML attributes
 
-- [`commandfor`](/en-US/docs/Web/HTML/Element/button#commandfor):
+- [`commandfor`](/en-US/docs/Web/HTML/Element/button#commandfor)
   - : Turns a {{htmlelement("button")}} element into a control button, controlling the given interactive element; takes the ID of the element to control as its value.
-- [`command`](/en-US/docs/Web/HTML/Element/button#command):
-
-  - : Specifies the action to be performed on an element being controlled by a control `<button>`, specified via the `commandfor` attribute. The possible values are:
-
-    - `"show-modal"`
-      - : The button will show a {{htmlelement("dialog")}} as modal. If the dialog is already modal, no action will be taken.
-    - `"close"`
-      - : The button will close a {{htmlelement("dialog")}} element. If the dialog is already closed, no action will be taken.
-    - `"show-popover"`
-      - : The button will show a hidden popover. If you try to show an already showing popover, no action will be taken. See the {{domxref("Popover API", "Popover API", "", "nocode")}} landing page for more details.
-    - `"hide-popover"`
-      - : The button will hide a showing popover. If you try to hide an already hidden popover, no action will be taken. See the {{domxref("Popover API", "Popover API", "", "nocode")}} landing page for more details.
-    - `"toggle-popover"`
-      - : The button will toggle a popover between showing and hidden. If the popover is hidden, it will be shown; if the popover is showing, it will be hidden. See the {{domxref("Popover API", "Popover API", "", "nocode")}} landing page for more details.
-    - Custom values
-      - : This attribute can represent custom values that are prefixed with a two hyphen characters (`--`). Buttons with a custom value will dispatch the {{domxref("CommandEvent")}} on the controlled element.
+- [`command`](/en-US/docs/Web/HTML/Element/button#command)
+  - : Specifies the action to be performed on an element being controlled by a control `<button>`, specified via the `commandfor` attribute.
 
 ## Interfaces
 

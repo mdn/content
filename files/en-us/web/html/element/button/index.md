@@ -30,11 +30,11 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/G
     - `"close"`
       - : The button will close a {{htmlelement("dialog")}} element. If the dialog is already closed, no action will be taken.
     - `"show-popover"`
-      - : The button will show a hidden popover. If you try to show an already showing popover, no action will be taken. See the {{domxref("Popover API", "Popover API", "", "nocode")}} landing page for more details.
+      - : The button will show a hidden popover. If you try to show an already showing popover, no action will be taken. See {{domxref("Popover API", "Popover API", "", "nocode")}} for more details.
     - `"hide-popover"`
-      - : The button will hide a showing popover. If you try to hide an already hidden popover, no action will be taken. See the {{domxref("Popover API", "Popover API", "", "nocode")}} landing page for more details.
+      - : The button will hide a showing popover. If you try to hide an already hidden popover, no action will be taken. See {{domxref("Popover API", "Popover API", "", "nocode")}} for more details.
     - `"toggle-popover"`
-      - : The button will toggle a popover between showing and hidden. If the popover is hidden, it will be shown; if the popover is showing, it will be hidden. See the {{domxref("Popover API", "Popover API", "", "nocode")}} landing page for more details.
+      - : The button will toggle a popover between showing and hidden. If the popover is hidden, it will be shown; if the popover is showing, it will be hidden. See {{domxref("Popover API", "Popover API", "", "nocode")}} for more details.
     - Custom values
       - : This attribute can represent custom values that are prefixed with a two hyphen characters (`--`). Buttons with a custom value will dispatch the {{domxref("CommandEvent")}} on the controlled element.
 

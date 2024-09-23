@@ -9,7 +9,7 @@ browser-compat: api.HTMLElement.command_event
 
 {{APIRef("Invoker Commands API")}}{{SeeCompatTable}}
 
-The **`command`** event of the {{domxref("HTMLElement")}} interface fires on a element that is controlled via a {{domxref("HTMLButtonElement", "button")}} with valid {{domxref("HTMLButtonElement.commandForElement", "commandForElement")}} and {{domxref("HTMLButtonElement.command", "command")}} values, whenever the button is interacted with (e.g. it is clicked).
+The **`command`** event of the {{domxref("HTMLElement")}} interface fires on an element that is controlled via a {{domxref("HTMLButtonElement", "button")}} with valid {{domxref("HTMLButtonElement.commandForElement", "commandForElement")}} and {{domxref("HTMLButtonElement.command", "command")}} values, whenever the button is interacted with (e.g. it is clicked).
 
 ## Syntax
 
@@ -43,7 +43,7 @@ popover.addEventListener("command", (event) => {
 });
 ```
 
-### A note on event dispatch and cancellation
+### Event dispatch and cancellation
 
 It is worth pointing out that `command` events fire on the element being invoked. If the control button is clicked, it will first dispatch a `click` event which, if cancelled, then the `command` event will not fire and the default behavior will not be run.
 In addition to cancelling the `click` event on the button, it is also possible to cancel the `command` event.
@@ -73,5 +73,5 @@ element.addEventListener("command", (event) => {
 ## See also
 
 - {{domxref("Invoker Commands API", "Invoker Commands API", "", "nocode")}}
-- {{domxref("HTMLButtonElement.command", "command")}} property
-- {{domxref("HTMLButtonElement.commandForElement", "commandForElement")}} property
+- {{domxref("HTMLButtonElement.command")}}
+- {{domxref("HTMLButtonElement.commandForElement")}}
