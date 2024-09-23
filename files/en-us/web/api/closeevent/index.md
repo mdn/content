@@ -21,7 +21,7 @@ A `CloseEvent` is sent to clients using {{Glossary("WebSockets")}} when the conn
 _This interface also inherits properties from its parent, {{domxref("Event")}}._
 
 - {{domxref("CloseEvent.code")}} {{ReadOnlyInline}}
-  - : Returns an `unsigned short` containing the close code sent by the server.
+  - : Returns an `unsigned short` containing the close code.
 - {{domxref("CloseEvent.reason")}} {{ReadOnlyInline}}
   - : Returns a string indicating the reason the server closed the connection. This is specific to the particular server and sub-protocol.
 - {{domxref("CloseEvent.wasClean")}} {{ReadOnlyInline}}

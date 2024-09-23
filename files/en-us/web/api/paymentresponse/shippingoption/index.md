@@ -68,6 +68,10 @@ function updateDetails(details, shippingOption, resolve, reject) {
 }
 ```
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}
