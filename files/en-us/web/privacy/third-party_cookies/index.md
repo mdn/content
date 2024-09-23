@@ -98,7 +98,7 @@ Note that if `SameSite=None` is set then the `Secure` attribute must also be set
 
 ### Transitioning from third-party cookies
 
-There are multiple strategies to help sites minimise breakage in browsers where third-party cookies are blocked:
+There are multiple strategies to help sites minimize breakage in browsers where third-party cookies are blocked:
 
 1. Audit your third-party cookie usage. Cookies must have the `SameSite=None` attribute set to be used in a cross-site context. You can therefore identify third-party cookies by searching for `SameSite=None` in your code, or checking for stored `SameSite=None` cookies in your browser DevTools, for example in the [Firefox Storage Inspector](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/). Chrome's [Issues panel](https://developer.chrome.com/docs/devtools/issues/) also [reports issues with third-party cookie blocking](https://developers.google.com/privacy-sandbox/cookies/prepare/audit-cookies#chrome-dev-tools) along with a list of affected cookies.
 2. Test your functionality with third-party cookies blocked, to see what breaks. You might find that some cookies are no longer needed.
