@@ -12,7 +12,7 @@ The **`yield()`** method of the {{domxref('Scheduler')}} interface is used for y
 
 The task can continue when the promise returned by the method is resolved. The priority for when the promise is resolved defaults to [`'user-visible'`](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#user-visible), but can inherit a different priority if the `yield()` occurs within a {{domxref('Scheduler.postTask')}}.
 
-Similarly, the continuation of work after the `yield()` can be aborted if it occurs within a `postTask()` task and the [task is aborted](/en-US/docs/Web/API/Scheduler/postTask#aborting_tasks).
+Similarly, the continuation of work after the `yield()` can be aborted if it occurs within a `postTask()` callback, and the [task is aborted](/en-US/docs/Web/API/Scheduler/postTask#aborting_tasks).
 
 ## Syntax
 
@@ -49,7 +49,7 @@ if (globalThis.scheduler?.yield) {
 
 Long tasks can be broken up by awaiting `scheduler.yield()`. The function returns a promise, yielding the {{Glossary('main thread')}} to allow the browser to execute other pending work—like responding to user input—if needed.
 
-For instance, if a `change` event listener on a checkbox results in a lot of work to filter content and update the page, this means there will be no visual feedback to the user that the checkbox was checked until that work is complete. A `scheduler.yield()` can be inserted into the event listener to yield early so the checked state will be seen immediately, and then the heavier computation can be done when the yield returns.
+For instance, if a `change` event listener on a checkbox results in a lot of work to filter content and update the page, this means there will be no visual feedback to the user that the checkbox was checked until that work is complete. A `scheduler.yield()` can be inserted into the event listener to yield early so the checked state will be seen immediately, and then the remainder of the work can be done when the yield returns.
 
 ```js
 checkbox.addEventListener("change", async () => {

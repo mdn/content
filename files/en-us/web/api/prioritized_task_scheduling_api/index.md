@@ -23,11 +23,11 @@ In this page, we also include information about the {{domxref("Scheduling.isInpu
 
 The Prioritized Task Scheduling API is available in both window and worker threads using the `scheduler` property on the global object.
 
-The main API methods are {{domxref('scheduler.postTask()')}} and {{domxref('scheduler.yield()')}}. `scheduler.postTask()` takes a callback function ("the task") and returns a promise that resolves with the return value of the function, or rejects with an error. `scheduler.yield()` turns any async function into a task by yielding the main thread to the browser for other work, with execution continuing when the returned promise is resolved.
+The main API methods are {{domxref('scheduler.postTask()')}} and {{domxref('scheduler.yield()')}}. `scheduler.postTask()` takes a callback function (the task) and returns a promise that resolves with the return value of the function, or rejects with an error. `scheduler.yield()` turns any async function into a task by yielding the main thread to the browser for other work, with execution continuing when the returned promise is resolved.
 
 #### `scheduler.yield()`
 
-To break up long-runing JavaScript so it doesn't block the main thread, a `scheduler.yield()` can be inserted to temporarily yield the main thread back to the browser, which creates a task to continue execution where it left off.
+To break up long-running JavaScript tasks so they don'tt block the main thread, a call to `scheduler.yield()` can be inserted to temporarily yield the main thread back to the browser, which creates a task to continue execution where it left off.
 
 ```js
 async function slowTask() {
@@ -37,9 +37,9 @@ async function slowTask() {
 }
 ```
 
-`scheduler.yield()` returns a promise that can be awaited for when execution can continue. This allows work that belongs in the same function to stay in the same function but without blocking the main thread the entire time the function runs.
+`scheduler.yield()` returns a promise that can be awaited for when execution can continue. This allows work that belongs in the same function to stay in the same function, but without blocking the main thread the entire time the function runs.
 
-`scheduler.yield()` takes no arguments. The task that triggers its continuation has a default [`user-visible`](#user-visible) priority, but if a `scheduler.yield()` is run within a `scheduler.postTask()` task, it will [inherit the priority of the surrounding task](/en-US/docs/Web/API/Scheduler/yield#inheriting_task_priorities).
+`scheduler.yield()` takes no arguments. The task that triggers its continuation has a default [`user-visible`](#user-visible) priority, but if `scheduler.yield()` is called within a `scheduler.postTask()` callback, it will [inherit the priority of the surrounding task](/en-US/docs/Web/API/Scheduler/yield#inheriting_task_priorities).
 
 #### `scheduler.postTask()`
 
