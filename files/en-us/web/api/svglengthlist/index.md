@@ -41,7 +41,7 @@ An `SVGLengthList` object is indexable and can be accessed like an array.
 
 ### Using SVGLengthList
 
-An `SVGLengthList` object can be retrievd from an {{domxref("SVGAnimatedLengthList")}} object, which itself is retrievable from many animatable length attributes, such as {{domxref("SVGTextPositioningElement.x")}}.
+An `SVGLengthList` object can be retrieved from an {{domxref("SVGAnimatedLengthList")}} object, which itself is retrievable from many animatable length attributes, such as {{domxref("SVGTextPositioningElement.x")}}.
 
 #### HTML
 
