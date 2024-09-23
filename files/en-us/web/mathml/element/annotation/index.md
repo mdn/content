@@ -55,7 +55,7 @@ body {
 </math>
 ```
 
-{{ EmbedLiveSample('Example', 700, 200, "", "") }}
+{{ EmbedLiveSample('example', 700, 200, "", "") }}
 
 ## Specifications
 
