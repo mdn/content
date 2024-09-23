@@ -609,7 +609,12 @@
       "guides": ["/docs/Web/API/Fullscreen_API/Guide"],
       "interfaces": [],
       "methods": ["Document.exitFullscreen()", "Element.requestFullscreen()"],
-      "properties": ["Document.fullscreen", "Document.fullscreenElement"],
+      "properties": [
+        "Document.fullscreen",
+        "Document.fullscreenElement",
+        "Document.fullscreenEnabled",
+        "ShadowRoot.fullscreenElement"
+      ],
       "events": [
         "Document: fullscreenchange",
         "Document: fullscreenerror",
