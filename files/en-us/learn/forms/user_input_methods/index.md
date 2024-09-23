@@ -92,7 +92,7 @@ When screen orientation matters for your form, you can read the screen orientati
 
 ### Fullscreen
 
-If you need to present your form in fullscreen mode, such as when your form is displayed on a museum kiosk, toll booth, or really any publically displayed user interface, it is possible to do so by calling {{domxref("Element.requestFullscreen()")}} on that element:
+If you need to present your form in fullscreen mode, such as when your form is displayed on a museum kiosk, toll booth, or really any publicly displayed user interface, it is possible to do so by calling {{domxref("Element.requestFullscreen()")}} on that element:
 
 ```js
 const elem = document.getElementById("myForm");
