@@ -25,9 +25,11 @@ The Prioritized Task Scheduling API is available in both window and worker threa
 
 The main API methods are {{domxref('scheduler.postTask()')}} and {{domxref('scheduler.yield()')}}. `scheduler.postTask()` takes a callback function (the task) and returns a promise that resolves with the return value of the function, or rejects with an error. `scheduler.yield()` turns any async function into a task by yielding the main thread to the browser for other work, with execution continuing when the returned promise is resolved.
 
+`scheduler.postTask()` is more configurable, like explicitly setting its task priority or `AbortSignal` to cancel the task. `scheduler.yield()` is simpler and can be `await`ed in any async function without having to provide the followup task in another function.
+
 #### `scheduler.yield()`
 
-To break up long-running JavaScript tasks so they don'tt block the main thread, a call to `scheduler.yield()` can be inserted to temporarily yield the main thread back to the browser, which creates a task to continue execution where it left off.
+To break up long-running JavaScript tasks so they don't block the main thread, a call to `scheduler.yield()` can be inserted to temporarily yield the main thread back to the browser, which creates a task to continue execution where it left off.
 
 ```js
 async function slowTask() {
@@ -43,7 +45,7 @@ async function slowTask() {
 
 #### `scheduler.postTask()`
 
-`scheduler.postTask()` creates a task with default priority [`user-visible`](#user-visible) that has a fixed priority and cannot be aborted.
+`scheduler.postTask()` called with no arguments creates a task with a default [`user-visible`](#user-visible) priority that cannot be aborted or have its priority changed.
 
 ```js
 const promise = scheduler.postTask(myTask);

@@ -8,7 +8,7 @@ browser-compat: api.Scheduler.yield
 
 {{APIRef('Prioritized Task Scheduling API')}}
 
-The **`yield()`** method of the {{domxref('Scheduler')}} interface is used for yielding the main thread during a task and continuing execution later, with the continuation [scheduled as a prioritized task](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API). This allows long-running work to be broken up so the browser stays responsive.
+The **`yield()`** method of the {{domxref('Scheduler')}} interface is used for yielding the {{Glossary('main thread')}} during a task and continuing execution later, with the continuation [scheduled as a prioritized task](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API). This allows long-running work to be broken up so the browser stays responsive.
 
 The task can continue when the promise returned by the method is resolved. The priority for when the promise is resolved defaults to [`'user-visible'`](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#user-visible), but can inherit a different priority if the `yield()` occurs within a {{domxref('Scheduler.postTask')}}.
 
@@ -47,9 +47,21 @@ if (globalThis.scheduler?.yield) {
 
 ### Basic usage
 
-Long tasks can be broken up by awaiting `scheduler.yield()`. The function returns a promise, yielding the {{Glossary('main thread')}} to allow the browser to execute other pending work—like responding to user input—if needed.
+Long tasks can be broken up by awaiting `scheduler.yield()`. The function returns a promise, yielding the main thread to allow the browser to execute other pending work—like responding to user input—if needed. The browser schedules a follow-up task that resovles the promise, at which point execution of the code can continue where it left off.
 
-For instance, if a `change` event listener on a checkbox results in a lot of work to filter content and update the page, this means there will be no visual feedback to the user that the checkbox was checked until that work is complete. A `scheduler.yield()` can be inserted into the event listener to yield early so the checked state will be seen immediately, and then the remainder of the work can be done when the yield returns.
+For instance, if a `click` event listener on a button results in a lot of work to load and display new page content, this means there will be no visual feedback to the user that their button click was even registered by the page until that work is complete. A `scheduler.yield()` can be inserted into the event listener so that quick feedback can be shown (like a spinner), and then the remainder of the work can be done when execution continues after the yield.
+
+```js
+button.addEventListener("click", async () => {
+  // Provide immediate feedback so the user knows their click was received.
+  showSpinner();
+  await scheduler.yield();
+  // Do longer processing
+  doSlowContentSwap();
+});
+```
+
+It may also be sufficient to have the browser default UI provide that quick interaction feedback. For instance, if a `change` event listener on a checkbox triggers a slow filtering of page content, a `scheduler.yield()` can be inserted to show the check state change immediately before continuing to the remained of the event response.
 
 ```js
 checkbox.addEventListener("change", async () => {
