@@ -25,7 +25,6 @@ beforeinstallpromptevent
 beforetoggle
 belgin
 blockable
-Blockable
 brians
 Browsersync
 browsingtopics
@@ -61,7 +60,6 @@ customstateset
 cycletracker
 davidwalsh
 demuxing
-Demuxing
 Descripton
 dropshow
 enablei
@@ -103,7 +101,6 @@ letmein
 lightpurple
 Lindenberg
 linecaps
-Linecaps
 longwinded
 loopstarted
 lowdelay
@@ -148,7 +145,6 @@ precache
 precached
 precaches
 precaching
-Precaching
 preconnects
 preloaders
 premultiplication
@@ -185,7 +181,6 @@ shadowrootserializable
 sharedmem
 sharpyuv
 shortlinks
-Shortlinks
 shrinkwap
 shrinkwrapping
 sinkchange
@@ -234,7 +229,6 @@ webtransport
 whitepoint
 wisedog
 workgroups
-Workgroups
 writingsuggestions
 zeroblue
 zeroyellow
