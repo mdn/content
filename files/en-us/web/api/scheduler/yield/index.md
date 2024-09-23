@@ -141,7 +141,7 @@ ending second function
 
 ### Inheriting task priorities
 
-A `scheduler.yield()` within a `scheduler.postTask()` task will inherit the task's priority. For example, work after a `scheduler.yield()` within a [`'background'`](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#user-blocking) low-priority task will also be scheduled as `'background'` by default (but, again, inserted at the front of the `'background'` priority queue, while a `'background'` `postTask` task will go to the end).
+A `scheduler.yield()` within a `scheduler.postTask()` task will inherit the task's priority. For example, work after a `scheduler.yield()` within a [`'background'`](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API#user-blocking) low-priority task will also be scheduled as `'background'` by default (but, again, inserted in the boosted `'background'` priority queue, so running before any `'background'` `postTask` tasks).
 
 ```js
 async function backgroundWork() {
