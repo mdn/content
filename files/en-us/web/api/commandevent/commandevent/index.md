@@ -47,5 +47,5 @@ A new {{domxref("CommandEvent")}} object.
 
 - {{domxref("Invoker Commands API", "Invoker Commands API", "", "nocode")}}
 - {{domxref("HTMLButtonElement.command")}}
-- {{domxref("HTMLButtonElement.commandForElement"_}}
+- {{domxref("HTMLButtonElement.commandForElement")}}
 - {{domxref("CommandEvent")}}
