@@ -10,16 +10,19 @@ page-type: glossary-definition
 
 It is no longer accurate to refer to colors on the web as "HTML color codes" or "HTML color names". Colors are now specified in the [CSS color module](/en-US/docs/Web/CSS/CSS_colors), and generally known as CSS colors or web colors.
 
-To look up web colors on MDN, see our {{cssxref("&lt;color&gt;")}} values reference documentation, or more specifically:
+## See also
+
+### General knowledge
+
+[Web colors](https://en.wikipedia.org/wiki/Web_colors) on Wikipedia
+
+### Technical reference
+
+To look up web colors on MDN, see our CSS {{cssxref("&lt;color&gt;")}} values reference documentation, or more specifically:
 
 - Color names: {{cssxref("&lt;named-color&gt;")}}.
 - Hexadecimal notations: {{cssxref("&lt;hex-color&gt;")}}.
 - Color functions:
-  - [sRGB](https://en.wikipedia.org/wiki/SRGB) color space: {{CSSXref("color_value/hsl", "hsl()")}}, {{CSSXref("color_value/hwb", "hwb()")}}, and {{CSSXref("color_value/rgb", "rgb()")}}.
-  - [CIELAB](https://en.wikipedia.org/wiki/CIELAB_color_space) color space: {{CSSXref("color_value/lab", "lab()")}} and {{CSSXref("color_value/lch", "lch()")}}.
-  - [Oklab](https://bottosson.github.io/posts/oklab/) color space: {{CSSXref("color_value/oklab", "oklab()")}} and {{CSSXref("color_value/oklch", "oklch()")}}.
+  - [sRGB](/en-US/docs/Glossary/Color_space#rgb_color_spaces) color space: {{CSSXref("color_value/hsl", "hsl()")}}, {{CSSXref("color_value/hwb", "hwb()")}}, and {{CSSXref("color_value/rgb", "rgb()")}}.
+  - [CIELAB](/en-US/docs/Glossary/Color_space#cielab_color_spaces) color space: {{CSSXref("color_value/lab", "lab()")}} and {{CSSXref("color_value/lch", "lch()")}}, {{CSSXref("color_value/oklab", "oklab()")}}, and {{CSSXref("color_value/oklch", "oklch()")}}.
   - Other color spaces: {{CSSXref("color_value/color", "color()")}}.
-
-## See also
-
-- [Web colors](https://en.wikipedia.org/wiki/Web_colors) on Wikipedia
