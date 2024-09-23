@@ -10,7 +10,12 @@ browser-compat: webextensions.api.storage.StorageArea.getBytesInUse
 Gets the amount of storage space, in bytes, used by one or more items stored in the storage area.
 
 > [!NOTE]
-> Firefox only provided support in {{WebExtAPIRef("storage.session")}} from Firefox 131. Firefox doesn't provide this method in {{WebExtAPIRef("storage.local")}}, see [Firefox bug 1385832](https://bugzil.la/1385832). Firefox doesn't provide this method in {{WebExtAPIRef("storage.managed")}}.
+> In Firefox this method:
+>
+> - is supported in {{WebExtAPIRef("storage.sync")}}.
+> - is supported in {{WebExtAPIRef("storage.session")}} from Firefox 131.
+> - isn't supported in {{WebExtAPIRef("storage.local")}}, see [Firefox bug 1385832](https://bugzil.la/1385832).
+> - isn't provided in {{WebExtAPIRef("storage.managed")}}.
 
 This is an asynchronous method that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
