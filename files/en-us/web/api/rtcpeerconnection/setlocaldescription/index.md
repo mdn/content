@@ -38,7 +38,7 @@ setLocalDescription(sessionDescription, successCallback, errorCallback) // depre
 
     If the description is omitted, the WebRTC runtime tries to automatically do the right thing.
 
-    You can also pass an actual {{domxref("RTCSessionDescription")}} instance, but there's no difference. This is why the `RTCSessionDescription` constructor is deprecated.
+    You can also pass an actual {{domxref("RTCSessionDescription")}} instance, but there's no difference. For this reason, the `RTCSessionDescription` constructor is deprecated.
 
 In older code and documentation, you may see a callback-based version of this function used.
 This has been deprecated and its use is **strongly** discouraged, as it will be removed in the future.
