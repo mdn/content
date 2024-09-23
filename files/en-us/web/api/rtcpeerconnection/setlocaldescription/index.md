@@ -28,6 +28,7 @@ setLocalDescription(sessionDescription, successCallback, errorCallback) // depre
 ### Parameters
 
 - `sessionDescription` {{optional_inline}}
+
   - : An object which specifies the configuration to be applied to the local end of the connection. It should contain the following properties:
 
     - `type` {{optional_inline}}
