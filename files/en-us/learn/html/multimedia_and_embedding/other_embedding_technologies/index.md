@@ -346,16 +346,8 @@ If you find yourself needing to embed plugin content, this is the kind of inform
       <td>names and values, to feed the plugin as parameters</td>
       <td>ad hoc attributes with those names and values</td>
       <td>
-        single-tag {{htmlelement("param")}} elements, contained within
-        <code>&#x3C;object></code> ({{htmlelement("param")}} element is deprecated. See {{htmlelement("param")}} for more information)
-      </td>
-    </tr>
-    <tr>
-      <td>independent HTML content as fallback for an unavailable resource</td>
-      <td>not supported (<code>&#x3C;noembed></code> is obsolete)</td>
-      <td>
-        contained within <code>&#x3C;object></code>, after
-        <code>&#x3C;param></code> elements
+        contained within opening and closing
+        <code>&#x3C;object></code> tags
       </td>
     </tr>
   </tbody>
