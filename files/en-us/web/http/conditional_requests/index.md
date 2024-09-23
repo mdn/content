@@ -7,7 +7,8 @@ page-type: guide
 {{HTTPSidebar}}
 
 HTTP has a concept of _conditional requests_, where the result, and even the success of a request, can be controlled by comparing the affected resources with a _validator_.
-These requests are useful for validating cached content, ensuring the integrity of a document when resuming a download, or preventing lost updates when uploading or modifying a document on the server.
+These requests are useful for validating cached content, ensuring that it is only fetched if it differs from the copy that is already available to the browser.
+Conditional requests are also useful for ensuring the integrity of a document when resuming a download, or preventing lost updates when uploading or modifying a document on the server.
 
 ## Principles
 
