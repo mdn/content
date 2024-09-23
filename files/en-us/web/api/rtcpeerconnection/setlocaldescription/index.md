@@ -70,7 +70,7 @@ When using the deprecated callback-based version of `setLocalDescription()`, the
 - `InvalidStateError` {{domxref("DOMException")}} {{deprecated_inline}}
   - : Thrown if the connection's {{domxref("RTCPeerConnection.signalingState", "signalingState")}} is `"closed"`, indicating that the connection is not currently open, so negotiation cannot take place.
 - `InvalidSessionDescriptionError` {{domxref("DOMException")}} {{deprecated_inline}}
-  - : Thrown if the [`RTCLocalSessionDescriptionInit`](/en-US/docs/Web/API/RTCSessionDescription#rtcsessiondescriptioninit) specified by the `sessionDescription` parameter is invalid.
+  - : Thrown if the `sessionDescription` parameter is invalid.
 
 ## Examples
 
